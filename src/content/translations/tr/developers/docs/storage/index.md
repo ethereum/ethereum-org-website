@@ -96,7 +96,7 @@ Bu araçların çoğu kendi [mutabakat mekanizması](/developers/docs/consensus-
 
 Hisse İspatı tabanlı:
 
-- [İşaret Zinciri](/upgrades/beacon-chain/)
+- [İşaret Zinciri](/roadmap/beacon-chain/)
 - Filecoin
 - 0Chain
 

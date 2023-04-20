@@ -26,15 +26,15 @@ Ezek a szabályváltoztatások átmeneti törést okozhatnak a hálózatban. Új
 
 ### Beacon Chain genesis {#beacon-chain-genesis}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Beacon Chain blokk szám: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $586.23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 
 #### Összefoglaló {#beacon-chain-genesis-summary}
 
-A [Beacon Chain](/upgrades/beacon-chain/) biztonságos elindításához 16384 darab 32 ETH-nyi letétre volt szükség. Ez november 27.-én történt meg, vagyis a Beacon Chain a blokkok létrehozását december 1.-jén kezdte meg 2020-ban. Ez az [Eth2 vízió](/roadmap/vision/) elérésének fontos első lépése.
+A [Beacon Chain](/roadmap/beacon-chain/) biztonságos elindításához 16384 darab 32 ETH-nyi letétre volt szükség. Ez november 27.-én történt meg, vagyis a Beacon Chain a blokkok létrehozását december 1.-jén kezdte meg 2020-ban. Ez az [Eth2 vízió](/roadmap/vision/) elérésének fontos első lépése.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   A Beacon Chain
 </DocLink>
 
@@ -42,11 +42,11 @@ A [Beacon Chain](/upgrades/beacon-chain/) biztonságos elindításához 16384 da
 
 ### A letétbe helyezési szerződés aktiválása {#staking-deposit-contract}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Okt-14-2020 09:22:52 AM +UTC</code><br /><Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Blokk száma: <a href="https://etherscan.io/block/11052984">11052984</a><br /><Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $379.04 USD<br /><Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
 #### Összefoglaló {#deposit-contract-summary}
 
-A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#staking) rendszerét az Ethereum ökoszisztémában. Bár [főhálózati](/glossary/#mainnet) szerződés, közvetlenül befolyásolta egy fontos [Eth2 frissítés](/upgrades/), a [Beacon Chain](/upgrades/beacon-chain/) indításának ütemezését.
+A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#staking) rendszerét az Ethereum ökoszisztémában. Bár [főhálózati](/glossary/#mainnet) szerződés, közvetlenül befolyásolta egy fontos [Eth2 frissítés](/roadmap/), a [Beacon Chain](/roadmap/beacon-chain/) indításának ütemezését.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -58,7 +58,7 @@ A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#st
 
 ### Muir Glacier {#muir-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/9200000">9200000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $127.18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="muirGlacier" />
 
 #### Összefoglaló {#muir-glacier-summary}
 
@@ -79,7 +79,7 @@ A Muir Glacier nevű fork késleltetést vezetett be a [nehézségi bombához](/
 
 ### Istanbul {#istanbul}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/9069000">9069000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $151.06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="istanbul" />
 
 #### Összefoglaló {#istanbul-summary}
 
@@ -108,7 +108,7 @@ Az Istanbul fork:
 
 ### Constantinople {#constantinople}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/7280000">7280000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $136.29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="constantinople" />
 
 #### Összefoglaló {#constantinople-summary}
 
@@ -135,7 +135,7 @@ A Constantinople fork:
 
 ### Byzantium {#byzantium}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/4370000">4370000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $334.23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="byzantium" />
 
 #### Összefoglaló {#byzantium-summary}
 
@@ -168,7 +168,7 @@ A Byzantium fork:
 
 ### Spurious Dragon {#spurious-dragon}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/2675000">2675000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $9.84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="spuriousDragon" />
 
 #### Összefoglaló {#spurious-dragon-summary}
 
@@ -193,7 +193,7 @@ A Spurious Dragon fork volt a második válasz a szolgáltatás megtagadásos (D
 
 ### Tangerine whistle {#tangerine-whistle}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/2463000">2463000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="tangerineWhistle" />
 
 #### Összefoglaló {#tangerine-whistle-summary}
 
@@ -214,7 +214,7 @@ A Tangerine Whistle fork volt a első válasz a szolgáltatás megtagadásos (Do
 
 ### DAO fork {#dao-fork}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/1920000">1920000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $12.54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="daoFork" />
 
 #### Összefoglaló {#dao-fork-summary}
 
@@ -230,7 +230,7 @@ Némely bányász nem volt hajlandó forkolni, mivel a DAO incidens nem a protok
 
 ### Homestead {#homestead}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/1150000">1150000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="homestead" />
 
 #### Összefoglaló {#homestead-summary}
 
@@ -252,7 +252,7 @@ A Homestead fork, mely a jövőbe tekintett. Számos protokoll változtatást ta
 
 ### Frontier thawing {#frontier-thawing}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/200000">200000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: $1.24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="frontierThawing" />
 
 #### Összefoglaló {#frontier-thawing-summary}
 
@@ -264,7 +264,7 @@ A frontier thawing fork megszüntette az 5,000-es [gáz](/glossary/#gas) limitet
 
 ### Frontier {#frontier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blokk száma: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH ára: N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="frontier" />
 
 #### Összefoglaló {#frontier-summary}
 
@@ -278,7 +278,7 @@ A Frontier egy működő, de teljesen leegyszerűsített implementációja volt 
 
 ### Ether eladás {#ether-sale}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> July 22 - September 02, 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="etherSale" />
 
 A hivatalos Ether eladás 42 napig tartott. BTC-vel tudtál fizetni.
 
@@ -288,7 +288,7 @@ A hivatalos Ether eladás 42 napig tartott. BTC-vel tudtál fizetni.
 
 ### Sárga könyv kiadása {#yellowpaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> April 01, 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 
 A Sárga Könyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műszaki meghatározása.
 
@@ -300,7 +300,7 @@ A Sárga Könyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műsz
 
 ### A fehérkönyv kiadása {#whitepaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> November 27, 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org a waybackmachine-en</a>
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 
 A bemutatkozó kiadvány, melyet Vitalik Buterin az Ethereum alapítója adott ki 2013-ban, a projekt 2015-ös indulása előtt.
 

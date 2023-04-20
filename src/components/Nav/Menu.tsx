@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 
 import NavDropdown from "./Dropdown"
-import Translation from "../Translation"
 import { getDirection } from "../../utils/translations"
 
 import { Lang } from "../../utils/languages"
@@ -21,8 +20,8 @@ export interface IProps {
 }
 
 const Menu: React.FC<IProps> = ({ path, sections }) => {
-  const intl = useIntl()
-  const direction = getDirection(intl.locale as Lang)
+  const { language } = useI18next()
+  const direction = getDirection(language as Lang)
   const shouldShowSubNav = path.includes("/developers/")
 
   const { useEthereum, learn, ...restSections } = sections
@@ -38,7 +37,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
             isLast={index === useEthereum.items.length - 1}
           >
             <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-              <Translation id={item.text} />
+              {item.text}
             </NavDropdown.Link>
           </NavDropdown.Item>
         ))}
@@ -53,7 +52,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
                 {(section.items || []).map((item, index) => (
                   <NavDropdown.Item key={index}>
                     <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                      <Translation id={item.text} />
+                      {item.text}
                     </NavDropdown.Link>
                   </NavDropdown.Item>
                 ))}
@@ -68,7 +67,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
                 isLast={index === (protocol.items || []).length - 1}
               >
                 <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                  <Translation id={item.text} />
+                  {item.text}
                 </NavDropdown.Link>
               </NavDropdown.Item>
             ))}
@@ -91,7 +90,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
                 isLast={index === section.items.length - 1}
               >
                 <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                  <Translation id={item.text} />
+                  {item.text}
                 </NavDropdown.Link>
               </NavDropdown.Item>
             ))}

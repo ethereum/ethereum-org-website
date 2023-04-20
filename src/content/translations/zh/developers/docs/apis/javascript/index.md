@@ -6,11 +6,11 @@ lang: zh
 
 为了使软件应用程序能够与以太坊区块链进行交互（例如：读取区块链数据或发送交易信息到网络），软件必须连接到以太坊节点。
 
-为此目的，每个以太坊客户端都执行 [JSON-RPC](/developers/docs/apis/json-rpc/) 规范，所以应用程序可以依赖统一的[端点](/developers/docs/apis/json-rpc/endpoints/)集。
+为此，每种以太坊客户端都实现了 [JSON-RPC](/developers/docs/apis/json-rpc/) 规范，因而应用程序可以依赖一组统一的[方法](/developers/docs/apis/json-rpc/#json-rpc-methods)。
 
 如果您想要用 JavaScript 连接到一个以太坊节点， 可以使用原生 JavaScript，不过生态系统中存在一些方便的库，使得这个事情变得更加容易。 通过这些库，开发者可以写下直观易懂甚至单行的代码就能初始化与以太坊的互动（背后使用 JSON RPC 请求）。
 
-请注意，自从[合并](/upgrades/merge/)以来，运行一个节点需要两个连接的以太坊软件 - 一个执行客户端和一个共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
+请注意，自从[合并](/roadmap/merge/)以来，运行一个节点需要两个连接的以太坊软件 - 一个执行客户端和一个共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
 
 ## 前提条件 {#prerequisites}
 

@@ -5,7 +5,7 @@ lang: pt-br
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: ../../../../assets/eth-gif-cat.png
+image: ../../assets/eth-gif-cat.png
 summaryPoint1: Os sistemas de identidade tradicionais centralizaram a emissão, manutenção e controle de seus identificadores.
 summaryPoint2: A identidade descentralizada elimina a dependência de terceiros centralizados.
 summaryPoint3: Graças à criptografia, os usuários agora têm as ferramentas para emitir, manter e controlar seus próprios identificadores e atestações novamente.
@@ -17,7 +17,7 @@ Entretanto, os sistemas tradicionais de gerenciamento de identidade há muito te
 
 Para resolver esses problemas, temos sistemas de identidade descentralizados construídos em blockchains públicos como o Ethereum. A identidade descentralizada permite que indivíduos gerenciem informações relacionadas à sua identidade. Com soluções de identidade descentralizadas, _você_ pode criar identificadores e reivindicar e manter seus atestados sem depender de autoridades centrais, como provedores de serviços ou governos.
 
-## O que é identidade {#what-is-identity}
+## O que é identidade? {#what-is-identity}
 
 Identidade significa o sentido de si próprio de um indivíduo, definido por características únicas. Identidade refere-se a ser um _indivíduo_, ou seja, uma entidade humana distinta. A identidade também pode se referir a outras entidades não humanas, como uma organização ou autoridade.
 
@@ -155,11 +155,11 @@ Os ataques Sybil referem-se a humanos individuais enganando um sistema para pens
 
 Existem muitos projetos ambiciosos usando Ethereum como base para soluções de identidade descentralizadas:
 
-- **[Nomes de Serviço Ethereum (ENS)](https://ens.domains/)** - _Um sistema de nomes descentralizado para identificadores legíveis por máquina on-chain, como endereços de carteira Ethereum, hashes de conteúdo e metadados._
+- **[Nomes de Serviço Ethereum (ENS)](https://ens.domains/)** - _ Um sistema de nomes descentralizado para identificadores legíveis por máquina on-chain, como endereços de carteira Ethereum, hashes de conteúdo e metadados._
 - **[SpruceID](https://www.spruceid.com/)** - _Um projeto de identidade descentralizada que permite aos usuários controlar a identidade digital com contas Ethereum e perfis ENS em vez de depender de serviços de terceiros._
 - **[Prova de Humanidade](https://www.proofofhumanity.id)** - _Prova de Humanidade (ou PoH) é um sistema de verificação de identidade social construído no Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Uma descentralizada, rede de identidade social de código aberto que busca reformar a verificação de identidade por meio da criação e análise de um grafo social._
-- **[Passaporte de prova de personalidade](https://proofofpersonhood.com/)** - _Um agregador de identidade digital descentralizado._
+- **[Passaporte de prova de personalidade](https://proofofpersonhood.com/)** - _ Um agregador de identidade digital descentralizado._
 
 ## Leitura adicional {#further-reading}
 
@@ -175,7 +175,7 @@ Existem muitos projetos ambiciosos usando Ethereum como base para soluções de 
 - [Identidade descentralizada (bônus sessão de transmissão ao vivo)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Um ótimo vídeo explicativo sobre identidade descentralizada por Andreas Antoniopolitas_
 - [Faça login com o Ethereum e identidade descentralizada com Ceramic, IDX, React e 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _Tutorial do YouTube sobre como criar um sistema de gerenciamento de identidade para criar, ler e atualizar o perfil de um usuário usando sua carteira Ethereum por Nader Dabit_
 - [BrightID - Identidade descentralizada no Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Episódio de podcast sem banco discutindo o BrightID, uma solução de identidade descentralizada para Ethereum_
-- [A Internet off-chain: identidade descentralizada & Credenciais verificáveis](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _apresentação EthDenver 2022 por Evin McMullen_
+- [A Internet off-chain: identidade descentralizada & Credenciais verificáveis](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — apresentação EthDenver 2022 por Evin McMullen
 
 ### Comunidades {#communities}
 

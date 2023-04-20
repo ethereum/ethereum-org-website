@@ -10,7 +10,7 @@ Una interfaz para contratos que administran múltiples tipos de tokens. Un solo 
 
 **¿Qué se entiende por estándar multitoken?**
 
-La idea es simple y busca crear una interfaz de contrato inteligente que pueda representar y controlar cualquier cantidad y tipo de token fungible y no fungible. De esta manera, los tokens ERC-1155 pueden hacer las mismas funciones que los tokens [ERC-20](/developers/docs/standards/tokens/erc-20/) y los tokens [ERC-721](/developers/docs/standards/tokens/erc-721/), e incluso ambas al mismo tiempo. Y lo mejor de todo, mejorar la funcionalidad de ambos estándares, haciendolos más eficientes y corrigiendo errores evidentes en la implementación de los estándares ERC-20 y ERC-721.
+La idea es simple y busca crear una interfaz de contrato inteligente que pueda representar y controlar cualquier cantidad y tipo de token fungible y no fungible. De esta manera, los tokens ERC-1155 pueden hacer las mismas funciones que los tokens [ERC-20](/developers/docs/standards/tokens/erc-20/) y los tokens [ERC-721](/developers/docs/standards/tokens/erc-721/), e incluso ambas al mismo tiempo. Y lo mejor de todo, mejorar la funcionalidad de ambos estándares, haciéndolos más eficientes y corrigiendo errores evidentes en la implementación de los estándares ERC-20 y ERC-721.
 
 El token ERC-1155 se describe completamente en [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
@@ -21,7 +21,7 @@ Para una mejor comprensión de esta página, recomendamos que primero lea acerca
 ## Características y funciones de ERC-1155: {#body}
 
 - [Transferencia en lotes](#batch_transfers): transfiera múltiples activos en una sola llamada.
-- [Saldos en lote](#batch_balance): obtenga saldos de multiples activos en una sola llamada.
+- [Saldos en lote](#batch_balance): obtenga saldos de múltiples activos en una sola llamada.
 - [Aprobación en lote](#batch_approval): apruebe todos los tokens en una dirección.
 - [Hooks](#recieve_hook): reciba hooks de tokens.
 - [Compatibilidad con NFT](#nft_support): si el suministro solo es 1, trátelo como un NFT.
@@ -29,7 +29,7 @@ Para una mejor comprensión de esta página, recomendamos que primero lea acerca
 
 ### Transferencias en lote {#batch-transfers}
 
-Las tranferencias en lote funcionan de manera muy similar a las transferencias regulares ERC-20. Veamos la función regular de transferencia de ERC-20 transferFrom:
+Las transferencias en lote funcionan de manera muy similar a las transferencias regulares ERC-20. Veamos la función regular de transferencia de ERC-20 `transferFrom`:
 
 ```solidity
 // ERC-20
@@ -136,7 +136,7 @@ Ya hemos hablado un poco acerca de algunas reglas de transferencia segura en exp
    3. cualquier balance(s) del tenedor(es) del token(s) en `_ids` es menor(es) que el monto (los montos) respectivo(s) en `_values` enviado al destinatario.
    4. ocurre cualquier otro error.
 
-_Nota_: Todas las funciones de lote, incluyendo hook, también existen como versiones sin lote. Esto se hace para la eficiencia del gas, considerando que la transferencia de un solo activo probablemente siga siendo la manera más comúnmente utilizada. Las hemos dejado de lado para mayor simplicidad en las explicaciones, incluidas las reglas de transferencia segura. Los nombres son identicos, solo quite el lote ("Batch").
+_Nota_: Todas las funciones de lote, incluyendo hook, también existen como versiones sin lote. Esto se hace para la eficiencia del gas, considerando que la transferencia de un solo activo probablemente siga siendo la manera más comúnmente utilizada. Las hemos dejado de lado para mayor simplicidad en las explicaciones, incluidas las reglas de transferencia segura. Los nombres son idénticos, solo quite el lote ("Batch").
 
 ## Más información {#further-reading}
 

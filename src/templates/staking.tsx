@@ -23,7 +23,7 @@ import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
-  Item as ItemTableOfContents,
+  type Item as ItemTableOfContents,
 } from "../components/TableOfContents"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
@@ -37,7 +37,6 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
-import ShanghaiCapella from "../components/Staking/ShanghaiCapella"
 import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "../components/Staking/StakingProductsCardGrid"
 import StakingComparison from "../components/Staking/StakingComparison"
@@ -357,7 +356,6 @@ const components = {
   MeetupList,
   RandomAppList,
   SectionNav,
-  ShanghaiCapella,
   StakingComparison,
   StakingConsiderations,
   StakingGuides,
@@ -383,15 +381,15 @@ const StakingPage = ({
     throw new Error("Required `title` property missing for staking template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
+  const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
   const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Options" as TranslationKey,
+    text: "Staking Options",
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "Staking home" as TranslationKey,
+        text: "Staking home",
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -400,7 +398,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Solo staking" as TranslationKey,
+        text: "Solo staking",
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -409,7 +407,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Staking as a service" as TranslationKey,
+        text: "Staking as a service",
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -418,7 +416,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Pooled staking" as TranslationKey,
+        text: "Pooled staking",
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -452,7 +450,7 @@ const StakingPage = ({
           <MobileTableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
-            isMobile={true}
+            isMobile
           />
         </TitleCard>
         <Image
@@ -493,7 +491,21 @@ const StakingPage = ({
 }
 
 export const stakingPageQuery = graphql`
-  query StakingPage($relativePath: String) {
+  query StakingPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-staking", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

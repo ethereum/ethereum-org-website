@@ -4,7 +4,6 @@ description: Come funziona il ponte standard per Optimism? Perch√© funziona cos√
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "optimism"
   - "ponte"
   - "livello 2"
 skill: intermediate

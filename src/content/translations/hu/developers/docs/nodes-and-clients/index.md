@@ -211,9 +211,7 @@ A kicsi, olcsó, és hatékony eszközök mint ezek ideálisak egy otthoni csom�
 
 ## Eth2 kliensek {#consensus-clients}
 
-Az [Eth2 fejlesztéseket](/upgrades/beacon-chain/) új kliensek támogatják. A Beacon Chain-nen fognak futni és az új [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) konszenzus mechanizmust fogják támogatni.
-
-[Eth2 kliens megtekintése](/upgrades/get-involved/#clients).
+Az [Eth2 fejlesztéseket](/roadmap/beacon-chain/) új kliensek támogatják. A Beacon Chain-nen fognak futni és az új [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) konszenzus mechanizmust fogják támogatni.
 
 ## További olvasnivaló {#further-reading}
 

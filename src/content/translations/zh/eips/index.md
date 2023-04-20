@@ -14,7 +14,7 @@ lang: zh
 
 ## 为什么 EIP 很重要？ {#why-do-eips-matter}
 
-EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊中。 它们是人们提议、辩论和适应变化的途径。 有[各种不同种类的以太坊改进提案](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types)，其中包括涉及底层协议更改，影响共识并需要网络升级的核心以太坊改进提案，例如 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)，还有应用程序标准相关的以太坊意见征求，例如 [EIP-20](https://eips.ethereum.org/EIPS/eip-20) 和 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)。
+EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊中。 它们是人们提议、辩论和适应变化的途径。 有[各种不同种类的以太坊改进提案](https://eips.ethereum.org/EIPS/eip-1#eip-types)，其中包括涉及底层协议更改，影响共识并需要网络升级的核心以太坊改进提案，例如 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)，还有应用程序标准相关的以太坊意见征求，例如 [EIP-20](https://eips.ethereum.org/EIPS/eip-20) 和 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)。
 
 每个网络升级都包含一组 EIP，需要网络上每个 [以太坊客户端](/learn/#clients-and-nodes)来执行。 这就意味着要想在以太坊主网上与其他客户端保持共识，客户端开发者需要确保他们已经全部实现了必需的以太坊改进提案。
 

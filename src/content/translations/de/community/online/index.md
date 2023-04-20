@@ -30,11 +30,13 @@ Hunderttausende von Ethereum-Enthusiasten treffen sich in diesen Online-Foren, u
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - Web3-Creator-Community, wo Entwickler, industrielle Führer, und Ethereum Enthusiasten abhängen. Wir sind begeistert von Web3-Entwicklung, Design und Kultur. Kommen Sie mit uns bauen.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity-Gitter</Link> - Unterhaltungen über Solidity-Entwicklung (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity-Matrix</Link> - Unterhaltungen über Solidity-Entwicklung (Matrix)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _– Forum für Fragen und Antworten_</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _– dezentrales Forum für Fragen und Antworten_</SocialListItem>
 
 ## YouTube und Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Bleiben Sie auf dem Laufenden mit den neuesten Informationen der Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Offizielles Konto der Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> – offizielles Konto der Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - Das Portal zu Ethereum, für unsere wachsende globale Gemeinschaft geschaffen</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">Liste von einflussreichen Ethereum Twitter-Accounts</Link></SocialListItem>
 

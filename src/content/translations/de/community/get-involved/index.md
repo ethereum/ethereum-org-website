@@ -25,6 +25,7 @@ Haben Sie einen Hintergrund in Mathematik, kryptographie oder Wirtschaft? Vielle
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) – eine Reihe hochwertiger Forschungsprämien, bei denen Sie >100.000 USD verdienen können
 - [Ethresear.ch](https://ethresear.ch) – Ethereums primäres Forum für Forschung und das weltweit einflussreichste Forum für Kryptoökonomie
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) – Eine fortlaufende Q&A-Reihe mit Forschern. Während sich die weiteren Teile öffnen, können alle Fragen stellen.
 - [Wunschliste des Ethereum Ecosystem-Supportprogrramms](https://esp.ethereum.foundation/wishlist/) – Forschungsbereiche, für die das Ethereum Ecosystem-Supportprogramm aktiv Förderer sucht
 
 [Erkunden Sie mehr aktive Forschungsbereiche](/community/research/).
@@ -40,7 +41,7 @@ Wenn Sie kein Entwickler sind, ist es nicht ganz so einfach, herauszufinden, wo 
 ### Inhalte zu Ethereum verfassen {#write-content}
 
 - Ethereum braucht gute Autoren, die seinen Wert in einfacher Sprache erklären können.
-- Sie Sie noch nicht bereit, Ihre eigenen Artikel zu veröffentlichen? Sie könnten in Betracht ziehen, einen Beitrag zu den bestehenden Inhalten auf Community-Ressourcen wie [EthHub](https://docs.ethhub.io/) zu leisten oder neue Inhalte für ethereum.org vorzuschlagen.
+- Sie Sie noch nicht bereit, Ihre eigenen Artikel zu veröffentlichen? Sie könnten in Betracht ziehen, einen Beitrag zu den bestehenden Inhalten auf Community-Ressourcen zu leisten oder [neue Inhalte für ethereum.org vorzuschlagen](/contributing/).
 
 ### Protokollerstellung für Community-Gespräche anbieten {#take-notes}
 
@@ -99,6 +100,8 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 - [Jobs bei Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Jobs im Crypto Valley](https://cryptovalley.jobs/)
+- [Arbeitsplätze bei Ethereum](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Einer DAO beitreten {#decentralized-autonomous-organizations-daos}
 

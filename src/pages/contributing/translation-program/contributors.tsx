@@ -11,7 +11,7 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 import type { Context } from "../../../types"
 
@@ -22,7 +22,6 @@ import Translation from "../../../components/Translation"
 import PageMetadata from "../../../components/PageMetadata"
 
 // Utils
-import { translateMessageId } from "../../../utils/translations"
 import FeedbackCard from "../../../components/FeedbackCard"
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
@@ -34,7 +33,7 @@ const Contributors = ({
   data,
   location,
 }: PageProps<Queries.ContributorsPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   // TODO: Remove specific user checks once Acolad has updated their usernames
   const translatorData =
     data.allTimeData?.data?.flatMap(
@@ -73,13 +72,11 @@ const Contributors = ({
   return (
     <Flex direction="column" align="center" w="full">
       <PageMetadata
-        title={translateMessageId(
-          "page-contributing-translation-program-contributors-meta-title",
-          intl
+        title={t(
+          "page-contributing-translation-program-contributors-meta-title"
         )}
-        description={translateMessageId(
-          "page-contributing-translation-program-contributors-meta-description",
-          intl
+        description={t(
+          "page-contributing-translation-program-contributors-meta-description"
         )}
       />
 
@@ -157,7 +154,27 @@ const Contributors = ({
 export default Contributors
 
 export const query = graphql`
-  query ContributorsPage {
+  query ContributorsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: {
+          in: [
+            "page-contributing-translation-program-contributors"
+            "page-languages"
+            "common"
+          ]
+        }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     allTimeData: alltimeJson {
       data {
         user {

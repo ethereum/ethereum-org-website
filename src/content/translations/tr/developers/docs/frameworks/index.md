@@ -42,11 +42,6 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [Belgeler](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark -** **_Ethereum, IPFS ve Whisper ile entegre edilmiş bir geliştirme ortamı, test çerçevesi ve diğer araçlar._**
-
-- [Belgeler](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
 **Web3j -** **_JVM üzerinde blok zinciri uygulamaları geliştirmek için bir platform._**
 
 - [Ana Sayfa](https://www.web3labs.com/web3j-sdk)

@@ -150,7 +150,7 @@ Viceversa, le catene Plasma derivano la propria sicurezza dalla Rete principale.
 
 ### Plasma vs sharding {#plasma-vs-sharding}
 
-Sia le catene Plasma che le [shard chain](/upgrades/sharding/) pubblicano periodicamente prove crittografiche sulla Rete principale di Ethereum. Tuttavia, le due catene hanno proprietà di sicurezza diverse.
+Sia le catene Plasma che le [shard chain](/roadmap/danksharding/) pubblicano periodicamente prove crittografiche sulla Rete principale di Ethereum. Tuttavia, le due catene hanno proprietà di sicurezza diverse.
 
 Le shard chain inviano "intestazioni di collazione" alla Rete principale contenenti informazioni dettagliate su ogni frammento di dati. I nodi sulla Rete principale verificano e applicano la validità dei frammenti di dati, riducendo la possibilità di transazioni di shard non valide e proteggendo la rete dalle attività malevole.
 

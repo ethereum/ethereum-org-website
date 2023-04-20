@@ -97,7 +97,7 @@ See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more d
 
 ## Scaling and performance {#scaling-and-performance}
 
-Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include sharding the blockchain, danksharding, and using rollups. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
+Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include offloading transactions onto rollups and making them as cheap as possible using data blobs. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
 
 ### Layer 2 {#layer-2}
 
@@ -136,7 +136,6 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Background reading {#background-reading-4}
 
-- [Introduction to Ethereum sharding](/upgrades/sharding/)
 - [Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 - [Bankless Danksharding video](https://www.youtube.com/watch?v=N5p0TB77flM)
 - [Ethereum Sharding Research Compendium](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
@@ -217,7 +216,7 @@ To onboard more people onto Ethereum, the ecosystem must improve the UX/UI. This
 
 ### Economics {#economics}
 
-Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyse the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
+Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyze the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
 
 #### Background reading {#background-reading-9}
 
@@ -249,7 +248,7 @@ Blockspace markets govern the inclusion of end-user transactions, either directl
 
 ### Proof-of-stake incentives {#proof-of-stake-incentives}
 
-Validators use Ethereum's native asset (ether) as collateral against dishonest behaviour. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
+Validators use Ethereum's native asset (ether) as collateral against dishonest behavior. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
 
 #### Background reading {#background-reading-11}
 
