@@ -37,7 +37,6 @@ import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
-import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -195,8 +194,6 @@ const HomePage = ({
     setActiveCode(id)
     setModalOpen(true)
   }
-
-  useConsoleEasterEgg()
 
   const cards = [
     {
