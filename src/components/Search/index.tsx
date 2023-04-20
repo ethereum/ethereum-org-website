@@ -6,8 +6,12 @@ import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
+
 // Styles
 import "@docsearch/css"
+
+// Utils
+import { trackCustomEvent } from "../../utils/matomo"
 
 const Search: FC = () => {
   const searchButtonRef = React.useRef<HTMLButtonElement>(null)
@@ -44,7 +48,14 @@ const Search: FC = () => {
     <>
       <SearchButton
         ref={searchButtonRef}
-        onClick={onOpen}
+        onClick={() => {
+          onOpen()
+          trackCustomEvent({
+            eventCategory: "nav bar",
+            eventAction: "click",
+            eventName: "search open",
+          })
+        }}
         translations={{
           buttonText: t("search"),
           buttonAriaLabel: t("search"),
