@@ -1,6 +1,6 @@
 ---
 title: Padrões de token
-description: Token
+description:
 lang: pt-br
 incomplete: true
 ---
