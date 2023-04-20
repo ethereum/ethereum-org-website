@@ -24,7 +24,7 @@
   "language-en": "Anglais",
   "language-es": "Espagnol",
   "language-fa": "Farsi",
-  "language-fi": "Finlandais",
+  "language-fi": "Finnois",
   "language-fr": "Français",
   "language-gl": "Galicien",
   "language-gu": "Gujarati",
@@ -44,7 +44,7 @@
   "language-mr": "Marathi",
   "language-ms": "Malais",
   "language-nb": "Norvégien",
-  "language-nl": "Hollandais",
+  "language-nl": "Néerlandais",
   "language-ph": "Philippin",
   "language-pl": "Polonais",
   "language-pt": "Portugais",
@@ -60,8 +60,9 @@
   "language-ta": "Tamoul",
   "language-tr": "Turc",
   "language-uk": "Ukrainien",
+  "language-ur-in": "Ourdou (Inde)",
   "language-uz": "Ouzbek",
   "language-vi": "Vietnamien",
-  "language-zh": "Chinois Simplifié",
+  "language-zh": "Chinois simplifié",
   "language-zh-tw": "Chinois traditionnel"
 }
