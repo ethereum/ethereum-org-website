@@ -214,21 +214,21 @@ const WalletsPage = ({
             mt={{ lg: 0 }}
             maxWidth={{ lg: "100%" }}
           >
-            <p>
+            <Text>
               <Translation id="page-wallets-description" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-wallets-desc-2" />{" "}
-            </p>
-            <CardList content={guides} />
+            </Text>
+            <CardList content={guides} mb={{ base: 6, lg: 0 }} />
           </Box>
           <RightColumn>
-            <p>
+            <Text>
               <Translation id="page-wallets-desc-3" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-wallets-desc-4" />
-            </p>
+            </Text>
           </RightColumn>
         </TwoColumnContent>
         <Content>
@@ -418,11 +418,11 @@ const WalletsPage = ({
             alt={t("page-wallets-try-dapps-alt")}
             descriptionKey="page-wallets-try-dapps-desc"
           >
-            <div>
+            <Box>
               <ButtonLink to="/dapps/">
                 <Translation id="page-wallets-more-on-dapps-btn" />
               </ButtonLink>
-            </div>
+            </Box>
           </Callout>
         </CalloutCardContainer>
       </Content>
