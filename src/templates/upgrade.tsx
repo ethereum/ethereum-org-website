@@ -21,7 +21,9 @@ import {
   Text,
   TextProps,
   useToken,
+  Icon,
 } from "@chakra-ui/react"
+import { MdExpandMore } from "react-icons/md"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -29,7 +31,6 @@ import ButtonDropdown, {
 } from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
-import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
@@ -58,7 +59,7 @@ import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
-import { ChildOnlyProp, Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
@@ -418,7 +419,7 @@ const UpgradePage = ({
       </HeroContainer>
       <Show above={lgBreakpoint}>
         <MoreContent to="#content">
-          <Icon name="chevronDown" />
+          <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
         </MoreContent>
       </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
