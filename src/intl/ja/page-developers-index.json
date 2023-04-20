@@ -22,7 +22,7 @@
   "page-developers-evm-desc": "トランザクションを処理するコンピュータ",
   "page-developers-evm-link": "イーサリアム仮想マシン(EVM)",
   "page-developers-explore-documentation": "ドキュメントを探す",
-  "page-developers-feedback": "フィードバックがあれば、GitHubの問題経由またはDiscordサーバーでご連絡ください。",
+  "page-developers-feedback": "フィードバックがあれば、GitHubの問題経由またはDiscordサーバでご連絡ください。",
   "page-developers-frameworks-desc": "開発スピードを上げるためのツール",
   "page-developers-frameworks-link": "開発フレームワーク",
   "page-developers-fundamentals": "基本",
@@ -51,7 +51,7 @@
   "page-developers-meta-desc": "イーサリアム上でアプリケーションを開発するためのガイドやリソース、開発ツールなどを紹介します。",
   "page-developers-mev-desc": "最大抽出可能価値 (MEV)入門",
   "page-developers-mev-link": "最大抽出可能価値 (MEV)",
-  "page-developers-mining-desc": "新しいブロックが作成され、コンセンサスに達する方法",
+  "page-developers-mining-desc": "新しいブロックの作成方法と、プルーフ・オブ・ワーク(PoW)を用いてコンセンサスを得た方法",
   "page-developers-mining-link": "マイニング",
   "page-developers-mining-algorithms-desc": "イーサリアムのマイニング・アルゴリズムに関する情報",
   "page-developers-mining-algorithms-link": "マイニング・アルゴリズム",
@@ -92,6 +92,6 @@
   "page-developers-data-structures-and-encoding": "データ構造とエンコード",
   "page-developers-data-structures-and-encoding-link": "データ構造とエンコード",
   "page-developers-data-structures-and-encoding-desc": "イーサリアムスタックで使用されるデータ構造とエンコーディングスキーマ入門",
-  "alt-eth-blocks": "ETHの記号のように構成されているブロックの図",
-  "page-assets-doge": "Dogeはdappsを使っている"
+  "alt-eth-blocks": "ETHのシンボルのように構成されたブロックの図",
+  "page-assets-doge": "分散型アプリ(Dapp)を使用しているドージ画像"
 }
