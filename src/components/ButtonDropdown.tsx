@@ -137,7 +137,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
     >
       <Button
         variant="outline"
-        minW={{ base: "100%", lg: "240" }}
+        w="full"
         leftIcon={<MdMenu />}
         onClick={() => setIsOpen(!isOpen)}
         onKeyDown={onKeyDownHandler}
