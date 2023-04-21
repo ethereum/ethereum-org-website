@@ -60,6 +60,7 @@ const EditorsChoice = (props: FlexProps) => (
     color="text"
     p={8}
     mb={8}
+    {...props}
   />
 )
 
