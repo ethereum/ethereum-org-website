@@ -1,6 +1,7 @@
 import * as React from "react"
-import { Select as SelectComponent, VStack } from "@chakra-ui/react"
+import { VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+import SelectComponent from "./"
 
 const selectData = [
   { label: "Ethereum", value: "eth" },
@@ -22,23 +23,15 @@ type Story = StoryObj<SelectType>
 export const Select: Story = {
   args: {
     minW: "223px",
+    options: selectData,
+    onChange(selectedOption) {
+      console.log(selectedOption)
+    },
   },
   render: (args) => (
     <VStack spacing={8}>
-      <SelectComponent {...args}>
-        {selectData.map(({ label, value }) => (
-          <option key={value} value={value}>
-            {label}
-          </option>
-        ))}
-      </SelectComponent>
-      <SelectComponent variant="flushed" {...args}>
-        {selectData.map(({ label, value }) => (
-          <option key={value} value={value}>
-            {label}
-          </option>
-        ))}
-      </SelectComponent>
+      <SelectComponent {...args} />
+      <SelectComponent variant="flushed" {...args} />
     </VStack>
   ),
 }
