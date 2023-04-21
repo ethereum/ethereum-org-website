@@ -1,50 +1,31 @@
 // Libraries
-import React, { ReactNode, useState } from "react"
+import React, { ReactNode } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
-import ButtonLink from "../ButtonLink"
-import Icon from "../Icon"
-import Link from "../Link"
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import Tooltip from "../Tooltip"
-import Translation from "../Translation"
+import ButtonLink from "../../ButtonLink"
+import Icon from "../../Icon"
+import Link from "../../Link"
+import { StyledSelect as Select } from "../../SharedStyledComponents"
+import Tooltip from "../../Tooltip"
+import Translation from "../../Translation"
 
 // Data
-import walletFilterData from "../../data/wallets/wallet-filters"
+import walletFilterData from "../../../data/wallets/wallet-filters"
 
 // Icons
 import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
-} from "../icons/staking"
-import {
-  BuyCryptoIcon,
-  ConnectDappsIcon,
-  EIP1559Icon,
-  ENSSupportIcon,
-  ERC20SupportIcon,
-  GasFeeCustomizationIcon,
-  HardwareSupportIcon,
-  Layer2Icon,
-  MultisigIcon,
-  NFTSupportIcon,
-  NonCustodialIcon,
-  OpenSourceWalletIcon,
-  RPCImportingIcon,
-  SocialRecoverIcon,
-  StakingIcon,
-  SwapIcon,
-  WalletConnectIcon,
-  WithdrawCryptoIcon,
-} from "../icons/wallets"
+} from "../../icons/staking"
 
 // Utils
-import { trackCustomEvent } from "../../utils/matomo"
-import { getImage } from "../../utils/image"
+import { trackCustomEvent } from "../../../utils/matomo"
+import { getImage } from "../../../utils/image"
+import { useWalletTable } from "./useWalletTable"
 
 // Styles
 const Container = styled.table`
@@ -470,291 +451,33 @@ export interface DropdownOption {
   icon: ReactNode
 }
 
-type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
-
 // Constants
 const firstCol = "firstCol"
 const secondCol = "secondCol"
 const thirdCol = "thirdCol"
 
-const WalletTable = ({ data, filters, walletData }) => {
+export interface WalletTableProps {
+  data: Record<string, any>
+  filters: Record<string, boolean>
+  walletData: WalletData[]
+}
+
+const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
   const { t } = useTranslation()
-  const featureDropdownItems: Array<DropdownOption> = [
-    {
-      label: t("page-find-wallet-open-source"),
-      value: t("page-find-wallet-open-source"),
-      filterKey: "open_source",
-      category: "security",
-      icon: <OpenSourceWalletIcon />,
-    },
-    {
-      label: t("page-find-wallet-self-custody"),
-      value: t("page-find-wallet-self-custody"),
-      filterKey: "non_custodial",
-      category: "security",
-      icon: <NonCustodialIcon />,
-    },
-    {
-      label: t("page-find-wallet-hardware-wallet-support"),
-      value: t("page-find-wallet-hardware-wallet-support"),
-      filterKey: "hardware_support",
-      category: "feature",
-      icon: <HardwareSupportIcon />,
-    },
-    {
-      label: t("page-find-wallet-walletconnect"),
-      value: t("page-find-wallet-walletconnect"),
-      filterKey: "walletconnect",
-      category: "feature",
-      icon: <WalletConnectIcon />,
-    },
-    {
-      label: t("page-find-wallet-rpc-importing"),
-      value: t("page-find-wallet-rpc-importing"),
-      filterKey: "rpc_importing",
-      category: "feature",
-      icon: <RPCImportingIcon />,
-    },
-    {
-      label: t("page-find-wallet-nft-support"),
-      value: t("page-find-wallet-nft-support"),
-      filterKey: "nft_support",
-      category: "feature",
-      icon: <NFTSupportIcon />,
-    },
-    {
-      label: t("page-find-wallet-connect-to-dapps"),
-      value: t("page-find-wallet-connect-to-dapps"),
-      filterKey: "connect_to_dapps",
-      category: "feature",
-      icon: <ConnectDappsIcon />,
-    },
-    {
-      label: t("page-find-wallet-staking"),
-      value: t("page-find-wallet-staking"),
-      filterKey: "staking",
-      category: "feature",
-      icon: <StakingIcon />,
-    },
-    {
-      label: t("page-find-wallet-swaps"),
-      value: t("page-find-wallet-swaps"),
-      filterKey: "swaps",
-      category: "feature",
-      icon: <SwapIcon />,
-    },
-    {
-      label: t("page-find-wallet-layer-2"),
-      value: t("page-find-wallet-layer-2"),
-      filterKey: "layer_2",
-      category: "feature",
-      icon: <Layer2Icon />,
-    },
-    {
-      label: t("page-find-wallet-gas-fee-customization"),
-      value: t("page-find-wallet-gas-fee-customization"),
-      filterKey: "gas_fee_customization",
-      category: "feature",
-      icon: <GasFeeCustomizationIcon />,
-    },
-    {
-      label: t("page-find-wallet-ens-support"),
-      value: t("page-find-wallet-ens-support"),
-      filterKey: "ens_support",
-      category: "feature",
-      icon: <ENSSupportIcon />,
-    },
-    {
-      label: t("page-find-wallet-token-importing"),
-      value: t("page-find-wallet-token-importing"),
-      filterKey: "erc_20_support",
-      category: "feature",
-      icon: <ERC20SupportIcon />,
-    },
-    {
-      label: t("page-find-wallet-fee-optimization"),
-      value: t("page-find-wallet-fee-optimization"),
-      filterKey: "eip_1559_support",
-      category: "feature",
-      icon: <EIP1559Icon />,
-    },
-    {
-      label: t("page-find-wallet-buy-crypto"),
-      value: t("page-find-wallet-buy-crypto"),
-      filterKey: "buy_crypto",
-      category: "trade_and_buy",
-      icon: <BuyCryptoIcon />,
-    },
-    {
-      label: t("page-find-wallet-sell-for-fiat"),
-      value: t("page-find-wallet-sell-for-fiat"),
-      filterKey: "withdraw_crypto",
-      category: "trade_and_buy",
-      icon: <WithdrawCryptoIcon />,
-    },
-    {
-      label: t("page-find-wallet-multisig"),
-      value: t("page-find-wallet-multisig"),
-      filterKey: "multisig",
-      category: "smart_contract",
-      icon: <MultisigIcon />,
-    },
-    {
-      label: t("page-find-wallet-social-recovery"),
-      value: t("page-find-wallet-social-recovery"),
-      filterKey: "social_recovery",
-      category: "smart_contract",
-      icon: <SocialRecoverIcon />,
-    },
-  ]
-
-  const [walletCardData, setWalletData] = useState(
-    walletData.map((wallet) => {
-      return { ...wallet, moreInfo: false, key: wallet.image_name }
-    })
-  )
-  const [firstFeatureSelect, setFirstFeatureSelect] = useState(
-    featureDropdownItems[14]
-  )
-  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
-    featureDropdownItems[1]
-  )
-  const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
-    featureDropdownItems[9]
-  )
-
-  const updateMoreInfo = (key) => {
-    const temp = [...walletCardData]
-
-    for (const [idx, wallet] of temp.entries()) {
-      if (wallet.key === key) {
-        temp[idx].moreInfo = !temp[idx].moreInfo
-        break
-      }
-    }
-
-    setWalletData(temp)
-  }
-
-  const filteredWallets = walletCardData.filter((wallet) => {
-    let showWallet = true
-    let mobileCheck = true
-    let desktopCheck = true
-    let browserCheck = true
-    let hardwareCheck = true
-
-    const featureFilterKeys = featureDropdownItems.map((item) => item.filterKey)
-    const deviceFilters = Object.entries(filters).filter(
-      (item) => !featureFilterKeys.includes(item[0])
-    )
-    const mobileFiltersTrue = deviceFilters
-      .filter((item) => item[0] === "ios" || item[0] === "android")
-      .filter((item) => item[1])
-      .map((item) => item[0])
-    const desktopFiltersTrue = deviceFilters
-      .filter(
-        (item) =>
-          item[0] === "linux" || item[0] === "windows" || item[0] === "macOS"
-      )
-      .filter((item) => item[1])
-      .map((item) => item[0])
-    const browserFiltersTrue = deviceFilters
-      .filter((item) => item[0] === "firefox" || item[0] === "chromium")
-      .filter((item) => item[1])
-      .map((item) => item[0])
-    const hardwareFiltersTrue = deviceFilters
-      .filter((item) => item[0] === "hardware")
-      .filter((item) => item[1])
-      .map((item) => item[0])
-
-    for (let item of mobileFiltersTrue) {
-      if (wallet[item]) {
-        mobileCheck = true
-        break
-      } else {
-        mobileCheck = false
-      }
-    }
-
-    for (let item of desktopFiltersTrue) {
-      if (wallet[item]) {
-        desktopCheck = true
-        break
-      } else {
-        desktopCheck = false
-      }
-    }
-
-    for (let item of browserFiltersTrue) {
-      if (wallet[item]) {
-        browserCheck = true
-        break
-      } else {
-        browserCheck = false
-      }
-    }
-
-    for (let item of hardwareFiltersTrue) {
-      if (wallet[item]) {
-        hardwareCheck = true
-        break
-      } else {
-        hardwareCheck = false
-      }
-    }
-
-    featureFilterKeys.forEach((filter) => {
-      if (filters[filter] && showWallet === true) {
-        showWallet = filters[filter] === wallet[filter]
-      }
-    })
-
-    return (
-      mobileCheck && desktopCheck && browserCheck && hardwareCheck && showWallet
-    )
-  })
-
-  const filteredFeatureDropdownItems = [...featureDropdownItems].filter(
-    (item) => {
-      return (
-        item.label !== firstFeatureSelect.label &&
-        item.label !== secondFeatureSelect.label &&
-        item.label !== thirdFeatureSelect.label
-      )
-    }
-  )
-
-  /**
-   *
-   * @param selectedOption selected dropdown option
-   * @param stateUpdateMethod method for updating state for dropdown
-   * @param className className of column
-   *
-   * This method gets the elements with the className, adds a fade class to fade icons out, after 0.5s it will then update state for the dropdown with the selectedOption, and then remove the fade class to fade the icons back in. Then it will send a matomo event for updating the dropdown.
-   */
-  const updateDropdown = (
-    selectedOption: DropdownOption,
-    stateUpdateMethod: Function,
-    className: ColumnClassName
-  ) => {
-    const domItems: HTMLCollectionOf<Element> =
-      document.getElementsByClassName(className)
-    for (let item of domItems) {
-      item.classList.add("fade")
-    }
-    setTimeout(() => {
-      stateUpdateMethod(selectedOption)
-      for (let item of domItems) {
-        item.classList.remove("fade")
-      }
-    }, 375)
-
-    trackCustomEvent({
-      eventCategory: "WalletFeatureCompare",
-      eventAction: `Select WalletFeatureCompare`,
-      eventName: `${selectedOption.filterKey} selected`,
-    })
-  }
+  const {
+    featureDropdownItems,
+    filteredFeatureDropdownItems,
+    filteredWallets,
+    setFirstFeatureSelect,
+    setSecondFeatureSelect,
+    setThirdFeatureSelect,
+    updateDropdown,
+    updateMoreInfo,
+    firstFeatureSelect,
+    secondFeatureSelect,
+    thirdFeatureSelect,
+    walletCardData,
+  } = useWalletTable({ filters, t, walletData })
 
   const WalletMoreInfo = ({ wallet, filters, idx }) => {
     const walletHasFilter = (filterKey) => {
@@ -1061,7 +784,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                             eventCategory: "WalletExternalLinkList",
                             eventAction: `Go to wallet`,
                             eventName: `${wallet.name} ${idx}`,
-                            eventValue: filters,
+                            eventValue: JSON.stringify(filters),
                           }}
                         >
                           <Icon name="webpage" size={"1.5rem"} color />
@@ -1074,7 +797,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
                               eventName: `${wallet.name} ${idx}`,
-                              eventValue: filters,
+                              eventValue: JSON.stringify(filters),
                             }}
                           >
                             <Icon name="twitter" size={"1.5rem"} color />
@@ -1088,7 +811,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
                               eventName: `${wallet.name} ${idx}`,
-                              eventValue: filters,
+                              eventValue: JSON.stringify(filters),
                             }}
                           >
                             <Icon name="discord" size={"1.5rem"} color />
