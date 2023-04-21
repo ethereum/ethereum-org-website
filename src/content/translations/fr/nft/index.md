@@ -14,7 +14,7 @@ summaryPoint3: Propulsés par des contrats intelligents sur la blockchain Ethere
 
 Les NFT révolutionnent actuellement le monde de l'art numérique et des objets de collection. La vie des artistes numériques est bouleversée avec les ventes énormes à un nouveau public crypto. Et les célébrités se joignent à elles car elles voient là une nouvelle occasion de se rapprocher de leurs fans. Mais l'art numérique n'est qu'une façon d'utiliser les NFT. Ils peuvent être utilisés pour attester de la propriété de n'importe quel actif unique, à l'instar d'un acte de propriété d'un objet dans la sphère numérique ou physique.
 
-Si Andy Warhol était né à la fin des années 90, il aurait probablement créé sa Campbell's Soup sous forme de NFT. Ce n'est qu'une question de temps avant que Kanye ne lance une paire de baskets Yeezys sur Ethereum. Les NFT pourraient, demain, vous permettre de prouver que vous êtes bien le propriétaire de votre voiture.
+Si Andy Warhol était né à la fin des années 90, il aurait probablement créé sa Campbell's Soup sous forme de NFT. Ce n'est qu'une question de temps avant que Nike ne lance une paire de baskets Jordan sur Ethereum. Les NFT pourraient, demain, vous permettre de prouver que vous êtes bien le propriétaire de votre voiture.
 
 ## Qu'est-ce qu'un NFT ? {#what-are-nfts}
 
