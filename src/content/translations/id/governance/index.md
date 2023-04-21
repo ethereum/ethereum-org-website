@@ -154,7 +154,7 @@ Sekalipun pengembangan spesifikasi dan implementasinya selalu sepenuhnya merupak
 
 Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelola untuk mengusulkan perubahan akan diselaraskan. Proses untuk mengimplementasikan penggabungan ini [sudah dimulai](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Selengkapnya tentang penggabungan
 </ButtonLink>
 

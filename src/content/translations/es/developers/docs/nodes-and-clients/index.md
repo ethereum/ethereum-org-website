@@ -243,9 +243,7 @@ Como cualquier otra configuración, puede establecerse con un parámetro de inic
 
 ## Clientes de consenso (anteriormente, clientes Eth2) {#consensus-clients}
 
-Existen múltiples clientes de consenso (antes conocidos como clientes "Eth2") que respaldan las [actualizaciones de conseso](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[Ver clientes de consenso](/upgrades/get-involved/#clients).
+Existen múltiples clientes de consenso (antes conocidos como clientes "Eth2") que respaldan las [actualizaciones de conseso](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | Cliente                                                     | Idioma     | Sistemas operativos   | Redes                                     |
 | ----------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------- |

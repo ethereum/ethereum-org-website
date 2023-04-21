@@ -72,7 +72,7 @@ Plasma 使用在以太坊上运行的主合约来处理用户的入口和出口�
 
 ### 争议仲裁 {#dispute-arbitration}
 
-与任何区块链一样，plasma 链需要一种机制来确保交易的完整性，以防参与者开始恶意行为（例如，两倍支出资金）。 为此，plasma 链使用欺诈证明来仲裁有关状态转换有效性的争议并惩罚不良行为。
+与任何区块链一样，Plasma 链需要一种机制确保交易的完整性，防止参与者的恶意行为（例如，资金双重支付）。 为此，plasma 链使用欺诈证明来仲裁有关状态转换有效性的争议并惩罚不良行为。 欺诈证明可作为一种机制，Plasma 子链通过它向父链或根链提出申诉。
 
 欺诈证明只是声称特定状态转换无效。 例如，如果用户 (Alice) 尝试两次花费相同的资金。 也许她在与 Bob 的交易中花费了未花费的交易输出，并希望在另一笔交易中花费相同的未花费的交易输出（现在是 Bob 的）。
 
@@ -150,7 +150,7 @@ Plasma、侧链、分片技术有一定的相似度，因为它们都以某种�
 
 ### Plasma 与分片 {#plasma-vs-sharding}
 
-Plasma 链和[分片链](/upgrades/sharding/)都会定期向以太坊主网发布加密证明。 但是，两者具有不同的安全属性。
+Plasma 链和[分片链](/roadmap/danksharding/)都会定期向以太坊主网发布加密证明。 但是，两者具有不同的安全属性。
 
 分片链向主网提交“汇总头”，其中包含有关每个数据分片的详细信息。 主网上的节点验证和执行数据分片的有效性，减少无效分片转换的可能性并防止网络上出现恶意活动。
 
@@ -167,11 +167,10 @@ Plasma 不同于此，因为主网只接收最少量的子链状态信息。 这
 
 ## 延伸阅读 {#further-reading}
 
-- [Plasma 上的 EthHub](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [学习 Plasma](https://www.learnplasma.org/en/)
 - [关于何为“共享安全”以及它为何如此重要的简单提示](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [侧链、Plasma 与分片](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
-- [了解 Plasma，第一部分：基本概念](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
-- [Plasma 的生与死](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
+- [了解 Plasma（第一部分）：基础知识](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
+- [Plasma 的一生](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

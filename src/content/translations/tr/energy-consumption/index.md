@@ -22,13 +22,13 @@ Ethereum başlangıçtan itibaren iş ispatını kullandı. İş ispatından his
 
 ## Hisse ispatı {#proof-of-stake}
 
-Ethereum için daha yeşil bir gelecek, şu anda zaten bir [**hisse ispatı (PoS)** zinciri](/upgrades/beacon-chain/) şeklinde inşa ediliyor. [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/) altında, saymaca yapbozlar çözmek gereksizdir. Yapboz çözümünün kaldırılması ağı korumak için gereken enerji miktarını büyük miktarda azaltmaktadır. Madencilerin yerini, aynı fonksiyonu gerçekleştiren ama varlıklarını hesaplama işi aracılığıyla tüketmek yerine sahtekâr davranışlara karşı teminat olarak ETH stake eden doğrulayıcılar alır. Eğer doğrulayıcı tembelse (doğrulayıcı görevini yerine getirmesi gerekirken çevrimdışıysa) stake ettikleri ETH yavaşça tükenebilir, bu sırada kanıtlanabilir biçimde sahtekâr davranışlar, stake edilmiş varlıkların "kesilmesi" ile sonuçlanır. Bu, ağı korumak için aktif ve dürüst katılımı fazlasıyla teşvik eder.
+Ethereum için daha yeşil bir gelecek, şu anda zaten bir [**hisse ispatı (PoS)** zinciri](/roadmap/beacon-chain/) şeklinde inşa ediliyor. [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/) altında, saymaca yapbozlar çözmek gereksizdir. Yapboz çözümünün kaldırılması ağı korumak için gereken enerji miktarını büyük miktarda azaltmaktadır. Madencilerin yerini, aynı fonksiyonu gerçekleştiren ama varlıklarını hesaplama işi aracılığıyla tüketmek yerine sahtekâr davranışlara karşı teminat olarak ETH stake eden doğrulayıcılar alır. Eğer doğrulayıcı tembelse (doğrulayıcı görevini yerine getirmesi gerekirken çevrimdışıysa) stake ettikleri ETH yavaşça tükenebilir, bu sırada kanıtlanabilir biçimde sahtekâr davranışlar, stake edilmiş varlıkların "kesilmesi" ile sonuçlanır. Bu, ağı korumak için aktif ve dürüst katılımı fazlasıyla teşvik eder.
 
 İş ispatına benzer bir şekilde, kötü niyetli bir oluşum [%51 saldırısı](/glossary/#51-attack) gerçekleştirebilmek için ağda stake edilmiş ETH'nin en az %51'ine ihtiyaç duyar. Ancak, başarısız bir saldırıdaki potansiyel kaybın sadece madencilik yapmak için gereken hash gücünü yaratma maliyeti olduğu iş ispatının aksine hisse ispatında, bir saldırıda olabilecek muhtemel kayıp, teminat olarak kullanılan tüm ETH miktarıdır. Bu caydırıcı yapı, hisse ispatı ile ağ güvenliğine olanak sağlar ve saymaca hesaplamalarla tüketilen enerjiye duyulan ihtiyacı yok eder. Hisse ispatı altında ağ güvenliği hakkında detaylı açıklamalara [buradan](/developers/docs/consensus-mechanisms/pos/) ve [buradan](https://vitalik.ca/general/2017/12/31/pos_faq.html) erişebilirsiniz.
 
 ## Birleştirme {#the-merge}
 
-Hisse ispatı protokolünün uygulanabilirliğini gösteren [İşaret Zinciri](/upgrades/beacon-chain/) isimli fonksiyonel hisse ispatı zinciri, Aralık 2020'den beri çalışmaktadır. Birleştirme, Ethereum'un iş ispatını geride bıraktığı ve hisse ispatını tamamen benimsediği zamandır. Birleşmenin 2022'nin üçüncü veya dördüncü çeyreğinde gerçekleşmesi bekleniyor. [Birleştirme hakkında daha fazla bilgi](/upgrades/merge/).
+Hisse ispatı protokolünün uygulanabilirliğini gösteren [İşaret Zinciri](/roadmap/beacon-chain/) isimli fonksiyonel hisse ispatı zinciri, Aralık 2020'den beri çalışmaktadır. Birleştirme, Ethereum'un iş ispatını geride bıraktığı ve hisse ispatını tamamen benimsediği zamandır. Birleşmenin 2022'nin üçüncü veya dördüncü çeyreğinde gerçekleşmesi bekleniyor. [Birleştirme hakkında daha fazla bilgi](/roadmap/merge/).
 
 ## Hisse ispatı enerji harcaması {#proof-of-stake-energy}
 
@@ -76,9 +76,9 @@ Ethereum'un enerji tüketimi tarihsel olarak önemli olsa da, enerjiye aç bir b
 ## İlgili konular {#related-topics}
 
 - [Ethereum'un vizyonu](/roadmap/vision/)
-- [İşaret Zinciri](/upgrades/beacon-chain)
-- [Birleştirme](/upgrades/merge/)
-- [Parçalama](/upgrades/beacon-chain/)
+- [İşaret Zinciri](/roadmap/beacon-chain)
+- [Birleştirme](/roadmap/merge/)
+- [Parçalama](/roadmap/beacon-chain/)
 
 ### Dipnotlar ve kaynaklar {#footnotes-and-sources}
 

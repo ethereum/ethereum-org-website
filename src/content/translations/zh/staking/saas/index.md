@@ -22,23 +22,16 @@ summaryPoints:
 以太坊协议本身并不支持质押委托，于是这类服务便为了满足这一需求而建。 如果你有 32 个以太币需要质押，但是没有合适的硬件设备，那么质押即服务可以使你在使用运营商硬件设施的同时获得区块奖励。
 
 <CardGrid>
-  <Card title="你自己的验证者" emoji=":desktop_computer:">
-    存入 32 个以太币后，可以激活你的一组签名密钥，这些密钥将参与以太坊共识。 你可以使用仪表板监控您的以太币奖励累积情况。
-  </Card>
-  <Card title="简单起步" emoji="🏁">
-    在整个过程中你不需要关注硬件规格、设置、节点维护和升级。
-    质押即服务提供商让你可以使用他们的硬件设施，只要你上传自己的签名凭证，允许他们代表你运行验证者，而你仅需支付较低的费用。
-  </Card>
-  <Card title="限制你的风险" emoji=":shield:">
-    在大多数情况下，用户无需放弃掌控能够提取或转移质押资金的密钥。 这些密钥不同于签名密钥，它们可以分开存储从而降低（但不是消除）你作为质押人的风险。
-  </Card>
+  <Card title="你自己的验证者" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="简单起步" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you to outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
+  <Card title="限制你的风险" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
 
 ## 需考虑事项 {#what-to-consider}
 
-为了满足你质押以太币的需求，出现了越来越多的质押即服务提供商，每位提供商都能带来不同的风险与优势。
+为了满足人们质押以太币的需求，质押即服务提供商的数量不断增长，但每位提供商的优势与风险不尽相同。 你应该考虑到，相比于自行质押，所有质押即服务方案都需要进一步的信任假设。 质押即服务方案可能使用更多代码包装以太坊客户端，而且这些代码未公开且不可审计。 质押即服务还会对网络去中心化造成有害影响。 取决于设置情况，你可能无法控制自己的验证者 - 运营者在使用你的以太币时可能会缺失诚信。
 
 下列属性指标可以用来衡量市场上质押即服务供应商的优势或劣势。 在选择帮你度过质押之旅的服务时，请使用本节作为参考，了解我们如何定义这些属性。
 
@@ -69,19 +62,31 @@ summaryPoints:
 </ExpandableCard>
 
 <ExpandableCard title="为什么有两套密钥？" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-由此可见， 每个账户都由<em>签名</em>密钥和<em>提现</em>密钥组成。 为了让验证者证明链的状态、参与同步委员会并提出区块建议，签名密钥必须易于验证者客户端访问。 为此签名密钥必须以某种形式与互联网连接，所以它们本质上被认为是“热”密钥。 这是验证者能够参与证明的必要条件，因此，出于安全原因，用于转移或提取资金的密钥是单独分开的。
+由此可见， 每个帐户都由 BLS <em>签名</em>密钥和 BLS <em>提款</em>密钥组成。 为了让验证者证明链的状态、参与同步委员会并提出区块建议，签名密钥必须易于验证者客户端访问。 为此签名密钥必须以某种形式与互联网连接，所以它们本质上被认为是“热”密钥。 这是验证者能够参与证明的必要条件，因此，出于安全原因，用于转移或提取资金的密钥是单独分开的。
 
-所有这些密钥都可以通过使用你的 24 字助记词恢复。 <em>请确保你安全地备份了助记词，否则当你提现时，可能无法生成提现密钥</em>。
+BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资金应该转入哪个执行层帐户。 在该信息广播后，不再需要 <em>BLS 提款</em>密钥。 然而，已提取资金的控制权将永久委托给你提供的地址。 因此，你可以设置一个用自己的冷存储保护的提款地址，即使有人控制了你的验证者签名密钥，也可以最大程度降低验证者资金的风险。
+
+上海升级后，更新提款凭据是进行提款的必需步骤。 此过程包括使用自己的助记词生成提款密钥。 <em>确保安全备份了该助记词，否则在需要时你将无法生成提款密钥。</em>
+
+提供了提款地址和初始存款的质押人不需要设置此项。 如需有关准备验证者方面的支持，请联系你的质押即服务提供商。
 </ExpandableCard>
 
 <ExpandableCard title="我什么时候可以提现？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  将 32 个以太币质押给质押即服务提供商时，你的以太币依然存入官方的质押存款合约中。 因此，目前使用质押即服务的质押人受到和单独质押的用户同样的提现限制。 这意味着质押以太币目前是单向存款。 这种情况将一直持续到上海升级为止。
+将 32 个以太币质押给质押即服务提供商时，你的以太币依然存入官方质押存款合约中。 因此，质押即服务质押人受到与单独质押人相同的提款限制，而且在上海升级之前不支持提款。
+
+质押提款将在即将进行的上海升级中实现，上海升级预计将于 2023 年第一季度/第二季度实施。 之后，质押人需要提供一个提款地址（如果在初始存款时没有提供），将开始每隔几天定期自动分发奖励付款。
+
+这也会让退出的资金解锁。 验证者能够以验证者身份完全退出，他们将在提供的提款地址中收到全部余额。
+
+<ButtonLink to="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="如果我遭到罚没，会发生什么？" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 使用质押即服务提供商，你需要将节点运营委托给别人。 这伴随着一些你不能控制的节点性能不佳的风险。 如果你的验证者受到罚没，你的验证者余额将因处罚而遭受损失，验证者也将从验证者池中强行移除。 这些资金将被锁定，直到协议层的提款功能得到实现。
 
-请联系你的质押即服务提供商，了解关于担保或保险方案的更多细节。 如果你想完全控制你的验证者设置，<a href="/staking/solo/">请详细了解如何单独质押以太币</a>。
+即将到来的上海升级带来了提款功能，需要提供提款地址才能启用该功能。 提款地址可能已在初次存款时提供。 如果未提供，那么在升级上线后，就需要使用验证者签名密钥对声明提款地址的信息进行签名。
+
+有关任何担保或保险方案的详细信息，以及如何提供提款地址的说明，请联系各质押即服务提供商。 如果你想完全控制你的验证者设置，<a href="/staking/solo/">请详细了解如何单独质押以太币</a>。
 </ExpandableCard>
 
 ## 延伸阅读 {#further-reading}

@@ -30,9 +30,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 ## Középhaladó cikkek {#intermediate-articles}
 
-- [Rust-Web3 dokumentáció](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 működő példák](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## Fejlett használati minták {#advanced-use-patterns}
 
 - [pwasm_ethereum externs library Ethereum-szerű hálózatokkal való interakciókhoz](https://github.com/openethereum/pwasm-ethereum)
@@ -49,7 +46,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum virtuális gép implementáció_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust kliens_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _A Web3.js könyvtár Rust implementációja_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet okos szerződés Rust-ban_
 
 Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt

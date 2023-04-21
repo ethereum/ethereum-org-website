@@ -216,15 +216,59 @@
     "toPath": "/en/roadmap/danksharding/"
   },
   {
+    "fromPath": "/upgrades/merge",
+    "toPath": "/en/roadmap/merge/"
+  },
+  {
+    "fromPath": "/*/upgrades/merge",
+    "toPath": "/:splat/roadmap/merge/"
+  },
+  {
+    "fromPath": "/upgrades/merge/issuance",
+    "toPath": "/en/roadmap/merge/issuance"
+  },
+  {
+    "fromPath": "/*/upgrades/merge/issuance",
+    "toPath": "/:splat/roadmap/merge/issuance"
+  },
+  {
+    "fromPath": "/upgrades/beacon-chain",
+    "toPath": "/en/roadmap/beacon-chain"
+  },
+  {
+    "fromPath": "/*/upgrades/beacon-chain",
+    "toPath": "/:splat/roadmap/beacon-chain"
+  },
+  {
+    "fromPath": "/upgrades/vision/",
+    "toPath": "/en/roadmap/vision/"
+  },
+  {
+    "fromPath": "/*/upgrades/vision/",
+    "toPath": "/:splat/roadmap/vision/"
+  },
+  {
+    "fromPath": "/upgrades",
+    "toPath": "/en/roadmap"
+  },
+  {
+    "fromPath": "/*/upgrades",
+    "toPath": "/:splat/roadmap"
+  },
+  {
+    "fromPath": "/upgrades/get-involved",
+    "toPath": "/contributing"
+  },
+  {
+    "fromPath": "/*/upgrades/get-involved",
+    "toPath": "/:splat/contributing"
+  },
+  {
     "fromPath": "/*/eth2/staking/",
     "toPath": "/:splat/staking/"
   },
   {
     "fromPath": "/*/eth2/vision/",
-    "toPath": "/:splat/roadmap/vision/"
-  },
-  {
-    "fromPath": "/*/upgrades/vision/",
     "toPath": "/:splat/roadmap/vision/"
   },
   {

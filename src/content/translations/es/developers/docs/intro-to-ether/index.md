@@ -18,7 +18,7 @@ La primera criptomoneda fue Bitcoin, creada por Satoshi Nakamoto. Desde el lanza
 
 ## ¿Qué es el ether? {#what-is-ether}
 
-**Ether (ETH)** es la criptomoneda que se utiliza para llevar a cabo multitud de acciones en la red Ethereum. Fundamentalmente, es la única forma de pago aceptable para las tarifas de transacción, y después de [The Merge](/upgrades/merge), se requerirá ether para validar y proponer bloques en Mainnet. Ether también se utiliza como forma principal de garantía en los mercados de préstamos de la [DeFi](/defi), como una unidad de cuenta en los mercados de NFT, como pago recibido por la prestación de servicios o la venta de bienes en el mundo real, y para muchas otras cosas.
+**Ether (ETH)** es la criptomoneda que se utiliza para llevar a cabo multitud de acciones en la red Ethereum. Fundamentalmente, es la única forma de pago aceptable para las tarifas de transacción, y después de [The Merge](/roadmap/merge), se requerirá ether para validar y proponer bloques en Mainnet. Ether también se utiliza como forma principal de garantía en los mercados de préstamos de la [DeFi](/defi), como una unidad de cuenta en los mercados de NFT, como pago recibido por la prestación de servicios o la venta de bienes en el mundo real, y para muchas otras cosas.
 
 Ethereum le permite a los desarrolladores crear [**aplicaciones descentralizadas (dapps)**](/developers/docs/dapps), las cuales comparten un conjunto de energía de computación. Este grupo compatido es finito, por lo que Ethereum necesita un mecanismo para determinar quién lo puede utilizar. De lo contrario, una dapp podría consumir todos los recursos de la red de manera accidental o maliciosa, con lo que se bloquearía el acceso a los demás.
 

@@ -8,7 +8,7 @@ Il valore estraibile massimo (MEV) si riferisce al valore massimo che può esser
 
 ### Valore estraibile dal miner {#miner-extractable-value}
 
-Il valore estraibile massimo fu applicato per la prima volta nel contesto del [proof-of-work](/developers/docs/consensus-mechanisms/pow/) e fu inizialmente definito come "valore estraibile dal miner". Questo perché nel Proof of Work i miner controllano l'inclusione, l'esclusione e l'ordinamento della transazione. Tuttavia, a partire dalla transizione al proof-of-stake tramite [La Fusione](/upgrades/merge), i validatori sono responsabili di tali ruoli e il mining non è più parte del protocollo di Ethereum. I metodi d'estrazione del valore però esistono ancora, quindi il termine usato adesso è invece "Valore estraibile massimo".
+Il valore estraibile massimo fu applicato per la prima volta nel contesto del [proof-of-work](/developers/docs/consensus-mechanisms/pow/) e fu inizialmente definito come "valore estraibile dal miner". Questo perché nel Proof of Work i miner controllano l'inclusione, l'esclusione e l'ordinamento della transazione. Tuttavia, a partire dalla transizione al proof-of-stake tramite [La Fusione](/roadmap/merge), i validatori sono responsabili di tali ruoli e il mining non è più parte del protocollo di Ethereum. I metodi d'estrazione del valore però esistono ancora, quindi il termine usato adesso è invece "Valore estraibile massimo".
 
 ## Prerequisiti {#prerequisites}
 

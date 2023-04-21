@@ -2,7 +2,7 @@
 title: Learn Foundational Ethereum Topics with SQL
 description: This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying on-chain data with Structured Query Language (SQL).
 author: "Paul Apivat"
-tags: ["SQL", "Querying", "Dune Analytics", "Transactions"]
+tags: ["SQL", "Querying", "Transactions"]
 skill: beginner
 lang: en
 published: 2021-05-11

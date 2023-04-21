@@ -4,11 +4,10 @@
   "page-upgrades-beacon-date": "أصبح متاحًا!",
   "page-upgrades-merge-date": "سبتمبر 2022",
   "page-upgrades-shards-date": "~2023",
-  "page-upgrades-withdrawals": "Q1/Q2 2023",
-  "page-upgrades-merge-banner-intro": "اقترب موعد الدمج، وسيحدث تغييرات على إثيريوم.",
-  "page-upgrades-merge-banner-content-outdated": "بعض محتويات هذه الصفحة قديمة فيما يتعلق بهذه التغييرات. وستصدر التحديثات قريبًا.",
-  "page-upgrades-merge-banner-developers-landing": "بعض المستندات بها شعار يشير إلى أنها قديمة. وستصدر التحديثات قريبًا.",
   "page-upgrades-post-merge-banner-tutorial-ood": "تعليمات الاستخدام هذه قديمة بعد الدمج وقد لا تفيد. يُرجى تقديم طلب سحب إذا كنت ترغب في المساهمة.",
-  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "تعليمات الاستخدام هذه قديمة بعد الدمج. ولا تعمل العقد الفاتحة حاليًا على إثبات الحصة، ولكن من المتوقع أن تتاح قريبًا.",
-  "page-upgrades-post-merge-banner-governance-ood": "بعض محتويات هذه الصفحة قديمة بعد الدمج. يُرجى تقديم طلب سحب إذا كنت ترغب في المساهمة."
+  "page-upgrades-post-merge-banner-governance-ood": "بعض محتويات هذه الصفحة قديمة بعد الدمج. يُرجى تقديم طلب سحب إذا كنت ترغب في المساهمة.",
+  "page-upgrades-upgrades-guide": "دليل ترقيات إثيريوم",
+  "page-upgrades-upgrades-docking": "الدمج",
+  "page-upgrades-shard-title": "التقسيم",
+  "page-upgrades-upgrades-beacon-chain": "سلسلة المنارة"
 }

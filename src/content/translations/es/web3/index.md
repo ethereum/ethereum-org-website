@@ -117,7 +117,7 @@ A pesar de los numerosos beneficios de Web3 en su forma actual, todavía hay muc
 
 ### Accesibilidad {#accessibility}
 
-Las características importantes de la Web 3, como el inicio de sesión con Ethereum, ya están disponibles para que cualquiera las use sin costo alguno. Pero, el coste relativo de las transacciones sigue siendo prohibitivo para muchos. Es menos probable que Web3 se utilice en países menos ricos, o en vías de desarrollo debido a las altas comisiones de las transacciones. En Ethereum, estos desafíos se están resolviendo a través de [actualizaciones de red](/upgrades/) y [soluciones de escalabilidad de capa 2](/developers/docs/scaling/). La tecnología está lista, pero necesitamos niveles más altos de adopción en la capa 2 para que Web3 sea accesible para todos.
+Las características importantes de la Web 3, como el inicio de sesión con Ethereum, ya están disponibles para que cualquiera las use sin costo alguno. Pero, el coste relativo de las transacciones sigue siendo prohibitivo para muchos. Es menos probable que Web3 se utilice en países menos ricos, o en vías de desarrollo debido a las altas comisiones de las transacciones. En Ethereum, estos desafíos se están resolviendo a través de [actualizaciones de red](/roadmap/) y [soluciones de escalabilidad de capa 2](/developers/docs/scaling/). La tecnología está lista, pero necesitamos niveles más altos de adopción en la capa 2 para que Web3 sea accesible para todos.
 
 ### Experiencia de usuario {#user-experience}
 

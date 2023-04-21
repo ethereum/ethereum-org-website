@@ -51,7 +51,7 @@
   "page-developers-meta-desc": "Documentazione, tutorial e strumenti per sviluppatori che usano Ethereum.",
   "page-developers-mev-desc": "Un'introduzione al valore estraibile massimo (MEV)",
   "page-developers-mev-link": "Valore estraibile massimo (MEV)",
-  "page-developers-mining-desc": "Come cerare nuovi blocchi e raggiungere il consenso",
+  "page-developers-mining-desc": "Come cerare nuovi blocchi e raggiungere il consenso utilizzando il proof of work",
   "page-developers-mining-link": "Mining",
   "page-developers-mining-algorithms-desc": "Informazioni sugli algoritmi di mining di Ethereum",
   "page-developers-mining-algorithms-link": "Algoritmi di mining",

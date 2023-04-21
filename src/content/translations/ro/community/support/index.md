@@ -106,4 +106,4 @@ Tranzacțiile pe Ethereum pot rămâne uneori blocate dacă ați trimis un comis
 
 #### Cum pot să minez pe Ethereum? {#mining-ethereum}
 
-Nu vă recomandăm să cumpărați echipament de minare dacă nu ați minat deja pe Ethereum. În -T2 2022 va avea loc [fuziunea](/upgrades/merge/), prin care Ethereum va trece de la dovada-muncii la dovada-mizei. Această schimbare înseamnă că minarea pe Ethereum nu va mai fi posibilă.
+Nu vă recomandăm să cumpărați echipament de minare dacă nu ați minat deja pe Ethereum. În -T2 2022 va avea loc [fuziunea](/roadmap/merge/), prin care Ethereum va trece de la dovada-muncii la dovada-mizei. Această schimbare înseamnă că minarea pe Ethereum nu va mai fi posibilă.

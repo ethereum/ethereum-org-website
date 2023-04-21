@@ -120,7 +120,7 @@ Model checking uses state space exploration, which involves constructing all pos
 
 Theorem proving is a method of mathematically reasoning about the correctness of programs, including smart contracts. It involves transforming the model of a contract’s system and its specifications into mathematical formulas (logic statements).
 
-The objective of theorem proving is to verify logical equivalence between these statements. “Logical equivalence” (also called “logical implication”) is a type of relationship between two statements in which statement A can only be true _if and only if_ statement B is true.
+The objective of theorem proving is to verify logical equivalence between these statements. “Logical equivalence” (also called “logical bi-implication”) is a type of relationship between two statements such that the first statement is true _if and only if_ the second statement is true.
 
 The required relationship (logical equivalence) between statements about a contract’s model and its property is formulated as a provable statement (called a theorem). Using a formal system of inference, the automated theorem prover can verify the theorem’s validity. In other words, a theorem prover can conclusively prove a smart contract’s model precisely matches its specifications.
 
@@ -134,7 +134,7 @@ Symbolic execution is a method of analyzing a smart contract by executing functi
 
 Symbolic execution represents an execution trace as a mathematical formula over symbolic input values, otherwise called a _path predicate_. An [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) is used to check if a path predicate is "satisfiable" (i.e., there exists a value that can satisfy the formula). If a vulnerable path is satisfiable, the SMT solver will generate a concrete value that triggers steers execution toward that path.
 
-Suppose a smart contract's function takes as input a `uint` value (`x`) and reverts when `x` is greater than `5` but lower than `10`. Finding a value for `x` that triggers the error using a normal testing procedure would require running through dozens of test cases (or more) without the assurance of actually finding an error-triggering input.
+Suppose a smart contract's function takes as input a `uint` value (`x`) and reverts when `x` is greater than `5` and also lower than `10`. Finding a value for `x` that triggers the error using a normal testing procedure would require running through dozens of test cases (or more) without the assurance of actually finding an error-triggering input.
 
 Conversely, a symbolic execution tool would execute the function with the symbolic value: `X > 5 ∧ X < 10` (i.e., `x` is greater than 5 AND `x` is less than 10). The associated path predicate `x = X > 5 ∧ X < 10` would then be given to an SMT solver to solve. If a particular value satisfies the formula `x = X > 5 ∧ X < 10`, the SMT solver will calculate it—for example, the solver might produce `7` as a value for `x`.
 

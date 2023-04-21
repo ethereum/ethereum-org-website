@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software application, known as a client, must be run on your computer to turn it into an Ethereum node.
 
-**Note: it is not possible to run an execution client on its own anymore. After [The Merge](/upgrades/merge), both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network.**
+**Note: it is not possible to run an execution client on its own anymore. After [The Merge](/roadmap/merge), both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network.**
 
 ## Prerequisites {#prerequisites}
 
@@ -24,8 +24,8 @@ Post-Merge Ethereum consists of two parts: the execution layer and the consensus
 - The execution client (also known as the Execution Engine, EL client or formerly the Eth1 client) listens to new transactions broadcasted in the network, executes them in EVM, and holds the latest state and database of all current Ethereum data.
 - The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client.
 
-Before [The Merge](/upgrades/merge/), consensus and execution layer were separate networks, with all transactions and user activity on the Ethereum happening at what is now the execution layer. One client software provided both execution environment and consensus verification of blocks produced by miners.
-The consensus layer, [the Beacon Chain](/upgrades/beacon-chain/), has been running separately since December 2020. It introduced proof-of-stake and coordinated the network of validators based on data from the Ethereum network.
+Before [The Merge](/roadmap/merge/), consensus and execution layer were separate networks, with all transactions and user activity on the Ethereum happening at what is now the execution layer. One client software provided both execution environment and consensus verification of blocks produced by miners.
+The consensus layer, [the Beacon Chain](/roadmap/beacon-chain/), has been running separately since December 2020. It introduced proof-of-stake and coordinated the network of validators based on data from the Ethereum network.
 
 With the Merge, Ethereum transitions to proof-of-stake by connecting these networks. Execution and consensus clients work together to verify Ethereum's state.
 
@@ -74,8 +74,6 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 Instead of downloading every block, light nodes download block headers. These headers only contain summary information about the contents of the blocks. Any other information required by the light node gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality and security guarantees as a full node.
 
-The execution client Geth includes a [light sync](https://github.com/ethereum/devp2p/blob/master/caps/les.md) option. However, a light Geth node relies upon full nodes serving light node data. Few full nodes opt to serve light node data, meaning light nodes often fail to find peers.
-
 Light clients are an area of active development for Ethereum and we expect to see new light clients for the consensus layer and execution layer soon.
 There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
 
@@ -88,7 +86,7 @@ Ethereum does not support a large population of light nodes yet, but light node 
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical states but the full node is able to build them on demand.
 
-Learn more about [Archive nodes](/developers/docs/archive-nodes).
+Learn more about [Archive nodes](/developers/docs/nodes-and-clients/archive-nodes).
 
 ## Why should I run an Ethereum node? {#why-should-i-run-an-ethereum-node}
 
@@ -128,7 +126,7 @@ If you're more of a technical user, dive into more details and options on how to
 
 ## Alternatives {#alternatives}
 
-Setting up your own node can cost you time and resources but you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), [QuikNode](https://www.quiknode.io), [Tenderly](https://tenderly.co/web3-gateway), [Blast](https://blastapi.io/), or [GetBlock](https://getblock.io/). Alternatively, [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Setting up your own node can cost you time and resources but you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), [QuikNode](https://www.quiknode.io), [Tenderly](https://tenderly.co/web3-gateway), [Blast](https://blastapi.io/), or [GetBlock](https://getblock.io/). For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
 If somebody runs an Ethereum node with a public API in your community, you can point your light wallets (like MetaMask) to a community node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) and gain more privacy than with some random trusted third party.
 
@@ -146,7 +144,6 @@ This table summarizes the different clients. All of them pass [client tests](htt
 | [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap (without serving), Fast, Full | Archive, Pruned |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap, Fast, Full                   | Archive, Pruned |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Full                               | Archive, Pruned |
-| [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Sepolia, Goerli           | Full                               | Archive, Pruned |
 
 **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use another client implementation!
 
@@ -162,7 +159,7 @@ Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will g
 
 ### Erigon {#erigon}
 
-Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development, e.g. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
+Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
 
 ### Go Ethereum {#geth}
 
@@ -182,9 +179,7 @@ Nethermind also has [detailed documentation](https://docs.nethermind.io), strong
 
 ## Consensus clients (formerly 'Eth2' clients) {#consensus-clients}
 
-There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide a proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[View consensus clients](/upgrades/get-involved/#clients).
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide a proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | Client                                                        | Language   | Operating systems     | Networks                                                          |
 | ------------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------------------------------- |
@@ -262,7 +257,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 **NB** Light sync does not yet work with proof-of-stake Ethereum - new versions of light sync should ship soon!
 
-[More on Light clients](https://www.parity.io/blog/what-is-a-light-client/)
+[More on light clients](/developers/docs/nodes-and-clients/light-clients/)
 
 #### Snap sync {#snap-sync}
 

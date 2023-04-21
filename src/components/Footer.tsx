@@ -8,7 +8,7 @@ import {
   SimpleGrid,
   useToken,
 } from "@chakra-ui/react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
@@ -279,107 +279,104 @@ const Footer: React.FC<IProps> = () => {
     },
   ]
 
-  return (
-    <StaticQuery
-      query={graphql`
-        query FooterQuery {
-          allSiteBuildMetadata {
-            edges {
-              node {
-                buildTime
-              }
-            }
+  const data = useStaticQuery(graphql`
+    query {
+      allSiteBuildMetadata {
+        edges {
+          node {
+            buildTime
           }
         }
-      `}
-      render={(data) => (
-        <Box as="footer" p="1rem 2rem">
-          <Flex
-            fontSize="sm"
-            justify="space-between"
-            alignItems="center"
-            flexWrap="wrap"
-          >
-            <Box color="text200">
-              <Translation id="website-last-updated" />:{" "}
-              {getLocaleTimestamp(
-                language as Lang,
-                data.allSiteBuildMetadata.edges[0].node.buildTime
-              )}
-            </Box>
-            <Box my={4}>
-              {socialLinks.map((link, idk) => {
-                return (
-                  <Link
-                    key={idk}
-                    to={link.to}
-                    hideArrow
-                    color="secondary"
-                    aria-label={link.ariaLabel}
-                  >
-                    <Icon as={link.icon} fontSize="4xl" ml={4} />
-                  </Link>
-                )
-              })}
-            </Box>
-          </Flex>
-          <SimpleGrid
-            gap={4}
-            justifyContent="space-between"
-            gridTemplateColumns="repeat(6, auto)"
-            sx={{
-              "@media (max-width: 1300px)": {
-                gridTemplateColumns: "repeat(3, auto)",
-              },
-              [`@media (max-width: ${medBp})`]: {
-                gridTemplateColumns: "repeat(2, auto)",
-              },
-              "@media (max-width: 500px)": {
-                gridTemplateColumns: "auto",
-              },
-            }}
-          >
-            {linkSections.map((section: LinkSection, idx) => (
-              <Box key={idx}>
-                <Heading as="h3" fontSize="sm" lineHeight="1.6" my="1.14em">
-                  {section.title}
-                </Heading>
-                <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
-                  {section.links.map((link, linkIdx) => (
-                    <ListItem key={linkIdx} mb={4}>
-                      <Link
-                        to={link.to}
-                        isPartiallyActive={false}
-                        dir={isPageRightToLeft ? "auto" : "ltr"}
-                        textDecor="none"
-                        color="text200"
-                        _hover={{
-                          textDecor: "none",
-                          color: "primary",
-                          _after: {
-                            color: "primary",
-                          },
-                          "& svg": {
-                            fill: "primary",
-                          },
-                        }}
-                        sx={{
-                          "& svg": {
-                            fill: "text200",
-                          },
-                        }}
-                      >
-                        {link.text}
-                      </Link>
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            ))}
-          </SimpleGrid>
+      }
+    }
+  `)
+
+  return (
+    <Box as="footer" p="1rem 2rem">
+      <Flex
+        fontSize="sm"
+        justify="space-between"
+        alignItems="center"
+        flexWrap="wrap"
+      >
+        <Box color="text200">
+          <Translation id="website-last-updated" />:{" "}
+          {getLocaleTimestamp(
+            language as Lang,
+            data.allSiteBuildMetadata.edges[0].node.buildTime
+          )}
         </Box>
-      )}
-    />
+        <Box my={4}>
+          {socialLinks.map((link, idk) => {
+            return (
+              <Link
+                key={idk}
+                to={link.to}
+                hideArrow
+                color="secondary"
+                aria-label={link.ariaLabel}
+              >
+                <Icon as={link.icon} fontSize="4xl" ml={4} />
+              </Link>
+            )
+          })}
+        </Box>
+      </Flex>
+      <SimpleGrid
+        gap={4}
+        justifyContent="space-between"
+        gridTemplateColumns="repeat(6, auto)"
+        sx={{
+          "@media (max-width: 1300px)": {
+            gridTemplateColumns: "repeat(3, auto)",
+          },
+          [`@media (max-width: ${medBp})`]: {
+            gridTemplateColumns: "repeat(2, auto)",
+          },
+          "@media (max-width: 500px)": {
+            gridTemplateColumns: "auto",
+          },
+        }}
+      >
+        {linkSections.map((section: LinkSection, idx) => (
+          <Box key={idx}>
+            <Heading as="h3" fontSize="sm" lineHeight="1.6" my="1.14em">
+              <Translation id={section.title} />
+            </Heading>
+            <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
+              {section.links.map((link, linkIdx) => (
+                <ListItem key={linkIdx} mb={4}>
+                  <Link
+                    to={link.to}
+                    isPartiallyActive={false}
+                    dir={isPageRightToLeft ? "auto" : "ltr"}
+                    textDecor="none"
+                    color="text200"
+                    _hover={{
+                      textDecor: "none",
+                      color: "primary",
+                      _after: {
+                        color: "primary",
+                      },
+                      "& svg": {
+                        fill: "primary",
+                      },
+                    }}
+                    sx={{
+                      "& svg": {
+                        fill: "text200",
+                      },
+                    }}
+                  >
+                    {link.text}
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        ))}
+      </SimpleGrid>
+    </Box>
   )
 }
 

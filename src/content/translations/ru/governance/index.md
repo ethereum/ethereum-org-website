@@ -154,7 +154,7 @@ _Примечание. Любой человек может входить в н
 
 Когда Beacon Chain объединится с исполнительным уровнем Ethereum, процесс управления предложениями изменений будет гармонизирован. Этот процесс реализации слияния [уже идет](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Подробнее о слиянии
 </ButtonLink>
 
