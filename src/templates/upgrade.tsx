@@ -1,11 +1,29 @@
-import React from "react"
+import React, { ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Badge } from "@chakra-ui/react"
+import {
+  Badge,
+  Box,
+  BoxProps,
+  calc,
+  chakra,
+  Divider as ChakraDivider,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  List,
+  ListItem,
+  Show,
+  Text,
+  TextProps,
+  useToken,
+  Icon,
+} from "@chakra-ui/react"
+import { MdExpandMore } from "react-icons/md"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -13,7 +31,6 @@ import ButtonDropdown, {
 } from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
-import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
@@ -31,13 +48,7 @@ import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import ExpandableCard from "../components/ExpandableCard"
-import {
-  Divider,
-  Paragraph,
-  Header1,
-  Header4,
-} from "../components/SharedStyledComponents"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
@@ -48,119 +59,173 @@ import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
-import { Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
-const Page = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto 4rem;
+const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
+  <Flex
+    direction={{ base: "column", lg: "row" }}
+    justify="space-between"
+    mx="auto"
+    mb={16}
+    pt={{ lg: 16 }}
+    w="full"
+    {...props}
+  />
+)
 
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 4rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const Divider = () => (
+  <ChakraDivider
+    my={16}
+    w="10%"
+    borderBottomWidth="0.25rem"
+    borderColor="homeDivider"
+  />
+)
 
-const InfoColumn = styled.aside`
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 6.25rem; /* account for navbar */
-  height: calc(100vh - 80px);
-  flex: 0 1 400px;
-  margin-right: 4rem;
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const InfoColumn = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    flex="0 1 400px"
+    ml={8}
+    mr={16}
+    position="sticky"
+    top="6.25rem"
+    h={calc("100vh").subtract("80px").toString()}
+    {...props}
+  />
+)
 
-const MobileButton = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    background: ${(props) => props.theme.colors.background};
-    box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
-    width: 100%;
-    bottom: 0;
-    position: sticky;
-    padding: 2rem;
-    z-index: 99;
-    margin-bottom: 0rem;
-  }
-`
+const MobileButton = (props: ChildOnlyProp) => {
+  const borderColor = useToken("colors", "border")
+
+  return (
+    <Box
+      bg="background"
+      boxShadow={`0 -1px 0 ${borderColor}`}
+      position="sticky"
+      bottom={0}
+      zIndex={99}
+      p={8}
+      w="full"
+      {...props}
+    />
+  )
+}
 
 // Apply styles for classes within markdown here
-const ContentContainer = styled.article`
-  flex: 1 1 ${(props) => props.theme.breakpoints.l};
-  position: relative;
-  padding: 2rem;
-  padding-top: 0rem;
+const ContentContainer = (props: BoxProps) => (
+  <Box
+    as="article"
+    flex="1 1 1024px"
+    position="relative"
+    p={8}
+    pt={0}
+    {...props}
+    sx={{
+      ".featured": {
+        pl: 4,
+        ml: -4,
+        borderLeft: "1px dotted",
+        borderColor: "primary",
+      },
+      ".citation p": {
+        color: "text200",
+      },
+    }}
+  />
+)
 
-  .featured {
-    padding-left: 1rem;
-    margin-left: -1rem;
-    border-left: 1px dotted ${(props) => props.theme.colors.primary};
-  }
+const LastUpdated = (props: ChildOnlyProp) => (
+  <Text
+    color="text200"
+    fontStyle="italic"
+    pt={4}
+    mb={0}
+    borderTop="1px"
+    borderColor="border"
+    {...props}
+  />
+)
 
-  .citation {
-    p {
-      color: ${(props) => props.theme.colors.text200};
-    }
-  }
-`
+const Pre = chakra("pre", {
+  baseStyle: {
+    maxW: "full",
+    overflowX: "scroll",
+    backgroundColor: "preBackground",
+    borderRadius: 1,
+    p: 4,
+    border: "1px",
+    borderColor: "preBorder",
+    whiteSpace: "pre-wrap",
+  },
+})
 
-const LastUpdated = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-  font-style: italic;
-  padding-top: 1rem;
-  margin-bottom: 0rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-`
+const H1 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h1"
+    fontSize={{ base: "2.5rem", lg: "5xl" }}
+    fontWeight="bold"
+    lineHeight={1.4}
+    textAlign={{ base: "left", lg: "right" }}
+    mt={0}
+    {...props}
+  />
+)
 
-const Pre = styled.pre`
-  max-width: 100%;
-  overflow-x: scroll;
-  background-color: ${(props) => props.theme.colors.preBackground};
-  border-radius: 0.25rem;
-  padding: 1rem;
-  border: 1px solid ${(props) => props.theme.colors.preBorder};
-  white-space: pre-wrap;
-`
+const MDXH1 = (props: HeadingProps) => (
+  <Heading
+    as="h1"
+    fontWeight="bold"
+    lineHeight={1.4}
+    fontSize="2.5rem"
+    {...props}
+  />
+)
 
-const H1 = styled.h1`
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: right;
-  margin-top: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    text-align: left;
-    font-size: 2.5rem
-    display: none;
-  }
-`
+const H2 = (props: HeadingProps) => (
+  <Heading
+    fontSize="2rem"
+    fontWeight="bold"
+    lineHeight={1.4}
+    mt={16}
+    {...props}
+  />
+)
 
-const H2 = styled.h2`
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 4rem;
-`
+const H3 = (props: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontWeight="bold"
+    lineHeight={1.4}
+    fontSize="2xl"
+    {...props}
+  />
+)
 
-const H3 = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 700;
-`
+const H4 = (props: HeadingProps) => (
+  <Heading
+    as="h4"
+    fontSize="xl"
+    lineHeight={1.4}
+    fontWeight="semibold"
+    {...props}
+  />
+)
+
+const P = (props: TextProps) => (
+  <Text mt={8} mb={4} color="text300" {...props} />
+)
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
+
 const components = {
   a: Link,
-  h1: Header1,
+  h1: MDXH1,
   h2: H2,
   h3: H3,
-  h4: Header4,
-  p: Paragraph,
+  h4: H4,
+  p: P,
   pre: Pre,
   table: MarkdownTable,
   MeetupList,
@@ -184,130 +249,110 @@ const components = {
   QuizWidget,
 }
 
-const Title = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 0rem;
-`
+const Title = (props: ChildOnlyProp) => (
+  <Heading
+    as="h1"
+    fontSize="2.5rem"
+    fontWeight="bold"
+    lineHeight={1.4}
+    mt={0}
+    {...props}
+  />
+)
 
-const SummaryPoint = styled.li`
-  font-size: 1rem;
-  color: ${(props) => props.theme.colors.text300};
-  margin-bottom: 0rem;
-  line-height: auto;
-`
+const SummaryPoint = (props: ChildOnlyProp) => (
+  <ListItem color="text300" mb={0} {...props} />
+)
 
-const SummaryBox = styled.div`
-  /* border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  padding-bottom: 0rem;
-  border-radius: 4px; */
-`
+type ButtonDropdownProps = Pick<
+  ComponentPropsWithRef<typeof ButtonDropdown>,
+  "list"
+>
 
-const DesktopBreadcrumbs = styled(Breadcrumbs)`
-  margin-top: 0.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-const MobileBreadcrumbs = styled(Breadcrumbs)`
-  margin-top: 0.5rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const StyledButtonDropdown = (props: FlexProps & ButtonDropdownProps) => (
+  <Flex
+    as={ButtonDropdown}
+    justify="flex-end"
+    align={{ sm: "flex-end" }}
+    textAlign="center"
+    mb={8}
+    {...props}
+  />
+)
 
-const StyledButtonDropdown = styled(ButtonDropdown)`
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    align-self: flex-end;
-  }
-`
+const MobileButtonDropdown = (props: ButtonDropdownProps) => (
+  <StyledButtonDropdown mb={0} {...props} />
+)
 
-const MobileButtonDropdown = styled(StyledButtonDropdown)`
-  margin-bottom: 0rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const Container = (props: ChildOnlyProp) => (
+  <Box position="relative" {...props} />
+)
 
-const Container = styled.div`
-  position: relative;
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Flex
+    justify="flex-end"
+    direction={{ base: "column-reverse", lg: "row" }}
+    bg="cardGradient"
+    boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
+    minH="608px"
+    maxH={{ base: "full", lg: "608px" }}
+    w="full"
+    {...props}
+  />
+)
 
-const HeroContainer = styled.div`
-  background: ${(props) => props.theme.colors.cardGradient};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: flex-end;
-  max-height: 608px;
-  min-height: 608px;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    max-height: 100%;
-  }
-`
+const Image = chakra(GatsbyImage, {
+  baseStyle: {
+    flex: "1 1 100%",
+    maxW: "816px",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    alignSelf: "flex-end",
+    ml: 8,
+    right: 0,
+    bottom: 0,
+    w: "full",
+    h: "full",
+    overflow: "initial",
+  },
+})
 
-const Image = styled(GatsbyImage)`
-  flex: 1 1 100%;
-  max-width: 816px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 2rem;
-  align-self: flex-end;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    height: 100%;
-    overflow: initial;
-  }
-`
+const MoreContent = (props: ChildOnlyProp & { to: string }) => (
+  <Flex
+    as={Link}
+    bg="ednBackground"
+    justify="center"
+    p={4}
+    w="full"
+    _hover={{
+      bg: "background",
+    }}
+    {...props}
+  />
+)
 
-const MoreContent = styled(Link)`
-  width: 100%;
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
+const TitleCard = (props: ChildOnlyProp) => {
+  const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
-  &:hover {
-    background: ${(props) => props.theme.colors.background};
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const TitleCard = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-  padding: 2rem;
-  display: flex;
-  position: absolute;
-  left: 6rem;
-  top: 6rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 2px;
-  z-index: 10;
-  max-width: 640px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-    position: relative;
-    left: 0rem;
-    top: 0rem;
-    background: ${(props) => props.theme.colors.ednBackground};
-    box-shadow: none;
-  }
-`
+  return (
+    <Flex
+      direction="column"
+      justify="flex-start"
+      position={{ base: "relative", lg: "absolute" }}
+      bg={{ base: "ednBackground", lg: "background" }}
+      border="1px"
+      borderColor="border"
+      borderRadius="sm"
+      boxShadow={{ lg: cardBoxShadow }}
+      maxW={{ base: "full", lg: "640px" }}
+      p={8}
+      top={{ lg: 24 }}
+      left={{ lg: 24 }}
+      zIndex={10}
+      {...props}
+    />
+  )
+}
 
 const UpgradePage = ({
   data: { mdx },
@@ -350,20 +395,21 @@ const UpgradePage = ({
     ],
   }
 
+  const lgBreakpoint = useToken("breakpoints", "lg")
+
   return (
     <Container>
       <HeroContainer>
         <TitleCard>
-          <DesktopBreadcrumbs slug={slug} startDepth={1} />
-          <MobileBreadcrumbs slug={slug} startDepth={1} />
+          <Breadcrumbs slug={slug} startDepth={1} mt={2} />
           <Title>{mdx.frontmatter.title}</Title>
-          <SummaryBox>
-            <ul>
+          <Box>
+            <List listStyleType="disc">
               {summaryPoints.map((point, idx) => (
                 <SummaryPoint key={idx}>{point}</SummaryPoint>
               ))}
-            </ul>
-          </SummaryBox>
+            </List>
+          </Box>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
@@ -371,25 +417,31 @@ const UpgradePage = ({
         </TitleCard>
         <Image image={getImage(mdx.frontmatter.image)!} alt="" />
       </HeroContainer>
-      <MoreContent to="#content">
-        <Icon name="chevronDown" />
-      </MoreContent>
+      <Show above={lgBreakpoint}>
+        <MoreContent to="#content">
+          <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
+        </MoreContent>
+      </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <InfoColumn>
-          <StyledButtonDropdown list={dropdownLinks} />
-          <H1>{mdx.frontmatter.title}</H1>
+        <Show above={lgBreakpoint}>
+          <InfoColumn>
+            <StyledButtonDropdown list={dropdownLinks} />
+            <Show above={lgBreakpoint}>
+              <H1>{mdx.frontmatter.title}</H1>
+            </Show>
 
-          {tocItems && (
-            <UpgradeTableOfContents
-              items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth!}
-            />
-          )}
-        </InfoColumn>
+            {tocItems && (
+              <UpgradeTableOfContents
+                items={tocItems}
+                maxDepth={mdx.frontmatter.sidebarDepth!}
+              />
+            )}
+          </InfoColumn>
+        </Show>
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>
@@ -397,9 +449,11 @@ const UpgradePage = ({
           </MDXProvider>
           <FeedbackCard />
         </ContentContainer>
-        <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
-        </MobileButton>
+        <Show below={lgBreakpoint}>
+          <MobileButton>
+            <MobileButtonDropdown list={dropdownLinks} />
+          </MobileButton>
+        </Show>
       </Page>
     </Container>
   )
