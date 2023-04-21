@@ -1,9 +1,5 @@
 import { selectAnatomy } from "@chakra-ui/anatomy"
-import {
-  createMultiStyleConfigHelpers,
-  cssVar,
-  defineStyle,
-} from "@chakra-ui/react"
+import { createMultiStyleConfigHelpers, cssVar } from "@chakra-ui/react"
 import { defineMergeStyles, selectDefaultTheme } from "./components.utils"
 
 const { defineMultiStyleConfig, definePartsStyle } =
@@ -33,9 +29,15 @@ const baseStyleField = defineMergeStyles(selectDefaultTheme.baseStyle?.field, {
   },
 })
 
+const baseStyleIcon = defineMergeStyles(selectDefaultTheme.baseStyle?.icon, {
+  _peerHover: {
+    color: "primary",
+  },
+})
+
 const baseStyle = definePartsStyle({
   field: baseStyleField,
-  icon: selectDefaultTheme.baseStyle?.icon,
+  icon: baseStyleIcon,
 })
 
 const variantOutline = definePartsStyle({
