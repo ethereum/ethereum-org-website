@@ -167,7 +167,6 @@ Diversi progetti forniscono implementazioni di Plasma che puoi integrare nelle t
 
 ## Letture consigliate {#further-reading}
 
-- [EthHub su Plasma](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Learn Plasma](https://www.learnplasma.org/en/)
 - [A quick reminder of what "shared security" means and why it's so important](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Sidechains vs Plasma vs Sharding](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)

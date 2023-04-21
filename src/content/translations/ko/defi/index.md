@@ -336,7 +336,6 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 ### 디파이 기사 {#defi-articles}
 
-- [탈중앙화 금융이란 무엇인가요?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, 정기적으로 업데이트됨_
 - [디파이 초보자 가이드](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _시드 코엘로-프라부, 2020년 1월 6일_
 
 ### 영상 {#videos}

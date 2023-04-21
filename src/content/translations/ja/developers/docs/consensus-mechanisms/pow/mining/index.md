@@ -68,8 +68,6 @@ Ether のマイニング ＝ ネットワークの保護
 
 ## 参考文献 {#further-reading}
 
-- [イーサリアムのマイニングとは](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
 ## 関連ツール {#related-tools}
 
 - [上位のイーサリアムマイナー](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

@@ -460,7 +460,6 @@ Nell'ambito del monitoraggio, assicurati di tenere d'occhio le prestazioni della
 - [Domande frequenti sulla Fusione per gli operatori di nodi](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Luglio 2022_
 - [Analizzare i requisiti hardware per essere un nodo completo e validato di Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 settembre 2018_
 - [Eseguire i nodi completi di Ethereum: una guida per i poco motivati](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 novembre 2019_
-- [Eseguire un nodo di Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, aggiornato spesso_
 - [Eseguire un nodo di Besu Hyperledger sulla Rete Principale di Ethereum: benefici, requisiti e configurazione](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 maggio 2020_
 - [Distribuire il client di Ethereum di Nethermind con lo stack di monitoraggio](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 luglio 2020_
 

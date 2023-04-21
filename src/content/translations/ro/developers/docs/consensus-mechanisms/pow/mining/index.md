@@ -61,8 +61,6 @@ Urmăriți cum vă îndrumă Austin în procesul de minare și blockchain-ul dov
 
 ## Referințe suplimentare {#further-reading}
 
-- [Ce înseamnă să minezi în Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
 ## Instrumente corelate {#related-tools}
 
 - [Miner-i de top în Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
