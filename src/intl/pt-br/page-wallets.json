@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "Sua conta Ethereum",
   "page-wallets-your-ethereum-account-desc": "A sua carteira é a janela para a sua conta Ethereum – o seu saldo, histórico de transações e muito mais. Mas você pode trocar os provedores de carteira a qualquer momento.",
   "page-wallets-your-login": "Seu login para aplicativos Ethereum",
-  "page-wallets-your-login-desc": "Sua carteira permite que você se conecte a qualquer aplicativo descentralizado usando a sua conta Ethereum. É como um login que você pode usar em vários dapps."
+  "page-wallets-your-login-desc": "Sua carteira permite que você se conecte a qualquer aplicativo descentralizado usando a sua conta Ethereum. É como um login que você pode usar em vários dapps.",
+  "additional-reading-how-to-register-an-ethereum-account": "Como \"registrar\" uma conta Ethereum",
+  "additional-reading-how-to-use-a-wallet": "Como usar uma carteira"
 }

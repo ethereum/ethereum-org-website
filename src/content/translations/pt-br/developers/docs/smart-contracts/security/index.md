@@ -464,6 +464,10 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 - **[Plataformas de recompensa por bugs](https://ethereum.org/en/developers/docs/smart-contracts/testing/#bug-bounty-platforms) ** - _Plataformas para coordenar recompensas por bugs e recompensar a divulgação responsável de vulnerabilidades críticas em contratos inteligentes._
 
+- **[Fork Checker](https://forkchecker.hashex.org/)** – _Uma ferramenta online gratuita para verificar todas as informações disponíveis sobre um contrato bifurcado._
+
+- **[ABI Encoder](https://abi.hashex.org/)** – _Um serviço online para codificar suas funções de contrato e argumentos de construtor do Solidity._
+
 ### Ferramentas para monitorar contratos inteligentes {#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/sentinel)** - _Uma ferramenta para monitorar e responder automaticamente a eventos, funções e parâmetros de transação em seus contratos inteligentes._
@@ -497,6 +501,8 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 - **[Hacken](https://hacken.io)** - _Auditor de cibersegurança da Web3 que traz a abordagem de 360 graus à segurança da blockchain._
 
 - **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Serviços de auditoria Solidity e Cairo que garantem a integridade dos contratos inteligentes e a segurança dos usuários em toda a Ethereum e Starknet._
+
+- **[HashEx](https://hashex.org/)** – _O HashEx se dedica a blockchain e auditoria de contrato inteligente para garantir a segurança de criptomoedas, fornecendo serviços como desenvolvimento de contrato inteligente, teste de penetração e consultoria em blockchain._
 
 ### Plataformas de recompensa de bugs {#bug-bounty-platforms}
 
