@@ -73,6 +73,6 @@ Les plateformes de financement de biens publics natifs Web3 telles que [Gitcoin]
 ## Sujets connexes {#related-topics}
 
 - [La vision d'Ethereum](/roadmap/vision/)
-- [La chaîne phare](/upgrades/beacon-chain)
-- [La Fusion](/upgrades/merge/)
-- [Fragmentation](/upgrades/beacon-chain/)
+- [La chaîne phare](/roadmap/beacon-chain)
+- [La Fusion](/roadmap/merge/)
+- [Fragmentation](/roadmap/beacon-chain/)

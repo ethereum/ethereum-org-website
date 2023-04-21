@@ -155,7 +155,7 @@ Lo sviluppo di specifiche e implementazioni è sempre stato totalmente open sour
 
 Quando la Beacon Chain si fonderà con il livello di esecuzione di Ethereum, il processo di governance per proporre le modifiche sarà armonizzato. Questo processo per implementare la fusione è [già in corso](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Maggiori informazioni sulla fusione
 </ButtonLink>
 

@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Ethereum è una rete distribuita di computer (noti come nodi) che eseguono software che possono verificare i blocchi e i dati delle transazioni. Per fare del tuo computer un nodo di Ethereum deve essere eseguita l'applicazione software, detta client.
 
-**Nota: non è più possibile eseguire un client di esecuzione da solo. Dopo [La Fusione](/upgrades/merge), sia il client di esecuzione sia quello di consenso devono essere eseguiti insieme perché un utente possa ottenere accesso alla rete di Ethereum.**
+**Nota: non è più possibile eseguire un client di esecuzione da solo. Dopo [La Fusione](/roadmap/merge), sia il client di esecuzione sia quello di consenso devono essere eseguiti insieme perché un utente possa ottenere accesso alla rete di Ethereum.**
 
 ## Prerequisiti {#prerequisites}
 
@@ -24,7 +24,7 @@ L'Ethereum post-Fusione consiste in due parti: il livello di esecuzione e il liv
 - Il client di esecuzione (noto anche come il Motore di Esecuzione, client EL o, precedentemente, client di Eth1) attende le nuove transazioni trasmesse nella rete, le esegue nell'EVM e detiene l'ultimo stato e database di tutti i dati correnti di Ethereum.
 - Il client di consenso (noto anche come il Nodo Beacon, client CL o, precedentemente, client di Eth2) implementa l'algoritmo di consenso di Proof of Stake, che consente alla rete di raggiungere l'accordo secondo i dati validati dal client di esecuzione.
 
-Prima de [La Fusione](/upgrades/merge/), i livelli di consenso e di esecuzione erano reti separate, con tutte le transazioni e le attività degli utenti su Ethereum che si verificavano dove ora si trova il livello di esecuzione. Un software del client forniva sia l'ambiente di esecuzione che la verifica del consenso dei blocchi prodotti dai miner. Il livello di consenso, [la Beacon Chain](/upgrades/beacon-chain/), è stato eseguito separatamente da dicembre 2020. Ha introdotto il Proof of Stake e coordinato la rete di validatori sulla base dei dati dalla rete Ethereum.
+Prima de [La Fusione](/roadmap/merge/), i livelli di consenso e di esecuzione erano reti separate, con tutte le transazioni e le attività degli utenti su Ethereum che si verificavano dove ora si trova il livello di esecuzione. Un software del client forniva sia l'ambiente di esecuzione che la verifica del consenso dei blocchi prodotti dai miner. Il livello di consenso, [la Beacon Chain](/roadmap/beacon-chain/), è stato eseguito separatamente da dicembre 2020. Ha introdotto il Proof of Stake e coordinato la rete di validatori sulla base dei dati dalla rete Ethereum.
 
 Con la Fusione, Ethereum è passata al Proof of Stake connettendo queste reti. I client di esecuzione e di consenso collaborano per verificare lo stato di Ethereum.
 
@@ -175,9 +175,7 @@ Inoltre, Nethermind vanta una [documentazione dettagliata](https://docs.nethermi
 
 ## Client di consenso (ex client di "Eth2") {#consensus-clients}
 
-Esistono diversi client di consenso (precedentemente noti come client di "Eth2") per supportare gli [aggiornamenti del consenso](/upgrades/beacon-chain/). Eseguono la Beacon Chain e forniranno il meccanismo di consenso Proof of Stake ai client di esecuzione, dopo [La Fusione](/upgrades/merge/).
-
-[Visualizza i client di consenso](/upgrades/get-involved/#clients).
+Esistono diversi client di consenso (precedentemente noti come client di "Eth2") per supportare gli [aggiornamenti del consenso](/roadmap/beacon-chain/). Eseguono la Beacon Chain e forniranno il meccanismo di consenso Proof of Stake ai client di esecuzione, dopo [La Fusione](/roadmap/merge/).
 
 | Client                                                        | Lingua     | Sistemi operativi     | Reti                                                            |
 | ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------------- |

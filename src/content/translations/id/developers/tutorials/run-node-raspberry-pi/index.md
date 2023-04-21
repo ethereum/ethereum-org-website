@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: Nyalakan Raspberry Pi 4 Anda, sambungkan pada kabel ethernet, koneksikan ke diska SSD dan nyalakan perangkat untuk mengubah Raspberry Pi 4 menjadi simpul Ethereum utuh yang menjalankan lapisan eksekusi, atau lapisan konsensus (Rantai Suar / validator)
 
-[Pelajari tentang peningkatan Ethereum](/upgrades/)
+[Pelajari tentang peningkatan Ethereum](/roadmap/)
 
 Mari mulai dengan latar belakang dulu. Seperti yang Anda ketahui, kami telah mengalami beberapa masalah memori [[1]](/developers/tutorials/run-node-raspberry-pi/#references) dengan gambar Raspberry Pi 4 karena OS Raspbian masih 32bit [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (setidaknya pada userland). Sementara kami lebih suka memakai OS yang resmi, kami sampai pada kesimpulan bahwa, untuk menyelesaikan masalah ini, kami perlu beralih ke OS 64bit asli
 
-Disamping itu, [klien konsensus](/upgrades/get-involved/#clients) tidak mendukung binari 32 bit sehingga menggunakan Raspbian akan memberi pengecualian pada Raspberry Pi 4 untuk menjalankan simpul lapisan konsensus (dan kemungkinan untuk melakukan penaruhan).
+Disamping itu, klien konsensus tidak mendukung binari 32 bit sehingga menggunakan Raspbian akan memberi pengecualian pada Raspberry Pi 4 untuk menjalankan simpul lapisan konsensus (dan kemungkinan untuk melakukan penaruhan).
 
 Jadi, setelah beberapa kali pengujian kini kami merilis dua gambar berbeda berdasarkan Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): edisi lapisan eksekusi dan lapisan konsensus.
 

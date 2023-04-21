@@ -484,7 +484,7 @@ const WhatIsEthereumPage = ({
               </h2>
               <BannerGrid>
                 <BannerGridCell>
-                  <StatPrimary>2970</StatPrimary>
+                  <StatPrimary>3986</StatPrimary>
                   <StatDescription>
                     Projects built on{" "}
                     <NoWrapText>
@@ -492,7 +492,7 @@ const WhatIsEthereumPage = ({
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
-                            "https://www.stateofthedapps.com/stats/platform/ethereum#new",
+                            "https://dappradar.com/rankings/protocol/ethereum",
                           apiProvider: "State of the dapps",
                           ariaLabel: "Read more about Ethereum projects stats",
                         })}
@@ -847,7 +847,7 @@ const WhatIsEthereumPage = ({
               <ButtonLink to="/energy-consumption/">
                 <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
               </ButtonLink>
-              <ButtonLink to="/upgrades/merge/" variant="outline">
+              <ButtonLink to="/roadmap/merge/" variant="outline">
                 <Translation id="page-what-is-ethereum-the-merge-update" />
               </ButtonLink>
             </ButtonRow>

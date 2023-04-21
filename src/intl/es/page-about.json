@@ -23,5 +23,15 @@
   "page-about-p-7": "Tareas completadas recientemente.",
   "page-about-p-8": "¿Tiene una idea de cómo mejorar ethereum.org? ¡Nos encantaría colaborar con usted!",
   "page-what-is-ethereum-energy-consumption-chart-legend": "Consumo energético anual en TW/año",
-  "page-upgrades-post-merge-banner-governance-ood": "Parte del contenido de esta página estará obsoleto después de la fusión. Por favor cree una PR si quiere contribuir."
+  "page-upgrades-post-merge-banner-governance-ood": "Parte del contenido de esta página estará obsoleto después de la fusión. Por favor cree una PR si quiere contribuir.",
+  "energy-consumption-chart-youtube-label": "YouTube",
+  "energy-consumption-chart-gold-mining-galaxy-label": "Minería de oro (Galaxy Digital)",
+  "energy-consumption-chart-global-data-centers-label": "Centros de datos globales",
+  "energy-consumption-chart-gold-mining-cbeci-label": "Minería de oro (CBECI)",
+  "energy-consumption-chart-btc-pow-label": "PoW de BTC",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-eth-pow-label": "PoW de ETH",
+  "energy-consumption-chart-gaming-us-label": "Juegos en Estados Unidos",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-chart-eth-pos-label": "PoS de ETH"
 }

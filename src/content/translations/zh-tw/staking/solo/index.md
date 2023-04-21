@@ -173,8 +173,6 @@ summaryPoints:
 在一個集中式雲端儲存解決方案上執行的驗證程式用戶端越多，對這些使用者而言就越危險。 如果發生任何事件導致這些供應商離綫，無論是由於攻擊、監管要求，抑或僅因為電源/網際網路中斷，都將導致依賴此伺服器的所有驗證程式用戶端同時離綫。
 
 離線罰金與同時離線的其他驗證程式數量成正比。 使用虛擬私人伺服器會大幅提高承受更嚴重的離線罰金的風險，甚至如果發生大量當機，還會增加二次懲罰或罰沒的風險。 為了將你自己的風險和網路風險降至最低，我們強烈鼓勵使用者取得並操作自己的硬體。
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">進一步了解酬勞和罰金</a>
 </ExpandableCard>
 
 ## 延伸閱讀 {#further-reading}
@@ -185,4 +183,3 @@ summaryPoints:
 - [如何購買以太坊驗證程式硬體](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [按部就班：如何加入以太坊 2.0 測試網](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [以太坊 2.0 罰沒預防技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
-- [以太坊 2.0 的酬勞與罰金](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_

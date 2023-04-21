@@ -69,7 +69,7 @@ Setiap [blok](#block) memiliki harga minimum yang dikenal sebagai 'harga dasar'.
 
 Peningkatan jaringan yang memperkenalkan lapisan konsensus baru, yang akan menjadi koordinator untuk seluruh jaringan Ethereum. Ini memperkenalkan [bukti taruhan](#pos) dan [validator](#validator) ke Ethereum. Pada akhirnya ini akan tergabung dengan [Jaringan Utama](#mainnet).
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Rantai Suar
 </DocLink>
 
@@ -229,7 +229,7 @@ Periode waktu 32 [slot](#slot) (6,4 menit) dalam sistem terkoordinasi [Rantai Su
 
 'Eth1' adalah istilah yang merujuk pada Jaringan Utama Ethereum, blockchain bukti kerja yang telah ada. Istilah ini sudah tidak dipakai dan digantikan dengan 'lapisan eksekusi'. [Pelajari selengkapnya mengenai perubahan nama tersebut](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Selengkapnya tentang peningkatan Ethereum
 </DocLink>
 
@@ -237,7 +237,7 @@ Periode waktu 32 [slot](#slot) (6,4 menit) dalam sistem terkoordinasi [Rantai Su
 
 'Eth2' adalah istilah yang merujuk pada sebuah set peningkatan protokol Ethereum, termasuk transisi Ethereum ke bukti taruhan. Istilah ini sudah tidak dipakai dan digantikan dengan 'lapisan konsensus'. [Pelajari selengkapnya mengenai perubahan nama tersebut](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Selengkapnya tentang peningkatan Ethereum
 </DocLink>
 
@@ -683,7 +683,7 @@ Jenis solusi penskalaan [lapisan 2](#layer-2) yang mengelompokkan beberapa trans
 
 Tahapan pengembangan Ethereum yang memulai serangkaian penskalaan dan peningkatan berkelanjutan, yang sebelumnya dikenal sebagai 'Ethereum 2.0', atau 'Eth2'.
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Peningkatan Ethereum
 </DocLink>
 
@@ -695,8 +695,8 @@ Serumpun fungsi hash kriptografik yang diterbitkan oleh National Institute of St
 
 Rantai [bukti taruhan](#pos) yang dikoordinir oleh [Rantai Suar](#beacon-chain) dan diamankan oleh [validator](#validator). Akan ada 64 rantai yang ditambahkan ke jaringan sebagai bagian dari peningkatan rantai shard. Rantai shard akan menawarkan keluaran transaksi yang bertambah untuk Ethereum dengan menyediakan data tambahan untuk solusi [lapisan 2](#layer-2) seperti [rollup optimistic](#optimistic-rollups) dan [rollup ZK](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
-  Rantai shard
+<DocLink to="/roadmap/danksharding">
+  Danksharding
 </DocLink>
 
 ### sidechain {#sidechain}

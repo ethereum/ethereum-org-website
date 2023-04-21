@@ -101,7 +101,9 @@ body:
     attributes:
       label: Would you like to work on this issue?
       options:
-        - "Yes"
-        - "No"
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
     validations:
       required: true

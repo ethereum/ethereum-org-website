@@ -154,7 +154,7 @@ Mentre que el desenvolupament de les especificacions i les implementacions ha es
 
 Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el procés de governança per proposar canvis estarà harmonitzat. Aquest procés d'implementar la fusió ja es troba [en marxa](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Més informació sobre La Fusió
 </ButtonLink>
 

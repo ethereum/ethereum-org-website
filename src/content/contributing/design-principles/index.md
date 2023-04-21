@@ -51,7 +51,7 @@ Ethereum is a global, decentralized project and our audience reflects this. The 
 - **Straightforward:** The site should be simple and unambiguous. Copy shouldn't use language that may be misinterpreted or lost in translation.
 - **Ethereum is multi-faceted:** Ethereum is a project, a codebase, a community, and a vision. Ethereum is valuable to different people for different reasons, and there are many ways to be involved.
 
-Writing systems • Use of colour • Visual Direction • Content
+Writing systems • Use of color • Visual Direction • Content
 
 ### 3. A Good Story {#3-a-good-story}
 

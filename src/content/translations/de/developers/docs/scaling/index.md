@@ -27,7 +27,7 @@ Diese Methode der Skalierung erfordert Änderungen am Ethereum-Protokoll (Layer 
 
 Unter Sharding versteht man die horizontale Aufteilung einer Datenbank, um die Last zu verteilen. Im Ethereum-Kontext wird das Sharding die Netzwerküberlastung reduzieren und die Transaktionen pro Sekunde erhöhen, indem neue Ketten, die sogenannten „Shards", geschaffen werden. Dies entlastet auch die einzelnen Prüfer, die nicht mehr die Gesamtheit aller Transaktionen im Netz bearbeiten müssen.
 
-Erfahren Sie mehr über [Sharding](/upgrades/sharding/).
+Erfahren Sie mehr über [Sharding](/roadmap/danksharding/).
 
 ## Off-Chain-Skalierung {#off-chain-scaling}
 

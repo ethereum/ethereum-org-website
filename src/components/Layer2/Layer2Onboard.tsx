@@ -58,7 +58,7 @@ const TwoColumnContent = styled.div`
 `
 
 // https://react-select.com/styles#using-classnames
-// Pass menuIsOpen={true} to component to debug
+// Pass menuIsOpen to component to debug
 const StyledSelect = styled(Select)`
   max-width: none;
 

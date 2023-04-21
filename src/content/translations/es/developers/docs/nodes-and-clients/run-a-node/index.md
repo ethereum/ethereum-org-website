@@ -142,7 +142,7 @@ Debe mantener actualizado el software de su cliente con los últimos parches de 
 
 #### Ejecución de servicios adicionales {#running-additional-services}
 
-Ejecutar tu propio nodo le permite usar servicios que requieren acceso directo al cliente RCP de Ethereum. Estos son servicios que se crean sobre Ethereum, como [soluciones de capa 2](/developers/docs/scaling/#layer-2-scaling), [clientes de consenso](/upgrades/get-involved/#clients) y otra infraestructura de Ethereum.
+Ejecutar tu propio nodo le permite usar servicios que requieren acceso directo al cliente RCP de Ethereum. Estos son servicios que se crean sobre Ethereum, como [soluciones de capa 2](/developers/docs/scaling/#layer-2-scaling), clientes de consenso y otra infraestructura de Ethereum.
 
 #### Supervisión del nodo {#monitoring-the-node}
 

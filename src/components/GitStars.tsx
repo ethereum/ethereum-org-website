@@ -24,7 +24,7 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
   }
 
   return (
-    <Link className={className} to={gitHubRepo.url} hideArrow={true}>
+    <Link className={className} to={gitHubRepo.url} hideArrow>
       <Flex
         background="lightBorder"
         textDecoration="none"

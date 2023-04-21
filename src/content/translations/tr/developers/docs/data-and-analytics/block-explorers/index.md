@@ -151,7 +151,7 @@ Tabii ki ağın sağlığı ile ilgili bazı veriler bulunuyor. Bunlar, Ethereum
 
 Ölçeklenebilirlik yükseltmeleri hâlâ geliştirilme aşamasında olsa da arayıcıların size sağlayabileceği bazı veri noktalarından bahsetmek faydalı olacaktır. Aslında, tüm bu veriler şu anda test ağları için mevcuttur.
 
-Yol haritasına aşina değilseniz [Ethereum yükseltmelerine genel bakışımıza](/upgrades/) göz atın.
+Yol haritasına aşina değilseniz [Ethereum yükseltmelerine genel bakışımıza](/roadmap/) göz atın.
 
 ### Dönem {#epoch}
 
