@@ -10,7 +10,6 @@ import Search from "../Search"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
 
-import { trackCustomEvent } from "../../utils/matomo"
 export interface IProps {
   path: string
 }
@@ -31,15 +30,6 @@ const Nav: FC<IProps> = ({ path }) => {
   } = useNav({ path })
 
   const navWrapperRef = useRef(null)
-
-  const changeColorMode = () => {
-    toggleColorMode()
-    trackCustomEvent({
-      eventCategory: "nav bar",
-      eventAction: "click",
-      eventName: isDarkTheme ? "light mode" : "dark mode", // This will be inverted as the state is changing
-    })
-  }
 
   return (
     <Box position="sticky" top={0} zIndex={100} width="full">
@@ -94,7 +84,7 @@ const Nav: FC<IProps> = ({ path }) => {
                 fontSize="2xl"
                 ms={{ xl: 2 }}
                 _hover={{ color: "primary" }}
-                onClick={changeColorMode}
+                onClick={toggleColorMode}
               />
               <ButtonLink
                 to={`/languages/${fromPageParameter}`}
