@@ -1396,7 +1396,7 @@ const DappsPage = ({
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
-          <StyledGhostCard>
+          <StyledGhostCard mt={2}>
             <MagiciansImage
               image={getImage(data.magicians)!}
               alt={t("page-dapps-magician-img-alt")}

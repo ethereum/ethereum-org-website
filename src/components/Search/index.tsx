@@ -1,7 +1,17 @@
 // Import libraries
-import React, { FC } from "react"
+import React from "react"
 import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
-import { Portal, useDisclosure } from "@chakra-ui/react"
+import { MdSearch } from "react-icons/md"
+import {
+  IconButton,
+  forwardRef,
+  Portal,
+  useDisclosure,
+  IconButtonProps,
+  useToken,
+  useMediaQuery,
+  useMergeRefs,
+} from "@chakra-ui/react"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import SearchButton from "./SearchButton"
@@ -13,9 +23,24 @@ import "@docsearch/css"
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
 
-const Search: FC = () => {
+export const SearchIconButton = forwardRef<IconButtonProps, "button">(
+  (props, ref) => (
+    <IconButton
+      ref={ref}
+      icon={<MdSearch />}
+      fontSize="2xl"
+      variant="icon"
+      _hover={{ svg: { fill: "primary" } }}
+      {...props}
+    />
+  )
+)
+
+const Search = forwardRef<{}, "button">((_, ref) => {
   const searchButtonRef = React.useRef<HTMLButtonElement>(null)
   const { isOpen, onClose, onOpen } = useDisclosure()
+
+  const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
 
   useDocSearchKeyboardEvents({
     isOpen,
@@ -44,23 +69,43 @@ const Search: FC = () => {
     return newValue.substring(0, siteNameIndex)
   }
 
+  // Check for the breakpoint with theme token
+  const xlBp = useToken("breakpoints", "xl")
+  const [isLargerThanXl] = useMediaQuery(`(min-width: ${xlBp})`)
+
   return (
     <>
-      <SearchButton
-        ref={searchButtonRef}
-        onClick={() => {
-          onOpen()
-          trackCustomEvent({
-            eventCategory: "nav bar",
-            eventAction: "click",
-            eventName: "search open",
-          })
-        }}
-        translations={{
-          buttonText: t("search"),
-          buttonAriaLabel: t("search"),
-        }}
-      />
+      {isLargerThanXl ? (
+        <SearchButton
+          ref={mergedButtonRefs}
+          onClick={() => {
+            onOpen()
+            trackCustomEvent({
+              eventCategory: "nav bar",
+              eventAction: "click",
+              eventName: "search open",
+            })
+          }}
+          translations={{
+            buttonText: t("search"),
+            buttonAriaLabel: t("search"),
+          }}
+        />
+      ) : (
+        <SearchIconButton
+          onClick={() => {
+            onOpen()
+            trackCustomEvent({
+              eventCategory: "nav bar",
+              eventAction: "click",
+              eventName: "search open",
+            })
+          }}
+          ref={mergedButtonRefs}
+          aria-label={t("aria-toggle-search-button")}
+          size="sm"
+        />
+      )}
       <Portal>
         {isOpen ? (
           <SearchModal
@@ -130,6 +175,6 @@ const Search: FC = () => {
       </Portal>
     </>
   )
-}
+})
 
 export default Search
