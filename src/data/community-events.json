@@ -107,6 +107,15 @@
     "startDate": "2023-06-02",
     "endDate": "2023-06-4"
   },
+   {
+    "title": "ETHPrague",
+    "to": "https://ethprague.com/",
+    "sponsor": null,
+    "location": "Prague, Czech Republic",
+    "description": "ETHPrague is focusing on exploring solarpunk visions, solving sustainability issues, and addressing societal challenges by utilizing Ethereum, and discovering potential concepts or applications that do not yet exist.",
+    "startDate": "2023-06-09",
+    "endDate": "2023-06-11"
+  },
   {
     "title": "ETHGlobal Paris",
     "to": "https://ethglobal.com/events/paris2023",
