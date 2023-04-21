@@ -22,6 +22,8 @@
   "page-learning-tools-eth-dot-build-logo-alt": "Logo Eth.build",
   "page-learning-tools-ethernauts-description": "Terminez les niveaux en piratant des contrats intelligents.",
   "page-learning-tools-ethernauts-logo-alt": "Logo Ethereum",
+  "page-learning-tools-metaschool-description": "Devenez développeur Web3 en construisant et expédiant des dApps.",
+  "page-learning-tools-metaschool-logo-alt": "Logo _metaschool",
   "page-learning-tools-game-tutorials": "Tutoriels interactifs",
   "page-learning-tools-game-tutorials-desc": "Apprenez en jouant. Ces tutoriels vous permettent de parcourir les bases de façon ludique.",
   "page-learning-tools-meta-desc": "Outils de codage en ligne et expériences d'apprentissage interactif pour vous aider à faire des expériences avec le développement d'Ethereum.",
@@ -29,8 +31,10 @@
   "page-learning-tools-questbook-description": "Tutoriels auto-initiés pour apprendre Web 3.0 en construisant",
   "page-learning-tools-questbook-logo-alt": "Logo du Questbook",
   "page-learning-tools-remix-description": "Développez, déployez et administrez des contrats intelligents pour Ethereum. Suivez des tutoriels avec le plugin Learneth.",
-  "page-learning-tools-remix-description-2": "Remix n'est pas seulement un espace de test. Les développeurs peuvent rédiger, compiler et déployer leurs contrats intelligents en utilisant Remix.",
+  "page-learning-tools-remix-description-2": "Remix, Replit, et ChainIDE ne sont pas seulement des espaces de test. Les développeurs peuvent rédiger, compiler et déployer leurs contrats intelligents en les utilisant.",
   "page-learning-tools-replit-description": "Un environnement de développement personnalisable dédiée à Ethereum avec le rechargement à chaud, une vérification des erreurs et un support testnet de première qualité.",
+  "page-learning-tools-chainIDE-description": "Commencez votre voyage Web3 en écrivant des contrats intelligents pour Ethereum avec ChainIDE. Utilisez les modèles intégrés pour apprendre et gagner du temps.",
+  "page-learning-tools-chainIDE-logo-alt": "Logo ChainIDE",
   "page-learning-tools-replit-logo-alt": "Logo Replit",
   "page-learning-tools-remix-logo-alt": "Logo Remix",
   "page-learning-tools-sandbox": "Boîtes à sable de code",
@@ -46,5 +50,7 @@
   "page-learning-tools-pointer-logo-alt": "Logo de Pointer",
   "page-learning-tools-platzi-description": "Apprenez à construire des DApps sur Web3 et maîtrisez toutes les compétences nécessaires pour être un développeur blockchain.",
   "page-learning-tools-platzi-logo-alt": "Logo de Platzi",
+  "page-learning-tools-alchemy-university-description": "Boostez votre carrière Web3 grâce à des cours, projets et du code.",
+  "page-learning-tools-alchemy-university-logo-alt": "Logo d'Alchemy University",
   "alt-eth-blocks": "Illustration de blocs organisés comme un symbole ETH"
 }

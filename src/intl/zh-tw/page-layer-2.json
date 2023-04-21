@@ -57,7 +57,7 @@
   "layer-2-dyor-3": "前往 L2BEAT",
   "layer-2-use-layer-2-title": "使用二層網路",
   "layer-2-use-layer-2-1": "現在你知道了為什麼二層網路會存在和它是如何工作的，讓我們開始行動吧！",
-  "layer-2-contract-accounts": "<strong>注意：</strong>在橋接和使用二層網路時，請務必注意，你將控制你的外部帳戶（一個只由一組私鑰控制的帳戶），就像在以太坊主網上一樣。然而當你使用合約帳戶，例如 <a href=\"https://safe.global/\"  target=”_blank”>Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，你將無法在二層網路上控制此地址，直到你將你的合約帳戶重新部署到二層網路上的該地址。如果你正在橋接或發送資金到合約帳戶，並且你沒有辦法控制該合約帳戶的地址，你的資金可能會遺失。",
+  "layer-2-contract-accounts": "<strong>備註：</strong>在橋接到二層網路並使用時，一定要格外注意，如同在以太坊主網上一樣，你將控制你的外部帳戶 (EOA)（只有一個私密金鑰控制帳戶的帳戶）的地址。但如果你使用合約帳戶，例如 <a href=\"https://safe.global/\"  target=”_blank”>Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，除非將該合約帳戶重新部署到二層網路上的相應地址，否則在二層網路上你將沒有該地址的控制權。如果你打算將資金橋接或發送到合約帳戶，但無法控制該合約帳戶的地址，你很可能會失去這筆資金。",
   "layer-2-use-layer-2-generalized-title": "廣義二層網路",
   "layer-2-use-layer-2-generalized-1": "廣義二層網路的行為和以太坊並無區別，但更便宜。你在以太坊一層網路上能夠做到的任何事情，在二層網路同樣能做到。許多去中心化應用程式已經開始遷移到這些二層網路上，或是直接跳過主網，直接部署在二層網路上。",
   "layer-2-use-layer-2-application-specific-title": "應用程式特定的二層網路",
