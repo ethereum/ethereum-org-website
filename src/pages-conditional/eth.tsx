@@ -164,10 +164,6 @@ const CentralActionCard = styled(ActionCard)`
   }
 `
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 5rem 0;
-`
-
 const tokens = [
   {
     emoji: ":scales:",
@@ -326,7 +322,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               />
             ))}
           </StyledCardContainer>
-          <InfoBanner emoji=":wave:" shouldCenter={true}>
+          <InfoBanner emoji=":wave:" shouldCenter>
             <b>
               <Translation id="page-eth-buy-some" />
             </b>{" "}
@@ -435,7 +431,9 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           </div>
           <Divider />
         </CentralColumn>
-        <StyledCalloutBanner
+        <CalloutBanner
+          my={20}
+          mx={0}
           titleKey={"page-eth-where-to-buy"}
           descriptionKey={"page-eth-where-to-buy-desc"}
           image={getImage(data.ethCat)!}
@@ -447,7 +445,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               <Translation id="page-eth-get-eth-btn" />
             </ButtonLink>
           </div>
-        </StyledCalloutBanner>
+        </CalloutBanner>
       </Content>
 
       <TwoColumnContent>

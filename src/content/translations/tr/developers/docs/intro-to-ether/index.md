@@ -18,7 +18,7 @@ Bir takas aracı, mallar ve hizmetler için ödeme olarak yaygın olarak kabul e
 
 ## Ether nedir? {#what-is-ether}
 
-**Ether (ETH)** Ethereum ağındaki birçok şey için kullanılan bir kripto paradır. Temelde, işlem ücretleri için kabul edilebilir tek ödeme şeklidir ve [Birleştirmeden](/upgrades/merge) sonra ether, Mainnet'te blokları doğrulamak ve tavsiye etmek için de gerekecektir. Ether ayrıca, [DeFi](/defi) kredi piyasalarında birincil teminat biçimi olarak, NFT piyasalarında bir hesap birimi olarak, hizmetlerin gerçekleştirilmesi veya gerçek dünya mallarının satılması için kazanılan ödeme ve daha fazlası olarak kullanılır.
+**Ether (ETH)** Ethereum ağındaki birçok şey için kullanılan bir kripto paradır. Temelde, işlem ücretleri için kabul edilebilir tek ödeme şeklidir ve [Birleştirmeden](/roadmap/merge) sonra ether, Mainnet'te blokları doğrulamak ve tavsiye etmek için de gerekecektir. Ether ayrıca, [DeFi](/defi) kredi piyasalarında birincil teminat biçimi olarak, NFT piyasalarında bir hesap birimi olarak, hizmetlerin gerçekleştirilmesi veya gerçek dünya mallarının satılması için kazanılan ödeme ve daha fazlası olarak kullanılır.
 
 Ethereum, geliştiricilerin tümü bir bilgi işlem gücü havuzunu paylaşan [**merkeziyetsiz uygulamalar (dapp'ler)**](/developers/docs/dapps) oluşturmasına olanak tanır. Bu paylaşılan havuz sınırlı olduğu için Ethereum'un onu kimin kullanacağını belirlemek için bir mekanizmaya ihtiyacı vardır. Aksi takdirde, bir dapp yanlışlıkla veya kötü niyetli olarak tüm ağ kaynaklarını tüketebilir ve bu da başkalarının ona erişmesini engelleyebilir.
 

@@ -28,6 +28,7 @@ import { isMobile } from "../utils/isMobile"
 import type { Context } from "../types"
 
 import client from "../apollo"
+import Fonts from "./Fonts"
 
 export interface IProps {
   children?: React.ReactNode
@@ -106,6 +107,7 @@ const Layout: React.FC<IProps> = ({
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
+        <Fonts />
         <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
           <SkipLink hrefId="#main-content" />
           <TranslationBanner

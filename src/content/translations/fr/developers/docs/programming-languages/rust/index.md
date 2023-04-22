@@ -30,9 +30,6 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 
 ## Articles de niveau intermédiaire {#intermediate-articles}
 
-- [Documentation Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Exemples de travail Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## Modèles d'utilisation avancés {#advanced-use-patterns}
 
 - [bibliothèque externe pwasm_ethereum pour interagir avec un réseau de type Ethereum](https://github.com/openethereum/pwasm-ethereum)
@@ -49,7 +46,6 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _Référence de l'API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Implémentation en Rust de machines virtuelles Ethereum_
-- [roust-web3](https://github.com/tomusdrw/rust-web3) - _Implémentation Rust de la bibliothèque Web3.js_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contrats intelligents Wavelet en Rust_
 - [Foundry](https://github.com/gakonst/foundry)- _Boîte à outils pour le développement d'applications Ethereum_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Bibliothèque Ethereum et implémentation de portefeuille_

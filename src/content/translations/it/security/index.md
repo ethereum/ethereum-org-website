@@ -214,7 +214,7 @@ Come regola generale, il personale non comunicherà mai con te attraverso canali
 
 ### Truffa del token "Eth2" {#eth2-token-scam}
 
-Nella corsa a [La Fusione](/upgrades/merge/), i truffatori hanno approfittato della confusione sul termine 'Eth2' per provare a convincere gli utenti a riscattare i propri ETH per un token 'ETH2'. Non esiste alcun 'ETH2' e non è stato introdotto alcun altro token legittimo con La Fusione. Gli ETH che possedevi prima de La Fusione, sono gli stessi ETH adesso. **Non serve intraprendere alcuna azione correlata ai tuoi ETH per tenere conto del passaggio dal proof-of-work al proof-of-stake**.
+Nella corsa a [La Fusione](/roadmap/merge/), i truffatori hanno approfittato della confusione sul termine 'Eth2' per provare a convincere gli utenti a riscattare i propri ETH per un token 'ETH2'. Non esiste alcun 'ETH2' e non è stato introdotto alcun altro token legittimo con La Fusione. Gli ETH che possedevi prima de La Fusione, sono gli stessi ETH adesso. **Non serve intraprendere alcuna azione correlata ai tuoi ETH per tenere conto del passaggio dal proof-of-work al proof-of-stake**.
 
 I truffatori potrebbero apparire sotto forma di "supporto", dicendoti che se depositi i tuoi ETH, riceverai degli 'ETH2' in cambio. Non esiste alcun [supporto ufficiale di Ethereum](/community/support/) e non esiste alcun nuovo token. Non condividere mai la frase di seed del tuo portafoglio con nessuno.
 

@@ -27,7 +27,7 @@ Ta metoda širjenja zahteva spremembe protokola Ethereum (plast 1 [glavno omrež
 
 Drobljenje je proces horizontalne cepitve podatkovne baze za razporeditev bremena. V kontekstu Ethereuma bo drobljenje zmanjšalo prenatrpanost omrežja in povečalo število transakcij na sekundo z ustvarjanjem novih verig, imenovanih "drobci". To bo prav tako zmanjšalo obremenitev za vsakega validatorja, ki mu ne bo več treba procesirati vseh transakcij na omrežju.
 
-Izvedite več o [razdrobitvi](/upgrades/sharding/).
+Izvedite več o [razdrobitvi](/roadmap/danksharding/).
 
 ## Širjenje izven verige {#off-chain-scaling}
 

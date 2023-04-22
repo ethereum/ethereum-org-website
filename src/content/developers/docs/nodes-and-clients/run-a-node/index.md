@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Running your own node provides you various benefits, opens new possibilities, and helps to support the ecosystem. This page will guide you through spinning up your own node and taking part in validating Ethereum transactions.
 
-Note that after [The Merge](/upgrades/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
+Note that after [The Merge](/roadmap/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
 
 ## Prerequisites {#prerequisites}
 
@@ -89,14 +89,14 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 - CPU with 2+ cores
 - 8 GB RAM
-- 700GB free disk space
+- 2TB SSD
 - 10+ MBit/s bandwidth
 
 ##### Recommended specifications
 
 - Fast CPU with 4+ cores
 - 16 GB+ RAM
-- Fast SSD with 1+TB
+- Fast SSD with 2+TB
 - 25+ MBit/s bandwidth
 
 The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
@@ -331,7 +331,7 @@ lighthouse beacon_node \
     --datadir /data/ethereum \
     --http \
     --execution-endpoint http://127.0.0.1:8551 \
-    --execution-jwt /path/to/jwtsecret \
+    --execution-jwt /path/to/jwtsecret
 ```
 
 ##### Running Lodestar
@@ -378,7 +378,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
-    --ee-jwt-secret-file "/path/to/jwtsecret" \
+    --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
 When a consensus client connects to the execution client to read the deposit contract and identify validators, it also connects to other Beacon Node peers and begins syncing consensus slots from genesis. Once the Beacon Node reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).

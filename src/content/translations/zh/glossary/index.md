@@ -77,7 +77,7 @@ sidebarDepth: 2
 
 信标链是为以太坊引入[权益证明](#pos)和[验证者](#validator)的区块链。 从 2020 年 11 月起，它和工作量证明模式下的以太坊主网并行运行，直到 2022 年 9 月两条链合并，形成现如今的以太坊。
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   信标链
 </DocLink>
 
@@ -274,7 +274,7 @@ DeFi 是“去中心化金融”的缩写，是一种广义的[去中心化应�
 
 ### 难度炸弹 {#difficulty-bomb}
 
-计划的使[工作量证明](#pow)[难度](#difficulty)呈指数级别增长的设置，旨在促进向[权益证明](#pos)的过渡，并减少发生[分叉](#hard-fork)的几率。 难度炸弹在[合并](/upgrades/merge/)时被移除。
+计划的使[工作量证明](#pow)[难度](#difficulty)呈指数级别增长的设置，旨在促进向[权益证明](#pos)的过渡，并减少发生[分叉](#hard-fork)的几率。 难度炸弹在[合并](/roadmap/merge/)时被移除。
 
 ### 数字签名 {#digital-signatures}
 
@@ -324,7 +324,7 @@ DeFi 是“去中心化金融”的缩写，是一种广义的[去中心化应�
 
 “以太坊 1”是指主网以太坊，即现有的工作量证明区块链。 该术语已弃用，取而代之的是“执行层”。 [详细了解此名称更改](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)。
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   有关以太坊升级的更多信息
 </DocLink>
 
@@ -332,7 +332,7 @@ DeFi 是“去中心化金融”的缩写，是一种广义的[去中心化应�
 
 “以太坊 2”是指以太坊协议的一系列升级，包括以太坊到权益证明的过渡。 该术语已弃用，取而代之的是“共识层”。 [详细了解此名称更改](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)。
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   有关以太坊升级的更多信息
 </DocLink>
 
@@ -823,7 +823,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 启动了一组扩容和可持续性升级的以太坊开发阶段，以前称为“以太坊 2.0”或“以太坊 2”。
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   以太坊升级
 </DocLink>
 
@@ -835,7 +835,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 分片链是整个区块链中验证者的子集可以负责的离散部分。 这将为以太坊提供更高的交易吞吐量，并提高[二层网络](#layer-2)解决方案（如[乐观卷叠](#optimistic-rollups)和[零知识卷叠](#zk-rollups)）的数据可用性。
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/roadmap/danksharding/">
   分片链
 </DocLink>
 

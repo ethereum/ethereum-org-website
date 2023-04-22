@@ -43,7 +43,7 @@ Validators with `0x00` BLS keys must update these credentials to point to an exe
 
 ### The withdrawal key {#withdrawal-key}
 
-The withdrawal key will be required to update withdrawal credentials to point to an execution address, if not set during initial deposit. This will enable excess balance payments to begin being processed (beginning with the Shanghai/Capella upgrade), and will also allow users to fully withdraw their staked ETH.
+The withdrawal key will be required to update withdrawal credentials to point to an execution address, if not set during initial deposit. This will enable excess balance payments to begin being processed, and will also allow users to fully withdraw their staked ETH.
 
 Just like the validator keys, the withdrawal keys also consist of two components:
 

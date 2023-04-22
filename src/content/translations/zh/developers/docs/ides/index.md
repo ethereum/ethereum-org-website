@@ -10,41 +10,44 @@ lang: zh
 
 如果您想在[设置本地开发环境](/developers/local-environment/)之前摆弄一下代码，这些网络应用是为以太坊智能合约开发定制的。
 
-**Remix -** **_基于 Web 的集成开发环境，内置静态分析和测试区块链虚拟机_**
+**[Remix](https://remix.ethereum.org/)** - **_基于 Web 的集成开发环境，内置静态分析和区块链测试虚拟机_**
 
-- [remix.ethereum.org](https://remix.ethereum.org/)
+- [相关文档](https://remix-ide.readthedocs.io/en/latest/#)
+- [Gitter](https://gitter.im/ethereum/remix)
 
-**EthFiddle -** **_基于 Web 的集成开发环境，可让你编写、编译和调试智能合约_**
+**[ChainIDE](https://chainide.com/)** - **_一个支持多链的云端集成开发环境_**
 
-- [ethfiddle.com](https://ethfiddle.com/)
+- [相关文档](https://chainide.gitbook.io/chainide-english-1/)
+- [帮助论坛](https://forum.chainide.com/)
+
+**[Replit（Solidity 新手教程 - Beta）](https://replit.com/@replit/Solidity-starter-beta)** - **_一种可定制的以太坊开发环境，提供热重载、错误检查和一流的测试网支持_**
+
+- [相关文档](https://docs.replit.com/)
+
+**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_一种快捷的原型构建环境，让你可以使用 Solidity 和 JavaScript 在浏览器中编写、执行并调试智能合约_**
+
+**[EthFiddle](https://ethfiddle.com/)** - **_基于 Web 的集成开发环境 ( IDE )，可让你编写、编译和调试智能合约_**
+
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
-
-**ChainIDE -** **_一个基于云端的多链集成开发环境_**
-
-- [chainide.com](https://chainide.com/)
-
-**Replit -** **_具有热重载、错误检查和一流测试网支持的可定制以太坊开发环境_**
-
-- [Solidity 新手教程](https://replit.com/@replit/Solidity-starter-beta)
 
 ## 桌面 IDE {#desktop-ides}
 
-大多数成熟的集成开发环境都建立了插件来增强以太坊的开发体验。 至少，它们为[智能合约语言](/developers/docs/smart-contracts/languages/)提供语法高亮功能。
+大多数成熟的集成开发环境都包含增强以太坊开发体验的插件。 至少，它们能为[智能合约语言](/developers/docs/smart-contracts/languages/)提供语法突出显示。
 
-**Visual Studio Code -** **_提供官方以太坊支持的专业跨平台集成开发环境_**
+**Visual Studio Code -** **_专业跨平台集成开发环境，获得以太坊官方支持_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [代码示例](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_21 世纪可破解的文本编辑器_**
+**Atom -** **_21 世纪可被黑客攻击的文本编辑器_**
 
-- [Atom 编辑器](https://atom.io/)
+- [Atom](https://atom.io/)
 - [GitHub](https://github.com/atom)
 - [以太坊包](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
-**JetBrains 集成开发环境（IntelliJ IDEA 等） -** **_软件开发者和团队的基本工具_**
+**JetBrains 集成开发环境（IntelliJ IDEA 等） -** **_面向软件开发者和团队的基本工具_**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)
@@ -57,9 +60,10 @@ lang: zh
 
 ## 插件与扩展 {#plugins-extensions}
 
-- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - 以太坊 Visual Studio Code 中的 Solidity 语言
-- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - 使用 prettier 的代码格式化工具
+- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - 面向 Visual Studio Code 的以太坊 Solidity 语言
+- [面向 VS Code 的 Solidity + 安全帽](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - 安全帽团队提供 Solidity 和安全帽支持
+- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - 使用 Prettier 的代码格式化工具
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

@@ -6,6 +6,7 @@
   "page-dapps-audius-logo-alt": "Logo de Audius",
   "page-dapps-augur-logo-alt": "Logo de Augur",
   "page-dapps-axie-infinity-logo-alt": "Logo de Axie Infinity",
+  "page-dapps-balancer-logo-alt": "Logo de Balancer",
   "page-dapps-brave-logo-alt": "Logo de Brave",
   "page-dapps-category-arts": "Arte y moda",
   "page-dapps-category-browsers": "Buscadores",
@@ -47,6 +48,7 @@
   "page-dapps-dapp-description-audius": "Plataforma de streaming descentralizada. Escuchas = dinero para creadores, no etiquetas.",
   "page-dapps-dapp-description-augur": "Apueste por los resultados de los deportes, la economía y más eventos mundiales.",
   "page-dapps-dapp-description-axie-infinity": "Comercie con criaturas de combate llamadas «Axies». Y gane mientras juega (disponible en móviles)",
+  "page-dapps-dapp-description-balancer": "Balancer es una plataforma automatizada de operaciones y gestión de carteras.",
   "page-dapps-dapp-description-brave": "Gane tókenes por navegar y apoyar a sus creadores favoritos con ellos.",
   "page-dapps-dapp-description-cent": "Una red social donde puede ganar dinero publicando NFT.",
   "page-dapps-dapp-description-compound": "Preste sus tókenes para ganar intereses y retírelos en cualquier momento.",
@@ -206,7 +208,9 @@
   "page-dapps-more-on-defi-button": "Más sobre finanzas descentralizadas",
   "page-dapps-more-on-nft-button": "Más sobre coleccionables tokenizados",
   "page-dapps-more-on-nft-gaming-button": "Más sobre objetos de juegos tokenizados",
-  "foundation": "Fundación",
-  "transaction-fees": "¿Qué son las tarifas de transacción?",
+  "page-dapps-dapp-description-pwn": "Préstamos fáciles respaldados por cualquier token o NFT en Ethereum.",
+  "page-dapps-pwn-image-alt": "Logo de PWN",
+  "foundation": "Foundation",
+  "transaction-fees": "¿Cuáles son las tarifas de transacción?",
   "page-wallets-get-some": "Obtener ETH"
 }

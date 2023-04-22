@@ -154,7 +154,7 @@ DAO 해킹에 대해 자세히 보기:
 
 비콘 체인이 이더리움 실행 계층과 병합되면 변경 사항을 제안하기 위한 운영 방식 프로세스가 조화를 이룰 것으로 기대합니다. 병합을 실행하려는 이 프로세스는 [이미 진행 중입니다](https://github.com/ethereum/EIPs/pull/3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   병합에 대해 자세히 알아보기
 </ButtonLink>
 

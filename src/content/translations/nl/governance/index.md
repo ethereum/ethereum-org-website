@@ -154,7 +154,7 @@ Hoewel de ontwikkeling van specificaties en implementaties altijd volledig open 
 
 Wanneer de Beacon Chain samenvalt met de uitvoeringslaag van Ethereum, zal het governance-proces om wijzigingen voor te stellen worden geharmoniseerd. Dit proces om de merge te implementeren is [al gaande](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Meer over de merge
 </ButtonLink>
 

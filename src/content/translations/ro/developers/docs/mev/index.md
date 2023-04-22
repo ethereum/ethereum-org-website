@@ -16,7 +16,7 @@ Aveţi grijă să vă familiarizaţi cu [tranzacțiile](/developers/docs/transac
 
 ## Extragerea MEV {#mev-extraction}
 
-In theory MEV accrues entirely to miners because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least on the current proof-of-work chain — this will change after [The Merge](/upgrades/merge/)). Cu toate acestea, în practică, o mare parte din MEV este extrasă de participanții independenți din rețea, denumiți „căutători” Căutătorii rulează algoritmi complecși pe datele blockchain pentru a detecta oportunitățile MEV profitabile și au roboți care să transmită automat aceste tranzacții profitabile în rețea.
+In theory MEV accrues entirely to miners because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least on the current proof-of-work chain — this will change after [The Merge](/roadmap/merge/)). Cu toate acestea, în practică, o mare parte din MEV este extrasă de participanții independenți din rețea, denumiți „căutători” Căutătorii rulează algoritmi complecși pe datele blockchain pentru a detecta oportunitățile MEV profitabile și au roboți care să transmită automat aceste tranzacții profitabile în rețea.
 
 Miner-ii primesc oricum o parte din întreaga sumă MEV, deoarece căutătorii sunt dispuși să plătească taxe mari pe gaz (care ajung la miner) în schimbul unei probabilități mai mari de includere a tranzacțiilor lor profitabile într-un bloc. Dacă presupunem că acești căutători sunt raționali din punct de vedere economic, taxa pe gaz pe care un căutător este dispus să o plătească va fi o sumă de până la 100% din MEV-ul căutătorului (deoarece dacă taxa pe gaz ar fi mai mare, căutătorul ar pierde bani).
 
