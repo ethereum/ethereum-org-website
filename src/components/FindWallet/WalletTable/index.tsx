@@ -1,14 +1,33 @@
 // Libraries
 import React, { ReactNode } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import Select from "react-select"
+import { MdExpandLess, MdExpandMore } from "react-icons/md"
+import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
+import {
+  Box,
+  chakra,
+  Flex,
+  FlexProps,
+  forwardRef,
+  Icon,
+  Img,
+  keyframes,
+  SimpleGrid,
+  SimpleGridProps,
+  Table,
+  TableProps,
+  Td,
+  Text,
+  Th,
+  Tr,
+} from "@chakra-ui/react"
 
 // Components
-import Icon from "../../Icon"
-import Link from "../../Link"
-import { StyledSelect as Select } from "../../SharedStyledComponents"
+import Link, { IProps as LinkProps } from "../../Link"
+import { WalletMoreInfo } from "./WalletMoreInfo"
 
 // Icons
 import {
@@ -17,223 +36,215 @@ import {
 } from "../../icons/staking"
 
 // Utils
+import { useWalletTable } from "./useWalletTable"
 import { trackCustomEvent } from "../../../utils/matomo"
 import { getImage } from "../../../utils/image"
-import { useWalletTable } from "./useWalletTable"
 import { WalletData } from "../../../data/wallets/wallet-data"
-import { WalletMoreInfo } from "./WalletMoreInfo"
+import { ChildOnlyProp } from "../../../types"
 
-// Styles
-const Container = styled.table`
-  width: 100%;
-  th {
-    font-weight: normal;
-    p {
-      font-size: 0.9rem;
-    }
-  }
-`
+const Container = (props: TableProps) => (
+  <Table
+    w="full"
+    sx={{
+      th: {
+        fontWeight: "normal",
+        p: {
+          fontSize: "0.9rem",
+        },
+      },
+    }}
+    {...props}
+  />
+)
 
-const WalletContainer = styled(Container)`
-  border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
-  :hover {
-    background: ${(props) => props.theme.colors.boxShadow};
-    transition: 0.5s all;
-  }
-`
+const WalletContainer = (props: ChildOnlyProp) => (
+  <Container
+    borderBottom="1px"
+    borderColor="lightBorder"
+    _hover={{ bg: "boxShadow", transition: "0.5s all" }}
+    {...props}
+  />
+)
 
-const Grid = styled.tr`
-  display: grid;
-  grid-template-columns: 40% auto auto auto 5%;
-  width: 100%;
-  column-gap: 0.5rem;
-  align-items: center;
+const Grid = forwardRef<SimpleGridProps, "tr">((props, ref) => (
+  <SimpleGrid
+    as={Tr}
+    ref={ref}
+    templateColumns={{ base: "60% auto 0% 0% 5%", md: "40% auto auto auto 5%" }}
+    w="full"
+    columnGap={2}
+    alignItems="center"
+    {...props}
+  />
+))
 
-  p {
-    margin: 0;
-  }
+const WalletContentHeader = (props: ChildOnlyProp) => (
+  <Grid
+    bg="background"
+    borderBottom="1px"
+    borderColor="primary"
+    templateColumns={{
+      base: "auto",
+      sm: "60% auto 0% 0% 5%",
+      md: "40% auto auto auto 5%",
+    }}
+    rowGap={{ base: 4, sm: 0 }}
+    p={2}
+    position="sticky"
+    top={0}
+    zIndex="docked"
+    sx={{
+      th: {
+        p: 0,
+        borderBottom: "none",
+        color: "currentColor",
+        fontSize: "0.9rem",
+        lineHeight: "revert",
+        letterSpacing: "revert",
+        textAlign: "revert",
+        textTransform: "revert",
+        "&:nth-of-type(2)": {
+          display: { base: "flex", sm: "revert" },
+          alignItems: "center",
+          gap: 4,
+        },
+        "&:nth-of-type(3), &:nth-of-type(4)": {
+          hideBelow: "sm",
+        },
+      },
+    }}
+    {...props}
+  />
+)
 
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: 60% auto 0% 0% 5%;
+const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
+  <Grid
+    ref={ref}
+    cursor="pointer"
+    py="25px"
+    px={{ base: 4, lg: 1 }}
+    sx={{
+      p: {
+        m: 0,
+      },
+      td: {
+        padding: 0,
+        borderBottom: "none",
+        height: "full",
+      },
+      "td:nth-of-type(3), td:nth-of-type(4)": {
+        hideBelow: "sm",
+      },
+    }}
+    {...props}
+  />
+))
 
-    th:nth-of-type(3) {
-      display: none;
-    }
-    th:nth-of-type(4) {
-      display: none;
-    }
+const ChakraSelect = chakra((props: { className?: string }) => (
+  <Select {...props} />
+))
+const StyledSelect = (props) => (
+  <ChakraSelect
+    sx={{
+      ".react-select": {
+        "&__control": {
+          bg: "searchBackground",
+          border: "1px",
+          borderColor: "text",
+          cursor: "pointer",
+          pe: "0.3rem",
+          transition: "0.5s all",
 
-    td:nth-of-type(3) {
-      display: none;
-    }
-    td:nth-of-type(4) {
-      display: none;
-    }
-  }
-`
+          ".react-select__value-container": {
+            ".react-select__single-value": {
+              color: "text",
+            },
+          },
 
-const WalletContentHeader = styled(Grid)`
-  position: sticky;
-  top: 0;
-  padding: 8px;
-  background: ${(props) => props.theme.colors.background};
-  z-index: 1;
-  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
+          ".react-select__indicators": {
+            ".react-select__indicator-separator": {
+              bg: "none",
+            },
+            ".react-select__indicator": {
+              color: "text",
+              p: 0,
+            },
+          },
 
-  th {
-    padding: 0;
-    border-bottom: none;
-  }
+          "&:hover, &--is-focused": {
+            bg: "primary",
+            borderColor: "primary",
 
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    grid-template-columns: auto;
-    gap: 1rem;
-    text-align: center;
-    th:nth-of-type(1) {
-      text-align: center;
-    }
-    th:nth-of-type(2) {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      &:before {
-        white-space: nowrap;
-        content: "Compare features";
-      }
-    }
-  }
+            ".react-select__value-container": {
+              ".react-select__single-value": {
+                color: "background",
+              },
+            },
 
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    top: 50;
-  }
-`
+            ".react-select__indicators": {
+              ".react-select__indicator": {
+                color: "background",
+              },
+            },
+          },
+        },
 
-const Wallet = styled(Grid)`
-  padding: 25px 4px;
-  cursor: pointer;
-  td {
-    padding: 0;
-    border-bottom: none;
-    height: 100%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 25px 1rem;
-  }
-`
+        "&__placeholder": {
+          color: "text200",
+        },
 
-// https://react-select.com/styles#using-classnames
-// Pass menuIsOpen to component to debug
-const StyledSelect = styled(Select)`
-  .react-select__control {
-    border: 1px solid ${(props) => props.theme.colors.text};
-    cursor: pointer;
-    font-size: 0.9rem;
-    padding-right: 0.3rem;
-    transition: 0.5s all;
-    svg {
-      fill: ${(props) => props.theme.colors.text};
-      transition: 0.5s all;
-    }
+        "&__single-value, &__menu, &__input": {
+          color: "text",
+        },
 
-    .react-select__value-container {
-      .react-select__single-value {
-        color: ${(props) => props.theme.colors.text};
-      }
-    }
+        "&__menu": {
+          bg: "searchBackground",
+        },
 
-    .react-select__indicators {
-      .react-select__indicator-separator {
-        background: none;
-      }
-      .react-select__indicator {
-        color: ${(props) => props.theme.colors.text};
-        padding: 0;
-      }
-    }
+        "&__option": {
+          "&:hover, &--is-focused": {
+            bg: "selectHover",
+          },
+          _active: {
+            bg: "selectActive",
+            color: "buttonColor !important",
+          },
 
-    &:hover {
-      background: ${(props) => props.theme.colors.primary};
-      cursor: pointer;
-      border-color: ${(props) => props.theme.colors.primary};
-      color: ${(props) => props.theme.colors.background};
-      transition: 0.5s all;
-      svg {
-        fill: ${(props) => props.theme.colors.background};
-        transition: 0.5s all;
-      }
+          "&--is-selected": {
+            bg: "primary",
+            color: "buttonColor",
+            _hover: {
+              bg: "primary",
+            },
+          },
+        },
+      },
+    }}
+    {...props}
+  />
+)
 
-      .react-select__value-container {
-        .react-select__single-value {
-          color: ${(props) => props.theme.colors.background};
-        }
-      }
-
-      .react-select__indicators {
-        .react-select__indicator-separator {
-          background: none;
-        }
-        .react-select__indicator {
-          color: ${(props) => props.theme.colors.text};
-        }
-      }
-    }
-  }
-
-  .react-select__control--is-focused {
-    border: 1px solid ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.primary};
-    svg {
-      fill: ${(props) => props.theme.colors.background};
-      transition: 0.5s all;
-    }
-
-    .react-select__value-container {
-      .react-select__single-value {
-        color: ${(props) => props.theme.colors.background};
-      }
-    }
-
-    .react-select__indicators {
-      background: ${(props) => props.theme.colors.primary};
-      .react-select__value-container {
-        .react-select__single-value {
-          color: ${(props) => props.theme.colors.background};
-        }
-      }
-
-      .react-select__indicators {
-        .react-select__indicator {
-          color: ${(props) => props.theme.colors.background};
-        }
-      }
-    }
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    .react-select__control {
-      padding: 0;
-    }
-  }
-`
-
-const FlexInfo = styled.div`
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  padding-left: 0.3rem;
-
-  p {
-    padding: 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  p + p {
-    margin-top: 0.1rem;
-    font-size: 0.9rem;
-    line-height: 1rem;
-    font-weight: normal;
-  }
-`
+const FlexInfo = (props: FlexProps) => (
+  <Flex
+    alignItems="center"
+    gap={4}
+    pl="0.3rem"
+    sx={{
+      p: {
+        p: 0,
+        fontSize: "1.2rem",
+        fontWeight: "bold",
+        "& + p": {
+          mt: "0.1rem",
+          fontSize: "0.9rem",
+          lineHeight: 4,
+          fontWeight: "normal",
+        },
+      },
+    }}
+    {...props}
+  />
+)
 
 const fadeIn = keyframes`
   0% {
@@ -253,79 +264,35 @@ const fadeOut = keyframes`
   }
 `
 
-const FlexInfoCenter = styled(FlexInfo)`
-  justify-content: center;
-  cursor: pointer;
-  height: 100%;
-  display: flex;
-  animation: ${fadeIn} 0.375s;
+const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
+  <FlexInfo
+    animation={`${fadeIn} 0.375s`}
+    cursor="pointer"
+    justifyContent="center"
+    height="full"
+    sx={{
+      "&.fade": {
+        animation: `${fadeOut} 0.375s`,
+      },
+    }}
+    {...props}
+  />
+)
 
-  &.fade {
-    animation: ${fadeOut} 0.375s;
-  }
-`
-
-const Image = styled(GatsbyImage)`
-  height: 56px;
-  width: 56px;
-`
-
-const SecondaryText = styled.p`
-  font-size: 0.7rem;
-  line-height: 0.85rem;
-  color: ${(props) => props.theme.colors.text200};
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: none;
-  }
-`
-
-const SecondaryTextMobile = styled.p`
-  display: none;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: block;
-    font-size: 0.7rem;
-    line-height: 0.85rem;
-    margin: 0;
-    color: ${(props) => props.theme.colors.text200};
-  }
-`
-
-const WalletMoreInfoArrow = styled(Icon)`
-  fill: ${(props) => props.theme.colors.primary};
-`
-
-const SocialsContainer = styled.div`
-  margin-top: 1rem;
-  p {
-    margin: 0;
-  }
-  a {
-    height: 32px;
-  }
-`
-
-const Socials = styled.div`
-  display: flex;
-  gap: 0.8rem;
-  p {
-    font-size: 0.9rem;
-    color: ${(props) => props.theme.colors.primary};
-    margin: 0;
-  }
-  a {
-    height: auto;
-    align-items: center;
-    display: flex;
-    transform: scale(1);
-    transition: transform 0.1s;
-    :hover {
-      transform: scale(1.15);
-      transition: transform 0.1s;
-    }
-  }
-`
+const SocialLink = (props: LinkProps) => (
+  <Link
+    display="flex"
+    height={8}
+    alignItems="center"
+    verticalAlign="middle"
+    transform="scale(1)"
+    transition="transform 0.1s"
+    _hover={{
+      transform: "scale(1.15)",
+    }}
+    {...props}
+  />
+)
 
 // Types
 export interface DropdownOption {
@@ -367,23 +334,26 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
   return (
     <Container>
       <WalletContentHeader>
-        <th>
+        <Th>
           {filteredWallets.length === walletCardData.length ? (
-            <p>
+            <Text as="span">
               {t("page-find-wallet-showing-all-wallets")} (
               <strong>{walletCardData.length}</strong>)
-            </p>
+            </Text>
           ) : (
-            <p>
+            <Text as="span">
               {t("page-find-wallet-showing")}{" "}
               <strong>
                 {filteredWallets.length} / {walletCardData.length}
               </strong>{" "}
               {t("page-find-wallet-wallets")}
-            </p>
+            </Text>
           )}
-        </th>
-        <th>
+        </Th>
+        <Th>
+          <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
+            Choose features
+          </Text>
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
@@ -399,8 +369,8 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
             defaultValue={firstFeatureSelect}
             isSearchable={false}
           />
-        </th>
-        <th>
+        </Th>
+        <Th>
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
@@ -416,8 +386,8 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
             defaultValue={secondFeatureSelect}
             isSearchable={false}
           />
-        </th>
-        <th>
+        </Th>
+        <Th>
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
@@ -433,7 +403,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
             defaultValue={thirdFeatureSelect}
             isSearchable={false}
           />
-        </th>
+        </Th>
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
         const deviceLabels: Array<string> = []
@@ -459,26 +429,41 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                 })
               }}
             >
-              <td>
+              <Td lineHeight="revert">
                 <FlexInfo>
-                  <div>
-                    <Image
+                  <Box>
+                    <Img
+                      as={GatsbyImage}
                       image={getImage(data[wallet.image_name])!}
                       alt=""
                       objectFit="contain"
+                      boxSize="56px"
                     />
-                  </div>
-                  <div>
-                    <p>{wallet.name}</p>
-                    <SecondaryText>{deviceLabels.join(" | ")}</SecondaryText>
+                  </Box>
+                  <Box>
+                    <Text>{wallet.name}</Text>
+                    <Text
+                      hideBelow="sm"
+                      color="text200"
+                      fontSize="0.7rem"
+                      lineHeight="0.85rem"
+                    >
+                      {deviceLabels.join(" | ")}
+                    </Text>
                     {deviceLabels.map((label) => (
-                      <SecondaryTextMobile key={label}>
+                      <Text
+                        key={label}
+                        hideFrom="md"
+                        fontSize="0.7rem"
+                        lineHeight="0.85rem"
+                        color="text200"
+                      >
                         {label}
-                      </SecondaryTextMobile>
+                      </Text>
                     ))}
-                    <SocialsContainer>
-                      <Socials>
-                        <Link
+                    <Box mt={4}>
+                      <Flex gap="0.8rem">
+                        <SocialLink
                           to={wallet.url}
                           hideArrow
                           customEventOptions={{
@@ -488,10 +473,10 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             eventValue: JSON.stringify(filters),
                           }}
                         >
-                          <Icon name="webpage" size={"1.5rem"} color />
-                        </Link>
+                          <Icon as={FaGlobe} fontSize="2xl" />
+                        </SocialLink>
                         {wallet.twitter && (
-                          <Link
+                          <SocialLink
                             to={wallet.twitter}
                             hideArrow
                             customEventOptions={{
@@ -501,11 +486,15 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                               eventValue: JSON.stringify(filters),
                             }}
                           >
-                            <Icon name="twitter" size={"1.5rem"} color />
-                          </Link>
+                            <Icon
+                              as={FaTwitter}
+                              color="#1da1f2"
+                              fontSize="2xl"
+                            />
+                          </SocialLink>
                         )}
                         {wallet.discord && (
-                          <Link
+                          <SocialLink
                             to={wallet.discord}
                             hideArrow
                             customEventOptions={{
@@ -515,15 +504,19 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                               eventValue: JSON.stringify(filters),
                             }}
                           >
-                            <Icon name="discord" size={"1.5rem"} color />
-                          </Link>
+                            <Icon
+                              as={FaDiscord}
+                              color="#7289da"
+                              fontSize="2xl"
+                            />
+                          </SocialLink>
                         )}
-                      </Socials>
-                    </SocialsContainer>
-                  </div>
+                      </Flex>
+                    </Box>
+                  </Box>
                 </FlexInfo>
-              </td>
-              <td>
+              </Td>
+              <Td>
                 <FlexInfoCenter className={firstCol}>
                   {wallet[firstFeatureSelect.filterKey!] ? (
                     <GreenCheckProductGlyphIcon />
@@ -531,8 +524,8 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                     <WarningProductGlyphIcon />
                   )}
                 </FlexInfoCenter>
-              </td>
-              <td>
+              </Td>
+              <Td>
                 <FlexInfoCenter className={secondCol}>
                   {wallet[secondFeatureSelect.filterKey!] ? (
                     <GreenCheckProductGlyphIcon />
@@ -540,8 +533,8 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                     <WarningProductGlyphIcon />
                   )}
                 </FlexInfoCenter>
-              </td>
-              <td>
+              </Td>
+              <Td>
                 <FlexInfoCenter className={thirdCol}>
                   {wallet[thirdFeatureSelect.filterKey!] ? (
                     <GreenCheckProductGlyphIcon />
@@ -549,16 +542,18 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                     <WarningProductGlyphIcon />
                   )}
                 </FlexInfoCenter>
-              </td>
-              <td>
+              </Td>
+              <Td>
                 <FlexInfoCenter>
-                  <div>
-                    <WalletMoreInfoArrow
-                      name={wallet.moreInfo ? "chevronUp" : "chevronDown"}
+                  <Box>
+                    <Icon
+                      as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
+                      color="primary"
+                      fontSize="2xl"
                     />
-                  </div>
+                  </Box>
                 </FlexInfoCenter>
-              </td>
+              </Td>
             </Wallet>
             {wallet.moreInfo && (
               <WalletMoreInfo
