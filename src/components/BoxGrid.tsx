@@ -37,7 +37,7 @@ const colors = [
   "gridRed",
   "gridBlue",
   "gridGreen",
-  "gridOrange",
+  "warning",
   "gridPink",
   "gridPurple",
 ]
