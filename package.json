@@ -43,7 +43,7 @@
     "gatsby-plugin-react-i18next": "^3.0.1",
     "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sharp": "^5.4.0",
+    "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-plugin-sitemap": "^6.4.0",
     "gatsby-remark-autolink-headers": "^5.21.0",
     "gatsby-remark-copy-linked-files": "^5.21.0",
