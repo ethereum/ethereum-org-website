@@ -1,15 +1,4 @@
 {
-  "comp-capella-title": "Capella",
-  "comp-capella-p-1": "Pour que la mise à niveau de Shanghai prenne effet, une mise à niveau simultanée vers la chaine phare (Beacon Chain) doit avoir lieu sous le nom de Capella. Les stakers opérationnels du nœud doivent rester à l'écoute des canaux de communication client pour être alertés des prochaines mises à jour client afin d'être pleinement préparés pour la mise à niveau prévue pour le 12 avril 2023.",
-  "comp-capella-p-2": "Les stakers qui ont besoin de mettre à jour leurs clés de retrait de validateur peuvent diffuser ce message une fois la mise à niveau de Capella effectuée.",
-  "comp-capella-link": "Testez votre installation sur la plateforme de lancement Goerli",
-  "comp-shanghai-title": "Shanghai",
-  "comp-shanghai-p-1": "La fonctionnalité de retrait sera activée dans la prochaine mise à niveau de Shanghai prévue pour le 12 avril 2023. Cela permet aux ETH préalablement misés d'être déposés dans les comptes de la couche d'exécution, fermant la boucle sur la liquidité du staking, et faire un pas de plus dans le parcours d'Ethereum vers la construction d’un écosystème décentralisé durable, évolutif et sécurisé.",
-  "comp-shanghai-p-2": "Shanghai marque la fin d'une période de verrouillage indéfinie pour le staking ETH. Les utilisateurs seront libres de :",
-  "comp-shanghai-li-1": "Staking de leurs ETH",
-  "comp-shanghai-li-2": "Gagnez des récompenses ETH qui seront automatiquement distribuées",
-  "comp-shanghai-li-3": "Retirer leur ETH pour retrouver un accès complet à l'ensemble de leur solde",
-  "comp-shanghai-li-4": "Et bien sûr, remettre en jeu pour vous réinscrire et commencer à gagner plus de récompenses",
   "comp-withdrawal-comparison-current-title": "Stakers actuels",
   "comp-withdrawal-comparison-current-li-1": "Certains utilisateurs peuvent avoir fourni une adresse de retrait lors de la configuration initiale de leur dépôt de staking — ces utilisateurs n'ont plus rien besoin de faire",
   "comp-withdrawal-comparison-current-li-2": "La majorité des stakers n’ont pas fourni d’adresse de retrait lors du dépôt initial et devront mettre à jour leurs informations d’identification. La <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">plateforme de lancement de la mise en jeu</a> a des instructions sur quand et comment le faire",
@@ -226,6 +215,6 @@
   "page-staking-meta-title": "Mise en jeu sur Ethereum",
   "page-staking-withdrawals-important-notices": "Informations importantes",
   "page-staking-withdrawals-important-notices-desc": "Les retraits ne sont pas encore disponibles. Veuillez lire la <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">FAQ de Merge Eth2 et post-merge</a> pour plus d'informations.",
-  "page-upgrades-merge-btn": "Plus d'infos sur la fusion",
+  "page-upgrades-merge-btn": "Plus d'informations sur la fusion",
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Abonnez-vous au Blog EF</a> pour recevoir des notifications par e-mail pour les dernières annonces de protocole."
 }
