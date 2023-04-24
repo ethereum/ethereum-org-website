@@ -30,6 +30,9 @@ incomplete: true
 
 ## 中級者向けの記事 {#intermediate-articles}
 
+- [Rust-Web3 ドキュメント](https://tomusdrw.github.io/rust-web3/web3/index.html)
+- [Rust-Web3 の実例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
+
 ## 発展的なユースケース {#advanced-use-patterns}
 
 - [pwasm_ethereum: イーサリアムライクなネットワークとやり取りするための extern ライブラリ](https://github.com/openethereum/pwasm-ethereum)
@@ -43,15 +46,16 @@ incomplete: true
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _イーサリアムライクのネットワークとやり取りするための extern のコレクション_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _高速イーサリアムコンセンサスレイヤークライアント_
-- [イーサリアム WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly の決定論的サブセットを使用したイーサリアムスマートコントラクト実行レイヤーの再設計の提案_
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API リファレンス_
-- [Solaris](https://github.com/paritytech/sol-rs)
-- [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust のイーサリアム仮想マシンの実装_
+- [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブ Parity クライアント EVM を使用した Solidity スマートコントラクトの単位テストハーネス_
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust のイーサリアム仮想マシンの実装_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js ライブラリの Rust 実装_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust での Wavelet スマートコントラクト_
 - [Foundry](https://github.com/gakonst/foundry)- _イーサリアムアプリケーション開発のためのツールキット_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _イーサリアムライブラリとウォレットの実装_
-- [evm_rs](https://github.com/rust-blockchain/evm)- _Rust でのイーサリアム仮想マシンの実装_
-- [SewUp](https://github.com/second-state/SewUp) - _Rust を使用したイーサリアム WebAssembly コントラクトの構築を、一般的なバックエンドでの開発と同様に行えるようにするライブラリ_
+- [SewUp](https://github.com/second-state/SewUp) - _Rust を使用したイーサリアム WebAssembly コントラクトの構築と、一般的なバックエンドと同様の開発をサポートするライブラリ_
+- [Reth](https://github.com/paradigmxyz/reth) レス(Rust Ethereum の略称)は、新しいイーサリアムのフルノード実装
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 
