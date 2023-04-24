@@ -584,7 +584,7 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    tallyho: file(relativePath: { eq: "wallets/tallyho.png" }) {
+    taho: file(relativePath: { eq: "wallets/taho.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
