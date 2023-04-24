@@ -259,5 +259,14 @@
     "description": "2nd annual ETHToronto, in the birthplace of Ethereum. Official Hackathon of Blockchain Futurist Conference.",
     "startDate": "2023-08-13",
     "endDate": "2023-08-16"
+  },
+    {
+    "title": "ETHACCRA",
+    "to": "https://www.ethaccra.xyz/",
+    "sponsor": null,
+    "location": "Ghana, Accra",
+    "description": "ETHAccra is a 3-day hackathon striving to educate young generations of web3 developers and builders.",
+    "startDate": "2023-09-07",
+    "endDate": "2023-09-09"
   }
 ]
