@@ -306,7 +306,6 @@ Bunun gibi küçük, uygun fiyatlı ve verimli cihazlar, evde bir düğüm çal�
 
 - [Ethereum 101 - 2. Bölüm - Düğümleri Anlamak](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 Şubat 2019_
 - [Ethereum Tam Düğümlerini Çalıştırmak: Pek Motivasyonu Olmayanlar İçin Bir Kılavuz](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Kasım 2019_
-- [Bir Ethereum Düğümü Çalıştırma](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, sık sık güncellenir_
 - [Tam doğrulanmış bir Ethereum düğümü olmak için gereken donanımın analizi](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Eylül 2018_
 - [Ethereum Mainnet'te Hyperledger Besu Düğümü Çalıştırma: Faydaları, Gereksinimleri ve Kurulum](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Mayıs 2020_
 

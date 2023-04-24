@@ -15,7 +15,6 @@ Dit zijn enkele uitstekende startpunten:
 
 Naast de informatie op deze pagina zijn er bronnen uit de community die het verkennen waard zijn:
 
-- [EthHub](https://docs.ethhub.io) _Uitgebreide knowledge base voor alles over Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Een educatieve bron over Ethereum, gericht op beginners_
 - [Ethereum.wiki](https://eth.wiki) _Een door de community samengestelde wiki over de technologie van Ethereum_
 - [Kauri](https://kauri.io) _Technische artikelen en tutorials voor Ethereum en gerelateerde projecten_
@@ -30,7 +29,6 @@ Nieuw bij Ethereum? Deze artikelen en bronnen zijn een goede plek om te beginnen
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Frequent bijgewerkt - EthHub_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
@@ -53,8 +51,6 @@ Een 'smart contract' is gewoon een stuk code dat op Ethereum wordt uitgevoerd. H
 ## Proof-of-work en mining {#proof-of-work-and-mining}
 
 Ethereum gebruikt momenteel een systeem met de naam 'proof-of-work'. Hierdoor kan het Ethereum-netwerk het eens worden over de status van alle gegevens die in de Ethereum-blockchain zijn vastgelegd en kunnen bepaalde soorten economische aanvallen worden voorkomen.
-
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Frequent bijgewerkt - Ethhub_
 
 In ETH 2.0 zal Ethereum evolueren naar een ander systeem genaamd 'proof-of-stake'. [Lees meer over ETH 2.0 hieronder](#consensus-layer-upgrades).
 
@@ -80,7 +76,6 @@ Er wordt veel aandacht besteed aan het beter 'schaalbaar' maken van Ethereum doo
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
-- [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Frequent bijgewerkt - EthHub_
 
 ### Sidechains
 
@@ -96,17 +91,12 @@ Er wordt veel aandacht besteed aan het beter 'schaalbaar' maken van Ethereum doo
 
 ETH 2.0 (ook bekend als 'Serenity') verwijst naar de volgende grote verbetering van het Ethereum-coreprotocol. Hierin komen verschillende verbeteringen in het coreprotocol van Ethereum of ‘Layer 1’ samen.
 
-- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Frequent bijgewerkt - EthHub_
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Frequent bijgewerkt - EthHub_
-- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Frequent bijgewerkt - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
 ## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x is de naam voor een collectie upgrades van het bestaande Ethereum-protocol. Het doel is om Ethereum te blijven verbeteren en onderhouden terwijl ETH 2.0 wordt ontwikkeld en geïmplementeerd.
-
-Ga voor meer informatie naar de [uitlegpagina van EthHub over ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## Crypto-economie {#cryptoeconomics}
 

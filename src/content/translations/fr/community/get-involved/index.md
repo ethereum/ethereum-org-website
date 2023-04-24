@@ -41,7 +41,7 @@ Si vous n'êtes pas développeur, il peut être difficile de savoir par où comm
 ### Rédiger du contenu sur Ethereum {#write-content}
 
 - Ethereum a besoin de bons écrivains qui peuvent expliquer sa valeur en langage clair
-- Pas prêt à publier vos propres articles ? Envisagez de contribuer au contenu existant sur les ressources communautaires telles que [EthHub](https://docs.ethhub.io/), ou proposez de nouveaux contenus pour ethereum.org !
+- Pas prêt à publier vos propres articles ? Envisagez de contribuer au contenu existant sur les ressources communautaires telles que ou proposez de nouveaux contenus pour ethereum.org !
 
 ### Proposer de prendre des notes pour les appels communautaires {#take-notes}
 

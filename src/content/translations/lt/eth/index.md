@@ -21,5 +21,4 @@ Lengviausias būdas gauti ETH – nusipirkti. Esama daug kriptovaliutos keitykl�
 Žvilgtelėkite į šiuos vadovus norėdami sužinoti daugiau apie tai, kaip pirkti ETH:
 
 - [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Dažnai atnaujinama - MyCrypto_
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Dažnai atnaujinama - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

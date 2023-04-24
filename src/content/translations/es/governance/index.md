@@ -175,7 +175,6 @@ Cuando la cadena de baliza se fusione con la capa de ejecución de Ethereum, el 
 La gobernanza en Ethereum no está estrictamente definida. Muchos participantes de la comunidad tienen diversas perspectivas al respecto. Aquí nombramos algunas de ellas:
 
 - [Notas sobre la gobernanza en la cadena de bloques](https://vitalik.ca/general/2017/12/17/voting.html) – _Vitalik Buterin_
-- [Gobernanza de Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [¿Cómo funciona la gobernanza de Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Criptotestres_
 - [Cómo funciona la gobernanza de Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [¿Qué es un desarrollador principal de Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
