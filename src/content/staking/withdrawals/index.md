@@ -154,10 +154,8 @@ eventAction="What if I participate in liquid staking derivatives or pooled staki
 eventName="read more">
 If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
 
-In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a [smaller provider](https://pools.invis.cloud). Or, if you’ve accumulated enough ETH you could [stake from home](/staking/solo/).
+In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a [smaller provider](https://rated.network/). Or, if you’ve accumulated enough ETH you could [stake from home](/staking/solo/).
 </ExpandableCard>
-
-<!-- TODO: Check if https://pools.invis.cloud ^^^ is still live -->
 
 <ExpandableCard
 title="Do reward payments (partial withdrawals) happen automatically?"
