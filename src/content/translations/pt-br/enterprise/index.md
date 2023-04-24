@@ -66,7 +66,7 @@ Diversas organizações trabalharam juntas para tornar o Ethereum amigável para
 ### Ferramentas e bibliotecas {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Plataforma de Análise de Dados do Ethereum_
-- [Epirus](https://www.web3labs.com/epirus) _é uma Plataforma da Web3 Labs para desenvolvimento, implantação e monitoramento de aplicativos de blockchain_
+- [Sirato](https://www.web3labs.com/sirato) _uma plataforma de dados e análises para redes públicas e privadas Ethereum compatíveis da Web3 Labs_
 - [Ernst & Young ‘Nightfall’](https://github.com/EYBlockchain/nightfall) _é um conjunto de ferramentas para transações privadas_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _é um aplicativo de assinatura de transações para ser usado com um provedor web3_
 - [Tenderly](https://tenderly.co/) _é uma plataforma de dados que fornece análise em tempo real, alertando e monitorando com suporte a redes privadas_
@@ -78,79 +78,49 @@ Diversas organizações trabalharam juntas para tornar o Ethereum amigável para
 
 Construir seu aplicativo sobre uma solução de escalabilidade de Camada 2 pode ajudar [a lidar com muitos dos problemas que anteriormente levaram empresas a construir em blockchains privadas](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), mas ainda assim manter os benefícios de construir na Rede principal.
 
-Projetos da Camada 2 incluem:
-
-- Acúmulos otimistas (dados em cadeia, provas de fraude)
-  - [Otimismo](https://optimism.io/)
-  - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
-  - [Rede de Combustível](https://fuel.sh)
-  - [Rede Boba](https://boba.network/)
-- Rollups ZK (dados sobre a cadeia, provas de validade ZK)
-  - [Loopring](https://loopring.org)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkSync](https://matter-labs.io/)
-  - [Aztec 2.0](https://aztec.network/)
-- Validium (dados fora da cadeia, provas de validade ZK)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkSync](https://matter-labs.io/)
-- Canais de estado
-  - [Connext](https://connext.network/)
-  - [Kchannels](https://www.kchannels.io/)
-  - [Perun](https://perun.network)
-  - [Raiden](https://raiden.network/)
-- Cadeias laterais
-  - [POS da Polygon](https://polygon.technology/)
-  - [Skale](https://skale.network)
-  - [Rede POA](https://www.poa.network/)
-- Soluções híbridas que combinam propriedades de várias categorias
-  - [Celer](https://celer.network)
-
 ## Aplicações empresariais ativas no Rede principal {#enterprise-live-on-mainnet}
 
-Aqui estão algumas das aplicações empresariais implantadas na Rede principal Ethereum pública
+Aqui estão alguns dos aplicativos corporativos que foram construídos em cima da Mainnet pública Ethereum
 
 ### Pagamentos {#payments}
 
 - [Brave Browser](https://basicattentiontoken. org/) _paga aos usuários para visualizar anúncios e os usuários podem pagar aos editores para apoiá-los por meio do Basic Attention Token._
 - [hCaptcha](https://www.hcaptcha.com/) _Sistema CAPTCHA de prevenção de bots que paga aos operadores do site o trabalho realizado pelos usuários para rotular dados para aprendizagem de máquina. Agora implantado pela Cloudflare_
-- [Audius](https://audius.co/) _um serviço de streaming que conecta fãs de música diretamente com artistas, e permite que os artistas sejam pagos na íntegra pelos seus fãs, direta e instantaneamente por cada transmissão_
 - [EthereumAds](https://ethereumads.com/) _permite que os operadores do site vendam espaço de publicidade e sejam pagos via Ethereum_
 
 ### Finanças {#finance}
 
 - [Banco Santander](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum)_ – emissão e liquidação de títulos_
-- [Societé Générale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _ – emissão de obrigações_
+- [Societé Générale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _ – emissão de obrigações_
 - [Cadência](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _ – oferta de obrigações e geração de tokens para a FAT Brands_
-- [Sila](https://silamoney.com/) _ – infraestrutura bancária e de pagamentos ACH como serviço_
-- [Kratos](https://triterras.com/kratos) _ – plataforma de negociação e de financiamento de commodities que conecta e permite que negociantes de commodities negociem e lucrem com capital dos credores diretamente online_
+- [Sila](https://silamoney.com/) _infraestrutura de pagamentos bancários e ACH como serviço, usando uma stablecoin_
 - [Taurus](https://www.taurushq.com/) _ – emite títulos gerados por token_
 
 ### Geração de token do ativo {#tokenization}
 
-- [Tinlake](https://tinlake.centrifuge.io/) _Financiamento de recebíveis por meio de ativos reais gerados por token, como faturas, hipotecas ou royalties de streaming_
-- [RealT](https://realt.co/) _Investidores em todo o mundo podem comprar no mercado imobiliário dos EUA por meio de uma propriedade totalmente compatível, fraccionada e gerada por token._
+- [Tinlake](https://tinlake.centrifuge.io/) _ – financiamento de recebíveis por meio de ativos reais gerados por token, como faturas, hipotecas ou royalties de streaming_
+- [RealT](https://realt.co/) _ – investidores em todo o mundo podem comprar no mercado imobiliário dos EUA por meio de uma propriedade totalmente compatível, fracionada e gerada por token._
 - [AgroToken](https://agrotoken.io/en/) _ – gerando tokens e negociando commodities agrícolas_
 - [Fasset](https://www.fasset.com/) _ – uma plataforma para apoiar a infraestrutura sustentável_
 
 ### Autenticação de dados {#notarization-of-data}
 
-- [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _ – detalhes dos empréstimos finalizados com hash e registrados na Rede principal_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _ – a integridade dos dados pode ser garantida escrevendo periodicamente hashes de dados indexados para a Rede principal_
-- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _ – a maior agência de notícias da Itália luta contra notícias falsas e permite que os leitores verifiquem a origem das notícias gravando-as na Rede principal_
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _ – registra comunicados de imprensa no Ethereum para garantir a responsabilidade e a confiança das empresas_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _ – registra a proveniência e o histórico de reparo de relógios no Ethereum_
+- [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _ – detalhes dos empréstimos finalizados com hash e registrados na Mainnet_
+- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _ – a integridade dos dados pode ser garantida escrevendo periodicamente hashes de dados indexados para a Mainnet_
+- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _ – a maior agência de notícias da Itália luta contra notícias falsas e permite que os leitores verifiquem a origem das notícias gravando-as na Mainnet_
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _ – logs da imprensa comunicados na Ethereum para garantir a responsabilidade e a confiança corporativas_
+- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _ – registra a proveniência dos registros e o histórico de reparos dos relógios no Ethereum_
 - [EthSign](https://ethsign.xyz/) _ – registra documentos eletrônicos assinados na blockchain do Ethereum_
 
 ### Cadeia de abastecimento {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _ – prestador de serviços de emissão de conhecimento de embarque e transferência de documentos_
-- [Morpheus.network](https://morpheus.network/) _ – plataforma de automação de cadeia de suprimentos que implementa um sistema híbrido de cadeias privadas com dados autenticados na Rede principal Ethereum, sendo usada por empresas como a Federated Co-op Ltd., distribuidora canadense de alimentos, petróleo e gás, e a Vitalcan, fornecedora argentina de alimentos para animais._
+- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _ – provedor de conhecimento de embarque marítimo e transferência de documentos_
+- [Morpheus.network](https://morpheus.network/) _ – plataforma de automação de cadeia de suprimentos que implementa um sistema híbrido de cadeias privadas com dados autenticados na Ethereum Mainnet, sendo usada por empresas como a Federated Co-op Ltd., distribuidora canadense de alimentos, petróleo e gás, e a Vitalcan, fornecedora argentina de alimentos para animais._
 - [Minespider](https://www.minespider.com/) _ – rastreamento da cadeia de suprimentos_
-- [Follow Our Fibre](https://www.followourfibre.com) _ – rastreabilidade da cadeia de suprimentos_
 - [EY OpsChain Contract Manager](<[https://blockchain.ey.com/products/contract-manager](https://blockchain.ey.com/products/contract-manager)>) _ – permite que as empresas participem de um fluxo de processo de aquisição, emitindo pedidos de cotação (RFQ), contratos, ordens de compra e faturas para toda a sua rede de parceiros de negócios confiáveis_
 - [Treum](https://treum.io/) _ – traz transparência, capacidade de rastreio e negociação para cadeias de abastecimento, usando a tecnologia de blockchain_
-- [TradeTrust](https://www.tradetrust.io/) _verifica conhecimentos de embarque marítimo eletrônicos (eBLs) para envio internacional_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _ cunha NFTs para cada lote de cerveja, permitindo maior visibilidade e eficiência ao longo de sua cadeia de suprimentos_
+- [TradeTrust](https://www.tradetrust.io/) _ – verifica conhecimentos de embarque marítimo eletrônicos (eBLs) para envio internacional_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _ – cunha NFTs para cada lote de cerveja, permitindo maior visibilidade e eficiência ao longo de sua cadeia de suprimentos_
 
 ### Seguros {#insurance}
 
@@ -159,13 +129,11 @@ Aqui estão algumas das aplicações empresariais implantadas na Rede principal 
 
 ### Credenciais e certificações {#credentials}
 
-- [Duas escolas de ensino médio italianas](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _ – diplomas digitais emitidos na Rede principal Ethereum_
+- [Duas escolas de ensino médio italianas](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _ – diplomas digitais emitidos na Ethereum Mainnet_
 - [Universidade de St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _ – projeto-piloto de uma universidade suíça para verificar diplomas_
-- [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _ – todos os certificados educacionais registrados na Rede principal emitidos pela [Hyland](https://www.learningmachine.com/)_
-- [Comprovantes da Universidade de Ciência e Tecnologia do Pohang](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _ – Universidade Sul-Coreana emite diplomas para seus novos graduados_
-- [OpenCerts](https://opencerts.io/) _ – emite diplomas e certificados pela blockchain em Singapura_
+- [Credenciais da Hyland](https://www.hylandcredentials.com) _ – diplomas digitais e outras credenciais, licenciamentos e certificados de educação_
+- [OpenCerts](https://opencerts.io/faq) _ – emite diplomas e certificados pela blockchain em Singapura_
 - [BlockCerts](https://www.blockcerts.org/) _ – desenvolveu uma norma aberta para diplomas e certificados da blockchain_
-- [SkillTree](http://skilltree.org/) _ – treinamento e certificações online que podem ser configurados com acionadores de expiração ou dependências de outras habilidades_
 
 ### Serviços {#utilities}
 

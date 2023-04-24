@@ -66,7 +66,7 @@ Geralmente, tokens de liquidez ERC-20 são emitidos para os stakers, que represe
 <ExpandableCard title="Quando posso sacar meu stake?">
 Atualmente, não é possível retirar fundos de um validador Ethereum, o que limita a capacidade de realmente <i>resgatar</i> seu token de liquidez para recompensas ETH bloqueadas na camada de consenso.
 
-A atualização da rede Shangai apresentará a funcionalidade de retirada planejada para o primeiro e segundo trimestre de 2023. Todo o ETH em jogo permanecerá bloqueado até lá.
+A atualização da rede Shanghai introduzirá a funcionalidade de saque agendada para 12 de abril de 2023. Todo o ETH em jogo permanecerá bloqueado até lá.
 
 Após esta atualização, as contas de validador dos pools de participação terão a capacidade de sair e sacar ETH para seu endereço de saque designado. Isso permitirá resgatar sua porção de participação para o ETH subjacente. Verifique com o seu provedor para ver como eles dão suporte a essa funcionalidade.
 
