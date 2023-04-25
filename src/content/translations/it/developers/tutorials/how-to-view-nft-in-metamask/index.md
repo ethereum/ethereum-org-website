@@ -6,7 +6,7 @@ tags:
   - "ERC-721"
   - "Alchemy"
   - "Solidity"
-skill: beginner
+skill: principiante
 lang: it
 published: 2021-04-22
 ---
