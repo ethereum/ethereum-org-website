@@ -66,7 +66,7 @@ Habituellement, les jetons de liquidité ERC-20 émis envers les validateurs rep
 <ExpandableCard title="Quand puis-je retirer ma mise?">
 Actuellement, il n'est pas possible de retirer des fonds d'un validateur Ethereum, ce qui limite la capacité à réellement <i>échanger</i> votre jeton de liquidité en échange des récompenses ETH bloquées dans la couche de consensus.
 
-La mise à niveau du réseau Shanghai introduira une fonctionnalité de retrait prévue pour les T1/T2 2023. Tous les ETH misés resteront verrouillés jusqu'à ce moment-là.
+La mise à niveau du réseau de Shanghai introduira la fonctionnalité de retrait prévue pour le 12 avril 2023. Tous les ETH misés resteront verrouillés jusqu'à ce moment-là.
 
 Après cette mise à niveau, les comptes de validateur soutenant les pools de mise en jeu auront la possibilité de sortir et de retirer l'ETH à leur adresse de retrait désignée. Cela vous permettra de racheter votre part de participation d'ETH sous-jacent. Vérifiez auprès de votre fournisseur de services pour savoir comment il supporte cette fonctionnalité.
 

@@ -74,7 +74,7 @@ Les stakers qui ont fourni une adresse de retrait avec le dépôt initial n'ont 
 <ExpandableCard title="Quand puis-je effectuer un retrait ?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Lorsque vous mettez 32 ETH en jeu avec un fournisseur SaaS, cet ETH est toujours déposé dans le cadre du contrat officiel de dépôt de mise en jeu. Ainsi, les personnes qui misent avec SaaS sont limités par les mêmes restrictions de retrait que les stakers individuels, et les retraits ne sont pas autorisés jusqu'à la mise à niveau Shanghai.
 
-Les retraits de mise en jeu seront mis en œuvre lors de la prochaine mise à niveau Shanghai, qui est attendue pour le T1/T2 2023. Après cela, les personnes qui misent doivent fournir une adresse de retrait (si elle n'est pas fournie avec le dépôt initial) et les paiements de récompense commenceront automatiquement à être distribués de façon périodique à intervalles de quelques jours.
+Les retraits de staking seront mis en œuvre lors de la prochaine mise à niveau de Shanghai, prévue pour le 12 avril 2023. Après cela, les personnes qui misent doivent fournir une adresse de retrait (si elle n'est pas fournie avec le dépôt initial) et les paiements de récompense commenceront automatiquement à être distribués de façon périodique à intervalles de quelques jours.
 
 Cela permettra également de débloquer les fonds sortis. Les validateurs peuvent se retirer entièrement en tant que validateur, et ils recevront leur solde complet à l'adresse de retrait fournie.
 
