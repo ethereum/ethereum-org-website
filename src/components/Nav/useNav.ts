@@ -266,7 +266,6 @@ export const useNav = ({ path }: { path: string }) => {
   let mobileLinkSections = cloneDeep(linkSections)
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev)
-    document.documentElement.style.overflowY = isMenuOpen ? "scroll" : "hidden"
   }
 
   const searchRef = useRef<HTMLButtonElement>(null)

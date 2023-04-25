@@ -176,7 +176,6 @@ Quando la Beacon Chain si fonderà con il livello di esecuzione di Ethereum, il 
 La governance in Ethereum non è definita rigidamente. I vari partecipanti della comunità hanno diverse prospettive a riguardo. Eccone alcune:
 
 - [Note sulla governance della blockchain](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Governance su Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [Come funziona la governance di Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Come funziona la governance di Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Cos'è uno sviluppatore core di Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_

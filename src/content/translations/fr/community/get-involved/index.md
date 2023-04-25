@@ -41,7 +41,7 @@ Si vous n'êtes pas développeur, il peut être difficile de savoir par où comm
 ### Rédiger du contenu sur Ethereum {#write-content}
 
 - Ethereum a besoin de bons écrivains qui peuvent expliquer sa valeur en langage clair
-- Pas prêt à publier vos propres articles ? Envisagez de contribuer au contenu existant sur les ressources communautaires telles que [EthHub](https://docs.ethhub.io/), ou proposez de nouveaux contenus pour ethereum.org !
+- Pas prêt à publier vos propres articles ? Envisagez de contribuer au contenu existant sur les ressources communautaires ou [proposez de nouveaux contenus pour ethereum.org](/contributing/) !
 
 ### Proposer de prendre des notes pour les appels communautaires {#take-notes}
 
@@ -100,6 +100,8 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 - [Offres Web3 Jobs](https://web3.career)
 - [Offres Web3 Army](https://web3army.xyz/)
 - [Offres Crypto Valley Jobs](https://cryptovalley.jobs/)
+- [Jobs Ethereum](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Rejoindre une organisation autonome décentralisée (DAO) {#decentralized-autonomous-organizations-daos}
 

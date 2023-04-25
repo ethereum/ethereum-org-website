@@ -20,6 +20,9 @@
   "page-tutorials-meta-description": "Navegue e filtre tutoriais examinados da comunidade Ethereum por tópico.",
   "page-tutorial-external-link": "Externo",
   "page-tutorials-meta-title": "Tutoriais de desenvolvimento Ethereum",
+  "page-tutorial-beginner": "Iniciante",
+  "page-tutorial-intermediate": "Intermediário",
+  "page-tutorial-advanced": "Avançado",
   "page-find-wallet-try-removing": "Tente remover um ou dois recursos",
   "page-find-wallet-clear": "Limpar filtros"
 }

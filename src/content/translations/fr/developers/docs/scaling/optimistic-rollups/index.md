@@ -52,7 +52,6 @@ Plusieurs implémentations de Rollups optimisés existent, que vous pouvez inté
 **Lecture à propos des rollups optimisés**
 
 - [Tout ce que vous devez savoir sur les rollups optimisés](https://research.paradigm.xyz/rollups)
-- [EthHub sur rollups optimisés](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Le guide essentiel pour Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Comment fonctionne réellement le rollup d'Optimism ?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

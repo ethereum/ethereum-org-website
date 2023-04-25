@@ -119,6 +119,8 @@ const Nav: FC<IProps> = ({ path }) => {
           borderBottom="1px"
           borderColor="border"
           boxSizing="border-box"
+          py={4}
+          px={8}
         >
           {ednLinks.map((link, idx) => (
             <Link
@@ -127,6 +129,7 @@ const Nav: FC<IProps> = ({ path }) => {
               isPartiallyActive={link.isPartiallyActive}
               color="text"
               textDecor="none"
+              mr={8}
               _hover={{
                 color: "primary",
                 svg: {

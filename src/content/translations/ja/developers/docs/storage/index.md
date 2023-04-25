@@ -47,36 +47,43 @@ lang: ja
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
 - [Crust Network](https://crust.network)
+- [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### その他の考慮事項 {#additional-consideration}
 
 IPFS は、ファイル、ウェブサイト、アプリケーション、データの保存とアクセスのための分散型システムです。 インセンティブスキームは組み込まれていませんが、上記のいずれかのコントラクトベースのインセンティブソリューションとともに、データの長期保持に使用できます。 IPFS でデータを保持するもう一つの方法は、ピンニングサービスというデータを「固定化」してくれるサービスと連携することです。 独自の IPFS ノードを実行して自分のデータや他のユーザーのデータを無料で保持し、ネットワークに貢献することもできます。
 
-- [IPFS (ピアツーピア分散ファイルシステム)](https://docs.ipfs.io/concepts/what-is-ipfs/)
-- [Pinata](https://www.pinata.cloud/) _(IPFS ピンニングサービス)_
-- [web3.storage](https://web3.storage/) _(IPFS/Filecoin ピンニングサービス)_
-- [Infura](https://infura.io/product/ipfs) _(IPFS ピンニングサービス)_
+- [IPFS(ピアツーピア分散ファイルシステム)](https://docs.ipfs.io/concepts/what-is-ipfs/)
+- [Pinata](https://www.pinata.cloud/)_(IPFS ピンニングサービス)_
+- [web3.storage](https://web3.storage/)_(IPFS/Filecoin ピンニングサービス)_
+- [Infura](https://infura.io/product/ipfs)_(IPFS ピンニングサービス)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS ピンニングエクスプローラー)_
+- [4EVERLAND](https://www.4everland.org/)_(IPFS ピンニングサービス)_
+- [Filebase](https://filebase.com)_(IPFS ピンニングサービス)_
+
+SWARM は、ストレージインセンティブシステムとストレージレンタル価格オラクルを備えた分散型データストレージおよび分配テクノロジーです。
 
 ## データの保持 {#data-retention}
 
-データを保持するには、システムに、データが保持されていることを確認するための何らかのメカニズムが必要です。
+データを保持するには、データが保持されていることを確認するためのメカニズムをシステムに搭載する必要があります。
 
 ### チャレンジメカニズム {#challenge-mechanism}
 
-データが保持されていることを確認する最も一般的な方法の 1 つに、ある種の暗号論的チャレンジを使用して、ノードにチャレンジを行い、ノードにまだデータがあることを確認するという方法があります。 単純なものとしては、Arweave のプルーフ・オブ・アクセス(PoA)があります。 これは、ノードに対してチャレンジを行い、最新のブロックとランダムな過去ブロックの両方にデータがあるかどうかを確認するものです。 ノードがチャレンジに解答できない場合、ペナルティが課されます。
+データが保持されていることを確認する最も一般的な方法の 1 つに、ノードに発行されるある種の暗号論的チャレンジを使用して、ノードにまだデータがあることを確認するという方法があります。 シンプルな方法として、Arweave のプルーフ・オブ・アクセス(PoA)があります。 これは、ノードに対してチャレンジを行い、最新のブロックとランダムな過去ブロックの両方にデータがあるかどうかを確認するものです。 ノードがチャレンジに解答できない場合、ペナルティが課されます。
 
-チャレンジメカニズムを持つ分散型ストレージ(dStorage)のタイプ
+チャレンジメカニズムを備えた分散型ストレージ(dStorage)のタイプ:
 
 - 0Chain
 - Skynet
 - Arweave
 - Filecoin
 - Crust Network
+- 4EVERLAND
 
 ### 分散性 {#decentrality}
 
-プラットフォームの分散化レベルを測る優れたツールはありませんが、一般的に、プラットフォームが中央集権型ではないという証拠を示すために、KYC のようなことを行わないツールを使用することができます。
+プラットフォームの分散化レベルを測る優れたツールはありませんが、一般的に、プラットフォームが中央集権型ではないという証拠を示すために、KYC という形態を持たないツールを使用したいと考えるでしょう。
 
 KYC なしの分散型ツール
 
@@ -87,6 +94,7 @@ KYC なしの分散型ツール
 - IPFS (ピアツーピア分散ファイルシステム)
 - イーサリアム
 - Crust Network
+- 4EVERLAND
 
 ### コンセンサスの方法 {#consensus}
 
@@ -112,10 +120,11 @@ KYC なしの分散型ツール
 - [ドキュメント](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-**Storj DCS - _デベロッパー向けの安全でプライベートな S3 互換の分散型クラウドオブジェクトストレージです。_**
+**Storj DCS - _デベロッパー向けの安全でプライベートな S3 互換の分散型クラウド・オブジェクト・ストレージです。_**
 
 - [Storj.io](https://storj.io/)
 - [ドキュメント](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
 **Skynet - _Skynet は、分散型 Web 専用の分散型 PoW チェーンです。_**
 
@@ -153,13 +162,13 @@ KYC なしの分散型ツール
 - [ドキュメント](https://docs.ethswarm.org/docs/)
 - [GitHub](https://github.com/ethersphere/)
 
-**OrbitDB - _IPFS ベースの分散型ピアツーピアデータベースです。_**
+**OrbitDB - _IPFS ベースの分散型ピアツーピアのデータベースです。_**
 
 - [OrbitDB.org](https://orbitdb.org/)
 - [ドキュメント](https://github.com/orbitdb/field-manual/)
 - [GitHub](https://github.com/orbitdb/orbit-db/)
 
-**Aleph.im - _分散型クラウドプロジェクト(データベース、ファイルストレージ、コンピューティング、DID)です。 オフチェーンとオンチェーンのピアツーピア技術のユニークなブレンド。 IPFS とマルチチェーン互換性。_**
+**Aleph.im - _分散型クラウドプロジェクト(データベース、ファイルストレージ、コンピューティング、DID)です。 オフチェーンとオンチェーンをうまく組み合わせたピアツーピア技術。 IPFS とマルチチェーン互換性。_**
 
 - [Aleph.im](https://aleph.im/)
 - [ドキュメント](https://aleph.im/#/developers/)
@@ -171,18 +180,30 @@ KYC なしの分散型ツール
 - [ドキュメント](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _初の S3 互換オブジェクトストレージ プラットフォームで、IPFS、Sia、Skynet、Storj など複数の分散型ストレージ ネットワークにわたってデータを保存することが可能です_。**
+**Filebase - _S3 互換の分散型ストレージと地理冗長な IPFS ピンニングサービスです。 Filebase 経由で IPFS にアップロードされたすべてのファイルは、世界中で 3 か所にレプリケーションされて Filebase インフラストラクチャへ自動的にピンされます。_**
 
 - [Filebase.com](https://filebase.com/)
 - [ドキュメント](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
+
+**4EVERLAND - _ストレージ、コンピューティング、ネットワークのコア機能を統合する Web 3.0 クラウドコンピューティング・プラットフォームで、S3 と互換性があり、IPFS や Arweave などの分散型ストレージネットワークで同期データストレージを提供します。_**
+
+- [4everland.org](https://www.4everland.org/)
+- [ドキュメント](https://docs.4everland.org/)
+- [GitHub](https://github.com/4everland)
+
+**Kaleido - _クリックボタン IPFS ノードを備えたブロックチェーン・アズ・ア・サービス・プラットフォーム_**
+
+- [Kaleido](https://kaleido.io/)
+- [ドキュメント](https://docs.kaleido.io/kaleido-services/ipfs/)
+- [GitHub](https://github.com/kaleido-io)
 
 ## 参考文献 {#further-reading}
 
 - [分散型ストレージとは](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [分散型ストレージに関する 5 つの一般的な通念を覆す](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
-_イーサリアムを学ぶために利用したコミュニティリソースはありますか？ ページを編集して追加してください。_
+_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
 
 ## 関連トピック {#related-topics}
 

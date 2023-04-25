@@ -171,86 +171,95 @@ A verificação formal é considerada importante para contratos inteligentes, po
 
 - [GitHub](https://github.com/crytic/etheno)
 
+**Estrutura de testes e desenvolvimento Woke** — _Scripts de teste e implantação com dicas, fuzzer, suporte para depuração, cobertura de código e teste cross-chain em Python._
+
+- [Documentação](https://ackeeblockchain.com/woke/docs/latest/testing-framework/overview/)
+- [Github](https://github.com/Ackee-Blockchain/woke)
+
 ### Ferramentas de análise estática {#static-analysis-tools}
 
-**Mythril** - _Ferramenta de avaliação de bytecode EVM para detectar vulnerabilidades de contrato usando análise concólica e análise de fluxo de controle._
+**Mythril** — _Ferramenta de avaliação de bytecode de EVM para detectar vulnerabilidades de contrato usando análise concolic e análise de fluxo de controle._
 
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [Documentação](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**Slither** - _Framework de análise estática de Solidity baseado em Python para encontrar vulnerabilidades, aprimorando a compreensão de código e escrevendo análises personalizadas para contratos inteligentes._
+**Slither** — _Estrutura de análise estática do Solidity baseado em Python para encontrar vulnerabilidades, aprimorando a compreensão de código e escrevendo análises personalizadas para contratos inteligentes._
 
 - [GitHub](https://github.com/crytic/slither)
 
-**Rattle** - _Framework de análise estática de bytecode EVM concebido para trabalhar em contratos inteligentes implementados._
+**Rattle** — _Estrutura de análise estática de bytecode de EVM concebido para trabalhar em contratos inteligentes implementados._
 
 - [GitHub](https://github.com/crytic/rattle)
 
 ### Ferramentas de análise dinâmica {#dynamic-analysis-tools}
 
-**Echidna** - _Difusor de contrato rápido para detectar vulnerabilidades em contratos inteligentes por meio de testes baseados em propriedades._
+**Echidna** — _Difusor de contrato rápido para detectar vulnerabilidades em contratos inteligentes por meio de testes baseados em propriedades._
 
-- [GitHub](https://github.com/crytic/echidna/)
+- [Github](https://github.com/crytic/echidna/)
 
-**Harvey** - _Ferramenta automatizada de difusão útil para detectar violações de propriedades em código de contrato inteligente._
+**Harvey** — _Ferramenta automatizada de difusão útil para detectar violações de propriedades em código de contrato inteligente._
 
-- [Site](https://consensys.net/diligence/fuzzing/)
+- [Website](https://consensys.net/diligence/fuzzing/)
 
-**Mantícora** - _Framework de execução simbólica dinâmica para analisar o bytecode EVM._
+**Mantícora** — _Estrutura de execução simbólica dinâmica para analisar o bytecode de EVM._
 
-- [GitHub](https://github.com/trailofbits/manticore)
+- [Github](https://github.com/trailofbits/manticore)
 - [Documentação](https://github.com/trailofbits/manticore/wiki)
 
 ### Serviços de auditoria de contrato inteligente {#smart-contract-auditing-services}
 
-**ConsenSys Diligence** - _Serviço de auditoria inteligente de contratos que ajuda projetos no ecossistema da blockchain que garante que seus protocolos estejam prontos para serem lançados e criados para proteger os usuários._
+**ConsenSys Diligence** — _Serviço de auditoria inteligente de contratos que ajuda projetos no ecossistema da blockchain e garante que seus protocolos estejam prontos para serem lançados e criados para proteger os usuários._
 
 - [Site](https://consensys.net/diligence/)
 
-**CertiK** - _Empresa de segurança Blockchain pioneira no uso de tecnologia de verificação formal de ponta em contratos inteligentes e redes blockchain._
+**CertiK** — _Empresa de segurança de blockchain pioneira no uso de tecnologia de verificação formal de ponta em contratos inteligentes e redes blockchain._
 
 - [Site](https://www.certik.com/)
 
-**Trail of Bits** - _Empresa de segurança virtual que combina pesquisa de segurança com uma mentalidade de invasores para reduzir riscos e fortalecer o código._
+**Trail of Bits** — _Empresa de segurança virtual que combina pesquisa de segurança com uma mentalidade de invasores para reduzir riscos e fortalecer o código._
 
 - [Site](https://www.trailofbits.com/)
 
-**PeckShield** - _Empresa de segurança Blockchain que oferece produtos e serviços para a segurança, privacidade e usabilidade de todo o ecossistema blockchain._
+**PeckShield** — _Empresa de segurança de blockchain que oferece produtos e serviços para a segurança, privacidade e usabilidade de todo o ecossistema blockchain._
 
 - [Site](https://peckshield.com/)
 
-**QuantStamp** - _Serviço de auditoria que facilita a adoção geral da tecnologia blockchain por meio de serviços de segurança e avaliação de riscos._
+**QuantStamp** — _Serviço de auditoria que facilita a adoção geral da tecnologia blockchain por meio de serviços de segurança e avaliação de riscos._
 
 - [Site](https://quantstamp.com/)
 
-**OpenZeppelin** - _Empresa de segurança do contrato inteligente, que fornece auditorias de segurança para sistemas distribuídos._
+**OpenZeppelin** — _Empresa de segurança de contrato inteligente, que fornece auditorias de segurança para sistemas distribuídos._
 
 - [Site](https://www.openzeppelin.com/security-audits)
 
+**Nethermind** — _Serviços de auditoria Solidity e Cairo, que garantem a integridade de contratos inteligentes e a segurança dos usuários pelo Ethereum e Starknet._
+
+- [Site](https://nethermind.io/smart-contracts-audits)
+
 ### Plataformas de recompensa por bugs {#bug-bounty-platforms}
 
-**Immunefi** - _Plataforma de recompensa por bugs para contratos inteligentes e projetos DeFi, onde pesquisadores de segurança revisam o código, divulgam vulnerabilidades, recebem e tornam as criptomoedas mais seguras._
+**Immunefi** — _Plataforma de recompensa por bugs para contratos inteligentes e projetos DeFi, na qual pesquisadores de segurança revisam o código, divulgam vulnerabilidades, são pagos e tornam as criptomoedas mais seguras._
 
-- [Site](https://immunefi.com/)
+- [Website](https://immunefi.com/)
 
 **HackerOne** — _Coordenação de vulnerabilidades e plataforma de recompensas por bug que conecta empresas com testadores de infiltração e pesquisadores de cibersegurança._
 
-- [Site](https://www.hackerone.com/)
+- [Website](https://www.hackerone.com/)
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Configuração de integração contínua de Solidity and Truffle](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– Como configurar Travis ou Circle CI para testes de Truffle juntamente com plugins úteis._
-- [Visão geral de testes de produtos](/developers/tutorials/guide-to-smart-contract-security-tools/) _– Uma visão geral e comparação de diferentes produtos de teste_
+- [Configuração de integração contínua do Solidity e Truffle](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _ – Como configurar Travis ou Circle CI para testes de Truffle juntamente com plugins úteis._
+- [Visão geral de testes de produtos](/developers/tutorials/guide-to-smart-contract-security-tools/) _ – Uma visão geral e comparação de diferentes produtos de teste_
 - [Como usar o Echidna para testar contratos inteligentes](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Como usar o Manticore para encontrar bugs em contratos inteligentes](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
-- [Como utilizar o Slither para encontrar bugs de contrato inteligente](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [Como simular contratos Solidity para teste](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
+- [Como usar o Manticore para encontrar bugs em contratos inteligentes](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [Como utilizar o Slither para encontrar bugs nos contratos inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Como simular contratos do Solidity para teste](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Como migrar do Truffle Tests para o ambiente de teste OpenZeppelin](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [Como testar os contratos depois que eles foram implantados em uma rede](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
-- [Aprenda Blockchain, Solidity e Stack Web3 Development com JavaScript no YouTube](https://www.youtube.com/watch?v=gyMwXuJrbJQ)
-- [Curso de Contrato Inteligente e Solidity, Blockchain no YouTube](https://www.youtube.com/watch?v=M576WGiDBdQ)
+- [Aprenda sobre desenvolvimento de Blockchain, Solidity e Web3 de pilha completa com JavaScript no YouTube](https://www.youtube.com/watch?v=gyMwXuJrbJQ)
+- [Curso de Contrato Inteligente, Solidity e Blockchain no YouTube](https://www.youtube.com/watch?v=M576WGiDBdQ)
 
 ## Leitura adicional {#further-reading}
 
-- [Um guia completo para testar contratos inteligentes da Ethereum](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297) - _Ben Hauser_
-- [Como testar os contratos inteligentes da Ethereum](https://betterprogramming. pub/how-to-test-ethereum-smart-contracts-35abc8fa199d) - _Alex Roan_
+- [Um guia completo para testar contratos inteligentes do Ethereum](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297) — _Ben Hauser_
+- [Como testar os contratos inteligentes do Ethereum](https://betterprogramming. pub/how-to-test-ethereum-smart-contracts-35abc8fa199d) — _Alex Roan_

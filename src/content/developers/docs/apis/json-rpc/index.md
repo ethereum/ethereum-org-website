@@ -360,6 +360,31 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
+## eth_chainId {#eth_chainId}
+
+Returns the chain ID used for signing replay-protected transactions.
+
+**Parameters**
+
+None
+
+**Returns**
+
+`chainId`, hexadecimal value as a string representing the integer of the current chain id.
+
+**Example**
+
+```js
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
+// Result
+{
+  "id":67,
+  "jsonrpc": "2.0",
+  "result": "0x1"
+}
+```
+
 ### eth_mining {#eth_mining}
 
 Returns `true` if client is actively mining new blocks.

@@ -175,7 +175,6 @@ _یادداشت: هر فردی می‌تواند عضوی از چند گروه �
 حاکمیت در اتریوم تعریف دشواری ندارد. مشارکت‌کنندگانِ جوامع مختلف دیدگاه‌های مختلفی درباره‌ی آن دارند. چند نمونه از آن‌ها در ادامه ذکر شده است:
 
 - [یادداشت‌هایی درباره ی حاکمیت زنجیره‌ی بلوکی](https://vitalik.ca/general/2017/12/17/voting.html) - _ویتالیک بوترین_
-- [حاکمیت در اتریوم](https://docs.ethhub.io/ethereum-basics/governance/) - _ETHHub_
 - [حاکمیت اتریوم چگونه کار می‌کند؟](https://cryptotesters.com/blog/ethereum-governance) - _Cryptotesters_
 - [چگونگی کارکرد حاکمیت اتریوم](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) - _میکا زولتو_
 - [توسعه‌دهنده‌ی هسته‌ای اتریوم چیست؟](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _هادسون جیمز_

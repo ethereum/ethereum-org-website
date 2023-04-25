@@ -15,7 +15,6 @@ Ndị a bụ ụfọdụ ebe mmalite kachasi mma:
 
 Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kwesịrị ịchoputa:
 
-- [EthHub](https://docs.ethhub.io) _Ihe omuma zuru oke dabere maka ihe niile Ethereum_
 - [Mpaghara0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Ihe eji eme nkuzi banyere Ethereum ezubere maka ndị na ebido ebido_
 - [Ethereum.wiki](https://eth.wiki) _Obodo wiki wuru banyere teknụzụ Ethereum_
 - [Kauri](https://kauri.io) _Ederede nka na ụzụ na nkuzi maka Ethereum na arụmaoru metụtara ya_
@@ -30,7 +29,6 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   - [Ntụziaka onye mbido na Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
   - [Gini bu Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _Mpaghara0x_
-  - [Gini bu ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _emelitere ohuru ọtụtụ mgbe - EthHub_
   - [Ihe nyocha maka Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
   - [Blockchains: Otu ha si arụ ọrụ na ihe kpatara ha ga agbanwe ụwa](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
   - [Ekwela ka inwe obi abụọ banyere Blockchains mechie uche gị](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
@@ -54,8 +52,6 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   Ethereum ugbu a na-eji usoro akpọrọ “Ihe akaebe nke Oru”. Nke a na-enye ohere ka netwọk Ethereum kwenye na steeti ozi niile edekọtara na blockchain Ethereum, ma gbochie ụdị mwakpo akụ na ụba.
 
-  - [Kedu ihe ọ pụtara ekwuputa Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Emelitere ohuru ọtụtụ mgbe - Ethhub_
-
   Na ETH 2.0, Ethereum ga aga na sistemụ dị iche akpọrọ “Ihe akaebe nke Ntinye ego”. [Gụkwuo banyere ETH 2.0 n'okpuru](#consensus-layer-upgrades).
 
   ## Ndị ahịa na Ebe nzuko {#clients-and-nodes}
@@ -78,7 +74,6 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   - [Ọwa steeti - nkọwa](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 -Jeff Coleman_
   - [Ntọala nke Ọwa steeti](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _Mpaghara0x_
-  - [Ọwa steeti](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Emelitere ọtụtụ mgbe - EthHub_
 
   ### Akukuagbu {#sidechains}
 
@@ -94,16 +89,12 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   ETH 2.0 (nke a makwaara dị ka “Serenity”) na-ezo aka na nkwalite isi ọzọ nke usoro isi protocol Ethereum. Ọ jikọtara ọtụtụ ndozi na usoro isi Ethereum, ma ọ bụ “Etu otu”.
 
-  - [Okporo ụzọ na usoro ETH 2.0](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Emelitere otutu mgbe - EthHub_
   - [Otu egwuregwu asato na-agbasa iji wuo Ọgbọ ọzọ nke Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
-  - [Ihe akaebe nke Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Emelitere otutu mgbe - EthHub_
-  - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Emelitere otutu mgbe - EthHub_
   - [Okporo uzo eji e scalu Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
   ## ETH 1.x {#execution-layer-upgrades}
 
   ETH 1.x bụ aha maka nchịkọta nke nkwalite ndị ọzọ na usoro Ethereum dị adị. Ebumnuche bụ ịga n'ihu na-emeziwanye ma na-elekọta Ethereum ebe a na-azụlite ma na-eme ETH 2.0.
-  Maka ozi ndi ozo, lee [Nkọwa onye EthHub banyere ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
   ## Cryptoeconomics {#cryptoeconomics}
 

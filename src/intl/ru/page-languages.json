@@ -44,7 +44,7 @@
   "language-mr": "Маратхи",
   "language-ms": "Малайский",
   "language-nb": "Норвежский",
-  "language-nl": "Голландский",
+  "language-nl": "Нидерландский",
   "language-ph": "Филиппинский",
   "language-pl": "Польский",
   "language-pt": "Португальский",
@@ -60,8 +60,9 @@
   "language-ta": "Тамильский",
   "language-tr": "Турецкий",
   "language-uk": "Украинский",
+  "language-ur-in": "Урду (Индия)",
   "language-uz": "Узбекский",
-  "language-vi": "Въетнамский",
+  "language-vi": "Вьетнамский",
   "language-zh": "Китайский (упрощенный)",
   "language-zh-tw": "Китайский (традиционный)"
 }

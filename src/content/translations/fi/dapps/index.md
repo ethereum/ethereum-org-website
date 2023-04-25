@@ -22,7 +22,6 @@ Tässä on muutama esimerkki Ethereumilla tehdyistä sovelluksista - päivitämm
 
 Oletko kiinnostunut lukemaan lisää muista Ethereumilla tehdyistä sovelluksista englanniksi?
 
-- [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) _päivitetään usein - EthHub_
 - [90+ Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _24.4.2019 - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _päivitetään usein - State of the Dapps_
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _päivitetään usein - Defiprime_

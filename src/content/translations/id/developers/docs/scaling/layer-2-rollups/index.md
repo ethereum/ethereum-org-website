@@ -138,12 +138,10 @@ Solusi hibrida ada dengan menggabungkan bagian terbaik dari berbagai teknologi l
 **Rollup ZK**
 
 - [Apa itu Rollup Zero-Knowledge?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
-- [EthHub tentang rollup zk](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 **Rollup Optimistic**
 
 - [Semua yang perlu Anda ketahui tentang Rollup Optimistic](https://research.paradigm.xyz/rollups)
-- [EthHub tentang rollup optimistic](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Panduan Penting untuk Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Bagaimana Rollup Optimism benar-benar berfungsi?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
