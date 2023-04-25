@@ -327,7 +327,7 @@ const UseCasePage = ({
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
-          eventName: "/defi/",
+          eventName: "defi",
         },
       },
       {
@@ -336,7 +336,7 @@ const UseCasePage = ({
         matomo: {
           eventCategory: "use cases menuy",
           eventAction: "click",
-          eventName: "/nft/",
+          eventName: "nft",
         },
       },
       {
@@ -345,7 +345,7 @@ const UseCasePage = ({
         matomo: {
           eventCategory: "use cases menuy",
           eventAction: "click",
-          eventName: "/dao/",
+          eventName: "dao",
         },
       },
       {
@@ -354,7 +354,7 @@ const UseCasePage = ({
         matomo: {
           eventCategory: "use cases menuy",
           eventAction: "click",
-          eventName: "/social-networks/",
+          eventName: "social-networks",
         },
       },
       {
@@ -363,7 +363,7 @@ const UseCasePage = ({
         matomo: {
           eventCategory: "use cases menuy",
           eventAction: "click",
-          eventName: "/decentralized-identity/",
+          eventName: "decentralized-identity",
         },
       },
     ],
