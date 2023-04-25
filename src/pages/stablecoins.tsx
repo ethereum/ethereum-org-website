@@ -335,11 +335,21 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       {
         content: t("page-stablecoins-hero-button"),
         toId: "explore",
+        matomo: {
+          eventCategory: "stablecoins hero buttons",
+          eventAction: "click",
+          eventName: "get stablecoins",
+        },
       },
       {
         content: t("page-stablecoins-how-they-work-button"),
         toId: "how",
         variant: "outline",
+        matomo: {
+          eventCategory: "stablecoins hero buttons",
+          eventAction: "click",
+          eventName: "how they work",
+        },
       },
     ],
   }

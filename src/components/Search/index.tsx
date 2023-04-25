@@ -16,8 +16,12 @@ import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
+
 // Styles
 import "@docsearch/css"
+
+// Utils
+import { trackCustomEvent } from "../../utils/matomo"
 
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (
@@ -74,7 +78,14 @@ const Search = forwardRef<{}, "button">((_, ref) => {
       {isLargerThanXl ? (
         <SearchButton
           ref={mergedButtonRefs}
-          onClick={onOpen}
+          onClick={() => {
+            onOpen()
+            trackCustomEvent({
+              eventCategory: "nav bar",
+              eventAction: "click",
+              eventName: "search open",
+            })
+          }}
           translations={{
             buttonText: t("search"),
             buttonAriaLabel: t("search"),
@@ -82,7 +93,14 @@ const Search = forwardRef<{}, "button">((_, ref) => {
         />
       ) : (
         <SearchIconButton
-          onClick={onOpen}
+          onClick={() => {
+            onOpen()
+            trackCustomEvent({
+              eventCategory: "nav bar",
+              eventAction: "click",
+              eventName: "search open",
+            })
+          }}
           ref={mergedButtonRefs}
           aria-label={t("aria-toggle-search-button")}
           size="sm"
