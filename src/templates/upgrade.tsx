@@ -387,10 +387,20 @@ const UpgradePage = ({
       {
         text: t("page-upgrades-upgrades-beacon-chain"),
         to: "/roadmap/beacon-chain/",
+        matomo: {
+          eventCategory: "upgrade menu",
+          eventAction: "click",
+          eventName: "/roadmap/beacon-chain/",
+        },
       },
       {
         text: t("page-upgrades-upgrades-docking"),
         to: "/roadmap/merge/",
+        matomo: {
+          eventCategory: "upgrade menu",
+          eventAction: "click",
+          eventName: "/roadmap/merge/",
+        },
       },
     ],
   }

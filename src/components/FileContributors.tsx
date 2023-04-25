@@ -21,6 +21,7 @@ import {
 import { FaGithub } from "react-icons/fa"
 
 import { getLocaleTimestamp } from "../utils/time"
+import { trackCustomEvent } from "../utils/matomo"
 import { Lang } from "../utils/languages"
 
 import ButtonLink from "./ButtonLink"
@@ -212,7 +213,14 @@ const FileContributors: React.FC<IProps> = ({
               variant="outline"
               bg="background"
               border={0}
-              onClick={() => setModalOpen(true)}
+              onClick={() => {
+                setModalOpen(true)
+                trackCustomEvent({
+                  eventCategory: "see contributors",
+                  eventAction: "click",
+                  eventName: "click",
+                })
+              }}
               w={{ base: "full", md: "inherit" }}
             >
               <Translation id="see-contributors" />

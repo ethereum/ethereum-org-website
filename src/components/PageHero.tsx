@@ -6,12 +6,16 @@ import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
 import Button, { IProps as IButtonProps } from "./Button"
 
+import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
+
 export interface IButtonLink extends IButtonLinkProps {
   content: ReactNode
+  matomo: MatomoEventOptions
 }
 
 export interface IButton extends IButtonProps {
   content: ReactNode
+  matomo: MatomoEventOptions
 }
 
 export interface IContent {
@@ -97,6 +101,13 @@ const PageHero: React.FC<IProps> = ({
                         key={idx}
                         variant={button.variant}
                         to={button.to}
+                        onClick={() =>
+                          trackCustomEvent({
+                            eventCategory: button.matomo.eventCategory,
+                            eventAction: button.matomo.eventAction,
+                            eventName: button.matomo.eventName,
+                          })
+                        }
                       >
                         {button.content}
                       </ButtonLink>
@@ -111,6 +122,13 @@ const PageHero: React.FC<IProps> = ({
                         key={idx}
                         variant={button.variant}
                         toId={button.toId}
+                        onClick={() =>
+                          trackCustomEvent({
+                            eventCategory: button.matomo.eventCategory,
+                            eventAction: button.matomo.eventAction,
+                            eventName: button.matomo.eventName,
+                          })
+                        }
                       >
                         {button.content}
                       </Button>

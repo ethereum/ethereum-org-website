@@ -160,6 +160,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
       {
         content: t("hero-button-lets-get-started"),
         toId: tocItems[0].id,
+        matomo: {
+          eventCategory: "learn hub hero buttons",
+          eventAction: "click",
+          eventName: "lets get started",
+        },
       },
     ],
   }

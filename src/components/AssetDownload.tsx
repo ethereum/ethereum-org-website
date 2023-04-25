@@ -1,21 +1,17 @@
+// Libraries
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import {
-  Box,
-  Flex,
-  Container,
-  Img,
-  Center,
-  Heading,
-  Text,
-} from "@chakra-ui/react"
+import { Box, Flex, Img, Center, Heading, Text } from "@chakra-ui/react"
 
+// Components
 import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
 import Emoji from "./Emoji"
 import Link from "./Link"
 
+// Utils
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
+import { trackCustomEvent } from "../utils/matomo"
 
 export interface IHide {
   shouldHide: boolean
@@ -125,7 +121,16 @@ const AssetDownload: React.FC<IProps> = ({
       </Box>
       <Box mt={4} p={0}>
         {!Svg && (
-          <ButtonLink to={downloadUrl}>
+          <ButtonLink
+            to={downloadUrl}
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: "asset download button",
+                eventAction: "click",
+                eventName: title,
+              })
+            }}
+          >
             <Translation id="page-assets-download-download" />
           </ButtonLink>
         )}

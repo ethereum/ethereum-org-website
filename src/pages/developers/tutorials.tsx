@@ -1,8 +1,11 @@
+// Libraries
 import React, { useEffect, useMemo, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { Badge } from "@chakra-ui/react"
 
+// Components
 import Translation from "../../components/Translation"
 import Icon from "../../components/Icon"
 import ButtonLink from "../../components/ButtonLink"
@@ -17,19 +20,23 @@ import {
   FakeLink,
   Page,
 } from "../../components/SharedStyledComponents"
-
-import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
-
-import externalTutorials from "../../data/externalTutorials.json"
 import FeedbackCard from "../../components/FeedbackCard"
 import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
-import { Context } from "../../types"
+
+// Data
+import externalTutorials from "../../data/externalTutorials.json"
+
+// Utils
+import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 import { Lang } from "../../utils/languages"
 import {
   filterTutorialsByLang,
   getSortedTutorialTagsForLang,
 } from "../../utils/tutorials"
-import { Badge } from "@chakra-ui/react"
+import { trackCustomEvent } from "../../utils/matomo"
+
+// Types
+import { Context } from "../../types"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -295,8 +302,18 @@ const TutorialsPage = ({
     const index = tempSelectedTags.indexOf(tagName)
     if (index > -1) {
       tempSelectedTags.splice(index, 1)
+      trackCustomEvent({
+        eventCategory: "tutorial tags",
+        eventAction: "click",
+        eventName: `${tagName} remove`,
+      })
     } else {
       tempSelectedTags.push(tagName)
+      trackCustomEvent({
+        eventCategory: "tutorial tags",
+        eventAction: "click",
+        eventName: `${tagName} add`,
+      })
     }
 
     setSelectedTags([...tempSelectedTags])
@@ -370,7 +387,16 @@ const TutorialsPage = ({
           </ModalOption>
         </ModalBody>
       </Modal>
-      <ButtonSecondary onClick={() => setModalOpen(true)}>
+      <ButtonSecondary
+        onClick={() => {
+          setModalOpen(true)
+          trackCustomEvent({
+            eventCategory: "tutorials tags",
+            eventAction: "click",
+            eventName: "submit",
+          })
+        }}
+      >
         <Translation id="page-tutorial-submit-btn" />
       </ButtonSecondary>
       <TutorialContainer>
@@ -391,7 +417,16 @@ const TutorialsPage = ({
               )
             })}
             {selectedTags.length > 0 && (
-              <ClearLink onClick={() => setSelectedTags([])}>
+              <ClearLink
+                onClick={() => {
+                  setSelectedTags([])
+                  trackCustomEvent({
+                    eventCategory: "tutorial tags",
+                    eventAction: "click",
+                    eventName: "clear",
+                  })
+                }}
+              >
                 <Translation id="page-find-wallet-clear" />
               </ClearLink>
             )}
