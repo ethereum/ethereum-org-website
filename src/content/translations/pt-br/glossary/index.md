@@ -783,12 +783,12 @@ Um número, derivado de uma função unidirecional de uma [chave privada](#priva
 
 Dado retornado pelo cliente Ethereum para representar o resultado de uma [transação](#transaction) particular, incluindo um [hash](#hash) de transação, seu número de [bloco](#block), a quantidade de [gás](#gas) usada e, em caso de desenvolvimento de um [contrato inteligente](#smart-contract), o [endereço](#address) do contrato.
 
-### ataque de reentrada {#re-entrancy-attack}
+### ataque de reentrância {#re-entrancy-attack}
 
 Um ataque que consiste em um contrato de um invasor chamando uma função de contrato da vítima de tal forma que, durante a execução, a vítima chama o contrato do invasor novamente, recursivamente. Isto pode resultar, por exemplo, no roubo de fundos mediante a omissão de partes do contrato da vítima que atualizam os saldos ou contam os montantes de saque.
 
 <DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
-  Reentrada
+  Reentrância
 </DocLink>
 
 ### recompensa {#reward}
@@ -1098,7 +1098,7 @@ A menor denominação de [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### endereço zero {#zero-address}
 
-Um endereço Ethereum, composto inteiramente de zeros, frequentemente usado como um endereço de consolidação para fundos indesejados.
+Um endereço Ethereum, composto inteiramente de zeros, que é frequentemente usado como um endereço, para remover tokens de circulação própria. Uma distinção é feita entre tokens formalmente removidos do índice de um contrato inteligente, através do método burn() e os enviados para este endereço.
 
 ### prova de conhecimento zero {#zk-proof}
 
