@@ -238,9 +238,11 @@ export const useStatsBoxGrid = () => {
         <RangeSelector
           state={selectedRangePrice}
           setState={setSelectedRangePrice}
-          eventCategory="Stats"
-          eventAction="click"
-          eventName="eth price"
+          matomo={{
+            eventCategory: "Stats",
+            eventAction: "click",
+            eventName: "eth price",
+          }}
         />
       ),
       state: ethPrices,
@@ -255,9 +257,11 @@ export const useStatsBoxGrid = () => {
         <RangeSelector
           state={selectedRangeTxs}
           setState={setSelectedRangeTxs}
-          eventCategory="Stats"
-          eventAction="click"
-          eventName="transactions"
+          matomo={{
+            eventCategory: "Stats",
+            eventAction: "click",
+            eventName: "transactions",
+          }}
         />
       ),
       state: txs,
@@ -272,9 +276,11 @@ export const useStatsBoxGrid = () => {
         <RangeSelector
           state={selectedRangeTvl}
           setState={setSelectedRangeTvl}
-          eventCategory="Stats"
-          eventAction="click"
-          eventName="defi tvl"
+          matomo={{
+            eventCategory: "Stats",
+            eventAction: "click",
+            eventName: "defi tvl",
+          }}
         />
       ),
       state: valueLocked,
@@ -289,9 +295,11 @@ export const useStatsBoxGrid = () => {
         <RangeSelector
           state={selectedRangeNodes}
           setState={setSelectedRangeNodes}
-          eventCategory="Stats"
-          eventAction="click"
-          eventName="nodes"
+          matomo={{
+            eventCategory: "Stats",
+            eventAction: "click",
+            eventName: "nodes",
+          }}
         />
       ),
       state: nodes,

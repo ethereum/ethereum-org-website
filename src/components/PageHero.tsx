@@ -6,20 +6,16 @@ import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
 import Button, { IProps as IButtonProps } from "./Button"
 
-import { trackCustomEvent } from "../utils/matomo"
+import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
 
 export interface IButtonLink extends IButtonLinkProps {
   content: ReactNode
-  eventCategory: string
-  eventAction: string
-  eventName: string
+  matomo: MatomoEventOptions
 }
 
 export interface IButton extends IButtonProps {
   content: ReactNode
-  eventCategory: string
-  eventAction: string
-  eventName: string
+  matomo: MatomoEventOptions
 }
 
 export interface IContent {
@@ -107,9 +103,9 @@ const PageHero: React.FC<IProps> = ({
                         to={button.to}
                         onClick={() =>
                           trackCustomEvent({
-                            eventCategory: button.eventCategory,
-                            eventAction: button.eventAction,
-                            eventName: button.eventName,
+                            eventCategory: button.matomo.eventCategory,
+                            eventAction: button.matomo.eventAction,
+                            eventName: button.matomo.eventName,
                           })
                         }
                       >
@@ -128,9 +124,9 @@ const PageHero: React.FC<IProps> = ({
                         toId={button.toId}
                         onClick={() =>
                           trackCustomEvent({
-                            eventCategory: button.eventCategory,
-                            eventAction: button.eventAction,
-                            eventName: button.eventName,
+                            eventCategory: button.matomo.eventCategory,
+                            eventAction: button.matomo.eventAction,
+                            eventName: button.matomo.eventName,
                           })
                         }
                       >

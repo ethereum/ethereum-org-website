@@ -2,33 +2,25 @@ import React from "react"
 import { Button } from "@chakra-ui/react"
 import { ranges } from "./useStatsBoxGrid"
 
-import { trackCustomEvent } from "../../utils/matomo"
+import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
 
 interface IRangeSelectorProps {
   state: string
   setState: (state: string) => void
-  eventCategory: string
-  eventAction: string
-  eventName: string
+  matomo: MatomoEventOptions
 }
 
 export const RangeSelector: React.FC<IRangeSelectorProps> = ({
   state,
   setState,
-  eventCategory,
-  eventAction,
-  eventName,
+  matomo,
 }) => (
   <div>
     {ranges.map((range, idx) => (
       <Button
         onClick={() => {
           setState(ranges[idx])
-          trackCustomEvent({
-            eventCategory: eventCategory,
-            eventAction: eventAction,
-            eventName: `${eventName} ${ranges[idx]}`,
-          })
+          trackCustomEvent(matomo)
         }}
         key={idx}
         color={""}

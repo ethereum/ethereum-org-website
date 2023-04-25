@@ -10,15 +10,13 @@ import {
 
 import Emoji from "./Emoji"
 
-import { trackCustomEvent } from "../utils/matomo"
+import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
 
 export interface IBoxItem {
   emoji: string
   title: string
   description: string
-  eventCategory: string
-  eventAction: string
-  eventName: string
+  matomo: MatomoEventOptions
 }
 
 export interface IProps {
@@ -89,9 +87,9 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
             onClick={() => {
               setOpenIndex(idx)
               trackCustomEvent({
-                eventCategory: item.eventCategory,
-                eventAction: item.eventAction,
-                eventName: item.eventName,
+                eventCategory: item.matomo.eventCategory,
+                eventAction: item.matomo.eventAction,
+                eventName: item.matomo.eventName,
               })
             }}
             key={idx}
