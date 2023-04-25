@@ -29,10 +29,10 @@ const Modal: React.FC<IProps> = ({ children, isOpen, setIsOpen, ...props }) => {
       <ModalOverlay bgColor="blackAlpha.700" />
 
       <ModalContent
-        p="2rem"
+        p={8}
         shadow="md"
         border="1px"
-        borderColor="ActiveBorder"
+        borderColor="border"
         borderRadius="md"
       >
         <ModalCloseButton />
