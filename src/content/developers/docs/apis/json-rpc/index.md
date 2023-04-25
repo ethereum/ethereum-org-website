@@ -370,7 +370,7 @@ None
 
 **Returns**
 
-`DATA`, integer of the current chain id.
+`chainId`, hexadecimal value as a string representing the integer of the current chain id.
 
 **Example**
 
