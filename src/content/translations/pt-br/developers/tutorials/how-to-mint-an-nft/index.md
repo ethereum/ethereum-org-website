@@ -4,7 +4,6 @@ description: Este tutorial descreve como criar um NFT na blockchain Ethereum usa
 author: "Sumi Mudgil"
 tags:
   - "ERC-721"
-  - "alchemy"
   - "solidity"
   - "contratos inteligentes"
 skill: iniciante
