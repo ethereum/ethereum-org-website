@@ -612,7 +612,7 @@ const DappsPage = ({
     {
       title: "Tornado cash",
       description: t("page-dapps-dapp-description-tornado-cash"),
-      link: "https://tornado.cash/",
+      link: "https://ipfs.io/ipns/tornadocash.eth/",
       image: getImage(data.tornado),
       alt: t("page-dapps-tornado-cash-logo-alt"),
     },
