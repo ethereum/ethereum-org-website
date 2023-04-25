@@ -39,7 +39,7 @@ Bir geliştirici değilseniz Ethereum'da nereden başlayacağınızı bilmek zor
 ### Ethereum hakkında içerik yazın {#write-content}
 
 - Ethereum'un değerini sade bir dille açıklayabilecek iyi yazarlara ihtiyacı var
-- Kendi makalelerinizi yayınlamaya hazır değil misiniz? [EthHub](https://docs.ethhub.io/) gibi topluluk kaynaklarındaki mevcut içeriklere katkı sağlamayı veya ethereum.org için yeni içerikler önermeyi göz önünde bulundurun!
+- Kendi makalelerinizi yayınlamaya hazır değil misiniz? gibi topluluk kaynaklarındaki mevcut içeriklere katkı sağlamayı veya ethereum.org için yeni içerikler önermeyi göz önünde bulundurun!
 
 ### Topluluk çağrıları için not alma teklifi {#take-notes}
 

@@ -22,7 +22,6 @@ Geriausias būdas pradėti naudoti Ethereum – pasinerti į ją iškart!
 
 Norite pamatyti daugiau su Ethereum sukurtų programų?
 
-- [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) _Dažnai atnaujinama - EthHub_
 - [90+ Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _2019 m. balandžio 24 d. - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _Dažnai atnaujinama - State of the Dapps_
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Dažnai atnaujinama - Defiprime_

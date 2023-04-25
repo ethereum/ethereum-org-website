@@ -30,9 +30,6 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 
 ## Artykuły dla średniozaawansowanych {#intermediate-articles}
 
-- [Dokumentacja Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Przykłady działania Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## Przykłady zaawansowane {#advanced-use-patterns}
 
 - [biblioteka zewnętrzna pwasm_ethereum do interakcji z siecią podobną do Ethereum](https://github.com/openethereum/pwasm-ethereum)
@@ -49,7 +46,6 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Wdrażanie maszyny wirtualnej Rust Ethereum_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust klient_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Wdrożenie biblioteki Web3.js przez Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Inteligentny kontrakt Wavelet w Rust_
 
 Szukasz więcej zasobów? Zajrzyj na [ethereum.org/developers.](/developers/)

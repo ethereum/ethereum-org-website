@@ -61,8 +61,6 @@ Schaue zu, wie Austin dich durch Mining und die Proof-of-Work-Blockchain führt.
 
 ## Weiterführende Informationen {#further-reading}
 
-- [Was bedeutet es, Ethereum zu minen?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
 ## Verwandte Tools {#related-tools}
 
 - [Verwandte Themen](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

@@ -360,7 +360,7 @@ contract PriceConsumerV3 {
 
 某些区块链应用程序（如基于区块链的游戏或彩票方案），需要高度的不可预测性和随机性才能有效工作。 然而，区块链的确定性执行消除了任何随机性来源。
 
-通常的方法是使用伪随机密码函数，例如`blockhash`，但这也适用于其他参与者[的](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.)操作，即解决工作量证明算法的矿工。 此外，以太坊[过渡到权益证明](/upgrades/merge/)意味着开发者不能再依靠 `blockhash` 获得链上随机性（然而，信标链的 [RANDAO 机制](https://eth2book.info/altair/part2/building_blocks/randomness)提供了另一种随机性来源）。
+通常的方法是使用伪随机密码函数，例如`blockhash`，但这也适用于其他参与者[的](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.)操作，即解决工作量证明算法的矿工。 此外，以太坊[过渡到权益证明](/roadmap/merge/)意味着开发者不能再依靠 `blockhash` 获得链上随机性（然而，信标链的 [RANDAO 机制](https://eth2book.info/altair/part2/building_blocks/randomness)提供了另一种随机性来源）。
 
 可以在链下生成随机值并发送到链上，但这样做对用户有很高的信任要求。 他们必须相信值确实是通过不可预测的机制产生的，并且未在传输过程中被改动。
 

@@ -32,7 +32,6 @@ Beberapa proyek menyediakan implementasi sidechain yang dapat Anda integrasikan 
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [EthHub tentang sidechain](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Penskalaan Dapp Ethereum melalui Sidechain](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 Feb 2018 - Georgios Konstantopoulos_
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

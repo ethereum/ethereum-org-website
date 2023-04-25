@@ -155,7 +155,7 @@ Bien que le développement des spécifications et des implémentations ait toujo
 
 Lorsque la chaîne phare fusionnera avec la couche d'exécution Ethereum, le processus de gouvernance pour proposer des changements sera harmonisé. Ce processus d'implémentation de la fusion est [déjà en cours](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Plus d'infos sur la fusion
 </ButtonLink>
 
@@ -176,7 +176,6 @@ Lorsque la chaîne phare fusionnera avec la couche d'exécution Ethereum, le pro
 La gouvernance d'Ethereum n'est pas rigoureusement définie. Divers participants de la communauté ont des points de vue différents à ce sujet. Voici quelques-unes d'entre elles :
 
 - [Notes on Blockchain Governance](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Governance on Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_

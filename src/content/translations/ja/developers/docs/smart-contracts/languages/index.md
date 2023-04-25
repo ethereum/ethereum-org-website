@@ -97,7 +97,7 @@ contract Coin {
   - オペレータのオーバーロード
   - 再帰呼び出し
   - 無限ループ
-  - バイナリ固定少数点
+  - 2 進固定小数点
 
 詳細については、[Vyper のドキュメント](https://vyper.readthedocs.io/en/latest/index.html)を参照してください。
 

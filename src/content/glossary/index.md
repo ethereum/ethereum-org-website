@@ -78,7 +78,7 @@ Every [block](#block) has a reserve price known as the 'base fee'. It is the min
 
 The Beacon Chain was the blockchain that introduced [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It ran alongside the proof-of-work Ethereum Mainnet from December 2020 until the two chains were merged in September 2022 to form the Ethereum of today.
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Beacon Chain
 </DocLink>
 
@@ -279,7 +279,7 @@ A network-wide setting in [proof-of-work](#pow) networks that controls how much 
 
 ### difficulty bomb {#difficulty-bomb}
 
-Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting that was designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork). The difficulty bomb was deprecated with the [transition to proof-of-stake](/upgrades/merge).
+Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting that was designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork). The difficulty bomb was deprecated with the [transition to proof-of-stake](/roadmap/merge).
 
 ### digital signature {#digital-signatures}
 
@@ -329,7 +329,7 @@ A validator sending two messages that contradict each other. One simple example 
 
 'Eth1' is a term that referred to Mainnet Ethereum, the existing proof-of-work blockchain. This term has since been deprecated in favor of the 'execution layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   More on the Ethereum upgrades
 </DocLink>
 
@@ -337,7 +337,7 @@ A validator sending two messages that contradict each other. One simple example 
 
 'Eth2' is a term that referred to a set of Ethereum protocol upgrades, including Ethereum's transition to proof-of-stake. This term has since been deprecated in favor of the 'consensus layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   More on the Ethereum upgrades
 </DocLink>
 
@@ -824,7 +824,7 @@ A family of cryptographic hash functions published by the National Institute of 
 
 The stage of Ethereum development that initiated a set of scaling and sustainability upgrades, previously known as 'Ethereum 2.0', or 'Eth2'.
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Ethereum upgrades
 </DocLink>
 
@@ -836,8 +836,8 @@ The process of converting a data structure into a sequence of bytes.
 
 Shard chains are discrete sections of the total blockchain that can subsets of validators can be responsible for. This will offer increased transaction throughput for Ethereum and improve data availability for [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
-  Shard chains
+<DocLink to="/roadmap/danksharding">
+  Danksharding
 </DocLink>
 
 ### sidechain {#sidechain}

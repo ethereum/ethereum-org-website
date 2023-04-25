@@ -205,7 +205,7 @@ En principe, l'équipe d'Ethereum ne communiquera jamais avec vous par le biais 
 
 ### Arnaque au jeton « Eth2 » {#eth2-token-scam}
 
-Dans la période précédant [La Fusion](/upgrades/merge/), les fraudeurs ont profité de la confusion autour du terme « Eth2 » pour essayer d'obtenir que les utilisateurs rachètent leur ETH pour un jeton « ETH2 ». Il n'existe pas d'« ETH2 » et aucun autre jeton légitime n'a été introduit avec La Fusion. L'ETH que vous possédiez avant La Fusion reste aujourd'hui le même ETH. Vous n'avez **pas besoin de prendre des mesures relatives à votre ETH pour tenir compte du passage de la preuve de travail à la preuve d'enjeu**.
+Dans la période précédant [La Fusion](/roadmap/merge/), les fraudeurs ont profité de la confusion autour du terme « Eth2 » pour essayer d'obtenir que les utilisateurs rachètent leur ETH pour un jeton « ETH2 ». Il n'existe pas d'« ETH2 » et aucun autre jeton légitime n'a été introduit avec La Fusion. L'ETH que vous possédiez avant La Fusion reste aujourd'hui le même ETH. Vous n'avez **pas besoin de prendre des mesures relatives à votre ETH pour tenir compte du passage de la preuve de travail à la preuve d'enjeu**.
 
 Les escrocs peuvent apparaître sous la forme d'agents d'« assistance » vous indiquant que si vous déposez votre ETH, vous recevrez en retour un « ETH2 ». Il n'y a pas de [support Ethereum officiel](/community/support/), et il n'y a pas de nouveau jeton. Ne partagez jamais la phrase de récupération de votre portefeuille avec qui que ce soit.
 

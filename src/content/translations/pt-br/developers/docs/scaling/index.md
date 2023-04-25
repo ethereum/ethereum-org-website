@@ -27,7 +27,7 @@ Este método de dimensionamento requer alterações no protocolo Ethereum ([rede
 
 A fragmentação é o processo de dividir um banco de dados horizontalmente para repartir a carga de trabalho. No contexto do Ethereum, a fragmentação reduzirá o congestionamento da rede e aumentará o número de transações por segundo graças à geração de novas cadeias conhecidas como "fragmentos". Isso também irá aliviar a carga para cada validador, que não precisará mais processar a totalidade de todas as transações da rede.
 
-Saiba mais sobre [fragmentação](/upgrades/sharding/).
+Saiba mais sobre [fragmentação](/roadmap/danksharding/).
 
 ## Dimensionamento off-chain {#off-chain-scaling}
 

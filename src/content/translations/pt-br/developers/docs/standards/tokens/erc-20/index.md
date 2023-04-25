@@ -89,8 +89,8 @@ weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ethe
 
 acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
-# Este é um simplificado Contrato Application Binary Interface (ABI) de um ERC-20 Contrato de Token.
-# Serão expostos apenas estes métodos: balanceOf(address), decimals(), symbol() and totalSupply()
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-20 Token Contract.
+# It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -118,7 +118,7 @@ simplified_abi = [
     }
 ]
 
-dai_contract = w3.eth.contract(address=w3.toChecksumAddress(dai_token_addr), abi=simplified_abi)
+dai_contract = w3.eth.contract(address=w3.to_checksum_address(dai_token_addr), abi=simplified_abi)
 symbol = dai_contract.functions.symbol().call()
 decimals = dai_contract.functions.decimals().call()
 totalSupply = dai_contract.functions.totalSupply().call() / 10**decimals
@@ -129,7 +129,7 @@ print("===== %s =====" % symbol)
 print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 
-weth_contract = w3.eth.contract(address=w3.toChecksumAddress(weth_token_addr), abi=simplified_abi)
+weth_contract = w3.eth.contract(address=w3.to_checksum_address(weth_token_addr), abi=simplified_abi)
 symbol = weth_contract.functions.symbol().call()
 decimals = weth_contract.functions.decimals().call()
 totalSupply = weth_contract.functions.totalSupply().call() / 10**decimals

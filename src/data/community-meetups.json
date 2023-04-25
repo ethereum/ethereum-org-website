@@ -1,9 +1,21 @@
 [
   {
+    "title": "Ethereum Bogota",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-bogota"
+  },
+  {
     "title": "Bokky's Ethereum Workshop",
     "emoji": ":australia:",
     "location": "Sydney",
     "link": "https://www.meetup.com/BokkyPooBahs-Ethereum-Workshop/"
+  },
+   {
+    "title": "Web3Mi",
+    "emoji": ":ita:",
+    "location": "Milan",
+    "link": "https://www.eventbrite.it/o/web3mi-52766466683"
   },
   {
     "title": "ETHSydney",

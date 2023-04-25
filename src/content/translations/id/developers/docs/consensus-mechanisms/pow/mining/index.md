@@ -61,8 +61,6 @@ Amati Austin memandu Anda melalui penambangan dan blockchain bukti kerja.
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [Apa artinya menambang Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
 ## Peralatan terkait {#related-tools}
 
 - [Penambang Ethereum terbaik](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

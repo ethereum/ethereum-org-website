@@ -61,8 +61,6 @@ Regardez Austin vous guider à travers le minage et la blockchain.
 
 ## Complément d'information {#further-reading}
 
-- [Que signifie miner Ethereum ?](https://docs.ethhub.io/using-ethereum/mining/) _Ethhub_
-
 ## Outils connexes {#related-tools}
 
 - [Meilleurs mineurs d'Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
