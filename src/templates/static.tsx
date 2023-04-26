@@ -45,6 +45,7 @@ import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
+import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -246,6 +247,8 @@ const StaticPage = ({
           translationString={postMergeBannerTranslationString!}
         />
       )}
+      {/* TODO: REMOVE MAY 11 */}
+      <WritersCohortBanner />
       <Flex
         justifyContent="space-between"
         w="full"
