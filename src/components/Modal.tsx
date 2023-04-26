@@ -24,6 +24,7 @@ const Modal: React.FC<IProps> = ({ children, isOpen, setIsOpen, ...props }) => {
       onClose={() => setIsOpen(false)}
       isCentered
       size="xl"
+      scrollBehavior="inside"
       {...props}
     >
       <ModalOverlay bgColor="blackAlpha.700" />
