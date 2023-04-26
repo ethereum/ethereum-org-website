@@ -13,10 +13,11 @@ import {
   ModalBody,
   ModalHeader,
   Show,
-  Skeleton,
-  SkeletonCircle,
+  Skeleton as ChakraSkeleton,
+  SkeletonCircle as ChakraSkeletonCircle,
   Text,
   UnorderedList,
+  VStack,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 
@@ -74,6 +75,22 @@ const COMMIT_HISTORY = gql`
     }
   }
 `
+
+// TODO: skeletons are not part of the DS, so these should be replaced once we
+// implement the new designs. Thats the reason we haven't define these styles in
+// the theme config file
+const skeletonColorProps = {
+  startColor: "lightBorder",
+  endColor: "searchBackgroundEmpty",
+}
+
+const Skeleton = (props) => (
+  <ChakraSkeleton {...skeletonColorProps} borderRadius="md" {...props} />
+)
+
+const SkeletonCircle = (props) => (
+  <ChakraSkeletonCircle {...skeletonColorProps} {...props} />
+)
 
 const ContributorList = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -199,16 +216,8 @@ const FileContributors: React.FC<IProps> = ({
           </Skeleton>
         </Flex>
 
-        <Flex
-          direction="column"
-          alignContent="center"
-          justifyContent="space-between"
-        >
-          <Skeleton
-            isLoaded={!loading}
-            mt={{ base: 4, md: 0 }}
-            mb={{ base: 2, md: 0 }}
-          >
+        <VStack align="stretch" justifyContent="space-between" spacing={2}>
+          <Skeleton isLoaded={!loading} mt={{ base: 4, md: 0 }}>
             <Button
               variant="outline"
               bg="background"
@@ -245,7 +254,7 @@ const FileContributors: React.FC<IProps> = ({
               </ButtonLink>
             </Show>
           )}
-        </Flex>
+        </VStack>
       </Flex>
     </>
   )
