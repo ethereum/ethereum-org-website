@@ -26,7 +26,6 @@ Vil du installere en lommebok?
 
 Vil du lære mer om Ethereum-lommebøker?
 
-- [Introduksjon til Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Oppdatert ofte - EthHub_
 - [En komplett nybegynner introduksjon til Ethereum: Den fulle nedlastingen](https://www.mewtopia.com/absolute-beginners-guide/) _juli 23, 2019 - MyEtherWallet_
 - [Beste Ethereum Wallets 2019: Hardware vs. Software vs. Papir](https://blockonomi.com/best-ethereum-wallets/) _Des 15, 2018 - Blockonomi_
 

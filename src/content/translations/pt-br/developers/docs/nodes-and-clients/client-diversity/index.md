@@ -91,11 +91,10 @@ Vários painéis fornecem estatísticas de diversidade de cliente em tempo real 
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-- [pools.invis.cloud](https://pools.invis.cloud/)
-- [slashed.info](https://www.slashed.info/)
 
 **Camada de execução:**
 
+- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Leitura adicional {#further-reading}

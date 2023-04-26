@@ -370,5 +370,11 @@
     "emoji": ":taiwan:",
     "location": "Taipei",
     "link": "https://www.meetup.com/taipei-ethereum-meetup/"
+  },
+  {
+    "title": "Web3 Timisoara",
+    "emoji": ":romania:",
+    "location": "Timisoara",
+    "link": "https://www.meetup.com/web3-timisoara/"
   }
 ]

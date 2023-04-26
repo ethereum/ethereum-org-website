@@ -429,7 +429,6 @@ _Nous aimerions avoir plus de documentation sur la création d'un contrat intell
 **Articles**
 
 - [Qu'est-ce qu'une Blockchain Oracle ?](https://chain.link/education/blockchain-oracles) - _Chainlink_
-- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
 - [Qu'est-ce qu'une Blockchain Oracle ?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
 - [Oracles décentralisés : un aperçu complet](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Implémentation d'une Blockchain Oracle sur Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_

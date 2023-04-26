@@ -14,7 +14,7 @@ import { NavigateOptions } from "@reach/router"
 import { BsQuestionSquareFill } from "react-icons/bs"
 
 import { Lang } from "../utils/languages"
-import { trackCustomEvent, EventOptions } from "../utils/matomo"
+import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
 import * as url from "../utils/url"
 import { Direction } from "../types"
 
@@ -24,7 +24,7 @@ export interface IBaseProps {
   language?: Lang
   hideArrow?: boolean
   isPartiallyActive?: boolean
-  customEventOptions?: EventOptions
+  customEventOptions?: MatomoEventOptions
   activeStyle?: object
 }
 
@@ -71,13 +71,13 @@ const Link: React.FC<IProps> = ({
   const isStatic = url.isStatic(to)
   const isPdf = url.isPdf(to)
 
-  const externalLinkEvent: EventOptions = {
+  const externalLinkEvent: MatomoEventOptions = {
     eventCategory: `External link`,
     eventAction: `Clicked`,
     eventName: to,
   }
 
-  const hashLinkEvent: EventOptions = {
+  const hashLinkEvent: MatomoEventOptions = {
     eventCategory: `Hash link`,
     eventAction: `Clicked`,
     eventName: to,

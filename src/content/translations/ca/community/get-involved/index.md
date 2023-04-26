@@ -37,7 +37,7 @@ Si no sou desenvolupadors, pot ser difícil saber per on començar a Ethereum. A
 ### Escriviu contingut sobre Ethereum {#write-content}
 
 - Ethereum necessita bons escriptors que puguin explicar el seu valor en llenguatge quotidià
-- No us atreviu a publicar els vostres propis articles encara? Considereu fer una contribució al contingut existent en els recursos de la comunitat, com ara [EthHub](https://docs.ethhub.io/), o proposeu un nou contingut per a ethereum.org!
+- No us atreviu a publicar els vostres propis articles encara? Considereu fer una contribució al contingut existent en els recursos de la comunitat, o proposeu un nou contingut per a ethereum.org!
 
 ### Oferiu-vos per prendre nota de les trucades de la comunitat {#take-notes}
 

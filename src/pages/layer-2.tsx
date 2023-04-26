@@ -265,16 +265,31 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {
         content: t("layer-2-hero-button-1"),
         toId: "what-is-layer-2",
+        matomo: {
+          eventCategory: "layer 2 hero buttons",
+          eventAction: "click",
+          eventName: "what is layer 2",
+        },
       },
       {
         content: t("layer-2-hero-button-2"),
         toId: "use-layer-2",
         variant: "outline",
+        matomo: {
+          eventCategory: "layer 2 hero buttons",
+          eventAction: "click",
+          eventName: "use layer 2",
+        },
       },
       {
         content: t("layer-2-hero-button-3"),
         toId: "how-to-get-onto-layer-2",
         variant: "outline",
+        matomo: {
+          eventCategory: "layer 2 hero buttons",
+          eventAction: "click",
+          eventName: "move to layer 2",
+        },
       },
     ],
   }
