@@ -2,6 +2,7 @@ import React from "react"
 import { Text } from "@chakra-ui/react"
 
 import DismissableBanner from "../DismissableBanner"
+import Link from "../../Link"
 
 const WritersCohortBanner = () => {
   if (
@@ -10,7 +11,13 @@ const WritersCohortBanner = () => {
   ) {
     return (
       <DismissableBanner storageKey="writersCohort">
-        <Text m={0}>Hello world</Text>
+        <Text m={0}>
+          Join the first-ever ethereum.org Writers Cohort, in collaboration with
+          Taptive, starting May 11th.{" "}
+          <Link to="https://ethereumwriterscohort.carrd.co/">
+            Sign up here!
+          </Link>
+        </Text>
       </DismissableBanner>
     )
   }
