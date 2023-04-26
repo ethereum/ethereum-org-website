@@ -9,14 +9,12 @@ import { Lang } from "../../utils/languages"
 import { ISections } from "./types"
 
 export interface IProps {
-  path: string
   sections: ISections
 }
 
-const Menu: React.FC<IProps> = ({ path, sections }) => {
+const Menu: React.FC<IProps> = ({ sections }) => {
   const { language } = useI18next()
   const direction = getDirection(language as Lang)
-  const shouldShowSubNav = path.includes("/developers/")
 
   const { useEthereum, learn, ...restSections } = sections
 
@@ -24,7 +22,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
 
   return (
     <Flex as={List} alignItems="center" m={0} gap={{ base: 3, xl: 6 }}>
-      <NavDropdown section={useEthereum} hasSubNav={shouldShowSubNav}>
+      <NavDropdown section={useEthereum}>
         {useEthereum.items.map((item, index) => (
           <NavDropdown.Item
             key={index}
@@ -37,7 +35,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
         ))}
       </NavDropdown>
 
-      <NavDropdown section={learn} hasSubNav={shouldShowSubNav}>
+      <NavDropdown section={learn}>
         <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"}>
           <Flex flexDir="column" gap={4}>
             {[start, basics].map((section, index) => (
@@ -75,11 +73,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
         const section = restSections[sectionKey]
 
         return (
-          <NavDropdown
-            key={sectionKey}
-            section={section}
-            hasSubNav={shouldShowSubNav}
-          >
+          <NavDropdown key={sectionKey} section={section}>
             {section.items.map((item, index) => (
               <NavDropdown.Item
                 key={index}

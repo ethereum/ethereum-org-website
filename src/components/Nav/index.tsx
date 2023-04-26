@@ -67,7 +67,7 @@ const Nav: FC<IProps> = ({ path }) => {
             display={{ base: "none", lg: "flex" }}
             ml={{ base: 3, xl: 8 }}
           >
-            <Menu path={path} sections={linkSections} />
+            <Menu sections={linkSections} />
             <Flex
               alignItems="center"
               justifyContent="space-between"
