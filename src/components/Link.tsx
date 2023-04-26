@@ -133,13 +133,15 @@ const Link: React.FC<IProps> = ({
         }}
         {...commonProps}
       >
-        {children}
-        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-        {!hideArrow && (
-          <Box as="span" ml={0.5} mr={1.5} aria-hidden>
-            ↗
-          </Box>
-        )}
+        <>
+          {children}
+          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+          {!hideArrow && (
+            <Box as="span" ml={0.5} mr={1.5} aria-hidden>
+              ↗
+            </Box>
+          )}
+        </>
       </ChakraLink>
     )
   }
@@ -155,19 +157,21 @@ const Link: React.FC<IProps> = ({
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
     >
-      {children}
-      {isGlossary && (
-        <Icon
-          as={BsQuestionSquareFill}
-          aria-label="See definition"
-          fontSize="12px"
-          margin="0 0.25rem 0 0.35rem"
-          _hover={{
-            transition: "transform 0.1s",
-            transform: "scale(1.2)",
-          }}
-        />
-      )}
+      <>
+        {children}
+        {isGlossary && (
+          <Icon
+            as={BsQuestionSquareFill}
+            aria-label="See definition"
+            fontSize="12px"
+            margin="0 0.25rem 0 0.35rem"
+            _hover={{
+              transition: "transform 0.1s",
+              transform: "scale(1.2)",
+            }}
+          />
+        )}
+      </>
     </ChakraLink>
   )
 }
