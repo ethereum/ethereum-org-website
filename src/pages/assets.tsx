@@ -441,14 +441,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={t("page-assets-eth-diamond-white")}
             image={data.ethDiamondPurpleWhite}
             svg={EthDiamondPurpleWhite}
-            shouldHide={true}
+            shouldHide
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={data.ethDiamondPurpleWhite}
             svg={EthDiamondPurpleWhite}
-            shouldHide={true}
+            shouldHide
           />
         </Row>
         <Row>
