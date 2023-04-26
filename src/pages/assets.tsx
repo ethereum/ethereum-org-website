@@ -232,7 +232,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             image={data.wallet}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
-            shouldHide
+            hideBelow="lg"
           />
         </Row>
         <Row>
@@ -313,7 +313,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             artistName="Tomo Saito"
             artistUrl="https://tomosaito.com/"
             image={data.leslieTheRhino}
-            shouldHide
+            hideBelow="lg"
           />
         </Row>
         <H2 id="historical">
@@ -441,14 +441,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={t("page-assets-eth-diamond-white")}
             image={data.ethDiamondPurpleWhite}
             svg={EthDiamondPurpleWhite}
-            shouldHide
+            hideBelow="lg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={data.ethDiamondPurpleWhite}
             svg={EthDiamondPurpleWhite}
-            shouldHide
+            hideBelow="lg"
           />
         </Row>
         <Row>

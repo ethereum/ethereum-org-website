@@ -3,7 +3,15 @@ import React, { ReactElement, ReactNode } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useEffect, useState } from "react"
 import * as ReactDOMServer from "react-dom/server"
-import { Box, Flex, Img, Center, Heading, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Img,
+  Center,
+  Heading,
+  Text,
+  FlexProps,
+} from "@chakra-ui/react"
 
 // Components
 import Translation from "../components/Translation"
@@ -19,13 +27,12 @@ export interface IHide {
   shouldHide: boolean
 }
 
-export interface IPropsBase {
+export interface IPropsBase extends FlexProps {
   children?: React.ReactNode
   alt: string
   artistName?: string
   artistUrl?: string
   src?: string
-  shouldHide?: boolean
   title: string
 }
 
@@ -73,9 +80,9 @@ const AssetDownload: React.FC<IProps> = ({
   children,
   image,
   src,
-  shouldHide = false,
   title,
   svg,
+  ...rest
 }) => {
   const baseUrl = `https://ethereum.org`
   const downloadUri = src ? src : image ? getSrc(image) : ""
@@ -95,11 +102,7 @@ const AssetDownload: React.FC<IProps> = ({
   }, [])
 
   return (
-    <Box
-      display={{
-        base: shouldHide ? "none" : "flex",
-        lg: "flex",
-      }}
+    <Flex
       maxW="100%"
       minW="170px"
       flex="1 1 45%"
@@ -107,7 +110,7 @@ const AssetDownload: React.FC<IProps> = ({
       justifyContent="space-between"
       m={4}
       p={0}
-      opacity={shouldHide ? 0 : 1}
+      {...rest}
     >
       <Heading as="h4" fontSize={{ base: "md", md: "xl" }} fontWeight="500">
         {title}
@@ -191,7 +194,7 @@ const AssetDownload: React.FC<IProps> = ({
           </ButtonLink>
         )}
       </Flex>
-    </Box>
+    </Flex>
   )
 }
 
