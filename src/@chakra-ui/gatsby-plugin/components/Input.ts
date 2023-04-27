@@ -50,6 +50,8 @@ const baseStyle = definePartsStyle((props) => {
       },
       element: {
         fontSize: "xl",
+        transitionProperty: "common",
+        transitionDuration: "normal",
         _groupHover: {
           color: "primaryHover",
         },
