@@ -29,10 +29,15 @@ const baseStyleLabel = defineStyle({ ...commonLabelProps })
 
 const baseStyleContainer = defineStyle({ ...commonContainerProps })
 
+const baseStyleIcon = defineStyle({
+  boxSize: 2,
+})
+
 const baseStyle = definePartsStyle({
   container: baseStyleContainer,
   control: baseStyleControl,
   label: baseStyleLabel,
+  icon: baseStyleIcon,
 })
 
 export const Checkbox = defineMultiStyleConfig({

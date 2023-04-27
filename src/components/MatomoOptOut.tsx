@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { MATOMO_LS_KEY } from "../utils/matomo"
-import { Flex, Text } from "@chakra-ui/react"
-import Checkbox from "./Checkbox"
+import { Flex, Checkbox, Text } from "@chakra-ui/react"
 
 export interface IProps {}
 
