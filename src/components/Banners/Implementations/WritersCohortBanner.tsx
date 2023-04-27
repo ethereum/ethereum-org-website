@@ -12,8 +12,7 @@ const WritersCohortBanner = () => {
     return (
       <DismissableBanner storageKey="writersCohort">
         <Text m={0}>
-          Join the first-ever ethereum.org Writers Cohort, in collaboration with
-          Taptive, starting May 11th.{" "}
+          Join the first-ever ethereum.org Writers Cohort, starting May 11th.{" "}
           <Link to="https://ethereumwriterscohort.carrd.co/">
             Sign up here!
           </Link>
