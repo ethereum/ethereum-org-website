@@ -1,5 +1,5 @@
 //Libraries
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react"
 
 // Components
@@ -12,7 +12,12 @@ interface Event {
 }
 
 const CommunityEvents = () => {
-  const [eventData, setEventData] = useState<Array<Event>>([])
+  const [pastEventData, setPastEventData] = useState<Array<Event>>([])
+  const [upcomingEventData, setUpcomingEventData] = useState<Array<Event>>([])
+
+  useEffect(() => {
+    console.log("hello world")
+  }, [])
 
   return (
     <Flex w="full" direction={{ base: "column", lg: "row" }}>
