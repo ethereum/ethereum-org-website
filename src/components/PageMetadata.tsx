@@ -125,7 +125,7 @@ const PageMetadata: React.FC<IProps> = ({
   if (pathname.includes("/dapps/")) {
     ogImage = getSrc(ogImageDapps)
   }
-  if (pathname.includes("/upgrades/")) {
+  if (pathname.includes("/roadmap/")) {
     ogImage = getSrc(ogImageUpgrades)
   }
   if (image) {

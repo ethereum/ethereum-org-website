@@ -214,7 +214,7 @@ Allgemein gilt: Mitarbeiter kommunizieren mit Ihnen nie über private, inoffizie
 
 ### „Eth2“-Token-Betrug {#eth2-token-scam}
 
-Im Vorfeld der [Zusammenführung](/upgrades/merge/) haben Betrüger die Chance ergriffen, die Verwirrung um den Begriff „Eth2“ für sich zu nutzen, indem sie Benutzer dazu brachten, ihr ETH gegen „ETH2“-Token einzutauschen. Es gibt kein „ETH2", und es wurde auch kein anderer legitimer Token zusammen mit der Zusammenführung eingeführt. Das ETH, welches Sie vor der Zusammenführung besaßen, ist jetzt weiterhin das gleiche ETH. Es ist **nicht nötig, im Zusammenhang mit Ihrem ETH aktiv zu werden, um den Wechsel von Proof-of-Work zu Proof-of-Stake zu berücksichtigen**.
+Im Vorfeld der [Zusammenführung](/roadmap/merge/) haben Betrüger die Chance ergriffen, die Verwirrung um den Begriff „Eth2“ für sich zu nutzen, indem sie Benutzer dazu brachten, ihr ETH gegen „ETH2“-Token einzutauschen. Es gibt kein „ETH2", und es wurde auch kein anderer legitimer Token zusammen mit der Zusammenführung eingeführt. Das ETH, welches Sie vor der Zusammenführung besaßen, ist jetzt weiterhin das gleiche ETH. Es ist **nicht nötig, im Zusammenhang mit Ihrem ETH aktiv zu werden, um den Wechsel von Proof-of-Work zu Proof-of-Stake zu berücksichtigen**.
 
 Betrüger könnten sich als „Support" ausgeben, und Sie dazu auffordern Ihr ETH einzuzahlen, um im Gegenzug „ETH2" zu erhalten. Es gibt kein [offizielles Ethereum-Support-Team](/community/support/) und auch keinen neuen Token. Teilen Sie niemals Ihre Ethereum-Wallet-Seed-Phrasen.
 

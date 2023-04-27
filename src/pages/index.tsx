@@ -37,7 +37,6 @@ import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
-import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -93,8 +92,6 @@ const StyledActionCard = chakra(ActionCard, {
 })
 
 const StyledCodeModal = chakra(CodeModal)
-
-const StyledCalloutBanner = chakra(CalloutBanner)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
@@ -198,8 +195,6 @@ const HomePage = ({
     setModalOpen(true)
   }
 
-  useConsoleEasterEgg()
-
   const cards = [
     {
       image: getImage(data.robotfixed),
@@ -237,7 +232,7 @@ const HomePage = ({
       alt: t("page-index-tout-upgrades-image-alt"),
       title: t("page-index-tout-upgrades-title"),
       description: t("page-index-tout-upgrades-description"),
-      to: "/upgrades/",
+      to: "/roadmap/",
     },
     {
       image: getImage(data.infrastructurefixed),
@@ -578,7 +573,7 @@ const HomePage = ({
             )
           })}
         </CardContainer>
-        <StyledCalloutBanner
+        <CalloutBanner
           titleKey={"page-index-contribution-banner-title"}
           descriptionKey={"page-index-contribution-banner-description"}
           image={getImage(data.finance)!}
@@ -610,7 +605,7 @@ const HomePage = ({
               ),
             }}
           />
-        </StyledCalloutBanner>
+        </CalloutBanner>
       </ContentBox>
     </Flex>
   )

@@ -1,9 +1,27 @@
 [
   {
+    "title": "Ethereum Ecuador",
+    "emoji": ":flag_ec:",
+    "location": "Ecuador",
+    "link": "https://www.eventbrite.com/o/ethereum-ecuador-64512134823"
+  },
+  {
+    "title": "Ethereum Bogota",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-bogota"
+  },
+  {
     "title": "Bokky's Ethereum Workshop",
     "emoji": ":australia:",
     "location": "Sydney",
     "link": "https://www.meetup.com/BokkyPooBahs-Ethereum-Workshop/"
+  },
+  {
+    "title": "Web3Mi",
+    "emoji": ":ita:",
+    "location": "Milan",
+    "link": "https://www.eventbrite.it/o/web3mi-52766466683"
   },
   {
     "title": "ETHSydney",
@@ -358,5 +376,11 @@
     "emoji": ":taiwan:",
     "location": "Taipei",
     "link": "https://www.meetup.com/taipei-ethereum-meetup/"
+  },
+  {
+    "title": "Web3 Timisoara",
+    "emoji": ":romania:",
+    "location": "Timisoara",
+    "link": "https://www.meetup.com/web3-timisoara/"
   }
 ]

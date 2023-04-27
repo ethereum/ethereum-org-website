@@ -41,31 +41,31 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 
 <InfoGrid>
   <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
-    When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
-    The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator. 
-  </ExpandableCard>
-  <ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required.
-    It also requires very basic hardware setup, and some understanding of minimum recommended specs.
-  </ExpandableCard>
-  <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
-    Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
-    <p style={{marginTop: "1rem"}}><a href="/security">Ethereum security and scam prevention</a></p>
-  </ExpandableCard>
-  <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals is planned for the upcoming Shanghai upgrade. After this, users can opt-in to receive reward payments automatically, and can withdrawal their entire balance to receive their funds back.
-  </ExpandableCard>
-  <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
-    Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
-  </ExpandableCard>
-  <ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>. Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but a minimum of 10 Mb/s up and down is recommended.
-  </ExpandableCard>
-  <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
-    
-    <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">More on slashing and validator lifecycle</a></p>
-  </ExpandableCard>
+  When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
+
+The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator.
+</ExpandableCard>
+<ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required.
+
+It also requires very basic hardware setup, and some understanding of minimum recommended specs.
+</ExpandableCard>
+<ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
+Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
+
+[Ethereum security and scam prevention](/security/)
+</ExpandableCard>
+<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
+</ExpandableCard>
+<ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>. Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but a minimum of 10 Mb/s up and down is recommended.
+</ExpandableCard>
+<ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
+Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
+
+[More on slashing and validator lifecycle](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/)
+</ExpandableCard>
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -77,8 +77,6 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 While active you will earn ETH rewards, which will be periodically deposited into your withdrawal address.
 
 If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Your remaining balance will then be withdrawn to the withdrawal address that you designate during setup.
-
-_Shanghai upgrade required to enable reward payments and full withdrawals of exited validators._
 
 [More on staking withdrawals](/staking/withdrawals/)
 
@@ -133,7 +131,7 @@ A _validator_ is a virtual entity that lives on Ethereum and participates in the
 <ExpandableCard title="Can I deposit more than 32 ETH?">
 Each key-pair associated with a validator requires exactly 32 ETH to be activated. More ETH deposited to a single set of keys does not increase rewards potential, as each validator is limited to an <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effective balance</a> of 32 ETH. This means that staking is done in 32 ETH increments, each with it's own set of keys and balance.
 
-Do not deposit more than 32 ETH for a single validator. It will not increase your rewards, and it will be locked until the planned Shanghai update.
+Do not deposit more than 32 ETH for a single validator. It will not increase your rewards. If a withdrawal address has been set for the validator, excess funds over 32 ETH will be automatically withdrawn to this address during the next <a href="/staking/withdrawals/#validator-sweeping">validator sweep</a>.
 
 If solo staking seems too demanding for you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
 </ExpandableCard>
@@ -176,9 +174,9 @@ Offline penalties are proportional to how many others are offline at the same ti
 </ExpandableCard>
 
 <ExpandableCard title="How do I unlock my rewards or get my ETH back?">
-At time of the Shanghai upgrade, reward payments and full withdrawals for exited validators will begin. Withdrawals of any kind from the Beacon Chain require withdrawal credentials to be set.
+Withdrawals of any kind from the Beacon Chain require withdrawal credentials to be set.
 
-New stakers set this at time of key generation and deposit. Existing stakers who did not already set this can upgrade their keys to support this functionality after the Shanghai upgrade.
+New stakers set this at time of key generation and deposit. Existing stakers who did not already set this can upgrade their keys to support this functionality.
 
 Once withdrawal credentials are set, reward payments (accumulated ETH over the initial 32) will be periodically distributed to the withdrawal address automatically.
 

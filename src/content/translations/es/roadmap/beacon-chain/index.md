@@ -23,7 +23,7 @@ El nombre de la cadena de baliza era el nombre utilizado para referirse al libro
 
 Dio paso al mecanismo de consenso (o «capa de consenso») que reemplazó el minado de la prueba de trabajo de Ethereum y trajo consigo mejoras significativas a la red.
 
-La cadena de baliza es un elemento fundacional para el [Ethereum seguro, escalable y amigable al medioambiente que tenemos en la actualidad](/upgrades/vision/).
+La cadena de baliza es un elemento fundacional para el [Ethereum seguro, escalable y amigable al medioambiente que tenemos en la actualidad](/roadmap/vision/).
 
 ## El impacto de la cadena de baliza {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ La fragmentación solo podría ser implementada en el ecosistema de Ethereum de 
 
 ## Más información
 
-- [Más sobre las futuras actualizaciones de Ethereum ](/upgrades/vision)
+- [Más sobre las futuras actualizaciones de Ethereum ](/roadmap/vision)
 - [Más sobre la prueba de participación ](/developers/docs/consensus-mechanisms/pos)

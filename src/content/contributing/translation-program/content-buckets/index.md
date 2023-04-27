@@ -85,7 +85,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [The Beacon Chain](/roadmap/beacon-chain/)
 - [The Merge](/roadmap/merge/)
 - [How The Merge impacted ETH supply](/roadmap/merge/issuance/)
-- [Ethereum upgrades get involved](/upgrades/get-involved/)
 - [Ethereum Improvement Proposals (EIPs)](/eips/)
 
 ## 10) Community pages {#community-pages}
@@ -236,8 +235,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Translator acknowledgements](/contributing/translation-program/)
 - [Our translators](/contributing/translation-program/contributors/)
 - [Translation FAQ](/contributing/translation-program/faq/)
-- [Ethereum Foundation blog translations](/contributing/translation-program/blog-translations/)
-- [Staking Launchpad translations](/contributing/translation-program/launchpad-translations/)
 - [How to translate](/contributing/translation-program/how-to-translate/)
 - [Translation Program mission and vision](/contributing/translation-program/mission-and-vision/)
 - [Translator resources](/contributing/translation-program/resources/)

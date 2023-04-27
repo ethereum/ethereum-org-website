@@ -1,5 +1,17 @@
 [
   {
+    "url": "https://www.cyfrin.io/blog/what-is-a-smart-contract-audit",
+    "title": "What is a Smart Contract Audit",
+    "description": "Smart Contract Auditing | What it is, what to expect, and where to look for one. Everything you need to know!",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": ["security"],
+    "skillLevel": "beginner",
+    "timeToRead": "5",
+    "lang": "en",
+    "publishDate": "04/06/2023"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=veBu03A6ptw",
     "title": "How to develop an NFT Smart Contract (ERC721) with Alchemy",
     "description": "A tutorial showing how to develop your first NFT smart contract quickly using OpenZeppelin, Remix, Alchemy, and Opensea. The first lesson of Road to Web3, a series of community-focused weekly Web3 development projects!",

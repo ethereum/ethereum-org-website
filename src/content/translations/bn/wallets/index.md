@@ -26,7 +26,6 @@ lang: bn
 
 ইথেরিয়াম ওয়ালেট সম্বন্ধে আরও জানতে চান?
 
-- [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _প্রায়শই আপডেট করা হয় - EthHub_
 - [Absolute Beginner Introduction to Ethereum: The Full Download](https://www.mewtopia.com/absolute-beginners-guide/) _23 জুলাই, 2019 - MyEtherWallet_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _ডিসেম্বর 15, 2018 - Blockonomi_
 

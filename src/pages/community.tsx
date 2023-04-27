@@ -22,6 +22,7 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 
 import { getImage } from "../utils/image"
 
@@ -141,6 +142,7 @@ interface IGetInvolvedCard {
 
 const CommunityPage = ({
   data,
+  location,
 }: PageProps<Queries.CommunityPageQuery, Context>) => {
   const { t } = useTranslation()
   const theme = useTheme()
@@ -207,6 +209,8 @@ const CommunityPage = ({
         title={t("page-community-meta-title")}
         description={t("page-community-meta-description")}
       />
+      {/* TODO: REMOVE MAY 11 */}
+      <WritersCohortBanner pathname={location.pathname} />
       <PageHero isReverse content={heroContent} />
       <Divider />
       <Flex

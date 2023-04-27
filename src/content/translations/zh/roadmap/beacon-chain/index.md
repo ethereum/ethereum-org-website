@@ -23,7 +23,7 @@ summaryPoint3: 信标链引入的共识逻辑和区块广播协议目前保护�
 
 信标链引入共识引擎（或“共识层”），取代了以太坊在工作量证明机制下的挖矿，并带来了很多重大改进。
 
-信标链是[我们目前拥有的安全、环保、可扩展的以太坊](/upgrades/vision/)的基础组成部分。
+信标链是[我们目前拥有的安全、环保、可扩展的以太坊](/roadmap/vision/)的基础组成部分。
 
 ## 信标链的影响 {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ summaryPoint3: 信标链引入的共识逻辑和区块广播协议目前保护�
 
 ## 延伸阅读
 
-- [有关以太坊未来升级的更多信息](/upgrades/vision)
+- [有关以太坊未来升级的更多信息](/roadmap/vision)
 - [有关权益证明的更多信息](/developers/docs/consensus-mechanisms/pos)

@@ -34,6 +34,7 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 
 import { getImage, getSrc } from "../utils/image"
+import { trackCustomEvent } from "../utils/matomo"
 import { Context } from "../types"
 import { Badge } from "@chakra-ui/react"
 
@@ -127,13 +128,6 @@ const StyledInfoBanner = styled(InfoBanner)`
   width: 50%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
-  }
-`
-
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 8rem 0 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 0;
   }
 `
 
@@ -405,36 +399,71 @@ const DappsPage = ({
       title: t("page-dapps-features-1-title"),
       description: t("page-dapps-features-1-description"),
       emoji: ":bust_in_silhouette:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "no owners",
+      },
     },
     {
       title: t("page-dapps-features-2-title"),
       description: t("page-dapps-features-2-description"),
       emoji: ":megaphone:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "free from censorship",
+      },
     },
     {
       title: t("page-dapps-features-3-title"),
       description: t("page-dapps-features-3-description"),
       emoji: ":money-mouth_face:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "built in payments",
+      },
     },
     {
       title: t("page-dapps-features-4-title"),
       description: t("page-dapps-features-4-description"),
       emoji: ":electric_plug:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "plug and play",
+      },
     },
     {
       title: t("page-dapps-features-5-title"),
       description: t("page-dapps-features-5-description"),
       emoji: ":detective:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "one anonymous login",
+      },
     },
     {
       title: t("page-dapps-features-6-title"),
       description: t("page-dapps-features-6-description"),
       emoji: ":key:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "backed by cryptography",
+      },
     },
     {
       title: t("page-dapps-features-7-title"),
       description: t("page-dapps-features-7-description"),
       emoji: ":antenna_with_bars:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "no down time",
+      },
     },
   ]
 
@@ -619,7 +648,7 @@ const DappsPage = ({
     {
       title: "Tornado cash",
       description: t("page-dapps-dapp-description-tornado-cash"),
-      link: "https://tornado.cash/",
+      link: "https://ipfs.io/ipns/tornadocash.eth/",
       image: getImage(data.tornado),
       alt: t("page-dapps-tornado-cash-logo-alt"),
     },
@@ -938,11 +967,21 @@ const DappsPage = ({
       {
         content: t("page-dapps-explore-dapps-title"),
         to: "#explore",
+        matomo: {
+          eventCategory: "dapp hero buttons",
+          eventAction: "click",
+          eventName: "explore dapps",
+        },
       },
       {
         content: t("page-dapps-what-are-dapps"),
         to: "#what-are-dapps",
         variant: "outline",
+        matomo: {
+          eventCategory: "dapp hero buttons",
+          eventAction: "click",
+          eventName: "what are dapps",
+        },
       },
     ],
   }
@@ -976,7 +1015,15 @@ const DappsPage = ({
                   <Translation id="page-dapps-get-some-eth-description" />
                 </p>
               </div>
-              <StyledButtonSecondary>
+              <StyledButtonSecondary
+                onClick={() =>
+                  trackCustomEvent({
+                    eventCategory: "dapp hero buttons",
+                    eventAction: "click",
+                    eventName: "get eth",
+                  })
+                }
+              >
                 <Translation id="get-eth" />
               </StyledButtonSecondary>
             </StepBox>
@@ -989,7 +1036,15 @@ const DappsPage = ({
                   <Translation id="page-dapps-set-up-a-wallet-description" />
                 </p>
               </div>
-              <StyledButtonSecondary>
+              <StyledButtonSecondary
+                onClick={() =>
+                  trackCustomEvent({
+                    eventCategory: "dapp hero buttons",
+                    eventAction: "click",
+                    eventName: "find wallet",
+                  })
+                }
+              >
                 <Translation id="page-dapps-set-up-a-wallet-button" />
               </StyledButtonSecondary>
             </StepBox>
@@ -1002,7 +1057,15 @@ const DappsPage = ({
                   <Translation id="page-dapps-ready-description" />
                 </p>
               </div>
-              <ButtonPrimary>
+              <ButtonPrimary
+                onClick={() =>
+                  trackCustomEvent({
+                    eventCategory: "dapp hero buttons",
+                    eventAction: "click",
+                    eventName: "go",
+                  })
+                }
+              >
                 <Translation id="page-dapps-ready-button" />
               </ButtonPrimary>
             </StepBox>
@@ -1051,7 +1114,14 @@ const DappsPage = ({
               <Option
                 key={idx}
                 isActive={selectedCategory === categoryType}
-                onClick={() => handleCategorySelect(categoryType, false)}
+                onClick={() => {
+                  handleCategorySelect(categoryType, false)
+                  trackCustomEvent({
+                    eventCategory: "choose dapp category",
+                    eventAction: "click",
+                    eventName: categoryType,
+                  })
+                }}
               >
                 <Emoji mr={`1rem`} text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
@@ -1135,7 +1205,10 @@ const DappsPage = ({
                 />
               </RightColumn>
             </TwoColumnContent>
-            <StyledCalloutBanner
+            <CalloutBanner
+              mt={32}
+              mx={0}
+              mb={{ base: 0, lg: 16 }}
               titleKey={"page-dapps-wallet-callout-title"}
               descriptionKey={"page-dapps-wallet-callout-description"}
               image={getImage(data.wallet)!}
@@ -1147,7 +1220,7 @@ const DappsPage = ({
                   <Translation id="page-dapps-wallet-callout-button" />
                 </ButtonLink>
               </div>
-            </StyledCalloutBanner>
+            </CalloutBanner>
           </Content>
         )}
         {selectedCategory === CategoryType.GAMING && (
@@ -1341,7 +1414,7 @@ const DappsPage = ({
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
-          <StyledGhostCard>
+          <StyledGhostCard mt={2}>
             <MagiciansImage
               image={getImage(data.magicians)!}
               alt={t("page-dapps-magician-img-alt")}

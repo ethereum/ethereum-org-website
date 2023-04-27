@@ -580,7 +580,7 @@ export const query = graphql`
     portis: file(relativePath: { eq: "wallets/portis.png" }) {
       ...walletImage
     }
-    tallyho: file(relativePath: { eq: "wallets/tallyho.png" }) {
+    taho: file(relativePath: { eq: "wallets/taho.png" }) {
       ...walletImage
     }
     safe: file(relativePath: { eq: "wallets/safe.png" }) {

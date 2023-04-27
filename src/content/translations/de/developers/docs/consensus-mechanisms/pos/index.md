@@ -5,7 +5,7 @@ lang: de
 incomplete: true
 ---
 
-Ethereum bewegt sich vom [Proof-of-Work (PoW)](/developers/docs/consensus-mechanisms/pow/) zu einem Konsensmechanismus, genannt Proof-of-Stake (PoS). Das war immer der Plan, denn es ist ein wichtiger Teil der Strategie der Community, Ethereum über [Upgrades](/upgrades/) zu skalieren. Allerdings ist es eine große technische Herausforderung, PoS richtig umzusetzen, und nicht so einfach wie PoW zu nutzen, um einen Konsens über das Netzwerk zu erzielen.
+Ethereum bewegt sich vom [Proof-of-Work (PoW)](/developers/docs/consensus-mechanisms/pow/) zu einem Konsensmechanismus, genannt Proof-of-Stake (PoS). Das war immer der Plan, denn es ist ein wichtiger Teil der Strategie der Community, Ethereum über [Upgrades](/roadmap/) zu skalieren. Allerdings ist es eine große technische Herausforderung, PoS richtig umzusetzen, und nicht so einfach wie PoW zu nutzen, um einen Konsens über das Netzwerk zu erzielen.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -22,7 +22,7 @@ Proof-of-Stake kommt mit einer Anzahl an Verbesserungen zum Proof-of-Work-System
 - bessere Energieeffizienz – weniger Energieaufwand für das Minen (Schürfen) von Blöcken
 - weniger Hindernisse für den Einstieg, zeduziert Hardwareanforderungen – Du brauchst keine Elite-Hardware, um neue Blöcke zu erstellen
 - stärkere Immunität gegen die Zentralisierung – Proof-of-Stake sollte zu mehr Nodes im Netzwerk führen
-- stärkere Unterstützung für [Shard Chains](/upgrades/sharding/) – ein wichtiges Upgrade bei der Skalierung des Ethereum-Netzwerks
+- stärkere Unterstützung für [Shard Chains](/roadmap/danksharding/) – ein wichtiges Upgrade bei der Skalierung des Ethereum-Netzwerks
 
 ## Proof-of-Stake, Staking und Validatoren {#pos-staking-validators}
 
@@ -36,7 +36,7 @@ Wenn du bösartige Blöcke attestierst, verlierst du deinen Einsatz.
 
 ### Die Beacon Chain {#the-beacon-chain}
 
-Wenn Ethereum den Proof-of-Work durch den Proof-of-Stake ersetzt, wird es zusätzlich die Komplexität von [Shard-Chains](/upgrades/sharding/) geben. Das sind separate Blockchains, die Validatoren benötigen, um Transaktionen zu verarbeiten und neue Blöcke zu erstellen. Der Plan sind 64 Scherben-Ketten, die alle ein geteiltes Verständnis vom Status des Netzwerks haben. Daher ist eine zusätzliche Koordination notwendig, die von [der Beacon Chain](/upgrades/beacon-chain/) übernommen wird.
+Wenn Ethereum den Proof-of-Work durch den Proof-of-Stake ersetzt, wird es zusätzlich die Komplexität von [Shard-Chains](/roadmap/danksharding/) geben. Das sind separate Blockchains, die Validatoren benötigen, um Transaktionen zu verarbeiten und neue Blöcke zu erstellen. Der Plan sind 64 Scherben-Ketten, die alle ein geteiltes Verständnis vom Status des Netzwerks haben. Daher ist eine zusätzliche Koordination notwendig, die von [der Beacon Chain](/roadmap/beacon-chain/) übernommen wird.
 
 Die Beacon Chain erhält Statusinformationen von den Fragmenten und stellt sie für die anderen Fragmente zur Verfügung, so dass das Netzwerken synchronisiert bleiben kann. Die Beacon Chain verwaltet auch die Validatoren, von der Registrierung ihrer Einlagen bis hin zur Verteilung ihrer Belohnungen und Strafen.
 

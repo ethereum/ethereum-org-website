@@ -19,6 +19,8 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Work we've identified that needs doing_
 - [Join the translation program](/contributing/translation-program/)
   _– Help us bring ethereum.org to new languages_
+- [Help design the website](/contributing/design/)
+  _– Designers of all levels can contribute to improve the website_
 - [Add community resources](/contributing/content-resources/)
   _– Add a helpful article or resource to a relevant page_
 - [Add a product](/contributing/adding-products/)

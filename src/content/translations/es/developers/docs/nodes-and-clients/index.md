@@ -243,9 +243,7 @@ Como cualquier otra configuración, puede establecerse con un parámetro de inic
 
 ## Clientes de consenso (anteriormente, clientes Eth2) {#consensus-clients}
 
-Existen múltiples clientes de consenso (antes conocidos como clientes "Eth2") que respaldan las [actualizaciones de conseso](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[Ver clientes de consenso](/upgrades/get-involved/#clients).
+Existen múltiples clientes de consenso (antes conocidos como clientes "Eth2") que respaldan las [actualizaciones de conseso](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | Cliente                                                     | Idioma     | Sistemas operativos   | Redes                                     |
 | ----------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------- |
@@ -308,7 +306,6 @@ Existe mucha información acerca de los clientes de Ethereum en internet. Estos 
 
 - [Ethereum 101 - Parte 2 - Explicación de los nodos](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 de febrero de 2019_
 - [Ejecución de los nodos completos de Ethereum: una guía para aquellas personas que se encuentren desmotivadas](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de noviembre de 2019_
-- [Ejecución de un nodo Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/)_: ETHHub, actualizado frecuentemente_
 - [Análisis de los requisitos de hardware para crear un nodo validado y completo de Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902)_: Albert Palau, 24 de Septiembre de 2018_
 - [Ejecución de un nodo Besu Hyperledger en la red principal de Ethereum: beneficios, requisitos y configuración](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _, Felipe Faraggi, 7 de mayo de 2020_
 

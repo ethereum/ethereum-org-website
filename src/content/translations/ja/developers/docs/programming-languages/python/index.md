@@ -23,11 +23,12 @@ incomplete: true
 ## 初心者向けの記事 {#beginner-articles}
 
 - [Python デベロッパー向けのイーサリアムガイド](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
-- [Vyper を使用したスマートコントラクト入門](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
+- [ブロックチェーン 2023 レポートにおける Python の状態](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
+- [Vyper を使ったスマートコントラクト入門](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Python と Brownie を使用して独自の ERC20 トークンをデプロイする](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
-- [Python の Flask を使用したイーサリアムコントラクトの開発方法](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
-- [Web3.py 入門 - Python デベロッパーのためのイーサリアム](https://www.dappuniversity.com/articles/web3-py-intro)
-- [Python と web3.py を使用したスマートコントラクト関数の呼び出し方法](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
+- [Python の Flask を使ってイーサリアムコントラクトを開発するには？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
+- [Web3.py 入門 - Python 開発者のためのイーサリアム](https://www.dappuniversity.com/articles/web3-py-intro)
+- [Python と web3.py を使ったスマートコントラクト関数の呼び出し方](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## 中級者向けの記事 {#intermediate-articles}
 

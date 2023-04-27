@@ -5,7 +5,6 @@ author: "Sumi Mudgil"
 tags:
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
   - "Solidity"
 skill: principiante
 lang: it

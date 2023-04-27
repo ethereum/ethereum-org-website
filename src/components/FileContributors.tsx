@@ -12,6 +12,7 @@ import Translation from "./Translation"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { Lang } from "../utils/languages"
+import { trackCustomEvent } from "../utils/matomo"
 
 const loadingStyles = (theme: Theme) => css`
   font-size: 0;
@@ -337,7 +338,14 @@ const FileContributors: React.FC<IProps> = ({
         </LeftContent>
         <ButtonContainer>
           <ContributorsButton
-            onClick={() => setModalOpen(true)}
+            onClick={() => {
+              setModalOpen(true)
+              trackCustomEvent({
+                eventCategory: "see contributors",
+                eventAction: "click",
+                eventName: "click",
+              })
+            }}
             loading={loading}
           >
             <Translation id="see-contributors" />

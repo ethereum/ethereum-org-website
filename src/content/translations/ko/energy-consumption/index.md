@@ -63,6 +63,6 @@ lang: ko
 ## 관련 주제 {#related-topics}
 
 - [이더리움의 비전](/roadmap/vision/)
-- [비콘 체인](/upgrades/beacon-chain)
-- [병합](/upgrades/merge/)
-- [샤딩](/upgrades/beacon-chain/)
+- [비콘 체인](/roadmap/beacon-chain)
+- [병합](/roadmap/merge/)
+- [샤딩](/roadmap/beacon-chain/)
