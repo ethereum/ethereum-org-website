@@ -212,6 +212,7 @@ const components = {
 const StaticPage = ({
   data: { siteData, pageData: mdx },
   pageContext: { relativePath, slug },
+  location,
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const { language } = useI18next()
 
@@ -248,7 +249,7 @@ const StaticPage = ({
         />
       )}
       {/* TODO: REMOVE MAY 11 */}
-      <WritersCohortBanner />
+      <WritersCohortBanner pathname={location.pathname} />
       <Flex
         justifyContent="space-between"
         w="full"

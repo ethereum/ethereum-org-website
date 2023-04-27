@@ -4,10 +4,14 @@ import { Text } from "@chakra-ui/react"
 import DismissableBanner from "../DismissableBanner"
 import Link from "../../Link"
 
-const WritersCohortBanner = () => {
+interface IProps {
+  pathname: string
+}
+
+const WritersCohortBanner = ({ pathname }) => {
   if (
     typeof window !== `undefined` &&
-    window.location.pathname.includes("contributing")
+    (pathname.includes("contributing") || pathname.includes("community"))
   ) {
     return (
       <DismissableBanner storageKey="writersCohort">
