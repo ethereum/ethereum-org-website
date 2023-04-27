@@ -41,7 +41,6 @@ Building can be hard. Here are some development focused spaces with experienced 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [Nader Dabit](https://naderdabit.notion.site/Nader-s-web3-Resources-for-Developers)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
 
