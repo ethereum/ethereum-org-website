@@ -38,9 +38,6 @@ const AssetDownload: React.FC<IProps> = ({
 
   return (
     <Flex
-      maxW="100%"
-      minW="170px"
-      flex="1 1 45%"
       flexDirection="column"
       justifyContent="space-between"
       m={4}

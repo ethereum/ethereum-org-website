@@ -10,6 +10,8 @@ import {
   Heading,
   HeadingProps,
   Img,
+  SimpleGrid,
+  SimpleGridProps,
   useTheme,
 } from "@chakra-ui/react"
 
@@ -26,10 +28,9 @@ import type { ChildOnlyProp, Context } from "../types"
 // Utils
 import { getImage } from "../utils/image"
 
-const Row = (props: ChildOnlyProp) => (
-  <Flex
-    wrap={{ base: "wrap", lg: "nowrap" }}
-    justify="space-between"
+const Row = (props: SimpleGridProps) => (
+  <SimpleGrid
+    templateColumns="repeat(auto-fit, minmax(min(288px, 100%), 1fr))"
     mx={-4}
     mb={8}
     {...props}
