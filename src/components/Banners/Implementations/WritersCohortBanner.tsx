@@ -9,10 +9,7 @@ interface IProps {
 }
 
 const WritersCohortBanner = ({ pathname }) => {
-  if (
-    typeof window !== `undefined` &&
-    (pathname.includes("contributing") || pathname.includes("community"))
-  ) {
+  if (pathname.includes("contributing") || pathname.includes("community")) {
     return (
       <DismissableBanner storageKey="writersCohort">
         <Text m={0}>
