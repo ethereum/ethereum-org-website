@@ -540,12 +540,7 @@ export const query = graphql`
     }
     ogImage: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: FIXED, placeholder: BLURRED, quality: 100)
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {

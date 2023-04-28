@@ -1532,12 +1532,7 @@ export const query = graphql`
     }
     ogImage: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: FIXED, placeholder: BLURRED, quality: 100)
       }
     }
     magicians: file(relativePath: { eq: "magicians.png" }) {

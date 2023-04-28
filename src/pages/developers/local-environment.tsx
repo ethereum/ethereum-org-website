@@ -402,12 +402,7 @@ export const query = graphql`
     }
     ogImage: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: FIXED, placeholder: BLURRED, quality: 100)
       }
     }
     hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
