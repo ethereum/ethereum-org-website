@@ -499,7 +499,7 @@ export const query = graphql`
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 624
+          width: 800
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -519,7 +519,7 @@ export const query = graphql`
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 740
+          width: 1440
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -529,7 +529,7 @@ export const query = graphql`
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 600
+          width: 800
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -539,7 +539,7 @@ export const query = graphql`
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 700
+          width: 1440
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
