@@ -53,44 +53,24 @@ const PageMetadata: React.FC<IProps> = ({
         }
         ogImageDefault: file(relativePath: { eq: "home/hero.png" }) {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              layout: FIXED
-              placeholder: BLURRED
-              quality: 100
-            )
+            gatsbyImageData(layout: FIXED, placeholder: BLURRED, quality: 100)
           }
         }
         ogImageDevelopers: file(relativePath: { eq: "enterprise-eth.png" }) {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              layout: FIXED
-              placeholder: BLURRED
-              quality: 100
-            )
+            gatsbyImageData(layout: FIXED, placeholder: BLURRED, quality: 100)
           }
         }
         ogImageDapps: file(relativePath: { eq: "doge-computer.png" }) {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              layout: FIXED
-              placeholder: BLURRED
-              quality: 100
-            )
+            gatsbyImageData(layout: FIXED, placeholder: BLURRED, quality: 100)
           }
         }
         ogImageUpgrades: file(
           relativePath: { eq: "upgrades/upgrade_doge.png" }
         ) {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              layout: FIXED
-              placeholder: BLURRED
-              quality: 100
-            )
+            gatsbyImageData(layout: FIXED, placeholder: BLURRED, quality: 100)
           }
         }
       }
