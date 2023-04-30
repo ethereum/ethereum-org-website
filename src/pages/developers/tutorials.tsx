@@ -3,7 +3,15 @@ import React, { useEffect, useMemo, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import { Badge, Box, Button, Flex, Text, useToken } from "@chakra-ui/react"
+import {
+  Badge,
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Text,
+  useToken,
+} from "@chakra-ui/react"
 
 // Components
 import Translation from "../../components/Translation"
@@ -56,53 +64,6 @@ const Title = styled.p<{ isExternal?: boolean | null }>`
   }
 `
 
-const PageTitle = styled.h1`
-  font-style: normal;
-  font-weight: normal;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 140%;
-  text-align: center;
-  margin: 0 0 1.625rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin: 1rem;
-  }
-`
-
-const TitleContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: -1rem;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    margin-bottom: 2rem;
-  }
-`
-
-const TagsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 2rem 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    padding: 1rem 0rem;
-  }
-`
-const TagContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-`
-
 const GithubButton = styled(ButtonLink)`
   display: flex;
   align-items: center;
@@ -113,37 +74,6 @@ const GithubButton = styled(ButtonLink)`
 const GithubIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
   margin-right: 0.5rem;
-`
-
-const ModalBody = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    max-height: 16rem;
-    overflow-y: scroll;
-  }
-`
-
-const ModalOption = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 4px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 0.5rem;
-  justify-content: space-between;
-  margin-left: 0rem;
-  margin-bottom: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-`
-
-const ModalTitle = styled.h2`
-  margin-top: 0;
-  margin-bottom: 1rem;
 `
 
 const published = (locale: string, published: string) => {
@@ -262,9 +192,20 @@ const TutorialsPage = ({
         title={t("page-tutorials-meta-title")}
         description={t("page-tutorials-meta-description")}
       />
-      <PageTitle>
+      <Heading
+        fontStyle="normal"
+        fontWeight="semibold"
+        fontFamily="monospace"
+        textTransform="uppercase"
+        fontSize="2rem"
+        lineHeight="140%"
+        textAlign="center"
+        mt={{ base: 4, sm: 0 }}
+        mx={{ base: 4, sm: 0 }}
+        mb={{ base: 4, sm: "1.625rem" }}
+      >
         <Translation id="page-tutorial-title" />
-      </PageTitle>
+      </Heading>
       <Text
         fontSize="xl"
         lineHeight="140%"
@@ -275,9 +216,9 @@ const TutorialsPage = ({
         <Translation id="page-tutorial-subtitle" />
       </Text>
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <ModalTitle>
+        <Heading fontSize="2rem" lineHeight="1.4" mt={0} mb={4}>
           <Translation id="page-tutorial-submit-btn" />
-        </ModalTitle>
+        </Heading>
         <p>
           <Translation id="page-tutorial-listing-policy-intro" />{" "}
           <Link to="/contributing/content-resources/">
@@ -287,8 +228,25 @@ const TutorialsPage = ({
         <p>
           <Translation id="page-tutorial-submit-tutorial" />
         </p>
-        <ModalBody>
-          <ModalOption>
+        <Flex
+          flexDirection={{ base: "column", md: "initial" }}
+          maxH={{ base: 64, md: "initial" }}
+          overflowY={{ base: "scroll", md: "initial" }}
+        >
+          <Flex
+            borderWidth="1px"
+            borderStyle="solid"
+            borderColor="border"
+            borderRadius="base"
+            p={4}
+            flexDirection="column"
+            w={{ base: "full", md: "50%" }}
+            justifyContent="space-between"
+            mt={2}
+            mb={{ base: 2, md: 6 }}
+            ml={0}
+            mr={{ base: 0, md: 2 }}
+          >
             <p>
               <b>
                 <Translation id="page-tutorial-new-github" />
@@ -305,8 +263,21 @@ const TutorialsPage = ({
                 <Translation id="page-tutorial-raise-issue-btn" />
               </span>
             </GithubButton>
-          </ModalOption>
-          <ModalOption>
+          </Flex>
+          <Flex
+            borderWidth="1px"
+            borderStyle="solid"
+            borderColor="border"
+            borderRadius="base"
+            p={4}
+            flexDirection="column"
+            w={{ base: "full", md: "50%" }}
+            justifyContent="space-between"
+            mt={2}
+            mb={{ base: 2, md: 6 }}
+            ml={0}
+            mr={{ base: 0, md: 2 }}
+          >
             <p>
               <b>
                 <Translation id="page-tutorial-pull-request" />
@@ -327,8 +298,8 @@ const TutorialsPage = ({
                 <Translation id="page-tutorial-pull-request-btn" />
               </span>
             </GithubButton>
-          </ModalOption>
-        </ModalBody>
+          </Flex>
+        </Flex>
       </Modal>
       <ButtonSecondary
         onClick={() => {
@@ -348,8 +319,23 @@ const TutorialsPage = ({
         mt={8}
         w={{ base: "full", md: "66%" }}
       >
-        <TagsContainer>
-          <TagContainer>
+        <Flex
+          justifyContent="center"
+          m={8}
+          pb={{ base: 4, md: 8 }}
+          pt={{ base: 4, md: "initial" }}
+          px={{ base: 0, md: "initial" }}
+          borderBottomWidth="1px"
+          borderBottomStyle="solid"
+          borderBottomColor="border"
+          flexDirection={{ base: "column", md: "initial" }}
+        >
+          <Flex
+            flexWrap="wrap"
+            alignItems="center"
+            maxW={{ base: "full", md: "initial" }}
+            mb={{ base: 4, md: "initial" }}
+          >
             {Object.entries(allTags).map(([tagName, tagCount]) => {
               const name = `${tagName} (${tagCount})`
               const isActive = selectedTags.includes(tagName)
@@ -387,8 +373,8 @@ const TutorialsPage = ({
                 <Translation id="page-find-wallet-clear" />
               </Button>
             )}
-          </TagContainer>
-        </TagsContainer>
+          </Flex>
+        </Flex>
         {filteredTutorials.length === 0 && (
           <Box mt={0} textAlign="center" padding={12}>
             <Emoji text=":crying_face:" fontSize="5xl" mb={8} mt={8} />
@@ -422,12 +408,17 @@ const TutorialsPage = ({
               to={tutorial.to ?? undefined}
               hideArrow
             >
-              <TitleContainer>
+              <Flex
+                justifyContent="space-between"
+                mb={{ base: 8, md: -4 }}
+                alignItems="flex-start"
+                flexDirection={{ base: "column", md: "initial" }}
+              >
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
                 <Badge variant="secondary">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
                 </Badge>
-              </TitleContainer>
+              </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
                 {/* TODO: Refactor each tutorial tag as a component */}
                 <Emoji text=":writing_hand:" fontSize="sm" mr={2} />
