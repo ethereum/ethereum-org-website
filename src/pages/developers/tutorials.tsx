@@ -1,21 +1,21 @@
 // Libraries
 import React, { useEffect, useMemo, useState } from "react"
-import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Badge,
   Box,
-  Button,
+  Center,
   Flex,
   Heading,
+  Icon,
   Text,
   useToken,
 } from "@chakra-ui/react"
+import { FaGithub } from "react-icons/fa"
 
 // Components
 import Translation from "../../components/Translation"
-import Icon from "../../components/Icon"
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
 import Modal from "../../components/Modal"
@@ -23,10 +23,7 @@ import PageMetadata from "../../components/PageMetadata"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
-import {
-  ButtonSecondary,
-  FakeLink,
-} from "../../components/SharedStyledComponents"
+import Button from "../../components/Button"
 import FeedbackCard from "../../components/FeedbackCard"
 import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
 
@@ -44,37 +41,6 @@ import { trackCustomEvent } from "../../utils/matomo"
 
 // Types
 import { Context } from "../../types"
-
-const Title = styled.p<{ isExternal?: boolean | null }>`
-  color: ${(props) => props.theme.colors.text};
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-right: 6rem;
-
-  &:after {
-    margin-left: 0.125em;
-    margin-right: 0.3em;
-    display: ${(props) => (props.isExternal ? "inline" : "none")};
-    content: "↗";
-    transition: all 0.1s ease-in-out;
-    font-style: normal;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-right: 0rem;
-  }
-`
-
-const GithubButton = styled(ButtonLink)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0.5rem;
-`
-
-const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
-`
 
 const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
@@ -121,6 +87,7 @@ const TutorialsPage = ({
   pageContext,
 }: PageProps<Queries.DevelopersTutorialsPageQuery, Context>) => {
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
+  const cardBoxShadow = useToken("colors", "cardBoxShadow")
   const filteredTutorialsByLang = useMemo(
     () =>
       filterTutorialsByLang(
@@ -254,15 +221,23 @@ const TutorialsPage = ({
               <br />
               <Translation id="page-tutorial-new-github-desc" />
             </p>
-            <GithubButton
+            <Center
+              as={ButtonLink}
+              mr={2}
               variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
-              <GithubIcon name="github" />{" "}
+              <Icon
+                as={FaGithub}
+                fill="text"
+                mr={2}
+                boxSize={6}
+                name="github"
+              />{" "}
               <span>
                 <Translation id="page-tutorial-raise-issue-btn" />
               </span>
-            </GithubButton>
+            </Center>
           </Flex>
           <Flex
             borderWidth="1px"
@@ -289,19 +264,40 @@ const TutorialsPage = ({
               </code>{" "}
               <Translation id="page-tutorial-pull-request-desc-3" />
             </p>
-            <GithubButton
+            <Center
+              as={ButtonLink}
+              mr={2}
               variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
-              <GithubIcon name="github" />{" "}
+              <Icon
+                as={FaGithub}
+                fill="text"
+                mr={2}
+                boxSize={6}
+                name="github"
+              />{" "}
               <span>
                 <Translation id="page-tutorial-pull-request-btn" />
               </span>
-            </GithubButton>
+            </Center>
           </Flex>
         </Flex>
       </Modal>
-      <ButtonSecondary
+      <Button
+        variant="outline"
+        color="text"
+        borderColor="text"
+        _hover={{
+          color: "primary",
+          borderColor: "primary",
+          boxShadow: cardBoxShadow,
+        }}
+        _active={{
+          bg: "secondaryButtonBackgroundActive",
+        }}
+        py={2}
+        px={3}
         onClick={() => {
           setModalOpen(true)
           trackCustomEvent({
@@ -312,7 +308,7 @@ const TutorialsPage = ({
         }}
       >
         <Translation id="page-tutorial-submit-btn" />
-      </ButtonSecondary>
+      </Button>
       <Box
         boxShadow={tableBoxShadow}
         mb={8}
@@ -414,7 +410,24 @@ const TutorialsPage = ({
                 alignItems="flex-start"
                 flexDirection={{ base: "column", md: "initial" }}
               >
-                <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
+                <Text
+                  color="text"
+                  fontWeight="semibold"
+                  fontSize="2xl"
+                  mr={{ base: 0, md: 24 }}
+                  _after={{
+                    ml: 0.5,
+                    mr: "0.3rem",
+                    display: tutorial.isExternal ? "inline" : "none",
+                    content: `"↗"`,
+                    transitionProperty: "all",
+                    transitionDuration: "0.1s",
+                    transitionTimingFunction: "ease-in-out",
+                    fontStyle: "normal",
+                  }}
+                >
+                  {tutorial.title}
+                </Text>
                 <Badge variant="secondary">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
                 </Badge>
@@ -437,9 +450,9 @@ const TutorialsPage = ({
                   <>
                     {" "}
                     •<Emoji text=":link:" fontSize="sm" ml={2} mr={2} />
-                    <FakeLink>
+                    <Box as="span" color="primary" cursor="pointer">
                       <Translation id="page-tutorial-external-link" />
-                    </FakeLink>
+                    </Box>
                   </>
                 )}
               </Text>
