@@ -252,14 +252,11 @@ Diversi progetti forniscono implementazioni dei canali di stato che puoi integra
 
 **State channels**
 
-- [EthHub on state channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 feb 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _6 nov 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 - [Blockchain State Channels: A State of the Art](https://ieeexplore.ieee.org/document/9627997)
 
 **Payment channels**
-
-- [EthHub on payment channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_

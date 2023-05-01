@@ -55,6 +55,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Foundry](https://github.com/gakonst/foundry)- _Conjunto de ferramentas para o desenvolvimento do aplicativo Ethereum_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Implementação da biblioteca e carteira Ethereum_
 - [SewUp](https://github.com/second-state/SewUp) - _Uma biblioteca para ajudá-lo a construir seu contrato Ethereum webassembly com Rust e, assim, desenvolver em um backend comum_
+- [Reth](https://github.com/paradigmxyz/reth) Reth (abreviação de Rust Ethereum, pronúncia) é uma nova implementação de nó completo do Ethereum
 
 Procurando por mais recursos? Leia [ethereum.org/developers.](/developers/)
 

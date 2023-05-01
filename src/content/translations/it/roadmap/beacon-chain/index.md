@@ -23,7 +23,7 @@ La Beacon Chain era il nome dato a un registro di conti che conduceva e coordina
 
 Ha introdotto il motore di consenso (o "livello di consenso") che ha preso il posto del mining di Proof of Work su Ethereum, apportando con esso molti miglioramenti significativi.
 
-La Beacon Chain è stata un componente fondamentale per [l'Ethereum sicura, ecosostenibile e scalabile che conosciamo ora](/upgrades/vision/).
+La Beacon Chain è stata un componente fondamentale per [l'Ethereum sicura, ecosostenibile e scalabile che conosciamo ora](/roadmap/vision/).
 
 ## Impatto della Beacon Chain {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ Lo sharding potrà entrare in modo sicuro nell'ecosistema Ethereum solo quando s
 
 ## Letture consigliate
 
-- [Maggiori informazioni sugli aggiornamenti futuri di Ethereum](/upgrades/vision)
+- [Maggiori informazioni sugli aggiornamenti futuri di Ethereum](/roadmap/vision)
 - [Maggiori informazioni sul proof-of-stake](/developers/docs/consensus-mechanisms/pos)

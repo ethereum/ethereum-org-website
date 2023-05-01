@@ -26,7 +26,6 @@ Norite įdiegti piniginę?
 
 Norite sužinoti daugiau apie Ethereum pinigines?
 
-- [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Dažnai atnaujinama - EthHub_
 - [Absolute Beginner Introduction to Ethereum: The Full Download](https://www.mewtopia.com/absolute-beginners-guide/) _2019 m. liepos 23 d. - MyEtherWallet_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _2018 m. gruodžio 15 d. - Blockonomi_
 

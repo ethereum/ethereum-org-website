@@ -154,7 +154,7 @@ Mentre que el desenvolupament de les especificacions i les implementacions ha es
 
 Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el procés de governança per proposar canvis estarà harmonitzat. Aquest procés d'implementar la fusió ja es troba [en marxa](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Més informació sobre La Fusió
 </ButtonLink>
 
@@ -175,7 +175,6 @@ Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el proc�
 La governança a Ethereum no està definida de manera rígida. Diversos participants de la comunitat tenen diferents perspectives al respecte. Aquí en teniu uns quants:
 
 - [Notes sobre la governança de la cadena de blocs](https://vitalik.ca/general/2017/12/17/voting.html) – _Vitalik Buterin_
-- [Governança a Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [Com funciona la governança d'Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Com funciona la governança d'Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Què és un desenvolupador de nucli d'Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_

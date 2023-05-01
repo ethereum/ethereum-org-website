@@ -123,7 +123,7 @@ EIP-1559 とそのメリットについて説明するビデオ:
 
 ## ガス代削減への取り組み {#initiatives-to-reduce-gas-costs}
 
-イーサリアムの[スケーラビリティ・アップグレード](/upgrades/)は、最終的にいくつかのガス代の問題を解決し、ひいてはプラットフォームが毎秒数千のトランザクションを処理し、グローバルにスケールアップできるはずです。
+イーサリアムの[スケーラビリティ・アップグレード](/roadmap/)は、最終的にいくつかのガス代の問題を解決し、ひいてはプラットフォームが毎秒数千のトランザクションを処理し、グローバルにスケールアップできるはずです。
 
 レイヤー 2 のスケーリングは、ガス代、ユーザーエクスペリエンス、スケーラビリティを大幅に向上させるための主要なイニシアチブです。 [レイヤー 2 スケーリングの詳細](/developers/docs/scaling/#layer-2-scaling)
 
@@ -146,7 +146,6 @@ ETH をより安く送れるようにガス代を節約したい場合は、次�
 ## 参考文献 {#further-reading}
 
 - [イーサリアムガスの説明](https://defiprime.com/gas)
-- [イーサリアムは価格上昇に伴い、使用料も高くなるのか？](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [スマートコントラクトのガス消費量の削減](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [プルーフ・オブ・ステークとプルーフ・オブ・ワークの比較](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

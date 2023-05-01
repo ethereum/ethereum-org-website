@@ -344,9 +344,9 @@ _Prav tako je pomembno, da Ethereum omogoča več kot le finančne transakcije. 
 
 #### Časovnice {#timelines}
 
-Proces se je že začel. [Oddajniška veriga](/upgrades/beacon-chain/), ki predstavlja prvo nadgradnjo, je bila dostavljena decembra 2020. To predstavlja temelj za zastavljanje s tem, da omogoči zastavljalcem, da se pridružijo sistemu. Naslednji relevanten korak za energetsko učinkovitost je združitev trenutne verige, ki jo varujejo rudarji, z oddajniško verigo, pri kateri rudarjenje ni potrebno. Časovnice na tej točki ne morejo biti natančne, vendar je ocenjeno, da se bo to zgodilo enkrat v 2022. Ta proces je znan pod imenom združitev (predhodno naslovljen kot priklopitev). [Več o združitvi](/upgrades/merge/).
+Proces se je že začel. [Oddajniška veriga](/roadmap/beacon-chain/), ki predstavlja prvo nadgradnjo, je bila dostavljena decembra 2020. To predstavlja temelj za zastavljanje s tem, da omogoči zastavljalcem, da se pridružijo sistemu. Naslednji relevanten korak za energetsko učinkovitost je združitev trenutne verige, ki jo varujejo rudarji, z oddajniško verigo, pri kateri rudarjenje ni potrebno. Časovnice na tej točki ne morejo biti natančne, vendar je ocenjeno, da se bo to zgodilo enkrat v 2022. Ta proces je znan pod imenom združitev (predhodno naslovljen kot priklopitev). [Več o združitvi](/roadmap/merge/).
 
-<ButtonLink to="/upgrades/">Več o Eth2</ButtonLink>
+<ButtonLink to="/roadmap/">Več o Eth2</ButtonLink>
 
 ## Razvito z NFT-ji {#build-with-nfts}
 
@@ -399,7 +399,7 @@ Ocenjuje se, da bo Eth2 omrežju omogočal, da bo procesiralo med 25.000 in 100.
 
 [Vitalik Buterin o potencialu transakcij na sekundo na Eth2](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
 
-Eth2 bo omogočal vsaj 64-krat večjo količino transakcij kot danes, ko ta številka stoji okoli 15 transakcij. To je število razdrobljenih verig (dodatnih podatkov in kapacitet), ki se jih uvaja. [Več o razdrobljenih verigah](/upgrades/sharding/)
+Eth2 bo omogočal vsaj 64-krat večjo količino transakcij kot danes, ko ta številka stoji okoli 15 transakcij. To je število razdrobljenih verig (dodatnih podatkov in kapacitet), ki se jih uvaja. [Več o razdrobljenih verigah](/roadmap/danksharding/)
 
 To pomeni, da lahko ocenimo, kako dolgo bo trajalo, da se obdela 100.000 transakcij in tako to primerjamo z zgornjim primerom Vise.
 

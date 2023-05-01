@@ -77,7 +77,7 @@ Cada [bloco](#block) tem um preço de reserva conhecido como "taxa base". É a t
 
 A Beacon Chain foi a cadeia de blocos que apresentou o conceito de [prova de participação](#pos) e [validadores](#validator) para o Ethereum. Ela era executada em paralelo com a prova de trabalho da Rede principal Ethereum desde dezembro de 2020, até que as duas cadeias foram fusionadas em setembro de 2022 para formar o Ethereum de hoje.
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Beacon Chain
 </DocLink>
 
@@ -278,7 +278,7 @@ Uma configuração geral de rede em redes de [prova de trabalho](#pow) que contr
 
 ### bomba de dificuldade {#difficulty-bomb}
 
-Aumento exponencial planejado na definição da [dificuldade](#difficulty) da [prova de trabalho](#pow) projetada para motivar a transição para a [prova-de-participação](#pos), reduzindo as chances de uma [bifurcação](#hard-fork). A bomba de dificuldade foi descontinuada com a [transição para a prova de participação](/upgrades/merge).
+Aumento exponencial planejado na definição da [dificuldade](#difficulty) da [prova de trabalho](#pow) projetada para motivar a transição para a [prova-de-participação](#pos), reduzindo as chances de uma [bifurcação](#hard-fork). A bomba de dificuldade foi descontinuada com a [transição para a prova de participação](/roadmap/merge).
 
 ### assinatura digital {#digital-signatures}
 
@@ -328,7 +328,7 @@ Um validador enviando duas mensagens que se contradizem. Um exemplo simples é u
 
 "Eth1" é um termo que se refere à Rede Principal Ethereum, uma cadeira de blocos de prova de trabalho existente. Esse termo já foi descontinuado e substituído por "camada de execução". [Saiba mais sobre essa mudança de nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Mais sobre as atualizações do Ethereum
 </DocLink>
 
@@ -336,7 +336,7 @@ Um validador enviando duas mensagens que se contradizem. Um exemplo simples é u
 
 "Eth2" é um termo que se refere a um conjunto de atualizações do protocolo Ethereum, incluindo a transição do Ethereum para a prova de participação. Esse termo foi descontinuado e substituído por "camada de consenso". [Saiba mais sobre essa mudança de nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Mais sobre as atualizações do Ethereum
 </DocLink>
 
@@ -783,12 +783,12 @@ Um número, derivado de uma função unidirecional de uma [chave privada](#priva
 
 Dado retornado pelo cliente Ethereum para representar o resultado de uma [transação](#transaction) particular, incluindo um [hash](#hash) de transação, seu número de [bloco](#block), a quantidade de [gás](#gas) usada e, em caso de desenvolvimento de um [contrato inteligente](#smart-contract), o [endereço](#address) do contrato.
 
-### ataque de reentrada {#re-entrancy-attack}
+### ataque de reentrância {#re-entrancy-attack}
 
 Um ataque que consiste em um contrato de um invasor chamando uma função de contrato da vítima de tal forma que, durante a execução, a vítima chama o contrato do invasor novamente, recursivamente. Isto pode resultar, por exemplo, no roubo de fundos mediante a omissão de partes do contrato da vítima que atualizam os saldos ou contam os montantes de saque.
 
 <DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
-  Reentrada
+  Reentrância
 </DocLink>
 
 ### recompensa {#reward}
@@ -823,7 +823,7 @@ Uma família de funções hash criptográficas publicada pelo Instituto Nacional
 
 O estágio de desenvolvimento do Ethereum que iniciou um conjunto de atualizações de redimensionamento e sustentabilidade, anteriormente conhecido como "Ethereum 2.0" ou "Eth2".
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Melhorias no Ethereum
 </DocLink>
 
@@ -835,7 +835,7 @@ O processo de conversão de uma estrutura de dados em uma sequência de bytes.
 
 As cadeias de fragmentos são seções discretas da cadeia de blocos total que podem estar sob a responsabilidade de subconjuntos de validadores. Isso oferecerá maior taxa de transferência de transações para o Ethereum e melhorará a disponibilidade de dados para soluções de [camada 2](#layer-2), como [rollups otimistas](#optimistic-rollups) e [rollups ZK](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/roadmap/danksharding">
   Cadeias de fragmentos
 </DocLink>
 
@@ -1098,7 +1098,7 @@ A menor denominação de [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### endereço zero {#zero-address}
 
-Um endereço Ethereum, composto inteiramente de zeros, frequentemente usado como um endereço de consolidação para fundos indesejados.
+Um endereço Ethereum, composto inteiramente de zeros, que é frequentemente usado como um endereço, para remover tokens de circulação própria. Uma distinção é feita entre tokens formalmente removidos do índice de um contrato inteligente, através do método burn() e os enviados para este endereço.
 
 ### prova de conhecimento zero {#zk-proof}
 

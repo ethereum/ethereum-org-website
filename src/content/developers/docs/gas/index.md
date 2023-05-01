@@ -69,7 +69,7 @@ The base fee is calculated by a formula that compares the size of the previous b
 | 7            |          30M |        12.5% |       180.2 gwei |
 | 8            |          30M |        12.5% |       202.7 gwei |
 
-Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.7 gwei * 112.5% = 228.1 gwei`.
+Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 12.5%` or `202.7 gwei * 12.5% = 228.1 gwei`.
 
 It's also important to note it is unlikely we will see extended spikes of full blocks because of the speed at which the base fee increases proceeding a full block.
 
@@ -130,7 +130,7 @@ Gas price alone does not actually determine how much we have to pay for a partic
 
 ## Initiatives to reduce gas costs {#initiatives-to-reduce-gas-costs}
 
-The Ethereum [scalability upgrades](/upgrades/) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
+The Ethereum [scalability upgrades](/roadmap/) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
 
 Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 

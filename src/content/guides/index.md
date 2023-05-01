@@ -6,13 +6,13 @@ lang: en
 
 # Ethereum guides
 
-Do you want to start your Ethereum journey? It can be confusing to use and understand new technology. Our practical guides will teach you how to get started step-by-step.
+Do you want to start your Ethereum journey? There's a whole community of us exploring together many different ways to use and understand Ethereum. Ethereum is not a corporation with a script-bound helpdesk: it is a living group of people interested in building better worlds. These practical guides will help you learn how to get started and where to find us.
 
 ## Getting started
 
-1. [How to "register" an Ethereum account](/guides/how-to-register-an-ethereum-account/) - You will learn that you need a wallet app and the guide will show you where to find one.
+1. [How to "register" an Ethereum account](/guides/how-to-register-an-ethereum-account/) - Anyone can create a wallet for free. This guide will show you where to begin.
 
-2. [How to use a wallet](/guides/how-to-use-a-wallet/) - An introduction to basic features of any wallet and how to use them.
+2. [How to use a wallet](/guides/how-to-use-a-wallet/) - An introduction to the basic features of any wallet and how to use them.
 
 ## Security basics
 
@@ -22,4 +22,8 @@ Do you want to start your Ethereum journey? It can be confusing to use and under
 
 1. [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/) - Are Ethereum transactions too costly? Consider moving to Ethereum scaling solutions called layer 2s.
 
-2. [How to swap tokens](/guides/how-to-swap-tokens/) - Do you want to exchange your tokens for a different one? A simple guide how to do that.
+2. [How to swap tokens](/guides/how-to-swap-tokens/) - Do you want to exchange your tokens for a different one? This simple guide will show you how to do that.
+
+## Decentralized Thinking Skills
+
+Once you've got a wallet and have used a few of its features, you can understand more about Ethereum by asking, "_why_ does this matter?" What makes money valuable if no-one controls it? What is trust? Does this contribute to freedom? What kinds of new governance and organizational structures does Ethereum enable? These questions, and more, are explored freely in communities like [Kernel](https://www.kernel.community/).

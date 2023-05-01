@@ -72,6 +72,15 @@
     "endDate": "2023-05-14"
   },
   {
+    "title": "ETH Tricolor Lanzamiento Road to Blockchain Week EC",
+    "to": "https://www.eventbrite.com/cc/launch-road-to-blockchain-week-ecuador-2023-2075369",
+    "sponsor": null,
+    "location": "Quito, Ecuador",
+    "description": "Introductory conferences on blockchain technology in Quito, at USFQ, UDLA, EPN.",
+    "startDate": "2023-05-15",
+    "endDate": "2023-05-20"
+  },
+  {
     "title": "EDCON 2023",
     "to": "https://edcon.io/",
     "sponsor": null,
@@ -90,6 +99,15 @@
     "endDate": "2023-05-24"
   },
   {
+    "title": "SpaghettETH II",
+    "to": "https://naples.spaghett-eth.com/",
+    "sponsor": "EF, Ambire, Zerion, ETHLocal, Yomi, Onlymusix, Oasis App",
+    "location": "Naples, Italy",
+    "description": "SpaghettETH is the umbrella of italian ETH communities, and annual touring conference. Join us in Naples and share your #rawStories about legal, security, narrative and education",
+    "startDate": "2023-05-24",
+    "endDate": "2023-05-26"
+  },
+  {
     "title": "ETH Belgrade 2023",
     "to": "https://ethbelgrade.rs/",
     "sponsor": null,
@@ -97,6 +115,15 @@
     "description": "ETH Belgrade is a playground for exploring Ethereum possibilities. As part of Belgrade Blockchain Week, this three-day conference gathers extraordinary minds and Ethereum enthusiasts to share knowledge and spark ideas that will ignite the whole ecosystem.",
     "startDate": "2023-06-02",
     "endDate": "2023-06-4"
+  },
+  {
+    "title": "ETHPrague",
+    "to": "https://ethprague.com/",
+    "sponsor": null,
+    "location": "Prague, Czech Republic",
+    "description": "ETHPrague is focusing on exploring solarpunk visions, solving sustainability issues, and addressing societal challenges by utilizing Ethereum, and discovering potential concepts or applications that do not yet exist.",
+    "startDate": "2023-06-09",
+    "endDate": "2023-06-11"
   },
   {
     "title": "ETHGlobal Paris",
@@ -198,11 +225,11 @@
     "endDate": "2023-04-02"
   },
   {
-    "title": "ETH Miami",
+    "title": "ETHMobile Miami",
     "to": "https://www.ethmiami.ooo/",
     "sponsor": null,
     "location": "Hybrid",
-    "description": "We are Ethereum Miami. Joined the Road to DevCon and launched ETH Mobile at main stage of ETH Denver",
+    "description": "We are the first Ethereum festival expanding the global ecosystem through the mobile experience.",
     "startDate": "2023-09-15",
     "endDate": "2023-09-17"
   },
@@ -225,6 +252,15 @@
     "endDate": "2023-06-25"
   },
   {
+    "title": "ETHMilan",
+    "to": "https://ethmilan.xyz/",
+    "sponsor": null,
+    "location": "Milan, Italy",
+    "description": "The conference will take place in the heart of Milan, in a location rich in history and culture. Join us to discuss all things Ethereum, DeFi, Account Abstraction, DAOs & NFTs.",
+    "startDate": "2023-10-05",
+    "endDate": "2023-10-06"
+  },
+  {
     "title": "ETHToronto",
     "to": "https://www.ethtoronto.ca/",
     "sponsor": null,
@@ -232,5 +268,14 @@
     "description": "2nd annual ETHToronto, in the birthplace of Ethereum. Official Hackathon of Blockchain Futurist Conference.",
     "startDate": "2023-08-13",
     "endDate": "2023-08-16"
+  },
+  {
+    "title": "ETHAccra",
+    "to": "https://www.ethaccra.xyz/",
+    "sponsor": null,
+    "location": "Ghana, Accra",
+    "description": "ETHAccra is a 3-day hackathon striving to educate young generations of web3 developers and builders.",
+    "startDate": "2023-09-07",
+    "endDate": "2023-09-09"
   }
 ]

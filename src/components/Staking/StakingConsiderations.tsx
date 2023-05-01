@@ -20,7 +20,7 @@ import {
 // Component imports
 import ButtonDropdown, { List as ButtonDropdownList } from "../ButtonDropdown"
 import Translation from "../Translation"
-import { EventOptions, trackCustomEvent } from "../../utils/matomo"
+import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
 
 const Container = styled.div`
   display: flex;
@@ -126,7 +126,7 @@ type DataType = {
   caution: string
   warning: string
   Svg: any
-  matomo: EventOptions
+  matomo: MatomoEventOptions
 }
 
 export interface IProps {
@@ -465,9 +465,10 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
   const dropdownLinks: ButtonDropdownList = {
     text: "Staking Considerations",
     ariaLabel: "Dropdown menu for staking considerations",
-    items: pageData.map(({ title }) => ({
+    items: pageData.map(({ title, matomo }) => ({
       text: title,
       callback: setActiveIndex,
+      matomo: matomo,
     })),
   }
 

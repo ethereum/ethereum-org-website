@@ -50,7 +50,6 @@ const TitleCardList: React.FC<IProps> = ({
       bg="background"
       boxShadow="tableBox"
       width="100%"
-      margin={8}
       border-radius="sm"
       className={className}
     >

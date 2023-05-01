@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 O Ethereum é uma rede distribuída de computadores (conhecidos como nós) executando softwares que podem verificar blocos e dados de transação. O aplicativo de software, conhecido como cliente, deve ser executado no seu computador para transformá-lo em um nó Ethereum.
 
-**Nota: não é mais possível executar um cliente de execução por conta própria. Após [A Fusão](/upgrades/merge), ambos os clientes de execução e consenso devem ser executados juntos para que um usuário obtenha acesso à rede Ethereum.**
+**Nota: não é mais possível executar um cliente de execução por conta própria. Após [A Fusão](/roadmap/merge), ambos os clientes de execução e consenso devem ser executados juntos para que um usuário obtenha acesso à rede Ethereum.**
 
 ## Pré-requisitos {#prerequisites}
 
@@ -24,7 +24,7 @@ O Ethereum pós Fusão consiste em duas partes: a camada de execução e a camad
 - O cliente de execução (também conhecido como Execution Engine, cliente EL ou anteriormente cliente Eth1) ouve novas transações transmitidas na rede, executa-as na EVM e mantém o estado mais recente e o banco de dados de todos os dados atuais do Ethereum.
 - O cliente de consenso (também conhecido como Beacon Node, cliente CL ou anteriormente cliente Eth2) implementa o algoritmo de consenso de prova de participação, o qual permite que a rede realize um acordo com base nos dados validados do cliente de execução.
 
-Antes da [Fusão](/upgrades/merge/), a camada de consenso e execução eram redes separadas, com todas as transações e atividades do usuário no Ethereum acontecendo, no que é agora a camada de execução. Um software do cliente forneceu ambiente de execução e verificação de consenso de blocos produzidos por mineradores. A camada de consenso, [a Beacon Chain](/upgrades/beacon-chain/), está sendo executada separadamente desde dezembro de 2020. Ela introduziu a prova de participação e coordenou a rede de validadores com base nos dados da rede Ethereum.
+Antes da [Fusão](/roadmap/merge/), a camada de consenso e execução eram redes separadas, com todas as transações e atividades do usuário no Ethereum acontecendo, no que é agora a camada de execução. Um software do cliente forneceu ambiente de execução e verificação de consenso de blocos produzidos por mineradores. A camada de consenso, [a Beacon Chain](/roadmap/beacon-chain/), está sendo executada separadamente desde dezembro de 2020. Ela introduziu a prova de participação e coordenou a rede de validadores com base nos dados da rede Ethereum.
 
 Com a Fusão, o Ethereum transita para a prova de participação conectando essas redes. Os clientes de execução e consenso trabalham juntos para verificar o estado do Ethereum.
 
@@ -178,9 +178,7 @@ A Nethermind também conta com uma [documentação detalhada](https://docs.nethe
 
 ## Clientes de consenso (antigos clientes 'Eth2') {#consensus-clients}
 
-Existem vários clientes de consenso (anteriormente conhecidos como clientes "Eth2") para oferecer suporte às [atualizações de consenso](/upgrades/beacon-chain/). Eles estão executando a Beacon Chain e fornecerão um mecanismo de consenso de prova de participação para clientes de execução após [A Fusão](/upgrades/merge/).
-
-[Visualizar clientes de consenso](/upgrades/get-involved/#clients).
+Existem vários clientes de consenso (anteriormente conhecidos como clientes "Eth2") para oferecer suporte às [atualizações de consenso](/roadmap/beacon-chain/). Eles estão executando a Beacon Chain e fornecerão um mecanismo de consenso de prova de participação para clientes de execução após [A Fusão](/roadmap/merge/).
 
 | Cliente                                                       | Linguagem de programação | Sistemas operacionais | Redes                                                          |
 | ------------------------------------------------------------- | ------------------------ | --------------------- | -------------------------------------------------------------- |
