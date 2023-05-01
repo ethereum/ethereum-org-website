@@ -75,7 +75,9 @@ As seguintes opções são possíveis para o parâmetro defaultBlock:
 - `String HEX` - um número de bloco inteiro
 - `String "earliest"` para o bloco mais antigo/de início
 - `String "latest"` - para o bloco minerado mais recente
-- `String "pendente"` - para o estado/transações pendentes
+- `String "safe"` – para o último bloco de cabeçalho seguro
+- `String "finalized"` – para o último bloco finalizado
+- `String "pendente"` – para o estado/transações pendentes
 
 ## Exemplos
 
@@ -484,7 +486,7 @@ Retorna o saldo da conta do endereço fornecido.
 **Parâmetros**
 
 1. `DATA`, 20 Bytes - Endereço para verificar o saldo.
-2. `QUANTITY|TAG` - Inteiro do número do bloco, ou a string `"latest"`, `"earliest"` ou `"pending"`, consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -515,7 +517,7 @@ Retorna o valor de uma posição de armazenamento em determinado endereço.
 
 1. `DATA`, 20 Bytes - Endereço do armazenamento.
 2. `QUANTITY` - Número inteiro da posição no armazenamento.
-3. `QUANTIDADE|TAG` - número inteiro de um bloco ou a string `"anterior"`, `"último"` ou `"pendente"`, como no parâmetro de bloco [padrão](/developers/docs/apis/json-rpc/#default-block-parameter)
+3. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 **Retorna**
 
@@ -581,7 +583,7 @@ Retorna o número de transações _enviadas_ a partir de um endereço.
 **Parâmetros**
 
 1. `DATA`, 20 Bytes - Endereço.
-2. `QUANTIDADE|TAG` - número inteiro de um bloco ou a string `"anterior"`, `"último"` ou `"pendente"`, como no parâmetro de bloco [padrão](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -642,7 +644,7 @@ Retorna o número de transações em um bloco a partir de um bloco que correspon
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` - inteiro de um número de bloco, ou a string `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block-parameter).
+1. `QUANTITY|TAG` – número inteiro de um bloco, ou a cadeira de caracteres `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
 
 ```js
 params: [
@@ -702,7 +704,7 @@ Retorna o número de transações em um bloco a partir de um bloco que correspon
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` - número inteiro de um bloco ou a string "anterior", "último" ou "pendente", como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block-parameter)
+1. `QUANTITY|TAG` – número inteiro de um bloco ou a cadeia de caracteres "latest", "earliest" ou "pending". Consulte [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -734,7 +736,7 @@ Retorna código em determinado endereço.
 **Parâmetros**
 
 1. `DATA`, 20 Bytes - Endereço
-2. `QUANTIDADE|TAG` - número inteiro de um bloco ou a string `"anterior"`, `"último"` ou `"pendente"`, como no parâmetro de bloco [padrão](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -919,7 +921,7 @@ Executa uma nova chamada de mensagem imediatamente sem criar uma transação na 
 - `valor`: `QUANTITY` - (Opcional) Inteiro do valor enviado com esta transação
 - `data`: `DATA` - (Opcional) Hash da assinatura do método e parâmetros codificados. Para obter mais detalhes, consulte [Contrato Ethereum ABI na documentação do Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
 
-2. `QUANTITY|TAG` - número de bloco inteiro ou a string `"latest"`, `"earliest"` ou `"pending"`, veja o [parâmetro de bloqueio padrão](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 **Retorna**
 
@@ -944,7 +946,7 @@ Gera e retorna uma estimativa de quanto gás é necessário para permitir que a 
 
 **Parâmetros**
 
-Consulte os parâmetros [eth_call](#eth_call), o qual espera que todas as propriedades sejam opcionais. Se nenhum limite de gás for especificado, o geth usa o limite de gás do bloco pendente como limite superior. Como resultado, a estimativa retornada pode não ser suficiente para executar a chamada/transação quando a quantidade de gás for maior que o limite de gás do bloco pendente.
+Veja os parâmetros [eth_call](#eth_call), exceto que todas as propriedades são opcionais. Se nenhum limite de gás for especificado, o geth usa o limite de gás do bloco pendente como limite superior. Como resultado, a estimativa retornada pode não ser suficiente para executar a chamada/transação quando a quantidade de gás for maior que o limite de gás do bloco pendente.
 
 **Retorna**
 
@@ -1046,7 +1048,7 @@ Retorna informações sobre um bloco por número de bloco.
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` - inteiro de um número do bloco ou a string `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block-parameter).
+1. `QUANTITY|TAG` – número inteiro de um bloco, ou a cadeira de caracteres `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
 2. `Boolean` - Se `true` retorna os objetos de transação completos, se `false` apenas os hashes das transações.
 
 ```js
@@ -1159,7 +1161,7 @@ Retorna informações sobre uma transação pelo número do bloco e posição do
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` - Um número de bloco ou a string `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block-parameter).
+1. `QUANTITY|TAG` – um número de bloco ou a cadeia de caracteres `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - A posição do índice da transação.
 
 ```js
@@ -1279,7 +1281,7 @@ Retorna informações sobre um tio de um bloco por número e posição do índic
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` - um número de bloco ou a string `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloqueio padrão](/developers/docs/apis/json-rpc/#default-block-parameter).
+1. `QUANTITY|TAG` – um número de bloco ou a cadeia de caracteres `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - A posição do índice tio.
 
 ```js

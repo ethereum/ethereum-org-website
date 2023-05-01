@@ -18,7 +18,6 @@ Tässä on muutamia loistavia aloitusmateriaaleja (englanniksi):
 
 Tämän sivun lisäksi saatavilla on useita yhteisön luomia resursseja, jotka ovat lukemisen arvoisia:
 
-- [EthHub](https://docs.ethhub.io) _Kattava tietämyskanta kaikista Ethereumin asioista_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Aloittelijoille suunnattu opettavainen resurssi Ethereumista_
 - [Ethereum.wiki](https://eth.wiki) _Yhteisön luoma wiki Ethereumin teknologiasta_
 - [Kauri](https://kauri.io) _Teknillisiä artikkeleja ja oppaita Ethereumiin ja siihen liittyviin projekteihin_
@@ -35,7 +34,6 @@ Onko Ethereum sinulle uusi? Nämä englanninkieliset artikkelit ja lähteet ovat
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
 - [Video: What is ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _April 25, 2019 - CME Group_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Päivitetään usein - EthHub_
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _July 23, 2019_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
@@ -55,13 +53,10 @@ Korkeatasoisia englanninkielisiä artikkeleita Ethereumista ja lohkoketjuteknolo
 
 - Haluatko oppia ohjelmoimaan älysopimuksia Ethereumilla? [ethereum.org/fi/developers](/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
-- [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Päivitetään usein - Ethhub_
 
 ## Proof-of-work ja louhinta {#proof-of-work-and-mining}
 
 Ethereum käyttää menetelmää nimeltä "proof-of-work". Tämä mahdollistaa Ethereum-verkon konsensusmenettelyn, jolla validoidaan kaikkien Ethereum-lohkoketjuun tallennettujen tietojen tila ja estetään tietynlaisia taloudellisia hyökkäyksiä.
-
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Päivitetään usein - Ethhub_
 
 ETH 2.0 -versiossa Ethereum tulee siirtymään toiseen menetelmään nimeltä "proof-of-stake". [Lue lisää ETH 2.0 -versiosta jäljempänä](#consensus-layer-upgrades).
 
@@ -94,7 +89,6 @@ Taso 2 viittaa teknologioihin, jotka on rakennettu Ethereumin pääprotokollan p
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
-- [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Päivitetään usein - EthHub_
 
 ### Sivuketjut {#sidechains}
 
@@ -110,20 +104,13 @@ Taso 2 viittaa teknologioihin, jotka on rakennettu Ethereumin pääprotokollan p
 
 ETH 2.0 (tunnetaan myös nimellä Serenity) viittaa seuraavaan merkittävään päivitykseen Ethereumin ydinprotokollassa. Se yhdistää useita parannuksia Ethereumin ydinprotokollaan eli Taso 1:een.
 
-- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Päivitetään usein - EthHub_
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Päivitetään usein - EthHub_
-- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Päivitetään usein - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
-- [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _Jan 24, 2019 - EthHub_
-- [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Jul 15, 2019 - EthHub_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _July 18, 2019 - Bruno Škvorc_
 
 ## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x on nimi kokoelmalle päivityksiä nykyiseen Ethereum-protokollaan. Tavoite on jatkaa Ethereumin kehitystä ja ylläpitoa sillä aikaa, kun ETH 2.0:aa kehitetään ja toteutetaan.
-
-Lisätietoja on [EthHubin selityssivulla ETH 1.x:stä](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## Kryptoekonomia {#cryptoeconomics}
 

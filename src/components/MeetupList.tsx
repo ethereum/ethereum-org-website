@@ -20,6 +20,9 @@ import Translation from "./Translation"
 // Data
 import meetups from "../data/community-meetups.json"
 
+// Utils
+import { trackCustomEvent } from "../utils/matomo"
+
 export interface Meetup {
   title: string
   emoji: string
@@ -52,8 +55,14 @@ const MeetupList: React.FC<IProps> = () => {
   const filteredMeetups = filterMeetups(searchField)
   const { colorMode } = useColorMode()
 
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void =>
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchField(event.target.value)
+    trackCustomEvent({
+      eventCategory: "events search",
+      eventAction: "click",
+      eventName: event.target.value,
+    })
+  }
 
   return (
     <Box>

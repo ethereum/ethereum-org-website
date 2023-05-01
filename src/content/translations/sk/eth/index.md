@@ -21,5 +21,4 @@ Najjednoduchším spôsobom, ako získať ether, je kúpiť si ho. Túto možnos
 Viac informácií o tom, ako si môžete kúpiť ether, nájdete v týchto návodoch:
 
 - [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _pravidelne aktualizované – MyCrypto_
-- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _pravidelne aktualizované – EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

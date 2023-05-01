@@ -68,7 +68,6 @@ Diversi progetti forniscono implementazioni di sidechain che puoi integrare nell
 
 ## Letture consigliate {#further-reading}
 
-- [EthHub on sidechains](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Scaling Ethereum dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 feb 2018 - Georgios Konstantopoulos_
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_

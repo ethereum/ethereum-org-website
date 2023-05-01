@@ -5,7 +5,7 @@ lang: es
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: ../../../../assets/ethereum-learn.png
+image: ../../assets/ethereum-learn.png
 summaryPoint1: Plataformas basadas en la cadena de bloques para interacción social, creación y distribución de contenidos.
 summaryPoint2: Las redes sociales descentralizadas protegen la privacidad del usuario y mejoran la seguridad de los datos.
 summaryPoint3: Tókenes y NFT crean nuevas formas de monetizar contenido.
@@ -21,7 +21,7 @@ Muchas redes sociales descentralizadas existen como alternativa a los servicios 
 
 ### ¿Cómo funcionan las redes sociales descentralizadas? {#decentralized-social-networks-overview}
 
-Las redes sociales descentralizadas son una clase [aplicaciones descentralizadas (dapps)](/dapps/) - aplicaiones impulsadas por [contratos inteligentes](/developers/docs/smart-contracts/) desplegados en la cadena de bloques. El código de contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
+Las redes sociales descentralizadas son una clase [aplicaciones descentralizadas (dapps)](/dapps/) - aplicaiones impulsadas por [ contratos inteligentes ](/developers/docs/smart-contracts/) desplegados en la cadena de bloques. El código de contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
 
 Las plataformas tradicionales de redes sociales se basan en bases de datos para almacenar información del usuario, el código del programa y otras formas de datos. Aunque esto crea puntos únicos de fallo y supone un riesgo significativo. Por ejemplo, los servidores de Facebook, de forma notoria, [se desconectaron durante horas](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) el año pasado, dejando a los usuarios fuera de la plataforma.
 
@@ -79,7 +79,7 @@ Reddit ha promocionado [puntos promocionados en la comunidad](https://cointelegr
 
 El programa ya está activo, con el subreddit r/Criptomoneda [ejecutando su versión de puntos de comunidad llamada «Moons»](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Según la descripción oficial, los Moons «recompensan carteles, comentaristas y moderadores por sus contribuciones al subreddit». Debido a que estos tókenes están en la cadena de bloques (los usuarios los reciben en carteras), estos son independientes de Reddit y no se pueden quitar.
 
-Después de concluir una fase beta en la red de prueba de Rinkeby, los puntos de la comunidad de Reddit ahora están en [Arbitrum Nova](https://nova.arbitrum.io/), una cadena de bloques que combina las funciones de un [validium](/developers/docs/scaling/validium/) y un [Optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Además de usar puntos comunitarios para desbloquear funciones especiales, los usuarios también pueden cambiarlos por moneda fiduciaria en los comercios o intercambios. Además, la cantidad de puntos de la comunidad que posee un usuario determina su influencia en el proceso de toma de decisiones dentro de la comunidad.
+Después de concluir una fase beta en la red de prueba de Rinkeby, los puntos de la comunidad de Reddit ahora están en [Arbitrum Nova](https://nova.arbitrum.io/), una cadena de bloques que combina las propiedades de una [cadena lateral](/developers/docs/scaling/sidechains/) y una [acumulación optimista](/developers/docs/scaling/optimistic-rollups/). Además de usar puntos comunitarios para desbloquear funciones especiales, los usuarios también pueden cambiarlos por moneda fiduciaria en los comercios o intercambios. Además, la cantidad de puntos de la comunidad que posee un usuario determina su influencia en el proceso de toma de decisiones dentro de la comunidad.
 
 ### Twitter {#twitter}
 
@@ -94,16 +94,19 @@ En mayo de 2022, [Instagram anunció la compatibilidad con NFT](https://about.in
 - **[Status.im](https://status.im/)** - _Status es una aplicación de mensajería segura que utiliza código abierto, protocolo entre pares y cifrado de extremo a extremo para proteger sus mensajes de terceros._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror es plataforma de publicación descentralizada con la propiedad asignada a los usuarios. Creada sobre Ethereum, los usuarios puedan financiar ideas, monetizar contenido y construir comunidades de alto valor._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol es una red social de gráficos, compuesto y descentralizado, que ayuda a los creadores a tomar posesión de su contenido dondequiera que vayan en el jardín digital del Internet descentralizado._
+- **[Farcaster](https://farcaster.xyz/)**: _Farcaster es una red social suficientemente descentralizada. Es un protocolo abierto que puede soportar muchos clientes, al igual que el correo electrónico._
 
 ## Para profundizar sobre el tema {#further-reading}
 
 ### Artículos {#articles}
 
+- [Descentralizar las redes sociales: una guía para el apilamiento social de web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Las redes sociales son la gran oportunidad futura de descentralización](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 contiene la promesa de redes sociales descentralizadas y alimentadas por la comunidad](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Un vistazo al panorama de las redes sociales en la cadena de bloques](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [Cómo la cadena de bloques puede resolver la privacidad de las redes sociales](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Las redes sociales están llegando a la cadena de bloques](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Descentralización suficiente para las redes sociales](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks): _Varun Srinivasan_
 
 ### Vídeos {#videos}
 

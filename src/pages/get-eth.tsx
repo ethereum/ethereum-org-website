@@ -25,6 +25,7 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
+import { trackCustomEvent } from "../utils/matomo"
 
 const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
   const { t } = useTranslation()
@@ -161,7 +162,16 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             <Translation id="page-get-eth-where-to-buy-desc-2" />
           </Text>
           <Box as={EthPriceCard} mb={8} />
-          <ButtonLink to="#country-picker">
+          <ButtonLink
+            to="#country-picker"
+            onClick={() =>
+              trackCustomEvent({
+                eventCategory: "Search by country button",
+                eventAction: "click",
+                eventName: "search_by_country",
+              })
+            }
+          >
             <Translation id="page-get-eth-search-by-country" />
           </ButtonLink>
         </Flex>

@@ -17,7 +17,6 @@ Niekoľko skvelých článkov a videí na úvod:
 
 Okrem informácií uvedených na tejto stránke existuje množstvo zaujímavých vzdelávacích zdrojov vytvorených našou komunitou:
 
-- [EthHub](https://docs.ethhub.io) _Rozsiahly zdroj informácií o Ethereu_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Vzdelávacia stránka o Ethereu pre začiatočníkov_
 - [Ethereum.wiki](https://eth.wiki) _Komunitou zostavovaná stránka typu Wikipédie o technológii Etherea _
 - [Kauri](https://kauri.io) _Technické články a návody pre Ethereum a súvisiace projekty_
@@ -34,7 +33,6 @@ Ste začiatočníkom? Tieto články a zdroje sú dobrým miestom, kde začať.
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _23. februára 2017 - Linda Xie_
 - [Video: What is ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25. apríla 2019 - CME Group_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Updated often - EthHub_
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _23. júla 2019_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _30. januára 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28. septembra 2017 - Morgan Peck_
@@ -54,13 +52,10 @@ Smart kontrakt – „inteligentná zmluva“ je v jednoduchosti časť kódu, k
 
 - Chcete sa naučiť programovať smart kontrakty na Ethereu? [ethereum.org/sk/developers](/sk/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12. novembra 2018 - Andreas M. Antonopoulos, Gavin Wood_
-- [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _pravidelne aktualizované - Ethhub_
 
 ## Proof-of-work a ťaženie {#proof-of-work-and-mining}
 
 Ethereum v súčasnosti používa systém s názvom „proof-of-work. Ten umožňuje uzlom siete Etherea dohodnúť sa na stave všetkých informácií zaznamenaných na blockchaine Etherea a bráni určitým typom ekonomických útokov.
-
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pravidelne aktualizované – Ethhub_
 
 V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom „proof-of-stake. [Prečítajte si viac o Ethereu 2.0 nižšie](#consensus-layer-upgrades).
 
@@ -93,7 +88,6 @@ Je vyvíjané veľké úsilie o to, aby bolo Ethereum „škálovateľnejšie“
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _6. novembra 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
-- [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _pravidelne aktualizované – EthHub_
 
 ### Sidechainy {#sidechains}
 
@@ -109,20 +103,13 @@ Je vyvíjané veľké úsilie o to, aby bolo Ethereum „škálovateľnejšie“
 
 Ethereum 2.0 (známe aj ako „Serenity“) je ďalšou významnou inováciou základného protokolu Etherea. Kombinuje niekoľko vylepšení základného protokolu Etherea, teda „vrstvy 1“.
 
-- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _pravidelne aktualizované – EthHub_
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _9. decembra 2018 - Christine Kim_
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _pravidelne aktualizované – EthHub_
-- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Pravidelne aktualizované – EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) november 2018 - YouTube_
-- [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _24. januára 2019 - EthHub_
-- [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _15. júla 2019 - EthHub_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _18. júla 2019 - Bruno Škvorc_
 
 ## Ethereum 1.x {#execution-layer-upgrades}
 
 Ethereum 1.x je názov pre súbor inovácií existujúceho protokolu Etherea. Cieľom je pokračovať v zdokonaľovaní a udržiavaní funkčnosti Etherea, pokiaľ nebude implementované Ethereum 2.0.
-
-Viac informácií nájdete na [stránke EthHub v časti o Ethereu 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## Kryptoekonómia {#cryptoeconomics}
 
