@@ -473,6 +473,40 @@
         "eventAction": "Clicked",
         "eventName": "Clicked Abyss Finance go to link"
       }
+    },
+    {
+      "name": "Sensei Node",
+      "imageName": "senseiNode",
+      "hue": 137,
+      "launchDate": "2022-11-01",
+      "url": "https://www.senseinode.com/",
+      "audits": [
+        {
+          "name": "Coinspect",
+          "url": "https://www.coinspect.com/doc/Coinspect%20-%20Smart%20Contract%20Audit%20-%20SenseiStake%20v221028.pdf"
+        }
+      ],
+      "minEth": 32,
+      "monthlyFee": "10",
+      "monthlyFeeUnit": "%",
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": true,
+      "pctMajorityClient": null,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://twitter.com/senseinode",
+        "medium": "https://medium.com/@senseinode",
+        "github": "https://github.com/Sensei-Node"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Sensei Node go to link"
+      }
     }
   ],
   "pools": [
