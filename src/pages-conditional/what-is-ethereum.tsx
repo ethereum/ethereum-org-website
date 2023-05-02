@@ -971,22 +971,12 @@ export const query = graphql`
     }
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 740
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     ogImage: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     banner: file(relativePath: { eq: "home/hero.png" }) {
