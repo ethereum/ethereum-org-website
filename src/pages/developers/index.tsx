@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { Box, Heading } from "@chakra-ui/react"
 
 import Card from "../../components/Card"
 import Callout from "../../components/Callout"
@@ -14,8 +14,7 @@ import FeedbackCard from "../../components/FeedbackCard"
 
 import { getImage } from "../../utils/image"
 
-import { ChildOnlyProp, Context } from "../../types"
-import { Box, Heading } from "@chakra-ui/react"
+import type { ChildOnlyProp, Context } from "../../types"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
