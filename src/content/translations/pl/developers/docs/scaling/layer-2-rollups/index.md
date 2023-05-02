@@ -122,12 +122,9 @@ Istnieją rozwiązania hybrydowe, które łączą w sobie najlepsze elementy wie
 
 **Pakiety zbiorcze ZK**
 
-- [EthHub na temat pakietów zbiorczych zk](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
-
 **Optymistyczne pakiety zbiorcze**
 
 - [Wszystko, co musisz wiedzieć o optymistycznym pakiecie zbiorczym](https://research.paradigm.xyz/rollups)
-- [EthHub na temat optymistycznych pakietów zbiorczych](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Jak faktycznie działa pakiet zbiorczy Optimism?](https://research.paradigm.xyz/optimism)
 

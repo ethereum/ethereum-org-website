@@ -426,7 +426,6 @@ _Kami ingin lebih banyak dokumentasi tentang pembuatan sebuah oracle kontrak pin
 **Artikel**
 
 - [Apa itu Oracle Blockchain?](https://chain.link/education/blockchain-oracles) - _Chainlink_
-- [Oracle](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
 - [Apa itu Oracle Blockchain?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
 - [Oracle Terdesentralisasi: gambaran umum lengkap](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Mengimplementasikan Oracle Blockchain di Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_

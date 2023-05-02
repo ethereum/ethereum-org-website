@@ -222,25 +222,18 @@ Combină cele mai bune părți ale mai multor tehnologii de nivel 2 și pot ofer
 
 **Canale de stare**
 
-- [EthHub despre canalele de stare](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 februarie 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _5 noiembrie 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
 **Canale de plată**
 
-- [EthHub despre canalele de plată](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
-
 **Rollup-uri ZK**
-
-- [EthHub despre ZK-rollup-uri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 **Rollup-uri Optimistic**
 
-- [EthHub despre rollup-uri optimistic](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic-rollups/)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 
 **Sidechain-uri**
 
-- [EthHub despre sidechain-uri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 februarie 2018 - Georgios Konstantopoulos_

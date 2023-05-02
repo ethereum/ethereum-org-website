@@ -68,8 +68,6 @@ La Rete principale di Ethereum ha sempre e solo usato un algoritmo di mining: ['
 
 ## Letture consigliate {#further-reading}
 
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
 ## Strumenti correlati {#related-tools}
 
 - [I top miner di Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

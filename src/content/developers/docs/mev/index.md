@@ -210,7 +210,7 @@ Some projects, such as MEV Boost, use the Builder API as part of an overall stru
 ## Further reading {#further-reading}
 
 - [What Is Miner-Extractable Value (MEV)?](https://blog.chain.link/what-is-miner-extractable-value-mev/)
-- [MEV and Me](https://research.paradigm.xyz/MEV)
+- [MEV and Me](https://www.paradigm.xyz/2021/02/mev-and-me)
 - [Ethereum is a Dark Forest](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Escaping the Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning the MEV Crisis](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)

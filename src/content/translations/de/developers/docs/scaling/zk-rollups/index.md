@@ -43,5 +43,4 @@ Es gibt mehrere Implementierungen von ZK-Rollups, die Sie in Ihre dApps integrie
 **ZK-Rollups verstehen**
 
 - [Was sind Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
-- [EthHub bei Zk-Rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARKs gegen SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)

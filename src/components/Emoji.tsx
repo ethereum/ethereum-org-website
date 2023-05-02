@@ -1,10 +1,10 @@
 import React from "react"
-import { Box, HTMLChakraProps } from "@chakra-ui/react"
+import { Box, BoxProps } from "@chakra-ui/react"
 import { Twemoji, BaseProps } from "react-emoji-render"
 
 import { IS_DEV } from "../utils/env"
 
-export interface IProps extends HTMLChakraProps<"span">, BaseProps {}
+export interface IProps extends Omit<BoxProps, "children">, BaseProps {}
 
 const Emoji = (props: IProps) => {
   return (

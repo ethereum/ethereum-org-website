@@ -23,11 +23,12 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 ## Artigos para Iniciantes {#beginner-articles}
 
 - [Um (Python) Guia do desenvolvedor para Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
+- [O estado do Python no relatório de 2023 da blockchain](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 - [Uma Introdução aos Smart Contracts com Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Instale seu próprio Token ERC20 com Python e Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [Como desenvolver um contrato Ethereum utilizando Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Intro para Web3.py · Ethereum para desenvolvedores Python](https://www.dappuniversity.com/articles/web3-py-intro)
-- [Como chamar uma função de Contrato Inteligente usando Python e web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
+- [Como chamar uma função do Smart Contract utilizando Python e web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## Artigos intermediários {#intermediate-articles}
 

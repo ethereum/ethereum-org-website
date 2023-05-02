@@ -43,5 +43,4 @@ Obstaja več implementacij ZK-zvitkov, ki jih lahko integrirate v svoje dappe:
 **Materiali za branje o ZK-zvitkih**
 
 - [Kaj so zvitki brez znanja?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
-- [EthHub o ZK-zvitkih](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
