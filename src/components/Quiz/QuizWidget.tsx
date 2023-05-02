@@ -49,10 +49,15 @@ const PROGRESS_BAR_GAP = "4px"
 export interface IProps {
   quizKey?: string
   maxQuestions?: number
+  hideHeading?: boolean
 }
 
 // Component
-const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
+const QuizWidget: React.FC<IProps> = ({
+  quizKey,
+  maxQuestions,
+  hideHeading = false,
+}) => {
   const { t } = useTranslation()
   const [quizData, setQuizData] = useState<Quiz | null>(null)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
@@ -249,16 +254,19 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   // Render QuizWidget component
   return (
     <Flex width="full" direction="column" alignItems="center">
-      <Heading
-        as="h2"
-        mb={12}
-        textAlign="center"
-        scrollBehavior="smooth"
-        scrollMarginTop={24}
-        id="quiz"
-      >
-        <Translation id="test-your-knowledge" />
-      </Heading>
+      {!hideHeading && (
+        <Heading
+          as="h2"
+          mb={12}
+          textAlign="center"
+          scrollBehavior="smooth"
+          scrollMarginTop={24}
+          id="quiz"
+        >
+          <Translation id="test-your-knowledge" />
+        </Heading>
+      )}
+
       <Box
         w="full"
         maxW="600px"
