@@ -14,7 +14,7 @@ A cryptocurrency is a medium of exchange secured by a blockchain-based ledger.
 
 A medium of exchange is anything widely accepted as payment for goods and services, and a ledger is a data store that keeps track of transactions. Blockchain technology allows users to make transactions on the ledger without reliance upon a trusted third party to maintain the ledger.
 
-The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin's release in 2009, people have made thousands of cryptocurrencies across many different blockchains.
+The first cryptocurrency was eCash, developed by the company DigiCash in 1990. The concept and company were created by cryptographer David Chaum, who in 1983 published a paper titled "Blind Signatures for Untraceable Payments". While not the first cryptocurrency, Bitcoin is the oldest surviving one using a blockchain-based ledger, as it was released via a whitepaper in 2008 by Satoshi Nakamoto. Since Bitcoin's release in 2009, people have made thousands of cryptocurrencies across many different blockchains.
 
 ## What is ether? {#what-is-ether}
 
