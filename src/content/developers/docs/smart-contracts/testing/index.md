@@ -40,7 +40,7 @@ Manual testing is human-aided and involves executing each test case in your test
 
 Manual testing can be carried out by a single individual following a written test plan that covers different test scenarios. You could also have multiple individuals or groups interact with a smart contract over a specified period as part of manual testing. Testers will compare the actual behavior of the contract against the expected behavior, flagging any difference as a bug.
 
-Effective manual testing requires considerable resources (skill, time, money, and effort), and it possible—due to human error—to miss certain errors while executing tests. But manual testing can also be beneficial—for example, a human tester (e.g., an auditor) may use intuition to detect edge cases that an automated testing tool would miss.
+Effective manual testing requires considerable resources (skill, time, money, and effort), and it is possible—due to human error—to miss certain errors while executing tests. But manual testing can also be beneficial—for example, a human tester (e.g., an auditor) may use intuition to detect edge cases that an automated testing tool would miss.
 
 ## Automated testing for smart contracts {#automated-testing-for-smart-contracts}
 
