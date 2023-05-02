@@ -2,9 +2,18 @@ import React, { ReactNode } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Heading } from "@chakra-ui/react"
+import {
+  Box,
+  BoxProps,
+  chakra,
+  Flex,
+  Heading,
+  Hide,
+  Image,
+  useColorModeValue,
+} from "@chakra-ui/react"
 
-import Card from "../../components/Card"
+import Card, { IProps as ICardProps } from "../../components/Card"
 import Callout from "../../components/Callout"
 import Link from "../../components/Link"
 import Translation from "../../components/Translation"
@@ -17,8 +26,7 @@ import { getImage } from "../../utils/image"
 import type { ChildOnlyProp, Context } from "../../types"
 
 const Page = (props: ChildOnlyProp) => (
-  <Box
-    display="flex"
+  <Flex
     flexDirection="column"
     alignItems="center"
     w="full"
@@ -29,8 +37,7 @@ const Page = (props: ChildOnlyProp) => (
 )
 
 const HeroContainer = (props: ChildOnlyProp) => (
-  <Box
-    display="flex"
+  <Flex
     justifyContent="space-between"
     flexDirection={{ base: "column-reverse", sm: "row" }}
     mt={8}
@@ -65,7 +72,7 @@ const HeroCopy = (props: ChildOnlyProp) => (
 const H1 = (props: ChildOnlyProp) => (
   <Heading
     as="h1"
-    fontSize="4xl"
+    fontSize="2rem"
     fontWeight="medium"
     fontFamily="monospace"
     fontStyle="normal"
@@ -94,12 +101,8 @@ const Content = (props: ChildOnlyProp) => (
   <Box py={4} px={8} w="full" {...props} />
 )
 
-const Subtitle = (props: ChildOnlyProp) => (
+const Subtitle = (props: BoxProps) => (
   <Box fontSize="xl" lineHeight="140%" color="text200" {...props} />
-)
-
-const SubtitleWithMargin = (props: ChildOnlyProp) => (
-  <Box fontSize="xl" lineHeight="140%" color="text200" mb={6} {...props} />
 )
 
 const MonoSubtitle = (props: ChildOnlyProp) => <Box as="h2" mb={0} {...props} />
@@ -114,35 +117,25 @@ const Hero = (props: ChildOnlyProp) => (
     ml={{ base: 0, md: 8 }}
     alignSelf={{ base: "center", md: "" }}
     {...props}
-  ></Box>
-)
-
-const Image = (props: ChildOnlyProp) => (
-  <Box maxW="400px" mt={16} {...props}></Box>
-)
-
-const ImageContainer = (props: ChildOnlyProp) => (
-  <Box display={{ base: "none", lg: "block" }} {...props} />
+  />
 )
 
 const StyledCardContainer = (props: ChildOnlyProp) => (
-  <Box display="flex" flexWrap="wrap" mx={-4} mt={8} mb={12} {...props} />
+  <Flex wrap="wrap" mx={-4} mt={8} mb={12} {...props} />
 )
 
 const TwoColumnContent = (props: ChildOnlyProp) => (
-  <Box
-    display="flex"
+  <Flex
     justifyContent="space-between"
     alignItems={{ base: "flex-start", lg: "center" }}
     flexDirection={{ base: "column", lg: "row" }}
     w="100%"
     {...props}
-  ></Box>
+  />
 )
 
 const ThreeColumnContent = (props: ChildOnlyProp) => (
-  <Box
-    display="flex"
+  <Flex
     py={0}
     px={8}
     w="full"
@@ -170,34 +163,33 @@ const IntroColumn = (props: ChildOnlyProp) => (
   />
 )
 
-const StyledCard = (props: ChildOnlyProp) => (
-  <Card
-    flex={{ base: "1 1 40%", lg: "1 1 22%" }}
-    minW="240px"
-    boxShadow="tableBoxShadow"
-    m={4}
-    p={6}
-    {...props}
-    _hover={{
-      borderRadius: "4px",
-      boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
-      background: "tableBackgroundHover",
-      transition: "transform 0.1s",
-      transform: "scale(1.02)",
-    }}
-  ></Card>
-)
+const StyledCard = (props: ICardProps) => {
+  const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
-const StyledCallout = (props: ChildOnlyProp) => (
-  <Box
-    as={Callout}
-    // minH="full"
-    mr={{ base: 0, sm: 0 }}
-    ml={{ base: 0, sm: 0 }}
-    flex={{ base: "1 1 416px", md: "1 1 416px" }}
-    {...props}
-  ></Box>
-)
+  return (
+    <Card
+      flex={{ base: "1 1 40%", lg: "1 1 22%" }}
+      minW="240px"
+      boxShadow={tableBoxShadow}
+      m={4}
+      p={6}
+      {...props}
+      _hover={{
+        borderRadius: "4px",
+        boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
+        background: "tableBackgroundHover",
+        transition: "transform 0.1s",
+        transform: "scale(1.02)",
+      }}
+    />
+  )
+}
+
+const StyledCallout = chakra(Callout, {
+  baseStyle: {
+    flex: { base: "auto", md: "1 1 416px" },
+  },
+})
 
 interface IDevelopersPath {
   emoji: string
@@ -294,9 +286,9 @@ const DevelopersPage = ({
             <h2>
               <Translation id="page-developers-about" />
             </h2>
-            <SubtitleWithMargin>
+            <Subtitle mb={6}>
               <Translation id="page-developers-about-desc" />
-            </SubtitleWithMargin>
+            </Subtitle>
             <p>
               <Translation id="page-developers-about-desc-2" />
             </p>
@@ -374,14 +366,15 @@ const DevelopersPage = ({
             <p>
               <Translation id="page-developers-language-desc" />
             </p>
-            <ImageContainer>
-              <Image>
-                <GatsbyImage
-                  image={getImage(data.doge)!}
-                  alt={t("page-assets-doge")}
-                ></GatsbyImage>
-              </Image>
-            </ImageContainer>
+            <Hide below="l">
+              <Image
+                as={GatsbyImage}
+                image={getImage(data.doge)!}
+                alt={t("page-assets-doge")}
+                maxW="400px"
+                mt={16}
+              ></Image>
+            </Hide>
           </Column>
           <Column>
             <h3>
