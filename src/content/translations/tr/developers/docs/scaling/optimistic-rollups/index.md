@@ -16,7 +16,7 @@ Yeni başlayanlar için daha uygun bir kaynak mı arıyorsunuz? [Katman 2'ye gir
 
 İyimser toplamalarla, işlemler ana Ethereum zincirine `calldata` olarak yazılır ve gaz maliyetini azaltarak daha da optimize edilir.
 
-Hesaplama, Ethereum kullanmanın yavaş ve pahalı kısmı olduğundan İyimser toplamalar, işleme bağlı olarak ölçeklenebilirlikte 10-100 kata kadar iyileştirme sunabilir. [Parça zincirlerin](/upgrades/sharding) kullanıma sunulmasıyla bu sayı daha da artacak çünkü bir işleme itiraz edildiğinde daha fazla veri mevcut olacak.
+Hesaplama, Ethereum kullanmanın yavaş ve pahalı kısmı olduğundan İyimser toplamalar, işleme bağlı olarak ölçeklenebilirlikte 10-100 kata kadar iyileştirme sunabilir. [Parça zincirlerin](/roadmap/danksharding) kullanıma sunulmasıyla bu sayı daha da artacak çünkü bir işleme itiraz edildiğinde daha fazla veri mevcut olacak.
 
 ### İhtilaflı işlemler {#disputing-transactions}
 
@@ -52,7 +52,6 @@ Dapp'lerinize entegre edebileceğiniz birden çok İyimser toplama uygulaması m
 **İyimser toplamalar hakkında bilgi**
 
 - [Optimistik Toplama hakkında bilmeniz gereken her şey](https://research.paradigm.xyz/rollups)
-- [EthHub'un iyimser toplamalar hakkındaki içerikleri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Temel Arbitrum Rehberi](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Optimism'in Toplaması aslında nasıl çalışıyor?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

@@ -22,7 +22,7 @@ JSON-RPC API を介してイーサリアムクライアントと直接やり取�
 
 このページでは、主にイーサリアムの実行クライアントで使用される JSON-RPC API について説明します。 しかし、コンセンサスクライアントには、ユーザーがノードについての情報のクエリを行える RPC API が用意されており、ビーコンブロック、ビーコンの状態、その他のコンセンサス関連の情報を直接ノードにリクエストできます。 この API については 、[ビーコン API のウェブページ](https://ethereum.github.io/beacon-APIs/#/)に記載されています。
 
-内部 API は、ノード内のクライアント間通信にも使用されます。 つまり、コンセンサスクライアントと実行クライアントとの間のデータ交換を可能にします。 これは「Engine API」と呼ばれており、仕様は[Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)で入手できます。
+内部 API は、ノード内のクライアント間通信にも使用されます。 つまり、コンセンサスクライアントと実行クライアントとの間のデータ交換を可能にします。 これは「Engine API」と呼ばれており、仕様は[Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)で参照できます。
 
 ## 実行クライアントの仕様 {#spec}
 
@@ -75,6 +75,8 @@ JSON-RPC API を介してイーサリアムクライアントと直接やり取�
 - `HEX String` - 整数のブロック番号
 - `String "earliest"` - 最も古い/始まりのブロック
 - `String "latest"` - 最も新しいマイニング済みブロック
+- `String "safe"` - 最も新しい安全な先頭ブロック
+- `String "finalized"` - 最も新しい確定済みブロック
 - `String "pending"` - 保留中の状態/トランザクション
 
 ## 使用例
@@ -265,7 +267,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 ### eth_protocolVersion {#eth_protocolversion}
 
-現在のイーサリアムプロトコルのバージョンを返します。
+現在のイーサリアムプロトコルのバージョンを返します。 このメソッドは、[Geth では利用できないこと](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924)に注意してください。
 
 **パラメータ**
 
@@ -484,7 +486,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 **パラメータ**
 
 1. `DATA`、20 バイト - 残高を確認するアドレス
-2. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+2. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -515,7 +517,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 
 1. `DATA`、20 バイト - ストレージのアドレス
 2. `QUANTITY` - ストレージの位置 (整数)
-3. `QUANTITY|TAG` - ブロック番号 (整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+3. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 **戻り値**
 
@@ -581,7 +583,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 **パラメータ**
 
 1. `DATA`、20 バイト - アドレス
-2. `QUANTITY|TAG` - ブロック番号 (整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+2. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: [
@@ -642,7 +644,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロック番号 (整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: [
@@ -681,7 +683,7 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 
 **戻り値**
 
-`QUANTITY` - このブロック内のアンクルの数 (整数)
+`QUANTITY` - このブロック内のアンクルの数(整数)
 
 **例**
 
@@ -702,7 +704,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロック番号 (整数)、または文字列"latest"、"earliest" 、"pending"のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列"latest"、"earliest" 、"pending"のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: [
@@ -734,7 +736,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 **パラメータ**
 
 1. `DATA`、20 バイト - アドレス
-2. `QUANTITY|TAG` - ブロック番号 (整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+2. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: [
@@ -919,7 +921,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 - `value`: `QUANTITY` - (オプション) このトランザクションで送信された価値 (整数)
 - `data`: `DATA` - (オプション) メソッド署名とエンコードされたパラメータのハッシュ。 詳細については、[Solidity のドキュメントのイーサリアムコントラクト ABI](https://docs.soliditylang.org/en/latest/abi-spec.html)を参照してください
 
-2. `QUANTITY|TAG` - ブロック番号 (整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+2. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 **戻り値**
 
@@ -1046,7 +1048,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロック番号 (整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 2. `Boolean` - `true`の場合は、完全なトランザクションオブジェクトを返します。 `false`の場合は、トランザクションのハッシュのみを返します
 
 ```js
@@ -1159,7 +1161,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAnd
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロック番号、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 2. `QUANTITY` - トランザクションのインデックスの位置
 
 ```js
@@ -1279,7 +1281,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロック番号、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block-parameter)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 2. `QUANTITY` - アンクルのインデックスの位置
 
 ```js

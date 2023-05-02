@@ -125,6 +125,6 @@ So, for example, if `X` (daily ETH issuance) rises to 1800 based on total ETH st
 
 ## अतिरिक्त पाठ्यसामग्री {#further-reading}
 
-- [मर्ज](/upgrades/merge/)
+- [मर्ज](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) - _Dashboards available to visualize ETH issuance and burn in real-time_
 - [Charting Ethereum Issuance](https://www.attestant.io/posts/charting-ethereum-issuance/) - _Jim McDonald 2020_

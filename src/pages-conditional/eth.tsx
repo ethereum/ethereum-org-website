@@ -164,10 +164,6 @@ const CentralActionCard = styled(ActionCard)`
   }
 `
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 5rem 0;
-`
-
 const tokens = [
   {
     emoji: ":scales:",
@@ -252,12 +248,6 @@ const tokenLinks = [
 ]
 
 const cardListContent = [
-  {
-    link: "https://docs.ethhub.io/ethereum-basics/monetary-policy/",
-    title: <Translation id="page-eth-monetary-policy" />,
-    description: "EthHub",
-    caption: <Translation id="page-eth-ethhub-caption" />,
-  },
   {
     link: "https://medium.com/ethhub/why-ether-is-valuable-2b4e39e01eb3",
     title: <Translation id="page-eth-value" />,
@@ -435,7 +425,9 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           </div>
           <Divider />
         </CentralColumn>
-        <StyledCalloutBanner
+        <CalloutBanner
+          my={20}
+          mx={0}
           titleKey={"page-eth-where-to-buy"}
           descriptionKey={"page-eth-where-to-buy-desc"}
           image={getImage(data.ethCat)!}
@@ -447,7 +439,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               <Translation id="page-eth-get-eth-btn" />
             </ButtonLink>
           </div>
-        </StyledCalloutBanner>
+        </CalloutBanner>
       </Content>
 
       <TwoColumnContent>

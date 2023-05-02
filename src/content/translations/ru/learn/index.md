@@ -15,7 +15,6 @@ lang: ru
 
 В дополнение к информации на этой странице есть много созданных сообществом ресурсов, которые стоит изучить:
 
-- [EthHub](https://docs.ethhub.io) _База знаний обо всем, что касается Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Образовательный ресурс о Ethereum, предназначенный для начинающих_
 - [Ethereum.wiki](https://eth.wiki) _Созданная сообществом вики о технологии Ethereum_
 - [Kauri](https://kauri.io) _Технические статьи и руководства по Ethereum и связанным с ним проектам_
@@ -30,7 +29,6 @@ lang: ru
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Updated often - EthHub_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
@@ -53,8 +51,6 @@ lang: ru
 ## Доказательство работы и майнинг {#proof-of-work-and-mining}
 
 В настоящее время Ethereum использует систему подтверждения транзакций под названием «Доказательство работы». Она позволяет сети Ethereum согласовать состояние всей информации, зарегистрированной в блокчейне Ethereum, а также предотвращает некоторые виды экономических атак.
-
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 
 В ETH 2.0 Ethereum перейдет на другую систему под названием «Доказательство доли владения». [Вы можете больше узнать о ETH 2.0 ниже](#consensus-layer-upgrades).
 
@@ -80,7 +76,6 @@ lang: ru
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
-- [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Updated often - EthHub_
 
 ### Технология Sidechains {#sidechains}
 
@@ -96,17 +91,12 @@ lang: ru
 
 ETH 2.0 (также известный как Serenity) относится к следующему крупному обновлению базового протокола Ethereum. Он объединяет некоторые улучшения базового протокола Ethereum (уровень 1).
 
-- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Updated often - EthHub_
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
-- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
 ## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x – это название для набора более мелких обновлений к существующему базовому протоколу Ethereum. Цель заключается в непрерывном улучшении и поддержке существующего Ethereum, пока ETH 2.0 разрабатывается и внедряется.
-
-Для получения дополнительной информации смотрите [страницу EthHub с объяснением ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## Криптоэкономика {#cryptoeconomics}
 

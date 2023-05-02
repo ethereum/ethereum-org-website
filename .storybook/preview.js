@@ -31,9 +31,13 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds: {
+    disable: true,
+  },
   chakra: {
     theme,
   },
+  layout: "centered",
   // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
   viewport: {
     viewports: chakraBreakpointArray.reduce((prevVal, currVal) => {

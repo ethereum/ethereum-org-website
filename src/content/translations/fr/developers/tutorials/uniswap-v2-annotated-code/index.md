@@ -4,7 +4,6 @@ description: Comment fonctionne le contrat Uniswap-v2 ? Pourquoi est-il écrit d
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: fr
@@ -891,11 +890,11 @@ Les contrats périphériques sont l'API (interface du programme d'application) p
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) présente des dangers et [ne doit plus être utilisé](https://uniswap.org/docs/v2/smart-contracts/router01/). Heureusement, les contrats périphériques sont dénués d'état et ne détiennent aucun actif. Il est ainsi facile de les déprécier et de suggérer aux gens d'utiliser à la place `UniswapV2Router02`.
+[Ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) présente des dangers et [ne doit plus être utilisé](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Heureusement, les contrats périphériques sont dénués d'état et ne détiennent aucun actif. Il est ainsi facile de les déprécier et de suggérer aux gens d'utiliser à la place `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-Dans la plupart des cas, vous utiliseriez Uniswap par le biais de [ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Vous pouvez voir comment l'utiliser [ici](https://uniswap.org/docs/v2/smart-contracts/router02/).
+Dans la plupart des cas, vous utiliseriez Uniswap par le biais de [ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Vous pouvez voir comment l'utiliser [ici](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
 ```solidity
 pragma solidity =0.6.6;

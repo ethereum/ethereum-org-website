@@ -123,7 +123,7 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 ## 减少燃料成本的举措 {#initiatives-to-reduce-gas-costs}
 
-以太坊[可扩展性升级](/upgrades/)应该最终解决部分燃料费用问题，并让以太坊平台能够每秒处理数千个交易，从而全面扩容。
+以太坊[可扩展性升级](/roadmap/)应该最终解决部分燃料费用问题，并让以太坊平台能够每秒处理数千个交易，从而全面扩容。
 
 二层网络扩容是一项主要举措，可大大优化燃料成本、用户体验和可扩展性。 [更多关于二层网络扩容的信息](/developers/docs/scaling/#layer-2-scaling)。
 
@@ -146,7 +146,6 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 ## 延伸阅读 {#further-reading}
 
 - [以太坊 Gas 详解](https://defiprime.com/gas)
-- [以太坊价格上涨会导致使用费更贵吗？](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [减少智能合约的 gas 消耗](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [权益证明与工作量证明](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

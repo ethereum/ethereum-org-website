@@ -30,9 +30,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 
 ## Articole de nivel intermediar {#intermediate-articles}
 
-- [Documentația Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Exemple practice de Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## Modele avansate de utilizare {#advanced-use-patterns}
 
 - [pwasm_ethereum bibliotecă pentru interacțiuni cu rețele ca Ethereum](https://github.com/openethereum/pwasm-ethereum)
@@ -49,7 +46,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _Referință API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Implementare Rust a mașinii virtuale Ethereum_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Implementare Rust a bibliotecii Web3.js_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contract inteligent Wavelet în Rust_
 - [Foundry](https://github.com/gakonst/foundry)- _Toolkit for Ethereum application development_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum library and wallet implementation_

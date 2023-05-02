@@ -62,7 +62,7 @@ constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {
 
 function setBtcPrice() public {
     bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
-    bytes32 _queryID = keccak256(_b);
+    bytes32 _queryId = keccak256(_b);
 
     uint256 _timestamp;
     bytes _value;

@@ -8,7 +8,7 @@ lang: zh
 
 ### 矿工可提取价值 {#miner-extractable-value}
 
-最大可提取价值首先应用于[工作量证明](/developers/docs/consensus-mechanisms/pow/)背景下，最初称为“矿工可提取价值”。 这是因为在工作量证明中，矿工掌握了交易的包含、排除和顺序。 然而，自从通过[合并](/upgrades/merge)过渡到权益证明以来，验证者一直负责这些角色，并且挖矿不再是以太坊协议的一部分。 但是，价值提取方法仍然存在，因此现在使用的是术语“最大可提取价值”。
+最大可提取价值首先应用于[工作量证明](/developers/docs/consensus-mechanisms/pow/)背景下，最初称为“矿工可提取价值”。 这是因为在工作量证明中，矿工掌握了交易的包含、排除和顺序。 然而，自从通过[合并](/roadmap/merge)过渡到权益证明以来，验证者一直负责这些角色，并且挖矿不再是以太坊协议的一部分。 但是，价值提取方法仍然存在，因此现在使用的是术语“最大可提取价值”。
 
 ## 前提条件 {#prerequisites}
 
@@ -122,7 +122,7 @@ MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极�
 
 在合并后的以太坊中，验证者（已经存入 32 个以太币作为保证金）就添加到信标链的区块的有效性达成共识。 由于 32 个以太币可能超出了许多人的能力范围，[加入质押池](/staking/pools/)也许是一种更可行的选择。 然而，[单独质押人](/staking/solo/)合理分布才是一种理想状态，因为它削弱了验证者的中心化并且提升了以太坊的安全性。
 
-不过，最大可提取价值提取被认为能够加速验证者中心化。 部分原因是，由于验证者[在提出区块时收益要低于](/upgrades/merge/issuance/#how-the-merge-impacts-ETH-supply)当前矿工提出区块的收益，合并后最大可提取价值提取可能会显著[影响验证者的收益](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb)。
+不过，最大可提取价值提取被认为能够加速验证者中心化。 部分原因是，由于验证者[在提出区块时收益要低于](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply)当前矿工提出区块的收益，合并后最大可提取价值提取可能会显著[影响验证者的收益](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb)。
 
 更大的质押池可能会有更多的资源投资进行必要的优化，以抓住最大可提取价值机会。 这些质押池提取的最大可提取价值越多，它们用来提升最大可提取价值提取能力（并增加总收入）的资源就越多，这在本质上形成了[规模经济](https://www.investopedia.com/terms/e/economiesofscale.asp#)。
 

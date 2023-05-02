@@ -119,7 +119,7 @@ Despite the numerous benefits of Web3 in its current form, there are still many 
 
 ### Accessibility {#accessibility}
 
-Important Web3 features, like Sign-in with Ethereum, are already available for anyone to use at zero cost. But, the relative cost of transactions is still prohibitive to many. Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved through [network upgrades](/upgrades/) and [layer 2 scaling solutions](/developers/docs/scaling/). The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
+Important Web3 features, like Sign-in with Ethereum, are already available for anyone to use at zero cost. But, the relative cost of transactions is still prohibitive to many. Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved through [the roadmap](/roadmap/) and [layer 2 scaling solutions](/developers/docs/scaling/). The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
 
 ### User experience {#user-experience}
 

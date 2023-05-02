@@ -15,7 +15,6 @@ lang: el
 
 Εκτός από τις πληροφορίες αυτής της σελίδας, υπάρχουν πολλά ακόμη βοηθήματα δημιουργημένα από την κοινότητα του Ethereum που αξίζει να εξερευνήσετε:
 
-- [EthHub](https://docs.ethhub.io) _Πλήρης βάση γνώσεων για οτιδήποτε αφορά το Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _ Επιπλέον εκπαιδευτικό υλικό για το Ethereum που απευθύνεται σε αρχάριους_
 - [Ethereum.wiki](https://eth.wiki) _Ένα wiki που δημιουργήθηκε από την κοινότητα σχετικά με την τεχνολογία του Ethereum_
 - [Kauri](https://kauri.io) _Τεχνικά άρθρα και σεμινάρια για το Ethereum και σχετικά projects_
@@ -30,7 +29,6 @@ lang: el
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Ενημερώνεται συχνά - EthHub_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
@@ -53,8 +51,6 @@ lang: el
 ## Απόδειξη της Εργασίας ("proof-of-work") και Εξόρυξη ("Mining") {#proof-of-work-and-mining}
 
 Το Ethereum χρησιμοποιεί επί του παρόντος ένα σύστημα που ονομάζεται "Απόδειξη της Εργασίας". Αυτό επιτρέπει στο δίκτυο του Ethereum να συμφωνήσει για την κατάσταση όλων των πληροφοριών που καταγράφονται στο blockchain του Ethereum και ταυτόχρονα εμποδίζει οικονομικές επιθέσεις συγκεκριμένου τύπου.
-
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Ενημερώνεται συχνά - Ethhub_
 
 Στο ETH 2.0, το Ethereum θα μετακινηθεί σε ένα διαφορετικό σύστημα που ονομάζεται " Απόδειξη του Πονταρίσματος" (“proof-of-stake”). [Διαβάστε περισσότερα για το ETH 2.0 παρακάτω](#consensus-layer-upgrades).
 
@@ -80,7 +76,6 @@ lang: el
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
-- [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Ενημερώνεται συχνά - EthHub_
 
 ### Πλευρικές αλυσίδες {#sidechains}
 
@@ -96,17 +91,12 @@ lang: el
 
 Το ETH 2.0 (επίσης γνωστό και ως "Serenity") αναφέρεται στην επόμενη σημαντική αναβάθμιση του βασικού πρωτοκόλλου του Ethereum. Συνδυάζει αρκετές βελτιώσεις στο βασικό πρωτόκολλο του Ethereum ("Layer 1").
 
-- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Ενημερώνεται συχνά - EthHub_
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Ενημερώνεται συχνά- EthHub_
-- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Ενημερώνεται συχνά - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
 ## ETH 1.x {#execution-layer-upgrades}
 
 Το ETH 1.x είναι το όνομα ενός συνόλου αναβαθμίσεων στο υπάρχον πρωτόκολλο του Ethereum. Ο στόχος είναι να συνεχίσει να βελτιώνεται και να διατηρείται το Ethereum όσο το ETH 2.0 αναπτύσσεται και υλοποιείται.
-
-Για περισσότερες πληροφορίες, ανατρέξτε στη [σελίδα εξήγησης του EthHub σχετικά με το ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## Κρυπτοοικονομικά {#cryptoeconomics}
 

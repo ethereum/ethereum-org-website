@@ -338,7 +338,6 @@ DeFi, açık kaynaklı bir akımdır. DeFi protokolleri ve uygulamaları; incele
 
 ### DeFi makaleleri {#defi-articles}
 
-- [Merkeziyetsiz Finans Nedir?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, düzenli olarak güncellenir_
 - [DeFi'ye yeni başlayanlar için rehber](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 Ocak 2020_
 
 ### Videolar {#videos}

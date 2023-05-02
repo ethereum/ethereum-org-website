@@ -18,7 +18,7 @@ ERC-777 proporciona las siguientes mejoras sobre ERC-20.
 
 ### Hooks {#hooks}
 
-Los hooks son una función descrita en el código de los contratos inteligentes. Se recurre a ellos cuando se envían o reciben tokens a través de un contrato. Esto permite que un contato inteligente reaccione a tokens entrantes o salientes.
+Los hooks son una función descrita en el código de los contratos inteligentes. Se recurre a ellos cuando se envían o reciben tokens a través de un contrato. Esto permite que un contrato inteligente reaccione a tokens entrantes o salientes.
 
 Los hooks se registran y descubren usando el estándar [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820).
 
@@ -30,7 +30,7 @@ Los hooks se registran y descubren usando el estándar [ERC-1820](https://eips.e
 
 ### Decimales {#decimals}
 
-El estándar támbien resuelve la confusión en torno a ` decimales` causada en ERC-20. Esta claridad mejora la experiencia del desarrollador.
+El estándar también resuelve la confusión en torno a ` decimales` causada en ERC-20. Esta claridad mejora la experiencia del desarrollador.
 
 ### Compatibilidad con versiones anteriores de ERC-20 {#backwards-compatibility-with-erc-20}
 

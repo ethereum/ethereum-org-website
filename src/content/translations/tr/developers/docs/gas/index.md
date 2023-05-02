@@ -133,7 +133,7 @@ Gaz fiyatı tek başına belirli bir işlem için ne kadar ödememiz gerektiğin
 
 ## Gaz maliyetlerini azaltmak için girişimler {#initiatives-to-reduce-gas-costs}
 
-Ethereum [ölçeklenebilirlik yükseltmeleri](/upgrades/) nihayetinde platformun saniyede binlerce işlemi işlemesini ve küresel olarak ölçeklenmesini sağlayacak olan bazı gaz ücreti sorunlarını çözecektir.
+Ethereum [ölçeklenebilirlik yükseltmeleri](/roadmap/) nihayetinde platformun saniyede binlerce işlemi işlemesini ve küresel olarak ölçeklenmesini sağlayacak olan bazı gaz ücreti sorunlarını çözecektir.
 
 Katman 2 ölçekleme; gaz maliyetlerini, kullanıcı deneyimini ve ölçeklenebilirliği büyük ölçüde iyileştirmeye yönelik birincil bir girişimdir. [Katman 2 ölçekleme hakkında daha fazla bilgi](/developers/docs/scaling/#layer-2-scaling).
 
@@ -161,7 +161,6 @@ ETH'nizi daha ucuza gönderebilmeniz için gaz fiyatlarını takip etmek istiyor
 ## Daha fazla bilgi {#further-reading}
 
 - [Ethereum Gazı Açıklaması](https://defiprime.com/gas)
-- [Fiyat arttıkça Ethereum kullanmak pahalılaşıyor mu?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Akıllı Sözleşmelerinizin gaz tüketimini azaltmak](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Hisse İspatına karşı İş İspatı](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

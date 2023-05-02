@@ -123,7 +123,7 @@ Le prix du gaz ne détermine pas à lui seul le montant que nous avons à payer 
 
 ## Initiatives mises en œuvre pour réduire les coûts du gaz {#initiatives-to-reduce-gas-costs}
 
-[Les mises à jour d'évolutivité](/upgrades/) d'Ethereum devraient en fin de compte résoudre certains problèmes liés aux frais de gaz et permettra à la plate-forme de traiter des milliers de transactions par seconde et à l'échelle mondiale.
+[Les mises à jour d'évolutivité](/roadmap/) d'Ethereum devraient en fin de compte résoudre certains problèmes liés aux frais de gaz et permettra à la plate-forme de traiter des milliers de transactions par seconde et à l'échelle mondiale.
 
 La mise à l'échelle de la couche 2 est une initiative primordiale pour améliorer considérablement les coûts de gaz, l'expérience utilisateur et l'évolutivité. [En savoir plus sur la mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling).
 

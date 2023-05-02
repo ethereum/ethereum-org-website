@@ -21,7 +21,7 @@ El primer paso para ejecutar el nodo es elegir su enfoque. Tiene que escoger el 
 
 Las implementaciones de clientes permiten el uso de diferentes modos de sincronización y otras opciones diferentes. [Los modos de sincronización](/developers/docs/nodes-and-clients/#sync-modes) representan diferentes métodos de descarga y validación de datos de cadenas de bloques. Antes de empezar el nodo, debería decidir qué red y modo de sincronización usar. Los aspectos más importantes que se deben tener en cuenta son el espacio del disco y el tiempo de sincronización que necesitará el cliente.
 
-Todas las características y opciones pueden encontrarse en la documentación para clientes. Se pueden establecer distintas configuraciones de clientes mediante la ejecución del cliente con los parámetros correspondientes. Puede obtener más información sobre los parámetros desde [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) o la documentación para clientes. Con fines de prueba, puede preferir ejecutar un cliente en una de las redes de prueba. [Ver resumen de las redes compatibles](/developers/docs/nodes-and-clients/#execution-clients).
+Todas las características y opciones pueden encontrarse en la documentación para clientes. Se pueden establecer distintas configuraciones de clientes mediante la ejecución del cliente con los parámetros correspondientes. Con fines de prueba, puede preferir ejecutar un cliente en una de las redes de prueba. [Ver resumen de las redes compatibles](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Entorno y hardware {#environment-and-hardware}
 
@@ -142,7 +142,7 @@ Debe mantener actualizado el software de su cliente con los últimos parches de 
 
 #### Ejecución de servicios adicionales {#running-additional-services}
 
-Ejecutar tu propio nodo le permite usar servicios que requieren acceso directo al cliente RCP de Ethereum. Estos son servicios que se crean sobre Ethereum, como [soluciones de capa 2](/developers/docs/scaling/#layer-2-scaling), [clientes de consenso](/upgrades/get-involved/#clients) y otra infraestructura de Ethereum.
+Ejecutar tu propio nodo le permite usar servicios que requieren acceso directo al cliente RCP de Ethereum. Estos son servicios que se crean sobre Ethereum, como [soluciones de capa 2](/developers/docs/scaling/#layer-2-scaling), clientes de consenso y otra infraestructura de Ethereum.
 
 #### Supervisión del nodo {#monitoring-the-node}
 
@@ -152,7 +152,6 @@ Para poder supervisar adecuadamente su nodo, considere la opción de recopilar m
 
 - [Análisis de los requisitos de hardware para crear un nodo validado y completo de Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902)_: Albert Palau, 24 de septiembre de 2018_
 - [Ejecución de los nodos completos de Ethereum: una guía para aquellas personas que se encuentren desmotivadas](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de noviembre de 2019_
-- [Ejecución de un nodo Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/)_: ETHHub, actualizado frecuentemente_
 - [Ejecución de un nodo Besu Hyperledger en la red principal de Ethereum: beneficios, requisitos y configuración](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _, Felipe Faraggi, 7 de Mayo de 2020_
 - [Despliegue del cliente Ethereum Nethermind con pila de supervisión](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 de julio de 2020_
 
