@@ -1,6 +1,6 @@
 ---
 title: How to identify scam tokens
-description: A how to guide on how to avoid one of the common Ethereum scams
+description: What are scam tokens, how do they make themselves look legitimate, and how to identify them to avoid the scam.
 lang: en
 ---
 
