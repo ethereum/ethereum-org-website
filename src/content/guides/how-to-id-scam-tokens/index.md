@@ -41,9 +41,9 @@ How do you protect yourself? How do you know that the token you're getting is le
 
 Additionally, you can look at the size of liquidity pools. Scam tokens typically have tiny liquidity pools, if any, because the scammers don't want to risk real assets. For example, the `ARB` Uniswap pool holds over 300k$ as I'm writing this ([see here for the up to date value](https://info.uniswap.org/#/tokens/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1)) and buying a small amount is not going to change the price:
 
-![Buying a legitimate token](uniswap-real.png)
+![Buying a legitimate token](./uniswap-real.png)
 
 But if I try to buy `vARB`, even a tiny purchase would change the prince by over 90%:
 
-![Buying a scam token](uniswap-scam.png)
+![Buying a scam token](./uniswap-scam.png)
 
