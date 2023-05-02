@@ -10,6 +10,7 @@ import {
   Heading,
   Hide,
   Image,
+  SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react"
 
@@ -39,7 +40,7 @@ const Page = (props: ChildOnlyProp) => (
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
     justifyContent="space-between"
-    flexDirection={{ base: "column-reverse", sm: "row" }}
+    flexDirection={{ base: "column-reverse", md: "row" }}
     mt={8}
     mb={16}
     bg="cardGradient"
@@ -92,7 +93,7 @@ const GrayContainer = (props: ChildOnlyProp) => (
     px={0}
     mt={8}
     bg="grayBackground"
-    boxShadow="inset 0px 1px 0px tableItemBoxShadow"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
     {...props}
   />
 )
@@ -121,7 +122,7 @@ const Hero = (props: ChildOnlyProp) => (
 )
 
 const StyledCardContainer = (props: ChildOnlyProp) => (
-  <Flex wrap="wrap" mx={-4} mt={8} mb={12} {...props} />
+  <SimpleGrid columns={[1, 1, 2, 4]} mx={-4} mt={8} mb={12} {...props} />
 )
 
 const TwoColumnContent = (props: ChildOnlyProp) => (
@@ -168,8 +169,6 @@ const StyledCard = (props: ICardProps) => {
 
   return (
     <Card
-      flex={{ base: "1 1 40%", lg: "1 1 22%" }}
-      minW="240px"
       boxShadow={tableBoxShadow}
       m={4}
       p={6}
@@ -366,15 +365,14 @@ const DevelopersPage = ({
             <p>
               <Translation id="page-developers-language-desc" />
             </p>
-            <Hide below="l">
-              <Image
-                as={GatsbyImage}
-                image={getImage(data.doge)!}
-                alt={t("page-assets-doge")}
-                maxW="400px"
-                mt={16}
-              ></Image>
-            </Hide>
+            <Image
+              as={GatsbyImage}
+              hideBelow="lg"
+              image={getImage(data.doge)!}
+              alt={t("page-assets-doge")}
+              maxW="400px"
+              mt={16}
+            />
           </Column>
           <Column>
             <h3>
