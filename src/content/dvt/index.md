@@ -6,7 +6,6 @@ lang: en
 
 # Distributed Validator Technology {#what-is-dvt}
 
-<Divider />
 
 ## What is DVT? {#what-is-dvt}
 
