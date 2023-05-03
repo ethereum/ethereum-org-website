@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../assets/infrastructure_transparent.png
+image: ../../../../assets/infrastructure_transparent.png
 alt: 通过全息图显示的以太币徽标。
 summaryPoint1: 一种用以太坊资产表示任何独特事物的方法。
 summaryPoint2: 非同质化代币正在前所未有地向内容创作人赋予更多权利。
@@ -14,7 +14,7 @@ summaryPoint3: 由以太坊区块链上的智能合约提供支持
 
 非同质化代币目前在数字艺术品和收藏品世界中掀起风潮。 得益于新加密货币受众带来巨额销售，数字艺术家的生活正在发生变化。 一些名人也纷纷加入，因为他们发现了与粉丝们联系的新契机。 但数字艺术品只是使用非同质化代币的一种方式。 实际上，它们可以代表任何独特资产的所有权，如数字世界或物理王国里持有某项物品的凭据。
 
-如果 Andy Warhol 出生在 90 年代后期，他很可能会将 Campbell's Soup 制作成一个非同质化代币。 Kanye 在以太坊上运行 Yeezys 只是时间问题。 某一天，您可以用非同质化代币来证明自己对汽车的所有权。
+如果 Andy Warhol 出生在 90 年代后期，他很可能会将 Campbell's Soup 制作成一个非同质化代币。 Nike 把 Jordan 系列运动鞋放到以太坊上只是时间问题。 某一天，您可以用非同质化代币来证明自己对汽车的所有权。
 
 ## 什么是非同质化代币？ {#what-are-nfts}
 
@@ -304,7 +304,7 @@ Decentraland 是一款虚拟现实游戏，甚至允许玩家购买代表虚拟�
 
 ## 非同质化代币的环境影响 {#environmental-impact-nfts}
 
-创建和转让非同质化代币仅仅是以太坊交易而已 - 铸造、购买、交换非同质化代币或与其互动并不直接消耗能源。 [合并](/upgrades/merge)后，以太坊成为一种低能耗区块链，这意味着使用非同质化代币对环境的影响微不足道。
+创建和转让非同质化代币仅仅是以太坊交易而已 - 铸造、购买、交换非同质化代币或与其互动并不直接消耗能源。 [合并](/roadmap/merge)后，以太坊成为一种低能耗区块链，这意味着使用非同质化代币对环境的影响微不足道。
 
 [关于以太坊能源消耗的更多信息](/energy-consumption/)。
 

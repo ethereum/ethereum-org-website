@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 A medida que la cantidad de usuarios de Ethereum ha ido creciendo, la cadena de bloques alcanzó ciertos límites en su capacidad. Esto ha hecho que se incrementen los costos para utilizar la red, haciendo necesarias "soluciones de escalado". Actualmente se están investigando, testeando e implementando múltiples soluciones desde distintos enfoques para lograr objetivos similares.
 
-La meta principal del escalado es incrementar la velocidad de las transacciones (transacciones más rápidas) y la capacidad de procesamiento de estas (más transacciones por segundo), sin sacrificar la descentralización o seguridad de la red (más información sobre la [visión de Ethereum](/upgrades/vision/)). En la capa 1 de la cadena de bloques de Ethereum, una demanda alta lleva a transacciones más lentas y a [precios de gas](/developers/docs/gas/) inviables. El incremento de la capacidad de la red en términos de velocidad y capacidad de procesamiento es fundamental para la adopción masiva y significativa de Ethereum.
+La meta principal del escalado es incrementar la velocidad de las transacciones (transacciones más rápidas) y la capacidad de procesamiento de estas (más transacciones por segundo), sin sacrificar la descentralización o seguridad de la red (más información sobre la [visión de Ethereum](/roadmap/vision/)). En la capa 1 de la cadena de bloques de Ethereum, una demanda alta lleva a transacciones más lentas y a [precios de gas](/developers/docs/gas/) inviables. El incremento de la capacidad de la red en términos de velocidad y capacidad de procesamiento es fundamental para la adopción masiva y significativa de Ethereum.
 
 A pesar de que la velocidad y la capacidad de procesamiento son importantes, es esencial que las soluciones de escalado que permitan alcanzar estos objetivos sigan siendo descentralizadas y seguras. Para evitar una progresión hacia un poder de cómputo centralizado e inseguro, es crítico mantener baja la barrera de entrada a los operadores de nodos.
 
@@ -27,7 +27,7 @@ El método de escalado en cadena ("on-chain") requiere cambios en el protocolo d
 
 La fragmentación es el proceso de dividir horizontalmente una base de datos para repartir la carga. En el contexto de Ethereum, la fragmentación reducirá la congestión en la red e incrementará las transacciones por segundo creando nuevas cadenas conocidas como "fragmentos". Esto, a su vez, reducirá la carga de cada validador, ya que estos no tendrán que procesar la totalidad de las transacciones en la red.
 
-Obtenga más información sobre la [fragmentación](/upgrades/sharding/).
+Obtenga más información sobre la [fragmentación](/roadmap/danksharding/).
 
 ## Escalado fuera de cadena {#off-chain-scaling}
 
@@ -88,7 +88,7 @@ Obtenga más información sobre [Validium](/developers/docs/scaling/validium/).
 - Las soluciones múltiples pueden ayudar a reducir la congestión general en cualquier parte de la red, y también evita los puntos únicos de fallo.
 - El conjunto es mayor que la suma de sus partes. Pueden existir diferentes soluciones y funcionar en armonía, permitiendo un efecto exponencial en la velocidad y la capacidad de procesamiento de transacciones futuras.
 - No todas las soluciones requieren utilizar el algoritmo de consenso de Ethereum directamente, y las alternativas pueden ofrecer beneficios que de otro modo serían difíciles de obtener.
-- Ninguna solución de escalado es suficiente para llevar a cabo la [visión de Ethereum](/upgrades/vision/).
+- Ninguna solución de escalado es suficiente para llevar a cabo la [visión de Ethereum](/roadmap/vision/).
 
 ## ¿Es más bien de los que aprende viendo? {#visual-learner}
 

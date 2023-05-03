@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Ethereum è una rete distribuita di computer (noti come nodi) che eseguono software che possono verificare i blocchi e i dati delle transazioni. Per fare del tuo computer un nodo di Ethereum deve essere eseguita l'applicazione software, detta client.
 
-**Nota: non è più possibile eseguire un client di esecuzione da solo. Dopo [La Fusione](/upgrades/merge), sia il client di esecuzione sia quello di consenso devono essere eseguiti insieme perché un utente possa ottenere accesso alla rete di Ethereum.**
+**Nota: non è più possibile eseguire un client di esecuzione da solo. Dopo [La Fusione](/roadmap/merge), sia il client di esecuzione sia quello di consenso devono essere eseguiti insieme perché un utente possa ottenere accesso alla rete di Ethereum.**
 
 ## Prerequisiti {#prerequisites}
 
@@ -24,7 +24,7 @@ L'Ethereum post-Fusione consiste in due parti: il livello di esecuzione e il liv
 - Il client di esecuzione (noto anche come il Motore di Esecuzione, client EL o, precedentemente, client di Eth1) attende le nuove transazioni trasmesse nella rete, le esegue nell'EVM e detiene l'ultimo stato e database di tutti i dati correnti di Ethereum.
 - Il client di consenso (noto anche come il Nodo Beacon, client CL o, precedentemente, client di Eth2) implementa l'algoritmo di consenso di Proof of Stake, che consente alla rete di raggiungere l'accordo secondo i dati validati dal client di esecuzione.
 
-Prima de [La Fusione](/upgrades/merge/), i livelli di consenso e di esecuzione erano reti separate, con tutte le transazioni e le attività degli utenti su Ethereum che si verificavano dove ora si trova il livello di esecuzione. Un software del client forniva sia l'ambiente di esecuzione che la verifica del consenso dei blocchi prodotti dai miner. Il livello di consenso, [la Beacon Chain](/upgrades/beacon-chain/), è stato eseguito separatamente da dicembre 2020. Ha introdotto il Proof of Stake e coordinato la rete di validatori sulla base dei dati dalla rete Ethereum.
+Prima de [La Fusione](/roadmap/merge/), i livelli di consenso e di esecuzione erano reti separate, con tutte le transazioni e le attività degli utenti su Ethereum che si verificavano dove ora si trova il livello di esecuzione. Un software del client forniva sia l'ambiente di esecuzione che la verifica del consenso dei blocchi prodotti dai miner. Il livello di consenso, [la Beacon Chain](/roadmap/beacon-chain/), è stato eseguito separatamente da dicembre 2020. Ha introdotto il Proof of Stake e coordinato la rete di validatori sulla base dei dati dalla rete Ethereum.
 
 Con la Fusione, Ethereum è passata al Proof of Stake connettendo queste reti. I client di esecuzione e di consenso collaborano per verificare lo stato di Ethereum.
 
@@ -140,7 +140,6 @@ Questa tabella riepiloga i diversi client. Tutti superano i [test dei client](ht
 | [Nethermind](http://nethermind.io/)             | C#, .NET   | Linux, Windows, macOS | Rete Principale, Sepolia, Görli, Ropsten, Rinkeby e altre | Snap (senza servire), Rapida, Completa | Archiviata, Tagliata      |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java       | Linux, Windows, macOS | Rete Principale, Sepolia, Görli, Ropsten, Rinkeby e altre | Rapida, Completa                       | Archiviata, Tagliata      |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go         | Linux, Windows, macOS | Rete Principale, Sepolia, Görli, Rinkeby, Ropsten e altre | Completa                               | Archiviata, Tagliata      |
-| [Akula](https://akula.app)                      | Rust       | Linux                 | Rete Principale, Sepolia, Görli, Rinkeby, Ropsten         | Completa                               | Archiviata, Tagliata      |
 
 **Sottolineiamo che OpenEthereum [è ormai obsoleto](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e non viene più mantenuto.** Usalo con cautela e preferibilmente passa ad un'altra implementazione client.
 
@@ -156,7 +155,7 @@ L'ampia [documentazione](https://besu.hyperledger.org/en/stable/) di Besu ti gui
 
 ### Erigon {#erigon}
 
-Erigon, precedentemente noto come Turbo-Geth, è nato come una diramazione di Go Ethereum orientata alla velocità e all'efficienza dello spazio su disco. Erigon è un'implementazione completamente riprogettata di Ethereum, correntemente scritta in Go, ma con implementazioni in altri linguaggi in via di sviluppo, ad es. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). L'obiettivo di Erigon è fornire un'implementazione più veloce, modulare e ottimizzata di Ethereum. Può eseguire una sincronizzazione completa del nodo archivio usando circa 2TB di spazio su disco, in meno di 3 giorni.
+Erigon, precedentemente noto come Turbo-Geth, è nato come una diramazione di Go Ethereum orientata alla velocità e all'efficienza dello spazio su disco. Erigon è un'implementazione completamente riprogettata di Ethereum, correntemente scritta in Go, ma con implementazioni in altri linguaggi in via di sviluppo. L'obiettivo di Erigon è fornire un'implementazione più veloce, modulare e ottimizzata di Ethereum. Può eseguire una sincronizzazione completa del nodo archivio usando circa 2TB di spazio su disco, in meno di 3 giorni.
 
 ### Go Ethereum {#geth}
 
@@ -176,9 +175,7 @@ Inoltre, Nethermind vanta una [documentazione dettagliata](https://docs.nethermi
 
 ## Client di consenso (ex client di "Eth2") {#consensus-clients}
 
-Esistono diversi client di consenso (precedentemente noti come client di "Eth2") per supportare gli [aggiornamenti del consenso](/upgrades/beacon-chain/). Eseguono la Beacon Chain e forniranno il meccanismo di consenso Proof of Stake ai client di esecuzione, dopo [La Fusione](/upgrades/merge/).
-
-[Visualizza i client di consenso](/upgrades/get-involved/#clients).
+Esistono diversi client di consenso (precedentemente noti come client di "Eth2") per supportare gli [aggiornamenti del consenso](/roadmap/beacon-chain/). Eseguono la Beacon Chain e forniranno il meccanismo di consenso Proof of Stake ai client di esecuzione, dopo [La Fusione](/roadmap/merge/).
 
 | Client                                                        | Lingua     | Sistemi operativi     | Reti                                                            |
 | ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------------- |
@@ -293,7 +290,6 @@ Su internet si trovano molte informazioni sui client Ethereum. Ecco alcune risor
 
 - [Ethereum 101 - Parte 2 - Comprendere i nodi](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 febbraio 2019_
 - [Eseguire i nodi completi di Ethereum: una guida per i poco motivati](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 novembre 2019_
-- [Eseguire un nodo di Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, aggiornato spesso_
 
 ## Argomenti correlati {#related-topics}
 

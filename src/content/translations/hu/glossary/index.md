@@ -49,7 +49,7 @@ Egy validátor szavazata egy [Beacon Chain](#beacon-chain) vagy egy [shard](#sha
 
 Egy Eth2 fejlesztés, mely az Ethereum hálózat koordinátora lesz. Bevezeti a [letétbizonyítékot](#proof-of-stake) és a [validátorokat](#validator) az Ethereumra. Idővel össze fog olvadni a [főhálózattal](#mainnet).
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Beacon Chain
 </DocLink>
 
@@ -603,7 +603,7 @@ A [2. réteg](#layer-2) skálázódásának egyik módszere, amely több tranzak
 
 Az Ethereum negyedik és végső fejlesztési fázisa.
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 
@@ -615,7 +615,7 @@ Kriptográfiai hash függvények egy családja, melyet a National Institute of S
 
 Egy [proof-of-stake](#proof-of-stake) lánc, melyet a [Beacon Chain](#beacon-chain) koordinált és a [validátorok](#validator) tartják biztonságban. 64 lesz hozzáadva a hálózathoz az Eth2 shard lánc fejlesztés részeként. A shard láncok megnövelt tranzakció átvitelt tesznek majd lehetővé az Ethereumon extra adat szolgáltatással az olyan [2. réteg](#layer-2) megoldások részére, mint az [optimista összegzők](#optimistic-rollups) és az [ZK összegzők](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/roadmap/danksharding">
   Shard láncok
 </DocLink>
 

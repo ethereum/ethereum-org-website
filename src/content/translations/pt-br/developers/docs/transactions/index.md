@@ -22,14 +22,15 @@ As transações exigem uma taxa e devem ser incluídas em um bloco validado. Par
 
 Uma transação enviada inclui as seguintes informações:
 
-- `recipient`: o endereço de recebimento (se uma conta de propriedade externa, a transação transferirá o valor. Se uma conta de contrato, a transação executará o código do contrato)
-- `signature`: o identificador do remetente. Isto é gerado quando a chave privada do remetente assina a transação e confirma que o remetente autorizou esta transação
-- `nonce`: um contador de incremento sequencial que indica o número da transação da conta
-- `value`: quantidade de ETH para transferir do remetente para o destinatário (em WEI, uma denominação de ETH)
-- `data`: campo opcional para incluir dados arbitrários
-- `gasLimit`: a quantidade máxima de gás que pode ser consumida pela transação. As unidades de gás representam etapas de cálculo
-- `maxPriorityFeePerGas` – a quantidade máxima de gás a ser incluída como gorjeta para o validador
-- `maxFeePerGas`: a quantidade máxima de gás disposta a ser paga pela transação (inclusive de `baseFeePerGas` e `maxPriorityFeePerGas`)
+- `from`: o endereço do remetente que assinará a transação. Ela será uma conta de propriedade externa, pois as contas de contrato não podem enviar transações.
+- `recipient`: o endereço de recebimento (se for uma conta de propriedade externa, a transação transferirá o valor. Se for uma conta de contrato, a transação executará o código do contrato)
+- `signature`: o identificador do remetente. Ele é gerado quando a chave privada do remetente assina a transação e confirma que o remetente autorizou essa transação.
+- `nonce`: um contador de incremento sequencial que indica o número da transação a partir da conta.
+- `value`: a quantidade de ETH a transferir do remetente para o destinatário (denominado em WEI, onde 1ETH equivale a 1e+18wei).
+- `data`: o campo opcional para incluir dados arbitrários.
+- `gasLimit`: a quantidade máxima de gás que pode ser consumida pela transação. A [EVM](https://ethereum.org/en/developers/docs/evm/opcodes) especifica as unidades de gás necessárias para cada etapa computacional.
+- `maxPriorityFeePerGas`: o preço máximo do gás consumido a ser incluído como gorjeta para o validador.
+- `maxFeePerGas`: a taxa máxima por unidade de gás disposta a ser paga pela transação (inclusive de `baseFeePerGas` e `maxPriorityFeePerGas`)
 
 Gás é uma referência ao cálculo necessário para processar a transação por um validador. Os usuários têm que pagar uma taxa por este cálculo. O `gasLimit` e o `maxPriorityFeePerGas` determinam a taxa máxima de transação paga ao validador. [Mais sobre gás](/developers/docs/gas/).
 
@@ -51,7 +52,7 @@ Mas um objeto de transação deve ser assinado usando a chave privada do remeten
 
 Um cliente Ethereum como o Geth irá lidar com este processo de assinatura.
 
-Exemplo de chamada [JSON-RPC](https://eth.wiki/json-rpc/API):
+Exemplo de chamada [JSON-RPC](/developers/docs/apis/json-rpc):
 
 ```json
 {
@@ -98,7 +99,7 @@ Exemplo de resposta:
 }
 ```
 
-- o `raw` é a transação assinada em Recursive Length Prefix (RLP) na forma codificada
+- o `raw` é a transação assinada no [Prefixo de Tamanho Recursivo (RLP)](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp) na forma codificada
 - `tx` é a transação assinada no formato JSON
 
 Com o hash da assinatura, a transação pode ser provada criptograficamente de que veio do remetente e enviada para a rede.
@@ -162,10 +163,10 @@ Qualquer gás não usado em uma transação é reembolsado para a conta do usuá
 
 Quando uma transação é enviada, acontece o seguinte:
 
-1. Depois de enviar uma transação, a criptografia gera um hash de transação: `0x97d99bc77292111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
-2. A transação é então transmitida para a rede e incluída em um pool com muitas outras transações.
+1. Um hash de transação é gerado criptograficamente: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
+2. A transação é então transmitida para a rede e adicionada a um pool de transações que compreende todas as outras transações de rede pendentes.
 3. Um validador deve escolher sua transação e incluí-la em um bloco para verificar a transação e considerá-la "bem-sucedida".
-4. Com o passar do tempo, o bloco que contém sua transação será atualizado para "justificado" e depois "finalizado". Essas atualizações tornam muito mais certo de que sua transação foi bem-sucedida e nunca será alterada. Uma vez que um bloco é "finalizado", ele só pode ser alterado por um ataque que custaria muitos bilhões de dólares.
+4. Com o passar do tempo, o bloco que contém sua transação será atualizado para "justificado" e depois "finalizado". Essas atualizações tornam muito mais certo de que sua transação foi bem-sucedida e nunca será alterada. Uma vez que um bloco é “finalizado”, ele só poderá ser alterado por um ataque na rede que custe muitos bilhões de dólares.
 
 ## Uma demonstração visual {#a-visual-demo}
 
@@ -179,13 +180,11 @@ O Ethereum originalmente tinha um formato para transações. Cada transação po
 
 `RLP ([emissor, taxa de "queima", parâmetros de "queima", destino, valor, dados, v, r, s])`
 
-O Ethereum evoluiu para apoiar vários tipos de transações, permitindo que novos recursos, como listas de acesso e [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) sejam implementados sem que isso afete os modelos transacionais precursores.
+O Ethereum evoluiu para apoiar vários tipos de transações, permitindo que novos recursos, como listas de acesso e [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) sejam implementados sem que isso afete os formatos de transação herdados.
 
-[EIP-2718: Carta de Transações Redigidas](https://eips.ethereum.org/EIPS/eip-2718) trata-se de um tipo de transação que é um "envelope" para os tipos de transações futuras.
+[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) é o que permite esse comportamento. Transações são interpretadas como:
 
-EIP-2718 é um novo envelope generalizado para transações tipadas. No novo padrão, as transações são interpretadas como:
-
-`TransactionType ├TransactionPayload`
+`TransactionType || TransactionPayload`
 
 Onde os campos são definidos como:
 
@@ -196,7 +195,7 @@ Onde os campos são definidos como:
 
 - [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
-_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione-o!_
+_Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-a!_
 
 ## Tópicos relacionados {#related-topics}
 

@@ -5,7 +5,7 @@ lang: ja
 ---
 
 <InfoBanner emoji=":wave:">
-プルーフ・オブ・ワークは、イーサリアムの合意メカニズムの基盤ではなくなり、すでにマイニングは廃止されています。 マイニングに代わって、イーサリアムはETHをステーキングするバリデータにより保護されています。 今日からETHのステーキングを始めることができます。 詳細については<a href='/upgrades/merge/'>マージ</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>プルーフ・オブ・ステーク</a>および<a href='/staking/'>ステーキング</a>を参照してください。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。
+プルーフ・オブ・ワークは、イーサリアムの合意メカニズムの基盤ではなくなり、すでにマイニングは廃止されています。 マイニングに代わって、イーサリアムはETHをステーキングするバリデータにより保護されています。 今日からETHのステーキングを始めることができます。 詳細については<a href='/roadmap/merge/'>マージ</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>プルーフ・オブ・ステーク</a>および<a href='/staking/'>ステーキング</a>を参照してください。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。
 </InfoBanner>
 
 ## 前提知識 {#prerequisites}
@@ -67,8 +67,6 @@ Ether のマイニング ＝ ネットワークの保護
 [マイニングアルゴリズムの詳細](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
 
 ## 参考文献 {#further-reading}
-
-- [イーサリアムのマイニングとは](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
 ## 関連ツール {#related-tools}
 

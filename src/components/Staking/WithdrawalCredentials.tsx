@@ -1,10 +1,12 @@
 // Import libraries
 import React, { FC, useState, useMemo, ChangeEvent } from "react"
-import { Button, Flex, Input, Spinner, Text } from "@chakra-ui/react"
+import { Button, Flex, Input, Text } from "@chakra-ui/react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 // Components
 import CopyToClipboard from "../CopyToClipboard"
 import Emoji from "../Emoji"
-import Link from "../Link"
+import Translation from "../Translation"
+// Utilites
 import { trackCustomEvent } from "../../utils/matomo"
 
 interface Validator {
@@ -16,6 +18,7 @@ interface Validator {
 
 interface IProps {}
 const WithdrawalCredentials: FC<IProps> = () => {
+  const { t } = useTranslation()
   const [isLoading, setIsLoading] = useState<{
     mainnet: boolean
     testnet: boolean
@@ -25,23 +28,25 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const [validator, setValidator] = useState<Validator | null>(null)
 
   const checkWithdrawalCredentials = async (isTestnet: boolean = false) => {
+    const network = isTestnet ? "Goerli" : "Mainnet"
+    const networkLowercase = network.toLowerCase()
     trackCustomEvent({
       eventCategory: `Validator index`,
-      eventAction: `Verify on ${isTestnet ? "Goerli" : "Mainnet"}`,
+      eventAction: `Verify on ${network}`,
       eventName: `click`,
     })
     setHasError(false)
     setIsLoading((prev) => ({
       ...prev,
-      [isTestnet ? "testnet" : "mainnet"]: true,
+      [networkLowercase]: true,
     }))
-    const endpoint = `https://${
-      isTestnet ? "goerli." : ""
-    }beaconcha.in/api/v1/validator/${inputValue}`
+    const endpoint = `https://${networkLowercase}.beaconcha.in/api/v1/validator/${inputValue}`
     try {
       const response = await fetch(endpoint)
       const { data } = await response.json()
-      const withdrawalCredentials = data.withdrawalcredentials
+      const withdrawalCredentials = data.length
+        ? data[0].withdrawalcredentials
+        : data.withdrawalcredentials
       setValidator({
         validatorIndex: parseInt(inputValue),
         withdrawalCredentials,
@@ -54,7 +59,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
     } finally {
       setIsLoading((prev) => ({
         ...prev,
-        [isTestnet ? "testnet" : "mainnet"]: false,
+        [networkLowercase]: false,
       }))
     }
   }
@@ -76,7 +81,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
       return (
         <Flex bg="errorNeutral" p={4}>
           <Text m={0} color="error">
-            Oops! Double check validator index number and try again.
+            <Translation id="comp-withdrawal-credentials-error" />
           </Text>
         </Flex>
       )
@@ -86,10 +91,12 @@ const WithdrawalCredentials: FC<IProps> = () => {
         <Flex bg="successNeutral" p={4}>
           <Text m={0} color="success">
             <Text as="span" fontWeight="bold">
-              Validator index {validator.validatorIndex} is ready to start
-              receiving rewards!
-            </Text>{" "}
-            Withdrawal credentials linked to execution address{" "}
+              <Translation
+                id="comp-withdrawal-credentials-upgraded-1"
+                options={{ validatorIndex: validator.validatorIndex }}
+              />{" "}
+            </Text>
+            <Translation id="comp-withdrawal-credentials-upgraded-2" />{" "}
             <CopyToClipboard text={longAddress} inline>
               {(isCopied) => (
                 <>
@@ -100,7 +107,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
                     <>
                       <Emoji text="✅" fontSize="lg" mr={2} ml={2} />
                       <Text as="span" title={longAddress}>
-                        Copied!
+                        <Translation id="copied" />
                       </Text>
                     </>
                   ) : (
@@ -116,13 +123,13 @@ const WithdrawalCredentials: FC<IProps> = () => {
       <Flex bg="errorNeutral" p={4}>
         <Text m={0} color="error">
           <Text as="span" fontWeight="bold">
-            This {validator.isTestnet ? "Goerli testnet" : ""} validator needs
-            to be upgraded.
+            {validator.isTestnet ? (
+              <Translation id="comp-withdrawal-credentials-not-upgraded-1-testnet" />
+            ) : (
+              <Translation id="comp-withdrawal-credentials-not-upgraded-1" />
+            )}
           </Text>{" "}
-          Instructions on how to upgrade can currently be found at{" "}
-          <Link to="https://zhejiang.launchpad.ethereum.org/withdrawals">
-            Zhejiang Testnet Staking Launchpad
-          </Link>
+          <Translation id="comp-withdrawal-credentials-not-upgraded-2" />
         </Text>
       </Flex>
     )
@@ -137,7 +144,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
           value={inputValue}
           onChange={handleChange}
           w={{ base: "full", sm: "18ch" }}
-          placeholder="Validator index"
+          placeholder={t("comp-withdrawal-credentials-placeholder")}
           bg="background"
         />
         <Flex
@@ -147,18 +154,18 @@ const WithdrawalCredentials: FC<IProps> = () => {
         >
           <Button
             onClick={() => checkWithdrawalCredentials()}
-            disabled={!inputValue.length}
+            isDisabled={!inputValue.length}
             isLoading={isLoading.mainnet}
           >
-            Verify on Mainnet
+            <Translation id="comp-withdrawal-credentials-verify-mainnet" />
           </Button>
           <Button
             onClick={() => checkWithdrawalCredentials(true)}
-            disabled={!inputValue.length}
+            isDisabled={!inputValue.length}
             variant="outline"
             isLoading={isLoading.testnet}
           >
-            Verify on Goerli
+            <Translation id="comp-withdrawal-credentials-verify-goerli" />
           </Button>
         </Flex>
       </Flex>

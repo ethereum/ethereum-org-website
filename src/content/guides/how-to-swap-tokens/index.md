@@ -6,7 +6,7 @@ lang: en
 
 # How to swap tokens
 
-Tired of searching for an exchange that lists all your favorite tokens? You can swap most of the tokens using decentralized exchanges.
+Are you tired of searching for an exchange that lists all your favorite tokens? You can swap most of the tokens using decentralized exchanges.
 
 A token swap involves the exchange of two different assets that exist on the Ethereum network, for example swapping ETH for DAI (an ERC-20 token). The process is very fast and cheap. You will need to have a crypto wallet to swap tokens.
 
@@ -23,6 +23,8 @@ Some popular exchanges are:
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
+
+If you'd like to learn more about what DeFi is and how these new kinds of exchanges work, we can recommend the [Kernel Library](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi).
 
 ## 2. Select the pair of tokens you wish to swap
 
@@ -46,6 +48,7 @@ Review the details of the transaction. Check the exchange rate and any other fee
 You can view the progress of the transaction on any blockchain explorer. This process should not take longer than 10 minutes.
 
 You will automatically receive the swapped tokens in your wallet once the transaction is processed.
+<br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>

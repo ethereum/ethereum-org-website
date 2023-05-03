@@ -99,5 +99,6 @@
   "page-upgrades-bug-bounty-card-text": "Napastnik może czasami wprowadzić węzeł w stan, który powoduje odrzucenie jednego na sto poświadczeń dokonanych przez walidatora",
   "page-upgrades-bug-bounty-card-text-1": "Napastnik może z powodzeniem przeprowadzać ataki typu eclipse (zaćmienia informacji) na węzły z identyfikatorami równorzędnymi z 4 wiodącymi bajtami zerowymi",
   "page-upgrades-bug-bounty-card-text-2": "Napastnik może z powodzeniem podzielić duże części sieci, a uruchomienie luki w zabezpieczeniach jest dla niego banalnie proste",
-  "page-upgrades-bug-bounty-card-text-3": "Napastnik może z powodzeniem przeprowadzić zdalne wykonanie kodu na kliencie większościowym, a uruchomienie luki w zabezpieczeniach jest dla niego banalnie proste"
+  "page-upgrades-bug-bounty-card-text-3": "Napastnik może z powodzeniem przeprowadzić zdalne wykonanie kodu na kliencie większościowym, a uruchomienie luki w zabezpieczeniach jest dla niego banalnie proste",
+  "page-upgrades-question-title": "Często zadawane pytania"
 }

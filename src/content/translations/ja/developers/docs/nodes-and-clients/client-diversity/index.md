@@ -65,8 +65,6 @@ sidebarDepth: 2
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[Akula](https://akula.app)
-
 [Go-Ethereum](https://geth.ethereum.org/)
 
 ### コンセンサスクライアント {#consensus-clients}
@@ -89,11 +87,10 @@ sidebarDepth: 2
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-- [pools.invis.cloud](https://pools.invis.cloud/)
-- [slashed.info](https://www.slashed.info/)
 
 **実行レイヤー:**
 
+- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## 参考文献 {#further-reading}

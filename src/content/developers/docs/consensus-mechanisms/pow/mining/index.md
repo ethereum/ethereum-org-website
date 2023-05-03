@@ -5,7 +5,7 @@ lang: en
 ---
 
 <InfoBanner emoji=":wave:">
-Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href='/upgrades/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake</a>, and <a href='/staking/'>staking</a>. This page is for historical interest only.
+Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href='/roadmap/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake</a>, and <a href='/staking/'>staking</a>. This page is for historical interest only.
 </InfoBanner>
 
 ## Prerequisites {#prerequisites}
@@ -73,10 +73,6 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash was the successor to an original R&D algorithm known as ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 [More on mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
-
-## Further reading {#further-reading}
-
-- [What does it mean to mine Ethereum?](https://web.archive.org/web/20220917012350/https://docs.ethhub.io/using-ethereum/mining/) _EthHub (Archived)_
 
 ## Related topics {#related-topics}
 

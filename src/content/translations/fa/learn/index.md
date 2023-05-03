@@ -18,7 +18,6 @@ lang: fa
 
 علاوه بر اطلاعات موجود در این صفحه، منابع باارزش فراوان دیگری نیز وجود دارند که توسط جامعه اتریوم ایجاد شده اند:
 
-- [EthHub](https://docs.ethhub.io) _دانستنی‌های جامع پایه درباره اتریوم_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/)
   _یک منبع آموزشی اتریوم برای مبتدیان_
 - [Ethereum.wiki](https://eth.wiki) _یک ویکی فناوری اتریوم ساخته شده توسط جامعه اتریوم_
@@ -41,7 +40,6 @@ lang: fa
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
 - [Video: What is ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _April 25, 2019 - CME Group_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Updated often - EthHub_
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _July 23, 2019_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
@@ -65,14 +63,11 @@ lang: fa
 
 - Want to learn how to program on Ethereum with smart contracts? [ethereum.org/fa/developers](/fa/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
-- [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Updated often - Ethhub_
 - [چه ارتباطی بین قراردادهای هوشمند و اتریوم وجود دارد؟](https://coiniran.com/ethereum-and-smart-contracts/) _June 2017 - کوین ایران_
 
 ## گواه اثبات کار و ماینینگ {#proof-of-work-and-mining}
 
 اتریوم در حال حاضر از سیستمی به نام "گواه اثبات کار" استفاده می‌کند.این به شبکه اتریوم اجازه می‌دهد که روی وضعیت تمام اطلاعات ثبت‌شده روی بلاک‌چین اتریوم توافق شود، و مانع بعضی از انواع حملات اقتصادی می‌گردد.
-
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 
 در ETH 2.0 اتریوم روی سیستم دیگری به نام "گواه اثبات سهام" منتقل می‌شود.
 [Read more about ETH 2.0 below](#consensus-layer-upgrades)
@@ -109,7 +104,6 @@ lang: fa
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
-- [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Updated often - EthHub_
 
 ### زنجیره‌های جانبی {#sidechains}
 
@@ -125,13 +119,8 @@ lang: fa
 
 سرنیتی "Serenity" یا ETH 2.0 به ارتقای بزرگ بعدی پروتکل اتریوم هسته اتلاق می‌شود که از ترکیب چندین مرحله بهسازی پروتکل هسته اتریوم یا "لایه 1" تشکیل می‌شود.
 
-- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Updated often - EthHub_
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
-- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
-- [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _Jan 24, 2019 - EthHub_
-- [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Jul 15, 2019 - EthHub_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _July 18, 2019 - Bruno Škvorc_
 
 ## ETH 1.x {#execution-layer-upgrades}
@@ -139,7 +128,6 @@ lang: fa
 نام مجموعه‌ای از ارتقاهایی که شامل حال پروتکل فعلی اتریوم شده‌اند ETH 1.x می‌باشد.هدف از آن، ادامه بهبود و پشتیبانی از اتریوم، در حین توسعه و اجرای ETH 2.0 است.
 
 برای اطلاعات بیشتر، این مطلب را ببینید
-[EthHub’s explainer page about ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## اقتصاد‌های رمزارزی {#cryptoeconomics}
 

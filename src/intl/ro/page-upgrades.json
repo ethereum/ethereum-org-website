@@ -4,10 +4,18 @@
   "page-upgrades-beacon-date": "Expediat!",
   "page-upgrades-merge-date": "Septembrie 2022",
   "page-upgrades-shards-date": "~2023",
-  "page-upgrades-merge-banner-intro": "Fuziunea se apropie și aduce modificările la Ethereum.",
-  "page-upgrades-merge-banner-content-outdated": "În ceea ce privește aceste modificări, o parte din conținutul paginii nu este actualizat. Actualizările vor fi disponibile curând.",
-  "page-upgrades-merge-banner-developers-landing": "Unele documente au un banner care indică faptul că nu sunt actualizate. Actualizări vor fi disponibile curând.",
   "page-upgrades-post-merge-banner-tutorial-ood": "Acest tutorial nu este actualizat după fuziune și este posibil să nu funcționeze. Creează un PR dacă dorești să contribui.",
-  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Acest tutorial nu este actualizat după fuziune. Nodurile ușoare nu funcționează în prezent în dovada mizei, dar urmează a fi lansate curând.",
-  "page-upgrades-post-merge-banner-governance-ood": "O parte din conținutul acestei pagini nu este actualizat după fuziune. Creează un PR dacă dorești să contribui."
+  "page-upgrades-post-merge-banner-governance-ood": "O parte din conținutul acestei pagini nu este actualizat după fuziune. Creează un PR dacă dorești să contribui.",
+  "page-upgrades-upgrades-guide": "Ghid pentru actualizările Ethereum",
+  "page-upgrades-upgrades-docking": "Fuziunea",
+  "page-upgrades-shard-title": "Fragmentarea",
+  "page-upgrades-upgrades-beacon-chain": "Lanțul Beacon",
+  "consensus-beaconcha-in-desc": "Exploratorul lanțului Beacon open source",
+  "consensus-beaconscan-desc": "Exploratorul lanțului Beacon - Etherscan pentru nivelul consensului",
+  "consensus-become-staker": "Deveniți o persoană care plasează mize",
+  "consensus-become-staker-desc": "S-a lansat programul mizelor! Dacă doriți să mizați ETH pentru asigurarea rețelei, informați-vă care sunt riscurile.",
+  "consensus-explore": "Explorați datele",
+  "consensus-run-beacon-chain": "Rulați un client de consens",
+  "consensus-run-beacon-chain-desc": "Ethereum necesită rularea a cât mai multor clienți. Contribuiți în favoarea acestui bun public Ethereum!",
+  "read-more": "Aflați mai multe"
 }

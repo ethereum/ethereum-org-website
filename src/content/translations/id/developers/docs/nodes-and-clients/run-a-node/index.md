@@ -21,7 +21,7 @@ Langkah pertama dalam menjalankan node Anda adalah memilih pendekatan Anda. Anda
 
 Implementasi klien memungkinkan mode sinkronisasi yang berbeda dan beragam opsi lainnya. [Mode sinkronisasi](/developers/docs/nodes-and-clients/#sync-modes) mewakili metode pengunduhan dan pengesahan data rantai blok yang berbeda. Sebelum memulai node, Anda harus memutuskan jaringan dan mode sinkronisasi apa yang akan digunakan. Yang paling penting untuk dipertimbangkan adalah ruang disk dan waktu sinkronisasi yang dibutuhkan klien.
 
-Semua fitur dan opsi dapat ditemukan di dokumentasi klien. Beragam konfigurasi klien dapat diatur dengan mengeksekusi klien dengan bendera yang sesuai. Anda bisa mendapat informasi lebih lanjut mengenai bendera dari [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) atau dokumentasi klien. Untuk kebutuhan pengujian, Anda mungkin memilih menjalankan klien pada salah satu jaringan testnet. [Lihat ringkasan jaringan yang didukung](/developers/docs/nodes-and-clients/#execution-clients).
+Semua fitur dan opsi dapat ditemukan di dokumentasi klien. Beragam konfigurasi klien dapat diatur dengan mengeksekusi klien dengan bendera yang sesuai. Untuk kebutuhan pengujian, Anda mungkin memilih menjalankan klien pada salah satu jaringan testnet. [Lihat ringkasan jaringan yang didukung](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Lingkungan dan perangkat keras {#environment-and-hardware}
 
@@ -142,7 +142,7 @@ Anda perlu menjaga perangkat lunak klien Anda dalam versi terkini dengan patch k
 
 #### Menjalankan layanan tambahan {#running-additional-services}
 
-Menjalankan node Anda sendiri memungkinkan Anda menggunakan layanan yang membutuhkan akses langsung ke RPC klien Ethereum. Layanan ini dibangun di atas Ethereum seperti [solusi lapisan 2](/developers/docs/scaling/#layer-2-scaling), [klien konsensus](/upgrades/get-involved/#clients), dan infrastruktur Ethereum lainnya.
+Menjalankan node Anda sendiri memungkinkan Anda menggunakan layanan yang membutuhkan akses langsung ke RPC klien Ethereum. Layanan ini dibangun di atas Ethereum seperti [solusi lapisan 2](/developers/docs/scaling/#layer-2-scaling), klien konsensus, dan infrastruktur Ethereum lainnya.
 
 #### Memonitor node {#monitoring-the-node}
 
@@ -152,7 +152,6 @@ Menjalankan node Anda sendiri memungkinkan Anda menggunakan layanan yang membutu
 
 - [Menganalisis persayaratan perangkat keras untuk menjadi node tervalidasi penuh Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Menjalankan Node Penuh Ethereum: Satu Panduan untuk Anda yang Sedikit Termotivasi](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
-- [Menjalankan Node Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, sering diperbarui_
 - [Menjalankan Node Hyperledger Besu pada Jaringan Utama Ethereum: Manfaat, Persyaratan, dan Persiapannya](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Mei 2020_
 - [Menyebarkan Klien Nethermind Ethereum dengan Memonitor Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 Juli 2020_
 

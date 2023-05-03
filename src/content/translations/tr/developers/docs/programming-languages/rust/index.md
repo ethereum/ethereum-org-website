@@ -30,9 +30,6 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 ## Orta seviye makaleler {#intermediate-articles}
 
-- [Rust-Web3 Belgeleri](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 Çalışma Örnekleri](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## İleri düzey kullanım Şşkilleri {#advanced-use-patterns}
 
 - [Ethereum benzeri ağ ile etkileşim kurmak için pwasm_ethereum externs kütüphanesi](https://github.com/openethereum/pwasm-ethereum)
@@ -49,7 +46,6 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API referansı_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum Sanal Makinesi Uygulaması_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js kütüphanesinin Rust uygulaması_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust'ta Wavelet akıllı sözleşme_
 - [Foundry](https://github.com/gakonst/foundry)- _Ethereum uygulama geliştirme için araç takımı_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum kütüphanesi ve cüzdan uygulaması_

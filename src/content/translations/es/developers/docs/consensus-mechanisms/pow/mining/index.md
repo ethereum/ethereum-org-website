@@ -61,8 +61,6 @@ Observa a Austin mientras te guía por el proceso de minado y la cadena de bloqu
 
 ## Más información {#further-reading}
 
-- [¿Qué significa minar Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
 ## Herramientas relacionadas {#related-tools}
 
 - [Principales mineros de Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

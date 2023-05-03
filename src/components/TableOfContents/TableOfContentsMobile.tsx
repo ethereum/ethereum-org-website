@@ -29,7 +29,7 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
 
   return (
     <Show below="l">
-      {/* TODO: switch `l` to `lg` after UI migration */}
+      {/* TODO: switch `l` to `lg` after UI migration and use `hideBelow` prop */}
       <Box
         as="aside"
         background="background"

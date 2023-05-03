@@ -8,7 +8,7 @@ lang: en
 
 We want to make sure we list the best resources possible so users can navigate the layer 2 space in a safe and confident manner.
 
-Anyone is free to suggest adding a layer 2 on ethereum.org. If there's a layer 2 that we have missed, **[please suggest it](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md)!**
+Anyone is free to suggest adding a layer 2 on ethereum.org. If there's a layer 2 that we have missed, **[please suggest it](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
 We currently list L2s on the following pages:
 
@@ -50,6 +50,8 @@ _We do not consider other scaling solutions that don't use Ethereum for data ava
 
 **Date project went live**
 
+- A layer 2 that has been "live" on Mainnet for over 6 months
+
 - Newer projects that have not been battle-tested by users are less likely to be listed.
 
 **External security audit**
@@ -90,6 +92,6 @@ _We do not consider other scaling solutions that don't use Ethereum for data ava
 
 If you want to add a layer 2 to ethereum.org, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Create an issue
 </ButtonLink>

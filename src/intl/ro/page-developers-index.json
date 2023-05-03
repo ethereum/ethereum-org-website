@@ -8,7 +8,6 @@
   "page-developers-advanced": "Avansat",
   "page-developers-api-desc": "Utilizarea bibliotecilor pentru a interacționa cu contractele inteligente",
   "page-developers-api-link": "API-urile pentru backend",
-  "page-developers-aria-label": "Meniul pentru dezvoltatori",
   "page-developers-block-desc": "Loturile de tranzacții adăugate la blockchain",
   "page-developers-block-explorers-desc": "Portalul dvs. către datele Ethereum",
   "page-developers-block-explorers-link": "Exploratorii de blocuri",
@@ -84,5 +83,7 @@
   "page-developers-transactions-desc": "Cum se schimbă starea Ethereum",
   "page-developers-transactions-link": "Tranzacțiile",
   "page-developers-web3-desc": "Modul în care lumea dezvoltării web3 este diferită",
-  "page-developers-web3-link": "Web2 față de Web3"
+  "page-developers-web3-link": "Web2 față de Web3",
+  "alt-eth-blocks": "Ilustrația blocurilor formând simbolul ETH",
+  "page-assets-doge": "Câine folosind aplicații dapps"
 }

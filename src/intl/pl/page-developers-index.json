@@ -8,7 +8,6 @@
   "page-developers-advanced": "Zaawansowane",
   "page-developers-api-desc": "Używanie bibliotek do interakcji z inteligentnymi kontraktami",
   "page-developers-api-link": "Backendowe API",
-  "page-developers-aria-label": "Strona główna dewelopera",
   "page-developers-block-desc": "Partie transakcji dodane do blockchain",
   "page-developers-block-explorers-desc": "Twój portal do danych Ethereum",
   "page-developers-block-explorers-link": "Eksplorator bloków",
@@ -80,5 +79,7 @@
   "page-developers-transactions-desc": "Sposób, w jaki zmienia się stan Ethereum",
   "page-developers-transactions-link": "Transakcje",
   "page-developers-web3-desc": "Różnice istniejące w rozwoju sieci 3",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 vs Web3",
+  "alt-eth-blocks": "Ilustracja bloków zorganizowanych jak symbol ETH",
+  "page-assets-doge": "Pieseł używający dapps"
 }

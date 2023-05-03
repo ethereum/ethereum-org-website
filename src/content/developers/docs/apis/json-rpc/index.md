@@ -6,7 +6,7 @@ lang: en
 
 In order for a software application to interact with the Ethereum blockchain - either by reading blockchain data or sending transactions to the network - it must connect to an Ethereum node.
 
-For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](https://github.com/ethereum/execution-apis), so there are a uniform set of methods that applications can rely on regardless of the specific node or client implementation.
+For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](https://github.com/ethereum/execution-apis), so there is a uniform set of methods that applications can rely on regardless of the specific node or client implementation.
 
 [JSON-RPC](https://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON (RFC 4627) as data format.
 
@@ -75,6 +75,8 @@ The following options are possible for the defaultBlock parameter:
 - `HEX String` - an integer block number
 - `String "earliest"` for the earliest/genesis block
 - `String "latest"` - for the latest mined block
+- `String "safe"` - for the latest safe head block
+- `String "finalized"` - for the latest finalized block
 - `String "pending"` - for the pending state/transactions
 
 ## Examples
@@ -358,6 +360,31 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
+## eth_chainId {#eth_chainId}
+
+Returns the chain ID used for signing replay-protected transactions.
+
+**Parameters**
+
+None
+
+**Returns**
+
+`chainId`, hexadecimal value as a string representing the integer of the current chain id.
+
+**Example**
+
+```js
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
+// Result
+{
+  "id":67,
+  "jsonrpc": "2.0",
+  "result": "0x1"
+}
+```
+
 ### eth_mining {#eth_mining}
 
 Returns `true` if client is actively mining new blocks.
@@ -490,7 +517,7 @@ Returns the balance of the account of given address.
 **Parameters**
 
 1. `DATA`, 20 Bytes - address to check for balance.
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -521,7 +548,7 @@ Returns the value from a storage position at a given address.
 
 1. `DATA`, 20 Bytes - address of the storage.
 2. `QUANTITY` - integer of the position in the storage.
-3. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter)
+3. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
 
 **Returns**
 
@@ -588,7 +615,7 @@ Returns the number of transactions _sent_ from an address.
 **Parameters**
 
 1. `DATA`, 20 Bytes - address.
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -649,7 +676,7 @@ Returns the number of transactions in a block matching the given block number.
 
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"` or `"pending"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter).
+1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"` or `"pending"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
 
 ```js
 params: [
@@ -709,7 +736,7 @@ Returns the number of uncles in a block from a block matching the given block nu
 
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string "latest", "earliest" or "pending", see the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter)
+1. `QUANTITY|TAG` - integer of a block number, or the string "latest", "earliest" or "pending", see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -741,7 +768,7 @@ Returns code at a given address.
 **Parameters**
 
 1. `DATA`, 20 Bytes - address
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -926,7 +953,7 @@ Executes a new message call immediately without creating a transaction on the bl
 - `value`: `QUANTITY` - (optional) Integer of the value sent with this transaction
 - `data`: `DATA` - (optional) Hash of the method signature and encoded parameters. For details see [Ethereum Contract ABI in the Solidity documentation](https://docs.soliditylang.org/en/latest/abi-spec.html)
 
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"` or `"pending"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
 
 **Returns**
 
@@ -951,7 +978,7 @@ Generates and returns an estimate of how much gas is necessary to allow the tran
 
 **Parameters**
 
-See [eth_call](#eth_call) parameters, expect that all properties are optional. If no gas limit is specified geth uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending block gas limit.
+See [eth_call](#eth_call) parameters, except that all properties are optional. If no gas limit is specified geth uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending block gas limit.
 
 **Returns**
 
@@ -1053,7 +1080,7 @@ Returns information about a block by block number.
 
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"` or `"pending"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter).
+1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"` or `"pending"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
 2. `Boolean` - If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.
 
 ```js
@@ -1168,7 +1195,7 @@ Returns information about a transaction by block number and transaction index po
 
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"` or `"pending"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"` or `"pending"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - the transaction index position.
 
 ```js
@@ -1219,7 +1246,7 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 - `contractAddress `: `DATA`, 20 Bytes - The contract address created, if the transaction was a contract creation, otherwise `null`.
 - `logs`: `Array` - Array of log objects, which this transaction generated.
 - `logsBloom`: `DATA`, 256 Bytes - Bloom filter for light clients to quickly retrieve related logs.
-- `type`: `DATA` - integer of the transaction type, `0x00` for legacy transactions, `0x01` for access list types, `0x02` for dynamic fees.
+- `type`: `QUANTITY` - integer of the transaction type, `0x0` for legacy transactions, `0x1` for access list types, `0x2` for dynamic fees.
   It also returns _either_ :
 - `root` : `DATA` 32 bytes of post-transaction stateroot (pre Byzantium)
 - `status`: `QUANTITY` either `1` (success) or `0` (failure)
@@ -1292,7 +1319,7 @@ Returns information about a uncle of a block by number and uncle index position.
 
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"` or `"pending"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block-parameter).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"` or `"pending"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - the uncle's index position.
 
 ```js

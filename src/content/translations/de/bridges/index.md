@@ -35,6 +35,8 @@ Brücken ermöglichen Folgendes:
 - Benutzer können auf neue Plattformen zugreifen, und die Vorteile verschiedener Blockchains zu nutzen.
 - Entwickler aus verschiedenen Blockchain-Ökosystemen können zusammenarbeiten, um neue Plattformen für die Benutzer zu erschaffen.
 
+[Wie man Token auf die Layer 2 überträgt](/guides/how-to-use-a-bridge/)
+
 <Divider />
 
 ## Anwendungsfälle für Brücken {#bridge-use-cases}

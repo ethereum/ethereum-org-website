@@ -25,7 +25,7 @@ A bug in an individual client is less of a risk to the network when representing
 
 ### Resilience to attacks {#resilience}
 
-Client diversity also offers resilience to attacks. For example, an attack that [tricks a particular client](https://twitter.com/vdWijden/status/1437712249926393858) onto a particular branch of the chain is unlikely to be successful because other clients are unlikely to be exploitable in the same way and the canonical chain remains uncorrupted. Low client diversity increases the risk associated with a hack on the dominant client. Client diversity has already proven to be an important defence against malicious attacks on the network, for example the Shanghai denial-of-service attack in 2016 was possible because attackers were able to trick the dominant client (Geth) into executing a slow disk i/o operation tens of thousands of times per block. Because alternative clients were also online which did not share the vulnerability, Ethereum was able to resist the attack and continue to operate while the vulnerability in Geth was fixed.
+Client diversity also offers resilience to attacks. For example, an attack that [tricks a particular client](https://twitter.com/vdWijden/status/1437712249926393858) onto a particular branch of the chain is unlikely to be successful because other clients are unlikely to be exploitable in the same way and the canonical chain remains uncorrupted. Low client diversity increases the risk associated with a hack on the dominant client. Client diversity has already proven to be an important defense against malicious attacks on the network, for example the Shanghai denial-of-service attack in 2016 was possible because attackers were able to trick the dominant client (Geth) into executing a slow disk i/o operation tens of thousands of times per block. Because alternative clients were also online which did not share the vulnerability, Ethereum was able to resist the attack and continue to operate while the vulnerability in Geth was fixed.
 
 ### Proof-of-stake finality {#finality}
 
@@ -66,8 +66,6 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[Akula](https://akula.app)
-
 [Go-Ethereum](https://geth.ethereum.org/)
 
 ### Consensus clients {#consensus-clients}
@@ -92,11 +90,9 @@ Several dashboards give real-time client diversity statistics for the execution 
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-- [pools.invis.cloud](https://pools.invis.cloud/)
-- [slashed.info](https://www.slashed.info/)
+  **Execution layer:**
 
-**Execution layer:**
-
+- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Further reading {#further-reading}

@@ -193,7 +193,7 @@ const TutorialPage = ({
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
-            isMobile={true}
+            isMobile
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -220,7 +220,21 @@ const TutorialPage = ({
 export default TutorialPage
 
 export const query = graphql`
-  query TutorialPage($relativePath: String) {
+  query TutorialPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-developers-tutorials", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl
