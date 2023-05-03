@@ -22,7 +22,7 @@ Specifically, just because Arbitrum deployed a contract that uses the symbol `AR
 
 There are several tricks that scam token creator pull to appear legitimate. They can do those, because they write the smart contract that implements the scam token. This means it can produce any effect they want.
 
-- **Legitimate name and symbol**. As mentioned before, ERC-20 contracts can hae the same symbol and name as other ERC-20 contracts. You cannot count on those fields for security.
+- **Legitimate name and symbol**. As mentioned before, ERC-20 contracts can have the same symbol and name as other ERC-20 contracts. You cannot count on those fields for security.
 
 - **Legitimate owners**. Scam tokens often airdrop significant balances to addresses that can be expected to be legitimate holders of the real token.
 
@@ -37,7 +37,7 @@ Another trick that scammers pull is to direct users to user interfaces that enti
 
 ## What can you trust?
 
-How do you protect yourself? How do you know that the token you're getting is legitimate? The most important rule is **check the contract address**. Legitimate tokens come from legitimate organizations. For example, for `ARB` [you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token). 
+How do you protect yourself? How do you know that the token you're getting is legitimate? The most important rule is **check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's web site. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token). 
 
 Additionally, you can look at the size of liquidity pools. Scam tokens typically have tiny liquidity pools, if any, because the scammers don't want to risk real assets. For example, the `ARB` Uniswap pool holds over 300k$ as I'm writing this ([see here for the up to date value](https://info.uniswap.org/#/tokens/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1)) and buying a small amount is not going to change the price:
 
