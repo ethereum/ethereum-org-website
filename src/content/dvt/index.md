@@ -15,7 +15,7 @@ A way to think about DVT is that DVT is to validators as multisig is to wallets.
 
 ## How does DVT work? {#how-does-dvt-work}
 
-DVT uses multiple components to facilitate the distribution of an Ethereum validator:
+A DVT solution contains the following components :
 
 ![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
 
