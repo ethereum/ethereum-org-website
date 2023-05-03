@@ -7,7 +7,6 @@ lang: en
 # Distributed Validator Technology {#what-is-dvt}
 
 
-## What is DVT? {#what-is-dvt}
 
 **Distributed Validator Technology (DVT)** is a technology primitive in the evolving **Ethereum technology** stack aimed at improving the resilience and health of the Ethereum blockchain. The solution focuses on strengthening the backbone of the blockchain's PoS consensus by enabling multiple non-trusting parties to operate an Ethereum validator collectively, as opposed to how standard validators are operated. This shift in validator operation dramatically improves the liveness and security of the network while significantly reducing slashing, downtime, and centralization risks compared to standard validator setups. 
 
