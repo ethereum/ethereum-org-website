@@ -45,6 +45,7 @@ import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
+import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -211,6 +212,7 @@ const components = {
 const StaticPage = ({
   data: { siteData, pageData: mdx },
   pageContext: { relativePath, slug },
+  location,
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const { language } = useI18next()
 
@@ -246,6 +248,8 @@ const StaticPage = ({
           translationString={postMergeBannerTranslationString!}
         />
       )}
+      {/* TODO: REMOVE MAY 11 */}
+      <WritersCohortBanner pathname={location.pathname} />
       <Flex
         justifyContent="space-between"
         w="full"

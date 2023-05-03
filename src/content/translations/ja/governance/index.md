@@ -176,7 +176,6 @@ The DAO ハッキング事件をもっと見る
 イーサリアムのガバナンスは厳格には定義されていません。 さまざまなコミュニティ参加者が多様な視点を持っています。 下記にいくつかご紹介します。
 
 - [ブロックチェーンガバナンスに関するノート](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [イーサリアムのガバナンス](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [イーサリアムのガバナンスの仕組み](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [イーサリアムのガバナンスの仕組み](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [イーサリアムコアデベロッパーとは](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_

@@ -61,8 +61,6 @@ Austin'in madenciliği ve iş ispatı blok zincirini size açıklamasını izley
 
 ## Daha fazla okuma {#further-reading}
 
-- [Ethereum madenciliği yapmak ne anlama geliyor?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
 ## İlgili araçlar {#related-tools}
 
 - [En iyi Ethereum madencileri](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

@@ -120,7 +120,7 @@ A verificação de modelo usa a exploração do espaço do estado, que envolve c
 
 Comprovação de teorema é um método de raciocínio matemático sobre a exatidão de programas, incluindo contratos inteligentes. Ela envolve transformar o modelo do sistema de um contrato e as suas especificações em fórmulas matemáticas (declarações lógicas).
 
-O objetivo da comprovação de teorema é verificar a equivalência lógica entre essas declarações. "Equivalência lógica" (também chamada "implicação lógica") é um tipo de relação entre duas declarações em que a declaração A só pode ser verdadeira _se e somente se_ a declaração B for verdadeira.
+O objetivo da comprovação de teorema é verificar a equivalência lógica entre essas declarações. “Equivalência lógica” (também chamada de “bi-implicação lógica”) é um tipo de relação entre duas declarações, de modo que a primeira declaração é verdadeira, _se e somente se_, a segunda declaração for verdadeira.
 
 A relação necessária (equivalência lógica) entre as declarações sobre o modelo de um contrato e sua propriedade é formulada como uma declaração provável (chamada teorema). Usando um sistema formal de inferência, o comprovador do teorema automatizado pode verificar a validade do teorema. Em outras palavras, um comprovador de teorema pode comprovar de forma conclusiva se o modelo de um contrato inteligente corresponde precisamente às suas especificações.
 
@@ -134,7 +134,7 @@ Execução simbólica é um método de análise de um contrato inteligente que e
 
 A execução simbólica representa um traço de execução como uma fórmula matemática sobre valores simbólicos de entrada, também chamados de _predicado de caminho_. Um [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) é usado para verificar se um predicado de caminho é "satisfatório" (ou seja, existe um valor que pode cumprir a fórmula). Se um caminho vulnerável for cumprido, o solucionador SMT gerará um valor concreto que acionará a execução de guias em direção àquele caminho.
 
-Suponha que a função de um contrato inteligente receba como entrada um valor `uint` (`x`) e reverta quando `x` for maior que `5`, mas menor que `10`. Encontrar um valor para `x` que dispara o erro usando um procedimento de teste normal exigiria ser executado por dezenas de casos de teste (ou mais) sem a garantia de realmente encontrar uma entrada de disparo de erro.
+Suponha que a função de um contrato inteligente tome como entrada, um valor `uint` (`x`) e reverta quando `x` for maior que `5` e também menor que `10`. Encontrar um valor para `x` que dispara o erro usando um procedimento de teste normal exigiria ser executado por dezenas de casos de teste (ou mais) sem a garantia de realmente encontrar uma entrada de disparo de erro.
 
 Inversamente, uma ferramenta de execução simbólica executaria a função com o valor simbólico: `X > 5 ∧ X < 10` (ou seja, `x` é maior que 5 E `x` é menor que 10). O predicado do caminho associado `x = X > 5 ∧ X < 10` seria dada a um solucionador de SMT para resolver. Se determinado valor satisfaz a fórmula `x = X > 5 ∧ X < 10`, o solucionador SMT irá calculá-lo—por exemplo, o solucionador pode produzir `7` como um valor para `x`.
 

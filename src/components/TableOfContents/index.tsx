@@ -22,6 +22,7 @@ import Translation from "../Translation"
 import Mobile from "./TableOfContentsMobile"
 import ItemsList from "./ItemsList"
 import { getCustomId, Item, outerListProps } from "./utils"
+import { trackCustomEvent } from "../../utils/matomo"
 
 export { Item }
 
@@ -139,7 +140,14 @@ const TableOfContents: React.FC<IProps> = ({
                     },
                   }}
                   isChecked={isZenMode}
-                  onChange={() => handleZenModeChange()}
+                  onChange={() => {
+                    handleZenModeChange()
+                    trackCustomEvent({
+                      eventCategory: "zen mode",
+                      eventAction: "click",
+                      eventName: isZenMode ? "activate" : "deactivate",
+                    })
+                  }}
                 />
               </FormControl>
             </Flex>

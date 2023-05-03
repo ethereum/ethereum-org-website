@@ -6,9 +6,9 @@ lang: en
 
 # How to "register" an Ethereum account
 
-Anyone can create an Ethereum account for free with a specific type of app commonly known as a wallet. Wallets hold the keys that let you hold, send and receive crypto. You can also connect to projects on Ethereum that will let you trade NFTs, exchange coins, access games, unlock Defi and much more.
+Anyone can create an Ethereum account for free with a specific type of app commonly known as a wallet. Wallets create and secure the keys that let you hold, send and receive crypto. You can also connect to projects on Ethereum that will let you trade NFTs, exchange tokens, access games, and much more.
 
-Unlike traditional account registrations you may be used to, creating an Ethereum account is done privately and without asking permission. Accounts are controlled by keys that your wallet software helps you create, and are not issued by a third party, nor stored in a central registry.
+Unlike opening a new account with a company, creating an Ethereum account is done freely, privately and without asking permission. Accounts are controlled by keys that your wallet software helps you create, and are not issued by a third party, nor stored in a central registry.
 
 ## Step 1: Browse our list of wallets
 
@@ -49,11 +49,11 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
 
 ### Are my wallet and my Ethereum account the same?
 
-No, wallets have the ability to create a new Ethereum account, but the account lives on Ethereum and wallets connect to it. So if you lose your wallet you can still recover your account with the recovery phrase.
+No, just like online banking you can have many different accounts all stored in one wallet application. Your 12 or 24 word phrase secures them all: it is like the seed of a big tree (which is why you must keep it safe). Each branch of the tree holds a key, and every key is one of your accounts. If you lose access to the wallet (i.e. your tree gets cut down), you can always restore all your different accounts using other software and the same seed (which will always grow the same tree).
 
 ### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
 
-No you cannot as bitcoin and ether exists on two separate networks (i.e. different blockchains), each with their own bookkeeping models and address formats. There are many EVM (Ethereum Virtual Machine) compatible tokens & blockchains that you can use with your Ethereum address.
+No you cannot. Bitcoin and ether exist on two separate networks (i.e. different blockchains), each with their own bookkeeping models and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 
@@ -61,8 +61,8 @@ You can use the same address on all EVM compatible blockchains (if you have the 
 
 ### Is having my own wallet safer than keeping my funds on an exchange?
 
-Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankruptcy resulting in users' losing their savings which were being held in custody. Hacks, frozen accounts or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. Nonetheless, a poorly backed up recovery phrase potentially exposes you to more risks as compared to having your keys managed by an exchange. Make sure to store your recovery phrase well.
+Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankruptcy resulting in users' losing their savings which were being held in custody. Hacks, frozen accounts, or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. Nonetheless, a poorly backed up recovery phrase potentially exposes you to more risks as compared to having your keys managed by an exchange. Make sure to store your recovery phrase well.
 
 ### If I lose my phone/hardware wallet, do I need to use the same wallet app again to recover the lost funds?
 
-No, you can use almost any wallet as the recovery process is largely standardized whereby only knowledge of the recovery phrase is required. You will have to enter the recovery phrase into any new wallet app, it can be a different app from the one you used before. It is almost impossible to recover lost funds without the recovery phrase.
+No, you can use almost any wallet as the recovery process is largely standardized. This means that you can put the same 12 or 24 word phrase into most wallets and they will restore your same account. Be careful if you ever need to do this: it is best to make sure you are not connected to the internet when recovering your wallet so that your recovery phrase is not accidentally leaked. It is often impossible to recover lost funds without the recovery phrase.

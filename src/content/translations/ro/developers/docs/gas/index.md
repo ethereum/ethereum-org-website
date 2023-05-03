@@ -161,7 +161,6 @@ Dacă doriți să monitorizați prețurile gazului ca să vă puteți trimite ET
 ## Referințe suplimentare {#further-reading}
 
 - [Gazul Ethereum explicat](https://defiprime.com/gas)
-- [Este Ethereum mai scump de utilizat pe măsură ce prețul crește?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducerea consumului de gaz al contractelor dvs. inteligente](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Dovada-mizei comparativ cu dovada-muncii](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

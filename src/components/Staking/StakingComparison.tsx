@@ -4,7 +4,7 @@ import { Box, Flex, Heading, Text, useTheme } from "@chakra-ui/react"
 import Link from "../Link"
 import Translation from "../Translation"
 
-import { EventOptions, trackCustomEvent } from "../../utils/matomo"
+import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
 import { TranslationKey } from "../../utils/translations"
 import {
   StakingGlyphCloudIcon,
@@ -16,7 +16,7 @@ interface DataType {
   title: TranslationKey
   linkText: TranslationKey
   to: string
-  matomo: EventOptions
+  matomo: MatomoEventOptions
   color: string
   glyph: JSX.Element
 }

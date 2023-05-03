@@ -168,7 +168,6 @@ Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo up
 
 Upravljanje Ethereuma ni rigidno določeno. Različni sodelujoči v skupnosti imajo raznolike poglede nanj. Tukaj jih je nekaj:
 
-- [Upravljanje Ethereuma](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [Kako deluje Ethereum upravljanje?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Kako deluje Ethereum upravljanje](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Kaj je ključni Ethereum razvijalec?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_

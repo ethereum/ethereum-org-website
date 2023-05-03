@@ -91,11 +91,10 @@ Plusieurs tableaux de bord donnent des statistiques en temps réel de la diversi
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-- [pools.invis.cloud](https://pools.invis.cloud/)
-- [slashed.info](https://www.slashed.info/)
 
 **Couche d'exécution :**
 
+- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Complément d'information {#further-reading}

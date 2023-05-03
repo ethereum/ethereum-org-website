@@ -32,7 +32,6 @@ Numeroase proiecte oferă implementări ale Plasma pe care le puteți integra î
 
 ## Referințe suplimentare {#further-reading}
 
-- [EthHub pe Plasma](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Învățați Plasma](https://www.learnplasma.org/en/)
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editați această pagină și adăugați-o!_

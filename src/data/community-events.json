@@ -71,6 +71,15 @@
     "startDate": "2023-05-12",
     "endDate": "2023-05-14"
   },
+   {
+    "title": "ETH Tricolor Lanzamiento Road to Blockchain Week EC",
+    "to": "https://www.eventbrite.com/cc/launch-road-to-blockchain-week-ecuador-2023-2075369",
+    "sponsor": null,
+    "location": "Quito, Ecuador",
+    "description": "Introductory conferences on blockchain technology in Quito, at USFQ, UDLA, EPN.",
+    "startDate": "2023-05-15",
+    "endDate": "2023-05-20"
+  },
   {
     "title": "EDCON 2023",
     "to": "https://edcon.io/",
@@ -106,6 +115,15 @@
     "description": "ETH Belgrade is a playground for exploring Ethereum possibilities. As part of Belgrade Blockchain Week, this three-day conference gathers extraordinary minds and Ethereum enthusiasts to share knowledge and spark ideas that will ignite the whole ecosystem.",
     "startDate": "2023-06-02",
     "endDate": "2023-06-4"
+  },
+  {
+    "title": "ETHPrague",
+    "to": "https://ethprague.com/",
+    "sponsor": null,
+    "location": "Prague, Czech Republic",
+    "description": "ETHPrague is focusing on exploring solarpunk visions, solving sustainability issues, and addressing societal challenges by utilizing Ethereum, and discovering potential concepts or applications that do not yet exist.",
+    "startDate": "2023-06-09",
+    "endDate": "2023-06-11"
   },
   {
     "title": "ETHGlobal Paris",
@@ -233,7 +251,7 @@
     "startDate": "2023-06-23",
     "endDate": "2023-06-25"
   },
-    {
+  {
     "title": "ETHMilan",
     "to": "https://ethmilan.xyz/",
     "sponsor": null,
@@ -250,5 +268,14 @@
     "description": "2nd annual ETHToronto, in the birthplace of Ethereum. Official Hackathon of Blockchain Futurist Conference.",
     "startDate": "2023-08-13",
     "endDate": "2023-08-16"
+  },
+  {
+    "title": "ETHAccra",
+    "to": "https://www.ethaccra.xyz/",
+    "sponsor": null,
+    "location": "Ghana, Accra",
+    "description": "ETHAccra is a 3-day hackathon striving to educate young generations of web3 developers and builders.",
+    "startDate": "2023-09-07",
+    "endDate": "2023-09-09"
   }
 ]

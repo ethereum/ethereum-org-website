@@ -484,7 +484,7 @@ const WhatIsEthereumPage = ({
               </h2>
               <BannerGrid>
                 <BannerGridCell>
-                  <StatPrimary>3986</StatPrimary>
+                  <StatPrimary>4k+</StatPrimary>
                   <StatDescription>
                     Projects built on{" "}
                     <NoWrapText>
@@ -503,7 +503,7 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>71M+</StatPrimary>
+                  <StatPrimary>96M+</StatPrimary>
                   <StatDescription>
                     Accounts (wallets) with an ETH{" "}
                     <NoWrapText>
@@ -511,8 +511,8 @@ const WhatIsEthereumPage = ({
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
-                            "https://bitcoinist.com/ethereum-reaches-new-milestone-as-over-71-million-wallets-hold-eth/",
-                          apiProvider: "Bitcoinist",
+                            "https://messari.io/asset/ethereum/metrics/all",
+                          apiProvider: "Messari",
                           ariaLabel: "Read more about wallets stats",
                         })}
                       >
@@ -522,7 +522,7 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>50.5M</StatPrimary>
+                  <StatPrimary>53.3M+</StatPrimary>
                   <StatDescription>
                     Smart contracts on{" "}
                     <NoWrapText>
@@ -541,18 +541,16 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>$11.6T</StatPrimary>
+                  <StatPrimary>$0.41T</StatPrimary>
                   <StatDescription>
-                    Value moved through the Ethereum network in{" "}
+                    Value secured on{" "}
                     <NoWrapText>
-                      2021{" "}
+                      Ethereum{" "}
                       <Tooltip
                         content={tooltipContent({
-                          apiUrl:
-                            "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
-                          apiProvider: "Josh Stark",
-                          ariaLabel:
-                            "Read more about 2021 Ethereum network stats",
+                          apiUrl: "https://ultrasound.money/",
+                          apiProvider: "Ultrasound Money",
+                          ariaLabel: "Read more about about Ethereum as money",
                         })}
                       >
                         <Icon name="info" size="1rem" />
@@ -866,16 +864,17 @@ const WhatIsEthereumPage = ({
           <Translation id="page-what-is-ethereum-week-in-ethereum-desc" />
         </p>
         <p>
-          <Link to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I">
-            <Translation id="page-what-is-ethereum-the-year-in-ethereum-2021" />
-          </Link>{" "}
-          <Translation id="page-what-is-ethereum-the-year-in-ethereum-2021-desc" />
-        </p>
-        <p>
           <Link to="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
             <Translation id="page-what-is-ethereum-atoms-institutions-blockchains" />
           </Link>{" "}
           <Translation id="page-what-is-ethereum-atoms-institutions-blockchains-desc" />
+        </p>
+
+        <p>
+          <Link to="https://www.kernel.community/en/learn/module-1/dreamers">
+            <Translation id="page-what-is-ethereum-kernel-dreamers" />
+          </Link>{" "}
+          <Translation id="page-what-is-ethereum-kernel-dreamers-desc" />
         </p>
       </Content>
 

@@ -64,42 +64,6 @@ En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes mas 
 
 Ideamos constantemente novedosas maneras de recompensar a nuestros colaboradores, ¡así que esté al tanto!
 
-### En qué estamos trabajando {#our-projects}
-
-Nuestra comunidad de colaboradores está traduciendo activamente múltiples sitios web y recursos de alto impacto para la comunidad global de Ethereum.
-
-#### Ethereum.org {#ethereumorg}
-
-![](./ethereum-org-screenshot.png)
-
-[Ethereum.org](/) es un recurso educativo clave para la comunidad Ethereum y es el foco principal del Programa de traducción. Dado el tamaño, la extensión y el alcance del sitio web, es el sitio más impactante para traducir y ¡recomendamos comenzar por aquí!
-
-¡Participe!:
-
-- Únase al Proyecto de traducción de [ethereum.org en Crowdin](https://crowdin.com/project/ethereum-org/invite)
-
-#### Plataforma de lanzamiento de participación en Ethereum {#ethereum-staking-launchpad}
-
-![](./launchpad-screenshot.png)
-
-La [Plataforma de lanzamiento de participación](https://launchpad.ethereum.org/en/) permite a los usuarios de Ethereum convertirse en validadores y ayudar a afianzar el futuro de Ethereum mediante la acumulación de ETH.
-
-¡Participe!:
-
-- Visite la [página de traducción de la Plataforma de lanzamiento](/contributing/translation-program/launchpad-translations/)
-- Únase al [Proyecto de traducción de la plataforma de lanzamiento en Crowdin](https://crowdin.com/project/ethereum-staking-launchpad)
-
-#### Blog de Ethereum Foundation {#ethereum-foundation-blog}
-
-![](./blog-screenshot.png)
-
-El blog de [Ethereum Foundation](https://blog.ethereum.org/) es la herramienta principal de publicación para muchos equipos apoyados por EF y es la fuente de anuncios, actualizaciones, informes, resúmenes y otros comunicados públicos para la comunidad Ethereum.
-
-¡Participe!:
-
-- Visite la [página de traducción del blog](/contributing/translation-program/blog-translations/)
-- Únase al [Proyecto de traducción del blog en Crowdin](https://crowdin.com/project/ethereum-foundation-blog)
-
 ### Guías y recursos {#guides-and-resources}
 
 Si está contribuyendo al Programa de traducción o pensando en participar, le aconsejamos que consulte las guías de traducción siguientes:
