@@ -14,7 +14,6 @@ lang: en
 
 A way to think about DVT is that DVT is to validators as multisig is to wallets. Where standard validators use a single key to sign duties, the key of a Distributed Validator is split across multiple nodes. In the case of DVT, the "multisig" is operated by a consensus protocol (BFT) instead of human interaction. Enabling the distributed operation of an Ethereum validator with best-in-class security practices. 
 
-Distributing a new or existing validator is quite complex in practice, but using a DVT solution like ssv.network as a layer to split the validator private key into multiple key shares makes the technology more accessible. Regardless of the [DVT-implementation](<https://ssv.network/>) stakers can have multiple nodes each operating a key share in a cluster, allowing them to ensure the uptime of their validators.
 
 ## How does DVT work? {#how-does-dvt-work}
 
