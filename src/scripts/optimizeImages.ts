@@ -7,7 +7,7 @@ const rename = util.promisify(fs.rename)
 
 const matches = glob.sync(`src/assets/**/*.{png,jpg,jpeg}`)
 const MAX_WIDTH = 800
-const QUALITY = 70
+const QUALITY = 100
 
 Promise.all(
   matches.map(async (match) => {
