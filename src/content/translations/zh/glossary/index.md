@@ -328,7 +328,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 “以太坊 1”是指主网以太坊，即现有的工作量证明区块链。 该术语已弃用，取而代之的是“执行层”。 [详细了解此名称更改](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)。
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   有关以太坊升级的更多信息
 </DocLink>
 
