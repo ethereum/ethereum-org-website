@@ -175,7 +175,7 @@ Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zd
 - [Zdecentralizowana tożsamość (oraz dodatkowa sesja transmisji na żywo)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _świetny film szkoleniowy na temat zdecentralizowanej tożsamości autorstwa Andreasa Antonopoulosa._
 - [Logowanie za pomocą Ethereum i zdecentralizowanej tożsamości za pomocą Ceramic, IDX, React i 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _samouczek YouTube pokazujący, jak zbudować system zarządzania tożsamością do tworzenia, odczytywania i aktualizowania profilu użytkownika przy użyciu portfela Ethereum autorstwa Nadera Dabita._
 - [BrightID — zdecentralizowana tożsamość w Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _odcinek podcastu Bankless omawiający BrightID, zdecentralizowane rozwiązanie tożsamości dla Ethereum._
-- [Internet poza łańcuchem: zdecentralizowana tożsamość i weryfikowalne dane uwierzytelniające](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — prezentacja EthDenver 2022 autorstwa Evina McMullena.
+- [Internet poza łańcuchem: zdecentralizowana tożsamość i weryfikowalne dane uwierzytelniające](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _prezentacja EthDenver 2022 autorstwa Evina McMullena._
 
 ### Społeczności {#communities}
 
