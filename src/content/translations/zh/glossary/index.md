@@ -278,7 +278,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 ### 难度炸弹 {#difficulty-bomb}
 
-计划的使[工作量证明](#pow)[难度](#difficulty)呈指数级别增长的设置，旨在促进向[权益证明](#pos)的过渡，并减少发生[分叉](#hard-fork)的几率。 难度炸弹在[过渡到权益证明](/upgrades/merge)时弃用。
+计划的使[工作量证明](#pow)[难度](#difficulty)呈指数级别增长的设置，旨在促进向[权益证明](#pos)的过渡，并减少发生[分叉](#hard-fork)的几率。 难度炸弹在[过渡到权益证明](/roadmap/merge)时弃用。
 
 ### 数字签名 {#digital-signatures}
 
