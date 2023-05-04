@@ -5,11 +5,11 @@ author: "Trailofbits"
 lang: zh
 tags:
   - "solidity"
-  - "智能合约"
+  - "智能合同"
   - "安全性"
   - "测试"
   - "模糊测试"
-skill: advanced
+skill: intermediate
 published: 2020-04-10
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
@@ -138,13 +138,13 @@ Echidna 中有一些特定的地址：
 用此命令启动 Echidna：
 
 ```bash
-$ echidna-test contract.sol
+echidna-test contract.sol
 ```
 
 如果 contract.sol 包含多个合约，您可以指定目标合约：
 
 ```bash
-$ echidna-test contract.sol --contract MyContract
+echidna-test contract.sol --contract MyContract
 ```
 
 ### 总结：测试属性 {#summary-testing-a-property}
@@ -161,7 +161,7 @@ contract TestToken is Token{
 ```
 
 ```bash
-$ echidna-test testtoken.sol --contract TestToken
+echidna-test testtoken.sol --contract TestToken
 ...
 
 echidna_balance_under_1000: failed!💥
@@ -230,7 +230,7 @@ contract C {
 这个小例子迫使 Echidna 找到特定的交易序列来改变一个状态变量。 这对一个模糊测试工具来说很困难（建议使用符号执行工具，比如 [Manticore](https://github.com/trailofbits/manticore)）。 我们可以运行 Echidna 对此进行验证：
 
 ```bash
-$ echidna-test multi.sol
+echidna-test multi.sol
 ...
 echidna_state4: passed! 🎉
 Seed: -3684648582249875403
@@ -262,7 +262,7 @@ filterFunctions: ["f", "g", "h", "i"]
 使用配置文件 `blacklist.yaml` 运行 Echidna：
 
 ```bash
-$ echidna-test multi.sol --config blacklist.yaml
+echidna-test multi.sol --config blacklist.yaml
 ...
 echidna_state4: failed!💥
   Call sequence:
@@ -284,7 +284,7 @@ filterFunctions: ["f1", "f2", "f3"]
 ```
 
 ```bash
-$ echidna-test contract.sol --config config.yaml
+echidna-test contract.sol --config config.yaml
 ...
 ```
 
@@ -335,7 +335,7 @@ checkAsserts: true
 当我们在 Echidna 上运行这个合约时，我们会获得预期的结果：
 
 ```bash
-$ echidna-test assert.sol --config config.yaml
+echidna-test assert.sol --config config.yaml
 Analyzing contract: assert.sol:Incrementor
 assertion in inc: failed!💥
   Call sequence, shrinking (2596/5000):
@@ -402,7 +402,7 @@ contract Incrementor {
 ```
 
 ```bash
-$ echidna-test assert.sol --config config.yaml
+echidna-test assert.sol --config config.yaml
 Analyzing contract: assert.sol:Incrementor
 assertion in inc: failed!💥
   Call sequence, shrinking (2596/5000):
@@ -440,7 +440,7 @@ contract C {
 这个小例子迫使 Echidna 找到一系列交易来改变一个状态变量。 这对一个模糊测试工具来说很困难（建议使用符号执行工具，比如 [Manticore](https://github.com/trailofbits/manticore)）。 我们可以运行 Echidna 对此进行验证：
 
 ```bash
-$ echidna-test magic.sol
+echidna-test magic.sol
 ...
 
 echidna_magic_values: passed! 🎉
@@ -455,7 +455,7 @@ Seed: 2221503356319272685
 为了启用语料库的收集，请创建一个语料目录：
 
 ```bash
-$ mkdir corpus-magic
+mkdir corpus-magic
 ```
 
 和一个 [Echidna 配置文件](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
@@ -468,7 +468,7 @@ corpusDir: "corpus-magic"
 现在，我们可以运行工具并检查收集到的语料库：
 
 ```bash
-$ echidna-test magic.sol --config config.yaml
+echidna-test magic.sol --config config.yaml
 ```
 
 Echidna 仍然找不到正确的 magic 值，但我们可以看一看它收集到的语料库。 例如，其中一个文件是：
@@ -523,13 +523,13 @@ Echidna 仍然找不到正确的 magic 值，但我们可以看一看它收集�
 Echidna 需要一些帮助才能处理 `magic` 函数。 我们将复制和修改输入以使用其合适的参数：
 
 ```bash
-$ cp corpus/2712688662897926208.txt corpus/new.txt
+cp corpus/2712688662897926208.txt corpus/new.txt
 ```
 
 我们将修改 `new.txt` 来调用 `magic(42,129,333,0)`。 现在，我们可以重新运行 Echidna：
 
 ```bash
-$ echidna-test magic.sol --config config.yaml
+echidna-test magic.sol --config config.yaml
 ...
 echidna_magic_values: failed!💥
   Call sequence:
@@ -576,7 +576,7 @@ contract C {
 目前，Echidna 总是需要一个属性来测试：这里 `echidna_test` 始终返回 `true`。 我们可以运行 Echidna 对此进行验证：
 
 ```
-$ echidna-test gas.sol
+echidna-test gas.sol
 ...
 echidna_test: passed! 🎉
 
@@ -603,7 +603,7 @@ estimateGas: true
 创建好配置文件之后，我们就可以这样运行 Echidna：
 
 ```bash
-$ echidna-test gas.sol --config config.yaml
+echidna-test gas.sol --config config.yaml
 ...
 echidna_test: passed! 🎉
 
@@ -651,7 +651,7 @@ contract C {
 如果 Echidna 可以调用所有函数，它将无法轻松找到消耗大量 gas 的交易：
 
 ```
-$ echidna-test pushpop.sol --config config.yaml
+echidna-test pushpop.sol --config config.yaml
 ...
 pop used a maximum of 10746 gas
 ...
@@ -670,7 +670,7 @@ filterFunctions: ["pop", "clear"]
 ```
 
 ```
-$ echidna-test pushpop.sol --config config.yaml
+echidna-test pushpop.sol --config config.yaml
 ...
 push used a maximum of 40839 gas
 ...
@@ -686,7 +686,7 @@ estimateGas: true
 ```
 
 ```bash
-$ echidna-test contract.sol --config config.yaml
+echidna-test contract.sol --config config.yaml
 ...
 ```
 

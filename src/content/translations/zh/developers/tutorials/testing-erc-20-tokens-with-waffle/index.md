@@ -1134,3 +1134,5 @@ it("Send transaction changes sender and receiver balances", async () => {
 **恭喜您！ 您通过这个教程，成功完成了测试。 您已经迈出了使用 Waffle 测试智能合约的第一大步。**
 
 **您可以在[这里](https://github.com/VladStarostenko/tutorial-for-ethereum-org-website)找到本教程的代码。**
+
+更多关于 `Waffle` 的文档可在这里获取 。

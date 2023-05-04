@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: zh
 tags:
   - "solidity"
-  - "智能合约"
+  - "智能合同"
   - "安全性"
   - "通证"
 skill: intermediate
