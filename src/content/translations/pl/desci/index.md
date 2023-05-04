@@ -6,7 +6,6 @@ template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: ../../../../assets/future_transparent.png
-alt: ""
 summaryPoint1: Globalna, otwarta alternatywa dla obecnego systemu naukowego.
 summaryPoint2: Technologia, która umożliwia naukowcom pozyskiwanie funduszy, prowadzenie eksperymentów, udostępnianie danych, rozpowszechnianie wniosków i wiele innych.
 summaryPoint3: Opiera się na otwartych inicjatywach naukowych.
