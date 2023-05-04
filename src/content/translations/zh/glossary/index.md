@@ -835,7 +835,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 分片链是整个区块链中验证者的子集可以负责的单独部分。 这将为以太坊提供更高的交易吞吐量，并提高[二层网络](#layer-2)解决方案（如[乐观卷叠](#optimistic-rollups)和[零知识卷叠](#zk-rollups)）的数据可用性。
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/roadmap/danksharding/">
   分片链
 </DocLink>
 
