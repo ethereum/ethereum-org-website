@@ -141,7 +141,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
         <Input
           size="lg"
           padding=".5rem"
-          borderRadius=".25rem"
+          borderRadius="base"
           id="validatorIndex"
           value={inputValue}
           onChange={handleChange}
