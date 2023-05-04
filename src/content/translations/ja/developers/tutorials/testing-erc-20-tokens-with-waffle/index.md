@@ -10,7 +10,6 @@ tags:
   - "ERC-20"
 skill: intermediate
 lang: ja
-sidebar: true
 published: 2020-10-16
 ---
 
