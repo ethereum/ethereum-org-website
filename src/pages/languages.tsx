@@ -1,7 +1,15 @@
-import { Box, Flex, Heading, IconButton, Input, Text } from "@chakra-ui/react"
-import { useLocation } from "@reach/router"
-import { graphql } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Box,
+  Flex,
+  Heading,
+  IconButton,
+  Input,
+  LinkBox,
+  LinkOverlay,
+  Text,
+} from "@chakra-ui/react"
+import { graphql, PageProps } from "gatsby"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React, { useState } from "react"
 import { MdClose } from "react-icons/md"
 
@@ -9,13 +17,13 @@ import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 
-import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import { Language, languageMetadata } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
 
-const LanguagesPage = () => {
+const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
   const { t } = useTranslation()
-  const location = useLocation()
+  const { language } = useI18next()
+
   const redirectTo =
     location.search.split("from=").length > 1
       ? location.search.split("from=")[1]
@@ -114,27 +122,55 @@ const LanguagesPage = () => {
           )}
         </Box>
         <Flex my={8} wrap="wrap" w="full">
-          {translationsCompleted.map((lang) => (
-            <LangItem to={redirectTo} language={lang.code} key={lang["name"]}>
-              <Box
-                fontSize="sm"
-                lineHeight={1.6}
-                fontWeight="normal"
-                letterSpacing="0.04em"
-                my="1.14em"
-                textTransform="uppercase"
+          {translationsCompleted.map((lang) => {
+            const isActive = language === lang.code
+
+            return (
+              <LinkBox
+                key={lang["name"]}
+                textDecor="none"
+                m={4}
+                ml={0}
+                p={4}
+                flex="0 1 240px"
+                border="1px solid"
+                borderColor="lightBorder"
+                borderRadius="sm"
+                color={isActive ? "primary" : "text"}
+                transitionProperty="common"
+                transitionDuration="normal"
+                _hover={{ boxShadow: "primary", borderColor: "black300" }}
               >
-                {lang["name"]}
-              </Box>
-              <Heading
-                as="h4"
-                lineHeight={1.4}
-                fontSize={{ base: "md", md: "xl" }}
-              >
-                {lang.localName}
-              </Heading>
-            </LangItem>
-          ))}
+                <Box
+                  fontSize="sm"
+                  lineHeight={1.6}
+                  fontWeight="normal"
+                  letterSpacing="0.04em"
+                  my="1.14em"
+                  textTransform="uppercase"
+                >
+                  {lang["name"]}
+                </Box>
+                <Heading
+                  as="h4"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
+                  <LinkOverlay
+                    as={Link}
+                    to={redirectTo}
+                    language={lang.code}
+                    textDecoration="none"
+                    fontWeight="medium"
+                    color="body"
+                    _hover={{ textDecoration: "none" }}
+                  >
+                    {lang.localName}
+                  </LinkOverlay>
+                </Heading>
+              </LinkBox>
+            )
+          })}
         </Flex>
         <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
           <Translation id="page-languages-want-more-header" />
