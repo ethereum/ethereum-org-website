@@ -823,7 +823,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 启动了一组扩容和可持续性升级的以太坊开发阶段，以前称为“以太坊 2.0”或“以太坊 2”。
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   以太坊升级
 </DocLink>
 
