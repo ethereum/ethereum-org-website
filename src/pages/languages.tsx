@@ -45,101 +45,107 @@ const LanguagesPage = () => {
   translationsCompleted.sort((a, b) => a["name"].localeCompare(b["name"]))
 
   return (
-    <Flex direction="column" align="center" w="full" mx="auto">
+    <Flex direction="column" align="center" w="full" mx="auto" mt={16}>
       <PageMetadata
         title={t("page-languages-meta-title")}
         description={t("page-languages-meta-desc")}
       />
       <Box py={4} px={8} w="full">
-        <Box>
-          <Heading as="h1" fontSize={{ base: "2rem", sm: "2.5rem" }}>
-            <Translation id="page-languages-h1" />
-          </Heading>
-          <Text>
-            <Translation id="page-languages-p1" />
-          </Text>
-          <Text>
-            <Translation id="page-languages-interested" />{" "}
-            <Link to="/contributing/translation-program/">
-              <Translation id="page-languages-learn-more" />
-            </Link>
-            .
-          </Text>
-          <Text>
-            <Translation id="page-languages-resources-paragraph" />{" "}
-            <Link to="/community/language-resources">
-              <Translation id="page-languages-resources-link" />
-            </Link>
-            .
-          </Text>
-          <Heading fontSize={{ base: "2xl", md: "2rem" }}>
-            <Translation id="page-languages-translations-available" />:
-          </Heading>
-          <Box
-            as="form"
-            position="relative"
+        <Heading
+          as="h1"
+          lineHeight={1.4}
+          fontSize={{ base: "2.5rem", md: "3rem" }}
+        >
+          <Translation id="page-languages-h1" />
+        </Heading>
+        <Text>
+          <Translation id="page-languages-p1" />
+        </Text>
+        <Text>
+          <Translation id="page-languages-interested" />{" "}
+          <Link to="/contributing/translation-program/">
+            <Translation id="page-languages-learn-more" />
+          </Link>
+          .
+        </Text>
+        <Text>
+          <Translation id="page-languages-resources-paragraph" />{" "}
+          <Link to="/community/language-resources">
+            <Translation id="page-languages-resources-link" />
+          </Link>
+          .
+        </Text>
+        <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+          <Translation id="page-languages-translations-available" />:
+        </Heading>
+        <Box
+          as="form"
+          position="relative"
+          borderRadius="0.25em"
+          w="clamp(min(400px, 100%), 50%, 600px)"
+        >
+          <Input
+            border="1px solid"
+            borderColor="searchBorder"
+            color="text"
+            bg="searchBackground"
+            p={2}
+            pr={8}
             borderRadius="0.25em"
-            w="clamp(min(400px, 100%), 50%, 600px)"
-          >
-            <Input
-              border="1px solid"
-              borderColor="searchBorder"
-              color="text"
-              bg="searchBackground"
-              p={2}
-              pr={8}
-              borderRadius="0.25em"
-              w="full"
-              _focus={{
-                outline: "auto 1px",
-                outlineColor: "primary",
-              }}
-              value={keyword}
-              placeholder={searchString}
-              onChange={(e) => setKeyword(e.target.value)}
+            w="full"
+            _focus={{
+              outline: "auto 1px",
+              outlineColor: "primary",
+            }}
+            value={keyword}
+            placeholder={searchString}
+            onChange={(e) => setKeyword(e.target.value)}
+          />
+          {keyword !== "" && (
+            <IconButton
+              icon={<MdClose />}
+              onClick={resetKeyword}
+              position="absolute"
+              insetInlineEnd={1}
+              aria-label={t("clear")}
+              variant="icon"
+              _hover={{ svg: { fill: "primary" } }}
             />
-            {keyword !== "" && (
-              <IconButton
-                icon={<MdClose />}
-                onClick={resetKeyword}
-                position="absolute"
-                insetInlineEnd={1}
-                aria-label={t("clear")}
-                variant="icon"
-                _hover={{ svg: { fill: "primary" } }}
-              />
-            )}
-          </Box>
-          <Flex my={8} wrap="wrap" w="full">
-            {translationsCompleted.map((lang) => (
-              <LangItem to={redirectTo} language={lang.code} key={lang["name"]}>
-                <Box
-                  fontSize="sm"
-                  lineHeight={1.6}
-                  fontWeight="normal"
-                  letterSpacing="0.04em"
-                  my="1.14em"
-                  textTransform="uppercase"
-                >
-                  {lang["name"]}
-                </Box>
-                <Heading as="h4" fontSize={{ base: "md", md: "xl" }}>
-                  {lang.localName}
-                </Heading>
-              </LangItem>
-            ))}
-          </Flex>
-          <Heading fontSize={{ base: "2xl", md: "2rem" }}>
-            <Translation id="page-languages-want-more-header" />
-          </Heading>
-          <Text>
-            <Translation id="page-languages-want-more-paragraph" />{" "}
-            <Link to="/contributing/translation-program/">
-              <Translation id="page-languages-want-more-link" />
-            </Link>
-            .
-          </Text>
+          )}
         </Box>
+        <Flex my={8} wrap="wrap" w="full">
+          {translationsCompleted.map((lang) => (
+            <LangItem to={redirectTo} language={lang.code} key={lang["name"]}>
+              <Box
+                fontSize="sm"
+                lineHeight={1.6}
+                fontWeight="normal"
+                letterSpacing="0.04em"
+                my="1.14em"
+                textTransform="uppercase"
+              >
+                {lang["name"]}
+              </Box>
+              <Heading
+                as="h4"
+                lineHeight={1.4}
+                fontSize={{ base: "md", md: "xl" }}
+              >
+                {lang.localName}
+              </Heading>
+            </LangItem>
+          ))}
+        </Flex>
+        <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+          <Translation id="page-languages-want-more-header" />
+        </Heading>
+        <Text>
+          <Translation id="page-languages-want-more-paragraph" />{" "}
+          <Link to="/contributing/translation-program/">
+            <Translation id="page-languages-want-more-link" />
+          </Link>
+          .
+        </Text>
       </Box>
     </Flex>
   )
