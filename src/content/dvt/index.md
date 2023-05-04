@@ -25,7 +25,6 @@ A DVT solution contains the following components :
 - **[Multi-Party Computation (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - The full validator key is generated in secret using multiparty computation. The full key is never known to any individual operator - they only ever know their own part of it (their "share").
 - **Consensus Protocol** - The consensus protocol selects one node to be the block proposer. They share the block with the other nodes in the cluster, who add their key shares to the aggregate signature. When enough key shares have been aggregated, the block is proposed on Ethereum.
 
-Altogether, the key share signatures are combined to create a validator key signature to perform duties on the Beacon Chain. A distributed validator (DV) cluster operates with each node holding a key share of the complete validator key. No single node can recreate the validator's private key or produce a signature for the validator on its own, nor do they have access to the key shares of others.
 
 In a validator cluster of four nodes, following the threshold n≥3f+1, where n is the number of nodes and f is the number of faulty nodes the system can tolerate. Only three of the key shares are required to produce a valid signature. The cluster can tolerate one faulty or malicious operator and continue functioning as expected.
 
