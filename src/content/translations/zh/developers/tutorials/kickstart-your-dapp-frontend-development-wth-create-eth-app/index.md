@@ -8,7 +8,7 @@ tags:
   - "javascript"
   - "ethers.js"
   - "图表"
-  - "deFi"
+  - "defi"
 skill: beginner
 lang: zh
 published: 2020-04-27
