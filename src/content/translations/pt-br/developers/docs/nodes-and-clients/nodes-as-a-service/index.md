@@ -333,7 +333,7 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
 
 ## Tópicos relacionados {#related-topics}
 
-- [ Nós e clientes](/developers/docs/nodes-and-clients/)
+- [Nós e clientes](/developers/docs/nodes-and-clients/)
 
 ## Tutoriais relacionados {#related-tutorials}
 
