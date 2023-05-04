@@ -96,7 +96,7 @@ sidebarDepth: 1
 
 #### 摘要 {#bellatrix-summary}
 
-Bellatrix 升级是计划的第二次[信标链](/upgrades/beacon-chain)升级，让信标链为[合并](/upgrades/merge/)做好准备。 它将验证者由于怠惰及进行了可被罚没的行为而受到的惩罚提高到其全部价值。 Bellatrix 升级还包括对分叉选择规则的更新，让信标链为合并以及从最后一个工作量证明区块过渡到第一个权益证明区块做好准备。 这包括让共识客户端意识到[终端总难度](/glossary/#terminal-total-difficulty) 58750000000000000000000。
+Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，让信标链为[合并](/roadmap/merge/)做好准备。 它将验证者由于怠惰及进行了可被罚没的行为而受到的惩罚提高到其全部价值。 Bellatrix 升级还包括对分叉选择规则的更新，让信标链为合并以及从最后一个工作量证明区块过渡到第一个权益证明区块做好准备。 这包括让共识客户端意识到[终端总难度](/glossary/#terminal-total-difficulty) 58750000000000000000000。
 
 - [阅读 Bellatrix 升级规范](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
