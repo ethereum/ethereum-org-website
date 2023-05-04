@@ -5,10 +5,9 @@ author: Markus Waas
 lang: zh
 tags:
   - "solidity"
-  - "智能合约"
+  - "智能合同"
   - "测试"
   - "truffle"
-  - "持续集成"
   - "ganache"
 skill: intermediate
 published: 2020-06-05
@@ -157,9 +156,7 @@ checks:
 ### 第 1 步：创建一个 metacoin 项目并安装覆盖工具 {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
-npm install --save-dev truffle
-npm install --save-dev coveralls
-npm install --save-dev solidity-coverage
+npm install --save-dev truffle coveralls solidity-coverage
 ```
 
 ### 第 2 步：将 solidity-coverage 添加到 truffle-config.js 的插件数组中。 {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}

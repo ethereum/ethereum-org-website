@@ -464,6 +464,10 @@ contract Attack {
 
 - **[漏洞奖励平台](https://ethereum.org/en/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _协调漏洞奖励并对发现智能合约中重大漏洞的负责人进行奖励的平台。_
 
+- **[Fork Checker](https://forkchecker.hashex.org/)** - _免费的在线工具，用于检查所有关于分叉合同的现有信息。_
+
+- **[ABI 编码器](https://abi.hashex.org/)** - _免费在线服务，用于编码您的 Solidity 合约函数和构造函数参数。_
+
 ### 智能合约监测工具 {#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/sentinel)** - _一种用于自动监测和响应智能合约中事件、函数和交易参数的工具。_
@@ -497,6 +501,8 @@ contract Attack {
 - **[Hacken](https://hacken.io)** - _Web3 网络安全审计公司，为区块链安全提供全方位解决方案。_
 
 - **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity 和 Cairo 审计服务，确保智能合约的完整性和跨以太坊和 Starknet 的用户安全_
+
+- **[HashEx](https://hashex.org/)** - _HashEx 专注于区块链和智能合约审计，确保加密货币安全，提供智能合约开发、渗透测试、区块链咨询等服务。_
 
 ### 漏洞奖励平台 {#bug-bounty-platforms}
 

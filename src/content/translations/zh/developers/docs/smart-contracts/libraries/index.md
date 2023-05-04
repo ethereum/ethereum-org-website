@@ -105,7 +105,7 @@ contract MyNFT is ERC721 {
 ## 相关教程 {#related-tutorials}
 
 - [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用_。
-- [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) \_-关于 ERC20 标准的教程，由多个库提供。
+- [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-关于 ERC20 标准的教程，由多个库提供。_
 
 ## 延伸阅读 {#further-reading}
 

@@ -5,7 +5,6 @@ author: "苏米-穆德吉尔"
 tags:
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
   - "Solidity"
 skill: beginner
 lang: zh
