@@ -7,7 +7,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "智能合约"
-skill: 初学者
+skill: beginner
 lang: zh
 published: 2021-04-22
 ---
@@ -239,7 +239,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 为了将它们实际连接到我们的代码，我们将在步骤 13 中在 hardhat.config.js 文件中引用这些变量。
 
-<InfoBanner isWarning>
+<InfoBanner isWarning={true}>
 不要提交 <code>.env</code>！ 请确保永远不要与任何人共享或公开您的 <code>.env</code> 文件，因为这样做会泄露您的秘密。 如果您使用版本控制，请将您的 <code>.env</code> 添加到 <a href="https://git-scm.com/docs/gitignore">gitignore</a> 文件中。
 </InfoBanner>
 

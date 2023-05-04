@@ -20,23 +20,25 @@ lang: zh
 - [Moloch 去中心化自治组织](https://www.molochdao.com/) - _隐私、二层网络扩容、客户端安全性等_
 - [开放资助](https://opengrants.com/explore)
 - [DAO 资助](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google 资助组织电子表格_
-- [学术资助](https://esp.ethereum.foundation/academic-grants-2023) - _为以太坊相关学术工作提供资助_
+- [Web3 资助 Crunchbase](https://www.cryptoneur.xyz/web3-grants) - _按类别、用例、金额等筛选和搜索资助。 致力于帮助他人找到合适的资助。_
+- [学术资助](https://esp.ethereum.foundation/academic-grants) - _为以太坊相关学术工作提供资助_
 
 ## 特定项目 {#project-specific}
 
 这些项目为旨在开发和实验自己技术的项目建立了自己的资助。
 
-- [Aave 资助计划](https://aavegrants.org/) – _[Aave](https://aave.com/) 资助去中心化自治组织_
+- [Aave 资助方案](https://aavegrants.org/) – _[Aave](https://aave.com/) 资助去中心化自治组织_
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) 生态系统基金_
 - [Chainlink 资助方案](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) 社区资助_
-- [Compound 资助计划](https://compoundgrants.org/) – _[Compound](https://compound.finance/) 金融生态系统_
+- [Compound 资助方案](https://compoundgrants.org/) – _[Compound](https://compound.finance/) 金融生态系统_
+- [Decentraland 资助方案](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
 - [Lido 生态系统资助组织 (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) 金融生态系统_
 - [MetaMask 方案](https://metamaskgrants.org/) - _-[MetaMask](https://metamask.io/) 员工主导的资助去中心化自助组织_
 - [mStable 资助方案](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) 社区_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生态系统_
 - [UMA 资助方案](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) 开发者支持_
 - [Uniswap 资助方案](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) 社区_
-- [Web3 Grants](https://web3grants.net) - _Web3/加密货币相关资助方案详尽列表_
+- [Web3 资助](https://web3grants.net) - _Web3/加密货币相关资助计划详尽列表_
 
 ## 二次方融资 {#quadratic-funding}
 

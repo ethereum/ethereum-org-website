@@ -5,8 +5,6 @@ author: Ori Pomerantz
 lang: zh
 tags:
   - "二层网络"
-  - "乐观解决方案"
-  - "燃料"
 skill: intermediate
 published: 2022-04-01
 ---
@@ -64,7 +62,7 @@ calldata 一个字节的费用为 4 个燃料单位（如果值为零）或 16 �
 
 假设你无法控制目标地址合约，你仍然可以使用与[此解决方案](https://github.com/qbzzt/ethereum.org-20220330-shortABI)类似的解决方案。 我们来学习一下相关文件。
 
-### Token.sol {#token.sol}
+### Token.sol {#token-sol}
 
 [这是目标地址合约](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol)。 它是一个标准 ERC-20 合约，包括一个附加功能。 此 `faucet` 函数可以让任何用户获得一些代币来使用。 该函数会使 ERC-20 生产合约变得无用，但当 ERC-20 合约只是为了方便测试时，它会让工作变得更轻松。
 
@@ -79,7 +77,7 @@ calldata 一个字节的费用为 4 个燃料单位（如果值为零）或 16 �
 
 [可以点击此处查看部署此合约的示例](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8)。
 
-### CalldataInterpreter.sol {#calldatainterpreter.sol}
+### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
 [这是指示应使用较短的 calldata 调用交易的合约](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol)。 我们逐行学习它。
 
@@ -241,7 +239,7 @@ contract CalldataInterpreter {
 }       // contract CalldataInterpreter
 ```
 
-### test.js {#test.js}
+### test.js {#test-js}
 
 [此 JavaScript 单元测试](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js)展示了如何使用此机制（以及如何验证它是否正常运作）。 本文假设你了解 [chai](https://www.chaijs.com/) 和 [ethers](https://docs.ethers.io/v5/) 并且只解释专门适用于此合约的部分。
 
@@ -345,7 +343,7 @@ const transferTx = {
 
 如果合约只响应外部交易，我们可以通过只拥有一份合约来解决。 但是，这会破坏[可组合性](/developers/docs/smart-contracts/composability/)。 一个合约响应正常 ERC-20 调用，另一个合约使用短调用数据响应交易，这样要好得多。
 
-### Token.sol {#token.sol-2}
+### Token.sol {#token-sol-2}
 
 在本示例中，我们可以修改 `Token.sol`。 这让我们拥有许多只有代理才可能调用的函数。 以下是新的部分：
 
@@ -443,7 +441,7 @@ ERC-20 合约需要知道授权代理的身份。 但是，我们不能在构造
 1. 由 `onlyProxy()` 修改，因此没有任何其他方可以控制它们。
 2. 获取通常为 `msg.sender` 的地址作为额外参数。
 
-### CalldataInterpreter.sol {#calldatainterpreter.sol-2}
+### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
 此 calldata 解释器几乎与上面的解释器相同，只是被代理的函数接收 `msg.sender` 参数并且 `transfer` 不需要限额。
 
@@ -477,7 +475,7 @@ ERC-20 合约需要知道授权代理的身份。 但是，我们不能在构造
         }
 ```
 
-### Test.js {#test.js-2}
+### Test.js {#test-js-2}
 
 前面的测试代码和这段代码之间有一些变化。
 
@@ -529,11 +527,11 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Check the approve / transeferFrom combo was done correctly
+// Check the approve / transferFrom combo was done correctly
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 
-测试两个新函数。 请注意，`transeferFromTx` 需要两个地址参数：限额的提供者和接收者。
+测试两个新函数。 请注意，`transferFromTx` 需要两个地址参数：限额的提供者和接收者。
 
 ### 示例 {#example-2}
 

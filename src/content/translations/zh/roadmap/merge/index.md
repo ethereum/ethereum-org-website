@@ -3,7 +3,7 @@ title: 合并
 description: 了解合并 - 以太坊主网何时采用权益证明机制。
 lang: zh
 template: upgrade
-image: ../../../../../assets/upgrades/merge.png
+image: ../../../assets/upgrades/merge.png
 summaryPoint1: 以太坊主网采用权益证明机制，但情况并非一直如此。
 summaryPoint2: 从原有的工作量证明机制过渡到权益证明机制的升级称为合并。
 summaryPoint3: 合并是指原有的以太坊主网与单独的权益证明区块链即信标链合并，现已成为一条链。
@@ -37,7 +37,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 历史记录不会在合并中丢失。 随着主网与信标链合并，它还合并以太坊的整个交易历史记录。
 
 <InfoBanner>
-这种向权益证明的过渡改变了以太币的发行方式。 了解有关<a href="/roadmap/merge/issuance/">合并前后以太币发行的信息更多信息</a>。
+这种向权益证明的过渡改变了以太币的发行方式。 了解有关<a href="/roadmap/merge/issuance/">合并前后以太币发行的更多信息</a>。
 </InfoBanner>
 
 ### 用户与持有者 {#users-holders}
@@ -108,7 +108,7 @@ id="developers">
 
 ## 合并与扩容 {#merge-and-scaling}
 
-合并还为在工作量证明下无法实现的进一步可扩展性升级奠定了基础，使以太坊更接近实现[以太坊愿景](/roadmap/vision/)中概述的全面可扩展、安全性和可持续性。
+合并还为工作量证明下无法实现的进一步可扩展性升级奠定了基础，使以太坊距离实现[以太坊愿景](/roadmap/vision/)中概述的全面可扩展、安全性和可持续性更近一步。
 
 ## 合并的误区 {#misconceptions}
 
