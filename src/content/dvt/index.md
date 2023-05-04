@@ -8,7 +8,7 @@ lang: en
 
 
 
-**Distributed Validator Technology (DVT)** is a technology primitive in the evolving **Ethereum technology** stack aimed at improving the resilience and health of the Ethereum blockchain. The solution focuses on strengthening the backbone of the blockchain's PoS consensus by enabling multiple non-trusting parties to operate an Ethereum validator collectively, as opposed to how standard validators are operated. This shift in validator operation dramatically improves the liveness and security of the network while significantly reducing slashing, downtime, and centralization risks compared to standard validator setups. 
+**Distributed Validator Technology (DVT)** splits the private key used to secure a validator across many computers organized into a "cluster". The benefit of this is that it makes it very difficult for attackers to gain access to the key, because it is not stored in full on any single machine. It also allows for some nodes to go offline, as the necessary signing can be done by a subset of the machines in each cluster. This reduces single points of failure from the network and makes the whole validator set more robust. 
 
 A way to think about DVT is that DVT is to validators as multisig is to wallets. Where standard validators use a single key to sign duties, the key of a Distributed Validator is split across multiple nodes. In the case of DVT, the "multisig" is operated by a consensus protocol (BFT) instead of human interaction. Enabling the distributed operation of an Ethereum validator with best-in-class security practices. 
 
