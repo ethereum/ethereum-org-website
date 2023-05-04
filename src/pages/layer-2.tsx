@@ -73,13 +73,10 @@ const SectionHeading = (props: HeadingProps) => {
   return <Heading {...mergeProps} />
 }
 
-const ContentBox = ({
-  isLightGrayBg,
-  ...rest
-}: BoxProps & {
-  children: ReactNode
+interface ContentBoxProps extends BoxProps {
   isLightGrayBg?: boolean
-}) => (
+}
+const ContentBox: React.FC<ContentBoxProps> = ({ isLightGrayBg, ...rest }) => (
   <Box
     px={8}
     py={12}
