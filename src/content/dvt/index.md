@@ -29,7 +29,6 @@ A DVT solution contains the following components :
 
 Individual nodes do not need to trust each other in order to share a validator. As long as enough key shares get aggregated, the validator duties can be performed by the cluster. Distributed validators have built-in fault tolerance and can keep running even if some of the individual nodes go offline. 
 
-<Divider />
 
 ## Why do we need DVT? {#why-do-we-need-dvt}
 
