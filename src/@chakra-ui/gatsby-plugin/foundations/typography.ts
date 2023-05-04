@@ -1,9 +1,8 @@
 const typography = {
-  // TODO: Uncomment when the `Inter` font is included in the project
-  // fonts: {
-  //   heading: "Inter, sans-serif",
-  //   body: "Inter, sans-serif",
-  // },
+  fonts: {
+    heading: "Inter, sans-serif",
+    body: "Inter, sans-serif",
+  },
 
   lineHeights: {
     "5xs": 1.1,

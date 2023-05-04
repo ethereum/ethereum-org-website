@@ -12,7 +12,7 @@ export const onRenderBody = ({ setHeadComponents }: RenderBodyArgs) => {
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/Inter-Regular.woff2"
+      href="/fonts/Inter-Regular.woff2?v=3.19"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
