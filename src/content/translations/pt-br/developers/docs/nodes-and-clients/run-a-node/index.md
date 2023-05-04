@@ -464,7 +464,7 @@ Como parte de seu monitoramento, certifique-se de ficar de olho no desempenho de
 - [Guias do ETHStaker sobre como executar validadores em redes de teste](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, atualizado regularmente_
 - [Perguntas frequentes sobre o The Merge para operadores de nós](https://notes.ethereum.org/@launchpad/node-faq-merge) — _julho de 2022_
 - [Analisando os requisitos de hardware para ser um nó totalmente validado no Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _ – Albert Palau, 24 de setembro de 2018_
-- [Executando nós completos do Ethereum: um guia para os pouco motivados ](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de novembro de 2019_
+- [Executando nós completos do Ethereum: um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de novembro de 2019_
 - [Executando um nó do Hyperledger Besu na Mainnet do Ethereum: benefícios, requisitos e configurações](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 de maio de 2020_
 - [Implantando o cliente Nethermind do Ethereum com uma pilha de monitoramento](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 de julho de 2020_
 
