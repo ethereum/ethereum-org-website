@@ -51,14 +51,14 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 - [Blast](https://blastapi.io/) _plateforme API qui fournit des API RPC/WSS pour le réseau principal archiveur Ethereum et les réseaux de test._
 - [Blockapps](https://blockapps.net/) _- Implémentation du protocole Ethereum pour les entreprises, outils et API constituant la plateforme STRATO_
 - [Chainstack](https://chainstack.com/) _- Infrastructure du réseau principal et du réseau de test Ethereum hébergée dans des clouds clients isolés & publics_
-- [ConsenSys](https://consensys.net/) _fournit une gamme de produits et d'outils pour construire sur Ethereum, ainsi que des services de conseil et de développement personnalisé_
-- [Envision Blockchain](https://envisionblockchain.com/) _fournit des services de conseil et de développement axés sur les entreprises, et spécialisés dans le réseau principal Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _fournit un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
+- [ConsenSys](https://consensys.net/) _- fournit une gamme de produits et d'outils pour construire sur Ethereum, ainsi que des services de conseil et de développement personnalisé_
+- [Envision Blockchain](https://envisionblockchain.com/) _- fournit des services de conseil et de développement axés sur les entreprises, et spécialisés dans le réseau principal Ethereum_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _- fournit un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
 - [- Hyperledger Besu](https://www.hyperledger.org/use/besu) _- Client Ethereum en open source axé sur les entreprises, développé sous la licence Apache 2.0 et rédigé en Java_
 - [Infura](https://infura.io/) _- Accès évolutif aux API des réseaux Ethereum et IPFS_
 - [Kaleido](https://kaleido.io/) _- Plate-forme de développement orientée vers les entreprises, qui offre une blockchain simplifiée et des applications dédiées aux actifs numériques_
 - [Provide](https://provide.services/) _- Infrastructure et API pour les applications d'entreprise Web3_
-- [QuickNode](https://www.quicknode.com/) _fournit des nœuds fiables et rapides avec des API de haut niveau comme NFT API, Token API, etc. tout en offrant une suite de produits unifiée et des solutions pour entreprise_
+- [QuickNode](https://www.quicknode.com/) _- fournit des nœuds fiables et rapides avec des API de haut niveau comme NFT API, Token API, etc. tout en offrant une suite de produits unifiée et des solutions pour entreprise_
 - [Tenderly](https://tenderly.co) _- Plate-forme de développement Web3 qui fournit des blocs de débogage, d'observabilité et de construction d'infrastructures en vue de l'élaboration, de la mise à l'essai, du suivi et de l'exécution de contrats intelligents_
 - [Unibright](https://unibright.io/) _- Équipe de spécialistes de la blockchain, d'architectes, de développeurs et de consultants ayant plus de 20 ans d'expérience dans les processus métiers et l'intégration_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _- Fournisseur de services gérés répartis sur plusieurs sites en Europe et en Asie. Exploite & surveille vos nœuds de façon sécurisée et fiable_
@@ -154,8 +154,8 @@ Voici quelques-unes des applications d'entreprise déployées sur le réseau pri
 
 ### Assurance {#insurance}
 
-- [Arbol](https://www.arbolmarket.com/) _assurance paramétrique pour couvrir les risques liés à la météo_
-- [Etherisc](https://etherisc.com/) _assurance décentralisée pour une variété de risques_
+- [Arbol](https://www.arbolmarket.com/) _- assurance paramétrique pour couvrir les risques liés à la météo_
+- [Etherisc](https://etherisc.com/) _- assurance décentralisée pour une variété de risques_
 
 ### Identifications et certifications {#credentials}
 

@@ -288,7 +288,7 @@ Mais sobre [sincronização de ponto de verificação](https://notes.ethereum.or
 
 Há muitas informações sobre os clientes Ethereum na internet. Aqui estão alguns recursos que podem ser úteis.
 
-- [Ethereum 101 – Parte 2 – Entendendo os nós](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _–Wil Barnes, 13 de fevereiro de 2019_
+- [Ethereum 101 – Parte 2 – Entendendo os nós](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _- Wil Barnes, 13 de fevereiro de 2019_
 - [Executando nós completos do Ethereum: um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de novembro de 2019_
 
 ## Tópicos relacionados {#related-topics}
