@@ -27,7 +27,7 @@ A DVT solution contains the following components :
 
 
 
-Nodes within DV clusters do not need to trust each other to operate as a group. As long as a predefined majority threshold of key shares is signed appropriately, the validator will perform its duties as intended. Distributed validators have built-in fault tolerance and can achieve genuine [active-active redundancy](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing) by maintaining diverse operator configurations. 
+Individual nodes do not need to trust each other in order to share a validator. As long as enough key shares get aggregated, the validator duties can be performed by the cluster. Distributed validators have built-in fault tolerance and can keep running even if some of the individual nodes go offline. 
 
 <Divider />
 
