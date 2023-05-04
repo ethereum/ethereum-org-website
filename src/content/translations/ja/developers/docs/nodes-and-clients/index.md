@@ -290,7 +290,6 @@ Teku は Java 実装で、Apache 2.0 ライセンスです。 Besu や Web3Signe
 
 - [イーサリアム 101 - パート 2 - ノードについての理解](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– 2019 年 2 月 13 日 - Wil Barnes_
 - [イーサリアムフルノードの運用: 手間を省きたい人向けのガイド](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _2019 年 11 月 7 日 - Justin Leroux_
-- [イーサリアムノードの運用](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub、頻繁に更新_
 
 ## 関連トピック {#related-topics}
 

@@ -32,7 +32,6 @@ Več projektov zagotavlja implementacije Plasme, ki jo lahko integrirate v svoje
 
 ## Nadaljnje branje {#further-reading}
 
-- [EthHub na Plasmi](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Učenje Plasme](https://www.learnplasma.org/en/)
 
 _Poznate vir iz skupnosti, ki vam je pomagal? Uredite to stran in ga dodajte!_

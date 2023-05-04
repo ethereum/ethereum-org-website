@@ -32,7 +32,6 @@ Več projektov zagotavlja implementacije stranskih verig, ki jih lahko integrira
 
 ## Nadaljnje branje {#further-reading}
 
-- [EthHub o stranskih verigah](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 – Georgios Konstantopoulos_
 
 _Poznate vir iz skupnosti, ki vam je pomagal? Uredite to stran in ga dodajte!_

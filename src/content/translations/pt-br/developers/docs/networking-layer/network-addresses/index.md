@@ -9,7 +9,7 @@ Nós Ethereum precisam se identificar com algumas informações básicas para se
 
 ## Pré-Requisitos {#prerequisites}
 
-É necessário ter algum entendimento sobre a [camada de rede ](/developers/docs/networking-layer/)do Ethereum para entender esta página.
+É necessário ter algum entendimento sobre a [camada de rede](/developers/docs/networking-layer/) do Ethereum para entender esta página.
 
 ## Multiaddr {#multiaddr}
 

@@ -177,6 +177,15 @@ function processMarkdown(path: string) {
   // Ignore tutorials with Javascript and ExpandableCards
   if (
     !path.includes("/history/") &&
+    !path.includes("/whitepaper/") &&
+    !path.includes("/roadmap/") &&
+    !path.includes("alchemy") &&
+    !path.includes("nft") &&
+    !path.includes("hello-world-smart-contract") &&
+    !path.includes("opcodes") &&
+    !path.includes("translation-program") &&
+    !path.includes("/deprecated-software/") &&
+    !path.includes("/energy-consumption/") &&
     !markdownFile.includes("```javascript") &&
     !markdownFile.includes("ExpandableCard")
   ) {

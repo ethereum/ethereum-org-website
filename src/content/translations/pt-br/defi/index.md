@@ -4,7 +4,7 @@ description: Uma visão geral do DeFi na Ethereum
 lang: pt-br
 template: use-cases
 emoji: ":money_with_wings:"
-image: ../../assets/use-cases/defi.png
+image: ../../../../assets/use-cases/defi.png
 alt: Um logotipo Eth feito de blocos de lego.
 sidebarDepth: 2
 summaryPoint1: Uma alternativa global e aberta ao sistema financeiro atual.

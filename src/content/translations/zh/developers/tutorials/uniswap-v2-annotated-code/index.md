@@ -4,8 +4,7 @@ description: Uniswap-v2 合约是如何工作的？ 为什么要如此编写？
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
-skill: 中难度
+skill: intermediate
 published: 2021-05-01
 lang: zh
 ---
@@ -891,11 +890,11 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[本合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)存在问题，[不应该再使用](https://uniswap.org/docs/v2/smart-contracts/router01/)。 幸运的是，外围合约无状态，也不拥有任何资产，弃用外围合约比较容易。建议使用 `UniswapV2Router02` 来替代。
+[本合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)存在问题，[不应该再使用](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01)。 幸运的是，外围合约无状态，也不拥有任何资产，弃用外围合约比较容易。建议使用 `UniswapV2Router02` 来替代。
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-在大多数情况下，您会通过[该合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)使用 Uniswap。 有关使用说明，您可以在[这里](https://uniswap.org/docs/v2/smart-contracts/router02/)找到。
+在大多数情况下，您会通过[该合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)使用 Uniswap。 有关使用说明，您可以在[这里](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02)找到。
 
 ```solidity
 pragma solidity =0.6.6;

@@ -12,7 +12,7 @@ A rede Ethereum começou usando um mecanismo de consenso que envolvia **[Prova d
 
 ## Pré-requisitos {#prerequisites}
 
-Para entender melhor esta página, recomendamos ler primeiro sobre [ transações ](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
+Para entender melhor esta página, recomendamos ler primeiro sobre [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
 
 ## O que é prova de trabalho (PoW)? {#what-is-pow}
 

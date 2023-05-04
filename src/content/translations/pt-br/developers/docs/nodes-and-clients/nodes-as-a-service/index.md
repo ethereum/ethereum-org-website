@@ -315,6 +315,18 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - O máximo de velocidade na obtenção do novo bloco e leitura da cadeia de blocos
     - O melhor preço por garantia de chamada de API
 
+[**Zeeve**](https://www.zeeve.io/)
+
+- [Documentação](https://www.zeeve.io/docs/)
+- Recursos
+  - Plataforma de automação sem código de nível empresarial que fornece implantação, monitoramento e gerenciamento de nós e redes da Blockchain
+  - Mais de 30 protocolos e integrações, e adicionando mais
+  - Valor adicionado à infraestrutura de serviços web3 como armazenamento decentralizado, identidade decentralizada e APIs de dados do Blockchain Ledger para casos reais
+  - Suporte 24/7 e monitoramento proativo garantem a saúde dos nós o tempo todo.
+  - Os pontos de conclusão RPC oferecem acesso autenticado às APIs, facilitam o gerenciamento livre com painel intuitivo e análises.
+  - Fornece nuvem gerenciada e traz suas próprias opções de nuvem para escolher, além de oferecer suporte a todos os maiores provedores de nuvem como AWS, Azure, Google Cloud, Digital Ocean e local.
+  - Usamos roteamento inteligente para sempre atingir o nó mais próximo de seu usuário
+
 ## Leitura adicional {#further-reading}
 
 - [Lista dos serviços de nós Ethereum](https://ethereumnodes.com/)
@@ -325,5 +337,5 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Introdução ao desenvolvimento de Ethereum usando Alquimia](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Guia para enviar transações usando web3 e Alquimia](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Introdução ao desenvolvimento do Ethereum usando o Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Guia para enviar transações usando web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

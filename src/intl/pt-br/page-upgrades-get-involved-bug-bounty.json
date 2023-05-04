@@ -34,7 +34,7 @@
   "page-upgrades-bug-bounty-meta-description": "Uma visão geral do programa de recompensas de bugs do Ethereum: como se envolver e recompensar informações.",
   "page-upgrades-bug-bounty-meta-title": "Programa de Recompensas por Bugs Ethereum",
   "page-upgrades-bug-bounty-not-included": "Fora do escopo",
-  "page-upgrades-bug-bounty-not-included-desc": "Apenas os alvos listados no escopo fazem parte do programa de Recompensa por Bugs. Isso significa que, por exemplo, nossa infraestrutura; como páginas Web, DNS, e-mail etc., não fazem parte do escopo da recompensa. Bugs do contrato ERC20 normalmente não são incluídos no escopo de recompensa. No entanto, podemos ajudar a alcançar as partes afetadas, como autores ou trocas nesses casos. O ENS é mantido pela fundação ENS e não faz parte do escopo de recompensa.",
+  "page-upgrades-bug-bounty-not-included-desc": "Apenas os alvos listados no escopo fazem parte do Programa Bug Bounty. Isso significa que, por exemplo, nossa infraestrutura; como páginas da web, dns, e-mail, etc., não fazem parte do escopo de recompensas. Os bugs do contrato ERC20 normalmente não estão incluídos no escopo da recompensa. No entanto, podemos ajudar a entrar em contato com as partes afetadas, como autores ou intercâmbios em tais casos. A ENS é mantida pela fundação ENS e não faz parte do escopo da recompensa. Vulnerabilidades que exigem que o usuário tenha exposto publicamente uma API, como JSON-RPC ou a API Beacon, estão fora do escopo do programa de recompensa de bugs.",
   "page-upgrades-bug-bounty-owasp": "Visualizar método OWASP",
   "page-upgrades-bug-bounty-points": "O EF também fornecerá recompensas com base em:",
   "page-upgrades-bug-bounty-points-error": "Erro ao carregar dados... atualize.",

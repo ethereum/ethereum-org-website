@@ -337,7 +337,6 @@ DeFi — це ініціатива з відкритим вихідним код
 
 ### Статті про DeFi {#defi-articles}
 
-- [Що таке децентралізовані фінанси?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) — _ETHHub, регулярні оновлення_
 - [Посібник з роботи з DeFi для початківців](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) — _Сід Коельо-Прабху, 6 січня 2020 р._
 
 ### Відео {#videos}

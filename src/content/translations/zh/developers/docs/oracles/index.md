@@ -392,7 +392,7 @@ contract PriceConsumerV3 {
 
 **[Witnet](https://witnet.io/)** - _Witnet 是一种无需许可、去中心化和抗审查的预言机，帮助智能合约对真实事件做出响应，提供强大的加密经济保障。_
 
-**[UMA Oracle](https://umaproject.org/products/optimistic-oracle)** - _UMA 的乐观预言机允许智能合约快速接收不同应用的任何类型的数据，包括保险、金融衍生品和预测市场。_
+**[UMA 预言机](https://uma.xyz)** - _UMA 的乐观预言机允许智能合约快速接收不同应用的任何类型的数据，包括保险、金融衍生品和预测市场。_
 
 **[Tellor](https://tellor.io/)** - _Tellor 是一种透明的、无需许可的预言机协议，可以让智能合约在需要时轻松获取任何数据。_
 
@@ -403,6 +403,8 @@ contract PriceConsumerV3 {
 **[Paralink](https://paralink.network/)** - _Paralink 为运行在以太坊和其他热门区块链上的智能合约提供一个开源的去中心化预言机平台。_
 
 **[Dos.Network](https://dos.network/)** - _DOS Network 是一个去中心化预言机服务网络，通过真实的数据和算力增强区块链的实用性。_
+
+**[Pyth 网络](https://pyth.network/)** - _Pyth 网络是第一方金融预言机网络，旨在在防篡改、去中心化和自我可持续的环境中发布链上连续的真实世界数据。_
 
 ## 延伸阅读 {#further-reading}
 
