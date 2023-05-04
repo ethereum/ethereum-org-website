@@ -338,4 +338,4 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
 ## Tutoriais relacionados {#related-tutorials}
 
 - [Introdução ao desenvolvimento do Ethereum usando o Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Guia para enviar transações usando web3 e Alquimia](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Guia para enviar transações usando web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
