@@ -11,9 +11,10 @@ const baseStyleField = defineMergeStyles(selectDefaultTheme.baseStyle?.field, {
   [$borderBaseWidth.variable]: "1px",
   borderColor: "currentColor",
   cursor: "pointer",
-  py: 2,
+  py: 0,
   ps: 2,
   pe: 8,
+  h: 10.5,
   _active: {
     bg: "primaryLowContrast",
     boxShadow: "none",
