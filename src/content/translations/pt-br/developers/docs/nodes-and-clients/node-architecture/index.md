@@ -4,7 +4,7 @@ description: Introdução de como os nós Ethereum são organizados.
 lang: pt-br
 ---
 
-Um nó Ethereum é composto por dois clientes: um [cliente de execução](/developers/docs/nodes-and-clients/#execution-clients) e um [cliente de consenso](/developers/docs/ nodes-and-clients/#consensus-clients).
+Um nó Ethereum é composto por dois clientes: um [cliente de execução](/developers/docs/nodes-and-clients/#execution-clients) e um [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients).
 
 Quando o Ethereum estava usando [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), um cliente de execução era suficiente para executar um nó completo Ethereum. No entanto, desde a implementação da [prova de participação](/developers/docs/consensus-mechanisms/pow/), o cliente de execução precisa ser usado com outro software, chamado [“cliente de consenso”](/developers/docs/nodes-and-clients/#consensus-clients).
 
