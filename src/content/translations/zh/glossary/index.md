@@ -77,7 +77,7 @@ sidebarDepth: 2
 
 信标链是为以太坊引入[权益证明](#pos)和[验证者](#validator)的区块链。 从 2020 年 12 月开始，它与采用工作量证明的以太坊主网一起运行，直到 2022 年 9 月这两条链合并，形成了今天的以太坊。
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   信标链
 </DocLink>
 
