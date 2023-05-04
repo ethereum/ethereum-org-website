@@ -9,7 +9,7 @@ tags:
   - "スマートコントラクト"
   - "フロントエンド"
   - "Pinata"
-skill: 中級
+skill: intermediate
 lang: ja
 published: 2021-10-06
 ---

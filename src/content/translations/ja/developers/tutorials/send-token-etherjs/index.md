@@ -6,7 +6,7 @@ tags:
   - "ETHERS.JS"
   - "ERC-20"
   - "トークン"
-skill: 初級
+skill: beginner
 lang: ja
 published: 2021-04-06
 ---
