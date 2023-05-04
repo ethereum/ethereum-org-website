@@ -17,7 +17,7 @@ Normalmente, os padrões são apresentados como [Propostas de melhorias do Ether
 - [Tabela de discussão de EIP](https://ethereum-magicians.org/c/eips)
 - [Introdução à governança do Ethereum](/governance/)
 - [Visão geral da governança Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 de Março de 2019 - Boris Mann_
-- [Coordenação de desenvolvimento do protocolo de governança do Ethereum e atualização da rede](https://hudsonjameson. com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 de Março 23 - Hudson Jameson_
+- [Coordenação de desenvolvimento do protocolo de governança do Ethereum e atualização da rede](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 de Março 23 - Hudson Jameson_
 - [Lista de reprodução de todas as reuniões de Ethereum Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
 
 ## Tipos de padrões {#types-of-standards}

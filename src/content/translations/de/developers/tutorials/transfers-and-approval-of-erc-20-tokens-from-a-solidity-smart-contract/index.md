@@ -8,7 +8,7 @@ tags:
   - "Solidity"
   - "Erste Schritte"
   - "Erc-20"
-skill: Mittleres Niveau
+skill: intermediate
 lang: de
 published: 2020-04-07
 source: EthereumDev

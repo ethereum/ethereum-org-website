@@ -8,7 +8,7 @@ tags:
   - "スマートコントラクト"
   - "テスト"
   - "モック"
-skill: 中級
+skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

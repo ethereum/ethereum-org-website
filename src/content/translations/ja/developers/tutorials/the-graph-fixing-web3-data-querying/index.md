@@ -10,7 +10,7 @@ tags:
   - "the graph"
   - "create-eth-app"
   - "react"
-skill: 中級
+skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph

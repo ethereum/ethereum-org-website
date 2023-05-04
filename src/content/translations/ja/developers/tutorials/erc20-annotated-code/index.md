@@ -6,7 +6,7 @@ lang: ja
 tags:
   - "Solidity"
   - "erc-20"
-skill: 初級
+skill: beginner
 published: 2021-03-09
 ---
 

@@ -27,7 +27,7 @@ Decida se deseja executar o software em seu próprio [hardware ou na nuvem](#loc
 
 Após preparar o ambiente, instale os clientes escolhidos com [interface simples para iniciantes](#automatized-setup) ou [manualmente](#manual-setup) usando um terminal com opções avançadas.
 
-Quando o nó estiver em execução e sincronização, você estará pronto para [usá-lo](#using-the-node), mas fique de olho em sua [manutenção](#operating-the -node).
+Quando o nó estiver em execução e sincronização, você estará pronto para [usá-lo](#using-the-node), mas fique de olho em sua [manutenção](#operating-the-node).
 
 ![Configuração do cliente](./diagram.png)
 
@@ -161,7 +161,7 @@ Aqui estão as páginas de lançamento dos clientes, nas quais você pode encont
 ##### Clientes de execução
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github. com/ledgerwatch/erigon#usage) (não fornece um binário pré-construído, precisa ser compilado)
+- [Erigon](https://github.com/ledgerwatch/erigon#usage) (não fornece um binário pré-construído, precisa ser compilado)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 

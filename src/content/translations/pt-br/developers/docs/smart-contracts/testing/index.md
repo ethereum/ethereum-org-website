@@ -74,7 +74,7 @@ O teste de integração é um nível superior ao dos testes unitários na hierar
 
 Esta abordagem detecta erros decorrentes de interações entre diferentes componentes de um contrato ou em vários contratos. Você deve usar este método se você tiver um contrato complexo com várias funções ou um que interfaces com outros contratos.
 
-Testes de integração podem ser úteis para garantir que coisas como a [herança](https://docs. soliditylang. org/en/v0.8.12/contracts. html#inheritance) e a injeção de dependência funcionem corretamente.
+Testes de integração podem ser úteis para garantir que coisas como a [herança](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) e a injeção de dependência funcionem corretamente.
 
 #### Teste de sistema
 
@@ -262,4 +262,4 @@ A verificação formal é considerada importante para contratos inteligentes, po
 ## Leitura adicional {#further-reading}
 
 - [Um guia completo para testar contratos inteligentes do Ethereum](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297) — _Ben Hauser_
-- [Como testar os contratos inteligentes do Ethereum](https://betterprogramming. pub/how-to-test-ethereum-smart-contracts-35abc8fa199d) — _Alex Roan_
+- [Como testar os contratos inteligentes do Ethereum](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d) — _Alex Roan_
