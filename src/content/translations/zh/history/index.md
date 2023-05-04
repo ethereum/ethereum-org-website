@@ -217,7 +217,7 @@ Bellatrix 升级是计划的第二次[信标链](/upgrades/beacon-chain)升级�
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   信标链
 </DocLink>
 
