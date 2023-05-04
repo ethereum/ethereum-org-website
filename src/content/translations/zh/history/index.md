@@ -147,7 +147,7 @@ Bellatrix 升级是计划的第二次[信标链](/upgrades/beacon-chain)升级�
 
 #### 摘要 {#altair-summary}
 
-天鹰座升级是计划的第一次[信标链](/upgrades/beacon-chain)升级。 它增加了对“同步委员会”的支持—支持轻客户端，在向合并进展的过程中，增加了对验证者怠惰及可被罚没行为的惩罚。
+天鹰座升级是计划的第一次[信标链](/roadmap/beacon-chain)升级。 它增加了对“同步委员会”的支持—支持轻客户端，在向合并进展的过程中，增加了对验证者怠惰及可被罚没行为的惩罚。
 
 - [阅读天鹰座升级规范](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
