@@ -304,7 +304,7 @@ It is also possible for stake-based oracles can slash node operators who fail to
 
 Decentralized oracles implement various incentive designs to prevent [Byzantine](https://en.wikipedia.org/wiki/Byzantine_fault) behavior among oracle nodes. Specifically, they achieve _attributability_ and _accountability_:
 
-1. Decentralized oracle nodes are often required to sign the data they provide in response to data requests. This information helps with evaluating the historical performance of oracle nodes, such that users can filter out unreliable oracle nodes when making data requests. An example is Chainlink’s [Oracle Reputation](https://oracle.reputation.link/) or Witnet’s [Algorithmic Reputation System](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system).
+1. Decentralized oracle nodes are often required to sign the data they provide in response to data requests. This information helps with evaluating the historical performance of oracle nodes, such that users can filter out unreliable oracle nodes when making data requests. An example is Witnet’s [Algorithmic Reputation System](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system).
 
 2. Decentralized oracles—as explained earlier—may require nodes to place a stake on their confidence in the truth of data they submit. If the claim checks out, this stake can be returned along with rewards for honest service. But it can also be slashed in case the information is incorrect, which provides some measure of accountability.
 
