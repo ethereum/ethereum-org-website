@@ -77,7 +77,7 @@ sidebarDepth: 1
 
 #### 摘要 {#paris-summary}
 
-巴黎升级是由于工作量证明区块链超过了[终端总难度](/glossary/#terminal-total-difficulty) 58750000000000000000000 而触发的。 这发生在 2022 年 9 月 15 日区块 15537393 上，并在下一个区块处触发了巴黎升级。 巴黎升级就是[合并 ](/upgrades/merge/)过渡，以太坊的主要功能结束了[工作量证明](/developers/docs/consensus-mechanisms/pow)挖矿算法及相关共识逻辑并启动了[权益证明](/developers/docs/consensus-mechanisms/pos)。 巴黎升级本身是对[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)的升级（相当于共识层上的 Bellatrix 升级），让执行客户端能够从与其连接的[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)接受指令。 这需要激活一组新的内部应用程序接口方法，统称为[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)。 该升级可能是自[家园](#homestead)以来以太坊历史上最重要的升级！
+巴黎升级是由于工作量证明区块链超过了[终端总难度](/glossary/#terminal-total-difficulty) 58750000000000000000000 而触发的。 这发生在 2022 年 9 月 15 日区块 15537393 上，并在下一个区块处触发了巴黎升级。 巴黎升级就是[合并 ](/roadmap/merge/)过渡，以太坊的主要功能结束了[工作量证明](/developers/docs/consensus-mechanisms/pow)挖矿算法及相关共识逻辑并启动了[权益证明](/developers/docs/consensus-mechanisms/pos)。 巴黎升级本身是对[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)的升级（相当于共识层上的 Bellatrix 升级），让执行客户端能够从与其连接的[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)接受指令。 这需要激活一组新的内部应用程序接口方法，统称为[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)。 该升级可能是自[家园](#homestead)以来以太坊历史上最重要的升级！
 
 - [阅读巴黎升级规范](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
