@@ -18,7 +18,7 @@ sidebarDepth: 1
 这些规则更改可能会在网络中造成暂时的分叉。 新区块的产生，可以来自新规则，也可以来自旧规则。 分叉通常提前商定，以便让客户端能够采用 Unison 的升级，升级后的分叉链成为主链。 然而，在极少数情况下，对分叉的不同意见可能导致网络永久硬分叉——最为著名的是【DAO fork】(#dao-fork) 的分叉，产生了 Ethereum Classic（ETC-ETH）。
 </ExpandableCard>
 
-直接查阅有关一些以往特别重要的升级的信息：[信标链](/upgrades/beacon-chain/)、[合并](/upgrades/merge/)和 [EIP-1559](#london)
+直接查阅有关一些以往特别重要的升级的信息：[信标链](/roadmap/beacon-chain/)、[合并](/roadmap/merge/)和 [EIP-1559](#london)
 
 想了解未来的协议升级？ [了解以太坊路线图上即将进行的升级](/roadmap/)。
 
