@@ -26,7 +26,6 @@ A DVT solution contains the following components :
 - **Consensus Protocol** - The consensus protocol selects one node to be the block proposer. They share the block with the other nodes in the cluster, who add their key shares to the aggregate signature. When enough key shares have been aggregated, the block is proposed on Ethereum.
 
 
-In a validator cluster of four nodes, following the threshold n≥3f+1, where n is the number of nodes and f is the number of faulty nodes the system can tolerate. Only three of the key shares are required to produce a valid signature. The cluster can tolerate one faulty or malicious operator and continue functioning as expected.
 
 Nodes within DV clusters do not need to trust each other to operate as a group. As long as a predefined majority threshold of key shares is signed appropriately, the validator will perform its duties as intended. Distributed validators have built-in fault tolerance and can achieve genuine [active-active redundancy](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing) by maintaining diverse operator configurations. 
 
