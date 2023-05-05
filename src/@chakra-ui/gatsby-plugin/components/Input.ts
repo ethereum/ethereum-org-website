@@ -30,6 +30,9 @@ const baseStyle = definePartsStyle((props) => {
           boxShadow: "none",
         },
         _hover: null, // override default
+        _groupHover: {
+          borderColor: "primaryHover",
+        },
         _invalid: {
           borderColor: ec,
           boxShadow: "none",
