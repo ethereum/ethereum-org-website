@@ -3,13 +3,12 @@ import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Stack, Text } from "@chakra-ui/react"
 
 // Components
 import ButtonLink from "../ButtonLink"
 import Link from "../Link"
 import Translation from "../Translation"
-import { StyledSelect as Select } from "../SharedStyledComponents"
+import Select from "../Select"
 
 // Data
 import {
@@ -54,18 +53,6 @@ const TwoColumnContent = styled.div`
     align-items: flex-start;
     margin-left: 0rem;
     margin-right: 0rem;
-  }
-`
-
-// https://react-select.com/styles#using-classnames
-// Pass menuIsOpen to component to debug
-const StyledSelect = styled(Select)`
-  max-width: none;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    .react-select__control {
-      padding: 14px 0;
-    }
   }
 `
 
@@ -247,18 +234,6 @@ const Layer2Onboard: React.FC<IProps> = ({
     }
   )
 
-  const formatGroupLabel = (data) => {
-    return data.label ? (
-      <Stack borderTop="2px solid" m={0}>
-        <Text mb={0} mt={2} textTransform="none" color="theme.colors.text">
-          {data.label}
-        </Text>
-      </Stack>
-    ) : (
-      <></>
-    )
-  }
-
   const selectExchangeOnboard = (option: ExchangeOption | CexOnboardOption) => {
     if (Object.hasOwn(option, "cex")) {
       trackCustomEvent({
@@ -306,20 +281,19 @@ const Layer2Onboard: React.FC<IProps> = ({
           </p>
         </LeftDescription>
         <LeftSelect>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
+          <Select
             options={layer2Options}
-            onChange={(selectedOption: Layer2Option) => {
+            placeholder={t("layer-2-onboard-wallet-input-placeholder")}
+            onChange={(selectedOption) => {
+              if (selectedOption === "") return setSelectedL2(undefined)
               trackCustomEvent({
                 eventCategory: `Selected layer 2 to bridge to`,
                 eventAction: `Clicked`,
-                eventName: `${selectedOption.l2.name} bridge selected`,
-                eventValue: `${selectedOption.l2.name}`,
+                eventName: `${selectedOption?.l2.name} bridge selected`,
+                eventValue: `${selectedOption?.l2.name}`,
               })
-              setSelectedL2(selectedOption.l2)
+              setSelectedL2(selectedOption?.l2)
             }}
-            placeholder={t("layer-2-onboard-wallet-input-placeholder")}
           />
         </LeftSelect>
         {selectedL2 && (
@@ -352,24 +326,24 @@ const Layer2Onboard: React.FC<IProps> = ({
           </p>
         </RightDescription>
         <RightSelect>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
+          <Select
             options={[
+              ...cexSupportOptions,
               {
-                options: [...cexSupportOptions],
-              },
-              {
-                label:
-                  "Don't see you exchange? Use dapps to bridge directly from exchanges to layer 2.",
+                optGroupLabel:
+                  "Don't see your exchange? Use dapps to bridge directly from exchanges to layer 2.",
                 options: [...cexOnboardOptions],
               },
             ]}
-            onChange={(selectedOption: ExchangeOption | CexOnboardOption) => {
+            onChange={(selectedOption) => {
+              if (selectedOption === "") {
+                setSelectedCexOnboard(undefined)
+                setSelectedExchange(undefined)
+                return
+              }
               selectExchangeOnboard(selectedOption)
             }}
             placeholder={t("layer-2-onboard-exchange-input-placeholder")}
-            formatGroupLabel={formatGroupLabel}
           />
         </RightSelect>
         <EthLogo>

@@ -8,7 +8,7 @@ import CardList from "./CardList"
 import Link from "./Link"
 import Emoji from "./OldEmoji"
 import Translation from "./Translation"
-import { StyledSelect as Select } from "./SharedStyledComponents"
+import Select from "./Select"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
@@ -96,10 +96,6 @@ const Disclaimer = styled.p`
   max-width: 876px;
   margin-top: 4rem;
   margin-bottom: 0;
-`
-
-const StyledSelect = styled(Select)`
-  max-width: 640px;
 `
 
 const NoResults = ({ children }) => (
@@ -714,13 +710,12 @@ const EthExchanges = () => {
       <Intro>
         <Translation id="page-get-eth-exchanges-intro" />
       </Intro>
-      <StyledSelect
-        aria-label={t("page-get-eth-exchanges-header")}
-        className="react-select-container"
-        classNamePrefix="react-select"
+      <Select
         options={exchangesByCountry}
         onChange={handleSelectChange}
         placeholder={placeholderString}
+        aria-label={t("page-get-eth-exchanges-header")}
+        maxW="container.sm"
       />
       {!hasSelectedCountry && (
         <EmptyStateContainer>

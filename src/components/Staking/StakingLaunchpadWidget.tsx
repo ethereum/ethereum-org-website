@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import { StyledSelect as Select } from "../SharedStyledComponents"
+import Select from "../Select"
 import ButtonLink from "../ButtonLink"
 import Emoji from "../OldEmoji"
 import Translation from "../Translation"
@@ -25,13 +25,6 @@ const Container = styled.div`
 
 const SelectContainer = styled.div`
   margin: 1rem 0;
-`
-
-const StyledSelect = styled(Select)`
-  max-width: 50%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    max-width: 100%;
-  }
 `
 
 const ButtonContainer = styled.div`
@@ -83,12 +76,11 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           <Translation id="page-staking-launchpad-widget-span" />
         </span>
         <SelectContainer>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
+          <Select
             options={selectOptions}
             onChange={handleChange}
             defaultValue={selectOptions[0]}
+            maxW={{ md: "50%" }}
           />
         </SelectContainer>
         <p>

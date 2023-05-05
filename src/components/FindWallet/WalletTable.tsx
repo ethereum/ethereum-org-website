@@ -9,7 +9,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import ButtonLink from "../ButtonLink"
 import Icon from "../Icon"
 import Link from "../Link"
-import { StyledSelect as Select } from "../SharedStyledComponents"
+import Select from "../Select"
 import Tooltip from "../Tooltip"
 import Translation from "../Translation"
 
@@ -141,101 +141,6 @@ const Wallet = styled(Grid)`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 25px 1rem;
-  }
-`
-
-// https://react-select.com/styles#using-classnames
-// Pass menuIsOpen to component to debug
-const StyledSelect = styled(Select)`
-  .react-select__control {
-    border: 1px solid ${(props) => props.theme.colors.text};
-    cursor: pointer;
-    font-size: 0.9rem;
-    padding-right: 0.3rem;
-    transition: 0.5s all;
-    svg {
-      fill: ${(props) => props.theme.colors.text};
-      transition: 0.5s all;
-    }
-
-    .react-select__value-container {
-      .react-select__single-value {
-        color: ${(props) => props.theme.colors.text};
-      }
-    }
-
-    .react-select__indicators {
-      .react-select__indicator-separator {
-        background: none;
-      }
-      .react-select__indicator {
-        color: ${(props) => props.theme.colors.text};
-        padding: 0;
-      }
-    }
-
-    &:hover {
-      background: ${(props) => props.theme.colors.primary};
-      cursor: pointer;
-      border-color: ${(props) => props.theme.colors.primary};
-      color: ${(props) => props.theme.colors.background};
-      transition: 0.5s all;
-      svg {
-        fill: ${(props) => props.theme.colors.background};
-        transition: 0.5s all;
-      }
-
-      .react-select__value-container {
-        .react-select__single-value {
-          color: ${(props) => props.theme.colors.background};
-        }
-      }
-
-      .react-select__indicators {
-        .react-select__indicator-separator {
-          background: none;
-        }
-        .react-select__indicator {
-          color: ${(props) => props.theme.colors.text};
-        }
-      }
-    }
-  }
-
-  .react-select__control--is-focused {
-    border: 1px solid ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.primary};
-    svg {
-      fill: ${(props) => props.theme.colors.background};
-      transition: 0.5s all;
-    }
-
-    .react-select__value-container {
-      .react-select__single-value {
-        color: ${(props) => props.theme.colors.background};
-      }
-    }
-
-    .react-select__indicators {
-      background: ${(props) => props.theme.colors.primary};
-      .react-select__value-container {
-        .react-select__single-value {
-          color: ${(props) => props.theme.colors.background};
-        }
-      }
-
-      .react-select__indicators {
-        .react-select__indicator {
-          color: ${(props) => props.theme.colors.background};
-        }
-      }
-    }
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    .react-select__control {
-      padding: 0;
-    }
   }
 `
 
@@ -613,15 +518,6 @@ const WalletTable = ({ data, filters, walletData }) => {
       return { ...wallet, moreInfo: false, key: wallet.image_name }
     })
   )
-  const [firstFeatureSelect, setFirstFeatureSelect] = useState(
-    featureDropdownItems[14]
-  )
-  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
-    featureDropdownItems[1]
-  )
-  const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
-    featureDropdownItems[9]
-  )
 
   const updateMoreInfo = (key) => {
     const temp = [...walletCardData]
@@ -714,16 +610,6 @@ const WalletTable = ({ data, filters, walletData }) => {
     )
   })
 
-  const filteredFeatureDropdownItems = [...featureDropdownItems].filter(
-    (item) => {
-      return (
-        item.label !== firstFeatureSelect.label &&
-        item.label !== secondFeatureSelect.label &&
-        item.label !== thirdFeatureSelect.label
-      )
-    }
-  )
-
   /**
    *
    * @param selectedOption selected dropdown option
@@ -755,6 +641,38 @@ const WalletTable = ({ data, filters, walletData }) => {
       eventName: `${selectedOption.filterKey} selected`,
     })
   }
+
+  const [firstFeatureSelect, setFirstFeatureSelect] = useState(
+    featureDropdownItems[14]
+  )
+  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
+    featureDropdownItems[1]
+  )
+  const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
+    featureDropdownItems[9]
+  )
+
+  const featureSelectGroup: {
+    featureSelect: DropdownOption
+    setFn: React.Dispatch<React.SetStateAction<DropdownOption>>
+    col: ColumnClassName
+  }[] = [
+    {
+      featureSelect: firstFeatureSelect,
+      setFn: setFirstFeatureSelect,
+      col: firstCol,
+    },
+    {
+      featureSelect: secondFeatureSelect,
+      setFn: setSecondFeatureSelect,
+      col: secondCol,
+    },
+    {
+      featureSelect: thirdFeatureSelect,
+      setFn: setThirdFeatureSelect,
+      col: thirdCol,
+    },
+  ]
 
   const WalletMoreInfo = ({ wallet, filters, idx }) => {
     const walletHasFilter = (filterKey) => {
@@ -959,57 +877,23 @@ const WalletTable = ({ data, filters, walletData }) => {
             </p>
           )}
         </th>
-        <th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setFirstFeatureSelect, firstCol)
-            }}
-            defaultValue={firstFeatureSelect}
-            isSearchable={false}
-          />
-        </th>
-        <th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setSecondFeatureSelect, secondCol)
-            }}
-            defaultValue={secondFeatureSelect}
-            isSearchable={false}
-          />
-        </th>
-        <th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setThirdFeatureSelect, thirdCol)
-            }}
-            defaultValue={thirdFeatureSelect}
-            isSearchable={false}
-          />
-        </th>
+        {featureSelectGroup.map(({ featureSelect, setFn, col }) => (
+          <th>
+            <Select
+              variant="flushed"
+              options={[
+                {
+                  optGroupLabel: t("page-find-choose-to-compare"),
+                  options: [...featureDropdownItems],
+                },
+              ]}
+              onChange={(selectedOption) => {
+                updateDropdown(selectedOption, setFn, col)
+              }}
+              defaultValue={featureSelect}
+            />
+          </th>
+        ))}
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
         const deviceLabels: Array<string> = []
