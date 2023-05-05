@@ -19,8 +19,7 @@ const { commonControlProps, commonContainerProps, commonLabelProps } =
 const baseStyleContainer = defineMergeStyles(
   defaultBaseStyle?.({} as never).container,
   switchSmSize?.container,
-  commonContainerProps,
-  {}
+  commonContainerProps
 )
 
 const baseStyleThumb = defineMergeStyles(
@@ -33,6 +32,7 @@ const baseStyleTrack = defineMergeStyles(
   commonControlProps,
   {
     bg: "bodyLight",
+    border: "none",
     _invalid: { borderColor: "errorOutline" },
     _focusVisible: { bg: "gray.500", borderColor: "transparent" },
   }
