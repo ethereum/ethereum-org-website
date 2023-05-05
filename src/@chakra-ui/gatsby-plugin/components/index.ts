@@ -5,6 +5,7 @@ import { Tag } from "./Tag"
 import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
 import { Tabs } from "./Tabs"
+import { Radio } from "./Radio"
 import {
   accordionDefaultTheme,
   avatarDefaultTheme,
@@ -40,6 +41,7 @@ export default {
   Link,
   Menu: menuDefaultTheme,
   Modal,
+  Radio,
   Select: selectDefaultTheme,
   Spinner: spinnerDefaultTheme,
   Switch: switchDefaultTheme,
