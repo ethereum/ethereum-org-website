@@ -23,21 +23,29 @@ const meta: Meta<RadioType> = {
 
 export default meta
 
-type Story = StoryObj<RadioType>
+type Story = StoryObj<typeof RadioGroup>
 
 export const Radio: Story = {
   args: {
     flexDirection: "column",
   },
-  render: ({ flexDirection }) => (
-    <RadioGroup defaultValue={"checked"}>
+  argTypes: {
+    value: {
+      options: ["checked", "disabled", "focusable", "read-only", "required"],
+      control: {
+        type: "radio",
+      },
+    },
+  },
+  render: ({ flexDirection, value }) => (
+    <RadioGroup value={value}>
       <Flex flexDirection={flexDirection} gap={4} align="flex-start">
         <RadioComponent value="checked">defaultValue</RadioComponent>
         <RadioComponent value="disabled" isDisabled>
           isDisabled
         </RadioComponent>
         <RadioComponent value="focusable" isFocusable isDisabled>
-          isFocusable
+          isFocusable and disabled
         </RadioComponent>
         <RadioComponent value="read-only" isReadOnly>
           isReadOnly
