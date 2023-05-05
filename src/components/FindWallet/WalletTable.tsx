@@ -887,7 +887,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                   options: [...featureDropdownItems],
                 },
               ]}
-              onChange={(selectedOption) => {
+              onChange={(selectedOption: DropdownOption) => {
                 updateDropdown(selectedOption, setFn, col)
               }}
               defaultValue={featureSelect}

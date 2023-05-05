@@ -284,7 +284,7 @@ const Layer2Onboard: React.FC<IProps> = ({
           <Select
             options={layer2Options}
             placeholder={t("layer-2-onboard-wallet-input-placeholder")}
-            onChange={(selectedOption) => {
+            onChange={(selectedOption: Layer2Option | "") => {
               if (selectedOption === "") return setSelectedL2(undefined)
               trackCustomEvent({
                 eventCategory: `Selected layer 2 to bridge to`,
@@ -335,7 +335,9 @@ const Layer2Onboard: React.FC<IProps> = ({
                 options: [...cexOnboardOptions],
               },
             ]}
-            onChange={(selectedOption) => {
+            onChange={(
+              selectedOption: ExchangeOption | CexOnboardOption | ""
+            ) => {
               if (selectedOption === "") {
                 setSelectedCexOnboard(undefined)
                 setSelectedExchange(undefined)
