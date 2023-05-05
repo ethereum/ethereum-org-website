@@ -29,7 +29,7 @@ const InfoBanner: React.FC<IProps> = ({
       borderRadius={"sm"}
       maxW={shouldCenter ? "55rem" : "100%"}
       sx={{
-        "*": {
+        ":not(button)": {
           color: "black300 !important",
         },
       }}
