@@ -3,6 +3,7 @@ import {
   createMultiStyleConfigHelpers,
   defineStyle,
 } from "@chakra-ui/styled-system"
+import { calc } from "@chakra-ui/theme-tools"
 import { defineMergeStyles, inputDefaultTheme } from "./components.utils"
 
 const { defineMultiStyleConfig, definePartsStyle } =
@@ -52,7 +53,6 @@ const baseStyle = definePartsStyle((props) => {
         },
       },
       element: {
-        fontSize: "xl",
         transitionProperty: "common",
         transitionDuration: "normal",
         _groupHover: {
@@ -83,8 +83,8 @@ const baseStyle = definePartsStyle((props) => {
 
 const size = {
   md: defineStyle({
-    h: 10,
-    px: 2,
+    h: 10.5,
+    px: 9,
   }),
   sm: defineStyle({
     fontSize: "sm",
@@ -96,11 +96,15 @@ const size = {
 const sizes = {
   md: definePartsStyle({
     field: size.md,
-    element: size.md,
+    element: {
+      fontSize: "2xl",
+    },
   }),
   sm: definePartsStyle({
     field: size.sm,
-    element: size.sm,
+    element: {
+      fontSize: "xl",
+    },
   }),
 }
 
