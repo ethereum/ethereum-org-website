@@ -75,10 +75,6 @@ const baseStyle = definePartsStyle((props) => {
     }
   )
 })
-console.log(
-  "🚀 ~ file: Input.ts:78 ~ baseStyle ~ inputDefaultTheme.baseStyle,:",
-  inputDefaultTheme.baseStyle
-)
 
 const size = {
   md: defineStyle({
