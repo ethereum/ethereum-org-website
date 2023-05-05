@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   ButtonProps,
+  Checkbox,
   Flex,
   Heading,
   Img,
@@ -16,7 +17,6 @@ import {
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import CardList from "../../components/CardList"
-import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Emoji from "../../components/Emoji"
 import InfoBanner from "../../components/InfoBanner"
