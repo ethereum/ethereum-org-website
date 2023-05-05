@@ -2,6 +2,7 @@ import * as React from "react"
 import {
   Input as ChakraInput,
   InputGroup,
+  InputGroupProps,
   InputLeftElement,
   InputProps as ChakraInputProps,
   InputRightElement,
@@ -16,17 +17,24 @@ interface InputProps extends ChakraInputProps {
    * The Element or Icon used to render `InputRightElement`
    */
   rightElement?: React.ReactNode
+  inputGroupProps?: InputGroupProps
 }
 
-const Input = (props: InputProps) => {
-  const { leftElement, rightElement, size, ...rest } = props
-  return (
-    <InputGroup size={size}>
-      <ChakraInput data-peer {...rest} />
-      {leftElement ? <InputLeftElement children={leftElement} /> : null}
-      {rightElement ? <InputRightElement children={rightElement} /> : null}
-    </InputGroup>
-  )
+function Input(props: InputProps) {
+  if ("leftElement" in props || "rightElement" in props) {
+    const { size, inputGroupProps, leftElement, rightElement, ...rest } = props
+    return (
+      <InputGroup size={size} {...inputGroupProps}>
+        <ChakraInput data-peer {...rest} />
+        {leftElement ? <InputLeftElement children={leftElement} /> : null}
+        {rightElement ? <InputRightElement children={rightElement} /> : null}
+      </InputGroup>
+    )
+  }
+
+  const { size, ...rest } = props
+
+  return <ChakraInput size={size} {...rest} />
 }
 
 export default Input
