@@ -4,7 +4,6 @@ import { sortBy } from "lodash"
 import {
   Box,
   Flex,
-  Input,
   LinkBox,
   LinkOverlay,
   Text,
@@ -19,6 +18,7 @@ import Translation from "./Translation"
 
 // Data
 import meetups from "../data/community-meetups.json"
+import Input from "./Input"
 
 // Utils
 import { trackCustomEvent } from "../utils/matomo"
@@ -73,13 +73,7 @@ const MeetupList: React.FC<IProps> = () => {
         mr="auto"
         ml="auto"
         mb={6}
-        border="1px solid"
-        borderColor="searchBorder"
-        color="text"
-        bg="searchBackground"
         p={2}
-        borderRadius="base"
-        w="100%"
         _focus={{ outline: "auto 1px" }}
         _placeholder={{ color: "text200" }}
       />

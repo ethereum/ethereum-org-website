@@ -14,6 +14,7 @@ import { Language, languageMetadata } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import Icon from "../components/Icon"
+import Input from "../components/Input"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -122,22 +123,24 @@ const LanguagesPage = () => {
             <Translation id="page-languages-translations-available" />:
           </h2>
           <Form>
-            <StyledInput
+            <Input
               value={keyword}
               placeholder={searchString}
               onChange={(e) => setKeyword(e.target.value)}
+              rightElement={
+                keyword !== "" && (
+                  <IconButton
+                    icon={<Icon name="close" />}
+                    onClick={resetKeyword}
+                    position="absolute"
+                    insetInlineEnd={1}
+                    aria-label={t("clear")}
+                    variant="icon"
+                    _hover={{ svg: { fill: "primary" } }}
+                  />
+                )
+              }
             />
-            {keyword !== "" && (
-              <IconButton
-                icon={<Icon name="close" />}
-                onClick={resetKeyword}
-                position="absolute"
-                insetInlineEnd={1}
-                aria-label={t("clear")}
-                variant="icon"
-                _hover={{ svg: { fill: "primary" } }}
-              />
-            )}
           </Form>
           <LangContainer>
             {translationsCompleted.map((lang) => (

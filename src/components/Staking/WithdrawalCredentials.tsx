@@ -1,6 +1,6 @@
 // Import libraries
 import React, { FC, useState, useMemo, ChangeEvent } from "react"
-import { Button, Flex, Input, Text } from "@chakra-ui/react"
+import { Button, Flex, Text } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 // Components
 import CopyToClipboard from "../CopyToClipboard"
@@ -8,6 +8,7 @@ import Emoji from "../Emoji"
 import Translation from "../Translation"
 // Utilites
 import { trackCustomEvent } from "../../utils/matomo"
+import Input from "../Input"
 
 interface Validator {
   validatorIndex: number
@@ -147,7 +148,6 @@ const WithdrawalCredentials: FC<IProps> = () => {
           onChange={handleChange}
           w={{ base: "full", sm: "18ch" }}
           placeholder={t("comp-withdrawal-credentials-placeholder")}
-          bg="background"
         />
         <Flex
           w={{ base: "full", sm: "fit-content" }}
