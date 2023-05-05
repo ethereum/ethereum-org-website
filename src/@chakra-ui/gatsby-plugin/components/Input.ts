@@ -10,7 +10,7 @@ const { defineMultiStyleConfig, definePartsStyle } =
 
 const baseStyle = definePartsStyle((props) => {
   const {
-    focusBorderColor: fc = "primary",
+    focusBorderColor: fc = "primaryHover",
     errorBorderColor: ec = "errorOutline",
   } = props
 
@@ -21,12 +21,15 @@ const baseStyle = definePartsStyle((props) => {
       field: {
         borderColor: "body",
         borderRadius: "base",
+        outline: "3px solid transparent",
         _placeholder: {
           color: "disabled",
           opacity: 1,
         },
         _focusVisible: {
-          borderColor: fc,
+          outlineColor: fc,
+          outlineOffset: "-1px",
+          border: "none",
           boxShadow: "none",
         },
         _hover: null, // override default
@@ -58,7 +61,7 @@ const baseStyle = definePartsStyle((props) => {
         _groupHover: {
           color: "primaryHover",
         },
-        _peerFocus: {
+        _peerFocusVisible: {
           color: fc,
           _peerInvalid: {
             color: ec,
