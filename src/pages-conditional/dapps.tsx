@@ -280,7 +280,7 @@ const AddDappButton = styled(ButtonLink)`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     margin-left: 1rem;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-top: 2rem;
     margin-left: 0rem;
   }
