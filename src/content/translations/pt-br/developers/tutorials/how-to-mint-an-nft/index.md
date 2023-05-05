@@ -6,7 +6,7 @@ tags:
   - "ERC-721"
   - "Solidity"
   - "contratos inteligentes"
-skill: iniciante
+skill: beginner
 lang: pt-br
 published: 2021-04-22
 ---

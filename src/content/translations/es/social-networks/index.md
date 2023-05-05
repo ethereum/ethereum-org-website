@@ -5,7 +5,7 @@ lang: es
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: ../../assets/ethereum-learn.png
+image: ../../../../assets/ethereum-learn.png
 summaryPoint1: Plataformas basadas en la cadena de bloques para interacción social, creación y distribución de contenidos.
 summaryPoint2: Las redes sociales descentralizadas protegen la privacidad del usuario y mejoran la seguridad de los datos.
 summaryPoint3: Tókenes y NFT crean nuevas formas de monetizar contenido.
@@ -21,7 +21,7 @@ Muchas redes sociales descentralizadas existen como alternativa a los servicios 
 
 ### ¿Cómo funcionan las redes sociales descentralizadas? {#decentralized-social-networks-overview}
 
-Las redes sociales descentralizadas son una clase [aplicaciones descentralizadas (dapps)](/dapps/) - aplicaiones impulsadas por [ contratos inteligentes ](/developers/docs/smart-contracts/) desplegados en la cadena de bloques. El código de contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
+Las redes sociales descentralizadas son una clase [aplicaciones descentralizadas (dapps)](/dapps/) - aplicaiones impulsadas por [contratos inteligentes](/developers/docs/smart-contracts/) desplegados en la cadena de bloques. El código de contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
 
 Las plataformas tradicionales de redes sociales se basan en bases de datos para almacenar información del usuario, el código del programa y otras formas de datos. Aunque esto crea puntos únicos de fallo y supone un riesgo significativo. Por ejemplo, los servidores de Facebook, de forma notoria, [se desconectaron durante horas](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) el año pasado, dejando a los usuarios fuera de la plataforma.
 

@@ -6,7 +6,7 @@ tags:
   - "トランザクション"
   - "web3.js"
   - "Alchemy"
-skill: 初級
+skill: beginner
 lang: ja
 published: 2020-11-04
 source: Alchemy ドキュメント

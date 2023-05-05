@@ -7,7 +7,7 @@ tags:
   - "Frontend"
   - "JavaScript"
   - "web3.js"
-skill: Einsteiger
+skill: beginner
 lang: de
 published: 2020-04-19
 source: EthereumDev

@@ -83,7 +83,7 @@ Goerli ess un réseau de test pour les tests de validation et de mise en jeu. Le
 - [Robinet Alchemy Goerli](https://goerlifaucet.com/)
 - [Robinet All That Node Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
 
-Pour lancer un validateur sur le réseau de test Goerli, utilisez la [plateforme de lancement "validateur goerli bon marché"](https://goerli. launchpad. ethstaker. cc/en/) d'ethstaker.
+Pour lancer un validateur sur le réseau de test Goerli, utilisez la [plateforme de lancement "validateur goerli bon marché"](https://goerli.launchpad.ethstaker.cc/en/) d'ethstaker.
 
 #### Rinkeby _(soutien à long terme)_ {#rinkeby}
 
