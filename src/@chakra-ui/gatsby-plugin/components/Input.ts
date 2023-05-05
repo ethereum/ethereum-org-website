@@ -19,7 +19,7 @@ const baseStyle = definePartsStyle((props) => {
     inputDefaultTheme.variants?.outline(props),
     {
       field: {
-        borderColor: "body",
+        borderColor: "currentColor",
         borderRadius: "base",
         outline: "3px solid transparent",
         _placeholder: {
@@ -46,7 +46,7 @@ const baseStyle = definePartsStyle((props) => {
         },
         "&:not(:disabled)": {
           _hover: {
-            borderColor: "primaryHover",
+            color: "primary",
           },
           _active: {
             bg: "backgroundHighlight",

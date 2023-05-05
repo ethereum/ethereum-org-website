@@ -1,31 +1,31 @@
 import { selectAnatomy } from "@chakra-ui/anatomy"
 import { createMultiStyleConfigHelpers, cssVar } from "@chakra-ui/react"
 import { defineMergeStyles, selectDefaultTheme } from "./components.utils"
+import { Input as inputTheme } from "./Input"
+
+const { baseStyle: inputBaseStyles } = inputTheme
+
+const baseFieldStyles = inputBaseStyles?.({} as never).field
 
 const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(selectAnatomy.keys)
 
-const $borderBaseWidth = cssVar("border-base-width")
-
 const baseStyleField = defineMergeStyles(selectDefaultTheme.baseStyle?.field, {
-  [$borderBaseWidth.variable]: "1px",
-  borderColor: "currentColor",
+  ...baseFieldStyles,
   cursor: "pointer",
   py: 2,
   ps: 2,
   pe: 8,
-  _active: {
-    bg: "primaryLowContrast",
-    boxShadow: "none",
-  },
-  _hover: {
-    boxShadow: "buttonHover",
-    color: "primary",
-  },
   _focusVisible: {
     outline: "3px solid",
     outlineColor: "primaryHover",
     outlineOffset: "-1px",
+  },
+  "&:not(:disabled)": {
+    _hover: {
+      ...baseFieldStyles?.["&:not(:disabled)"],
+      boxShadow: "buttonHover",
+    },
   },
 })
 
@@ -43,14 +43,22 @@ const baseStyle = definePartsStyle({
 const variantOutline = definePartsStyle({
   field: {
     borderRadius: "base",
-    borderWidth: $borderBaseWidth.reference,
   },
 })
 
+const flushedBorderColor = "transparent !important"
+
 const variantFlushed = definePartsStyle({
   field: {
-    borderTopRadius: "base",
-    borderBottomWidth: $borderBaseWidth.reference,
+    borderBottomRadius: 0,
+    borderTopColor: flushedBorderColor,
+    borderInlineColor: flushedBorderColor,
+    "&:not(:disabled)": {
+      _hover: {
+        borderTopColor: flushedBorderColor,
+        borderInlineColor: flushedBorderColor,
+      },
+    },
   },
 })
 
