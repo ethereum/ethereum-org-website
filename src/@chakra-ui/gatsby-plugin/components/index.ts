@@ -6,6 +6,7 @@ import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
 import { Tabs } from "./Tabs"
 import { Radio } from "./Radio"
+import { Switch } from "./Switch"
 import {
   accordionDefaultTheme,
   avatarDefaultTheme,
@@ -20,7 +21,6 @@ import {
   menuDefaultTheme,
   selectDefaultTheme,
   spinnerDefaultTheme,
-  switchDefaultTheme,
   tableDefaultTheme,
 } from "./components.utils"
 
@@ -44,7 +44,7 @@ export default {
   Radio,
   Select: selectDefaultTheme,
   Spinner: spinnerDefaultTheme,
-  Switch: switchDefaultTheme,
+  Switch,
   Table: tableDefaultTheme,
   Tabs,
   Tag,
