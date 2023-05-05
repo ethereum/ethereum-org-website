@@ -1,5 +1,5 @@
 import * as React from "react"
-import { RadioGroup, Radio as RadioComponent, Stack } from "@chakra-ui/react"
+import { RadioGroup, Radio as RadioComponent, Flex } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 type RadioType = typeof RadioComponent
@@ -8,7 +8,7 @@ const meta: Meta<RadioType> = {
   title: "Atoms / Form / Radio",
   component: RadioComponent,
   argTypes: {
-    groupDir: {
+    flexDirection: {
       options: ["column", "row"],
       control: { type: "radio" },
     },
@@ -27,11 +27,11 @@ type Story = StoryObj<RadioType>
 
 export const Radio: Story = {
   args: {
-    groupDir: "column",
+    flexDirection: "column",
   },
-  render: ({ groupDir }) => (
+  render: ({ flexDirection }) => (
     <RadioGroup defaultValue={"checked"}>
-      <Stack direction={groupDir} spacing={4} align="flex-start">
+      <Flex flexDirection={flexDirection} gap={4} align="flex-start">
         <RadioComponent value="checked">defaultValue</RadioComponent>
         <RadioComponent value="disabled" isDisabled>
           isDisabled
@@ -45,7 +45,7 @@ export const Radio: Story = {
         <RadioComponent value="required" isRequired>
           isRequired
         </RadioComponent>
-      </Stack>
+      </Flex>
     </RadioGroup>
   ),
 }
