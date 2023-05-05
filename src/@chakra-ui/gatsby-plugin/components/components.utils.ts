@@ -100,10 +100,7 @@ export const commonInputTriggerStyles = {
       // Hovering over the label triggers the style for the control
       "*:hover > &": {
         bg: "primaryHover",
-        outlineColor: "primaryDark",
-        _dark: {
-          outlineColor: "primaryLight",
-        },
+        borderColor: "primaryHighContrast",
       },
     },
   },
