@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react"
 import {
   Box,
   Flex,
@@ -9,16 +8,17 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react"
+import React, { useEffect, useState } from "react"
 
+import { PageProps, graphql } from "gatsby"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
 
-import Translation from "../../components/Translation"
+import FeedbackCard from "../../components/FeedbackCard"
 import PageMetadata from "../../components/PageMetadata"
 import ProductCard from "../../components/ProductCard"
-import FeedbackCard from "../../components/FeedbackCard"
+import Translation from "../../components/Translation"
 
 import { getImage } from "../../utils/image"
 
@@ -94,6 +94,15 @@ const frameworksList: Array<IFramework> = [
     name: "Brownie",
     description: "page-local-environment-brownie-desc",
     alt: "page-local-environment-brownie-logo-alt",
+  },
+  {
+    id: "apeworx",
+    url: "https://apeworx.io/",
+    githubUrl: "https://github.com/ApeWorX",
+    background: "#ffffff",
+    name: "ApeWorX",
+    description: "page-local-environment-apeworx-desc",
+    alt: "page-local-environment-apeworx-logo-alt",
   },
   {
     id: "epirus",
@@ -184,6 +193,15 @@ const ChooseStackPage = ({
       name: "Brownie",
       description: t("page-local-environment-brownie-desc"),
       alt: t("page-local-environment-brownie-logo-alt"),
+    },
+    {
+      id: "apeworx",
+      url: "https://apeworx.io/",
+      githubUrl: "https://github.com/ApeWorX",
+      background: "#ffffff",
+      name: "ApeWorX",
+      description: t("page-local-environment-apeworx-desc"),
+      alt: t("page-local-environment-apeworx-logo-alt"),
     },
     {
       id: "epirus",
@@ -421,6 +439,9 @@ export const query = graphql`
       ...devtoolImage
     }
     brownie: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
+      ...devtoolImage
+    }
+    apeworx: file(relativePath: { eq: "assets/dev-tools/apeworx.png" }) {
       ...devtoolImage
     }
     epirus: file(relativePath: { eq: "dev-tools/epirus.png" }) {
