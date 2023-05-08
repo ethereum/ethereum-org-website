@@ -5,7 +5,7 @@ author: Ori Pomerantz
 tags:
   - "solidity"
 skill: intermediate
-published: 01-05-2021
+published: 2021-05-01
 lang: it
 ---
 
@@ -800,7 +800,7 @@ Queste due funzioni consentono a `feeSetter` di controllare il destinatario dell
 
 ### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
-[Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa il token di liquidità ERC-20. È simile al [contratto ERC-20 di OpenZeppelin ](/developers/tutorials/erc20-annotated-code), quindi spiegherò solo le differenze: la funzionalità `permit`.
+[Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa il token di liquidità ERC-20. È simile al [contratto ERC-20 di OpenZeppelin](/developers/tutorials/erc20-annotated-code), quindi spiegherò solo le differenze: la funzionalità `permit`.
 
 Le transazioni su Ethereum costano ether (ETH), equivalente al denaro reale. Se hai dei token ERC-20 ma non ETH, non puoi inviare transazioni, quindi non puoi farci nulla. Una soluzione per evitare questo problema sono le [meta-transazioni](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Il proprietario dei token firma una transazione che consente a chiunque altro di prelevare token al di fuori della catena e li invia al destinatario tramite Internet. Il destinatario, che ha ETH a disposizione, invia il permesso per conto del proprietario.
 

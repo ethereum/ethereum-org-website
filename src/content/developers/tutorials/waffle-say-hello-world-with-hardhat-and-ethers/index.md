@@ -4,7 +4,7 @@ description: Make your first Waffle project with hardhat and ethers.js
 author: "MiZiet"
 tags:
   ["waffle", "smart contracts", "solidity", "testing", "hardhat", "ethers.js"]
-skill: basic
+skill: beginner
 lang: en
 published: 2020-10-16
 ---

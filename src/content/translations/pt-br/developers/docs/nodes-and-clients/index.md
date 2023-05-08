@@ -84,7 +84,7 @@ O Ethereum ainda não suporta uma grande quantidade de nós leves, mas o suporte
 
 Sincronizar clientes em qualquer modo que não seja o de arquivo resultará na remoção de dados da cadeia de blocos. Isso significa que não há arquivo de todo o estado histórico, mas o nó completo é capaz de criá-lo sob demanda.
 
-Saiba mais sobre [Nós de arquivo](/developers/docs/archive-nodes).
+Saiba mais sobre [Nós de arquivo](/developers/docs/nodes-and-clients/archive-nodes).
 
 ## Por que devo executar um nó Ethereum? {#why-should-i-run-an-ethereum-node}
 
@@ -95,7 +95,7 @@ A execução de um nó permite que você use o Ethereum de forma direta, confiá
 A execução de seu próprio nó permite que você use o Ethereum de maneira privada, autossuficiente e confiável. Você não precisa confiar na rede porque você pode verificar os dados por conta própria com seu cliente. "Não confie, verifique" é um mantra popular da cadeia de blocos.
 
 - Seu nó verifica todas as transações e blocos contra as regras de consenso por si só. Isso significa que você não precisa confiar em nenhum outro nó da rede nem confiar totalmente neles.
-- Você pode usar uma carteira Ethereum com seu próprio nó. Você pode usar dapps com mais segurança e privacidade porque não precisará vazar seus endereços e saldos para nós aleatórios. Tudo pode ser verificado com seu próprio cliente. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) e [muitas outras carteiras](/wallets/ find-wallet/) oferecem importação de RPC, permitindo que elas usem seu nó.
+- Você pode usar uma carteira Ethereum com seu próprio nó. Você pode usar dapps com mais segurança e privacidade porque não precisará vazar seus endereços e saldos para nós aleatórios. Tudo pode ser verificado com seu próprio cliente. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) e [muitas outras carteiras](/wallets/find-wallet/) oferecem importação de RPC, permitindo que elas usem seu nó.
 - Você pode executar e auto-hospedar outros serviços que dependem de dados do Ethereum. Por exemplo, isso pode ser um validador Beacon Chain, software como camada 2, infraestrutura, exploradores de bloco, processadores de pagamento etc.
 - Você pode fornecer seus próprios [pontos de extremidade RPC](https://ethereum.org/en/developers/docs/apis/json-rpc/) personalizados. O ponto de extremidade Ethereum hospedado publicamente pela comunidade ou de modo privado, permite que as pessoas usem seu nó e evitem grandes provedores centralizados.
 - Você pode se conectar ao seu nó usando **Comunicações entre processos (IPC)** ou reescrever o nó para carregar seu programa como um plugin. Isso garante baixa latência, o que ajuda muito, por exemplo, ao processar muitos dados usando bibliotecas Web3 ou quando você precisa substituir suas transações o mais rápido possível (isto é, de forma acelerada).
@@ -124,7 +124,7 @@ Se você é mais que um usuário técnico, mergulhe em mais detalhes e opções 
 
 ## Alternativas {#alternatives}
 
-Configurar seu próprio nó pode custar tempo e recursos, mas nem sempre você precisa executar sua própria instância. Nesse caso, você pode usar um provedor de API de terceiros, como [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), [QuikNode](https://www.quiknode.io), [Tenderly](https://tenderly.co/web3-gateway), [Blast](https://blastapi.io/) ou [GetBlock](https://getblock.io/). Como alternativa, [ArchiveNode](https://archivenode.io/) é um nó de arquivo financiado pela comunidade, que espera trazer dados de arquivo na cadeia de blocos Ethereum, para desenvolvedores independentes que de outra forma não poderiam pagar. Para obter uma visão geral do uso desses serviços, confira [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Configurar seu próprio nó pode custar tempo e recursos, mas nem sempre você precisa executar sua própria instância. Nesse caso, você pode usar um provedor de API de terceiros, como [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), [QuikNode](https://www.quiknode.io), [Tenderly](https://tenderly.co/web3-gateway), [Blast](https://blastapi.io/) ou [GetBlock](https://getblock.io/). Para obter uma visão geral do uso desses serviços, confira [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
 Se alguém executa um nó Ethereum com uma API pública em sua comunidade, você pode apontar suas carteiras ligeiras (como MetaMask) para um nó da comunidade [via RPC personalizado](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) e ganhar mais privacidade do que com alguns terceiros aleatórios de confiança.
 
@@ -142,9 +142,8 @@ Esta tabela resume os diferentes clientes. Todos eles passam por [testes de clie
 | [Nethermind](http://nethermind.io/)             | C#, .NET                 | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo (sem servidor), Rápido, Completo | Arquivo, Removido |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java                     | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo, Rápido, Completo                | Arquivo, Removido |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Completo                                     | Arquivo, Removido |
-| [Akula](https://akula.app)                      | Rust                     | Linux                 | Rede principal, Sepolia, Goerli           | Completo                                     | Arquivo, Removido |
 
-**Observe que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-form-turbo-geth-to-release-next-gen-ethereum- client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e, de preferência, mude para outra implementação de cliente!
+**Observe que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-form-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e, de preferência, mude para outra implementação de cliente!
 
 Para saber mais sobre redes suportadas, leia sobre as [redes Ethereum](/developers/docs/networks/).
 
@@ -158,7 +157,7 @@ A [documentação](https://besu.hyperledger.org/en/stable/) extensa do Besu irá
 
 ### Erigon {#erigon}
 
-Erigon, anteriormente conhecido como Turbo-Geth, começou como uma bifurcação do Go Ethereum orientado para velocidade e eficiência de espaço em disco. Erigon é uma implementação completamente rearquitetada do Ethereum, atualmente escrita em Go, mas com implementações em outras linguagens em desenvolvimento, por exemplo, [Acula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). O objetivo do Erigon é fornecer uma implementação mais rápida, modular e otimizada do Ethereum. Ele pode realizar uma sincronização completa do nó de arquivamento usando cerca de 2TB de espaço em disco, em menos de 3 dias.
+Erigon, anteriormente conhecido como Turbo-Geth, começou como uma bifurcação do Go Ethereum orientado para velocidade e eficiência de espaço em disco. Erigon é uma implementação completamente rearquitetada do Ethereum, atualmente escrita em Go, mas com implementações em outras linguagens em desenvolvimento. O objetivo do Erigon é fornecer uma implementação mais rápida, modular e otimizada do Ethereum. Ele pode realizar uma sincronização completa do nó de arquivamento usando cerca de 2TB de espaço em disco, em menos de 3 dias.
 
 ### Go Ethereum {#geth}
 
@@ -178,7 +177,9 @@ A Nethermind também conta com uma [documentação detalhada](https://docs.nethe
 
 ## Clientes de consenso (antigos clientes 'Eth2') {#consensus-clients}
 
-Existem vários clientes de consenso (anteriormente conhecidos como clientes "Eth2") para oferecer suporte às [atualizações de consenso](/roadmap/beacon-chain/). Eles estão executando a Beacon Chain e fornecerão um mecanismo de consenso de prova de participação para clientes de execução após [A Fusão](/roadmap/merge/).
+Existem vários clientes de consenso (anteriormente conhecidos como clientes "Eth2") para oferecer suporte às [atualizações de consenso](/upgrades/beacon-chain/). Eles estão executando a Beacon Chain e fornecerão um mecanismo de consenso de prova de participação para clientes de execução após [A Fusão](/upgrades/merge/).
+
+[Visualizar clientes de consenso](/upgrades/get-involved/#clients).
 
 | Cliente                                                       | Linguagem de programação | Sistemas operacionais | Redes                                                          |
 | ------------------------------------------------------------- | ------------------------ | --------------------- | -------------------------------------------------------------- |
@@ -287,8 +288,8 @@ Mais sobre [sincronização de ponto de verificação](https://notes.ethereum.or
 
 Há muitas informações sobre os clientes Ethereum na internet. Aqui estão alguns recursos que podem ser úteis.
 
-- [Ethereum 101 – Parte 2 – Entendendo os nós](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _–Wil Barnes, 13 de fevereiro de 2019_
-- [Executando nós completos do Ethereum: um guia para os pouco motivados ](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de novembro de 2019_
+- [Ethereum 101 – Parte 2 – Entendendo os nós](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _- Wil Barnes, 13 de fevereiro de 2019_
+- [Executando nós completos do Ethereum: um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de novembro de 2019_
 
 ## Tópicos relacionados {#related-topics}
 

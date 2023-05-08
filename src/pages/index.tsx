@@ -175,9 +175,12 @@ const PageHeader = () => (
     <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>
       <Translation id="page-index-description" />
     </Text>
-    <ButtonLink variant="outline" to="/learn/">
-      <Translation id="page-index-title-button" />
-    </ButtonLink>
+    <ButtonLinkRow
+      firstButton={{
+        to: "/learn/",
+        child: <Translation id="page-index-title-button" />,
+      }}
+    />
   </Flex>
 )
 

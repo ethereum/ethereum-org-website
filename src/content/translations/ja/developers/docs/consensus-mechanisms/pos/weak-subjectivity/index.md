@@ -34,6 +34,6 @@ lang: ja
 
 - [Eth2 における弱い主観性](https://notes.ethereum.org/@adiasg/weak-subjectvity-eth2)
 - [Vitalik: 弱い主観性の利点](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
-- [弱い主観性(Teku ドキュメント) ](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
+- [弱い主観性(Teku ドキュメント)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
 - [Phase-0 弱い主観性ガイド](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
 - [イーサリアム 2.0 における弱い主観性の分析](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

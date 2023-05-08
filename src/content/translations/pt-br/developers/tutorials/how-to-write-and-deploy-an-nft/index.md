@@ -7,7 +7,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "contratos inteligentes"
-skill: iniciante
+skill: beginner
 lang: pt-br
 published: 2021-04-22
 ---
@@ -192,7 +192,7 @@ Abra o projeto my-nft no seu editor favorito (nós gostamos do [VSCode](https://
 
 Então, o que esse código _faz_ exatamente? Vamos por partes, linha por linha.
 
-No topo do nosso contrato inteligente, importamos três [classes de contrato inteligente OpenZeppelin](https://openzeppelin. com/):
+No topo do nosso contrato inteligente, importamos três [classes de contrato inteligente OpenZeppelin](https://openzeppelin.com/):
 
 - @openzeppelin/contracts/token/ERC721/ERC721.sol contém a implementação do padrão ERC-721, que nosso contrato inteligente NFT herdará. (Para ser um NFT válido, seu contrato inteligente deve implementar todos os métodos do padrão ERC-721.) Para saber mais sobre as funções herdadas do ERC-721, confira a definição da interface [aqui](https://eips.ethereum.org/EIPS/eip-721).
 

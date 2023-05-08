@@ -16,7 +16,7 @@ lang: zh
 
 <DeveloperDocsLinks headerId="foundational-topics" />
 
-### 以太坊堆栈 {#ethereum-stack}
+### 以太坊技术栈 {#ethereum-stack}
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 

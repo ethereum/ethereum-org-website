@@ -9,7 +9,7 @@ tags:
   - "テスト"
   - "Hardhat"
   - "ethers.js"
-skill: 基本
+skill: beginner
 lang: ja
 published: 2020-10-16
 ---

@@ -227,9 +227,9 @@ sidebarDepth: 3
 
 ## 区块浏览器 {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - 可以用来获取以太坊主网和 Goerli 测试网数据的区块浏览器。
+- [Etherscan](https://etherscan.io/) - 可以用来获取以太坊主网和 Goerli 测试网数据的区块浏览器
 - [Beaconcha.in](https://beaconcha.in/) - 用于以太坊主网和 Goerli 测试网的开源区块浏览器
-- [Blockchair](https://blockchair.com/ethereum) - 最具隐私保护的以太坊浏览器。 也用于排序和过滤（内存池）数据
+- [Blockchair](https://blockchair.com/ethereum) - 最具隐私保护性的以太坊浏览器。 也用于排序和过滤（内存池）数据
 - [Etherchain](https://www.etherchain.org/) - 以太坊主网的区块浏览器
 - [Ethplorer](https://ethplorer.io/) - 专注于以太坊主网和 Kovan 测试网代币的区块浏览器
 

@@ -27,7 +27,7 @@ Um objeto contendo um [endereço](#address), um saldo, [um nonce](#nonce), bem c
 
 ### endereço {#address}
 
-Geralmente, isso representa um [EOA](#eoa) ou [contrato](#contract-account) que pode receber (endereço de destino) ou enviar (endereço de origem) [transações](#transaction) na cadeia de blocos. Mais especificamente, são os 160 bits mais à direita de um [hash Keccak](#keccak-256) de uma [chave pública](# public-key)[ECDSA](#ecdsa).
+Geralmente, isso representa um [EOA](#eoa) ou [contrato](#contract-account) que pode receber (endereço de destino) ou enviar (endereço de origem) [transações](#transaction) na cadeia de blocos. Mais especificamente, são os 160 bits mais à direita de um [hash Keccak](#keccak-256) de uma [chave pública](#public-key)[ECDSA](#ecdsa).
 
 ### interface binária de aplicação (ABI) {#abi}
 
@@ -132,7 +132,7 @@ O processo de verificação de que um novo bloco contém transações e assinatu
 
 ### cadeia de blocos {#blockchain}
 
-Uma sequência de [blocos](#block), cada um se conectando ao seu antecessor até o [bloco de início ](#genesis-block), fazendo referência ao hash do bloco anterior. A integridade da cadeia de blocos é economicamente protegida com a ajuda de um mecanismo de consenso baseado em prova de participação.
+Uma sequência de [blocos](#block), cada um se conectando ao seu antecessor até o [bloco de início](#genesis-block), fazendo referência ao hash do bloco anterior. A integridade da cadeia de blocos é economicamente protegida com a ajuda de um mecanismo de consenso baseado em prova de participação.
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
   O que é uma cadeia de blocos?
@@ -941,7 +941,7 @@ Uma imagem instantânea de todos os saldos e dados em um determinado momento na 
 
 ### canais de estado {#state-channels}
 
-Uma solução de [camada 2](#layer-2), na qual um canal é configurado entre os participantes, para que eles possam realizar transações de forma livre e barata. Apenas uma [transação ](#transaction) para configurar o canal e fechar o canal é enviada para a [Rede principal](#mainnet). Isso permite uma taxa de transferência de transação muito alta, mas depende do conhecimento prévio do número de participantes e do bloqueio de fundos.
+Uma solução de [camada 2](#layer-2), na qual um canal é configurado entre os participantes, para que eles possam realizar transações de forma livre e barata. Apenas uma [transação](#transaction) para configurar o canal e fechar o canal é enviada para a [Rede principal](#mainnet). Isso permite uma taxa de transferência de transação muito alta, mas depende do conhecimento prévio do número de participantes e do bloqueio de fundos.
 
 <DocLink to="/developers/docs/scaling/state-channels/#state-channels">
   Canais de estado

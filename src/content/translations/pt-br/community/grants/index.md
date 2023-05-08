@@ -29,13 +29,13 @@ Estes projetos criaram seus próprios programas de recompensas destinados a dese
 
 - [Programa de concessões Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) concede DAO_
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _Fundo do ecossistema [Balancer](https://balancer.fi/)_
-- [Programa de concessões da Chainlink](https://chain.link/community/grants) – _Concessões da comunidade da [Chainlink](https://chain.link/)_
-- [Programa de concessões Compound](https://compoundgrants.org/) – _Ecossistema financeiro [Compound](https://compound.finance/)_
-- [Programa de Recompensas Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/)Metaverso DAO_
-- [Organização de concessões do ecossistema Lido (LEGO)](https://lego.lido.fi/) – _Ecossistema financeiro [Lido](https://lido. fi/)_
-- [Programa MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) bolsas lideradas por funcionários DAO_
-- [Programa de bolsas mStable](https://docs.mstable.org/advanced/grants-program) – _Comunidade [mStable](https://mstable.org/)_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecossistema [The Graph](https://thegraph.com/)_
+- [Programa de concessões da Chainlink](https://chain.link/community/grants) _- Concessões da comunidade da [Chainlink](https://chain.link/)_
+- [Programa de concessões Compound](https://compoundgrants.org/) _- Ecossistema financeiro [Compound](https://compound.finance/)_
+- [Programa de Recompensas Decentraland](https://governance.decentraland.org/grants/) _- [Decentraland](https://decentraland.org/)Metaverso DAO_
+- [Organização de concessões do ecossistema Lido (LEGO)](https://lego.lido.fi/) _- Ecossistema financeiro [Lido](https://lido.fi/)_
+- [Programa MetaMask](https://metamaskgrants.org/) _- [MetaMask](https://metamask.io/) bolsas lideradas por funcionários DAO_
+- [Programa de bolsas mStable](https://docs.mstable.org/advanced/grants-program) _- Comunidade [mStable](https://mstable.org/)_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) _- Ecossistema [The Graph](https://thegraph.com/)_
 - [Programa de bolsas UMA](https://grants.umaproject.org/): _[suporte ao desenvolvedor](https://umaproject.org/)UMA_
 - [Programa de bolsas Uniswap](https://www.unigrants.org/) – _Comunidade [Uniswap](https://uniswap.org/)_
 - [Web3 Grants](https://web3grants.net) – _Uma extensa lista de programas de bolsas relacionados com web3/criptomoedas_

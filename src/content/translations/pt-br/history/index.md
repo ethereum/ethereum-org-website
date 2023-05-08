@@ -173,11 +173,11 @@ A atualização London introduziu a [EIP-1559](https://eips.ethereum.org/EIPS/ei
 
 <ExpandableCard title="EIPs da London" contentPreview="Official improvements included in this upgrade.">
 
-– [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _melhora a taxa de transação do mercado_
-– [EIP-3198](https://eips. thereum.org/EIPS/eip-3198) – _retorna o "BASEFEE" de um bloco_
-– [EIP-3529](https://eips.ethereum. rg/EIPS/eip-3529) – _reduz os reembolsos de gás para operações de EVM_
-– [EIP-3541](https://eips.ethereum. rg/EIPS/eip-3541) – _evita a implantação de contratos que iniciam com "0xEF"_
-– [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _atrasa a Ice Age até 2021_
+– [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) _– melhora a taxa de transação do mercado_
+– [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) _– retorna o "BASEFEE" de um bloco_
+– [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) _– reduz os reembolsos de gás para operações de EVM_
+– [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) _– evita a implantação de contratos que iniciam com "0xEF"_
+– [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) _– atrasa a Ice Age até 2021_
 
 </ExpandableCard>
 
@@ -196,10 +196,10 @@ A atualização Berlim otimizou o custo de gás para certas ações de EVM e aum
 
 <ExpandableCard title="EIPs da Berlim" contentPreview="Official improvements included in this upgrade.">
 
-– [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) - _reduz o custo de gás para ModExp_
-– [EIP-2718](https://eips. thereum.org/EIPS/eip-2718) – _permite suporte mais fácil para vários tipos de transação_
-– [EIP-2929](https://eips. thereum.org/EIPS/eip-2929) – _o custo de gás aumenta para os opcodes de acesso ao estado_
-– [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _adiciona listas de acesso opcionais_
+– [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) _– reduz o custo de gás para ModExp_
+– [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) _– permite suporte mais fácil para vários tipos de transação_
+– [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) _– o custo de gás aumenta para os opcodes de acesso ao estado_
+– [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) _– adiciona listas de acesso opcionais_
 
 </ExpandableCard>
 
@@ -365,10 +365,10 @@ O fork (bifurcação) Spurious Dragon foi a segunda resposta aos ataques de nega
 
 <ExpandableCard title="EIPs da Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
-– [EIP-155](https://eips.ethereum. rg/EIPS/eip-155) – _evita que as transações de uma cadeia Ethereum sejam retransmitidas em uma cadeia alternativa, por exemplo, uma transação de rede de testes sendo reproduzida na cadeia principal Ethereum.
-– [EIP-160](https://eips.ethereum. rg/EIPS/eip-160) – \_ajusta os preços do código de operação "EXP" – dificulta a desaceleração da rede pode meio de operações contratuais computacionalmente caras.
-– [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – \_permite a remoção de contas vazias adicionadas por meio dos ataques DOS (DOS).
-– [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – \_muda o tamanho máximo de código que um contrato na cadeia de blocos pode ter – para 24576 bytes._
+– [EIP-155](https://eips.ethereum.org/EIPS/eip-155) _– evita que as transações de uma cadeia Ethereum sejam retransmitidas em uma cadeia alternativa, por exemplo, uma transação de rede de testes sendo reproduzida na cadeia principal Ethereum._
+– [EIP-160](https://eips.ethereum.org/EIPS/eip-160) _– ajusta os preços do código de operação "EXP" – dificulta a desaceleração da rede pode meio de operações contratuais computacionalmente caras._
+– [EIP-161](https://eips.ethereum.org/EIPS/eip-161) _– permite a remoção de contas vazias adicionadas por meio dos ataques DOS (DOS)._
+– [EIP-170](https://eips.ethereum.org/EIPS/eip-170) _– muda o tamanho máximo de código que um contrato na cadeia de blocos pode ter – para 24576 bytes._
 
 </ExpandableCard>
 
@@ -388,8 +388,8 @@ O fork (bifurcação) Whistle Tangerine foi a primeira resposta aos ataques de n
 
 <ExpandableCard title="EIPs da Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
-– [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – _aumenta os custos de gás de códigos de operação que podem ser usados em ataques de spam._
-– [EIP-158](https://eips.ethereum. rg/EIPS/eip-158) – _reduz o tamanho do estado removendo muitas contas vazias que foram colocadas no estado a um custo muito baixo, devido a falhas em versões anteriores do protocolo Ethereum._
+– [EIP-150](https://eips.ethereum.org/EIPS/eip-150) _– aumenta os custos de gás de códigos de operação que podem ser usados em ataques de spam._
+– [EIP-158](https://eips.ethereum.org/EIPS/eip-158) _– reduz o tamanho do estado removendo muitas contas vazias que foram colocadas no estado a um custo muito baixo, devido a falhas em versões anteriores do protocolo Ethereum._
 
 </ExpandableCard>
 
@@ -423,9 +423,9 @@ O fork (bifurcação) Homestead que olhou para o futuro. Incluiu várias altera�
 
 <ExpandableCard title="EIPs do Homestead" contentPreview="Official improvements included in this fork.">
 
-– [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _faz edições no processo de criação do contrato._
-– [EIP-7](https://eips.ethereum. rg/EIPS/eip-7) – _adiciona um novo código de operação: `DELEGATECALL`_
-– [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _introduz os requisitos de compatibilidade devp2p_
+– [EIP-2](https://eips.ethereum.org/EIPS/eip-2) _– faz edições no processo de criação do contrato._
+– [EIP-7](https://eips.ethereum.org/EIPS/eip-7) _– adiciona um novo código de operação: `DELEGATECALL`_
+– [EIP-8](https://eips.ethereum.org/EIPS/eip-8) _– introduz os requisitos de compatibilidade devp2p_
 
 </ExpandableCard>
 

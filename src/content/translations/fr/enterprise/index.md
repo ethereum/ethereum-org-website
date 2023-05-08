@@ -49,19 +49,19 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 
 - [Alchemy](https://www.alchemy.com/) _- Fournit des outils et des services d'API pour construire et surveiller les applications sur Ethereum_
 - [Blast](https://blastapi.io/) _plateforme API qui fournit des API RPC/WSS pour le réseau principal archiveur Ethereum et les réseaux de test._
-- [Blockapps](https://blockapps.net/)_ - Implémentation du protocole Ethereum pour les entreprises, outils et API constituant la plateforme STRATO_
+- [Blockapps](https://blockapps.net/) _- Implémentation du protocole Ethereum pour les entreprises, outils et API constituant la plateforme STRATO_
 - [Chainstack](https://chainstack.com/) _- Infrastructure du réseau principal et du réseau de test Ethereum hébergée dans des clouds clients isolés & publics_
-- [ConsenSys](https://consensys.net/) _ fournit une gamme de produits et d'outils pour construire sur Ethereum, ainsi que des services de conseil et de développement personnalisé_
-- [Envision Blockchain](https://envisionblockchain.com/) _ fournit des services de conseil et de développement axés sur les entreprises, et spécialisés dans le réseau principal Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/contract-manager)_ fournit un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
+- [ConsenSys](https://consensys.net/) _- fournit une gamme de produits et d'outils pour construire sur Ethereum, ainsi que des services de conseil et de développement personnalisé_
+- [Envision Blockchain](https://envisionblockchain.com/) _- fournit des services de conseil et de développement axés sur les entreprises, et spécialisés dans le réseau principal Ethereum_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _- fournit un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
 - [- Hyperledger Besu](https://www.hyperledger.org/use/besu) _- Client Ethereum en open source axé sur les entreprises, développé sous la licence Apache 2.0 et rédigé en Java_
 - [Infura](https://infura.io/) _- Accès évolutif aux API des réseaux Ethereum et IPFS_
 - [Kaleido](https://kaleido.io/) _- Plate-forme de développement orientée vers les entreprises, qui offre une blockchain simplifiée et des applications dédiées aux actifs numériques_
 - [Provide](https://provide.services/) _- Infrastructure et API pour les applications d'entreprise Web3_
-- [QuickNode](https://www.quicknode.com/) _fournit des nœuds fiables et rapides avec des API de haut niveau comme NFT API, Token API, etc. tout en offrant une suite de produits unifiée et des solutions pour entreprise_
-- [Tenderly](https://tenderly.co) _ - Plate-forme de développement Web3 qui fournit des blocs de débogage, d'observabilité et de construction d'infrastructures en vue de l'élaboration, de la mise à l'essai, du suivi et de l'exécution de contrats intelligents_
+- [QuickNode](https://www.quicknode.com/) _- fournit des nœuds fiables et rapides avec des API de haut niveau comme NFT API, Token API, etc. tout en offrant une suite de produits unifiée et des solutions pour entreprise_
+- [Tenderly](https://tenderly.co) _- Plate-forme de développement Web3 qui fournit des blocs de débogage, d'observabilité et de construction d'infrastructures en vue de l'élaboration, de la mise à l'essai, du suivi et de l'exécution de contrats intelligents_
 - [Unibright](https://unibright.io/) _- Équipe de spécialistes de la blockchain, d'architectes, de développeurs et de consultants ayant plus de 20 ans d'expérience dans les processus métiers et l'intégration_
-- [Zero Services GmbH](https://www. zeroservices. eu/) _- Fournisseur de services gérés répartis sur plusieurs sites en Europe et en Asie. Exploite & surveille vos nœuds de façon sécurisée et fiable_
+- [Zero Services GmbH](https://www.zeroservices.eu/) _- Fournisseur de services gérés répartis sur plusieurs sites en Europe et en Asie. Exploite & surveille vos nœuds de façon sécurisée et fiable_
 
 ### Outils et bibliothèques {#tooling-and-libraries}
 
@@ -69,7 +69,7 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 - [Epirus](https://www.web3labs.com/epirus) _- Plateforme Web3 Labs pour développer, déployer et surveiller les applications blockchain_
 - [Ernst & Young Nightfall](https://github.com/EYBlockchain/nightfall) _- Boîte à outils pour les transactions privées_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _- Application de signature de transactions à utiliser avec un prestataire Web3_
-- [Tenderly](https://tenderly.co/) _ - Plateforme de données fournissant des analyses en temps réel, des alertes et une surveillance avec support pour les réseaux privés_
+- [Tenderly](https://tenderly.co/) _- Plateforme de données fournissant des analyses en temps réel, des alertes et une surveillance avec support pour les réseaux privés_
 - [Truffle Suite](https://trufflesuite.com) _- Suite de développement de blockchain (Truffle, Ganache, Drizzle)_
 
 ### Solutions d'évolutivité {#scalability-solutions}
@@ -154,8 +154,8 @@ Voici quelques-unes des applications d'entreprise déployées sur le réseau pri
 
 ### Assurance {#insurance}
 
-- [Arbol](https://www. arbolmarket. com/) _assurance paramétrique pour couvrir les risques liés à la météo_
-- [Etherisc](https://etherisc.com/) _assurance décentralisée pour une variété de risques_
+- [Arbol](https://www.arbolmarket.com/) _- assurance paramétrique pour couvrir les risques liés à la météo_
+- [Etherisc](https://etherisc.com/) _- assurance décentralisée pour une variété de risques_
 
 ### Identifications et certifications {#credentials}
 

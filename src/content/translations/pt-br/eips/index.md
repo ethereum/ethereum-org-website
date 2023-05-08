@@ -46,7 +46,7 @@ Os editores eméritos da EIP são
 
 Se você deseja se tornar um editor de EIP, confira [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-Os editores de EIP decidem quando uma proposta está pronta para se tornar uma EIP e ajudam os autores da EIP a avançar com suas propostas. [Ethereum Cat Herders](https://ethereumcatherders.com/) ajuda a organizar reuniões entre os editores de EIP e a comunidade (confira [EIPIP](https://github.com/ethereum-cat -pastores/EIPIP)).
+Os editores de EIP decidem quando uma proposta está pronta para se tornar uma EIP e ajudam os autores da EIP a avançar com suas propostas. [Ethereum Cat Herders](https://ethereumcatherders.com/) ajuda a organizar reuniões entre os editores de EIP e a comunidade (confira [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
 
 O processo completo de padronização, juntamente com o gráfico, é descrito em [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 

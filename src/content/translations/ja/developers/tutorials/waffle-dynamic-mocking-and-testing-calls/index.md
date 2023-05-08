@@ -8,7 +8,7 @@ tags:
   - "Solidity"
   - "テスト"
   - "モックアップ作成"
-skill: 中級
+skill: intermediate
 lang: ja
 published: 2020-11-14
 ---
