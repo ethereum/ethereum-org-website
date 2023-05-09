@@ -132,7 +132,9 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                 m={4}
                 ml={0}
                 p={4}
-                flex="0 1 240px"
+                flexBasis="240px"
+                flexGrow={{ base: 1, sm: 0 }}
+                flexShrink={0}
                 border="1px solid"
                 borderColor="lightBorder"
                 borderRadius="sm"
