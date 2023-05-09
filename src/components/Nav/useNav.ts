@@ -70,6 +70,10 @@ export const useNav = ({ path }: { path: string }) => {
           text: t("decentralized-science"),
           to: "/desci/",
         },
+        {
+          text: t("block-explorers"),
+          to: "/developers/docs/data-and-analytics/block-explorers/",
+        },
       ],
     },
     learn: {
