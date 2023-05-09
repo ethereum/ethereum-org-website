@@ -3,10 +3,8 @@ import { FlexProps } from "@chakra-ui/react"
 import InfoBanner from "./InfoBanner"
 import Translation from "./Translation"
 
-export interface IProps extends FlexProps {}
-
-const EnvWarningBanner: React.FC<IProps> = () => (
-  <InfoBanner isWarning>
+const EnvWarningBanner: React.FC<FlexProps> = ({ ...flexProps }) => (
+  <InfoBanner isWarning {...flexProps}>
     <Translation id="page-tutorials-env-banner" />
   </InfoBanner>
 )
