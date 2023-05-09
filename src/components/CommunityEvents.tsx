@@ -137,9 +137,9 @@ const CommunityEvents = () => {
               <Translation id="loading-error-try-again-later" />
             </Text>
           ) : (
-            <Text>test</Text>
+            <Text mx="auto">No upcoming calls</Text>
           )}
-          <Text fontSize="lg" fontWeight="bold" mb={2}>
+          <Text fontSize="lg" fontWeight="bold" mb={2} mt={18}>
             Previous calls
           </Text>
           <Divider mb={4} />
@@ -152,7 +152,7 @@ const CommunityEvents = () => {
               <Translation id="loading-error-try-again-later" />
             </Text>
           ) : (
-            <Text>test</Text>
+            <Text mx="auto">There are no past calls</Text>
           )}
         </Box>
       </Flex>
