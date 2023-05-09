@@ -47,10 +47,14 @@ const CommunityEvents = () => {
   })
 
   useEffect(() => {
-    setTimeout(
-      () => setState({ ...state, loading: false, hasError: true }),
-      500
-    )
+    try {
+      setTimeout(
+        () => setState({ ...state, loading: false, hasError: false }),
+        500
+      )
+    } catch {
+      setState({ ...state, loading: false, hasError: true })
+    }
   }, [])
 
   return (
@@ -95,8 +99,19 @@ const CommunityEvents = () => {
                 <Text color="error">
                   <Translation id="loading-error-try-again-later" />
                 </Text>
+              ) : state.upcomingEventData.length ? (
+                <>
+                  <Text>Test</Text>
+                  <Text>
+                    ({Intl.DateTimeFormat().resolvedOptions().timeZone})
+                  </Text>
+                </>
               ) : (
-                <Text>test</Text>
+                <>
+                  <Text fontSize="3xl" fontWeight="bold" mb={8}>
+                    No events planned
+                  </Text>
+                </>
               )}
               <DiscordButton />
             </Box>
