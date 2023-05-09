@@ -38,11 +38,32 @@ The Shanghai upgrade brought staking withdrawals to the execution layer. In tand
 <ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> – <em>Starts the <code>COINBASE</code> address warm</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-3855">EIP-3855</a> – <em>New <code>PUSH0</code> instruction</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-3860">EIP-3860</a> – <em>Limit and meter initcode</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> – <em>Beacon chain push withdrawals as operations</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> - <em>Deprecate <code>SELFDESTRUCT</code></em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-3651">EIP-3651</a> –{" "}
+    <em>
+      Starts the <code>COINBASE</code> address warm
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-3855">EIP-3855</a> –{" "}
+    <em>
+      New <code>PUSH0</code> instruction
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-3860">EIP-3860</a> –{" "}
+    <em>Limit and meter initcode</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-4895">EIP-4895</a> –{" "}
+    <em>Beacon chain push withdrawals as operations</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-6049">EIP-6049</a> -{" "}
+    <em>
+      Deprecate <code>SELFDESTRUCT</code>
+    </em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -83,8 +104,14 @@ The Paris upgrade was triggered by the proof-of-work blockchain passing a [termi
 <ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> – <em>Upgrade consensus to Proof-of-Stake</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> – <em>Supplant DIFFICULTY opcode with PREVRANDAO</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-3675">EIP-3675</a> –{" "}
+    <em>Upgrade consensus to Proof-of-Stake</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-4399">EIP-4399</a> –{" "}
+    <em>Supplant DIFFICULTY opcode with PREVRANDAO</em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -116,7 +143,10 @@ The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#di
 <ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> – <em>delays the difficulty bomb until September 2022</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-5133">EIP-5133</a> –{" "}
+    <em>delays the difficulty bomb until September 2022</em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -139,7 +169,10 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 <ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> – <em>delays the difficulty bomb until June 2022</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-4345">EIP-4345</a> –{" "}
+    <em>delays the difficulty bomb until June 2022</em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -179,11 +212,30 @@ The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 <ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> – <em>improves the transaction fee market</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-3198">EIP-3198</a> – <em>returns the <code>BASEFEE</code> from a block</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-3529">EIP-3529</a> - <em>reduces gas refunds for EVM operations</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> - <em>prevents deploying contracts starting with <code>0xEF</code></em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> – <em>delays the Ice Age until December 2021</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-1559">EIP-1559</a> –{" "}
+    <em>improves the transaction fee market</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-3198">EIP-3198</a> –{" "}
+    <em>
+      returns the <code>BASEFEE</code> from a block
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-3529">EIP-3529</a> -{" "}
+    <em>reduces gas refunds for EVM operations</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-3541">EIP-3541</a> -{" "}
+    <em>
+      prevents deploying contracts starting with <code>0xEF</code>
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-3554">EIP-3554</a> –{" "}
+    <em>delays the Ice Age until December 2021</em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -204,10 +256,22 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 <ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> – <em>lowers ModExp gas cost</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-2718">EIP-2718</a> – <em>enables easier support for multiple transaction types</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> – <em>gas cost increases for state access opcodes</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> – <em>adds optional access lists</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-2565">EIP-2565</a> –{" "}
+    <em>lowers ModExp gas cost</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-2718">EIP-2718</a> –{" "}
+    <em>enables easier support for multiple transaction types</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-2929">EIP-2929</a> –{" "}
+    <em>gas cost increases for state access opcodes</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-2930">EIP-2930</a> –{" "}
+    <em>adds optional access lists</em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -226,9 +290,7 @@ The [Beacon Chain](/roadmap/beacon-chain/) needed 16384 deposits of 32 staked ET
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
-  The Beacon Chain
-</DocLink>
+<DocLink to="/roadmap/beacon-chain/">The Beacon Chain</DocLink>
 
 ---
 
@@ -242,9 +304,7 @@ The staking deposit contract introduced [staking](/glossary/#staking) to the Eth
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
-  Staking
-</DocLink>
+<DocLink to="/staking/">Staking</DocLink>
 
 ---
 
@@ -262,7 +322,12 @@ The Muir Glacier fork introduced a delay to the [difficulty bomb](/glossary/#dif
 <ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> – <em>delays the difficulty bomb for another 4,000,000 blocks, or ~611 days.</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-2384">EIP-2384</a> –{" "}
+    <em>
+      delays the difficulty bomb for another 4,000,000 blocks, or ~611 days.
+    </em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -290,12 +355,41 @@ The Istanbul fork:
 <ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>allow Ethereum to work with privacy-preserving currency like Zcash.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cheaper cryptography to improve <a href="/glossary/#gas">gas</a> costs.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protects Ethereum against replay attacks by adding <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">opcode</a>.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>optimising opcode gas prices based on consumption.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>reduces the cost of CallData to allow more data in blocks – good for <a href="/developers/docs/scaling/#layer-2-scaling">Layer 2 scaling</a>.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>other opcode gas price alterations.</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> –{" "}
+    <em>allow Ethereum to work with privacy-preserving currency like Zcash.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> –{" "}
+    <em>
+      cheaper cryptography to improve <a href="/glossary/#gas">gas</a> costs.
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> –{" "}
+    <em>
+      protects Ethereum against replay attacks by adding <code>CHAINID</code>{" "}
+      <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine">
+        opcode
+      </a>
+      .
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> –{" "}
+    <em>optimising opcode gas prices based on consumption.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> –{" "}
+    <em>
+      reduces the cost of CallData to allow more data in blocks – good for{" "}
+      <a href="/developers/docs/scaling/#layer-2-scaling">Layer 2 scaling</a>.
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> –{" "}
+    <em>other opcode gas price alterations.</em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -319,10 +413,22 @@ The Constantinople fork:
 <ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>optimises cost of certain on-chain actions.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>allows you to interact with addresses that have yet to be created.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>optimises cost of certain on-chain actions.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>makes sure the blockchain doesn&#39;t freeze before proof-of-stake.</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> –{" "}
+    <em>optimises cost of certain on-chain actions.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> –{" "}
+    <em>allows you to interact with addresses that have yet to be created.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> –{" "}
+    <em>optimises cost of certain on-chain actions.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> –{" "}
+    <em>makes sure the blockchain doesn&#39;t freeze before proof-of-stake.</em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -349,15 +455,58 @@ The Byzantium fork:
 <ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> – <em>adds <code>REVERT</code> opcode.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> – <em>status field added to transaction receipts to indicate success or failure.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> – <em>adds elliptic curve and scalar multiplication to allow for <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> – <em>adds elliptic curve and scalar multiplication to allow for <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> – <em>enables RSA signature verification.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>adds support for variable length return values.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> – <em>adds <code>STATICCALL</code> opcode, allowing non-state-changing calls to other contracts.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>changes difficulty adjustment formula.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>delays <a href="/glossary/#difficulty-bomb">difficulty bomb</a> by 1 year and reduces block reward from 5 to 3 ETH.</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-140">EIP-140</a> –{" "}
+    <em>
+      adds <code>REVERT</code> opcode.
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-658">EIP-658</a> –{" "}
+    <em>
+      status field added to transaction receipts to indicate success or failure.
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-196">EIP-196</a> –{" "}
+    <em>
+      adds elliptic curve and scalar multiplication to allow for{" "}
+      <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-197">EIP-197</a> –{" "}
+    <em>
+      adds elliptic curve and scalar multiplication to allow for{" "}
+      <a href="/developers/docs/scaling/zk-rollups/">ZK-Snarks</a>.
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-198">EIP-198</a> –{" "}
+    <em>enables RSA signature verification.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> –{" "}
+    <em>adds support for variable length return values.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-214">EIP-214</a> –{" "}
+    <em>
+      adds <code>STATICCALL</code> opcode, allowing non-state-changing calls to
+      other contracts.
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> –{" "}
+    <em>changes difficulty adjustment formula.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> –{" "}
+    <em>
+      delays <a href="/glossary/#difficulty-bomb">difficulty bomb</a> by 1 year
+      and reduces block reward from 5 to 3 ETH.
+    </em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -383,10 +532,32 @@ The Spurious Dragon fork was the second response to the denial of service (DoS) 
 <ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>prevents transactions from one Ethereum chain from being rebroadcasted on an alternative chain, for example a testnet transaction being replayed on the main Ethereum chain.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-160">EIP-160</a> – <em>adjusts prices of <code>EXP</code> opcode – makes it more difficult to slow down the network via computationally expensive contract operations.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>allows for removal of empty accounts added via the DOS attacks.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>changes the maximum code size that a contract on the blockchain can have – to 24576 bytes.</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> –{" "}
+    <em>
+      prevents transactions from one Ethereum chain from being rebroadcasted on
+      an alternative chain, for example a testnet transaction being replayed on
+      the main Ethereum chain.
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-160">EIP-160</a> –{" "}
+    <em>
+      adjusts prices of <code>EXP</code> opcode – makes it more difficult to
+      slow down the network via computationally expensive contract operations.
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> –{" "}
+    <em>allows for removal of empty accounts added via the DOS attacks.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> –{" "}
+    <em>
+      changes the maximum code size that a contract on the blockchain can have –
+      to 24576 bytes.
+    </em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -408,8 +579,18 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 <ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>increases gas costs of opcodes that can be used in spam attacks.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>reduces state size by removing a large number of empty accounts that were put in the state at very low cost due to flaws in earlier versions of the Ethereum protocol.</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> –{" "}
+    <em>increases gas costs of opcodes that can be used in spam attacks.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> –{" "}
+    <em>
+      reduces state size by removing a large number of empty accounts that were
+      put in the state at very low cost due to flaws in earlier versions of the
+      Ethereum protocol.
+    </em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -445,9 +626,20 @@ The Homestead fork that looked to the future. It included several protocol chang
 <ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-<li><a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> – <em>makes edits to contract creation process.</em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> – <em>adds new opcode: <code>DELEGATECALL</code></em></li>
-<li><a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> – <em>introduces devp2p forward compatibility requirements</em></li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-2">EIP-2</a> –{" "}
+    <em>makes edits to contract creation process.</em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-7">EIP-7</a> –{" "}
+    <em>
+      adds new opcode: <code>DELEGATECALL</code>
+    </em>
+  </li>
+  <li>
+    <a href="https://eips.ethereum.org/EIPS/eip-8">EIP-8</a> –{" "}
+    <em>introduces devp2p forward compatibility requirements</em>
+  </li>
 </ul>
 
 </ExpandableCard>
@@ -511,6 +703,4 @@ The Yellow Paper, authored by Dr. Gavin Wood, is a technical definition of the E
 
 The introductory paper, published in 2013 by Vitalik Buterin, the founder of Ethereum, before the project's launch in 2015.
 
-<DocLink to="/whitepaper/">
-  Whitepaper
-</DocLink>
+<DocLink to="/whitepaper/">Whitepaper</DocLink>
