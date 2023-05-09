@@ -1,9 +1,20 @@
 //Libraries
 import React, { useEffect, useState } from "react"
-import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  Divider,
+  Flex,
+  Heading,
+  Icon,
+  Text,
+} from "@chakra-ui/react"
+import { FaDiscord } from "react-icons/fa"
 
 // Components
+import ButtonLink from "./ButtonLink"
 import Link from "./Link"
+import Translation from "./Translation"
 
 interface Event {
   date: string
@@ -11,16 +22,39 @@ interface Event {
   calenderLink: string
 }
 
+interface State {
+  pastEventData: Array<Event>
+  upcomingEventData: Array<Event>
+  loading: boolean
+  hasError: boolean
+}
+
+const DiscordButton = () => {
+  return (
+    <ButtonLink to={"/discord/"} gap={2}>
+      <Icon as={FaDiscord} fontSize={25} />
+      Join Discord
+    </ButtonLink>
+  )
+}
+
 const CommunityEvents = () => {
-  const [pastEventData, setPastEventData] = useState<Array<Event>>([])
-  const [upcomingEventData, setUpcomingEventData] = useState<Array<Event>>([])
+  const [state, setState] = useState<State>({
+    pastEventData: [],
+    upcomingEventData: [],
+    loading: true,
+    hasError: false,
+  })
 
   useEffect(() => {
-    console.log("hello world")
+    setTimeout(
+      () => setState({ ...state, loading: false, hasError: true }),
+      500
+    )
   }, [])
 
   return (
-    <Flex w="full" direction={{ base: "column", lg: "row" }}>
+    <Flex w="full" flexDirection={{ base: "column", lg: "row" }}>
       <Center w={{ base: "100%", lg: "40%" }} p={16}>
         <Box>
           <Heading>Join the ethereum.org community</Heading>
@@ -38,14 +72,74 @@ const CommunityEvents = () => {
       </Center>
       <Flex
         w={{ base: "100%", lg: "60%" }}
-        direction={{ base: "column", lg: "row" }}
+        flexDirection={{ base: "column", lg: "row" }}
       >
-        <Center w={{ base: "100%", lg: "50%" }} bg="layer2Gradient">
-          <Text>Hello world</Text>
-        </Center>
-        <Center w={{ base: "100%", lg: "50%" }} bg="backgroundHighlight">
-          <Text>Hello world</Text>
-        </Center>
+        <Box
+          w={{ base: "100%", lg: "50%" }}
+          bg="layer2Gradient"
+          p={12}
+          textAlign="center"
+          display="flex"
+          flexDir="column"
+        >
+          <Text fontSize="md" fontWeight="bold">
+            Next event
+          </Text>
+          {state.loading ? (
+            <Text>
+              <Translation id="loading" />
+            </Text>
+          ) : (
+            <Box>
+              {state.hasError ? (
+                <Text color="error">
+                  <Translation id="loading-error-try-again-later" />
+                </Text>
+              ) : (
+                <Text>test</Text>
+              )}
+              <DiscordButton />
+            </Box>
+          )}
+        </Box>
+        <Box
+          w={{ base: "100%", lg: "50%" }}
+          bg="backgroundHighlight"
+          p={12}
+          display="flex"
+          flexDir="column"
+        >
+          <Text fontSize="lg" fontWeight="bold" mb={2}>
+            Upcoming
+          </Text>
+          <Divider mb={4} />
+          {state.loading ? (
+            <Text>
+              <Translation id="loading" />
+            </Text>
+          ) : state.hasError ? (
+            <Text color="error">
+              <Translation id="loading-error-try-again-later" />
+            </Text>
+          ) : (
+            <Text>test</Text>
+          )}
+          <Text fontSize="lg" fontWeight="bold" mb={2}>
+            Previous calls
+          </Text>
+          <Divider mb={4} />
+          {state.loading ? (
+            <Text>
+              <Translation id="loading" />
+            </Text>
+          ) : state.hasError ? (
+            <Text color="error">
+              <Translation id="loading-error-try-again-later" />
+            </Text>
+          ) : (
+            <Text>test</Text>
+          )}
+        </Box>
       </Flex>
     </Flex>
   )
