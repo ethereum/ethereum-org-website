@@ -64,7 +64,7 @@ const CommunityEvents = () => {
           <Heading>Join the ethereum.org community</Heading>
           <Text>
             Join almost <strong>40 000 members</strong> on our{" "}
-            <Link to="https://discord.gg/CetY6Y4">Discord server</Link>.
+            <Link to="/discord/">Discord server</Link>.
           </Text>
           <Text>
             Join our monthly community calls for exciting updates on
