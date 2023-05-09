@@ -6,7 +6,7 @@ lang: en
 
 # Ethereum guides
 
-Do you want to start your Ethereum journey? There's a whole community of us exploring together many different ways to use and understand Ethereum. Ethereum is not a corporation with a script-bound helpdesk: it is a living group of people interested in building better worlds. These practical guides will help you learn how to get started and where to find us.
+Do you want to start your Ethereum journey? Ethereum is not a corporation with a script-bound helpdesk, but these practical guides will help you learn how to get started.
 
 ## Getting started
 
