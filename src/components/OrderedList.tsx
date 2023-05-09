@@ -18,12 +18,12 @@ export interface IProps {
 const liCustomType: SystemStyleObject = {
   content: `counter(li-counter)`,
   position: "absolute",
-  top: "-2px", // adjusts circle + number up and down
+  top: "-5px", // adjusts circle + number up and down
   left: "-3rem",
-  width: "35px",
-  aspectRatio: "1",
-  height: "2rem",
-  pt: "7px", // adjusts number up and down,
+  width: "32px",
+  // aspectRatio: "1",
+  height: "1.5rem",
+  pt: "9px", // adjusts number up and down,
   lineHeight: "100%",
   borderRadius: "50%",
   background: "grayBackground",
