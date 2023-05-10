@@ -53,7 +53,7 @@ The ideal scenario for Ethereum is to have as many independently operated valida
 Stake centralization can also lead to client centralization since it's easier for services to support only one or two client configurations. In case of a faulty node, or poor performance, this could have a massive impact on the entire network, which should be avoided.
 
 
-In a nutshell, DVT enables:
+Overall, DVT offers the following benefits to Ethereum:
 - Decentralization of Ethereum's PoS consensus
 - Ensures the liveness of the network
 - Creates validator fault tolerance
