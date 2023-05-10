@@ -191,7 +191,7 @@ const HeroImage = chakra(GatsbyImage, {
   },
 })
 
-const Page = (props: FlexProps) => (
+export const Page = (props: FlexProps) => (
   <Flex
     flexDirection={{ base: "column", lg: "row" }}
     justifyContent="space-between"
@@ -199,11 +199,12 @@ const Page = (props: FlexProps) => (
     mb={16}
     pt={{ lg: 16 }}
     width="full"
+    sx={{ "h2:first-of-type": { mt: { lg: 0 } } }}
     {...props}
   />
 )
 
-const InfoColumn = (props: ChildOnlyProp) => (
+export const InfoColumn = (props: ChildOnlyProp) => (
   <Flex
     flexDirection="column"
     flex="0 1 400px"
@@ -227,7 +228,9 @@ const InfoTitle = (props: ChildOnlyProp) => (
 
 type ButtonDropdownProps = Parameters<typeof ButtonDropdown>[0]
 
-const StyledButtonDropdown = (props: FlexProps & ButtonDropdownProps) => (
+export const StyledButtonDropdown = (
+  props: FlexProps & ButtonDropdownProps
+) => (
   <Flex
     as={ButtonDropdown}
     alignSelf={{ sm: "flex-end" }}
@@ -238,11 +241,11 @@ const StyledButtonDropdown = (props: FlexProps & ButtonDropdownProps) => (
   />
 )
 
-const MobileButtonDropdown = (props: ButtonDropdownProps) => (
+export const MobileButtonDropdown = (props: ButtonDropdownProps) => (
   <StyledButtonDropdown mb={0} {...props} />
 )
 
-const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => (
+export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => (
   <Box
     as="article"
     flex="1 1 1024px"
@@ -264,7 +267,7 @@ const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => (
   />
 )
 
-const MobileButton = (props: ChildOnlyProp) => {
+export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
     <Box

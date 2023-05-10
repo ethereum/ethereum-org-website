@@ -11,25 +11,21 @@ import {
   Heading,
   SimpleGrid,
   Text,
-  useTheme,
   chakra,
-  calc,
   Grid,
   Image,
   UnorderedList,
+  useToken,
+  Show,
 } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown, {
-  List as ButtonDropdownList,
-} from "../components/ButtonDropdown"
+import { List as ButtonDropdownList } from "../components/ButtonDropdown"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
-import SharedInfoBanner, {
-  IProps as ISharedInfoBannerProps,
-} from "../components/InfoBanner"
+import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
@@ -62,6 +58,16 @@ import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
 
 import { ChildOnlyProp, Context } from "../types"
+
+// TODO: move these components to a new folder under /components
+import {
+  ContentContainer,
+  InfoColumn,
+  MobileButton,
+  MobileButtonDropdown,
+  Page,
+  StyledButtonDropdown,
+} from "./use-cases"
 
 // Apply styles for classes within markdown here
 const Divider = (props: ChildOnlyProp) => (
@@ -254,18 +260,6 @@ const SummaryPoint = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
 )
 
-const Container = (props: ChildOnlyProp) => (
-  <Box
-    position="relative"
-    sx={{
-      "*": {
-        scrollMarginTop: 1,
-      },
-    }}
-    {...props}
-  />
-)
-
 const HeroContainer = (props: ChildOnlyProp) => {
   return (
     <Flex
@@ -280,10 +274,6 @@ const HeroContainer = (props: ChildOnlyProp) => {
     />
   )
 }
-
-const InfoBanner = (props: ISharedInfoBannerProps) => (
-  <SharedInfoBanner my={8} {...props} />
-)
 
 const TableContainer = (props: BoxProps) => (
   <Box
@@ -348,6 +338,9 @@ const StakingPage = ({
   data: { pageData: mdx },
   location,
 }: PageProps<Queries.StakingPageQuery, Context>) => {
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
+
   if (!mdx?.frontmatter)
     throw new Error(
       "Staking page template query does not return expected values"
@@ -358,7 +351,6 @@ const StakingPage = ({
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
   const { summaryPoints } = mdx.frontmatter
-  const theme = useTheme()
 
   const dropdownLinks: ButtonDropdownList = {
     text: "Staking Options",
@@ -413,7 +405,7 @@ const StakingPage = ({
   }
 
   return (
-    <Container>
+    <Box position="relative" width="full">
       <HeroContainer>
         <Flex direction="column" justify="flex-start" w="full" p={8}>
           <Breadcrumbs slug={location.pathname} />
@@ -447,97 +439,40 @@ const StakingPage = ({
           objectFit="contain"
         />
       </HeroContainer>
-      <Flex
-        direction={{ base: "column", lg: "row" }}
-        justify="space-between"
-        w="full"
-        mx="auto"
-        mb={16}
-        pt={{ lg: 16 }}
-        dir={isRightToLeft ? "rtl" : "ltr"}
-      >
+      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Flex
-          as="aside"
-          direction="column"
-          position="sticky"
-          top="6.25rem" // account for navbar
-          h={calc.subtract("100vh", "80px")}
-          flex="0 1 330px"
-          mx={8}
-          hideBelow="lg"
-        >
-          <Flex
-            as={ButtonDropdown}
-            mb={8}
-            justify="flex-end"
-            alignSelf={{ sm: "flex-end" }}
-            textAlign="center"
-            list={dropdownLinks}
-          />
-          <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
+        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <Show above={lgBp}>
+          <InfoColumn>
+            <StyledButtonDropdown list={dropdownLinks} />
+            <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
-          {tocItems && (
-            <UpgradeTableOfContents
-              items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth!}
-            />
-          )}
-        </Flex>
-        <Box
-          as="article"
-          flex={`1 1 ${theme.breakpoints.lg}`}
-          position="relative"
-          px={8}
-          pb={8}
-          sx={{
-            "h2:first-of-type": {
-              mt: { lg: 0 },
-            },
-            ".featured": {
-              pl: 4,
-              ml: -4,
-              borderLeft: "1px dotted",
-              borderLeftColor: "primary",
-            },
-            ".citation": {
-              p: {
-                color: "text200",
-              },
-            },
-          }}
-          id="content"
-        >
+            {tocItems && (
+              <UpgradeTableOfContents
+                items={tocItems}
+                maxDepth={mdx.frontmatter.sidebarDepth!}
+              />
+            )}
+          </InfoColumn>
+        </Show>
+        <ContentContainer id="content">
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
           <StakingCommunityCallout />
           <FeedbackCard />
-        </Box>
-        <Box
-          bg="background"
-          boxShadow={`0 -1px 0px ${theme.colors.border}`}
-          w="full"
-          bottom={0}
-          position="sticky"
-          p={8}
-          zIndex={99}
-          hideFrom="lg"
-        >
-          <Flex
-            as={ButtonDropdown}
-            justify="flex-end"
-            alignSelf={{ sm: "flex-end" }}
-            textAlign="center"
-            hideFrom="lg"
-            list={dropdownLinks}
-          />
-        </Box>
-      </Flex>
-    </Container>
+        </ContentContainer>
+        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <Show below={lgBp}>
+          <MobileButton>
+            <MobileButtonDropdown list={dropdownLinks} />
+          </MobileButton>
+        </Show>
+      </Page>
+    </Box>
   )
 }
 

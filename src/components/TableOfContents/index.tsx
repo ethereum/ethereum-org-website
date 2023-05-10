@@ -12,6 +12,7 @@ import {
   ListItem,
   Show,
   Switch,
+  useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 import { useActiveHash } from "../../hooks/useActiveHash"
@@ -44,6 +45,8 @@ const TableOfContents: React.FC<IProps> = ({
   ...rest
 }) => {
   const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
 
   const titleIds: Array<string> = []
 
@@ -81,7 +84,7 @@ const TableOfContents: React.FC<IProps> = ({
 
   return (
     // TODO: Switch to `above="lg"` after completion of Chakra Migration
-    <Show breakpoint="(min-width: 1025px)">
+    <Show above={lgBp}>
       <Box
         as="aside"
         position="sticky"
