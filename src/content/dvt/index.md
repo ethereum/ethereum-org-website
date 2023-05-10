@@ -75,7 +75,7 @@ Staking providers and institutions managing many validators can leverage DVT to 
 Staking providers invest heavily to work around operational costs in development, DevOps, and comprehensive insurance policies. With DVT, responsibility is distributed between nodes, resulting in much lower operational risk and expense.
 
 
-### Staking Pools {#staking-pools}
+### Staking pools {#staking-pools}
 
 Due to standard validator setups, staking pools and LSP (Liquid Staking Providers) are compelled to have varying levels of single-operator trust since gains and losses are socialized throughout the pool. They are also reliant on operators to safeguard signing keys because, until now, there has been no other option for them.
 
