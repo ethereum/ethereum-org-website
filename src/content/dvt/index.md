@@ -76,7 +76,6 @@ Staking providers and institutions managing many validators can leverage DVT to 
 
 Staking providers invest heavily to work around operational costs in development, DevOps, and comprehensive insurance policies. With DVT, responsibility is distributed between nodes, resulting in much lower operational risk and expense.
 
-DVT can bridge the way for institutions that want to join ETH staking by reducing their risk as well as providing the much-needed transparency and trust required. By having permissioned sets of nodes that comply with KYC/AML regulations, institutions can know precisely the operators they are staking with, including slashing protection and redundancy benefits of the technology. 
 
 ### Staking Pools {#staking-pools}
 
