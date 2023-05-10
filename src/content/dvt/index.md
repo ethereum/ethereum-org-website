@@ -32,7 +32,6 @@ Individual nodes do not need to trust each other in order to share a validator. 
 
 ## Why do we need DVT? {#why-do-we-need-dvt}
 
-The standard validator configuration creates single points of failure in Ethereum's consensus layer that lead to several challenges and risks:
 
 ### Security {#security}
 
