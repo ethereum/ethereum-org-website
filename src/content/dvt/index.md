@@ -25,8 +25,6 @@ A DVT solution contains the following components:
 - **[Multi-Party Computation (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - The full validator key is generated in secret using multiparty computation. The full key is never known to any individual operator - they only ever know their own part of it (their "share").
 - **Consensus Protocol** - The consensus protocol selects one node to be the block proposer. They share the block with the other nodes in the cluster, who add their key shares to the aggregate signature. When enough key shares have been aggregated, the block is proposed on Ethereum.
 
-
-
 Individual nodes do not need to trust each other in order to share a validator. As long as enough key shares get aggregated, the validator duties can be performed by the cluster. Distributed validators have built-in fault tolerance and can keep running even if some of the individual nodes go offline. 
 
 
