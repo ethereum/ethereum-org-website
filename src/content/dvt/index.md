@@ -57,7 +57,7 @@ Overall, DVT offers the following benefits to Ethereum:
 - Creates validator fault tolerance
 - Trust minimized validator operation
 - Minimized slashing and downtime risks
-- Improves Diversity (client, data center, location, regulation, etc.)
+- Improves diversity (client, data center, location, regulation, etc.)
 - Enhanced security of validator key management
 
 ## DVT use cases {#dvt-use-cases}
