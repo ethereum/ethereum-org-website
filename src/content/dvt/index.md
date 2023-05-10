@@ -33,7 +33,7 @@ Validators generate two public-private key pairs: validator keys for participati
 
 With DVT, the validator's private key is split into key shares, and since the nodes only need to have their key share online, the validator's private key can be safely stored in cold storage.
 
-### No Single Points of Failure {#no-single-point-of-failure}
+### No single points of failure {#no-single-point-of-failure}
 
 When a validator is divided across multiple operators and multiple machines, it can withstand individual hardware and software failures without going offline. The risk of failures can also be reduced by using diverse hardware and software configurations across the nodes in a cluster. This resilience is not available to today's validators - it comes from the DVT layer.
 
