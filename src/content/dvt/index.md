@@ -49,7 +49,7 @@ Stake centralization can also lead to client centralization since it's easier fo
 
 
 Overall, DVT offers the following benefits to Ethereum:
-- Decentralization of Ethereum's PoS consensus
+- Decentralization of Ethereum's proof-of-stake consensus
 - Ensures the liveness of the network
 - Creates validator fault tolerance
 - Trust minimized validator operation
