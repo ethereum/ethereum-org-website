@@ -149,7 +149,7 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#C1B6F5",
       },
       {
-        name: t("energy-consumption-chart-airbnb-label"),
+        name: "AirBnB",
         amount: 0.02,
         color: "#E50914",
       },
