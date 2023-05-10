@@ -48,7 +48,7 @@ If one of the components of a machine in a cluster goes down (For example, if th
 
 ### Centralization {#centralization}
 
-Economies of scale in staking can lead to the centralization of stake, which is the idea that there is a single point of failure in the form of a single entity - a service provider or client - that has enough market share to potentially take down or censor the network (with malicious intent or through human error). 
+The ideal scenario for Ethereum is to have as many independently operated validators as possible. However, a few staking providers have become very popular and account for a substantial portion of the total staked ETH on the network. DVT can allow these operators to exist while preserving decentralization of stake. This is because the keys for each validator are distributed across many machines and it would take much greater collusion for a validator to turn malicious.
 
 Stake centralization can also lead to client centralization since it's easier for services to support only one or two client configurations. In case of a faulty node, or poor performance, this could have a massive impact on the entire network, which should be avoided.
 
