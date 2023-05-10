@@ -41,7 +41,7 @@ With DVT, the validator's private key is split into key shares, and since the no
 
 ### No Single Points of Failure {#no-single-point-of-failure}
 
-Standard validators have various fallible components, consisting of hardware (node hosting and physical location) and software (node software and operating system), each presenting a single point of failure. Active-passive solutions have been implemented but are costly and can lead to slashing through double attestations. 
+When a validator is divided across multiple operators and multiple machines, it can withstand individual hardware and software failures without going offline. The risk of failures can also be reduced by using diverse hardware and software configurations across the nodes in a cluster. This resilience is not available to today's validators - it comes from the DVT layer.
 
 Since DVT distributes the operation of a validator between multiple parties, each partie's machine can run different infrastructure component configurations (e.g., multiple client types and nodes hosted in various locations).
 
