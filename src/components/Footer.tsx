@@ -112,7 +112,7 @@ const Footer: React.FC<IProps> = () => {
         },
         {
           to: `/learn/`,
-          text: t("guides-and-resources"),
+          text: t("learn-hub"),
         },
         {
           to: "/history/",
