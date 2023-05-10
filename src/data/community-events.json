@@ -71,7 +71,7 @@
     "startDate": "2023-05-12",
     "endDate": "2023-05-14"
   },
-   {
+  {
     "title": "ETH Tricolor Lanzamiento Road to Blockchain Week EC",
     "to": "https://www.eventbrite.com/cc/launch-road-to-blockchain-week-ecuador-2023-2075369",
     "sponsor": null,
@@ -277,5 +277,14 @@
     "description": "ETHAccra is a 3-day hackathon striving to educate young generations of web3 developers and builders.",
     "startDate": "2023-09-07",
     "endDate": "2023-09-09"
+  },
+  {
+    "title": "Protocol Berg",
+    "to": "https://protocol.berlin/",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "The decentralized protocol and infrastructure conference. Protocol Berg is a one-day technical conference for protocol/system/network engineers, decentralized-infrastructure administrators, researchers, and other curious minds from different ecosystems.",
+    "startDate": "2023-09-15",
+    "endDate": "2023-09-15"
   }
 ]
