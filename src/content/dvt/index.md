@@ -40,7 +40,8 @@ When a validator is divided across multiple operators and multiple machines, it 
 
 If one of the components of a machine in a cluster goes down (For example, if there are four operators in a validator cluster and one uses a specific client that has a bug), the others ensure that the validator keeps running. 
 
-### Centralization {#centralization}
+### Decentralization {#decentralization}
+``
 
 The ideal scenario for Ethereum is to have as many independently operated validators as possible. However, a few staking providers have become very popular and account for a substantial portion of the total staked ETH on the network. DVT can allow these operators to exist while preserving decentralization of stake. This is because the keys for each validator are distributed across many machines and it would take much greater collusion for a validator to turn malicious.
 
