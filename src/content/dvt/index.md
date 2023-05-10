@@ -52,7 +52,6 @@ The ideal scenario for Ethereum is to have as many independently operated valida
 
 Stake centralization can also lead to client centralization since it's easier for services to support only one or two client configurations. In case of a faulty node, or poor performance, this could have a massive impact on the entire network, which should be avoided.
 
-DVT solves these issues by allowing staking providers to distribute their validator's operation between multiple operators, leading to improved operator participation in the network. While simultaneously reducing correlation risks by diversifying client configurations and jurisdictions. Resulting in the Ethereum network being more resistant and decentralized.
 
 In a nutshell, DVT enables:
 - Decentralization of Ethereum's PoS consensus
