@@ -4,7 +4,7 @@ description: Distributed validator technology enables the distributed operation 
 lang: en
 ---
 
-# Distributed Validator Technology {#what-is-dvt}
+# Distributed validator technology {#what-is-dvt}
 
 
 
