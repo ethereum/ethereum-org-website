@@ -1,6 +1,6 @@
 ---
 title: Distributed validator technology
-description: Distributed Validator Technology enables the distributed operation of an Ethereum validator by multiple parties.
+description: Distributed validator technology enables the distributed operation of an Ethereum validator by multiple parties.
 lang: en
 ---
 
