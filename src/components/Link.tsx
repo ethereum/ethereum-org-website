@@ -135,7 +135,9 @@ const Link: React.FC<IProps> = ({
       >
         <>
           {children}
-          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+          <VisuallyHidden className="visually-hidden">
+            (opens in a new tab)
+          </VisuallyHidden>
           {!hideArrow && (
             <Box as="span" ml={0.5} mr={1.5} aria-hidden>
               ↗

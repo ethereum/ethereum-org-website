@@ -14,6 +14,9 @@ const MarkdownTable: React.FC<IProps> = ({ children }) => (
           borderColor: "border",
           whiteSpace: "nowrap",
         },
+        ".chakra-link .visually-hidden": {
+          width: "0px",
+        },
       }}
     >
       {children}
