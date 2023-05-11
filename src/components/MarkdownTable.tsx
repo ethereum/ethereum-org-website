@@ -6,7 +6,7 @@ export interface IProps {
 }
 
 const MarkdownTable: React.FC<IProps> = ({ children }) => (
-  <TableContainer my={8}>
+  <TableContainer position="relative" my={8}>
     <Table
       sx={{
         th: {
