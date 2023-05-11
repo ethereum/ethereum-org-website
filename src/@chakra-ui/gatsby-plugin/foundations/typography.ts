@@ -2,6 +2,8 @@ const typography = {
   fonts: {
     heading: "Inter, sans-serif",
     body: "Inter, sans-serif",
+    monospace:
+      "SFMono-Regular, Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace",
   },
 
   lineHeights: {
