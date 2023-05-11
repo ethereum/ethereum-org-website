@@ -142,7 +142,7 @@ This function returns the maximum amount of shares that can be redeemed from the
 function previewRedeem(uint256 shares) public view returns (uint256)
 ```
 
-This function allows users to simulate the effects of their redeemption at the current block.
+This function allows users to simulate the effects of their redemption at the current block.
 
 #### redeem {#redeem}
 
