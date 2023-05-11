@@ -135,6 +135,11 @@ lang: ja
 - [NOWNodes.io](https://nownodes.io/)
 - [ドキュメント](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
+**Kriptonio - _アーカイブノードとWeb3プラットフォーム_**
+
+- [kriptonio.com](https://kriptonio.com/)
+- [ドキュメント](https://docs.kriptonio.com/)
+
 **Moralis -** **_エンタープライズグレードの EVM API プロバイダ_**
 
 - [moralis.io](http://moralis.io)

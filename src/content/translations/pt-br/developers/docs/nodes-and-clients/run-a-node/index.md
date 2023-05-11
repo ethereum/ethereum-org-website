@@ -57,6 +57,7 @@ Ambas as opções têm vantagens e desvantagens, as quais foram resumidas acima.
 - [GetBlock](https://getblock.io/)
 - [NodeReal](https://nodereal.io/)
 - [NOWNodes](https://nownodes.io/)
+- [Kriptonio](https://kriptonio.com/)
 
 Confira também [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/) para obter mais opções de nós hospedados.
 

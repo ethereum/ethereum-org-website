@@ -177,6 +177,16 @@ sidebarDepth: 2
     - 24 時間年中無休のサポートチーム
     - パーソナルアカウントマネージャー
     - 共有、アーカイブ、バックアップ、専用ノード
+- [**Kriptonio**](https://kriptonio.com/)
+  - [ドキュメント](https://docs.kriptonio.com/)
+  - 機能
+    - 無料プランと有料プラン
+    - アーカイブノードへのアクセス
+    - マルチチェーンサポート
+    - RPCコールエクスプローラー
+    - RPCコール統計情報
+    - プレミアムサポート
+    - アカウント抽象化インフラストラクチャー
 - [**Pocket Network**](https://www.pokt.network/)
   - [ドキュメント](https://docs.pokt.network/home/)
   - 機能

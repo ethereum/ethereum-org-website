@@ -177,6 +177,16 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Team di supporto 24/7
     - Gestore Personale del Conto
     - Nodi condivisi, archivio, backup e dedicati
+- [**Kriptonio**](https://kriptonio.com/)
+  - [Docs](https://docs.kriptonio.com/)
+  - Caratteristiche
+    - Piani Gratuiti e a Pagamento
+    - Accesso ai nodi di archivio
+    - Supporto Multi-Chain
+    - Esploratore di chiamate RPC
+    - Statistiche di chiamate RPC
+    - Supporto Premium
+    - Infrastruttura di Astrazione dell'Account
 - [**Pocket Network**](https://www.pokt.network/)
   - [Documentazione](https://docs.pokt.network/home/)
   - Caratteristiche

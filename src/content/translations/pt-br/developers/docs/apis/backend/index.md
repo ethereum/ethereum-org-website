@@ -135,6 +135,11 @@ Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um
 - [NOWNodes.io](https://nownodes.io/)
 - [Documentação](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
+**Kriptonio - _Nós de arquivo e plataforma Web3._**
+
+- [Kriptonio](https://kriptonio.com/)
+- [Documentação](https://docs.kriptonio.com/)
+
 **Moralis -** **_Provedor de API para EVM para uso corporativo._**
 
 - [moralis.io](http://moralis.io)

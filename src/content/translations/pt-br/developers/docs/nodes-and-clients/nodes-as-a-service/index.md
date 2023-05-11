@@ -222,6 +222,16 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Equipe de suporte 24/7
     - Gerente de Conta Pessoal
     - Nós compartilhados, de arquivo, de cópia de segurança e dedicados
+- [**Kriptonio**](https://kriptonio.com/)
+  - [Documentação](https://docs.kriptonio.com/)
+  - Recursos
+    - Planos gratuitos e pagos
+    - Acesso a nós de arquivo
+    - Suporte a várias cadeias
+    - Explorador de chamadas RPC
+    - Estatísticas de chamadas RPC
+    - Suporte premium
+    - Infraestrutura de abstração de conta
 - [**Rede Pocket**](https://www.pokt.network/)
   - [Documentação](https://docs.pokt.network/home/)
   - Recursos

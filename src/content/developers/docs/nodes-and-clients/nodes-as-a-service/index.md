@@ -222,6 +222,16 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - 24/7 Support Team
     - Personal Account Manager
     - Shared, archive, backup and dedicated nodes
+- [**Kriptonio**](https://kriptonio.com/)
+  - [Docs](https://docs.kriptonio.com/)
+  - Features
+    - Free & Paid plans
+    - Access to archive nodes
+    - Multi-chain support
+    - RPC calls explorer
+    - RPC calls statistics
+    - Premium support
+    - Account Abstraction Infrastructure
 - [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/home/)
   - Features

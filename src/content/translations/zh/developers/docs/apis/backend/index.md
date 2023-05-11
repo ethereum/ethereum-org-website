@@ -135,6 +135,11 @@ lang: zh
 - [NOWNodes.io](https://nownodes.io/)
 - [相关文档](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
+**Kriptonio - _存档节点和 Web3 平台。_**
+
+- [kriptonio.com](https://kriptonio.com/)
+- [相关文档](https://docs.kriptonio.com/)
+
 **Moralis -** **_企业级以太坊虚拟机应用程序接口提供商。_**
 
 - [moralis.io](http://moralis.io)

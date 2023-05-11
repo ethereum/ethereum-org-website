@@ -135,6 +135,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [NOWNodes.io](https://nownodes.io/)
 - [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
+**Kriptonio - _All in One Web3 Development Platform_**
+
+- [Kriptonio](https://kriptonio.com/)
+- [Documentation](https://docs.kriptonio.com/)
+
 **Moralis -** **_Enterprise-Grade EVM API Provider._**
 
 - [moralis.io](http://moralis.io)

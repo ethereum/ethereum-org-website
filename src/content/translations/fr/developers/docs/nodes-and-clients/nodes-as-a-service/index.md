@@ -222,6 +222,16 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Une équipe d'assistance 24h/24 et 7j/7
     - Gestionnaire de compte personnel
     - Archives, sauvegardes et nœuds dédiés partagés
+- [**Kriptonio**](https://kriptonio.com/)
+  - [Docs](https://docs.kriptonio.com/)
+  - Fonctionnalités
+    - Planos Gratuitos e Pagos
+    - Acesso a nós de arquivos
+    - Suporte a várias cadeias
+    - Explorador de chamadas RPC
+    - Estatísticas de chamadas RPC
+    - Suporte premium
+    - Infraestrutura de Abstração de Conta
 - [**Réseau Pocket**](https://www.pokt.network/)
   - [Documentation](https://docs.pokt.network/home/)
   - Fonctionnalités
