@@ -32,7 +32,6 @@ Birden çok proje, dapp'lerinize entegre edebileceğiniz yan zincirlerin uygulam
 
 ## Daha fazla bilgi {#further-reading}
 
-- [EthHub'un yan zincirler hakkındaki içerikleri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Ethereum Dapp'lerinin Yan Zincirler Üzerinden Ölçeklendirilmesi](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 Şubat 2018 - Georgios Konstantopoulos_
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_

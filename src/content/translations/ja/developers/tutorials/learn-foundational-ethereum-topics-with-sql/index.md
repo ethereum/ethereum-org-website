@@ -7,7 +7,7 @@ tags:
   - "クエリ"
   - "Dune Analytics"
   - "トランザクション"
-skill: 初級
+skill: beginner
 lang: ja
 published: 2021-05-11
 source: paulapivat.com

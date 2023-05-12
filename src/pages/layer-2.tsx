@@ -6,6 +6,7 @@ import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Badge,
   Box,
+  BoxProps,
   Center,
   Divider,
   DividerProps,
@@ -72,20 +73,17 @@ const SectionHeading = (props: HeadingProps) => {
   return <Heading {...mergeProps} />
 }
 
-const ContentBox = (
-  props: HTMLAttributes<"div"> & {
-    children: ReactNode
-    isLightGrayBg?: boolean
-  }
-) => (
+interface ContentBoxProps extends BoxProps {
+  isLightGrayBg?: boolean
+}
+const ContentBox: React.FC<ContentBoxProps> = ({ isLightGrayBg, ...rest }) => (
   <Box
     px={8}
     py={12}
     width="full"
-    {...(props.isLightGrayBg && { background: "layer2ContentSecondary" })}
-  >
-    {props.children}
-  </Box>
+    {...(isLightGrayBg && { background: "layer2ContentSecondary" })}
+    {...rest}
+  />
 )
 
 const StyledInfoIcon = () => (
@@ -265,16 +263,31 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {
         content: t("layer-2-hero-button-1"),
         toId: "what-is-layer-2",
+        matomo: {
+          eventCategory: "layer 2 hero buttons",
+          eventAction: "click",
+          eventName: "what is layer 2",
+        },
       },
       {
         content: t("layer-2-hero-button-2"),
         toId: "use-layer-2",
         variant: "outline",
+        matomo: {
+          eventCategory: "layer 2 hero buttons",
+          eventAction: "click",
+          eventName: "use layer 2",
+        },
       },
       {
         content: t("layer-2-hero-button-3"),
         toId: "how-to-get-onto-layer-2",
         variant: "outline",
+        matomo: {
+          eventCategory: "layer 2 hero buttons",
+          eventAction: "click",
+          eventName: "move to layer 2",
+        },
       },
     ],
   }

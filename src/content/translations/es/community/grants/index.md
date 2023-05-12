@@ -20,7 +20,8 @@ Estos programas apoyan al ecosistema Ethereum ofreciendo subvenciones para una a
 - [Moloch DAO](https://www.molochdao.com/): _privacidad, escalabilidad en capa 2, seguridad del cliente y más_.
 - [Subvenciones abiertas](https://opengrants.com/explore)
 - [Subvenciones DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _hoja de cálculo de Google de organizaciones que ofrecen subvenciones_
-- [Becas académicas](https://esp.ethereum.foundation/academic-grants-2023): _becas para apoyar el trabajo académico relacionado con Ethereum_
+- [Crunchbase para subvenciones Web3](https://www.cryptoneur.xyz/web3-grants): _filtrar y buscar subvenciones por categoría, caso de uso y cantidad, entre otras opciones. Contribuya a ayudar a otros a encontrar la subvención correcta._
+- [Becas académicas](https://esp.ethereum.foundation/academic-grants): _becas para apoyar el trabajo académico relacionado con Ethereum_
 
 ## Para proyectos concretos {#project-specific}
 
@@ -30,6 +31,7 @@ Estos proyectos han creado sus propias subvenciones para proyectos con fines de 
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6): _[fondo de ecosistemas](https://balancer.fi/) Balancer_
 - [Programa de subvenciones de Chainlink](https://chain.link/community/grants): _subvenciones para la comunidad[Chainlink](https://chain.link/)_
 - [Programa de subvenciones Compound](https://compoundgrants.org/): _[ecosistema financiero](https://compound.finance/) Compound_
+- [Programa de subvenciones Decentraland](https://governance.decentraland.org/grants/): _[metaverso DAO](https://decentraland.org/) Decentraland_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/): _[ecosistema financiero](https://lido.fi/) Lido_
 - [Programa de MetaMask](https://metamaskgrants.org/): _[MetaMask](https://metamask.io/) subvenciones lideradas por empleados DAO_
 - [Programa de subvenciones mStable](https://docs.mstable.org/advanced/grants-program): _[comunidad](https://mstable.org/) mStable_

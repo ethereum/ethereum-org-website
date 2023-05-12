@@ -43,5 +43,4 @@ Dapp'lerinize entegre edebileceğiniz birden fazla ZK-toplaması uygulaması mev
 **ZK-toplamaları hakkında bilgiler**
 
 - [Sıfır-Bilgi Toplamaları Nelerdir?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
-- [EthHub'un zk-toplamaları hakkındaki içerikleri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARK'lar ve SNARK'lar](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)

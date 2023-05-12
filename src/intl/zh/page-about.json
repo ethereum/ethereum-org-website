@@ -29,7 +29,7 @@
   "energy-consumption-chart-global-data-centers-label": "全球数据中心",
   "energy-consumption-chart-gold-mining-cbeci-label": "黄金开采 (CBECI)",
   "energy-consumption-chart-btc-pow-label": "比特币工作量证明",
-  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-netflix-label": "Netflix（最小估算值）",
   "energy-consumption-chart-eth-pow-label": "以太坊工作量证明",
   "energy-consumption-chart-gaming-us-label": "美国游戏业",
   "energy-consumption-chart-paypal-label": "PayPal",

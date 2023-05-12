@@ -8,9 +8,8 @@ tags:
   - "Solidity"
   - "テスト"
   - "ERC-20"
-skill: 中級
+skill: intermediate
 lang: ja
-sidebar: true
 published: 2020-10-16
 ---
 

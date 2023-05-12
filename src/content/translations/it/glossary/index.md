@@ -612,7 +612,7 @@ Client di Ethereum che non memorizza una copia locale della [blockchain](#blockc
 
 ### LMD_GHOST {#lmd-ghost}
 
-L'[algoritmo di scelta della diramazione](#scelta della diramazione-algorithm) usato dai client del consenso di Ethereum per identificare la testa della catena. LMD-GHOST è un acronimo che sta per "Latest Message Driven Greediest Heaviest Observed SubTree" (Ultimo albero secondario osservato guidato dal messaggio più avido e più pesante), che significa che la testa della catena è il blocco col maggior accumulo di [attestazioni](#attestation) nella sua storia.
+L'[algoritmo di scelta della diramazione](#fork-choice-algorithm) usato dai client del consenso di Ethereum per identificare la testa della catena. LMD-GHOST è un acronimo che sta per "Latest Message Driven Greediest Heaviest Observed SubTree" (Ultimo albero secondario osservato guidato dal messaggio più avido e più pesante), che significa che la testa della catena è il blocco col maggior accumulo di [attestazioni](#attestation) nella sua storia.
 
 ## M {#section-m}
 
