@@ -14,7 +14,7 @@ _There are no secrets on the blockchain_, everything that happens is consistent,
 
 There are reverse compilers, but they don't always produce [usable results](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). In this article you learn how to manually reverse engineer and understand a contract from [the opcodes](https://github.com/wolflo/evm-opcodes), as well as how to interpret the results of a decompiler.
 
-To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You can read about about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
+To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You can read about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
 ## Prepare the Executable Code {#prepare-the-executable-code}
 
