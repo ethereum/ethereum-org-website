@@ -86,7 +86,7 @@ const baseStyle = definePartsStyle((props) => {
 
 const size = {
   md: defineStyle({
-    h: 10,
+    h: 10.5,
     px: 2,
   }),
   sm: defineStyle({

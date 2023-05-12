@@ -16,6 +16,7 @@ const baseStyleField = defineMergeStyles(selectDefaultTheme.baseStyle?.field, {
   py: 2,
   ps: 2,
   pe: 8,
+  h: 10.5,
   _focusVisible: {
     outline: "3px solid",
     outlineColor: "primaryHover",
