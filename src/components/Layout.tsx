@@ -30,6 +30,7 @@ import type { Context } from "../types"
 import client from "../apollo"
 
 import "../../static/fonts/inter-font-face.css"
+import "../../static/fonts/ibm-plex-font-face.css"
 
 export interface IProps {
   children?: React.ReactNode
