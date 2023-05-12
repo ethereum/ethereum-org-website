@@ -246,3 +246,9 @@
           to: /developers/docs/data-structures-and-encoding/ssz/
         - id: docs-nav-data-structures-and-encoding-web3-secret-storage
           to: /developers/docs/data-structures-and-encoding/web3-secret-storage/
+- id: docs-nav-design-fundamentals
+  path: /developers/docs/
+  items:
+    - id: docs-nav-design-and-ux
+      to: /developers/docs/design-and-ux/
+      description: docs-nav-design-and-ux-description
