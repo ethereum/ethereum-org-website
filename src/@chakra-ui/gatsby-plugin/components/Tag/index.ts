@@ -41,6 +41,7 @@ const baseStyleLabel = defineStyle({
 const baseStyleCloseButton = defineStyle({
   ...tagTheme.baseStyle?.closeButton,
   opacity: 1,
+  m: 0,
 })
 
 const baseStyle = definePartsStyle({
