@@ -35,6 +35,7 @@ const baseStyleLabel = defineStyle({
   fontSize: "xs",
   textTransform: "uppercase",
   textAlign: "center",
+  lineHeight: 1,
 })
 
 const baseStyleCloseButton = defineStyle({
