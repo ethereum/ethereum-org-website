@@ -74,7 +74,7 @@ Os participantes que forneceram um endereço de retirada com depósito inicial n
 <ExpandableCard title="Quando posso sacar?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Quando você participa com 32 ETH por meio de um provedor SaaS, sua participação de ETH é ainda depositada no contrato oficial de depósito de participação. Como tal, os participantes de SaaS são limitados pelas mesmas restrições de saque que os participantes isolados, e saques não são ativados até a atualização Shangai.
 
-Saques de participação serão implementados na próxima atualização Shangai, esperada no T1/T2 2023. Depois disso, os participantes precisam fornecer um endereço de saque (se não fornecido no depósito inicial), e os pagamentos de recompensas começarão a ser distribuídos automaticamente periodicamente a cada poucos dias.
+Os saques de staking serão implementados na próxima atualização Shanghai, agendada para 12 de abril de 2023. Depois disso, os participantes precisam fornecer um endereço de saque (se não fornecido no depósito inicial), e os pagamentos de recompensas começarão a ser distribuídos automaticamente periodicamente a cada poucos dias.
 
 Isso também permitirá desbloqueio de fundos saídos. Os validadores podem sair totalmente como um validador, e eles receberão todo seu saldo de volta para o endereço de saque fornecido.
 

@@ -161,7 +161,6 @@ lang: ru
 ## Дополнительные ресурсы {#further-reading}
 
 - [Объяснение газа в Ethereum](https://defiprime.com/gas)
-- [Будет ли Ethereum менее выгодно использовать по мере роста цены?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Снижение потребления газа в ваших умных контрактах](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Доказательство владения и доказательство работы](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

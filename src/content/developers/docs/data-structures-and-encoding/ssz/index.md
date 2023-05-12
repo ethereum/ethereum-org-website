@@ -109,7 +109,7 @@ This SSZ serialized object can then be merkleized - that is transformed into a M
 
 There are also cases where the leaves of the tree do not naturally evenly distribute in the way they do in the example above. For example, leaf 4 could be a container with multiple elements that require additional "depth" to be added to the Merkle tree, creating an uneven tree.
 
-Instead of referring to these tree elements as leaf X, node X etc, we can give them generalized indices, starting with root = 1 and counting from left to right along each level. This is the generalized index explained above. Each element in the serialized list has a generalized index equal to `2**depth + idx` where idx is its zero-indexed position in the serialized object and the depth is the number of levels in the Merkle tree, which can be determined as the square root of the number of elements (leaves).
+Instead of referring to these tree elements as leaf X, node X etc, we can give them generalized indices, starting with root = 1 and counting from left to right along each level. This is the generalized index explained above. Each element in the serialized list has a generalized index equal to `2**depth + idx` where idx is its zero-indexed position in the serialized object and the depth is the number of levels in the Merkle tree, which can be determined as the base-two logarithm of the number of elements (leaves).
 
 ## Generalized indices {#generalized-indices}
 

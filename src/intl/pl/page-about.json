@@ -22,6 +22,16 @@
   "page-about-p-6": "Zadania oczekujące na wdrożenie.",
   "page-about-p-7": "Ostatnio ukończone zadania.",
   "page-about-p-8": "Masz pomysł, jak ulepszyć ethereum.org? Chcielibyśmy z Tobą współpracować!",
-  "page-what-is-ethereum-energy-consumption-chart-legend": "Roczne zużycie energii w TW/rok",
-  "page-upgrades-post-merge-banner-governance-ood": "Niektóre treści na tej stronie są nieaktualne po Połączeniu. Jeśli chcesz wnieść swój wkład, zgłoś PR."
+  "page-what-is-ethereum-energy-consumption-chart-legend": "Roczne zużycie energii w TW/r",
+  "page-upgrades-post-merge-banner-governance-ood": "Niektóre treści na tej stronie są nieaktualne po Połączeniu. Jeśli chcesz wnieść swój wkład, zgłoś PR.",
+  "energy-consumption-chart-youtube-label": "YouTube",
+  "energy-consumption-chart-gold-mining-galaxy-label": "Wydobycie złota (Galaxy Digital)",
+  "energy-consumption-chart-global-data-centers-label": "Global data centers",
+  "energy-consumption-chart-gold-mining-cbeci-label": "Wydobycie złota (CBECI)",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-eth-pow-label": "BTC PoW",
+  "energy-consumption-chart-gaming-us-label": "Gry w USA",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS"
 }

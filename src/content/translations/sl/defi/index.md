@@ -311,7 +311,6 @@ DeFi je odprtokodno gibanje. DeFi protokoli in aplikacije so vam vse odprte za p
 
 ### DeFi članki {#defi-articles}
 
-- [Kaj so decentralizirane finance?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, redno posodobljen_
 - [Začetniški vodnik po DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6. januar 2020_
 
 ### Videoposnetki {#videos}

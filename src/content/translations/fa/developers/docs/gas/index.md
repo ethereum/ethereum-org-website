@@ -161,7 +161,6 @@ lang: fa
 ## بیشتر بخوانید {#further-reading}
 
 - [توضیحی درباره‌ی گاز اتریوم](https://defiprime.com/gas)
-- [آیا با بالا رفتن قیمت اتریوم استفاده از اتریوم گران‌تر می‌شود؟](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [کاهش مصرف گاز قراردادهای هوشمندتان](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [اثبات سهام در مقابل اثبات کار](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

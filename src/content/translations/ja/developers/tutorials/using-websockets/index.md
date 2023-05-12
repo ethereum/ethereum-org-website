@@ -8,7 +8,7 @@ tags:
   - "WebSockets"
   - "クエリ"
   - "JavaScript"
-skill: 初級
+skill: beginner
 source: Alchemy ドキュメント
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01

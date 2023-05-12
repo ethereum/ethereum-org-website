@@ -21,5 +21,4 @@ ETH পাওয়ার সহজতম উপায় হ'ল কয়েক�
 কীভাবে ETH কেনা যায় সে সম্পর্কে আরও তথ্যের জন্য এই নির্দেশিকাগুলি দেখুন:
 
 - [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _প্রায়শই আপডেট করা হয় - MyCrypto_
-- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _প্রায়শই আপডেট করা হয় - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

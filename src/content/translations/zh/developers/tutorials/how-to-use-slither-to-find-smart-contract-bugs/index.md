@@ -5,11 +5,11 @@ author: Trailofbits
 lang: zh
 tags:
   - "solidity"
-  - "智能合约"
+  - "智能合同"
   - "安全性"
   - "测试"
   - "静态分析"
-skill: advanced
+skill: intermediate
 published: 2020-06-09
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

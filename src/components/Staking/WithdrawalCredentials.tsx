@@ -140,6 +140,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
     <Flex direction="column" gap={4}>
       <Flex alignItems="center" gap={2} flexWrap="wrap">
         <Input
+          padding={2}
+          borderRadius="base"
           id="validatorIndex"
           value={inputValue}
           onChange={handleChange}

@@ -160,6 +160,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
       {
         content: t("hero-button-lets-get-started"),
         toId: tocItems[0].id,
+        matomo: {
+          eventCategory: "learn hub hero buttons",
+          eventAction: "click",
+          eventName: "lets get started",
+        },
       },
     ],
   }
@@ -286,6 +291,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </DocLink>
               <DocLink to="/web3/">
                 <Translation id="additional-reading-what-is-web3" />
+              </DocLink>
+              <DocLink
+                to="https://www.kernel.community/en/learn/module-1/value"
+                isExternal
+              >
+                <Translation id="additional-reading-value" />
               </DocLink>
               <DocLink
                 to="https://www.youtube.com/watch?v=WSN5BaCzsbo"
@@ -646,6 +657,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </DocLink>
               <DocLink to="https://weekinethereumnews.com/" isExternal>
                 <Translation id="more-on-ethereum-protocol-week-in-ethereum" />
+              </DocLink>
+              <DocLink to="https://kernel.community/en/learn/" isExternal>
+                <Translation id="more-on-ethereum-protocol-kernel" />
               </DocLink>
             </DocsContainer>
           </Section>

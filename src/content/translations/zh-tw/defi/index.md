@@ -338,7 +338,6 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 ### 去中心化金融文章 {#defi-articles}
 
-- [何謂去中心化金融？](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub，定期更新_
 - [去中心化金融新手指南](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu，2020 年 1 月 6 日_
 
 ### 影片 {#videos}

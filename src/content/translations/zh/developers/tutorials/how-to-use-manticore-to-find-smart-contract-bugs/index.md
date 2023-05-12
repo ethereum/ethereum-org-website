@@ -4,12 +4,12 @@ description: 如何使用Manticore来自动发现智能合约漏洞
 author: Trailofbits
 lang: zh
 tags:
-  - "固态"
-  - "智能合约"
+  - "solidity"
+  - "智能合同"
   - "安全性"
   - "测试"
   - "形式化验证"
-skill: advanced
+skill: intermediate
 published: 2020-01-13
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

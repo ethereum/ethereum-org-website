@@ -295,12 +295,6 @@ const DepositContractPage = ({
       image: getImage(data.etherscan)!,
       alt: "",
     },
-    {
-      title: "EthHub",
-      link: "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
-      image: getImage(data.ethhub)!,
-      alt: "",
-    },
   ]
 
   const isButtonEnabled =
@@ -530,9 +524,6 @@ export const query = graphql`
       ...sourceImage
     }
     ef: file(relativePath: { eq: "staking/ef-blog-logo.png" }) {
-      ...sourceImage
-    }
-    ethhub: file(relativePath: { eq: "projects/ethhub.png" }) {
       ...sourceImage
     }
     etherscan: file(

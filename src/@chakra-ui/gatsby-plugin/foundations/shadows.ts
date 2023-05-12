@@ -16,6 +16,8 @@ const shadows = {
     dark: "0 1px 1px hsla(0,0%,100%,.1)",
   },
   tableItemBoxHover: "0 0 1px var(--eth-colors-primary)",
+  gridYellowBoxShadow: "8px 8px 0px 0px var(--eth-colors-gridYellow)",
+  gridBlueBowShadow: "8px 8px 0px 0px var(--eth-colors-gridBlue)",
 
   // * Part of new DS
   // TODO: From current theme. Rename to 'buttonHover'

@@ -331,7 +331,7 @@ lighthouse beacon_node \
     --datadir /data/ethereum \
     --http \
     --execution-endpoint http://127.0.0.1:8551 \
-    --execution-jwt /path/to/jwtsecret \
+    --execution-jwt /path/to/jwtsecret
 ```
 
 ##### Running Lodestar
@@ -378,7 +378,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
-    --ee-jwt-secret-file "/path/to/jwtsecret" \
+    --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
 When a consensus client connects to the execution client to read the deposit contract and identify validators, it also connects to other Beacon Node peers and begins syncing consensus slots from genesis. Once the Beacon Node reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
