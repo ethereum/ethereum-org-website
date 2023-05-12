@@ -176,7 +176,7 @@ const Layer2Onboard: React.FC<IProps> = ({
     )
   }
 
-  const selectExchangeOnboard = (option: ExchangeOption | CexOnboardOption) => {
+  const selectExchangeOnboard = (option: ExchangeOption & CexOnboardOption) => {
     if (Object.hasOwn(option, "cex")) {
       trackCustomEvent({
         eventCategory: `Selected cex to onboard`,
@@ -301,7 +301,7 @@ const Layer2Onboard: React.FC<IProps> = ({
                 options: [...cexOnboardOptions],
               },
             ]}
-            onChange={(selectedOption: ExchangeOption | CexOnboardOption) => {
+            onChange={(selectedOption: ExchangeOption & CexOnboardOption) => {
               selectExchangeOnboard(selectedOption)
             }}
             placeholder={t("layer-2-onboard-exchange-input-placeholder")}
