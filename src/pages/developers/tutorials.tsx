@@ -175,6 +175,7 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
         boxShadow={!isActive ? "table" : undefined}
         color="text"
         fontSize="sm"
+        lineHeight={1.2}
         opacity={isActive ? 1 : 0.7}
         p={2}
         textTransform="uppercase"
