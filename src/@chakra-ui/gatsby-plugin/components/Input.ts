@@ -55,7 +55,7 @@ const baseStyle = definePartsStyle((props) => {
         },
       },
       element: {
-        fontSize: "xl",
+        fontSize: "2xl",
         transitionProperty: "common",
         transitionDuration: "normal",
         _groupHover: {
@@ -90,7 +90,6 @@ const size = {
     px: 2,
   }),
   sm: defineStyle({
-    fontSize: "sm",
     h: 8,
     px: 1,
   }),
@@ -102,8 +101,11 @@ const sizes = {
     element: size.md,
   }),
   sm: definePartsStyle({
-    field: size.sm,
-    element: size.sm,
+    field: { ...size.sm, fontSize: "sm" },
+    element: {
+      ...size.sm,
+      fontSize: "xl",
+    },
   }),
 }
 
