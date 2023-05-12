@@ -162,29 +162,33 @@ const TagContainer = styled.div`
 `
 
 const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
-  (props, ref) => (
-    <chakra.button
-      ref={ref}
-      bg="none"
-      bgImage="radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)"
-      border="1px"
-      borderColor={props.isActive ? "primary300" : "white800"}
-      borderRadius="base"
-      boxShadow={!props.isActive ? "table" : undefined}
-      color="text"
-      fontSize="sm"
-      opacity={props.isActive ? 1 : 0.7}
-      p={2}
-      textTransform="uppercase"
-      _hover={{
-        color: "primary",
-        borderColor: "text200",
-        opacity: "1",
-      }}
-    >
-      {props.name}
-    </chakra.button>
-  )
+  (props, ref) => {
+    const { isActive, name, ...rest } = props
+    return (
+      <chakra.button
+        ref={ref}
+        bg="none"
+        bgImage="radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)"
+        border="1px"
+        borderColor={isActive ? "primary300" : "white800"}
+        borderRadius="base"
+        boxShadow={!isActive ? "table" : undefined}
+        color="text"
+        fontSize="sm"
+        opacity={isActive ? 1 : 0.7}
+        p={2}
+        textTransform="uppercase"
+        _hover={{
+          color: "primary",
+          borderColor: "text200",
+          opacity: "1",
+        }}
+        {...rest}
+      >
+        {name}
+      </chakra.button>
+    )
+  }
 )
 
 const ClearLink = styled.button`
