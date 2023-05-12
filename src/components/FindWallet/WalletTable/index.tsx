@@ -108,7 +108,7 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
           gap: 4,
         },
         "&:nth-of-type(3), &:nth-of-type(4)": {
-          hideBelow: "sm",
+          hideBelow: "md",
         },
       },
     }}
@@ -132,7 +132,7 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
         height: "full",
       },
       "td:nth-of-type(3), td:nth-of-type(4)": {
-        hideBelow: "sm",
+        hideBelow: "md",
       },
     }}
     {...props}
