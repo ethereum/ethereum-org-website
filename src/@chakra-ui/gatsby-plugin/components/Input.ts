@@ -22,6 +22,7 @@ const baseStyle = definePartsStyle((props) => {
         borderColor: "currentColor",
         borderRadius: "base",
         outline: "3px solid transparent",
+        lineHeight: 1,
         _placeholder: {
           color: "disabled",
           opacity: 1,
