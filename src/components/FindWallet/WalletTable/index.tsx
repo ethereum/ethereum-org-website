@@ -144,6 +144,7 @@ const ChakraSelect = chakra((props: { className?: string }) => (
 ))
 const StyledSelect = (props) => (
   <ChakraSelect
+    w="full"
     sx={{
       ".react-select": {
         "&__control": {
