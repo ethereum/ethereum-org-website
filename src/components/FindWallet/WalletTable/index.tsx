@@ -352,7 +352,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
         </Th>
         <Th>
           <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
-            Choose features
+            {t("page-find-wallet-choose-features")}
           </Text>
           <StyledSelect
             className="react-select-container"
