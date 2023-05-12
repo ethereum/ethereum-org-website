@@ -1,7 +1,6 @@
 // Libraries
 import React, { ReactNode } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Select from "react-select"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
