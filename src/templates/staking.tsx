@@ -63,6 +63,7 @@ import { ChildOnlyProp, Context } from "../types"
 import {
   ContentContainer,
   InfoColumn,
+  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
@@ -151,18 +152,6 @@ const Pre = (props: ChildOnlyProp) => (
     border="1px solid"
     borderColor="preBorder"
     whiteSpace="pre-wrap"
-    {...props}
-  />
-)
-
-const InfoTitle = (props: ChildOnlyProp) => (
-  <Heading
-    fontSize="5xl"
-    lineHeight={1.4}
-    fontWeight="bold"
-    textAlign="right"
-    mt={0}
-    hideBelow="lg"
     {...props}
   />
 )

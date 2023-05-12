@@ -217,7 +217,7 @@ export const InfoColumn = (props: ChildOnlyProp) => (
   />
 )
 
-const InfoTitle = (props: ChildOnlyProp) => (
+export const InfoTitle = (props: ChildOnlyProp) => (
   <H2
     fontSize={{ base: "2.5rem", lg: "5xl" }}
     textAlign={{ base: "left", lg: "right" }}
@@ -245,27 +245,31 @@ export const MobileButtonDropdown = (props: ButtonDropdownProps) => (
   <StyledButtonDropdown mb={0} {...props} />
 )
 
-export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => (
-  <Box
-    as="article"
-    flex="1 1 1024px"
-    position="relative"
-    px={8}
-    pb={8}
-    {...props}
-    sx={{
-      ".featured": {
-        pl: 4,
-        ml: -4,
-        borderLeft: "1px dotted",
-        borderColor: "primary",
-      },
-      ".citation p": {
-        color: "text200",
-      },
-    }}
-  />
-)
+export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+  const lgBp = useToken("breakpoints", "lg")
+
+  return (
+    <Box
+      as="article"
+      flex={`1 1 ${lgBp}`}
+      position="relative"
+      px={8}
+      pb={8}
+      {...props}
+      sx={{
+        ".featured": {
+          pl: 4,
+          ml: -4,
+          borderLeft: "1px dotted",
+          borderColor: "primary",
+        },
+        ".citation p": {
+          color: "text200",
+        },
+      }}
+    />
+  )
+}
 
 export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
@@ -288,6 +292,8 @@ const UseCasePage = ({
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
   const { t } = useTranslation()
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
 
   if (!siteData || !mdx?.frontmatter)
     throw new Error(
@@ -347,11 +353,9 @@ const UseCasePage = ({
     ],
   }
 
-  const lgBreakpoint = useToken("breakpoints", "lg")
-
   return (
     <Box position="relative" width="full">
-      <Show above={lgBreakpoint}>
+      <Show above={lgBp}>
         <BannerNotification shouldShow>
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <div>
@@ -393,7 +397,7 @@ const UseCasePage = ({
           }}
         />
       </HeroContainer>
-      <Show above={lgBreakpoint}>
+      <Show above={lgBp}>
         <Flex
           as={Link}
           to="#content"
@@ -413,7 +417,7 @@ const UseCasePage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above={lgBreakpoint}>
+        <Show above={lgBp}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />
             <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
@@ -432,7 +436,7 @@ const UseCasePage = ({
           </MDXProvider>
           <FeedbackCard />
         </ContentContainer>
-        <Show below={lgBreakpoint}>
+        <Show below={lgBp}>
           <MobileButton>
             <MobileButtonDropdown list={dropdownLinks} />
           </MobileButton>
