@@ -48,7 +48,7 @@ const baseStyle = definePartsStyle({
   closeButton: baseStyleCloseButton,
 })
 
-const variantSubtle = defineStyle((props) => {
+const variantSubtle = definePartsStyle((props) => {
   const { status = "normal" } = props
   const defaultStyles = tagTheme.variants?.subtle(props)
   const statusStyles = STATUS_COLORS[status].subtle
@@ -65,7 +65,7 @@ const variantSubtle = defineStyle((props) => {
   }
 })
 
-const variantSolid = defineStyle((props) => {
+const variantSolid = definePartsStyle((props) => {
   const { status = "normal" } = props
   const defaultStyles = tagTheme.variants?.solid(props)
   const statusStyles = STATUS_COLORS[status].solid
@@ -79,7 +79,7 @@ const variantSolid = defineStyle((props) => {
   }
 })
 
-const variantOutline = defineStyle((props) => {
+const variantOutline = definePartsStyle((props) => {
   const { status = "normal" } = props
   const defaultStyles = tagTheme.variants?.outline(props)
   const statusStyles = STATUS_COLORS[status].outline
