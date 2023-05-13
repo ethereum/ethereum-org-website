@@ -53,7 +53,6 @@ import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
-import isButtonLink from "../utils/isButtonLink"
 
 import type { Context } from "../types"
 
@@ -414,7 +413,7 @@ const RoadmapPage = ({
                 {mdx.frontmatter.buttons.map((button, idx) => {
                   if (!button) return null
 
-                  if (isButtonLink(button)) {
+                  if (button.to) {
                     return (
                       <WrapItem>
                         <ButtonLink
