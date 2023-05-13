@@ -3,7 +3,6 @@ import {
   Flex,
   Heading,
   IconButton,
-  Input,
   LinkBox,
   LinkOverlay,
   Text,
@@ -14,12 +13,12 @@ import React, { useState } from "react"
 import { MdClose } from "react-icons/md"
 
 import Link from "../components/Link"
+import Input from "../components/Input"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 
 import { Language, languageMetadata } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
-import Input from "../components/Input"
 
 const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
   const { t } = useTranslation()
@@ -100,7 +99,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
             rightElement={
               keyword !== "" && (
                 <IconButton
-                  icon={<Icon name="close" />}
+                  icon={<MdClose />}
                   onClick={resetKeyword}
                   position="absolute"
                   insetInlineEnd={1}

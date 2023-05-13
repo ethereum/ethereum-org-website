@@ -6,9 +6,9 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import CopyToClipboard from "../CopyToClipboard"
 import Emoji from "../Emoji"
 import Translation from "../Translation"
+import Input from "../Input"
 // Utilites
 import { trackCustomEvent } from "../../utils/matomo"
-import Input from "../Input"
 
 interface Validator {
   validatorIndex: number
