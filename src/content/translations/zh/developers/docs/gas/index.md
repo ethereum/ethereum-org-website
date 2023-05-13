@@ -146,7 +146,6 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 ## 延伸阅读 {#further-reading}
 
 - [以太坊 Gas 详解](https://defiprime.com/gas)
-- [以太坊价格上涨会导致使用费更贵吗？](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [减少智能合约的 gas 消耗](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [权益证明与工作量证明](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

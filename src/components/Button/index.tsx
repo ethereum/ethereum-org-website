@@ -8,16 +8,16 @@ export interface IProps extends ButtonProps {
 }
 
 const Button: React.FC<IProps> = ({ toId, children, ...props }) => {
-  const handleOnClick = () => {
-    if (!toId) {
-      return
+  const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (toId) {
+      scrollIntoView(toId)
     }
 
-    scrollIntoView(toId)
+    props.onClick?.(e)
   }
 
   return (
-    <ChakraButton onClick={handleOnClick} {...props}>
+    <ChakraButton {...props} onClick={handleOnClick}>
       {children}
     </ChakraButton>
   )

@@ -30,6 +30,9 @@ incomplete: true
 
 ## 面向中等程度用户的文章 {#intermediate-articles}
 
+- [Rust-Web3 相关文档](https://tomusdrw.github.io/rust-web3/web3/index.html)
+- [Rust-Web3 工作示例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
+
 ## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
 - [pwasm_ethereum 外部库与类以太坊网络交互](https://github.com/openethereum/pwasm-ethereum)
@@ -47,10 +50,12 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS 应用程序界面参考_
 - [Solaris](https://github.com/paritytech/sol-rs) - _使用本机 Parity 客户端以太坊虚拟机的 Solidity 智能合约单元测试框架。_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _以太坊虚拟机的 Rust 实现_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 库 Rust 语言实现_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_
 - [Foundry](https://github.com/gakonst/foundry) - _以太坊应用开发工具包_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _可实现以太坊库和钱包功能_
 - [SewUp](https://github.com/second-state/SewUp) - _一个帮助用户用 Rust 语言构建以太坊 Webassembly 合约的库，正如在公共后端中开发一样_
+- [Reth](https://github.com/paradigmxyz/reth) - Reth 即 Rust 以太坊的简称，是新的以太坊全节点实现。
 
 想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
 

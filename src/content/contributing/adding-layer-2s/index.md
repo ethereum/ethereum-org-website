@@ -50,6 +50,8 @@ _We do not consider other scaling solutions that don't use Ethereum for data ava
 
 **Date project went live**
 
+- A layer 2 that has been "live" on Mainnet for over 6 months
+
 - Newer projects that have not been battle-tested by users are less likely to be listed.
 
 **External security audit**

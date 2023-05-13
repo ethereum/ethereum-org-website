@@ -4,9 +4,8 @@ description: Come funziona il contratto Uniswap-v2? Perché è scritto così?
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
-published: 01-05-2021
+published: 2021-05-01
 lang: it
 ---
 
@@ -801,7 +800,7 @@ Queste due funzioni consentono a `feeSetter` di controllare il destinatario dell
 
 ### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
-[Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa il token di liquidità ERC-20. È simile al [contratto ERC-20 di OpenZeppelin ](/developers/tutorials/erc20-annotated-code), quindi spiegherò solo le differenze: la funzionalità `permit`.
+[Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa il token di liquidità ERC-20. È simile al [contratto ERC-20 di OpenZeppelin](/developers/tutorials/erc20-annotated-code), quindi spiegherò solo le differenze: la funzionalità `permit`.
 
 Le transazioni su Ethereum costano ether (ETH), equivalente al denaro reale. Se hai dei token ERC-20 ma non ETH, non puoi inviare transazioni, quindi non puoi farci nulla. Una soluzione per evitare questo problema sono le [meta-transazioni](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Il proprietario dei token firma una transazione che consente a chiunque altro di prelevare token al di fuori della catena e li invia al destinatario tramite Internet. Il destinatario, che ha ETH a disposizione, invia il permesso per conto del proprietario.
 
@@ -891,11 +890,11 @@ I contratti periferici sono l'API (interfaccia del programma applicativo) per Un
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) ha dei problemi e [non dovrebbe più essere usato](https://uniswap.org/docs/v2/smart-contracts/router01/). Fortunatamente, i contratti periferici sono privi di stato e non detengono alcuna risorsa, quindi è facile deprecarli e suggerire alle persone di usare invece il sostituto, `UniswapV2Router02`.
+[Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) presenta dei problemi e [non deve più essere usato](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Fortunatamente, i contratti periferici sono privi di stato e non detengono alcuna risorsa, quindi è facile deprecarli e suggerire alle persone di usare invece il sostituto, `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-In gran parte dei casi puoi usare Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puoi vedere come usarlo [qui](https://uniswap.org/docs/v2/smart-contracts/router02/).
+In gran parte dei casi puoi usare Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puoi vedere come usarlo [qui](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
 ```solidity
 pragma solidity =0.6.6;

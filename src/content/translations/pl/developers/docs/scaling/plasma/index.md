@@ -32,6 +32,4 @@ Wiele projektów dostarcza implementacje Plasma, które można zintegrować z w�
 
 ## Dalsza lektura {#further-reading}
 
-- [EthHub w Plasma](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
-
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_

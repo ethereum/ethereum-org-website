@@ -35,17 +35,19 @@ import {
   KilnGlyphIcon,
   LidoGlyphIcon,
   RocketPoolGlyphIcon,
+  SenseiNodeGlyphIcon,
   StafiGlyphIcon,
   StakefishGlyphIcon,
   StakewiseGlyphIcon,
   StakingDappnodeGlyphIcon,
   StereumGlyphIcon,
+  SquidGlyphIcon,
   UnknownProductGlyphIcon,
   WagyuGlyphIcon,
   WarningProductGlyphIcon,
 } from "../icons/staking"
 
-import { EventOptions } from "../../utils/matomo"
+import { MatomoEventOptions } from "../../utils/matomo"
 // When adding a product svg, be sure to add to mapping below as well.
 
 const PADDED_DIV_STYLE: BoxProps = {
@@ -77,9 +79,11 @@ const getIconFromName = (
     kiln: KilnGlyphIcon,
     lido: LidoGlyphIcon,
     rocketPool: RocketPoolGlyphIcon,
+    senseiNode: SenseiNodeGlyphIcon,
     stafi: StafiGlyphIcon,
     stakewise: StakewiseGlyphIcon,
     stereum: StereumGlyphIcon,
+    squid: SquidGlyphIcon,
     wagyu: WagyuGlyphIcon,
     stakefish: StakefishGlyphIcon,
   }
@@ -141,7 +145,7 @@ type Product = {
   multiClient: FlagType
   diverseClients: FlagType
   economical: FlagType
-  matomo: EventOptions
+  matomo: MatomoEventOptions
 }
 interface ICardProps {
   product: Product

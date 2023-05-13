@@ -425,7 +425,6 @@ _Ne-ar plăcea să mai avem documentație privind crearea unui contract intelige
 **Articole**
 
 - [Ce este un blockchain oracol?](https://chain.link/education/blockchain-oracles) – _Chainlink_
-- [Oracole](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
 - [Ce este un blockchain oracol?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) – _Patrick Collins_
 - [Oracole descentralizate: o prezentare cuprinzătoare](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Implementarea unui blockchain oracol pe Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_

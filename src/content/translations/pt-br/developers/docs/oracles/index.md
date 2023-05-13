@@ -284,7 +284,7 @@ O staking/votação também protege oráculos descentralizados de "ataques Sybil
 
 O [ponto de Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) é um conceito da teoria dos jogos que assume que várias entidades encontrarão sempre por padrão uma solução comum para um problema na ausência de qualquer comunicação. Os mecanismos do ponto de Schelling são frequentemente utilizados em redes descentralizadas de oráculos para permitir que os nós cheguem a consenso sobre as respostas às solicitações de dados.
 
-Um exemplo inicial é [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), um feed de dados proposto em que os participantes submetem respostas para perguntas "escalares" (perguntas cujas respostas são descritas pela magnitude, como, "Qual é o preço do ETH?", juntamente com um depósito. Os usuários que fornecem valores entre o 25º e 75º [percentil](https://en.wikipedia.org/wiki/Percentile) são recompensados, enquanto aqueles cujos valores se desviam amplamente da mediana são penalizados.
+Um exemplo inicial é o [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), uma proposta de feed de dados (oráculo), na qual os participantes submetem respostas para "escalar" perguntas (perguntas cujas respostas são descritas por magnitude, por exemplo, "qual é o preço do ETH?"), juntamente com um depósito. Os usuários que fornecem valores entre o 25º e 75º [percentil](https://en.wikipedia.org/wiki/Percentile) são recompensados, enquanto aqueles cujos valores se desviam amplamente da mediana são penalizados.
 
 Embora o SchellingCoin não exista hoje, uma série de oráculos descentralizados, principalmente [Oráculos do Maker Protocol](https://docs.makerdao.com/smart-contract-modules/oracle-module), usam o mecanismo schelling-point para melhorar a precisão dos dados do oráculo. Cada Maker Oracle consiste de uma rede off-chain P2P de nós ("relayers" e "feeds") que submetem preços de mercado para ativos colaterais e um contrato on-chain "Medianizer" que calcula a mediana de todos os valores fornecidos. Quando o período de atraso especificado acaba, esta mediana se torna o novo preço de referência para o ativo associado.
 
@@ -393,7 +393,7 @@ Existem vários aplicativos de oráculos que você pode integrar no seu dapp Eth
 
 **[Witnet](https://witnet.io/)**: _Witnet é um óraculo sem permissão, descentralizado e resistente à censura, que ajuda os contratos inteligentes a reagir a eventos do mundo real com fortes garantias criptoeconômicas._
 
-**[UMA Oracle](https://umaproject.org/products/optimistic-oracle)**: _o oráculo otimista da UMA permite que os contratos inteligentes recebam qualquer tipo de dados para diferentes aplicações, incluindo seguros, derivados financeiros e mercado de previsão._
+**[UMA Oracle](https://uma.xyz)** – _UMA é um oráculo otimista que permite contratos de receber, rapidamente, qualquer tipo de dados para diferentes aplicações, incluindo seguros, derivativos financeiros e mercados de previsão._
 
 **[Tellor](https://tellor.io/)**: _Tellor é um protocolo de oráculo transparente e sem permissão para que seu contrato inteligente obtenha facilmente quaisquer dados sempre que precisar._
 
@@ -404,6 +404,8 @@ Existem vários aplicativos de oráculos que você pode integrar no seu dapp Eth
 **[Paralink](https://paralink.network/)**: _Paralink fornece uma plataforma de código aberto e descentralizada de oráculos para contratos inteligentes em execução no Ethereum e em outras blockchains populares._
 
 **[Dos.Network](https://dos.network/)**: _é uma rede de serviços de oráculos descentralizada para impulsionar a usabilidade da blockchain com dados do mundo real e poder de computação._
+
+**[Rede Pyth](https://pyth.network/)** – _A rede Pyth é uma rede de oráculos financeiros internos projetada para publicar dados contínuos do mundo real em cadeia em um ambiente autossustentável, descentralizado e inviolável._
 
 ## Leitura Adicional {#further-reading}
 

@@ -175,7 +175,6 @@ _Примітка. Будь-хто може належати до кількох
 Процес керування в Ethereum не є чітко визначеним. Різні учасники спільноти мають власні погляди щодо цього. Ви можете ознайомитися з ними нижче.
 
 - [Примітка до управління Blockchain](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Керування на Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) — _ETHHub_
 - [Як працює керування Ethereum?](https://cryptotesters.com/blog/ethereum-governance) — _Cryptotesters_
 - [Як працює керування Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) — _Міка Золту_
 - [Чим займається основний розробник Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) — _Хадсон Джеймсон_

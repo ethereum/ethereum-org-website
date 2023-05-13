@@ -9,7 +9,7 @@ tags:
   - "Smart Contracts"
   - "Erste Schritte"
   - "Bereitstellung"
-skill: Einsteiger
+skill: beginner
 lang: de
 published: 2021-03-31
 ---

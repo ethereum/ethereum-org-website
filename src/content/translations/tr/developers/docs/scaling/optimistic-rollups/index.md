@@ -52,7 +52,6 @@ Dapp'lerinize entegre edebileceğiniz birden çok İyimser toplama uygulaması m
 **İyimser toplamalar hakkında bilgi**
 
 - [Optimistik Toplama hakkında bilmeniz gereken her şey](https://research.paradigm.xyz/rollups)
-- [EthHub'un iyimser toplamalar hakkındaki içerikleri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Temel Arbitrum Rehberi](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Optimism'in Toplaması aslında nasıl çalışıyor?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

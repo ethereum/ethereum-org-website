@@ -6,9 +6,8 @@ tags:
   - "contratos inteligentes"
   - "tokens"
   - "solidity"
-  - "introdução"
   - "erc-20"
-skill: iniciante
+skill: beginner
 lang: pt-br
 published: 2020-04-05
 source: EthereumDev
@@ -91,7 +90,7 @@ event Transfer(address indexed from, address indexed to, uint256 value);
 
 Este evento é emitido quando a quantidade de tokens (valor) é enviada do endereço `from` para o endereço `to`.
 
-In the case of minting new tokens, the transfer is usually `from` the 0x00..0000 address while in the case of burning tokens the transfer is `to` 0x00..0000.
+No caso de criação de novos tokens, a transferência é geralmente `do` endereço 0x00..0000, enquanto no caso de queima de tokens a transferência é `para` 0x00..0000.
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);

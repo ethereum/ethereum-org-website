@@ -22,7 +22,6 @@ Här är några appar byggda på Ethereum - vi roterar listan ofta!
 
 Intresserad av att titta på fler appar som är byggda på Ethereum?
 
-- [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) _Uppdateras ofta - EthHub_
 - [90+ Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _24 april 2019 - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _Uppdateras ofta - State of the Dapps_
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Uppdaterad ofta - Defiprime_

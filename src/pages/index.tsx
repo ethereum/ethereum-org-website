@@ -37,7 +37,6 @@ import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
-import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -176,9 +175,12 @@ const PageHeader = () => (
     <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>
       <Translation id="page-index-description" />
     </Text>
-    <ButtonLink variant="outline" to="/learn/">
-      <Translation id="page-index-title-button" />
-    </ButtonLink>
+    <ButtonLinkRow
+      firstButton={{
+        to: "/learn/",
+        child: <Translation id="page-index-title-button" />,
+      }}
+    />
   </Flex>
 )
 
@@ -195,8 +197,6 @@ const HomePage = ({
     setActiveCode(id)
     setModalOpen(true)
   }
-
-  useConsoleEasterEgg()
 
   const cards = [
     {

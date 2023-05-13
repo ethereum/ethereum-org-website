@@ -6,7 +6,7 @@ tags:
   - "クライアント"
   - "Geth"
   - "ノード"
-skill: 中級
+skill: intermediate
 lang: ja
 published: 2021-01-13
 ---

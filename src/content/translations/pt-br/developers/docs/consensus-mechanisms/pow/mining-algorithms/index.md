@@ -12,7 +12,7 @@ A mineração Ethereum usou um algoritmo conhecido como Ethash. A ideia fundamen
 
 ## Pré-Requisitos {#prerequisites}
 
-Para entender melhor esta página, recomendamos que você leia primeiro sobre o [consenso da prova de trabalho](/developers/docs/consensus-mechanisms/pow) e a [mineração](/developers/docs /consensus-mechanisms/pow/mining).
+Para entender melhor esta página, recomendamos que você leia primeiro sobre o [consenso da prova de trabalho](/developers/docs/consensus-mechanisms/pow) e a [mineração](/developers/docs/consensus-mechanisms/pow/mining).
 
 ## Dagger Hashimoto {#dagger-hashimoto}
 

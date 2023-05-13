@@ -16,7 +16,7 @@ Ultimately, this is a great way to build a diverse and impressive portfolio that
 
 We sometimes need a help testing our raw ideas. This is a great way how to contribute without any technical knowledge.
 
-1. The design team will share a mockup design on Discord and on GitHub.
+1. The design team will share a mockup design on [Discord](https://discord.com/invite/CetY6Y4) and on [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. You will be guided through the designs to provide feedback via comments function.
 3. The outcome will be shared in the GitHub issue and then closed by the team.
 
@@ -33,7 +33,7 @@ Provide feedback on our website by:
 Ethereum.org is a fast growing website with many features and content. Some of the UI can easily become obsolete or could be improved. If you encounter any such instance, please report it so that it gets our attention.
 
 1. Go through the website and pay attention to its design.
-2. Take screenshots and notes If you see any visual or UX issues.
+2. Take screenshots and notes if you see any visual or UX issues.
 3. Report the found issues using a [bug report](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 ### <Emoji text=":four:" size={1} /> Propose design changes {#propose-design-changes}
