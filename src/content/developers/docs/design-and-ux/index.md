@@ -65,7 +65,7 @@ Get involved in professional community-driven organizations or join design group
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/about)
 - [web3trends.org](https://web3trends.org/)
-- [Open Source Web3Design](https://t.me/joinchat/RLu-SuLwRwf7aubu)
+- [Open Source Web3Design](https://www.web3designers.org/)
 
 ## Design Systems {#Design-systems}
 
