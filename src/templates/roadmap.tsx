@@ -7,7 +7,6 @@ import styled from "@emotion/styled"
 import {
   Flex,
   ListItem,
-  Stack,
   Text,
   UnorderedList,
   Wrap,
@@ -15,7 +14,6 @@ import {
 } from "@chakra-ui/react"
 
 import Button from "../components/Button"
-
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
   List as ButtonDropdownList,
@@ -53,9 +51,11 @@ import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
-import { Context } from "../types"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
+import isButtonLink from "../utils/isButtonLink"
+
+import type { Context } from "../types"
 
 const Page = styled.div`
   display: flex;
@@ -412,30 +412,35 @@ const RoadmapPage = ({
             {mdx?.frontmatter?.buttons && (
               <Wrap spacing={2} marginBottom={4}>
                 {mdx.frontmatter.buttons.map((button, idx) => {
-                  if (button?.to) {
+                  if (!button) return null
+
+                  if (isButtonLink(button)) {
                     return (
                       <WrapItem>
                         <ButtonLink
                           key={idx}
-                          variant={button?.variant}
-                          to={button?.to}
+                          variant={button.variant || "solid"}
+                          to={button.to}
                         >
                           {button.label}
                         </ButtonLink>
                       </WrapItem>
                     )
                   }
-                  return (
-                    <WrapItem>
-                      <Button
-                        key={idx}
-                        variant={button?.variant}
-                        toId={button?.toId}
-                      >
-                        {button?.label}
-                      </Button>
-                    </WrapItem>
-                  )
+
+                  if (button.toId) {
+                    return (
+                      <WrapItem>
+                        <Button
+                          key={idx}
+                          variant={button.variant || "solid"}
+                          toId={button.toId}
+                        >
+                          {button.label}
+                        </Button>
+                      </WrapItem>
+                    )
+                  }
                 })}
               </Wrap>
             )}

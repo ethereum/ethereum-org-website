@@ -2,7 +2,8 @@ import React, { ReactNode } from "react"
 import Emoji from "./Emoji"
 import { Text, Box, Flex, FlexProps } from "@chakra-ui/react"
 
-export interface IProps extends FlexProps {
+export interface IProps extends Omit<FlexProps, "title"> {
+  title?: ReactNode
   emoji: string
   description: ReactNode
   className?: string

@@ -30,7 +30,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
     epochNumber,
     slotNumber,
   } = NetworkUpgradeSummaryData[name]
-  const date = new Date(dateTimeAsString)
+  const date = new Date(dateTimeAsString!)
   const formattedDate = date.toLocaleString(language, {
     timeZone: "UTC",
     month: "short",
@@ -42,7 +42,11 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   })
   const formattedUTC = `${formattedDate} +UTC`
 
-  const blockTypeTranslation = (translationKey, explorerUrl, number) => {
+  const blockTypeTranslation = (
+    translationKey: string,
+    explorerUrl: string,
+    number: number
+  ) => {
     return (
       <Flex>
         <Emoji fontSize="sm" mr={2} text=":bricks:" />

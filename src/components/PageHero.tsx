@@ -7,6 +7,7 @@ import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
 import Button, { IProps as IButtonProps } from "./Button"
 
 import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
+import isButtonLink from "../utils/isButtonLink"
 
 export interface IButtonLink extends IButtonLinkProps {
   content: ReactNode
@@ -32,10 +33,6 @@ export interface IProps {
   isReverse?: boolean
   children?: ReactNode
   className?: string
-}
-
-function isButtonLink(button: IButton | IButtonLink): button is IButtonLink {
-  return (button as IButtonLink).to !== undefined
 }
 
 const PageHero: React.FC<IProps> = ({

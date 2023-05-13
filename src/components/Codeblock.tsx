@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
 import Highlight, {
@@ -231,30 +231,11 @@ const codeTheme = {
   },
 }
 
-const getValidChildrenForCodeblock = (child) => {
-  try {
-    if (typeof child !== "string") {
-      return getValidChildrenForCodeblock(child.props.children)
-    } else {
-      return child
-    }
-  } catch (e) {
-    /*For now available: code without wrappers like div
-    * example:
-    * <Codeblock codeLanguage="language-js">
-        const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key"){"\n"}
-        web3.eth.getBlockNumber().then(console.log)
-      </Codeblock>
-    * */
-    console.error(`Codeblock children is not valid`)
-  }
-}
-
 export interface IProps {
   allowCollapse?: boolean
   codeLanguage: string
   fromHomepage?: boolean
-  children: React.ReactChild
+  children: string
 }
 
 const Codeblock: React.FC<IProps> = ({
@@ -263,18 +244,10 @@ const Codeblock: React.FC<IProps> = ({
   codeLanguage,
   fromHomepage = false,
 }) => {
-  const codeText = React.Children.map(children, (child) => {
-    return getValidChildrenForCodeblock(child)
-  }).join("")
-
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
 
-  let className
-  if (React.isValidElement(children)) {
-    className = children?.props?.className
-  } else {
-    className = codeLanguage || ""
-  }
+  const codeText = children
+  const className = codeLanguage || ""
 
   const matches = className?.match(/language-(?<lang>.*)/)
   const language = matches?.groups?.lang || ""

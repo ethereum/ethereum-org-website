@@ -260,7 +260,7 @@ const Layer2Onboard: React.FC<IProps> = ({
   }
 
   const selectExchangeOnboard = (option: ExchangeOption | CexOnboardOption) => {
-    if (Object.hasOwn(option, "cex")) {
+    if ("cex" in option) {
       trackCustomEvent({
         eventCategory: `Selected cex to onboard`,
         eventAction: `Clicked`,
