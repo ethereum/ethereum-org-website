@@ -764,19 +764,15 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             </Text>
             <UnorderedList>
               <ListItem>
-                <Text>
-              <Link to="/developers/docs/scaling/sidechains/">
-                <Translation id="layer-2-more-on-sidechains" />
-              </Link>
-            </Text>
-           </ListItem>
-           <ListItem>
-           <Text>
-              <Link to="/developers/docs/scaling/validium/">
-                <Translation id="layer-2-more-on-validiums" />
-              </Link>
-            </Text>
-           </ListItem>
+                <Link to="/developers/docs/scaling/sidechains/">
+                  <Translation id="layer-2-more-on-sidechains" />
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link to="/developers/docs/scaling/validium/">
+                  <Translation id="layer-2-more-on-validiums" />
+                </Link>
+              </ListItem>
             </UnorderedList>
           </Box>
           <Box flex="50%">
