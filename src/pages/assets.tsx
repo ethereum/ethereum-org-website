@@ -188,8 +188,6 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
-        </Row>
-        <Row>
           <AssetDownload
             title={t("page-assets-robot")}
             alt={t("page-assets-robot")}
