@@ -60,7 +60,7 @@ Reproducibility and replicability are the foundations of quality scientific disc
 - Reproducible results can be achieved multiple times in a row by the same team using the same methodology.
 - Replicable results can be achieved by a different group using the same experimental setup.
 
-New Web3-native tools can ensure that reproducibility and replicability are the basis of discovery. We can weave quality science into the technological fabric of academia. Web3 offers the ability to create attestations for each analysis component: the raw data, the computational engine, and the application result. The beauty of consensus systems is that when a trusted network is created for maintaining these components, each network participant can be responsible for reproducing the calculation and validating each result.
+New Web3-native tools such as [DeSci Nodes](https://beta.dpid.org/46) can ensure that reproducibility and replicability are the basis of discovery by allowing code, data, and pdfs to be linked together through reproducibility annotations. Web3 offers the ability to create attestations for each analysis component: the raw data, the computational engine, and the application result. The beauty of consensus systems is that when a trusted network is created for maintaining these components, each network participant can be responsible for reproducing the calculation and validating each result.
 
 ### Funding {#funding}
 
@@ -97,6 +97,7 @@ Explore projects and join the DeSci community.
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
+- [DeSci Labs](https://www.desci.com/)
 - [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 - [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 - [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
