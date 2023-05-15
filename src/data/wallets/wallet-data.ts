@@ -1,4 +1,4 @@
-interface WalletData {
+export interface WalletData {
   last_updated: string
   name: string
   image_name: string
