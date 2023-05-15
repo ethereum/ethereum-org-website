@@ -36,14 +36,15 @@ It does not make sense to create a wrapped version of an ERC-20 token that is al
 
 The whole point of Ethereum is decentralization. This means that there is no central authority that can confiscate your assets or prevent you from deploying a smart contract. But it also means that scammers can deploy any smart contract they wish.
 
-**smartcontract**
+<ExpandableCard
+title="What are smart contracts?"
+contentPreview=''>
+  
+[*Smart contracts*](/developers/docs/smart-contracts/) are the programs that run on top of the Ethereum blockchain. Each ERC-20 token, for example, is implemented as a smart contract.
+  
+</ExpandableCard>
 
 Specifically, just because Arbitrum deployed a contract that uses the symbol `ARB`, doesn't mean that other people can't also deploy a contract that uses the exact same symbol, or a similar one. And whoever writes the contract gets to set what the contract will do.
-
-### How do they make money from the scam?
-
-**Uniswap**
-**Directing people to their own UI**
 
 
 ## Appearing legitimate
@@ -54,13 +55,17 @@ There are several tricks that scam token creator pull to appear legitimate. They
 
 - **Legitimate owners**. Scam tokens often airdrop significant balances to addresses that can be expected to be legitimate holders of the real token.
 
-  For example, lets look at `wARB` again. [About 16% of the tokens](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) are held by an address whose public tag is [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). This is *not* a fake address, it really is the address that [deployed the real ARB contract on Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670). The ERC-20 balance of an address is part of the ERC-20 contract's storage, and can be specified by the contract to be whatever it wishes.
+  For example, lets look at `wARB` again. [About 16% of the tokens](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) are held by an address whose public tag is [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). This is *not* a fake address, it really is the address that [deployed the real ARB contract on Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670). The ERC-20 balance of an address is part of the ERC-20 contract's storage, and can be specified by the contract to be whatever the contract developer wishes.
+
+- **Legitimate transfers**. *Legitimate owners wouldn't pay to transfer a scam token around, so if there are transfers it must be legitimate, right?* Wrong. `Transfer` events are emitted by the ERC-20 contract. A scammer can easily write the contract in such a way it will emit those events, with any desired source and destination, at will. 
+
+<ExpandableCard
+title="What are `Transfer` events?"
+contentPreview=''>
   
-**What is a deployer**
-
-- **Legitimate transfers**. *Legitimate owners wouldn't pay to transfer a scam token around, so if there are transfers it must be legitimate, right?* Wrong. [`Transfer` events](https://eips.ethereum.org/EIPS/eip-20#transfer-1) are emitted by the ERC-20 contract. A scammer can easily write the contract in such a way it will emit those events, with any desired source and destination, at will. 
-
-**What is a Transfer event**
+In theory a program running offchain can view all the transactions that affected a particular ERC-20 contract from its initial deployment, and use that to identify transfers. In practice, doing this would require too much network bandwidth and CPU power. To allow for simpler analysis, ERC-20 contracts are [required by the standard](https://eips.ethereum.org/EIPS/eip-20#transfer-1) to emit events tagged as transfers whenever tokens are transferred from one account to another. [Events](https://docs.alchemy.com/docs/deep-dive-into-eth_getlogs#what-are-logs-or-events) are written to the blockchain and indexed, which makes it a lot easier to obtain and analyse onchain data.
+  
+</ExpandableCard>
 
 ## Scammy UI
 
