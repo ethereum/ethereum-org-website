@@ -1,7 +1,15 @@
 import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Flex, Grid, Heading, Show, useToken } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  Show,
+  Text,
+  useToken,
+} from "@chakra-ui/react"
 
 import { List as ButtonDropdownList } from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
@@ -37,7 +45,13 @@ const PageContainer = (props: ChildOnlyProp) => (
 )
 
 const Divider = () => (
-  <Box mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
+  <Box
+    my={8}
+    w="10%"
+    height="0.25rem"
+    bgColor="homeDivider"
+    alignSelf="center"
+  />
 )
 
 const HeroStatsWrapper = (props: ChildOnlyProp) => (
@@ -89,6 +103,15 @@ const ComparisonGrid = (props: ChildOnlyProp) => {
     ></Grid>
   )
 }
+
+const H2 = (props) => (
+  <Heading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    mt={0}
+    {...props}
+  />
+)
 
 const ColorH3 = (props: { color: string; id: TranslationKey }) => (
   <Heading as="h3" fontSize="2xl" color={props.color}>
@@ -287,24 +310,24 @@ const StakingPage = ({
           </InfoColumn>
         </Show>
         <ContentContainer id="content">
-          <Flex direction="column" gap={6}>
+          <Flex direction="column" gap={16} mt={{ base: 16, lg: 0 }}>
             <Box>
-              <h2 id={tocItems.whatIsStaking.id}>
+              <H2 id={tocItems.whatIsStaking.id}>
                 {tocItems.whatIsStaking.title}
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-staking-description" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Link to="/get-eth/">
                   <Translation id="page-staking-section-what-link" />
                 </Link>
-              </p>
+              </Text>
             </Box>
             <Box>
-              <h2 id={tocItems.whyStakeYourEth.id}>
+              <H2 id={tocItems.whyStakeYourEth.id}>
                 {tocItems.whyStakeYourEth.title}
-              </h2>
+              </H2>
               <CardGrid>
                 {benefits.map(
                   ({ title, description, emoji, linkText, to }, idx) => (
@@ -321,15 +344,15 @@ const StakingPage = ({
               </CardGrid>
             </Box>
             <Box>
-              <h2 id={tocItems.howToStakeYourEth.id}>
+              <H2 id={tocItems.howToStakeYourEth.id}>
                 {tocItems.howToStakeYourEth.title}
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-staking-section-why-p1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-staking-section-why-p2" />
-              </p>
+              </Text>
             </Box>
             <StakingHierarchy />
             <Box>
@@ -339,12 +362,12 @@ const StakingPage = ({
             </Box>
             <Divider />
             <Box>
-              <h2 id={tocItems.comparisonOfOptions.id}>
+              <H2 id={tocItems.comparisonOfOptions.id}>
                 {tocItems.comparisonOfOptions.title}
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-staking-section-comparison-subtitle" />
-              </p>
+              </Text>
               <ComparisonGrid>
                 <ColorH3 color="stakingGold" id="page-staking-dropdown-solo" />
                 <div
@@ -535,28 +558,28 @@ const StakingPage = ({
             <Divider />
             <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
             <Box>
-              <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
+              <H2 id={tocItems.faq.id}>{tocItems.faq.title}</H2>
               <ExpandableCard title={t("page-staking-faq-4-question")}>
-                <p>
+                <Text>
                   <Translation id="page-staking-faq-4-answer-p1" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-staking-faq-4-answer-p2" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-staking-faq-4-answer-p3" />
-                </p>
+                </Text>
                 <ButtonLink to="/roadmap/merge/">
                   <Translation id="page-upgrades-merge-btn" />
                 </ButtonLink>
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-5-question")}>
-                <p>
+                <Text>
                   <Translation id="page-staking-faq-5-answer-p1" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-staking-faq-5-answer-p2" />
-                </p>
+                </Text>
                 <ButtonLink to="/staking/withdrawals/">
                   <Translation id="page-staking-faq-5-answer-link" />
                 </ButtonLink>
@@ -568,16 +591,16 @@ const StakingPage = ({
                 <Translation id="page-staking-faq-2-answer" />
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-3-question")}>
-                <p>
+                <Text>
                   <Translation id="page-staking-faq-3-answer-p1" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-staking-faq-3-answer-p2" />
-                </p>
+                </Text>
               </ExpandableCard>
             </Box>
             <Box>
-              <h2 id={tocItems.further.id}>{tocItems.further.title}</h2>
+              <H2 id={tocItems.further.id}>{tocItems.further.title}</H2>
               <ul>
                 <li>
                   <Link to="https://vitalik.ca/general/2020/11/06/pos2020.html">
