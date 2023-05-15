@@ -27,7 +27,10 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
-import ExpandableCard from "../components/ExpandableCard"
+import ExpandableCard, {
+  ExpandableCardPreview,
+  ExpandableCardContent,
+} from "../components/ExpandableCard"
 import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
@@ -194,6 +197,8 @@ const components = {
   Emoji,
   DocLink,
   ExpandableCard,
+  ExpandableCardPreview,
+  ExpandableCardContent,
   CardContainer,
   GhostCard,
   UpcomingEventsList,

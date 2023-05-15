@@ -22,7 +22,10 @@ import CardList from "../components/CardList"
 import Breadcrumbs from "../components/Breadcrumbs"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
-import ExpandableCard from "../components/ExpandableCard"
+import ExpandableCard, {
+  ExpandableCardContent,
+  ExpandableCardPreview,
+} from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
 import { getImage } from "../utils/image"
 
@@ -777,95 +780,117 @@ const BugBountiesPage = ({
         </Center>
         <Faq>
           <LeftColumn>
-            <ExpandableCard
-              title={t("bug-bounty-faq-q1-title")}
-              contentPreview={t("bug-bounty-faq-q1-contentPreview")}
-            >
-              <Text>
-                <Translation id="bug-bounty-faq-q1-content-1" />
-              </Text>
-              <Text>
-                <Translation id="bug-bounty-faq-q1-content-2" />
-              </Text>
-              <Text>
-                <Translation id="bug-bounty-faq-q1-content-3" />
-              </Text>
-              <Text>
-                <Translation id="bug-bounty-faq-q1-content-4" />
-              </Text>
-              <Text>
-                <Translation id="bug-bounty-faq-q1-content-5" />
-              </Text>
-              <Text>
-                <Translation id="bug-bounty-faq-q1-content-6" />
-              </Text>
-              <Text>
-                <Translation id="bug-bounty-faq-q1-content-7" />
-              </Text>
+            <ExpandableCard>
+              <ExpandableCardPreview title={t("bug-bounty-faq-q1-title")}>
+                <Translation id="bug-bounty-faq-q1-contentPreview" />
+              </ExpandableCardPreview>
+              <ExpandableCardContent>
+                <Text>
+                  <Translation id="bug-bounty-faq-q1-content-1" />
+                </Text>
+                <Text>
+                  <Translation id="bug-bounty-faq-q1-content-2" />
+                </Text>
+                <Text>
+                  <Translation id="bug-bounty-faq-q1-content-3" />
+                </Text>
+                <Text>
+                  <Translation id="bug-bounty-faq-q1-content-4" />
+                </Text>
+                <Text>
+                  <Translation id="bug-bounty-faq-q1-content-5" />
+                </Text>
+                <Text>
+                  <Translation id="bug-bounty-faq-q1-content-6" />
+                </Text>
+                <Text>
+                  <Translation id="bug-bounty-faq-q1-content-7" />
+                </Text>
+              </ExpandableCardContent>
             </ExpandableCard>
-            <ExpandableCard
-              title={t("bug-bounty-faq-q2-title")}
-              contentPreview={t("bug-bounty-faq-q2-contentPreview")}
-            >
-              <Text>
-                <Translation id="bug-bounty-faq-q2-content-1" />
-              </Text>
+
+            <ExpandableCard>
+              <ExpandableCardPreview title={t("bug-bounty-faq-q2-title")}>
+                <Translation id="bug-bounty-faq-q2-contentPreview" />
+              </ExpandableCardPreview>
+              <ExpandableCardContent>
+                <Text>
+                  <Translation id="bug-bounty-faq-q2-content-1" />
+                </Text>
+              </ExpandableCardContent>
             </ExpandableCard>
-            <ExpandableCard
-              title={t("bug-bounty-faq-q3-title")}
-              contentPreview={t("bug-bounty-faq-q3-contentPreview")}
-            >
-              <Text>
-                <Translation id="bug-bounty-faq-q3-content-1" />
-              </Text>
+
+            <ExpandableCard>
+              <ExpandableCardPreview title={t("bug-bounty-faq-q3-title")}>
+                <Translation id="bug-bounty-faq-q3-contentPreview" />
+              </ExpandableCardPreview>
+              <ExpandableCardContent>
+                <Text>
+                  <Translation id="bug-bounty-faq-q3-content-1" />
+                </Text>
+              </ExpandableCardContent>
             </ExpandableCard>
-            <ExpandableCard
-              title={t("bug-bounty-faq-q4-title")}
-              contentPreview={t("bug-bounty-faq-q4-contentPreview")}
-            >
-              <Text>
-                <Translation id="bug-bounty-faq-q4-content-1" />
-              </Text>
+
+            <ExpandableCard>
+              <ExpandableCardPreview title={t("bug-bounty-faq-q4-title")}>
+                <Translation id="bug-bounty-faq-q4-contentPreview" />
+              </ExpandableCardPreview>
+              <ExpandableCardContent>
+                <Text>
+                  <Translation id="bug-bounty-faq-q4-content-1" />
+                </Text>
+              </ExpandableCardContent>
             </ExpandableCard>
           </LeftColumn>
           <RightColumn>
-            <ExpandableCard
-              title={t("bug-bounty-faq-q5-title")}
-              contentPreview={t("bug-bounty-faq-q5-contentPreview")}
-            >
-              <Text>
-                <Translation id="bug-bounty-faq-q5-content-1" />
-              </Text>
+            <ExpandableCard>
+              <ExpandableCardPreview title={t("bug-bounty-faq-q5-title")}>
+                <Translation id="bug-bounty-faq-q5-contentPreview" />
+              </ExpandableCardPreview>
+              <ExpandableCardContent>
+                <Text>
+                  <Translation id="bug-bounty-faq-q5-content-1" />
+                </Text>
+              </ExpandableCardContent>
             </ExpandableCard>
-            <ExpandableCard
-              title={t("bug-bounty-faq-q6-title")}
-              contentPreview={t("bug-bounty-faq-q6-contentPreview")}
-            >
-              <Text>
-                <Translation id="bug-bounty-faq-q6-content-1" />
-              </Text>
-              <Text>
-                <Translation id="bug-bounty-faq-q6-content-2" />
-              </Text>
+
+            <ExpandableCard>
+              <ExpandableCardPreview title={t("bug-bounty-faq-q6-title")}>
+                <Translation id="bug-bounty-faq-q6-contentPreview" />
+              </ExpandableCardPreview>
+              <ExpandableCardContent>
+                <Text>
+                  <Translation id="bug-bounty-faq-q6-content-1" />
+                </Text>
+                <Text>
+                  <Translation id="bug-bounty-faq-q6-content-2" />
+                </Text>
+              </ExpandableCardContent>
             </ExpandableCard>
-            <ExpandableCard
-              title={t("bug-bounty-faq-q7-title")}
-              contentPreview={t("bug-bounty-faq-q7-contentPreview")}
-            >
-              <Text>
-                <Translation id="bug-bounty-faq-q7-content-1" />
-              </Text>
+
+            <ExpandableCard>
+              <ExpandableCardPreview title={t("bug-bounty-faq-q7-title")}>
+                <Translation id="bug-bounty-faq-q7-contentPreview" />
+              </ExpandableCardPreview>
+              <ExpandableCardContent>
+                <Text>
+                  <Translation id="bug-bounty-faq-q7-content-1" />
+                </Text>
+              </ExpandableCardContent>
             </ExpandableCard>
-            <ExpandableCard
-              title={t("bug-bounty-faq-q8-title")}
-              contentPreview={t("bug-bounty-faq-q8-contentPreview")}
-            >
-              <Text>
-                <Translation id="bug-bounty-faq-q8-content-1" />
-              </Text>
-              <Link to="https://ethereum.org/security_at_ethereum.org.asc">
-                <Translation id="bug-bounty-faq-q8-PGP-key" />
-              </Link>
+
+            <ExpandableCard>
+              <ExpandableCardPreview title={t("bug-bounty-faq-q8-title")}>
+                <Translation id="bug-bounty-faq-q8-contentPreview" />
+              </ExpandableCardPreview>
+              <ExpandableCardContent>
+                <Text>
+                  <Translation id="bug-bounty-faq-q8-content-1" />
+                </Text>
+                <Link to="https://ethereum.org/security_at_ethereum.org.asc">
+                  <Translation id="bug-bounty-faq-q8-PGP-key" />
+                </Link>
+              </ExpandableCardContent>
             </ExpandableCard>
           </RightColumn>
         </Faq>
