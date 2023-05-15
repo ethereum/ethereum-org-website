@@ -7,6 +7,22 @@ import React, {
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Badge,
+  Box,
+  Button,
+  ButtonProps,
+  Divider as ChakraDivider,
+  DividerProps,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  SimpleGrid,
+  Text,
+  chakra,
+  useToken,
+} from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import BoxGrid from "../components/BoxGrid"
@@ -28,22 +44,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
 import { ChildOnlyProp, Context } from "../types"
-import {
-  Badge,
-  Box,
-  Button,
-  ButtonProps,
-  Divider as ChakraDivider,
-  DividerProps,
-  Flex,
-  FlexProps,
-  Heading,
-  HeadingProps,
-  SimpleGrid,
-  Text,
-  chakra,
-  useToken,
-} from "@chakra-ui/react"
 
 const Page = (props: ChildOnlyProp & FlexProps) => (
   <Flex direction="column" align="center" mx="auto" w="full" {...props} />
@@ -80,7 +80,7 @@ const OptionContainer = (props: ChildOnlyProp) => (
 const Option = (
   props: Pick<ButtonProps, "children" | "onClick"> & { isActive: boolean }
 ) => {
-  const [tableBoxShadow] = useToken("colors", ["tableBoxShadow"])
+  const tableBoxShadow = useToken("colors", "tableBoxShadow")
 
   return (
     <Button
