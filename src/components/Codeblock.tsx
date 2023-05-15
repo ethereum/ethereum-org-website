@@ -231,11 +231,21 @@ const codeTheme = {
   },
 }
 
+const getValidChildrenForCodeblock = (child: React.ReactNode) => {
+  if (!child) return ""
+
+  if (React.isValidElement(child)) {
+    return getValidChildrenForCodeblock(child.props.children)
+  }
+
+  return child.toString()
+}
+
 export interface IProps {
   allowCollapse?: boolean
   codeLanguage: string
   fromHomepage?: boolean
-  children: string
+  children: React.ReactNode
 }
 
 const Codeblock: React.FC<IProps> = ({
@@ -246,8 +256,18 @@ const Codeblock: React.FC<IProps> = ({
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
 
-  const codeText = children
-  const className = codeLanguage || ""
+  const codeText = (
+    React.Children.map(children, (child) => {
+      return getValidChildrenForCodeblock(child)
+    }) || []
+  ).join("")
+
+  let className
+  if (React.isValidElement<{ className?: string }>(children)) {
+    className = children.props.className || ""
+  } else {
+    className = codeLanguage || ""
+  }
 
   const matches = className?.match(/language-(?<lang>.*)/)
   const language = matches?.groups?.lang || ""
