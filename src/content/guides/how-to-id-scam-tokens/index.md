@@ -6,15 +6,31 @@ lang: en
 
 # How to identify scam tokens
 
-One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/). However, anywhere they are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves. In this case, there are two way in which they are likely to do so:
+One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). However, anywhere they are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves. In this case, there are two way in which they are likely to do so:
 
 - Try to sell you *scam tokens*, which look like the legitimate token you want to purchase, but are issued by the scammers and worthless.
 - Try to direct you into their own user interface, where they attempt to trick you into signing transactions that give them your ETH, your real tokens, etc. 
 
 To illustrate what scam tokens are, and how to identify them, we are going to look at [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
+<ExpandableCard
+title="What is `ARB`?"
+contentPreview=''>
 
-**Wrapped versions of tokens that aren't ERC-20**
+[Arbitrum](https://developer.arbitrum.io/intro/) is an organization that runs and manages an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Initially Arbitrum was organized as a for-profit company, but they recently [started to decentralize](https://arbitrumfoundation.medium.com/arbitrum-the-next-phase-of-decentralization-e7f8b37b5226). As part of that process, they issued a tradeable [governance token](/dao/#token-based-membership).
+
+</ExpandableCard>
+
+<ExpandableCard
+title="Why is the scam token called `wARB`?"
+contentPreview=''>
+  
+There is a convention in Ethereum that when an asset is not ERC-20 compliant we create a "wrapped" version of it with the name starting with `w`. So, for example, we have [`wBTC` for Bitcoin](https://wbtc.network/) and [`wETH` for Ether](https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work).
+  
+It does not make sense to create a wrapped version of an ERC-20 token that is already on Ethereum, but scammers rely on the appearance of legitimacy rather than underlying reality.
+
+</ExpandableCard>
+
 
 ## How do scam tokens work?
 
