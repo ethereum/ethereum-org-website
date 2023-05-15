@@ -123,6 +123,10 @@ const Footer: React.FC<IProps> = () => {
           to: "/web3/",
         },
         {
+          text: t("smart-contracts"),
+          to: "/smart-contracts/",
+        },
+        {
           text: t("energy-consumption"),
           to: "/energy-consumption/",
         },

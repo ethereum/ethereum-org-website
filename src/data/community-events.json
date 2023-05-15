@@ -286,5 +286,14 @@
     "description": "The decentralized protocol and infrastructure conference. Protocol Berg is a one-day technical conference for protocol/system/network engineers, decentralized-infrastructure administrators, researchers, and other curious minds from different ecosystems.",
     "startDate": "2023-09-15",
     "endDate": "2023-09-15"
+  },
+  {
+    "title": "EthereumSP 23",
+    "to": "https://www.ethereumbrasil.com/ethereum-sp23",
+    "sponsor": null,
+    "location": "Campus USP, São Paulo, Brazil",
+    "description": "EthereumSP 2023 is a four-day event to educate and boost the Brazilian Web3 community. Participants will have free access to advanced workshops, bootcamps, and an international Hackathon.",
+    "startDate": "2023-06-22",
+    "endDate": "2023-06-25"
   }
 ]
