@@ -6,14 +6,13 @@ lang: en
 
 # How to identify scam tokens
 
-**ERC-20**
+One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/). However, anywhere they are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves. In this case, there are two way in which they are likely to do so:
 
-This guide will teach you how to identify *scam tokens*, [ERC-20 tokens](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) that are created to mimic other tokens, typically for the sake of defrauding people. 
+- Try to sell you *scam tokens*, which look like the legitimate token you want to purchase, but are issued by the scammers and worthless.
+- Try to direct you into their own user interface, where they attempt to trick you into signing transactions that give them your ETH, your real tokens, etc. 
 
-**Governance token**
-**rollup**
+To illustrate what scam tokens are, and how to identify them, we are going to look at [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
-For example, [Arbitrum](https://arbitrum.foundation/) has a governance token, `ARB`. You can see it on [their rollup](https://arbiscan.io/token/0x912ce59144191c1204e64559fe8253a0e49e6548), or on [the Ethereum mainnet](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1). But somebody also created a [scam token](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82) that attempts to look like a wrapped version of the legitimate `ARB`.
 
 **Wrapped versions of tokens that aren't ERC-20**
 
