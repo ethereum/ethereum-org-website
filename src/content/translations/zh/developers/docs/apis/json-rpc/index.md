@@ -75,7 +75,9 @@ lang: zh
 - `HEX String` - 整数区块号
 - `String "earliest"` - 表示最早/创世区块
 - `String "latest"` - 最新挖出的区块
-- `String "pending"` - 用于未决状态/交易
+- `String "safe"` - 最新且安全的头部区块
+- `String "finalized"` - 最新的最终确定的区块
+- `String "pending"` - 未决状态/交易
 
 ## 示例
 
@@ -484,7 +486,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 **参数**
 
 1. `DATA`，20 字节 - 需要检查余额的地址。
-2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -515,7 +517,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 
 1. `DATA`，20 字节 - 存储地址。
 2. `QUANTITY` - 表示存储位置的整数。
-3. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)
+3. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 **返回值**
 
@@ -581,7 +583,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 **参数**
 
 1. `DATA`，20 字节 - 地址。
-2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -642,7 +644,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 
 **参数**
 
-1. `QUANTITY|TAG` - 表示区块编号的整数，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)。
+1. `QUANTITY|TAG` - 表示区块编号的整数，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)。
 
 ```js
 params: [
@@ -702,7 +704,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 
 **参数**
 
-1. `QUANTITY|TAG` - 表示区块编号的整数，或字符串“latest”、“earliest”或“pending”，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)
+1. `QUANTITY|TAG` - 表示区块编号的整数，或字符串“latest”、“earliest”或“pending”，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -734,7 +736,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 **参数**
 
 1. `DATA`，20 字节 - 地址
-2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -919,7 +921,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 - `value`：`QUANTITY` -（可选）表示与此交易一起发送的值的整数。
 - `data`：`DATA` - （可选）方法签名和编码参数的哈希。 有关详细信息，请参阅 [Solidity 文档中的以太坊合约应用程序二进制接口](https://docs.soliditylang.org/en/latest/abi-spec.html)
 
-2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)
+2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 **返回值**
 
@@ -944,7 +946,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 **参数**
 
-参见 [eth_call](#eth_call) 参数，期望所有属性都是可选的。 如果没有指定燃料限制，geth 将使用来自待处理区块的区块燃料限制作为上限。 因此，当所需燃料数量高于待处理区块的燃料限制时，返回的估算数量可能不足以执行调用/交易。
+参见 [eth_call](#eth_call) 参数，但所有属性都是可选的。 如果没有指定燃料限制，geth 将使用来自待处理区块的区块燃料限制作为上限。 因此，当所需燃料数量高于待处理区块的燃料限制时，返回的估算数量可能不足以执行调用/交易。
 
 **返回值**
 
@@ -1046,7 +1048,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 
 **参数**
 
-1. `QUANTITY|TAG` - 表示区块编号的整数，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)。
+1. `QUANTITY|TAG` - 表示区块编号的整数，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)。
 2. `Boolean` - 如果为 `true` 则返回完整的交易对象，如果为 `false` 则仅返回交易的哈希。
 
 ```js
@@ -1159,7 +1161,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAnd
 
 **参数**
 
-1. `QUANTITY|TAG` - 区块编号，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)。
+1. `QUANTITY|TAG` - 区块编号，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)。
 2. `QUANTITY` - 交易索引位置。
 
 ```js
@@ -1279,7 +1281,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 
 **参数**
 
-1. `QUANTITY|TAG` - 区块编号，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block-parameter)。
+1. `QUANTITY|TAG` - 区块编号，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)。
 2. `QUANTITY` - 叔块的索引位置。
 
 ```js

@@ -4,6 +4,7 @@
   "page-upgrades-beacon-date": "已上线！",
   "page-upgrades-merge-date": "2022 年 9 月",
   "page-upgrades-shards-date": "~2023",
+  "page-upgrades-pbs": "不是即将发生 - 预计 2024/25 年",
   "page-upgrades-post-merge-banner-tutorial-ood": "在合并后此教程已经过时且可能不再有效。如果你想做出贡献，请提出一个拉取请求。",
   "page-upgrades-post-merge-banner-governance-ood": "在合并后本页面上的部分内容已经过时。如果你想做出贡献，请提出一个拉取请求。",
   "page-upgrades-upgrades-guide": "以太坊升级指引",
@@ -13,9 +14,9 @@
   "consensus-beaconcha-in-desc": "开源信标链浏览器",
   "consensus-beaconscan-desc": "共识层信标链浏览器 - Etherscan",
   "consensus-become-staker": "成为质押人",
-  "consensus-become-staker-desc": "质押已经上线！如果您想要通过质押您的 ETH 帮助巩固此网络，请确保您了解其中的风险。",
+  "consensus-become-staker-desc": "质押已经上线！如果你想通过质押以太币帮助保护网络安全，确保你已了解其中风险。",
   "consensus-explore": "查看数据",
-  "consensus-run-beacon-chain": "运行一个共识客户端",
-  "consensus-run-beacon-chain-desc": "以太坊需要尽可能多地处在运行中的客户端支持，为这个以太坊公共产品提供帮助吧！",
+  "consensus-run-beacon-chain": "运行共识客户端",
+  "consensus-run-beacon-chain-desc": "以太坊需要尽可能多的运行中的客户端，借助这个以太坊公共物品提供帮助吧！",
   "read-more": "了解更多"
 }

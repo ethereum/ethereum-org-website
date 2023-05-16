@@ -92,7 +92,7 @@ const PageHero: React.FC<IProps> = ({
             {subtitle}
           </Box>
           {buttons && (
-            <Wrap spacing={2}>
+            <Wrap spacing={2} overflow="visible">
               {buttons.map((button, idx) => {
                 if (isButtonLink(button)) {
                   return (

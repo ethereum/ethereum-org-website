@@ -30,7 +30,7 @@ lang: zh
 
 ## 客户端多样性
 
-[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)对于以太坊网络的整体健康很重要，因为它提供了对错误和漏洞利用的弹性。 现在有多个客户端多样性仪表板，包括 [clientdiversity.org](https://clientdiversity.org/)、[rated.network](rated.network)、[execution-diversity.info](https://execution-diversity.info/) 和 [Ethernodes](https://ethernodes.org/)。
+[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)对于以太坊网络的整体健康很重要，因为它提供了对错误和漏洞利用的弹性。 现在有多个客户端多样性仪表板，包括 [clientdiversity.org](https://clientdiversity.org/)、[rated.network](rated.network)、[pool.invis.cloud](pool.invis.cloud)、[slashed.info](slashed.info) 和 [Ethernodes](https://ethernodes.org/)。
 
 ## Dune Analytics {#dune-analytics}
 

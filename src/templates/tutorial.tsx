@@ -11,6 +11,7 @@ import Codeblock from "../components/Codeblock"
 import TutorialMetadata from "../components/TutorialMetadata"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
+import EnvWarningBanner from "../components/EnvWarningBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
@@ -132,6 +133,7 @@ const components = {
   table: MarkdownTable,
   ButtonLink,
   InfoBanner,
+  EnvWarningBanner,
   Card,
   Divider,
   SectionNav,

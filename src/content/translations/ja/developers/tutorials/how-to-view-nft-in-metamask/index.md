@@ -7,7 +7,7 @@ tags:
   - "Alchemy"
   - "MetaMask"
   - "Solidity"
-skill: 初級
+skill: beginner
 lang: ja
 published: 2021-04-22
 ---

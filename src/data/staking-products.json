@@ -382,6 +382,35 @@
       }
     },
     {
+      "name": "Squid",
+      "imageName": "squid",
+      "hue": 240,
+      "launchDate": "2022-11-01",
+      "url": "https://www.ohsquid.com/",
+      "audits": [],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 12,
+      "monthlyFeeUnit": "USD",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityClient": null,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "github": null
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Squid go to link"
+      }
+    },
+    {
       "name": "Ethpool",
       "imageName": "ethpool",
       "hue": 20,

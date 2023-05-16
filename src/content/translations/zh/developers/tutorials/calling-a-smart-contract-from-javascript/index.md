@@ -7,7 +7,7 @@ tags:
   - "前端"
   - "JavaScript"
   - "web3.js"
-skill: 初学者
+skill: beginner
 lang: zh
 published: 2020-04-19
 source: EthereumDev
