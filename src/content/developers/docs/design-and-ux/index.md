@@ -64,7 +64,8 @@ Get involved in professional community-driven organizations or join design group
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/about)
-- [web3trends.org/](https://web3trends.org/)
+- [web3trends.org](https://web3trends.org/)
+- [Open Source Web3Design](https://www.web3designers.org/)
 
 ## Design Systems {#Design-systems}
 
