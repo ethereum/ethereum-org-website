@@ -105,7 +105,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 - [Ethereum Madrid](https://ethereummadrid.com/): cadena de bloques, DeFi, y cursos de gobernanza, eventos y blog.
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners): guía de Ethereum para principiantes en español.
 - [Tutoriales en línea](https://tutoriales.online/curso/solidity): para aprender Solidity y programación en Ethereum.
-- [Curso introductorio al desarrollo en Ethereum ](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU): introducción a Solidity, prueba y desarrollo de su primer contrato inteligente.
+- [Curso introductorio al desarrollo en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU): introducción a Solidity, prueba y desarrollo de su primer contrato inteligente.
 - [Curso introductorio a la seguridad y piratería en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci): entender los aspectos vulnerables comunes y problemas de seguridad en un contrato inteligente real.
 - [Curso Introducción a Desarrollo DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS): profundice en el funcionamiento de los contratos intelifentes DeFi en Solidity y genere su propio creador de mercado automatizado.
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Formación genérica para principiantes y avanzados sobre la cadena de bloques. Conozca más sobre criptomonedas y Ethereum.

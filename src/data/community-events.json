@@ -71,7 +71,7 @@
     "startDate": "2023-05-12",
     "endDate": "2023-05-14"
   },
-   {
+  {
     "title": "ETH Tricolor Lanzamiento Road to Blockchain Week EC",
     "to": "https://www.eventbrite.com/cc/launch-road-to-blockchain-week-ecuador-2023-2075369",
     "sponsor": null,
@@ -269,7 +269,7 @@
     "startDate": "2023-08-13",
     "endDate": "2023-08-16"
   },
-    {
+  {
     "title": "ETHAccra",
     "to": "https://www.ethaccra.xyz/",
     "sponsor": null,
@@ -277,5 +277,23 @@
     "description": "ETHAccra is a 3-day hackathon striving to educate young generations of web3 developers and builders.",
     "startDate": "2023-09-07",
     "endDate": "2023-09-09"
+  },
+  {
+    "title": "Protocol Berg",
+    "to": "https://protocol.berlin/",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "The decentralized protocol and infrastructure conference. Protocol Berg is a one-day technical conference for protocol/system/network engineers, decentralized-infrastructure administrators, researchers, and other curious minds from different ecosystems.",
+    "startDate": "2023-09-15",
+    "endDate": "2023-09-15"
+  },
+  {
+    "title": "EthereumSP 23",
+    "to": "https://www.ethereumbrasil.com/ethereum-sp23",
+    "sponsor": null,
+    "location": "Campus USP, São Paulo, Brazil",
+    "description": "EthereumSP 2023 is a four-day event to educate and boost the Brazilian Web3 community. Participants will have free access to advanced workshops, bootcamps, and an international Hackathon.",
+    "startDate": "2023-06-22",
+    "endDate": "2023-06-25"
   }
 ]

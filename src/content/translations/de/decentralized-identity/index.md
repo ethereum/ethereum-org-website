@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: ../../assets/eth-gif-cat.png
+image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: Traditionelle Identitätssysteme haben die Ausgabe, Wartung und Kontrolle Ihrer Identifikatoren zentralisiert.
 summaryPoint2: Eine dezentralisierte Identität beseitigt die Abhängigkeit von zentralisierten Dritten.
 summaryPoint3: Dank Krypto haben Benutzer jetzt die Werkzeuge, um ihre eigenen Identifikatoren und Bescheinigungen wieder auszugeben, zu halten und zu kontrollieren.

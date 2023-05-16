@@ -9,7 +9,7 @@ tags:
   - "テスト"
   - "Truffle"
   - "Ganache"
-skill: 中級
+skill: intermediate
 published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration

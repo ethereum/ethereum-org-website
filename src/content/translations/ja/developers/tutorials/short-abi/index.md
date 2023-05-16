@@ -6,7 +6,7 @@ lang: ja
 tags:
   - "レイヤー2"
   - "Optimism"
-skill: 中級
+skill: intermediate
 published: 2022-04-01
 ---
 

@@ -5,7 +5,7 @@ author: Markus Waas
 lang: zh
 tags:
   - "solidity"
-  - "智能合约"
+  - "智能合同"
   - "测试"
   - "模拟"
 skill: intermediate
@@ -14,7 +14,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
 
-[模拟对象](https://en.wikipedia.org/wiki/Mock_object)是面向对象编程中的一种常见设计模式。 Mock 一词来源于古法语词“mocquer”，意为“嘲笑，取笑”，但它渐渐拥有了“模拟真实事物”的含义，这实际上也是我们在编程时所做的事情。 不要随意拿你的智能合约开玩笑，但一定要尽可能多地模拟它们。 这将使你的工作更轻松。
+[模拟对象](https://wikipedia.org/wiki/Mock_object)是面向对象编程中的一种常见设计模式。 Mock 一词来源于古法语词“mocquer”，意为“嘲笑，取笑”，但它渐渐拥有了“模拟真实事物”的含义，这实际上也是我们在编程时所做的事情。 不要随意拿你的智能合约开玩笑，但一定要尽可能多地模拟它们。 这将使你的工作更轻松。
 
 ## 使用模拟合约对合约进行单元测试 {#unit-testing-contracts-with-mocks}
 

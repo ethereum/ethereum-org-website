@@ -7,7 +7,7 @@ tags:
   - "Optimism"
   - "ブリッジ"
   - "レイヤー2"
-skill: 中級
+skill: intermediate
 published: 2022-03-30
 lang: ja
 ---

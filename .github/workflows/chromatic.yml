@@ -5,11 +5,7 @@ name: Chromatic Publish and Testing
 
 # Event for the workflow
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - ready_for_review
+  push:
     paths:
       # Only run on file changes in any of these paths
       - "src/components/**/*"

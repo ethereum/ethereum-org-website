@@ -56,11 +56,11 @@ Todos nuestros traductores pueden optar a una POAP (siglas en inglés de prueba 
 
 #### Reconocimientos a los traductores {#translator-acknowledgements}
 
-Reconocimientos públicos a nuestros mejores traductores a través de las [ Tablas de clasificacion ](/contributing/translation-program/acknowledgements/) y una lista[ de todos los contribuyentes al Programa de traduccion](/contributing/translation-program/contributors/).
+Reconocimientos públicos a nuestros mejores traductores a través de las [Tablas de clasificacion](/contributing/translation-program/acknowledgements/) y una lista [de todos los contribuyentes al Programa de traduccion](/contributing/translation-program/contributors/).
 
 #### Recompensas {#rewards}
 
-En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes mas activos con entradas para conferencias de Ethereum, como [ Devcon ](https://devcon.org/en/) y [ Devconnect ](https://devconnect.org/), además de ofrecerles productos exclusivos de ethereum.org.
+En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes mas activos con entradas para conferencias de Ethereum, como [Devcon](https://devcon.org/en/) y [Devconnect](https://devconnect.org/), además de ofrecerles productos exclusivos de ethereum.org.
 
 Ideamos constantemente novedosas maneras de recompensar a nuestros colaboradores, ¡así que esté al tanto!
 

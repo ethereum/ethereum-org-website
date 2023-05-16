@@ -12,7 +12,7 @@ tags:
   - "Compound"
   - "Uniswap"
   - "Sablier"
-skill: 初級
+skill: beginner
 lang: ja
 published: 2020-04-27
 source: soliditydeveloper.com
