@@ -610,13 +610,10 @@ const DappsPage = ({
     },
     {
       title: "DexGuru",
-      description: translateMessageId(
-        "page-dapps-dapp-description-dexguru",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-dexguru"),
       link: "https://dex.guru",
       image: getImage(data.dexguru),
-      alt: translateMessageId("page-dapps-dexguru-logo-alt", intl),
+      alt: t("page-dapps-dexguru-logo-alt"),
     },
   ]
 
