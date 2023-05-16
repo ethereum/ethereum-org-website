@@ -44,18 +44,16 @@ import { Context } from "../types"
 const ContentContainer = (props) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
   const borderColor = useToken("colors", "primary")
-  const mediumBp = useToken("breakpoints", "md")
 
   return (
     <Box
       as="article"
       maxW="1000px"
+      minW={0}
       background="background"
       boxShadow={{ base: "none", lg: boxShadow }}
       m={{ base: "2.5rem 0rem", lg: "2rem 2rem 6rem" }}
       p={{ base: "3rem 2rem", lg: 16 }}
-      w={{ base: "100%", lg: "auto" }}
-      flex={`1 1 ${mediumBp}`}
       borderRadius="4px"
       {...props}
       sx={{
