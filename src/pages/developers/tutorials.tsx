@@ -182,19 +182,20 @@ const TutorialsPage = ({
       >
         <Translation id="page-tutorial-subtitle" />
       </Text>
+
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
         <Heading fontSize="2rem" lineHeight="1.4" mt={0} mb={4}>
           <Translation id="page-tutorial-submit-btn" />
         </Heading>
-        <p>
+        <Text>
           <Translation id="page-tutorial-listing-policy-intro" />{" "}
           <Link to="/contributing/content-resources/">
             <Translation id="page-tutorial-listing-policy" />
           </Link>
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-tutorial-submit-tutorial" />
-        </p>
+        </Text>
         <Flex
           flexDirection={{ base: "column", md: "initial" }}
           maxH={{ base: 64, md: "initial" }}
@@ -214,13 +215,12 @@ const TutorialsPage = ({
             ml={0}
             mr={{ base: 0, md: 2 }}
           >
-            <p>
-              <b>
-                <Translation id="page-tutorial-new-github" />
-              </b>
-              <br />
+            <Text as="b">
+              <Translation id="page-tutorial-new-github" />
+            </Text>
+            <Text>
               <Translation id="page-tutorial-new-github-desc" />
-            </p>
+            </Text>
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
@@ -243,17 +243,16 @@ const TutorialsPage = ({
             ml={0}
             mr={{ base: 0, md: 2 }}
           >
-            <p>
-              <b>
-                <Translation id="page-tutorial-pull-request" />
-              </b>
-              <br />
+            <Text as="b">
+              <Translation id="page-tutorial-pull-request" />
+            </Text>
+            <Text>
               <Translation id="page-tutorial-pull-request-desc-1" />{" "}
               <code>
                 <Translation id="page-tutorial-pull-request-desc-2" />
               </code>{" "}
               <Translation id="page-tutorial-pull-request-desc-3" />
-            </p>
+            </Text>
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
@@ -264,6 +263,7 @@ const TutorialsPage = ({
           </Flex>
         </Flex>
       </Modal>
+
       <Button
         variant="outline"
         color="text"
@@ -289,6 +289,7 @@ const TutorialsPage = ({
       >
         <Translation id="page-tutorial-submit-btn" />
       </Button>
+
       <Box
         boxShadow={tableBoxShadow}
         mb={8}
