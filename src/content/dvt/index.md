@@ -17,7 +17,7 @@ A DVT solution contains the following components:
 
 ![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
 
-- **[Shamir's Secret Sharing](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Validator keys use BLS signatures - that are additive - allowing multiple signatures to be combined to recreate a validator key signature. The BLS private validator key is split into multiple "key shares." Using [BLS aggregation](https://our.status.im/fastest-bls-signature-implementation/), multiple shares or signatures can be aggregated into a single signature. 
+- **[Shamir's Secret Sharing](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Validators use [BLS keys](https://en.wikipedia.org/wiki/BLS_digital_signature). Individual BLS keys ("key shares") can be combined into a single aggregated key (signature). In DVT, the private key for a validator is the combined BLS signature of each operator in the cluster.
 - **[Threshold Signature Scheme](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Determines the number of individual key shares that are required for signing duties, e.g., 3 out of 4.
 - **[Distributed Key Generation (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Cryptographic process that generates the key shares and is used to distribute the shares of an existing or new validator key to the nodes in a cluster.
 - **[Multi-Party Computation (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - The full validator key is generated in secret using multiparty computation. The full key is never known to any individual operator - they only ever know their own part of it (their "share").
@@ -45,7 +45,7 @@ If one of the components of a machine in a cluster goes down (For example, if th
 
 The ideal scenario for Ethereum is to have as many independently operated validators as possible. However, a few staking providers have become very popular and account for a substantial portion of the total staked ETH on the network. DVT can allow these operators to exist while preserving decentralization of stake. This is because the keys for each validator are distributed across many machines and it would take much greater collusion for a validator to turn malicious.
 
-Stake centralization can also lead to client centralization since it's easier for services to support only one or two client configurations. In case of a faulty node, or poor performance, this could have a massive impact on the entire network, which should be avoided.
+Without DVT, it's easier for staking providers to support only one or two client configurations for all their validators, increasing the impact of a client bug. DVT can be used to spread the risk across multiple client configurations and different hardware, creating resilience through diversity.
 
 
 Overall, DVT offers the following benefits to Ethereum:
@@ -67,7 +67,7 @@ The main benefit DVT brings to solo stakers is that it removes the technical bar
 
 ### Staking as a service (SaaS) {#saas}
 
-Staking providers and institutions managing many validators can leverage DVT to mitigate the risks associated with large-scale single validator instance setups. By distributing their infrastructure, they can introduce redundancy to their operations and diversify their infrastructure components to achieve greater performance and eliminate single points of failure in any single location or client type. 
+Operators (such as staking pools and institutional stakers) managing many validators can use DVT to reduce their risk. By distributing their infrastructure, they can add redundancy to their operations and diversify their infrastructure. 
 
 Staking providers invest heavily to work around operational costs in development, DevOps, and comprehensive insurance policies. With DVT, responsibility is distributed between nodes, resulting in much lower operational risk and expense.
 
