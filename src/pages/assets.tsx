@@ -116,19 +116,6 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         </Row>
         <Row>
           <AssetDownload
-            title={t("page-assets-hero-panda")}
-            alt={t("page-assets-hero-panda")}
-            image={data.heroPanda}
-          />
-          <AssetDownload
-            title={t("page-assets-merge-panda")}
-            alt={t("page-assets-merge-panda")}
-            image={data.mergePanda}
-            svgUrl="/static/merge-panda.svg"
-          />
-        </Row>
-        <Row>
-          <AssetDownload
             title={t("page-assets-doge")}
             alt={t("page-assets-doge")}
             image={data.doge}
@@ -433,6 +420,22 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={t("page-assets-eth-wordmark-white")}
             image={data.ethWordmarkPurpleWhite}
             svgUrl="/static/ethereum-wordmark-purple-white.svg"
+          />
+        </Row>
+        <H2 id="historical-illustrations">
+          <Translation id="page-assets-illustrations" />
+        </H2>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-hero-panda")}
+            alt={t("page-assets-hero-panda")}
+            image={data.heroPanda}
+          />
+          <AssetDownload
+            title={t("page-assets-merge-panda")}
+            alt={t("page-assets-merge-panda")}
+            image={data.mergePanda}
+            svgUrl="/static/merge-panda.svg"
           />
         </Row>
       </Box>
