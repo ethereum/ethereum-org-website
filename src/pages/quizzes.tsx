@@ -1,30 +1,54 @@
-// 1) agregar boton start
-// 2) reordenar imports
-// 3) remover componentes no usados
+// 0) colors theme dark mode design
+// 1) col derecha data
+// 2) local storage
+// 5) custom Progress y Modal components
+// 5) TODO: hide green tick if not passed
+// 5) mobile version
+// 5) dark mode colors
+// 6) reordenar imports
+// 7) remover componentes no usados
+// 8) add translation strings to copy
 
 // Libraries
-import React, { ReactNode, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
-import { type Icon as ChakraIcon } from "@chakra-ui/react"
+// import { type Icon as ChakraIcon } from "@chakra-ui/react"
 
 // Components
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import { Content, Divider, Page } from "../components/SharedStyledComponents"
-import Emoji from "../components/OldEmoji"
-import Link from "../components/Link"
-import ButtonLink from "../components/ButtonLink"
+import {
+  Content,
+  Divider,
+  Page,
+  StyledCard,
+} from "../components/SharedStyledComponents"
+// import Emoji from "../components/OldEmoji"
+// import Link from "../components/Link"
+// import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
-import Icon from "../components/Icon"
+// import Icon from "../components/Icon"
 import Modal from "../components/Modal"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import QuizzesList, { QuizzesListItem } from "../components/QuizzesList"
 
 // Utils
 import { getImage } from "../utils/image"
+import {
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  Progress,
+  Stack,
+  Text,
+} from "@chakra-ui/react"
+import Button from "../components/Button"
+import { FaGithub, FaTwitter } from "react-icons/fa"
+import ButtonLink from "../components/ButtonLink"
 
 // Styles
 const GappedPage = styled(Page)`
@@ -61,10 +85,10 @@ const Column = styled.div`
   flex: 1;
 `
 
-const ModalTitle = styled.h2`
-  margin-top: 0;
-  margin-bottom: 1rem;
-`
+// const ModalTitle = styled.h2`
+//   margin-top: 0;
+//   margin-bottom: 1rem;
+// `
 
 const ModalBody = styled.div`
   display: flex;
@@ -75,17 +99,60 @@ const ModalBody = styled.div`
   }
 `
 
+// TODO: move to custom re-usable hook
+const handleShare = (): void => {
+  // if (!quizData || !window) return
+  // trackCustomEvent({
+  //   eventCategory: "Quiz widget",
+  //   eventAction: "Other",
+  //   eventName: "Share results",
+  // })
+  const url = `https://ethereum.org${window.location.pathname}%23quiz` // %23 is # character, needs to added to already encoded tweet string
+  const tweet =
+    encodeURI(
+      `I just took the "X" quiz on ethereum.org and scored Y out of Z! Try it yourself at `
+    ) + url
+  window.open(
+    `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${"ethereumquiz"}`
+  )
+}
+
 const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
-  const [currentQuiz, setCurrentQuiz] = useState("what-is-ethereum")
+  const INITIAL_QUIZ = "what-is-ethereum"
+  // TODO: compute value and remove hardcoded number
+  const TOTAL_QUIZZES_POINTS = 37
+  const USER_SCORE_KEY = "userScoreKey"
+
+  // useEffect(() => {
+  //   const isDismissed = localStorage.getItem(storageKey) === "true"
+  //   setShow(!isDismissed)
+  // }, [])
+
+  // const onClose = () => {
+  //   localStorage.setItem(storageKey, "true")
+  //   setShow(false)
+  // }
+
+  const [currentQuiz, setCurrentQuiz] = useState(INITIAL_QUIZ)
+  const [userScore, setUserScore] = useState("0")
   const [isModalOpen, setModalOpen] = useState(false)
+
+  useEffect(() => {
+    if (localStorage.getItem(USER_SCORE_KEY)) {
+      setUserScore(localStorage.getItem(USER_SCORE_KEY)!)
+    } else {
+      localStorage.setItem(USER_SCORE_KEY, "0")
+      setUserScore("0")
+    }
+  }, [])
 
   const { t } = useTranslation()
   const heroContent = {
     // TODO: move to translations
     title: "Ethereum Quizzes",
-    header: "How well do you know Ethereum?",
+    header: "Test Your Ethereum Knowledge",
     subtitle:
-      "Test your knowledge and find out how well you understand Ethereum and cryptocurrencies in general.",
+      "Find out how well you understand Ethereum and cryptocurrencies. Are you ready to become an expert?",
     // TODO: update image alt
     image: getImage(data.doge)!,
     alt: t("page-run-a-node-hero-alt"),
@@ -96,37 +163,45 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
     {
       id: "what-is-ethereum",
       title: "What is Ethereum?",
+      level: "beginner",
     },
     {
       id: "what-is-ether",
-      title: "What is Ether?",
+      title: "What is ether?",
+      level: "beginner",
     },
     {
       id: "wallets",
       title: "What is a Wallet?",
-    },
-    {
-      id: "nfts",
-      title: "What are NFTs?",
+      level: "beginner",
     },
     {
       id: "web3",
       title: "What is Web3?",
+      level: "beginner",
+    },
+    {
+      id: "security",
+      title: "Security and scams",
+      level: "beginner",
     },
     {
       id: "merge",
       title: "What is The Merge?",
-    },
-    {
-      id: "security",
-      title: "Scam and Prevention in Crypto",
+      level: "beginner",
     },
   ]
 
   const usingEthereumQuizzes: Array<QuizzesListItem> = [
     {
+      id: "nfts",
+      title: "What are NFTs?",
+      level: "beginner",
+    },
+    {
       id: "layer-2",
       title: "Using Layer 2",
+      level: "intermediate",
     },
   ]
 
@@ -145,48 +220,201 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
         <ModalBody>
-          <QuizWidget quizKey={currentQuiz} hideHeading />
+          <QuizWidget
+            quizKey={currentQuiz}
+            setUserScore={setUserScore}
+            hideHeading
+          />
         </ModalBody>
       </Modal>
 
       <Content>
-        <SplitContent>
-          <Column>
-            <h2>
-              {/* TODO: move to translations */}
-              Ethereum Basics
-            </h2>
-            <p>
-              Test your knowledge on the basics of ethereum. Every quiz draws
-              from a larger pool of questions around specific topic so even
-              repeated take will test you on different aspects and deepen your
-              understanding.
-            </p>
+        {/* TODO: use SplitContent instead?? */}
+        <Flex alignItems="start" gap={20}>
+          <Box flex={1}>
+            <Box>
+              <h2>
+                {/* TODO: move to translations */}
+                Ethereum Basics
+              </h2>
 
-            <QuizzesList
-              content={ethereumBasicsQuizzes}
-              quizHandler={setCurrentQuiz}
-              modalHandler={setModalOpen}
-            />
+              <p>
+                This section covers the fundamental concepts of Ethereum,
+                ensuring you have a strong foundation.
+              </p>
 
-            <h2>
-              {/* TODO: move to translations */}
-              Using Ethereum
-            </h2>
-            <p>
-              Quizzes in this section are a great way to make sure you
-              understand things well enough if you want to use your crypto more
-              actively . Some questions may be more advanced and technical.
-            </p>
+              <QuizzesList
+                content={ethereumBasicsQuizzes}
+                numberOfQuizzes={ethereumBasicsQuizzes.length}
+                quizHandler={setCurrentQuiz}
+                modalHandler={setModalOpen}
+              />
+            </Box>
 
-            <QuizzesList
-              content={usingEthereumQuizzes}
-              quizHandler={setCurrentQuiz}
-              modalHandler={setModalOpen}
-            />
-          </Column>
-          <Column></Column>
-        </SplitContent>
+            <Box mb={10}>
+              <h2>
+                {/* TODO: move to translations */}
+                Using Ethereum
+              </h2>
+
+              <p>
+                Delve into the real-world applications of Ethereum and uncover
+                how this revolutionary blockchain platform is reshaping
+                industries. This is a great way to make sure you understand
+                things well enough before you start using cryptocurrencies
+                actively.
+              </p>
+
+              <QuizzesList
+                content={usingEthereumQuizzes}
+                numberOfQuizzes={usingEthereumQuizzes.length}
+                quizHandler={setCurrentQuiz}
+                modalHandler={setModalOpen}
+              />
+            </Box>
+
+            <Flex
+              justifyContent="space-between"
+              alignItems="center"
+              bg="ednBackground"
+              borderRadius="lg"
+              border="none"
+              p={6}
+            >
+              <Stack>
+                <Text fontWeight="bold" mb={-2}>
+                  {/* TODO: move to translations */}
+                  Want to see more quizzes here?
+                </Text>
+
+                <Text>
+                  {/* TODO: move to translations */}
+                  Contribute to our library.
+                </Text>
+              </Stack>
+
+              <ButtonLink
+                to={"https://github.com/ethereum/ethereum-org-website"}
+                variant="outline"
+                hideArrow
+                mt={0}
+              >
+                <Flex alignItems="center">
+                  <Icon as={FaGithub} color="text" boxSize={6} me={2} />
+                  {/* TODO: move text to translations */}
+                  Add a question/quiz
+                </Flex>
+              </ButtonLink>
+            </Flex>
+          </Box>
+
+          <Box flex={1}>
+            <Stack mt={12} gap={2}>
+              <Flex
+                direction="column"
+                gap="1rem"
+                justifyContent="space-between"
+                bg="ednBackground"
+                borderRadius="lg"
+                border="none"
+                p={6}
+              >
+                <Flex justifyContent="space-between" alignItems="center">
+                  {/* TODO: move text to translations */}
+                  <Text fontWeight="bold" fontSize="xl" margin={0}>
+                    Your total points
+                  </Text>
+
+                  <Button
+                    variant="outline-color"
+                    leftIcon={<Icon as={FaTwitter} />}
+                    onClick={handleShare}
+                  >
+                    <Translation id="share-results" />
+                  </Button>
+                </Flex>
+
+                <Heading
+                  as="h4"
+                  color="text200"
+                  m={0}
+                  fontSize="5xl"
+                  fontWeight="medium"
+                  lineHeight="140%"
+                  letterSpacing="0.04em"
+                  textTransform="uppercase"
+                >
+                  {/* TODO: update styles here, remove span?? */}
+                  <Text as="span" sx={{ color: "black !important" }}>
+                    {userScore}
+                  </Text>
+                  /{TOTAL_QUIZZES_POINTS}
+                </Heading>
+
+                <Box>
+                  progress-bar
+                  <Progress value={20} size="sm" />
+                </Box>
+
+                <Flex>
+                  {/* TODO: move text to translations */}
+                  <Text mr={10} mb={0}>
+                    Average score: <Text as="span">83%</Text>
+                  </Text>
+
+                  {/* TODO: move text to translations */}
+                  <Text mb={0}>
+                    Completed: <Text as="span">2/8</Text>
+                  </Text>
+                </Flex>
+              </Flex>
+
+              <Flex
+                direction="column"
+                gap="1rem"
+                justifyContent="space-between"
+                bg="ednBackground"
+                borderRadius="lg"
+                border="none"
+                p={6}
+              >
+                {/* TODO: move text to translations */}
+                <Text fontWeight="bold" fontSize="xl" margin={0}>
+                  Community stats
+                </Text>
+
+                <Flex>
+                  <Stack>
+                    {/* TODO: move text to translations */}
+                    <Text mr={10} mb={-2}>
+                      Average score:
+                    </Text>
+
+                    <Text>67,4%</Text>
+                  </Stack>
+
+                  <Stack>
+                    {/* TODO: move text to translations */}
+                    <Text mr={10} mb={-2}>
+                      Questions answered:
+                    </Text>
+
+                    <Text>100000+</Text>
+                  </Stack>
+
+                  <Stack>
+                    {/* TODO: move text to translations */}
+                    <Text mr={10} mb={-2}>
+                      Retry:
+                    </Text>
+
+                    <Text>15,6%</Text>
+                  </Stack>
+                </Flex>
+              </Flex>
+            </Stack>
+          </Box>
+        </Flex>
       </Content>
 
       <Content>
