@@ -221,23 +221,13 @@ const TutorialsPage = ({
               <br />
               <Translation id="page-tutorial-new-github-desc" />
             </p>
-            <Center
-              as={ButtonLink}
-              mr={2}
+            <ButtonLink
+              leftIcon={<FaGithub />}
               variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
-              <Icon
-                as={FaGithub}
-                fill="text"
-                mr={2}
-                boxSize={6}
-                name="github"
-              />{" "}
-              <span>
-                <Translation id="page-tutorial-raise-issue-btn" />
-              </span>
-            </Center>
+              <Translation id="page-tutorial-raise-issue-btn" />
+            </ButtonLink>
           </Flex>
           <Flex
             borderWidth="1px"
@@ -264,23 +254,13 @@ const TutorialsPage = ({
               </code>{" "}
               <Translation id="page-tutorial-pull-request-desc-3" />
             </p>
-            <Center
-              as={ButtonLink}
-              mr={2}
+            <ButtonLink
+              leftIcon={<FaGithub />}
               variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
-              <Icon
-                as={FaGithub}
-                fill="text"
-                mr={2}
-                boxSize={6}
-                name="github"
-              />{" "}
-              <span>
-                <Translation id="page-tutorial-pull-request-btn" />
-              </span>
-            </Center>
+              <Translation id="page-tutorial-pull-request-btn" />
+            </ButtonLink>
           </Flex>
         </Flex>
       </Modal>
