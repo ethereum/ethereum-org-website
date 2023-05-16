@@ -1,97 +1,132 @@
-import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
-import { IGatsbyImageData } from "gatsby-plugin-image"
+// remove green tick if test not passed
+// refactor components
+// remove unused imports
+// reorder imports
+
+import React from "react"
 import {
   Box,
   BoxProps,
   Flex,
-  HStack,
-  LinkBox,
-  StackProps,
-  useColorModeValue,
+  ListItem,
+  OrderedList,
+  Stack,
+  Text,
 } from "@chakra-ui/react"
-import { ButtonSecondary } from "./SharedStyledComponents"
+import Button from "./Button"
+import { GreenTickIcon } from "./icons/quiz/"
 
 export type QuizzesListItem = {
-  title?: ReactNode
-  description?: ReactNode
-  caption?: ReactNode
-  link?: string
-  id?: string
-  image?: IGatsbyImageData
-  alt?: string
-}
-
-export interface IProps extends BoxProps {
-  content: Array<QuizzesListItem>
+  title: string
+  id: string
+  numberOfQuizzes: number
+  level: string
   quizHandler: (id: string) => void
   modalHandler: (isModalOpen: boolean) => void
 }
 
-const StyledButtonSecondary = styled(ButtonSecondary)`
-  margin-top: 0;
-`
-
-const QuizzesContainer = (props: StackProps) => {
-  return (
-    <HStack
-      spacing={4}
-      p={4}
-      color="text"
-      border="1px solid"
-      borderColor="border"
-      _hover={{
-        borderRadius: "base",
-        boxShadow: "0 0 1px var(--eth-colors-primary)",
-        background: "tableBackgroundHover",
-      }}
-      {...props}
-    />
-  )
+export interface IProps extends BoxProps {
+  content: Array<QuizzesListItem>
+  numberOfQuizzes: number
+  quizHandler: (id: string) => void
+  modalHandler: (isModalOpen: boolean) => void
 }
 
-const Quiz = (props: QuizzesListItem & Omit<StackProps, "title" | "id">) => {
-  const { title, description, caption, link, image, alt, ...rest } = props
+const QuizItem = (props: QuizzesListItem) => {
+  const { title, id, numberOfQuizzes, level, quizHandler, modalHandler } = props
 
   return (
-    <QuizzesContainer {...rest} cursor="pointer">
-      <Flex justifyContent="space-between">
-        <Box>{title}</Box>
+    <Flex
+      justifyContent="space-between"
+      alignItems="center"
+      p={4}
+      color="text"
+      borderBottom="1px solid"
+      borderColor="gray.300"
+      _first={{ borderTopRadius: "sm" }}
+      _last={{ borderBottomRadius: "sm" }}
+    >
+      <Stack ml={4}>
+        <Flex gap={2} alignItems="center">
+          <ListItem fontWeight="bold" mb={0}>
+            <Text fontWeight="bold">{title}</Text>
+          </ListItem>
 
-        <Box>end</Box>
-      </Flex>
-    </QuizzesContainer>
+          {/* TODO: hide green tick if not passed */}
+          <GreenTickIcon />
+        </Flex>
+
+        <Flex gap={3}>
+          <Text
+            fontWeight="light"
+            fontSize="xs"
+            bg="ednBackground"
+            borderRadius="full"
+            border="none"
+            px={2}
+            py={1}
+            ml={-6}
+            mb={0}
+          >
+            {/* TODO: add to translations */}
+            {numberOfQuizzes} QUESTIONS
+          </Text>
+
+          <Text
+            fontWeight="light"
+            fontSize="xs"
+            bg="ednBackground"
+            borderRadius="full"
+            border="none"
+            px={2}
+            py={1}
+            mb={0}
+          >
+            {/* TODO: add to translations */}
+            {level.toUpperCase()}
+          </Text>
+        </Flex>
+      </Stack>
+
+      <Box>
+        <Button
+          variant="outline-color"
+          onClick={() => {
+            quizHandler(id)
+            modalHandler(true)
+          }}
+        >
+          {/* TODO: move to translations */}
+          Start
+        </Button>
+      </Box>
+    </Flex>
   )
 }
 
 const QuizzesList: React.FC<IProps> = ({
   content,
+  numberOfQuizzes,
   quizHandler,
   modalHandler,
-  ...rest
 }) => (
-  <Box bg="background" w="full" {...rest}>
-    {content.map((listItem, idx) => {
-      const { link, id } = listItem
-      const isLink = !!link
+  <OrderedList m={0}>
+    {content.map((listItem) => {
+      const { id, title, level } = listItem
 
-      return isLink ? (
-        <LinkBox key={id || idx}>
-          <Quiz {...listItem} />
-        </LinkBox>
-      ) : (
-        <Quiz
-          key={idx}
-          onClick={() => {
-            quizHandler(listItem.id!)
-            modalHandler(true)
-          }}
-          mb={4}
-          {...listItem}
+      return (
+        <QuizItem
+          key={id}
+          id={id}
+          title={title}
+          numberOfQuizzes={numberOfQuizzes}
+          level={level}
+          quizHandler={quizHandler}
+          modalHandler={modalHandler}
         />
       )
     })}
-  </Box>
+  </OrderedList>
 )
 
 export default QuizzesList

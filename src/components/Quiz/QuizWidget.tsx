@@ -49,6 +49,8 @@ const PROGRESS_BAR_GAP = "4px"
 export interface IProps {
   quizKey?: string
   maxQuestions?: number
+  // TODO: update setUserScore interface
+  setUserScore: () => {}
   hideHeading?: boolean
 }
 
@@ -56,6 +58,7 @@ export interface IProps {
 const QuizWidget: React.FC<IProps> = ({
   quizKey,
   maxQuestions,
+  setUserScore,
   hideHeading = false,
 }) => {
   const { t } = useTranslation()
@@ -67,6 +70,9 @@ const QuizWidget: React.FC<IProps> = ({
   const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
+
+  // TODO: move somewhere else
+  const USER_SCORE_KEY = "userScoreKey"
 
   const initialize = (): void => {
     // Reset state
@@ -142,10 +148,16 @@ const QuizWidget: React.FC<IProps> = ({
     ]
   )
 
-  const correctCount = useMemo<number>(
-    () => userQuizProgress.filter(({ isCorrect }) => isCorrect).length,
-    [userQuizProgress]
-  )
+  const correctCount = useMemo<number>(() => {
+    const numberOfCorrectAnswers = userQuizProgress.filter(
+      ({ isCorrect }) => isCorrect
+    ).length
+    // TODO: remove clog
+    console.log(numberOfCorrectAnswers)
+    localStorage.setItem(USER_SCORE_KEY, numberOfCorrectAnswers.toString())
+
+    return numberOfCorrectAnswers
+  }, [userQuizProgress])
 
   const ratioCorrect = useMemo<number>(
     () => (!quizData ? 0 : correctCount / quizData.questions.length),
@@ -202,9 +214,24 @@ const QuizWidget: React.FC<IProps> = ({
 
   const handleContinue = (): void => {
     if (!currentQuestionAnswerChoice) return
+
     setUserQuizProgress((prev) => [...prev, currentQuestionAnswerChoice])
     setCurrentQuestionAnswerChoice(null)
     setShowAnswer(false)
+
+    // TODO: duplicated const, refactor
+    const numberOfCorrectAnswers = userQuizProgress.filter(
+      ({ isCorrect }) => isCorrect
+    ).length
+
+    const computeUserScore =
+      parseInt(localStorage.getItem(USER_SCORE_KEY)!) + numberOfCorrectAnswers
+
+    console.log({ computeUserScore })
+
+    localStorage.setItem(USER_SCORE_KEY, computeUserScore.toString())
+    setUserScore(computeUserScore.toString())
+
     if (showResults) {
       trackCustomEvent({
         eventCategory: "Quiz widget",
