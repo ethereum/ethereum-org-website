@@ -17,7 +17,7 @@ const Button: React.FC<IProps> = ({ toId, children, ...props }) => {
   }
 
   return (
-    <ChakraButton {...props} onClick={handleOnClick}>
+    <ChakraButton {...props} my={8} onClick={handleOnClick}>
       {children}
     </ChakraButton>
   )
