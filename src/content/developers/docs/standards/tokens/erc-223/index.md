@@ -14,7 +14,7 @@ The ERC-223 is another standard for fungible tokens, like the ERC-20. The key di
 
 ERC-223 addresses some limitations of ERC-20 and introduces a new method of interactions between token contract and a contract that may receive the tokens. There are few things that are possible with ERC-223 but not with ERC-20:
 
-- Token transfer handling on the recipient's side. Recipient can detect that a ERC-223 token is being deposited.
+- Token transfer handling on the recipient's side. Recipient can detect that an ERC-223 token is being deposited.
 - Rejection of improperly sent tokens. If a user sent ERC-223 tokens to a contract that is not supposed to receive tokens then the contract can reject the transaction and the tokens will not be lost.
 - The transfer of ERC-223 tokens may contain metadata, which allows arbitrary information to be attached to the token transactions.
 
