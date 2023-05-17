@@ -89,5 +89,6 @@
   "page-find-wallet-browser": "Browser",
   "page-find-wallet-browser-desc": "Wallets with browser extensions",
   "page-find-wallet-device": "Device",
-  "page-find-choose-to-compare": "Choose to compare"
+  "page-find-choose-to-compare": "Choose to compare",
+  "page-find-wallet-choose-features": "Choose features"
 }
