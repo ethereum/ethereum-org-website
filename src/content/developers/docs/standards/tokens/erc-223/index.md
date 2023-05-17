@@ -8,7 +8,7 @@ lang: en
 
 **What is ERC-223?**
 
-The ERC-223 is another standard for Fungible Tokens, like the ERC-20. The key difference is that ERC-223 defines not only the token API, but also the logic of how tokens should be transferred from sender to recipient and introduces a communication model that allows token transfers to be handled on the recipients side.
+The ERC-223 is another standard for fungible tokens, like the ERC-20. The key difference is that ERC-223 defines not only the token API, but also the logic of how tokens should be transferred from sender to recipient and introduces a communication model that allows token transfers to be handled on the recipients side.
 
 **How is it different from ERC-20 and why we need another token standard?**
 
