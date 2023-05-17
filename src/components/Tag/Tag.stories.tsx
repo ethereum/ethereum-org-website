@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import { Box, HStack, Link, VStack } from "@chakra-ui/react"
+import { Args, Meta, StoryObj } from "@storybook/react"
+import { Box, HStack, Link, TagProps, VStack } from "@chakra-ui/react"
 import { TbSquareRoundedNumber8Filled } from "react-icons/tb"
-import Tag from "."
+import Tag, { EthTagProps } from "."
 import { MdInfoOutline, MdLanguage } from "react-icons/md"
 
 type TagType = typeof Tag
@@ -22,33 +22,44 @@ const statusArray = ["normal", "tag", "success", "error", "warning"] as const
 // "subtle" is default variant
 const variantArray = ["subtle", "solid", "outline"]
 
-export const StyleVariantsAndStatuses: Story = {
-  args: {
-    label: "Tag Name",
-  },
-  render: (args) => (
-    <>
-      <Box textAlign="center" mb={8}>
+const StyleVariantList = (args: EthTagProps) => (
+  <HStack>
+    {statusArray.map((status) => (
+      <VStack key={status}>
+        {variantArray.map((variant) => (
+          <Tag
+            key={variant}
+            href="#"
+            status={status}
+            variant={variant}
+            {...args}
+          />
+        ))}
+      </VStack>
+    ))}
+  </HStack>
+)
+
+export const StyleVariantsBasic: Story = {
+  render: () => (
+    <VStack spacing={8}>
+      <Box textAlign="center">
+        Click anywhere in the whitespace and then tab to see the button styling
+        on `:focus-visible`
+      </Box>
+      <StyleVariantList label="Tag Name" isCloseable />
+    </VStack>
+  ),
+}
+
+export const StyleVariantsAsLinks: Story = {
+  render: () => (
+    <VStack spacing={8}>
+      <Box textAlign="center">
         They are all rendered as links to hover, click, and focus
       </Box>
-      <HStack>
-        {statusArray.map((status) => (
-          <VStack key={status}>
-            {variantArray.map((variant) => (
-              <Tag
-                key={variant}
-                as={Link}
-                href="#"
-                status={status}
-                variant={variant}
-                isCloseable
-                {...args}
-              />
-            ))}
-          </VStack>
-        ))}
-      </HStack>
-    </>
+      <StyleVariantList as={Link} label="Tag Name" />
+    </VStack>
   ),
 }
 

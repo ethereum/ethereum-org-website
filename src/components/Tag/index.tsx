@@ -9,7 +9,7 @@ import {
   TagRightIcon,
 } from "@chakra-ui/react"
 
-interface EthTagProps extends TagProps {
+export interface EthTagProps extends TagProps {
   label: string
   isCloseable?: boolean
   leftIcon?: any
