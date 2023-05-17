@@ -124,7 +124,7 @@ contract VeryBasicERC223Token {
 }
 ```
 
-Now we want another contract to accept deposits of `tokenA` assuming that tokenA is a ERC-223 token. The contract must accept only tokenA and reject any other tokens. When the contract receives tokenA it must emit a `Deposit()` event and increase the value of the internal `deposits` variable.
+Now we want another contract to accept deposits of `tokenA` assuming that tokenA is an ERC-223 token. The contract must accept only tokenA and reject any other tokens. When the contract receives tokenA it must emit a `Deposit()` event and increase the value of the internal `deposits` variable.
 
 Here is the code:
 
