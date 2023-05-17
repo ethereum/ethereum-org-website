@@ -1,15 +1,4 @@
 import React from "react"
-// SVG imports
-import {
-  CautionProductGlyphIcon,
-  GreenCheckProductGlyphIcon,
-  WarningProductGlyphIcon,
-} from "../../icons/staking"
-// Component imports
-import ButtonDropdown from "../../ButtonDropdown"
-import Translation from "../../Translation"
-import { trackCustomEvent } from "../../../utils/matomo"
-import { useStakingConsiderations } from "./use-staking-considerations"
 import {
   Box,
   chakra,
@@ -20,6 +9,19 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react"
+
+// SVG imports
+import {
+  CautionProductGlyphIcon,
+  GreenCheckProductGlyphIcon,
+  WarningProductGlyphIcon,
+} from "../../icons/staking"
+
+// Component imports
+import ButtonDropdown from "../../ButtonDropdown"
+import Translation from "../../Translation"
+import { trackCustomEvent } from "../../../utils/matomo"
+import { useStakingConsiderations } from "./use-staking-considerations"
 
 const ChakraButtonDropdown = chakra(ButtonDropdown, {
   baseStyle: {
