@@ -11,6 +11,7 @@ module.exports = {
     // https://storybook.js.org/addons/@storybook/addon-a11y/
     "@storybook/addon-a11y",
     "@chakra-ui/storybook-addon",
+    "storybook-react-i18next",
   ],
   babel: async (options) => ({
     ...babelConfig,
