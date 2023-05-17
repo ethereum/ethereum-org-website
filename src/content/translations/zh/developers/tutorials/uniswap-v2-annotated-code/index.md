@@ -1798,15 +1798,14 @@ library UniswapV2Library {
         amountB = amountA.mul(reserveB) / reserveA;
     }
 ```
-
-如果不涉及交易费用的话，此函数将返回给您代币 A 兑换得到的代币 B。 此计算考虑到转账可能会改变汇率。
+在添加流动性时，可以使用此函数返回在保持价格不变的前提下，添加给定数量代币A所需对应添加代币B的数量。
 
 ```solidity
     // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-如果使用配对交易没有手续费，上述 `quote` 函数非常有效。 然而，如果有 0.3% 的手续费，您实际得到的金额就会低于此值。 此函数可以计算缴纳交易费用后的金额。
+在进行交易时，可以使用此函数返回在保持流动性不变的前提下，给定数量输入代币所能兑换到的输出代币的数量。并且考虑了0.3%的手续费。
 
 ```solidity
 
