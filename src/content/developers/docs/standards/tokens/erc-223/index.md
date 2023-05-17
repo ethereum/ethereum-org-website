@@ -33,7 +33,7 @@ implements an API for tokens within smart contracts and declares API for a contr
 If a smart contract implements the following methods and events it can be called an ERC-223 compatible token contract. Once deployed, it
 will be responsible to keep track of the created tokens on Ethereum.
 
-The contract is not obligated to have only this functions and a developer can add any other feature from different token standards to this contract. For example, `approve` and `transferFrom` functions are not part of ERC-223 standard but these functions could be implemented should it be necessary.
+The contract is not obligated to have only these functions and a developer can add any other feature from different token standards to this contract. For example, `approve` and `transferFrom` functions are not part of ERC-223 standard but these functions could be implemented should it be necessary.
 
 From [EIP-223](https://eips.ethereum.org/EIPS/eip-223):
 
