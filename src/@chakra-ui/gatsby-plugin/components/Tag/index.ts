@@ -42,6 +42,12 @@ const baseStyleCloseButton = defineStyle({
   ...tagTheme.baseStyle?.closeButton,
   opacity: 1,
   m: 0,
+  // Clear default
+  _focusVisible: null,
+  "&:focus-visible, &:hover": {
+    outline: "3px solid",
+    outlineOffset: "-2px",
+  },
 })
 
 const baseStyle = definePartsStyle({
@@ -50,19 +56,24 @@ const baseStyle = definePartsStyle({
   closeButton: baseStyleCloseButton,
 })
 
+const getStatusStyles = (status: string, variant: string) => {
+  const statusStyles = STATUS_COLORS[status][variant]
+
+  return {
+    container: statusStyles,
+  }
+}
+
 const variantSubtle = definePartsStyle((props) => {
   const { status = "normal" } = props
   const defaultStyles = tagTheme.variants?.subtle(props)
-  const statusStyles = STATUS_COLORS[status].subtle
+  const statusStyles = getStatusStyles(status, "subtle")
   return {
     container: {
       ...defaultStyles?.container,
       // Remove default dark mode styles
       _dark: {},
-      ...statusStyles,
-    },
-    label: {
-      // ...warningLabelStyles
+      ...statusStyles.container,
     },
   }
 })
@@ -70,13 +81,13 @@ const variantSubtle = definePartsStyle((props) => {
 const variantSolid = definePartsStyle((props) => {
   const { status = "normal" } = props
   const defaultStyles = tagTheme.variants?.solid(props)
-  const statusStyles = STATUS_COLORS[status].solid
+  const statusStyles = getStatusStyles(status, "solid")
   return {
     container: {
       ...defaultStyles?.container,
       // Remove default dark mode styles
       _dark: {},
-      ...statusStyles,
+      ...statusStyles.container,
     },
   }
 })
@@ -84,7 +95,7 @@ const variantSolid = definePartsStyle((props) => {
 const variantOutline = definePartsStyle((props) => {
   const { status = "normal" } = props
   const defaultStyles = tagTheme.variants?.outline(props)
-  const statusStyles = STATUS_COLORS[status].outline
+  const statusStyles = getStatusStyles(status, "outline")
   return {
     container: {
       ...defaultStyles?.container,
@@ -92,7 +103,7 @@ const variantOutline = definePartsStyle((props) => {
       borderColor: $badgeColor.reference,
       // Remove default dark mode styles
       _dark: {},
-      ...statusStyles,
+      ...statusStyles.container,
     },
   }
 })
