@@ -84,7 +84,7 @@ Aqui estão alguns dos aplicativos corporativos que foram construídos em cima d
 
 ### Pagamentos {#payments}
 
-- [Brave Browser](https://basicattentiontoken. org/) _paga aos usuários para visualizar anúncios e os usuários podem pagar aos editores para apoiá-los por meio do Basic Attention Token._
+- [Brave Browser](https://basicattentiontoken.org/) _paga aos usuários para visualizar anúncios e os usuários podem pagar aos editores para apoiá-los por meio do Basic Attention Token._
 - [hCaptcha](https://www.hcaptcha.com/) _Sistema CAPTCHA de prevenção de bots que paga aos operadores do site o trabalho realizado pelos usuários para rotular dados para aprendizagem de máquina. Agora implantado pela Cloudflare_
 - [EthereumAds](https://ethereumads.com/) _permite que os operadores do site vendam espaço de publicidade e sejam pagos via Ethereum_
 

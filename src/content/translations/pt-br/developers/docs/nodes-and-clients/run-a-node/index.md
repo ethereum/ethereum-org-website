@@ -27,7 +27,7 @@ Decida se deseja executar o software em seu próprio [hardware ou na nuvem](#loc
 
 Após preparar o ambiente, instale os clientes escolhidos com [interface simples para iniciantes](#automatized-setup) ou [manualmente](#manual-setup) usando um terminal com opções avançadas.
 
-Quando o nó estiver em execução e sincronização, você estará pronto para [usá-lo](#using-the-node), mas fique de olho em sua [manutenção](#operating-the -node).
+Quando o nó estiver em execução e sincronização, você estará pronto para [usá-lo](#using-the-node), mas fique de olho em sua [manutenção](#operating-the-node).
 
 ![Configuração do cliente](./diagram.png)
 
@@ -55,6 +55,8 @@ Ambas as opções têm vantagens e desvantagens, as quais foram resumidas acima.
 - [Alchemy](https://www.alchemy.com/)
 - [Blast](https://blastapi.io/)
 - [GetBlock](https://getblock.io/)
+- [NodeReal](https://nodereal.io/)
+- [NOWNodes](https://nownodes.io/)
 
 Confira também [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/) para obter mais opções de nós hospedados.
 
@@ -86,14 +88,14 @@ Todos os clientes suportam os principais sistemas operacionais: Linux, MacOS e W
 
 - CPU com mais de 2 núcleos
 - 8 GB RAM
-- 700 GB de espaço livre em disco
+- SSD de 2 TB
 - - de 10 MBit/s de largura de banda
 
 ##### Especificações recomendadas
 
 - CPU rápida com mais de 4 núcleos
 - - de 16 GB de RAM
-- SSD rápido com + de 1 TB
+- SSD rápido com + de 2 TB
 - - de 25 MBit/s de largura de banda
 
 O modo de sincronização e o cliente que você escolher afetará os requisitos de espaço, mas estimamos o espaço em disco necessário para cada cliente abaixo.
@@ -159,7 +161,7 @@ Aqui estão as páginas de lançamento dos clientes, nas quais você pode encont
 ##### Clientes de execução
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github. com/ledgerwatch/erigon#usage) (não fornece um binário pré-construído, precisa ser compilado)
+- [Erigon](https://github.com/ledgerwatch/erigon#usage) (não fornece um binário pré-construído, precisa ser compilado)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 
@@ -460,11 +462,10 @@ Como parte de seu monitoramento, certifique-se de ficar de olho no desempenho de
 - [Guias de participação do Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, atualizado com frequência_
 - [Guia | Como configurar um validador para participação do Ethereum na rede principal](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, atualizado regularmente_
 - [Guias do ETHStaker sobre como executar validadores em redes de teste](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, atualizado regularmente_
-- [Guias de Participação do Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) _– Somer Esat, atualizado regularmente_
-- [FAQ sobre A Fusão para operadores de nós](https://notes.ethereum.org/@launchpad/node-faq-merge) - _julho de 2022_
+- [Perguntas frequentes sobre o The Merge para operadores de nós](https://notes.ethereum.org/@launchpad/node-faq-merge) — _julho de 2022_
 - [Analisando os requisitos de hardware para ser um nó totalmente validado no Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _ – Albert Palau, 24 de setembro de 2018_
-- [Executando nós completos Ethereum: Um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _ – Justin Leroux, 7 de novembro de 2019_
-- [Executando um nó do Hyperledger Besu na Rede principal do Ethereum: benefícios, requisitos e configurações](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 de maio de 2020_
+- [Executando nós completos do Ethereum: um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de novembro de 2019_
+- [Executando um nó do Hyperledger Besu na Mainnet do Ethereum: benefícios, requisitos e configurações](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 de maio de 2020_
 - [Implantando o cliente Nethermind do Ethereum com uma pilha de monitoramento](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 de julho de 2020_
 
 ## Tópicos relacionados {#related-topics}

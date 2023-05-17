@@ -176,7 +176,7 @@ Assista Austin mostrar as transações, gás e mineração.
 
 ## Envelope de transação digitado {#typed-transaction-envelope}
 
-O Ethereum originalmente tinha um formato para transações. Cada transação possuía um emissor, custo de "queima", parâmetro de "queima", endereçamentos, valores, dados, v, r, e s. Estas categorias são encriptadas em RLP para se parecer com algo assim:
+O Ethereum originalmente tinha um formato para transações. Cada transação possuía um emissor, custo de "queima", parâmetro de "queima", endereçamentos, valores, dados, v, r, e s. Esses campos são [codificados por RLP](/developers/docs/data-structures-and-encoding/rlp/), podendo se parecer com isto:
 
 `RLP ([emissor, taxa de "queima", parâmetros de "queima", destino, valor, dados, v, r, s])`
 

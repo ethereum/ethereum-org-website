@@ -143,7 +143,7 @@ lang: zh
 - [Discord](https://discord.com/invite/KYswaxwEtg)
 - [论坛](https://forum.moralis.io/)
 
-\*_GetBlock-用于 Web3 开发的区块链即服务_
+\*_GetBlock - 用于 Web3 开发的区块链即服务_
 
 - [GetBlock.io](https://getblock.io/)
 - [相关文档](https://getblock.io/docs/)

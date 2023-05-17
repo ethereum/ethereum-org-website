@@ -62,7 +62,7 @@ The base reward is calculated according to the number of attesting validators an
 
 #### Inclusion delay {#inclusion-delay}
 
-At the time when the validators voted on the head of the chain (`block n`), `block n+1` was not proposed yet. Therefore attestations naturally get included **one block later** so all attestations who voted on `block n` being the chain head got included in `block n+1` and, the **inclusion delay** is 1. If the inclusion delay doubles to two slots, the attestation reward halves, because to calculate the attestation reward the the base reward is multiplied by the reciprocal of the inclusion delay.
+At the time when the validators voted on the head of the chain (`block n`), `block n+1` was not proposed yet. Therefore attestations naturally get included **one block later** so all attestations who voted on `block n` being the chain head got included in `block n+1` and, the **inclusion delay** is 1. If the inclusion delay doubles to two slots, the attestation reward halves, because to calculate the attestation reward the base reward is multiplied by the reciprocal of the inclusion delay.
 
 ### Attestation scenarios {#attestation-scenarios}
 

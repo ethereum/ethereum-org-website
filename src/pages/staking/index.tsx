@@ -1,11 +1,9 @@
 import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Flex, Grid, Heading, useToken } from "@chakra-ui/react"
+import { Box, Flex, Grid, Heading, Show, useToken } from "@chakra-ui/react"
 
-import ButtonDropdown, {
-  List as ButtonDropdownList,
-} from "../../components/ButtonDropdown"
+import { List as ButtonDropdownList } from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
@@ -20,12 +18,19 @@ import StakingCommunityCallout from "../../components/Staking/StakingCommunityCa
 import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
 
 import { getImage } from "../../utils/image"
-
+import type { TranslationKey } from "../../utils/translations"
 import type { ChildOnlyProp, Context } from "../../types"
 
-const Content = (props: ChildOnlyProp) => (
-  <Box p="1rem 2rem" w="full" {...props} />
-)
+// TODO: move these components to a new folder under /components
+import {
+  ContentContainer,
+  InfoColumn,
+  InfoTitle,
+  MobileButton,
+  MobileButtonDropdown,
+  Page,
+  StyledButtonDropdown,
+} from "../../templates/use-cases"
 
 const PageContainer = (props: ChildOnlyProp) => (
   <Flex flexDir="column" alignItems="center" w="full" m="0 auto" {...props} />
@@ -46,105 +51,6 @@ const HeroStatsWrapper = (props: ChildOnlyProp) => (
   />
 )
 
-const Page = (props: ChildOnlyProp) => (
-  <Flex
-    w="full"
-    justifyContent="space-between"
-    m="0 auto 4rem"
-    pt={16}
-    flexDirection={{ base: "column", lg: "row" }}
-    {...props}
-  />
-)
-
-const InfoTitle = (props: ChildOnlyProp) => (
-  <Heading
-    fontSize="5xl"
-    fontWeight="700"
-    lineHeight={1.4}
-    textAlign="right"
-    mt={0}
-    display={{ base: "none", lg: "block" }}
-    {...props}
-  />
-)
-
-// InfoColumn shows above xl
-const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    flexDir="column"
-    position="sticky"
-    top="6.25rem"
-    height="calc(100vh - 80px)"
-    flex="0 1 330px"
-    mx={8}
-    display={{ base: "none", lg: "initial" }}
-    {...props}
-  />
-)
-
-const StyledButtonDropdown = ({
-  list,
-  ...rest
-}: {
-  list: ButtonDropdownList
-}) => (
-  <Flex
-    justifyContent="flex-end"
-    textAlign="center"
-    alignSelf={{ base: "auto", lg: "flex-end" }}
-    mb={8}
-    {...rest}
-  >
-    <ButtonDropdown list={list} />
-  </Flex>
-)
-
-// ButtonDropdown for mobile only
-const MobileButton = ({ list, ...rest }: { list: ButtonDropdownList }) => {
-  const borderBoxShadowColor = useToken("colors", "border")
-
-  return (
-    <Box
-      position="sticky"
-      bottom="0"
-      w="full"
-      bg="background"
-      boxShadow={`0 -1px 0px ${borderBoxShadowColor}`}
-      zIndex="99"
-      p={8}
-      mb={0}
-      display={{ base: "block", lg: "none" }}
-      {...rest}
-    >
-      <ButtonDropdown list={list} />
-    </Box>
-  )
-}
-
-const ContentContainer = (props: { children: ReactNode; id: string }) => {
-  const [mdBp, lgBp] = useToken("breakpoints", ["md", "lg"])
-
-  return (
-    <Flex
-      flex={`1 1 ${lgBp}`}
-      flexBasis={mdBp}
-      position="relative"
-      padding={{ base: 0, md: "0 2rem 2rem" }}
-      gap={8}
-      direction="column"
-      alignItems="center"
-      sx={{
-        "h2:first-of-type, & > div:first-of-type": {
-          mt: 0,
-          pt: 0,
-        },
-      }}
-      {...props}
-    ></Flex>
-  )
-}
-
 const ComparisonGrid = (props: ChildOnlyProp) => {
   const gridAreas = {
     base: `"solo-title"
@@ -162,7 +68,7 @@ const ComparisonGrid = (props: ChildOnlyProp) => {
         "pool-risks"
         "pool-reqs"
         "pool-cta";`,
-    lg: `"solo-title saas-title pool-title"
+    xl: `"solo-title saas-title pool-title"
         "solo-rewards saas-rewards pool-rewards"
         "solo-risks saas-risks pool-risks"
         "solo-reqs saas-reqs pool-reqs"
@@ -172,7 +78,7 @@ const ComparisonGrid = (props: ChildOnlyProp) => {
     <Grid
       columnGap={12}
       gridAutoRows="minmax(64px, auto)"
-      gridTemplateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
+      gridTemplateColumns={{ base: "1fr", xl: "repeat(3, 1fr)" }}
       gridTemplateAreas={gridAreas}
       sx={{
         h4: {
@@ -242,6 +148,8 @@ const StakingPage = ({
   data,
 }: PageProps<Queries.StakingPageIndexQuery, Context>) => {
   const { t } = useTranslation()
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
 
   const heroContent = {
     title: t("page-staking-hero-title"),
@@ -368,15 +276,18 @@ const StakingPage = ({
         <StakingStatsBox />
       </HeroStatsWrapper>
       <Page>
-        <InfoColumn>
-          <StyledButtonDropdown list={dropdownLinks} />
-          <InfoTitle>
-            <Translation id="page-staking-dom-info-title" />
-          </InfoTitle>
-          <UpgradeTableOfContents items={tocArray} />
-        </InfoColumn>
+        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <Show above={lgBp}>
+          <InfoColumn>
+            <StyledButtonDropdown list={dropdownLinks} />
+            <InfoTitle>
+              <Translation id="page-staking-dom-info-title" />
+            </InfoTitle>
+            <UpgradeTableOfContents items={tocArray} />
+          </InfoColumn>
+        </Show>
         <ContentContainer id="content">
-          <Content>
+          <Box>
             <h2 id={tocItems.whatIsStaking.id}>
               {tocItems.whatIsStaking.title}
             </h2>
@@ -388,8 +299,8 @@ const StakingPage = ({
                 <Translation id="page-staking-section-what-link" />
               </Link>
             </p>
-          </Content>
-          <Content>
+          </Box>
+          <Box>
             <h2 id={tocItems.whyStakeYourEth.id}>
               {tocItems.whyStakeYourEth.title}
             </h2>
@@ -407,8 +318,8 @@ const StakingPage = ({
                 )
               )}
             </CardGrid>
-          </Content>
-          <Content>
+          </Box>
+          <Box>
             <h2 id={tocItems.howToStakeYourEth.id}>
               {tocItems.howToStakeYourEth.title}
             </h2>
@@ -418,15 +329,15 @@ const StakingPage = ({
             <p>
               <Translation id="page-staking-section-why-p2" />
             </p>
-          </Content>
+          </Box>
           <StakingHierarchy />
-          <Content>
+          <Box>
             <p style={{ marginTop: "1rem" }}>
               <Translation id="page-staking-hierarchy-subtext" />
             </p>
-          </Content>
+          </Box>
           <Divider />
-          <Content>
+          <Box>
             <h2 id={tocItems.comparisonOfOptions.id}>
               {tocItems.comparisonOfOptions.title}
             </h2>
@@ -619,10 +530,10 @@ const StakingPage = ({
                 />
               </div>
             </ComparisonGrid>
-          </Content>
+          </Box>
           <Divider />
           <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
-          <Content>
+          <Box>
             <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
             <ExpandableCard title={t("page-staking-faq-4-question")}>
               <p>
@@ -663,8 +574,8 @@ const StakingPage = ({
                 <Translation id="page-staking-faq-3-answer-p2" />
               </p>
             </ExpandableCard>
-          </Content>
-          <Content>
+          </Box>
+          <Box>
             <h2 id={tocItems.further.id}>{tocItems.further.title}</h2>
             <ul>
               <li>
@@ -738,12 +649,17 @@ const StakingPage = ({
                 </Link>
               </li>
             </ul>
-          </Content>
-          <Content>
+          </Box>
+          <Box>
             <FeedbackCard />
-          </Content>
+          </Box>
         </ContentContainer>
-        <MobileButton list={dropdownLinks} />
+        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <Show below={lgBp}>
+          <MobileButton>
+            <MobileButtonDropdown list={dropdownLinks} />
+          </MobileButton>
+        </Show>
       </Page>
     </PageContainer>
   )

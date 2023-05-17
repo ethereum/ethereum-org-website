@@ -112,6 +112,7 @@ Smart contract wallets are already available, but more upgrades are required to 
 
 ## Further reading {#further-reading}
 
+- [erc4337.io](https://www.erc4337.io/)
 - [Account abstraction panel discussion from Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)
 - ["Why account abstraction is a game changer for dapps" from Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Account abstraction ELI5" from Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)

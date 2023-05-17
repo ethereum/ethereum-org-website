@@ -17,12 +17,12 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [Cadeia de blocos explicada](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Entender os Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Escreva seu primeiro Smart Contract ](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [Escreva seu primeiro Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Aprenda como Compilar e Implementar Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## Trabalhando com clientes Ethereum {#working-with-ethereum-clients}
 
-Aprenda como usar [Web3J](https://github.com/web3j/web3j)e Besu Hiperregistro, dois principais clientes Java Ethereum
+Aprenda como usar [Web3J](https://github.com/web3j/web3j) e Besu Hiperregistro, dois principais clientes Java Ethereum
 
 - [Conectando a um cliente Ethereum com Java, Eclipse e Web3J](https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j)
 - [Gerenciando uma conta Ethereum com Java e Web3j](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)

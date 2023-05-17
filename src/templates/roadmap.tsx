@@ -404,51 +404,49 @@ const RoadmapPage = ({
   return (
     <Container>
       <HeroContainer>
-        <Stack>
-          <Flex flexDirection={{ base: "column", md: "row" }}>
-            <TitleCard>
-              <Breadcrumbs slug={location.pathname} />
-              <Title>{mdx.frontmatter.title}</Title>
-              <Text>{mdx.frontmatter.description}</Text>
-              {mdx?.frontmatter?.buttons && (
-                <Wrap spacing={2} marginBottom={4}>
-                  {mdx.frontmatter.buttons.map((button, idx) => {
-                    if (button?.to) {
-                      return (
-                        <WrapItem>
-                          <ButtonLink
-                            key={idx}
-                            variant={button?.variant}
-                            to={button?.to}
-                          >
-                            {button.label}
-                          </ButtonLink>
-                        </WrapItem>
-                      )
-                    }
+        <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
+          <TitleCard>
+            <Breadcrumbs slug={location.pathname} />
+            <Title>{mdx.frontmatter.title}</Title>
+            <Text>{mdx.frontmatter.description}</Text>
+            {mdx?.frontmatter?.buttons && (
+              <Wrap spacing={2} marginBottom={4}>
+                {mdx.frontmatter.buttons.map((button, idx) => {
+                  if (button?.to) {
                     return (
                       <WrapItem>
-                        <Button
+                        <ButtonLink
                           key={idx}
                           variant={button?.variant}
-                          toId={button?.toId}
+                          to={button?.to}
                         >
-                          {button?.label}
-                        </Button>
+                          {button.label}
+                        </ButtonLink>
                       </WrapItem>
                     )
-                  })}
-                </Wrap>
-              )}
-              <MobileTableOfContents items={tocItems} isMobile />
-            </TitleCard>
-            <Image
-              image={getImage(mdx.frontmatter.image)!}
-              alt={mdx.frontmatter.alt || ""}
-              objectFit="contain"
-            />
-          </Flex>
-        </Stack>
+                  }
+                  return (
+                    <WrapItem>
+                      <Button
+                        key={idx}
+                        variant={button?.variant}
+                        toId={button?.toId}
+                      >
+                        {button?.label}
+                      </Button>
+                    </WrapItem>
+                  )
+                })}
+              </Wrap>
+            )}
+            <MobileTableOfContents items={tocItems} isMobile />
+          </TitleCard>
+          <Image
+            image={getImage(mdx.frontmatter.image)!}
+            alt={mdx.frontmatter.alt || ""}
+            objectFit="contain"
+          />
+        </Flex>
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
