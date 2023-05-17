@@ -47,6 +47,8 @@ This is a curated list of user research done in web3 that may help with design a
 - [Defi design tips](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
 - [Deep Work Studio](https://deepwork.studio/case-studies/)
 - [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
+- [Wallet UX teardown how wallets need to change](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 min)
+
 
 ## Design Bounties {#Bounties}
 
