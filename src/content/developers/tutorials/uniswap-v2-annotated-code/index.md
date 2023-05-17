@@ -1816,14 +1816,14 @@ This function returns the reserves of the two tokens that the pair exchange has.
     }
 ```
 
-This function gives you the amount of token B you'll get in return for token A if there is no fee involved. This calculation takes into account that the transfer changes the exchange rate.
+This function returns the number of tokens B that need to be added to add token A, while keeping the price the same. It is used when adding liquidity.
 
 ```solidity
     // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-The `quote` function above works great if there is no fee to use the pair exchange. However, if there is a 0.3% exchange fee the amount you actually get is lower. This function calculates the amount after the exchange fee.
+This function returns the number of tokens redeemed, while keeping the liquidity constant. This function calculates the amount after the exchange fee.
 
 ```solidity
 
