@@ -27,7 +27,7 @@ ERC-223 addresses some limitations of ERC-20 and introduces a new method of inte
 
 ## Body {#body}
 
-The ERC-223 (Ethereum Request for Comments 223), proposed by Dexaran in March 2017, is a Token Standard that
+The ERC-223 (Ethereum Request for Comments 223), proposed by Dexaran in March 2017, is a token standard that
 implements an API for tokens within smart contracts and declares API for a contract that is supposed to receive ERC-223 tokens. Any contract that does not support ERC-223 Receiver API can not receive ERC-223 tokens which prevents the most common user mistakes.
 
 If a smart contract implements the following methods and events it can be called an ERC-223 compatible token contract. Once deployed, it
