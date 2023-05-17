@@ -142,7 +142,7 @@ const CommunityEvents = () => {
               )}
               <Flex flexDirection="column" gap={6}>
                 <DiscordButton />
-                {state.upcomingEventData.length && (
+                {state.upcomingEventData[0] && (
                   <Link
                     to={state.upcomingEventData[0].calenderLink}
                     fontWeight="700"
