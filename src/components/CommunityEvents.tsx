@@ -82,6 +82,37 @@ const CommunityEvents = () => {
     }
   }, [])
 
+  const renderEventDateTime = (date, language) => {
+    return DateTime.fromISO(date)
+      .setLocale(language)
+      .toLocaleString({
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour12: false,
+        hour: "numeric",
+        minute: "numeric",
+      })
+  }
+
+  const renderEventLink = (link, title) => {
+    return (
+      <Link to={link} fontWeight="700">
+        {title}
+      </Link>
+    )
+  }
+
+  const renderEvent = (event, language) => {
+    const { date, title, calenderLink } = event
+    return (
+      <Flex gap={6}>
+        <Text>{renderEventDateTime(date, language)}</Text>
+        {renderEventLink(calenderLink, title)}
+      </Flex>
+    )
+  }
+
   return (
     <Flex w="full" flexDirection={{ base: "column", lg: "row" }}>
       <Center w={{ base: "100%", lg: "40%" }} px={16}>
@@ -94,8 +125,9 @@ const CommunityEvents = () => {
           <Text>
             Join our monthly community calls for exciting updates on
             Ethereum.org development and important ecosystem news. Get the
-            chance to ask questions, share ideas and provide feedback - it's the
-            perfect opportunity to be part of the thriving Ethereum community.
+            chance to ask questions, share ideas, and provide feedback - it's
+            the perfect opportunity to be part of the thriving Ethereum
+            community.
           </Text>
         </Box>
       </Center>
@@ -126,16 +158,10 @@ const CommunityEvents = () => {
               ) : state.upcomingEventData.length ? (
                 <>
                   <Text m={0} fontSize="xl">
-                    {DateTime.fromISO(state.upcomingEventData[0].date)
-                      .setLocale(language)
-                      .toLocaleString({
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                        hour12: false,
-                        hour: "numeric",
-                        minute: "numeric",
-                      })}
+                    {renderEventDateTime(
+                      state.upcomingEventData[0].date,
+                      language
+                    )}
                   </Text>
                   <Text color={"bodyLight"} fontSize="md">
                     ({Intl.DateTimeFormat().resolvedOptions().timeZone})
@@ -145,22 +171,17 @@ const CommunityEvents = () => {
                   </Text>
                 </>
               ) : (
-                <>
-                  <Text fontSize="3xl" fontWeight="bold" mb={8}>
-                    No events planned
-                  </Text>
-                </>
+                <Text fontSize="3xl" fontWeight="bold" mb={8}>
+                  No events planned
+                </Text>
               )}
               <Flex flexDirection="column" gap={6}>
                 <DiscordButton />
-                {state.upcomingEventData[0] && (
-                  <Link
-                    to={state.upcomingEventData[0].calenderLink}
-                    fontWeight="700"
-                  >
-                    Add to calendar
-                  </Link>
-                )}
+                {state.upcomingEventData[0] &&
+                  renderEventLink(
+                    state.upcomingEventData[0].calenderLink,
+                    "Add to calendar"
+                  )}
               </Flex>
             </Box>
           )}
@@ -185,22 +206,7 @@ const CommunityEvents = () => {
             </Text>
           ) : state.upcomingEventData.slice(1).length ? (
             state.upcomingEventData.slice(1).map((item) => {
-              return (
-                <Flex gap={6}>
-                  <Text>
-                    {DateTime.fromISO(item.date)
-                      .setLocale(language)
-                      .toLocaleString({
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                  </Text>
-                  <Link to={item.calenderLink} fontWeight="700">
-                    {item.title}
-                  </Link>
-                </Flex>
-              )
+              return renderEvent(item, language)
             })
           ) : (
             <Text mx="auto">No upcoming calls</Text>
@@ -219,22 +225,7 @@ const CommunityEvents = () => {
             </Text>
           ) : state.pastEventData.length ? (
             state.pastEventData.map((item) => {
-              return (
-                <Flex gap={6}>
-                  <Text>
-                    {DateTime.fromISO(item.date)
-                      .setLocale(language)
-                      .toLocaleString({
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                  </Text>
-                  <Link to={item.pastEventLink} fontWeight="700">
-                    {item.title}
-                  </Link>
-                </Flex>
-              )
+              return renderEvent(item, language)
             })
           ) : (
             <Text mx="auto">There are no past calls</Text>
