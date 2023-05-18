@@ -18,6 +18,12 @@ import ButtonLink from "./ButtonLink"
 import Link from "./Link"
 import Translation from "./Translation"
 
+// Constants
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
+
+// Utils
+import { getData } from "../utils/cache"
+
 interface Event {
   date: string
   title: string
@@ -52,6 +58,11 @@ const CommunityEvents = () => {
 
   useEffect(() => {
     try {
+      const fetchCalendarData = async () => {
+        const events = await getData(`${GATSBY_FUNCTIONS_PATH}/calendarEvents`)
+      }
+      fetchCalendarData()
+
       const pastEventData: Array<Event> = []
       const upcomingEventData: Array<Event> = []
 
