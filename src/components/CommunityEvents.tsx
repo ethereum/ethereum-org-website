@@ -91,15 +91,19 @@ const CommunityEvents = () => {
     }
   }, [])
 
-  const renderEventDateTime = (date, language) => {
-    return DateTime.fromISO(date).setLocale(language).toLocaleString({
+  const renderEventDateTime = (
+    date,
+    language,
+    params = {
       year: "numeric",
       month: "long",
       day: "numeric",
       hour12: false,
       hour: "numeric",
       minute: "numeric",
-    })
+    }
+  ) => {
+    return DateTime.fromISO(date).setLocale(language).toLocaleString(params)
   }
 
   const renderEventLink = (link, title) => {
@@ -112,9 +116,14 @@ const CommunityEvents = () => {
 
   const renderEvent = (event, language) => {
     const { date, title, calendarLink } = event
+    const params = {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    }
     return (
       <Flex gap={6}>
-        <Text>{renderEventDateTime(date, language)}</Text>
+        <Text>{renderEventDateTime(date, language, params)}</Text>
         {renderEventLink(calendarLink, title)}
       </Flex>
     )
