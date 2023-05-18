@@ -83,16 +83,14 @@ const CommunityEvents = () => {
   }, [])
 
   const renderEventDateTime = (date, language) => {
-    return DateTime.fromISO(date)
-      .setLocale(language)
-      .toLocaleString({
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        hour12: false,
-        hour: "numeric",
-        minute: "numeric",
-      })
+    return DateTime.fromISO(date).setLocale(language).toLocaleString({
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour12: false,
+      hour: "numeric",
+      minute: "numeric",
+    })
   }
 
   const renderEventLink = (link, title) => {
@@ -117,17 +115,14 @@ const CommunityEvents = () => {
     <Flex w="full" flexDirection={{ base: "column", lg: "row" }}>
       <Center w={{ base: "100%", lg: "40%" }} px={16}>
         <Box>
-          <Heading>Join the ethereum.org community</Heading>
+          <Heading>
+            <Translation id="community-events-content-heading" />
+          </Heading>
           <Text>
-            Join almost <strong>40 000 members</strong> on our{" "}
-            <Link to="/discord/">Discord server</Link>.
+            <Translation id="community-events-content-1" />
           </Text>
           <Text>
-            Join our monthly community calls for exciting updates on
-            Ethereum.org development and important ecosystem news. Get the
-            chance to ask questions, share ideas, and provide feedback - it's
-            the perfect opportunity to be part of the thriving Ethereum
-            community.
+            <Translation id="community-events-content-2" />
           </Text>
         </Box>
       </Center>
@@ -143,7 +138,7 @@ const CommunityEvents = () => {
           flexDir="column"
         >
           <Text fontSize="md" fontWeight="bold">
-            Next event
+            <Translation id="community-events-next-event" />
           </Text>
           {state.loading ? (
             <Text>
@@ -172,7 +167,7 @@ const CommunityEvents = () => {
                 </>
               ) : (
                 <Text fontSize="3xl" fontWeight="bold" mb={8}>
-                  No events planned
+                  <Translation id="community-events-no-events-planned" />
                 </Text>
               )}
               <Flex flexDirection="column" gap={6}>
@@ -193,7 +188,7 @@ const CommunityEvents = () => {
           flexDir="column"
         >
           <Text fontSize="lg" fontWeight="bold" mb={2}>
-            Upcoming calls
+            <Translation id="community-events-upcoming-calls" />
           </Text>
           <Divider mb={4} />
           {state.loading ? (
@@ -209,10 +204,12 @@ const CommunityEvents = () => {
               return renderEvent(item, language)
             })
           ) : (
-            <Text mx="auto">No upcoming calls</Text>
+            <Text mx="auto">
+              <Translation id="community-events-no-upcoming-calls" />
+            </Text>
           )}
           <Text fontSize="lg" fontWeight="bold" mb={2}>
-            Previous calls
+            <Translation id="community-events-previous-calls" />
           </Text>
           <Divider mb={4} />
           {state.loading ? (
@@ -228,7 +225,9 @@ const CommunityEvents = () => {
               return renderEvent(item, language)
             })
           ) : (
-            <Text mx="auto">There are no past calls</Text>
+            <Text mx="auto">
+              <Translation id="community-events-there-are-no-past-calls" />
+            </Text>
           )}
         </Flex>
       </Flex>
