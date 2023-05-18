@@ -84,9 +84,10 @@ function sortMarkdownPathsIntoLanguages(paths: Array<string>): Languages {
     const isTranslation = path.includes(translationDir)
     const langIndex = path.indexOf(translationDir) + translationDir.length
 
+    // RegEx to grab the root of the path (e.g. the lang code for translated files)
     const regex = /^([^\/]+)\//
     const match = path.substring(langIndex).match(regex)
-    const lang = isTranslation && match && match?.length > 1 ? match[1] : "en"
+    const lang = isTranslation && match && match.length > 1 ? match[1] : "en"
 
     if (LANG_ARG) {
       if (LANG_ARG === lang) {
