@@ -51,7 +51,7 @@ export type Lang =
   | "th"
   | "tr"
   | "uk"
-  | "ur-in"
+  | "ur"
   | "uz"
   | "vi"
   | "zh"
