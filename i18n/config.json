@@ -400,9 +400,9 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
-    "code": "ur-in",
-    "hrefLang": "ur-in",
-    "name": "Urdu (India)",
+    "code": "ur",
+    "hrefLang": "ur",
+    "name": "Urdu",
     "localName": "اردو",
     "langDir": "rtl",
     "dateFormat": "MM/DD/YYYY"
