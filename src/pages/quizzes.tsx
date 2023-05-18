@@ -1,10 +1,12 @@
 // 0) colors theme dark mode design
 
 // 2) local storage
-// 1) col derecha data
-// 5) custom Progress y Modal components
+// 1) col derecha data (current completed, average score)
+
+// 5) custom Modal components
 // 5) TODO: hide green tick if not passed
 // 5) mobile version
+// 6) tw share results copy
 
 // 5) dark mode colors
 // 6) reordenar imports
@@ -29,6 +31,7 @@ import { getImage } from "../utils/image"
 
 import {
   Box,
+  Circle,
   Flex,
   Heading,
   Icon,
@@ -38,8 +41,10 @@ import {
 } from "@chakra-ui/react"
 
 import Button from "../components/Button"
-import { FaGithub, FaTwitter } from "react-icons/fa"
 import ButtonLink from "../components/ButtonLink"
+
+import { FaGithub, FaTwitter } from "react-icons/fa"
+import { TrophyIcon } from "../components/icons/quiz"
 
 // Styles
 const GappedPage = styled(Page)`
@@ -60,26 +65,6 @@ const HeroContainer = styled.div`
 const Hero = styled(PageHero)`
   padding-bottom: 2rem;
 `
-
-const SplitContent = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-    flex-direction: column-reverse;
-  }
-`
-
-const Column = styled.div`
-  flex: 1;
-`
-
-// const ModalTitle = styled.h2`
-//   margin-top: 0;
-//   margin-bottom: 1rem;
-// `
 
 const ModalBody = styled.div`
   display: flex;
@@ -195,6 +180,9 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
       level: "intermediate",
     },
   ]
+
+  const totalQuizzesNumber =
+    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
 
   return (
     <GappedPage>
@@ -325,26 +313,20 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                   </Button>
                 </Flex>
 
-                <Heading
-                  as="h4"
-                  color="text200"
-                  m={0}
-                  fontSize="5xl"
-                  fontWeight="medium"
-                  lineHeight="140%"
-                  letterSpacing="0.04em"
-                  textTransform="uppercase"
-                >
-                  {/* TODO: update styles here, remove span?? */}
-                  <Text as="span" sx={{ color: "black !important" }}>
-                    {userScore}
-                  </Text>
-                  /{TOTAL_QUIZZES_POINTS}
-                </Heading>
+                <Flex alignItems="center">
+                  <Circle size="64px" bg="primary" mr={4}>
+                    <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
+                  </Circle>
 
-                <Box>
-                  <Progress value={20} />
-                </Box>
+                  <Text fontWeight="bold" fontSize="5xl" mb={0}>
+                    {userScore}
+                    <Text as="span" color="bodyLight">
+                      /{TOTAL_QUIZZES_POINTS}
+                    </Text>
+                  </Text>
+                </Flex>
+
+                <Progress value={20} />
 
                 <Flex>
                   {/* TODO: move text to translations */}
@@ -354,7 +336,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
                   {/* TODO: move text to translations */}
                   <Text mb={0}>
-                    Completed: <Text as="span">2/8</Text>
+                    Completed: <Text as="span">2/{totalQuizzesNumber}</Text>
                   </Text>
                 </Flex>
               </Flex>
