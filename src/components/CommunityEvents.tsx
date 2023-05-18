@@ -1,6 +1,6 @@
 //Libraries
 import React, { useEffect, useState } from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   Center,
@@ -27,7 +27,7 @@ import { getData } from "../utils/cache"
 interface Event {
   date: string
   title: string
-  calenderLink: string
+  calendarLink: string
   pastEventLink: string | undefined
 }
 
@@ -49,6 +49,7 @@ const DiscordButton = () => {
 
 const CommunityEvents = () => {
   const { language } = useI18next()
+  const { t } = useTranslation()
   const [state, setState] = useState<State>({
     pastEventData: [],
     upcomingEventData: [],
@@ -60,23 +61,31 @@ const CommunityEvents = () => {
     try {
       const fetchCalendarData = async () => {
         const events = await getData(`${GATSBY_FUNCTIONS_PATH}/calendarEvents`)
+        const pastEventData = events.pastEvents.map((event) => {
+          return {
+            date: event.start.dateTime,
+            title: event.summary,
+            calendarLink: event.htmlLink,
+            pastEventLink: event.location,
+          }
+        })
+        const upcomingEventData = events.futureEvents.map((event) => {
+          return {
+            date: event.start.dateTime,
+            title: event.summary,
+            calendarLink: event.htmlLink,
+            pastEventLink: event.location,
+          }
+        })
+        setState({
+          ...state,
+          pastEventData,
+          upcomingEventData,
+          loading: false,
+          hasError: false,
+        })
       }
       fetchCalendarData()
-
-      const pastEventData: Array<Event> = []
-      const upcomingEventData: Array<Event> = []
-
-      setTimeout(
-        () =>
-          setState({
-            ...state,
-            pastEventData,
-            upcomingEventData,
-            loading: false,
-            hasError: false,
-          }),
-        500
-      )
     } catch {
       setState({ ...state, loading: false, hasError: true })
     }
@@ -102,11 +111,11 @@ const CommunityEvents = () => {
   }
 
   const renderEvent = (event, language) => {
-    const { date, title, calenderLink } = event
+    const { date, title, calendarLink } = event
     return (
       <Flex gap={6}>
         <Text>{renderEventDateTime(date, language)}</Text>
-        {renderEventLink(calenderLink, title)}
+        {renderEventLink(calendarLink, title)}
       </Flex>
     )
   }
@@ -174,8 +183,8 @@ const CommunityEvents = () => {
                 <DiscordButton />
                 {state.upcomingEventData[0] &&
                   renderEventLink(
-                    state.upcomingEventData[0].calenderLink,
-                    "Add to calendar"
+                    state.upcomingEventData[0].calendarLink,
+                    t("community-events-add-to-calendar")
                   )}
               </Flex>
             </Box>
