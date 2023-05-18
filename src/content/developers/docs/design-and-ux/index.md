@@ -40,6 +40,7 @@ This is a curated list of user research done in web3 that may help with design a
 - [Dimensions of web3 UX](https://uxdesign.cc/the-levels-of-web3-user-experience-4f2ad113e37d) - An analysis of different layers of web3 UX and its challenges
 - [Web3 Design Patterns](https://www.web3designpatterns.io/)- A curated library of design patterns from real Web3 products
 - [W3design.io](https://w3design.io/) - A curated library of UI flows of different projects in the ecosystem
+- [Neueux.com](https://neueux.com/apps) - UI library of web3 flow screenshots with diverse filtering options
 
 ## Web3 Design Case Studies {#Design-case-studies}
 
