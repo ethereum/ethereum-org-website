@@ -73,3 +73,4 @@ Get involved in professional community-driven organizations or join design group
 - [Ethereum.org Design system](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, a design system for Web3 by Polygon](https://finity.polygon.technology/) (Figma)
 - [ENS Design system](https://thorin.ens.domains/)
+- [Mirror Design System](https://degen-xyz.vercel.app/)
