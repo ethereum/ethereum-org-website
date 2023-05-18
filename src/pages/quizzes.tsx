@@ -1,42 +1,32 @@
 // 0) colors theme dark mode design
-// 1) col derecha data
+
 // 2) local storage
+// 1) col derecha data
 // 5) custom Progress y Modal components
 // 5) TODO: hide green tick if not passed
 // 5) mobile version
+
 // 5) dark mode colors
 // 6) reordenar imports
 // 7) remover componentes no usados
 // 8) add translation strings to copy
 
-// Libraries
 import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
-// import { type Icon as ChakraIcon } from "@chakra-ui/react"
-
-// Components
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import {
-  Content,
-  Divider,
-  Page,
-  StyledCard,
-} from "../components/SharedStyledComponents"
-// import Emoji from "../components/OldEmoji"
-// import Link from "../components/Link"
-// import ButtonLink from "../components/ButtonLink"
+import { Content, Page } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
-// import Icon from "../components/Icon"
 import Modal from "../components/Modal"
 import QuizWidget from "../components/Quiz/QuizWidget"
+
 import QuizzesList, { QuizzesListItem } from "../components/QuizzesList"
 
-// Utils
 import { getImage } from "../utils/image"
+
 import {
   Box,
   Flex,
@@ -46,6 +36,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react"
+
 import Button from "../components/Button"
 import { FaGithub, FaTwitter } from "react-icons/fa"
 import ButtonLink from "../components/ButtonLink"
@@ -352,8 +343,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 </Heading>
 
                 <Box>
-                  progress-bar
-                  <Progress value={20} size="sm" />
+                  <Progress value={20} />
                 </Box>
 
                 <Flex>
