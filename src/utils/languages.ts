@@ -36,6 +36,7 @@ export type Lang =
   | "ms"
   | "nl"
   | "nb"
+  | "pcm"
   | "ph"
   | "pl"
   | "pt"
