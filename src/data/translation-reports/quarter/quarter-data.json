@@ -343,8 +343,8 @@
       "languages": [
         {
           "language": {
-            "id": "ur-IN",
-            "name": "Urdu (India)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Translator, Proofreader",
             "tmSavings": 0,
             "preTranslate": 0,
@@ -383,8 +383,8 @@
         },
         {
           "language": {
-            "id": "ur-PK",
-            "name": "Urdu (Pakistan)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Proofreader",
             "tmSavings": 0,
             "preTranslate": 0,
@@ -1377,8 +1377,8 @@
       "languages": [
         {
           "language": {
-            "id": "ur-PK",
-            "name": "Urdu (Pakistan)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Translator",
             "tmSavings": 0,
             "preTranslate": 0,
@@ -4266,8 +4266,8 @@
         },
         {
           "language": {
-            "id": "ur-IN",
-            "name": "Urdu (India)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Translator",
             "tmSavings": 0,
             "preTranslate": 0,
@@ -9580,8 +9580,8 @@
       "languages": [
         {
           "language": {
-            "id": "ur-PK",
-            "name": "Urdu (Pakistan)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Translator",
             "tmSavings": 0,
             "preTranslate": 0,
@@ -10428,8 +10428,8 @@
       "languages": [
         {
           "language": {
-            "id": "ur-PK",
-            "name": "Urdu (Pakistan)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Translator",
             "tmSavings": 0,
             "preTranslate": 0,
@@ -18506,8 +18506,8 @@
         },
         {
           "language": {
-            "id": "ur-IN",
-            "name": "Urdu (India)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Owner",
             "tmSavings": 0,
             "preTranslate": 810,
@@ -18546,8 +18546,8 @@
         },
         {
           "language": {
-            "id": "ur-PK",
-            "name": "Urdu (Pakistan)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Owner",
             "tmSavings": 0,
             "preTranslate": 372,
@@ -24259,8 +24259,8 @@
       "languages": [
         {
           "language": {
-            "id": "ur-IN",
-            "name": "Urdu (India)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Translator",
             "tmSavings": 0,
             "preTranslate": 0,
