@@ -124,6 +124,3 @@ Smart contract wallets are already available, but more upgrades are required to 
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
 - [EIP-2771 documentation](https://eips.ethereum.org/EIPS/eip-2771)
 - ["Basics of Account Abstraction" -- What is Account Abstraction Part I](https://www.alchemy.com/blog/account-abstraction)
-- ["Sponsoring Transactions Using Paymasters" -- What is Account Abstraction Part II](https://www.alchemy.com/blog/account-abstraction-paymasters)
-- ["Wallet Creation" -- What is Account Abstraction Part III](https://www.alchemy.com/blog/account-abstraction-wallet-creation)
-- ["Aggregate Signatures" -- What is Account Abstraction Part IV](https://www.alchemy.com/blog/account-abstraction-aggregate-signatures)
