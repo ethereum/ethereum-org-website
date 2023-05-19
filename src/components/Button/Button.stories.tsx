@@ -13,14 +13,14 @@ export const Solid: StoryObj<typeof Button> = {
 
 export const Outline: StoryObj<typeof Button> = {
   args: {
-    children: "More on digital money",
+    children: "More on digital money test",
     variant: "outline",
   },
 }
 
 export const OutlineColor: StoryObj<typeof Button> = {
   args: {
-    children: "More on digital money",
+    children: "More on digital money test",
     variant: "outline-color",
   },
 }
