@@ -7,7 +7,7 @@ export type TranslationKey = string
 
 export const isLangRightToLeft = (lang: Lang): boolean => {
   const langConfig = i18nConfigs.filter(
-    (language) => language.hrefLang === lang
+    (language) => language.code === lang
   )
   return langConfig[0].langDir === "rtl"
 }
