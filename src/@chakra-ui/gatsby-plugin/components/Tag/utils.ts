@@ -13,7 +13,7 @@ export const STATUS_COLORS = {
   normal: {
     subtle: {
       [$badgeBg.variable]: "colors.backgroundHighlight",
-      [$badgeColor.variable]: "colors.bodyLight",
+      [$badgeColor.variable]: "colors.bodyMedium",
       "&:any-link": {
         _hover: {
           [$badgeBg.variable]: "colors.primaryHover",
@@ -23,7 +23,7 @@ export const STATUS_COLORS = {
         },
         _focusWithin: {
           [$badgeBg.variable]: "colors.primaryLight",
-          [$badgeColor.variable]: "colors.bodyLight",
+          [$badgeColor.variable]: "colors.bodyMedium",
           outlineColor: "primaryHover",
         },
         _active: {
@@ -33,7 +33,7 @@ export const STATUS_COLORS = {
       },
     },
     solid: {
-      [$badgeBg.variable]: "colors.bodyLight",
+      [$badgeBg.variable]: "colors.bodyMedium",
       [$badgeColor.variable]: "colors.backgroundHighlight",
       "&:any-link": {
         _hover: {
@@ -44,7 +44,7 @@ export const STATUS_COLORS = {
         },
         _focusWithin: {
           [$badgeBg.variable]: "colors.primaryLight",
-          [$badgeColor.variable]: "colors.bodyLight",
+          [$badgeColor.variable]: "colors.bodyMedium",
           outlineColor: "primaryHover",
         },
         _active: {
@@ -54,7 +54,7 @@ export const STATUS_COLORS = {
       },
     },
     outline: {
-      [$badgeColor.variable]: "colors.bodyLight",
+      [$badgeColor.variable]: "colors.bodyMedium",
       "&:any-link": {
         _hover: {
           [$badgeBg.variable]: "colors.primaryHover",
@@ -66,7 +66,7 @@ export const STATUS_COLORS = {
         },
         _focusWithin: {
           [$badgeBg.variable]: "colors.primaryLight",
-          [$badgeColor.variable]: "colors.bodyLight",
+          [$badgeColor.variable]: "colors.bodyMedium",
           bg: $badgeBg.reference,
           outlineColor: "primaryHover",
           borderColor: "transparent",
