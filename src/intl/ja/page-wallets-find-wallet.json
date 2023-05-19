@@ -88,5 +88,6 @@
   "page-find-wallet-desktop-desc": "デスクトップアプリのウォレット",
   "page-find-wallet-browser": "ブラウザ",
   "page-find-wallet-browser-desc": "ブラウザ拡張機能付きウォレット",
-  "page-find-wallet-device": "デバイス"
+  "page-find-wallet-device": "デバイス",
+  "page-find-choose-to-compare": "比較"
 }

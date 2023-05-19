@@ -1,8 +1,28 @@
-import React, { useRef, useState, useEffect } from "react"
-import styled from "@emotion/styled"
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  ComponentPropsWithRef,
+} from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Badge,
+  Box,
+  Button,
+  ButtonProps,
+  Divider as ChakraDivider,
+  DividerProps,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  SimpleGrid,
+  Text,
+  chakra,
+  useToken,
+} from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import BoxGrid from "../components/BoxGrid"
@@ -14,297 +34,320 @@ import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import PageHero from "../components/PageHero"
-import {
-  ButtonSecondary,
-  ButtonPrimary,
-  CardGrid,
-  Content,
-  Page,
-  CenterDivider,
-  Divider,
-  Option,
-  OptionContainer,
-  OptionText,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
-import { Context } from "../types"
-import { Badge } from "@chakra-ui/react"
+import { ChildOnlyProp, Context } from "../types"
 
-const MagiciansImage = styled(GatsbyImage)`
-  background-size: cover;
-  background-repeat: no-repeat;
-  align-self: center;
-  width: 100%;
-  min-width: 240px;
-  max-width: 300px;
-  margin: 2rem 6rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin: 2rem 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin: 2rem 0rem;
-  }
-`
+const Page = (props: ChildOnlyProp & FlexProps) => (
+  <Flex direction="column" align="center" mx="auto" w="full" {...props} />
+)
 
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`
+const Divider = (props: DividerProps) => (
+  <ChakraDivider
+    opacity={1}
+    my={16}
+    w="10%"
+    borderBottomWidth="0.25rem"
+    borderColor="homeDivider"
+    {...props}
+  />
+)
 
-const StyledButtonSecondary = styled(ButtonSecondary)`
-  margin-top: 0;
-`
+const CenterDivider = () => <Divider display="flex" justifyContent="center" />
 
-const StyledGhostCard = styled(GhostCard)`
-  .ghost-card-base {
-    display: flex;
-    justify-content: center;
-  }
-`
+const Content = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
 
-const Subtitle = styled.div`
-  font-size: 1.5rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 1.25rem;
-  }
-`
+const OptionContainer = (props: ChildOnlyProp) => (
+  <Flex
+    direction={{ base: "column", lg: "row" }}
+    justify="center"
+    px={8}
+    mb={8}
+    w={{ base: "full", lg: "auto" }}
+    {...props}
+  />
+)
 
-const Row = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const Option = (
+  props: Pick<ButtonProps, "children" | "onClick"> & { isActive: boolean }
+) => {
+  const tableBoxShadow = useToken("colors", "tableBoxShadow")
 
-const IntroRow = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  background: ${(props) => props.theme.colors.background};
-  border-radius: 32px;
-  padding: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+  return (
+    <Button
+      variant="outline"
+      display="flex"
+      alignItems="center"
+      justifyContent={{ base: "center", lg: "flex-start" }}
+      boxShadow={props.isActive ? tableBoxShadow : `none`}
+      color={props.isActive ? "primary" : "text"}
+      borderColor={props.isActive ? "primary" : "text"}
+      borderRadius="2rem"
+      height="auto"
+      w={{ base: "full", lg: "auto" }}
+      my={2}
+      mx={{ base: 0, lg: 2 }}
+      py={4}
+      px={6}
+      transition="none"
+      _hover={{
+        color: "primary",
+        borderColor: "primary",
+      }}
+      _active={{ bg: "transparent" }}
+      {...props}
+    />
+  )
+}
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
+const OptionText = (props: ChildOnlyProp) => (
+  <Text
+    as="span"
+    fontSize={{ base: "md", md: "2xl" }}
+    textAlign="center"
+    fontWeight={{ base: "semibold", md: "normal" }}
+    lineHeight="100%"
+    {...props}
+  />
+)
 
-const H2 = styled.h2`
-  font-size: 1.5rem;
-  font-style: normal;
-  margin-top: 0.5rem;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
-`
+const ButtonPrimary = (props: Pick<ButtonProps, "children" | "onClick">) => (
+  <Button py={2} px={3} borderRadius="0.25em" {...props} />
+)
 
-const StyledInfoBanner = styled(InfoBanner)`
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
-`
+const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
+  <Button variant="outline" py={2} px={3} borderRadius="0.25em" {...props} />
+)
 
-const Column = styled.div`
-  flex: 1 1 75%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-`
+const MagiciansImage = chakra(GatsbyImage, {
+  baseStyle: {
+    bgSize: "cover",
+    bgRepeat: "no-repeat",
+    alignSelf: "center",
+    w: "full",
+    minW: "240px",
+    maxW: "300px",
+    my: 8,
+    mx: { base: 0, sm: 8, md: 24 },
+  },
+})
 
-const FullWidthContainer = styled(Page)`
-  margin: 0rem 0rem;
-  margin-bottom: 4rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 2rem 0rem;
-  padding-top: 4rem;
-`
+const ImageContainer = (props: Pick<FlexProps, "children" | "id">) => (
+  <Flex justify="center" {...props} />
+)
 
-const CardContainer = styled.div`
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: 1fr;
-  }
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Box
+    fontSize={{ base: "xl", lg: "2xl" }}
+    lineHeight="140%"
+    color="text200"
+    mt={4}
+    {...props}
+  />
+)
 
-const CenteredCard = styled(Card)`
-  text-align: center;
-`
+const Row = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    direction={{ base: "column", lg: "row" }}
+    align="flex-start"
+    {...props}
+  />
+)
 
-const StepBoxContainer = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 1rem 0rem;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-wrap: wrap;
-  }
-`
+const IntroRow = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    direction={{ base: "column", lg: "row" }}
+    align="flex-start"
+    bg="background"
+    p={8}
+    borderRadius="32px"
+    {...props}
+  />
+)
 
-const StepBox = styled(Link)`
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background: ${(props) => props.theme.colors.background};
-  padding: 0rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text};
-  text-decoration: none;
-  width: 100%;
-  &:hover {
-    text-decoration: none;
-    background: ${(props) => props.theme.colors.ednBackground};
-    transition: transform 0.2s;
-    transform: scale(1.05);
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 2rem;
-  }
-`
+const TwoColumnContent = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    direction={{ base: "column", lg: "row" }}
+    align="flex-start"
+    mr={{ lg: 8 }}
+    {...props}
+  />
+)
 
-const H3 = styled.h3`
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  margin-top: 1.5rem;
+const StyledH2 = (props: ChildOnlyProp) => (
+  <Heading
+    fontSize="2xl"
+    lineHeight="22px"
+    letterSpacing={0}
+    mt={2}
+    {...props}
+  />
+)
 
-  a {
-    display: none;
-  }
-`
+const H2 = (props: HeadingProps) => (
+  <Heading
+    mt={12}
+    mb={8}
+    fontSize={{ base: "2xl", md: "2rem" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const CenterText = styled.p`
-  text-align: center;
-  max-width: 800px;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 1.5rem;
-    margin-bottom: 1rem;
-  }
-`
+const H3 = (props: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const LeftColumn = styled.div`
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-  }
-`
+const StyledH3 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h3"
+    lineHeight={1.4}
+    fontSize="xl"
+    fontWeight="bold"
+    mb={2}
+    mt={6}
+    sx={{
+      a: {
+        dispalay: "none",
+      },
+    }}
+    {...props}
+  />
+)
 
-const RightColumn = styled.div`
-  margin-left: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-  }
-`
-const About = styled.div`
-  margin-top: 3rem;
-`
+const StyledInfoBanner = (props: ComponentPropsWithRef<typeof InfoBanner>) => (
+  <InfoBanner w={{ lg: "50%" }} {...props} />
+)
 
-const Box = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    align-items: flex-start;
-  }
-`
+const Column = (props: ChildOnlyProp) => (
+  <Box flex="1 1 75%" mb={6} mr={{ lg: 8 }} {...props} />
+)
 
-const BoxText = styled.p`
-  text-align: center;
-  max-width: 800px;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    text-align: left;
-  }
-`
+const FullWidthContainer = (
+  props: ChildOnlyProp & { ref: React.RefObject<HTMLDivElement> }
+) => (
+  <Page
+    m={0}
+    mb={16}
+    pt={16}
+    pb={8}
+    borderTop="1px solid"
+    borderColor="border"
+    bg="ednBackground"
+    {...props}
+  />
+)
 
-const TextNoMargin = styled.p`
-  margin-bottom: 0rem;
-  margin-right: 1rem;
-`
-const AddDapp = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const CardContainer = (props: ChildOnlyProp) => (
+  <SimpleGrid gap={4} columns={[1, null, 2]} {...props} />
+)
 
-const AddDappButton = styled(ButtonLink)`
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-left: 1rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: 2rem;
-    margin-left: 0rem;
-  }
-`
+const StepBoxContainer = (props: ChildOnlyProp) => (
+  <Flex
+    flexWrap={{ base: "wrap", lg: "nowrap" }}
+    w="full"
+    my={4}
+    mb={16}
+    mx={0}
+    {...props}
+  />
+)
 
-const StyledCallout = styled(Callout)`
-  flex: 1 1 416px;
-  min-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 12rem;
-  }
-`
+const StepBox = (props: ComponentPropsWithRef<typeof Link>) => (
+  <Link
+    border="1px solid"
+    borderColor="border"
+    pt={0}
+    pb={{ base: 8, md: 0 }}
+    px={8}
+    display="flex"
+    flexDirection={{ base: "column", md: "row" }}
+    justifyContent="space-between"
+    alignItems={{ base: "flex-start", md: "center" }}
+    color="text"
+    textDecor="none"
+    w="full"
+    transition="transform 0.2s"
+    _hover={{
+      bg: "ednBackground",
+      transform: "scale(1.05)",
+    }}
+    {...props}
+  />
+)
 
-const StyledCardGrid = styled(CardGrid)`
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-`
+const CenterText = (props: ChildOnlyProp) => (
+  <Text
+    textAlign="center"
+    maxW="800px"
+    mt={{ base: "auto", lg: 0 }}
+    mx={{ base: 6, lg: 0 }}
+    mb={4}
+    {...props}
+  />
+)
 
-const MoreButtonContainer = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-`
+const LeftColumn = (props: ChildOnlyProp) => (
+  <Box w="full" m={{ base: "auto 0", lg: 0 }} mr={{ lg: 8 }} {...props} />
+)
+
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box w="full" m={{ base: "auto 0", lg: 0 }} ml={{ lg: 8 }} {...props} />
+)
+
+const AddDapp = (props: ChildOnlyProp) => (
+  <Flex
+    direction={{ base: "column", sm: "row" }}
+    justify="space-between"
+    align={{ base: "flex-start", sm: "center" }}
+    borderRadius="base"
+    border="1px solid"
+    borderColor="border"
+    p={6}
+    mt={6}
+    {...props}
+  />
+)
+
+const AddDappButton = (props: ComponentPropsWithRef<typeof ButtonLink>) => (
+  <ButtonLink
+    variant="outline"
+    mt={{ base: 8, sm: 0 }}
+    ml={{ base: 0, md: 8 }}
+    {...props}
+  />
+)
+
+const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
+  <Callout flex="1 1 416px" minH="full" mt={{ base: 48, lg: 32 }} {...props} />
+)
+
+const StyledCardGrid = (props: ChildOnlyProp) => (
+  <SimpleGrid gap={8} minChildWidth="min(100%, 280px)" my={16} {...props} />
+)
+
+const MoreButtonContainer = (props: ChildOnlyProp) => (
+  <Flex justify="center" mt={12} mb={4} {...props} />
+)
 
 enum CategoryType {
   FINANCE = "finance",
@@ -1002,27 +1045,27 @@ const DappsPage = ({
       <PageHero content={heroContent} />
       <Divider />
       <Content>
-        <H2>
+        <StyledH2>
           <Translation id="get-started" />
-        </H2>
-        <p>
+        </StyledH2>
+        <Text>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
           <Link to="/glossary/#transaction-fee">
             <Translation id="transaction-fees" />
           </Link>
-        </p>
+        </Text>
         <Row>
           <StepBoxContainer>
             <StepBox to="/get-eth/">
-              <div>
-                <H3>
+              <Box>
+                <StyledH3>
                   1. <Translation id="page-wallets-get-some" />
-                </H3>
-                <p>
+                </StyledH3>
+                <Text>
                   <Translation id="page-dapps-get-some-eth-description" />
-                </p>
-              </div>
-              <StyledButtonSecondary
+                </Text>
+              </Box>
+              <ButtonSecondary
                 onClick={() =>
                   trackCustomEvent({
                     eventCategory: "dapp hero buttons",
@@ -1032,18 +1075,18 @@ const DappsPage = ({
                 }
               >
                 <Translation id="get-eth" />
-              </StyledButtonSecondary>
+              </ButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">
-              <div>
-                <H3>
+              <Box>
+                <StyledH3>
                   2. <Translation id="page-dapps-set-up-a-wallet-title" />
-                </H3>
-                <p>
+                </StyledH3>
+                <Text>
                   <Translation id="page-dapps-set-up-a-wallet-description" />
-                </p>
-              </div>
-              <StyledButtonSecondary
+                </Text>
+              </Box>
+              <ButtonSecondary
                 onClick={() =>
                   trackCustomEvent({
                     eventCategory: "dapp hero buttons",
@@ -1053,17 +1096,17 @@ const DappsPage = ({
                 }
               >
                 <Translation id="page-dapps-set-up-a-wallet-button" />
-              </StyledButtonSecondary>
+              </ButtonSecondary>
             </StepBox>
             <StepBox to="#explore">
-              <div>
-                <H3>
+              <Box>
+                <StyledH3>
                   3. <Translation id="page-dapps-ready-title" />
-                </H3>
-                <p>
+                </StyledH3>
+                <Text>
                   <Translation id="page-dapps-ready-description" />
-                </p>
-              </div>
+                </Text>
+              </Box>
               <ButtonPrimary
                 onClick={() =>
                   trackCustomEvent({
@@ -1078,13 +1121,13 @@ const DappsPage = ({
             </StepBox>
           </StepBoxContainer>
         </Row>
-        <h3>
+        <H3>
           <Translation id="page-dapps-editors-choice-header" />{" "}
-          <Emoji text=":+1:" size={1} />
-        </h3>
-        <p>
+          <Emoji text=":+1:" />
+        </H3>
+        <Text>
           <Translation id="page-dapps-editors-choice-description" />
-        </p>
+        </Text>
         <StyledCardGrid>
           {editorChoices.map((choice, idx) => (
             <ProductCard
@@ -1104,15 +1147,15 @@ const DappsPage = ({
         </StyledCardGrid>
       </Content>
       <FullWidthContainer ref={explore}>
-        <h2 id="explore">
+        <H2 id="explore">
           <Translation id="page-dapps-explore-dapps-title" />
-        </h2>
+        </H2>
         <CenterText>
           <Translation id="page-dapps-explore-dapps-description" />
         </CenterText>
-        <h3>
+        <H3>
           <Translation id="page-dapps-choose-category" />
-        </h3>
+        </H3>
         <OptionContainer>
           {categoryKeys.map((key, idx) => {
             const categoryType = key as CategoryType
@@ -1130,7 +1173,7 @@ const DappsPage = ({
                   })
                 }}
               >
-                <Emoji mr={`1rem`} text={category.emoji} />
+                <Emoji fontSize="2xl" mr={`1rem`} text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
               </Option>
             )
@@ -1141,18 +1184,22 @@ const DappsPage = ({
           <Content>
             <IntroRow>
               <Column>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-finance-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":money_with_wings:" />
-                </H2>
+                  <Emoji
+                    fontSize="5xl"
+                    ml={"0.5rem"}
+                    text=":money_with_wings:"
+                  />
+                </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-finance-description" />
                 </Subtitle>
               </Column>
               <StyledInfoBanner isWarning>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-warning-header" />
-                </H2>
+                </StyledH2>
                 <Translation id="page-dapps-warning-message" />
               </StyledInfoBanner>
             </IntroRow>
@@ -1222,11 +1269,11 @@ const DappsPage = ({
               maxImageWidth={300}
               alt={t("page-dapps-wallet-callout-image-alt")}
             >
-              <div>
+              <Box>
                 <ButtonLink to="/wallets/find-wallet/">
                   <Translation id="page-dapps-wallet-callout-button" />
                 </ButtonLink>
-              </div>
+              </Box>
             </CalloutBanner>
           </Content>
         )}
@@ -1234,18 +1281,18 @@ const DappsPage = ({
           <Content>
             <IntroRow>
               <Column>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-gaming-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":video_game:" />
-                </H2>
+                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":video_game:" />
+                </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-gaming-description" />
                 </Subtitle>
               </Column>
               <StyledInfoBanner isWarning>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-warning-header" />
-                </H2>
+                </StyledH2>
                 <Translation id="page-dapps-warning-message" />
               </StyledInfoBanner>
             </IntroRow>
@@ -1269,18 +1316,18 @@ const DappsPage = ({
           <Content>
             <IntroRow>
               <Column>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-technology-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":keyboard:" />
-                </H2>
+                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":keyboard:" />
+                </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-technology-description" />
                 </Subtitle>
               </Column>
               <StyledInfoBanner isWarning>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-warning-header" />
-                </H2>
+                </StyledH2>
                 <Translation id="page-dapps-warning-message" />
               </StyledInfoBanner>
             </IntroRow>
@@ -1318,18 +1365,22 @@ const DappsPage = ({
           <Content>
             <IntroRow>
               <Column>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-collectibles-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":frame_with_picture:" />
-                </H2>
+                  <Emoji
+                    fontSize="5xl"
+                    ml={"0.5rem"}
+                    text=":frame_with_picture:"
+                  />
+                </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-collectibles-description" />
                 </Subtitle>
               </Column>
               <StyledInfoBanner isWarning>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-warning-header" />
-                </H2>
+                </StyledH2>
                 <Translation id="page-dapps-warning-message" />
               </StyledInfoBanner>
             </IntroRow>
@@ -1357,35 +1408,33 @@ const DappsPage = ({
         {/* General content for all categories */}
         <Content>
           <AddDapp>
-            <div>
-              <H2>
+            <Box>
+              <StyledH2>
                 <Translation id="page-dapps-add-title" />
-              </H2>
-              <TextNoMargin>
+              </StyledH2>
+              <Text mb={0} mr={4}>
                 <Translation id="listing-policy-disclaimer" />{" "}
-              </TextNoMargin>
-            </div>
-            <AddDappButton
-              variant="outline"
-              to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.yaml&title="
-            >
+              </Text>
+            </Box>
+            <AddDappButton to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.yaml&title=">
               <Translation id="page-dapps-add-button" />
             </AddDappButton>
           </AddDapp>
           <CenterDivider />
           {categories[selectedCategory].benefits && (
-            <About>
-              <h2>
+            <Box mt={12}>
+              <H2>
                 <Translation id="page-dapps-magic-title-1" />{" "}
-                <Emoji size={1} text=":sparkles:" />{" "}
+                <Emoji fontSize="2rem" text=":sparkles:" />{" "}
                 <Translation id="page-dapps-magic-title-2" />{" "}
                 {categories[selectedCategory].benefitsTitle}
-              </h2>
-              <p>{categories[selectedCategory].benefitsDescription}</p>
+              </H2>
+              <Text>{categories[selectedCategory].benefitsDescription}</Text>
               <CardContainer>
                 {(categories[selectedCategory].benefits || []).map(
                   (art, idx) => (
-                    <CenteredCard
+                    <Card
+                      textAlign="center"
                       key={idx}
                       emoji={art.emoji}
                       title={art.title}
@@ -1415,45 +1464,57 @@ const DappsPage = ({
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
-            </About>
+            </Box>
           )}
         </Content>
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
-          <StyledGhostCard mt={2}>
+          <GhostCard
+            mt={2}
+            sx={{
+              ".ghost-card-base": {
+                display: "flex",
+                justifyContent: "center",
+              },
+            }}
+          >
             <MagiciansImage
               image={getImage(data.magicians)!}
               alt={t("page-dapps-magician-img-alt")}
             />
-          </StyledGhostCard>
+          </GhostCard>
         </ImageContainer>
-        <Box>
-          <h2>
+        <Flex
+          direction="column"
+          align={{ base: "flex-start", sm: "center" }}
+          mt={12}
+        >
+          <H2>
             <Translation id="page-dapps-magic-behind-dapps-title" />
-          </h2>
-          <BoxText>
+          </H2>
+          <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             <Translation id="page-dapps-magic-behind-dapps-description" />
-          </BoxText>
+          </Text>
           <Link to="/what-is-ethereum/">
             <Translation id="page-dapps-magic-behind-dapps-link" />
           </Link>
-        </Box>
+        </Flex>
         <BoxGrid items={features} />
         <Row>
           <LeftColumn>
-            <h2>
+            <H2>
               <Translation id="page-dapps-how-dapps-work-title" />
-            </h2>
-            <p>
+            </H2>
+            <Text>
               <Translation id="page-dapps-how-dapps-work-p1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-dapps-how-dapps-work-p2" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-dapps-how-dapps-work-p3" />
-            </p>
+            </Text>
             <DocLink to="/developers/docs/dapps/">
               <Translation id="page-dapps-docklink-dapps" />
             </DocLink>
@@ -1468,11 +1529,11 @@ const DappsPage = ({
               image={getImage(data.developers)}
               alt={t("page-dapps-learn-callout-image-alt")}
             >
-              <div>
+              <Box>
                 <ButtonLink to="/developers/">
                   <Translation id="page-dapps-learn-callout-button" />
                 </ButtonLink>
-              </div>
+              </Box>
             </StyledCallout>
           </RightColumn>
         </Row>

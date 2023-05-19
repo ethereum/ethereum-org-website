@@ -341,7 +341,7 @@ Las cuestiones de seguridad relativas a los NFT suelen estar relacionadas con es
 
 ## Construya con NFT {#build-with-nfts}
 
-La mayoría de los NFT se desarrollan usando un estándar consistente conocido como [ERC-721](/developers/docs/standards/tokens/erc-721/). Sin embargo, existen otros estándares que pueden llamarle la atención. El estándar [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) permite el uso de tókenes semifungibles, lo cual es particularmente útil en el ámbito de los videojuegos. Y, más recientemente, se ha propuesto el estándar [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) para hacer que el proceso de acuñado de NFT sea más eficiente. ¡Este estándar le permite acuñar tantos NFT como quiera en una sola transacción!
+La mayoría de los NFT se desarrollan usando un estándar consistente conocido como [ERC-721](/developers/docs/standards/tokens/erc-721/). Sin embargo, existen otros estándares que pueden llamarle la atención. El estándar [ERC-1155](/developers/docs/standards/tokens/erc-1155/) permite el uso de tókenes semifungibles, lo cual es particularmente útil en el ámbito de los videojuegos. Y, más recientemente, se ha propuesto el estándar [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) para hacer que el proceso de acuñado de NFT sea más eficiente. ¡Este estándar le permite acuñar tantos NFT como quiera en una sola transacción!
 
 ## Más información {#further-reading}
 

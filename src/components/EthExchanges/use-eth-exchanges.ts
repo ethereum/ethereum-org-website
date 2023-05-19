@@ -1,126 +1,12 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import styled from "@emotion/styled"
 
-import CardList from "./CardList"
-import Link from "./Link"
-import Emoji from "./OldEmoji"
-import Translation from "./Translation"
-import { StyledSelect as Select } from "./SharedStyledComponents"
-
-import { getLocaleTimestamp } from "../utils/time"
-import { trackCustomEvent } from "../utils/matomo"
-import { getImage, ImageDataLike } from "../utils/image"
-import { Lang } from "../utils/languages"
-
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const ListContainer = styled.div`
-  margin-top: 4rem;
-  flex: 1 1 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 1 1 100%;
-  }
-`
-
-const ResultsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 876px;
-
-  ${ListContainer}:first-child {
-    margin-right: 1.5rem;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-wrap: wrap;
-    ${ListContainer}:first-child {
-      margin-right: 0;
-    }
-  }
-`
-
-const EmptyStateContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 4rem;
-`
-
-const EmptyStateContainerSingle = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.5rem;
-`
-
-const SuccessContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
-`
-
-const EmptyStateText = styled.p`
-  margin: 2rem;
-  font-size: 1.25rem;
-  max-width: 450px;
-  text-align: center;
-`
-
-const EmptyStateTextSingle = styled.p`
-  max-width: 450px;
-  margin-bottom: 4rem;
-`
-
-const Intro = styled.p`
-  font-size: 1rem;
-  line-height: 140%;
-  margin-top: 0rem;
-  margin-bottom: 2rem;
-  max-width: 640px;
-  text-align: center;
-`
-
-const Disclaimer = styled.p`
-  width: 100%;
-  max-width: 876px;
-  margin-top: 4rem;
-  margin-bottom: 0;
-`
-
-const StyledSelect = styled(Select)`
-  max-width: 640px;
-`
-
-const NoResults = ({ children }) => (
-  <EmptyStateContainer>
-    <Emoji text=":crying_face:" size={5} />
-    <EmptyStateText>
-      {children}{" "}
-      <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
-    </EmptyStateText>
-  </EmptyStateContainer>
-)
-
-const NoResultsSingle = ({ children }) => (
-  <EmptyStateContainerSingle>
-    <EmptyStateTextSingle>
-      {children}{" "}
-      <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
-    </EmptyStateTextSingle>
-    <Emoji text=":crying_face:" size={5} />
-  </EmptyStateContainerSingle>
-)
+import { getLocaleTimestamp } from "../../utils/time"
+import { trackCustomEvent } from "../../utils/matomo"
+import { getImage, ImageDataLike } from "../../utils/image"
+import { Lang } from "../../utils/languages"
 
 export const cardListImage = graphql`
   fragment cardListImage on File {
@@ -211,8 +97,7 @@ interface State {
   selectedCountry?: ExchangeByCountry
 }
 
-// TODO move component into get-eth.js page?
-const EthExchanges = () => {
+export const useEthExchanges = () => {
   const { language } = useI18next()
   const { t } = useTranslation()
   const [state, setState] = useState<State>()
@@ -706,94 +591,16 @@ const EthExchanges = () => {
   const hasExchangeResults = filteredExchanges.length > 0
   const hasWalletResults = filteredWallets.length > 0
 
-  return (
-    <Container>
-      <h2>
-        <Translation id="page-get-eth-exchanges-header" />
-      </h2>
-      <Intro>
-        <Translation id="page-get-eth-exchanges-intro" />
-      </Intro>
-      <StyledSelect
-        aria-label={t("page-get-eth-exchanges-header")}
-        className="react-select-container"
-        classNamePrefix="react-select"
-        options={exchangesByCountry}
-        onChange={handleSelectChange}
-        placeholder={placeholderString}
-      />
-      {!hasSelectedCountry && (
-        <EmptyStateContainer>
-          <Emoji text=":world_map:" size={5} />
-          <EmptyStateText>
-            <Translation id="page-get-eth-exchanges-empty-state-text" />
-          </EmptyStateText>
-        </EmptyStateContainer>
-      )}
-      {/* No results */}
-      {hasSelectedCountry && !hasExchangeResults && !hasWalletResults && (
-        <ResultsContainer>
-          <NoResults>
-            <Translation id="page-get-eth-exchanges-no-exchanges-or-wallets" />
-          </NoResults>
-        </ResultsContainer>
-      )}
-      {/* Has results */}
-      {(hasExchangeResults || hasWalletResults) && (
-        <>
-          <ResultsContainer>
-            <ListContainer>
-              <h3>
-                <Translation id="page-get-eth-exchanges-header-exchanges" />
-              </h3>
-              {hasExchangeResults && (
-                <SuccessContainer>
-                  <p>
-                    <Translation id="page-get-eth-exchanges-success-exchange" />
-                  </p>
-                  <CardList content={filteredExchanges} />
-                </SuccessContainer>
-              )}
-              {!hasExchangeResults && (
-                <NoResultsSingle>
-                  <Translation id="page-get-eth-exchanges-no-exchanges" />
-                </NoResultsSingle>
-              )}
-            </ListContainer>
-            <ListContainer>
-              <h3>
-                <Translation id="page-get-eth-exchanges-header-wallets" />
-              </h3>
-
-              {hasWalletResults && (
-                <SuccessContainer>
-                  <p>
-                    <Translation id="page-get-eth-exchanges-success-wallet-paragraph" />{" "}
-                    <Link to="/wallets/">
-                      <Translation id="page-get-eth-exchanges-success-wallet-link" />
-                    </Link>
-                    .
-                  </p>
-                  <CardList content={filteredWallets} />
-                </SuccessContainer>
-              )}
-              {!hasWalletResults && (
-                <NoResultsSingle>
-                  <Translation id="page-get-eth-exchanges-no-wallets" />
-                </NoResultsSingle>
-              )}
-            </ListContainer>
-          </ResultsContainer>
-          <Disclaimer>
-            <Translation id="page-get-eth-exchanges-disclaimer" />{" "}
-            <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.{" "}
-            <Translation id="page-find-wallet-last-updated" />{" "}
-            <strong>{lastUpdated}</strong>
-          </Disclaimer>
-        </>
-      )}
-    </Container>
-  )
+  return {
+    t,
+    exchangesByCountry,
+    handleSelectChange,
+    placeholderString,
+    hasSelectedCountry,
+    hasExchangeResults,
+    hasWalletResults,
+    filteredExchanges,
+    filteredWallets,
+    lastUpdated,
+  }
 }
-
-export default EthExchanges
