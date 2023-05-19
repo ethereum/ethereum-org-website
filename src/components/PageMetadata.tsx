@@ -200,6 +200,10 @@ const PageMetadata: React.FC<IProps> = ({
           property: `og:site_name`,
           content: `ethereum.org`,
         },
+        {
+          name: `docsearch:description`,
+          content: desc,
+        },
       ].concat(meta)}
     >
       <script type="application/ld+json">
