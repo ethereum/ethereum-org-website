@@ -76,14 +76,12 @@ Another trick that scammers pull is to direct users to user interfaces that enti
 
 How do you protect yourself? How do you know that the token you're getting is legitimate? The most important rule is **check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's web site. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token). 
 
-**Liquidity pools**
-
-Additionally, you can look at the size of liquidity pools. Scam tokens typically have tiny liquidity pools, if any, because the scammers don't want to risk real assets. For example, the `ARB` Uniswap pool holds over 300k$ as I'm writing this ([see here for the up to date value](https://info.uniswap.org/#/tokens/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1)) and buying a small amount is not going to change the price:
-
-**Explain buying on Uniswap**
+Another option is to look at liquidity pool size on [Uniswap](https://uniswap.org/), one of the most common token swapping protocols. This protocol works using [liquidity pools](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools), into which investors deposit their tokens in hope of a return from trading fees. Scam tokens typically have tiny liquidity pools, if any, because the scammers don't want to risk real assets. For example, the `ARB`/`ETH` Uniswap pool holds about a million dollars as I'm writing this ([see here for the up to date value](https://info.uniswap.org/#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca)) and buying or selling a small amount is not going to change the price:
 
 ![Buying a legitimate token](./uniswap-real.png)
 
-But if I try to buy `vARB`, even a tiny purchase would change the prince by over 90%:
+But if I try to buy `wARB`, even a tiny purchase would change the prince by over 90%:
 
 ![Buying a scam token](./uniswap-scam.png)
+
+This is another piece of evidence that shows us `wARB` is not likely to be a legitimate token.
