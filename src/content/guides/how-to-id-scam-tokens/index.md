@@ -6,9 +6,9 @@ lang: en
 
 # How to identify scam tokens
 
-One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). However, anywhere they are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves. In this case, there are two way in which they are likely to do so:
+One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). However, anywhere there are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves. In this case, there are two way in which they are likely to do so:
 
-- Try to sell you *scam tokens*, which look like the legitimate token you want to purchase, but are issued by the scammers and worthless.
+- Try to sell you *scam tokens*, which look like the legitimate token you want to purchase, but are issued by the scammers and worth nothing.
 - Try to direct you into their own user interface, where they attempt to trick you into signing transactions that give them your ETH, your real tokens, etc. 
 
 To illustrate what scam tokens are, and how to identify them, we are going to look at [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
@@ -17,7 +17,7 @@ To illustrate what scam tokens are, and how to identify them, we are going to lo
 title="What is `ARB`?"
 contentPreview=''>
 
-[Arbitrum](https://developer.arbitrum.io/intro/) is an organization that runs and manages an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Initially Arbitrum was organized as a for-profit company, but they recently [started to decentralize](https://arbitrumfoundation.medium.com/arbitrum-the-next-phase-of-decentralization-e7f8b37b5226). As part of that process, they issued a tradeable [governance token](/dao/#token-based-membership).
+[Arbitrum](https://developer.arbitrum.io/intro/) is an organization that develops and manages [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Initially Arbitrum was organized as a for-profit company, but they recently [started to decentralize](https://arbitrumfoundation.medium.com/arbitrum-the-next-phase-of-decentralization-e7f8b37b5226). As part of that process, they issued a tradeable [governance token](/dao/#token-based-membership).
 
 </ExpandableCard>
 
@@ -27,7 +27,7 @@ contentPreview=''>
   
 There is a convention in Ethereum that when an asset is not ERC-20 compliant we create a "wrapped" version of it with the name starting with `w`. So, for example, we have [`wBTC` for Bitcoin](https://wbtc.network/) and [`wETH` for Ether](https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work).
   
-It does not make sense to create a wrapped version of an ERC-20 token that is already on Ethereum, but scammers rely on the appearance of legitimacy rather than underlying reality.
+It does not make sense to create a wrapped version of an ERC-20 token that is already on Ethereum. But scammers rely on the appearance of legitimacy rather than the underlying reality.
 
 </ExpandableCard>
 
@@ -40,11 +40,11 @@ The whole point of Ethereum is decentralization. This means that there is no cen
 title="What are smart contracts?"
 contentPreview=''>
   
-[*Smart contracts*](/developers/docs/smart-contracts/) are the programs that run on top of the Ethereum blockchain. Each ERC-20 token, for example, is implemented as a smart contract.
+[*Smart contracts*](/developers/docs/smart-contracts/) are the programs that run on top of the Ethereum blockchain. Every ERC-20 token, for example, is implemented as a smart contract.
   
 </ExpandableCard>
 
-Specifically, just because Arbitrum deployed a contract that uses the symbol `ARB`, doesn't mean that other people can't also deploy a contract that uses the exact same symbol, or a similar one. And whoever writes the contract gets to set what the contract will do.
+Specifically, Arbitrum deployed a contract that uses the symbol `ARB`. But that doesn't stop other people from also deploying a contract that uses the exact same symbol, or a similar one. Whoever writes the contract gets to set what the contract will do.
 
 
 ## Appearing legitimate
@@ -55,7 +55,9 @@ There are several tricks that scam token creator pull to appear legitimate. They
 
 - **Legitimate owners**. Scam tokens often airdrop significant balances to addresses that can be expected to be legitimate holders of the real token.
 
-  For example, lets look at `wARB` again. [About 16% of the tokens](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) are held by an address whose public tag is [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). This is *not* a fake address, it really is the address that [deployed the real ARB contract on Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670). The ERC-20 balance of an address is part of the ERC-20 contract's storage, and can be specified by the contract to be whatever the contract developer wishes.
+  For example, lets look at `wARB` again. [About 16% of the tokens](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) are held by an address whose public tag is [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). This is *not* a fake address, it really is the address that [deployed the real ARB contract on Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670). 
+  
+  Because the ERC-20 balance of an address is part of the ERC-20 contract's storage, it can be specified by the contract to be whatever the contract developer wishes. It is also possible for a contract to forbid transfers so the legitimate users won't be able to get rid of those scam tokens.
 
 - **Legitimate transfers**. *Legitimate owners wouldn't pay to transfer a scam token around, so if there are transfers it must be legitimate, right?* Wrong. `Transfer` events are emitted by the ERC-20 contract. A scammer can easily write the contract in such a way it will emit those events, with any desired source and destination, at will. 
 
@@ -69,7 +71,7 @@ In theory a program running offchain can view all the transactions that affected
 
 ## Scammy UI
 
-Another trick that scammers pull is to direct users to user interfaces that entice them to sign bad transactions. For example, [this scam token](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452) tried to direct users to `https://op-claim.xyz`. This probably used to host a scam, but since then the scammer must have given up and stopped paying for web hosting.
+Another trick that scammers pull is to direct users to user interfaces that entice them to sign bad transactions. For example, [this scam token](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452) tried to direct users to `https://op-claim.xyz`. This link probably used to host a scam. It doesn't anymore, probably because the scammer has given up and stopped paying for web hosting.
 
 
 ## Conclusion: What can you trust?
