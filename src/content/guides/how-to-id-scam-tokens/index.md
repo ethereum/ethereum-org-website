@@ -14,7 +14,7 @@ One of the most common uses for Ethereum is for a group to create a tradable tok
 To illustrate what scam tokens are, and how to identify them, we are going to look at [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
 <ExpandableCard
-title="What is `ARB`?"
+title="What is ARB?"
 contentPreview=''>
 
 [Arbitrum](https://developer.arbitrum.io/intro/) is an organization that develops and manages [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Initially Arbitrum was organized as a for-profit company, but they recently [started to decentralize](https://arbitrumfoundation.medium.com/arbitrum-the-next-phase-of-decentralization-e7f8b37b5226). As part of that process, they issued a tradeable [governance token](/dao/#token-based-membership).
@@ -22,10 +22,10 @@ contentPreview=''>
 </ExpandableCard>
 
 <ExpandableCard
-title="Why is the scam token called `wARB`?"
+title="Why is the scam token called wARB?"
 contentPreview=''>
   
-There is a convention in Ethereum that when an asset is not ERC-20 compliant we create a "wrapped" version of it with the name starting with `w`. So, for example, we have [`wBTC` for Bitcoin](https://wbtc.network/) and [`wETH` for Ether](https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work).
+There is a convention in Ethereum that when an asset is not ERC-20 compliant we create a "wrapped" version of it with the name starting with w. So, for example, we have [wBTC for Bitcoin](https://wbtc.network/) and [wETH for Ether](https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work).
   
 It does not make sense to create a wrapped version of an ERC-20 token that is already on Ethereum. But scammers rely on the appearance of legitimacy rather than the underlying reality.
 
@@ -40,7 +40,7 @@ The whole point of Ethereum is decentralization. This means that there is no cen
 title="What are smart contracts?"
 contentPreview=''>
   
-[*Smart contracts*](/developers/docs/smart-contracts/) are the programs that run on top of the Ethereum blockchain. Every ERC-20 token, for example, is implemented as a smart contract.
+[Smart contracts](/developers/docs/smart-contracts/) are the programs that run on top of the Ethereum blockchain. Every ERC-20 token, for example, is implemented as a smart contract.
   
 </ExpandableCard>
 
