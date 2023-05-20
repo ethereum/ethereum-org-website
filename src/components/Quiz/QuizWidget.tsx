@@ -266,8 +266,8 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
           !showAnswer
             ? "neutral"
             : currentQuestionAnswerChoice?.isCorrect
-            ? "successNeutral"
-            : "errorNeutral"
+            ? "success.neutral"
+            : "error.neutral"
         }
         borderRadius="base"
         boxShadow="drop"
@@ -301,7 +301,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
           size="50px"
           bg={
             !showAnswer
-              ? "primary"
+              ? "primary.base"
               : currentQuestionAnswerChoice?.isCorrect
               ? "success"
               : "error"
@@ -316,7 +316,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
         {quizData ? (
           <>
             <Center>
-              <Text fontStyle="normal" fontWeight="700" color="primaryHover">
+              <Text fontStyle="normal" fontWeight="700" color="primary.hover">
                 {quizData.title}
               </Text>
             </Center>

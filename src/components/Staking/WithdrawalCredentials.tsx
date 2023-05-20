@@ -79,7 +79,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const resultText = useMemo<string | JSX.Element>(() => {
     if (hasError)
       return (
-        <Flex bg="errorNeutral" p={4}>
+        <Flex bg="error.neutral" p={4}>
           <Text m={0} color="error">
             <Translation id="comp-withdrawal-credentials-error" />
           </Text>
@@ -88,7 +88,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
     if (!validator) return " "
     if (validator.isUpgraded)
       return (
-        <Flex bg="successNeutral" p={4}>
+        <Flex bg="success.neutral" p={4}>
           <Text m={0} color="success">
             <Text as="span" fontWeight="bold">
               <Translation
@@ -120,7 +120,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
         </Flex>
       )
     return (
-      <Flex bg="errorNeutral" p={4}>
+      <Flex bg="error.neutral" p={4}>
         <Text m={0} color="error">
           <Text as="span" fontWeight="bold">
             {validator.isTestnet ? (
@@ -147,7 +147,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
           onChange={handleChange}
           w={{ base: "full", sm: "18ch" }}
           placeholder={t("comp-withdrawal-credentials-placeholder")}
-          bg="background"
+          bg="background.base"
         />
         <Flex
           w={{ base: "full", sm: "fit-content" }}

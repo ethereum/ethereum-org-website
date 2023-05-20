@@ -27,7 +27,7 @@ const baseContainerStyle = defineMergeStyles(baseDefaultStyle?.container, {
   opacity: "0.7",
   color: "text",
   _hover: {
-    color: "primary",
+    color: "primary.base",
     borderColor: "text200",
     opacity: "1",
   },

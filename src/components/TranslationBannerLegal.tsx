@@ -117,7 +117,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
           margin={4}
           color="secondary"
           _hover={{
-            color: "primary",
+            color: "primary.base",
           }}
           onClick={() => setIsOpen(false)}
         />

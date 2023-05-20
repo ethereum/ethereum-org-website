@@ -83,7 +83,7 @@ const ContentBox = (props: ChildOnlyProp) => (
 
 const StyledActionCard = chakra(ActionCard, {
   baseStyle: {
-    background: "background",
+    background: "background.base",
     borderRadius: "sm",
     border: "1px",
     borderColor: "text",
@@ -599,9 +599,9 @@ const HomePage = ({
                     as={FaGithub}
                     color="text"
                     fontSize="2xl"
-                    _hover={{ color: "primary" }}
-                    _active={{ color: "primary" }}
-                    _focus={{ color: "primary" }}
+                    _hover={{ color: "primary.base" }}
+                    _active={{ color: "primary.base" }}
+                    _focus={{ color: "primary.base" }}
                   />
                   GitHub
                 </>

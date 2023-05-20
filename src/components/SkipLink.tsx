@@ -10,14 +10,14 @@ export interface IProps {
 
 export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
   return (
-    <Box bg="primary">
+    <Box bg="primary.base">
       <Link
         href={hrefId}
         lineHeight="taller"
         position="absolute"
         top="-12"
         ml="2"
-        color="background"
+        color="background.base"
         textDecorationLine="none"
         _hover={{ textDecoration: "none" }}
         _focus={{ position: "static" }}

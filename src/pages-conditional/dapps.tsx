@@ -89,8 +89,8 @@ const Option = (
       alignItems="center"
       justifyContent={{ base: "center", lg: "flex-start" }}
       boxShadow={props.isActive ? tableBoxShadow : `none`}
-      color={props.isActive ? "primary" : "text"}
-      borderColor={props.isActive ? "primary" : "text"}
+      color={props.isActive ? "primary.base" : "text"}
+      borderColor={props.isActive ? "primary.base" : "text"}
       borderRadius="2rem"
       height="auto"
       w={{ base: "full", lg: "auto" }}
@@ -100,8 +100,8 @@ const Option = (
       px={6}
       transition="none"
       _hover={{
-        color: "primary",
-        borderColor: "primary",
+        color: "primary.base",
+        borderColor: "primary.base",
       }}
       _active={{ bg: "transparent" }}
       {...props}
@@ -169,7 +169,7 @@ const IntroRow = (props: ChildOnlyProp) => (
     w="full"
     direction={{ base: "column", lg: "row" }}
     align="flex-start"
-    bg="background"
+    bg="background.base"
     p={8}
     borderRadius="32px"
     {...props}

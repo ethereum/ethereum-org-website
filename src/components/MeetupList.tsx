@@ -103,7 +103,7 @@ const MeetupList: React.FC<IProps> = () => {
               _hover={{
                 textDecoration: "none",
                 borderRadius: "base",
-                boxShadow: "0 0 1px primary",
+                boxShadow: "0 0 1px var(--eth-colors-primary-base)",
                 bg: "tableBackgroundHover",
               }}
             >

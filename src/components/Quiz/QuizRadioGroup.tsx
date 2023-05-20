@@ -68,8 +68,8 @@ const QuizRadioGroup: React.FC<IProps> = ({
 
     // Memoized values
     const buttonBg = useMemo<string>(() => {
-      if (!state.isChecked) return "bodyInverted"
-      if (!showAnswer) return "primary"
+      if (!state.isChecked) return "body.inverted"
+      if (!showAnswer) return "primary.base"
       if (!isSelectedCorrect) return "error"
       return "success"
     }, [state.isChecked, showAnswer, isSelectedCorrect])
@@ -87,7 +87,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
           color={state.isChecked ? "white" : "text"}
           borderRadius="base"
           _hover={{
-            boxShadow: showAnswer ? "none" : "primary",
+            boxShadow: showAnswer ? "none" : "primary.base",
             outline: showAnswer
               ? "none"
               : "1px solid var(--eth-colors-primary)",
@@ -100,11 +100,11 @@ const QuizRadioGroup: React.FC<IProps> = ({
               showAnswer
                 ? "white"
                 : state.isChecked
-                ? "primaryPressed"
+                ? "primary.pressed"
                 : "disabled"
             }
             _groupHover={{
-              bg: showAnswer ? "white" : "primaryPressed",
+              bg: showAnswer ? "white" : "primary.pressed",
             }}
             me={2}
           >

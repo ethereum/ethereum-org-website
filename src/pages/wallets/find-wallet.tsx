@@ -67,10 +67,10 @@ const FilterTab = ({ children, active, onClick }: IFilterTabProps) => {
       onClick={onClick}
       w="50%"
       textAlign="center"
-      bg={active ? "primary" : "none"}
+      bg={active ? "primary.base" : "none"}
       py="0.9rem"
       px="0.4rem"
-      color={active ? "background" : "text"}
+      color={active ? "background.base" : "text"}
       _first={{
         borderTopLeftRadius: "lg",
       }}
@@ -78,7 +78,7 @@ const FilterTab = ({ children, active, onClick }: IFilterTabProps) => {
         borderTopRightRadius: "lg",
       }}
       _hover={{
-        bg: active ? "primary" : "selectHover",
+        bg: active ? "primary.base" : "selectHover",
       }}
     >
       {children}
@@ -202,7 +202,7 @@ const FindWalletPage = ({ data, location }) => {
       <Box
         position="sticky"
         top="76px"
-        bg="background"
+        bg="background.base"
         w="full"
         zIndex={1}
         py="5px"
@@ -213,7 +213,7 @@ const FindWalletPage = ({ data, location }) => {
           justifyContent="space-between"
           alignItems="center"
           border="1px solid"
-          borderColor="primary"
+          borderColor="primary.base"
           borderLeft="none"
           borderRightRadius="base"
           pt={1.5}
@@ -224,7 +224,7 @@ const FindWalletPage = ({ data, location }) => {
           zIndex={1}
           w="full"
           maxW={showMobileSidebar ? "330px" : "150px"}
-          bg="background"
+          bg="background.base"
           onClick={() => {
             setShowMobileSidebar(!showMobileSidebar)
             trackCustomEvent({
@@ -241,10 +241,10 @@ const FindWalletPage = ({ data, location }) => {
               pointerEvents: "none",
               boxSize: 8,
               line: {
-                stroke: "primary",
+                stroke: "primary.base",
               },
               circle: {
-                stroke: "primary",
+                stroke: "primary.base",
               },
             },
           }}
@@ -264,7 +264,7 @@ const FindWalletPage = ({ data, location }) => {
             </Text>
           </Box>
           {showMobileSidebar ? (
-            <Icon as={MdOutlineCancel} fill="primary" />
+            <Icon as={MdOutlineCancel} fill="primary.base" />
           ) : (
             <FilterBurgerIcon />
           )}
@@ -289,7 +289,7 @@ const FindWalletPage = ({ data, location }) => {
           direction="column"
           gap="0.55rem"
           overflowY="scroll"
-          bg="background"
+          bg="background.base"
           transition="0.5s all"
           zIndex={20}
           borderTopRightRadius="lg"
@@ -303,13 +303,13 @@ const FindWalletPage = ({ data, location }) => {
               width: 2,
             },
             "::-webkit-scrollbar-track": {
-              bg: "background",
+              bg: "background.base",
             },
             "::-webkit-scrollbar-thumb": {
               bgColor: "lightBorder",
               borderRadius: "base",
               border: "2px solid",
-              borderColor: "background",
+              borderColor: "background.base",
             },
           }}
           width={{ base: "90%", sm: "350px", lg: "full" }}
@@ -329,11 +329,11 @@ const FindWalletPage = ({ data, location }) => {
         >
           <Flex
             borderBottom="1px solid"
-            borderBottomColor="primary"
+            borderBottomColor="primary.base"
             cursor="pointer"
             position="sticky"
             top={0}
-            bg="background"
+            bg="background.base"
             zIndex={1}
             sx={{
               p: {
@@ -408,12 +408,12 @@ const FindWalletPage = ({ data, location }) => {
               as={BsArrowCounterclockwise}
               aria-hidden="true"
               fontSize="sm"
-              fill="primary"
+              fill="primary.base"
               _groupHover={{ fill: "selectHover" }}
             />
             <Text
               m={0}
-              color="primary"
+              color="primary.base"
               _groupHover={{ color: "selectHover" }}
               id="reset-filter"
               aria-hidden="true"
@@ -450,13 +450,13 @@ const FindWalletPage = ({ data, location }) => {
               width: 2,
             },
             "::-webkit-scrollbar-track": {
-              bg: "background",
+              bg: "background.base",
             },
             "::-webkit-scrollbar-thumb": {
               bgColor: "lightBorder",
               borderRadius: "base",
               border: "2px solid",
-              borderColor: "background",
+              borderColor: "background.base",
             },
             table: {
               m: 0,
