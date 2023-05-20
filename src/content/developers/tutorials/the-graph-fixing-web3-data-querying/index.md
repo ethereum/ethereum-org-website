@@ -126,7 +126,7 @@ You can define multiple contracts and handlers here. A typical setup would have 
 
 For convenience reasons you also might want to use a template tool like mustache. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. For a more advanced example setup, see for example the [Aave subgraph repo](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-And the full documentation can be seen here: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+And the full documentation can be seen here: https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest.
 
 ```yaml
 specVersion: 0.0.1
