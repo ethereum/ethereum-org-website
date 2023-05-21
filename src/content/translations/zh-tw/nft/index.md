@@ -304,7 +304,7 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 
 ## 非同質化代幣的環境影響 {#environmental-impact-nfts}
 
-創造以及轉移非同質化代幣都僅是以太坊交易 — 鑄造、購買、交換或是和非同質化代幣互動都並未直接消耗能源。 自從[合併](/roadmap/merge)之後，以太坊成為一個低能耗區塊鏈，代表使用非同質化代幣對環境的影響是可以忽略的。
+創造以及轉移非同質化代幣都僅是以太坊交易 — 鑄造、購買、交換或是和非同質化代幣互動都並未直接消耗能源。 自從[合併](/roadmap/merge)之後，以太坊成為一條低能耗區塊鏈，代表使用非同質化代幣對環境的影響是可以忽略的。
 
 [更多關於以太坊能耗的資訊](/energy-consumption/)。
 
@@ -341,7 +341,7 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 
 ## 建構非同質化代幣 {#build-with-nfts}
 
-大多數非同質化代幣都是使用統一的標準建構，即 [ERC-721](/developers/docs/standards/tokens/erc-721/)。 然而，您可能也想了解其他標準。 [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) 標準適用於半同質化代幣，這種代幣在電玩領域尤其有用。 而最近提出的 [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) 則可以讓非同質化代幣的鑄造更有效率， 此標準可讓您在一筆交易中隨心所欲地鑄造任意數量的代幣！
+大多數非同質化代幣都是使用統一的標準建構，即 [ERC-721](/developers/docs/standards/tokens/erc-721/)。 然而，您可能也想了解其他標準。 [ERC-1155](/developers/docs/standards/tokens/erc-1155/) 標準適用於半同質化代幣，這種代幣在遊戲領域尤其有用。 而最近提出的 [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) 則可以讓非同質化代幣的鑄造更有效率， 此標準可讓您在一筆交易中隨心所欲地鑄造任意數量的代幣！
 
 ## 延伸閱讀 {#further-reading}
 

@@ -815,6 +815,47 @@
         "eventAction": "Clicked",
         "eventName": "Clicked StaFi go to link"
       }
+    },
+    {
+      "name": "Bedrock",
+      "imageName": "rockX",
+      "hue": 224,
+      "launchDate": "2022-09-29",
+      "url": "https://bedrock.rockx.com/",
+      "audits": [
+        {
+          "name": "PeckSheild",
+          "url": "https://github.com/RockX-SG/stake/blob/main/PeckShield-Audit-Report-RockXStaking-v1.0.pdf"
+        }
+      ],
+      "minEth": 0,
+      "feePercentage": 10,
+      "tokens": [
+        {
+          "name": "Universal ETH",
+          "symbol": "uniETH",
+          "address": "0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4"
+        }
+      ],
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "hasPermissionlessNodes": false,
+      "pctMajorityClient": 100,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.gg/YJzs4UwsTp",
+        "twitter": "ttps://twitter.com/rockx_official",
+        "github": "https://github.com/RockX-SG/stake",
+        "linkedin": "https://www.linkedin.com/company/rockx-official",
+        "youtube": "https://www.youtube.com/@rockx_official"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Bedrock go to link"
+      }
     }
   ]
 }
