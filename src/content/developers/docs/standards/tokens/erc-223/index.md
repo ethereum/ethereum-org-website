@@ -69,7 +69,7 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 The API of ERC-223 token is similar to that of ERC-20, so from UI development point of view there is no difference. The only exception here is that ERC-223 tokens may  not have `approve` + `transferFrom` functions as these are optional for this standard.
 
-### Examples {#solidity-example}
+### Solidity examples {#solidity-example}
 
 The purpose of this example is to illustrate how a contract must work with ERC-223 tokens.
 
