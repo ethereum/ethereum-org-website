@@ -34,8 +34,8 @@ const QuizzesModal: React.FC<IProps> = ({
     >
       <ModalOverlay bgColor="blackAlpha.700" />
 
-      <ModalContent>
-        <ModalCloseButton />
+      <ModalContent h="full">
+        <ModalCloseButton zIndex={1} />
         {children}
       </ModalContent>
     </ChakraModal>

@@ -308,7 +308,7 @@ const QuizWidget: React.FC<IProps> = ({
             : "errorNeutral"
         }
         borderRadius="base"
-        boxShadow="drop"
+        boxShadow={isStandaloneQuiz ? "drop" : "none"}
         pt={12}
         pb={[8, 12]}
         px={[8, 12, 16]}
@@ -321,14 +321,15 @@ const QuizWidget: React.FC<IProps> = ({
               fontSize="184px"
               position="absolute"
               zIndex={-1}
-              top={-8}
+              top={isStandaloneQuiz ? -8 : 0}
               left={0}
             />
+
             <StarConfettiIcon
               fontSize="184px"
               position="absolute"
               zIndex={-1}
-              top={-8}
+              top={isStandaloneQuiz ? -8 : 0}
               right={0}
               transform="scaleX(-100%)"
             />
