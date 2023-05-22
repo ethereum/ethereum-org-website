@@ -1,7 +1,8 @@
 // 0) colors theme dark mode design
 
+// 0) doge background color
 // 2) local storage
-// 1) col derecha data (current completed, average score)
+// 1) col derecha data (current completed, average score, progress, current/total)
 
 // 5) custom Modal components
 // 5) TODO: hide green tick if not passed
@@ -33,6 +34,8 @@ import {
   Box,
   Circle,
   Flex,
+  Grid,
+  GridItem,
   Heading,
   Icon,
   Progress,
@@ -48,16 +51,17 @@ import { TrophyIcon } from "../components/icons/quiz"
 
 // Styles
 const GappedPage = styled(Page)`
-  gap: 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
     gap: 3rem;
   }
+
   * {
     scroll-margin-top: 5.5rem;
   }
 `
 
 const HeroContainer = styled.div`
+  /* TODO: update background */
   background: ${({ theme }) => theme.colors.runNodeGradient};
   width: 100%;
 `
@@ -195,8 +199,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         <Hero content={heroContent} isReverse />
       </HeroContainer>
 
-      {/* <Divider /> */}
-
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
         <ModalBody>
           <QuizWidget
@@ -207,20 +209,24 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         </ModalBody>
       </Modal>
 
-      <Content>
-        {/* TODO: use SplitContent instead?? */}
-        <Flex alignItems="start" gap={20}>
-          <Box flex={1}>
-            <Box>
-              <h2>
+      <Box px={{ base: 0, md: 8 }} py={{ base: 0, md: 4 }}>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          alignItems="start"
+          gap={{ base: 0, md: 20 }}
+        >
+          {/* quizzes list */}
+          <Box flex={1} order={{ base: 2, md: 1 }}>
+            <Box px={{ base: 8, md: 0 }}>
+              <Heading fontSize={{ base: "1.75rem", md: "2rem" }}>
                 {/* TODO: move to translations */}
                 Ethereum Basics
-              </h2>
+              </Heading>
 
-              <p>
+              <Text mb={8}>
                 This section covers the fundamental concepts of Ethereum,
                 ensuring you have a strong foundation.
-              </p>
+              </Text>
 
               <QuizzesList
                 content={ethereumBasicsQuizzes}
@@ -230,19 +236,19 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
               />
             </Box>
 
-            <Box mb={10}>
-              <h2>
+            <Box px={{ base: 8, md: 0 }} mb={10}>
+              <Heading fontSize={{ base: "1.75rem", md: "2rem" }}>
                 {/* TODO: move to translations */}
                 Using Ethereum
-              </h2>
+              </Heading>
 
-              <p>
+              <Text mb={8}>
                 Delve into the real-world applications of Ethereum and uncover
                 how this revolutionary blockchain platform is reshaping
                 industries. This is a great way to make sure you understand
                 things well enough before you start using cryptocurrencies
                 actively.
-              </p>
+              </Text>
 
               <QuizzesList
                 content={usingEthereumQuizzes}
@@ -253,20 +259,27 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
             </Box>
 
             <Flex
+              direction={{ base: "column", md: "row" }}
               justifyContent="space-between"
               alignItems="center"
               bg="ednBackground"
               borderRadius="lg"
               border="none"
-              p={6}
+              p={{ base: 8, md: 12 }}
             >
-              <Stack>
-                <Text fontWeight="bold" mb={-2}>
+              <Stack mb={{ base: 4, md: 0 }}>
+                {/* TODO: RTL left on md */}
+                <Text
+                  align={{ base: "center", md: "left" }}
+                  fontWeight="bold"
+                  mb={-2}
+                >
                   {/* TODO: move to translations */}
                   Want to see more quizzes here?
                 </Text>
 
-                <Text>
+                {/* TODO: RTL left on md */}
+                <Text align={{ base: "center", md: "left" }}>
                   {/* TODO: move to translations */}
                   Contribute to our library.
                 </Text>
@@ -287,60 +300,88 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
             </Flex>
           </Box>
 
-          <Box flex={1}>
-            <Stack mt={12} gap={2}>
-              <Flex
-                direction="column"
-                gap="1rem"
-                justifyContent="space-between"
+          {/* quizzes stats */}
+          <Box flex={1} order={{ base: 1, md: 2 }} w="full">
+            <Stack mt={{ base: 0, md: 12 }} gap={2}>
+              <Grid
+                gap={4}
                 bg="ednBackground"
                 borderRadius="lg"
                 border="none"
-                p={6}
+                p={{ base: 8, md: 12 }}
               >
-                <Flex justifyContent="space-between" alignItems="center">
-                  {/* TODO: move text to translations */}
-                  <Text fontWeight="bold" fontSize="xl" margin={0}>
+                <GridItem
+                  colSpan={{ base: 2, md: 1 }}
+                  alignSelf="center"
+                  order={1}
+                >
+                  {/* TODO: make text RTL */}
+                  <Text
+                    fontWeight="bold"
+                    fontSize="xl"
+                    margin={0}
+                    textAlign={{ base: "center", md: "left" }}
+                  >
                     Your total points
                   </Text>
+                </GridItem>
 
+                <GridItem
+                  colSpan={{ base: 2, md: 1 }}
+                  justifySelf={{ base: "auto", md: "end" }}
+                  alignSelf="center"
+                  order={{ base: 3, md: 2 }}
+                >
                   <Button
                     variant="outline-color"
                     leftIcon={<Icon as={FaTwitter} />}
                     onClick={handleShare}
+                    w={{ base: "full", md: "auto" }}
+                    mt={{ base: 2, md: 0 }}
                   >
                     <Translation id="share-results" />
                   </Button>
-                </Flex>
+                </GridItem>
 
-                <Flex alignItems="center">
-                  <Circle size="64px" bg="primary" mr={4}>
-                    <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
-                  </Circle>
+                <GridItem colSpan={2} order={{ base: 2, md: 3 }}>
+                  <Stack gap={2}>
+                    {/* user stats */}
+                    <Flex
+                      justifyContent={{ base: "center", md: "flex-start" }}
+                      alignItems="center"
+                    >
+                      <Circle size="64px" bg="primary" mr={4}>
+                        <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
+                      </Circle>
 
-                  <Text fontWeight="bold" fontSize="5xl" mb={0}>
-                    {userScore}
-                    <Text as="span" color="bodyLight">
-                      /{TOTAL_QUIZZES_POINTS}
-                    </Text>
-                  </Text>
-                </Flex>
+                      <Text fontWeight="bold" fontSize="5xl" mb={0}>
+                        {userScore}
+                        <Text as="span" color="bodyLight">
+                          /{TOTAL_QUIZZES_POINTS}
+                        </Text>
+                      </Text>
+                    </Flex>
 
-                <Progress value={20} />
+                    <Progress value={20} />
 
-                <Flex>
-                  {/* TODO: move text to translations */}
-                  <Text mr={10} mb={0}>
-                    Average score: <Text as="span">83%</Text>
-                  </Text>
+                    <Flex direction={{ base: "column", md: "row" }}>
+                      {/* TODO: move text to translations */}
+                      {/* TODO: remove hardcoded value */}
+                      <Text mr={10} mb={0} mt={{ base: 2, md: 0 }}>
+                        Average score: <Text as="span">83%</Text>
+                      </Text>
 
-                  {/* TODO: move text to translations */}
-                  <Text mb={0}>
-                    Completed: <Text as="span">2/{totalQuizzesNumber}</Text>
-                  </Text>
-                </Flex>
-              </Flex>
+                      {/* TODO: move text to translations */}
+                      {/* TODO: remove hardcoded value */}
+                      <Text mb={0}>
+                        Completed: <Text as="span">2/{totalQuizzesNumber}</Text>
+                      </Text>
+                    </Flex>
+                  </Stack>
+                </GridItem>
+              </Grid>
 
+              {/* community stats */}
               <Flex
                 direction="column"
                 gap="1rem"
@@ -348,10 +389,11 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 bg="ednBackground"
                 borderRadius="lg"
                 border="none"
-                p={6}
+                p={{ base: 8, md: 12 }}
+                display={{ base: "none", md: "block" }}
               >
                 {/* TODO: move text to translations */}
-                <Text fontWeight="bold" fontSize="xl" margin={0}>
+                <Text fontWeight="bold" fontSize="xl">
                   Community stats
                 </Text>
 
@@ -387,7 +429,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
             </Stack>
           </Box>
         </Flex>
-      </Content>
+      </Box>
 
       <Content>
         <FeedbackCard />

@@ -38,15 +38,17 @@ const QuizItem = (props: QuizzesListItem) => {
   return (
     <Flex
       justifyContent="space-between"
-      alignItems="center"
-      p={4}
+      alignItems={{ base: "flex-start", md: "center" }}
+      direction={{ base: "column", md: "row" }}
+      px={{ base: 0, md: 4 }}
+      py={4}
       color="text"
       borderBottom="1px solid"
       borderColor="gray.300"
       _first={{ borderTopRadius: "sm" }}
       _last={{ borderBottomRadius: "sm" }}
     >
-      <Stack ml={4}>
+      <Stack ml={4} mb={{ base: 5, md: 0 }}>
         <Flex gap={2} alignItems="center">
           <ListItem fontWeight="bold" mb={0}>
             <Text fontWeight="bold">{title}</Text>
@@ -56,7 +58,9 @@ const QuizItem = (props: QuizzesListItem) => {
           <GreenTickIcon />
         </Flex>
 
+        {/* Labels */}
         <Flex gap={3}>
+          {/* number of questions - label */}
           <Text
             fontWeight="light"
             fontSize="xs"
@@ -72,6 +76,7 @@ const QuizItem = (props: QuizzesListItem) => {
             {numberOfQuizzes} QUESTIONS
           </Text>
 
+          {/* difficulty - label */}
           <Text
             fontWeight="light"
             fontSize="xs"
@@ -88,9 +93,11 @@ const QuizItem = (props: QuizzesListItem) => {
         </Flex>
       </Stack>
 
-      <Box>
+      {/* Start Button */}
+      <Box w={{ base: "full", md: "auto" }}>
         <Button
           variant="outline-color"
+          w={{ base: "full", md: "auto" }}
           onClick={() => {
             quizHandler(id)
             modalHandler(true)
