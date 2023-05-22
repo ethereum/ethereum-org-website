@@ -14,18 +14,18 @@
 
 // 9) rewrite QuizzesModal as Modal with prop borderless, removing padding/borderprops
 
-import React, { createContext, useContext, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import { Content, Page } from "../components/SharedStyledComponents"
+import { Content } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
-import QuizzesList, { QuizzesListItem } from "../components/Quiz/QuizzesList"
+import QuizzesList from "../components/Quiz/QuizzesList"
 
 import { getImage } from "../utils/image"
 
@@ -51,16 +51,6 @@ import QuizzesModal from "../components/Quiz/QuizzesModal"
 import { NextQuizContext } from "../components/Quiz/context"
 
 // Styles
-const GappedPage = styled(Page)`
-  @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
-    gap: 3rem;
-  }
-
-  * {
-    scroll-margin-top: 5.5rem;
-  }
-`
-
 const HeroContainer = styled.div`
   background: ${({ theme }) => theme.colors.layer2Gradient};
   width: 100%;
@@ -117,9 +107,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
       setUserScore("0")
     }
   }, [])
-
-  // Next Quiz Context
-  // const NextQuizContext = createContext<string | undefined>(undefined)
 
   const { t } = useTranslation()
   const heroContent = {
@@ -191,7 +178,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
   return (
     <NextQuizContext.Provider value={nextQuiz}>
-      <GappedPage>
+      <Box>
         {/* TODO: update metadata, page title */}
         <PageMetadata
           title={t("page-run-a-node-title")}
@@ -210,7 +197,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
           />
         </QuizzesModal>
 
-        <Box px={{ base: 0, lg: 8 }} py={{ base: 0, lg: 4 }}>
+        <Box px={{ base: 0, lg: 8 }} py={{ base: 0, lg: 4 }} mb={12}>
           <Flex
             direction={{ base: "column", lg: "row" }}
             alignItems="start"
@@ -231,7 +218,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
                 <QuizzesList
                   content={ethereumBasicsQuizzes}
-                  numberOfQuizzes={ethereumBasicsQuizzes.length}
                   quizHandler={setCurrentQuiz}
                   nextHandler={setNextQuiz}
                   modalHandler={setModalOpen}
@@ -254,7 +240,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
                 <QuizzesList
                   content={usingEthereumQuizzes}
-                  numberOfQuizzes={usingEthereumQuizzes.length}
                   quizHandler={setCurrentQuiz}
                   nextHandler={setNextQuiz}
                   modalHandler={setModalOpen}
@@ -266,7 +251,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 justifyContent="space-between"
                 alignItems="center"
                 bg="ednBackground"
-                borderRadius="lg"
+                borderRadius={{ base: "none", lg: "lg" }}
                 border="none"
                 p={{ base: 8, lg: 12 }}
               >
@@ -305,13 +290,15 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
             {/* quizzes stats */}
             <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
-              <Stack mt={{ base: 0, lg: 12 }} gap={2}>
+              <Stack mt={{ base: 0, lg: 12 }} gap={{ base: 8, lg: 4 }}>
+                {/* user stats */}
                 <Grid
                   gap={4}
                   bg="ednBackground"
-                  borderRadius="lg"
+                  borderRadius={{ base: "none", lg: "lg" }}
                   border="none"
                   p={{ base: 8, lg: 12 }}
+                  mb={-2}
                 >
                   <GridItem
                     colSpan={{ base: 2, lg: 1 }}
@@ -348,7 +335,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
                   <GridItem colSpan={2} order={{ base: 2, lg: 3 }}>
                     <Stack gap={2}>
-                      {/* user stats */}
                       <Flex
                         justifyContent={{ base: "center", lg: "flex-start" }}
                         alignItems="center"
@@ -391,10 +377,9 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                   gap="1rem"
                   justifyContent="space-between"
                   bg="ednBackground"
-                  borderRadius="lg"
+                  borderRadius={{ base: "none", lg: "lg" }}
                   border="none"
                   p={{ base: 8, lg: 12 }}
-                  display={{ base: "none", lg: "block" }}
                 >
                   {/* TODO: move text to translations */}
                   <Text fontWeight="bold" fontSize="xl">
@@ -438,7 +423,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         <Content>
           <FeedbackCard />
         </Content>
-      </GappedPage>
+      </Box>
     </NextQuizContext.Provider>
   )
 }
