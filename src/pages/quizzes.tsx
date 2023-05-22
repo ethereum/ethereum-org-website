@@ -4,7 +4,6 @@
 // 2) local storage
 // 1) col derecha data (current completed, average score, progress, current/total)
 
-// 5) custom Modal components
 // 5) TODO: hide green tick if not passed
 // 5) mobile version
 // 6) tw share results copy
@@ -13,6 +12,8 @@
 // 6) reordenar imports
 // 7) remover componentes no usados
 // 8) add translation strings to copy
+
+// 9) rewrite QuizzesModal as Modal with prop borderless, removing padding/borderprops
 
 import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
@@ -23,10 +24,9 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import { Content, Page } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
-import Modal from "../components/Modal"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
-import QuizzesList, { QuizzesListItem } from "../components/QuizzesList"
+import QuizzesList, { QuizzesListItem } from "../components/Quiz/QuizzesList"
 
 import { getImage } from "../utils/image"
 
@@ -48,6 +48,7 @@ import ButtonLink from "../components/ButtonLink"
 
 import { FaGithub, FaTwitter } from "react-icons/fa"
 import { TrophyIcon } from "../components/icons/quiz"
+import QuizzesModal from "../components/Quiz/QuizzesModal"
 
 // Styles
 const GappedPage = styled(Page)`
@@ -68,15 +69,6 @@ const HeroContainer = styled.div`
 
 const Hero = styled(PageHero)`
   padding-bottom: 2rem;
-`
-
-const ModalBody = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    max-height: 16rem;
-    overflow-y: scroll;
-  }
 `
 
 // TODO: move to custom re-usable hook
@@ -114,6 +106,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   // }
 
   const [currentQuiz, setCurrentQuiz] = useState(INITIAL_QUIZ)
+  const [nextQuiz, setNextQuiz] = useState()
   const [userScore, setUserScore] = useState("0")
   const [isModalOpen, setModalOpen] = useState(false)
 
@@ -139,31 +132,36 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   }
 
   // TODO: move somewhere else
-  const ethereumBasicsQuizzes: Array<QuizzesListItem> = [
+  const ethereumBasicsQuizzes = [
     {
       id: "what-is-ethereum",
       title: "What is Ethereum?",
       level: "beginner",
+      next: "what-is-ether",
     },
     {
       id: "what-is-ether",
       title: "What is ether?",
       level: "beginner",
+      next: "wallets",
     },
     {
       id: "wallets",
       title: "What is a Wallet?",
       level: "beginner",
+      next: "web3",
     },
     {
       id: "web3",
       title: "What is Web3?",
       level: "beginner",
+      next: "security",
     },
     {
       id: "security",
       title: "Security and scams",
       level: "beginner",
+      next: "merge",
     },
     {
       id: "merge",
@@ -172,11 +170,12 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
     },
   ]
 
-  const usingEthereumQuizzes: Array<QuizzesListItem> = [
+  const usingEthereumQuizzes = [
     {
       id: "nfts",
       title: "What are NFTs?",
       level: "beginner",
+      next: "layer-2",
     },
     {
       id: "layer-2",
@@ -199,26 +198,25 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         <Hero content={heroContent} isReverse />
       </HeroContainer>
 
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <ModalBody>
-          <QuizWidget
-            quizKey={currentQuiz}
-            setUserScore={setUserScore}
-            hideHeading
-          />
-        </ModalBody>
-      </Modal>
+      <QuizzesModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+        <QuizWidget
+          quizKey={currentQuiz}
+          nextHandler={setNextQuiz}
+          setUserScore={setUserScore}
+          isStandaloneQuiz={false}
+        />
+      </QuizzesModal>
 
-      <Box px={{ base: 0, md: 8 }} py={{ base: 0, md: 4 }}>
+      <Box px={{ base: 0, lg: 8 }} py={{ base: 0, lg: 4 }}>
         <Flex
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: "column", lg: "row" }}
           alignItems="start"
-          gap={{ base: 0, md: 20 }}
+          gap={{ base: 0, lg: 20 }}
         >
           {/* quizzes list */}
-          <Box flex={1} order={{ base: 2, md: 1 }}>
-            <Box px={{ base: 8, md: 0 }}>
-              <Heading fontSize={{ base: "1.75rem", md: "2rem" }}>
+          <Box flex={1} order={{ base: 2, lg: 1 }}>
+            <Box px={{ base: 8, lg: 0 }}>
+              <Heading fontSize={{ base: "1.75rem", lg: "2rem" }}>
                 {/* TODO: move to translations */}
                 Ethereum Basics
               </Heading>
@@ -232,12 +230,13 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 content={ethereumBasicsQuizzes}
                 numberOfQuizzes={ethereumBasicsQuizzes.length}
                 quizHandler={setCurrentQuiz}
+                // nextHandler={setNextQuiz}
                 modalHandler={setModalOpen}
               />
             </Box>
 
-            <Box px={{ base: 8, md: 0 }} mb={10}>
-              <Heading fontSize={{ base: "1.75rem", md: "2rem" }}>
+            <Box px={{ base: 8, lg: 0 }} mb={10}>
+              <Heading fontSize={{ base: "1.75rem", lg: "2rem" }}>
                 {/* TODO: move to translations */}
                 Using Ethereum
               </Heading>
@@ -254,23 +253,24 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 content={usingEthereumQuizzes}
                 numberOfQuizzes={usingEthereumQuizzes.length}
                 quizHandler={setCurrentQuiz}
+                // nextHandler={setNextQuiz}
                 modalHandler={setModalOpen}
               />
             </Box>
 
             <Flex
-              direction={{ base: "column", md: "row" }}
+              direction={{ base: "column", lg: "row" }}
               justifyContent="space-between"
               alignItems="center"
               bg="ednBackground"
               borderRadius="lg"
               border="none"
-              p={{ base: 8, md: 12 }}
+              p={{ base: 8, lg: 12 }}
             >
-              <Stack mb={{ base: 4, md: 0 }}>
+              <Stack mb={{ base: 4, lg: 0 }}>
                 {/* TODO: RTL left on md */}
                 <Text
-                  align={{ base: "center", md: "left" }}
+                  align={{ base: "center", lg: "left" }}
                   fontWeight="bold"
                   mb={-2}
                 >
@@ -279,7 +279,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 </Text>
 
                 {/* TODO: RTL left on md */}
-                <Text align={{ base: "center", md: "left" }}>
+                <Text align={{ base: "center", lg: "left" }}>
                   {/* TODO: move to translations */}
                   Contribute to our library.
                 </Text>
@@ -301,17 +301,17 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
           </Box>
 
           {/* quizzes stats */}
-          <Box flex={1} order={{ base: 1, md: 2 }} w="full">
-            <Stack mt={{ base: 0, md: 12 }} gap={2}>
+          <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
+            <Stack mt={{ base: 0, lg: 12 }} gap={2}>
               <Grid
                 gap={4}
                 bg="ednBackground"
                 borderRadius="lg"
                 border="none"
-                p={{ base: 8, md: 12 }}
+                p={{ base: 8, lg: 12 }}
               >
                 <GridItem
-                  colSpan={{ base: 2, md: 1 }}
+                  colSpan={{ base: 2, lg: 1 }}
                   alignSelf="center"
                   order={1}
                 >
@@ -320,34 +320,34 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                     fontWeight="bold"
                     fontSize="xl"
                     margin={0}
-                    textAlign={{ base: "center", md: "left" }}
+                    textAlign={{ base: "center", lg: "left" }}
                   >
                     Your total points
                   </Text>
                 </GridItem>
 
                 <GridItem
-                  colSpan={{ base: 2, md: 1 }}
-                  justifySelf={{ base: "auto", md: "end" }}
+                  colSpan={{ base: 2, lg: 1 }}
+                  justifySelf={{ base: "auto", lg: "end" }}
                   alignSelf="center"
-                  order={{ base: 3, md: 2 }}
+                  order={{ base: 3, lg: 2 }}
                 >
                   <Button
                     variant="outline-color"
                     leftIcon={<Icon as={FaTwitter} />}
                     onClick={handleShare}
-                    w={{ base: "full", md: "auto" }}
-                    mt={{ base: 2, md: 0 }}
+                    w={{ base: "full", lg: "auto" }}
+                    mt={{ base: 2, lg: 0 }}
                   >
                     <Translation id="share-results" />
                   </Button>
                 </GridItem>
 
-                <GridItem colSpan={2} order={{ base: 2, md: 3 }}>
+                <GridItem colSpan={2} order={{ base: 2, lg: 3 }}>
                   <Stack gap={2}>
                     {/* user stats */}
                     <Flex
-                      justifyContent={{ base: "center", md: "flex-start" }}
+                      justifyContent={{ base: "center", lg: "flex-start" }}
                       alignItems="center"
                     >
                       <Circle size="64px" bg="primary" mr={4}>
@@ -364,10 +364,10 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
                     <Progress value={20} />
 
-                    <Flex direction={{ base: "column", md: "row" }}>
+                    <Flex direction={{ base: "column", lg: "row" }}>
                       {/* TODO: move text to translations */}
                       {/* TODO: remove hardcoded value */}
-                      <Text mr={10} mb={0} mt={{ base: 2, md: 0 }}>
+                      <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }}>
                         Average score: <Text as="span">83%</Text>
                       </Text>
 
@@ -389,8 +389,8 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 bg="ednBackground"
                 borderRadius="lg"
                 border="none"
-                p={{ base: 8, md: 12 }}
-                display={{ base: "none", md: "block" }}
+                p={{ base: 8, lg: 12 }}
+                display={{ base: "none", lg: "block" }}
               >
                 {/* TODO: move text to translations */}
                 <Text fontWeight="bold" fontSize="xl">
