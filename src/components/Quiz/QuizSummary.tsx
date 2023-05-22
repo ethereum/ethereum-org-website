@@ -33,9 +33,15 @@ const QuizSummary: React.FC<IProps> = ({
   // Render QuizSummary component
   return (
     <Box w="full" fontSize={["xl", "2xl"]}>
-      <Text fontWeight="700" textAlign="center">
+      <Text
+        fontWeight="700"
+        textAlign="center"
+        color={isPassingScore ? "success500" : "default"}
+        fontSize="3xl"
+      >
         {isPassingScore ? "You passed the quiz!" : "Your results"}
       </Text>
+
       <Flex
         p={4}
         justify="center"

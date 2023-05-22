@@ -10,6 +10,7 @@ import {
   Icon,
   Text,
   Spinner,
+  Stack,
 } from "@chakra-ui/react"
 import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
@@ -48,18 +49,20 @@ const PROGRESS_BAR_GAP = "4px"
 // Interfaces
 export interface IProps {
   quizKey?: string
+  nextHandler: (next?: string) => void
   maxQuestions?: number
   // TODO: update setUserScore interface
   setUserScore: () => {}
-  hideHeading?: boolean
+  isStandaloneQuiz?: boolean
 }
 
 // Component
 const QuizWidget: React.FC<IProps> = ({
   quizKey,
+  nextHandler,
   maxQuestions,
   setUserScore,
-  hideHeading = false,
+  isStandaloneQuiz = true,
 }) => {
   const { t } = useTranslation()
   const [quizData, setQuizData] = useState<Quiz | null>(null)
@@ -281,7 +284,7 @@ const QuizWidget: React.FC<IProps> = ({
   // Render QuizWidget component
   return (
     <Flex width="full" direction="column" alignItems="center">
-      {!hideHeading && (
+      {isStandaloneQuiz && (
         <Heading
           as="h2"
           mb={12}
@@ -331,6 +334,7 @@ const QuizWidget: React.FC<IProps> = ({
             />
           </>
         )}
+
         {/* Answer Icon - defaults to TrophyIcon */}
         <Circle
           size="50px"
@@ -348,11 +352,28 @@ const QuizWidget: React.FC<IProps> = ({
         >
           <AnswerIcon />
         </Circle>
+
         {quizData ? (
           <>
             <Center>
-              <Text fontStyle="normal" fontWeight="700" color="primaryHover">
-                {quizData.title}
+              <Text
+                fontStyle="normal"
+                fontWeight="700"
+                // TODO: refactor get color
+                color={
+                  showAnswer && currentQuestionAnswerChoice?.isCorrect
+                    ? "success"
+                    : showAnswer && !currentQuestionAnswerChoice?.isCorrect
+                    ? "fail"
+                    : "primaryHover"
+                }
+              >
+                {/* TODO: refactor get title */}
+                {showAnswer && currentQuestionAnswerChoice?.isCorrect
+                  ? "Correct!"
+                  : showAnswer && !currentQuestionAnswerChoice?.isCorrect
+                  ? "Incorrect"
+                  : quizData.title}
               </Text>
             </Center>
             {/* Progress bar */}
@@ -411,20 +432,62 @@ const QuizWidget: React.FC<IProps> = ({
                       <Translation id="try-again" />
                     </Button>
                   )}
+
                 {showResults ? (
-                  <>
-                    <Button
-                      leftIcon={<Icon as={FaTwitter} />}
-                      onClick={handleShare}
-                    >
-                      <Translation id="share-results" />
-                    </Button>
-                    {score < 100 && (
+                  <Flex
+                    alignItems={isStandaloneQuiz ? "initial" : "center"}
+                    direction={isStandaloneQuiz ? "row" : "column"}
+                    gap={{ base: 6, md: 2 }}
+                  >
+                    <Flex gap={{ base: 6, md: 2 }}>
+                      <Button
+                        variant="outline-color"
+                        leftIcon={<Icon as={FaTwitter} />}
+                        onClick={handleShare}
+                      >
+                        <Translation id="share-results" />
+                      </Button>
+
+                      {/* Show Next Quiz button if quiz is opened from hub page */}
+                      {!isStandaloneQuiz && (
+                        <Button
+                          onClick={() => {
+                            console.log("ASD")
+                            nextHandler("what-is-ether")
+                          }}
+                        >
+                          {/* TODO: move to translations */}
+                          Next quiz
+                        </Button>
+
+                        // onClick={() => {
+                        //   quizHandler(id)
+                        //   modalHandler(true)
+                        // }}
+                      )}
+                    </Flex>
+
+                    {score < 100 && isStandaloneQuiz ? (
                       <Button onClick={initialize}>
                         <Translation id="try-again" />
                       </Button>
+                    ) : (
+                      <Button
+                        onClick={initialize}
+                        variant="unstyled"
+                        color="primary"
+                        _hover={{ boxShadow: "none" }}
+                      >
+                        <Text
+                          textDecoration="underline"
+                          fontWeight="bold"
+                          m={0}
+                        >
+                          <Translation id="try-again" />
+                        </Text>
+                      </Button>
                     )}
-                  </>
+                  </Flex>
                 ) : showAnswer ? (
                   <Button onClick={handleContinue}>
                     {userQuizProgress.length === quizData.questions.length - 1
