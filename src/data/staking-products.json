@@ -2,7 +2,7 @@
   "nodeTools": [
     {
       "name": "Rocket Pool CLI",
-      "imageName": "RocketPool",
+      "imageName": "rocketPool",
       "hue": 379,
       "launchDate": "2021-11-08",
       "url": "https://rocketpool.net/node-operators",
@@ -51,7 +51,7 @@
     },
     {
       "name": "Stereum",
-      "imageName": "Stereum",
+      "imageName": "stereum",
       "hue": 164,
       "launchDate": "2021-02-06",
       "url": "https://stereum.net/ethereum-node-setup/",
@@ -83,7 +83,7 @@
     },
     {
       "name": "DAppNode",
-      "imageName": "StakingDappnode",
+      "imageName": "dappnode",
       "hue": 196,
       "launchDate": "2020-12-01",
       "url": "https://dappnode.io",
@@ -110,7 +110,7 @@
     },
     {
       "name": "Ethereum on Arm",
-      "imageName": "DefaultOpenSource",
+      "imageName": "defaultOpenSource",
       "hue": 209,
       "launchDate": "2021-03-25",
       "url": "https://ethereum-on-arm-documentation.readthedocs.io/",
@@ -135,7 +135,7 @@
     },
     {
       "name": "eth-docker",
-      "imageName": "Docker",
+      "imageName": "docker",
       "hue": 221,
       "launchDate": "2021-06-05",
       "url": "https://eth-docker.net",
@@ -160,7 +160,7 @@
     },
     {
       "name": "Vouch + Dirk",
-      "imageName": "DefaultOpenSource",
+      "imageName": "defaultOpenSource",
       "hue": 239,
       "launchDate": "2020-12-01",
       "url": "https://www.attestant.io/posts/introducing-vouch/",
@@ -193,7 +193,7 @@
     },
     {
       "name": "Avado",
-      "imageName": "Avado",
+      "imageName": "avado",
       "hue": 239,
       "launchDate": "2018-12-01",
       "url": "https://ava.do/",
@@ -224,7 +224,7 @@
   "keyGen": [
     {
       "name": "Wagyu Key Gen",
-      "imageName": "Wagyu",
+      "imageName": "wagyu",
       "hue": 46,
       "launchDate": "2021-12-01",
       "url": "https://wagyu.gg/",
@@ -254,7 +254,7 @@
     },
     {
       "name": "ethdo",
-      "imageName": "DefaultOpenSource",
+      "imageName": "defaultOpenSource",
       "hue": 281,
       "launchDate": "2020-12-01",
       "url": "https://github.com/wealdtech/ethdo",
@@ -282,7 +282,7 @@
     },
     {
       "name": "Avado",
-      "imageName": "Avado",
+      "imageName": "avado",
       "hue": 239,
       "launchDate": "2018-12-01",
       "url": "https://ava.do/",
@@ -312,7 +312,7 @@
   "saas": [
     {
       "name": "Kiln",
-      "imageName": "Kiln",
+      "imageName": "kiln",
       "hue": 20,
       "launchDate": "2021-03-01",
       "url": "https://www.kiln.fi/",
@@ -352,7 +352,7 @@
     },
     {
       "name": "Allnodes",
-      "imageName": "Allnodes",
+      "imageName": "allnodes",
       "hue": 248,
       "launchDate": "2020-12-01",
       "url": "https://www.allnodes.com/eth2/staking",
@@ -383,7 +383,7 @@
     },
     {
       "name": "Squid",
-      "imageName": "Squid",
+      "imageName": "squid",
       "hue": 240,
       "launchDate": "2022-11-01",
       "url": "https://www.ohsquid.com/",
@@ -412,7 +412,7 @@
     },
     {
       "name": "Ethpool",
-      "imageName": "Ethpool",
+      "imageName": "ethpool",
       "hue": 20,
       "launchDate": "2021-10-20",
       "url": "https://ethpool.org/",
@@ -438,7 +438,7 @@
     },
     {
       "name": "BloxStaking",
-      "imageName": "Bloxstaking",
+      "imageName": "bloxstaking",
       "hue": 341,
       "launchDate": "2020-12-08",
       "url": "https://www.bloxstaking.com/",
@@ -474,7 +474,7 @@
     },
     {
       "name": "Abyss Finance",
-      "imageName": "Abyss",
+      "imageName": "abyss",
       "hue": 237,
       "launchDate": "2020-12-01",
       "url": "https://abyss.finance/hosting",
@@ -505,7 +505,7 @@
     },
     {
       "name": "Sensei Node",
-      "imageName": "SenseiNode",
+      "imageName": "senseiNode",
       "hue": 137,
       "launchDate": "2022-11-01",
       "url": "https://www.senseinode.com/",
@@ -541,7 +541,7 @@
   "pools": [
     {
       "name": "Rocket Pool",
-      "imageName": "RocketPool",
+      "imageName": "rocketPool",
       "hue": 14,
       "launchDate": "2021-11-08",
       "url": "https://rocketpool.net/",
@@ -588,7 +588,7 @@
     },
     {
       "name": "Lido",
-      "imageName": "Lido",
+      "imageName": "lido",
       "hue": 210,
       "launchDate": "2020-12-17",
       "url": "https://lido.fi/",
@@ -637,7 +637,7 @@
     },
     {
       "name": "StakeWise",
-      "imageName": "Stakewise",
+      "imageName": "stakewise",
       "hue": 220,
       "launchDate": "2021-02-01",
       "url": "https://app.stakewise.io/",
@@ -697,7 +697,7 @@
     },
     {
       "name": "stakefish",
-      "imageName": "Stakefish",
+      "imageName": "stakefish",
       "hue": 73,
       "launchDate": "2020-12-01",
       "url": "https://stake.fish/ethereum-shared/",
@@ -730,7 +730,7 @@
     },
     {
       "name": "Ankr Staking",
-      "imageName": "Ankr",
+      "imageName": "ankr",
       "hue": 221,
       "launchDate": "2020-11-20",
       "url": "https://stakefi.ankr.com/liquid-staking",
@@ -778,7 +778,7 @@
     },
     {
       "name": "StaFi",
-      "imageName": "Stafi",
+      "imageName": "stafi",
       "hue": 155,
       "launchDate": "2020-10-16",
       "url": "https://stafi.io",
@@ -818,7 +818,7 @@
     },
     {
       "name": "Bedrock",
-      "imageName": "RockX",
+      "imageName": "rockX",
       "hue": 224,
       "launchDate": "2022-09-29",
       "url": "https://bedrock.rockx.com/",
