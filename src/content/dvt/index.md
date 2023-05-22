@@ -62,7 +62,7 @@ DVT has significant implications for the broader staking industry:
 
 ### Solo stakers {#solo-stakers}
 
-The main benefit DVT brings to solo stakers is that it removes the technical barrier for running a validator node. Stakers that want to run their own validators no longer have to supply the infrastructure to participate in staking. Running a single validator instance is susceptible to technical issues, hacking, and high maintenance costs. A solo staker can use DVT to run their validator in a decentralized manner, on par with the performance of large staking services, while still having complete control over their validator keys and custody of their funds.
+DVT also enables non-custodial staking by allowing you to distribute your validator key across remote nodes while keeping the full key completely offline. This means home stakers do not necessarily need to outlay for hardware or add to their home electricity bills, while distributing the key shares can help strengthen them against potential hacks.
 
 ### Staking as a service (SaaS) {#saas}
 
