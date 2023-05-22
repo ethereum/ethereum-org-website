@@ -69,7 +69,7 @@ The main benefit DVT brings to solo stakers is that it removes the technical bar
 
 Operators (such as staking pools and institutional stakers) managing many validators can use DVT to reduce their risk. By distributing their infrastructure, they can add redundancy to their operations and diversify their infrastructure. 
 
-Staking providers invest heavily to work around operational costs in development, DevOps, and comprehensive insurance policies. With DVT, responsibility is distributed between nodes, resulting in much lower operational risk and expense.
+DVT shares responsibility for key management across multiple nodes, meaning some operational costs can also be shared. DVT can also reduce operational risk and insurance costs for staking providers.
 
 
 ### Staking pools {#staking-pools}
