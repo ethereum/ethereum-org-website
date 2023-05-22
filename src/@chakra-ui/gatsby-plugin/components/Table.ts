@@ -49,7 +49,7 @@ const baseStyle = defineMergeStyles(tableDefaultTheme.baseStyle, {
            * Override specificity when hovering
            * over even rows in 'striped' variant.
            */
-          bg: "primaryLowContrast !important",
+          bg: "backgroundHighlight !important",
         },
       },
     },
