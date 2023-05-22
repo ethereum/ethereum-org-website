@@ -291,6 +291,7 @@ const QuizWidget: React.FC<IProps> = ({
 
   // TODO: Allow user to submit quiz for storage
   // TODO: Fix a11y keyboard tab stops
+  const hasNextQuiz = !isStandaloneQuiz && !!nextQuiz
 
   // Render QuizWidget component
   return (
@@ -389,6 +390,7 @@ const QuizWidget: React.FC<IProps> = ({
                   : quizData.title}
               </Text>
             </Center>
+
             {/* Progress bar */}
             <Center gap={PROGRESS_BAR_GAP} marginBottom={6}>
               {quizData.questions.map(({ id }, index) => {
@@ -409,6 +411,7 @@ const QuizWidget: React.FC<IProps> = ({
                 )
               })}
             </Center>
+
             <Center>
               {showResults ? (
                 <QuizSummary
@@ -426,6 +429,7 @@ const QuizWidget: React.FC<IProps> = ({
                 />
               )}
             </Center>
+
             <Center mt={[8, 12]}>
               <Flex
                 gap={6}
@@ -461,8 +465,8 @@ const QuizWidget: React.FC<IProps> = ({
                         <Translation id="share-results" />
                       </Button>
 
-                      {/* Show Next Quiz button if quiz is opened from hub page */}
-                      {!isStandaloneQuiz && (
+                      {/* Show `Next Quiz` button if quiz is opened from hub page */}
+                      {hasNextQuiz && (
                         <Button onClick={() => quizHandler(nextQuiz)}>
                           {/* TODO: move to translations */}
                           Next quiz
