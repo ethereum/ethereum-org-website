@@ -1,5 +1,11 @@
 // Import libraries
-import React, { useEffect, useState, useMemo, useCallback } from "react"
+import React, {
+  useEffect,
+  useState,
+  useMemo,
+  useCallback,
+  useContext,
+} from "react"
 import {
   Box,
   Center,
@@ -31,7 +37,7 @@ import {
 } from "../icons/quiz"
 
 // Import data
-import allQuizData from "../../data/quizzes"
+import allQuizzesData from "../../data/quizzes"
 import questionBank from "../../data/quizzes/questionBank"
 
 // Import utilities
@@ -42,6 +48,7 @@ import { AnswerChoice, RawQuiz, Quiz, RawQuestion, Question } from "../../types"
 
 // Import constants
 import { PASSING_QUIZ_SCORE } from "../../constants"
+import { NextQuizContext } from "./context"
 
 // Constants
 const PROGRESS_BAR_GAP = "4px"
@@ -49,7 +56,8 @@ const PROGRESS_BAR_GAP = "4px"
 // Interfaces
 export interface IProps {
   quizKey?: string
-  nextHandler: (next?: string) => void
+  // TODO: update type
+  quizHandler: (next?: string) => {}
   maxQuestions?: number
   // TODO: update setUserScore interface
   setUserScore: () => {}
@@ -59,7 +67,7 @@ export interface IProps {
 // Component
 const QuizWidget: React.FC<IProps> = ({
   quizKey,
-  nextHandler,
+  quizHandler,
   maxQuestions,
   setUserScore,
   isStandaloneQuiz = true,
@@ -73,6 +81,8 @@ const QuizWidget: React.FC<IProps> = ({
   const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
+
+  const nextQuiz = useContext(NextQuizContext)
 
   // TODO: move somewhere else
   const USER_SCORE_KEY = "userScoreKey"
@@ -88,7 +98,7 @@ const QuizWidget: React.FC<IProps> = ({
     // Get quiz key
     const currentQuizKey =
       quizKey ||
-      Object.keys(allQuizData).filter((quizUri) =>
+      Object.keys(allQuizzesData).filter((quizUri) =>
         window?.location.href.includes(quizUri)
       )[0] ||
       null
@@ -96,7 +106,7 @@ const QuizWidget: React.FC<IProps> = ({
     if (!currentQuizKey) return
 
     // Get quiz data from key, shuffle, then truncate if necessary
-    const rawQuiz: RawQuiz = allQuizData[currentQuizKey]
+    const rawQuiz: RawQuiz = allQuizzesData[currentQuizKey]
     const questions: Array<Question> = rawQuiz.questions.map((id) => {
       const rawQuestion: RawQuestion = questionBank[id]
       return { id, ...rawQuestion }
@@ -156,7 +166,7 @@ const QuizWidget: React.FC<IProps> = ({
       ({ isCorrect }) => isCorrect
     ).length
     // TODO: remove clog
-    console.log(numberOfCorrectAnswers)
+    console.log({ numberOfCorrectAnswers })
     localStorage.setItem(USER_SCORE_KEY, numberOfCorrectAnswers.toString())
 
     return numberOfCorrectAnswers
@@ -236,6 +246,7 @@ const QuizWidget: React.FC<IProps> = ({
     setUserScore(computeUserScore.toString())
 
     if (showResults) {
+      // TODO: does this code executes??
       trackCustomEvent({
         eventCategory: "Quiz widget",
         eventAction: "Other",
@@ -284,6 +295,7 @@ const QuizWidget: React.FC<IProps> = ({
   // Render QuizWidget component
   return (
     <Flex width="full" direction="column" alignItems="center">
+      {/* Hide heading if quiz is not in Learning Quizzes Hub page */}
       {isStandaloneQuiz && (
         <Heading
           as="h2"
@@ -451,20 +463,10 @@ const QuizWidget: React.FC<IProps> = ({
 
                       {/* Show Next Quiz button if quiz is opened from hub page */}
                       {!isStandaloneQuiz && (
-                        <Button
-                          onClick={() => {
-                            console.log("ASD")
-                            nextHandler("what-is-ether")
-                          }}
-                        >
+                        <Button onClick={() => quizHandler(nextQuiz)}>
                           {/* TODO: move to translations */}
                           Next quiz
                         </Button>
-
-                        // onClick={() => {
-                        //   quizHandler(id)
-                        //   modalHandler(true)
-                        // }}
                       )}
                     </Flex>
 

@@ -34,8 +34,14 @@ const QuizzesModal: React.FC<IProps> = ({
     >
       <ModalOverlay bgColor="blackAlpha.700" />
 
-      <ModalContent h="full">
-        <ModalCloseButton zIndex={1} />
+      <ModalContent h={{ base: "100vh", md: "auto" }}>
+        <ModalCloseButton
+          size={{ base: "lg", md: "md" }}
+          zIndex={1}
+          // position="absolute"
+          // top={-20}
+          // right={2}
+        />
         {children}
       </ModalContent>
     </ChakraModal>

@@ -3,7 +3,7 @@
 // remove unused imports
 // reorder imports
 
-import React from "react"
+import React, { useContext } from "react"
 import {
   Box,
   BoxProps,
@@ -16,35 +16,30 @@ import {
 import Button from "../Button"
 import { GreenTickIcon } from "../icons/quiz"
 
+// Raw quizzes data
+import allQuizzesData from "../../data/quizzes"
+
 export type QuizzesListItem = {
   title: string
   id: string
-  numberOfQuizzes: number
   level: string
-  // next?: string
+  next?: string
   quizHandler: (id: string) => void
-  // nextHandler: (next?: string) => void
+  nextHandler: (next?: string) => void
   modalHandler: (isModalOpen: boolean) => void
 }
 
 export interface IProps extends BoxProps {
   content: Array<QuizzesListItem>
   quizHandler: (id: string) => void
-  // nextHandler: (next?: string) => void
+  nextHandler: (next?: string) => void
   modalHandler: (isModalOpen: boolean) => void
 }
 
 const QuizItem = (props: QuizzesListItem) => {
-  const {
-    title,
-    id,
-    numberOfQuizzes,
-    level,
-    // next,
-    quizHandler,
-    // nextHandler,
-    modalHandler,
-  } = props
+  const { title, id, level, next, quizHandler, nextHandler, modalHandler } =
+    props
+  const numberOfQuestions = allQuizzesData[id].questions.length
 
   return (
     <Flex
@@ -84,7 +79,7 @@ const QuizItem = (props: QuizzesListItem) => {
             mb={0}
           >
             {/* TODO: add to translations */}
-            {numberOfQuizzes} QUESTIONS
+            {numberOfQuestions} QUESTIONS
           </Text>
 
           {/* difficulty - label */}
@@ -111,7 +106,7 @@ const QuizItem = (props: QuizzesListItem) => {
           w={{ base: "full", lg: "auto" }}
           onClick={() => {
             quizHandler(id)
-            // nextHandler(next)
+            nextHandler(next)
             modalHandler(true)
           }}
         >
@@ -126,23 +121,22 @@ const QuizItem = (props: QuizzesListItem) => {
 const QuizzesList: React.FC<IProps> = ({
   content,
   quizHandler,
-  // nextHandler,
+  nextHandler,
   modalHandler,
 }) => (
   <OrderedList m={0}>
     {content.map((listItem) => {
-      const { id, title, level } = listItem
+      const { id, title, level, next } = listItem
 
       return (
         <QuizItem
           key={id}
           id={id}
           title={title}
-          numberOfQuizzes={content.length}
           level={level}
-          // next={next}
+          next={next}
           quizHandler={quizHandler}
-          // nextHandler={nextHandler}
+          nextHandler={nextHandler}
           modalHandler={modalHandler}
         />
       )
