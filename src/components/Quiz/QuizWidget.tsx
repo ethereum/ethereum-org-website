@@ -303,8 +303,8 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
             !showAnswer
               ? "primary.base"
               : currentQuestionAnswerChoice?.isCorrect
-              ? "success"
-              : "error"
+              ? "success.base"
+              : "error.base"
           }
           position="absolute"
           top={0}
