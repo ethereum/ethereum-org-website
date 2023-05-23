@@ -12,14 +12,14 @@ body:
     attributes:
       label: Page URL
       description: URL for the page the quiz can be found on, or should be added to
-    validation:
+    validations:
       required: true
   - type: textarea
     id: question_content
     attributes:
       label: Question content
       description: Suggest questions to add, update, or delete based on contribution guideline
-    validation:
+    validations:
       required: true
   - type: checkboxes
     id: work_on
