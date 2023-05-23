@@ -1,7 +1,7 @@
 import { createIcon } from "@chakra-ui/react"
 
-export const DockerIcon = createIcon({
-  displayName: "DockerIcon",
+export const DockerGlyphIcon = createIcon({
+  displayName: "DockerGlyphIcon",
   viewBox: "0 0 66 47",
   defaultProps: {
     width: "66px",
