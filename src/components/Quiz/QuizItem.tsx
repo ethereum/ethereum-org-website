@@ -1,11 +1,11 @@
 import React from "react"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
-import { GreenTickIcon } from "../icons/quiz"
-import { QuizzesListItem } from "./QuizzesList"
-
 import Button from "../Button"
 import Translation from "../Translation"
+import { QuizzesListItem } from "./QuizzesList"
+
+import { GreenTickIcon } from "../icons/quiz"
 
 // Raw quizzes data
 import allQuizzesData from "../../data/quizzes"

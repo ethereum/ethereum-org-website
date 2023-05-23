@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import {
   Box,
   Circle,
@@ -19,6 +19,7 @@ import { TrophyIcon } from "../icons/quiz"
 
 export interface IProps {
   totalQuizzesNumber: number
+  userScore: number
 }
 
 // TODO: move to custom re-usable hook, remove from QuizWidget??
@@ -40,10 +41,7 @@ const handleShare = (): void => {
   )
 }
 
-const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber }) => {
-  // TODO: fix score computing
-  const [userScore, setUserScore] = useState(0)
-
+const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber, userScore }) => {
   // useEffect(() => {
   //   if (localStorage.getItem(USER_SCORE_KEY)) {
   //     setUserScore(localStorage.getItem(USER_SCORE_KEY)!)
@@ -137,18 +135,21 @@ const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber }) => {
         {/* community stats */}
         <Flex
           direction="column"
-          gap="1rem"
+          gap={6}
           justifyContent="space-between"
           bg="ednBackground"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
           p={{ base: 8, lg: 12 }}
         >
-          <Text fontWeight="bold" fontSize="xl">
+          <Text fontWeight="bold" fontSize="xl" mb={0}>
             <Translation id="community-stats" />
           </Text>
 
-          <Flex>
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            gap={{ base: 6, md: 10 }}
+          >
             <Stack>
               <Text mr={10} mb={-2}>
                 <Translation id="average-score" />

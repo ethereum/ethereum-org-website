@@ -6,31 +6,27 @@
 
 // 0) colors theme dark mode design
 // 5) dark mode colors
-// 6) reordenar imports
-// 7) remover componentes no usadoss
 
 import React, { useState } from "react"
 import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
+import { FaGithub } from "react-icons/fa"
+
+import ButtonLink from "../components/ButtonLink"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import { Content } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
-
 import QuizzesList from "../components/Quiz/QuizzesList"
+import QuizzesModal from "../components/Quiz/QuizzesModal"
+import QuizzesStats from "../components/Quiz/QuizzesStats"
+import { QuizStatus, QuizzesHubContext } from "../components/Quiz/context"
 
 import { getImage } from "../utils/image"
-
-import ButtonLink from "../components/ButtonLink"
-
-import { FaGithub } from "react-icons/fa"
-import QuizzesModal from "../components/Quiz/QuizzesModal"
-import { QuizStatus, QuizzesHubContext } from "../components/Quiz/context"
-import QuizzesStats from "../components/Quiz/QuizzesStats"
 
 // Styles
 // TODO: remove styled components
@@ -59,6 +55,8 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   const [currentQuiz, setCurrentQuiz] = useState(INITIAL_QUIZ)
   const [nextQuiz, setNextQuiz] = useState("neutral")
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
+  // TODO: fix score computing
+  const [userScore, setUserScore] = useState(0)
   const [isModalOpen, setModalOpen] = useState(false)
 
   const { t } = useTranslation()
@@ -233,7 +231,10 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
           </Box>
 
           {/* quizzes stats */}
-          <QuizzesStats totalQuizzesNumber={totalQuizzesNumber} />
+          <QuizzesStats
+            totalQuizzesNumber={totalQuizzesNumber}
+            userScore={userScore}
+          />
         </Flex>
       </Box>
 
