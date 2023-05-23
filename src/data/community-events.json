@@ -295,5 +295,14 @@
     "description": "EthereumSP 2023 is a four-day event to educate and boost the Brazilian Web3 community. Participants will have free access to advanced workshops, bootcamps, and an international Hackathon.",
     "startDate": "2023-06-22",
     "endDate": "2023-06-25"
+  },
+  {
+    "title": "ETHGlobal Istanbul",
+    "to": "https://ethglobal.com/events/istanbul",
+    "sponsor": null,
+    "location": "Istanbul, Türkiye",
+    "description": "ETHGlobal Istanbul is going to be an event full of hacking, networking, side events and fun activites.",
+    "startDate": "2023-11-17",
+    "endDate": "2023-11-19"
   }
 ]
