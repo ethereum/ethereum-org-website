@@ -247,6 +247,20 @@ const scrapeDirectory = (
       copyFileSync(source, mdDestinationPath)
       // Update .md tracker
       trackers.langs[repoLangCode].mdCopyCount++
+    } else if (item.endsWith(".svg")) {
+      const svgDestDirPath: string = join(
+        repoRoot,
+        "src",
+        "content",
+        "translations",
+        repoLangCode,
+        contentSubpath
+      )
+      if (!existsSync(svgDestDirPath))
+        mkdirSync(svgDestDirPath, { recursive: true })
+      const svgDestinationPath: string = join(svgDestDirPath, item)
+      log("Copy .svg from", source, "to", svgDestinationPath)
+      copyFileSync(source, svgDestinationPath)
     } else {
       log(`Entering ${_path}/${item}`)
       // If another directory, recursively call `scrapeDirectory`
