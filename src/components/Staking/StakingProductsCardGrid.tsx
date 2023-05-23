@@ -247,7 +247,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
         borderRadius="base"
         maxH={24}
       >
-        {!!Svg && <Icon as={Svg} fontSize="2rem" />}
+        {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
         <Heading fontSize="2xl" color="white">
           {name}
         </Heading>
