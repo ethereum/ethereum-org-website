@@ -39,7 +39,11 @@ const QuizSummary: React.FC<IProps> = ({
         color={isPassingScore ? "success500" : "default"}
         fontSize="3xl"
       >
-        {isPassingScore ? "You passed the quiz!" : "Your results"}
+        {isPassingScore ? (
+          <Translation id="passed" />
+        ) : (
+          <Translation id="your-results" />
+        )}
       </Text>
 
       <Flex
@@ -70,12 +74,14 @@ const QuizSummary: React.FC<IProps> = ({
             <Translation id="score" />
           </Text>
         </Flex>
+
         <Flex>
           <Text {...valueStyles}>+{correctCount}</Text>
           <Text {...labelStyles}>
             <Translation id="correct" />
           </Text>
         </Flex>
+
         {largerThanMobile && (
           <Flex>
             <Text {...valueStyles}>{questionCount}</Text>

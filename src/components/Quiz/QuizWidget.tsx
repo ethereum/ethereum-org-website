@@ -341,6 +341,7 @@ const QuizWidget: React.FC<IProps> = ({
         maxW="600px"
         h={isStandaloneQuiz ? "100%" : { base: "100vh", md: "100%" }}
         px={{ base: 8, md: 12, lg: 16 }}
+        // Reduce padding when showing Spinner
         pt={!quizData ? 10 : { base: 10, md: 12 }}
         pb={!quizData ? 2 : { base: 4, md: 8 }}
         justifyContent="space-between"
