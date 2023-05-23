@@ -84,7 +84,7 @@ const QuizWidget: React.FC<IProps> = ({
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  const { next: nextQuiz, status } = useContext(QuizzesHubContext)
+  const { next: nextQuiz } = useContext(QuizzesHubContext)
 
   // TODO: move somewhere else
   const USER_SCORE_KEY = "userScoreKey"
@@ -96,7 +96,10 @@ const QuizWidget: React.FC<IProps> = ({
     setUserQuizProgress([])
     setShowAnswer(false)
     setSelectedAnswer(null)
-    statusHandler("neutral")
+
+    if (!isStandaloneQuiz) {
+      statusHandler("neutral")
+    }
 
     // Get quiz key
     const currentQuizKey =
@@ -170,7 +173,7 @@ const QuizWidget: React.FC<IProps> = ({
     ).length
     // TODO: remove clog
     console.log({ numberOfCorrectAnswers })
-    localStorage.setItem(USER_SCORE_KEY, numberOfCorrectAnswers.toString())
+    // localStorage.setItem(USER_SCORE_KEY, numberOfCorrectAnswers.toString())
 
     return numberOfCorrectAnswers
   }, [userQuizProgress])
@@ -217,14 +220,14 @@ const QuizWidget: React.FC<IProps> = ({
 
     setShowAnswer(true)
 
-    if (currentQuestionAnswerChoice?.isCorrect) {
-      console.log("success")
-      statusHandler("success")
-    }
+    if (!isStandaloneQuiz) {
+      if (currentQuestionAnswerChoice?.isCorrect) {
+        statusHandler("success")
+      }
 
-    if (!currentQuestionAnswerChoice?.isCorrect) {
-      console.log("error")
-      statusHandler("error")
+      if (!currentQuestionAnswerChoice?.isCorrect) {
+        statusHandler("error")
+      }
     }
   }
 
@@ -238,7 +241,10 @@ const QuizWidget: React.FC<IProps> = ({
     setCurrentQuestionAnswerChoice(null)
     setSelectedAnswer(null)
     setShowAnswer(false)
-    statusHandler("neutral")
+
+    if (!isStandaloneQuiz) {
+      statusHandler("neutral")
+    }
   }
 
   const handleContinue = (): void => {
@@ -254,15 +260,17 @@ const QuizWidget: React.FC<IProps> = ({
     ).length
 
     // Reset quiz status (modifies bg color for mobile)
-    statusHandler("neutral")
+    if (!isStandaloneQuiz) {
+      statusHandler("neutral")
+    }
 
     const computeUserScore =
       parseInt(localStorage.getItem(USER_SCORE_KEY)!) + numberOfCorrectAnswers
 
     console.log({ computeUserScore })
 
-    localStorage.setItem(USER_SCORE_KEY, computeUserScore.toString())
-    setUserScore(computeUserScore.toString())
+    // localStorage.setItem(USER_SCORE_KEY, computeUserScore.toString())
+    // setUserScore(computeUserScore.toString())
 
     if (showResults) {
       // TODO: does this code executes??
@@ -314,12 +322,7 @@ const QuizWidget: React.FC<IProps> = ({
 
   // Render QuizWidget component
   return (
-    <Flex
-      width="full"
-      direction="column"
-      // alignItems="center"
-      // justifyContent="center"
-    >
+    <Flex width="full" direction="column" alignItems="center">
       {/* Hide heading if quiz is not in Learning Quizzes Hub page */}
       {isStandaloneQuiz && (
         <Heading
@@ -467,7 +470,7 @@ const QuizWidget: React.FC<IProps> = ({
         </Box>
 
         {/* Quiz buttons */}
-        <Box border="1px solid blue">
+        <>
           {quizData && (
             <Center>
               <Flex
@@ -557,7 +560,7 @@ const QuizWidget: React.FC<IProps> = ({
               </Flex>
             </Center>
           )}
-        </Box>
+        </>
       </Stack>
     </Flex>
   )

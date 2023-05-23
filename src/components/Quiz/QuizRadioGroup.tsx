@@ -128,7 +128,12 @@ const QuizRadioGroup: React.FC<IProps> = ({
   // Render QuizRadioGroup
   return (
     <Flex {...getRootProps()} direction="column" w="100%">
-      <Text textAlign="center" fontWeight="700" fontSize="2xl" mb={6}>
+      <Text
+        textAlign={{ base: "center", md: "left" }}
+        fontWeight="700"
+        fontSize="2xl"
+        mb={6}
+      >
         {t(prompt)}
       </Text>
 
