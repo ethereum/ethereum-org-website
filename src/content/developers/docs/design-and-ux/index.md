@@ -40,7 +40,7 @@ This is a curated list of user research done in web3 that may help with design a
 - [Dimensions of web3 UX](https://uxdesign.cc/the-levels-of-web3-user-experience-4f2ad113e37d) - An analysis of different layers of web3 UX and its challenges
 - [Web3 Design Patterns](https://www.web3designpatterns.io/)- A curated library of design patterns from real Web3 products
 - [W3design.io](https://w3design.io/) - A curated library of UI flows of different projects in the ecosystem
-- [Neueux.com](https://neueux.com/apps) - UI library of web3 flow screenshots with diverse filtering options
+- [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options 
 
 ## Web3 Design Case Studies {#Design-case-studies}
 
@@ -48,6 +48,7 @@ This is a curated list of user research done in web3 that may help with design a
 - [Defi design tips](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
 - [Deep Work Studio](https://deepwork.studio/case-studies/)
 - [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
+- [Selling an NFT on OpenSea](https://builtformars.com/case-studies/opensea)
 - [Wallet UX teardown how wallets need to change](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 min)
 
 
