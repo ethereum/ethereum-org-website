@@ -50,7 +50,7 @@ const USER_SELECTION: UserSelectionObject = {
   es: [],
   fa: [],
   fi: [],
-  fr: [1, 2, 3, 4, 5, 7],
+  fr: [],
   gl: [],
   gu: [],
   hi: [],
