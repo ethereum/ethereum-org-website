@@ -1,6 +1,12 @@
 // Library requires
-const { copyFileSync, existsSync, mkdirSync, readdirSync } = require("fs")
-const { resolve, join } = require("path")
+const {
+  copyFileSync,
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  lstatSync,
+} = require("fs")
+const { resolve, join, extname } = require("path")
 const argv = require("minimist")(process.argv.slice(2))
 
 /**
@@ -44,7 +50,7 @@ const USER_SELECTION: UserSelectionObject = {
   es: [],
   fa: [],
   fi: [],
-  fr: [],
+  fr: [1, 2, 3, 4, 5, 7],
   gl: [],
   gu: [],
   hi: [],
@@ -211,50 +217,39 @@ const scrapeDirectory = (
   contentSubpath: string,
   repoLangCode: string
 ): void => {
-  if (!existsSync(_path)) return
-  const ls: Array<string> = readdirSync(_path).filter(
-    (dir: string) => !dir.startsWith(".")
-  )
-  ls.forEach((item: string) => {
+  const directoryContents: string[] = readdirSync(_path)
+
+  directoryContents.forEach((item: string) => {
     const source: string = join(_path, item)
-    if (item.endsWith(".json")) {
-      const jsonDestDirPath: string = join(
-        repoRoot,
-        "src",
-        "intl",
-        repoLangCode
-      )
-      if (!existsSync(jsonDestDirPath))
-        mkdirSync(jsonDestDirPath, { recursive: true })
-      const jsonDestinationPath: string = join(jsonDestDirPath, item)
-      log("Copy .json from", source, "to", jsonDestinationPath)
-      copyFileSync(source, jsonDestinationPath)
-      // Update .json tracker
-      trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (item.endsWith(".md")) {
-      const mdDestDirPath: string = join(
-        repoRoot,
-        "src",
-        "content",
-        "translations",
-        repoLangCode,
-        contentSubpath
-      )
-      if (!existsSync(mdDestDirPath))
-        mkdirSync(mdDestDirPath, { recursive: true })
-      const mdDestinationPath: string = join(mdDestDirPath, item)
-      log("Copy .md from", source, "to", mdDestinationPath)
-      copyFileSync(source, mdDestinationPath)
-      // Update .md tracker
-      trackers.langs[repoLangCode].mdCopyCount++
+
+    // Check if the item is a directory
+    if (lstatSync(source).isDirectory()) {
+      // Recursively call scrapeDirectory
+      scrapeDirectory(source, `${contentSubpath}/${item}`, repoLangCode)
     } else {
-      log(`Entering ${_path}/${item}`)
-      // If another directory, recursively call `scrapeDirectory`
-      scrapeDirectory(
-        `${_path}/${item}`,
-        `${contentSubpath}/${item}`,
-        repoLangCode
-      )
+      // If not a directory, handle the file based on its extension
+      let destDirPath: string
+      if (extname(source) === ".json") {
+        // Handle JSON files
+        destDirPath = join(repoRoot, "src", "intl", repoLangCode)
+      } else {
+        // Handle other file types
+        destDirPath = join(
+          repoRoot,
+          "src",
+          "content",
+          "translations",
+          repoLangCode,
+          contentSubpath
+        )
+      }
+
+      if (!existsSync(destDirPath)) {
+        mkdirSync(destDirPath, { recursive: true })
+      }
+
+      const destinationPath: string = join(destDirPath, item)
+      copyFileSync(source, destinationPath)
     }
   })
 }
