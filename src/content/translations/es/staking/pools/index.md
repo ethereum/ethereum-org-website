@@ -24,9 +24,15 @@ Algunas agrupaciones operan utilizando contratos inteligentes, estos permiten de
 Además de las ventajas que hemos descrito en nuestra [introducción a las participaciones](/staking/), participar en una agrupación supone una serie de ventajas distintas.
 
 <CardGrid>
-  <Card title="Barrera baja de entrada" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
-  <Card title="Participe hoy" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="Token de liquidez" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Barrera baja de entrada" emoji="🐟">
+    ¿No es ballena? No pasa nada. La mayoría de las agrupaciones de participaciones le permiten apostar prácticamente cualquier cantidad de ETH uniendo fuerzas con otros participantes, a diferencia de una participación en solitario, que se requiere 32 ETH.
+  </Card>
+  <Card title="Participe hoy" emoji=":stopwatch:">
+    Participar en una agrupación es tan fácil como intercambiar tókenes. No es necesario preocuparse por la configuración del hardware ni por el mantenimiento del nodo. Las agrupaciones le permiten depositar su ETH y capacitar a los operadores de nodos a ejecutar validadores. Las recompensas se reparten entre los colaboradores menos una comisión por las operaciones del nodo.
+  </Card>
+  <Card title="Token de liquidez" emoji=":droplet:">
+    Muchas agrupaciones de participación proporcionan un token que representa un derecho sobre su ETH apostado y las recompensas que genera. Esto le permite hacer uso de su ETH apostado, por ejemplo, como garantía en aplicaciones DeFi.
+  </Card>
 </CardGrid>
 
 <StakingComparison page="pools" />
