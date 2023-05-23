@@ -48,7 +48,7 @@ import { AnswerChoice, RawQuiz, Quiz, RawQuestion, Question } from "../../types"
 
 // Import constants
 import { PASSING_QUIZ_SCORE } from "../../constants"
-import { NextQuizContext } from "./context"
+import { QuizStatus, QuizzesHubContext } from "./context"
 
 // Constants
 const PROGRESS_BAR_GAP = "4px"
@@ -57,7 +57,8 @@ const PROGRESS_BAR_GAP = "4px"
 export interface IProps {
   quizKey?: string
   // TODO: update type
-  quizHandler: (next?: string) => {}
+  nextHandler: (next?: string) => {}
+  statusHandler: (status: QuizStatus) => {}
   maxQuestions?: number
   // TODO: update setUserScore interface
   setUserScore: () => {}
@@ -67,7 +68,8 @@ export interface IProps {
 // Component
 const QuizWidget: React.FC<IProps> = ({
   quizKey,
-  quizHandler,
+  nextHandler,
+  statusHandler,
   maxQuestions,
   setUserScore,
   isStandaloneQuiz = true,
@@ -82,7 +84,7 @@ const QuizWidget: React.FC<IProps> = ({
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  const nextQuiz = useContext(NextQuizContext)
+  const { next: nextQuiz, status } = useContext(QuizzesHubContext)
 
   // TODO: move somewhere else
   const USER_SCORE_KEY = "userScoreKey"
@@ -94,6 +96,7 @@ const QuizWidget: React.FC<IProps> = ({
     setUserQuizProgress([])
     setShowAnswer(false)
     setSelectedAnswer(null)
+    statusHandler("neutral")
 
     // Get quiz key
     const currentQuizKey =
@@ -211,7 +214,18 @@ const QuizWidget: React.FC<IProps> = ({
       eventName: `QID: ${questionId}`,
       eventValue: answer.isCorrect ? "1" : "0",
     })
+
     setShowAnswer(true)
+
+    if (currentQuestionAnswerChoice?.isCorrect) {
+      console.log("success")
+      statusHandler("success")
+    }
+
+    if (!currentQuestionAnswerChoice?.isCorrect) {
+      console.log("error")
+      statusHandler("error")
+    }
   }
 
   const handleRetryQuestion = (): void => {
@@ -220,9 +234,11 @@ const QuizWidget: React.FC<IProps> = ({
       eventAction: "Other",
       eventName: "Retry question",
     })
+
     setCurrentQuestionAnswerChoice(null)
     setSelectedAnswer(null)
     setShowAnswer(false)
+    statusHandler("neutral")
   }
 
   const handleContinue = (): void => {
@@ -236,6 +252,9 @@ const QuizWidget: React.FC<IProps> = ({
     const numberOfCorrectAnswers = userQuizProgress.filter(
       ({ isCorrect }) => isCorrect
     ).length
+
+    // Reset quiz status (modifies bg color for mobile)
+    statusHandler("neutral")
 
     const computeUserScore =
       parseInt(localStorage.getItem(USER_SCORE_KEY)!) + numberOfCorrectAnswers
@@ -295,7 +314,12 @@ const QuizWidget: React.FC<IProps> = ({
 
   // Render QuizWidget component
   return (
-    <Flex width="full" direction="column" alignItems="center">
+    <Flex
+      width="full"
+      direction="column"
+      // alignItems="center"
+      // justifyContent="center"
+    >
       {/* Hide heading if quiz is not in Learning Quizzes Hub page */}
       {isStandaloneQuiz && (
         <Heading
@@ -310,9 +334,14 @@ const QuizWidget: React.FC<IProps> = ({
         </Heading>
       )}
 
-      <Box
+      <Stack
         w="full"
         maxW="600px"
+        h={{ base: "100vh", md: "100%" }}
+        px={{ base: 8, md: 12, lg: 16 }}
+        pt={{ base: 10, md: 12 }}
+        pb={{ base: 4, md: 8 }}
+        justifyContent="space-between"
         bg={
           !showAnswer
             ? "neutral"
@@ -322,9 +351,6 @@ const QuizWidget: React.FC<IProps> = ({
         }
         borderRadius="base"
         boxShadow={isStandaloneQuiz ? "drop" : "none"}
-        pt={12}
-        pb={[8, 12]}
-        px={[8, 12, 16]}
         position="relative"
         isolation="isolate"
       >
@@ -349,92 +375,106 @@ const QuizWidget: React.FC<IProps> = ({
           </>
         )}
 
-        {/* Answer Icon - defaults to TrophyIcon */}
-        <Circle
-          size="50px"
-          bg={
-            !showAnswer
-              ? "primary"
-              : currentQuestionAnswerChoice?.isCorrect
-              ? "success"
-              : "error"
-          }
-          position="absolute"
-          top={0}
-          left="50%"
-          transform="translateX(-50%) translateY(-50%)"
-        >
-          <AnswerIcon />
-        </Circle>
+        <Box mb={{ md: 8 }}>
+          {/* Answer Icon - defaults to TrophyIcon */}
+          <Circle
+            size="50px"
+            bg={
+              !showAnswer
+                ? "primary"
+                : currentQuestionAnswerChoice?.isCorrect
+                ? "success"
+                : "error"
+            }
+            position={{ base: "relative", md: "absolute" }}
+            top={{ base: 2, md: 0 }}
+            left="50%"
+            transform="translateX(-50%) translateY(-50%)"
+          >
+            <AnswerIcon />
+          </Circle>
 
-        {quizData ? (
-          <>
-            <Center>
-              <Text
-                fontStyle="normal"
-                fontWeight="700"
-                // TODO: refactor get color
-                color={
-                  showAnswer && currentQuestionAnswerChoice?.isCorrect
-                    ? "success"
+          {quizData ? (
+            <>
+              {/* Quiz title */}
+              <Center mb={-2}>
+                <Text
+                  fontStyle="normal"
+                  fontWeight="700"
+                  // TODO: refactor get color
+                  color={
+                    showAnswer && currentQuestionAnswerChoice?.isCorrect
+                      ? "success"
+                      : showAnswer && !currentQuestionAnswerChoice?.isCorrect
+                      ? "fail"
+                      : "primaryHover"
+                  }
+                >
+                  {/* TODO: refactor get title */}
+                  {showAnswer && currentQuestionAnswerChoice?.isCorrect
+                    ? "Correct!"
                     : showAnswer && !currentQuestionAnswerChoice?.isCorrect
-                    ? "fail"
-                    : "primaryHover"
-                }
-              >
-                {/* TODO: refactor get title */}
-                {showAnswer && currentQuestionAnswerChoice?.isCorrect
-                  ? "Correct!"
-                  : showAnswer && !currentQuestionAnswerChoice?.isCorrect
-                  ? "Incorrect"
-                  : quizData.title}
-              </Text>
-            </Center>
+                    ? "Incorrect"
+                    : quizData.title}
+                </Text>
+              </Center>
 
-            {/* Progress bar */}
-            <Center gap={PROGRESS_BAR_GAP} marginBottom={6}>
-              {quizData.questions.map(({ id }, index) => {
-                /* Calculate width percent based on number of questions */
-                const width = `calc(${Math.floor(
-                  100 / quizData.questions.length
-                )}% - ${PROGRESS_BAR_GAP})`
-                return (
-                  <Container
-                    key={id}
-                    bg={progressBarBackground(index)}
-                    h="4px"
-                    w={width}
-                    maxW={`min(${width}, 2rem)`}
-                    marginInline={0}
-                    p={0}
+              {/* Progress bar */}
+              <Center gap={PROGRESS_BAR_GAP} mb={6}>
+                {quizData.questions.map(({ id }, index) => {
+                  /* Calculate width percent based on number of questions */
+                  const width = `calc(${Math.floor(
+                    100 / quizData.questions.length
+                  )}% - ${PROGRESS_BAR_GAP})`
+                  return (
+                    <Container
+                      key={id}
+                      bg={progressBarBackground(index)}
+                      h="4px"
+                      w={width}
+                      maxW={`min(${width}, 2rem)`}
+                      marginInline={0}
+                      p={0}
+                    />
+                  )
+                })}
+              </Center>
+
+              {/* Quiz main body */}
+              <Center>
+                {showResults ? (
+                  <QuizSummary
+                    correctCount={correctCount}
+                    isPassingScore={isPassingScore}
+                    questionCount={quizData.questions.length}
+                    ratioCorrect={ratioCorrect}
                   />
-                )
-              })}
-            </Center>
+                ) : (
+                  <QuizRadioGroup
+                    questionData={quizData.questions[currentQuestionIndex]}
+                    showAnswer={showAnswer}
+                    handleSelection={handleSelection}
+                    selectedAnswer={selectedAnswer}
+                  />
+                )}
+              </Center>
+            </>
+          ) : (
+            <Flex justify="center">
+              <Spinner />
+            </Flex>
+          )}
+        </Box>
 
+        {/* Quiz buttons */}
+        <Box border="1px solid blue">
+          {quizData && (
             <Center>
-              {showResults ? (
-                <QuizSummary
-                  correctCount={correctCount}
-                  isPassingScore={isPassingScore}
-                  questionCount={quizData.questions.length}
-                  ratioCorrect={ratioCorrect}
-                />
-              ) : (
-                <QuizRadioGroup
-                  questionData={quizData.questions[currentQuestionIndex]}
-                  showAnswer={showAnswer}
-                  handleSelection={handleSelection}
-                  selectedAnswer={selectedAnswer}
-                />
-              )}
-            </Center>
-
-            <Center mt={[8, 12]}>
               <Flex
-                gap={6}
+                gap={{ base: 4, md: 6 }}
                 flex={{ base: 1, sm: "unset" }}
                 direction={{ base: "column", sm: "row" }}
+                justifyContent="flex-start"
                 sx={{
                   button: { width: { base: "100%", sm: "fit-content" } },
                 }}
@@ -456,7 +496,7 @@ const QuizWidget: React.FC<IProps> = ({
                     direction={isStandaloneQuiz ? "row" : "column"}
                     gap={{ base: 6, md: 2 }}
                   >
-                    <Flex gap={{ base: 6, md: 2 }}>
+                    <Flex gap={{ base: 4, md: 2 }} w="100%">
                       <Button
                         variant="outline-color"
                         leftIcon={<Icon as={FaTwitter} />}
@@ -467,7 +507,7 @@ const QuizWidget: React.FC<IProps> = ({
 
                       {/* Show `Next Quiz` button if quiz is opened from hub page */}
                       {hasNextQuiz && (
-                        <Button onClick={() => quizHandler(nextQuiz)}>
+                        <Button onClick={() => nextHandler(nextQuiz)}>
                           {/* TODO: move to translations */}
                           Next quiz
                         </Button>
@@ -516,13 +556,9 @@ const QuizWidget: React.FC<IProps> = ({
                 )}
               </Flex>
             </Center>
-          </>
-        ) : (
-          <Flex justify="center">
-            <Spinner />
-          </Flex>
-        )}
-      </Box>
+          )}
+        </Box>
+      </Stack>
     </Flex>
   )
 }

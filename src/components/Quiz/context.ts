@@ -1,4 +1,15 @@
 import { createContext } from "react"
 
-// Next Quiz Context
-export const NextQuizContext = createContext<string | undefined>(undefined)
+export type QuizStatus = "neutral" | "success" | "error"
+
+interface ContextState {
+  next?: string
+  status: QuizStatus
+}
+
+const initialState: ContextState = {
+  next: undefined,
+  status: "neutral",
+}
+
+export const QuizzesHubContext = createContext(initialState)

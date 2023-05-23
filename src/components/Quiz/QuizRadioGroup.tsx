@@ -128,9 +128,10 @@ const QuizRadioGroup: React.FC<IProps> = ({
   // Render QuizRadioGroup
   return (
     <Flex {...getRootProps()} direction="column" w="100%">
-      <Text fontWeight="700" fontSize="2xl" mb={6}>
+      <Text textAlign="center" fontWeight="700" fontSize="2xl" mb={6}>
         {t(prompt)}
       </Text>
+
       <Flex direction="column" gap={4}>
         {answers.map(({ id, label }, index) => {
           const display =
@@ -146,6 +147,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
           )
         })}
       </Flex>
+
       {showAnswer && (
         <Box mt={5}>
           <Text fontWeight="bold" mt={0} mb={2}>

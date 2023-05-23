@@ -1,5 +1,4 @@
-import React from "react"
-
+import React, { useContext } from "react"
 import {
   Modal as ChakraModal,
   ModalOverlay,
@@ -7,41 +6,39 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react"
 
-export interface IPropsOverlay {
-  isActive: boolean
-}
+import { QuizzesHubContext } from "./context"
 
-export interface IProps {
+interface IProps {
   children?: React.ReactNode
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
 }
 
-const QuizzesModal: React.FC<IProps> = ({
-  children,
-  isOpen,
-  setIsOpen,
-  ...props
-}) => {
+const QuizzesModal: React.FC<IProps> = ({ children, isOpen, setIsOpen }) => {
+  const { status: quizStatus } = useContext(QuizzesHubContext)
+
+  const statusColor =
+    quizStatus === "neutral"
+      ? "white"
+      : quizStatus === "success"
+      ? "successLight"
+      : "errorLight"
+
   return (
     <ChakraModal
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
       isCentered
-      size="xl"
+      size={{ base: "full", md: "xl" }}
       scrollBehavior="inside"
-      {...props}
     >
-      <ModalOverlay bgColor="blackAlpha.700" />
+      <ModalOverlay
+        bg="blackAlpha.700"
+        display={{ base: "none", md: "block" }}
+      />
 
-      <ModalContent h={{ base: "100vh", md: "auto" }}>
-        <ModalCloseButton
-          size={{ base: "lg", md: "md" }}
-          zIndex={1}
-          // position="absolute"
-          // top={-20}
-          // right={2}
-        />
+      <ModalContent justifyContent="center" bg={statusColor}>
+        <ModalCloseButton size="lg" zIndex={1} />
         {children}
       </ModalContent>
     </ChakraModal>
