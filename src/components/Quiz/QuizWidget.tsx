@@ -86,7 +86,7 @@ const QuizWidget: React.FC<IProps> = ({
 
   const { next: nextQuiz } = useContext(QuizzesHubContext)
 
-  // TODO: move somewhere else
+  // TODO: move somewhere else (Context??)
   const USER_SCORE_KEY = "userScoreKey"
 
   const initialize = (): void => {
@@ -341,8 +341,8 @@ const QuizWidget: React.FC<IProps> = ({
         maxW="600px"
         h={isStandaloneQuiz ? "100%" : { base: "100vh", md: "100%" }}
         px={{ base: 8, md: 12, lg: 16 }}
-        pt={{ base: 10, md: 12 }}
-        pb={{ base: 4, md: 8 }}
+        pt={!quizData ? 10 : { base: 10, md: 12 }}
+        pb={!quizData ? 2 : { base: 4, md: 8 }}
         justifyContent="space-between"
         bg={
           !showAnswer
@@ -511,8 +511,7 @@ const QuizWidget: React.FC<IProps> = ({
                     {/* Show `Next Quiz` button if quiz is opened from hub page */}
                     {hasNextQuiz && (
                       <Button onClick={() => nextHandler(nextQuiz)}>
-                        {/* TODO: move to translations */}
-                        Next quiz
+                        <Translation id="next-quiz" />
                       </Button>
                     )}
                   </Flex>
