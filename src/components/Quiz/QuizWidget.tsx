@@ -316,7 +316,6 @@ const QuizWidget: React.FC<IProps> = ({
     )
   }
 
-  // TODO: Allow user to submit quiz for storage
   // TODO: Fix a11y keyboard tab stops
   const hasNextQuiz = !isStandaloneQuiz && !!nextQuiz
 
@@ -340,7 +339,7 @@ const QuizWidget: React.FC<IProps> = ({
       <Stack
         w="full"
         maxW="600px"
-        h={{ base: "100vh", md: "100%" }}
+        h={isStandaloneQuiz ? "100%" : { base: "100vh", md: "100%" }}
         px={{ base: 8, md: 12, lg: 16 }}
         pt={{ base: 10, md: 12 }}
         pb={{ base: 4, md: 8 }}
@@ -363,7 +362,7 @@ const QuizWidget: React.FC<IProps> = ({
               fontSize="184px"
               position="absolute"
               zIndex={-1}
-              top={isStandaloneQuiz ? -8 : 0}
+              top={0}
               left={0}
             />
 
@@ -371,14 +370,14 @@ const QuizWidget: React.FC<IProps> = ({
               fontSize="184px"
               position="absolute"
               zIndex={-1}
-              top={isStandaloneQuiz ? -8 : 0}
+              top={0}
               right={0}
               transform="scaleX(-100%)"
             />
           </>
         )}
 
-        <Box mb={{ md: 8 }}>
+        <Box mb={isStandaloneQuiz ? 8 : { base: 0, md: 8 }}>
           {/* Answer Icon - defaults to TrophyIcon */}
           <Circle
             size="50px"
@@ -470,97 +469,89 @@ const QuizWidget: React.FC<IProps> = ({
         </Box>
 
         {/* Quiz buttons */}
-        <>
-          {quizData && (
-            <Center>
-              <Flex
-                gap={{ base: 4, md: 6 }}
-                flex={{ base: 1, sm: "unset" }}
-                direction={{ base: "column", sm: "row" }}
-                justifyContent="flex-start"
-                sx={{
-                  button: { width: { base: "100%", sm: "fit-content" } },
-                }}
-              >
-                {showAnswer &&
-                  currentQuestionAnswerChoice &&
-                  !currentQuestionAnswerChoice.isCorrect && (
-                    <Button
-                      onClick={handleRetryQuestion}
-                      variant="outline-color"
-                    >
-                      <Translation id="try-again" />
-                    </Button>
-                  )}
+        {quizData && (
+          <Center>
+            <Flex
+              gap={{ base: 4, md: 6 }}
+              flex={{ base: 1, sm: "unset" }}
+              direction={{ base: "column", sm: "row" }}
+              justifyContent="flex-start"
+              sx={{
+                button: { width: { base: "100%", sm: "fit-content" } },
+              }}
+            >
+              {showAnswer &&
+                currentQuestionAnswerChoice &&
+                !currentQuestionAnswerChoice.isCorrect && (
+                  <Button onClick={handleRetryQuestion} variant="outline-color">
+                    <Translation id="try-again" />
+                  </Button>
+                )}
 
-                {showResults ? (
+              {showResults ? (
+                <Flex
+                  direction="column"
+                  alignItems="center"
+                  gap={{ base: 6, md: 2 }}
+                  mt={isStandaloneQuiz ? 8 : { md: 8 }}
+                >
                   <Flex
-                    alignItems={isStandaloneQuiz ? "initial" : "center"}
-                    direction={isStandaloneQuiz ? "row" : "column"}
-                    gap={{ base: 6, md: 2 }}
+                    direction={{ base: "column", md: "row" }}
+                    gap={{ base: 4, md: 2 }}
+                    w="100%"
                   >
-                    <Flex gap={{ base: 4, md: 2 }} w="100%">
-                      <Button
-                        variant="outline-color"
-                        leftIcon={<Icon as={FaTwitter} />}
-                        onClick={handleShare}
-                      >
-                        <Translation id="share-results" />
-                      </Button>
+                    <Button
+                      variant="outline-color"
+                      leftIcon={<Icon as={FaTwitter} />}
+                      onClick={handleShare}
+                    >
+                      <Translation id="share-results" />
+                    </Button>
 
-                      {/* Show `Next Quiz` button if quiz is opened from hub page */}
-                      {hasNextQuiz && (
-                        <Button onClick={() => nextHandler(nextQuiz)}>
-                          {/* TODO: move to translations */}
-                          Next quiz
-                        </Button>
-                      )}
-                    </Flex>
-
-                    {score < 100 && isStandaloneQuiz ? (
-                      <Button onClick={initialize}>
-                        <Translation id="try-again" />
-                      </Button>
-                    ) : (
-                      <Button
-                        onClick={initialize}
-                        variant="unstyled"
-                        color="primary"
-                        _hover={{ boxShadow: "none" }}
-                      >
-                        <Text
-                          textDecoration="underline"
-                          fontWeight="bold"
-                          m={0}
-                        >
-                          <Translation id="try-again" />
-                        </Text>
+                    {/* Show `Next Quiz` button if quiz is opened from hub page */}
+                    {hasNextQuiz && (
+                      <Button onClick={() => nextHandler(nextQuiz)}>
+                        {/* TODO: move to translations */}
+                        Next quiz
                       </Button>
                     )}
                   </Flex>
-                ) : showAnswer ? (
-                  <Button onClick={handleContinue}>
-                    {userQuizProgress.length === quizData.questions.length - 1
-                      ? t("see-results")
-                      : t("next-question")}
-                  </Button>
-                ) : (
-                  <Button
-                    onClick={() =>
-                      handleShowAnswer(
-                        quizData.questions[currentQuestionIndex].id,
-                        currentQuestionAnswerChoice!
-                      )
-                    }
-                    isDisabled={!currentQuestionAnswerChoice}
-                  >
-                    <Translation id="submit-answer" />
-                  </Button>
-                )}
-              </Flex>
-            </Center>
-          )}
-        </>
+
+                  {showResults && (
+                    <Button
+                      onClick={initialize}
+                      variant="unstyled"
+                      color="primary"
+                      _hover={{ boxShadow: "none" }}
+                    >
+                      <Text textDecoration="underline" fontWeight="bold" m={0}>
+                        <Translation id="try-again" />
+                      </Text>
+                    </Button>
+                  )}
+                </Flex>
+              ) : showAnswer ? (
+                <Button onClick={handleContinue}>
+                  {userQuizProgress.length === quizData.questions.length - 1
+                    ? t("see-results")
+                    : t("next-question")}
+                </Button>
+              ) : (
+                <Button
+                  onClick={() =>
+                    handleShowAnswer(
+                      quizData.questions[currentQuestionIndex].id,
+                      currentQuestionAnswerChoice!
+                    )
+                  }
+                  isDisabled={!currentQuestionAnswerChoice}
+                >
+                  <Translation id="submit-answer" />
+                </Button>
+              )}
+            </Flex>
+          </Center>
+        )}
       </Stack>
     </Flex>
   )
