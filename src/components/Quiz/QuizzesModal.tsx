@@ -38,7 +38,7 @@ const QuizzesModal: React.FC<IProps> = ({ children, isOpen, setIsOpen }) => {
       />
 
       <ModalContent justifyContent="center" bg={statusColor}>
-        <ModalCloseButton size="lg" zIndex={1} />
+        <ModalCloseButton size="lg" p={6} zIndex={1} />
         {children}
       </ModalContent>
     </ChakraModal>
