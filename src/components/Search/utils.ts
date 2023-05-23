@@ -156,7 +156,7 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     "--docsearch-footer-height": "space.10",
     "--docsearch-logo-color": "colors.body.light",
     "--docsearch-footer-shadow": "none",
-    bg: "primary.owContrast",
+    bg: "primary.lowContrast",
     borderTop: "2px",
     borderColor: "primary.base",
   },
