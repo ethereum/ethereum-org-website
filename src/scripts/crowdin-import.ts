@@ -224,6 +224,7 @@ const scrapeDirectory = (
 
     // Check if the item is a directory
     if (lstatSync(source).isDirectory()) {
+      log(`Entering ${_path}/${item}`)
       // Recursively call scrapeDirectory
       scrapeDirectory(source, `${contentSubpath}/${item}`, repoLangCode)
     } else {
@@ -232,6 +233,9 @@ const scrapeDirectory = (
       if (extname(source) === ".json") {
         // Handle JSON files
         destDirPath = join(repoRoot, "src", "intl", repoLangCode)
+        log("Copy .json from", source, "to", destDirPath)
+        // Update .json tracker
+        trackers.langs[repoLangCode].jsonCopyCount++
       } else {
         // Handle other file types
         destDirPath = join(
@@ -242,6 +246,9 @@ const scrapeDirectory = (
           repoLangCode,
           contentSubpath
         )
+        log("Copy file from", source, "to", destDirPath)
+        // Update .md tracker
+        trackers.langs[repoLangCode].mdCopyCount++
       }
 
       if (!existsSync(destDirPath)) {
