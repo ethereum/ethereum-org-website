@@ -68,7 +68,7 @@ export const getSearchButtonStyles = (): ButtonProps => ({
 })
 
 export const getSearchModalStyles = (): SystemStyleObject => ({
-  "--docsearch-modal-background": "var(--eth-colors-background)",
+  "--docsearch-modal-background": "var(--eth-colors-background-base)",
   "--docsearch-searchbox-height": "fit-content",
   "--docsearch-highlight-color": "var(--eth-colors-primary-hover)",
   "--docsearch-modal-width": "650px",
