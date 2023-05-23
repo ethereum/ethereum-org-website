@@ -68,20 +68,20 @@ const semanticTokens = {
     attention: {
       base: "yellow.500",
       light: "yellow.200",
-      outline: { _light: "attention", _dark: "attention.light" },
+      outline: { _light: "attention.base", _dark: "attention.light" },
     },
     // ? Keep "error" or rename to "fail" ?
     error: {
       base: "red.500",
       light: "red.100",
-      outline: { _light: "error", _dark: "error.light" },
+      outline: { _light: "error.base", _dark: "error.light" },
       // ! Deprecating errorNeutral
       neutral: { _light: "red.100", _dark: "red.900" },
     },
     success: {
       base: "green.500",
       light: "green.100",
-      outline: { _light: "success", _dark: "success.light" },
+      outline: { _light: "success.base", _dark: "success.light" },
       // ! Deprecating success.neutral
       neutral: { _light: "green.100", _dark: "green.900" },
     },
