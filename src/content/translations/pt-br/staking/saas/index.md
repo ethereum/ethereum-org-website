@@ -58,7 +58,7 @@ Alguma sugestão de um provedor de SaaS que deixamos de mencionar? Confira nossa
 ## Perguntas frequentes {#faq}
 
 <ExpandableCard title="Quem guarda as minhas chaves?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-  As disposições diferem de provedor para provedor, mas geralmente você será guiado pela configuração de quaisquer chaves de assinatura que você precise (uma a cada 32 ETH), e terá que enviar estas para o seu provedor para permitir que validem em seu nome. Só as chaves de assinatura não oferecem nenhuma possibilidade de saque, transferência ou gasto dos seus fundos. Entretanto, elas proporcionam a capacidade de votar em consensos, o que, se não for feito adequadamente, pode resultar em sanções ou em cortes off-line.
+As disposições diferem de provedor para provedor, mas geralmente você será guiado pela configuração de quaisquer chaves de assinatura que você precise (uma a cada 32 ETH), e terá que enviar estas para o seu provedor para permitir que validem em seu nome. Só as chaves de assinatura não oferecem nenhuma possibilidade de saque, transferência ou gasto dos seus fundos. Entretanto, elas proporcionam a capacidade de votar em consensos, o que, se não for feito adequadamente, pode resultar em sanções ou em cortes off-line.
 </ExpandableCard>
 
 <ExpandableCard title="Então, há dois conjuntos de chaves?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
@@ -66,25 +66,25 @@ Sim. Cada conta é composta por ambas chaves <em>de assinatura</em> BLS, e as ch
 
 As chaves de retirada BLS são usadas para assinar uma mensagem de uso único que declara para qual conta de execução de uma conta de recompensas de participação e fundos sacados elas devem ir. Uma vez que essa mensagem é transmitida, as chaves de <em>saque de BLS</em> não são mais necessárias. Em vez disso, o controle sobre os fundos retirados é permanentemente delegado ao endereço que você forneceu. Isso permite que você defina um endereço de retirada protegido por meio do seu próprio armazenamento frio, minimizando o risco para seus fundos de validador, mesmo se outra pessoa controlarem suas chaves de assinatura de validador.
 
-Atualizar as credenciais de retirada é um passo necessário para ativar as retiradas com a atualização Shangai. Esse processo envolve gerar as chaves de retirada usando sua frase semente mnemônica. <em>Certifique-se de fazer o backup dessa frase semente com segurança, ou você não poderá gerar suas chaves de retirada quando chegar o momento.</em>
+A atualização das credenciais de saque é uma etapa necessária para habilitar saques\*. Esse processo envolve gerar as chaves de retirada usando sua frase semente mnemônica.
 
-Os participantes que forneceram um endereço de retirada com depósito inicial não precisam definir isso. Consulte com seu provedor SaaS para obter suporte sobre como preparar seu validador.
+<strong>Certifique-se de fazer backup dessa frase de recuperação com segurança ou você não conseguirá gerar suas chaves de saque quando precisar.</strong>
+
+\*Os stakers que forneceram um endereço de saque com depósito inicial não precisam definir isso. Consulte com seu provedor SaaS para obter suporte sobre como preparar seu validador.
 </ExpandableCard>
 
 <ExpandableCard title="Quando posso sacar?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Quando você participa com 32 ETH por meio de um provedor SaaS, sua participação de ETH é ainda depositada no contrato oficial de depósito de participação. Como tal, os participantes de SaaS são limitados pelas mesmas restrições de saque que os participantes isolados, e saques não são ativados até a atualização Shangai.
+Os saques de staking foram implementados na atualização Shanghai/Capella em abril de 2023. Os stakers precisam fornecer um endereço de saque (se não tiver sido fornecido no depósito inicial) e os pagamentos de recompensa começarão a ser distribuídos de forma automática periodicamente em intervalos de alguns dias.
 
-Os saques de staking serão implementados na próxima atualização Shanghai, agendada para 12 de abril de 2023. Depois disso, os participantes precisam fornecer um endereço de saque (se não fornecido no depósito inicial), e os pagamentos de recompensas começarão a ser distribuídos automaticamente periodicamente a cada poucos dias.
-
-Isso também permitirá desbloqueio de fundos saídos. Os validadores podem sair totalmente como um validador, e eles receberão todo seu saldo de volta para o endereço de saque fornecido.
+Os validadores também podem sair totalmente como validadores, o que desbloqueará seus saldos de ETH restantes para saque. As contas que forneceram um endereço de saque para execução e concluíram o processo de saída receberão todo o seu saldo no endereço de saque fornecido durante a próxima varredura do validador.
 
 <ButtonLink to="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="O que acontece se eu for cortado?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
-Usando um provedor SaaS, você está confiando a operação do seu nó a um terceiro. Isto implica o risco de um desempenho deficiente, que não está sob o seu controle. Caso seu validador seja cortado, seu saldo do validador será penalizado e removido à força da pool do validador. Estes fundos serão bloqueados até que os saques sejam ativados no nível do protocolo.
+Usando um provedor SaaS, você está confiando a operação do seu nó a um terceiro. Isto implica o risco de um desempenho deficiente, que não está sob o seu controle. Caso seu validador seja cortado, seu saldo do validador será penalizado e removido à força da pool do validador.
 
-A próxima atualização Shangai traz funcionalidade de saque, que exige um endereço de saque para ser habilitada. Ela pode ter sido fornecida no depósito inicial. Caso contrário, as chaves de assinatura do validador precisarão ser usadas para assinar uma mensagem declarando um endereço de saque assim que a atualização estiver online.
+Após a conclusão do processo de remoção/saída, esses fundos serão transferidos para o endereço de saque atribuído ao validador. Para isso, é necessário habilitar um endereço de saque. Ela pode ter sido fornecida no depósito inicial. Caso contrário, será necessário usar as chaves de saque do validador para assinar uma mensagem declarando um endereço de saque. Os fundos permanecerão bloqueados até um endereço de saque ser fornecido.
 
 Entre em contato com o provedor de SaaS para obter mais detalhes sobre quaisquer garantias ou opções de seguro e instruções sobre como fornecer um endereço de saque. Se você preferir estar no controle total da sua configuração do validador, <a href="/staking/solo/">saiba mais sobre como fazer staking individual de seu ETH</a>.
 </ExpandableCard>
