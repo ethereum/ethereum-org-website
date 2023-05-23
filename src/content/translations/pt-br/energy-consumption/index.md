@@ -6,7 +6,7 @@ lang: pt-br
 
 # Gasto de energia do Ethereum {#proof-of-stake-energy}
 
-Ethereum é uma cadeia de blocos verde. Ele usa um mecanismo de consenso chamado [prova de participação](/developers/docs/consensus-mechanisms/pos), que usa ETH ao invés de [energia para proteger a rede](/developers/docs/consensus-mechanisms/pow). O mecanismo de prova de participação do Ethereum usa apenas [~0,0026 TWh/ano](https://carbon-ratings.com/eth-report-2022) em toda a rede global.
+Ethereum é uma cadeia de blocos verde. Ele usa um mecanismo de consenso chamado [prova de participação](/developers/docs/consensus-mechanisms/pos/), que usa ETH ao invés de [energia para proteger a rede](/developers/docs/consensus-mechanisms/pow/). O mecanismo de prova de participação do Ethereum usa apenas [~0,0026 TWh/ano](https://carbon-ratings.com/eth-report-2022) em toda a rede global.
 
 O [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) gerou estimativas do consumo de eletricidade e da pegada de carbono da rede Ethereum ([veja o relatório](https://carbon-ratings.com/eth-report-2022)). Eles mediram o consumo de eletricidade de diferentes nós com várias configurações de hardware e software cliente. Isso gerou uma estimativa de **2,601 MWh** (0,0026 TWh) para o consumo anual de eletricidade da rede (setembro de 2022), correspondente a **870 toneladas de CO2, ** com a aplicação de fatores de intensidade de carbono específicos de cada região.
 
@@ -75,4 +75,3 @@ As plataformas nativas de financiamento de bens públicos da Web3, como [Gitcoin
 - [Visão do Ethereum](/roadmap/vision/)
 - [A Beacon Chain](/roadmap/beacon-chain)
 - [The Merge (A Fusão)](/roadmap/merge/)
-- [Fragmentação](/roadmap/beacon-chain/)
