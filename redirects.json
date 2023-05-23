@@ -112,6 +112,10 @@
     "toPath": "/nb/:splat"
   },
   {
+    "fromPath": "/ph/*",
+    "toPath": "/fil/:splat"
+  },
+  {
     "fromPath": "/en/java/",
     "toPath": "/en/developers/docs/programming-languages/java/"
   },
