@@ -22,6 +22,9 @@ import { sanitizeHitTitle } from "../../utils/sanitizeHitTitle"
 // Styles
 import "@docsearch/css"
 
+// Utils
+import { trackCustomEvent } from "../../utils/matomo"
+
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (
     <IconButton
@@ -63,7 +66,14 @@ const Search = forwardRef<{}, "button">((_, ref) => {
       {isLargerThanXl ? (
         <SearchButton
           ref={mergedButtonRefs}
-          onClick={onOpen}
+          onClick={() => {
+            onOpen()
+            trackCustomEvent({
+              eventCategory: "nav bar",
+              eventAction: "click",
+              eventName: "search open",
+            })
+          }}
           translations={{
             buttonText: t("search"),
             buttonAriaLabel: t("search"),
@@ -71,7 +81,14 @@ const Search = forwardRef<{}, "button">((_, ref) => {
         />
       ) : (
         <SearchIconButton
-          onClick={onOpen}
+          onClick={() => {
+            onOpen()
+            trackCustomEvent({
+              eventCategory: "nav bar",
+              eventAction: "click",
+              eventName: "search open",
+            })
+          }}
           ref={mergedButtonRefs}
           aria-label={t("aria-toggle-search-button")}
           size="sm"

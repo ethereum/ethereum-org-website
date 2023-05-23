@@ -471,7 +471,7 @@ The text in the "Link to Asset", "Name", "Description" fields will comprise the 
 
 To store our metadata on IPFS, we will use [Pinata](https://pinata.cloud/), a convenient IPFS API and toolkit. In the next step, we'll explain exactly how to do this!
 
-## Use Pintata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Use Pinata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
 If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email and account.
 

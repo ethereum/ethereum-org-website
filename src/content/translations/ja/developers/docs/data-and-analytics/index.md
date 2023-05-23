@@ -20,7 +20,7 @@ lang: ja
 
 多くの[ブロックエクスプローラー](/developers/docs/data-and-analytics/block-explorers/)は、[RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API)ゲートウェイを提供しています。このゲートウェイにより、デベロッパーは、ブロック、トランザクション、マイナー、アカウント、およびその他のオンチェーンアクティビティについて、リアルタイムのデータを可視化できるようになります。
 
-デベロッパーはこうしたデータを処理して変換することで、[ブロックチェーン](/glossary/#blockchain)についての独自のインサイトおよびやり取りをユーザーに提供できます。 例えば、[Etherscan](etherscan.io)は、12 秒のスロットごとに実行データとコンセンサスデータを提供します。
+デベロッパーはこうしたデータを処理して変換することで、[ブロックチェーン](/glossary/#blockchain)についての独自のインサイトおよびやり取りをユーザーに提供できます。 たとえば、[Etherscan](https://etherscan.io)は、12 秒のスロットごとに実行データとコンセンサスデータを提供します。
 
 ## The Graph {#the-graph}
 
@@ -30,7 +30,7 @@ lang: ja
 
 ## クライアントの多様性
 
-[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は、バグや脆弱性に対する回復力を提供します。そのため、イーサリアムネットワーク全体の健全性にとって重要です。 現在、[clientdiversity.org](https://clientdiversity.org/)、[rated.network](rated.network)、[execution-diversity.info](https://execution-diversity.info/)、[Ethernodes](https://ethernodes.org/)など、いくつかのクライアント多様性ダッシュボードがあります。
+[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は、バグや脆弱性に対する回復力を提供します。そのため、イーサリアムネットワーク全体の健全性にとって重要です。 現在、[clientdiversity.org](https://clientdiversity.org/)、[rated.network](rated.network)、[pool.invis.cloud](pool.invis.cloud)、[slashed.info](slahed.info)、[Ethernodes](https://ethernodes.org/)など、いくつかのクライアント多様性ダッシュボードがあります。
 
 ## Dune Analytics {#dune-analytics}
 

@@ -63,6 +63,6 @@
   "page-get-eth-your-address-desc": "ウォレットをダウンロードすると、パブリックETHアドレスが作成されます。以下のようになります：",
   "page-get-eth-your-address-desc-3": "これはあなたのメールアドレスのようなものと考えてください。しかし、メールの代わりにETHを受け取ることができます。取引所からウォレットへETHを送金したい場合は、送金先としてあなたのアドレスを使用してください。送る前に必ず再確認しておきましょう！",
   "page-get-eth-your-address-wallet-link": "ウォレットをチェックする",
-  "listing-policy-raise-issue-link": "問題を報告する",
+  "listing-policy-raise-issue-link": "問題を提起する",
   "page-find-wallet-last-updated": "最終更新日"
 }

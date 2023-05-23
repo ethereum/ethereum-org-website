@@ -137,7 +137,7 @@ By screenshotting your seed phrases or private keys, you risk syncing them to th
 
 ### Use a hardware wallet {#use-hardware-wallet}
 
-A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys: your private key touches the internet and stays completely local on your device.
+A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys: your private key never touches the internet and stays completely local on your device.
 
 Keeping private keys offline massively reduces the risk of being hacked, even if a hacker gets control of your computer.
 

@@ -295,7 +295,7 @@ The other values (3 bytes, 4 bytes, etc.) are handled the same way, just with di
         revert("Error in encodeVal, should not happen");
 ```
 
-If we get here it means we got a key that's not less than than 16\*256<sup>15</sup>. But `cacheWrite` limits the keys so we can't even get up to 14\*256<sup>16</sup> (which would have a first byte of 0xFE, so it would look like `DONT_CACHE`). But it doesn't cost us much to add a test in case a future programmer introduces a bug.
+If we get here it means we got a key that's not less than 16\*256<sup>15</sup>. But `cacheWrite` limits the keys so we can't even get up to 14\*256<sup>16</sup> (which would have a first byte of 0xFE, so it would look like `DONT_CACHE`). But it doesn't cost us much to add a test in case a future programmer introduces a bug.
 
 ```solidity
     } // encodeVal

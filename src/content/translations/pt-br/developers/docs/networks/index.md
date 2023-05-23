@@ -57,6 +57,9 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 - [Faucet de PoW](https://sepolia-faucet.pk910.de/)
 - [Faucet Sepolia](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
+- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Faucet do Alchemy Sepolia](https://sepoliafaucet.com/)
+- [Faucet do Infura Sepolia](https://www.infura.io/faucet)
 
 #### Goerli _(suporte a longo prazo)_ {#goerli}
 
@@ -82,6 +85,7 @@ Goerli é a rede de testes usada para testar a validação e a participação. A
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Faucet Alchemy Goerli](https://goerlifaucet.com/)
 - [Todas as faucets do nó Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
+- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 
 Para iniciar um Validador na rede de testes Goerli, use a barra de inicialização ["validador goerli barato"](https://goerli.launchpad.ethstaker.cc/en/) do ethstaker.
 
@@ -120,6 +124,7 @@ Uma rede de testes para [Optimism](https://www.optimism.io/).
 
 - [FaucETH](https://fauceth.komputing.org) (torneira multi-cadeia sem a necessidade de conta social)
 - [Faucet do Paradigm](https://faucet.paradigm.xyz/)
+- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
 ## Redes privadas {#private-networks}
 

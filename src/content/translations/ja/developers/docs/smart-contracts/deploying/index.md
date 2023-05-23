@@ -12,7 +12,7 @@ lang: ja
 
 スマートコントラクトをデプロイする前に、[イーサリアムネットワーク](/developers/docs/networks/)、[トランザクション](/developers/docs/transactions/)、[スマートコントラクトの構造](/developers/docs/smart-contracts/anatomy/)を理解する必要があります。
 
-コントラクトのデプロイにはイーサ(ETH)もかかりますので、イーサリアムの[ガスと手数料](/developers/docs/gas/)を熟知しておく必要があります。
+コントラクトはブロックチェーンに保存されているため、デプロイする際にイーサ(ETH)もかかります。そのため、イーサリアムの[ガスと手数料](/developers/docs/gas/)を熟知しておく必要があります。
 
 最後に、デプロイする前にコントラクトをコンパイルする必要がありますので、 [スマートコントラクトのコンパイル](/developers/docs/smart-contracts/compiling/)を必ずお読みください。
 
@@ -23,7 +23,7 @@ lang: ja
 - コントラクトのバイトコード - これは[コンパイル](/developers/docs/smart-contracts/compiling/)によって生成されます。
 - ガス用の ETH - 他のトランザクションと同様にガスリミットを設定しますので、コントラクトのデプロイには、単純な ETH の送金よりも多くのガスが必要であることに注意してください。
 - デプロイメントのためのスクリプトやプラグイン。
-- [イーサリアムノード](/developers/docs/nodes-and-clients/)へのアクセス。これは、自身のノードを実行するか、公開ノードに接続するか、Infura や Alchemy のような[ノードサービス](/developers/docs/nodes-and-clients/nodes-as-a-service/)を使用して API キーを介するかのいずれかの方法で行います。
+- [イーサリアムノード](/developers/docs/nodes-and-clients/)へのアクセス。これは、自身のノードを実行するか、公開ノードに接続するか、[Infura](https://www.infura.io/)や[Alchemy](https://docs.alchemy.com/)のような[ノードサービス](/developers/docs/nodes-and-clients/nodes-as-a-service/)を使用して API キーを介するかのいずれかの方法で行います。
 
 ### スマートコントラクトをデプロイする手順 {#steps-to-deploy}
 
@@ -37,7 +37,7 @@ lang: ja
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly - _EVM 互換チェーン上のあらゆるものを、リアルタイムデータを活用してシミュレート、デバッグ、監視します。_**
+**Tenderly - _スマートコントラクトの開発、テスト、監視、運用のためのデバッグ、オブザーバビリティ、インフラストラクチャ・ビルディング・ブロックを提供する Web3 開発プラットフォーム_**
 
 - [tenderly.co](https://tenderly.co/)
 - [ドキュメント](https://docs.tenderly.co/)
@@ -60,10 +60,11 @@ lang: ja
 ## 関連チュートリアル {#related-tutorials}
 
 - [最初のスマートコントラクトのデプロイ](/developers/tutorials/deploying-your-first-smart-contract/) _- イーサリアムテストネットワークに最初のスマートコントラクトをデプロイする方法の紹介_
+- [Hello World | スマートコントラクトチュートリアル](/developers/tutorials/hello-world-smart-contract/) _– 容易に理解できるチュートリアルです。基本的なスマートコントラクトを作成し、イーサリアムにデプロイします。_
 - [Solidity を使用した他のコントラクトとの連携](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- 既存のコントラクトからスマートコントラクトをデプロイし、それを扱う方法_
 - [コントラクトのサイズを小さくする方法](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- コントラクトコードのサイズをリミットよりも下げて、ガスを節約する方法_
 
-## さらに学びたい方へ {#further-reading}
+## 参考文献 {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [Hardhat を使用したコントラクトのデプロイ](https://hardhat.org/guides/deploying.html) - _Nomic Labs_

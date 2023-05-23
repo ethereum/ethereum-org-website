@@ -235,9 +235,7 @@ Your `.env` should now look like this:
 
 To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file in step 13.
 
-<InfoBanner isWarning>
-Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
-</InfoBanner>
+<EnvWarningBanner />
 
 ## Step 12: Install Ethers.js {#install-ethers}
 

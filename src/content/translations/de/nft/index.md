@@ -341,7 +341,7 @@ Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügerei
 
 ## NFTs erstellen {#build-with-nfts}
 
-Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/docs/standards/tokens/erc-721/) erstellt. Es gibt jedoch noch andere Standards, die für Sie unter Umständen von Interesse sind. Der Standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) erlaubt halb-fungible Token, die besonders im Gaming-Bereich nützlich sind. Kürzlich wurde [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) vorgeschlagen, um das Prägen von NFTs wesentlich effizienter zu machen. Dieser Standard ermöglicht es Ihnen, so viele Tokens wie Sie möchten in einer Transaktion zu prägen!
+Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/docs/standards/tokens/erc-721/) erstellt. Es gibt jedoch noch andere Standards, die für Sie unter Umständen von Interesse sind. Der Standard [ERC-1155](/developers/docs/standards/tokens/erc-1155/) erlaubt halb-fungible Token, die besonders im Gaming-Bereich nützlich sind. Kürzlich wurde [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) vorgeschlagen, um das Prägen von NFTs wesentlich effizienter zu machen. Dieser Standard ermöglicht es Ihnen, so viele Tokens wie Sie möchten in einer Transaktion zu prägen!
 
 ## Weiterführende Informationen {#further-reading}
 

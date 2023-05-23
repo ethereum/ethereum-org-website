@@ -144,7 +144,6 @@ const Line = () => {
       as="aside"
       gridColumn={1}
       gridRow="1 / 3"
-      boxSize="100%"
       position="relative"
       hideBelow={medBp}
       _after={{

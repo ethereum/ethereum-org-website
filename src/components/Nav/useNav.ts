@@ -4,6 +4,8 @@ import { cloneDeep } from "lodash"
 import { useRef, useState } from "react"
 import { IItem, ISections } from "./types"
 
+import { trackCustomEvent } from "../../utils/matomo"
+
 export const useNav = ({ path }: { path: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { colorMode, toggleColorMode } = useColorMode()
@@ -266,7 +268,6 @@ export const useNav = ({ path }: { path: string }) => {
   let mobileLinkSections = cloneDeep(linkSections)
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev)
-    document.documentElement.style.overflowY = isMenuOpen ? "scroll" : "hidden"
   }
 
   const searchRef = useRef<HTMLButtonElement>(null)
@@ -281,18 +282,27 @@ export const useNav = ({ path }: { path: string }) => {
       ? `?from=/${splitPath.slice(2).join("/")}`
       : ""
 
+  const changeColorMode = () => {
+    toggleColorMode()
+    trackCustomEvent({
+      eventCategory: "nav bar",
+      eventAction: "click",
+      eventName: isDarkTheme ? "light mode" : "dark mode", // This will be inverted as the state is changing
+    })
+  }
+
   const mobileNavProps = {
     isMenuOpen,
     isDarkTheme,
     toggleMenu,
-    toggleTheme: toggleColorMode,
+    toggleTheme: changeColorMode,
     toggleSearch,
     linkSections: mobileLinkSections,
     fromPageParameter,
   }
 
   return {
-    toggleColorMode,
+    toggleColorMode: changeColorMode,
     t,
     i18n,
     isDarkTheme,
