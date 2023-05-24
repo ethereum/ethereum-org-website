@@ -142,3 +142,5 @@ export type UserStats = {
 }
 
 export type CompletedQuizzes = { [key: string]: boolean }
+
+export type QuizShareStats = { score: number; total: number }

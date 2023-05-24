@@ -259,6 +259,25 @@ const QuizWidget: React.FC<IProps> = ({
     }
   }
 
+  const handleShare = () => {
+    if (!quizData || !window) return
+    trackCustomEvent({
+      eventCategory: "Quiz widget",
+      eventAction: "Other",
+      eventName: "Share results",
+    })
+
+    const url = `https://ethereum.org${window.location.pathname}%23quiz`
+    const hashtags = ["ethereumquiz", "ethereum", "quiz"]
+    const tweet = `${encodeURI(
+      `I just took the "${quizData.title}" quiz on ethereum.org and scored ${numberOfCorrectAnswers} out of ${quizData.questions.length}! Try it yourself at ${url}`
+    )}`
+
+    window.open(
+      `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
+    )
+  }
+
   const handleContinue = () => {
     if (!currentQuestionAnswerChoice) return
 
@@ -279,23 +298,6 @@ const QuizWidget: React.FC<IProps> = ({
         eventValue: `${score}%`,
       })
     }
-  }
-
-  const handleShare = () => {
-    if (!quizData || !window) return
-    trackCustomEvent({
-      eventCategory: "Quiz widget",
-      eventAction: "Other",
-      eventName: "Share results",
-    })
-    const url = `https://ethereum.org${window.location.pathname}%23quiz` // %23 is # character, needs to added to already encoded tweet string
-    const tweet =
-      encodeURI(
-        `I just took the "${quizData.title}" quiz on ethereum.org and scored ${numberOfCorrectAnswers} out of ${quizData.questions.length}! Try it yourself at `
-      ) + url
-    window.open(
-      `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${"ethereumquiz"}`
-    )
   }
 
   const handleNextQuiz = () => {

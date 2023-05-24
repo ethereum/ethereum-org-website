@@ -21,26 +21,32 @@ import { QuizzesHubContext } from "./context"
 import { getTotalQuizzesPoints } from "./utils"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
+import { QuizShareStats } from "../../types"
 
-// TODO: move to custom re-usable hook, remove from QuizWidget??
-// TODO: update tw sharing copy and urls
-// TODO: can we translate tweet copy?
-const handleShare = (): void => {
+// TODO: track event on matomo
+const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
   // if (!quizData || !window) return
-  // trackCustomEvent({
-  //   eventCategory: "Quiz widget",
-  //   eventAction: "Other",
-  //   eventName: "Share results",
-  // })
-  const url = `https://ethereum.org${window.location.pathname}%23quiz` // %23 is # character, needs to added to already encoded tweet string
-  const tweet =
-    encodeURI(
-      `I just took the "X" quiz on ethereum.org and scored Y out of Z! Try it yourself at `
-    ) + url
+  //   trackCustomEvent({
+  //     eventCategory: "Quiz widget",
+  //     eventAction: "Other",
+  //     eventName: "Share results",
+  //   })
+  const url = "https://ethereum.org/quizzes"
+  const hashtags = ["ethereumquiz", "ethereum", "quiz"]
+  const tweet = `${encodeURI(
+    `I took Ethereum quizzes on ethereum.org and overall scored ${score} out of ${total}! Try it yourself at ${url}`
+  )}`
+
   window.open(
-    `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${"ethereumquiz"}`
+    `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
   )
 }
+
+const handleShare = ({ score, total }: QuizShareStats) =>
+  shareOnTwitter({
+    score,
+    total,
+  })
 
 const QuizzesStats: React.FC = () => {
   const { score: userScore, completed, average } = useContext(QuizzesHubContext)
@@ -80,7 +86,9 @@ const QuizzesStats: React.FC = () => {
             <Button
               variant="outline-color"
               leftIcon={<Icon as={FaTwitter} />}
-              onClick={handleShare}
+              onClick={() =>
+                handleShare({ score: userScore, total: TOTAL_QUIZZES_POINTS })
+              }
               w={{ base: "full", lg: "auto" }}
               mt={{ base: 2, lg: 0 }}
             >
