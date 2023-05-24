@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
 import Button from "../Button"
@@ -6,7 +6,7 @@ import Translation from "../Translation"
 
 import { GreenTickIcon } from "../icons/quiz"
 
-import { CompletedQuizzes, QuizzesListItem } from "../../types"
+import { QuizzesListItem } from "../../types"
 // Raw quizzes data
 import allQuizzesData from "../../data/quizzes"
 
@@ -15,16 +15,7 @@ const QuizItem = (props: QuizzesListItem) => {
     props
   const numberOfQuestions = allQuizzesData[id].questions.length
 
-  // Create an object that contains quiz id as key and a boolean flag to indicate if its completed
-  // Initialize all quizzes as not completed
-  const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
-    allQuizzesData
-  ).reduce((object, key) => ({ ...object, [key]: false }), {})
-
-  const [completedQuizzes, setCompletedQuizzes] = useState(
-    INITIAL_COMPLETED_QUIZZES
-  )
-
+  // TODO: leer data de context
   const isCompleted = completedQuizzes[id]
 
   return (

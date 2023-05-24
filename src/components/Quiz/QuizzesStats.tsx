@@ -20,8 +20,9 @@ import { QuizzesHubContext } from "./context"
 
 import { getTotalQuizzesPoints } from "./utils"
 
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 import { QuizShareStats } from "../../types"
+
+import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 
 // TODO: track event on matomo
 const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
@@ -117,14 +118,12 @@ const QuizzesStats: React.FC = () => {
               <Progress value={userScore} />
 
               <Flex direction={{ base: "column", lg: "row" }}>
-                {/* TODO: remove hardcoded 83% value */}
                 <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }}>
                   <Translation id="average-score" />{" "}
                   <Text as="span">{average}%</Text>
                 </Text>
 
                 <Text mb={0}>
-                  {/* TODO: remove hardcoded 2 value */}
                   <Translation id="completed" />{" "}
                   <Text as="span">
                     {completed}/{totalQuizzesNumber}

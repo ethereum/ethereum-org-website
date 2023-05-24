@@ -60,9 +60,7 @@ import {
 // Import constants
 import { PASSING_QUIZ_SCORE } from "../../constants"
 import { USER_STATS_KEY } from "../../pages/quizzes"
-
-// Constants
-const PROGRESS_BAR_GAP = "4px"
+import QuizProgressBar from "./QuizProgressBar"
 
 // Interfaces
 export interface IProps {
@@ -98,8 +96,8 @@ const QuizWidget: React.FC<IProps> = ({
   const {
     next: nextQuiz,
     score: userScore,
-    completed,
     average,
+    completed,
   } = useContext(QuizzesHubContext)
 
   const hasNextQuiz = !isStandaloneQuiz && !!nextQuiz
@@ -119,7 +117,6 @@ const QuizWidget: React.FC<IProps> = ({
     }
 
     // Get quiz key
-    // TODO: get quiz key from Context (current)
     const currentQuizKey =
       quizKey ||
       Object.keys(allQuizzesData).filter((quizUri) =>
@@ -433,7 +430,6 @@ const QuizWidget: React.FC<IProps> = ({
                 <Text
                   fontStyle="normal"
                   fontWeight="700"
-                  // TODO: refactor get color
                   color={
                     showAnswer && currentQuestionAnswerChoice?.isCorrect
                       ? "success"
@@ -442,7 +438,6 @@ const QuizWidget: React.FC<IProps> = ({
                       : "primaryHover"
                   }
                 >
-                  {/* TODO: refactor get title */}
                   {showAnswer && currentQuestionAnswerChoice?.isCorrect
                     ? "Correct!"
                     : showAnswer && !currentQuestionAnswerChoice?.isCorrect
@@ -452,24 +447,11 @@ const QuizWidget: React.FC<IProps> = ({
               </Center>
 
               {/* Progress bar */}
-              <Center gap={PROGRESS_BAR_GAP} mb={6}>
-                {quizData.questions.map(({ id }, index) => {
-                  /* Calculate width percent based on number of questions */
-                  const width = `calc(${Math.floor(
-                    100 / quizData.questions.length
-                  )}% - ${PROGRESS_BAR_GAP})`
-                  return (
-                    <Container
-                      key={id}
-                      bg={progressBarBackground(index)}
-                      h="4px"
-                      w={width}
-                      maxW={`min(${width}, 2rem)`}
-                      marginInline={0}
-                      p={0}
-                    />
-                  )
-                })}
+              <Center mb={6}>
+                <QuizProgressBar
+                  progressBarBackground={progressBarBackground}
+                  questions={quizData.questions}
+                />
               </Center>
 
               {/* Quiz main body */}

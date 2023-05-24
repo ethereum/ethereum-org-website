@@ -135,12 +135,12 @@ export type QuizzesListItem = {
 
 export type QuizStatus = "neutral" | "success" | "error"
 
+export type CompletedQuizzes = { [key: string]: boolean }
+
 export type UserStats = {
   score: number
   average: number
-  completed: number
+  completed: CompletedQuizzes
 }
-
-export type CompletedQuizzes = { [key: string]: boolean }
 
 export type QuizShareStats = { score: number; total: number }

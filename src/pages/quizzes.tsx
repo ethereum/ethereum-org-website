@@ -1,8 +1,3 @@
-// 1) col derecha data (average score)
-
-// 5) TODO: hide green tick if not passed
-// 6) tw share results copy
-
 import React, { useEffect, useState } from "react"
 import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
@@ -24,9 +19,12 @@ import { QuizzesHubContext } from "../components/Quiz/context"
 
 import { getImage } from "../utils/image"
 
-import { QuizStatus, UserStats } from "../types"
+import { CompletedQuizzes, QuizStatus, UserStats } from "../types"
 
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../data/quizzes"
+import allQuizzesData, {
+  ethereumBasicsQuizzes,
+  usingEthereumQuizzes,
+} from "../data/quizzes"
 
 // Styles
 // TODO: remove styled components
@@ -39,16 +37,21 @@ const Hero = styled(PageHero)`
   padding-bottom: 2rem;
 `
 
-// export const USER_SCORE_KEY = "quizzes-user-score"
-// export const AVERAGE_SCORE_KEY = "quizzes-average-score"
 export const USER_STATS_KEY = "quizzes-stats"
-export const INITIAL_USER_STATS = {
+// Create an object that contains each quiz id as key and a boolean flag to indicate if its completed
+// Initialize all quizzes as not completed
+const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
+  allQuizzesData
+).reduce((object, key) => ({ ...object, [key]: false }), {})
+
+const INITIAL_USER_STATS = {
   score: 0,
   average: 0,
-  completed: 0,
+  completed: INITIAL_COMPLETED_QUIZZES,
 }
 
 // Hook
+// TODO: move to other place, rewrite as arrow fn
 function useLocalStorage(key, initialValue) {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
@@ -123,6 +126,14 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
     alt: t("quizzes-title"),
   }
 
+  const contextState = {
+    status: quizStatus,
+    next: nextQuiz,
+    score: userStats.score,
+    average: userStats.average,
+    completed: userStats.completed,
+  }
+
   return (
     <Box>
       <PageMetadata
@@ -133,22 +144,14 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         <Hero content={heroContent} isReverse />
       </HeroContainer>
 
-      <QuizzesHubContext.Provider
-        // TODO: move to constant init
-        value={{
-          status: quizStatus,
-          next: nextQuiz,
-          score: userStats.score,
-          average: userStats.average,
-          completed: userStats.completed,
-        }}
-      >
+      <QuizzesHubContext.Provider value={contextState}>
         <QuizzesModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
           <QuizWidget
             quizKey={currentQuiz}
             nextHandler={setCurrentQuiz}
             statusHandler={setQuizStatus}
             setUserStats={setUserStats}
+            // TODO: remove commented code below
             // completedHandler={setNumberOfCompletedQuizzes}
             // averageHandler={setAverageScore}
             isStandaloneQuiz={false}
@@ -253,11 +256,10 @@ export default QuizzesHubPage
 
 export const query = graphql`
   query QuizzesHubPage($languagesToFetch: [String!]!) {
-    # TODO: update locales query
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-run-a-node", "common", "learn-quizzes"] }
+        ns: { in: ["common", "learn-quizzes"] }
       }
     ) {
       edges {
