@@ -72,6 +72,7 @@ const QuizzesStats: React.FC = () => {
         >
           <GridItem colSpan={{ base: 2, lg: 1 }} alignSelf="center" order={1}>
             <Text
+              color="body"
               fontWeight="bold"
               fontSize="xl"
               margin={0}
@@ -110,7 +111,7 @@ const QuizzesStats: React.FC = () => {
                   <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
                 </Circle>
 
-                <Text fontWeight="bold" fontSize="5xl" mb={0}>
+                <Text fontWeight="bold" fontSize="5xl" mb={0} color="body">
                   {userScore}
                   <Text as="span" color="bodyLight">
                     /{TOTAL_QUIZZES_POINTS}
@@ -121,14 +122,16 @@ const QuizzesStats: React.FC = () => {
               <Progress value={userScore} />
 
               <Flex direction={{ base: "column", lg: "row" }}>
-                <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }}>
+                <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyLight">
                   <Translation id="average-score" />{" "}
-                  <Text as="span">{average}%</Text>
+                  <Text as="span" color="body">
+                    {average}%
+                  </Text>
                 </Text>
 
-                <Text mb={0}>
+                <Text mb={0} color="bodyLight">
                   <Translation id="completed" />{" "}
-                  <Text as="span">
+                  <Text as="span" color="body">
                     {numberOfCompletedQuizzes}/{totalQuizzesNumber}
                   </Text>
                 </Text>
@@ -156,29 +159,29 @@ const QuizzesStats: React.FC = () => {
             gap={{ base: 6, md: 10 }}
           >
             <Stack>
-              <Text mr={10} mb={-2}>
+              <Text mr={10} mb={-2} color="bodyLight">
                 <Translation id="average-score" />
               </Text>
               {/* Data from Matomo, manually updated */}
-              <Text>67.4%</Text>
+              <Text color="body">67.4%</Text>
             </Stack>
 
             <Stack>
-              <Text mr={10} mb={-2}>
+              <Text mr={10} mb={-2} color="bodyLight">
                 <Translation id="questions-answered" />
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text>100 000+</Text>
+              <Text color="body">100 000+</Text>
             </Stack>
 
             <Stack>
-              <Text mr={10} mb={-2}>
+              <Text mr={10} mb={-2} color="bodyLight">
                 <Translation id="retry" />
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text>15.6%</Text>
+              <Text color="body">15.6%</Text>
             </Stack>
           </Flex>
         </Flex>

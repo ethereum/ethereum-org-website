@@ -159,11 +159,14 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
             {/* quizzes list */}
             <Box flex={1} order={{ base: 2, lg: 1 }}>
               <Box px={{ base: 8, lg: 0 }}>
-                <Heading fontSize={{ base: "1.75rem", lg: "2rem" }}>
+                <Heading
+                  fontSize={{ base: "1.75rem", lg: "2rem" }}
+                  color="body"
+                >
                   <Translation id="basics" />
                 </Heading>
 
-                <Text mb={8}>
+                <Text mb={8} color="body">
                   <Translation id="basics-description" />
                 </Text>
 
@@ -176,11 +179,14 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
               </Box>
 
               <Box px={{ base: 8, lg: 0 }} mb={10}>
-                <Heading fontSize={{ base: "1.75rem", lg: "2rem" }}>
+                <Heading
+                  fontSize={{ base: "1.75rem", lg: "2rem" }}
+                  color="body"
+                >
                   <Translation id="using-ethereum" />
                 </Heading>
 
-                <Text mb={8}>
+                <Text mb={8} color="body">
                   <Translation id="using-ethereum-description" />
                 </Text>
 
@@ -205,12 +211,13 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                   <Text
                     align={{ base: "center", lg: "left" }}
                     fontWeight="bold"
+                    color="body"
                     mb={-2}
                   >
                     <Translation id="want-more-quizzes" />
                   </Text>
 
-                  <Text align={{ base: "center", lg: "left" }}>
+                  <Text align={{ base: "center", lg: "left" }} color="body">
                     <Translation id="contribute" />
                   </Text>
                 </Stack>
