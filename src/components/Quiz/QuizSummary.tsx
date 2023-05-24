@@ -11,7 +11,7 @@ import { numberToPercent } from "../../utils/numberToPercent"
 
 // Interfaces
 export interface IProps {
-  correctCount: number
+  numberOfCorrectAnswers: number
   isPassingScore: boolean
   questionCount: number
   ratioCorrect: number
@@ -19,7 +19,7 @@ export interface IProps {
 
 // Component
 const QuizSummary: React.FC<IProps> = ({
-  correctCount,
+  numberOfCorrectAnswers,
   isPassingScore,
   questionCount,
   ratioCorrect,
@@ -76,7 +76,7 @@ const QuizSummary: React.FC<IProps> = ({
         </Flex>
 
         <Flex>
-          <Text {...valueStyles}>+{correctCount}</Text>
+          <Text {...valueStyles}>+{numberOfCorrectAnswers}</Text>
           <Text {...labelStyles}>
             <Translation id="correct" />
           </Text>

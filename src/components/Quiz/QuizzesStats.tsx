@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import {
   Box,
   Circle,
@@ -14,16 +14,20 @@ import { FaTwitter } from "react-icons/fa"
 
 import Button from "../Button"
 import Translation from "../Translation"
-
 import { TrophyIcon } from "../icons/quiz"
 
+import { QuizzesHubContext } from "./context"
+
+import { getTotalQuizzesPoints } from "./utils"
+
 export interface IProps {
+  // TODO: calcular y sacar prop
   totalQuizzesNumber: number
-  userScore: number
 }
 
 // TODO: move to custom re-usable hook, remove from QuizWidget??
-// TODO: update tw sharing copy
+// TODO: update tw sharing copy and urls
+// TODO: can we translate tweet copy?
 const handleShare = (): void => {
   // if (!quizData || !window) return
   // trackCustomEvent({
@@ -41,19 +45,9 @@ const handleShare = (): void => {
   )
 }
 
-const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber, userScore }) => {
-  // useEffect(() => {
-  //   if (localStorage.getItem(USER_SCORE_KEY)) {
-  //     setUserScore(localStorage.getItem(USER_SCORE_KEY)!)
-  //   } else {
-  //     localStorage.setItem(USER_SCORE_KEY, "0")
-  //     setUserScore("0")
-  //   }
-  // }, [])
-
-  // TODO: compute value and remove hardcoded number
-  const TOTAL_QUIZZES_POINTS = 37
-  const USER_SCORE_KEY = "userScoreKey"
+const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber }) => {
+  const { score: userScore, completed } = useContext(QuizzesHubContext)
+  const TOTAL_QUIZZES_POINTS = getTotalQuizzesPoints()
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
@@ -113,19 +107,20 @@ const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber, userScore }) => {
                 </Text>
               </Flex>
 
-              {/* TODO: remove hardcoded value */}
-              <Progress value={20} />
+              <Progress value={userScore} />
 
               <Flex direction={{ base: "column", lg: "row" }}>
-                {/* TODO: remove hardcoded value */}
+                {/* TODO: remove hardcoded 83% value */}
                 <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }}>
                   <Translation id="average-score" /> <Text as="span">83%</Text>
                 </Text>
 
                 <Text mb={0}>
-                  {/* TODO: remove hardcoded value */}
+                  {/* TODO: remove hardcoded 2 value */}
                   <Translation id="completed" />{" "}
-                  <Text as="span">2/{totalQuizzesNumber}</Text>
+                  <Text as="span">
+                    {completed}/{totalQuizzesNumber}
+                  </Text>
                 </Text>
               </Flex>
             </Stack>

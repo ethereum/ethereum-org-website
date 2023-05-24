@@ -28,6 +28,9 @@ import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
 
+// Context
+import { QuizStatus, QuizzesHubContext } from "./context"
+
 // Import SVGs
 import {
   CorrectIcon,
@@ -48,7 +51,7 @@ import { AnswerChoice, RawQuiz, Quiz, RawQuestion, Question } from "../../types"
 
 // Import constants
 import { PASSING_QUIZ_SCORE } from "../../constants"
-import { QuizStatus, QuizzesHubContext } from "./context"
+import { USER_SCORE_KEY } from "../../pages/quizzes"
 
 // Constants
 const PROGRESS_BAR_GAP = "4px"
@@ -56,22 +59,23 @@ const PROGRESS_BAR_GAP = "4px"
 // Interfaces
 export interface IProps {
   quizKey?: string
-  // TODO: update type
-  nextHandler: (next?: string) => {}
-  statusHandler: (status: QuizStatus) => {}
+  nextHandler: (next?: string) => void
+  statusHandler: (status: QuizStatus) => void
   maxQuestions?: number
-  // TODO: update setUserScore interface
-  setUserScore: () => {}
+  scoreHandler: (score: number) => void
+  completedHandler: (completed: number) => void
   isStandaloneQuiz?: boolean
 }
 
 // Component
+// TODO: Fix a11y keyboard tab stops
 const QuizWidget: React.FC<IProps> = ({
   quizKey,
   nextHandler,
   statusHandler,
   maxQuestions,
-  setUserScore,
+  scoreHandler,
+  completedHandler,
   isStandaloneQuiz = true,
 }) => {
   const { t } = useTranslation()
@@ -84,13 +88,19 @@ const QuizWidget: React.FC<IProps> = ({
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  const { next: nextQuiz } = useContext(QuizzesHubContext)
+  // Context
+  const {
+    next: nextQuiz,
+    score: userScore,
+    completed,
+  } = useContext(QuizzesHubContext)
 
-  // TODO: move somewhere else (Context??)
-  const USER_SCORE_KEY = "userScoreKey"
+  const hasNextQuiz = !isStandaloneQuiz && !!nextQuiz
+  const finishedQuiz =
+    userQuizProgress.length === quizData?.questions.length! - 1
 
-  const initialize = (): void => {
-    // Reset state
+  // Reset quiz state
+  const initialize = () => {
     setQuizData(null)
     setCurrentQuestionAnswerChoice(null)
     setUserQuizProgress([])
@@ -102,6 +112,7 @@ const QuizWidget: React.FC<IProps> = ({
     }
 
     // Get quiz key
+    // TODO: get quiz key from Context (current)
     const currentQuizKey =
       quizKey ||
       Object.keys(allQuizzesData).filter((quizUri) =>
@@ -127,6 +138,7 @@ const QuizWidget: React.FC<IProps> = ({
     }
     setQuizData(quiz)
   }
+
   useEffect(initialize, [quizKey])
 
   // Memoized values
@@ -167,20 +179,13 @@ const QuizWidget: React.FC<IProps> = ({
     ]
   )
 
-  const correctCount = useMemo<number>(() => {
-    const numberOfCorrectAnswers = userQuizProgress.filter(
-      ({ isCorrect }) => isCorrect
-    ).length
-    // TODO: remove clog
-    console.log({ numberOfCorrectAnswers })
-    // localStorage.setItem(USER_SCORE_KEY, numberOfCorrectAnswers.toString())
-
-    return numberOfCorrectAnswers
+  const numberOfCorrectAnswers = useMemo<number>(() => {
+    return userQuizProgress.filter(({ isCorrect }) => isCorrect).length
   }, [userQuizProgress])
 
   const ratioCorrect = useMemo<number>(
-    () => (!quizData ? 0 : correctCount / quizData.questions.length),
-    [quizData, correctCount]
+    () => (!quizData ? 0 : numberOfCorrectAnswers / quizData.questions.length),
+    [quizData, numberOfCorrectAnswers]
   )
 
   const score = useMemo<number>(
@@ -199,18 +204,18 @@ const QuizWidget: React.FC<IProps> = ({
   )
 
   // Handlers
-  const handleSelectAnswerChoice = (answerId: string): void => {
+  const handleSelectAnswerChoice = (answerId: string) => {
     const isCorrect =
       answerId === quizData?.questions[currentQuestionIndex].correctAnswerId
     setCurrentQuestionAnswerChoice({ answerId, isCorrect })
   }
 
-  const handleSelection = (answerId: string): void => {
+  const handleSelection = (answerId: string) => {
     setSelectedAnswer(answerId)
     handleSelectAnswerChoice(answerId)
   }
 
-  const handleShowAnswer = (questionId: string, answer: AnswerChoice): void => {
+  const handleShowAnswer = (questionId: string, answer: AnswerChoice) => {
     trackCustomEvent({
       eventCategory: "Quiz widget",
       eventAction: "Question answered",
@@ -231,7 +236,7 @@ const QuizWidget: React.FC<IProps> = ({
     }
   }
 
-  const handleRetryQuestion = (): void => {
+  const handleRetryQuestion = () => {
     trackCustomEvent({
       eventCategory: "Quiz widget",
       eventAction: "Other",
@@ -247,33 +252,19 @@ const QuizWidget: React.FC<IProps> = ({
     }
   }
 
-  const handleContinue = (): void => {
+  const handleContinue = () => {
     if (!currentQuestionAnswerChoice) return
 
     setUserQuizProgress((prev) => [...prev, currentQuestionAnswerChoice])
     setCurrentQuestionAnswerChoice(null)
     setShowAnswer(false)
 
-    // TODO: duplicated const, refactor
-    const numberOfCorrectAnswers = userQuizProgress.filter(
-      ({ isCorrect }) => isCorrect
-    ).length
-
     // Reset quiz status (modifies bg color for mobile)
     if (!isStandaloneQuiz) {
       statusHandler("neutral")
     }
 
-    const computeUserScore =
-      parseInt(localStorage.getItem(USER_SCORE_KEY)!) + numberOfCorrectAnswers
-
-    console.log({ computeUserScore })
-
-    // localStorage.setItem(USER_SCORE_KEY, computeUserScore.toString())
-    // setUserScore(computeUserScore.toString())
-
-    if (showResults) {
-      // TODO: does this code executes??
+    if (finishedQuiz) {
       trackCustomEvent({
         eventCategory: "Quiz widget",
         eventAction: "Other",
@@ -283,7 +274,7 @@ const QuizWidget: React.FC<IProps> = ({
     }
   }
 
-  const handleShare = (): void => {
+  const handleShare = () => {
     if (!quizData || !window) return
     trackCustomEvent({
       eventCategory: "Quiz widget",
@@ -293,11 +284,26 @@ const QuizWidget: React.FC<IProps> = ({
     const url = `https://ethereum.org${window.location.pathname}%23quiz` // %23 is # character, needs to added to already encoded tweet string
     const tweet =
       encodeURI(
-        `I just took the "${quizData.title}" quiz on ethereum.org and scored ${correctCount} out of ${quizData.questions.length}! Try it yourself at `
+        `I just took the "${quizData.title}" quiz on ethereum.org and scored ${numberOfCorrectAnswers} out of ${quizData.questions.length}! Try it yourself at `
       ) + url
     window.open(
       `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${"ethereumquiz"}`
     )
+  }
+
+  const handleNextQuiz = () => {
+    const newUserScore = userScore + numberOfCorrectAnswers
+    // Update user score and save to local storage
+    scoreHandler(newUserScore)
+    localStorage.setItem(USER_SCORE_KEY, newUserScore.toString())
+
+    // Update number of completed quizzes
+    if (score === 100) {
+      completedHandler(completed + 1)
+    }
+
+    // Move to next quiz
+    nextHandler(nextQuiz)
   }
 
   const AnswerIcon = () => {
@@ -315,9 +321,6 @@ const QuizWidget: React.FC<IProps> = ({
       <IncorrectIcon {...commonProps} />
     )
   }
-
-  // TODO: Fix a11y keyboard tab stops
-  const hasNextQuiz = !isStandaloneQuiz && !!nextQuiz
 
   // Render QuizWidget component
   return (
@@ -447,7 +450,7 @@ const QuizWidget: React.FC<IProps> = ({
               <Center>
                 {showResults ? (
                   <QuizSummary
-                    correctCount={correctCount}
+                    numberOfCorrectAnswers={numberOfCorrectAnswers}
                     isPassingScore={isPassingScore}
                     questionCount={quizData.questions.length}
                     ratioCorrect={ratioCorrect}
@@ -511,7 +514,7 @@ const QuizWidget: React.FC<IProps> = ({
 
                     {/* Show `Next Quiz` button if quiz is opened from hub page */}
                     {hasNextQuiz && (
-                      <Button onClick={() => nextHandler(nextQuiz)}>
+                      <Button onClick={handleNextQuiz}>
                         <Translation id="next-quiz" />
                       </Button>
                     )}
@@ -532,9 +535,7 @@ const QuizWidget: React.FC<IProps> = ({
                 </Flex>
               ) : showAnswer ? (
                 <Button onClick={handleContinue}>
-                  {userQuizProgress.length === quizData.questions.length - 1
-                    ? t("see-results")
-                    : t("next-question")}
+                  {finishedQuiz ? t("see-results") : t("next-question")}
                 </Button>
               ) : (
                 <Button
