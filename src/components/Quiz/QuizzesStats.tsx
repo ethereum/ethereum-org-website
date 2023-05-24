@@ -18,7 +18,7 @@ import { TrophyIcon } from "../icons/quiz"
 
 import { QuizzesHubContext } from "./context"
 
-import { getTotalQuizzesPoints } from "./utils"
+import { getNumberOfCompletedQuizzes, getTotalQuizzesPoints } from "./utils"
 
 import { QuizShareStats } from "../../types"
 
@@ -54,6 +54,9 @@ const QuizzesStats: React.FC = () => {
   const totalQuizzesNumber =
     ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
   const TOTAL_QUIZZES_POINTS = getTotalQuizzesPoints()
+  const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(
+    JSON.parse(completed)
+  )
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
@@ -126,7 +129,7 @@ const QuizzesStats: React.FC = () => {
                 <Text mb={0}>
                   <Translation id="completed" />{" "}
                   <Text as="span">
-                    {completed}/{totalQuizzesNumber}
+                    {numberOfCompletedQuizzes}/{totalQuizzesNumber}
                   </Text>
                 </Text>
               </Flex>

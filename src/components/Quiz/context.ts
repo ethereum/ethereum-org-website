@@ -1,13 +1,13 @@
 import { createContext } from "react"
 
-import { CompletedQuizzes, QuizStatus } from "../../types"
+import { QuizStatus } from "../../types"
 
 interface ContextState {
   status: QuizStatus
   next?: string
   score: number
   average: number
-  completed: CompletedQuizzes
+  completed: string
 }
 
 const INITIAL_CONTEXT_STATE: ContextState = {
@@ -15,7 +15,7 @@ const INITIAL_CONTEXT_STATE: ContextState = {
   next: undefined,
   score: 0,
   average: 0,
-  completed: {},
+  completed: JSON.stringify({}),
 }
 
 export const QuizzesHubContext = createContext(INITIAL_CONTEXT_STATE)

@@ -26,8 +26,7 @@ import allQuizzesData, {
   usingEthereumQuizzes,
 } from "../data/quizzes"
 
-// Styles
-// TODO: remove styled components
+// TODO: remove styled components?
 const HeroContainer = styled.div`
   background: ${({ theme }) => theme.colors.layer2Gradient};
   width: 100%;
@@ -47,12 +46,12 @@ const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
 const INITIAL_USER_STATS = {
   score: 0,
   average: 0,
-  completed: INITIAL_COMPLETED_QUIZZES,
+  completed: JSON.stringify(INITIAL_COMPLETED_QUIZZES),
 }
 
 // Hook
-// TODO: move to other place, rewrite as arrow fn
-function useLocalStorage(key, initialValue) {
+// TODO: move to other place
+const useLocalStorage = (key, initialValue) => {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
   const [storedValue, setStoredValue] = useState(() => {
@@ -99,16 +98,12 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   )
   const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
-
-  // const [userScore, setUserScore] = useState(0)
-  // const [averageScore, setAverageScore] = useState(0)
-  // const [numberOfCompletedQuizzes, setNumberOfCompletedQuizzes] = useState(0)
+  // TODO: read stats from local storage (useLocalStorage)
   const [userStats, setUserStats] = useState<UserStats>(INITIAL_USER_STATS)
-
   const [isModalOpen, setModalOpen] = useState(false)
 
   useEffect(() => {
-    // User score
+    // set user stats in Context if available
     if (localStorage.getItem(USER_STATS_KEY)) {
       setUserStats(JSON.parse(localStorage.getItem(USER_STATS_KEY)!))
     } else {
@@ -151,9 +146,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
             nextHandler={setCurrentQuiz}
             statusHandler={setQuizStatus}
             setUserStats={setUserStats}
-            // TODO: remove commented code below
-            // completedHandler={setNumberOfCompletedQuizzes}
-            // averageHandler={setAverageScore}
             isStandaloneQuiz={false}
           />
         </QuizzesModal>
@@ -175,7 +167,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                   <Translation id="basics-description" />
                 </Text>
 
-                {/* TODO: fix TS error */}
                 <QuizzesList
                   content={ethereumBasicsQuizzes}
                   quizHandler={setCurrentQuiz}
@@ -193,7 +184,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                   <Translation id="using-ethereum-description" />
                 </Text>
 
-                {/* TODO: fix TS error */}
                 <QuizzesList
                   content={usingEthereumQuizzes}
                   quizHandler={setCurrentQuiz}

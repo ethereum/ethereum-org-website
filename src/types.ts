@@ -123,11 +123,14 @@ export interface RawQuizzes {
   [key: string]: RawQuiz
 }
 
-export type QuizzesListItem = {
-  title: string
+export type QuizzesSection = {
   id: string
+  title: string
   level: string
   next?: string
+}
+
+export type QuizzesListItem = QuizzesSection & {
   quizHandler: (id: string) => void
   nextHandler: (next?: string) => void
   modalHandler: (isModalOpen: boolean) => void
@@ -140,7 +143,7 @@ export type CompletedQuizzes = { [key: string]: boolean }
 export type UserStats = {
   score: number
   average: number
-  completed: CompletedQuizzes
+  completed: string
 }
 
 export type QuizShareStats = { score: number; total: number }

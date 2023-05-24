@@ -1,22 +1,23 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
 import Button from "../Button"
 import Translation from "../Translation"
-
 import { GreenTickIcon } from "../icons/quiz"
 
+import { QuizzesHubContext } from "./context"
+
 import { QuizzesListItem } from "../../types"
-// Raw quizzes data
+
 import allQuizzesData from "../../data/quizzes"
 
-const QuizItem = (props: QuizzesListItem) => {
+const QuizItem: React.FC<QuizzesListItem> = (props) => {
   const { title, id, level, next, quizHandler, nextHandler, modalHandler } =
     props
+  const { completed } = useContext(QuizzesHubContext)
   const numberOfQuestions = allQuizzesData[id].questions.length
 
-  // TODO: leer data de context
-  const isCompleted = completedQuizzes[id]
+  const isCompleted = JSON.parse(completed)[id]
 
   return (
     <Flex

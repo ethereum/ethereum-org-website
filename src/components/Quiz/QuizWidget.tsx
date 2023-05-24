@@ -1,4 +1,3 @@
-// Import libraries
 import React, {
   useEffect,
   useState,
@@ -10,7 +9,6 @@ import {
   Box,
   Center,
   Circle,
-  Container,
   Flex,
   Heading,
   Icon,
@@ -22,16 +20,13 @@ import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-// Import components
 import Button from "../Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
 
-// Context
 import { QuizzesHubContext } from "./context"
 
-// Import SVGs
 import {
   CorrectIcon,
   IncorrectIcon,
@@ -39,14 +34,8 @@ import {
   TrophyIcon,
 } from "../icons/quiz"
 
-// Import data
-import allQuizzesData from "../../data/quizzes"
-import questionBank from "../../data/quizzes/questionBank"
-
-// Import utilities
 import { trackCustomEvent } from "../../utils/matomo"
 
-// Import types
 import {
   AnswerChoice,
   RawQuiz,
@@ -57,13 +46,15 @@ import {
   UserStats,
 } from "../../types"
 
-// Import constants
 import { PASSING_QUIZ_SCORE } from "../../constants"
 import { USER_STATS_KEY } from "../../pages/quizzes"
 import QuizProgressBar from "./QuizProgressBar"
 
-// Interfaces
-export interface IProps {
+// Import data
+import allQuizzesData from "../../data/quizzes"
+import questionBank from "../../data/quizzes/questionBank"
+
+interface IProps {
   quizKey?: string
   nextHandler: (next?: string) => void
   statusHandler: (status: QuizStatus) => void
@@ -72,7 +63,6 @@ export interface IProps {
   isStandaloneQuiz?: boolean
 }
 
-// Component
 // TODO: Fix a11y keyboard tab stops
 const QuizWidget: React.FC<IProps> = ({
   quizKey,
@@ -92,7 +82,6 @@ const QuizWidget: React.FC<IProps> = ({
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  // Context
   const {
     next: nextQuiz,
     score: userScore,
@@ -116,7 +105,6 @@ const QuizWidget: React.FC<IProps> = ({
       statusHandler("neutral")
     }
 
-    // Get quiz key
     const currentQuizKey =
       quizKey ||
       Object.keys(allQuizzesData).filter((quizUri) =>
@@ -207,7 +195,6 @@ const QuizWidget: React.FC<IProps> = ({
     [quizData, showResults, isPassingScore]
   )
 
-  // Handlers
   const handleSelectAnswerChoice = (answerId: string) => {
     const isCorrect =
       answerId === quizData?.questions[currentQuestionIndex].correctAnswerId
@@ -302,26 +289,26 @@ const QuizWidget: React.FC<IProps> = ({
 
     // Update user score, average and save to local storage
     const newUserScore = userScore + numberOfCorrectAnswers
-    setUserStats({ ...userStats, score: newUserScore })
-    localStorage.setItem(
-      USER_STATS_KEY,
-      JSON.stringify({ ...userStats, score: newUserScore })
-    )
-
-    // Update average score
     const newAverage = average === 0 ? score : (average + score) / 2
-    setUserStats({ ...userStats, average: newAverage })
+
+    setUserStats({ ...userStats, score: newUserScore, average: newAverage })
     localStorage.setItem(
       USER_STATS_KEY,
-      JSON.stringify({ ...userStats, average: newAverage })
+      JSON.stringify({ ...userStats, score: newUserScore, average: newAverage })
     )
 
-    // Update number of completed quizzes
+    // Update number of completed quizzes if needed
     if (score === 100) {
-      setUserStats({ ...userStats, completed: completed + 1 })
+      const completedQuizzes = JSON.parse(completed)
+      const newCompleted = JSON.stringify({
+        ...completedQuizzes,
+        [quizKey!]: true,
+      })
+
+      setUserStats({ ...userStats, completed: newCompleted })
       localStorage.setItem(
         USER_STATS_KEY,
-        JSON.stringify({ ...userStats, completed: completed + 1 })
+        JSON.stringify({ ...userStats, completed: newCompleted })
       )
     }
 

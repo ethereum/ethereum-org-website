@@ -1,23 +1,18 @@
-// Import libraries
 import React from "react"
 import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react"
 import { useI18next } from "gatsby-plugin-react-i18next"
 
-// Components
 import Translation from "../Translation"
 
-// Import utilities
 import { numberToPercent } from "../../utils/numberToPercent"
 
-// Interfaces
-export interface IProps {
+interface IProps {
   numberOfCorrectAnswers: number
   isPassingScore: boolean
   questionCount: number
   ratioCorrect: number
 }
 
-// Component
 const QuizSummary: React.FC<IProps> = ({
   numberOfCorrectAnswers,
   isPassingScore,
@@ -30,7 +25,6 @@ const QuizSummary: React.FC<IProps> = ({
   const valueStyles = { fontWeight: "700", mb: 2 }
   const labelStyles = { fontSize: "sm", m: 0, color: "disabled" }
 
-  // Render QuizSummary component
   return (
     <Box w="full" fontSize={["xl", "2xl"]}>
       <Text

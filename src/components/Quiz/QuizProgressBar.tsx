@@ -3,7 +3,7 @@ import { Box, Container } from "@chakra-ui/react"
 
 import { Question } from "../../types"
 
-export interface IProps {
+interface IProps {
   progressBarBackground: (index: number) => string
   questions: Question[]
 }

@@ -1,4 +1,3 @@
-// Import libraries
 import React, { useMemo } from "react"
 import {
   Box,
@@ -12,28 +11,24 @@ import {
 } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-// Components
 import Translation from "../Translation"
 
-// Import types
-import { Question } from "../../types"
-
-// Utils
 import { TranslationKey } from "../../utils/translations"
 
-// Interfaces
-export interface CustomRadioProps extends RadioProps {
+import { Question } from "../../types"
+
+interface CustomRadioProps extends RadioProps {
   index: number
   label: string
 }
-export interface IProps {
+
+interface IProps {
   questionData: Question
   showAnswer: boolean
   handleSelection: (answerId: string) => void
   selectedAnswer: string | null
 }
 
-// Component
 const QuizRadioGroup: React.FC<IProps> = ({
   questionData,
   showAnswer,
@@ -51,7 +46,6 @@ const QuizRadioGroup: React.FC<IProps> = ({
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
   }, [selectedAnswer])
-
   const isSelectedCorrect = useMemo<boolean>(
     () => correctAnswerId === selectedAnswer,
     [selectedAnswer]

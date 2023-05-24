@@ -1,12 +1,12 @@
 import React from "react"
-import { BoxProps, OrderedList } from "@chakra-ui/react"
+import { OrderedList } from "@chakra-ui/react"
 
 import QuizItem from "./QuizItem"
 
-import { QuizzesListItem } from "../../types"
+import { QuizzesSection } from "../../types"
 
-export interface IProps extends BoxProps {
-  content: Array<QuizzesListItem>
+interface IProps {
+  content: Array<QuizzesSection>
   quizHandler: (id: string) => void
   nextHandler: (next?: string) => void
   modalHandler: (isModalOpen: boolean) => void

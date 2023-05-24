@@ -6,3 +6,6 @@ export const getTotalQuizzesPoints = () =>
     .reduce((accumulator, currentValue) => {
       return accumulator + currentValue
     }, 0)
+
+export const getNumberOfCompletedQuizzes = (quizzes) =>
+  Object.values(quizzes).filter((v) => v).length
