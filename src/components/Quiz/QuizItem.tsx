@@ -28,14 +28,18 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
       py={4}
       color="text"
       borderBottom="1px solid"
-      borderColor="gray.300"
+      borderColor="disabled"
       _first={{ borderTopRadius: "sm" }}
       _last={{ borderBottomRadius: "sm" }}
     >
       <Stack ml={4} mb={{ base: 5, lg: 0 }}>
         <Flex gap={2} alignItems="center">
-          <ListItem fontWeight="bold" mb={0}>
-            <Text color={isCompleted ? "gray.500" : "text"} fontWeight="bold">
+          <ListItem
+            color={isCompleted ? "bodyLight" : "text"}
+            fontWeight="bold"
+            mb={0}
+          >
+            <Text color={isCompleted ? "bodyLight" : "text"} fontWeight="bold">
               {title}
             </Text>
           </ListItem>
