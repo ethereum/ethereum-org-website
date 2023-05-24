@@ -1,12 +1,6 @@
-# Deploy and pull request review process
+# Pull request review process
 
-This documentation outlines our current processes for how we deploy the latest changes to ethereum.org, and how we prioritize items in our pull request review process.
-
-## Deploy process
-
-Anything merged into the `dev` branch of [ethereum.org](http://ethereum.org) will go live on ethereum.org at the next release. Currently, we deploy the latest changes to [ethereum.org](http://ethereum.org) twice per week (Tuesday and Thursday). When deploying, we merge the `dev` branch into the `master` branch. The `master` branch is the latest live version of [ethereum.org](https://ethereum.org).
-
-Occasionally, we’ll also do a patch deploy to fix an urgent or widespread issue.
+This documentation outlines our current processes for how we prioritize items in our pull request review process.
 
 ## Pull request review process
 

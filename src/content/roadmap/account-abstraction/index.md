@@ -123,3 +123,4 @@ Smart contract wallets are already available, but more upgrades are required to 
 - [EIP-4337 notes](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
 - [EIP-2771 documentation](https://eips.ethereum.org/EIPS/eip-2771)
+- ["Basics of Account Abstraction" -- What is Account Abstraction Part I](https://www.alchemy.com/blog/account-abstraction)
