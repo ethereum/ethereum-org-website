@@ -63,6 +63,6 @@
   "page-get-eth-your-address-desc": "在您下载钱包的时候它会为您创建一个公开的地址，如下图所示：",
   "page-get-eth-your-address-desc-3": "把它想像成您的电子邮箱地址，只是它用来接收的是ETH。如果您想从一个交易所发送ETH到您的钱包，这个地址就是目的地。在发送前一定要多次检查，确保地址正确！",
   "page-get-eth-your-address-wallet-link": "查看钱包",
-  "listing-policy-raise-issue-link": "提 issue",
+  "listing-policy-raise-issue-link": "提出问题",
   "page-find-wallet-last-updated": "最近更新"
 }

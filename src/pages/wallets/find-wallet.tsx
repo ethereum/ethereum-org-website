@@ -40,7 +40,7 @@ import type { ChildOnlyProp } from "../../types"
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
-    <Box
+    <Text
       fontSize="xl"
       lineHeight={1.4}
       color="text200"
@@ -49,7 +49,7 @@ const Subtitle = ({ children }: ChildOnlyProp) => {
       }}
     >
       {children}
-    </Box>
+    </Text>
   )
 }
 

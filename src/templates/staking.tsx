@@ -451,7 +451,7 @@ const StakingPage = ({
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-          <StakingCommunityCallout />
+          <StakingCommunityCallout my={16} />
           <FeedbackCard />
         </ContentContainer>
         {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}

@@ -144,12 +144,12 @@ In case you want to test them as if you were in a Netlify env, you can install t
 - See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made)
 - Acceptable PRs will be approved & merged into the `dev` branch
 
-Learn more about how we review pull requests [here](docs/deploy-and-review-process.md).
+Learn more about how we review pull requests [here](docs/review-process.md).
 
 ### 8. Release
 
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
-- The [website team](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made) will create deploys and merge `dev` into `master`. This happens on Tuesdays and Thursdays every week. More info on deploys and review process [here](docs/deploy-and-review-process.md).
+- Learn more about how we deploy the site [here](docs/deploy-process.md)
 - You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
