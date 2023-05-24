@@ -8,8 +8,6 @@ lang: en
 
 **Distributed Validator Technology (DVT)** splits the private key used to secure a validator across many computers organized into a "cluster". The benefit of this is that it makes it very difficult for attackers to gain access to the key, because it is not stored in full on any single machine. It also allows for some nodes to go offline, as the necessary signing can be done by a subset of the machines in each cluster. This reduces single points of failure from the network and makes the whole validator set more robust. 
 
-
-
 ## How does DVT work? {#how-does-dvt-work}
 
 A DVT solution contains the following components:
@@ -25,26 +23,24 @@ A DVT solution contains the following components:
 Individual nodes do not need to trust each other in order to share a validator. As long as enough key shares get aggregated, the validator duties can be performed by the cluster. Distributed validators have built-in fault tolerance and can keep running even if some of the individual nodes go offline. 
 
 ## Why do we need DVT? {#why-do-we-need-dvt}
+
 ### Security {#security}
 
-Validators generate two public-private key pairs: validator keys for participating in consensus and withdrawal keys for accessing funds. While validators can secure withdrawal keys in cold storage, validator private keys must be online 24/7, increasing the possibility of theft. If a validator private key is compromised, an attacker can control the validator, potentially leading to slashing or the loss of the staker's ETH. 
+Validators generate two public-private key pairs: validator keys for participating in consensus and withdrawal keys for accessing funds. While validators can secure withdrawal keys in cold storage, validator private keys must be online 24/7. If a validator private key is compromised, an attacker can control the validator, potentially leading to slashing or the loss of the staker's ETH. DVT can help mitigate this risk. Here's how:
 
-With DVT, the validator's private key is split into key shares, and since the nodes only need to have their key share online, the validator's private key can be safely stored in cold storage.
+By using DVT, stakers can participate in staking while keeping the validator private key in cold storage. This is achieved by encrypting the original validator key and then splitting it into key shares. The key shares live online and are distributed to multiple nodes which enable the distributed operation of the validator. This is possible because Ethereum validators use BLS signatures that are additive, meaning the full key can be reconstructed by summing their component parts. This allows the staker to keep the original validator key securely offline.
 
 ### No single points of failure {#no-single-point-of-failure}
 
 When a validator is divided across multiple operators and multiple machines, it can withstand individual hardware and software failures without going offline. The risk of failures can also be reduced by using diverse hardware and software configurations across the nodes in a cluster. This resilience is not available to today's validators - it comes from the DVT layer.
 
-
 If one of the components of a machine in a cluster goes down (For example, if there are four operators in a validator cluster and one uses a specific client that has a bug), the others ensure that the validator keeps running. 
 
 ### Decentralization {#decentralization}
-``
 
 The ideal scenario for Ethereum is to have as many independently operated validators as possible. However, a few staking providers have become very popular and account for a substantial portion of the total staked ETH on the network. DVT can allow these operators to exist while preserving decentralization of stake. This is because the keys for each validator are distributed across many machines and it would take much greater collusion for a validator to turn malicious.
 
 Without DVT, it's easier for staking providers to support only one or two client configurations for all their validators, increasing the impact of a client bug. DVT can be used to spread the risk across multiple client configurations and different hardware, creating resilience through diversity.
-
 
 Overall, DVT offers the following benefits to Ethereum:
 - Decentralization of Ethereum's proof-of-stake consensus
