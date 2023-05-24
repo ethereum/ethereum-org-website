@@ -122,3 +122,23 @@ export interface Quiz {
 export interface RawQuizzes {
   [key: string]: RawQuiz
 }
+
+export type QuizzesListItem = {
+  title: string
+  id: string
+  level: string
+  next?: string
+  quizHandler: (id: string) => void
+  nextHandler: (next?: string) => void
+  modalHandler: (isModalOpen: boolean) => void
+}
+
+export type QuizStatus = "neutral" | "success" | "error"
+
+export type UserStats = {
+  score: number
+  average: number
+  completed: number
+}
+
+export type CompletedQuizzes = { [key: string]: boolean }

@@ -1,11 +1,7 @@
-// 2) local storage
-// 1) col derecha data (current completed, average score, progress, current/total)
+// 1) col derecha data (average score)
 
 // 5) TODO: hide green tick if not passed
 // 6) tw share results copy
-
-// 0) colors theme dark mode design
-// 5) dark mode colors
 
 import React, { useEffect, useState } from "react"
 import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react"
@@ -24,9 +20,13 @@ import QuizWidget from "../components/Quiz/QuizWidget"
 import QuizzesList from "../components/Quiz/QuizzesList"
 import QuizzesModal from "../components/Quiz/QuizzesModal"
 import QuizzesStats from "../components/Quiz/QuizzesStats"
-import { QuizStatus, QuizzesHubContext } from "../components/Quiz/context"
+import { QuizzesHubContext } from "../components/Quiz/context"
 
 import { getImage } from "../utils/image"
+
+import { QuizStatus, UserStats } from "../types"
+
+import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../data/quizzes"
 
 // Styles
 // TODO: remove styled components
@@ -39,7 +39,14 @@ const Hero = styled(PageHero)`
   padding-bottom: 2rem;
 `
 
-export const USER_SCORE_KEY = "userScoreKey"
+// export const USER_SCORE_KEY = "quizzes-user-score"
+// export const AVERAGE_SCORE_KEY = "quizzes-average-score"
+export const USER_STATS_KEY = "quizzes-stats"
+export const INITIAL_USER_STATS = {
+  score: 0,
+  average: 0,
+  completed: 0,
+}
 
 // Hook
 function useLocalStorage(key, initialValue) {
@@ -89,18 +96,21 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   )
   const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
-  const [numberOfCompletedQuizzes, setNumberOfCompletedQuizzes] = useState(0)
+
+  // const [userScore, setUserScore] = useState(0)
+  // const [averageScore, setAverageScore] = useState(0)
+  // const [numberOfCompletedQuizzes, setNumberOfCompletedQuizzes] = useState(0)
+  const [userStats, setUserStats] = useState<UserStats>(INITIAL_USER_STATS)
+
   const [isModalOpen, setModalOpen] = useState(false)
 
-  // TODO: fix score computing
-  const [userScore, setUserScore] = useLocalStorage(USER_SCORE_KEY, 0)
-
   useEffect(() => {
-    if (localStorage.getItem(USER_SCORE_KEY)) {
-      setUserScore(parseInt(localStorage.getItem(USER_SCORE_KEY)!))
+    // User score
+    if (localStorage.getItem(USER_STATS_KEY)) {
+      setUserStats(JSON.parse(localStorage.getItem(USER_STATS_KEY)!))
     } else {
-      // Initialize user score
-      localStorage.setItem(USER_SCORE_KEY, "0")
+      // initialize
+      localStorage.setItem(USER_STATS_KEY, JSON.stringify(userStats))
     }
   }, [])
 
@@ -112,62 +122,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
     image: getImage(data.doge)!,
     alt: t("quizzes-title"),
   }
-
-  // TODO: move somewhere else (compute from allQuizzesData??)
-  const ethereumBasicsQuizzes = [
-    {
-      id: "what-is-ethereum",
-      title: "What is Ethereum?",
-      level: "beginner",
-      next: "what-is-ether",
-    },
-    {
-      id: "what-is-ether",
-      title: "What is ether?",
-      level: "beginner",
-      next: "wallets",
-    },
-    {
-      id: "wallets",
-      title: "What is a Wallet?",
-      level: "beginner",
-      next: "web3",
-    },
-    {
-      id: "web3",
-      title: "What is Web3?",
-      level: "beginner",
-      next: "security",
-    },
-    {
-      id: "security",
-      title: "Security and scams",
-      level: "beginner",
-      next: "merge",
-    },
-    {
-      id: "merge",
-      title: "What is The Merge?",
-      level: "beginner",
-    },
-  ]
-
-  const usingEthereumQuizzes = [
-    {
-      id: "nfts",
-      title: "What are NFTs?",
-      level: "beginner",
-      next: "layer-2",
-    },
-    {
-      id: "layer-2",
-      title: "Using Layer 2",
-      level: "intermediate",
-    },
-  ]
-
-  const totalQuizzesNumber =
-    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
 
   return (
     <Box>
@@ -184,8 +138,9 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         value={{
           status: quizStatus,
           next: nextQuiz,
-          score: userScore,
-          completed: numberOfCompletedQuizzes,
+          score: userStats.score,
+          average: userStats.average,
+          completed: userStats.completed,
         }}
       >
         <QuizzesModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
@@ -193,8 +148,9 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
             quizKey={currentQuiz}
             nextHandler={setCurrentQuiz}
             statusHandler={setQuizStatus}
-            scoreHandler={setUserScore}
-            completedHandler={setNumberOfCompletedQuizzes}
+            setUserStats={setUserStats}
+            // completedHandler={setNumberOfCompletedQuizzes}
+            // averageHandler={setAverageScore}
             isStandaloneQuiz={false}
           />
         </QuizzesModal>
@@ -281,7 +237,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
             </Box>
 
             {/* quizzes stats */}
-            <QuizzesStats totalQuizzesNumber={totalQuizzesNumber} />
+            <QuizzesStats />
           </Flex>
         </Box>
       </QuizzesHubContext.Provider>

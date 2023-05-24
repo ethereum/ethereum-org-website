@@ -29,7 +29,7 @@ import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
 
 // Context
-import { QuizStatus, QuizzesHubContext } from "./context"
+import { QuizzesHubContext } from "./context"
 
 // Import SVGs
 import {
@@ -47,11 +47,19 @@ import questionBank from "../../data/quizzes/questionBank"
 import { trackCustomEvent } from "../../utils/matomo"
 
 // Import types
-import { AnswerChoice, RawQuiz, Quiz, RawQuestion, Question } from "../../types"
+import {
+  AnswerChoice,
+  RawQuiz,
+  Quiz,
+  RawQuestion,
+  Question,
+  QuizStatus,
+  UserStats,
+} from "../../types"
 
 // Import constants
 import { PASSING_QUIZ_SCORE } from "../../constants"
-import { USER_SCORE_KEY } from "../../pages/quizzes"
+import { USER_STATS_KEY } from "../../pages/quizzes"
 
 // Constants
 const PROGRESS_BAR_GAP = "4px"
@@ -62,8 +70,7 @@ export interface IProps {
   nextHandler: (next?: string) => void
   statusHandler: (status: QuizStatus) => void
   maxQuestions?: number
-  scoreHandler: (score: number) => void
-  completedHandler: (completed: number) => void
+  setUserStats: (stats: UserStats) => void
   isStandaloneQuiz?: boolean
 }
 
@@ -74,8 +81,7 @@ const QuizWidget: React.FC<IProps> = ({
   nextHandler,
   statusHandler,
   maxQuestions,
-  scoreHandler,
-  completedHandler,
+  setUserStats,
   isStandaloneQuiz = true,
 }) => {
   const { t } = useTranslation()
@@ -93,6 +99,7 @@ const QuizWidget: React.FC<IProps> = ({
     next: nextQuiz,
     score: userScore,
     completed,
+    average,
   } = useContext(QuizzesHubContext)
 
   const hasNextQuiz = !isStandaloneQuiz && !!nextQuiz
@@ -292,14 +299,31 @@ const QuizWidget: React.FC<IProps> = ({
   }
 
   const handleNextQuiz = () => {
+    const userStats = JSON.parse(localStorage.getItem(USER_STATS_KEY)!)
+
+    // Update user score, average and save to local storage
     const newUserScore = userScore + numberOfCorrectAnswers
-    // Update user score and save to local storage
-    scoreHandler(newUserScore)
-    localStorage.setItem(USER_SCORE_KEY, newUserScore.toString())
+    setUserStats({ ...userStats, score: newUserScore })
+    localStorage.setItem(
+      USER_STATS_KEY,
+      JSON.stringify({ ...userStats, score: newUserScore })
+    )
+
+    // Update average score
+    const newAverage = average === 0 ? score : (average + score) / 2
+    setUserStats({ ...userStats, average: newAverage })
+    localStorage.setItem(
+      USER_STATS_KEY,
+      JSON.stringify({ ...userStats, average: newAverage })
+    )
 
     // Update number of completed quizzes
     if (score === 100) {
-      completedHandler(completed + 1)
+      setUserStats({ ...userStats, completed: completed + 1 })
+      localStorage.setItem(
+        USER_STATS_KEY,
+        JSON.stringify({ ...userStats, completed: completed + 1 })
+      )
     }
 
     // Move to next quiz

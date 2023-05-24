@@ -20,10 +20,7 @@ import { QuizzesHubContext } from "./context"
 
 import { getTotalQuizzesPoints } from "./utils"
 
-export interface IProps {
-  // TODO: calcular y sacar prop
-  totalQuizzesNumber: number
-}
+import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 
 // TODO: move to custom re-usable hook, remove from QuizWidget??
 // TODO: update tw sharing copy and urls
@@ -45,8 +42,10 @@ const handleShare = (): void => {
   )
 }
 
-const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber }) => {
-  const { score: userScore, completed } = useContext(QuizzesHubContext)
+const QuizzesStats: React.FC = () => {
+  const { score: userScore, completed, average } = useContext(QuizzesHubContext)
+  const totalQuizzesNumber =
+    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
   const TOTAL_QUIZZES_POINTS = getTotalQuizzesPoints()
 
   return (
@@ -112,7 +111,8 @@ const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber }) => {
               <Flex direction={{ base: "column", lg: "row" }}>
                 {/* TODO: remove hardcoded 83% value */}
                 <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }}>
-                  <Translation id="average-score" /> <Text as="span">83%</Text>
+                  <Translation id="average-score" />{" "}
+                  <Text as="span">{average}%</Text>
                 </Text>
 
                 <Text mb={0}>
@@ -150,7 +150,7 @@ const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber }) => {
                 <Translation id="average-score" />
               </Text>
               {/* Data from Matomo, manually updated */}
-              <Text>67,4%</Text>
+              <Text>67.4%</Text>
             </Stack>
 
             <Stack>
@@ -168,7 +168,7 @@ const QuizzesStats: React.FC<IProps> = ({ totalQuizzesNumber }) => {
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text>15,6%</Text>
+              <Text>15.6%</Text>
             </Stack>
           </Flex>
         </Flex>

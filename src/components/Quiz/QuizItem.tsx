@@ -1,12 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
 import Button from "../Button"
 import Translation from "../Translation"
-import { QuizzesListItem } from "./QuizzesList"
 
 import { GreenTickIcon } from "../icons/quiz"
 
+import { CompletedQuizzes, QuizzesListItem } from "../../types"
 // Raw quizzes data
 import allQuizzesData from "../../data/quizzes"
 
@@ -14,6 +14,18 @@ const QuizItem = (props: QuizzesListItem) => {
   const { title, id, level, next, quizHandler, nextHandler, modalHandler } =
     props
   const numberOfQuestions = allQuizzesData[id].questions.length
+
+  // Create an object that contains quiz id as key and a boolean flag to indicate if its completed
+  // Initialize all quizzes as not completed
+  const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
+    allQuizzesData
+  ).reduce((object, key) => ({ ...object, [key]: false }), {})
+
+  const [completedQuizzes, setCompletedQuizzes] = useState(
+    INITIAL_COMPLETED_QUIZZES
+  )
+
+  const isCompleted = completedQuizzes[id]
 
   return (
     <Flex
@@ -31,11 +43,15 @@ const QuizItem = (props: QuizzesListItem) => {
       <Stack ml={4} mb={{ base: 5, lg: 0 }}>
         <Flex gap={2} alignItems="center">
           <ListItem fontWeight="bold" mb={0}>
-            <Text fontWeight="bold">{title}</Text>
+            <Text color={isCompleted ? "gray.500" : "text"} fontWeight="bold">
+              {title}
+            </Text>
           </ListItem>
 
-          {/* TODO: hide green tick if not passed */}
-          <GreenTickIcon />
+          {/* Show green tick if quizz was completed only */}
+          <Box display={isCompleted ? "flex" : "none"}>
+            <GreenTickIcon />
+          </Box>
         </Flex>
 
         {/* Labels */}
