@@ -15,6 +15,7 @@ import {
   Text,
   Spinner,
   Stack,
+  Container,
 } from "@chakra-ui/react"
 import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
@@ -47,8 +48,6 @@ import {
 } from "../../types"
 
 import { PASSING_QUIZ_SCORE } from "../../constants"
-import { USER_STATS_KEY } from "../../pages/quizzes"
-import QuizProgressBar from "./QuizProgressBar"
 
 import allQuizzesData from "../../data/quizzes"
 import questionBank from "../../data/quizzes/questionBank"
@@ -81,6 +80,8 @@ const QuizWidget: React.FC<IProps> = ({
   const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
+
+  const PROGRESS_BAR_GAP = "4px"
 
   const {
     next: nextQuiz,
@@ -417,11 +418,24 @@ const QuizWidget: React.FC<IProps> = ({
               </Center>
 
               {/* Progress bar */}
-              <Center mb={6}>
-                <QuizProgressBar
-                  progressBarBackground={progressBarBackground}
-                  questions={quizData.questions}
-                />
+              <Center gap={PROGRESS_BAR_GAP} mb={6}>
+                {quizData?.questions.map(({ id }, index) => {
+                  /* Calculate width percent based on number of questions */
+                  const width = `calc(${Math.floor(
+                    100 / quizData?.questions.length
+                  )}% - ${PROGRESS_BAR_GAP})`
+                  return (
+                    <Container
+                      key={id}
+                      bg={progressBarBackground(index)}
+                      h="4px"
+                      w={width}
+                      maxW={`min(${width}, 2rem)`}
+                      marginInline={0}
+                      p={0}
+                    />
+                  )
+                })}
               </Center>
 
               {/* Quiz main body */}
