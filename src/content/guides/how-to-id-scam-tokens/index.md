@@ -17,7 +17,7 @@ To illustrate what scam tokens are, and how to identify them, we are going to lo
 title="What is ARB?"
 contentPreview=''>
 
-[Arbitrum](https://developer.arbitrum.io/intro/) is an organization that develops and manages [optimistic rollups](/developers/docs/scaling/optimistic-rollups/). Initially Arbitrum was organized as a for-profit company, but they recently [started to decentralize](https://arbitrumfoundation.medium.com/arbitrum-the-next-phase-of-decentralization-e7f8b37b5226). As part of that process, they issued a tradeable [governance token](/dao/#token-based-membership).
+<a href="https://developer.arbitrum.io/intro/">Arbitrum</a> is an organization that develops and manages <a href="/developers/docs/scaling/optimistic-rollups/">optimistic rollups</a>. Initially Arbitrum was organized as a for-profit company, but they recently <a href="https://arbitrumfoundation.medium.com/arbitrum-the-next-phase-of-decentralization-e7f8b37b5226">started to decentralize</a>. As part of that process, they issued a tradeable <a href="/dao/#token-based-membership">governance token</a>.
 
 </ExpandableCard>
 
