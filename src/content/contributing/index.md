@@ -83,6 +83,19 @@ We have low barrier to entry issues on our GitHub repository specifically design
 
 ## Claim your contributor POAP {#poap}
 
+{For GitPOAP} (one time contribution)
+
+GitPOAP will automatically recognizes your merged contribution and lets you mint a unique contributors POAP on their platform itself!
+
+### How to claim {#how-to-claim}
+
+1. Visit [GitPOAP](https://www.gitpoap.io). 
+2. Connect with your wallet or even with your email id through sign in option.
+3. Search for your GitHub username, ETH address, ENS names or any GitPOAP to check if you're eligibile.
+4. If your github account is eligible, then you would be able to mint a GitPOAP!
+ 
+{For tiered POAPs} (based on number of contributions)
+
 If your contribution gets merged into ethereum.org, we'll mint you a unique contributors POAP. A Proof of Attendance Protocol (POAP) token is on-chain proof that you helped make the ecosystem a little more awesome.
 
 [More on POAPs](https://www.poap.xyz/)
