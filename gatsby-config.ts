@@ -323,6 +323,12 @@ if (!IS_PREVIEW) {
         matomoPhpScript: "matomo.php",
         matomoJsScript: "matomo.js",
         trackLoad: false,
+        additionalTrackers: [
+          {
+            siteId: "1",
+            trackerUrl: "https://ethereumfoundation.matomo.cloud/matomo.php",
+          },
+        ],
       },
     },
   ]

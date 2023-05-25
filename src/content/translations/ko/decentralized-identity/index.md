@@ -4,6 +4,7 @@ description: 분산 신원 증명이란 무엇이며, 왜 중요할까요?
 lang: ko
 template: use-cases
 emoji: ":id:"
+sidebarDepth: 2
 image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: 기존의 신원 증명 시스템은 식별자의 발급, 점검, 제어를 한 곳으로 집중시켰습니다.
 summaryPoint2: 분산 신원 증명을 사용하면 더 이상 중앙화된 제3자에 의존할 필요가 없어집니다.
@@ -152,13 +153,13 @@ DID는 블록체인에 저장되기 때문에 누구든지 이더리움에서 �
 
 ## 분산 신원 증명을 사용하세요 {#use-decentralized-identity}
 
-분산 신원 증명 솔루션을 위한 기반으로 이더리움을 사용하는 야심 찬 프로젝트가 많이 있습니다.
+분산 신원 증명 솔루션을 위한 기반으로 이더리움을 사용하는 야심 찬 프로젝트가 많이 있습니다:
 
-- **[이더리움 이름 서비스(ENS)](https://ens.domains/)**: _이더리움 지갑 주소, 콘텐츠 해시, 메타데이터 등 온체인 기반 컴퓨터용 식별 정보를 위한 탈중앙화 이름 시스템입니다._
-- **[SpruceID](https://www.spruceid.com/)**: _사용자가 제3자 서비스에 의존하지 않고 이더리움 계정과 ENS 프로필을 이용하여 디지털 신원을 직접 관리할 수 있도록 하는 분산 신원 증명 프로젝트입니다._
-- **[인간 증명](https://www.proofofhumanity.id)**: *인간 증명(PoH: Proof of Humanity)은 이더리움 기반의 소셜 신원 증명 시스템입니다.*
-- **[BrightID](https://www.brightid.org/)**: _소셜 그래프를 만들고 분석함으로써 신원 증명을 개혁하고자 하는 탈중앙화된 오픈소스의 소셜 신원 증명 네트워크입니다._
-- **[개인 증명 여권](https://proofofpersonhood.com/)**: _탈중앙화 디지털 신원 정보 종합 플랫폼입니다._
+- **[이더리움 이름 서비스(ENS)](https://ens.domains/)** - _이더리움 지갑 주소, 콘텐츠 해시, 메타데이터 등 온체인 기반 컴퓨터용 식별 정보를 위한 탈중앙화 이름 시스템입니다._
+- **[SpruceID](https://www.spruceid.com/)** - _사용자가 제3자 서비스에 의존하지 않고 이더리움 계정과 ENS 프로필을 이용하여 디지털 신원을 직접 관리할 수 있도록 하는 분산 신원 증명 프로젝트입니다._
+- **[인간 증명](https://www.proofofhumanity.id)** - _인간 증명(PoH: Proof of Humanity)은 이더리움 기반의 소셜 신원 증명 시스템입니다._
+- **[BrightID](https://www.brightid.org/)** - _소셜 그래프를 만들고 분석함으로써 신원 증명을 개혁하고자 하는 탈중앙화된 오픈소스의 소셜 신원 증명 네트워크입니다._
+- **[개인 증명 여권](https://proofofpersonhood.com/)** - _탈중앙화 디지털 신원 정보 종합 플랫폼입니다._
 
 ## 더 읽을 거리 {#further-reading}
 

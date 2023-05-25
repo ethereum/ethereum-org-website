@@ -30,6 +30,7 @@ const Callout: React.FC<IProps> = ({
   ...rest
 }) => (
   <Flex
+    as="aside"
     direction="column"
     bgGradient="linear-gradient(
     49.21deg,

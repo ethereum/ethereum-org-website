@@ -15,7 +15,7 @@ import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
 import TranslationBannerLegal from "./TranslationBannerLegal"
 import FeedbackWidget from "./FeedbackWidget"
-import { SkipLink, SkipLinkAnchor } from "./SkipLink"
+import { SkipLink } from "./SkipLink"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
@@ -135,8 +135,11 @@ const Layout: React.FC<IProps> = ({
               <Nav path={path} />
               {shouldShowSideNav && <SideNavMobile path={path} />}
             </ZenMode>
-            <SkipLinkAnchor id="main-content" />
-            <Flex flexDirection={{ base: "column", lg: "row" }}>
+            <Flex
+              flexDirection={{ base: "column", lg: "row" }}
+              id="main-content"
+              scrollMarginTop={20}
+            >
               {shouldShowSideNav && (
                 <ZenMode>
                   <SideNav path={path} />

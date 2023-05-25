@@ -69,7 +69,7 @@ const H2 = (props: ChildOnlyProp) => (
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <Box
+  <Text
     fontSize="1.5rem"
     lineHeight="140%"
     color="text200"

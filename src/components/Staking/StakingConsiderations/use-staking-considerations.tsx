@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 // SVG imports
@@ -6,118 +6,18 @@ import {
   AuditedIcon,
   BattleTestedIcon,
   BugBountyIcon,
-  CautionProductGlyphIcon,
   EconomicalIcon,
-  GreenCheckProductGlyphIcon,
   LiquidityTokenIcon,
   MultiClientIcon,
   OpenSourceStakingIcon,
   PermissionlessIcon,
   SelfCustodyIcon,
   TrustlessIcon,
-  WarningProductGlyphIcon,
-} from "../icons/staking"
+} from "../../icons/staking"
 // Component imports
-import ButtonDropdown, { List as ButtonDropdownList } from "../ButtonDropdown"
-import Translation from "../Translation"
-import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
-
-const Container = styled.div`
-  display: flex;
-  gap: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
-
-const List = styled.div`
-  flex: 1;
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    display: none;
-  }
-`
-
-// TODO: Make mobile responsive
-
-const ListItem = styled.li<{ active: boolean }>`
-  padding: 0.125rem 0.5rem;
-  cursor: pointer;
-  box-sizing: border-box;
-  position: relative;
-  height: 2rem;
-  ${({ theme, active }) =>
-    active
-      ? `
-    background: ${theme.colors.primary};
-    color: ${theme.colors.background};
-    &::after{
-        content:"";
-        position:absolute;
-        height:0;
-        width:0;
-        left:100%;
-        top:0;
-        border: 1rem solid transparent;
-        border-left: 1rem solid ${theme.colors.primary};
-    }`
-      : `
-    color: ${theme.colors.primary};
-    `};
-`
-
-const StyledButtonDropdown = styled(ButtonDropdown)`
-  display: none;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    display: inline-block;
-  }
-`
-
-const Content = styled.div`
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 410px;
-  background: ${({ theme }) => theme.colors.offBackground};
-  padding: 1.5rem;
-  h3 {
-    font-weight: 700;
-    font-size: 27px;
-  }
-`
-
-const IndicatorRow = styled.div`
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: auto;
-`
-
-const Indicator = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  width: max-content;
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: fit-content;
-  }
-  p {
-    font-size: 0.75rem;
-    padding: 0;
-    text-align: center;
-    width: max-content;
-    @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-      width: fit-content;
-    }
-  }
-`
+import { List as ButtonDropdownList } from "../../ButtonDropdown"
+import { MatomoEventOptions } from "../../../utils/matomo"
+import { IProps } from "."
 
 type DataType = {
   title: string
@@ -129,11 +29,7 @@ type DataType = {
   matomo: MatomoEventOptions
 }
 
-export interface IProps {
-  page: "solo" | "saas" | "pools"
-}
-
-const StakingConsiderations: React.FC<IProps> = ({ page }) => {
+export const useStakingConsiderations = ({ page }: IProps) => {
   const { t } = useTranslation()
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -488,60 +384,18 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         display: none;
       `
 
-  return (
-    <Container>
-      <StyledButtonDropdown list={dropdownLinks} />
-      <List>
-        {!!pageData && (
-          <ul>
-            {pageData.map(({ title, matomo }, idx) => (
-              <ListItem
-                key={idx}
-                onClick={(e) => {
-                  handleSelection(idx)
-                  trackCustomEvent(matomo)
-                }}
-                active={idx === activeIndex}
-              >
-                {title}
-              </ListItem>
-            ))}
-          </ul>
-        )}
-      </List>
-      <Content>
-        <StyledSvg style={selectionSvgStyle} />
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <IndicatorRow>
-          {!!valid && (
-            <Indicator>
-              <GreenCheckProductGlyphIcon style={indicatorSvgStyle} />
-              <p>
-                <Translation id={valid} />
-              </p>
-            </Indicator>
-          )}
-          {!!caution && (
-            <Indicator>
-              <CautionProductGlyphIcon style={indicatorSvgStyle} />
-              <p>
-                <Translation id={caution} />
-              </p>
-            </Indicator>
-          )}
-          {!!warning && (
-            <Indicator>
-              <WarningProductGlyphIcon style={indicatorSvgStyle} />
-              <p>
-                <Translation id={warning} />
-              </p>
-            </Indicator>
-          )}
-        </IndicatorRow>
-      </Content>
-    </Container>
-  )
+  return {
+    title,
+    description,
+    valid,
+    caution,
+    warning,
+    dropdownLinks,
+    handleSelection,
+    selectionSvgStyle,
+    indicatorSvgStyle,
+    StyledSvg,
+    pageData,
+    activeIndex,
+  }
 }
-
-export default StakingConsiderations

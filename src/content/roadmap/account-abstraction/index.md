@@ -112,6 +112,7 @@ Smart contract wallets are already available, but more upgrades are required to 
 
 ## Further reading {#further-reading}
 
+- [erc4337.io](https://www.erc4337.io/)
 - [Account abstraction panel discussion from Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)
 - ["Why account abstraction is a game changer for dapps" from Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Account abstraction ELI5" from Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
@@ -122,3 +123,4 @@ Smart contract wallets are already available, but more upgrades are required to 
 - [EIP-4337 notes](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
 - [EIP-2771 documentation](https://eips.ethereum.org/EIPS/eip-2771)
+- ["Basics of Account Abstraction" -- What is Account Abstraction Part I](https://www.alchemy.com/blog/account-abstraction)

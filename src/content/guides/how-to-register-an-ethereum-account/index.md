@@ -1,5 +1,5 @@
 ---
-title: How to "register" an Ethereum account
+title: How to "create" an Ethereum account
 description: A step-by-step guide on Ethereum account creation using a wallet.
 lang: en
 ---

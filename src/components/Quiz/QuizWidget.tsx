@@ -248,7 +248,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
 
   // Render QuizWidget component
   return (
-    <Flex width="full" direction="column" alignItems="center">
+    <Flex as="aside" width="full" direction="column" alignItems="center">
       <Heading
         as="h2"
         mb={12}
