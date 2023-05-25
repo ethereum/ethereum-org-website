@@ -72,16 +72,20 @@ In theory a program running off-chain can view all the transactions that affecte
 
 Another trick that scammers pull is to direct users to user interfaces that entice them to sign bad transactions. For example, one scam token ([view on explorer](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452)) tried to direct users to `https://op-claim.xyz`. This link probably used to host a scam. It doesn't anymore, probably because the scammer has given up and stopped paying for web hosting.
 
-## Conclusion: What can you trust?
+## How can you protect yourself? {#how-can-you-protect-yourself}
 
-How do you protect yourself? How do you know that the token you're getting is legitimate? The most important rule is **check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's web site. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token). 
+1. **Check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's web site. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token). 
 
-Another option is to look at liquidity pool size on [Uniswap](https://uniswap.org/), one of the most common token swapping protocols. This protocol works using [liquidity pools](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools), into which investors deposit their tokens in hope of a return from trading fees. Scam tokens typically have tiny liquidity pools, if any, because the scammers don't want to risk real assets. For example, the `ARB`/`ETH` Uniswap pool holds about a million dollars as I'm writing this ([see here for the up to date value](https://info.uniswap.org/#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca)) and buying or selling a small amount is not going to change the price:
+2. **Real tokens have liquidity**. Another option is to look at liquidity pool size on [Uniswap](https://uniswap.org/), one of the most common token swapping protocols. This protocol works using [liquidity pools](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools), into which investors deposit their tokens in hope of a return from trading fees. Scam tokens typically have tiny liquidity pools, if any, because the scammers don't want to risk real assets. For example, the `ARB`/`ETH` Uniswap pool holds about a million dollars as I'm writing this ([see here for the up to date value](https://info.uniswap.org/#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca)) and buying or selling a small amount is not going to change the price:
 
-![Buying a legitimate token](./uniswap-real.png)
+   ![Buying a legitimate token](./uniswap-real.png)
 
-But if I try to buy `wARB`, even a tiny purchase would change the prince by over 90%:
+   But if I try to buy `wARB`, even a tiny purchase would change the prince by over 90%:
 
-![Buying a scam token](./uniswap-scam.png)
+   ![Buying a scam token](./uniswap-scam.png)
 
-This is another piece of evidence that shows us `wARB` is not likely to be a legitimate token.
+   This is another piece of evidence that shows us `wARB` is not likely to be a legitimate token.
+
+3. **Look in Etherscan**. A lot of scam tokens have already been identified as such, and are [marked in Etherscan](https://info.etherscan.com/etherscan-token-reputation/). While Etherscan is not authoritative source of truth (it is the nature of decentralized networks that there can't be an authoritative source for legitimacy), tokens that are identified by Etherscan as scams are likely to be scams.
+
+   ![Scam token in Etherscan](./etherscan-scam.png)
