@@ -27,7 +27,7 @@ Um objeto contendo um [endereço](#address), um saldo, [um nonce](#nonce), bem c
 
 ### endereço {#address}
 
-Geralmente, isso representa um [EOA](#eoa) ou [contrato](#contract-account) que pode receber (endereço de destino) ou enviar (endereço de origem) [transações](#transaction) na cadeia de blocos. Mais especificamente, são os 160 bits mais à direita de um [hash Keccak](#keccak-256) de uma [chave pública](#public-key)[ECDSA](#ecdsa).
+Geralmente, isso representa um [EOA](#eoa) ou [contrato](#contract-account) que pode receber (endereço de destino) ou enviar (endereço de origem) [transações](#transaction) na cadeia de blocos. Mais especificamente, são os 160 bits mais à direita de um [hash Keccak](#keccak-256) de uma [chave pública](#public-key) [ECDSA](#ecdsa).
 
 ### interface binária de aplicação (ABI) {#abi}
 
@@ -833,10 +833,10 @@ O processo de conversão de uma estrutura de dados em uma sequência de bytes.
 
 ### fragmento / cadeia de fragmentos {#shard}
 
-As cadeias de fragmentos são seções discretas da cadeia de blocos total que podem estar sob a responsabilidade de subconjuntos de validadores. Isso oferecerá maior taxa de transferência de transações para o Ethereum e melhorará a disponibilidade de dados para soluções de [camada 2](#layer-2), como [rollups otimistas](#optimistic-rollups) e [rollups ZK](#zk-rollups).
+As cadeias de fragmentos são seções discretas da blockchain total pelas quais os subconjuntos dos validadores podem ser responsáveis. Isso oferecerá maior taxa de transferência de transações para o Ethereum e melhorará a disponibilidade de dados para soluções de [camada 2](#layer-2), como [rollups otimistas](#optimistic-rollups) e [rollups ZK](#zk-rollups).
 
 <DocLink to="/roadmap/danksharding">
-  Cadeias de fragmentos
+  Danksharding
 </DocLink>
 
 ### cadeia lateral {#sidechain}

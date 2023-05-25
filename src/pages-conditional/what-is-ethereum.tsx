@@ -70,7 +70,7 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.textTableOfContents};
 `
 
-const Subtitle = styled.div`
+const Subtitle = styled.p`
   font-size: 1.25rem;
   line-height: 140%;
   color: ${({ theme }) => theme.colors.text200};
