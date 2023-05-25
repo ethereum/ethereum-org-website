@@ -4,7 +4,7 @@ description: What are scam tokens, how do they make themselves look legitimate, 
 lang: en
 ---
 
-# How to identify scam tokens
+# How to identify scam tokens {#how-to-identify-scam-tokens}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). However, anywhere there are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves. In this case, there are two way in which they are likely to do so:
 
@@ -25,14 +25,14 @@ contentPreview=''>
 title="Why is the scam token called wARB?"
 contentPreview=''>
   
-There is a convention in Ethereum that when an asset is not ERC-20 compliant we create a "wrapped" version of it with the name starting with w. So, for example, we have [wBTC for Bitcoin](https://wbtc.network/) and [wETH for Ether](https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work).
+There is a convention in Ethereum that when an asset is not ERC-20 compliant we create a "wrapped" version of it with the name starting with "w". So, for example, we have <a href="https://wbtc.network/">wBTC for bitcoin</a> and <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH for ether</a>.
   
-It does not make sense to create a wrapped version of an ERC-20 token that is already on Ethereum. But scammers rely on the appearance of legitimacy rather than the underlying reality.
+It does not make sense to create a wrapped version of an ERC-20 token that is already on Ethereum, but scammers rely on the appearance of legitimacy rather than the underlying reality.
 
 </ExpandableCard>
 
 
-## How do scam tokens work?
+## How do scam tokens work? {#how-do-scam-tokens-work}
 
 The whole point of Ethereum is decentralization. This means that there is no central authority that can confiscate your assets or prevent you from deploying a smart contract. But it also means that scammers can deploy any smart contract they wish.
 
@@ -40,14 +40,13 @@ The whole point of Ethereum is decentralization. This means that there is no cen
 title="What are smart contracts?"
 contentPreview=''>
   
-[Smart contracts](/developers/docs/smart-contracts/) are the programs that run on top of the Ethereum blockchain. Every ERC-20 token, for example, is implemented as a smart contract.
+<a href="/developers/docs/smart-contracts/">Smart contracts</a> are the programs that run on top of the Ethereum blockchain. Every ERC-20 token, for example, is implemented as a smart contract.
   
 </ExpandableCard>
 
 Specifically, Arbitrum deployed a contract that uses the symbol `ARB`. But that doesn't stop other people from also deploying a contract that uses the exact same symbol, or a similar one. Whoever writes the contract gets to set what the contract will do.
 
-
-## Appearing legitimate
+## Appearing legitimate {#appearing-legitimate}
 
 There are several tricks that scam token creator pull to appear legitimate. They can do those, because they write the smart contract that implements the scam token. This means it can produce any effect they want from that contract.
 
@@ -65,14 +64,13 @@ There are several tricks that scam token creator pull to appear legitimate. They
 title="What are `Transfer` events?"
 contentPreview=''>
   
-In theory a program running offchain can view all the transactions that affected a particular ERC-20 contract from its initial deployment, and use that to identify transfers. In practice, doing this would require too much network bandwidth and CPU power. To allow for simpler analysis, ERC-20 contracts are [required by the standard](https://eips.ethereum.org/EIPS/eip-20#transfer-1) to emit events tagged as transfers whenever tokens are transferred from one account to another. [Events](https://docs.alchemy.com/docs/deep-dive-into-eth_getlogs#what-are-logs-or-events) are written to the blockchain and indexed, which makes it a lot easier to obtain and analyse onchain data.
+In theory a program running off-chain can view all the transactions that affected a particular ERC-20 contract from its initial deployment, and use that to identify transfers. In practice, doing this would require too much network bandwidth and CPU power. To allow for simpler analysis, ERC-20 contracts are <a href="https://eips.ethereum.org/EIPS/eip-20#transfer-1">required by the standard</a> to emit events tagged as transfers whenever tokens are transferred from one account to another. <a href="https://docs.alchemy.com/docs/deep-dive-into-eth_getlogs#what-are-logs-or-events">Events</a> are written to the blockchain and indexed, which makes it a lot easier to obtain and analyze on-chain data.
   
 </ExpandableCard>
 
-## Scammy UI
+## Scammy appearing website {#scammy-appearing-website}
 
-Another trick that scammers pull is to direct users to user interfaces that entice them to sign bad transactions. For example, [this scam token](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452) tried to direct users to `https://op-claim.xyz`. This link probably used to host a scam. It doesn't anymore, probably because the scammer has given up and stopped paying for web hosting.
-
+Another trick that scammers pull is to direct users to user interfaces that entice them to sign bad transactions. For example, one scam token ([view on explorer](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452)) tried to direct users to `https://op-claim.xyz`. This link probably used to host a scam. It doesn't anymore, probably because the scammer has given up and stopped paying for web hosting.
 
 ## Conclusion: What can you trust?
 
