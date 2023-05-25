@@ -45,6 +45,11 @@ export const ElementVariations: Story = {
       <Input leftElement={<MdSearch />} placeholder="input text" />
       <Input placeholder="input text" />
       <Input rightElement={<BsSlashSquare />} placeholder="input text" />
+      <Input
+        rightElement={<BsSlashSquare />}
+        placeholder="input text"
+        isDisabled
+      />
     </VStack>
   ),
 }
