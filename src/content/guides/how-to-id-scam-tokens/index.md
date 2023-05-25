@@ -89,3 +89,13 @@ Another trick that scammers pull is to direct users to user interfaces that enti
 3. **Look in Etherscan**. A lot of scam tokens have already been identified as such, and are [marked in Etherscan](https://info.etherscan.com/etherscan-token-reputation/). While Etherscan is not authoritative source of truth (it is the nature of decentralized networks that there can't be an authoritative source for legitimacy), tokens that are identified by Etherscan as scams are likely to be scams.
 
    ![Scam token in Etherscan](./etherscan-scam.png)
+   
+   
+## Conclusion {#conclusion}
+
+As long as there is value in the world, there are going to be scammers who attempt to steal it for themselves, and in a decentralized world there is nobody to protect you except for yourself. Hopefully, you remember these points to help tell the legitimate tokens from the scams:
+
+- Scam tokens impersonate legitimate tokens, they can use the same name, symbol, etc. 
+- Scam tokens *cannot* use the same contract address.
+- The best source for the address of the legitimate token is the organization whose token it is.
+- Failing that, you can use popular, trusted applications such as [Uniswap](https://app.uniswap.org/#/swap) and [Etherscan](https://etherscan.io/).
