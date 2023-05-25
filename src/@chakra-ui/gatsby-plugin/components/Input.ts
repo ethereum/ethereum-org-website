@@ -30,7 +30,7 @@ const baseStyle = definePartsStyle((props) => {
         _focusVisible: {
           outlineColor: fc,
           outlineOffset: "-1px",
-          border: "none",
+          borderColor: "transparent",
           boxShadow: "none",
         },
         _hover: null, // override default
@@ -46,9 +46,6 @@ const baseStyle = definePartsStyle((props) => {
           opacity: 1,
         },
         "&:not(:disabled)": {
-          _hover: {
-            color: "primary",
-          },
           _active: {
             bg: "backgroundHighlight",
             borderColor: "primaryHighContrast",
