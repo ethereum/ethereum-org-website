@@ -118,14 +118,14 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
           currentQuestionAnswerChoice?.isCorrect) ||
         userQuizProgress[index]?.isCorrect
       )
-        return "success"
+        return "success.base"
       if (
         (showAnswer &&
           index === currentQuestionIndex &&
           !currentQuestionAnswerChoice?.isCorrect) ||
         (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
       )
-        return "error"
+        return "error.base"
       if (index === currentQuestionIndex) return "gray.400"
       return "gray.500"
     },

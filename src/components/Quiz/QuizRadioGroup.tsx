@@ -70,8 +70,8 @@ const QuizRadioGroup: React.FC<IProps> = ({
     const buttonBg = useMemo<string>(() => {
       if (!state.isChecked) return "body.inverted"
       if (!showAnswer) return "primary.base"
-      if (!isSelectedCorrect) return "error"
-      return "success"
+      if (!isSelectedCorrect) return "error.base"
+      return "success.base"
     }, [state.isChecked, showAnswer, isSelectedCorrect])
 
     // Render CustomRadio component
@@ -90,7 +90,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
             boxShadow: showAnswer ? "none" : "primary.base",
             outline: showAnswer
               ? "none"
-              : "1px solid var(--eth-colors-primary)",
+              : "1px solid var(--eth-colors-primary-base)",
             cursor: showAnswer ? "default" : "pointer",
           }}
         >
@@ -113,7 +113,11 @@ const QuizRadioGroup: React.FC<IProps> = ({
               fontWeight="700"
               fontSize="lg"
               color={
-                !showAnswer ? "white" : isSelectedCorrect ? "success" : "error"
+                !showAnswer
+                  ? "white"
+                  : isSelectedCorrect
+                  ? "success.base"
+                  : "error.base"
               }
             >
               {String.fromCharCode(97 + index).toUpperCase()}
