@@ -17,7 +17,7 @@ To illustrate what scam tokens are, and how to identify them, we are going to lo
 title="What is ARB?"
 contentPreview=''>
 
-<a href="https://developer.arbitrum.io/intro/">Arbitrum</a> is an organization that develops and manages <a href="/developers/docs/scaling/optimistic-rollups/">optimistic rollups</a>. Initially Arbitrum was organized as a for-profit company, but they recently <a href="https://arbitrumfoundation.medium.com/arbitrum-the-next-phase-of-decentralization-e7f8b37b5226">started to decentralize</a>. As part of that process, they issued a tradeable <a href="/dao/#token-based-membership">governance token</a>.
+<a href="https://developer.arbitrum.io/intro/">Arbitrum</a> is an organization that develops and manages <a href="/developers/docs/scaling/optimistic-rollups/">optimistic rollups</a>. Initially Arbitrum was organized as a for-profit company, but then <a href="https://arbitrumfoundation.medium.com/arbitrum-the-next-phase-of-decentralization-e7f8b37b5226">took steps to decentralize</a>. As part of that process, they issued a tradeable <a href="/dao/#token-based-membership">governance token</a>.
 
 </ExpandableCard>
 
@@ -61,7 +61,7 @@ There are several tricks that scam token creator pull to appear legitimate. They
 - **Legitimate transfers**. *Legitimate owners wouldn't pay to transfer a scam token around, so if there are transfers it must be legitimate, right?* Wrong. `Transfer` events are emitted by the ERC-20 contract. A scammer can easily write the contract in such a way it will emit those events, with any desired source and destination, at will. 
 
 <ExpandableCard
-title="What are `Transfer` events?"
+title="What are Transfer events?"
 contentPreview=''>
   
 In theory a program running off-chain can view all the transactions that affected a particular ERC-20 contract from its initial deployment, and use that to identify transfers. In practice, doing this would require too much network bandwidth and CPU power. To allow for simpler analysis, ERC-20 contracts are <a href="https://eips.ethereum.org/EIPS/eip-20#transfer-1">required by the standard</a> to emit events tagged as transfers whenever tokens are transferred from one account to another. <a href="https://docs.alchemy.com/docs/deep-dive-into-eth_getlogs#what-are-logs-or-events">Events</a> are written to the blockchain and indexed, which makes it a lot easier to obtain and analyze on-chain data.
