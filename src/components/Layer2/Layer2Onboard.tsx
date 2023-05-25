@@ -4,13 +4,11 @@ import React, { useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
-  chakra,
   Flex,
   Heading,
   Img,
   ListItem,
   SimpleGrid,
-  Stack,
   Text,
   UnorderedList,
 } from "@chakra-ui/react"
@@ -45,19 +43,6 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
     justifyContent="space-between"
     {...props}
   />
-)
-
-const ChakraSelect = chakra((props: { className?: string }) => (
-  <Select {...props} />
-))
-const StyledSelect = (props: any) => (
-  <Box mt="auto">
-    <ChakraSelect
-      maxW="none"
-      sx={{ ".react-select__control": { py: { base: "14px", sm: "0" } } }}
-      {...props}
-    />
-  </Box>
 )
 
 const SelectedContainer = (props: ChildOnlyProp) => (
@@ -164,18 +149,6 @@ const Layer2Onboard: React.FC<IProps> = ({
     }
   )
 
-  const formatGroupLabel = (data) => {
-    return data.label ? (
-      <Stack borderTop="2px solid" m={0}>
-        <Text mb={0} mt={2} textTransform="none" color="theme.colors.text">
-          {data.label}
-        </Text>
-      </Stack>
-    ) : (
-      <></>
-    )
-  }
-
   const selectExchangeOnboard = (option: ExchangeOption & CexOnboardOption) => {
     if (Object.hasOwn(option, "cex")) {
       trackCustomEvent({
@@ -239,7 +212,7 @@ const Layer2Onboard: React.FC<IProps> = ({
         </Text>
       </Box>
       <SimpleGrid {...gridContentPlacementStyles.gridContainer}>
-        <Flex flexDir="column">
+        <Flex flexDir="column" justify="space-between">
           {/* LeftDescription */}
           <Box>
             <H4>
@@ -255,9 +228,7 @@ const Layer2Onboard: React.FC<IProps> = ({
             </Text>
           </Box>
           {/* LeftSelected */}
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
+          <Select
             options={layer2Options}
             placeholder={t("layer-2-onboard-wallet-input-placeholder")}
             onChange={(selectedOption: Layer2Option | "") => {
@@ -272,7 +243,7 @@ const Layer2Onboard: React.FC<IProps> = ({
             }}
           />
         </Flex>
-        <Flex flexDir="column">
+        <Flex flexDir="column" justify="space-between">
           {/* RightDescription */}
           <Box>
             <H4>
@@ -289,9 +260,7 @@ const Layer2Onboard: React.FC<IProps> = ({
             </Text>
           </Box>
           {/* RightSelect */}
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
+          <Select
             options={[
               ...cexSupportOptions,
               {
@@ -300,7 +269,14 @@ const Layer2Onboard: React.FC<IProps> = ({
                 options: [...cexOnboardOptions],
               },
             ]}
-            onChange={(selectedOption: ExchangeOption & CexOnboardOption) => {
+            onChange={(
+              selectedOption: (ExchangeOption & CexOnboardOption) | ""
+            ) => {
+              if (selectedOption === "") {
+                setSelectedCexOnboard(undefined)
+                setSelectedExchange(undefined)
+                return
+              }
               selectExchangeOnboard(selectedOption)
             }}
             placeholder={t("layer-2-onboard-exchange-input-placeholder")}

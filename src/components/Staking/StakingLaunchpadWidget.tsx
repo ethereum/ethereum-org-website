@@ -9,12 +9,6 @@ import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
 
-const StyledSelect = chakra(Select, {
-  baseStyle: {
-    maxW: { base: "full", md: "50%" },
-  },
-})
-
 export interface IProps {}
 
 const StakingLaunchpadWidget: React.FC<IProps> = () => {
@@ -58,12 +52,11 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
         <Translation id="page-staking-launchpad-widget-span" />
       </Text>
       <Box my={4}>
-        <StyledSelect
-          className="react-select-container"
-          classNamePrefix="react-select"
+        <Select
           options={selectOptions}
           onChange={handleChange}
           defaultValue={selectOptions[0]}
+          maxW={{ md: "50%" }}
         />
       </Box>
       <Text>
