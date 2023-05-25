@@ -50,9 +50,9 @@ import { PASSING_QUIZ_SCORE } from "../../constants"
 import { USER_STATS_KEY } from "../../pages/quizzes"
 import QuizProgressBar from "./QuizProgressBar"
 
-// Import data
 import allQuizzesData from "../../data/quizzes"
 import questionBank from "../../data/quizzes/questionBank"
+import { updateUserStats } from "./utils"
 
 interface IProps {
   quizKey?: string
@@ -180,14 +180,14 @@ const QuizWidget: React.FC<IProps> = ({
     [quizData, numberOfCorrectAnswers]
   )
 
-  const score = useMemo<number>(
+  const quizScore = useMemo<number>(
     () => Math.floor(ratioCorrect * 100),
     [ratioCorrect]
   )
 
   const isPassingScore = useMemo<boolean>(
-    () => score > PASSING_QUIZ_SCORE,
-    [score]
+    () => quizScore > PASSING_QUIZ_SCORE,
+    [quizScore]
   )
 
   const showConfetti = useMemo<boolean>(
@@ -279,38 +279,21 @@ const QuizWidget: React.FC<IProps> = ({
         eventCategory: "Quiz widget",
         eventAction: "Other",
         eventName: "Submit results",
-        eventValue: `${score}%`,
+        eventValue: `${quizScore}%`,
       })
     }
   }
 
   const handleNextQuiz = () => {
-    const userStats = JSON.parse(localStorage.getItem(USER_STATS_KEY)!)
-
-    // Update user score, average and save to local storage
-    const newUserScore = userScore + numberOfCorrectAnswers
-    const newAverage = average === 0 ? score : (average + score) / 2
-
-    setUserStats({ ...userStats, score: newUserScore, average: newAverage })
-    localStorage.setItem(
-      USER_STATS_KEY,
-      JSON.stringify({ ...userStats, score: newUserScore, average: newAverage })
-    )
-
-    // Update number of completed quizzes if needed
-    if (score === 100) {
-      const completedQuizzes = JSON.parse(completed)
-      const newCompleted = JSON.stringify({
-        ...completedQuizzes,
-        [quizKey!]: true,
-      })
-
-      setUserStats({ ...userStats, completed: newCompleted })
-      localStorage.setItem(
-        USER_STATS_KEY,
-        JSON.stringify({ ...userStats, completed: newCompleted })
-      )
-    }
+    updateUserStats({
+      average, // Context
+      completed, // Context
+      numberOfCorrectAnswers, // Set in Context
+      quizKey, // PROP
+      quizScore, // Set in Context
+      setUserStats, // PROP
+      userScore, // Context
+    })
 
     // Move to next quiz
     nextHandler(nextQuiz)

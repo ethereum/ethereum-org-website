@@ -1,5 +1,5 @@
 // Import data types
-import { RawQuizzes } from "../../types"
+import { QuizzesSection, RawQuizzes } from "../../types"
 
 // Declare hash-map of quizzes based on slug key
 const quizzes: RawQuizzes = {
@@ -37,7 +37,7 @@ const quizzes: RawQuizzes = {
   },
 }
 
-export const ethereumBasicsQuizzes = [
+export const ethereumBasicsQuizzes: QuizzesSection[] = [
   {
     id: "what-is-ethereum",
     title: "What is Ethereum?",
@@ -71,11 +71,11 @@ export const ethereumBasicsQuizzes = [
   {
     id: "merge",
     title: "What is The Merge?",
-    level: "beginner",
+    level: "intermediate",
   },
 ]
 
-export const usingEthereumQuizzes = [
+export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "nfts",
     title: "What are NFTs?",
