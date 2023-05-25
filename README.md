@@ -162,10 +162,10 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 > The Proof of Attendance Protocol is a dapp that distributes badges in the form of ERC-721 tokens to prove you participated in an event. [More on POAPs](https://www.poap.xyz/).
 
-## The GitPOAP (One-time contribution) 
+## The GitPOAP (one-time contribution) 
 
 If you've made at least one contribution and that gets merged into ethereum.org, GitPOAP will auto recognize it and lets you mint a unique contributors POAP. 
-[More on GitPOAP](https://gitpoap.io).
+[More on GitPOAP](https://www.gitpoap.io).
 
 ## Tiered POAPs (based on the number of contributions)
 
