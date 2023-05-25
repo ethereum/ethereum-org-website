@@ -82,3 +82,9 @@ Another benefit to minimizing single-operator trust is that staking pools can al
 - **Additional component** - introducing a DVT node adds another part that can possibly be faulty or vulnerable. A way to mitigate this is to strive for multiple implementations of a DVT node, meaning multiple DVT clients (similarly as there are multiple clients for the consensus and execution layers).
 - **Operational costs** - as DVT distributes the validator between multiple parties, there are more nodes required for operation instead of only a single node, which introduces increased operating costs.
 - **Potentially increased latency** - since DVT utilizes a consensus protocol to achieve consensus between the multiple nodes operating a validator, it can potentially introduce increased latency.
+
+## Further Reading {#further-reading}
+
+[Ethereum distributed validator specs (high level)](https://github.com/ethereum/distributed-validator-specs)
+[Ethereum distributed validator technical specs](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
+[Shamir secret sharing demo app](https://iancoleman.io/shamir/)
