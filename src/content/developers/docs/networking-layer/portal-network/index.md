@@ -18,6 +18,8 @@ Clients are currently developed on top of peer-to-peer technology called DevP2P 
 
 The clients do a great job of running Ethereum; they must work within the design framework of devP2P and libP2P.
 
+![devp2p and libp2p](portal-network-devp2p-libp2p.png)
+
 This means the current clients need more support in what they can do to help keep network data requirements low.
 
 Disk space often poses a significant limitation for node operators, particularly when running full nodes or archive nodes for blockchain networks such as Ethereum. To give you an overview of the storage requirements:
@@ -53,6 +55,8 @@ Portal Network's new design aims to:
 - Residential internet connection
 
 Portal took the essential five parts of running a client that could be split up. This reduces the burden on the above, allowing users to run a node with whatever computational power they can.
+
+![portal network table](portal-network-table.png)
 
 Another challenge is building this in a decentralised structure; running on a centralised infrastructure would remove many of the obstacles the team is building solutions for, although this would be too much dependency which would not be a viable solution for the long term.
 
