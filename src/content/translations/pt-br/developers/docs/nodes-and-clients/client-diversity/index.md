@@ -43,7 +43,7 @@ Há também um custo humano para ter a maioria dos clientes. Isso coloca excesso
 
 ![Gráfico de pizza mostrando a diversidade do cliente](./client-diversity.png) _Dados do diagrama de [ethernodes.org](https://ethernodes.org) e [clientdiversity.org](https://clientdiversity.org/)_
 
-Os dois gráficos de pizza acima mostram imagens da diversidade atual do cliente para as camadas de execução e consenso (no momento da escrita em janeiro de 2022). A camada de execução é dominada esmagadoramente por [Geth](https://geth.ethereum.org/), com [Open Ethereum ](https://openethereum.github.io/) a um segundo de distância, [Erigon](https://github.com/ledgerwatch/erigon) em terceiro e [Nethermind](https://nethermind.io/) em quarto, com outros clientes compostos por menos de 1% da rede. O cliente mais comumente usado na camada de consenso – [Prysm](https://prysmaticlabs.com/#projects) – não é tão dominante quanto o Geth, mas ainda representa mais de 60% da rede. [Lighthouse](https://lighthouse.sigmaprime.io/) e [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) compõem ~20% e ~14% respectivamente, e outros clientes são raramente usados.
+Os dois gráficos de pizza acima mostram imagens da diversidade atual do cliente para as camadas de execução e consenso (no momento da escrita em janeiro de 2022). A camada de execução é dominada esmagadoramente por [Geth](https://geth.ethereum.org/), com [Open Ethereum](https://openethereum.github.io/) a um segundo de distância, [Erigon](https://github.com/ledgerwatch/erigon) em terceiro e [Nethermind](https://nethermind.io/) em quarto, com outros clientes compostos por menos de 1% da rede. O cliente mais comumente usado na camada de consenso – [Prysm](https://prysmaticlabs.com/#projects) – não é tão dominante quanto o Geth, mas ainda representa mais de 60% da rede. [Lighthouse](https://lighthouse.sigmaprime.io/) e [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) compõem ~20% e ~14% respectivamente, e outros clientes são raramente usados.
 
 Os dados da camada de execução foram obtidos da [Ethernodes](https://ethernodes.org) em 23/01/22. Os dados para clientes de consenso foram obtidos de [Michael Sproul](https://github.com/sigp/blockprint). Os dados do cliente de consenso são mais difíceis de obter porque os clientes da Beacon Chain nem sempre têm vestígios claros que podem ser usados para identificá-los. Os dados foram gerados usando um algoritmo de classificação que confunde às vezes alguns dos clientes minoritários (consulte [aqui](https://twitter.com/sproulM_/status/1440512518242197516) para obter mais detalhes). No diagrama acima, essas classificações ambíguas são tratadas com um rótulo (por exemplo, Nimbus/Teku). No entanto, é claro que a maior parte da rede está executando o Prysm. Os dados são um retrato sobre um conjunto fixo de blocos (neste caso, blocos Beacon nos espaços 2048001 a 2164916) e o domínio do Prysm às vezes foi maior, excedendo 68%. Apesar de serem apenas capturas, os valores no diagrama fornecem uma boa noção geral do estado atual da diversidade do cliente.
 
@@ -64,8 +64,6 @@ Endereçar a diversidade do cliente requer mais do que usuários individuais par
 [Nethermind](https://downloads.nethermind.io/)
 
 [Erigon](https://github.com/ledgerwatch/erigon)
-
-[Akula](https://akula.app)
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
@@ -91,10 +89,11 @@ Vários painéis fornecem estatísticas de diversidade de cliente em tempo real 
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
+- [pools.invis.cloud](https://pools.invis.cloud/)
+- [slashed.info](https://www.slashed.info/)
 
 **Camada de execução:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Leitura adicional {#further-reading}

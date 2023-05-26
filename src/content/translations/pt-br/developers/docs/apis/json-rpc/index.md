@@ -6,7 +6,7 @@ lang: pt-br
 
 Para que um aplicativo de software interaja com a blockchain Ethereum - lendo os dados da blockchain ou enviando transações para a rede - ele deve se conectar na Ethereum.
 
-Para isso, cada [cliente Ethereum](/developers/docs/nodes-and-clients/#execution-clients) implementa uma [especificação JSON-RPC](https://github.com/ethereum/ execution-apis), portanto, há um conjunto uniforme de métodos nos quais os aplicativos podem confiar, independentemente do nó específico ou da implementação do cliente.
+Para isso, cada [cliente Ethereum](/developers/docs/nodes-and-clients/#execution-clients) implementa uma [especificação JSON-RPC](https://github.com/ethereum/execution-apis), portanto, há um conjunto uniforme de métodos nos quais os aplicativos podem confiar, independentemente do nó específico ou da implementação do cliente.
 
 [JSON-RPC](https://www.jsonrpc.org/specification) é um protocolo de chamada de procedimento remoto (RPC) leve e sem estado. Ele define várias estruturas de dados e as regras em torno de seu processamento. É agnóstico de transporte no sentido de que os conceitos podem ser usados dentro do mesmo processo, sobre sockets, HTTP ou em vários ambientes de passagem de mensagens. Usa o formato de dados JSON (RFC 4627).
 

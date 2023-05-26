@@ -1,4 +1,4 @@
-interface WalletData {
+export interface WalletData {
   last_updated: string
   name: string
   image_name: string
@@ -2526,6 +2526,52 @@ const walletData: WalletData[] = [
       "https://tahowallet.notion.site/Taho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5",
     documentation:
       "https://tahowallet.notion.site/Taho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5",
+  },
+  {
+    last_updated: "2023-05-01",
+    name: "ShapeShift Wallet",
+    image_name: "shapeshift",
+    brand_color: "#386FF9",
+    url: "https://app.shapeshift.com/",
+    wallet_live_date: "2020-07-01",
+    active_development_team: true,
+    languages_supported: ["en", "es", "pt", "fr", "de", "tr", "ru", "uk"],
+    twitter: "https://twitter.com/shapeshift",
+    discord: "https://discord.gg/shapeshift",
+    reddit: "",
+    telegram: "https://t.me/shapeshiftofficial",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/shapeshift/hdwallet",
+    non_custodial: true,
+    security_audit: ["https://www.defisafety.com/app/pqrs/108"],
+    scam_protection: false,
+    hardware_support: true,
+    walletconnect: true,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: true,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: true,
+    erc_20_support: true,
+    eip_1559_support: true,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://shapeshift.zendesk.com/hc/en-us/",
+    documentation: "https://docs.shapeshift.com/",
   },
 ]
 

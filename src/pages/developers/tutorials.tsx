@@ -1,25 +1,28 @@
 // Libraries
 import React, { useEffect, useMemo, useState } from "react"
-import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import { Badge } from "@chakra-ui/react"
+import {
+  Badge,
+  Button,
+  chakra,
+  forwardRef,
+  Box,
+  Flex,
+  Heading,
+  Text,
+  useToken,
+} from "@chakra-ui/react"
+import { FaGithub } from "react-icons/fa"
 
 // Components
 import Translation from "../../components/Translation"
-import Icon from "../../components/Icon"
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
-import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
-import {
-  ButtonSecondary,
-  FakeLink,
-  Page,
-} from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
 
@@ -38,184 +41,36 @@ import { trackCustomEvent } from "../../utils/matomo"
 // Types
 import { Context } from "../../types"
 
-const SubSlogan = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 1rem;
-  text-align: center;
-`
-
-const TutorialCard = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
-  padding: 2rem;
-  width: 100%;
-  color: #000000;
-  &:hover {
-    text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
+const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
+  (props, ref) => {
+    const { isActive, name, ...rest } = props
+    return (
+      <chakra.button
+        ref={ref}
+        bg="none"
+        bgImage="radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)"
+        border="1px"
+        borderColor={isActive ? "primary300" : "white800"}
+        borderRadius="base"
+        boxShadow={!isActive ? "table" : undefined}
+        color="text"
+        fontSize="sm"
+        lineHeight={1.2}
+        opacity={isActive ? 1 : 0.7}
+        p={2}
+        textTransform="uppercase"
+        _hover={{
+          color: "primary",
+          borderColor: "text200",
+          opacity: "1",
+        }}
+        {...rest}
+      >
+        {name}
+      </chakra.button>
+    )
   }
-`
-
-const TutorialContainer = styled.div`
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  width: 66%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
-
-const StyledPage = styled(Page)`
-  margin-top: 4rem;
-`
-
-const PillContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-`
-
-const About = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const Author = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-  font-size: 0.875rem;
-  text-transform: uppercase;
-`
-
-const Title = styled.p<{ isExternal?: boolean | null }>`
-  color: ${(props) => props.theme.colors.text};
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-right: 6rem;
-
-  &:after {
-    margin-left: 0.125em;
-    margin-right: 0.3em;
-    display: ${(props) => (props.isExternal ? "inline" : "none")};
-    content: "↗";
-    transition: all 0.1s ease-in-out;
-    font-style: normal;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-right: 0rem;
-  }
-`
-
-const PageTitle = styled.h1`
-  font-style: normal;
-  font-weight: normal;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 140%;
-  text-align: center;
-  margin: 0 0 1.625rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin: 1rem;
-  }
-`
-
-const TitleContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: -1rem;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    margin-bottom: 2rem;
-  }
-`
-
-const TagsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 2rem 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    padding: 1rem 0rem;
-  }
-`
-const TagContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-`
-const ClearLink = styled.button`
-  color: ${(props) => props.theme.colors.primary};
-  text-decoration: underline;
-  background: none;
-  border: none;
-  cursor: pointer;
-`
-
-const ResultsContainer = styled.div`
-  margin-top: 0rem;
-  text-align: center;
-  padding: 3rem;
-`
-
-const GithubButton = styled(ButtonLink)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0.5rem;
-`
-
-const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
-`
-
-const ModalBody = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    max-height: 16rem;
-    overflow-y: scroll;
-  }
-`
-
-const ModalOption = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 4px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 0.5rem;
-  justify-content: space-between;
-  margin-left: 0rem;
-  margin-bottom: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-`
-
-const ModalTitle = styled.h2`
-  margin-top: 0;
-  margin-bottom: 1rem;
-`
+)
 
 const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
@@ -261,6 +116,8 @@ const TutorialsPage = ({
   data,
   pageContext,
 }: PageProps<Queries.DevelopersTutorialsPageQuery, Context>) => {
+  const tableBoxShadow = useToken("colors", "tableBoxShadow")
+  const cardBoxShadow = useToken("colors", "cardBoxShadow")
   const filteredTutorialsByLang = useMemo(
     () =>
       filterTutorialsByLang(
@@ -320,74 +177,137 @@ const TutorialsPage = ({
   }
 
   return (
-    <StyledPage>
+    <Flex
+      flexDirection="column"
+      alignItems="center"
+      w="full"
+      my={0}
+      mx="auto"
+      mt={16}
+    >
       <PageMetadata
         title={t("page-tutorials-meta-title")}
         description={t("page-tutorials-meta-description")}
       />
-      <PageTitle>
+      <Heading
+        fontStyle="normal"
+        fontWeight="semibold"
+        fontFamily="monospace"
+        textTransform="uppercase"
+        fontSize="2rem"
+        lineHeight="140%"
+        textAlign="center"
+        mt={{ base: 4, sm: 0 }}
+        mx={{ base: 4, sm: 0 }}
+        mb={{ base: 4, sm: "1.625rem" }}
+      >
         <Translation id="page-tutorial-title" />
-      </PageTitle>
-      <SubSlogan>
+      </Heading>
+      <Text
+        fontSize="xl"
+        lineHeight="140%"
+        color="text200"
+        mb={4}
+        textAlign="center"
+      >
         <Translation id="page-tutorial-subtitle" />
-      </SubSlogan>
+      </Text>
+
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <ModalTitle>
+        <Heading fontSize="2rem" lineHeight="1.4" mt={0} mb={4}>
           <Translation id="page-tutorial-submit-btn" />
-        </ModalTitle>
-        <p>
+        </Heading>
+        <Text>
           <Translation id="page-tutorial-listing-policy-intro" />{" "}
           <Link to="/contributing/content-resources/">
             <Translation id="page-tutorial-listing-policy" />
           </Link>
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-tutorial-submit-tutorial" />
-        </p>
-        <ModalBody>
-          <ModalOption>
-            <p>
-              <b>
-                <Translation id="page-tutorial-new-github" />
-              </b>
-              <br />
+        </Text>
+        <Flex
+          flexDirection={{ base: "column", md: "initial" }}
+          maxH={{ base: 64, md: "initial" }}
+          overflowY={{ base: "scroll", md: "initial" }}
+        >
+          <Flex
+            borderWidth="1px"
+            borderStyle="solid"
+            borderColor="border"
+            borderRadius="base"
+            p={4}
+            flexDirection="column"
+            w={{ base: "full", md: "50%" }}
+            justifyContent="space-between"
+            mt={2}
+            mb={{ base: 2, md: 6 }}
+            ml={0}
+            mr={{ base: 0, md: 2 }}
+          >
+            <Text as="b">
+              <Translation id="page-tutorial-new-github" />
+            </Text>
+            <Text>
               <Translation id="page-tutorial-new-github-desc" />
-            </p>
-            <GithubButton
+            </Text>
+            <ButtonLink
+              leftIcon={<FaGithub />}
               variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
-              <GithubIcon name="github" />{" "}
-              <span>
-                <Translation id="page-tutorial-raise-issue-btn" />
-              </span>
-            </GithubButton>
-          </ModalOption>
-          <ModalOption>
-            <p>
-              <b>
-                <Translation id="page-tutorial-pull-request" />
-              </b>
-              <br />
+              <Translation id="page-tutorial-raise-issue-btn" />
+            </ButtonLink>
+          </Flex>
+          <Flex
+            borderWidth="1px"
+            borderStyle="solid"
+            borderColor="border"
+            borderRadius="base"
+            p={4}
+            flexDirection="column"
+            w={{ base: "full", md: "50%" }}
+            justifyContent="space-between"
+            mt={2}
+            mb={{ base: 2, md: 6 }}
+            ml={0}
+            mr={{ base: 0, md: 2 }}
+          >
+            <Text as="b">
+              <Translation id="page-tutorial-pull-request" />
+            </Text>
+            <Text>
               <Translation id="page-tutorial-pull-request-desc-1" />{" "}
               <code>
                 <Translation id="page-tutorial-pull-request-desc-2" />
               </code>{" "}
               <Translation id="page-tutorial-pull-request-desc-3" />
-            </p>
-            <GithubButton
+            </Text>
+            <ButtonLink
+              leftIcon={<FaGithub />}
               variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
-              <GithubIcon name="github" />{" "}
-              <span>
-                <Translation id="page-tutorial-pull-request-btn" />
-              </span>
-            </GithubButton>
-          </ModalOption>
-        </ModalBody>
+              <Translation id="page-tutorial-pull-request-btn" />
+            </ButtonLink>
+          </Flex>
+        </Flex>
       </Modal>
-      <ButtonSecondary
+
+      <Button
+        variant="outline"
+        color="text"
+        borderColor="text"
+        _hover={{
+          color: "primary",
+          borderColor: "primary",
+          boxShadow: cardBoxShadow,
+        }}
+        _active={{
+          bg: "secondaryButtonBackgroundActive",
+        }}
+        py={2}
+        px={3}
         onClick={() => {
           setModalOpen(true)
           trackCustomEvent({
@@ -398,26 +318,53 @@ const TutorialsPage = ({
         }}
       >
         <Translation id="page-tutorial-submit-btn" />
-      </ButtonSecondary>
-      <TutorialContainer>
-        <TagsContainer>
-          <TagContainer>
+      </Button>
+
+      <Box
+        boxShadow={tableBoxShadow}
+        mb={8}
+        mt={8}
+        w={{ base: "full", md: "66%" }}
+      >
+        <Flex
+          justifyContent="center"
+          m={8}
+          pb={{ base: 4, md: 8 }}
+          pt={{ base: 4, md: "initial" }}
+          px={{ base: 0, md: "initial" }}
+          borderBottomWidth="1px"
+          borderBottomStyle="solid"
+          borderBottomColor="border"
+          flexDirection={{ base: "column", md: "initial" }}
+        >
+          <Flex
+            flexWrap="wrap"
+            alignItems="center"
+            gap={2}
+            maxW={{ base: "full", md: "initial" }}
+            mb={{ base: 4, md: "initial" }}
+          >
             {Object.entries(allTags).map(([tagName, tagCount]) => {
               const name = `${tagName} (${tagCount})`
               const isActive = selectedTags.includes(tagName)
               return (
-                <Tag
-                  name={name}
-                  key={name}
-                  isActive={isActive}
-                  shouldShowIcon={false}
-                  onClick={handleTagSelect}
-                  value={tagName}
+                <FilterTag
+                  onClick={() => handleTagSelect(tagName)}
+                  {...{ name, isActive }}
                 />
               )
             })}
             {selectedTags.length > 0 && (
-              <ClearLink
+              <Button
+                color="primary"
+                textDecoration="underline"
+                bg="none"
+                border="none"
+                cursor="pointer"
+                p={0}
+                _hover={{
+                  bg: "none",
+                }}
                 onClick={() => {
                   setSelectedTags([])
                   trackCustomEvent({
@@ -428,12 +375,12 @@ const TutorialsPage = ({
                 }}
               >
                 <Translation id="page-find-wallet-clear" />
-              </ClearLink>
+              </Button>
             )}
-          </TagContainer>
-        </TagsContainer>
+          </Flex>
+        </Flex>
         {filteredTutorials.length === 0 && (
-          <ResultsContainer>
+          <Box mt={0} textAlign="center" padding={12}>
             <Emoji text=":crying_face:" fontSize="5xl" mb={8} mt={8} />
             <h2>
               <Translation id="page-tutorial-tags-error" />
@@ -441,22 +388,59 @@ const TutorialsPage = ({
             <p>
               <Translation id="page-find-wallet-try-removing" />
             </p>
-          </ResultsContainer>
+          </Box>
         )}
         {filteredTutorials.map((tutorial) => {
           return (
-            <TutorialCard
+            <Flex
+              as={Link}
+              textDecoration="none"
+              flexDirection="column"
+              justifyContent="space-between"
+              color="text"
+              boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
+              mb="px"
+              padding={8}
+              w="full"
+              _hover={{
+                textDecoration: "none",
+                borderRadius: "base",
+                boxShadow: "0 0 1px var(--eth-colors-primary)",
+                bg: "tableBackgroundHover",
+              }}
               key={tutorial.to}
               to={tutorial.to ?? undefined}
               hideArrow
             >
-              <TitleContainer>
-                <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
+              <Flex
+                justifyContent="space-between"
+                mb={{ base: 8, md: -4 }}
+                alignItems="flex-start"
+                flexDirection={{ base: "column", md: "initial" }}
+              >
+                <Text
+                  color="text"
+                  fontWeight="semibold"
+                  fontSize="2xl"
+                  mr={{ base: 0, md: 24 }}
+                  _after={{
+                    ml: 0.5,
+                    mr: "0.3rem",
+                    display: tutorial.isExternal ? "inline" : "none",
+                    content: `"↗"`,
+                    transitionProperty: "all",
+                    transitionDuration: "0.1s",
+                    transitionTimingFunction: "ease-in-out",
+                    fontStyle: "normal",
+                  }}
+                >
+                  {tutorial.title}
+                </Text>
                 <Badge variant="secondary">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
                 </Badge>
-              </TitleContainer>
-              <Author>
+              </Flex>
+              <Text color="text200" fontSize="sm" textTransform="uppercase">
                 {/* TODO: Refactor each tutorial tag as a component */}
                 <Emoji text=":writing_hand:" fontSize="sm" mr={2} />
                 {tutorial.author} •
@@ -474,22 +458,22 @@ const TutorialsPage = ({
                   <>
                     {" "}
                     •<Emoji text=":link:" fontSize="sm" ml={2} mr={2} />
-                    <FakeLink>
+                    <Box as="span" color="primary" cursor="pointer">
                       <Translation id="page-tutorial-external-link" />
-                    </FakeLink>
+                    </Box>
                   </>
                 )}
-              </Author>
-              <About>{tutorial.description}</About>
-              <PillContainer>
+              </Text>
+              <Text color="text200">{tutorial.description}</Text>
+              <Flex flexWrap="wrap" w="full">
                 <TutorialTags tags={tutorial.tags ?? []} />
-              </PillContainer>
-            </TutorialCard>
+              </Flex>
+            </Flex>
           )
         })}
-      </TutorialContainer>
+      </Box>
       <FeedbackCard />
-    </StyledPage>
+    </Flex>
   )
 }
 export default TutorialsPage

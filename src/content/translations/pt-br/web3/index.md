@@ -117,7 +117,7 @@ Apesar dos inúmeros benefícios da Web3 em sua forma atual, ainda existem muita
 
 ### Acessibilidade {#accessibility}
 
-Recursos importantes da Web3, como Entrar com Ethereum, ou seja, fazer login com o Ethereum, já estão disponíveis para qualquer pessoa usar a custo zero. Mas, o custo relativo das transações ainda é proibitivo para muitos. É menos provável que a Web3 seja utilizada em países menos ricos e em desenvolvimento devido às altas taxas de transação. No Ethereum, esses desafios estão sendo resolvidos por meio de [atualizações de rede](/roadmap/) e [soluções de dimensionamento de camada 2](/developers/docs/scaling/). A tecnologia está pronta, mas precisamos de níveis mais altos de adoção na camada 2 para tornar a Web3 acessível a todos.
+Recursos importantes da Web3, como Entrar com Ethereum, ou seja, fazer login com o Ethereum, já estão disponíveis para qualquer pessoa usar a custo zero. Mas, o custo relativo das transações ainda é proibitivo para muitos. É menos provável que a Web3 seja utilizada em países menos ricos e em desenvolvimento devido às altas taxas de transação. No Ethereum, esses desafios estão sendo resolvidos por meio do [roteiro](/roadmap/) e das [soluções de dimensionamento da camada 2](/developers/docs/scaling/). A tecnologia está pronta, mas precisamos de níveis mais altos de adoção na camada 2 para tornar a Web3 acessível a todos.
 
 ### Experiência do usuário {#user-experience}
 

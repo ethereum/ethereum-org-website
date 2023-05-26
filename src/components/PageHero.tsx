@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { Box, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
+import { Box, Flex, Heading, Text, Wrap, WrapItem } from "@chakra-ui/react"
 
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
@@ -82,7 +82,7 @@ const PageHero: React.FC<IProps> = ({
           >
             {header}
           </Heading>
-          <Box
+          <Text
             fontSize={{ base: "xl", lg: "2xl" }}
             lineHeight={1.4}
             color="text200"
@@ -90,9 +90,9 @@ const PageHero: React.FC<IProps> = ({
             mb={8}
           >
             {subtitle}
-          </Box>
+          </Text>
           {buttons && (
-            <Wrap spacing={2}>
+            <Wrap spacing={2} overflow="visible">
               {buttons.map((button, idx) => {
                 if (isButtonLink(button)) {
                   return (

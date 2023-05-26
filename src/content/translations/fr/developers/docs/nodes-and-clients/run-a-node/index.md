@@ -439,7 +439,7 @@ Envisagez de créer un service pour exécuter automatiquement votre client au d�
 
 Vous devez conserver votre logiciel client à jour avec les derniers patchs de sécurité, les dernières fonctionnalités et les [EIPs](/eips/). Tout particulièrement avant [les fourches majeures](/history/), assurez-vous d'utiliser la bonne version client.
 
-> Avant les mises à jour importantes du réseau, EF publie un message sur son [blog ](https://blog.ethereum.org). Vous pouvez [vous abonner à ces annonces](https://groups.google.com/a/ethereum.org/g/announcements) pour recevoir une notification par email lorsque votre nœud a besoin d'une mise à jour.
+> Avant les mises à jour importantes du réseau, EF publie un message sur son [blog](https://blog.ethereum.org). Vous pouvez [vous abonner à ces annonces](https://groups.google.com/a/ethereum.org/g/announcements) pour recevoir une notification par email lorsque votre nœud a besoin d'une mise à jour.
 
 La mise à jour des clients est très simple. Chaque client a des instructions spécifiques dans sa documentation, mais le processus consiste généralement à simplement télécharger la dernière version et à redémarrer le client avec le nouvel exécutable. Le client devrait reprendre là où il s'est arrêté, mais avec les mises à jour appliquées.
 

@@ -88,5 +88,6 @@
   "page-find-wallet-desktop-desc": "Carteras con aplicaciones para escritorio",
   "page-find-wallet-browser": "Navegador",
   "page-find-wallet-browser-desc": "Carteras con extension para navegadores",
-  "page-find-wallet-device": "Dispositivo"
+  "page-find-wallet-device": "Dispositivo",
+  "page-find-choose-to-compare": "Elija para comparar"
 }

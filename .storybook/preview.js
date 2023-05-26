@@ -2,6 +2,9 @@ import { action } from "@storybook/addon-actions"
 
 import theme from "../src/@chakra-ui/gatsby-plugin/theme"
 
+import "../static/fonts/inter-font-face.css"
+import "../static/fonts/ibm-plex-font-face.css"
+
 const chakraBreakpointArray = Object.entries(theme.breakpoints)
 
 // Gatsby's Link overrides:

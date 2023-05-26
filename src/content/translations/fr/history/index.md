@@ -16,29 +16,31 @@ On parle de fourches lorsque des mises à niveau ou des modifications techniques
 Lorsque des mises à niveau des logiciels traditionnels contrôlés centralement sont nécessaires, la société publie simplement une nouvelle version pour l'utilisateur final. Les blockchains fonctionnent différemment parce qu'il n'existe pas de propriété centralisée. Les <a href="(/developers/docs/nodes-and-clients/">clients Ethereum</a> doivent mettre à jour leur logiciel pour implémenter les nouvelles règles des fourches. En outre, les créateurs de blocs (les "mineurs" dans l'univers des preuves de travail, les "validateurs" dans celui des preuves d'enjeu) et les nœuds doivent créer des blocs et les valider conformément aux nouvelles règles. [En savoir plus sur les mécanismes de consensus](/developers/docs/consensus-mechanisms/)
 
 Ces changements de règles peuvent créer une scission temporaire dans le réseau. De nouveaux blocs peuvent être produits selon les nouvelles règles ou les anciennes. Les fourches font généralement l'objet d'un accord à l'avance afin que les clients adoptent les changements à l'unisson et que la fourche contenant les mises à niveau devienne la chaîne principale. Toutefois, dans de rares cas, les désaccords sur les fourches peuvent causer une division permanente du réseau. Cela a notamment été le cas pour Ethereum Classic et la fourche DAO.
-
 </ExpandableCard>
 
-Vous cherchez de prochaines mises à jour de protocole ? [En savoir plus sur les prochaines mises à jour d'Ethereum](/roadmap/).
+Passer directement à l'information sur certaines des mises à jour passées particulièrement importantes : [La Chaîne phare](/roadmap/beacon-chain/); [La Fusion](/roadmap/merge/); et [EIP-1559](#london)
+
+Vous cherchez les prochaines mises à jour de protocole ? [Découvrez les mises à jour à venir sur la feuille de route Ethereum](/roadmap/).
 
 <Divider />
 
 ## 2023 {#2023}
 
-### Shanghai (_planifié_) {#shanghai}
+### Shanghai {#shanghai}
 
 <NetworkUpgradeSummary name="shanghai" />
 
 #### Résumé {#shanghai-summary}
 
-La mise à jour Shanghai fait basculer les retraits de mise en jeu vers la couche d'exécution. En tandem avec la mise à jour Capella, cette mise à jour permet aux blocs d'accepter des opérations de retrait, qui permettent aux stakers de retirer leur ETH de la chaine phare la basculer vers la couche d'exécution.
+La mise à jour Shanghai a ouvert la voie à des opérations de retrait et de basculement vers la couche d'exécution Couplée à la mise à jour Capella, cette mise à jour permet aux blocs d'accepter des opérations de retrait, permettant ainsi aux validateurs de retirer leur ETH de la chaîne phare et de le basculer vers la couche d'exécution.
 
 <ExpandableCard title="EIP Shanghai" contentPreview="Official improvements included in this upgrade.">
 
-- [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – _Starts the `COINBASE` address warm_
+- [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – _Démarre l'adresse `COINBASE` warm_
 - [EIP-3855](https://eips.ethereum.org/EIPS/eip-3855) – _New `PUSH0` instruction_
-- [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) – _Limit and meter initcode_
-- [EIP-4895](https://eips.ethereum.org/EIPS/eip-4895) – _Beacon chain push withdrawals as operations_
+- [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) – Code _Limit et compteur initcode_
+- [EIP-4895](https://eips.ethereum.org/EIPS/eip-4895) – Retraits de la chaîne _Beacon en tant qu'opérations_
+- [EIP-6049](https://eips.ethereum.org/EIPS/eip-6049) - _Deprecate `SELFDESTRUCT`_
 
 </ExpandableCard>
 
@@ -46,17 +48,20 @@ La mise à jour Shanghai fait basculer les retraits de mise en jeu vers la couch
 
 ---
 
-### Capella (_planifié_) {#capella}
+### Capella {#capella}
 
 <NetworkUpgradeSummary name="capella" />
 
 #### Résumé {#capella-summary}
 
-La mise à jour Capella est la troisième mise à jour majeure vers la couche de consensus (Chaine phare), qui permet les retraits de la mise en jeu. La mise à jour Capella et la mise à jour Shanghai survenant sur la couche d'exécution doivent se produire simultanément pour synchroniser la fonctionnalité de retrait.
+La mise à jour Capella est la troisième mise à jour majeure vers la couche de consensus (Chaine phare). Elle a permis d'effectuer des retraits de mise en jeu. Capella est entrée en action en même temps que la mise à niveau de la couche d'exécution, Shanghai, et a activé la fonctionnalité de retrait de mise en jeu.
 
-Cette mise à jour de la couche de consensus permet aux stakers qui n'ont pas fourni de certificats de retrait avec leur dépôt initial de le faire, ce qui leur permet les retraits.
+Cette mise à jour de la couche de consensus a permis aux validateurs, qui n'avaient pas fourni de certificats de retrait lors du premier dépôt de le faire, et donc d'effectuer des retraits.
 
-La mise à jour fournit aussi des fonctionnalités de balayage automatique de compte, qui traitent continuellement les comptes de validateur pour tous les paiements de récompenses disponibles ou les retraits complets.<!-- - \[More on staking withdrawals\](/staking/withdrawals/). -->- [Lire les spécificités de la mise à jour Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+La mise à jour a également permis la mise en place d'une fonctionnalité de balayage automatique de compte, qui traite continuellement les comptes de validateur pour tout paiement de récompenses ou retrait intégral disponible.
+
+- [En savoir plus sur les retraits de mise en jeu](/staking/withdrawals/).
+- [Lire les spécifications de la mise à jour Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
 <Divider />
 
@@ -68,7 +73,7 @@ La mise à jour fournit aussi des fonctionnalités de balayage automatique de co
 
 #### Résumé {#paris-summary}
 
-La mise à jour de Paris a été déclenchée par le passage de la blockchain de preuve de travail à une[difficulté totale finale](/glossary/#terminal-total-difficulty) de 5875000000000000000. Cela s'est produit au bloc 15537393 le 15 septembre 2022, déclenchant la mise à jour Paris du bloc suivant. Paris était la transition vers la [La Fusion](/roadmap/merge/) : sa principale fonctionnalité était de désactiver l'algorithme de minage [preuve de travail](/developers/docs/consensus-mechanisms/pow) et sa logique de consensus associée et d'activer la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) à la place. Paris lui-même était une mise à jour vers les [clients d'exécution](/developers/docs/nodes-and-clients/#execution-clients) (équivalent de Bellatrix sur la couche de consensus) qui leur permettait de recevoir des instructions depuis leurs [clients de consensus](/developers/docs/nodes-and-clients/#consensus-clients) connectés. Cela nécessite un nouvel ensemble de méthodes internes d'API, collectivement connues sous le nom d'[API Moteur](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), à activer. C'est sans doute la mise à jour la plus significative de l'histoire d'Ethereum depuis [Homestead](#homestead)!
+La mise à jour de Paris a été déclenchée par le passage de la blockchain de preuve de travail à une [difficulté totale finale](/glossary/#terminal-total-difficulty) de 5875000000000000000. Cela s'est produit au bloc 15537393 le 15 septembre 2022, déclenchant la mise à jour du bloc suivant. Paris était la transition vers la [La Fusion](/roadmap/merge/) : sa principale fonctionnalité était de désactiver l'algorithme de minage [preuve de travail](/developers/docs/consensus-mechanisms/pow) et sa logique de consensus associée et d'activer la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) à la place. Paris lui-même était une mise à jour vers les [clients d'exécution](/developers/docs/nodes-and-clients/#execution-clients) (équivalent de Bellatrix sur la couche de consensus) qui leur permettait de recevoir des instructions depuis leurs [clients de consensus](/developers/docs/nodes-and-clients/#consensus-clients) connectés. Cela nécessitait d'activer un nouvel ensemble de méthodes internes d'API, collectivement connues sous le nom d'[API Moteur](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). C'est sans doute la mise à jour la plus significative de l'histoire d'Ethereum depuis [Homestead](#homestead) !
 
 - [Lisez la spécification de la mise à jour Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
@@ -87,7 +92,7 @@ La mise à jour de Paris a été déclenchée par le passage de la blockchain de
 
 #### Résumé {#bellatrix-summary}
 
-La mise à jour de Bellatrix était la seconde mise à jour planifiée pour la [Chaîne Phare](/roadmap/beacon-chain), préparant la chaîne à [La Fusion](/roadmap/merge/). Elle porte les pénalités de validateur à leurs valeurs maximales en cas d'inactivité ou d'infractions sanctionnable. Bellatrix inclut également une mise à jour des règles de choix de fourche pour préparer la chaîne à La Fusion et à la transition du dernier bloc de preuve de travail vers le premier bloc de preuve d'enjeu. Cela inclut la sensibilisation des clients de consensus à la [difficulté totale du terminal](/glossary/#terminal-total-difficulty) de 5875000000000000000.
+La mise à jour de Bellatrix était la seconde mise à jour planifiée pour la [Chaîne Phare](/roadmap/beacon-chain), préparant la chaîne à [La Fusion](/roadmap/merge/). Elle porte les pénalités de validateur à leurs valeurs maximales en cas d'inactivité ou d'infractions sanctionnables. Bellatrix inclut également une mise à jour des règles de choix de fourche pour préparer la chaîne à La Fusion et à la transition du dernier bloc de preuve de travail vers le premier bloc de preuve d'enjeu. Cela inclut la sensibilisation des clients de consensus à la [difficulté totale du terminal](/glossary/#terminal-total-difficulty) de 5875000000000000000.
 
 - [Lire les spécifications de la mise à niveau Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
@@ -138,13 +143,13 @@ La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de dif
 
 #### Résumé {#altair-summary}
 
-La mise à niveau Altair était la première mise à niveau répertoriée pour la [chaîne phare](/roadmap/beacon-chain). La prise en charge des « comités de synchronisation » a été ajoutée, autorisant d'une part les clients légers et augmentant d'autre part les pénalités d'inactivité et de délestage des validateurs alors que la situation évoluait vers La Fusion.
+La mise à niveau Altair était la première mise à niveau répertoriée pour la [chaîne phare](/roadmap/beacon-chain). La prise en charge des « comités de synchronisation » a été ajoutée, autorisant d'une part les clients légers et augmentant d'autre part les pénalités d'inactivité et de délestage des validateurs à mesure que le système évoluait vers la fusion.
 
 - [Lire les spécifications de la mise à niveau Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
 #### <emoji text=":tada:" size={1} mr="0.5rem" />Anecdote ! {#altair-fun-fact}
 
-Altair a été la première mise à niveau majeure d'un réseau dont la date de déploiement était exacte. Toutes les mises à niveau antérieures étaient basées sur un numéro de bloc déclaré sur la chaîne de preuve de travail dans laquelle les durées de blocage varient. La chaîne phare ne nécessite pas de résoudre de preuve de travail, mais fonctionne sur la base d'un système de périodes composées de 32 créneaux de 12 secondes chacun durant lesquels les validateurs peuvent proposer des blocs. C'est pourquoi nous savions exactement quand nous atteindrions l'époque 74 240 et la date de sortie d'Altaïr !
+Altair a été la première mise à jour majeure du réseau à disposer d'un délai de mise en œuvre précis. Toutes les mises à niveau antérieures étaient basées sur un numéro de bloc déclaré sur la chaîne de preuve de travail, dans laquelle les durées de blocage varient. La chaîne phare ne nécessite pas de résoudre de preuve de travail, mais fonctionne sur la base d'un système de périodes composées de 32 créneaux de 12 secondes pendant lesquels les validateurs peuvent proposer des blocs. C'est pourquoi nous savions exactement quand nous atteindrions l'époque 74 240 et la date de sortie d'Altair !
 
 - [Durée de blocage](/developers/docs/blocks/#block-time)
 
@@ -156,7 +161,7 @@ Altair a été la première mise à niveau majeure d'un réseau dont la date de 
 
 #### Résumé {#london-summary}
 
-La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), qui a réorganisé le marché des frais de transaction, ainsi que des changements dans le traitement des remboursements de gaz et dans le calendrier [Ice Age](/glossary/#ice-age).
+La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), qui a réorganisé le marché des frais de transaction, ainsi que des changements dans le traitement des remboursements de gaz et le calendrier [Ice Age](/glossary/#ice-age).
 
 - [Êtes-vous un développeur d'applications décentralisées ? Assurez-vous de mettre à niveau vos bibliothèques et vos outils.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -204,7 +209,7 @@ La mise à niveau Berlin a optimisé le coût en gaz de certaines actions EVM et
 
 #### Résumé {#beacon-chain-genesis-summary}
 
-La [chaîne phare](/roadmap/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. C'est arrivé le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. Ce fut une première étape importante dans la réalisation de la [vision Ethereum](/roadmap/vision/).
+La [chaîne phare](/roadmap/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. Cela s'est produit le 27 novembre, de sorte que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. Ce fut une première étape importante dans la réalisation de la [vision Ethereum](/roadmap/vision/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
@@ -220,7 +225,7 @@ La [chaîne phare](/roadmap/beacon-chain/) avait besoin de 16 384 dépôts de 3
 
 #### Résumé {#deposit-contract-summary}
 
-Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#staking) dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat sur le [réseau principal](/glossary/#mainnet), cela a eu des conséquences directes sur l'échéance du lancement de la [chaîne phare](/roadmap/beacon-chain/), une importante [mise à niveau d'Ethereum](/roadmap/).
+Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#staking) dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat sur le [réseau principal](/glossary/#mainnet), il a eu des conséquences directes sur le calendrier de lancement de la [chaîne phare](/roadmap/beacon-chain/), une importante [mise à niveau d'Ethereum](/roadmap/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -315,7 +320,7 @@ La fourche Constantinople a :
 
 La fourche Byzantium a :
 
-- réduit les récompenses pour le [minage ](/developers/docs/consensus-mechanisms/pow/mining/)des blocs de 5 à 3 ETH ;
+- réduit les récompenses pour le [minage](/developers/docs/consensus-mechanisms/pow/mining/) des blocs de 5 à 3 ETH ;
 - retardé la [bombe de difficulté](/glossary/#difficulty-bomb) d'un an ;
 - ajouté la possibilité d'effectuer des appels sans changement d'état vers d'autres contrats ;
 - ajouté certaines méthodes de cryptographie pour permettre la [mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling).
@@ -443,7 +448,7 @@ La fourche Frontier Thawing a levé la [limite de gaz](/glossary/#gas) de 5 000
 
 #### Résumé {#frontier-summary}
 
-Frontier était une implémentation réelle, mais sans structure, du projet Ethereum. Elle a fait suite à la phase de tests réussie Olympic. Elle était destinée aux utilisateurs techniques, en particulier aux développeurs. Les [blocs](/glossary/#block) avaient une limite de [gaz](/glossary/#gas) de 5 000. La période « Thawing » a permis aux mineurs de démarrer leurs opérations et aux premiers adoptants d’installer leurs clients sans avoir à « se précipiter ».
+Frontier était une implémentation réelle, mais sans structure, du projet Ethereum. Elle faisait suite à la phase de tests réussie Olympic. Elle était destinée aux utilisateurs techniques, en particulier aux développeurs. Les [blocs](/glossary/#block) avaient une limite de [gaz](/glossary/#gas) de 5 000. La période « Thawing » a permis aux mineurs de démarrer leurs opérations et aux premiers adoptants d’installer leurs clients sans avoir à « se précipiter ».
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
@@ -455,7 +460,7 @@ Frontier était une implémentation réelle, mais sans structure, du projet Ethe
 
 <NetworkUpgradeSummary name="etherSale" />
 
-L'ETH a offciellement été en vente pendant 42 jours. Il était possible d'en acheter avec des BTC.
+L'ETH a officiellement été en vente pendant 42 jours. Il était possible d'en acheter avec des BTC.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
 

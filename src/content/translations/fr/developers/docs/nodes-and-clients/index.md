@@ -75,7 +75,7 @@ Le client d'exécution Geth intègre une option de [synchronisation simplifiée]
 
 Les clients légers sont un domaine de développement actif pour Ethereum et nous nous attendons à prochainement voir apparaître de nouveaux clients légers pour la couche de consensus et la couche d'exécution. Il existe également des routes potentielles pour fournir des données client légers sur le [réseau gossip](https://www.ethportal.net/). Ceci est avantageux dans la mesure où le réseau gossip pourrait supporter un réseau de nœuds légers sans avoir besoin que des nœuds complets servent les requêtes.
 
-Ethereum ne prend pas encore en charge un nombre important de ces nœuds légers mais la prise en charge des nœuds légers est une thématique qui devrait fortement développer dans un futur proche. En particulier, des clients comme [Nimbus](https://nimbus. team/), [Helios](https://github. com/a16z/helios), et [LodeStar](https://lodestar. chainsafe. io/) se focalisent actuellement fortement sur les nœuds légers.
+Ethereum ne prend pas encore en charge un nombre important de ces nœuds légers mais la prise en charge des nœuds légers est une thématique qui devrait fortement développer dans un futur proche. En particulier, des clients comme [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios), et [LodeStar](https://lodestar.chainsafe.io/) se focalisent actuellement fortement sur les nœuds légers.
 
 ### Nœud d'archive {#archive-node}
 
@@ -277,7 +277,7 @@ La synchronisation optimiste est une stratégie de synchronisation post-fusion c
 
 #### Synchronisation des points de contrôle {#checkpoint-sync}
 
-La Synchronisation des points de contrôle, également connue sous le nom de synchronisation à faible subjectivité, génère une expérience utilisateur supérieure pour la synchronisation du Nœud Phare. Elle est basée sur des hypothèses de [faible subjectivité ](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) qui permettent de synchroniser la Chaîne phare à partir d'un point de contrôle de faible subjectivité récent plutôt que de la genèse. La synchronisation des points de contrôle réduit sensiblement le temps de synchronisation initiale avec des hypothèses de confiance similaires à la synchronisation effectuée à partir de la [genèse](/glossary/#genesis-block).
+La Synchronisation des points de contrôle, également connue sous le nom de synchronisation à faible subjectivité, génère une expérience utilisateur supérieure pour la synchronisation du Nœud Phare. Elle est basée sur des hypothèses de [faible subjectivité](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) qui permettent de synchroniser la Chaîne phare à partir d'un point de contrôle de faible subjectivité récent plutôt que de la genèse. La synchronisation des points de contrôle réduit sensiblement le temps de synchronisation initiale avec des hypothèses de confiance similaires à la synchronisation effectuée à partir de la [genèse](/glossary/#genesis-block).
 
 En pratique, cela signifie que votre nœud se connecte à un service distant pour télécharger les états finalisés récents et continue de vérifier les données à partir de ce point. Les tiers qui fournissent les données sont de confiance et doivent être soigneusement sélectionnés.
 

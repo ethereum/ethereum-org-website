@@ -126,7 +126,7 @@ You can define multiple contracts and handlers here. A typical setup would have 
 
 For convenience reasons you also might want to use a template tool like mustache. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. For a more advanced example setup, see for example the [Aave subgraph repo](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-And the full documentation can be seen here: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+And the full documentation can be seen [here](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```yaml
 specVersion: 0.0.1
@@ -169,7 +169,7 @@ The schema is the GraphQL data definition. It will allow you to define which ent
 - BigInt
 - BigDecimal
 
-You can also use entities as type to define relationships. In our example we define a 1-to-many relationship from player to bets. The ! means the value can't be empty. The full documentation can be seen here: https://thegraph.com/docs/define-a-subgraph#the-graphql-schema.
+You can also use entities as type to define relationships. In our example we define a 1-to-many relationship from player to bets. The ! means the value can't be empty. The full documentation can be seen [here](https://thegraph.com/docs/define-a-subgraph#the-graphql-schema).
 
 ```graphql
 type Bet @entity {
@@ -295,13 +295,13 @@ But we're missing one last piece of the puzzle and that's the server. You can ei
 
 ### Graph Explorer: The hosted service {#graph-explorer-the-hosted-service}
 
-The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/deploy-a-subgraph) to deploy a subgraph. For many projects you can actually find existing subgraphs in the explorer at https://thegraph.com/explorer/.
+The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/deploy-a-subgraph) to deploy a subgraph. For many projects you can actually find existing subgraphs in the [explorer](https://thegraph.com/explorer/).
 
 ![The Graph-Explorer](./thegraph-explorer.png)
 
 ### Running your own node {#running-your-own-node}
 
-Alternatively you can run your own node: https://github.com/graphprotocol/graph-node#quick-start. One reason to do this might be using a network that's not supported by the hosted service. Currently supported are Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI and Sokol.
+Alternatively you can run your own node. Docs [here](https://github.com/graphprotocol/graph-node#quick-start). One reason to do this might be using a network that's not supported by the hosted service. Currently supported are Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI and Sokol.
 
 ## The decentralized future {#the-decentralized-future}
 

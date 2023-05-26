@@ -7,7 +7,7 @@ tags:
   - "トークン"
   - "Solidity"
   - "erc-20"
-skill: 中級
+skill: intermediate
 lang: ja
 published: 2020-04-07
 source: EthereumDev

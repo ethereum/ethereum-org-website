@@ -22,27 +22,9 @@ import ButtonLink from "../ButtonLink"
 import Translation from "../Translation"
 // SVG imports
 import {
-  AbyssGlyphIcon,
-  AllnodesGlyphIcon,
-  AnkrGlyphIcon,
-  AvadoGlyphIcon,
-  BloxstakingGlyphIcon,
   CautionProductGlyphIcon,
-  DefaultOpenSourceGlyphIcon,
-  DockerIcon,
-  EthpoolGlyphIcon,
   GreenCheckProductGlyphIcon,
-  KilnGlyphIcon,
-  LidoGlyphIcon,
-  RocketPoolGlyphIcon,
-  SenseiNodeGlyphIcon,
-  StafiGlyphIcon,
-  StakefishGlyphIcon,
-  StakewiseGlyphIcon,
-  StakingDappnodeGlyphIcon,
-  StereumGlyphIcon,
   UnknownProductGlyphIcon,
-  WagyuGlyphIcon,
   WarningProductGlyphIcon,
 } from "../icons/staking"
 
@@ -65,27 +47,8 @@ enum FlagType {
 const getIconFromName = (
   imageName: string
 ): ComponentType<SVGProps<SVGElement>> => {
-  const mapping = {
-    abyss: AbyssGlyphIcon,
-    allnodes: AllnodesGlyphIcon,
-    ankr: AnkrGlyphIcon,
-    avado: AvadoGlyphIcon,
-    bloxstaking: BloxstakingGlyphIcon,
-    dappnode: StakingDappnodeGlyphIcon,
-    docker: DockerIcon,
-    defaultOpenSource: DefaultOpenSourceGlyphIcon,
-    ethpool: EthpoolGlyphIcon,
-    kiln: KilnGlyphIcon,
-    lido: LidoGlyphIcon,
-    rocketPool: RocketPoolGlyphIcon,
-    senseiNode: SenseiNodeGlyphIcon,
-    stafi: StafiGlyphIcon,
-    stakewise: StakewiseGlyphIcon,
-    stereum: StereumGlyphIcon,
-    wagyu: WagyuGlyphIcon,
-    stakefish: StakefishGlyphIcon,
-  }
-  return mapping[imageName]
+  const { [imageName + "GlyphIcon"]: Icon } = require("../icons/staking")
+  return Icon
 }
 
 const Status: React.FC<{ status: FlagType }> = ({ status }) => {
@@ -243,7 +206,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
         borderRadius="base"
         maxH={24}
       >
-        {!!Svg && <Icon as={Svg} fontSize="2rem" />}
+        {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
         <Heading fontSize="2xl" color="white">
           {name}
         </Heading>

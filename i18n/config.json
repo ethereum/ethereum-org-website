@@ -272,6 +272,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "pcm",
+    "hrefLang": "pcm",
+    "name": "Nigerian Pidgin",
+    "localName": "Nigerian Pidgin",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY"
+  },
+  {
     "code": "ph",
     "hrefLang": "fil",
     "name": "Filipino",
@@ -392,9 +400,9 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
-    "code": "ur-in",
-    "hrefLang": "ur-in",
-    "name": "Urdu (India)",
+    "code": "ur",
+    "hrefLang": "ur",
+    "name": "Urdu",
     "localName": "اردو",
     "langDir": "rtl",
     "dateFormat": "MM/DD/YYYY"

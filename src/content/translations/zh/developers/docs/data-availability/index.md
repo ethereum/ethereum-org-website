@@ -93,7 +93,7 @@ lang: zh
 
 ### 链下数据可用性 {#off-chain-data-availability}
 
-链下数据可用性系统将数据存储移至区块链以外：区块生产者不在链上发布交易数据，而是提供一种加密承诺来证明数据的可用性。 [模块化区块链](https://celestia.org/learn/basics-of-modular-blockchains/)采用了这种方法。在模块化区块链中，区块链管理一些任务（例如交易执行和共识），同时把其他任务（例如数据可用性）分流到另一层。
+链下数据可用性系统将数据存储移至区块链以外：区块生产者不在链上发布交易数据，而是提供一种加密承诺来证明数据的可用性。 [模块化区块链](https://celestia.org/learn/basics-of-modular-blockchains/modular-and-monolithic-blockchains/)采用了这种方法。在模块化区块链中，区块链管理一些任务（例如交易执行和共识），同时把其他任务（例如数据可用性）分流到另一层。
 
 很多扩容解决方案都采用模块化方法，将数据可用性与共识和执行分开，这被视作一种扩展区块链且不会增加节点要求的理想方式。 例如，[Validium](/developers/docs/scaling/validium/) 和 [plasma](/developers/docs/scaling/plasma/) 使用链下存储减少发布到链上的数据量。
 

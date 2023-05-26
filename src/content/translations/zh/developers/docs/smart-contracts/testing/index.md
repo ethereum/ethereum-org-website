@@ -171,9 +171,14 @@ iii. “合约在出错时将会还原”
 
 - [GitHub](https://github.com/crytic/etheno)
 
+**Woke 开发和测试框架** - _利用类型提示、模糊测试工具、调试支持、代码覆盖和跨链测试，测试和部署 Python 脚本。_
+
+- [相关文档](https://ackeeblockchain.com/woke/docs/latest/testing-framework/overview/)
+- [Github](https://github.com/Ackee-Blockchain/woke)
+
 ### 静态分析工具 {#static-analysis-tools}
 
-**Mythril** - _以太坊虚拟机字节码评估工具，用于使用污染分析、concolic 分析和控制流检查来检测合约漏洞。_
+**Mythril** - _以太坊虚拟机字节码评估工具，用于使用污染分析、混合执行分析和控制流检查来检测合约漏洞。_
 
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [相关文档](https://mythril-classic.readthedocs.io/en/master/about.html)
@@ -188,9 +193,9 @@ iii. “合约在出错时将会还原”
 
 ### 动态分析工具 {#dynamic-analysis-tools}
 
-**Echidna** - _快速合约模糊器，用于通过基于属性的测试来检测智能合约中的漏洞。_
+**Echidna** - _快速合约模糊测试工具，利用基于属性的测试来检测智能合约中的漏洞。_
 
-- [GitHub](https://github.com/crytic/echidna/)
+- [Github](https://github.com/crytic/echidna/)
 
 **Harvey** - _自动化模糊测试工具，用于检测智能合约代码中的属性违规行为。_
 
@@ -198,16 +203,16 @@ iii. “合约在出错时将会还原”
 
 **Manticore** - _用于分析以太坊虚拟机字节码的动态符号执行框架。_
 
-- [GitHub](https://github.com/trailofbits/manticore)
+- [Github](https://github.com/trailofbits/manticore)
 - [相关文档](https://github.com/trailofbits/manticore/wiki)
 
 ### 智能合约审计服务 {#smart-contract-auditing-services}
 
-**ConsenSys Diligence** - _智能合约审计服务可帮助整个区块链生态系统中的项目，确保其协议已准备好启动并为保护用户而构建。_
+**ConsenSys Diligence** - _智能合约审计服务，帮助整个区块链生态系统中的项目确保其协议已准备好启动，并为保护用户而构建。_
 
 - [网站](https://consensys.net/diligence/)
 
-**CertiK** - _区块链安全公司率先在智能合约和区块链网络上使用尖端的形式化验证技术。_
+**CertiK** - _区块链安全公司，率先在智能合约和区块链网络上使用尖端的形式化验证技术。_
 
 - [网站](https://www.certik.com/)
 
@@ -219,7 +224,7 @@ iii. “合约在出错时将会还原”
 
 - [网站](https://peckshield.com/)
 
-**QuantStamp** - _通过安全和风险评估服务促进区块链技术主流采用的审计服务。_
+**QuantStamp** - _审计服务，通过安全和风险评估服务促使区块链技术的采用称为主流。_
 
 - [网站](https://quantstamp.com/)
 
@@ -227,9 +232,13 @@ iii. “合约在出错时将会还原”
 
 - [网站](https://www.openzeppelin.com/security-audits)
 
+**Nethermind** - _Solidity 和 Cairo 审计服务，确保智能合约的完整性和跨以太坊和 Starknet 的用户安全。_
+
+- [网站](https://nethermind.io/smart-contracts-audits)
+
 ### 漏洞奖金平台 {#bug-bounty-platforms}
 
-**Immunefi** - _用于智能合约和去中心化金融项目的漏洞赏金平台，安全研究人员在此审查代码、披露漏洞、获得报酬并制作更安全的加密。_
+**Immunefi** - _智能合约和去中心化金融项目的漏洞奖励平台，安全研究人员在该平台上审查代码、披露漏洞、获得报酬并使加密应用更加安全。_
 
 - [网站](https://immunefi.com/)
 
@@ -242,12 +251,12 @@ iii. “合约在出错时将会还原”
 - [Solidity 和 Truffle 持续集成设置](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)_ – 如何为 Truffle 测试设置 Travis 或 Circle CI 并搭配有用的插件。_
 - [测试产品概述](/developers/tutorials/guide-to-smart-contract-security-tools/)_ — 不同测试产品的概述和比较。_
 - [如何使用 Echidna 测试智能合约](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [如何使用 Manticore 查找智能合约漏洞](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
-- [如何使用 Slither 来查找智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [如何使用 Manticore 查找智能合约漏洞](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [如何使用 Slither 发现智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [如何模拟 Solidity 合约以进行测试](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [如何从 Truffle 测试迁移至 OpenZeppelin 测试环境](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [如何在部署到网络后测试合约](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
-- [学习使用 JavaScript 的区块链、Solidity 和全栈 Web3 开发 (YouTube)](https://www.youtube.com/watch?v=gyMwXuJrbJQ)
+- [学习使用 JavaScript 开发区块链、Solidity 和全栈 Web3 (YouTube)](https://www.youtube.com/watch?v=gyMwXuJrbJQ)
 - [Solidity、区块链和智能合约课程 (YouTube)](https://www.youtube.com/watch?v=M576WGiDBdQ)
 
 ## 延伸阅读 {#further-reading}

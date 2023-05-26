@@ -22,7 +22,7 @@ While you may choose to interact directly with Ethereum clients via the JSON-RPC
 
 This page deals mainly with the JSON-RPC API used by Ethereum execution clients. However, consensus clients also have an RPC API that allows users to query information about the node, request Beacon blocks, Beacon state, and other consensus-related information directly from a node. This API is documented on the [Beacon API webpage](https://ethereum.github.io/beacon-APIs/#/).
 
-An internal API is also used for inter-client communication within a node - that is, it enables the consensus client and execution client to swap data. This is called the 'Engine API' and the specs are available on [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+An internal API is also used for inter-client communication within a node - that is, it enables the consensus client and execution client to swap data. This is called the 'Engine API' and the specs are available on [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Execution client spec {#spec}
 
@@ -202,11 +202,10 @@ None
 `String` - The current network id.
 
 The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Some common ones are:
-`1`: Ethereum Mainnet
-`2`: Morden testnet (now deprecated)
-`3`: Ropsten testnet
-`4`: Rinkeby testnet
-`5`: Goerli testnet
+
+- `1`: Ethereum Mainnet
+- `5`: Goerli testnet
+- `11155111`: Sepolia testnet
 
 **Example**
 
