@@ -51,6 +51,7 @@ type ExchangeName =
   | "rain"
   | "shakepay"
   | "wazirx"
+  | "korbit"
 
 type WalletProviderName = "simplex" | "moonpay" | "wyre"
 
@@ -137,6 +138,7 @@ export const useEthExchanges = () => {
           simplex
           wazirx
           wyre
+          korbit
         }
       }
       timestamp: exchangesByCountryCsv {
@@ -247,6 +249,9 @@ export const useEthExchanges = () => {
         ...cardListImage
       }
       wazirx: file(relativePath: { eq: "exchanges/wazirx.png" }) {
+        ...cardListImage
+      }
+      korbit: file(relativePath: { eq: "exchanges/korbit.png" }) {
         ...cardListImage
       }
     }
@@ -413,6 +418,12 @@ export const useEthExchanges = () => {
       name: "WazirX",
       url: "https://wazirx.com/",
       image: data.wazirx,
+      usaExceptions: [],
+    },
+    korbit: {
+      name: "Korbit",
+      url: "https://korbit.co.kr",
+      image: data.korbit,
       usaExceptions: [],
     },
   }
