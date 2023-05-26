@@ -85,6 +85,6 @@ Another benefit to minimizing single-operator trust is that staking pools can al
 
 ## Further Reading {#further-reading}
 
-[Ethereum distributed validator specs (high level)](https://github.com/ethereum/distributed-validator-specs)
-[Ethereum distributed validator technical specs](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
-[Shamir secret sharing demo app](https://iancoleman.io/shamir/)
+- [Ethereum distributed validator specs (high level)](https://github.com/ethereum/distributed-validator-specs)
+- [Ethereum distributed validator technical specs](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
+- [Shamir secret sharing demo app](https://iancoleman.io/shamir/)
