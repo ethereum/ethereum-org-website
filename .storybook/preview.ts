@@ -1,8 +1,11 @@
+import { Preview } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 
-import i18n from "./i18next"
+import i18n, { baseLocales } from "./i18next"
 import theme from "../src/@chakra-ui/gatsby-plugin/theme"
-import { Preview } from "@storybook/react"
+
+import { supportedLanguages, languageMetadata } from "../src/utils/languages"
+import { capitalize } from "lodash"
 
 const chakraBreakpointArray = Object.entries(theme.breakpoints)
 
@@ -25,15 +28,27 @@ window.___navigate = (pathname) => {
   action("NavigateTo:")(pathname)
 }
 
+const locales = supportedLanguages.reduce(
+  (acc, curr) => {
+    if (Object.keys(baseLocales).includes(curr)) return acc
+
+    const currLangMeta = languageMetadata[curr]
+
+    return {
+      ...acc,
+      [curr]: {
+        title: currLangMeta.localName,
+        left: capitalize(currLangMeta.hrefLang),
+      },
+    }
+  },
+  { ...baseLocales }
+)
+
 const preview: Preview = {
   globals: {
     locale: "en",
-    locales: {
-      en: { title: "English", left: "🇺🇸" },
-      fr: { title: "Français", left: "🇫🇷" },
-      ja: { title: "日本語", left: "🇯🇵" },
-      uk: { title: "українська", left: "🇺🇦" },
-    },
+    locales,
   },
   parameters: {
     i18n,
