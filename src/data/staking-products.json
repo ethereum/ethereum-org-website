@@ -560,15 +560,35 @@
       "url": "https://rocketpool.net/",
       "audits": [
         {
-          "name": "Sigma Prime",
+          "name": "Sigma Prime - May 2021",
           "url": "https://rocketpool.net/files/sigma-prime-audit.pdf"
         },
         {
-          "name": "Consensys Diligence",
+          "name": "Sigma Prime - Nov 2021",
+          "url": "https://rocketpool.net/files/sigma-prime-fix-review.pdf"
+        },
+        {
+          "name": "Sigma Prime - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-audit-redstone.pdf"
+        },
+        {
+          "name": "Sigma Prime - Atlas, Dec 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Consensys Diligence - 2021",
           "url": "https://consensys.net/diligence/audits/2021/04/rocketpool/"
         },
         {
-          "name": "Trail of Bits",
+          "name": "Consensys Diligence - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/consensys-audit-redstone.pdf"
+        },
+        {
+          "name": "Consensys Diligence - Atlas, Jan 2023",
+          "url": "https://rocketpool.net/files/consensys-diligence-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Trail of Bits - Sept 2021",
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
