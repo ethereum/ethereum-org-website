@@ -22,7 +22,7 @@ A DVT solution contains the following components:
 - **[Multiparty computation (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - The full validator key is generated in secret using multiparty computation. The full key is never known to any individual operator—they only ever know their own part of it (their "share").
 - **Consensus protocol** - The consensus protocol selects one node to be the block proposer. They share the block with the other nodes in the cluster, who add their key shares to the aggregate signature. When enough key shares have been aggregated, the block is proposed on Ethereum.
 
-Individual nodes do not need to trust each other in order to share a validator. As long as enough key shares get aggregated, the validator duties can be performed by the cluster. Distributed validators have built-in fault tolerance and can keep running even if some of the individual nodes go offline. 
+Distributed validators have built-in fault tolerance and can keep running even if some of the individual nodes go offline. This means that the cluster is resilient even if some of the nodes within it turn out to be malicious or lazy.
 
 ## Why do we need DVT? {#why-do-we-need-dvt}
 
@@ -30,11 +30,11 @@ Individual nodes do not need to trust each other in order to share a validator. 
 
 Validators generate two public-private key pairs: validator keys for participating in consensus and withdrawal keys for accessing funds. While validators can secure withdrawal keys in cold storage, validator private keys must be online 24/7. If a validator private key is compromised, an attacker can control the validator, potentially leading to slashing or the loss of the staker's ETH. DVT can help mitigate this risk. Here's how:
 
-By using DVT, stakers can participate in staking while keeping the validator private key in cold storage. This is achieved by encrypting the original validator key and then splitting it into key shares. The key shares live online and are distributed to multiple nodes which enable the distributed operation of the validator. This is possible because Ethereum validators use BLS signatures that are additive, meaning the full key can be reconstructed by summing their component parts. This allows the staker to keep the original validator key securely offline.
+By using DVT, stakers can participate in staking while keeping the validator private key in cold storage. This is achieved by encrypting the original, full validator key and then splitting it into key shares. The key shares live online and are distributed to multiple nodes which enable the distributed operation of the validator. This is possible because Ethereum validators use BLS signatures that are additive, meaning the full key can be reconstructed by summing their component parts. This allows the staker to keep the full, original 'master' validator key securely offline.
 
 ### No single points of failure {#no-single-point-of-failure}
 
-When a validator is divided across multiple operators and multiple machines, it can withstand individual hardware and software failures without going offline. The risk of failures can also be reduced by using diverse hardware and software configurations across the nodes in a cluster. This resilience is not available to today's validators - it comes from the DVT layer.
+When a validator is divided across multiple operators and multiple machines, it can withstand individual hardware and software failures without going offline. The risk of failures can also be reduced by using diverse hardware and software configurations across the nodes in a cluster. This resilience is not available to single-node validator configurations - it comes from the DVT layer.
 
 If one of the components of a machine in a cluster goes down (for example, if there are four operators in a validator cluster and one uses a specific client that has a bug), the others ensure that the validator keeps running. 
 
@@ -59,11 +59,11 @@ DVT has significant implications for the broader staking industry:
 
 ### Solo stakers {#solo-stakers}
 
-DVT also enables non-custodial staking by allowing you to distribute your validator key across remote nodes while keeping the full key completely offline. This means home stakers do not necessarily need to outlay for hardware or add to their home electricity bills, while distributing the key shares can help strengthen them against potential hacks.
+DVT also enables non-custodial staking by allowing you to distribute your validator key across remote nodes while keeping the full key completely offline. This means home stakers do not necessarily need to outlay for hardware, while distributing the key shares can help strengthen them against potential hacks.
 
 ### Staking as a service (SaaS) {#saas}
 
-Operators (such as staking pools and institutional stakers) managing many validators can use DVT to reduce their risk. By distributing their infrastructure, they can add redundancy to their operations and diversify their infrastructure. 
+Operators (such as staking pools and institutional stakers) managing many validators can use DVT to reduce their risk. By distributing their infrastructure, they can add redundancy to their operations and diversify the types of hardware they use. 
 
 DVT shares responsibility for key management across multiple nodes, meaning some operational costs can also be shared. DVT can also reduce operational risk and insurance costs for staking providers.
 
