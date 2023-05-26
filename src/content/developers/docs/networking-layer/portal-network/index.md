@@ -1,17 +1,16 @@
-## What is Portal on Ethereum? (Decentralised Clients)
+---
+title: The Portal Network
+description: An overview of the Portal Network - an in-development network designed to support low-resource clients.
+lang: en
+---
 
-This article is aimed to give an overview of Portal and further resources for you to dive deeper into.
-
-After reading, you will understand the following:
-
-- Why clients are vital to Ethereum
-- The current challenges with the existing infrastructure that Portal is attempting to solve
-
-Ethereum runs on nodes. A "node" is any instance of Ethereum client software connected to other computers also running Ethereum software, forming a network. A client is an implementation of Ethereum that verifies data against the protocol rules and keeps the network secure. ( Read more: What are nodes and clients?)
+Ethereum runs on nodes. A "node" is any instance of Ethereum client software connected to other computers also running Ethereum software, forming a network. A client is an implementation of Ethereum that verifies data against the protocol rules and keeps the network secure.
 
 Nodes have to run client software, for example, Prysm and Geth, which are vital to the operations of Ethereum.
 
 Ethereum is a decentralized network that relies on a consensus mechanism called Proof-of-Stake (PoS) to validate and agree upon transactions and the state of the blockchain. Clients are implementations of the Ethereum protocol that enable network participants, known as validators, to contribute their computational resources to secure the network and maintain consensus.
+
+## Limitations of the current networking design {#limitations-of-current-network-design}
 
 Node Operators use clients to store a copy of a part or the entire blockchain and validate transactions and smart contracts. By running their nodes, users can independently verify the state of the network without relying on centralized entities.
 
@@ -38,6 +37,7 @@ The design of DevP2P impacts users running a node in many ways:
 
 Running Ethereum nodes results in a high entry barrier that affects geographic and economic participation. Trying to build solutions to tackle these issues are not feasible in the current framework.
 
+## Why is the Portal Network different? {#why-is-portal-network-different?}
 
 Portal decided to rethink the whole design.
 
@@ -64,11 +64,12 @@ Having multiple independent client implementations enhances the resilience and d
 
 If one client experiences issues or vulnerabilities, other clients can continue to operate smoothly, preventing a single point of failure. Additionally, diverse client implementations foster innovation and competition, driving improvements and reducing monoculture risk within the ecosystem.
 
-
-Check out the latest presentation by Piper Merriam on the Portal Network at ETHZurich.
-
 Now you see that the best option to design a decentralised light client needed a new approach from the current infrastructure, a multi-team effort.
 
-Join the Portal Network discord: https://discord.gg/6XFs56cX
+## Further Reading {#futher-reading}
 
-Check out ethportal.net
+- The Portal Network (Piper Merriam at ETHZurich).
+
+- [Portal Network discord](https://discord.gg/6XFs56cX)
+
+- [The Portal Network website](ethportal.net)
