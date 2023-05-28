@@ -1,5 +1,5 @@
-import { initReactI18next } from "react-i18next"
-import i18n from "i18next"
+import i18n, { Resource } from "i18next"
+import { initReactI18next } from "gatsby-plugin-react-i18next"
 import { supportedLanguages } from "../src/utils/languages"
 
 export const baseLocales = {
@@ -10,25 +10,29 @@ export const baseLocales = {
 }
 
 // Only i18 files named in this array are being exposed to Storybook. Add filenames as necessary.
-const ns = ["common"]
+const ns = ["common", "page-about"]
 const supportedLngs = [...Object.keys(baseLocales), ...supportedLanguages]
-const resources = ns.reduce((acc, n) => {
+
+/**
+ * Taking the ns array and combining all the ids
+ * under a single ns per language, set to the default of "translation"
+ */
+const resources: Resource = ns.reduce((acc, n) => {
   supportedLngs.forEach((lng) => {
     if (!acc[lng]) acc[lng] = {}
     acc[lng] = {
-      ...acc[lng],
-      [n]: require(`../src/intl/${lng}/${n}.json`),
+      translation: {
+        ...acc[lng],
+        ...require(`../src/intl/${lng}/${n}.json`),
+      },
     }
   })
   return acc
 }, {})
 
 i18n.use(initReactI18next).init({
-  //debug: true,
-  lng: "en",
+  debug: true,
   fallbackLng: "en",
-  defaultNS: "common",
-  ns,
   interpolation: { escapeValue: false },
   react: { useSuspense: false },
   supportedLngs,
