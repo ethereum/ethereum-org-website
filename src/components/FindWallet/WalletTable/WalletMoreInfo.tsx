@@ -73,7 +73,8 @@ export const WalletMoreInfo = ({
             justifyContent="space-between"
             wrap="wrap"
             alignItems="flex-start"
-            my={8}
+            mt={8}
+            pb={8}
             spacing={4}
           >
             <ButtonLink
