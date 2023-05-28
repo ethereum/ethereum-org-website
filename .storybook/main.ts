@@ -1,8 +1,8 @@
-const { propNames } = require("@chakra-ui/react")
+import { StorybookConfig } from "@storybook/react-webpack5"
+import { propNames } from "@chakra-ui/react"
+import { babelConfig } from "./babel-storybook-config"
 
-const { babelConfig } = require("./babel-storybook-config")
-
-module.exports = {
+const config: StorybookConfig = {
   stories: ["../src/components/**/*.stories.tsx"],
   addons: [
     "@storybook/addon-links",
@@ -13,9 +13,7 @@ module.exports = {
     "@chakra-ui/storybook-addon",
     "storybook-react-i18next",
   ],
-  babel: async (options) => ({
-    ...babelConfig,
-  }),
+  babel: async () => ({ ...babelConfig }),
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
@@ -27,23 +25,29 @@ module.exports = {
   },
   features: {},
   webpackFinal: async (config) => {
-    config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
-    config.module.rules[0].use = [
-      {
-        loader: require.resolve("babel-loader"),
-        options: {
-          presets: [
-            // use @babel/preset-react for JSX and env (instead of staged presets)
-            require.resolve("@babel/preset-react"),
-            require.resolve("@babel/preset-env"),
-          ],
-          plugins: [
-            // use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
-            require.resolve("babel-plugin-remove-graphql-queries"),
-          ],
+    if (
+      config.module != undefined &&
+      config.module.rules != undefined &&
+      config.module.rules[0] !== "..."
+    ) {
+      config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
+      config.module.rules[0].use = [
+        {
+          loader: require.resolve("babel-loader"),
+          options: {
+            presets: [
+              // use @babel/preset-react for JSX and env (instead of staged presets)
+              require.resolve("@babel/preset-react"),
+              require.resolve("@babel/preset-env"),
+            ],
+            plugins: [
+              // use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
+              require.resolve("babel-plugin-remove-graphql-queries"),
+            ],
+          },
         },
-      },
-    ]
+      ]
+    }
 
     return config
   },
@@ -77,3 +81,5 @@ module.exports = {
     },
   },
 }
+
+export default config

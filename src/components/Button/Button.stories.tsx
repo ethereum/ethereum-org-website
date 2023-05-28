@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react"
+import React from "react"
 import Button from "."
+import Translation from "../Translation"
 
 export default {
   component: Button,
@@ -30,4 +32,12 @@ export const Disabled: StoryObj<typeof Button> = {
     children: "I am disabled",
     isDisabled: true,
   },
+}
+
+export const Test = {
+  render: () => (
+    <Button>
+      <Translation id="page-about-h2" />
+    </Button>
+  ),
 }
