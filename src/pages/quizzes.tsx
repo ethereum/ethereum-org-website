@@ -17,9 +17,11 @@ import QuizzesModal from "../components/Quiz/QuizzesModal"
 import QuizzesStats from "../components/Quiz/QuizzesStats"
 import { QuizzesHubContext } from "../components/Quiz/context"
 
+import { useLocalStorage } from "../hooks/useLocalStorage"
+
 import { getImage } from "../utils/image"
 
-import { CompletedQuizzes, QuizStatus, UserStats } from "../types"
+import { CompletedQuizzes, QuizStatus } from "../types"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,
@@ -47,34 +49,6 @@ const INITIAL_USER_STATS = {
   score: 0,
   average: 0,
   completed: JSON.stringify(INITIAL_COMPLETED_QUIZZES),
-}
-
-// Hook
-// TODO: move to other place
-const useLocalStorage = (key, initialValue) => {
-  const [storedValue, setStoredValue] = useState(initialValue)
-  const setValue = (value) => {
-    try {
-      const valueToStore =
-        value instanceof Function ? value(storedValue) : value
-      setStoredValue(valueToStore)
-      window.localStorage.setItem(key, JSON.stringify(valueToStore))
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  useEffect(() => {
-    try {
-      const item = window.localStorage.getItem(key)
-      setStoredValue(item ? JSON.parse(item) : initialValue)
-    } catch (error) {
-      console.log(error)
-      return setStoredValue(initialValue)
-    }
-  }, [])
-
-  return [storedValue, setValue]
 }
 
 const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
