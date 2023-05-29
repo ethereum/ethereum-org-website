@@ -142,7 +142,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
               </Box>
 
               <Flex
-                direction={{ base: "column", md: "row" }}
+                direction={{ base: "column", xl: "row" }}
                 justifyContent="space-between"
                 alignItems="center"
                 bg="ednBackground"
@@ -150,9 +150,9 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 border="none"
                 p={{ base: 8, lg: 12 }}
               >
-                <Stack mb={{ base: 4, lg: 0 }}>
+                <Stack mb={{ base: 4, xl: 0 }}>
                   <Text
-                    align={{ base: "center", lg: "left" }}
+                    align={{ base: "center", xl: "left" }}
                     fontWeight="bold"
                     color="body"
                     mb={-2}
@@ -160,7 +160,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                     <Translation id="want-more-quizzes" />
                   </Text>
 
-                  <Text align={{ base: "center", lg: "left" }} color="body">
+                  <Text align={{ base: "center", xl: "left" }} color="body">
                     <Translation id="contribute" />
                   </Text>
                 </Stack>
