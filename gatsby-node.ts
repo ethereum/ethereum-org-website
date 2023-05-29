@@ -291,6 +291,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
               isOutdated: false,
               isContentEnglish: true,
               relativePath, // Use English path for template MDX query
+              isDefaultLang: lang === defaultLanguage,
               // gatsby i18n plugin
               i18n: {
                 language: lang,
@@ -366,6 +367,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
             slug,
             isContentEnglish,
             isOutdated,
+            isDefaultLang: lang === defaultLanguage,
             // gatsby i18n plugin
             i18n: {
               language: lang,
@@ -420,6 +422,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
         isOutdated,
         //display TranslationBanner for translation-component pages that are still in English
         isContentEnglish,
+        isDefaultLang,
       },
     }
 
