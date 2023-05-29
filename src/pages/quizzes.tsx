@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import styled from "@emotion/styled"
 import { FaGithub } from "react-icons/fa"
 
 import ButtonLink from "../components/ButtonLink"
@@ -27,11 +26,6 @@ import allQuizzesData, {
   ethereumBasicsQuizzes,
   usingEthereumQuizzes,
 } from "../data/quizzes"
-
-// TODO: remove styled components?
-const Hero = styled(PageHero)`
-  padding-bottom: 2rem;
-`
 
 export const USER_STATS_KEY = "quizzes-stats"
 // Create an object that contains each quiz id as key and a boolean flag to indicate if its completed
@@ -84,8 +78,8 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         title={t("quizzes-title")}
         description={t("quizzes-subtitle")}
       />
-      <Box w="100%" bg="layer2Gradient">
-        <Hero content={heroContent} isReverse />
+      <Box w="100%" bg="layer2Gradient" pb={8}>
+        <PageHero content={heroContent} isReverse />
       </Box>
 
       <QuizzesHubContext.Provider value={contextState}>
