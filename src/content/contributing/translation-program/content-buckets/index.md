@@ -71,7 +71,7 @@ Below is a breakdown of the website pages each content bucket contains.
 
 - [Learn hub](/learn/)
 - [Ethereum guides](/guides/)
-- [How to "register" an Ethereum account](/guides/how-to-register-an-ethereum-account/)
+- [How to "create" an Ethereum account](/guides/how-to-create-an-ethereum-account/)
 - [How to use a wallet](/guides/how-to-use-a-wallet/)
 - [How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
 - [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/)
