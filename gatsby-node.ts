@@ -393,6 +393,8 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   actions,
 }) => {
   const { createPage, deletePage, createRedirect } = actions
+  const rootPath = page.path.slice(3)
+  const is404Page = rootPath.match(/^\/404(\/|.html)$/)
 
   if (!page.context) {
     return
@@ -419,8 +421,9 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
       context: {
         ...page.context,
         languagesToFetch: [language],
-        isOutdated,
-        //display TranslationBanner for translation-component pages that are still in English
+        // hide the outdated content banner for 404 pages
+        isOutdated: is404Page ? false : isOutdated,
+        // display TranslationBanner for translation-component pages that are still in English
         isContentEnglish,
         isDefaultLang,
       },
@@ -448,8 +451,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
     if (!IS_DEV && i18n.routed) {
       createPage<Context>(newPage)
 
-      const rootPath = page.path.slice(3)
-      if (isDefaultLang && !rootPath.match(/^\/404(\/|.html)$/)) {
+      if (isDefaultLang && !is404Page) {
         createRedirect({
           ...commonRedirectProps,
           fromPath: rootPath,
