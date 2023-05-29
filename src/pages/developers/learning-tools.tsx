@@ -1,78 +1,103 @@
 // Library imports
 import React, { useEffect, useState } from "react"
-import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
 // Component imports
+import { Box, Flex } from "@chakra-ui/react"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
-import { Content, Page } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import LearningToolsCardGrid from "../../components/LearningToolsCardGrid"
 // Util imports
 import { getImage } from "../../utils/image"
 // Type imports
-import { Context, LearningTool } from "../../types"
+import { ChildOnlyProp, Context, LearningTool } from "../../types"
 
-// Styled components
-const StyledPage = styled(Page)`
-  margin-top: 4rem;
-`
+const StyledPage = (props: ChildOnlyProp) => (
+  <Flex
+    flexDirection="column"
+    alignItems="center"
+    w="100%"
+    ml="auto"
+    mr="auto"
+    mb={16}
+    mt={16}
+    {...props}
+  ></Flex>
+)
 
-const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 896px;
-  padding: 0 2rem;
-`
-const H1 = styled.h1`
-  margin: 2rem 0 0;
-  margin-top: 0;
-  color: ${(props) => props.theme.colors.text};
-  font-style: normal;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 1.4;
-  text-align: center;
-`
+const Header = (props: ChildOnlyProp) => (
+  <Flex
+    flexDirection="column"
+    alignItems="center"
+    textAlign="center"
+    maxW="896px"
+    p={0}
+    pl={8}
+    pr={8}
+    {...props}
+  />
+)
 
-const Subtitle = styled.h2`
-  font-size: 1.25rem;
-  line-height: 1.4;
-  font-weight: 400;
-  color: ${(props) => props.theme.colors.text300};
-  max-width: 55ch;
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
-`
+const H1 = (props: ChildOnlyProp) => (
+  <Flex
+    m={"8 0 0"}
+    mt={0}
+    color="text"
+    fontStyle="normal"
+    fontFamily={"mono"}
+    textTransform="uppercase"
+    fontWeight="semibold"
+    fontSize="4xl"
+    lineHeight="1.4"
+    textAlign="center"
+    {...props}
+  />
+)
 
-const SubtitleTwo = styled(Subtitle)`
-  margin-top: 0rem;
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Flex
+    fontSize={"xl"}
+    lineHeight={"short"}
+    color="text300"
+    maxW="55ch"
+    mb={2}
+    mt={4}
+    {...props}
+  />
+)
 
-const StackContainer = styled(Content)`
-  border: 1px solid ${(props) => props.theme.colors.border};
-  justify-content: flex-start;
-  border-radius: 4px;
-  padding: 3rem 2rem;
-  margin: 2rem;
-  width: 96%;
-  background: ${(props) => props.theme.colors.ednBackground};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    border-radius: 0px;
-  }
-`
+const SubtitleTwo = (props: ChildOnlyProp) => (
+  <Subtitle>
+    <Box mt={0} {...props}></Box>
+  </Subtitle>
+)
+
+const ContentBox = (props: ChildOnlyProp) => (
+  <Box pt={4} pb={4} pl={8} pr={8} w={"100%"} {...props}></Box>
+)
+
+const StackContainer = (props: ChildOnlyProp) => (
+  <Box
+    border="1px solid border"
+    justifyContent="flex-start"
+    borderRadius={{ base: "4px", sm: "0" }}
+    w={{ base: "96%", sm: "100%" }}
+    m={8}
+    ml={{ base: 8, sm: 0 }}
+    mr={{ base: 8, sm: 0 }}
+    pt={12}
+    pb={12}
+    pl={8}
+    pr={8}
+    background="ednBackground"
+    {...props}
+  ></Box>
+)
 
 // Page component
 const LearningToolsPage = ({
@@ -303,7 +328,7 @@ const LearningToolsPage = ({
         </p>
         <LearningToolsCardGrid category={bootcamps} />
       </StackContainer>
-      <Content>
+      <ContentBox>
         <CalloutBanner
           mx={4}
           mt={24}
@@ -319,10 +344,10 @@ const LearningToolsPage = ({
             </ButtonLink>
           </div>
         </CalloutBanner>
-      </Content>
-      <Content>
+      </ContentBox>
+      <ContentBox>
         <FeedbackCard />
-      </Content>
+      </ContentBox>
     </StyledPage>
   )
 }
