@@ -30,7 +30,7 @@ const QuizSummary: React.FC<IProps> = ({
       <Text
         fontWeight="700"
         textAlign="center"
-        color={isPassingScore ? "success500" : "default"}
+        color={isPassingScore ? "success" : "body"}
         fontSize="3xl"
       >
         {isPassingScore ? (
