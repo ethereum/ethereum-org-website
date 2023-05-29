@@ -189,7 +189,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
               </Box>
 
               <Flex
-                direction={{ base: "column", lg: "row" }}
+                direction={{ base: "column", md: "row" }}
                 justifyContent="space-between"
                 alignItems="center"
                 bg="ednBackground"
