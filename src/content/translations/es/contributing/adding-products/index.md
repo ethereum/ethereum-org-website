@@ -97,7 +97,7 @@ Al igual que la naturaleza fluida de Ethereum, los equipos y productos vienen y 
 - asegurarnos de que todas las carteras y dapps incluidas todavía cumplan nuestros criterios,
 - cercionarnos de que no hay productos sugeridos que cumplan con más de nuestros criterios que los actualmente incluidos,
 
-Puede ayudar con esta tarea comprobando e informándonos de las conclusiones. [Cree una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) o envíe un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org)
+Puede ayudar con esta tarea comprobando e informándonos de las conclusiones. [Cree una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) o envíe un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org)
 
 _También estamos investigando las opciones para votar para que la comunidad pueda indicar sus preferencias y poner de relevancia los mejores productos para que nosotros los recomendemos._
 

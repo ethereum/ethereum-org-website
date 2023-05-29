@@ -21,7 +21,7 @@ ethereum.org のウェブサイトは、より広範なイーサリアムと同�
 - [デベロッパーツールの追加](/contributing/adding-developer-tools/) _- 関連ページにデベロッパーツールを追加する_
 - [取引所の追加](/contributing/adding-exchanges/) *- [取引所を探す](/get-eth/#country-picker)*に取引所を追加する
 - [研究への改善](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) _- 私たちの研究に対するご意見、ご感想の共有_
-- [機能のリクエスト](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) _- 新しい機能やデザインについてのアイデアを共有_
+- [機能のリクエスト](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) _- 新しい機能やデザインについてのアイデアを共有_
 - [用語の追加](/contributing/adding-glossary-terms) *- イーサリアム[用語集](/glossary/)*の継続的な拡張
 - [コンテンツの作成/編集](/contributing/#how-to-update-content) _- 新しいページの提案、すでにあるものに手を加える_
 - [レイヤー 2 の追加](/contributing/adding-layer-2s/) _- 関連ページにレイヤー 2 を追加する_
