@@ -29,11 +29,6 @@ import allQuizzesData, {
 } from "../data/quizzes"
 
 // TODO: remove styled components?
-const HeroContainer = styled.div`
-  background: ${({ theme }) => theme.colors.layer2Gradient};
-  width: 100%;
-`
-
 const Hero = styled(PageHero)`
   padding-bottom: 2rem;
 `
@@ -99,9 +94,9 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         title={t("quizzes-title")}
         description={t("quizzes-subtitle")}
       />
-      <HeroContainer>
+      <Box w="100%" bg="layer2Gradient">
         <Hero content={heroContent} isReverse />
-      </HeroContainer>
+      </Box>
 
       <QuizzesHubContext.Provider value={contextState}>
         <QuizzesModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
