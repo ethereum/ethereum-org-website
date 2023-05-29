@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -60,16 +60,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
     INITIAL_USER_STATS
   )
   const [isModalOpen, setModalOpen] = useState(false)
-
-  useEffect(() => {
-    // set user stats in Context if available
-    if (localStorage.getItem(USER_STATS_KEY)) {
-      setUserStats(JSON.parse(localStorage.getItem(USER_STATS_KEY)!))
-    } else {
-      // initialize
-      localStorage.setItem(USER_STATS_KEY, JSON.stringify(userStats))
-    }
-  }, [])
 
   const { t } = useTranslation()
   const heroContent = {
