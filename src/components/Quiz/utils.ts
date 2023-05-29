@@ -21,29 +21,29 @@ export const updateUserStats = ({
   userScore,
 }) => {
   const userStats = JSON.parse(localStorage.getItem(USER_STATS_KEY)!)
+  const completedQuizzes = JSON.parse(completed)
 
   // Update user score, average and save to local storage
   const newUserScore = userScore + numberOfCorrectAnswers
   const newAverage = average === 0 ? quizScore : (average + quizScore) / 2
+  const newCompleted = JSON.stringify({
+    ...completedQuizzes,
+    [quizKey!]: quizScore === 100,
+  })
 
-  setUserStats({ ...userStats, score: newUserScore, average: newAverage })
+  setUserStats({
+    ...userStats,
+    score: newUserScore,
+    average: newAverage,
+    completed: newCompleted,
+  })
   localStorage.setItem(
     USER_STATS_KEY,
-    JSON.stringify({ ...userStats, score: newUserScore, average: newAverage })
-  )
-
-  // Update number of completed quizzes if needed
-  if (quizScore === 100) {
-    const completedQuizzes = JSON.parse(completed)
-    const newCompleted = JSON.stringify({
-      ...completedQuizzes,
-      [quizKey!]: true,
+    JSON.stringify({
+      ...userStats,
+      score: newUserScore,
+      average: newAverage,
+      completed: newCompleted,
     })
-
-    setUserStats({ ...userStats, completed: newCompleted })
-    localStorage.setItem(
-      USER_STATS_KEY,
-      JSON.stringify({ ...userStats, completed: newCompleted })
-    )
-  }
+  )
 }

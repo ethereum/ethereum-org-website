@@ -47,11 +47,14 @@ import {
   UserStats,
 } from "../../types"
 
+import { updateUserStats } from "./utils"
+
 import { PASSING_QUIZ_SCORE } from "../../constants"
 
 import allQuizzesData from "../../data/quizzes"
 import questionBank from "../../data/quizzes/questionBank"
-import { updateUserStats } from "./utils"
+
+import { USER_STATS_KEY } from "../../pages/quizzes"
 
 interface IProps {
   quizKey?: string
