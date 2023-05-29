@@ -113,7 +113,7 @@ const QuizzesStats: React.FC = () => {
 
                 <Text fontWeight="bold" fontSize="5xl" mb={0} color="body">
                   {userScore}
-                  <Text as="span" color="bodyLight">
+                  <Text as="span" color="bodyMedium">
                     /{TOTAL_QUIZZES_POINTS}
                   </Text>
                 </Text>
@@ -122,14 +122,14 @@ const QuizzesStats: React.FC = () => {
               <Progress value={userScore} />
 
               <Flex direction={{ base: "column", lg: "row" }}>
-                <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyLight">
+                <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyMedium">
                   <Translation id="average-score" />{" "}
                   <Text as="span" color="body">
                     {average}%
                   </Text>
                 </Text>
 
-                <Text mb={0} color="bodyLight">
+                <Text mb={0} color="bodyMedium">
                   <Translation id="completed" />{" "}
                   <Text as="span" color="body">
                     {numberOfCompletedQuizzes}/{totalQuizzesNumber}
@@ -150,7 +150,7 @@ const QuizzesStats: React.FC = () => {
           border="none"
           p={{ base: 8, lg: 12 }}
         >
-          <Text fontWeight="bold" fontSize="xl" mb={0}>
+          <Text color="body" fontWeight="bold" fontSize="xl" mb={0}>
             <Translation id="community-stats" />
           </Text>
 
@@ -159,7 +159,7 @@ const QuizzesStats: React.FC = () => {
             gap={{ base: 6, md: 10 }}
           >
             <Stack>
-              <Text mr={10} mb={-2} color="bodyLight">
+              <Text mr={10} mb={-2} color="bodyMedium">
                 <Translation id="average-score" />
               </Text>
               {/* Data from Matomo, manually updated */}
@@ -167,7 +167,7 @@ const QuizzesStats: React.FC = () => {
             </Stack>
 
             <Stack>
-              <Text mr={10} mb={-2} color="bodyLight">
+              <Text mr={10} mb={-2} color="bodyMedium">
                 <Translation id="questions-answered" />
               </Text>
 
@@ -176,7 +176,7 @@ const QuizzesStats: React.FC = () => {
             </Stack>
 
             <Stack>
-              <Text mr={10} mb={-2} color="bodyLight">
+              <Text mr={10} mb={-2} color="bodyMedium">
                 <Translation id="retry" />
               </Text>
 

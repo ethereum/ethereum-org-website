@@ -35,11 +35,11 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
       <Stack ml={4} mb={{ base: 5, lg: 0 }}>
         <Flex gap={2} alignItems="center">
           <ListItem
-            color={isCompleted ? "bodyLight" : "text"}
+            color={isCompleted ? "bodyMedium" : "text"}
             fontWeight="bold"
             mb={0}
           >
-            <Text color={isCompleted ? "bodyLight" : "text"} fontWeight="bold">
+            <Text color={isCompleted ? "bodyMedium" : "text"} fontWeight="bold">
               {title}
             </Text>
           </ListItem>
