@@ -10,13 +10,10 @@ import {
   Heading,
   HeadingProps,
   Img,
+  SimpleGrid,
+  SimpleGridProps,
   useTheme,
-  VStack,
 } from "@chakra-ui/react"
-
-// Assets
-import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
-import MergePandaSvg from "../assets/home/merge-panda.svg"
 
 // Components
 import AssetDownload from "../components/AssetDownload"
@@ -31,10 +28,9 @@ import type { ChildOnlyProp, Context } from "../types"
 // Utils
 import { getImage } from "../utils/image"
 
-const Row = (props: ChildOnlyProp) => (
-  <Flex
-    wrap={{ base: "wrap", lg: "nowrap" }}
-    justify="space-between"
+const Row = (props: SimpleGridProps) => (
+  <SimpleGrid
+    templateColumns="repeat(auto-fit, minmax(min(288px, 100%), 1fr))"
     mx={-4}
     mb={8}
     {...props}
@@ -120,23 +116,6 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         </Row>
         <Row>
           <AssetDownload
-            title={t("page-assets-hero-panda")}
-            alt={t("page-assets-hero-panda")}
-            image={data.heroPanda}
-          />
-          <AssetDownload
-            title={t("page-assets-merge-panda")}
-            alt={t("page-assets-merge-panda")}
-            image={data.mergePanda}
-          />
-          <AssetDownload
-            title={t("page-assets-merge-panda-svg")}
-            alt={t("page-assets-merge-panda-svg")}
-            svg={MergePandaSvg}
-          />
-        </Row>
-        <Row>
-          <AssetDownload
             title={t("page-assets-doge")}
             alt={t("page-assets-doge")}
             image={data.doge}
@@ -196,22 +175,12 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
-        </Row>
-        <Row>
           <AssetDownload
             title={t("page-assets-robot")}
             alt={t("page-assets-robot")}
             image={data.wallet}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
-          />
-          <AssetDownload
-            title={t("page-assets-robot")}
-            alt={t("page-assets-robot")}
-            image={data.wallet}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
-            shouldHide
           />
         </Row>
         <Row>
@@ -278,23 +247,6 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             artistUrl="https://www.patrickatkins.co.uk/"
           />
         </Row>
-        <Row>
-          <AssetDownload
-            title={t("page-assets-leslie-the-rhino")}
-            alt={t("page-assets-leslie-the-rhino")}
-            artistName="Tomo Saito"
-            artistUrl="https://tomosaito.com/"
-            image={data.leslieTheRhino}
-          />
-          <AssetDownload
-            title={t("page-assets-leslie-the-rhino")}
-            alt={t("page-assets-leslie-the-rhino")}
-            artistName="Tomo Saito"
-            artistUrl="https://tomosaito.com/"
-            image={data.leslieTheRhino}
-            shouldHide
-          />
-        </Row>
         <H2 id="historical">
           <Translation id="page-assets-historical-artwork" />
         </H2>
@@ -309,16 +261,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-diamond-glyph")}
             alt={t("page-assets-eth-diamond-glyph")}
             image={data.ethDiamondGlyph}
+            svgUrl="/static/eth-diamond-glyph.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={data.ethDiamondBlack}
+            svgUrl="/static/eth-diamond-black.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-color")}
             alt={t("page-assets-eth-diamond-color")}
             image={data.ethDiamondColor}
+            svgUrl="/static/eth-diamond-rainbow.svg"
           />
         </Row>
         <Row>
@@ -326,16 +281,13 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={data.ethDiamondPurple}
+            svgUrl="/static/eth-diamond-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-colored")}
             alt={t("page-assets-eth-diamond-colored")}
             image={data.ethGlyphColored}
-          />
-          <AssetDownload
-            title={t("page-assets-eth-diamond-colored-svg")}
-            alt={t("page-assets-eth-diamond-colored-svg")}
-            svg={EthGlyphColoredSvg}
+            svgUrl="/static/eth-glyph-colored.svg"
           />
         </Row>
         <Row>
@@ -343,16 +295,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={data.ethPortraitBlack}
+            svgUrl="/static/ethereum-logo-portrait-black.svg  "
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={data.ethLandscapeBlack}
+            svgUrl="/static/ethereum-logo-landscape-black.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={data.ethWordmarkBlack}
+            svgUrl="/static/ethereum-wordmark-black.svg"
           />
         </Row>
         <Row>
@@ -360,16 +315,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={data.ethPortraitPurple}
+            svgUrl="/static/ethereum-logo-portrait-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={data.ethLandscapePurple}
+            svgUrl="/static/ethereum-logo-landscape-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={data.ethWordmarkPurple}
+            svgUrl="/static/ethereum-wordmark-purple-purple.svg"
           />
         </Row>
         <H3>
@@ -380,21 +338,34 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={data.ethDiamondBlackWhite}
+            svgUrl="/static/eth-diamond-black-white.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={data.ethDiamondBlackGray}
+            svgUrl="/static/eth-diamond-black-gray.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={data.ethDiamondPurplePurple}
+            svgUrl="/static/eth-diamond-purple-purple.svg"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title={t("page-assets-eth-diamond-white")}
+            alt={t("page-assets-eth-diamond-white")}
+            image={data.ethDiamondPurpleWhite}
+            svgUrl="/static/eth-diamond-purple-white.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={data.ethDiamondPurpleWhite}
+            svgUrl="/static/eth-diamond-purple-white.svg"
           />
         </Row>
         <Row>
@@ -402,16 +373,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={data.ethPortraitBlackGray}
+            svgUrl="/static/ethereum-logo-portrait-black-gray.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={data.ethLandscapeBlackGray}
+            svgUrl="/static/ethereum-logo-landscape-black-gray.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={data.ethWordmarkBlackGray}
+            svgUrl="/static/ethereum-wordmark-black-gray.svg"
           />
         </Row>
         <Row>
@@ -419,33 +393,49 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={data.ethPortraitPurplePurple}
+            svgUrl="/static/ethereum-logo-portrait-purple-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={data.ethLandscapePurplePurple}
+            svgUrl="/static/ethereum-logo-landscape-purple-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={data.ethWordmarkPurplePurple}
+            svgUrl="/static/ethereum-wordmark-purple-purple.svg"
           />
         </Row>
         <Row>
           <AssetDownload
-            title={t("page-assets-eth-logo-portrait-white")}
-            alt={t("page-assets-eth-logo-portrait-white")}
-            image={data.ethPortraitPurpleWhite}
-          />
-          <AssetDownload
             title={t("page-assets-eth-logo-landscape-white")}
             alt={t("page-assets-eth-logo-landscape-white")}
             image={data.ethLandscapePurpleWhite}
+            svgUrl="/static/ethereum-logo-landscape-purple-white.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-white")}
             alt={t("page-assets-eth-wordmark-white")}
             image={data.ethWordmarkPurpleWhite}
+            svgUrl="/static/ethereum-wordmark-purple-white.svg"
+          />
+        </Row>
+        <H2 id="historical-illustrations">
+          <Translation id="page-assets-illustrations" />
+        </H2>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-hero-panda")}
+            alt={t("page-assets-hero-panda")}
+            image={data.heroPanda}
+          />
+          <AssetDownload
+            title={t("page-assets-merge-panda")}
+            alt={t("page-assets-merge-panda")}
+            image={data.mergePanda}
+            svgUrl="/static/merge-panda.svg"
           />
         </Row>
       </Box>

@@ -97,7 +97,7 @@ _ウォレットの追加に関する注意事項: [Q1 プロダクトロード�
 - 掲載されているウォレットと分散型アプリ(Dapp)すべてが、引き続き基準を満たしているかどうかの確認
 - 現在掲載されている製品よりも、多くの基準を満たす製品の提案がないかの確認
 
-上記の確認にご協力ください。 該当するものがあれば、[問題を作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)するか[website@ethereum.org](mailto:website@ethereum.org)までメールでお知らせください。
+上記の確認にご協力ください。 該当するものがあれば、[問題を作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request)するか[website@ethereum.org](mailto:website@ethereum.org)までメールでお知らせください。
 
 _コミュニティーが好みの製品や最高の製品を推奨できるよう、投票できるオプションの導入についても検討しています。_
 
