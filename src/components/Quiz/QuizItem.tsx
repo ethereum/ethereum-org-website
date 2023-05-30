@@ -60,6 +60,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
             color="text"
             bg="backgroundHighlight"
             label={t(`${numberOfQuestions} ${t("questions")}`)}
+            ml={-6}
           />
 
           {/* difficulty - label */}
