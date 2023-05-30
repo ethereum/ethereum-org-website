@@ -15,36 +15,21 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 
 ## Ways to contribute {#ways-to-contribute}
 
-- [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
-  _– Work we've identified that needs doing_
-- [Join the translation program](/contributing/translation-program/)
-  _– Help us bring ethereum.org to new languages_
-- [Help design the website](/contributing/design/)
-  _– Designers of all levels can contribute to improve the website_
-- [Add community resources](/contributing/content-resources/)
-  _– Add a helpful article or resource to a relevant page_
-- [Add a product](/contributing/adding-products/)
-  _– Add a dapp or wallet to a relevant page_
-- [Add developer tools](/contributing/adding-developer-tools/)
-  _– Add a developer tool to a relevant page_
-- [Add an exchange](/contributing/adding-exchanges/)
-  _– Add an exchange to our [exchange finder](/get-eth/#country-picker)_
-- [Improve our research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
-  _– Let us know your feedback on our research or contribute your own_
-- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)
-  _– Let us know about any ideas you have for a new feature or design_
-- [Add a glossary term](/contributing/adding-glossary-terms)
-  _– Help us continue to expand the Ethereum [glossary](/glossary/)_
-- [Create/edit content](/contributing/#how-to-update-content)
-  _– Suggest new pages or make tweaks to what's here already_
-- [Add a layer 2](/contributing/adding-layer-2s/)
-  _– Add a layer 2 to a relevant page_
-- [Add a staking product or service](/contributing/adding-staking-products/)
-  _– Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
-- [Add a wallet](/contributing/adding-wallets/)
-  _– Add a wallet for the [find wallets page](/wallets/find-wallet/)_
-- [Suggest a project for our DeSci page](/contributing/adding-desci-projects/)
-  _- Add a project built on Ethereum that contributes to decentralized science_
+- [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues) - _Work we've identified that needs doing_
+- [Join the translation program](/contributing/translation-program/) - _Help us bring ethereum.org to new languages_
+- [Help design the website](/contributing/design/) - _Designers of all levels can contribute to improve the website_
+- [Add community resources](/contributing/content-resources/) - _Add a helpful article or resource to a relevant page_
+- [Add a product](/contributing/adding-products/) - _Add a dapp or wallet to a relevant page_
+- [Add developer tools](/contributing/adding-developer-tools/) - _Add a developer tool to a relevant page_
+- [Add an exchange](/contributing/adding-exchanges/) - _Add an exchange to our [exchange finder](/get-eth/#country-picker)_
+- [Improve our research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) - _Let us know your feedback on our research or contribute your own_
+- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) - _Let us know about any ideas you have for a new feature or design_
+- [Add a glossary term](/contributing/adding-glossary-terms) - _Help us continue to expand the Ethereum [glossary](/glossary/)_
+- [Create/edit content](/contributing/#how-to-update-content) - _Suggest new pages or make tweaks to what's here already_
+- [Add a layer 2](/contributing/adding-layer-2s/) - _Add a layer 2 to a relevant page_
+- [Add a staking product or service](/contributing/adding-staking-products/) - _Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
+- [Add a wallet](/contributing/adding-wallets/) - _Add a wallet for the [find wallets page](/wallets/find-wallet/)_
+- [Suggest a project for our DeSci page](/contributing/adding-desci-projects/) - _Add a project built on Ethereum that contributes to decentralized science_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 
