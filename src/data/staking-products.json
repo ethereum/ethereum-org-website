@@ -20,7 +20,7 @@
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
-      "minEth": 16,
+      "minEth": 10.4,
       "additionalStake": "10",
       "additionalStakeUnit": "% RPL",
       "tokens": [
