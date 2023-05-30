@@ -21,7 +21,7 @@ Le site ethereum.org, comme Ethereum plus largement, est un projet open source. 
 - [Ajouter des outils de développement](/contributing/adding-developer-tools/) _– Ajoutez un outil de développement à la page adéquate_
 - [Ajouter un échange](/contributing/adding-exchanges/) _– Ajoutez une plateforme d'échange à notre [outil de recherche d'échange](/get-eth/#country-picker)_
 - [Contribuer à la recherche](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) _– Donnez-nous votre avis sur nos recherches ou apportez-y votre contribution_
-- [Proposer une fonctionnalité](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) _– Faites-nous parvenir vos idées de nouvelles fonctionnalités ou de conception_
+- [Proposer une fonctionnalité](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) _– Faites-nous parvenir vos idées de nouvelles fonctionnalités ou de conception_
 - [Ajouter un terme au glossaire](/contributing/adding-glossary-terms) _– Aidez-nous à continuer d'étendre le [glossaire](/glossary/) Ethereum_
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) _– Proposez de nouvelles pages ou des modifications de ce qui existe déjà_
 - [Ajouter une couche 2](/contributing/adding-layer-2s/) _– Ajoutez une couche 2 à une page pertinente_
