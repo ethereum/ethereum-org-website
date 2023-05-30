@@ -145,7 +145,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 direction={{ base: "column", xl: "row" }}
                 justifyContent="space-between"
                 alignItems="center"
-                bg="ednBackground"
+                bg="backgroundHighlight"
                 borderRadius={{ base: "none", lg: "lg" }}
                 border="none"
                 p={{ base: 8, lg: 12 }}

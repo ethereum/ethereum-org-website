@@ -64,7 +64,7 @@ const QuizzesStats: React.FC = () => {
         {/* user stats */}
         <Grid
           gap={4}
-          bg="ednBackground"
+          bg="backgroundHighlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
           p={{ base: 8, lg: 12 }}
@@ -145,7 +145,7 @@ const QuizzesStats: React.FC = () => {
           direction="column"
           gap={6}
           justifyContent="space-between"
-          bg="ednBackground"
+          bg="backgroundHighlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
           p={{ base: 8, lg: 12 }}
