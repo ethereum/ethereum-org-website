@@ -241,7 +241,7 @@ const Codeblock: React.FC<IProps> = ({
     shouldShowCopyWidget || totalLines - 1 > LINES_BEFORE_COLLAPSABLE
 
   return (
-    /* Overwrites codeblocks inheriting RTL styling in Farsi/Arabic */
+    /* Overwrites codeblocks inheriting RTL styling in Right-To-Left script languages (e.g. Arabic) */
     /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
     <Box position="relative" dir="ltr">
       <Box
