@@ -1,8 +1,10 @@
 import React, { useContext } from "react"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Button from "../Button"
 import Translation from "../Translation"
+import Tag from "../Tag"
 import { GreenTickIcon } from "../icons/quiz"
 
 import { QuizzesHubContext } from "./context"
@@ -16,8 +18,9 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
     props
   const { completed } = useContext(QuizzesHubContext)
   const numberOfQuestions = allQuizzesData[id].questions.length
-
   const isCompleted = JSON.parse(completed)[id]
+
+  const { t } = useTranslation()
 
   return (
     <Flex
@@ -53,34 +56,18 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
         {/* Labels */}
         <Flex gap={3}>
           {/* number of questions - label */}
-          <Text
-            fontWeight="light"
-            fontSize="xs"
-            bg="ednBackground"
-            borderRadius="full"
-            border="none"
-            casing="uppercase"
-            px={2}
-            py={1}
-            ml={-6}
-            mb={0}
-          >
-            {numberOfQuestions} {<Translation id="questions" />}
-          </Text>
+          <Tag
+            color="text"
+            bg="backgroundHighlight"
+            label={t(`${numberOfQuestions} ${t("questions")}`)}
+          />
 
           {/* difficulty - label */}
-          <Text
-            fontWeight="light"
-            fontSize="xs"
-            bg="ednBackground"
-            borderRadius="full"
-            border="none"
-            px={2}
-            py={1}
-            mb={0}
-          >
-            {level.toUpperCase()}
-          </Text>
+          <Tag
+            color="text"
+            bg="backgroundHighlight"
+            label={level.toUpperCase()}
+          />
         </Flex>
       </Stack>
 
