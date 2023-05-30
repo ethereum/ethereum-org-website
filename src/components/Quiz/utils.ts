@@ -1,5 +1,6 @@
 import { USER_STATS_KEY } from "../../pages/quizzes"
 import allQuizzesData from "../../data/quizzes"
+import { QuizShareStats } from "../../types"
 
 export const getTotalQuizzesPoints = () =>
   Object.values(allQuizzesData)
@@ -45,5 +46,29 @@ export const updateUserStats = ({
       average: newAverage,
       completed: newCompleted,
     })
+  )
+}
+
+// TODO: track event on matomo
+export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
+  // if (!quizData || !window) return
+  //   trackCustomEvent({
+  //     eventCategory: "Quiz widget",
+  //     eventAction: "Other",
+  //     eventName: "Share results",
+  //   })
+  const url = "https://ethereum.org/quizzes"
+  const hashtags = ["ethereumquiz", "ethereum", "quiz"]
+  const tweet =
+    score > 0
+      ? `${encodeURI(
+          `I took Ethereum quizzes on ethereum.org and overall scored ${score} out of ${total}! Try it yourself at ${url}`
+        )}`
+      : `${encodeURI(
+          `How well do you know Ethereum? Check out these Ethereum quizzes on ethereum.org: ${url}`
+        )}`
+
+  window.open(
+    `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
   )
 }

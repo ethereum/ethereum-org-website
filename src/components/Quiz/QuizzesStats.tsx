@@ -18,30 +18,15 @@ import { TrophyIcon } from "../icons/quiz"
 
 import { QuizzesHubContext } from "./context"
 
-import { getNumberOfCompletedQuizzes, getTotalQuizzesPoints } from "./utils"
+import {
+  getNumberOfCompletedQuizzes,
+  getTotalQuizzesPoints,
+  shareOnTwitter,
+} from "./utils"
 
 import { QuizShareStats } from "../../types"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
-
-// TODO: track event on matomo
-const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
-  // if (!quizData || !window) return
-  //   trackCustomEvent({
-  //     eventCategory: "Quiz widget",
-  //     eventAction: "Other",
-  //     eventName: "Share results",
-  //   })
-  const url = "https://ethereum.org/quizzes"
-  const hashtags = ["ethereumquiz", "ethereum", "quiz"]
-  const tweet = `${encodeURI(
-    `I took Ethereum quizzes on ethereum.org and overall scored ${score} out of ${total}! Try it yourself at ${url}`
-  )}`
-
-  window.open(
-    `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
-  )
-}
 
 const handleShare = ({ score, total }: QuizShareStats) =>
   shareOnTwitter({
