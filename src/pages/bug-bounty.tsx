@@ -921,7 +921,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-upgrades-get-involved-bug-bounty", "common"] }
+        ns: { in: ["page-bug-bounty", "common"] }
       }
     ) {
       edges {
