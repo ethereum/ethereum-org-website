@@ -12,6 +12,7 @@ module.exports = {
     "@storybook/addon-a11y",
     "@chakra-ui/storybook-addon",
   ],
+  staticDirs: ["../static"],
   babel: async (options) => ({
     ...babelConfig,
   }),
