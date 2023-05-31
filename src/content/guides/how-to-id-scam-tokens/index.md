@@ -64,13 +64,6 @@ There are several tricks that scam token creators do to appear legitimate.
 
 A scammer can easily write the contract in such a way it will produce those actions.
 
-<ExpandableCard
-title="What are Transfer events?"
-contentPreview=''>
-  
-In theory a program running off-chain can view all the transactions that affected a particular ERC-20 contract from its initial deployment, and use that to identify transfers. In practice, doing this would require too much network bandwidth and CPU power. To allow for simpler analysis, ERC-20 contracts are <a href="https://eips.ethereum.org/EIPS/eip-20#transfer-1">required by the standard</a> to emit events tagged as transfers whenever tokens are transferred from one account to another. <a href="https://docs.alchemy.com/docs/deep-dive-into-eth_getlogs#what-are-logs-or-events">Events</a> are written to the blockchain and indexed, which makes it a lot easier to obtain and analyze on-chain data.
-  
-</ExpandableCard>
 
 ## Scammy websites {#scammy-websites}
 
