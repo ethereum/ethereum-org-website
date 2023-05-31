@@ -82,7 +82,9 @@ The best practise for avoiding this is to carefully check the URL for the sites 
 
 1. **Check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's web site. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token). 
 
-2. **Real tokens have liquidity**. Another option is to look at liquidity pool size on [Uniswap](https://uniswap.org/), one of the most common token swapping protocols. This protocol works using [liquidity pools](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/pools), into which investors deposit their tokens in hope of a return from trading fees. Scam tokens typically have tiny liquidity pools, if any, because the scammers don't want to risk real assets. For example, the `ARB`/`ETH` Uniswap pool holds about a million dollars as I'm writing this ([see here for the up to date value](https://info.uniswap.org/#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca)) and buying or selling a small amount is not going to change the price:
+2. **Real tokens have liquidity**. Another option is to look at liquidity pool size on [Uniswap](https://uniswap.org/), one of the most common token swapping protocols. This protocol works using liquidity pools, into which investors deposit their tokens in hope of a return from trading fees.
+
+Scam tokens typically have tiny liquidity pools, if any, because the scammers don't want to risk real assets. For example, the `ARB`/`ETH` Uniswap pool holds about a million dollars ([see here for the up to date value](https://info.uniswap.org/#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca)) and buying or selling a small amount is not going to change the price:
 
    ![Buying a legitimate token](./uniswap-real.png)
 
