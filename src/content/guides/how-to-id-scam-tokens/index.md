@@ -60,7 +60,9 @@ There are several tricks that scam token creators do to appear legitimate.
   
   Because the ERC-20 balance of an address is part of the ERC-20 contract's storage, it can be specified by the contract to be whatever the contract developer wishes. It is also possible for a contract to forbid transfers so the legitimate users won't be able to get rid of those scam tokens.
 
-- **Legitimate transfers**. *Legitimate owners wouldn't pay to transfer a scam token around, so if there are transfers it must be legitimate, right?* Wrong. `Transfer` events are emitted by the ERC-20 contract. A scammer can easily write the contract in such a way it will emit those events, with any desired source and destination, at will. 
+- **Legitimate transfers**. *Legitimate owners wouldn't pay to transfer a scam token to others, so if there are transfers it must be legitimate, right?* **Wrong**. `Transfer` events are produced by the ERC-20 contract. 
+
+A scammer can easily write the contract in such a way it will produce those actions.
 
 <ExpandableCard
 title="What are Transfer events?"
@@ -70,10 +72,12 @@ In theory a program running off-chain can view all the transactions that affecte
   
 </ExpandableCard>
 
-## Scammy appearing website {#scammy-appearing-website}
+## Scammy websites {#scammy-websites}
 
-Another trick that scammers pull is to direct users to user interfaces that entice them to sign bad transactions. For example, one scam token ([view on explorer](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452)) tried to direct users to `https://op-claim.xyz`. This link probably used to host a scam. It doesn't anymore, probably because the scammer has given up and stopped paying for web hosting.
+Another trick that scammers pull is to direct users to user interfaces that entice them to sign bad transactions. For example, one scam token ([view on explorer](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452)) tried to direct users to `https://op-claim.xyz`. This link probably used to host a scam. It doesn't anymore, because the scammer has given up and stopped paying for web hosting.
+Note that scammers can also produce very convincing websites, sometimes even precise clones of authentic sites with identical UIs, but with subtle tricks. Examples might be external links that seem legitimate actually sending the user to an external scam site, or incorrect instructions that guide the user to exposing their keys or sending funds to an attacker's address. 
 
+The best practise for avoiding this is to carefully check the URL for the sites you visit, and save addresses for known authentic sites in your bookmarks. Then, you can access the real site through your bookmarks without accidentally making spelling errors or relying on external links.
 ## How can you protect yourself? {#how-can-you-protect-yourself}
 
 1. **Check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's web site. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token). 
@@ -82,13 +86,13 @@ Another trick that scammers pull is to direct users to user interfaces that enti
 
    ![Buying a legitimate token](./uniswap-real.png)
 
-   But if I try to buy `wARB`, even a tiny purchase would change the prince by over 90%:
+   But when you try to buy the scam token `wARB`, even a tiny purchase would change the price by over 90%:
 
    ![Buying a scam token](./uniswap-scam.png)
 
    This is another piece of evidence that shows us `wARB` is not likely to be a legitimate token.
 
-3. **Look in Etherscan**. A lot of scam tokens have already been identified as such, and are [marked in Etherscan](https://info.etherscan.com/etherscan-token-reputation/). While Etherscan is not authoritative source of truth (it is the nature of decentralized networks that there can't be an authoritative source for legitimacy), tokens that are identified by Etherscan as scams are likely to be scams.
+3. **Look in Etherscan**. A lot of scam tokens have already been identified and reported by the community. Such tokens are [marked in Etherscan](https://info.etherscan.com/etherscan-token-reputation/). While Etherscan is not authoritative source of truth (it is the nature of decentralized networks that there can't be an authoritative source for legitimacy), tokens that are identified by Etherscan as scams are likely to be scams.
 
    ![Scam token in Etherscan](./etherscan-scam.png)
    
