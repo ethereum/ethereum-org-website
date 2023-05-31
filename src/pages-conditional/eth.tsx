@@ -56,12 +56,12 @@ const StyledTwoColumnContent = styled(TwoColumnContent)`
   align-items: flex-start;
 `
 
-const Subtitle = styled.div`
+const Subtitle = styled.p`
   font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
-const SubtitleTwo = styled.div`
+const SubtitleTwo = styled.p`
   font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;

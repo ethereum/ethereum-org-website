@@ -29,14 +29,6 @@ import { trackCustomEvent } from "../utils/matomo"
 
 const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
   const { t } = useTranslation()
-  const decentralizedExchanges: Array<CardListItem> = [
-    {
-      title: "Localcryptos.com",
-      link: "https://localcryptos.com/",
-      image: getImage(data.localcryptos)!,
-      alt: "",
-    },
-  ].sort((a, b) => a.title.localeCompare(b.title))
 
   const tokenSwaps: Array<CardListItem> = [
     {
@@ -273,17 +265,6 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             fontSize={{ base: "xl", md: "2xl" }}
             lineHeight={1.4}
           >
-            <Translation id="page-get-eth-traditional-currencies" />
-          </Heading>
-          <Text>
-            <Translation id="page-get-eth-traditional-payments" />
-          </Text>
-          <CardList content={decentralizedExchanges} />
-          <Heading
-            as="h3"
-            fontSize={{ base: "xl", md: "2xl" }}
-            lineHeight={1.4}
-          >
             <Translation id="page-get-eth-other-cryptos" />
           </Heading>
           <Text>
@@ -469,9 +450,6 @@ export const query = graphql`
           quality: 100
         )
       }
-    }
-    localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {
-      ...listItemImage
     }
     uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
       ...listItemImage

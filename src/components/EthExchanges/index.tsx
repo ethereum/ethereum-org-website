@@ -86,7 +86,11 @@ const EthExchanges = () => {
 
   return (
     <Flex flexDir="column" align="center" w="full">
-      <Heading fontSize={{ base: "2xl", md: "2rem" }} fontWeight={600} lineHeight={1.4}>
+      <Heading
+        fontSize={{ base: "2xl", md: "2rem" }}
+        fontWeight={600}
+        lineHeight={1.4}
+      >
         <Translation id="page-get-eth-exchanges-header" />
       </Heading>
       <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">

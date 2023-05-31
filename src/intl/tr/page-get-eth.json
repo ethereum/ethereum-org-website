@@ -43,8 +43,6 @@
   "page-get-eth-security": "Ancak bu aynı zamanda fonlarınızın güvenliğini ciddiye almanız gerektiği anlamına gelir. ETH ile paranızla ilgilenecek bir bankaya değil, kendinize güvenirsiniz.",
   "page-get-eth-smart-contract-link": "Akıllı kontratlar hakkında daha fazla bilgi edin",
   "page-get-eth-swapping": "Token'larınızı başkalarının ETH'siyle değiştirin. Ya da tam tersini yapın.",
-  "page-get-eth-traditional-currencies": "Geleneksel para birimleriyle satın alın",
-  "page-get-eth-traditional-payments": "Geleneksel ödeme türleriyle doğrudan satıcılardan ETH satın alın.",
   "page-get-eth-try-dex": "Bir DEX deneyin",
   "page-get-eth-use-your-eth": "ETH'nizi kullanın",
   "page-get-eth-use-your-eth-dapps": "Artık bir miktar ETH'ye sahip olduğunuza göre, bazı Ethereum uygulamalarına (dapps) göz atın. Finans, sosyal medya, oyun ve diğer birçok kategori için uygulamalar var.",
