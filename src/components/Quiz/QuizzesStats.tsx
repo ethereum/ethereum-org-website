@@ -52,7 +52,7 @@ const QuizzesStats: React.FC = () => {
           bg="backgroundHighlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
-          p={{ base: 8, lg: 12 }}
+          p={4}
           mb={-2}
         >
           <GridItem colSpan={{ base: 2, lg: 1 }} alignSelf="center" order={1}>
@@ -133,7 +133,7 @@ const QuizzesStats: React.FC = () => {
           bg="backgroundHighlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
-          p={{ base: 8, lg: 12 }}
+          p={4}
         >
           <Text color="body" fontWeight="bold" fontSize="xl" mb={0}>
             <Translation id="community-stats" />
