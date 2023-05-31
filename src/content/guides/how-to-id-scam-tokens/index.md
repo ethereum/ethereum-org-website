@@ -6,9 +6,11 @@ lang: en
 
 # How to identify scam tokens {#how-to-identify-scam-tokens}
 
-One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). However, anywhere there are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves. In this case, there are two way in which they are likely to do so:
+One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). However, anywhere there are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves.
 
-- Try to sell you *scam tokens*, which look like the legitimate token you want to purchase, but are issued by the scammers and worth nothing.
+There are two ways in which they are likely to deceive you:
+
+- **Selling you a scam token**, which may look like the legitimate token you want to purchase, but are issued by the scammers and worth nothing.
 - Try to direct you into their own user interface, where they attempt to trick you into signing transactions that give them your ETH, your real tokens, etc. 
 
 To illustrate what scam tokens are, and how to identify them, we are going to look at [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
@@ -25,7 +27,7 @@ contentPreview=''>
 title="Why is the scam token called wARB?"
 contentPreview=''>
   
-There is a convention in Ethereum that when an asset is not ERC-20 compliant we create a "wrapped" version of it with the name starting with "w". So, for example, we have <a href="https://wbtc.network/">wBTC for bitcoin</a> and <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH for ether</a>.
+There is a convention in Ethereum that when an asset is not ERC-20 compliant we create a "wrapped" version of it with the name starting with "w". So, for example, we have wBTC for bitcoin and <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH for ether</a>.
   
 It does not make sense to create a wrapped version of an ERC-20 token that is already on Ethereum, but scammers rely on the appearance of legitimacy rather than the underlying reality.
 
@@ -48,7 +50,7 @@ Specifically, Arbitrum deployed a contract that uses the symbol `ARB`. But that 
 
 ## Appearing legitimate {#appearing-legitimate}
 
-There are several tricks that scam token creator pull to appear legitimate. They can do those, because they write the smart contract that implements the scam token. This means it can produce any effect they want from that contract.
+There are several tricks that scam token creators do to appear legitimate. 
 
 - **Legitimate name and symbol**. As mentioned before, ERC-20 contracts can have the same symbol and name as other ERC-20 contracts. You cannot count on those fields for security.
 
