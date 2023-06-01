@@ -90,4 +90,4 @@ Puoi vedere i nostri principi di progettazione in azione [sul nostro sito](/).
 
 Sebbene questi principi siano incentrati sul sito web ethereum.org, speriamo che molti di essi siano rappresentativi dei valori dell'ecosistema Ethereum in generale (ad esempio, puoi vedere l'influenza dei [principi del Whitepaper di Ethereum](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)). Potresti persino decidere di incorporare alcuni di essi nel tuo progetto!
 
-Facci sapere che ne pensi sul [server Discord](https://discord.gg/CetY6Y4) o [creando un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=).
+Facci sapere che ne pensi sul [server Discord](https://discord.gg/CetY6Y4) o [creando un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request).

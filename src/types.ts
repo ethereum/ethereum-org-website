@@ -36,7 +36,7 @@ export type Context = {
   ignoreTranslationBanner?: boolean
   isOutdated: boolean
   isLegal?: boolean
-  isDefaultLang?: boolean
+  isDefaultLang: boolean
   isContentEnglish?: boolean
   i18n: I18NextContext
 }

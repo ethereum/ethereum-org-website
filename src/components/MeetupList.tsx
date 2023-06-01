@@ -7,8 +7,11 @@ import {
   Input,
   LinkBox,
   LinkOverlay,
+  List,
+  ListItem,
   Text,
-  useColorMode,
+  useColorModeValue,
+  VisuallyHidden,
 } from "@chakra-ui/react"
 
 // Components
@@ -53,7 +56,11 @@ export interface IProps {}
 const MeetupList: React.FC<IProps> = () => {
   const [searchField, setSearchField] = useState<string>("")
   const filteredMeetups = filterMeetups(searchField)
-  const { colorMode } = useColorMode()
+  const listBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const listItemBoxShadow = useColorModeValue(
+    "tableItemBox.light",
+    "tableItemBox.dark"
+  )
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchField(event.target.value)
@@ -82,70 +89,72 @@ const MeetupList: React.FC<IProps> = () => {
         w="100%"
         _focus={{ outline: "auto 1px" }}
         _placeholder={{ color: "text200" }}
+        aria-describedby="input-instruction"
       />
-      <Box
-        boxShadow={colorMode === "dark" ? "tableBox.dark" : "tableBox.light"}
-      >
-        {filteredMeetups.length ? (
-          filteredMeetups.map((meetup, idx) => (
-            <LinkBox
-              key={idx}
-              display="flex"
-              justifyContent="space-between"
-              boxShadow={
-                colorMode === "dark"
-                  ? "tableItemBox.dark"
-                  : "tableItemBox.light"
-              }
-              mb={0.25}
-              p={4}
-              w="100%"
-              _hover={{
-                textDecoration: "none",
-                borderRadius: "base",
-                boxShadow: "0 0 1px primary",
-                bg: "tableBackgroundHover",
-              }}
+      {/* hidden for attachment to input only */}
+      <VisuallyHidden hidden id="input-instruction">
+        results update as you type
+      </VisuallyHidden>
+
+      <List m={0} boxShadow={listBoxShadow} aria-label="Event meetup results">
+        {filteredMeetups.map((meetup, idx) => (
+          <LinkBox
+            as={ListItem}
+            key={idx}
+            display="flex"
+            justifyContent="space-between"
+            boxShadow={listItemBoxShadow}
+            mb={0.25}
+            p={4}
+            w="100%"
+            _hover={{
+              textDecoration: "none",
+              borderRadius: "base",
+              boxShadow: "0 0 1px primary",
+              bg: "tableBackgroundHover",
+            }}
+          >
+            <Flex flex="1 1 75%" mr={4}>
+              <Box mr={4} opacity="0.4">
+                {idx + 1}
+              </Box>
+              <Box>
+                <LinkOverlay
+                  as={Link}
+                  href={meetup.link}
+                  textDecor="none"
+                  color="text"
+                  hideArrow
+                >
+                  {meetup.title}
+                </LinkOverlay>
+              </Box>
+            </Flex>
+            <Flex
+              textAlign="right"
+              alignContent="flex-start"
+              flex="1 1 25%"
+              mr={4}
+              flexWrap="wrap"
             >
-              <Flex flex="1 1 75%" mr={4}>
-                <Box mr={4} opacity="0.4">
-                  {idx + 1}
-                </Box>
-                <Box>
-                  <LinkOverlay
-                    as={Link}
-                    href={meetup.link}
-                    textDecor="none"
-                    color="text"
-                    hideArrow
-                  >
-                    {meetup.title}
-                  </LinkOverlay>
-                </Box>
-              </Flex>
-              <Flex
-                textAlign="right"
-                alignContent="flex-start"
-                flex="1 1 25%"
-                mr={4}
-                flexWrap="wrap"
-              >
-                <Emoji text={meetup.emoji} boxSize={4} mr={2} />
-                <Text mb={0} opacity={"0.6"}>
-                  {meetup.location}
-                </Text>
-              </Flex>
-              <Box
-                as="span"
-                _after={{
-                  content: '"↗"',
-                  ml: 0.5,
-                  mr: 1.5,
-                }}
-              ></Box>
-            </LinkBox>
-          ))
-        ) : (
+              <Emoji text={meetup.emoji} boxSize={4} mr={2} />
+              <Text mb={0} opacity={"0.6"}>
+                {meetup.location}
+              </Text>
+            </Flex>
+            <Box
+              as="span"
+              _after={{
+                content: '"↗"',
+                ml: 0.5,
+                mr: 1.5,
+              }}
+            ></Box>
+          </LinkBox>
+        ))}
+      </List>
+      <Box aria-live="assertive" aria-atomic>
+        {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
             <Translation id="page-community-meetuplist-no-meetups" />{" "}
             <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
