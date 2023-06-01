@@ -8,7 +8,7 @@ lang: en
 
 Distributed validator technology (DVT) is an approach to validator security that spreads out key management and signing responsibilities across multiple parties, to reduce single points of failure, and increase validator resiliency. 
 
-It does this by splitting the private key used to secure a validator across many computers organized into a "cluster". The benefit of this is that it makes it very difficult for attackers to gain access to the key, because it is not stored in full on any single machine. It also allows for some nodes to go offline, as the necessary signing can be done by a subset of the machines in each cluster. This reduces single points of failure from the network and makes the whole validator set more robust. 
+It does this by **splitting the private key** used to secure a validator **across many computers** organized into a "cluster". The benefit of this is that it makes it very difficult for attackers to gain access to the key, because it is not stored in full on any single machine. It also allows for some nodes to go offline, as the necessary signing can be done by a subset of the machines in each cluster. This reduces single points of failure from the network and makes the whole validator set more robust. 
 
 ## How does DVT work? {#how-does-dvt-work}
 
@@ -44,14 +44,16 @@ The ideal scenario for Ethereum is to have as many independently operated valida
 
 Without DVT, it's easier for staking providers to support only one or two client configurations for all their validators, increasing the impact of a client bug. DVT can be used to spread the risk across multiple client configurations and different hardware, creating resilience through diversity.
 
-Overall, DVT offers the following benefits to Ethereum:
-- Decentralization of Ethereum's proof-of-stake consensus
-- Ensures the liveness of the network
-- Creates validator fault tolerance
-- Trust minimized validator operation
-- Minimized slashing and downtime risks
-- Improves diversity (client, data center, location, regulation, etc.)
-- Enhanced security of validator key management
+**DVT offers the following benefits to Ethereum:**
+
+1. **Decentralization** of Ethereum's proof-of-stake consensus
+2. Ensures the **liveness** of the network
+3. Creates validator **fault tolerance**
+4. **Trust minimized** validator operation
+5. **Minimized slashing** and downtime risks
+6. **Improves diversity** (client, data center, location, regulation, etc.)
+7. **Enhanced security** of validator key management
+
 
 ## DVT use cases {#dvt-use-cases}
 
@@ -73,7 +75,7 @@ Due to standard validator setups, staking pools and liquid staking providers are
 
 Even though traditionally efforts are made to spread risk by distributing stakes across multiple operators, each operator still manages a significant stake independently. Relying on a single operator poses immense risks if they underperform, encounter downtime, get compromised, or act maliciously.
 
-By leveraging DVT, the trust required from operators is significantly reduced. Pools can enable operators to hold stakes without needing custody of validator keys (as only key shares are utilized). It also allows managed stakes to be distributed between more operators (e.g., instead of having a single operator managing 1000 validators, DVT enables those validators to be collectively run by multiple operators). Diverse operator configurations will ensure that if one operator should go down, the others will still be able to attest. This results in redundancy and diversification that leads to better performance and resilience, while maximizing rewards.
+By leveraging DVT, the trust required from operators is significantly reduced. **Pools can enable operators to hold stakes without needing custody of validator keys** (as only key shares are utilized). It also allows managed stakes to be distributed between more operators (e.g., instead of having a single operator managing 1000 validators, DVT enables those validators to be collectively run by multiple operators). Diverse operator configurations will ensure that if one operator should go down, the others will still be able to attest. This results in redundancy and diversification that leads to better performance and resilience, while maximizing rewards.
 
 Another benefit to minimizing single-operator trust is that staking pools can allow more open and permissionless operator participation. By doing this, services can reduce their risk and support Ethereum decentralization by using both curated and permissionless sets of operators, for example, by pairing home or more minor stakers with larger ones. 
 
