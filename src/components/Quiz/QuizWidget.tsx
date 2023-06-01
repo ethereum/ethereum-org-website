@@ -37,6 +37,8 @@ import {
 
 import { trackCustomEvent } from "../../utils/matomo"
 
+import { PASSING_QUIZ_SCORE } from "../../constants"
+
 import {
   AnswerChoice,
   RawQuiz,
@@ -44,24 +46,16 @@ import {
   RawQuestion,
   Question,
   QuizStatus,
-  UserStats,
 } from "../../types"
-
-import { updateUserStats } from "./utils"
-
-import { PASSING_QUIZ_SCORE } from "../../constants"
 
 import allQuizzesData from "../../data/quizzes"
 import questionBank from "../../data/quizzes/questionBank"
-
-import { USER_STATS_KEY } from "../../pages/quizzes"
 
 interface IProps {
   quizKey?: string
   nextHandler: (next?: string) => void
   statusHandler: (status: QuizStatus) => void
   maxQuestions?: number
-  setUserStats: (stats: UserStats) => void
   isStandaloneQuiz?: boolean
 }
 
@@ -71,7 +65,6 @@ const QuizWidget: React.FC<IProps> = ({
   nextHandler,
   statusHandler,
   maxQuestions,
-  setUserStats,
   isStandaloneQuiz = true,
 }) => {
   const { t } = useTranslation()
@@ -86,12 +79,7 @@ const QuizWidget: React.FC<IProps> = ({
 
   const PROGRESS_BAR_GAP = "4px"
 
-  const {
-    next: nextQuiz,
-    score: userScore,
-    average,
-    completed,
-  } = useContext(QuizzesHubContext)
+  const { next: nextQuiz } = useContext(QuizzesHubContext)
 
   const hasNextQuiz = !isStandaloneQuiz && !!nextQuiz
   const finishedQuiz =
@@ -132,21 +120,14 @@ const QuizWidget: React.FC<IProps> = ({
       title: t(rawQuiz.title),
       questions: trimmedQuestions,
     }
+
     setQuizData(quiz)
   }
 
   useEffect(initialize, [quizKey])
 
-  // Memoized values
-  const currentQuestionIndex = useMemo<number>(
-    () => userQuizProgress.length || 0,
-    [userQuizProgress]
-  )
-
-  const showResults = useMemo<boolean>(
-    () => userQuizProgress.length === quizData?.questions.length,
-    [userQuizProgress, quizData]
-  )
+  const currentQuestionIndex = userQuizProgress.length
+  const showResults = currentQuestionIndex === quizData?.questions.length
 
   const progressBarBackground = useCallback(
     (index: number): string => {
@@ -155,16 +136,23 @@ const QuizWidget: React.FC<IProps> = ({
           index === currentQuestionIndex &&
           currentQuestionAnswerChoice?.isCorrect) ||
         userQuizProgress[index]?.isCorrect
-      )
+      ) {
         return "success"
+      }
+
       if (
         (showAnswer &&
           index === currentQuestionIndex &&
           !currentQuestionAnswerChoice?.isCorrect) ||
         (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
-      )
+      ) {
         return "error"
-      if (index === currentQuestionIndex) return "gray.400"
+      }
+
+      if (index === currentQuestionIndex) {
+        return "gray.400"
+      }
+
       return "gray.500"
     },
     [
@@ -175,24 +163,16 @@ const QuizWidget: React.FC<IProps> = ({
     ]
   )
 
-  const numberOfCorrectAnswers = useMemo<number>(() => {
-    return userQuizProgress.filter(({ isCorrect }) => isCorrect).length
-  }, [userQuizProgress])
+  const numberOfCorrectAnswers = userQuizProgress.filter(
+    ({ isCorrect }) => isCorrect
+  ).length
 
-  const ratioCorrect = useMemo<number>(
-    () => (!quizData ? 0 : numberOfCorrectAnswers / quizData.questions.length),
-    [quizData, numberOfCorrectAnswers]
-  )
+  const ratioCorrect = !quizData
+    ? 0
+    : numberOfCorrectAnswers / quizData.questions.length
 
-  const quizScore = useMemo<number>(
-    () => Math.floor(ratioCorrect * 100),
-    [ratioCorrect]
-  )
-
-  const isPassingScore = useMemo<boolean>(
-    () => quizScore > PASSING_QUIZ_SCORE,
-    [quizScore]
-  )
+  const quizScore = Math.floor(ratioCorrect * 100)
+  const isPassingScore = quizScore > PASSING_QUIZ_SCORE
 
   const showConfetti = useMemo<boolean>(
     () => !!quizData && showResults && isPassingScore,
@@ -210,7 +190,7 @@ const QuizWidget: React.FC<IProps> = ({
     handleSelectAnswerChoice(answerId)
   }
 
-  const handleShowAnswer = (questionId: string, answer: AnswerChoice) => {
+  const handleSubmitAnswer = (questionId: string, answer: AnswerChoice) => {
     trackCustomEvent({
       eventCategory: "Quiz widget",
       eventAction: "Question answered",
@@ -288,20 +268,7 @@ const QuizWidget: React.FC<IProps> = ({
     }
   }
 
-  const handleNextQuiz = () => {
-    updateUserStats({
-      average, // Context
-      completed, // Context
-      numberOfCorrectAnswers, // Set in Context
-      quizKey, // PROP
-      quizScore, // Set in Context
-      setUserStats, // PROP
-      userScore, // Context
-    })
-
-    // Move to next quiz
-    nextHandler(nextQuiz)
-  }
+  const handleNextQuiz = () => nextHandler(nextQuiz)
 
   const AnswerIcon = () => {
     const commonProps = {
@@ -427,6 +394,7 @@ const QuizWidget: React.FC<IProps> = ({
                   const width = `calc(${Math.floor(
                     100 / quizData?.questions.length
                   )}% - ${PROGRESS_BAR_GAP})`
+
                   return (
                     <Container
                       key={id}
@@ -449,6 +417,7 @@ const QuizWidget: React.FC<IProps> = ({
                     isPassingScore={isPassingScore}
                     questionCount={quizData.questions.length}
                     ratioCorrect={ratioCorrect}
+                    quizScore={quizScore}
                   />
                 ) : (
                   <QuizRadioGroup
@@ -535,7 +504,7 @@ const QuizWidget: React.FC<IProps> = ({
               ) : (
                 <Button
                   onClick={() =>
-                    handleShowAnswer(
+                    handleSubmitAnswer(
                       quizData.questions[currentQuestionIndex].id,
                       currentQuestionAnswerChoice!
                     )

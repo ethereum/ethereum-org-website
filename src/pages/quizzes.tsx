@@ -20,6 +20,8 @@ import { useLocalStorage } from "../hooks/useLocalStorage"
 
 import { getImage } from "../utils/image"
 
+import { INITIAL_QUIZ, USER_STATS_KEY } from "../constants"
+
 import { CompletedQuizzes, QuizStatus } from "../types"
 
 import allQuizzesData, {
@@ -27,7 +29,6 @@ import allQuizzesData, {
   usingEthereumQuizzes,
 } from "../data/quizzes"
 
-export const USER_STATS_KEY = "quizzes-stats"
 // Create an object that contains each quiz id as key and a boolean flag to indicate if its completed
 // Initialize all quizzes as not completed
 const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
@@ -41,14 +42,12 @@ const INITIAL_USER_STATS = {
 }
 
 const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
-  const INITIAL_QUIZ = "what-is-ethereum"
-
   const [currentQuiz, setCurrentQuiz] = useState<string | undefined>(
     INITIAL_QUIZ
   )
   const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
-  // TODO: read stats from local storage (useLocalStorage)
+  // Read initial data from localStorage if available
   const [userStats, setUserStats] = useLocalStorage(
     USER_STATS_KEY,
     INITIAL_USER_STATS
@@ -68,8 +67,10 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
     status: quizStatus,
     next: nextQuiz,
     score: userStats.score,
+    quizKey: currentQuiz,
     average: userStats.average,
     completed: userStats.completed,
+    setUserStats: setUserStats,
   }
 
   return (
@@ -88,7 +89,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
             quizKey={currentQuiz}
             nextHandler={setCurrentQuiz}
             statusHandler={setQuizStatus}
-            setUserStats={setUserStats}
             isStandaloneQuiz={false}
           />
         </QuizzesModal>

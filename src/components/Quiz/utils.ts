@@ -1,6 +1,8 @@
-import { USER_STATS_KEY } from "../../pages/quizzes"
-import allQuizzesData from "../../data/quizzes"
+import { USER_STATS_KEY } from "../../constants"
+
 import { QuizShareStats } from "../../types"
+
+import allQuizzesData from "../../data/quizzes"
 
 export const getTotalQuizzesPoints = () =>
   Object.values(allQuizzesData)
