@@ -29,11 +29,11 @@ import allQuizzesData, {
   usingEthereumQuizzes,
 } from "../data/quizzes"
 
-// Create an object that contains each quiz id as key and a boolean flag to indicate if its completed
+// Contains each quiz id as key and <boolean, number> to indicate if its completed and the highest score in that quiz
 // Initialize all quizzes as not completed
 const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
   allQuizzesData
-).reduce((object, key) => ({ ...object, [key]: false }), {})
+).reduce((object, key) => ({ ...object, [key]: [false, 0] }), {})
 
 const INITIAL_USER_STATS = {
   score: 0,

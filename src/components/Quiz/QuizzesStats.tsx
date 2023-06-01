@@ -45,6 +45,9 @@ const QuizzesStats: React.FC = () => {
 
   const computedAverage =
     average.length > 0 ? average.reduce((a, b) => a + b, 0) / average.length : 0
+  const parsedAverage = Number.isInteger(computedAverage)
+    ? computedAverage
+    : computedAverage.toFixed(2)
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
@@ -113,7 +116,7 @@ const QuizzesStats: React.FC = () => {
                 <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyMedium">
                   <Translation id="average-score" />{" "}
                   <Text as="span" color="body">
-                    {computedAverage}%
+                    {parsedAverage}%
                   </Text>
                 </Text>
 
