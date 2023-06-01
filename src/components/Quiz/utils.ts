@@ -28,7 +28,7 @@ export const updateUserStats = ({
 
   // Update user score, average and save to local storage
   const newUserScore = userScore + numberOfCorrectAnswers
-  const newAverage = average === 0 ? quizScore : (average + quizScore) / 2
+  const newAverage = [...average, quizScore]
   const newCompleted = JSON.stringify({
     ...completedQuizzes,
     [quizKey!]: quizScore === 100,
@@ -40,6 +40,7 @@ export const updateUserStats = ({
     average: newAverage,
     completed: newCompleted,
   })
+
   localStorage.setItem(
     USER_STATS_KEY,
     JSON.stringify({

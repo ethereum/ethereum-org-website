@@ -37,7 +37,7 @@ const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
 
 const INITIAL_USER_STATS = {
   score: 0,
-  average: 0,
+  average: [],
   completed: JSON.stringify(INITIAL_COMPLETED_QUIZZES),
 }
 

@@ -43,6 +43,9 @@ const QuizzesStats: React.FC = () => {
     JSON.parse(completed)
   )
 
+  const computedAverage =
+    average.length > 0 ? average.reduce((a, b) => a + b, 0) / average.length : 0
+
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
       <Stack mt={{ base: 0, lg: 12 }} gap={{ base: 8, lg: 4 }}>
@@ -110,7 +113,7 @@ const QuizzesStats: React.FC = () => {
                 <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyMedium">
                   <Translation id="average-score" />{" "}
                   <Text as="span" color="body">
-                    {average}%
+                    {computedAverage}%
                   </Text>
                 </Text>
 

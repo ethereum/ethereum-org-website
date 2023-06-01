@@ -7,7 +7,7 @@ interface ContextState {
   next?: string
   score: number
   quizKey?: string
-  average: number
+  average: number[]
   completed: string
   setUserStats: (stats: UserStats) => void
 }
@@ -17,7 +17,7 @@ const INITIAL_CONTEXT_STATE: ContextState = {
   next: undefined,
   score: 0,
   quizKey: undefined,
-  average: 0,
+  average: [],
   completed: JSON.stringify({}),
   setUserStats: () => {},
 }
