@@ -4,25 +4,11 @@ description: Distributed validator technology enables the distributed operation 
 lang: en
 ---
 
-# Distributed validator technology {#what-is-dvt}
-
 Distributed validator technology (DVT) is an approach to validator security that spreads out key management and signing responsibilities across multiple parties, to reduce single points of failure, and increase validator resiliency. 
 
 It does this by **splitting the private key** used to secure a validator **across many computers** organized into a "cluster". The benefit of this is that it makes it very difficult for attackers to gain access to the key, because it is not stored in full on any single machine. It also allows for some nodes to go offline, as the necessary signing can be done by a subset of the machines in each cluster. This reduces single points of failure from the network and makes the whole validator set more robust. 
 
-## How does DVT work? {#how-does-dvt-work}
-
-A DVT solution contains the following components:
-
 ![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
-
-- **[Shamir's secret sharing](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Validators use [BLS keys](https://en.wikipedia.org/wiki/BLS_digital_signature). Individual BLS "key shares" ("key shares") can be combined into a single aggregated key (signature). In DVT, the private key for a validator is the combined BLS signature of each operator in the cluster.
-- **[Threshold signature scheme](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Determines the number of individual key shares that are required for signing duties, e.g., 3 out of 4.
-- **[Distributed key generation (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Cryptographic process that generates the key shares and is used to distribute the shares of an existing or new validator key to the nodes in a cluster.
-- **[Multiparty computation (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - The full validator key is generated in secret using multiparty computation. The full key is never known to any individual operator—they only ever know their own part of it (their "share").
-- **Consensus protocol** - The consensus protocol selects one node to be the block proposer. They share the block with the other nodes in the cluster, who add their key shares to the aggregate signature. When enough key shares have been aggregated, the block is proposed on Ethereum.
-
-Distributed validators have built-in fault tolerance and can keep running even if some of the individual nodes go offline. This means that the cluster is resilient even if some of the nodes within it turn out to be malicious or lazy.
 
 ## Why do we need DVT? {#why-do-we-need-dvt}
 
@@ -53,6 +39,18 @@ Without DVT, it's easier for staking providers to support only one or two client
 5. **Minimized slashing** and downtime risks
 6. **Improves diversity** (client, data center, location, regulation, etc.)
 7. **Enhanced security** of validator key management
+
+## How does DVT work? {#how-does-dvt-work}
+
+A DVT solution contains the following components:
+
+- **[Shamir's secret sharing](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Validators use [BLS keys](https://en.wikipedia.org/wiki/BLS_digital_signature). Individual BLS "key shares" ("key shares") can be combined into a single aggregated key (signature). In DVT, the private key for a validator is the combined BLS signature of each operator in the cluster.
+- **[Threshold signature scheme](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Determines the number of individual key shares that are required for signing duties, e.g., 3 out of 4.
+- **[Distributed key generation (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Cryptographic process that generates the key shares and is used to distribute the shares of an existing or new validator key to the nodes in a cluster.
+- **[Multiparty computation (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - The full validator key is generated in secret using multiparty computation. The full key is never known to any individual operator—they only ever know their own part of it (their "share").
+- **Consensus protocol** - The consensus protocol selects one node to be the block proposer. They share the block with the other nodes in the cluster, who add their key shares to the aggregate signature. When enough key shares have been aggregated, the block is proposed on Ethereum.
+
+Distributed validators have built-in fault tolerance and can keep running even if some of the individual nodes go offline. This means that the cluster is resilient even if some of the nodes within it turn out to be malicious or lazy.
 
 
 ## DVT use cases {#dvt-use-cases}
