@@ -306,7 +306,7 @@ const QuizWidget: React.FC<IProps> = ({
       <Stack
         w="full"
         maxW="600px"
-        h={isStandaloneQuiz ? "100%" : { base: "100vh", md: "100%" }}
+        h={isStandaloneQuiz ? "100%" : { base: "$100vh", md: "100%" }}
         px={{ base: 8, md: 12, lg: 16 }}
         // Reduce padding when showing Spinner
         pt={!quizData ? 10 : { base: 10, md: 12 }}
