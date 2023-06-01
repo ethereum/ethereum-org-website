@@ -9,6 +9,8 @@ import { GreenTickIcon } from "../icons/quiz"
 
 import { QuizzesHubContext } from "./context"
 
+import { trackCustomEvent } from "../../utils/matomo"
+
 import { QuizzesListItem } from "../../types"
 
 import allQuizzesData from "../../data/quizzes"
@@ -29,6 +31,18 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
   const isCompleted = JSON.parse(completed)[id][0]
 
   const { t } = useTranslation()
+
+  const handleStart = () => {
+    quizHandler(id)
+    nextHandler(next)
+    modalHandler(true)
+
+    trackCustomEvent({
+      eventCategory: "quiz_hub_events",
+      eventAction: "quizzes click",
+      eventName: `${id}`,
+    })
+  }
 
   return (
     <ListItem
@@ -85,11 +99,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
           <Button
             variant="outline-color"
             w={{ base: "full", lg: "auto" }}
-            onClick={() => {
-              quizHandler(id)
-              nextHandler(next)
-              modalHandler(true)
-            }}
+            onClick={handleStart}
           >
             <Translation id="start" />
           </Button>

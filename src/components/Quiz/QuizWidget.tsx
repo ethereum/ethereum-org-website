@@ -229,10 +229,11 @@ const QuizWidget: React.FC<IProps> = ({
 
   const handleShare = () => {
     if (!quizData || !window) return
+
     trackCustomEvent({
-      eventCategory: "Quiz widget",
-      eventAction: "Other",
-      eventName: "Share results",
+      eventCategory: "quiz_hub_events",
+      eventAction: "Secondary button clicks",
+      eventName: "Twitter_share_quiz",
     })
 
     const url = `https://ethereum.org${window.location.pathname}%23quiz`

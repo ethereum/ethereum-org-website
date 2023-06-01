@@ -19,6 +19,7 @@ import { QuizzesHubContext } from "../components/Quiz/context"
 import { useLocalStorage } from "../hooks/useLocalStorage"
 
 import { getImage } from "../utils/image"
+import { trackCustomEvent } from "../utils/matomo"
 
 import { INITIAL_QUIZ, USER_STATS_KEY } from "../constants"
 
@@ -40,6 +41,13 @@ const INITIAL_USER_STATS = {
   average: [],
   completed: JSON.stringify(INITIAL_COMPLETED_QUIZZES),
 }
+
+const handleGHAdd = () =>
+  trackCustomEvent({
+    eventCategory: "quiz_hub_events",
+    eventAction: "Secondary button clicks",
+    eventName: "GH_add",
+  })
 
 const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   const [currentQuiz, setCurrentQuiz] = useState<string | undefined>(
@@ -170,6 +178,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                   variant="outline"
                   hideArrow
                   mt={0}
+                  onClick={handleGHAdd}
                 >
                   <Flex alignItems="center">
                     <Icon as={FaGithub} color="text" boxSize={6} me={2} />

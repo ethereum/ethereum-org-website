@@ -23,16 +23,24 @@ import {
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
+import { trackCustomEvent } from "../../utils/matomo"
 
 import { QuizShareStats } from "../../types"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 
-const handleShare = ({ score, total }: QuizShareStats) =>
+const handleShare = ({ score, total }: QuizShareStats) => {
   shareOnTwitter({
     score,
     total,
   })
+
+  trackCustomEvent({
+    eventCategory: "quiz_hub_events",
+    eventAction: "Secondary button clicks",
+    eventName: "Twitter_share_stats",
+  })
+}
 
 const QuizzesStats: React.FC = () => {
   const { score: userScore, completed, average } = useContext(QuizzesHubContext)
