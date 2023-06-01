@@ -4,9 +4,11 @@ description: Distributed validator technology enables the distributed operation 
 lang: en
 ---
 
-Distributed validator technology (DVT) is an approach to validator security that spreads out key management and signing responsibilities across multiple parties, to reduce single points of failure, and increase validator resiliency. 
+# Distributed validator technology {#distributed-validator-technology}
 
-It does this by **splitting the private key** used to secure a validator **across many computers** organized into a "cluster". The benefit of this is that it makes it very difficult for attackers to gain access to the key, because it is not stored in full on any single machine. It also allows for some nodes to go offline, as the necessary signing can be done by a subset of the machines in each cluster. This reduces single points of failure from the network and makes the whole validator set more robust. 
+Distributed validator technology (DVT) is an approach to validator security that spreads out key management and signing responsibilities across multiple parties, to reduce single points of failure, and increase validator resiliency.
+
+It does this by **splitting the private key** used to secure a validator **across many computers** organized into a "cluster". The benefit of this is that it makes it very difficult for attackers to gain access to the key, because it is not stored in full on any single machine. It also allows for some nodes to go offline, as the necessary signing can be done by a subset of the machines in each cluster. This reduces single points of failure from the network and makes the whole validator set more robust.
 
 ![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
 
@@ -22,7 +24,7 @@ By using DVT, stakers can participate in staking while keeping the validator pri
 
 When a validator is divided across multiple operators and multiple machines, it can withstand individual hardware and software failures without going offline. The risk of failures can also be reduced by using diverse hardware and software configurations across the nodes in a cluster. This resilience is not available to single-node validator configurations - it comes from the DVT layer.
 
-If one of the components of a machine in a cluster goes down (for example, if there are four operators in a validator cluster and one uses a specific client that has a bug), the others ensure that the validator keeps running. 
+If one of the components of a machine in a cluster goes down (for example, if there are four operators in a validator cluster and one uses a specific client that has a bug), the others ensure that the validator keeps running.
 
 ### Decentralization {#decentralization}
 
@@ -52,7 +54,6 @@ A DVT solution contains the following components:
 
 Distributed validators have built-in fault tolerance and can keep running even if some of the individual nodes go offline. This means that the cluster is resilient even if some of the nodes within it turn out to be malicious or lazy.
 
-
 ## DVT use cases {#dvt-use-cases}
 
 DVT has significant implications for the broader staking industry:
@@ -63,7 +64,7 @@ DVT also enables non-custodial staking by allowing you to distribute your valida
 
 ### Staking as a service (SaaS) {#saas}
 
-Operators (such as staking pools and institutional stakers) managing many validators can use DVT to reduce their risk. By distributing their infrastructure, they can add redundancy to their operations and diversify the types of hardware they use. 
+Operators (such as staking pools and institutional stakers) managing many validators can use DVT to reduce their risk. By distributing their infrastructure, they can add redundancy to their operations and diversify the types of hardware they use.
 
 DVT shares responsibility for key management across multiple nodes, meaning some operational costs can also be shared. DVT can also reduce operational risk and insurance costs for staking providers.
 
@@ -75,7 +76,7 @@ Even though traditionally efforts are made to spread risk by distributing stakes
 
 By leveraging DVT, the trust required from operators is significantly reduced. **Pools can enable operators to hold stakes without needing custody of validator keys** (as only key shares are utilized). It also allows managed stakes to be distributed between more operators (e.g., instead of having a single operator managing 1000 validators, DVT enables those validators to be collectively run by multiple operators). Diverse operator configurations will ensure that if one operator should go down, the others will still be able to attest. This results in redundancy and diversification that leads to better performance and resilience, while maximizing rewards.
 
-Another benefit to minimizing single-operator trust is that staking pools can allow more open and permissionless operator participation. By doing this, services can reduce their risk and support Ethereum decentralization by using both curated and permissionless sets of operators, for example, by pairing home or more minor stakers with larger ones. 
+Another benefit to minimizing single-operator trust is that staking pools can allow more open and permissionless operator participation. By doing this, services can reduce their risk and support Ethereum decentralization by using both curated and permissionless sets of operators, for example, by pairing home or more minor stakers with larger ones.
 
 ## Potential drawbacks of using DVT {#potential-drawbacks-of-using-dvt}
 
