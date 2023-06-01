@@ -141,7 +141,7 @@ export type QuizzesListItem = QuizzesSection & {
 
 export type QuizStatus = "neutral" | "success" | "error"
 
-export type CompletedQuizzes = { [key: string]: boolean }
+export type CompletedQuizzes = { [key: string]: [boolean, number] }
 
 export type UserStats = {
   score: number
