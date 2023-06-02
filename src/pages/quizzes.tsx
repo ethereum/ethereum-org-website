@@ -1,5 +1,13 @@
 import React, { useState } from "react"
-import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  Stack,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { FaGithub } from "react-icons/fa"
@@ -60,9 +68,10 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
     USER_STATS_KEY,
     INITIAL_USER_STATS
   )
-  const [isModalOpen, setModalOpen] = useState(false)
+  const { isOpen, onClose, onOpen } = useDisclosure()
 
   const { t } = useTranslation()
+
   const heroContent = {
     title: <Translation id="quizzes-title" />,
     header: <Translation id="test-your-knowledge" />,
@@ -92,7 +101,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
       </Box>
 
       <QuizzesHubContext.Provider value={contextState}>
-        <QuizzesModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+        <QuizzesModal isOpen={isOpen} onClose={onClose}>
           <QuizWidget
             quizKey={currentQuiz}
             nextHandler={setCurrentQuiz}
@@ -125,7 +134,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                   content={ethereumBasicsQuizzes}
                   quizHandler={setCurrentQuiz}
                   nextHandler={setNextQuiz}
-                  modalHandler={setModalOpen}
+                  modalHandler={onOpen}
                 />
               </Box>
 
@@ -145,7 +154,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                   content={usingEthereumQuizzes}
                   quizHandler={setCurrentQuiz}
                   nextHandler={setNextQuiz}
-                  modalHandler={setModalOpen}
+                  modalHandler={onOpen}
                 />
               </Box>
 
