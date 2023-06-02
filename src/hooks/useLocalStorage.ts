@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 
 // This custom hook allows to read data from localStorage to initialize state
-export const useLocalStorage = (key, initialValue) => {
+export const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState(initialValue)
-  const setValue = (value) => {
+  const setValue = (value: T) => {
     try {
       const valueToStore =
         value instanceof Function ? value(storedValue) : value

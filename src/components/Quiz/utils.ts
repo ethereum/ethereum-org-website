@@ -61,14 +61,7 @@ export const updateUserStats = ({
   }
 }
 
-// TODO: track event on matomo
 export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
-  // if (!quizData || !window) return
-  //   trackCustomEvent({
-  //     eventCategory: "Quiz widget",
-  //     eventAction: "Other",
-  //     eventName: "Share results",
-  //   })
   const url = "https://ethereum.org/quizzes"
   const hashtags = ["ethereumquiz", "ethereum", "quiz"]
   const tweet =
