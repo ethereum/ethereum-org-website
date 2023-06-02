@@ -44,7 +44,7 @@ const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
   allQuizzesData
 ).reduce((object, key) => ({ ...object, [key]: [false, 0] }), {})
 
-const INITIAL_USER_STATS = {
+const INITIAL_USER_STATS: UserStats = {
   score: 0,
   average: [],
   completed: JSON.stringify(INITIAL_COMPLETED_QUIZZES),

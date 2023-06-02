@@ -63,7 +63,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
                 content: 'counter(list-counter) ". "',
               }}
             >
-              <Translation id={id} />
+              <Translation id={allQuizzesData[id].title} />
             </Text>
 
             {/* Show green tick if quizz was completed only */}
