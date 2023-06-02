@@ -69,7 +69,7 @@ const QuizWidget: React.FC<IProps> = ({
   isStandaloneQuiz = true,
 }) => {
   const quizTitleRef = useRef<HTMLParagraphElement | null>(null)
-  const quizRef = useRef<{ focusQuizQuestion: () => void } | null>(null)
+  const quizQuestionRef = useRef<{ focusQuizQuestion: () => void } | null>(null)
   const { t } = useTranslation()
   const [quizData, setQuizData] = useState<Quiz | null>(null)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
@@ -256,8 +256,8 @@ const QuizWidget: React.FC<IProps> = ({
     if (!currentQuestionAnswerChoice) return
 
     setUserQuizProgress((prev) => [...prev, currentQuestionAnswerChoice])
-    if (quizRef.current) {
-      quizRef.current.focusQuizQuestion()
+    if (quizQuestionRef.current) {
+      quizQuestionRef.current.focusQuizQuestion()
     }
     setCurrentQuestionAnswerChoice(null)
     setShowAnswer(false)
@@ -282,6 +282,7 @@ const QuizWidget: React.FC<IProps> = ({
   const AnswerIcon = () => {
     const commonProps = {
       color: "neutral",
+      "aria-hidden": true,
     }
 
     if (!showAnswer) {
@@ -432,7 +433,7 @@ const QuizWidget: React.FC<IProps> = ({
                   />
                 ) : (
                   <QuizRadioGroup
-                    ref={quizRef}
+                    ref={quizQuestionRef}
                     questionData={quizData.questions[currentQuestionIndex]}
                     showAnswer={showAnswer}
                     handleSelection={handleSelection}
