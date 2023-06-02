@@ -145,7 +145,7 @@ export type CompletedQuizzes = { [key: string]: [boolean, number] }
 
 export type UserStats = {
   score: number
-  average: number
+  average: number[]
   completed: string
 }
 
