@@ -121,7 +121,7 @@ const QuizzesStats: React.FC = () => {
                 </Text>
               </Flex>
 
-              <Progress value={userScore} />
+              <Progress value={(userScore / totalQuizzesPoints) * 100} />
 
               <Flex direction={{ base: "column", lg: "row" }}>
                 <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyMedium">
