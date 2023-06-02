@@ -84,7 +84,7 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   },
   {
     id: "layer-2",
-    title: "Using Layer 2",
+    title: "Using layer 2",
     level: "intermediate",
   },
 ]
