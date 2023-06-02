@@ -11,6 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import { FaTwitter } from "react-icons/fa"
+import { useI18next } from "gatsby-plugin-react-i18next"
 
 import Button from "../Button"
 import Translation from "../Translation"
@@ -18,11 +19,17 @@ import { TrophyIcon } from "../icons/quiz"
 
 import { QuizzesHubContext } from "./context"
 
+// Utils
 import {
   getNumberOfCompletedQuizzes,
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
+import {
+  isLangRightToLeft,
+  getLocaleForNumberFormat,
+} from "../../utils/translations"
+import { Lang } from "../../utils/languages"
 import { trackCustomEvent } from "../../utils/matomo"
 
 import { QuizShareStats } from "../../types"
@@ -43,7 +50,14 @@ const handleShare = ({ score, total }: QuizShareStats) => {
 }
 
 const QuizzesStats: React.FC = () => {
-  const { score: userScore, completed, average } = useContext(QuizzesHubContext)
+  const { language } = useI18next()
+  const localeForNumbers = getLocaleForNumberFormat(language as Lang)
+  const isRightToLeft = isLangRightToLeft(language as Lang)
+  const {
+    score: userScore,
+    completed,
+    average: userAverageScores,
+  } = useContext(QuizzesHubContext)
   const totalQuizzesNumber =
     ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
   const TOTAL_QUIZZES_POINTS = getTotalQuizzesPoints()
@@ -52,10 +66,48 @@ const QuizzesStats: React.FC = () => {
   )
 
   const computedAverage =
-    average.length > 0 ? average.reduce((a, b) => a + b, 0) / average.length : 0
-  const parsedAverage = Number.isInteger(computedAverage)
-    ? computedAverage
-    : computedAverage.toFixed(2)
+    userAverageScores.length > 0
+      ? userAverageScores.reduce((a, b) => a + b, 0) / userAverageScores.length
+      : 0
+  // Normalize the raw average to be between 0 and 1 by dividing by 100
+  const normalizedAverage = computedAverage / 100
+
+  // Data from Matomo, manually updated
+  const collectiveQuestionsAnswered = 100000
+  const collectiveAverageScore = 67.4 / 100 // converted to fraction for percentage format
+  const collectiveRetryRate = 15.6 / 100 // converted to fraction for percentage format
+
+  // Todo: make global util function
+  const numberFormatter = new Intl.NumberFormat(localeForNumbers, {
+    style: "decimal",
+    minimumSignificantDigits: 2,
+    maximumSignificantDigits: 3,
+  })
+
+  // Todo: make global util function
+  const percentFormatter = new Intl.NumberFormat(localeForNumbers, {
+    style: "percent",
+    minimumSignificantDigits: 2,
+    maximumSignificantDigits: 3,
+  })
+
+  // Formatted collective stats
+  const formattedCollectiveQuestionsAnswered = numberFormatter.format(
+    collectiveQuestionsAnswered
+  )
+  // If language is RTL, more than indicator should go at start
+  const textForCollectiveQuestions = isRightToLeft
+    ? `+${formattedCollectiveQuestionsAnswered}`
+    : `${formattedCollectiveQuestionsAnswered}+`
+
+  const formattedCollectiveAverageScore = percentFormatter.format(
+    collectiveAverageScore
+  )
+  const formattedCollectiveRetryRate =
+    percentFormatter.format(collectiveRetryRate)
+
+  // Formatted user stats
+  const formattedUserAverageScore = percentFormatter.format(normalizedAverage)
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
@@ -124,7 +176,7 @@ const QuizzesStats: React.FC = () => {
                 <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyMedium">
                   <Translation id="average-score" />{" "}
                   <Text as="span" color="body">
-                    {parsedAverage}%
+                    {formattedUserAverageScore}
                   </Text>
                 </Text>
 
@@ -162,7 +214,7 @@ const QuizzesStats: React.FC = () => {
                 <Translation id="average-score" />
               </Text>
               {/* Data from Matomo, manually updated */}
-              <Text color="body">67.4%</Text>
+              <Text color="body">{formattedCollectiveAverageScore}</Text>
             </Stack>
 
             <Stack>
@@ -171,7 +223,7 @@ const QuizzesStats: React.FC = () => {
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text color="body">100 000+</Text>
+              <Text color="body">{textForCollectiveQuestions}</Text>
             </Stack>
 
             <Stack>
@@ -180,7 +232,7 @@ const QuizzesStats: React.FC = () => {
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text color="body">15.6%</Text>
+              <Text color="body">{formattedCollectiveRetryRate}</Text>
             </Stack>
           </Flex>
         </Flex>
