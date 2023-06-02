@@ -127,8 +127,6 @@ type QuizLevel = "beginner" | "intermediate"
 
 export type QuizzesSection = {
   id: string
-  num: number
-  title: string
   level: QuizLevel
   next?: string
 }

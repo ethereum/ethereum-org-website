@@ -16,16 +16,7 @@ import { QuizzesListItem } from "../../types"
 import allQuizzesData from "../../data/quizzes"
 
 const QuizItem: React.FC<QuizzesListItem> = (props) => {
-  const {
-    num,
-    title,
-    id,
-    level,
-    next,
-    quizHandler,
-    nextHandler,
-    modalHandler,
-  } = props
+  const { id, level, next, quizHandler, nextHandler, modalHandler } = props
   const { completed } = useContext(QuizzesHubContext)
   const numberOfQuestions = allQuizzesData[id].questions.length
   const isCompleted = JSON.parse(completed)[id][0]
@@ -53,6 +44,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
       borderBottom="1px solid"
       borderColor="disabled"
       mb={0}
+      sx={{ counterIncrement: "list-counter" }}
     >
       <Flex
         justifyContent="space-between"
@@ -65,8 +57,11 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
               color={isCompleted ? "bodyMedium" : "text"}
               fontWeight="bold"
               mb={0}
+              _before={{
+                content: 'counter(list-counter) ". "',
+              }}
             >
-              {`${num}. ${title}`}
+              <Translation id={id} />
             </Text>
 
             {/* Show green tick if quizz was completed only */}

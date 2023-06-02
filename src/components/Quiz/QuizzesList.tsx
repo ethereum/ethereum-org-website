@@ -18,16 +18,14 @@ const QuizzesList: React.FC<IProps> = ({
   nextHandler,
   modalHandler,
 }) => (
-  <OrderedList m={0} listStyleType="none">
-    {content.map((listItem, idx) => {
-      const { id, title, level, next } = listItem
+  <OrderedList m={0} listStyleType="none" sx={{ counterReset: "list-counter" }}>
+    {content.map((listItem) => {
+      const { id, level, next } = listItem
 
       return (
         <QuizItem
           key={id}
           id={id}
-          num={idx + 1}
-          title={title}
           level={level}
           next={next}
           quizHandler={quizHandler}

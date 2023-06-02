@@ -40,37 +40,31 @@ const quizzes: RawQuizzes = {
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
   {
     id: "what-is-ethereum",
-    title: "What is Ethereum?",
     level: "beginner",
     next: "what-is-ether",
   },
   {
     id: "what-is-ether",
-    title: "What is ether?",
     level: "beginner",
     next: "wallets",
   },
   {
     id: "wallets",
-    title: "What is a wallet?",
     level: "beginner",
     next: "web3",
   },
   {
     id: "web3",
-    title: "What is Web3?",
     level: "beginner",
     next: "security",
   },
   {
     id: "security",
-    title: "Security and scams",
     level: "beginner",
     next: "merge",
   },
   {
     id: "merge",
-    title: "What is The Merge?",
     level: "intermediate",
   },
 ]
@@ -78,13 +72,11 @@ export const ethereumBasicsQuizzes: QuizzesSection[] = [
 export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "nfts",
-    title: "What are NFTs?",
     level: "beginner",
     next: "layer-2",
   },
   {
     id: "layer-2",
-    title: "Using layer 2",
     level: "intermediate",
   },
 ]

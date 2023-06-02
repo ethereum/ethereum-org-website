@@ -26,5 +26,5 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
     }
   }, [])
 
-  return [storedValue, setValue]
+  return [storedValue, setValue] as const
 }

@@ -23,7 +23,7 @@ import { trackCustomEvent } from "../utils/matomo"
 
 import { INITIAL_QUIZ, USER_STATS_KEY } from "../constants"
 
-import { CompletedQuizzes, QuizStatus } from "../types"
+import { CompletedQuizzes, QuizStatus, UserStats } from "../types"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,
@@ -56,7 +56,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
   // Read initial data from localStorage if available
-  const [userStats, setUserStats] = useLocalStorage(
+  const [userStats, setUserStats] = useLocalStorage<UserStats>(
     USER_STATS_KEY,
     INITIAL_USER_STATS
   )

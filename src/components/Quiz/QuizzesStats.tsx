@@ -92,7 +92,7 @@ const QuizzesStats: React.FC = () => {
               variant="outline-color"
               leftIcon={<FaTwitter />}
               onClick={() =>
-                handleShare({ score: userScore, total: TOTAL_QUIZZES_POINTS })
+                handleShare({ score: userScore, total: totalQuizzesPoints })
               }
               w={{ base: "full", lg: "auto" }}
               mt={{ base: 2, lg: 0 }}
