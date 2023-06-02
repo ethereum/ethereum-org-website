@@ -97,7 +97,7 @@ Ethereum étant flexible par nature, les équipes et les produits vont et vienne
 - nous assurer que tous les portefeuilles et dApps répertoriés répondent toujours à nos critères ;
 - vérifier si de nouveaux produits suggérés répondent à plus de nos critères que ceux actuellement répertoriés.
 
-Vous pouvez nous aider en vérifiant par vous-même et en nous le faisant savoir. [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) ou envoyez un email à l'adresse [website@ethereum.org](mailto:website@ethereum.org)
+Vous pouvez nous aider en vérifiant par vous-même et en nous le faisant savoir. [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) ou envoyez un email à l'adresse [website@ethereum.org](mailto:website@ethereum.org)
 
 _Nous étudions également des options de vote afin que la communauté puisse indiquer ses préférences et mettre en évidence les meilleurs produits pour que nous puissions les recommander._
 
