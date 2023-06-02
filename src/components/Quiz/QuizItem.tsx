@@ -79,18 +79,12 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
           <Flex gap={3}>
             {/* number of questions - label */}
             <Tag
-              color="text"
-              bg="backgroundHighlight"
               label={t(`${numberOfQuestions} ${t("questions")}`)}
               ml={{ lg: -2 }}
             />
 
             {/* difficulty - label */}
-            <Tag
-              color="text"
-              bg="backgroundHighlight"
-              label={level.toUpperCase()}
-            />
+            <Tag label={level.toUpperCase()} />
           </Flex>
         </Stack>
 
