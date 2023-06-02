@@ -6,7 +6,7 @@ lang: en
 
 # Learning quizzes {#learning-quizzes}
 
-Learning quizzes are an opportunity for users to test themselves to see if they understood the content on the page they just read. The questions should only be based on the content provided on the page and should not ask about information that is not mentioned on the page.
+Quizzes are an opportunity for users to test themselves to see if they understood the content on the page they just read. The questions should only be based on the content provided on the page and should not ask about information that is not mentioned on the page.
 
 Questions are structured as follows. The question prompt, 1 correct answer with an explanation of why it is correct, 3 incorrect answers with an explanation of why they are incorrect.
 
