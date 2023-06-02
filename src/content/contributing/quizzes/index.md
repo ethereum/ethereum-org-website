@@ -4,7 +4,7 @@ description: The policy we use when adding quizzes to ethereum.org
 lang: en
 ---
 
-# Learning quizzes {#learning-quizzes}
+# Quizzes {#quizzes}
 
 Quizzes are an opportunity for users to test themselves to see if they understood the content on the page they just read. The questions should only be based on the content provided on the page and should not ask about information that is not mentioned on the page.
 
@@ -60,11 +60,3 @@ If the content no longer exists on the page for a question and it needs to be re
 - The page you want to delete a quiz question on
 - The question that you want to delete
 - Explanation if necessary for why the question should be removed
-
-## Contribute
-
-If you want to add, update, or delete quiz content for ethereum.org, create an issue on GitHub.
-
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml">
-  Create an issue
-</ButtonLink>
