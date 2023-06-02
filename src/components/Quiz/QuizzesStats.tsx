@@ -17,12 +17,16 @@ import { TrophyIcon } from "../icons/quiz"
 
 import { QuizzesHubContext } from "./context"
 
-import { getNumberOfCompletedQuizzes, shareOnTwitter } from "./utils"
+import {
+  getNumberOfCompletedQuizzes,
+  getTotalQuizzesPoints,
+  shareOnTwitter,
+} from "./utils"
 import { trackCustomEvent } from "../../utils/matomo"
 
 import { QuizShareStats } from "../../types"
 
-import { TOTAL_QUIZZES_NUMBER, TOTAL_QUIZZES_POINTS } from "../../constants"
+import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 
 const handleShare = ({ score, total }: QuizShareStats) => {
   shareOnTwitter({
@@ -48,6 +52,11 @@ const QuizzesStats: React.FC = () => {
   const parsedAverage = Number.isInteger(computedAverage)
     ? computedAverage
     : computedAverage.toFixed(2)
+
+  // These values are not fixed but calculated each time, can't be moved to /constants
+  const totalQuizzesNumber =
+    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
+  const totalQuizzesPoints = getTotalQuizzesPoints()
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
@@ -105,7 +114,7 @@ const QuizzesStats: React.FC = () => {
                 <Text fontWeight="bold" fontSize="5xl" mb={0} color="body">
                   {userScore}
                   <Text as="span" color="bodyMedium">
-                    /{TOTAL_QUIZZES_POINTS}
+                    /{totalQuizzesPoints}
                   </Text>
                 </Text>
               </Flex>
@@ -123,7 +132,7 @@ const QuizzesStats: React.FC = () => {
                 <Text mb={0} color="bodyMedium">
                   <Translation id="completed" />{" "}
                   <Text as="span" color="body">
-                    {numberOfCompletedQuizzes}/{TOTAL_QUIZZES_NUMBER}
+                    {numberOfCompletedQuizzes}/{totalQuizzesNumber}
                   </Text>
                 </Text>
               </Flex>
