@@ -5,7 +5,6 @@ import {
   Flex,
   Grid,
   GridItem,
-  Icon,
   Progress,
   Stack,
   Text,
@@ -18,16 +17,12 @@ import { TrophyIcon } from "../icons/quiz"
 
 import { QuizzesHubContext } from "./context"
 
-import {
-  getNumberOfCompletedQuizzes,
-  getTotalQuizzesPoints,
-  shareOnTwitter,
-} from "./utils"
+import { getNumberOfCompletedQuizzes, shareOnTwitter } from "./utils"
 import { trackCustomEvent } from "../../utils/matomo"
 
 import { QuizShareStats } from "../../types"
 
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
+import { TOTAL_QUIZZES_NUMBER, TOTAL_QUIZZES_POINTS } from "../../constants"
 
 const handleShare = ({ score, total }: QuizShareStats) => {
   shareOnTwitter({
@@ -44,9 +39,6 @@ const handleShare = ({ score, total }: QuizShareStats) => {
 
 const QuizzesStats: React.FC = () => {
   const { score: userScore, completed, average } = useContext(QuizzesHubContext)
-  const totalQuizzesNumber =
-    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
-  const TOTAL_QUIZZES_POINTS = getTotalQuizzesPoints()
   const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(
     JSON.parse(completed)
   )
@@ -89,7 +81,7 @@ const QuizzesStats: React.FC = () => {
           >
             <Button
               variant="outline-color"
-              leftIcon={<Icon as={FaTwitter} />}
+              leftIcon={<FaTwitter />}
               onClick={() =>
                 handleShare({ score: userScore, total: TOTAL_QUIZZES_POINTS })
               }
@@ -131,7 +123,7 @@ const QuizzesStats: React.FC = () => {
                 <Text mb={0} color="bodyMedium">
                   <Translation id="completed" />{" "}
                   <Text as="span" color="body">
-                    {numberOfCompletedQuizzes}/{totalQuizzesNumber}
+                    {numberOfCompletedQuizzes}/{TOTAL_QUIZZES_NUMBER}
                   </Text>
                 </Text>
               </Flex>
