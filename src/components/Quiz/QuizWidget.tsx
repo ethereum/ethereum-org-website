@@ -4,6 +4,7 @@ import React, {
   useMemo,
   useCallback,
   useContext,
+  useRef,
 } from "react"
 import {
   Box,
@@ -67,6 +68,8 @@ const QuizWidget: React.FC<IProps> = ({
   maxQuestions,
   isStandaloneQuiz = true,
 }) => {
+  const quizTitleRef = useRef<HTMLParagraphElement | null>(null)
+  const quizRef = useRef<{ focusQuizQuestion: () => void } | null>(null)
   const { t } = useTranslation()
   const [quizData, setQuizData] = useState<Quiz | null>(null)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
@@ -199,6 +202,8 @@ const QuizWidget: React.FC<IProps> = ({
     })
 
     setShowAnswer(true)
+    // Focus keyboard on 'Correct/Incorrect'
+    quizTitleRef.current?.focus()
 
     if (!isStandaloneQuiz) {
       if (currentQuestionAnswerChoice?.isCorrect) {
@@ -251,6 +256,9 @@ const QuizWidget: React.FC<IProps> = ({
     if (!currentQuestionAnswerChoice) return
 
     setUserQuizProgress((prev) => [...prev, currentQuestionAnswerChoice])
+    if (quizRef.current) {
+      quizRef.current.focusQuizQuestion()
+    }
     setCurrentQuestionAnswerChoice(null)
     setShowAnswer(false)
 
@@ -370,6 +378,8 @@ const QuizWidget: React.FC<IProps> = ({
               {/* Quiz title */}
               <Center mb={-2}>
                 <Text
+                  ref={quizTitleRef}
+                  tabIndex={-1}
                   fontStyle="normal"
                   fontWeight="700"
                   color={
@@ -422,6 +432,7 @@ const QuizWidget: React.FC<IProps> = ({
                   />
                 ) : (
                   <QuizRadioGroup
+                    ref={quizRef}
                     questionData={quizData.questions[currentQuestionIndex]}
                     showAnswer={showAnswer}
                     handleSelection={handleSelection}
