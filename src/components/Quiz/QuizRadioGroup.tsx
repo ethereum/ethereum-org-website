@@ -71,7 +71,15 @@ const QuizRadioGroup: React.FC<IProps> = ({
     // Render CustomRadio component
     return (
       <chakra.label {...htmlProps} cursor="pointer" data-group w="100%">
-        <input {...getInputProps({})} hidden />
+        <input
+          {...getInputProps({ "aria-label": label })}
+          style={{
+            position: "absolute",
+            opacity: 0,
+            width: 0,
+            height: 0,
+          }}
+        />
         <Flex
           {...getCheckboxProps()}
           w="100%"
