@@ -83,10 +83,12 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   const contextState = {
     status: quizStatus,
     next: nextQuiz,
-    score: userStats.score,
     quizKey: currentQuiz,
-    average: userStats.average,
-    completed: userStats.completed,
+    userStats: {
+      score: userStats.score,
+      average: userStats.average,
+      completed: userStats.completed,
+    },
     setUserStats: setUserStats,
   }
 

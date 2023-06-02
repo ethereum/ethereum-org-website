@@ -17,17 +17,14 @@ export const getNumberOfCompletedQuizzes = (quizzes: CompletedQuizzes) =>
     .filter((v) => v).length
 
 export const updateUserStats = ({
-  average,
-  completed,
-  numberOfCorrectAnswers,
   quizKey,
   quizScore,
+  numberOfCorrectAnswers,
+  userStats,
   setUserStats,
-  userScore,
 }) => {
-  const userStats = JSON.parse(localStorage.getItem(USER_STATS_KEY)!)
+  const { score: userScore, average, completed } = userStats
   const completedQuizzes = JSON.parse(completed)
-
   // Get previous score on quiz to compare on retry, if previous score is higher then keep it
   const lastScore = completedQuizzes[quizKey][1]
   // Update user score, average and save to local storage

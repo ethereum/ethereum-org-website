@@ -30,24 +30,16 @@ const QuizSummary: React.FC<IProps> = ({
   const valueStyles = { fontWeight: "700", mb: 2 }
   const labelStyles = { fontSize: "sm", m: 0, color: "disabled" }
 
-  const {
-    score: userScore,
-    quizKey,
-    average,
-    completed,
-    setUserStats,
-  } = useContext(QuizzesHubContext)
+  const { quizKey, userStats, setUserStats } = useContext(QuizzesHubContext)
 
   // QuizSummary is rendered when user has finished the quiz, proper time to update the stats
   useEffect(() => {
     updateUserStats({
-      average,
-      completed,
-      numberOfCorrectAnswers,
       quizKey,
       quizScore,
+      numberOfCorrectAnswers,
+      userStats,
       setUserStats,
-      userScore,
     })
   }, [])
 

@@ -42,7 +42,9 @@ const handleShare = ({ score, total }: QuizShareStats) => {
 }
 
 const QuizzesStats: React.FC = () => {
-  const { score: userScore, completed, average } = useContext(QuizzesHubContext)
+  const {
+    userStats: { score: userScore, completed, average },
+  } = useContext(QuizzesHubContext)
   const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(
     JSON.parse(completed)
   )

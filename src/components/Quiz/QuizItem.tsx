@@ -17,7 +17,9 @@ import allQuizzesData from "../../data/quizzes"
 
 const QuizItem: React.FC<QuizzesListItem> = (props) => {
   const { id, level, next, quizHandler, nextHandler, modalHandler } = props
-  const { completed } = useContext(QuizzesHubContext)
+  const {
+    userStats: { completed },
+  } = useContext(QuizzesHubContext)
   const numberOfQuestions = allQuizzesData[id].questions.length
   const isCompleted = JSON.parse(completed)[id][0]
 
