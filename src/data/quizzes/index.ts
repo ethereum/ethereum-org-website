@@ -52,7 +52,7 @@ export const ethereumBasicsQuizzes: QuizzesSection[] = [
   },
   {
     id: "wallets",
-    title: "What is a Wallet?",
+    title: "What is a wallet?",
     level: "beginner",
     next: "web3",
   },
