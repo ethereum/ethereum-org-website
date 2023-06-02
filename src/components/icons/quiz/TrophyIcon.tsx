@@ -8,6 +8,7 @@ export const TrophyIcon = createIcon({
   defaultProps: {
     width: "28px",
     height: "28px",
+    "aria-hidden": true,
     ...commonIconDefaultProps,
   },
   path: [

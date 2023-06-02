@@ -282,7 +282,6 @@ const QuizWidget: React.FC<IProps> = ({
   const AnswerIcon = () => {
     const commonProps = {
       color: "neutral",
-      "aria-hidden": true,
     }
 
     if (!showAnswer) {

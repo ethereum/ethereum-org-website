@@ -7,6 +7,7 @@ export const StarConfettiIcon = createIcon({
   defaultProps: {
     width: "185px",
     height: "119px",
+    "aria-hidden": true,
   },
   path: [
     <path
