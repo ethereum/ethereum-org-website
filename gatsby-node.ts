@@ -98,12 +98,15 @@ const checkIsPageOutdated = async (
 
   const joinedFilepath = filePath.join("-")
   const srcPath = path.resolve(`src/intl/${lang}/page-${joinedFilepath}.json`)
-  const englishPath = path.resolve(`src/intl/en/page-${joinedFilepath}.json`)
+  const englishPath = path.resolve(
+    `src/intl/${defaultLanguage}/page-${joinedFilepath}.json`
+  )
 
   // If no file exists, default to english
   if (!fs.existsSync(srcPath)) {
     return {
-      isOutdated: true,
+      // Consider always defaultLanguage paths as updated
+      isOutdated: lang !== defaultLanguage,
       isContentEnglish: true,
     }
   } else {
