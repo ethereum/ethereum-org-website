@@ -16,7 +16,7 @@ import { QuizzesListItem } from "../../types"
 import allQuizzesData from "../../data/quizzes"
 
 const QuizItem: React.FC<QuizzesListItem> = (props) => {
-  const { id, level, next, quizHandler, nextHandler, modalHandler } = props
+  const { id, level, quizHandler, modalHandler } = props
   const {
     userStats: { completed },
   } = useContext(QuizzesHubContext)
@@ -27,7 +27,6 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
 
   const handleStart = () => {
     quizHandler(id)
-    nextHandler(next)
     modalHandler(true)
 
     trackCustomEvent({

@@ -8,14 +8,12 @@ import { QuizzesSection } from "../../types"
 interface IProps {
   content: Array<QuizzesSection>
   quizHandler: (id: string) => void
-  nextHandler: (next?: string) => void
   modalHandler: (isModalOpen: boolean) => void
 }
 
 const QuizzesList: React.FC<IProps> = ({
   content,
   quizHandler,
-  nextHandler,
   modalHandler,
 }) => (
   <OrderedList m={0} listStyleType="none" sx={{ counterReset: "list-counter" }}>
@@ -29,7 +27,6 @@ const QuizzesList: React.FC<IProps> = ({
           level={level}
           next={next}
           quizHandler={quizHandler}
-          nextHandler={nextHandler}
           modalHandler={modalHandler}
         />
       )

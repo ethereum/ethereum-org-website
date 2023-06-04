@@ -61,7 +61,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   const [currentQuiz, setCurrentQuiz] = useState<string | undefined>(
     INITIAL_QUIZ
   )
-  const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
   // Read initial data from localStorage if available
   const [userStats, setUserStats] = useLocalStorage<UserStats>(
@@ -82,7 +81,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
   const contextState = {
     status: quizStatus,
-    next: nextQuiz,
     quizKey: currentQuiz,
     userStats: {
       score: userStats.score,
@@ -106,7 +104,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         <QuizzesModal isOpen={isOpen} onClose={onClose}>
           <QuizWidget
             quizKey={currentQuiz}
-            nextHandler={setCurrentQuiz}
+            currentHandler={setCurrentQuiz}
             statusHandler={setQuizStatus}
             isStandaloneQuiz={false}
           />
@@ -135,7 +133,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 <QuizzesList
                   content={ethereumBasicsQuizzes}
                   quizHandler={setCurrentQuiz}
-                  nextHandler={setNextQuiz}
                   modalHandler={onOpen}
                 />
               </Box>
@@ -155,7 +152,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 <QuizzesList
                   content={usingEthereumQuizzes}
                   quizHandler={setCurrentQuiz}
-                  nextHandler={setNextQuiz}
                   modalHandler={onOpen}
                 />
               </Box>

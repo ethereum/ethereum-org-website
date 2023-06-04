@@ -4,7 +4,6 @@ import { QuizStatus, UserStats } from "../../types"
 
 interface ContextState {
   status: QuizStatus
-  next?: string
   quizKey?: string
   userStats: UserStats
   setUserStats: (stats: UserStats) => void
@@ -12,7 +11,6 @@ interface ContextState {
 
 const INITIAL_CONTEXT_STATE: ContextState = {
   status: "neutral",
-  next: undefined,
   quizKey: undefined,
   userStats: {
     score: 0,
