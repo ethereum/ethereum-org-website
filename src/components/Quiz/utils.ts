@@ -30,9 +30,10 @@ export const updateUserStats = ({
   quizKey,
   quizScore,
   numberOfCorrectAnswers,
-  userStats,
   setUserStats,
 }) => {
+  // Read userStats from localStorage as quiz could be standalone (out of Quiz Hub page)
+  const userStats = JSON.parse(localStorage.getItem(USER_STATS_KEY)!)
   const { score: userScore, average, completed } = userStats
   const completedQuizzes = JSON.parse(completed)
   // Get previous score on quiz to compare on retry, if previous score is higher then keep it

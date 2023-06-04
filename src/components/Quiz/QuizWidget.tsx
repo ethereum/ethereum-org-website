@@ -1,4 +1,10 @@
-import React, { useEffect, useState, useMemo, useCallback } from "react"
+import React, {
+  useEffect,
+  useState,
+  useMemo,
+  useCallback,
+  useContext,
+} from "react"
 import {
   Box,
   Center,
@@ -27,9 +33,16 @@ import {
   TrophyIcon,
 } from "../icons/quiz"
 
+import { QuizzesHubContext } from "./context"
+
 import { trackCustomEvent } from "../../utils/matomo"
 
-import { PASSING_QUIZ_SCORE, PROGRESS_BAR_GAP } from "../../constants"
+import {
+  PASSING_QUIZ_SCORE,
+  PROGRESS_BAR_GAP,
+  USER_STATS_KEY,
+} from "../../constants"
+import { INITIAL_USER_STATS } from "../../pages/quizzes"
 
 import { getNextQuiz } from "./utils"
 
@@ -72,7 +85,17 @@ const QuizWidget: React.FC<IProps> = ({
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
+  const { setUserStats } = useContext(QuizzesHubContext)
+
   useEffect(() => {
+    // If quiz is standalone (out of Quiz Hub page),
+    // stats required to be initialized on localStorage first
+    const item = window.localStorage.getItem(USER_STATS_KEY)
+
+    if (item === null) {
+      localStorage.setItem(USER_STATS_KEY, JSON.stringify(INITIAL_USER_STATS))
+    }
+
     setNextQuiz(getNextQuiz(quizKey))
   }, [quizKey])
 
@@ -410,12 +433,16 @@ const QuizWidget: React.FC<IProps> = ({
               {/* Quiz main body */}
               <Center>
                 {showResults ? (
+                  // QuizSummary is receiving quizKey & setUserStats as props as it can be rendered on
+                  // other pages without access to the Context values defined on /quizzes
                   <QuizSummary
+                    quizKey={quizKey!}
                     numberOfCorrectAnswers={numberOfCorrectAnswers}
                     isPassingScore={isPassingScore}
                     questionCount={quizData.questions.length}
                     ratioCorrect={ratioCorrect}
                     quizScore={quizScore}
+                    setUserStats={setUserStats}
                   />
                 ) : (
                   <QuizRadioGroup
