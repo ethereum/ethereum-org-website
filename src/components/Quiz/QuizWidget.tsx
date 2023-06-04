@@ -1,10 +1,4 @@
-import React, {
-  useEffect,
-  useState,
-  useMemo,
-  useCallback,
-  useContext,
-} from "react"
+import React, { useEffect, useState, useMemo, useCallback } from "react"
 import {
   Box,
   Center,
@@ -26,8 +20,6 @@ import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
 
-import { QuizzesHubContext } from "./context"
-
 import {
   CorrectIcon,
   IncorrectIcon,
@@ -37,7 +29,9 @@ import {
 
 import { trackCustomEvent } from "../../utils/matomo"
 
-import { PASSING_QUIZ_SCORE } from "../../constants"
+import { PASSING_QUIZ_SCORE, PROGRESS_BAR_GAP } from "../../constants"
+
+import { getNextQuiz } from "./utils"
 
 import {
   AnswerChoice,
@@ -53,7 +47,7 @@ import questionBank from "../../data/quizzes/questionBank"
 
 interface IProps {
   quizKey?: string
-  nextHandler: (next?: string) => void
+  currentHandler: (next?: string) => void
   statusHandler: (status: QuizStatus) => void
   maxQuestions?: number
   isStandaloneQuiz?: boolean
@@ -62,13 +56,14 @@ interface IProps {
 // TODO: Fix a11y keyboard tab stops
 const QuizWidget: React.FC<IProps> = ({
   quizKey,
-  nextHandler,
+  currentHandler,
   statusHandler,
   maxQuestions,
   isStandaloneQuiz = true,
 }) => {
   const { t } = useTranslation()
   const [quizData, setQuizData] = useState<Quiz | null>(null)
+  const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
     []
   )
@@ -77,9 +72,9 @@ const QuizWidget: React.FC<IProps> = ({
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  const PROGRESS_BAR_GAP = "4px"
-
-  const { next: nextQuiz } = useContext(QuizzesHubContext)
+  useEffect(() => {
+    setNextQuiz(getNextQuiz(quizKey))
+  }, [quizKey])
 
   const hasNextQuiz = !isStandaloneQuiz && !!nextQuiz
   const finishedQuiz =
@@ -269,7 +264,9 @@ const QuizWidget: React.FC<IProps> = ({
     }
   }
 
-  const handleNextQuiz = () => nextHandler(nextQuiz)
+  const handleNextQuiz = () => {
+    currentHandler(nextQuiz)
+  }
 
   const AnswerIcon = () => {
     const commonProps = {

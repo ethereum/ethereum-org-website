@@ -2,7 +2,10 @@ import { USER_STATS_KEY } from "../../constants"
 
 import { CompletedQuizzes, QuizShareStats } from "../../types"
 
-import allQuizzesData from "../../data/quizzes"
+import allQuizzesData, {
+  ethereumBasicsQuizzes,
+  usingEthereumQuizzes,
+} from "../../data/quizzes"
 
 export const getTotalQuizzesPoints = () =>
   Object.values(allQuizzesData)
@@ -15,6 +18,13 @@ export const getNumberOfCompletedQuizzes = (quizzes: CompletedQuizzes) =>
   Object.values(quizzes)
     .map((v) => v[0])
     .filter((v) => v).length
+
+export const getNextQuiz = (currentQuiz?: string) => {
+  const allQuizzes = [...ethereumBasicsQuizzes, ...usingEthereumQuizzes]
+  const nextQuiz = allQuizzes.find((quiz) => quiz.id === currentQuiz)
+
+  return nextQuiz ? nextQuiz.next : undefined
+}
 
 export const updateUserStats = ({
   quizKey,
