@@ -65,7 +65,7 @@ const Divider = () => (
   />
 )
 const baseHeadingStyle: HeadingProps = {
-  fontFamily: "monospace",
+  fontFamily: "mono",
   textTransform: "uppercase",
   fontWeight: "bold",
 }
