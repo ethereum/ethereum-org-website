@@ -133,7 +133,6 @@ export type QuizzesSection = {
 
 export type QuizzesListItem = QuizzesSection & {
   quizHandler: (id: string) => void
-  nextHandler: (next?: string) => void
   modalHandler: (isModalOpen: boolean) => void
 }
 
