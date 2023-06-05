@@ -163,7 +163,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 bg="backgroundHighlight"
                 borderRadius={{ base: "none", lg: "lg" }}
                 border="none"
-                p={{ base: 8, lg: 4 }}
+                p={8}
               >
                 <Stack mb={{ base: 4, xl: 0 }}>
                   <Text
