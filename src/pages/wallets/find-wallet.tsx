@@ -9,6 +9,7 @@ import {
   Center,
   Heading,
   useTheme,
+  SkipNavLink,
 } from "@chakra-ui/react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -37,6 +38,9 @@ import { getImage } from "../../utils/image"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 import type { ChildOnlyProp } from "../../types"
+
+export const COMPARE_FEATURES_SKIP_LINK = "compare-features"
+export const FILTERED_RESULTS_SKIP_LINK = "filtered-results"
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
@@ -199,6 +203,15 @@ const FindWalletPage = ({ data, location }) => {
           }}
         />
       </Flex>
+      <Box w="full">
+        {/* Skip Nav Links to the feature comparison dropdowns and to the filtered list */}
+        <SkipNavLink id={COMPARE_FEATURES_SKIP_LINK} zIndex="skipLink">
+          Skip to compare features
+        </SkipNavLink>
+        <SkipNavLink id={FILTERED_RESULTS_SKIP_LINK} zIndex="skipLink">
+          Skip to filtered results
+        </SkipNavLink>
+      </Box>
       <Box
         position="sticky"
         top="76px"

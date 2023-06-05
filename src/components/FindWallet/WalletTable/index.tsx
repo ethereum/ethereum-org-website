@@ -21,6 +21,7 @@ import {
   ListItem,
   SimpleGrid,
   Text,
+  SkipNavContent,
 } from "@chakra-ui/react"
 
 // Components
@@ -38,6 +39,10 @@ import { useWalletTable } from "./useWalletTable"
 import { trackCustomEvent } from "../../../utils/matomo"
 import { getImage } from "../../../utils/image"
 import { WalletData } from "../../../data/wallets/wallet-data"
+import {
+  COMPARE_FEATURES_SKIP_LINK,
+  FILTERED_RESULTS_SKIP_LINK,
+} from "../../../pages/wallets/find-wallet"
 
 const ChakraSelect = chakra((props: { className?: string }) => (
   <Select {...props} />
@@ -212,227 +217,222 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
   return (
     <Box w="full">
       {/* Feature comparison dropdowns */}
-      <SimpleGrid
-        bg="background"
-        borderBottom="1px"
-        borderColor="primary"
-        fontSize="0.9rem"
-        fontWeight="normal"
-        templateColumns={{
-          base: "auto",
-          sm: "60% auto 0% 0% 5%",
-          md: "40% auto auto auto 5%",
-        }}
-        w="full"
-        rowGap={{ base: 4, sm: 0 }}
-        columnGap={2}
-        alignItems="center"
-        p={2}
-        position="sticky"
-        top={0}
-        zIndex="docked"
-        sx={{
-          "& > *": {
-            "&:nth-of-type(2)": {
-              display: { base: "flex", sm: "revert" },
-              alignItems: "center",
-              gap: 4,
+      <SkipNavContent id={COMPARE_FEATURES_SKIP_LINK}>
+        <SimpleGrid
+          bg="background"
+          borderBottom="1px"
+          borderColor="primary"
+          fontSize="0.9rem"
+          fontWeight="normal"
+          templateColumns={{
+            base: "auto",
+            sm: "60% auto 0% 0% 5%",
+            md: "40% auto auto auto 5%",
+          }}
+          w="full"
+          rowGap={{ base: 4, sm: 0 }}
+          columnGap={2}
+          alignItems="center"
+          p={2}
+          position="sticky"
+          top={0}
+          zIndex="docked"
+          sx={{
+            "& > *": {
+              "&:nth-of-type(2)": {
+                display: { base: "flex", sm: "revert" },
+                alignItems: "center",
+                gap: 4,
+              },
+              "&:nth-of-type(3), &:nth-of-type(4)": {
+                hideBelow: "md",
+              },
             },
-            "&:nth-of-type(3), &:nth-of-type(4)": {
-              hideBelow: "md",
-            },
-          },
-        }}
-      >
-        <Box textAlign="center">
-          {filteredWallets.length === walletCardData.length ? (
-            <Text as="span">
-              {t("page-find-wallet-showing-all-wallets")} (
-              <strong>{walletCardData.length}</strong>)
-            </Text>
-          ) : (
-            <Text as="span">
-              {t("page-find-wallet-showing")}{" "}
-              <strong>
-                {filteredWallets.length} / {walletCardData.length}
-              </strong>{" "}
-              {t("page-find-wallet-wallets")}
-            </Text>
-          )}
-        </Box>
-        <Box>
-          <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
-            {t("page-find-wallet-choose-features")}
-          </Text>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setFirstFeatureSelect, firstCol)
-            }}
-            defaultValue={firstFeatureSelect}
-            isSearchable={false}
-          />
-        </Box>
-        <Box>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setSecondFeatureSelect, secondCol)
-            }}
-            defaultValue={secondFeatureSelect}
-            isSearchable={false}
-          />
-        </Box>
-        <Box>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setThirdFeatureSelect, thirdCol)
-            }}
-            defaultValue={thirdFeatureSelect}
-            isSearchable={false}
-          />
-        </Box>
-      </SimpleGrid>
-      {/* Filtered Wallet List */}
-      <Accordion as={List} m={0} allowMultiple>
-        {filteredWallets.map((wallet, idx) => {
-          const deviceLabels: Array<string> = []
+          }}
+        >
+          <Box textAlign="center" aria-hidden>
+            {filteredWallets.length === walletCardData.length ? (
+              <Text as="span">
+                {t("page-find-wallet-showing-all-wallets")} (
+                <strong>{walletCardData.length}</strong>)
+              </Text>
+            ) : (
+              <Text as="span">
+                {t("page-find-wallet-showing")}{" "}
+                <strong>
+                  {filteredWallets.length} / {walletCardData.length}
+                </strong>{" "}
+                {t("page-find-wallet-wallets")}
+              </Text>
+            )}
+          </Box>
 
-          wallet.ios && deviceLabels.push(t("page-find-wallet-iOS"))
-          wallet.android && deviceLabels.push(t("page-find-wallet-android"))
-          wallet.linux && deviceLabels.push(t("page-find-wallet-linux"))
-          wallet.windows && deviceLabels.push(t("page-find-wallet-windows"))
-          wallet.macOS && deviceLabels.push(t("page-find-wallet-macOS"))
-          wallet.chromium && deviceLabels.push(t("page-find-wallet-chromium"))
-          wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
-          wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
-          return (
-            <AccordionItem
-              key={idx}
-              as={ListItem}
-              borderTop="none"
-              borderBottom="1px"
-              borderColor="lightBorder"
-              m={0}
-              _hover={{ bg: "boxShadow", transition: "0.5s all" }}
-              sx={{
-                h2: {
-                  m: 0,
+          <Box>
+            <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
+              {t("page-find-wallet-choose-features")}
+            </Text>
+            <StyledSelect
+              className="react-select-container"
+              classNamePrefix="react-select"
+              options={[
+                {
+                  label: t("page-find-choose-to-compare"),
+                  options: [...filteredFeatureDropdownItems],
                 },
+              ]}
+              onChange={(selectedOption) => {
+                updateDropdown(selectedOption, setFirstFeatureSelect, firstCol)
               }}
-            >
-              <h2>
-                <AccordionButton
-                  onClick={() => {
-                    updateMoreInfo(wallet.key)
-                    trackCustomEvent({
-                      eventCategory: "WalletMoreInfo",
-                      eventAction: `More info wallet`,
-                      eventName: `More info ${wallet.name} ${wallet.moreInfo}`,
-                    })
-                  }}
-                  py={6}
-                  px={{ base: 4, lg: 1 }}
-                >
-                  <SimpleGrid
-                    templateColumns={{
-                      base: "60% auto 0% 0% 5%",
-                      md: "40% auto auto auto 5%",
+              defaultValue={firstFeatureSelect}
+              isSearchable={false}
+            />
+          </Box>
+          <Box>
+            <StyledSelect
+              className="react-select-container"
+              classNamePrefix="react-select"
+              options={[
+                {
+                  label: t("page-find-choose-to-compare"),
+                  options: [...filteredFeatureDropdownItems],
+                },
+              ]}
+              onChange={(selectedOption) => {
+                updateDropdown(
+                  selectedOption,
+                  setSecondFeatureSelect,
+                  secondCol
+                )
+              }}
+              defaultValue={secondFeatureSelect}
+              isSearchable={false}
+            />
+          </Box>
+          <Box>
+            <StyledSelect
+              className="react-select-container"
+              classNamePrefix="react-select"
+              options={[
+                {
+                  label: t("page-find-choose-to-compare"),
+                  options: [...filteredFeatureDropdownItems],
+                },
+              ]}
+              onChange={(selectedOption) => {
+                updateDropdown(selectedOption, setThirdFeatureSelect, thirdCol)
+              }}
+              defaultValue={thirdFeatureSelect}
+              isSearchable={false}
+            />
+          </Box>
+        </SimpleGrid>
+      </SkipNavContent>
+      <SkipNavContent id={FILTERED_RESULTS_SKIP_LINK}>
+        {/* Filtered Wallet List */}
+        <Accordion as={List} m={0} allowMultiple>
+          {filteredWallets.map((wallet, idx) => {
+            const deviceLabels: Array<string> = []
+
+            wallet.ios && deviceLabels.push(t("page-find-wallet-iOS"))
+            wallet.android && deviceLabels.push(t("page-find-wallet-android"))
+            wallet.linux && deviceLabels.push(t("page-find-wallet-linux"))
+            wallet.windows && deviceLabels.push(t("page-find-wallet-windows"))
+            wallet.macOS && deviceLabels.push(t("page-find-wallet-macOS"))
+            wallet.chromium && deviceLabels.push(t("page-find-wallet-chromium"))
+            wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
+            wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
+            return (
+              <AccordionItem
+                key={idx}
+                as={ListItem}
+                borderTop="none"
+                borderBottom="1px"
+                borderColor="lightBorder"
+                m={0}
+                _hover={{ bg: "boxShadow", transition: "0.5s all" }}
+                sx={{
+                  h2: {
+                    m: 0,
+                  },
+                }}
+              >
+                <h2>
+                  <AccordionButton
+                    onClick={() => {
+                      updateMoreInfo(wallet.key)
+                      trackCustomEvent({
+                        eventCategory: "WalletMoreInfo",
+                        eventAction: `More info wallet`,
+                        eventName: `More info ${wallet.name} ${wallet.moreInfo}`,
+                      })
                     }}
-                    w="full"
-                    sx={{
-                      ".chakra-text": {
-                        m: 0,
-                        textAlign: "initial",
-                      },
-                    }}
+                    py={6}
+                    px={{ base: 4, lg: 1 }}
                   >
-                    <HStack
-                      spacing={4}
-                      pl="0.3rem"
+                    <SimpleGrid
+                      templateColumns={{
+                        base: "60% auto 0% 0% 5%",
+                        md: "40% auto auto auto 5%",
+                      }}
+                      w="full"
                       sx={{
-                        "& .chakra-text": {
-                          _first: {
-                            fontSize: "1.2rem",
-                            fontWeight: "bold",
-                          },
-                          _notFirst: {
-                            mt: "0.1rem",
-                            fontSize: "0.9rem",
-                            lineHeight: 4,
-                          },
+                        ".chakra-text": {
+                          m: 0,
+                          textAlign: "initial",
                         },
                       }}
                     >
-                      <Box>
-                        <Img
-                          as={GatsbyImage}
-                          image={getImage(data[wallet.image_name])!}
-                          alt=""
-                          objectFit="contain"
-                          boxSize="56px"
-                        />
-                      </Box>
-                      <Box>
-                        <Text>{wallet.name}</Text>
-                        <Text
-                          hideBelow="sm"
-                          color="text200"
-                          fontSize="0.7rem"
-                          lineHeight="0.85rem"
-                        >
-                          {deviceLabels.join(" | ")}
-                        </Text>
-                        {deviceLabels.map((label) => (
+                      <HStack
+                        spacing={4}
+                        pl="0.3rem"
+                        sx={{
+                          "& .chakra-text": {
+                            _first: {
+                              fontSize: "1.2rem",
+                              fontWeight: "bold",
+                            },
+                            _notFirst: {
+                              mt: "0.1rem",
+                              fontSize: "0.9rem",
+                              lineHeight: 4,
+                            },
+                          },
+                        }}
+                      >
+                        <Box>
+                          <Img
+                            as={GatsbyImage}
+                            image={getImage(data[wallet.image_name])!}
+                            alt=""
+                            objectFit="contain"
+                            boxSize="56px"
+                          />
+                        </Box>
+                        <Box>
+                          <Text>{wallet.name}</Text>
                           <Text
-                            key={label}
-                            hideFrom="md"
+                            hideBelow="sm"
+                            color="text200"
                             fontSize="0.7rem"
                             lineHeight="0.85rem"
-                            color="text200"
                           >
-                            {label}
+                            {deviceLabels.join(" | ")}
                           </Text>
-                        ))}
-                        <Box mt={4}>
-                          <Flex gap="0.8rem">
-                            <SocialLink
-                              to={wallet.url}
-                              hideArrow
-                              customEventOptions={{
-                                eventCategory: "WalletExternalLinkList",
-                                eventAction: `Go to wallet`,
-                                eventName: `${wallet.name} ${idx}`,
-                                eventValue: JSON.stringify(filters),
-                              }}
+                          {deviceLabels.map((label) => (
+                            <Text
+                              key={label}
+                              hideFrom="md"
+                              fontSize="0.7rem"
+                              lineHeight="0.85rem"
+                              color="text200"
                             >
-                              <Icon as={FaGlobe} fontSize="2xl" />
-                            </SocialLink>
-                            {wallet.twitter && (
+                              {label}
+                            </Text>
+                          ))}
+                          <Box mt={4}>
+                            <Flex gap="0.8rem">
                               <SocialLink
-                                to={wallet.twitter}
+                                to={wallet.url}
                                 hideArrow
                                 customEventOptions={{
                                   eventCategory: "WalletExternalLinkList",
@@ -441,67 +441,81 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                                   eventValue: JSON.stringify(filters),
                                 }}
                               >
-                                <Icon
-                                  as={FaTwitter}
-                                  color="#1da1f2"
-                                  fontSize="2xl"
-                                />
+                                <Icon as={FaGlobe} fontSize="2xl" />
                               </SocialLink>
-                            )}
-                            {wallet.discord && (
-                              <SocialLink
-                                to={wallet.discord}
-                                hideArrow
-                                customEventOptions={{
-                                  eventCategory: "WalletExternalLinkList",
-                                  eventAction: `Go to wallet`,
-                                  eventName: `${wallet.name} ${idx}`,
-                                  eventValue: JSON.stringify(filters),
-                                }}
-                              >
-                                <Icon
-                                  as={FaDiscord}
-                                  color="#7289da"
-                                  fontSize="2xl"
-                                />
-                              </SocialLink>
-                            )}
-                          </Flex>
+                              {wallet.twitter && (
+                                <SocialLink
+                                  to={wallet.twitter}
+                                  hideArrow
+                                  customEventOptions={{
+                                    eventCategory: "WalletExternalLinkList",
+                                    eventAction: `Go to wallet`,
+                                    eventName: `${wallet.name} ${idx}`,
+                                    eventValue: JSON.stringify(filters),
+                                  }}
+                                >
+                                  <Icon
+                                    as={FaTwitter}
+                                    color="#1da1f2"
+                                    fontSize="2xl"
+                                  />
+                                </SocialLink>
+                              )}
+                              {wallet.discord && (
+                                <SocialLink
+                                  to={wallet.discord}
+                                  hideArrow
+                                  customEventOptions={{
+                                    eventCategory: "WalletExternalLinkList",
+                                    eventAction: `Go to wallet`,
+                                    eventName: `${wallet.name} ${idx}`,
+                                    eventValue: JSON.stringify(filters),
+                                  }}
+                                >
+                                  <Icon
+                                    as={FaDiscord}
+                                    color="#7289da"
+                                    fontSize="2xl"
+                                  />
+                                </SocialLink>
+                              )}
+                            </Flex>
+                          </Box>
                         </Box>
-                      </Box>
-                    </HStack>
-                    <FeatureIconCol
-                      className={firstCol}
-                      featSelect={wallet[firstFeatureSelect.filterKey!]}
-                    />
-                    <FeatureIconCol
-                      className={secondCol}
-                      featSelect={wallet[secondFeatureSelect.filterKey!]}
-                    />
-                    <FeatureIconCol
-                      className={thirdCol}
-                      featSelect={wallet[thirdFeatureSelect.filterKey!]}
-                    />
-                    <AccordionIcon
-                      color="primary"
-                      fontSize="2xl"
-                      placeSelf="center"
-                    />
-                  </SimpleGrid>
-                </AccordionButton>
-              </h2>
-              <AccordionPanel p={0} pr={4}>
-                <WalletMoreInfo
-                  wallet={wallet}
-                  filters={filters}
-                  idx={idx}
-                  featureDropdownItems={featureDropdownItems}
-                />
-              </AccordionPanel>
-            </AccordionItem>
-          )
-        })}
-      </Accordion>
+                      </HStack>
+                      <FeatureIconCol
+                        className={firstCol}
+                        featSelect={wallet[firstFeatureSelect.filterKey!]}
+                      />
+                      <FeatureIconCol
+                        className={secondCol}
+                        featSelect={wallet[secondFeatureSelect.filterKey!]}
+                      />
+                      <FeatureIconCol
+                        className={thirdCol}
+                        featSelect={wallet[thirdFeatureSelect.filterKey!]}
+                      />
+                      <AccordionIcon
+                        color="primary"
+                        fontSize="2xl"
+                        placeSelf="center"
+                      />
+                    </SimpleGrid>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel p={0} pr={4}>
+                  <WalletMoreInfo
+                    wallet={wallet}
+                    filters={filters}
+                    idx={idx}
+                    featureDropdownItems={featureDropdownItems}
+                  />
+                </AccordionPanel>
+              </AccordionItem>
+            )
+          })}
+        </Accordion>
+      </SkipNavContent>
     </Box>
   )
 }
