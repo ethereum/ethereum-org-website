@@ -126,6 +126,15 @@
     "endDate": "2023-06-11"
   },
   {
+    "title": "ETHBrussels",
+    "to": "https://ethbrussels.com/",
+    "sponsor": null,
+    "location": "Brussels, Belgium",
+    "description": "ETHBrussels is a cozy hackathon in the capital of Europe. As part of the Brussels Blockchain Week, dozens of coders learn and devise local solutions on the Ethereum stack. Located in a coding school on top of the Brussels Central Station.",
+    "startDate": "2023-06-09",
+    "endDate": "2023-06-11"
+  },
+  {
     "title": "ETHGlobal Paris",
     "to": "https://ethglobal.com/events/paris2023",
     "sponsor": null,
@@ -142,6 +151,15 @@
     "description": "Solutions For Disempowered Economies. We support the Blockchain revolution and we are establishing a movement to promote its use out of love for our African Continent and the nations that make it up.",
     "startDate": "2023-08-26",
     "endDate": "2023-08-27"
+  },
+    {
+    "title": "ETH Montréal",
+    "to": "https://ethmontreal.xyz",
+    "sponsor": null,
+    "location": "Montréal, Canada",
+    "description": "Conference and hackathon with the aim to onboard to Ethereum the students and junior devs from Montréal's world class universities",
+    "startDate": "2023-09-18",
+    "endDate": "2023-09-21"
   },
   {
     "title": "ETHGlobal New York",
@@ -295,5 +313,14 @@
     "description": "EthereumSP 2023 is a four-day event to educate and boost the Brazilian Web3 community. Participants will have free access to advanced workshops, bootcamps, and an international Hackathon.",
     "startDate": "2023-06-22",
     "endDate": "2023-06-25"
+  },
+  {
+    "title": "ETHGlobal Istanbul",
+    "to": "https://ethglobal.com/events/istanbul",
+    "sponsor": null,
+    "location": "Istanbul, Türkiye",
+    "description": "ETHGlobal Istanbul is going to be an event full of hacking, networking, side events and fun activites.",
+    "startDate": "2023-11-17",
+    "endDate": "2023-11-19"
   }
 ]

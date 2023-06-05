@@ -26,7 +26,6 @@ lang: zh
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 关注以太坊发展的 Discord 社区</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord - </Link>专注于为以太坊开发提供项目管理支持的社区</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org 网站团队</Link> - 拜访社区中的团队和成员并与他们讨论 ethereum.org 的网络开发和设计</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> - 专注于学习 web3 开发的社区 </SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - web3 创作者社区，构建者、业界人士和以太坊爱好者在这里聚会。 我们热衷于 Web3 的开发、设计和文化。 我们一起来构建。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - Solidity 开发相关聊天 (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity 开发相关聊天 (Matrix)</SocialListItem>
