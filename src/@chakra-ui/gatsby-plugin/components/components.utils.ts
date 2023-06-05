@@ -3,6 +3,7 @@ import { merge } from "lodash"
 
 const {
   Accordion: accordionDefaultTheme,
+  Alert: alertDefaultTheme,
   Avatar: avatarDefaultTheme,
   Badge: badgeDefaultTheme,
   Breadcrumb: breadcrumbDefaultTheme,
@@ -30,6 +31,7 @@ const {
 
 export {
   accordionDefaultTheme,
+  alertDefaultTheme,
   avatarDefaultTheme,
   badgeDefaultTheme,
   breadcrumbDefaultTheme,

@@ -1,3 +1,4 @@
+import { Alert } from "./Alert"
 import { Badge } from "./Badge"
 import { Button } from "./Button"
 import { Link } from "./Link"
@@ -25,6 +26,7 @@ import {
 
 export default {
   Accordion: accordionDefaultTheme,
+  Alert,
   Avatar: avatarDefaultTheme,
   Badge,
   Breadcrumb: breadcrumbDefaultTheme,
