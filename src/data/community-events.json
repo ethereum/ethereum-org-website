@@ -126,6 +126,15 @@
     "endDate": "2023-06-11"
   },
   {
+    "title": "ETHBrussels",
+    "to": "https://ethbrussels.com/",
+    "sponsor": null,
+    "location": "Brussels, Belgium",
+    "description": "ETHBrussels is a cozy hackathon in the capital of Europe. As part of the Brussels Blockchain Week, dozens of coders learn and devise local solutions on the Ethereum stack. Located in a coding school on top of the Brussels Central Station.",
+    "startDate": "2023-06-09",
+    "endDate": "2023-06-11"
+  },
+  {
     "title": "ETHGlobal Paris",
     "to": "https://ethglobal.com/events/paris2023",
     "sponsor": null,
