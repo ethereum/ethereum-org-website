@@ -5,7 +5,6 @@ import {
   Flex,
   Grid,
   GridItem,
-  Icon,
   Progress,
   Stack,
   Text,
@@ -53,14 +52,12 @@ const QuizzesStats: React.FC = () => {
   const { language } = useI18next()
   const localeForNumbers = getLocaleForNumberFormat(language as Lang)
   const isRightToLeft = isLangRightToLeft(language as Lang)
-  const {
-    score: userScore,
-    completed,
-    average: userAverageScores,
-  } = useContext(QuizzesHubContext)
   const totalQuizzesNumber =
     ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
   const TOTAL_QUIZZES_POINTS = getTotalQuizzesPoints()
+  const {
+    userStats: { score: userScore, completed, average },
+  } = useContext(QuizzesHubContext)
   const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(
     JSON.parse(completed)
   )
@@ -109,6 +106,11 @@ const QuizzesStats: React.FC = () => {
   // Formatted user stats
   const formattedUserAverageScore = percentFormatter.format(normalizedAverage)
 
+  // These values are not fixed but calculated each time, can't be moved to /constants
+  const totalQuizzesNumber =
+    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
+  const totalQuizzesPoints = getTotalQuizzesPoints()
+
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
       <Stack mt={{ base: 0, lg: 12 }} gap={{ base: 8, lg: 4 }}>
@@ -118,7 +120,7 @@ const QuizzesStats: React.FC = () => {
           bg="backgroundHighlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
-          p={4}
+          p={{ base: 8, lg: 4 }}
           mb={-2}
         >
           <GridItem colSpan={{ base: 2, lg: 1 }} alignSelf="center" order={1}>
@@ -141,9 +143,9 @@ const QuizzesStats: React.FC = () => {
           >
             <Button
               variant="outline-color"
-              leftIcon={<Icon as={FaTwitter} />}
+              leftIcon={<FaTwitter />}
               onClick={() =>
-                handleShare({ score: userScore, total: TOTAL_QUIZZES_POINTS })
+                handleShare({ score: userScore, total: totalQuizzesPoints })
               }
               w={{ base: "full", lg: "auto" }}
               mt={{ base: 2, lg: 0 }}
@@ -165,12 +167,12 @@ const QuizzesStats: React.FC = () => {
                 <Text fontWeight="bold" fontSize="5xl" mb={0} color="body">
                   {userScore}
                   <Text as="span" color="bodyMedium">
-                    /{TOTAL_QUIZZES_POINTS}
+                    /{totalQuizzesPoints}
                   </Text>
                 </Text>
               </Flex>
 
-              <Progress value={userScore} />
+              <Progress value={(userScore / totalQuizzesPoints) * 100} />
 
               <Flex direction={{ base: "column", lg: "row" }}>
                 <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyMedium">
@@ -199,7 +201,7 @@ const QuizzesStats: React.FC = () => {
           bg="backgroundHighlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
-          p={4}
+          p={{ base: 8, lg: 4 }}
         >
           <Text color="body" fontWeight="bold" fontSize="xl" mb={0}>
             <Translation id="community-stats" />

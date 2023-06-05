@@ -2,7 +2,10 @@ import { USER_STATS_KEY } from "../../constants"
 
 import { CompletedQuizzes, QuizShareStats } from "../../types"
 
-import allQuizzesData from "../../data/quizzes"
+import allQuizzesData, {
+  ethereumBasicsQuizzes,
+  usingEthereumQuizzes,
+} from "../../data/quizzes"
 
 export const getTotalQuizzesPoints = () =>
   Object.values(allQuizzesData)
@@ -16,18 +19,23 @@ export const getNumberOfCompletedQuizzes = (quizzes: CompletedQuizzes) =>
     .map((v) => v[0])
     .filter((v) => v).length
 
+export const getNextQuiz = (currentQuiz?: string) => {
+  const allQuizzes = [...ethereumBasicsQuizzes, ...usingEthereumQuizzes]
+  const nextQuiz = allQuizzes.find((quiz) => quiz.id === currentQuiz)
+
+  return nextQuiz ? nextQuiz.next : undefined
+}
+
 export const updateUserStats = ({
-  average,
-  completed,
-  numberOfCorrectAnswers,
   quizKey,
   quizScore,
+  numberOfCorrectAnswers,
   setUserStats,
-  userScore,
 }) => {
+  // Read userStats from localStorage as quiz could be standalone (out of Quiz Hub page)
   const userStats = JSON.parse(localStorage.getItem(USER_STATS_KEY)!)
+  const { score: userScore, average, completed } = userStats
   const completedQuizzes = JSON.parse(completed)
-
   // Get previous score on quiz to compare on retry, if previous score is higher then keep it
   const lastScore = completedQuizzes[quizKey][1]
   // Update user score, average and save to local storage
@@ -61,14 +69,7 @@ export const updateUserStats = ({
   }
 }
 
-// TODO: track event on matomo
 export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
-  // if (!quizData || !window) return
-  //   trackCustomEvent({
-  //     eventCategory: "Quiz widget",
-  //     eventAction: "Other",
-  //     eventName: "Share results",
-  //   })
   const url = "https://ethereum.org/quizzes"
   const hashtags = ["ethereumquiz", "ethereum", "quiz"]
   const tweet =

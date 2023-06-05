@@ -26,8 +26,6 @@ import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
 
-import { QuizzesHubContext } from "./context"
-
 import {
   CorrectIcon,
   IncorrectIcon,
@@ -35,9 +33,18 @@ import {
   TrophyIcon,
 } from "../icons/quiz"
 
+import { QuizzesHubContext } from "./context"
+
 import { trackCustomEvent } from "../../utils/matomo"
 
-import { PASSING_QUIZ_SCORE } from "../../constants"
+import {
+  PASSING_QUIZ_SCORE,
+  PROGRESS_BAR_GAP,
+  USER_STATS_KEY,
+} from "../../constants"
+import { INITIAL_USER_STATS } from "../../pages/quizzes"
+
+import { getNextQuiz } from "./utils"
 
 import {
   AnswerChoice,
@@ -53,7 +60,7 @@ import questionBank from "../../data/quizzes/questionBank"
 
 interface IProps {
   quizKey?: string
-  nextHandler: (next?: string) => void
+  currentHandler: (next?: string) => void
   statusHandler: (status: QuizStatus) => void
   maxQuestions?: number
   isStandaloneQuiz?: boolean
@@ -62,13 +69,14 @@ interface IProps {
 // TODO: Fix a11y keyboard tab stops
 const QuizWidget: React.FC<IProps> = ({
   quizKey,
-  nextHandler,
+  currentHandler,
   statusHandler,
   maxQuestions,
   isStandaloneQuiz = true,
 }) => {
   const { t } = useTranslation()
   const [quizData, setQuizData] = useState<Quiz | null>(null)
+  const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
     []
   )
@@ -77,9 +85,19 @@ const QuizWidget: React.FC<IProps> = ({
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  const PROGRESS_BAR_GAP = "4px"
+  const { setUserStats } = useContext(QuizzesHubContext)
 
-  const { next: nextQuiz } = useContext(QuizzesHubContext)
+  useEffect(() => {
+    // If quiz is standalone (out of Quiz Hub page),
+    // stats required to be initialized on localStorage first
+    const item = window.localStorage.getItem(USER_STATS_KEY)
+
+    if (item === null) {
+      localStorage.setItem(USER_STATS_KEY, JSON.stringify(INITIAL_USER_STATS))
+    }
+
+    setNextQuiz(getNextQuiz(quizKey))
+  }, [quizKey])
 
   const hasNextQuiz = !isStandaloneQuiz && !!nextQuiz
   const finishedQuiz =
@@ -269,7 +287,9 @@ const QuizWidget: React.FC<IProps> = ({
     }
   }
 
-  const handleNextQuiz = () => nextHandler(nextQuiz)
+  const handleNextQuiz = () => {
+    currentHandler(nextQuiz)
+  }
 
   const AnswerIcon = () => {
     const commonProps = {
@@ -413,12 +433,16 @@ const QuizWidget: React.FC<IProps> = ({
               {/* Quiz main body */}
               <Center>
                 {showResults ? (
+                  // QuizSummary is receiving quizKey & setUserStats as props as it can be rendered on
+                  // other pages without access to the Context values defined on /quizzes
                   <QuizSummary
+                    quizKey={quizKey!}
                     numberOfCorrectAnswers={numberOfCorrectAnswers}
                     isPassingScore={isPassingScore}
                     questionCount={quizData.questions.length}
                     ratioCorrect={ratioCorrect}
                     quizScore={quizScore}
+                    setUserStats={setUserStats}
                   />
                 ) : (
                   <QuizRadioGroup

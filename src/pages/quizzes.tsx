@@ -1,5 +1,13 @@
 import React, { useState } from "react"
-import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  Stack,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { FaGithub } from "react-icons/fa"
@@ -23,7 +31,7 @@ import { trackCustomEvent } from "../utils/matomo"
 
 import { INITIAL_QUIZ, USER_STATS_KEY } from "../constants"
 
-import { CompletedQuizzes, QuizStatus } from "../types"
+import { CompletedQuizzes, QuizStatus, UserStats } from "../types"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,
@@ -36,7 +44,7 @@ const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
   allQuizzesData
 ).reduce((object, key) => ({ ...object, [key]: [false, 0] }), {})
 
-const INITIAL_USER_STATS = {
+export const INITIAL_USER_STATS: UserStats = {
   score: 0,
   average: [],
   completed: JSON.stringify(INITIAL_COMPLETED_QUIZZES),
@@ -53,16 +61,16 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
   const [currentQuiz, setCurrentQuiz] = useState<string | undefined>(
     INITIAL_QUIZ
   )
-  const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
   // Read initial data from localStorage if available
-  const [userStats, setUserStats] = useLocalStorage(
+  const [userStats, setUserStats] = useLocalStorage<UserStats>(
     USER_STATS_KEY,
     INITIAL_USER_STATS
   )
-  const [isModalOpen, setModalOpen] = useState(false)
+  const { isOpen, onClose, onOpen } = useDisclosure()
 
   const { t } = useTranslation()
+
   const heroContent = {
     title: <Translation id="quizzes-title" />,
     header: <Translation id="test-your-knowledge" />,
@@ -73,11 +81,12 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
   const contextState = {
     status: quizStatus,
-    next: nextQuiz,
-    score: userStats.score,
     quizKey: currentQuiz,
-    average: userStats.average,
-    completed: userStats.completed,
+    userStats: {
+      score: userStats.score,
+      average: userStats.average,
+      completed: userStats.completed,
+    },
     setUserStats: setUserStats,
   }
 
@@ -92,10 +101,10 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
       </Box>
 
       <QuizzesHubContext.Provider value={contextState}>
-        <QuizzesModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+        <QuizzesModal isOpen={isOpen} onClose={onClose}>
           <QuizWidget
             quizKey={currentQuiz}
-            nextHandler={setCurrentQuiz}
+            currentHandler={setCurrentQuiz}
             statusHandler={setQuizStatus}
             isStandaloneQuiz={false}
           />
@@ -124,8 +133,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 <QuizzesList
                   content={ethereumBasicsQuizzes}
                   quizHandler={setCurrentQuiz}
-                  nextHandler={setNextQuiz}
-                  modalHandler={setModalOpen}
+                  modalHandler={onOpen}
                 />
               </Box>
 
@@ -144,8 +152,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 <QuizzesList
                   content={usingEthereumQuizzes}
                   quizHandler={setCurrentQuiz}
-                  nextHandler={setNextQuiz}
-                  modalHandler={setModalOpen}
+                  modalHandler={onOpen}
                 />
               </Box>
 
@@ -156,7 +163,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 bg="backgroundHighlight"
                 borderRadius={{ base: "none", lg: "lg" }}
                 border="none"
-                p={4}
+                p={{ base: 8, lg: 4 }}
               >
                 <Stack mb={{ base: 4, xl: 0 }}>
                   <Text
@@ -174,7 +181,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 </Stack>
 
                 <ButtonLink
-                  to={"/contributing/learning-quizzes/"}
+                  to={"/contributing/quizzes/"}
                   variant="outline"
                   hideArrow
                   mt={0}

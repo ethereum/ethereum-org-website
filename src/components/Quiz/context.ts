@@ -4,21 +4,19 @@ import { QuizStatus, UserStats } from "../../types"
 
 interface ContextState {
   status: QuizStatus
-  next?: string
-  score: number
   quizKey?: string
-  average: number[]
-  completed: string
+  userStats: UserStats
   setUserStats: (stats: UserStats) => void
 }
 
 const INITIAL_CONTEXT_STATE: ContextState = {
   status: "neutral",
-  next: undefined,
-  score: 0,
   quizKey: undefined,
-  average: [],
-  completed: JSON.stringify({}),
+  userStats: {
+    score: 0,
+    average: [],
+    completed: JSON.stringify({}),
+  },
   setUserStats: () => {},
 }
 

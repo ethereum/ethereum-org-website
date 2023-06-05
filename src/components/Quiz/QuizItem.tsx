@@ -16,17 +16,10 @@ import { QuizzesListItem } from "../../types"
 import allQuizzesData from "../../data/quizzes"
 
 const QuizItem: React.FC<QuizzesListItem> = (props) => {
+  const { id, level, quizHandler, modalHandler } = props
   const {
-    num,
-    title,
-    id,
-    level,
-    next,
-    quizHandler,
-    nextHandler,
-    modalHandler,
-  } = props
-  const { completed } = useContext(QuizzesHubContext)
+    userStats: { completed },
+  } = useContext(QuizzesHubContext)
   const numberOfQuestions = allQuizzesData[id].questions.length
   const isCompleted = JSON.parse(completed)[id][0]
 
@@ -34,7 +27,6 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
 
   const handleStart = () => {
     quizHandler(id)
-    nextHandler(next)
     modalHandler(true)
 
     trackCustomEvent({
@@ -53,6 +45,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
       borderBottom="1px solid"
       borderColor="disabled"
       mb={0}
+      sx={{ counterIncrement: "list-counter" }}
     >
       <Flex
         justifyContent="space-between"
@@ -65,8 +58,11 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
               color={isCompleted ? "bodyMedium" : "text"}
               fontWeight="bold"
               mb={0}
+              _before={{
+                content: 'counter(list-counter) ". "',
+              }}
             >
-              {`${num}. ${title}`}
+              <Translation id={allQuizzesData[id].title} />
             </Text>
 
             {/* Show green tick if quizz was completed only */}
@@ -79,18 +75,12 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
           <Flex gap={3}>
             {/* number of questions - label */}
             <Tag
-              color="text"
-              bg="backgroundHighlight"
               label={t(`${numberOfQuestions} ${t("questions")}`)}
               ml={{ lg: -2 }}
             />
 
             {/* difficulty - label */}
-            <Tag
-              color="text"
-              bg="backgroundHighlight"
-              label={level.toUpperCase()}
-            />
+            <Tag label={level.toUpperCase()} />
           </Flex>
         </Stack>
 

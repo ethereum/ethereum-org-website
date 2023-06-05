@@ -127,15 +127,12 @@ type QuizLevel = "beginner" | "intermediate"
 
 export type QuizzesSection = {
   id: string
-  num: number
-  title: string
   level: QuizLevel
   next?: string
 }
 
 export type QuizzesListItem = QuizzesSection & {
   quizHandler: (id: string) => void
-  nextHandler: (next?: string) => void
   modalHandler: (isModalOpen: boolean) => void
 }
 
@@ -145,7 +142,7 @@ export type CompletedQuizzes = { [key: string]: [boolean, number] }
 
 export type UserStats = {
   score: number
-  average: number
+  average: number[]
   completed: string
 }
 
