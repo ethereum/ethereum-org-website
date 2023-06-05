@@ -181,7 +181,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 </Stack>
 
                 <ButtonLink
-                  to={"/contributing/learning-quizzes/"}
+                  to={"/contributing/quizzes/"}
                   variant="outline"
                   hideArrow
                   mt={0}
