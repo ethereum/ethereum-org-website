@@ -52,15 +52,17 @@ const QuizzesStats: React.FC = () => {
   const { language } = useI18next()
   const localeForNumbers = getLocaleForNumberFormat(language as Lang)
   const isRightToLeft = isLangRightToLeft(language as Lang)
-  const totalQuizzesNumber =
-    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
-  const TOTAL_QUIZZES_POINTS = getTotalQuizzesPoints()
   const {
     userStats: { score: userScore, completed, average },
   } = useContext(QuizzesHubContext)
   const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(
     JSON.parse(completed)
   )
+
+  // These values are not fixed but calculated each time, can't be moved to /constants
+  const totalQuizzesNumber =
+    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
+  const totalQuizzesPoints = getTotalQuizzesPoints()
 
   const computedAverage =
     userAverageScores.length > 0
@@ -105,11 +107,6 @@ const QuizzesStats: React.FC = () => {
 
   // Formatted user stats
   const formattedUserAverageScore = percentFormatter.format(normalizedAverage)
-
-  // These values are not fixed but calculated each time, can't be moved to /constants
-  const totalQuizzesNumber =
-    ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
-  const totalQuizzesPoints = getTotalQuizzesPoints()
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
