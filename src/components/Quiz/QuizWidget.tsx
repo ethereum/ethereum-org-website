@@ -509,7 +509,7 @@ const QuizWidget: React.FC<IProps> = ({
                     )}
                   </Flex>
 
-                  {showResults && (
+                  {showResults && quizScore < 100 && (
                     <Button
                       onClick={initialize}
                       variant="unstyled"
