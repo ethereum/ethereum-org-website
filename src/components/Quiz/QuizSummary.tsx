@@ -98,7 +98,7 @@ const QuizSummary: React.FC<IProps> = ({
           <Flex>
             <Text {...valueStyles}>{questionCount}</Text>
             <Text {...labelStyles}>
-              <Translation id="total" />
+              <Translation id="questions" />
             </Text>
           </Flex>
         )}
