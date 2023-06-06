@@ -49,10 +49,52 @@ const handleShare = ({ score, total }: QuizShareStats) => {
   })
 }
 
+const getFormattedStats = (
+  language,
+  average,
+  collectiveQuestionsAnswered,
+  collectiveAverageScore,
+  collectiveRetryRate
+) => {
+  const localeForNumbers = getLocaleForNumberFormat(language as Lang)
+
+  // Initialize number and percent formatters
+  const numberFormatter = new Intl.NumberFormat(localeForNumbers, {
+    style: "decimal",
+    minimumSignificantDigits: 2,
+    maximumSignificantDigits: 3,
+  })
+
+  const percentFormatter = new Intl.NumberFormat(localeForNumbers, {
+    style: "percent",
+    minimumSignificantDigits: 2,
+    maximumSignificantDigits: 3,
+  })
+
+  // Calculate average
+  const computedAverage = average.length > 0 ? mean(average) : 0
+
+  // Convert collective stats to fraction for percentage format
+  const normalizedCollectiveAverageScore = collectiveAverageScore / 100
+  const normalizedCollectiveRetryRate = collectiveRetryRate / 100
+
+  // Return formatted values
+  return {
+    formattedUserAverageScore: percentFormatter.format(computedAverage / 100), // Normalize user average
+    formattedCollectiveQuestionsAnswered: numberFormatter.format(
+      collectiveQuestionsAnswered
+    ),
+    formattedCollectiveAverageScore: percentFormatter.format(
+      normalizedCollectiveAverageScore
+    ),
+    formattedCollectiveRetryRate: percentFormatter.format(
+      normalizedCollectiveRetryRate
+    ),
+  }
+}
+
 const QuizzesStats: React.FC = () => {
   const { language } = useI18next()
-  const localeForNumbers = getLocaleForNumberFormat(language as Lang)
-  const isRightToLeft = isLangRightToLeft(language as Lang)
   const {
     userStats: { score: userScore, completed, average },
   } = useContext(QuizzesHubContext)
@@ -65,41 +107,23 @@ const QuizzesStats: React.FC = () => {
     ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
   const totalQuizzesPoints = getTotalQuizzesPoints()
 
-  const computedAverage = average.length > 0 ? mean(average) : 0
-  // Normalize the raw average to be between 0 and 1 by dividing by 100
-  const normalizedAverage = computedAverage / 100
-
   // Data from Matomo, manually updated
   const collectiveQuestionsAnswered = 100000
-  const collectiveAverageScore = 67.4 / 100 // converted to fraction for percentage format
-  const collectiveRetryRate = 15.6 / 100 // converted to fraction for percentage format
+  const collectiveAverageScore = 67.4
+  const collectiveRetryRate = 15.6
 
-  // Todo: make global util function
-  const numberFormatter = new Intl.NumberFormat(localeForNumbers, {
-    style: "decimal",
-    minimumSignificantDigits: 2,
-    maximumSignificantDigits: 3,
-  })
-
-  // Todo: make global util function
-  const percentFormatter = new Intl.NumberFormat(localeForNumbers, {
-    style: "percent",
-    minimumSignificantDigits: 2,
-    maximumSignificantDigits: 3,
-  })
-
-  // Formatted collective stats
-  const formattedCollectiveQuestionsAnswered = numberFormatter.format(
-    collectiveQuestionsAnswered
+  const {
+    formattedUserAverageScore,
+    formattedCollectiveQuestionsAnswered,
+    formattedCollectiveAverageScore,
+    formattedCollectiveRetryRate,
+  } = getFormattedStats(
+    language,
+    average,
+    collectiveQuestionsAnswered,
+    collectiveAverageScore,
+    collectiveRetryRate
   )
-  const formattedCollectiveAverageScore = percentFormatter.format(
-    collectiveAverageScore
-  )
-  const formattedCollectiveRetryRate =
-    percentFormatter.format(collectiveRetryRate)
-
-  // Formatted user stats
-  const formattedUserAverageScore = percentFormatter.format(normalizedAverage)
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
