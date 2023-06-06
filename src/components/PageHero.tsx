@@ -56,8 +56,8 @@ const PageHero: React.FC<IProps> = ({
       >
         <Box
           maxW={{ base: "full", lg: "container.sm" }}
-          pt={{ base: 0, lg: 32 }}
-          pb={{ base: 8, lg: 32 }}
+          pt={{ base: isReverse ? 0 : 8, lg: 32 }}
+          pb={{ base: isReverse ? 8 : 0, lg: 32 }}
           pl={{ base: 0, lg: 8 }}
           mr={{ base: "0px", lg: 4 }}
         >
