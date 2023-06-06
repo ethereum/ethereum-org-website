@@ -10,6 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import { FaTwitter } from "react-icons/fa"
+import { useI18next } from "gatsby-plugin-react-i18next"
 
 import Button from "../Button"
 import Translation from "../Translation"
@@ -17,7 +18,9 @@ import { TrophyIcon } from "../icons/quiz"
 
 import { QuizzesHubContext } from "./context"
 
+// Utils
 import {
+  getFormattedStats,
   getNumberOfCompletedQuizzes,
   getTotalQuizzesPoints,
   shareOnTwitter,
@@ -42,6 +45,7 @@ const handleShare = ({ score, total }: QuizShareStats) => {
 }
 
 const QuizzesStats: React.FC = () => {
+  const { language } = useI18next()
   const {
     userStats: { score: userScore, completed, average },
   } = useContext(QuizzesHubContext)
@@ -49,16 +53,17 @@ const QuizzesStats: React.FC = () => {
     JSON.parse(completed)
   )
 
-  const computedAverage =
-    average.length > 0 ? average.reduce((a, b) => a + b, 0) / average.length : 0
-  const parsedAverage = Number.isInteger(computedAverage)
-    ? computedAverage
-    : computedAverage.toFixed(2)
-
   // These values are not fixed but calculated each time, can't be moved to /constants
   const totalQuizzesNumber =
     ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
   const totalQuizzesPoints = getTotalQuizzesPoints()
+
+  const {
+    formattedUserAverageScore,
+    formattedCollectiveQuestionsAnswered,
+    formattedCollectiveAverageScore,
+    formattedCollectiveRetryRate,
+  } = getFormattedStats(language, average)
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
@@ -127,7 +132,7 @@ const QuizzesStats: React.FC = () => {
                 <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyMedium">
                   <Translation id="average-score" />{" "}
                   <Text as="span" color="body">
-                    {parsedAverage}%
+                    {formattedUserAverageScore}
                   </Text>
                 </Text>
 
@@ -165,7 +170,7 @@ const QuizzesStats: React.FC = () => {
                 <Translation id="average-score" />
               </Text>
               {/* Data from Matomo, manually updated */}
-              <Text color="body">67.4%</Text>
+              <Text color="body">{formattedCollectiveAverageScore}</Text>
             </Stack>
 
             <Stack>
@@ -174,7 +179,10 @@ const QuizzesStats: React.FC = () => {
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text color="body">100 000+</Text>
+              <Text color="body">
+                {formattedCollectiveQuestionsAnswered}
+                <Text as="span">+</Text>
+              </Text>
             </Stack>
 
             <Stack>
@@ -183,7 +191,7 @@ const QuizzesStats: React.FC = () => {
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text color="body">15.6%</Text>
+              <Text color="body">{formattedCollectiveRetryRate}</Text>
             </Stack>
           </Flex>
         </Flex>

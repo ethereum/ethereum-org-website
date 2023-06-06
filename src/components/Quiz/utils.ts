@@ -1,6 +1,14 @@
-import { USER_STATS_KEY } from "../../constants"
+import { getLocaleForNumberFormat } from "../../utils/translations"
+import { Lang } from "../../utils/languages"
 
 import { CompletedQuizzes, QuizShareStats } from "../../types"
+
+import {
+  TOTAL_QUIZ_AVERAGE_SCORE,
+  TOTAL_QUIZ_QUESTIONS_ANSWERED,
+  TOTAL_QUIZ_RETRY_RATE,
+  USER_STATS_KEY,
+} from "../../constants"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,
@@ -84,4 +92,43 @@ export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
   window.open(
     `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
   )
+}
+
+const mean = (values: number[]) =>
+  values.length > 0 ? values.reduce((a, b) => a + b, 0) / values.length : 0
+
+export const getFormattedStats = (language, average) => {
+  const localeForNumbers = getLocaleForNumberFormat(language as Lang)
+
+  // Initialize number and percent formatters
+  const numberFormatter = new Intl.NumberFormat(localeForNumbers, {
+    style: "decimal",
+    minimumSignificantDigits: 1,
+    maximumSignificantDigits: 3,
+  })
+
+  const percentFormatter = new Intl.NumberFormat(localeForNumbers, {
+    style: "percent",
+    minimumSignificantDigits: 1,
+    maximumSignificantDigits: 3,
+  })
+
+  const computedAverage = average.length > 0 ? mean(average) : 0
+
+  // Convert collective stats to fraction for percentage format
+  const normalizedCollectiveAverageScore = TOTAL_QUIZ_AVERAGE_SCORE / 100
+  const normalizedCollectiveRetryRate = TOTAL_QUIZ_RETRY_RATE / 100
+
+  return {
+    formattedUserAverageScore: percentFormatter.format(computedAverage / 100), // Normalize user average
+    formattedCollectiveQuestionsAnswered: numberFormatter.format(
+      TOTAL_QUIZ_QUESTIONS_ANSWERED
+    ),
+    formattedCollectiveAverageScore: percentFormatter.format(
+      normalizedCollectiveAverageScore
+    ),
+    formattedCollectiveRetryRate: percentFormatter.format(
+      normalizedCollectiveRetryRate
+    ),
+  }
 }
