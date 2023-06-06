@@ -50,7 +50,7 @@ const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
     direction="column"
     w="full"
-    border="1px"
+    borderBottom="1px"
     borderColor="border"
     {...props}
   />
