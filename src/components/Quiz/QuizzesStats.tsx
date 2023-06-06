@@ -92,11 +92,6 @@ const QuizzesStats: React.FC = () => {
   const formattedCollectiveQuestionsAnswered = numberFormatter.format(
     collectiveQuestionsAnswered
   )
-  // If language is RTL, more than indicator should go at start
-  const textForCollectiveQuestions = isRightToLeft
-    ? `+${formattedCollectiveQuestionsAnswered}`
-    : `${formattedCollectiveQuestionsAnswered}+`
-
   const formattedCollectiveAverageScore = percentFormatter.format(
     collectiveAverageScore
   )
@@ -220,7 +215,10 @@ const QuizzesStats: React.FC = () => {
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text color="body">{textForCollectiveQuestions}</Text>
+              <Text color="body">
+                {formattedCollectiveQuestionsAnswered}
+                <Text as="span">+</Text>
+              </Text>
             </Stack>
 
             <Stack>
