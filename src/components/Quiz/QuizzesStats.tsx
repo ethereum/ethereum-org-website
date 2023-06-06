@@ -65,9 +65,7 @@ const QuizzesStats: React.FC = () => {
   const totalQuizzesPoints = getTotalQuizzesPoints()
 
   const computedAverage =
-    userAverageScores.length > 0
-      ? userAverageScores.reduce((a, b) => a + b, 0) / userAverageScores.length
-      : 0
+    average.length > 0 ? average.reduce((a, b) => a + b, 0) / average.length : 0
   // Normalize the raw average to be between 0 and 1 by dividing by 100
   const normalizedAverage = computedAverage / 100
 
