@@ -27,7 +27,7 @@ const QuizzesModal: React.FC<IProps> = ({ children, ...rest }) => {
     <ChakraModal
       isCentered
       size={{ base: "full", md: "xl" }}
-      scrollBehavior="outside"
+      scrollBehavior="inside"
       {...rest}
     >
       <ModalOverlay
