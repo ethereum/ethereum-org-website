@@ -31,6 +31,11 @@ import {
 } from "../../utils/translations"
 import { Lang } from "../../utils/languages"
 import { trackCustomEvent } from "../../utils/matomo"
+import {
+  TOTAL_QUIZ_AVERAGE_SCORE,
+  TOTAL_QUIZ_QUESTIONS_ANSWERED,
+  TOTAL_QUIZ_RETRY_RATE,
+} from "../../constants"
 
 import { QuizShareStats } from "../../types"
 
@@ -49,13 +54,7 @@ const handleShare = ({ score, total }: QuizShareStats) => {
   })
 }
 
-const getFormattedStats = (
-  language,
-  average,
-  collectiveQuestionsAnswered,
-  collectiveAverageScore,
-  collectiveRetryRate
-) => {
+const getFormattedStats = (language, average) => {
   const localeForNumbers = getLocaleForNumberFormat(language as Lang)
 
   // Initialize number and percent formatters
@@ -71,18 +70,16 @@ const getFormattedStats = (
     maximumSignificantDigits: 3,
   })
 
-  // Calculate average
   const computedAverage = average.length > 0 ? mean(average) : 0
 
   // Convert collective stats to fraction for percentage format
-  const normalizedCollectiveAverageScore = collectiveAverageScore / 100
-  const normalizedCollectiveRetryRate = collectiveRetryRate / 100
+  const normalizedCollectiveAverageScore = TOTAL_QUIZ_AVERAGE_SCORE / 100
+  const normalizedCollectiveRetryRate = TOTAL_QUIZ_RETRY_RATE / 100
 
-  // Return formatted values
   return {
     formattedUserAverageScore: percentFormatter.format(computedAverage / 100), // Normalize user average
     formattedCollectiveQuestionsAnswered: numberFormatter.format(
-      collectiveQuestionsAnswered
+      TOTAL_QUIZ_QUESTIONS_ANSWERED
     ),
     formattedCollectiveAverageScore: percentFormatter.format(
       normalizedCollectiveAverageScore
@@ -107,23 +104,12 @@ const QuizzesStats: React.FC = () => {
     ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
   const totalQuizzesPoints = getTotalQuizzesPoints()
 
-  // Data from Matomo, manually updated
-  const collectiveQuestionsAnswered = 100000
-  const collectiveAverageScore = 67.4
-  const collectiveRetryRate = 15.6
-
   const {
     formattedUserAverageScore,
     formattedCollectiveQuestionsAnswered,
     formattedCollectiveAverageScore,
     formattedCollectiveRetryRate,
-  } = getFormattedStats(
-    language,
-    average,
-    collectiveQuestionsAnswered,
-    collectiveAverageScore,
-    collectiveRetryRate
-  )
+  } = getFormattedStats(language, average)
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
