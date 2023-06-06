@@ -15,6 +15,9 @@ import {
   Box,
   useToken,
   HeadingProps,
+  UnorderedList as ChakraUnorderedList,
+  OrderedList as ChakraOrderedList,
+  ListProps,
 } from "@chakra-ui/react"
 
 import BannerNotification from "../components/BannerNotification"
@@ -123,6 +126,13 @@ const Paragraph = (props: TextProps) => (
   <Text fontSize="md" color="text300" mt={8} mb={4} {...props} />
 )
 
+const UnorderedList = (props: ListProps) => (
+  <ChakraUnorderedList ms="1.45rem" {...props} />
+)
+const OrderedList = (props: ListProps) => (
+  <ChakraOrderedList ms="1.45rem" {...props} />
+)
+
 const ListItem = (props: ListItemProps) => (
   <ChakraListItem color="text300" {...props} />
 )
@@ -190,6 +200,8 @@ const components = {
   h3: H3,
   h4: H4,
   p: Paragraph,
+  ul: UnorderedList,
+  ol: OrderedList,
   li: ListItem,
   pre: Codeblock,
   table: MarkdownTable,
