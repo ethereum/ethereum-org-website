@@ -61,13 +61,13 @@ const getFormattedStats = (
   // Initialize number and percent formatters
   const numberFormatter = new Intl.NumberFormat(localeForNumbers, {
     style: "decimal",
-    minimumSignificantDigits: 2,
+    minimumSignificantDigits: 1,
     maximumSignificantDigits: 3,
   })
 
   const percentFormatter = new Intl.NumberFormat(localeForNumbers, {
     style: "percent",
-    minimumSignificantDigits: 2,
+    minimumSignificantDigits: 1,
     maximumSignificantDigits: 3,
   })
 
