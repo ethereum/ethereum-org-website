@@ -25,10 +25,7 @@ import {
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
-import {
-  isLangRightToLeft,
-  getLocaleForNumberFormat,
-} from "../../utils/translations"
+import { getLocaleForNumberFormat } from "../../utils/translations"
 import { Lang } from "../../utils/languages"
 import { trackCustomEvent } from "../../utils/matomo"
 import {
