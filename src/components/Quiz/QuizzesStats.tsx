@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import { mean } from "lodash"
 import {
   Box,
   Circle,
@@ -21,18 +20,12 @@ import { QuizzesHubContext } from "./context"
 
 // Utils
 import {
+  getFormattedStats,
   getNumberOfCompletedQuizzes,
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
-import { getLocaleForNumberFormat } from "../../utils/translations"
-import { Lang } from "../../utils/languages"
 import { trackCustomEvent } from "../../utils/matomo"
-import {
-  TOTAL_QUIZ_AVERAGE_SCORE,
-  TOTAL_QUIZ_QUESTIONS_ANSWERED,
-  TOTAL_QUIZ_RETRY_RATE,
-} from "../../constants"
 
 import { QuizShareStats } from "../../types"
 
@@ -49,42 +42,6 @@ const handleShare = ({ score, total }: QuizShareStats) => {
     eventAction: "Secondary button clicks",
     eventName: "Twitter_share_stats",
   })
-}
-
-const getFormattedStats = (language, average) => {
-  const localeForNumbers = getLocaleForNumberFormat(language as Lang)
-
-  // Initialize number and percent formatters
-  const numberFormatter = new Intl.NumberFormat(localeForNumbers, {
-    style: "decimal",
-    minimumSignificantDigits: 1,
-    maximumSignificantDigits: 3,
-  })
-
-  const percentFormatter = new Intl.NumberFormat(localeForNumbers, {
-    style: "percent",
-    minimumSignificantDigits: 1,
-    maximumSignificantDigits: 3,
-  })
-
-  const computedAverage = average.length > 0 ? mean(average) : 0
-
-  // Convert collective stats to fraction for percentage format
-  const normalizedCollectiveAverageScore = TOTAL_QUIZ_AVERAGE_SCORE / 100
-  const normalizedCollectiveRetryRate = TOTAL_QUIZ_RETRY_RATE / 100
-
-  return {
-    formattedUserAverageScore: percentFormatter.format(computedAverage / 100), // Normalize user average
-    formattedCollectiveQuestionsAnswered: numberFormatter.format(
-      TOTAL_QUIZ_QUESTIONS_ANSWERED
-    ),
-    formattedCollectiveAverageScore: percentFormatter.format(
-      normalizedCollectiveAverageScore
-    ),
-    formattedCollectiveRetryRate: percentFormatter.format(
-      normalizedCollectiveRetryRate
-    ),
-  }
 }
 
 const QuizzesStats: React.FC = () => {
