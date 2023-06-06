@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { mean } from "lodash"
 import {
   Box,
   Circle,
@@ -64,8 +65,7 @@ const QuizzesStats: React.FC = () => {
     ethereumBasicsQuizzes.length + usingEthereumQuizzes.length
   const totalQuizzesPoints = getTotalQuizzesPoints()
 
-  const computedAverage =
-    average.length > 0 ? average.reduce((a, b) => a + b, 0) / average.length : 0
+  const computedAverage = average.length > 0 ? mean(average) : 0
   // Normalize the raw average to be between 0 and 1 by dividing by 100
   const normalizedAverage = computedAverage / 100
 
