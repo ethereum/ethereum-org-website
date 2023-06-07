@@ -1595,6 +1595,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://changwu.me/"><img src="https://avatars.githubusercontent.com/u/1557364?v=4?s=100" width="100px;" alt="changwu"/><br /><sub><b>changwu</b></sub></a><br /><a href="#content-changwu-tw" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://uniyj.eth"><img src="https://avatars.githubusercontent.com/u/84749041?v=4?s=100" width="100px;" alt="yj"/><br /><sub><b>yj</b></sub></a><br /><a href="#content-uniyj" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://megatheikal.com"><img src="https://avatars.githubusercontent.com/u/64621442?v=4?s=100" width="100px;" alt="megatheikal"/><br /><sub><b>megatheikal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amegatheikal" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
