@@ -48,7 +48,8 @@ const semanticTokens = {
     body: { _light: "gray.700", _dark: "gray.100" },
     // ! Deprecating bodyInverted
     bodyInverted: { _light: "gray.100", _dark: "gray.700" },
-    bodyLight: { _light: "gray.500", _dark: "gray.300" },
+    bodyMedium: { _light: "gray.500", _dark: "gray.300" },
+    bodyLight: { _light: "gray.200", _dark: "gray.600" },
     disabled: { _light: "gray.300", _dark: "gray.500" },
     background: { _light: "white", _dark: "gray.700" },
     backgroundHighlight: { _light: "gray.100", _dark: "gray.900" },

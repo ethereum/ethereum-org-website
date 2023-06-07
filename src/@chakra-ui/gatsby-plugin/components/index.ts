@@ -4,6 +4,7 @@ import { Link } from "./Link"
 import { Tag } from "./Tag"
 import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
+import { Progress } from "./Progress"
 import { Tabs } from "./Tabs"
 import { Radio } from "./Radio"
 import { Select } from "./Select"
@@ -43,6 +44,7 @@ export default {
   Link,
   Menu: menuDefaultTheme,
   Modal,
+  Progress,
   Radio,
   Select,
   Spinner: spinnerDefaultTheme,

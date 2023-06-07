@@ -152,9 +152,11 @@ title="What if I participate in liquid staking derivatives or pooled staking"
 eventCategory="FAQ"
 eventAction="What if I participate in liquid staking derivatives or pooled staking"
 eventName="read more">
+
 If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
 
-In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a [smaller provider](https://rated.network/). Or, if you’ve accumulated enough ETH you could [stake from home](/staking/solo/).
+In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a <a href="https://rated.network/">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -170,9 +172,11 @@ title="Do full withdrawals happen automatically?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
+
 No, if your validator is still active on the network, a full withdrawal will not happen automatically. This requires manually initiating a voluntary exit.
 
-Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will _then_ be withdrawn during the next [validator sweep](#validator-sweeping).
+Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next <a href="#validator-sweeping">validator sweep</a>.
+
 </ExpandableCard>
 
 <ExpandableCard title="Can I withdraw a custom amount?"
@@ -189,9 +193,11 @@ title="I operate a validator. Where can I find more information on enabling with
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
+
 Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to prepare your validator for withdrawals. prepared, timing of events, and more details about how withdrawals function.
 
-To try out your setup on a testnet first, visit the the [Goerli Testnet Staking Launchpad](https://goerli.launchpad.ethereum.org) to get started.
+To try out your setup on a testnet first, visit the the <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> to get started.
+
 </ExpandableCard>
 
 <ExpandableCard

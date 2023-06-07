@@ -26,7 +26,6 @@ Mamia ya maelfu ya wapenzi wa Ethereum hukusanyika kwenye majukwaa haya ya mtand
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Maboresho ya Ethereum yanalenga jamii ya Discord</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - jamii iliyozama kutoa usaidizi wa usimamizi wa miradi kwa maboresho ya </SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Timu ya tovuti ya Ethereum.org</Link> - tembelea na upige gumzo kwenye maboresho ya wavuti wa ethereum.org na uunde na timu na watu kutoka katika jamii</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Chuo cha Web3</Link> - jamii imelenga kujifunza maboresho ya web3 </SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - gumzo la maboresho ya solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereumsolidity:gitter.im">Solidity Matrix</Link> - gumzo la maboresho ya solidity (Matrix)</SocialListItem>
 

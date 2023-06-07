@@ -67,7 +67,7 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
 
   return (
     <Flex
-      px={12}
+      px={{ base: 0, md: 12 }}
       py={8}
       direction="column"
       borderTop="1px solid"

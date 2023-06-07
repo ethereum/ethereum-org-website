@@ -162,6 +162,10 @@ const Footer: React.FC<IProps> = () => {
           text: t("zero-knowledge-proofs"),
           to: "/zero-knowledge-proofs/",
         },
+        {
+          text: t("quizzes-title"),
+          to: "/quizzes/",
+        },
       ],
     },
     {

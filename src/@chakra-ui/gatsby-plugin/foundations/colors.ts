@@ -3,9 +3,11 @@ export type Colors = typeof colors
 const colors = {
   gray: {
     100: "#f7f7f7",
+    200: "#e7e7e7",
     300: "#d4d4d4",
     400: "#b0b0b0",
     500: "#646464",
+    600: "#333333",
     700: "#222222",
     900: "#141414",
   },
