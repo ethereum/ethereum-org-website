@@ -382,5 +382,11 @@
     "emoji": ":romania:",
     "location": "Timisoara",
     "link": "https://www.meetup.com/web3-timisoara/"
+  },
+  {
+    "title": "Crypto Wednesdays",
+    "emoji": ":belgium:",
+    "location": "Brussels",
+    "link": "https://dao.brussels/"
   }
 ]

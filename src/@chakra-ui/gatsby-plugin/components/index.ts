@@ -4,6 +4,7 @@ import { Link } from "./Link"
 import { Tag } from "./Tag"
 import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
+import { Progress } from "./Progress"
 import { Tabs } from "./Tabs"
 import {
   accordionDefaultTheme,
@@ -40,6 +41,7 @@ export default {
   Link,
   Menu: menuDefaultTheme,
   Modal,
+  Progress,
   Select: selectDefaultTheme,
   Spinner: spinnerDefaultTheme,
   Switch: switchDefaultTheme,

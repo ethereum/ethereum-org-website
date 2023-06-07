@@ -146,7 +146,7 @@ const ImageContainer = (props: Pick<FlexProps, "children" | "id">) => (
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <Box
+  <Text
     fontSize={{ base: "xl", lg: "2xl" }}
     lineHeight="140%"
     color="text200"

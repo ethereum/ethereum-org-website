@@ -1,4 +1,3 @@
-// Import libraries
 import React, { useMemo } from "react"
 import {
   Box,
@@ -9,31 +8,28 @@ import {
   Text,
   useRadio,
   useRadioGroup,
+  useToken,
 } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-// Components
 import Translation from "../Translation"
 
-// Import types
-import { Question } from "../../types"
-
-// Utils
 import { TranslationKey } from "../../utils/translations"
 
-// Interfaces
-export interface CustomRadioProps extends RadioProps {
+import { Question } from "../../types"
+
+interface CustomRadioProps extends RadioProps {
   index: number
   label: string
 }
-export interface IProps {
+
+interface IProps {
   questionData: Question
   showAnswer: boolean
   handleSelection: (answerId: string) => void
   selectedAnswer: string | null
 }
 
-// Component
 const QuizRadioGroup: React.FC<IProps> = ({
   questionData,
   showAnswer,
@@ -51,7 +47,6 @@ const QuizRadioGroup: React.FC<IProps> = ({
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
   }, [selectedAnswer])
-
   const isSelectedCorrect = useMemo<boolean>(
     () => correctAnswerId === selectedAnswer,
     [selectedAnswer]
@@ -74,6 +69,8 @@ const QuizRadioGroup: React.FC<IProps> = ({
       return "success.base"
     }, [state.isChecked, showAnswer, isSelectedCorrect])
 
+    const primaryBaseColor = useToken("colors", "primary.base")
+
     // Render CustomRadio component
     return (
       <chakra.label {...htmlProps} cursor="pointer" data-group w="100%">
@@ -88,9 +85,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
           borderRadius="base"
           _hover={{
             boxShadow: showAnswer ? "none" : "primary.base",
-            outline: showAnswer
-              ? "none"
-              : "1px solid var(--eth-colors-primary-base)",
+            outline: showAnswer ? "none" : `1px solid ${primaryBaseColor}`,
             cursor: showAnswer ? "default" : "pointer",
           }}
         >
@@ -132,9 +127,15 @@ const QuizRadioGroup: React.FC<IProps> = ({
   // Render QuizRadioGroup
   return (
     <Flex {...getRootProps()} direction="column" w="100%">
-      <Text fontWeight="700" fontSize="2xl" mb={6}>
+      <Text
+        textAlign={{ base: "center", md: "left" }}
+        fontWeight="700"
+        fontSize="2xl"
+        mb={6}
+      >
         {t(prompt)}
       </Text>
+
       <Flex direction="column" gap={4}>
         {answers.map(({ id, label }, index) => {
           const display =
@@ -150,6 +151,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
           )
         })}
       </Flex>
+
       {showAnswer && (
         <Box mt={5}>
           <Text fontWeight="bold" mt={0} mb={2}>

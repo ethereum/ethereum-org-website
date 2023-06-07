@@ -12,3 +12,11 @@ export const isGlossary = (href: string): boolean =>
 export const isStatic = (href: string): boolean => href.includes("static")
 
 export const isPdf = (href: string): boolean => href.includes(".pdf")
+
+export const sanitizeHitUrl = (url: string): string =>
+  url
+    .replace(/^https?:\/\/[^\/]+(?=\/)/, "")
+    .replace("#gatsby-focus-wrapper", "")
+    .replace("#main-content", "")
+    .replace("#content", "")
+    .replace("#top", "")

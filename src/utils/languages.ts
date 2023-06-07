@@ -60,7 +60,7 @@ export type Lang =
 
 export interface Language {
   code: Lang
-  hrefLang: string
+  crowdinCode: string
   name: string
   localName: string
   langDir: Direction
