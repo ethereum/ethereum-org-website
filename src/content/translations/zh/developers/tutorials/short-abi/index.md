@@ -32,7 +32,7 @@ published: 2022-04-01
 1. 二层网络处理费用，通常非常便宜
 2. 一层网络存储费用，与主网燃料费用相关
 
-撰写本文时，在乐观卷叠上，二层网络燃料费用是 0.001 [Gwei](https://ethereum.org/en/developers/docs/gas/#pre-london)。 另一方面，一层网络的燃料费用约为 40 gwei。 [点击此处可以查看当前价格](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)。
+撰写本文时，在乐观卷叠上，二层网络燃料费用是 0.001 [Gwei](/developers/docs/gas/#pre-london)。 另一方面，一层网络的燃料费用约为 40 gwei。 [点击此处可以查看当前价格](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)。
 
 calldata 一个字节的费用为 4 个燃料单位（如果值为零）或 16 个燃料单位（如果值是任何其他值）。 以太坊虚拟机上最昂贵的操作之一是写入存储。 将 32 字节的字写入二层网络存储的最高费用为 22100 个燃料单位。 目前，该费用是 22.1 gwei。 因此，如果我们可以仅保存 calldata 零字节，就能够将大约 200 个字节写入存储，并且仍然可以获利。
 

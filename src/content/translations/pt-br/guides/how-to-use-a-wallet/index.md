@@ -79,7 +79,7 @@ Sim, você pode usar o mesmo endereço em vários dispositivos. Tecnicamente, ca
 
 ### Eu não recebi a criptomoeda. Onde posso verificar o status da transação?
 
-Você pode usar [exploradores de blocos](https://ethereum.org/en/developers/docs/data-and-analytics/block-explorers/) para ver o status de qualquer transação em tempo real. Tudo o que você precisa fazer é pesquisar o endereço da sua carteira ou o ID da transação.
+Você pode usar [exploradores de blocos](/developers/docs/data-and-analytics/block-explorers/) para ver o status de qualquer transação em tempo real. Tudo o que você precisa fazer é pesquisar o endereço da sua carteira ou o ID da transação.
 
 ### Posso cancelar ou retornar transações?
 
