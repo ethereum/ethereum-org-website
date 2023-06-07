@@ -252,6 +252,15 @@ const StakingPage = ({
           eventName: "clicked about withdrawals",
         },
       },
+      {
+        text: "page-staking-dropdown-dvt",
+        to: "/staking/dvt/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked about dvt",
+        },
+      },
     ],
   }
 
