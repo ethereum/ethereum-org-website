@@ -100,6 +100,8 @@ pip install 'web3[tester]'
 
 You’re all set up to go!
 
+Note: The `web3[tester]` package works up to Python 3.10.xx
+
 ## Spin up a sandbox {#spin-up-a-sandbox}
 
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.

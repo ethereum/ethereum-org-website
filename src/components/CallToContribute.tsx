@@ -53,6 +53,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
 
   return (
     <Flex
+      as="aside"
       bg="ednBackground"
       align="center"
       mt={8}

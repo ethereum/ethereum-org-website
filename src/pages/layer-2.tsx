@@ -171,7 +171,11 @@ interface L2DataResponse {
 }
 
 interface FeeDataResponse {
-  data: Array<{ id: string; results: { feeTransferEth: number } }>
+  data: Array<{
+    id: string
+    results: { feeTransferEth: number }
+    errors?: { [key: string]: string }
+  }>
 }
 
 const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
@@ -229,7 +233,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         )
 
         // filtering out L2's we arent listing
-        const feeData = feeDataResponse.data.filter((l2) => l2.id !== "hermez")
+        const feeData = feeDataResponse.data.filter(
+          (l2) => l2.id !== "hermez" && !l2.errors
+        )
 
         const feeAverage =
           feeData.reduce(

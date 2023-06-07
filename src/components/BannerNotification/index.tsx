@@ -16,6 +16,7 @@ const BannerNotification: React.FC<IProps> = ({
     <>
       {shouldShow && (
         <Center
+          as="aside"
           maxW={isLGScreen ? oldTheme.variables.maxPageWidth : "100%"}
           w="100%"
           py="4"

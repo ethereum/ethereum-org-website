@@ -1,32 +1,28 @@
 # Site search on ethereum.org
 
-TL;DR: we use Algolia to implement a site search feature on ethereum.org.
+TL;DR: we use Algolia to implement a site search feature on ethereum.org. As an open source project, Algolia has sponsored the crawling and indexing of the entire site.
 
-## What do we use Algolia and Docsearch for?
+## What do we use Algolia and DocSearch for?
 
-Algolia allows us to index the content on ethereum.org and implement a powerful site search tool on ethereum.org. In order to create the index of our content, we use a web crawling tool called Docsearch. Docsearch takes a start_urls of ethereum.org and crawls the site to index the content based on a [docsearchConfig file](https://github.com/ethereum/ethereum-org-website/blob/dev/.github/workflows/docsearchConfig.json).
+Algolia allows us to index the content on ethereum.org and implement a powerful site search tool on ethereum.org. In order to create the index of our content, we use a web crawling tool called DocSearch. DocSearch takes a starting URL of ethereum.org and crawls the site to index the content, based on a custom configuration setup held with the service.
 
-We kick off the crawling and indexing of ethereum.org through a GitHub Action that triggers on the merge to `master` branch. [View the GitHub Action](https://github.com/ethereum/ethereum-org-website/blob/dev/.github/workflows/docsearch-crawl.yml).
+Site crawling and indexing is performed by default on a weekly basis on Friday afternoons. This is performed automatically by Algolia servers, which scrape the entire production site of ethereum.org to build an index. This index is hosted by Algolia for use on the site.
 
-## Docsearch Config
+## DocSearch Config
 
-Some important notes about the docsearch config file:
+Some important notes about the DocSearch config:
 
 ### Configuration
 
-- `index_name` is the name of the algolia index where the generated index will be uploaded to.
-- `start_urls` are the urls that the crawler will start from. Some important attributes in the `start_urls` that we use are:
-  - `lang`: regex path to different languages that the site is translated to that need crawling. Since ethereum.org is translated to 37+ languages, we need to be able to crawl the website in each language for indexing.
-  - `page_rank`: the rank of pages that breaks ties when multiple query results have the same weight. This weight is derived from the selectors.
-- `stop_urls` is used to strip out query parameters in the websites urls. We were running into issues where we were getting duplicate query results due to query parameters making urls unique. Stripping these out solved our deduplication problem.
-- selectors are used to specify what the crawler should look for when weighting content for the index.
-
-### Generation
-
-We generate the docsearchConfig.json file using a [script](https://github.com/ethereum/ethereum-org-website/blob/dev/.github/workflows/docsearchConfigScript.js). This allows us to dynamically pull in the languages the websites support from the [translations.json data file](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/translations.json). Our GitHub action executes this script.
+- `indexName` is the name of the Algolia index where the generated index will be uploaded to
+- `startUrls` are the urls that the crawler will start from
+- Translated pages are automatically faceted for search results based on the `<html lang="">` attribute of each page
+- Selectors are used to specify what the crawler should look for when weighting content for the index.
+- CheerioAPI can be utilized within the crawler using the `$` selector to manipulate the DOM before indexing each page
+- Elements to be ignored are removed before indexing using the CheerioAPI library: `$('selector').remove()`. This includes `aside`, `nav`, `footer` and `style` elements.
+- While building pages, semantic naming with the aforementioned elements, i.e. `aside`, will ignore any content contained within. This is beneficial for content that is not directly related to the page content, such as callouts, banners, quiz content, or navigation elements.
 
 ## Resources
 
 - [Algolia documentation](https://www.algolia.com/doc/)
-- [Docsearch documentation](https://docsearch.algolia.com/docs/what-is-docsearch)
-- [Docsearch scraper Docker image](https://hub.docker.com/r/algolia/docsearch-scraper)
+- [DocSearch documentation](https://docsearch.algolia.com/docs/what-is-docsearch)

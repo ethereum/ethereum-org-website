@@ -4,11 +4,12 @@ import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Badge,
+  Button,
+  chakra,
+  forwardRef,
   Box,
-  Center,
   Flex,
   Heading,
-  Icon,
   Text,
   useToken,
 } from "@chakra-ui/react"
@@ -20,10 +21,8 @@ import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
-import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
-import Button from "../../components/Button"
 import FeedbackCard from "../../components/FeedbackCard"
 import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
 
@@ -41,6 +40,37 @@ import { trackCustomEvent } from "../../utils/matomo"
 
 // Types
 import { Context } from "../../types"
+
+const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
+  (props, ref) => {
+    const { isActive, name, ...rest } = props
+    return (
+      <chakra.button
+        ref={ref}
+        bg="none"
+        bgImage="radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)"
+        border="1px"
+        borderColor={isActive ? "primary300" : "white800"}
+        borderRadius="base"
+        boxShadow={!isActive ? "table" : undefined}
+        color="text"
+        fontSize="sm"
+        lineHeight={1.2}
+        opacity={isActive ? 1 : 0.7}
+        p={2}
+        textTransform="uppercase"
+        _hover={{
+          color: "primary",
+          borderColor: "text200",
+          opacity: "1",
+        }}
+        {...rest}
+      >
+        {name}
+      </chakra.button>
+    )
+  }
+)
 
 const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
@@ -310,6 +340,7 @@ const TutorialsPage = ({
           <Flex
             flexWrap="wrap"
             alignItems="center"
+            gap={2}
             maxW={{ base: "full", md: "initial" }}
             mb={{ base: 4, md: "initial" }}
           >
@@ -317,13 +348,9 @@ const TutorialsPage = ({
               const name = `${tagName} (${tagCount})`
               const isActive = selectedTags.includes(tagName)
               return (
-                <Tag
-                  name={name}
-                  key={name}
-                  isActive={isActive}
-                  shouldShowIcon={false}
-                  onClick={handleTagSelect}
-                  value={tagName}
+                <FilterTag
+                  onClick={() => handleTagSelect(tagName)}
+                  {...{ name, isActive }}
                 />
               )
             })}

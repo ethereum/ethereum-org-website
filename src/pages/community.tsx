@@ -6,6 +6,7 @@ import {
   HeadingProps,
   Image,
   SimpleGrid,
+  Text,
   useTheme,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -99,9 +100,9 @@ const ImageContainer = ({ children }: ChildOnlyProp) => {
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
-    <Box mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
+    <Text mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
       {children}
-    </Box>
+    </Text>
   )
 }
 

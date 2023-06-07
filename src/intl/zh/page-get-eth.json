@@ -43,8 +43,6 @@
   "page-get-eth-security": "然而，这也代表您必须认真仔细地保证您的资金安全。不存在可信的银行来代管您的ETH。可以信任的人唯有您自己。",
   "page-get-eth-smart-contract-link": "更多关于智能合约的信息",
   "page-get-eth-swapping": "用您的其他加密货币与他人交易ETH。反之亦然。",
-  "page-get-eth-traditional-currencies": "使用法定货币购买",
-  "page-get-eth-traditional-payments": "通过传统的支付方式直接向卖方购买ETH。",
   "page-get-eth-try-dex": "试用去中心化交易所",
   "page-get-eth-use-your-eth": "使用您的ETH",
   "page-get-eth-use-your-eth-dapps": "现在，您已经持有了一些ETH。您可以查看一些以太坊网络应用（去中心化应用）。有很多类型的去中心化应用，包括金融、社交、媒体、游戏，还有其他各种领域。",
@@ -63,6 +61,6 @@
   "page-get-eth-your-address-desc": "在您下载钱包的时候它会为您创建一个公开的地址，如下图所示：",
   "page-get-eth-your-address-desc-3": "把它想像成您的电子邮箱地址，只是它用来接收的是ETH。如果您想从一个交易所发送ETH到您的钱包，这个地址就是目的地。在发送前一定要多次检查，确保地址正确！",
   "page-get-eth-your-address-wallet-link": "查看钱包",
-  "listing-policy-raise-issue-link": "提 issue",
+  "listing-policy-raise-issue-link": "提出问题",
   "page-find-wallet-last-updated": "最近更新"
 }

@@ -24,6 +24,7 @@ const CalloutBanner: React.FC<IProps> = ({
   ...restProps
 }) => (
   <Flex
+    as="aside"
     direction={{ base: "column", lg: "row-reverse" }}
     bg="layer2Gradient"
     p={{ base: 8, sm: 12 }}

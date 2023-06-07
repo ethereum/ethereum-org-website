@@ -27,6 +27,6 @@ description: 在 ethereum.org 上上架内容资源的标准
 
 如果您想要将内容资源添加到 ethereum.org，并且该内容资源符合标准，请在 GitHub 上创建一个提议。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request">
   创建一个提议
 </ButtonLink>
