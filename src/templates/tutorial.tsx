@@ -195,15 +195,24 @@ const KBD = (props) => {
 
 const Div = (props: ClassNameChildOnlyProps) => {
   require("katex/dist/katex.min.css")
-  if (props.className?.includes("math-display"))
-    return <TeX block math={props.children?.toString()} />
+  if (props.className?.includes("math-display")) {
+    return (
+      <Box maxW="100%" overflowX="scroll">
+        <TeX block math={props.children?.toString()} />
+      </Box>
+    )
+  }
   return <Box {...props} />
 }
 
 const Span = (props: ClassNameChildOnlyProps) => {
   require("katex/dist/katex.min.css")
   if (props.className?.includes("math-inline"))
-    return <TeX math={props.children?.toString()} />
+    return (
+      <Box maxW="100%" overflowX="scroll">
+        <TeX math={props.children?.toString()} />
+      </Box>
+    )
   return <Text as="span" {...props} />
 }
 
