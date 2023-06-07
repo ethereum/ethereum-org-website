@@ -159,8 +159,8 @@ Això significa que s'ha de programar a mida per a cada transacció. Un exemple 
 
 Així, en una transacció qualsevol hi passa el següent:
 
-- Demaneu una quantitat X prestada de $asset a 1,00$ del mercat A
-- Veneu X $asset al mercat B per 1,10$
+- Demaneu una quantitat X prestada de $asset a 1,00\$ del mercat A
+- Veneu X $asset al mercat B per 1,10\$
 - Torneu el préstec al mercat A
 - Us quedeu el benefici de la transacció menys la comissió
 

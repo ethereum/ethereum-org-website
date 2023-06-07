@@ -274,8 +274,8 @@ He aquí algunos ejemplos de aspectos especialmente importantes:
 
 - Traducir divisas puede ser un desafío, debido a los diferentes formatos, convenciones y conversiones. Como regla general, mantenga las mismas divisas que se mencionan en el texto original. Puede añadir su divisa local y poner su conversión entre paréntesis, para ayudar a su comprensión.
 - Las principales diferencias en la escritura de divisas en diferentes idiomas incluyen la colocación de símbolos, comas decimales frente a puntos decimales, espacio, y siglas frente a descripciones completas.
-  - Colocación de símbolos: $100 o 100 $
-  - Comas decimales o puntos decimales: 100,50 $ o 100.50$
+  - Colocación de símbolos: $100 o 100 \$
+  - Comas decimales o puntos decimales: 100,50 $ o 100.50\$
   - Espacio: 100$ o 100 $
   - Abreviaturas, siglas o símbolos: 100 $ o 100 USD
 

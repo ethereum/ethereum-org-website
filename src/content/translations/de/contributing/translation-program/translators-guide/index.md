@@ -274,7 +274,7 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
 
 - Die Übersetzung von Währungen kann aufgrund der unterschiedlichen Formate, Konventionen und Umrechnungen eine Herausforderung darstellen. In der Regel sollten die Währungen mit der Quelle übereinstimmen. Sie können Ihre Landeswährung und die Umrechnung in Klammern hinzufügen, um dem Leser mehr Informationen zu bieten.
 - Zu den wichtigsten Unterschieden bei der Schreibweise von Währungen in verschiedenen Sprachen gehören die Platzierung von Symbolen, Kommas und Dezimalpunkten, Abstände und Abkürzungen oder die Verwendung von Symbolen.
-  - Symbolplatzierung: $100 oder 100$
+  - Symbolplatzierung: $100 oder 100\$
   - Dezimal-Kommas vs. Dezimal-Punkte: 100,50$ oder 100.50$
   - Abstände: 100$ oder 100 $
   - Abkürzungen oder Symbole: 100 $ oder 100 USD

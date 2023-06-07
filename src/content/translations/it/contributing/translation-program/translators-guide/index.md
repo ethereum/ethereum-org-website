@@ -274,7 +274,7 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 - Tradurre le valute può essere complicato, a causa dei diversi formati, convenzioni e conversioni. Come regola generale, consigliamo di lasciare la valuta riportata nel testo originale. Puoi aggiungere la tua valuta locale e la conversione tra parentesi, per comodità del lettore.
 - Le principali differenze nella scrittura delle valute nelle varie lingue riguardano il posizionamento dei simboli, l'uso di virgole o punti decimali, la spaziatura e l'uso di abbreviazioni o simboli.
-  - Posizionamento del simbolo: $100 o 100$
+  - Posizionamento del simbolo: $100 o 100\$
   - Virgole vs. punti decimali: 100,50$ o 100.50$
   - Spaziatura: 100$ o 100 $
   - Abbreviazioni vs. simboli: 100 $ o 100 USD

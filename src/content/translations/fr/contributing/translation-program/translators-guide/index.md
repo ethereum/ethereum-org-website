@@ -274,7 +274,7 @@ Voici quelques exemples de ce à quoi vous devrez faire attention :
 
 - Traduire des devises peut s'avérer difficile, en raison des différences de formats, de conventions et de conversions. En règle générale, veuillez garder la même devise que la source. Dans l'intérêt du lecteur, vous pouvez éventuellement ajouter votre devise locale ainsi que la conversion entre parenthèses.
 - Les principales différences qui existent lors de l'écriture des devises dans différentes langues sont le placement des symboles, les virgules décimales par rapport aux points décimaux, l'espacement et les abréviations par rapport aux symboles.
-  - Emplacement du symbole : $100 ou 100$
+  - Emplacement du symbole : $100 ou 100\$
   - Virgule décimale ou point décimal : 100,50$ ou 100.50$
   - Espacement : 100$ ou 100 $
   - Abréviation ou symbole : 100 $ ou 100 USD

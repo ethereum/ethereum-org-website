@@ -260,9 +260,9 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 
 - Farklı biçimler, kurallar ve dönüşümler nedeniyle para birimlerini çevirmek zor olabilir. Genel bir kural olarak, lütfen para birimlerini kaynakla aynı tutun. Okuyucunun yararına parantez içinde yerel para biriminizi ve dönüşümünüzü ekleyebilirsiniz.
 - Farklı dillerde para birimleri yazmanın temel farklılıkları arasında sembol yerleşimi, ondalık virgül ve ondalık nokta, boşluk ve kısaltmalar ve semboller yer alır.
-  - Sembol yerleştirmesi: $100 veya 100$
+  - Sembol yerleştirmesi: $100 veya 100\$
   - Ondalık virgül ve ondalık nokta: 100,50$ veya 100.50$
-  - Boşluklar: $100 veya 100 $
+  - Boşluklar: $100 veya 100 \$
   - Kısaltmalar vs. semboller: 100 $ veya 100 USD
 
 **Ölçü birimleri**
