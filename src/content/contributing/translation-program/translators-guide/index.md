@@ -280,7 +280,7 @@ Some examples of what to be particularly mindful of:
 
 - Translating currencies can be challenging, due to the different formats, conventions and conversions. As a general rule, please keep currencies the same as the source. You can add your local currency and conversion in brackets, for the benefit of the reader.
 - The main differences in writing currencies in different languages include symbol placement, decimal commas vs. decimal points, spacing, and abbreviations vs. symbols.
-  - Symbol placement: $100 or 100$
+  - Symbol placement: \$100 or 100\$
   - Decimal commas vs. decimal points: 100,50$ or 100.50$
   - Spacing: 100$ or 100 $
   - Abbreviations vs. symbols: 100 $ or 100 USD
