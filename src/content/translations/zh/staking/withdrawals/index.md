@@ -3,7 +3,7 @@ title: 质押提款
 description: 本页面概述质押推送提款是什么，它们如何工作，质押人需要做什么才能获得奖励
 lang: zh
 template: staking
-image: ../../../assets/staking/leslie-withdrawal.png
+image: ../../../../../assets/staking/leslie-withdrawal.png
 alt: 犀牛莱斯利与她的质押奖励
 sidebarDepth: 2
 summaryPoints:

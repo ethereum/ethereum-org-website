@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "あなたのイーサリアムアカウント",
   "page-wallets-your-ethereum-account-desc": "ウォレットはあなたのイーサリアムアカウントの窓口で、残高、トランザクション履歴などを扱えます。ただし、いつでもウォレットプロバイダを交換できます。",
   "page-wallets-your-login": "イーサリアムアプリケーションへのログイン",
-  "page-wallets-your-login-desc": "あなたのウォレットはイーサリアムアカウントを使用して任意の分散型アプリケーションに接続することができます。これは多くのdappsをまたがって使用できるログインのようなものです。"
+  "page-wallets-your-login-desc": "あなたのウォレットはイーサリアムアカウントを使用して任意の分散型アプリケーションに接続することができます。これは多くのdappsをまたがって使用できるログインのようなものです。",
+  "additional-reading-how-to-register-an-ethereum-account": "イーサリアムアカウントの「登録」方法",
+  "additional-reading-how-to-use-a-wallet": "ウォレットの使用方法"
 }

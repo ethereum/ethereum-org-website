@@ -16,6 +16,8 @@ import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
+import { sanitizeHitUrl } from "../../utils/url"
+import { sanitizeHitTitle } from "../../utils/sanitizeHitTitle"
 
 // Styles
 import "@docsearch/css"
@@ -53,21 +55,7 @@ const Search = forwardRef<{}, "button">((_, ref) => {
   const appId = process.env.GATSBY_ALGOLIA_APP_ID || ""
   const apiKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY || ""
   const indexName =
-    process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || "prod-ethereum-org"
-
-  const sanitizeHitUrl = (url: string): string =>
-    url
-      .replace(/^https?:\/\/[^\/]+(?=\/)/, "")
-      .replace("#main-content", "")
-      .replace("#content", "")
-      .replace("#top", "")
-
-  const sanitizeHitTitle = (value: string): string => {
-    const newValue = value.replaceAll("&quot;", '"')
-    const siteNameIndex = value.lastIndexOf(" | ")
-    if (siteNameIndex < 0) return newValue
-    return newValue.substring(0, siteNameIndex)
-  }
+    process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
 
   // Check for the breakpoint with theme token
   const xlBp = useToken("breakpoints", "xl")
@@ -107,7 +95,7 @@ const Search = forwardRef<{}, "button">((_, ref) => {
         />
       )}
       <Portal>
-        {isOpen ? (
+        {isOpen && (
           <SearchModal
             apiKey={apiKey}
             appId={appId}
@@ -171,7 +159,7 @@ const Search = forwardRef<{}, "button">((_, ref) => {
               },
             }}
           />
-        ) : null}
+        )}
       </Portal>
     </>
   )

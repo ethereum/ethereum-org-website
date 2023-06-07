@@ -29,16 +29,6 @@ const config: ThemeConfig = {
  */
 const theme: ThemeOverride = {
   config,
-  // TODO: fonts object to be removed (it'll now be in the 'foundation' directory)
-  fonts: {
-    // old fonts from the previous theme
-    // TODO: update the fonts when we transition to the Design System
-    heading:
-      "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
-    body: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
-    monospace:
-      "SFMono-Regular, Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace",
-  },
   styles,
   ...foundations,
   semanticTokens,

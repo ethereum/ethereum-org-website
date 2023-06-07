@@ -8035,8 +8035,8 @@
         },
         {
           "language": {
-            "id": "ur-IN",
-            "name": "Urdu (India)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Owner",
             "tmSavings": 0,
             "preTranslate": 171,
@@ -8075,8 +8075,8 @@
         },
         {
           "language": {
-            "id": "ur-PK",
-            "name": "Urdu (Pakistan)",
+            "id": "ur",
+            "name": "Urdu",
             "userRole": "Owner",
             "tmSavings": 0,
             "preTranslate": 108,
