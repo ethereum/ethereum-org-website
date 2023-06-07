@@ -119,12 +119,13 @@ export const useStatsBoxGrid = () => {
       }).format(nodes)
     }
 
+    const weiToRoundedEther = (wei: number): number => Math.floor(wei * 1e-18)
+
     const fetchTotalStaked = async (): Promise<void> => {
       const { href: ethstoreLatest } = new URL(
         "api/v1/ethstore/latest",
         "https://beaconcha.in"
       )
-      const weiToEther = (wei: number): number => Math.floor(wei * 1e-18)
       try {
         // 1- Use initial call to `latest` to fetch current Beacon Chain "day" (for use in secondary fetches)
         const ethStoreResponse = await getData<IFetchEthstoreResponse>(
@@ -133,10 +134,10 @@ export const useStatsBoxGrid = () => {
         const {
           data: { day, effective_balances_sum_wei },
         } = ethStoreResponse
-        const valueTotalEth = weiToEther(effective_balances_sum_wei)
+        const valueTotalEth = weiToRoundedEther(effective_balances_sum_wei)
         const currentValueTotalEth = formatTotalStaked(valueTotalEth)
-        const msPerDay = 1000 * 60 * 60 * 24
-        const [daysToFetch, dayDelta] = [90, 5]
+        const MS_PER_DAY = 1000 * 60 * 60 * 24
+        const [DAYS_TO_FETCH, DAY_DELTA] = [90, 5]
         const data = [
           {
             timestamp: new Date().getTime(),
@@ -144,9 +145,9 @@ export const useStatsBoxGrid = () => {
           },
         ]
         // 2- Perform multiple API calls to fetch data for the last 90 days, `getData` for caching
-        for (let i = dayDelta; i <= daysToFetch; i += dayDelta) {
+        for (let i = DAY_DELTA; i <= DAYS_TO_FETCH; i += DAY_DELTA) {
           const lookupDay = day - i
-          const timestamp = new Date().getTime() - i * msPerDay
+          const timestamp = new Date().getTime() - i * MS_PER_DAY
           const { href: ethstoreDay } = new URL(
             `api/v1/ethstore/${lookupDay}`,
             "https://beaconcha.in"
@@ -154,7 +155,7 @@ export const useStatsBoxGrid = () => {
           const {
             data: { effective_balances_sum_wei: sumWei },
           } = await getData<IFetchEthstoreResponse>(ethstoreDay)
-          const value = weiToEther(sumWei)
+          const value = weiToRoundedEther(sumWei)
           data.push({ timestamp, value })
         }
         data.sort((a, b) => a.timestamp - b.timestamp)
