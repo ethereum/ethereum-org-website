@@ -1,5 +1,6 @@
 import "dotenv/config"
 import path from "path"
+import remarkMath from "remark-math"
 
 import type { GatsbyConfig } from "gatsby"
 
@@ -151,7 +152,7 @@ const config: GatsbyConfig = {
             },
           },
         ],
-        remarkPlugins: [],
+        remarkPlugins: [remarkMath],
       },
     },
     // SEO tags
