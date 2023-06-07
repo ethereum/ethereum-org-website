@@ -2,9 +2,8 @@ import React, { useContext } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import TeX from "@matejmazur/react-katex"
 import styled from "@emotion/styled"
-import { Box, Text, Badge } from "@chakra-ui/react"
+import { Badge } from "@chakra-ui/react"
 
 import BannerNotification from "../components/BannerNotification"
 import ButtonLink from "../components/ButtonLink"
@@ -36,11 +35,12 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
+import { Div, Span } from "../components/MDXKatex"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
-import type { ClassNameChildOnlyProps, Context } from "../types"
+import type { Context } from "../types"
 
 const Page = styled.div`
   display: flex;
@@ -132,29 +132,6 @@ const BackToTop = styled.div`
     display: none;
   }
 `
-
-const Div = (props: ClassNameChildOnlyProps) => {
-  require("katex/dist/katex.min.css")
-  if (props.className?.includes("math-display")) {
-    return (
-      <Box maxW="100%" overflowX="scroll">
-        <TeX block math={props.children?.toString()} />
-      </Box>
-    )
-  }
-  return <Box {...props} />
-}
-
-const Span = (props: ClassNameChildOnlyProps) => {
-  require("katex/dist/katex.min.css")
-  if (props.className?.includes("math-inline"))
-    return (
-      <Box maxW="100%" overflowX="scroll">
-        <TeX math={props.children?.toString()} />
-      </Box>
-    )
-  return <Text as="span" {...props} />
-}
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider

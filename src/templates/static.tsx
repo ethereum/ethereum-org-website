@@ -4,7 +4,6 @@ import {
   Box,
   Divider as ChakraDivider,
   Flex,
-  Grid,
   Heading,
   Icon,
   Text,
@@ -14,7 +13,6 @@ import { graphql, PageProps } from "gatsby"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import TeX from "@matejmazur/react-katex"
 
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -48,6 +46,7 @@ import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
 import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
+import { Div, Span } from "../components/MDXKatex"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -167,29 +166,6 @@ const ListItem = (props: ChildOnlyProp) => (
 const CardContainer = (props: ChildOnlyProp) => (
   <Flex wrap="wrap" mx={-4} {...props} />
 )
-
-const Div = (props: ClassNameChildOnlyProps) => {
-  require("katex/dist/katex.min.css")
-  if (props.className?.includes("math-display")) {
-    return (
-      <Box maxW="100%" overflowX="scroll">
-        <TeX block math={props.children?.toString()} />
-      </Box>
-    )
-  }
-  return <Box {...props} />
-}
-
-const Span = (props: ClassNameChildOnlyProps) => {
-  require("katex/dist/katex.min.css")
-  if (props.className?.includes("math-inline"))
-    return (
-      <Box maxW="100%" overflowX="scroll">
-        <TeX math={props.children?.toString()} />
-      </Box>
-    )
-  return <Text as="span" {...props} />
-}
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider

@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import TeX from "@matejmazur/react-katex"
 import {
   Badge,
   chakra,
@@ -36,6 +35,7 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
+import { Div, Span } from "../components/MDXKatex"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -191,29 +191,6 @@ const KBD = (props) => {
       {...props}
     />
   )
-}
-
-const Div = (props: ClassNameChildOnlyProps) => {
-  require("katex/dist/katex.min.css")
-  if (props.className?.includes("math-display")) {
-    return (
-      <Box maxW="100%" overflowX="scroll">
-        <TeX block math={props.children?.toString()} />
-      </Box>
-    )
-  }
-  return <Box {...props} />
-}
-
-const Span = (props: ClassNameChildOnlyProps) => {
-  require("katex/dist/katex.min.css")
-  if (props.className?.includes("math-inline"))
-    return (
-      <Box maxW="100%" overflowX="scroll">
-        <TeX math={props.children?.toString()} />
-      </Box>
-    )
-  return <Text as="span" {...props} />
 }
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
