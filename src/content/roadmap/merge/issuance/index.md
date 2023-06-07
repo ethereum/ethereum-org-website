@@ -101,31 +101,50 @@ On top of the fee burn implemented by the London upgrade, validators can also in
 
 ### Calculating average gas price for deflation {#calculating-average-gas-price-for-deflation}
 
-As discussed above, the amount of ETH issued in a given day is dependent upon the total ETH staked. At time of writing, this is approximately 1700 ETH/day.
+As discussed above, the amount of ETH issued in a given day is dependent upon the total ETH staked. At time of writing, this is approximately $1,700$ ETH/day.
 
-To determine the average gas price required to completely offset this issuance in a given 24-hour period, we'll start by calculating the total number of blocks in a day, given a block time of 12 seconds:
+To determine the average gas price required to completely offset this issuance in a given 24-hour period, we'll start by calculating the total number of blocks in a day, given a block time of $12\sec$:
 
-- `(1 block / 12 seconds) * (60 seconds/minute) = 5 blocks/minute`
-- `(5 blocks/minute) * (60 minutes/hour) = 300 blocks/hour`
-- `(300 blocks/hour) * (24 hours/day) = 7200 blocks/day`
+$$
+{1\space block \over 12\sec} \times 60 {\sec \over \min} = 5 {blocks \over \min} \\
+\downarrow \\
+5 {blocks \over \min} \times 60 {\min \over hour} = 300 {blocks \over hour} \\
+\downarrow \\
+300 {blocks \over hour} \times 24 {hours \over day} = 7200 {blocks \over day}
+$$
 
-Each block targets `15x10^6 gas/block` ([more on gas](/developers/docs/gas/)). Using this, we can solve for the average gas price (in units of gwei/gas) required to offset issuance, given a total daily ETH issuance of 1700 ETH:
+Each block targets $15 \times 10^{6} {gas \over block}$ ([more on gas](/developers/docs/gas/)). Using this, we can solve for the average gas price (in units of $gwei/gas$) required to offset issuance, given a total daily ETH issuance of 1700 ETH:
 
-- `7200 blocks/day * 15x10^6 gas/block * `**`Y gwei/gas`**` * 1 ETH/ 10^9 gwei = 1700 ETH/day`
+$$
+7200 {blocks \over day}
+\times 15 \times 10^{6} {gas \over block}
+\times Y {gwei \over gas}
+\times {1\space ETH \over 10^{9} gwei}
+\atop
+= 1700 {ETH \over day}
+$$
 
-Solving for `Y`:
+Solving for $Y$, rounding to only two significant digits:
 
-- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (rounding to only two significant digits)
+$$
+Y = {1700 \times 10^{9} \over 7200 \times 15 \times 10^{6}} \\
+\downarrow \\
+{17 \times 10^{3} \over 72 \times 15} \\
+\downarrow \\
+\approx 16 gwei
+$$
 
-Another way to rearrange this last step would be to replace `1700` with a variable `X` that represents the daily ETH issuance, and to simplify the rest to:
+Another way to rearrange this last step would be to replace $1,700$ with a variable $X$ that represents the daily ETH issuance, and to simplify the rest to:
 
-- `Y = (X(10^3)/(7200 * 15)) = X/108`
+$$
+Y = {X \times 10^{3} \over 7200 \times 15} = {X \over 108}
+$$
 
-We can simplify and write this as a function of `X`:
+We can simplify and write this as a function of $X$:
 
-- `f(X) = X/108` where `X` is daily ETH issuance, and `f(X)` represents the gwei/gas price required to offset all of the newly issued ETH.
+- $f(X) = {X \over 108}$ where $X$ is daily ETH issuance, and $f(X)$ represents the $gwei/gas$ price required to offset all of the newly issued ETH.
 
-So, for example, if `X` (daily ETH issuance) rises to 1800 based on total ETH staked, `f(X)` (gwei required to offset all of the issuance) would then be `17 gwei` (using 2 significant digits)
+So, for example, if $X$ (daily ETH issuance) rises to $1,800$ based on total ETH staked, $f(X)$ ($gwei$ required to offset all of the issuance) would then be $17 gwei$ (using two significant digits)
 
 ## Further reading {#further-reading}
 
