@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React from "react"
 import { VStack, Icon, Box, Flex, Text } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 import { kebabCase } from "lodash"
@@ -60,18 +60,14 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
     })
   }
 
-  const minValue = useMemo(
-    () =>
-      state.data.reduce(
-        (prev, { value }) => (prev < value ? prev : value),
-        1e42
-      ),
-    [state]
+  const minValue = state.data.reduce(
+    (prev, { value }) => (prev < value ? prev : value),
+    1e42
   )
-  const maxValue = useMemo(
-    () =>
-      state.data.reduce((prev, { value }) => (prev > value ? prev : value), 0),
-    [state]
+
+  const maxValue = state.data.reduce(
+    (prev, { value }) => (prev > value ? prev : value),
+    0
   )
 
   const chart: React.ReactNode = (
