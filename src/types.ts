@@ -6,6 +6,7 @@ import type { Lang } from "./utils/languages"
 import { TranslationKey } from "./utils/translations"
 
 export type ChildOnlyProp = { children: ReactNode }
+export type ClassNameChildOnlyProps = { className?: string } & ChildOnlyProp
 
 export type Intl = {
   language: Lang
