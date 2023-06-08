@@ -9,7 +9,7 @@ export const baseLocales = {
   uk: { title: "українська", left: "Uk" },
 }
 
-// Only i18 files named in this array are being exposed to Storybook. Add filenames as necessary.
+// Only i18n files named in this array are being exposed to Storybook. Add filenames as necessary.
 const ns = ["common", "page-about"]
 const supportedLngs = [...Object.keys(baseLocales), ...supportedLanguages]
 
