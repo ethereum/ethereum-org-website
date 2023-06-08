@@ -7,6 +7,7 @@
   "share-results": "Compartilhar resultados",
   "submit-answer": "Enviar a resposta",
   "test-your-knowledge": "Teste seus conhecimentos",
+  "total": "Total",
   "try-again": "Tente novamente",
   "a001-prompt": "A maior diferença entre Ethereum e Bitcoin é:",
   "a001-a-label": "O Ethereum não permite que você faça pagamentos para outras pessoas",
@@ -303,7 +304,9 @@
   "h005-b-explanation": "Antes de ser renomeada a camada de consenso, ela era originalmente chamada de “Eth2”.",
   "h005-c-label": "Eth1",
   "h005-c-explanation": "Eth1 foi o nome original dado à camada de execução, não à camada de consenso.",
-  "h005-d-label": "Fragmentação",
-  "h005-d-explanation": "Fragmentação é uma atualização no roteiro Ethereum relacionado a escalabilidade.",
-  "page-assets-merge": "A Fusão"
+  "h005-d-label": "Participação",
+  "h005-d-explanation": "Participar (staking) é depositar ETH em um contrato inteligente para ajudar a proteger a cadeia.",
+  "page-assets-merge": "A integração",
+  "security": "Segurança",
+  "page-what-is-ethereum-what-is-ether": "O que é ether?"
 }
