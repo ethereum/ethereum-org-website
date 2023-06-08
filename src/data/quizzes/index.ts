@@ -8,7 +8,7 @@ const quizzes: RawQuizzes = {
     questions: ["a001", "a002", "a003", "a004", "a005"],
   },
   "what-is-ether": {
-    title: "page-what-is-ethereum-what-is-ether",
+    title: "what-is-ether",
     questions: ["b001", "b002", "b003", "b004"],
   },
   web3: {
