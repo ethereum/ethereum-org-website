@@ -59,14 +59,14 @@ const PageHero: React.FC<IProps> = ({
           pt={{ base: isReverse ? 0 : 8, lg: 32 }}
           pb={{ base: isReverse ? 8 : 0, lg: 32 }}
           pl={{ base: 0, lg: 8 }}
-          mr={{ base: "0px", lg: 4 }}
+          mr={{ base: 0, lg: 4 }}
         >
           <Heading
             as="h1"
             textTransform="uppercase"
             fontSize="md"
             fontWeight="normal"
-            mt={{ base: "0px", lg: 8 }}
+            mt={{ base: 0, lg: 8 }}
             mb={4}
             color="text300"
             lineHeight={1.4}
