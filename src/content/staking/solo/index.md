@@ -40,31 +40,36 @@ Solo staking comes with more responsibility but provides you with maximum contro
 As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
 
 <InfoGrid>
-  <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
-  When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
+<ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
+When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
 
 The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator.
 </ExpandableCard>
+
 <ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required.
 
 It also requires very basic hardware setup, and some understanding of minimum recommended specs.
 </ExpandableCard>
+
 <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
 Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
 
-[Ethereum security and scam prevention](/security/)
+<a href="/security/">Ethereum security and scam prevention</a>
 </ExpandableCard>
+
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
 Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
 </ExpandableCard>
+
 <ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>. Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but a minimum of 10 Mb/s up and down is recommended.
 </ExpandableCard>
+
 <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
 
-[More on slashing and validator lifecycle](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/)
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">More on slashing and validator lifecycle</a>
 </ExpandableCard>
 </InfoGrid>
 
@@ -124,7 +129,7 @@ These are a few of the most common questions about staking that are worth knowin
 
 <ExpandableCard title="What is a validator?">
 
-A _validator_ is a virtual entity that lives on Ethereum and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A _validator client_ is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+A <em>validator</em> is a virtual entity that lives on Ethereum and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A <em>validator client</em> is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
 
 </ExpandableCard>
 
@@ -153,8 +158,10 @@ Running a supermajority client (any client used by over 2/3 the network) also ho
 
 Equivalent bugs in a <em>minority client would never finalize</em> and thus would never result in a surround vote, and would simply result in inactivity penalties, <em>not slashing</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Learn more about the importance of running a minority client.</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Learn more about slashing prevention</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Learn more about the importance of running a minority client.</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Learn more about slashing prevention</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="Which client is best?">
