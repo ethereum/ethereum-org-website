@@ -331,5 +331,14 @@
     "description": "ETH Hong Kong will be held in Q4 2023. It is the frist-ever large-scale ETH Hong Kong event, which will be developer driven and full of hacking, panel discussions, boot camps and other fun activites.",
     "startDate": "2023-10-14",
     "endDate": "2023-10-15"
-  }
+  },
+  {
+    "title": "ETH Miami 2023",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami",
+    "description": "Join ETH Miami’s 2nd Annual Web3 Hackathon”.",
+    "startDate": "2023-10-27",
+    "endDate": "2023-10-29"
+  },
 ]
