@@ -10190,6 +10190,16 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "feuGeneA",
+      "name": "F. Eugene Aumson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7883777?v=4",
+      "profile": "http://aumson.org/gene",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
