@@ -32,7 +32,7 @@ const quizzes: RawQuizzes = {
     questions: ["g001", "g002", "g003", "g004"],
   },
   merge: {
-    title: "merge",
+    title: "page-assets-merge",
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
 }
