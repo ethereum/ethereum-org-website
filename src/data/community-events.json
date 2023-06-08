@@ -322,5 +322,14 @@
     "description": "ETHGlobal Istanbul is going to be an event full of hacking, networking, side events and fun activites.",
     "startDate": "2023-11-17",
     "endDate": "2023-11-19"
+  },
+  {
+    "title": "ETH Hong Kong",
+    "to": "https://www.ethhongkong.co/",
+    "sponsor": null,
+    "location": "Hong Kong",
+    "description": "ETH Hong Kong will be held in Q4 2023. It is the frist-ever large-scale ETH Hong Kong event, which will be developer driven and full of hacking, panel discussions, boot camps and other fun activites.",
+    "startDate": "2023-10-14",
+    "endDate": "2023-10-15"
   }
 ]

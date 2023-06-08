@@ -15,9 +15,11 @@ const { Tag: tagTheme } = theme.components
 const baseStyleContainer = defineMergeStyles(tagTheme.baseStyle?.container, {
   border: "1px",
   borderColor: "transparent",
+  boxSizing: "border-box",
   gap: 1,
   borderRadius: "full",
   px: 2,
+  py: 0.5,
   minH: 8,
   fontWeight: 300,
   "&:any-link": {
@@ -35,7 +37,7 @@ const baseStyleLabel = defineStyle({
   fontSize: "xs",
   textTransform: "uppercase",
   textAlign: "center",
-  lineHeight: 1,
+  lineHeight: 1.6,
 })
 
 const baseStyleCloseButton = defineStyle({
