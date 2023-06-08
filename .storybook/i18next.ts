@@ -22,7 +22,7 @@ const resources: Resource = ns.reduce((acc, n) => {
     if (!acc[lng]) acc[lng] = {}
     acc[lng] = {
       translation: {
-        ...acc[lng],
+        ...acc[lng].translation,
         ...require(`../src/intl/${lng}/${n}.json`),
       },
     }
