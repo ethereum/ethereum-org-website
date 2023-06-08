@@ -175,9 +175,9 @@ The DAO ハッキング事件をもっと見る
 
 イーサリアムのガバナンスは厳格には定義されていません。 さまざまなコミュニティ参加者が多様な視点を持っています。 下記にいくつかご紹介します。
 
-- [ブロックチェーンガバナンスに関するメモ(Notes on Blockchain Governance)](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [イーサリアムのガバナンスの仕組み(How does Ethereum Governance work?)](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
-- [イーサリアムガバナンスの仕組み(How Ethereum governance works)](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [イーサリアムのコアデベロッパーについて(What is an Ethereum core developer?)](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [ガバナンス、パート 2: 金権政治はまだ悪質(Governance, Part 2: Plutocracy Is Still Bad)](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [コイン投票ガバナンスを越えて(Moving beyond coin voting governance)](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [ブロックチェーンガバナンスに関するメモ](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [イーサリアムのガバナンスの仕組み](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
+- [イーサリアムガバナンスの仕組み](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
+- [イーサリアムのコアデベロッパーについて](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [ガバナンス、パート 2: 金権政治はまだ悪質](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [コイン投票ガバナンスを越えて](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
