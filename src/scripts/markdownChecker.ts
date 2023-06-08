@@ -178,6 +178,7 @@ function processMarkdown(path: string) {
 
   let incorrectImagePathMatch: RegExpExecArray | null
 
+  // Todo: refactor to simply check if the image exists relative to the path
   if (path.includes("/translations/")) {
     while (
       (incorrectImagePathMatch =
