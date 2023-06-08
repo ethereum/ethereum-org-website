@@ -235,6 +235,34 @@
         "eventAction": "Clicked",
         "eventName": "Clicked Avado go to link"
       }
+    },
+    {
+      "name": "Launchnodes",
+      "imageName": "Launchnodes",
+      "hue": 218,
+      "launchDate": "2020-09-01",
+      "url": "https://launchnodes.com/",
+      "audits": [],
+      "minEth": 32,
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": false,
+      "multiClient": false,
+      "easyClientSwitching": false,
+      "platforms": ["Linux", "macOS", "Windows"],
+      "ui": ["CLI", "AWS", "Azure"],
+      "socials": {
+        "twitter": "https://twitter.com/launchnodes",
+        "youtube": "https://www.youtube.com/channel/UC5tEUUlx11httS9Y9RvIzJw",
+        "linkedin": "https://www.linkedin.com/company/67972177/",
+        "discord": "https://discord.gg/w5pjfWqdyT"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Launchnodes go to link"
+      }
     }
   ],
   "keyGen": [
