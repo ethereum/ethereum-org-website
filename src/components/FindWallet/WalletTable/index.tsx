@@ -329,7 +329,12 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
       </SkipNavContent>
       <SkipNavContent id={FILTERED_RESULTS_SKIP_LINK}>
         {/* Filtered Wallet List */}
-        <Accordion as={List} m={0} allowMultiple>
+        <Accordion
+          as={List}
+          aria-label={t("page-find-wallet-filtered-results")}
+          m={0}
+          allowMultiple
+        >
           {filteredWallets.map((wallet, idx) => {
             const deviceLabels: Array<string> = []
 
