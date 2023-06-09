@@ -9,6 +9,8 @@ import {
 
 import Link from "./Link"
 
+import commonTranslations from "../../src/intl/en/common.json"
+
 export interface IProps extends BreadcrumbProps {
   slug: string
   startDepth?: number
@@ -58,6 +60,12 @@ const Breadcrumbs: React.FC<IProps> = ({
       : []),
     ,
     ...sliced.map((path, idx) => {
+      if (language === "en" && !commonTranslations.hasOwnProperty(path)) {
+        console.warn(
+          `No translation found for path: ${path}. Falling back to path as breadcrumb text.`
+        )
+      }
+
       return {
         fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
         text: t(path),
