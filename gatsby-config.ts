@@ -318,11 +318,17 @@ if (!IS_PREVIEW) {
       resolve: "gatsby-plugin-matomo",
       options: {
         siteId: "4",
-        matomoUrl: "https://ethereumfoundation.matomo.cloud",
+        matomoUrl: "https://matomo.ethereum.org",
         siteUrl,
         matomoPhpScript: "matomo.php",
         matomoJsScript: "matomo.js",
         trackLoad: false,
+        additionalTrackers: [
+          {
+            siteId: "1",
+            trackerUrl: "https://ethereumfoundation.matomo.cloud/matomo.php",
+          },
+        ],
       },
     },
   ]
