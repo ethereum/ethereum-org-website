@@ -435,22 +435,15 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             </Text>
                           ))}
                           <Box mt={4}>
-                            <Flex gap="0.8rem">
-                              <SocialLink
-                                to={wallet.url}
-                                hideArrow
-                                customEventOptions={{
-                                  eventCategory: "WalletExternalLinkList",
-                                  eventAction: `Go to wallet`,
-                                  eventName: `${wallet.name} ${idx}`,
-                                  eventValue: JSON.stringify(filters),
-                                }}
-                              >
-                                <Icon as={FaGlobe} fontSize="2xl" />
-                              </SocialLink>
-                              {wallet.twitter && (
+                            <Flex
+                              as={List}
+                              aria-label="available social media sites"
+                              gap="0.8rem"
+                              m={0}
+                            >
+                              <ListItem>
                                 <SocialLink
-                                  to={wallet.twitter}
+                                  to={wallet.url}
                                   hideArrow
                                   customEventOptions={{
                                     eventCategory: "WalletExternalLinkList",
@@ -458,31 +451,53 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                                     eventName: `${wallet.name} ${idx}`,
                                     eventValue: JSON.stringify(filters),
                                   }}
+                                  aria-label={`${wallet.name} website`}
                                 >
-                                  <Icon
-                                    as={FaTwitter}
-                                    color="#1da1f2"
-                                    fontSize="2xl"
-                                  />
+                                  <Icon as={FaGlobe} fontSize="2xl" />
                                 </SocialLink>
+                              </ListItem>
+
+                              {wallet.twitter && (
+                                <ListItem>
+                                  <SocialLink
+                                    to={wallet.twitter}
+                                    hideArrow
+                                    customEventOptions={{
+                                      eventCategory: "WalletExternalLinkList",
+                                      eventAction: `Go to wallet`,
+                                      eventName: `${wallet.name} ${idx}`,
+                                      eventValue: JSON.stringify(filters),
+                                    }}
+                                    aria-label={`${wallet.name} twitter`}
+                                  >
+                                    <Icon
+                                      as={FaTwitter}
+                                      color="#1da1f2"
+                                      fontSize="2xl"
+                                    />
+                                  </SocialLink>
+                                </ListItem>
                               )}
                               {wallet.discord && (
-                                <SocialLink
-                                  to={wallet.discord}
-                                  hideArrow
-                                  customEventOptions={{
-                                    eventCategory: "WalletExternalLinkList",
-                                    eventAction: `Go to wallet`,
-                                    eventName: `${wallet.name} ${idx}`,
-                                    eventValue: JSON.stringify(filters),
-                                  }}
-                                >
-                                  <Icon
-                                    as={FaDiscord}
-                                    color="#7289da"
-                                    fontSize="2xl"
-                                  />
-                                </SocialLink>
+                                <ListItem>
+                                  <SocialLink
+                                    to={wallet.discord}
+                                    hideArrow
+                                    customEventOptions={{
+                                      eventCategory: "WalletExternalLinkList",
+                                      eventAction: `Go to wallet`,
+                                      eventName: `${wallet.name} ${idx}`,
+                                      eventValue: JSON.stringify(filters),
+                                    }}
+                                    aria-label={`${wallet.name} discord`}
+                                  >
+                                    <Icon
+                                      as={FaDiscord}
+                                      color="#7289da"
+                                      fontSize="2xl"
+                                    />
+                                  </SocialLink>
+                                </ListItem>
                               )}
                             </Flex>
                           </Box>
