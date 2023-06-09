@@ -73,7 +73,8 @@ export function defineMergeStyles(
   return merge(defaultTheming, ...styleObjs)
 }
 
-export const _notDisabled = "&:not([data-disabled], [disabled])"
+export const _notDisabledReadOnly =
+  "&:not([data-disabled], [disabled], [data-readonly])"
 
 const $inputTriggerDisableColor = cssVar("input-trigger-disable-color")
 
@@ -103,7 +104,7 @@ export const commonInputTriggerStyles = {
         borderColor: $inputTriggerDisableColor.reference,
       },
     },
-    [_notDisabled]: {
+    [_notDisabledReadOnly]: {
       // Hovering over the label triggers the style for the control
       "*:hover > &": {
         bg: "primaryHover",
