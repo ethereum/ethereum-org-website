@@ -132,9 +132,11 @@ const StyledSelect = (props) => (
 const FeatureIconCol = ({
   className,
   featSelect,
+  name,
 }: {
   className: string
   featSelect: object
+  name: string
 }) => (
   <Box
     className={className}
@@ -148,6 +150,9 @@ const FeatureIconCol = ({
         hideBelow: "md",
       },
     }}
+    aria-label={`Chosen feature ${name} is ${
+      featSelect ? "included." : "not included."
+    }`}
   >
     {featSelect ? <GreenCheckProductGlyphIcon /> : <WarningProductGlyphIcon />}
   </Box>
@@ -506,14 +511,17 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                       <FeatureIconCol
                         className={firstCol}
                         featSelect={wallet[firstFeatureSelect.filterKey!]}
+                        name={firstFeatureSelect.label}
                       />
                       <FeatureIconCol
                         className={secondCol}
                         featSelect={wallet[secondFeatureSelect.filterKey!]}
+                        name={secondFeatureSelect.label}
                       />
                       <FeatureIconCol
                         className={thirdCol}
                         featSelect={wallet[thirdFeatureSelect.filterKey!]}
+                        name={thirdFeatureSelect.label}
                       />
                       <AccordionIcon
                         color="primary"
