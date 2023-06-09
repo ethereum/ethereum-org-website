@@ -17,6 +17,7 @@ import { Lang } from "../utils/languages"
 import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
 import * as url from "../utils/url"
 import { Direction } from "../types"
+import { SITE_URL, DISCORD_PATH } from "../constants"
 
 export interface IBaseProps {
   to?: string
@@ -63,8 +64,10 @@ const Link: React.FC<IProps> = ({
 
   // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
   // this is to support the ButtonLink component which uses the `to` prop
-  const to = (toProp ?? href)!
+  let to = (toProp ?? href)!
 
+  const isDiscordInvite = url.isDiscordInvite(to)
+  if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
   const isExternal = url.isExternal(to)
   const isHash = url.isHash(to)
   const isGlossary = url.isGlossary(to)
