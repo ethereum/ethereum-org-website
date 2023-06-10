@@ -4,7 +4,7 @@ import { Icon } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Data
-import walletFilterData from "../../../data/wallets/wallet-filters"
+import walletFilterData from "../../../../data/wallets/wallet-filters"
 
 import {
   BrowserIcon,
@@ -29,9 +29,9 @@ import {
   SwapIcon,
   WalletConnectIcon,
   WithdrawCryptoIcon,
-} from "../../icons/wallets"
+} from "../../../icons/wallets"
 
-import { WalletFilterSidebarProps } from "."
+import { WalletFilterFeatureProps } from "."
 
 type FilterOptionType = {
   title: string
@@ -51,11 +51,11 @@ type FilterOptionType = {
   }>
 }
 
-export const useWalletFilterSidebar = ({
+export const useWalletFilterFeature = ({
   resetWalletFilter,
   filters,
   updateFilterOptions,
-}: Omit<WalletFilterSidebarProps, "updateFilterOption">) => {
+}: Omit<WalletFilterFeatureProps, "updateFilterOption">) => {
   const { t } = useTranslation()
   const [filterOptions, setFilterOptions] = useState<FilterOptionType[]>([
     {
