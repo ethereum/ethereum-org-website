@@ -89,7 +89,7 @@ const H2 = (props: HeadingProps) => (
   <Heading
     {...baseHeadingStyle}
     fontSize="2xl"
-    lineHeight={1.4}
+    lineHeight={{ base: 1.2, md: 1.4 }}
     pb={2}
     borderBottom="1px"
     borderColor="border"
