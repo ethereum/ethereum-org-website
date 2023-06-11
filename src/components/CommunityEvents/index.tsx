@@ -67,9 +67,17 @@ const CommunityEvents = () => {
     useCommunityEvents()
 
   return (
-    <Flex w="full" flexDirection={{ base: "column", lg: "row" }}>
-      <Center w={{ base: "100%", lg: "40%" }} px={16}>
-        <Box>
+    <Flex
+      w="full"
+      flexDirection={{ base: "column", lg: "row" }}
+      p={{
+        base: "0",
+        sm: "2rem 0 0",
+        lg: "2rem 2rem 0",
+      }}
+    >
+      <Center w={{ base: "100%", lg: "40%" }}>
+        <Box px={4}>
           <Heading>
             <Translation id="community-events-content-heading" />
           </Heading>
