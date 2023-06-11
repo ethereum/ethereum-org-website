@@ -6,6 +6,8 @@ import {
   Center,
   Divider,
   Flex,
+  Grid,
+  GridItem,
   Heading,
   Icon,
   Text,
@@ -47,10 +49,14 @@ const Event = ({ event, language }) => {
   }
 
   return (
-    <Flex gap={6}>
-      <Text>{renderEventDateTime(date, language, params)}</Text>
-      <EventLink to={calendarLink}>{title}</EventLink>
-    </Flex>
+    <Grid gap={6} templateColumns="100px auto">
+      <GridItem>
+        <Text>{renderEventDateTime(date, language, params)}</Text>
+      </GridItem>
+      <GridItem>
+        <EventLink to={calendarLink}>{title}</EventLink>
+      </GridItem>
+    </Grid>
   )
 }
 
