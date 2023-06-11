@@ -155,7 +155,7 @@ const CommunityEvents = () => {
           textAlign="center"
           flexDir="column"
         >
-          <Text fontSize="md" fontWeight="bold">
+          <Text mb={1} fontSize="md" fontWeight="bold">
             <Translation id="community-events-next-event" />
           </Text>
           {state.loading ? (
