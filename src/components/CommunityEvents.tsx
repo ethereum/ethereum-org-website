@@ -176,7 +176,7 @@ const CommunityEvents = () => {
                       language
                     )}
                   </Text>
-                  <Text color={"bodyLight"} fontSize="md">
+                  <Text mb={1} color={"bodyLight"} fontSize="md">
                     ({Intl.DateTimeFormat().resolvedOptions().timeZone})
                   </Text>
                   <Text fontSize="3xl" fontWeight="bold" mb={10}>
