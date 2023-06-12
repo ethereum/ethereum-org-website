@@ -40,9 +40,9 @@ import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
 import Icon from "../components/Icon"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 // Utils
-import { TranslationKey } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
 import { getImage } from "../utils/image"
 
@@ -999,6 +999,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
         </ul>
       </Content>
       <Content>
+        <QuizWidget quizKey="run-a-node" />
         <FeedbackCard />
       </Content>
     </GappedPage>
@@ -1012,7 +1013,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-run-a-node", "common"] }
+        ns: { in: ["page-run-a-node", "learn-quizzes", "common"] }
       }
     ) {
       edges {
