@@ -80,7 +80,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
     if (hasError)
       return (
         <Flex bg="error.neutral" p={4}>
-          <Text m={0} color="error">
+          <Text m={0} color="error.base">
             <Translation id="comp-withdrawal-credentials-error" />
           </Text>
         </Flex>
@@ -89,7 +89,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
     if (validator.isUpgraded)
       return (
         <Flex bg="success.neutral" p={4}>
-          <Text m={0} color="success">
+          <Text m={0} color="success.base">
             <Text as="span" fontWeight="bold">
               <Translation
                 id="comp-withdrawal-credentials-upgraded-1"
@@ -121,7 +121,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
       )
     return (
       <Flex bg="error.neutral" p={4}>
-        <Text m={0} color="error">
+        <Text m={0} color="error.base">
           <Text as="span" fontWeight="bold">
             {validator.isTestnet ? (
               <Translation id="comp-withdrawal-credentials-not-upgraded-1-testnet" />

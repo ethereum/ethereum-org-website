@@ -53,7 +53,7 @@ const semanticTokens = {
       base: { _light: "gray.700", _dark: "gray.100" },
       medium: { _light: "gray.500", _dark: "gray.300" },
       light: { _light: "gray.200", _dark: "gray.600" },
-      // ! Deprecating bodyInverted
+      // ! Deprecating body.inverted
       inverted: { _light: "gray.100", _dark: "gray.700" },
     },
     background: {
@@ -75,7 +75,7 @@ const semanticTokens = {
       base: "red.500",
       light: "red.100",
       outline: { _light: "error.base", _dark: "error.light" },
-      // ! Deprecating errorNeutral
+      // ! Deprecating error.neutral
       neutral: { _light: "red.100", _dark: "red.900" },
     },
     success: {
