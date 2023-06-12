@@ -77,7 +77,7 @@ const CommunityEvents = () => {
       }}
     >
       <Center w={{ base: "100%", lg: "40%" }}>
-        <Box px={4}>
+        <Box px={8}>
           <Heading>
             <Translation id="community-events-content-heading" />
           </Heading>
@@ -96,7 +96,7 @@ const CommunityEvents = () => {
         <Flex
           w={{ base: "100%", lg: "50%" }}
           bg="layer2Gradient"
-          p={12}
+          p={8}
           textAlign="center"
           flexDir="column"
         >
@@ -147,7 +147,7 @@ const CommunityEvents = () => {
         <Flex
           w={{ base: "100%", lg: "50%" }}
           bg="backgroundHighlight"
-          p={12}
+          p={8}
           flexDir="column"
         >
           <Text fontSize="lg" fontWeight="bold" mb={2}>
