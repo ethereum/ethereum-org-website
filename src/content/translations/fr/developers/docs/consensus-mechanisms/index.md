@@ -75,7 +75,7 @@ Maintenant techniquement, la preuve de travail et la preuve d'enjeu ne sont pas 
 
 Cette combinaison de la preuve de travail et de la règle de la plus longue chaîne est connue sous le nom de « Consensus de Nakamoto ».
 
-La [chaîne phare](/upgrades/beacon-chain/) utilise un mécanisme de consensus appelé [Casper le Gadget de finalité amical](https://arxiv.org/abs/1710.09437), qui est basé sur la preuve de mise en jeu.
+La [chaîne phare](/roadmap/beacon-chain/) utilise un mécanisme de consensus appelé [Casper le Gadget de finalité amical](https://arxiv.org/abs/1710.09437), qui est basé sur la preuve de mise en jeu.
 
 ## Complément d'information {#further-reading}
 

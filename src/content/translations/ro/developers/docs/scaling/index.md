@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 Întrucât numărul de persoane care utilizează Ethereum a crescut, blockchain-ul a atins anumite limite de capacitate. Acest lucru a dus la creșterea costului de utilizare a rețelei, creând necesitarea unor „soluții de scalare” Există mai multe soluții în curs de cercetare, testare şi implementare, care adoptă abordări diferite pentru a atinge obiective similare.
 
-Obiectivul principal al scalabilității este creșterea vitezei tranzacțiilor (finalitate mai rapidă) și a fluxului de tranzacții (tranzacții mai multe pe secundă), fără sacrificarea descentralizării sau a securității (aflați mai multe în [viziunea Ethereum](/upgrades/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Creșterea capacității rețelei din punctul de vedere al vitezei și al fluxului este fundamentală pentru o adoptare semnificativă și în masă a lui Ethereum.
+Obiectivul principal al scalabilității este creșterea vitezei tranzacțiilor (finalitate mai rapidă) și a fluxului de tranzacții (tranzacții mai multe pe secundă), fără sacrificarea descentralizării sau a securității (aflați mai multe în [viziunea Ethereum](/roadmap/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Creșterea capacității rețelei din punctul de vedere al vitezei și al fluxului este fundamentală pentru o adoptare semnificativă și în masă a lui Ethereum.
 
 Deși viteza și fluxul sunt importante, este esențial ca soluțiile de scalare care permit atingerea acestor obiective să rămână descentralizate și securizate. Menținerea unei bariere scăzute la intrare pentru operatorii de noduri este esențială pentru a împiedica evoluția către o putere de calcul centralizată și nesecurizată.
 
@@ -27,7 +27,7 @@ Această metodă de scalare necesită modificări ale protocolului Ethereum (niv
 
 Fragmentarea este procesul de divizare orizontală a unei baze de date pentru a distribui sarcina. În contextul Ethereum, fragmentarea va reduce congestionarea rețelei și va crește numărul de tranzacții pe secundă prin crearea de noi lanțuri, cunoscute sub numele de „fragmente.” Acest lucru va ușura de asemenea sarcina fiecărui validator, care nu va mai fi nevoit să proceseze integral toate tranzacțiile din întreaga rețea.
 
-Aflați mai multe despre [fragmentare](/upgrades/sharding/).
+Aflați mai multe despre [fragmentare](/roadmap/danksharding/).
 
 ## Scalarea off-chain {#off-chain-scaling}
 
@@ -88,7 +88,7 @@ Learn more about [Validium](/developers/docs/scaling/validium/).
 - Soluțiile multiple pot ajuta la reducerea congestiei generale pe orice parte a rețelei și de asemenea previn punctele unice de eșec.
 - Întregul este mai mare decât suma părților sale. Pot exista soluții diferite care să funcţioneze armonios, permițând creşterea exponențială a vitezei și a fluxului tranzacțiilor viitoare.
 - Nu toate soluțiile necesită utilizarea directă a algoritmului de consens Ethereum, iar alternativele pot oferi beneficii care altfel ar fi dificil de obținut.
-- Nici una dintre aceste soluții de scalare nu este suficientă pentru ca viziunea [Ethereum](/upgrades/vision/) să devină realitate.
+- Nici una dintre aceste soluții de scalare nu este suficientă pentru ca viziunea [Ethereum](/roadmap/vision/) să devină realitate.
 
 ## Învățați mai ușor prin vizualizare? {#visual-learner}
 

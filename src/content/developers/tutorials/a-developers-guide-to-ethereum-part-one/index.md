@@ -18,8 +18,8 @@ This post aspires to be accessible to a wide range of developers. [Python tools]
 
 Assumptions:
 
-- you can get around in a terminal,
-- you've written a few lines of Python code,
+- You can get around in a terminal,
+- You've written a few lines of Python code,
 - Python version 3.6 or greater is installed on your machine (use of a [virtual environment](https://realpython.com/effective-python-environment/#virtual-environments) is strongly encouraged), and
 - you’ve used `pip`, Python’s package installer.
   Again, if any of these are untrue, or you don’t plan to reproduce the code in this article, you can likely still follow along just fine.
@@ -60,7 +60,7 @@ Python developers that want to interact with Ethereum are likely to reach for [W
 
 [Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
 
-![A diagram showing how web3.py uses IPC to connect your applicaction to an Ethereum node](./web3py-and-nodes.png)
+![A diagram showing how web3.py uses IPC to connect your application to an Ethereum node](./web3py-and-nodes.png)
 
 _Configure the Ethereum node and Web3.py to communicate via the same protocol, e.g., IPC in this diagram._
 
@@ -100,6 +100,8 @@ pip install 'web3[tester]'
 
 You’re all set up to go!
 
+Note: The `web3[tester]` package works up to Python 3.10.xx
+
 ## Spin up a sandbox {#spin-up-a-sandbox}
 
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.
@@ -114,7 +116,7 @@ This will print out some information about the versions of Python and IPython yo
 In [1]:
 ```
 
-You’re looking at an interactive Python shell now. Essentially, its a sandbox to play in. If you’ve made it this far, its time to import Web3.py:
+You’re looking at an interactive Python shell now. Essentially, it's a sandbox to play in. If you’ve made it this far, it's time to import Web3.py:
 
 ```python
 In [1]: from web3 import Web3
@@ -124,7 +126,7 @@ In [1]: from web3 import Web3
 
 Besides being a gateway to Ethereum, the [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) module offers a few convenience functions. Let’s explore a couple.
 
-In an Ethereum application, you will commonly need to convert currency denominations. The Web3 module provides a couple of helper methods just for this: [fromWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.fromWei) and [toWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toWei).
+In an Ethereum application, you will commonly need to convert currency denominations. The Web3 module provides a couple of helper methods just for this: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) and [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <div class="featured">
 Note: Computers are notoriously bad at handling decimal math. To get around this, developers often store dollar amounts in cents. For example, an item with a price of $5.99 may be stored in the database as 599.
@@ -140,10 +142,10 @@ A similar pattern is used when handling transactions in <b>ether</b>. However, i
 Try converting some values to and from wei. Note that [there are names for many of the denominations](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) in between ether and wei. One of the better known among them is **gwei**, as it’s often how transaction fees are represented.
 
 ```python
-In [2]: Web3.toWei(1, 'ether')
+In [2]: Web3.to_wei(1, 'ether')
 Out[2]: 1000000000000000000
 
-In [3]: Web3.fromWei(500000000, 'gwei')
+In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
@@ -211,7 +213,7 @@ Out[7]: 1000000000000000000000000
 That’s a lot of zeros! Before you go laughing all the way to the fake bank, recall that lesson about currency denominations from earlier. Ether values are represented in the smallest denomination, wei. Convert that to ether:
 
 ```python
-In [8]: w3.fromWei(1000000000000000000000000, 'ether')
+In [8]: w3.from_wei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
 
@@ -246,7 +248,7 @@ We’re stuck at block zero until there’s a pending transaction, so let’s gi
 In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether'),
+   'value': w3.to_wei(3, 'ether'),
    'gas': 21000
 })
 ```

@@ -30,7 +30,7 @@ The ZK-rollup's core architecture is made up of the following components:
 
 2. **Off-chain virtual machine (VM)**: While the ZK-rollup protocol lives on Ethereum, transaction execution and state storage happen on a separate virtual machine independent of the [EVM](/developers/docs/evm/). This off-chain VM is the execution environment for transactions on the ZK-rollup and serves as the secondary layer or "layer 2" for the ZK-rollup protocol. Validity proofs verified on Ethereum Mainnet guarantee the correctness of state transitions in the off-chain VM.
 
-ZK-rollups are "hybrid scaling solutions"—off-chain protocols that operate independently but derive security from Ethereum. Specifically, the Ethereum network enforces the validity of state updates on the ZK-rollup and guarantees the availability of data behind every update to the rollup's state. As a result, ZK-rollups are considerably safer than pure off-chain scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), which are responsible for their security properties, or [validiums](/developers/docs/scaling/validiums/), which also verify transactions on Ethereum with validity proofs, but store transaction data elsewhere.
+ZK-rollups are "hybrid scaling solutions"—off-chain protocols that operate independently but derive security from Ethereum. Specifically, the Ethereum network enforces the validity of state updates on the ZK-rollup and guarantees the availability of data behind every update to the rollup's state. As a result, ZK-rollups are considerably safer than pure off-chain scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), which are responsible for their security properties, or [validiums](/developers/docs/scaling/validium/), which also verify transactions on Ethereum with validity proofs, but store transaction data elsewhere.
 
 ZK-rollups rely on the main Ethereum protocol for the following:
 
@@ -232,13 +232,15 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 
 Projects working on zkEVMs include:
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 is an EVM-compatible ZK Rollup being built by Matter Labs, powered by its own zkEVM._
-
 - **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP is a project funded by the Ethereum Foundation to develop an EVM-compatible ZK-rollup and a mechanism for generating validity proofs for Ethereum blocks._
+
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll is a tech-driven company working on building a native zkEVM Layer 2 Solution for Ethereum._
 
-- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
+- **[Taiko](https://taiko.xyz)** - _Taiko is a decentralized, Ethereum-equivalent ZK-rollup (a [Type 1 ZK-EVM](https://vitalik.ca/general/2022/08/04/zkevm.html))._
+
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 is an EVM-compatible ZK Rollup being built by Matter Labs, powered by its own zkEVM._
 
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 

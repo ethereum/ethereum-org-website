@@ -334,12 +334,11 @@ DeFi es un proyecto de código abierto. Puede inspeccionar, copiar e innovar tod
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [Tasa DeFi](https://defirate.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### Artículos sobre DeFi {#defi-articles}
 
-- [¿Qué son las Finanzas Descentralizadas?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, actualizado periódicamente_
-- [Una guía sobre DeFi para principiantes](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de Enero del 2020_
+- [Una guía sobre DeFi para principiantes](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4): _Sid Coelho-Prabhu, 6 de enero de 2020_
 
 ### Vídeos {#videos}
 

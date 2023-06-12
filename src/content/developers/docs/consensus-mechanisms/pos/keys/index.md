@@ -10,7 +10,7 @@ Ethereum's keys are generated using [elliptic-curve cryptography](https://en.wik
 
 However, when Ethereum switched from [proof-of-work](/developers/docs/consensus-mechanisms/pow) to [proof-of-stake](/developers/docs/consensus-mechanisms/pos) a new type of key was added to Ethereum. The original keys still work exactly the same as before—there were no changes to the elliptic-curve-based keys securing accounts. However, users needed a new type of key for participating in proof-of-stake by staking ETH and running validators. This need arose from scalability challenges associated with many messages passing between large numbers of validators that required a cryptographic method that could easily be aggregated to reduce the amount of communication required for the network to come to consensus.
 
-This new type of key uses the [Boneh-Lyn-Shacham (BLS) signature scheme](https://wikipedia.org/wiki/BLS_digital_signature). BLS enables a very efficient aggregation of signatures but also allows reverse engineering of aggregated individual validator keys and is ideal for managing actions between validators.
+This new type of key uses the [**Boneh-Lyn-Shacham (BLS)** signature scheme](https://wikipedia.org/wiki/BLS_digital_signature). BLS enables a very efficient aggregation of signatures but also allows reverse engineering of aggregated individual validator keys and is ideal for managing actions between validators.
 
 ## The two types of validator keys {#two-types-of-keys}
 
@@ -35,14 +35,22 @@ This flexibility has the advantage of moving validator signing keys very quickly
 
 The **validator public key** is included in the transaction data when a user deposits ETH to the staking deposit contract. This is known as the _deposit data_ and it allows Ethereum to identify the validator.
 
+### Withdrawal credentials {#withdrawal-credentials}
+
+Every validator has a property known as _withdrawal credentials_. This 32-byte field begins with either a `0x00`, representing BLS withdrawal credentials, or a `0x01`, representing credentials that point to an execution address.
+
+Validators with `0x00` BLS keys must update these credentials to point to an execution address in order to activate excess balance payments or full withdrawal from staking. This can be done by providing an execution address in the deposit data during initial key generation, _OR_ by using the withdrawal key at a later time to sign and broadcast a `BLSToExecutionChange` message.
+
 ### The withdrawal key {#withdrawal-key}
 
-The withdrawal key will be required to move the validator balance after this is enabled in the upcoming Shanghai upgrade. Just like the validator keys, the withdrawal keys also consist of two components:
+The withdrawal key will be required to update withdrawal credentials to point to an execution address, if not set during initial deposit. This will enable excess balance payments to begin being processed, and will also allow users to fully withdraw their staked ETH.
+
+Just like the validator keys, the withdrawal keys also consist of two components:
 
 - Withdrawal **private** key
 - Withdrawal **public** key
 
-Losing this key means losing access to the validator balance. However, the validator can still sign attestations and blocks since these actions require the validator's private key, but there is little to no incentive if the withdrawal keys are lost.
+Losing this key before updating withdrawal credentials to `0x01` type means losing access to the validator balance. The validator can still sign attestations and blocks since these actions require the validator's private key, however there is little to no incentive if the withdrawal keys are lost.
 
 Separating the validator keys from the Ethereum account keys enables multiple validators to be run by a single user.
 

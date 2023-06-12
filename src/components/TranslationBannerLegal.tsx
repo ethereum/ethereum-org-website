@@ -43,6 +43,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
 
   return (
     <Box
+      as="aside"
       position="fixed"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}

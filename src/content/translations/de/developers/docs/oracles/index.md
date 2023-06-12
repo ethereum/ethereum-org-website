@@ -347,8 +347,8 @@ contract Oracle {
   )
   public
   {
-    uint lenght = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
-    Request storage r = requests[lenght-1];
+    uint length = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
+    Request storage r = requests[length-1];
 
     // Hardcoded oracles address
     r.quorum[address(0x6c2339b46F41a06f09CA0051ddAD54D1e582bA77)] = 1;
@@ -426,7 +426,6 @@ _Wir würden gerne mehr Dokumentation über die Erstellung eines Oracle-Smart-Co
 **Artikel**
 
 - [Was ist ein Blockchain-Oracle?](https://chain.link/education/blockchain-oracles) - _Chainlink_
-- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) - _EthHub_
 - [Was ist ein Blockchain-Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
 - [Dezentralisierte Oracle: Ein umfassender Überblick](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) - _Julien Thevenard_
 - [Implementieren eines Blockchain-Oracles auf Ethereum](https://medium.com/@pedrodc/implementieren-ein-blockchain-orakel-auf-ethereum-cedc7e26b49e) - _Pedro Costa_

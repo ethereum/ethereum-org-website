@@ -1,12 +1,12 @@
 ---
-title: Eşsiz token'lar (NFT)
-description: Ethereum'da NFT'lere genel bakış
+title: Eşsiz jetonlar (NFT)
+description: Ethereum'daki NFT'lere genel bakış
 lang: tr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
-alt: Hologram aracılığıyla görüntülenen bir Eth logosu.
+alt: Hologram ile gösterilen bir Eth logosu.
 summaryPoint1: Benzersiz bir şeyi Ethereum tabanlı bir varlık olarak göstermenin yolu.
 summaryPoint2: NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor.
 summaryPoint3: Ethereum blokzincirindeki akıllı sözleşmelerle desteklenmektedir.
@@ -14,7 +14,7 @@ summaryPoint3: Ethereum blokzincirindeki akıllı sözleşmelerle desteklenmekte
 
 NFT'ler şu anda dijital sanat ve koleksiyon dünyasını kasıp kavuruyor. Yeni bir kripto kitlesine yapılan büyük satışlar sayesinde dijital sanatçıların hayatları değişiyor. Ve hayranlarla bağlantı kurmak için yeni bir fırsat bulan ünlüler de katılıyor. Ancak dijital sanat, NFT'leri kullanmanın yollarından sadece biridir. Aslında dijital veya fiziksel dünyadaki bir öğenin tapusu gibi, herhangi bir benzersiz varlığın sahipliğini temsil etmek için kullanılabilirler.
 
-Andy Warhol 90'ların sonlarında doğmuş olsaydı, muhtemelen Campbell's Soup'u bir NFT olarak basardı. Kanye'nin Ethereum'a bir dizi Yeezy koyması an meselesi. Ve bir gün arabanıza sahip olduğunuz bir NFT ile kanıtlanabilir.
+Andy Warhol 90'ların sonlarında doğmuş olsaydı, muhtemelen Campbell's Soup'u bir NFT olarak basardı. Nike'ın Ethereum'a Jordan serisi koyması an meselesi. Ve bir gün arabanıza sahip olduğunuz bir NFT ile kanıtlanabilir.
 
 ## NFT nedir? {#what-are-nfts}
 
@@ -153,6 +153,7 @@ Bu tamamen otomatiktir, bu nedenle yaratıcılar, çalışmaları kişiden kişi
 - [Alan adları](#nft-domains)
 - [Fiziksel öğeler](#nft-physical-items)
 - [Yatırımlar ve teminat](#nfts-and-defi)
+- [Tokengating](#tokengating)
 
 <Divider />
 
@@ -273,6 +274,24 @@ Bahsettiğimiz gibi, bu gelişmekte olan bir alan. NFT'ler, DAO'lar ve kesirli t
 
 <Divider />
 
+### Tokengating {#tokengating}
+
+Tokengating bir şeye olan erişimi kısıtlayıp NFT'lerle bu erişim kısıtlamasını kaldırmanın bir yoludur. Bunlar, patforma dayalı olarak devasa boyutta farklılık gösterebilir, ancak popüler örnekler arasında kapalı içerikler, özel sohbet sunucuları ve e-ticarette ayrıcalıklı ürünler yer alır.
+
+Tokengating yapan bir platform doğal olarak, sizden gerekli olan NFT'ye sahip olduğunuzu kanıtlamanız adına cüzdanınızı bağlamanızı isteyecektir. Yalnızca gerekli NFT'ye sahip olmanız durumunda erişim sağlayabilirsiniz. Aksi taktirde, sizin için erişilebilir olmayacaktır. NFT'ler bunu yapmanın en mükemmel yoludur çünkü eşsiz varlıklardır. Erişim için sahte sahiplik iddiasında bulunamazsınız.
+
+NFT'ler Ethereum'da bulunduğundan, bunları uygulayan herhangi bir platformda Ethereum tokengatelerinin kilidini açmak için kullanılabilir. Sahip olduğunuz tek bir NFT; kapalı içeriklere, özel sohbet sunucularına ve tamamen farklı web siteleri ya da uygulamaların ayrıcalıklı ürünlerine erişim sağlamanıza yardımcı olabilir.
+
+NFT'lerin basılması ve dağıtılması, topluluk oluşturma veya topluluğun dijitalleştirilmesiyle ilgiliyse, "tokengating" de topluluğun büyütülmesiyle ilgilidir. NFT'ler üyelik ya da sadakat sağlamak için bir araç olarak kullanılıyor ve bu yolla gelen ödülleri güvenilir bir şekilde sunmanın harika bir yolu olarak görülüyor.
+
+#### Örnekler
+
+- [Collab.land](https://collab.land/) tokengates Discord sohbet sunucuları veya Telegram grupları
+- [Unlock protocol](https://unlock-protocol.com/) tokengating sağlayan bir protokoldür
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts), tüccarlara tokengate modeliyle alıcıların ürün ve indirimlere erişmelerine olanak sağlayan artan sayıda uygulamalara sahiptir
+
+<Divider />
+
 ## Ethereum ve NFT'ler {#ethereum-and-nfts}
 
 Ethereum, birkaç nedenden dolayı NFT'lerin çalışmasını mümkün kılıyor:
@@ -280,29 +299,24 @@ Ethereum, birkaç nedenden dolayı NFT'lerin çalışmasını mümkün kılıyor
 - İşlem geçmişi ve token meta verileri herkese açık olarak doğrulanabilir: Sahiplik geçmişini ispatlamak kolaydır.
 - Bir işlem onaylandıktan sonra, sahipliği "çalmak" için bu verileri manipüle etmek neredeyse imkansızdır.
 - NFT ticareti, ücret olarak büyük kesintiler alabilen platformlara ihtiyaç duymadan eşler arası gerçekleşebilir.
-- Tüm Ethereum ürünleri aynı "arka ucu" paylaşır. Başka bir deyişle, tüm Ethereum ürünleri birbirini kolayca anlayabilir: Bu, NFT'leri ürünler arasında taşınabilir hâle getirir. Bir üründe NFT satın alabilir ve başka bir üründe kolayca satabilirsiniz. Bir içerik oluşturucu olarak NFT'lerinizi aynı anda birden fazla üründe listeleyebilirsiniz: Her ürün en güncel sahiplik bilgilerine sahip olacaktır.
+- Tüm Ethereum ürünleri aynı "arka ucu" paylaşır. Başka bir deyişle, tüm Ethereum ürünleri birbirini kolayca anlayabilir: Bu, NFT'leri ürünler arasında taşınabilir hale getirir. Bir üründe NFT satın alabilir ve bunu başka bir üründe kolayca satabilirsiniz. Bir içerik oluşturucu olarak NFT'lerinizi aynı anda birden fazla üründe listeleyebilirsiniz: Her ürün en güncel sahiplik bilgilerine sahip olacaktır.
 - Ethereum asla kapanmaz, yani token'larınız her zaman satılmaya hazır olacaktır.
 
 ## NFT'lerin çevreye etkisi {#environmental-impact-nfts}
 
-NFT'lerin popülaritesi artıyor, bu da özellikle karbon ayak izleri üzerinde daha fazla incelemeye tabi tutuldukları anlamına geliyor.
+NFT'leri oluşturmak ve transfer etmek yanlızca Ethereum işlemleridir; oluşturmak, satın almak, el değiştirmek ya da NFT'ler ile etkileşime girmek doğrudan enerji harcamaz. ["Birleşim"](/roadmap/merge/), Ethereum az enerji harcayan bir blokzincirdir. Bu NFT'leri kullanmanın çevresel etkisinin göz ardı edilebilecek kadar ufak olduğu anlamına geliyor.
 
-Birkaç şeyi açıklığa kavuşturmak için:
-
-- NFT'lerin oluşturulması ve aktarılması sadece Ethereum işlemleridir; Ethereum tarafından harcanan enerji üzerinde doğrudan bir etkileri yoktur veya bunlar, bağımsız olarak kendi enerjilerini harcamaz.
-- Ethereum, düşük enerjili bir blok zincirdir, yani NFT'leri oluşturmanın, satın almanın ve aktarmanın çevresel etkisi çok küçüktür.
-
-Sonraki bölümler biraz daha teknik ayrıntıyla daha fazla açıklama yapıyor...
+[Ethereum'un enerji tüketimi hakkında dahası](/energy-consumption/).
 
 ### NFT'leri suçlamayın {#nft-qualities}
 
-Tüm NFT ekosistemi Ethereum'un merkeziyetsiz ve güvenli olması sayesinde çalışır.
+Tüm NFT ekosistemi, Ethereum'un merkeziyetsiz ve güvenli olması sayesinde çalışır.
 
 Merkeziyetsiz, yani siz ve diğer herkes bir şeye sahip olduğunuzu doğrulayabilir. Hepsi, kendi kurallarını istediği zaman empoze edebilen üçüncü bir şahsa güvenmeden veya velayet vermeden yapılır. Ayrıca NFT'nizin birçok farklı üründe ve pazarda taşınabilir olduğu anlamına gelir.
 
 Güvenlidir, yani hiç kimse NFT'nizi kopyalayamaz/yapıştıramaz veya çalamaz.
 
-Ethereum'un bu nitelikleri, dijital olarak benzersiz öğelere sahip olmayı ve içeriğiniz için adil bir fiyat almayı mümkün kılar. Ethereum, varlıkları, ["hisse ispatı"](/developers/docs/consensus-mechanisms/pos) içeren merkeziyetsiz bir mutabakat mekanizması kullanarak korur. Bu, zincire kimlerin işlem bloku ekleyebileceğini belirlemek için kullanılan düşük karbonlu bir yöntemdir ve enerji yoğun alternatif olan ["iş ispatı"](/developers/docs/consensus-mechanisms/pow) öğesinden daha güvenli olarak kabul edilir. NFT'ler, yüksek enerji harcaması ile ilişkilendirilmiştir çünkü Ethereum, iş ispatı kullanılarak güvence altına alınmıştır. Bu artık doğru değil.
+Ethereum'un bu nitelikleri, dijital olarak benzersiz ögelere sahip olmayı ve içeriğiniz için adil bir fiyat almayı mümkün kılar. Ethereum; varlıkları, ["hisse ispatı"](/developers/docs/consensus-mechanisms/pos) içeren merkeziyetsiz bir mutabakat mekanizması kullanarak korur. Bu, zincire kimlerin işlem bloku ekleyebileceğini belirlemek için kullanılan düşük karbonlu bir yöntemdir ve enerji yoğun alternatif olan ["iş ispatı"](/developers/docs/consensus-mechanisms/pow) öğesinden daha güvenli olarak kabul edilir. NFT'ler, yüksek enerji harcaması ile ilişkilendirilmiştir çünkü Ethereum, iş ispatı kullanılarak güvence altına alınmıştır. Bu artık doğru değil.
 
 #### NFT Basma {#minting-nfts}
 
@@ -313,7 +327,7 @@ Bir NFT bastığınızda, birkaç şeyin olması gerekir:
 - Yukarıdakileri doğrulayan işlemlerin bir bloka eklenmesi ve zincir üzerinde "ölümsüzleştirilmesi" gerekir.
 - Blok, ağdaki herkes tarafından "doğru" olarak onaylanmalıdır. Bu mutabakat, aracılara olan ihtiyacı ortadan kaldırır çünkü ağ, NFT'nizin var olduğunu ve size ait olduğunu kabul eder. Ve zincir üzerinde olduğu için herkes kontrol edebilir. Bu, Ethereum'un NFT yaratıcılarının kazançlarını en üst düzeye çıkarmasına yardımcı olmasının yollarından biridir.
 
-Tüm bu görevler blok üreticileri ve doğrulayıcılar tarafından yapılır. Blok teklif edenler, NFT işleminizi bir bloka ekler ve ağın geri kalanına yayınlar. Doğrulayıcılar, işlemin geçerli olup olmadığını kontrol eder ve ardından bunu veritabanlarına eklerler. Doğrulayıcıların dürüst davrandığından emin olmak için birçok kripto-ekonomik teşvik var. Öte yandan, herhangi biri yeni bastığınız NFT'ye sahip olduğunu iddia edebilir ve mülkiyeti hileli bir şekilde devredebilir.
+Tüm bu görevler blok üreticileri ve doğrulayıcılar tarafından yapılır. Blok teklif edenler, NFT işleminizi bir bloka ekler ve ağın geri kalanına yayınlar. Doğrulayıcılar, işlemin geçerli olup olmadığını kontrol eder ve ardından bunu kendi veritabanlarına eklerler. Doğrulayıcıların dürüst davrandığından emin olmak için birçok kripto-ekonomik teşvik mevcuttur. Öte yandan, herhangi biri yeni bastığınız NFT'ye sahip olduğunu iddia edebilir ve mülkiyeti hileli bir şekilde devredebilir.
 
 #### NFT güvenliği {#nft-security}
 
@@ -327,7 +341,7 @@ NFT'lerle ilgili güvenlik sorunları çoğunlukla kimlik avı dolandırıcılı
 
 ## NFT'ler ile oluşturun {#build-with-nfts}
 
-Çoğu NFT, [ERC-721](/developers/docs/standards/tokens/erc-721/) olarak bilinen tutarlı bir standart kullanılarak oluşturulur. Ancak incelemek isteyebileceğiniz başka standartlar da var. [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standardı, özellikle oyun alanında faydalı olan yarı değiştirilebilir token'lara izin verir. Ayrıca daha yakın zamanda, NFT'lerin basımını çok daha verimli hâle getirmek için [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) standardı da önerildi. Bu standart, tek bir işlemde istediğiniz kadar basmanıza olanak tanır!
+Çoğu NFT, [ERC-721](/developers/docs/standards/tokens/erc-721/) olarak bilinen tutarlı bir standart kullanılarak oluşturulur. Ancak incelemek isteyebileceğiniz başka standartlar da mevcuttur. [ERC-1155](/developers/docs/standards/tokens/erc-1155/) standardı, özellikle oyun alanında faydalı olan yarı değiştirilebilir token'lara izin verir. Ayrıca daha yakın zamanda, NFT'lerin basımını çok daha verimli hale getirmek için [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) standardı da önerildi. Bu standart, tek bir işlemde istediğiniz kadar basmanıza olanak tanır!
 
 ## Daha fazla bilgi {#further-reading}
 
@@ -337,4 +351,5 @@ NFT'lerle ilgili güvenlik sorunları çoğunlukla kimlik avı dolandırıcılı
 - [Metaverse hakkında bilmeniz gereken her şey](https://foundation.app/blog/enter-the-metaverse) – _Foundation ekibi, Foundation.app_
 - [Hayır, CryptoSanatçıları Gezegene Zarar Vermiyor](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Ethereum'un enerji tüketimi](/energy-consumption/)
-- [Artık bir ülkeyle eş güç harcanmıyor](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 Mayıs 2021_
+
+<QuizWidget quizKey="nfts" />

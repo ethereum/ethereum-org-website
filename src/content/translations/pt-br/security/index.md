@@ -55,8 +55,8 @@ Lembrar de senhas fortes e exclusivas para cada conta que você possui não é o
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
-- [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
+- Ou confira outros [gerenciadores de senhas recomendados](https://www.privacytools.io/secure-password-manager)
 
 ### Use autenticação de dois fatores {#two-factor-authentication}
 
@@ -137,7 +137,7 @@ Ao capturar a tela com as suas frases semente ou chaves privadas, você corre o 
 
 ### Use uma carteira de hardware {#use-hardware-wallet}
 
-Uma carteira de hardware fornece armazenamento off-line para chaves privadas. Elas são consideradas a opção de carteira mais segura para armazenar suas chaves privadas.
+Uma carteira de hardware fornece armazenamento off-line para chaves privadas. Elas são consideradas a opção de carteira mais segura para armazenar suas chaves privadas, pois elas nunca entram em contato com a Internet e permanecem completamente locais em seu dispositivo.
 
 Manter chaves privadas off-line reduz maciçamente o risco de serem hackeadas, mesmo que um hacker tenha controle de seu computador.
 
@@ -158,13 +158,13 @@ Ao interagir com contratos inteligentes, não permita limites de gastos ilimitad
 
 Muitas carteiras Ethereum oferecem proteção de limites para evitar que as contas sejam drenadas.
 
-[Veja as carteiras com proteção de limites](/wallets/find-wallet/?filters=has_limits_protection)
+[Como revogar o acesso ao contrato inteligente aos seus fundos cripto](/guides/how-to-revoke-token-access/)
 
 <Divider />
 
 ## Fraudes comuns {#common-scams}
 
-Os golpistas estão sempre procurando maneiras de tirar seus fundos de você. É impossível deter completamente os fraudadores, mas podemos torná-los menos eficazes ao conhecermos a maior parte das técnicas utilizadas. Existem muitas variações destas fraudes, mas elas geralmente seguem os mesmos padrões de alto nível. Além de tudo, lembre-se:
+Os golpistas estão sempre procurando maneiras de tirar seus fundos de você. É impossível deter completamente os fraudadores, mas podemos torná-los menos eficazes ao conhecermos a maioria das técnicas utilizadas. Existem muitas variações dessas fraudes, mas elas geralmente seguem os mesmos padrões de alto nível. Em todo caso, lembre-se:
 
 - sempre seja cético
 - Ninguém vai te dar ETH de graça ou com desconto
@@ -172,35 +172,35 @@ Os golpistas estão sempre procurando maneiras de tirar seus fundos de você. É
 
 ### Golpe de doação {#giveaway}
 
-Uma das fraudes mais comuns com criptomoedas é o golpe de doação. O golpe de doação pode ser de muitas formas, mas a premissa geral é que se você enviar ETH para o endereço da carteira fornecido, você receberá seu ETH de volta com valor dobrado. *Por esta razão, também é conhecida como "golpe 2-por-1".*
+Uma das fraudes mais comuns com criptomoedas é o golpe de sorteio. O golpe sorteio pode ter muitas formas, mas o princípio geral é que se você enviar ETH para o endereço da carteira fornecido, você receberá seu ETH de volta em dobro. *Por esta razão, esse golpe também é conhecido como "golpe dois em um".*
 
-Esses golpes geralmente estipulam um tempo limite de oportunidade para reivindicar a oferta para incentivar a tomada de decisões inadequadas e criar um falso sensação de urgência.
+Esses golpes geralmente estipulam um tempo limite para reivindicar a oferta para incentivar tomadas de decisão precipitadas e criar uma falsa sensação de urgência.
 
 #### Hacks de mídia social {#social-media-hacks}
 
-Um exemplo notório disso ocorreu em julho de 2020, quando as contas do Twitter de celebridades proeminentes e organizações foram hackeadas. O hacker publicou simultaneamente um doação de Bitcoins nas contas hackeadas. Embora os tweets enganosos tenham sido rapidamente detectados e excluídos, os hackers ainda conseguiram levar 11 bitcoins (ou US$ 500.000 em setembro de 2021) e saíram impunes.
+Um exemplo notório desses ocorreu em julho de 2020, quando as contas do Twitter de celebridades e organizações foram hackeadas. O hacker publicou simultaneamente uma doação de Bitcoins nas contas hackeadas. Embora os tweets enganosos tenham sido rapidamente detectados e excluídos, os hackers ainda conseguiram levar 11 bitcoins (ou US$ 500.000 em setembro de 2021) e saíram impunes.
 
 ![Uma fraude no Twitter](./appleTwitterScam.png)
 
 #### Golpe de doação usando celebridades {#celebrity-giveaway}
 
-O golpe de doação usando celebridades é outra variável comum do golpe de doação. Os golpistas pegarão uma entrevista de vídeo ou uma palestra gravada dada por uma celebridade e a transmitirão ao vivo no YouTube, fazendo parecer que a celebridade estava dando uma entrevista ao vivo endossando um sorteio de criptomoeda.
+O golpe de sorteio usando celebridades é outra variável comum do golpe sorteio. Os golpistas pegarão uma entrevista de vídeo ou uma palestra gravada dada por uma celebridade e a transmitirão ao vivo no YouTube, fazendo parecer que a celebridade estava dando uma entrevista ao vivo promovendo um sorteio de criptomoedas.
 
-Vitalik Buterin é frequentemente usado nessa fraude, mas muitas outras pessoas proeminentes envolvidas com criptomoedas também são usadas (por exemplo, Elon Musk ou Charles Hoskinson). Incluir uma pessoa conhecida dá às transmissões ao vivo dos golpistas um sentido de legitimidade (isso parece tosco, mas como Vitalik está envolvido, então deve estar bem!).
+Vitalik Buterin é frequentemente usado nessa fraude, mas muitas outras pessoas famosas envolvidas com criptomoedas também são usadas (por exemplo, Elon Musk ou Charles Hoskinson). Incluir uma pessoa conhecida dá às transmissões ao vivo dos golpistas um sentido de legitimidade (isso parece suspeito, mas como Vitalik está envolvido, então deve ser bom!).
 
-**As doações são sempre fraudes. Se você enviar seus fundos para essas contas, os perderá para sempre.**
+**Os sorteios são sempre fraudes. Se você enviar seus fundos para essas contas, os perderá para sempre.**
 
 ![Um golpe no YouTube](./youtubeScam.png)
 
 ### Golpes de suporte {#support-scams}
 
-Criptomoeda é uma tecnologia relativamente jovem e mal compreendida. Uma fraude comum que tira vantagem disso é a fraude de suporte, onde os golpistas se personificam como pessoal de suporte de carteiras, exchanges ou blockchains populares.
+Criptomoeda é uma tecnologia relativamente jovem e mal compreendida. Uma fraude comum que tira vantagem disso é a fraude de suporte, na qual os golpistas se personificam como equipe de suporte de carteiras, agências de câmbio ou blockchains populares.
 
-A maior parte da discussão sobre Ethereum acontece no Discord. Os golpistas de suporte normalmente encontrarão seu alvo em canais públicos do Discord, onde procurarão questões de suporte e enviarão ao usuário uma mensagem privada oferecendo suporte. Ao fomentar a confiança, os golpistas de suporte tentarão induzir você a revelar suas chaves privadas ou a enviar seus fundos para as carteiras deles.
+A maior parte da discussão sobre Ethereum acontece no Discord. Os golpistas de suporte normalmente encontrarão seu alvo em canais públicos do Discord, nos quais procurarão questões de suporte e enviarão ao usuário uma mensagem privada oferecendo suporte. Ao criar segurança, os golpistas de suporte tentarão induzir você a revelar suas chaves privadas ou a enviar seus fundos para as carteiras deles.
 
 ![Um golpe de suporte no Discord](./discordScam.png)
 
-Como regra geral, o pessoal de suporte nunca se comunicará com você através de canais privados não oficiais. Algumas coisas simples para ter em mente ao lidar com o suporte:
+Como regra geral, o pessoal de suporte nunca se comunicará com você por meio de canais privados não oficiais. Algumas coisas simples a ter em mente ao lidar com o suporte:
 
 - Nunca compartilhe suas chaves privadas, frases semente ou senhas
 - Nunca permita que alguém acesse remotamente o seu computador
@@ -214,19 +214,19 @@ Como regra geral, o pessoal de suporte nunca se comunicará com você através d
 
 ### Golpe com o token 'Eth2' {#eth2-token-scam}
 
-Na fase de preparação ao [The Merge](/upgrades/merge/), golpistas aproveitaram a confusão em torno do termo 'Eth2' para tentar fazer com que os usuários resgatassem seu ETH por um token 'ETH2'. Não há 'ETH2' e nenhum outro token legítimo foi introduzido com a The Merge. O ETH que você possuía antes da fusão é o mesmo ETH agora. Não há **necessidade de realizar nenhuma ação relacionada ao seu ETH para contabilizar a mudança de prova de trabalho para prova de participação**.
+Na fase de preparação para [The Merge](/roadmap/merge/) (A Fusão), os golpistas aproveitaram a confusão em torno do termo "Eth2" para tentar fazer com que os usuários resgatassem seu ETH por um token "ETH2". Não há "ETH2" e nenhum outro token legítimo foi introduzido com a A Fusão. O ETH que você possuía antes da fusão é o mesmo ETH agora. Não há **necessidade de realizar nenhuma ação relacionada ao seu ETH para contabilizar a mudança de prova de trabalho para prova de participação**.
 
-Os golpistas podem aparecer como "suporte", informando que, se você depositar seu ETH, você receberá de volta 'ETH2'. Não há [suporte oficial ao Ethereum](/community/support/)e não há nenhum novo token. Jamais compartilhe a sua frase de recuperação com ninguém.
+Os golpistas podem aparecer como "suporte", informando que, se você depositar seu ETH, você receberá de volta "ETH2". Não há [suporte oficial ao Ethereum](/community/support/)e não há nenhum novo token. Jamais compartilhe a frase de recuperação de sua carteira com ninguém.
 
-_Nota: existem tokens/tickers derivados que podem representar ETH em staking (ou seja, rETH do Rocket Pool, stETH de Lido, ETH2 do Coinbase), mas estes não são algo para o qual você precise "migrar"._
+_Nota: existem tokens/rótulos derivados que podem representar ETH em participação (ou seja, rETH do Rocket Pool, stETH de Lido, ETH2 do Coinbase), mas você não precisa "migrar" para algum eles._
 
 ### Golpes de “phishing” {#phishing-scams}
 
 Golpes de “phishing” são outra abordagem cada vez mais comum que os golpistas usarão para tentar roubar os fundos da sua carteira.
 
-Alguns e-mails de “phishing” pedem aos usuários que cliquem em links que os redirecionarão para sites falsos, pedindo para inserir a frase de recuperação, redefinir sua senha ou enviar ETH. Outros podem induzi-lo a instalar “malwares” inadvertidamente para infectar seu computador e dar aos golpistas acesso aos arquivos do seu computador.
+Alguns e-mails de “phishing” pedem aos usuários que cliquem em links que os redirecionarão para sites falsos, pedindo para inserir a frase de recuperação, redefinir sua senha ou enviar ETH. Outros podem induzir você a instalar “malwares” inadvertidamente para infectar seu computador e dar aos golpistas acesso aos arquivos do seu computador.
 
-Se você receber um e-maail de um remetente desconhecido, lembre-se:
+Se você receber um e-mail de um remetente desconhecido, lembre-se:
 
 - Nunca abrir um link ou anexo dos endereços de correio eletrônio que você não reconheça
 - Nunca divulgue suas informações pessoais ou senhas para ninguém
@@ -236,9 +236,9 @@ Se você receber um e-maail de um remetente desconhecido, lembre-se:
 
 ### Golpes de corretores de criptomoedas {#broker-scams}
 
-Os golpes de corretores de criptomoedas são dados por pessoas que dizem ser corretores especializados em criptomoeda que se oferecerão para investir seu dinheiro em seu nome. As promessas de retornos exagerados geralmente acompanham esta oferta. Depois que o golpista recebe seus fundos, ele pode persuadir você a enviar mais fundos, para que você não perca mais ganhos de investimento, ou pode desaparecer por completo.
+Os falsos corretores de criptomoedas alegam ser especialistas e se oferecerão pegar seu dinheiro e investi-lo em seu nome. Promessas de retorno exageradas geralmente acompanham esse tipo de oferta. Depois que o golpista recebe seus fundos, ele pode persuadir você a enviar mais fundos, para que você não perca mais ganhos de investimento, ou pode desaparecer por completo.
 
-Esses corretores fraudulentos encontram seus alvos usando contas falsas no YouTube para começar conversas aparentemente naturais sobre corretagem. Essas conversas geralmente têm uma alta votação positiva para aumentar a legitimidade, mas os votos positivos são todos de contas de robôs.
+Esses corretores fraudulentos encontram seus alvos usando contas falsas no YouTube para iniciar conversas aparentemente naturais sobre corretagem. Essas conversas geralmente têm muitas curtidas para aumentar a legitimidade, mas elas são todas de contas de robôs.
 
 **Não confie em estranhos na Internet para investir em seu nome. Você perderá suas criptomoedas.**
 
@@ -246,7 +246,7 @@ Esses corretores fraudulentos encontram seus alvos usando contas falsas no YouTu
 
 ### Golpes de pool (consórcio) de mineração de criptomoedas {#mining-pool-scams}
 
-A partir de setembro de 2022, não será mais possível realizar mineração no Ethereum. Entretanto, os golpes de pool de mineração ainda existem. Os golpes de pool de mineração envolvem pessoas entrando em contato com você, sem a sua solicitação, e alegando que você pode obter grandes retornos juntando-se a um pool de mineração Ethereum. O golpista fará pedidos e permanecerá em contato com você pelo tempo que for necessário. Essencialmente, o golpista tentará convencê-lo de que, quando você ingressar em um consórcio de mineração Ethereum, sua criptomoeda será usada para criar ETH e que você receberá dividendos na forma de ETH. O que vai acabar acontecendo é que você notará que sua criptomoeda está gerando pequenos retornos. Isso é simplesmente uma isca para induzi-lo a investir mais. Finalmente, todos os seus fundos serão enviados para um endereço desconhecido e o golpista desaparecerá ou, em alguns casos, ele continuará mantendo contato, como aconteceu em um caso recente.
+A partir de setembro de 2022, não será mais possível realizar mineração no Ethereum. No entanto, os golpes de pool de mineração ainda existem. Os golpes de pool de mineração envolvem pessoas que entram em contato com você, sem a sua solicitação, alegando que você pode obter grandes retornos juntando-se a um pool de mineração Ethereum. O golpista continuará fazendo afirmações e permanecerá em contato com você pelo tempo que for necessário. Essencialmente, o golpista tentará convencê-lo de que ao ingressar em um pool de mineração Ethereum, sua criptomoeda será usada para criar ETH e que você receberá dividendos na forma de ETH. O que vai acabar acontecendo é que você notará que sua criptomoeda está gerando pequenos retornos. Isso é simplesmente uma isca para induzi-lo a investir mais. Por fim, todos os seus fundos serão enviados para um endereço desconhecido e o golpista desaparecerá ou, em alguns casos, ele continuará mantendo contato, como aconteceu em um caso recente.
 
 Resumindo, tenha cuidado com as pessoas que entram em contato com você nas mídias sociais pedindo que você faça parte de um pool de mineração. Uma vez que você perde a sua criptomoeda, não há como recuperá-la.
 
@@ -260,7 +260,7 @@ Algumas coisas para você se lembrar:
 
 ### Golpes de airdrop {#airdrop-scams}
 
-As fraudes com airdrop envolvem um projeto fradulento que lança um ativo (NFT, token) em sua carteira e o redireciona para um site fraudulento para você reivindicar o ativo lançado. Você será solicitado a entrar com a sua carteira Ethereum e "aprovar" uma transação ao tentar reivindicar o ativo falso. Esta transação compromete a sua conta enviando suas chaves públicas e privadas para o golpista. Uma forma alternativa desta fraude pode fazer com que você confirme uma transação que envie fundos para a conta do golpista.
+As fraudes com airdrop envolvem um projeto fradulento que lança um ativo (NFT, token) em sua carteira e o redireciona para um site fraudulento para você reivindicar o ativo lançado. Você será solicitado a entrar com a sua carteira Ethereum e "aprovar" uma transação ao tentar reivindicar o ativo falso. Essa transação compromete a sua conta enviando suas chaves públicas e privadas para o golpista. Uma forma alternativa dessa fraude pode fazer com que você confirme uma transação que enviará fundos para a conta do golpista.
 
 [Mais sobre fraudes com airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
@@ -287,3 +287,5 @@ As fraudes com airdrop envolvem um projeto fradulento que lança um ativo (NFT, 
 - [Como se proteger: golpes comuns](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Evitando golpes](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Tópico no Twitter sobre e-mails e mensagens comuns de phishing de criptografia](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+
+<QuizWidget quizKey="security" />

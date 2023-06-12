@@ -41,9 +41,11 @@ If you do not know which contract to choose, you can revoke all of them. It won'
 
 Once you click on revoke, you should see a new transaction suggestion in your wallet. This is to be expected. You will have to pay the fee for the cancellation to be successful. Depending on the network this can take from a minute to several to be processed.
 
-We advise to refresh the revoking tool after few minutes and connect your wallet again to double check if revoked contract has disappeared from the list.
+We advise you to refresh the revoking tool after a few minutes and connect your wallet again to double check if the revoked contract has disappeared from the list.
 
-<mark>We recommend you never allow projects unlimited access to your tokens and revoke all token allowance access regularly. Revoking token access will never result in loss of funds.</mark>
+<mark>We recommend you never allow projects unlimited access to your tokens and revoke all token allowance access regularly. Revoking token access should never result in a loss of funds, especially if you use the tools listed above.</mark>
+
+ <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>

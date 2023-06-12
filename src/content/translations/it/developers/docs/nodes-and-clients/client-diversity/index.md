@@ -65,8 +65,6 @@ Per "indirizzare" la diversità dei client non basta che i singoli utenti scelga
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[Akula](https://akula.app)
-
 [Go-Ethereum](https://geth.ethereum.org/)
 
 ### Client di consenso {#consensus-clients}
@@ -89,11 +87,10 @@ Diversi pannelli di controllo forniscono statistiche sulla diversità dei client
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-- [pools.invis.cloud](https://pools.invis.cloud/)
-- [slashed.info](https://www.slashed.info/)
 
 **Livello di esecuzione:**
 
+- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Letture consigliate {#further-reading}

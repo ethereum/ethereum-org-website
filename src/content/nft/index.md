@@ -41,7 +41,7 @@ Here's how an internet of NFTs compared to the internet most of us use today loo
 | NFTs are compatible with anything built using Ethereum. An NFT ticket for an event can be traded on every Ethereum marketplace, for an entirely different NFT. You could trade a piece of art for a ticket! | Companies with digital items must build their own infrastructure. For example an app that issues digital tickets for events would have to build their own ticket exchange. |
 | Content creators can sell their work anywhere and can access a global market.                                                                                                                               | Creators rely on the infrastructure and distribution of the platforms they use. These are often subject to terms of use and geographical restrictions.                     |
 | Creators can retain ownership rights over their own work, and claim resale royalties directly.                                                                                                              | Platforms, such as music streaming services, retain the majority of profits from sales.                                                                                    |
-| Items can be used in surprising ways. For example, you can use digital artwork as collateral in a decentralised loan.                                                                                       |                                                                                                                                                                            |
+| Items can be used in surprising ways. For example, you can use digital artwork as collateral in a decentralized loan.                                                                                       |                                                                                                                                                                            |
 
 ### NFT examples {#nft-examples}
 
@@ -258,7 +258,7 @@ This is still experimental but you can learn more about fractional NFT ownership
 - [NIFTEX](https://landing.niftex.com/)
 - [NFTX](https://gallery.nftx.org/)
 
-In theory, this would unlock the possibility to do things like own a piece of a Picasso. You would become a shareholder in a Picasso NFT, meaning you would have a say in things like revenue sharing. It's very likely that one day soon owning a fraction of an NFT will enter you into a decentralised autonomous organisation (DAO) for managing that asset.
+In theory, this would unlock the possibility to do things like own a piece of a Picasso. You would become a shareholder in a Picasso NFT, meaning you would have a say in things like revenue sharing. It's very likely that one day soon owning a fraction of an NFT will enter you into a decentralized autonomous organisation (DAO) for managing that asset.
 
 These are Ethereum-powered organisations that allow strangers, like global shareholders of an asset, to coordinate securely without necessarily having to trust the other people. That's because not a single penny can be spent without group approval.
 
@@ -304,7 +304,7 @@ Ethereum makes it possible for NFTs to work for a number of reasons:
 
 ## The environmental impact of NFTs {#environmental-impact-nfts}
 
-Creating and transferring NFTs are just Ethereum transactions - minting, buying, swapping or interacting with NFTs does not directly consume energy. Since [The Merge](/upgrades/merge), Ethereum is a low-energy blockchain, meaning the environmental impact of using NFTs is negligible.
+Creating and transferring NFTs are just Ethereum transactions - minting, buying, swapping or interacting with NFTs does not directly consume energy. Since [The Merge](/roadmap/merge), Ethereum is a low-energy blockchain, meaning the environmental impact of using NFTs is negligible.
 
 [More on Ethereum's energy consumption](/energy-consumption/).
 
@@ -341,7 +341,7 @@ Security issues relating to NFTs are most often related to phishing scams, smart
 
 ## Build with NFTs {#build-with-nfts}
 
-Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there are other standards that you might want to look into. The [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standard allows for semi-fungible tokens which is particularly useful in the realm of gaming. And more recently, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) has been proposed to make minting NFTs a lot more efficient. This standard lets you mint as many as you like in one transaction!
+Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there are other standards that you might want to look into. The [ERC-1155](/developers/docs/standards/tokens/erc-1155/) standard allows for semi-fungible tokens which is particularly useful in the realm of gaming. And more recently, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) has been proposed to make minting NFTs a lot more efficient. This standard lets you mint as many as you like in one transaction!
 
 ## Further reading {#further-reading}
 
@@ -351,5 +351,6 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 - [Everything you need to know about the metaverse](https://foundation.app/blog/enter-the-metaverse) – _Foundation team, foundation.app_
 - [No, CryptoArtists Aren’t Harming the Planet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Ethereum's energy consumption](/energy-consumption/)
+- [Ethereum NFT APIs](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
 <QuizWidget quizKey="nfts" />

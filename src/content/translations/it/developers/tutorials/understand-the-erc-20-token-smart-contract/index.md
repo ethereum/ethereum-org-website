@@ -1,13 +1,12 @@
 ---
-title: Informazioni sugli Smart Contract con token ERC-20
-description: Introduzione alla distribuzione del primo Smart Contract su una rete di prova Ethereum
+title: Comprendere il contratto intelligente del token ERC-20
+description: Un'introduzione alla distribuzione del tuo primo contratto intelligente su una rete di prova di Ethereum
 author: "jdourlens"
 tags:
-  - "Smart Contract"
+  - "contratti intelligenti"
   - "token"
   - "Solidity"
-  - "primi passi"
-  - "ERC-20"
+  - "erc-20"
 skill: beginner
 lang: it
 published: 2020-04-05
@@ -16,7 +15,7 @@ sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Uno dei più importanti [standard di Smart Contract](/developers/docs/standards/) su Ethereum è conosciuto come [ERC-20](/developers/docs/standards/tokens/erc-20/) ed si è imposto come standard tecnico utilizzato per tutti gli Smart Contract sulla blockchain Ethereum per l'implementazione di token fungibili.
+Uno dei più importanti [standard dei contratti intelligenti](/developers/docs/standards/) su Ethereum è noto come [ERC-20](/developers/docs/standards/tokens/erc-20/); è emerso come lo standard tecnico usato per tutti i contratti intelligenti sulla blockchain di Ethereum per le implementazioni di token fungibili.
 
 ERC-20 definisce una serie comune di regole che tutti i token fruibili di Ethereum devono seguire. Di conseguenza, consente a sviluppatori di ogni tipologia di prevedere con precisione come funzioneranno i nuovi token nell'ecosistema Ethereum. Questo semplifica lo sviluppo, in quanto si può lavorare con la sicurezza che ogni nuovo progetto non dovrà essere rifatto in seguito al rilascio di un nuovo token, se questo segue le regole.
 

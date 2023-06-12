@@ -14,9 +14,9 @@ Uma blockchain é melhor descrita como um banco de dados público atualizado e c
 
 Todos os computadores da rede têm de chegar a um acordo sobre cada novo bloco e sobre a cadeia como um todo. Estes computadores são conhecidos como "nós". Os nós garantem que todos interagindo com a blockchain tenham os mesmos dados. Para cumprir este acordo distribuído, as blockchains precisam de um mecanismo de consenso.
 
-O Ethereum utiliza um mecanismo de consenso baseado em [prova de participação](/developers/docs/consensus-mechanisms/pos/). Qualquer um que queira adicionar novos blocos à rede deve colocar pelo menos 32 ETH no contrato de depósito e executar um software do validador. Então, eles podem ser selecionados aleatoriamente para propor blocos que outros validadores verificam e adicionam à cadeia de blocos. Nesse modelo, normalmente há apenas uma rede, porém latência de rede e comportamento desonesto podem fazer com que diversos blocos sejam inseridos em uma mesma posição. Para resolver esse problema, um algoritmo de escolha bifurcada seleciona um conjunto de blocos válidos. Os blocos selecionados são os que formam a cadeia mais pesada quanto possível, sendo que "pesada" refere-se ao número de validadores que aprovaram os blocos (balanceado de acordo com a quantidade de ETH colocada em participação por eles). Há um sistema de recompensas e punições que fortemente incentiva os participantes a serem honestos e ativos o máximo possível.
+O Ethereum utiliza um mecanismo de consenso baseado em [prova de participação](/developers/docs/consensus-mechanisms/pos/). Qualquer um que queira adicionar novos blocos à cadeia deve colocar ETH – a moeda nativa no Ethereum – como garantia e executar um software validador. Esses “validadores” podem então ser selecionados aleatoriamente para propor blocos que outros validadores verificam e adicionam à blockchain. Há um sistema de recompensas e penalidades que fortemente incentiva os participantes a serem honestos e estarem disponíveis online o máximo possível.
 
-Se você quiser ver como a cadeia de blocos faz hash dos dados e como o bloco anterior referencia todos os blocos anteriores, confira [esta demonstração](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo correspondente abaixo.
+Se você quiser ver como a cadeia de blocos faz hash dos dados e, subsequentemente, ao histórico de referência aos blocos, confira [esta demonstração](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo abaixo.
 
 Assista a Anders explicando hashes em cadeias de blocos:
 
@@ -107,7 +107,7 @@ Um trecho de código reutilizável (um programa) que um desenvolvedor publica no
 ## Leitura adicional {#further-reading}
 
 - [Whitepaper do Ethereum](/whitepaper/)
-- [Como o Ethereum funciona realmente?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_
+- [Afinal, como funciona o Ethereum?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** este recurso ainda é valioso, mas esteja ciente de que é anterior à [Fusão](/roadmap/merge) (The Merge) e, portanto, ainda se refere ao mecanismo de prova de trabalho do Ethereum, que agora é protegido pelo uso da [prova de participação](/developers/docs/consensus-mechanisms/pos))
 
 _Conhece um recurso da comunidade que ajudou você? Edite essa página e adicione-o!_
 

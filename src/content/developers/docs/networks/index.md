@@ -54,10 +54,14 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 
 ##### Faucets
 
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
+- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
+- [Infura Sepolia faucet](https://www.infura.io/faucet)
 
 #### Goerli _(long-term support)_ {#goerli}
 
@@ -77,16 +81,18 @@ Goerli is testnet for testing of validating and staking. The Goerli network is o
 
 ##### Faucets
 
+- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://goerli-faucet.pk910.de/)
 - [Goerli faucet](https://faucet.goerli.mudit.blog/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
+- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 
 To launch a Validator on Goerli testnet, use ethstaker's ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/).
 
-#### Rinkeby _(long-term support)_ {#rinkeby}
+#### Rinkeby _(deprecated)_ {#rinkeby}
 
 _Note: [the Rinkeby testnet is deprecated](https://blog.ethereum.org/2022/11/30/ropsten-shutdown-announcement) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia._
 
@@ -109,9 +115,7 @@ A testnet for [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
-- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 #### Optimistic Goerli {#optimistic-goerli}
 
@@ -119,8 +123,8 @@ A testnet for [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
-- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
 ## Private networks {#private-networks}
 

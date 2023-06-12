@@ -2,7 +2,7 @@
 title: "Uniswap-v2 Contract Walk-Through"
 description: How does the Uniswap-v2 contract work? Why is it written that way?
 author: Ori Pomerantz
-tags: ["solidity", "uniswap"]
+tags: ["solidity"]
 skill: intermediate
 published: 2021-05-01
 lang: en
@@ -905,12 +905,12 @@ The periphery contracts are the API (application program interface) for Uniswap.
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[This contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) has problems, and [should no longer be used](https://uniswap.org/docs/v2/smart-contracts/router01/). Luckily, the periphery contracts are stateless and don't hold any assets, so it is easy to deprecate it and suggest people use the replacement, `UniswapV2Router02`, instead.
+[This contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) has problems, and [should no longer be used](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Luckily, the periphery contracts are stateless and don't hold any assets, so it is easy to deprecate it and suggest people use the replacement, `UniswapV2Router02`, instead.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
 In most cases you would use Uniswap through [this contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
-You can see how to use it [here](https://uniswap.org/docs/v2/smart-contracts/router02/).
+You can see how to use it [here](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
 ```solidity
 pragma solidity =0.6.6;

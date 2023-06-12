@@ -8,7 +8,6 @@
   "page-developers-advanced": "উন্নত",
   "page-developers-api-desc": "স্মার্ট কন্ট্র্যাক্ট-এর সাথে ইন্টার‍্যাক্ট করার জন্য লাইব্রেরিগুলিকে ব্যবহার করা",
   "page-developers-api-link": "ব্যাকএন্ড এপিআইস",
-  "page-developers-aria-label": "ডেভেলপারদের মেনু",
   "page-developers-block-desc": "ব্লকচেইনে যোগ করা লেনদেনগুলির ব্যাচ",
   "page-developers-block-explorers-desc": "ইথেরিয়াম ডেটায় আপনার পোর্টাল",
   "page-developers-block-explorers-link": "ব্লক এক্সপ্লোরার",
@@ -80,5 +79,6 @@
   "page-developers-transactions-desc": "ইথেরিয়াম-এর অবস্থা যেভাবে পরিবর্তিত হয়",
   "page-developers-transactions-link": "লেনদেনসমূহ",
   "page-developers-web3-desc": "web3 ডেভেলপমেন্টের বিশ্ব কীভাবে আলাদা",
-  "page-developers-web3-link": "Web2 বনাম Web3"
+  "page-developers-web3-link": "Web2 বনাম Web3",
+  "alt-eth-blocks": "একটি ETH চিহ্নের মতো করে সাজানো ব্লকগুলির ছবি "
 }

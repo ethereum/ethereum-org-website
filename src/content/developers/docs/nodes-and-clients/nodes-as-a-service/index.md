@@ -15,7 +15,7 @@ If you don't already have an understanding of what nodes and clients are, check 
 
 ## Stakers {#stakoooooooooooooors}
 
-Solo stakers must run their own infrastructure rather than relying on third-party providers. This means running an execution client coupled with a consensus client. Before [The Merge](/upgrades/merge), it was possible to run a consensus client only and use a centralized provider for execution data; this is no longer possible - a solo staker must run both clients. However, there are services available to ease this process.
+Solo stakers must run their own infrastructure rather than relying on third-party providers. This means running an execution client coupled with a consensus client. Before [The Merge](/roadmap/merge), it was possible to run a consensus client only and use a centralized provider for execution data; this is no longer possible - a solo staker must run both clients. However, there are services available to ease this process.
 
 [Read more on running a node](/developers/docs/nodes-and-clients/run-a-node/).
 
@@ -143,6 +143,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Direct 24/7 Support
     - Pay in Crypto (Enterprise)
+- [DRPC](https://drpc.org/)
+  - [Docs](https://docs.drpc.org/)
+  - Features
+    - Decentralized RPC nodes
+    - 15+ Node providers
+    - Node balancing
+    - Unlimited compute units per month on the free tier
+    - Data verification
+    - Custom endpoints
+    - http and WSS endpoints
+    - Unlimited keys (free and paid tier)
+    - Flexible fallback options
+    - [Public Endpoint](https://eth.drpc.org)
+    - Free shared archive nodes
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Features
@@ -314,6 +328,18 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unlimited TX fee and infinite Gas for sending transactions
     - Fastest getting of the new block and reading of the blockchain
     - The best price per API call guarantee
+
+[**Zeeve**](https://www.zeeve.io/)
+
+- [Docs](https://www.zeeve.io/docs/)
+- Features
+  - Enterprise-grade no-code automation platform providing deployment, monitoring and management of Blockchain nodes and networks
+  - 30+ Supported Protocols & Integrations, and adding more
+  - Value added web3 infrastructure services like decentralized storage, decentralized identity and Blockchain Ledger data APIs for real-world use cases
+  - 24/7 support and proactive monitoring ensure the health of nodes all the time.
+  - RPC endpoints offer authenticated access to API’s, hassle free management with intuitive dashboard and analytics.
+  - Provides both managed cloud and bring your own cloud options to choose from and supports all major cloud providers like AWS, Azure, Google Cloud, Digital Ocean and on-premise.
+  - We use intelligent routing to hit the node closest to your user every time
 
 ## Further reading {#further-reading}
 

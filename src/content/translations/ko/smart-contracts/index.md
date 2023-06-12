@@ -6,7 +6,7 @@ lang: ko
 
 # 스마트 계약에 대한 소개 {#introduction-to-smart-contracts}
 
-스마트 계약은 [이더리움 애플리케이션](/dapps/)의 기초적인 빌딩 블록입니다. 이는 블록체인에 저장된 컴퓨터 프로그램이며, 기존의 계약을 디지털 병렬로 변환할 수 있습니다. 스마트 계약은 매우 논리적이며, 적용할 수 있는 구조가 있을 때 해당 구조를 따릅니다. 이는 프로그래밍된 대로 정확하게 작동하며, 변경할 수 없음을 의미합니다.
+스마트 계약은 [이더리움 애플리케이션](/dapps/)의 기초적인 빌딩 블록입니다. 이는 블록체인에 저장된 프로그램이며, 기존의 전통적 계약서를 병렬화된 디지털 양식으로 변환할 수 있습니다. 스마트 계약은 매우 논리적이며, 적용할 수 있는 구조가 있을 때 해당 구조를 따릅니다. 이는 프로그래밍된 대로 정확하게 작동하며, 변경할 수 없음을 의미합니다.
 
 Nick Szabo는 "스마트 계약"이라는 용어를 만들었습니다. 1994년에 그는 [해당 개념에 대한 소개를 작성](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)하고, 1996년에는 [스마트 계약이 어떤 작업을 실행할 수 있는지 탐구](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)했습니다.
 

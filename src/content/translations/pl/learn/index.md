@@ -15,7 +15,6 @@ Oto kilka doskonałych tekstów na początek:
 
 Oprócz informacji zawartych na tej stronie istnieje wiele zasobów stworzonych przez społeczność, które warto sprawdzić:
 
-- [EthHub](https://docs.ethhub.io) _Comprehensive knowledge base for all things Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _An educational resource about Ethereum targeted at beginners_
 - [Ethereum.wiki](https://eth.wiki) _A community-built wiki about Ethereum’s technology_
 - [Kauri](https://kauri.io) _Technical articles and tutorials for Ethereum and related projects_
@@ -30,7 +29,6 @@ Nowy na Ethereum? Poniższe artykuły i zasoby pomogą ci zacząć.
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _23.01.2017 - Linda Xie_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Często aktualizowane - EthHub_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _ 30.01.2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28.09.2017 - Morgan Peck_
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _27.04.2018 - Tyler Cowen_
@@ -53,8 +51,6 @@ Inteligentny kontrakt (ang. „smart contract”) to prosty fragment kodu urucha
 ## Proof-of-work i kopanie kryptowaluty {#proof-of-work-and-mining}
 
 Ethereum używa obecnie systemu o nazwie „proof-of-work. Umożliwia to sieci Ethereum uzgodnienie stanu wszystkich informacji zapisanych w blokchain Ethereum i zapobiega niektórym rodzajom ataków gospodarczych.
-
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Często aktualizowane - Ethhub_
 
 W ETH 2.0 Ethereum zostanie przeniesione do innego systemu o nazwie „proof-of-stake”. [Czytaj więcej o ETH 2.0 poniżej](#consensus-layer-upgrades).
 
@@ -80,7 +76,6 @@ Podejmowanych jest wiele starań, aby Ethereum było bardziej „skalowalne” p
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _06.11.2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
-- [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Często aktualizowane - EthHub_
 
 ### Łańcuchy boczne {#sidechains}
 
@@ -96,17 +91,12 @@ Podejmowanych jest wiele starań, aby Ethereum było bardziej „skalowalne” p
 
 ETH 2.0 (znany również jako „Serenity”) odnosi się do kolejnej ważnej aktualizacji podstawowego protokołu Ethereum. Łączy kilka ulepszeń podstawowego protokołu Ethereum lub tzw. „Warstwy 1”.
 
-- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Często aktualizowane - EthHub_
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _09.12.2018 - Christine Kim_
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Często aktualizowane - EthHub_
-- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Często aktualizowane - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Wideo) Listopad 2018 - YouTube_
 
 ## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x to nazwa zbioru aktualizacji do istniejącego protokołu Ethereum. Celem jest dalsza poprawa i utrzymanie Ethereum, w czasie gdy nadal rozwijana i wdrażana jest ETH 2.0.
-
-Aby uzyskać więcej informacji, zobacz [EthHub’s explainer page about ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## Kryptoekonomia {#cryptoeconomics}
 

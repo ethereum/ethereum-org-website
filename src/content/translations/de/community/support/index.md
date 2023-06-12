@@ -38,6 +38,7 @@ Suchen Sie eine Ethereum-Wallet? [Sehen Sie sich unsere vollständige Liste der 
 
 Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpunkt auf Entwicklung mit erfahrenen Ethereum-Entwicklern, die Ihnen gerne helfen.
 
+- [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs-Discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
@@ -57,6 +58,7 @@ Hier sind einige beliebte Beispiele:
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## Einen Knoten betreiben {#node-support}
 

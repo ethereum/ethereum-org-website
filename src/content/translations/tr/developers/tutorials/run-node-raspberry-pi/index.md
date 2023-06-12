@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **Kısacası**: Raspberry Pi 4'ünüzü flaşlayın, bir ethernet kablosu takın, SSD diskini bağlayın ve Raspberry Pi 4'ü yürütüm katmanını veya mutabakat katmanını (İşaret Zinciri/doğrulayıcı) çalıştıran tam bir Ethereum düğümüne dönüştürmek için cihazı çalıştırın
 
-[Ethereum yükseltmeleri hakkında bilgi edinin](/upgrades/)
+[Ethereum yükseltmeleri hakkında bilgi edinin](/roadmap/)
 
 Önce biraz arka plan bilgisi verelim. Bildiğiniz gibi, Raspbian işletim sistemi hâlâ 32 bit [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (en azından kullanıcı alanı) üzerinde olduğundan, [[1]](/developers/tutorials/run-node-raspberry-pi/#references)Raspberry Pi 4 görüntüsüyle ilgili bazı bellek sorunlarıyla karşılaşıyoruz. Resmi işletim sistemine bağlı kalmayı tercih ederken, bu sorunları çözmek için yerel 64 bit işletim sistemine geçmemiz gerektiği sonucuna vardık
 
-Ayrıca, [mutabakat istemcileri](/upgrades/get-involved/#clients) 32 bit ikili dosyaları desteklemez, bu nedenle Raspbian kullanmak, Raspberry Pi 4'ün bir mutabakat katmanı düğümü çalıştırmasını (ve stake etme olasılığını) hariç tutar.
+Ayrıca, mutabakat istemcileri 32 bit ikili dosyaları desteklemez, bu nedenle Raspbian kullanmak, Raspberry Pi 4'ün bir mutabakat katmanı düğümü çalıştırmasını (ve stake etme olasılığını) hariç tutar.
 
 Bu nedenle, birkaç testten sonra şimdi Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references) tabanlı 2 farklı sürücü yayınlıyoruz: yürütüm katmanı ve mutabakat katmanı sürümleri.
 

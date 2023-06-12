@@ -16,7 +16,7 @@ Los rollups optimistas se encuentran en paralelo a la cadena principal de Ethere
 
 Con los rollups optimistas, las transacciones se escriben en la cadena principal de Ethereum como `calldata`, lo que ofrece mayor optimización, ya que se reduce el costo del gas.
 
-Como el cálculo es la parte lenta y costosa del uso de Ethereum, los rollups optimistas pueden ofrecer mejoras de 10 a 100 veces en lo que respecta a la escalabilidad en función de la transacción. Este número incrementará aún más con la introducción de las [cadenas de fragmentos](/upgrades/sharding), ya que habrá más datos disponibles si se disputa una transacción.
+Como el cálculo es la parte lenta y costosa del uso de Ethereum, los rollups optimistas pueden ofrecer mejoras de 10 a 100 veces en lo que respecta a la escalabilidad en función de la transacción. Este número incrementará aún más con la introducción de las [cadenas de fragmentos](/roadmap/danksharding), ya que habrá más datos disponibles si se disputa una transacción.
 
 ### Disputar transacciones {#disputing-transactions}
 
@@ -52,7 +52,6 @@ Existen múltiples implementaciones de rollups optimistas que puede integrar en 
 **Lectura sobre rollups optimistas**
 
 - [Todo lo que debes saber sobre Optimistic rollup](https://research.paradigm.xyz/rollups)
-- [EthHub: rollups optimistas](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Guía esencial sobre Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [¿Cómo funciona realmente el rollup de Optimism?](https://research.paradigm.xyz/optimism)
 - [Análisis detallado de OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

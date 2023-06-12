@@ -76,7 +76,7 @@ Optymistyczne pakiety zbiorcze są umieszczone równolegle do głównego łańcu
 
 W przypadku optymistycznych pakietów zbiorczych transakcje są zapisywane w łańcuchu Ethereum jako `calldata`, co optymalizuje je jeszcze bardziej dzięki ograniczeniu kosztów gazu.
 
-Ponieważ obliczanie to powolna, droga część korzystania z Ethereum, optymistyczne pakiety zbiorcze mogą przynieść nawet 10-100-krotną poprawę skalowalności zależną od transakcji. Ta liczba zwiększy się jeszcze bardziej wraz z wprowadzeniem [łańcuchów odłamkowych](/upgrades/shard-chains). Wynika to z faktu, że w przypadku zakwestionowania transakcji dostępnych będzie więcej danych.
+Ponieważ obliczanie to powolna, droga część korzystania z Ethereum, optymistyczne pakiety zbiorcze mogą przynieść nawet 10-100-krotną poprawę skalowalności zależną od transakcji. Ta liczba zwiększy się jeszcze bardziej wraz z wprowadzeniem [łańcuchów odłamkowych](/roadmap/danksharding). Wynika to z faktu, że w przypadku zakwestionowania transakcji dostępnych będzie więcej danych.
 
 #### Transakcje sporne {#disputing-transactions}
 
@@ -122,12 +122,9 @@ Istnieją rozwiązania hybrydowe, które łączą w sobie najlepsze elementy wie
 
 **Pakiety zbiorcze ZK**
 
-- [EthHub na temat pakietów zbiorczych zk](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
-
 **Optymistyczne pakiety zbiorcze**
 
 - [Wszystko, co musisz wiedzieć o optymistycznym pakiecie zbiorczym](https://research.paradigm.xyz/rollups)
-- [EthHub na temat optymistycznych pakietów zbiorczych](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Jak faktycznie działa pakiet zbiorczy Optimism?](https://research.paradigm.xyz/optimism)
 

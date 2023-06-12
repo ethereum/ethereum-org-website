@@ -27,3 +27,4 @@ Some collaborative efforts to make Ethereum enterprise friendly have been put to
 - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)_
 - [Kaleido](https://kaleido.io/) _full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems_
 - [Quorum](https://consensys.net/quorum/) _an Ethereum-based open source enterprise blockchain platform with advanced enterprise grade features enabling privacy, permissioning and performance_
+[Zeeve](https://www.zeeve.io/) _provides a range of products and tools for building on Ethereum, also infrastructure and APIs for Enterprise Web3 applications._

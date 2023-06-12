@@ -6,31 +6,33 @@
 
 import React from "react"
 
-import type { GatsbySSR } from "gatsby"
+import type { RenderBodyArgs } from "gatsby"
 
-import Layout from "./src/components/Layout"
-
-import { Context } from "./src/types"
-import { IS_DEV } from "./src/utils/env"
-import { isLang } from "./src/utils/languages"
-
-// Prevents <Layout/> from unmounting on page transitions
-// https://www.gatsbyjs.com/docs/layout-components/#how-to-prevent-layout-components-from-unmounting
-// @ts-ignore: returning `null` is not accepted by the `GatsbySSR` type def.
-export const wrapPageElement: GatsbySSR<any, Context>["wrapPageElement"] = ({
-  element,
-  props,
-}) => {
-  const { location } = props
-  const { pathname } = location
-
-  const [, pathLocale] = pathname.split("/")
-
-  // this is to avoid having hydration issues on dev mode. Check the logic
-  // inside gatsby-browser.tsx
-  if (IS_DEV && !isLang(pathLocale)) {
-    return null
-  }
-
-  return <Layout {...props}>{element}</Layout>
+export const onRenderBody = ({ setHeadComponents }: RenderBodyArgs) => {
+  setHeadComponents([
+    <link
+      rel="preload"
+      href="/fonts/Inter-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+      key="interFont"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Inter-Regular.woff"
+      as="font"
+      type="font/woff"
+      crossOrigin="anonymous"
+      key="interFont"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/IBMPlexMono-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+      key="interFont"
+    />,
+  ])
 }

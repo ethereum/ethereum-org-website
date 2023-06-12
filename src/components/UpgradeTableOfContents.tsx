@@ -1,8 +1,7 @@
-import React from "react"
-import { Box, ListItem, UnorderedList } from "@chakra-ui/react"
-import Link from "../components/Link"
-
-import type { Item as ItemTableOfContents } from "./TableOfContents"
+import React, { useRef } from "react"
+import { Box, List, ListItem } from "@chakra-ui/react"
+import Link from "./Link"
+import { Item as TableOfContentsItem } from "./TableOfContents"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
@@ -23,40 +22,41 @@ const trimmedTitle = (title: string): string => {
   return match ? title.replace(match[1], "").trim() : title
 }
 
-export interface Item extends ItemTableOfContents {}
-
-interface IPropsTableOfContentsLink {
-  depth: number
-  item: Item
+export interface Item extends TableOfContentsItem {
+  id?: string
 }
 
-const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
-  depth,
-  item,
-}: {
-  depth: number
-  item: Item
-}) => {
-  const url = `#${getCustomId(item.title)}`
+const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
+  const { item } = props
+
+  const idString = useRef("")
+
+  if (!!item.id) {
+    idString.current = item.id
+  } else {
+    idString.current = item.title
+  }
+
+  const url = `#${getCustomId(idString.current)}`
+
   let isActive = false
   if (typeof window !== `undefined`) {
     isActive = window.location.hash === url
   }
-  const isNested: boolean = depth === 2
+
   let classes = ""
   if (isActive) {
     classes += " active"
   }
-  if (isNested) {
-    classes += " nested"
-  }
+
   return (
     <Link
-      href={url}
+      to={url}
       className={classes}
       position="relative"
       display="inline-block"
-      mb={2}
+      // `li :last-child` global selector wants to override this without `!important`
+      mb="0.5rem !important"
       color="text300"
     >
       {trimmedTitle(item.title)}
@@ -70,54 +70,44 @@ interface IPropsItemsList {
   maxDepth: number
 }
 
-const ItemsList: React.FC<IPropsItemsList> = ({
-  items,
-  depth,
-  maxDepth,
-}: {
-  items: Array<Item>
-  depth: number
-  maxDepth: number
-}) => {
+const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
   if (depth > maxDepth || !items) {
     return null
   }
-
   return (
     <>
       {items.map((item, index) => (
-        <ListItem margin={0} key={index}>
-          <TableOfContentsLink depth={depth} item={item} />
+        <ListItem m={0} key={index}>
+          <TableOfContentsLink item={item} />
         </ListItem>
       ))}
     </>
   )
 }
 
-export interface IProps {
-  items: Array<Item>
+function UpgradeTableOfContents(props: {
+  items: Array<{ id: string; title: string }>
+}): JSX.Element
+function UpgradeTableOfContents(props: {
+  maxDepth: number
+  items: Array<TableOfContentsItem>
+}): JSX.Element
+function UpgradeTableOfContents(props: {
   maxDepth?: number
-}
-
-const UpgradeTableOfContents: React.FC<IProps> = ({ items, maxDepth = 1 }) => {
-  if (!items) {
-    return null
-  }
-  // Exclude <h1> from TOC
-  if (items.length === 1) {
-    items = [items[0]]
-  }
+  items: Array<Item>
+}) {
+  const { items, maxDepth = 1 } = props
 
   return (
     <Box
-      as="aside"
+      as="nav"
       p={0}
       mb={8}
       textAlign="end"
       overflowY="auto"
       display={{ base: "none", l: "block" }}
     >
-      <UnorderedList
+      <List
         m={0}
         py={0}
         ps={4}
@@ -128,7 +118,7 @@ const UpgradeTableOfContents: React.FC<IProps> = ({ items, maxDepth = 1 }) => {
         styleType="none"
       >
         <ItemsList items={items} depth={0} maxDepth={maxDepth} />
-      </UnorderedList>
+      </List>
     </Box>
   )
 }

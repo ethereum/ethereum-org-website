@@ -5,9 +5,7 @@ lang: zh
 ---
 
 <InfoBanner emoji=":wave:">
-
-工作量证明不再是以太坊共识机制的基础，这意味着挖矿已终结。 取而代之的是，以太坊将由质押了以太币的验证者保护。 你可以立即开始质押以太币。 阅读有关 [The Merge](/upgrades/merge/)、[proof-of-stake](/developers/docs/consensus-mechanisms/pos/) 和 [staking](/staking/) 的更多信息。 此页面仅为满足对历史的兴趣。
-
+工作量证明不再是以太坊共识机制的基础，这意味着挖矿已终结。 取而代之的是，以太坊将由质押了以太币的验证者保护。 你可以立即开始质押以太币。 详细了解<a href='/roadmap/merge/'>合并</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>权益证明</a>和<a href='/staking/'>质押</a>。 此页面仅为满足对历史的兴趣。
 </InfoBanner>
 
 以太坊挖矿使用过一种称为 Ethash 的算法。 该算法的基本思想是，矿工尝试使用蛮力计算找到一个随机数输入，使得生成的哈希小于一个取决于计算难度的阈值。 此难度级别可以动态调整，从而允许定期进行区块生产。

@@ -6,6 +6,7 @@
   "page-dapps-audius-logo-alt": "Audius logo",
   "page-dapps-augur-logo-alt": "Augur logo",
   "page-dapps-axie-infinity-logo-alt": "Axie Infinity logo",
+  "page-dapps-balancer-logo-alt": "Логотип Balancer",
   "page-dapps-brave-logo-alt": "Brave logo",
   "page-dapps-category-arts": "Мистецтво й мода",
   "page-dapps-category-browsers": "Веб-переглядачі",
@@ -47,6 +48,7 @@
   "page-dapps-dapp-description-audius": "Децентралізована платформа для трансляцій. Прослуховування приносять гроші авторам, а не лейблам.",
   "page-dapps-dapp-description-augur": "Робіть ставки на результати спортивних матчів, подій у сфері економіки та світових подій.",
   "page-dapps-dapp-description-axie-infinity": "Торгуйте войовничими створіннями Аксі. Заробляйте гроші, граючи в ігри (доступно на мобільних пристроях)",
+  "page-dapps-dapp-description-balancer": "Balancer — це автоматизований менеджер портфелів і торгова платформа.",
   "page-dapps-dapp-description-brave": "Заробляйте токени за дії в Інтернеті й підтримуйте улюблених авторів.",
   "page-dapps-dapp-description-cent": "Соціальна мережа, у якій ви заробляєте гроші, публікуючи NFT.",
   "page-dapps-dapp-description-compound": "Позичте свої токени, щоб заробити відсотки й вивести їх будь-коли.",
@@ -205,5 +207,10 @@
   "page-dapps-what-are-dapps": "Що таке децентралізовані програми?",
   "page-dapps-more-on-defi-button": "Докладніше про децентралізовані фінанси",
   "page-dapps-more-on-nft-button": "Докладніше про токенізовані предмети колекціонування",
-  "page-dapps-more-on-nft-gaming-button": "Докладніше про токенізовані елементи в іграх"
+  "page-dapps-more-on-nft-gaming-button": "Докладніше про токенізовані елементи в іграх",
+  "page-dapps-dapp-description-pwn": "Легкі кредити на Ethereum, що підтримуються будь-яким токеном або NFT.",
+  "page-dapps-pwn-image-alt": "Логотип PWN",
+  "foundation": "Фонд",
+  "transaction-fees": "Що таке комісія за транзакції?",
+  "page-wallets-get-some": "Отримайте ETH"
 }

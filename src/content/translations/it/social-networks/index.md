@@ -79,7 +79,7 @@ Reddit ha [propagandato i Punti della Community](https://cointelegraph.com/news/
 
 Il programma è già attivo, con la subreddit r/CryptoCurrency [che adopera la sua versione dei Punti della Community, detti "Moon"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Secondo la descrizione ufficiale, i Moon "ricompensano pubblicatori, commentatori e moderatori per i loro contributi alla subreddit." Poiché questi token sono sulla blockchain (gli utenti li ricevono nei portafogli), sono indipendenti da Reddit e non possono esser rimossi.
 
-Dopo aver confluso una fase beta sulla rete di prova di Rinkeby, i Punti della Community di Reddit sono ora su [Arbitrum Nova](https://nova.arbitrum.io/), una blockchain che combina le proprietà di un [Validium](/developers/docs/scaling/validium/) e di un [rollup ottimistico](/developers/docs/scaling/optimistic-rollups/). Oltre a usare i Punti della Community per sbloccare funzionalità speciali, gli utenti possono anche scambiarli per valuta legale nelle borse. Inoltre, la quantità di Punti della Community posseduto da un utente, ne determina l'influenza sul processo di presa decisionale nella community.
+Dopo aver concluso la fase beta sulla rete di prova di Rinkeby, i punti della community di Reddit sono ora su [Arbitrum Nova](https://nova.arbitrum.io/), una blockchain che combina le proprietà di una [sidechain](/developers/docs/scaling/sidechains/) e di un [rollup ottimistico](/developers/docs/scaling/optimistic-rollups/). Oltre a usare i Punti della Community per sbloccare funzionalità speciali, gli utenti possono anche scambiarli per valuta legale nelle borse. Inoltre, la quantità di Punti della Community posseduto da un utente, ne determina l'influenza sul processo di presa decisionale nella community.
 
 ### Twitter {#twitter}
 
@@ -94,16 +94,19 @@ A maggio 2022, [Instagram ha annunciato il supporto agli NFT](https://about.inst
 - **[Status.im](https://status.im/)** - _Status è un'app di messaggistica sicura che usa un protocollo open source e peer-to-peer e la crittografia end-to-end per proteggere i tuoi messaggi da terzi._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror è una piattaforma di pubblicazione decentralizzata e posseduta dagli utenti, basata su Ethereum, per il crowdfunding di idee, monetizzazione dei contenuti e creazione di community di alto valore._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol è un grafico sociale componibile e decentralizzato che aiuta i creatori ad assumere la proprietà dei propri contenuti ovunque vadano nel giardino digitale dell'Internet decentralizzato._
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster è un social network sufficientemente decentralizzato. È un protocollo aperto che supporta molti client, proprio come l'email._
 
 ## Lettura consigliate {#further-reading}
 
 ### Articoli {#articles}
 
+- [Decentralizzare i social media: una guida allo stack social di web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [How Blockchain Can Solve Social Media Privacy](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Decentralizzazione Sufficiente per i Social Networks](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Video {#videos}
 

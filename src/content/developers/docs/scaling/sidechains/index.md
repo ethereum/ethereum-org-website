@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 A sidechain is a separate blockchain that runs independent of Ethereum and is connected to Ethereum Mainnet by a two-way bridge. Sidechains can have separate block parameters and [consensus algorithms](/developers/docs/consensus-mechanisms/), which are often designed for efficient processing of transactions. Using a sidechain involves trade-offs, though, as they do not inherit Ethereum's security properties. Unlike [layer 2 scaling solutions](/layer-2/), sidechains do not post state changes and transaction data back to Ethereum Mainnet.
 
-Sidechains also sacrifice some measure of decentralization or security to achieve high throughput ([scalability trilemma](https://vitalik.ca/general/2021/05/23/scaling.html)). Ethereum is, however, committed to scaling without compromising on decentralization and security as outlined in its [vision statement](/upgrades/vision/) for upgrades.
+Sidechains also sacrifice some measure of decentralization or security to achieve high throughput ([scalability trilemma](https://vitalik.ca/general/2021/05/23/scaling.html)). Ethereum is, however, committed to scaling without compromising on decentralization and security as outlined in its [vision statement](/roadmap/vision/) for upgrades.
 
 ## How do sidechains work? {#how-do-sidechains-work}
 
@@ -18,7 +18,7 @@ Sidechains are independent blockchains, with different histories, development ro
 One of the qualities that make sidechains unique (i.e., different from Ethereum) is the consensus algorithm used. Sidechains don't rely on Ethereum for consensus and can choose alternative consensus protocols that suit their needs. Some examples of consensus algorithms used on sidechains include:
 
 - [Proof-of-authority](https://wikipedia.org/wiki/Proof_of_authority)
-- [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS)
+- [Delegated proof-of-stake](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 
 Like Ethereum, sidechains have validating nodes that verify and process transactions, produce blocks, and store the blockchain state. Validators are also responsible for maintaining consensus across the network and securing it against malicious attacks.

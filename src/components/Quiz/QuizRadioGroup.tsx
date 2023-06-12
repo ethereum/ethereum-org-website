@@ -1,4 +1,3 @@
-// Import libraries
 import React, { useMemo } from "react"
 import {
   Box,
@@ -10,37 +9,33 @@ import {
   useRadio,
   useRadioGroup,
 } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
-// Components
 import Translation from "../Translation"
 
-// Import types
+import { TranslationKey } from "../../utils/translations"
+
 import { Question } from "../../types"
 
-// Utils
-import { translateMessageId, TranslationKey } from "../../utils/translations"
-
-// Interfaces
-export interface CustomRadioProps extends RadioProps {
+interface CustomRadioProps extends RadioProps {
   index: number
   label: string
 }
-export interface IProps {
+
+interface IProps {
   questionData: Question
   showAnswer: boolean
   handleSelection: (answerId: string) => void
   selectedAnswer: string | null
 }
 
-// Component
 const QuizRadioGroup: React.FC<IProps> = ({
   questionData,
   showAnswer,
   handleSelection,
   selectedAnswer,
 }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const { getRadioProps, getRootProps } = useRadioGroup({
     onChange: handleSelection,
   })
@@ -51,7 +46,6 @@ const QuizRadioGroup: React.FC<IProps> = ({
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
   }, [selectedAnswer])
-
   const isSelectedCorrect = useMemo<boolean>(
     () => correctAnswerId === selectedAnswer,
     [selectedAnswer]
@@ -128,9 +122,15 @@ const QuizRadioGroup: React.FC<IProps> = ({
   // Render QuizRadioGroup
   return (
     <Flex {...getRootProps()} direction="column" w="100%">
-      <Text fontWeight="700" fontSize="2xl" mb={6}>
-        {translateMessageId(prompt, intl)}
+      <Text
+        textAlign={{ base: "center", md: "left" }}
+        fontWeight="700"
+        fontSize="2xl"
+        mb={6}
+      >
+        {t(prompt)}
       </Text>
+
       <Flex direction="column" gap={4}>
         {answers.map(({ id, label }, index) => {
           const display =
@@ -140,18 +140,19 @@ const QuizRadioGroup: React.FC<IProps> = ({
               key={id}
               display={display}
               index={index}
-              label={translateMessageId(label, intl)}
+              label={t(label)}
               {...getRadioProps({ value: id })}
             />
           )
         })}
       </Flex>
+
       {showAnswer && (
         <Box mt={5}>
           <Text fontWeight="bold" mt={0} mb={2}>
             <Translation id="explanation" />
           </Text>
-          <Text m={0}>{translateMessageId(explanation, intl)}</Text>
+          <Text m={0}>{t(explanation)}</Text>
         </Box>
       )}
     </Flex>

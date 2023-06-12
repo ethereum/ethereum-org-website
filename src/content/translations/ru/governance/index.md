@@ -154,7 +154,7 @@ _Примечание. Любой человек может входить в н
 
 Когда Beacon Chain объединится с исполнительным уровнем Ethereum, процесс управления предложениями изменений будет гармонизирован. Этот процесс реализации слияния [уже идет](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Подробнее о слиянии
 </ButtonLink>
 
@@ -175,7 +175,6 @@ _Примечание. Любой человек может входить в н
 В Ethereum нет строгой структуры. У разных участников сообщества есть собственные взгляды на развитие системы. Вот некоторые из них:
 
 - [Заметки об управлении блокчейном](https://vitalik.ca/general/2017/12/17/voting.html) _Виталик Бутерин_
-- [Управление на Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) _ETHHub_
 - [Как работает управление Ethereum?](https://cryptotesters.com/blog/ethereum-governance) _Cryptotesters_
 - [Как работает управление Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) _Мика Золту_
 - [Чем занимается основной разработчик Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) _Джеймсон Хадсон_

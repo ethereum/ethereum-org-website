@@ -63,13 +63,10 @@ Wiele projektów dostarcza implementacje kanałów uzyskiwania informacji, któr
 
 **Kanały uzyskiwania informacji**
 
-- [EthHub na temat kanałów uzyskiwania informacji](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, Feb 12 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _06.11.2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
 **Kanały płatnicze**
-
-- [EthHub na temat kanałów płatniczych](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_

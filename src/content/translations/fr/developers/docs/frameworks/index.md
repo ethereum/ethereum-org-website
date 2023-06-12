@@ -42,11 +42,6 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark -** **_Environnement de développement, infrastructure de test et autres outils intégrés à Ethereum, IPFS et Whisper_**
-
-- [Documentation](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
 **Web3j -** **_Une plateforme pour le développement d'applications blockchain sur JVM._**
 
 - [Page d'accueil](https://www.web3labs.com/web3j-sdk)

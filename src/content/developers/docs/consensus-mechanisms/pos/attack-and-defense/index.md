@@ -8,7 +8,7 @@ Thieves and saboteurs are constantly seeking opportunities to attack Ethereum’
 
 ## Prerequisites {#prerequisites}
 
-Some basic knowledge of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) is required. Also, it will be helpful to have a basic understanding of Ethereum's [incentive layer](/docs/consensus-mechanisms/pos/rewards-and-penalties) and fork-choice algorithm, [LMD-GHOST](/docs/consensus-mechanisms/pos/gasper).
+Some basic knowledge of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) is required. Also, it will be helpful to have a basic understanding of Ethereum's [incentive layer](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) and fork-choice algorithm, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
 ## What do attackers want? {#what-do-attackers-want}
 

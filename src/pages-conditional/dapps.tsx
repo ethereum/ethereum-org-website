@@ -1,8 +1,28 @@
-import React, { useRef, useState, useEffect } from "react"
-import styled from "@emotion/styled"
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  ComponentPropsWithRef,
+} from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Badge,
+  Box,
+  Button,
+  ButtonProps,
+  Divider as ChakraDivider,
+  DividerProps,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  SimpleGrid,
+  Text,
+  chakra,
+  useToken,
+} from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import BoxGrid from "../components/BoxGrid"
@@ -14,311 +34,320 @@ import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import PageHero from "../components/PageHero"
-import {
-  ButtonSecondary,
-  ButtonPrimary,
-  CardGrid,
-  Content,
-  Page,
-  CenterDivider,
-  Divider,
-  Option,
-  OptionContainer,
-  OptionText,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 
-import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
-import { Context } from "../types"
-import { Badge } from "@chakra-ui/react"
+import { trackCustomEvent } from "../utils/matomo"
+import { ChildOnlyProp, Context } from "../types"
 
-const MagiciansImage = styled(GatsbyImage)`
-  background-size: cover;
-  background-repeat: no-repeat;
-  align-self: center;
-  width: 100%;
-  min-width: 240px;
-  max-width: 300px;
-  margin: 2rem 6rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin: 2rem 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin: 2rem 0rem;
-  }
-`
+const Page = (props: ChildOnlyProp & FlexProps) => (
+  <Flex direction="column" align="center" mx="auto" w="full" {...props} />
+)
 
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`
+const Divider = (props: DividerProps) => (
+  <ChakraDivider
+    opacity={1}
+    my={16}
+    w="10%"
+    borderBottomWidth="0.25rem"
+    borderColor="homeDivider"
+    {...props}
+  />
+)
 
-const StyledButtonSecondary = styled(ButtonSecondary)`
-  margin-top: 0;
-`
+const CenterDivider = () => <Divider display="flex" justifyContent="center" />
 
-const StyledGhostCard = styled(GhostCard)`
-  .ghost-card-base {
-    display: flex;
-    justify-content: center;
-  }
-`
+const Content = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
 
-const Subtitle = styled.div`
-  font-size: 1.5rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 1.25rem;
-  }
-`
+const OptionContainer = (props: ChildOnlyProp) => (
+  <Flex
+    direction={{ base: "column", lg: "row" }}
+    justify="center"
+    px={8}
+    mb={8}
+    w={{ base: "full", lg: "auto" }}
+    {...props}
+  />
+)
 
-const Row = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const Option = (
+  props: Pick<ButtonProps, "children" | "onClick"> & { isActive: boolean }
+) => {
+  const tableBoxShadow = useToken("colors", "tableBoxShadow")
 
-const IntroRow = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  background: ${(props) => props.theme.colors.background};
-  border-radius: 32px;
-  padding: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+  return (
+    <Button
+      variant="outline"
+      display="flex"
+      alignItems="center"
+      justifyContent={{ base: "center", lg: "flex-start" }}
+      boxShadow={props.isActive ? tableBoxShadow : `none`}
+      color={props.isActive ? "primary" : "text"}
+      borderColor={props.isActive ? "primary" : "text"}
+      borderRadius="2rem"
+      height="auto"
+      w={{ base: "full", lg: "auto" }}
+      my={2}
+      mx={{ base: 0, lg: 2 }}
+      py={4}
+      px={6}
+      transition="none"
+      _hover={{
+        color: "primary",
+        borderColor: "primary",
+      }}
+      _active={{ bg: "transparent" }}
+      {...props}
+    />
+  )
+}
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
+const OptionText = (props: ChildOnlyProp) => (
+  <Text
+    as="span"
+    fontSize={{ base: "md", md: "2xl" }}
+    textAlign="center"
+    fontWeight={{ base: "semibold", md: "normal" }}
+    lineHeight="100%"
+    {...props}
+  />
+)
 
-const H2 = styled.h2`
-  font-size: 1.5rem;
-  font-style: normal;
-  margin-top: 0.5rem;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
-`
+const ButtonPrimary = (props: Pick<ButtonProps, "children" | "onClick">) => (
+  <Button py={2} px={3} borderRadius="0.25em" {...props} />
+)
 
-const StyledInfoBanner = styled(InfoBanner)`
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
-`
+const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
+  <Button variant="outline" py={2} px={3} borderRadius="0.25em" {...props} />
+)
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 8rem 0 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 0;
-  }
-`
+const MagiciansImage = chakra(GatsbyImage, {
+  baseStyle: {
+    bgSize: "cover",
+    bgRepeat: "no-repeat",
+    alignSelf: "center",
+    w: "full",
+    minW: "240px",
+    maxW: "300px",
+    my: 8,
+    mx: { base: 0, sm: 8, md: 24 },
+  },
+})
 
-const MobileOptionContainer = styled(OptionContainer)`
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
-`
+const ImageContainer = (props: Pick<FlexProps, "children" | "id">) => (
+  <Flex justify="center" {...props} />
+)
 
-const Column = styled.div`
-  flex: 1 1 75%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Text
+    fontSize={{ base: "xl", lg: "2xl" }}
+    lineHeight="140%"
+    color="text200"
+    mt={4}
+    {...props}
+  />
+)
 
-const FullWidthContainer = styled(Page)`
-  margin: 0rem 0rem;
-  margin-bottom: 4rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 2rem 0rem;
-  padding-top: 4rem;
-`
+const Row = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    direction={{ base: "column", lg: "row" }}
+    align="flex-start"
+    {...props}
+  />
+)
 
-const CardContainer = styled.div`
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: 1fr;
-  }
-`
+const IntroRow = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    direction={{ base: "column", lg: "row" }}
+    align="flex-start"
+    bg="background"
+    p={8}
+    borderRadius="32px"
+    {...props}
+  />
+)
 
-const CenteredCard = styled(Card)`
-  text-align: center;
-`
+const TwoColumnContent = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    direction={{ base: "column", lg: "row" }}
+    align="flex-start"
+    mr={{ lg: 8 }}
+    {...props}
+  />
+)
 
-const StepBoxContainer = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 1rem 0rem;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-wrap: wrap;
-  }
-`
+const StyledH2 = (props: ChildOnlyProp) => (
+  <Heading
+    fontSize="2xl"
+    lineHeight="22px"
+    letterSpacing={0}
+    mt={2}
+    {...props}
+  />
+)
 
-const StepBox = styled(Link)`
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background: ${(props) => props.theme.colors.background};
-  padding: 0rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text};
-  text-decoration: none;
-  width: 100%;
-  &:hover {
-    text-decoration: none;
-    background: ${(props) => props.theme.colors.ednBackground};
-    transition: transform 0.2s;
-    transform: scale(1.05);
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 2rem;
-  }
-`
+const H2 = (props: HeadingProps) => (
+  <Heading
+    mt={12}
+    mb={8}
+    fontSize={{ base: "2xl", md: "2rem" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const H3 = styled.h3`
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  margin-top: 1.5rem;
+const H3 = (props: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-  a {
-    display: none;
-  }
-`
+const StyledH3 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h3"
+    lineHeight={1.4}
+    fontSize="xl"
+    fontWeight="bold"
+    mb={2}
+    mt={6}
+    sx={{
+      a: {
+        dispalay: "none",
+      },
+    }}
+    {...props}
+  />
+)
 
-const CenterText = styled.p`
-  text-align: center;
-  max-width: 800px;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 1.5rem;
-    margin-bottom: 1rem;
-  }
-`
+const StyledInfoBanner = (props: ComponentPropsWithRef<typeof InfoBanner>) => (
+  <InfoBanner w={{ lg: "50%" }} {...props} />
+)
 
-const LeftColumn = styled.div`
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-  }
-`
+const Column = (props: ChildOnlyProp) => (
+  <Box flex="1 1 75%" mb={6} mr={{ lg: 8 }} {...props} />
+)
 
-const RightColumn = styled.div`
-  margin-left: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-  }
-`
-const About = styled.div`
-  margin-top: 3rem;
-`
+const FullWidthContainer = (
+  props: ChildOnlyProp & { ref: React.RefObject<HTMLDivElement> }
+) => (
+  <Page
+    m={0}
+    mb={16}
+    pt={16}
+    pb={8}
+    borderTop="1px solid"
+    borderColor="border"
+    bg="ednBackground"
+    {...props}
+  />
+)
 
-const Box = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    align-items: flex-start;
-  }
-`
+const CardContainer = (props: ChildOnlyProp) => (
+  <SimpleGrid gap={4} columns={[1, null, 2]} {...props} />
+)
 
-const BoxText = styled.p`
-  text-align: center;
-  max-width: 800px;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    text-align: left;
-  }
-`
+const StepBoxContainer = (props: ChildOnlyProp) => (
+  <Flex
+    flexWrap={{ base: "wrap", lg: "nowrap" }}
+    w="full"
+    my={4}
+    mb={16}
+    mx={0}
+    {...props}
+  />
+)
 
-const TextNoMargin = styled.p`
-  margin-bottom: 0rem;
-  margin-right: 1rem;
-`
-const AddDapp = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const StepBox = (props: ComponentPropsWithRef<typeof Link>) => (
+  <Link
+    border="1px solid"
+    borderColor="border"
+    pt={0}
+    pb={{ base: 8, md: 0 }}
+    px={8}
+    display="flex"
+    flexDirection={{ base: "column", md: "row" }}
+    justifyContent="space-between"
+    alignItems={{ base: "flex-start", md: "center" }}
+    color="text"
+    textDecor="none"
+    w="full"
+    transition="transform 0.2s"
+    _hover={{
+      bg: "ednBackground",
+      transform: "scale(1.05)",
+    }}
+    {...props}
+  />
+)
 
-const AddDappButton = styled(ButtonLink)`
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-left: 1rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: 2rem;
-    margin-left: 0rem;
-  }
-`
+const CenterText = (props: ChildOnlyProp) => (
+  <Text
+    textAlign="center"
+    maxW="800px"
+    mt={{ base: "auto", lg: 0 }}
+    mx={{ base: 6, lg: 0 }}
+    mb={4}
+    {...props}
+  />
+)
 
-const StyledCallout = styled(Callout)`
-  flex: 1 1 416px;
-  min-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 12rem;
-  }
-`
+const LeftColumn = (props: ChildOnlyProp) => (
+  <Box w="full" m={{ base: "auto 0", lg: 0 }} mr={{ lg: 8 }} {...props} />
+)
 
-const StyledCardGrid = styled(CardGrid)`
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-`
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box w="full" m={{ base: "auto 0", lg: 0 }} ml={{ lg: 8 }} {...props} />
+)
 
-const MoreButtonContainer = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-`
+const AddDapp = (props: ChildOnlyProp) => (
+  <Flex
+    direction={{ base: "column", sm: "row" }}
+    justify="space-between"
+    align={{ base: "flex-start", sm: "center" }}
+    borderRadius="base"
+    border="1px solid"
+    borderColor="border"
+    p={6}
+    mt={6}
+    {...props}
+  />
+)
+
+const AddDappButton = (props: ComponentPropsWithRef<typeof ButtonLink>) => (
+  <ButtonLink
+    variant="outline"
+    mt={{ base: 8, sm: 0 }}
+    ml={{ base: 0, md: 8 }}
+    {...props}
+  />
+)
+
+const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
+  <Callout flex="1 1 416px" minH="full" mt={{ base: 48, lg: 32 }} {...props} />
+)
+
+const StyledCardGrid = (props: ChildOnlyProp) => (
+  <SimpleGrid gap={8} minChildWidth="min(100%, 280px)" my={16} {...props} />
+)
+
+const MoreButtonContainer = (props: ChildOnlyProp) => (
+  <Flex justify="center" mt={12} mb={4} {...props} />
+)
 
 enum CategoryType {
   FINANCE = "finance",
@@ -347,7 +376,8 @@ const DappsPage = ({
   data,
   location,
 }: PageProps<Queries.DappsPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
   const [selectedCategory, setCategory] = useState<CategoryType>(
     CategoryType.FINANCE
   )
@@ -392,7 +422,7 @@ const DappsPage = ({
     } else {
       // If within `window` and not in the bottom mobile selection...
       if (window) {
-        newPath = `/${intl.locale}${newPath}`
+        newPath = `/${language}${newPath}`
         // Apply new path without page refresh
         window.history.pushState(null, "", newPath)
       }
@@ -409,220 +439,159 @@ const DappsPage = ({
 
   const features = [
     {
-      title: translateMessageId("page-dapps-features-1-title", intl),
-      description: translateMessageId(
-        "page-dapps-features-1-description",
-        intl
-      ),
+      title: t("page-dapps-features-1-title"),
+      description: t("page-dapps-features-1-description"),
       emoji: ":bust_in_silhouette:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "no owners",
+      },
     },
     {
-      title: translateMessageId("page-dapps-features-2-title", intl),
-      description: translateMessageId(
-        "page-dapps-features-2-description",
-        intl
-      ),
+      title: t("page-dapps-features-2-title"),
+      description: t("page-dapps-features-2-description"),
       emoji: ":megaphone:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "free from censorship",
+      },
     },
     {
-      title: translateMessageId("page-dapps-features-3-title", intl),
-      description: translateMessageId(
-        "page-dapps-features-3-description",
-        intl
-      ),
+      title: t("page-dapps-features-3-title"),
+      description: t("page-dapps-features-3-description"),
       emoji: ":money-mouth_face:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "built in payments",
+      },
     },
     {
-      title: translateMessageId("page-dapps-features-4-title", intl),
-      description: translateMessageId(
-        "page-dapps-features-4-description",
-        intl
-      ),
+      title: t("page-dapps-features-4-title"),
+      description: t("page-dapps-features-4-description"),
       emoji: ":electric_plug:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "plug and play",
+      },
     },
     {
-      title: translateMessageId("page-dapps-features-5-title", intl),
-      description: translateMessageId(
-        "page-dapps-features-5-description",
-        intl
-      ),
+      title: t("page-dapps-features-5-title"),
+      description: t("page-dapps-features-5-description"),
       emoji: ":detective:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "one anonymous login",
+      },
     },
     {
-      title: translateMessageId("page-dapps-features-6-title", intl),
-      description: translateMessageId(
-        "page-dapps-features-6-description",
-        intl
-      ),
+      title: t("page-dapps-features-6-title"),
+      description: t("page-dapps-features-6-description"),
       emoji: ":key:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "backed by cryptography",
+      },
     },
     {
-      title: translateMessageId("page-dapps-features-7-title", intl),
-      description: translateMessageId(
-        "page-dapps-features-7-description",
-        intl
-      ),
+      title: t("page-dapps-features-7-title"),
+      description: t("page-dapps-features-7-description"),
       emoji: ":antenna_with_bars:",
+      matomo: {
+        eventCategory: "dapp benefits",
+        eventAction: "click",
+        eventName: "no down time",
+      },
     },
   ]
 
   const categories: Categories = {
     [CategoryType.FINANCE]: {
-      title: translateMessageId("page-dapps-finance-button", intl),
+      title: t("page-dapps-finance-button"),
       emoji: ":money_with_wings:",
-      benefitsTitle: translateMessageId(
-        "page-dapps-finance-benefits-title",
-        intl
-      ),
-      benefitsDescription: translateMessageId(
-        "page-dapps-finance-benefits-description",
-        intl
-      ),
+      benefitsTitle: t("page-dapps-finance-benefits-title"),
+      benefitsDescription: t("page-dapps-finance-benefits-description"),
       benefits: [
         {
           emoji: ":open_lock:",
-          title: translateMessageId(
-            "page-dapps-finance-benefits-1-title",
-            intl
-          ),
-          description: translateMessageId(
-            "page-dapps-finance-benefits-1-description",
-            intl
-          ),
+          title: t("page-dapps-finance-benefits-1-title"),
+          description: t("page-dapps-finance-benefits-1-description"),
         },
         {
           emoji: ":bank:",
-          title: translateMessageId(
-            "page-dapps-finance-benefits-2-title",
-            intl
-          ),
-          description: translateMessageId(
-            "page-dapps-finance-benefits-2-description",
-            intl
-          ),
+          title: t("page-dapps-finance-benefits-2-title"),
+          description: t("page-dapps-finance-benefits-2-description"),
         },
         {
           emoji: ":scales:",
-          title: translateMessageId(
-            "page-dapps-finance-benefits-3-title",
-            intl
-          ),
-          description: translateMessageId(
-            "page-dapps-finance-benefits-3-description",
-            intl
-          ),
+          title: t("page-dapps-finance-benefits-3-title"),
+          description: t("page-dapps-finance-benefits-3-description"),
         },
         {
           emoji: ":chains:",
-          title: translateMessageId(
-            "page-dapps-finance-benefits-4-title",
-            intl
-          ),
-          description: translateMessageId(
-            "page-dapps-finance-benefits-4-description",
-            intl
-          ),
+          title: t("page-dapps-finance-benefits-4-title"),
+          description: t("page-dapps-finance-benefits-4-description"),
         },
       ],
     },
     [CategoryType.COLLECTIBLES]: {
-      title: translateMessageId("page-dapps-collectibles-button", intl),
+      title: t("page-dapps-collectibles-button"),
       emoji: ":frame_with_picture:",
-      benefitsTitle: translateMessageId(
-        "page-dapps-collectibles-benefits-title",
-        intl
-      ),
-      benefitsDescription: translateMessageId(
-        "page-dapps-collectibles-benefits-description",
-        intl
-      ),
+      benefitsTitle: t("page-dapps-collectibles-benefits-title"),
+      benefitsDescription: t("page-dapps-collectibles-benefits-description"),
       benefits: [
         {
           emoji: ":white_check_mark:",
-          title: translateMessageId(
-            "page-dapps-collectibles-benefits-1-title",
-            intl
-          ),
-          description: translateMessageId(
-            "page-dapps-collectibles-benefits-1-description",
-            intl
-          ),
+          title: t("page-dapps-collectibles-benefits-1-title"),
+          description: t("page-dapps-collectibles-benefits-1-description"),
         },
         {
           emoji: ":man_singer:",
-          title: translateMessageId(
-            "page-dapps-collectibles-benefits-2-title",
-            intl
-          ),
-          description: translateMessageId(
-            "page-dapps-collectibles-benefits-2-description",
-            intl
-          ),
+          title: t("page-dapps-collectibles-benefits-2-title"),
+          description: t("page-dapps-collectibles-benefits-2-description"),
         },
         {
           emoji: ":shopping_bags:",
-          title: translateMessageId(
-            "page-dapps-collectibles-benefits-3-title",
-            intl
-          ),
-          description: translateMessageId(
-            "page-dapps-collectibles-benefits-3-description",
-            intl
-          ),
+          title: t("page-dapps-collectibles-benefits-3-title"),
+          description: t("page-dapps-collectibles-benefits-3-description"),
         },
         {
           emoji: ":department_store:",
-          title: translateMessageId(
-            "page-dapps-collectibles-benefits-4-title",
-            intl
-          ),
-          description: translateMessageId(
-            "page-dapps-collectibles-benefits-4-description",
-            intl
-          ),
+          title: t("page-dapps-collectibles-benefits-4-title"),
+          description: t("page-dapps-collectibles-benefits-4-description"),
         },
       ],
     },
     [CategoryType.GAMING]: {
-      title: translateMessageId("page-dapps-gaming-button", intl),
+      title: t("page-dapps-gaming-button"),
       emoji: ":video_game:",
-      benefitsTitle: translateMessageId(
-        "page-dapps-gaming-benefits-title",
-        intl
-      ),
-      benefitsDescription: translateMessageId(
-        "page-dapps-gaming-benefits-description",
-        intl
-      ),
+      benefitsTitle: t("page-dapps-gaming-benefits-title"),
+      benefitsDescription: t("page-dapps-gaming-benefits-description"),
       benefits: [
         {
           emoji: ":crossed_swords:",
-          title: translateMessageId("page-dapps-gaming-benefits-1-title", intl),
-          description: translateMessageId(
-            "page-dapps-gaming-benefits-1-description",
-            intl
-          ),
+          title: t("page-dapps-gaming-benefits-1-title"),
+          description: t("page-dapps-gaming-benefits-1-description"),
         },
         {
           emoji: ":european_castle:",
-          title: translateMessageId("page-dapps-gaming-benefits-2-title", intl),
-          description: translateMessageId(
-            "page-dapps-gaming-benefits-2-description",
-            intl
-          ),
+          title: t("page-dapps-gaming-benefits-2-title"),
+          description: t("page-dapps-gaming-benefits-2-description"),
         },
         {
           emoji: ":handshake:",
-          title: translateMessageId("page-dapps-gaming-benefits-3-title", intl),
-          description: translateMessageId(
-            "page-dapps-gaming-benefits-3-description",
-            intl
-          ),
+          title: t("page-dapps-gaming-benefits-3-title"),
+          description: t("page-dapps-gaming-benefits-3-description"),
         },
       ],
     },
     [CategoryType.TECHNOLOGY]: {
-      title: translateMessageId("page-dapps-technology-button", intl),
+      title: t("page-dapps-technology-button"),
       emoji: ":keyboard:",
     },
   }
@@ -632,531 +601,406 @@ const DappsPage = ({
   const lending = [
     {
       title: "Aave",
-      description: translateMessageId("page-dapps-dapp-description-aave", intl),
+      description: t("page-dapps-dapp-description-aave"),
       link: "https://aave.com/",
       image: getImage(data.aave),
-      alt: translateMessageId("page-dapps-aave-logo-alt", intl),
+      alt: t("page-dapps-aave-logo-alt"),
     },
     {
       title: "Compound",
-      description: translateMessageId(
-        "page-dapps-dapp-description-compound",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-compound"),
       link: "https://compound.finance/",
       image: getImage(data.compound),
-      alt: translateMessageId("page-dapps-compound-logo-alt", intl),
+      alt: t("page-dapps-compound-logo-alt"),
     },
     {
       title: "Oasis",
-      description: translateMessageId(
-        "page-dapps-dapp-description-oasis",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-oasis"),
       link: "https://oasis.app/",
       image: getImage(data.dai),
-      alt: translateMessageId("page-dapps-oasis-logo-alt", intl),
+      alt: t("page-dapps-oasis-logo-alt"),
     },
     {
       title: "PWN",
-      description: translateMessageId("page-dapps-dapp-description-pwn", intl),
+      description: t("page-dapps-dapp-description-pwn"),
       link: "https://pwn.xyz",
       image: getImage(data.pwn),
-      alt: translateMessageId("page-dapps-pwn-image-alt", intl),
+      alt: t("page-dapps-pwn-image-alt"),
     },
   ]
 
   const dex = [
     {
       title: "Uniswap",
-      description: translateMessageId(
-        "page-dapps-dapp-description-uniswap",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-uniswap"),
       link: "https://uniswap.org/",
       image: getImage(data.uniswap),
-      alt: translateMessageId("page-dapps-uniswap-logo-alt", intl),
+      alt: t("page-dapps-uniswap-logo-alt"),
     },
     {
       title: "Matcha",
-      description: translateMessageId(
-        "page-dapps-dapp-description-matcha",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-matcha"),
       link: "https://matcha.xyz",
       image: getImage(data.matcha),
-      alt: translateMessageId("page-dapps-matcha-logo-alt", intl),
+      alt: t("page-dapps-matcha-logo-alt"),
     },
     {
       title: "1inch",
-      description: translateMessageId(
-        "page-dapps-dapp-description-1inch",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-1inch"),
       link: "https://1inch.exchange/",
       image: getImage(data.oneinch),
-      alt: translateMessageId("page-dapps-1inch-logo-alt", intl),
+      alt: t("page-dapps-1inch-logo-alt"),
+    },
+    {
+      title: "DexGuru",
+      description: t("page-dapps-dapp-description-dexguru"),
+      link: "https://dex.guru",
+      image: getImage(data.dexguru),
+      alt: t("page-dapps-dexguru-logo-alt"),
     },
   ]
 
   const trading = [
     {
       title: "Polymarket",
-      description: translateMessageId(
-        "page-dapps-dapp-description-polymarket",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-polymarket"),
       link: "https://polymarket.com",
       image: getImage(data.polymarket),
-      alt: translateMessageId("page-dapps-polymarket-logo-alt", intl),
+      alt: t("page-dapps-polymarket-logo-alt"),
     },
     {
       title: "Augur",
-      description: translateMessageId(
-        "page-dapps-dapp-description-augur",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-augur"),
       link: "https://augur.net",
       image: getImage(data.augur),
-      alt: translateMessageId("page-dapps-augur-logo-alt", intl),
+      alt: t("page-dapps-augur-logo-alt"),
     },
     {
       title: "Loopring",
-      description: translateMessageId(
-        "page-dapps-dapp-description-loopring",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-loopring"),
       link: "https://loopring.org/#/",
       image: getImage(data.loopring),
-      alt: translateMessageId("page-dapps-loopring-logo-alt", intl),
+      alt: t("page-dapps-loopring-logo-alt"),
     },
   ]
 
   const lottery = [
     {
       title: "Gitcoin Grants",
-      description: translateMessageId(
-        "page-dapps-dapp-description-gitcoin-grants",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-gitcoin-grants"),
       link: "https://gitcoin.co/grants/?",
       image: getImage(data.gitcoin),
-      alt: translateMessageId("page-dapps-gitcoin-grants-logo-alt", intl),
+      alt: t("page-dapps-gitcoin-grants-logo-alt"),
     },
   ]
 
   const payments = [
     {
       title: "Tornado cash",
-      description: translateMessageId(
-        "page-dapps-dapp-description-tornado-cash",
-        intl
-      ),
-      link: "https://tornado.cash/",
+      description: t("page-dapps-dapp-description-tornado-cash"),
+      link: "https://ipfs.io/ipns/tornadocash.eth/",
       image: getImage(data.tornado),
-      alt: translateMessageId("page-dapps-tornado-cash-logo-alt", intl),
+      alt: t("page-dapps-tornado-cash-logo-alt"),
     },
     {
       title: "Sablier",
-      description: translateMessageId(
-        "page-dapps-dapp-description-sablier",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-sablier"),
       link: "https://pay.sablier.finance/",
       image: getImage(data.sablier),
-      alt: translateMessageId("page-dapps-sablier-logo-alt", intl),
+      alt: t("page-dapps-sablier-logo-alt"),
     },
   ]
 
   const investments = [
     {
       title: "Token Sets",
-      description: translateMessageId(
-        "page-dapps-dapp-description-token-sets",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-token-sets"),
       link: "https://www.tokensets.com/",
       image: getImage(data.set),
-      alt: translateMessageId("page-dapps-token-sets-logo-alt", intl),
+      alt: t("page-dapps-token-sets-logo-alt"),
     },
     {
       title: "PoolTogether",
-      description: translateMessageId(
-        "page-dapps-dapp-description-pooltogether",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-pooltogether"),
       link: "https://pooltogether.com/",
       image: getImage(data.pooltogether),
-      alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
+      alt: t("page-dapps-pooltogether-logo-alt"),
     },
     {
       title: "Index Coop",
-      description: translateMessageId(
-        "page-dapps-dapp-description-index-coop",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-index-coop"),
       link: "https://www.indexcoop.com/",
       image: getImage(data.index),
-      alt: translateMessageId("page-dapps-index-coop-logo-alt", intl),
+      alt: t("page-dapps-index-coop-logo-alt"),
     },
     {
       title: "Balancer",
-      description: translateMessageId(
-        "page-dapps-dapp-description-balancer",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-balancer"),
       link: "https://balancer.fi/",
       image: getImage(data.balancer),
-      alt: translateMessageId("page-dapps-balancer-logo-alt", intl),
+      alt: t("page-dapps-balancer-logo-alt"),
     },
   ]
 
   const insurance = [
     {
       title: "Nexus Mutual",
-      description: translateMessageId(
-        "page-dapps-dapp-description-nexus-mutual",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-nexus-mutual"),
       link: "https://nexusmutual.io/",
       image: getImage(data.nexus),
-      alt: translateMessageId("page-dapps-nexus-mutual-logo-alt", intl),
+      alt: t("page-dapps-nexus-mutual-logo-alt"),
     },
     {
       title: "Etherisc",
-      description: translateMessageId(
-        "page-dapps-dapp-description-etherisc",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-etherisc"),
       link: "https://etherisc.com/",
       image: getImage(data.etherisc),
-      alt: translateMessageId("page-dapps-etherisc-logo-alt", intl),
+      alt: t("page-dapps-etherisc-logo-alt"),
     },
   ]
 
   const portfolios = [
     {
       title: "Zapper",
-      description: translateMessageId(
-        "page-dapps-dapp-description-zapper",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-zapper"),
       link: "https://zapper.fi/",
       image: getImage(data.zapper),
-      alt: translateMessageId("page-dapps-zapper-logo-alt", intl),
+      alt: t("page-dapps-zapper-logo-alt"),
     },
     {
       title: "Zerion",
-      description: translateMessageId(
-        "page-dapps-dapp-description-zerion",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-zerion"),
       link: "https://app.zerion.io/",
       image: getImage(data.zerion),
-      alt: translateMessageId("page-dapps-zerion-logo-alt", intl),
+      alt: t("page-dapps-zerion-logo-alt"),
     },
     {
       title: "Rotki",
-      description: translateMessageId(
-        "page-dapps-dapp-description-rotki",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-rotki"),
       link: "https://rotki.com/",
       image: getImage(data.rotki),
-      alt: translateMessageId("page-dapps-rotki-logo-alt", intl),
+      alt: t("page-dapps-rotki-logo-alt"),
     },
     {
       title: "Krystal",
-      description: translateMessageId(
-        "page-dapps-dapp-description-krystal",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-krystal"),
       link: "https://defi.krystal.app/",
       image: getImage(data.krystal),
-      alt: translateMessageId("page-dapps-krystal-logo-alt", intl),
+      alt: t("page-dapps-krystal-logo-alt"),
     },
   ]
 
   const computing = [
     {
       title: "Golem",
-      description: translateMessageId(
-        "page-dapps-dapp-description-golem",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-golem"),
       link: "https://golem.network/",
       image: getImage(data.golem),
-      alt: translateMessageId("page-dapps-golem-logo-alt", intl),
+      alt: t("page-dapps-golem-logo-alt"),
     },
     {
       title: "radicle.xyz",
-      description: translateMessageId(
-        "page-dapps-dapp-description-radicle",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-radicle"),
       link: "https://radicle.xyz/",
       image: getImage(data.radicle),
-      alt: translateMessageId("page-dapps-radicle-logo-alt", intl),
+      alt: t("page-dapps-radicle-logo-alt"),
     },
   ]
 
   const marketplaces = [
     {
       title: "Gitcoin",
-      description: translateMessageId(
-        "page-dapps-dapp-description-gitcoin",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-gitcoin"),
       link: "https://gitcoin.co/",
       image: getImage(data.gitcoin),
-      alt: translateMessageId("page-dapps-gitcoin-logo-alt", intl),
+      alt: t("page-dapps-gitcoin-logo-alt"),
     },
   ]
 
   const utilities = [
     {
       title: "Ethereum Name Service (ENS)",
-      description: translateMessageId("page-dapps-dapp-description-ens", intl),
+      description: t("page-dapps-dapp-description-ens"),
       link: "http://ens.domains/",
       image: getImage(data.ens),
-      alt: translateMessageId("page-dapps-ens-logo-alt", intl),
+      alt: t("page-dapps-ens-logo-alt"),
     },
   ]
 
   const browsers = [
     {
       title: "Brave",
-      description: translateMessageId(
-        "page-dapps-dapp-description-brave",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-brave"),
       link: "https://brave.com/",
       image: getImage(data.brave),
-      alt: translateMessageId("page-dapps-brave-logo-alt", intl),
+      alt: t("page-dapps-brave-logo-alt"),
     },
     {
       title: "Opera",
-      description: translateMessageId(
-        "page-dapps-dapp-description-opera",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-opera"),
       link: "https://www.opera.com/crypto",
       image: getImage(data.opera),
-      alt: translateMessageId("page-dapps-opera-logo-alt", intl),
+      alt: t("page-dapps-opera-logo-alt"),
     },
   ]
 
   const arts = [
     {
       title: "Foundation",
-      description: translateMessageId(
-        "page-dapps-dapp-description-foundation",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-foundation"),
       link: "https://foundation.app/",
       image: getImage(data.foundation),
-      alt: translateMessageId("page-dapps-foundation-logo-alt", intl),
+      alt: t("page-dapps-foundation-logo-alt"),
     },
     {
       title: "SuperRare",
-      description: translateMessageId(
-        "page-dapps-dapp-description-superrare",
-        intl
-      ),
-      link: "https://www.superrare.co",
+      description: t("page-dapps-dapp-description-superrare"),
+      link: "https://www.superrare.com",
       image: getImage(data.superrare),
-      alt: translateMessageId("page-dapps-superrare-logo-alt", intl),
+      alt: t("page-dapps-superrare-logo-alt"),
     },
     {
       title: "Nifty Gateway",
-      description: translateMessageId(
-        "page-dapps-dapp-description-nifty-gateway",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-nifty-gateway"),
       link: "https://niftygateway.com/",
       image: getImage(data.nifty),
-      alt: translateMessageId("page-dapps-nifty-gateway-logo-alt", intl),
+      alt: t("page-dapps-nifty-gateway-logo-alt"),
     },
     {
       title: "Async Art",
-      description: translateMessageId(
-        "page-dapps-dapp-description-async-art",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-async-art"),
       link: "https://async.art/",
       image: getImage(data.asyncart),
-      alt: translateMessageId("page-dapps-async-logo-alt", intl),
+      alt: t("page-dapps-async-logo-alt"),
     },
   ]
 
   const music = [
     {
       title: "Audius",
-      description: translateMessageId(
-        "page-dapps-dapp-description-audius",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-audius"),
       link: "https://audius.co/",
       image: getImage(data.audius),
-      alt: translateMessageId("page-dapps-audius-logo-alt", intl),
+      alt: t("page-dapps-audius-logo-alt"),
     },
   ]
 
   const collectibles = [
     {
       title: "OpenSea",
-      description: translateMessageId(
-        "page-dapps-dapp-description-opensea",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-opensea"),
       link: "https://opensea.io/",
       image: getImage(data.opensea),
-      alt: translateMessageId("page-dapps-opensea-logo-alt", intl),
+      alt: t("page-dapps-opensea-logo-alt"),
     },
     {
       title: "marble.cards",
-      description: translateMessageId(
-        "page-dapps-dapp-description-marble-cards",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-marble-cards"),
       link: "https://marble.cards/",
       image: getImage(data.marble),
-      alt: translateMessageId("page-dapps-marble-cards-logo-alt", intl),
+      alt: t("page-dapps-marble-cards-logo-alt"),
     },
     {
       title: "Rarible",
-      description: translateMessageId(
-        "page-dapps-dapp-description-rarible",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-rarible"),
       link: "https://rarible.com/",
       image: getImage(data.rarible),
-      alt: translateMessageId("page-dapps-rarible-logo-alt", intl),
+      alt: t("page-dapps-rarible-logo-alt"),
     },
     {
       title: "CryptoPunks",
-      description: translateMessageId(
-        "page-dapps-dapp-description-cryptopunks",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-cryptopunks"),
       link: "https://cryptopunks.app/",
       image: getImage(data.cryptopunks),
-      alt: translateMessageId("page-dapps-cryptopunks-logo-alt", intl),
+      alt: t("page-dapps-cryptopunks-logo-alt"),
     },
     {
       title: "POAP - Proof of Attendance Protocol",
-      description: translateMessageId("page-dapps-dapp-description-poap", intl),
+      description: t("page-dapps-dapp-description-poap"),
       link: "https://poap.xyz",
       image: getImage(data.poap),
-      alt: translateMessageId("page-dapps-poap-logo-alt", intl),
+      alt: t("page-dapps-poap-logo-alt"),
     },
   ]
 
   const worlds = [
     {
       title: "Cryptovoxels",
-      description: translateMessageId(
-        "page-dapps-dapp-description-cryptovoxels",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-cryptovoxels"),
       link: "https://www.cryptovoxels.com/",
       image: getImage(data.cryptovoxels),
-      alt: translateMessageId("page-dapps-cryptovoxels-logo-alt", intl),
+      alt: t("page-dapps-cryptovoxels-logo-alt"),
     },
     {
       title: "Decentraland",
-      description: translateMessageId(
-        "page-dapps-dapp-description-decentraland",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-decentraland"),
       link: "https://decentraland.org/",
       image: getImage(data.decentraland),
-      alt: translateMessageId("page-dapps-decentraland-logo-alt", intl),
+      alt: t("page-dapps-decentraland-logo-alt"),
     },
   ]
 
   const competitive = [
     {
       title: "Axie Infinity",
-      description: translateMessageId(
-        "page-dapps-dapp-description-axie-infinity",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-axie-infinity"),
       link: "https://axieinfinity.com/",
       image: getImage(data.axie),
-      alt: translateMessageId("page-dapps-axie-infinity-logo-alt", intl),
+      alt: t("page-dapps-axie-infinity-logo-alt"),
     },
     {
       title: "Gods Unchained",
-      description: translateMessageId(
-        "page-dapps-dapp-description-gods-unchained",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-gods-unchained"),
       link: "https://godsunchained.com/",
       image: getImage(data.gods),
-      alt: translateMessageId("page-dapps-gods-unchained-logo-alt", intl),
+      alt: t("page-dapps-gods-unchained-logo-alt"),
     },
     {
       title: "Dark Forest",
-      description: translateMessageId(
-        "page-dapps-dapp-description-dark-forest",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-dark-forest"),
       link: "https://zkga.me/",
       image: getImage(data.darkforest),
-      alt: translateMessageId("page-dapps-dark-forest-logo-alt", intl),
+      alt: t("page-dapps-dark-forest-logo-alt"),
     },
   ]
 
   const editorChoices = [
     {
       name: "Uniswap",
-      description: translateMessageId(
-        "page-dapps-editors-choice-uniswap",
-        intl
-      ),
+      description: t("page-dapps-editors-choice-uniswap"),
       url: "https://uniswap.exchange/swap",
       image: getImage(data.uniswapec),
-      alt: translateMessageId("page-dapps-uniswap-logo-alt", intl),
+      alt: t("page-dapps-uniswap-logo-alt"),
       background: "#212f46",
       type: CategoryType.FINANCE,
       pillColor: "tagMint",
     },
     {
       name: "Dark Forest",
-      description: translateMessageId(
-        "page-dapps-editors-choice-dark-forest",
-        intl
-      ),
+      description: t("page-dapps-editors-choice-dark-forest"),
       url: "https://zkga.me",
       image: getImage(data.darkforestec),
-      alt: translateMessageId("page-dapps-dark-forest-logo-alt", intl),
+      alt: t("page-dapps-dark-forest-logo-alt"),
       background: "#080808",
       type: CategoryType.GAMING,
       pillColor: "tagOrange",
     },
     {
       name: "Foundation",
-      description: translateMessageId(
-        "page-dapps-editors-choice-foundation",
-        intl
-      ),
+      description: t("page-dapps-editors-choice-foundation"),
       url: "https://foundation.app",
       image: getImage(data.foundationec),
-      alt: translateMessageId("page-dapps-foundation-logo-alt", intl),
+      alt: t("page-dapps-foundation-logo-alt"),
       background: "#ffffff",
       type: CategoryType.COLLECTIBLES,
       pillColor: "tagBlue",
     },
     {
       name: "PoolTogether",
-      description: translateMessageId(
-        "page-dapps-editors-choice-pooltogether",
-        intl
-      ),
+      description: t("page-dapps-editors-choice-pooltogether"),
       url: "https://pooltogether.com",
       image: getImage(data.pooltogetherec),
-      alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
+      alt: t("page-dapps-pooltogether-logo-alt"),
       background: "#7e4cf2",
       type: CategoryType.FINANCE,
       pillColor: "tagMint",
@@ -1164,92 +1008,126 @@ const DappsPage = ({
   ]
 
   const heroContent = {
-    title: translateMessageId("decentralized-applications-dapps", intl),
-    header: translateMessageId("page-dapps-hero-header", intl),
-    subtitle: translateMessageId("page-dapps-hero-subtitle", intl),
+    title: t("decentralized-applications-dapps"),
+    header: t("page-dapps-hero-header"),
+    subtitle: t("page-dapps-hero-subtitle"),
     image: getImage(data.doge)!,
-    alt: translateMessageId("page-dapps-doge-img-alt", intl),
+    alt: t("page-dapps-doge-img-alt"),
     buttons: [
       {
-        content: translateMessageId("page-dapps-explore-dapps-title", intl),
+        content: t("page-dapps-explore-dapps-title"),
         to: "#explore",
+        matomo: {
+          eventCategory: "dapp hero buttons",
+          eventAction: "click",
+          eventName: "explore dapps",
+        },
       },
       {
-        content: translateMessageId("page-dapps-what-are-dapps", intl),
+        content: t("page-dapps-what-are-dapps"),
         to: "#what-are-dapps",
         variant: "outline",
+        matomo: {
+          eventCategory: "dapp hero buttons",
+          eventAction: "click",
+          eventName: "what are dapps",
+        },
       },
     ],
   }
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("decentralized-applications-dapps", intl)}
-        description={translateMessageId("page-dapps-desc", intl)}
+        title={t("decentralized-applications-dapps")}
+        description={t("page-dapps-desc")}
         image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} />
       <Divider />
       <Content>
-        <H2>
+        <StyledH2>
           <Translation id="get-started" />
-        </H2>
-        <p>
+        </StyledH2>
+        <Text>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
           <Link to="/glossary/#transaction-fee">
             <Translation id="transaction-fees" />
           </Link>
-        </p>
+        </Text>
         <Row>
           <StepBoxContainer>
             <StepBox to="/get-eth/">
-              <div>
-                <H3>
+              <Box>
+                <StyledH3>
                   1. <Translation id="page-wallets-get-some" />
-                </H3>
-                <p>
+                </StyledH3>
+                <Text>
                   <Translation id="page-dapps-get-some-eth-description" />
-                </p>
-              </div>
-              <StyledButtonSecondary>
+                </Text>
+              </Box>
+              <ButtonSecondary
+                onClick={() =>
+                  trackCustomEvent({
+                    eventCategory: "dapp hero buttons",
+                    eventAction: "click",
+                    eventName: "get eth",
+                  })
+                }
+              >
                 <Translation id="get-eth" />
-              </StyledButtonSecondary>
+              </ButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">
-              <div>
-                <H3>
+              <Box>
+                <StyledH3>
                   2. <Translation id="page-dapps-set-up-a-wallet-title" />
-                </H3>
-                <p>
+                </StyledH3>
+                <Text>
                   <Translation id="page-dapps-set-up-a-wallet-description" />
-                </p>
-              </div>
-              <StyledButtonSecondary>
+                </Text>
+              </Box>
+              <ButtonSecondary
+                onClick={() =>
+                  trackCustomEvent({
+                    eventCategory: "dapp hero buttons",
+                    eventAction: "click",
+                    eventName: "find wallet",
+                  })
+                }
+              >
                 <Translation id="page-dapps-set-up-a-wallet-button" />
-              </StyledButtonSecondary>
+              </ButtonSecondary>
             </StepBox>
             <StepBox to="#explore">
-              <div>
-                <H3>
+              <Box>
+                <StyledH3>
                   3. <Translation id="page-dapps-ready-title" />
-                </H3>
-                <p>
+                </StyledH3>
+                <Text>
                   <Translation id="page-dapps-ready-description" />
-                </p>
-              </div>
-              <ButtonPrimary>
+                </Text>
+              </Box>
+              <ButtonPrimary
+                onClick={() =>
+                  trackCustomEvent({
+                    eventCategory: "dapp hero buttons",
+                    eventAction: "click",
+                    eventName: "go",
+                  })
+                }
+              >
                 <Translation id="page-dapps-ready-button" />
               </ButtonPrimary>
             </StepBox>
           </StepBoxContainer>
         </Row>
-        <h3>
+        <H3>
           <Translation id="page-dapps-editors-choice-header" />{" "}
-          <Emoji text=":+1:" size={1} />
-        </h3>
-        <p>
+          <Emoji text=":+1:" />
+        </H3>
+        <Text>
           <Translation id="page-dapps-editors-choice-description" />
-        </p>
+        </Text>
         <StyledCardGrid>
           {editorChoices.map((choice, idx) => (
             <ProductCard
@@ -1269,15 +1147,15 @@ const DappsPage = ({
         </StyledCardGrid>
       </Content>
       <FullWidthContainer ref={explore}>
-        <h2 id="explore">
+        <H2 id="explore">
           <Translation id="page-dapps-explore-dapps-title" />
-        </h2>
+        </H2>
         <CenterText>
           <Translation id="page-dapps-explore-dapps-description" />
         </CenterText>
-        <h3>
+        <H3>
           <Translation id="page-dapps-choose-category" />
-        </h3>
+        </H3>
         <OptionContainer>
           {categoryKeys.map((key, idx) => {
             const categoryType = key as CategoryType
@@ -1286,9 +1164,16 @@ const DappsPage = ({
               <Option
                 key={idx}
                 isActive={selectedCategory === categoryType}
-                onClick={() => handleCategorySelect(categoryType, false)}
+                onClick={() => {
+                  handleCategorySelect(categoryType, false)
+                  trackCustomEvent({
+                    eventCategory: "choose dapp category",
+                    eventAction: "click",
+                    eventName: categoryType,
+                  })
+                }}
               >
-                <Emoji mr={`1rem`} text={category.emoji} />
+                <Emoji fontSize="2xl" mr={`1rem`} text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
               </Option>
             )
@@ -1299,34 +1184,35 @@ const DappsPage = ({
           <Content>
             <IntroRow>
               <Column>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-finance-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":money_with_wings:" />
-                </H2>
+                  <Emoji
+                    fontSize="5xl"
+                    ml={"0.5rem"}
+                    text=":money_with_wings:"
+                  />
+                </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-finance-description" />
                 </Subtitle>
               </Column>
-              <StyledInfoBanner isWarning={true}>
-                <H2>
+              <StyledInfoBanner isWarning>
+                <StyledH2>
                   <Translation id="page-dapps-warning-header" />
-                </H2>
+                </StyledH2>
                 <Translation id="page-dapps-warning-message" />
               </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-lending",
-                    intl
-                  )}
+                  category={t("page-dapps-category-lending")}
                   content={lending}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={translateMessageId("page-dapps-category-dex", intl)}
+                  category={t("page-dapps-category-dex")}
                   content={dex}
                 />
               </RightColumn>
@@ -1334,19 +1220,13 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-trading",
-                    intl
-                  )}
+                  category={t("page-dapps-category-trading")}
                   content={trading}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-investments",
-                    intl
-                  )}
+                  category={t("page-dapps-category-investments")}
                   content={investments}
                 />
               </RightColumn>
@@ -1354,19 +1234,13 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-payments",
-                    intl
-                  )}
+                  category={t("page-dapps-category-payments")}
                   content={payments}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-lottery",
-                    intl
-                  )}
+                  category={t("page-dapps-category-lottery")}
                   content={lottery}
                 />
               </RightColumn>
@@ -1374,76 +1248,64 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-insurance",
-                    intl
-                  )}
+                  category={t("page-dapps-category-insurance")}
                   content={insurance}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-portfolios",
-                    intl
-                  )}
+                  category={t("page-dapps-category-portfolios")}
                   content={portfolios}
                 />
               </RightColumn>
             </TwoColumnContent>
-            <StyledCalloutBanner
+            <CalloutBanner
+              mt={32}
+              mx={0}
+              mb={{ base: 0, lg: 16 }}
               titleKey={"page-dapps-wallet-callout-title"}
               descriptionKey={"page-dapps-wallet-callout-description"}
               image={getImage(data.wallet)!}
               maxImageWidth={300}
-              alt={translateMessageId(
-                "page-dapps-wallet-callout-image-alt",
-                intl
-              )}
+              alt={t("page-dapps-wallet-callout-image-alt")}
             >
-              <div>
+              <Box>
                 <ButtonLink to="/wallets/find-wallet/">
                   <Translation id="page-dapps-wallet-callout-button" />
                 </ButtonLink>
-              </div>
-            </StyledCalloutBanner>
+              </Box>
+            </CalloutBanner>
           </Content>
         )}
         {selectedCategory === CategoryType.GAMING && (
           <Content>
             <IntroRow>
               <Column>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-gaming-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":video_game:" />
-                </H2>
+                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":video_game:" />
+                </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-gaming-description" />
                 </Subtitle>
               </Column>
-              <StyledInfoBanner isWarning={true}>
-                <H2>
+              <StyledInfoBanner isWarning>
+                <StyledH2>
                   <Translation id="page-dapps-warning-header" />
-                </H2>
+                </StyledH2>
                 <Translation id="page-dapps-warning-message" />
               </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-worlds",
-                    intl
-                  )}
+                  category={t("page-dapps-category-worlds")}
                   content={worlds}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-competitive",
-                    intl
-                  )}
+                  category={t("page-dapps-category-competitive")}
                   content={competitive}
                 />
               </RightColumn>
@@ -1454,37 +1316,31 @@ const DappsPage = ({
           <Content>
             <IntroRow>
               <Column>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-technology-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":keyboard:" />
-                </H2>
+                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":keyboard:" />
+                </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-technology-description" />
                 </Subtitle>
               </Column>
-              <StyledInfoBanner isWarning={true}>
-                <H2>
+              <StyledInfoBanner isWarning>
+                <StyledH2>
                   <Translation id="page-dapps-warning-header" />
-                </H2>
+                </StyledH2>
                 <Translation id="page-dapps-warning-message" />
               </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-utilities",
-                    intl
-                  )}
+                  category={t("page-dapps-category-utilities")}
                   content={utilities}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-marketplaces",
-                    intl
-                  )}
+                  category={t("page-dapps-category-marketplaces")}
                   content={marketplaces}
                 />
               </RightColumn>
@@ -1492,19 +1348,13 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-computing",
-                    intl
-                  )}
+                  category={t("page-dapps-category-computing")}
                   content={computing}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-browsers",
-                    intl
-                  )}
+                  category={t("page-dapps-category-browsers")}
                   content={browsers}
                 />
               </RightColumn>
@@ -1515,45 +1365,40 @@ const DappsPage = ({
           <Content>
             <IntroRow>
               <Column>
-                <H2>
+                <StyledH2>
                   <Translation id="page-dapps-collectibles-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":frame_with_picture:" />
-                </H2>
+                  <Emoji
+                    fontSize="5xl"
+                    ml={"0.5rem"}
+                    text=":frame_with_picture:"
+                  />
+                </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-collectibles-description" />
                 </Subtitle>
               </Column>
-              <StyledInfoBanner isWarning={true}>
-                <H2>
+              <StyledInfoBanner isWarning>
+                <StyledH2>
                   <Translation id="page-dapps-warning-header" />
-                </H2>
+                </StyledH2>
                 <Translation id="page-dapps-warning-message" />
               </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-arts",
-                    intl
-                  )}
+                  category={t("page-dapps-category-arts")}
                   content={arts}
                 />
 
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-music",
-                    intl
-                  )}
+                  category={t("page-dapps-category-music")}
                   content={music}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={translateMessageId(
-                    "page-dapps-category-collectibles",
-                    intl
-                  )}
+                  category={t("page-dapps-category-collectibles")}
                   content={collectibles}
                 />
               </RightColumn>
@@ -1563,35 +1408,33 @@ const DappsPage = ({
         {/* General content for all categories */}
         <Content>
           <AddDapp>
-            <div>
-              <H2>
+            <Box>
+              <StyledH2>
                 <Translation id="page-dapps-add-title" />
-              </H2>
-              <TextNoMargin>
+              </StyledH2>
+              <Text mb={0} mr={4}>
                 <Translation id="listing-policy-disclaimer" />{" "}
-              </TextNoMargin>
-            </div>
-            <AddDappButton
-              variant="outline"
-              to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
-            >
+              </Text>
+            </Box>
+            <AddDappButton to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.yaml&title=">
               <Translation id="page-dapps-add-button" />
             </AddDappButton>
           </AddDapp>
           <CenterDivider />
           {categories[selectedCategory].benefits && (
-            <About>
-              <h2>
+            <Box mt={12}>
+              <H2>
                 <Translation id="page-dapps-magic-title-1" />{" "}
-                <Emoji size={1} text=":sparkles:" />{" "}
+                <Emoji fontSize="2rem" text=":sparkles:" />{" "}
                 <Translation id="page-dapps-magic-title-2" />{" "}
                 {categories[selectedCategory].benefitsTitle}
-              </h2>
-              <p>{categories[selectedCategory].benefitsDescription}</p>
+              </H2>
+              <Text>{categories[selectedCategory].benefitsDescription}</Text>
               <CardContainer>
                 {(categories[selectedCategory].benefits || []).map(
                   (art, idx) => (
-                    <CenteredCard
+                    <Card
+                      textAlign="center"
                       key={idx}
                       emoji={art.emoji}
                       title={art.title}
@@ -1621,64 +1464,57 @@ const DappsPage = ({
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
-            </About>
+            </Box>
           )}
         </Content>
-        <MobileOptionContainer>
-          <h3>
-            <Translation id="page-dapps-mobile-options-header" />
-          </h3>
-          {categoryKeys.map((key, idx) => {
-            const categoryType = key as CategoryType
-            const category = categories[categoryType]
-            return (
-              <Option
-                key={idx}
-                isActive={selectedCategory === categoryType}
-                onClick={() => handleCategorySelect(categoryType, true)}
-              >
-                <Emoji mr={`1rem`} text={category.emoji} />
-                <OptionText>{category.title}</OptionText>
-              </Option>
-            )
-          })}
-        </MobileOptionContainer>
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
-          <StyledGhostCard>
+          <GhostCard
+            mt={2}
+            sx={{
+              ".ghost-card-base": {
+                display: "flex",
+                justifyContent: "center",
+              },
+            }}
+          >
             <MagiciansImage
               image={getImage(data.magicians)!}
-              alt={translateMessageId("page-dapps-magician-img-alt", intl)}
+              alt={t("page-dapps-magician-img-alt")}
             />
-          </StyledGhostCard>
+          </GhostCard>
         </ImageContainer>
-        <Box>
-          <h2>
+        <Flex
+          direction="column"
+          align={{ base: "flex-start", sm: "center" }}
+          mt={12}
+        >
+          <H2>
             <Translation id="page-dapps-magic-behind-dapps-title" />
-          </h2>
-          <BoxText>
+          </H2>
+          <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             <Translation id="page-dapps-magic-behind-dapps-description" />
-          </BoxText>
+          </Text>
           <Link to="/what-is-ethereum/">
             <Translation id="page-dapps-magic-behind-dapps-link" />
           </Link>
-        </Box>
+        </Flex>
         <BoxGrid items={features} />
         <Row>
           <LeftColumn>
-            <h2>
+            <H2>
               <Translation id="page-dapps-how-dapps-work-title" />
-            </h2>
-            <p>
+            </H2>
+            <Text>
               <Translation id="page-dapps-how-dapps-work-p1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-dapps-how-dapps-work-p2" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-dapps-how-dapps-work-p3" />
-            </p>
+            </Text>
             <DocLink to="/developers/docs/dapps/">
               <Translation id="page-dapps-docklink-dapps" />
             </DocLink>
@@ -1691,16 +1527,13 @@ const DappsPage = ({
               titleKey="page-dapps-learn-callout-title"
               descriptionKey="page-dapps-learn-callout-description"
               image={getImage(data.developers)}
-              alt={translateMessageId(
-                "page-dapps-learn-callout-image-alt",
-                intl
-              )}
+              alt={t("page-dapps-learn-callout-image-alt")}
             >
-              <div>
+              <Box>
                 <ButtonLink to="/developers/">
                   <Translation id="page-dapps-learn-callout-button" />
                 </ButtonLink>
-              </div>
+              </Box>
             </StyledCallout>
           </RightColumn>
         </Row>
@@ -1740,7 +1573,21 @@ export const editorImage = graphql`
 `
 
 export const query = graphql`
-  query DappsPage {
+  query DappsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-dapps", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(
@@ -1930,6 +1777,9 @@ export const query = graphql`
       ...dappImage
     }
     balancer: file(relativePath: { eq: "dapps/balancer.png" }) {
+      ...dappImage
+    }
+    dexguru: file(relativePath: { eq: "dapps/dexguru.png" }) {
       ...dappImage
     }
   }

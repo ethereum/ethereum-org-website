@@ -4,7 +4,6 @@ description: Comment fonctionne le contrat Uniswap-v2 ? Pourquoi est-il écrit d
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: fr
@@ -450,7 +449,7 @@ Utilisez la fonction `UniswapV2ERC20._mint` pour créer les jetons de liquidité
     }
 ```
 
-S'il n'existe pas de frais, réglez `kLast` à zéro (si ce n'est pas déjà le cas). Lorsque ce contrat a été rédigé, il existait une [fonctionnalité de remboursement de gaz](https://eips.ethereum.org/EIPS/eip-3298) qui encourageait les contrats à réduire la taille globale de l'état Ethereum en mettant à zéro le stockage dont ils n'avaient pas besoin. Ce code récupère ce remboursement lorsque c'est possible.
+S'il n'existe pas de frais, réglez `kLast` à zéro (si ce n'est pas déjà le cas). Lorsque ce contrat a été rédigé, il existait une [fonctionnalité de remboursement de gaz](https://eips.ethereum.org/EIPS/eip-3298) qui encourageait les contrats à réduire la taille globale de l'état d'Ethereum en mettant à zéro le stockage dont ils n'avaient pas besoin. Ce code récupère ce remboursement lorsque c'est possible.
 
 #### Fonctions accessibles en externe {#pair-external}
 
@@ -493,7 +492,7 @@ Calculez les frais de protocole à percevoir, le cas échéant, et minez les jet
            _mint(address(0), MINIMUM_LIQUIDITY); // permanently lock the first MINIMUM_LIQUIDITY tokens
 ```
 
-S'il s'agit du premier dépôt, créez des jetons `MINIMUM_LIQUIDITY` et envoyez-les à l'adresse zéro pour les verrouiller. Ils ne peuvent jamais être rachetés, ce qui signifie que la réserve ne sera jamais complètement vide (d'une certaine façon celà nous évite une division par zéro). La valeur `MINIMUM_LIQUIDITY` est d'un millier, ce qui implique que la plupart des ERC-20 sont subdivisés en unités de 10^-18'e d'un jeton, étant donné que la division de l'ETH en wei est de 10^-15 de la valeur d'un jeton unique. Ce n'est pas un coût élevé.
+S'il s'agit du premier dépôt, créez des jetons `MINIMUM_LIQUIDITY` et envoyez-les à l'adresse zéro pour les verrouiller. Ils ne peuvent jamais être rachetés, ce qui signifie que la réserve ne sera jamais complètement vide (d'une certaine façon cela nous évite une division par zéro). La valeur `MINIMUM_LIQUIDITY` est d'un millier, ce qui implique que la plupart des ERC-20 sont subdivisés en unités de 10^-18'e d'un jeton, étant donné que la division de l'ETH en wei est de 10^-15 de la valeur d'un jeton unique. Ce n'est pas un coût élevé.
 
 Lors du premier dépôt, nous ne connaissons pas la valeur relative des deux jetons, donc nous multiplions simplement les montants et prenons une racine carrée, en supposant que le dépôt nous donne la même valeur pour les deux jetons.
 
@@ -801,7 +800,7 @@ Ces deux fonctions permettent à `feeSetter` de contrôler le destinataire des f
 
 ### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
-[Ce contrat](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implemente le jeton de liquidité ERC-20. Il est identique au [contrat OpenWhisk ERC-20](/developers/tutorials/erc20-annotated-code). De fait, je n'expliquerai que la partie qui est différente, à savoir la fonctionnalité `Permit`.
+[Ce contrat](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implemente le jeton de liquidité ERC-20. Il est identique au [contrat OpenZeppelin ERC-20](/developers/tutorials/erc20-annotated-code). De fait, je n'expliquerai que la partie qui est différente, à savoir la fonctionnalité `Permit`.
 
 Les transactions sur Ethereum coûtent de l'Ether (ETH), ce qui équivaut à de l'argent réel. Si vous avez des jetons ERC-20 mais pas d'ETH, vous ne pouvez pas envoyer de transactions. Vous ne pouvez donc rien faire avec. Pour éviter ce problème, vous pouvez opter pour des [méta-transactions](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Le propriétaire des jetons signe une transaction qui permet à quelqu'un d'autre de retirer des jetons hors chaîne et de les envoyer via Internet à un destinataire. Le destinataire disposant d'ETH soumet ensuite le permis pour le compte du propriétaire.
 
@@ -891,11 +890,11 @@ Les contrats périphériques sont l'API (interface du programme d'application) p
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) présente des dangers et [ne doit plus être utilisé](https://uniswap.org/docs/v2/smart-contracts/router01/). Heureusement, les contrats périphériques sont dénués d'état et ne détiennent aucun actif. Il est ainsi facile de les déprécier et de suggérer aux gens d'utiliser à la place `UniswapV2Router02`.
+[Ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) présente des dangers et [ne doit plus être utilisé](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Heureusement, les contrats périphériques sont dénués d'état et ne détiennent aucun actif. Il est ainsi facile de les déprécier et de suggérer aux gens d'utiliser à la place `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-Dans la plupart des cas, vous utiliseriez Uniswap par le biais de [ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Vous pouvez voir comment l'utiliser [ici](https://uniswap.org/docs/v2/smart-contracts/router02/).
+Dans la plupart des cas, vous utiliseriez Uniswap par le biais de [ce contrat](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Vous pouvez voir comment l'utiliser [ici](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
 ```solidity
 pragma solidity =0.6.6;
@@ -1052,12 +1051,6 @@ Si le montant optimal de B est supérieur au montant désiré de B, cela signifi
 En mettant tout cela ensemble, nous obtenons ce graphique. Supposons que vous essayez de déposer un millier de jetons A (ligne bleue) et un millier de jetons B (ligne rouge). L'axe x est le taux de change, A/B. Si x=1, ils sont égaux en valeur et vous déposez mille de chaque. Si x=2, A est deux fois la valeur de B (vous obtenez deux jetons B pour chaque jeton A). Vous déposez donc un millier de jetons B, mais seulement 500 jetons A. Si x=0.5, la situation est alors inversée avec mille jetons A et cinq cents jetons B.
 
 ![Graph](liquidityProviderDeposit.png)
-
-```solidity
-            }
-        }
-    }
-```
 
 Vous pouvez déposer des liquidités directement dans le contrat principal (en utilisant [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), mais le contrat de base vérifie uniquement qu'il ne se trompe pas lui-même. Ainsi, vous risquez de perdre de la valeur si le taux de change évolue entre le moment où vous soumettez votre transaction et le moment où elle est exécutée. Si vous utilisez le contrat périphérique, il indique le montant que vous devez déposer et le dépose immédiatement. Ainsi, le taux de change n'évolue pas et vous ne perdez rien.
 

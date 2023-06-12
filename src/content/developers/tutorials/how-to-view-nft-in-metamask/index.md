@@ -2,7 +2,7 @@
 title: How to View Your NFT in Your Wallet (Part 3/3 of NFT Tutorial Series)
 description: This tutorial describes how to view an existing an NFT on MetaMask!
 author: "Sumi Mudgil"
-tags: ["ERC-721", "Alchemy", "MetaMask", "Solidity"]
+tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
 lang: en
 published: 2021-04-22
@@ -14,15 +14,15 @@ Congrats! You’ve made it to the shortest and simplest part of our NFT tutorial
 
 As a prerequisite, you should already have MetaMask on mobile installed, and it should include the account to which you minted your NFT — you can get the app for free on [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) or [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
 
-## Step 1: Set your network to Goerli {#set-network-to-goerli}
+## Step 1: Set your network to Sepolia {#set-network-to-sepolia}
 
-At the top of the app, press the “Wallet” button, after which you’ll be prompted to select a network. As our NFT was minted on the Goerli network, you’ll want to select Goerli as your network.
+At the top of the app, press the “Wallet” button, after which you’ll be prompted to select a network. As our NFT was minted on the Sepolia network, you’ll want to select Sepolia as your network.
 
-![How to set Goerli as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
 
 ## Step 2: Add your collectable to MetaMask {#add-nft-to-metamask}
 
-Once you’re on the Goerli network, select the “Collectibles” tab on the right and add the NFT smart contract address and the ERC-721 token ID of your NFT — which you should be able to find on Etherscan based on the transaction hash from your NFT deployed in Part II of our tutorial.
+Once you’re on the Sepolia network, select the “Collectibles” tab on the right and add the NFT smart contract address and the ERC-721 token ID of your NFT — which you should be able to find on Etherscan based on the transaction hash from your NFT deployed in Part II of our tutorial.
 
 ![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
 

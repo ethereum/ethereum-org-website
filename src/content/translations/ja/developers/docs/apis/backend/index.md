@@ -32,6 +32,12 @@ lang: ja
 - [blockcypher.com](https://www.blockcypher.com/)
 - [ドキュメント](https://www.blockcypher.com/dev/ethereum/)
 
+**Blast by Bware Labs -** **_イーサリアムメインネットとテストネットのための分散型 API_**
+
+- [blastapi.io](https://blastapi.io/)
+- [ドキュメント](https://docs.blastapi.io)
+- [Discord](https://discord.com/invite/VPkWESgtvV)
+
 **Infura -** **_アズ・ア・サービス型のイーサリアム API_**
 
 - [infura.io](https://infura.io)
@@ -42,17 +48,17 @@ lang: ja
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Coinbase Cloud ノード -** **_ブロックチェーン・インフラストラクチャ API_**
+**Coinbase Cloud Node -** **_ブロックチェーンインフラストラクチャ API_**
 
-- [Coinbase Cloud ノード](https://www.coinbase.com/cloud/products/node)
+- [Coinbase Cloud Node](https://www.coinbase.com/cloud/products/node)
 - [ドキュメント](https://docs.cloud.coinbase.com/node/reference/welcome-to-node)
 
-**Figment 社による DataHub -** **_イーサリアムプロトコル(メインネット・テストネット)を使用した Web3 API サービス _**
+**Figment 社が提供する DataHub -** **_イーサリアムプロトコル(メインネットとテストネット)を使用した Web3 API サービス_**
 
 - [DataHub](https://www.figment.io/datahub)
 - [ドキュメント](https://docs.figment.io/introduction/what-is-datahub)
 
-**NFTPort -** **_イーサリアムデータと Mint API_**
+**NFTPort -** **_イーサリアムデータとミント API_**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [ドキュメント](https://docs.nftport.xyz/)
@@ -74,7 +80,7 @@ lang: ja
 - [ドキュメント](https://docs.chainstack.com)
 - [イーサリアム API リファレンス](https://docs.chainstack.com/api/ethereum/ethereum-api-reference)
 
-**QuickNode -** **_アズ・ア・サービス型のブロックチェーン・インフラストラクチャ_**
+**QuickNode -** **_アズ・ア・サービス型のブロックチェーンインフラストラクチャ_**
 
 - [quicknode.com](https://quicknode.com)
 - [ドキュメント](https://www.quicknode.com/docs)
@@ -98,7 +104,7 @@ lang: ja
 - [ドキュメント](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Nethereum -** **_ブロックチェーンのためのオープンソースの .NET 統合ライブラリ_**
+**Nethereum -** **_オープンソースのブロックチェーン用.NET 統合ライブラリ_**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [ドキュメント](http://docs.nethereum.com/en/latest/)
@@ -124,9 +130,27 @@ lang: ja
 - [ドキュメント](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
+**NOWNodes - _フルノードとブロックエクスプローラー_**
+
+- [NOWNodes.io](https://nownodes.io/)
+- [ドキュメント](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+
+**Moralis -** **_エンタープライズグレードの EVM API プロバイダ_**
+
+- [moralis.io](http://moralis.io)
+- [ドキュメンテーション](https://docs.moralis.io/)
+- [GitHub](https://github.com/MoralisWeb3)
+- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [フォーラム](https://forum.moralis.io/)
+
+\*_GetBlock - Web3 開発のためのブロックチェーン・アズ・ア・サービス_
+
+- [GetBlock.io](https://getblock.io/)
+- [ドキュメンテーション](https://getblock.io/docs/)
+
 ## 参考文献 {#further-reading}
 
-_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
+_イーサリアムを学ぶために利用したコミュニティリソースはありますか？ このページを編集して追加しましょう！_
 
 ## 関連トピック {#related-topics}
 

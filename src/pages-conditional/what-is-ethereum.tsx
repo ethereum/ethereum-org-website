@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
@@ -37,10 +37,7 @@ import Slider, { EmblaSlide } from "../components/Slider"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
-import {
-  getLocaleForNumberFormat,
-  translateMessageId,
-} from "../utils/translations"
+import { getLocaleForNumberFormat } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { trackCustomEvent } from "../utils/matomo"
 import { getImage, getSrc } from "../utils/image"
@@ -73,7 +70,7 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.textTableOfContents};
 `
 
-const Subtitle = styled.div`
+const Subtitle = styled.p`
   font-size: 1.25rem;
   line-height: 140%;
   color: ${({ theme }) => theme.colors.text200};
@@ -241,10 +238,11 @@ const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
 const WhatIsEthereumPage = ({
   data,
 }: PageProps<Queries.WhatIsEthereumQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
   const theme = useTheme()
 
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale as Lang)
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
 
   const txCount = useFetchStat<
     Array<{ unixTimeStamp: string; transactionCount: number }>
@@ -264,61 +262,40 @@ const WhatIsEthereumPage = ({
   const cards = [
     {
       emoji: ":bank:",
-      title: translateMessageId("page-what-is-ethereum-banking-card", intl),
-      description: translateMessageId(
-        "page-what-is-ethereum-banking-card-desc",
-        intl
-      ),
+      title: t("page-what-is-ethereum-banking-card"),
+      description: t("page-what-is-ethereum-banking-card-desc"),
     },
 
     {
       emoji: ":detective:",
-      title: translateMessageId("page-what-is-ethereum-internet-card", intl),
-      description: translateMessageId(
-        "page-what-is-ethereum-internet-card-desc",
-        intl
-      ),
+      title: t("page-what-is-ethereum-internet-card"),
+      description: t("page-what-is-ethereum-internet-card-desc"),
     },
     {
       emoji: ":busts_in_silhouette:",
-      title: translateMessageId("page-what-is-ethereum-p2p-card", intl),
-      description: translateMessageId(
-        "page-what-is-ethereum-p2p-card-desc",
-        intl
-      ),
+      title: t("page-what-is-ethereum-p2p-card"),
+      description: t("page-what-is-ethereum-p2p-card-desc"),
     },
     {
       emoji: ":shield:",
-      title: translateMessageId("page-what-is-ethereum-censorless-card", intl),
-      description: translateMessageId(
-        "page-what-is-ethereum-censorless-card-desc",
-        intl
-      ),
+      title: t("page-what-is-ethereum-censorless-card"),
+      description: t("page-what-is-ethereum-censorless-card-desc"),
     },
     {
       emoji: ":shopping_bags:",
-      title: translateMessageId("page-what-is-ethereum-commerce-card", intl),
-      description: translateMessageId(
-        "page-what-is-ethereum-commerce-card-desc",
-        intl
-      ),
+      title: t("page-what-is-ethereum-commerce-card"),
+      description: t("page-what-is-ethereum-commerce-card-desc"),
     },
     {
       emoji: ":handshake:",
-      title: translateMessageId("page-what-is-ethereum-composable-card", intl),
-      description: translateMessageId(
-        "page-what-is-ethereum-composable-card-desc",
-        intl
-      ),
+      title: t("page-what-is-ethereum-composable-card"),
+      description: t("page-what-is-ethereum-composable-card-desc"),
     },
   ]
 
   const tabs = [
     {
-      title: translateMessageId(
-        "page-what-is-ethereum-blockchain-tab-title",
-        intl
-      ),
+      title: t("page-what-is-ethereum-blockchain-tab-title"),
       eventName: "Blockchain tab",
       content: (
         <TabContent>
@@ -327,10 +304,7 @@ const WhatIsEthereumPage = ({
       ),
     },
     {
-      title: translateMessageId(
-        "page-what-is-ethereum-cryptocurrency-tab-title",
-        intl
-      ),
+      title: t("page-what-is-ethereum-cryptocurrency-tab-title"),
       eventName: "Cryptocurrency tab",
       content: (
         <TabContent>
@@ -367,11 +341,8 @@ const WhatIsEthereumPage = ({
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-what-is-ethereum-meta-title", intl)}
-        description={translateMessageId(
-          "page-what-is-ethereum-meta-description",
-          intl
-        )}
+        title={t("page-what-is-ethereum-meta-title")}
+        description={t("page-what-is-ethereum-meta-description")}
         image={getSrc(data.ogImage)}
       />
       <Content>
@@ -394,10 +365,7 @@ const WhatIsEthereumPage = ({
           </Header>
           <Hero
             image={getImage(data.hero)!}
-            alt={translateMessageId(
-              "page-what-is-ethereum-alt-img-bazaar",
-              intl
-            )}
+            alt={t("page-what-is-ethereum-alt-img-bazaar")}
             loading="eager"
           />
         </HeroContainer>
@@ -516,7 +484,7 @@ const WhatIsEthereumPage = ({
               </h2>
               <BannerGrid>
                 <BannerGridCell>
-                  <StatPrimary>2970</StatPrimary>
+                  <StatPrimary>4k+</StatPrimary>
                   <StatDescription>
                     Projects built on{" "}
                     <NoWrapText>
@@ -524,7 +492,7 @@ const WhatIsEthereumPage = ({
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
-                            "https://www.stateofthedapps.com/stats/platform/ethereum#new",
+                            "https://dappradar.com/rankings/protocol/ethereum",
                           apiProvider: "State of the dapps",
                           ariaLabel: "Read more about Ethereum projects stats",
                         })}
@@ -535,7 +503,7 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>71M+</StatPrimary>
+                  <StatPrimary>96M+</StatPrimary>
                   <StatDescription>
                     Accounts (wallets) with an ETH{" "}
                     <NoWrapText>
@@ -543,8 +511,8 @@ const WhatIsEthereumPage = ({
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
-                            "https://bitcoinist.com/ethereum-reaches-new-milestone-as-over-71-million-wallets-hold-eth/",
-                          apiProvider: "Bitcoinist",
+                            "https://messari.io/asset/ethereum/metrics/all",
+                          apiProvider: "Messari",
                           ariaLabel: "Read more about wallets stats",
                         })}
                       >
@@ -554,7 +522,7 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>50.5M</StatPrimary>
+                  <StatPrimary>53.3M+</StatPrimary>
                   <StatDescription>
                     Smart contracts on{" "}
                     <NoWrapText>
@@ -573,18 +541,16 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>$11.6T</StatPrimary>
+                  <StatPrimary>$410B</StatPrimary>
                   <StatDescription>
-                    Value moved through the Ethereum network in{" "}
+                    Value secured on{" "}
                     <NoWrapText>
-                      2021{" "}
+                      Ethereum{" "}
                       <Tooltip
                         content={tooltipContent({
-                          apiUrl:
-                            "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
-                          apiProvider: "Josh Stark",
-                          ariaLabel:
-                            "Read more about 2021 Ethereum network stats",
+                          apiUrl: "https://ultrasound.money/#tvs",
+                          apiProvider: "Ultrasound Money",
+                          ariaLabel: "Read more about about Ethereum as money",
                         })}
                       >
                         <Icon name="info" size="1rem" />
@@ -879,7 +845,7 @@ const WhatIsEthereumPage = ({
               <ButtonLink to="/energy-consumption/">
                 <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
               </ButtonLink>
-              <ButtonLink to="/upgrades/merge/" variant="outline">
+              <ButtonLink to="/roadmap/merge/" variant="outline">
                 <Translation id="page-what-is-ethereum-the-merge-update" />
               </ButtonLink>
             </ButtonRow>
@@ -898,16 +864,17 @@ const WhatIsEthereumPage = ({
           <Translation id="page-what-is-ethereum-week-in-ethereum-desc" />
         </p>
         <p>
-          <Link to="https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I">
-            <Translation id="page-what-is-ethereum-the-year-in-ethereum-2021" />
-          </Link>{" "}
-          <Translation id="page-what-is-ethereum-the-year-in-ethereum-2021-desc" />
-        </p>
-        <p>
           <Link to="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
             <Translation id="page-what-is-ethereum-atoms-institutions-blockchains" />
           </Link>{" "}
           <Translation id="page-what-is-ethereum-atoms-institutions-blockchains-desc" />
+        </p>
+
+        <p>
+          <Link to="https://www.kernel.community/en/learn/module-1/dreamers">
+            <Translation id="page-what-is-ethereum-kernel-dreamers" />
+          </Link>{" "}
+          <Translation id="page-what-is-ethereum-kernel-dreamers-desc" />
         </p>
       </Content>
 
@@ -921,7 +888,7 @@ const WhatIsEthereumPage = ({
           <StyledCallout
             image={getImage(data.developers)!}
             titleKey="page-what-is-ethereum-build"
-            alt={translateMessageId("page-what-is-ethereum-alt-img-lego", intl)}
+            alt={t("page-what-is-ethereum-alt-img-lego")}
             descriptionKey="page-what-is-ethereum-build-desc"
           >
             <div>
@@ -933,7 +900,7 @@ const WhatIsEthereumPage = ({
           <StyledCallout
             image={getImage(data.community)!}
             titleKey="page-what-is-ethereum-community"
-            alt={translateMessageId("page-what-is-ethereum-alt-img-comm", intl)}
+            alt={t("page-what-is-ethereum-alt-img-comm")}
             descriptionKey="page-what-is-ethereum-comm-desc"
           >
             <div>
@@ -987,7 +954,21 @@ export const calloutImage = graphql`
 `
 
 export const query = graphql`
-  query WhatIsEthereum {
+  query WhatIsEthereum($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-what-is-ethereum", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

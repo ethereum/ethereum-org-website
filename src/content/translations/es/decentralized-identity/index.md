@@ -17,7 +17,7 @@ Sin embargo, los sistemas tradicionales de gestión de identidad dependen de int
 
 Para resolver estos problemas, hemos descentralizado los sistemas de identidad utilizando cadenas de bloques públicas como Ethereum. La identidad descentralizada permite a los individuos administrar la información relacionada con su identidad. Con soluciones de identidad descentralizada, _tú_ puede crear identificadores y reclamar y mantener sus certificados sin depender de autoridades centralizadas como proveedores de servicios o gobiernos.
 
-## Qué es la identidad {#what-is-identity}
+## Qué es la identidad? {#what-is-identity}
 
 Identidad significa el sentido del yo como individuo, definido por características únicas. La identidad se refiere a ser un _individuo_, es decir, una entidad humana única. La identidad también refiere entidades no humanas, como una organización o autoridad.
 
@@ -175,7 +175,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - [Identidad descentralizada (bonificación de sesión Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un vídeo muy aclarador de la identidad descentralizada explicado por Andreas_
 - [Iniciar sesión con Ethereum e Identity descentralizada con Ceramic, IDX, React, y 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutorial de YouTube sobre la construcción de un sistema de gestión de identidad para crear, leer, y actualizar el perfil de un usuario usando su cartera Ethereum por Nader Dabit_
 - [BrightID - Identidad descentralizada en Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _episodio de pódcast Bankless abordando BrightID, una solución de identidad descentralizada para Ethereum_
-- [Internet fuera de la cadena: Credenciales descentralizadas y verufucables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentación de Evin McMullen
+- [Internet fuera de la cadena: Credenciales descentralizadas y verificables](https://www.youtube.com/watch?v=Ez_Bb6j87mg) — EthDenver 2022 presentación de Evin McMullen
 
 ### Comunidades {#communities}
 

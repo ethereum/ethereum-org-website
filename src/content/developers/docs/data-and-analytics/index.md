@@ -30,7 +30,7 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 ## Client diversity
 
-[Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several client diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](rated.network), [pool.invis.cloud](pool.invis.cloud), [slashed.info](slahed.info) and [Ethernodes](https://ethernodes.org/).
+[Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several client diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](rated.network), [execution-diversity.info](https://execution-diversity.info/) and [Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 

@@ -4,7 +4,6 @@ description: Uniswap-v2 合约是如何工作的？ 为什么要如此编写？
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: zh
@@ -450,7 +449,7 @@ ERC-20 的转移调用有两种方式可能失败：
     }
 ```
 
-如果不需收费则将 `klast` 设为 0（如果 klast 不为 0）。 编写该合约时，有一个[燃料返还功能](https://eips.ethereum.org/EIPS/eip-3298)，用于鼓励合约将其不需要的存储释放，从而减少以太坊上状态变量的整体存储大小。 此段代码在可行时返还。
+如果不需收费则将 `klast` 设为 0（如果 klast 不为 0）。 编写该合约时，有一个[燃料返还功能](https://eips.ethereum.org/EIPS/eip-3298)，用于鼓励合约将其不需要的存储释放，从而减少以太坊上状态的整体存储大小。 此段代码在可行时返还。
 
 #### 外部可访问函数 {#pair-external}
 
@@ -493,7 +492,7 @@ ERC-20 的转移调用有两种方式可能失败：
            _mint(address(0), MINIMUM_LIQUIDITY); // permanently lock the first MINIMUM_LIQUIDITY tokens
 ```
 
-如果这是第一笔存款，会创建数量为 `MINIMUM_LIQUIDITY` 的代币并将它们发送到地址 0 进行锁定。 这些代币无法兑换，也就是说资金池永远不会完全变空（避免某些情况下出现分母为零错误）。 `MINIMUM_LIQUIDITY` 的值是 1000，因为考虑到大多数 ERC-20 细分成 1 个代币的 10^-18 个单位，而以太币则被分为 wei，为 1 个代币价值的 10^-15。 成本不高。
+如果这是第一笔存款，会创建数量为 `MINIMUM_LIQUIDITY` 的代币并将它们发送到地址 0 进行锁定。 这些代币永远无法赎回，也就是说资金池永远不会完全变空（避免某些情况下出现分母为零错误）。 `MINIMUM_LIQUIDITY` 的值是 1000，因为考虑到大多数 ERC-20 细分成 1 个代币的 10^-18 个单位，而以太币则被分为 wei，为 1 个代币价值的 10^-15。 成本不高。
 
 在首次存入时，我们不知道两种代币的相对价值，所以假定两种代币都具有相同的价值，只需要两者数量的乘积并取一下平方根。
 
@@ -801,7 +800,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
-[本合约](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)实现 ERC-20 流动性代币。 它与 [OpenWhisk ERC-20 合约](/developers/tutorials/erc20-annotated-code)相似，因此这里仅解释不同的部分，即 `permit` 的功能。
+[本合约](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)实现 ERC-20 流动性代币。 它与 [OpenZeppelin ERC-20 合约](/developers/tutorials/erc20-annotated-code)相似，因此这里仅解释不同的部分，即 `permit` 的功能。
 
 以太坊上的交易需要消耗以太币 (ETH)，相当于实际货币。 如果你有 ERC-20 代币但没有以太币，就无法发送交易，因而不能用代币做任何事情。 避免该问题的一个解决方案是[元交易](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions)。 代币的所有者签署一个交易，允许其他人从链上提取代币，并通过网络发送给接收人。 接收人拥有以太币，可以代表所有者提交许可。
 
@@ -891,11 +890,11 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[本合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)存在问题，[不应该再使用](https://uniswap.org/docs/v2/smart-contracts/router01/)。 幸运的是，外围合约无状态，也不拥有任何资产，弃用外围合约比较容易。建议使用 `UniswapV2Router02` 来替代。
+[本合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)存在问题，[不应该再使用](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01)。 幸运的是，外围合约无状态，也不拥有任何资产，弃用外围合约比较容易。建议使用 `UniswapV2Router02` 来替代。
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-在大多数情况下，您会通过[该合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)使用 Uniswap。 有关使用说明，您可以在[这里](https://uniswap.org/docs/v2/smart-contracts/router02/)找到。
+在大多数情况下，您会通过[该合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)使用 Uniswap。 有关使用说明，您可以在[这里](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02)找到。
 
 ```solidity
 pragma solidity =0.6.6;
@@ -1052,12 +1051,6 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 把数值汇总起来，我们就会得到这张图表。 假定你正在试图存入 1000 个 A 代币（蓝线）和 1000 个 B 代币（红线）。 X 轴是汇率，A/B。 如果 x=1，两种代币价值相等，每种代币各存入 1000 个。 如果 x=2，A 的价值是 B 的两倍（每个 A 代币可换两个 B 代币），因此你存入 1000 个 B 代币，但只能存入 500 个 A 代币。 如果是 x=0.5，情况就会逆转，即可存 1000 个 A 代币或 500 个 B 代币。
 
 ![图表](liquidityProviderDeposit.png)
-
-```solidity
-            }
-        }
-    }
-```
 
 可以将流动资金直接存入核心合约（使用 [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)），但核心合约只是检查自己没有遭受欺骗。因此，如果汇率在提交交易至执行交易之间发生变化，您将面临损失资金价值的风险。 如果使用外围合约，它会计算你应该存入的金额并会立即存入，所以汇率不会改变，你不会有任何损失。
 

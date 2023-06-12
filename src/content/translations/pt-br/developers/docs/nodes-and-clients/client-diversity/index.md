@@ -65,8 +65,6 @@ Endereçar a diversidade do cliente requer mais do que usuários individuais par
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[Akula](https://akula.app)
-
 [Go-Ethereum](https://geth.ethereum.org/)
 
 ### Clientes de consenso {#consensus-clients}
@@ -77,7 +75,9 @@ Endereçar a diversidade do cliente requer mais do que usuários individuais par
 
 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
 
-[Lodestar](https://github.com/ChainSafe/lodestar) – _em análise e auditoria_
+[Lodestar](https://github.com/ChainSafe/lodestar)
+
+[Prysm](https://docs.prylabs.network/docs/getting-started)
 
 Os usuários técnicos podem ajudar a acelerar esse processo escrevendo mais tutoriais e documentações para clientes minoritários e encorajando seus pares operacionais de nó a migrar para longe dos clientes dominantes. Guias para mudar para um cliente de consenso minoritário estão disponíveis em [clientdiversity.org](https://clientdiversity.org/).
 
@@ -88,12 +88,9 @@ Vários painéis fornecem estatísticas de diversidade de cliente em tempo real 
 **Camada de consenso:**
 
 - [Rated.network](https://www.rated.network/)
-- [clientdiversity.org](https://clientdiversity.org/)
-- [pools.invis.cloud](https://pools.invis.cloud/)
-- [slashed.info](https://www.slashed.info/)
+- [clientdiversity.org](https://clientdiversity.org/) **Camada de execução:**
 
-**Camada de execução:**
-
+- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Leitura adicional {#further-reading}
@@ -103,7 +100,7 @@ Vários painéis fornecem estatísticas de diversidade de cliente em tempo real 
 - [Importância da diversidade de cliente](https://our.status.im/the-importance-of-client-diversity/)
 - [Lista dos serviços de nós Ethereum](https://ethereumnodes.com/)
 - ["Cinco porquês" do problema da diversidade de clientes](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
-- [Diversidade Ethereum e como resolvê-la (Youtube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
+- [Diversidade do Ethereum e como resolvê-la (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
 ## Tópicos relacionados {#related-topics}

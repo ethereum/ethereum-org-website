@@ -10109,6 +10109,107 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "mlCode111",
+      "name": "Miao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34754144?v=4",
+      "profile": "https://github.com/mlCode111",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ljiatu",
+      "name": "Jiatu Liu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3280973?v=4",
+      "profile": "https://github.com/ljiatu",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "DeUETH",
+      "name": "DeUETH",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107472460?v=4",
+      "profile": "https://github.com/DeUETH",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "erin-at-work",
+      "name": "erin-at-work",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50590950?v=4",
+      "profile": "http://www.erinleelikes.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "AmazingAng",
+      "name": "0xAA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14728591?v=4",
+      "profile": "https://github.com/AmazingAng",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "changwu-tw",
+      "name": "changwu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1557364?v=4",
+      "profile": "https://changwu.me/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "uniyj",
+      "name": "yj",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84749041?v=4",
+      "profile": "http://uniyj.eth",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "megatheikal",
+      "name": "megatheikal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64621442?v=4",
+      "profile": "https://megatheikal.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "stephenfire",
+      "name": "Stephen Guo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17247036?v=4",
+      "profile": "https://github.com/stephenfire",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "feuGeneA",
+      "name": "F. Eugene Aumson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7883777?v=4",
+      "profile": "http://aumson.org/gene",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "rpalakkal",
+      "name": "Roshan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19766713?v=4",
+      "profile": "https://github.com/rpalakkal",
+      "contributions": [
+        "content",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -10117,5 +10218,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }

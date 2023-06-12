@@ -5,12 +5,7 @@ author: "Paul Apivat"
 tags:
   - "SQL"
   - "查询"
-  - "分析"
-  - "入门指南"
-  - "Dune Analytics"
-  - "区块"
   - "交易"
-  - "燃料"
 skill: beginner
 lang: zh
 published: 2021-05-11

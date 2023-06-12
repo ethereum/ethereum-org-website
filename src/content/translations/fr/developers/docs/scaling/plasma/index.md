@@ -32,7 +32,6 @@ Plusieurs projets fournissent des implémentations de Plasma que vous pouvez int
 
 ## Complément d'information {#further-reading}
 
-- [EthHub sur Plasma](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Apprendre Plasma](https://www.learnplasma.org/en/)
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
