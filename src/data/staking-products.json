@@ -650,7 +650,7 @@
       ],
       "isFoss": true,
       "hasBugBounty": true,
-      "isTrustless": false,
+      "isTrustless": true,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": 42.83,
       "platforms": ["Browser", "Wallet"],
