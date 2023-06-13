@@ -11,14 +11,14 @@ export const lambda = async (
     const futureEvents = await calendar.events.list({
       calendarId: calenderId,
       timeMin: new Date().toISOString(),
-      maxResults: 5,
+      maxResults: 3,
       singleEvents: true,
       orderBy: "startTime",
     })
     const pastEvents = await calendar.events.list({
       calendarId: calenderId,
       timeMax: new Date().toISOString(),
-      maxResults: 5,
+      maxResults: 4,
       singleEvents: true,
       orderBy: "startTime",
     })
