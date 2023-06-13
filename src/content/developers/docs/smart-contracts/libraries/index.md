@@ -87,6 +87,11 @@ Last, when deciding on whether to include a library, consider its overall usage.
 
 ## Related tools {#related-tools}
 
+**thirdweb Solidity SDK -** **_Provides the tools needed to build custom smart contracts efficiently_**
+
+- [Documentation](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 **OpenZeppelin Contracts -** **_Most popular library for secure smart contract development._**
 
 - [Documentation](https://docs.openzeppelin.com/contracts/)

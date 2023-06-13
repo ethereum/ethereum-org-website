@@ -30,6 +30,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 ## Available frameworks {#available-frameworks}
 
+**thirdweb SDK -** **_Build web3 applications that can interact with your smart contracts using our powerful SDKs and CLI._**
+
+- [Documentation](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
 **Truffle -** **_A development environment, testing framework, build pipeline, and other tools._**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
