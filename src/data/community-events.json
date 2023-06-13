@@ -198,6 +198,24 @@
     "endDate": "2023-10-29"
   },
   {
+    "title": "ETHGlobal Pragma",
+    "to": "https://ethglobal.com/events/pragma-waterloo",
+    "sponsor": null,
+    "location": "Waterloo, Canada",
+    "description": "ETHGlobal Pragma is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-06-22",
+    "endDate": "2023-06-22"
+  },
+  {
+    "title": "ETHGlobal Pragma",
+    "to": "https://ethglobal.com/events/pragma-paris",
+    "sponsor": null,
+    "location": "Paris, France",
+    "description": "ETHGlobal Pragma is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-07-20",
+    "endDate": "2023-07-20"
+  },
+  {
     "title": "ETHMunich",
     "to": "https://ethmunich.de/",
     "sponsor": null,
