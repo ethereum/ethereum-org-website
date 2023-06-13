@@ -86,6 +86,18 @@ Below is a breakdown of the website pages each content bucket contains.
 - [The Merge](/roadmap/merge/)
 - [How The Merge impacted ETH supply](/roadmap/merge/issuance/)
 - [Ethereum Improvement Proposals (EIPs)](/eips/)
+- [Scaling Ethereum](/roadmap/scaling/)
+- [A more secure Ethereum](/roadmap/security/)
+- [Improving user experience](/roadmap/user-experience/)
+- [Future-proofing Ethereum](/roadmap/future-proofing/)
+- [Danksharding](/roadmap/danksharding/)
+- [Single slot finality](roadmap/single-slot-finality/)
+- [Proposer-builder separation](/roadmap/pbs/)
+- [Secret leader election](/roadmap/secret-leader-election/)
+- [Account abstraction](/roadmap/account-abstraction/)
+- [Verkle trees](/roadmap/verkle-trees/)
+- [Statelessness, state expiry and history expiry](/roadmap/statelessness/)
+
 
 ## 10) Community pages {#community-pages}
 
@@ -110,22 +122,23 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethereum virtual machine (EVM)](/developers/docs/evm/)
 - [Opcodes for the EVM](/developers/docs/evm/opcodes/)
 - [Gas](/developers/docs/gas/)
+- [Networks](/developers/docs/networks/)
+- Developer docs sidebar
+
+## 12) Foundational docs - Nodes and clients {#nodes-and-clients}
+
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 - [Nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 - [Ethereum archive node](/developers/docs/nodes-and-clients/archive-nodes/)
 - [Introduction to Ethereum bootnodes](/developers/docs/nodes-and-clients/bootnodes/)
 - [Light clients](/developers/docs/nodes-and-clients/light-clients/)
 - [Node architecture](/developers/docs/nodes-and-clients/node-architecture/)
-- [Networks](/developers/docs/networks/)
 - [Client diversity](/developers/docs/nodes-and-clients/client-diversity/)
 - [Spin up your own Ethereum node](/developers/docs/nodes-and-clients/run-a-node/)
-- Developer docs sidebar
 
-## 12) Consensus mechanisms {#consensus}
+## 13) Foundational docs - Proof-of-Stake {#PoS}
 
 - [Consensus mechanisms](/developers/docs/consensus-mechanisms/)
-- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
-- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Ethereum proof-of-stake attack and defense](/developers/docs/consensus-mechanisms/pos/attack-and-defense/)
 - [Attestations](/developers/docs/consensus-mechanisms/pos/attestations/)
@@ -133,19 +146,20 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Proof-of-stake FAQs](/developers/docs/consensus-mechanisms/pos/faqs/)
 - [Keys in proof-of-stake Ethereum](/developers/docs/consensus-mechanisms/pos/keys/)
 - [Proof-of-stake rewards and penalties](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/)
+- [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
+- [Weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)
 
-## 13) Ethereum stack developer docs {#ethereum-stack-docs}
+## 14) Foundational docs - Proof-of-Work {#PoW}
+
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
+- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)
+- [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)
+
+## 15) Ethereum stack developer docs {#ethereum-stack-docs}
 
 - [Introduction to the Ethereum stack](/developers/docs/ethereum-stack/)
-- [Smart contracts](/developers/docs/smart-contracts/)
-- [Smart contract languages](/developers/docs/smart-contracts/languages/)
-- [Smart contract anatomy](/developers/docs/smart-contracts/anatomy/)
-- [Smart contract libraries](/developers/docs/smart-contracts/libraries)
-- [Testing smart contracts](/developers/docs/smart-contracts/testing)
-- [Compiling smart contracts](/developers/docs/smart-contracts/compiling)
-- [Deploying smart contracts](/developers/docs/smart-contracts/deploying)
-- [Composability](/developers/docs/smart-contracts/composability/)
-- [Formal verification of smart contracts](/developers/docs/smart-contracts/formal-verification/)
 - [Deployment networks](/developers/docs/development-networks/)
 - [Development frameworks](/developers/docs/frameworks/)
 - [JavaScript APIs](/developers/docs/apis/javascript/)
@@ -153,7 +167,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [JSON-RPC](/developers/docs/apis/json-rpc/)
 - [Data and analytics](/developers/docs/data-and-analytics/)
 - [Block explorers](/developers/docs/data-and-analytics/block-explorers/)
-- [Smart contract security](/developers/docs/smart-contracts/security/)
 - [Storage](/developers/docs/storage/)
 - [Integrated Development Environments (IDEs)](/developers/docs/ides/)
 - [Programming languages](/developers/docs/programming-languages/)
@@ -167,11 +180,35 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ruby](/developers/docs/programming-languages/ruby/)
 - [Dart](/developers/docs/programming-languages/dart/)
 
-## 14) Whitepaper {#whitepaper}
+## 16) Smart contracts - Basics {#smart-contracts-basics}
+
+- [Smart contracts](/developers/docs/smart-contracts/)
+- [Smart contract languages](/developers/docs/smart-contracts/languages/)
+- [Smart contract anatomy](/developers/docs/smart-contracts/anatomy/)
+- [Smart contract libraries](/developers/docs/smart-contracts/libraries)
+- [Compiling smart contracts](/developers/docs/smart-contracts/compiling)
+- [Deploying smart contracts](/developers/docs/smart-contracts/deploying)
+- [Smart contract security](/developers/docs/smart-contracts/security/)
+
+## 17) Smart contracts - Advanced {#smart-contracts-advanced}
+
+- [Testing smart contracts](/developers/docs/smart-contracts/testing)
+- [Composability](/developers/docs/smart-contracts/composability/)
+- [Formal verification of smart contracts](/developers/docs/smart-contracts/formal-verification/)
+- [Verifying smart contracts](/developers/docs/smart-contracts/verifying/)
+- [Upgrading smart contracts](/developers/docs/smart-contracts/upgrading/)
+
+## 18) Whitepaper {#whitepaper}
 
 - [Whitepaper](/whitepaper/)
 
-## 15) Advanced developer docs {#advanced-docs}
+## 19) Additional Learn pages {#learn-pages2}
+
+- [History](/history/)
+- [Glossary](/glossary/)
+- [Zero-knowledge proofs](/zero-knowledge-proofs/)
+
+## 20) Advanced developer docs {#advanced-docs}
 
 - [Standards](/developers/docs/standards/)
 - [Token standards](/developers/docs/standards/tokens/)
@@ -182,6 +219,11 @@ Below is a breakdown of the website pages each content bucket contains.
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/)
 - [Maximal extractable value (MEV)](/developers/docs/mev/)
 - [Orcles](/developers/docs/oracles/)
+- [Bridges](/developers/docs/bridges/)
+- [Data availability](/developers/docs/data-availability/)
+
+## 21) Advanced developer docs - Scaling {#scaling-docs}
+
 - [Scaling](/developers/docs/scaling/)
 - [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/)
 - [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/)
@@ -189,20 +231,8 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Sidechains](/developers/docs/scaling/sidechains)
 - [Plasma](/developers/docs/scaling/plasma)
 - [Validium](/developers/docs/scaling/validium/)
-- [Bridges](/developers/docs/bridges/)
-- [Data availability](/developers/docs/data-availability/)
 
-## 16) Additional Learn and general pages {#general-pages}
-
-- [About ethereum.org](/about/)
-- [Enterprise Ethereum](/enterprise/)
-- [Private Ethereum](/enterprise/private-ethereum/)
-- [History](/history/)
-- [Glossary](/glossary/)
-- [Brand assets](/assets/)
-- [About the Ethereum Foundation](/foundation/)
-
-## 17) Research documentation {#research-documentation}
+## 22) Research documentation {#research-documentation}
 
 - [Networking layer](/developers/docs/networking-layer/)
 - [Patricia Merkle Trees](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
@@ -217,7 +247,15 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)
 - [Web3 secret storage definition](/developers/docs/data-structures-and-encoding/web3-secret-storage/)
 
-## 18) Contributing {#contributing}
+## 23) Miscellaneous {#miscellaneous}
+
+- [About ethereum.org](/about/)
+- [Enterprise Ethereum](/enterprise/)
+- [Private Ethereum](/enterprise/private-ethereum/)
+- [Brand assets](/assets/)
+- [About the Ethereum Foundation](/foundation/)
+
+## 24) Contributing {#contributing}
 
 - [Contributing to ethereum.org](/contributing/)
 - [Adding developer tools](/contributing/adding-developer-tools/)
@@ -239,7 +277,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Translation Program mission and vision](/contributing/translation-program/mission-and-vision/)
 - [Translator resources](/contributing/translation-program/resources/)
 
-## 19) Developer tutorials 1 {#tutorials-1}
+## 25) Developer tutorials 1 {#tutorials-1}
 
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [How to write & deploy an NFT (Part 1/3 of NFT tutorial series)](/developers/tutorials/how-to-write-and-deploy-an-nft/)
@@ -250,50 +288,53 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Uniswap-v2 contract walkthrough](/developers/tutorials/uniswap-v2-annotated-code/)
 - Submit a tutorial
 
-## 20) Developer tutorials 2 {#tutorials-2}
+## 26) Developer tutorials 2 {#tutorials-2}
 
 - [A Python developer's introduction to Ethereum](/developers/tutorials/a-developers-guide-to-ethereum-part-one/)
-- [All you can cache](/developers/tutorials/all-you-can-cache/)
 - [Downsizing contracts to fight the contract size limit](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/)
-- [ERC-20 contract walkthrough](/developers/tutorials/erc20-annotated-code/)
-- [ERC-20 with safety rails](/developers/tutorials/erc20-with-safety-rails/)
 - [Hello world smart contract for beginners](/developers/tutorials/hello-world-smart-contract/)
 - [How to turn your Raspberry Pi 4 into a node just by flashing the MicroSD card](/developers/tutorials/run-node-raspberry-pi/)
-- [How to run a light node with Geth](/developers/tutorials/run-light-node-geth/)
 - [Interact with other contracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/)
-- [Merkle proofs for offline data integrity](/developers/tutorials/merkle-proofs-for-offline-data-integrity/)
 - [NFT Minter tutorial](/developers/tutorials/nft-minter/)
 - [Reverse engineering a contract](/developers/tutorials/reverse-engineering-a-contract/)
 - [Sending tokens using ethers.js](/developers/tutorials/send-token-etherjs/)
 - [The Graph: Fixing Web3 data querying](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 - [Transfers and approval of ERC-20 tokens from a Solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
 
-## 21) Developer tutorials 3 {#tutorials-3}
+## 27) Developer tutorials 3 {#tutorials-3}
 
 - [A guide to smart contract security tools](/developers/tutorials/guide-to-smart-contract-security-tools/)
+- [All you can cache](/developers/tutorials/all-you-can-cache/)
+- [ERC-20 contract walkthrough](/developers/tutorials/erc20-annotated-code/)
+- [ERC-20 with safety rails](/developers/tutorials/erc20-with-safety-rails/)
+- [Getting Started with Ethereum Development](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [How to mock Solidity smart contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
+- [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/)
+- [Logging data from smart contracts with events](/developers/tutorials/logging-events-smart-contracts/)
+- [Merkle proofs for offline data integrity](/developers/tutorials/merkle-proofs-for-offline-data-integrity/)
+- [Sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Smart contract security checklist](/developers/tutorials/secure-development-workflow/)
+- [Testing simple smart contract with Waffle library](/developers/tutorials/waffle-test-simple-smart-contract/)
+- [Vyper ERC-721 contract walkthrough](/developers/tutorials/erc-721-vyper-annotated-code/)
+
+## 28) Developer tutorials 4 {#tutorials-4}
+
 - [Create and deploy a DeFi app](/developers/tutorials/create-and-deploy-a-defi-app/)
 - [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/)
-- [Getting Started with Ethereum Development](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [How to implement an ERC-721 market](/developers/tutorials/how-to-implement-an-erc721-market/)
 - [How to set up Tellor as your oracle](/developers/tutorials/how-to-use-tellor-as-your-oracle/)
 - [How to use Echidna to test smart contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [How to use Manticore to find bugs in smart contracts](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/)
 - [Learn foundational Ethereum topics with SQL](/developers/tutorials/learn-foundational-ethereum-topics-with-sql/)
-- [Logging data from smart contracts with events](/developers/tutorials/logging-events-smart-contracts/)
 - [Monitoring Geth with InfluxDB and Grafana](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/)
 - [Optimism standard bridge contract walkthrough](/developers/tutorials/optimism-std-bridge-annotated-code/)
-- [Sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Set up web3.js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)
 - [Short ABIs for calldata optimization](/developers/tutorials/short-abi/)
-- [Smart contract security checklist](/developers/tutorials/secure-development-workflow/)
 - [Smart contract security guidelines](/developers/tutorials/smart-contract-security-guidelines/)
 - [Solidity and Truffle continuous integration setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)
 - [Testing ERC-20 tokens with Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
-- [Testing simple smart contract with Waffle library](/developers/tutorials/waffle-test-simple-smart-contract/)
 - [Token integration checklist](/developers/tutorials/token-integration-checklist/)
 - [Using WebSockets](/developers/tutorials/using-websockets/)
-- [Vyper ERC-721 contract walkthrough](/developers/tutorials/erc-721-vyper-annotated-code/)
 - [Waffle: Dynamic mocking and testing contract calls](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/)
 - [Waffle say hello world tutorial with Hardhat and ethers](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/)
