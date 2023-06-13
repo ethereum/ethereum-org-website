@@ -20,8 +20,19 @@ import ButtonLink from "../ButtonLink"
 import Link from "../Link"
 import Translation from "../Translation"
 
+// Utils
+import { trackCustomEvent } from "../../utils/matomo"
+
 // Hooks
 import { useCommunityEvents } from "./useCommunityEvents"
+
+const matomoEvent = (buttonType) => {
+  trackCustomEvent({
+    eventCategory: "CommunityEventsWidget",
+    eventAction: "clicked",
+    eventName: buttonType,
+  })
+}
 
 const renderEventDateTime = (
   date,
@@ -40,7 +51,7 @@ const renderEventDateTime = (
 
 const EventLink = (props) => <Link fontWeight="700" {...props} />
 
-const Event = ({ event, language }) => {
+const Event = ({ event, language, type }) => {
   const { date, title, calendarLink } = event
   const params = {
     year: "numeric",
@@ -54,7 +65,9 @@ const Event = ({ event, language }) => {
         <Text>{renderEventDateTime(date, language, params)}</Text>
       </GridItem>
       <GridItem>
-        <EventLink to={calendarLink}>{title}</EventLink>
+        <EventLink to={calendarLink} onClick={matomoEvent(type)}>
+          {title}
+        </EventLink>
       </GridItem>
     </Grid>
   )
@@ -131,12 +144,19 @@ const CommunityEvents = () => {
                 </Text>
               )}
               <Flex flexDirection="column" gap={6}>
-                <ButtonLink to={"/discord/"} gap={2}>
+                <ButtonLink
+                  to={"/discord/"}
+                  gap={2}
+                  onClick={matomoEvent("discord")}
+                >
                   <Icon as={FaDiscord} fontSize={25} />
                   Join Discord
                 </ButtonLink>
                 {upcomingEventData[0] && (
-                  <EventLink to={upcomingEventData[0].calendarLink}>
+                  <EventLink
+                    to={upcomingEventData[0].calendarLink}
+                    onClick={matomoEvent("Add to calendar")}
+                  >
                     {t("community-events-add-to-calendar")}
                   </EventLink>
                 )}
@@ -164,7 +184,7 @@ const CommunityEvents = () => {
             </Text>
           ) : upcomingEventData.slice(1).length ? (
             upcomingEventData.slice(1).map((item) => {
-              return <Event event={item} language={language} />
+              return <Event event={item} language={language} type="upcoming" />
             })
           ) : (
             <Text mx="auto">
@@ -185,7 +205,7 @@ const CommunityEvents = () => {
             </Text>
           ) : pastEventData.length ? (
             pastEventData.map((item) => {
-              return <Event event={item} language={language} />
+              return <Event event={item} language={language} type="past" />
             })
           ) : (
             <Text mx="auto">
