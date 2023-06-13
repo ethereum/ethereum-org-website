@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { Box, chakra, Flex, Text } from "@chakra-ui/react"
 
 import { StyledSelect as Select } from "../SharedStyledComponents"
 import ButtonLink from "../ButtonLink"
@@ -9,41 +9,12 @@ import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  background: ${({ theme }) => theme.colors.layer2Gradient};
-  border-radius: 0.25rem;
-  padding: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: 1.5rem;
-  }
-  span {
-    color: ${({ theme }) => theme.colors.text200};
-  }
-`
+const StyledSelect = chakra(Select, {
+  baseStyle: {
+    maxW: { base: "full", md: "50%" },
+  },
+})
 
-const SelectContainer = styled.div`
-  margin: 1rem 0;
-`
-
-const StyledSelect = styled(Select)`
-  max-width: 50%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    a {
-      width: 100%;
-    }
-  }
-`
 export interface IProps {}
 
 const StakingLaunchpadWidget: React.FC<IProps> = () => {
@@ -77,44 +48,54 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
   }))
 
   return (
-    <Container>
-      <div>
-        <span>
-          <Translation id="page-staking-launchpad-widget-span" />
-        </span>
-        <SelectContainer>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={selectOptions}
-            onChange={handleChange}
-            defaultValue={selectOptions[0]}
-          />
-        </SelectContainer>
-        <p>
-          <Translation id="page-staking-launchpad-widget-p1" />
-        </p>
-        <p>
-          <Translation id="page-staking-launchpad-widget-p2" />
-        </p>
-        <ButtonContainer style={{ marginBottom: "1rem" }}>
-          <ButtonLink to={data[selection].url}>
-            {selection === "mainnet"
-              ? t("page-staking-launchpad-widget-mainnet-start")
-              : t("page-staking-launchpad-widget-testnet-start")}
-          </ButtonLink>
-        </ButtonContainer>
-        <p>
-          <Translation id="page-staking-launchpad-widget-p3" />
-        </p>
-        <ButtonContainer>
-          <ButtonLink to="#node-and-client-tools" variant="outline">
-            <Emoji text="🛠" mr="1rem" />
-            <Translation id="page-staking-launchpad-widget-link" />
-          </ButtonLink>
-        </ButtonContainer>
-      </div>
-    </Container>
+    <Flex
+      bg="layer2Gradient"
+      borderRadius="base"
+      flexDir="column"
+      p={{ base: 6, md: 8 }}
+    >
+      <Text as="span" color="text200">
+        <Translation id="page-staking-launchpad-widget-span" />
+      </Text>
+      <Box my={4}>
+        <StyledSelect
+          className="react-select-container"
+          classNamePrefix="react-select"
+          options={selectOptions}
+          onChange={handleChange}
+          defaultValue={selectOptions[0]}
+        />
+      </Box>
+      <Text>
+        <Translation id="page-staking-launchpad-widget-p1" />
+      </Text>
+      <Text>
+        <Translation id="page-staking-launchpad-widget-p2" />
+      </Text>
+      <Box mb={4}>
+        <ButtonLink
+          to={data[selection].url}
+          width={{ base: "full", md: "auto" }}
+        >
+          {selection === "mainnet"
+            ? t("page-staking-launchpad-widget-mainnet-start")
+            : t("page-staking-launchpad-widget-testnet-start")}
+        </ButtonLink>
+      </Box>
+      <Text>
+        <Translation id="page-staking-launchpad-widget-p3" />
+      </Text>
+      <Box>
+        <ButtonLink
+          to="#node-and-client-tools"
+          variant="outline"
+          width={{ base: "full", md: "auto" }}
+        >
+          <Emoji text="🛠" mr="1rem" />
+          <Translation id="page-staking-launchpad-widget-link" />
+        </ButtonLink>
+      </Box>
+    </Flex>
   )
 }
 

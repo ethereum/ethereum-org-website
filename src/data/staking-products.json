@@ -2,27 +2,45 @@
   "nodeTools": [
     {
       "name": "Rocket Pool CLI",
-      "imageName": "rocketPool",
+      "imageName": "RocketPool",
       "hue": 379,
       "launchDate": "2021-11-08",
       "url": "https://rocketpool.net/node-operators",
       "audits": [
         {
-          "name": "Sigma Prime",
+          "name": "Sigma Prime - May 2021",
           "url": "https://rocketpool.net/files/sigma-prime-audit.pdf"
         },
         {
-          "name": "Consensys Diligence",
+          "name": "Sigma Prime - Nov 2021",
+          "url": "https://rocketpool.net/files/sigma-prime-fix-review.pdf"
+        },
+        {
+          "name": "Sigma Prime - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-audit-redstone.pdf"
+        },
+        {
+          "name": "Sigma Prime - Atlas, Dec 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Consensys Diligence - 2021",
           "url": "https://consensys.net/diligence/audits/2021/04/rocketpool/"
         },
         {
-          "name": "Trail of Bits",
+          "name": "Consensys Diligence - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/consensys-audit-redstone.pdf"
+        },
+        {
+          "name": "Consensys Diligence - Atlas, Jan 2023",
+          "url": "https://rocketpool.net/files/consensys-diligence-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Trail of Bits - Sept 2021",
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
-      "minEth": 16,
-      "additionalStake": "10",
-      "additionalStakeUnit": "% RPL",
+      "minEth": 10.4,
       "tokens": [
         {
           "name": "Rocket Pool ETH",
@@ -51,7 +69,7 @@
     },
     {
       "name": "Stereum",
-      "imageName": "stereum",
+      "imageName": "Stereum",
       "hue": 164,
       "launchDate": "2021-02-06",
       "url": "https://stereum.net/ethereum-node-setup/",
@@ -83,12 +101,12 @@
     },
     {
       "name": "DAppNode",
-      "imageName": "dappnode",
+      "imageName": "StakingDappnode",
       "hue": 196,
       "launchDate": "2020-12-01",
       "url": "https://dappnode.io",
       "audits": [],
-      "minEth": 32,
+      "minEth": 10.4,
       "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
@@ -110,7 +128,7 @@
     },
     {
       "name": "Ethereum on Arm",
-      "imageName": "defaultOpenSource",
+      "imageName": "DefaultOpenSource",
       "hue": 209,
       "launchDate": "2021-03-25",
       "url": "https://ethereum-on-arm-documentation.readthedocs.io/",
@@ -135,7 +153,7 @@
     },
     {
       "name": "eth-docker",
-      "imageName": "docker",
+      "imageName": "Docker",
       "hue": 221,
       "launchDate": "2021-06-05",
       "url": "https://eth-docker.net",
@@ -160,7 +178,7 @@
     },
     {
       "name": "Vouch + Dirk",
-      "imageName": "defaultOpenSource",
+      "imageName": "DefaultOpenSource",
       "hue": 239,
       "launchDate": "2020-12-01",
       "url": "https://www.attestant.io/posts/introducing-vouch/",
@@ -193,14 +211,12 @@
     },
     {
       "name": "Avado",
-      "imageName": "avado",
+      "imageName": "Avado",
       "hue": 239,
       "launchDate": "2018-12-01",
       "url": "https://ava.do/",
       "audits": [],
-      "minEth": 16,
-      "additionalStake": "10",
-      "additionalStakeUnit": "% RPL",
+      "minEth": 10.4,
       "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
@@ -224,7 +240,7 @@
   "keyGen": [
     {
       "name": "Wagyu Key Gen",
-      "imageName": "wagyu",
+      "imageName": "Wagyu",
       "hue": 46,
       "launchDate": "2021-12-01",
       "url": "https://wagyu.gg/",
@@ -254,7 +270,7 @@
     },
     {
       "name": "ethdo",
-      "imageName": "defaultOpenSource",
+      "imageName": "DefaultOpenSource",
       "hue": 281,
       "launchDate": "2020-12-01",
       "url": "https://github.com/wealdtech/ethdo",
@@ -282,14 +298,11 @@
     },
     {
       "name": "Avado",
-      "imageName": "avado",
+      "imageName": "Avado",
       "hue": 239,
       "launchDate": "2018-12-01",
       "url": "https://ava.do/",
       "audits": [],
-      "minEth": 16,
-      "additionalStake": "10",
-      "additionalStakeUnit": "% RPL",
       "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
@@ -312,7 +325,7 @@
   "saas": [
     {
       "name": "Kiln",
-      "imageName": "kiln",
+      "imageName": "Kiln",
       "hue": 20,
       "launchDate": "2021-03-01",
       "url": "https://www.kiln.fi/",
@@ -352,7 +365,7 @@
     },
     {
       "name": "Allnodes",
-      "imageName": "allnodes",
+      "imageName": "Allnodes",
       "hue": 248,
       "launchDate": "2020-12-01",
       "url": "https://www.allnodes.com/eth2/staking",
@@ -382,8 +395,37 @@
       }
     },
     {
+      "name": "Squid",
+      "imageName": "Squid",
+      "hue": 240,
+      "launchDate": "2022-11-01",
+      "url": "https://www.ohsquid.com/",
+      "audits": [],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 12,
+      "monthlyFeeUnit": "USD",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityClient": null,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "github": null
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Squid go to link"
+      }
+    },
+    {
       "name": "Ethpool",
-      "imageName": "ethpool",
+      "imageName": "Ethpool",
       "hue": 20,
       "launchDate": "2021-10-20",
       "url": "https://ethpool.org/",
@@ -409,7 +451,7 @@
     },
     {
       "name": "BloxStaking",
-      "imageName": "bloxstaking",
+      "imageName": "Bloxstaking",
       "hue": 341,
       "launchDate": "2020-12-08",
       "url": "https://www.bloxstaking.com/",
@@ -445,7 +487,7 @@
     },
     {
       "name": "Abyss Finance",
-      "imageName": "abyss",
+      "imageName": "Abyss",
       "hue": 237,
       "launchDate": "2020-12-01",
       "url": "https://abyss.finance/hosting",
@@ -476,7 +518,7 @@
     },
     {
       "name": "Sensei Node",
-      "imageName": "senseiNode",
+      "imageName": "SenseiNode",
       "hue": 137,
       "launchDate": "2022-11-01",
       "url": "https://www.senseinode.com/",
@@ -512,21 +554,41 @@
   "pools": [
     {
       "name": "Rocket Pool",
-      "imageName": "rocketPool",
+      "imageName": "RocketPool",
       "hue": 14,
       "launchDate": "2021-11-08",
       "url": "https://rocketpool.net/",
       "audits": [
         {
-          "name": "Sigma Prime",
+          "name": "Sigma Prime - May 2021",
           "url": "https://rocketpool.net/files/sigma-prime-audit.pdf"
         },
         {
-          "name": "Consensys Diligence",
+          "name": "Sigma Prime - Nov 2021",
+          "url": "https://rocketpool.net/files/sigma-prime-fix-review.pdf"
+        },
+        {
+          "name": "Sigma Prime - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-audit-redstone.pdf"
+        },
+        {
+          "name": "Sigma Prime - Atlas, Dec 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Consensys Diligence - 2021",
           "url": "https://consensys.net/diligence/audits/2021/04/rocketpool/"
         },
         {
-          "name": "Trail of Bits",
+          "name": "Consensys Diligence - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/consensys-audit-redstone.pdf"
+        },
+        {
+          "name": "Consensys Diligence - Atlas, Jan 2023",
+          "url": "https://rocketpool.net/files/consensys-diligence-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Trail of Bits - Sept 2021",
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
@@ -559,7 +621,7 @@
     },
     {
       "name": "Lido",
-      "imageName": "lido",
+      "imageName": "Lido",
       "hue": 210,
       "launchDate": "2020-12-17",
       "url": "https://lido.fi/",
@@ -608,7 +670,7 @@
     },
     {
       "name": "StakeWise",
-      "imageName": "stakewise",
+      "imageName": "Stakewise",
       "hue": 220,
       "launchDate": "2021-02-01",
       "url": "https://app.stakewise.io/",
@@ -668,7 +730,7 @@
     },
     {
       "name": "stakefish",
-      "imageName": "stakefish",
+      "imageName": "Stakefish",
       "hue": 73,
       "launchDate": "2020-12-01",
       "url": "https://stake.fish/ethereum-shared/",
@@ -701,7 +763,7 @@
     },
     {
       "name": "Ankr Staking",
-      "imageName": "ankr",
+      "imageName": "Ankr",
       "hue": 221,
       "launchDate": "2020-11-20",
       "url": "https://stakefi.ankr.com/liquid-staking",
@@ -749,7 +811,7 @@
     },
     {
       "name": "StaFi",
-      "imageName": "stafi",
+      "imageName": "Stafi",
       "hue": 155,
       "launchDate": "2020-10-16",
       "url": "https://stafi.io",
@@ -785,6 +847,47 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked StaFi go to link"
+      }
+    },
+    {
+      "name": "Bedrock",
+      "imageName": "RockX",
+      "hue": 224,
+      "launchDate": "2022-09-29",
+      "url": "https://bedrock.rockx.com/",
+      "audits": [
+        {
+          "name": "PeckSheild",
+          "url": "https://github.com/RockX-SG/stake/blob/main/PeckShield-Audit-Report-RockXStaking-v1.0.pdf"
+        }
+      ],
+      "minEth": 0,
+      "feePercentage": 10,
+      "tokens": [
+        {
+          "name": "Universal ETH",
+          "symbol": "uniETH",
+          "address": "0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4"
+        }
+      ],
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "hasPermissionlessNodes": false,
+      "pctMajorityClient": 100,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.gg/YJzs4UwsTp",
+        "twitter": "ttps://twitter.com/rockx_official",
+        "github": "https://github.com/RockX-SG/stake",
+        "linkedin": "https://www.linkedin.com/company/rockx-official",
+        "youtube": "https://www.youtube.com/@rockx_official"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Bedrock go to link"
       }
     }
   ]

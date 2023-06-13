@@ -5,7 +5,7 @@ lang: vi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../assets/infrastructure_transparent.png
+image: ../../../../assets/infrastructure_transparent.png
 alt: Biểu trưng của Eth được hiển thị qua ảnh ba chiều.
 summaryPoint1: Một cách để đại diện cho bất kỳ thứ gì độc nhất dưới dạng tài sản dựa trên Ethereum.
 summaryPoint2: NFT đang mang lại nhiều quyền lực hơn cho người tạo nội dung hơn bao giờ hết.

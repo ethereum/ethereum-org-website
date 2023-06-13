@@ -134,7 +134,7 @@ title="Equívoco: &quot;A Fusão falhou em reduzir as taxas de gás.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
 Taxas de gás são um produto da demanda de rede relativa à capacidade da rede. A Fusão depreciou o uso da prova de trabalho, passando para a prova de participação por consenso, mas não alterou significativamente nenhum parâmetro que influencie diretamente a capacidade da rede ou a taxa de transferência.
 
-Com um [planejamento centrado por rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), os esforços se concentram em escalar a atividade do usuário na [camada 2](/camada -2/), enquanto habilita a Rede principal da camada 1 como uma camada de liquidação descentralizada otimizada para o armazenamento de dados rollup para ajudar a tornar as transações rollup exponencialmente mais baratas. A transição para a prova de participação é um precursor crítico para a realização desse objetivo. [Mais sobre gas e tarifas.](/developers/docs/gas/)
+Com um [planejamento centrado por rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), os esforços se concentram em escalar a atividade do usuário na [camada 2](/layer-2/), enquanto habilita a Rede principal da camada 1 como uma camada de liquidação descentralizada otimizada para o armazenamento de dados rollup para ajudar a tornar as transações rollup exponencialmente mais baratas. A transição para a prova de participação é um precursor crítico para a realização desse objetivo. [Mais sobre gas e tarifas.](/developers/docs/gas/)
 </ExpandableCard>
 
 <ExpandableCard

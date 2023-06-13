@@ -8,7 +8,7 @@ lang: fr
 
 Ethereum est une blockchain verte. Il utilise un mécanisme de consensus de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos), utilisant l'ETH au lieu de [l'énergie pour sécuriser le réseau](/developers/docs/consensus-mechanisms/pow). Le mécanisme de preuve d'enjeu d'Ethereum n'utilise que [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) sur l'ensemble du réseau global.
 
-Le [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) a produit des estimations ascendantes de la consommation d'électricité et de l'empreinte carbone du réseau Ethereum ([voir le rapport](https://carbon-ratings.com/eth-report-2022)). Il a mesuré la consommation d'électricité de différents nœuds selon diverses configurations matérielles et logiciels clients. Il en résulte une estimation de **2 601 MWh** (0,0026 TWh) pour la consommation annuelle d'électricité du réseau (septembre 2022), ce qui correspond à des émissions de carbone annuelles de **870 tonnes de CO2e** en appliquant des facteurs d'intensité de carbone spécifiques à la région.
+Le [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) a produit des estimations ascendantes de la consommation d'électricité et de l'empreinte carbone du réseau Ethereum ([voir le rapport](https://carbon-ratings.com/eth-report-2022)). Il a mesuré la consommation d'électricité de différents nœuds selon diverses configurations matérielles et logiciels clients. Il en résulte une estimation de **2,601 MWh** (0. 0026 TWh) pour la consommation annuelle d'électricité du réseau (septembre 2022), ce qui correspond à des émissions de carbone annuelles de **870 tonnes de CO2e** en appliquant des facteurs d'intensité de carbone spécifiques à la région.
 
 <EnergyConsumptionChart />
 
@@ -75,4 +75,3 @@ Les plateformes de financement de biens publics natifs Web3 telles que [Gitcoin]
 - [La vision d'Ethereum](/roadmap/vision/)
 - [La chaîne phare](/roadmap/beacon-chain)
 - [La Fusion](/roadmap/merge/)
-- [Fragmentation](/roadmap/beacon-chain/)

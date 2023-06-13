@@ -16,14 +16,16 @@ Você verá um painel que provavelmente mostrará seu saldo e os botões para en
 
 Você quer receber criptomoedas na sua carteira?
 
-Cada conta do Ethereum possui seu próprio endereço de recebimento, que é uma sequência única de números e letras. O endereço funciona como um número de conta bancária ou chave pix. Os endereços Ethereum sempre começarão com “0x”.
+Cada conta do Ethereum possui seu próprio endereço de recebimento, que é uma sequência única de números e letras. O endereço funciona como um número de conta bancária ou chave pix. Os endereços Ethereum sempre começarão com “0x”. Você pode compartilhar esse endereço com qualquer pessoa: é seguro fazê-lo.
 
-Você precisa informar o remetente com o seu endereço. Muitos aplicativos de carteira permitem copiar para a área de transferência o endereço ou mostrar um código QR para um uso mais fácil. Evite digitar qualquer endereço Ethereum manualmente. Isto não é seguro e pode facilmente conduzir à perda de fundos.
+Seu endereço (que é às vezes chamado de “chave pública”) é como seu endereço residencial: você precisa dizer às pessoas o que é para que elas possam te encontrar. É seguro fazer isso, porque você ainda pode trancar a porta da frente com outra chave que só você controla para que ninguém possa entrar, mesmo que saibam onde você mora.
 
-Esse é um padrão geral, e aplicativos diferentes podem variar ou usar um idioma diferente. Se você estiver tentando enviar seus fundos de uma corretora, o processo também é semelhante.
+Você precisa fornecer seu endereço público a quem desejar enviar dinheiro a você. Muitos aplicativos de carteira permitem que você copie seu endereço ou mostre um código QR para facilitar o uso. Evite digitar qualquer endereço Ethereum manualmente. Isso pode facilmente levar a erros administrativos e perda de fundos.
+
+Aplicativos diferentes podem variar ou usar linguagens diferentes, mas devem conduzir você por um processo semelhante se estiver tentando transferir fundos.
 
 1. Abra o aplicativo da sua carteira.
-2. Clique na opção “Receber” ou na palavra similar no painel
+2. Clique em “Receber” (ou na opção com palavras semelhantes).
 3. Copie o seu endereço Ethereum para a área de transferência.
 4. Forneça ao remetente o seu endereço Ethereum.
 
@@ -31,21 +33,21 @@ Esse é um padrão geral, e aplicativos diferentes podem variar ou usar um idiom
 
 Deseja enviar ETH para outra carteira?
 
-1. Prepare o endereço de recebimento e a rede do destinatário.
-2. Abra o aplicativo da sua carteira.
-3. Clique no botão “Enviar” ou na palavra similar no painel da sua carteira.
-4. Insira o endereço de recebimento ou digitalize um código QR com a sua câmera para que você não precise escrever o endereço manualmente.
+1. Abra o aplicativo da sua carteira.
+2. Obtenha o endereço de recebimento e verifique se está conectado à mesma rede do destinatário.
+3. Insira o endereço de recebimento ou digitalize um código QR com a sua câmera para que você não precise escrever o endereço manualmente.
+4. Clique no botão “Enviar” em sua carteira (ou uma alternativa com palavras semelhantes).
 
 ![Enviar campo para endereço cripto](./send.png)
 <br/>
 
 5. Muitos ativos, como DAI e USDC, existem em várias redes. Ao transferir tokens de criptomoedas, certifique-se de que o destinatário está usando a mesma rede que você, já que isso não pode ser alterado.
-6. Certifique-se de que sua carteira tenha ETH suficiente para cobrir a taxa de transação, que varia conforme as condições da rede. A maioria das carteiras adicionará automaticamente a taxa sugerida para a transação. Em seguida, você pode confirmar.
-7. Uma vez que a transação é processada, o valor de cripto correspondente aparecerá na conta do destinatário. Isso pode demorar de alguns segundos a alguns minutos, dependendo da prioridade de transações na rede.
+6. Certifique-se de que sua carteira tenha ETH suficiente para cobrir a taxa de transação, que varia dependendo das condições da rede. A maioria das carteiras adicionará automaticamente a taxa sugerida para a transação. Em seguida, você pode confirmar.
+7. Uma vez que a transação é processada, o valor de cripto correspondente aparecerá na conta do destinatário. Isso pode demorar de alguns segundos a alguns minutos, dependendo do quanto a rede está sendo usada atualmente.
 
 ## Conectando-se a projetos
 
-Seu endereço representa você em todos os projetos na rede Ethereum. Não será necessário se registrar individualmente em nenhum projeto. Quando tiver uma carteira, você poderá se conectar a qualquer projeto na rede Ethereum sem quaisquer informações adicionais. Não são necessários e-mails ou outras informações pessoais.
+Seu endereço será o mesmo em todos os projetos do Ethereum. Você não precisa se registrar individualmente em nenhum projeto. Quando tiver uma carteira, você poderá se conectar a qualquer projeto na rede Ethereum sem quaisquer informações adicionais. Não são necessários e-mails ou outras informações pessoais.
 
 1. Visite o website do projeto.
 2. Se a página inicial do projeto for apenas uma descrição estática do projeto, você deve poder clicar em um botão “Abrir o App” no menu que irá navegar para o aplicativo web real.
@@ -57,7 +59,7 @@ Seu endereço representa você em todos os projetos na rede Ethereum. Não será
 
 ![Selecionando de uma lista de carteiras com as quais se conectar](./connect2.png)
 
-5. Confirme o pedido de assinatura na sua carteira para estabelecer a conexão. Observe que assinar esta mensagem não deve exigir gastar nenhum ETH.
+5. Confirme o pedido de assinatura na sua carteira para estabelecer a conexão. **A assinatura desta mensagem não dever exigir o gasto de nenhum ETH**.
 6. É isso! Comece a usar o app. Você pode encontrar alguns projetos interessantes em nossa [página de dApps](/dapps/#explore). <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
@@ -79,8 +81,8 @@ Sim, você pode usar o mesmo endereço em vários dispositivos. Tecnicamente, ca
 
 ### Eu não recebi a criptomoeda. Onde posso verificar o status da transação?
 
-Você pode usar [exploradores de blocos](https://ethereum.org/en/developers/docs/data-and-analytics/block-explorers/) para ver o status de qualquer transação em tempo real. Tudo o que você precisa fazer é pesquisar o endereço da sua carteira ou o ID da transação.
+Você pode usar [exploradores de blocos](/developers/docs/data-and-analytics/block-explorers/) para ver o status de qualquer transação em tempo real. Tudo o que você precisa fazer é pesquisar o endereço da sua carteira ou o ID da transação.
 
 ### Posso cancelar ou retornar transações?
 
-Não, uma vez que uma transação foi confirmada, você não pode cancelá-la.
+Não, uma vez que uma transação é confirmada, você não pode cancelá-la.

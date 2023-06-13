@@ -211,6 +211,7 @@ const components = {
 const StaticPage = ({
   data: { siteData, pageData: mdx },
   pageContext: { relativePath, slug },
+  location,
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const { language } = useI18next()
 

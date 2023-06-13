@@ -22,7 +22,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 - [添加开发者工具](/contributing/adding-developer-tools/) _– 将开发者工具添加到相关页面_
 - [添加交易所](/contributing/adding-exchanges/) _– 将交易所添加到我们的[交易所查找器](/get-eth/#country-picker)_
 - [改进我们的研究](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) _– 让我们了解您对我们研究的反馈，或贡献您自己的研究_
-- [请求功能](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) _– 让我们知道您对新功能或设计的任何想法_
+- [请求功能](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) _– 让我们知道您对新功能或设计的任何想法_
 - [添加词汇表术语](/contributing/adding-glossary-terms) _– 帮助我们继续扩展以太坊[术语](/glossary/)_
 - [创建/编辑内容](/contributing/#how-to-update-content) _– 建议新页面或调整这里已经存在的内容_
 - [添加二层网络](/contributing/adding-layer-2s/) _- 将二层网络添加到相关页面_

@@ -18,7 +18,7 @@ Quando é necessário atualizar um software tradicional, com controle centraliza
 Essas mudanças de regra podem criar uma divisão temporária na rede. Novos blocos podem ser produzidos conforme as novas regras ou as antigas. Geralmente, as bifurcações são acordadas antes do tempo, para que os clientes adotem as mudanças de uníssono e para que a bifurcação com as melhorias se torne a cadeia principal. No entanto, em casos raros, desacordos sobre as bifurcações podem fazer com que a rede seja dividida permanentemente. Esse foi notadamente o caso para a criação do Ethereum Classic com a [bifurcação DAO] (#dao-fork).
 </ExpandableCard>
 
-Vá direto para informações sobre algumas das atualizações passadas particularmente importantes: [The Beacon Chain](/roadmap/beacon-chain/); [The Merge](/roadmap/merge/); e [EIP-1559](#london)
+Vá direto para informações sobre algumas das atualizações anteriores particularmente importantes: [The Beacon Chain](/roadmap/beacon-chain/), [The Merge](/roadmap/merge/) e [EIP-1559](#london)
 
 Procurando por futuras melhorias de protocolo? [Saiba mais sobre as próximas atualizações no roteiro do Ethereum](/roadmap/).
 
@@ -26,15 +26,13 @@ Procurando por futuras melhorias de protocolo? [Saiba mais sobre as próximas at
 
 ## 2023 {#2023}
 
-### Shanghai (_planejado_) {#shanghai}
+### Shanghai {#shanghai}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Carimbo de data/hora: 12 de abril de 2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Número do bloco: TBD<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Preço ETH: TBD<br />
-
-<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
+<NetworkUpgradeSummary name="shanghai" />
 
 #### Resumo {#shanghai-summary}
 
-A atualização Shanghai traz saques de participação para a camada de execução. Em conjunto com a atualização Capella, isso permite que os blocos aceitem operações de retirada, permitindo aos participantes retirar seu ETH da Beacon Chain para a camada de execução.
+A atualização Shanghai trouxe saques de stake para a camada de execução. Em conjunto com a atualização Capella, isso permitiu que os blocos aceitassem operações de saque, o que permite que os stakers saquem seu ETH da Beacon Chain para a camada de execução.
 
 <ExpandableCard title="EIPs da Shanghai" contentPreview="Official improvements included in this upgrade.">
 
@@ -50,19 +48,17 @@ A atualização Shanghai traz saques de participação para a camada de execuç�
 
 ---
 
-### Capella (_planejado_) {#capella}
+### Capella {#capella}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Carimbo de data/hora: 12 de abril de 2023 22:27:35 +UTC<br/> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Número da Época: 194048 (Slot 6209536)<br/> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Preço ETH: TBD<br />
-
-<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
+<NetworkUpgradeSummary name="capella" />
 
 #### Resumo {#capella-summary}
 
-A atualização Capella é a terceira maior atualização para a camada de consenso (Beacon Chain), que permite saques de participação. Capella ocorrerá em simultâneo com a atualização Shanghai, que ocorre na camada de execução para habilitar a funcionalidade de saque em sincronia entre elas.
+A atualização Capella foi a terceira maior atualização para a camada de consenso (Beacon Chain) e permitiu saques de stake. Capella ocorreu em sincronia com a atualização da camada de execução, Shanghai, e ativou a funcionalidade de saque de stake.
 
-Essa atualização em camada de consenso traz a habilidade para os participantes que não forneceram credenciais de saque com seu depósito inicial de fazer isso, permitindo assim os saques.
+Essa atualização da camada de consenso trouxe a capacidade para os stakers que não forneceram credenciais de saque com seu depósito inicial de fazê-lo, permitindo assim os saques.
 
-A atualização também fornece a funcionalidade de varredura de contas automáticas, que processa continuamente contas de validador para quaisquer pagamentos de recompensas disponíveis ou saques completos.
+A atualização também forneceu a funcionalidade de varredura automática de contas, que processa continuamente as contas do validador para todos os pagamentos de recompensas disponíveis ou saques totais.
 
 - [Mais sobre saques de staking](/staking/withdrawals/).
 - [Leia a especificação da atualização Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
@@ -73,11 +69,11 @@ A atualização também fornece a funcionalidade de varredura de contas automát
 
 ### Paris (A Fusão) {#paris}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>15 de setembro de 2022 06:42:42 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Número do bloco: <a href="https://etherscan.io/block/ 15537394">15537394</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Preço em ETH: 1.472 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220915075314 /https://ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="paris" />
 
 #### Resumo {#paris-summary}
 
-A atualização Paris foi desencadeada pela cadeia de blocos de prova de trabalho com uma [dificuldade total final](/glossary/#terminal-total-difficulty) de 58750000000000000000000. Isso aconteceu no bloco 15537393, em 15 de setembro de 2022, iniciando a atualização Paris para o próximo bloco. Paris foi a transição para o [The Merge](/roadmap/merge/) – seu maior recurso era desativar o algoritmo de mineração da [prova de trabalho](/developers/docs/consensus-mechanisms/pow) e a lógica de consenso associada e ativar a [prova de participação](/developers/docs/consensus-mechanisms/pos) no lugar dele. Paris em si foi uma atualização para os [clientes de execução](/developers/docs/nodes-and-clients/#execution-clients) (equivalente à Bellatrix na camada de consenso) que permitiu que eles recebessem instruções de seus [clientes de consenso](/developers/docs/nodes-and-clients/#consensus-clients) conectados. Isso exigiu um novo conjunto de métodos internos da API, coletivamente conhecido como [API do mecanismo](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), a ser ativado. Esta foi, indiscutivelmente, a atualização mais significativa na história do Ethereum desde o [Homestead](#homestead)!
+A atualização Paris foi desencadeada pela cadeia de blocos de prova de trabalho com uma [dificuldade total final](/glossary/#terminal-total-difficulty) de 58750000000000000000000. Isso aconteceu no bloco 15537393, em 15 de setembro de 2022, iniciando a atualização Paris para o próximo bloco. Paris foi a transição para o [The Merge](/roadmap/merge/) — seu maior recurso era desativar o algoritmo de mineração da [prova de trabalho](/developers/docs/consensus-mechanisms/pow) e a lógica de consenso associada e ativar a [prova de participação](/developers/docs/consensus-mechanisms/pos) no lugar dela. Paris em si foi uma atualização para os [clientes de execução](/developers/docs/nodes-and-clients/#execution-clients) (equivalente à Bellatrix na camada de consenso) que permitiu que eles recebessem instruções de seus [clientes de consenso](/developers/docs/nodes-and-clients/#consensus-clients) conectados. Isso exigiu um novo conjunto de métodos internos da API, coletivamente conhecido como [API do mecanismo](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), a ser ativado. Esta foi, indiscutivelmente, a atualização mais significativa na história do Ethereum desde o [Homestead](#homestead)!
 
 - [Leia a especificação de atualização Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
@@ -92,7 +88,7 @@ A atualização Paris foi desencadeada pela cadeia de blocos de prova de trabalh
 
 ### Bellatrix {#bellatrix}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-06-2022 11:34:47 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Número da época: 144,896<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Preço em ETH: 1.558 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220906112525/https://ethereum.org/en/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="bellatrix" />
 
 #### Resumo {#bellatrix-summary}
 
@@ -104,7 +100,7 @@ A atualização Bellatrix foi a segunda atualização agendada para a [Beacon Ch
 
 ### Gray Glacier {#gray-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Número do bloco: <a href="https://etherscan.io/block/15050000">15.050.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Preço em ETH: 1.069 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="grayGlacier" />
 
 #### Resumo {#gray-glacier-summary}
 
@@ -124,7 +120,7 @@ A atualização Gray Glacier atrasou a [bomba de dificuldade](/glossary/#difficu
 
 ### Arrow Glacier {#arrow-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Número de bloco: <a href="https://etherscan.io/block/13773000">13.773.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Preço do ETH: 4.111 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="arrowGlacier" />
 
 #### Resumo {#arrow-glacier-summary}
 
@@ -143,7 +139,7 @@ A implementação de rede Arrow Glacier atrasou a [bomba de dificuldade](/glossa
 
 ### Altair {#altair}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Número da época: 74.240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Preço em ETH: 4.024 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="altair" />
 
 #### Resumo {#altair-summary}
 
@@ -161,7 +157,7 @@ Altair foi a primeira grande atualização de rede que teve um tempo exato de im
 
 ### London {#london}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/12965000">12.965.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 2.621 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="london" />
 
 #### Resumo {#london-summary}
 
@@ -174,9 +170,9 @@ A atualização London introduziu a [EIP-1559](https://eips.ethereum.org/EIPS/ei
 <ExpandableCard title="EIPs da London" contentPreview="Official improvements included in this upgrade.">
 
 – [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _melhora a taxa de transação do mercado_
-– [EIP-3198](https://eips. thereum.org/EIPS/eip-3198) – _retorna o "BASEFEE" de um bloco_
-– [EIP-3529](https://eips.ethereum. rg/EIPS/eip-3529) – _reduz os reembolsos de gás para operações de EVM_
-– [EIP-3541](https://eips.ethereum. rg/EIPS/eip-3541) – _evita a implantação de contratos que iniciam com "0xEF"_
+– [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _retorna o "BASEFEE" de um bloco_
+– [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) – _reduz os reembolsos de gás para operações de EVM_
+– [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) – _evita a implantação de contratos que iniciam com "0xEF"_
 – [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _atrasa a Ice Age até 2021_
 
 </ExpandableCard>
@@ -185,7 +181,7 @@ A atualização London introduziu a [EIP-1559](https://eips.ethereum.org/EIPS/ei
 
 ### Berlin {#berlin}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/12244000">12.244.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 2.454 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="berlin" />
 
 #### Resumo {#berlin-summary}
 
@@ -197,8 +193,8 @@ A atualização Berlim otimizou o custo de gás para certas ações de EVM e aum
 <ExpandableCard title="EIPs da Berlim" contentPreview="Official improvements included in this upgrade.">
 
 – [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) - _reduz o custo de gás para ModExp_
-– [EIP-2718](https://eips. thereum.org/EIPS/eip-2718) – _permite suporte mais fácil para vários tipos de transação_
-– [EIP-2929](https://eips. thereum.org/EIPS/eip-2929) – _o custo de gás aumenta para os opcodes de acesso ao estado_
+– [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _permite suporte mais fácil para vários tipos de transação_
+– [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _o custo de gás aumenta para os opcodes de acesso ao estado_
 – [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _adiciona listas de acesso opcionais_
 
 </ExpandableCard>
@@ -209,7 +205,7 @@ A atualização Berlim otimizou o custo de gás para certas ações de EVM e aum
 
 ### Origem da Beacon Chain {#beacon-chain-genesis}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco da Beacon Chain: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 586,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 
 #### Resumo {#beacon-chain-genesis-summary}
 
@@ -225,7 +221,7 @@ A [Beacon Chain](/roadmap/beacon-chain/) precisava de 16.384 depósitos de 32 ET
 
 ### Contrato de depósito de participação implantado {#staking-deposit-contract}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14 Out 2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/11052984">11 052 984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 379,04 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
 #### Resumo {#deposit-contract-summary}
 
@@ -241,7 +237,7 @@ O contrato de depósito fixo introduziu [staking](/glossary/#staking) (participa
 
 ### Muir Glacier {#muir-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/9200000">9.200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 127,18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="muirGlacier" />
 
 #### Resumo {#muir-glacier-summary}
 
@@ -262,7 +258,7 @@ O fork (bifurcação) Muir Glacier introduziu um atraso na [bomba de dificuldade
 
 ### Istambul {#istanbul}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>08 Dez 2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/9069000">9.069.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 151,06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="istanbul" />
 
 #### Resumo {#istanbul-summary}
 
@@ -291,7 +287,7 @@ O fork (bifurcação) Istanbul:
 
 ### Constantinopla {#constantinople}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>28 Feb 2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/7280000">7.280.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 136,29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="constantinople" />
 
 #### Resumo {#constantinople-summary}
 
@@ -318,7 +314,7 @@ O fork (bifurcação) Constantinople:
 
 ### Byzantium {#byzantium}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>16 Out 2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/4370000">4.370.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 334,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="byzantium" />
 
 #### Resumo {#byzantium-summary}
 
@@ -351,7 +347,7 @@ O fork (bifurcação) Byzantium:
 
 ### Spurious Dragon {#spurious-dragon}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>22 Nov 2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/2675000">2.675.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 9,84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="spuriousDragon" />
 
 #### Resumo {#spurious-dragon-summary}
 
@@ -365,10 +361,10 @@ O fork (bifurcação) Spurious Dragon foi a segunda resposta aos ataques de nega
 
 <ExpandableCard title="EIPs da Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
-– [EIP-155](https://eips.ethereum. rg/EIPS/eip-155) – _evita que as transações de uma cadeia Ethereum sejam retransmitidas em uma cadeia alternativa, por exemplo, uma transação de rede de testes sendo reproduzida na cadeia principal Ethereum.
-– [EIP-160](https://eips.ethereum. rg/EIPS/eip-160) – \_ajusta os preços do código de operação "EXP" – dificulta a desaceleração da rede pode meio de operações contratuais computacionalmente caras.
-– [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – \_permite a remoção de contas vazias adicionadas por meio dos ataques DOS (DOS).
-– [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – \_muda o tamanho máximo de código que um contrato na cadeia de blocos pode ter – para 24576 bytes._
+– [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _evita que as transações de uma cadeia Ethereum sejam retransmitidas em uma cadeia alternativa, por exemplo, uma transação de rede de testes sendo reproduzida na cadeia principal Ethereum._
+– [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _ajusta os preços do código de operação "EXP" – dificulta a desaceleração da rede pode meio de operações contratuais computacionalmente caras._
+– [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _permite a remoção de contas vazias adicionadas por meio dos ataques DOS (DOS)._
+– [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _muda o tamanho máximo de código que um contrato na cadeia de blocos pode ter – para 24576 bytes._
 
 </ExpandableCard>
 
@@ -376,7 +372,7 @@ O fork (bifurcação) Spurious Dragon foi a segunda resposta aos ataques de nega
 
 ### Tangerine Whistle {#tangerine-whistle}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>18 Out 2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/2463000">2.463.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="tangerineWhistle" />
 
 #### Resumo {#tangerine-whistle-summary}
 
@@ -389,7 +385,7 @@ O fork (bifurcação) Whistle Tangerine foi a primeira resposta aos ataques de n
 <ExpandableCard title="EIPs da Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 – [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – _aumenta os custos de gás de códigos de operação que podem ser usados em ataques de spam._
-– [EIP-158](https://eips.ethereum. rg/EIPS/eip-158) – _reduz o tamanho do estado removendo muitas contas vazias que foram colocadas no estado a um custo muito baixo, devido a falhas em versões anteriores do protocolo Ethereum._
+– [EIP-158](https://eips.ethereum.org/EIPS/eip-158) – _reduz o tamanho do estado removendo muitas contas vazias que foram colocadas no estado a um custo muito baixo, devido a falhas em versões anteriores do protocolo Ethereum._
 
 </ExpandableCard>
 
@@ -397,7 +393,7 @@ O fork (bifurcação) Whistle Tangerine foi a primeira resposta aos ataques de n
 
 ### Bifurcação DAO {#dao-fork}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>20 Jul 2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/1920000">1.920.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 12,54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="daoFork" />
 
 #### Resumo {#dao-fork-summary}
 
@@ -413,7 +409,7 @@ Alguns mineradores recusaram a bifurcação porque o incidente da DAO não era u
 
 ### Homestead {#homestead}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14 Mar 2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/1150000">1.150.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="homestead" />
 
 #### Resumo {#homestead-summary}
 
@@ -424,7 +420,7 @@ O fork (bifurcação) Homestead que olhou para o futuro. Incluiu várias altera�
 <ExpandableCard title="EIPs do Homestead" contentPreview="Official improvements included in this fork.">
 
 – [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _faz edições no processo de criação do contrato._
-– [EIP-7](https://eips.ethereum. rg/EIPS/eip-7) – _adiciona um novo código de operação: `DELEGATECALL`_
+– [EIP-7](https://eips.ethereum.org/EIPS/eip-7) – _adiciona um novo código de operação: `DELEGATECALL`_
 – [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _introduz os requisitos de compatibilidade devp2p_
 
 </ExpandableCard>
@@ -435,7 +431,7 @@ O fork (bifurcação) Homestead que olhou para o futuro. Incluiu várias altera�
 
 ### Frontier thawing {#frontier-thawing}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>07 Set 2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/200000">200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: 1,24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="frontierThawing" />
 
 #### Resumo {#frontier-thawing-summary}
 
@@ -448,7 +444,7 @@ O fork (bifurcação) Frontier Thawing aumentou o limite de [gás](/glossary/#ga
 
 ### Frontier {#frontier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Número de bloco: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preço em ETH: N/D<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="frontier" />
 
 #### Resumo {#frontier-summary}
 
@@ -462,7 +458,7 @@ Frontier era a implementação mais simples do projeto Ethereum. Ela veio após 
 
 ### Venda de Ether {#ether-sale}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 22 de julho – 2 de setembro de 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="etherSale" />
 
 O Ether permaneceu à venda oficialmente por 42 dias. Era possível comprá-lo com BTC.
 
@@ -472,7 +468,7 @@ O Ether permaneceu à venda oficialmente por 42 dias. Era possível comprá-lo c
 
 ### Lançamento do Yellow Paper {#yellowpaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 1 de abril de 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 
 O Yellow Paper, de autoria do Dr. Gavin Wood, é uma definição técnica do protocolo Ethereum.
 
@@ -484,7 +480,7 @@ O Yellow Paper, de autoria do Dr. Gavin Wood, é uma definição técnica do pro
 
 ### Lançamento do Whitepaper {#whitepaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 de novembro de 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org em waybackmachine</a>
+<NetworkUpgradeSummary name="whitepaperRelease" />
 
 Este artigo introdutório foi originalmente publicado em 2013 por Vitalik Buterin, fundador da Ethereum, antes do lançamento do projeto em 2015.
 

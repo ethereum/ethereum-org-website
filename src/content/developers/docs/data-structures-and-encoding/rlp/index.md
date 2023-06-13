@@ -43,12 +43,12 @@ In code, this is:
 ```python
 def rlp_encode(input):
     if isinstance(input,str):
-        if len(input) == 1 and ord(input) < 0x80: 
+        if len(input) == 1 and ord(input) < 0x80:
             return input
         return encode_length(len(input), 0x80) + input
     elif isinstance(input, list):
         output = ''
-        for item in input: 
+        for item in input:
             output += rlp_encode(item)
         return encode_length(len(output), 0xc0) + output
 
@@ -113,7 +113,7 @@ def rlp_decode(input):
         output = instantiate_str(substr(input, offset, dataLen))
     elif type is list:
         output = instantiate_list(substr(input, offset, dataLen))
-    output + rlp_decode(substr(input, offset + dataLen))
+    output += rlp_decode(substr(input, offset + dataLen))
     return output
 
 def decode_length(input):

@@ -304,7 +304,7 @@ Ethereum rende possibile il funzionamento degli NFT per vari motivi:
 
 ## Impatto ambientale degli NFT {#environmental-impact-nfts}
 
-La creazione ed il trasferimento degli NFT sono solo transazioni su Ethereum - il conio, l'acquisto, lo scambio o l'interazione con gli NFT non consumano direttamente energia. Dal momento in cui [la Fusione](/roadmap/merge) è andata live nella Rete principale, Ethereum è una blockchain a bassa consumo energetico, il che significa che l'impatto ambientale dell'uso di NFT è trascurabile.
+La creazione ed il trasferimento degli NFT sono solo transazioni su Ethereum - il conio, l'acquisto, lo scambio o l'interazione con gli NFT non consumano direttamente energia. Dal momento in cui [la Fusione](/roadmap/merge) Ethereum è una blockchain a bassa consumo energetico, l'impatto ambientale dell'uso di NFT è trascurabile.
 
 [Scopri di più sul consumo energetico di Ethereum](/energy-consumption/).
 
@@ -341,7 +341,7 @@ I problemi di sicurezza degli NFT sono molto spesso correlati alle truffe di phi
 
 ## Costruire con i NFT {#build-with-nfts}
 
-Gran parte degli NFT è creata usando uno standard coerente, noto come [ERC-721](/developers/docs/standards/tokens/erc-721/). Ma esistono anche altri standard che potrebbero interessarti. Lo standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) ammette i token semi-fungibili, particolarmente utili nel mondo dei videogiochi. E, più di recente, è stato proposto l'[EIP-2309](https://eips.ethereum.org/EIPS/eip-2309), per rendere molto più efficiente coniare NFT. Questo standard consente di coniarne in un'unica transazione qualunque numero di NFT!
+Gran parte degli NFT è creata usando uno standard coerente, noto come [ERC-721](/developers/docs/standards/tokens/erc-721/). Ma esistono anche altri standard che potrebbero interessarti. Lo standard [ERC-1155](/developers/docs/standards/tokens/erc-1155/) ammette i token semi-fungibili, particolarmente utili nel campo del gioco. E, più di recente, è stato proposto l'[EIP-2309](https://eips.ethereum.org/EIPS/eip-2309), per rendere molto più efficiente coniare NFT. Questo standard consente di coniarne in un'unica transazione qualunque numero di NFT!
 
 ## Lettura consigliate {#further-reading}
 

@@ -4,7 +4,6 @@ description: 乐观解决方案标准链桥如何运作？ 为什么它会这样
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "乐观解决方案"
   - "链桥"
   - "二层网络"
 skill: intermediate
@@ -170,7 +169,7 @@ lang: zh
      * @param _to L2 address to credit the withdrawal to.
      * @param _amount Amount of the ERC20 to deposit.
      * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
+     * @param _data 可选数据转发到 L2。 This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -643,7 +642,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
      * @param _from Account to pull the deposit from on L1.
      * @param _to Account to give the deposit to on L2.
      * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
+     * @param _data 可选数据转发到 L2。 This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -734,7 +733,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
      * @param _to Account to give the deposit to on L2
      * @param _amount Amount of the ERC20 to deposit.
      * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
+     * @param _data 可选数据转发到 L2。 This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */

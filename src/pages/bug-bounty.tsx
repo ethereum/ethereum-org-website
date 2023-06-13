@@ -69,7 +69,7 @@ const H2 = (props: ChildOnlyProp) => (
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <Box
+  <Text
     fontSize="1.5rem"
     lineHeight="140%"
     color="text200"
@@ -921,7 +921,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-upgrades-get-involved-bug-bounty", "common"] }
+        ns: { in: ["page-bug-bounty", "common"] }
       }
     ) {
       edges {

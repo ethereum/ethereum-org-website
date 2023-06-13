@@ -1,7 +1,7 @@
 [
   {
     "code": "en",
-    "hrefLang": "en",
+    "crowdinCode": "en",
     "name": "English",
     "localName": "English",
     "langDir": "ltr",
@@ -9,7 +9,7 @@
   },
   {
     "code": "ar",
-    "hrefLang": "ar",
+    "crowdinCode": "ar",
     "name": "Arabic",
     "localName": "العربية",
     "langDir": "rtl",
@@ -17,7 +17,7 @@
   },
   {
     "code": "az",
-    "hrefLang": "az",
+    "crowdinCode": "az",
     "name": "Azerbaijani",
     "localName": "Azərbaycan",
     "langDir": "ltr",
@@ -25,7 +25,7 @@
   },
   {
     "code": "bg",
-    "hrefLang": "bg",
+    "crowdinCode": "bg",
     "name": "Bulgarian",
     "localName": "български",
     "langDir": "ltr",
@@ -33,7 +33,7 @@
   },
   {
     "code": "bn",
-    "hrefLang": "bn",
+    "crowdinCode": "bn",
     "name": "Bengali",
     "localName": "বাংলা",
     "langDir": "ltr",
@@ -41,7 +41,7 @@
   },
   {
     "code": "ca",
-    "hrefLang": "ca",
+    "crowdinCode": "ca",
     "name": "Catalan",
     "localName": "Català",
     "langDir": "ltr",
@@ -49,7 +49,7 @@
   },
   {
     "code": "cs",
-    "hrefLang": "cs",
+    "crowdinCode": "cs",
     "name": "Czech",
     "localName": "Čeština",
     "langDir": "ltr",
@@ -57,7 +57,7 @@
   },
   {
     "code": "da",
-    "hrefLang": "da",
+    "crowdinCode": "da",
     "name": "Danish",
     "localName": "Dansk",
     "langDir": "ltr",
@@ -65,7 +65,7 @@
   },
   {
     "code": "de",
-    "hrefLang": "de",
+    "crowdinCode": "de",
     "name": "German",
     "localName": "Deutsch",
     "langDir": "ltr",
@@ -73,7 +73,7 @@
   },
   {
     "code": "el",
-    "hrefLang": "el",
+    "crowdinCode": "el",
     "name": "Greek",
     "localName": "Ελληνικά",
     "langDir": "ltr",
@@ -81,7 +81,7 @@
   },
   {
     "code": "es",
-    "hrefLang": "es",
+    "crowdinCode": "es-EM",
     "name": "Spanish",
     "localName": "Español",
     "langDir": "ltr",
@@ -89,7 +89,7 @@
   },
   {
     "code": "fa",
-    "hrefLang": "fa",
+    "crowdinCode": "fa",
     "name": "Farsi",
     "localName": "فارسی",
     "langDir": "rtl",
@@ -97,7 +97,7 @@
   },
   {
     "code": "fi",
-    "hrefLang": "fi",
+    "crowdinCode": "fi",
     "name": "Finnish",
     "localName": "Suomi",
     "langDir": "ltr",
@@ -105,7 +105,7 @@
   },
   {
     "code": "fr",
-    "hrefLang": "fr",
+    "crowdinCode": "fr",
     "name": "French",
     "localName": "Français",
     "langDir": "ltr",
@@ -113,7 +113,7 @@
   },
   {
     "code": "gl",
-    "hrefLang": "gl",
+    "crowdinCode": "gl",
     "name": "Galician",
     "localName": "Galego",
     "langDir": "ltr",
@@ -121,7 +121,7 @@
   },
   {
     "code": "gu",
-    "hrefLang": "gu",
+    "crowdinCode": "gu-IN",
     "name": "Gujarati",
     "localName": "ગુજરાતી",
     "langDir": "ltr",
@@ -129,7 +129,7 @@
   },
   {
     "code": "he",
-    "hrefLang": "he",
+    "crowdinCode": "he",
     "name": "Hebrew",
     "localName": "עִבְרִית",
     "langDir": "rtl",
@@ -137,7 +137,7 @@
   },
   {
     "code": "hi",
-    "hrefLang": "hi",
+    "crowdinCode": "hi",
     "name": "Hindi",
     "localName": "हिन्दी",
     "langDir": "ltr",
@@ -145,7 +145,7 @@
   },
   {
     "code": "hr",
-    "hrefLang": "hr",
+    "crowdinCode": "hr",
     "name": "Croatian",
     "localName": "Hrvatski",
     "langDir": "ltr",
@@ -153,7 +153,7 @@
   },
   {
     "code": "hu",
-    "hrefLang": "hu",
+    "crowdinCode": "hu",
     "name": "Hungarian",
     "localName": "Magyar",
     "langDir": "ltr",
@@ -161,7 +161,7 @@
   },
   {
     "code": "id",
-    "hrefLang": "id",
+    "crowdinCode": "id",
     "name": "Indonesian",
     "localName": "Bahasa Indonesia",
     "langDir": "ltr",
@@ -169,7 +169,7 @@
   },
   {
     "code": "ig",
-    "hrefLang": "ig",
+    "crowdinCode": "ig",
     "name": "Igbo",
     "localName": "Ibo",
     "langDir": "ltr",
@@ -177,7 +177,7 @@
   },
   {
     "code": "it",
-    "hrefLang": "it",
+    "crowdinCode": "it",
     "name": "Italian",
     "localName": "Italiano",
     "langDir": "ltr",
@@ -185,7 +185,7 @@
   },
   {
     "code": "ja",
-    "hrefLang": "ja",
+    "crowdinCode": "ja",
     "name": "Japanese",
     "localName": "日本語",
     "langDir": "ltr",
@@ -193,7 +193,7 @@
   },
   {
     "code": "ka",
-    "hrefLang": "ka",
+    "crowdinCode": "ka",
     "name": "Georgian",
     "localName": "ქართული",
     "langDir": "ltr",
@@ -201,7 +201,7 @@
   },
   {
     "code": "kk",
-    "hrefLang": "kk",
+    "crowdinCode": "kk",
     "name": "Kazakh",
     "localName": "қазақ",
     "langDir": "ltr",
@@ -209,7 +209,7 @@
   },
   {
     "code": "km",
-    "hrefLang": "km",
+    "crowdinCode": "km",
     "name": "Khmer",
     "localName": "ចក្រភពខ្មែរ",
     "langDir": "ltr",
@@ -217,7 +217,7 @@
   },
   {
     "code": "ko",
-    "hrefLang": "ko",
+    "crowdinCode": "ko",
     "name": "Korean",
     "localName": "한국어",
     "langDir": "ltr",
@@ -225,7 +225,7 @@
   },
   {
     "code": "lt",
-    "hrefLang": "lt",
+    "crowdinCode": "lt",
     "name": "Lithuanian",
     "localName": "Lietuvis",
     "langDir": "ltr",
@@ -233,7 +233,7 @@
   },
   {
     "code": "ml",
-    "hrefLang": "ml",
+    "crowdinCode": "ml-IN",
     "name": "Malayalam",
     "localName": "മലയാളം",
     "langDir": "ltr",
@@ -241,7 +241,7 @@
   },
   {
     "code": "mr",
-    "hrefLang": "mr",
+    "crowdinCode": "mr",
     "name": "Marathi",
     "localName": "मराठी",
     "langDir": "ltr",
@@ -249,7 +249,7 @@
   },
   {
     "code": "ms",
-    "hrefLang": "ms",
+    "crowdinCode": "ms",
     "name": "Malay",
     "localName": "Melayu",
     "langDir": "ltr",
@@ -257,7 +257,7 @@
   },
   {
     "code": "nl",
-    "hrefLang": "nl",
+    "crowdinCode": "nl",
     "name": "Dutch",
     "localName": "Nederlands",
     "langDir": "ltr",
@@ -265,15 +265,23 @@
   },
   {
     "code": "nb",
-    "hrefLang": "nb",
+    "crowdinCode": "no",
     "name": "Norwegian",
     "localName": "Norsk",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
   {
-    "code": "ph",
-    "hrefLang": "fil",
+    "code": "pcm",
+    "crowdinCode": "pcm",
+    "name": "Nigerian Pidgin",
+    "localName": "Nigerian Pidgin",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY"
+  },
+  {
+    "code": "fil",
+    "crowdinCode": "fil",
     "name": "Filipino",
     "localName": "Filipino",
     "langDir": "ltr",
@@ -281,7 +289,7 @@
   },
   {
     "code": "pl",
-    "hrefLang": "pl",
+    "crowdinCode": "pl",
     "name": "Polish",
     "localName": "Polski",
     "langDir": "ltr",
@@ -289,7 +297,7 @@
   },
   {
     "code": "pt",
-    "hrefLang": "pt",
+    "crowdinCode": "pt-PT",
     "name": "Portuguese",
     "localName": "Português",
     "langDir": "ltr",
@@ -297,7 +305,7 @@
   },
   {
     "code": "pt-br",
-    "hrefLang": "pt-br",
+    "crowdinCode": "pt-BR",
     "name": "Portuguese (Brazilian)",
     "localName": "Português",
     "langDir": "ltr",
@@ -305,7 +313,7 @@
   },
   {
     "code": "ro",
-    "hrefLang": "ro",
+    "crowdinCode": "ro",
     "name": "Romanian",
     "localName": "Română",
     "langDir": "ltr",
@@ -313,7 +321,7 @@
   },
   {
     "code": "ru",
-    "hrefLang": "ru",
+    "crowdinCode": "ru",
     "name": "Russian",
     "localName": "Pусский",
     "langDir": "ltr",
@@ -321,7 +329,7 @@
   },
   {
     "code": "se",
-    "hrefLang": "se",
+    "crowdinCode": "sv-SE",
     "name": "Swedish",
     "localName": "Svenska",
     "langDir": "ltr",
@@ -329,7 +337,7 @@
   },
   {
     "code": "sk",
-    "hrefLang": "sk",
+    "crowdinCode": "sk",
     "name": "Slovak",
     "localName": "Slovenský",
     "langDir": "ltr",
@@ -337,7 +345,7 @@
   },
   {
     "code": "sl",
-    "hrefLang": "sl",
+    "crowdinCode": "sl",
     "name": "Slovenian",
     "localName": "Slovenščina",
     "langDir": "ltr",
@@ -345,7 +353,7 @@
   },
   {
     "code": "sr",
-    "hrefLang": "sr",
+    "crowdinCode": "sr-CS",
     "name": "Serbian",
     "localName": "Српски",
     "langDir": "ltr",
@@ -353,7 +361,7 @@
   },
   {
     "code": "sw",
-    "hrefLang": "sw",
+    "crowdinCode": "sw",
     "name": "Swahili",
     "localName": "Kiswahili",
     "langDir": "ltr",
@@ -361,7 +369,7 @@
   },
   {
     "code": "ta",
-    "hrefLang": "ta",
+    "crowdinCode": "ta",
     "name": "Tamil",
     "localName": "தமிழ்",
     "langDir": "ltr",
@@ -369,7 +377,7 @@
   },
   {
     "code": "th",
-    "hrefLang": "th",
+    "crowdinCode": "th",
     "name": "Thai",
     "localName": "ภาษาไทย",
     "langDir": "ltr",
@@ -377,7 +385,7 @@
   },
   {
     "code": "tr",
-    "hrefLang": "tr",
+    "crowdinCode": "tr",
     "name": "Turkish",
     "localName": "Türkçe",
     "langDir": "ltr",
@@ -385,23 +393,23 @@
   },
   {
     "code": "uk",
-    "hrefLang": "uk",
+    "crowdinCode": "uk",
     "name": "Ukrainian",
     "localName": "Українська",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
   {
-    "code": "ur-in",
-    "hrefLang": "ur-in",
-    "name": "Urdu (India)",
+    "code": "ur",
+    "crowdinCode": "ur",
+    "name": "Urdu",
     "localName": "اردو",
     "langDir": "rtl",
     "dateFormat": "MM/DD/YYYY"
   },
   {
     "code": "uz",
-    "hrefLang": "uz",
+    "crowdinCode": "uz",
     "name": "Uzbek",
     "localName": "O'zbekcha",
     "langDir": "ltr",
@@ -409,7 +417,7 @@
   },
   {
     "code": "vi",
-    "hrefLang": "vi",
+    "crowdinCode": "vi",
     "name": "Vietnamese",
     "localName": "Tiếng Việt",
     "langDir": "ltr",
@@ -417,7 +425,7 @@
   },
   {
     "code": "zh",
-    "hrefLang": "zh",
+    "crowdinCode": "zh-CN",
     "name": "Chinese Simplified",
     "localName": "简体中文",
     "langDir": "ltr",
@@ -425,7 +433,7 @@
   },
   {
     "code": "zh-tw",
-    "hrefLang": "zh-tw",
+    "crowdinCode": "zh-TW",
     "name": "Chinese Traditional",
     "localName": "繁體中文",
     "langDir": "ltr",

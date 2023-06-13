@@ -6,7 +6,7 @@ lang: ja
 tags:
   - "イーサリアム仮想マシン(EVM)"
   - "オペコード"
-skill: 詳細
+skill: advanced
 published: 2021-12-30
 ---
 

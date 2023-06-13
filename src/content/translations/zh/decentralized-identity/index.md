@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: ../../assets/eth-gif-cat.png
+image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: 传统身份系统有权对您的身份标识进行发布、维护和控制。
 summaryPoint2: 去中心化身份消除了对中心化第三方的依赖。
 summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持有和控制其自身身份标识和身份证明的工具。

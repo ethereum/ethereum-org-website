@@ -99,6 +99,10 @@ const Footer: React.FC<IProps> = () => {
       title: t("learn"),
       links: [
         {
+          to: `/learn/`,
+          text: t("learn-hub"),
+        },
+        {
           to: `/what-is-ethereum/`,
           text: t("what-is-ethereum"),
         },
@@ -111,8 +115,28 @@ const Footer: React.FC<IProps> = () => {
           text: t("ethereum-wallets"),
         },
         {
-          to: `/learn/`,
-          text: t("guides-and-resources"),
+          text: t("ethereum-security"),
+          to: "/security/",
+        },
+        {
+          text: t("web3"),
+          to: "/web3/",
+        },
+        {
+          text: t("smart-contracts"),
+          to: "/smart-contracts/",
+        },
+        {
+          text: t("energy-consumption"),
+          to: "/energy-consumption/",
+        },
+        {
+          text: t("ethereum-roadmap"),
+          to: "/roadmap/",
+        },
+        {
+          to: "/eips/",
+          text: t("eips"),
         },
         {
           to: "/history/",
@@ -121,14 +145,6 @@ const Footer: React.FC<IProps> = () => {
         {
           to: "/whitepaper/",
           text: t("ethereum-whitepaper"),
-        },
-        {
-          text: t("ethereum-roadmap"),
-          to: "/roadmap/",
-        },
-        {
-          text: t("ethereum-security"),
-          to: "/security/",
         },
         {
           to: `/glossary/`,
@@ -147,16 +163,8 @@ const Footer: React.FC<IProps> = () => {
           to: "/zero-knowledge-proofs/",
         },
         {
-          text: t("energy-consumption"),
-          to: "/energy-consumption/",
-        },
-        {
-          text: t("web3"),
-          to: "/web3/",
-        },
-        {
-          to: "/eips/",
-          text: t("eips"),
+          text: t("quizzes-title"),
+          to: "/quizzes/",
         },
       ],
     },

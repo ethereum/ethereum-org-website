@@ -17,6 +17,7 @@ import { Lang } from "../utils/languages"
 import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
 import * as url from "../utils/url"
 import { Direction } from "../types"
+import { SITE_URL, DISCORD_PATH } from "../constants"
 
 export interface IBaseProps {
   to?: string
@@ -63,8 +64,10 @@ const Link: React.FC<IProps> = ({
 
   // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
   // this is to support the ButtonLink component which uses the `to` prop
-  const to = (toProp ?? href)!
+  let to = (toProp ?? href)!
 
+  const isDiscordInvite = url.isDiscordInvite(to)
+  if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
   const isExternal = url.isExternal(to)
   const isHash = url.isHash(to)
   const isGlossary = url.isGlossary(to)
@@ -133,13 +136,15 @@ const Link: React.FC<IProps> = ({
         }}
         {...commonProps}
       >
-        {children}
-        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-        {!hideArrow && (
-          <Box as="span" ml={0.5} mr={1.5} aria-hidden>
-            ↗
-          </Box>
-        )}
+        <>
+          {children}
+          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+          {!hideArrow && (
+            <Box as="span" ml={0.5} mr={1.5} aria-hidden>
+              ↗
+            </Box>
+          )}
+        </>
       </ChakraLink>
     )
   }
@@ -155,19 +160,21 @@ const Link: React.FC<IProps> = ({
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
     >
-      {children}
-      {isGlossary && (
-        <Icon
-          as={BsQuestionSquareFill}
-          aria-label="See definition"
-          fontSize="12px"
-          margin="0 0.25rem 0 0.35rem"
-          _hover={{
-            transition: "transform 0.1s",
-            transform: "scale(1.2)",
-          }}
-        />
-      )}
+      <>
+        {children}
+        {isGlossary && (
+          <Icon
+            as={BsQuestionSquareFill}
+            aria-label="See definition"
+            fontSize="12px"
+            margin="0 0.25rem 0 0.35rem"
+            _hover={{
+              transition: "transform 0.1s",
+              transform: "scale(1.2)",
+            }}
+          />
+        )}
+      </>
     </ChakraLink>
   )
 }

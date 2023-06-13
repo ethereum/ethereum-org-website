@@ -40,7 +40,7 @@ import type { ChildOnlyProp } from "../../types"
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
-    <Box
+    <Text
       fontSize="xl"
       lineHeight={1.4}
       color="text200"
@@ -49,7 +49,7 @@ const Subtitle = ({ children }: ChildOnlyProp) => {
       }}
     >
       {children}
-    </Box>
+    </Text>
   )
 }
 
@@ -775,6 +775,11 @@ export const query = graphql`
       }
     }
     apex: file(relativePath: { eq: "wallets/apex.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    shapeshift: file(relativePath: { eq: "wallets/shapeshift.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
