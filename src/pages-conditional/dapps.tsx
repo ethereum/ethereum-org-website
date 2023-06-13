@@ -627,6 +627,13 @@ const DappsPage = ({
       image: getImage(data.pwn),
       alt: t("page-dapps-pwn-image-alt"),
     },
+    {
+      title: "Yearn",
+      description: t("page-dapps-dapp-description-yearn"),
+      link: "https://yearn.finance/",
+      image: getImage(data.yearn),
+      alt: t("page-dapps-yearn-image-alt"),
+    },
   ]
 
   const dex = [
@@ -1774,6 +1781,9 @@ export const query = graphql`
       ...dappImage
     }
     pwn: file(relativePath: { eq: "dapps/pwn.png" }) {
+      ...dappImage
+    }
+    yearn: file(relativePath: { eq: "dapps/yearn.png" }) {
       ...dappImage
     }
     balancer: file(relativePath: { eq: "dapps/balancer.png" }) {
