@@ -112,18 +112,6 @@ const BeaconChainActions: React.FC = () => {
             <Translation id="page-upgrades-index-staking-learn" />
           </ButtonLink>
         </Card>
-        <Card
-          w="full"
-          mr={0}
-          ml={{ base: 0, md: 4 }}
-          emoji=":computer:"
-          title={t("consensus-run-beacon-chain")}
-          description={t("consensus-run-beacon-chain-desc")}
-        >
-          <ButtonLink variant="outline" to="/upgrades/get-involved/">
-            <Translation id="consensus-run-beacon-chain" />
-          </ButtonLink>
-        </Card>
       </Flex>
       <H3>
         <Translation id="consensus-explore" />

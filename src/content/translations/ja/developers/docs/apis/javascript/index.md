@@ -10,7 +10,7 @@ Web アプリはイーサリアムブロックチェーンとやりとりを行�
 
 JavaScript でイーサリアムノードに接続する場合、通常の JavaScript を使用することは可能です。しかし、エコシステム内には、作業をより簡単にするいくつかの便利なライブラリがあります。 これらのライブラリにより、デベロッパーは直感的な 1 行のメソッドを作成するだけで、イーサリアムとやり取りする JSON-RPC リクエストを (内部的に) 初期化できるようになります。
 
-[マージ](/upgrades/merge/)以降は、ノードの実行には、実行クライアントとコンセンサスクライアントという 2 つのつながったイーサリアムソフトウェアが必要になることに注意してください。 必ず、ノードに実行クライアントとコンセンサスクライアントの両方が含まれるようにしてください。 ノードがローカルマシン上にない (ノードが AWS インスタンス上で動作しているなど) 場合は、適宜、チュートリアルの IP アドレスをアップデートしてください。 詳細については、[ノードの実行](/developers/docs/nodes-and-clients/run-a-node/)ページをご覧ください。
+[マージ](/roadmap/merge/)以降は、ノードの実行には、実行クライアントとコンセンサスクライアントという 2 つのつながったイーサリアムソフトウェアが必要になることに注意してください。 必ず、ノードに実行クライアントとコンセンサスクライアントの両方が含まれるようにしてください。 ノードがローカルマシン上にない (ノードが AWS インスタンス上で動作しているなど) 場合は、適宜、チュートリアルの IP アドレスをアップデートしてください。 詳細については、[ノードの実行](/developers/docs/nodes-and-clients/run-a-node/)ページをご覧ください。
 
 ## 前提知識 {#prerequisites}
 
@@ -274,17 +274,22 @@ ethers.utils.formatEther(balance)
 - [ドキュメント](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**viem -** **_イーサリアム用の TypeScript インターフェース。_**
+
+- [ドキュメント](https://viem.sh)
+- [GitHub](https://github.com/wagmi-dev/viem)
+
 ## 参考文献 {#further-reading}
 
 _役に立つコミュニティリソースをご存知の場合は、 このページを編集して追加してください。_
 
 ## 関連トピック {#related-topics}
 
-- [ノードとクライアント](/developers/docs/nodes-and-clients/)
+- [ ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [開発フレームワーク](/developers/docs/frameworks/)
 
 ## 関連チュートリアル {#related-tutorials}
 
 - [Javascript でイーサリアムブロックチェーンを使用するための Web3js のセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトで web3.js をセットアップするための手順。_
-- [JavaScript からスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Dai トークンを使用することで、JavaScript を使用してスマートコントラクト関数を呼び出す方法を確認できます。_
+- [JavaScript からスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI トークンを使って、JavaScript からスマートコントラクトを呼び出す方法を確認する。_
 - [Web3 と Alchemy を使用してトランザクションを送信する](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– バックエンドからトランザクションを送信するための段階的ガイド。_

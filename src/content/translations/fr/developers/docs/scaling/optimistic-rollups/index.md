@@ -16,7 +16,7 @@ Les rollups optimisés s'installent en parallèle à la chaîne principale d'Eth
 
 Avec les rollups optimisés, les transactions sont codées sur la chaîne principale Ethereum en tant que `données d'appel`, ce qui les optimise davantage en réduisant les frais de gaz.
 
-Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de [chaînes de fragments](/upgrades/sharding) puisque plus de données seront disponibles si une transaction est contestée.
+Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de [chaînes de fragments](/roadmap/danksharding) puisque plus de données seront disponibles si une transaction est contestée.
 
 ### Contestation des transactions {#disputing-transactions}
 
@@ -52,7 +52,6 @@ Plusieurs implémentations de Rollups optimisés existent, que vous pouvez inté
 **Lecture à propos des rollups optimisés**
 
 - [Tout ce que vous devez savoir sur les rollups optimisés](https://research.paradigm.xyz/rollups)
-- [EthHub sur rollups optimisés](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Le guide essentiel pour Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Comment fonctionne réellement le rollup d'Optimism ?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

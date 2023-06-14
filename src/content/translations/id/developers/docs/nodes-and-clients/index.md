@@ -241,9 +241,7 @@ Sama seperti konfigurasi lainnya, ia dapat ditentukan dengan bendera startup ata
 
 ## Klien konsensus (sebelumnya klien 'Eth2') {#consensus-clients}
 
-Ada beberapa klien konsensus (sebelumnya dikenal sebagai klien 'Eth2') untuk mendukung [peningkatan konsensus](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[Lihat klien konsensus](/upgrades/get-involved/#clients).
+Ada beberapa klien konsensus (sebelumnya dikenal sebagai klien 'Eth2') untuk mendukung [peningkatan konsensus](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | Klien                                                       | Bahasa     | Sistem operasi        | Jaringan                             |
 | ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------ |
@@ -306,7 +304,6 @@ Ada banyak informasi tentang klien Ethereum di internet. Berikut adalah beberapa
 
 - [Ethereum 101 - Bagian 2 - Memahami Node](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 Februari 2019_
 - [Menjalankan Node Penuh Ethereum: Panduan bagi Mereka yang Hampir Tidak Termotivasi](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
-- [Menjalankan Node Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, sering diperbarui_
 - [Menganalisis persyaratan perangkat keras untuk menjadi node tervalidasi penuh Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Menjalankan Node Hyperledger Besu di Jaringan Utama Ethereum: Keuntungan, Persyaratan, dan Penyiapan](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Mei 2020_
 

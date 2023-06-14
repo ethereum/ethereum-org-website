@@ -17,6 +17,8 @@ summaryPoints:
 
 La mise en jeu individuelle consiste à [faire fonctionner un noeud Ethereum](/run-a-node/) connecté à Internet et à déposer 32 ETH pour activer un [validateur](#faq), vous donnant la possibilité de participer directement au consensus du réseau.
 
+**Le staking individuel augmente la décentralisation du réseau Ethereum**, rendant Ethereum plus résistant à la censure et robuste contre les attaques. D'autres méthodes de mises en jeu peuvent ne pas aider le réseau de la même manière. La mise en jeu individuelle est la meilleure option de staking pour sécuriser Ethereum.
+
 Un nœud Ethereum est constitué à la fois d'un client de couche d'exécution (EL) et d'un client de consensus (CL). Ces clients sont des logiciels qui se coordonnent, avec un ensemble valide de clés de signature, pour vérifier les transactions et les blocs, attester de la tête de la chaîne, agréger les attestations et proposer des blocs.
 
 Les validateurs individuels sont responsables du fonctionnement du matériel nécessaire à l'exécution de ces clients. Pour cela, il est fortement recommandé d'utiliser une machine dédiée que vous opérez depuis chez vous - c'est extrêmement bénéfique pour la santé du réseau.
@@ -28,15 +30,9 @@ Un validateur individuel reçoit des récompenses directement du protocole pour 
 La mise en jeu individuelle demande plus de responsabilités, mais vous donne un contrôle maximal sur vos fonds et votre configuration de mise en jeu.
 
 <CardGrid>
-  <Card title="Gagnez de l'ETH frais" emoji="💸">
-    Gagnez des récompenses en ETH, directement à partir du protocole lorsque votre validateur est en ligne, sans verser de commission à un quelconque intermédiaire.
-  </Card>
-  <Card title="Contrôle total" emoji="🎛️">
-    Gardez vos propres clés. Choisissez la combinaison des clients et du matériel qui vous permet de minimiser vos risques et de contribuer au mieux à la santé et à la sécurité du réseau. Les services tiers de mise en jeu prennent ces décisions pour vous, et ils ne font pas toujours les choix les plus sûrs.
-  </Card>
-  <Card title="Sécurité du réseau" emoji="🔐">
-    La mise en jeu individuelle est la façon la plus efficace de miser. En exécutant un validateur sur votre propre matériel depuis votre domicile, vous renforcez la solidité, la décentralisation et la sécurité du protocole Ethereum.
-  </Card>
+  <Card title="Gagnez de l'ETH frais" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Contrôle total" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Sécurité du réseau" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Considérations avant de miser de manière individuelle {#considerations-before-staking-solo}
@@ -57,7 +53,7 @@ Bien que nous souhaitions que la mise en jeu individuelle soit accessible et san
     <p style={{marginTop: "1rem"}}><a href="/security">Sécurité d'Ethereum et prévention des arnaques</a></p>
   </ExpandableCard>
   <ExpandableCard title="Pas de retrait (pour l'instant)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Il n'est pour l'instant pas possible de retirer les ETH misés ou les récompenses du solde d'un validateur. La prise en charge des retraits est prévue pour la prochaine mise à niveau Shanghai. Vous devriez vous attendre à ce que vos ETH soient immobilisés pendant au moins un à deux ans. Après la mise à niveau de Shanghai, vous pourrez retirer librement une partie ou la totalité de vos ETH mis en jeu.
+    Il n'est pour l'instant pas possible de retirer les ETH misés ou les récompenses du solde d'un validateur. La prise en charge des retraits est prévue pour la prochaine mise à niveau Shanghai. Après cela, les utilisateurs peuvent opter pour recevoir des paiements de récompense automatiquement, et peuvent retirer leur solde entier pour recevoir leurs fonds en retour.
   </ExpandableCard>
   <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
     Le matériel tombe parfois en panne, tout comme les connexions réseau, et les logiciels client ont parfois besoin d'être mis à jour. La maintenance des nœuds est inévitable et nécessitera occasionnellement votre attention. Il est préférable de se tenir au courant de toutes les mises à niveau du réseau prévues, ou d'autres mises à jour critiques des logiciels client.
@@ -78,9 +74,13 @@ Bien que nous souhaitions que la mise en jeu individuelle soit accessible et san
 
 <StakingHowSoloWorks />
 
-Si vous le désirez, vous pouvez vous retirer en tant que validateur, ce qui élimine l'obligation d'être en ligne et met fin à toute autre récompense. Sachez que jusqu'à ce que la mise à jour planifiée de Shanghai, il ne sera pas possible de _retirer_ ces fonds.
+Lorsque vous êtes actif, vous gagnerez des récompenses ETH, qui seront déposées périodiquement dans votre adresse de retrait.
 
-Après Shanghai, les utilisateurs pourront retirer leurs récompenses ainsi que leur mise en jeu s'ils le souhaitent.
+Si vous le désirez, vous pouvez vous retirer en tant que validateur, ce qui élimine l'obligation d'être en ligne et met fin à toute autre récompense. Votre solde restant sera alors retiré à l'adresse de retrait que vous avez désignée lors de la configuration.
+
+_La mise à niveau de Shanghai est nécessaire pour permettre les paiements de récompense et les retraits complets des validateurs sortis._
+
+[En savoir plus sur les retraits de mise en jeu](/staking/withdrawals/)
 
 ## Commencer avec la plateforme de lancement de la mise en jeu {#get-started-on-the-staking-launchpad}
 
@@ -120,7 +120,7 @@ Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consul
 
 <StakingGuides />
 
-## FAQ {#faq}
+## Questions fréquemment posées {#faq}
 
 Voici quelques-unes des questions les plus fréquentes relatives à la mise en jeu qui valent la peine d'être connues.
 
@@ -173,8 +173,18 @@ Bien qu'un serveur privé virtuel (VPS) puisse être utilisé en remplacement du
 Plus il y a de clients validateurs fonctionnant sur une seule solution de stockage en cloud centralisée, plus cela devient dangereux pour ces utilisateurs. Tout événement qui mettrait ces fournisseurs hors ligne, qu'il s'agisse d'une attaque, d'une demande réglementaire ou d'une simple panne de courant ou d'Internet, entraînera la mise hors ligne simultanée de tous les clients de validation qui dépendent de ce serveur.
 
 Les pénalités hors ligne sont proportionnelles au nombre de personnes se trouvant hors ligne au même moment. L'utilisation d'un VPS augmente considérablement le risque de voir les pénalités hors ligne devenir plus sévères, et accroît votre risque de fuite quadratique ou de délestage dans le cas où la panne serait suffisamment importante. Pour minimiser vos propres risques et ceux encourus par le réseau, les utilisateurs sont fortement encouragés à se procurer et à exploiter leur propre matériel.
+</ExpandableCard>
 
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">En savoir plus sur les récompenses et les pénalités</a>
+<ExpandableCard title="Comment débloquer mes récompenses ou récupérer mon ETH ?">
+Au moment de la mise à niveau de Shanghai, les paiements de récompense et les retraits complets des validateurs sortis commenceront. Les retraits de quelque nature que ce soit de la Chaîne Phare (Beacon Chain) exigent que les identifiants de retrait soient définis.
+
+Les nouvelles personnes plaçant des ETH définissent ceci au moment de la génération et du dépôt de clés. Les personnes ayant déjà placé des ETH qui n'ont pas déjà défini cela peuvent mètre à jour leurs clés. Leurs clés pourront ainsi supporter cette fonctionnalité après la mise à niveau de Shanghai.
+
+Une fois que les identifiants de retrait sont définis, les paiements de récompense (ETH cumulés par rapport aux 32 initiaux) seront distribués périodiquement à l'adresse de retrait automatiquement.
+
+Pour déverrouiller et recevoir la totalité de votre solde, vous devez également terminer le processus de sortie de votre validateur.
+
+<ButtonLink to="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
 </ExpandableCard>
 
 ## Complément d'information {#further-reading}
@@ -185,4 +195,3 @@ Les pénalités hors ligne sont proportionnelles au nombre de personnes se trouv
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
-- [Rewards and Penalties on Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_

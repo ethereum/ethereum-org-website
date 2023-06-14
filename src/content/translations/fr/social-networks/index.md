@@ -79,7 +79,7 @@ Reddit a [utilisé les Points Communautaires](https://cointelegraph.com/news/red
 
 Le programme est déjà en ligne, avec le subreddit r/CryptoCurrency [exécutant sa version de Points Communautaires appelée « Moons »](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Par description officielle, Moons « récompensent les affichages, les commentaires, et les modérateurs pour leurs contributions au subreddit ». Parce que ces jetons sont sur la blockchain (les utilisateurs les reçoivent dans des portefeuilles), ils sont indépendants de Reddit et ne peuvent pas être retirés.
 
-Après une phase bêta sur le réseau de test Rinkeby, les Points Communautaires Reddit sont maintenant sur [Arbitrum Nova](https://nova.arbitrum.io/), une blockchain qui combine les propriétés d'un [validium](/developers/docs/scaling/validium/) et d'un [rollup optimiste](/developers/docs/scaling/optimistic-rollups/). En plus d'utiliser des Points Communautaires pour débloquer des fonctionnalités spéciales, les utilisateurs peuvent également les échanger contre des monnaies officielles. De plus, le nombre de Points Communautaires qu'un utilisateur possède détermine son influence sur le processus décisionnel au sein de la communauté.
+Au terme d'une phase bêta sur le réseau de test Rinkeby, les Points de la Communauté Reddit sont maintenant sur [Arbitrum Nova](https://nova.arbitrum.io/), une blockchain qui combine les propriétés d'une chaine latérale [](/developers/docs/scaling/sidechains/) et d'un [Rollup optimisé](/developers/docs/scaling/optimistic-rollups/). En plus d'utiliser des Points Communautaires pour débloquer des fonctionnalités spéciales, les utilisateurs peuvent également les échanger contre des monnaies officielles. De plus, le nombre de Points Communautaires qu'un utilisateur possède détermine son influence sur le processus décisionnel au sein de la communauté.
 
 ### Twitter {#twitter}
 
@@ -94,16 +94,19 @@ En mai 2022, [Instagram a annoncé le support des NFT](https://about.instagram.c
 - **[Status](https://status.im/)** - _Status est une application de messagerie sécurisée qui utilise un code open source, un protocole peer-to-peer et un chiffrement de bout en bout pour protéger vos messages contre des tiers._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror est une plateforme de publication, détenue par les utilisateurs, décentralisée et basée sur Ethereum pour permettre aux utilisateurs de financer des projets, de monétiser du contenu et de construire des communautés de grande valeur._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol est un graphe social décentralisé et modulaire qui aide les créateurs à prendre en main leur contenu où qu'ils aillent dans le jardin numérique de l'internet décentralisé._
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster est un réseau social suffisamment décentralisé. C'est un protocole ouvert qui peut supporter de nombreux clients, tout comme l'e-mail._
 
 ## Lectures additionnelles {#further-reading}
 
 ### Articles {#articles}
 
+- [Décentralisation des réseaux sociaux : guide relatif à la pile sociale du web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [How Blockchain Can Solve Social Media Privacy](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Décentralisation suffisante pour les réseaux sociaux](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Vidéos {#videos}
 

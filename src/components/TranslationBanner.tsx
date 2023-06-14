@@ -35,6 +35,7 @@ const TranslationBanner: React.FC<IProps> = ({
 
   return (
     <Box
+      as="aside"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}
       right={{ base: 0, md: 8 }}

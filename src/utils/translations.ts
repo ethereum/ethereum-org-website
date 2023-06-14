@@ -1,10 +1,17 @@
 import type { Lang } from "./languages"
 import type { Direction } from "../types"
 
+import i18nConfigs from "../../i18n/config.json"
+
 export type TranslationKey = string
 
 export const isLangRightToLeft = (lang: Lang): boolean => {
-  return lang === "ar" || lang === "fa"
+  const langConfig = i18nConfigs.filter((language) => language.code === lang)
+
+  if (!langConfig.length)
+    throw new Error("Language code not found in isLangRightToLeft")
+
+  return langConfig[0].langDir === "rtl"
 }
 
 export const getDirection = (lang?: Lang): Direction => {

@@ -117,7 +117,7 @@ Trotz der zahlreichen Vorteile von Web3 in seiner jetzigen Form gibt es nach wie
 
 ### Zugänglichkeit {#accessibility}
 
-Wichtige Web3-Funktionen, wie z. B. das Anmelden mit Ethereum, sind bereits für jedermann zum Nulltarif verfügbar. Doch die relativen Transaktionskosten sind für viele noch immer unerschwinglich. Es ist wahrscheinlich, dass Web3 aufgrund der hohen Transaktionsgebühren in weniger wohlhabenden Entwicklungsländern womöglich weniger genutzt wird. Bei Ethereum werden diese Herausforderungen durch [Netzwerk-Upgrades](/upgrades/) und [Layer-2-Skalierungslösungen](/developers/docs/scaling/) gelöst. Die Technologie steht bereit. Doch wir benötigen einen höheren Grad an Akzeptanz auf Ebene 2, um Web3 allen zugänglich zu machen.
+Wichtige Web3-Funktionen, wie z. B. das Anmelden mit Ethereum, sind bereits für jedermann zum Nulltarif verfügbar. Doch die relativen Transaktionskosten sind für viele noch immer unerschwinglich. Es ist wahrscheinlich, dass Web3 aufgrund der hohen Transaktionsgebühren in weniger wohlhabenden Entwicklungsländern womöglich weniger genutzt wird. Bei Ethereum werden diese Herausforderungen durch [die Roadmap](/roadmap/) und [Layer-2-Skalierungslösungen](/developers/docs/scaling/) gelöst. Die Technologie steht bereit. Doch wir benötigen einen höheren Grad an Akzeptanz auf Ebene 2, um Web3 allen zugänglich zu machen.
 
 ### Benutzererfahrung {#user-experience}
 
@@ -157,3 +157,5 @@ Web3 ist nicht starr definiert. Zahlreiche Community-Teilnehmer haben unterschie
 - [Warum Dezentralisierung wichtig ist](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Chris Dixon_
 - [Die Web3-Landschaft](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [Die Web3-Debatte](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+
+<QuizWidget quizKey="web3" />

@@ -24,15 +24,9 @@ Alcuni pool operano utilizzando i contratti intelligenti, dove i fondi possono e
 Oltre ai vantaggi che abbiamo delineato nella nostra [introduzione allo staking](/staking/), lo staking mediante un pool viene fornito con una serie di vantaggi distinti.
 
 <CardGrid>
-  <Card title="Bassa barriera all’ingresso" emoji="🐟">
-    Non è una balena? Nessun problema. La maggior parte dei pool di staking ti permette di accumulare (staking) praticamente qualsiasi quantità di ETH unendo le forze con altri staker, a differenza dello staking in solitaria che richiede 32 ETH.
-  </Card>
-  <Card title="Inizia oggi" emoji=":stopwatch:">
-    Fare staking con un pool è facile come fare un token swap. Non c'è bisogno di preoccuparsi di installazione hardware e manutenzione del nodo. I pool ti consentono di depositare i tuoi ETH, il che consente agli operatori del nodo di eseguire i validatori. Le ricompense sono poi distribuite ai collaboratori, meno una commissione per le operazioni del nodo.
-  </Card>
-  <Card title="Token di liquidità" emoji=":droplet:">
-    Molti pool di staking forniscono un token che rappresenta una rivendicazione sui tuoi ETH in staking e le ricompense che genera. Questo ti consente di usare i tuoi ETH in staking, es. come garanzia nelle applicazioni DeFi.
-  </Card>
+  <Card title="Bassa barriera all’ingresso" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
+  <Card title="Inizia oggi" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
+  <Card title="Token di liquidità" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -41,7 +35,11 @@ Oltre ai vantaggi che abbiamo delineato nella nostra [introduzione allo staking]
 
 Lo staking in pool o delegato non è supportato nativamente dal protocollo di Ethereum, ma data la domanda degli utenti di mettere meno di 32 ETH in staking, sono state costruite sempre più soluzioni per soddisfare tale richiesta.
 
-Ogni pool e gli strumenti o i contratti intelligenti che usano sono stati creati da diversi team e, ognuno, presenta i propri rischi e benefici.
+Ogni pool e gli strumenti o i contratti intelligenti che utilizzano sono stati creati da team differenti e ognuno presenta i propri benefici e rischi. I pool consentono agli utenti di scambiare i propri ETH per un token che rappresenta gli ETH in staking. Il token è noto come un "derivato liquido dello staking"; questo è utile perché consente agli utenti di scambiare qualsiasi importo di ETH in un importo equivalente di un token che generi una resa dalle ricompense di staking applicate agli ETH in staking sottostanti (e viceversa), sugli scambi decentralizzati, sebbene gli ETH effettivi restino in staking sulla Beacon Chain. Ciò significa che lo scambio da e verso un prodotto di ETH in staking che generi una resa e gli "ETH grezzi" è rapido, facile e non solo disponibile in multipli di 32 ETH.
+
+Tuttavia, questi derivati liquidi dello staking tendono a creare comportamenti in stile cartello, in cui una grande quantità di ETH in staking finisce sotto il controllo di alcune organizzazioni centralizzate, piuttosto che distribuirsi a molti individui indipendenti. Ciò crea condizioni di censura o di estrazione del valore. Lo standard di riferimento per lo staking dovrebbe sempre prevedere l'esecuzione di validatori da parte di individui, sul proprio hardware, quando possibile.
+
+[Di più sui rischi dello staking di token](https://notes.ethereum.org/@djrtwo/risks-of-lsd).
 
 Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di forza o debolezze che un pool di staking elencato potrebbe avere. Usa questa sezione come un riferimento per come definire tali attributi mentre stai scegliendo un pool cui unirti.
 
@@ -66,10 +64,15 @@ Tipicamente, i token di liquidità ERC-20 sono emessi agli staker che rappresent
 </ExpandableCard>
 
 <ExpandableCard title="Quando posso prelevare il mio stake?">
+Al momento, è impossibile prelevare fondi da un validatore di Ethereum, il che limita l'abilità di <i>riscattare</i> effettivamente il tuo token di liquidità per le ricompense in ETH bloccate nel livello del consenso.
 
-Al momento, è impossibile prelevare fondi da un validatore di Ethereum, il che limita l'abilità di _riscattare_ effettivamente il tuo token di liquidità per le ricompense in ETH bloccate nel livello del consenso.
+L'aggiornamento della rete Shanghai introdurrà la funzionalità di prelievo, pianificata per il primo o secondo trimestre del 2023. Tutti gli ETH in staking resteranno bloccati fino ad allora.
+
+Dopo questo aggiornamento, i conti dei validatori che sostengono i pool di staking avranno la possibilità di uscire e prelevare ETH al proprio indirizzo designato di prelievo. Ciò consentirà di riscattare la porzione di stake per gli ETH sottostanti. Confrontati con il tuo fornitore per scoprire come supporta tale funzionalità.
 
 Altrimenti, i pool che usano un token di liquidità ERC-20 consentono agli utenti di scambiarlo nel mercato aperto, consentendoti di vendere la tua posizione di staking, "prelevando" effettivamente senza rimuovere realmente ETH dal contratto di staking.
+
+<ButtonLink to="/staking/withdrawals/">Di più sui prelievi di staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="È diverso dallo staking con la mia borsa?">

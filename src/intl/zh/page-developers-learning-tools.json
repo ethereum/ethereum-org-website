@@ -22,6 +22,8 @@
   "page-learning-tools-eth-dot-build-logo-alt": "Eth.build徽标",
   "page-learning-tools-ethernauts-description": "通过破解智能合约来闯关。",
   "page-learning-tools-ethernauts-logo-alt": "Ethernauts徽标",
+  "page-learning-tools-metaschool-description": "通过构建和发布去中心化应用程序成为 Web3 开发者。",
+  "page-learning-tools-metaschool-logo-alt": "_metschool 标志",
   "page-learning-tools-game-tutorials": "游戏式的互动教程",
   "page-learning-tools-game-tutorials-desc": "边玩边学。这些教程会让您通过玩游戏来了解基本知识。",
   "page-learning-tools-meta-desc": "基于网络的编码工具和交互式学习体验，帮助您体验以太坊的开发。",
@@ -29,8 +31,10 @@
   "page-learning-tools-questbook-description": "构建以下内容，通过自定义进度的教程来学习 Web 3.0",
   "page-learning-tools-questbook-logo-alt": "Questbook 徽标",
   "page-learning-tools-remix-description": "开发、部署和管理以太坊的智能合约。跟随Learneth插件随附教程学习。",
-  "page-learning-tools-remix-description-2": "Remix 和 Replit 不仅仅是沙盒——开发者可以使用它们编写、编译和部署他们的智能合约。",
+  "page-learning-tools-remix-description-2": "Remix、Replit 和 Replit 不仅仅是沙盒 — 开发者可以使用它们编写、编译和部署智能合约。",
   "page-learning-tools-replit-description": "一个可定制的以太坊开发环境，具有热重载、错误检查和一流的测试网支持。",
+  "page-learning-tools-chainIDE-description": "借助 ChainIDE 为以太坊编写智能合约，开始你的 Web3 之旅。使用内置模板学习并节省时间。",
+  "page-learning-tools-chainIDE-logo-alt": "ChainIDE 徽标",
   "page-learning-tools-replit-logo-alt": "Replit 徽标",
   "page-learning-tools-remix-logo-alt": "Remix徽标",
   "page-learning-tools-sandbox": "代码沙箱",
@@ -46,5 +50,7 @@
   "page-learning-tools-pointer-logo-alt": "指针标志",
   "page-learning-tools-platzi-description": "了解如何在 Web3 上构建去中心化应用程序，掌握成为区块链开发者所需的所有技能。",
   "page-learning-tools-platzi-logo-alt": "Platzi 徽标",
-  "alt-eth-blocks": "组织成类似ETH符号的区块示例"
+  "page-learning-tools-alchemy-university-description": "学习课程、项目和代码，发展你的 Web3 职业生涯。",
+  "page-learning-tools-alchemy-university-logo-alt": "Alchemy University 徽标",
+  "alt-eth-blocks": "积木被搭建成以太坊符号的图示"
 }

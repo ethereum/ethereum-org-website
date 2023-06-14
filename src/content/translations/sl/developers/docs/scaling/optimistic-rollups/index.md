@@ -16,7 +16,7 @@ Optimistični zvitki so vzporedno z glavno verigo Ethereum na plasti 2. Lahko po
 
 Pri optimističnih zvitkih so transakcije zapisane na glavno verigo Ethereum kot `calldata`, kar jih še bolj optimizira s tem, da zniža ceno goriva.
 
-Glede na to, da je računanje počasen in drag del uporabe Ethereuma, lahko optimistični zvitki ponudijo do 10- do 100-kratne izboljšave v razširljivosti transakcij. Ta številka se bo še bolj povečala s predstavitvijo [razdrobljenih verig](/upgrades/sharding), saj bo v primeru, da je transakcija izpodbijana, na voljo več podatkov.
+Glede na to, da je računanje počasen in drag del uporabe Ethereuma, lahko optimistični zvitki ponudijo do 10- do 100-kratne izboljšave v razširljivosti transakcij. Ta številka se bo še bolj povečala s predstavitvijo [razdrobljenih verig](/roadmap/danksharding), saj bo v primeru, da je transakcija izpodbijana, na voljo več podatkov.
 
 ### Izpodbijanje transakcij {#disputing-transactions}
 
@@ -52,7 +52,6 @@ Obstaja več implementacij optimističnih zvitkov, ki jih lahko integrirate v sv
 **Gradivo za branje o optimističnih zvitkih**
 
 - [Vse kar morate vedeti o Optimističnih zvitkih](https://research.paradigm.xyz/rollups)
-- [EthHub o optimističnih zvitkih](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Ključni vodnik za Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Kako zares deluje zvitek Optimizma?](https://research.paradigm.xyz/optimism)
 - [Globoki vpogled v OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

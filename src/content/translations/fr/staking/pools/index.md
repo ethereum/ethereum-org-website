@@ -24,15 +24,9 @@ Certains pools fonctionnent à l'aide de contrats intelligents, dans lesquels le
 En plus des avantages que nous avons décrits dans notre [introduction à la mise en jeu](/staking/), la mise en jeu mutualisée offre un certain nombres d'avantages spécifiques.
 
 <CardGrid>
-  <Card title="Barrière faible à l’entrée" emoji="🐟">
-    Pas une baleine ? Aucun problème. La plupart des pools vous permettent de mettre en jeu pratiquement n'importe quelle quantité d'ETH en unissant vos forces avec d'autres validateurs, contrairement à la mise en jeu individuelle qui nécessite 32 ETH.
-  </Card>
-  <Card title="La mise en jeu aujourd'hui" emoji=":stopwatch:">
-    Miser avec un pool est aussi facile que de faire un échange de jetons. Pas besoin de se soucier de la configuration du matériel et de la maintenance des nœuds. Les pools vous permettent de déposer votre ETH afin de permettre aux opérateurs de nœuds d'exécuter des validateurs. Les récompenses sont ensuite distribuées aux contributeurs après déduction des frais d'exploitation du nœud.
-  </Card>
-  <Card title="Jetons de liquidité" emoji=":droplet:">
-    De nombreux groupes d'enjeux fournissent un jeton qui représente un droit sur votre ETH misé et les gains qu'il génère. Cela vous permet d'utiliser votre ETH mis en jeu, par exemple comme garantie dans les applications DeFi.
-  </Card>
+  <Card title="Barrière faible à l’entrée" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
+  <Card title="La mise en jeu aujourd'hui" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
+  <Card title="Jetons de liquidité" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -41,9 +35,13 @@ En plus des avantages que nous avons décrits dans notre [introduction à la mis
 
 La mise en jeu mutualisée ou déléguée n'est pas prise en charge nativement par le protocole Ethereum, mais compte tenu de la demande des utilisateurs de miser moins de 32 ETH, un nombre croissant de solutions ont été construites pour répondre à cette demande.
 
-Les pools, ainsi que les outils ou les contrats intelligents qu'ils utilisent, ont été construits par différentes équipes et chacun d'entre eux a ses propres risques et avantages.
+Chaque pool et les outils ou contrats intelligents qu'ils utilisent ont été élaborés par différentes équipes, et chacun présente des avantages et des risques. Les pools permettent aux utilisateurs d'échanger leur ETH contre un jeton représentant l'ETH mis en jeu. Le jeton est connu sous le nom de « dérivé de staking liquide » ; ceci est utile parce que cela permet aux utilisateurs d'échanger n'importe quel montant d'ETH à un montant équivalent d'un jeton porteur de rendement qui génère un retour des récompenses de mise en jeu appliquées à l'ETH misé sous-jacent (et vice versa) sur les échanges décentralisés même si l'ETH réel reste misé sur la Chaîne phare (Beacon Chain). Cela signifie que les échanges entre un produit ETH mis en jeu générateur de rendement et l'« ETH brut» sont rapides, faciles et pas uniquement disponibles en multiples de 32 ETH.
 
-Les indicateurs d'attributs sont utilisés ci-dessous pour signaler des forces ou faiblesses notables qu'un groupe d'enjeux répertorié peut présenter. Utilisez cette section comme référence pour savoir comment nous définissons ces attributs lorsque vous choisissez un pool à rejoindre.
+Cependant, ces dérivés du staking liquide ont tendance à créer des comportements de type cartel, où une grande quantité d'ETH mis en jeu se retrouve sous le contrôle de quelques organisations centralisées plutôt que répartis entre de nombreux individus indépendants. Cela crée les conditions d'une censure ou d'une extraction de valeur. La norme d'excellence pour la mise en jeu devrait toujours porter sur des personnes individuelles qui exécutent des nœuds validateurs sur leur propre matériel, dans la mesure du possible.
+
+[En savoir plus sur les risques de la mise en jeu de jetons](https://notes.ethereum.org/@djrtwo/risks-of-lsd).
+
+Les indicateurs d'attributs sont utilisés ci-dessous pour signaler des forces ou faiblesses notables qu'un groupe de mise en jeu mutualisé peut présenter. Utilisez cette section comme référence pour savoir comment nous définissons ces attributs lorsque vous choisissez un pool à rejoindre.
 
 <StakingConsiderations page="pools" />
 
@@ -59,17 +57,22 @@ Veuillez noter l'importance de choisir un service qui prend au sérieux <a href=
 
 Avez-vous une suggestion concernant un outil de mise en jeu que nous avons manqué ? Consultez notre [politique de liste de produits](/contributing/adding-staking-products/) pour voir s'il conviendrait, et le soumettre à examen.
 
-## FAQ {#faq}
+## Questions fréquemment posées {#faq}
 
 <ExpandableCard title="Comment puis-je gagner des récompenses ?">
 Habituellement, les jetons de liquidité ERC-20 émis envers les validateurs représentent la valeur de leur ETH misé auquel s'ajoutent des récompenses. Gardez en mémoire que les différents pools distribueront des récompenses de mise en jeu à leurs utilisateurs selon des règles différentes, mais c'est un sujet général.
 </ExpandableCard>
 
 <ExpandableCard title="Quand puis-je retirer ma mise?">
+Actuellement, il n'est pas possible de retirer des fonds d'un validateur Ethereum, ce qui limite la capacité à réellement <i>échanger</i> votre jeton de liquidité en échange des récompenses ETH bloquées dans la couche de consensus.
 
-Actuellement, il n'est pas possible de retirer des fonds d'un validateur Ethereum, ce qui limite actuellement la capacité à réellement échanger votre jeton de liquidité en échange des récompenses ETH bloquées dans la couche de consensus.
+La mise à niveau du réseau de Shanghai introduira la fonctionnalité de retrait prévue pour le 12 avril 2023. Tous les ETH misés resteront verrouillés jusqu'à ce moment-là.
 
-Alternativement, les pools qui utilisent un jeton de liquidité ERC-20 permettent aux utilisateurs d'échanger ce jeton sur le marché ouvert, vous permettant de vendre votre position de mise en jeu, efficacement "retirer" sans pour autant retirer l'ETH du contrat de mise en jeu.
+Après cette mise à niveau, les comptes de validateur soutenant les pools de mise en jeu auront la possibilité de sortir et de retirer l'ETH à leur adresse de retrait désignée. Cela vous permettra de racheter votre part de participation d'ETH sous-jacent. Vérifiez auprès de votre fournisseur de services pour savoir comment il supporte cette fonctionnalité.
+
+Alternativement, les pools qui utilisent un jeton de liquidité ERC-20 permettent aux utilisateurs d'échanger ce jeton sur le marché ouvert, vous permettant de vendre votre position de mise en jeu, de réaliser dans les faits un "retrait" sans pour autant retirer l'ETH du contrat de mise en jeu.
+
+<ButtonLink to="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu.</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Est-ce différent de la mise en jeu via mon service d'échange ?">

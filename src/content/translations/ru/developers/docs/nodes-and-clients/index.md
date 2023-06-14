@@ -243,9 +243,7 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 ## Консенсус-клиенты (ранее — «клиенты Eth2») {#consensus-clients}
 
-Существует несколько консенсус-клиентов (ранее известных как «клиенты Eth2»), поддерживающих [обновления консенсуса](/upgrades/beacon-chain/). Они управляют цепочкой Beacon Chain и предоставят механизм консенсуса с доказательством владения клиентам-исполнителям после [слияния](/upgrades/merge/).
-
-[Взгляните на обзор консенсус-клиентов](/upgrades/get-involved/#clients).
+Существует несколько консенсус-клиентов (ранее известных как «клиенты Eth2»), поддерживающих [обновления консенсуса](/roadmap/beacon-chain/). Они управляют цепочкой Beacon Chain и предоставят механизм консенсуса с доказательством владения клиентам-исполнителям после [слияния](/roadmap/merge/).
 
 | Клиент                                                      | Язык       | Операционные системы  | Сети                                  |
 | ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
@@ -308,7 +306,6 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 - [Ethereum 101, часть 2: понимание узлов](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) — _Уил Барнс, 13 февраля 2019 г._
 - [Запуск полных узлов Ethereum: руководство для сомневающихся](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) — _Джастин Леру, 7 ноября 2019 г._
-- [Запуск узла Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) — _ETHHub, часто обновляется_
 - [Анализ требований к оборудованию, чтобы стать полностью проверенным узлом Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) — _Альберт Палау, 24 сентября 2018 г._
 - [Запуск узла Hyperledger Besu в основной сети Ethereum: преимущества, требования и настройка](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) — _Фелипе Фараджи, 7 мая 2020 г._
 

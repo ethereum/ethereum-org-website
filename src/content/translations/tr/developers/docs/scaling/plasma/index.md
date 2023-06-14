@@ -32,7 +32,6 @@ Birden çok proje, dapp'lerinize entegre edebileceğiniz Plazma uygulamaları sa
 
 ## Daha fazla bilgi {#further-reading}
 
-- [EthHub'un Plazma hakkındaki içerikleri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Plazmayı öğrenin](https://www.learnplasma.org/en/)
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_

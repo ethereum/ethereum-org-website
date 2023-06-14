@@ -1,6 +1,6 @@
 {
-  "page-index-hero-image-alt": "イーサリアム・エコシステムを表す未来的な都市のイラスト",
-  "page-index-meta-description": "イーサリアムは、お金と新しい種類のアプリケーションのためのグローバルな分散型プラットフォームです。 イーサリアムでは、お金を制御するコードを書くことができ、世界中のどこにいてもアクセス可能なアプリケーションを構築できます。",
+  "page-index-hero-image-alt": "イーサリアム・エコシステムが表現された近未来都市のイラスト",
+  "page-index-meta-description": "イーサリアムは、貨幣と新しい種類のアプリケーションのための包括的かつ分散化されたプラットフォームです。イーサリアム上では、貨幣を制御するコードを書いたり、世界のどこからでもアクセス可能なアプリケーションを構築できます。",
   "page-index-meta-title": "ホーム",
   "page-index-title": "イーサリアムへようこそ",
   "page-index-description": "イーサリアムは、暗号通貨Ether (ETH) 、何千もの分散型アプリを可能にするコミュニティにより運用されているテクノロジーです。",
@@ -48,6 +48,7 @@
   "page-index-developers-code-example-description-3": "既存のサービスを分散化された公開アプリとして再構築することができます。",
   "page-index-network-stats-title": "現在のイーサリアム",
   "page-index-network-stats-subtitle": "最新のネットワーク統計",
+  "page-index-network-stats-total-eth-staked": "ETHステーキング合計",
   "page-index-network-stats-eth-price-description": "ETH価格(米ドル)",
   "page-index-network-stats-eth-price-explainer": "1 ETHの最新価格です。0.0000000000000001から購入できます。1 ETH全てを購入する必要はありません。",
   "page-index-network-stats-tx-day-description": "現在のトランザクション",

@@ -27,7 +27,3 @@ export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
     </Box>
   )
 }
-
-export const SkipLinkAnchor: React.FC<{ id: string }> = ({ id }) => {
-  return <Box height="80px" mt="-80px" id={id}></Box>
-}

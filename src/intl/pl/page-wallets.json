@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "Twoje konto Ethereum",
   "page-wallets-your-ethereum-account-desc": "Twój portfel to okno na konto Ethereum - Twoje saldo konta, historia transakcji i inne. Możesz jednak zmienić dostawców portfela w dowolnym momencie.",
   "page-wallets-your-login": "Twój login dla aplikacji Ethereum",
-  "page-wallets-your-login-desc": "Twój portfel pozwala Ci połączyć się z dowolną zdecentralizowaną aplikacją przy użyciu konta Ethereum. To jest jak logowanie, którego możesz używać w wielu aplikacjach."
+  "page-wallets-your-login-desc": "Twój portfel pozwala Ci połączyć się z dowolną zdecentralizowaną aplikacją przy użyciu konta Ethereum. To jest jak logowanie, którego możesz używać w wielu aplikacjach.",
+  "additional-reading-how-to-register-an-ethereum-account": "Jak „zarejestrować” konto Ethereum",
+  "additional-reading-how-to-use-a-wallet": "Jak używać portfela"
 }

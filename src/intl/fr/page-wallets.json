@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "Votre compte Ethereum",
   "page-wallets-your-ethereum-account-desc": "Votre portefeuille est votre fenêtre sur votre compte Ethereum - votre solde, l'historique des transactions et bien plus. Mais vous pouvez changer de fournisseur de portefeuille à tout moment.",
   "page-wallets-your-login": "Votre compte pour les applications Ethereum",
-  "page-wallets-your-login-desc": "Votre portefeuille vous permet de vous connecter à n'importe quelle application décentralisée à l'aide de votre compte Ethereum. C'est comme une connexion que vous pouvez utiliser sur plusieurs DApps."
+  "page-wallets-your-login-desc": "Votre portefeuille vous permet de vous connecter à n'importe quelle application décentralisée à l'aide de votre compte Ethereum. C'est comme une connexion que vous pouvez utiliser sur plusieurs DApps.",
+  "additional-reading-how-to-register-an-ethereum-account": "Comment \"créer\" un compte Ethereum",
+  "additional-reading-how-to-use-a-wallet": "Comment utiliser un portefeuille"
 }

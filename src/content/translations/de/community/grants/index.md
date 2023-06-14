@@ -20,7 +20,8 @@ Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem s
 - [Moloch DAO](https://www.molochdao.com/) – _Datenschutz, Layer-2-Skalierung, Kundensicherheit und mehr_
 - [Offene Zuschüsse](https://opengrants.com/explore)
 - [DAO-Stipendien](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google-Tabelle der Organisationen, die Stipendien anbieten_
-- [Akademische Stipendien](https://esp.ethereum.foundation/academic-grants-2023) – _Stipendien zur Untstützung akademischer Arbeiten in Bezug auf Ethereum_
+- [Crunchbase für Web3-Grants](https://www.cryptoneur.xyz/web3-grants) - _Filter und suche nach Grants nach Kategorie, Anwendungsfall, Betrag und mehr. Hilf anderen dabei, die richtige Zuwendung zu finden._
+- [Akademische Stipendien](https://esp.ethereum.foundation/academic-grants) – _Stipendien zur Untstützung akademischer Arbeiten in Bezug auf Ethereum_
 
 ## Projektspezifisch {#project-specific}
 
@@ -30,8 +31,9 @@ Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklun
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
 - [Chainlink-Förderprogramm](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) Gemeinschaftsförderungen_
 - [Programm für Verbundzuschüsse](https://compoundgrants.org/) – _[Verbund](https://compound.finance/)-Finanzökosystem_
+- [Decentraland-Zuschussprogramm](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)-Finanzökosystem_
-- [MetaMask-Programm](https://metamaskgrants.org/) – _Mitarbeitergeleitete DAO für[MetaMask](https://metamask.io/)-Stipendien_
+- [MetaMask-Programm](https://metamaskgrants.org/) – _Von Mitarbeitern geleitete DAO für[MetaMask](https://metamask.io/)-Stipendien_
 - [mStable-Zuschussprogram](https://docs.mstable.org/advanced/grants-program) – _[mStable](https://mstable.org/)-Gemeinschaft_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-Ökosystem_
 - [UMA Grants Program](https://grants.umaproject.org/) – _[UMA](https://umaproject.org/)-Entwicklerunterstützung_

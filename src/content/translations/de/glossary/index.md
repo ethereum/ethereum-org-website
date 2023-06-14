@@ -77,7 +77,7 @@ Jeder [Block](#block) hat einen Mindestpreis, der als „Grundgebühr" bezeichne
 
 Die Beacon Chain ist die Blockchain, die [Proof-of-Stake](#pos) und [Validatoren](#validator) in Ethereum eingeführt hat. Sie hat seit November 2020 parallel zum Proof-of-Work Ethereum Mainnet gearbeitet, bis beide Blockchains im September 2022 vereinigt wurden, um das heutige Ethereum zu formen.
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Beacon Chain
 </DocLink>
 
@@ -274,7 +274,7 @@ Eine netzwerkweite Einstellung, die bestimmt, wie viel Berechnung erforderlich i
 
 ### Schwierigkeitsbombe/Schwierigkeitssprenger {#difficulty-bomb}
 
-Geplante exponentielle Erhöhung der [Proof-of-Work](#pow) [Schwierigkeit](#difficulty), um den Übergang zu [Proof-of-Stake](#pos) anzuregen und die Wahrscheinlichkeit einer [Abspaltung](#hard-fork) zu verringern. Die Schwierigkeitsbombe wurde bei [dem Merge](/upgrades/merge/) entfernt.
+Geplante exponentielle Erhöhung der [Proof-of-Work](#pow) [Schwierigkeit](#difficulty), um den Übergang zu [Proof-of-Stake](#pos) anzuregen und die Wahrscheinlichkeit einer [Abspaltung](#hard-fork) zu verringern. Die Schwierigkeitsbombe wurde bei [dem Merge](/roadmap/merge/) entfernt.
 
 ### Digitale Signatur {#digital-signatures}
 
@@ -324,7 +324,7 @@ Ein Validator, der zwei Nachrichten sendet, die sich widersprechen. Ein einfache
 
 „Eth1" ist ein Begriff, der sich auf das Ethereum-Mainnet die bestehende Proof-of-Work Blockchain, bezieht. Dieser Begriff ist inzwischen im Vergleich zum Begriff „Ausführungsebene" veraltet. [Erfahren Sie mehr über diese Namensänderung](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Mehr zu den Ethereum-Upgrades
 </DocLink>
 
@@ -332,7 +332,7 @@ Ein Validator, der zwei Nachrichten sendet, die sich widersprechen. Ein einfache
 
 „Eth2" ist ein Begriff, der sich auf eine Reihe von Upgrades des Ethereum-Protokolls bezieht, einschließlich des Übergangs von Ethereum zu Proof-of-Stake. Dieser Begriff ist inzwischen im Vergleich zum Begriff „Konsensschicht" veraltet. [Erfahren Sie mehr über diese Namensänderung](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Mehr zu den Ethereum-Upgrades
 </DocLink>
 
@@ -823,7 +823,7 @@ Eine Familie kryptografischer Hashfunktionen, die vom National Institute of Stan
 
 Die Phase der Ethereum-Entwicklung, die eine Reihe von Skalierungs- und Nachhaltigkeitsverbesserungen einleitete und früher als „Ethereum 2.0" oder „Eth2" bekannt war.
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Die Ethereum-Upgrades
 </DocLink>
 
@@ -835,7 +835,7 @@ Der Prozess der Umwandlung einer Datenstruktur in eine Sequenz von Bytes.
 
 Fragmentierungsketten sind diskrete Abschnitte der gesamten Blockchain, für die Untergruppen von Validatoren verantwortlich sein können. Fragmentierungsketten werden einen erhöhten Transaktionsdurchsatz für Ethereum bieten, indem sie zusätzliche Daten für [Layer 2](#layer-2) Lösungen wie [Optimistische Gruppierungen](#optimistic-rollups) und [ZK-Gruppierungen](#zk-rollups) bereitstellen.
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/roadmap/danksharding">
   Fragmentierungsketten
 </DocLink>
 

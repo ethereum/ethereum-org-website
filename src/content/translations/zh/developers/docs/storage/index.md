@@ -46,6 +46,9 @@ lang: zh
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
+- [Crust Network](https://crust.network)
+- [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### 其他注意事项 {#additional-consideration}
 
@@ -55,27 +58,34 @@ lang: zh
 - [Pinata](https://www.pinata.cloud/)_（星际文件系统固定服务）_
 - [web3.storage](https://web3.storage/)_（星际文件系统/菲乐币固定服务）_
 - [Infura](https://infura.io/product/ipfs)_（星际文件系统固定服务）_
+- [IPFS Scan](https://ipfs-scan.io) _（星际文件系统固定浏览器）_
+- [4EVERLAND](https://www.4everland.org/)_（星际文件系统固定服务）_
+- [Filebase](https://filebase.com)_（星际文件系统固定服务）_
+
+SWARM 是一种去中心化的数据存储和分发技术，具有存储激励系统和存储空间租金价格预言机。
 
 ## 数据留存 {#data-retention}
 
-为了保留数据，系统必须有某种机制，以确保数据得到保留。
+为了保留数据，系统必须有某种机制，确保数据得到保留。
 
 ### 质疑机制 {#challenge-mechanism}
 
-确保保留数据的一个最常见方法是使用向节点发出的某种类型的密码质询，以确保它们仍然持有数据。 一种简单的方法是查看 Arweave 的访问证明。 他们向节点发出质疑，以查看它们是否在最近的区块和过去的随机区块中都具有数据。 如果节点无法给出答案，则会受到惩罚。
+一种最常见的确保保留数据的方法是使用某种类型的密码质询，这种加密质询向节点发出，确保它们仍然持有数据。 一种简单的方法是查看 Arweave 的访问证明。 他们向节点发出质询，查看它们是否在最近的区块和过去的随机区块中都具有数据。 如果节点无法给出答案，则会受到惩罚。
 
-具有质疑机制的去中心化存储类型：
+具有质询机制的去中心化存储类型：
 
 - 0Chain
 - Skynet
 - Arweave
 - Filecoin
+- Crust Network
+- 4EVERLAND
 
 ### 去中心化 {#decentrality}
 
-没有很好的工具来衡量平台的去中心化程度，但一般来说，您可能想使用那些没有某种形式的 KYC 的工具证明它们实际上是去中心化的。
+没有有效的工具来衡量平台的去中心化程度，但一般来说，您可能想使用那些没有某种形式的身份验证的工具来证明平台并未中心化。
 
-不使用 KYC 的去中心化工具：
+不使用身份验证的去中心化工具：
 
 - 0Chain（实现非 KYC 版本）
 - Skynet
@@ -83,21 +93,24 @@ lang: zh
 - Filecoin
 - 星际文件系统
 - 以太坊
+- Crust Network
+- 4EVERLAND
 
 ### 共识 {#consensus}
 
-这些工具大多有自己的 [共识机制](/developers/docs/consensus-mechanisms/) 版本，但一般都是基于[**工作量证明（PoW）**](/developers/docs/consensus-mechanisms/pow/) 或者[**权益证明（PoS）**](/developers/docs/consensus-mechanisms/pos/)。
+这些工具大多有自己的[共识机制](/developers/docs/consensus-mechanisms/)版本，但一般都是基于[**工作量证明 (PoW)**](/developers/docs/consensus-mechanisms/pow/) 或[**权益证明 (PoS)**](/developers/docs/consensus-mechanisms/pos/)。
 
-基于工作量证明：
+基于工作量证明的工具：
 
 - Skynet
 - Arweave
 
-基于权益证明：
+基于权益证明的工具：
 
 - 以太坊
 - Filecoin
 - 0Chain
+- Crust Network
 
 ## 相关工具 {#related-tools}
 
@@ -111,14 +124,15 @@ lang: zh
 
 - [Storj.io](https://storj.io/)
 - [相关文档](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
-**Skynet - _Skynet 是一条去中心化 PoW 链，专用于去中心化网络。_**
+**Skynet - _Skynet 是一条去中心化的工作量证明链，专用于去中心化网络。_**
 
 - [Skynet.net](https://siasky.net/)
 - [相关文档](https://siasky.net/docs/)
 - [GitHub](https://github.com/SkynetLabs/)
 
-**Filecoin - _Filecoin 是由星际文件系统背后的同一团队打造。 它是星际文件系统之上的一个激励层。_**
+**Filecoin - _Filecoin 由星际文件系统背后的同一团队打造。 它是星际文件系统概念之上的一个激励层。_**
 
 - [Filecoin.io](https://filecoin.io/)
 - [相关文档](https://docs.filecoin.io/)
@@ -130,13 +144,19 @@ lang: zh
 - [相关文档](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain 是一个具有区块分片和 blobbers 的基于权益证明的去中心化存储平台。_**
+**0chain - _0Chain 是一个基于权益证明的去中心化存储平台，具有区块分片和 blobber。_**
 
 - [0Chain.net](https://0chain.net/)
 - [相关文档](https://docs.0chain.net/0chain/)
 - [GitHub](https://github.com/0chain/)
 
-**Swarm - _以太坊 web3 堆栈的分布式存储平台和内容分发服务。_**
+**Crust Network - _Crust 是基于星际文件系统的去中心化存储平台。_**
+
+- [Crust.network](https://crust.network)
+- [相关文档](https://wiki.crust.network)
+- [Github](https://github.com/crustio)
+
+**Swarm - _以太坊 Web3 堆栈的分布式存储平台和内容分发服务。_**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
 - [相关文档](https://docs.ethswarm.org/docs/)
@@ -148,7 +168,7 @@ lang: zh
 - [相关文档](https://github.com/orbitdb/field-manual/)
 - [GitHub](https://github.com/orbitdb/orbit-db/)
 
-**Aleph.im - _去中心化云项目（数据库、文件存储、计算和 DID）。 独特的链下和链上点对点技术融合。 星际文件系统以及多链兼容性。_**
+**Aleph.im - _去中心化云项目（数据库、文件存储、计算和去中心化身份）。 独特的链下和链上点对点技术融合。 星际文件系统以及多链兼容性。_**
 
 - [Aleph.im](https://aleph.im/)
 - [相关文档](https://aleph.im/#/developers/)
@@ -160,18 +180,30 @@ lang: zh
 - [相关文档](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _第一个兼容 S3 的对象存储平台，允许您跨多个去中心化存储网络存储数据，包括星际文件系统、Sia、Skynet 和 Storj。_**
+**Filebase - _ S3 兼容的去中心化存储和地理冗余星际文件系统固定服务。 所有通过 Filebase 上传到星际文件系统的文件都会自动被固定到 Filebase 基础设施，在全球复制 3 份。_**
 
 - [Filebase.com](https://filebase.com/)
 - [相关文档](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
 
+**4EVERLAND - _Web 3.0 云计算平台，集存储、计算和网络核心能力于一体，兼容 S3，在星际文件系统和 Arweave 等去中心化存储网络上提供同步数据存储。_**
+
+- [4everland.org](https://www.4everland.org/)
+- [相关文档](https://docs.4everland.org/)
+- [GitHub](https://github.com/4everland)
+
+**Kaleido - _一个具有点击按钮星际文件系统节点的区块链即服务平台_**
+
+- [Kaleido](https://kaleido.io/)
+- [相关文档](https://docs.kaleido.io/kaleido-services/ipfs/)
+- [GitHub](https://github.com/kaleido-io)
+
 ## 延伸阅读 {#further-reading}
 
 - [什么是去中心化存储？](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
-- [击破关于去中心化存储的五种谣传](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
+- [打破关于去中心化存储的五种谣传](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加它！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 

@@ -133,7 +133,7 @@ Harga gas sendiri sebenarnya tidak menentukan jumlah yang harus kita bayarkan un
 
 ## Inisiatif untuk mengurangi biaya gas {#initiatives-to-reduce-gas-costs}
 
-[Peningkatan skalabilitas](/upgrades/) Ethereum seharusnya akan menyelesaikan beberapa masalah biaya gas, hasilnya yang akan memungkinkan platform untuk memroses ribuan transaksi per detik dan melakukan penskalaan secara global.
+[Peningkatan skalabilitas](/roadmap/) Ethereum seharusnya akan menyelesaikan beberapa masalah biaya gas, hasilnya yang akan memungkinkan platform untuk memroses ribuan transaksi per detik dan melakukan penskalaan secara global.
 
 Penskalaan lapisan 2 adalah inisiatif utama untuk sangat meningkatkan biaya gas, pengalaman pengguna, dan skalabilitas. [Selengkapnya tentang penskalaan lapisan 2](/developers/docs/scaling/#layer-2-scaling).
 
@@ -161,7 +161,6 @@ Jika ingin memantau harga gas, sehingga Anda dapat mengirim ETH lebih murah, And
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Gas Ethereum Dijelaskan](https://defiprime.com/gas)
-- [Apakah Ethereum lebih mahal untuk digunakan karena harga naik?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Mengurangi pemakaian gas Kontrak Pintar Anda](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Bukti Taruhan versus Bukti Kerja](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

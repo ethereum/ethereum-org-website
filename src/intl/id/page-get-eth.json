@@ -43,9 +43,7 @@
   "page-get-eth-security": "Tetapi ini juga berarti Anda harus memperhatikan keamanan dana Anda dengan serius. Dengan ETH, Anda tidak mempercayai bank untuk menjaga uang Anda, percayakan pada diri Anda sendiri.",
   "page-get-eth-smart-contract-link": "Lebih lanjut tentang kontrak pintar",
   "page-get-eth-swapping": "Tukar token Anda dengan ETH orang lain. Dan sebaliknya.",
-  "page-get-eth-traditional-currencies": "Beli dengan kurs tradisional",
-  "page-get-eth-traditional-payments": "Beli ETH dengan jenis pembayaran tradisional langsung dari penjual.",
-  "page-get-eth-try-dex": "Coba Dex",
+  "page-get-eth-try-dex": "Coba DEX",
   "page-get-eth-use-your-eth": "Gunakan ETH Anda",
   "page-get-eth-use-your-eth-dapps": "Karena sekarang Anda telah memiliki beberapa ETH, lihat beberapa aplikasi Ethereum (dapp). Ada dapp untuk keuangan, media sosial, aktivitas game, dan banyak kategori lainnya.",
   "page-get-eth-wallet-instructions": "Ikuti instruksi dompet",
@@ -63,5 +61,6 @@
   "page-get-eth-your-address-desc": "Saat Anda mengunduh dompet, itu akan membuat alamat ETH publik untuk Anda. Berikut ini contoh tampilan alamatnya:",
   "page-get-eth-your-address-desc-3": "Anggap ini seperti alamat email Anda, tetapi bukan surat, alamat ini dapat menerima ETH. Jika Anda ingin menukar ETH dari bursa ke dompet, gunakan alamat Anda sebagai tujuan. Pastikan untuk selalu memeriksa ulang sebelum Anda mengirim!",
   "page-get-eth-your-address-wallet-link": "Periksa dompet",
-  "listing-policy-raise-issue-link": "Angkat masalah"
+  "listing-policy-raise-issue-link": "Angkat masalah",
+  "page-find-wallet-last-updated": "Terakhir diperbarui"
 }

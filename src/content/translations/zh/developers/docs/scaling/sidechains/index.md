@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 侧链是独立于以太坊运行的独立区块链，通过双向桥梁与以太坊主网连接。 侧链可以有单独的区块参数和[共识算法](/developers/docs/consensus-mechanisms/)，它们通常是为高效处理交易而设计的。 但是，使用侧链需要权衡取舍，因为它们未继承以太坊的安全属性。 与[二层网络扩容解决方案](/layer-2/)不同，侧链不会将状态变化和交易数据发布到以太坊主网。
 
-侧链还在一定程度上牺牲了去中心化或安全性来实现高吞吐量（[可扩展性三难困境](https://vitalik.ca/general/2021/05/23/scaling.html)）。 然而，以太坊致力于在不影响去中心化和安全性的情况下扩容，正如其关于升级的[愿景声明](/roadmap/vision/)中所述。
+侧链还在一定程度上牺牲了去中心化或安全性来实现高吞吐量（[可扩展性三难困境](https://vitalik.ca/general/2021/05/23/scaling.html)）。 然而，正如其升级[愿景声明](/roadmap/vision/)中所述，以太坊致力于在不影响去中心化和安全性的情况下扩容。
 
 ## 侧链如何运作？ {#how-do-sidechains-work}
 
@@ -64,10 +64,10 @@ sidebarDepth: 3
 - [Skale](https://skale.network/)
 - [Gnosis Chain（原 xDai）](https://www.gnosischain.com/)
 - [Loom Network](https://loomx.io/)
+- [Metis Andromeda](https://www.metis.io/)
 
 ## 延伸阅读 {#further-reading}
 
-- [侧链上的 EthHub](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [通过侧链扩展以太坊去中心化应用程序](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _2018 年 2 月 8 日 - Georgios Konstantopoulos_
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

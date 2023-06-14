@@ -61,8 +61,6 @@ incomplete: true
 
 ## بیشتر بخوانید {#further-reading}
 
-- [منظور از استخراج اتریوم چیست؟](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
 ## ابزارهای مرتبط {#related-tools}
 
 - [برترین استخراج‌کنندگان اتریوم](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

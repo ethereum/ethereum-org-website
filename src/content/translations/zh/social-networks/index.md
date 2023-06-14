@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: ../../assets/ethereum-learn.png
+image: ../../../../assets/ethereum-learn.png
 summaryPoint1: 基于区块链的社交互动与内容平台的创建和分配。
 summaryPoint2: 去中心化社交媒体网络可保护用户隐私并增强数据安全性。
 summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的新方法。
@@ -79,7 +79,7 @@ Reddit 提供[回赠式社区积分](https://cointelegraph.com/news/reddit-to-re
 
 该程序已经上线，r/CryptoCurrency subreddit [运行其名为“Moons”的社区积分版本](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)。 根据官方描述，Moons“奖励发布者、评论者和版主对 subreddit 的贡献。” 因为这些代币在区块链上进行交易（代币会直接进入用户钱包），代币与 Reddit 无关，因此其他人无法获取用户的代币。
 
-在 Rinkeby 测试网上结束测试阶段后，Reddit 社区积分现在在 [Arbitrum Nova](https://nova.arbitrum.io/) 上，这是一条结合了 [validium](/developers/docs/scaling/validium/) 和 [乐观卷叠](/developers/docs/scaling/optimistic-rollups/)属性的区块链。 除了使用社区积分来解锁特殊功能外，用户还可以在交易所用它们换取法币。 此外，用户拥有的社区积分决定了他们对社区内决策过程的影响。
+在结束了 Rinkeby 测试网的测试阶段后，Reddit 社区积分现在位于 [Arbitrum Nova](https://nova.arbitrum.io/) - 这是一个区块链，结合了[侧链](/developers/docs/scaling/sidechains/)和[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)的属性。 除了使用社区积分来解锁特殊功能外，用户还可以在交易所用它们换取法币。 此外，用户拥有的社区积分决定了他们对社区内决策过程的影响。
 
 ### Twitter {#twitter}
 
@@ -94,16 +94,19 @@ Reddit 提供[回赠式社区积分](https://cointelegraph.com/news/reddit-to-re
 - **[Status.im](https://status.im/)** - _Status 是一个安全的消息收发应用程序，使用开源、对等协议和端到端加密来保护你的消息免受第三方侵害。_
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror 是一个基于以太坊的去中心化、用户所有发布平台，供用户众筹创意、将内容货币化并创建高价值社区。_
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol 是一个可组合的去中心化社交图谱，可帮助创作者在去中心化互联网数字花园中的任何地方都拥有自己的内容。_
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster 是一个足够分散的社交网络。 它是一个开放的协议，可以支持许多客户端，就像电子邮件。_
 
 ## 延伸阅读 {#further-reading}
 
 ### 文章 {#articles}
 
+- [去中心化社交媒体：web3 社交堆栈指南](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [社交网络是去中心化的下一个大机遇](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 可能实现去中心化的社区推动社交网络](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [区块链社交媒体发展形势概述](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [区块链如何解决社交媒体的隐私问题](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [社交媒体网络正在走进区块链领域](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [社交网络的充分去中心化](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) - _Varun Srinivasan_
 
 ### 视频 {#videos}
 

@@ -40,7 +40,7 @@ lang: ja
 
 [イーサリアム仮想マシン(EVM)](/developers/docs/evm/)にデプロイされたスマートコントラクトは、デフォルトでイミュータブル(不変)となっています。 従来のデベロッパーは、発売後にソフトウェアのバグを修正することに慣れているかもしれませんが、イーサリアムの開発では、スマートコントラクトがブロックチェーン上で稼働すると、セキュリティ上の欠陥を修正する余地がほとんどなくなります。
 
-スマートコントラクトのアップグレード可能なメカニズムには、プロキシパターンなどがありますが、これらは実装が難しい場合があります。 アップグレードによって不変性が損なわれ、複雑さが生じるだけでなく、しばしば複雑なガバナンスプロセスが要求されます。
+プロキシパターンなど、スマートコントラクトでアップグレード可能なメカニズムは存在するものの、実装が難しい場合があります。 アップグレードによって不変性が損なわれ、複雑さが生じるだけでなく、しばしば複雑なガバナンスプロセスが要求されます。
 
 ほとんどの場合、アップグレードは最後の手段と考え、必要な場合を除き避けるべきです。 起動前の段階でスマートコントラクトの潜在的な脆弱性や欠陥を検出することで、ロジックのアップグレードの必要性を減らすことができます。
 
@@ -171,6 +171,11 @@ iii. 「コントラクトはエラーになると元に戻る」
 
 - [GitHub](https://github.com/crytic/etheno)
 
+**Woke development and testing framework** - _Python のテスト・デプロイメントスクリプトで、型ヒント、ファザー、デバッグサポート、コードカバレッジ、クロスチェーンテストを備えています。_
+
+- [ドキュメント](https://ackeeblockchain.com/woke/docs/latest/testing-framework/overview/)
+- [GitHub](https://github.com/Ackee-Blockchain/woke)
+
 ### 静的解析ツール {#static-analysis-tools}
 
 **Mythril** - _Taint 解析、Concolic 解析、制御フローチェックを用いてコントラクトの脆弱性を検出する EVM バイトコード評価ツールです_。
@@ -203,7 +208,7 @@ iii. 「コントラクトはエラーになると元に戻る」
 
 ### スマートコントラクト監査サービス {#smart-contract-auditing-services}
 
-**ConsenSys Diligence** - _スマートコントラクトの監査サービスにより、ブロックチェーンエコシステム全体のプロジェクトについて、プロトコルが起動に適した状態にあり、ユーザーを保護するように構築されていることを確認します。_
+**ConsenSys Diligence** - _スマートコントラクトの監査サービスによって、ブロックチェーンエコシステム全体のプロジェクトについて、プロトコルが起動に適した状態にあり、ユーザーを保護できるように構築されていることを保証します。_
 
 - [ウェブサイト](https://consensys.net/diligence/)
 
@@ -211,7 +216,7 @@ iii. 「コントラクトはエラーになると元に戻る」
 
 - [ウェブサイト](https://www.certik.com/)
 
-**Trail of Bits** - _セキュリティ研究と攻撃者のメンタリティを融合させ、リスクの低減とコードの堅牢化を図るサイバーセキュリティ企業です。_
+**Trail of Bits** - _セキュリティ研究と攻撃者の心理を融合させ、リスクの低減とコードの堅牢化を図るサイバーセキュリティ企業です。_
 
 - [ウェブサイト](https://www.trailofbits.com/)
 
@@ -226,6 +231,10 @@ iii. 「コントラクトはエラーになると元に戻る」
 **OpenZeppelin** - _分散型システムのセキュリティ監査を提供するスマートコントラクトセキュリティ企業です。_
 
 - [ウェブサイト](https://www.openzeppelin.com/security-audits)
+
+**Nethermind** - _Solidity と Cairo の監査サービスにより、イーサリアムと Starknet 全体でスマートコントラクトの整合性とユーザーの安全が確保されます。_
+
+- [ウェブサイト](https://nethermind.io/smart-contracts-audits)
 
 ### バグ報奨金プラットフォーム {#bug-bounty-platforms}
 
@@ -242,7 +251,7 @@ iii. 「コントラクトはエラーになると元に戻る」
 - [安定性と Truffle 連続統合設定](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– Travis または Circle CI の Truffle テストと有益なプラグインのセットアップ方法_
 - [製品テストの概要](/developers/tutorials/guide-to-smart-contract-security-tools/) _– 様々な製品テストの概要と比較_
 - [スマートコントラクトのテストに Echidna を使用する方法](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Manticore を使用してスマートコントラクトのバグを見つける方法](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
+- [Manticore を使用してスマートコントラクトのバグを見つける方法](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Slither を使用してスマートコントラクトのバグを見つける方法](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [テスト用 Solidity コントラクトのモックの作成方法](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Truffle テストから OpenZeppelin テスト環境に移行する方法](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
@@ -252,5 +261,5 @@ iii. 「コントラクトはエラーになると元に戻る」
 
 ## 参考文献 {#further-reading}
 
-- [イーサリアムスマートコントラクトのテストに関する徹底的なガイド](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297) - _Ben Hauser_
+- [イーサリアムスマートコントラクトのテストに関する徹底ガイド](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297) - _Ben Hauser_
 - [イーサリアムスマートコントラクトのテスト方法](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d) - _Alex Roan_

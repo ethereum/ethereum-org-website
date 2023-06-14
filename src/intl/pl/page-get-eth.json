@@ -43,8 +43,6 @@
   "page-get-eth-security": "Ale oznacza to również, że musisz poważnie traktować bezpieczeństwo swoich funduszy. Dzięki ETH nie ufasz bankowi, że zajmie się Twoimi pieniędzmi, ufasz sobie.",
   "page-get-eth-smart-contract-link": "Więcej na temat inteligentnych kontraktów",
   "page-get-eth-swapping": "Zamień swoje tokeny na ETH innych osób. I wzajemnie.",
-  "page-get-eth-traditional-currencies": "Kup za pomocą tradycyjnych walut",
-  "page-get-eth-traditional-payments": "Kupuj ETH za pomocą tradycyjnych typów płatności bezpośrednio od sprzedawców.",
   "page-get-eth-try-dex": "Wypróbuj DEX",
   "page-get-eth-use-your-eth": "Użyj swojego ETH",
   "page-get-eth-use-your-eth-dapps": "Teraz, gdy jesteś właścicielem ETH, sprawdź niektóre aplikacje Ethereum (aplikacje zdecentralizowane). Istnieją aplikacje dla finansów, mediów społecznościowych, gier i wielu innych kategorii.",
@@ -63,5 +61,6 @@
   "page-get-eth-your-address-desc": "Kiedy pobierzesz portfel, stworzy dla Ciebie publiczny adres ETH. Oto jak wygląda:",
   "page-get-eth-your-address-desc-3": "To coś podobnego do adresu e-mail, ale zamiast wysyłać wiadomość, możesz odbierać ETH. Jeśli chcesz przenieść ETH z giełdy do swojego portfela, użyj swojego adresu jako miejsca docelowego. Upewnij się, że zawsze sprawdzasz dokładnie przed wysłaniem!",
   "page-get-eth-your-address-wallet-link": "Sprawdź portfele",
-  "listing-policy-raise-issue-link": "Zgłoś problem"
+  "listing-policy-raise-issue-link": "Zgłoś problem",
+  "page-find-wallet-last-updated": "Ostatnia aktualizacja"
 }
