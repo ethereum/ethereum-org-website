@@ -107,7 +107,7 @@ Um trecho de código reutilizável (um programa) que um desenvolvedor publica no
 ## Leitura adicional {#further-reading}
 
 - [Whitepaper do Ethereum](/whitepaper/)
-- [Afinal, como funciona o Ethereum?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** este recurso ainda é valioso, mas esteja ciente de que é anterior à [Fusão](/roadmap/merge) e, portanto, ainda se refere ao mecanismo de prova de trabalho do Ethereum, que agora é protegido usando a [prova de participação](/developers/docs/consensus-mechanisms/pos))
+- [Afinal, como funciona o Ethereum?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** este recurso ainda é valioso, mas esteja ciente de que é anterior à [Fusão](/roadmap/merge) (The Merge) e, portanto, ainda se refere ao mecanismo de prova de trabalho do Ethereum, que agora é protegido pelo uso da [prova de participação](/developers/docs/consensus-mechanisms/pos))
 
 _Conhece um recurso da comunidade que ajudou você? Edite essa página e adicione-o!_
 

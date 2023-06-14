@@ -6,9 +6,9 @@ lang: pt-br
 
 # Como "registrar" uma conta Ethereum
 
-Qualquer pessoa pode criar uma conta Ethereum gratuitamente usando um tipo específico de aplicativo comumente conhecido como carteira. As carteiras guardam as chaves que lhe permitem manter, enviar e receber criptomoedas. Você também pode se conectar a aplicativos na rede Ethereum, que lhe permitirão negociar NFTs, trocar moedas, acessar jogos, descobrir DeFi e muito mais.
+Qualquer pessoa pode criar uma conta Ethereum gratuitamente usando um tipo específico de aplicativo comumente conhecido como carteira. As carteiras criam e protegem as chaves que permitem você manter, enviar e receber criptomoedas. Você também pode se conectar a projetos no Ethereum que permitirão negociar NFTs, trocar tokens, acessar jogos e muito mais.
 
-Ao contrário dos registros tradicionais de contas aos quais você deve estar acostumado, a criação de uma conta Ethereum é feita de forma privada e sem precisar de permissão. As contas são controladas por chaves que seu software de carteira ajuda a criar. Estas contas não são emitidas por terceiros, nem armazenadas em um registro central.
+Ao contrário de abrir uma nova conta com uma empresa, a criação de uma conta Ethereum é feita livremente, maneira privada e sem pedir permissão. As contas são controladas por chaves que seu software de carteira ajuda a criar. Estas contas não são emitidas por terceiros, nem armazenadas em um registro central.
 
 ## Passo 1: Consultar nossa lista de carteiras
 
@@ -49,11 +49,11 @@ Depois de salvar sua frase de recuperação, você verá o painel da sua carteir
 
 ### Uma carteira e uma conta Ethereum são o mesmo?
 
-Não, as carteiras têm a capacidade de criar novas contas Ethereum, mas não ao contrário. As contas servem para interagir com a blockchain do Ethereum e as carteiras se conectam com elas. Dessa maneira, se você perder sua carteira, ainda poderá recuperar sua conta por meio da frase de recuperação.
+Não, assim como o banco online, você pode ter muitas contas diferentes, todas armazenadas em um aplicativo de carteira. Sua frase de 12 ou 24 palavras protege todas elas: é como a semente de uma grande árvore (é por isso que você deve mantê-la segura). Cada ramo da árvore contém uma chave e cada chave é uma das suas contas. Se você perder o acesso à carteira (ou seja, sua árvore for cortada), você sempre pode restaurar todas as suas diferentes contas usando outro software e a mesma semente (que sempre crescerá na mesma árvore).
 
 ### Posso enviar bitcoins para uma conta/endereço Ethereum ou enviar ethers para uma conta/endereço Bitcoin?
 
-Não, pois bitcoins e ethers existem em duas redes separadas (isto é, diferentes blockchains), cada uma com seus próprios modelos de contabilidade e formatos de endereços. Há muitos tokens e blockchains compatíveis com a EVM (Máquina Virtual Ethereum) que você pode usar com o seu endereço Ethereum.
+Não, você não pode. Bitcoin e ether existem em duas redes separadas (ou seja, blockchains diferentes), cada uma com seus próprios modelos de contabilidade e formatos de endereço. Houve várias tentativas de conectar as duas redes diferentes, das quais a mais ativa é atualmente o [Bitcoin envelopado ou WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Isso não é uma recomendação, pois o WBTC é uma solução de custódia (ou seja, um único grupo de pessoas controla determinadas funções críticas) e é fornecido aqui apenas a título informativo.
 
 ### Se eu tenho um endereço de ETH, o endereço é o mesmo para outras blockchains?
 
@@ -61,8 +61,8 @@ Você pode usar o mesmo endereço em todas as blockchains compatíveis com EVM (
 
 ### Ter a minha própria carteira é mais seguro do que manter os meus fundos em uma corretora?
 
-Sim, esta é uma opção muito mais segura, porque mais ninguém terá acesso aos seus fundos. Infelizmente, há muitos exemplos de corretoras que foram à falência, fazendo com que usuários perdessem suas economias, que estavam sendo mantidas em custódia. Invasões, contas congeladas ou saques bloqueados são alguns outros riscos comuns. Possuir uma carteira (com uma frase de recuperação) é a melhor maneira de proteger seus ativos. No entanto, se você não fizer um backup adequado da frase de recuperação, estará potencialmente exposto a mais riscos do que se tiver suas chaves gerenciadas por uma corretora. Certifique-se de guardar bem sua frase de recuperação.
+Sim, esta é uma opção muito mais segura, porque mais ninguém terá acesso aos seus fundos. Infelizmente, há muitos exemplos de corretoras que foram à falência, fazendo com que usuários perdessem suas economias, que estavam sendo mantidas em custódia. Ataques, contas congeladas ou saques bloqueados são alguns outros riscos comuns. Possuir uma carteira (com uma frase de recuperação) é a melhor maneira de proteger seus ativos. No entanto, se você não fizer um backup adequado da frase de recuperação, estará potencialmente exposto a mais riscos do que se tiver suas chaves gerenciadas por uma corretora. Certifique-se de guardar bem sua frase de recuperação.
 
 ### Se eu perder minha carteira de celular/hardware, eu preciso usar o mesmo aplicativo de carteira novamente para recuperar os fundos perdidos?
 
-Não, você pode usar praticamente qualquer carteira, pois o processo de recuperação está em grande parte padronizado, sendo apenas necessário saber a frase de recuperação. Você terá que inserir a frase de recuperação em qualquer novo aplicativo de carteira; pode ser um aplicativo diferente daquele que você usou antes. É quase impossível recuperar fundos perdidos sem a frase de recuperação.
+Não, você pode usar praticamente qualquer carteira, pois o processo de recuperação é amplamente padronizado. Isso significa que você pode colocar a mesma frase de 12 ou 24 palavras, na maioria das carteiras, e elas restaurarão sua conta. Tenha cuidado se precisar fazer isso: é melhor garantir que você não esteja conectado à Internet quando recuperar sua carteira, para que sua frase de recuperação não seja vazada acidentalmente. Muitas vezes, é impossível recuperar fundos perdidos sem a frase de recuperação.

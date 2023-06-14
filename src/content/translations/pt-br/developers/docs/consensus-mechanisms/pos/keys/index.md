@@ -10,7 +10,7 @@ As chaves do Ethereum são geradas usando a [criptografia de curva elíptica](ht
 
 No entanto, quando o Ethereum mudou de [prova de trabalho](/developers/docs/consensus-mechanisms/pow) para [prova de participação](/developers/docs/consensus-mechanisms/pos), um novo tipo de chave foi adicionado ao Ethereum. As chaves originais ainda funcionam exatamente como antes — não houve alterações nas chaves baseadas em curva elíptica que protegem as contas. No entanto, os usuários precisavam de um novo tipo de chave para participar da prova de participação colocando ETH em stake e executando validadores. Essa necessidade surgiu dos desafios de escalabilidade associados a muitas mensagens trocadas entre inúmeros validadores que exigiam um método criptográfico que pudesse ser agregado facilmente para reduzir a quantidade de comunicação necessária para a rede chegar a consenso.
 
-Esse novo tipo de chave usa o [esquema de assinatura Boneh-Lyn-Shacham (BLS)](https://wikipedia.org/wiki/BLS_digital_signature). O BLS permite uma agregação de assinaturas muito eficiente, mas também permite a engenharia reversa de chaves agregadas de validadores individuais e é ideal para gerenciar ações entre validadores.
+Este novo tipo de chave usa o [esquema de assinatura **Boneh-Lyn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). O BLS permite uma agregação de assinaturas muito eficiente, mas também permite a engenharia reversa de chaves agregadas de validadores individuais e é ideal para gerenciar ações entre validadores.
 
 ## Os dois tipos de chaves de validação {#two-types-of-keys}
 
@@ -35,14 +35,22 @@ Essa flexibilidade tem a vantagem de mover rapidamente as chaves de assinatura d
 
 A **chave pública do validador** é incluída nos dados de transação quando um usuário deposita ETH no contrato de depósito de stake. Isso é conhecido como _dados de depósito_ e permite que o Ethereum identifique o validador.
 
+### Credenciais de saque {#withdrawal-credentials}
+
+Todo validador tem uma propriedade conhecida como _credenciais de saque_. Esse campo de 32 bytes começa com um `0x00`, representando credenciais de saque do BLS, ou um `0x01`, representando credenciais que apontam para um endereço de execução.
+
+Os validadores com chaves BLS `0x00` devem atualizar estas credenciais para apontar para um endereço de execução e ativar pagamentos de saldo em excesso ou saque total de participação (stake). Isso pode ser feito fornecendo um endereço de execução nos dados de depósito durante a geração inicial da chave, _OU_ usando a chave de saque posteriormente para assinar e transmitir uma mensagem `BLSToExecutionChange`.
+
 ### Chave de saque {#withdrawal-key}
 
-A chave de saque será necessária para mover o saldo do validador depois que ela for ativada na próxima atualização Shangai. Assim como as chaves de validador, as chaves de saque também consistem em dois componentes:
+A chave de saque será necessária para atualizar as credenciais de saque para apontar para um endereço de execução, se não for definido durante o depósito inicial. Isso permitirá que os pagamentos do saldo em excesso comecem a ser processados e também permitirá que os usuários saquem totalmente seus ETH em participação (stake).
+
+Assim como as chaves de validador, as chaves de saque também consistem em dois componentes:
 
 - Chave de saque **privada**
 - Chave de saque **pública**
 
-Perder esta chave significa perder acesso ao saldo do validador. No entanto, o validador ainda pode assinar certificados e blocos, pois essas ações exigem a chave privada do validador, mas haverá pouco ou nenhum incentivo se as chaves de retirada forem perdidas.
+Perder esta chave antes de atualizar as credenciais de saque para o tipo `0x01` significa perder o acesso ao saldo do validador. O validador pode ainda assinar atestações e bloqueios, pois essas ações exigem a chave privada do validador, no entanto, há pouco ou nenhum incentivo se as chaves de saque forem perdidas.
 
 Separar as chaves de validação das chaves da conta Ethereum permite que vários validadores sejam executados por um único usuário.
 
