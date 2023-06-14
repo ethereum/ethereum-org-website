@@ -62,7 +62,7 @@ Once you have a project for yourself, you'll need to apply to an active round. F
 6. When finished, click **Preview Application** to continue to preview
 7. Review your application, then click **Submit**
 8. Once submitted, the entry cannot be changed. Please make sure everything is correct before proceeding. Clicking **Proceed** will submit your transaction on Optimism (requires some ETH on Optimism for transaction fee)
-   - To encrypt your data, you must also sign-in again with your wallet—this does not cost gas
+   - To encrypt your data, you must also sign-in again with your wallet—this does not cost additional gas
 
 <InfoBanner emoji="👷">
 After you’ve applied, you’re submission will enter the review process. You can view your project profile and the status of your application by going to <a href="https://builder.gitcoin.co/">Gitcoin Builder</a>.
@@ -71,3 +71,9 @@ After you’ve applied, you’re submission will enter the review process. You c
 ## Step 3: Spread the word! {#step-3}
 
 <Emoji text="📣" fontSize="3xl" me={2} /> Tell others about the round and make sure folks know you’ve applied! Encourage others to check out the round when it goes live and add their voice in how the funds are distributed.
+
+<!-- TODO: Consider a link with a prepared tweet -->
+
+Lastly, when round allocations begin, be sure to also participate as an allocator to get a say in how the funds are distributed!
+
+<ButtonLink href="/contributing/funding-rounds/participating/allocating/">Learn how to allocate</ButtonLink>

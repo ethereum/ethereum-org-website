@@ -20,7 +20,7 @@ Contributions to ethereum.org have increased significantly in frequency over the
 The goal is to retroactively reward impactful work, while encouraging and creating incentive for everyone to contribute to public goods, including ethereum.org. And of course, to say <strong>thank you</strong>.
 </InfoBanner>
 
-[How to become a contributor](/contributing/)
+[Contributing to ethereum.org](/contributing/)
 
 ## The challenge in deciding {#the-challenge-in-deciding}
 
@@ -36,7 +36,7 @@ We're taking ourselves out of the decision making, and allowing the community to
 
 Allo Protocol is a set of smart contracts that enable the democratic allocation and distribution of funds through the power of **quadratic funding **.
 
-In short, quadratic funding is a mechanism for donation matching that takes into consideration how many unique people are signaling support to a recipient, rather than solely the amount of money a that recipient raised. Donations to recipients are then matched with funds from the matching pool, proportional to number of unique contributors, and to a lesser extent, the amount of money raised.
+In short, quadratic funding is a mechanism for donation matching that takes into consideration how many unique people are signaling support to a recipient, rather than solely the amount of money a recipient raised. Donations to recipients are then matched with funds from the matching pool, proportional to number of unique contributors, and to a lesser extent, the amount of money raised.
 
 This prevents large donors from having disproportionate influence over the allocation of funds. A recipient with 100 small donations will receive significantly more matching funds at the end of the round than a project with a large donation from a single donor, even if the latter raised more money.
 
@@ -49,7 +49,7 @@ This prevents large donors from having disproportionate influence over the alloc
 
 ## Get started {#get-started}
 
-If you've either contributed to ethereum.org in the past and would like to apply for funding, or if you've benefited from ethereum.org in the past and would like to help allocate the funds, learn how to participate in the next funding round!
+If you've contributed to ethereum.org in the past and would like to apply for funding, or have benefited from ethereum.org and would like to help allocate funds to contributors, learn how to participate in the next funding round!
 
 <ButtonLink href="/contributing/funding-rounds/participating/" mt={8}>Learn how to participate</ButtonLink>
 

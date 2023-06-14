@@ -69,13 +69,13 @@ You are welcome to strengthen your vote by donating more, but each additional do
 
 You can view all submitted contributions to see a summary of each. If you've found a contribution to be impactful, you're encouraged to show your support for this contributor to receive more matching funds by adding them to your shopping cart.
 
-When ready, users can checkout using the shopping cart by finalizing the amounts they'd like to donate before sending the funds using their wallet.
+When ready, you can checkout using the shopping cart by finalizing the amounts you'd like to donate before sending the funds using your wallet.
 
 <ButtonLink href="/contributing/funding-rounds/participating/allocating/">Learn how to allocate</ButtonLink>
 
 ## What funds will I need? {#needed-funds}
 
-Rounds are being held using the Allo Protocol on the Optimism layer 2 rollup. As such you’ll need an Ethereum address with some ETH available _on Optimism_ to be used for transaction fees (gas).
+Rounds are being held using the Allo Protocol on the Optimism layer 2 rollup, for on-chain transparency and inexpensive network fees. As such you’ll need an Ethereum address with some ETH available _on Optimism_ to be used for transaction fees (gas).
 
 As an **ethereum.org contributor** looking to receive funding, you’ll need some ETH on Optimism for:
 
