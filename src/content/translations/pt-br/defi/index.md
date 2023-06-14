@@ -334,11 +334,10 @@ DeFi é um movimento de código aberto. Os protocolos e aplicações DeFi são t
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [Taxa DeFi](https://defirate.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### Artigos sobre DeFi {#defi-articles}
 
-- [O que são finanças descentralizadas?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, atualizado regularmente_
 - [Um guia para iniciantes em DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de janeiro de 2020_
 
 ### Vídeos {#videos}

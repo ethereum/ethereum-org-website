@@ -73,7 +73,7 @@ Her [blok](#block), "taban ücret" olarak bilinen bir rezerv fiyatına sahiptir.
 
 Tüm Ethereum ağının koordinatörü olacak yeni bir konsensus katmanı sunan bir ağ yükseltmesi. Ethereum'a [hisse kanıtı](#pos) ve [doğrulayıcılar](#validator) sunar. Sonunda [Ana Ağ](#mainnet) ile birleştirilecektir.
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   İşaret Zinciri
 </DocLink>
 
@@ -313,7 +313,7 @@ Birbiriyle çelişen iki mesaj gönderen bir doğrulayıcı. NonceBasit bir örn
 
 "Eth1", mevcut iş kanıtı blok zinciri olan Ethereum Anaağı'na atıfta bulunan bir terimdir. Artık bu terim, yerine "yürütüm katmanı" kullanıldığı için kullanımdan kaldırılmıştır. [Bu ad değişikliği hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Ethereum yükseltmeleri hakkında daha fazla bilgi
 </DocLink>
 
@@ -321,7 +321,7 @@ Birbiriyle çelişen iki mesaj gönderen bir doğrulayıcı. NonceBasit bir örn
 
 "Eth2", Ethereum'un hisse ispatına geçişi de dahil olmak üzere bir dizi Ethereum protokolü yükseltmesine atıfta bulunan bir terimdir. Artık bu terim, yerine "konsensus katmanı" kullanıldığı için kullanımdan kaldırılmıştır. [Bu ad değişikliği hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Ethereum yükseltmeleri hakkında daha fazla bilgi
 </DocLink>
 
@@ -819,7 +819,7 @@ Ulusal Standartlar ve Teknoloji Enstitüsü (NIST) tarafından yayınlanan bir �
 
 Daha önce 'Ethereum 2.0' veya 'Eth2' olarak bilinen bir dizi ölçeklendirme ve sürdürülebilirlik yükseltmesini başlatan Ethereum geliştirme aşaması.
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Ethereum yükseltmeleri
 </DocLink>
 
@@ -831,7 +831,7 @@ Veri yapısını bir bayt dizisine dönüştürme işlemi.
 
 [İşaret Zinciri](#beacon-chain), bir [hisse kanıtı](#pos) zinciri tarafından koordine edilir ve [doğrulayıcılar](#validator) tarafından güvence altına alınır. Parça zinciri yükseltmesinin bir parçası olarak, ağa 64 tanesi eklenecektir. Parça zincirleri, [katman 2](#layer-2) çözümlerine [iyimser toplamalar](#optimistic-rollups) ve [ZK-rollups](#zk-rollups) gibi ek veriler sağlayarak Ethereum için artan işlem hacmi sunacak.
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/roadmap/danksharding">
   Parça Zincirleri
 </DocLink>
 

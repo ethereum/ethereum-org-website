@@ -1,6 +1,6 @@
 export const MATOMO_LS_KEY = "ethereum-org.matomo-opt-out"
 
-export interface EventOptions {
+export interface MatomoEventOptions {
   eventCategory: string
   eventAction: string
   eventName: string
@@ -12,7 +12,7 @@ export const trackCustomEvent = ({
   eventAction,
   eventName,
   eventValue,
-}: EventOptions): void => {
+}: MatomoEventOptions): void => {
   if (process.env.NODE_ENV === "production" || window.dev === true) {
     const optedOutValue = localStorage.getItem(MATOMO_LS_KEY) || "false"
     const isOptedOut = JSON.parse(optedOutValue)

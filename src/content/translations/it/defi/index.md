@@ -338,7 +338,6 @@ La DeFi è un movimento open source. I protocolli e le applicazioni della DeFi s
 
 ### Articoli sulla DeFi {#defi-articles}
 
-- [Cos'è la Finanza Decentralizzata?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, aggiornato regolarmente_
 - [Una guida per principianti alla DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 gennaio 2020_
 
 ### Video {#videos}

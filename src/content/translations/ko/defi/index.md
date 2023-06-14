@@ -6,6 +6,7 @@ template: use-cases
 emoji: ":money_with_wings:"
 image: ../../../../assets/use-cases/defi.png
 alt: 레고 블록으로 만든 이더리움 로고.
+sidebarDepth: 2
 summaryPoint1: 현재 금융 시스템에 대한 글로벌하고 개방적인 대안입니다.
 summaryPoint2: 대출, 저축, 투자, 거래 등을 할 수 있는 제품입니다.
 summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 기반으로 합니다.
@@ -333,10 +334,10 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 - [디파이 프라임](https://defiprime.com/)
 - [디파이 라마](https://defillama.com/)
+- [디파이 레이트](https://defirate.com/)
 
 ### 디파이 기사 {#defi-articles}
 
-- [탈중앙화 금융이란 무엇인가요?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, 정기적으로 업데이트됨_
 - [디파이 초보자 가이드](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _시드 코엘로-프라부, 2020년 1월 6일_
 
 ### 영상 {#videos}

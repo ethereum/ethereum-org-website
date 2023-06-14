@@ -52,7 +52,7 @@ Lors de la traduction du contenu, vous devez vous assurer que les traductions so
 
 Une idée reçue courante voudrait qu'« Ethereum » soit toujours écrit en latin. C'est généralement incorrect. Veuillez utiliser l'orthographe d'« Ethereum » native dans votre langue (ex : 以太坊 en chinois, إيثيريوم en arabe, etc.).
 
-**Ceci ne s'applique pas aux langues où il existe une règle proscrivant la traduction des noms propres.**
+**Ceci ne s'applique pas aux langues au sein desquelles il existe une règle proscrivant la traduction des noms propres.**
 
 ### Traduction des métadonnées de la page {#translating-metadata}
 

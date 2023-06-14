@@ -56,12 +56,12 @@ const StyledTwoColumnContent = styled(TwoColumnContent)`
   align-items: flex-start;
 `
 
-const Subtitle = styled.div`
+const Subtitle = styled.p`
   font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
-const SubtitleTwo = styled.div`
+const SubtitleTwo = styled.p`
   font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;
@@ -164,10 +164,6 @@ const CentralActionCard = styled(ActionCard)`
   }
 `
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 5rem 0;
-`
-
 const tokens = [
   {
     emoji: ":scales:",
@@ -253,12 +249,6 @@ const tokenLinks = [
 
 const cardListContent = [
   {
-    link: "https://docs.ethhub.io/ethereum-basics/monetary-policy/",
-    title: <Translation id="page-eth-monetary-policy" />,
-    description: "EthHub",
-    caption: <Translation id="page-eth-ethhub-caption" />,
-  },
-  {
     link: "https://medium.com/ethhub/why-ether-is-valuable-2b4e39e01eb3",
     title: <Translation id="page-eth-value" />,
     description: "Anthony Sassano",
@@ -326,7 +316,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               />
             ))}
           </StyledCardContainer>
-          <InfoBanner emoji=":wave:" shouldCenter={true}>
+          <InfoBanner emoji=":wave:" shouldCenter>
             <b>
               <Translation id="page-eth-buy-some" />
             </b>{" "}
@@ -435,7 +425,9 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           </div>
           <Divider />
         </CentralColumn>
-        <StyledCalloutBanner
+        <CalloutBanner
+          my={20}
+          mx={0}
           titleKey={"page-eth-where-to-buy"}
           descriptionKey={"page-eth-where-to-buy-desc"}
           image={getImage(data.ethCat)!}
@@ -447,7 +439,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               <Translation id="page-eth-get-eth-btn" />
             </ButtonLink>
           </div>
-        </StyledCalloutBanner>
+        </CalloutBanner>
       </Content>
 
       <TwoColumnContent>

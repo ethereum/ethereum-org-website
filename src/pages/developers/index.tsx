@@ -1,203 +1,194 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Box,
+  chakra,
+  Flex,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+  TextProps,
+  useColorModeValue,
+} from "@chakra-ui/react"
 
-import Card from "../../components/Card"
+import Card, { IProps as ICardProps } from "../../components/Card"
 import Callout from "../../components/Callout"
 import Link from "../../components/Link"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
-import {
-  CardContainer,
-  Content,
-  Page,
-  GrayContainer,
-} from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 
 import { getImage } from "../../utils/image"
 
-import { Context } from "../../types"
+import type { ChildOnlyProp, Context } from "../../types"
 
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
-`
+const Page = (props: ChildOnlyProp) => (
+  <Flex
+    flexDirection="column"
+    alignItems="center"
+    w="full"
+    my={0}
+    mx="auto"
+    {...props}
+  />
+)
 
-const HeroCopyContainer = styled.div`
-  flex: 0 1 500px;
-  max-width: 500px;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 0 1 400px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    max-width: 100%;
-    max-height: 340px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-height: 280px;
-  }
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Flex
+    justifyContent="space-between"
+    flexDirection={{ base: "column-reverse", md: "row" }}
+    mt={8}
+    mb={16}
+    bg="cardGradient"
+    {...props}
+  />
+)
 
-const HeroCopy = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  padding: 2rem;
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  margin: 2rem;
-  @media (max-width: 1240px) {
-    margin-top: -2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -4rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin: 0;
-  }
-`
+const HeroCopyContainer = (props: ChildOnlyProp) => (
+  <Box
+    flex={{ base: "0 1 400px", md: "0 1 500px" }}
+    w={{ base: "100%", md: "auto" }}
+    maxWidth={{ base: "100%", md: "500px" }}
+    maxHeight={{ base: "280px", md: "340px" }}
+    {...props}
+  />
+)
 
-const H1 = styled.h1`
-  font-style: normal;
-  font-weight: normal;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 110%;
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 0.5rem;
-  margin-top: 0rem;
-`
+const HeroCopy = (props: ChildOnlyProp) => (
+  <Box
+    p={8}
+    m={{ base: 0, sm: 8 }}
+    mt={{ base: -2, md: 8 }}
+    bg="background"
+    borderRadius="4px"
+    border="1px solid border"
+    {...props}
+  />
+)
 
-const Subtitle = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-`
-const SubtitleWithMargin = styled(Subtitle)`
-  margin-bottom: 1.5rem;
-`
+const H1 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h1"
+    fontSize="2rem"
+    fontWeight="medium"
+    fontFamily="monospace"
+    fontStyle="normal"
+    textTransform="uppercase"
+    lineHeight="110%"
+    bg="ednBackground"
+    p={2}
+    mt={0}
+    {...props}
+  />
+)
 
-const MonoSubtitle = styled.h2`
-  margin-bottom: 0rem;
-`
+const GrayContainer = (props: ChildOnlyProp) => (
+  <Box
+    w="full"
+    py={16}
+    px={0}
+    mt={8}
+    bg="grayBackground"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+    {...props}
+  />
+)
 
-const Hero = styled(GatsbyImage)`
-  flex: 1 1 50%;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-top: 3rem;
-  margin-left: 2rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    align-self: center;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0;
-    margin-left: 0;
-  }
-`
+const Content = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
 
-const Image = styled(GatsbyImage)`
-  max-width: 400px;
-  margin-top: 4rem;
-`
+const Subtitle = (props: TextProps) => (
+  <Text fontSize="xl" lineHeight="140%" color="text200" {...props} />
+)
 
-const ImageContainer = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const MonoSubtitle = (props: ChildOnlyProp) => <Box as="h2" mb={0} {...props} />
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
+const Hero = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 50%"
+    maxW="800px"
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    mt={{ base: 0, md: 12 }}
+    ml={{ base: 0, md: 8 }}
+    alignSelf={{ base: "center", md: "" }}
+    {...props}
+  />
+)
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const StyledCardContainer = (props: ChildOnlyProp) => (
+  <SimpleGrid columns={[1, 1, 2, 4]} mx={-4} mt={8} mb={12} {...props} />
+)
 
-const ThreeColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  padding: 0rem 2rem;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const TwoColumnContent = (props: ChildOnlyProp) => (
+  <Flex
+    justifyContent="space-between"
+    alignItems={{ base: "flex-start", lg: "center" }}
+    flexDirection={{ base: "column", lg: "row" }}
+    w="100%"
+    {...props}
+  />
+)
 
-const Column = styled.div`
-  flex: 1 1 33%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-`
-const RightColumn = styled(Column)`
-  margin-right: 0;
-`
-const IntroColumn = styled(Column)`
-  margin-top: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 0;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-right: 0;
-  }
-`
+const ThreeColumnContent = (props: ChildOnlyProp) => (
+  <Flex
+    py={0}
+    px={8}
+    w="full"
+    justifyContent="space-between"
+    alignItems={{ base: "flex-start", lg: "flex-start" }}
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const StyledCard = styled(Card)`
-  flex: 1 1 22%;
-  min-width: 240px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: 1120px) {
-    flex: 1 1 40%;
-  }
+const Column = (props: ChildOnlyProp) => (
+  <Box flex="1 1 33%" mb={6} mr={8} w="full" {...props} />
+)
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box flex="1 1 33%" mb={6} mr={0} w="full" {...props} />
+)
+const IntroColumn = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 33%"
+    mb={6}
+    mt={{ base: 0, lg: 32 }}
+    mr={{ base: 0, sm: 8 }}
+    w="full"
+    {...props}
+  />
+)
 
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
+const StyledCard = (props: ICardProps) => {
+  const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
-const StyledCallout = styled(Callout)`
-  min-height: 100%;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 1 1 416px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-right: 0;
-    margin-left: 0;
-  }
-`
+  return (
+    <Card
+      boxShadow={tableBoxShadow}
+      m={4}
+      p={6}
+      {...props}
+      _hover={{
+        borderRadius: "4px",
+        boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
+        background: "tableBackgroundHover",
+        transition: "transform 0.1s",
+        transform: "scale(1.02)",
+      }}
+    />
+  )
+}
+
+const StyledCallout = chakra(Callout, {
+  baseStyle: {
+    flex: { base: "auto", md: "1 1 416px" },
+  },
+})
 
 interface IDevelopersPath {
   emoji: string
@@ -266,11 +257,13 @@ const DevelopersPage = ({
               </Subtitle>
             </HeroCopy>
           </HeroCopyContainer>
-          <Hero
-            image={getImage(data.ednHero)!}
-            alt={t("alt-eth-blocks")}
-            loading="eager"
-          />
+          <Hero>
+            <GatsbyImage
+              image={getImage(data.ednHero)!}
+              alt={t("alt-eth-blocks")}
+              loading="eager"
+            ></GatsbyImage>
+          </Hero>
         </HeroContainer>
         <MonoSubtitle>
           <Translation id="page-developers-get-started" />
@@ -292,9 +285,9 @@ const DevelopersPage = ({
             <h2>
               <Translation id="page-developers-about" />
             </h2>
-            <SubtitleWithMargin>
+            <Subtitle mb={6}>
               <Translation id="page-developers-about-desc" />
-            </SubtitleWithMargin>
+            </Subtitle>
             <p>
               <Translation id="page-developers-about-desc-2" />
             </p>
@@ -372,9 +365,14 @@ const DevelopersPage = ({
             <p>
               <Translation id="page-developers-language-desc" />
             </p>
-            <ImageContainer>
-              <Image image={getImage(data.doge)!} alt={t("page-assets-doge")} />
-            </ImageContainer>
+            <Image
+              as={GatsbyImage}
+              hideBelow="lg"
+              image={getImage(data.doge)!}
+              alt={t("page-assets-doge")}
+              maxW="400px"
+              mt={16}
+            />
           </Column>
           <Column>
             <h3>
@@ -453,56 +451,48 @@ const DevelopersPage = ({
             <p>
               <Translation id="page-developers-smart-contracts-desc" />
             </p>
-
             <Link to="/developers/docs/frameworks/">
               <Translation id="page-developers-frameworks-link" />
             </Link>
             <p>
               <Translation id="page-developers-frameworks-desc" />
             </p>
-
             <Link to="/developers/docs/apis/javascript/">
               <Translation id="page-developers-js-libraries-link" />
             </Link>
             <p>
               <Translation id="page-developers-js-libraries-desc" />
             </p>
-
             <Link to="/developers/docs/apis/backend/">
               <Translation id="page-developers-api-link" />
             </Link>
             <p>
               <Translation id="page-developers-api-desc" />
             </p>
-
             <Link to="/developers/docs/data-and-analytics/block-explorers/">
               <Translation id="page-developers-block-explorers-link" />
             </Link>
             <p>
               <Translation id="page-developers-block-explorers-desc" />
             </p>
-
             <Link to="/developers/docs/smart-contracts/security/">
               <Translation id="page-developers-smart-contract-security-link" />
             </Link>
             <p>
               <Translation id="page-developers-smart-contract-security-desc" />
             </p>
-
             <Link to="/developers/docs/storage/">
               <Translation id="page-developers-storage-link" />
             </Link>
             <p>
               <Translation id="page-developers-storage-desc" />
             </p>
-
             <Link to="/developers/docs/ides/">
               <Translation id="page-developers-dev-env-link" />
             </Link>
             <p>
               <Translation id="page-developers-dev-env-desc" />
             </p>
-
             <h3>
               <Translation id="page-developers-advanced" />
             </h3>
@@ -512,21 +502,18 @@ const DevelopersPage = ({
             <p>
               <Translation id="page-developers-token-standards-desc" />
             </p>
-
             <Link to="/developers/docs/mev/">
               <Translation id="page-developers-mev-link" />
             </Link>
             <p>
               <Translation id="page-developers-mev-desc" />
             </p>
-
             <Link to="/developers/docs/oracles/">
               <Translation id="page-developers-oracles-link" />
             </Link>
             <p>
               <Translation id="page-developers-oracle-desc" />
             </p>
-
             <Link to="/developers/docs/scaling/">
               <Translation id="page-developers-scaling-link" />
             </Link>

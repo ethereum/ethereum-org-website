@@ -123,7 +123,7 @@ Il prezzo del gas da solo in realtà non determina quanto dobbiamo pagare per un
 
 ## Iniziative per ridurre i costi del gas {#initiatives-to-reduce-gas-costs}
 
-Gli [aggiornamenti di scalabilità](/upgrades/) di Ethereum dovrebbero infine risolvere alcuni problemi delle commissioni del gas, che, a loro volta, consentiranno alla piattaforma di elaborare migliaia di transazioni al secondo e di scalare globalmente.
+Gli [aggiornamenti di scalabilità](/roadmap/) di Ethereum dovrebbero infine risolvere alcuni problemi delle commissioni del gas, che, a loro volta, consentiranno alla piattaforma di elaborare migliaia di transazioni al secondo e di scalare globalmente.
 
 Il ridimensionamento del Livello 2 è un'iniziativa fondamentale per migliorare notevolmente i costi del gas, l'esperienza utente e la scalabilità. [Maggiori informazioni sul ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling).
 
@@ -146,7 +146,6 @@ Se desideri monitorare i prezzi del gas, così da poter inviare i tuoi ETH a un 
 ## Letture consigliate {#further-reading}
 
 - [Spiegazione del Gas di Ethereum](https://defiprime.com/gas)
-- [Ethereum è più costoso da usare all'aumentare dei prezzi?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Ridurre il consumo di gas dei tuoi Contratti Intelligenti](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof of Stake contro Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

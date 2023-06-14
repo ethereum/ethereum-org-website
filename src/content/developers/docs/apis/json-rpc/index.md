@@ -6,7 +6,7 @@ lang: en
 
 In order for a software application to interact with the Ethereum blockchain - either by reading blockchain data or sending transactions to the network - it must connect to an Ethereum node.
 
-For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](https://github.com/ethereum/execution-apis), so there are a uniform set of methods that applications can rely on regardless of the specific node or client implementation.
+For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](https://github.com/ethereum/execution-apis), so there is a uniform set of methods that applications can rely on regardless of the specific node or client implementation.
 
 [JSON-RPC](https://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON (RFC 4627) as data format.
 
@@ -22,7 +22,7 @@ While you may choose to interact directly with Ethereum clients via the JSON-RPC
 
 This page deals mainly with the JSON-RPC API used by Ethereum execution clients. However, consensus clients also have an RPC API that allows users to query information about the node, request Beacon blocks, Beacon state, and other consensus-related information directly from a node. This API is documented on the [Beacon API webpage](https://ethereum.github.io/beacon-APIs/#/).
 
-An internal API is also used for inter-client communication within a node - that is, it enables the consensus client and execution client to swap data. This is called the 'Engine API' and the specs are available on [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+An internal API is also used for inter-client communication within a node - that is, it enables the consensus client and execution client to swap data. This is called the 'Engine API' and the specs are available on [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Execution client spec {#spec}
 
@@ -75,6 +75,8 @@ The following options are possible for the defaultBlock parameter:
 - `HEX String` - an integer block number
 - `String "earliest"` for the earliest/genesis block
 - `String "latest"` - for the latest mined block
+- `String "safe"` - for the latest safe head block
+- `String "finalized"` - for the latest finalized block
 - `String "pending"` - for the pending state/transactions
 
 ## Examples
@@ -200,11 +202,10 @@ None
 `String` - The current network id.
 
 The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Some common ones are:
-`1`: Ethereum Mainnet
-`2`: Morden testnet (now deprecated)
-`3`: Ropsten testnet
-`4`: Rinkeby testnet
-`5`: Goerli testnet
+
+- `1`: Ethereum Mainnet
+- `5`: Goerli testnet
+- `11155111`: Sepolia testnet
 
 **Example**
 
@@ -355,6 +356,31 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
   "id":64,
   "jsonrpc": "2.0",
   "result": "0x407d73d8a49eeb85d32cf465507dd71d507100c1"
+}
+```
+
+### eth_chainId {#eth_chainId}
+
+Returns the chain ID used for signing replay-protected transactions.
+
+**Parameters**
+
+None
+
+**Returns**
+
+`chainId`, hexadecimal value as a string representing the integer of the current chain id.
+
+**Example**
+
+```js
+// Request
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67}'
+// Result
+{
+  "id":67,
+  "jsonrpc": "2.0",
+  "result": "0x1"
 }
 ```
 
@@ -1219,7 +1245,7 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 - `contractAddress `: `DATA`, 20 Bytes - The contract address created, if the transaction was a contract creation, otherwise `null`.
 - `logs`: `Array` - Array of log objects, which this transaction generated.
 - `logsBloom`: `DATA`, 256 Bytes - Bloom filter for light clients to quickly retrieve related logs.
-- `type`: `DATA` - integer of the transaction type, `0x00` for legacy transactions, `0x01` for access list types, `0x02` for dynamic fees.
+- `type`: `QUANTITY` - integer of the transaction type, `0x0` for legacy transactions, `0x1` for access list types, `0x2` for dynamic fees.
   It also returns _either_ :
 - `root` : `DATA` 32 bytes of post-transaction stateroot (pre Byzantium)
 - `status`: `QUANTITY` either `1` (success) or `0` (failure)

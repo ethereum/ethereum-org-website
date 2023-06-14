@@ -18,7 +18,7 @@ A primeira criptomoeda foi o Bitcoin, criado por Satoshi Nakamoto. Desde o lanç
 
 ## O que é ether? {#what-is-ether}
 
-**Ether (ETH)** é a criptomoeda usada para muitas coisas na rede Ethereum. Fundamentalmente, é a única forma de pagamento aceitável para taxas de transação, e após [A Fusão](/upgrades/merge), o ether será necessário para validar e propor bloqueios na Rede principal. O ether também é usado como uma forma primária de garantia nos mercados de crédito de [DeFi](/defi) como unidade de conta nos mercados NFT, como o pagamento ganho pela realização de serviços ou a venda de produtos do mundo real, entre outros.
+**Ether (ETH)** é a criptomoeda usada para muitas coisas na rede Ethereum. Fundamentalmente, essa é a única forma de pagamento aceitável para taxas de transação e, após [A Fusão](/roadmap/merge) (The Merge), é necessário ether para validar e propor blocos na Rede principal (Mainnet). O ether também é usado como uma forma primária de garantia nos mercados de crédito de [DeFi](/defi) como unidade de conta nos mercados NFT, como o pagamento ganho pela realização de serviços ou a venda de produtos do mundo real, entre outros.
 
 Ethereum permite que os desenvolvedores criem [**aplicativos descentralizados (dapps)**](/developers/docs/dapps), que compartilham um conjunto de capacidades de computação. Este pool compartilhado é finito, portanto Ethereum precisa de um mecanismo para determinar quem vai usá-lo. Caso contrário, um dapp poderia acidental ou maliciosamente consumir todos os recursos de rede, o que bloquearia o acesso de outros.
 
@@ -36,15 +36,15 @@ O Ether é cunhado como recompensa para cada bloco proposto e em cada ponto de v
 
 ## Como "queimar" ether {#burning-ether}
 
-Além de criar ether através de recompensas de bloco, o ether pode ser destruído por um processo chamado "queima'. Quando o ether é queimado, ele é removido de circulação permanentemente.
+Além de criar ether por meio de recompensas de bloco, o ether pode ser destruído por um processo chamado "burning". Quando o ether é queimado, ele é removido de circulação permanentemente.
 
 A queima de ether ocorre em todas as transações no Ethereum. Quando os usuários pagam por suas transações, uma taxa base de gás, definida pela rede de acordo com a demanda transacional, é destruída. Isso, juntamente com tamanhos de blocos variáveis e uma taxa máxima de gás, simplifica a estimativa da taxa de transação no Ethereum. Quando a demanda da rede é alta, os [blocos](https://etherscan.io/block/12965263) podem queimar mais ether do que gerar, compensando efetivamente a emissão de ether.
 
-Queimar a taxa base previne várias maneiras pelas quais os produtores de blocos poderiam manipulá-la de outra forma. Por exemplo, se os produtores de blocos recebessem a taxa base, eles poderiam incluir suas próprias transações gratuitamente e aumentar a taxa base para todos os demais. Como alternativa, eles poderiam reembolsar a taxa base para alguns usuários fora da cadeia, gerando um mercado de taxas de transação mais opaco e complexo.
+Queimar a taxa base dificulta a capacidade de os produtores de blocos de manipular transações. Por exemplo, se os produtores de blocos recebessem a taxa base, eles poderiam incluir suas próprias transações gratuitamente e aumentar a taxa base para todos os demais. Como alternativa, eles poderiam reembolsar a taxa base para alguns usuários fora da cadeia, gerando um mercado de taxas de transação mais opaco e complexo.
 
 ## Denominações do ether {#denominations}
 
-Uma vez que muitas transações no Ethereum são pequenas, o ether tem várias denominações que podem ser referenciadas por quantidades menores. Dessas denominações, Wei e gwei são particularmente importantes.
+Uma vez que muitas transações no Ethereum são pequenas, o ether tem várias denominações que podem ser referenciadas por unidades menores de conta. Dessas denominações, Wei e gwei são particularmente importantes.
 
 Wei é a menor quantidade possível de ether, e, como resultado, muitas implementações técnicas, como o [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), irão basear todos os cálculos em Wei.
 

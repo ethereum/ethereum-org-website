@@ -14,59 +14,55 @@ Une blockchain est une base de données publique qui est mise à jour et partag�
 
 Chaque ordinateur du réseau doit accepter chaque nouveau bloc, ainsi que la chaîne dans son intégralité. Ces ordinateurs sont appelés des « nœuds ». Les nœuds garantissent que toutes les personnes qui interagissent avec la blockchain disposent des mêmes données. Pour assurer que tous les nœuds soient d'accord, les blockchains ont besoin d'un mécanisme de consensus.
 
-Ethereum utilise actuellement un mécanisme de consensus appelé [preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow/). Cela signifie que toute personne voulant ajouter de nouveaux blocs à la chaîne doit résoudre un problème difficile, qui nécessite beaucoup de puissance de calcul informatique. Résoudre le problème « prouve » que vous avez dépensé les ressources informatiques. Cette action s'appelle le [minage](/developers/docs/consensus-mechanisms/pow/mining/). En général, le minage s'accomplit par la force brute en testant des milliers de possibilités, mais ajouter un bloc avec succès est récompensé par une prime en ETH.
+Ethereum utilise un mécanisme de consensus basé sur [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). Celui qui souhaite ajouter un nouveau bloc à la chaîne doit miser au moins 32 ETH dans le contrat de dépôt et éxécuter un logiciel de validation. Il peut ensuite être choisi au hasard pour proposer des blocs que d'autres validateurs vérifient et ajoutent à la blockchain. Dans ce modèle, on trouve généralement une seule chaîne, mais les latences du réseau et les comportements malhonnêtes peuvent provoquer l'existence de plusieurs blocs à la même position près de la tête du réseau. Pour résoudre ce problème, un algorithme de sélection de fourche choisit un ensemble canonique de blocs. Les blocs sélectionnés sont ceux qui forment la chaîne la plus lourde, le terme « lourde » faisant référence au nombre de validateurs ayant soutenu les blocs (mesuré par le nombre d'ETH mis en enjeu). Il existe un système de récompenses et de pénalités qui incite fortement les participants à être honnêtes et disponibles en ligne autant que possible.
 
-Les nouveaux blocs sont diffusés aux nœuds du réseau, vérifiés et validés, ce qui met à jour l'état pour tout le monde.
+Si vous souhaitez voir comment les données de la blockchain sont hachées puis ajoutées à l'historique des références des blocs, consultez [cette démo](https://andersbrownworth.com/blockchain/blockchain) d'Anders Brownworth et regardez la vidéo d'accompagnement ci-dessous.
 
-Pour résumer, lorsque vous envoyez de l'ETH à quelqu'un, la transaction doit être minée et incluse dans un nouveau bloc. L'état mis à jour est ensuite partagé avec l'ensemble du réseau.
-
-Regardez Austin vous guider à travers les blockchains :
-
-<YouTube id="zcX7OJ-L8XQ" />
-
-Si vous voulez voir comment les blockchains hashent les données et comment les nouveaux blocs référencent tous les blocs précédents, consultez [cette démonstration](https://andersbrownworth.com/blockchain/blockchain) par Anders Brownworth et regardez la vidéo correspondante ci-dessous.
-
-Regardez Anders expliquer les hashs dans les blockchains :
+Regardez Anders expliquer le hachage dans les blockchains :
 
 <YouTube id="_160oMzblY8" />
 
 ## Qu'est-ce qu'Ethereum ? {#what-is-ethereum}
 
-Dans l'univers Ethereum, il existe un ordinateur unique et conforme (appelé EVM, ou Ethereum Virtual Machine) dont l'état est approuvé par tous sur le réseau Ethereum. Quiconque participe au réseau Ethereum (chaque nœud Ethereum) garde une copie de l'état de cet ordinateur. De plus, chaque participant peut diffuser une demande pour que cet ordinateur effectue un calcul arbitraire. Dès lors qu'une telle demande est diffusée, les autres participants sur le réseau vérifient, valident et exécutent le calcul. Cette exécution produit un changement d'état de l'EVM, qui est engagé et propagé sur tout le réseau.
+Ethereum est une blockchain avec un ordinateur intégré. C'est la base pour élaborer des applications et des organisations d'une manière décentralisée, sans demande de permission et en résistant à la censure.
 
-Les demandes de calcul sont appelées demandes de transaction ; l'enregistrement de toutes les transactions, de la même façon que l'état actuel de l'EVM, est enregistré sur la blockchain, qui à son tour est stockée et validée par tous les nœuds.
+Dans l'univers Ethereum, il existe un ordinateur unique et canonique (appelé EVM, ou Ethereum Virtual Machine) dont l'état est approuvé par tous sur le réseau Ethereum. Quiconque participe au réseau Ethereum (chaque nœud Ethereum) garde une copie de l'état de cet ordinateur. De plus, chaque participant peut diffuser une demande pour que cet ordinateur effectue un calcul arbitraire. Dès lors qu'une telle demande est diffusée, les autres participants sur le réseau vérifient, valident et exécutent le calcul. Cette exécution produit un changement d'état de l'EVM, qui est engagé et propagé sur tout le réseau.
 
-Les mécanismes cryptographiques garantissent qu'une fois que les transactions sont vérifiées comme valides et ajoutées à la blockchain, elles ne pourront pas être altérées plus tard. Les mêmes mécanismes garantissent également que toutes les transactions sont signées et exécutées avec les « autorisations » appropriées (personne ne devrait pouvoir transmettre des biens numériques depuis le compte d'Alice, sauf Alice elle-même).
+Les demandes de calcul sont appelées « demandes de transaction » ; l'enregistrement de toutes les transactions, de la même façon que l'état actuel de l'EVM, est enregistré sur la blockchain, qui à son tour est stockée et validée par tous les nœuds.
+
+Les mécanismes cryptographiques garantissent qu'une fois que les transactions sont vérifiées comme étant valides et ajoutées à la blockchain, elles ne pourront pas être altérées ultérieurement. Les mêmes mécanismes garantissent également que toutes les transactions sont signées et exécutées avec les « autorisations » appropriées (personne ne devrait pouvoir transmettre des biens numériques depuis le compte d'Alice, sauf Alice elle-même).
 
 ## Qu'est-ce-que l'ether ? {#what-is-ether}
 
-**Ether (ETH)** est la cryptomonnaie native d'Ethereum. Le but de l'ether est de créer un marché du calcul. Un tel marché incite économiquement les participants à vérifier/exécuter les demandes de transaction et à fournir des ressources informatiques au réseau.
+**Ether (ETH)** est la cryptomonnaie native d'Ethereum. L'objectif de l'ETH est de créer un marché du calcul. Un tel marché incite économiquement les participants à vérifier/exécuter les demandes de transaction et à fournir des ressources informatiques au réseau.
 
-Tout participant qui diffuse une demande de transaction doit également offrir une certaine quantité d'éther au réseau comme prime. Cette prime sera versée à quiconque effectuera le travail nécessaire pour vérifier la transaction, l'exécuter, la consigner dans la blockchain et la diffuser sur le réseau.
+Tout participant qui diffuse une demande de transaction doit également offrir une certaine quantité d'ETH au réseau comme prime. Le réseau versera cette prime à quiconque effectuera le travail nécessaire pour vérifier la transaction, l'exécuter, la consigner dans la blockchain et la diffuser sur le réseau.
 
-La quantité d'ether payée correspond au temps passé à effectuer les calculs. Ces primes empêchent également aux participants malveillants de bloquer intentionnellement le réseau en demandant l'exécution de boucles infinies ou d'autres scripts gourmands en ressources, car ces participants doivent payer le temps de calcul qu'ils réquisitionnent.
+La quantité d'ETH payée correspond aux ressources nécessaires pour effectuer les calculs. Ces primes empêchent également les participants malveillants de bloquer intentionnellement le réseau en demandant l'exécution de boucles infinies ou d'autres scripts gourmands en ressources, dans la mesure où ces participants doivent payer les ressources de calcul qu'ils réquisitionnent.
+
+L'ETH est également utilisé pour fournir une sécurité crypto-économique au réseau de trois manières principales : 1 - il est utilisé comme moyen de récompenser les validateurs qui proposent des blocs ou encore empêcher des appels aux comportements malhonnêtes par d'autres validateurs ; 2 - il est misé par des validateurs, agissant ainsi comme collatéral contre un comportement malhonnête — si les validateurs tentent de mal se comporter, leur ETH peut être détruit ; 3 - il est utilisé pour pondérer les « votes » pour les blocs nouvellement proposés, en alimentant la partie de fourche du mécanisme de consensus.
 
 ## Qu'est-ce qu'un contrat intelligent ? {#what-are-smart-contracts}
 
-En pratique, les participants n'écrivent pas de nouveau code chaque fois qu'ils veulent demander un calcul sur l'EVM. À la place, les développeurs d'applications téléchargent des programmes (extraits de code réutilisables) dans la mémoire de l'EVM et les utilisateurs exécutent des requêtes pour l'exécution de ces extraits de codes avec des paramètres qui varient. On appelle « contrats intelligents » les programmes téléchargés sur le réseau et exécutés.
+En pratique, les participants n'écrivent pas de nouveau code chaque fois qu'ils veulent demander un calcul sur l'EVM. À la place, les développeurs d'applications téléchargent des programmes (extraits de code réutilisables) dans la mémoire de l'EVM et les utilisateurs exécutent des requêtes pour exécuter ces extraits de codes selon des paramètres variables. On appelle « contrats intelligents » les programmes téléchargés sur le réseau et exécutés par celui-ci.
 
-Pour faire simple, vous pouvez imaginer qu'un contrat intelligent est une sorte de distributeur automatique : un script qui, lorsqu'il est appelé avec certains paramètres, effectue des actions ou des calculs si certaines conditions sont réunies. Par exemple, un simple contrat intelligent de vendeur pourrait créer et assigner la propriété d'un actif numérique si l'appelant envoie de l'ether à un destinataire spécifique.
+Pour faire simple, vous pouvez imaginer qu'un contrat intelligent est une sorte de distributeur automatique : un script qui, lorsqu'il est appelé selon certains paramètres, effectue des actions ou des calculs si certaines conditions sont réunies. Par exemple, un simple contrat intelligent de vendeur pourrait créer et assigner la propriété d'un actif numérique lorsque l'appelant envoie de l'ETH à un destinataire spécifique.
 
 N'importe quel développeur peut créer un contrat intelligent et le rendre public sur le réseau, en utilisant la blockchain comme couche de données, moyennant des frais payés au réseau. Tout utilisateur peut alors appeler le contrat intelligent et exécuter son code, encore une fois contre des frais payés au réseau.
 
-Ainsi, avec les contrats intelligents, les développeurs peuvent créer et déployer des applications et des services complexes orientés utilisateurs, tels que des sites marchands, des outils financiers, des jeux, etc.
+Avec les contrats intelligents, les développeurs peuvent ainsi créer et déployer des applications et des services complexes orientés utilisateurs, tels que des sites marchands, des outils financiers, des jeux, etc.
 
 ## Terminologie {#terminology}
 
 ### Blockchain {#blockchain}
 
-L'ensemble des blocs engagés sur le réseau Ethereum dans le début de son histoire. Elle est appelée ainsi car chaque bloc contient une référence au bloc précédent, ce qui nous aide à maintenir un ordre entre les blocs (et ce de façon précise).
+L'ensemble des blocs engagés sur le réseau Ethereum depuis le début de son histoire. Elle est appelée ainsi car chaque bloc contient une référence au bloc précédent, ce qui nous aide à maintenir un ordre entre les blocs (et donc un historique précis).
 
 ### ETH {#eth}
 
-La cryptomonnaie native d'Ethereum. Les utilisateurs payent les autres utilisateurs en ether afin que leurs demandes d'exécution de code soient satisfaites.
+**Ether (ETH)** est la cryptomonnaie native d'Ethereum. Les utilisateurs payent les autres utilisateurs en ETH afin que leurs demandes d'exécution de code soient satisfaites.
 
-[Plus d'infos sur l'ETH](/developers/docs/intro-to-ether/)
+[Autres informations sur ETH](/developers/docs/intro-to-ether/)
 
 ### EVM {#evm}
 
@@ -82,15 +78,15 @@ Les machines réelles qui stockent l'état de l'EVM. Les nœuds communiquent les
 
 ### Comptes {#accounts}
 
-Endroit où l'ether est stocké. Les utilisateurs peuvent initialiser des comptes, y déposer de l'ether et en transférer à d'autres utilisateurs. Les comptes et les soldes des comptes sont stockés dans une grande table au sein de l’EVM. Ils font partie de l’état global de l’EVM.
+Où est stocké ETH ? Les utilisateurs peuvent initialiser des comptes, y déposer des ETH et en transférer à d'autres utilisateurs. Les comptes et les soldes des comptes sont stockés dans une grande table au sein de l’EVM. Ils font partie de l’état global de l’EVM.
 
 [Plus d'infos sur les comptes](/developers/docs/accounts/)
 
 ### Transactions {#transactions}
 
-Une « demande de transaction » est le terme officiel pour une demande d'exécution de code sur l'EVM, et une « transaction » correspond à une demande de transaction satisfaite et au changement associé dans l'état de l'EVM. N'importe quel utilisateur peut diffuser une demande de transaction sur le réseau depuis un nœud. Pour qu'une demande de transaction affecte l'état convenu de l'EVM, elle doit être validée, exécutée et "engagée sur le réseau" par un autre nœud. L'exécution de n'importe quel code provoque un changement d'état dans l'EVM. En cas d'engagement, ce changement d'état est diffusé à tous les nœuds du réseau. Quelques exemples de transactions :
+Une « demande de transaction » est le terme officiel pour une demande d'exécution de code sur l'EVM, et une « transaction » correspond à une demande de transaction satisfaite et au changement associé dans l'état de l'EVM. N'importe quel utilisateur peut diffuser une demande de transaction sur le réseau depuis un nœud. Pour qu'une demande de transaction affecte l'état convenu de l'EVM, elle doit être validée, exécutée et « engagée sur le réseau » par un autre nœud. L'exécution d'un code quel qu'il soit provoque un changement d'état dans l'EVM. En cas d'engagement, ce changement d'état est diffusé à tous les nœuds du réseau. Quelques exemples de transactions :
 
-- Envoyer X ether depuis mon compte sur le compte d'Alice.
+- Envoyer X ETH depuis mon compte sur le compte d'Alice.
 - Publier un code de contrat intelligent dans l'état de l'EVM.
 - Exécuter le code du contrat intelligent à l'adresse X dans l'EVM, avec les arguments Y.
 
@@ -106,12 +102,12 @@ Le volume des transactions est très élevé, les transactions sont donc « enga
 
 Extraits de code réutilisables (un programme) qu'un développeur publie dans l'état de l'EVM. N'importe qui peut demander l'exécution du code d'un contrat intelligent en faisant une demande de transaction. Étant donné que les développeurs peuvent écrire des applications exécutables arbitraires dans l'EVM (jeux, places de marché, instruments financiers, etc.) en publiant des contrats intelligents, ceux-ci sont aussi souvent appelés [dApps, ou Applications décentralisées](/developers/docs/dapps/).
 
-[En savoir plus sur les contrats intelligents](/developers/docs/smart-contracts/)
+[Plus d'infos sur les contrats intelligents](/developers/docs/smart-contracts/)
 
-## En lire plus {#further-reading}
+## Complément d'information {#further-reading}
 
 - [Livre blanc Ethereum](/whitepaper/)
-- [Mais comment fonctionne Ethereum?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_
+- [Comment fonctionne Ethereum de toute manière ?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** cette ressource est toujours utile mais sachez qu'elle est antérieure à [La Fusion](/roadmap/merge) et fait donc toujours référence au mécanisme de preuve de travail d'Ethereum - Ethereum est désormais sécurisé par la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos))
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 

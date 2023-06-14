@@ -1,10 +1,4 @@
-import React, {
-  ComponentType,
-  ReactNode,
-  SVGProps,
-  useEffect,
-  useState,
-} from "react"
+import React, { ComponentType, SVGProps, useEffect, useState } from "react"
 import { shuffle } from "lodash"
 import {
   Badge,
@@ -28,29 +22,13 @@ import ButtonLink from "../ButtonLink"
 import Translation from "../Translation"
 // SVG imports
 import {
-  AbyssGlyphIcon,
-  AllnodesGlyphIcon,
-  AnkrGlyphIcon,
-  AvadoGlyphIcon,
-  BloxstakingGlyphIcon,
   CautionProductGlyphIcon,
-  DefaultOpenSourceGlyphIcon,
-  DockerIcon,
   GreenCheckProductGlyphIcon,
-  KilnGlyphIcon,
-  LidoGlyphIcon,
-  RocketPoolGlyphIcon,
-  StafiGlyphIcon,
-  StakefishGlyphIcon,
-  StakewiseGlyphIcon,
-  StakingDappnodeGlyphIcon,
-  StereumGlyphIcon,
   UnknownProductGlyphIcon,
-  WagyuGlyphIcon,
   WarningProductGlyphIcon,
 } from "../icons/staking"
 
-import { EventOptions } from "../../utils/matomo"
+import { MatomoEventOptions } from "../../utils/matomo"
 // When adding a product svg, be sure to add to mapping below as well.
 
 const PADDED_DIV_STYLE: BoxProps = {
@@ -66,28 +44,11 @@ enum FlagType {
   UNKNOWN = "unknown",
 }
 
-const getSvgFromPath = (
-  svgPath: string
+const getIconFromName = (
+  imageName: string
 ): ComponentType<SVGProps<SVGElement>> => {
-  const mapping = {
-    "abyss-glyph.svg": AbyssGlyphIcon,
-    "allnodes-glyph.svg": AllnodesGlyphIcon,
-    "ankr-glyph.svg": AnkrGlyphIcon,
-    "avado-glyph.svg": AvadoGlyphIcon,
-    "bloxstaking-glyph.svg": BloxstakingGlyphIcon,
-    "dappnode-glyph.svg": StakingDappnodeGlyphIcon,
-    "docker-icon.svg": DockerIcon,
-    "default-open-source-glyph.svg": DefaultOpenSourceGlyphIcon,
-    "kiln-glyph.svg": KilnGlyphIcon,
-    "lido-glyph.svg": LidoGlyphIcon,
-    "rocket-pool-glyph.svg": RocketPoolGlyphIcon,
-    "stafi-glyph.svg": StafiGlyphIcon,
-    "stakewise-glyph.svg": StakewiseGlyphIcon,
-    "stereum-glyph.svg": StereumGlyphIcon,
-    "wagyu-glyph.svg": WagyuGlyphIcon,
-    "stakefish-glyph.svg": StakefishGlyphIcon,
-  }
-  return mapping[svgPath]
+  const { [imageName + "GlyphIcon"]: Icon } = require("../icons/staking")
+  return Icon
 }
 
 const Status: React.FC<{ status: FlagType }> = ({ status }) => {
@@ -127,7 +88,7 @@ const StakingBadge: React.FC<{
 
 type Product = {
   name: string
-  svgPath: string
+  imageName: string
   color: string
   url: string
   platforms: Array<string>
@@ -143,9 +104,10 @@ type Product = {
   permissionless: FlagType
   permissionlessNodes: FlagType
   multiClient: FlagType
-  diverseClients: FlagType
+  consensusDiversity: FlagType
+  executionDiversity: FlagType
   economical: FlagType
-  matomo: EventOptions
+  matomo: MatomoEventOptions
 }
 interface ICardProps {
   product: Product
@@ -154,7 +116,7 @@ interface ICardProps {
 const StakingProductCard: React.FC<ICardProps> = ({
   product: {
     name,
-    svgPath,
+    imageName,
     color,
     url,
     platforms,
@@ -170,12 +132,13 @@ const StakingProductCard: React.FC<ICardProps> = ({
     permissionless,
     permissionlessNodes,
     multiClient,
-    diverseClients,
+    consensusDiversity,
+    executionDiversity,
     economical,
     matomo,
   },
 }) => {
-  const Svg = getSvgFromPath(svgPath)
+  const Svg = getIconFromName(imageName)
   const data = [
     {
       label: <Translation id="page-staking-considerations-solo-1-title" />,
@@ -211,7 +174,11 @@ const StakingProductCard: React.FC<ICardProps> = ({
     },
     {
       label: <Translation id="page-staking-considerations-saas-7-title" />,
-      status: diverseClients,
+      status: executionDiversity,
+    },
+    {
+      label: <Translation id="page-staking-considerations-saas-8-title" />,
+      status: consensusDiversity,
     },
     {
       label: <Translation id="page-staking-considerations-solo-8-title" />,
@@ -245,7 +212,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
         borderRadius="base"
         maxH={24}
       >
-        {!!Svg && <Icon as={Svg} fontSize="2rem" />}
+        {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
         <Heading fontSize="2xl" color="white">
           {name}
         </Heading>
@@ -357,12 +324,8 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     return product.multiClient === FlagType.VALID ? 1 : 0
   }
 
-  const scoreDiverseClients = (product: Product): 2 | 1 | 0 => {
-    return product.diverseClients === FlagType.VALID
-      ? 2
-      : product.diverseClients === FlagType.WARNING
-      ? 1
-      : 0
+  const scoreClientDiversity = (flag: FlagType): 2 | 1 | 0 => {
+    return flag === FlagType.VALID ? 2 : flag === FlagType.WARNING ? 1 : 0
   }
 
   const scoreEconomical = (product: Product): 1 | 0 => {
@@ -379,7 +342,8 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     score += scorePermissionless(product)
     score += scorePermissionlessNodes(product)
     score += scoreMultiClient(product)
-    score += scoreDiverseClients(product)
+    score += scoreClientDiversity(product.executionDiversity)
+    score += scoreClientDiversity(product.consensusDiversity)
     score += scoreEconomical(product)
     return score
   }
@@ -404,7 +368,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   const getDiversityOfClients = (
     _pctMajorityClient: number | null
   ): FlagType => {
-    if (!_pctMajorityClient) return FlagType.UNKNOWN
+    if (_pctMajorityClient === null) return FlagType.UNKNOWN
     if (_pctMajorityClient > 50) return FlagType.WARNING
     return FlagType.VALID
   }
@@ -414,14 +378,14 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
 
   const getBrandProperties = ({
     name,
-    svgPath,
+    imageName,
     hue,
     url,
     socials,
     matomo,
   }) => ({
     name,
-    svgPath,
+    imageName,
     color: `hsla(${hue}, ${SAT}, ${LUM}, 1)`,
     url,
     socials,
@@ -460,7 +424,12 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
           permissionlessNodes: getFlagFromBoolean(
             listing.hasPermissionlessNodes
           ),
-          diverseClients: getDiversityOfClients(listing.pctMajorityClient),
+          executionDiversity: getDiversityOfClients(
+            listing.pctMajorityExecutionClient
+          ),
+          consensusDiversity: getDiversityOfClients(
+            listing.pctMajorityConsensusClient
+          ),
           liquidityToken: getFlagFromBoolean(listing.tokens?.length),
           minEth: listing.minEth,
         }))
@@ -491,7 +460,12 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
           permissionless: getFlagFromBoolean(listing.isPermissionless),
-          diverseClients: getDiversityOfClients(listing.pctMajorityClient),
+          executionDiversity: getDiversityOfClients(
+            listing.pctMajorityExecutionClient
+          ),
+          consensusDiversity: getDiversityOfClients(
+            listing.pctMajorityConsensusClient
+          ),
           selfCustody: getFlagFromBoolean(listing.isSelfCustody),
           minEth: listing.minEth,
         }))

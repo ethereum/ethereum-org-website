@@ -167,12 +167,12 @@
   "page-upgrades-upgrades-aria-label": "Menu de melhorias do Ethereum",
   "page-upgrades-upgrades-beacon-chain": "A Beacon Chain",
   "page-upgrades-upgrades-guide": "Guia para as melhorias no Ethereum",
-  "page-upgrades-upgrades-docking": "A fusão",
+  "page-upgrades-upgrades-docking": "A integração",
   "page-upgrades-energy-consumption": "Mais sobre o consumo energético do Ethereum",
   "page-upgrades-upgrading": "Melhorias do Ethereum para níveis mais avançados",
-  "page-upgrades-vision": "A visão",
-  "page-upgrades-vision-btn": "Mais sobre a visão do Ethereum",
-  "page-upgrades-vision-desc": "Para integrar o Ethereum e atender a toda a humanidade, precisamos torná-lo mais dimensionável, seguro e sustentável.",
+  "page-roadmap-vision": "A visão",
+  "page-roadmap-vision-btn": "Mais sobre a visão Ethereum",
+  "page-roadmap-vision-desc": "Para integrar o Ethereum e atender a toda a humanidade, precisamos torná-lo mais dimensionável, seguro e sustentável.",
   "page-upgrades-what-happened-to-eth2-title": "O que aconteceu com \"Eth2?\"",
   "page-upgrades-what-happened-to-eth2-1": "O termo \"Eth2\" era comumente usado antes da Fusão, mas está sendo descontinuado e substituído por uma terminologia mais precisa.",
   "page-upgrades-what-happened-to-eth2-1-more": "Mais sobre a fusão.",
@@ -199,9 +199,9 @@
   "page-upgrades-whats-ethereum": "Um momento, o que é Ethereum?",
   "page-upgrades-whats-new": "Ethereum: próximos passos",
   "page-upgrades-security-link": "Mais sobre segurança e prevenção de fraude",
-  "page-staking-deposit-contract-staking-more-link": "Mais sobre staking",
+  "page-staking-deposit-contract-staking-more-link": "Mais sobre participação",
   "docs-nav-proof-of-stake": "Prova de participação",
   "docs-nav-proof-of-work": "Prova de trabalho",
   "page-upgrades-get-involved-ethresearch-1": "Fragmentação",
-  "page-upgrades-get-involved-ethresearch-2": "A fusão"
+  "page-upgrades-get-involved-ethresearch-2": "A integração"
 }

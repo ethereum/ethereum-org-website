@@ -304,7 +304,7 @@ Ethereum umożliwia działanie NFT z kilku powodów:
 
 ## Wpływ NFT na środowisko {#environmental-impact-nfts}
 
-Tworzenie i przesyłanie NFT to wyłącznie transakcje Ethereum — wybijanie, kupowanie, wymiana lub interakcja z NFT nie powoduje bezpośredniego zużycia energii. Od czasu [Połączenia](/upgrades/merge) Ethereum jest łańcuchem bloków o niskim zużyciu energii, co oznacza, że ​​wpływ używania NFT na środowisko jest niewielki.
+Tworzenie i przesyłanie NFT to wyłącznie transakcje Ethereum — wybijanie, kupowanie, wymiana lub interakcja z NFT nie powoduje bezpośredniego zużycia energii. Od czasu [Połączenia](/roadmap/merge) Ethereum jest łańcuchem bloków o niskim zużyciu energii, co oznacza, że ​​wpływ używania NFT na środowisko jest niewielki.
 
 [Więcej o zużyciu energii przez Ethereum](/energy-consumption/).
 

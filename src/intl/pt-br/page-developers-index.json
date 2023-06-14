@@ -51,7 +51,7 @@
   "page-developers-meta-desc": "Documentação, tutoriais e ferramentas para profissionais que desenvolvem com Ethereum.",
   "page-developers-mev-desc": "Uma introdução ao valor máximo extraível (MEV)",
   "page-developers-mev-link": "Valor máximo extraível (MEV)",
-  "page-developers-mining-desc": "Como criar novos blocos e entrar em consenso",
+  "page-developers-mining-desc": "Como novos blocos são criados e o consenso era atingido usando a prova de trabalho",
   "page-developers-mining-link": "Mineração",
   "page-developers-mining-algorithms-desc": "Informações sobre os algoritmos de mineração da Ethereum",
   "page-developers-mining-algorithms-link": "Algoritmos de mineração",
@@ -92,5 +92,6 @@
   "page-developers-data-structures-and-encoding": "Codificação e estruturas de dados",
   "page-developers-data-structures-and-encoding-link": "Codificação e estruturas de dados",
   "page-developers-data-structures-and-encoding-desc": "Introdução às estruturas de dados e esquema de codificação utilizado na pilha Ethereum",
-  "alt-eth-blocks": "Ilustração de blocos sendo organizados como um símbolo do ETH"
+  "alt-eth-blocks": "Ilustração de blocos sendo organizados como um símbolo ETH",
+  "page-assets-doge": "Doge usando dapps"
 }

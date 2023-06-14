@@ -63,13 +63,10 @@ Mehrere Projekte bieten Implementierungen von Zustandskanälen, die Sie in Ihre 
 
 **Zustandskanäle**
 
-- [EthHub auf Zustandskanälen](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Making Sense of Ethereum's Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12. Februar 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _6. November 2015 - Jeff Coleman_
 - [Basis von Zustandskanälen](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _Distrikt0x_
 
 **Zahlungskanäle**
-
-- [EthHub auf Zahlungskanälen](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
 _Kennen Sie eine Community-Ressource die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._

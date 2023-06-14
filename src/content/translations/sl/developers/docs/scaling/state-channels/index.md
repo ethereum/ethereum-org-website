@@ -63,13 +63,10 @@ Več projektov zagotavlja implementacije kanalov stanj, ki jih lahko integrirate
 
 **Kanali stanja**
 
-- [EthHub o kanalih stanja](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Smiselnost Ethereumovih rešitev za razširljivost s plastjo 2: kanali stanja, Plasma in Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12. februar 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 – Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
 **Plačilni kanali**
-
-- [EthHub o plačilnih kanalih](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
 _Poznate vir iz skupnosti, ki vam je pomagal? Uredite to stran in ga dodajte!_

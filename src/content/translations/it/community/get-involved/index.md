@@ -25,6 +25,7 @@ Hai conoscenze in matematica, crittografia o economia? Potresti essere interessa
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - una serie di premi di ricerca di alto valore dove puoi guadagnare fino a >$100.000 USD
 - [Ethresearch.ch](https://ethresear.ch) - Il forum principale di Ethereum per la ricerca, e il forum più influente al mondo per la criptoeconomia
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022): Una serie continuativa di domande e risposte, con i ricercatori. Ogni volta che si apre una parte successiva, chiunque può pubblicare domande.
 - [Lista dei desideri del programma di supporto per gli ecosistemi](https://esp.ethereum.foundation/wishlist/) - aree di ricerca in cui il programma di supporto per gli ecosistemi Ethereum sta cercando attivamente domande di sovvenzione
 
 [Esplora altre aree di ricerca attive](/community/research/).
@@ -40,7 +41,7 @@ Se non sei uno sviluppatore, può essere difficile sapere da dove iniziare all�
 ### Scrivi contenuti su Ethereum {#write-content}
 
 - Ethereum ha bisogno di buoni scrittori che possano spiegare il suo valore in un linguaggio semplice
-- Non sei pronto a pubblicare i tuoi articoli? Prendi in considerazione di contribuire a contenuti esistenti sulle risorse della community come [EthHub](https://docs.ethhub.io/), o proponi nuovi contenuti per ethereum.org!
+- Non sei pronto a pubblicare i tuoi articoli? Considera di contribuire ai contenuti esistenti sulle risorse della community, o [proponi nuovi contenuti per ethereum.org](/contributing/)!
 
 ### Messa a disposizione per prendere appunti per le riunioni della community {#take-notes}
 
@@ -72,7 +73,7 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 
 ## Professionisti finanziari e Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum è la casa della "Finanza Decentralizzata" - una rete di protocolli e applicazioni che offrono un sistema finanziario alternativo. Se sei un professionista finanziario, controlla alcune applicazioni DeFi su [DeFi Llama](https://defillama.com/) o su [DeFiPrime](https://defiprime.com)
+- Ethereum è la casa della "Finanza Decentralizzata" - una rete di protocolli e applicazioni che offrono un sistema finanziario alternativo. Se sei un professionista finanziario, dai un'occhiata ad alcune app DeFi su [DeFi Llama](https://defillama.com/) o su [DeFiPrime](https://defiprime.com)
 - Contabile? Le risorse su Ethereum: ETH, token, Defi, etc., introducono molti nuovi problemi di compatibilità. Potresti iniziare dando un'occhiata ad alcuni progetti che mirano ad aiutare gli utenti delle criptovalute a risolvere le proprie difficoltà di contabilità e ragioneria, come [Rotki](https://rotki.com/)
 
 ## Product Manager <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
@@ -99,6 +100,8 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 - [Lavori Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
+- [Lavori correlati a Ethereum](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Entra a far parte di una DAO {#decentralized-autonomous-organizations-daos}
 

@@ -154,7 +154,7 @@ Deși dezvoltarea specificațiilor și implementărilor a fost întotdeauna comp
 
 Când Lanțul Beacon se va uni cu nivelul execuției în Ethereum, procesul de guvernanță pentru a propune modificări va fi armonizat. Acest proces de implementare a fuziunii este [deja în curs de desfășurare](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Mai multe despre fuziune
 </ButtonLink>
 
@@ -175,7 +175,6 @@ Când Lanțul Beacon se va uni cu nivelul execuției în Ethereum, procesul de g
 Guvernanța în Ethereum nu este definită rigid. Diverși participanți ai comunității au perspective diferite în această privință. Iată câteva dintre acestea:
 
 - [Note cu privire la Guvernanța Blockchain-ului](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Guvernare pe Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [Cum funcționează guvernanța în Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Cum funcționează guvernarea în Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Ce este un dezvoltator de bază în Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_

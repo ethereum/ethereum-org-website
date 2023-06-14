@@ -4,7 +4,7 @@ description: 详细了解 Dagger-Hashimoto 算法。
 lang: zh
 ---
 
-Dagger-Hashimoto 是以太坊挖矿算法的原始研究实现和规范。 但是，Dagger-Hashimoto 已被 [Ethash](#ethash) 取代。 在[合并](/updates/merge)之后，挖矿将完全关闭，届时以太坊将使用[权益证明](/developers/docs/consensus-mechanisms/pos)机制来提供保护。
+Dagger-Hashimoto 是以太坊挖矿算法的原始研究实现和规范。 但是，Dagger-Hashimoto 已被 [Ethash](#ethash) 取代。 在 2022 年 9 月 15 日实施的[合并](/updates/merge)后，挖矿完全关闭。 此后，以太坊采用[权益证明](/developers/docs/consensus-mechanisms/pos)机制保护安全。 本页面展示与历史有关的内容，其中的信息不再与合并后的以太坊相关。
 
 ## 前提条件 {#prerequisites}
 
@@ -291,7 +291,7 @@ _证明_。 由于 `P` 是一个安全素数，那么根据 \[Lagrange's Theorem
 
 对于特定的 `P` 值和 `w` 值，函数 `pow(x, w, P)` 可能存在许多冲突。 例如，`pow(x,9,19)` 的值只能接受 `{1,18}`。
 
-鉴于 `P` 为素数，可以使用以下结果，选择一个用于模幂运算散列函数的适当 `w` 值：
+鉴于 `P` 为素数，可以使用以下结果，选择一个用于模幂运算哈希函数的适当 `w` 值：
 
 > 观察 3。 令 `P` 为素数；当且仅当用于 `ℤ/Pℤ` 中所有 `a` 和 `b` 满足以下条件时，`w` 和 `P-1` 才能为互素。
 >

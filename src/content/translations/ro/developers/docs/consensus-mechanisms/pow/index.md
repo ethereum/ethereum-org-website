@@ -7,7 +7,7 @@ incomplete: true
 
 Ethereum, ca și Bitcoin, utilizează actualmente un protocol de consens numit **[Dovada-muncii (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. Acesta permite nodurilor rețelei Ethereum să cadă de acord asupra stării tuturor informațiilor înregistrate pe blockchain-ul Ethereum și previne anumite tipuri de atacuri economice.
 
-În cursul anului viitor, dovada-muncii (proof-of-work) va fi eliminată treptat în favoarea **[Dovezii-mizei (PoS)](/developers/docs/consensus-mechanisms/pos)**. Tranziția la dovada-mizei (proof-of-stake) va duce de asemenea la eliminarea treptată a minării din Ethereum. [Aflați mai multe despre fuziune](/upgrades/merge/)
+În cursul anului viitor, dovada-muncii (proof-of-work) va fi eliminată treptat în favoarea **[Dovezii-mizei (PoS)](/developers/docs/consensus-mechanisms/pos)**. Tranziția la dovada-mizei (proof-of-stake) va duce de asemenea la eliminarea treptată a minării din Ethereum. [Aflați mai multe despre fuziune](/roadmap/merge/)
 
 ## Condiții prealabile {#prerequisites}
 

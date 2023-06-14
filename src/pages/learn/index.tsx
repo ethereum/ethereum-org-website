@@ -1,5 +1,5 @@
 // Libraries
-import React, { ReactNode } from "react"
+import React from "react"
 import {
   Box,
   Center,
@@ -26,8 +26,8 @@ import OriginalCard, {
 } from "../../components/Card"
 import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
-import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import Translation from "../../components/Translation"
+import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
 
 // Utils
 import { Lang } from "../../utils/languages"
@@ -160,6 +160,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
       {
         content: t("hero-button-lets-get-started"),
         toId: tocItems[0].id,
+        matomo: {
+          eventCategory: "learn hub hero buttons",
+          eventAction: "click",
+          eventName: "lets get started",
+        },
       },
     ],
   }
@@ -203,7 +208,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           >
             <Translation id="toc-learn-hub" />
           </Heading>
-          <StakingHomeTableOfContents items={tocItems} />
+          <UpgradeTableOfContents items={tocItems} />
         </Box>
 
         <Box
@@ -274,9 +279,13 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <AdditionalReadingHeader>
               <Translation id="additional-reading-more-on-ethereum-basics" />
             </AdditionalReadingHeader>
+
             <DocsContainer>
               <DocLink to="/guides/">
                 <Translation id="guides-hub" />
+              </DocLink>
+              <DocLink to="/quizzes/">
+                <Translation id="quizzes-title" />
               </DocLink>
               <DocLink to="/smart-contracts/">
                 <Translation id="additional-reading-what-are-smart-contracts" />
@@ -286,6 +295,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </DocLink>
               <DocLink to="/web3/">
                 <Translation id="additional-reading-what-is-web3" />
+              </DocLink>
+              <DocLink
+                to="https://www.kernel.community/en/learn/module-1/value"
+                isExternal
+              >
+                <Translation id="additional-reading-value" />
               </DocLink>
               <DocLink
                 to="https://www.youtube.com/watch?v=WSN5BaCzsbo"
@@ -602,7 +617,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <CardImage>
                     <GatsbyImage image={getImage(data.merge)!} alt="" />
                   </CardImage>
-                  <ButtonLink to="/upgrades/">
+                  <ButtonLink to="/roadmap/">
                     <Translation id="ethereum-upgrades-card-button" />
                   </ButtonLink>
                 </>
@@ -646,6 +661,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </DocLink>
               <DocLink to="https://weekinethereumnews.com/" isExternal>
                 <Translation id="more-on-ethereum-protocol-week-in-ethereum" />
+              </DocLink>
+              <DocLink to="https://kernel.community/en/learn/" isExternal>
+                <Translation id="more-on-ethereum-protocol-kernel" />
               </DocLink>
             </DocsContainer>
           </Section>

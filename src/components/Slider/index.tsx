@@ -71,7 +71,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         <IconButton
           aria-label="MdChevronLeft"
           onClick={scrollPrev}
-          icon={<MdChevronLeft fontSize={24} focusable={true} />}
+          icon={<MdChevronLeft fontSize={24} focusable />}
           isRound
           mr="0.8rem"
           _hover={{ boxShadow: "none" }}
@@ -83,7 +83,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         <IconButton
           aria-label="MdChevronRight"
           onClick={scrollNext}
-          icon={<MdChevronRight fontSize={24} focusable={true} />}
+          icon={<MdChevronRight fontSize={24} focusable />}
           isRound
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}

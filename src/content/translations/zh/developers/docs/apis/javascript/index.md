@@ -6,11 +6,11 @@ lang: zh
 
 为了使软件应用程序能够与以太坊区块链进行交互（例如：读取区块链数据或发送交易信息到网络），软件必须连接到以太坊节点。
 
-为此目的，每个以太坊客户端都执行 [JSON-RPC](/developers/docs/apis/json-rpc/) 规范，所以应用程序可以依赖统一的[端点](/developers/docs/apis/json-rpc/endpoints/)集。
+为此，每种以太坊客户端都实现了 [JSON-RPC](/developers/docs/apis/json-rpc/) 规范，因而应用程序可以依赖一组统一的[方法](/developers/docs/apis/json-rpc/#json-rpc-methods)。
 
 如果您想要用 JavaScript 连接到一个以太坊节点， 可以使用原生 JavaScript，不过生态系统中存在一些方便的库，使得这个事情变得更加容易。 通过这些库，开发者可以写下直观易懂甚至单行的代码就能初始化与以太坊的互动（背后使用 JSON RPC 请求）。
 
-请注意，自从[合并](/upgrades/merge/)以来，运行一个节点需要两个连接的以太坊软件 - 一个执行客户端和一个共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
+请注意，自从[合并](/roadmap/merge/)以来，运行一个节点需要两个连接的以太坊软件 - 一个执行客户端和一个共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
 
 ## 前提条件 {#prerequisites}
 
@@ -273,9 +273,14 @@ ethers.utils.formatEther(balance)
 - [相关文档](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**viem -** **_以太坊的 TypeScript 接口。_**
+
+- [相关文档](https://viem.sh)
+- [Github](https://github.com/wagmi-dev/viem)
+
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对你有所帮助？ 编辑本页面以添加！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
 
 ## 相关主题 {#related-topics}
 
@@ -285,5 +290,5 @@ _还有哪些社区资源对你有所帮助？ 编辑本页面以添加！_
 ## 相关教程 {#related-tutorials}
 
 - [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
-- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用稳定币 DAI 代币，了解如何使用 JavaScript 调用合约函数。_
+- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI 代币，从而借助 JavaScript 调用合约函数。_
 - [使用 Web3 和 Alchemy 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– 从后端发送交易分步指南。_

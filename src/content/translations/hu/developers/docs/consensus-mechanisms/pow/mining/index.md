@@ -44,8 +44,6 @@ Nézd meg ahogy Austin végig kísér a bányászaton és a proof-of-work blokkl
 
 ## További olvasnivaló {#further-reading}
 
-- [Mit jelent Ethereumot bányászni?](https://docs.ethhub.io/using-ethereum/mining/) _Ethhub_
-
 ## Kapcsolódó eszközök {#related-tools}
 
 - [Legnagyobb Ethereum bányászok](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

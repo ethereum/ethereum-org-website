@@ -43,8 +43,6 @@
   "page-get-eth-security": "Maar dat betekent ook dat u de veiligheid van uw geld serieus moet nemen. Met ETH vertrouwt u geen bank om voor uw geld te zorgen, u vertrouwt uzelf.",
   "page-get-eth-smart-contract-link": "Meer over smart contracts",
   "page-get-eth-swapping": "Wissel je tokens om voor ETH van anderen. En andersom.",
-  "page-get-eth-traditional-currencies": "Koop met traditionele valuta",
-  "page-get-eth-traditional-payments": "Koop ETH met traditionele betaalsoorten direct van verkopers.",
   "page-get-eth-try-dex": "Probeer een DEX",
   "page-get-eth-use-your-eth": "Gebruik je ETH",
   "page-get-eth-use-your-eth-dapps": "Nu dat u eigenaar bent van ETH, bekijk enkele Ethereum-applicaties (dapps). Er zijn dapps voor financiën, sociale media, gaming en veel andere categorieën.",
@@ -63,5 +61,6 @@
   "page-get-eth-your-address-desc": "Wanneer u een portemonnee downloadt, wordt er een publiek ETH-adres voor u aangemaakt. Zo ziet zo'n adres eruit:",
   "page-get-eth-your-address-desc-3": "Zie dit als uw e-mailadres, maar in plaats van e-mail kan het ETH ontvangen. Als u ETH wilt overmaken van een exchange naar uw wallet, gebruik dan uw adres als bestemming. Zorg ervoor dat u altijd dubbel controleert voordat u verzendt!",
   "page-get-eth-your-address-wallet-link": "Controleer wallets",
-  "listing-policy-raise-issue-link": "Probleem melden"
+  "listing-policy-raise-issue-link": "Probleem melden",
+  "page-find-wallet-last-updated": "Laatst gewijzigd op"
 }

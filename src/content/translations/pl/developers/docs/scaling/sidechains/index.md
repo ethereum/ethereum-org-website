@@ -32,7 +32,6 @@ Wiele projektów dostarcza implementacje łańcuchów bocznych, które można zi
 
 ## Dalsza lektura {#further-reading}
 
-- [EthHub na temat łańcuchów bocznych](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_

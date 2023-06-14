@@ -26,7 +26,6 @@ Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkı
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Ethereum geliştirme odaklı Discord topluluğu</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - Ethereum geliştirmeye proje yönetimi desteği sunmaya odaklı topluluk</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org web sitesi ekibi</Link> - uğrayın ve ethereum.org web geliştirme ve tasarımı ekibi ile ve topluluktan insanlarla sohbet edin</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 Üniversitesi</Link> - web3 geliştirmeyi öğrenmeye odaklanan topluluk </SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - Solidity geliştirme için sohbet (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity geliştirme için sohbet (Matrix)</SocialListItem>
 

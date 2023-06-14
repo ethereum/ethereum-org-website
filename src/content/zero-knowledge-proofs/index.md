@@ -172,7 +172,7 @@ Thus, even without sharing a breakdown of votes per user (as is usually the case
 - Alice shows Bob a transaction which shows she voted for `option B` (which is invalid since the public key is no longer associated with Alice's identity in the system)
 - While processing messages, the coordinator skips Alice's vote for `option B` and counts only the vote for `option A`. Hence, Bob's attempt to collude with Alice and manipulate the on-chain vote fails.
 
-Using MACI _does_ require trusting the coordinator not to collude with bribers or attempt to bribe voters themself. The coordinator can decrypt user messages (necessary for creating the proof), so they can accurately verify how each person voted.
+Using MACI _does_ require trusting the coordinator not to collude with bribers or attempt to bribe voters themselves. The coordinator can decrypt user messages (necessary for creating the proof), so they can accurately verify how each person voted.
 
 But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of on-chain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
 

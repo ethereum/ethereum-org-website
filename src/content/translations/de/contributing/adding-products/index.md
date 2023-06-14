@@ -97,7 +97,7 @@ Ethereum befindet sich in der Entwicklung. Daher kommen und gehen Teams und Prod
 - Sicherstellen, dass alle aufgeführten Wallets und Dapps weiterhin unsere Kriterien erfüllen
 - Überprüfen, ob Produkte vorgeschlagen wurden, die unsere Kriterien besser erfüllen als die derzeit aufgeführten
 
-Sie können uns dabei helfen, indem Sie das hier überprüfen und uns Bescheid geben. [Erstellen Sie ein Ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) oder senden Sie eine E-Mail an [website@ethereum.org](mailto:website@ethereum.org).
+Sie können uns dabei helfen, indem Sie das hier überprüfen und uns Bescheid geben. [Erstellen Sie ein Ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) oder senden Sie eine E-Mail an [website@ethereum.org](mailto:website@ethereum.org).
 
 _Wir untersuchen auch Optionen für Abstimmungen, damit die Community ihre Präferenzen angeben und die besten Produkte hervorheben kann, die wir dann empfehlen können._
 

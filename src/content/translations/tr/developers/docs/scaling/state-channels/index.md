@@ -63,13 +63,10 @@ Birden çok proje, dapp'lerinize entegre edebileceğiniz durum kanallarının uy
 
 **Durum kanalları**
 
-- [EthHub'un durum kanalları hakkındaki içerikleri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Ethereum'un Katman 2 Ölçeklendirme Çözümlerini Anlama: Durum Kanalları, Plazma ve Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 Şubat 2018_
 - [Durum Kanalları - bir açıklama](https://www.jeffcoleman.ca/state-channels/) _6 Kasım 2015 - Jeff Coleman_
 - [Durum Kanallarının Temelleri](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
 **Ödeme kanalları**
-
-- [EthHub'un ödeme kanalları hakkındaki içerikleri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
