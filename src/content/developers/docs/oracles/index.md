@@ -402,7 +402,7 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data on-chain in a tamper-resistant, decentralized, and self-sustainable environment._
 
-**[API3 DAO](https://www.api3.org/)** - _API3 is leading the movement from legacy third-party oracle networks to first-party oracle solutions that deliver greater source transparency, security, cost-efficiency, and scalability._
+**[API3 DAO](https://www.api3.org/)** - _API3 DAO is delivering first-party oracle solutions that deliver greater source transparency, security and scalability in a decentralized solution for smart contracts_
 
 ## Further reading {#further-reading}
 
