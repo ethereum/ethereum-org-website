@@ -15,7 +15,7 @@ Se você ainda não sabe o que são os nós e os clientes e como eles funcionam,
 
 ## Participantes {#stakoooooooooooooors}
 
-Os participantes individuais devem executar sua própria infraestrutura, em vez de depender de provedores de terceiros. Isso significa executar um cliente de execução acoplado a um cliente de consenso. Antes da [Fusão](/roadmap/merge), era possível executar apenas um cliente de consenso e usar um provedor centralizado para dados de execução; isso não é mais possível: um participante solo deve executar ambos os clientes. No entanto, há serviços disponíveis para facilitar este processo.
+Os participantes individuais devem executar sua própria infraestrutura, em vez de depender de provedores de terceiros. Isso significa executar um cliente de execução acoplado a um cliente de consenso. Antes da [Fusão](/roadmap/merge) (The Merge), era possível executar apenas um cliente de consenso e usar um provedor centralizado para dados de execução. Porém, isso não é mais possível: um participante individual deve executar ambos os clientes. No entanto, há serviços disponíveis para facilitar este processo.
 
 [Leia mais sobre execução de um nó](/developers/docs/nodes-and-clients/run-a-node/).
 
@@ -333,9 +333,9 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
 
 ## Tópicos relacionados {#related-topics}
 
-- [Nós e clientes](/developers/docs/nodes-and-clients/)
+- [ Nós e clientes](/developers/docs/nodes-and-clients/)
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Introdução ao desenvolvimento do Ethereum usando o Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Guia para enviar transações usando web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Introdução ao desenvolvimento do Ethereum usando o Alquimia](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Guia para enviar transações usando web3 e Alquimia](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

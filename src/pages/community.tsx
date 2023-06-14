@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import {
   Box,
   Flex,
@@ -6,6 +6,7 @@ import {
   HeadingProps,
   Image,
   SimpleGrid,
+  Text,
   useTheme,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -22,7 +23,6 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
-import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 
 import { getImage } from "../utils/image"
 
@@ -99,9 +99,9 @@ const ImageContainer = ({ children }: ChildOnlyProp) => {
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
-    <Box mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
+    <Text mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
       {children}
-    </Box>
+    </Text>
   )
 }
 
@@ -209,8 +209,6 @@ const CommunityPage = ({
         title={t("page-community-meta-title")}
         description={t("page-community-meta-description")}
       />
-      {/* TODO: REMOVE MAY 11 */}
-      <WritersCohortBanner pathname={location.pathname} />
       <PageHero isReverse content={heroContent} />
       <Divider />
       <Flex

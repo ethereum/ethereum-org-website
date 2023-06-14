@@ -341,7 +341,7 @@ Decentraland 是一款虚拟现实游戏，甚至允许玩家购买代表虚拟�
 
 ## 开发非同质化代币 {#build-with-nfts}
 
-大多数非同质化代币都使用一个统一标准 [ERC-721](/developers/docs/standards/tokens/erc-721/) 创建。 然而，你可能也想了解其他标准。 [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) 标准涵盖半同质化代币，这种代币在游戏领域特别有用。 最近提出的 [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) 标准显著提升了铸造非同质化代币的效率。 该标准允许你在一次交易中随意铸币！
+大多数非同质化代币都使用一个统一标准 [ERC-721](/developers/docs/standards/tokens/erc-721/) 创建。 然而，你可能也想了解其他标准。 [ERC-1155](/developers/docs/standards/tokens/erc-1155/) 标准涵盖半同质化代币，这种代币在游戏领域特别有用。 最近提出的 [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) 标准显著提升了铸造非同质化代币的效率。 该标准允许你在一次交易中随意铸币！
 
 ## 延伸阅读 {#further-reading}
 

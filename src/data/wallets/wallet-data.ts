@@ -2571,7 +2571,7 @@ const walletData: WalletData[] = [
     multisig: false,
     social_recovery: false,
     onboard_documentation: "https://shapeshift.zendesk.com/hc/en-us/",
-    documentation:"https://docs.shapeshift.com/",
+    documentation: "https://docs.shapeshift.com/",
   },
 ]
 

@@ -48,6 +48,7 @@
   "page-index-developers-code-example-description-3": "您可以将现有的服务重构为去中心化的开放应用程序。",
   "page-index-network-stats-title": "以太坊现状",
   "page-index-network-stats-subtitle": "最新的网络统计数据",
+  "page-index-network-stats-total-eth-staked": "以太币质押总数",
   "page-index-network-stats-eth-price-description": "ETH 价格（美元）",
   "page-index-network-stats-eth-price-explainer": "最新以太币价格。最低购买 0.000000000000000001 即可，无需购买 1 个完整的以太币。",
   "page-index-network-stats-tx-day-description": "今日交易",

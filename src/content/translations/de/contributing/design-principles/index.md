@@ -90,4 +90,4 @@ Sie können unsere Designgrundsätze in Aktion sehen, und zwar [überall auf uns
 
 Obwohl diese Grundsätze auf die ethereum.org-Website ausgerichtet sind, hoffen wir, dass große Teile davon repräsentativ für die Werte des Ethereum-Ökosystems insgesamt stehen (z. B. lassen sich Einflüsse aus den [Grundsätzen des Ethereum-Whitepapers](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy) erkennen). Vielleicht möchten Sie sogar einige davon für Ihr eigenes Projekt berücksichtigen.
 
-Teilen Sie uns Ihre Gedanken mit auf unserem [Discord Server](https://discord.gg/CetY6Y4) oder bei [ein Problem melden](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=).
+Teilen Sie uns Ihre Gedanken mit auf unserem [Discord Server](https://discord.gg/CetY6Y4) oder bei [ein Problem melden](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request).
