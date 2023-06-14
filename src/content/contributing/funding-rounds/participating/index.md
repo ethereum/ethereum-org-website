@@ -50,9 +50,9 @@ Once a funding round begins, **anyone** is allowed to help allocate the matching
 <ExpandableCard
 title="Wait, I have to pay for this?"
 contentPreview="Ethereum.org is using Allo Protocol by Gitcoin to execute funding rounds">
-Allo Protocol by Gitcoin utilizes a mechanism called "quadratic funding" to allocate funds democratically, optimizing for human impact.
+Allo Protocol by Gitcoin utilizes a mechanism called <strong>quadratic funding</strong> to allocate funds democratically, optimizing for human impact.
 
-Your "donation" represents your vote in how the matching funds should be <em>allocated</em>.
+Your donation represents your vote in how the matching funds should be <em>allocated</em>.
 
 The funds in the matching pool are intended to be the main source of funding—donations by participants are meant to signal where they'd prefer the matching pool funds to be allocated, while keeping votes scarce (unlimited free votes would break the model).
 
@@ -66,6 +66,8 @@ Quadratic funding cares more about <em>how many unique individuals</em> found a 
 
 You are welcome to strengthen your vote by donating more, but each additional dollar donated will have diminishing returns on the matching pool funds.
 </ExpandableCard>
+
+**Note that 100% of all donations go directly to the recipient Ethereum address.**
 
 You can view all submitted contributions to see a summary of each. If you've found a contribution to be impactful, you're encouraged to show your support for this contributor to receive more matching funds by adding them to your shopping cart.
 
