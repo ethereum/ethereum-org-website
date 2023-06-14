@@ -51,7 +51,7 @@ This is what we will be using in this tutorial.
 ### 6\. What is the web3 library? {#what-is-the-web3-library}
 
 - Web3.js is a wrapper library around the standard JSON-RPC calls that is quite common to use in Ethereum development.
-- There are many web3 libraries for different languages. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) like [ethers.js](https://docs.alchemy.com/reference/alchemy-sdk-quickstart).
+- There are many web3 libraries for different languages. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) like [ethers.js](https://docs.ethers.org/v5/).
 
 Okay, now that we have a few of these questions out of the way, let’s move on to the tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/gWuC7zB)!
 
