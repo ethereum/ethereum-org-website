@@ -1,17 +1,17 @@
 import React from "react"
 import {
   Checkbox as ChakraCheckbox,
-  CheckboxIconProps,
   CheckboxProps,
   Icon,
+  IconProps,
 } from "@chakra-ui/react"
 
-const CustomIcon = (props: CheckboxIconProps) => {
+const CustomIcon = (props: IconProps) => {
   return (
     <Icon
       viewBox="0 0 24 24"
       fill="none"
-      stroke="white"
+      stroke="buttonColor"
       strokeWidth="2px"
       w="100%"
       h="100%"

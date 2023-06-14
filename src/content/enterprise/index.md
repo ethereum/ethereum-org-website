@@ -52,6 +52,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 ### Products and services {#products-and-services}
 
 - [Alchemy](https://www.alchemy.com/) _provides API services and tools for building and monitoring applications on Ethereum_
+- [Blast](https://blastapi.io/) _an API platform that provides RPC/WSS APIs for Ethereum Archive Mainnet and Testnets._
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [Chainstack](https://chainstack.com/) _mainnet and testnet Ethereum infrastructure hosted in public & isolated customer clouds_
 - [ConsenSys](https://consensys.net/) _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
@@ -59,15 +60,19 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
+- [Kaleido](https://kaleido.io/) _an enterprise-focused development platform that offers simplified blockchain and digital asset applications_
+- [NodeReal](https://nodereal.io/) _provides scalable blockchain infrastructure and API services provider for the Web3 ecosystem_
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
 - [QuickNode](https://www.quicknode.com/) _provides reliable and fast nodes with high-level APIs like NFT API, Token API, etc., while delivering a unified product suite and enterprise-grade solutions_
+- [Tenderly](https://tenderly.co) _a Web3 development platform that provides debugging, observability, and infrastructure building blocks for developing, testing, monitoring, and operating smart contracts_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _provider of managed services spread across co-locations in Europe and Asia. Operates & monitors your nodes securely and reliably_
+- [Zeeve](https://www.zeeve.io/) _provides a range of products and tools for building on Ethereum, also infrastructure and APIs for Enterprise Web3 applications._
 
 ### Tooling and libraries {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analytics Platform_
-- [Epirus](https://www.web3labs.com/epirus) _a platform for developing, deploying and monitoring blockchain applications by Web3 Labs_
+- [Sirato](https://www.web3labs.com/sirato) _a data and analytics platform for public and private Ethereum compatible networks by Web3 Labs_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _a toolkit for private transactions_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _a transaction signing application to be used with a web3 provider_
 - [Tenderly](https://tenderly.co/) _a Data Platform providing real-time analytics, alerting and monitoring with support for private networks_
@@ -79,51 +84,22 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 Building your application on top of a Layer 2 scalability solution can help [address many of the concerns that have previously driven companies to build on private blockchains](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), yet retain the benefits of building on Mainnet.
 
-Layer 2 projects include:
-
-- Optimistic rollups (data on chain, fraud proofs)
-  - [Optimism](https://optimism.io/)
-  - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
-  - [Fuel Network](https://fuel.sh)
-  - [Boba Network](https://boba.network/)
-- ZK-rollups (data on chain, ZK validity proofs)
-  - [Loopring](https://loopring.org)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkSync](https://matter-labs.io/)
-  - [Aztec 2.0](https://aztec.network/)
-- Validium (data off chain, ZK validity proofs)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkPorter](https://matter-labs.io/)
-- State channels
-  - [Connext](https://connext.network/)
-  - [Kchannels](https://www.kchannels.io/)
-  - [Perun](https://perun.network)
-  - [Raiden](https://raiden.network/)
-- Sidechains
-  - [Polygon POS](https://polygon.technology/)
-  - [Skale](https://skale.network)
-  - [POA Network](https://www.poa.network/)
-- Hybrid solutions that combine properties of multiple categories
-  - [Celer](https://celer.network)
-
 ## Enterprise applications live on Mainnet {#enterprise-live-on-mainnet}
 
-Here are some of the enterprise applications that have been deployed to the public Ethereum Mainnet
+Here are some of the enterprise applications that have been built on top of the public Ethereum Mainnet
 
 ### Payments {#payments}
 
 - [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token_
 - [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
-- [Audius](https://audius.co/) _a streaming service that connects music fans directly with artists, and allows artists to be paid in full by their fans, directly and instantly for every stream_
 - [EthereumAds](https://ethereumads.com/) _lets web site operators sell advertising space and get paid via Ethereum_
 
 ### Finance {#finance}
 
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _bond issuance and settlement_
-- [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _bond issuance_
+- [Societe Generale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _bond issuance_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _bond offering and tokenization for FAT Brands_
-- [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service_
-- [Kratos](https://triterras.com/kratos) _commodity trading and trade finance platform that connects and enables commodity traders to trade and source capital from lenders directly online_
+- [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service, using a stablecoin_
 - [Taurus](https://www.taurushq.com/) _issues tokenized securities_
 
 ### Asset tokenization {#tokenization}
@@ -147,7 +123,6 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _bill of lading and document transfer provider_
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
-- [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
 - [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Treum](https://treum.io/) _brings transparency, traceability, and tradability to supply chains, using blockchain technology_
 - [TradeTrust](https://www.tradetrust.io/) _verifies electronic Bills of Lading (eBLs) for international shipping_
@@ -162,11 +137,9 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 - [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
 - [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
-- [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _all educational certificates recorded on Mainnet by [Hyland](https://www.learningmachine.com/)_
-- [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _South Korean university issues blockchain-stored diplomas to its new graduates_
-- [OpenCerts](https://opencerts.io/) _issues blockchain education credentials in Singapore_
+- [Hyland Credentials](https://www.hylandcredentials.com) _digital diplomas and other education credentials, licenses, and certificates_
+- [OpenCerts](https://opencerts.io/faq) _issues blockchain education credentials in Singapore_
 - [BlockCerts](https://www.blockcerts.org/) _developed an open standard for blockchain credentials_
-- [SkillTree](http://skilltree.org/) _online skill training and certifications which can be configured with expiration triggers or dependencies on other skills_
 
 ### Utilities {#utilities}
 

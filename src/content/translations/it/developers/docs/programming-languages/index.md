@@ -4,7 +4,7 @@ description:
 lang: it
 ---
 
-Spesso si crede erroneamente che gli sviluppatori debbano scrivere [Smart Contract](/developers/docs/smart-contracts/) per sviluppare su Ethereum. Non è vero. Uno degli aspetti positivi della rete e della community Ethereum è che si può [partecipare](/community/) usando praticamente qualsiasi linguaggio di programmazione.
+Spesso, si crede erroneamente che gli sviluppatori debbano scrivere i [contratti intelligenti](/developers/docs/smart-contracts/) per poter sviluppare su Ethereum. Non è vero. Uno degli aspetti positivi della rete e della community Ethereum è che si può [partecipare](/community/) usando praticamente qualsiasi linguaggio di programmazione.
 
 Ethereum e la sua community adottano l'open source. È possibile trovare progetti della community, cioè implementazioni di client, API, framework di sviluppo, strumenti di test, in un'ampia gamma di linguaggi.
 

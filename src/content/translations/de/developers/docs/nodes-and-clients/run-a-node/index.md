@@ -21,7 +21,7 @@ Der erste Schritt beim Einrichten deines Nodes besteht in der Wahl der Herangehe
 
 Client-Implementierungen ermöglichen unterschiedliche Synchronisierungsmodi und verschiedene andere Optionen. [Synchronisierungsmodi](/developers/docs/nodes-and-clients/#sync-modes) stellen verschiedene Methoden zum Herunterladen und Validieren von Blockchain-Daten dar. Bevor du den Node startest, solltest du entscheiden, welchen Netzwerk- und Synchronisierungsmodus du verwenden möchtest. Das Wichtigste sind der Speicherplatz und die Synchronisierungszeit, die der Client benötigt.
 
-Alle Funktionen und Optionen sind in der Dokumentation des Clients zu finden. Es können verschiedene Client-Konfigurationen eingestellt werden, indem der Client mit den entsprechenden Flags ausgeführt wird. Weitere Informationen zu Flags findest du auf [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) oder in der Client-Dokumentation. Zu Testzwecken kannst du einen Client in einem der Testnetze betreiben. [Übersicht der unterstützten Netzwerke](/developers/docs/nodes-and-clients/#execution-clients)
+Alle Funktionen und Optionen sind in der Dokumentation des Clients zu finden. Es können verschiedene Client-Konfigurationen eingestellt werden, indem der Client mit den entsprechenden Flags ausgeführt wird. Zu Testzwecken kannst du einen Client in einem der Testnetze betreiben. [Übersicht der unterstützten Netzwerke](/developers/docs/nodes-and-clients/#execution-clients)
 
 ### Umgebung und Hardware {#environment-and-hardware}
 
@@ -144,7 +144,7 @@ Jede Client-Implementierung hat eine von Menschen lesbare Versionszeichenfolge, 
 
 #### Durchführung zusätzlicher Dienste {#running-additional-services}
 
-Wenn du deinen eigenen Node betreibst, kannst du Dienste nutzen, die einen direkten Zugang zum Ethereum-Client-RPC erfordern. Dies sind Dienste, die auf Ethereum aufbauen, wie [Layer-2-Lösungen](/developers/docs/scaling/#layer-2-scaling), [Konsens-Clients](/upgrades/get-involved/#clients) und andere Ethereum-Infrastruktur.
+Wenn du deinen eigenen Node betreibst, kannst du Dienste nutzen, die einen direkten Zugang zum Ethereum-Client-RPC erfordern. Dies sind Dienste, die auf Ethereum aufbauen, wie [Layer-2-Lösungen](/developers/docs/scaling/#layer-2-scaling), Konsens-Clients und andere Ethereum-Infrastruktur.
 
 #### Überwachung des Nodes {#monitoring-the-node}
 
@@ -154,7 +154,6 @@ Wenn du deinen eigenen Node betreibst, kannst du Dienste nutzen, die einen direk
 
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
-- [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_
 - [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
 - [Deploying Nethermind Ethereum Client with Monitoring Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 July 2020_
 

@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: Flashați-vă Raspberry Pi 4, conectați un cablu ethernet, conectați discul SSD și porniți dispozitivul pentru a transforma Raspberry Pi 4 într-un nod Ethereum complet, care rulează nivelul de execuție sau nivelul de consens (Lanț Beacon / validator)
 
-[Aflaţi mai multe despre actualizările Ethereum](/upgrades/)
+[Aflaţi mai multe despre actualizările Ethereum](/roadmap/)
 
 Mai întâi câteva elemente de context. După cum știţi, am întâmpinat unele probleme de memorie [[1]](/developers/tutorials/run-node-raspberry-pi/#references) cu imaginea Raspberry PI 4, întrucât sistemul de operare al acestuia este încă pe 32 de biți [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (cel puțin cu aplicația „userland”). Chiar dacă preferăm să rămânem cu sistemul de operare oficial, am ajuns la concluzia că, pentru a rezolva aceste probleme, trebuie să migrăm la un sistem de operare nativ de 64 de biți
 
-Pe de altă parte, [clienții de consens](/upgrades/get-involved/#clients) nu suportă binarele de 32 de biţi, de aceea utilizarea Raspbian ar exclude Raspberry Pi 4 de la executarea unui nod al nivelului de consens (și astfel, de la posibilitatea de mizare).
+Pe de altă parte, clienții de consens nu suportă binarele de 32 de biţi, de aceea utilizarea Raspbian ar exclude Raspberry Pi 4 de la executarea unui nod al nivelului de consens (și astfel, de la posibilitatea de mizare).
 
 Așa că, după mai multe teste, lansăm acum 2 imagini diferite bazate pe Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): ediții pentru nivelul de execuție și pentru nivelul de consens.
 
@@ -134,7 +134,7 @@ Sistemul de operare Ubuntu va porni în mai puțin de un minut, dar **va trebui 
 În funcție de imaginea folosită, veţi rula:
 
 - Clientul de execuție: Geth ca şi client implicit de sincronizare a blockchain-ului
-- Clientul de consens: Prysm ca şi client implicit de sincronizare a lanțului Beacon (testnetul Prater)
+- Clientul de consens: Prysm ca şi client implicit de sincronizare a lanțului Beacon (testnetul Goerli)
 
 ### 5. Logare {#5-log-in}
 
@@ -163,7 +163,7 @@ sudo tail -f /var/log/syslog
 
 Acum trebuie să așteptaţi sincronizarea blockchain-ului. În cazul nivelului de execuție, aceasta va dura câteva zile, în funcție de diferiți factori, dar puteţi anticipa până la circa 5-7 zile.
 
-Dacă rulați nivelul de consens testnet Prater, puteţi anticipa o durată de 1-2 zile de sincronizare a lanțului Beacon. Amintiţi-vă că mai târziu va trebui să configuraţi validatorul pentru a începe procesul de mizare. [Cum se rulează validatorul nivelului de consens](/developers/tutorials/run-node-raspberry-pi/#validator)
+Dacă rulați nivelul de consens testnet Goerli, puteţi anticipa o durată de 1-2 zile de sincronizare a lanțului Beacon. Amintiţi-vă că mai târziu va trebui să configuraţi validatorul pentru a începe procesul de mizare. [Cum se rulează validatorul nivelului de consens](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Monitorizarea tablourilor de bord {#monitoring-dashboards}
 
@@ -235,7 +235,7 @@ Ambele au nevoie să mai fie testate, așa că nu ezitaţi să vă jucaţi cu el
 
 ## Cum se execută validatorul de consens (mizarea) {#validator}
 
-Odată ce lanțul Beacon testnet Prater este sincronizat, puteți să rulați un validator pe același dispozitiv. Va trebui să urmaţi [acești pași de participare](https://prylabs.net/participate).
+Odată ce lanțul Beacon testnet Goerli este sincronizat, puteți să rulați un validator pe același dispozitiv. Va trebui să urmaţi [acești pași de participare](https://prylabs.net/participate).
 
 Prima dată trebuie să creaţi manual un cont rulând „validatorul” binar și să setaţi o parolă. După ce aţi finalizat acest pas, puteți adăuga parola în fișierul `/etc/ehereum/prysm-validator.conf` și poți porni validatorul ca serviciu systemd.
 

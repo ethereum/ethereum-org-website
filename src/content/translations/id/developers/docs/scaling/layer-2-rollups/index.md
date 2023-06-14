@@ -47,7 +47,7 @@ Rollup optimistic duduk sejajar dengan rantai Ethereum utama pada lapisan 2. Rol
 
 Dengan rollup Optimistic, transaksi ditulis ke rantai utama Ethereum sebagai `calldata`, mengoptimalkannya lebih jauh dengan mengurangi biaya gas.
 
-Karena komputasi adalah bagian yang lambat, mahal dari penggunaan Ethereum, rollup Optimistic dapat menawarkan peningkatan perluasan hingga 10-100x tergantung pada transaksi. Bahkan, jumlah ini akan semakin bertambah dengan pengenalan [rantai shard](/upgrades/shard-chains), karena akan semakin banyak data yang tersedia jika sebuah transaksi dipertentangkan.
+Karena komputasi adalah bagian yang lambat, mahal dari penggunaan Ethereum, rollup Optimistic dapat menawarkan peningkatan perluasan hingga 10-100x tergantung pada transaksi. Bahkan, jumlah ini akan semakin bertambah dengan pengenalan [rantai shard](/roadmap/danksharding), karena akan semakin banyak data yang tersedia jika sebuah transaksi dipertentangkan.
 
 #### Mempersengketakan transaksi {#disputing-transactions}
 
@@ -138,12 +138,10 @@ Solusi hibrida ada dengan menggabungkan bagian terbaik dari berbagai teknologi l
 **Rollup ZK**
 
 - [Apa itu Rollup Zero-Knowledge?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
-- [EthHub tentang rollup zk](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 **Rollup Optimistic**
 
 - [Semua yang perlu Anda ketahui tentang Rollup Optimistic](https://research.paradigm.xyz/rollups)
-- [EthHub tentang rollup optimistic](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Panduan Penting untuk Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Bagaimana Rollup Optimism benar-benar berfungsi?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

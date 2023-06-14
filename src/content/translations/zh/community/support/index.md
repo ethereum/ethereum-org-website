@@ -13,7 +13,7 @@ lang: zh
 了解以太坊的去中心化性质至关重要，因为任何自称是以太坊官方支持人员的人都可能在试图诈骗您！ 预防诈骗的最好办法就是自学并认真对待安全问题。
 
 <DocLink to="/security/">
-  以太坊安全和预防诈骗措施
+  以太坊安全和预防欺诈措施
 </DocLink>
 
 <DocLink to="/learn/">
@@ -57,6 +57,7 @@ _这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加�
 - [安全帽](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## 运行节点 {#node-support}
 

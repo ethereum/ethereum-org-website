@@ -4,6 +4,10 @@ description:
 lang: en
 ---
 
+## Warning {#warning}
+
+**ERC-777 is difficult to implement properly, due to its [susceptibility to different forms of attack](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). It is recommended to use [ERC-20](/developers/docs/standards/tokens/erc-20/) instead.** This page remains as a historical archive.
+
 ## Introduction? {#introduction}
 
 ERC-777 is a fungible token standard improving the existing [ERC-20](/developers/docs/standards/tokens/erc-20/) standard.

@@ -2,7 +2,7 @@
 title: Understand the ERC-20 token smart contract
 description: An introduction to deploying your first smart contract on an Ethereum test network
 author: "jdourlens"
-tags: ["smart contracts", "tokens", "solidity", "getting started", "erc-20"]
+tags: ["smart contracts", "tokens", "solidity", "erc-20"]
 skill: beginner
 lang: en
 published: 2020-04-05

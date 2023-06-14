@@ -20,7 +20,8 @@ Ces programmes soutiennent le vaste écosystème Ethereum en offrant des subvent
 - [DAO Moloch](https://www.molochdao.com/) - _Confidentialité, mise à l'échelle de la couche 2, sécurité du client, etc._
 - [Subventions ouvertes](https://opengrants.com/explore)
 - [Subventions DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Feuille de calcul Google regroupant les organisations offrant des subventions_
-- [Défi de Fusion de Données](https://esp.ethereum.foundation/merge-data-challenge) - _Un appel à tous les Ethereans, scientifiques des données, ingénieurs des données, visualiseurs de données, développeurs et toutes personnes intéressées par la recherche de données Ethereum !_
+- [Crunchbase pour les financements Web3](https://www.cryptoneur.xyz/web3-grants) - _Filtrer et rechercher des subventions par catégorie, cas d'utilisation, montant et bien plus encore. Contribuez à aider les autres à trouver la bonne subvention._
+- [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Subventions pour soutenir les travaux universitaires liés à Ethereum_
 
 ## Projets spécifiques {#project-specific}
 
@@ -30,11 +31,14 @@ Ces projets ont crée leurs propres subventions pour encourager d'autres projets
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _Fonds pour l'écosystème [Balancer](https://balancer.fi/)_
 - [Programme de subventions Chainlink](https://chain.link/community/grants) - _[Subventions de la Communauté](https://chain.link/) Chainlink_
 - [Programme de subventions Compound](https://compoundgrants.org/) – _Écosystème financier [Compound](https://compound.finance/)_
-- [Programme de subventions Consensys](https://consensys.net/grants/) – _Subventions Ethereum et financement de blockchain [Consensys](https://consensys.net/)_
+- [Programme de subventions de décentralisation](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) Metaverse DAO_
 - [Organisme de subvention Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _Écosystème financier [Lido](https://lido.fi/)_
+- [Programme MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) DAO de subventions gérées par les employés_
 - [Programme de subventions mStable](https://docs.mstable.org/advanced/grants-program) - _Communauté [mStable](https://mstable.org/)_
 - [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _Écosystème [TheGraph](https://thegraph.com/)_
+- [Programme de subventions UMA](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) soutien aux développeurs_
 - [Programme de subventions Uniswap](https://www.unigrants.org/) – _Communauté [Uniswap](https://uniswap.org/)_
+- [Web3 Grants](https://web3grants.net) - _Une liste complète de programmes de subvention liés au web3/crypto_
 
 ## Financement quadratique {#quadratic-funding}
 

@@ -1,55 +1,25 @@
 // Library imports
 import React, { ReactNode, useState } from "react"
-import { Icon } from "@chakra-ui/react"
-import styled from "@emotion/styled"
+import { Flex, FlexProps, Heading } from "@chakra-ui/react"
 // Component imports
 import Button from "./Button"
 import Translation from "./Translation"
 // SVG imports
-import ThumbsUp from "../assets/feedback-thumbs-up.svg"
+import { FeedbackThumbsUpIcon } from "./icons"
 // Utility imports
 import { trackCustomEvent } from "../utils/matomo"
+// Hook imports
 import { useSurvey } from "../hooks/useSurvey"
 
-const Card = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.border};
-  background: ${({ theme }) => theme.colors.feedbackGradient};
-  border-radius: 4px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-  width: 100%;
-`
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`
-
-const Title = styled.h3`
-  margin: 0 0 0.5rem;
-  font-size: 1.375rem;
-  font-weight: 700;
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-`
-
-export interface IProps {
+export interface IProps extends FlexProps {
   prompt?: string
   isArticle?: boolean
-  className?: string
 }
 
 const FeedbackCard: React.FC<IProps> = ({
   prompt,
   isArticle = false,
-  className,
+  ...props
 }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
@@ -84,30 +54,41 @@ const FeedbackCard: React.FC<IProps> = ({
     window && surveyUrl && window.open(surveyUrl, "_blank")
   }
   return (
-    <Card className={className}>
-      <Content>
-        <Title>{getTitle(feedbackSubmitted)}</Title>
+    <Flex
+      border="1px"
+      borderColor="border"
+      bg="feedbackGradient"
+      borderRadius="base"
+      p={6}
+      direction="column"
+      mb={4}
+      mt={8}
+      w="full"
+      {...props}
+    >
+      <Flex direction="column" gap={4}>
+        <Heading as="h3" m={0} mb={2} fontSize="1.375rem" fontWeight="bold">
+          {getTitle(feedbackSubmitted)}
+        </Heading>
         {feedbackSubmitted && (
           <p>
             <Translation id="feedback-widget-thank-you-subtitle" />{" "}
             <Translation id="feedback-widget-thank-you-subtitle-ext" />
           </p>
         )}
-        <ButtonContainer>
+        <Flex gap={4}>
           {!feedbackSubmitted ? (
             <>
               <Button
                 variant="outline-color"
-                leftIcon={<Icon as={ThumbsUp} w={6} h={6} />}
+                leftIcon={<FeedbackThumbsUpIcon />}
                 onClick={() => handleSubmit(true)}
               >
                 <Translation id="yes" />
               </Button>
               <Button
                 variant="outline-color"
-                leftIcon={
-                  <Icon as={ThumbsUp} w={6} h={6} transform="scaleY(-1)" />
-                }
+                leftIcon={<FeedbackThumbsUpIcon transform="scaleY(-1)" />}
                 onClick={() => handleSubmit(false)}
               >
                 <Translation id="no" />
@@ -118,9 +99,9 @@ const FeedbackCard: React.FC<IProps> = ({
               <Translation id="feedback-widget-thank-you-cta" />
             </Button>
           )}
-        </ButtonContainer>
-      </Content>
-    </Card>
+        </Flex>
+      </Flex>
+    </Flex>
   )
 }
 

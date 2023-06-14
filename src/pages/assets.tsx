@@ -1,132 +1,114 @@
 // Libraries
 import React from "react"
-import { useIntl } from "react-intl"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-
-// Assets
-import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
-import MergePandaSvg from "../assets/home/merge-panda.svg"
+import {
+  Box,
+  Center,
+  Flex,
+  Heading,
+  HeadingProps,
+  Img,
+  SimpleGrid,
+  SimpleGridProps,
+  useTheme,
+} from "@chakra-ui/react"
 
 // Components
 import AssetDownload from "../components/AssetDownload"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import { Page, Content } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 
 // Types
-import { Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
 // Utils
-import { translateMessageId } from "../utils/translations"
 import { getImage } from "../utils/image"
 
-const Image = styled(GatsbyImage)`
-  align-self: center;
-  width: 100%;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 60%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-  }
-`
+const Row = (props: SimpleGridProps) => (
+  <SimpleGrid
+    templateColumns="repeat(auto-fit, minmax(min(288px, 100%), 1fr))"
+    mx={-4}
+    mb={8}
+    {...props}
+  />
+)
 
-const HeroContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 2rem 0rem;
-`
+const H2 = (prop: ChildOnlyProp & HeadingProps) => (
+  <Heading
+    fontSize={{ base: "2xl", md: "3xl" }}
+    lineHeight={1.4}
+    mt={16}
+    mb={6}
+    {...prop}
+  />
+)
 
-const Row = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin: 0 -1rem 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-wrap: wrap;
-  }
-`
-
-const H2 = styled.h2`
-  margin: 4.5rem 0 1.5rem;
-  /* Needed to fix issues of header padding overlapping links */
-  /* https://github.com/confluenza/confluenza/pull/17 */
-  position: inherit !important;
-
-  /* Prevent nav overlap */
-  &:before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-  }
-`
-
-const H3 = styled.h3`
-  margin-bottom: 0;
-`
-
-const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 6rem;
-  text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 2rem;
-  }
-`
+const H3 = (prop: ChildOnlyProp) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    lineHeight={1.4}
+    mb={0}
+    {...prop}
+  />
+)
 
 const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const theme = useTheme()
   const isDarkTheme = theme.isDark
   const assetPageHeroImage = isDarkTheme
     ? data.ethDiamondPurpleHero
     : data.ethDiamondBlackHero
   return (
-    <Page>
+    <Flex direction="column" width="full">
       <PageMetadata
-        title={translateMessageId("page-assets-meta-title", intl)}
-        description={translateMessageId("page-assets-meta-desc", intl)}
+        title={t("page-assets-meta-title")}
+        description={t("page-assets-meta-desc")}
       />
-      <Content>
-        <HeroContainer>
-          <Header>
-            <Image
+      <Box py={4} px={8}>
+        <Flex direction="column" px={8} py={4}>
+          <Center>
+            <Img
+              as={GatsbyImage}
               image={getImage(assetPageHeroImage)!}
-              alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
+              alt={t("page-assets-eth-diamond-gray")}
             />
+          </Center>
+          <Center>
             <h1>
               <Translation id="page-assets-h1" />
             </h1>
+          </Center>
+          <Center>
             <Link to="/assets/#illustrations">
               <Translation id="page-assets-illustrations" />
             </Link>
+          </Center>
+          <Center>
             <Link to="/assets/#historical">
               <Translation id="page-assets-historical-artwork" />
             </Link>
+          </Center>
+          <Center>
             <Link to="/assets/#brand">
               <Translation id="page-assets-ethereum-brand-assets" />
             </Link>
-          </Header>
-        </HeroContainer>
+          </Center>
+        </Flex>
+
         <H2 id="illustrations">
           <Translation id="page-assets-illustrations" />
         </H2>
 
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-hero", intl)}
-            alt={translateMessageId("page-assets-hero", intl)}
+            title={t("page-assets-hero")}
+            alt={t("page-assets-hero")}
             image={data.hero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
@@ -134,412 +116,331 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         </Row>
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-hero-panda", intl)}
-            alt={translateMessageId("page-assets-hero-panda", intl)}
-            image={data.heroPanda}
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-merge-panda", intl)}
-            alt={translateMessageId("page-assets-merge-panda", intl)}
-            image={data.mergePanda}
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-merge-panda-svg", intl)}
-            alt={translateMessageId("page-assets-merge-panda-svg", intl)}
-            svg={MergePandaSvg}
-          />
-        </Row>
-
-        <Row>
-          <AssetDownload
-            title={translateMessageId("page-assets-doge", intl)}
-            alt={translateMessageId("page-assets-doge", intl)}
+            title={t("page-assets-doge")}
+            alt={t("page-assets-doge")}
             image={data.doge}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-blocks", intl)}
-            alt={translateMessageId("page-assets-blocks", intl)}
+            title={t("page-assets-blocks")}
+            alt={t("page-assets-blocks")}
             image={data.developers}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-enterprise", intl)}
-            alt={translateMessageId("page-assets-enterprise", intl)}
+            title={t("page-assets-enterprise")}
+            alt={t("page-assets-enterprise")}
             image={data.enterprise}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
         </Row>
-
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-infrastructure", intl)}
-            alt={translateMessageId("page-assets-infrastructure", intl)}
+            title={t("page-assets-infrastructure")}
+            alt={t("page-assets-infrastructure")}
             image={data.infrastructure}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-finance", intl)}
-            alt={translateMessageId("page-assets-finance", intl)}
+            title={t("page-assets-finance")}
+            alt={t("page-assets-finance")}
             image={data.finance}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-impact", intl)}
-            alt={translateMessageId("page-assets-impact", intl)}
+            title={t("page-assets-impact")}
+            alt={t("page-assets-impact")}
             image={data.impact}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
         </Row>
-
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-future", intl)}
-            alt={translateMessageId("page-assets-future", intl)}
+            title={t("page-assets-future")}
+            alt={t("page-assets-future")}
             image={data.future}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-hackathon", intl)}
-            alt={translateMessageId("page-assets-hackathon", intl)}
+            title={t("page-assets-hackathon")}
+            alt={t("page-assets-hackathon")}
             image={data.hackathon}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
-        </Row>
-
-        <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-robot", intl)}
-            alt={translateMessageId("page-assets-robot", intl)}
+            title={t("page-assets-robot")}
+            alt={t("page-assets-robot")}
             image={data.wallet}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
-          <AssetDownload
-            title={translateMessageId("page-assets-robot", intl)}
-            alt={translateMessageId("page-assets-robot", intl)}
-            image={data.wallet}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
-            shouldHide={true}
-          />
         </Row>
-
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-bazaar", intl)}
-            alt={translateMessageId("page-assets-bazaar", intl)}
+            title={t("page-assets-bazaar")}
+            alt={t("page-assets-bazaar")}
             image={data.whatIsEthereum}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-eth", intl)}
-            alt={translateMessageId("page-assets-eth", intl)}
+            title={t("page-assets-eth")}
+            alt={t("page-assets-eth")}
             image={data.eth}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
         </Row>
-
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-mainnet", intl)}
-            alt={translateMessageId("page-assets-mainnet", intl)}
+            title={t("page-assets-mainnet")}
+            alt={t("page-assets-mainnet")}
             image={data.oldShip}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-merge", intl)}
-            alt={translateMessageId("page-assets-merge", intl)}
+            title={t("page-assets-merge")}
+            alt={t("page-assets-merge")}
             image={data.merge}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
         </Row>
-
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-beacon-chain", intl)}
-            alt={translateMessageId("page-assets-beacon-chain", intl)}
+            title={t("page-assets-beacon-chain")}
+            alt={t("page-assets-beacon-chain")}
             image={data.beaconChain}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-sharding", intl)}
-            alt={translateMessageId("page-assets-sharding", intl)}
+            title={t("page-assets-sharding")}
+            alt={t("page-assets-sharding")}
             image={data.newRings}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
         </Row>
-
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-defi", intl)}
-            alt={translateMessageId("page-assets-defi", intl)}
+            title={t("page-assets-defi")}
+            alt={t("page-assets-defi")}
             image={data.defi}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-dao", intl)}
-            alt={translateMessageId("page-assets-dao", intl)}
+            title={t("page-assets-dao")}
+            alt={t("page-assets-dao")}
             image={data.dao}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
           />
         </Row>
-
-        <Row>
-          <AssetDownload
-            title={translateMessageId("page-assets-leslie-the-rhino", intl)}
-            alt={translateMessageId("page-assets-leslie-the-rhino", intl)}
-            artistName="Tomo Saito"
-            artistUrl="https://tomosaito.com/"
-            image={data.leslieTheRhino}
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-leslie-the-rhino", intl)}
-            alt={translateMessageId("page-assets-leslie-the-rhino", intl)}
-            artistName="Tomo Saito"
-            artistUrl="https://tomosaito.com/"
-            image={data.leslieTheRhino}
-            shouldHide={true}
-          />
-        </Row>
-
         <H2 id="historical">
           <Translation id="page-assets-historical-artwork" />
         </H2>
-
         <H2 id="brand">
           <Translation id="page-assets-ethereum-brand-assets" />
         </H2>
-
         <H3>
           <Translation id="page-assets-page-assets-transparent-background" />
         </H3>
-
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-eth-diamond-glyph", intl)}
-            alt={translateMessageId("page-assets-eth-diamond-glyph", intl)}
+            title={t("page-assets-eth-diamond-glyph")}
+            alt={t("page-assets-eth-diamond-glyph")}
             image={data.ethDiamondGlyph}
+            svgUrl="/static/eth-diamond-glyph.svg"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-eth-diamond-gray", intl)}
-            alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
+            title={t("page-assets-eth-diamond-gray")}
+            alt={t("page-assets-eth-diamond-gray")}
             image={data.ethDiamondBlack}
+            svgUrl="/static/eth-diamond-black.svg"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-eth-diamond-color", intl)}
-            alt={translateMessageId("page-assets-eth-diamond-color", intl)}
+            title={t("page-assets-eth-diamond-color")}
+            alt={t("page-assets-eth-diamond-color")}
             image={data.ethDiamondColor}
+            svgUrl="/static/eth-diamond-rainbow.svg"
           />
         </Row>
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-eth-diamond-purple", intl)}
-            alt={translateMessageId("page-assets-eth-diamond-purple", intl)}
+            title={t("page-assets-eth-diamond-purple")}
+            alt={t("page-assets-eth-diamond-purple")}
             image={data.ethDiamondPurple}
+            svgUrl="/static/eth-diamond-purple.svg"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-eth-diamond-colored", intl)}
-            alt={translateMessageId("page-assets-eth-diamond-colored", intl)}
+            title={t("page-assets-eth-diamond-colored")}
+            alt={t("page-assets-eth-diamond-colored")}
             image={data.ethGlyphColored}
-          />
-          <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-diamond-colored-svg",
-              intl
-            )}
-            alt={translateMessageId(
-              "page-assets-eth-diamond-colored-svg",
-              intl
-            )}
-            svg={EthGlyphColoredSvg}
+            svgUrl="/static/eth-glyph-colored.svg"
           />
         </Row>
         <Row>
           <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-portrait-gray",
-              intl
-            )}
-            alt={translateMessageId("page-assets-eth-logo-portrait-gray", intl)}
+            title={t("page-assets-eth-logo-portrait-gray")}
+            alt={t("page-assets-eth-logo-portrait-gray")}
             image={data.ethPortraitBlack}
+            svgUrl="/static/ethereum-logo-portrait-black.svg  "
           />
           <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-landscape-gray",
-              intl
-            )}
-            alt={translateMessageId(
-              "page-assets-eth-logo-landscape-gray",
-              intl
-            )}
+            title={t("page-assets-eth-logo-landscape-gray")}
+            alt={t("page-assets-eth-logo-landscape-gray")}
             image={data.ethLandscapeBlack}
+            svgUrl="/static/ethereum-logo-landscape-black.svg"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-eth-wordmark-gray", intl)}
-            alt={translateMessageId("page-assets-eth-wordmark-gray", intl)}
+            title={t("page-assets-eth-wordmark-gray")}
+            alt={t("page-assets-eth-wordmark-gray")}
             image={data.ethWordmarkBlack}
+            svgUrl="/static/ethereum-wordmark-black.svg"
           />
         </Row>
         <Row>
           <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-portrait-purple",
-              intl
-            )}
-            alt={translateMessageId(
-              "page-assets-eth-logo-portrait-purple",
-              intl
-            )}
+            title={t("page-assets-eth-logo-portrait-purple")}
+            alt={t("page-assets-eth-logo-portrait-purple")}
             image={data.ethPortraitPurple}
+            svgUrl="/static/ethereum-logo-portrait-purple.svg"
           />
           <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-landscape-purple",
-              intl
-            )}
-            alt={translateMessageId(
-              "page-assets-eth-logo-landscape-purple",
-              intl
-            )}
+            title={t("page-assets-eth-logo-landscape-purple")}
+            alt={t("page-assets-eth-logo-landscape-purple")}
             image={data.ethLandscapePurple}
+            svgUrl="/static/ethereum-logo-landscape-purple.svg"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-eth-wordmark-purple", intl)}
-            alt={translateMessageId("page-assets-eth-wordmark-purple", intl)}
+            title={t("page-assets-eth-wordmark-purple")}
+            alt={t("page-assets-eth-wordmark-purple")}
             image={data.ethWordmarkPurple}
+            svgUrl="/static/ethereum-wordmark-purple-purple.svg"
           />
         </Row>
-
         <H3>
           <Translation id="page-assets-page-assets-solid-background" />
         </H3>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-eth-diamond-white")}
+            alt={t("page-assets-eth-diamond-white")}
+            image={data.ethDiamondBlackWhite}
+            svgUrl="/static/eth-diamond-black-white.svg"
+          />
+          <AssetDownload
+            title={t("page-assets-eth-diamond-gray")}
+            alt={t("page-assets-eth-diamond-gray")}
+            image={data.ethDiamondBlackGray}
+            svgUrl="/static/eth-diamond-black-gray.svg"
+          />
+          <AssetDownload
+            title={t("page-assets-eth-diamond-purple")}
+            alt={t("page-assets-eth-diamond-purple")}
+            image={data.ethDiamondPurplePurple}
+            svgUrl="/static/eth-diamond-purple-purple.svg"
+          />
+        </Row>
 
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-eth-diamond-white", intl)}
-            alt={translateMessageId("page-assets-eth-diamond-white", intl)}
-            image={data.ethDiamondBlackWhite}
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-eth-diamond-gray", intl)}
-            alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
-            image={data.ethDiamondBlackGray}
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-eth-diamond-purple", intl)}
-            alt={translateMessageId("page-assets-eth-diamond-purple", intl)}
-            image={data.ethDiamondPurplePurple}
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-eth-diamond-white", intl)}
-            alt={translateMessageId("page-assets-eth-diamond-white", intl)}
+            title={t("page-assets-eth-diamond-white")}
+            alt={t("page-assets-eth-diamond-white")}
             image={data.ethDiamondPurpleWhite}
+            svgUrl="/static/eth-diamond-purple-white.svg"
+          />
+          <AssetDownload
+            title={t("page-assets-eth-diamond-white")}
+            alt={t("page-assets-eth-diamond-white")}
+            image={data.ethDiamondPurpleWhite}
+            svgUrl="/static/eth-diamond-purple-white.svg"
           />
         </Row>
         <Row>
           <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-portrait-gray",
-              intl
-            )}
-            alt={translateMessageId("page-assets-eth-logo-portrait-gray", intl)}
+            title={t("page-assets-eth-logo-portrait-gray")}
+            alt={t("page-assets-eth-logo-portrait-gray")}
             image={data.ethPortraitBlackGray}
+            svgUrl="/static/ethereum-logo-portrait-black-gray.svg"
           />
           <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-landscape-gray",
-              intl
-            )}
-            alt={translateMessageId(
-              "page-assets-eth-logo-landscape-gray",
-              intl
-            )}
+            title={t("page-assets-eth-logo-landscape-gray")}
+            alt={t("page-assets-eth-logo-landscape-gray")}
             image={data.ethLandscapeBlackGray}
+            svgUrl="/static/ethereum-logo-landscape-black-gray.svg"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-eth-wordmark-gray", intl)}
-            alt={translateMessageId("page-assets-eth-wordmark-gray", intl)}
+            title={t("page-assets-eth-wordmark-gray")}
+            alt={t("page-assets-eth-wordmark-gray")}
             image={data.ethWordmarkBlackGray}
+            svgUrl="/static/ethereum-wordmark-black-gray.svg"
           />
         </Row>
         <Row>
           <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-portrait-purple",
-              intl
-            )}
-            alt={translateMessageId(
-              "page-assets-eth-logo-portrait-purple",
-              intl
-            )}
+            title={t("page-assets-eth-logo-portrait-purple")}
+            alt={t("page-assets-eth-logo-portrait-purple")}
             image={data.ethPortraitPurplePurple}
+            svgUrl="/static/ethereum-logo-portrait-purple-purple.svg"
           />
           <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-landscape-purple",
-              intl
-            )}
-            alt={translateMessageId(
-              "page-assets-eth-logo-landscape-purple",
-              intl
-            )}
+            title={t("page-assets-eth-logo-landscape-purple")}
+            alt={t("page-assets-eth-logo-landscape-purple")}
             image={data.ethLandscapePurplePurple}
+            svgUrl="/static/ethereum-logo-landscape-purple-purple.svg"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-eth-wordmark-purple", intl)}
-            alt={translateMessageId("page-assets-eth-wordmark-purple", intl)}
+            title={t("page-assets-eth-wordmark-purple")}
+            alt={t("page-assets-eth-wordmark-purple")}
             image={data.ethWordmarkPurplePurple}
+            svgUrl="/static/ethereum-wordmark-purple-purple.svg"
           />
         </Row>
         <Row>
           <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-portrait-white",
-              intl
-            )}
-            alt={translateMessageId(
-              "page-assets-eth-logo-portrait-white",
-              intl
-            )}
-            image={data.ethPortraitPurpleWhite}
-          />
-          <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-logo-landscape-white",
-              intl
-            )}
-            alt={translateMessageId(
-              "page-assets-eth-logo-landscape-white",
-              intl
-            )}
+            title={t("page-assets-eth-logo-landscape-white")}
+            alt={t("page-assets-eth-logo-landscape-white")}
             image={data.ethLandscapePurpleWhite}
+            svgUrl="/static/ethereum-logo-landscape-purple-white.svg"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-eth-wordmark-white", intl)}
-            alt={translateMessageId("page-assets-eth-wordmark-white", intl)}
+            title={t("page-assets-eth-wordmark-white")}
+            alt={t("page-assets-eth-wordmark-white")}
             image={data.ethWordmarkPurpleWhite}
+            svgUrl="/static/ethereum-wordmark-purple-white.svg"
           />
         </Row>
-      </Content>
+        <H2 id="historical-illustrations">
+          <Translation id="page-assets-illustrations" />
+        </H2>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-hero-panda")}
+            alt={t("page-assets-hero-panda")}
+            image={data.heroPanda}
+          />
+          <AssetDownload
+            title={t("page-assets-merge-panda")}
+            alt={t("page-assets-merge-panda")}
+            image={data.mergePanda}
+            svgUrl="/static/merge-panda.svg"
+          />
+        </Row>
+      </Box>
       <FeedbackCard />
-    </Page>
+    </Flex>
   )
 }
 
@@ -554,7 +455,21 @@ export const assetItem = graphql`
 `
 
 export const query = graphql`
-  query AssetsPage {
+  query AssetsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-assets", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     ethDiamondBlackHero: file(
       relativePath: { eq: "assets/eth-diamond-black.png" }
     ) {

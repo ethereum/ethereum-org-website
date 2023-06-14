@@ -25,7 +25,8 @@ lang: zh
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - 一系列高额研究奖金，您可以从中赚取 >100,000 美元
 - [Ethresear.ch](https://ethresear.ch) - 以太坊的主要研究论坛，也是世界上最具影响力的加密经济学论坛
-- [生态系统支持计划的愿望清单](https://esp.ethereum.foundation/wishlist/) - 适用于多个研究领域，以太坊生态系统支持计划正在积极寻求这些研究领域的资助申请
+- [以太坊基金会研究团队 AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 正在进行中的研究人员问答系列。 下一部分开放时，任何人都可以提出问题。
+- [生态系统支持计划愿望清单](https://esp.ethereum.foundation/wishlist/) - 介绍以太坊生态系统支持计划正在积极征询资助申请的研究领域
 
 [探索更多活跃研究领域](/community/research/)。
 
@@ -40,7 +41,7 @@ lang: zh
 ### 撰写关于以太坊的内容 {#write-content}
 
 - 以太坊需要能用通俗易懂的语言阐述以太坊价值的优秀写手
-- 还没有准备好发布自己的文章？ 可以考虑为 [EthHub](https://docs.ethhub.io/) 等社区资源上的现有内容贡献一份力量，或者为 ethereum.org 提出新内容！
+- 还没有准备好发布自己的文章？ 可以考虑丰富社区资源中的现有内容，或者[为 ethereum.org 提出新内容](/contributing/)！
 
 ### 主动提出为社区电话会议做会议纪要 {#take-notes}
 
@@ -61,7 +62,7 @@ lang: zh
 
 通过质押以太币，你不但可以获得奖励，还能够帮助保护以太坊网络。
 
-- [关于权益质押的更多信息](/staking/)
+- [有关质押的更多信息](/staking/)
 
 ### 资助项目 {#support-projects}
 
@@ -72,7 +73,7 @@ lang: zh
 
 ## 金融专业人士 & 会计师 <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
 
-- 以太坊是“去中心化金融”生态系统的发源地，该系统是一个提供替代金融系统的协议和应用程序网络。 如果您是金融专业人士，请访问 [DeFi Pulse](https://defipulse.com/) 或 [DeFiPrime](https://defiprime.com)，查看一些去中心化金融应用程序。
+- 以太坊是“去中心化金融”生态系统的发源地，该系统是一个提供替代金融系统的协议和应用程序网络。 如果你是金融专业人士，可以查看 [DeFi Llama](https://defillama.com/) 或 [defprime](https://defiprime.com) 上的一些去中心化金融应用程序
 - 会计师？ 以太坊上的资产（以太币、令牌、去中心化金融等）带来了许多新的会计问题。 您可以从查看一些项目开始，帮助加密货币用户克服他们的记账 & 会计挑战，如 [Rotki](https://rotki.com/)
 
 ## 产品经理 <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
@@ -99,6 +100,8 @@ lang: zh
 - [Web3 招聘职位](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley 招聘职位](https://cryptovalley.jobs/)
+- [以太坊招聘职位](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## 加入去中心化自治组织 {#decentralized-autonomous-organizations-daos}
 

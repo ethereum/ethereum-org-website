@@ -15,7 +15,7 @@ Se non hai ancora chiaro cosa siano nodi e client, consulta [Nodi e client](/dev
 
 ## Staker {#stakoooooooooooooors}
 
-Gli staker in autonomia devono gestire la propria infrastruttura piuttosto che affidarsi a fornitori terzi. Ciò significa eseguire un client di esecuzione associato a un client di consenso. Prima de [La Fusione](/upgrades/merge), era possibile eseguire solo un client di consenso e usare un fornitore centralizzato per i dati di esecuzione; questo non è più possibile: uno staker in autonomia deve eseguire entrambi i client. Tuttavia, sono disponibili dei servizi per semplificare questo processo.
+Gli staker in autonomia devono gestire la propria infrastruttura piuttosto che affidarsi a fornitori terzi. Ciò significa eseguire un client di esecuzione associato a un client di consenso. Prima de [La Fusione](/roadmap/merge), era possibile eseguire solo un client di consenso e usare un fornitore centralizzato per i dati di esecuzione; questo non è più possibile: uno staker in autonomia deve eseguire entrambi i client. Tuttavia, sono disponibili dei servizi per semplificare questo processo.
 
 [Maggiori informazioni sull'esecuzione di un nodo](/developers/docs/nodes-and-clients/run-a-node/).
 
@@ -175,7 +175,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Esploratori di blocchi
     - Tempo di risposta dell'API ⩽ 1 sec
     - Team di supporto 24/7
-    - Referente commerciale personale
+    - Gestore Personale del Conto
     - Nodi condivisi, archivio, backup e dedicati
 - [**Pocket Network**](https://www.pokt.network/)
   - [Documentazione](https://docs.pokt.network/home/)
@@ -205,7 +205,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Bilanciamento geografico, multi-cloud/metal, rete a bassa latenza
     - Supporto multi-catena (Optimism, Arbitrum, Polygon e altri 11)
     - Livelli intermedi (middle layer) per velocità e stabilità (indirizzamento di chiamata, cache, indicizzazione)
-    - Monitoraggio dello smart contract tramite Webhook
+    - Monitoraggio del contratto intelligente tramite Webhook
     - Pannello di controllo intuitivo, suite di analisi, RPC composer
     - Funzionalità di sicurezza avanzate (JWT, mascheratura, whitelist)
     - API di dati e analisi NFT
@@ -252,7 +252,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
   - Caratteristiche
     - Front-running come servizio
     - Mempool di transazioni globale con metodi di ricerca/filtraggio
-    - Commissione TX illimitata e Gas illimitato per l'invio di transazioni
+    - Commissione TX illimitata e Gas infinito per inviare le transazioni
     - Ottenimento più veloce del nuovo blocco e lettura della blockchain
     - Il miglior prezzo per garanzia di chiamata dell'API
 

@@ -92,17 +92,31 @@ Un esempio di avviso di Crowdin quando dimentichi di aggiungere un tag nella tua
 
 Molti dei contenuti di origine contengono tag e variabili, evidenziati in giallo nell'editor di Crowdin. Questi svolgono diverse funzioni e dovrebbero essere trattati correttamente.
 
+**Impostazioni di Crowdin**
+
+Per semplificare la gestione dei tag e copiarli direttamente dal testo di partenza, consigliamo di modificare le tue impostazioni nell'editor di Crowdin.
+
+1. Apri le impostazioni ![Come aprire le impostazioni nell'editor](./editor-settings.png)
+
+2. Scorri verso il basso fino alla sezione "HTML tags displaying”
+
+3. Seleziona "Hide"![Seleziona "Hide"](./hide-tags.png)
+
+4. Fai clic su "Save"
+
+Selezionando quest'opzione, il testo del tag completo non sarà più mostrato e sarà sostituito da un numero. Durante la traduzione, facendo clic su questo tag si copierà automaticamente lo stesso tag nel campo di traduzione.
+
 **Link**
 
 Potresti notare link completi a pagine su ethereum.org o altri siti web.
 
-Dovrebbero essere identici a quelli originali e non essere modificati o tradotti. Se traduci un link o lo modifichi in qualche modo, anche solo rimuovendone una parte, come un backslash (/), ciò condurra a link corrotti o inutilizzabili.
+Dovrebbero essere identici a quelli originali e non essere modificati o tradotti. Se traduci un link o lo modifichi in qualche modo, anche solo rimuovendone una parte, come un backslash (/), lo renderai corrotto o inutilizzabile.
 
 Il modo migliore per gestire i collegamenti è copiarli direttamente dal testo di partenza, facendo clic su di essi o utilizzando il pulsante "Copy Source" (Alt+C).
 
 ![Esempio di link.png](./example-of-link.png)
 
-I link appaiono nel testo sorgente anche sotto forma di tag (cioè <0> </0>). Se passi sul tag, l'editor ne mostrerà il contenuto completo; talvolta questi tag rappresentano dei link.
+I link appaiono nel testo di partenza anche sotto forma di tag (cioè <0> </0>). Se passi sul tag, l'editor ne mostrerà il contenuto completo; talvolta questi tag rappresentano dei link.
 
 È molto importante copiare i link dal testo di partenza senza modificarne l'ordine.
 
@@ -112,7 +126,7 @@ Se l'ordine dei tag viene modificato, il link corrispondente risulterà corrotto
 
 **Tag e variabili**
 
-Il testo di partenza può contenere diversi tipi di tag, che dovrebbero sempre essere copiati dalla sorgente e mai modificati. In modo simile a quanto detto sopra, l'ordine di questi tag nella traduzione dovrebbe anch'esso rimanere identico a quello del testo originale.
+Il testo di partenza può contenere diversi tipi di tag, che dovrebbero sempre essere copiati dalla sorgente e mai modificati. Analogamente a quanto detto sopra, anche l'ordine di questi tag nella traduzione dovrebbe rimanere identico a quello del testo originale.
 
 I tag contengono sempre un tag d'apertura e uno di chiusura. In gran parte dei casi, il testo tra i tag d'apertura e di chiusura va tradotto.
 
@@ -124,7 +138,7 @@ Decentralizzato - _Testo traducibile_
 
 `</strong>` - _Tag di chiusura_
 
-![Esempio di tag 'forti'.png](./example-of-strong-tags.png)
+![Esempio di tag "forti".png](./example-of-strong-tags.png)
 
 I frammenti di codice vanno trattati in maniera leggermente diversa rispetto agli altri tag, poiché contengono codice che non va tradotto.
 
@@ -138,27 +152,27 @@ nonce - _Testo non traducibile_
 
 ![Esempio di frammenti di codice.png](./example-of-code-snippets.png)
 
-Il testo di partenza contiene tag abbreviati, contenenti solo numeri, il che significa che la loro funzione non è immediatamente ovvia. Puoi passare su questi tag per vedere esattamente quale scopo assolvono.
+Il testo di partenza contiene anche tag abbreviati, contenenti solo numeri, il che significa che la loro funzione non è immediatamente ovvia. Puoi passare su questi tag per vedere esattamente quale scopo assolvono.
 
-Nell'esempio seguente, passando con il mouse su <0> puoi vedere che che il tag rappresenta `<code>` e contiene un frammento di codice, quindi il contenuto non va tradotto.
+Nell'esempio seguente, passando con il mouse sul <0> tag puoi vedere che rappresenta `<code>` e contiene un frammento di codice, quindi il contenuto non va tradotto.
 
 ![Esempio di tag ambigui.png](./example-of-ambiguous-tags.png)
 
 ### Formule/abbreviazioni brevi vs. complete {#short-vs-full-forms}
 
-Nel sito web sono usate molte abbreviazioni, es. dApp, NFT, DAO, DeFi, etc. Queste abbreviazioni sono comunemente usate in inglese e gran parte dei visitatori del sito web ne è a conoscenza.
+Nel sito web sono usate molte abbreviazioni, es. dapp, NFT, DAO, DeFi, ecc. Queste abbreviazioni sono comunemente usate in inglese e gran parte dei visitatori del sito web ne è a conoscenza.
 
 Dal momento che di solito non esistono traduzioni attestate in altre lingue, il modo migliore per trattare questi termini e altri simili è quello di fornire una traduzione descrittiva della forma estesa e aggiungere l'abbreviazione inglese tra parentesi.
 
 Non tradurre queste abbreviazioni, poiché la maggior parte delle persone non le conoscerebbe e le versioni localizzate non avrebbero molto senso per la maggior parte dei visitatori.
 
-Esempio di come tradurre le dApp:
+Esempio di come tradurre le dapp:
 
 - Applicazioni decentralizzate (dApp) → _Tradotto integralmente (abbreviazione tra parentesi)_
 
 ### Termini senza traduzioni attestate {#terms-without-established-translations}
 
-Alcuni termini potrebbero non avere traduzioni attestate in altre lingue e sono ampiamente noti con il termine originale in inglese. Tali termini includono principalmente concetti recenti, come proof-of-work, proof-of-stake, Beacon Chain, staking, ecc.
+Alcuni termini potrebbero non avere traduzioni attestate in altre lingue e sono ampiamente noti con il termine originale in inglese. Tali termini includono principalmente concetti recenti, come Proof of Work, Proof of Stake, Beacon Chain, staking, ecc.
 
 Sebbene la traduzione di questi termini possa sembrare innaturale, poiché la versione inglese è comunemente usata anche in altre lingue, si consiglia vivamente di tradurli.
 
@@ -168,9 +182,9 @@ Traducendoli, sentiti libero di essere creativo, usa traduzioni descrittive o se
 
 ### Pulsanti e CTA {#buttons-and-ctas}
 
-Il sito web contiene numerosi pulsanti, che dovrebbero esser tradotti in modo diverso dagli altri contenuti.
+Il sito web contiene numerosi pulsanti, che dovrebbero essere tradotti in modo diverso dagli altri contenuti.
 
-Il testo del pulsante può essere identificato visualizzando gli screenshot contestuali, associati a gran parte delle stringhe, o visualizzando il contesto nell'editor, che include il segmento "pulsante".
+Il testo del pulsante può essere identificato visualizzando gli screenshot contestuali, associati a gran parte delle stringhe, o controllando il contesto nell'editor, che include l'espressione "button".
 
 Le traduzioni dei pulsanti dovrebbero essere il più possibile brevi, onde evitare mancate corrispondenze di formattazione. Inoltre, le traduzioni dei pulsanti dovrebbero essere in forma imperativa, ovvero indicare un comando o una richiesta.
 
@@ -243,11 +257,11 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
     - Spagnolo – **1.000,50**
     - Francese – **1 000,50**
 - Un'altra considerazione importante sulla traduzione dei numeri riguarda il segno percentuale. Può essere scritto in diversi modi: **100%**, **100 %** o **%100**.
-- Infine, i numeri negativi possono essere mostrati in modo diverso, a seconda della lingua: -100, 100- (100) o [100].
+- Infine, i numeri negativi possono esser scritti diversamente, a secnda della lingua: -100, 100-, (100) o [100].
 
 **Date**
 
-- Per la traduzione delle date, occorre tenere conto di una serie di considerazioni e differenze basate sulla lingua, tra cui il formato della data, il separatore, l'uso delle maiuscole/minuscole e gli zeri iniziali. Esistono anche differenze tra le date scritte per esteso e le date numeriche.
+- Traducendo le date, esistono numerose considerazioni e differenze basate sulla lingua. Ciò include il formato della data, il separatore, l'uso di maiuscole e minuscole e gli zeri iniziali. Esistono anche differenze tra le date scritte per esteso e le date numeriche.
   - Alcuni esempi di formati di data diversi:
     - Inglese UK (gg/mm/aaaa) – 1st January, 2022
     - Inglese US (mm/gg/aaaa) – January 1st, 2022
@@ -268,7 +282,7 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 **Unità di misura**
 
 - Come regola generale, consigliamo di lasciare le unità di misura come appaiono nel testo originale. Se il tuo paese usa un sistema differente, puoi includere la conversione tra parentesi.
-- Oltre alla localizzazione delle unità di misura, è importante notare anche il diverso trattamento di tali unità nelle varie lingue. La differenza principale riguarda la spaziatura tra numero e unità, che può variare in base alla lingua. Ed esempio: 100kB o 100 kB, 50°F o 50 °F.
+- Oltre alla localizzazione delle unità di misura, è importante notare anche il diverso trattamento di tali unità nelle varie lingue. La differenza principale riguarda la spaziatura tra numero e unità, che può variare in base alla lingua. Esempi di ciò includono: 100kB o 100 kB, 50°F o 50 °F.
 
 ### Conclusioni {#conclusion}
 
@@ -276,4 +290,4 @@ Tradurre ethereum.org è una grande opportunità per conoscere i diversi aspetti
 
 Quando traduci, cerca di non andare troppo in fretta. Prendila con calma e goditi l'esperienza!
 
-Grazie per aver partecipato al Programma di traduzione e per averci aiutato a rendere il sito web accessibile a un pubblico più ampio. La comunità di Ethereum è globale e siamo felici che tu ne faccia parte!
+Grazie per aver partecipato al Programma di Traduzione e per averci aiutato a rendere il sito web accessibile a un pubblico più ampio. La comunità di Ethereum è globale e siamo felici che tu ne faccia parte!

@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: Actualice su Raspberry Pi 4, a través de un cable de ethernet, conecte el disco SSD y encienda el dispositivo para convertir la Raspberry Pi en un nodo Ethereum completo ejecutando la capa de ejecución, o la capa de consenso (cadena de baliza / validador)
 
-[Más información acerca de las actualizaciones de Ethereum](/upgrades/)
+[Más información acerca de las actualizaciones de Ethereum](/roadmap/)
 
 Primero, veamos un poco de contexto. Como saben, nos hemos encontrado con algunos problemas de memoria [[1]](/developers/tutorials/run-node-raspberry-pi/#references) con la imagen de Raspberry Pi 4 ya que Raspbian OS todavía está en 32 bits [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (al menos a nivel de usuario). Si bien preferimos seguir con el sistema operativo oficial, llegamos a la conclusión de que, para resolver estos problemas, debemos migrar a un sistema operativo nativo de 64 bits
 
-Además, [los clientes de consenso](/upgrades/get-involved/#clients) no admiten binarios de 32 bits, por lo que el uso de Raspbian excluiría a Raspberry Pi 4 de ejecutar un nodo de capa de consenso (y la posibilidad de apuesta).
+Además, los clientes de consenso no admiten binarios de 32 bits, por lo que el uso de Raspbian excluiría a Raspberry Pi 4 de ejecutar un nodo de capa de consenso (y la posibilidad de apuesta).
 
 De modo que, tras varias pruebas, ahora lanzamos 2 imágenes diferentes basadas en Ubuntu 20.04 de 64bits las ediciones de [[3]](/developers/tutorials/run-node-raspberry-pi/#references): capa de ejecución y de capa de consenso.
 
@@ -134,7 +134,7 @@ El sistema operativo Ubuntu arrancará en menos de un minuto, pero **tendrá que
 Dependiendo de la imagen que use, se ejecutará:
 
 - Cliente de ejecución: Geth como cliente predeterminado de sincronización de la cadena de bloques
-- Cliente de consenso: Prysm como cliente predeterminado de sincronización de la cadena de baliza (red de prueba Prater)
+- Cliente de consenso: Prysm como cliente predeterminado de sincronización de la cadena de baliza (red de prueba Goerli)
 
 ### 5. Inicio de sesión {#5-log-in}
 
@@ -163,7 +163,7 @@ sudo tail -f /var/log/syslog
 
 Seguidamente tendrá que esperar a que la cadena de bloques se sincronice por completo. En el caso de la capa de ejecución, llevará varios días en función de factores concretos, pero puede esperar aproximadamente 5-7 días.
 
-Si está ejecutando la capa de consenso en la red de prueba Prater la sincronización con la cadena de la baliza puede llevar entre 1 y 2 días. Recuerde que necesitará configurar el validador más adelante para poder iniciar el proceso de apuesta. [Cómo ejecutar el validador de la capa de consenso](/developers/tutorials/run-node-raspberry-pi/#validator)
+Si está ejecutando la capa de consenso en la red de prueba Goerli la sincronización con la cadena de la baliza puede llevar entre 1 y 2 días. Recuerde que necesitará configurar el validador más adelante para poder iniciar el proceso de apuesta. [Cómo ejecutar el validador de la capa de consenso](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Paneles de control {#monitoring-dashboards}
 
@@ -235,7 +235,7 @@ Ambos necesitan más pruebas, así que experimente a sus anchas con ellos e info
 
 ## Cómo ejecutar el validador de consenso (apuestas) {#validator}
 
-Una vez que la cadena de baliza de la red de pruebas Prater está sincronizada, puede ejecutar un validador en el mismo dispositivo. Necesitará seguir [estos pasos de participación](https://prylabs.net/participate).
+Una vez que la cadena de baliza de la red de pruebas Goerli está sincronizada, puede ejecutar un validador en el mismo dispositivo. Necesitará seguir [estos pasos de participación](https://prylabs.net/participate).
 
 La primera vez, necesita crear manualmente una cuenta ejecutando el binario «validador» y configurando una contraseña. Una vez que haya completado este paso, puede agregar la contraseña a `/etc/ethereum/prysm-validator.conf` e iniciar el validador como un servicio systemd.
 

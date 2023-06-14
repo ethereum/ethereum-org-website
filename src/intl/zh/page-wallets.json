@@ -9,7 +9,7 @@
   "page-wallets-bookmarking-desc": "如果您使用一个网页版的钱包，将这个站点加入书签以防止网络钓鱼。",
   "page-wallets-cd": "物理硬件钱包是能够线下保存加密资产的设备，而且非常安全。",
   "page-wallets-desc-2": "您需要一个钱包来发送和管理你的ETH。",
-  "page-wallets-desc-2-link": "ETH的更多信息",
+  "page-wallets-desc-2-link": "有关以太币的更多信息",
   "page-wallets-desc-3": "您的钱包只是管理您以太坊账户的工具。这意味着您可以随时更换您的钱包应用。许多钱包应用都支持同时管理您的多个以太坊账户。",
   "page-wallets-desc-4": "是您，而不是钱包实际控制您的资产。它们只是管理您资产的工具。",
   "page-wallets-description": "以太坊钱包是一种帮助您与您的以太坊账户进行交互的工具。可以把它想像成一个背后没有银行的互联网银行应用。通过钱包您可以查看余额，发送交易或者链接到各种应用。",
@@ -20,9 +20,9 @@
   "page-wallets-features-title": "根据功能比较钱包",
   "page-wallets-find-wallet-btn": "获取一个钱包",
   "page-wallets-find-wallet-link": "获取一个钱包",
-  "page-wallets-get-some": "获取一些ETH",
+  "page-wallets-get-some": "获取一些以太币",
   "page-wallets-get-some-alt": "插图：一只正在搭建乐高版ETH徽标的手",
-  "page-wallets-get-some-btn": "获取一些ETH",
+  "page-wallets-get-some-btn": "获取一些以太币",
   "page-wallets-get-some-desc": "ETH是以太坊内建的原生加密货币。要使用以太坊应用，您需要在您的钱包中预留一些以太币。",
   "page-wallets-how-to-store": "如何在以太坊上存储数字资产",
   "page-wallets-keys-to-safety": "保证您加密货币安全的关键",
@@ -36,7 +36,7 @@
   "page-wallets-protecting-yourself": "保护您自己和您的资金",
   "page-wallets-seed-phrase": "将您的助记词写下来",
   "page-wallets-seed-phrase-desc": "钱包会提供给您一系列助记词，您必须把它们写下来并保存在安全的地方。这是当您丢失钱包时找回它的唯一方法。",
-  "page-wallets-seed-phrase-example": "这里有一个案例：",
+  "page-wallets-seed-phrase-example": "下面是一个示例：",
   "page-wallets-seed-phrase-snippet": "there aeroplane curve vent formation doge possible product distinct under spirit lamp",
   "page-wallets-seed-phrase-write-down": "不要把它保存在电脑里。写下来并确保它的安全。",
   "page-wallets-slogan": "通向您的数字未来的钥匙",
@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "您的以太坊账户",
   "page-wallets-your-ethereum-account-desc": "您的钱包是您与您的以太坊账户进行交互的窗口 - 查看余额、交易记录等等。但是您可以随时更换您的钱包提供商。",
   "page-wallets-your-login": "登录以太坊应用",
-  "page-wallets-your-login-desc": "您的钱包让您能够使用以太坊账户链接任何去中心化应用。它是各种去中心化应用的统一登录入口。"
+  "page-wallets-your-login-desc": "您的钱包让您能够使用以太坊账户链接任何去中心化应用。它是各种去中心化应用的统一登录入口。",
+  "additional-reading-how-to-register-an-ethereum-account": "如何“注册”以太坊帐户",
+  "additional-reading-how-to-use-a-wallet": "如何使用钱包"
 }

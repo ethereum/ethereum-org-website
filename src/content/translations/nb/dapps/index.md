@@ -22,11 +22,10 @@ Her er bare noen få apper bygget på Ethereum – vi endrer ofte på denne list
 
 Interessert i å se på flere applikasjoner bygget på Ethereum?
 
-- [Bygget på Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) _Oppdatert ofte- Ethub_
 - [90 Ethereum Apper du kan bruke allerede nå](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _Aug 24, 2019 - ConsenSys_
 - [Ethereum Dapper](https://www.stateofthedapps.com/rankings/platform/ethereum) _Oppdaterte ofte - State of the Dapps_
 - [Ethereum DeFi Økosystem](https://defiprime.com/ethereum) _Oppdatert ofte - Defiprime_
-- [DeFi Puls](https://defipulse.com/) _Analytics + rangering av DeFi protokoller - Defi Pulse_
+- [DeFi Llama](https://defillama.com/) _Analytics + rangering av DeFi protokoller - Defi Llama_
 
 Noen Ethereum-applikasjoner krever en lommebok – [Lær mer om Ethereum-lommebøker](/wallets/).
 

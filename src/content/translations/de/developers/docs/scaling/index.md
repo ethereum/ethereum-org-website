@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 Da die Zahl der Nutzer von Ethereum gestiegen ist, hat die Blockchain gewisse Kapazitätsgrenzen erreicht. Dies hat die Kosten für die Nutzung des Netzes in die Höhe getrieben und den Bedarf an „Skalierungslösungen" geschaffen. Es gibt mehrere Lösungen, die erforscht, getestet und umgesetzt werden, die unterschiedliche Ansätze verfolgen, um ähnliche Ziele zu erreichen.
 
-Das Hauptziel der Skalierbarkeit ist die Erhöhung der Transaktionsgeschwindigkeit (schnellere Endgültigkeit) und des Transaktionsdurchsatzes (viele Transaktionen pro Sekunde), ohne dabei die Dezentralisierung oder die Sicherheit zu opfern (mehr zur [Ethereum Vision](/upgrades/vision/)). Hohe Nachfrage auf der Layer-1 Ethereum Blockchain, führt zu langsameren Transaktionen und untragbaren [Gas Preisen](/developers/docs/gas/). Die Erhöhung der Netzwerkkapazität in Bezug auf Geschwindigkeit und Durchsatz ist von grundlegender Bedeutung für eine sinnvolle und massenhafte Einführung von Ethereum.
+Das Hauptziel der Skalierbarkeit ist die Erhöhung der Transaktionsgeschwindigkeit (schnellere Endgültigkeit) und des Transaktionsdurchsatzes (viele Transaktionen pro Sekunde), ohne dabei die Dezentralisierung oder die Sicherheit zu opfern (mehr zur [Ethereum Vision](/roadmap/vision/)). Hohe Nachfrage auf der Layer-1 Ethereum Blockchain, führt zu langsameren Transaktionen und untragbaren [Gas Preisen](/developers/docs/gas/). Die Erhöhung der Netzwerkkapazität in Bezug auf Geschwindigkeit und Durchsatz ist von grundlegender Bedeutung für eine sinnvolle und massenhafte Einführung von Ethereum.
 
 Geschwindigkeit und Durchsatz sind zwar von Bedeutung, aber es ist entscheidend, dass Skalierungslösungen, die diese Ziele ermöglichen, dezentralisiert und sicher bleiben. Eine niedrige Einstiegshürde für die Betreiber von Knotenpunkten ist von entscheidender Bedeutung, um eine Entwicklung hin zu zentralisierter und unsicherer Rechenleistung zu verhindern.
 
@@ -27,7 +27,7 @@ Diese Methode der Skalierung erfordert Änderungen am Ethereum-Protokoll (Layer 
 
 Unter Sharding versteht man die horizontale Aufteilung einer Datenbank, um die Last zu verteilen. Im Ethereum-Kontext wird das Sharding die Netzwerküberlastung reduzieren und die Transaktionen pro Sekunde erhöhen, indem neue Ketten, die sogenannten „Shards", geschaffen werden. Dies entlastet auch die einzelnen Prüfer, die nicht mehr die Gesamtheit aller Transaktionen im Netz bearbeiten müssen.
 
-Erfahren Sie mehr über [Sharding](/upgrades/sharding/).
+Erfahren Sie mehr über [Sharding](/roadmap/danksharding/).
 
 ## Off-Chain-Skalierung {#off-chain-scaling}
 
@@ -88,7 +88,7 @@ Lernen Sie mehr über [Validium](/developers/docs/scaling/validium/).
 - Mehrere Lösungen können dazu beitragen, die Gesamtüberlastung in einem Teil des Netzes zu verringern, und verhindern außerdem einzelne Fehlerquellen.
 - Das Ganze ist größer als die Summe seiner Teile. Es können verschiedene Lösungen existieren und miteinander harmonieren, was einen exponentiellen Effekt auf die künftige Transaktionsgeschwindigkeit und den Durchsatz ermöglicht.
 - Nicht alle Lösungen erfordern die direkte Nutzung des Ethereum-Konsens-Algorithmus, und Alternativen können Vorteile bieten, die sonst nur schwer zu erreichen wären.
-- Eine einzige Skalierungslösung reicht nicht aus, um die [Ethereum Vision](/upgrades/vision/) zu erfüllen.
+- Eine einzige Skalierungslösung reicht nicht aus, um die [Ethereum Vision](/roadmap/vision/) zu erfüllen.
 
 ## Eher der visuelle Lernende? {#visual-learner}
 

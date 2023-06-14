@@ -332,13 +332,11 @@ DeFi este o mișcare open-source. Protocoalele și aplicațiile DeFi sunt dtoate
 
 ### Date despre DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
 ### Articole despre DeFi {#defi-articles}
 
-- [Ce este Finanțarea Descentralizată?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, actualizat periodic_
 - [Ghidul începătorului pentru DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 ianuarie 2020_
 
 ### Videoclipuri {#videos}

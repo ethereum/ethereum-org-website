@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Berhenti membaca",
   "page-staking-deposit-contract-subtitle": "Ini adalah alamat untuk kontrak penaruhan Ethereum. Gunakan halaman ini untuk mengonfirmasi bahwa Anda mengirim dana ke alamat yang benar saat Anda bertaruh.",
   "page-staking-deposit-contract-warning": "Periksa setiap huruf secara hati-hati.",
-  "page-staking-deposit-contract-warning-2": "Mengirim dana ke alamat ini tidak akan berhasil dan tidak akan membuat Anda menjadi penaruh. Anda harus mengikuti petunjuk launchpad."
+  "page-staking-deposit-contract-warning-2": "Mengirim dana ke alamat ini tidak akan berhasil dan tidak akan membuat Anda menjadi penaruh. Anda harus mengikuti petunjuk launchpad.",
+  "page-staking-deposit-contract-title": "Periksa alamat kontrak deposit"
 }

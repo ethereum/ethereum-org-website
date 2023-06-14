@@ -2,15 +2,7 @@
 title: Interact with other contracts from Solidity
 description: How to deploy a smart contract from an existing contract and interact with it
 author: "jdourlens"
-tags:
-  [
-    "smart contracts",
-    "solidity",
-    "remix",
-    "factories",
-    "deploying",
-    "composability",
-  ]
+tags: ["smart contracts", "solidity", "remix", "deploying", "composability"]
 skill: advanced
 lang: en
 published: 2020-04-05

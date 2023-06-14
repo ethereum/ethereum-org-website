@@ -4,7 +4,7 @@ description: Crea il tuo primo progetto Waffle con hardhat ed ethers.js
 author: "MiZiet"
 tags:
   - "waffle"
-  - "Smart Contract"
+  - "smart contract"
   - "Solidity"
   - "test"
   - "hardhat"

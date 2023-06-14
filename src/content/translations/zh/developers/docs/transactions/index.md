@@ -6,13 +6,13 @@ lang: zh
 
 交易是由帐户发出，带密码学签名的指令。 帐户将发起交易以更新以太坊网络的状态。 最简单的交易是将 ETH 从一个账户转到另一个帐户。
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 为了帮助您更好地理解这个页面，我们建议您先阅读[账户](/developers/docs/accounts/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
 ## 什么是交易？ {#whats-a-transaction}
 
-以太坊交易是指由外部持有账户发起的行动，换句话说，是指由人管理而不是智能合约管理的账户。 例如，如果 Bob 发送 Alice 1 ETH，则 Bob 的帐户必须减少 1 ETH，而 Alice 的账户必须增加 1 ETH。 此项操作发生在交易中，会变更状态。
+以太坊交易是指由外部持有账户发起的行动，换句话说，是指由人管理而不是智能合约管理的账户。 例如，如果 Bob 向 Alice 发送 1 ETH，则 Bob 的帐户必须减少 1 ETH，而 Alice 的账户必须增加 1 ETH。 交易会造成状态的改变。
 
 ![显示交易导致状态更改的图表](./tx.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -24,7 +24,7 @@ lang: zh
 
 - `recipient` – 接收地址（如果为一个外部持有的帐户，交易将传输值。 如果为合约帐户，交易将执行合约代码）
 - `signature` – 发送者的标识符。 当通过发送者的私钥签名交易来确保发送者已授权此交易时，生成此签名。
-- `nonce` - 一个连续的递增计数器，表示帐户中的交易编号。
+- `随机数` - 一个连续的递增计数器，表示帐户中的交易编号。
 - `value` – 发送人向接收人转移的以太币金额（以以太币的一种面值 WEI 为单位）
 - `data` – 可包括任意数据的可选字段
 - `gasLimit` – 交易可以消耗的最大数量的燃料单位。 燃料单位代表计算步骤
@@ -105,7 +105,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 
 ### `data`字段 {#the-data-field}
 
-绝大多数交易从外部所有的帐户访问合约。 大多数合约用 Solidity 语言编写，并根据[应用程序二进制接口 (ABI)](/glossary/#abi) 解释其`data`字段。
+绝大多数交易都是从外部所有的帐户访问合约。 大多数合约用 Solidity 语言编写，并根据[应用程序二进制接口 (ABI)](/glossary/#abi) 解释其`data`字段。
 
 前四个字节使用函数名称和参数的哈希指定要调用的函数。 有时可以使用[本数据库](https://www.4byte.directory/signatures/)根据选择器识别函数。
 
@@ -144,7 +144,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 0.0042 ETH
 ```
 
-Bob 的帐户将会减少 **-1.0042 ETH**
+Bob 的帐户将会扣除 **1.0042 个以太币**（1 个以太币给 Alice，0.0042 个以太币作为燃料费用）
 
 Alice 的帐户将会增加 **+1.0 ETH**
 
@@ -154,7 +154,7 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 任何智能合约交互也需要燃料。
 
-![未使用燃料退款情况图](./gas-tx.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![未使用燃料退还示意图](./gas-tx.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 任何未用于交易的燃料都会退还给用户帐户。
 
@@ -167,7 +167,7 @@ Alice 的帐户将会增加 **+1.0 ETH**
 3. 验证者必须选择你的交易并将它包含在一个区块中，以便验证交易并认为它“成功”。
 4. 随着时间的流逝，包含你的交易的区块将升级成“合理”状态，然后变成“最后确定”状态。 通过这些升级，可以进一步确定 你的交易已经成功并将无法更改。 区块一旦“最终确定”，只能通过耗费数十亿美元 的攻击来更改。
 
-## 直观演示 {#a-visual-demo}
+## 视频演示 {#a-visual-demo}
 
 跟随 Austin 了解交易、燃料和挖矿。
 
@@ -179,7 +179,7 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-以太坊经过演变，已经支持多种类型的交易，从而能够在不影响传统交易形式的情况下实现访问列表和 [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) 等新功能。
+以太坊经过演变，已经支持多种类型的交易，从而能够在不影响传统交易形式的情况下实现访问列表和 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 等新功能。
 
 [EIP-2718：类型化交易封套](https://eips.ethereum.org/EIPS/eip-2718)定义了交易类型，是未来交易类型的“封套”。
 
@@ -196,7 +196,7 @@ EIP-2718 是用于类型化交易的新通用封套。 在新标准中，交易�
 
 - [EIP-2718：Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 

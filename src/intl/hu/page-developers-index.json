@@ -8,7 +8,6 @@
   "page-developers-advanced": "Speciális",
   "page-developers-api-desc": "Könyvtárak használata az okosszerződésekkel való interakcióra",
   "page-developers-api-link": "Backend API-ok",
-  "page-developers-aria-label": "Fejlesztői Menü",
   "page-developers-block-desc": "Számos tranzakciócsomagot adtunk a blokklánchoz",
   "page-developers-block-explorers-desc": "Ethereum-adat portálod",
   "page-developers-block-explorers-link": "Blokk felfedezők",
@@ -80,5 +79,7 @@
   "page-developers-transactions-desc": "Hogyan változik az Ethereum állapota",
   "page-developers-transactions-link": "Tranzakciók",
   "page-developers-web3-desc": "Miben más a web3 fejlesztői világ",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 vs Web3",
+  "alt-eth-blocks": "A blokkok ábrázolása úgy van elrendezve, hogy egy ETH szimbólumot formázzon",
+  "page-assets-doge": "Doge dappokat használ"
 }

@@ -37,7 +37,7 @@ Jika Anda bukan seorang pengembang, untuk tahu dari mana memulai di Ethereum bis
 ### Tulis konten tentang Ethereum {#write-content}
 
 - Ethereum membutuhkan para penulis yang baik yang dapat menjelaskan nilainya dalam bahasa yang sederhana
-- Tidak siap untuk memublikasikan artikel Anda sendiri? Pertimbangkan untuk berkontribusi terhadap konten yang telah ada dalam sumber daya komunitas seperti [EthHub](https://docs.ethhub.io/), atau ajukan konten baru untuk ethereum.org!
+- Tidak siap untuk memublikasikan artikel Anda sendiri? Pertimbangkan untuk berkontribusi terhadap konten yang telah ada dalam sumber daya komunitas seperti atau ajukan konten baru untuk ethereum.org!
 
 ### Tawarkan diri untuk membuat catatan untuk panggilan komunitas {#take-notes}
 
@@ -69,7 +69,7 @@ Ekosistem Ethereum bertujuan mendanai fasilitas publik dan proyek yang berdampak
 
 ## Ahli keuangan & Akuntan <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum adalah rumah untuk ekosistem "Keuangan Terdesentralisasi" - sebuah jaringan protokol dan aplikasi yang menawarkan sistem keuangan alternatif. Jika Anda adalah seorang ahli keuangan, lihat beberapa aplikasi DeFi di [DeFi Pulse](https://defipulse.com/) atau [DeFiPrime](https://defiprime.com)
+- Ethereum adalah rumah untuk ekosistem "Keuangan Terdesentralisasi" - sebuah jaringan protokol dan aplikasi yang menawarkan sistem keuangan alternatif. Jika Anda adalah seorang ahli keuangan, lihat beberapa aplikasi DeFi di [DeFi Llama](https://defillama.com/) atau [DeFiPrime](https://defiprime.com)
 - Seorang akuntan? Aset di Ethereum - ETH, token, DeFi, dll - memperkenalkan banyak masalah akuntansi yang baru. Anda dapat memulai dengan memeriksa beberapa proyek yang bertujuan menolong pengguna mata uang kripto menyelesaikan pembukuan & tantangan akuntansi mereka, seperti [Rotki](https://rotki.com/)
 
 ## Manajer Produk <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

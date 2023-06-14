@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 Ethereum kullanan kişi sayısı arttıkça blok zinciri belirli kapasite sınırlamalarına ulaştı. Bu durum, ağı kullanma maliyetini artırarak "ölçeklendirme çözümlerine" yönelik bir ihtiyaç doğurdu. Benzer hedeflere ulaşmak için farklı yaklaşımlar benimseyen, araştırılan, test edilen ve uygulanan çok sayıda çözüm vardır.
 
-Ölçeklenebilirliğin ana hedefi, merkeziyetsizlikten veya güvenlikten ödün vermeden işlem hızını (daha hızlı kesinlik) ve işlem verimini (saniye başına yüksek işlem) artırmaktır ([Ethereum'un vizyonu](/upgrades/vision/) hakkında daha fazla bilgi). Katman 1 Ethereum blok zincirinde yüksek talep, daha yavaş işlemlere ve elverişsiz [gaz fiyatlarına](/developers/docs/gas/) yol açar. Ethereum'un anlamlı ve toplu olarak benimsenmesi için ağ kapasitesini hız ve verim açısından artırmak çok önemlidir.
+Ölçeklenebilirliğin ana hedefi, merkeziyetsizlikten veya güvenlikten ödün vermeden işlem hızını (daha hızlı kesinlik) ve işlem verimini (saniye başına yüksek işlem) artırmaktır ([Ethereum'un vizyonu](/roadmap/vision/) hakkında daha fazla bilgi). Katman 1 Ethereum blok zincirinde yüksek talep, daha yavaş işlemlere ve elverişsiz [gaz fiyatlarına](/developers/docs/gas/) yol açar. Ethereum'un anlamlı ve toplu olarak benimsenmesi için ağ kapasitesini hız ve verim açısından artırmak çok önemlidir.
 
 Hız ve verim önemli olsa da, bu hedefleri mümkün kılan ölçeklendirme çözümlerinin merkeziyetsiz ve güvenli kalması çok önemlidir. Düğüm operatörleri için giriş engelini düşük tutmak, merkezi ve güvenli olmayan bilgi işlem gücüne doğru ilerlemeyi önlemede kritik önem arz eder.
 
@@ -27,7 +27,7 @@ Bu ölçeklendirme yöntemi, Ethereum protokolünde değişiklik yapılmasını 
 
 Parçalama, yükü yaymak için bir veri tabanını yatay olarak bölme işlemidir. Ethereum bağlamında parçalama, "parça" olarak bilinen yeni zincirler oluşturarak ağ tıkanıklığını azaltır ve saniye başına işlem kapasitesini artırır. Bu, aynı zamanda doğrulayıcıların ağdaki işlemlerin tamamını işleme zorunluluğunu ortadan kaldırarak tüm doğrulayıcıların yükünü azaltır.
 
-[Parçalama](/upgrades/sharding/) hakkında daha fazla bilgi.
+[Parçalama](/roadmap/danksharding/) hakkında daha fazla bilgi.
 
 ## Zincir dışında ölçeklendirme {#off-chain-scaling}
 
@@ -88,7 +88,7 @@ Bir Validium zinciri, sıfır bilgi toplamaları gibi doğruluk ispatlarını ku
 - Birden çok çözüm, ağın herhangi bir bölümündeki genel tıkanıklığı azaltmaya yardımcı olabilir ve ayrıca tek hata noktalarını da önler.
 - Bütün, parçalarının toplamından daha büyüktür. Farklı çözümler var olabilir ve uyum içinde çalışabilir, bu da gelecekteki işlem hızı ve verimi üzerinde üstel bir etkiye izin verir.
 - Tüm çözümler, Ethereum mutabakat algoritmasının doğrudan kullanılmasını gerektirmez ve alternatifler, aksi takdirde elde edilmesi zor olacak faydalar sunabilir.
-- [Ethereum vizyonunu](/upgrades/vision/) gerçekleştirmek için tek bir ölçeklendirme çözümü yeterli değildir.
+- [Ethereum vizyonunu](/roadmap/vision/) gerçekleştirmek için tek bir ölçeklendirme çözümü yeterli değildir.
 
 ## Görsel olarak öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
 

@@ -4,7 +4,7 @@ description: Make your first Waffle project with hardhat and ethers.js
 author: "MiZiet"
 tags:
   ["waffle", "smart contracts", "solidity", "testing", "hardhat", "ethers.js"]
-skill: basic
+skill: beginner
 lang: en
 published: 2020-10-16
 ---
@@ -76,7 +76,7 @@ MyWaffleProject
 
 ### Now let's talk about some of these files: {#now-lets-talk}
 
-- Greeter.sol - our smart contract writen in solidity;
+- Greeter.sol - our smart contract written in solidity;
 
 ```solidity
 contract Greeter {

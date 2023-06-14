@@ -10,7 +10,7 @@ Sono comunque disponibili tecnologie base di Ethereum che aiutano a fornire un m
 
 ## Livello 1: macchina virtuale Ethereum {#ethereum-virtual-machine}
 
-La [macchina virtuale Ethereum (EVM)](/developers/docs/evm/) è l'ambiente di runtime per gli Smart Contract su Ethereum. Tutti gli Smart Contract e le modifiche di stato sulla blockchian Ethereum sono eseguiti per mezzo di [transazioni](/developers/docs/transactions/). La EVM gestisce l'elaborazione di tutte le transazioni sulla rete Ethereum.
+La [Macchina Virtuale di Ethereum (EVM)](/developers/docs/evm/) è l'ambiente d'esecuzione per i contratti intelligenti su Ethereum. Tutti i contratti intelligenti e i cambiamenti di stato sulle blockchain di Ethereum sono eseguiti dalle [transazioni](/developers/docs/transactions/). La EVM gestisce l'elaborazione di tutte le transazioni sulla rete Ethereum.
 
 Come avviene con ogni macchina virtuale, la EVM crea un livello di astrazione fra il codice in esecuzione e la macchina che esegue tale codice (il nodo Ethereum). Al momento la EVM è in esecuzione su migliaia di nodi distribuiti in tutto il mondo.
 
@@ -18,15 +18,15 @@ La EVM utilizza un insieme di istruzioni opcode per eseguire attività specifich
 
 A uno sviluppatore di dapp non serve conoscere a fondo la EVM, gli basta sapere che esiste e fa funzionare in modo affidabile tutte le applicazioni su Ethereum senza interruzioni.
 
-## Livello 2: Smart Contract {#smart-contracts}
+## Livello 2: Contratti intelligenti {#smart-contracts}
 
-Gli [Smart Contract](/developers/docs/smart-contracts/) sono i programmi che vengono eseguiti sulla blockchain Ethereum.
+I [contratti intelligenti](/developers/docs/smart-contracts/) sono i programmi eseguiti sulla blockchain di Ethereum.
 
-Sono scritti in un [linguaggio di programmazione](/developers/docs/smart-contracts/languages/) specifico, che viene compilato in bytecode EVM (istruzioni macchina di basso livello dette opcode).
+I contratti intelligenti sono scritti usando [linguaggi di programmazione](/developers/docs/smart-contracts/languages/) specifici, compilati al bytecode dell'EVM (istruzioni della macchina di basso livello, dette opcode).
 
-Gli Smart Contract fungono non solo da librerie open source ma sono essenzialmente servizi open API che vengono eseguiti 24 ore su 24 e 7 giorni su 7, e non possono essere disattivati. Gli smart contract forniscono funzioni pubbliche con cui gli utenti e le applicazioni ([dApp](/developers/docs/dapps/)) possono interagire, senza necessitare di permessi. Qualsiasi applicazione può essere integrata con smart contract distribuiti per comporre funzionalità, come aggiungere i [feed di dati](/developers/docs/oracles/) o supportare gli scambi di token. Chiunque può distribuire nuovi Smart Contract su Ethereum per aggiungere funzionalità personalizzate che soddisfino le esigenze della propria applicazione.
+Non solo i contratti intelligenti servono da librerie open source, ma sono essenzialmente servizi API aperti in continua esecuzione e non disattivabili. I contratti intelligenti forniscono funzioni pubbliche con cui gli utenti e le applicazioni ([dapp](/developers/docs/dapps/)) potrebbero interagire, senza necessitare di permessi. Qualsiasi applicazione potrebbe integrarsi con i contratti intelligenti distribuiti per comporre la funzionalità, come aggiungere [feed di dati](/developers/docs/oracles/) o supportare gli scambi di token. Inoltre, chiunque può distribuire nuovi contratti intelligenti a Ethereum per aggiungere funzionalità personalizzate che soddisfino le esigenze della loro applicazione.
 
-Uno sviluppatore di dapp deve scrivere Smart Contract solo se intende aggiungere funzionalità personalizzate alla blockchain Ethereum. È infatti possibile soddisfare la maggior parte delle esigenze di un progetto (se non tutte) semplicemente integrando gli Smart Contract esistenti, ad esempio per supportare pagamenti con stablecoin o abilitare lo scambio decentralizzato di token.
+Come sviluppatore di dapp, dovrvai scrivere i contratti intelligenti solo se desideri aggiungere funzionalità personalizzate alla blockchain di Ethereum. Potresti renderti conto di poter soddisfare gran parte o tutte le esigenze del tuo progetto, semplicemente integrando con contratti intelligenti esistenti, ad esempio, se desideri supportare pagamenti in stablecoin o consentire lo scambio decentralizzato di token.
 
 ## Livello 3: nodi Ethereum {#ethereum-nodes}
 
@@ -34,7 +34,7 @@ Affinché un'applicazione interagisca con la blockchain di Ethereum, deve connet
 
 I nodi Ethereum sono computer che eseguono software, ovvero un client Ethereum. Un client è una implementazione di Ethereum che verifica tutte le transazioni presenti in un blocco, facendo in modo che la rete rimanga sicura e i dati siano accurati. **I nodi di Ethereum sono la blockchain di Ethereum**. Memorizzano in maniera collettiva lo stato della blockchain Ethereum e raggiungono il consenso sulle transazioni per modificare lo stato della blockchain.
 
-Connettendo la propria applicazione a un nodo di Ethereum (tramite l'[API di JSON-RPC](/developers/docs/apis/json-rpc/)), l'applicazione può leggere i dati dalla blockchain (come i saldi dell'account dell'utente) nonché trasmettere le nuove transazioni alla rete (ad es. trasferire ETH tra gli account degli utenti o eseguire le funzioni degli smart contract).
+Connettendo la tua applicazione a un nodo di Ethereum (tramite l'[API JSON-RPC](/developers/docs/apis/json-rpc/)), la tua applicazione può leggere i dati dalla blockchain (come i saldi dei conti degli utenti), nonché trasmettere le nuove transazioni alla rete (come trasferire ETH tra conti degli utenti o eseguire funzioni dei contratti intelligenti).
 
 ## Livello 4: API client Ethereum {#ethereum-client-apis}
 

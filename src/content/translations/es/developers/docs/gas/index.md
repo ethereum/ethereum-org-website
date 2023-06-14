@@ -101,13 +101,13 @@ Uno de los principales beneficios de la actualización de Londres es la mejora d
 
 ## EIP-1559 {#eip-1559}
 
-La implementación de [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) en la actualización de Londres hizo que el mecanismo de comisiones de transacción fuera más complejo que el anterior de subasta del precio del gas, pero tiene la ventaja de hacer más predecibles las comisiones de gas, lo cual genera un mercado de comisiones de transacción más eficiente. Los usuarios pueden enviar transacciones con una `maxFeePerGas` correspondiente a la cantidad que están dispuestos a pagar por transacción para que esta se ejecute, sabiendo que no pagarán más que el precio de mercado por el gas (`comisión base por gas`), y que se les reembolsará la cantidad adicional menos su propina.
+La implementación de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) en la actualización de Londres hizo que el mecanismo de comisiones de transacción fuera más complejo que el anterior de subasta del precio del gas, pero tiene la ventaja de hacer más predecibles las comisiones de gas, lo cual genera un mercado de comisiones de transacción más eficiente. Los usuarios pueden enviar transacciones con una `maxFeePerGas` correspondiente a la cantidad que están dispuestos a pagar por transacción para que esta se ejecute, sabiendo que no pagarán más que el precio de mercado por el gas (`comisión base por gas`), y que se les reembolsará la cantidad adicional menos su propina.
 
 En este vídeo se explica el EIP-1559 y los beneficios que brinda:
 
 <YouTube id="MGemhK9t44Q" />
 
-Si está interesado/a, puede leer las [especificaciones exactas de EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
+Si está interesado/a, puede leer las [especificaciones exactas de EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 
 Continúe aprendiendo más con estos [recursos de EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
 
@@ -133,7 +133,7 @@ El precio del gas por sí solo no determina cuánto tenemos que pagar por una de
 
 ## Iniciativas para reducir los costes del gas {#initiatives-to-reduce-gas-costs}
 
-Las [mejoras de escalabilidad](/upgrades/) de Ethereum deberían abordar algunos de los problemas de las comisiones de gas, lo que a su vez permitiría que la plataforma procesase cientos de transacciones por segundo y a escala global.
+Las [mejoras de escalabilidad](/roadmap/) de Ethereum deberían abordar algunos de los problemas de las comisiones de gas, lo que a su vez permitiría que la plataforma procesase cientos de transacciones por segundo y a escala global.
 
 La escala de la capa 2 es una iniciativa primaria para mejorar de manera considerable los costes del gas, la experiencia de usuario y la escalabilidad. [Más información sobre la escala de la capa 2](/developers/docs/scaling/#layer-2-scaling).
 
@@ -161,7 +161,6 @@ Si desea supervisar los precios del gas, para poder enviar su ETH por menos, pue
 ## Más información {#further-reading}
 
 - [Explicación sobre el gas de Ethereum](https://defiprime.com/gas)
-- [¿Es más caro usar Ethereum cuando el precio sube?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducir el consumo de gas de sus contratos inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Prueba de participación frente a prueba de trabajo](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

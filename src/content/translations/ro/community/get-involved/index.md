@@ -37,7 +37,7 @@ Dacă nu sunteți un dezvoltator, poate fi dificil să știți de unde să înce
 ### Scrieți articole despre Ethereum {#write-content}
 
 - Ethereum are nevoie de scriitori buni care îi pot explica valoarea într-un limbaj simplu, ușor de înțeles
-- Nu sunteți pregătit să vă publicați propriile articole? Gândiți-vă să contribuiți la conținutul existent pe resurse comunitare, cum ar fi [EthHub](https://docs.ethhub.io/), sau propuneți conținut nou pentru ethereum.org!
+- Nu sunteți pregătit să vă publicați propriile articole? Gândiți-vă să contribuiți la conținutul existent pe resurse comunitare, cum ar fi, sau propuneți conținut nou pentru ethereum.org!
 
 ### Oferiți-vă să luați notițe la întrunirile comunității {#take-notes}
 
@@ -69,7 +69,7 @@ Ecosistemul Ethereum are ca misiune să finanțeze bunurile publice și proiecte
 
 ## Profesioniști în domeniul financiar & Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum găzduiește ecosistemul de „Finanțe descentralizate” - o rețea de protocoale și aplicații care oferă un sistem financiar alternativ. Dacă sunteți un profesionist în domeniul financiar, consultați câteva aplicații la DeFi la [Defi Pulse](https://defipulse.com/) sau [DeFiPrime](https://defiprime.com)
+- Ethereum găzduiește ecosistemul de „Finanțe descentralizate” - o rețea de protocoale și aplicații care oferă un sistem financiar alternativ. Dacă sunteți un profesionist în domeniul financiar, consultați câteva aplicații la DeFi la [Defi Llama](https://defillama.com/) sau [DeFiPrime](https://defiprime.com)
 - Sunteți contabil? Activele pe Ethereum - ETH, tokenuri, DeFi etc. - introduc multe aspecte contabile noi. Ați putea începe prin examinarea unor proiecte care urmăresc să ajute utilizatorii de criptomonede să-și rezolve & problemele legate de contabilitate, cum ar fi [Rotki](https://rotki.com/)
 
 ## Managerii de produse <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

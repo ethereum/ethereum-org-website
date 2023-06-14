@@ -152,9 +152,9 @@ _Примітка. Будь-хто може належати до кількох
 
 Хоча розробка специфікацій і впроваджень завжди була повністю відкритою, офіційні процеси, що застосовуються для пропонування вище описаних оновлень, не використовувалися. Це дало змогу дослідникам і впроваджувачам швидше уточнювати й погоджувати зміни.
 
-Коли Beacon Chain об’єднається з виконавчим рівнем Ethereum, процес керування пропозиціями змін буде узгоджено. Виконання об’єднання [вже триває](https://github.com/ethereum/EIPs/pull/3675).
+Коли Beacon Chain об’єднається з виконавчим рівнем Ethereum, процес керування пропозиціями змін буде узгоджено. Виконання об’єднання [вже триває](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Докладніше про об’єднання
 </ButtonLink>
 
@@ -175,7 +175,6 @@ _Примітка. Будь-хто може належати до кількох
 Процес керування в Ethereum не є чітко визначеним. Різні учасники спільноти мають власні погляди щодо цього. Ви можете ознайомитися з ними нижче.
 
 - [Примітка до управління Blockchain](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Керування на Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) — _ETHHub_
 - [Як працює керування Ethereum?](https://cryptotesters.com/blog/ethereum-governance) — _Cryptotesters_
 - [Як працює керування Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) — _Міка Золту_
 - [Чим займається основний розробник Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) — _Хадсон Джеймсон_

@@ -1,105 +1,23 @@
+import {
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  List,
+  ListItem,
+  SimpleGrid,
+  useToken,
+} from "@chakra-ui/react"
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
-import { StaticQuery, graphql } from "gatsby"
-import { Icon } from "@chakra-ui/react"
-import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
-import { getLocaleTimestamp } from "../utils/time"
-import Translation from "./Translation"
-import Link from "./Link"
-import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
-
-const StyledFooter = styled.footer`
-  padding-top: 3rem;
-  padding-bottom: 4rem;
-  padding: 1rem 2rem;
-`
-
-const FooterTop = styled.div`
-  font-size: ${(props) => props.theme.fontSizes.s};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-`
-
-const LastUpdated = styled.div`
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const LinkGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-gap: 1rem;
-  justify-content: space-between;
-  @media (max-width: 1300px) {
-    grid-template-columns: repeat(3, auto);
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: repeat(2, auto);
-  }
-  @media (max-width: 500px) {
-    grid-template-columns: auto;
-  }
-`
-
-const LinkSection = styled.div``
-
-const SectionHeader = styled.h3`
-  font-size: 0.875rem;
-  line-height: 1.6;
-  margin: 1.14em 0;
-  font-weight: bold;
-`
-
-const List = styled.ul`
-  font-size: 0.875rem;
-  line-height: 1.6;
-  font-weight: 400;
-  margin: 0;
-  list-style-type: none;
-  list-style-image: none;
-`
-
-const ListItem = styled.li`
-  margin-bottom: 1rem;
-`
-
-const FooterLink = styled(Link)`
-  text-decoration: none;
-  color: ${(props) => props.theme.colors.text200};
-  svg {
-    fill: ${(props) => props.theme.colors.text200};
-  }
-  &:after {
-    color: ${(props) => props.theme.colors.text200};
-  }
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-    &:after {
-      color: ${(props) => props.theme.colors.primary};
-    }
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const SocialIcons = styled.div`
-  margin: 1rem 0;
-`
-const SocialIcon = styled(Icon)`
-  margin-left: 1rem;
-  width: 2rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-left: 0;
-    margin-right: 0.5rem;
-  }
-`
+import { getLocaleTimestamp } from "../utils/time"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
+import Link from "./Link"
+import Translation from "./Translation"
 
 const socialLinks = [
   {
@@ -136,292 +54,337 @@ export interface LinkSection {
 export interface IProps {}
 
 const Footer: React.FC<IProps> = () => {
-  const intl = useIntl()
+  const { language } = useI18next()
+  const { t } = useTranslation()
 
-  const isPageRightToLeft = isLangRightToLeft(intl.locale as Lang)
+  const isPageRightToLeft = isLangRightToLeft(language as Lang)
+
+  const [medBp] = useToken("breakpoints", ["md"])
 
   const linkSections: Array<LinkSection> = [
     {
-      title: "use-ethereum",
+      title: t("use-ethereum"),
       links: [
         {
-          text: "find-wallet",
+          text: t("find-wallet"),
           to: "/wallets/find-wallet/",
         },
         {
           to: `/get-eth/`,
-          text: "get-eth",
+          text: t("get-eth"),
         },
         {
           to: `/dapps/`,
-          text: "decentralized-applications-dapps",
+          text: t("decentralized-applications-dapps"),
         },
         {
           to: "/layer-2/",
-          text: "layer-2",
+          text: t("layer-2"),
         },
         {
           to: "/run-a-node/",
-          text: "run-a-node",
+          text: t("run-a-node"),
         },
         {
           to: `/stablecoins/`,
-          text: "page-stablecoins-title",
+          text: t("stablecoins"),
         },
         {
           to: `/staking/`,
-          text: "page-upgrades-get-involved-stake-eth",
+          text: t("stake-eth"),
         },
       ],
     },
     {
-      title: "learn",
+      title: t("learn"),
       links: [
         {
+          to: `/learn/`,
+          text: t("learn-hub"),
+        },
+        {
           to: `/what-is-ethereum/`,
-          text: "what-is-ethereum",
+          text: t("what-is-ethereum"),
         },
         {
           to: `/eth/`,
-          text: "what-is-ether",
+          text: t("what-is-ether"),
         },
         {
           to: `/wallets/`,
-          text: "ethereum-wallets",
+          text: t("ethereum-wallets"),
         },
         {
-          to: `/learn/`,
-          text: "guides-and-resources",
-        },
-        {
-          to: "/history/",
-          text: "history-of-ethereum",
-        },
-        {
-          to: "/whitepaper/",
-          text: "ethereum-whitepaper",
-        },
-        {
-          text: "ethereum-upgrades",
-          to: "/upgrades/",
-        },
-        {
-          text: "ethereum-security",
+          text: t("ethereum-security"),
           to: "/security/",
         },
         {
-          to: `/glossary/`,
-          text: "ethereum-glossary",
-        },
-        {
-          text: "ethereum-governance",
-          to: "/governance/",
-        },
-        {
-          text: "bridges",
-          to: "/bridges/",
-        },
-        {
-          text: "zero-knowledge-proofs",
-          to: "/zero-knowledge-proofs/",
-        },
-        {
-          text: "energy-consumption",
-          to: "/energy-consumption/",
-        },
-        {
-          text: "web3",
+          text: t("web3"),
           to: "/web3/",
         },
         {
+          text: t("smart-contracts"),
+          to: "/smart-contracts/",
+        },
+        {
+          text: t("energy-consumption"),
+          to: "/energy-consumption/",
+        },
+        {
+          text: t("ethereum-roadmap"),
+          to: "/roadmap/",
+        },
+        {
           to: "/eips/",
-          text: "eips",
+          text: t("eips"),
+        },
+        {
+          to: "/history/",
+          text: t("history-of-ethereum"),
+        },
+        {
+          to: "/whitepaper/",
+          text: t("ethereum-whitepaper"),
+        },
+        {
+          to: `/glossary/`,
+          text: t("ethereum-glossary"),
+        },
+        {
+          text: t("ethereum-governance"),
+          to: "/governance/",
+        },
+        {
+          text: t("bridges"),
+          to: "/bridges/",
+        },
+        {
+          text: t("zero-knowledge-proofs"),
+          to: "/zero-knowledge-proofs/",
+        },
+        {
+          text: t("quizzes-title"),
+          to: "/quizzes/",
         },
       ],
     },
     {
-      title: "developers",
+      title: t("developers"),
       links: [
         {
           to: `/developers/`,
-          text: "get-started",
+          text: t("get-started"),
           isPartiallyActive: false,
         },
         {
           to: `/developers/docs/`,
-          text: "documentation",
+          text: t("documentation"),
         },
         {
           to: `/developers/tutorials/`,
-          text: "tutorials",
+          text: t("tutorials"),
         },
         {
           to: `/developers/learning-tools/`,
-          text: "learn-by-coding",
+          text: t("learn-by-coding"),
         },
         {
           to: `/developers/local-environment/`,
-          text: "set-up-local-env",
+          text: t("set-up-local-env"),
         },
       ],
     },
     {
-      title: "ecosystem",
+      title: t("ecosystem"),
       links: [
         {
           to: `/community/`,
-          text: "community-hub",
+          text: t("community-hub"),
         },
         {
           to: "/foundation/",
-          text: "ethereum-foundation",
+          text: t("ethereum-foundation"),
         },
         {
           to: "https://blog.ethereum.org/",
-          text: "ef-blog",
+          text: t("ef-blog"),
         },
         {
           to: "https://esp.ethereum.foundation",
-          text: "esp",
+          text: t("esp"),
         },
         {
           to: "/bug-bounty/",
-          text: "ethereum-bug-bounty",
+          text: t("ethereum-bug-bounty"),
         },
         {
           to: "/community/grants",
-          text: "grant-programs",
+          text: t("grant-programs"),
         },
         {
           to: "/assets/",
-          text: "ethereum-brand-assets",
+          text: t("ethereum-brand-assets"),
         },
         {
           to: "https://devcon.org/",
-          text: "devcon",
+          text: t("devcon"),
         },
       ],
     },
     {
-      title: "enterprise",
+      title: t("enterprise"),
       links: [
         {
           to: "/enterprise/",
-          text: "mainnet-ethereum",
+          text: t("mainnet-ethereum"),
         },
         {
           to: "/enterprise/private-ethereum/",
-          text: "private-ethereum",
+          text: t("private-ethereum"),
         },
         {
           to: "/enterprise/",
-          text: "enterprise",
+          text: t("enterprise"),
         },
       ],
     },
     {
-      title: "about-ethereum-org",
+      title: t("about-ethereum-org"),
       links: [
         {
           to: "/about/",
-          text: "about-us",
+          text: t("about-us"),
         },
         {
           to: "/about/#open-jobs",
-          text: "jobs",
+          text: t("jobs"),
         },
         {
           to: "/contributing/",
-          text: "contributing",
+          text: t("contributing"),
         },
         {
           to: "/languages/",
-          text: "language-support",
+          text: t("language-support"),
         },
         {
           to: "/privacy-policy/",
-          text: "privacy-policy",
+          text: t("privacy-policy"),
         },
         {
           to: "/terms-of-use/",
-          text: "terms-of-use",
+          text: t("terms-of-use"),
         },
         {
           to: "/cookie-policy/",
-          text: "cookie-policy",
+          text: t("cookie-policy"),
         },
         {
           to: "mailto:press@ethereum.org",
-          text: "contact",
+          text: t("contact"),
         },
       ],
     },
   ]
 
-  return (
-    <StaticQuery
-      query={graphql`
-        query FooterQuery {
-          allSiteBuildMetadata {
-            edges {
-              node {
-                buildTime
-              }
-            }
+  const data = useStaticQuery(graphql`
+    query {
+      allSiteBuildMetadata {
+        edges {
+          node {
+            buildTime
           }
         }
-      `}
-      render={(data) => (
-        <StyledFooter>
-          <FooterTop>
-            <LastUpdated>
-              <Translation id="website-last-updated" />:{" "}
-              {getLocaleTimestamp(
-                intl.locale as Lang,
-                data.allSiteBuildMetadata.edges[0].node.buildTime
-              )}
-            </LastUpdated>
-            <SocialIcons>
-              {socialLinks.map((link, idx) => {
-                return (
+      }
+    }
+  `)
+
+  return (
+    <Box as="footer" p="1rem 2rem">
+      <Flex
+        fontSize="sm"
+        justify="space-between"
+        alignItems="center"
+        flexWrap="wrap"
+      >
+        <Box color="text200">
+          <Translation id="website-last-updated" />:{" "}
+          {getLocaleTimestamp(
+            language as Lang,
+            data.allSiteBuildMetadata.edges[0].node.buildTime
+          )}
+        </Box>
+        <Box my={4}>
+          {socialLinks.map((link, idk) => {
+            return (
+              <Link
+                key={idk}
+                to={link.to}
+                hideArrow
+                color="secondary"
+                aria-label={link.ariaLabel}
+              >
+                <Icon as={link.icon} fontSize="4xl" ml={4} />
+              </Link>
+            )
+          })}
+        </Box>
+      </Flex>
+      <SimpleGrid
+        gap={4}
+        justifyContent="space-between"
+        gridTemplateColumns="repeat(6, auto)"
+        sx={{
+          "@media (max-width: 1300px)": {
+            gridTemplateColumns: "repeat(3, auto)",
+          },
+          [`@media (max-width: ${medBp})`]: {
+            gridTemplateColumns: "repeat(2, auto)",
+          },
+          "@media (max-width: 500px)": {
+            gridTemplateColumns: "auto",
+          },
+        }}
+      >
+        {linkSections.map((section: LinkSection, idx) => (
+          <Box key={idx}>
+            <Heading as="h3" fontSize="sm" lineHeight="1.6" my="1.14em">
+              <Translation id={section.title} />
+            </Heading>
+            <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
+              {section.links.map((link, linkIdx) => (
+                <ListItem key={linkIdx} mb={4}>
                   <Link
-                    key={idx}
                     to={link.to}
-                    hideArrow={true}
-                    color="secondary"
-                    aria-label={link.ariaLabel}
+                    isPartiallyActive={false}
+                    dir={isPageRightToLeft ? "auto" : "ltr"}
+                    textDecor="none"
+                    color="text200"
+                    _hover={{
+                      textDecor: "none",
+                      color: "primary",
+                      _after: {
+                        color: "primary",
+                      },
+                      "& svg": {
+                        fill: "primary",
+                      },
+                    }}
+                    sx={{
+                      "& svg": {
+                        fill: "text200",
+                      },
+                    }}
                   >
-                    <Icon as={link.icon} fontSize="4xl" ml={4} />
+                    {link.text}
                   </Link>
-                )
-              })}
-            </SocialIcons>
-          </FooterTop>
-          <LinkGrid>
-            {linkSections.map((section: LinkSection, idx) => (
-              <LinkSection key={idx}>
-                <SectionHeader>
-                  <Translation id={section.title} />
-                </SectionHeader>
-                <List>
-                  {section.links.map((link, linkIdx) => (
-                    <ListItem key={linkIdx}>
-                      <FooterLink
-                        dir={isPageRightToLeft ? "auto" : "ltr"}
-                        to={link.to}
-                        isPartiallyActive={false}
-                      >
-                        <Translation id={link.text} />
-                      </FooterLink>
-                    </ListItem>
-                  ))}
-                </List>
-              </LinkSection>
-            ))}
-          </LinkGrid>
-        </StyledFooter>
-      )}
-    />
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        ))}
+      </SimpleGrid>
+    </Box>
   )
 }
 

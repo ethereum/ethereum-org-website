@@ -2,6 +2,7 @@
 title: Мероприятия Ethereum
 description: Как участвовать в жизни сообщества Ethereum.
 lang: ru
+hideEditButton: true
 ---
 
 ## Предстоящие мероприятия {#events}

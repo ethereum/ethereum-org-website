@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **Kısacası**: Raspberry Pi 4'ünüzü flaşlayın, bir ethernet kablosu takın, SSD diskini bağlayın ve Raspberry Pi 4'ü yürütüm katmanını veya mutabakat katmanını (İşaret Zinciri/doğrulayıcı) çalıştıran tam bir Ethereum düğümüne dönüştürmek için cihazı çalıştırın
 
-[Ethereum yükseltmeleri hakkında bilgi edinin](/upgrades/)
+[Ethereum yükseltmeleri hakkında bilgi edinin](/roadmap/)
 
 Önce biraz arka plan bilgisi verelim. Bildiğiniz gibi, Raspbian işletim sistemi hâlâ 32 bit [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (en azından kullanıcı alanı) üzerinde olduğundan, [[1]](/developers/tutorials/run-node-raspberry-pi/#references)Raspberry Pi 4 görüntüsüyle ilgili bazı bellek sorunlarıyla karşılaşıyoruz. Resmi işletim sistemine bağlı kalmayı tercih ederken, bu sorunları çözmek için yerel 64 bit işletim sistemine geçmemiz gerektiği sonucuna vardık
 
-Ayrıca, [mutabakat istemcileri](/upgrades/get-involved/#clients) 32 bit ikili dosyaları desteklemez, bu nedenle Raspbian kullanmak, Raspberry Pi 4'ün bir mutabakat katmanı düğümü çalıştırmasını (ve stake etme olasılığını) hariç tutar.
+Ayrıca, mutabakat istemcileri 32 bit ikili dosyaları desteklemez, bu nedenle Raspbian kullanmak, Raspberry Pi 4'ün bir mutabakat katmanı düğümü çalıştırmasını (ve stake etme olasılığını) hariç tutar.
 
 Bu nedenle, birkaç testten sonra şimdi Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references) tabanlı 2 farklı sürücü yayınlıyoruz: yürütüm katmanı ve mutabakat katmanı sürümleri.
 
@@ -134,7 +134,7 @@ Ubuntu İşletim Sistemi bir dakikadan daha kısa sürede açılacaktır ancak *
 Sürücüye bağlı olarak şunları çalıştıracaksınız:
 
 - Yürütüm istemcisi: Blok zincirini senkronize eden varsayılan istemci olarak Geth
-- Mutabakat istemcisi: İşaret zincirini senkronize eden varsayılan istemci olarak Prysm (Prater testnet)
+- Mutabakat istemcisi: İşaret zincirini senkronize eden varsayılan istemci olarak Prysm (Goerli testnet)
 
 ### 5. Giriş yapın {#5-log-in}
 
@@ -163,7 +163,7 @@ sudo tail -f /var/log/syslog
 
 Şimdi blok zincirinin senkronize edilmesini beklemeniz gerekiyor. Yürütüm katmanı söz konusu olduğunda, bu birkaç faktöre bağlı olarak birkaç gün sürebilir, ancak yaklaşık 5-7 güne kadar bekleyebilirsiniz.
 
-Mutabakat katmanı Prater test ağını çalıştırıyorsanız, 1-2 günlük İşaret zinciri senkronizasyon süresi bekleyebilirsiniz. Stake sürecini başlatmak için doğrulayıcıyı daha sonra kurmanız gerekeceğini unutmayın. [Mutabakat katmanı doğrulayıcı nasıl çalıştırılır](/developers/tutorials/run-node-raspberry-pi/#validator)
+Mutabakat katmanı Goerli test ağını çalıştırıyorsanız, 1-2 günlük İşaret zinciri senkronizasyon süresi bekleyebilirsiniz. Stake sürecini başlatmak için doğrulayıcıyı daha sonra kurmanız gerekeceğini unutmayın. [Mutabakat katmanı doğrulayıcı nasıl çalıştırılır](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## İzleme gösterge panoları {#monitoring-dashboards}
 
@@ -235,7 +235,7 @@ Her ikisinin de daha fazla teste ihtiyacı var, bu yüzden onlarla deney yapmakt
 
 ## Mutabakat doğrulayıcı nasıl çalıştırılır (stake etmek) {#validator}
 
-Prater test ağı işaret zinciri senkronize edildikten sonra aynı cihazda bir doğrulayıcı çalıştırabilirsiniz. [Bu katılım adımlarını](https://prylabs.net/participate) takip etmeniz gerekecek.
+Goerli test ağı işaret zinciri senkronize edildikten sonra aynı cihazda bir doğrulayıcı çalıştırabilirsiniz. [Bu katılım adımlarını](https://prylabs.net/participate) takip etmeniz gerekecek.
 
 İlk sefer için, “doğrulayıcı” ikili dosyasını çalıştırarak manuel olarak bir hesap oluşturmanız ve bir şifre belirlemeniz gerekir. Bu adımı tamamladıktan sonra parolayı `/etc/ethereum/prysm-validator.conf` dizinine ekleyebilir ve doğrulayıcıyı bir systemd hizmeti olarak başlatabilirsiniz.
 

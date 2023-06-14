@@ -4,7 +4,7 @@ description:
 lang: it
 ---
 
-Un'applicazione decentralizzata (dApp) è un'applicazione costruita su una rete decentralizzata che coniuga uno [smart contract](/developers/docs/smart-contracts/) con un'interfaccia utente frontend. In Ethereum gli Smart Contract sono accessibili e trasparenti (come le API aperte) quindi una dapp può anche includere Smart Contract scritto da altri.
+Un'applicazione decentralizzata (dapp) è un'applicazione costruita su una rete decentralizzata che combina un [contratto intelligente](/developers/docs/smart-contracts/) e l'interfaccia utente di un frontend. Su Ethereum, i contratti intelligenti sono accessibili e trasparenti (come le API aperte), quindi la tua dapp può persino includere un contratto intelligente, già scritto da qualcun altro.
 
 ## Prerequisiti {#prerequisites}
 
@@ -19,21 +19,21 @@ Una dapp può avere codice frontend e interfacce utente scritti in qualsiasi lin
 - **Decentralizzate** - Le dApp operano su Ethereum, una piattaforma pubblica decentralizzata dove nessun individuo o gruppo detiene il controllo
 - **Deterministiche**: eseguono la stessa funzione a prescindere dall'ambiente dove vengono eseguite.
 - **Turing complete** - Le dApp possono eseguire qualsiasi azione una volta fornite le risorse necessarie
-- **Isolate** - Le dApp vengono eseguite in un ambiente virtuale noto come Ethereum Virtual Machine. In questo modo, se lo smart contract ha un bug, non ostacolerà il normale funzionamento della rete blockchain
+- **Isolate** - Le dApp sono eseguite in un ambiente virtuale, noto come la Macchina Virtuale di Ethereum, così che se il contratto intelligente contiene un bug, non ostacolerà il normale funzionamento della rete della blockchain
 
-### Informazioni sugli Smart Contract {#on-smart-contracts}
+### Sui contratti intelligenti {#on-smart-contracts}
 
-Per presentare le dapp, dobbiamo introdurre gli Smart Contract, cioè il backend della dapp, in mancanza di una definizione migliore. Per una panoramica dettagliata, consulta la nostra sezione sugli [smart contract](/developers/docs/smart-contracts/).
+Per introdurre le dapp, dobbiamo introdurre i contratti intelligenti: la backend di una dapp, in mancanza di un termine migliore. Per una panoramica dettagliata, consulta la nostra sezione sui [contratti intelligenti](/developers/docs/smart-contracts/).
 
-Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona esattamente come programmato. Una volta che gli smart contract sono distribuiti sulla rete, non è possibile modificarli. Le dapp possono essere decentralizzate perché sono controllate della logica scritta nel contratto, non da un individuo o da un'azienda. Questo significa anche gli Smart Contract devono essere progettati molto attentamente e testati accuratamente.
+Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e opera esattamente come programmato. Una volta distribuiti i contratti intelligenti sulla rete, non puoi modificarli. Le dapp possono essere decentralizzate perché sono controllate della logica scritta nel contratto, non da un individuo o da un'azienda. Questo significa anche che devi progettare i tuoi contratti molto attenteamente e testarli accuratamente.
 
 ## Vantaggi dello sviluppo delle dapp {#benefits-of-dapp-development}
 
-- **Nessun tempo di inattività** – Una volta che lo smart contract è distribuito sulla blockchain, la rete nel suo insieme sarà sempre in grado di servire i client che cercano di interagire con il contratto. Gli attori malevoli quindi non possono lanciare attacchi denial-of-service verso dapp singole.
+- **Nessun tempo di inattività** – Una volta distribuito il contratto intelligente sulla blockchain, l'intera rete potrà sempre servire i clienti che cercano di interagire con il contratto. Gli attori malevoli quindi non possono lanciare attacchi denial-of-service verso dapp singole.
 - **Privacy**: non è necessario fornire un'identità reale per distribuire una dapp o interagirvi.
 - **Resistenza alla censura**: nessuna entità sulla rete può impedire agli utenti di inviare transazioni, distribuire dapp o leggere dati dalla blockchain.
 - **Completa integrità dei dati**: i dati conservati sulla blockchain sono immutabili e indiscutibili, grazie alle primitive crittografiche. Attori malevoli non possono falsificare transazioni o altri dati che sono già stati resi pubblici.
-- **Calcolo trustless/comportamento verificabile** – gli smart contract possono essere analizzati ed è garantito che vengano eseguiti in modo prevedibile, senza la necessità di affidarsi ad un'autorità centrale. Questo non accade nei modelli tradizionali. Per esempio, quando usiamo l'online banking dobbiamo fidarci del fatto che gli istituti finanziari non abusino dei nostri dati finanziari, non manomettano record e non vengano attaccati da hacker.
+- **Calcolo senza fiducia/comportamento verificabile** – I contratti intelligenti sono analizzabili e, l'esecuzione in modi prevedibili è garantita, senza il bisogno di affidarsi a un'autorità centrale. Questo non accade nei modelli tradizionali. Per esempio, quando usiamo l'online banking dobbiamo fidarci del fatto che gli istituti finanziari non abusino dei nostri dati finanziari, non manomettano record e non vengano attaccati da hacker.
 
 ## Svantaggi dello sviluppo di dApp {#drawbacks-of-dapp-development}
 
@@ -49,7 +49,7 @@ Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona e
 
 ## Strumenti per creare le dApp {#dapp-tools}
 
-**Scaffold-ETH _- Sperimenta rapidamente con Solidity utilizzando un frontend che si adatta al tuo smart contract._**
+**Scaffold-ETH _ Sperimenta rapidamente con Solidity utilizzando un frontend che si adatta al tuo contratto intelligente._**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 - [Esempio di dApp](https://punkwallet.io/)

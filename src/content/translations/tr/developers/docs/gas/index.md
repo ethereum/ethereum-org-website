@@ -101,13 +101,13 @@ Londra yükseltmesinin ana faydalarından biri, işlem ücretlerini belirlerken 
 
 ## EIP-1559 {#eip-1559}
 
-[EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)'un Londra Yükseltmesinde uygulanması, işlem ücreti mekanizmasını önceki gaz fiyatı ihalesinden daha karmaşık hâle getirdi ancak gaz ücretlerini daha öngörülebilir hâle getirme avantajına sahip; bu da daha verimli bir işlem ücreti piyasası sağlıyor. Kullanıcılar, gaz için piyasa fiyatından (`baseFeePerGas`) fazlasını ödemeyeceklerini bilerek, işlemin gerçekleşmesi için ne kadar ödemeye razı olduklarına karşılık gelen bir `maxFeePerGas` ile işlem gönderebilirler ve herhangi bir fazlalığı ve verdikleri bahşiş hariç geri alırlar.
+[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)'un Londra Yükseltmesinde uygulanması, işlem ücreti mekanizmasını önceki gaz fiyatı ihalesinden daha karmaşık hâle getirdi ancak gaz ücretlerini daha öngörülebilir hâle getirme avantajına sahip; bu da daha verimli bir işlem ücreti piyasası sağlıyor. Kullanıcılar, gaz için piyasa fiyatından (`baseFeePerGas`) fazlasını ödemeyeceklerini bilerek, işlemin gerçekleşmesi için ne kadar ödemeye razı olduklarına karşılık gelen bir `maxFeePerGas` ile işlem gönderebilirler ve herhangi bir fazlalığı ve verdikleri bahşiş hariç geri alırlar.
 
 Bu video, EIP-1559'u ve getirdiği faydaları açıklıyor:
 
 <YouTube id="MGemhK9t44Q" />
 
-İlgileniyorsanız, [EIP-1559 şartnamesini](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) tam olarak okuyabilirsiniz.
+İlgileniyorsanız, [EIP-1559 şartnamesini](https://eips.ethereum.org/EIPS/eip-1559) tam olarak okuyabilirsiniz.
 
 Bu [EIP-1559 Kaynakları](https://hackmd.io/@timbeiko/1559-resources) ile daha derine inmeye devam edin.
 
@@ -133,7 +133,7 @@ Gaz fiyatı tek başına belirli bir işlem için ne kadar ödememiz gerektiğin
 
 ## Gaz maliyetlerini azaltmak için girişimler {#initiatives-to-reduce-gas-costs}
 
-Ethereum [ölçeklenebilirlik yükseltmeleri](/upgrades/) nihayetinde platformun saniyede binlerce işlemi işlemesini ve küresel olarak ölçeklenmesini sağlayacak olan bazı gaz ücreti sorunlarını çözecektir.
+Ethereum [ölçeklenebilirlik yükseltmeleri](/roadmap/) nihayetinde platformun saniyede binlerce işlemi işlemesini ve küresel olarak ölçeklenmesini sağlayacak olan bazı gaz ücreti sorunlarını çözecektir.
 
 Katman 2 ölçekleme; gaz maliyetlerini, kullanıcı deneyimini ve ölçeklenebilirliği büyük ölçüde iyileştirmeye yönelik birincil bir girişimdir. [Katman 2 ölçekleme hakkında daha fazla bilgi](/developers/docs/scaling/#layer-2-scaling).
 
@@ -161,7 +161,6 @@ ETH'nizi daha ucuza gönderebilmeniz için gaz fiyatlarını takip etmek istiyor
 ## Daha fazla bilgi {#further-reading}
 
 - [Ethereum Gazı Açıklaması](https://defiprime.com/gas)
-- [Fiyat arttıkça Ethereum kullanmak pahalılaşıyor mu?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Akıllı Sözleşmelerinizin gaz tüketimini azaltmak](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Hisse İspatına karşı İş İspatı](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

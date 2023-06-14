@@ -8,7 +8,6 @@
   "page-developers-advanced": "پیشرفته",
   "page-developers-api-desc": "استفاده از کتابخانه‌ها برای تعامل با قراردادهای هوشمند",
   "page-developers-api-link": "بک اند وب سرویس‌ها",
-  "page-developers-aria-label": "منوی توسعه‌دهنده‌ها",
   "page-developers-block-desc": "دسته‌هایی از تراکنش‌های اضافه شده به بلاکچین",
   "page-developers-block-explorers-desc": "پورتال شما به داده‌های اتریوم",
   "page-developers-block-explorers-link": " جستجوگر‌های بلوک",
@@ -84,5 +83,6 @@
   "page-developers-transactions-desc": "نحوه تغییر حالت اتریوم",
   "page-developers-transactions-link": "تراکنش‌ها",
   "page-developers-web3-desc": "دنیای توسعه web3 چگونه متفاوت است",
-  "page-developers-web3-link": "Web2 در مقابل Web3"
+  "page-developers-web3-link": "Web2 در مقابل Web3",
+  "alt-eth-blocks": "تصویری از بلوک‌هایی که مانند نماد ETH سازماندهی شده اند"
 }

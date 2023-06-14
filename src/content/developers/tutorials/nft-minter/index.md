@@ -2,18 +2,7 @@
 title: NFT Minter Tutorial
 description: In this tutorial, you’ll build an NFT minter and learn how to create a full stack dapp by connecting your smart contract to a React frontend using MetaMask and Web3 tools.
 author: "smudgil"
-tags:
-  [
-    "solidity",
-    "NFT",
-    "minter",
-    "alchemy",
-    "smart contracts",
-    "frontend",
-    "UI",
-    "wallet",
-    "Pinata",
-  ]
+tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata"]
 skill: intermediate
 lang: en
 published: 2021-10-06
@@ -482,7 +471,7 @@ The text in the "Link to Asset", "Name", "Description" fields will comprise the 
 
 To store our metadata on IPFS, we will use [Pinata](https://pinata.cloud/), a convenient IPFS API and toolkit. In the next step, we'll explain exactly how to do this!
 
-## Use Pintata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Use Pinata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
 If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email and account.
 

@@ -47,11 +47,11 @@ I due grafici a torta di cui sopra mostrano le istantanee dell'attuale diversit�
 
 I dati del livello d'esecuzione sono stati ottenuti da [Ethernodes](https://ethernodes.org) il 23/01/22. I dati per i client di consenso sono stati ottenuti da [Michael Sproul](https://github.com/sigp/blockprint). I dati dei client di consenso sono più difficili da ottenere perché i client della Beacon Chain non hanno sempre tracce inequivocabili, utilizzabili per identificarli. I dati sono stati generati usando un algoritmo di classificazione che talvolta confonde alcuni dei client di minoranza (vedi [qui](https://twitter.com/sproulM_/status/1440512518242197516) per ulteriori dettagli). Nel diagramma precedente, queste classificazioni ambigue sono trattate classificate come alternative multiple (es. Nimbus/Teku). È comunque chiaro che la maggioranza della rete sta eseguendo Prysm. I dati sono un'istantanea su una serie fissa di blocchi (in questo caso i blocchi della Beacon Chain dallo slot 2048001 al 2164916) e in alcuni momenti la dominanza di Prysm è stata anche maggiore, superando il 68%. Nonostante siano solo istantanee, i valori nel diagramma forniscono una buona indicazione generale dello stato corrente della diversità dei client.
 
-I dati della diversità dei client aggiornati per il livello di consenso sono ora disponibili su https://clientdiversity.org/.
+I dati di diversità dei client aggiornati per il livello del consenso sono ora disponibili su [clientdiversity.org](https://clientdiversity.org/).
 
 ## Livello di esecuzione {#execution-layer}
 
-Finora, la conversazione sulla diversità dei client si è concentrata sul livello del consenso. Tuttavia, il client d'esecuzione [Geth](https://geth.ethereum.org) rappresenta attualmente l'85% di tutti i nodi. Questa percentuale è problematica per gli stessi motivi dei client di consenso. Ad esempio, un bug su Geth che influenzi la gestione delle transazioni o la costruzione dei carichi utili d'esecuzione potrebbe condurre alla finalizzazione da parte dei client di consenso di transazioni problematiche o contenenti bug. Ethereum sarebbe più quindi più robusto con una distribuzione più equa dei client d'esecuzione, idealmente senza alcun client che rappresenti oltre il 33% della rete.
+Finora, la conversazione sulla diversità dei client si è concentrata sul livello del consenso. Tuttavia, il client d'esecuzione [Geth](https://geth.ethereum.org) rappresenta correntemente circa l'85% di tutti i nodi. Questa percentuale è problematica per gli stessi motivi dei client di consenso. Ad esempio, un bug su Geth che influenzi la gestione delle transazioni o la costruzione dei carichi utili d'esecuzione potrebbe condurre alla finalizzazione da parte dei client di consenso di transazioni problematiche o contenenti bug. Ethereum sarebbe più quindi più robusto con una distribuzione più equa dei client d'esecuzione, idealmente senza alcun client che rappresenti oltre il 33% della rete.
 
 ## Usare un client di minoranza {#use-minority-client}
 
@@ -64,8 +64,6 @@ Per "indirizzare" la diversità dei client non basta che i singoli utenti scelga
 [Nethermind](https://downloads.nethermind.io/)
 
 [Erigon](https://github.com/ledgerwatch/erigon)
-
-[Akula](https://akula.app)
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
@@ -89,11 +87,10 @@ Diversi pannelli di controllo forniscono statistiche sulla diversità dei client
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-- [pools.invis.cloud](https://pools.invis.cloud/)
-- [slashed.info](https://www.slashed.info/)
 
 **Livello di esecuzione:**
 
+- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Letture consigliate {#further-reading}

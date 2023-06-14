@@ -1,185 +1,45 @@
 // Libraries
 import React from "react"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
+import {
+  Box,
+  Flex,
+  Heading,
+  ListItem,
+  UnorderedList,
+  useColorMode,
+  Icon,
+} from "@chakra-ui/react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
-import Icon from "../Icon"
+import Translation from "../Translation"
 
 // Icons
-import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
-import ENSSupport from "../../assets/wallets/ens_support.svg"
-import ERC20Support from "../../assets/wallets/erc_20_support.svg"
-import GasFeeCustomization from "../../assets/wallets/gas_fee_customization.svg"
-import HardwareSupport from "../../assets/wallets/hardware_support.svg"
-import Hardware from "../../assets/wallets/hardware.svg"
-import Layer2 from "../../assets/wallets/layer_2.svg"
-import NFTSupport from "../../assets/wallets/nft_support.svg"
-import NonCustodial from "../../assets/wallets/non_custodial.svg"
-import OpenSource from "../../assets/wallets/open_source.svg"
-import RPCImporting from "../../assets/wallets/rpc_importing.svg"
-import Staking from "../../assets/wallets/staking.svg"
-import WalletConnect from "../../assets/wallets/walletconnect.svg"
-import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
-import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
-import Multisig from "../../assets/wallets/multisig.svg"
-import SocialRecover from "../../assets/wallets/social_recover.svg"
-import Swap from "../../assets/wallets/swap.svg"
-import Eip1559 from "../../assets/wallets/eip1559.svg"
+import { MdCircle } from "react-icons/md"
+import {
+  BuyCryptoIcon,
+  ConnectDappsIcon,
+  EIP1559Icon,
+  ENSSupportIcon,
+  ERC20SupportIcon,
+  GasFeeCustomizationIcon,
+  HardwareIcon,
+  HardwareSupportIcon,
+  Layer2Icon,
+  MultisigIcon,
+  NFTSupportIcon,
+  NonCustodialIcon,
+  OpenSourceWalletIcon,
+  RPCImportingIcon,
+  SocialRecoverIcon,
+  StakingIcon,
+  SwapIcon,
+  WalletConnectIcon,
+  WithdrawCryptoIcon,
+} from "../icons/wallets"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
-
-// Styles
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 1rem 1rem;
-  }
-`
-
-const FeatureListItem = styled.li<{
-  selected: boolean
-}>`
-  display: flex;
-  gap: 0.2rem;
-  font-size: 0.85rem;
-  line-height: 0.95rem;
-  margin: 0.1rem;
-  align-items: center;
-  p {
-    margin-bottom: 0;
-    color: ${(props) =>
-      props.selected === true
-        ? props.theme.colors.primary
-        : props.theme.colors.text};
-  }
-
-  svg {
-    width: 28px;
-    height: 28px;
-    path {
-      fill: ${(props) => props.theme.colors.text};
-      stroke: ${(props) => props.theme.colors.text};
-    }
-  }
-`
-
-const Persona = styled.div<{
-  selected: boolean
-  isDark: boolean
-}>`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1.5rem;
-  background: ${({ selected, isDark, theme }) =>
-    selected
-      ? isDark
-        ? theme.colors.primary900
-        : theme.colors.primary200
-      : isDark
-      ? theme.colors.black400
-      : theme.colors.primary100};
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.5s all;
-
-  h3 {
-    color: ${(props) => props.theme.colors.text};
-  }
-
-  &:hover {
-    background: ${(props) =>
-      props.selected === true
-        ? props.isDark === true
-          ? props.theme.colors.primary900
-          : props.theme.colors.primary200
-        : props.isDark === true
-        ? props.theme.colors.black500
-        : props.theme.colors.primary200};
-    transition: 0.5s all;
-  }
-`
-
-const PersonaDescription = styled.span<{
-  selected: boolean
-}>`
-  margin: 0.5rem 0 0.8rem 0;
-  padding: 0.7rem 0.6rem 0;
-  color: ${(props) =>
-    props.selected === true
-      ? props.theme.colors.text
-      : props.theme.colors.text200};
-  font-size: 0.9rem;
-  font-weight: normal;
-  transition: 0.5s all;
-  line-height: 1.3;
-  border-top: 1px solid ${(props) => props.theme.colors.lightBorder};
-`
-
-const Title = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  gap: "1rem";
-  margin-bottom: 0.6rem;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-`
-
-const H3 = styled.h3`
-  margin-left: 0.5rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.3rem;
-  padding: 0 0.25rem 0 0;
-  line-height: 1.7rem;
-`
-const ProfileFilterPrompt = styled.span`
-  margin: 0;
-  font-weight: normal;
-  font-size: 0.875rem;
-  padding: 0 1.2rem;
-  line-height: 1.3rem;
-  text-align: center;
-  color: ${(props) => props.theme.colors.secondary};
-`
-
-const FeatureGridList = styled.ul`
-  margin: 0;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 100%;
-  column-gap: 0.2rem;
-  row-gap: 0.5rem;
-`
-
-const IconContainer = styled.div`
-  width: 1.3rem;
-  height: 1.3rem;
-`
-
-const StyledIcon = styled(Icon)<{ selected: boolean }>`
-  border-radius: 100%;
-  width: 1rem;
-  height: 1rem;
-  margin: 0 0.25rem;
-  fill: ${(props) =>
-    props.selected === true ? props.theme.colors.primary : "rgba(0, 0, 0, 0)"};
-  background: ${(props) =>
-    props.selected === true
-      ? props.theme.colors.primary
-      : props.theme.colors.priceCardBackground};
-  outline: 1.5px solid
-    ${(props) =>
-      props.selected === true
-        ? props.theme.colors.primary
-        : props.theme.colors.text};
-  outline-offset: 3px;
-`
 
 // Types
 interface Personas {
@@ -216,96 +76,98 @@ interface Personas {
   }
 }
 
-const filterLabels = {
-  hardware: {
-    label: "Hardware",
-    icon: <Hardware />,
-  },
-  open_source: {
-    label: "Open source",
-    icon: <OpenSource />,
-  },
-  non_custodial: {
-    label: "Non-custodial",
-    icon: <NonCustodial />,
-  },
-  hardware_support: {
-    label: "Hardware support",
-    icon: <HardwareSupport />,
-  },
-  walletconnect: {
-    label: "WalletConnect",
-    icon: <WalletConnect />,
-  },
-  rpc_importing: {
-    label: "RPC importing",
-    icon: <RPCImporting />,
-  },
-  nft_support: {
-    label: "NFT support",
-    icon: <NFTSupport />,
-  },
-  connect_to_dapps: {
-    label: "Connect to apps",
-    icon: <ConnectDapps />,
-  },
-  staking: {
-    label: "Staking",
-    icon: <Staking />,
-  },
-  swaps: {
-    label: "Swaps",
-    icon: <Swap />,
-  },
-  layer_2: {
-    label: "Layer 2",
-    icon: <Layer2 />,
-  },
-  gas_fee_customization: {
-    label: "Gas fee customization",
-    icon: <GasFeeCustomization />,
-  },
-  ens_support: {
-    label: "ENS support",
-    icon: <ENSSupport />,
-  },
-  buy_crypto: {
-    label: "Buy crypto",
-    icon: <BuyCrypto />,
-  },
-  withdraw_crypto: {
-    label: "Sell for fiat",
-    icon: <WithdrawCrypto />,
-  },
-  multisig: {
-    label: "Multisig",
-    icon: <Multisig />,
-  },
-  social_recovery: {
-    label: "Social recovery",
-    icon: <SocialRecover />,
-  },
-  erc_20_support: {
-    label: "Token support",
-    icon: <ERC20Support />,
-  },
-  eip_1559_support: {
-    label: "Fee optimization",
-    icon: <Eip1559 />,
-  },
-}
-
 const WalletPersonasSidebar = ({
   resetFilters,
   setFilters,
   selectedPersona,
   setSelectedPersona,
 }) => {
-  const theme = useTheme()
+  const { t } = useTranslation()
+  const { colorMode } = useColorMode()
+  const isDark = colorMode === "dark"
+
+  const filterLabels = {
+    hardware: {
+      label: t("page-find-wallet-hardware"),
+      icon: <HardwareIcon />,
+    },
+    open_source: {
+      label: t("page-find-wallet-open-source"),
+      icon: <OpenSourceWalletIcon />,
+    },
+    non_custodial: {
+      label: t("page-find-wallet-non-custodial"),
+      icon: <NonCustodialIcon />,
+    },
+    hardware_support: {
+      label: t("page-find-wallet-hardware-wallet-support"),
+      icon: <HardwareSupportIcon />,
+    },
+    walletconnect: {
+      label: t("page-find-wallet-walletconnect"),
+      icon: <WalletConnectIcon />,
+    },
+    rpc_importing: {
+      label: t("page-find-wallet-rpc-importing"),
+      icon: <RPCImportingIcon />,
+    },
+    nft_support: {
+      label: t("page-find-wallet-nft-support"),
+      icon: <NFTSupportIcon />,
+    },
+    connect_to_dapps: {
+      label: t("page-find-wallet-connect-to-dapps"),
+      icon: <ConnectDappsIcon />,
+    },
+    staking: {
+      label: t("page-find-wallet-staking"),
+      icon: <StakingIcon />,
+    },
+    swaps: {
+      label: t("page-find-wallet-swaps"),
+      icon: <SwapIcon />,
+    },
+    layer_2: {
+      label: t("page-find-wallet-layer-2"),
+      icon: <Layer2Icon />,
+    },
+    gas_fee_customization: {
+      label: t("page-find-wallet-gas-fee-customization"),
+      icon: <GasFeeCustomizationIcon />,
+    },
+    ens_support: {
+      label: t("page-find-wallet-ens-support"),
+      icon: <ENSSupportIcon />,
+    },
+    buy_crypto: {
+      label: t("page-find-wallet-buy-crypto"),
+      icon: <BuyCryptoIcon />,
+    },
+    withdraw_crypto: {
+      label: t("page-find-wallet-sell-for-fiat"),
+      icon: <WithdrawCryptoIcon />,
+    },
+    multisig: {
+      label: t("page-find-wallet-multisig"),
+      icon: <MultisigIcon />,
+    },
+    social_recovery: {
+      label: t("page-find-wallet-social-recovery"),
+      icon: <SocialRecoverIcon />,
+    },
+    erc_20_support: {
+      label: t("page-find-wallet-token-support"),
+      icon: <ERC20SupportIcon />,
+    },
+    eip_1559_support: {
+      label: t("page-find-wallet-fee-optimization"),
+      icon: <EIP1559Icon />,
+    },
+  }
   const personas: Personas[] = [
     {
-      title: "New to crypto",
-      description: "You are a first time user looking for your first wallet",
+      title: t("page-find-wallet-new-to-crypto-title"),
+      description: t("page-find-wallet-new-to-crypto-desc"),
       featureHighlight: [
         filterLabels.connect_to_dapps,
         filterLabels.layer_2,
@@ -344,9 +206,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: "NFTs",
-      description:
-        "You are someone that is all about NFTs and want a wallet with NFT support",
+      title: t("page-find-wallet-nfts-title"),
+      description: t("page-find-wallet-nfts-desc"),
       featureHighlight: [
         filterLabels.nft_support,
         filterLabels.layer_2,
@@ -382,9 +243,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: "Hodler",
-      description:
-        "You are someone that has tokens and don’t want to touch them",
+      title: t("page-find-wallet-hodler-title"),
+      description: t("page-find-wallet-hodler-desc"),
       featureHighlight: [filterLabels.hardware, filterLabels.non_custodial],
       presetFilters: {
         android: false,
@@ -416,9 +276,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: "Finance",
-      description:
-        "You are someone that uses DeFi and want a wallet that allows you to connect to DeFi applications",
+      title: t("page-find-wallet-finance-title"),
+      description: t("page-find-wallet-finance-desc"),
       featureHighlight: [
         filterLabels.hardware_support,
         filterLabels.connect_to_dapps,
@@ -456,9 +315,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: "Developer",
-      description:
-        "You are developer and need a wallet to help develop and test dapps",
+      title: t("page-find-wallet-developer-title"),
+      description: t("page-find-wallet-developer-desc"),
       featureHighlight: [
         filterLabels.open_source,
         filterLabels.walletconnect,
@@ -499,16 +357,48 @@ const WalletPersonasSidebar = ({
   ]
 
   return (
-    <Container>
-      <ProfileFilterPrompt>
-        Choose the profile that matches your type of user and filter the wallet
-        list
-      </ProfileFilterPrompt>
+    <Flex direction="column" gap={4} p={{ base: 4, sm: 0 }}>
+      <Box
+        as="span"
+        m={0}
+        fontWeight="normal"
+        fontSize="sm"
+        p="0 1.2rem"
+        lineHeight="1.3rem"
+        textAlign="center"
+        color="secondary"
+      >
+        <Translation id="page-find-wallet-persona-desc" />
+      </Box>
       {personas.map((persona, idx) => {
         return (
-          <Persona
-            isDark={theme.isDark}
-            selected={selectedPersona === idx}
+          <Flex
+            key={persona.title}
+            direction="column"
+            alignItems="flex-start"
+            padding={6}
+            background={
+              selectedPersona === idx
+                ? isDark
+                  ? "primary900"
+                  : "primary200"
+                : isDark
+                ? "black400"
+                : "primary100"
+            }
+            borderRadius="base"
+            cursor="pointer"
+            transition="0.5s all"
+            _hover={{
+              background:
+                selectedPersona === idx
+                  ? isDark
+                    ? "primary900"
+                    : "primary200"
+                  : isDark
+                  ? "black500"
+                  : "primary200",
+            }}
             onClick={() => {
               if (idx === selectedPersona) {
                 resetFilters()
@@ -528,34 +418,99 @@ const WalletPersonasSidebar = ({
               }
             }}
           >
-            <Title>
-              <IconContainer
+            <Flex alignItems="center" gap={2} mb="0.6rem" pt={2} pb={0} px={2}>
+              <Box
+                boxSize="1.3rem"
                 role="checkbox"
                 aria-label={`${persona.title} filter`}
               >
-                <StyledIcon
-                  name="circle"
-                  selected={selectedPersona === idx}
-                  size="2rem"
+                <Icon
+                  as={MdCircle}
+                  borderRadius="full"
+                  boxSize={4}
+                  my={0}
+                  mx={1}
+                  fill={
+                    selectedPersona === idx ? "primary" : "rgba(0, 0, 0, 0)"
+                  }
+                  background={
+                    selectedPersona === idx ? "primary" : "priceCardBackground"
+                  }
+                  outline="1.5px solid"
+                  outlineColor={selectedPersona === idx ? "primary" : "text"}
+                  outlineOffset="3px"
+                  fontSize={8}
                 />
-              </IconContainer>
-              <H3>{persona.title}</H3>
-            </Title>
-            <PersonaDescription selected={selectedPersona === idx}>
+              </Box>
+              <Heading
+                as="h3"
+                ml={2}
+                my={0}
+                fontSize="1.3rem"
+                py={0}
+                pr={1}
+                pl={0}
+                lineHeight="1.7rem"
+                color="text"
+              >
+                {persona.title}
+              </Heading>
+            </Flex>
+            <Box
+              as="span"
+              m="0.5rem 0 0.8rem 0"
+              p="0.7rem 0.6rem 0"
+              color={selectedPersona === idx ? "text" : "text200"}
+              fontSize="0.9rem"
+              fontWeight="normal"
+              transition="0.5s all"
+              lineHeight={1.3}
+              borderTop="1px solid"
+              borderTopColor="lightBorder"
+            >
               {persona.description}
-            </PersonaDescription>
-            <FeatureGridList aria-label={`${persona.title} filters`}>
+            </Box>
+            <UnorderedList
+              m={0}
+              display="grid"
+              gridTemplateColumns="50% 50%"
+              width="full"
+              columnGap="0.2rem"
+              rowGap={2}
+              aria-label={`${persona.title} filters`}
+            >
               {persona.featureHighlight.map((feature) => (
-                <FeatureListItem selected={selectedPersona === idx}>
+                <ListItem
+                  display="flex"
+                  gap="0.2rem"
+                  fontSize="0.85rem"
+                  lineHeight="0.95rem"
+                  margin="0.1rem"
+                  alignItems="center"
+                  sx={{
+                    p: {
+                      mb: 0,
+                      color: selectedPersona === idx ? "primary" : "text",
+                    },
+                    svg: {
+                      width: 7,
+                      height: 7,
+                      path: {
+                        fill: "text",
+                        stroke: "text",
+                      },
+                    },
+                  }}
+                >
                   <span aria-hidden="true">{feature.icon}</span>
                   <span>{feature.label}</span>
-                </FeatureListItem>
+                </ListItem>
               ))}
-            </FeatureGridList>
-          </Persona>
+            </UnorderedList>
+          </Flex>
         )
       })}
-    </Container>
+    </Flex>
   )
 }
 

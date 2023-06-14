@@ -35,7 +35,7 @@
   "page-learning-tools-remix-logo-alt": "Remix-logo",
   "page-learning-tools-sandbox": "Code-sandboxes",
   "page-learning-tools-sandbox-desc": "Deze sandboxes geven u de ruimte om te experimenteren met het schrijven van slimme contracten en het begrijpen van Ethereum.",
-  "page-learning-tools-speed-run-ethereum-description": "SpeedRunEthereum biedt een reeks uitdagingen om uw Solidity-kennis te testen met Scaffold-ETH",
+  "page-learning-tools-speed-run-ethereum-description": "Speed Run Ethereum biedt een reeks uitdagingen om uw Solidity-kennis te testen met Scaffold-ETH",
   "page-learning-tools-speed-run-ethereum-logo-alt": "Logo van Speed Run Ethereum",
   "page-learning-tools-studio-description": "Een webgebaseerde IDE waar u tutorials kunt volgen om slimme contracten te maken en te testen, en er een frontend voor te bouwen.",
   "page-learning-tools-vyperfun-description": "Leer Vyper door uw eigen Pokémon-game te maken.",
@@ -45,5 +45,6 @@
   "page-learning-tools-pointer-description": "Leer web3-ontwikkelingsvaardigheden met leuke interactieve tutorials. Verdien onderweg cryptobeloningen",
   "page-learning-tools-pointer-logo-alt": "Pointer-logo",
   "page-learning-tools-platzi-description": "Leer hoe u dapps kunt bouwen op Web3 en beheers alle vaardigheden die nodig zijn om blockchain-ontwikkelaar te zijn.",
-  "page-learning-tools-platzi-logo-alt": "Platzi-logo"
+  "page-learning-tools-platzi-logo-alt": "Platzi-logo",
+  "alt-eth-blocks": "Illustratie van blokken die worden georganiseerd als een ETH-symbool"
 }

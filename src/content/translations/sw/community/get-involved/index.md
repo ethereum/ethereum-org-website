@@ -37,7 +37,7 @@ Kama wewe sio msanidi programu, inaweza kua vigumu kujua ni wapi unapaswa kuanzi
 ### Andika maudhui kuhusu Ethereum {#write-content}
 
 - Ethereum inahitaji waandishi wazuri wanaoweza kuelezea thamani yake kwa kutumia lugha rahisi
-- Hauko tayari kuchapisha makala yako pekee? Zingattia kuchangia kwenye maudhui yaliopo kwenye vyanzo vya jumuiya kama [EthHub](https://docs.ethhub.io/), ama pendekeza maudhui mapya kwa ajili ya ethereum.org!
+- Hauko tayari kuchapisha makala yako pekee? Zingattia kuchangia kwenye maudhui yaliopo kwenye vyanzo vya jumuiya kama, ama pendekeza maudhui mapya kwa ajili ya ethereum.org!
 
 ### Toa msaada wa kuandika muhtasari kwenye mikutano ya jumuiya {#take-notes}
 
@@ -69,7 +69,7 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 
 ## Wataalamu wa Kifedha & Akaunti <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum ni mji wa ikolojia ya "feddha zilizogatuliwa" - mtandao wa itifaki na programu zinatoa huduma mbadala za kifedha. Kama wewe ni unataaluma ya uchumi, tazama app za DeFi kwenye [DeFi Pulse](https://defipulse.com/) ama [DeFiprime](https://defiprime.com)
+- Ethereum ni mji wa ikolojia ya "feddha zilizogatuliwa" - mtandao wa itifaki na programu zinatoa huduma mbadala za kifedha. Kama wewe ni unataaluma ya uchumi, tazama app za DeFi kwenye [DeFi Llama](https://defillama.com/) ama [DeFiprime](https://defiprime.com)
 - Mhasibu? Mali za Ethereum - ETH, tokeni, DeFi, nk - tambulisha masuala mengi ya riwaya. Unaweza kuanza kwa kutazama baadhi ya miradi inayolenga kusaidia watumiaji wa sarafu ya kripto na kupanga vitabu vyao & changamoto za uhasibu, kama [Rotki](https://rotki.com/)
 
 ## Wasimamizi wa bidhaa <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

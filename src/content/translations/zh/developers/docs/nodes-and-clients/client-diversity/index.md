@@ -43,11 +43,11 @@ sidebarDepth: 2
 
 ![显示客户端多样性的饼状图](./client-diversity.png) _图表数据来自 [ethernodes.org](https://ethernodes.org) 和 [ clientdiversity.org](https://clientdiversity.org/)_
 
-上面的两个饼图显示了执行层和共识层客户端多样性现状的快照（在 2022 年 1 月撰写本文时）。 在执行层，[Geth](https://geth.ethereum.org/) 占据绝对主导地位，[Open Ethereum ](https://openethereum.github.io/) 以极大的差距位居第二，[Erigon](https://github.com/ledgerwatch/erigon) 和 [Nethermind](https://nethermind.io/) 分别占据第三和第四，其他客户端加起来占网络的比例不到 1%。 共识层最常用的客户端 [Prysm](https://prysmaticlabs.com/#projects) 不像 Geth 那样占据绝对主导地位，但仍占有网络的 60% 以上。 [Lighthouse](https://lighthouse.sigmaprime.io/) 和 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) 分别占据约 20% 和 约 14%，其他客户端很少使用。
+上面的两个饼图显示了执行层和共识层客户端多样性现状的快照（在 2022 年 1 月撰写本文时）。 在执行层，[Geth](https://geth.ethereum.org/) 占据绝对主导地位，[Open Ethereum ](https://openethereum.github.io/) 以极大的差距位居第二，[Erigon](https://github.com/ledgerwatch/erigon) 和 [Nethermind](https://nethermind.io/) 分别占据第三和第四，其他客户端加起来占网络的比例不到 1%。 共识层最常用的客户端 [Prysm](https://prysmaticlabs.com/#projects) 不像 Geth 那样占据绝对主导地位，但仍占有网络的 60% 以上。 [Lighthouse](https://lighthouse.sigmaprime.io/) 和 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) 分别占据约 20% 和约 14%，其他客户端很少使用。
 
 执行层数据于 2022 年 1 月 23 日从 [Ethernodes](https://ethernodes.org) 获得。 共识客户端的数据来自 [Michael Sproul](https://github.com/sigp/blockprint)。 共识客户端数据更难获取，因为信标链客户端并不总是具有明确痕迹来加以识别。 这些数据是使用分类算法生成的，该算法有时会混淆一些非主流客户端（点击[此处](https://twitter.com/sproulM_/status/1440512518242197516)了解更多详细信息）。 在上图中，这些含糊的分类使用了“/”符号进行处理（例如 Nimbus/Teku）。 尽管如此，很明显大部分网络都在运行 Prysm。 这些数据是一组固定区块的快照（在本例中为时隙 2048001 与 2164916 之间的信标区块），Prysm 的主导地位曾经一度更高，超过 68%。 尽管只是快照，但上图中的数值让您对客户端多样性现状有了一个清晰的全局认识。
 
-共识层客户端多样性的最新数据现在可在 https://clientdiversity.org/ 查阅。
+现在，可以在 [clientdiversity.org](https://clientdiversity.org/) 查阅最新的共识层客户端多样性数据。
 
 ## 执行层 {#execution-layer}
 
@@ -64,8 +64,6 @@ sidebarDepth: 2
 [Nethermind](https://downloads.nethermind.io/)
 
 [Erigon](https://github.com/ledgerwatch/erigon)
-
-[Akula](https://akula.app)
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
@@ -89,11 +87,10 @@ sidebarDepth: 2
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-- [pools.invis.cloud](https://pools.invis.cloud/)
-- [slashed.info](https://www.slashed.info/)
 
 **执行层：**
 
+- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## 延伸阅读 {#further-reading}

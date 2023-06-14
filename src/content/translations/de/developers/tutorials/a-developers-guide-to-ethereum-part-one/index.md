@@ -6,9 +6,8 @@ lang: de
 tags:
   - "Erste Schritte"
   - "Python"
-  - "Blockchain"
   - "web3.py"
-skill: Einsteiger
+skill: beginner
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

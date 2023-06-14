@@ -7,10 +7,10 @@ lang: zh
 以太坊网络最初采用一种称为**[工作量证明 (PoW)](/developers/docs/consensus-mechanisms/pow)** 的共识机制。 这种机制允许以太坊网络的节点就以太坊区块链上记录的所有信息的状态达成共识，并防止某些产生经济影响的攻击。 然而，以太坊在 2022 年终结了工作量证明并开始采用[权益证明](/developers/docs/consensus-mechanisms/pos)。
 
 <InfoBanner emoji=":wave:">
-    工作量证明现已弃用。 以太坊不再使用工作量证明作为其部分共识机制。 它改用权益证明。 阅读有关<a href="/developers/docs/consensus-mechanisms/pos/">权益证明</a>和<a href="/staking/">质押</a>的更多信息。    
+    工作量证明现已弃用。 以太坊不再使用工作量证明作为其部分共识机制。 它改用权益证明。 阅读有关<a href="/developers/docs/consensus-mechanisms/pos/">权益证明</a>和<a href="/staking/">质押</a>的更多信息。
 </InfoBanner>
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 为了更好地理解此页面，建议提前阅读[交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)和[共识机制](/developers/docs/consensus-mechanisms/)。
 
@@ -58,7 +58,7 @@ lang: zh
 
 自[君士坦丁堡升级](/history/#constantinople)以来，成功创建区块的矿工将获得两个新铸造的以太币及部分交易费作为奖励。 叔块也会获得 1.75 个以太币的补偿。 叔块是由一个矿工创建的有效区块，几乎与此同时另一个矿工创建了规范区块。要确定规范区块，最终取决于哪条链构建于第一个区块之上。 叔块通常是由于网络延迟而出现。
 
-## 终局性 {#finality}
+## 最终确定性 {#finality}
 
 如果交易属于一个无法更改的区块时，它就在以太坊上具有“最终确定性”。
 
@@ -89,7 +89,7 @@ lang: zh
 
 [有关权益证明的更多信息](/developers/docs/consensus-mechanisms/pos/)
 
-## 更偏向视频学习者？ {#visual-learner}
+## 更愿意通过视频学习？ {#visual-learner}
 
 <YouTube id="3EUAcxhuoU4" />
 

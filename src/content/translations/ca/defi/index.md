@@ -332,13 +332,11 @@ Les DeFi són un moviment de codi obert. Els protocols i les aplicacions DeFi s�
 
 ### Dades sobre DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
 ### Articles sobre DeFi {#defi-articles}
 
-- [Què són les finances descentralitzades?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, actualitzat regularment_
 - [Una guia per a principiants de les DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de gener de 2020_
 
 ### Vídeos {#videos}

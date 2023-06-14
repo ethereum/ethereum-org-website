@@ -1,15 +1,9 @@
 // Libraries
 import React from "react"
-import styled from "@emotion/styled"
 
 // Components
 import CardList from "../CardList"
-
-const StyledCardList = styled(CardList)`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`
+import { Stack } from "@chakra-ui/react"
 
 export interface IProps {}
 
@@ -32,7 +26,7 @@ const StakingGuides: React.FC<IProps> = () => {
     },
   ]
 
-  return <StyledCardList content={guides} />
+  return <Stack as={CardList} direction="column" gap={4} content={guides} />
 }
 
 export default StakingGuides

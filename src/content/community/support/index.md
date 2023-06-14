@@ -38,6 +38,7 @@ Looking for an Ethereum wallet? [Explore our full list of Ethereum wallets](/wal
 
 Building can be hard. Here are some development focused spaces with experienced Ethereum developers that are happy to help.
 
+- [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
@@ -57,6 +58,7 @@ Here are some popular examples:
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## Running a node {#node-support}
 

@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL; DR** : Flashez votre Raspberry Pi 4, branchez-y un câble Ethernet, connectez le disque SSD et mettez l'appareil en marche pour transformer votre Raspberry Pi 4 en un nœud Ethereum complet exécutant la couche d'exécution ou la couche de consensus (chaîne phare / validateur)
 
-[En savoir plus sur les mises à jour d'Ethereum](/upgrades/)
+[En savoir plus sur les mises à jour d'Ethereum](/roadmap/)
 
 Pour commencer, un peu de contexte. Comme vous le savez, on peut rencontrer des problèmes de mémoire [[1]](/developers/tutorials/run-node-raspberry-pi/#references) puisque l'image du Raspberry Pi 4 dans le cadre du système d'exploitation Raspbian est toujours en 32 bits [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (en tout cas l'espace utilisateur). Si on préfère s'en tenir au système d'exploitation officiel, nous sommes arrivés à la conclusion que, pour résoudre ces problèmes, il faut migrer vers un système d'exploitation natif 64 bits
 
-De plus, [les clients de consensus](/upgrades/get-involved/#clients) ne prennent pas en charge les binaires en 32 bits, donc l'utilisation de Raspbian exclurait le Raspberry Pi 4 de l'exécution d'un noeud de couche de consensus (et la possibilité de miser).
+De plus, les clients de consensus ne prennent pas en charge les binaires en 32 bits, donc l'utilisation de Raspbian exclurait le Raspberry Pi 4 de l'exécution d'un noeud de couche de consensus (et la possibilité de miser).
 
 Donc, après plusieurs tests, nous sortons 2 images différentes basées sur Ubuntu 20.4 64 bits [[3]](/developers/tutorials/run-node-raspberry-pi/#references) : une édition pour la couche d'exécution et l'autre pour la couche de consensus.
 
@@ -134,7 +134,7 @@ Le système d'exploitation Ubuntu démarrera en moins d'une minute mais **vous d
 En fonction de l'image, vous allez exécuter :
 
 - Client d'exécution : Geth comme client par défaut de synchronisation de la blockchain
-- Client de consensus : Prysm comme client par défaut de synchronisation de la chaîne phare (Prater testnet)
+- Client de consensus : Prysm comme client par défaut de synchronisation de la chaîne phare (Goerli testnet)
 
 ### 5. S'identifier {#5-log-in}
 
@@ -163,7 +163,7 @@ sudo tail -f /var/log/syslog
 
 Vous devez maintenant attendre que la blockchain soit synchronisée. Dans le cas de la couche d'exécution, cela pourra prendre quelques jours en fonction de plusieurs facteurs, mais il faudra bien compter 5 à 7 jours.
 
-Si vous utilisez la couche de consensus Prater testnet, vous pouvez attendre 1 à 2 jours avant la synchronisation de la chaîne phare. N'oubliez pas que vous devrez configurer le validateur plus tard afin de démarrer le processus de mise en jeu. [Comment exécuter le validateur de couche de consensus](/developers/tutorials/run-node-raspberry-pi/#validator)
+Si vous utilisez la couche de consensus Goerli testnet, vous pouvez attendre 1 à 2 jours avant la synchronisation de la chaîne phare. N'oubliez pas que vous devrez configurer le validateur plus tard afin de démarrer le processus de mise en jeu. [Comment exécuter le validateur de couche de consensus](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Tableaux de bord de suivi {#monitoring-dashboards}
 
@@ -235,7 +235,7 @@ Tous deux nécessitent de nouveaux tests alors n'hésitez pas à vous exercer av
 
 ## Comment exécuter le validateur de consensus (mise en jeu) {#validator}
 
-Une fois que la chaîne phare Prater testnet est synchronisée, vous pouvez exécuter un validateur sur le même appareil. Vous devrez suivre [ces étapes de participation](https://prylabs.net/participate).
+Une fois que la chaîne phare Goerli testnet est synchronisée, vous pouvez exécuter un validateur sur le même appareil. Vous devrez suivre [ces étapes de participation](https://prylabs.net/participate).
 
 La première fois, vous devrez créer manuellement un compte en exécutant le « validateur » binaire et configurer un mot de passe. Une fois cette étape terminée, vous pouvez ajouter le mot de passe à `/etc/ethereum/prysm-validator.conf` et démarrer le validateur en tant que service système.
 

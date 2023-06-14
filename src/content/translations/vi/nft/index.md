@@ -6,7 +6,7 @@ template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
-alt: Một biểu tượng Eth được hiển thị ở dạng ảnh ba chiều.
+alt: Biểu trưng của Eth được hiển thị qua ảnh ba chiều.
 summaryPoint1: Một cách để đại diện cho bất kỳ thứ gì độc nhất dưới dạng tài sản dựa trên Ethereum.
 summaryPoint2: NFT đang mang lại nhiều quyền lực hơn cho người tạo nội dung hơn bao giờ hết.
 summaryPoint3: Được hỗ trợ bởi các hợp đồng thông minh trên chuỗi khối Ethereum.
@@ -14,11 +14,11 @@ summaryPoint3: Được hỗ trợ bởi các hợp đồng thông minh trên ch
 
 NFT đang tiến vào thế giới của nghệ thuật và đồ sưu tập số như một cơn bão. Các nhà sáng tạo nghệ thuật số đang chứng kiến cuộc sống của họ thay đổi nhờ vào những đợt bán hàng lớn cho một nhóm đối tượng khách hàng mới liên quan đến tiền mã hóa. Và những người nổi tiếng đang bắt đầu tham gia vào thị trường này vì họ nhận thấy một cơ hội mới để kết nối với người hâm mộ. Nhưng nghệ thuật số chỉ là một ứng dụng của NFT. Thực ra, chúng có thể dùng để đại diện cho quyền sở hữu đối với bất kì tài sản riêng biệt nào, ví dụ như chứng từ cho một món gì đó trên thế giới số hay thế giới vật lý.
 
-Nếu Andy Warhol được sinh ra vào cuối những năm 90, ông nhiều khả năng sẽ tạo ra tác phẩm Campbell's Soup dưới dạng NFT. Việc Kanye cho ra mắt một dòng giày Yeezys mới trên Ethereum chỉ là vấn đề thời gian. Và một ngày kia, quyền sở hữu chiếc xe hơi của bạn sẽ được chứng minh bằng một NFT.
+Nếu Andy Warhol được sinh ra vào cuối những năm 90, ông nhiều khả năng sẽ tạo ra tác phẩm Campbell's Soup dưới dạng NFT. Việc Nike chào bán giày Jordans trên Ethereum chỉ là vấn đề thời gian. Và một ngày kia, quyền sở hữu chiếc xe hơi của bạn sẽ được chứng minh bằng một NFT.
 
 ## NFT là gì? {#what-are-nfts}
 
-NFT là những token mà chúng ta có thể dùng để đại diện cho quyền sở hữu đối với những món đồ riêng biệt. Chúng cho phép chúng ta token hóa những thứ như nghệ thuật, đồ sưu tầm, thậm chí bất động sản. Chúng chỉ có thể có một chủ sở hữu chính thức tại một thời điểm và chúng được bảo vệ bởi chuỗi khối Ethereum – không một ai có thể chỉnh sửa chứng từ sở hữu hay sao chép/dán để cho ra đời một NFT mới.
+NFT là những token mà chúng ta có thể dùng để đại diện cho quyền sở hữu đối với những món đồ riêng biệt. Chúng cho phép chúng ta token hóa những thứ như nghệ thuật, đồ sưu tầm, thậm chí bất động sản. Quyền sở hữu của tài sản được bảo mật bởi chuỗi khối Ethereum – không một ai có thể chỉnh sửa chứng từ sở hữu hay sao chép/dán để cho ra đời một NFT mới.
 
 NFT là từ chỉ token không thể thay thế. Không phân tách là một khái niệm kinh tế học mà bạn có thể dùng để mô tả những thứ như nội thất của bạn, một tệp nhạc hay một chiếc máy tính. Những thứ này không thể hoán đổi hay bị nhầm lẫn với những thứ khác vì chúng có những tính chất đặc trưng.
 
@@ -94,7 +94,7 @@ NFT khác với các tokens ERC-20 như là DAI hay LINK ở chỗ mỗi token c
   - Các chữ ký
 - Còn nhiều thật nhiều lựa chọn nữa để bạn có thể khám phá và sáng tạo!
 
-Một NFT chỉ có thể có một chủ sở hữu tại một thời điểm nhất định. Quyền sở hữu được quản lý thông qua số nhận dạng riêng và siêu dữ liệu mà không một token nào khác có thể mô phỏng theo. NFT được phát hành thông qua các hợp đồng thông minh dùng để trao quyền sở hữu và quản lý khả năng trao tay của NFT. Khi một ai đó tạo ra hay phát hành một NFT, họ thực thi đoạn mã chứa trong các hợp đồng thông minh được tuân theo các tiêu chuẩn khác nhau, ví dụ như ERC-721. Thông tin này được thêm vào chuỗi khối nơi NFT được quản lý. Quy trình phát hành, nhìn một cách vĩ mô, đi theo những bước sau đây:
+Quyền sở hữu NFT được quản lý thông qua ID nhận dạng riêng và siêu dữ liệu mà không một token nào khác có thể mô phỏng theo. NFT được phát hành thông qua các hợp đồng thông minh dùng để trao quyền sở hữu và quản lý quyền chuyển nhượng của NFT. Khi một ai đó tạo ra hay phát hành một NFT, họ thực thi đoạn mã chứa trong các hợp đồng thông minh được tuân theo các tiêu chuẩn khác nhau, điển hình như [ERC-721](/developers/docs/standards/tokens/erc-721/). Thông tin này được thêm vào chuỗi khối nơi NFT được quản lý. Quy trình phát hành, nhìn tổng thể, đi theo những bước sau đây:
 
 - Tạo một khối mới
 - Xác minh thông tin
@@ -153,6 +153,7 @@ Việc này là hoàn toàn tự động nên các tác giả có thể nhận p
 - [Tên miền](#nft-domains)
 - [Các sản phẩm vật lý](#nft-physical-items)
 - [Những khoản đầu tư và thế chấp](#nfts-and-defi)
+- [Phương thức kiểm soát quyền truy cập Token (Tokengating)](#tokengating)
 
 <Divider />
 
@@ -273,6 +274,24 @@ Công nghệ NFT có thể giúp chống lại thực trạng các công ty cung
 
 <Divider />
 
+### Phương thức kiểm soát quyền truy cập Token (Tokengating) {#tokengating}
+
+Tokengating là một phương thức hạn chế quyền truy cập vào một số dạng thức nhất định và sử dụng NFT như một phương thức để mở khóa quyền truy cập. Những dạng thức đó có thể khác nhau rất lớn xét trên cơ sở nền tảng nhưng các ví dụ phổ biến có thể kể đến là nội dung được kiểm soát, máy chủ trò chuyện riêng tư và trong thế giới thương mại điện tử thì là các sản phẩm độc quyền.
+
+Một nền tảng có tokengating thường sẽ yêu cầu bạn kết nối ví của mình để chứng minh rằng bạn sở hữu NFT cần thiết. Nếu bạn có NFT bạn cần, bạn sẽ có quyền truy cập. Nếu không, dạng thức đó sẽ vẫn bị kiểm soát. NFT là một phương thức tuyệt vời để thực hiện việc kiểm soát vì tính độc nhất của NFT – bạn không thể giả mạo quyền sở hữu để có được dạng thức.
+
+Kể từ khi NFT có trên Ethereum, có thể sử dụng NFT để mở khóa các tokengate của Ethereum trên bất kỳ nền tảng nào mà NFT được triển khai. Một NFT duy nhất mà bạn sở hữu có thể mở khóa nội dung được kiểm soát, máy chủ trò chuyện riêng tư và các sản phẩm độc quyền trên các trang web và ứng dụng hoàn toàn khác nhau.
+
+Nếu phát hành và phân phối các NFT là hoạt động tạo ra cộng đồng hay số hoá cộng đồng, thì tokengate là để nuôi dưỡng cộng đồng ấy. Các NFT được sử dụng nhiều hơn như một công cụ để trở thành hội viên hoặc hội viên trung thành – và là một cách tuyệt vời để phân phối phần thưởng đi kèm với NFT đó một cách đáng tin cậy.
+
+#### Ví dụ
+
+- [Collab.land](https://collab.land/) triển khai tokengate trên các máy chủ trò chuyện của Discord hoặc các nhóm trên Telegram
+- [Mở khoá giao thức](https://unlock-protocol.com/) là một giao thức của tokengate
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) có danh sách ứng dụng ngày càng tăng cho phép người bán token truy cập vào các sản phẩm và chiết khấu
+
+<Divider />
+
 ## Ethereum và NFT {#ethereum-and-nfts}
 
 Ethereum giúp cho NFT trở nên khả thi vì một số lý do:
@@ -280,95 +299,49 @@ Ethereum giúp cho NFT trở nên khả thi vì một số lý do:
 - Lịch sử giao dịch và siêu dữ liệu của token có thể được xác minh một cách công khai – việc chứng minh lịch sử quyền sở hữu trở nên đơn giản.
 - Một khi một giao dịch được xác nhận, việc thao túng dữ liệu để "ăn cắp" quyền sở hữu gần như là không thể.
 - Mua bán NFT có thể diễn ra ngang hàng không cần đến những nền tảng nơi có thể lấy đi phần trăm chiết khấu lớn từ giao dịch.
-- Tất cả các sản phẩm trên Ethereum cùng chia sẻ một "backend" như nhau. Nói theo cách khác, tất cả sản phẩm số và phần mềm trên Ethereum có thể dễ dàng hiểu nhau – điều này khiến cho NFT trở nên dễ chuyển từ phần mềm này sang phần mềm khác. Bạn có thể mua một NFT trên một nền tảng và bán nó trên một nền tảng khác một cách dễ dàng. Với vai trò tác giả, bạn có thể niêm yết các NFT của mình trên nhiều phần mềm cùng lúc – mọi phần mềm sẽ có thông tin sở hữu được cập nhật mới nhất.
+- Tất cả các sản phẩm trên Ethereum cùng chia sẻ một "hệ nền" như nhau. Nói theo cách khác, tất cả sản phẩm số và phần mềm trên Ethereum có thể dễ dàng hiểu nhau – điều này khiến cho việc chuyển NFT từ phần mềm này sang phần mềm khác trở nên dễ dàng. Bạn có thể mua một NFT trên một nền tảng và bán NFT đó trên một nền tảng khác một cách dễ dàng. Với vai trò tác giả, bạn có thể niêm yết các NFT của mình trên nhiều phần mềm cùng lúc – mọi phần mềm sẽ có thông tin sở hữu được cập nhật mới nhất.
 - Ethereum không bao giờ ngưng nghỉ, đồng nghĩa với việc những token của bạn sẽ luôn luôn có sẵn để bán.
 
 ## Tác động môi trường của NFT {#environmental-impact-nfts}
 
-NFT đang trở nên nổi tiếng hơn, đồng nghĩa với việc chúng cũng đang được xem xét kĩ lưỡng hơn – đặc biệt là đối với lượng khí thải carbon của chúng.
+Tạo ra và chuyển giao các NFT chỉ là các giao dịch Ethereum - tạo, mua, hoán đổi hay tương tác với các NFT không trực tiếp làm tiêu hao năng lượng. Kể từ [The Merge](/roadmap/merge), Ethereum là một blockchaim dùng ít năng lượng, nghĩa là tác động môi trường khi sử dụng NFT là không đáng kể.
 
-Để làm rõ một vài điểm:
-
-- NFT không trực tiếp làm gia tăng lượng khí thải carbon của Ethereum.
-- Cách mà Ethereum bảo đảm an toàn cho tiền và tài sản của bạn hiện đang rất hao tốn điện năng nhưng việc này sắp sửa được cải thiện.
-- Một khi đã được cải thiện, lượng khí thải của Ethereum sẽ được giảm thiểu 99,95%, khiến cho chuỗi khối trở nên hiệu quả về năng lượng hơn nhiều ngành công nghiệp hiện nay.
-
-Để giải thích kĩ hơn, chúng tôi sẽ phải đi sâu vào khía cạnh kĩ thuật hơn nên bạn hãy cố gắng đi theo chúng tôi nhé...
+[Thông tin thêm về mức tiêu thụ năng lượng của Ethereum](/energy-consumption/).
 
 ### Đừng đổ lỗi cho NFT {#nft-qualities}
 
-Cả hệ sinh thái NFT hoạt động được là vì Ethereum an toàn và phi tập trung.
+Cả hệ sinh thái NFT thành công là vì Ethereum an toàn và phi tập trung.
 
-Phi tập trung có nghĩa rằng bạn và tất cả những người khác có thể xác minh bạn sở hữu một vật gì đó. mà không cần tin tưởng hay giao quyền quản lý cho một bên thứ ba có thể áp đặt luật riêng của họ một cách tùy ý. Điều này cũng có nghĩa rằng NFT của bạn có thể được dịch chuyển khắp các phần mềm và sàn giao dịch khác nhau.
+Phi tập trung có nghĩa là bạn và tất cả những người khác có thể xác minh bạn sở hữu một vật gì đó. mà không cần tin tưởng hay giao quyền quản lý cho một bên thứ ba có thể áp đặt luật riêng của họ một cách tùy ý. Điều này cũng có nghĩa là NFT của bạn có thể dịch chuyển khắp các phần mềm và sàn giao dịch khác nhau.
 
-An toàn có nghĩa là không một ai có thể copy/dán NFT của bạn hay đánh cắp nó.
+An toàn có nghĩa là không một ai có thể sao chép/dán hay đánh cắp NFT của bạn.
 
-Những tính chất này của Ethereum khiến cho việc sở hữu số những vật phẩm duy nhất và nhận thù lao công bằng cho nội dung mà bạn tạo ra trở nên khả thi. Nhưng việc này cũng có cái giá riêng. Những chuỗi khối như Bitcoin hay Ethereum gây hao tổn điện năng ở thời điểm hiện tại vì để bảo tồn những tính chất nêu trên cần tiêu tốn nhiều năng lượng. Nếu việc viết lại lịch sử của Ethereum để ăn cắp NFT hay tiền mã hóa là dễ dàng, hệ thống sẽ sụp đổ.
+Những tính chất này của Ethereum khiến cho việc sở hữu trên nền tảng số những vật phẩm độc nhất và nhận thù lao xứng đáng cho nội dung mà bạn tạo ra trở nên khả thi. Ethereum bảo vệ tài sản bằng cách sử dụng cơ chế đồng thuận phi tập trung liên quan đến ['bằng chứng cổ phần'](/developers/docs/consensus-mechanisms/pos). Đây là một phương pháp kinh tế carbon thấp để xác định xem ai có thể thêm một khối giao dịch vào chuỗi cũng như sở hữu độ bảo mật và tiết kiệm hơn năng lượng hơn phương pháp ['bằng chứng công việc'](/developers/docs/consensus-mechanisms/pow) trước đó. NFT thường tiêu tốn nhiều năng lượng vì Ethereum từng dùng cơ chế bảo mật đồng thuận bằng chứng công việc. Điều này không còn đúng nữa.
 
-#### Điều gì diễn ra khi bạn phát hành NFT {#minting-nfts}
+#### Phát hành NFT {#minting-nfts}
 
 Khi bạn phát hành NFT, một vài điều phải xảy ra:
 
 - NFT mới phát hành cần được xác nhận là một tài sản trên chuỗi khối.
 - Số dư tài khoản của chủ sở hữu phải được cập nhật để thêm tài sản đó. Điều này khiến cho việc mua bán hay chứng nhận "quyền sở hữu" NFT trở nên khả thi.
-- Các giao dịch nhằm xác nhận những thông tin trên cần được thêm vào một khối và được "bất tử hóa" trên chuỗi.
+- Các giao dịch nhằm xác nhận những thông tin trên cần được thêm vào một khối và được "trường tồn" trên chuỗi.
 - Khối cần được xác nhận bởi tất cả mọi người trong mạng lưới là "đúng". Sự đồng thuận này loại bỏ vai trò của những bên trung gian vì mạng lưới đồng ý rằng NFT của bạn tồn tại và thuộc về bạn. Và nó nằm trên chuỗi nên bất kì ai cũng có thể kiểm tra. Đây là một trong những cách mà Ethereum giúp những nhà sáng tạo NFT tối đa hóa thu nhập của họ.
 
-Tất cả các tác vụ này được thực hiện bởi những thợ đào. Và chúng cho phép phần còn lại của mạng lưới biết về NFT của bạn và ai là người sở hữu nó. Điều này có nghĩa rằng việc khai thác cần đủ khó, nếu không bất cứ ai cũng có thể tuyên bố rằng họ sở hữu NFT mà bạn vừa mới phát hành và chuyển đổi quyền sở hữu một cách gian lận. Có nhiều phần thưởng khuyến khích được thiết lập để đảm bảo rằng những thợ đào hành động một cách trung thực.
+Tất cả các công việc này được thực hiện bởi các xuất khối viên và xác thực viên. Những xuất khối viên thêm giao dịch NFT của bạn vào một khối và truyền đến phần còn lại của mạng lưới. Xác thực viên sẽ đảm bảo rằng giao dịch đó là hợp lệ và rồi thêm vào cơ sở dữ liệu. Có nhiều phần thưởng khuyến khích để đảm bảo rằng những thợ đào hành động một cách trung thực. Nếu không, bất kỳ ai cũng có thể tuyên bố rằng họ sở hữu NFT mà bạn vừa phát hành và chuyển quyền sở hữu một cách phi pháp.
 
-[Thông tin thêm về khai thác](/developers/docs/consensus-mechanisms/pow/)
+#### Bảo mật NFT {#nft-security}
 
-#### Bảo đảm an toàn cho NFT của bạn với quy trình khai thác {#securing-nfts}
+Tính bảo mật của Ethereum đến từ cơ chế đồng thuận bằng chứng cổ phần. Hệ thống được thiết kế để ngăn chặn các hành động phá hoại kinh tế, giúp Ethereum chống được mạo danh. Đây là thứ làm cho NFT trở nên khả thi. Sau khi khối chứa giao dịch NFT của bạn được xác thực xong, kẻ tấn công sẽ tốn hàng triệu ETH để thay đổi. Bất kỳ ai chạy phần mềm Ethereum sẽ ngay lập tức có thể phát hiện tình trạng gian lận bất hợp pháp của NFT đó và kẻ tình nghi sẽ bị phạt tiền và cấm cửa vĩnh viễn.
 
-Độ khó của việc khai thác đến từ sự thật là phải tốn rất nhiều khả năng xử lý dữ liệu để tạo ra những khối mới trên chuỗi. Các khối được tạo ra một cách thường xuyên chứ không chỉ khi chúng được cần đến. Cứ khoảng 12 giây là chúng lại được tạo ra.
+Các vấn đề bảo mật liên quan đến NFT thường ít hay nhiều liên quan đến nạn lừa đảo, lỗ hổng hợp đồng thông minh hoặc lỗi người dùng (chẳng hạn như vô tình làm lộ khóa cá nhân), khiến cho việc bảo vệ ví điện tử trở nên cực kì quan trọng đối với chủ sở hữu NFT.
 
-Điều này là cần thiết để giúp chống giả mạo Ethereum, một trong những tính chất khiến cho NFT trở nên khả thi. Càng thêm nhiều khối, chuỗi càng thêm an toàn. Nếu NFT của bạn được tạo ra ở khối #600 và một hacker thử ăn cắp NFT của bạn bằng cách chỉnh sửa dữ liệu của nó, dấu vân tay số hóa của tất cả những khối tiếp sau đó sẽ thay đổi. Điều đó có nghĩa rằng bất cứ ai vận hành phần mềm Ethereum sẽ ngay lập tức có thể phát hiện và ngăn cản vụ tấn công.
-
-Tuy nhiên, điều này có nghĩa rằng khả năng xử lý dữ liệu cần được sử dụng liên tục. Nó cũng đồng nghĩa với việc một khối không chứa đựng một giao dịch NFT nào cũng sẽ tạo ra lượng khí thải tương đương như các khối khác, vì khả năng xử lý dữ liệu vẫn sẽ bị tiêu thụ để tạo ra nó. Những giao dịch không liên quan đến NFT khác sẽ lấp đầy khối.
-
-#### Các chuỗi khối gây hao tổn điện năng, ngay bây giờ {#blockchains-intensive}
-
-Đúng vậy, có một lượng khí thải carbon gắn liền với việc khai thác các khối – và đây là một vấn đề đối với các chuỗi khác như Bitcoin – nhưng nó không phải lỗi trực tiếp của NFT.
-
-Nhiều quy trình khai thác sử dụng các nguồn năng lượng tái tạo hoặc điện năng không được dùng đến ở những nơi xa xôi. Và có một lập luận rằng những ngành công nghiệp mà NFT và tiền mã hóa đang can thiệp cũng tạo ra những lượng khí thải khổng lồ. Tuy nhiên, chỉ vì những ngành công nghiệp hiện có đang gây ô nhiễm không có nghĩa rằng chúng ta không nên cố gắng để trở nên tốt hơn.
-
-Và chúng tôi đang làm điều đó. Ethereum đang tiến hóa để khiến việc sử dụng Ethereum (và tất nhiên là cả NFT) trở nên tiết kiệm năng lượng hơn. Và đây vẫn luôn là kế hoạch từ đầu.
-
-Chúng tôi không ở đây để bảo vệ những tác hại đến môi trường của việc khaithacs khối. Thay vào đó, chúng tôi muốn giải thích cách mà mọi thứ đang thay đổi để trở nên tốt hơn.
-
-### Một tương lai xanh hơn... {#a-greener-future}
-
-Từ khi Ethereum ra đời đến nay, sự tiêu thụ điện năng của việc khai thác khối đã và đang là một khía cạnh lớn thu hút sự tập trung của các nhà phát triển và nhà nghiên cứu. Và tầm nhìn vẫn luôn là để thay thế nó ngay khi có thể. [Đọc thêm về tầm nhìn của Ethereum](/upgrades/vision/)
-
-Tầm nhìn này đang từng bước được hiện thực hóa ngay lúc này.
-
-#### Một Ethereum xanh hơn {#greener-ethereum}
-
-Ethereum hiện đang trải qua một loạt nâng cấp mà sẽ thay thế việc khai thác bằng [đặt cược](/staking/). Việc đặt cọc sẽ thay thế khả năng tính toán với vai trò cơ chế bảo đảm an ninh mới, và cắt giảm lượng khí thải của Ethereum tới ~99,95%<sup>[^1]</sup>. Trong cơ chế mới, những người đặt cọc góp vốn thay vì khả năng tính toán để bảo đảm an ninh cho mạng lưới.
-
-Chi phí năng lượng của Ethereum sẽ trở thành chi phí vận hành một chiếc máy tính tại nhà nhân với số nút trên mạng lưới. Nếu có 10.000 nút trên mạng lưới và chi phí để vận hành một chiếc máy tính tại nhà là khoảng 525kWh một năm. Đó là 5.250.000kWh<sup>[^1]</sup> trên năm cho toàn bộ mạng lưới.
-
-Chúng tôi có thể sử dụng điều này để so sánh tương lai của Ethereum với một dịch vụ toàn cầu như Visa. 100.000 giao dịch thẻ Visa dùng 149kWh năng lượng <sup>[^2]</sup>. Trong Ethereum bằng chứng cổ phần, số lượng giao dịch đó sẽ tiêu tốn 17,4kWh năng lượng hoặc ~11% tổng năng lượng<sup>[^ 3]</sup>. Đó là chúng ta chưa tính đến nhiều tối ưu hóa đang được thực hiện song song với lớp đồng thuận và chuỗi phân mảnh, như [bản tổng hợp](/glossary/#rollups). Có thể chỉ tốn đến 0,1666666667kWh năng lượng để thực hiện 100.000 giao dịch.
-
-Quan trọng là việc nâng cấp này cải thiện hiệu suất sử dụng năng lượng đồng thời bảo tồn sự phi tập trung và an toàn của Ethereum. Nhiều chuỗi khối khác ngoài kia có thể đã đang dùng một dạng cơ chế đặt cọc nào đó, nhưng chúng được bảo đảm an ninh bởi một vài người đặt cọc được chọn lựa chứ không phải hàng ngàn người mà Ethereum sẽ có. Càng phi tập trung, hệ thống càng an toàn.
-
-[Đọc thêm về các ước tính năng lượng](#footnotes-and-sources)
-
-_Chúng tôi đã cung cấp so sánh cơ bản với Visa để bạn có thể hiểu thêm về mức tiêu thụ năng lượng của Ethereum bằng chứng cổ phần so với một cái tên quen thuộc. Tuy nhiên, trên thực tế, không thực sự chính xác khi so sánh dựa trên số lượng giao dịch. Lượng điện mà Ethereum sử dụng phụ thuộc vào thời gian. Nếu Ethereum thực hiện nhiều hay ít giao dịch hơn mỗi phú, lượng điện năng được sử dụng vẫn sẽ như nhau._
-
-_Cần lưu ý rằng Ethereum xử lý nhiều hơn là chỉ những giao dịch tài chính. Nó là một nền tảng cho các ứng dụng. Vậy nên một sự so sánh công bằng hơn có thể là với nhiều công ty/ngành công nghiệp bao gồm Visa, AWS và hơn thế nữa!_
-
-#### Kế hoạch và mục tiêu {#timelines}
-
-Quy trình nâng cấp đã bắt đầu. [Chuỗi Hải Đăng](/upgrades/beacon-chain/), bản nâng cấp đầu tiên, ra mắt tháng 12, 2020. Chuỗi Hải Đăng đặt nền móng cho việc đặt cọc bằng cách cho phép những người đặt cọc tham gia vào hệ thống. Bước tiếp theo liên quan đến hiệu suất năng lượng là sáp nhập chuỗi khối hiện tại, đang được bảo đảm bởi các thợ đào, vào với chuỗi hải đăng nơi mà việc khai thác không còn cần thiết. Không thể nêu chính xác các mốc thời gian ở giai đoạn này, nhưng ước tính rằng điều này sẽ xảy ra vào khoảng năm 2022. Quy trình này được biết đến với cái tên Sự Hợp Nhất (từng được đề cập với tên gọi sự cập bến). [Đọc thêm về Sự Hợp Nhất](/upgrades/merge/).
-
-<ButtonLink to="/upgrades/">
-  Thông tin thêm về nâng cấp Ethereum
+<ButtonLink to="/security/">
+  Tìm hiểu thêm về bảo mật
 </ButtonLink>
 
 ## Xây dựng với NFT {#build-with-nfts}
 
-Đa phần NFT được xây dựng dưới một tiêu chuẩn chung với tên gọi là [ERC-721](/developers/docs/standards/tokens/erc-721/). Tuy nhiên, có những tiêu chuẩn khác nữa mà có thể bạn sẽ muốn tham khảo. Tiêu chuẩn [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) cho phép những token gần như có thể phân tách đặc biệt hữu ích trong thế giới của trò chơi điện tử. Và gần đây, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) đã được đề xuất để giúp việc phát hành NFT trở nên năng suất hơn nhiều. Tiêu chuẩn này cho phép bạn phát hành số lượng NFT tùy thích trong một giao dịch!
+Đa phần NFT được xây dựng dưới một tiêu chuẩn chung với tên gọi là [ERC-721](/developers/docs/standards/tokens/erc-721/). Tuy nhiên, có những tiêu chuẩn khác nữa mà có thể bạn sẽ muốn tham khảo. Tiêu chuẩn [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) cho phép những token gần như có thể phân tách vô cùng hữu ích trong thế giới game. Và gần đây, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) đã được đề xuất để giúp việc phát hành NFT trở nên năng suất hơn nhiều. Tiêu chuẩn này cho phép bạn phát hành số lượng NFT tùy thích trong một giao dịch!
 
 ## Đọc thêm {#further-reading}
 
@@ -377,69 +350,6 @@ Quy trình nâng cấp đã bắt đầu. [Chuỗi Hải Đăng](/upgrades/beaco
 - [Hướng dẫn nhập môn cho NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, tháng 01, 2020_
 - [Mọi điều bạn cần biết về thế giới ảo (metaverse)](https://foundation.app/blog/enter-the-metaverse) - _đội Foundation, foundation.app_
 - [Không, các nghệ sĩ crypto không làm hại Trái Đất](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
-- [Lượng điện năng bằng một quốc gia, không hơn](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, ngày 18 tháng 05, 2021_
+- [Tiêu thụ năng lượng của Ethereum](/energy-consumption/)
 
-<Divider />
-
-### Chú thích và trích nguồn {#footnotes-and-sources}
-
-Phần này giải thích cách chúng tôi đưa ra những ước tính về năng lượng tiêu thụ như ở trên. Những ước tính này áp dụng cho cả mạng lưới chứ không chỉ dành cho quy trình tạo ra, mua, hay bán NFT.
-
-#### 1. Giảm thiểu 99,95% năng lượng từ việc khai thác {#fn-1}
-
-Sự giảm thiểu 99,95% năng lượng tiêu thụ từ một hệ thống được bảo đảm bằng việc khai thác đến một hệ thống được bảo đảm bằng việc đặt cọc được tính bởi những nguồn thông tin sau đây:
-
-- 44,49 TWh điện năng được tiêu thụ bởi việc khai thác Ethereum hàng năm [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
-
-- Một máy tính để bàn trung bình, tất cả phần cứng cần để vận hành cơ chế đồng thuận bằng chứng cổ phần, dùng 0,06kWh năng lượng mỗi giờ – [Biểu đồ điện năng thung lũng Silicon](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Một số ước tính cao hơn ở mức 0,15kWh)
-
-Tại thời điểm của bài viết này, có 140 592 nút xác minh từ 16 405 địa chỉ riêng biệt. Trong đó, 87 897 nút xác minh được giả định đang đặt cọc tại nhà.
-
-Giả định rằng một người bình thường đặt cọc tại nhà dùng một máy tính để bàn cá nhân 100 watt để vận hành trung bình 5,4 nút xác minh.
-
-87 897 nút xác minh tại nhà cho chúng ta 16 300 người dùng tiêu thụ ~1,64 megawatt năng lượng.
-
-Phần nút xác minh còn lại được vận hành bởi các nhà đặt cọc giám hộ như là các sàn giao dịch và các dịch vụ đặt cọc. Có thể giả định rằng họ dùng 100w mỗi 5,5 nút xác minh. Ước tính này có thể hơi cao nhằm mục đích an toàn.
-
-Tổng cộng, Ethereum với cơ chế bằng chứng như vậy tiêu thụ khoảng 2,62 megawatt, tương đương với một thị trấn nhỏ ở Mỹ.
-
-Vậy là mức giảm ít nhất 99,95% tổng lượng điện năng tiêu thụ so với ước tính 44,94 TWh một năm mà những thợ đào của Ethereum đang tiêu thụ theo Digiconomist.
-
-#### 2. Nâng lượng tiêu thụ của Visa {#fn-2}
-
-Chi phí của 100.000 giao dịch Visa là 149 kwH - [năng lượng tiêu thụ trung bình trên giao dịch của mạng lưới Bitcoin so với mạng lưới của VISA năm 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
-
-Tính đến năm tài khóa kết thúc vào tháng 09, 2020, họ xử lý 140.839.000.000 giao dịch – [báo cáo tài chính quý 4, 2020, của VISA](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
-
-#### 3. Mức sử dụng năng lượng cho 100.000 giao dịch trên mạng bằng chứng cổ phần được phân đoạn {#fn-3}
-
-Ước tính rằng việc nâng cấp khả năng mở rộng sẽ cho phép mạng xử lý từ 25.000 đến 100.000 giao dịch mỗi giây, với [100.000 là mức tối đa theo lý thuyết hiện giờ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
-
-[Vitalik Buterin về tiềm năng giao dịch mỗi giây với phân đoạn](https://twitter.com/VitalikButerin/status/1312905884549300224)
-
-Ở mức tối thiểu, phân đoạn sẽ cho phép số lượng giao dịch gấp 64 lần hôm nay ở khoảng 15 giao dịch trên giây. Đây là khối lượng chuỗi phân đoạn (thêm dữ liệu và sức chứa) được thêm vào. [Đọc thêm về chuỗi phân đoạn](/upgrades/sharding/)
-
-Điều đó có nghĩa rằng chúng ta có thể ước lượng thời gian cần thiết để xử lý 100.000 giao dịch để từ đó chúng ta có thể so sánh Eth2 với ví dụ về Visa ở trên.
-
-- `15 * 64 = 960` giao dịch trên giây.
-- `100.000 / 960 = 104,2` giây để xử lý 100.000 giao dịch.
-
-Trong 104,2 giây, mạng lưới Ethereum sẽ sử dụng lượng điện năng sau:
-
-`1,44kWh tiêu thụ hàng ngày * 10.000 nút trên mạng lưới = 14.400kWh` mỗi ngày.
-
-Mỗi ngày có 86.400 giây, vậy là `14.400 / 86.400 = 0,1666666667kWh` trên giây.
-
-Nếu chúng ta nhân số điện năng đó với số thời gian cần để xử lý 100.000 giao dịch: `0,1666666667 * 104,2 = 17,3666666701 kWh`.
-
-Nó tương đương với **11,6554809866%** lượng điện năng tiêu thụ bởi số lượng giao dịch tương tự trên Visa.
-
-Và hãy nhớ rằng, điều này dựa trên số lượng giao dịch tối thiểu mà Ethereum sẽ có thể xử lý mỗi giây. Nếu Ethereum đạt đến tiềm năng 100.000 giao dịch mỗi giây, 100.000 giao dịch sẽ tiêu tốn 0,1666666667kWh.
-
-Nói cách khác, nếu Visa xử lý 140.839.000.000 giao dịch với chi phí 149 kWh trên 100.000 giao dịch thì sẽ là 209.850.110 kWh năng lượng tiêu thụ trong một năm.
-
-Ethereum trong một năm tiêu thụ 5.256.000 kWh. Với tiềm năng của từ 788.940.000.000 - 3.153.600.000,000 giao dịch được xử lý trong thời gian đó.
-
-<InfoBanner emoji=":evergreen_tree:">
-  Nếu bạn nghĩ rằng những số liệu này là sai hay có thể được tính chính xác hơn, vui lòng nêu ý kiến hoặc gửi PR. Đây là những ước tính của nhóm ethereum.org được thực hiện bằng cách sử dụng thông tin có thể truy cập công khai và thiết kế Ethereum đã lên kế hoạch. Những tính toán này không đại diện cho một lời đảm bảo chính thức từ Ethereum Foundation.
-</InfoBanner>
+<QuizWidget quizKey="nfts" />

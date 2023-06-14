@@ -1,31 +1,9 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
+import { Text, Box, Flex, FlexProps } from "@chakra-ui/react"
 
-const StyledCard = styled.div`
-  border-radius: 4px;
-  display: flex;
-`
-
-const Content = styled.div`
-  flex: 0 1 75%;
-  margin-left: 2rem;
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-  margin-top: -1rem;
-  margin-bottom: 0.5rem;
-`
-
-const Title = styled.p`
-  font-size: 1.25rem;
-`
-
-export interface IProps {
-  children?: React.ReactNode
+export interface IProps extends FlexProps {
   emoji: string
-  title?: ReactNode
   description: ReactNode
   className?: string
   emojiSize?: number
@@ -38,15 +16,18 @@ const HorizontalCard: React.FC<IProps> = ({
   children,
   className,
   emojiSize,
+  ...rest
 }) => (
-  <StyledCard className={className}>
-    <Emoji size={emojiSize} text={emoji} />
-    <Content>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
-      {children}
-    </Content>
-  </StyledCard>
+  <Flex borderRadius="base" className={className} {...rest}>
+    <Emoji fontSize={`${emojiSize}rem`} text={emoji} />
+    <Box flexGrow="0" flexShrink="1" flexBasis="75%" ml="8">
+      <Text fontSize="lg">{title}</Text>
+      <Text opacity="0.8" mt="-4" mb="2">
+        {description}
+      </Text>
+      <>{children}</>
+    </Box>
+  </Flex>
 )
 
 export default HorizontalCard

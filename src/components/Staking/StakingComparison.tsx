@@ -1,78 +1,24 @@
-import React, { useContext } from "react"
-import styled from "@emotion/styled"
-import { useTheme } from "@emotion/react"
+import React from "react"
+import { Box, Flex, Heading, Text, useTheme } from "@chakra-ui/react"
 
 import Link from "../Link"
 import Translation from "../Translation"
 
-import { EventOptions, trackCustomEvent } from "../../utils/matomo"
+import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
 import { TranslationKey } from "../../utils/translations"
-
-import SoloGlyph from "../../assets/staking/staking-glyph-cpu.svg"
-import SaasGlyph from "../../assets/staking/staking-glyph-cloud.svg"
-import PoolGlyph from "../../assets/staking/staking-glyph-token-wallet.svg"
-
-const GradientContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  background: linear-gradient(
-    83.46deg,
-    rgba(127, 127, 213, 0.2) 7.03%,
-    rgba(138, 168, 231, 0.2) 52.42%,
-    rgba(145, 234, 228, 0.2) 98.77%
-  );
-  padding: 2rem;
-  margin-top: 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 2rem 1.5rem;
-  }
-
-  h3 {
-    margin: 0 0 0.5rem;
-  }
-`
-
-const Flex = styled.div`
-  display: flex;
-  gap: 1.5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
-
-const Glyph = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 3rem;
-  max-height: 3rem;
-`
-
-const StyledSoloGlyph = styled(SoloGlyph)`
-  path {
-    fill: ${({ theme }) => theme.colors.stakingGold};
-  }
-`
-const StyledSaasGlyph = styled(SaasGlyph)`
-  path {
-    fill: ${({ theme }) => theme.colors.stakingGreen};
-  }
-`
-const StyledPoolGlyph = styled(PoolGlyph)`
-  path {
-    fill: ${({ theme }) => theme.colors.stakingBlue};
-  }
-`
+import {
+  StakingGlyphCloudIcon,
+  StakingGlyphCPUIcon,
+  StakingGlyphTokenWalletIcon,
+} from "../icons/staking"
 
 interface DataType {
   title: TranslationKey
   linkText: TranslationKey
   to: string
-  matomo: EventOptions
-  color: any
-  glyph: any
+  matomo: MatomoEventOptions
+  color: string
+  glyph: JSX.Element
 }
 
 type StakingTypePage = "solo" | "saas" | "pools"
@@ -96,7 +42,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
       eventName: "clicked solo staking",
     },
     color: stakingGold,
-    glyph: <StyledSoloGlyph />,
+    glyph: <StakingGlyphCPUIcon color="stakingGold" boxSize="50px" />,
   }
   const saas: DataType = {
     title: "page-staking-saas-with-abbrev",
@@ -108,7 +54,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
       eventName: "clicked staking as a service",
     },
     color: stakingGreen,
-    glyph: <StyledSaasGlyph />,
+    glyph: <StakingGlyphCloudIcon color="stakingGreen" w="50px" h="28px" />,
   }
   const pools: DataType = {
     title: "page-staking-dropdown-pools",
@@ -120,7 +66,9 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
       eventName: "clicked pooled staking",
     },
     color: stakingBlue,
-    glyph: <StyledPoolGlyph />,
+    glyph: (
+      <StakingGlyphTokenWalletIcon color="stakingBlue" w="50px" h="39px" />
+    ),
   }
   const data: {
     [key in StakingTypePage]: (DataType & {
@@ -162,19 +110,42 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
   const selectedData = data[page]
 
   return (
-    <GradientContainer className={className}>
-      <h2>Comparison with other options</h2>
+    <Flex
+      direction="column"
+      gap={8}
+      bg="linear-gradient(
+      83.46deg,
+      rgba(127, 127, 213, 0.2) 7.03%,
+      rgba(138, 168, 231, 0.2) 52.42%,
+      rgba(145, 234, 228, 0.2) 98.77%
+    )"
+      py={8}
+      px={{ base: 6, md: 8 }}
+      mt={16}
+      className={className}
+    >
+      <Heading fontSize="2rem">Comparison with other options</Heading>
       {selectedData.map(
         ({ title, linkText, to, color, content, glyph, matomo }, idx) => (
-          <Flex key={idx}>
-            {!!glyph && <Glyph>{glyph}</Glyph>}
-            <div>
-              <h3 style={{ color }}>
+          <Flex gap={6} direction={{ base: "column", md: "row" }} key={idx}>
+            {!!glyph && (
+              <Flex
+                direction="column"
+                justify="flex-start"
+                align="center"
+                w={12}
+                maxH={12}
+              >
+                {glyph}
+              </Flex>
+            )}
+            <Box>
+              <Heading as="h3" fontSize="2xl" color={color} mt={0} mb={2}>
                 <Translation id={title} />
-              </h3>
-              <p>
+              </Heading>
+              <Text>
                 <Translation id={content} />
-              </p>
+              </Text>
               <Link
                 onClick={() => {
                   trackCustomEvent(matomo)
@@ -183,11 +154,11 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
               >
                 <Translation id={linkText} />
               </Link>
-            </div>
+            </Box>
           </Flex>
         )
       )}
-    </GradientContainer>
+    </Flex>
   )
 }
 

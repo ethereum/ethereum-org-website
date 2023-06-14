@@ -1,16 +1,23 @@
 import React from "react"
-import { Icon, Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
+import {
+  Box,
+  Icon,
+  Link as ChakraLink,
+  LinkProps,
+  useTheme,
+  VisuallyHidden,
+} from "@chakra-ui/react"
 import { navigate as gatsbyNavigate } from "gatsby"
-import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
+import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 import { NavigateOptions } from "@reach/router"
-import { IntlShape } from "react-intl"
 
 import { BsQuestionSquareFill } from "react-icons/bs"
 
 import { Lang } from "../utils/languages"
-import { trackCustomEvent, EventOptions } from "../utils/matomo"
+import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
 import * as url from "../utils/url"
 import { Direction } from "../types"
+import { SITE_URL, DISCORD_PATH } from "../constants"
 
 export interface IBaseProps {
   to?: string
@@ -18,7 +25,8 @@ export interface IBaseProps {
   language?: Lang
   hideArrow?: boolean
   isPartiallyActive?: boolean
-  customEventOptions?: EventOptions
+  customEventOptions?: MatomoEventOptions
+  activeStyle?: object
 }
 
 export interface IProps extends IBaseProps, LinkProps {
@@ -49,22 +57,31 @@ const Link: React.FC<IProps> = ({
   hideArrow = false,
   isPartiallyActive = true,
   customEventOptions,
+  activeStyle = null,
   ...restProps
 }) => {
   const theme = useTheme()
 
   // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
   // this is to support the ButtonLink component which uses the `to` prop
-  const to = (toProp || href)!
+  let to = (toProp ?? href)!
 
+  const isDiscordInvite = url.isDiscordInvite(to)
+  if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
   const isExternal = url.isExternal(to)
   const isHash = url.isHash(to)
   const isGlossary = url.isGlossary(to)
   const isStatic = url.isStatic(to)
   const isPdf = url.isPdf(to)
 
-  const eventOptions: EventOptions = {
+  const externalLinkEvent: MatomoEventOptions = {
     eventCategory: `External link`,
+    eventAction: `Clicked`,
+    eventName: to,
+  }
+
+  const hashLinkEvent: MatomoEventOptions = {
+    eventCategory: `Hash link`,
     eventAction: `Clicked`,
     eventName: to,
   }
@@ -79,7 +96,21 @@ const Link: React.FC<IProps> = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <ChakraLink href={to} {...commonProps}>
+      <ChakraLink
+        href={to}
+        onClick={(e) => {
+          // only track events on external links and hash links
+          if (!isHash) {
+            return
+          }
+
+          e.stopPropagation()
+          trackCustomEvent(
+            customEventOptions ? customEventOptions : hashLinkEvent
+          )
+        }}
+        {...commonProps}
+      >
         {children}
       </ChakraLink>
     )
@@ -92,25 +123,28 @@ const Link: React.FC<IProps> = ({
       <ChakraLink
         href={to}
         isExternal
-        _after={{
-          content: !hideArrow ? '"↗"' : undefined,
-          ml: 0.5,
-          mr: 1.5,
-        }}
         onClick={(e) => {
-          // only track events on external links
+          // only track events on external links and hash links
           if (!isExternal) {
             return
           }
 
           e.stopPropagation()
           trackCustomEvent(
-            customEventOptions ? customEventOptions : eventOptions
+            customEventOptions ? customEventOptions : externalLinkEvent
           )
         }}
         {...commonProps}
       >
-        {children}
+        <>
+          {children}
+          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+          {!hideArrow && (
+            <Box as="span" ml={0.5} mr={1.5} aria-hidden>
+              ↗
+            </Box>
+          )}
+        </>
       </ChakraLink>
     )
   }
@@ -122,37 +156,39 @@ const Link: React.FC<IProps> = ({
       as={IntlLink}
       language={language}
       partiallyActive={isPartiallyActive}
-      activeStyle={{ color: theme.colors.primary }}
+      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
     >
-      {children}
-      {isGlossary && (
-        <Icon
-          as={BsQuestionSquareFill}
-          aria-label="See definition"
-          fontSize="12px"
-          margin="0 0.25rem 0 0.35rem"
-          _hover={{
-            transition: "transform 0.1s",
-            transform: "scale(1.2)",
-          }}
-        />
-      )}
+      <>
+        {children}
+        {isGlossary && (
+          <Icon
+            as={BsQuestionSquareFill}
+            aria-label="See definition"
+            fontSize="12px"
+            margin="0 0.25rem 0 0.35rem"
+            _hover={{
+              transition: "transform 0.1s",
+              transform: "scale(1.2)",
+            }}
+          />
+        )}
+      </>
     </ChakraLink>
   )
 }
 
 export function navigate(
   to: string,
-  intl: IntlShape,
+  language: Lang,
   options?: NavigateOptions<{}>
 ) {
   if (typeof window === "undefined") {
     return
   }
 
-  const link = `/${intl.locale as Lang}${to}`
+  const link = `/${language}${to}`
   gatsbyNavigate(link, options)
 }
 

@@ -8,7 +8,7 @@ tags:
   - "camada de consenso"
   - "nós"
 lang: pt-br
-skill: intermediário
+skill: intermediate
 published: 2020-05-07
 source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: formate seu Raspberry Pi 4, conecte um cabo de rede e um disco SSD, e ligue o dispositivo. Desta maneira, você terá transformado seu Raspberry Pi 4 em um nó completo do Ethereum, executando a camada de execução, ou a camada de consenso (Beacon Chain/validador)
 
-[Aprenda sobre as implementações no Ethereum](/upgrades/)
+[Aprenda sobre as implementações no Ethereum](/roadmap/)
 
 Um pouco de contexto primeiro. Como você sabe, tivemos alguns problemas de memória [[1]](/developers/tutorials/run-node-raspberry-pi/#references) com a imagem do Raspberry Pi 4, já que o Raspbian OS ainda está em 32 bits [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (pelo menos no nível de usuário). Embora preferíssemos manter o sistema operacional oficial, chegamos à conclusão que, para resolver esses problemas, precisamos migrar para um sistema operacional nativo de 64 bits.
 
-Além disso, [os clientes de consenso](/upgrades/get-involved/#clients) não suportam binários de 32 bits, então usar o sistema operacional Raspbian impediria que o Raspberry Pi executasse um nó da camada de consenso (e também a possibilidade de fazer staking).
+Além disso, os clientes de consenso não suportam binários de 32 bits, então usar o sistema operacional Raspbian impediria que o Raspberry Pi executasse um nó da camada de consenso (e também a possibilidade de fazer staking).
 
 Portanto, após vários testes, estamos lançando 2 imagens diferentes baseadas no Ubuntu 20.04 de 64 bits [[3]](/developers/tutorials/run-node-raspberry-pi/#references): edições para a camada de execução e para camada de consenso.
 
@@ -133,7 +133,7 @@ O sistema operacional Ubuntu se iniciará em menos de um minuto, mas **você pre
 Dependendo da imagem, você estará executando:
 
 - Cliente de execução: Geth como o cliente padrão que sincroniza a blockchain
-- Cliente de consenso: Prysm como cliente padrão que sincroniza a Beacon Chain (rede de teste Prater)
+- Cliente de consenso: Prysm como cliente padrão que sincroniza a Beacon Chain (rede de teste Goerli)
 
 ### 5. Iniciar sessão {#5-log-in}
 
@@ -162,7 +162,7 @@ sudo tail -f /var/log/syslog
 
 Agora você precisa esperar que a blockchain seja sincronizada. No caso da camada de execução, esse processo levará alguns dias dependendo de vários fatores, mas você pode esperar algo entre 5 – 7 dias.
 
-Se está executando a rede de teste Prater para a camada de consenso, você pode esperar entre 1–2 dias para a sincronização da Beacon Chain. Lembre-se de que precisará configurar o validador mais tarde para iniciar o processo de apostas. [Como executar o validador da camada de consenso](/developers/tutorials/run-node-raspberry-pi/#validator)
+Se está executando a rede de teste Goerli para a camada de consenso, você pode esperar entre 1–2 dias para a sincronização da Beacon Chain. Lembre-se de que precisará configurar o validador mais tarde para iniciar o processo de apostas. [Como executar o validador da camada de consenso](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Painéis de monitoramento {#monitoring-dashboards}
 
@@ -234,7 +234,7 @@ Ambos precisam de mais testes, por isso sinta-se livre para testá-los e compart
 
 ## Como gerenciar o validador do consenso (staking) {#validator}
 
-Uma vez que a Beacon Chain da rede de teste Prater for sincronizada, você vai poder executar um validador no mesmo dispositivo. Você precisará seguir [essas etapas de participação](https://prylabs.net/participate).
+Uma vez que a Beacon Chain da rede de teste Goerli for sincronizada, você vai poder executar um validador no mesmo dispositivo. Você precisará seguir [essas etapas de participação](https://prylabs.net/participate).
 
 Na primeira vez, você precisa criar uma conta manualmente executando o binário "validador" e configurando uma senha. Depois de concluir esta etapa, você pode adicionar a senha a `/etc/ethereum/prysm-validator.conf` e iniciar o validador como um serviço systemd.
 

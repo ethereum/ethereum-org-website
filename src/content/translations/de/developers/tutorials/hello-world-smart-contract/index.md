@@ -9,7 +9,7 @@ tags:
   - "Smart Contracts"
   - "Erste Schritte"
   - "Bereitstellung"
-skill: Einsteiger
+skill: beginner
 lang: de
 published: 2021-03-31
 ---
@@ -233,7 +233,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Um diese mit unserem Code zu verbinden, werden wir diese Variablen in unserer `hardhat.config.js`-Datei in Schritt 13 referenzieren.
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 Führen Sie keinen Commit für <code>.env</code> aus. Stellen Sie sicher, dass Sie Ihre <code>.env</code>-Datei niemals an andere weitergeben, denn damit würden Sie Ihre geheimen Daten weitergeben. Wenn Sie die Versionskontrolle verwenden, fügen Sie Ihre <code>Env-Datei</code> zu einer Datei <a href="https://git-scm.com/docs/gitignore">gitignore</a> hinzu.
 </InfoBanner>
 

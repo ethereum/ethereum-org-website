@@ -9,20 +9,20 @@ incomplete: false
 
 Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp possono essere senza fiducia, a significare che una volta distribuite su Ethereum, saranno sempre eseguite come programmate. Possono controllare risorse digitali per creare nuove tipologie di applicazioni finanziarie. Possono essere decentralizzate, pertanto nessuna entità singola o individuo le controlla e sono quasi impossibili da censurare.
 
-## Primi passi con gli Smart Contract e il linguaggio Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Primi passi con i contratti intelligenti e il linguaggio Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Inizia a integrare Ruby con Ethereum**
 
 Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/learn/) o [ethereum.org/developers](/developers/).
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Comprendere gli Smart Contract](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Scrivi il tuo Primo Smart Contact](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [Comprendere i Contratti Intelligenti](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [Scrivi il tuo Primo Contratto Intelligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Impara Come Compilare e Distribuire Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## Articoli per chi inizia ora {#beginner-articles}
 
-- [Comprendere definitivamente gli account Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
+- [Comprendere definitivamente i conti di Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Autenticare definitivamente gli utenti di Rails con Metamask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
 - [Accesso con Ethereum - Rilascio di esempi di Rail e libreria di Ruby](https://blog.spruceid.com/sign-in-with-ethereum-ruby-library-release-and-rails-examples/)
 - [Come connettersi alla rete di Ethereum usando Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
@@ -31,13 +31,13 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/lea
 ## Articoli di livello intermedio {#intermediate-articles}
 
 - [App della Blockchain con Ruby](https://www.nopio.com/blog/blockchain-app-ruby/)
-- [Usare Ruby, connesso a Ethereum, per eseguire lo smart contract](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
+- [Usa Ruby, connesso a Ethereum, per eseguire il Contratto Intelligente](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
 
 ## Progetti e strumenti Ruby {#ruby-projects-and-tools}
 
 ### Attivi {#active}
 
-- [eth.rb](https://github.com/q9f/eth.rb) - _Libreria di Ruby e client RPC per gestire account, messaggi e transazioni di Ethereum_
+- [eth.rb](https://github.com/q9f/eth.rb): _Libreria di Ruby e client RPC per gestire conti, messaggi e transazioni di Ethereum_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _L'hash di The Keccak (SHA3) usato da Ethereum_
 - [siwe-ruby](https://github.com/spruceid/siwe-ruby) - _Implementazione in Ruby dell'Accesso con Ethereum_
 - [siwe_rails](https://github.com/spruceid/siwe_rails) - _Gemma di Rails che aggiunge la firma locale SIWE nei percorsi_

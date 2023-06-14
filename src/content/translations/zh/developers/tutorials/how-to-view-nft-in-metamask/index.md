@@ -3,11 +3,8 @@ title: 如何在钱包中查看您的非同质化代币（非同质化代币系�
 description: 本教程介绍了如何在 MetaMask 上查看所持有的非同质化代币！
 author: "苏米-穆德吉尔"
 tags:
-  - "NFT"
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
-  - "非同质化代币"
   - "Solidity"
 skill: beginner
 lang: zh
@@ -20,15 +17,15 @@ published: 2021-04-22
 
 作为一个前提条件，您应该已经在移动设备上安装了 MetaMask， 并且它应该包含您铸造非同质化代币的帐户——您可以在 [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) 或 [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US) 免费获得该应用程序。
 
-## 第 1 步：将你的网络设置为 Ropsten {#set-network-to-ropsten}
+## 第 1 步：将你的网络设置为 Goerli {#set-network-to-goerli}
 
-在应用程序顶端，按“钱包”按钮，然后会提示您选择网络。 由于我们的非同质化代币是在 Ropsten 网络上发行的，您将会选择 Ropsten 作为您的网络。
+在应用程序顶端，按“钱包”按钮，然后会提示您选择网络。 由于我们的非同质化代币是在 Goerli 网络上铸造的，因此你需要选择 Goerli 作为你的网络。
 
-![如何在 MetaMask Mobile 上设置 Ropsten 网络](./ropstenMetamask.gif)
+![如何在 MetaMask Mobile上将 Goerli 设置为你的网络](./goerliMetamask.gif)
 
 ## 第 2 步：将您的收藏添加到 MetaMask {#add-nft-to-metamask}
 
-在您使用 Ropsten 网络时，选择右侧“收藏”选项卡，然后添加非同质化代币智能合约地址和您的非同质化代币的 ERC-721 代币 ID—— 您应该能够根据我们第 3 部分的教程，通过非同质化代币的交易哈希值在 Etherscan 网站上找到它。
+进入 Goerli 网络后，选择右侧的“Collectibles”选项卡，并添加非同质化代币智能合约的地址和你的非同质化代币的 ERC-721 代币 ID（应该可以根据教程第二部分中部署的非同质化代币的交易哈希值在 Etherscan 上找到）。
 
 ![如何查找您的交易哈希值和 ERC-721 代币 ID](./findNFTEtherscan.png)
 

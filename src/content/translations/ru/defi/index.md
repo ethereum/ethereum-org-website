@@ -332,13 +332,11 @@ DeFi — это движение с открытым исходным кодом
 
 ### Данные о DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
 ### Статьи о DeFi {#defi-articles}
 
-- [Что такое децентрализованные финансы?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) — _ETHHub, регулярно обновляется_
 - [Руководство по DeFi для новичков](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) — _Сид Коэльо-Прабху, 6 января 2020_
 
 ### Видео {#videos}

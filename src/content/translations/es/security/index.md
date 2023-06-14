@@ -158,8 +158,6 @@ Cuando firme contratos inteligentes, no permita un techo ilimitado de gasto. Un 
 
 Muchas carteras de Ethereum ofrecen una protección de límites para evitar que las cuentas se vacíen.
 
-[Explore las carteras con protección de límites.](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Estafas comunes {#common-scams}
@@ -252,7 +250,7 @@ He aquí un compendio de puntos que recordar:
 
 ### Estafa del token Eth2 {#eth2-token-scam}
 
-Con [la fusión](/upgrades/merge/) en 2022, los estafadores han aprovechado la confusión en torno al término «Eth2» para intentar que los usuarios canjeen su ETH por un token «Eth2». La fusión no ha traído ningún token «Eth2», ni ningún otro token nuevo. El ETH que posee hoy seguirá siendo el mismo ETH después de la fusión, y no hay necesidad de hacer ningún intercambio de ETH de cara a la fusión.
+Con [la fusión](/roadmap/merge/) en 2022, los estafadores han aprovechado la confusión en torno al término «Eth2» para intentar que los usuarios canjeen su ETH por un token «Eth2». La fusión no ha traído ningún token «Eth2», ni ningún otro token nuevo. El ETH que posee hoy seguirá siendo el mismo ETH después de la fusión, y no hay necesidad de hacer ningún intercambio de ETH de cara a la fusión.
 
 Los estafadores pueden hacerse pasar por técnicos de soporte diciéndole que si deposita su ETH, recibirá de vuelta «Eth2». No hay [soporte técnico oficial de Ethereum](/community/support/), y tampoco hay tókenes nuevos. Nunca comparta su frase semilla con nadie.
 
