@@ -19,6 +19,7 @@ import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import Contributors from "../components/Contributors"
+import CurrentFundingRound from "../components/CurrentFundingRound"
 import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
@@ -207,6 +208,7 @@ const components = {
   EnergyConsumptionChart,
   QuizWidget,
   UpgradeStatus,
+  CurrentFundingRound,
 }
 
 const StaticPage = ({

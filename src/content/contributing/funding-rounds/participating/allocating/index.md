@@ -1,6 +1,6 @@
 ---
 title: Allocating funds during a funding round
-description:
+description: Instructions on how to participate as an allocator during a funding round
 lang: en
 ---
 
@@ -26,7 +26,7 @@ _Note that you’ll be required to sign multiple message with your wallet during
 
 <!-- TODO: Replace with a canonical list of ethereum.org grant rounds -->
 
-1. **Go to** [Ethereum.org Contributor Round](https://explorer.gitcoin.co/#/round/10/0x{round-contract-address})
+1. **Go to** <CurrentFundingRound roundInterface="explorer">Ethereum.org Contributor Round</CurrentFundingRound>
 2. **Connect Wallet**
 3. **Switch network** to Optimism
 4. **Browse contributors**

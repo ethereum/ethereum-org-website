@@ -9,7 +9,7 @@ lang: en
 As an ethereum.org contributor looking to receive funding during a funding round, there are a couple things you'll need to do **before round allocations begin**:
 
 1. Creating a "project" for yourself
-1. Applying to the funding round
+1. Applying to a funding round
 
 ## Step 1: Creating a "project" for yourself {#step-1}
 
@@ -38,14 +38,14 @@ Follow along below, or check out the Gitcoin support docs, _[How to create a pro
 
 - Confirm your details, then "Save and Publish" to submit your transaction on Optimism (requires some ETH on Optimism for transaction fee)
 
-## Step 2: Applying to the round {#step-2}
+## Step 2: Applying to a round {#step-2}
 
 Once you have a project for yourself, you'll need to apply to an active round. Follow along here, or see the Gitcoin support docs, _[How to apply to a round in Explorer](https://support.gitcoin.co/gitcoin-knowledge-base/gitcoin-grants-program/project-owners/how-to-apply-to-a-round-in-explorer)_, for additional guidance.
 
 <!-- TODO: Figure out how to link to round(s) without manual updates here -->
 <!-- Explorer link: https://explorer.gitcoin.co/#/round/10/round-contract-address -->
 
-1. Go to [Gitcoin Builder for the current round](https://builder.gitcoin.co/#/chains/10/rounds/round-contract-address)
+1. Go to <CurrentFundingRound roundInterface="builder">Gitcoin Builder for the current round</CurrentFundingRound>
 2. Make sure you're connected to the same wallet used to create your project
 3. Review application period and round eligibility, then click **Apply** to continue
 4. Select your project from the list

@@ -12,7 +12,7 @@ There are two ways to participate: as an **ethereum.org contributor**, or as an 
 
 Contributors to ethereum.org will have a period of time to apply for funding before a funding round starts. Anyone who meets the [eligibility criteria](#eligibility-criteria) are encouraged to apply during this time.
 
-Applications from ethereum.org contributors are accepted up until the funding round begins.
+Applications from ethereum.org contributors are accepted up until a funding round begins.
 
 Contributions can be from (but not limited to) any of the following categories:
 
