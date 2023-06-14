@@ -5,6 +5,8 @@ import { Tag } from "./Tag"
 import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
 import { Tabs } from "./Tabs"
+import { Menu } from "./Menu"
+
 import {
   accordionDefaultTheme,
   avatarDefaultTheme,
@@ -16,7 +18,6 @@ import {
   formDefaultTheme,
   formLabelDefaultTheme,
   headingDefaultTheme,
-  menuDefaultTheme,
   selectDefaultTheme,
   spinnerDefaultTheme,
   switchDefaultTheme,
@@ -38,7 +39,7 @@ export default {
   FormLabel: formLabelDefaultTheme,
   Heading: headingDefaultTheme,
   Link,
-  Menu: menuDefaultTheme,
+  Menu,
   Modal,
   Select: selectDefaultTheme,
   Spinner: spinnerDefaultTheme,

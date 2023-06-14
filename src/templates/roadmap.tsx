@@ -7,9 +7,10 @@ import styled from "@emotion/styled"
 import {
   Flex,
   ListItem,
-  Stack,
+  Show,
   Text,
   UnorderedList,
+  useToken,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react"
@@ -17,9 +18,6 @@ import {
 import Button from "../components/Button"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown, {
-  List as ButtonDropdownList,
-} from "../components/ButtonDropdown"
 import Card from "../components/Card"
 import ImageCard from "../components/ImageCard"
 import ExpandableCard from "../components/ExpandableCard"
@@ -51,11 +49,18 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
+import {
+  MobileButton,
+  MobileButtonDropdown,
+  StyledButtonDropdown,
+} from "./use-cases"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
-import { Context } from "../types"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
+
+import type { Context } from "../types"
+import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
 
 const Page = styled.div`
   display: flex;
@@ -81,19 +86,6 @@ const InfoColumn = styled.aside`
   margin: 0 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
-  }
-`
-
-const MobileButton = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    background: ${(props) => props.theme.colors.background};
-    box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
-    width: 100%;
-    bottom: 0;
-    position: sticky;
-    padding: 2rem;
-    z-index: 99;
-    margin-bottom: 0rem;
   }
 `
 
@@ -232,28 +224,6 @@ const Title = styled.h1`
   margin-top: 1rem;
 `
 
-const SummaryPoint = styled.li`
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const StyledButtonDropdown = styled(ButtonDropdown)`
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    align-self: flex-end;
-  }
-`
-
-const MobileButtonDropdown = styled(StyledButtonDropdown)`
-  margin-bottom: 0rem;
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: block;
-  }
-`
-
 const Container = styled.div`
   position: relative;
   overflow-x: hidden;
@@ -339,6 +309,9 @@ const RoadmapPage = ({
   data: { pageData: mdx },
   location,
 }: PageProps<Queries.RoadmapPageQuery, Context>) => {
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
+
   if (!mdx?.frontmatter)
     throw new Error(
       "Staking page template query does not return expected values"
@@ -470,9 +443,11 @@ const RoadmapPage = ({
           </MDXProvider>
           <FeedbackCard />
         </ContentContainer>
-        <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
-        </MobileButton>
+        <Show below={lgBp}>
+          <MobileButton>
+            <MobileButtonDropdown list={dropdownLinks} />
+          </MobileButton>
+        </Show>
       </Page>
     </Container>
   )

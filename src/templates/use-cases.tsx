@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ComponentProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -25,6 +25,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
+  IProps as ButtonDropdownProps,
   List as ButtonDropdownList,
 } from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
@@ -226,24 +227,18 @@ export const InfoTitle = (props: ChildOnlyProp) => (
   />
 )
 
-type ButtonDropdownProps = Parameters<typeof ButtonDropdown>[0]
-
-export const StyledButtonDropdown = (
-  props: FlexProps & ButtonDropdownProps
-) => (
-  <Flex
-    as={ButtonDropdown}
-    alignSelf={{ sm: "flex-end" }}
-    justifyContent="flex-end"
-    mb={8}
-    textAlign="center"
-    {...props}
-  />
+export const StyledButtonDropdown = ({
+  list,
+  ...rest
+}: FlexProps & Pick<ButtonDropdownProps, "list">) => (
+  <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
+    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
+  </Flex>
 )
 
-export const MobileButtonDropdown = (props: ButtonDropdownProps) => (
-  <StyledButtonDropdown mb={0} {...props} />
-)
+export const MobileButtonDropdown = (
+  props: ComponentProps<typeof StyledButtonDropdown>
+) => <StyledButtonDropdown mb={0} {...props} />
 
 export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const lgBp = useToken("breakpoints", "lg")
