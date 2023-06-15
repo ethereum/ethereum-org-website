@@ -82,7 +82,7 @@ Rounds are being held using the Allo Protocol on the Optimism layer 2 rollup, fo
 As an **ethereum.org contributor** looking to receive funding, you’ll need some ETH on Optimism for:
 
 1. Gas when registering yourself as a "project"
-2. Gas when applying to the funding round with your "project"
+2. Gas when applying to a funding round with your "project"
 
 As an **allocator**, you’ll need Optimism ETH for:
 
