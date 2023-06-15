@@ -1,14 +1,5 @@
 [
   {
-    "title": "Ethereum Rio",
-    "to": "https://www.ethereumbrasil.com/ethereumrio",
-    "sponsor": null,
-    "location": "Museu de Arte de Rio, Rio de Janeiro, Brazil",
-    "description": "A convergence of creators, builders & thinkers.",
-    "startDate": "2023-03-28",
-    "endDate": "2023-03-30"
-  },
-  {
     "title": "ETHVietnam",
     "to": "https://www.eth-vietnam.com/",
     "sponsor": null,
@@ -18,103 +9,13 @@
     "endDate": "2023-10-29"
   },
   {
-    "title": "Scaling Ethereum",
-    "to": "https://ethglobal.com/events/scaling2023",
+    "title": "Kyiv Ethereum",
+    "to": "https://kyivethereum.com/",
     "sponsor": null,
-    "location": "Remote",
-    "description": "Strap in for three weeks of hacking and summits devoted to pushing the envelope and building the future infrastructure of our ecosystem.",
-    "startDate": "2023-03-10",
-    "endDate": "2023-03-29"
-  },
-  {
-    "title": "ETH Beijing",
-    "to": "https://ethbeijing.xyz/",
-    "sponsor": null,
-    "location": "Beijing, China",
-    "description": "Join the first offline event of Ethereum in Beijing in the post-covid-19 era.",
-    "startDate": "2023-04-05",
-    "endDate": "2023-04-08"
-  },
-  {
-    "title": "ETHGlobal Tokyo",
-    "to": "https://tokyo.ethglobal.com/",
-    "sponsor": null,
-    "location": "Tokyo, Japan",
-    "description": "ETHGlobal is coming to Tokyo, as the Ethereum community converges in Asia for an unforgettable weekend of hacking, summits, and side events celebrating a new year in our ecosystem.",
-    "startDate": "2023-04-14",
-    "endDate": "2023-04-16"
-  },
-  {
-    "title": "ETHTaipei",
-    "to": "https://ethtaipei.org/",
-    "sponsor": null,
-    "location": "Taipei, Taiwan",
-    "description": "ETHTaipei is a community-driven event, spawned from the desire of connecting the Taiwan/Asia community with teams globally on a deep technical level.",
-    "startDate": "2023-04-21",
-    "endDate": "2023-04-25"
-  },
-  {
-    "title": "ETHTallinn",
-    "to": "https://www.ethtallinn.org",
-    "sponsor": null,
-    "location": "Tallinn, Estonia",
-    "description": "ETHTallinn is the first Ethereum Hackathon in the Baltics, bringing together some of Europe's smartest tech, cybersecurity, and Web3 minds to solve Ethereum's biggest challenges.",
-    "startDate": "2023-05-05",
-    "endDate": "2023-05-07"
-  },
-  {
-    "title": "ETHGlobal Lisbon",
-    "to": "https://ethglobal.com/events/lisbon",
-    "sponsor": null,
-    "location": "Lisbon, Portugal",
-    "description": "ETHGlobal Lisbon replaces ETHGlobal Istanbul",
-    "startDate": "2023-05-12",
-    "endDate": "2023-05-14"
-  },
-  {
-    "title": "ETH Tricolor Lanzamiento Road to Blockchain Week EC",
-    "to": "https://www.eventbrite.com/cc/launch-road-to-blockchain-week-ecuador-2023-2075369",
-    "sponsor": null,
-    "location": "Quito, Ecuador",
-    "description": "Introductory conferences on blockchain technology in Quito, at USFQ, UDLA, EPN.",
-    "startDate": "2023-05-15",
-    "endDate": "2023-05-20"
-  },
-  {
-    "title": "EDCON 2023",
-    "to": "https://edcon.io/",
-    "sponsor": null,
-    "location": "Podgorica, Montenegro",
-    "description": "EDCON is a non-profit annual global conference committed to serving the Ethereum ecosystem in boosting the communication and interaction of Ethereum communities worldwide",
-    "startDate": "2023-05-19",
-    "endDate": "2023-05-23"
-  },
-  {
-    "title": "BlockSplit",
-    "to": "https://www.blocksplit.net",
-    "sponsor": null,
-    "location": "Split, Croatia",
-    "description": "BlockSplit is the oldest web3 conference in the South-East Europe, taking place since 2018 and attracting over 600 attendees from all around the world.",
-    "startDate": "2023-05-23",
-    "endDate": "2023-05-24"
-  },
-  {
-    "title": "SpaghettETH II",
-    "to": "https://naples.spaghett-eth.com/",
-    "sponsor": "EF, Ambire, Zerion, ETHLocal, Yomi, Onlymusix, Oasis App",
-    "location": "Naples, Italy",
-    "description": "SpaghettETH is the umbrella of italian ETH communities, and annual touring conference. Join us in Naples and share your #rawStories about legal, security, narrative and education",
-    "startDate": "2023-05-24",
-    "endDate": "2023-05-26"
-  },
-  {
-    "title": "ETH Belgrade 2023",
-    "to": "https://ethbelgrade.rs/",
-    "sponsor": null,
-    "location": "Belgrade, Serbia",
-    "description": "ETH Belgrade is a playground for exploring Ethereum possibilities. As part of Belgrade Blockchain Week, this three-day conference gathers extraordinary minds and Ethereum enthusiasts to share knowledge and spark ideas that will ignite the whole ecosystem.",
-    "startDate": "2023-06-02",
-    "endDate": "2023-06-4"
+    "location": "Kyiv, Ukraine",
+    "description": "ETH Community in Ukraine to build, learn and share together. We are doing regular meetups and workshops - you can check on the website",
+    "startDate": "2023-06-24",
+    "endDate": "2023-06-24"
   },
   {
     "title": "ETHPrague",
@@ -171,15 +72,6 @@
     "endDate": "2023-09-24"
   },
   {
-    "title": "Ethereum Zürich",
-    "to": "https://ethereumzuri.ch/",
-    "sponsor": null,
-    "location": "Zurich, Switzerland",
-    "description": "Ethereum Zürich is a development and research-focused conference and hackathon, bringing the Ethereum community to one of the most crypto-friendly countries, and the cradle of blockchain research.",
-    "startDate": "2023-04-14",
-    "endDate": "2023-04-16"
-  },
-  {
     "title": "ETHVenice",
     "to": "https://ethvenice.com/",
     "sponsor": null,
@@ -187,15 +79,6 @@
     "description": "The event takes place in one of the most beautiful and historic cities in the world, Venice! A conference and hackathon open to all people who want to expand their knowledge, learn about this amazing world or get involved. We are waiting for you in many, let's connect.",
     "startDate": "2023-10-20",
     "endDate": "2023-10-22"
-  },
-  {
-    "title": "ETHDam",
-    "to": "https://ethdam.com/",
-    "sponsor": null,
-    "location": "Amsterdam, Netherlands",
-    "description": "ETHDam is a conference and hackathon gathering the best DeFi and Privacy builders in Amsterdam in May 2023.",
-    "startDate": "2023-05-20",
-    "endDate": "2023-05-21"
   },
   {
     "title": "Ethereum Singapore",
@@ -223,24 +106,6 @@
     "description": "Welcome to the latest greatest Ethereum event happening in Africa! Join the BlockTrain from Nairobi to celebrate an ETH-festival held underneath ancient Boabab trees in Kilifi.",
     "startDate": "2023-09-18",
     "endDate": "2023-09-24"
-  },
-  {
-    "title": "ETH Privacy – The First Hackathon around Privacy",
-    "to": "https://www.leadingprivacy.com/istanbul",
-    "sponsor": null,
-    "location": "Turkey, Istanbul",
-    "description": "Buidl on the future of privacy for crypto wallets and more.",
-    "startDate": "2023-04-27",
-    "endDate": "2023-04-30"
-  },
-  {
-    "title": "ETHSamba Hack",
-    "to": "https://ethsamba.org/",
-    "sponsor": null,
-    "location": "Rio de Janeiro, BR",
-    "description": "Bootcamp, Hackathon, and 1-day conference in the sun.",
-    "startDate": "2023-03-31",
-    "endDate": "2023-04-02"
   },
   {
     "title": "ETHMobile Miami",
@@ -322,5 +187,50 @@
     "description": "ETHGlobal Istanbul is going to be an event full of hacking, networking, side events and fun activites.",
     "startDate": "2023-11-17",
     "endDate": "2023-11-19"
+  },
+  {
+    "title": "ETH Hong Kong",
+    "to": "https://www.ethhongkong.co/",
+    "sponsor": null,
+    "location": "Hong Kong",
+    "description": "ETH Hong Kong will be held in Q4 2023. It is the frist-ever large-scale ETH Hong Kong event, which will be developer driven and full of hacking, panel discussions, boot camps and other fun activites.",
+    "startDate": "2023-10-14",
+    "endDate": "2023-10-15"
+  },
+  {
+    "title": "ETH Miami 2023",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami",
+    "description": "Join ETH Miami’s 2nd Annual Web3 Hackathon”.",
+    "startDate": "2023-10-27",
+    "endDate": "2023-10-29"
+  },
+  {
+    "title": "ETHGlobal Pragma",
+    "to": "https://ethglobal.com/events/pragma-waterloo",
+    "sponsor": null,
+    "location": "Waterloo, Canada",
+    "description": "ETHGlobal Pragma is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-06-22",
+    "endDate": "2023-06-22"
+  },
+  {
+    "title": "ETHGlobal Pragma",
+    "to": "https://ethglobal.com/events/pragma-paris",
+    "sponsor": null,
+    "location": "Paris, France",
+    "description": "ETHGlobal Pragma is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-07-20",
+    "endDate": "2023-07-20"
+  },
+  {
+    "title": "ETHMunich",
+    "to": "https://ethmunich.de/",
+    "sponsor": null,
+    "location": "Munich, Germany",
+    "description": "ETH Munich is a first time Hackathon organised by the local web3 community PretzelDAO",
+    "startDate": "2023-08-11",
+    "endDate": "2023-08-13"
   }
 ]

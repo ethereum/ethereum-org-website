@@ -207,5 +207,6 @@ ZK-STARK gilt als immun gegen die Bedrohung durch Quantencomputer, da es kollisi
 - [SNARKs vs. STARKS vs. Rekursive SNARKs](https://www.alchemy.com/overviews/snarks-vs-starks) – _Alchemy-Übersichten_
 - [Ein Null-Wissen-Beweis: Verbesserung des Datenschutzes auf einer Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitri Lawrenow_
 - [zk-SNARKs – Ein realistisches Null-Wissen-Beispiel mit Tiefgang](https://medium.com/coinmonks/zk-snarks-ein-realistisches-Zero-Knowledge-Beispiel-und-Deep-Dive-c5e6eaa7131c) – _Adam Luciano_
+- [ZK-STARKs – Schaffen Sie verifizierbares Vertrauen, sogar gegenüber Quantencomputern](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) – _Adam Luciano_
 - [Eine ungefähre Einführung, wie zk-SNARKs möglich sind](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Was ist Null-Wissen-Beweis und seine Rolle in der Blockchain?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

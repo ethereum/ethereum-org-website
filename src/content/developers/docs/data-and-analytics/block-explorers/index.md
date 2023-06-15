@@ -21,6 +21,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Ethplorer](https://ethplorer.io/) -_Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
+- [Rantom](https://rantom.app/) 
 - [Sirato](https://www.web3labs.com/sirato)
 - [EthVM](https://www.ethvm.com/)
 
@@ -234,6 +235,7 @@ The consensus layer top-level data includes the following:
 - [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data
 - [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
+- [Rantom](https://rantom.app/) - A user-friendly open-source DeFi & NFT transaction viewer for detailed insights
 
 ## Further reading {#further-reading}
 

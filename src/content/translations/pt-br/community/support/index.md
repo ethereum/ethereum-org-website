@@ -38,10 +38,10 @@ Procurando uma carteira Ethereum? [Veja a nossa lista completa de carteiras Ethe
 
 Desevolver um dapp pode ser difícil. Aqui estão alguns espaços voltados ao desenvolvimento com desenvolvedores Ethereum experientes dispostos a ajudar.
 
-- [discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
-- [Ethereum Stackexchange](https://ethereum.stackexchange.com/)
+- [Universidade Alchemy](https://university.alchemy.com/#starter_code)
+- [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
+- [Stackexchange do Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
-- [Web3 University](https://www.web3.university/)
 
 Você também pode encontrar documentação e guias de desenvolvimento em nossa seção [Recursos de desenvolvedor Ethereum](/developers/).
 

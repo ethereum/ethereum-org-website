@@ -16,29 +16,31 @@ Le diramazioni si verificano quando è necessario apportare aggiornamenti o modi
 Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I [client Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software per implementare le nuove regole di diramazione. Inoltre i creatori dei blocchi (miner in contesto Proof of Work e validatori in contesto Proof of Stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. [Maggiori informazioni sui meccanismi di consenso](/developers/docs/consensus-mechanisms/)
 
 Queste modifiche delle regole potrebbero creare una divisione temporanea nella rete. I nuovi blocchi potrebbero essere creati in base alle nuove regole o a quelle vecchie. Le diramazioni di solito sono concordate in anticipo in modo che i client adottino le modifiche all'unisono e la diramazione legata agli upgrade diventi la catena principale. Tuttavia, in rari casi, disaccordi sulle diramazioni possono causare una divisione permanente della rete, come è successo con la creazione di Ethereum Classic con la [diramazione OAD](#dao-fork).
-
 </ExpandableCard>
 
-Cerchi i prossimi aggiornamenti di protocollo? [Maggiori informazioni sui prossimi aggiornamenti a Ethereum](/roadmap/).
+Salta direttamente alle informazioni su alcuni degli ultimi aggiornamenti particolarmente importanti: [La Beacon Chain](/roadmap/beacon-chain/); [La Fusione](/roadmap/merge/) ed [EIP-1559](#london)
+
+Stai cercando i prossimi aggiornamenti di protocollo? [Scopri di più sui prossimi aggiornamenti, nella roadmap di Ethereum](/roadmap/).
 
 <Divider />
 
 ## 2023 {#2023}
 
-### Shanghai (_programmato_) {#shanghai}
+### Shanghai {#shanghai}
 
 <NetworkUpgradeSummary name="shanghai" />
 
 #### Riepilogo {#shanghai-summary}
 
-L'aggiornamento Shanghai porta i prelievi di staking al livello d'esecuzione. Insieme all'aggiornamento Capella, questo consentirà ai blocchi di accettare le operazioni di prelievo, che consentono agli staker di prelevare i propri ETH dalla Beacon Chain al livello d'esecuzione.
+L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuzione. Insieme all'aggiornamento Capella, questo abiliterà i blocchi ad accettare le operazioni di prelievo, che consentono agli staker di prelevare i propri ETH dalla Beacon Chain al livello d'esecuzione.
 
 <ExpandableCard title="EIP di Shanghai" contentPreview="Official improvements included in this upgrade.">
 
-- [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – _Avvia il riscaldamento dell'indirizzo `COINBASE`_
+- [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – _Avvia l'indirizzo `COINBASE` in modo warm_
 - [EIP-3855](https://eips.ethereum.org/EIPS/eip-3855) – _Nuova istruzione `PUSH0`_
 - [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) – _Limita e misura initcode_
 - [EIP-4895](https://eips.ethereum.org/EIPS/eip-4895) – _Prelievi push della beacon chain come operazioni_
+- [EIP-6049](https://eips.ethereum.org/EIPS/eip-6049) - _Rendi obsoleto `SELFDESTRUCT`_
 
 </ExpandableCard>
 
@@ -46,17 +48,20 @@ L'aggiornamento Shanghai porta i prelievi di staking al livello d'esecuzione. In
 
 ---
 
-### Capella (_programmato_) {#capella}
+### Capella {#capella}
 
 <NetworkUpgradeSummary name="capella" />
 
 #### Riepilogo {#capella-summary}
 
-L'aggiornamento Capella è il terzo grande aggiornamento al livello di consenso (Beacon Chain), che abilita i prelievi di staking. Capella avverrà contestualmente all'aggiornamento Shanghai sul livello d'esecuzione, per abilitare la funzionalità di prelievo in sincronia.
+L'aggiornamento di Capella è il terzo aggiornamento principale al livello del consenso (Beacon Chain) e ha abilitato i prelievi di staking. Capella è avvenuto contemporaneamente all'aggiornamento del livello di esecuzione di Shanghai, e ha reso disponibili le funzioni di prelievo da staking.
 
-Questo aggiornamento del livello di consenso comporta la possibilità, per gli staker che non hanno fornito le credenziali di prelievo con il loro deposito iniziale, di fornirle, abilitando quindi i prelievi.
+Questo aggiornamento del livello del consenso ha comportato la possibilità, per gli staker che non hanno fornito le credenziali di prelievo con il loro deposito iniziale, di fornirlo, consentendo dunque i prelievi.
 
-L'aggiornamento prevede anche la funzionalità di sweeping automatico dei conti, che elabora continuamente i conti dei validatori per eventuali pagamenti di premi o prelievi completi disponibili.<!-- - \[More on staking withdrawals\](/staking/withdrawals/). -->- [Leggi le specifiche dell'aggiornamento di Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+L'aggiornamento, inoltre, ha fornito la funzionalità di pulizia automatica dei conti, che elabora continuamente sui conti dei validatori qualsiasi pagamento di ricompense o prelievo completo disponibile.
+
+- [Maggiori informazioni sui prelievi in staking](/staking/withdrawals/).
+- [Leggi le specifiche dell'aggiornamento Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
 <Divider />
 
@@ -68,7 +73,7 @@ L'aggiornamento prevede anche la funzionalità di sweeping automatico dei conti,
 
 #### Riepilogo {#paris-summary}
 
-L'aggiornamento "Paris" è stato attivato dal passaggio da una blockchain proof-of-work una [difficoltà totale terminale](/glossary/#terminal-total-difficulty) di 58750000000000000000000. Questo è avvenuto al blocco 15537393 il 15 settembre 2022, innescando l'aggiornamento "Paris" dal blocco successivo. Paris è stata la transizione [alla Fusione](/roadmap/merge/): la sua caratteristica principale è lo spegnimento dell'algoritmo di consenso [proof-of-work](/developers/docs/consensus-mechanisms/pow) e l'attivazione della [proof-of-stake](/developers/docs/consensus-mechanisms/pos). Paris è stata un aggiornamento ai [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) (equivalente a Bellatrix sullo strato di consenso) che ha permesso loro di ricevere istruzioni dai loro [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients). Questo ha richiesto l'attivazione di una nuova serie di metodi API interni, collettivamente noti come l'[API Engine](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). Questo è stato probabilmente l'aggiornamento più significativo nella storia di Ethereum dopo [Homestead](#homestead)!
+L'aggiornamento Paris è stato attivato dal passaggio da una blockchain proof-of-work di una [difficoltà totale terminale](/glossary/#terminal-total-difficulty) di 58750000000000000000000. Questo è avvenuto al blocco 15537393 il 15 settembre 2022, innescando l'aggiornamento Paris dal blocco successivo. Paris è stata la transizione [alla Fusione](/roadmap/merge/): la sua caratteristica principale è lo spegnimento dell'algoritmo di mining [proof-of-work](/developers/docs/consensus-mechanisms/pow) e della relativa logica di consenso, e l'attivazione della [proof-of-stake](/developers/docs/consensus-mechanisms/pos). Paris è stata un aggiornamento ai [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) (equivalente a Bellatrix a livello di consenso) che ha permesso loro di ricevere istruzioni dai loro [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) collegati. Questo ha richiesto l'attivazione di una nuova serie di metodi API interni, collettivamente noti come l'[API Engine](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). Questo è stato probabilmente l'aggiornamento più significativo nella storia di Ethereum dopo [Homestead](#homestead)!
 
 - [Leggi le specifiche dell'aggiornamento Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
@@ -156,7 +161,7 @@ Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo 
 
 #### Riepilogo {#london-summary}
 
-L'aggiornamento di Londra ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che ha riformato il mercato delle commissioni sulle transazioni, oltre a modificare come sono gestiti i rimborsi di carburante e la pianificazione di [Ice Age](/glossary/#ice-age).
+L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che ha riformato il mercato delle commissioni sulle transazioni, oltre a modificare come sono gestiti i rimborsi di carburante e la pianificazione di [Ice Age](/glossary/#ice-age).
 
 - [Sei uno sviluppatore di dapp? Assicurati di aggiornare le tue librerie e i tuoi strumenti.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -204,7 +209,7 @@ L'aggiornamento Berlin ha ottimizzato i costi del carburante per certe azioni de
 
 #### Riepilogo {#beacon-chain-genesis-summary}
 
-La [Beacon Chain](/roadmap/beacon-chain/) necessita di 16.384 depositi da 32 ETH di staking per funzionare in sicurezza. Questo è successo il 27 novembre, quindi la Beacon Chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di una prima fase importante nel percorso per raggiungere la [visione di Ethereum](/roadmap/vision/).
+La [Beacon Chain](/roadmap/beacon-chain/) necessita di 16384 depositi da 32 ETH di staking per poter funzionare in sicurezza. Questo è successo il 27 novembre, quindi la Beacon Chain ha iniziato a produrre blocchi il 1° dicembre 2020. Questa è una prima fase importante nel percorso per raggiungere la [visione di Ethereum](/roadmap/vision/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
@@ -220,7 +225,7 @@ La [Beacon Chain](/roadmap/beacon-chain/) necessita di 16.384 depositi da 32 ETH
 
 #### Riepilogo {#deposit-contract-summary}
 
-Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [Rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [Beacon Chain](/roadmap/beacon-chain/), un importante [aggiornamento di Ethereum](/roadmap/).
+Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) all'ecosistema di Ethereum. Nonostante fosse un contratto della [Rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [Beacon Chain](/roadmap/beacon-chain/), un importante [aggiornamento di Ethereum](/roadmap/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -286,7 +291,7 @@ La diramazione Instanbul:
 
 #### Riepilogo {#constantinople-summary}
 
-La biforcazione Constantinople:
+La diramazione Constantinople:
 
 - Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione del Proof-of-Stake](#beacon-chain-genesis).
 - Ha ottimizzato il costo del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
@@ -371,7 +376,7 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 
 #### Riepilogo {#tangerine-whistle-summary}
 
-La diramazione Tangerine Whistle è stata la prima risposta agli attacchi denial of service (DoS) sulla rete (settembre/ottobre 2016) e ha reso possibile tra l'altro:
+La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di denial of service (DoS) alla rete (settembre/ottobre 2016) e ha incluso:
 
 - gestire problemi urgenti di salute della rete relativi ai codici delle operazioni con prezzi troppo bassi.
 
@@ -396,7 +401,7 @@ La diramazione OAD è stata pensata come risposta all'[attacco OAD del 2016](htt
 
 Questa iniziativa è stata votata dalla community di Ethereum. Ogni titolare di ETH ha potuto votare tramite una transazione su [una piattaforma di voto](http://v1.carbonvote.com/). La decisione di creare la diramazione ha ottenuto oltre l'85% dei voti.
 
-Alcuni miner si sono rifiutati di creare la diramazione perché l'incidente OAD non era un difetto nel protocollo. Si sono riuniti per creare [Ethereum Classic](https://ethereumclassic.org/).
+Alcuni miner rifiutarono di creare la diramazione perché l'incidente DAO non era un difetto nel protocollo. Si sono riuniti per creare [Ethereum Classic](https://ethereumclassic.org/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
 
@@ -408,7 +413,7 @@ Alcuni miner si sono rifiutati di creare la diramazione perché l'incidente OAD 
 
 #### Riepilogo {#homestead-summary}
 
-La diramazione Homestead guardava al futuro. Comprendeva diverse modifiche al protocollo e una modifica della rete che ha dato a Ethereum la possibilità di eseguire ulteriori aggiornamenti della rete.
+La diramazione Homestead guardava al futuro. Includeva diverse modifiche al protocollo e un cambiamento che ha dato a Ethereum la possibilità di eseguire ulteriori aggiornamenti della rete.
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
@@ -430,7 +435,7 @@ La diramazione Homestead guardava al futuro. Comprendeva diverse modifiche al pr
 
 #### Riepilogo {#frontier-thawing-summary}
 
-La diramazione frontier thawing ha introdotto il limite di 5000 unità di [carburante](/glossary/#gas) per [blocco](/glossary/#block) e ha impostato il prezzo predefinito del carburante a 51 [gwei](/glossary/#gwei). In questo sono state rese possibili le transazioni, che richiedono 21.000 unità di carburante. La [bomba di difficoltà](/glossary/#difficulty-bomb) è stata introdotta per assicurare una hard-fork futura verso il [proof-of-stake](/glossary/#pos).
+La diramazione Frontier Thawing ha innalzato il limite di 5.000 [gas](/glossary/#gas) per [blocco](/glossary/#block) e ha impostato il prezzo predefinito del gas a 51 [gwei](/glossary/#gwei). Ciò ha reso possibili le transazioni, che richiedono 21.000 gas. La [bomba di difficoltà](/glossary/#difficulty-bomb) è stata introdotta per assicurare una hard-fork futura verso il [proof-of-stake](/glossary/#pos).
 
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [Leggi l'Aggiornamento 1 del Protocollo di Ethereum](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
@@ -443,7 +448,7 @@ La diramazione frontier thawing ha introdotto il limite di 5000 unità di [carbu
 
 #### Riepilogo {#frontier-summary}
 
-Frontier era un'implementazione attiva ma a livello base del progetto di Ethereum. È seguita alla positiva fase di test Olympic. Era destinata agli utenti tecnici, in particolare agli sviluppatori. I [blocchi](/glossary/#block) avevano un limite di 5.000 unità di [carburante](/glossary/#gas). Questo periodo di "disgelo" (dall'inglese thawing) ha consentito ai miner di iniziare la propria operatività e ai primi utilizzatori di installare i client senza fretta.
+Frontier è stata un'implementazione operativa ma rudimentale del progetto Ethereum. È seguita alla positiva fase di test Olympic. Era destinata agli utenti tecnici, in particolare gli sviluppatori. I [blocchi](/glossary/#block) avevano un limite di 5.000 [gas](/glossary/#gas). Questo periodo di "disgelo" (dall'inglese thawing) ha consentito ai miner di iniziare la propria operatività e ai primi utilizzatori di installare i client senza fretta.
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
@@ -455,7 +460,7 @@ Frontier era un'implementazione attiva ma a livello base del progetto di Ethereu
 
 <NetworkUpgradeSummary name="etherSale" />
 
-Ether è stato ufficialmente messo in vendita per 42 giorni. Era acquistabile con BTC.
+Ether fu ufficialmente messo in vendita per 42 giorni. Lo potresti acquistare in Bitcoin.
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
 
