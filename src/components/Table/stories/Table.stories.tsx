@@ -33,7 +33,7 @@ export const Tables: Story = {
   render: (args) => (
     <>
       <TableComponent {...args} />
-      <TableComponent {...args} variant="minimal" />
+      <TableComponent {...args} variant="simple" />
       <TableComponent {...args} variant="striped" />
     </>
   ),
@@ -42,7 +42,7 @@ export const Tables: Story = {
 export const MockDocContent: Story = {
   render: () => (
     <>
-      <TableComponent children={<MdxEnergyConsumpData />} />
+      <TableComponent children={<MdxEnergyConsumpData />} variant="simple" />
       <TableComponent children={<MdxTypesOfBridgesData />} />
     </>
   ),

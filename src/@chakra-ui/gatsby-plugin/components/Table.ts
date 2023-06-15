@@ -18,9 +18,6 @@ const numericStyles = defineStyle({
 const baseStyle = defineMergeStyles(tableDefaultTheme.baseStyle, {
   table: {
     minW: "556px",
-    thead: {
-      bg: "backgroundHighlight",
-    },
     th: {
       borderBottom: "1px",
       borderColor: "primaryVisited",
@@ -68,10 +65,10 @@ const variantStriped = definePartsStyle({
   },
 })
 
-const variantMinimal = definePartsStyle({
+const variantSimple = definePartsStyle({
   table: {
     thead: {
-      bg: "transparent",
+      bg: "backgroundHighlight",
     },
   },
 })
@@ -79,7 +76,8 @@ const variantMinimal = definePartsStyle({
 export const Table = defineMultiStyleConfig({
   baseStyle,
   variants: {
+    minimal: {},
     striped: variantStriped,
-    minimal: variantMinimal,
+    simple: variantSimple,
   },
 })
