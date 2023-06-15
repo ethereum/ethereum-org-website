@@ -64,42 +64,6 @@ In passato, abbiamo premiato retroattivamente i nostri contributori più attivi 
 
 Pensiamo costantemente a modi nuovi e innovativi per premiare i nostri collaboratori, quindi restate sintonizzati!
 
-### A cosa stiamo lavorando {#our-projects}
-
-La nostra community di collaboratori sta traducendo attivamente diversi siti web e risorse ad elevato impatto per la community globale di Ethereum.
-
-#### Ethereum.org {#ethereumorg}
-
-![](./ethereum-org-screenshot.png)
-
-[Ethereum.org](/) è una risorsa didattica essenziale per la community di Ethereum nonché il fulcro principale del Programma di Traduzione. Date le dimensioni, l'ambito e la portata del sito web, è il sito di maggiore impatto da tradurre e consigliamo di iniziare da lì!
-
-Partecipa:
-
-- Unisciti al [progetto di traduzione di ethereum.org su Crowdin](https://crowdin.com/project/ethereum-org/invite)
-
-#### Launchpad di staking di Ethereum {#ethereum-staking-launchpad}
-
-![](./launchpad-screenshot.png)
-
-Il [Launchpad di Staking](https://launchpad.ethereum.org/en/) consente agli utenti di Ethereum di diventare validatori e aiutare a proteggere il futuro di Ethereum mettendo ETH in staking.
-
-Partecipa:
-
-- Visita la [pagina delle traduzioni del Launchpad](/contributing/translation-program/launchpad-translations/)
-- Unisciti al [progetto di traduzione del Launchpad su Crowdin](https://crowdin.com/project/ethereum-staking-launchpad)
-
-#### Blog della Ethereum Foundation {#ethereum-foundation-blog}
-
-![](./blog-screenshot.png)
-
-Il [blog della Ethereum Foundation](https://blog.ethereum.org/) è lo strumento principale di pubblicazione per molti team supportati dalla EF ed è la fonte di annunci, aggiornamenti, report, resoconti e altre comunicazioni pubbliche per la community di Ethereum.
-
-Partecipa:
-
-- Visita la [pagina delle traduzioni del blog](/contributing/translation-program/blog-translations/)
-- Unisciti al [progetto di traduzione del blog su Crowdin](https://crowdin.com/project/ethereum-foundation-blog)
-
 ### Guide e risorse {#guides-and-resources}
 
 Se stai contribuendo al Programma di Traduzione o stai pensando di partecipare, dovresti dare un'occhiata alle seguenti guide alla traduzione:

@@ -27,7 +27,7 @@ El método de escalado en cadena ("on-chain") requiere cambios en el protocolo d
 
 La fragmentación es el proceso de dividir horizontalmente una base de datos para repartir la carga. En el contexto de Ethereum, la fragmentación reducirá la congestión en la red e incrementará las transacciones por segundo creando nuevas cadenas conocidas como "fragmentos". Esto, a su vez, reducirá la carga de cada validador, ya que estos no tendrán que procesar la totalidad de las transacciones en la red.
 
-Obtenga más información sobre la [fragmentación](/upgrades/sharding/).
+Obtenga más información sobre la [fragmentación](/roadmap/danksharding/).
 
 ## Escalado fuera de cadena {#off-chain-scaling}
 

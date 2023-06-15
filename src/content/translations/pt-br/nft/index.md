@@ -5,7 +5,7 @@ lang: pt-br
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../assets/infrastructure_transparent.png
+image: ../../../../assets/infrastructure_transparent.png
 alt: Um logotipo Eth sendo exibido via holograma.
 summaryPoint1: Uma forma de representar qualquer coisa única como um ativo baseado no Ethereum.
 summaryPoint2: Os NFTs estão dando mais poder do que nunca aos criadores de conteúdo.
@@ -304,7 +304,7 @@ O Ethereum permite que NFTs funcionem por várias razões:
 
 ## O impacto ambiental dos NFTs {#environmental-impact-nfts}
 
-Criar e transferir NFTs são apenas transações Ethereum – cunhar, comprar, trocar ou interagir com NFTs não consome energia diretamente. Desde [A Fusão](/upgrades/merge), o Ethereum é uma blockchain de baixo consumo de energia, o que significa que o impacto ambiental do uso de NFTs é insignificante.
+Criar e transferir NFTs são apenas transações Ethereum – cunhar, comprar, trocar ou interagir com NFTs não consome energia diretamente. Desde [A Fusão](/roadmap/merge), o Ethereum é uma blockchain de baixo consumo de energia, o que significa que o impacto ambiental do uso de NFTs é insignificante.
 
 [Mais sobre o consumo de energia do Ethereum](/energy-consumption/).
 
@@ -341,7 +341,7 @@ Os problemas de segurança relacionados aos NFTs são mais frequentemente relaci
 
 ## Criar com NFTs {#build-with-nfts}
 
-A maioria dos NFTs é criada usando um padrão consistente conhecido como [ERC-721](/developers/docs/standards/tokens/erc-721/). No entanto, há outros padrões que você pode querer analisar. O padrão [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) permite o uso de tokens semifungíveis, particularmente úteis no mundo dos jogos. E, mais recentemente, o [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) foi proposto para tornar a cunhagem de NFTs muito mais eficiente. Esse padrão deixa você cunhar o quanto quiser em uma transação!
+A maioria dos NFTs é criada usando um padrão consistente conhecido como [ERC-721](/developers/docs/standards/tokens/erc-721/). No entanto, há outros padrões que você pode querer analisar. A norma [ERC-1155](/developers/docs/standards/tokens/erc-1155/) permite o uso de tokens semifungíveis, que são particularmente úteis no mundo dos jogos. E, mais recentemente, o [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) foi proposto para tornar a cunhagem de NFTs muito mais eficiente. Esse padrão deixa você cunhar o quanto quiser em uma transação!
 
 ## Leitura adicional {#further-reading}
 

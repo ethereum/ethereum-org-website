@@ -70,6 +70,7 @@
   "docs-nav-run-a-node": "Executar um nó",
   "docs-nav-client-diversity": "Diversidade dos clientes",
   "docs-nav-bootnodes": "Nós de inicialização",
+  "docs-nav-light-clients": "Clientes leves",
   "docs-nav-nodes-as-a-service": "Nós como serviço",
   "docs-nav-oracles": "Oráculos",
   "docs-nav-oracles-description": "Como as informações são inseridas na blockchain Ethereum",

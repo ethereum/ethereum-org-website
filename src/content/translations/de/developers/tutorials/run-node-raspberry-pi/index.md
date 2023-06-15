@@ -8,7 +8,7 @@ tags:
   - "Konsensebene"
   - "Nodes"
 lang: de
-skill: Fortgeschritten
+skill: advanced
 published: 2020-05-07
 source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: Verbinden Sie Ihren Raspberry Pi 4 mit einem Ethernetkabel, schließen Sie ihn anschließend an die SSD-Festplatte an und starten Sie das Gerät. Nun können Sie es als Ethereum-Node nutzen und eine Ausführungsebene oder Konsensebene (Beacon Chain/Validator) ausführen.
 
-[Mehr erfahren über Ethereum-Upgrades](/upgrades/)
+[Mehr erfahren über Ethereum-Upgrades](/roadmap/)
 
 Zunächst ein paar Hintergrundinformationen: Wie Sie bereits wissen, gibt es einige Speicherprobleme [[1]](/developers/tutorials/run-node-raspberry-pi/#references) bei dem Raspberry Pi 4-Image, da die Betriebssoftware Raspbian OS bisher nur mit der 32-Bit-Version erhältlich ist [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (das gilt jedenfalls für die Benutzeroberfläche). Obwohl wir das offizielle Betriebssystem bevorzugen würden, sind wir zu dem Entschluss gekommen, dass wir auf ein natives 64-Bit-Betriebssystem umsteigen müssen, um diese Probleme zu lösen.
 
-Außerdem unterstützen [Konsens-Clients](/upgrades/get-involved/#clients) keine 32-Bit-Binärdateien, so dass die Verwendung von Raspbian den Raspberry Pi 4 vom Betrieb eines Node auf Konsensebene (und der Möglichkeit des Staking) ausschließen würde.
+Außerdem unterstützen Konsens-Clients keine 32-Bit-Binärdateien, so dass die Verwendung von Raspbian den Raspberry Pi 4 vom Betrieb eines Node auf Konsensebene (und der Möglichkeit des Staking) ausschließen würde.
 
 Nach mehreren Tests veröffentlichen wir nun zwei verschiedene Images auf Basis von Ubuntu 20.04 64-Bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): Ausführungsebenen- und Konsensebenen-Editionen.
 

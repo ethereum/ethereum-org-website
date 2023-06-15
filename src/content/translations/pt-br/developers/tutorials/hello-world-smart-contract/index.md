@@ -9,7 +9,7 @@ tags:
   - "contratos inteligentes"
   - "primeiros passos"
   - "implementação"
-skill: iniciante
+skill: beginner
 lang: pt-br
 published: 2021-03-31
 ---

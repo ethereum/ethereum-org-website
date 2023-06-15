@@ -91,15 +91,18 @@ title="Dapp and smart contract developers"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-The Merge came with changes to consensus, which also includes changes related to:
+The Merge came with changes to consensus, which also includes changes related to:<
 
-- block structure
-- slot/block timing
-- opcode changes
-- sources of on-chain randomness
-- concept of _safe head_ and _finalized blocks_
+<ul>
+  <li>block structure</li>
+  <li>slot/block timing</li>
+  <li>opcode changes</li>
+  <li>sources of on-chain randomness</li>
+  <li>concept of <em>safe head</em> and <em>finalized blocks</em></li>
+</ul>
 
-For more information, check out this blog post by Tim Beiko on [How The Merge Impacts Ethereum’s Application Layer](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
+For more information, check out this blog post by Tim Beiko on <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">How The Merge Impacts Ethereum’s Application Layer</a>.
+
 </ExpandableCard>
 
 ## The Merge and energy consumption {#merge-and-energy}
@@ -115,26 +118,29 @@ The Merge also set the stage for further scalability upgrades not possible under
 <ExpandableCard
 title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+
 There are two types of Ethereum nodes: nodes that can propose blocks and nodes that don't.
 
 Nodes that propose blocks are only a small number of the total nodes on Ethereum. This category includes mining nodes under proof-of-work (PoW) and validator nodes under proof-of-stake (PoS). This category requires committing economic resources (such as GPU hash power in proof-of-work or staked ETH in proof-of-stake) in exchange for the ability to occasionally propose the next block and earn protocol rewards.
 
 The other nodes on the network (i.e. the majority) are not required to commit any economic resources beyond a consumer-grade computer with 1-2 TB of available storage and an internet connection. These nodes do not propose blocks, but they still serve a critical role in securing the network by holding all block proposers accountable by listening for new blocks and verifying their validity on arrival according to the network consensus rules. If the block is valid, the node continues propagating it through the network. If the block is invalid for whatever reason, the node software will disregard it as invalid and stop its propagation.
 
-Running a non-block-producing node is possible for anyone under either consensus mechanism (proof-of-work or proof-of-stake); it is _strongly encouraged_ for all users if they have the means. Running a node is immensely valuable for Ethereum and gives added benefits to any individual running one, such as improved security, privacy and censorship resistance.
+Running a non-block-producing node is possible for anyone under either consensus mechanism (proof-of-work or proof-of-stake); it is <em>strongly encouraged</em> for all users if they have the means. Running a node is immensely valuable for Ethereum and gives added benefits to any individual running one, such as improved security, privacy and censorship resistance.
 
-The ability for anyone to run their own node is _absolutely essential_ to maintaining the decentralization of the Ethereum network.
+The ability for anyone to run their own node is <em>absolutely essential</em> to maintaining the decentralization of the Ethereum network.
 
-[More on running your own node](/run-a-node/)
+<a href="/run-a-node/">More on running your own node</a>
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+
 Gas fees are a product of network demand relative to the capacity of the network. The Merge deprecated the use of proof-of-work, transitioning to proof-of-stake for consensus, but did not significantly change any parameters that directly influence network capacity or throughput.
 
-With a [rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), efforts are being focused on scaling user activity at [layer 2](/layer-2/), while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this. [More on gas and fees.](/developers/docs/gas/)
+With a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric roadmap</a>, efforts are being focused on scaling user activity at <a href="/layer-2/">layer 2</a>, while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this. <a href="/developers/docs/gas/">More on gas and fees.</a>
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -150,28 +156,26 @@ Proof-of-stake introduced the transaction finality concept that did not previous
 
 <ExpandableCard
 title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
-contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
-Staked ETH and staking rewards continue to be locked without the ability to withdraw. Withdrawals are planned for the upcoming Shanghai upgrade.
+contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+
+Initially after The Merge, stakers could only access fee tips and MEV that were earned as a result of block proposals. These rewards are credited to a non-staking account controlled by the validator (known as the <em>fee recipient</em>), and are available immediately. These rewards are separate from protocol rewards for performing validator duties.
+
+Since the Shanghai/Capella network upgrade, stakers can now designate a <em>withdrawal address</em> to start receiving automatic payouts of any excess staking balance (ETH over 32 from protocol rewards). This upgrade also enabled the ability for a validator to unlock and reclaim its entire balance upon exiting from the network.
+
+<a href="/staking/withdrawals/">More on staking withdrawals</a>
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Validators will not receive any liquid ETH rewards til the Shanghai upgrade when withdrawals are enabled.&quot;"
-contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
-This may seem counterintuitive to the above note that withdrawals are not enabled til the Shanghai upgrade, but validators DO have immediate access to the fee rewards/MEV earned during block proposals.
-
-The protocol issues ETH as a reward to validators for contributing to consensus. The consensus layer accounts for the newly issued ETH, where a validator has a unique address that holds its staked ETH and protocol rewards. This ETH is locked until Shanghai.
-
-ETH on the execution layer is accounted for separately from the consensus layer. When users execute transactions on Ethereum Mainnet, ETH must be paid to cover the gas, including a tip to the validator. This ETH is already on the execution layer, is NOT being newly issued by the protocol, and is available to the validator immediately (given a proper `fee recipient` address is provided to the client software).
-</ExpandableCard>
-
-<ExpandableCard
-title="Misconception: &quot;When withdrawals are enabled, stakers will all exit at once.&quot;"
+title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-After the Shanghai upgrade enables withdrawals, all validators will be incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
+Since the Shanghai/Capella upgrade enabled withdrawals, validators are incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
 
-An important caveat here, full validator exits are rate limited by the protocol, so only six validators may exit per epoch (every 6.4 minutes, so 1350 per day, or only ~43,200 ETH per day out of over 10 million ETH staked). This rate limit adjusts depending on the total ETH staked and prevents a mass exodus of funds. Furthermore, it prevents a potential attacker from using their stake to commit a slashable offense and exiting their entire staking balance in the same epoch before the protocol can enforce the slashing penalty.
+An important caveat here, full validator exits are rate limited by the protocol, and only so many validators may exit per epoch (every 6.4 minutes). This limit fluctuates depending on the number of active validators, but comes out to approximately 0.33% of total ETH staked can be exited from the network in a single day.
 
-The APR is intentionally dynamic, allowing a market of stakers to balance how much they're willing to be paid to help secure the network. When withdrawals are enabled, if the rate is too low, then validators will exit at a rate limited by the protocol. Gradually this will raise the APR for everyone who remains, attracting new or returning stakers yet again.
+This prevents a mass exodus of staked funds. Furthermore, it prevents a potential attacker with access to a large portion of the total ETH staked from committing a slashable offense and exiting/withdrawing all of the offending validator balances in the same epoch before the protocol can enforce the slashing penalty.
+
+The APR is also intentionally dynamic, allowing a market of stakers to balance how much they're willing to be paid to help secure the network. If the rate is too low, then validators will exit at a rate limited by the protocol. Gradually this will raise the APR for everyone who remains, attracting new or returning stakers yet again.
 </ExpandableCard>
 
 ## What happened to 'Eth2'? {#eth2}
@@ -204,9 +208,9 @@ Blocks are instead proposed by validating nodes that have staked ETH in return f
 
 ### The Merge and the Shanghai upgrade {#merge-and-shanghai}
 
-In order to simplify and maximize focus on a successful transition to proof-of-stake, The Merge upgrade did not include certain anticipated features such as the ability to withdraw staked ETH. The Shanghai upgrade is planned to follow The Merge, which will enable the ability for stakers to withdraw.
+In order to simplify and maximize focus on a successful transition to proof-of-stake, The Merge upgrade did not include certain anticipated features such as the ability to withdraw staked ETH. This functionality was enabled separately with the Shanghai/Capella upgrade.
 
-Stay up-to-date with the [Shanghai upgrade planning issue on GitHub](https://github.com/ethereum/pm/issues/450), or the [EF Research and Development Blog](https://blog.ethereum.org/category/research-and-development/). For those curious, learn more about [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101), presented by Vitalik at the April 2021 ETHGlobal event.
+For those curious, learn more about [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101), presented by Vitalik at the April 2021 ETHGlobal event.
 
 ### The Merge and sharding {#merge-and-data-sharding}
 

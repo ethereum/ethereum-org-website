@@ -154,7 +154,7 @@ Sekalipun pengembangan spesifikasi dan implementasinya selalu sepenuhnya merupak
 
 Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelola untuk mengusulkan perubahan akan diselaraskan. Proses untuk mengimplementasikan penggabungan ini [sudah dimulai](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Selengkapnya tentang penggabungan
 </ButtonLink>
 
@@ -175,7 +175,6 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelol
 Tata kelola di Ethereum tidaklah didefinisikan dengan kaku. Berbagai peserta komunitas memiliki sudut pandang berbeda mengenai ini. Berikut adalah beberapa di antaranya:
 
 - [Catatan tentang Tata Kelola Blockchain](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Tata Kelola di Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [Bagaimana cara kerja Tata Kelola Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Bagaimana cara kerja tata kelola Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Apa yang dimaksud dengan pengembang inti Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_

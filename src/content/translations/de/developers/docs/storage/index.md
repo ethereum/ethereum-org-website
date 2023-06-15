@@ -96,7 +96,7 @@ PoW-basiert:
 
 PoS-basiert:
 
-- [Die Beacon Chain](/upgrades/beacon-chain/)
+- [Die Beacon Chain](/roadmap/beacon-chain/)
 - Filecoin
 - 0Chain
 

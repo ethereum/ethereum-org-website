@@ -97,7 +97,7 @@ ethereum.org 负责做出设计决策。
 - 确保所有上架的钱包和去中心化应用程序仍然符合我们的标准
 - 验证所建议的产品没有比当前上架的产品更符合我们的标准
 
-如果您想对此提供帮助，可以开展上述两项检查并让我们知道检查结果。 [创建一个提议](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)或发送电子邮件至 [website@ethereum.org](mailto:website@ethereum.org)
+如果您想对此提供帮助，可以开展上述两项检查并让我们知道检查结果。 [创建一个提议](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request)或发送电子邮件至 [website@ethereum.org](mailto:website@ethereum.org)
 
 _我们也在调研投票的可能性，以便社区能够表明他们的喜好并且突显出最佳产品供我们进行推荐。_
 

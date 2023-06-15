@@ -2,8 +2,19 @@ import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "@emotion/styled"
-import { Badge } from "@chakra-ui/react"
+import {
+  Badge,
+  chakra,
+  Divider,
+  Flex,
+  Heading,
+  HeadingProps,
+  Text,
+  TextProps,
+  useToken,
+  Kbd,
+  Box,
+} from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
@@ -11,6 +22,7 @@ import Codeblock from "../components/Codeblock"
 import TutorialMetadata from "../components/TutorialMetadata"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
+import EnvWarningBanner from "../components/EnvWarningBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
@@ -19,17 +31,7 @@ import TableOfContents, {
 } from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import CallToContribute from "../components/CallToContribute"
-import {
-  Divider,
-  Paragraph,
-  Header1,
-  Header2,
-  Header3,
-  Header4,
-  ListItem,
-  KBD,
-} from "../components/SharedStyledComponents"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
@@ -38,84 +40,157 @@ import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
 
-const Page = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem 0 0;
-  background: ${(props) => props.theme.colors.ednBackground};
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  background-color: ${(props) => props.theme.colors.ednBackground};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 2rem 0rem;
-    padding: 0;
-    background: ${(props) => props.theme.colors.background};
-  }
-`
-
-const DesktopTableOfContents = styled(TableOfContents)`
-  padding-top: 4rem;
-`
-const MobileTableOfContents = styled(TableOfContents)`
-  margin-bottom: 2rem;
-`
-
 // Apply styles for classes within markdown here
-const ContentContainer = styled.article`
-  flex: 1 1 ${(props) => props.theme.breakpoints.m};
-  max-width: 1000px;
-  background: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin: 2rem 2rem;
-  padding: 4rem 4rem;
-  margin-bottom: 6rem;
-  border-radius: 4px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 2.5rem 0rem;
-    padding: 3rem 2rem;
-    box-shadow: none;
-    width: 100%;
-  }
+const ContentContainer = (props) => {
+  const boxShadow = useToken("colors", "tableBoxShadow")
+  const borderColor = useToken("colors", "primary")
 
-  .featured {
-    padding-left: 1rem;
-    margin-left: -1rem;
-    border-left: 1px dotted ${(props) => props.theme.colors.primary};
-  }
+  return (
+    <Box
+      as="article"
+      maxW="1000px"
+      minW={0}
+      background="background"
+      boxShadow={{ base: "none", lg: boxShadow }}
+      m={{ base: "2.5rem 0rem", lg: "2rem 2rem 6rem" }}
+      p={{ base: "3rem 2rem", lg: 16 }}
+      borderRadius="4px"
+      {...props}
+      sx={{
+        ".featured": {
+          pl: "1rem",
+          ml: "-1rem",
+          borderLeft: `1px dotted ${borderColor}`,
+        },
+        ".citation": {
+          p: { color: "text200" },
+        },
+      }}
+    />
+  )
+}
 
-  .citation {
-    p {
-      color: ${(props) => props.theme.colors.text200};
-    }
-  }
-`
+const H1 = (props: HeadingProps) => {
+  const monospaceFont = useToken("fonts", "monospace")
+  return (
+    <Heading
+      as="h1"
+      fontWeight="bold"
+      fontFamily={monospaceFont}
+      textTransform="uppercase"
+      fontSize={{ base: "1.75rem", lg: "2.5rem" }}
+      lineHeight="1.4"
+      _before={{
+        content: '""',
+        display: "block",
+        h: "140px",
+        mt: "-140px",
+        visibility: "hidden",
+      }}
+      sx={{
+        a: { display: "none" },
+      }}
+      {...props}
+    />
+  )
+}
 
-const H1 = styled(Header1)`
-  font-size: 2.5rem;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1.75rem;
-  }
-`
+const H2 = (props: HeadingProps) => {
+  const monospaceFont = useToken("fonts", "monospace")
 
-const H2 = styled(Header2)`
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-`
+  return (
+    <Heading
+      as="h2"
+      fontFamily={monospaceFont}
+      textTransform="uppercase"
+      fontWeight="bold"
+      fontSize={{ base: "2xl", md: "2rem" }}
+      sx={{ position: "inherit !important" }}
+      lineHeight="1.4"
+      _before={{
+        content: '""',
+        display: "block",
+        h: "120px",
+        mt: "-120px",
+        visibility: "hidden",
+      }}
+      {...props}
+    />
+  )
+}
 
-const H3 = styled(Header3)`
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-`
-const H4 = styled(Header4)`
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-`
+const H3 = (props: HeadingProps) => {
+  return (
+    <Heading
+      as="h3"
+      fontWeight={{ base: "semibold" }}
+      fontSize={{ base: "1rem", md: "1.5rem" }}
+      lineHeight="1.4"
+      sx={{ position: "inherit !important" }}
+      _before={{
+        content: '""',
+        display: "block",
+        h: "120px",
+        mt: "-120px",
+        visibility: "hidden",
+      }}
+      {...props}
+    />
+  )
+}
+
+const H4 = (props: HeadingProps) => {
+  return (
+    <Heading
+      as="h4"
+      fontWeight={{ base: "semibold" }}
+      fontSize={{ base: "1rem", md: "1.25rem" }}
+      lineHeight="1.4"
+      sx={{ position: "unset !important" }}
+      _before={{
+        content: '""',
+        display: "block",
+        h: "120px",
+        mt: "-120px",
+        visibility: "hidden",
+      }}
+      {...props}
+    />
+  )
+}
+
+const StyledDivider = (props) => (
+  <Divider
+    my={16}
+    w="10%"
+    h="1"
+    opacity="1"
+    backgroundColor="homeDivider"
+    {...props}
+  />
+)
+
+const Paragraph = (props: TextProps) => (
+  <Text as="p" mt={8} mb={4} mx={0} color="text300" fontSize="md" {...props} />
+)
+
+const ListItem = (props) => {
+  return <chakra.li color="text300" {...props} />
+}
+
+const KBD = (props) => {
+  const borderColor = useToken("colors", "primary")
+
+  return (
+    <Kbd
+      verticalAlign="middle"
+      p="0.15rem 0.45rem"
+      borderRadius="2px"
+      border={`1px solid ${borderColor}`}
+      {...props}
+    />
+  )
+}
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
@@ -132,22 +207,15 @@ const components = {
   table: MarkdownTable,
   ButtonLink,
   InfoBanner,
+  EnvWarningBanner,
   Card,
-  Divider,
+  StyledDivider,
   SectionNav,
   Badge,
   CallToContribute,
   Emoji,
   YouTube,
 }
-
-const Contributors = styled(FileContributors)`
-  margin-top: 3rem;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 1rem;
-  border-radius: 4px;
-`
 
 const TutorialPage = ({
   data: { siteData, pageData: mdx },
@@ -173,6 +241,7 @@ const TutorialPage = ({
   const { editContentUrl } = siteData.siteMetadata || {}
   const hideEditButton = !!mdx.frontmatter.hideEditButton
   const absoluteEditPath = `${editContentUrl}${relativePath}`
+  const borderColor = useToken("colors", "border")
   return (
     <>
       {showPostMergeBanner && (
@@ -180,7 +249,14 @@ const TutorialPage = ({
           translationString={postMergeBannerTranslationString!}
         />
       )}
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Flex
+        w="100%"
+        borderBottom={`1px solid ${borderColor}`}
+        dir={isRightToLeft ? "rtl" : "ltr"}
+        m={{ base: "2rem 0rem", lg: "0 auto" }}
+        p={{ base: "0", lg: "0 2rem 0 0" }}
+        background={{ base: "background", lg: "ednBackground" }}
+      >
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
@@ -189,30 +265,37 @@ const TutorialPage = ({
         <ContentContainer>
           <H1>{mdx.frontmatter.title}</H1>
           <TutorialMetadata tutorial={mdx} />
-          <MobileTableOfContents
+          <TableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
             isMobile
+            pt={8}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-          <Contributors
+          <FileContributors
             relativePath={relativePath}
             editPath={absoluteEditPath}
+            mt={12}
+            p={2}
+            borderRadius="4px"
+            border={`1px solid ${borderColor}`}
+            background="ednBackground"
           />
           <FeedbackCard />
         </ContentContainer>
         {tocItems && (
-          <DesktopTableOfContents
+          <TableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
             hideEditButton={hideEditButton}
+            pt={16}
           />
         )}
-      </Page>
+      </Flex>
     </>
   )
 }

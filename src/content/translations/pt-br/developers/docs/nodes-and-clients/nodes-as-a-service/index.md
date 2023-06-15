@@ -15,7 +15,7 @@ Se você ainda não sabe o que são os nós e os clientes e como eles funcionam,
 
 ## Participantes {#stakoooooooooooooors}
 
-Os participantes individuais devem executar sua própria infraestrutura, em vez de depender de provedores de terceiros. Isso significa executar um cliente de execução acoplado a um cliente de consenso. Antes da [Fusão](/upgrades/merge), era possível executar apenas um cliente de consenso e usar um provedor centralizado para dados de execução; isso não é mais possível: um participante solo deve executar ambos os clientes. No entanto, há serviços disponíveis para facilitar este processo.
+Os participantes individuais devem executar sua própria infraestrutura, em vez de depender de provedores de terceiros. Isso significa executar um cliente de execução acoplado a um cliente de consenso. Antes da [Fusão](/roadmap/merge) (The Merge), era possível executar apenas um cliente de consenso e usar um provedor centralizado para dados de execução. Porém, isso não é mais possível: um participante individual deve executar ambos os clientes. No entanto, há serviços disponíveis para facilitar este processo.
 
 [Leia mais sobre execução de um nó](/developers/docs/nodes-and-clients/run-a-node/).
 
@@ -315,15 +315,27 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - O máximo de velocidade na obtenção do novo bloco e leitura da cadeia de blocos
     - O melhor preço por garantia de chamada de API
 
+[**Zeeve**](https://www.zeeve.io/)
+
+- [Documentação](https://www.zeeve.io/docs/)
+- Recursos
+  - Plataforma de automação sem código de nível empresarial que fornece implantação, monitoramento e gerenciamento de nós e redes da Blockchain
+  - Mais de 30 protocolos e integrações, e adicionando mais
+  - Valor adicionado à infraestrutura de serviços web3 como armazenamento decentralizado, identidade decentralizada e APIs de dados do Blockchain Ledger para casos reais
+  - Suporte 24/7 e monitoramento proativo garantem a saúde dos nós o tempo todo.
+  - Os pontos de conclusão RPC oferecem acesso autenticado às APIs, facilitam o gerenciamento livre com painel intuitivo e análises.
+  - Fornece nuvem gerenciada e traz suas próprias opções de nuvem para escolher, além de oferecer suporte a todos os maiores provedores de nuvem como AWS, Azure, Google Cloud, Digital Ocean e local.
+  - Usamos roteamento inteligente para sempre atingir o nó mais próximo de seu usuário
+
 ## Leitura adicional {#further-reading}
 
 - [Lista dos serviços de nós Ethereum](https://ethereumnodes.com/)
 
 ## Tópicos relacionados {#related-topics}
 
-- [Nós e clientes](/developers/docs/nodes-and-clients/)
+- [ Nós e clientes](/developers/docs/nodes-and-clients/)
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Introdução ao desenvolvimento de Ethereum usando Alquimia](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Introdução ao desenvolvimento do Ethereum usando o Alquimia](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guia para enviar transações usando web3 e Alquimia](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

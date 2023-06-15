@@ -106,4 +106,4 @@ Wakati mwingine miamala hugita kwenye Ethereum kama umetoa kiwango kidogo cha ma
 
 #### Nawezaje kuchimba Ethereum? {#mining-ethereum}
 
-Hatushauri kununua maunzi ya kuchimba Ethereum kama bado haujaanza kuchimba. Kwenye ~Q3. Q4 2022, [Muungano](/upgrades/merge/) utatokea, utabadilisha Ethereum kutoka kwenye uthibitisho-wa-kazi kwenda kwenye usthibitisho-wa-hisa. Haya mabadiliko yatafanya uchimbaji wa Ethereum kutowezekana tena.
+Hatushauri kununua maunzi ya kuchimba Ethereum kama bado haujaanza kuchimba. Kwenye ~Q3. Q4 2022, [Muungano](/roadmap/merge/) utatokea, utabadilisha Ethereum kutoka kwenye uthibitisho-wa-kazi kwenda kwenye usthibitisho-wa-hisa. Haya mabadiliko yatafanya uchimbaji wa Ethereum kutowezekana tena.

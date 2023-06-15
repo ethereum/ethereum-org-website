@@ -24,7 +24,6 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
-import BugBountyBanner from "../components/Banners/BugBountyBanner"
 import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp, Context } from "../types"
@@ -70,7 +69,7 @@ const H2 = (props: ChildOnlyProp) => (
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <Box
+  <Text
     fontSize="1.5rem"
     lineHeight="140%"
     color="text200"
@@ -445,8 +444,6 @@ const BugBountiesPage = ({
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      {/* TODO: Remove April 6 */}
-      <BugBountyBanner />
       <Content>
         <HeroCard>
           <HeroContainer>
@@ -924,7 +921,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-upgrades-get-involved-bug-bounty", "common"] }
+        ns: { in: ["page-bug-bounty", "common"] }
       }
     ) {
       edges {

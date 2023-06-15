@@ -37,7 +37,7 @@ Kama wewe sio msanidi programu, inaweza kua vigumu kujua ni wapi unapaswa kuanzi
 ### Andika maudhui kuhusu Ethereum {#write-content}
 
 - Ethereum inahitaji waandishi wazuri wanaoweza kuelezea thamani yake kwa kutumia lugha rahisi
-- Hauko tayari kuchapisha makala yako pekee? Zingattia kuchangia kwenye maudhui yaliopo kwenye vyanzo vya jumuiya kama [EthHub](https://docs.ethhub.io/), ama pendekeza maudhui mapya kwa ajili ya ethereum.org!
+- Hauko tayari kuchapisha makala yako pekee? Zingattia kuchangia kwenye maudhui yaliopo kwenye vyanzo vya jumuiya kama, ama pendekeza maudhui mapya kwa ajili ya ethereum.org!
 
 ### Toa msaada wa kuandika muhtasari kwenye mikutano ya jumuiya {#take-notes}
 

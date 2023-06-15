@@ -304,7 +304,7 @@ Ethereum umožňuje NFT fungovat z několika důvodů:
 
 ## Dopad NFT na životní prostředí {#environmental-impact-nfts}
 
-Vytváření a převod NFT jsou pouze transakce na síti Ethereum. Těžba, nákup, výměna nebo interakce s NFT přímo nespotřebovává energii. Od aktualizace [The Merge](/upgrades/merge) je Ethereum nízkoenergetickým blockchainem, což znamená, že dopad NFT na životní prostředí je zanedbatelný.
+Vytváření a převod NFT jsou pouze transakce na síti Ethereum. Těžba, nákup, výměna nebo interakce s NFT přímo nespotřebovává energii. Od aktualizace [The Merge](/roadmap/merge) je Ethereum nízkoenergetickým blockchainem, což znamená, že dopad NFT na životní prostředí je zanedbatelný.
 
 [Více o energetické spotřebě Etherea](/energy-consumption/).
 
@@ -341,7 +341,7 @@ Bezpečnostní otázky týkající se NFT se nejčastěji týkají podvodů s ph
 
 ## Budujte s NFT {#build-with-nfts}
 
-Většina NFT je vytvořena pomocí konzistentní normy známé jako [ERC-721](/developers/docs/standards/tokens/erc-721/). Existují však i jiné normy, o kterých byste se mohli informovat. Norma [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) umožňuje polozaměnitelné tokeny, které jsou obzvláště užitečné v oblasti her. A v poslední době bylo navržena norma [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309), aby byla těžba NFT mnohem efektivnější. Tato norma vám umožňuje těžit tolik, kolik chcete, v jedné transakci!
+Většina NFT je vytvořena pomocí konzistentní normy známé jako [ERC-721](/developers/docs/standards/tokens/erc-721/). Existují však i jiné normy, o kterých byste se mohli informovat. Norma [ERC-1155](/developers/docs/standards/tokens/erc-1155/) umožňuje polozaměnitelné tokeny, které jsou obzvláště užitečné v oblasti her. A v poslední době bylo navržena norma [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309), aby byla těžba NFT mnohem efektivnější. Tato norma vám umožňuje těžit tolik, kolik chcete, v jedné transakci!
 
 ## Další čtení {#further-reading}
 

@@ -43,8 +43,6 @@
   "page-get-eth-security": "しかし、これはまた、資金の安全性を真剣に考える必要があることを意味します。ETHでは、銀行にお金を預けるのではなく、あなた自身を信頼することになります。",
   "page-get-eth-smart-contract-link": "スマートコントラクトの詳細",
   "page-get-eth-swapping": "あなたのトークンを他の人のETHに交換します。その逆も同様です。",
-  "page-get-eth-traditional-currencies": "従来の通貨で購入",
-  "page-get-eth-traditional-payments": "売り手から直接、従来の支払い方法でETHを購入してください。",
   "page-get-eth-try-dex": "分散型取引所(DEX)を試す",
   "page-get-eth-use-your-eth": "あなたのETHを使う",
   "page-get-eth-use-your-eth-dapps": "さて、ETHを手に入れたので、いくつかのイーサリアムアプリケーション(dapps) をチェックしてみましょう。金融、ソーシャルメディア、ゲーム、その他多くのカテゴリのdappsがあります。",
@@ -63,6 +61,6 @@
   "page-get-eth-your-address-desc": "ウォレットをダウンロードすると、パブリックETHアドレスが作成されます。以下のようになります：",
   "page-get-eth-your-address-desc-3": "これはあなたのメールアドレスのようなものと考えてください。しかし、メールの代わりにETHを受け取ることができます。取引所からウォレットへETHを送金したい場合は、送金先としてあなたのアドレスを使用してください。送る前に必ず再確認しておきましょう！",
   "page-get-eth-your-address-wallet-link": "ウォレットをチェックする",
-  "listing-policy-raise-issue-link": "問題を報告する",
+  "listing-policy-raise-issue-link": "問題を提起する",
   "page-find-wallet-last-updated": "最終更新日"
 }

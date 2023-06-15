@@ -35,6 +35,8 @@ Les ponts permettent :
 - aux utilisateurs d'accéder à de nouvelles plateformes et de tirer parti des avantages de différentes chaînes.
 - aux développeurs de différents écosystèmes de blockchain de collaborer et de créer de nouvelles plateformes pour les utilisateurs.
 
+[Comment transférer des jetons aux réseaux de secondes couches](/guides/how-to-use-a-bridge/)
+
 <Divider />
 
 ## Exemple d'utilisation d'un pont {#bridge-use-cases}

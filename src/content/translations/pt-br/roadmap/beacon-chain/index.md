@@ -15,7 +15,7 @@ summaryPoint3: A Beacon Chain introduziu a lógica de consenso e o protocolo de 
 
 ## O que era a Beacon Chain? {#what-is-the-beacon-chain}
 
-Beacon Chain foi o nome original dado a cadeia de blocos de prova de participação lançada em 2020. Ela foi criada para garantir que a lógica de consenso de prova de participação era sólida e sustentável antes de implementá-la na rede principal do Ethereum. Portanto, ela existia paralelamente à prova de trabalho do Ethereum. Desligar a prova de trabalho e mudar para a prova de participação no Ethereum exigiu instruir a Beacon Chain a aceitar transações da cadeia original do Ethereum, juntá-las em blocos e então organizá-las em uma cadeia de blocos usando um mecanismo de consenso baseado em prova de participação. Ao mesmo tempo, os nós da rede original do Ethereum desligaram sua lógica de consenso, propagação de blocos e mineração, passando essas funções para a Beacon Chain. Este evento ficou conhecido como [A Fusão](/roadmap/merge/). Assim que A Fusão aconteceu, não haviam mais duas cadeias de blocos, mas apenas uma cadeia de prova de participação do Ethereum.
+Beacon Chain foi o nome original dado a cadeia de blocos de prova de participação lançada em 2020. Ela foi criada para garantir que a lógica de consenso de prova de participação era sólida e sustentável antes de implementá-la na rede principal do Ethereum. Portanto, ela existia paralelamente à prova de trabalho do Ethereum. Desligar a prova de trabalho e mudar para a prova de participação no Ethereum exigiu instruir a Beacon Chain a aceitar transações da cadeia original do Ethereum, juntá-las em blocos e então organizá-las em uma cadeia de blocos usando um mecanismo de consenso baseado em prova de participação. Ao mesmo tempo, os nós da rede original do Ethereum desligaram sua lógica de consenso, propagação de blocos e mineração, passando essas funções para a Beacon Chain. Este evento ficou conhecido como [The Merge](/roadmap/merge/). Assim que A Fusão aconteceu, não haviam mais duas cadeias de blocos, mas apenas uma cadeia de prova de participação do Ethereum.
 
 ## O que a Beacon Chain fazia? {#what-does-the-beacon-chain-do}
 
@@ -23,7 +23,7 @@ Beacon Chain foi o nome dado a um livro de contas que conduziu e coordenou a red
 
 Ela introduziu o mecanismo de consenso (ou "camada de consenso") que substituiu a mineração de prova de trabalho no Ethereum e trouxe melhorias significativas em relação ao antigo modelo.
 
-A Beacon Chain foi um componente fundamental para [o Ethereum seguro, amigo do ambiente e escalável que temos agora](/roadmap/vision/).
+A Beacon Chain foi um componente fundamental para [o Ethereum seguro, amigo do ambiente e escalonável que temos agora](/roadmap/vision/).
 
 ## O impacto da Beacon Chain {#beacon-chain-features}
 

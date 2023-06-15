@@ -36,6 +36,7 @@ export type Lang =
   | "ms"
   | "nl"
   | "nb"
+  | "pcm"
   | "ph"
   | "pl"
   | "pt"
@@ -51,7 +52,7 @@ export type Lang =
   | "th"
   | "tr"
   | "uk"
-  | "ur-in"
+  | "ur"
   | "uz"
   | "vi"
   | "zh"
@@ -59,7 +60,7 @@ export type Lang =
 
 export interface Language {
   code: Lang
-  hrefLang: string
+  crowdinCode: string
   name: string
   localName: string
   langDir: Direction

@@ -64,7 +64,7 @@ No entanto, normalmente os usuários são honestos e fazem reivindicações corr
 
 Ela também deve fornecer uma prova Merkle verificando que, uma transação que criou seus fundos na cadeia Plasma foi incluída em um bloco. Isso é necessário para iterações de Plasma, como o [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), que utiliza um modelo [Transação de Saída Não Gasta (Unspent Transaction Output, UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Outros, como [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), representam fundos como [tokens não fungíveis](/developers/docs/standards/tokens /erc-721/) em vez de UTXOs. A retirada, neste caso, requer a prova de propriedade de tokens na cadeia Plasma. Isso é feito submetendo as duas últimas transações envolvendo o token e fornecendo uma prova Merkle verificando a inclusão dessas transações em um bloco.
+Outros, como [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), representam fundos como [tokens não fungíveis](/developers/docs/standards/tokens/erc-721/) em vez de UTXOs. A retirada, neste caso, requer a prova de propriedade de tokens na cadeia Plasma. Isso é feito submetendo as duas últimas transações envolvendo o token e fornecendo uma prova Merkle verificando a inclusão dessas transações em um bloco.
 
 O usuário também deve adicionar um vínculo ao pedido de retirada como garantia de comportamento honesto. Se um desafiante provar que o pedido de retirada de Alice é inválido, seu vínculo é reduzido e parte dele vai para o desafiante como recompensa.
 
@@ -150,7 +150,7 @@ Inversamente, as cadeias Plasma derivam sua segurança da rede principal. Isto a
 
 ### Plasma vs fragmentação (sharding) {#plasma-vs-sharding}
 
-Tanto as cadeias Plasma quanto as [cadeias de shard](/upgrades/sharding/) publicam periodicamente provas criptográficas para a rede principal do Ethereum. No entanto, ambas têm propriedades de segurança diferentes.
+Tanto as cadeias Plasma quanto as [cadeias de shard](/roadmap/danksharding/) publicam periodicamente provas criptográficas para a rede principal do Ethereum. No entanto, ambas têm propriedades de segurança diferentes.
 
 As cadeias de shard gravam "cabeçalhos de agrupamento" na rede principal contendo informações detalhadas sobre cada shard de dados. Os nós na rede principal verificam e garantem a validade de shards de dados, reduzindo a possibilidade de transições de shards inválidos e protegendo a rede contra atividades maliciosas.
 

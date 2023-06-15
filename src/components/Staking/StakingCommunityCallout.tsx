@@ -2,6 +2,7 @@ import React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
 import { graphql, useStaticQuery } from "gatsby"
+import { FlexProps } from "@chakra-ui/react"
 
 import ButtonLink from "../ButtonLink"
 import CalloutBanner from "../CalloutBanner"
@@ -9,10 +10,6 @@ import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
-
-const StyledCallout = styled(CalloutBanner)`
-  margin: 4rem 0;
-`
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -28,7 +25,7 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-export interface IProps {
+export interface IProps extends FlexProps {
   id?: string
 }
 
@@ -50,7 +47,7 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
   `)
 
   return (
-    <StyledCallout
+    <CalloutBanner
       {...props}
       image={getImage(image)!}
       alt={t("page-staking-image-alt")}
@@ -95,7 +92,7 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
           <Translation id="rollup-component-website" />
         </StyledButtonLink>
       </ButtonContainer>
-    </StyledCallout>
+    </CalloutBanner>
   )
 }
 

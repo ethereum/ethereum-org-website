@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../assets/infrastructure_transparent.png
+image: ../../../../assets/infrastructure_transparent.png
 alt: 通过全息图显示的以太币徽标。
 summaryPoint1: 一种用以太坊资产表示任何独特事物的方法。
 summaryPoint2: 非同质化代币正在前所未有地向内容创作人赋予更多权利。
@@ -304,7 +304,7 @@ Decentraland 是一款虚拟现实游戏，甚至允许玩家购买代表虚拟�
 
 ## 非同质化代币的环境影响 {#environmental-impact-nfts}
 
-创建和转让非同质化代币仅仅是以太坊交易而已 - 铸造、购买、交换非同质化代币或与其互动并不直接消耗能源。 [合并](/upgrades/merge)后，以太坊成为一种低能耗区块链，这意味着使用非同质化代币对环境的影响微不足道。
+创建和转让非同质化代币仅仅是以太坊交易而已 - 铸造、购买、交换非同质化代币或与其互动并不直接消耗能源。 [合并](/roadmap/merge)后，以太坊成为一种低能耗区块链，这意味着使用非同质化代币对环境的影响微不足道。
 
 [关于以太坊能源消耗的更多信息](/energy-consumption/)。
 
@@ -341,7 +341,7 @@ Decentraland 是一款虚拟现实游戏，甚至允许玩家购买代表虚拟�
 
 ## 开发非同质化代币 {#build-with-nfts}
 
-大多数非同质化代币都使用一个统一标准 [ERC-721](/developers/docs/standards/tokens/erc-721/) 创建。 然而，你可能也想了解其他标准。 [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) 标准涵盖半同质化代币，这种代币在游戏领域特别有用。 最近提出的 [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) 标准显著提升了铸造非同质化代币的效率。 该标准允许你在一次交易中随意铸币！
+大多数非同质化代币都使用一个统一标准 [ERC-721](/developers/docs/standards/tokens/erc-721/) 创建。 然而，你可能也想了解其他标准。 [ERC-1155](/developers/docs/standards/tokens/erc-1155/) 标准涵盖半同质化代币，这种代币在游戏领域特别有用。 最近提出的 [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) 标准显著提升了铸造非同质化代币的效率。 该标准允许你在一次交易中随意铸币！
 
 ## 延伸阅读 {#further-reading}
 

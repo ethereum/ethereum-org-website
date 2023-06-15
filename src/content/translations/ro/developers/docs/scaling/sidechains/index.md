@@ -32,7 +32,6 @@ Numeroase proiecte oferă implementări de lanțuri paralele pe care le puteți 
 
 ## Referințe suplimentare {#further-reading}
 
-- [EthHub despre lanţurile paralele](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Scalarea dapp-urilor Ethereum prin lanţuri paralele](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 februarie 2018 - Georgios Konstantopoulos_
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editați această pagină și adăugați-o!_

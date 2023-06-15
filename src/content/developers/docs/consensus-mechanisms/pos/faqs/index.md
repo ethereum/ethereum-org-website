@@ -163,7 +163,7 @@ No, there are several proof-of-stake blockchains. None are identical to Ethereum
 
 The Merge was the moment when Ethereum switched off its proof-of-work-based consensus mechanism and switched on its proof-of-stake-based consensus mechanism. The Merge happened on September 15, 2022.
 
-[More on The Merge](/upgrades/merge)
+[More on The Merge](/roadmap/merge)
 
 ## What are liveness and safety? {#what-are-liveness-and-safety}
 

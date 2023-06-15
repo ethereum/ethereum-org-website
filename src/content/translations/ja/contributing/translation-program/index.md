@@ -64,42 +64,6 @@ ethereum.org は、何千人ものコミュニティメンバーによって翻�
 
 貢献者に報いることができる、新しいイノベーティブな方法を常に検討しています。
 
-### 活動内容 {#our-projects}
-
-貢献者のコミュニティは、影響力の大きい複数のウェブサイトとリソースを活発に翻訳しています。
-
-#### ethereum.org {#ethereumorg}
-
-![](./ethereum-org-screenshot.png)
-
-[ethereum.org](/)は、イーサリアムコミュニティにとって重要な教育リソースであるため、翻訳プログラムで主な焦点となります。 ウェブサイトの規模、スコープ、影響が及ぶ範囲を考慮すると、翻訳で一番影響力を与えられるサイトです。ここから、翻訳し始めることをお勧めします。
-
-参加する:
-
-- [Crowdin の ethereum.org 翻訳プロジェクト](https://crowdin.com/project/ethereum-org/invite)に参加
-
-#### イーサリアムステーキングランチパッド {#ethereum-staking-launchpad}
-
-![](./launchpad-screenshot.png)
-
-[ステーキングランチパッド](https://launchpad.ethereum.org/en/)は、イーサリアムユーザーがバリデータになることができ、ETH をステーキングすることで、イーサリアムの今後の安全性を保護する役割を担うことができます。
-
-参加する:
-
-- [ランチパッド翻訳ページ](/contributing/translation-program/launchpad-translations/)へアクセス
-- [Crowdin でのランチパッド翻訳プロジェクト](https://crowdin.com/project/ethereum-staking-launchpad)に参加
-
-#### イーサリアム・ファウンデーションのブログ {#ethereum-foundation-blog}
-
-![](./blog-screenshot.png)
-
-[イーサリアム・ファウンデーションのブログ](https://blog.ethereum.org/)は、イーサリアム・ファウンデーションがサポートしている様々なチームの主要な広報ツールです。イーサリアムコミュニティの発表、更新、レポート、ラウンドアップ、その他の公式なコミュニケーションに使われています。
-
-参加する:
-
-- [ブログ翻訳ページ](/contributing/translation-program/blog-translations/)へアクセス
-- [Crowdin でブログ翻訳プロジェクト](https://crowdin.com/project/ethereum-foundation-blog)に参加
-
 ### ガイドとリソース {#guides-and-resources}
 
 翻訳プログラムに貢献している、または参加を検討中の方は、以下の翻訳ガイドを参照してください。

@@ -51,9 +51,14 @@ This is what we will be using in this tutorial.
 ### 6\. What is the web3 library? {#what-is-the-web3-library}
 
 - Web3.js is a wrapper library around the standard JSON-RPC calls that is quite common to use in Ethereum development.
-- There are many web3 libraries for different languages. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
+- There are many web3 libraries for different languages. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) like [ethers.js](https://docs.ethers.org/v5/).
 
 Okay, now that we have a few of these questions out of the way, let’s move on to the tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/gWuC7zB)!
+
+### 7\. How to send secure, gas-optimized, and private transactions? {how-to-send-secure-gas-optimized-and-private-transactions}
+
+- [Alchemy has a suite of Transact APIs](https://docs.alchemy.com/reference/transact-api-quickstart). You can use these to send reinforced transactions, simulate transactions before they happen, send private transactions, and send gas-optimized transactions
+- You can also use the [Notify API](https://docs.alchemy.com/docs/alchemy-notify) to be alerted when your transaction is pulled from the mempool and added to the chain
 
 **NOTE:** This guide requires an Alchemy account, an Ethereum address or MetaMask wallet, NodeJs, and npm installed. If not, follow these steps:
 
@@ -63,13 +68,13 @@ Okay, now that we have a few of these questions out of the way, let’s move on 
 
 ## Steps to Sending your Transaction {#steps-to-sending-your-transaction}
 
-### 1\. Create an Alchemy app on the Rinkeby testnet {#create-an-alchemy-app-on-the-rinkeby-testnet}
+### 1\. Create an Alchemy app on the Sepolia testnet {#create-an-alchemy-app-on-the-sepolia-testnet}
 
-Navigate to your [Alchemy Dashboard](https://dashboard.alchemyapi.io/) and create a new app, choosing Rinkeby (or any other testnet) for your network.
+Navigate to your [Alchemy Dashboard](https://dashboard.alchemyapi.io/) and create a new app, choosing Sepolia (or any other testnet) for your network.
 
-### 2\. Request ETH from the Rinkeby faucet {#request-eth-from-rinkeby-faucet}
+### 2\. Request ETH from the Sepolia faucet {#request-eth-from-sepolia-faucet}
 
-Follow the instructions on the [Alchemy Rinkeby faucet](https://www.rinkebyfaucet.com/) to receive ETH. Make sure to include your **Rinkeby** Ethereum address (from MetaMask) and not another network. After following the instructions, double-check that you’ve received the ETH in your wallet.
+Follow the instructions on the [Alchemy Sepolia faucet](https://www.sepoliafaucet.com/) to receive ETH. Make sure to include your **Sepolia** Ethereum address (from MetaMask) and not another network. After following the instructions, double-check that you’ve received the ETH in your wallet.
 
 ### 3\. Create a new project directory and `cd` into it {#create-a-new-project-direction}
 
@@ -83,6 +88,8 @@ cd sendtx-example
 ### 4\. Install Alchemy Web3 (or any web3 library) {#install-alchemy-web3}
 
 Run the following command in your project directory to install [Alchemy Web3](https://docs.alchemy.com/reference/api-overview):
+
+Note, if you'd like to use the ethers.js library, [follow the instructions here](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum). 
 
 ```
 npm install @alch/alchemy-web3
@@ -114,7 +121,7 @@ Don't commit <code>.env</code>! Please make sure never to share or expose your <
 
 ### 7\. Create `sendTx.js` file {#create-sendtx-js}
 
-Great, now that we have our sensitive data protected in a `.env` file, let’s start coding. For our send transaction example, we’ll be sending ETH back to the Rinkeby faucet.
+Great, now that we have our sensitive data protected in a `.env` file, let’s start coding. For our send transaction example, we’ll be sending ETH back to the Sepolia faucet.
 
 Create a `sendTx.js` file, which is where we will configure and send our example transaction, and add the following lines of code to it:
 
@@ -156,7 +163,7 @@ Now, before we jump into running this code, let's talk about some of the compone
 
 - `nonce` : The nonce specification is used to keep track of the number of transactions sent from your address. We need this for security purposes and to prevent [replay attacks](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). To get the number of transactions sent from your address we use [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
 - `transaction`: The transaction object has a few aspects we need to specify
-  - `to`: This is the address we want to send ETH to. In this case, we are sending ETH back to the [Rinkeby faucet](https://faucet.rinkeby.io/) we initially requested from.
+  - `to`: This is the address we want to send ETH to. In this case, we are sending ETH back to the [Sepolia faucet](https://sepoliafaucet.com/) we initially requested from.
   - `value`: This is the amount we wish to send, specified in Wei where 10^18 Wei = 1 ETH
   - `gas`: There are many ways to determine the right amount of gas to include with your transaction. Alchemy even has a [gas price webhook](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1) to notify you when the gas price falls within a certain threshold. For Mainnet transactions, it's good practice to check a gas estimator like [ETH Gas Station](https://ethgasstation.info/) to determine the right amount of gas to include. 21000 is the minimum amount of gas an operation on Ethereum will use, so to ensure our transaction will be executed we put 30000 here.
   - `nonce`: see above nonce definition. Nonce starts counting from zero.

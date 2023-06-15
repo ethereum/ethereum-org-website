@@ -9,7 +9,7 @@ summaryPoints:
 
 # Verkle trees {#verkle-trees}
 
-Verkle trees (a portmanteau of "Vector commitment" and "Merkle Trees") are a data structure that be used to upgrade Ethereum nodes so that they can stop storing large amounts of state data without losing the ability to validate blocks.
+Verkle trees (a portmanteau of "Vector commitment" and "Merkle Trees") are a data structure that can be used to upgrade Ethereum nodes so that they can stop storing large amounts of state data without losing the ability to validate blocks.
 
 ## Statelessness {#statelessness}
 

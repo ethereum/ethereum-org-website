@@ -77,7 +77,7 @@ Chaque [bloc](#block) a un prix de réserve connu sous le nom de « frais de ba
 
 La chaîne phare a été la blockchain qui a introduit la [preuve d'enjeu](#pos) et [les validateurs](#validator) sur Ethereum. Elle a fonctionné parallèlement au réseau principal par preuve de travail Ethereum depuis décembre 2020 jusqu'à ce que les deux chaînes soient fusionnées en septembre 2022 pour former l'Ethereum d'aujourd'hui.
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Chaîne phare
 </DocLink>
 
@@ -278,7 +278,7 @@ Paramétrage qui, dans les réseaux de [preuve de travail](#pow), contrôle, à 
 
 ### Bombe de difficulté {#difficulty-bomb}
 
-Augmentation exponentielle planifiée du paramètre de [difficulté](#difficulty) de la [preuve de travail](#pow) qui a été conçue pour inciter à la transition vers la [preuve d'enjeu](#pos), réduisant les possibilités d'une [fourche](#hard-fork). La bombe de difficulté est devenue obsolète avec la [transition vers la preuve d'enjeu](/upgrades/merge).
+Augmentation exponentielle planifiée du paramètre de [difficulté](#difficulty) de la [preuve de travail](#pow) qui a été conçue pour inciter à la transition vers la [preuve d'enjeu](#pos), réduisant les possibilités d'une [fourche](#hard-fork). La bombe de difficulté est devenue obsolète avec la [transition vers la preuve d'enjeu](/roadmap/merge).
 
 ### Signature numérique {#digital-signatures}
 
@@ -328,7 +328,7 @@ Envoi par un validateur de deux messages contradictoires. Un exemple simple pour
 
 « Eth1 » est un terme qui faisait référence au réseau principal Ethereum, c'est-à-dire la blockchain actuelle basée sur la preuve de travail. Ce terme a depuis été abandonné au profit de « couche d'exécution ». [En savoir plus sur ce changement de nom](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   En savoir plus sur les mises à niveau d'Ethereum
 </DocLink>
 
@@ -336,7 +336,7 @@ Envoi par un validateur de deux messages contradictoires. Un exemple simple pour
 
 « Eth2 » est un terme qui faisait référence à un ensemble de mises à niveau du protocole Ethereum, notamment la transition d'Ethereum vers la preuve d'enjeu. Ce terme a depuis été abandonné au profit de « couche de consensus ». [En savoir plus sur ce changement de nom](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   En savoir plus sur les mises à niveau d'Ethereum
 </DocLink>
 
@@ -811,7 +811,7 @@ Type de solution de mise à l'échelle de [couche 2](#layer-2) qui regroupe plus
 
 ### RPC {#rpc}
 
-**Appel de procédure à distance (RPC)** est un protocole qu'un programme peut utiliser pour solliciter un service auprès d'un programme situé sur un autre ordinateur d'un réseau dont il n'a pas besoin de connaître les détails
+L'**appel de procédure à distance (RPC)** est un protocole qu'un programme peut utiliser pour solliciter un service auprès d'un programme situé sur un autre ordinateur d'un réseau dont il n'a pas besoin de connaître les détails
 
 ## S {#section-s}
 
@@ -823,7 +823,7 @@ Famille de fonctions de hachage cryptographique publiées par le National Instit
 
 Étape du développement d'Ethereum qui a initié un ensemble de mises à jour et de mises à l'échelle en termes de durabilité, précédemment appelées 'Ethereum 2.0', ou 'Eth2'.
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Mises à niveau d'Ethereum
 </DocLink>
 
@@ -833,10 +833,10 @@ Procédé de conversion d'une structure de données en une séquence d'octets.
 
 ### Fragment / chaîne de fragments {#shard}
 
-Les chaînes de fragments sont des portions de la blockchain complète qui peuvent être sous la responsabilité de sous-ensembles de validateurs. Les chaînes de fragments offriront un débit de transaction accru pour Ethereum et amélioreront la disponibilité des données pour les solutions de [couche 2](#layer-2) comme les [rollups optimistes](#optimistic-rollups) et les [rollups ZK](#zk-rollups).
+Les chaînes de fragments sont des portions de la blockchain complète susceptibles de se trouver sous la responsabilité de sous-ensembles de validateurs. Les chaînes de fragments offriront un débit de transaction accru pour Ethereum et amélioreront la disponibilité des données pour les solutions de [couche 2](#layer-2) comme les [rollups optimistes](#optimistic-rollups) et les [rollups ZK](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
-  Chaines de fragments
+<DocLink to="/roadmap/danksharding">
+  Danksharding
 </DocLink>
 
 ### Chaînes latérales {#sidechain}
@@ -957,7 +957,7 @@ Processus de téléchargement de la dernière version complète d'une blockchain
 
 ### Comité de synchronisation {#sync-committee}
 
-Un comité de synchronisation est un groupe de validateurs sélectionnés aléatoirement qui est actualisé toutes les 27 heures environ. Son rôle est d'ajouter leurs signatures à des en-têtes de blocs valides. Les comités de synchronisation permettent aux [clients légers](#light-client) de garder une trace de la tête de la blockchain sans avoir besoin d'accéder à l'ensemble des validateurs.
+Un comité de synchronisation est un groupe de [validateurs](#validator) sélectionnés aléatoirement qui est actualisé toutes les 27 heures environ. Son rôle est d'ajouter leurs signatures à des en-têtes de blocs valides. Les comités de synchronisation permettent aux [clients légers](#light-client) de garder une trace de la tête de la blockchain sans avoir besoin d'accéder à l'ensemble des validateurs.
 
 ### Szabo {#szabo}
 
@@ -1098,7 +1098,7 @@ Plus petite unité de l'[ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### Adresse zéro {#zero-address}
 
-Adresse Ethereum, composée entièrement de zéros, qui est fréquemment utilisée comme adresse de brûlage pour les fonds non désirés.
+Une adresse Ethereum, composée entièrement de zéros, qui est fréquemment utilisée comme adresse pour retirer des jetons de la circulation propriétaire. Une distinction est établie entre les jetons formellement supprimés de l'index d'un contrat intelligent via la méthode burn() et ceux envoyés à cette adresse.
 
 ### preuve de connaissance zéro {#zk-proof}
 

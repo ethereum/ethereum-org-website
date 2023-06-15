@@ -440,7 +440,7 @@ contract Attack {
 
 但如果预言机损坏并向链上发送错误信息，智能合约将基于错误的输入执行，这会造成问题。 这就是“预言机问题”的根源，它涉及确保区块链预言机提供准确、最新、即时的信息。
 
-相关的安全问题就是利用链上预言机（例如去中心化交易所）获取一种资产的现货价格。 [去中心化金融 (DeFi) ](/defi/)行业中的借贷平台经常利用这种方法确定用户抵押品的价值，进而确定他们能借入多少。
+相关的安全问题就是利用链上预言机（例如去中心化交易所）获取一种资产的现货价格。 [去中心化金融 (DeFi)](/defi/) 行业中的借贷平台经常利用这种方法确定用户抵押品的价值，进而确定他们能借入多少。
 
 去中心化交易所 (DEX) 的价格往往是准确的，很大程度上源于套利者的套利行为帮助市场恢复平价。 然而，去中心化交易所的价格容易受到操纵，尤其当链上预言机根据历史交易模式计算资产价格时（通常是这种情况）。
 
@@ -463,6 +463,10 @@ contract Attack {
 - **[智能合约审计服务](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _为以太坊开发项目提供智能合约审计服务的组织的列表。_
 
 - **[漏洞奖励平台](https://ethereum.org/en/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _协调漏洞奖励并对发现智能合约中重大漏洞的负责人进行奖励的平台。_
+
+- **[Fork Checker](https://forkchecker.hashex.org/)** - _免费的在线工具，用于检查所有关于分叉合同的现有信息。_
+
+- **[ABI 编码器](https://abi.hashex.org/)** - _免费在线服务，用于编码您的 Solidity 合约函数和构造函数参数。_
 
 ### 智能合约监测工具 {#smart-contract-monitoring-tools}
 
@@ -497,6 +501,8 @@ contract Attack {
 - **[Hacken](https://hacken.io)** - _Web3 网络安全审计公司，为区块链安全提供全方位解决方案。_
 
 - **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity 和 Cairo 审计服务，确保智能合约的完整性和跨以太坊和 Starknet 的用户安全_
+
+- **[HashEx](https://hashex.org/)** - _HashEx 专注于区块链和智能合约审计，确保加密货币安全，提供智能合约开发、渗透测试、区块链咨询等服务。_
 
 ### 漏洞奖励平台 {#bug-bounty-platforms}
 

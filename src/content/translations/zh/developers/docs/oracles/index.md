@@ -360,7 +360,7 @@ contract PriceConsumerV3 {
 
 某些区块链应用程序（如基于区块链的游戏或彩票方案），需要高度的不可预测性和随机性才能有效工作。 然而，区块链的确定性执行消除了任何随机性来源。
 
-通常的方法是使用伪随机密码函数，例如`blockhash`，但这也适用于其他参与者[的](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.)操作，即解决工作量证明算法的矿工。 此外，以太坊[过渡到权益证明](/upgrades/merge/)意味着开发者不能再依靠 `blockhash` 获得链上随机性（然而，信标链的 [RANDAO 机制](https://eth2book.info/altair/part2/building_blocks/randomness)提供了另一种随机性来源）。
+通常的方法是使用伪随机密码函数，例如`blockhash`，但这也适用于其他参与者[的](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.)操作，即解决工作量证明算法的矿工。 此外，以太坊[过渡到权益证明](/roadmap/merge/)意味着开发者不能再依靠 `blockhash` 获得链上随机性（然而，信标链的 [RANDAO 机制](https://eth2book.info/altair/part2/building_blocks/randomness)提供了另一种随机性来源）。
 
 可以在链下生成随机值并发送到链上，但这样做对用户有很高的信任要求。 他们必须相信值确实是通过不可预测的机制产生的，并且未在传输过程中被改动。
 
@@ -392,7 +392,7 @@ contract PriceConsumerV3 {
 
 **[Witnet](https://witnet.io/)** - _Witnet 是一种无需许可、去中心化和抗审查的预言机，帮助智能合约对真实事件做出响应，提供强大的加密经济保障。_
 
-**[UMA Oracle](https://umaproject.org/products/optimistic-oracle)** - _UMA 的乐观预言机允许智能合约快速接收不同应用的任何类型的数据，包括保险、金融衍生品和预测市场。_
+**[UMA 预言机](https://uma.xyz)** - _UMA 的乐观预言机允许智能合约快速接收不同应用的任何类型的数据，包括保险、金融衍生品和预测市场。_
 
 **[Tellor](https://tellor.io/)** - _Tellor 是一种透明的、无需许可的预言机协议，可以让智能合约在需要时轻松获取任何数据。_
 
@@ -403,6 +403,8 @@ contract PriceConsumerV3 {
 **[Paralink](https://paralink.network/)** - _Paralink 为运行在以太坊和其他热门区块链上的智能合约提供一个开源的去中心化预言机平台。_
 
 **[Dos.Network](https://dos.network/)** - _DOS Network 是一个去中心化预言机服务网络，通过真实的数据和算力增强区块链的实用性。_
+
+**[Pyth 网络](https://pyth.network/)** - _Pyth 网络是第一方金融预言机网络，旨在在防篡改、去中心化和自我可持续的环境中发布链上连续的真实世界数据。_
 
 ## 延伸阅读 {#further-reading}
 

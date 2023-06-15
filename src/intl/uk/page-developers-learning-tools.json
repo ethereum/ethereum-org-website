@@ -22,6 +22,8 @@
   "page-learning-tools-eth-dot-build-logo-alt": "Eth.build logo",
   "page-learning-tools-ethernauts-description": "Проходьте рівні, зламуючи розумні контракти.",
   "page-learning-tools-ethernauts-logo-alt": "Ethernauts logo",
+  "page-learning-tools-metaschool-description": "Станьте розробником Web3, створюючи й надаючи децентралізовані програми.",
+  "page-learning-tools-metaschool-logo-alt": "Логотип Metaschool",
   "page-learning-tools-game-tutorials": "Інтерактивні ігрові посібники",
   "page-learning-tools-game-tutorials-desc": "Грайте й навчайтеся. Ці посібники допоможуть вам зрозуміти основи під час гри.",
   "page-learning-tools-meta-desc": "Веб-інструменти кодування та інтерактивне навчання, які допоможуть вам експериментувати з розробкою мережі Ethereum.",
@@ -50,5 +52,5 @@
   "page-learning-tools-platzi-logo-alt": "Логотип Platzi",
   "page-learning-tools-alchemy-university-description": "Розвивайте свою кар’єру у Web3 за допомогою курсів, проєктів і коду.",
   "page-learning-tools-alchemy-university-logo-alt": "Логотип університету Alchemy",
-  "alt-eth-blocks": "Ілюстрація блоків, організованих як символ ETH"
+  "alt-eth-blocks": "Ілюстрація з блоками, зібраними в символ ETH"
 }

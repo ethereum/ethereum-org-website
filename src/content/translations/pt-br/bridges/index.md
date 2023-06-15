@@ -18,7 +18,7 @@ Vejamos um exemplo:
 
 Você é dos EUA e está planejando uma viagem à Europa. Você tem Dólar, mas precisa de Euro para gastar. Para trocar seus Dólares por Euros, você pode usar uma corretora de câmbio por uma pequena taxa.
 
-Mas, o que você faz se quiser fazer uma troca parecida para usar um blockchain diferente? Digamos que você queira trocar ETH na rede principal Ethereum por ETH no [Arbitrum](https://arbitrum.io/). Como o câmbio de moedas que fizemos por Euro, precisamos de um mecanismo para mover nosso ETH do Ethereum para o Arbitrum. As pontes tornam essa transação possível. Neste caso,a [Arbitrum tem uma ponte nativa ](https://bridge.arbitrum.io/)que pode transferir o ETH da rede principal para o Arbitrum.
+Mas, o que você faz se quiser fazer uma troca parecida para usar um blockchain diferente? Digamos que você queira trocar ETH na rede principal Ethereum por ETH no [Arbitrum](https://arbitrum.io/). Como o câmbio de moedas que fizemos por Euro, precisamos de um mecanismo para mover nosso ETH do Ethereum para o Arbitrum. As pontes tornam essa transação possível. Neste caso,a [Arbitrum tem uma ponte nativa](https://bridge.arbitrum.io/) que pode transferir o ETH da rede principal para o Arbitrum.
 
 ## Por que precisamos de pontes? {#why-do-we-need-bridges}
 
@@ -125,9 +125,10 @@ As pontes são cruciais para integrar usuários às camadas 2 do Ethereum e até
 
 - [EIP-5164: Execução entre cadeias](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 de junho de 2022 - Brendan Asselstine_
 - [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 de julho de 2022 - Bartek Kiepuszewski_
-- ["Por que o futuro será multi-chain, mas não será cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)_8 de janeiro de 2022 - Vitalik Buterin_
-- [O que são pontes de cadeias cruzadas?](https://www.alchemy.com/overviews/cross-chain-bridges) _10 de maio de 2022 – Alchemy_
-- [Pontos Blockchain: construindo redes de criptoredes](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _8 de setembro de 2021 – Dmitriy Berenzon_
-- [Pontes no espaço cripto](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _23 de agosto, 2021 – Ben Adar Hyman_
-- [O Trilema da Interoperabilidade](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1º de outubro de 2021 – Arjun Bhuptani_
-- [Proteja a ponte: Comunicação eficiente entre cadeias cruzadas](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _23 de agosto de 2021 – Celia Wan_
+- ["Por que o futuro será multi-chain, mas não será cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 de janeiro de 2022 - Vitalik Buterin_
+- [O que são pontes Blockchain e como podemos classificá-las?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _18 de fevereiro de 2021 - Arjun Chand_
+- [O que são pontes de cadeias cruzadas?](https://www.alchemy.com/overviews/cross-chain-bridges) _10 de maio de 2022 - Alchemy_
+- [Pontos Blockchain: construindo redes de criptoredes](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _8 de setembro de 2021 - Dmitriy Berenzon_
+- [Pontes no espaço cripto](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _23 de agosto, 2021 - Ben Adar Hyman_
+- [O Trilema da Interoperabilidade](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1º de outubro de 2021 - Arjun Bhuptani_
+- [Proteja a ponte: Comunicação eficiente entre cadeias cruzadas](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _23 de agosto de 2021 - Celia Wan_

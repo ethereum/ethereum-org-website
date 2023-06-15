@@ -39,6 +39,7 @@ import Emoji from "../components/Emoji"
 import UpcomingEventsList from "../components/UpcomingEventsList"
 import SocialListItem from "../components/SocialListItem"
 import YouTube from "../components/YouTube"
+import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
 import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
@@ -200,6 +201,7 @@ const components = {
   MatomoOptOut,
   Callout,
   YouTube,
+  NetworkUpgradeSummary,
   TranslationChartImage,
   EnergyConsumptionChart,
   QuizWidget,
@@ -209,6 +211,7 @@ const components = {
 const StaticPage = ({
   data: { siteData, pageData: mdx },
   pageContext: { relativePath, slug },
+  location,
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const { language } = useI18next()
 
@@ -316,7 +319,15 @@ export const staticPageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-about", "page-community", "learn-quizzes", "common"] }
+        ns: {
+          in: [
+            "page-about"
+            "page-community"
+            "learn-quizzes"
+            "page-history"
+            "common"
+          ]
+        }
       }
     ) {
       edges {

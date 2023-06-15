@@ -8,7 +8,7 @@ Maksimalna pridobljiva vrednost (MEV) se nanaša na maksimalno vrednost, ki se l
 
 ### Pridobljiva vrednost rudarjev
 
-Ta koncept se je prvič pojavil v kontekstu [dokaza o delu](/developers/docs/consensus-mechanisms/pow/) in se je na začetku imenoval "pridobljiva vrednost rudarjev". To je zato, ker pri dokazu o delu rudarji nadzirajo vključevanje, izključevanje in razvrščanje transakcij. Vendar pa bodo validatorji po prehodu na dokaz o deležu prek [Spojitve](/upgrades/merge) odgovorni za te vloge in rudarjenje ne bo več uporabno. Metode za pridobivanje vrednosti bodo ostale tudi po prehodu in zato je bila potrebna zamenjava imena. Zaradi ohranjanja kontinuitete bomo ohranili enako kratico in obenem ohranili osnovni pomen, "maksimalna pridobljiva vrednost" se zdaj uporablja kot bolj vključujoča zamenjava.
+Ta koncept se je prvič pojavil v kontekstu [dokaza o delu](/developers/docs/consensus-mechanisms/pow/) in se je na začetku imenoval "pridobljiva vrednost rudarjev". To je zato, ker pri dokazu o delu rudarji nadzirajo vključevanje, izključevanje in razvrščanje transakcij. Vendar pa bodo validatorji po prehodu na dokaz o deležu prek [Spojitve](/roadmap/merge) odgovorni za te vloge in rudarjenje ne bo več uporabno. Metode za pridobivanje vrednosti bodo ostale tudi po prehodu in zato je bila potrebna zamenjava imena. Zaradi ohranjanja kontinuitete bomo ohranili enako kratico in obenem ohranili osnovni pomen, "maksimalna pridobljiva vrednost" se zdaj uporablja kot bolj vključujoča zamenjava.
 
 ## Predpogoji {#prerequisites}
 
@@ -16,7 +16,7 @@ Prepričajte se, da ste seznanjeni s [transakcijami](/developers/docs/transactio
 
 ## Ekstrakcija MEV {#mev-extraction}
 
-V teoriji se MEV v celoti dodaja rudarjem, saj so samo te edini subjekt, ki lahko jamči izvedbo dobičkonosne priložnosti MEV (vsaj na trenutni verigi z dokazom o delu — to se bo spremenilo po [Spojitvi](/upgrades/merge/)). V praksi pa je velik del MEV pridobljen s strani neodvisnih sodelujočih v omrežju, ki se imenujejo "iskalci." Iskalci izvajajo kompleksne algoritme na podatkih blokovne verige, da zaznajo dobičkonosne priložnosti MEV, in imajo robote, da omrežju samodejno predložijo te dobičkonosne transakcije.
+V teoriji se MEV v celoti dodaja rudarjem, saj so samo te edini subjekt, ki lahko jamči izvedbo dobičkonosne priložnosti MEV (vsaj na trenutni verigi z dokazom o delu — to se bo spremenilo po [Spojitvi](/roadmap/merge/)). V praksi pa je velik del MEV pridobljen s strani neodvisnih sodelujočih v omrežju, ki se imenujejo "iskalci." Iskalci izvajajo kompleksne algoritme na podatkih blokovne verige, da zaznajo dobičkonosne priložnosti MEV, in imajo robote, da omrežju samodejno predložijo te dobičkonosne transakcije.
 
 Rudarji prejmejo del celotne količine MEV v vsakem primeru, saj so iskalci pripravljeni plačati visoke provizije goriva (ki gredo rudarjem) v zameno za višjo možnost vključitve njihove dobičkonosne transakcije v blok. Predpostavimo, da so iskalci ekonomsko racionalni, provizija goriva, ki jo je iskalec pripravljen plačati, bo obsegala do 100 % iskalčeve MEV (saj, če bi bila provizija goriva višja, bi iskalec izgubil denar).
 

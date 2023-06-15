@@ -8,7 +8,7 @@ tags:
   - "alchemy"
   - "スマートコントラクト"
   - "デプロイ"
-skill: 初級
+skill: beginner
 lang: ja
 published: 2021-03-31
 ---

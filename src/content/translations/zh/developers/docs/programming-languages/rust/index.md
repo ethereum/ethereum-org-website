@@ -55,6 +55,7 @@ incomplete: true
 - [Foundry](https://github.com/gakonst/foundry) - _以太坊应用开发工具包_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _可实现以太坊库和钱包功能_
 - [SewUp](https://github.com/second-state/SewUp) - _一个帮助用户用 Rust 语言构建以太坊 Webassembly 合约的库，正如在公共后端中开发一样_
+- [Reth](https://github.com/paradigmxyz/reth) - Reth 即 Rust 以太坊的简称，是新的以太坊全节点实现。
 
 想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
 

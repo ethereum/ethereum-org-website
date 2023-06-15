@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Ethereum est un réseau d'ordinateurs qui exécutent des logiciels (appelés nœuds) dont l'objectif est de valider les blocs et les données de transaction. L'application logicielle, que l'on appelle client, doit être exécutée depuis l'ordinateur qu'on souhaite transformer en nœud Ethereum.
 
-**Remarque : Il n'est plus possible d'exécuter seul un logiciel d'exécution. Depuis [La Fusion](/upgrades/merge), les logiciels d'exécution et de consensus doivent être exécutés ensemble afin qu'un utilisateur puisse avoir accès au réseau Ethereum.**
+**Remarque : Il n'est plus possible d'exécuter seul un logiciel d'exécution. Depuis [La Fusion](/roadmap/merge), les logiciels d'exécution et de consensus doivent être exécutés ensemble afin qu'un utilisateur puisse avoir accès au réseau Ethereum.**
 
 ## Prérequis {#prerequisites}
 
@@ -24,7 +24,7 @@ Depuis la Fusion, Ethereum se compose de deux parties : la couche d'exécution e
 - Le client d'exécution (également connu sous le nom de moteur d'exécution, de client EL ou anciennement de client Eth1) écoute les nouvelles transactions diffusées sur le réseau, les exécute dans l'EVM, et contient la dernière base de données et l'état de toutes les données Ethereum actuelles.
 - Le client de consensus (également connu sous le nom de Nœud Beacon, client CL ou anciennement de client Eth2) implémente l'algorithme de consensus de la preuve d'enjeu, qui permet au réseau de parvenir à un accord basé sur des données validées du client d'exécution.
 
-Avant [La Fusion](/upgrades/merge/), la couche de consensus et d'exécution étaient des réseaux séparés, et toutes les transactions et l'activité des utilisateurs sur l'Ethereum étaient réalisées sur ce qui est maintenant la couche d'exécution. Un logiciel client offrait à la fois l'environnement d'exécution et la vérification de consensus des blocs produits par les mineurs. La couche de consensus, [la Chaîne phare](/upgrades/beacon-chain/), fonctionnait séparément depuis décembre 2020. Elle a introduit la preuve d'enjeu et coordonné le réseau de validateurs basé sur les données du réseau Ethereum.
+Avant [La Fusion](/roadmap/merge/), la couche de consensus et d'exécution étaient des réseaux séparés, et toutes les transactions et l'activité des utilisateurs sur l'Ethereum étaient réalisées sur ce qui est maintenant la couche d'exécution. Un logiciel client offrait à la fois l'environnement d'exécution et la vérification de consensus des blocs produits par les mineurs. La couche de consensus, [la Chaîne phare](/roadmap/beacon-chain/), fonctionnait séparément depuis décembre 2020. Elle a introduit la preuve d'enjeu et coordonné le réseau de validateurs basé sur les données du réseau Ethereum.
 
 Avec La Fusion, Ethereum est passé à la preuve d'enjeu en connectant ces réseaux. Les clients d'exécution et de consensus travaillent ensemble pour vérifier l'état d'Ethereum.
 
@@ -75,7 +75,7 @@ Le client d'exécution Geth intègre une option de [synchronisation simplifiée]
 
 Les clients légers sont un domaine de développement actif pour Ethereum et nous nous attendons à prochainement voir apparaître de nouveaux clients légers pour la couche de consensus et la couche d'exécution. Il existe également des routes potentielles pour fournir des données client légers sur le [réseau gossip](https://www.ethportal.net/). Ceci est avantageux dans la mesure où le réseau gossip pourrait supporter un réseau de nœuds légers sans avoir besoin que des nœuds complets servent les requêtes.
 
-Ethereum ne prend pas encore en charge un nombre important de ces nœuds légers mais la prise en charge des nœuds légers est une thématique qui devrait fortement développer dans un futur proche. En particulier, des clients comme [Nimbus](https://nimbus. team/), [Helios](https://github. com/a16z/helios), et [LodeStar](https://lodestar. chainsafe. io/) se focalisent actuellement fortement sur les nœuds légers.
+Ethereum ne prend pas encore en charge un nombre important de ces nœuds légers mais la prise en charge des nœuds légers est une thématique qui devrait fortement développer dans un futur proche. En particulier, des clients comme [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios), et [LodeStar](https://lodestar.chainsafe.io/) se focalisent actuellement fortement sur les nœuds légers.
 
 ### Nœud d'archive {#archive-node}
 
@@ -178,9 +178,7 @@ Nethermind dispose également d'[une documentation détaillée](https://docs.net
 
 ## Clients de consensus (anciennement clients 'Eth2') {#consensus-clients}
 
-De nombreux clients de consensus (précédemment connus sous le nom de clients 'Eth2') prennent en charge les [mises à niveau du consensus](/upgrades/beacon-chain/). Ils exécutent la Chaîne Phare et fourniront un mécanisme de consensus de preuve d'enjeu pour exécuter les clients après [La Fusion](/upgrades/merge/).
-
-[Voir les clients de consensus](/upgrades/get-involved/#clients).
+De nombreux clients de consensus (précédemment connus sous le nom de clients 'Eth2') prennent en charge les [mises à niveau du consensus](/roadmap/beacon-chain/). Ils exécutent la Chaîne Phare et fourniront un mécanisme de consensus de preuve d'enjeu pour exécuter les clients après [La Fusion](/roadmap/merge/).
 
 | Client                                                        | Langage    | Systèmes d'exploitation | Réseaux                                                                 |
 | ------------------------------------------------------------- | ---------- | ----------------------- | ----------------------------------------------------------------------- |
@@ -279,7 +277,7 @@ La synchronisation optimiste est une stratégie de synchronisation post-fusion c
 
 #### Synchronisation des points de contrôle {#checkpoint-sync}
 
-La Synchronisation des points de contrôle, également connue sous le nom de synchronisation à faible subjectivité, génère une expérience utilisateur supérieure pour la synchronisation du Nœud Phare. Elle est basée sur des hypothèses de [faible subjectivité ](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) qui permettent de synchroniser la Chaîne phare à partir d'un point de contrôle de faible subjectivité récent plutôt que de la genèse. La synchronisation des points de contrôle réduit sensiblement le temps de synchronisation initiale avec des hypothèses de confiance similaires à la synchronisation effectuée à partir de la [genèse](/glossary/#genesis-block).
+La Synchronisation des points de contrôle, également connue sous le nom de synchronisation à faible subjectivité, génère une expérience utilisateur supérieure pour la synchronisation du Nœud Phare. Elle est basée sur des hypothèses de [faible subjectivité](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) qui permettent de synchroniser la Chaîne phare à partir d'un point de contrôle de faible subjectivité récent plutôt que de la genèse. La synchronisation des points de contrôle réduit sensiblement le temps de synchronisation initiale avec des hypothèses de confiance similaires à la synchronisation effectuée à partir de la [genèse](/glossary/#genesis-block).
 
 En pratique, cela signifie que votre nœud se connecte à un service distant pour télécharger les états finalisés récents et continue de vérifier les données à partir de ce point. Les tiers qui fournissent les données sont de confiance et doivent être soigneusement sélectionnés.
 

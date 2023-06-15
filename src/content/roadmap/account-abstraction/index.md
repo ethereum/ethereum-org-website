@@ -82,17 +82,17 @@ EIP-2771 introduces the concept of meta-transactions that allow third parties to
 
 <ExpandableCard title="EIP-4337: account abstraction without changing the Ethereum protocol" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
 
-EIP-4337 is the first step towards native smart contract wallet support in a decentralized way _without requiring changes to the Ethereum protocol_. Instead of modifying the consensus layer to support smart contract wallets, a new system is added separately to the normal transaction gossip protocol. This higher level system is built around a new object called a `UserOperation` that package up actions from a user along with the relevant signatures. These `UserOperation` objects then get broadcast into a dedicated mempool where validators can collect them into a "bundle transaction". The bundle transaction represents a sequence of many individual `UserOperations` and can be included in Ethereum blocks just like a normal transaction, and would be picked up by validators using a similar fee-maximizing selection model.
+EIP-4337 is the first step towards native smart contract wallet support in a decentralized way <em>without requiring changes to the Ethereum protocol</em>. Instead of modifying the consensus layer to support smart contract wallets, a new system is added separately to the normal transaction gossip protocol. This higher level system is built around a new object called a <code>UserOperation</code> that package up actions from a user along with the relevant signatures. These <code>UserOperation</code> objects then get broadcast into a dedicated mempool where validators can collect them into a "bundle transaction". The bundle transaction represents a sequence of many individual <code>UserOperations</code> and can be included in Ethereum blocks just like a normal transaction, and would be picked up by validators using a similar fee-maximizing selection model.
 
-The way wallets work would also change under EIP-4337. Instead of each wallet re-implementing common but complex safety logic, those functions would be outsourced to a global wallet contract known as the "entry point". This would handle operations such as paying fees and executing EVM code so that wallet developers can focus on providing excellent user experiences.
+The way wallets work would also change under EIP-4337. Instead of each wallet re-implementing common but complex safety logic, those functions would be outsourced to a global wallet contract known as the &quot;entry point&quot;. This would handle operations such as paying fees and executing EVM code so that wallet developers can focus on providing excellent user experiences.
 
-**Note** the EIP 4337 entry point contract was deployed to Ethereum Mainnet on 1st March 2023. You can see the contract on [Etherscan](https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57).
+<strong>Note</strong> the EIP 4337 entry point contract was deployed to Ethereum Mainnet on 1st March 2023. You can see the contract on <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscan</a>.
 
 </ExpandableCard>
 
 <ExpandableCard title="EIP-2938: changing the Ethereum protocol to support account abstraction" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
 
-[EIP-2938](https://eips.ethereum.org/EIPS/eip-2938) aims to update the Ethereum protocol by introducing a new transaction type, `AA_TX_TYPE` that includes three fields: `nonce`, `target` and `data`, where `nonce` is a transaction counter, `target` is the entry point contract address and `data` is EVM bytecode. To execute these transactions, two new instructions (known as opcodes) have to be added to the EVM: `NONCE` and `PAYGAS`. The `NONCE` opcode tracks the transaction sequence and `PAYGAS` calculates and withdraws the gas required to execute the transaction from the contract's balance. These new features allow Ethereum to support smart contract wallets natively as the necessary infrastructure is built in to Ethereum's protocol.
+<a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> aims to update the Ethereum protocol by introducing a new transaction type, <code>AA_TX_TYPE</code> that includes three fields: <code>nonce</code>, <code>target</code> and <code>data</code>, where <code>nonce</code> is a transaction counter, <code>target</code> is the entry point contract address and <code>data</code> is EVM bytecode. To execute these transactions, two new instructions (known as opcodes) have to be added to the EVM: <code>NONCE</code> and <code>PAYGAS</code>. The <code>NONCE</code> opcode tracks the transaction sequence and <code>PAYGAS</code> calculates and withdraws the gas required to execute the transaction from the contract&#39;s balance. These new features allow Ethereum to support smart contract wallets natively as the necessary infrastructure is built in to Ethereum&#39;s protocol.
 
 Note that EIP-2938 is currently not active. The community is currently favoring EIP-4337 because it does not require changes to the protocol.
 
@@ -100,7 +100,7 @@ Note that EIP-2938 is currently not active. The community is currently favoring 
 
 <ExpandableCard title="EIP-3074: upgrading externally-owned accounts for account abstraction" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
 
-[EIP-3074](https://eips.ethereum.org/EIPS/eip-3074) aims to update Ethereum's externally-owned accounts by allowing them to delegate control to a smart contract. This means smart contract logic could approve transactions originating from an EOA. This would allow features such as gas-sponsoring and batched transactions. For this to work, two new opcodes have to be added to the EVM: `AUTH` and `AUTHCALL`. With EIP-3074 the benefits of a smart contract wallet are made available _without needing a contract_ - instead, a specific type of stateless, trustless, non-upgradeable contract known as an "invoker" handles the transactions.
+<a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> aims to update Ethereum&#39;s externally-owned accounts by allowing them to delegate control to a smart contract. This means smart contract logic could approve transactions originating from an EOA. This would allow features such as gas-sponsoring and batched transactions. For this to work, two new opcodes have to be added to the EVM: <code>AUTH</code> and <code>AUTHCALL</code>. With EIP-3074 the benefits of a smart contract wallet are made available <em>without needing a contract</em> - instead, a specific type of stateless, trustless, non-upgradeable contract known as an "invoker" handles the transactions.
 
 Note that EIP-3074 is currently not active. The community is currently favoring EIP-4337 because it does not require changes to the protocol.
 
@@ -112,6 +112,7 @@ Smart contract wallets are already available, but more upgrades are required to 
 
 ## Further reading {#further-reading}
 
+- [erc4337.io](https://www.erc4337.io/)
 - [Account abstraction panel discussion from Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)
 - ["Why account abstraction is a game changer for dapps" from Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Account abstraction ELI5" from Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
@@ -122,3 +123,4 @@ Smart contract wallets are already available, but more upgrades are required to 
 - [EIP-4337 notes](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
 - [EIP-2771 documentation](https://eips.ethereum.org/EIPS/eip-2771)
+- ["Basics of Account Abstraction" -- What is Account Abstraction Part I](https://www.alchemy.com/blog/account-abstraction)

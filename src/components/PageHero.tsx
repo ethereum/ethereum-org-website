@@ -1,17 +1,21 @@
 import React, { ReactNode } from "react"
-import { Box, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
+import { Box, Flex, Heading, Text, Wrap, WrapItem } from "@chakra-ui/react"
 
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
 import Button, { IProps as IButtonProps } from "./Button"
 
+import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
+
 export interface IButtonLink extends IButtonLinkProps {
   content: ReactNode
+  matomo: MatomoEventOptions
 }
 
 export interface IButton extends IButtonProps {
   content: ReactNode
+  matomo: MatomoEventOptions
 }
 
 export interface IContent {
@@ -78,7 +82,7 @@ const PageHero: React.FC<IProps> = ({
           >
             {header}
           </Heading>
-          <Box
+          <Text
             fontSize={{ base: "xl", lg: "2xl" }}
             lineHeight={1.4}
             color="text200"
@@ -86,9 +90,9 @@ const PageHero: React.FC<IProps> = ({
             mb={8}
           >
             {subtitle}
-          </Box>
+          </Text>
           {buttons && (
-            <Wrap spacing={2}>
+            <Wrap spacing={2} overflow="visible">
               {buttons.map((button, idx) => {
                 if (isButtonLink(button)) {
                   return (
@@ -97,6 +101,13 @@ const PageHero: React.FC<IProps> = ({
                         key={idx}
                         variant={button.variant}
                         to={button.to}
+                        onClick={() =>
+                          trackCustomEvent({
+                            eventCategory: button.matomo.eventCategory,
+                            eventAction: button.matomo.eventAction,
+                            eventName: button.matomo.eventName,
+                          })
+                        }
                       >
                         {button.content}
                       </ButtonLink>
@@ -111,6 +122,13 @@ const PageHero: React.FC<IProps> = ({
                         key={idx}
                         variant={button.variant}
                         toId={button.toId}
+                        onClick={() =>
+                          trackCustomEvent({
+                            eventCategory: button.matomo.eventCategory,
+                            eventAction: button.matomo.eventAction,
+                            eventName: button.matomo.eventName,
+                          })
+                        }
                       >
                         {button.content}
                       </Button>
