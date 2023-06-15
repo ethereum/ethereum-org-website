@@ -1,6 +1,14 @@
-import React from "react"
-import { Center } from "@chakra-ui/react"
-import styled from "@emotion/styled"
+import React, { ComponentProps } from "react"
+import {
+  Box,
+  Center,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
@@ -16,153 +24,204 @@ import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
-import {
-  CardContainer,
-  Content,
-  Divider,
-  GrayContainer,
-  Intro,
-  LeftColumn,
-  RightColumn,
-  TwoColumnContent,
-  Page,
-  StyledCard,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import Card from "../components/Card"
 
 import { getImage, getSrc } from "../utils/image"
-import { Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 2rem;
-  line-height: 140%;
-`
+const Page = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    align="center"
+    w="full"
+    my={0}
+    mx="auto"
+    {...props}
+  />
+)
 
-const Title = styled.h1`
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-`
+const Content = (props: ChildOnlyProp) => (
+  <Box w="full" px={8} py={4} {...props} />
+)
 
-const StyledTwoColumnContent = styled(TwoColumnContent)`
-  align-items: flex-start;
-`
+const Divider = () => (
+  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider" />
+)
 
-const Subtitle = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-`
-const SubtitleTwo = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  margin-bottom: 2rem;
-  color: ${(props) => props.theme.colors.text300};
-`
+const GrayContainer = (props: ChildOnlyProp) => (
+  <Box
+    width="full"
+    py={16}
+    mt={8}
+    background="grayBackground"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+    {...props}
+  />
+)
 
-const StyledEthPriceCard = styled(EthPriceCard)`
-  margin-bottom: 2rem;
-`
+const Intro = (props: ChildOnlyProp) => (
+  <Box maxW="608px" mb={{ base: 12, sm: 16 }} {...props} />
+)
 
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-`
+const StyledCard = (props: ComponentProps<typeof Card>) => (
+  <Card
+    m={4}
+    p={6}
+    flex="1 0 30%"
+    minW="280px"
+    maxW={{ base: "full", md: "46%", lg: "31%" }}
+    {...props}
+  />
+)
 
-const Hero = styled(GatsbyImage)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  align-self: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-left: 0;
-    width: 100%;
-  }
-`
+const Slogan = (props: ChildOnlyProp) => (
+  <Text
+    textStyle="normal"
+    fontWeight="normal"
+    fontSize="2rem"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const Header = styled.header`
-  flex: 1 1 50%;
-  min-width: 300px;
-  margin-top: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 1.5rem;
-  }
-`
+const Title = (props: ChildOnlyProp) => (
+  <Heading
+    as="h1"
+    fontSize="sm"
+    lineHeight={1.4}
+    letterSpacing="wider"
+    fontWeight="500"
+    mb={4}
+    mt={0}
+    textTransform="uppercase"
+    color="textTableOfContents"
+    {...props}
+  />
+)
 
-const H2 = styled.h2`
-  margin-top: 0;
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Text fontSize="xl" lineHeight={1.4} color="text200" {...props} />
+)
 
-const H4 = styled.h4`
-  font-weight: 600;
-`
+const TwoColumnContent = (props: FlexProps) => (
+  <Flex
+    w="full"
+    gap={{ base: 8, lg: 0 }}
+    align={{ base: "flex-start", lg: "center" }}
+    direction={{ base: "column", lg: "row" }}
+    p={8}
+    mb={12}
+    {...props}
+  />
+)
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-bottom: 2rem;
-`
+const SubtitleTwo = (props: ChildOnlyProp) => (
+  <Text fontSize="xl" lineHeight={1.4} color="text300" mb={8} {...props} />
+)
 
-const TokenCard = styled(HorizontalCard)`
-  min-width: 100%;
-  margin: 0.5rem 0rem;
-  border-radius: 0px;
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Flex
+    align="center"
+    justify="space-between"
+    direction={{ base: "column-reverse", md: "row" }}
+    {...props}
+  />
+)
 
-const TextDivider = styled.div`
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  width: 10%;
-  height: 1px;
-  background-color: ${(props) => props.theme.colors.searchResultBackground};
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    align-self: flex-start;
-  }
-`
+const Hero = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 100%"
+    maxW="800px"
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    ml={{ base: 0, md: 8 }}
+    {...props}
+  />
+)
 
-const CentralColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 960px;
-  margin: 4rem auto;
-`
+const Header = (props: ChildOnlyProp) => (
+  <Box
+    as="header"
+    flex="1 1 50%"
+    minW="300px"
+    mt={{ base: 6, md: 32 }}
+    {...props}
+  />
+)
 
-const CentralActionCard = styled(ActionCard)`
-  flex: none;
-  margin: 2rem 0;
-  .action-card-image-wrapper {
-    padding: 1rem;
-  }
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    display: flex;
+const H2 = (prop: HeadingProps) => (
+  <Heading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    mt={0}
+    {...prop}
+  />
+)
 
-    .action-card-image-wrapper {
-      min-width: 260px;
-    }
-    .action-card-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-left: 1rem;
+const H4 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h4"
+    fontSize={{ base: "md", md: "xl" }}
+    fontWeight={600}
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-      p {
-        margin-bottom: 0;
-      }
-    }
-  }
-`
+const CardContainer = (props: FlexProps) => (
+  <Flex wrap="wrap" ml={-4} mr={-4} {...props} />
+)
+
+const TokenCard = (props: ComponentProps<typeof HorizontalCard>) => (
+  <HorizontalCard minW="full" my={2} mx={0} borderRadius={0} {...props} />
+)
+
+const TextDivider = () => (
+  <Box
+    w="10%"
+    h="1px"
+    bg="searchResultBackground"
+    my={8}
+    alignSelf={{ base: "flex-start" }}
+  />
+)
+
+const CentralColumn = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    align="center"
+    maxW="960px"
+    my={16}
+    mx="auto"
+    {...props}
+  />
+)
+
+const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
+  <ActionCard
+    display={{ base: "block", sm: "flex" }}
+    flex="none"
+    my={8}
+    mx={0}
+    sx={{
+      ".action-card-image-wrapper": {
+        minW: { sm: "260px" },
+      },
+      ".action-card-content": {
+        display: { sm: "flex" },
+        justifyContent: { sm: "center" },
+        flexDirection: { sm: "column" },
+        ml: { sm: 4 },
+      },
+      p: {
+        mb: { sm: 0 },
+      },
+    }}
+    {...props}
+  />
+)
 
 const tokens = [
   {
@@ -287,16 +346,18 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             <SubtitleTwo>
               <Translation id="page-eth-currency-for-apps" />
             </SubtitleTwo>
-            <StyledEthPriceCard isLeftAlign={false} />
+            <EthPriceCard isLeftAlign={false} mb={8} />
             <ButtonLink to="/get-eth/">
               <Translation id="page-eth-button-buy-eth" />
             </ButtonLink>
           </Header>
-          <Hero
-            image={getImage(data.eth)!}
-            alt={t("page-eth-whats-eth-hero-alt")}
-            loading="eager"
-          />
+          <Hero>
+            <GatsbyImage
+              image={getImage(data.eth)!}
+              alt={t("page-eth-whats-eth-hero-alt")}
+              loading="eager"
+            />
+          </Hero>
         </HeroContainer>
       </Content>
       <GrayContainer>
@@ -306,7 +367,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               <Translation id="page-eth-description" />{" "}
             </p>
           </Intro>
-          <StyledCardContainer>
+          <CardContainer mb={8}>
             {benefits.map((benefits, idx) => (
               <StyledCard
                 key={idx}
@@ -315,7 +376,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
                 description={benefits.description}
               />
             ))}
-          </StyledCardContainer>
+          </CardContainer>
           <InfoBanner emoji=":wave:" shouldCenter>
             <b>
               <Translation id="page-eth-buy-some" />
@@ -442,8 +503,8 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
         </CalloutBanner>
       </Content>
 
-      <TwoColumnContent>
-        <LeftColumn>
+      <SimpleGrid columns={{ base: 1, lg: 2 }} p={8} spacing={8}>
+        <Box>
           <h3>
             <Translation id="page-eth-has-value" />
           </h3>
@@ -462,13 +523,13 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <p>
             <Translation id="page-eth-has-value-desc-5" />
           </p>
-        </LeftColumn>
-        <RightColumn>
+        </Box>
+        <Flex align="center">
           <CardList content={cardListContent} />
-        </RightColumn>
-      </TwoColumnContent>
-      <StyledTwoColumnContent id="tokens">
-        <LeftColumn>
+        </Flex>
+      </SimpleGrid>
+      <SimpleGrid id="tokens" columns={{ base: 1, lg: 2 }} p={8} spacing={8}>
+        <Box>
           <h3>
             <Translation id="page-eth-not-only-crypto" />
           </h3>
@@ -482,8 +543,8 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             <Translation id="page-eth-more-on-tokens" />
           </h4>
           <CardList content={tokenLinks} />
-        </LeftColumn>
-        <RightColumn>
+        </Box>
+        <Box>
           <h3>
             <Translation id="page-eth-popular-tokens" />
           </h3>
@@ -496,8 +557,8 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               emojiSize={5}
             />
           ))}
-        </RightColumn>
-      </StyledTwoColumnContent>
+        </Box>
+      </SimpleGrid>
       <Content>
         <Center w="100%">
           <QuizWidget quizKey="what-is-ether" />
