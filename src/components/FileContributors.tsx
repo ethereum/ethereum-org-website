@@ -220,7 +220,7 @@ const FileContributors: React.FC<IProps> = ({
           <Skeleton isLoaded={!loading} mt={{ base: 4, md: 0 }}>
             <Button
               variant="outline"
-              bg="background"
+              bg="background.base"
               border={0}
               onClick={() => {
                 setModalOpen(true)

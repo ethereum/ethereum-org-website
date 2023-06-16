@@ -22,7 +22,7 @@ El sitio web ethereum.org, al igual Ethereum en general, es un proyecto de códi
 - [Añadir herramientas de desarrollador](/contributing/adding-developer-tools/) _: añada una herramienta de desarrollador a una página relevante_.
 - [Añadir un intercambio](/contributing/adding-exchanges/) _: anada un intercambio a nuestro [buscador de intercambios](/get-eth/#country-picker)_.
 - [Mejorar nuestra investigación](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) _: comparta su opinión sobre nuestra investigación o colabore aportando la suya propia_.
-- [Solicitar una función](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) _: comuníquenos las ideas que tenga para una nueva función o diseño_.
+- [Solicitar una función](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) _: comuníquenos las ideas que tenga para una nueva función o diseño_.
 - [Añadir un término de glosario](/contributing/adding-glossary-terms) \_: ayúdenos a continuar ampliando el [glosario](/glossary/)\_de Ethereum.
 - [Crear/editar contenido](/contributing/#how-to-update-content) _: sugiera nuevas páginas o haga ajustes a lo que ya hay aquí_.
 - [ Agregar una capa 2](/contributing/adding-layer-2s/) _: agregue una capa 2 a una página relevante._

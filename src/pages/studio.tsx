@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Box, Container, Divider, Heading, useToken } from "@chakra-ui/react"
 
 import Link from "../components/Link"
@@ -87,5 +88,21 @@ const StudioRedirectPage = () => {
     </Container>
   )
 }
+
+export const query = graphql`
+  query StudioPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`
 
 export default StudioRedirectPage

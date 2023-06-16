@@ -10172,6 +10172,44 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "megatheikal",
+      "name": "megatheikal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64621442?v=4",
+      "profile": "https://megatheikal.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "stephenfire",
+      "name": "Stephen Guo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17247036?v=4",
+      "profile": "https://github.com/stephenfire",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "feuGeneA",
+      "name": "F. Eugene Aumson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7883777?v=4",
+      "profile": "http://aumson.org/gene",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "rpalakkal",
+      "name": "Roshan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19766713?v=4",
+      "profile": "https://github.com/rpalakkal",
+      "contributions": [
+        "content",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -10180,5 +10218,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }

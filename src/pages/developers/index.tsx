@@ -4,13 +4,13 @@ import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
-  BoxProps,
   chakra,
   Flex,
   Heading,
-  Hide,
   Image,
   SimpleGrid,
+  Text,
+  TextProps,
   useColorModeValue,
 } from "@chakra-ui/react"
 
@@ -63,7 +63,7 @@ const HeroCopy = (props: ChildOnlyProp) => (
     p={8}
     m={{ base: 0, sm: 8 }}
     mt={{ base: -2, md: 8 }}
-    bg="background"
+    bg="background.base"
     borderRadius="4px"
     border="1px solid border"
     {...props}
@@ -102,8 +102,8 @@ const Content = (props: ChildOnlyProp) => (
   <Box py={4} px={8} w="full" {...props} />
 )
 
-const Subtitle = (props: BoxProps) => (
-  <Box fontSize="xl" lineHeight="140%" color="text200" {...props} />
+const Subtitle = (props: TextProps) => (
+  <Text fontSize="xl" lineHeight="140%" color="text200" {...props} />
 )
 
 const MonoSubtitle = (props: ChildOnlyProp) => <Box as="h2" mb={0} {...props} />

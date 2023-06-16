@@ -19,7 +19,7 @@ export interface IProps {
 }
 
 const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
-  const linkBoxShadowColor = useToken("colors", "primary")
+  const linkBoxShadowColor = useToken("colors", "primary.base")
 
   return (
     <LinkBox
@@ -66,7 +66,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
           boxSize={6}
           marginX={6}
           _groupHover={{
-            fill: "primary",
+            fill: "primary.base",
             transition: "transform 0.1s",
             transform: "scale(1.2)",
             rotate: isExternal ? "-45deg" : "0",

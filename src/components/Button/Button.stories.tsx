@@ -101,7 +101,7 @@ export const MultiLineText: Story = {
         <Button {...args} />
         <Button size="sm" isSecondary {...args} />
       </VStack>
-      <VStack maxW="180px">
+      <VStack maxW="209px">
         <Button rightIcon={<MdChevronRight />} {...args} />
         <Button
           rightIcon={<MdChevronRight />}

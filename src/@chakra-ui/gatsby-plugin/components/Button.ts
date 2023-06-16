@@ -11,7 +11,7 @@ import { defineStyle, defineStyleConfig } from "@chakra-ui/react"
 const ICON_SELECTOR = "& svg"
 
 const getBaseColor = (isSecondary: boolean) =>
-  !isSecondary ? "primary" : "body"
+  !isSecondary ? "primary.base" : "body.base"
 
 const baseStyle = defineStyle((props) => ({
   borderRadius: "base",
@@ -21,7 +21,7 @@ const baseStyle = defineStyle((props) => ({
   whiteSpace: "normal",
   _focusVisible: {
     outline: "4px solid",
-    outlineColor: "primaryHover",
+    outlineColor: "primary.hover",
     outlineOffset: -1,
   },
   _disabled: {
@@ -29,7 +29,7 @@ const baseStyle = defineStyle((props) => ({
     pointerEvents: "none",
   },
   _hover: {
-    color: "primaryHover",
+    color: "primary.hover",
   },
   p: {
     m: 0,
@@ -39,11 +39,11 @@ const baseStyle = defineStyle((props) => ({
 const HOVER_BOX_SHADOW = "buttonHover"
 
 const variantSolid = defineStyle({
-  color: "background",
-  bg: "primary",
+  color: "background.base",
+  bg: "primary.base",
   _hover: {
-    color: "background",
-    bg: "primaryHover",
+    color: "background.base",
+    bg: "primary.hover",
     boxShadow: HOVER_BOX_SHADOW,
   },
   _active: {
@@ -64,13 +64,13 @@ const variantOutline = defineStyle({
 const variantGhost = {}
 
 const variantLink = defineStyle({
-  color: "primary",
+  color: "primary.base",
   fontWeight: 700,
   textDecor: "underline",
   py: 0,
   px: 1,
   _active: {
-    color: "primary",
+    color: "primary.base",
   },
 })
 
@@ -82,7 +82,7 @@ const variantIcon = defineStyle({
   color: "inherit",
   boxShadow: "none",
   _hover: {
-    color: "primary",
+    color: "primary.base",
     boxShadow: "none",
   },
 })

@@ -70,9 +70,11 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 
 ## Further reading {#further-reading}
 
+- [Explore dapps](/dapps)
 - [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [A 2021 guide to decentralized applications](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [What Are Decentralized Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
+- [Popular dapps](https://www.alchemy.com/dapps) - _Alchemy_
 
 _Know of a community resource that helped you? Edit this page and add it!_
 

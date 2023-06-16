@@ -334,10 +334,11 @@ DeFi — це ініціатива з відкритим вихідним код
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### Статті про DeFi {#defi-articles}
 
-- [Посібник з роботи з DeFi для початківців](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) — _Сід Коельо-Прабху, 6 січня 2020 р._
+- [Посібник із роботи з DeFi для початківців](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) — _Сід Коельо-Прабху, 6 січня 2020 р._
 
 ### Відео {#videos}
 

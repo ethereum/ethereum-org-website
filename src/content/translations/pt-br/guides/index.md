@@ -6,11 +6,11 @@ lang: pt-br
 
 # Guias Ethereum
 
-Deseja iniciar a sua jornada no Ethereum? Pode ser confuso usar e compreender uma nova tecnologia. Nossos guias práticos ensinam passo a passo como começar.
+Deseja iniciar a sua jornada no Ethereum? Há toda uma comunidade de nós explorando em conjunto muitas maneiras diferentes de usar e entender o Ethereum. O Ethereum não é uma corporação com um departamento baseado em cadeias de caracteres: é um grupo vivo de pessoas interessadas em construir mundos melhores. Esses guias práticos ajudarão você a aprender como começar e onde nos encontrar.
 
 ## Introdução
 
-1. [Como “registrar” uma conta no Ethereum](/guides/how-to-register-an-ethereum-account/) — Você aprenderá que precisa de um aplicativo de carteira e o guia mostrará onde encontrar uma.
+1. [Como “registrar” uma conta Ethereum](/guides/how-to-register-an-ethereum-account/) — qualquer pessoa pode criar uma carteira gratuitamente. Este guia mostrará por onde começar.
 
 2. [Como usar uma carteira](/guides/how-to-use-a-wallet/) — Uma introdução aos recursos básicos de qualquer carteira e como usá-los.
 
@@ -22,4 +22,8 @@ Deseja iniciar a sua jornada no Ethereum? Pode ser confuso usar e compreender um
 
 1. [Como levar os tokens para a camada 2](/guides/how-to-use-a-bridge/) — As transações Ethereum são muito caras? Considere mudar para soluções de escalabilidade Ethereum chamadas de camada 2.
 
-2. [Como trocar tokens](/guides/how-to-swap-tokens/) — Deseja trocar seus tokens por um diferente? Um guia simples sobre como fazer isso.
+2. [Como trocar tokens](/guides/how-to-swap-tokens/) — Deseja trocar seus tokens por um diferente? Este guia simples mostrará como fazer isso.
+
+## Habilidades de pensamento descentralizadas
+
+Uma vez que você tenha uma carteira e tenha usado alguns de seus recursos, você pode entender mais sobre o Ethereum perguntando: “_por que_ isso importa?” O que torna o dinheiro valioso se ninguém o controla? O que é confiança? Isso contribui para a liberdade? Que tipos de novas estruturas organizacionais e de governança o Ethereum permite? Essas perguntas, e muitas outras, são exploradas livremente em comunidades como a do [Kernel](https://www.kernel.community/).

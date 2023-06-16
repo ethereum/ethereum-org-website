@@ -173,14 +173,14 @@ const H2 = (props: ChildOnlyProp) => (
         verticalAlign: "middle",
 
         "&:hover": {
-          fill: "primary",
+          fill: "primary.base",
           opacity: 1,
         },
       },
     }}
     _hover={{
       a: {
-        fill: "primary",
+        fill: "primary.base",
         opacity: 1,
       },
     }}
@@ -205,14 +205,14 @@ const H3 = (props: ChildOnlyProp) => (
         verticalAlign: "middle",
 
         "&:hover": {
-          fill: "primary",
+          fill: "primary.base",
           opacity: 1,
         },
       },
     }}
     _hover={{
       a: {
-        fill: "primary",
+        fill: "primary.base",
         opacity: 1,
       },
     }}
@@ -451,7 +451,7 @@ const StakingPage = ({
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-          <StakingCommunityCallout />
+          <StakingCommunityCallout my={16} />
           <FeedbackCard />
         </ContentContainer>
         {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}

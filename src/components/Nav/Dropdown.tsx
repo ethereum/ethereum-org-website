@@ -28,7 +28,7 @@ const NavLink = (props: LinkProps) => (
     px={4}
     _hover={{
       textDecor: "none",
-      color: "primary",
+      color: "primary.base",
       svg: { fill: "currentColor" },
     }}
     sx={{ svg: { fill: "currentColor" } }}
@@ -100,7 +100,7 @@ const NavDropdown: React.FC<IProps> & {
         whiteSpace="nowrap"
         m={0}
         color="text"
-        _hover={{ color: "primary" }}
+        _hover={{ color: "primary.base" }}
       >
         <Flex
           as="span"

@@ -6,7 +6,7 @@ lang: pt-br
 
 # Como fazer transferir tokens para a camada 2
 
-Camadas 2 são soluções de escalabilidade para Ethereum, que permitem aos usuários realizar transações com maior velocidade e menores custos. Muitos projetos populares de criptomoedas estão se movendo para as camadas 2 devido a esses benefícios. A maneira mais simples de mover tokens do Ethereum para a camada 2 é usar um projeto de ponte.
+Se houver muito tráfego no Ethereum, isso pode ficar caro. Uma solução para isto é criar novas “camadas”: ou seja, diferentes redes que operam de forma similar ao próprio Ethereum. Estas chamadas de Camada 2s ajudam a reduzir o congestionamento e o custo no Ethereum, processando muito mais transações com taxas mais baixas e armazenando apenas o resultado delas no Ethereum de vez em quando. Como tal, essas camadas 2s nos permitem fazer transações com maior velocidade e custos reduzidos. Muitos projetos populares de criptomoedas estão se movendo para as camadas 2 devido a esses benefícios. A maneira mais simples de mover tokens do Ethereum para a camada 2 é usar uma ponte.
 
 **Pré-Requisitos:**
 

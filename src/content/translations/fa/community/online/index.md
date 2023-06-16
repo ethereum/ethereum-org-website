@@ -26,7 +26,6 @@ lang: fa
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - انجمن Discord متمرکز بر توسعه‌ی اتریوم</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - جامعه‌ای با محوریت ارائه‌ی کمک در بحث مدیریت پروژه برای توسعه‌ی اتریوم</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">تیم وب سایت Ethereum.org</Link> - با تیم و افراد جامعه توسعه و طراحی وب ethereum.org گفتگو کنید</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">دانشگاه Web3</Link> - جامعه‌ای متمرکز بر یادگیری توسعه‌ی Web3 </SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - جامعه‌ی خالقان web3 که در آن سازندگان، چهره‌های مطرح صنعت و علاقه‌مندان به اتریوم دور هم جمع می‌شوند. ما مشتاق توسعه، طراحی و فرهنگ وب 3 هستیم. بیایید در ساختن، همراه ما شوید.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - تالار گفتگو برای توسعه‌ی solidity‏ (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - تالار گفتگو برای توسعه‌ی solidity‏ (Matrix)</SocialListItem>

@@ -97,7 +97,7 @@ In linea con la natura fluida di Ethereum, team e prodotti vanno e vengono e l'i
 - garantire che tutti i portafogli e dapp elencati soddisfino ancora i nostri criteri
 - verificare che non ci siano prodotti suggeriti che soddisfano più criteri rispetto a quelli attualmente elencati
 
-A tale riguardo, puoi aiutarci controllando e facendoci sapere. [Crea un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) o invia un'email a [website@ethereum.org](mailto:website@ethereum.org)
+A tale riguardo, puoi aiutarci controllando e facendoci sapere. [Crea un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) o invia un'email a [website@ethereum.org](mailto:website@ethereum.org)
 
 _Stiamo anche studiando altre opzioni per votare, in modo tale che la community possa indicare le proprie preferenze ed evidenziare i migliori prodotti che dovremmo consigliare._
 

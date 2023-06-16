@@ -53,11 +53,12 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
 
   return (
     <Flex
+      as="aside"
       bg="ednBackground"
       align="center"
       mt={8}
       border="1px"
-      borderColor="primary"
+      borderColor="primary.base"
       borderRadius="base"
       boxShadow="inset 0 -2px 0 0 var(--eth-colors-primary400)"
     >
@@ -106,7 +107,13 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
         <ButtonLink
           to={editPath}
           leftIcon={
-            <Icon fill="background" w={6} h={6} as={FaGithub} name="github" />
+            <Icon
+              fill="background.base"
+              w={6}
+              h={6}
+              as={FaGithub}
+              name="github"
+            />
           }
         >
           <Translation id="page-calltocontribute-span" />
