@@ -114,7 +114,7 @@ export const commonInputTriggerStyles = {
   },
   commonContainerProps: {
     [$inputTriggerDisableColor.variable]: "colors.disabled",
-    _disabled: {
+    ["[data-disabled], [disabled], [data-readonly]"]: {
       cursor: "not-allowed",
     },
   },
