@@ -24,17 +24,27 @@ const baseStyleContainer = defineMergeStyles(
 
 const baseStyleThumb = defineMergeStyles(
   defaultBaseStyle?.({} as never).thumb,
-  { bg: "background.base" }
+  {
+    bg: "background.base",
+    [".chakra-switch__track:not([data-checked])[data-disabled] > &"]: {
+      border: "1px",
+      borderColor: "disabled",
+    },
+  }
 )
 
 const baseStyleTrack = defineMergeStyles(
   defaultBaseStyle?.({} as never).track,
   commonControlProps,
   {
-    bg: "body.light",
-    border: "none",
+    bg: "body.medium",
+    borderColor: "transparent",
     _invalid: { borderColor: "error.outline" },
     _focusVisible: { bg: "gray.500", borderColor: "transparent" },
+    ["&:not([data-checked])[data-disabled]"]: {
+      bg: "transparent",
+      borderColor: "disabled",
+    },
   }
 )
 

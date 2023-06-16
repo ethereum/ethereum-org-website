@@ -81,8 +81,8 @@ const $inputTriggerDisableColor = cssVar("input-trigger-disable-color")
 export const commonInputTriggerStyles = {
   commonControlProps: {
     border: "1px",
-    borderColor: "body.light",
-    outline: "2px solid",
+    borderColor: "body.medium",
+    outline: "3px solid",
     outlineColor: "transparent",
     _checked: {
       color: "background.base",
@@ -107,7 +107,7 @@ export const commonInputTriggerStyles = {
     [_notDisabledReadOnly]: {
       // Hovering over the label triggers the style for the control
       "*:hover > &": {
-        bg: "primary.hover",
+        bg: "body.light",
         borderColor: "primary.highContrast",
       },
     },
