@@ -157,6 +157,21 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Flexible fallback options
     - [Public Endpoint](https://eth.drpc.org)
     - Free shared archive nodes
+- [**Dwellir**](https://www.dwellir.com/)
+  - Features
+    - Free tier option with 3,000,000 reqs/month
+    - Infinitely scale the number of requests per month
+    - RPC and WSS endpoints
+    - Dedicated full and archive nodes
+    - Auto-Scaling (Volume Discounts)
+    - Highly scalable, resilient, enterprise-grade infrastructure
+    - Automated Chain Upgrades
+    - Bare metal machines hosted globally
+    - Service Analytics
+    - Direct support
+    - Access to 50+ blockchain nodes
+    - Customizable clients and algorithms
+    - Pay in Crypto (Enterprise)
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Features
