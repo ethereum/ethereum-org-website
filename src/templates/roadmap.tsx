@@ -51,6 +51,7 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
@@ -333,6 +334,7 @@ const components = {
   YouTube,
   RoadmapActionCard,
   RoadmapImageContent,
+  QuizWidget,
 }
 
 const RoadmapPage = ({
@@ -481,7 +483,10 @@ const RoadmapPage = ({
 export const roadmapPageQuery = graphql`
   query RoadmapPage($languagesToFetch: [String!]!, $relativePath: String) {
     locales: allLocale(
-      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["common", "learn-quizzes"] }
+      }
     ) {
       edges {
         node {

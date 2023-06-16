@@ -35,6 +35,10 @@ const quizzes: RawQuizzes = {
     title: "page-assets-merge",
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
+  scaling: {
+    title: "scaling",
+    questions: ["k001", "k002", "k003", "k004"],
+  },
 }
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
@@ -65,6 +69,11 @@ export const ethereumBasicsQuizzes: QuizzesSection[] = [
   },
   {
     id: "merge",
+    level: "intermediate",
+    next: "scaling",
+  },
+  {
+    id: "scaling",
     level: "intermediate",
   },
 ]
