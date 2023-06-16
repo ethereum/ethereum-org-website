@@ -41,7 +41,7 @@ Contributions can be from (but not limited to) any of the following categories:
 
 Eligibility criteria are subject to change, and disputes will be arbitrated by the ethereum.org core team. For questions reach out to us on [Discord](/discord/).
 
-<ButtonLink href="/contributing/funding-rounds/participating/registering/">Learn how to register</ButtonLink>
+<ButtonLink href="/contributing/funding-rounds/participating/registering/">Learn how to register as a recipient</ButtonLink>
 
 ## Allocators {#allocators}
 
@@ -50,7 +50,7 @@ Once a funding round begins, **anyone** is allowed to help allocate the matching
 <ExpandableCard
 title="Wait, I have to pay for this?"
 contentPreview="Ethereum.org is using Allo Protocol by Gitcoin to execute funding rounds">
-Allo Protocol by Gitcoin utilizes a mechanism called <strong>quadratic funding</strong> to allocate funds democratically, optimizing for human impact.
+Allo Protocol is a suite of smart contracts that utilize a mechanism called <strong>quadratic funding</strong> to allocate funds democratically, optimizing for human impact.
 
 Your donation represents your vote in how the matching funds should be <em>allocated</em>.
 
@@ -62,22 +62,24 @@ The funds in the matching pool are intended to be the main source of funding—d
 <ExpandableCard
 title="How much do I need to spend?"
 contentPreview="$1 is the minimum—you can do more, but that will do">
-Quadratic funding cares more about <em>how many unique individuals</em> found a contribution valuable, and less about the total value that was donated to each project... a <strong>$1 donation is plenty</strong> (the minimum allowed per project by Allo Protocol), and can be matched by significantly more if others agree.
+Quadratic funding cares more about <em>how many unique individuals</em> found a contribution valuable, and less about the total value that was donated to each project... a <strong>$1 donation is plenty</strong> (the minimum allowed per project by the Allo Protocol), and can be matched by significantly more if others agree.
 
 You are welcome to strengthen your vote by donating more, but each additional dollar donated will have diminishing returns on the matching pool funds.
 </ExpandableCard>
-
-**Note that 100% of all donations go directly to the recipient Ethereum address.**
 
 You can view all submitted contributions to see a summary of each. If you've found a contribution to be impactful, you're encouraged to show your support for this contributor to receive more matching funds by adding them to your shopping cart.
 
 When ready, you can checkout using the shopping cart by finalizing the amounts you'd like to donate before sending the funds using your wallet.
 
+<InfoBanner my={8}>
+Note that <strong>100%</strong> of all donations go directly to the recipient Ethereum address.
+</InfoBanner>
+
 <ButtonLink href="/contributing/funding-rounds/participating/allocating/">Learn how to allocate</ButtonLink>
 
 ## What funds will I need? {#needed-funds}
 
-Rounds are being held using the Allo Protocol on the Optimism layer 2 rollup, for on-chain transparency and inexpensive network fees. As such you’ll need an Ethereum address with some ETH available _on Optimism_ to be used for transaction fees (gas).
+Rounds are being held using the Allo Protocol smart contracts for on-chain transparency, deployed to the Optimism layer 2 rollup for inexpensive network fees. As such you’ll need an Ethereum address with some ETH available _on Optimism_ to be used for transaction fees (gas).
 
 As an **ethereum.org contributor** looking to receive funding, you’ll need some ETH on Optimism for:
 
@@ -92,6 +94,8 @@ As an **allocator**, you’ll need Optimism ETH for:
 <ExpandableCard
 title="How much will gas cost?"
 contentPreview="On Optimism, total fees should be anywhere from ~$0.25-$2">
+
+Optimism has implemented the Bedrock upgrade, which has further reduced gas costs for users.
 
 Total transaction fees for an ethereum.org contributor registering as a project should be under 0.001 ETH.
 

@@ -16,7 +16,7 @@ Ethereum.org is currently managed by a core team of ten full-time individuals, b
 
 Contributions to ethereum.org have increased significantly in frequency over the past five years. While the vast majority of these contributions have been on a voluntary basis, large portions of the site content **would not have been possible** without this community support, and the core team has been investigating measures to return value to impactful contributors.
 
-<InfoBanner emoji="❤️" mt="8">
+<InfoBanner emoji="❤️" my="8">
 The goal is to retroactively reward impactful work, while encouraging and creating incentive for everyone to contribute to public goods, including ethereum.org. And of course, to say <strong>thank you</strong>.
 </InfoBanner>
 
@@ -52,5 +52,3 @@ This prevents large donors from having disproportionate influence over the alloc
 If you've contributed to ethereum.org in the past and would like to apply for funding, or have benefited from ethereum.org and would like to help allocate funds to contributors, learn how to participate in the next funding round!
 
 <ButtonLink href="/contributing/funding-rounds/participating/" mt={8}>Learn how to participate</ButtonLink>
-
-<!-- TODO: Add information about timing, and how to find the (next) active round -->
