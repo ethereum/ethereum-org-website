@@ -67,7 +67,7 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
             colStart={{ ...(isOpen && { lg: columnNumber }) }}
             color={isOpen ? "black300" : "text"}
             cursor="pointer"
-            bg={isOpen ? color : "background"}
+            bg={isOpen ? color : "background.base"}
             direction={{
               base: isOpen ? "column" : "column-reverse",
               sm: isOpen ? "column" : "row-reverse",

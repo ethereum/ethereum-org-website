@@ -47,7 +47,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
 
   return (
     <List
-      bgColor="background"
+      bgColor="background.base"
       boxShadow={colorModeStyles.listBoxShadow}
       w="100%"
       mb={8}
@@ -94,7 +94,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                 _hover={{
                   textDecor: "none",
                   borderRadius: 0.5,
-                  boxShadow: "0 0 1px primary",
+                  boxShadow: "0 0 1px var(--eth-colors-primary-base)",
                   background: "tableBackgroundHover",
                 }}
               >

@@ -11,6 +11,7 @@ import {
   ListItem,
   Text,
   useColorModeValue,
+  useToken,
   VisuallyHidden,
 } from "@chakra-ui/react"
 
@@ -71,6 +72,8 @@ const MeetupList: React.FC<IProps> = () => {
     })
   }
 
+  const primaryBaseColor = useToken("colors", "primary.base")
+
   return (
     <Box>
       <Input
@@ -110,7 +113,7 @@ const MeetupList: React.FC<IProps> = () => {
             _hover={{
               textDecoration: "none",
               borderRadius: "base",
-              boxShadow: "0 0 1px primary",
+              boxShadow: `0 0 1px ${primaryBaseColor}`,
               bg: "tableBackgroundHover",
             }}
           >
