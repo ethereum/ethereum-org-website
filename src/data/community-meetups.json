@@ -394,5 +394,11 @@
     "emoji": ":belgium:",
     "location": "Brussels",
     "link": "https://dao.brussels/"
+  },
+  {
+    "title": "Blockchained India",
+    "emoji": ":india:",
+    "location": "Bangalore",
+    "link": "https://www.meetup.com/blockchainindia/"
   }
 ]
