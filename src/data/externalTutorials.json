@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://patrickalphac.medium.com/fuzz-invariant-tests-the-new-bare-minimum-for-smart-contract-security-87ebe150e88c",
+    "title": "Fuzzing & Invariant Testing Introduction",
+    "description": "What is fuzz testing? What are invariant tests? We introduce how to use these tools in Web3 & Solidity and explain why they are essential, especially for security. ",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "security"
+    ],
+    "skillLevel": "beginner",
+    "timeToRead": "9",
+    "lang": "en",
+    "publishDate": "04/13/2023"
+  },
+  {
     "url": "https://www.cyfrin.io/blog/what-is-a-smart-contract-audit",
     "title": "What is a Smart Contract Audit",
     "description": "Smart Contract Auditing | What it is, what to expect, and where to look for one. Everything you need to know!",

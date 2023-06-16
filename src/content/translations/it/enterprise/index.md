@@ -66,7 +66,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 ### Strumenti e librerie {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Piattaforma di analisi dei dati di Ethereum_
-- [Epirus](https://www.web3labs.com/epirus) _piattaforma per sviluppare, distribuire e monitorare le applicazioni della blockchain di Web3 Labs_
+- [Sirato](https://www.web3labs.com/sirato) _una piattaforma specializzata nell'analisi dei dati per reti pubbliche e private abilitate a Ethereum realizzata da Labs nel Web3_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _kit di strumenti per transazioni private_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _applicazione per la firma delle transazioni da usare con un provider web3_
 - [Tenderly](https://tenderly.co/) _una Piattaforma di dati che fornisce analitiche in tempo reale, avvisando e monitorando con supporto alle reti private_
@@ -78,51 +78,22 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 
 Sviluppare un'applicazione su una soluzione di scalabilità livello 2 può aiutare a [gestire molte problematiche che precedentemente hanno spinto le aziende a sviluppare su blockchain private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), mantenendo comunque i vantaggi legati allo sviluppo sulla rete principale.
 
-I progetti di Livello 2 includono:
-
-- Optimistic Rollup (dati sulla catena, prove di frode)
-  - [Optimism](https://optimism.io/)
-  - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
-  - [Fuel Network](https://fuel.sh)
-  - [Rete Boba](https://boba.network/)
-- Rollup ZK (dati sulla catena, prove di validità ZK)
-  - [Loopring](https://loopring.org)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkSync](https://matter-labs.io/)
-  - [Aztec 2.0](https://aztec.network/)
-- Validium (dati esterni alla catena, prove di validità ZK)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkPorter](https://matter-labs.io/)
-- Canali di stato
-  - [Connext](https://connext.network/)
-  - [Kchannels](https://www.kchannels.io/)
-  - [Perun](https://perun.network)
-  - [Raiden](https://raiden.network/)
-- Catene secondarie
-  - [Polygon PoS](https://polygon.technology/)
-  - [Skale](https://skale.network)
-  - [POA Network](https://www.poa.network/)
-- Soluzioni ibride che combinano le proprietà di più categorie
-  - [Celer](https://celer.network)
-
 ## Applicazioni aziendali attive sulla rete principale {#enterprise-live-on-mainnet}
 
-Ecco alcune applicazioni aziendali che sono state distribuite alla rete principale pubblica Ethereum
+Ecco alcuni esempi di applicazioni aziendali che sono stati estesi alla rete pubblica principale (Mainnet) di Ethereum
 
 ### Pagamenti {#payments}
 
-- [Brave Browser](https://basicattentiontoken.org/) _paga gli utenti per l'attenzione prestata agli annunci pubblicitari e gli utenti possono pagare gli editori per supportarli, tramite il Token d'attenzione di base_
+- [Brave Browser](https://basicattentiontoken.org/) _paga gli utenti per l'attenzione prestata agli annunci pubblicitari e gli utenti possono pagare gli editori per supportarli, tramite il token di attenzione di base_
 - [hCaptcha](https://www.hcaptcha.com/) _Sistema CAPTCHA di prevenzione da bot che paga gli operatori dei siti web per l'operazione di etichettatura dei dati da parte degli utenti per il machine learning. Attualmente distribuito da Cloudflare_
-- [Audius](https://audius.co/) _un servizio di streaming che collega i fan musicali direttamente agli artisti e consente a questi ultimi di essere pagati totalmente dai fan, direttamente e istantaneamente per ogni flusso_
 - [EthereumAds](https://ethereumads.com/) _consente agli operatori dei siti web di vendere spazi pubblicitari e di essere pagati tramite Ethereum_
 
 ### Finanza {#finance}
 
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _emissione e liquidazione di obbligazioni_
-- [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _emissione di obbligazioni_
+- [Societe Generale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _emissione di obbligazioni_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _offerta e tokenizzazione di obbligazioni per FAT Brands_
-- [Sila](https://silamoney.com/) _infrastruttura di servizi bancari e pagamenti ACH sotto forma di servizio_
-- [Kratos](https://triterras.com/kratos) _piattaforma finanziaria di commercio di commodity che connette i trader di commodity e consente loro di scambiare e procurarsi capitale dai finanziatori direttamente online_
+- [Sila](https://silamoney.com/) _infrastruttura di servizi bancari e pagamenti ACH sotto forma di servizio, che usa stablecoin_
 - [Taurus](https://www.taurushq.com/) _emette titoli tokenizzati_
 
 ### Tokenizzazione di asset {#tokenization}
@@ -137,16 +108,15 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _i dettagli dei prestiti finalizzati sono associati ad hash e registrati sulla rete principale_
 - [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _l'integrità dei dati può essere assicurata scrivendo periodicamente hash di dati indicizzati nella rete principale_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _la maggiore agenzia di stampa italiana combatte contro le fake news e consente ai lettori di verificare l'origine delle notizie registrandole sulla rete principale_
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _registra le conferenze stampa su Ethereum per assicurare l'affidabilità e la fiducia nell'azienda_
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _registra le conferenze stampa su Ethereum per assicurare l'affidabilità e la fiducia aziendale_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _registra la provenienza e lo storico delle riparazioni degli orologi su Ethereum_
 - [EthSign](https://ethsign.xyz/) _registra i documenti elettronici firmati sulla blockchain di Ethereum_
 
 ### Catena d'approvvigionamento {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _fornitore di polizze di carico e trasferimento di documenti_
-- [Morpheus.network](https://morpheus.network/) _piattaforma di automatizzazione della catena d'approvvigionamento che implementa un ibrido di catene private con dati autenticati sulla rete principale Ethereum e viene utilizzata da aziende come il distributore di carburante e petrolio canadese Federated Co-op Ltd. e il fornitore di alimenti per animali domestici argentino Vitalcan_
+- [Morpheus.network](https://morpheus.network/): _Piattaforma di automazione della filiera che implementa un ibrido di catene private con dati autenticati sulla Rete Principale di Ethereum ed è in uso da aziende come il distributore di alimenti, olio e carburanti canadese Federated Co-op Ltd. e il fornitore argentino di alimenti per animali domestici Vitalcan_
 - [Minespider](https://www.minespider.com/) _monitoraggio della catena di approvvigionamento_
-- [Follow Our Fibre](https://www.followourfibre.com) _tracciabilità della filiera della viscosa_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _consente alle aziende di interagire in un flusso di lavoro di approvvigionamento emettendo richieste di preventivo, contratti, ordini d'acquisto e fatture sulla rete di partner aziendali fidati_
 - [Treum](https://treum.io/) _assicura trasparenza, tracciabilità e commerciabilità alle catene d'approvvigionamento usando la tecnologia della blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _verifica le Polizze di Carico (B/L) per le spedizioni internazionali_
@@ -161,11 +131,9 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 
 - [Due scuole superiori italiane](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _emettono diplomi sulla rete principale Ethereum_
 - L'[Università di St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _ha avviato un progetto pilota per verificare le lauree conferite da un'università svizzera_
-- [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _tutti i certificati di istruzione sono registrati sulla rete principale da [Hyland](https://www.learningmachine.com/)_
-- La [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus), _università sudcoreana, rilascia ai nuovi laureati diplomi memorizzati sulla blockchain_
-- [OpenCerts](https://opencerts.io/) _emette credenziali d'istruzione nella blockchain a Singapore_
+- [Hyland Credentials](https://www.hylandcredentials.com) _titoli di studio digitali, licenze e certificati digitali o di altro tipo_
+- [OpenCerts](https://opencerts.io/faq) _emette credenziali d'istruzione nella blockchain a Singapore_
 - [BlockCerts](https://www.blockcerts.org/) _ha sviluppato uno standard aperto per le credenziali della blockchain_
-- [SkillTree](http://skilltree.org/) _training per migliorare le competenze online e certificazioni configurabili con trigger di scadenza o dipendenze da altre competenze_
 
 ### Utilità {#utilities}
 

@@ -48,6 +48,7 @@
   "page-index-developers-code-example-description-3": "既存のサービスを分散化された公開アプリとして再構築することができます。",
   "page-index-network-stats-title": "現在のイーサリアム",
   "page-index-network-stats-subtitle": "最新のネットワーク統計",
+  "page-index-network-stats-total-eth-staked": "ETHステーキング合計",
   "page-index-network-stats-eth-price-description": "ETH価格(米ドル)",
   "page-index-network-stats-eth-price-explainer": "1 ETHの最新価格です。0.0000000000000001から購入できます。1 ETH全てを購入する必要はありません。",
   "page-index-network-stats-tx-day-description": "現在のトランザクション",

@@ -2,7 +2,7 @@ import React from "react"
 import { VStack, Icon, Box, Flex, Text } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 import { kebabCase } from "lodash"
-import { ResponsiveContainer, AreaChart, Area, XAxis } from "recharts"
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis } from "recharts"
 import Tooltip from "../Tooltip"
 import Translation from "../Translation"
 import Link from "../Link"
@@ -60,6 +60,16 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
     })
   }
 
+  const minValue = state.data.reduce(
+    (prev, { value }) => (prev < value ? prev : value),
+    1e42
+  )
+
+  const maxValue = state.data.reduce(
+    (prev, { value }) => (prev > value ? prev : value),
+    0
+  )
+
   const chart: React.ReactNode = (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
@@ -96,6 +106,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
           fill={`url(#colorUv-${kebabCase(title)})`}
           connectNulls
         />
+        <YAxis type="number" domain={[minValue, maxValue]} width={0} />
         <XAxis dataKey="timestamp" axisLine={false} tick={false} />
       </AreaChart>
     </ResponsiveContainer>

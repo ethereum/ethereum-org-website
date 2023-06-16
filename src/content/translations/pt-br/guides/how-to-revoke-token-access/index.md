@@ -41,9 +41,9 @@ Se você não sabe qual contrato escolher, você pode revogar todos eles. Isso n
 
 Ao clicar em revogar, você verá uma nova sugestão de transação na sua carteira. Isso é o que se espera que aconteça. Você terá que pagar a tarifa para o cancelamento ser bem-sucedido. Dependendo da rede, isso pode levar de um a vários minuto para ser processado.
 
-Aconselhamos a atualizar a ferramenta de revogação após alguns minutos e conectar sua carteira novamente para ter certeza de que o contrato revogado desapareceu da lista.
+Aconselhamos que você atualize a ferramenta de revogação após alguns minutos e conecte sua carteira novamente para ter certeza de que o contrato revogado desapareceu da lista.
 
-<mark>Recomendamos que você nunca permita que seus projetos tenham acesso ilimitado aos seus tokens e revogue toda permissão de acesso aos seus tokens regularmente. Revogar o acesso ao token nunca resultará na perda de fundos.</mark>
+<mark>Recomendamos que você nunca permita que seus projetos tenham acesso ilimitado aos seus tokens e revogue toda permissão de acesso aos seus tokens regularmente. Revogar o acesso ao token nunca deve resultar na perda de fundos, especialmente se você usar as ferramentas listadas acima.</mark>
 
  <br />
 

@@ -58,7 +58,7 @@ Our design system makes designing ethereum.org fun and easy. If you are an exper
 
 ### <Emoji text=":six:" size={1} /> Write design-related content on the website {#write-design-articles}
 
-The Ethereum developer community is strong, but the design community is falling slightly behind. If you are a designer with web3 knowledge, please consider sharing your learnings with the larger community so that we can all grow and improve together!
+The Ethereum developer community is strong, but the design community is falling slightly behind. If you are a designer with web3 knowledge, please consider sharing your learnings with the larger community so that we can all grow and improve together; we have [a page on designing for Ethereum](/developers/docs/design-and-ux/) you can contribute to.
 
 1. Ideate on design topics that should be covered on ethereum.org and would be beneficial for the designers in the space.
 2. Go to our GitHub repository and [raise an issue](https://github.com/ethereum/ethereum-org-website/issues/new) proposing a topic (do not write the content yet).

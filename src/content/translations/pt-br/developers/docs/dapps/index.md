@@ -70,9 +70,9 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 
 ## Leitura adicional {#further-reading}
 
-- [A arquitetura de um aplicativo web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) _- Preethi Kasireddy_
-- [Um guia de 2021 para aplicativos descentralizados](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) _- LimeChain_
-- [O que são aplicativos descentralizados?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) _- Gemini_
+- [A arquitetura de um aplicativo web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
+- [Um guia de 2021 para aplicativos descentralizados](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
+- [O que são aplicativos descentralizados?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
 
 _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
 
