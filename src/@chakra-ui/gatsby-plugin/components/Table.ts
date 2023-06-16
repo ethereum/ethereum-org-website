@@ -22,6 +22,7 @@ const baseStyle = defineMergeStyles(tableDefaultTheme.baseStyle, {
       borderBottom: "1px",
       borderColor: "primary.visited",
       color: "primary.visited",
+      textAlign: "initial",
       textTransform: "capitalize",
       ...cellPadding,
       ...numericStyles,
