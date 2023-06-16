@@ -35,7 +35,7 @@ const baseStyle = definePartsStyle((props) => {
         },
         _hover: null, // override default
         _groupHover: {
-          borderColor: "primaryHover",
+          borderColor: "primary.hover",
         },
         _invalid: {
           borderColor: ec,
@@ -47,8 +47,8 @@ const baseStyle = definePartsStyle((props) => {
         },
         "&:not(:disabled)": {
           _active: {
-            bg: "backgroundHighlight",
-            borderColor: "primaryHighContrast",
+            bg: "background.highlight",
+            borderColor: "primary.highContrast",
           },
         },
       },
@@ -57,7 +57,7 @@ const baseStyle = definePartsStyle((props) => {
         transitionProperty: "common",
         transitionDuration: "normal",
         _groupHover: {
-          color: "primaryHover",
+          color: "primary.hover",
         },
         _peerFocusVisible: {
           color: fc,
@@ -72,9 +72,9 @@ const baseStyle = definePartsStyle((props) => {
           color: "disabled",
         },
         "[data-peer]:not(:disabled):active ~ &": {
-          color: "primaryDark",
+          color: "primary.dark",
           _dark: {
-            color: "primaryHighContrast",
+            color: "primary.highContrast",
           },
         },
       },

@@ -24,16 +24,16 @@ const baseStyleContainer = defineMergeStyles(
 
 const baseStyleThumb = defineMergeStyles(
   defaultBaseStyle?.({} as never).thumb,
-  { bg: "background" }
+  { bg: "background.base" }
 )
 
 const baseStyleTrack = defineMergeStyles(
   defaultBaseStyle?.({} as never).track,
   commonControlProps,
   {
-    bg: "bodyLight",
+    bg: "body.light",
     border: "none",
-    _invalid: { borderColor: "errorOutline" },
+    _invalid: { borderColor: "error.outline" },
     _focusVisible: { bg: "gray.500", borderColor: "transparent" },
   }
 )

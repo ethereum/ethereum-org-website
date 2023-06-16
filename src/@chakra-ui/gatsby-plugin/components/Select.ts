@@ -19,7 +19,7 @@ const baseStyleField = defineMergeStyles(selectDefaultTheme.baseStyle?.field, {
   h: 10.5,
   _focusVisible: {
     outline: "3px solid",
-    outlineColor: "primaryHover",
+    outlineColor: "primary.hover",
     outlineOffset: "-1px",
   },
   "&:not(:disabled)": {
@@ -32,7 +32,7 @@ const baseStyleField = defineMergeStyles(selectDefaultTheme.baseStyle?.field, {
 
 const baseStyleIcon = defineMergeStyles(selectDefaultTheme.baseStyle?.icon, {
   _peerHover: {
-    color: "primary",
+    color: "primary.base",
   },
 })
 

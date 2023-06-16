@@ -24,7 +24,7 @@ const baseStyleControl = defineMergeStyles(
   radioDefaultTheme.baseStyle?.({} as never).control,
   commonControlProps,
   {
-    borderColor: "bodyLight",
+    borderColor: "body.light",
     boxSize: 4,
     fontSize: "md",
     "*:hover > &": {
