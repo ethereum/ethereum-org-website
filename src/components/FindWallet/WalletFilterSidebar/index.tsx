@@ -37,7 +37,7 @@ const FilterToggle = ({
   >
     <Icon
       as={conditionItem ? BsToggleOn : BsToggleOff}
-      color="primary"
+      color="primary.base"
       boxSize="1.875rem"
     />
   </Box>
@@ -82,7 +82,7 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
               <>
                 <Heading
                   as="h3"
-                  color="primary"
+                  color="primary.base"
                   borderBottom={isExpanded ? "1px" : "none"}
                   borderColor="currentColor"
                   fontSize="2xl"
@@ -102,7 +102,7 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
                     <Box as="span" flex={1}>
                       {filterOption.title}
                     </Box>
-                    <AccordionIcon color="primary" boxSize={9} />
+                    <AccordionIcon color="primary.base" boxSize={9} />
                   </AccordionButton>
                 </Heading>
                 <AccordionPanel as={List} p={0} m={0}>

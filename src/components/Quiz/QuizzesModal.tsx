@@ -20,8 +20,8 @@ const QuizzesModal: React.FC<IProps> = ({ children, ...rest }) => {
     quizStatus === "neutral"
       ? "white"
       : quizStatus === "success"
-      ? "successLight"
-      : "errorLight"
+      ? "success.light"
+      : "error.light"
 
   return (
     <ChakraModal

@@ -91,7 +91,7 @@ const CardTag = (props: ChildOnlyProp) => (
     alignItems="center"
     justifyContent="center"
     p={2}
-    bg="primary"
+    bg="primary.base"
     borderBottom="1px solid border"
     color="buttonColor"
     borderRadius="3px 3px 0px 0px"
@@ -105,7 +105,7 @@ const AddressCard = (props: ChildOnlyProp) => {
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
   return (
     <Box
-      bg="background"
+      bg="background.base"
       border="1px solid"
       borderColor="border"
       borderRadius="4px"
@@ -184,7 +184,7 @@ const StyledFakeLink = (props: { onClick: any; children: ReactNode }) => (
     as="button"
     onClick={props.onClick}
     mr={2}
-    color="primary"
+    color="primary.base"
     cursor="pointer"
   >
     {props.children}

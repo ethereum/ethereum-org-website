@@ -181,6 +181,7 @@ Offline penalties are proportional to how many others are offline at the same ti
 </ExpandableCard>
 
 <ExpandableCard title="How do I unlock my rewards or get my ETH back?">
+
 Withdrawals of any kind from the Beacon Chain require withdrawal credentials to be set.
 
 New stakers set this at time of key generation and deposit. Existing stakers who did not already set this can upgrade their keys to support this functionality.

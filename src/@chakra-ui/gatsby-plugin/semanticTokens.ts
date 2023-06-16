@@ -34,41 +34,59 @@ const semanticTokens = {
     ...oldColors,
 
     // Design System colors
-    primary: { _light: "blue.500", _dark: "orange.500" },
-    primaryHighContrast: { _light: "blue.700", _dark: "orange.100" },
-    primaryLowContrast: { _light: "blue.100", _dark: "orange.800" },
-    // ! Deprecating primaryLight
-    primaryLight: { _light: "blue.100", _dark: "orange.100" },
-    // ! Deprecating primaryDark
-    primaryDark: { _light: "blue.700", _dark: "orange.800" },
-    primaryHover: { _light: "blue.300", _dark: "orange.300" },
-    primaryVisited: { _light: "blue.600", _dark: "orange.600" },
-    // ! Deprecating primaryPressed
-    primaryPressed: { _light: "blue.300", _dark: "orange.800" },
-    body: { _light: "gray.700", _dark: "gray.100" },
-    // ! Deprecating bodyInverted
-    bodyInverted: { _light: "gray.100", _dark: "gray.700" },
-    bodyMedium: { _light: "gray.500", _dark: "gray.300" },
-    bodyLight: { _light: "gray.200", _dark: "gray.600" },
+
+    // Main Set
+    primary: {
+      base: { _light: "blue.500", _dark: "orange.500" },
+      highContrast: { _light: "blue.700", _dark: "orange.100" },
+      lowContrast: { _light: "blue.100", _dark: "orange.800" },
+      hover: { _light: "blue.300", _dark: "orange.300" },
+      visited: { _light: "blue.600", _dark: "orange.600" },
+      // ! Deprecating primary.light
+      light: { _light: "blue.100", _dark: "orange.100" },
+      // ! Deprecating primary.dark
+      dark: { _light: "blue.700", _dark: "orange.800" },
+      // ! Deprecating primary.pressed
+      pressed: { _light: "blue.300", _dark: "orange.800" },
+    },
+    body: {
+      base: { _light: "gray.700", _dark: "gray.100" },
+      medium: { _light: "gray.500", _dark: "gray.300" },
+      light: { _light: "gray.200", _dark: "gray.600" },
+      // ! Deprecating body.inverted
+      inverted: { _light: "gray.100", _dark: "gray.700" },
+    },
+    background: {
+      base: { _light: "white", _dark: "gray.700" },
+      highlight: { _light: "gray.100", _dark: "gray.900" },
+    },
     disabled: { _light: "gray.300", _dark: "gray.500" },
-    background: { _light: "white", _dark: "gray.700" },
-    backgroundHighlight: { _light: "gray.100", _dark: "gray.900" },
     // ! Deprecating neutral
     neutral: { _light: "white", _dark: "gray.900" },
-    success: "green.500",
-    successLight: "green.100",
-    successOutline: { _light: "success", _dark: "successLight" },
-    // ! Deprecating successNeutral
-    successNeutral: { _light: "green.100", _dark: "green.900" },
+
+    // Complementary Set
+    attention: {
+      base: "yellow.500",
+      light: "yellow.200",
+      outline: { _light: "attention.base", _dark: "attention.light" },
+    },
     // ? Keep "error" or rename to "fail" ?
-    error: "red.500",
-    errorLight: "red.100",
-    errorOutline: { _light: "error", _dark: "errorLight" },
-    // ! Deprecating errorNeutral
-    errorNeutral: { _light: "red.100", _dark: "red.900" },
-    attention: "yellow.500",
-    attentionLight: "yellow.200",
-    attentionOutline: { _light: "attention", _dark: "attentionLight" },
+    error: {
+      base: "red.500",
+      light: "red.100",
+      outline: { _light: "error.base", _dark: "error.light" },
+      // ! Deprecating error.neutral
+      neutral: { _light: "red.100", _dark: "red.900" },
+    },
+    success: {
+      base: "green.500",
+      light: "green.100",
+      outline: { _light: "success.base", _dark: "success.light" },
+      // ! Deprecating success.neutral
+      neutral: { _light: "green.100", _dark: "green.900" },
+    },
+
+    // Misc
     tooltipShadow: {
       _light: "blackAlpha.400",
       _dark: "whiteAlpha.400",

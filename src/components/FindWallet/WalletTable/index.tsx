@@ -82,9 +82,9 @@ const Grid = forwardRef<SimpleGridProps, "tr">((props, ref) => (
 
 const WalletContentHeader = (props: ChildOnlyProp) => (
   <Grid
-    bg="background"
+    bg="background.base"
     borderBottom="1px"
-    borderColor="primary"
+    borderColor="primary.base"
     templateColumns={{
       base: "auto",
       sm: "60% auto 0% 0% 5%",
@@ -445,7 +445,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                   <Box>
                     <Icon
                       as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
-                      color="primary"
+                      color="primary.base"
                       fontSize="2xl"
                     />
                   </Box>
