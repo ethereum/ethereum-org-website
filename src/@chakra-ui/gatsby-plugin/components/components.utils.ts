@@ -111,6 +111,12 @@ export const commonInputTriggerStyles = {
         borderColor: "primary.highContrast",
       },
     },
+    _invalid: {
+      // TODO: Investigate inconsistency in prop rendering order (possible Chakra bug)
+      // border: "2px",
+      borderColor: "error.base",
+      bg: "error.light",
+    },
   },
   commonContainerProps: {
     [$inputTriggerDisableColor.variable]: "colors.disabled",

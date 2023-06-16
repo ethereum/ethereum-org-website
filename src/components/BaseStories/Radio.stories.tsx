@@ -53,6 +53,9 @@ export const Radio: Story = {
         <RadioComponent value="required" isRequired>
           isRequired
         </RadioComponent>
+        <RadioComponent value="invalid" isInvalid>
+          isInvalid
+        </RadioComponent>
       </Flex>
     </RadioGroup>
   ),

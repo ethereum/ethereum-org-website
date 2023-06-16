@@ -42,6 +42,9 @@ export const Checkbox: Story = {
         <CheckboxComponent value="required" isRequired>
           isRequired
         </CheckboxComponent>
+        <CheckboxComponent value="invalid" isInvalid>
+          isInvalid
+        </CheckboxComponent>
       </VStack>
     </CheckboxGroup>
   ),
