@@ -33,7 +33,7 @@ export const Tables: Story = {
   render: (args) => (
     <>
       <TableComponent {...args} />
-      <TableComponent {...args} variant="simple" />
+      <TableComponent {...args} variant="minimal" />
       <TableComponent {...args} variant="striped" />
     </>
   ),

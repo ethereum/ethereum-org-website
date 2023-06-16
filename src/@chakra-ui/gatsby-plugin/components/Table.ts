@@ -20,8 +20,8 @@ const baseStyle = defineMergeStyles(tableDefaultTheme.baseStyle, {
     minW: "556px",
     th: {
       borderBottom: "1px",
-      borderColor: "primaryVisited",
-      color: "primaryVisited",
+      borderColor: "primary.visited",
+      color: "primary.visited",
       textTransform: "capitalize",
       ...cellPadding,
       ...numericStyles,
@@ -31,7 +31,7 @@ const baseStyle = defineMergeStyles(tableDefaultTheme.baseStyle, {
       "th, td": {
         _notLast: {
           borderRight: "2px",
-          borderRightColor: "background",
+          borderRightColor: "background.base",
         },
       },
     },
@@ -46,7 +46,7 @@ const baseStyle = defineMergeStyles(tableDefaultTheme.baseStyle, {
            * Override specificity when hovering
            * over even rows in 'striped' variant.
            */
-          bg: "backgroundHighlight !important",
+          bg: "background.highlight !important",
         },
       },
     },
@@ -58,7 +58,7 @@ const variantStriped = definePartsStyle({
     tbody: {
       tr: {
         _even: {
-          bg: "backgroundHighlight",
+          bg: "background.highlight",
         },
       },
     },
@@ -68,7 +68,7 @@ const variantStriped = definePartsStyle({
 const variantSimple = definePartsStyle({
   table: {
     thead: {
-      bg: "backgroundHighlight",
+      bg: "background.highlight",
     },
   },
 })
@@ -79,5 +79,8 @@ export const Table = defineMultiStyleConfig({
     minimal: {},
     striped: variantStriped,
     simple: variantSimple,
+  },
+  defaultProps: {
+    variant: "simple",
   },
 })
