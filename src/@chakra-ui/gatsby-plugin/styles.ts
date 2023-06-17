@@ -138,6 +138,9 @@ const styles = {
       lineHeight: "1.1rem",
       fontFamily: "SFMono-Regular,Menlo,Monaco,Consolas,monospace",
     },
+    ".katex .newline": {
+      height: "0.5em",
+    },
   }),
 }
 

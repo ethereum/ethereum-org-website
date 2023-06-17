@@ -120,7 +120,7 @@ $$
 \times 15 \times 10^{6} {gas \over block}
 \times Y {gwei \over gas}
 \times {1\space ETH \over 10^{9} gwei}
-\atop
+\\
 = 1700 {ETH \over day}
 $$
 
