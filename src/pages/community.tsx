@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import {
   Box,
   Flex,
@@ -23,7 +23,6 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
-import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 
 import { getImage } from "../utils/image"
 
@@ -210,8 +209,6 @@ const CommunityPage = ({
         title={t("page-community-meta-title")}
         description={t("page-community-meta-description")}
       />
-      {/* TODO: REMOVE MAY 11 */}
-      <WritersCohortBanner pathname={location.pathname} />
       <PageHero isReverse content={heroContent} />
       <Divider />
       <Flex
@@ -290,7 +287,7 @@ const CommunityPage = ({
                 borderRadius="sm"
                 border="1px solid"
                 borderColor="text"
-                bg="background"
+                bg="background.base"
                 boxShadow={theme.colors.cardBoxShadow}
                 key={idx}
                 title={card.title}

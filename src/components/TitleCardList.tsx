@@ -47,7 +47,7 @@ const TitleCardList: React.FC<IProps> = ({
   )
   return (
     <Box
-      bg="background"
+      bg="background.base"
       boxShadow="tableBox"
       width="100%"
       border-radius="sm"
@@ -119,7 +119,7 @@ const TitleCardList: React.FC<IProps> = ({
             boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
             _hover={{
               textDecoration: "none",
-              boxShadow: "0 0 1px var(--eth-colors-primary)",
+              boxShadow: "0 0 1px var(--eth-colors-primary-base)",
               bg: "primary100",
               color: "black",
             }}
@@ -186,7 +186,7 @@ const TitleCardList: React.FC<IProps> = ({
             cursor="pointer"
             boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
             _hover={{
-              boxShadow: "0 0 1px var(--eth-colors-primary)",
+              boxShadow: "0 0 1px var(--eth-colors-primary-base)",
               bg: "primary100",
               color: "black",
             }}

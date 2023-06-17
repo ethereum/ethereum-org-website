@@ -49,6 +49,7 @@
   "page-index-network-stats-title": "اتریوم امروز",
   "page-index-network-stats-subtitle": "جدیدترین آمار شبکه",
   "page-index-network-stats-eth-price-description": "قیمت ETH (USD)",
+  "page-index-network-stats-total-eth-staked": "کل اتر سهام‌گذاری‌شده",
   "page-index-network-stats-eth-price-explainer": "آخرین قیمت برای 1 اتر. می توانید به اندازه 0.000000000000000000001 خرید کنید - نیازی به خرید 1 ETH کامل نیست.",
   "page-index-network-stats-tx-day-description": "معاملات امروز",
   "page-index-network-stats-tx-day-explainer": "تعداد معاملاتی که در شبکه در 24 ساعت گذشته با موفقیت پردازش شده است.",

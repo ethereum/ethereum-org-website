@@ -82,11 +82,9 @@ O design da recompensa, penalidade e corte da Beacon Chain incentiva os validado
 
 - [Atualizando o Ethereum: a camada de incentivo](https://eth2book.info/altair/part2/incentives)
 - [Incentivos no protocolo Casper híbrido do Ethereum](https://arxiv.org/pdf/1903.04205.pdf)
-- [Recompensas e penalidades no Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)
 - [Especificação anotada de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [Dicas para evitar remoções no Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
 
 _Fontes_
 
-- _[https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)_
 - _[https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/)_

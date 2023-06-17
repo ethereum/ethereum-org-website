@@ -359,7 +359,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-## eth_chainId {#eth_chainId}
+### eth_chainId {#eth_chainId}
 
 Returns the chain ID used for signing replay-protected transactions.
 

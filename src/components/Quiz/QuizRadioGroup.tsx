@@ -8,6 +8,7 @@ import {
   Text,
   useRadio,
   useRadioGroup,
+  useToken,
 } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
@@ -62,11 +63,13 @@ const QuizRadioGroup: React.FC<IProps> = ({
 
     // Memoized values
     const buttonBg = useMemo<string>(() => {
-      if (!state.isChecked) return "bodyInverted"
-      if (!showAnswer) return "primary"
-      if (!isSelectedCorrect) return "error"
-      return "success"
+      if (!state.isChecked) return "body.inverted"
+      if (!showAnswer) return "primary.base"
+      if (!isSelectedCorrect) return "error.base"
+      return "success.base"
     }, [state.isChecked, showAnswer, isSelectedCorrect])
+
+    const primaryBaseColor = useToken("colors", "primary.base")
 
     // Render CustomRadio component
     return (
@@ -81,10 +84,8 @@ const QuizRadioGroup: React.FC<IProps> = ({
           color={state.isChecked ? "white" : "text"}
           borderRadius="base"
           _hover={{
-            boxShadow: showAnswer ? "none" : "primary",
-            outline: showAnswer
-              ? "none"
-              : "1px solid var(--eth-colors-primary)",
+            boxShadow: showAnswer ? "none" : "primary.base",
+            outline: showAnswer ? "none" : `1px solid ${primaryBaseColor}`,
             cursor: showAnswer ? "default" : "pointer",
           }}
         >
@@ -94,11 +95,11 @@ const QuizRadioGroup: React.FC<IProps> = ({
               showAnswer
                 ? "white"
                 : state.isChecked
-                ? "primaryPressed"
+                ? "primary.pressed"
                 : "disabled"
             }
             _groupHover={{
-              bg: showAnswer ? "white" : "primaryPressed",
+              bg: showAnswer ? "white" : "primary.pressed",
             }}
             me={2}
           >
@@ -107,7 +108,11 @@ const QuizRadioGroup: React.FC<IProps> = ({
               fontWeight="700"
               fontSize="lg"
               color={
-                !showAnswer ? "white" : isSelectedCorrect ? "success" : "error"
+                !showAnswer
+                  ? "white"
+                  : isSelectedCorrect
+                  ? "success.base"
+                  : "error.base"
               }
             >
               {String.fromCharCode(97 + index).toUpperCase()}

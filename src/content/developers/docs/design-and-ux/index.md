@@ -25,7 +25,7 @@ This is a curated list of user research done in web3 that may help with design a
 - [CRADL: UX in Cryptocurrency](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)
 - [CRADL: Onboarding to Cryptocurrency](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)
 - [Staking survey: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)
-- [Survey: The state of Defi 2023](https://stateofdefi.org/) 
+- [Survey: The state of Defi 2023](https://stateofdefi.org/)
 - [Usability and user satisfaction survey - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)
 - [Usability study: Coverage pools](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)
 - [Usability study: Multi App Staking](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)
@@ -42,7 +42,7 @@ This is a curated list of user research done in web3 that may help with design a
 - [Dimensions of web3 UX](https://uxdesign.cc/the-levels-of-web3-user-experience-4f2ad113e37d) - An analysis of different layers of web3 UX and its challenges
 - [Web3 Design Patterns](https://www.web3designpatterns.io/)- A curated library of design patterns from real Web3 products
 - [W3design.io](https://w3design.io/) - A curated library of UI flows of different projects in the ecosystem
-- [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options 
+- [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options
 
 ## Web3 Design Case Studies {#Design-case-studies}
 
@@ -52,7 +52,6 @@ This is a curated list of user research done in web3 that may help with design a
 - [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
 - [Selling an NFT on OpenSea](https://builtformars.com/case-studies/opensea)
 - [Wallet UX teardown how wallets need to change](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 min)
-
 
 ## Design Bounties {#Bounties}
 

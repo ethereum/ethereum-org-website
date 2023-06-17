@@ -79,9 +79,9 @@ const Grid = forwardRef<SimpleGridProps, "tr">((props, ref) => (
 
 const WalletContentHeader = (props: ChildOnlyProp) => (
   <Grid
-    bg="background"
+    bg="background.base"
     borderBottom="1px"
-    borderColor="primary"
+    borderColor="primary.base"
     templateColumns={{
       base: "auto",
       sm: "60% auto 0% 0% 5%",
@@ -172,18 +172,18 @@ const StyledSelect = (props) => (
           },
 
           "&:hover, &--is-focused": {
-            bg: "primary",
-            borderColor: "primary",
+            bg: "primary.base",
+            borderColor: "primary.base",
 
             ".react-select__value-container": {
               ".react-select__single-value": {
-                color: "background",
+                color: "background.base",
               },
             },
 
             ".react-select__indicators": {
               ".react-select__indicator": {
-                color: "background",
+                color: "background.base",
               },
             },
           },
@@ -211,10 +211,10 @@ const StyledSelect = (props) => (
           },
 
           "&--is-selected": {
-            bg: "primary",
+            bg: "primary.base",
             color: "buttonColor",
             _hover: {
-              bg: "primary",
+              bg: "primary.base",
             },
           },
         },
@@ -548,7 +548,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                   <Box>
                     <Icon
                       as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
-                      color="primary"
+                      color="primary.base"
                       fontSize="2xl"
                     />
                   </Box>
