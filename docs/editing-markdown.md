@@ -9,6 +9,7 @@
 - Editing MD files
   - Markdown is somewhat similar to HTML, you can use `#` for `h1` which is the largest heading or `##` for `h2`.
   - Here's a little [guide](https://www.markdownguide.org/cheat-sheet/) for better understanding of the same.
+  - If you're writing mathematical expressions, KaTeX is also supported. [KaTeX Support](./katex-support.md)
   - You can directly edit these files on GitHub and can preview by clicking on the preview button.
 - Scroll down, write a brief description about the changes you made and click on `Propose Changes`.
 - Click on `Create pull request` and wait for the reviewers to review your PR.
