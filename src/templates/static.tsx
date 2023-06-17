@@ -51,7 +51,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 
-import type { ChildOnlyProp, ClassNameChildOnlyProps, Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
 const Pre = (props: ChildOnlyProp) => (
   <Text
