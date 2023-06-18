@@ -12,14 +12,12 @@ const { defineMultiStyleConfig, definePartsStyle } =
 
 const { baseStyle: defaultBaseStyle, sizes: defaultSizes } = avatarDefaultTheme
 
-const $avatarBg = cssVar("avatar-background")
 const $border = cssVar("avatar-border-color", "transparent")
 const $mlBySize = cssVar("ml-by-size")
 
 const baseStyleContainer = defineStyle((props) =>
   defineMergeStyles(defaultBaseStyle?.(props).container, {
     [$border.variable]: "transparent",
-    bg: $avatarBg.reference,
     borderWidth: "1px",
     "&:hover, [data-peer]:hover ~ &": {
       boxShadow: "buttonHover",
