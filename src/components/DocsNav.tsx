@@ -16,6 +16,7 @@ import Translation from "./Translation"
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
 import { TranslationKey } from "../utils/translations"
+import { trackCustomEvent } from "../utils/matomo"
 
 const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
   <Flex
@@ -55,7 +56,7 @@ const CardLink = (props: {
       mt={4}
       w="262px"
       h="82px"
-      bg="background"
+      bg="background.base"
       border="1px"
       borderColor="border"
       borderRadius={1}
@@ -76,6 +77,13 @@ const CardLink = (props: {
           href={docData.to}
           textAlign={isPrev ? "start" : "end"}
           rel={isPrev ? "prev" : "next"}
+          onClick={() => {
+            trackCustomEvent({
+              eventCategory: "next/previous article DocsNav",
+              eventAction: "click",
+              eventName: isPrev ? "previous" : "next",
+            })
+          }}
         >
           <Translation id={docData.id} />
         </LinkOverlay>

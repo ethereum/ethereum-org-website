@@ -811,7 +811,7 @@ Type de solution de mise à l'échelle de [couche 2](#layer-2) qui regroupe plus
 
 ### RPC {#rpc}
 
-**Appel de procédure à distance (RPC)** est un protocole qu'un programme peut utiliser pour solliciter un service auprès d'un programme situé sur un autre ordinateur d'un réseau dont il n'a pas besoin de connaître les détails
+L'**appel de procédure à distance (RPC)** est un protocole qu'un programme peut utiliser pour solliciter un service auprès d'un programme situé sur un autre ordinateur d'un réseau dont il n'a pas besoin de connaître les détails
 
 ## S {#section-s}
 
@@ -833,10 +833,10 @@ Procédé de conversion d'une structure de données en une séquence d'octets.
 
 ### Fragment / chaîne de fragments {#shard}
 
-Les chaînes de fragments sont des portions de la blockchain complète qui peuvent être sous la responsabilité de sous-ensembles de validateurs. Les chaînes de fragments offriront un débit de transaction accru pour Ethereum et amélioreront la disponibilité des données pour les solutions de [couche 2](#layer-2) comme les [rollups optimistes](#optimistic-rollups) et les [rollups ZK](#zk-rollups).
+Les chaînes de fragments sont des portions de la blockchain complète susceptibles de se trouver sous la responsabilité de sous-ensembles de validateurs. Les chaînes de fragments offriront un débit de transaction accru pour Ethereum et amélioreront la disponibilité des données pour les solutions de [couche 2](#layer-2) comme les [rollups optimistes](#optimistic-rollups) et les [rollups ZK](#zk-rollups).
 
 <DocLink to="/roadmap/danksharding">
-  Chaines de fragments
+  Danksharding
 </DocLink>
 
 ### Chaînes latérales {#sidechain}
@@ -957,7 +957,7 @@ Processus de téléchargement de la dernière version complète d'une blockchain
 
 ### Comité de synchronisation {#sync-committee}
 
-Un comité de synchronisation est un groupe de validateurs sélectionnés aléatoirement qui est actualisé toutes les 27 heures environ. Son rôle est d'ajouter leurs signatures à des en-têtes de blocs valides. Les comités de synchronisation permettent aux [clients légers](#light-client) de garder une trace de la tête de la blockchain sans avoir besoin d'accéder à l'ensemble des validateurs.
+Un comité de synchronisation est un groupe de [validateurs](#validator) sélectionnés aléatoirement qui est actualisé toutes les 27 heures environ. Son rôle est d'ajouter leurs signatures à des en-têtes de blocs valides. Les comités de synchronisation permettent aux [clients légers](#light-client) de garder une trace de la tête de la blockchain sans avoir besoin d'accéder à l'ensemble des validateurs.
 
 ### Szabo {#szabo}
 
@@ -1098,7 +1098,7 @@ Plus petite unité de l'[ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### Adresse zéro {#zero-address}
 
-Adresse Ethereum, composée entièrement de zéros, qui est fréquemment utilisée comme adresse de brûlage pour les fonds non désirés.
+Une adresse Ethereum, composée entièrement de zéros, qui est fréquemment utilisée comme adresse pour retirer des jetons de la circulation propriétaire. Une distinction est établie entre les jetons formellement supprimés de l'index d'un contrat intelligent via la méthode burn() et ceux envoyés à cette adresse.
 
 ### preuve de connaissance zéro {#zk-proof}
 

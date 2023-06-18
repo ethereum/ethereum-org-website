@@ -2,7 +2,7 @@
 title: Future-proofing Ethereum
 description: These upgrades cement Ethereum as the resilient, decentralized base layer for the future, whatever it may hold.
 lang: en
-image: ../../../assets/upgrades/core.png
+image: ../../../assets/roadmap/roadmap-future.png
 alt: "Ethereum roadmap"
 template: roadmap
 ---

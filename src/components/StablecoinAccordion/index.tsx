@@ -49,7 +49,7 @@ const StepBox = (
   <Flex
     as={LinkBox}
     alignItems={{ base: "flex-start", md: "normal" }}
-    background="background"
+    background="background.base"
     border="1px"
     borderColor="border"
     color="text"
@@ -100,13 +100,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
   const { cardListGroups } = useStablecoinAccordion()
 
   return (
-    <Accordion
-      borderRadius="base"
-      mt={12}
-      width="full"
-      allowToggle
-      reduceMotion
-    >
+    <Accordion borderRadius="base" width="full" allowToggle reduceMotion>
       <AccordionCustomItem category="dapps">
         <LeftColumnPanel>
           <SectionTitle>

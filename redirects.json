@@ -112,6 +112,10 @@
     "toPath": "/nb/:splat"
   },
   {
+    "fromPath": "/ph/*",
+    "toPath": "/fil/:splat"
+  },
+  {
     "fromPath": "/en/java/",
     "toPath": "/en/developers/docs/programming-languages/java/"
   },
@@ -252,6 +256,10 @@
     "toPath": "/en/roadmap"
   },
   {
+    "fromPath": "/quizzes",
+    "toPath": "/en/quizzes/"
+  },
+  {
     "fromPath": "/*/upgrades",
     "toPath": "/:splat/roadmap"
   },
@@ -286,14 +294,6 @@
   {
     "fromPath": "/*/eth2/deposit-contract/",
     "toPath": "/:splat/staking/deposit-contract/"
-  },
-  {
-    "fromPath": "/*/eth2/get-involved/medalla-data-challenge",
-    "toPath": "/:splat/community/grants/medalla-data-challenge/"
-  },
-  {
-    "fromPath": "/*/eth2/get-involved/staking-community-grants",
-    "toPath": "/:splat/community/grants/staking-community-grants/"
   },
   {
     "fromPath": "/*/eth2",

@@ -27,6 +27,6 @@ Los recursos de aprendizaje se evaluarán a tenor de los siguientes criterios:
 
 Si desea añadir un recurso de contenido a ethereum.org y cumple con los criterios, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request">
   Crear una incidencia
 </ButtonLink>

@@ -88,5 +88,6 @@
   "page-find-wallet-desktop-desc": "带有桌面应用程序的钱包",
   "page-find-wallet-browser": "浏览器版",
   "page-find-wallet-browser-desc": "带有浏览器扩展程序的钱包",
-  "page-find-wallet-device": "设备"
+  "page-find-wallet-device": "设备",
+  "page-find-choose-to-compare": "选择要比较的钱包"
 }

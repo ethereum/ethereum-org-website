@@ -27,13 +27,13 @@ De nombreuses entreprises et consortiums ont déployé des blockchains privées 
 - Performances - Les chaînes d'entreprise privées Ethereum ayant la possibilité d'utiliser des nœuds hautes performances avec des exigences matérielles spéciales ainsi que différents algorithmes de consensus comme la preuve d'autorité, elles peuvent atteindre un débit de transaction plus élevé sur la couche de base (couche 1). Sur le réseau principal Ethereum, un débit élevé peut être atteint en utilisant des [ solutions de mise à l'échelle par la couche 2](/developers/docs/scaling/#layer-2-scaling).
 - Coût - Le coût d'exploitation d'une chaîne privée se reflète principalement dans le travail nécessaire pour la configurer et la gérer, et les serveurs pour l'exécuter. Si se connecter au réseau principal d'Ethereum ne coûte rien, il faut payer pour chaque transaction des frais de gaz en ETH, ce qui représente un coût. Des relais de transactions (c'est-à-dire des stations de gaz) sont en cours de développement afin d'éliminer la nécessité, pour les utilisateurs finaux et les entreprises, d'utiliser directement l'ether dans leurs transactions. Certaines [analyses](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) ont montré que le coût total d'exploitation d'une application peut être inférieur sur le réseau principal par rapport à une chaîne privée.
 - Autorisation des nœuds - Seuls les nœuds autorisés peuvent rejoindre les chaînes privées. N'importe qui peut configurer un nœud sur le réseau principal Ethereum.
-- Confidentialité - L'accès aux données écrites sur les chaînes privées peut être contrôlé en limitant l'accès au réseau, et de façon plus précise avec des contrôles d'accès et des transactions privées. L'ensemble des données écrites sur la couche 1 du réseau principal sont visibles par tous, de sorte que les informations sensibles doivent être stockées et transmises hors chaîne, ou chiffrées. Des modèles de conception facilitant ceci émergent (par ex., Baseline, Aztec), ainsi que des solutions de couche 2, qui permettent de garder les données compartimentées et hors de la couche 1.
+- Confidentialité - L'accès aux données écrites sur les chaînes privées peut être contrôlé en limitant l'accès au réseau, et de façon plus précise avec des contrôles d'accès et des transactions privées. L'ensemble des données écrites sur la couche 1 du réseau principal est visible par tous, de sorte que les informations sensibles doivent être stockées et transmises hors chaîne, ou chiffrées. Des modèles de conception facilitant ceci émergent (par ex., Baseline, Aztec), ainsi que des solutions de couche 2, qui permettent de garder les données compartimentées et hors de la couche 1.
 
 ### Pourquoi construire sur le réseau principal Ethereum ? {#why-build-on-ethereum-mainnet}
 
-Les entreprises expérimentent la technologie blockchain depuis 2016, lorsque les projets Hyperledger, Quorum et Corda ont été lancés. L'accent était principalement mis sur les blockchains d'entreprise privées avec autorisations, mais à partir de 2019, un changement s'est opéré dans la réflexion sur les blockchains publiques par rapport aux privées pour les applications métiers. Une [enquête](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) menée par Forrester a révélé que "Les participants à l'enquête ... voient ce potentiel, 75 % d'entre eux déclarant qu’ils sont susceptibles de tirer parti des blockchains publiques à l’avenir, et près d’un tiers assurant qu'ils y sont très favorables”. Chez EY, [Paul Brody explique](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) les avantages de construire sur la blockchain publique, qui (en fonction de l'application) peut offrir une meilleure sécurité/immuabilité, plus de transparence, une réduction du coût total de propriété et la possibilité d'interagir avec toutes les autres applications du réseau principal (effets réseau). Le partage d'un cadre de référence commun entre les entreprises évite la création inutile de nombreux silos isolés qui ne peuvent pas communiquer, partager ni synchroniser les informations.
+Les entreprises expérimentent la technologie blockchain depuis 2016, lorsque les projets Hyperledger, Quorum et Corda ont été lancés. L'accent était principalement mis sur les blockchains d'entreprise privées avec autorisations, mais à partir de 2019, un changement s'est opéré dans la réflexion sur les blockchains publiques par rapport aux privées pour les applications métiers. Une [enquête](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) menée par Forrester a révélé que "Les participants à l'enquête... voient ce potentiel, 75 % d'entre eux déclarant qu’ils sont susceptibles de tirer parti des blockchains publiques à l’avenir, et près d’un tiers assurant qu'ils y sont très favorables”. Chez EY, [Paul Brody explique](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) les avantages de construire sur la blockchain publique, qui (en fonction de l'application) peut offrir une meilleure sécurité/immuabilité, plus de transparence, une réduction du coût total de propriété et la possibilité d'interagir avec toutes les autres applications du réseau principal (effets réseau). Le partage d'un cadre de référence commun entre les entreprises évite la création inutile de nombreux silos isolés qui ne peuvent pas communiquer, partager ni synchroniser les informations.
 
-Une autre avancée qui renforce l'intérêt pour les blockchains publiques est la [couche 2](/developers/docs/scaling/#layer-2-scaling). La couche 2 est avant tout une catégorie de technologie d’évolutivité qui rend possible les applications à haut débit sur les chaînes publiques. Mais les solutions de la couche 2 peuvent aussi [résoudre certains problèmes qui ont poussé les développeurs en entreprise à choisir des chaînes privées dans le passé](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
+Une autre avancée qui renforce l'intérêt pour les blockchains publiques est la [couche 2](/developers/docs/scaling/#layer-2-scaling). La couche 2 est avant tout une catégorie de technologie d’évolutivité qui rend possibles les applications à haut débit sur les chaînes publiques. Mais les solutions de la couche 2 peuvent aussi [résoudre certains problèmes qui ont poussé les développeurs en entreprise à choisir des chaînes privées dans le passé](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
 ## Ressources pour les développeurs en entreprise {#enterprise-developer-resources}
 
@@ -56,17 +56,17 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager)_ fournit un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
 - [- Hyperledger Besu](https://www.hyperledger.org/use/besu) _- Client Ethereum en open source axé sur les entreprises, développé sous la licence Apache 2.0 et rédigé en Java_
 - [Infura](https://infura.io/) _- Accès évolutif aux API des réseaux Ethereum et IPFS_
-- [Kaleido](https://kaleido.io/) _- Plate-forme de développement orientée vers les entreprises, qui offre une blockchain simplifiée et des applications dédiées aux actifs numériques_
+- [Kaleido](https://kaleido.io/) _- Plateforme de développement orientée vers les entreprises, qui offre une blockchain simplifiée et des applications dédiées aux actifs numériques_
 - [Provide](https://provide.services/) _- Infrastructure et API pour les applications d'entreprise Web3_
 - [QuickNode](https://www.quicknode.com/) _fournit des nœuds fiables et rapides avec des API de haut niveau comme NFT API, Token API, etc. tout en offrant une suite de produits unifiée et des solutions pour entreprise_
-- [Tenderly](https://tenderly.co) _ - Plate-forme de développement Web3 qui fournit des blocs de débogage, d'observabilité et de construction d'infrastructures en vue de l'élaboration, de la mise à l'essai, du suivi et de l'exécution de contrats intelligents_
+- [Tenderly](https://tenderly.co) _ - Plateforme de développement Web3 qui fournit des blocs de débogage, d'observabilité et de construction d'infrastructures en vue de l'élaboration, de la mise à l'essai, du suivi et de l'exécution de contrats intelligents_
 - [Unibright](https://unibright.io/) _- Équipe de spécialistes de la blockchain, d'architectes, de développeurs et de consultants ayant plus de 20 ans d'expérience dans les processus métiers et l'intégration_
-- [Zero Services GmbH](https://www. zeroservices. eu/) _- Fournisseur de services gérés répartis sur plusieurs sites en Europe et en Asie. Exploite & surveille vos nœuds de façon sécurisée et fiable_
+- [Zero Services GmbH](https://www.zeroservices.eu/) _- Fournisseur de services gérés répartis sur plusieurs sites en Europe et en Asie. Exploite & surveille vos nœuds de façon sécurisée et fiable_
 
 ### Outils et bibliothèques {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _- Plateforme d'analyse des données Ethereum_
-- [Epirus](https://www.web3labs.com/epirus) _- Plateforme Web3 Labs pour développer, déployer et surveiller les applications blockchain_
+- [Sirato](https://www.web3labs.com/sirato) _- Plateforme de données et d'analyse, pour les réseaux publics et privés compatibles avec Ethereum (EVM) par Web3 Labs_
 - [Ernst & Young Nightfall](https://github.com/EYBlockchain/nightfall) _- Boîte à outils pour les transactions privées_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _- Application de signature de transactions à utiliser avec un prestataire Web3_
 - [Tenderly](https://tenderly.co/) _ - Plateforme de données fournissant des analyses en temps réel, des alertes et une surveillance avec support pour les réseaux privés_
@@ -78,58 +78,29 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 
 Construire votre application sur une solution de couche 2 peut aider à [répondre à bon nombre de préoccupations qui ont précédemment poussé les entreprises à construire sur des blockchains privées](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), tout en conservant les avantages du réseau principal.
 
-Les projets de la couche 2 incluent :
-
-- Rollups optimisés (données sur la chaîne, preuves de fraude)
-  - [Optimism](https://optimism.io/)
-  - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
-  - [Fuel Network](https://fuel.sh)
-  - [Réseau Boba](https://boba.network/)
-- Rollups ZK (données sur la chaîne, preuves de validité ZK)
-  - [Loopring](https://loopring.org)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkSync](https://matter-labs.io/)
-  - [Aztec 2.0](https://aztec.network/)
-- Validium (données hors chaîne, preuves de validité ZK)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkPorter](https://matter-labs.io/)
-- Canaux d'état
-  - [Connext](https://connext.network/)
-  - [Kchannels](https://www.kchannels.io/)
-  - [Perun](https://perun.network)
-  - [Raiden](https://raiden.network/)
-- Chaînes latérales
-  - [Polygone POS](https://polygon.technology/)
-  - [Skale](https://skale.network)
-  - [POA Network](https://www.poa.network/)
-- Solutions hybrides combinant les propriétés de plusieurs catégories
-  - [Celer](https://celer.network)
-
 ## Applications d'entreprise live sur le réseau principal {#enterprise-live-on-mainnet}
 
-Voici quelques-unes des applications d'entreprise déployées sur le réseau principal public Ethereum
+Voici quelques-unes des applications d'entreprise qui ont été construites sur le réseau principal public Ethereum
 
 ### Paiements {#payments}
 
-- [Le navigateur Brave](https://basicattentiontoken.org/)_rémunère les utilisateurs pour leur attention aux publicités et les utilisateurs peuvent payer les éditeurs afin de les supporter, via le Basic Attention Token_
-- [hCaptcha](https://www.hcaptcha.com/) _ - Système CAPTCHA de prévention des robots qui rémunère les opérateurs de sites web pour le travail effectué par les utilisateurs afin de libeller les données pour l'apprentissage automatique. Désormais déployé par Cloudflare._
-- [Audius](https://audius.co/) _ - Service de streaming qui connecte les fans de musique directement avec les artistes, et permet aux artistes d'être payés en totalité par leurs fans, directement et instantanément pour chaque diffusion._
-- [EthereumAds](https://ethereumads.com/) _- Permet aux opérateurs de sites web de vendre de l'espace publicitaire et d'être payés via Ethereum_
+- [Le navigateur Brave](https://basicattentiontoken.org/)_ rémunère les utilisateurs pour leur attention aux publicités ; les utilisateurs peuvent payer les éditeurs afin de les soutenir, via le jeton Basic Attention_
+- [hCaptcha](https://www.hcaptcha.com/) _ - Système CAPTCHA de prévention des robots qui rémunère les opérateurs de sites Web pour le travail effectué par les utilisateurs en vue d'étiqueter les données pour l'apprentissage automatique. Désormais déployé par Cloudflare._
+- [EthereumAds](https://ethereumads.com/) _permet aux opérateurs de sites Web de vendre de l'espace publicitaire et d'être payés via Ethereum_
 
 ### Finance {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _ - Émission d'obligations et règlement_
-- [Société Générale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _- Émission d'obligations_
+- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _- Émission d'obligations et règlement_
+- [Société Générale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _- Émission d'obligations_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _ - Offre d'obligations et de jetons pour les marques FAT_
-- [Sila](https://silamoney.com/) _ - Infrastructure bancaire et de paiement ACH en tant que services_
-- [Kratos](https://triterras.com/kratos) _- Plateforme de négociation et de financement de produits de base qui connecte les négociants et leur permettent de faire du commerce et de trouver des capitaux auprès de prêteurs directement en ligne_
+- [Sila](https://silamoney.com/) _- Infrastructure as a service de services bancaires et de paiements ACH, utilisant un stablecoin _
 - [Taurus](https://www.taurushq.com/) _- Émet des titres tokenisés_
 
 ### Tokenisation des actifs {#tokenization}
 
 - [Tinlake](https://tinlake.centrifuge.io/) _ - Financement de créances via des actifs réels tokenisés comme des factures, des hypothèques ou des redevances de streaming_
-- [RealT](https://realt.co/) _les investisseurs du monde entier peuvent acheter sur le marché de l'immobilier américain par une propriété entièrement conforme, fractionnée et tokenisée._
-- [AgroToken](https://agrotoken.io/en/) _tokenisation et négociation de produits agricoles_
+- [RealT](https://realt.co/) _- Les investisseurs du monde entier peuvent acheter sur le marché de l'immobilier américain par le biais d'une propriété entièrement conforme, fractionnée et tokenisée._
+- [AgroToken](https://agrotoken.io/en/) _- Tokenisation et négociation de produits agricoles_
 - [Fasset](https://www.fasset.com/) _ - Plateforme pour soutenir l'infrastructure durable_
 
 ### Authentification des données {#notarization-of-data}
@@ -137,38 +108,35 @@ Voici quelques-unes des applications d'entreprise déployées sur le réseau pri
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _ - Les détails des prêts finalisés sont hachés et enregistrés sur le réseau principal._
 - [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _ - L'intégrité des données peut être garantie en écrivant périodiquement des hachages de données indexées sur le réseau principal._
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _- La plus grande agence de presse d'Italie lutte contre les fake news et permet aux lecteurs de vérifier l'origine des nouvelles en les enregistrant sur le réseau principal._
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _ - Enregistre les communiqués de presse sur Ethereum pour garantir la responsabilité et la confiance des entreprises._
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _- Enregistre la provenance et l'historique de réparation des montres sur Ethereum._
-- [EthSign](https://ethsign.xyz/) _- Enregistre les documents électroniques signés sur la blockchain Ethereum_
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _ enregistre les communiqués de presse sur Ethereum en vue de garantir la responsabilité et la confiance des entreprises._
+- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _ enregistre la provenance et l'historique de réparation de montres sur Ethereum._
+- [EthSign](https://ethsign.xyz/) _ enregistre les documents électroniques signés sur la blockchain Ethereum_
 
 ### Chaîne logistique {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _- Prestataire de services de connaissement et de transfert de documents_
 - [Morpheus.network](https://morpheus.network/) _- Plateforme d'automatisation de la chaîne logistique qui implémente un hybride de chaînes privées et de données authentifiées sur le réseau principal Ethereum. Utilisée par des entreprises comme le distributeur canadien de produits alimentaires, de pétrole et de gaz Federated Co-op Ltd. et le fournisseur argentin d'aliments pour animaux Vitalcan._
 - [Minespion](https://www.minespider.com/) _- Suivi de la chaîne logistique_
-- [Follow Our Fibre](https://www.followourfibre.com)_ - Traçabilité de la chaîne logistique de la viscose_
 - [Gestionnaire de Contrats EY OpsChain](https://blockchain.ey.com/products/contract-manager) _- Permet aux entreprises de lancer un flux d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers leur réseau de partenaires commerciaux de confiance_
 - [Treum](https://treum.io/) _- Apporte transparence, traçabilité et négociabilité aux chaînes logistiques, en utilisant la technologie blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _- Vérifie les connaissements électroniques (eBL) pour l'expédition à l'international_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _- Frappe des jetons non fongibles (NFT) pour chaque nouveau lot de bière, offrant une plus grande visibilité et efficacité à travers sa chaîne logistique_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _frappe des jetons non fongibles (NFT) pour chaque nouveau lot de bière, offrant une plus grande visibilité et efficacité à travers sa chaîne logistique_
 
 ### Assurance {#insurance}
 
-- [Arbol](https://www. arbolmarket. com/) _assurance paramétrique pour couvrir les risques liés à la météo_
-- [Etherisc](https://etherisc.com/) _assurance décentralisée pour une variété de risques_
+- [Arbol](https://www.arbolmarket.com/) _- Assurance paramétrique pour couvrir les risques liés à la météo_
+- [Etherisc](https://etherisc.com/) _- Assurance décentralisée pour une variété de risques_
 
 ### Identifications et certifications {#credentials}
 
 - [Deux lycées italiens](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _ - Délivrance de diplômes numériques sur le réseau principal Ethereum_
 - [Université de St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _- Projet pilote d'une université suisse pour vérifier les diplômes_
-- [Malte](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _- Ensemble des certificats d'enseignement enregistrés sur le réseau principal par [Hyland](https://www.learningmachine.com/)_
-- [Université Pohang des sciences et de la technologie](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _Université sud-coréenne délivrant des diplômes stockés dans la blockchain à ses nouveaux diplômés_
-- [OpenCerts](https://opencerts.io/) _- Délivre diplômes et certificats d'enseignement via la blockchain à Singapour_
-- [BlockCerts](https://www.blockcerts.org/) _ - A développé une norme ouverte pour les diplômes et certifications sur la blockchain_
-- [SkillTree](http://skilltree.org/) _- Formations et certifications de compétences en ligne susceptibles d'être configurées avec des déclencheurs d'expiration ou des dépendances à d'autres compétences._
+- [Hyland Credentials](https://www.hylandcredentials.com) _- Diplômes d'études numériques ou autres diplômes d'études, licences et certificats_
+- [OpenCerts](https://opencerts.io/faq) _délivre des diplômes et certificats d'enseignement via la blockchain à Singapour_
+- [BlockCerts](https://www.blockcerts.org/) _a développé une norme ouverte pour les identifiants blockchain_
 
 ### Utilitaires {#utilities}
 
-- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _- Paiements de factures d'électricité_
+- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _Paiements de factures d'électricité_
 
 Si vous souhaitez ajouter des éléments à cette liste, veuillez consulter [les instructions pour contribuer](/contributing/).

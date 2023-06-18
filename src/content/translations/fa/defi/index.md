@@ -337,7 +337,6 @@ DeFi یک جنبش متن‌باز است. پروتکل‌ها و برنامه�
 
 ### مقاله‌های DeFi {#defi-articles}
 
-- [امور مالی غیرمتمرکز چیست؟](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) - _ETHHub، به‌طور منظم به‌روز می‌شود_
 - [راهنمای DeFi برای مبتدیان](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu،‏ 6 ژانویه 2020_
 
 ### ویدیوها {#videos}

@@ -10,8 +10,6 @@
   "page-eth-currency-for-future": "我们数字未来的货币",
   "page-eth-description": "ETH是一种加密货币。这是稀缺的数字货币，您可以在互联网上使用——类似于比特币。 如果您是新的用户，点击这里了解ETH如何不同于传统的钱。",
   "page-eth-earn-interest-link": "赚取利息",
-  "page-eth-ethhub-caption": "定期更新",
-  "page-eth-ethhub-overview": "EthHub有一个很好的概览（如果您想了解的话）",
   "page-eth-flexible-amounts": "具有很好的分割性",
   "page-eth-flexible-amounts-desc": "ETH可拆分多达18个小数点，因此您不必购买一整个ETH。您可以一次购买分片——如果您想购买，只需0.000000000000000001 ETH。译者注：您实际上一次最少买几百元的ETH",
   "page-eth-fuels": "ETH使以太坊运行并保持以太坊安全",
@@ -41,7 +39,6 @@
   "page-eth-not-only-crypto": "ETH不是以太坊上唯一的加密货币",
   "page-eth-not-only-crypto-desc": "任何人都可以创建新类型的资产并在以太坊交易它们。它们叫做“代币”(tokens)。 人们拥有象征性的传统货币、其房地产、艺术，甚至是自己！",
   "page-eth-not-only-crypto-desc-2": "以太坊有数千个代币——有一些代币比其他代币更有用和更宝贵。 开发者正在不断建立新的代币，解锁新的可能性并打开新的市场。",
-  "page-eth-not-only-crypto-desc-3": "如果你想了解更多关于代币的信息，我们在 EthHub 上的朋友已经写了一些很好的概述：",
   "page-eth-open": "对任何人开放",
   "page-eth-open-desc": "您只需要互联网连接和钱包来接受ETH。您不需要访问银行帐户来接受付款。 ",
   "page-eth-p2p-payments": "点对点支付",
@@ -93,5 +90,5 @@
   "page-eth-tokens-dao-description": "互联网社区往往由代币持有人管理。",
   "page-eth-whats-defi": "关于去中心化金融的更多信息",
   "page-eth-whats-defi-description": "DeFi 是建立在以太坊上的去中心化金融系统。以下内容解释了您可以利用 DeFi 做什么。",
-  "page-what-is-ethereum-what-is-ether": "什么是以太币？"
+  "page-what-is-ethereum-what-is-ether": "什么是以太币 (ETH)？"
 }

@@ -118,8 +118,10 @@ const Text = styled.p`
 `
 
 // now
-<Text color="primary" bg="background" />
+<Text color="primary.base" bg="background.base" />
 ```
+
+> Note the dotted notation. In Chakra, the values are referred to as "semantic tokens" and the new theme applies a nested structure of like tokens for better organization. See [semanticTokens.ts](../src/%40chakra-ui/gatsby-plugin/semanticTokens.ts)
 
 <aside>
 💡 In the **next iteration** we will refactor all the colors with the correct color from the new Design System

@@ -2,6 +2,7 @@ import React, { ReactNode } from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import {
   Box,
+  BoxProps,
   Flex,
   HStack,
   LinkBox,
@@ -23,7 +24,7 @@ export type CardListItem = {
   alt?: string
 }
 
-export interface IProps {
+export interface IProps extends BoxProps {
   content: Array<CardListItem>
   clickHandler?: (idx: string | number) => void
 }
@@ -91,8 +92,12 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
   )
 }
 
-const CardList: React.FC<IProps> = ({ content, clickHandler = () => null }) => (
-  <Box bg="background" width="full">
+const CardList: React.FC<IProps> = ({
+  content,
+  clickHandler = () => null,
+  ...rest
+}) => (
+  <Box bg="background.base" w="full" {...rest}>
     {content.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link

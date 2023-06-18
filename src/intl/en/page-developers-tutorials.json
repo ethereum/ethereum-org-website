@@ -24,5 +24,6 @@
   "page-tutorial-intermediate": "Intermediate",
   "page-tutorial-advanced": "Advanced",
   "page-find-wallet-try-removing": "Try removing a feature or two",
-  "page-find-wallet-clear": "Clear filters"
+  "page-find-wallet-clear": "Clear filters",
+  "page-tutorials-env-banner": "Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> file."
 }

@@ -56,12 +56,12 @@ const StyledTwoColumnContent = styled(TwoColumnContent)`
   align-items: flex-start;
 `
 
-const Subtitle = styled.div`
+const Subtitle = styled.p`
   font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
-const SubtitleTwo = styled.div`
+const SubtitleTwo = styled.p`
   font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;
@@ -248,12 +248,6 @@ const tokenLinks = [
 ]
 
 const cardListContent = [
-  {
-    link: "https://docs.ethhub.io/ethereum-basics/monetary-policy/",
-    title: <Translation id="page-eth-monetary-policy" />,
-    description: "EthHub",
-    caption: <Translation id="page-eth-ethhub-caption" />,
-  },
   {
     link: "https://medium.com/ethhub/why-ether-is-valuable-2b4e39e01eb3",
     title: <Translation id="page-eth-value" />,

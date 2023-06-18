@@ -211,6 +211,7 @@ const components = {
 const StaticPage = ({
   data: { siteData, pageData: mdx },
   pageContext: { relativePath, slug },
+  location,
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const { language } = useI18next()
 
@@ -268,7 +269,7 @@ const StaticPage = ({
               pl: 4,
               ml: -4,
               borderLeft: "1px dotted",
-              borderLeftColor: "primary",
+              borderLeftColor: "primary.base",
             },
 
             ".citation": {

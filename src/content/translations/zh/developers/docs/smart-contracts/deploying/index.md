@@ -12,7 +12,7 @@ lang: zh
 
 在部署智能合约之前，您需要理解[以太坊网络](/developers/docs/networks/), [交易](/developers/docs/transactions/)和[详解智能合约](/developers/docs/smart-contracts/anatomy/)。
 
-部署一个合约也需要耗费以太币(ETH), 因为他们被存储在区块链上，所以您应该熟悉以太坊的[燃料和费用](/developers/docs/gas/)。
+部署一个合约也需要耗费以太币 (ETH)，因为他们被存储在区块链上，所以您应该熟悉以太坊的[燃料和费用](/developers/docs/gas/)。
 
 最后，您需要在部署之前编译您的合约，所以请确保您已经阅读了[编译智能合约](/developers/docs/smart-contracts/compiling/)。
 

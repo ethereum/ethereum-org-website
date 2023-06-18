@@ -10,8 +10,6 @@
   "page-eth-currency-for-future": "디지털 미래를 위한 화폐",
   "page-eth-description": "ETH는 암호화폐입니다. 이는 비트코인과 마찬가지로 인터넷에서 사용할 수 있는 희소한 디지털 화폐입니다. 암호화폐의 개념에 생소하시면 ETH가 실존 화폐와 어떻게 다른지 아래를 참조하십시오.",
   "page-eth-earn-interest-link": "이자 받기",
-  "page-eth-ethhub-caption": "수시로 업데이트됨",
-  "page-eth-ethhub-overview": "EthHub에서 개요를 확인할 수 있습니다.",
   "page-eth-flexible-amounts": "원하는 수량만큼 구입 가능",
   "page-eth-flexible-amounts-desc": "ETH의 거래 단위는 소수점 아래 18자리까지 가능하므로, 1ETH를 통째로 구매하지 않아도 됩니다. 한 번에 단돈 0.000000000000000001 ETH만 사는 것도 얼마든지 가능합니다.",
   "page-eth-fuels": "ETH는 이더리움을 발전시키고 보호합니다.",
@@ -41,7 +39,6 @@
   "page-eth-not-only-crypto": "ETH는 이더리움에서 사용하는 유일한 가상화폐가 아닙니다.",
   "page-eth-not-only-crypto-desc": "누구든지 이더리움에서 새로운 종류의 자산을 생성하고 거래할 수 있습니다. 이러한 자산을 '토큰'이라고 하며, 사용자는 실물 화폐, 자신의 부동산, 미술품, 심지어 자기 자신까지도 토큰화할 수 있습니다.",
   "page-eth-not-only-crypto-desc-2": "이더리움은 수천 종류에 달하는 토큰의 터전이며, 각 토큰의 가치는 다릅니다. 개발자들은 새로운 가능성과 새로운 시장을 여는 새로운 토큰을 끊임없이 구축하고 있습니다.",
-  "page-eth-not-only-crypto-desc-3": "토큰에 대해 자세히 알아보려면 EthHub를 방문하여 몇 가지 개요를 참조하십시오.",
   "page-eth-open": "모두에게 오픈",
   "page-eth-open-desc": "인터넷이 연결된 환경과 ETH를 수락할 수 있는 지갑만 있으면 됩니다. 결제를 수락하기 위해 은행 계좌에 액세스하지 않아도 됩니다.",
   "page-eth-p2p-payments": "P2P 결제",
@@ -93,5 +90,5 @@
   "page-eth-tokens-dao-description": "토큰 소유자가 관리하는 인터넷 커뮤니티.",
   "page-eth-whats-defi": "DeFi에 대해 자세히 알아보기",
   "page-eth-whats-defi-description": "DeFi는 이더리움에 구축된 탈중앙화 금융 시스템입니다. 본 개요에서는 실행할 수 있는 작업에 대해 설명합니다.",
-  "page-what-is-ethereum-what-is-ether": "이더란 무엇인가요?"
+  "page-what-is-ethereum-what-is-ether": "이더란 무엇인가?"
 }

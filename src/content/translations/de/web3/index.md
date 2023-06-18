@@ -117,7 +117,7 @@ Trotz der zahlreichen Vorteile von Web3 in seiner jetzigen Form gibt es nach wie
 
 ### Zugänglichkeit {#accessibility}
 
-Wichtige Web3-Funktionen, wie z. B. das Anmelden mit Ethereum, sind bereits für jedermann zum Nulltarif verfügbar. Doch die relativen Transaktionskosten sind für viele noch immer unerschwinglich. Es ist wahrscheinlich, dass Web3 aufgrund der hohen Transaktionsgebühren in weniger wohlhabenden Entwicklungsländern womöglich weniger genutzt wird. Bei Ethereum werden diese Herausforderungen durch [Netzwerk-Upgrades](/roadmap/) und [Layer-2-Skalierungslösungen](/developers/docs/scaling/) gelöst. Die Technologie steht bereit. Doch wir benötigen einen höheren Grad an Akzeptanz auf Ebene 2, um Web3 allen zugänglich zu machen.
+Wichtige Web3-Funktionen, wie z. B. das Anmelden mit Ethereum, sind bereits für jedermann zum Nulltarif verfügbar. Doch die relativen Transaktionskosten sind für viele noch immer unerschwinglich. Es ist wahrscheinlich, dass Web3 aufgrund der hohen Transaktionsgebühren in weniger wohlhabenden Entwicklungsländern womöglich weniger genutzt wird. Bei Ethereum werden diese Herausforderungen durch [die Roadmap](/roadmap/) und [Layer-2-Skalierungslösungen](/developers/docs/scaling/) gelöst. Die Technologie steht bereit. Doch wir benötigen einen höheren Grad an Akzeptanz auf Ebene 2, um Web3 allen zugänglich zu machen.
 
 ### Benutzererfahrung {#user-experience}
 

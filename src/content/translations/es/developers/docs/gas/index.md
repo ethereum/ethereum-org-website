@@ -161,7 +161,6 @@ Si desea supervisar los precios del gas, para poder enviar su ETH por menos, pue
 ## Más información {#further-reading}
 
 - [Explicación sobre el gas de Ethereum](https://defiprime.com/gas)
-- [¿Es más caro usar Ethereum cuando el precio sube?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducir el consumo de gas de sus contratos inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Prueba de participación frente a prueba de trabajo](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

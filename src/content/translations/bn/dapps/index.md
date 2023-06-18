@@ -22,7 +22,6 @@ lang: bn
 
 ইথেরিয়ামে নির্মিত আরও অ্যাপ্লিকেশনগুলি দেখতে আগ্রহী?
 
-- [ইথেরিয়ামে নির্মিত](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) _প্রায়শই আপডেট করা হয় - EthHub_
 - [90টির বেশি ইথেরিয়াম অ্যাপ যা আপনি এখনই ব্যবহার করতে পারেন_এপ্রিল](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _24, 2019 - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _ স্টেট অফ দ্যাপস দ্বারা প্রায়শই আপডেট করা হয়।_
 - [ইথেরিয়াম ডিফাই (DeFI) ইকোসিস্টেম](https://defiprime.com/ethereum)_প্রায়শই আপডেট করা হয় - Defiprime_

@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: ../../assets/ethereum-learn.png
+image: ../../../../assets/ethereum-learn.png
 summaryPoint1: 基于区块链的社交互动与内容平台的创建和分配。
 summaryPoint2: 去中心化社交媒体网络可保护用户隐私并增强数据安全性。
 summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的新方法。

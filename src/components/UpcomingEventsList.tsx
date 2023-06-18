@@ -12,6 +12,9 @@ import Button from "./Button"
 // Data
 import events from "../data/community-events.json"
 
+// Utils
+import { trackCustomEvent } from "../utils/matomo"
+
 interface ICommunityEventData {
   title: string
   to: string
@@ -89,6 +92,11 @@ const UpcomingEventsList: React.FC<IProps> = () => {
   const loadMoreEvents = () => {
     setMaxRange((counter) => counter + eventsPerLoad)
     setIsVisible(maxRange + eventsPerLoad <= orderedUpcomingEvents.length)
+    trackCustomEvent({
+      eventCategory: "more events button",
+      eventAction: "click",
+      eventName: "load more",
+    })
   }
 
   if (orderedUpcomingEvents.length === 0) {
@@ -115,7 +123,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
           position: "absolute",
           width: "3px",
           height: "full",
-          background: "primary",
+          background: "primary.base",
           top: 0,
           left: "50%",
         }}

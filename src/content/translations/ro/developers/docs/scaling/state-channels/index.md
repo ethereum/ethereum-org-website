@@ -63,13 +63,10 @@ Numeroase proiecte oferă implementări ale canalelor de stare pe care le puteț
 
 **Canale de stare**
 
-- [EthHub despre canalele de stare](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Înţelegerea soluţiilor de scalare de nivelul 2 în Ethereum: canalele de stare, Plasma şi Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 februarie 2018_
 - [Canalele de stare - o explicaţie](https://www.jeffcoleman.ca/state-channels/) _5 noiembrie 2015 - Jeff Coleman_
 - [Cunoştinţe de bază despre canalele de stare](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
 **Canale de plată**
-
-- [EthHub despre canalele de plată](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagină și adăugaţi-o!_

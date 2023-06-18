@@ -26,7 +26,6 @@ lang: ja
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - イーサリアム開発に関する Discord コミュニティ</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - イーサリアム開発プロジェクトの管理支援に関するコミュニティ</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">ethereum.org ウェブサイトチーム</Link> - ethereum.org ウェブ開発とデザインのコミュニティチャット</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> - Web3 開発の学びに関するコミュニティ </SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - 事業者、業界のリーダー、イーサリアム愛好家が集う、Web3 のクリエイターのコミュニティ。 Web3 開発、設計、文化に熱心。 参加して一緒に開発しましょう。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - Solidity 開発のチャット(Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity 開発のチャット(Matrix) </SocialListItem>

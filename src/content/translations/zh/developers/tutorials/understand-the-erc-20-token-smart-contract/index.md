@@ -7,7 +7,7 @@ tags:
   - "通证"
   - "solidity"
   - "erc-20"
-skill: 初学者
+skill: beginner
 lang: zh
 published: 2020-04-05
 source: EthereumDev

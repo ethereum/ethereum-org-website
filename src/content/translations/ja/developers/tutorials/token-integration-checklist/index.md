@@ -8,7 +8,7 @@ tags:
   - "スマートコントラクト"
   - "セキュリティ"
   - "トークン"
-skill: 中級
+skill: intermediate
 published: 2020-08-13
 source: セキュアなコントラクトの構築
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

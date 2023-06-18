@@ -41,21 +41,21 @@ const commonOutline = defineStyle({
   bg: "transparent",
   borderColor: "text",
   _hover: {
-    color: "primary",
-    bg: "background",
-    borderColor: "primary",
+    color: "primary.base",
+    bg: "background.base",
+    borderColor: "primary.base",
     _disabled: {
       ...disabledStylesOutline,
     },
   },
   _active: {
-    color: "primary",
-    bg: "primaryLight",
-    borderColor: "primary",
+    color: "primary.base",
+    bg: "primary.light",
+    borderColor: "primary.base",
   },
   _focus: {
-    color: "primary",
-    borderColor: "background",
+    color: "primary.base",
+    borderColor: "background.base",
     _disabled: {
       ...disabledStylesOutline,
     },
@@ -68,17 +68,17 @@ const commonOutline = defineStyle({
 const variantSolid = defineStyle((props) =>
   defineMergeStyles(defaultVariants?.solid(props), {
     color: "buttonColor",
-    bg: "primary",
+    bg: "primary.base",
     border: 0,
     _hover: {
-      bg: "primary",
+      bg: "primary.base",
       opacity: 0.8,
       _disabled: {
         ...disabledStylesSolid,
       },
     },
     _active: {
-      bg: "primaryHover",
+      bg: "primary.hover",
     },
     _disabled: {
       ...disabledStylesSolid,
@@ -92,8 +92,8 @@ const variantOutline = defineStyle((props) =>
 
 const variantOutlineColor = defineStyle({
   ...commonOutline,
-  color: "primary",
-  borderColor: "primary",
+  color: "primary.base",
+  borderColor: "primary.base",
 })
 
 const variantIcon = defineStyle({
@@ -104,7 +104,7 @@ const variantIcon = defineStyle({
   color: "inherit",
   boxShadow: "none",
   _hover: {
-    color: "primary",
+    color: "primary.base",
     boxShadow: "none",
   },
 })

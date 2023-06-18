@@ -90,7 +90,7 @@ ERC-721 代币 ID 是 256 位的。 通常，这些 ID 是通过对代币所代�
 #      transfer, the approved address for that NFT (if any) is reset to none.
 # @param _from Sender of NFT (if address is zero address it indicates token creation).
 # @param _to Receiver of NFT (if address is zero address it indicates token destruction).
-# @param _tokenId The NFT that got transfered.
+# @param _tokenId The NFT that got transferred.
 event Transfer:
     sender: indexed(address)
     receiver: indexed(address)
@@ -400,7 +400,7 @@ def _clearApproval(_owner: address, _tokenId: uint256):
 @internal
 def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: address):
     """
-    @dev Exeute transfer of a NFT.
+    @dev Execute transfer of a NFT.
          Throws unless `msg.sender` is the current owner, an authorized operator, or the approved
          address for this NFT. (NOTE: `msg.sender` not allowed in private function so pass `_sender`.)
          Throws if `_to` is the zero address.

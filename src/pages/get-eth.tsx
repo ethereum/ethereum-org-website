@@ -25,17 +25,10 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
+import { trackCustomEvent } from "../utils/matomo"
 
 const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
   const { t } = useTranslation()
-  const decentralizedExchanges: Array<CardListItem> = [
-    {
-      title: "Localcryptos.com",
-      link: "https://localcryptos.com/",
-      image: getImage(data.localcryptos)!,
-      alt: "",
-    },
-  ].sort((a, b) => a.title.localeCompare(b.title))
 
   const tokenSwaps: Array<CardListItem> = [
     {
@@ -161,7 +154,16 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             <Translation id="page-get-eth-where-to-buy-desc-2" />
           </Text>
           <Box as={EthPriceCard} mb={8} />
-          <ButtonLink to="#country-picker">
+          <ButtonLink
+            to="#country-picker"
+            onClick={() =>
+              trackCustomEvent({
+                eventCategory: "Search by country button",
+                eventAction: "click",
+                eventName: "search_by_country",
+              })
+            }
+          >
             <Translation id="page-get-eth-search-by-country" />
           </ButtonLink>
         </Flex>
@@ -258,17 +260,6 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </ButtonLink>
         </LeftColumn>
         <RightColumn>
-          <Heading
-            as="h3"
-            fontSize={{ base: "xl", md: "2xl" }}
-            lineHeight={1.4}
-          >
-            <Translation id="page-get-eth-traditional-currencies" />
-          </Heading>
-          <Text>
-            <Translation id="page-get-eth-traditional-payments" />
-          </Text>
-          <CardList content={decentralizedExchanges} />
           <Heading
             as="h3"
             fontSize={{ base: "xl", md: "2xl" }}
@@ -459,9 +450,6 @@ export const query = graphql`
           quality: 100
         )
       }
-    }
-    localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {
-      ...listItemImage
     }
     uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
       ...listItemImage

@@ -7,7 +7,7 @@ tags:
   - "front-end"
   - "JavaScript"
   - "web3.js"
-skill: iniciante
+skill: beginner
 lang: pt-br
 published: 2020-04-19
 source: EthereumDev
@@ -112,7 +112,7 @@ daiToken.methods.balanceOf(senderAddress).call(função (err, res) {
 })
 ```
 
-Lembre-se que DAI ERC20 tem 18 decimais, o que significa que você precisa remover 18 zeros para obter o valor correto. uint256 are returned as strings as JavaScript does not handle big numeric values. Se não tiver certeza [de como lidar com grandes números em JS, verifique nosso tutorial sobre bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
+Lembre-se que DAI ERC20 tem 18 decimais, o que significa que você precisa remover 18 zeros para obter o valor correto. uint256 são retornados como cadeias de caracteres, pois o JavaScript não lida com grandes valores numéricos. Se não tiver certeza [de como lidar com grandes números em JS, verifique nosso tutorial sobre bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
 ## Enviar: enviando transação para uma função de contrato inteligente {#send-sending-a-transaction-to-a-smart-contract-function}
 

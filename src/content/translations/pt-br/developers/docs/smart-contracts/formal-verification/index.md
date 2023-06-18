@@ -58,7 +58,7 @@ Especificações de alto nível geralmente capturam duas propriedades temporais 
 
 Veja, por exemplo, este requisito de segurança que cobre condições para usar `transfer()` ou `transferFrom()` em contratos de token ERC-20: _ “O saldo de um remetente nunca é inferior à quantidade solicitada de tokens a serem enviados.”_. Essa descrição em linguagem natural de uma invariável de contrato pode ser traduzida em uma especificação formal (matemática), que pode então ser rigorosamente verificada para validade.
 
-Propriedades de vivacidade afirmam que “algo eventualmente bom acontece” e se refere à capacidade do contrato progredir por diferentes estados. Um exemplo de uma propriedade de vivacidade é a “liquidez”, que se refere à capacidade do contrato transferir seus saldos aos usuários por solicitação. Se essa propriedade for violada, os usuários não poderiam retirar os ativos armazenados no contrato, como aconteceu com o [incidente de carteira do Parity](https://www.cnbc.com/2017/11/08/accidental-bug-may- have-frozen-280-worth-of-ether-on-parity-wallet.html).
+Propriedades de vivacidade afirmam que “algo eventualmente bom acontece” e se refere à capacidade do contrato progredir por diferentes estados. Um exemplo de uma propriedade de vivacidade é a “liquidez”, que se refere à capacidade do contrato transferir seus saldos aos usuários por solicitação. Se essa propriedade for violada, os usuários não poderiam retirar os ativos armazenados no contrato, como aconteceu com o [incidente de carteira do Parity](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html).
 
 ### Especificações de baixo nível {#low-level-specifications}
 
@@ -88,7 +88,7 @@ As instruções `require` expressam uma precondição ou invariável e são freq
 
 Especificações baseadas em traços descrevem operações que transitam um contrato entre diferentes estados e as relações entre essas operações. Como foi explicado anteriormente, os traços são sequências de operações que alteram o estado de um contrato de uma forma específica.
 
-Essa abordagem depende do modelo de contratos inteligentes como sistemas de transição de estado com alguns estados predefinidos (descritos por variáveis de estado) junto com um conjunto de transições predefinidas (descritas pelas funções de contrato). Além disso, um [gráfico de controle de fluxo ](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/) (CFG), que é uma representação gráfica do fluxo de execução de um programa, é frequentemente utilizado para descrever a semântica operacional de um contrato. Aqui, cada traço representado como um caminho no gráfico do fluxo de controle.
+Essa abordagem depende do modelo de contratos inteligentes como sistemas de transição de estado com alguns estados predefinidos (descritos por variáveis de estado) junto com um conjunto de transições predefinidas (descritas pelas funções de contrato). Além disso, um [gráfico de controle de fluxo](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/) (CFG), que é uma representação gráfica do fluxo de execução de um programa, é frequentemente utilizado para descrever a semântica operacional de um contrato. Aqui, cada traço representado como um caminho no gráfico do fluxo de controle.
 
 Em primeiro lugar, as especificações de nível de traços são usadas para raciocinar sobre padrões de execução interna em contratos inteligentes. Ao criar especificações de nível de traços, afirmamos os caminhos de execução admissíveis (ou seja, transições de estado) para um contrato inteligente. Utilizando técnicas, como a execução simbólica, podemos verificar formalmente que a execução nunca segue um caminho não definido no modelo formal.
 
@@ -120,7 +120,7 @@ A verificação de modelo usa a exploração do espaço do estado, que envolve c
 
 Comprovação de teorema é um método de raciocínio matemático sobre a exatidão de programas, incluindo contratos inteligentes. Ela envolve transformar o modelo do sistema de um contrato e as suas especificações em fórmulas matemáticas (declarações lógicas).
 
-O objetivo da comprovação de teorema é verificar a equivalência lógica entre essas declarações. "Equivalência lógica" (também chamada "implicação lógica") é um tipo de relação entre duas declarações em que a declaração A só pode ser verdadeira _se e somente se_ a declaração B for verdadeira.
+O objetivo da comprovação de teorema é verificar a equivalência lógica entre essas declarações. “Equivalência lógica” (também chamada de “bi-implicação lógica”) é um tipo de relação entre duas declarações, de modo que a primeira declaração é verdadeira, _se e somente se_, a segunda declaração for verdadeira.
 
 A relação necessária (equivalência lógica) entre as declarações sobre o modelo de um contrato e sua propriedade é formulada como uma declaração provável (chamada teorema). Usando um sistema formal de inferência, o comprovador do teorema automatizado pode verificar a validade do teorema. Em outras palavras, um comprovador de teorema pode comprovar de forma conclusiva se o modelo de um contrato inteligente corresponde precisamente às suas especificações.
 
@@ -134,7 +134,7 @@ Execução simbólica é um método de análise de um contrato inteligente que e
 
 A execução simbólica representa um traço de execução como uma fórmula matemática sobre valores simbólicos de entrada, também chamados de _predicado de caminho_. Um [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) é usado para verificar se um predicado de caminho é "satisfatório" (ou seja, existe um valor que pode cumprir a fórmula). Se um caminho vulnerável for cumprido, o solucionador SMT gerará um valor concreto que acionará a execução de guias em direção àquele caminho.
 
-Suponha que a função de um contrato inteligente receba como entrada um valor `uint` (`x`) e reverta quando `x` for maior que `5`, mas menor que `10`. Encontrar um valor para `x` que dispara o erro usando um procedimento de teste normal exigiria ser executado por dezenas de casos de teste (ou mais) sem a garantia de realmente encontrar uma entrada de disparo de erro.
+Suponha que a função de um contrato inteligente tome como entrada, um valor `uint` (`x`) e reverta quando `x` for maior que `5` e também menor que `10`. Encontrar um valor para `x` que dispara o erro usando um procedimento de teste normal exigiria ser executado por dezenas de casos de teste (ou mais) sem a garantia de realmente encontrar uma entrada de disparo de erro.
 
 Inversamente, uma ferramenta de execução simbólica executaria a função com o valor simbólico: `X > 5 ∧ X < 10` (ou seja, `x` é maior que 5 E `x` é menor que 10). O predicado do caminho associado `x = X > 5 ∧ X < 10` seria dada a um solucionador de SMT para resolver. Se determinado valor satisfaz a fórmula `x = X > 5 ∧ X < 10`, o solucionador SMT irá calculá-lo—por exemplo, o solucionador pode produzir `7` como um valor para `x`.
 

@@ -23,10 +23,11 @@ incomplete: true
 ## 初学者文章 {#beginner-articles}
 
 - [以太坊开发者指南 (Python)](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
+- [2023 区块链报告中的 Python 状态](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 - [基于 Vyper 的智能合约简介](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
-- [使用 Python 和 Brownie 部署您自己的 ERC20 令牌](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
-- [如何使用 Python Flask 开发以太坊合约？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
-- [Web3.py 简介 ·面向 Python 开发者的以太坊](https://www.dappuniversity.com/articles/web3-py-intro)
+- [使用 Python 和 Brownie 部署您自己的 ERC20 代币](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
+- [如何使用 Python Flask 开发 Ethereum 合约？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
+- [Web3.py 简介 · 面向 Python 开发者的以太坊资源](https://www.dappuniversity.com/articles/web3-py-intro)
 - [如何通过 Python 和 web3.py 调用智能合约函数？](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## 面向中等程度用户的文章 {#intermediate-articles}

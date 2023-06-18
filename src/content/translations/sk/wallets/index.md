@@ -26,7 +26,6 @@ Chcete si nainštalovať peňaženku?
 
 Chcete sa dozvedieť viac o peňaženkách pre Ethereum?
 
-- [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _pravidelne aktualizované – EthHub_
 - [Absolute Beginner Introduction to Ethereum: The Full Download](https://www.mewtopia.com/absolute-beginners-guide/) _23. júla 2019 - MyEtherWallet_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _15. decembra 2018 - Blockonomi_
 

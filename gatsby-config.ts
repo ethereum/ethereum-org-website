@@ -318,7 +318,7 @@ if (!IS_PREVIEW) {
       resolve: "gatsby-plugin-matomo",
       options: {
         siteId: "4",
-        matomoUrl: "https://matomo.ethereum.org",
+        matomoUrl: "https://ethereumfoundation.matomo.cloud",
         siteUrl,
         matomoPhpScript: "matomo.php",
         matomoJsScript: "matomo.js",

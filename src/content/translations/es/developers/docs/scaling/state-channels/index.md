@@ -63,13 +63,10 @@ Múltiples proyectos proporcionan implementaciones de canales de estado que se p
 
 **Canales de estado**
 
-- [EthHub: canales de estado](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Explicación de las soluciones de escalado de capa 2 de Ethereum: canales de estado, Plasma y Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– 12 de febrero de 2018, Josh Stark_
 - [Explicación de los canales de estado](https://www.jeffcoleman.ca/state-channels/) _6 de noviembre de 2015, Jeff Coleman_
 - [Aspectos básicos sobre los canales de estado](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
 **Canales de pago**
-
-- [EthHub: canales de pago](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
 _¿Conoce algún recurso comunitario que lo haya ayudado? Edite esta página y añádalo._

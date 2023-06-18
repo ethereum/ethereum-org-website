@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Non Fungible Token"
   - "Solidity"
-skill: Einsteiger
+skill: beginner
 lang: de
 published: 2021-04-22
 ---
