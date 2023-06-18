@@ -11,7 +11,7 @@ One of the most common uses for Ethereum is for a group to create a tradable tok
 There are two ways in which they are likely to deceive you:
 
 - **Selling you a scam token**, which may look like the legitimate token you want to purchase, but are issued by the scammers and worth nothing.
-- Directing you into their own user interface where they attempt to trick you into signing transactions or approvals or exposing sensitive information that gives them access to your assets. These might be near-perfect clones of honest sites, but with hidden tricks.
+- **Tricking you into signing bad transactions**, usually by directing you into their own user interface. Alternatively, the try to get you to give their contracts an allowance on your ERC-20 tokens or to expose sensitive information that gives them access to your assets. These user interfaces might be near-perfect clones of honest sites, but with hidden tricks.
 
 To illustrate what scam tokens are, and how to identify them, we are going to look at an example of one: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
@@ -60,17 +60,13 @@ There are several tricks that scam token creators do to appear legitimate.
   
   Because the ERC-20 balance of an address is part of the ERC-20 contract's storage, it can be specified by the contract to be whatever the contract developer wishes. It is also possible for a contract to forbid transfers so the legitimate users won't be able to get rid of those scam tokens.
 
-- **Legitimate transfers**. *Legitimate owners wouldn't pay to transfer a scam token to others, so if there are transfers it must be legitimate, right?* **Wrong**. `Transfer` events are produced by the ERC-20 contract. 
-
-A scammer can easily write the contract in such a way it will produce those actions.
+- **Legitimate transfers**. *Legitimate owners wouldn't pay to transfer a scam token to others, so if there are transfers it must be legitimate, right?* **Wrong**. `Transfer` events are produced by the ERC-20 contract. A scammer can easily write the contract in such a way it will produce those actions.
 
 
 ## Scammy websites {#scammy-websites}
 Scammers can also produce very convincing websites, sometimes even precise clones of authentic sites with identical UIs, but with subtle tricks. Examples might be external links that seem legitimate actually sending the user to an external scam site, or incorrect instructions that guide the user to exposing their keys or sending funds to an attacker's address. 
 
 The best practise for avoiding this is to carefully check the URL for the sites you visit, and save addresses for known authentic sites in your bookmarks. Then, you can access the real site through your bookmarks without accidentally making spelling errors or relying on external links.
-
-Another trick that scammers pull is to direct users to user interfaces that entice them to sign bad transactions. For example, one scam token ([view on explorer](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452)) tried to direct users to `https://op-claim.xyz`. This link probably used to host a scam. It doesn't anymore, because the scammer has given up and stopped paying for web hosting.
 
 
 ## How can you protect yourself? {#how-can-you-protect-yourself}
