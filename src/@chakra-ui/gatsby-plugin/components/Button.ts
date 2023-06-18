@@ -72,6 +72,10 @@ const variantLink = defineStyle({
   },
 })
 
+/**
+ * @deprecated This is no longer needed. Styling for just the icon is not
+ * unique compared to the variants used for text (as of the new DS)
+ */
 const variantIcon = defineStyle({
   appearance: "none",
   background: "inherit",
