@@ -36,7 +36,7 @@ const Avatar = forwardRef<AvatarLinkProps, "div" | "a">((props, ref) => {
   const linkProps = {
     href,
     isExternal: true,
-    color: "#1C1CFF",
+    color: "primary.base",
   }
 
   if (label) {
