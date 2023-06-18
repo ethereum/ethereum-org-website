@@ -22,7 +22,7 @@ export const Single: Story = {
   },
   render: (args) => (
     <VStack spacing={4}>
-      {["lg", "md", "sm", "xs", "2xs"].map((size) => (
+      {["lg", "md", "sm", "xs"].map((size) => (
         <Avatar key={size} size={size} {...args} />
       ))}
     </VStack>
@@ -37,7 +37,7 @@ export const Group: Story = {
   },
   render: (args) => (
     <VStack spacing={4}>
-      {["sm", "xs", "2xs"].map((size) => (
+      {["sm", "xs"].map((size) => (
         <AvatarGroup key={size} size={size} max={3}>
           <Avatar {...args} />
           <Avatar {...args} />
@@ -59,12 +59,12 @@ export const WithUsername: Story = {
   render: (args) => (
     <HStack spacing={16}>
       <VStack>
-        {["md", "sm", "xs"].map((size) => (
+        {["md", "sm"].map((size) => (
           <Avatar size={size} {...args} />
         ))}
       </VStack>
       <VStack>
-        {["md", "sm", "xs"].map((size) => (
+        {["md", "sm"].map((size) => (
           <Avatar size={size} direction="column" {...args} />
         ))}
       </VStack>

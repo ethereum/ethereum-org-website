@@ -5,6 +5,7 @@ import {
 } from "@chakra-ui/react"
 import { avatarAnatomy } from "@chakra-ui/anatomy"
 import { avatarDefaultTheme, defineMergeStyles } from "./components.utils"
+import { omit, pick } from "lodash"
 
 const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(avatarAnatomy.keys)
@@ -57,15 +58,12 @@ const baseStyle = definePartsStyle((props) => ({
   excessLabel: baseStyleExessLabel(props),
 }))
 
-const sizes = defineMergeStyles(defaultSizes, {
-  "2xs": {
-    group: {
-      [$mlBySize.variable]: "space.-0.5",
-    },
-    excessLabel: {
-      fontSize: "0.5rem",
-    },
-  },
+const USED_SIZES = ["xs", "sm", "md", "lg"] as const
+
+const pickedDefaultSizes: { [k in (typeof USED_SIZES)[number]]?: object } =
+  pick(defaultSizes, ...USED_SIZES)
+
+const sizes = defineMergeStyles(pickedDefaultSizes, {
   xs: {
     group: {
       [$mlBySize.variable]: "space.-1",
