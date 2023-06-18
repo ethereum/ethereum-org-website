@@ -45,7 +45,7 @@ const baseStyleContainer = defineStyle((props) =>
 
 const baseStyleExessLabel = defineStyle((props) =>
   defineMergeStyles(defaultBaseStyle?.(props).excessLabel, {
-    bg: "body",
+    bg: "body.base",
     color: "background.base",
     ms: $mlBySize.reference,
   })
