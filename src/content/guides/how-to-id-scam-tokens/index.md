@@ -11,7 +11,7 @@ One of the most common uses for Ethereum is for a group to create a tradable tok
 There are two ways in which they are likely to deceive you:
 
 - **Selling you a scam token**, which may look like the legitimate token you want to purchase, but are issued by the scammers and worth nothing.
-- **Tricking you into signing bad transactions**, usually by directing you into their own user interface. Alternatively, the try to get you to give their contracts an allowance on your ERC-20 tokens or to expose sensitive information that gives them access to your assets. These user interfaces might be near-perfect clones of honest sites, but with hidden tricks.
+- **Tricking you into signing bad transactions**, usually by directing you into their own user interface. They mignt try to get you into giving their contracts an allowance on your ERC-20 tokens, exposing sensitive information that gives them access to your assets, etc.. These user interfaces might be near-perfect clones of honest sites, but with hidden tricks.
 
 To illustrate what scam tokens are, and how to identify them, we are going to look at an example of one: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
