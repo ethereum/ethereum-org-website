@@ -25,18 +25,18 @@ const baseStyleContainer = defineStyle((props) =>
     },
     _focus: {
       outline: "4px solid",
-      outlineColor: "primaryHover",
+      outlineColor: "primary.hover",
       outlineOffset: "-1px",
     },
     _active: {
-      [$border.variable]: "colors.primaryHover",
+      [$border.variable]: "colors.primary.hover",
       boxShadow: "none",
       "& img": {
         opacity: 0.7,
       },
     },
     "[role='group'] &": {
-      [$border.variable]: "colors.background",
+      [$border.variable]: "colors.background.base",
       _notLast: {
         marginLeft: $mlBySize.reference,
       },
@@ -47,7 +47,7 @@ const baseStyleContainer = defineStyle((props) =>
 const baseStyleExessLabel = defineStyle((props) =>
   defineMergeStyles(defaultBaseStyle?.(props).excessLabel, {
     bg: "body",
-    color: "background",
+    color: "background.base",
     ms: $mlBySize.reference,
   })
 )
@@ -86,5 +86,6 @@ const sizes = defineMergeStyles(defaultSizes, {
 
 export const Avatar = defineMultiStyleConfig({
   baseStyle,
+  // @ts-expect-error
   sizes,
 })
