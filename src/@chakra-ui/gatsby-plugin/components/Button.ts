@@ -36,15 +36,13 @@ const baseStyle = defineStyle((props) => ({
   },
 }))
 
-const HOVER_BOX_SHADOW = "buttonHover"
-
 const variantSolid = defineStyle({
   color: "background.base",
   bg: "primary.base",
   _hover: {
     color: "background.base",
     bg: "primary.hover",
-    boxShadow: HOVER_BOX_SHADOW,
+    boxShadow: "buttonHover",
   },
   _active: {
     boxShadow: "none",
@@ -54,7 +52,7 @@ const variantSolid = defineStyle({
 const variantOutline = defineStyle({
   border: "1px",
   _hover: {
-    boxShadow: HOVER_BOX_SHADOW,
+    boxShadow: "buttonHover",
   },
   _active: {
     boxShadow: "none",
