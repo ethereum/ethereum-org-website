@@ -61,11 +61,13 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
 - [Kaleido](https://kaleido.io/) _an enterprise-focused development platform that offers simplified blockchain and digital asset applications_
+- [NodeReal](https://nodereal.io/) _provides scalable blockchain infrastructure and API services provider for the Web3 ecosystem_
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
 - [QuickNode](https://www.quicknode.com/) _provides reliable and fast nodes with high-level APIs like NFT API, Token API, etc., while delivering a unified product suite and enterprise-grade solutions_
 - [Tenderly](https://tenderly.co) _a Web3 development platform that provides debugging, observability, and infrastructure building blocks for developing, testing, monitoring, and operating smart contracts_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _provider of managed services spread across co-locations in Europe and Asia. Operates & monitors your nodes securely and reliably_
+- [Zeeve](https://www.zeeve.io/) _provides a range of products and tools for building on Ethereum, also infrastructure and APIs for Enterprise Web3 applications._
 
 ### Tooling and libraries {#tooling-and-libraries}
 

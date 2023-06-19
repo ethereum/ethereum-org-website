@@ -109,8 +109,8 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
                 position="relative"
                 {...(idx === activeIndex
                   ? {
-                      bg: "primary",
-                      color: "background",
+                      bg: "primary.base",
+                      color: "background.base",
                       _after: {
                         content: `''`,
                         position: "absolute",
@@ -119,10 +119,10 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
                         top: 0,
                         left: "100%",
                         border: "1rem solid transparent",
-                        borderLeftColor: "primary",
+                        borderLeftColor: "primary.base",
                       },
                     }
-                  : { color: "primary" })}
+                  : { color: "primary.base" })}
               >
                 {title}
               </ListItem>

@@ -1,5 +1,10 @@
+import { DISCORD_PATH } from "../constants"
+
 const HASH_PATTERN = /^#.*/
 const isHashLink = (href: string): boolean => HASH_PATTERN.test(href)
+
+export const isDiscordInvite = (href: string): boolean =>
+  href.includes(DISCORD_PATH) && !href.includes("http")
 
 export const isExternal = (href: string): boolean =>
   href.includes("http") || href.includes("mailto:") || href.includes("ipfs")

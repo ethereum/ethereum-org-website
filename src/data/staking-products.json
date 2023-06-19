@@ -8,21 +8,39 @@
       "url": "https://rocketpool.net/node-operators",
       "audits": [
         {
-          "name": "Sigma Prime",
+          "name": "Sigma Prime - May 2021",
           "url": "https://rocketpool.net/files/sigma-prime-audit.pdf"
         },
         {
-          "name": "Consensys Diligence",
+          "name": "Sigma Prime - Nov 2021",
+          "url": "https://rocketpool.net/files/sigma-prime-fix-review.pdf"
+        },
+        {
+          "name": "Sigma Prime - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-audit-redstone.pdf"
+        },
+        {
+          "name": "Sigma Prime - Atlas, Dec 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Consensys Diligence - 2021",
           "url": "https://consensys.net/diligence/audits/2021/04/rocketpool/"
         },
         {
-          "name": "Trail of Bits",
+          "name": "Consensys Diligence - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/consensys-audit-redstone.pdf"
+        },
+        {
+          "name": "Consensys Diligence - Atlas, Jan 2023",
+          "url": "https://rocketpool.net/files/consensys-diligence-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Trail of Bits - Sept 2021",
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
-      "minEth": 16,
-      "additionalStake": "10",
-      "additionalStakeUnit": "% RPL",
+      "minEth": 10.4,
       "tokens": [
         {
           "name": "Rocket Pool ETH",
@@ -88,7 +106,7 @@
       "launchDate": "2020-12-01",
       "url": "https://dappnode.io",
       "audits": [],
-      "minEth": 32,
+      "minEth": 10.4,
       "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
@@ -198,9 +216,7 @@
       "launchDate": "2018-12-01",
       "url": "https://ava.do/",
       "audits": [],
-      "minEth": 16,
-      "additionalStake": "10",
-      "additionalStakeUnit": "% RPL",
+      "minEth": 10.4,
       "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
@@ -218,6 +234,34 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked Avado go to link"
+      }
+    },
+    {
+      "name": "Launchnodes",
+      "imageName": "Launchnodes",
+      "hue": 218,
+      "launchDate": "2020-09-01",
+      "url": "https://launchnodes.com/",
+      "audits": [],
+      "minEth": 32,
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": false,
+      "multiClient": false,
+      "easyClientSwitching": false,
+      "platforms": ["Linux", "macOS", "Windows"],
+      "ui": ["CLI", "AWS", "Azure"],
+      "socials": {
+        "twitter": "https://twitter.com/launchnodes",
+        "youtube": "https://www.youtube.com/channel/UC5tEUUlx11httS9Y9RvIzJw",
+        "linkedin": "https://www.linkedin.com/company/67972177/",
+        "discord": "https://discord.gg/w5pjfWqdyT"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Launchnodes go to link"
       }
     }
   ],
@@ -287,9 +331,6 @@
       "launchDate": "2018-12-01",
       "url": "https://ava.do/",
       "audits": [],
-      "minEth": 16,
-      "additionalStake": "10",
-      "additionalStakeUnit": "% RPL",
       "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
@@ -335,7 +376,8 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityClient": null,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": null,
       "isSelfCustody": false,
       "platforms": ["Browser"],
       "ui": ["GUI"],
@@ -366,7 +408,8 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityClient": null,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": null,
       "isSelfCustody": true,
       "platforms": ["Browser"],
       "ui": ["GUI"],
@@ -397,7 +440,8 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityClient": null,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": null,
       "isSelfCustody": true,
       "platforms": ["Browser"],
       "ui": ["GUI"],
@@ -422,7 +466,8 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityClient": 0,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 0,
       "isSelfCustody": true,
       "platforms": ["Browser"],
       "ui": ["GUI"],
@@ -457,7 +502,8 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityClient": 43.8,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 43.8,
       "isSelfCustody": true,
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["GUI"],
@@ -488,7 +534,8 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": true,
-      "pctMajorityClient": 3.61,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 3.61,
       "isSelfCustody": true,
       "platforms": ["Browser"],
       "ui": ["GUI"],
@@ -522,7 +569,8 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": true,
-      "pctMajorityClient": null,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": null,
       "isSelfCustody": true,
       "platforms": ["Browser"],
       "ui": ["GUI"],
@@ -547,15 +595,35 @@
       "url": "https://rocketpool.net/",
       "audits": [
         {
-          "name": "Sigma Prime",
+          "name": "Sigma Prime - May 2021",
           "url": "https://rocketpool.net/files/sigma-prime-audit.pdf"
         },
         {
-          "name": "Consensys Diligence",
+          "name": "Sigma Prime - Nov 2021",
+          "url": "https://rocketpool.net/files/sigma-prime-fix-review.pdf"
+        },
+        {
+          "name": "Sigma Prime - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-audit-redstone.pdf"
+        },
+        {
+          "name": "Sigma Prime - Atlas, Dec 2022",
+          "url": "https://rocketpool.net/files/sigma-prime-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Consensys Diligence - 2021",
           "url": "https://consensys.net/diligence/audits/2021/04/rocketpool/"
         },
         {
-          "name": "Trail of Bits",
+          "name": "Consensys Diligence - Redstone, June 2022",
+          "url": "https://rocketpool.net/files/consensys-audit-redstone.pdf"
+        },
+        {
+          "name": "Consensys Diligence - Atlas, Jan 2023",
+          "url": "https://rocketpool.net/files/consensys-diligence-atlas-v1.2.pdf"
+        },
+        {
+          "name": "Trail of Bits - Sept 2021",
           "url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
         }
       ],
@@ -572,7 +640,8 @@
       "hasBugBounty": true,
       "isTrustless": true,
       "hasPermissionlessNodes": true,
-      "pctMajorityClient": 10.67,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 10.67,
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
@@ -617,9 +686,10 @@
       ],
       "isFoss": true,
       "hasBugBounty": true,
-      "isTrustless": false,
+      "isTrustless": true,
       "hasPermissionlessNodes": false,
-      "pctMajorityClient": 42.83,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 42.83,
       "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "socials": {
@@ -681,7 +751,8 @@
       "hasBugBounty": true,
       "isTrustless": true,
       "hasPermissionlessNodes": false,
-      "pctMajorityClient": 43.1,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 43.1,
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
@@ -714,7 +785,8 @@
       "hasBugBounty": false,
       "isTrustless": true,
       "hasPermissionlessNodes": false,
-      "pctMajorityClient": 0.0,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 0.0,
       "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "twitter": "https://twitter.com/stakefish",
@@ -762,7 +834,8 @@
       "hasBugBounty": true,
       "isTrustless": false,
       "hasPermissionlessNodes": false,
-      "pctMajorityClient": 67.94,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 67.94,
       "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "socials": {
@@ -801,7 +874,8 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "hasPermissionlessNodes": true,
-      "pctMajorityClient": null,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": null,
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
@@ -841,7 +915,8 @@
       "hasBugBounty": false,
       "isTrustless": true,
       "hasPermissionlessNodes": false,
-      "pctMajorityClient": 100,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 100,
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
@@ -855,6 +930,53 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked Bedrock go to link"
+      }
+    },
+    {
+      "name": "Origin Ether",
+      "imageName": "OriginEther",
+      "hue": 211,
+      "launchDate": "2023-05-16",
+      "url": "https://oeth.com/",
+      "audits": [
+        {
+          "name": "OpenZeppelin Security",
+          "url": "https://github.com/OriginProtocol/security/blob/master/audits/OpenZeppelin%20-%20Origin%20Dollar%20OETH%20Integration%20-%20May%202023.pdf"
+        },
+        {
+          "name": "Narya.ai",
+          "url": "https://github.com/OriginProtocol/security/blob/master/audits/Narya%20-%20Origin%20OETH%20Report%20-%20May%202023%20-%20Initial%20Report.pdf"
+        }
+      ],
+      "minEth": 0,
+      "feePercentage": 20,
+      "tokens": [
+        {
+          "name": "Origin Ether",
+          "symbol": "OETH",
+          "address": "0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3"
+        }
+      ],
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": true,
+      "hasPermissionlessNodes": true,
+      "pctMajorityClient": null,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.com/invite/ogn",
+        "twitter": "https://twitter.com/OriginProtocol",
+        "github": "https://github.com/originprotocol",
+        "linkedin": "https://www.linkedin.com/company/originprotocol/",
+        "youtube": "https://www.youtube.com/c/originprotocol",
+        "medium": "https://blog.originprotocol.com/",
+        "telegram": "https://t.me/originprotocol"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Origin Ether go to link"
       }
     }
   ]

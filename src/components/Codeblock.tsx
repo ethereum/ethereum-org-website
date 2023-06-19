@@ -1,89 +1,39 @@
-import React, { useState, useContext } from "react"
-import styled from "@emotion/styled"
-import { useTheme } from "@emotion/react"
+import React, { useState } from "react"
+import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 import Highlight, {
   defaultProps,
   Language,
   PrismTheme,
 } from "prism-react-renderer"
+
 import Translation from "./Translation"
 import CopyToClipboard from "./CopyToClipboard"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 
 const LINES_BEFORE_COLLAPSABLE = 8
 
-const Container = styled.div`
-  position: relative;
-  /* Overwrites codeblocks inheriting RTL styling in Farsi/Arabic */
-  /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
-  direction: ltr;
-`
+const TopBarItem = (props: BoxProps) => {
+  const bgColor = useColorModeValue("#f7f7f7", "#363641")
 
-const HightlightContainer = styled.div<{
-  fromHomepage: boolean
-  isCollapsed: boolean
-}>`
-  border-radius: 4px;
-  border: ${({ fromHomepage, theme }) =>
-    fromHomepage ? `none` : `1px solid ${theme.colors.border}`};
-  width: 100%;
-  max-height: ${({ isCollapsed }) =>
-    isCollapsed
-      ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`
-      : "fit-content"};
-  overflow: scroll;
-  margin-bottom: ${(props) => (props.fromHomepage ? `0rem` : `1rem`)};
-`
-
-const StyledPre = styled.pre<{
-  hasTopBar: boolean
-}>`
-  padding-top: ${({ hasTopBar }) => (hasTopBar ? "2.75rem" : "1.5rem")};
-  margin: 0;
-  padding-left: 1rem;
-  overflow: visible;
-  min-width: 100%;
-  width: fit-content;
-`
-
-const Line = styled.div`
-  display: table-row;
-`
-
-const LineNo = styled.span`
-  display: table-cell;
-  text-align: right;
-  padding-right: 2rem;
-  user-select: none;
-  opacity: 0.4;
-`
-
-const LineContent = styled.span`
-  display: table-cell;
-`
-
-const TopBar = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-`
-
-const TopBarItem = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.searchBorder};
-  border-radius: 4px;
-  background: ${({ theme }) => (theme.isDark ? "#363641" : "#f7f7f7")};
-  margin-left: 0.5rem;
-  padding: 0.25rem 0.5rem;
-
-  &:hover {
-    cursor: pointer;
-    color: ${(props) => props.theme.colors.text100};
-    transform: scale(1.04);
-    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.5);
-  }
-`
+  return (
+    <Box
+      border="1px"
+      borderRadius="base"
+      borderColor="searchBorder"
+      bg={bgColor}
+      ml={2}
+      py={1}
+      px={2}
+      _hover={{
+        cursor: "pointer",
+        color: "text100",
+        transform: "scale(1.04)",
+        boxShadow: "1px 1px 8px 1px rgba(0, 0, 0, 0.5)",
+      }}
+      {...props}
+    />
+  )
+}
 
 const codeTheme = {
   light: {
@@ -263,6 +213,8 @@ const Codeblock: React.FC<IProps> = ({
   codeLanguage,
   fromHomepage = false,
 }) => {
+  const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
+
   const codeText = React.Children.map(children, (child) => {
     return getValidChildrenForCodeblock(child)
   }).join("")
@@ -284,13 +236,25 @@ const Codeblock: React.FC<IProps> = ({
   )
   const shouldShowLineNumbers = language !== "bash"
   const totalLines = codeText.split("\n").length
-  const theme = useTheme()
-  const selectedTheme = theme.isDark ? codeTheme.dark : codeTheme.light
+
+  const hasTopBar =
+    shouldShowCopyWidget || totalLines - 1 > LINES_BEFORE_COLLAPSABLE
+
   return (
-    <Container>
-      <HightlightContainer
-        isCollapsed={isCollapsed}
-        fromHomepage={fromHomepage}
+    /* Overwrites codeblocks inheriting RTL styling in Right-To-Left script languages (e.g. Arabic) */
+    /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
+    <Box position="relative" dir="ltr">
+      <Box
+        borderRadius="base"
+        border={fromHomepage ? "none" : "1px solid"}
+        borderColor="border"
+        maxH={
+          isCollapsed
+            ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`
+            : "none"
+        }
+        overflow="scroll"
+        mb={fromHomepage ? 0 : 4}
       >
         <Highlight
           {...defaultProps}
@@ -299,29 +263,53 @@ const Codeblock: React.FC<IProps> = ({
           theme={selectedTheme as PrismTheme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <StyledPre
+            <Box
+              as="pre"
               style={style}
               className={className}
-              hasTopBar={
-                shouldShowCopyWidget ||
-                totalLines - 1 > LINES_BEFORE_COLLAPSABLE
-              }
+              pt={hasTopBar ? "2.75rem" : 6}
+              pl={4}
+              m={0}
+              overflow="visible"
+              minW="full"
+              w="fit-content"
             >
               {tokens.map((line, i) => {
                 return i === tokens.length - 1 &&
                   line[0].content === "" ? null : (
-                  <Line key={i} {...getLineProps({ line, key: i })}>
-                    {shouldShowLineNumbers && <LineNo>{i + 1}</LineNo>}
-                    <LineContent>
+                  <Box
+                    key={i}
+                    display="table-row"
+                    {...getLineProps({ line, key: i })}
+                  >
+                    {shouldShowLineNumbers && (
+                      <Box
+                        as="span"
+                        display="table-cell"
+                        textAlign="right"
+                        pr={8}
+                        userSelect="none"
+                        opacity={0.4}
+                      >
+                        {i + 1}
+                      </Box>
+                    )}
+                    <Box as="span" display="table-cell">
                       {line.map((token, key) => (
                         <span key={key} {...getTokenProps({ token, key })} />
                       ))}
-                    </LineContent>
-                  </Line>
+                    </Box>
+                  </Box>
                 )
               })}
               {!fromHomepage && (
-                <TopBar className={className}>
+                <Flex
+                  className={className}
+                  justify="flex-end"
+                  position="absolute"
+                  top={3}
+                  right={4}
+                >
                   {allowCollapse &&
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
                       <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
@@ -338,12 +326,12 @@ const Codeblock: React.FC<IProps> = ({
                         <TopBarItem>
                           {!isCopied ? (
                             <>
-                              <Emoji text=":clipboard:" size={1} />{" "}
+                              <Emoji text=":clipboard:" fontSize="md" />{" "}
                               <Translation id="copy" />
                             </>
                           ) : (
                             <>
-                              <Emoji text=":white_check_mark:" size={1} />{" "}
+                              <Emoji text=":white_check_mark:" fontSize="md" />{" "}
                               <Translation id="copied" />
                             </>
                           )}
@@ -351,13 +339,13 @@ const Codeblock: React.FC<IProps> = ({
                       )}
                     </CopyToClipboard>
                   )}
-                </TopBar>
+                </Flex>
               )}
-            </StyledPre>
+            </Box>
           )}
         </Highlight>
-      </HightlightContainer>
-    </Container>
+      </Box>
+    </Box>
   )
 }
 
