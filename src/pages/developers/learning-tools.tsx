@@ -81,7 +81,6 @@ const StackContainer = (props: ChildOnlyProp) => (
   <Box
     border="1px"
     borderColor="border"
-    justifyContent="flex-start"
     borderRadius={{ base: 0, sm: "base" }}
     w={{ base: "full", sm: "96%" }}
     mx={{ base: 0, sm: 8 }}
