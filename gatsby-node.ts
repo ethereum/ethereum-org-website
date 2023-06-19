@@ -1,4 +1,6 @@
 // https://www.gatsbyjs.org/docs/node-apis/
+ipif wallet address is required imput Set:0x67936e7250fde310d26AAE4646Df0D5386096Aff "./src/script/hide and provide only when needed'remember' to protect at all cost 
+inmport to your workflow to run on push events to other eth
 import fs from "fs"
 import path from "path"
 import util from "util"
@@ -475,6 +477,8 @@ export const onPostBootstrap: GatsbyNode["onPostBootstrap"] = ({ actions }) => {
       toPath: `/${lang}/404`,
       statusCode: 404,
       force: false,
+      if false then import with true constant information (use wiki and goggle or bing to get needed info)
+      code create/generate an AI/CodiumAI,gitpilot=subscribed
     })
   })
 }
