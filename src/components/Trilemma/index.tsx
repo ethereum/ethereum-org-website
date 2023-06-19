@@ -1,5 +1,6 @@
 import React from "react"
 import {
+  Box,
   Drawer,
   DrawerCloseButton,
   DrawerContent,
@@ -7,6 +8,7 @@ import {
   Flex,
   Heading,
   Hide,
+  Stack,
   Text,
   useToken,
 } from "@chakra-ui/react"
@@ -36,37 +38,40 @@ const Trilemma: React.FC<IProps> = () => {
 
   return (
     <Flex
-      alignItems="flex-start"
+      alignItems="center"
       flexDirection={{ base: "column", lg: "row" }}
-      justifyContent="space-between"
+      gap={12}
+      py={12}
+      pl={{ lg: 12 }}
+      pr={{ lg: 32 }}
     >
-      <Flex
-        flexDirection="column"
-        my={{ base: 8, md: 12 }}
-        mx={{ md: 12 }}
-        py={8}
+      <Stack
+        gap={8}
+        py={{ lg: 8 }}
+        px={{ base: 12, lg: 0 }}
         flex={{
-          base: "1 1 100%",
           lg: "0 1 500px",
         }}
       >
-        <Heading fontSize="2rem" mt={0}>
-          <Translation id="page-roadmap-vision-trilemma-h2" />
-        </Heading>
-        <Text>
-          <Translation id="page-roadmap-vision-trilemma-p" />
-        </Text>
-        <Text>
-          <Translation id="page-roadmap-vision-trilemma-p-1" />
-        </Text>
-        <Text>
-          <Translation id="page-roadmap-vision-trilemma-p-2" />
-        </Text>
-        <Text fontWeight={600} hideFrom={lgBp}>
-          <Translation id="page-roadmap-vision-trilemma-modal-tip" />:
-        </Text>
-        <Card {...cardDetail} mt={8} minH="300px" hideBelow={lgBp} />
-      </Flex>
+        <Box>
+          <Heading fontSize="2rem" mt={0}>
+            <Translation id="page-roadmap-vision-trilemma-h2" />
+          </Heading>
+          <Text>
+            <Translation id="page-roadmap-vision-trilemma-p" />
+          </Text>
+          <Text>
+            <Translation id="page-roadmap-vision-trilemma-p-1" />
+          </Text>
+          <Text>
+            <Translation id="page-roadmap-vision-trilemma-p-2" />
+          </Text>
+          <Text fontWeight={600} hideFrom="lg">
+            <Translation id="page-roadmap-vision-trilemma-modal-tip" />:
+          </Text>
+        </Box>
+        <Card {...cardDetail} minH="300px" hideBelow="lg" />
+      </Stack>
       <Hide above={lgBp}>
         <Drawer
           isOpen={mobileModalOpen}
@@ -74,18 +79,8 @@ const Trilemma: React.FC<IProps> = () => {
           placement="bottom"
         >
           <DrawerOverlay background="rgba(0,0,0,0.3)" />
-          <DrawerContent
-            border="none"
-            borderTopRadius="1rem"
-            background="background.base"
-          >
-            <Card
-              {...cardDetail}
-              background="none"
-              border="none"
-              justifyContent="flex-start"
-              my={8}
-            />
+          <DrawerContent borderTopRadius="1rem" background="background.base">
+            <Card {...cardDetail} background="none" border="none" my={8} />
             <DrawerCloseButton top={6} right={6} />
           </DrawerContent>
         </Drawer>
