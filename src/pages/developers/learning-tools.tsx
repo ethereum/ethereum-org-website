@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
+import { Box, Flex, Heading, HeadingProps, Text } from "@chakra-ui/react"
 // Component imports
-import { Box, Flex } from "@chakra-ui/react"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
@@ -15,54 +15,54 @@ import LearningToolsCardGrid from "../../components/LearningToolsCardGrid"
 // Util imports
 import { getImage } from "../../utils/image"
 // Type imports
-import { ChildOnlyProp, Context, LearningTool } from "../../types"
+import type { ChildOnlyProp, Context, LearningTool } from "../../types"
 
-const StyledPage = (props: ChildOnlyProp) => (
+const Page = (props: ChildOnlyProp) => (
   <Flex
-    flexDirection="column"
-    alignItems="center"
-    w="100%"
-    ml="auto"
-    mr="auto"
-    mb={16}
+    direction="column"
+    align="center"
+    w="full"
+    mx="auto"
     mt={16}
+    mb={0}
     {...props}
-  ></Flex>
+  />
 )
 
 const Header = (props: ChildOnlyProp) => (
   <Flex
-    flexDirection="column"
-    alignItems="center"
+    as="header"
+    direction="column"
+    align="center"
     textAlign="center"
     maxW="896px"
-    p={0}
-    pl={8}
-    pr={8}
+    py={0}
+    px={8}
     {...props}
   />
 )
 
 const H1 = (props: ChildOnlyProp) => (
-  <Flex
-    m={"8 0 0"}
-    mt={0}
+  <Heading
+    as="h1"
+    my={0}
     color="text"
     fontStyle="normal"
-    fontFamily={"mono"}
+    fontFamily="monospace"
     textTransform="uppercase"
     fontWeight="semibold"
-    fontSize="4xl"
-    lineHeight="1.4"
+    fontSize="2rem"
+    lineHeight={1.4}
     textAlign="center"
     {...props}
   />
 )
 
-const Subtitle = (props: ChildOnlyProp) => (
-  <Flex
-    fontSize={"xl"}
-    lineHeight={"short"}
+const Subtitle = (props: HeadingProps) => (
+  <Heading
+    fontSize="xl"
+    lineHeight={1.4}
+    fontWeight="normal"
     color="text300"
     maxW="55ch"
     mb={2}
@@ -71,32 +71,26 @@ const Subtitle = (props: ChildOnlyProp) => (
   />
 )
 
-const SubtitleTwo = (props: ChildOnlyProp) => (
-  <Subtitle>
-    <Box mt={0} {...props}></Box>
-  </Subtitle>
-)
+const SubtitleTwo = (props: ChildOnlyProp) => <Subtitle mt={0} {...props} />
 
 const ContentBox = (props: ChildOnlyProp) => (
-  <Box pt={4} pb={4} pl={8} pr={8} w={"100%"} {...props}></Box>
+  <Box py={4} px={8} w="full" {...props} />
 )
 
 const StackContainer = (props: ChildOnlyProp) => (
   <Box
-    border="1px solid border"
+    border="1px"
+    borderColor="border"
     justifyContent="flex-start"
-    borderRadius={{ base: "4px", sm: "0" }}
-    w={{ base: "96%", sm: "100%" }}
-    m={8}
-    ml={{ base: 8, sm: 0 }}
-    mr={{ base: 8, sm: 0 }}
-    pt={12}
-    pb={12}
-    pl={8}
-    pr={8}
+    borderRadius={{ base: 0, sm: "base" }}
+    w={{ base: "full", sm: "96%" }}
+    mx={{ base: 0, sm: 8 }}
+    my={8}
+    px={8}
+    py={12}
     background="ednBackground"
     {...props}
-  ></Box>
+  />
 )
 
 // Page component
@@ -285,7 +279,7 @@ const LearningToolsPage = ({
   ]
 
   return (
-    <StyledPage>
+    <Page>
       <PageMetadata
         title={t("page-learning-tools-meta-title")}
         description={t("page-learning-tools-meta-desc")}
@@ -302,9 +296,9 @@ const LearningToolsPage = ({
         <SubtitleTwo>
           <Translation id="page-learning-tools-sandbox" />
         </SubtitleTwo>
-        <p>
+        <Text>
           <Translation id="page-learning-tools-sandbox-desc" />
-        </p>
+        </Text>
         <LearningToolsCardGrid category={randomizedSandboxes} />
         <InfoBanner emoji=":point_up:" shouldCenter>
           <Translation id="page-learning-tools-remix-description-2" />
@@ -314,18 +308,18 @@ const LearningToolsPage = ({
         <SubtitleTwo>
           <Translation id="page-learning-tools-game-tutorials" />
         </SubtitleTwo>
-        <p>
+        <Text>
           <Translation id="page-learning-tools-game-tutorials-desc" />
-        </p>
+        </Text>
         <LearningToolsCardGrid category={games} />
       </StackContainer>
       <StackContainer>
         <SubtitleTwo>
           <Translation id="page-learning-tools-bootcamps" />
         </SubtitleTwo>
-        <p>
+        <Text>
           <Translation id="page-learning-tools-bootcamps-desc" />
-        </p>
+        </Text>
         <LearningToolsCardGrid category={bootcamps} />
       </StackContainer>
       <ContentBox>
@@ -338,17 +332,17 @@ const LearningToolsPage = ({
           titleKey={"page-learning-tools-documentation"}
           descriptionKey={"page-learning-tools-documentation-desc"}
         >
-          <div>
+          <Box>
             <ButtonLink to="/developers/docs/">
               <Translation id="page-learning-tools-browse-docs" />
             </ButtonLink>
-          </div>
+          </Box>
         </CalloutBanner>
       </ContentBox>
       <ContentBox>
         <FeedbackCard />
       </ContentBox>
-    </StyledPage>
+    </Page>
   )
 }
 
