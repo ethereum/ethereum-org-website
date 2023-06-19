@@ -4,6 +4,7 @@ import {
   commonInputTriggerStyles,
   defineMergeStyles,
   switchDefaultTheme,
+  _notDisabledReadOnly,
 } from "./components.utils"
 
 const { defineMultiStyleConfig, definePartsStyle } =
@@ -44,6 +45,12 @@ const baseStyleTrack = defineMergeStyles(
     ["&:not([data-checked])[data-disabled]"]: {
       bg: "transparent",
       borderColor: "disabled",
+    },
+    [_notDisabledReadOnly]: {
+      "*[data-checked]:hover > &, *:not([data-checked]):hover > &": {
+        bg: "primary.hover",
+        borderColor: "transparent",
+      },
     },
   }
 )

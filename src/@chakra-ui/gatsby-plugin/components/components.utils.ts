@@ -106,7 +106,11 @@ export const commonInputTriggerStyles = {
     },
     [_notDisabledReadOnly]: {
       // Hovering over the label triggers the style for the control
-      "*:hover > &": {
+      "*[data-checked]:hover > &": {
+        bg: "primary.hover",
+        borderColor: "primary.highContrast",
+      },
+      "*:not([data-checked]):hover > &": {
         bg: "body.light",
         borderColor: "primary.highContrast",
       },
