@@ -57,6 +57,12 @@ Please note the importance of choosing a service that takes <a href="/developers
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
+## Earn diversified pooled staking rewards {#earn-diversified-pooled-staking-rewards}
+
+It is difficult to understand all the pooled staking protocols and manage a pooled staking portfolio. To help you save time and hassle, Index Coop launched $dsETH: a single, easy to buy token giving holders access to staking returns from a diverse range of pooled staking protocols.
+
+<StakingRewardsButton campaign="pooledstaking" />
+
 ## Frequently asked questions {#faq}
 
 <ExpandableCard title="How do I earn rewards?">

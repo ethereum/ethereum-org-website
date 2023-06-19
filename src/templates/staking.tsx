@@ -49,6 +49,7 @@ import StakingHowSoloWorks from "../components/Staking/StakingHowSoloWorks"
 import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
+import StakingRewardsButton from "../components/Staking/StakingRewardsButton"
 import WithdrawalCredentials from "../components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "../components/Staking/WithdrawalsTabComparison"
 import Callout from "../components/Callout"
@@ -316,6 +317,7 @@ const components = {
   StakingHowSoloWorks,
   StakingLaunchpadWidget,
   StakingProductsCardGrid,
+  StakingRewardsButton,
   TableContainer,
   UpgradeStatus,
   WithdrawalCredentials,

@@ -20,6 +20,7 @@ import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
+import StakingRewardsButton from "../../components/Staking/StakingRewardsButton"
 import StakingStatsBox from "../../components/Staking/StakingStatsBox"
 import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
@@ -280,6 +281,10 @@ const StakingPage = ({
     comparisonOfOptions: {
       id: "comparison-of-options",
       title: t("page-staking-toc-comparison-of-options"),
+    },
+    earnRewards: {
+      id: "earn-rewards",
+      title: t("page-staking-toc-earn-rewards"),
     },
     joinTheCommunity: {
       id: "join-the-community",
@@ -563,6 +568,14 @@ const StakingPage = ({
                   />
                 </div>
               </ComparisonGrid>
+            </Box>
+            <Divider />
+            <Box>
+              <H2 id={tocItems.earnRewards.id}>{tocItems.earnRewards.title}</H2>
+              <Text>
+                <Translation id="page-staking-earn-rewards-description" />
+              </Text>
+              <StakingRewardsButton campaign="staking" />
             </Box>
             <Divider />
             <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
