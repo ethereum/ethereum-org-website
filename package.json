@@ -83,7 +83,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@chakra-ui/cli": "^2.3.0",
-    "@chakra-ui/storybook-addon": "^4.0.12",
+    "@chakra-ui/storybook-addon": "^5.0.0",
     "@netlify/functions": "^1.2.0",
     "@storybook/addon-a11y": "^7.0.6",
     "@storybook/addon-actions": "^7.0.6",
