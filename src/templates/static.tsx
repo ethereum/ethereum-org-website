@@ -269,7 +269,7 @@ const StaticPage = ({
               pl: 4,
               ml: -4,
               borderLeft: "1px dotted",
-              borderLeftColor: "primary",
+              borderLeftColor: "primary.base",
             },
 
             ".citation": {

@@ -36,7 +36,7 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
       {/* TODO: switch `l` to `lg` after UI migration and use `hideBelow` prop */}
       <Box
         as="aside"
-        background="background"
+        background="background.base"
         border="1px"
         borderColor="border"
         borderRadius="4px"

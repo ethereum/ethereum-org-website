@@ -11,12 +11,12 @@ const variantPrimary = definePartsStyle({
   tab: {
     borderTopRadius: "0.3rem",
     borderBottom: "1px solid",
-    borderBottomColor: "primary",
+    borderBottomColor: "primary.base",
     px: 4,
     py: "0.3rem",
     _selected: {
-      color: "background",
-      bg: "primary",
+      color: "background.base",
+      bg: "primary.base",
     },
   },
   tabpanels: {

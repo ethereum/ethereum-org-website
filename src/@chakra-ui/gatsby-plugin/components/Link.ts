@@ -3,7 +3,7 @@ import { defineMergeStyles, linkDefaultTheme } from "./components.utils"
 
 export const Link = defineStyleConfig({
   baseStyle: defineMergeStyles(linkDefaultTheme.baseStyle, {
-    color: "primary",
+    color: "primary.base",
     textDecoration: "underline",
     _focus: {
       boxShadow: "none",
