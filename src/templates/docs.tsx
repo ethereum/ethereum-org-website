@@ -14,7 +14,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -35,7 +35,6 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
-import PostMergeBanner from "../components/Banners/PostMergeBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
@@ -144,7 +143,7 @@ const components = {
   p: Paragraph,
   li: ListItem,
   pre: Codeblock,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   ButtonLink,
   InfoBanner,
   Card,

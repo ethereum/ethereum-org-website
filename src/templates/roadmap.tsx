@@ -7,7 +7,6 @@ import styled from "@emotion/styled"
 import {
   Flex,
   ListItem,
-  Stack,
   Text,
   UnorderedList,
   Wrap,
@@ -28,7 +27,7 @@ import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -310,7 +309,7 @@ const components = {
   h3: H3,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   li: ListItem,
   ul: UnorderedList,
   MeetupList,

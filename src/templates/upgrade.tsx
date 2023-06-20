@@ -35,7 +35,7 @@ import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import BeaconChainActions from "../components/BeaconChainActions"
 import ShardChainsList from "../components/ShardChainsList"
 import MergeArticleList from "../components/MergeArticleList"
@@ -227,7 +227,7 @@ const components = {
   h4: H4,
   p: P,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   MeetupList,
   RandomAppList,
   Logo,

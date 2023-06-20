@@ -24,7 +24,7 @@ import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import EnvWarningBanner from "../components/EnvWarningBanner"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -204,7 +204,7 @@ const components = {
   kbd: KBD,
   li: ListItem,
   pre: Codeblock,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   ButtonLink,
   InfoBanner,
   EnvWarningBanner,
