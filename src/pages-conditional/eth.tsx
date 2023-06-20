@@ -6,7 +6,9 @@ import {
   FlexProps,
   Heading,
   HeadingProps,
+  ListItem,
   Text,
+  UnorderedList,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -178,7 +180,16 @@ const H2 = (prop: HeadingProps) => (
   />
 )
 
-const H4 = (props: ChildOnlyProp) => (
+const H3 = (props: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", m: "2xl" }}
+    lineHeight={1.4}
+    {...props}
+  />
+)
+
+const H4 = (props: HeadingProps) => (
   <Heading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
@@ -382,9 +393,9 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
       <GrayContainer>
         <Content>
           <Intro>
-            <p>
+            <Text>
               <Translation id="page-eth-description" />{" "}
-            </p>
+            </Text>
           </Intro>
           <CardContainer mb={8}>
             {benefits.map((benefits, idx) => (
@@ -397,9 +408,9 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             ))}
           </CardContainer>
           <InfoBanner emoji=":wave:" shouldCenter>
-            <b>
+            <Text as="b">
               <Translation id="page-eth-buy-some" />
-            </b>{" "}
+            </Text>{" "}
             <Translation id="page-eth-buy-some-desc" />{" "}
             <Link to="/what-is-ethereum/">
               <Translation id="page-eth-more-on-ethereum-link" />
@@ -413,34 +424,34 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <H2>
             <Translation id="page-eth-whats-unique" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-eth-whats-unique-desc" />
-          </p>
+          </Text>
           <EthVideo />
-          <div>
+          <Box>
             <H4>
               <Translation id="page-eth-fuels" />
             </H4>
-            <p>
+            <Text>
               <Translation id="page-eth-fuels-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-fuels-desc-2" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-fuels-desc-3" />{" "}
-              <strong>
+              <Text as="strong">
                 <Translation id="page-eth-powers-ethereum" />
-              </strong>
+              </Text>
               <Translation id="page-eth-period" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-fuels-staking" />{" "}
               <Link to="/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
               </Link>
-            </p>
-          </div>
+            </Text>
+          </Box>
           <CentralActionCard
             to="/what-is-ethereum/"
             title={t("page-eth-whats-ethereum")}
@@ -448,61 +459,61 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             image={getImage(data.ethereum)!}
           />
           <TextDivider />
-          <div>
+          <Box>
             <H4>
               <Translation id="page-eth-underpins" />
             </H4>
-            <p>
+            <Text>
               <Translation id="page-eth-underpins-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-underpins-desc-2" />
-            </p>
+            </Text>
             <CentralActionCard
               to="/defi/"
               title={t("page-eth-whats-defi")}
               description={t("page-eth-whats-defi-description")}
               image={getImage(data.defi)!}
             />
-          </div>
+          </Box>
           <TextDivider />
-          <div>
+          <Box>
             <H4>
               <Translation id="page-eth-uses" />
             </H4>
-            <p>
+            <Text>
               <Translation id="page-eth-uses-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-uses-desc-2" />{" "}
-            </p>
-            <ul>
-              <li>
+            </Text>
+            <UnorderedList>
+              <ListItem>
                 <Link to="https://sablier.finance">
                   <Translation id="page-eth-stream-link" />
                 </Link>{" "}
                 – <Translation id="page-eth-uses-desc-3" />
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 <Link to="/get-eth/#dex">
                   <Translation id="page-eth-trade-link-2" />
                 </Link>{" "}
                 – <Translation id="page-eth-uses-desc-4" />
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 <Link to="https://app.compound.finance/">
                   <Translation id="page-eth-earn-interest-link" />
                 </Link>{" "}
                 – <Translation id="page-eth-uses-desc-5" />
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 <Link to="/stablecoins/">
                   <Translation id="page-eth-stablecoins-link" />
                 </Link>{" "}
                 – <Translation id="page-eth-uses-desc-6" />
-              </li>
-            </ul>
-          </div>
+              </ListItem>
+            </UnorderedList>
+          </Box>
           <Divider />
         </CentralColumn>
         <CalloutBanner
@@ -514,34 +525,34 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           alt={t("page-eth-cat-img-alt")}
           maxImageWidth={300}
         >
-          <div>
+          <Box>
             <ButtonLink to="/get-eth/">
               <Translation id="page-eth-get-eth-btn" />
             </ButtonLink>
-          </div>
+          </Box>
         </CalloutBanner>
       </Content>
 
       <TwoColumnContent>
         <LeftColumn>
-          <h3>
+          <H3>
             <Translation id="page-eth-has-value" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-eth-has-value-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-has-value-desc-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-has-value-desc-3" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-has-value-desc-4" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-has-value-desc-5" />
-          </p>
+          </Text>
         </LeftColumn>
         <RightColumn>
           <CardList content={cardListContent} />
@@ -549,24 +560,24 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
       </TwoColumnContent>
       <TwoColumnContent id="tokens" align="flex-start">
         <LeftColumn>
-          <h3>
+          <H3>
             <Translation id="page-eth-not-only-crypto" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-eth-not-only-crypto-desc" />{" "}
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-not-only-crypto-desc-2" />
-          </p>
-          <h4>
+          </Text>
+          <H4 fontWeight="normal">
             <Translation id="page-eth-more-on-tokens" />
-          </h4>
+          </H4>
           <CardList content={tokenLinks} />
         </LeftColumn>
         <RightColumn>
-          <h3>
+          <H3>
             <Translation id="page-eth-popular-tokens" />
-          </h3>
+          </H3>
           {tokens.map((token, idx) => (
             <TokenCard
               key={idx}
