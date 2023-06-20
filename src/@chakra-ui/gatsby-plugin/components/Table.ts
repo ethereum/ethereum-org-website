@@ -1,9 +1,15 @@
 import { tableAnatomy } from "@chakra-ui/anatomy"
-import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react"
+import {
+  createMultiStyleConfigHelpers,
+  cssVar,
+  defineStyle,
+} from "@chakra-ui/react"
 import { defineMergeStyles, tableDefaultTheme } from "./components.utils"
 
 const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(tableAnatomy.keys)
+
+const $bgColor = cssVar("bg-color")
 
 const cellPadding = defineStyle({
   p: 4,
@@ -13,12 +19,13 @@ const baseStyle = defineMergeStyles(
   tableDefaultTheme.baseStyle,
   definePartsStyle({
     table: {
+      [$bgColor.variable]: "colors.background.highlight",
       minW: "556px",
     },
     th: {
       borderBottom: "1px",
-      borderColor: "primary.visited",
-      color: "primary.visited",
+      borderColor: "body.base",
+      color: "body.base",
       textTransform: "capitalize",
       ...cellPadding,
     },
@@ -41,21 +48,30 @@ const baseStyle = defineMergeStyles(
            * Override specificity when hovering
            * over even rows in 'striped' variant.
            */
-          bg: "background.highlight !important",
+          bg: $bgColor.reference,
         },
       },
     },
   })
 )
 
-const variantStriped = definePartsStyle({
+const variantMinimalStriped = definePartsStyle({
   table: {
     tbody: {
       tr: {
         _even: {
-          bg: "background.highlight",
+          bg: $bgColor.reference,
         },
       },
+    },
+  },
+})
+
+const variantSimpleStriped = definePartsStyle({
+  table: {
+    ...variantMinimalStriped.table,
+    thead: {
+      bg: $bgColor.reference,
     },
   },
 })
@@ -63,7 +79,7 @@ const variantStriped = definePartsStyle({
 const variantSimple = definePartsStyle({
   table: {
     thead: {
-      bg: "background.highlight",
+      bg: $bgColor.reference,
     },
   },
 })
@@ -72,8 +88,9 @@ export const Table = defineMultiStyleConfig({
   baseStyle,
   variants: {
     minimal: {},
-    striped: variantStriped,
+    "minimal-striped": variantMinimalStriped,
     simple: variantSimple,
+    "simple-striped": variantSimpleStriped,
   },
   defaultProps: {
     variant: "simple",
