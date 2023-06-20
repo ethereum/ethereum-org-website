@@ -152,7 +152,7 @@ const TitleCard = (props: ChildOnlyProp) => {
 
   return (
     <Flex
-      bg={{ base: "ednBackground", lg: "background" }}
+      bg={{ base: "ednBackground", lg: "background.base" }}
       border="1px"
       borderColor="border"
       borderRadius="base"
@@ -261,7 +261,7 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
           pl: 4,
           ml: -4,
           borderLeft: "1px dotted",
-          borderColor: "primary",
+          borderColor: "primary.base",
         },
         ".citation p": {
           color: "text200",
@@ -275,7 +275,7 @@ export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
     <Box
-      bg="background"
+      bg="background.base"
       boxShadow={`0 -1px 0 ${borderColor}`}
       position="sticky"
       bottom={0}
@@ -431,7 +431,7 @@ const UseCasePage = ({
           p={4}
           width="full"
           _hover={{
-            bg: "background",
+            bg: "background.base",
           }}
         >
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />

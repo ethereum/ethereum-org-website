@@ -103,7 +103,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
             w="full"
             _focus={{
               outline: "auto 1px",
-              outlineColor: "primary",
+              outlineColor: "primary.base",
             }}
             value={keyword}
             placeholder={searchString}
@@ -117,7 +117,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
               insetInlineEnd={1}
               aria-label={t("clear")}
               variant="icon"
-              _hover={{ svg: { fill: "primary" } }}
+              _hover={{ svg: { fill: "primary.base" } }}
             />
           )}
         </Box>
@@ -138,10 +138,10 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                 border="1px solid"
                 borderColor="lightBorder"
                 borderRadius="sm"
-                color={isActive ? "primary" : "text"}
+                color={isActive ? "primary.base" : "text"}
                 transitionProperty="common"
                 transitionDuration="normal"
-                _hover={{ boxShadow: "primary", borderColor: "black300" }}
+                _hover={{ boxShadow: "primary.base", borderColor: "black300" }}
               >
                 <Box
                   fontSize="sm"
@@ -164,7 +164,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                     language={lang.code}
                     textDecoration="none"
                     fontWeight="medium"
-                    color="body"
+                    color="body.base"
                     _hover={{ textDecoration: "none" }}
                   >
                     {lang.localName}

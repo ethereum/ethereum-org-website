@@ -43,14 +43,14 @@ import { Context } from "../types"
 // Apply styles for classes within markdown here
 const ContentContainer = (props) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
-  const borderColor = useToken("colors", "primary")
+  const borderColor = useToken("colors", "primary.base")
 
   return (
     <Box
       as="article"
       maxW="1000px"
       minW={0}
-      background="background"
+      background="background.base"
       boxShadow={{ base: "none", lg: boxShadow }}
       m={{ base: "2.5rem 0rem", lg: "2rem 2rem 6rem" }}
       p={{ base: "3rem 2rem", lg: 16 }}
@@ -179,7 +179,7 @@ const ListItem = (props) => {
 }
 
 const KBD = (props) => {
-  const borderColor = useToken("colors", "primary")
+  const borderColor = useToken("colors", "primary.base")
 
   return (
     <Kbd
@@ -255,7 +255,7 @@ const TutorialPage = ({
         dir={isRightToLeft ? "rtl" : "ltr"}
         m={{ base: "2rem 0rem", lg: "0 auto" }}
         p={{ base: "0", lg: "0 2rem 0 0" }}
-        background={{ base: "background", lg: "ednBackground" }}
+        background={{ base: "background.base", lg: "ednBackground" }}
       >
         <PageMetadata
           title={mdx.frontmatter.title}

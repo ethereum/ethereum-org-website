@@ -45,7 +45,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
             whiteSpace="normal"
             w={{ base: "140px", md: "200px" }}
             color="text"
-            bg="background"
+            bg="background.base"
             boxShadow={shadow}
             position="absolute"
             zIndex="docked"
@@ -70,7 +70,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
               borderRightColor="transparent"
               borderTopWidth={10}
               borderTopStyle="solid"
-              borderTopColor="background"
+              borderTopColor="background.base"
               borderLeftWidth={10}
               borderLeftStyle="solid"
               borderLeftColor="transparent"

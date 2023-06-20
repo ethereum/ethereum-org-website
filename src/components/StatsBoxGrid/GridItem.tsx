@@ -40,9 +40,9 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
             boxSize={6}
             fill="text"
             mr={2}
-            _hover={{ fill: "primary" }}
-            _active={{ fill: "primary" }}
-            _focus={{ fill: "primary" }}
+            _hover={{ fill: "primary.base" }}
+            _active={{ fill: "primary.base" }}
+            _focus={{ fill: "primary.base" }}
           ></Icon>
         </Tooltip>
       </Box>
