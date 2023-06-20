@@ -7,6 +7,7 @@ import {
   Tr,
   ThemingProps,
   Tbody,
+  Thead,
 } from "@chakra-ui/react"
 import { MDXProviderComponentsProp } from "@mdx-js/react"
 
@@ -29,6 +30,7 @@ export const mdxTableComponents: MDXProviderComponentsProp = {
   td: ({ align, ...rest }) => <Td textAlign={align} {...rest} />,
   tr: (props) => <Tr {...props} />,
   tbody: (props) => <Tbody {...props} />,
+  thead: (props) => <Thead {...props} />,
 }
 
 export default Table

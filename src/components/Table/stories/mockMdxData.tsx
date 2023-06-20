@@ -1,10 +1,10 @@
 import * as React from "react"
-import { Td, Th, Tr, Tbody } from "@chakra-ui/react"
+import { Td, Th, Tr, Tbody, Thead } from "@chakra-ui/react"
 
 /*
  * Note on the Chakra Table components:
  *
- * Only the `Td`, `Th`, `Tr` and `Tbody` components are used because those are the
+ * Only the `Td`, `Th`, `Tr`, `Tbody`, and `Thead` components are used because those are the
  * only table elements we are defining styles with and sending to the MDX provider
  *
  * The use of `textAlign` is a mock for the `align` prop from the MDX parsing going to
@@ -13,12 +13,12 @@ import { Td, Th, Tr, Tbody } from "@chakra-ui/react"
 
 export const MdxDemoData = () => (
   <>
-    <thead>
+    <Thead>
       <Tr>
         <Th>Column head</Th>
         <Th>Column head</Th>
       </Tr>
-    </thead>
+    </Thead>
     <Tbody>
       <Tr>
         <Td>Twitter can censor any account or tweet</Td>
@@ -50,14 +50,14 @@ export const MdxDemoData = () => (
 
 export const MdxEnergyConsumpData = () => (
   <>
-    <thead>
+    <Thead>
       <Tr>
         <Th></Th>
         <Th textAlign="right">Annualized energy consumption (TWh)</Th>
         <Th textAlign="right">Comparison to PoS Ethereum</Th>
         <Th>Source</Th>
       </Tr>
-    </thead>
+    </Thead>
     <Tbody>
       <Tr>
         <Td>Global data centers</Td>
@@ -225,12 +225,12 @@ export const MdxEnergyConsumpData = () => (
 
 export const MdxTypesOfBridgesData = () => (
   <>
-    <thead>
+    <Thead>
       <Tr>
         <Th>Trusted Bridges</Th>
         <Th>Trustless Bridges</Th>
       </Tr>
-    </thead>
+    </Thead>
     <Tbody>
       <Tr>
         <Td>

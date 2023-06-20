@@ -56,31 +56,25 @@ const baseStyle = defineMergeStyles(
 )
 
 const variantMinimalStriped = definePartsStyle({
-  table: {
-    tbody: {
-      tr: {
-        _even: {
-          bg: $bgColor.reference,
-        },
+  tbody: {
+    tr: {
+      _even: {
+        bg: $bgColor.reference,
       },
     },
   },
 })
 
 const variantSimpleStriped = definePartsStyle({
-  table: {
-    ...variantMinimalStriped.table,
-    thead: {
-      bg: $bgColor.reference,
-    },
+  ...variantMinimalStriped,
+  thead: {
+    bg: $bgColor.reference,
   },
 })
 
 const variantSimple = definePartsStyle({
-  table: {
-    thead: {
-      bg: $bgColor.reference,
-    },
+  thead: {
+    bg: $bgColor.reference,
   },
 })
 
