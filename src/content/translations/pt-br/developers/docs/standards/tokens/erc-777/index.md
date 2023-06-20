@@ -1,6 +1,6 @@
 ---
 title: Padrão de token ERC-777
-description: Token
+description:
 lang: pt-br
 ---
 

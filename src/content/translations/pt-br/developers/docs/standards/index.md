@@ -1,6 +1,6 @@
 ---
 title: Padrões de desenvolvimento Ethereum
-description: Standards
+description:
 lang: pt-br
 incomplete: true
 ---
@@ -31,7 +31,7 @@ Existem 3 tipos de EIP:
 Além disso, o acompanhamento padrão é subdividido em 4 categorias:
 
 - [Core](https://eips.ethereum.org/core): melhorias que requerem um fork de consenso
-- [Networking](https://eips.ethereum.org/networking): melhorias em torno do devp2p e do Light Ethereum Subprotocol, bem como propostas de melhorias nas especificações de protocolo de rede do whisper e do swarm.
+- <0">Networking</a>: melhorias em torno do devp2p e do Light Ethereum Subprotocol, bem como propostas de melhorias nas especificações de protocolo de rede do whisper e do swarm.
 - [Interface](https://eips.ethereum.org/interface): melhorias em torno das especificações e padrões de API/RPC, e certos padrões no nível de linguagem, como nomes de método e contratos ABIs.
 - [ERC](https://eips.ethereum.org/erc): normas e convenções dno nível do aplicativo
 
