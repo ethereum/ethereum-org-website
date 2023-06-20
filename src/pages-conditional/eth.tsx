@@ -6,7 +6,6 @@ import {
   FlexProps,
   Heading,
   HeadingProps,
-  SimpleGrid,
   Text,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -91,7 +90,7 @@ const Title = (props: ChildOnlyProp) => (
     as="h1"
     fontSize="sm"
     lineHeight={1.4}
-    letterSpacing="wider"
+    letterSpacing="0.04em"
     fontWeight="500"
     mb={4}
     mt={0}
@@ -108,11 +107,30 @@ const Subtitle = (props: ChildOnlyProp) => (
 const TwoColumnContent = (props: FlexProps) => (
   <Flex
     w="full"
-    gap={{ base: 8, lg: 0 }}
-    align={{ base: "flex-start", lg: "center" }}
     direction={{ base: "column", lg: "row" }}
+    justify="space-between"
     p={8}
     mb={12}
+    {...props}
+  />
+)
+
+export const LeftColumn = (props: ChildOnlyProp) => (
+  <Box
+    flex="0 0 50%"
+    maxW={{ base: "full", lg: "75%" }}
+    mr={{ lg: 16 }}
+    {...props}
+  />
+)
+
+export const RightColumn = (props: ChildOnlyProp) => (
+  <Flex
+    flex="0 1 50%"
+    direction="column"
+    justify="center"
+    maxW={{ base: "full", lg: "75%" }}
+    mt={{ base: 12, lg: 0 }}
     {...props}
   />
 )
@@ -184,7 +202,7 @@ const TextDivider = () => (
     h="1px"
     bg="searchResultBackground"
     my={8}
-    alignSelf={{ base: "flex-start" }}
+    alignSelf={{ lg: "flex-start" }}
   />
 )
 
@@ -207,6 +225,7 @@ const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
     mx={0}
     sx={{
       ".action-card-image-wrapper": {
+        p: 4,
         minW: { sm: "260px" },
       },
       ".action-card-content": {
@@ -503,8 +522,8 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
         </CalloutBanner>
       </Content>
 
-      <SimpleGrid columns={{ base: 1, lg: 2 }} p={8} spacing={8}>
-        <Box>
+      <TwoColumnContent>
+        <LeftColumn>
           <h3>
             <Translation id="page-eth-has-value" />
           </h3>
@@ -523,13 +542,13 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <p>
             <Translation id="page-eth-has-value-desc-5" />
           </p>
-        </Box>
-        <Flex align="center">
+        </LeftColumn>
+        <RightColumn>
           <CardList content={cardListContent} />
-        </Flex>
-      </SimpleGrid>
-      <SimpleGrid id="tokens" columns={{ base: 1, lg: 2 }} p={8} spacing={8}>
-        <Box>
+        </RightColumn>
+      </TwoColumnContent>
+      <TwoColumnContent id="tokens" align="flex-start">
+        <LeftColumn>
           <h3>
             <Translation id="page-eth-not-only-crypto" />
           </h3>
@@ -543,8 +562,8 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             <Translation id="page-eth-more-on-tokens" />
           </h4>
           <CardList content={tokenLinks} />
-        </Box>
-        <Box>
+        </LeftColumn>
+        <RightColumn>
           <h3>
             <Translation id="page-eth-popular-tokens" />
           </h3>
@@ -557,8 +576,8 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               emojiSize={5}
             />
           ))}
-        </Box>
-      </SimpleGrid>
+        </RightColumn>
+      </TwoColumnContent>
       <Content>
         <Center w="100%">
           <QuizWidget quizKey="what-is-ether" />
