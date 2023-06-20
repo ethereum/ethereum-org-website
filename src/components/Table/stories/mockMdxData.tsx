@@ -1,58 +1,69 @@
 import * as React from "react"
+import { Td, Th, Tr, Tbody } from "@chakra-ui/react"
+
+/*
+ * Note on the Chakra Table components:
+ *
+ * Only the `Td`, `Th`, `Tr` and `Tbody` components are used because those are the
+ * only table elements we are defining styles with and sending to the MDX provider
+ *
+ * The use of `textAlign` is a mock for the `align` prop from the MDX parsing going to
+ * the former prop in the given Chakra component.
+ */
 
 export const MdxDemoData = () => (
   <>
     <thead>
-      <tr>
-        <th>Column head</th>
-        <th>Column head</th>
-      </tr>
+      <Tr>
+        <Th>Column head</Th>
+        <Th>Column head</Th>
+      </Tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>Twitter can censor any account or tweet</td>
-        <td>
+    <Tbody>
+      <Tr>
+        <Td>Twitter can censor any account or tweet</Td>
+        <Td>
           Web3 tweets would be uncensorable because control is decentralized
-        </td>
-      </tr>
-      <tr>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>
           Payment service may decide to not allow payments for certain types of
           work
-        </td>
-        <td>
+        </Td>
+        <Td>
           Web3 payment apps require no personal data and can't prevent payments
-        </td>
-      </tr>
-      <tr>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>
           Servers for gig-economy apps could go down and affect worker income
-        </td>
-        <td>
+        </Td>
+        <Td>
           Web3 servers can't go down – they use Ethereum, a decentralized
           network of 1000s of computers as their backend
-        </td>
-      </tr>
-    </tbody>
+        </Td>
+      </Tr>
+    </Tbody>
   </>
 )
 
 export const MdxEnergyConsumpData = () => (
   <>
     <thead>
-      <tr>
-        <th></th>
-        <th>Annualized energy consumption (TWh)</th>
-        <th>Comparison to PoS Ethereum</th>
-        <th>Source</th>
-      </tr>
+      <Tr>
+        <Th></Th>
+        <Th textAlign="right">Annualized energy consumption (TWh)</Th>
+        <Th textAlign="right">Comparison to PoS Ethereum</Th>
+        <Th>Source</Th>
+      </Tr>
     </thead>
-    <tbody>
-      <tr>
-        <td align="left">Global data centers</td>
-        <td>200</td>
-        <td>77,000x</td>
-        <td>
+    <Tbody>
+      <Tr>
+        <Td>Global data centers</Td>
+        <Td textAlign="right">200</Td>
+        <Td textAlign="right">77,000x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -62,13 +73,13 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">Gold mining</td>
-        <td>131</td>
-        <td>50,000x</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>Gold mining</Td>
+        <Td textAlign="right">131</Td>
+        <Td textAlign="right">50,000x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -78,13 +89,13 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">Bitcoin</td>
-        <td>131</td>
-        <td>50,000x</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>Bitcoin</Td>
+        <Td textAlign="right">131</Td>
+        <Td textAlign="right">50,000x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -94,13 +105,13 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">PoW Ethereum</td>
-        <td>78</td>
-        <td>30,000x</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>PoW Ethereum</Td>
+        <Td textAlign="right">78</Td>
+        <Td textAlign="right">30,000x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -110,13 +121,13 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">Youtube (direct only)</td>
-        <td>12</td>
-        <td>4600x</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>Youtube (direct only)</Td>
+        <Td textAlign="right">12</Td>
+        <Td textAlign="right">4600x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -126,13 +137,13 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">Gaming in USA</td>
-        <td>34</td>
-        <td>13,000x</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>Gaming in USA</Td>
+        <Td textAlign="right">34</Td>
+        <Td textAlign="right">13,000x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -142,13 +153,13 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">Netflix</td>
-        <td>0.451</td>
-        <td>173x</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>Netflix</Td>
+        <Td textAlign="right">0.451</Td>
+        <Td textAlign="right">173x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -158,13 +169,13 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">PayPal</td>
-        <td>0.26</td>
-        <td>100x</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>PayPal</Td>
+        <Td textAlign="right">0.26</Td>
+        <Td textAlign="right">100x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -174,13 +185,13 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">AirBnB</td>
-        <td>0.02</td>
-        <td>8x</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>AirBnB</Td>
+        <Td textAlign="right">0.02</Td>
+        <Td textAlign="right">8x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -190,13 +201,13 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">PoS Ethereum</td>
-        <td>0.0026</td>
-        <td>1x</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>PoS Ethereum</Td>
+        <Td textAlign="right">0.0026</Td>
+        <Td textAlign="right">1x</Td>
+        <Td>
           <a
             target="_blank"
             rel="noopener"
@@ -206,46 +217,46 @@ export const MdxEnergyConsumpData = () => (
             source
             <span aria-hidden="true">↗</span>
           </a>
-        </td>
-      </tr>
-    </tbody>
+        </Td>
+      </Tr>
+    </Tbody>
   </>
 )
 
 export const MdxTypesOfBridgesData = () => (
   <>
     <thead>
-      <tr>
-        <th>Trusted Bridges</th>
-        <th>Trustless Bridges</th>
-      </tr>
+      <Tr>
+        <Th>Trusted Bridges</Th>
+        <Th>Trustless Bridges</Th>
+      </Tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>
+    <Tbody>
+      <Tr>
+        <Td>
           Trusted bridges depend upon a central entity or system for their
           operations.
-        </td>
-        <td>Trustless bridges operate using smart contracts and algorithms.</td>
-      </tr>
-      <tr>
-        <td>
+        </Td>
+        <Td>Trustless bridges operate using smart contracts and algorithms.</Td>
+      </Tr>
+      <Tr>
+        <Td>
           They have trust assumptions with respect to the custody of funds and
           the security of the bridge. Users mostly rely on the bridge operator's
           reputation.
-        </td>
-        <td>
+        </Td>
+        <Td>
           They are trustless, i.e., the security of the bridge is the same as
           that of the underlying blockchain.
-        </td>
-      </tr>
-      <tr>
-        <td>Users need to give up control of their crypto assets.</td>
-        <td>
+        </Td>
+      </Tr>
+      <Tr>
+        <Td>Users need to give up control of their crypto assets.</Td>
+        <Td>
           Through smart contracts, trustless bridges enable users to remain in
           control of their funds.
-        </td>
-      </tr>
-    </tbody>
+        </Td>
+      </Tr>
+    </Tbody>
   </>
 )

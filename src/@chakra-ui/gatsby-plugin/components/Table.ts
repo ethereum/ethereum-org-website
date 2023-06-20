@@ -9,23 +9,18 @@ const cellPadding = defineStyle({
   p: 4,
 })
 
-const numericStyles = defineStyle({
-  "&[data-is-numeric=true]": {
-    textAlign: "end",
-  },
-})
-
-const baseStyle = defineMergeStyles(tableDefaultTheme.baseStyle, {
-  table: {
-    minW: "556px",
+const baseStyle = defineMergeStyles(
+  tableDefaultTheme.baseStyle,
+  definePartsStyle({
+    table: {
+      minW: "556px",
+    },
     th: {
       borderBottom: "1px",
       borderColor: "primary.visited",
       color: "primary.visited",
-      textAlign: "initial",
       textTransform: "capitalize",
       ...cellPadding,
-      ...numericStyles,
     },
     tr: {
       verticalAlign: "text-top",
@@ -38,7 +33,6 @@ const baseStyle = defineMergeStyles(tableDefaultTheme.baseStyle, {
     },
     td: {
       ...cellPadding,
-      ...numericStyles,
     },
     tbody: {
       tr: {
@@ -51,8 +45,8 @@ const baseStyle = defineMergeStyles(tableDefaultTheme.baseStyle, {
         },
       },
     },
-  },
-})
+  })
+)
 
 const variantStriped = definePartsStyle({
   table: {
