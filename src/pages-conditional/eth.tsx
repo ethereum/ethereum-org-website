@@ -121,7 +121,7 @@ export const LeftColumn = (props: ChildOnlyProp) => (
   <Box
     flex="0 0 50%"
     maxW={{ base: "full", lg: "75%" }}
-    mr={{ lg: 16 }}
+    me={{ lg: 16 }}
     {...props}
   />
 )
@@ -156,7 +156,7 @@ const Hero = (props: ChildOnlyProp) => (
     maxW="800px"
     bgSize="cover"
     bgRepeat="no-repeat"
-    ml={{ base: 0, md: 8 }}
+    ms={{ base: 0, md: 8 }}
     {...props}
   />
 )
@@ -200,7 +200,7 @@ const H4 = (props: HeadingProps) => (
 )
 
 const CardContainer = (props: FlexProps) => (
-  <Flex wrap="wrap" ml={-4} mr={-4} {...props} />
+  <Flex wrap="wrap" my={-4} {...props} />
 )
 
 const TokenCard = (props: ComponentProps<typeof HorizontalCard>) => (
