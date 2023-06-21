@@ -219,7 +219,7 @@ const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (item.endsWith(".md")) {
+    } else if (item.endsWith(".md") || item.endsWith(".svg")) {
       const mdDestDirPath: string = join(
         repoRoot,
         "src",
