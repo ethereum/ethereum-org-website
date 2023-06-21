@@ -501,7 +501,7 @@ export const useEthExchanges = () => {
           exchanges: node,
         }
       })
-      .sort((a, b) => a.value.localeCompare(b.value))
+      .sort(() => Math.random() - 0.5)
 
   const exchangesArray = Object.keys(exchanges) as Array<ExchangeName>
   const walletProvidersArray = Object.keys(
@@ -540,7 +540,7 @@ export const useEthExchanges = () => {
           alt: "",
         }
       })
-      .sort((a, b) => a.title.localeCompare(b.title))
+      .sort(() => Math.random() - 0.5)
 
     // Filter to wallet providers that serve selected Country
     filteredWalletProviders = walletProvidersArray.filter(
@@ -585,7 +585,7 @@ export const useEthExchanges = () => {
         // Flatten data into single array for <CardList/>
         return res.concat(flattenWallets)
       }, [])
-      .sort((a, b) => a.title.localeCompare(b.title))
+      .sort(() => Math.random() - 0.5)
   }
 
   const hasExchangeResults = filteredExchanges.length > 0
