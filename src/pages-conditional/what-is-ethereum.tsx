@@ -139,7 +139,7 @@ const H3 = (props: ChildOnlyProp) => (
 )
 
 const CardContainer = (props: ChildOnlyProp) => (
-  <Flex wrap="wrap" ml={-4} mr={-4} {...props} />
+  <Flex wrap="wrap" mx={-4} {...props} />
 )
 
 const Column = (props: ChildOnlyProp) => (
