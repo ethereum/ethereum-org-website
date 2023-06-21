@@ -5,7 +5,7 @@ lang: pt-br
 ---
 
 <InfoBanner emoji=":wave:">
-A prova de trabalho não está mais subjacente ao mecanismo de consenso do Ethereum, o que significa que a mineração foi desativada. Em vez disso, o Ethereum é garantido por validadores que apostam em ETH. Você pode começar a participar com o seu ETH hoje. Leia mais sobre <a href='/upgrades/merge/'>A Fusão</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>prova de participação</a> e <a href='/staking/'>participação</a>. Esta página é apenas para interesse histórico.
+A prova de trabalho não está mais subjacente ao mecanismo de consenso do Ethereum, o que significa que a mineração foi desativada. Em vez disso, o Ethereum é garantido por validadores que apostam em ETH. Você pode começar a participar com o seu ETH hoje. Leia mais sobre <a href='/roadmap/merge/'>A Fusão</a> (The MErge), <a href='/developers/docs/consensus-mechanisms/pos/'>prova de participação</a> e <a href='/staking/'>participação (stake)</a>. Esta página é apenas para interesse histórico.
 </InfoBanner>
 
 ## Pré-requisitos {#prerequisites}
@@ -41,6 +41,8 @@ Para conhecer ainda mais a rentabilidade da mineração, use uma calculadora de 
 
 ## Como as transações do Ethereum eram mineradas {#how-ethereum-transactions-were-mined}
 
+O seguinte fornece uma visão geral de como as transações foram mineradas na prova de trabalho Ethereum. Uma descrição análoga deste processo para a prova de participação Ethereum pode ser encontrada [aqui](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
+
 1. Um usuário escreve e assina uma solicitação de [transação](/developers/docs/transactions/) com a chave privada de alguma [conta](/developers/docs/accounts/).
 2. O usuário transmite a solicitação de transação para toda a rede Ethereum de algum [nó](/developers/docs/nodes-and-clients/).
 3. Ao ouvir tomar conhecimento da nova solicitação de transação, cada nó na rede Ethereum adiciona a solicitação ao seu mempool local, uma lista de todas as solicitações de transação sobre as quais eles têm conhecimento que ainda não foram confirmadas na blockchain em um bloco.
@@ -52,7 +54,13 @@ Para conhecer ainda mais a rentabilidade da mineração, use uma calculadora de 
 7. Cada nó remove todas as transações do novo bloco de suas memórias locais de pedidos de transações não atendidos.
 8. Novos nós que se juntam à rede baixam todos os blocos em sequência, incluindo o bloco que contém nossa transação de interesse. Eles inicializam uma cópia local de EVM (que começa como uma EVM em branco) e, em seguida, passa pelo processo de execução de cada transação em cada bloco em cima de sua cópia de EVM local, verificando as somas de verificação de estado em cada bloco ao longo do caminho.
 
-Cada transação é extraída (incluída em um novo bloco e propagada pela primeira vez) uma vez, mas executada e verificada por cada participante no processo de avanço do estado EVM canônico. Isso destaca um dos mantras centrais da cadeia de blocos: ** Não confie, verifique **.
+Cada transação é extraída (incluída em um novo bloco e propagada pela primeira vez) uma vez, mas executada e verificada por cada participante no processo de avanço do estado EVM padrão. Isso destaca um dos mantras centrais da cadeia de blocos: ** Não confie, verifique **.
+
+## Blocos Ommer (tio) {#ommer-blocks}
+
+Mineração de blocos na prova de trabalho era probabilística, o que significa que às vezes dois blocos válidos eram publicados simultaneamente devido à latência da rede. Nesse caso, o protocolo tinha que determinar a cadeia mais longa (e, portanto, mais “válida”), enquanto garante justiça para os mineradores, recompensando parcialmente o bloco válido proposto não incluído. Isso encorajou uma maior descentralização da rede, pois mineradores menores, que podem enfrentar maior latência, ainda poderiam gerar retornos por meio de recompensas de bloco [ommer](/glossary/#ommer).
+
+O termo "ommer" é o termo neutro de gênero preferido para o irmão de um bloco pai, mas às vezes também é chamado de "tio". **Desde a mudança do Ethereum para prova de participação, os blocos ommer não são mais minerados**, pois apenas um proponente é eleito em cada espaço. Você pode ver essa mudança visualizando o [gráfico histórico](https://ycharts.com/indicators/ethereum_uncle_rate) dos blocos ommer minerados.
 
 ## Uma demonstração visual {#a-visual-demo}
 
@@ -62,19 +70,9 @@ Acompanhe o Austin enquanto ele explica como funciona o processo de mineração 
 
 ## O algoritmo de mineração {#mining-algorithm}
 
-A Rede principal do Ethereum usou apenas um algoritmo de mineração - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash foi o sucessor de um algoritmo de P&D original conhecido como ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
+A Rede principal do Ethereum usou apenas um algoritmo de mineração, o ["Ethash"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). O Ethhash foi o sucessor de um algoritmo de P&D original conhecido como ["Dagger-Hashimoto"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 [Mais sobre algoritmos de mineração](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
-
-## Leitura adicional {#further-reading}
-
-- [O que significa minerar Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
-## Ferramentas relacionadas {#related-tools}
-
-- [Principais mineradores de Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
-- [Calculadora de mineração da Etherscan](https://etherscan.io/ether-mining-calculator)
-- [Calculadora de mineração Minerstat](https://minerstat.com/coin/ETH)
 
 ## Tópicos relacionados {#related-topics}
 

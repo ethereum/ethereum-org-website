@@ -1,10 +1,17 @@
 import React, { useState, createRef, useContext } from "react"
-import styled from "@emotion/styled"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { motion } from "framer-motion"
+import {
+  Box,
+  Fade,
+  Flex,
+  Heading,
+  Icon,
+  List,
+  ListItem,
+} from "@chakra-ui/react"
+import { MdExpandMore } from "react-icons/md"
 
-import Icon from "../Icon"
-import Link from "../Link"
+import Link, { IProps as LinkProps } from "../Link"
 
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 import { getDirection } from "../../utils/translations"
@@ -12,108 +19,22 @@ import { Lang } from "../../utils/languages"
 
 import { ISection } from "./types"
 
-// TODO use framer-motion
-const StyledIcon = styled(Icon)<{ isOpen: boolean }>`
-  transform: ${({ isOpen }) => (isOpen ? `rotate(180deg)` : ``)};
-`
-
-const DropdownTitle = styled.span`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-right: 1.5rem;
-
-  &:hover {
-    & > svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const DropdownList = styled(motion.ul)<{ hasSubNav: boolean }>`
-  margin: 0;
-  position: absolute;
-  margin-top: ${({ hasSubNav }) => (hasSubNav ? `-4.5rem` : `-1rem`)};
-  list-style-type: none;
-  list-style-image: none;
-  top: 100%;
-  width: auto;
-  border-radius: 0.5em;
-  background: ${(props) => props.theme.colors.dropdownBackground};
-  border: 1px solid ${(props) => props.theme.colors.dropdownBorder};
-  padding: 1rem 0;
-`
-
-const listVariants = {
-  open: {
-    opacity: 1,
-    rotateX: 0,
-    display: "block",
-    transition: {
-      duration: 0.2,
-    },
-  },
-  closed: {
-    opacity: 0,
-    rotateX: -15,
-    transitionEnd: {
-      display: "none",
-    },
-  },
-}
-
-const NavListItem = styled.li`
-  white-space: nowrap;
-  margin: 0;
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-  }
-`
-
-const DropdownItem = styled.li`
-  margin: 0;
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.dropdownBackgroundHover};
-  }
-`
-
-// TODO move to SharedStyles
-const NavLink = styled(Link)`
-  text-decoration: none;
-  display: block;
-  padding: 0.5rem 1rem;
-  color: ${(props) => props.theme.colors.text200};
-  svg {
-    fill: ${(props) => props.theme.colors.text200};
-  }
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const H2 = styled.h2`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.3rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  padding: 0 1rem;
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  color: ${(props) => props.theme.colors.text};
-`
+const NavLink = (props: LinkProps) => (
+  <Link
+    color="text200"
+    display="block"
+    textDecor="none"
+    py={2}
+    px={4}
+    _hover={{
+      textDecor: "none",
+      color: "primary.base",
+      svg: { fill: "currentColor" },
+    }}
+    sx={{ svg: { fill: "currentColor" } }}
+    {...props}
+  />
+)
 
 interface IDropdownContext {
   isOpen: boolean
@@ -173,28 +94,57 @@ const NavDropdown: React.FC<IProps> & {
     <DropdownContext.Provider
       value={{ isOpen, toggle, close, tabInteractionHandler }}
     >
-      <NavListItem ref={ref} aria-label={ariaLabel}>
-        <DropdownTitle
+      <ListItem
+        ref={ref}
+        aria-label={ariaLabel}
+        whiteSpace="nowrap"
+        m={0}
+        color="text"
+        _hover={{ color: "primary.base" }}
+      >
+        <Flex
+          as="span"
           dir={direction}
           onClick={() => toggle()}
           onKeyDown={onKeyDownHandler}
           tabIndex={0}
           role="button"
           aria-expanded={isOpen ? "true" : "false"}
+          alignItems="center"
+          cursor="pointer"
+          py={2}
+          _hover={{
+            "& > svg": {
+              fill: "currentColor",
+            },
+          }}
         >
           {section.text}
-          <StyledIcon isOpen={isOpen} name="chevronDown" />
-        </DropdownTitle>
-
-        <DropdownList
-          hasSubNav={hasSubNav}
-          animate={isOpen ? "open" : "closed"}
-          variants={listVariants}
-          initial="closed"
+          <Icon
+            as={MdExpandMore}
+            color="text200"
+            boxSize={6}
+            transform={isOpen ? "rotate(180deg)" : undefined}
+          />
+        </Flex>
+        <Box
+          as={Fade}
+          in={isOpen}
+          unmountOnExit
+          bg="dropdownBackground"
+          border="1px"
+          borderColor="dropdownBorder"
+          m={0}
+          mt={hasSubNav ? "-4.5rem" : -4}
+          position="absolute"
+          top="100%"
+          py={4}
+          borderRadius="base"
+          width="auto"
         >
           {children}
-        </DropdownList>
-      </NavListItem>
+        </Box>
+      </ListItem>
     </DropdownContext.Provider>
   )
 }
@@ -208,13 +158,19 @@ const Item: React.FC<IItemProp> = ({ children, isLast = false, ...rest }) => {
   const context = useContext(DropdownContext)
 
   return (
-    <DropdownItem
+    <ListItem
       {...rest}
       onClick={() => context?.close()}
       onKeyDown={(e) => context?.tabInteractionHandler(e, isLast)}
+      m={0}
+      color="inherit"
+      _hover={{
+        bg: "dropdownBackgroundHover",
+        color: "text",
+      }}
     >
       {children}
-    </DropdownItem>
+    </ListItem>
   )
 }
 
@@ -222,8 +178,20 @@ interface ITitleProps {
   children?: React.ReactNode
 }
 
-const Title: React.FC<ITitleProps> = ({ children }) => {
-  return <H2>{children}</H2>
+const Title: React.FC<ITitleProps> = (props) => {
+  return (
+    <Box
+      as="span"
+      color="text"
+      display="block"
+      fontFamily="heading"
+      fontSize="1.3rem"
+      lineHeight={1.4}
+      mb={2}
+      px={4}
+      {...props}
+    />
+  )
 }
 
 NavDropdown.Item = Item

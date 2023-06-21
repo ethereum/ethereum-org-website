@@ -16,15 +16,16 @@ const BannerNotification: React.FC<IProps> = ({
     <>
       {shouldShow && (
         <Center
+          as="aside"
           maxW={isLGScreen ? oldTheme.variables.maxPageWidth : "100%"}
           w="100%"
           py="4"
           px="8"
-          bg="primary"
-          color="background"
+          bg="primary.base"
+          color="background.base"
           sx={{
             a: {
-              color: "background",
+              color: "background.base",
             },
           }}
           {...props}

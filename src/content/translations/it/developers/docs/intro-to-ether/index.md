@@ -18,7 +18,7 @@ La prima criptovaluta è stata Bitcoin, creata da Satoshi Nakamoto. Dal rilascio
 
 ## Cos'è un ether? {#what-is-ether}
 
-**Ether (ETH)** è la criptovaluta impiegata per molti scopi sulla rete Ethereum. Fondamentalmente è l'unica forma di pagamento accettabile per le commissioni sulle transazioni, e dopo [la fusione](/upgrades/merge) servianno degli ether per convalidare e proporre blocchi sulla rete principale. L'ether è anche usato come una forma principale di garanzia nei mercati di prestito della [DeFi](/defi), come un'unità di conto nei mercati di NFT, come pagamento guadagnato per l'esecuzione di servizi o della vendita di beni del mondo reale e molto altro.
+**Ether (ETH)** è la criptovaluta impiegata per molti scopi sulla rete Ethereum. Fondamentalmente è l'unica forma di pagamento accettabile per le commissioni sulle transazioni, e dopo [la fusione](/roadmap/merge) servianno degli ether per convalidare e proporre blocchi sulla rete principale. L'ether è anche usato come una forma principale di garanzia nei mercati di prestito della [DeFi](/defi), come un'unità di conto nei mercati di NFT, come pagamento guadagnato per l'esecuzione di servizi o della vendita di beni del mondo reale e molto altro.
 
 Ethereum consente agli sviluppatori di creare [**applicazioni decentralizzate (dapp)**](/developers/docs/dapps), che condividono tutte un pool di potenza di elaborazione. Questo pool condiviso è limitato, quindi Ethereum necessita di un meccanismo per determinare chi lo usa. In caso contrario, una dApp potrebbe consumare accidentalmente o malevolmente tutte le risorse della rete, impedendo ad altri di accedervi.
 

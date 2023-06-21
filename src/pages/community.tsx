@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import {
   Box,
   Flex,
@@ -6,6 +6,7 @@ import {
   HeadingProps,
   Image,
   SimpleGrid,
+  Text,
   useTheme,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -98,9 +99,9 @@ const ImageContainer = ({ children }: ChildOnlyProp) => {
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
-    <Box mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
+    <Text mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
       {children}
-    </Box>
+    </Text>
   )
 }
 
@@ -141,6 +142,7 @@ interface IGetInvolvedCard {
 
 const CommunityPage = ({
   data,
+  location,
 }: PageProps<Queries.CommunityPageQuery, Context>) => {
   const { t } = useTranslation()
   const theme = useTheme()
@@ -285,7 +287,7 @@ const CommunityPage = ({
                 borderRadius="sm"
                 border="1px solid"
                 borderColor="text"
-                bg="background"
+                bg="background.base"
                 boxShadow={theme.colors.cardBoxShadow}
                 key={idx}
                 title={card.title}

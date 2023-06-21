@@ -34,7 +34,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
 }) => {
   const data = useStaticQuery(graphql`
     query RoadmapActionCard {
-      futureProofing: file(relativePath: { eq: "upgrades/core.png" }) {
+      futureProofing: file(relativePath: { eq: "roadmap/roadmap-future.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 400
@@ -45,7 +45,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
           )
         }
       }
-      scaling: file(relativePath: { eq: "eth.png" }) {
+      scaling: file(relativePath: { eq: "roadmap/roadmap-transactions.png" }) {
         childImageSharp {
           gatsbyImageData(
             height: 260
@@ -55,7 +55,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
           )
         }
       }
-      security: file(relativePath: { eq: "hackathon_transparent.png" }) {
+      security: file(relativePath: { eq: "roadmap/roadmap-security.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 380
@@ -66,7 +66,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
           )
         }
       }
-      userExperience: file(relativePath: { eq: "enterprise-eth.png" }) {
+      userExperience: file(relativePath: { eq: "roadmap/roadmap-ux.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 380

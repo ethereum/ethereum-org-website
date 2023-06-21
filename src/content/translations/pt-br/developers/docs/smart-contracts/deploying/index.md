@@ -12,7 +12,7 @@ Para implantar um contrato inteligente, você apenas envia uma transação Ether
 
 Você deve entender as [redes Ethereum](/developers/docs/networks/), [transações](/developers/docs/transactions/) e a [anatomia de contratos inteligentes](/developers/docs/smart-contracts/anatomy/) antes de implantar contratos inteligentes.
 
-Implantar um contrato também custa ETH, então você deve estar familiarizado com [gás e taxas](/developers/docs/gas/) na Ethereum.
+Implantar um contrato também custa ether (ETH), pois eles são armazenados na blockchain, portanto, você deveria estar familiarizado com [gás e taxas](/developers/docs/gas/) na Ethereum.
 
 Finalmente, você precisará compilar seu contrato antes de implantá-lo, então certifique-se de ter lido sobre [compilação de contratos inteligentes](/developers/docs/smart-contracts/compiling/).
 
@@ -21,9 +21,9 @@ Finalmente, você precisará compilar seu contrato antes de implantá-lo, então
 ### O que você precisará {#what-youll-need}
 
 - bytecode do seu contrato - isto é gerado através da [compilação](/developers/docs/smart-contracts/compiling/).
-- Ether para gás – você vai definir o seu limite de gás como outras transações, então esteja ciente de que a implantação do contrato precisa de muito mais gás do que uma simples transferência de ETH.
+- Ether para gás – você definirá o seu limite de gás como outras transações, então esteja ciente de que a implantação do contrato precisa de muito mais gás do que uma simples transferência de ETH
 - um script de implantação ou um plugin
-- acesso a um [nó Ethereum](/developers/docs/nodes-and-clients/), executando o seu próprio, conectando a um nó público, ou através de uma chave de API usando um [serviço de nó](/developers/docs/nodes-and-clients/nodes-as-a-service/) como Infura ou Alquimia
+- acesso a um [nó Ethereum](/developers/docs/nodes-and-clients/), ou executando o seu próprio, conectando a um nó público, ou usando uma chave API usando um [serviço de nó](/developers/docs/nodes-and-clients/nodes-as-a-service/) como [Infura](https://www.infura.io/) ou [Alchemy](https://docs.alchemy.com/).
 
 ### Como implantar um contrato inteligente {#steps-to-deploy}
 
@@ -37,7 +37,7 @@ Uma vez implantado, o seu contrato terá um endereço Ethereum, como outras [con
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly - _Simular, depurar e monitorar qualquer coisa em cadeias compatíveis com EVM, com dados em tempo real_**
+**Tenderly - _Plataforma de desenvolvimento web3 que fornece blocos de construção para debugar, observar, e para infraestrutura para desenvolvimento, testes, monitoramento e operação de contratos inteligentes_**
 
 - [tenderly.com](https://tenderly.co/)
 - [Documentação](https://docs.tenderly.co/)
@@ -51,7 +51,7 @@ Uma vez implantado, o seu contrato terá um endereço Ethereum, como outras [con
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
-**Truffle -** **_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._**
+**Truffle -\*\***_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._\*\*
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [Documentos em redes e implantação de aplicativos](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
@@ -60,6 +60,7 @@ Uma vez implantado, o seu contrato terá um endereço Ethereum, como outras [con
 ## Tutoriais relacionados {#related-tutorials}
 
 - [Implantando o seu primeiro contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) _– Uma introdução à implantação do seu primeiro contrato inteligente em uma rede de teste da Ethereum._
+- [Hello World | tutorial para contrato inteligente](/developers/tutorials/hello-world-smart-contract/)_ - Um tutorial fácil de seguir para criar & implantar um contrato inteligente básico na Ethereum._
 - [Interaja com outros contratos da Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Como implantar um contrato inteligente a partir de um contrato existente e interagir com ele._
 - [Como diminuir o tamanho de seu contrato](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Como reduzir o tamanho do seu contrato para mantê-lo abaixo do limite e economizar gás_
 

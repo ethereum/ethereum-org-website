@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Exdcutar um nó próprio proporciona vários benefícios, abre novas possibilidades e ajuda a dar suporte ao ecossistema. Esta página vai ajudar você a iniciar seu próprio nó, para assim participar na validação das transações de Ethereum.
 
-Observe que após [A Fusão](/upgrades/merge), dois clientes são necessários para executar um nó Ethereum; um cliente da **camada de execução (EL)** e um cliente da **camada de consenso (CL)**. Esta página mostrará como instalar, configurar e conectar esses dois clientes para executar um nó Ethereum.
+Observe que após [A Fusão](/roadmap/merge) (The Merge), são necessários dois clientes para executar um nó Ethereum; um cliente da **camada de execução (EL)** e um cliente da **camada de consenso (CL)**. Esta página mostrará como instalar, configurar e conectar esses dois clientes para executar um nó Ethereum.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -27,7 +27,7 @@ Decida se deseja executar o software em seu próprio [hardware ou na nuvem](#loc
 
 Após preparar o ambiente, instale os clientes escolhidos com [interface simples para iniciantes](#automatized-setup) ou [manualmente](#manual-setup) usando um terminal com opções avançadas.
 
-Quando o nó estiver em execução e sincronização, você estará pronto para [usá-lo](#using-the-node), mas certifique-se de ficar de olho em sua [manutenção](#operating-the-node).
+Quando o nó estiver em execução e sincronização, você estará pronto para [usá-lo](#using-the-node), mas fique de olho em sua [manutenção](#operating-the-node).
 
 ![Configuração do cliente](./diagram.png)
 
@@ -53,6 +53,10 @@ Ambas as opções têm vantagens e desvantagens, as quais foram resumidas acima.
 - [QuikNode](https://www.quiknode.io/)
 - [Blockdaemon](https://blockdaemon.com)
 - [Alchemy](https://www.alchemy.com/)
+- [Blast](https://blastapi.io/)
+- [GetBlock](https://getblock.io/)
+- [NodeReal](https://nodereal.io/)
+- [NOWNodes](https://nownodes.io/)
 
 Confira também [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/) para obter mais opções de nós hospedados.
 
@@ -76,22 +80,22 @@ O tamanho do banco de dados e a velocidade da sincronização inicial dependem d
 
 Verifique também que sua conexão de Internet não seja limitada devido a um [limite de largura de banda](https://wikipedia.org/wiki/Data_cap). É recomendado usar uma conexão ilimitada para que a sincronização inicial e os dados transmitidos à rede possam exceder seu limite.
 
-##### Sistema operacional {#operating-system}
+##### Sistema operacional
 
 Todos os clientes suportam os principais sistemas operacionais: Linux, MacOS e Windows. Isso significa que você pode executar seu nó em computadores ou servidores regulares com o sistema operacional (SO) que melhor atenda às suas necessidades. Certifique-se, porém, de que seu sistema operacional está atualizado para evitar possíveis problemas e vulnerabilidades de segurança.
 
-##### Requisitos mínimos {#minimum-requirements}
+##### Requisitos mínimos
 
 - CPU com mais de 2 núcleos
 - 8 GB RAM
-- 700 GB de espaço livre em disco
+- SSD de 2 TB
 - - de 10 MBit/s de largura de banda
 
-##### Especificações recomendadas {#recommended-hardware}
+##### Especificações recomendadas
 
 - CPU rápida com mais de 4 núcleos
 - - de 16 GB de RAM
-- SSD rápido com + de 1 TB
+- SSD rápido com + de 2 TB
 - - de 25 MBit/s de largura de banda
 
 O modo de sincronização e o cliente que você escolher afetará os requisitos de espaço, mas estimamos o espaço em disco necessário para cada cliente abaixo.
@@ -118,7 +122,7 @@ A opção mais fácil para executar um nó com seu próprio hardware é usando f
 
 Uma maneira fácil e barata de executar um nó Ethereum é usar um computador de placa única, mesmo com uma arquitetura ARM como o Raspberry Pi. [Ethereum no ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) fornece imagens fáceis de executar de múltipla execução e cliente de consenso para Raspberry Pi e outras placas ARM.
 
-Dispositivos pequenos, acessíveis e eficientes como esses são ideais para executar um nó em casa, mas tenha em mente o seu desempenho limitado.
+Dispositivos pequenos, acessíveis e eficientes como esses são ideais para executar um nó em casa, mas tenha em mente seu desempenho limitado.
 
 ## Executando seu nó {#spinning-up-node}
 
@@ -132,10 +136,11 @@ Vários projetos de fácil utilização visam melhorar a experiência de configu
 
 Abaixo estão alguns projetos que podem ajudá-lo a instalar e controlar clientes apenas com alguns cliques:
 
-- [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) – O DappNode não vem apenas com uma máquina de um fornecedor. O software, o programa atual e o centro de controle com muitos recursos podem ser usados em hardware arbitrário.
-- [eth-docker](https://eth-docker.net/docs/About/Overview/) – Configuração automatizada usando Docker focada em participação fácil e segura, requer conhecimento básico de terminal e Docker, recomendado para usuários um pouco mais avançados.
+- [DappNode](https://docs.dappnode.io/user/quick-start/first-steps/) – O DappNode não vem apenas com o computador de um fornecedor. O software, o programa atual e o centro de controle com muitos recursos podem ser usados em hardware arbitrário.
+- [eth-docker](https://eth-docker.net/) – Configuração automatizada usando Docker, focada em participação fácil e segura. Requer conhecimento básico de terminal e Docker, recomendada para usuários um pouco mais avançados.
 - [Stereum](https://stereum.net/ethereum-node-setup/) – Inicialização para instalar clientes em um servidor remoto via conexão SSH com um guia de configuração GUI, centro de controle e muitas outras funcionalidades.
 - [NiceNode](https://www.nicenode.xyz/) – Programa com uma experiência de usuário simples para executar um nó em seu computador. Basta escolher os clientes e iniciá-los com alguns cliques. Ainda em desenvolvimento.
+- [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Ferramenta de configuração do nó que gera automaticamente uma configuração do Docker usando o assistente de CLI. Escrito em Go pela Nethermind.
 
 ### Configuração manual do cliente {#manual-setup}
 
@@ -153,7 +158,7 @@ Instruções para instalar cada cliente são fornecidas na documentação associ
 
 Aqui estão as páginas de lançamento dos clientes, nas quais você pode encontrar seus binários pré-construídos ou instruções sobre instalação:
 
-##### Clientes de execução {#execution-clients}
+##### Clientes de execução
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon#usage) (não fornece um binário pré-construído, precisa ser compilado)
@@ -162,7 +167,7 @@ Aqui estão as páginas de lançamento dos clientes, nas quais você pode encont
 
 Também vale a pena notar que a diversidade de clientes é um [problema na camada de execução](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Recomenda-se que os leitores considerem a execução de um cliente de execução minoritário.
 
-##### Clientes de consenso {#consensus-clients}
+##### Clientes de consenso
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (não fornece um binário pré-construído, apenas uma imagem do Docker ou para ser construído a partir da fonte)
@@ -174,7 +179,7 @@ A [diversidade de cliente](/developers/docs/nodes-and-clients/client-diversity/)
 
 [Veja o uso mais recente do cliente de rede](https://clientdiversity.org/) e saiba mais sobre a [diversidade do cliente](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Verificando o software {#verifying-the-software}
+##### Verificando o software
 
 Ao baixar o software da Internet, é recomendável verificar sua integridade. Esta etapa é opcional, mas especialmente com uma peça de infraestrutura crucial como o cliente Ethereum. É importante estar ciente dos possíveis vetores de ataque e evitá-los. Se você baixou um binário pré-construído, você precisa confiar nele e arriscar que um invasor possa trocar o executável por um malicioso.
 
@@ -281,12 +286,13 @@ Este exemplo inicia o Geth na rede principal, armazena os dados da cadeia de blo
 ```
 geth --mainnet \
     --datadir "/data/ethereum" \
-    --http --http.api="eth,web3,net" \
+    --http --authrpc.addr localhost \
     --authrpc.vhosts="localhost" \
+    --authrpc.port 8551
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
-Verifique a [documentação para todas as opções de configuração](https://geth.ethereum.org/docs/interface/command-line-options) e, saiba mais sobre [Geth executando um cliente de consenso](https://geth.ethereum.org/docs/interface/consensus-clients).
+Confira a [documentação para todas as opções de configuração](https://geth.ethereum.org/docs/fundamentals/command-line-options) e, saiba mais sobre [como executar Geth com um cliente de consenso](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
 ##### Executando o Nethermind
 
@@ -319,12 +325,12 @@ Ao iniciar um Beacon Node em uma rede de testes, você pode economizar um tempo 
 Antes de executar o Lighthouse, saiba mais sobre como instalá-lo e configurá-lo no [Livro do Lighthouse](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```
-lighthouse beacon_node
+lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
     --http \
     --execution-endpoint http://127.0.0.1:8551 \
-    --execution-jwt /path/to/jwtsecret \
+    --execution-jwt /path/to/jwtsecret
 ```
 
 ##### Executando o Lodestar
@@ -358,7 +364,7 @@ O Prysm vem com um script que permite uma fácil instalação automática. Os de
 
 ```
 ./prysm.sh beacon-chain \
-    --mainnet
+    --mainnet \
     --datadir /data/ethereum  \
     --execution-endpoint=http://localhost:8551  \
     --jwt-secret=/path/to/jwtsecret
@@ -370,7 +376,7 @@ O Prysm vem com um script que permite uma fácil instalação automática. Os de
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
-    --ee-jwt-secret-file "/path/to/jwtsecret" \
+    --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
 Quando um cliente de consenso se conecta ao cliente de execução para ler o contrato de depósito e identificar validadores, ele também se conecta a outros pares do Beacon Node e começa a sincronizar os espaços de consenso do gênesis. Quando o Beacon Node atinge a época atual, a API do Beacon se torna utilizável para seus validadores. Saiba mais sobre [APIs do Beacon Node](https://eth2docs.vercel.app/).
@@ -456,12 +462,10 @@ Como parte de seu monitoramento, certifique-se de ficar de olho no desempenho de
 - [Guias de participação do Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, atualizado com frequência_
 - [Guia | Como configurar um validador para participação do Ethereum na rede principal](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, atualizado regularmente_
 - [Guias do ETHStaker sobre como executar validadores em redes de teste](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, atualizado regularmente_
-- [Guias de Participação do Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) _– Somer Esat, atualizado regularmente_
-- [FAQ sobre A Fusão para operadores de nós](https://notes.ethereum.org/@launchpad/node-faq-merge) - _julho de 2022_
+- [Perguntas frequentes sobre o The Merge para operadores de nós](https://notes.ethereum.org/@launchpad/node-faq-merge) — _julho de 2022_
 - [Analisando os requisitos de hardware para ser um nó totalmente validado no Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _ – Albert Palau, 24 de setembro de 2018_
-- [Executando nós completos Ethereum: Um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _ – Justin Leroux, 7 de novembro de 2019_
-- [Executando um nó Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _ – ETHHub, atualizado com frequência_
-- [Executando um nó Hyperledger Besu na Rede principal do Ethereum: benefícios, requisitos e configurações](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 de maio de 2020_
+- [Executando nós completos do Ethereum: um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de novembro de 2019_
+- [Executando um nó do Hyperledger Besu na Mainnet do Ethereum: benefícios, requisitos e configurações](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 de maio de 2020_
 - [Implantando o cliente Nethermind do Ethereum com uma pilha de monitoramento](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 de julho de 2020_
 
 ## Tópicos relacionados {#related-topics}

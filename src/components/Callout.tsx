@@ -1,13 +1,15 @@
 // Libraries
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import Translation from "./Translation"
-import { TranslationKey } from "../utils/translations"
-// Components
-import Emoji from "./Emoji"
-import { Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Flex, FlexProps, Heading, Image, Text } from "@chakra-ui/react"
 
-export interface IProps {
+// Components
+import Translation from "./Translation"
+import Emoji from "./Emoji"
+
+import type { TranslationKey } from "../utils/translations"
+
+export interface IProps extends FlexProps {
   children?: React.ReactNode
   image?: IGatsbyImageData
   emoji?: string
@@ -25,8 +27,10 @@ const Callout: React.FC<IProps> = ({
   descriptionKey,
   children,
   className,
+  ...rest
 }) => (
   <Flex
+    as="aside"
     direction="column"
     bgGradient="linear-gradient(
     49.21deg,
@@ -40,6 +44,7 @@ const Callout: React.FC<IProps> = ({
     mb={{ base: 16, lg: 4 }}
     borderRadius="base"
     className={className}
+    {...rest}
   >
     {image && (
       <Image

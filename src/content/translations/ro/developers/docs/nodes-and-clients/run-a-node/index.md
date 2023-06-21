@@ -21,7 +21,7 @@ Primul pas în crearea nodului dvs. este să vă alegeţi un mod de abordare. Yo
 
 Implementările clienţilor activează diferite moduri de sincronizare și diverse alte opțiuni. [Modurile de sincronizare](/developers/docs/nodes-and-clients/#sync-modes) reprezintă diferite metode de descărcare și validare a datelor din blockchain. Before starting the node, you should decide what network and sync mode to use. Cele mai importante lucruril de luat în considerare sunt spațiul pe disc și timpul de sincronizare de care va avea nevoie clientul.
 
-Puteţi afla toate funcţionalităţile și opțiunile în documentația clientului. Se pot seta diverse configurații ale clientului prin executarea clientului cu flagurile corespunzătoare. You can get more information on flags from [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) or the client documentation. În scopul testării, este preferabil să executați un client pe una dintre rețelele testnet. [Vedeți o prezentare generală a rețelelor acceptate](/developers/docs/nodes-and-clients/#execution-clients).
+Puteţi afla toate funcţionalităţile și opțiunile în documentația clientului. Se pot seta diverse configurații ale clientului prin executarea clientului cu flagurile corespunzătoare. În scopul testării, este preferabil să executați un client pe una dintre rețelele testnet. [Vedeți o prezentare generală a rețelelor acceptate](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Mediu și hardware {#environment-and-hardware}
 
@@ -142,7 +142,7 @@ You need to keep your client software up-to-date with the latest security patche
 
 #### Rularea de servicii suplimentare {#running-additional-services}
 
-Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/#layer-2-scaling), [consensus clients](/upgrades/get-involved/#clients), and other Ethereum infrastructure.
+Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/#layer-2-scaling), [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients), and other Ethereum infrastructure.
 
 #### Monitorizarea nodului {#monitoring-the-node}
 
@@ -152,7 +152,6 @@ Running your own node lets you use services that require direct access to Ethere
 
 - [Analizarea cerințelor hardware pentru a fi un nod Ethereum validat complet](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 septembrie 2018_
 - [Rularea de Noduri Ethereum complete: Un ghid pentru cei abia motivați](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 noiembrie 2019_
-- [Executarea unui nod Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, actualizat des_
 - [Rularea unui nod Besu Hyperledder pe Mainnet Ethereum: Beneficii, cerințe și instalare](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 mai 2020_
 - [Implementarea Clientului Nethermind Ethereum cu stiva de monitorizare](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 iulie 2020_
 

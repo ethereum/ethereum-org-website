@@ -10,15 +10,13 @@
   "page-eth-currency-for-future": "Měna digitální budoucnosti",
   "page-eth-description": "ETH je kryptoměna. Jsou to vzácné digitální peníze, které můžete používat na internetu, podobně jako Bitcoin. Pokud se s kryptoměnami seznamujete, zde najdete, jak se ETH liší od tradičních peněz.",
   "page-eth-earn-interest-link": "Získejte výnosy z úroků",
-  "page-eth-ethhub-caption": "Pravidelně aktualizováno",
-  "page-eth-ethhub-overview": "EthHub má skvělý přehled, pokud chcete",
   "page-eth-flexible-amounts": "Dostupné ve flexibilním množství",
   "page-eth-flexible-amounts-desc": "ETH je dělitelné až do 18 desetinných míst, takže nemusíte kupovat celé 1 ETH. Pokud chcete, můžete koupit pouze jeho zlomek – až 0,000000000000000001 ETH.",
   "page-eth-fuels": "ETH pohání a zabezpečuje Ethereum",
   "page-eth-fuels-desc": "ETH je krev Etherea. Když posíláš ETH nebo používáš Ethereum aplikaci, zaplatíš poplatek v ETH za využívání sítě Ethereum. Tento poplatek je pobídkou pro výrobce bloků aby zpracoval a ověřil to, co se snažíš dělat.",
-  "page-eth-fuels-desc-2": "V současné době jsou těžaři něco jako zapisovatelé Etherea - kontrolují a dokazují, že nikdo nepodvádí a vykonávají práci za právo navrhnout blok transakcí. Těžaři, kteří dělají tuto práci, jsou také odměňováni malým množstvím nově vydaných ETH.",
-  "page-eth-fuels-desc-3": "Práci, kterou těžaři dělají, udržuje Ethereum zabezpečené a bez centralizovaného řízení. Jinými slovy,",
-  "page-eth-fuels-staking": "Brzy, ETH se stane ještě důležitějším díky sázení. Když sázíš ETH, budeš moct pomoci zabezpečit Ethereum a získat odměny. V tomto systému, hrozba ztráty jejich ETH odrazuje útočníky.",
+  "page-eth-fuels-desc-2": "Validátoři fungují jako dozorčí Etherea. Kontrolují a dokazují, že nikdo nepodvadí. Jsou náhodně vybíráni pro tvorbu bloku transakcí. Validátoři, kteří vykonají tuto práci, jsou následně odměněni malou částí nově vygenerovaného ETH.",
+  "page-eth-fuels-desc-3": "Práci, kterou validátoři vykonávají, a kapitál, který stakují, pomáhá k bezpečnosti sítě Ethereum a k větší decentralizaci.",
+  "page-eth-fuels-staking": "Stakingem svého ETH pomáháte zabezpečit síť Ethereum, a tím získáváte odměny. V tomto systému hrozba ztráty ETH odrazuje útočníky.",
   "page-eth-fuels-more-staking": "Další informace o investicích",
   "page-eth-get-eth-btn": "Získat ETH",
   "page-eth-gov-tokens": "Správní tokeny",
@@ -41,7 +39,6 @@
   "page-eth-not-only-crypto": "ETH není jediná kryptoměna na Ethereu",
   "page-eth-not-only-crypto-desc": "Kdokoli může vytvářet nové druhy aktiv a na Ethereu s nimi obchodovat. Tato aktiva známe jako „tokeny“. Uživatelé už tokenizovali tradiční měny, své nemovitosti, své umění, a dokonce sami sebe!",
   "page-eth-not-only-crypto-desc-2": "Ethereum je domovem tisíce tokenů. Některé jsou užitečnější a cennější než jiné. Vývojáři vytvářejí nové tokeny, které představují nové možnosti a otevírají nové trhy.",
-  "page-eth-not-only-crypto-desc-3": "Pokud se chcete dozvědět o tokenech více, naši kamarádi na EthHubu napsali několik skvělých přehledů:",
   "page-eth-open": "Otevřené komukoli",
   "page-eth-open-desc": "K přijetí ETH potřebujete pouze připojení k internetu a peněženku. Nepotřebujete přístup k bankovnímu účtu abyste přijímali platby. ",
   "page-eth-p2p-payments": "Platby typu peer-to-peer",
@@ -93,5 +90,5 @@
   "page-eth-tokens-dao-description": "Internetové komunity často spravované držiteli tokenů.",
   "page-eth-whats-defi": "Další informace o DeFi",
   "page-eth-whats-defi-description": "DeFi je decentralizovaný finanční systém postavený na Ethereu. Tento přehled vysvětluje, co tento systém umožňuje provést.",
-  "page-what-is-ethereum-what-is-ether": "What is ether?"
+  "page-what-is-ethereum-what-is-ether": "Co je Ether?"
 }

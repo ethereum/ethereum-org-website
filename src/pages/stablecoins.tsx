@@ -1,29 +1,33 @@
 import React, { useEffect, useState, useMemo } from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Img,
+  Icon,
+  Grid,
+  BoxProps,
+  FlexProps,
+  HeadingProps,
+  SimpleGrid,
+} from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import DataProductCard from "../components/DataProductCard"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import FeedbackCard from "../components/FeedbackCard"
 import GhostCard from "../components/GhostCard"
 import HorizontalCard from "../components/HorizontalCard"
-import Icon from "../components/Icon"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
-import {
-  CardGrid,
-  Content,
-  Divider,
-  GradientContainer,
-  Page,
-} from "../components/SharedStyledComponents"
 import SimpleTable from "../components/SimpleTable"
 import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
@@ -33,247 +37,55 @@ import Translation from "../components/Translation"
 import { getData } from "../utils/cache"
 import { getImage } from "../utils/image"
 
-const StyledContent = styled(Content)`
-  margin-bottom: -2rem;
-`
-
-const StyledGradientContainer = styled(GradientContainer)`
-  margin-bottom: 2rem;
-`
-
-/* const HeroSectionContent = styled(Content)`
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  margin-bottom: 2rem;
-  padding: 2rem;
-  background: ${(props) => props.theme.colors.ednBackground};
-` */
-
-const Image = styled(GatsbyImage)`
-  background-size: cover;
-  background-repeat: repeat;
-  align-self: center;
-  width: 100%;
-  max-width: 240px;
-  flex: 1;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin: 2rem 2rem;
-    min-width: 160px;
-    max-width: 160px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin: 2rem 0rem;
-    min-width: 96px;
-    max-width: 96px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 0rem;
-  }
-`
-
-const StyledGhostCard = styled(GhostCard)`
-  max-width: 640px;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem;
-    margin-top: 4rem;
-  }
-`
-
-const Row = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
-
-const DaiBanner = styled.div`
-  border: 1.5px solid ${(props) => props.theme.colors.text};
-  box-shadow: 8px 8px 0px 0px ${(props) => props.theme.colors.gridYellow};
-  border-radius: 2px;
-  background: ${(props) => props.theme.colors.background};
-  justify-content: space-between;
-  display: flex;
-  width: 100%;
-  padding: 1rem 6rem;
-  margin-bottom: 2rem;
-  color: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    padding: 2rem 2rem;
-  }
-`
-
-const StyledDaiBanner = styled(DaiBanner)`
-  margin-right: 2rem;
-  padding: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-  }
-`
-
-const USDCBanner = styled(DaiBanner)`
-  margin-left: 2rem;
-  padding: 2rem;
-  box-shadow: 8px 8px 0px 0px ${(props) => props.theme.colors.gridBlue};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-  }
-`
-
-const DaiSubtitle = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const H2 = styled.h2`
-  margin-top: 0rem;
-`
-
-const H3 = styled.h3`
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 1rem;
-`
-/* const OptionContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    width: 100%;
-  }
-` */
-
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 2rem 0 4rem;
-`
-
-const FullWidthContainer = styled(Page)`
-  padding: 0rem 2rem;
-  padding-bottom: 4rem;
-  margin-top: -2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    margin-top: -2rem;
-  }
-`
-
-const DaiH2 = styled.h2`
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-
-  a {
-    display: none;
-  }
-`
-
-const LeftColumn = styled.div`
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-  }
-`
-
-const StyledRightColumn = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 2px;
-  padding: 2rem;
-  width: 100%;
-  border: 1.5px solid ${(props) => props.theme.colors.text};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-  }
-`
-const TokenCard = styled(HorizontalCard)`
-  min-width: 100%;
-  margin: 0.5rem 0rem;
-  border-radius: 0px;
-`
-
-const StyledLeftColumn = styled(LeftColumn)`
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
-`
-
-const StyledCardGrid = styled(CardGrid)`
-  margin-bottom: 4rem;
-`
-
-const TableContent = styled(Content)`
-  overflow-x: scroll;
-`
-
-const ButtonColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const Apy = styled.p`
-  font-size: 64px;
-  line-height: 100%;
-`
-
-const InfoIcon = styled(Icon)`
-  margin-left: 0.5rem;
-  fill: ${(props) => props.theme.colors.text};
-`
-
-const ButtonLinkWrap = styled(ButtonLink)`
-  white-space: break-spaces;
-`
-
-const ButtonLinkContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-  gap: 1em;
-`
-
-const PaddedContent = styled(Content)`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-`
-
 const tooltipContent = (
   <div>
     <Translation id="data-provided-by" />{" "}
     <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
   </div>
+)
+
+const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
+
+const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
+
+const EditorsChoice = (props: FlexProps) => (
+  <Flex
+    flexDirection={{ base: "column-reverse", lg: "row" }}
+    justifyContent="space-between"
+    width="full"
+    border="1.5px solid"
+    borderColor="text"
+    borderRadius="sm"
+    background="background.base"
+    color="text"
+    p={8}
+    mb={8}
+    {...props}
+  />
+)
+
+const Page = (props: FlexProps) => (
+  <Flex
+    width="full"
+    direction="column"
+    align="center"
+    my={0}
+    mx="auto"
+    {...props}
+  />
+)
+
+const H2 = (props: HeadingProps) => (
+  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+)
+
+const H3 = (props: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", m: "2xl" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 type EthereumDataResponse = Array<{
@@ -523,11 +335,21 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       {
         content: t("page-stablecoins-hero-button"),
         toId: "explore",
+        matomo: {
+          eventCategory: "stablecoins hero buttons",
+          eventAction: "click",
+          eventName: "get stablecoins",
+        },
       },
       {
         content: t("page-stablecoins-how-they-work-button"),
         toId: "how",
         variant: "outline",
+        matomo: {
+          eventCategory: "stablecoins hero buttons",
+          eventAction: "click",
+          eventName: "how they work",
+        },
       },
     ],
   }
@@ -549,68 +371,89 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
         description={t("page-stablecoins-meta-description")}
       />
       <PageHero isReverse content={heroContent} />
-      {/* <HeroSectionContent>
-        <H2>
-          <Translation id="page-stablecoins-prices" />
-        </H2>
-        <p>
-          <Translation id="page-stablecoins-prices-definition" />{" "}
-          <Link to="#how">
-            <Translation id="page-stablecoins-prices-definition-how" />
-          </Link>
-        </p>
-        <H3>
-          <Translation id="page-stablecoins-coin-price-change" />
-        </H3>
-        [Insert graph showing price changes over 30days for stablecoins vs ETH
-        to demo comparative stability]
-      </HeroSectionContent> */}
       <Divider />
       <Content>
-        <TwoColumnContent>
-          <LeftColumn>
-            <H2>
+        <Flex
+          direction={{ base: "column", lg: "row" }}
+          align="flex-start"
+          width="full"
+          mr={8}
+          mb={8}
+        >
+          <Box
+            w="full"
+            ml={{ base: "auto", lg: 0 }}
+            mr={{ base: "auto", lg: 2 }}
+          >
+            <H2 mt={0}>
               <Translation id="page-stablecoins-why-stablecoins" />
             </H2>
-            <p>
+            <Text>
               <Translation id="page-stablecoins-prices-definition" />{" "}
               <Link to="#how">
                 <Translation id="page-stablecoins-prices-definition-how" />
               </Link>
-            </p>
-          </LeftColumn>
-        </TwoColumnContent>
-        <TwoColumnContent>
-          <LeftColumn>
+            </Text>
+          </Box>
+        </Flex>
+        <Flex
+          direction={{ base: "column", lg: "row" }}
+          align="flex-start"
+          width="full"
+          mr={{ base: 0, lg: 8 }}
+          mb={8}
+        >
+          <Box w="full" margin={{ base: "auto 0", lg: "0 2rem 0" }}>
             {tokens.map((token, idx) => (
-              <TokenCard
-                key={idx}
-                emoji={token.emoji}
-                description={token.description}
-                emojiSize={3}
-              />
+              <Box minWidth="full" my={2}>
+                <HorizontalCard
+                  key={idx}
+                  emoji={token.emoji}
+                  description={token.description}
+                  emojiSize={3}
+                />
+              </Box>
             ))}
-          </LeftColumn>
-          <StyledGhostCard>
-            <Emoji size={3} text=":pizza:" />
-            <h3>
+          </Box>
+          <GhostCard
+            maxW="640px"
+            mr={{ base: 0, lg: 8 }}
+            mt={{ base: 16, lg: 2 }}
+          >
+            <Emoji text=":pizza:" fontSize="5xl" />
+            <H3>
               <Translation id="page-stablecoins-bitcoin-pizza" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-stablecoins-bitcoin-pizza-body" />{" "}
-            </p>
-          </StyledGhostCard>
-        </TwoColumnContent>
+            </Text>
+          </GhostCard>
+        </Flex>
       </Content>
-      <StyledGradientContainer>
-        <StyledContent>
-          <H2>
+      <Box
+        w="full"
+        py={16}
+        mt={8}
+        mb={8}
+        background="cardGradient"
+        boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+      >
+        <Box mb={-8} py={4} px={8} w="full">
+          <H2 mt={0}>
             <Translation id="page-stablecoins-find-stablecoin" />
           </H2>
-          <StyledLeftColumn>
-            <p>
+          <Box
+            display="flex"
+            w="full"
+            width={{ base: "full", lg: "50%" }}
+            justifyContent="center"
+            flexDirection="column"
+            ml={{ base: "auto", lg: 0 }}
+            mr={{ base: "auto", lg: 2 }}
+          >
+            <Text>
               <Translation id="page-stablecoins-find-stablecoin-intro" />
-            </p>
+            </Text>
             <ul>
               <li>
                 <Link to="#how">
@@ -623,115 +466,153 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 </Link>
               </li>
             </ul>
-          </StyledLeftColumn>
-          <H3>
+          </Box>
+          <H3 mt={0} mb={4}>
             <Translation id="page-stablecoins-editors-choice" />
           </H3>
-          <p>
+          <Text>
             <Translation id="page-stablecoins-editors-choice-intro" />
-          </p>
-          <Row>
-            <StyledDaiBanner>
-              <StyledLeftColumn>
-                <div>
-                  <DaiH2>
+          </Text>
+          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16}>
+            <EditorsChoice boxShadow="gridYellowBoxShadow">
+              <Box
+                display="flex"
+                w="full"
+                width={{ base: "full", lg: "50%" }}
+                justifyContent="center"
+                flexDirection="column"
+                ml={{ base: "auto", lg: 0 }}
+                mr={{ base: "auto", lg: 8 }}
+              >
+                <Box>
+                  <H2 fontSize="2rem" mt={0} mb={2}>
                     <Translation id="page-stablecoins-dai-banner-title" />
-                  </DaiH2>
-                  <DaiSubtitle>
+                  </H2>
+                  <Text fontSize="xl" lineHeight={1.4} color="text200">
                     <Translation id="page-stablecoins-dai-banner-body" />
-                  </DaiSubtitle>
-                  <ButtonColumn>
-                    <div>
-                      <ButtonLink
-                        mb={"1rem"}
-                        mr={"1rem"}
-                        to="https://1inch.exchange"
-                      >
+                  </Text>
+                  <Flex direction="column">
+                    <Box>
+                      <ButtonLink mb={4} mr={4} to="https://1inch.exchange">
                         <Translation id="page-stablecoins-dai-banner-swap-button" />
                       </ButtonLink>
-                    </div>
-                    <div>
+                    </Box>
+                    <Box>
                       <ButtonLink
                         variant="outline"
                         to="https://kb.oasis.app/help/what-is-dai"
                       >
                         <Translation id="page-stablecoins-dai-banner-learn-button" />
                       </ButtonLink>
-                    </div>
-                  </ButtonColumn>
-                </div>
-              </StyledLeftColumn>
-              <Image
+                    </Box>
+                  </Flex>
+                </Box>
+              </Box>
+              <Img
+                as={GatsbyImage}
                 image={getImage(data.dailarge)!}
                 alt={t("page-stablecoins-dai-logo")}
+                backgroundSize="cover"
+                backgroundRepeat="repeat"
+                alignSelf="center"
+                width="full"
+                flex="1"
+                maxWidth={{ base: "96px", sm: "160px", md: "240px" }}
+                minWidth={{ base: "96px", sm: "160px" }}
+                my={{ base: 8, md: 0 }}
               />
-            </StyledDaiBanner>
-            <USDCBanner>
-              <StyledLeftColumn>
-                <div>
-                  <DaiH2>
-                    <Translation id="page-stablecoins-usdc-banner-title" />
-                  </DaiH2>
-                  <DaiSubtitle>
-                    <Translation id="page-stablecoins-usdc-banner-body" />
-                  </DaiSubtitle>
-                  <ButtonColumn>
-                    <div>
-                      <ButtonLink
-                        mb={"1rem"}
-                        mr={"1rem"}
-                        to="https://matcha.xyz/markets/ETH/USDC"
-                      >
-                        <Translation id="page-stablecoins-usdc-banner-swap-button" />
-                      </ButtonLink>
-                    </div>
-                    <div>
-                      <ButtonLink
-                        variant="outline"
-                        to="https://www.coinbase.com/usdc"
-                      >
-                        <Translation id="page-stablecoins-usdc-banner-learn-button" />
-                      </ButtonLink>
-                    </div>
-                  </ButtonColumn>
-                </div>
-              </StyledLeftColumn>
-              <Image
+            </EditorsChoice>
+
+            <EditorsChoice boxShadow="gridBlueBowShadow">
+              <Box
+                display="flex"
+                w="full"
+                width={{ base: "full", lg: "50%" }}
+                justifyContent="center"
+                flexDirection="column"
+                ml={{ base: "auto", lg: 0 }}
+                mr={{ base: "auto", lg: 8 }}
+              >
+                <H2 fontSize="2rem" mt={0} mb={2}>
+                  <Translation id="page-stablecoins-usdc-banner-title" />
+                </H2>
+                <Text fontSize="xl" lineHeight={1.4} color="text200">
+                  <Translation id="page-stablecoins-usdc-banner-body" />
+                </Text>
+                <Flex direction="column">
+                  <Box>
+                    <ButtonLink
+                      mb={4}
+                      mr={4}
+                      to="https://matcha.xyz/markets/ETH/USDC"
+                    >
+                      <Translation id="page-stablecoins-usdc-banner-swap-button" />
+                    </ButtonLink>
+                  </Box>
+                  <Box>
+                    <ButtonLink
+                      variant="outline"
+                      to="https://www.coinbase.com/usdc"
+                    >
+                      <Translation id="page-stablecoins-usdc-banner-learn-button" />
+                    </ButtonLink>
+                  </Box>
+                </Flex>
+              </Box>
+              <Img
+                as={GatsbyImage}
                 image={getImage(data.usdclarge)!}
                 alt={t("page-stablecoins-usdc-logo")}
+                backgroundSize="cover"
+                backgroundRepeat="repeat"
+                alignSelf="center"
+                width="full"
+                flex="1"
+                maxWidth={{ base: "96px", sm: "160px", md: "240px" }}
+                minWidth={{ base: "96px", sm: "160px" }}
+                mb={{ base: 8, md: 0 }}
               />
-            </USDCBanner>
-          </Row>
-          <h3>
+            </EditorsChoice>
+          </SimpleGrid>
+          <H3>
             <Translation id="page-stablecoins-top-coins" />
             <Tooltip content={tooltipContent}>
-              <InfoIcon name="info" size="14" />
+              <Icon ml={2} fill="'text" name="info" boxSize={4} />
             </Tooltip>
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-stablecoins-top-coins-intro" />{" "}
             <Translation id="page-stablecoins-top-coins-intro-code" />
-          </p>
-        </StyledContent>
-        <TableContent>
+          </Text>
+        </Box>
+        <Box px={8} py={4} width="full" overflowX="scroll">
           <SimpleTable
             columns={tableColumns}
             content={state.markets}
             hasError={state.marketsHasError}
           />
-        </TableContent>
-      </StyledGradientContainer>
+        </Box>
+      </Box>
       <Content id="explore">
-        <h2>
+        <H2>
           <Translation id="page-stablecoins-get-stablecoins" />
-        </h2>
+        </H2>
       </Content>
-      <FullWidthContainer>
+      <Flex
+        alignItems="center"
+        w="full"
+        pl={{ base: "0rem", lg: "2rem" }}
+        pr={{ base: "0rem", lg: "2rem" }}
+        pb={16}
+      >
         <StablecoinAccordion />
-      </FullWidthContainer>
+      </Flex>
       <Divider />
       <Content>
-        <StyledCalloutBanner
+        <CalloutBanner
+          mt={8}
+          mb={16}
+          mx={0}
           titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
           descriptionKey={
             "page-stablecoins-stablecoins-dapp-callout-description"
@@ -740,46 +621,70 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           maxImageWidth={600}
           alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
         >
-          <ButtonLinkContainer>
+          <Flex flexFlow="wrap" gap="1em">
             <ButtonLink to="/dapps/">
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
-            <ButtonLinkWrap variant="outline" to="/defi/">
+            <ButtonLink variant="outline" to="/defi/" whiteSpace="normal">
               <Translation id="page-stablecoins-more-defi-button" />
-            </ButtonLinkWrap>
-          </ButtonLinkContainer>
-        </StyledCalloutBanner>
-        <h2>
+            </ButtonLink>
+          </Flex>
+        </CalloutBanner>
+        <H2>
           <Translation id="page-stablecoins-save-stablecoins" />
-        </h2>
-        <TwoColumnContent>
-          <LeftColumn>
-            <p>
+        </H2>
+        <Flex
+          flexDirection={{ base: "column", lg: "row" }}
+          alignItems="flex-start"
+          width="full"
+          mr={8}
+          mb={8}
+        >
+          <Box
+            w="full"
+            ml={{ base: "auto", lg: 0 }}
+            mr={{ base: "auto", lg: 2 }}
+          >
+            <Text>
               <Translation id="page-stablecoins-save-stablecoins-body" />
-            </p>
-            <h3>
+            </Text>
+            <H3>
               <Translation id="page-stablecoins-interest-earning-dapps" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-stablecoins-saving" />
-            </p>
-          </LeftColumn>
-          <StyledRightColumn>
-            <div>
-              <Emoji size={5} mb={"1rem"} text=":bank:" />
-              <Apy>
-                <Translation id="page-stablecoins-bank-apy" />
-              </Apy>
-              <em>
-                <Translation id="page-stablecoins-bank-apy-source" />{" "}
-                <Link to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
-                  <Translation id="page-stablecoins-bank-apy-source-link" />
-                </Link>
-              </em>
-            </div>
-          </StyledRightColumn>
-        </TwoColumnContent>
-        <StyledCardGrid>
+            </Text>
+          </Box>
+
+          <Box
+            display="flex"
+            justifyContent="center"
+            flexDirection="column"
+            borderRadius="sm"
+            w="full"
+            border="1.5px solid"
+            boxShadow="cardBoxShadow"
+            borderColor="text"
+            p={8}
+            mx={{ base: "auto", lg: 0 }}
+          >
+            <Emoji mb={4} text=":bank:" fontSize="5rem" />
+            <Text as="p" fontSize="64px" lineHeight="100%">
+              <Translation id="page-stablecoins-bank-apy" />
+            </Text>
+            <Text as="em">
+              <Translation id="page-stablecoins-bank-apy-source" />{" "}
+              <Link to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
+                <Translation id="page-stablecoins-bank-apy-source-link" />
+              </Link>
+            </Text>
+          </Box>
+        </Flex>
+        <Grid
+          templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
+          gap={8}
+          mb={16}
+        >
           {dapps.map((dapp, idx) => (
             <DataProductCard
               key={idx}
@@ -791,9 +696,9 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
               description={dapp.description}
             />
           ))}
-        </StyledCardGrid>
-        <InfoBanner isWarning={true} shouldCenter={true}>
-          <H3>
+        </Grid>
+        <InfoBanner isWarning shouldCenter>
+          <H3 mt={0} mb={4}>
             <Translation id="page-stablecoins-research-warning-title" />
           </H3>
           <Translation id="page-stablecoins-research-warning" />
@@ -801,24 +706,38 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       </Content>
       <Divider />
       <Content id="how">
-        <H2>
+        <H2 mt={0}>
           <Translation id="page-stablecoins-types-of-stablecoin" />
         </H2>
         <StablecoinBoxGrid items={features} />
       </Content>
-      <PaddedContent id="tools">
-        <h2>
+      <Box id="tools" py={12} px={8} w="full">
+        <H2>
           <Translation id="page-stablecoins-tools-title" />
-        </h2>
-        <TwoColumnContent>
-          <StyledLeftColumn>
+        </H2>
+        <Flex
+          alignItems="flex-start"
+          width="full"
+          mr={8}
+          mb={8}
+          flexDirection={{ base: "column", lg: "row" }}
+        >
+          <Box
+            display="flex"
+            w="full"
+            width={{ base: "full", lg: "50%" }}
+            justifyContent="center"
+            flexDirection="column"
+            ml={{ base: "auto", lg: 0 }}
+            mr={{ base: "auto", lg: 2 }}
+          >
             <ProductList
               category="Dashboards & Education"
               content={toolsData}
             />
-          </StyledLeftColumn>
-        </TwoColumnContent>
-      </PaddedContent>
+          </Box>
+        </Flex>
+      </Box>
       <Content>
         <FeedbackCard />
       </Content>

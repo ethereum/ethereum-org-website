@@ -1,67 +1,90 @@
-import React from "react"
-import { Box, IconButton } from "@chakra-ui/react"
-import styled from "@emotion/styled"
+import React, { Fragment, ReactNode, RefObject } from "react"
+import {
+  Box,
+  IconButton,
+  Icon,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerBody,
+  List,
+  ListItem,
+  forwardRef,
+  DrawerFooter,
+  Flex,
+} from "@chakra-ui/react"
+import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 
-import Icon from "../Icon"
 import Link from "../Link"
 import Translation from "../Translation"
-import { NavLink } from "../SharedStyledComponents"
 
 import { ISections } from "./types"
+import { ChildOnlyProp } from "../../types"
+import { SearchIconButton } from "../Search"
 
-const MobileModal = styled(motion.div)`
-  position: fixed;
-  background: ${(props) => props.theme.colors.modalBackground};
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100vh;
-`
+const NavListItem = forwardRef<{ "aria-label"?: string }, typeof List>(
+  (props, ref) => <ListItem ref={ref} mb={12} {...props} />
+)
 
-const mobileModalVariants = {
-  open: { display: "block", opacity: 1 },
-  closed: { display: "none", opacity: 0 },
-}
+const SectionItem = forwardRef<ChildOnlyProp, typeof ListItem>((props, ref) => (
+  <ListItem ref={ref} mb={4} opacity={0.7} _hover={{ opacity: 1 }} {...props} />
+))
 
-const MenuContainer = styled(motion.div)`
-  background: ${(props) => props.theme.colors.background};
-  z-index: 99;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
-  width: 100%;
-  max-width: 450px;
-`
+const StyledNavLink = (props: {
+  to: string
+  isPartiallyActive: boolean
+  children: ReactNode
+}) => (
+  <Link
+    color="currentColor"
+    textDecor="none"
+    _hover={{
+      color: "primary.base",
+    }}
+    {...props}
+  />
+)
 
-const mobileMenuVariants = {
-  closed: { x: `-100%`, transition: { duration: 0.2 } },
-  open: { x: 0, transition: { duration: 0.8 } },
-}
+const FooterItem = forwardRef<ChildOnlyProp, "div">((props, ref) => (
+  <Flex
+    ref={ref}
+    flex="1 1 120px"
+    alignItems="center"
+    color="text"
+    cursor="pointer"
+    flexDir="column"
+    _hover={{
+      color: "primary.base",
+      "& svg": {
+        fill: "currentColor",
+      },
+    }}
+    sx={{
+      "& svg": {
+        fill: "currentColor",
+        fontSize: "2xl",
+      },
+    }}
+    {...props}
+  />
+))
 
-const GlyphButton = styled.svg`
-  margin: 0 0.125rem;
-  width: 1.5rem;
-  height: 2.5rem;
-  position: relative;
-  stroke-width: 2px;
-  z-index: 100;
-  pointer-events: ${(props) => props.pointerEvents};
-  & > path {
-    stroke: ${(props) => props.theme.colors.text};
-    fill: none;
-  }
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-    & > path {
-      stroke: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
+const FooterItemText = (props: ChildOnlyProp) => (
+  <Box
+    fontSize="sm"
+    lineHeight={1.6}
+    fontWeight={400}
+    letterSpacing="0.04em"
+    mt={2}
+    textTransform="uppercase"
+    textAlign="center"
+    opacity={0.7}
+    _hover={{ opacity: 1 }}
+    {...props}
+  />
+)
 
 const hamburgerSvg =
   "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
@@ -81,124 +104,6 @@ const glyphPathVariants = {
   },
 }
 
-const MenuItems = styled.ul`
-  margin: 0;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding: 3rem 1rem 8rem;
-`
-
-const NavListItem = styled.li`
-  margin: 0;
-  margin-bottom: 3rem;
-  list-style-type: none;
-  list-style-image: none;
-`
-
-const StyledNavLink = styled(NavLink)`
-  display: flex;
-  align-items: center;
-  margin: 0;
-`
-
-const SectionTitle = styled.div`
-  margin: 1rem 0;
-  font-size: 1.3rem;
-  color: ${(props) => props.theme.colors.text};
-`
-
-const SectionSubtitle = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  line-height: 1;
-  color: ${(props) => props.theme.colors.text};
-`
-
-const SectionItems = styled.ul`
-  margin: 0;
-`
-
-const SectionItem = styled.li`
-  margin-bottom: 1rem;
-  list-style-type: none;
-  list-style-image: none;
-  opacity: 0.7;
-  &:hover {
-    opacity: 1;
-  }
-`
-
-const BottomMenu = styled(motion.div)`
-  background: ${(props) => props.theme.colors.background};
-  border-top: 1px solid ${(props) => props.theme.colors.lightBorder};
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 108px;
-  align-items: center;
-  width: 100%;
-  max-width: 450px;
-  z-index: 99;
-`
-
-const BottomItem = styled.div`
-  flex: 1 1 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  color: ${(props) => props.theme.colors.text};
-  & > svg {
-    fill: ${(props) => props.theme.colors.text};
-  }
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-    & > svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const BottomLink = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text};
-  & > svg {
-    fill: ${(props) => props.theme.colors.text};
-  }
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-    & > svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const BottomItemText = styled.div`
-  font-size: 0.875rem;
-  line-height: 1.6;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  margin-top: 0.5rem;
-  text-transform: uppercase;
-  text-align: center;
-  opacity: 0.7;
-  &:hover {
-    opacity: 1;
-  }
-`
-
 export interface IProps {
   isMenuOpen: boolean
   isDarkTheme: boolean
@@ -207,6 +112,7 @@ export interface IProps {
   toggleSearch: () => void
   linkSections: ISections
   fromPageParameter: string
+  drawerContainerRef: RefObject<HTMLElement | null>
 }
 
 const MobileNavMenu: React.FC<IProps> = ({
@@ -217,6 +123,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   toggleSearch,
   linkSections,
   fromPageParameter,
+  drawerContainerRef,
 }) => {
   const { t } = useTranslation()
 
@@ -227,58 +134,96 @@ const MobileNavMenu: React.FC<IProps> = ({
   return (
     <Box
       display={{ base: "flex", lg: "none" }}
-      gap={4}
-      sx={{ svg: { fill: "body" } }}
+      gap={2}
+      sx={{ svg: { fill: "body.base" } }}
     >
-      <IconButton
-        icon={<Icon name="search" />}
+      <SearchIconButton
         onClick={toggleSearch}
         aria-label={t("aria-toggle-search-button")}
-        variant="icon"
-        _hover={{ svg: { fill: "primary" } }}
+        size="sm"
       />
       <IconButton
         icon={
-          <GlyphButton
+          <Icon
             viewBox="0 0 24 40"
             pointerEvents={isMenuOpen ? "none" : "auto"}
+            mx={0.5}
+            width={6}
+            height={10}
+            position="relative"
+            strokeWidth="2px"
+            zIndex={100}
+            _hover={{
+              color: "primary.base",
+              "& > path": {
+                stroke: "primary.base",
+              },
+            }}
+            sx={{
+              "& > path": {
+                stroke: "text",
+                fill: "none",
+              },
+            }}
           >
             <motion.path
               variants={glyphPathVariants}
               initial={false}
               animate={isMenuOpen ? "open" : "closed"}
             />
-          </GlyphButton>
+          </Icon>
         }
         onClick={toggleMenu}
         aria-label={t("aria-toggle-search-button")}
         variant="icon"
-        _hover={{ svg: { fill: "primary" } }}
+        size="sm"
+        zIndex={2000}
+        _hover={{ svg: { fill: "primary.base" } }}
       />
-      <MobileModal
-        animate={isMenuOpen ? "open" : "closed"}
-        variants={mobileModalVariants}
-        initial="closed"
-        onClick={handleClick}
-      />
-      <MenuContainer
-        aria-hidden={!isMenuOpen}
-        animate={isMenuOpen ? "open" : "closed"}
-        variants={mobileMenuVariants}
-        initial="closed"
+      <Drawer
+        portalProps={{ containerRef: drawerContainerRef }}
+        isOpen={isMenuOpen}
+        onClose={handleClick}
+        placement="left"
+        size="sm"
       >
-        <MenuItems>
-          {Object.keys(linkSections).map((sectionKey, idx) => {
-            const section = linkSections[sectionKey]
-            return section.items ? (
-              <NavListItem key={idx} aria-label={`Select ${section.text}`}>
-                <SectionTitle>{section.text}</SectionTitle>
-                <SectionItems>
-                  {section.items.map((item, idx) =>
-                    item.items ? (
-                      <React.Fragment key={idx}>
-                        <SectionSubtitle>{item.text}</SectionSubtitle>
-                        {item.items.map((item, idx) => (
+        <DrawerOverlay bg="modalBackground" />
+        <DrawerContent bg="background.base">
+          <DrawerBody pt={12} pb={24} px={4}>
+            <List m={0}>
+              {Object.keys(linkSections).map((sectionKey, idx) => {
+                const section = linkSections[sectionKey]
+
+                return section.items ? (
+                  <NavListItem key={idx} aria-label={`Select ${section.text}`}>
+                    <Box color="text" my={4} fontSize="1.3rem">
+                      {section.text}
+                    </Box>
+                    <List m={0}>
+                      {section.items.map((item, idx) =>
+                        item.items ? (
+                          <Fragment key={idx}>
+                            <Box
+                              mt={8}
+                              mb={4}
+                              fontSize="0.9rem"
+                              lineHeight={1}
+                              color="currentColor"
+                            >
+                              {item.text}
+                            </Box>
+                            {item.items.map((item, idx) => (
+                              <SectionItem key={idx} onClick={handleClick}>
+                                <StyledNavLink
+                                  to={item.to}
+                                  isPartiallyActive={item.isPartiallyActive}
+                                >
+                                  {item.text}
+                                </StyledNavLink>
+                              </SectionItem>
+                            ))}
+                          </Fragment>
+                        ) : (
                           <SectionItem key={idx} onClick={handleClick}>
                             <StyledNavLink
                               to={item.to}
@@ -287,61 +232,73 @@ const MobileNavMenu: React.FC<IProps> = ({
                               {item.text}
                             </StyledNavLink>
                           </SectionItem>
-                        ))}
-                      </React.Fragment>
-                    ) : (
-                      <SectionItem key={idx} onClick={handleClick}>
-                        <StyledNavLink
-                          to={item.to}
-                          isPartiallyActive={item.isPartiallyActive}
-                        >
-                          {item.text}
-                        </StyledNavLink>
-                      </SectionItem>
-                    )
-                  )}
-                </SectionItems>
-              </NavListItem>
-            ) : (
-              <NavListItem onClick={handleClick} key={idx}>
-                <NavLink
-                  to={section.to}
-                  isPartiallyActive={section.isPartiallyActive}
-                >
-                  {section.text}
-                </NavLink>
-              </NavListItem>
-            )
-          })}
-        </MenuItems>
-      </MenuContainer>
-      <BottomMenu
-        aria-hidden={!isMenuOpen}
-        animate={isMenuOpen ? "open" : "closed"}
-        variants={mobileMenuVariants}
-        initial="closed"
-      >
-        <BottomItem onClick={toggleSearch}>
-          <Icon name="search" />
-          <BottomItemText>
-            <Translation id="search" />
-          </BottomItemText>
-        </BottomItem>
-        <BottomItem onClick={toggleTheme}>
-          <Icon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
-          <BottomItemText>
-            <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
-          </BottomItemText>
-        </BottomItem>
-        <BottomItem onClick={handleClick}>
-          <BottomLink to={`/languages/${fromPageParameter}`}>
-            <Icon name="language" />
-            <BottomItemText>
-              <Translation id="languages" />
-            </BottomItemText>
-          </BottomLink>
-        </BottomItem>
-      </BottomMenu>
+                        )
+                      )}
+                    </List>
+                  </NavListItem>
+                ) : (
+                  <NavListItem key={idx} onClick={handleClick}>
+                    <StyledNavLink
+                      to={section.to}
+                      isPartiallyActive={section.isPartiallyActive}
+                    >
+                      {section.text}
+                    </StyledNavLink>
+                  </NavListItem>
+                )
+              })}
+            </List>
+          </DrawerBody>
+          <DrawerFooter
+            bg="background.base"
+            borderTop="1px"
+            borderColor="lightBorder"
+            justifyContent="space-between"
+            height="108px"
+            px={4}
+            py={0}
+            mt="auto"
+          >
+            <FooterItem
+              onClick={() => {
+                // Workaround to ensure the input for the search modal can have focus
+                toggleMenu()
+                toggleSearch()
+              }}
+            >
+              <Icon as={MdSearch} />
+              <FooterItemText>
+                <Translation id="search" />
+              </FooterItemText>
+            </FooterItem>
+            <FooterItem onClick={toggleTheme}>
+              <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
+              <FooterItemText>
+                <Translation id={isDarkTheme ? "light-mode" : "dark-mode"} />
+              </FooterItemText>
+            </FooterItem>
+            <FooterItem onClick={handleClick}>
+              <Flex
+                as={Link}
+                to={`/languages/${fromPageParameter}`}
+                alignItems="center"
+                color="text"
+                flexDir="column"
+                textDecor="none"
+                _hover={{
+                  color: "primary.base",
+                  textDecor: "none",
+                }}
+              >
+                <Icon as={MdLanguage} />
+                <FooterItemText>
+                  <Translation id="languages" />
+                </FooterItemText>
+              </Flex>
+            </FooterItem>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     </Box>
   )
 }

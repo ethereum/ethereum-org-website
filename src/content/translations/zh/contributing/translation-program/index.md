@@ -20,6 +20,8 @@ Ethereum.org 翻译计划是开放的，所有人都可以参与！
 4. 机器翻译将不会被批准。
 5. 所有翻译在添加到网站之前都会经过审核，因此你的翻译在上线之前会有一个短暂的延迟。
 
+_加入 [ethereum.org Discord](/discord/) 合作翻译、提问、分享反馈和想法，或加入翻译组。_
+
 <ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   开始翻译
 </ButtonLink>
@@ -30,67 +32,37 @@ Ethereum.org 翻译计划是开放的，所有人都可以参与！
 
 Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容翻译成尽可能多的语言，让所有人都能参与以太坊。
 
-阅读更多关于 ethereum.org 翻译计划[任务和视图](/contributing/translation-program/mission-and-vision)的信息。
+阅读更多关于 Ethereum.org 翻译计划[任务和愿景](/contributing/translation-program/mission-and-vision)的信息。
 
 ### 我们迄今取得的进展 {#our-progress}
 
-- [超过 **4,100** 名翻译人员参与](/contributing/translation-program/contributors/)
-- [网站支持 **50** 种语言](/languages/)
-- [2022 年，截止目前我们已翻译 **250 万**个字词](/contributing/translation-program/acknowledgements/)
+- [超过 **4,700** 名翻译人员参与](/contributing/translation-program/contributors/)
+- [网站支持 **52** 种语言](/languages/)
+- [2022 年翻译了** 300 万**字](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
 ### 致谢 {#acknowledgements}
 
-成千上万社区成员参与 Ethereum.org 的翻译，他们是翻译计划的关键组成部分。 我们要感谢我们的翻译人员，并在他们的职业生涯中给予支持。 以下是我们对翻译人员的一些致谢方式:
+成千上万社区成员参与 Ethereum.org 的翻译，他们是翻译计划的关键组成部分。 我们要感谢我们的翻译人员，并在他们的职业生涯中给予支持。 以下是我们对翻译人员的一些致谢方式：
 
 #### 证书 {#certificate}
 
-如果你为翻译计划做出了贡献，并且你翻译的字词至少有 5000 个获得批准，你就有资格获得 ethereum.org 翻译证书。 [更多关于证书的信息](/contributing/translation-program/acknowledgements/#certificate)
+如果你参与了翻译计划，并且至少有 5000 个翻译的字词获得批准，就有资格获得 Ethereum.org 翻译人员证书。 [更多关于证书的信息](/contributing/translation-program/acknowledgements/#certificate)
 
 #### POAP 徽章 {#poaps}
 
-我们所有的翻译人员都有资格获得 POAP（出席证明协议）徽章 — 一种证明他们对 ethereum.org 翻译计划做出贡献的非同质化代币。 [关于 POAP 徽章的更多信息](/contributing/translation-program/acknowledgements/#poap)
+我们所有的翻译人员都有资格获得 POAP（出席证明协议）徽章 — 一种证明他们对 Ethereum.org 翻译计划做出贡献的非同质化代币。 [关于 POAP 徽章的更多信息](/contributing/translation-program/acknowledgements/#poap)
 
 #### 致谢翻译人员 {#translator-acknowledgements}
 
 通过发布[排行榜](/contributing/translation-program/acknowledgements/)和[翻译计划全体贡献者名单](/contributing/translation-program/contributors/)，对我们的优秀翻译人员致以公开感谢。
 
-### 我们当前的工作内容 {#our-projects}
+#### 奖励 {#rewards}
 
-我们的贡献者社区正在积极地为全球以太坊社区翻译多个具有强大影响力的网站和资源。
+过去，我们追加奖励了最活跃的贡献者，为其提供了 [Devcon](https://devcon.org/en/) 和 [Devconnect](https://devconnect.org/) 等以太坊会议的票证以及 Ethereum.org 专属商品。
 
-#### Ethereum.org（以太坊官网） {#ethereumorg}
-
-![](./ethereum-org-screenshot.png)
-
-[Ethereum.org](/) 是以太坊社区的重要教育资源，也是翻译计划的主要关注点。 鉴于其规模、范围和覆盖面，该网站是需要翻译的最具影响力的网站，我们建议从这里开始！
-
-参与方式：
-
-- 加入 [Crowdin 中的 ethereum.org 翻译项目](https://crowdin.com/project/ethereum-org/invite)
-
-#### 以太坊质押启动板 {#ethereum-staking-launchpad}
-
-![](./launchpad-screenshot.png)
-
-[质押启动板](https://launchpad.ethereum.org/en/)使以太坊用户能够通过质押以太币成为验证者，并帮助保护以太坊的未来。
-
-参与方式：
-
-- 访问[启动板翻译页面](/contributing/translation-program/launchpad-translations/)
-- 加入 [Crowdin 中的启动板翻译项目](https://crowdin.com/project/ethereum-staking-launchpad)
-
-#### 以太坊基金会博客 {#ethereum-foundation-blog}
-
-![](./blog-screenshot.png)
-
-[以太坊基金会博客](https://blog.ethereum.org/)是许多以太坊基金会支持的团队的主要发布工具，是以太坊社区公告、更新、报告、综述和其他公共通信内容的来源。
-
-参与方式：
-
-- 访问[博客翻译页面](/contributing/translation-program/blog-translations/)
-- 加入 [Crowdin 中的博客翻译项目](https://crowdin.com/project/ethereum-foundation-blog)
+我们一直在考虑一些创新方式来奖励我们的贡献者，敬请关注！
 
 ### 指南和资源 {#guides-and-resources}
 
@@ -111,7 +83,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 ## 开始你自己的翻译计划 {#starting-a-translation-program}
 
-我们致力于将以太坊内容翻译成尽可能多的语言，并向所有人提供教育内容。 我们对翻译很重视，希望帮助其他以太坊项目组织、管理和改进他们自己的翻译工作。
+我们致力于将以太坊内容翻译成尽可能多的语言，并向所有人提供教育内容。 我们对翻译很重视，希望帮助其他以太坊项目组织、管理和改进他们的翻译工作。
 
 出于这个原因，我们制作了一本[翻译计划手册](/contributing/translation-program/playbook/)，其中包含我们在翻译 ethereum.org 的过程中获得的一些技巧和最佳做法。
 

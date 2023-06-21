@@ -24,7 +24,7 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
   }
 
   return (
-    <Link className={className} to={gitHubRepo.url} hideArrow={true}>
+    <Link className={className} to={gitHubRepo.url} hideArrow>
       <Flex
         background="lightBorder"
         textDecoration="none"
@@ -34,8 +34,8 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
         float="right"
         color="text"
         _hover={{
-          boxShadow: "0 0 1px var(--eth-colors-primary)",
-          path: { fill: "primary" },
+          boxShadow: "0 0 1px var(--eth-colors-primary-base)",
+          path: { fill: "primary.base" },
         }}
       >
         {hideStars ? (

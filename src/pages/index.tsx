@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
   chakra,
@@ -37,7 +37,6 @@ import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
-import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -84,7 +83,7 @@ const ContentBox = (props: ChildOnlyProp) => (
 
 const StyledActionCard = chakra(ActionCard, {
   baseStyle: {
-    background: "background",
+    background: "background.base",
     borderRadius: "sm",
     border: "1px",
     borderColor: "text",
@@ -93,8 +92,6 @@ const StyledActionCard = chakra(ActionCard, {
 })
 
 const StyledCodeModal = chakra(CodeModal)
-
-const StyledCalloutBanner = chakra(CalloutBanner)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
@@ -178,9 +175,12 @@ const PageHeader = () => (
     <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>
       <Translation id="page-index-description" />
     </Text>
-    <ButtonLink variant="outline" to="/learn/">
-      <Translation id="page-index-title-button" />
-    </ButtonLink>
+    <ButtonLinkRow
+      firstButton={{
+        to: "/learn/",
+        child: <Translation id="page-index-title-button" />,
+      }}
+    />
   </Flex>
 )
 
@@ -197,8 +197,6 @@ const HomePage = ({
     setActiveCode(id)
     setModalOpen(true)
   }
-
-  useConsoleEasterEgg()
 
   const cards = [
     {
@@ -237,7 +235,7 @@ const HomePage = ({
       alt: t("page-index-tout-upgrades-image-alt"),
       title: t("page-index-tout-upgrades-title"),
       description: t("page-index-tout-upgrades-description"),
-      to: "/upgrades/",
+      to: "/roadmap/",
     },
     {
       image: getImage(data.infrastructurefixed),
@@ -488,7 +486,6 @@ const HomePage = ({
               content={codeExamples}
               clickHandler={toggleCodeExample}
               headerKey="page-index-developers-code-examples"
-              icon="code"
               isCode
               border="1px"
               borderColor="text"
@@ -579,7 +576,7 @@ const HomePage = ({
             )
           })}
         </CardContainer>
-        <StyledCalloutBanner
+        <CalloutBanner
           titleKey={"page-index-contribution-banner-title"}
           descriptionKey={"page-index-contribution-banner-description"}
           image={getImage(data.finance)!}
@@ -602,16 +599,16 @@ const HomePage = ({
                     as={FaGithub}
                     color="text"
                     fontSize="2xl"
-                    _hover={{ color: "primary" }}
-                    _active={{ color: "primary" }}
-                    _focus={{ color: "primary" }}
+                    _hover={{ color: "primary.base" }}
+                    _active={{ color: "primary.base" }}
+                    _focus={{ color: "primary.base" }}
                   />
                   GitHub
                 </>
               ),
             }}
           />
-        </StyledCalloutBanner>
+        </CalloutBanner>
       </ContentBox>
     </Flex>
   )

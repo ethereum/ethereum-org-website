@@ -1,132 +1,90 @@
 ---
 title: 翻訳プログラム
 lang: ja
-description: ethereum.orgサイトの翻訳プログラムに貢献する方法
+description: ethereum.org翻訳プログラムについて
 ---
 
 # 翻訳プログラム {#translation-program}
 
-翻訳プログラムは、世界中の何十億もの英語を話さない人たちが、よりアクセスしやすくなるように、ethereum.org をさまざまな言語に翻訳するための共同作業です。
+翻訳プログラムは、世界中の何十億もの英語を話さない人たちが、利用できるよう ethereum.org をさまざまな言語に翻訳するコラボレーションです。
 
-これまでの進捗:
+![](./enterprise-eth.png)
 
-- **2,000 人**以上の翻訳者
-- **37** 言語に対応
-- **190 万語**の翻訳(2021 年)
+## 翻訳への協力 {#help-us-translate}
 
-ウェブサイトを自分の言語に翻訳して、グローバルな Ethereum コミュニティの発展に貢献したいとお考えの方は、以下の手順に従ってください。
+ethereum.org 翻訳プログラムはオープンで、誰でも貢献できます。
 
-<InfoBanner shouldCenter emoji=":tada:">
-  申請して、POAPトークンを受け取りましょう! 2021年にethereum.orgの翻訳をした方には、特別なPOAPが準備されています。<a href="/contributing/#poap"> POAPについての詳細</a>
-</InfoBanner>
+1. Crowdin アカウントにログイン、またはサインアップします。
+2. 貢献したい言語を選択します。
+3. 始める前に、まず [翻訳方法](/contributing/translation-program/how-to-translate/)ガイドで Crowdin の使い方を学び、[翻訳スタイルガイド](/contributing/translation-program/translators-guide/)でコツと最善の方法を確認します。
+4. 機械翻訳は承認されません。
+5. すべての翻訳は、サイトに追加される前にレビューされるため、翻訳が掲載されるまで若干のライムラグがあります。
 
-## ミッションとビジョン {#mission-and-vision}
+_[ethereum.org の Discord](/discord/)に参加すると、翻訳でのコラボレーション、質問、フィードバックやアイデアの共有、または翻訳グループへの参加ができます。_
 
-Ethereum コミュニティはグローバルで包括的であることを目指していますが、そのコンテンツの多くは英語を話す人向けになっており、世界 60 億人の英語を話さない人たちを考慮していません。 ethereum.org が世界中のコミュニティにとって Ethereum へのポータルとして機能するためには、英語を話さない人に母国語で Ethereum のコンテンツを提供することが不可欠だと考えています。
+<ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
+  翻訳を始める
+</ButtonLink>
 
-その中で、ethereum.org 翻訳プログラムは、ethereum.org やその他の Ethereum コンテンツをできるだけ多くの言語に翻訳することで、誰もが Ethereum にアクセスできるようにすることを目的としています。
+## 翻訳プログラムについて {#about-us}
 
-**私たちのミッション**
+イーサリアムコミュニティはグローバルで包括的であることを目指していますが、そのコンテンツの多くは英語を話す人向けになっており、世界 60 億人の英語を話さない人たちにとって、排他的なものになっています。 ethereum.org が世界中のコミュニティのイーサリアムへのポータルとして機能するためには、英語を話さない人に母国語でイーサリアムのコンテンツを提供することが不可欠だと考えています。
 
-- 世界中の訪問者が母国語で Ethereum について学べるよう、サイトの翻訳版の提供
-- グローバルな Ethereum コミュニティへのより多くのメンバーの参加の促進
-- Ethereum の情報や知識を、よりアクセスしやすく、より包括的に共有
-- コミュニティメンバーが Ethereum に翻訳を提供し、エコシステムに足跡を残すことを実現
-- エコシステムに参加しようとしている熱心な貢献者を特定し、連絡を取り、ガイダンスの提供
+ethereum.org 翻訳プログラムは、ethereum.org やその他のイーサリアムコンテンツをできるだけ多くの言語に翻訳することで、誰もがイーサリアムを利用できるようにすることを目的としています。
 
-**私たちのビジョン**
+ethereum.org 翻訳プログラムの詳細については、[ミッションとビジョン](/contributing/translation-program/mission-and-vision)を参照してください。
 
-- できるだけ多くの国や地域の Ethereum コミュニティのメンバーのために、必要なコンテンツの翻訳
-- 言語を超えた知識の共有をサポートし、より多くの情報と知識を持つ Ethereum コミュニティの構築
-- 英語を話さない人がエコシステムに参加することを妨げる言語の障壁を取り除くことで、Ethereum の包括性とアクセシビリティの向上
+### これまでの進捗 {#our-progress}
 
-## 翻訳方法 {#how-to-translate}
+- [**4,700 人**以上の翻訳者](/contributing/translation-program/contributors/)
+- [**52**言語に対応](/languages/)
+- [**300 万**語翻訳(2022 年時点)](/contributing/translation-program/acknowledgements/)
 
-1. **[Crowdin でのプロジェクト参加](https://crowdin.com/project/ethereum-org/invite)**  
-   Crowdin のアカウントにログイン、まだアカウントをお持ちでない場合はサインアップする必要があります。 サインアップに必要なのは、E メールとパスワードだけです。
+<TranslationChartImage />
 
-2. **翻訳したい言語を開き、作業するドキュメントを検索**  
-   ウェブサイトのコンテンツは、いくつかのドキュメントと言語のバージョンに分かれています。 各ドキュメントの進捗状況は右側で確認できます。翻訳の進捗が 100％以下の場合は、ぜひご協力ください!
+### 謝辞 {#acknowledgements}
 
-   あなたの言語が表示されてない場合は、 [問題を報告](https://github.com/ethereum/ethereum-org-website/issues/new/choose)してください
+ethereum.org は、何千人ものコミュニティメンバーによって翻訳されており、翻訳プログラムに欠かせない重要な役割を担っています。 翻訳者の皆様に感謝すると同時に、翻訳者の皆様のキャリアパスをサポートしたいと考えています。 以下に、翻訳者の皆様への感謝の形をいくつか紹介します。
 
-   ![Crowdin上の翻訳されたファイルと未翻訳のファイル](../../../../contributing/translation-program/crowdin-files.png)
+#### 証明書 {#certificate}
 
-   コンテンツのバージョンについての注意点: 追加されたコンテンツの翻訳が遅れることを防ぐために、Crowdin 内でバージョン管理を行っています。 言語をチェックするとき、例えば  [フィリピン語](https://crowdin.com/project/ethereum-org/fil#)  をクリックすると、サイトのバージョンごとのフォルダ（v2.0、v2.1 など）が表示されます。
+翻訳プログラムに貢献し、5000 語以上の翻訳が承認された場合、ethereum.org 翻訳者証明書受け取ることができます。 [証明書の詳細](/contributing/translation-program/acknowledgements/#certificate)
 
-   バージョンの低いものから順にサイトに更新されていきますので、まずはバージョンの低いものから翻訳していただき、徐々にバージョンを上げていってください(v.2.0 → v.2.1 → v.2.2 → ⋯)。
+#### 出席証明プロトコル(POAP) {#poaps}
 
-   [ethereum.org コンテンツのバージョンについてはこちらをご覧ください。](/contributing/translation-program/content-versions/)
+翻訳にご協力いただいた全員に、ethereum.org 翻訳プログラムへの貢献を証する、出席証明プロトコル(POAP)を発行します。 [出席証明プロトコル(POAP)の詳細](/contributing/translation-program/acknowledgements/#poap)
 
-3. **翻訳**  
-   翻訳したいファイルを選択すると、オンラインエディターが開きます。 Crowdin を使ったことがない方は、このクイックガイドで基本的なことを確認してください。
+#### 翻訳者の表彰 {#translator-acknowledgements}
 
-   ![Crowdinオンラインエディター](../../../../contributing/translation-program/online-editor.png)
+[リーダーボード](/contributing/translation-program/acknowledgements/)でトップの翻訳者を公表します。また、[翻訳プログラムへのすべての貢献者のリストを公開しています](/contributing/translation-program/contributors/)。
 
-   **_1 - 左サイドバー_**
+#### 報酬 {#rewards}
 
-   - Untranslated (赤) - まだ翻訳されていないテキスト。 これらは、翻訳が必要な文字列です。
-   - Translated (緑) - 翻訳はされていますが、まだレビューされていないテキスト。 別の翻訳を提案したり、エディタの「+」と「-」ボタンを使って、既存の翻訳への投票が自由にできます。
-   - Approved (チェックマーク) - すでにレビューが完了し、現在ウェブサイトに掲載されているテキスト。
+これまで、アクティブな貢献者には、[開発者会議](https://devcon.org/en/)や[Devconnect](https://devconnect.org/)などのイーサリアム会議のチケットや、ethereum.org の限定グッズを提供してきました。
 
-   また、上部のボタンを使って、特定の文字列を検索したり、ステータスでフィルタリングしたり、表示を変更したりすることができます。
+貢献者に報いることができる、新しいイノベーティブな方法を常に検討しています。
 
-   **_2 - エディターエリア_**
+### ガイドとリソース {#guides-and-resources}
 
-   メインの翻訳エリア - 原文が上部に表示され、追加でコンテキストやスクリーンショットがある場合はそれらも表示されます。 新しい翻訳を提案するには、「Enter translation here」の欄に翻訳を入力し、[Save]をクリックします。
+翻訳プログラムに貢献している、または参加を検討中の方は、以下の翻訳ガイドを参照してください。
 
-   また、このセクションでは、文字列の既存の翻訳や他の言語への翻訳のほか、翻訳メモリの一致や機械翻訳の候補も見つけることができます。
+- [翻訳スタイルガイド](/contributing/translation-program/translators-guide/) _– ethereum.org 翻訳者向けの説明とヒント_
+- [翻訳に関するよくある質問](/contributing/translation-program/faq/) _– ethereum.org 翻訳プログラムに関するよくある質問とその回答_
+- [Crowdin オンラインエディタガイド](https://support.crowdin.com/online-editor/) _– Crowdin オンラインエディタと高度な機能を使用するための詳細なガイド_
+- [コンテンツバケット](/contributing/translation-program/content-buckets/) _– ethereum.org のコンテンツバケットに含まれているページ_
 
-   **_3 - 右サイドバー_**
+他の有用な翻訳ツール、翻訳コミュニティ、翻訳プログラムのブログ記事については、 [リソースページ](/contributing/translation-program/resources/)を参照してください。
 
-   ここには、コメントや翻訳メモリのエントリ、用語集のエントリがあります。 デフォルトの表示では、コメントが表示され、翻訳者がコミュニケーションを取ったり、問題を提起したり、間違った翻訳を報告したりすることができます。
+## お問い合わせ {#get-in-touch}
 
-   また、上部のボタンで、既存の翻訳を検索できる「翻訳メモリ」や、重要な用語の説明や標準的な翻訳を収録した「用語集」に切り替えることができます。
-
-   詳細をご希望の場合は、 [Crowdin オンラインエディターの使用方法に関するドキュメント](https://support.crowdin.com/online-editor/)をご参照ください。
-
-4. **レビュープロセス**  
-   翻訳が完了したら(コンテンツバージョンの全ファイルが 100％と表示)、プロの翻訳サービスがコンテンツをレビューします。またレビューの際は、編集する場合もあります。 レビューが完了(レビューの進捗率が 100％)したら、ウェブサイトに追加されます。
-
-何かご質問がある場合や 私たちのチームや他の翻訳者とコラボレーションしたい場合は、 [ethereum.org Discord server](https://discord.gg/6WX7E97)の#translation チャネルに投稿してください。
+何かご質問がある場合や 私たちのチームや他の翻訳者とコラボレーションしたい場合は、 [ethereum.org の Discord サーバー](https://discord.gg/6WX7E97)の#translation チャネルに投稿してください。
 
 または、translations@ethereum.orgまでご連絡ください
 
-ethereum.org 翻訳プログラムにご参加いただき、ありがとうございます。
+## あなた自身の翻訳プログラムの開始 {#starting-a-translation-program}
 
-<InfoBanner shouldCenter emoji=":information_source:">
-  翻訳のお手伝いをされている方は、「翻訳に関するFAQ」に役立つ情報が掲載されていますので、ご一読ください。 
-  {" "}<a href="/contributing/translation-program/faq/">ethereum.orgの翻訳に関するFAQ</a>
-</InfoBanner>
+私たちはイーサリアムコンテンツをできるだけ多くの言語に翻訳し、教育コンテンツを誰にでも利用できるようにすることに専念しています。 翻訳に焦点を置くのと同様に、他のイーサリアムプロジェクトが、翻訳活動を組織、管理、改善する支援を行いたいと考えています。
 
-## リソース {#resources}
+このため、ethereum.org を翻訳する過程で得たきた、ヒントと最善の方法に関する[翻訳プログラムプレイブック](/contributing/translation-program/playbook/)を作成しました。
 
-**ツール**
-
-- [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– 技術用語の標準的な訳語を検索・確認するのに便利なポータル_
-- [Linguee](https://www.linguee.com/) _– 単語やフレーズでの検索が可能な翻訳・辞書検索エンジン_
-- [Proz term search](https://www.proz.com/search/) _– 専門用語の翻訳辞書・用語集のデータベース_
-- [Eurotermbank](https://www.eurotermbank.com/) _– 42 言語の欧州用語集_
-
-**コミュニティ**
-
-- [Language-specific Translation Groups](https://discord.gg/6WX7E97) _– ethereum.org の翻訳者を翻訳グループにつなげるイニシアティブ_
-- [中国語翻訳者グループ](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– 中国語翻訳者間の調整を容易にするノーションページ_
-
-**バージョンの概要**
-
-- [コンテンツバージョン](/contributing/translation-program/content-versions/) _– ethereum.org の各コンテンツバージョンに含まれてるページ_
-
-**最新情報**
-
-最新の翻訳プログラムの進捗状況については、[イーサリアム財団ブログ](https://blog.ethereum.org/)をご覧ください。
-
-- [2020 年 12 月マイルストーンの更新](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [2020 年 7 月のマイルストーンの更新](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [2019 年 8 月翻訳プログラム始動](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
-
-## Ethereum ステーキング・ローンチパッドの翻訳 {#staking-launchpad}
-
-翻訳コミュニティでは、 [ステーキング・ローンチパッド](https://launchpad.ethereum.org/en/) の翻訳にも取り組んでいます。 これにより、誰でも Ethereum のバリデータとして設定でき、Ethereum ネットワークを保護することができます。 ローンチパッドは現在 17 言語に対応しています。
-
-ご興味があれば、[Crowdin の Ethereum ステーキングローンチパッドの翻訳プロジェクトにご参加ください](https://crowdin.com/project/ethereum-staking-launchpad)。 Crowdin で利用できない言語がある場合は、GitHub で[問題を作成](https://github.com/ethereum/staking-launchpad/issues/new)して、新しい言語の追加をリクエストすることができます。
+コラボレーションのご要望、翻訳リソースの利用、 またはプレイブックについてのご意見があれば、 translations@ethereum.orgまでご連絡ください。

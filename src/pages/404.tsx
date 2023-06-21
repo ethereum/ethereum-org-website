@@ -1,19 +1,13 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
+import { Box, Flex } from "@chakra-ui/react"
 
 import Link from "../components/Link"
 import Translation from "../components/Translation"
 
-import { Page, Content } from "../components/SharedStyledComponents"
-
-const StyledPage = styled(Page)`
-  margin-top: 4rem;
-`
-
 const NotFoundPage = (props: PageProps) => (
-  <StyledPage>
-    <Content>
+  <Flex flexDir="column" align="center" w="full" mt={16} mb={0} mx="auto">
+    <Box py={4} px={8} w="full">
       <h1>
         <Translation id="we-couldnt-find-that-page" />
       </h1>
@@ -24,8 +18,8 @@ const NotFoundPage = (props: PageProps) => (
         </Link>
         .
       </p>
-    </Content>
-  </StyledPage>
+    </Box>
+  </Flex>
 )
 
 export default NotFoundPage

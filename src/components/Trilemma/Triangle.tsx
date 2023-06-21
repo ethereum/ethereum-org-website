@@ -52,10 +52,11 @@ export const TriangleSVG: React.FC<IProps> = ({
     return (
       <chakra.circle
         fill={
-          (isActive && (isEthereum ? "primary300" : "primary")) || "background"
+          (isActive && (isEthereum ? "primary300" : "primary.base")) ||
+          "background.base"
         }
         _hover={{
-          fill: isActive ? "primary" : "primary100",
+          fill: isActive ? "primary.base" : "primary100",
         }}
         {...rest}
       />
@@ -113,7 +114,7 @@ export const TriangleSVG: React.FC<IProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       height="620px"
       viewBox="-100 100 850 915"
-      fill="background"
+      fill="background.base"
       width={{ base: "full", lg: "auto" }}
       my={{ base: -28, sm: -16, lg: 0 }}
       mt={{ lg: 32 }}
@@ -161,13 +162,13 @@ export const TriangleSVG: React.FC<IProps> = ({
         {t("ethereum")}
       </Text>
       <Text x="460" y="150" isActive={isDecentralized}>
-        {t("page-upgrades-vision-trilemma-text-1")}
+        {t("page-roadmap-vision-trilemma-text-1")}
       </Text>
       <Text x="-24" y="486" isActive={isSecure}>
-        {t("page-upgrades-vision-trilemma-text-2")}
+        {t("page-roadmap-vision-trilemma-text-2")}
       </Text>
       <Text x="540" y="835" isActive={isScalable}>
-        {t("page-upgrades-vision-trilemma-text-3")}
+        {t("page-roadmap-vision-trilemma-text-3")}
       </Text>
     </chakra.svg>
   )

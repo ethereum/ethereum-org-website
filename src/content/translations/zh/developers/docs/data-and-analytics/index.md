@@ -20,7 +20,7 @@ lang: zh
 
 许多[区块浏览器](/developers/docs/data-and-analytics/block-explorers/)提供 [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [应用程序接口](https://www.wikipedia.org/wiki/API)网关，它将使开发者可以看见区块上的实时数据、交易、矿工、帐户和其他链上活动。
 
-然后开发者可以处理和转换此数据，让他们的用户有独特的洞察力并与[区块链](/glossary/#blockchain)交互。 例如，[Etherscan](etherscan.io) 为每个 12 秒时隙提供了执行和共识数据。
+然后开发者可以处理和转换此数据，让他们的用户有独特的洞察力并与[区块链](/glossary/#blockchain)交互。 例如，[Etherscan](https://etherscan.io) 在每个 12 秒时隙都提供执行和共识数据。
 
 ## Graph {#the-graph}
 
@@ -30,7 +30,7 @@ lang: zh
 
 ## 客户端多样性
 
-[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)对于以太坊网络的整体健康很重要，因为它提供了对错误和漏洞利用的弹性。 现在有多个客户端多样性仪表板，包括 [clientdiversity.org](https://clientdiversity.org/)、[rated.network](rated.network)、[pool.invis.cloud](pool.invis.cloud)、[slashed.info](slahed.info) 和 [Ethernodes](https://ethernodes.org/)。
+[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)对于以太坊网络的整体健康很重要，因为它提供了对错误和漏洞利用的弹性。 现在有多个客户端多样性仪表板，包括 [clientdiversity.org](https://clientdiversity.org/)、[rated.network](rated.network)、[pool.invis.cloud](pool.invis.cloud)、[slashed.info](slashed.info) 和 [Ethernodes](https://ethernodes.org/)。
 
 ## Dune Analytics {#dune-analytics}
 

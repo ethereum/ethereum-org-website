@@ -151,7 +151,7 @@ Obviamente, existen algunos datos que hablan de la salud de la red. Estos son ba
 
 Las actualizaciones de Eth2 están todavía en desarrollo, pero vale la pena comentar algunos de los puntos de información que podrán proporcionarte los exploradores. De hecho, todos estos datos ya están disponibles para las redes de pruebas.
 
-Si no estás familiarizado con Eth2, revisa [nuestra visión general de las actualizaciones de Eth2](/upgrades/).
+Si no estás familiarizado con Eth2, revisa [nuestra visión general de las actualizaciones de Eth2](/roadmap/).
 
 ### Epoch {#epoch}
 

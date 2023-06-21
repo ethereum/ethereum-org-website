@@ -16,7 +16,7 @@ Optimistische Rollups laufen parallel zur Ethereum-Hauptkette auf Layer 2. Sie b
 
 Mit optimistischen Rollups werden Transaktionen als `Calldata` in die Ethereum-Hauptkette geschrieben, wodurch sie weiter optimiert werden, indem die Gaskosten reduziert werden.
 
-Da die Berechnung der langsame und teure Teil der Verwendung von Ethereum ist, können optimistische Rollups die Skalierbarkeit je nach Transaktion bis zu 10-100x verbessern. Diese Zahl wird mit der Einführung von [Shard-Chains](/upgrades/sharding) noch weiter steigen, da mehr Daten verfügbar sein werden, wenn eine Transaktion angefochten wird.
+Da die Berechnung der langsame und teure Teil der Verwendung von Ethereum ist, können optimistische Rollups die Skalierbarkeit je nach Transaktion bis zu 10-100x verbessern. Diese Zahl wird mit der Einführung von [Shard-Chains](/roadmap/danksharding) noch weiter steigen, da mehr Daten verfügbar sein werden, wenn eine Transaktion angefochten wird.
 
 ### Transaktionen bestreiten {#disputing-transactions}
 
@@ -52,7 +52,6 @@ Es gibt mehrere Implementierungen von optimistischen Rollups, die Sie in Ihre dA
 **Optimistische Rollups verstehen**
 
 - [Alles, was Sie über Optimistic Rollup wissen müssen](https://research.paradigm.xyz/rollups)
-- [EthHub zu optimistischen Rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Der Leitfaden zu Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Wie funktioniert das Rollup von Optimismus wirklich?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

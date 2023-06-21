@@ -5,16 +5,16 @@ lang: zh-tw
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../assets/infrastructure_transparent.png
+image: ../../../../assets/infrastructure_transparent.png
 alt: 全息投影顯示的以太幣標誌。
 summaryPoint1: 一種用以太坊資產來呈現任何獨特事物的方式。
 summaryPoint2: 非同質化代幣賦予了內容創作者前所未有的強大力量。
-summaryPoint3: 由以太坊區塊鏈的智能合約提供支援。
+summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援。
 ---
 
 非同質化代幣目前正席捲全球數位藝術及收藏界。 新加密貨幣的巨額銷售，正在使數位藝術家的生活發生變化。 名人明星目睹與粉絲互動的新方式，也相繼加入。 但數位藝術品只是非同質化代幣的用途之一。 事實上，非同質化代幣可以用來代表所有獨特資產，如數位或實體世界中某項物品的契據。
 
-如果安迪沃荷誕生在 90 年代後期，說不定會將他最著名的作品《康寶湯罐頭》製作成非同質化代幣。 饒舌巨星肯爺在以太坊上發行 Yeezy 系列潮鞋，也只是時間早晚的問題。 甚至有朝一日或許還可以用非同質化代幣來證明您對汽車的所有權。
+如果安迪沃荷誕生在 90 年代後期，說不定會將他最著名的作品《康寶湯罐頭》製作成非同質化代幣。 Nike 遲早也會在以太坊上推出喬丹系列運動鞋。 甚至有朝一日或許還可以用非同質化代幣來證明您對汽車的所有權。
 
 ## 什麼是非同質化代幣？ {#what-are-nfts}
 
@@ -304,7 +304,7 @@ summaryPoint3: 由以太坊區塊鏈的智能合約提供支援。
 
 ## 非同質化代幣的環境影響 {#environmental-impact-nfts}
 
-創造以及轉移非同質化代幣都僅是以太坊交易 — 鑄造、購買、交換或是和非同質化代幣互動都並未直接消耗能源。 自從[合併](/upgrades/merge)之後，以太坊成為一個低能耗區塊鏈，代表使用非同質化代幣對環境的影響是可以忽略的。
+創造以及轉移非同質化代幣都僅是以太坊交易 — 鑄造、購買、交換或是和非同質化代幣互動都並未直接消耗能源。 自從[合併](/roadmap/merge)之後，以太坊成為一條低能耗區塊鏈，代表使用非同質化代幣對環境的影響是可以忽略的。
 
 [更多關於以太坊能耗的資訊](/energy-consumption/)。
 
@@ -341,7 +341,7 @@ summaryPoint3: 由以太坊區塊鏈的智能合約提供支援。
 
 ## 建構非同質化代幣 {#build-with-nfts}
 
-大多數非同質化代幣都是使用統一的標準建構，即 [ERC-721](/developers/docs/standards/tokens/erc-721/)。 然而，您可能也想了解其他標準。 [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) 標準適用於半同質化代幣，這種代幣在電玩領域尤其有用。 而最近提出的 [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) 則可以讓非同質化代幣的鑄造更有效率， 此標準可讓您在一筆交易中隨心所欲地鑄造任意數量的代幣！
+大多數非同質化代幣都是使用統一的標準建構，即 [ERC-721](/developers/docs/standards/tokens/erc-721/)。 然而，您可能也想了解其他標準。 [ERC-1155](/developers/docs/standards/tokens/erc-1155/) 標準適用於半同質化代幣，這種代幣在遊戲領域尤其有用。 而最近提出的 [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) 則可以讓非同質化代幣的鑄造更有效率， 此標準可讓您在一筆交易中隨心所欲地鑄造任意數量的代幣！
 
 ## 延伸閱讀 {#further-reading}
 

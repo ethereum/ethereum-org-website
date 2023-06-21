@@ -3,7 +3,7 @@ title: Ethereum roadmap
 description: The path to more scalability, security and sustainability for Ethereum.
 lang: en
 template: roadmap
-image: ../../assets/upgrades/merge.png
+image: ../../assets/roadmap/roadmap-main.png
 alt: "Ethereum roadmap"
 summaryPoints:
 buttons:
@@ -59,7 +59,7 @@ Ethereum gets regular upgrades that enhance its scalability, security, or sustai
 
 <RoadmapImageContent title="How the roadmap is defined">
 
-The roadmap is mostly the result of years of work by researchers and developers - because the protocol is very technical - but any motivated person can participate. Ideas usually start off as discussions on a forum such as [ethresear.ch](https://github.com/ethereum/ethereum-org-website/blob/1c5502a0abaa746512323bbce0fbf1093387a724/src/content/roadmap/ethresear.ch), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) or the Eth R&D discord server. They may be responses to new vulnerabilities that are discovered, suggestions from organizations working in the application layer (such as dapps and exchanges) or from known frictions for end users (such as costs or transaction speeds). When these ideas mature, they can be proposed as [Ethereum Improvement Proposals](https://eips.ethereum.org/). This is all done in public so that anyone from the community can weigh in at any time.
+The roadmap is mostly the result of years of work by researchers and developers - because the protocol is very technical - but any motivated person can participate. Ideas usually start off as discussions on a forum such as [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) or the Eth R&D discord server. They may be responses to new vulnerabilities that are discovered, suggestions from organizations working in the application layer (such as dapps and exchanges) or from known frictions for end users (such as costs or transaction speeds). When these ideas mature, they can be proposed as [Ethereum Improvement Proposals](https://eips.ethereum.org/). This is all done in public so that anyone from the community can weigh in at any time.
 
 [More on Ethereum governance](/governance/)
 
@@ -100,3 +100,18 @@ Upgrades tend not to impact end-users except by providing better user-experience
 - The Splurge: other upgrades that don't fit well into the previous categories.
 
 We decided not to use this terminology because we wanted to use a simpler and more user-centric model. Although we use user-centric language, the vision remains the same as the one proposed by Vitalik.
+
+## What about sharding? {#what-about-sharding}
+
+Sharding is splitting up the Ethereum blockchain so that subsets of validators are only responsible for a fraction of the total data. This was originally intended to be the way for Ethereum to scale. However, layer 2 rollups have developed much faster than expected and have provided a lot of scaling already, and will provide much more after Proto-Danksharding is implemented. This means "shard chains" are no longer needed and have been dropped from the roadmap.
+
+## Looking for specific technical upgrades? {#looking-for-specific-technical-upgrades}
+
+- [Danksharding](/roadmap/danksharding) - Danksharding makes layer 2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.
+- [Staking withdrawals](/staking/withdrawals) - The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum, allowing people to unlock their staked ETH.
+- [Single slot finality](/roadmap/single-slot-finality) - Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This is more convenient for apps and much more difficult to attack.
+- [Proposer-builder separation](/roadmap/pbs) - Splitting the block building and block proposal tasks across separate validators creates a fairer, more censorship resistant and efficient way for Ethereum to come to consensus.
+- [Secret leader election](/roadmap/secret-leader-election) - Clever cryptography can be used to ensure that the identity of the current block proposer is not made public, protecting them from certain types of attack.
+- [Account abstraction](/roadmap/account-abstraction) - Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.
+- [Verkle trees](/roadmap/verkle-trees) - Verkle trees are a data structure that can be used to enable stateless clients on Ethereum. These “stateless” clients will require a tiny amount of storage space but will still be able to verify new blocks.
+- [Statelessness](/roadmap/statelessness) - stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today’s costs.

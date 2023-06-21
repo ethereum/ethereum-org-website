@@ -51,19 +51,19 @@ const Trilemma: React.FC<IProps> = () => {
         }}
       >
         <Heading fontSize="2rem" mt={0}>
-          <Translation id="page-upgrades-vision-trilemma-h2" />
+          <Translation id="page-roadmap-vision-trilemma-h2" />
         </Heading>
         <Text>
-          <Translation id="page-upgrades-vision-trilemma-p" />
+          <Translation id="page-roadmap-vision-trilemma-p" />
         </Text>
         <Text>
-          <Translation id="page-upgrades-vision-trilemma-p-1" />
+          <Translation id="page-roadmap-vision-trilemma-p-1" />
         </Text>
         <Text>
-          <Translation id="page-upgrades-vision-trilemma-p-2" />
+          <Translation id="page-roadmap-vision-trilemma-p-2" />
         </Text>
         <Text fontWeight={600} hideFrom={lgBp}>
-          <Translation id="page-upgrades-vision-trilemma-modal-tip" />:
+          <Translation id="page-roadmap-vision-trilemma-modal-tip" />:
         </Text>
         <Card {...cardDetail} mt={8} minH="300px" hideBelow={lgBp} />
       </Flex>
@@ -77,7 +77,7 @@ const Trilemma: React.FC<IProps> = () => {
           <DrawerContent
             border="none"
             borderTopRadius="1rem"
-            background="background"
+            background="background.base"
           >
             <Card
               {...cardDetail}

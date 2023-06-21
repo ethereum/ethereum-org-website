@@ -30,9 +30,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Intermediate articles {#intermediate-articles}
 
-- [Rust-Web3 Documentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## Advanced use patterns {#advanced-use-patterns}
 
 - [pwasm_ethereum externs library to interact with Ethereum-like network](https://github.com/openethereum/pwasm-ethereum)
@@ -50,11 +47,12 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API reference_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Solidity Smart Contracts unit test harness using the native Parity Client EVM._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust Ethereum Virtual Machine Implementation_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust implementation of Web3.js library_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart contract in Rust_
 - [Foundry](https://github.com/gakonst/foundry)- _Toolkit for Ethereum application development_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum library and wallet implementation_
 - [SewUp](https://github.com/second-state/SewUp) - _A library to help you build your Ethereum webassembly contract with Rust and just like develop in a common backend_
+- [Substreams](https://github.com/streamingfast/substreams) - _Parallelized blockchain data indexing technology_
+- [Reth](https://github.com/paradigmxyz/reth) Reth (short for Rust Ethereum, pronunciation) is a new Ethereum full-node implementation
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 

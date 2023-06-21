@@ -37,7 +37,7 @@ Jika Anda bukan seorang pengembang, untuk tahu dari mana memulai di Ethereum bis
 ### Tulis konten tentang Ethereum {#write-content}
 
 - Ethereum membutuhkan para penulis yang baik yang dapat menjelaskan nilainya dalam bahasa yang sederhana
-- Tidak siap untuk memublikasikan artikel Anda sendiri? Pertimbangkan untuk berkontribusi terhadap konten yang telah ada dalam sumber daya komunitas seperti [EthHub](https://docs.ethhub.io/), atau ajukan konten baru untuk ethereum.org!
+- Tidak siap untuk memublikasikan artikel Anda sendiri? Pertimbangkan untuk berkontribusi terhadap konten yang telah ada dalam sumber daya komunitas seperti atau ajukan konten baru untuk ethereum.org!
 
 ### Tawarkan diri untuk membuat catatan untuk panggilan komunitas {#take-notes}
 

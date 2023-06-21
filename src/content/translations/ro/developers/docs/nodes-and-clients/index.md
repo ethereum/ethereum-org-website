@@ -243,9 +243,7 @@ Ca orice altă configurație, aceasta poate fi definită cu ajutorul steguleţul
 
 ## Clienți de consens (anterior clienți „Eth2”) {#consensus-clients}
 
-There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[View consensus clients](/upgrades/get-involved/#clients).
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | Client                                                      | Limbaj     | Sisteme de operare    | Rețele                                 |
 | ----------------------------------------------------------- | ---------- | --------------------- | -------------------------------------- |
@@ -308,7 +306,6 @@ There is a lot of information about Ethereum clients on the internet. Here are f
 
 - [Ethereum 101 - Partea 2 - Înțelegerea nodurilor](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 februarie 2019_
 - [Rularea de noduri Ethereum complete: Un ghid pentru cei nu prea motivați](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 noiembrie 2019_
-- [Executarea unui nod Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, actualizat frecvent_
 - [Analiza cerințelor de hardware pentru a fi un nod Ethereum validat complet](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 septembrie 2018_
 - [Rularea unui nod Hyperledger Besu pe Mainnet-ul Ethereum: avantaje, cerințe și configurare](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 mai 2020_
 

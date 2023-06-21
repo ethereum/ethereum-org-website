@@ -151,7 +151,7 @@ Tentu ada beberapa data yang berbicara tentang kesehatan jaringan. Ini cukup spe
 
 Peningkatan skalabilitas masih dalam pengembangan, tetapi rasanya layak membicarakan tentang beberapa poin data yang dapat disediakan oleh penjelajah. Sebenarnya, semua data ini tersedia saat ini dalam testnet.
 
-Jika Anda belum terbiasa dengan road map, lihat [gambaran umum kami tentang peningkatan Ethereum](/upgrades/).
+Jika Anda belum terbiasa dengan road map, lihat [gambaran umum kami tentang peningkatan Ethereum](/roadmap/).
 
 ### Epoch {#epoch}
 

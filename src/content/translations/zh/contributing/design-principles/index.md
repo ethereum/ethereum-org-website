@@ -90,4 +90,4 @@ description: Ethereum.org 设计和内容决策背后的原则
 
 虽然这些原则主要体现在 ethereum.org 网站上，但我们希望其中许多原则能够代表以太坊生态系统的整体价值（例如，您可以看到[以太坊原则白皮书](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)的影响）。 也许您甚至想将其中一些原则运用到您自己的项目中！
 
-在 [Discord 服务器](https://discord.gg/CetY6Y4)上或通过[创建问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)，让我们知道你的想法。
+在 [Discord 服务器](https://discord.gg/CetY6Y4)上或通过[创建问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request)，让我们知道你的想法。

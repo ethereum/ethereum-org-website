@@ -9,7 +9,7 @@ tags:
   - "contratos inteligentes"
   - "primeiros passos"
   - "implementação"
-skill: iniciante
+skill: beginner
 lang: pt-br
 published: 2021-03-31
 ---
@@ -231,7 +231,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Para realmente vinculá-los a nosso código, vamos fazer referência a essas variáveis em nosso arquivo `hardhat.config.js` no passo 13.
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
 </InfoBanner>
 

@@ -409,11 +409,21 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       {
         content: <Translation id="page-run-a-node-hero-cta-1" />,
         toId: "what-is-a-node",
+        matomo: {
+          eventCategory: "run a node hero buttons",
+          eventAction: "click",
+          eventName: "learn more",
+        },
       },
       {
         content: <Translation id="page-run-a-node-hero-cta-2" />,
         toId: "getting-started",
         variant: "outline",
+        matomo: {
+          eventCategory: "run a node hero buttons",
+          eventAction: "click",
+          eventName: "lets dive in",
+        },
       },
     ],
   }

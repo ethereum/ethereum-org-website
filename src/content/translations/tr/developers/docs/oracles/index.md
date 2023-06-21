@@ -347,8 +347,8 @@ contract Oracle {
   )
   public
   {
-    uint lenght = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
-    Request storage r = requests[lenght-1];
+    uint length = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
+    Request storage r = requests[length-1];
 
     // Hardcoded oracles address
     r.quorum[address(0x6c2339b46F41a06f09CA0051ddAD54D1e582bA77)] = 1;
@@ -426,7 +426,6 @@ _Bir Kâhin akıllı sözleşmesi oluşturmaya ilişkin daha fazla belgeye sahip
 **Makaleler**
 
 - [Bir Blok Zinciri Kâhini nedir?](https://chain.link/education/blockchain-oracles) - _Chainlink_
-- [Kâhinler](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
 - [Blok Zinciri Kâhini nedir?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
 - [Merkeziyetsiz Kâhinler: kapsamlı bir genel bakış](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Ethereum'da Blok Zinciri Kâhin Uygulaması](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_

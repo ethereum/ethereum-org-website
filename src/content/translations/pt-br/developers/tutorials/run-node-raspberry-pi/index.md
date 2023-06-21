@@ -8,7 +8,7 @@ tags:
   - "camada de consenso"
   - "nós"
 lang: pt-br
-skill: intermediário
+skill: intermediate
 published: 2020-05-07
 source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: formate seu Raspberry Pi 4, conecte um cabo de rede e um disco SSD, e ligue o dispositivo. Desta maneira, você terá transformado seu Raspberry Pi 4 em um nó completo do Ethereum, executando a camada de execução, ou a camada de consenso (Beacon Chain/validador)
 
-[Aprenda sobre as implementações no Ethereum](/upgrades/)
+[Aprenda sobre as implementações no Ethereum](/roadmap/)
 
 Um pouco de contexto primeiro. Como você sabe, tivemos alguns problemas de memória [[1]](/developers/tutorials/run-node-raspberry-pi/#references) com a imagem do Raspberry Pi 4, já que o Raspbian OS ainda está em 32 bits [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (pelo menos no nível de usuário). Embora preferíssemos manter o sistema operacional oficial, chegamos à conclusão que, para resolver esses problemas, precisamos migrar para um sistema operacional nativo de 64 bits.
 
-Além disso, [os clientes de consenso](/upgrades/get-involved/#clients) não suportam binários de 32 bits, então usar o sistema operacional Raspbian impediria que o Raspberry Pi executasse um nó da camada de consenso (e também a possibilidade de fazer staking).
+Além disso, os clientes de consenso não suportam binários de 32 bits, então usar o sistema operacional Raspbian impediria que o Raspberry Pi executasse um nó da camada de consenso (e também a possibilidade de fazer staking).
 
 Portanto, após vários testes, estamos lançando 2 imagens diferentes baseadas no Ubuntu 20.04 de 64 bits [[3]](/developers/tutorials/run-node-raspberry-pi/#references): edições para a camada de execução e para camada de consenso.
 

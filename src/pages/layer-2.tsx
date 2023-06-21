@@ -1,10 +1,26 @@
 // Libraries
-import React, { useEffect, useState } from "react"
+import React, { HTMLAttributes, ReactNode, useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import styled from "@emotion/styled"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import { Badge } from "@chakra-ui/react"
+import {
+  Badge,
+  Box,
+  BoxProps,
+  Center,
+  Divider,
+  DividerProps,
+  Flex,
+  GridItem,
+  Heading,
+  HeadingProps,
+  Icon,
+  ListItem,
+  SimpleGrid,
+  Text,
+  UnorderedList,
+  useBreakpointValue,
+} from "@chakra-ui/react"
 
 // Data
 import layer2Data from "../data/layer-2/layer-2.json"
@@ -14,7 +30,6 @@ import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
-import Icon from "../components/Icon"
 import InfoBanner from "../components/InfoBanner"
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
 import Layer2ProductCard from "../components/Layer2ProductCard"
@@ -26,7 +41,6 @@ import ProductList from "../components/ProductList"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
-import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 
 // Utils
 import { getData } from "../utils/cache"
@@ -36,153 +50,115 @@ import { getImage } from "../utils/image"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
+import { MdInfoOutline } from "react-icons/md"
+import { merge } from "lodash"
 
-// Styles
+type ChildOnlyType = {
+  children: ReactNode
+}
 
-const HeroBackground = styled.div`
-  width: 100%;
-  background: ${(props) => props.theme.colors.layer2Gradient};
-`
-
-const HeroContainer = styled.div`
-  width: 100%;
-`
-
-const Hero = styled(PageHero)`
-  padding-bottom: 2rem;
-`
-
-const PaddedContent = styled(Content)`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-`
-
-const LightGrayContent = styled(PaddedContent)`
-  background: ${(props) => props.theme.colors.layer2ContentSecondary};
-`
-
-const FlexContainer = styled.div<{ flexPercent: string | number }>`
-  flex: ${(props) => props.flexPercent}%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex: 100%;
+const SectionHeading = (props: HeadingProps) => {
+  const headingSpecificProps = {
+    fontSize: { base: "2xl", md: "2rem" },
+    fontWeight: 600,
+    lineHeight: 1.4,
   }
-`
 
-const Flex50 = styled.div`
-  flex: 50%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex: 100%;
+  if (props.as === "h3") {
+    headingSpecificProps.fontSize = { base: "xl", md: "2xl" }
   }
-`
 
-const StyledIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
-  opacity: 0.8;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    fill: ${({ theme }) => theme.colors.primary};
-  }
-`
+  const mergeProps = merge(headingSpecificProps, props)
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
+  return <Heading {...mergeProps} />
+}
 
-const InfoGrid = styled(CardGrid)`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-  gap: 1rem 2rem;
-  & > div {
-    height: fit-content;
-    &:hover {
-      transition: 0.1s;
-      transform: scale(1.01);
-      img {
-        transition: 0.1s;
-        transform: scale(1.1);
-      }
-    }
-  }
-`
+interface ContentBoxProps extends BoxProps {
+  isLightGrayBg?: boolean
+}
+const ContentBox: React.FC<ContentBoxProps> = ({ isLightGrayBg, ...rest }) => (
+  <Box
+    px={8}
+    py={12}
+    width="full"
+    {...(isLightGrayBg && { background: "layer2ContentSecondary" })}
+    {...rest}
+  />
+)
 
-const RollupCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: ${(props) => props.theme.colors.ednBackground};
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  padding: 1.5rem;
-  flex: 50%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex: 100%;
-  }
-`
+const StyledInfoIcon = () => (
+  <Icon
+    as={MdInfoOutline}
+    color="text"
+    mr={2}
+    opacity={0.8}
+    boxSize="full"
+    _hover={{ color: "primary.base" }}
+    _active={{ color: "primary.base" }}
+    _focus={{ color: "primary.base" }}
+  />
+)
 
-const StatsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-bottom: 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+const TwoColumnContent = (props: ChildOnlyType) => (
+  <Flex
+    justifyContent="space-between"
+    gap={16}
+    flexDirection={{ base: "column", lg: "row" }}
+    alignItems={{ base: "flex-start", lg: "normal" }}
+    {...props}
+  />
+)
 
-const StatBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 33%;
-  padding: 0 20px;
-  text-align: center;
-  align-content: center;
-  justify-content: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex: 100%;
-  }
-`
+const StatDivider = () => {
+  const responsiveOrientation = useBreakpointValue<DividerProps["orientation"]>(
+    { base: "horizontal", md: "vertical" }
+  )
+  return (
+    <Divider
+      orientation={responsiveOrientation}
+      borderColor="homeDivider"
+      my={{ base: 8, md: 0 }}
+    />
+  )
+}
 
-const StatPrimary = styled.p`
-  font-weight: bold;
-  font-size: ${(props) => props.theme.fontSizes.xl};
-  color: ${(props) => props.theme.colors.primary};
-  font-family: monospace;
-`
+const StatBox = (props: ChildOnlyType) => (
+  <Center
+    flexDirection="column"
+    flex={{ base: "100%", md: "33%" }}
+    textAlign="center"
+    px={5}
+    {...props}
+  />
+)
 
-const StatSpan = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-`
+const StatPrimary = (props: { content: string }) => (
+  <Text
+    color="primary.base"
+    fontFamily="monospace"
+    fontWeight="bold"
+    fontSize="2rem"
+  >
+    {props.content}
+  </Text>
+)
 
-const StatDescription = styled.p`
-  opacity: 0.8;
-  margin: 0;
-`
+const StatSpan = (props: ChildOnlyType) => (
+  <Flex justifyContent="center" gap={2} {...props} />
+)
 
-const StatDivider = styled.div`
-  border-left: 1px solid ${({ theme }) => theme.colors.homeDivider};
-  max-height: 100px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    border-left: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.homeDivider};
-    width: 100%;
-    height: 0%;
-    margin: 2rem 0;
-  }
-`
+const StatDescription = (props: ChildOnlyType) => (
+  <Text opacity={0.8} m={0} {...props} />
+)
+
+const Layer2CardGrid = (props: ChildOnlyType) => (
+  <SimpleGrid
+    templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
+    gap={8}
+    {...props}
+  />
+)
+
 interface L2DataResponseItem {
   daily: {
     data: Array<[string, number, number]>
@@ -195,7 +171,11 @@ interface L2DataResponse {
 }
 
 interface FeeDataResponse {
-  data: Array<{ id: string; results: { feeTransferEth: number } }>
+  data: Array<{
+    id: string
+    results: { feeTransferEth: number }
+    errors?: { [key: string]: string }
+  }>
 }
 
 const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
@@ -253,7 +233,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         )
 
         // filtering out L2's we arent listing
-        const feeData = feeDataResponse.data.filter((l2) => l2.id !== "hermez")
+        const feeData = feeDataResponse.data.filter(
+          (l2) => l2.id !== "hermez" && !l2.errors
+        )
 
         const feeAverage =
           feeData.reduce(
@@ -287,16 +269,31 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {
         content: t("layer-2-hero-button-1"),
         toId: "what-is-layer-2",
+        matomo: {
+          eventCategory: "layer 2 hero buttons",
+          eventAction: "click",
+          eventName: "what is layer 2",
+        },
       },
       {
         content: t("layer-2-hero-button-2"),
         toId: "use-layer-2",
         variant: "outline",
+        matomo: {
+          eventCategory: "layer 2 hero buttons",
+          eventAction: "click",
+          eventName: "use layer 2",
+        },
       },
       {
         content: t("layer-2-hero-button-3"),
         toId: "how-to-get-onto-layer-2",
         variant: "outline",
+        matomo: {
+          eventCategory: "layer 2 hero buttons",
+          eventAction: "click",
+          eventName: "move to layer 2",
+        },
       },
     ],
   }
@@ -387,302 +384,316 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
 
   const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
-  const tooltipContent = (metric: {
+  type ToolTipContentMetric = {
     apiUrl: string
     apiProvider: string
-  }): JSX.Element => (
+  }
+  const tooltipContent = (metric: ToolTipContentMetric): JSX.Element => (
     <div>
       <Translation id="data-provided-by" />{" "}
       <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
     </div>
   )
 
+  const statBoxGroupData: Array<{
+    content: string
+    descriptionId: TranslationKey
+    tooltipContent: ToolTipContentMetric
+  }> = [
+    {
+      content: tvl,
+      descriptionId: "layer-2-statsbox-1",
+      tooltipContent: {
+        apiUrl: "https://l2beat.com/",
+        apiProvider: "L2BEAT",
+      },
+    },
+    {
+      content: averageFee,
+      descriptionId: "layer-2-statsbox-2",
+      tooltipContent: {
+        apiUrl: "https://cryptostats.community/",
+        apiProvider: "CryptoStats",
+      },
+    },
+    {
+      content: percentChangeL2,
+      descriptionId: "layer-2-statsbox-3",
+      tooltipContent: {
+        apiUrl: "https://l2beat.com/",
+        apiProvider: "L2BEAT",
+      },
+    },
+  ]
+
   return (
-    <Page>
+    <Flex flexDirection="column" alignItems="center">
       <PageMetadata
         title={"Layer 2"}
         description={"Introduction page to layer 2"}
       />
 
-      <HeroBackground>
-        <HeroContainer>
-          <Hero content={heroContent} isReverse />
-        </HeroContainer>
+      {/* Hero Section */}
+      <Box background="layer2Gradient" width="full">
+        <Box pb={8}>
+          <PageHero content={heroContent} isReverse />
+        </Box>
 
-        <PaddedContent>
-          <StatsContainer>
-            <StatBox>
-              <StatPrimary>{tvl}</StatPrimary>
-              <StatSpan>
-                <StatDescription>
-                  <Translation id="layer-2-statsbox-1" />
-                </StatDescription>
-                <Tooltip
-                  content={tooltipContent({
-                    apiUrl: "https://l2beat.com/",
-                    apiProvider: "L2BEAT",
-                  })}
-                >
-                  <StyledIcon name="info" />
-                </Tooltip>
-              </StatSpan>
-            </StatBox>
-            <StatDivider />
-            <StatBox>
-              <StatPrimary>{averageFee}</StatPrimary>
-              <StatSpan>
-                <StatDescription>
-                  <Translation id="layer-2-statsbox-2" />
-                </StatDescription>
-                <Tooltip
-                  content={tooltipContent({
-                    apiUrl: "https://cryptostats.community/",
-                    apiProvider: "CryptoStats",
-                  })}
-                >
-                  <StyledIcon name="info" />
-                </Tooltip>
-              </StatSpan>
-            </StatBox>
-            <StatDivider />
-            <StatBox>
-              <StatPrimary>{percentChangeL2}</StatPrimary>
-              <StatSpan>
-                <StatDescription>
-                  <Translation id="layer-2-statsbox-3" />
-                </StatDescription>
-                <Tooltip
-                  content={tooltipContent({
-                    apiUrl: "https://l2beat.com/",
-                    apiProvider: "L2BEAT",
-                  })}
-                >
-                  <StyledIcon name="info" />
-                </Tooltip>
-              </StatSpan>
-            </StatBox>
-          </StatsContainer>
-        </PaddedContent>
-      </HeroBackground>
-
-      <PaddedContent id="what-is-layer-2">
+        <ContentBox>
+          <Center
+            flexDirection={{ base: "column", md: "row" }}
+            mb={16}
+            // To allow the content divider to expand vertically above the breakpoint
+            height={{ md: "100px" }}
+          >
+            {statBoxGroupData.map((box, idx) => (
+              <>
+                <StatBox>
+                  <StatPrimary content={box.content} />
+                  <StatSpan>
+                    <StatDescription>
+                      <Translation id={box.descriptionId} />
+                    </StatDescription>
+                    <Tooltip content={tooltipContent(box.tooltipContent)}>
+                      <StyledInfoIcon />
+                    </Tooltip>
+                  </StatSpan>
+                </StatBox>
+                {idx < statBoxGroupData.length - 1 ? <StatDivider /> : null}
+              </>
+            ))}
+          </Center>
+        </ContentBox>
+      </Box>
+      {/* What is Layer 2 Section */}
+      <ContentBox id="what-is-layer-2">
         <TwoColumnContent>
-          <Flex50>
-            <h2>
+          <Box flex="50%">
+            <SectionHeading>
               <Translation id="layer-2-what-is-layer-2-title" />
-            </h2>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-what-is-layer-2-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-what-is-layer-2-2" />
-            </p>
-          </Flex50>
-          <Flex50>
+            </Text>
+          </Box>
+          <Box flex="50%">
             <GatsbyImage
               image={getImage(data.whatIsEthereum)!}
               alt=""
               style={{ maxHeight: "400px" }}
               objectFit="contain"
             />
-          </Flex50>
+          </Box>
         </TwoColumnContent>
-      </PaddedContent>
-      <LightGrayContent>
-        <h2>
+      </ContentBox>
+      {/* What is Layer 1 Section */}
+      <ContentBox isLightGrayBg>
+        <SectionHeading>
           <Translation id="layer-2-what-is-layer-1-title" />
-        </h2>
+        </SectionHeading>
         <TwoColumnContent>
-          <Flex50>
-            <p>
+          <Box flex="50%">
+            <Text>
               <Translation id="layer-2-what-is-layer-1-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-what-is-layer-1-2" />
-            </p>
-          </Flex50>
-          <Flex50>
-            <p>
+            </Text>
+          </Box>
+          <Box flex="50%">
+            <Text>
               <Translation id="layer-2-what-is-layer-1-list-title" />
-            </p>
+            </Text>
             <OrderedList
               listData={[
-                <p>
+                <Text>
                   <Translation id="layer-2-what-is-layer-1-list-1" />
-                </p>,
-                <p>
+                </Text>,
+                <Text>
                   <Translation id="layer-2-what-is-layer-1-list-2" />
-                </p>,
-                <p>
+                </Text>,
+                <Text>
                   <Translation id="layer-2-what-is-layer-1-list-3" />
-                </p>,
-                <p>
+                </Text>,
+                <Text>
                   <Translation id="layer-2-what-is-layer-1-list-4" />
-                </p>,
+                </Text>,
               ]}
             />
-            <p>
+            <Text>
               <Translation id="layer-2-what-is-layer-1-list-link-1" />{" "}
               <Link to="/what-is-ethereum/">
                 <Translation id="layer-2-what-is-layer-1-list-link-2" />
               </Link>
-            </p>
-          </Flex50>
+            </Text>
+          </Box>
         </TwoColumnContent>
-      </LightGrayContent>
-
-      <PaddedContent>
+      </ContentBox>
+      {/* Why Layer 2 Section */}
+      <ContentBox>
         <TwoColumnContent>
-          <FlexContainer
-            flexPercent="50"
-            style={{
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
-            }}
-          >
+          <Center flex="50%">
             <GatsbyImage
               image={getImage(data.dao)!}
               alt=""
               style={{ width: "100%" }}
               objectFit="contain"
             />
-          </FlexContainer>
-          <FlexContainer flexPercent="50">
-            <h2>
+          </Center>
+          <Box flex="50%">
+            <SectionHeading>
               <Translation id="layer-2-why-do-we-need-layer-2-title" />
-            </h2>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-why-do-we-need-layer-2-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-why-do-we-need-layer-2-2" />
-            </p>
+            </Text>
 
-            <h3>
+            <SectionHeading as="h3">
               <Translation id="layer-2-why-do-we-need-layer-2-scalability" />
-            </h3>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-2" />
-            </p>
+            </Text>
             <Link to="/roadmap/vision/">
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-3" />
             </Link>
-          </FlexContainer>
+          </Box>
         </TwoColumnContent>
-        <h3>
+        <SectionHeading as="h3">
           <Translation id="layer-2-benefits-of-layer-2-title" />
-        </h3>
-        <InfoGrid>
+        </SectionHeading>
+        <SimpleGrid
+          columnGap={8}
+          rowGap={4}
+          templateColumns="repeat(auto-fill, minmax(340px, 1fr))"
+        >
           {layer2Cards.map(({ emoji, title, description }, idx) => (
-            <Card
+            <GridItem
+              as={Card}
               description={description}
               title={title}
               emoji={emoji}
               key={idx}
+              _hover={{
+                transition: "0.1s",
+                transform: "scale(1.01)",
+                img: {
+                  transition: "0.1s",
+                  transform: "scale(1.1)",
+                },
+              }}
             />
           ))}
-        </InfoGrid>
-      </PaddedContent>
-
-      <PaddedContent>
+        </SimpleGrid>
+      </ContentBox>
+      {/* How does Layer 2 Work Section */}
+      <ContentBox>
         <TwoColumnContent>
-          <FlexContainer flexPercent="50">
-            <h2>
+          <Box flex="50%">
+            <SectionHeading>
               <Translation id="layer-2-how-does-layer-2-work-title" />
-            </h2>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-how-does-layer-2-work-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-how-does-layer-2-work-2" />
-            </p>
-            <h3>
+            </Text>
+            <SectionHeading as="h3">
               <Translation id="layer-2-rollups-title" />
-            </h3>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-rollups-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-rollups-2" />
-            </p>
-          </FlexContainer>
-          <FlexContainer
-            flexPercent="50"
-            style={{
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
-            }}
-          >
+            </Text>
+          </Box>
+          <Center flex="50%">
             <GatsbyImage
               image={getImage(data.rollup)!}
               alt=""
               style={{ width: "100%" }}
               objectFit="contain"
             />
-          </FlexContainer>
+          </Center>
         </TwoColumnContent>
         <TwoColumnContent>
           {rollupCards.map(
             ({ image, title, description, childSentence, childLink }) => (
-              <RollupCard key={title}>
+              <Flex
+                key={title}
+                background="ednBackground"
+                borderRadius="sm"
+                border="1px"
+                borderColor="lightBorder"
+                p={6}
+                flex={{ base: "100%", md: "50%" }}
+                flexDirection="column"
+                justifyContent="space-between"
+              >
                 <GatsbyImage
                   image={image!}
                   alt=""
                   objectPosition="0"
                   objectFit="contain"
                 />
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <p>
+                <SectionHeading as="h3">{title}</SectionHeading>
+                <Text>{description}</Text>
+                <Text>
                   <Link to={childLink}>{childSentence}</Link>
-                </p>
-              </RollupCard>
+                </Text>
+              </Flex>
             )
           )}
         </TwoColumnContent>
-      </PaddedContent>
-
-      <PaddedContent>
-        <InfoBanner isWarning={true}>
-          <h2>
+      </ContentBox>
+      {/* DYOR Section */}
+      <ContentBox>
+        <InfoBanner isWarning>
+          <SectionHeading>
             <Translation id="layer-2-dyor-title" />
-          </h2>
-          <p>
+          </SectionHeading>
+          <Text>
             <Translation id="layer-2-dyor-1" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-dyor-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <ButtonLink to="https://l2beat.com/scaling/risk">
               <Translation id="layer-2-dyor-3" />
             </ButtonLink>
-          </p>
+          </Text>
         </InfoBanner>
-      </PaddedContent>
-
-      <PaddedContent id="use-layer-2">
-        <h2>
+      </ContentBox>
+      {/* Use Layer 2 Section */}
+      <ContentBox id="use-layer-2">
+        <SectionHeading>
           <Translation id="layer-2-use-layer-2-title" />
-        </h2>
-        <p>
+        </SectionHeading>
+        <Text>
           <Translation id="layer-2-use-layer-2-1" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="layer-2-contract-accounts" />
-        </p>
-        <h3>
+        </Text>
+        <SectionHeading as="h3">
           <Translation id="layer-2-use-layer-2-generalized-title" />
-        </h3>
-        <p>
+        </SectionHeading>
+        <Text>
           <Translation id="layer-2-use-layer-2-generalized-1" />
-        </p>
-        <CardGrid>
+        </Text>
+        <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => !l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
@@ -698,20 +709,26 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                   bridge={l2.bridge}
                   ecosystemPortal={l2.ecosystemPortal}
                   tokenLists={l2.tokenLists}
-                />
+                >
+                  {l2.purpose.map((purpose, index) => (
+                    <Badge key={index} me={2}>
+                      {purpose}
+                    </Badge>
+                  ))}
+                </Layer2ProductCard>
               )
             })}
-        </CardGrid>
-      </PaddedContent>
-
-      <PaddedContent>
-        <h3>
+        </Layer2CardGrid>
+      </ContentBox>
+      {/* Layer 2 App Specific Section */}
+      <ContentBox id="use-layer-2">
+        <SectionHeading as="h3">
           <Translation id="layer-2-use-layer-2-application-specific-title" />
-        </h3>
-        <p>
+        </SectionHeading>
+        <Text>
           <Translation id="layer-2-use-layer-2-application-specific-1" />
-        </p>
-        <CardGrid>
+        </Text>
+        <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
@@ -736,189 +753,178 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 </Layer2ProductCard>
               )
             })}
-        </CardGrid>
-      </PaddedContent>
-
-      <PaddedContent>
-        <h2>
+        </Layer2CardGrid>
+      </ContentBox>
+      {/* Layer 2 Sidechain Section */}
+      <ContentBox>
+        <SectionHeading>
           <Translation id="layer-2-sidechains-title" />
-        </h2>
+        </SectionHeading>
         <TwoColumnContent>
-          <Flex50>
-            <p>
+          <Box flex="50%">
+            <Text>
               <Translation id="layer-2-sidechains-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-sidechains-2" />
-            </p>
-            <p>
-              <Link to="/developers/docs/scaling/sidechains/">
-                <Translation id="layer-2-more-on-sidechains" />
-              </Link>
-            </p>
-            <p>
-              <Link to="/developers/docs/scaling/validium/">
-                <Translation id="layer-2-more-on-validiums" />
-              </Link>
-            </p>
-          </Flex50>
-          <Flex50>
-            <p>
+            </Text>
+            <UnorderedList>
+              <ListItem>
+                <Link to="/developers/docs/scaling/sidechains/">
+                  <Translation id="layer-2-more-on-sidechains" />
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link to="/developers/docs/scaling/validium/">
+                  <Translation id="layer-2-more-on-validiums" />
+                </Link>
+              </ListItem>
+            </UnorderedList>
+          </Box>
+          <Box flex="50%">
+            <Text>
               <Translation id="layer-2-sidechains-4" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-sidechains-5" />
-            </p>
-          </Flex50>
+            </Text>
+          </Box>
         </TwoColumnContent>
-      </PaddedContent>
-
-      <PaddedContent id="how-to-get-onto-layer-2">
+      </ContentBox>
+      {/* Layer 2 Onboard Section */}
+      <ContentBox id="how-to-get-onto-layer-2">
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)!}
           ethIconAlt={t("ethereum-logo")}
         />
-      </PaddedContent>
-
-      <PaddedContent>
-        <h2>
+      </ContentBox>
+      {/* Layer 2 Tools Section */}
+      <ContentBox>
+        <SectionHeading>
           <Translation id="layer-2-tools-title" />
-        </h2>
+        </SectionHeading>
         <TwoColumnContent>
-          <Flex50>
+          <Box flex="50%">
             <ProductList
               category="Information"
               content={toolsData.information}
             />
-          </Flex50>
-          <Flex50>
+          </Box>
+          <Box flex="50%">
             <ProductList
               category="Wallet managers"
               content={toolsData.walletManagers}
             />
-          </Flex50>
+          </Box>
         </TwoColumnContent>
-      </PaddedContent>
-
-      <PaddedContent>
-        <h2>
+      </ContentBox>
+      {/* Layer 2 FAQ Section */}
+      <ContentBox>
+        <SectionHeading>
           <Translation id="layer-2-faq-title" />
-        </h2>
+        </SectionHeading>
         <ExpandableCard title={`${t("layer-2-faq-question-1-title")}`}>
-          <p>
+          <Text>
             <Translation id="layer-2-faq-question-1-description-1" />
-          </p>
+          </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-2-title")}`}>
-          <p>
+          <Text>
             <Translation id="layer-2-faq-question-2-description-1" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-2-description-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-2-description-3" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Link to="/developers/docs/scaling/optimistic-rollups/">
               <Translation id="layer-2-more-info-on-optimistic-rollups" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Link to="/developers/docs/scaling/zk-rollups/">
               <Translation id="layer-2-more-info-on-zk-rollups" />
             </Link>
-          </p>
-        </ExpandableCard>
-        <ExpandableCard title={`${t("layer-2-faq-question-3-title")}`}>
-          <p>
-            <Translation id="layer-2-faq-question-3-description-1" />{" "}
-          </p>
-          <p>
-            <Link to="/upgrades/sharding/">
-              <Translation id="layer-2-more-on-sharding" />
-            </Link>
-          </p>
+          </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-4-title")}`}>
-          <p>
+          <Text>
             <Translation id="layer-2-faq-question-4-description-1" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-4-description-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-4-description-3" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Link to="/bridges/">
               <Translation id="layer-2-more-on-bridges" />
             </Link>
-          </p>
+          </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-5-title")}`}>
-          <p>
+          <Text>
             <Translation id="layer-2-faq-question-5-description-1" />{" "}
             <Link to="/contributing/adding-layer-2s/">
               <Translation id="layer-2-faq-question-5-view-listing-policy" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-5-description-2" />
-          </p>
+          </Text>
         </ExpandableCard>
-      </PaddedContent>
-
-      <PaddedContent>
-        <h2>
+      </ContentBox>
+      {/* Layer 2 Further Reading Section */}
+      <ContentBox>
+        <SectionHeading>
           <Translation id="layer-2-further-reading-title" />
-        </h2>
-        <ul>
-          <li>
+        </SectionHeading>
+        <UnorderedList ms="1.45rem" mb="1.45rem">
+          <ListItem>
             <Link to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
               <Translation id="a-rollup-centric-ethereum-roadmap" />
             </Link>{" "}
             <i>- Vitalik Buterin </i>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="https://vitalik.ca/general/2021/01/05/rollup.html">
               <Translation id="an-incomplete-guide-to-rollups" />
             </Link>{" "}
             <i>- Vitalik Buterin</i>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="https://www.youtube.com/watch?v=DyNbmgkyxJI">
               <Translation id="polygon-sidechain-vs-ethereum-rollups" />
             </Link>{" "}
             <i>- Lex Clips</i>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="https://www.youtube.com/watch?v=7pWxCklcNsU">
               <Translation id="rollups-the-ultimate-ethereum-scaling-strategy" />
             </Link>{" "}
             <i>- Finematics</i>
-          </li>
-          <li>
-            <Link to="/upgrades/sharding/">
-              <Translation id="scaling-layer-1-with-shard-chains" />
-            </Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
               <Translation id="understanding-rollup-economics-from-first-principals" />
             </Link>{" "}
             <i>- Barnabé Monnot</i>
-          </li>
-        </ul>
-      </PaddedContent>
-      <PaddedContent>
+          </ListItem>
+        </UnorderedList>
+      </ContentBox>
+      {/* Layer 2 Quiz Section */}
+      <ContentBox>
         <QuizWidget quizKey="layer-2" />
-      </PaddedContent>
-      <PaddedContent>
+      </ContentBox>
+      {/* Layer 2 Feedback Section */}
+      <ContentBox>
         <FeedbackCard />
-      </PaddedContent>
-    </Page>
+      </ContentBox>
+    </Flex>
   )
 }
 

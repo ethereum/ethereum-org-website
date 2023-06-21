@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "Ваш акаунт Ethereum",
   "page-wallets-your-ethereum-account-desc": "Гаманець – це вікно у ваш акаунт Ethereum, де міститься баланс, історія транзакцій тощо. Змінити постачальника гаманця можна будь-коли.",
   "page-wallets-your-login": "Ваш логін для програм Ethereum",
-  "page-wallets-your-login-desc": "Ваш гаманець дає змогу підключатися до будь-якої децентралізованої програми за допомогою акаунту Ethereum. Це як логін, який можна використовувати в багатьох програмах."
+  "page-wallets-your-login-desc": "Ваш гаманець дає змогу підключатися до будь-якої децентралізованої програми за допомогою акаунту Ethereum. Це як логін, який можна використовувати в багатьох програмах.",
+  "additional-reading-how-to-register-an-ethereum-account": "Як зареєструвати обліковий запис Ethereum",
+  "additional-reading-how-to-use-a-wallet": "Як користуватися гаманцем"
 }

@@ -18,7 +18,7 @@ Mata uang kripto pertama adalah Bitcoin, yang dibuat oleh Satoshi Nakamoto. Seja
 
 ## Apa itu ether? {#what-is-ether}
 
-**Ether (ETH)** adalah mata uang kripto yang digunakan untuk berbagai keperluan di jaringan Ethereum. Pada dasarnya, ini adalah satu-satunya bentuk pembayaran yang dapat diterima untuk biaya transaksi, dan setelah [penggabungan](/upgrades/merge) juga diperlukan untuk memvalidasi dan mengusulkan pemblokiran di Jaringan Utama. Ether juga digunakan sebagai bentuk jaminan utama di pasar pinjaman [DeFi](/defi), sebagai unit akun di pasar NFT, sebagai pembayaran yang diperoleh karena menjalanan layanan atau menjual barang dunia nyata, dan banyak lagi.
+**Ether (ETH)** adalah mata uang kripto yang digunakan untuk berbagai keperluan di jaringan Ethereum. Pada dasarnya, ini adalah satu-satunya bentuk pembayaran yang dapat diterima untuk biaya transaksi, dan setelah [penggabungan](/roadmap/merge) juga diperlukan untuk memvalidasi dan mengusulkan pemblokiran di Jaringan Utama. Ether juga digunakan sebagai bentuk jaminan utama di pasar pinjaman [DeFi](/defi), sebagai unit akun di pasar NFT, sebagai pembayaran yang diperoleh karena menjalanan layanan atau menjual barang dunia nyata, dan banyak lagi.
 
 Ethereum memungkinkan pengembang untuk membuat [**aplikasi terdesentralisasi (dapp)**](/developers/docs/dapps), yang semuanya berbagi pool daya komputasi. Pool bersama ini terbatas, sehingga Ethereum memerlukan sebuah mekanisme untuk menentukan siapa yang dapat menggunakannya. Jika tidak, sebuah dapp dapat secara tidak sengaja atau dengan maksud jahat menghabiskan semua sumber daya jaringan, yang akan menghalangi pengguna lainnya untuk mengaksesnya.
 

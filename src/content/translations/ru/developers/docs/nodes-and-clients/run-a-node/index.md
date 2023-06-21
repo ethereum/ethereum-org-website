@@ -21,7 +21,7 @@ sidebarDepth: 2
 
 Реализации клиента включают различные режимы синхронизации и многие другие параметры. [Режимы синхронизации](/developers/docs/nodes-and-clients/#sync-modes) представляют собой различные методы загрузки и проверки данных блокчейна. Перед запуском узла следует решить, какую сеть и режим синхронизации использовать. Наиболее важно учитывать дисковое пространство и время синхронизации, которые потребуются клиенту.
 
-Все функции и опции можно найти в документации клиента. Различные конфигурации клиента можно установить, запустив клиент с соответствующими флагами. Дополнительную информацию о флагах можно получить на [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) или в документации клиента. В целях тестирования вы можете запустить клиент в одной из тестовых сетей. [Обзор поддерживаемых сетей](/developers/docs/nodes-and-clients/#execution-clients).
+Все функции и опции можно найти в документации клиента. Различные конфигурации клиента можно установить, запустив клиент с соответствующими флагами. В целях тестирования вы можете запустить клиент в одной из тестовых сетей. [Обзор поддерживаемых сетей](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Среда и оборудование {#environment-and-hardware}
 
@@ -144,7 +144,7 @@ _Это не относится к узлам-валидаторам слоя к
 
 #### Запуск дополнительных служб {#running-additional-services}
 
-Запуск собственного узла дает возможность вашим службам использовать прямой доступ к клиентскому RPC сети Ethereum. Такие службы построены поверх Ethereum, примером чего могут быть [решения слоя 2](/developers/docs/scaling/#layer-2-scaling), [консенсус-клиенты](/upgrades/get-involved/#clients) и другие части инфраструктуры Ethereum.
+Запуск собственного узла дает возможность вашим службам использовать прямой доступ к клиентскому RPC сети Ethereum. Такие службы построены поверх Ethereum, примером чего могут быть [решения слоя 2](/developers/docs/scaling/#layer-2-scaling), [консенсус-клиенты](/developers/docs/nodes-and-clients/#consensus-clients) и другие части инфраструктуры Ethereum.
 
 #### Наблюдение за узлом {#monitoring-the-node}
 
@@ -154,7 +154,6 @@ _Это не относится к узлам-валидаторам слоя к
 
 - [Анализ требований к оборудованию, чтобы стать полностью проверенным узлом Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) — _Альберт Палау, 24 сентября 2018 г._
 - [Запуск полных узлов Ethereum: руководство для сомневающихся](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) — _Джастин Леру, 7 ноября 2019 г._
-- [Запуск узла Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) — _ETHHub, часто обновляется_
 - [Запуск узла Hyperledger Besu в основной сети Ethereum: преимущества, требования и настройка](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) — _Фелипе Фараджи, 7 мая 2020 г._
 - [Развертывание клиента Nethermind Ethereum со стеком мониторинга](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _— Nethermind.eth, 8 июля 2020 г._
 

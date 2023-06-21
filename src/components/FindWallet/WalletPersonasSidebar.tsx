@@ -431,13 +431,19 @@ const WalletPersonasSidebar = ({
                   my={0}
                   mx={1}
                   fill={
-                    selectedPersona === idx ? "primary" : "rgba(0, 0, 0, 0)"
+                    selectedPersona === idx
+                      ? "primary.base"
+                      : "rgba(0, 0, 0, 0)"
                   }
                   background={
-                    selectedPersona === idx ? "primary" : "priceCardBackground"
+                    selectedPersona === idx
+                      ? "primary.base"
+                      : "priceCardBackground"
                   }
                   outline="1.5px solid"
-                  outlineColor={selectedPersona === idx ? "primary" : "text"}
+                  outlineColor={
+                    selectedPersona === idx ? "primary.base" : "text"
+                  }
                   outlineOffset="3px"
                   fontSize={8}
                 />
@@ -490,7 +496,7 @@ const WalletPersonasSidebar = ({
                   sx={{
                     p: {
                       mb: 0,
-                      color: selectedPersona === idx ? "primary" : "text",
+                      color: selectedPersona === idx ? "primary.base" : "text",
                     },
                     svg: {
                       width: 7,

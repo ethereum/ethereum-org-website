@@ -78,7 +78,7 @@ Every [block](#block) has a reserve price known as the 'base fee'. It is the min
 
 The Beacon Chain was the blockchain that introduced [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It ran alongside the proof-of-work Ethereum Mainnet from December 2020 until the two chains were merged in September 2022 to form the Ethereum of today.
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Beacon Chain
 </DocLink>
 
@@ -88,7 +88,7 @@ A positional number representation where the most significant digit is first in 
 
 ### block {#block}
 
-A block is a bundled unit of information that include an ordered list of transactions and consensus-related information. Blocks are proposed by proof-of-stake validators, at which point they are shared across the entire peer-to-peer network, where they can easily be independently verified by all other nodes. Consensus rules govern what contents of a block are considered valid, and any invalid blocks are disregarded by the network. The ordering of these blocks and the transactions therein create a deterministic chain of events with the end representing the current state of the network.
+A block is a bundled unit of information that includes an ordered list of transactions and consensus-related information. Blocks are proposed by proof-of-stake validators, at which point they are shared across the entire peer-to-peer network, where they can easily be independently verified by all other nodes. Consensus rules govern what contents of a block are considered valid, and any invalid blocks are disregarded by the network. The ordering of these blocks and the transactions therein create a deterministic chain of events with the end representing the current state of the network.
 
 <DocLink to="/developers/docs/blocks/">
   Blocks
@@ -177,7 +177,7 @@ A group of at least 128 [validators](#validator) assigned to validate blocks in 
 
 ### computational infeasibility {#computational-infeasibility}
 
-A process is computationally infeasible if it would take an impracticably long time (eg. billions of years) to do it for anyone who might conceivably have an interest in carrying it out.
+A process is computationally infeasible if it would take an impracticably long time (e.g. billions of years) to do it for anyone who might conceivably have an interest in carrying it out.
 
 ### consensus {#consensus}
 
@@ -279,7 +279,7 @@ A network-wide setting in [proof-of-work](#pow) networks that controls how much 
 
 ### difficulty bomb {#difficulty-bomb}
 
-Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting that was designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork). The difficulty bomb was deprecated with the [transition to proof-of-stake](/upgrades/merge).
+Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting that was designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork). The difficulty bomb was deprecated with the [transition to proof-of-stake](/roadmap/merge).
 
 ### digital signature {#digital-signatures}
 
@@ -329,7 +329,7 @@ A validator sending two messages that contradict each other. One simple example 
 
 'Eth1' is a term that referred to Mainnet Ethereum, the existing proof-of-work blockchain. This term has since been deprecated in favor of the 'execution layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   More on the Ethereum upgrades
 </DocLink>
 
@@ -337,7 +337,7 @@ A validator sending two messages that contradict each other. One simple example 
 
 'Eth2' is a term that referred to a set of Ethereum protocol upgrades, including Ethereum's transition to proof-of-stake. This term has since been deprecated in favor of the 'consensus layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   More on the Ethereum upgrades
 </DocLink>
 
@@ -824,7 +824,7 @@ A family of cryptographic hash functions published by the National Institute of 
 
 The stage of Ethereum development that initiated a set of scaling and sustainability upgrades, previously known as 'Ethereum 2.0', or 'Eth2'.
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Ethereum upgrades
 </DocLink>
 
@@ -834,10 +834,10 @@ The process of converting a data structure into a sequence of bytes.
 
 ### shard / shard chain {#shard}
 
-Shard chains are discrete sections of the total blockchain that can subsets of validators can be responsible for. This will offer increased transaction throughput for Ethereum and improve data availability for [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
+Shard chains are discrete sections of the total blockchain that subsets of validators can be responsible for. This will offer increased transaction throughput for Ethereum and improve data availability for [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
-  Shard chains
+<DocLink to="/roadmap/danksharding">
+  Danksharding
 </DocLink>
 
 ### sidechain {#sidechain}
@@ -862,7 +862,7 @@ A slasher is an entity that scans attestations searching for slashable offenses.
 
 ### slot {#slot}
 
-A period of time (12 seconds) in which a new blocks can be proposed by a [validator](#validator) in the [proof-of-stake](#pos) system. A slot may be empty. 32 slots make up an [epoch](#epoch).
+A period of time (12 seconds) in which new blocks can be proposed by a [validator](#validator) in the [proof-of-stake](#pos) system. A slot may be empty. 32 slots make up an [epoch](#epoch).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Proof-of-stake
@@ -1099,7 +1099,7 @@ The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### zero address {#zero-address}
 
-An Ethereum address, composed entirely of zeros, that is frequently used as a burn address for unwanted funds.
+An Ethereum address, composed entirely of zeros, that is frequently used as an address to remove tokens from owned circulation. A distinction is drawn between tokens formally removed from a smart contract's index via the burn() method and those sent to this address.
 
 ### zero-knowledge proof {#zk-proof}
 

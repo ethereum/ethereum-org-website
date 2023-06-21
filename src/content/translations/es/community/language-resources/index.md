@@ -1,10 +1,10 @@
 ---
-title: Recursos en múltiples idiomas
+title: Recursos lingüísticos
 description: Recursos en idiomas distintos al inglés para aprender sobre Ethereum
 lang: es
 ---
 
-# Recursos en múltiples idiomas {#language-resources}
+# Recursos lingüísticos {#language-resources}
 
 La comunidad Ethereum es global y está compuesta por millones de personas que no hablan inglés.
 
@@ -59,7 +59,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 
 **Para desarrolladores**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning): grupo de aprendizaje que estudia principalmente los proyectos de dApp y comparte ideas y comentarios cada semana.
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning): un grupo de aprendizaje que estudia los proyectos dapp más populares y comparte sus visiones y opiniones todas las semanas.
 - [LearnBlockchain](https://learnblockchain.cn/): una comunidad de desarrolladores, que comparte información acerca de la tecnología de cadena de bloques.
 
 **Para investigadores en criptografía**
@@ -67,9 +67,16 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw): una cuenta de WeChat que explica la criptografía, la seguridad, etc.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ): una cuenta de WeChat que explica la tecnología zk.
 
+### Checo {#cs}
+
+- [Gwei.cz](https://gwei.cz): comunidad local con enfoque en Web3 que crea contenido educativo y organiza eventos tanto en línea como presenciales.
+- [Gwei.cz Příručka](https://prirucka.gwei.cz/): guía de Ethereum para principiantes.
+- [DAO Příručka](https://dao.gwei.cz/): guía sobre las DAO para principiantes.
+- [Dominar Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m): dominar Ethereum en checo.
+
 ### Francés {#fr}
 
-- [Ethereum France](https://www.ethereum-france.com/): Ethereum Francia organiza eventos, crea contenido y fomenta discusiones en torno a Ethereum.
+- [Ethereum France](https://www.ethereum-france.com/): Ethereum France organiza eventos, crea contenido y fomenta discusiones en torno a Ethereum.
 - [Ethereum.fr](https://ethereum.fr/): noticias y educación sobre Ethereum.
 - [BanklessFR](https://banklessfr.substack.com/): boletín informativo en francés sobre Bankless.
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general): foro de criptomonedas con una subpágina de Ethereum.
@@ -78,16 +85,20 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/): el uso de Solidity.
 - [Microsoft Learn (contratos inteligentes)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/): escribir contratos inteligentes en Ethereum con Solidity.
-- [Microsoft Learn (Ethereum networks)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/): conectar e implementar redes de Ethereum.
-- [Microsoft Learn (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/): adentrarse en el desarrollo de cadenas de bloque.
+- [Microsoft Learn (redes Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/): conectar e implementar redes de Ethereum.
+- [Microsoft Learn (cadenas de bloque)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/): adentrarse en el desarrollo de cadenas de bloque.
 
 ### Italiano {#it}
 
-- [Ethereum Italia](https://www.ethereum-italia.it/): educación sobre Ethereum, eventos y noticias, centrados en contratos inteligentes y tecnología de cadena de bloques.
-- [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/): pódcast en italiano sobre Ethereum.
+- [Ethereum Italia](https://www.ethereum-italia.it/): formación sobre Ethereum, eventos y noticias, centrados en contratos inteligentes y tecnología de cadena de bloques.
+- [Pódcast Ethereum Italia](https://www.ethereum-italia.it/podcast/): pódcast en italiano sobre Ethereum.
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/): aprenda a usar Solidity.
 - [Microsoft Learn (contratos inteligentes)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/): aprenda acerca de cómo escribir contratos inteligentes usando Solidity.
-- [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/): crear una interfaz de usuario con aplicaciones descentralizadas.
+- [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/): cree una interfaz de usuario con aplicaciones descentralizadas.
+
+### Ruso {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev): espacio educativo para constructores de Web 3.0.
 
 ### Español {#es}
 
@@ -96,7 +107,8 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 - [Tutoriales en línea](https://tutoriales.online/curso/solidity): para aprender Solidity y programación en Ethereum.
 - [Curso introductorio al desarrollo en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU): introducción a Solidity, prueba y desarrollo de su primer contrato inteligente.
 - [Curso introductorio a la seguridad y piratería en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci): entender los aspectos vulnerables comunes y problemas de seguridad en un contrato inteligente real.
-- [Curso Introducción a Desarrollo DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - aprende como trabajan los contratos intelifentes DeFi en Solidity y crea tu propio creador de mercado automatizado
+- [Curso Introducción a Desarrollo DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS): profundice en el funcionamiento de los contratos intelifentes DeFi en Solidity y genere su propio creador de mercado automatizado.
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Formación genérica para principiantes y avanzados sobre la cadena de bloques. Conozca más sobre criptomonedas y Ethereum.
 
 ### Turco {#tr}
 
@@ -105,14 +117,14 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 
 ### Vietnamita {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/): información general de Ethereum, dapps, carteras y preguntas más frecuentes.
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/): visión general sobre Ethereum, dapps, carteras, preguntas y respuestas.
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth): plataforma web con subpáginas de noticias y educación de Ethereum.
-- [Coin68](https://coin68.com/ethereum-tieu-diem/): portal de criptomonedas con contenido educativo y noticias de Ethereum.
+- [Coin68](https://coin68.com/ethereum-tieu-diem/): portal de criptomonedas con contenido educativo y noticias de Ethereum
 
 ### Japonés {#ja}
 
 - [Asociación de intercambio de activos virtuales y criptomonedas de Japón](https://jvcea.or.jp/)
 - [Asociación empresarial de criptoactivos de Japón](https://cryptocurrency-association.org/)
-- [Comience con el desarrollo de la cadena de bloques: Aprender | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) Esta módulo de aprendizaje es una introducción a la cadena de bloques y el desarrollo en la plataforma Ethereum
-- [Dominar Ethereum](https://www.oreilly.co.jp/books/9784873118963/): Dominar Ethereum en japonés
-- [Desarrollo práctico de contratos inteligentes con Solidity y Ethereum](https://www.oreilly.co.jp/books/9784873119342/): Desarrollo práctico de contratos inteligentes con Solidity y Ethereum en japonés
+- [Comience con el desarrollo de la cadena de bloques: Aprender | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) Este módulo de aprendizaje es una introducción a la cadena de bloques y al desarrollo en la plataforma Ethereum.
+- [Dominar Ethereum](https://www.oreilly.co.jp/books/9784873118963/): dominar Ethereum en japonés.
+- [Desarrollo práctico de contratos inteligentes con Solidity y Ethereum](https://www.oreilly.co.jp/books/9784873119342/): desarrollo práctico de contratos inteligentes con Solidity y Ethereum en japonés.
