@@ -13,7 +13,10 @@ const config: StorybookConfig = {
     "@chakra-ui/storybook-addon",
     "storybook-react-i18next",
   ],
-  babel: async () => ({ ...babelConfig }),
+  staticDirs: ["../static"],
+  babel: async () => ({
+    ...babelConfig,
+  }),
   framework: {
     name: "@storybook/react-webpack5",
     options: {},

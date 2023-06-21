@@ -123,7 +123,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
           position: "absolute",
           width: "3px",
           height: "full",
-          background: "primary",
+          background: "primary.base",
           top: 0,
           left: "50%",
         }}

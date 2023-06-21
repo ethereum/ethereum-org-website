@@ -162,6 +162,10 @@ const Footer: React.FC<IProps> = () => {
           text: t("zero-knowledge-proofs"),
           to: "/zero-knowledge-proofs/",
         },
+        {
+          text: t("quizzes-title"),
+          to: "/quizzes/",
+        },
       ],
     },
     {
@@ -358,12 +362,12 @@ const Footer: React.FC<IProps> = () => {
                     color="text200"
                     _hover={{
                       textDecor: "none",
-                      color: "primary",
+                      color: "primary.base",
                       _after: {
-                        color: "primary",
+                        color: "primary.base",
                       },
                       "& svg": {
-                        fill: "primary",
+                        fill: "primary.base",
                       },
                     }}
                     sx={{

@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "Ihr Ethereum-Konto",
   "page-wallets-your-ethereum-account-desc": "Ihre Wallet ist Ihr Fenster in Ihr Ethereum-Konto – Ihr Guthaben, Transaktionsverlauf und vieles mehr. Sie können jedoch jederzeit Wallet-Anbieter austauschen.",
   "page-wallets-your-login": "Ihr Login für Ethereum-Anwendungen",
-  "page-wallets-your-login-desc": "Ihre Wallet lässt Sie mit jeder dezentralen Anwendung über Ihr Ethereum-Konto verbinden. Es ist wie ein Login, den Sie über viele dapps hinweg verwenden können."
+  "page-wallets-your-login-desc": "Ihre Wallet lässt Sie mit jeder dezentralen Anwendung über Ihr Ethereum-Konto verbinden. Es ist wie ein Login, den Sie über viele dapps hinweg verwenden können.",
+  "additional-reading-how-to-register-an-ethereum-account": "So \"registrieren\" Sie ein Ethereum-Konto",
+  "additional-reading-how-to-use-a-wallet": "So verwenden Sie eine Wallet"
 }

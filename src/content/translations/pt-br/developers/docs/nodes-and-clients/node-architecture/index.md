@@ -6,7 +6,7 @@ lang: pt-br
 
 Um nó Ethereum é composto por dois clientes: um [cliente de execução](/developers/docs/nodes-and-clients/#execution-clients) e um [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients).
 
-Quando o Ethereum estava usando [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), um cliente de execução era suficiente para executar um nó completo Ethereum. No entanto, desde a implementação da [prova de participação](/developers/docs/consensus-mechanisms/pos/), o cliente de execução precisa ser usado com outro software, chamado [“cliente de consenso”](/developers/docs/nodes-and-clients/#consensus-clients).
+Quando o Ethereum estava usando [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), um cliente de execução era suficiente para executar um nó completo Ethereum. No entanto, desde a implementação da [prova de participação](/developers/docs/consensus-mechanisms/pow/), o cliente de execução precisa ser usado com outro software, chamado [“cliente de consenso”](/developers/docs/nodes-and-clients/#consensus-clients).
 
 O diagrama abaixo mostra a relação entre os dois clientes Ethereum. Os dois clientes se conectam às suas respectivas redes ponto a ponto (P2P). As redes P2P separadas são necessárias à medida que os clientes de execução espalham transações em sua rede P2P, permitindo que eles gerenciem seu pool de transações local, enquanto os clientes de consenso distribuem blocos em sua rede P2P, permitindo consenso e crescimento da cadeia.
 
@@ -22,7 +22,7 @@ O cliente de execução é responsável pelo tratamento de transações, transmi
 
 O cliente de execução cria payloads (cargas) de execução — a lista de transações, triagem de estado atualizada e outros dados relacionados à execução. Os clientes de consenso incluem o payload em cada bloco. O cliente de execução também é responsável por reexecutar transações em novos blocos, para garantir que eles sejam válidos. A execução das transações é feita no computador embutido do cliente de execução, conhecido como [Máquina Virtual Ethereum (EVM)](/developers/docs/evm).
 
-O cliente de execução também oferece uma interface de usuário para Ethereum por meio de [métodos RPC](/developers/docs/apis/json-rpc), que permitem aos usuários consultar a blockchain Ethereum, enviar transações e implantar contratos inteligentes. É comum que as chamadas RPC sejam tratadas por uma biblioteca como [Web3js](https://web3js.readthedocs.io/en/v1.8.0/), [Web3py](https:// web3py.readthedocs.io/en/v5/) ou por uma interface de usuário, como uma carteira de navegador.
+O cliente de execução também oferece uma interface de usuário para Ethereum por meio de [métodos RPC](/developers/docs/apis/json-rpc), que permitem aos usuários consultar a blockchain Ethereum, enviar transações e implantar contratos inteligentes. É comum que as chamadas RPC sejam tratadas por uma biblioteca como [Web3js](https://web3js.readthedocs.io/en/v1.8.0/), [Web3py](https://web3py.readthedocs.io/en/v5/) ou por uma interface de usuário, como uma carteira de navegador.
 
 Em resumo, o cliente de execução é:
 
@@ -55,5 +55,5 @@ Os operadores de nó podem adicionar um validador aos seus clientes de consenso 
 ## Leitura adicional {#further-reading}
 
 - [Prova de participação](/developers/docs/consensus-mechanisms/pos)
-- [Proposta de bloqueio ](/developers/docs/consensus-mechanisms/pos/block-proposal)
+- [Proposta de bloqueio](/developers/docs/consensus-mechanisms/pos/block-proposal)
 - [Recompensas e penalidades do validador](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)

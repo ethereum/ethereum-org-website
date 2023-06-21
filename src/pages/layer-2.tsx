@@ -93,9 +93,9 @@ const StyledInfoIcon = () => (
     mr={2}
     opacity={0.8}
     boxSize="full"
-    _hover={{ color: "primary" }}
-    _active={{ color: "primary" }}
-    _focus={{ color: "primary" }}
+    _hover={{ color: "primary.base" }}
+    _active={{ color: "primary.base" }}
+    _focus={{ color: "primary.base" }}
   />
 )
 
@@ -134,7 +134,7 @@ const StatBox = (props: ChildOnlyType) => (
 
 const StatPrimary = (props: { content: string }) => (
   <Text
-    color="primary"
+    color="primary.base"
     fontFamily="monospace"
     fontWeight="bold"
     fontSize="2rem"
@@ -171,7 +171,11 @@ interface L2DataResponse {
 }
 
 interface FeeDataResponse {
-  data: Array<{ id: string; results: { feeTransferEth: number } }>
+  data: Array<{
+    id: string
+    results: { feeTransferEth: number }
+    errors?: { [key: string]: string }
+  }>
 }
 
 const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
@@ -229,7 +233,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         )
 
         // filtering out L2's we arent listing
-        const feeData = feeDataResponse.data.filter((l2) => l2.id !== "hermez")
+        const feeData = feeDataResponse.data.filter(
+          (l2) => l2.id !== "hermez" && !l2.errors
+        )
 
         const feeAverage =
           feeData.reduce(

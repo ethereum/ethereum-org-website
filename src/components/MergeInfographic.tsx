@@ -87,7 +87,7 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
           lineHeight="1em"
           textAlign="center"
           maxHeight="2em"
-          color="background"
+          color="background.base"
           fontSize={{
             base: "0.625em",
             sm: "0.875em",

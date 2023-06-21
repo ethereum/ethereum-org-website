@@ -70,7 +70,7 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.textTableOfContents};
 `
 
-const Subtitle = styled.div`
+const Subtitle = styled.p`
   font-size: 1.25rem;
   line-height: 140%;
   color: ${({ theme }) => theme.colors.text200};
@@ -541,14 +541,14 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>$0.41T</StatPrimary>
+                  <StatPrimary>$410B</StatPrimary>
                   <StatDescription>
                     Value secured on{" "}
                     <NoWrapText>
                       Ethereum{" "}
                       <Tooltip
                         content={tooltipContent({
-                          apiUrl: "https://ultrasound.money/",
+                          apiUrl: "https://ultrasound.money/#tvs",
                           apiProvider: "Ultrasound Money",
                           ariaLabel: "Read more about about Ethereum as money",
                         })}

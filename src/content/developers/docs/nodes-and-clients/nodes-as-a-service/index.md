@@ -143,6 +143,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Direct 24/7 Support
     - Pay in Crypto (Enterprise)
+- [DRPC](https://drpc.org/)
+  - [Docs](https://docs.drpc.org/)
+  - Features
+    - Decentralized RPC nodes
+    - 15+ Node providers
+    - Node balancing
+    - Unlimited compute units per month on the free tier
+    - Data verification
+    - Custom endpoints
+    - http and WSS endpoints
+    - Unlimited keys (free and paid tier)
+    - Flexible fallback options
+    - [Public Endpoint](https://eth.drpc.org)
+    - Free shared archive nodes
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Features

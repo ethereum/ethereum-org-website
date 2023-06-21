@@ -341,7 +341,7 @@ Masalah keamanan terkait NFT sering kali terkait dengan penipuan phishing, keren
 
 ## Membangun dengan NFT {#build-with-nfts}
 
-Kebanyakan NFT dibangun dengan menggunakan standar yang dikenal sebagai [ERC-721](/developers/docs/standards/tokens/erc-721/). Namun, ada standar lainnya yang mungkin Anda ingin periksa. Standar [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) memungkinkan token dapat dipertukarkan yang terutama berguna di dunia game. Dan yang lebih baru, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) telah diusulkan untuk membuat pencetakan NFT menjadi lebih efisien. Standar ini memungkinkan Anda mencetak NFT sebanyak yang Anda inginkan dalam satu transaksi!
+Kebanyakan NFT dibangun dengan menggunakan standar yang dikenal sebagai [ERC-721](/developers/docs/standards/tokens/erc-721/). Namun, ada standar lainnya yang mungkin Anda ingin periksa. Standar [ERC-1155](/developers/docs/standards/tokens/erc-1155/) memungkinkan token dapat dipertukarkan yang terutama berguna di dunia game. Dan yang lebih baru, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) telah diusulkan untuk membuat pencetakan NFT menjadi lebih efisien. Standar ini memungkinkan Anda mencetak NFT sebanyak yang Anda inginkan dalam satu transaksi!
 
 ## Bacaan lebih lanjut {#further-reading}
 

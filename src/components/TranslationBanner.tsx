@@ -35,6 +35,7 @@ const TranslationBanner: React.FC<IProps> = ({
 
   return (
     <Box
+      as="aside"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}
       right={{ base: 0, md: 8 }}
@@ -117,7 +118,7 @@ const TranslationBanner: React.FC<IProps> = ({
           margin={2}
           color="secondary"
           _hover={{
-            color: "primary",
+            color: "primary.base",
           }}
           onClick={() => setIsOpen(false)}
         />

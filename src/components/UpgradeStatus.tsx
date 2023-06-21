@@ -25,6 +25,7 @@ const UpgradeStatus: React.FC<IProps> = ({
 
   return (
     <VStack
+      as="aside"
       alignItems="start"
       bg={
         isShipped ? "upgradeStatusShippedBackground" : "upgradeStatusBackground"

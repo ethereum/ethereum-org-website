@@ -66,7 +66,7 @@ Uma árvore Radix "Merkle" é construída ligando os nós usando digests de hash
 
 É impossível para um atacante fornecer uma prova de um par `(path, value)` que não exista, já que o hash raiz é, em última análise, baseado em todos os hashes abaixo dele. Qualquer modificação subjacente alteraria o hash raiz.
 
-Vamos nos referir a uma unidade atômica de uma árvore de radix (por exemplo, um único caractere hexadecimal, ou número binário de 4 bits) como um "nibble". Ao percorrerem um caminho um nibble de cada vez, conforme descrito acima, os nós podem fazer referência a 16 filhos, no máximo, mas incluir um elemento `value`. Portanto, os representamos como uma array com comprimento. Chamamos esses arrays de 17 elementos de "branch nodes".
+Vamos nos referir a uma unidade atômica de uma árvore de radix (por exemplo, um único caractere hexadecimal, ou número binário de 4 bits) como um "nibble". Ao percorrerem um caminho um nibble de cada vez, conforme descrito acima, os nós podem fazer referência a 16 filhos, no máximo, mas incluir um elemento `value`. Portanto, nós os representamos como uma faixa de comprimento 17. Chamamos esses arrays de 17 elementos de "branch nodes".
 
 ## Árvore Merkle Patricia {#merkle-patricia-trees}
 
@@ -248,7 +248,7 @@ Mais informações sobre isso podem ser encontradas na documentação do [EIP 27
 
 ### Árvore de recibos {#receipts-trie}
 
-Cada bloco tem sua própria árvore de recibos. Um `path` aqui é: `rlp(transactionIndex)`. `transactionIndex` é seu índice dentro do bloco que é minerado. A árvore de recibos nunca é atualizada. De maneira similar à árvore de Transações, existem recibos atuais e legados. Para consultar um recibo específico na árvore de Recibos, o índice da transação em seu bloco, o payload do recibo e o tipo de transação são necessários. O recibo retornado pode ser do tipo `Receipt`, que é definido como a concatenação do `transaction type` e `transaction payload` ou ele pode ser do tipo `LegacyReceipt` que é definido como `rlp([status, cumulativaGasUsed, logsBloom, logs])`.
+Cada bloco tem sua própria árvore de recibos. Um `path` aqui é: `rlp(transactionIndex)`. `transactionIndex` é seu índice dentro do bloco que é minerado. A árvore de recibos nunca é atualizada. De maneira similar à árvore de Transações, existem recibos atuais e legados. Para consultar um recibo específico na árvore de Recibos, o índice da transação em seu bloco, o payload do recibo e o tipo de transação são necessários. O recibo retornado pode ser do tipo `Receipt`, que é definido como a concentração de `TransactionType` e `ReceiptPayload`, ou pode ser do tipo `LegacyReceipt`, que é definido como `rlp([status, acumulativoGasUsed, logsBloom, logs])`.
 
 Mais informações sobre isso podem ser encontradas na documentação do [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
