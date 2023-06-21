@@ -68,7 +68,7 @@ Para usar o método sandwich, um buscador observará o mempool para encontrar gr
 
 Um buscador pode calcular o efeito de preço aproximado desta grande negociação no par UNI/DAI e executar uma ordem de compra ideal imediatamente _antes_ da grande negociação, comprando UNI mais barato e, em seguida, executar uma ordem de venda imediatamente _após_ a grande negociação, vendendo-a pelo preço mais alto causado pelo grande pedido.
 
-No entanto, o método sandwich é mais arriscado, pois não é atômico (ao contrário da arbitragem DEX, como descrito acima) e é propenso a um <a href="[m/Defi-Cartel/salmonella">ataque "salmonela"](https://github.com/Defi-Cartel/salmonella).
+No entanto, o método sandwich é mais arriscado, pois não é atômico (ao contrário da arbitragem DEX, como descrito acima) e é propenso a um [ataque "salmonela"](https://github.com/Defi-Cartel/salmonella).
 
 ### MEV com NFT {#mev-examples-nfts}
 
