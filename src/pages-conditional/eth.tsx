@@ -200,7 +200,7 @@ const H4 = (props: HeadingProps) => (
 )
 
 const CardContainer = (props: FlexProps) => (
-  <Flex wrap="wrap" my={-4} {...props} />
+  <Flex wrap="wrap" mx={-4} {...props} />
 )
 
 const TokenCard = (props: ComponentProps<typeof HorizontalCard>) => (
