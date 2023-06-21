@@ -273,9 +273,14 @@ ethers.utils.formatEther(balance)
 - [相关文档](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**viem -** **_以太坊的 TypeScript 接口。_**
+
+- [相关文档](https://viem.sh)
+- [Github](https://github.com/wagmi-dev/viem)
+
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对你有所帮助？ 编辑本页面以添加！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
 
 ## 相关主题 {#related-topics}
 
@@ -285,5 +290,5 @@ _还有哪些社区资源对你有所帮助？ 编辑本页面以添加！_
 ## 相关教程 {#related-tutorials}
 
 - [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
-- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用稳定币 DAI 代币，了解如何使用 JavaScript 调用合约函数。_
+- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI 代币，从而借助 JavaScript 调用合约函数。_
 - [使用 Web3 和 Alchemy 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– 从后端发送交易分步指南。_

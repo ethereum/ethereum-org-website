@@ -3,7 +3,7 @@ title: Ethereum roadmap
 description: The path to more scalability, security and sustainability for Ethereum.
 lang: en
 template: roadmap
-image: ../../assets/upgrades/merge.png
+image: ../../assets/roadmap/roadmap-main.png
 alt: "Ethereum roadmap"
 summaryPoints:
 buttons:

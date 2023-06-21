@@ -35,7 +35,7 @@ In addition to the benefits we outlined in our [intro to staking](/staking/), st
 
 Pooled or delegated staking is not natively supported by the Ethereum protocol, but given the demand for users to stake less than 32 ETH a growing number of solutions have been built out to serve this demand.
 
-Each pool and the tools or smart contracts they use have been built out by different teams, and each comes with benefits and risks. Pools enable users to swap their ETH for a token representing staked ETH. The token is known as a "liquid staking derivative"; this is useful because it allows users to swap any amount of ETH to an equivalent amount of a yield-bearing token that generates a return from the staking rewards applied to the underlying staked ETH (and vice versa) on decentralized exchanges even though the actual ETH stays staked on the Beacon Chain. This means swaps back and forth from a yield-bearing staked-ETH product and "raw ETH" is quick, easy and not only available in multiples of 32 ETH.
+Each pool and the tools or smart contracts they use have been built out by different teams, and each comes with benefits and risks. Pools enable users to swap their ETH for a token representing staked ETH. The token is known as a "liquid staking derivative"; this is useful because it allows users to swap any amount of ETH to an equivalent amount of a yield-bearing token that generates a return from the staking rewards applied to the underlying staked ETH (and vice versa) on decentralized exchanges even though the actual ETH stays staked on the consensus layer. This means swaps back and forth from a yield-bearing staked-ETH product and "raw ETH" is quick, easy and not only available in multiples of 32 ETH.
 
 However, these liquid staking derivatives tend to create cartel-like behaviors where a large amount of staked ETH ends up under the control of a few centralized organizations rather than spread across many independent individuals. This creates conditions for censorship or value extraction. The gold standard for staking should always be individuals running validators on their own hardware whenever possible.
 
@@ -50,7 +50,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
 <InfoBanner emoji="⚠️" isWarning>
-Please note the importance of choosing a service that takes <a href="/developers/docs/nodes-and-clients/client-diversity/">client diversity</a> seriously, as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are marked as <em style="text-transform: uppercase;">"diverse clients."</em>
+Please note the importance of choosing a service that takes <a href="/developers/docs/nodes-and-clients/client-diversity/">client diversity</a> seriously, as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style="text-transform: uppercase;">"execution client diversity"</em> and <em style="text-transform: uppercase;">"consensus client diversity."</em>
 </InfoBanner>
 
 <StakingProductsCardGrid category="pools" />

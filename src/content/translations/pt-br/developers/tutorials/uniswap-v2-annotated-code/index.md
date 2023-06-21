@@ -4,7 +4,7 @@ description: Como funciona o contrato Uniswap-v2? Por que ele é escrito assim?
 author: Ori Pomerantz
 tags:
   - "solidity"
-skill: intermediário
+skill: intermediate
 published: 2021-05-01
 lang: pt-br
 ---
@@ -265,7 +265,7 @@ Esta função fornece aos chamadores o estado atual do câmbio. Observe que as f
 
 Essa função interna transfere uma quantidade de tokens ERC20 do câmbio para outra pessoa. `SELECTOR` especifica que a função que estamos chamando é `transfer(address,uint)` (veja a definição acima).
 
-Para evitar ter que importar uma interface para a função do token, nós "manualmente" criamos o chamado usando uma das [funções ABI ](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions).
+Para evitar ter que importar uma interface para a função do token, nós "manualmente" criamos o chamado usando uma das [funções ABI](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions).
 
 ```solidity
         require(success && (data.length == 0 || abi.decode(data, (bool))), 'UniswapV2: TRANSFER_FAILED');

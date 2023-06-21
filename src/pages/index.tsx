@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
   chakra,
@@ -83,7 +83,7 @@ const ContentBox = (props: ChildOnlyProp) => (
 
 const StyledActionCard = chakra(ActionCard, {
   baseStyle: {
-    background: "background",
+    background: "background.base",
     borderRadius: "sm",
     border: "1px",
     borderColor: "text",
@@ -175,9 +175,12 @@ const PageHeader = () => (
     <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>
       <Translation id="page-index-description" />
     </Text>
-    <ButtonLink variant="outline" to="/learn/">
-      <Translation id="page-index-title-button" />
-    </ButtonLink>
+    <ButtonLinkRow
+      firstButton={{
+        to: "/learn/",
+        child: <Translation id="page-index-title-button" />,
+      }}
+    />
   </Flex>
 )
 
@@ -596,9 +599,9 @@ const HomePage = ({
                     as={FaGithub}
                     color="text"
                     fontSize="2xl"
-                    _hover={{ color: "primary" }}
-                    _active={{ color: "primary" }}
-                    _focus={{ color: "primary" }}
+                    _hover={{ color: "primary.base" }}
+                    _active={{ color: "primary.base" }}
+                    _focus={{ color: "primary.base" }}
                   />
                   GitHub
                 </>

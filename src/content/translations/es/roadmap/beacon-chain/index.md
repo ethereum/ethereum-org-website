@@ -71,5 +71,5 @@ La fragmentación solo podría ser implementada en el ecosistema de Ethereum de 
 
 ## Más información
 
-- [Más sobre las futuras actualizaciones de Ethereum ](/roadmap/vision)
-- [Más sobre la prueba de participación ](/developers/docs/consensus-mechanisms/pos)
+- [Más sobre las futuras actualizaciones de Ethereum](/roadmap/vision)
+- [Más sobre la prueba de participación](/developers/docs/consensus-mechanisms/pos)

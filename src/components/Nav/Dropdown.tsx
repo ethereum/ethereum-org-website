@@ -84,7 +84,7 @@ const Item = (props: Pick<LinkProps, "to" | "children">) => (
     px={4}
     _hover={{
       bg: "dropdownBackgroundHover",
-      color: "primary",
+      color: "primary.base",
       textDecor: "none",
       svg: { fill: "currentColor" },
     }}

@@ -15,7 +15,7 @@ import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
 import TranslationBannerLegal from "./TranslationBannerLegal"
 import FeedbackWidget from "./FeedbackWidget"
-import { SkipLink, SkipLinkAnchor } from "./SkipLink"
+import { SkipLink } from "./SkipLink"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
@@ -28,7 +28,9 @@ import { isMobile } from "../utils/isMobile"
 import type { Context } from "../types"
 
 import client from "../apollo"
-import Fonts from "./Fonts"
+
+import "../../static/fonts/inter-font-face.css"
+import "../../static/fonts/ibm-plex-font-face.css"
 
 export interface IProps {
   children?: React.ReactNode
@@ -107,7 +109,6 @@ const Layout: React.FC<IProps> = ({
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
-        <Fonts />
         <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
           <SkipLink hrefId="#main-content" />
           <TranslationBanner
@@ -135,8 +136,11 @@ const Layout: React.FC<IProps> = ({
               <Nav path={path} />
               {shouldShowSideNav && <SideNavMobile path={path} />}
             </ZenMode>
-            <SkipLinkAnchor id="main-content" />
-            <Flex flexDirection={{ base: "column", lg: "row" }}>
+            <Flex
+              flexDirection={{ base: "column", lg: "row" }}
+              id="main-content"
+              scrollMarginTop={20}
+            >
               {shouldShowSideNav && (
                 <ZenMode>
                   <SideNav path={path} />

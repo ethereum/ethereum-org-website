@@ -80,14 +80,14 @@ function sortMarkdownPathsIntoLanguages(paths: Array<string>): Languages {
   }, {})
 
   for (const path of paths) {
-    const isTranslation = path.includes("/translations/")
-    const langIndex = path.indexOf("/translations/") + 14
-    const isFourCharLang = path.includes("pt-br") || path.includes("zh-tw")
-    const charactersToSlice: number = isFourCharLang ? 5 : 2
+    const translationDir = "/translations/"
+    const isTranslation = path.includes(translationDir)
+    const langIndex = path.indexOf(translationDir) + translationDir.length
 
-    const lang = isTranslation
-      ? path.slice(langIndex, langIndex + charactersToSlice)
-      : "en"
+    // RegEx to grab the root of the path (e.g. the lang code for translated files)
+    const regex = /^([^\/]+)\//
+    const match = path.substring(langIndex).match(regex)
+    const lang = isTranslation && match && match.length > 1 ? match[1] : "en"
 
     if (LANG_ARG) {
       if (LANG_ARG === lang) {
@@ -177,6 +177,15 @@ function processMarkdown(path: string) {
   // Ignore tutorials with Javascript and ExpandableCards
   if (
     !path.includes("/history/") &&
+    !path.includes("/whitepaper/") &&
+    !path.includes("/roadmap/") &&
+    !path.includes("alchemy") &&
+    !path.includes("nft") &&
+    !path.includes("hello-world-smart-contract") &&
+    !path.includes("opcodes") &&
+    !path.includes("translation-program") &&
+    !path.includes("/deprecated-software/") &&
+    !path.includes("/energy-consumption/") &&
     !markdownFile.includes("```javascript") &&
     !markdownFile.includes("ExpandableCard")
   ) {

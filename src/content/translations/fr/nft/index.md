@@ -304,7 +304,7 @@ Ethereum permet aux NFT de fonctionner pour plusieurs raisons :
 
 ## L'impact environnemental des NFT {#environmental-impact-nfts}
 
-La création et le transfert de NFT ne sont que des transactions d'Ethereum - le fait de frapper, acheter, échanger ou interagir avec des NFT ne consomme pas directement d'énergie. Depuis [La fusion](/roadmap/merge), Ethereum est une blockchain basse énergie, de sorte que l'impact environnemental de l'utilisation de NFT est négligeable.
+La création et le transfert de NFT ne sont que des transactions d'Ethereum - le fait de frapper, acheter, échanger ou interagir avec des NFT ne consomme pas directement d'énergie. Depuis [La fusion](/roadmap/merge), Ethereum est une blockchain basse énergie, de sorte que l'impact environnemental généré par l'utilisation des NFT est négligeable.
 
 [Plus d'infos sur la consommation d'énergie d'Ethereum](/energy-consumption/).
 
@@ -341,7 +341,7 @@ Les questions de sécurité concernant les NFT sont le plus souvent liées aux e
 
 ## Créer avec les NFT {#build-with-nfts}
 
-La plupart des NFT sont construits via une norme cohérente connue sous le nom de [ERC-721](/developers/docs/standards/tokens/erc-721/). Il existe cependant d'autres normes qui pourraient vous intéresser. La norme [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) autorise les jetons à moitié fongibles, ce qui est particulièrement utiles dans l'univers des jeux vidéos. Et plus récemment, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) a été proposé pour rendre la frappe de NFT bien plus efficace. Cette norme vous laisse le droit de frapper autant que vous le souhaitez en une seule transaction !
+La plupart des NFT sont construits via une norme cohérente connue sous le nom de [ERC-721](/developers/docs/standards/tokens/erc-721/). Il existe cependant d'autres normes qui pourraient vous intéresser. La norme [ERC-1155](/developers/docs/standards/tokens/erc-1155/) autorise les jetons à moitié fongibles, ce qui est particulièrement utiles dans l'univers des jeux vidéos. Et plus récemment, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) a été proposé pour rendre la frappe de NFT bien plus efficace. Cette norme vous laisse le droit de frapper autant que vous le souhaitez en une seule transaction !
 
 ## Complément d'information {#further-reading}
 

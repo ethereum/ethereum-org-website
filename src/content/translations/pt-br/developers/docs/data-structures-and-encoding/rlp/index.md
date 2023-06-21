@@ -43,27 +43,27 @@ Em código, isto é:
 ```python
 def rlp_encode(input):
     if isinstance(input,str):
-        if len(input) == 1 and ord(input) < 0x80: return input
-        else: return encode_length(len(input), 0x80) + input
-    elif isinstance(input,list):
+        if len(input) == 1 and ord(input) < 0x80:
+            return input
+        return encode_length(len(input), 0x80) + input
+    elif isinstance(input, list):
         output = ''
-        for item in input: output += rlp_encode(item)
+        for item in input:
+            output += rlp_encode(item)
         return encode_length(len(output), 0xc0) + output
 
-def encode_length(L,offset):
+def encode_length(L, offset):
     if L < 56:
          return chr(L + offset)
     elif L < 256**8:
          BL = to_binary(L)
          return chr(len(BL) + offset + 55) + BL
-    else:
-         raise Exception("input too long")
+     raise Exception("input too long")
 
 def to_binary(x):
     if x == 0:
         return ''
-    else:
-        return to_binary(int(x / 256)) + chr(x % 256)
+    return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
 ## Exemplos {#examples}
@@ -137,8 +137,7 @@ def decode_length(input):
         lenOfListLen = prefix - 0xf7
         listLen = to_integer(substr(input, 1, lenOfListLen))
         return (1 + lenOfListLen, listLen, list)
-    else:
-        raise Exception("input does not conform to RLP encoding form")
+    raise Exception("input does not conform to RLP encoding form")
 
 def to_integer(b):
     length = len(b)
@@ -146,8 +145,7 @@ def to_integer(b):
         raise Exception("input is null")
     elif length == 1:
         return ord(b[0])
-    else:
-        return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
+    return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
 ## Leitura adicional {#further-reading}

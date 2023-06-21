@@ -6,7 +6,7 @@ tags:
   - "Solidity"
   - "スマートコントラクト"
   - "セキュリティ"
-skill: 中級
+skill: intermediate
 lang: ja
 published: 2020-09-06
 source: セキュアなコントラクトの構築

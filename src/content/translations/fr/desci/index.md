@@ -20,9 +20,9 @@ La DeSci vise à créer un écosystème dans lequel les scientifiques sont incit
 
 La science décentralisée permet d'accéder à des sources de financement plus variées (des [DAO](/dao/), [dons quadratiques](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) aux financements participatifs et plus encore), des données et méthodes d'accès plus accessibles, et incite à la reproductibilité.
 
-### Juan Benet - DeSci, laboratoires indépendants, & dcience des données à grande échelle
+### Juan Benet - Le Mouvement DeSci
 
-<YouTube id="zkXM9H90g_E" />
+<YouTube id="5ORvbCIW39o" />
 
 ## En quoi la DeSci fait avancer la science {#desci-improves-science}
 
@@ -51,7 +51,7 @@ La DeSci met en place les outils scientifiques nécessaires pour faire basculer 
 
 Comme chacun le sait, les publications scientifiques posent problème car elles sont gérées par des maisons d'édition qui s'appuient sur le travail gratuit de scientifiques, de réviseurs et d'éditeurs pour produire des articles, mais qui facturent ensuite des frais d'édition exorbitants. Le public, qui a généralement financé indirectement le travail et les coûts de publication à travers les taxes et les impôts qu'il paie, ne peut souvent pas accéder à ce même travail sans payer l'éditeur à nouveau. Le montant total des frais de publication d'articles scientifiques individuels est souvent à cinq chiffres ($USD), ce qui sape le concept même de connaissance scientifique en tant que [bien public](https://www.econlib.org/library/Enc/PublicGoods.html) tout en permettant à un petit groupe d'éditeurs d'engranger d'énormes profits.
 
-Il existe des plateformes d'acès libre et gratuit sous forme de serveurs de pré-impression [comme ArXiv](https://arxiv.org/). Le contrôle qualité , de même que les [mécanismes anti-sybil ](https://csrc.nist.gov/glossary/term/sybil_attack), font défaut sur ces plateformes, qui ne suivent généralement pas les paramètres de niveau article, ce qui signifie qu'ils ne sont généralement utilisés que pour faire connaître un travail avant de le soumettre à un éditeur classique. SciHub permet également d'accéder gratuitement aux articles publiés, mais pas légalement, et seulement après que les éditeurs ont été réglés et ont lié l'œuvre à une législation stricte sur le droit d'auteur. Les données et articles scientifiques accessibles associés à un mécanisme de légitimité et à un modèle incitatif intégrés manquent donc cruellement. Le Web3 offre les outils nécessaire pour construire un tel système.
+Il existe des plateformes d'acès libre et gratuit sous forme de serveurs de pré-impression [comme ArXiv](https://arxiv.org/). Le contrôle qualité , de même que les [mécanismes anti-sybil](https://csrc.nist.gov/glossary/term/sybil_attack), font défaut sur ces plateformes, qui ne suivent généralement pas les paramètres de niveau article, ce qui signifie qu'ils ne sont généralement utilisés que pour faire connaître un travail avant de le soumettre à un éditeur classique. SciHub permet également d'accéder gratuitement aux articles publiés, mais pas légalement, et seulement après que les éditeurs ont été réglés et ont lié l'œuvre à une législation stricte sur le droit d'auteur. Les données et articles scientifiques accessibles associés à un mécanisme de légitimité et à un modèle incitatif intégrés manquent donc cruellement. Le Web3 offre les outils nécessaire pour construire un tel système.
 
 ### Reproductibilité et réplicabilité {#reproducibility-and-replicability}
 
@@ -108,7 +108,6 @@ Explorer les projets et rejoindre la communauté DeSci.
 - [VitaDAO : recevoir des fonds pour mener des recherches sur la longévité par le biais d'accords de recherche sponsorisés](https://www.vitadao.com/)
 - [Protocole Fleming : économie de données open-source qui alimente la découverte biomédicale collaborative](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Active Inference Lab](https://www.activeinference.org/)
-- [Cherubs DAO : Fonds d'impact dédié à la santé mentale et au & le bien-être cérébral financé par des NFT et régi par une DAO](https://cherubsdao.com/)
 - [CureDAO : plateforme de santé de précision détenue par une communauté](https://docs.curedao.org/)
 - [IdeaMarkets : pour une crédibilité scientifique décentralisée renforcée](https://ideamarket.io/)
 
@@ -135,5 +134,5 @@ Nous accueillons volontiers les suggestions de nouveaux projets à répertorier 
 - [Qu'est-ce que la science décentralisée ?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversation entre Vitalik Buterin et le scientifique Aubrey de Grey sur le croisement entre recherche sur la longévité et cryptomonnaie](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [La publication scientifique est en panne. Est-ce que le Web3 peut améliorer ?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
-- [Juan Benet - DeSci, Laboratoires indépendants, & Science des données à grande échelle](https://www.youtube.com/watch?v=zkXM9H90g_E)
+- [Juan Benet - DeSci, laboratoires indépendants, & dcience des données à grande échelle](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - Comment la DeSci peut transformer la recherche biomédicale & le capital risque](https://www.youtube.com/watch?v=qB4Tc3FcVbM)

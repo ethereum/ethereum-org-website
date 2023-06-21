@@ -107,7 +107,7 @@ Extraits de code réutilisables (un programme) qu'un développeur publie dans l'
 ## Complément d'information {#further-reading}
 
 - [Livre blanc Ethereum](/whitepaper/)
-- [Comment fonctionne Ethereum de toute manière ?](https://www. preethikasireddy. com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** cette ressource est toujours utile mais sachez qu'elle est antérieure à [La Fusion](/roadmap/merge) et fait donc toujours référence au mécanisme de preuve de travail d'Ethereum - Ethereum est désormais sécurisé par la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos))
+- [Comment fonctionne Ethereum de toute manière ?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** cette ressource est toujours utile mais sachez qu'elle est antérieure à [La Fusion](/roadmap/merge) et fait donc toujours référence au mécanisme de preuve de travail d'Ethereum - Ethereum est désormais sécurisé par la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos))
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 

@@ -84,7 +84,7 @@ Aqui estão alguns dos aplicativos corporativos que foram construídos em cima d
 
 ### Pagamentos {#payments}
 
-- [Brave Browser](https://basicattentiontoken. org/) _paga aos usuários para visualizar anúncios e os usuários podem pagar aos editores para apoiá-los por meio do Basic Attention Token._
+- [Brave Browser](https://basicattentiontoken.org/) _paga aos usuários para visualizar anúncios e os usuários podem pagar aos editores para apoiá-los por meio do Basic Attention Token._
 - [hCaptcha](https://www.hcaptcha.com/) _Sistema CAPTCHA de prevenção de bots que paga aos operadores do site o trabalho realizado pelos usuários para rotular dados para aprendizagem de máquina. Agora implantado pela Cloudflare_
 - [EthereumAds](https://ethereumads.com/) _permite que os operadores do site vendam espaço de publicidade e sejam pagos via Ethereum_
 
@@ -117,7 +117,7 @@ Aqui estão alguns dos aplicativos corporativos que foram construídos em cima d
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _ – provedor de conhecimento de embarque marítimo e transferência de documentos_
 - [Morpheus.network](https://morpheus.network/) _ – plataforma de automação de cadeia de suprimentos que implementa um sistema híbrido de cadeias privadas com dados autenticados na Ethereum Mainnet, sendo usada por empresas como a Federated Co-op Ltd., distribuidora canadense de alimentos, petróleo e gás, e a Vitalcan, fornecedora argentina de alimentos para animais._
 - [Minespider](https://www.minespider.com/) _ – rastreamento da cadeia de suprimentos_
-- [EY OpsChain Contract Manager](<[https://blockchain.ey.com/products/contract-manager](https://blockchain.ey.com/products/contract-manager)>) _ – permite que as empresas participem de um fluxo de processo de aquisição, emitindo pedidos de cotação (RFQ), contratos, ordens de compra e faturas para toda a sua rede de parceiros de negócios confiáveis_
+- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _ – permite que as empresas participem de um fluxo de processo de aquisição, emitindo pedidos de cotação (RFQ), contratos, ordens de compra e faturas para toda a sua rede de parceiros de negócios confiáveis_
 - [Treum](https://treum.io/) _ – traz transparência, capacidade de rastreio e negociação para cadeias de abastecimento, usando a tecnologia de blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _ – verifica conhecimentos de embarque marítimo eletrônicos (eBLs) para envio internacional_
 - [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _ – cunha NFTs para cada lote de cerveja, permitindo maior visibilidade e eficiência ao longo de sua cadeia de suprimentos_

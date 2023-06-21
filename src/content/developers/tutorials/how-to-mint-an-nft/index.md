@@ -109,9 +109,9 @@ Once you’re done editing the JSON file, save it and upload it to Pinata, follo
 
 ## Step 5: Create an instance of your contract {#instance-contract}
 
-Now, to interact with our contract, we need to create an instance of it in our code. To do so we’ll need our contract address which we can get from the deployment or [Etherscan](https://goerli.etherscan.io/) by looking up the address you used to deploy the contract.
+Now, to interact with our contract, we need to create an instance of it in our code. To do so we’ll need our contract address which we can get from the deployment or [Etherscan](https://sepolia.etherscan.io/) by looking up the address you used to deploy the contract.
 
-![View your contract address on Etherscan](./viewContractEtherscan.png)
+![View your contract address on Etherscan](./view-contract-etherscan.png)
 
 In the above example, our contract address is 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
@@ -130,7 +130,7 @@ Now, in order to create and send transactions to the Ethereum chain, we’ll use
 Add your public key to your `.env` file — if you completed part 1 of the tutorial, our `.env` file should now look like this:
 
 ```js
-API_URL = "https://eth-goerli.g.alchemy.com/v2/your-api-key"
+API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
@@ -316,9 +316,9 @@ Now, run `node scripts/mint-nft.js` to deploy your NFT. After a couple of second
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Goerli Etherscan](https://goerli.etherscan.io/) and search for your transaction hash.
+Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Sepolia Etherscan](https://sepolia.etherscan.io/) and search for your transaction hash.
 
-![View your NFT transaction hash on Etherscan](./viewNFTEtherscan.png)_View your NFT transaction hash on Etherscan_
+![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_View your NFT transaction hash on Etherscan_
 
 And that’s it! You’ve now deployed AND minted with a NFT on the Ethereum blockchain <Emoji text=":money_mouth_face:" size={1} />
 

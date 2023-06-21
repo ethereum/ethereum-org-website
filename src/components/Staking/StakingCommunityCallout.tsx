@@ -2,6 +2,7 @@ import React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
 import { graphql, useStaticQuery } from "gatsby"
+import { FlexProps } from "@chakra-ui/react"
 
 import ButtonLink from "../ButtonLink"
 import CalloutBanner from "../CalloutBanner"
@@ -24,7 +25,7 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-export interface IProps {
+export interface IProps extends FlexProps {
   id?: string
 }
 
@@ -48,8 +49,6 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
   return (
     <CalloutBanner
       {...props}
-      mx={0}
-      my={16}
       image={getImage(image)!}
       alt={t("page-staking-image-alt")}
       titleKey={"page-staking-join-community"}

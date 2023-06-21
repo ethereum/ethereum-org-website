@@ -97,7 +97,7 @@ Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gide
 - listelenen tüm cüzdanların ve dapp'lerin hâlâ kriterlerimizi karşıladığından emin olmak
 - şu anda listelenenlerden daha fazla kriterlerimizi karşılayan önerilen ürünler olmadığını doğrulamak
 
-Kontrol edip bize bildirerek bu konuda yardımcı olabilirsiniz. [Bir konu oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) veya [website@ethereum.org](mailto:website@ethereum.org) adresine bir e-posta gönderin
+Kontrol edip bize bildirerek bu konuda yardımcı olabilirsiniz. [Bir konu oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) veya [website@ethereum.org](mailto:website@ethereum.org) adresine bir e-posta gönderin
 
 _Ayrıca, topluluğun tercihlerini belirtebilmesi ve önerebileceğimiz en iyi ürünleri öne çıkarabilmesi için oylama seçeneklerini araştırıyoruz._
 
@@ -107,6 +107,6 @@ _Ayrıca, topluluğun tercihlerini belirtebilmesi ve önerebileceğimiz en iyi �
 
 Ethereum.org'a bir cüzdan veya dapp eklemek istiyorsanız ve bu cüzdan veya dapp kriterleri karşılıyorsa GitHub'da bir sorun oluşturun.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request">
   Bir konu oluşturun
 </ButtonLink>

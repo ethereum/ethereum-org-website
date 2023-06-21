@@ -1,5 +1,17 @@
 [
   {
+    "title": "Ethereum Ecuador",
+    "emoji": ":ec:",
+    "location": "Ecuador",
+    "link": "https://www.eventbrite.com/o/ethereum-ecuador-64512134823"
+  },
+  {
+    "title": "Kyiv Ethereum",
+    "emoji": ":ukr:",
+    "location": "Ukraine",
+    "link": "https://kyivethereum.com/"
+  },
+  {
     "title": "Ethereum Bogota",
     "emoji": ":co:",
     "location": "Colombia",
@@ -11,9 +23,9 @@
     "location": "Sydney",
     "link": "https://www.meetup.com/BokkyPooBahs-Ethereum-Workshop/"
   },
-   {
+  {
     "title": "Web3Mi",
-    "emoji": ":ita:",
+    "emoji": ":it:",
     "location": "Milan",
     "link": "https://www.eventbrite.it/o/web3mi-52766466683"
   },
@@ -376,5 +388,11 @@
     "emoji": ":romania:",
     "location": "Timisoara",
     "link": "https://www.meetup.com/web3-timisoara/"
+  },
+  {
+    "title": "Crypto Wednesdays",
+    "emoji": ":belgium:",
+    "location": "Brussels",
+    "link": "https://dao.brussels/"
   }
 ]

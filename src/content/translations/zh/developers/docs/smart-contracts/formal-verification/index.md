@@ -120,7 +120,7 @@ lang: zh
 
 定理证明是一种程序（包括智能合约）正确性的数学推理方法。 它涉及将合约系统的模型以及其规范转换成数学公式（逻辑语句）。
 
-定理证明的目的是验证这些语句之间的逻辑等价性。 “逻辑等价性”（又称为“逻辑蕴涵”）是指两个语句之间的一种关系类型，即*当且仅当*语句 B 为真时，语句 A 才能为真。
+定理证明的目的是验证这些语句之间的逻辑等价性。 “逻辑等价性”（又称为“逻辑双向蕴含”）是指两个语句之间的一种关系类型，即*当且仅当*语句二为真时，语句一才能为真。
 
 关于合约模型及其属性的语句之间的必要关系（逻辑等价性）被表述为一个可证明的语句（称为定理）。 使用形式化推理系统，自动化定理证明器可以验证该定理的有效性。 也就是说，定理证明器可以确证智能合约模型与其规范完全相符。
 
@@ -134,7 +134,7 @@ lang: zh
 
 符号执行把执行轨迹表示成针对符号输入值的数学公式，也称为*路径谓词*。 [SMT 求解器](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories)用来检查路径谓词是否“可满足”（即存在一个满足公式的值）。 如果可以满足脆弱路径，SMT 求解器将产生一个具体值，将执行引向该路径。
 
-假设智能合约的函数把 `uint` 值 (`x`) 作为输入，并且当 `x` 大于 `5` 但小于 `10` 时回滚。 使用正常测试程序寻找一个触发错误的 `x` 值需要运行数十个测试用例（或者更多），而且不保证能实际找到一个触发错误的输入。
+假设智能合约的函数把 `uint` 值 (`x`) 作为输入，并且当 `x` 大于 `5` 且小于 `10` 时回滚。 使用正常测试程序寻找一个触发错误的 `x` 值需要运行数十个测试用例（或者更多），而且不保证能实际找到一个触发错误的输入。
 
 相反，符号执行工具使用符号值来执行函数：`X > 5 ∧ X < 10`（即，`x` 大于 5 同时 `x` 小于 10）。 相关的路径谓词 `x = X > 5 ∧ X < 10` 将提供给 SMT 求解器来求解。 如果一个特定值满足公式 `x = X > 5 ∧ X < 10`，SMT 求解器将计算它 — 例如，求解器可能生成 `7` 作为 `x` 的值。
 
@@ -212,35 +212,35 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ### 用于制定形式化规范的规范语言 {#specification-languages}
 
-**Act**：\_\*Act 允许存储更新、前置条件/后置条件、合约不变量的规范。 其工具套件也具有证明后端，可通过 Coq、SMT 求解器或 hevm 证明许多属性。\*\*
+**Act**：_Act 允许存储更新、前置条件/后置条件、合约不变量的规范。 其工具套件也具有证明后端，可通过 Coq、SMT 求解器或 hevm 证明许多属性。_
 
 - [GitHub](https://github.com/ethereum/act)
 - [相关文档](https://ethereum.github.io/act/)
 
-**Scribble** - \_\*Scribble 把 Scribble 规范语言中的代码注释转换为检查规范的具体断言。\*\*
+**Scribble** - _Scribble 把 Scribble 规范语言中的代码注释转换为检查规范的具体断言。_
 
 - [相关文档](https://docs.scribble.codes/)
 
-**Dafny** - \_\*Dafny 是一种可直接验证的编程语言，依赖于高层次注释来推理和验证代码的正确性。\*\*
+**Dafny** - _Dafny 是一种可直接验证的编程语言，依赖于高层次注释来推理和验证代码的正确性。_
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
 ### 用于检查正确性的程序验证器 {#program-verifiers}
 
-**Certora Prover** - \_ Certora Prover 是一种检查智能合约代码正确性的自动形式化验证工具。 它使用 CVL（Certora 验证语言）编写规范，并组合使用静态分析和约束求解检测属性违反。
+**Certora Prover** - _Certora Prover 是一种检查智能合约代码正确性的自动形式化验证工具。 它使用 CVL（Certora 验证语言）编写规范，并组合使用静态分析和约束求解检测属性违反。_
 
 - [网站](https://www.certora.com/)
 - [相关文档](https://docs.certora.com/en/latest/index.html)
 
-**Solidity SMTChecker** - \_\*Solidity 的 SMTChecker 是一个基于 SMT（可满足性模理论）和 Horn 求解的内置模型检查器。 它在编译期间确认合约源代码是否符合规范并静态检查是否违反了安全属性。\*\*
+**Solidity SMTChecker** - _Solidity 的 SMTChecker 是一个基于 SMT（可满足性模理论）和 Horn 求解的内置模型检查器。 它在编译期间确认合约源代码是否符合规范并静态检查是否违反了安全属性。_
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - \_\*solc-verify 是 Solidity 编译器的扩展版本，它可以使用注释和模块化程序验证对 Solidity 代码执行自动形式化验证。\*\*
+**solc-verify** - _solc-verify 是 Solidity 编译器的扩展版本，它可以使用注释和模块化程序验证对 Solidity 代码执行自动形式化验证。_
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - \_\*KEVM 是以太坊虚拟机 (EVM) 的形式化语义，用 K 框架编写。 KEVM 是可执行的，并且能够使用可达性逻辑证明某些与属性相关的断言。\*\*
+**KEVM** - _KEVM 是以太坊虚拟机 (EVM) 的形式化语义，用 K 框架编写。 KEVM 是可执行的，并且能够使用可达性逻辑证明某些与属性相关的断言。_
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [相关文档](https://jellopaper.org/)
@@ -259,12 +259,12 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ### 用于检测智能合约中易受攻击模式的基于符号执行的工具 {#symbolic-execution-tools}
 
-**Manticore** - \__一种基于符号执行的工具，用于分析以太坊虚拟机的字节码分析工具_。\*
+**Manticore** - _种基于符号执行的工具，用于分析以太坊虚拟机的字节码分析工具。_
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [相关文档](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - \_\*hevm 是一种面向以太坊虚拟机字节码的符号执行引擎和等价性检查器。\*\*
+**hevm** - _hevm 是一种面向以太坊虚拟机字节码的符号执行引擎和等价性检查器。_
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 

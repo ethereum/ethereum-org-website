@@ -91,15 +91,18 @@ title="Dapp and smart contract developers"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-The Merge came with changes to consensus, which also includes changes related to:
+The Merge came with changes to consensus, which also includes changes related to:<
 
-- block structure
-- slot/block timing
-- opcode changes
-- sources of on-chain randomness
-- concept of _safe head_ and _finalized blocks_
+<ul>
+  <li>block structure</li>
+  <li>slot/block timing</li>
+  <li>opcode changes</li>
+  <li>sources of on-chain randomness</li>
+  <li>concept of <em>safe head</em> and <em>finalized blocks</em></li>
+</ul>
 
-For more information, check out this blog post by Tim Beiko on [How The Merge Impacts Ethereum’s Application Layer](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
+For more information, check out this blog post by Tim Beiko on <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">How The Merge Impacts Ethereum’s Application Layer</a>.
+
 </ExpandableCard>
 
 ## The Merge and energy consumption {#merge-and-energy}
@@ -115,26 +118,29 @@ The Merge also set the stage for further scalability upgrades not possible under
 <ExpandableCard
 title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+
 There are two types of Ethereum nodes: nodes that can propose blocks and nodes that don't.
 
 Nodes that propose blocks are only a small number of the total nodes on Ethereum. This category includes mining nodes under proof-of-work (PoW) and validator nodes under proof-of-stake (PoS). This category requires committing economic resources (such as GPU hash power in proof-of-work or staked ETH in proof-of-stake) in exchange for the ability to occasionally propose the next block and earn protocol rewards.
 
 The other nodes on the network (i.e. the majority) are not required to commit any economic resources beyond a consumer-grade computer with 1-2 TB of available storage and an internet connection. These nodes do not propose blocks, but they still serve a critical role in securing the network by holding all block proposers accountable by listening for new blocks and verifying their validity on arrival according to the network consensus rules. If the block is valid, the node continues propagating it through the network. If the block is invalid for whatever reason, the node software will disregard it as invalid and stop its propagation.
 
-Running a non-block-producing node is possible for anyone under either consensus mechanism (proof-of-work or proof-of-stake); it is _strongly encouraged_ for all users if they have the means. Running a node is immensely valuable for Ethereum and gives added benefits to any individual running one, such as improved security, privacy and censorship resistance.
+Running a non-block-producing node is possible for anyone under either consensus mechanism (proof-of-work or proof-of-stake); it is <em>strongly encouraged</em> for all users if they have the means. Running a node is immensely valuable for Ethereum and gives added benefits to any individual running one, such as improved security, privacy and censorship resistance.
 
-The ability for anyone to run their own node is _absolutely essential_ to maintaining the decentralization of the Ethereum network.
+The ability for anyone to run their own node is <em>absolutely essential</em> to maintaining the decentralization of the Ethereum network.
 
-[More on running your own node](/run-a-node/)
+<a href="/run-a-node/">More on running your own node</a>
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+
 Gas fees are a product of network demand relative to the capacity of the network. The Merge deprecated the use of proof-of-work, transitioning to proof-of-stake for consensus, but did not significantly change any parameters that directly influence network capacity or throughput.
 
-With a [rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), efforts are being focused on scaling user activity at [layer 2](/layer-2/), while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this. [More on gas and fees.](/developers/docs/gas/)
+With a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric roadmap</a>, efforts are being focused on scaling user activity at <a href="/layer-2/">layer 2</a>, while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this. <a href="/developers/docs/gas/">More on gas and fees.</a>
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -151,11 +157,13 @@ Proof-of-stake introduced the transaction finality concept that did not previous
 <ExpandableCard
 title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+
 Initially after The Merge, stakers could only access fee tips and MEV that were earned as a result of block proposals. These rewards are credited to a non-staking account controlled by the validator (known as the <em>fee recipient</em>), and are available immediately. These rewards are separate from protocol rewards for performing validator duties.
 
-Since the Shanghai/Capella network upgrade, stakers can now designate a _withdrawal address_ to start receiving automatic payouts of any excess staking balance (ETH over 32 from protocol rewards). This upgrade also enabled the ability for a validator to unlock and reclaim its entire balance upon exiting from the network.
+Since the Shanghai/Capella network upgrade, stakers can now designate a <em>withdrawal address</em> to start receiving automatic payouts of any excess staking balance (ETH over 32 from protocol rewards). This upgrade also enabled the ability for a validator to unlock and reclaim its entire balance upon exiting from the network.
 
-[More on staking withdrawals](/staking/withdrawals/)
+<a href="/staking/withdrawals/">More on staking withdrawals</a>
+
 </ExpandableCard>
 
 <ExpandableCard

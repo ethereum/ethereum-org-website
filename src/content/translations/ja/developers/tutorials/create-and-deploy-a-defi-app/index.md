@@ -9,7 +9,7 @@ tags:
   - "Truffle"
   - "Ganache"
   - "スマートコントラクト"
-skill: 中級
+skill: intermediate
 lang: ja
 published: 2020-12-31
 source: github.com

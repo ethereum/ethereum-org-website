@@ -304,7 +304,7 @@ It is also possible for stake-based oracles can slash node operators who fail to
 
 Decentralized oracles implement various incentive designs to prevent [Byzantine](https://en.wikipedia.org/wiki/Byzantine_fault) behavior among oracle nodes. Specifically, they achieve _attributability_ and _accountability_:
 
-1. Decentralized oracle nodes are often required to sign the data they provide in response to data requests. This information helps with evaluating the historical performance of oracle nodes, such that users can filter out unreliable oracle nodes when making data requests. An example is Chainlink’s [Oracle Reputation](https://oracle.reputation.link/) or Witnet’s [Algorithmic Reputation System](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system).
+1. Decentralized oracle nodes are often required to sign the data they provide in response to data requests. This information helps with evaluating the historical performance of oracle nodes, such that users can filter out unreliable oracle nodes when making data requests. An example is Witnet’s [Algorithmic Reputation System](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system).
 
 2. Decentralized oracles—as explained earlier—may require nodes to place a stake on their confidence in the truth of data they submit. If the claim checks out, this stake can be returned along with rewards for honest service. But it can also be slashed in case the information is incorrect, which provides some measure of accountability.
 
@@ -398,11 +398,7 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocol is a cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts._
 
-**[Provable](https://provable.xyz/)** - _Provable connects blockchain dapps with any external Web API and leverages TLSNotary proofs, Trusted Execution Environments (TEEs), and secure cryptographic primitives to guarantee data authenticity._
-
 **[Paralink](https://paralink.network/)** - _Paralink provides an open source and decentralized oracle platform for smart contracts running on Ethereum and other popular blockchains._
-
-**[DOS Network](https://dos.network/)** - _DOS Network is a decentralized oracle service network to boost blockchain usability with real-world data and computation power._
 
 **[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data on-chain in a tamper-resistant, decentralized, and self-sustainable environment._
 
