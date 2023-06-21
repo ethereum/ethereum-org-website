@@ -23,6 +23,35 @@ import { trackCustomEvent } from "../../../utils/matomo"
 
 import { FiltersType } from "../../../pages/wallets/find-wallet"
 
+const FilterTab = ({
+  eventName,
+  ...rest
+}: {
+  children: React.ReactNode
+  eventName: string
+}) => (
+  <Tab
+    onClick={() => {
+      trackCustomEvent({
+        eventCategory: "WalletFilterSidebar",
+        eventAction: `WalletFilterSidebar tab clicked`,
+        eventName,
+      })
+    }}
+    _hover={{
+      bg: "selectHover",
+    }}
+    sx={{
+      "&[aria-selected=true]": {
+        _hover: {
+          bg: "primary.base",
+        },
+      },
+    }}
+    {...rest}
+  />
+)
+
 interface WalletFilterSidebarProps {
   showMobileSidebar: boolean
   filters: FiltersType
@@ -63,7 +92,7 @@ const WalletFilterSidebar = forwardRef<
         ref={ref}
         maxW="330px"
         overflowY="scroll"
-        bg="background"
+        bg="background.base"
         transition="0.5s all"
         zIndex={20}
         borderTopRightRadius="lg"
@@ -76,13 +105,13 @@ const WalletFilterSidebar = forwardRef<
             width: 2,
           },
           "::-webkit-scrollbar-track": {
-            bg: "background",
+            bg: "background.base",
           },
           "::-webkit-scrollbar-thumb": {
             bgColor: "lightBorder",
             borderRadius: "base",
             border: "2px solid",
-            borderColor: "background",
+            borderColor: "background.base",
           },
         }}
         width={{ base: "90%", sm: "350px", lg: "full" }}
@@ -100,10 +129,10 @@ const WalletFilterSidebar = forwardRef<
       >
         <TabList
           borderBottom="1px solid"
-          borderBottomColor="primary"
+          borderBottomColor="primary.base"
           position="sticky"
           top={0}
-          bg="background"
+          bg="background.base"
           sx={{
             ".chakra-tabs__tab": {
               flex: 1,
@@ -119,26 +148,10 @@ const WalletFilterSidebar = forwardRef<
             },
           }}
         >
-          <Tab
-            onClick={() => {
-              trackCustomEvent({
-                eventCategory: "WalletFilterSidebar",
-                eventAction: `WalletFilterSidebar tab clicked`,
-                eventName: `show user personas`,
-              })
-            }}
-          >
+          <FilterTab eventName="show user personas">
             <Translation id="page-find-wallet-profile-filters" />
-          </Tab>
-          <Tab
-            onClick={() => {
-              trackCustomEvent({
-                eventCategory: "WalletFilterSidebar",
-                eventAction: `WalletFilterSidebar tab clicked`,
-                eventName: `show feature filters`,
-              })
-            }}
-          >
+          </FilterTab>
+          <FilterTab eventName="show feature filters">
             {t("page-find-wallet-feature-filters")} (
             {Object.values(filters).reduce((acc, filter) => {
               if (filter) {
@@ -147,12 +160,12 @@ const WalletFilterSidebar = forwardRef<
               return acc
             }, 0)}
             )
-          </Tab>
+          </FilterTab>
         </TabList>
         <Center
           as="button"
           borderRadius="base"
-          color="primary"
+          color="primary.base"
           fontSize="xs"
           gap={1}
           mx="auto"

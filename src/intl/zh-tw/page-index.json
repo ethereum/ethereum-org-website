@@ -48,6 +48,7 @@
   "page-index-developers-code-example-description-3": "您可以將現有的服務改為去中心化的開放應用程式。",
   "page-index-network-stats-title": "本日以太坊數據",
   "page-index-network-stats-subtitle": "最新網路數據",
+  "page-index-network-stats-total-eth-staked": "以太幣質押總額",
   "page-index-network-stats-eth-price-description": "以太幣價格 (USD)",
   "page-index-network-stats-eth-price-explainer": "1 以太幣 (ETH) 的最新價格。您能購入的最小額度為 0.000000000000000001 以太幣，無須購入完整一個以太幣。",
   "page-index-network-stats-tx-day-description": "本日交易",

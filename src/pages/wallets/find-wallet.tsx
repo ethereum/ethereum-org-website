@@ -167,7 +167,7 @@ const FindWalletPage = ({ data, location }) => {
       <Box
         position="sticky"
         top="76px"
-        bg="background"
+        bg="background.base"
         w="full"
         zIndex={1}
         py="5px"
@@ -178,7 +178,7 @@ const FindWalletPage = ({ data, location }) => {
           justifyContent="space-between"
           alignItems="center"
           border="1px solid"
-          borderColor="primary"
+          borderColor="primary.base"
           borderLeft="none"
           borderRightRadius="base"
           pt={1.5}
@@ -189,7 +189,7 @@ const FindWalletPage = ({ data, location }) => {
           zIndex={1}
           w="full"
           maxW={showMobileSidebar ? "330px" : "150px"}
-          bg="background"
+          bg="background.base"
           onClick={() => {
             setShowMobileSidebar(!showMobileSidebar)
             trackCustomEvent({
@@ -206,10 +206,10 @@ const FindWalletPage = ({ data, location }) => {
               pointerEvents: "none",
               boxSize: 8,
               line: {
-                stroke: "primary",
+                stroke: "primary.base",
               },
               circle: {
-                stroke: "primary",
+                stroke: "primary.base",
               },
             },
           }}
@@ -229,7 +229,7 @@ const FindWalletPage = ({ data, location }) => {
             </Text>
           </Box>
           {showMobileSidebar ? (
-            <Icon as={MdOutlineCancel} fill="primary" />
+            <Icon as={MdOutlineCancel} fill="primary.base" />
           ) : (
             <FilterBurgerIcon />
           )}
@@ -274,13 +274,13 @@ const FindWalletPage = ({ data, location }) => {
               width: 2,
             },
             "::-webkit-scrollbar-track": {
-              bg: "background",
+              bg: "background.base",
             },
             "::-webkit-scrollbar-thumb": {
               bgColor: "lightBorder",
               borderRadius: "base",
               border: "2px solid",
-              borderColor: "background",
+              borderColor: "background.base",
             },
             table: {
               m: 0,

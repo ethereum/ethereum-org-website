@@ -9,6 +9,15 @@
     "endDate": "2023-10-29"
   },
   {
+    "title": "Kyiv Ethereum",
+    "to": "https://kyivethereum.com/",
+    "sponsor": null,
+    "location": "Kyiv, Ukraine",
+    "description": "ETH Community in Ukraine to build, learn and share together. We are doing regular meetups and workshops - you can check on the website",
+    "startDate": "2023-06-24",
+    "endDate": "2023-06-24"
+  },
+  {
     "title": "ETHPrague",
     "to": "https://ethprague.com/",
     "sponsor": null,
@@ -196,5 +205,32 @@
     "description": "Join ETH Miami’s 2nd Annual Web3 Hackathon”.",
     "startDate": "2023-10-27",
     "endDate": "2023-10-29"
+  },
+  {
+    "title": "ETHGlobal Pragma",
+    "to": "https://ethglobal.com/events/pragma-waterloo",
+    "sponsor": null,
+    "location": "Waterloo, Canada",
+    "description": "ETHGlobal Pragma is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-06-22",
+    "endDate": "2023-06-22"
+  },
+  {
+    "title": "ETHGlobal Pragma",
+    "to": "https://ethglobal.com/events/pragma-paris",
+    "sponsor": null,
+    "location": "Paris, France",
+    "description": "ETHGlobal Pragma is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-07-20",
+    "endDate": "2023-07-20"
+  },
+  {
+    "title": "ETHMunich",
+    "to": "https://ethmunich.de/",
+    "sponsor": null,
+    "location": "Munich, Germany",
+    "description": "ETH Munich is a first time Hackathon organised by the local web3 community PretzelDAO",
+    "startDate": "2023-08-11",
+    "endDate": "2023-08-13"
   }
 ]

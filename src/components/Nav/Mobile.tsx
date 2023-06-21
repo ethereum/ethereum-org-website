@@ -41,7 +41,7 @@ const StyledNavLink = (props: {
     color="currentColor"
     textDecor="none"
     _hover={{
-      color: "primary",
+      color: "primary.base",
     }}
     {...props}
   />
@@ -56,7 +56,7 @@ const FooterItem = forwardRef<ChildOnlyProp, "div">((props, ref) => (
     cursor="pointer"
     flexDir="column"
     _hover={{
-      color: "primary",
+      color: "primary.base",
       "& svg": {
         fill: "currentColor",
       },
@@ -135,7 +135,7 @@ const MobileNavMenu: React.FC<IProps> = ({
     <Box
       display={{ base: "flex", lg: "none" }}
       gap={2}
-      sx={{ svg: { fill: "body" } }}
+      sx={{ svg: { fill: "body.base" } }}
     >
       <SearchIconButton
         onClick={toggleSearch}
@@ -154,9 +154,9 @@ const MobileNavMenu: React.FC<IProps> = ({
             strokeWidth="2px"
             zIndex={100}
             _hover={{
-              color: "primary",
+              color: "primary.base",
               "& > path": {
-                stroke: "primary",
+                stroke: "primary.base",
               },
             }}
             sx={{
@@ -178,7 +178,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         variant="icon"
         size="sm"
         zIndex={2000}
-        _hover={{ svg: { fill: "primary" } }}
+        _hover={{ svg: { fill: "primary.base" } }}
       />
       <Drawer
         portalProps={{ containerRef: drawerContainerRef }}
@@ -188,7 +188,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         size="sm"
       >
         <DrawerOverlay bg="modalBackground" />
-        <DrawerContent bg="background">
+        <DrawerContent bg="background.base">
           <DrawerBody pt={12} pb={24} px={4}>
             <List m={0}>
               {Object.keys(linkSections).map((sectionKey, idx) => {
@@ -250,7 +250,7 @@ const MobileNavMenu: React.FC<IProps> = ({
             </List>
           </DrawerBody>
           <DrawerFooter
-            bg="background"
+            bg="background.base"
             borderTop="1px"
             borderColor="lightBorder"
             justifyContent="space-between"
@@ -286,7 +286,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                 flexDir="column"
                 textDecor="none"
                 _hover={{
-                  color: "primary",
+                  color: "primary.base",
                   textDecor: "none",
                 }}
               >

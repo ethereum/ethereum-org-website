@@ -342,9 +342,5 @@
   {
     "fromPath": "/*/staking/withdraws",
     "toPath": "/:splat/staking/withdrawals/"
-  },
-  {
-    "fromPath": "/*/writing-cohort",
-    "toPath": "https://ethereumwriterscohort.carrd.co/"
   }
 ]

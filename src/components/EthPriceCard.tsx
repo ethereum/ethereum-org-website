@@ -128,7 +128,7 @@ const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
           fontSize="2xl"
           lineHeight="140%"
           mr={4}
-          color={isNegativeChange ? "fail300" : "success"}
+          color={isNegativeChange ? "fail300" : "success.base"}
         >
           {change}
         </Box>
