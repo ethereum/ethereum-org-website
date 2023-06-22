@@ -49,7 +49,7 @@ const StepBox = (
   <Flex
     as={LinkBox}
     alignItems={{ base: "flex-start", md: "normal" }}
-    background="background"
+    background="background.base"
     border="1px"
     borderColor="border"
     color="text"

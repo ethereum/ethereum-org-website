@@ -4,7 +4,7 @@ const commonBtnStateStyles: SystemStyleObject = {
   boxShadow: "none",
   bg: "none",
   outline: "1px solid",
-  outlineColor: "primaryHover",
+  outlineColor: "primary.hover",
   outlineOffset: "-2px",
 }
 
@@ -28,12 +28,12 @@ export const getSearchButtonStyles = (): ButtonProps => ({
   _focus: commonBtnStateStyles,
   _active: commonBtnStateStyles,
   sx: {
-    "--docsearch-searchbox-shadow": `inset 0 0 0 1px var(--eth-colors-primaryHighContrast)`,
+    "--docsearch-searchbox-shadow": `inset 0 0 0 1px var(--eth-colors-primary-highContrast)`,
     ".DocSearch-Button-Container svg": {
       boxSize: 3.5,
     },
     ".DocSearch-Search-Icon, .DocSearch-Button-Placeholder": {
-      color: "body",
+      color: "body.base",
     },
     ".DocSearch-Button-Placeholder": {
       fontWeight: "normal",
@@ -68,9 +68,9 @@ export const getSearchButtonStyles = (): ButtonProps => ({
 })
 
 export const getSearchModalStyles = (): SystemStyleObject => ({
-  "--docsearch-modal-background": "var(--eth-colors-background)",
+  "--docsearch-modal-background": "var(--eth-colors-background-base)",
   "--docsearch-searchbox-height": "fit-content",
-  "--docsearch-highlight-color": "var(--eth-colors-primaryHover)",
+  "--docsearch-highlight-color": "var(--eth-colors-primary-hover)",
   "--docsearch-modal-width": "650px",
   "--docsearch-hit-height": "fit-content",
 
@@ -78,12 +78,12 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     p: { base: 4, md: 8 },
     pb: 4,
     form: {
-      "--docsearch-searchbox-shadow": `inset 0 0 0 1px var(--eth-colors-primaryHighContrast)`,
+      "--docsearch-searchbox-shadow": `inset 0 0 0 1px var(--eth-colors-primary-highContrast)`,
       bg: "neutral",
       py: 3,
     },
     "label, input": {
-      color: "primaryHighContrast",
+      color: "primary.highContrast",
     },
 
     label: {
@@ -95,15 +95,15 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   },
 
   ".DocSearch-Cancel": {
-    color: { base: "primary", md: "primaryHighContrast" },
+    color: { base: "primary.base", md: "primary.highContrast" },
     _hover: {
-      color: "primary",
+      color: "primary.base",
     },
   },
 
   ".DocSearch-Container--Stalled .DocSearch-MagnifierLabel, .DocSearch-Container--Stalled .DocSearch-LoadingIndicator":
     {
-      color: "primaryHighContrast",
+      color: "primary.highContrast",
     },
 
   ".DocSearch-Dropdown": {
@@ -117,7 +117,7 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   },
 
   ".DocSearch-Hit-source": {
-    color: "body",
+    color: "body.base",
     lineHeight: 6,
     pb: 0.5,
   },
@@ -134,8 +134,8 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     },
     '&[aria-selected="true"] a': {
       "--docsearch-hit-active-color": "colors.background",
-      bg: "primaryHover",
-      boxShadow: `4px 4px 0 0 var(--eth-colors-primaryLight)`,
+      bg: "primary.hover",
+      boxShadow: `4px 4px 0 0 var(--eth-colors-primary-light)`,
       borderColor: "transparent",
     },
   },
@@ -145,7 +145,7 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   },
 
   ".DocSearch-Hit-icon": {
-    color: "body",
+    color: "body.base",
   },
 
   ".DocSearch-Hit-Select-Icon:focus, .DocSearch-Hit-Select-Icon:hover": {
@@ -154,11 +154,11 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
 
   ".DocSearch-Footer": {
     "--docsearch-footer-height": "space.10",
-    "--docsearch-logo-color": "colors.bodyLight",
+    "--docsearch-logo-color": "colors.body.light",
     "--docsearch-footer-shadow": "none",
-    bg: "primaryLowContrast",
+    bg: "primary.lowContrast",
     borderTop: "2px",
-    borderColor: "primary",
+    borderColor: "primary.base",
   },
 
   ".DocSearch-Commands": {
@@ -169,15 +169,15 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   },
 
   ".DocSearch-Label": {
-    color: "body",
+    color: "body.base",
     textTransform: "lowercase",
   },
 
   ".DocSearch-Commands-Key": {
-    bg: "background",
+    bg: "background.base",
     border: "1px",
-    borderColor: "primary",
-    color: "primary",
+    borderColor: "primary.base",
+    color: "primary.base",
     boxShadow: "none",
     boxSize: 4,
     padding: 0,
@@ -188,13 +188,13 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
 
   ".DocSearch-Logo": {
     ".DocSearch-Label": {
-      color: "bodyLight",
+      color: "body.light",
       textTransform: "uppercase",
     },
   },
 
   "svg[aria-label='Algolia'] *": {
-    fill: "bodyLight",
+    fill: "body.light",
   },
 
   "@media (max-width: 768px)": {

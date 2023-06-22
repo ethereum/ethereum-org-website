@@ -48,6 +48,7 @@
   "page-index-developers-code-example-description-3": "Sie können bestehende Dienste in dezentralisierte, offene Anwendungen umgestalten.",
   "page-index-network-stats-title": "Ethereum heute",
   "page-index-network-stats-subtitle": "Die neuesten Netzwerkstatistiken",
+  "page-index-network-stats-total-eth-staked": "Gesamtes Staking-ETH",
   "page-index-network-stats-eth-price-description": "ETH-Preis (USD)",
   "page-index-network-stats-eth-price-explainer": "Der aktuellste Kurspreis für 1 Ether: Die Kleinste Einheit, die erhältlich ist, ist 0,000000000000000001. Es ist nicht erforderlich, einen ganzen ETH zu kaufen.",
   "page-index-network-stats-tx-day-description": "Transaktionen heute",

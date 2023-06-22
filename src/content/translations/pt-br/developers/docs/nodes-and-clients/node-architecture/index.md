@@ -6,7 +6,7 @@ lang: pt-br
 
 Um nó Ethereum é composto por dois clientes: um [cliente de execução](/developers/docs/nodes-and-clients/#execution-clients) e um [cliente de consenso](/developers/docs/nodes-and-clients/#consensus-clients).
 
-Quando o Ethereum estava usando [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), um cliente de execução era suficiente para executar um nó completo Ethereum. No entanto, desde a implementação da [prova de participação](/developers/docs/consensus-mechanisms/pos/), o cliente de execução precisa ser usado com outro software, chamado [“cliente de consenso”](/developers/docs/nodes-and-clients/#consensus-clients).
+Quando o Ethereum estava usando [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), um cliente de execução era suficiente para executar um nó completo Ethereum. No entanto, desde a implementação da [prova de participação](/developers/docs/consensus-mechanisms/pow/), o cliente de execução precisa ser usado com outro software, chamado [“cliente de consenso”](/developers/docs/nodes-and-clients/#consensus-clients).
 
 O diagrama abaixo mostra a relação entre os dois clientes Ethereum. Os dois clientes se conectam às suas respectivas redes ponto a ponto (P2P). As redes P2P separadas são necessárias à medida que os clientes de execução espalham transações em sua rede P2P, permitindo que eles gerenciem seu pool de transações local, enquanto os clientes de consenso distribuem blocos em sua rede P2P, permitindo consenso e crescimento da cadeia.
 
