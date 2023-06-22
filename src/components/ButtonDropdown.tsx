@@ -84,8 +84,8 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
               isPartiallyActive={false}
               textDecor="none"
               color="text"
-              _hover={{ textDecor: "none", color: "primary" }}
-              _focus={{ textDecor: "none", color: "primary" }}
+              _hover={{ textDecor: "none", color: "primary.base" }}
+              _focus={{ textDecor: "none", color: "primary.base" }}
             >
               <MenuItem
                 as="span"
@@ -94,11 +94,11 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
                 textAlign="center"
                 justifyContent="center"
                 _hover={{
-                  color: "primary",
+                  color: "primary.base",
                   bg: "dropdownBackgroundHover",
                 }}
                 _focus={{
-                  color: "primary",
+                  color: "primary.base",
                   bg: "dropdownBackgroundHover",
                 }}
               >
