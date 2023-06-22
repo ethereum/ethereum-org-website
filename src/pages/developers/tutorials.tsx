@@ -60,7 +60,7 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
         p={2}
         textTransform="uppercase"
         _hover={{
-          color: "primary",
+          color: "primary.base",
           borderColor: "text200",
           opacity: "1",
         }}
@@ -299,8 +299,8 @@ const TutorialsPage = ({
         color="text"
         borderColor="text"
         _hover={{
-          color: "primary",
-          borderColor: "primary",
+          color: "primary.base",
+          borderColor: "primary.base",
           boxShadow: cardBoxShadow,
         }}
         _active={{
@@ -356,7 +356,7 @@ const TutorialsPage = ({
             })}
             {selectedTags.length > 0 && (
               <Button
-                color="primary"
+                color="primary.base"
                 textDecoration="underline"
                 bg="none"
                 border="none"
@@ -405,7 +405,7 @@ const TutorialsPage = ({
               _hover={{
                 textDecoration: "none",
                 borderRadius: "base",
-                boxShadow: "0 0 1px var(--eth-colors-primary)",
+                boxShadow: "0 0 1px var(--eth-colors-primary-base)",
                 bg: "tableBackgroundHover",
               }}
               key={tutorial.to}
@@ -458,7 +458,7 @@ const TutorialsPage = ({
                   <>
                     {" "}
                     •<Emoji text=":link:" fontSize="sm" ml={2} mr={2} />
-                    <Box as="span" color="primary" cursor="pointer">
+                    <Box as="span" color="primary.base" cursor="pointer">
                       <Translation id="page-tutorial-external-link" />
                     </Box>
                   </>

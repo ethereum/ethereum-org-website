@@ -46,7 +46,7 @@ const Value: React.FC<{ children: ReactNode; title: string }> = ({
       fontWeight="bold"
       fontSize="2rem"
       background="none"
-      color="primary"
+      color="primary.base"
       p={0}
     >
       {children}
@@ -74,9 +74,9 @@ const BeaconchainTooltip: React.FC<BeaconchainTooltipProps> = ({
       as={MdInfoOutline}
       color="text"
       marginInlineStart={2}
-      _hover={{ color: "primary" }}
-      _active={{ color: "primary" }}
-      _focus={{ color: "primary" }}
+      _hover={{ color: "primary.base" }}
+      _active={{ color: "primary.base" }}
+      _focus={{ color: "primary.base" }}
       boxSize={4}
     />
   </Tooltip>

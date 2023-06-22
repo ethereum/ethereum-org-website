@@ -97,7 +97,7 @@ const CardList: React.FC<IProps> = ({
   clickHandler = () => null,
   ...rest
 }) => (
-  <Box bg="background" w="full" {...rest}>
+  <Box bg="background.base" w="full" {...rest}>
     {content.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link

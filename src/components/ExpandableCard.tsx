@@ -116,7 +116,7 @@ const ExpandableCard: React.FC<IProps> = ({
               </Box>
               <Text
                 fontSize="md"
-                color="primary"
+                color="primary.base"
                 ml={{ base: undefined, sm: "auto" }}
                 mt="auto"
                 mb="auto"

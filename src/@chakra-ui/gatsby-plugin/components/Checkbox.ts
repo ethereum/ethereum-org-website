@@ -9,7 +9,7 @@ const { definePartsStyle, defineMultiStyleConfig } =
 
 const baseStyleControl = defineStyle((props) =>
   defineMergeStyles(defaultBaseStyle?.(props).control, {
-    bg: "background",
+    bg: "background.base",
     _checked: {
       bg: "primary400",
       _hover: {

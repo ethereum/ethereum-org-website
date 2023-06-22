@@ -159,7 +159,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
       gridColumnStart={isOpen ? columnNumber : `auto`}
       color={isOpen ? "black300" : "text"}
       cursor={isOpen ? `auto` : `pointer`}
-      background={isOpen ? color : "background"}
+      background={isOpen ? color : "background.base"}
       direction={{
         base: "column",
         sm: `${isOpen ? "column" : "row"}`,

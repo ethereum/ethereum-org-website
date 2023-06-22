@@ -45,7 +45,7 @@ Node operators can add a validator to their consensus clients by depositing 32 E
 
 | Execution Client                                   | Consensus Client                                                 | Validator                    |
 | -------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------- |
-| Gossips transactions over its p2p network          | Gossips blocks and attestations overs its p2p network            | Proposes blocks              |
+| Gossips transactions over its p2p network          | Gossips blocks and attestations over its p2p network             | Proposes blocks              |
 | Executes/re-executes transactions                  | Runs the fork choice algorithm                                   | Accrues rewards/penalties    |
 | Verifies incoming state changes                    | Keeps track of the head of the chain                             | Makes attestations           |
 | Manages state and receipts tries                   | Manages the Beacon state (contains consensus and execution info) | Requires 32 ETH to be staked |

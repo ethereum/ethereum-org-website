@@ -113,7 +113,7 @@ const ContentContainer = (props: BoxProps) => (
         pl: 4,
         ml: -4,
         borderLeft: "1px dotted",
-        borderColor: "primary",
+        borderColor: "primary.base",
       },
       ".citation p": {
         color: "text200",
@@ -292,7 +292,7 @@ const MoreContent = (props: ChildOnlyProp & { to: string }) => (
     p={4}
     w="full"
     _hover={{
-      bg: "background",
+      bg: "background.base",
     }}
     {...props}
   />
@@ -306,7 +306,7 @@ const TitleCard = (props: ChildOnlyProp) => {
       direction="column"
       justify="flex-start"
       position={{ base: "relative", lg: "absolute" }}
-      bg={{ base: "ednBackground", lg: "background" }}
+      bg={{ base: "ednBackground", lg: "background.base" }}
       border="1px"
       borderColor="border"
       borderRadius="sm"
