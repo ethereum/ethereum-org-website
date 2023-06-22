@@ -93,6 +93,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
                 p={2}
                 textAlign="center"
                 justifyContent="center"
+                bg="dropdownBackground"
                 _hover={{
                   color: "primary.base",
                   bg: "dropdownBackgroundHover",
