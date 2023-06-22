@@ -57,10 +57,23 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
   }
   return (
     <Menu matchWidth>
-      <MenuButton as={Button} leftIcon={<MdMenu />} variant="outline" {...rest}>
+      <MenuButton
+        as={Button}
+        leftIcon={<MdMenu />}
+        variant="outline"
+        _active={{ bg: "transparent" }}
+        {...rest}
+      >
         <Translation id={list.text} />
       </MenuButton>
-      <MenuList>
+      <MenuList
+        py={2}
+        borderRadius="base"
+        border="1px"
+        borderColor="text"
+        bg="dropdownBackground"
+        zIndex={2}
+      >
         {list.items.map((item, idx) => {
           const { text, to } = item
 
@@ -74,7 +87,21 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
               _hover={{ textDecor: "none", color: "primary" }}
               _focus={{ textDecor: "none", color: "primary" }}
             >
-              <MenuItem as="span" onClick={(e) => handleClick(e, item, idx)}>
+              <MenuItem
+                as="span"
+                onClick={(e) => handleClick(e, item, idx)}
+                p={2}
+                textAlign="center"
+                justifyContent="center"
+                _hover={{
+                  color: "primary",
+                  bg: "dropdownBackgroundHover",
+                }}
+                _focus={{
+                  color: "primary",
+                  bg: "dropdownBackgroundHover",
+                }}
+              >
                 <Translation id={text} />
               </MenuItem>
             </Link>

@@ -6,8 +6,6 @@ import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
 import { Progress } from "./Progress"
 import { Tabs } from "./Tabs"
-import { Menu } from "./Menu"
-
 import {
   accordionDefaultTheme,
   avatarDefaultTheme,
@@ -19,6 +17,7 @@ import {
   formDefaultTheme,
   formLabelDefaultTheme,
   headingDefaultTheme,
+  menuDefaultTheme,
   selectDefaultTheme,
   spinnerDefaultTheme,
   switchDefaultTheme,
@@ -40,7 +39,7 @@ export default {
   FormLabel: formLabelDefaultTheme,
   Heading: headingDefaultTheme,
   Link,
-  Menu,
+  Menu: menuDefaultTheme,
   Modal,
   Progress,
   Select: selectDefaultTheme,
