@@ -1,9 +1,24 @@
-import React, { useContext } from "react"
+import React, { ComponentPropsWithoutRef, useContext } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "@emotion/styled"
-import { Badge } from "@chakra-ui/react"
+import {
+  Badge,
+  Divider as ChakraDivider,
+  Flex,
+  FlexProps,
+  Heading,
+  ListItem as ChakraListItem,
+  ListItemProps,
+  Text,
+  TextProps,
+  Box,
+  useToken,
+  HeadingProps,
+  UnorderedList as ChakraUnorderedList,
+  OrderedList as ChakraOrderedList,
+  ListProps,
+} from "@chakra-ui/react"
 
 import BannerNotification from "../components/BannerNotification"
 import ButtonLink from "../components/ButtonLink"
@@ -21,117 +36,160 @@ import TableOfContents, {
 } from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import Translation from "../components/Translation"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import DocsNav from "../components/DocsNav"
 import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 import RollupProductDevDoc from "../components/RollupProductDevDoc"
 import YouTube from "../components/YouTube"
-import {
-  Divider,
-  Paragraph,
-  Header1,
-  Header2,
-  Header3,
-  Header4,
-  ListItem,
-} from "../components/SharedStyledComponents"
+
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
-import { Context } from "../types"
+import { ChildOnlyProp, Context } from "../types"
 
-const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-`
+const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
+  <Flex
+    direction="column"
+    w="full"
+    borderBottom="1px"
+    borderColor="border"
+    {...props}
+  />
+)
 
-const ContentContainer = styled.div<{ isZenMode: boolean }>`
-  display: flex;
-  justify-content: ${(props) => (props.isZenMode ? "center" : "space-between")};
-  width: 100%;
-  padding: 0 2rem 0 0;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 0;
-  }
-  background-color: ${(props) => props.theme.colors.ednBackground};
-`
+const Divider = () => (
+  <ChakraDivider
+    my={16}
+    w="10%"
+    borderBottomWidth={1}
+    borderColor="homeDivider"
+  />
+)
+const baseHeadingStyle: HeadingProps = {
+  fontFamily: "mono",
+  textTransform: "uppercase",
+  fontWeight: "bold",
+}
+
+const H1 = (props: HeadingProps) => (
+  <Heading
+    {...baseHeadingStyle}
+    as="h1"
+    fontSize={{ base: "2rem", md: "2.5rem" }}
+    lineHeight={{ md: 1.4 }}
+    mt={{ base: 0, md: 8 }}
+    mb={{ base: 4, md: 8 }}
+    {...props}
+  />
+)
+
+const H2 = (props: HeadingProps) => (
+  <Heading
+    {...baseHeadingStyle}
+    fontSize="2xl"
+    lineHeight={{ base: 1.2, md: 1.4 }}
+    pb={2}
+    borderBottom="1px"
+    borderColor="border"
+    {...props}
+  />
+)
+
+const baseSubHeadingStyles: HeadingProps = {
+  lineHeight: 1.4,
+  fontWeight: "semibold",
+  fontSize: "md",
+}
+
+const H3 = (props: HeadingProps) => (
+  <Heading
+    {...baseSubHeadingStyles}
+    as="h3"
+    fontSize={{ md: "2xl" }}
+    mt={12}
+    {...props}
+  />
+)
+
+const H4 = (props: HeadingProps) => (
+  <Heading
+    {...baseSubHeadingStyles}
+    as="h4"
+    fontSize={{ md: "xl" }}
+    {...props}
+  />
+)
+
+const Paragraph = (props: TextProps) => (
+  <Text fontSize="md" color="text300" mt={8} mb={4} {...props} />
+)
+
+const UnorderedList = (props: ListProps) => (
+  <ChakraUnorderedList ms="1.45rem" {...props} />
+)
+const OrderedList = (props: ListProps) => (
+  <ChakraOrderedList ms="1.45rem" {...props} />
+)
+
+const ListItem = (props: ListItemProps) => (
+  <ChakraListItem color="text300" {...props} />
+)
+
+const ContentContainer = (props: ChildOnlyProp & { isZenMode: boolean }) => (
+  <Flex
+    justify={props.isZenMode ? "center" : "space-between"}
+    w="full"
+    py={0}
+    pl={0}
+    pr={{ base: 0, lg: 8 }}
+    backgroundColor="ednBackground"
+    {...props}
+  />
+)
 
 // Apply styles for classes within markdown here
-const Content = styled.article`
-  flex: 1 1 ${(props) => props.theme.breakpoints.m};
-  max-width: ${(props) => props.theme.breakpoints.m};
-  padding: 3rem 4rem 4rem;
-  margin: 0px auto;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: 8rem 2rem 2rem;
-  }
+const Content = (props: ChildOnlyProp) => {
+  const mdBreakpoint = useToken("breakpoints", "md")
 
-  .featured {
-    padding-left: 1rem;
-    margin-left: -1rem;
-    border-left: 1px dotted ${(props) => props.theme.colors.primary};
-  }
+  return (
+    <Box
+      as="article"
+      flex={`1 1 ${mdBreakpoint}`}
+      maxW={{ base: "full", lg: mdBreakpoint }}
+      pt={{ base: 32, md: 12 }}
+      pb={{ base: 8, md: 16 }}
+      px={{ base: 8, md: 16 }}
+      m="0 auto"
+      sx={{
+        ".featured": {
+          paddingLeft: 4,
+          marginLeft: -4,
+          borderLeft: "1px dotted",
+          borderColor: "primary",
+        },
+        ".citation": {
+          p: {
+            color: "text200",
+          },
+        },
+      }}
+      {...props}
+    />
+  )
+}
 
-  .citation {
-    p {
-      color: ${(props) => props.theme.colors.text200};
-    }
-  }
-`
-
-const H1 = styled(Header1)`
-  font-size: 2.5rem;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 2rem;
-    line-height: 1.2;
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-`
-
-const H2 = styled(Header2)`
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-
-  font-size: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-`
-
-const H3 = styled(Header3)`
-  margin-top: 3rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-`
-
-const H4 = styled(Header4)`
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-`
-
-const BackToTop = styled.div`
-  margin-top: 3rem;
-  display: flex;
-  padding-top: 2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const BackToTop = (props: ChildOnlyProp) => (
+  <Flex
+    display={{ lg: "none" }}
+    mt={12}
+    pt={8}
+    borderTop="1px"
+    borderColor="border"
+    {...props}
+  />
+)
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
@@ -142,6 +200,8 @@ const components = {
   h3: H3,
   h4: H4,
   p: Paragraph,
+  ul: UnorderedList,
+  ol: OrderedList,
   li: ListItem,
   pre: Codeblock,
   table: MarkdownTable,
@@ -158,11 +218,9 @@ const components = {
   RollupProductDevDoc,
 }
 
-const Contributors = styled(FileContributors)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-bottom: 2rem;
-  }
-`
+const Contributors = (
+  props: ComponentPropsWithoutRef<typeof FileContributors>
+) => <FileContributors p={{ base: 0, lg: 2 }} pb={{ base: 8, lg: 2 }} {...props} />
 
 const DocsPage = ({
   data: { siteData, pageData: mdx },
