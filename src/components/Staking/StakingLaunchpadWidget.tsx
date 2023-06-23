@@ -2,12 +2,18 @@ import React, { useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { Box, chakra, Flex, Text } from "@chakra-ui/react"
 
-import Select from "../Select"
+import { StyledSelect as Select } from "../SharedStyledComponents"
 import ButtonLink from "../ButtonLink"
 import Emoji from "../OldEmoji"
 import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
+
+const StyledSelect = chakra(Select, {
+  baseStyle: {
+    maxW: { base: "full", md: "50%" },
+  },
+})
 
 export interface IProps {}
 
@@ -52,11 +58,12 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
         <Translation id="page-staking-launchpad-widget-span" />
       </Text>
       <Box my={4}>
-        <Select
+        <StyledSelect
+          className="react-select-container"
+          classNamePrefix="react-select"
           options={selectOptions}
           onChange={handleChange}
           defaultValue={selectOptions[0]}
-          maxW={{ md: "50%" }}
         />
       </Box>
       <Text>

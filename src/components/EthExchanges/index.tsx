@@ -1,11 +1,11 @@
 import React from "react"
-import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Center, chakra, Flex, Heading, Text } from "@chakra-ui/react"
 
 import CardList from "../CardList"
 import Link from "../Link"
 import Emoji from "../Emoji"
 import Translation from "../Translation"
-import Select from "../Select"
+import { StyledSelect as Select } from "../SharedStyledComponents"
 
 import { ChildOnlyProp } from "../../types"
 import { useEthExchanges } from "./use-eth-exchanges"
@@ -42,6 +42,12 @@ const SuccessContainer = (props: ChildOnlyProp) => (
 const EmptyStateText = (props: ChildOnlyProp) => (
   <Text m={8} fontSize="xl" maxW="450px" textAlign="center" {...props} />
 )
+
+const StyledSelect = chakra(Select, {
+  baseStyle: {
+    maxW: "container.sm",
+  },
+})
 
 const NoResults = ({ children }) => (
   <EmptyStateContainer>
@@ -90,12 +96,13 @@ const EthExchanges = () => {
       <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">
         <Translation id="page-get-eth-exchanges-intro" />
       </Text>
-      <Select
+      <StyledSelect
+        aria-label={t("page-get-eth-exchanges-header")}
+        className="react-select-container"
+        classNamePrefix="react-select"
         options={exchangesByCountry}
         onChange={handleSelectChange}
         placeholder={placeholderString}
-        aria-label={t("page-get-eth-exchanges-header")}
-        maxW="container.sm"
       />
       {!hasSelectedCountry && (
         <EmptyStateContainer>

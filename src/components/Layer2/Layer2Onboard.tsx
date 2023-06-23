@@ -4,11 +4,13 @@ import React, { useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
+  chakra,
   Flex,
   Heading,
   Img,
   ListItem,
   SimpleGrid,
+  Stack,
   Text,
   UnorderedList,
 } from "@chakra-ui/react"
@@ -17,7 +19,7 @@ import {
 import ButtonLink from "../ButtonLink"
 import Link from "../Link"
 import Translation from "../Translation"
-import Select from "../Select"
+import { StyledSelect as Select } from "../SharedStyledComponents"
 
 // Data
 import {
@@ -43,6 +45,19 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
     justifyContent="space-between"
     {...props}
   />
+)
+
+const ChakraSelect = chakra((props: { className?: string }) => (
+  <Select {...props} />
+))
+const StyledSelect = (props: any) => (
+  <Box mt="auto">
+    <ChakraSelect
+      maxW="none"
+      sx={{ ".react-select__control": { py: { base: "14px", sm: "0" } } }}
+      {...props}
+    />
+  </Box>
 )
 
 const SelectedContainer = (props: ChildOnlyProp) => (
@@ -149,6 +164,18 @@ const Layer2Onboard: React.FC<IProps> = ({
     }
   )
 
+  const formatGroupLabel = (data) => {
+    return data.label ? (
+      <Stack borderTop="2px solid" m={0}>
+        <Text mb={0} mt={2} textTransform="none" color="theme.colors.text">
+          {data.label}
+        </Text>
+      </Stack>
+    ) : (
+      <></>
+    )
+  }
+
   const selectExchangeOnboard = (option: ExchangeOption & CexOnboardOption) => {
     if (Object.hasOwn(option, "cex")) {
       trackCustomEvent({
@@ -212,7 +239,7 @@ const Layer2Onboard: React.FC<IProps> = ({
         </Text>
       </Box>
       <SimpleGrid {...gridContentPlacementStyles.gridContainer}>
-        <Flex flexDir="column" justify="space-between">
+        <Flex flexDir="column">
           {/* LeftDescription */}
           <Box>
             <H4>
@@ -228,22 +255,23 @@ const Layer2Onboard: React.FC<IProps> = ({
             </Text>
           </Box>
           {/* LeftSelected */}
-          <Select
+          <StyledSelect
+            className="react-select-container"
+            classNamePrefix="react-select"
             options={layer2Options}
-            placeholder={t("layer-2-onboard-wallet-input-placeholder")}
-            onChange={(selectedOption: Layer2Option | "") => {
-              if (selectedOption === "") return setSelectedL2(undefined)
+            onChange={(selectedOption: Layer2Option) => {
               trackCustomEvent({
                 eventCategory: `Selected layer 2 to bridge to`,
                 eventAction: `Clicked`,
-                eventName: `${selectedOption?.l2.name} bridge selected`,
-                eventValue: `${selectedOption?.l2.name}`,
+                eventName: `${selectedOption.l2.name} bridge selected`,
+                eventValue: `${selectedOption.l2.name}`,
               })
-              setSelectedL2(selectedOption?.l2)
+              setSelectedL2(selectedOption.l2)
             }}
+            placeholder={t("layer-2-onboard-wallet-input-placeholder")}
           />
         </Flex>
-        <Flex flexDir="column" justify="space-between">
+        <Flex flexDir="column">
           {/* RightDescription */}
           <Box>
             <H4>
@@ -260,26 +288,24 @@ const Layer2Onboard: React.FC<IProps> = ({
             </Text>
           </Box>
           {/* RightSelect */}
-          <Select
+          <StyledSelect
+            className="react-select-container"
+            classNamePrefix="react-select"
             options={[
-              ...cexSupportOptions,
               {
-                optGroupLabel:
-                  "Don't see your exchange? Use dapps to bridge directly from exchanges to layer 2.",
+                options: [...cexSupportOptions],
+              },
+              {
+                label:
+                  "Don't see you exchange? Use dapps to bridge directly from exchanges to layer 2.",
                 options: [...cexOnboardOptions],
               },
             ]}
-            onChange={(
-              selectedOption: (ExchangeOption & CexOnboardOption) | ""
-            ) => {
-              if (selectedOption === "") {
-                setSelectedCexOnboard(undefined)
-                setSelectedExchange(undefined)
-                return
-              }
+            onChange={(selectedOption: ExchangeOption & CexOnboardOption) => {
               selectExchangeOnboard(selectedOption)
             }}
             placeholder={t("layer-2-onboard-exchange-input-placeholder")}
+            formatGroupLabel={formatGroupLabel}
           />
         </Flex>
         {/* LeftSelected extra */}
