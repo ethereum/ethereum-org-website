@@ -22,6 +22,7 @@ import {
   SimpleGrid,
   Text,
   SkipNavContent,
+  useToken,
 } from "@chakra-ui/react"
 
 // Components
@@ -219,6 +220,8 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
 
+  const outlineShadowStyle = useToken("shadows", "outline")
+
   return (
     <Box w="full">
       {/* Feature comparison dropdowns */}
@@ -378,6 +381,10 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                     }}
                     py={6}
                     px={{ base: 4, lg: 1 }}
+                    _focusVisible={{
+                      // Part of original style but modified to be "inset" for better visibility
+                      boxShadow: `inset ${outlineShadowStyle}`,
+                    }}
                   >
                     <SimpleGrid
                       templateColumns={{
