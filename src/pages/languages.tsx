@@ -93,18 +93,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
           w="clamp(min(400px, 100%), 50%, 600px)"
         >
           <Input
-            border="1px solid"
-            borderColor="searchBorder"
-            color="text"
-            bg="searchBackground"
-            p={2}
-            pr={8}
-            borderRadius="0.25em"
             w="full"
-            _focus={{
-              outline: "auto 1px",
-              outlineColor: "primary.base",
-            }}
             value={keyword}
             placeholder={searchString}
             onChange={(e) => setKeyword(e.target.value)}
@@ -122,17 +111,6 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
               )
             }
           />
-          {keyword !== "" && (
-            <IconButton
-              icon={<MdClose />}
-              onClick={resetKeyword}
-              position="absolute"
-              insetInlineEnd={1}
-              aria-label={t("clear")}
-              variant="icon"
-              _hover={{ svg: { fill: "primary.base" } }}
-            />
-          )}
         </Box>
         <Flex my={8} wrap="wrap" w="full">
           {translationsCompleted.map((lang) => {
