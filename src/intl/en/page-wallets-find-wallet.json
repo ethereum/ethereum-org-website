@@ -56,6 +56,7 @@
   "page-find-wallet-showing": "Showing",
   "page-find-wallet-wallets": "wallets",
   "page-find-wallet-filtered-results": "Filtered wallet results",
+  "page-find-wallet-compare-feature-dropdowns-desc": "Use this list of dropdowns options to pick up to three features you want in a wallet. When you navigate through the filtered list of wallets immediately following, each wallet will tell you whether or not a feature is included. If you are on a mobile device, only one dropdown is available to select one feature at a time.",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
   "page-find-wallet-linux": "Linux",

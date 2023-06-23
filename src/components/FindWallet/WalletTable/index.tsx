@@ -23,6 +23,8 @@ import {
   Text,
   SkipNavContent,
   useToken,
+  VisuallyHidden,
+  StackItem,
 } from "@chakra-ui/react"
 
 // Components
@@ -44,6 +46,7 @@ import {
   COMPARE_FEATURES_SKIP_LINK,
   FILTERED_RESULTS_SKIP_LINK,
 } from "../../../pages/wallets/find-wallet"
+import { ChildOnlyProp } from "../../../types"
 
 const ChakraSelect = chakra((props: { className?: string }) => (
   <Select {...props} />
@@ -192,6 +195,10 @@ const fadeOut = keyframes`
   }
 `
 
+const StretchedStackItem = (props: ChildOnlyProp) => (
+  <StackItem flex={1} {...props} />
+)
+
 // Constants
 const firstCol = "firstCol"
 const secondCol = "secondCol"
@@ -234,8 +241,8 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
           fontWeight="normal"
           templateColumns={{
             base: "auto",
-            sm: "60% auto 0% 0% 5%",
-            md: "40% auto auto auto 5%",
+            sm: "60% auto 5%",
+            md: "40% auto 5%",
           }}
           w="full"
           rowGap={{ base: 4, sm: 0 }}
@@ -245,18 +252,6 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
           position="sticky"
           top={0}
           zIndex="docked"
-          sx={{
-            "& > *": {
-              "&:nth-of-type(2)": {
-                display: { base: "flex", sm: "revert" },
-                alignItems: "center",
-                gap: 4,
-              },
-              "&:nth-of-type(3), &:nth-of-type(4)": {
-                hideBelow: "md",
-              },
-            },
-          }}
         >
           <Box textAlign="center" aria-hidden>
             {filteredWallets.length === walletCardData.length ? (
@@ -274,65 +269,89 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
               </Text>
             )}
           </Box>
-
-          <Box>
-            <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
-              {t("page-find-wallet-choose-features")}
-            </Text>
-            <StyledSelect
-              className="react-select-container"
-              classNamePrefix="react-select"
-              options={[
-                {
-                  label: t("page-find-choose-to-compare"),
-                  options: [...filteredFeatureDropdownItems],
+          <VisuallyHidden id="feature-dropdowns-desc">
+            {t("page-find-wallet-compare-feature-dropdowns-desc")}
+          </VisuallyHidden>
+          <HStack
+            aria-describedby="feature-dropdowns-desc"
+            m={0}
+            sx={{
+              "& > *": {
+                "&:nth-of-type(2), &:nth-of-type(3)": {
+                  hideBelow: "md",
                 },
-              ]}
-              onChange={(selectedOption) => {
-                updateDropdown(selectedOption, setFirstFeatureSelect, firstCol)
-              }}
-              defaultValue={firstFeatureSelect}
-              isSearchable={false}
-            />
-          </Box>
-          <Box>
-            <StyledSelect
-              className="react-select-container"
-              classNamePrefix="react-select"
-              options={[
-                {
-                  label: t("page-find-choose-to-compare"),
-                  options: [...filteredFeatureDropdownItems],
-                },
-              ]}
-              onChange={(selectedOption) => {
-                updateDropdown(
-                  selectedOption,
-                  setSecondFeatureSelect,
-                  secondCol
-                )
-              }}
-              defaultValue={secondFeatureSelect}
-              isSearchable={false}
-            />
-          </Box>
-          <Box>
-            <StyledSelect
-              className="react-select-container"
-              classNamePrefix="react-select"
-              options={[
-                {
-                  label: t("page-find-choose-to-compare"),
-                  options: [...filteredFeatureDropdownItems],
-                },
-              ]}
-              onChange={(selectedOption) => {
-                updateDropdown(selectedOption, setThirdFeatureSelect, thirdCol)
-              }}
-              defaultValue={thirdFeatureSelect}
-              isSearchable={false}
-            />
-          </Box>
+              },
+            }}
+          >
+            <StretchedStackItem>
+              <HStack>
+                <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
+                  {t("page-find-wallet-choose-features")}
+                </Text>
+                <StyledSelect
+                  className="react-select-container"
+                  classNamePrefix="react-select"
+                  options={[
+                    {
+                      label: t("page-find-choose-to-compare"),
+                      options: [...filteredFeatureDropdownItems],
+                    },
+                  ]}
+                  onChange={(selectedOption) => {
+                    updateDropdown(
+                      selectedOption,
+                      setFirstFeatureSelect,
+                      firstCol
+                    )
+                  }}
+                  defaultValue={firstFeatureSelect}
+                  isSearchable={false}
+                />
+              </HStack>
+            </StretchedStackItem>
+            <StretchedStackItem>
+              <StyledSelect
+                className="react-select-container"
+                classNamePrefix="react-select"
+                options={[
+                  {
+                    label: t("page-find-choose-to-compare"),
+                    options: [...filteredFeatureDropdownItems],
+                  },
+                ]}
+                onChange={(selectedOption) => {
+                  updateDropdown(
+                    selectedOption,
+                    setSecondFeatureSelect,
+                    secondCol
+                  )
+                }}
+                defaultValue={secondFeatureSelect}
+                isSearchable={false}
+              />
+            </StretchedStackItem>
+            <StretchedStackItem>
+              <StyledSelect
+                className="react-select-container"
+                classNamePrefix="react-select"
+                options={[
+                  {
+                    label: t("page-find-choose-to-compare"),
+                    options: [...filteredFeatureDropdownItems],
+                  },
+                ]}
+                onChange={(selectedOption) => {
+                  updateDropdown(
+                    selectedOption,
+                    setThirdFeatureSelect,
+                    thirdCol
+                  )
+                }}
+                defaultValue={thirdFeatureSelect}
+                isSearchable={false}
+              />
+            </StretchedStackItem>
+          </HStack>
         </SimpleGrid>
       </SkipNavContent>
       <SkipNavContent id={FILTERED_RESULTS_SKIP_LINK}>
@@ -388,7 +407,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                   >
                     <SimpleGrid
                       templateColumns={{
-                        base: "60% auto 0% 0% 5%",
+                        base: "60% auto 5%",
                         md: "40% auto auto auto 5%",
                       }}
                       w="full"
