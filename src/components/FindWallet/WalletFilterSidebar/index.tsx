@@ -235,7 +235,6 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
                                   isChecked={
                                     restProps.filters[option.filterKey!]
                                   }
-                                  size="md"
                                   width="full"
                                   onChange={handleClick}
                                 >

@@ -140,14 +140,11 @@ const WithdrawalCredentials: FC<IProps> = () => {
     <Flex direction="column" gap={4}>
       <Flex alignItems="center" gap={2} flexWrap="wrap">
         <Input
-          padding={2}
-          borderRadius="base"
           id="validatorIndex"
           value={inputValue}
           onChange={handleChange}
           w={{ base: "full", sm: "18ch" }}
           placeholder={t("comp-withdrawal-credentials-placeholder")}
-          bg="background.base"
         />
         <Flex
           w={{ base: "full", sm: "fit-content" }}

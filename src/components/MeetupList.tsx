@@ -77,15 +77,9 @@ const MeetupList: React.FC<IProps> = () => {
   return (
     <Box>
       <Input
+        mb={6}
         onChange={handleSearch}
         placeholder={"Search by meetup title or location"}
-        display="block"
-        mr="auto"
-        ml="auto"
-        mb={6}
-        p={2}
-        _focus={{ outline: "auto 1px" }}
-        _placeholder={{ color: "text200" }}
         aria-describedby="input-instruction"
       />
       {/* hidden for attachment to input only */}
