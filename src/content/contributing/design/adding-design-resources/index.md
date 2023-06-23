@@ -10,7 +10,7 @@ Be aware that the focus of this page is on providing user value to aspiring web3
 
 To ensure that we maintain a high standard of information and promote valuable insights, we have established a listing policy:
 
-## Research Studies and Dashboards {Research-studies}
+## Research Studies and Dashboards {#Research-studies}
 
 1. Sound Methodology
 - The methodology should clearly define how the data was collected.
@@ -22,7 +22,7 @@ To ensure that we maintain a high standard of information and promote valuable i
 - The primary objective of the text should be sharing insights rather than promoting a specific project or company.
 
   
-## Articles {Articles}
+## Articles {#Articles}
 
 1. Relevance to Web3 Designers/Researchers and Common Web3 Design Use Cases
   - The topic of the article should be pertinent to web3 designers and researchers, focusing on common web3 design use cases.
@@ -34,7 +34,7 @@ To ensure that we maintain a high standard of information and promote valuable i
   - The primary goal of the article should be sharing insights rather than promoting a particular project or company.
 
 
-## Communities / DAOs {Communities-and-DAOs}
+## Communities / DAOs {#Communities-and-DAOs}
 
 1. Website must clearly indicate how to join the DAO/Community
 2. Clear Benefits of Membership
