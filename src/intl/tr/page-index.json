@@ -48,6 +48,7 @@
   "page-index-developers-code-example-description-3": "Var olan hizmetleri merkezi olmayan, açık uygulamalar olarak tekrardan tasarlayabilirsiniz.",
   "page-index-network-stats-title": "Ethereum'da bugün",
   "page-index-network-stats-subtitle": "En güncel ağ istatistikleri",
+  "page-index-network-stats-total-eth-staked": "Stake edilen toplam ETH",
   "page-index-network-stats-eth-price-description": "ETH fiyatı (USD)",
   "page-index-network-stats-eth-price-explainer": "1 ether'in en güncel fiyatıdır. 0,000000000000000001 kadar bile küçük miktarlarda alabilirsiniz. 1 ETH almanıza gerek yoktur.",
   "page-index-network-stats-tx-day-description": "Bugünkü işlemler",

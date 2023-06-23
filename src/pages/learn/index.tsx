@@ -1,5 +1,5 @@
 // Libraries
-import React, { ReactNode } from "react"
+import React from "react"
 import {
   Box,
   Center,
@@ -279,9 +279,13 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             <AdditionalReadingHeader>
               <Translation id="additional-reading-more-on-ethereum-basics" />
             </AdditionalReadingHeader>
+
             <DocsContainer>
               <DocLink to="/guides/">
                 <Translation id="guides-hub" />
+              </DocLink>
+              <DocLink to="/quizzes/">
+                <Translation id="quizzes-title" />
               </DocLink>
               <DocLink to="/smart-contracts/">
                 <Translation id="additional-reading-what-are-smart-contracts" />

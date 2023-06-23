@@ -155,6 +155,7 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 - [Ethereum Gas Explained](https://defiprime.com/gas)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
+- [Gas Optimization Strategies for Developers](https://www.alchemy.com/overviews/solidity-gas-optimization)
 
 ## Related topics {#related-topics}
 

@@ -77,18 +77,18 @@ const StyledSelect = (props) => (
           },
 
           "&:hover, &--is-focused": {
-            bg: "primary",
-            borderColor: "primary",
+            bg: "primary.base",
+            borderColor: "primary.base",
 
             ".react-select__value-container": {
               ".react-select__single-value": {
-                color: "background",
+                color: "background.base",
               },
             },
 
             ".react-select__indicators": {
               ".react-select__indicator": {
-                color: "background",
+                color: "background.base",
               },
             },
           },
@@ -116,10 +116,10 @@ const StyledSelect = (props) => (
           },
 
           "&--is-selected": {
-            bg: "primary",
+            bg: "primary.base",
             color: "buttonColor",
             _hover: {
-              bg: "primary",
+              bg: "primary.base",
             },
           },
         },

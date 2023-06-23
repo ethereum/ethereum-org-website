@@ -66,7 +66,7 @@ const ExpandableInfo: React.FC<IProps> = ({
       p={6}
       mb={4}
       spacing="0"
-      background={background ?? "background"}
+      background={background ?? "background.base"}
       position="relative"
       _hover={{
         "& img": {

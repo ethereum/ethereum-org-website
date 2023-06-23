@@ -56,7 +56,7 @@ const EditorsChoice = (props: FlexProps) => (
     border="1.5px solid"
     borderColor="text"
     borderRadius="sm"
-    background="background"
+    background="background.base"
     color="text"
     p={8}
     mb={8}
