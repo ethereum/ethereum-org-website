@@ -14,6 +14,7 @@ import {
   Text,
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
+import { FaDiscord } from "react-icons/fa"
 
 // Assets
 import Dappnode from "../assets/run-a-node/dappnode.svg"
@@ -34,25 +35,22 @@ import {
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import {
-  Divider,
-  InfoGrid,
-  Width60,
-  Width40,
-} from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
 import Emoji from "../components/Emoji"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
+import Button from "../components/Button"
+import { InfoGrid } from "../templates/staking"
+import { Width40, Width60 } from "../pages-conditional/what-is-ethereum"
 
 // Utils
 import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp } from "../types"
-import Button from "../components/Button"
-import { FaDiscord } from "react-icons/fa"
+
+const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
 
 const GappedPage = (props: ChildOnlyProp) => (
   <Flex
@@ -86,9 +84,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
   <Box w="full" bg="runNodeGradient" {...props} />
 )
 
-const Content = (props: ChildOnlyProp) => (
-  <Box w="full" py={4} px={8} {...props} />
-)
+const Content = (props: BoxProps) => <Box w="full" py={4} px={8} {...props} />
 
 const TwoColumnContent = (props: ChildOnlyProp) => (
   <Flex
