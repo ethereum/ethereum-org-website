@@ -452,6 +452,9 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             fontSize="0.7rem"
                             lineHeight="0.85rem"
                           >
+                            <VisuallyHidden>
+                              {t("page-find-wallet-availble-for")}
+                            </VisuallyHidden>
                             {deviceLabels.join(" | ")}
                           </Text>
                           {deviceLabels.map((label) => (
