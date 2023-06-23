@@ -25,7 +25,7 @@ export const RightColumnPanel = (props: ChildOnlyType) => (
 
 const MoreOrLessLink = ({ isOpen }: { isOpen: boolean }) => {
   return (
-    <Box mr={6} color="primary">
+    <Box mr={6} color="primary.base">
       {isOpen ? (
         <Translation id="page-stablecoins-accordion-less" />
       ) : (

@@ -99,7 +99,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           <Flex flexWrap="wrap" w="full" mr={4}>
             <CopyToClipboard text={frontmatter.address}>
               {(isCopied) => (
-                <Text color="primary" cursor="pointer">
+                <Text color="primary.base" cursor="pointer">
                   {!isCopied ? (
                     <Box
                       overflow="hidden"

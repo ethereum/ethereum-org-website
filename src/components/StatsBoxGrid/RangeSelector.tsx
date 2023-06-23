@@ -24,7 +24,7 @@ export const RangeSelector: React.FC<IRangeSelectorProps> = ({
         }}
         key={idx}
         color={""}
-        background="background"
+        background="background.base"
         fontFamily="monospace"
         fontSize="xl"
         padding="2px 15px"

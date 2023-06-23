@@ -69,10 +69,10 @@ const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
       color="text"
       _hover={{
         textDecoration: "none",
-        color: "primary",
+        color: "primary.base",
       }}
       _active={{
-        color: "primary",
+        color: "primary.base",
       }}
       {...props}
     >
@@ -172,7 +172,7 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
       <Center
         as={motion.div}
         fontWeight="medium"
-        color="primary"
+        color="primary.base"
         cursor="pointer"
         py={4}
         px={8}
