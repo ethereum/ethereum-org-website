@@ -10,8 +10,12 @@ import {
   CenterProps,
   Flex,
   FlexProps,
+  Heading,
+  HeadingProps,
   Img,
+  ListItem,
   Text,
+  UnorderedList,
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 import { FaDiscord } from "react-icons/fa"
@@ -274,6 +278,29 @@ const StrongParagraph = (props: BoxProps) => (
   <Text fontSize="150%" fontWeight={600} {...props} />
 )
 
+const H2 = (prop: HeadingProps) => (
+  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...prop} />
+)
+
+const H3 = (prop: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    lineHeight={1.4}
+    {...prop}
+  />
+)
+
+const H4 = (prop: ChildOnlyProp) => (
+  <Heading
+    as="h4"
+    fontSize={{ base: "md", md: "xl" }}
+    lineHeight={1.4}
+    fontWeight="medium"
+    {...prop}
+  />
+)
+
 interface RunANodeCard {
   image: typeof ChakraIcon
   title: string
@@ -392,27 +419,27 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       <Content id="what-is-a-node">
         <TwoColumnContent>
           <Width60>
-            <h2>
+            <H2>
               <Translation id="page-run-a-node-what-title" />
-            </h2>
-            <h3>
+            </H2>
+            <H3>
               <Translation id="page-run-a-node-what-1-subtitle" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-run-a-node-what-1-text" />
-            </p>
-            <h3>
+            </Text>
+            <H3>
               <Translation id="page-run-a-node-what-2-subtitle" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-run-a-node-what-2-text" />
-            </p>
-            <h3>
+            </Text>
+            <H3>
               <Translation id="page-run-a-node-what-3-subtitle" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-run-a-node-what-3-text" />
-            </p>
+            </Text>
           </Width60>
           <Width40>
             <GatsbyImage image={getImage(data.hackathon)!} alt="" />
@@ -431,15 +458,15 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
           background="runNodeGradient2"
           forceOpen
         >
-          <p>
+          <Text>
             <Translation id="page-run-a-node-who-copy-1" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-run-a-node-who-copy-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-run-a-node-who-copy-3" />
-          </p>
+          </Text>
           <StrongParagraph>
             <Translation id="page-run-a-node-who-copy-bold" />
           </StrongParagraph>
@@ -447,9 +474,9 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       </FlexContent>
 
       <Content>
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-why-title" />
-        </h2>
+        </H2>
         <InfoGrid>
           {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => {
             return (
@@ -474,24 +501,24 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       <Divider />
 
       <Content id="getting-started">
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-getting-started-title" />
-        </h2>
+        </H2>
         <GappedContent>
           <SoftwareHighlight
             bg="homeBoxTurquoise"
             flexDirection={{ base: "column-reverse", md: "row" }}
           >
             <ColumnFill>
-              <p>
+              <Text>
                 <Translation id="page-run-a-node-getting-started-software-section-1" />
-              </p>
-              <p>
-                <code>
+              </Text>
+              <Text>
+                <Text as="code">
                   <Emoji text=":warning:" fontSize="md" mr={4} />
                   <Translation id="page-run-a-node-getting-started-software-section-1-alert" />
-                </code>
-              </p>
+                </Text>
+              </Text>
               <Link to="/developers/docs/nodes-and-clients/run-a-node/">
                 <Translation id="page-run-a-node-getting-started-software-section-1-link" />
               </Link>
@@ -514,9 +541,9 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               />
             </ColumnNarrow>
             <ColumnFill>
-              <p>
+              <Text>
                 <Translation id="page-run-a-node-getting-started-software-section-2" />
-              </p>
+              </Text>
             </ColumnFill>
           </SoftwareHighlight>
 
@@ -525,12 +552,12 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             flexDirection={{ base: "column-reverse", md: "row" }}
           >
             <ColumnFill>
-              <p>
+              <Text>
                 <Translation id="page-run-a-node-getting-started-software-section-3a" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-run-a-node-getting-started-software-section-3b" />
-              </p>
+              </Text>
             </ColumnFill>
             <ColumnNarrow>
               <Dapptap
@@ -544,39 +571,39 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       </Content>
 
       <Content>
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-choose-your-adventure-title" />
-        </h2>
-        <p>
+        </H2>
+        <Text>
           <Translation id="page-run-a-node-choose-your-adventure-1" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-run-a-node-choose-your-adventure-2" />
-        </p>
+        </Text>
         <MarginFlex>
           <FullyLoaded>
-            <div>
-              <h3>
+            <Box>
+              <H3>
                 <Emoji text=":shopping_cart:" fontSize="2em" mr={4} />
                 <Translation id="page-run-a-node-buy-fully-loaded-title" />
-              </h3>
-              <p>
+              </H3>
+              <Text>
                 <Translation id="page-run-a-node-buy-fully-loaded-description" />
-              </p>
-              <ul>
-                <li>
+              </Text>
+              <UnorderedList>
+                <ListItem>
                   <Translation id="page-run-a-node-buy-fully-loaded-note-1" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-run-a-node-buy-fully-loaded-note-2" />
-                </li>
-                <li>
-                  <code>
+                </ListItem>
+                <ListItem>
+                  <Text as="code">
                     <Translation id="page-run-a-node-buy-fully-loaded-note-3" />
-                  </code>
-                </li>
-              </ul>
-            </div>
+                  </Text>
+                </ListItem>
+              </UnorderedList>
+            </Box>
             <ButtonContainer>
               <DappNodeButtonLink to="https://shop.dappnode.io/">
                 <Translation id="page-run-a-node-shop-dappnode" />
@@ -588,26 +615,26 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
           </FullyLoaded>
 
           <FullyLoaded>
-            <div>
-              <h3>
+            <Box>
+              <H3>
                 <Emoji text=":building_construction:" fontSize="2em" mr={4} />
                 <Translation id="page-run-a-node-build-your-own-title" />
-              </h3>
-              <p>
+              </H3>
+              <Text>
                 <Translation id="page-run-a-node-choose-your-adventure-build-1" />
-              </p>
-              <ul>
-                <li>
+              </Text>
+              <UnorderedList>
+                <ListItem>
                   <Translation id="page-run-a-node-choose-your-adventure-build-bullet-1" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-run-a-node-choose-your-adventure-build-bullet-2" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-run-a-node-choose-your-adventure-build-bullet-3" />
-                </li>
-              </ul>
-            </div>
+                </ListItem>
+              </UnorderedList>
+            </Box>
             <Button variant="outline" toId="build-your-own">
               <Translation id="page-run-a-node-choose-your-adventure-build-start" />
             </Button>
@@ -616,9 +643,9 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       </Content>
 
       <Content id="build-your-own">
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-build-your-own-title" />
-        </h2>
+        </H2>
 
         <BuildContainer>
           <SvgTitle>
@@ -627,77 +654,77 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               // @ts-ignore
               alt={t("page-run-a-node-glyph-alt-hardware")}
             />
-            <h3>
+            <H3>
               <Translation id="page-run-a-node-build-your-own-hardware-title" />
-            </h3>
+            </H3>
           </SvgTitle>
 
           <FlexContainer>
             <BuildBox>
-              <h4>
+              <H4>
                 <Translation id="page-run-a-node-build-your-own-minimum-specs" />
-              </h4>
-              <ul>
-                <li>
-                  <p>
+              </H4>
+              <UnorderedList>
+                <ListItem>
+                  <Text>
                     <Translation id="page-run-a-node-build-your-own-min-ram" />
-                  </p>
-                  <p>
+                  </Text>
+                  <Text>
                     <Link href="#plan-on-staking">
                       <Translation id="page-run-a-node-build-your-own-ram-note-1" />
                     </Link>
-                  </p>
-                  <p>
+                  </Text>
+                  <Text>
                     <Link href="#rasp-pi">
                       <Translation id="page-run-a-node-build-your-own-ram-note-2" />
                     </Link>
-                  </p>
-                </li>
-                <li>
-                  <p>
+                  </Text>
+                </ListItem>
+                <ListItem>
+                  <Text>
                     <Translation id="page-run-a-node-build-your-own-min-ssd" />
-                  </p>
-                  <p>
-                    <small>
-                      <em>
+                  </Text>
+                  <Text>
+                    <Text as="small">
+                      <Text as="em">
                         <Translation id="page-run-a-node-build-your-own-ssd-note" />
-                      </em>
-                    </small>
-                  </p>
-                </li>
-              </ul>
+                      </Text>
+                    </Text>
+                  </Text>
+                </ListItem>
+              </UnorderedList>
             </BuildBox>
 
             <BuildBox>
-              <h4>
+              <H4>
                 <Translation id="page-run-a-node-build-your-own-recommended" />
-              </h4>
-              <ul>
-                <li>
+              </H4>
+              <UnorderedList>
+                <ListItem>
                   <Translation id="page-run-a-node-build-your-own-nuc" />
-                  <p>
-                    <small>
+                  <Text>
+                    <Text as="small">
                       <Translation id="page-run-a-node-build-your-own-nuc-small" />
-                    </small>
-                  </p>
-                </li>
-                <li>
+                    </Text>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-run-a-node-build-your-own-connection" />
-                  <p>
-                    <small>
+                  <Text>
+                    <Text as="small">
                       <Translation id="page-run-a-node-build-your-own-connection-small" />
-                    </small>
-                  </p>
-                </li>
-                <li>
+                    </Text>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-run-a-node-build-your-own-peripherals" />
-                  <p>
-                    <small>
+                  <Text>
+                    <Text as="small">
                       <Translation id="page-run-a-node-build-your-own-peripherals-small" />
-                    </small>
-                  </p>
-                </li>
-              </ul>
+                    </Text>
+                  </Text>
+                </ListItem>
+              </UnorderedList>
             </BuildBox>
           </FlexContainer>
         </BuildContainer>
@@ -709,21 +736,21 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               // @ts-ignore
               alt={t("page-run-a-node-glyph-alt-software")}
             />
-            <h3>
+            <H3>
               <Translation id="page-run-a-node-build-your-own-software" />
-            </h3>
+            </H3>
           </SvgTitle>
 
           <FlexContainer>
             <BuildBoxSpace>
-              <div>
-                <h4>
+              <Box>
+                <H4>
                   <Translation id="page-run-a-node-build-your-own-software-option-1-title" />
-                </h4>
-                <p>
+                </H4>
+                <Text>
                   <Translation id="page-run-a-node-build-your-own-software-option-1-description" />
-                </p>
-              </div>
+                </Text>
+              </Box>
               <ButtonContainer>
                 <DappNodeButtonLink to="https://docs.dappnode.io">
                   <Translation id="page-run-a-node-build-your-own-software-option-1-button" />
@@ -732,25 +759,25 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             </BuildBoxSpace>
 
             <BuildBoxSpace>
-              <div>
-                <h4>
+              <Box>
+                <H4>
                   <Translation id="page-run-a-node-build-your-own-software-option-2-title" />
-                </h4>
-                <p>
+                </H4>
+                <Text>
                   <Translation id="page-run-a-node-build-your-own-software-option-2-description-1" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-run-a-node-build-your-own-software-option-2-description-2" />
-                </p>
-              </div>
+                </Text>
+              </Box>
               <ButtonContainer>
                 <ButtonLink
                   to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
                   variant="outline"
                 >
-                  <code>
+                  <Text as="code">
                     <Translation id="page-run-a-node-build-your-own-software-option-2-button" />
-                  </code>
+                  </Text>
                 </ButtonLink>
               </ButtonContainer>
             </BuildBoxSpace>
@@ -761,15 +788,15 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       <Content>
         <SplitContent direction={{ base: "column-reverse", md: "row" }}>
           <Column>
-            <h2>
+            <H2>
               <Translation id="page-run-a-node-community-title" />
-            </h2>
-            <p>
+            </H2>
+            <Text>
               <Translation id="page-run-a-node-community-description-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-run-a-node-community-description-2" />
-            </p>
+            </Text>
             <ButtonContainer>
               <ButtonLink
                 leftIcon={<FaDiscord />}
@@ -789,34 +816,34 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       </Content>
 
       <Content>
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-further-reading-title" />
-        </h2>
-        <ul>
-          <li>
+        </H2>
+        <UnorderedList>
+          <ListItem>
             <Link to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
               <Translation id="page-run-a-node-further-reading-1-link" />
             </Link>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-further-reading-1-author" />
-            </i>
-          </li>
-          <li>
+            </Text>
+          </ListItem>
+          <ListItem>
             <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
               <Translation id="page-run-a-node-further-reading-2-link" />
             </Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="https://vitalik.ca/general/2021/05/23/scaling.html">
               <Translation id="page-run-a-node-further-reading-3-link" />
             </Link>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-further-reading-3-author" />
-            </i>
-          </li>
-        </ul>
+            </Text>
+          </ListItem>
+        </UnorderedList>
       </Content>
 
       <Divider />
@@ -834,12 +861,12 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
           />
         </Column>
         <Column>
-          <h2>
+          <H2>
             <Translation id="page-run-a-node-staking-title" />
-          </h2>
-          <p>
+          </H2>
+          <Text>
             <Translation id="page-run-a-node-staking-description" />
-          </p>
+          </Text>
           <ButtonContainer>
             <ButtonLink to="/staking/">
               <Translation id="page-run-a-node-staking-link" />
@@ -848,56 +875,56 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
         </Column>
       </StakingCalloutContainer>
       <Content>
-        <h3 id="plan-on-staking">
+        <H3 id="plan-on-staking">
           <Emoji text=":cut_of_meat:" fontSize="2em" mr={4} />
           <Translation id="page-run-a-node-staking-plans-title" />
-        </h3>
-        <p>
+        </H3>
+        <Text>
           <Translation id="page-run-a-node-staking-plans-description" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-run-a-node-staking-plans-ethstaker-link-description" />{" "}
           -{" "}
           <Link to="https://youtu.be/C2wwu1IlhDc">
             <Translation id="page-run-a-node-staking-plans-ethstaker-link-label" />
           </Link>
-        </p>
-        <h3 id="rasp-pi">
+        </Text>
+        <H3 id="rasp-pi">
           <Emoji text=":pie:" fontSize="2em" mr={4} />
           <Translation id="page-run-a-node-rasp-pi-title" />
-        </h3>
-        <p>
+        </H3>
+        <Text>
           <Translation id="page-run-a-node-rasp-pi-description" />
-        </p>
-        <ul>
-          <li>
+        </Text>
+        <UnorderedList>
+          <ListItem>
             <Link to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
               <Translation id="page-run-a-node-rasp-pi-note-1-link" />
             </Link>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-rasp-pi-note-1-description" />
-            </i>
-          </li>
-          <li>
+            </Text>
+          </ListItem>
+          <ListItem>
             <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
               <Translation id="page-run-a-node-rasp-pi-note-2-link" />
             </Link>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-rasp-pi-note-2-description" />
-            </i>
-          </li>
-          <li>
+            </Text>
+          </ListItem>
+          <ListItem>
             <Link to="/developers/tutorials/run-node-raspberry-pi">
               <Translation id="page-run-a-node-rasp-pi-note-3-link" />
             </Link>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-rasp-pi-note-3-description" />
-            </i>
-          </li>
-        </ul>
+            </Text>
+          </ListItem>
+        </UnorderedList>
       </Content>
       <Content>
         <FeedbackCard />
