@@ -7,6 +7,7 @@ import { getLocaleTimestamp } from "../../utils/time"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage, ImageDataLike } from "../../utils/image"
 import { Lang } from "../../utils/languages"
+import { ReactSelectOnChange } from "../ReactSelect"
 
 export const cardListImage = graphql`
   fragment cardListImage on File {
@@ -482,7 +483,11 @@ export const useEthExchanges = () => {
     data.timestamp.parent.fields.gitLogLatestDate
   )
 
-  const handleSelectChange = (selectedOption: ExchangeByCountry) => {
+  const handleSelectChange: ReactSelectOnChange<ExchangeByCountry> = (
+    selectedOption
+  ) => {
+    if (selectedOption == undefined) return
+
     trackCustomEvent({
       eventCategory: `Country input`,
       eventAction: `Selected`,

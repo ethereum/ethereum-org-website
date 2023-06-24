@@ -1,35 +1,19 @@
 import React, { useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, chakra, Flex, Text } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 
-import { StyledSelect as Select } from "../SharedStyledComponents"
 import ButtonLink from "../ButtonLink"
 import Emoji from "../OldEmoji"
 import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
-
-const StyledSelect = chakra(Select, {
-  baseStyle: {
-    maxW: { base: "full", md: "50%" },
-  },
-})
+import ReactSelect, { ReactSelectOnChange } from "../ReactSelect"
 
 export interface IProps {}
 
 const StakingLaunchpadWidget: React.FC<IProps> = () => {
   const { t } = useTranslation()
   const [selection, setSelection] = useState("testnet")
-
-  const handleChange = (e) => {
-    trackCustomEvent({
-      eventCategory: `Selected testnet vs mainnet for Launchpad link`,
-      eventAction: `Clicked`,
-      eventName: `${e.label} bridge selected`,
-      eventValue: `${e.value}`,
-    })
-    setSelection(e.value)
-  }
 
   const data = {
     testnet: {
@@ -42,10 +26,26 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
     },
   }
 
-  const selectOptions = Object.keys(data).map((key) => ({
+  type Layer2Option = {
+    label: string
+    value: string
+  }
+
+  const selectOptions: Layer2Option[] = Object.keys(data).map((key) => ({
     label: data[key].label,
     value: key,
   }))
+
+  const handleChange: ReactSelectOnChange<Layer2Option> = (selectedOption) => {
+    if (selectedOption == undefined) return
+    trackCustomEvent({
+      eventCategory: `Selected testnet vs mainnet for Launchpad link`,
+      eventAction: `Clicked`,
+      eventName: `${selectedOption.label} bridge selected`,
+      eventValue: `${selectedOption.value}`,
+    })
+    setSelection(selectedOption.value)
+  }
 
   return (
     <Flex
@@ -58,13 +58,13 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
         <Translation id="page-staking-launchpad-widget-span" />
       </Text>
       <Box my={4}>
-        <StyledSelect
-          className="react-select-container"
-          classNamePrefix="react-select"
-          options={selectOptions}
-          onChange={handleChange}
-          defaultValue={selectOptions[0]}
-        />
+        <Box w="full" maxW={{ md: "50%" }}>
+          <ReactSelect
+            options={selectOptions}
+            onChange={handleChange}
+            defaultValue={selectOptions[0]}
+          />
+        </Box>
       </Box>
       <Text>
         <Translation id="page-staking-launchpad-widget-p1" />

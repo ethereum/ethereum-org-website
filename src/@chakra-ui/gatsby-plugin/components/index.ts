@@ -4,6 +4,7 @@ import { Link } from "./Link"
 import { Tag } from "./Tag"
 import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
+import { ReactSelect } from "./ReactSelect"
 import { Progress } from "./Progress"
 import { Tabs } from "./Tabs"
 import {
@@ -41,6 +42,7 @@ export default {
   Link,
   Menu: menuDefaultTheme,
   Modal,
+  ReactSelect,
   Progress,
   Select: selectDefaultTheme,
   Spinner: spinnerDefaultTheme,

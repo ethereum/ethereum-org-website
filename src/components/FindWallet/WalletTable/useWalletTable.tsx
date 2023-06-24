@@ -23,6 +23,7 @@ import {
   MultisigIcon,
   SocialRecoverIcon,
 } from "../../icons/wallets"
+import { ReactSelectOnChange } from "../../ReactSelect"
 
 export interface DropdownOption {
   label: string
@@ -290,34 +291,36 @@ export const useWalletTable = ({
 
   /**
    *
-   * @param selectedOption selected dropdown option
    * @param stateUpdateMethod method for updating state for dropdown
    * @param className className of column
    *
    * This method gets the elements with the className, adds a fade class to fade icons out, after 0.5s it will then update state for the dropdown with the selectedOption, and then remove the fade class to fade the icons back in. Then it will send a matomo event for updating the dropdown.
    */
   const updateDropdown = (
-    selectedOption: DropdownOption,
     stateUpdateMethod: Function,
     className: ColumnClassName
-  ) => {
-    const domItems: HTMLCollectionOf<Element> =
-      document.getElementsByClassName(className)
-    for (let item of domItems) {
-      item.classList.add("fade")
-    }
-    setTimeout(() => {
-      stateUpdateMethod(selectedOption)
+  ): ReactSelectOnChange<DropdownOption> => {
+    // Use function enclosure to properly type this handler
+    return (selectedOption) => {
+      if (selectedOption == undefined) return
+      const domItems: HTMLCollectionOf<Element> =
+        document.getElementsByClassName(className)
       for (let item of domItems) {
-        item.classList.remove("fade")
+        item.classList.add("fade")
       }
-    }, 375)
+      setTimeout(() => {
+        stateUpdateMethod(selectedOption)
+        for (let item of domItems) {
+          item.classList.remove("fade")
+        }
+      }, 375)
 
-    trackCustomEvent({
-      eventCategory: "WalletFeatureCompare",
-      eventAction: `Select WalletFeatureCompare`,
-      eventName: `${selectedOption.filterKey} selected`,
-    })
+      trackCustomEvent({
+        eventCategory: "WalletFeatureCompare",
+        eventAction: `Select WalletFeatureCompare`,
+        eventName: `${selectedOption.filterKey} selected`,
+      })
+    }
   }
 
   return {

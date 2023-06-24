@@ -1,14 +1,14 @@
 import React from "react"
-import { Box, Center, chakra, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react"
 
 import CardList from "../CardList"
 import Link from "../Link"
 import Emoji from "../Emoji"
 import Translation from "../Translation"
-import { StyledSelect as Select } from "../SharedStyledComponents"
 
 import { ChildOnlyProp } from "../../types"
 import { useEthExchanges } from "./use-eth-exchanges"
+import ReactSelect from "../ReactSelect"
 
 const ListContainer = (props: ChildOnlyProp) => (
   <Box mt={16} flex={{ base: "1 1 100%", md: "1 1 50%" }} {...props} />
@@ -42,12 +42,6 @@ const SuccessContainer = (props: ChildOnlyProp) => (
 const EmptyStateText = (props: ChildOnlyProp) => (
   <Text m={8} fontSize="xl" maxW="450px" textAlign="center" {...props} />
 )
-
-const StyledSelect = chakra(Select, {
-  baseStyle: {
-    maxW: "container.sm",
-  },
-})
 
 const NoResults = ({ children }) => (
   <EmptyStateContainer>
@@ -96,14 +90,15 @@ const EthExchanges = () => {
       <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">
         <Translation id="page-get-eth-exchanges-intro" />
       </Text>
-      <StyledSelect
-        aria-label={t("page-get-eth-exchanges-header")}
-        className="react-select-container"
-        classNamePrefix="react-select"
-        options={exchangesByCountry}
-        onChange={handleSelectChange}
-        placeholder={placeholderString}
-      />
+      <Box w="full" maxW="container.sm">
+        <ReactSelect
+          aria-label={t("page-get-eth-exchanges-header")}
+          options={exchangesByCountry}
+          onChange={handleSelectChange}
+          placeholder={placeholderString}
+          variant="outline"
+        />
+      </Box>
       {!hasSelectedCountry && (
         <EmptyStateContainer>
           <Emoji text=":world_map:" fontSize="80px" />

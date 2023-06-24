@@ -2,12 +2,10 @@
 import React, { ReactNode } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import Select from "react-select"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import {
   Box,
-  chakra,
   Flex,
   FlexProps,
   forwardRef,
@@ -40,6 +38,7 @@ import { trackCustomEvent } from "../../../utils/matomo"
 import { getImage } from "../../../utils/image"
 import { WalletData } from "../../../data/wallets/wallet-data"
 import { ChildOnlyProp } from "../../../types"
+import ReactSelect from "../../ReactSelect"
 
 const Container = (props: TableProps) => (
   <Table
@@ -138,91 +137,6 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
     {...props}
   />
 ))
-
-const ChakraSelect = chakra((props: { className?: string }) => (
-  <Select {...props} />
-))
-const StyledSelect = (props) => (
-  <ChakraSelect
-    w="full"
-    sx={{
-      ".react-select": {
-        "&__control": {
-          bg: "searchBackground",
-          border: "1px",
-          borderColor: "text",
-          cursor: "pointer",
-          pe: "0.3rem",
-          transition: "0.5s all",
-
-          ".react-select__value-container": {
-            ".react-select__single-value": {
-              color: "text",
-            },
-          },
-
-          ".react-select__indicators": {
-            ".react-select__indicator-separator": {
-              bg: "none",
-            },
-            ".react-select__indicator": {
-              color: "text",
-              p: 0,
-            },
-          },
-
-          "&:hover, &--is-focused": {
-            bg: "primary.base",
-            borderColor: "primary.base",
-
-            ".react-select__value-container": {
-              ".react-select__single-value": {
-                color: "background.base",
-              },
-            },
-
-            ".react-select__indicators": {
-              ".react-select__indicator": {
-                color: "background.base",
-              },
-            },
-          },
-        },
-
-        "&__placeholder": {
-          color: "text200",
-        },
-
-        "&__single-value, &__menu, &__input": {
-          color: "text",
-        },
-
-        "&__menu": {
-          bg: "searchBackground",
-        },
-
-        "&__option": {
-          "&:hover, &--is-focused": {
-            bg: "selectHover",
-          },
-          _active: {
-            bg: "selectActive",
-            color: "buttonColor !important",
-          },
-
-          "&--is-selected": {
-            bg: "primary.base",
-            color: "buttonColor",
-            _hover: {
-              bg: "primary.base",
-            },
-          },
-        },
-      },
-    }}
-    {...props}
-  />
-)
 
 const FlexInfo = (props: FlexProps) => (
   <Flex
@@ -354,55 +268,49 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
           <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
             {t("page-find-wallet-choose-features")}
           </Text>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setFirstFeatureSelect, firstCol)
-            }}
-            defaultValue={firstFeatureSelect}
-            isSearchable={false}
-          />
+          <Box>
+            <ReactSelect
+              options={[
+                {
+                  label: t("page-find-choose-to-compare"),
+                  options: [...filteredFeatureDropdownItems],
+                },
+              ]}
+              onChange={updateDropdown(setFirstFeatureSelect, firstCol)}
+              defaultValue={firstFeatureSelect}
+              variant="outline"
+            />
+          </Box>
         </Th>
         <Th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setSecondFeatureSelect, secondCol)
-            }}
-            defaultValue={secondFeatureSelect}
-            isSearchable={false}
-          />
+          <Box>
+            <ReactSelect
+              options={[
+                {
+                  label: t("page-find-choose-to-compare"),
+                  options: [...filteredFeatureDropdownItems],
+                },
+              ]}
+              onChange={updateDropdown(setSecondFeatureSelect, secondCol)}
+              defaultValue={secondFeatureSelect}
+              variant="outline"
+            />
+          </Box>
         </Th>
         <Th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setThirdFeatureSelect, thirdCol)
-            }}
-            defaultValue={thirdFeatureSelect}
-            isSearchable={false}
-          />
+          <Box>
+            <ReactSelect
+              options={[
+                {
+                  label: t("page-find-choose-to-compare"),
+                  options: [...filteredFeatureDropdownItems],
+                },
+              ]}
+              onChange={updateDropdown(setThirdFeatureSelect, thirdCol)}
+              defaultValue={thirdFeatureSelect}
+              variant="outline"
+            />
+          </Box>
         </Th>
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
