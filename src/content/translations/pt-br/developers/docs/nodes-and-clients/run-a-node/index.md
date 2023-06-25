@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Exdcutar um nó próprio proporciona vários benefícios, abre novas possibilidades e ajuda a dar suporte ao ecossistema. Esta página vai ajudar você a iniciar seu próprio nó, para assim participar na validação das transações de Ethereum.
 
-Observe que após [A Fusão](/roadmap/merge), dois clientes são necessários para executar um nó Ethereum; um cliente da **camada de execução (EL)** e um cliente da **camada de consenso (CL)**. Esta página mostrará como instalar, configurar e conectar esses dois clientes para executar um nó Ethereum.
+Observe que após [A Fusão](/roadmap/merge) (The Merge), são necessários dois clientes para executar um nó Ethereum; um cliente da **camada de execução (EL)** e um cliente da **camada de consenso (CL)**. Esta página mostrará como instalar, configurar e conectar esses dois clientes para executar um nó Ethereum.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -330,7 +330,7 @@ lighthouse beacon_node \
     --datadir /data/ethereum \
     --http \
     --execution-endpoint http://127.0.0.1:8551 \
-    --execution-jwt /path/to/jwtsecret \
+    --execution-jwt /path/to/jwtsecret
 ```
 
 ##### Executando o Lodestar
@@ -376,7 +376,7 @@ O Prysm vem com um script que permite uma fácil instalação automática. Os de
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
-    --ee-jwt-secret-file "/path/to/jwtsecret" \
+    --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
 Quando um cliente de consenso se conecta ao cliente de execução para ler o contrato de depósito e identificar validadores, ele também se conecta a outros pares do Beacon Node e começa a sincronizar os espaços de consenso do gênesis. Quando o Beacon Node atinge a época atual, a API do Beacon se torna utilizável para seus validadores. Saiba mais sobre [APIs do Beacon Node](https://eth2docs.vercel.app/).

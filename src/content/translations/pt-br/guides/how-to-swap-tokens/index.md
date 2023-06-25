@@ -6,7 +6,7 @@ lang: pt-br
 
 # Como trocar tokens
 
-Cansado de procurar por uma corretora que liste todos os seus tokens favoritos? Você também pode trocar a maioria dos tokens usando corretoras descentralizadas.
+Está cansado de procurar por uma corretora que lista todos os seus tokens favoritos? Você também pode trocar a maioria dos tokens usando corretoras descentralizadas.
 
 Um swap de token envolve a corretora de dois ativos diferentes que existem na rede Ethereum, por exemplo, trocando o ETH por DAI (um token ERC-20). O processo é muito rápido e barato. Você precisará ter uma carteira de criptomoedas para trocar tokens.
 
@@ -23,6 +23,8 @@ Algumas corretoras populares são:
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
+
+Se você gostaria de aprender mais sobre o que é DeFi e como esses novos tipos de corretoras funcionam, recomendamos a [Biblioteca do Kernel](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi).
 
 ## 2. Selecione o par de tokens que deseja trocar
 

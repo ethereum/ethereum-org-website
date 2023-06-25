@@ -8,7 +8,7 @@ Ladrões e sabotadores estão constantemente buscando oportunidades para atacar 
 
 ## Pré-requisitos {#prerequisites}
 
-São necessários alguns conhecimentos básicos de [prova de participação](/developers/docs/consensus-mechanisms/pos/). Além disso, será útil ter um entendimento básico da [camada de incentivo](/docs/consensus-mechanisms/pos/rewards-and-penalties) do Ethereum e do algoritmo de escolha de fork, [LMD-GHOST](/docs/consensus-mechanisms/pos/gasper).
+São necessários alguns conhecimentos básicos de [prova de participação](/developers/docs/consensus-mechanisms/pos/). Além disso, será útil ter conhecimentos básicos sobre a [camada de incentivo](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) do Ethereum e do algoritmo de escolha de bifurcação (fork), [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
 ## O que os invasores querem? {#what-do-attackers-want}
 

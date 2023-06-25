@@ -229,7 +229,20 @@ export const useStakingConsiderations = ({ page }: IProps) => {
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
-          eventName: "clicked saas diverse clients",
+          eventName: "clicked saas diverse consensus clients",
+        },
+      },
+      {
+        title: t("page-staking-considerations-saas-8-title"),
+        description: t("page-staking-considerations-saas-8-description"),
+        valid: t("page-staking-considerations-saas-8-valid"),
+        caution: t("page-staking-considerations-saas-8-caution"),
+        warning: t("page-staking-considerations-saas-8-warning"),
+        Svg: MultiClientIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked saas diverse execution clients",
         },
       },
       {
@@ -335,7 +348,20 @@ export const useStakingConsiderations = ({ page }: IProps) => {
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
-          eventName: "clicked pooled diverse clients",
+          eventName: "clicked pooled diverse execution clients",
+        },
+      },
+      {
+        title: t("page-staking-considerations-saas-8-title"),
+        description: t("page-staking-considerations-pools-9-description"),
+        valid: t("page-staking-considerations-saas-8-valid"),
+        caution: t("page-staking-considerations-saas-8-caution"),
+        warning: t("page-staking-considerations-saas-8-warning"),
+        Svg: MultiClientIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled diverse consensus clients",
         },
       },
       {

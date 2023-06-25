@@ -71,7 +71,7 @@ const QuizzesStats: React.FC = () => {
         {/* user stats */}
         <Grid
           gap={4}
-          bg="backgroundHighlight"
+          bg="background.highlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
           p={8}
@@ -79,7 +79,7 @@ const QuizzesStats: React.FC = () => {
         >
           <GridItem colSpan={{ base: 2, lg: 1 }} alignSelf="center" order={1}>
             <Text
-              color="body"
+              color="body.base"
               fontWeight="bold"
               fontSize="xl"
               margin={0}
@@ -114,13 +114,13 @@ const QuizzesStats: React.FC = () => {
                 justifyContent={{ base: "center", lg: "flex-start" }}
                 alignItems="center"
               >
-                <Circle size="64px" bg="primary" mr={4}>
+                <Circle size="64px" bg="primary.base" mr={4}>
                   <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
                 </Circle>
 
-                <Text fontWeight="bold" fontSize="5xl" mb={0} color="body">
+                <Text fontWeight="bold" fontSize="5xl" mb={0} color="body.base">
                   {userScore}
-                  <Text as="span" color="bodyMedium">
+                  <Text as="span" color="body.medium">
                     /{totalQuizzesPoints}
                   </Text>
                 </Text>
@@ -129,16 +129,21 @@ const QuizzesStats: React.FC = () => {
               <Progress value={(userScore / totalQuizzesPoints) * 100} />
 
               <Flex direction={{ base: "column", lg: "row" }}>
-                <Text mr={10} mb={0} mt={{ base: 2, lg: 0 }} color="bodyMedium">
+                <Text
+                  mr={10}
+                  mb={0}
+                  mt={{ base: 2, lg: 0 }}
+                  color="body.medium"
+                >
                   <Translation id="average-score" />{" "}
-                  <Text as="span" color="body">
+                  <Text as="span" color="body.base">
                     {formattedUserAverageScore}
                   </Text>
                 </Text>
 
-                <Text mb={0} color="bodyMedium">
+                <Text mb={0} color="body.medium">
                   <Translation id="completed" />{" "}
-                  <Text as="span" color="body">
+                  <Text as="span" color="body.base">
                     {numberOfCompletedQuizzes}/{totalQuizzesNumber}
                   </Text>
                 </Text>
@@ -152,12 +157,12 @@ const QuizzesStats: React.FC = () => {
           direction="column"
           gap={6}
           justifyContent="space-between"
-          bg="backgroundHighlight"
+          bg="background.highlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
           p={8}
         >
-          <Text color="body" fontWeight="bold" fontSize="xl" mb={0}>
+          <Text color="body.base" fontWeight="bold" fontSize="xl" mb={0}>
             <Translation id="community-stats" />
           </Text>
 
@@ -166,32 +171,32 @@ const QuizzesStats: React.FC = () => {
             gap={{ base: 6, md: 10 }}
           >
             <Stack>
-              <Text mr={10} mb={-2} color="bodyMedium">
+              <Text mr={10} mb={-2} color="body.medium">
                 <Translation id="average-score" />
               </Text>
               {/* Data from Matomo, manually updated */}
-              <Text color="body">{formattedCollectiveAverageScore}</Text>
+              <Text color="body.base">{formattedCollectiveAverageScore}</Text>
             </Stack>
 
             <Stack>
-              <Text mr={10} mb={-2} color="bodyMedium">
+              <Text mr={10} mb={-2} color="body.medium">
                 <Translation id="questions-answered" />
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text color="body">
+              <Text color="body.base">
                 {formattedCollectiveQuestionsAnswered}
                 <Text as="span">+</Text>
               </Text>
             </Stack>
 
             <Stack>
-              <Text mr={10} mb={-2} color="bodyMedium">
+              <Text mr={10} mb={-2} color="body.medium">
                 <Translation id="retry" />
               </Text>
 
               {/* Data from Matomo, manually updated */}
-              <Text color="body">{formattedCollectiveRetryRate}</Text>
+              <Text color="body.base">{formattedCollectiveRetryRate}</Text>
             </Stack>
           </Flex>
         </Flex>
