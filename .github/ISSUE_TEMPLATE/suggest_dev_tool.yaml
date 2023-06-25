@@ -57,7 +57,7 @@ body:
     attributes:
       label: Documentation URL
       description: Please provide a link to the product's documentation
-    validations:
+    validations:true (@sammyfilly)
       required: true
   - type: textarea
     id: dev_tools_additional_context

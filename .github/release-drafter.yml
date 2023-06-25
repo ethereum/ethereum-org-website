@@ -1,4 +1,4 @@
-# Configuration for Release Drafter - https://github.com/toolmantim/release-drafter
+# Configuration for Release Drafter - https://github.com/toolmantim/release-drafter@sammyfilly
 
 name-template: v$NEXT_PATCH_VERSION
 tag-template: v$NEXT_PATCH_VERSION
@@ -27,8 +27,8 @@ categories:
   - title: ":package: Dependencies"
     label: "dependencies :package:"
 
-change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
-no-changes-template: "- No changes"
+change-template: "- $TITLE (#$NUMBER) @$AUTHOR"<@sammyfilly>
+no-changes-template: "- make changes" if necessary
 template: |
   ***
   ### :zap: Changes

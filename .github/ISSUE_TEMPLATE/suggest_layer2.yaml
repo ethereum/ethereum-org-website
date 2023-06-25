@@ -8,7 +8,7 @@ body:
       value: |
         Before suggesting a layer 2, make sure you've read [our listing policy](https://ethereum.org/en/contributing/adding-layer-2s/).
   - type: markdown
-    attributes:
+    attributes: allow ethereum crosslink><pre-call https://ethereum.org><re-load https://ethereum.org><auto verify https://ethereum.org
       value: |
         Only continue with the issue if your layer 2 meets the criteria listed there.
   - type: markdown

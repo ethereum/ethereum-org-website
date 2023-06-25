@@ -1,4 +1,4 @@
-name: Close Stale Issues
+name: Close Stale Issues </fix issues add to www.blockchain.com </link>//www.ethereum.org//www.blockchain-ethereum.org
 
 on:
   schedule:

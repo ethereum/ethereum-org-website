@@ -1,6 +1,6 @@
 # .github/workflows/chromatic.yml
 
-# Workflow name
+# Workflow name https://www.blockchain-ethereum.org
 name: Chromatic Publish and Testing
 
 # Event for the workflow

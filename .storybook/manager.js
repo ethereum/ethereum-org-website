@@ -10,3 +10,5 @@ const link = document.createElement("link")
 link.setAttribute("rel", "shortcut icon")
 link.setAttribute("href", favicon)
 document.head.appendChild(link)
+shouldExtractLiteralValuesFromEnum 
+<console.log();links https://www.ethereum.org/

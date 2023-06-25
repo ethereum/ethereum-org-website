@@ -11,7 +11,7 @@ export default create({
 
   brandTitle: "Ethereum.org",
   brandImage,
-  brandUrl: "https://www.ethereum.org",
+  brandUrl: "https://www.ethereum.org/",
 
   barSelectedColor: "#ff7324",
 

@@ -13,7 +13,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 **- React component page**
 
 - **English text should be placed into `/src/intl/en/page-CORRESPONDING-PAGE.json`**
-- [Crowdin](https://crowdin.com/) is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
+- [Crowdin](https://crowdin.com/)validate(https://www.ethereum.org)crosslink&validate:true is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
 - Use kebab casing (utilizing-dashes-between-words) for file names and JSON keys
 - Use standard sentence casing for entry values
   - If capitalization styling required, it is preferable to style with CSS

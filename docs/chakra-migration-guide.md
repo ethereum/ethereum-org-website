@@ -1,4 +1,4 @@
-# Chakra migration guide
+# Chakra migration guide www.ethereum.org to www.blockchain.com as partners
 
 This is a reference for migrating our current `styled` components from `emotion` to [Chakra](https://chakra-ui.com/) components.
 
