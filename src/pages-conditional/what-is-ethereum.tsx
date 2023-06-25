@@ -1,9 +1,19 @@
 import React from "react"
-import styled from "@emotion/styled"
-import { useTheme } from "@emotion/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Box,
+  BoxProps,
+  Center,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
@@ -16,15 +26,6 @@ import Tabs from "../components/Tabs"
 import Icon from "../components/Icon"
 import Link from "../components/Link"
 import {
-  CardContainer,
-  Content,
-  GrayContainer,
-  Page,
-  Width60,
-  Width40,
-  NoWrapText,
-} from "../components/SharedStyledComponents"
-import {
   Banner,
   BannerBody,
   BannerGrid,
@@ -36,6 +37,8 @@ import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import Slider, { EmblaSlide } from "../components/Slider"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import StatErrorMessage from "../components/StatErrorMessage"
+import StatLoadingMessage from "../components/StatLoadingMessage"
 
 import { getLocaleForNumberFormat } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -47,181 +50,115 @@ import useFetchStat, {
   IFetchStat,
 } from "../hooks/useFetchStat"
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
-import { Context } from "../types"
-import StatErrorMessage from "../components/StatErrorMessage"
-import StatLoadingMessage from "../components/StatLoadingMessage"
-import { Center } from "@chakra-ui/react"
+import type { ChildOnlyProp, Context } from "../types"
 
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 2rem;
-  line-height: 140%;
-`
+const Slogan = (props: ChildOnlyProp) => (
+  <Text
+    textStyle="normal"
+    fontWeight="normal"
+    fontSize="2rem"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const Title = styled.h1`
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.textTableOfContents};
-`
+const Title = (props: ChildOnlyProp) => (
+  <Heading
+    as="h1"
+    fontSize="sm"
+    lineHeight={1.4}
+    letterSpacing="wider"
+    fontWeight="500"
+    mb={4}
+    mt={0}
+    textTransform="uppercase"
+    color="textTableOfContents"
+    {...props}
+  />
+)
 
-const Subtitle = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${({ theme }) => theme.colors.text200};
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Text fontSize="xl" lineHeight={1.4} color="text200" {...props} />
+)
 
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-`
+const Hero = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 100%"
+    maxW="800px"
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    {...props}
+  />
+)
 
-const Hero = styled(GatsbyImage)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-`
+const Summary = (props: BoxProps) => (
+  <Box p={4} borderRadius="base" bg="cardGradient" {...props} />
+)
 
-const Header = styled.header`
-  margin-top: 12rem;
-  @media (max-width: 1280px) {
-    margin-top: 8rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: 7rem;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    margin-top: 4rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: 2rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: 1rem;
-  }
-  @media (max-width: 840px) {
-    margin-top: 0;
-  }
-`
+const Content = (props: ChildOnlyProp) => (
+  <Box w="full" px={8} py={4} {...props} />
+)
 
-const StyledGrayContainer = styled(GrayContainer)`
-  padding: 0;
-  margin: 0;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    margin-top: 0rem;
-    box-shadow: none;
-  }
-`
+const TwoColumnContent = (props: FlexProps) => (
+  <Flex
+    w="full"
+    gap={{ base: 8, lg: 0 }}
+    align={{ base: "flex-start", lg: "center" }}
+    direction={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
+const Section = (props: BoxProps) => <Box w="full" py={12} px={8} {...props} />
 
-const Summary = styled.div`
-  padding: 1rem;
-  border-radius: 4px;
-  background: ${({ theme }) => theme.colors.cardGradient};
+const Width60 = (props: ChildOnlyProp) => <Box w="full" flex={3} {...props} />
 
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-    color: ${({ theme }) => theme.colors.text300};
-  }
+const Width40 = (props: ChildOnlyProp) => (
+  <Center w="full" flex={2} {...props} />
+)
 
-  p:last-child {
-    margin: 0;
-  }
-`
+const H2 = (prop: ChildOnlyProp & HeadingProps) => (
+  <Heading
+    fontSize={{ base: "2xl", md: "3xl" }}
+    lineHeight={1.4}
+    mt={0}
+    mb={6}
+    {...prop}
+  />
+)
 
-const TwoColumnContent = styled.div<{ reverse?: boolean }>`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+const H3 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h3"
+    mt={0}
+    fontSize={{ base: "xl", md: "2xl" }}
+    lineHeight={1.4}
+    fontWeight={600}
+    {...props}
+  />
+)
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
+const CardContainer = (props: ChildOnlyProp) => (
+  <Flex wrap="wrap" mx={-4} {...props} />
+)
 
-    & > *:first-child {
-      margin-bottom: 2rem;
-    }
-  }
-`
+const Column = (props: ChildOnlyProp) => (
+  <Box flex="0 0 50%" maxW={{ base: "full", md: "75%" }} mb={6} {...props} />
+)
 
-const Section = styled.div<{
-  bgColor?: string
-  padding?: string
-}>`
-  width: 100%;
-  padding: ${({ padding }) => padding ?? "3rem 2rem"};
-  background-color: ${({ bgColor = "transparent" }) => bgColor};
+const TabContent = (props: ChildOnlyProp) => <Text m={0} {...props} />
 
-  h2 {
-    margin-top: 0;
-  }
-`
+const StatPrimary = (props: ChildOnlyProp) => (
+  <Box fontSize="5xl" mb={4} lineHeight={1} {...props} />
+)
 
-const Column = styled.div`
-  flex: 0 0 50%;
-  max-width: 75%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-  margin-bottom: 1.5rem;
-`
+const StatDescription = (props: ChildOnlyProp) => (
+  <Box fontSize="md" color="text200" {...props} />
+)
 
-const StyledCallout = styled(Callout)`
-  flex: 1 1 416px;
-  min-height: 100%;
-`
-
-const TabContent = styled.p`
-  margin: 0;
-`
-
-const StatPrimary = styled.div`
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  line-height: 1;
-`
-
-const StatDescription = styled.div`
-  font-size: 1rem;
-  color: ${({ theme }) => theme.colors.text200};
-`
-
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1.45rem;
-  flex-wrap: wrap;
-
-  & > button,
-  & > a {
-    margin-right: 1rem;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-      margin-bottom: 1rem;
-    }
-  }
-`
+const ButtonRow = (props: ChildOnlyProp) => (
+  <Flex align="center" mt={4} mb={6} wrap="wrap" gap={4} {...props} />
+)
 
 const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
   const isLoading = !stat.value
@@ -235,12 +172,15 @@ const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
   )
 }
 
+const NoWrapText = (props: ChildOnlyProp) => (
+  <Text as="span" whiteSpace="nowrap" {...props} />
+)
+
 const WhatIsEthereumPage = ({
   data,
 }: PageProps<Queries.WhatIsEthereumQuery, Context>) => {
   const { t } = useTranslation()
   const { language } = useI18next()
-  const theme = useTheme()
 
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
 
@@ -339,15 +279,19 @@ const WhatIsEthereumPage = ({
   )
 
   return (
-    <Page>
+    <Flex direction="column" align="center" w="full" m="0 auto">
       <PageMetadata
         title={t("page-what-is-ethereum-meta-title")}
         description={t("page-what-is-ethereum-meta-description")}
         image={getSrc(data.ogImage)}
       />
       <Content>
-        <HeroContainer>
-          <Header>
+        <Flex
+          align="center"
+          justify="space-between"
+          direction={{ base: "column-reverse", md: "row" }}
+        >
+          <Box as="header">
             <Title>
               <Translation id="page-what-is-ethereum-title" />
             </Title>
@@ -362,34 +306,49 @@ const WhatIsEthereumPage = ({
                 <Translation id="page-what-is-ethereum-button-lets-start" />
               </Button>
             </ButtonRow>
-          </Header>
-          <Hero
-            image={getImage(data.hero)!}
-            alt={t("page-what-is-ethereum-alt-img-bazaar")}
-            loading="eager"
-          />
-        </HeroContainer>
+          </Box>
+          <Hero>
+            <GatsbyImage
+              image={getImage(data.hero)!}
+              alt={t("page-what-is-ethereum-alt-img-bazaar")}
+              loading="eager"
+            />
+          </Hero>
+        </Flex>
       </Content>
-      <StyledGrayContainer>
+      <Box
+        w="full"
+        bg="grayBackground"
+        boxShadow={{
+          base: "none",
+          md: "inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)",
+        }}
+      >
         <Section>
           <TwoColumnContent id="summary">
             <Width60>
               <Summary>
-                <h2>
+                <Heading
+                  fontSize="1.4rem"
+                  lineHeight={1.4}
+                  color="text300"
+                  mt={0}
+                  mb={6}
+                >
                   <Translation id="page-what-is-ethereum-summary-title" />
-                </h2>
-                <p>
+                </Heading>
+                <Text>
                   <Translation id="page-what-is-ethereum-summary-desc-1" />
-                </p>
-                <p>
+                </Text>
+                <Text mb={0}>
                   <Translation id="page-what-is-ethereum-summary-desc-2" />
-                </p>
+                </Text>
               </Summary>
             </Width60>
             <Width40 />
           </TwoColumnContent>
-          <Section padding="3rem 0">
-            <TwoColumnContent reverse>
+          <Section px={0}>
+            <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
               <Width40>
                 <GatsbyImage
                   image={getImage(data.whatIsCryptocurrency)!}
@@ -397,24 +356,24 @@ const WhatIsEthereumPage = ({
                 />
               </Width40>
               <Width60>
-                <h2>
+                <H2>
                   <Translation id="page-what-is-ethereum-what-is-crypto-title" />
-                </h2>
-                <p>
+                </H2>
+                <Text>
                   <Translation id="page-what-is-ethereum-what-is-crypto-desc-1" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-what-is-ethereum-what-is-crypto-desc-2" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-what-is-ethereum-what-is-crypto-desc-3" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-what-is-ethereum-what-is-crypto-desc-4" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-what-is-ethereum-what-is-crypto-desc-5" />
-                </p>
+                </Text>
               </Width60>
             </TwoColumnContent>
           </Section>
@@ -441,36 +400,40 @@ const WhatIsEthereumPage = ({
               <GatsbyImage image={getImage(data.diffEthAndBtc)!} alt="" />
             </Width40>
             <Width60>
-              <h2>
+              <H2>
                 <Translation id="page-what-is-ethereum-btc-eth-diff-title" />
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-what-is-ethereum-btc-eth-diff-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-what-is-ethereum-btc-eth-diff-2" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-what-is-ethereum-btc-eth-diff-3" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-what-is-ethereum-btc-eth-diff-4" />
-              </p>
+              </Text>
             </Width60>
           </TwoColumnContent>
         </Section>
 
         <Section>
-          <h2>
+          <H2>
             <Translation id="page-what-is-ethereum-what-can-eth-do-title" />
-          </h2>
+          </H2>
           <CardContainer>
             {cards.map((card, idx) => (
-              <StyledCard
+              <Card
                 key={idx}
                 emoji={card.emoji}
                 title={card.title}
                 description={card.description}
+                flex="1 1 30%"
+                minW="240px"
+                m={4}
+                p={6}
               />
             ))}
           </CardContainer>
@@ -479,9 +442,9 @@ const WhatIsEthereumPage = ({
         <Section>
           <Banner>
             <BannerBody>
-              <h2>
+              <H2>
                 <Translation id="page-what-is-ethereum-ethereum-in-numbers-title" />
-              </h2>
+              </H2>
               <BannerGrid>
                 <BannerGridCell>
                   <StatPrimary>4k+</StatPrimary>
@@ -610,15 +573,15 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent>
             <Width60>
-              <h2>
+              <H2>
                 <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-title" />
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-2" />
-              </p>
+              </Text>
 
               <Slider
                 onSlideChange={(index) => {
@@ -630,45 +593,45 @@ const WhatIsEthereumPage = ({
                 }}
               >
                 <EmblaSlide>
-                  <h3>
+                  <H3>
                     <Translation id="page-what-is-ethereum-slide-1-title" />
-                  </h3>
-                  <p>
+                  </H3>
+                  <Text>
                     <Translation id="page-what-is-ethereum-slide-1-desc-1" />
-                  </p>
-                  <p>
+                  </Text>
+                  <Text>
                     <Translation id="page-what-is-ethereum-slide-1-desc-2" />
-                  </p>
+                  </Text>
                 </EmblaSlide>
                 <EmblaSlide>
-                  <h3>
+                  <H3>
                     <Translation id="page-what-is-ethereum-slide-2-title" />
-                  </h3>
-                  <p>
+                  </H3>
+                  <Text>
                     <Translation id="page-what-is-ethereum-slide-2-desc-1" />
-                  </p>
-                  <p>
+                  </Text>
+                  <Text>
                     <Translation id="page-what-is-ethereum-slide-2-desc-2" />
-                  </p>
+                  </Text>
                 </EmblaSlide>
                 <EmblaSlide>
-                  <h3>
+                  <H3>
                     <Translation id="page-what-is-ethereum-slide-3-title" />
-                  </h3>
-                  <p>
+                  </H3>
+                  <Text>
                     <Translation id="page-what-is-ethereum-slide-3-desc-1" />
-                  </p>
+                  </Text>
                 </EmblaSlide>
                 <EmblaSlide>
-                  <h3>
+                  <H3>
                     <Translation id="page-what-is-ethereum-slide-4-title" />
-                  </h3>
-                  <p>
+                  </H3>
+                  <Text>
                     <Translation id="page-what-is-ethereum-slide-4-desc-1" />
-                  </p>
-                  <p>
+                  </Text>
+                  <Text>
                     <Translation id="page-what-is-ethereum-slide-4-desc-2" />
-                  </p>
+                  </Text>
                 </EmblaSlide>
               </Slider>
             </Width60>
@@ -678,21 +641,21 @@ const WhatIsEthereumPage = ({
           </TwoColumnContent>
         </Section>
 
-        <Section bgColor={theme.colors.homeBoxTurquoise}>
+        <Section bgColor="homeBoxTurquoise">
           <TwoColumnContent>
             <Width40>
               <GatsbyImage image={getImage(data.ethCoin)!} alt="" />
             </Width40>
             <Width60>
-              <h2>
+              <H2>
                 <Translation id="page-what-is-ethereum-meet-ether-title" />
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-what-is-ethereum-meet-ether-desc-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-what-is-ethereum-meet-ether-desc-2" />
-              </p>
+              </Text>
               <ButtonRow>
                 <ButtonLink to="/eth/">
                   <Translation id="page-what-is-ethereum-what-is-ether" />
@@ -706,17 +669,17 @@ const WhatIsEthereumPage = ({
         </Section>
 
         <Section>
-          <TwoColumnContent reverse>
+          <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
             <Width40>
               <GatsbyImage image={getImage(data.meetEth)!} alt="" />
             </Width40>
             <Width60>
-              <h2>
+              <H2>
                 <Translation id="page-what-is-ethereum-what-can-i-do-title" />
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-what-is-ethereum-what-can-i-do-desc-1" />
-              </p>
+              </Text>
               <ButtonRow>
                 <ButtonLink to="/dapps/">
                   <Translation id="page-what-is-ethereum-explore-applications" />
@@ -729,21 +692,21 @@ const WhatIsEthereumPage = ({
           </TwoColumnContent>
         </Section>
 
-        <Section bgColor={theme.colors.homeBoxPurple}>
+        <Section bgColor="homeBoxPurple">
           <TwoColumnContent>
             <Width40>
               <GatsbyImage image={getImage(data.whoRunsEthereum)!} alt="" />
             </Width40>
             <Width60>
-              <h2>
+              <H2>
                 <Translation id="page-what-is-ethereum-who-runs-ethereum-title" />
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-what-is-ethereum-who-runs-ethereum-desc-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-what-is-ethereum-who-runs-ethereum-desc-2" />
-              </p>
+              </Text>
               <ButtonRow>
                 <ButtonLink to="/run-a-node/">
                   <Translation id="page-what-is-ethereum-run-a-node" />
@@ -754,7 +717,7 @@ const WhatIsEthereumPage = ({
         </Section>
 
         <Section>
-          <TwoColumnContent reverse>
+          <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
             <Width40>
               <GatsbyImage
                 image={getImage(data.whatAreSmartContracts)!}
@@ -762,18 +725,18 @@ const WhatIsEthereumPage = ({
               />
             </Width40>
             <Width60>
-              <h2>
+              <H2>
                 <Translation id="page-what-is-ethereum-smart-contract-title" />
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-what-is-ethereum-smart-contract-desc-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-what-is-ethereum-smart-contract-desc-2" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-what-is-ethereum-smart-contract-desc-3" />
-              </p>
+              </Text>
               <ButtonRow>
                 <ButtonLink to="/smart-contracts/">
                   <Translation id="page-what-is-ethereum-more-on-smart-contracts" />
@@ -785,7 +748,7 @@ const WhatIsEthereumPage = ({
             </Width60>
           </TwoColumnContent>
         </Section>
-      </StyledGrayContainer>
+      </Box>
 
       <Section>
         <TwoColumnContent>
@@ -793,54 +756,54 @@ const WhatIsEthereumPage = ({
             <GatsbyImage image={getImage(data.criminalActivity)!} alt="" />
           </Width40>
           <Width60>
-            <h2>
+            <H2>
               <Translation id="page-what-is-ethereum-criminal-activity-title" />
-            </h2>
-            <p>
+            </H2>
+            <Text>
               <Translation id="page-what-is-ethereum-criminal-activity-desc-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-what-is-ethereum-criminal-activity-desc-2" />
-            </p>
-            <p>
-              <em>
+            </Text>
+            <Text>
+              <Text as="em">
                 <Translation id="page-what-is-ethereum-criminal-activity-desc-3" />
-              </em>
-            </p>
-            <ul>
-              <li>
+              </Text>
+            </Text>
+            <UnorderedList>
+              <ListItem>
                 <Link to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
                   Europol Spotlight - Cryptocurrencies - Tracing the evolution
                   of criminal finances.pdf
                 </Link>{" "}
                 EN (1.4 MB)
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 <Link to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
                   Chainalysis (2021), The 2021 Crypto Crime report
                 </Link>{" "}
                 EN
-              </li>
-            </ul>
+              </ListItem>
+            </UnorderedList>
           </Width60>
         </TwoColumnContent>
       </Section>
 
       <Section>
-        <TwoColumnContent reverse>
+        <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
           <Width40>
             <EnergyConsumptionChart />
           </Width40>
           <Width60>
-            <h2>
+            <H2>
               <Translation id="page-what-is-ethereum-energy-title" />
-            </h2>
-            <p>
+            </H2>
+            <Text>
               <Translation id="page-what-is-ethereum-energy-desc-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-what-is-ethereum-energy-desc-2" />
-            </p>
+            </Text>
             <ButtonRow>
               <ButtonLink to="/energy-consumption/">
                 <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
@@ -854,61 +817,65 @@ const WhatIsEthereumPage = ({
       </Section>
 
       <Content>
-        <h2>
+        <H2>
           <Translation id="page-what-is-ethereum-additional-reading" />
-        </h2>
-        <p>
+        </H2>
+        <Text>
           <Link to="https://weekinethereumnews.com/">
             <Translation id="page-what-is-ethereum-week-in-ethereum" />
           </Link>{" "}
           <Translation id="page-what-is-ethereum-week-in-ethereum-desc" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Link to="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
             <Translation id="page-what-is-ethereum-atoms-institutions-blockchains" />
           </Link>{" "}
           <Translation id="page-what-is-ethereum-atoms-institutions-blockchains-desc" />
-        </p>
+        </Text>
 
-        <p>
+        <Text>
           <Link to="https://www.kernel.community/en/learn/module-1/dreamers">
             <Translation id="page-what-is-ethereum-kernel-dreamers" />
           </Link>{" "}
           <Translation id="page-what-is-ethereum-kernel-dreamers-desc" />
-        </p>
+        </Text>
       </Content>
 
       <Content>
         <Column>
-          <h2>
+          <H2>
             <Translation id="page-what-is-ethereum-explore" />
-          </h2>
+          </H2>
         </Column>
         <CardContainer>
-          <StyledCallout
+          <Callout
+            flex="1 1 416px"
+            minH="full"
             image={getImage(data.developers)!}
             titleKey="page-what-is-ethereum-build"
             alt={t("page-what-is-ethereum-alt-img-lego")}
             descriptionKey="page-what-is-ethereum-build-desc"
           >
-            <div>
+            <Box>
               <ButtonLink to="/developers/">
                 <Translation id="page-what-is-ethereum-start-building-btn" />
               </ButtonLink>
-            </div>
-          </StyledCallout>
-          <StyledCallout
+            </Box>
+          </Callout>
+          <Callout
+            flex="1 1 416px"
+            minH="full"
             image={getImage(data.community)!}
             titleKey="page-what-is-ethereum-community"
             alt={t("page-what-is-ethereum-alt-img-comm")}
             descriptionKey="page-what-is-ethereum-comm-desc"
           >
-            <div>
+            <Box>
               <ButtonLink to="/community/">
                 <Translation id="page-what-is-ethereum-meet-comm" />
               </ButtonLink>
-            </div>
-          </StyledCallout>
+            </Box>
+          </Callout>
         </CardContainer>
       </Content>
 
@@ -921,7 +888,7 @@ const WhatIsEthereumPage = ({
       <Content>
         <FeedbackCard />
       </Content>
-    </Page>
+    </Flex>
   )
 }
 
