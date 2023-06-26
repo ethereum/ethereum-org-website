@@ -32,6 +32,7 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
+import ProductDisclaimer from "../components/ProductDisclaimer"
 import RandomAppList from "../components/RandomAppList"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
@@ -308,6 +309,7 @@ const components = {
   InfoGrid,
   Logo,
   MeetupList,
+  ProductDisclaimer,
   RandomAppList,
   SectionNav,
   StakingComparison,
