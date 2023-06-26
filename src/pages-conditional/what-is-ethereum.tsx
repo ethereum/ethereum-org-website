@@ -248,7 +248,15 @@ const WhatIsEthereumPage = ({
       eventName: "Cryptocurrency tab",
       content: (
         <TabContent>
-          <Translation id="page-what-is-ethereum-cryptocurrency-tab-content" />
+          <Text>
+            <Translation id="page-what-is-ethereum-cryptocurrency-tab-content-1" />
+          </Text>
+          <Text>
+            <Translation id="page-what-is-ethereum-cryptocurrency-tab-content-2" />
+          </Text>
+          <Text>
+            <Translation id="page-what-is-ethereum-cryptocurrency-tab-content-3" />
+          </Text>
         </TabContent>
       ),
     },
@@ -347,36 +355,8 @@ const WhatIsEthereumPage = ({
             </Width60>
             <Width40 />
           </TwoColumnContent>
-          <Section px={0}>
-            <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
-              <Width40>
-                <GatsbyImage
-                  image={getImage(data.whatIsCryptocurrency)!}
-                  alt=""
-                />
-              </Width40>
-              <Width60>
-                <H2>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-title" />
-                </H2>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-1" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-2" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-3" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-4" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-5" />
-                </Text>
-              </Width60>
-            </TwoColumnContent>
-          </Section>
+          <br />
+          <br />
           <TwoColumnContent>
             <Width60>
               <Tabs
