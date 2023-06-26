@@ -89,7 +89,7 @@ cd sendtx-example
 
 Run the following command in your project directory to install [Alchemy Web3](https://docs.alchemy.com/reference/api-overview):
 
-Note, if you'd like to use the ethers.js library, [follow the instructions here](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum). 
+Note, if you'd like to use the ethers.js library, [follow the instructions here](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum).
 
 ```
 npm install @alch/alchemy-web3
