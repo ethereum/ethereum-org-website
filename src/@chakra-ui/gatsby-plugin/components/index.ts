@@ -6,6 +6,10 @@ import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
 import { Progress } from "./Progress"
 import { Tabs } from "./Tabs"
+import { Radio } from "./Radio"
+import { Select } from "./Select"
+import { Switch } from "./Switch"
+import { Input } from "./Input"
 import {
   accordionDefaultTheme,
   avatarDefaultTheme,
@@ -18,9 +22,7 @@ import {
   formLabelDefaultTheme,
   headingDefaultTheme,
   menuDefaultTheme,
-  selectDefaultTheme,
   spinnerDefaultTheme,
-  switchDefaultTheme,
   tableDefaultTheme,
 } from "./components.utils"
 
@@ -38,13 +40,15 @@ export default {
   Form: formDefaultTheme,
   FormLabel: formLabelDefaultTheme,
   Heading: headingDefaultTheme,
+  Input,
   Link,
   Menu: menuDefaultTheme,
   Modal,
   Progress,
-  Select: selectDefaultTheme,
+  Radio,
+  Select,
   Spinner: spinnerDefaultTheme,
-  Switch: switchDefaultTheme,
+  Switch,
   Table: tableDefaultTheme,
   Tabs,
   Tag,
