@@ -1596,7 +1596,7 @@ const walletData: WalletData[] = [
     non_custodial: true,
     security_audit: [""],
     scam_protection: true,
-    hardware_support: false,
+    hardware_support: true,
     walletconnect: true,
     rpc_importing: false,
     nft_support: true,

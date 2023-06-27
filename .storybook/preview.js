@@ -28,6 +28,9 @@ window.___navigate = (pathname) => {
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  backgrounds: {
+    disable: true,
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
