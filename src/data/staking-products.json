@@ -157,7 +157,12 @@
       "hue": 221,
       "launchDate": "2021-06-05",
       "url": "https://eth-docker.net",
-      "audits": [],
+      "audits": [
+        {
+          "name": "Sigma Prime",
+          "url": "https://eth-docker.net/About/SecurityAudit"
+        }
+      ],
       "minEth": 32,
       "isFoss": true,
       "hasBugBounty": false,
