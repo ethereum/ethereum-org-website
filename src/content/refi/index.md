@@ -26,31 +26,43 @@ ReFi projects realize these principles using [smart contracts](/developers/docs/
 
 ReFi also overlaps with the [decentralized science (DeSci)](/desci/) movement, which uses Ethereum as a platform to finance, create, review, credit, store, and disseminate scientific knowledge. DeSci tools could become useful for developing verifiable standards and practices for implementing and monitoring regenerative activities like planting trees, removing plastic from the ocean, or restoring a degraded ecosystem.
 
-## The current state of ReFi {#refi-current-state}
+## Tokenization of carbon credits {#tokenization-of-carbon-credits}
 
-ReFi is still very young, and so far it has found its best fit in projects related to carbon markets. Tokenization of carbon credits from the **[voluntary carbon market (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** is currently the most prominent use case.
+The **[voluntary carbon market (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** is a mechanism for funding projects that make a verified positive impact on carbon emissions, either reducing ongoing emissions, or removing greenhouse gases already emitted from the atmosphere. These projects receive an asset called "carbon credits" after they are verified, which they can sell to individuals and organizations who want to support climate action.
 
-Carbon credits and carbon markets existed long before the term ReFi was coined. The seeds were planted at the Earth Summit in Rio de Janeiro in 1992, when 160 countries agreed to the [UN Framework Convention on Climate Change (UNFCCC)](https://unfccc.int/). There are now several government-mandated carbon markets (‘compliance markets’) that aim to establish a carbon price via laws or regulations controlling the supply of permits to be distributed by national, regional, and global regimes. The VCM is an entirely separate market in which private actors voluntarily buy and sell carbon credits that represent certified removals or reductions of greenhouse gasses in the atmosphere. However, despite its development over recent decades, the VCM continues to suffer from a variety of issues, such as highly fragmented liquidity, opaque transaction mechanisms, high fees, very slow trading speed, and lack of scalability to meet the necessary 10–20x growth that the [Taskforce on Scaling the Voluntary Carbon Markets](https://www.iif.com/tsvcm) predicts is needed in the coming decade for the VCM to deliver on its potential to mitigate the climate crisis.
+In addition to the VCM, there are also several government-mandated carbon markets (‘compliance markets’) that aim to establish a carbon price via laws or regulations within a particular jurisdiction (e.g. country or region), controlling the supply of permits to be distributed. Compliance markets incentivize polluters within their jurisdiction to reduce emissions, but they are not capable of removing greenhouse gases which have already been emitted.
+
+Despite its development over recent decades, the VCM continues to suffer from a variety of issues:
+
+1. Highly fragmented liquidity
+2. Opaque transaction mechanisms
+3. High fees
+4. Very slow trading speed
+5. Lack of scalability to meet the necessary 10–20x growth to mitigate the climate crisis
 
 Transitioning the VCM to the new blockchain-based **digital carbon market (DCM)** might be an opportunity to upgrade the existing technology for validating, transacting and consuming carbon credits. Blockchains allow for publicly verifiable data, access for a broad range of users and more liquidity.
 
 ReFi projects employ blockchain technology to alleviate many of the problems of the traditional market:
 
-- In the DCM, liquidity is concentrated in a small number of [liquidity pools](https://www.gemini.com/cryptopedia/what-is-a-liquidity-pool-crypto-market-liquidity) that can be freely traded by anyone. Large organizations as well as individual users can use these pools without manual searches for sellers/buyers, participation fees, or prior registration.
-- All transactions are recorded on public blockchains. The path each carbon credit takes due to trading activity is traceable forever as soon as it is made available in the DCM.
-- Transaction speed is nearly instant. Securing large amounts of carbon credits via the legacy markets can take days or weeks, but this can be achieved in a few seconds in the DCM.
-- Trading activity occurs without intermediaries, which charge high fees. Digital carbon credits represent a [62% cost improvement compared to equivalent traditional credits](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), according to data from one analytics firm.
-- The DCM is scalable and can meet the demands of individuals and multinational corporations alike.
+- **Liquidity is concentrated in a small number of liquidity pools** that can be freely traded by anyone. Large organizations as well as individual users can use these pools without manual searches for sellers/buyers, participation fees, or prior registration.
+- **All transactions are recorded on public blockchains**. The path each carbon credit takes due to trading activity is traceable forever as soon as it is made available in the DCM.
+- **Transaction speed is nearly instant**. Securing large amounts of carbon credits via the legacy markets can take days or weeks, but this can be achieved in a few seconds in the DCM.
+- **Trading activity occurs without intermediaries**, which charge high fees. Digital carbon credits represent a [62% cost improvement compared to equivalent traditional credits](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), according to data from one analytics firm.
+- **The DCM is scalable** and can meet the demands of individuals and multinational corporations alike.
 
-Many of the issues responsible for slow growth and impracticality in the VCM, as well as its inability to scale, are either mitigated or solved completely by the transition to a fast, energy-efficient DCM and the applications built on it.
+### Key components of the DCM {#key-components-dcm}
 
-### The current building blocks {#current-building}
+Four major components make up the current landscape of the DCM:
 
-Four major components make up the current landscape:
+1. Registries such as [Verra](https://verra.org/project/vcs-program/registry-system/) and [Gold Standard](https://www.goldstandard.org/) make sure that projects creating carbon credits are reliable. They also operate the databases in which digital carbon credits originate and can be transferred or used up (retired).
 
-1. Registries such as [Verra](https://verra.org/project/vcs-program/registry-system/) and [Gold Standard](https://www.goldstandard.org/) establish standards for the integrity of carbon credit projects. They also operate the databases in which digital carbon credits originate and can be transferred or retired (consumed permanently). A new wave of innovative systems for issuing carbon credits that operate natively on blockchains like Ethereum are also being developed, which may complement or compete with the traditional registries.
-2. Carbon bridges, a.k.a. tokenizers, which provide technology to represent or transfer carbon credits from traditional registries into the DCM. Notable examples include [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/), and [Moss.Earth](https://moss.earth/).
-3. Integrated services offering carbon avoidance and/or removal credits to end-users so they can claim the environmental benefit of a credit and share their support of climate action with the world. Some such as [Klima Infinity](https://www.klimadao.finance/infinity) and [Senken](https://senken.io/) offer a wide variety of projects developed by third parties and issued under established standards like Verra; others like [Nori](https://nori.com/) only offer specific projects developed under their own carbon credit standard, which they issue and for which they have their own dedicated marketplace.
+There is a new wave of innovative projects being built on blockchains that are attempting to disrupt incumbents in this sector.
+
+2. Carbon bridges, a.k.a. tokenizers, provide technology to represent or transfer carbon credits from traditional registries into the DCM. Notable examples include [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/), and [Moss.Earth](https://moss.earth/).
+3. Integrated services offer carbon avoidance and/or removal credits to end-users so they can claim the environmental benefit of a credit and share their support of climate action with the world. 
+
+Some such as [Klima Infinity](https://www.klimadao.finance/infinity) and [Senken](https://senken.io/) offer a wide variety of projects developed by third parties and issued under established standards like Verra; others like [Nori](https://nori.com/) only offer specific projects developed under their own carbon credit standard, which they issue and for which they have their own dedicated marketplace.
+
 4. The underlying rails and infrastructure that facilitate the scaling up of the impact and efficiency of the carbon market’s entire supply chain. [KlimaDAO](http://klimadao.finance/) supplies liquidity as a public good (allowing anyone to buy or sell carbon credits at a transparent price), incentivizes increased throughput of carbon markets and retirements with rewards, and provides user-friendly interoperable tooling to access data about, as well as acquire and retire, a wide variety of tokenized carbon credits.
 
 ## ReFi beyond carbon markets {#refi-beyond}
