@@ -241,5 +241,14 @@
     "description": "ETH Munich is a first time Hackathon organised by the local web3 community PretzelDAO",
     "startDate": "2023-08-11",
     "endDate": "2023-08-13"
+  },
+  {
+    "title": "ETHLisbon 2023",
+    "to": "https://www.ethlisbon.org/",
+    "sponsor": null,
+    "location": "Gale patio, Lisbon, Portugal",
+    "description": "ETHLisbon is an Ethereum-focused hackathon bringing together the best Web 3.0 builders to the crypto capital of Europe.",
+    "startDate": "2023-11-03",
+    "endDate": "2023-11-05"
   }
 ]
