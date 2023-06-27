@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { Checkbox } from "@chakra-ui/react"
 import Emoji from "./OldEmoji"
-
-import Checkbox from "./Checkbox"
 
 const StyledCard = styled.div`
   display: flex;

@@ -103,13 +103,13 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
-<InfoBanner emoji="⚠️" isWarning>
-Please note the importance of choosing a <a href="/developers/docs/nodes-and-clients/client-diversity/">minority client</a> as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style="text-transform: uppercase;">"multi-client."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### Node tools
 
 <StakingProductsCardGrid category="nodeTools" />
+
+Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style="text-transform: uppercase;">"multi-client."</em>
 
 #### Key Generators
 

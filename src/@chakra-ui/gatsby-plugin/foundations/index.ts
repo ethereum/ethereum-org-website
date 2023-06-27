@@ -1,6 +1,7 @@
 import colors from "./colors"
 import shadows from "./shadows"
 import typography from "./typography"
+import spacing from "./spacing"
 import sizes from "./sizes"
 import spacing from "./spacing"
 
@@ -9,12 +10,16 @@ import spacing from "./spacing"
 const foundations = {
   colors,
   shadows,
+  space: spacing,
+  sizes: {
+    ...spacing,
+    ...sizes,
+  },
   ...typography,
   space: spacing,
   sizes: {
     ...spacing,
     ...sizes,
   },
-}
 
 export default foundations
