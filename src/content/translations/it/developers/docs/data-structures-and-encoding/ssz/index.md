@@ -109,7 +109,7 @@ L’oggetto serializzato SSZ può essere poi merkle-zzato, ovvero trasformato in
 
 Ci sono anche casi in cui le foglie dell'albero non si distribuiscono naturalmente e uniformemente come nell'esempio di cui sopra. Ad esempio, la foglia 4 potrebbe essere un contenitore con diversi elementi che richiedono che sia aggiunta ulteriore "profondità" all'albero di Merkle, creando un albero non equilibrato.
 
-Invece di far riferimento a questi elementi dell'albero come foglia X, nodo X, ecc., possiamo dare loro indici generalizzati che iniziano con radice = 1, contando da sinistra a destra per ogni livello. Questo è l'indice generalizzato spiegato sopra. Ogni elemento nell'elenco serializzato ha un indice generalizzato pari a `2**depth + idx`, dove idx è la sua posizione indicizzata a zero nell'oggetto serializzato e la profondità è il numero di livelli nell'albero di Merkle, determinabile come la radice quadrata del numero di elementi (foglie).
+Invece di far riferimento a questi elementi dell'albero come foglia X, nodo X, ecc., possiamo dare loro indici generalizzati che iniziano con radice = 1, contando da sinistra a destra per ogni livello. Questo è l'indice generalizzato spiegato sopra. Ogni elemento nell'elenco serializzato ha un indice generalizzato pari a `2**depth + idx`, dove idx è la posizione indicizzata a zero nell'oggetto serializzato e "depth" è il numero di livelli nell'albero di Merkle, determinabile come il logaritmo a base due del numero di elementi (foglie).
 
 ## Indici generalizzati {#generalized-indices}
 
