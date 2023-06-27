@@ -1,6 +1,6 @@
 ---
 title: ERC-721 Padrão de token não-fungível
-description:
+description: Token
 lang: pt-br
 ---
 
