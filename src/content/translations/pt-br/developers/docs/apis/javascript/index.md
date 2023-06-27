@@ -284,7 +284,7 @@ _Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione
 
 ## Tópicos relacionados {#related-topics}
 
-- [ Nós e clientes](/developers/docs/nodes-and-clients/)
+- [Nós e clientes](/developers/docs/nodes-and-clients/)
 - [Estruturas de desenvolvimento](/developers/docs/frameworks/)
 
 ## Tutoriais relacionados {#related-tutorials}
