@@ -1,13 +1,13 @@
 ---
 title: Ethereum pour les développeurs Go
-description: Apprendre à développer sur Ethereum avec des projets et des outils basés sur Go
+description: Apprendre à développer pour Ethereum avec des projets et des outils basés sur Go
 lang: fr
 incomplete: true
 ---
 
 <div class="featured">Apprendre à développer pour Ethereum avec des projets et des outils basés sur Go</div>
 
-Utilisez Ethereum pour créer des applications décentralisées (ou « dApps »). Ces dapps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Étant décentralisées, elles fonctionnent sur un réseau P2P et il n'existe aucun point de défaillance. Aucune personne ni entité ne les contrôle, et il est pratiquement impossible de les censurer. Elles peuvent contrôler des actifs numériques afin de créer de nouveaux types d'applications.
+Utilisez Ethereum pour créer des applications décentralisées (ou « dApps »). Ces dApps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Étant décentralisées, elles fonctionnent sur un réseau P2P et il n'existe aucun point de défaillance. Aucune personne ni entité ne les contrôle, et il est pratiquement impossible de les censurer. Elles peuvent contrôler des actifs numériques afin de créer de nouveaux types d'applications.
 
 ## Premiers pas avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
 
@@ -16,8 +16,8 @@ Utilisez Ethereum pour créer des applications décentralisées (ou « dApps »)
 Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
 - [Explication de la blockchain](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Comprendre les contrats autonomes](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Écrire votre premier contrat intelligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [Comprendre les contrats intelligents](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [Écrivez votre premier contrat intelligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Apprendre à compiler et à déployer avec Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Tutoriel de contrat](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
@@ -33,11 +33,11 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 ## Articles et documentation de niveau intermédiaire {#intermediate-articles-and-docs}
 
 - [Documentation Go Ethereum](https://geth.ethereum.org/docs/) - _Documentation Ethereum officielle pour Go_
-- [Guide du programmeur Ergion](https://github.com/ledgerwatch/ergion/blob/devel/docs/programmers_guide/guide.md) - _Guide illustré incluant l'arborescence d'état, les multipreuves et le traitement des transactions_
-- [Erigon et Ethereum sans état](https://youtu.be/3-Mn7OckSus?t=394) - _Conférence de la communauté Ethereum 2020 (EthCC 3)_
-- [Erigon: optimiser les clients Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _Devcon 4 - 2018 _
+- [Guide du programmeur Erigon](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Guide illustré incluant l'arborescence d'état, les multipreuves et le traitement des transactions_
+- [Erigon et Ethereum sans état](https://youtu.be/3-Mn7OckSus?t=394) - _Conférence de la Communauté Ethereum 2020 (EthCC 3)_
+- [Erigon : optimiser les clients Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [GoDoc Go Ethereum](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Créer un dApp avec Geth dans Go](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
+- [Créer une dApp avec Geth dans Go](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Travailler avec le réseau privé Ethereum avec Golang et Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Test unitaire des contrats Solidity avec Go dans Ethereum](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Référence rapide pour utiliser Geth en tant que bibliothèque](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
@@ -54,16 +54,17 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 
 - [Geth/Go Ethereum](https://github.com/ethereum/go-ethereum) - _Implémentation officielle du protocole Ethereum_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Revue et analyse du code source Go Ethereum_
-- [Erigon](https://github.com/ledgerwatch/erigon) - _Dérivé plus rapide de Go Ethereum_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Dérivé plus rapide de Go Ethereum, focalisé sur les nœuds d'archives_
 - [Golem](https://github.com/golemfactory/golem) - _Golem crée un marché mondial de distribution de puissance informatique_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _Implémentation d'Ethereum soumise à droit d'accès, prenant en charge la confidentialité des données_
-- [Prysm](https://github.com/prysmaticlabs/prysm) - _Implémentation d'Ethereum « Serenity » 2.0 Go _
+- [Prysm](https://github.com/prysmaticlabs/prysm) - _Implémentation d'Ethereum « Serenity » 2.0 Go_
 - [Eth Tweet](https://github.com/yep/eth-tweet) - _Twitter décentralisé&nbsp;: service de microblogging fonctionnant sur la blockchain Ethereum_
 - [Plasma MVP Golang](https://github.com/kyokan/plasma) - _Implémentation et extension Golang de la spécification Minimum Viable Plasma_
 - [Open Ethereum Mining Pool](https://github.com/sammy007/open-ethereum-pool) - _Groupe de minage Ethereum en open source_
 - [Ethereum HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) - _Dérivations de portefeuilles HD (Hierarchical Deterministic, ou déterministe hiérarchique) Ethereum en Go_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Support pour de nombreux types de réseaux Ethereum_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implémentation Geth du LES (Light Client Subprotocol) Ethereum_
+- [Ethereum Golang SDK](https://github.com/everFinance/goether) - _Une simple implémentation et des utilitaires pour les portefeuilles Ethereum dans Golang_
 
 Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/developers/)
 

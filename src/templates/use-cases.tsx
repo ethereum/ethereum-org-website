@@ -63,19 +63,19 @@ const commonHeadingProps: HeadingProps = {
   lineHeight: 1.4,
 }
 
-const H1 = (props: HeadingProps) => (
+export const H1 = (props: HeadingProps) => (
   <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
-const H2 = (props: HeadingProps) => (
+export const H2 = (props: HeadingProps) => (
   <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
-const H3 = (props: HeadingProps) => (
+export const H3 = (props: HeadingProps) => (
   <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
-const H4 = (props: HeadingProps) => (
+export const H4 = (props: HeadingProps) => (
   <Heading
     as="h4"
     {...commonHeadingProps}
@@ -85,9 +85,9 @@ const H4 = (props: HeadingProps) => (
   />
 )
 
-const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
-const Pre = (props: ChildOnlyProp) => (
+export const Pre = (props: ChildOnlyProp) => (
   <chakra.pre
     bg="preBackground"
     border="1px"
@@ -101,7 +101,7 @@ const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-const Paragraph = (props: ChildOnlyProp) => (
+export const Paragraph = (props: ChildOnlyProp) => (
   <Text color="text300" mt={8} mb={4} {...props} />
 )
 
@@ -171,7 +171,7 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
+export const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
 const HeroImage = chakra(GatsbyImage, {
   baseStyle: {
