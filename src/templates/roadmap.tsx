@@ -19,7 +19,6 @@ import {
 
 import Button from "../components/Button"
 import ButtonLink from "../components/ButtonLink"
-import { List as ButtonDropdownList } from "../components/ButtonDropdown"
 import Card from "../components/Card"
 import ImageCard from "../components/ImageCard"
 import ExpandableCard from "../components/ExpandableCard"
@@ -67,6 +66,7 @@ import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp, Context } from "../types"
+import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid
@@ -151,7 +151,8 @@ const RoadmapPage = ({
   data: { pageData: mdx },
   location,
 }: PageProps<Queries.RoadmapPageQuery, Context>) => {
-  const lgBreakpoint = useToken("breakpoints", "lg")
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
 
   if (!mdx?.frontmatter)
     throw new Error(
@@ -272,7 +273,7 @@ const RoadmapPage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above={lgBreakpoint}>
+        <Show above={lgBp}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />
             <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
@@ -291,7 +292,7 @@ const RoadmapPage = ({
           </MDXProvider>
           <FeedbackCard />
         </ContentContainer>
-        <Show below={lgBreakpoint}>
+        <Show below={lgBp}>
           <MobileButton>
             <MobileButtonDropdown list={dropdownLinks} />
           </MobileButton>

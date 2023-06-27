@@ -4,9 +4,11 @@ import {
   chakra,
   Flex,
   Heading,
+  Hide,
   List,
   ListItem,
   Text,
+  useToken,
   VStack,
 } from "@chakra-ui/react"
 
@@ -22,12 +24,6 @@ import ButtonDropdown from "../../ButtonDropdown"
 import Translation from "../../Translation"
 import { trackCustomEvent } from "../../../utils/matomo"
 import { useStakingConsiderations } from "./use-staking-considerations"
-
-const ChakraButtonDropdown = chakra(ButtonDropdown, {
-  baseStyle: {
-    hideFrom: "md",
-  },
-})
 
 const IndicatorGroup = ({
   label,
@@ -72,6 +68,9 @@ export interface IProps {
 }
 
 const StakingConsiderations: React.FC<IProps> = ({ page }) => {
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const mdBp = useToken("breakpoints", "md")
+
   const {
     StyledSvg,
     caution,
@@ -89,9 +88,9 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
 
   return (
     <Flex flexDir={{ base: "column", md: "row" }} gap={8}>
-      <ChakraButtonDropdown list={dropdownLinks} />
+      <ButtonDropdown list={dropdownLinks} hideFrom={mdBp} />
       {/* TODO: Improve a11y */}
-      <Box flex={1} hideBelow="md">
+      <Box flex={1} hideBelow={mdBp}>
         {!!pageData && (
           <List m={0}>
             {/* TODO: Make mobile responsive */}
