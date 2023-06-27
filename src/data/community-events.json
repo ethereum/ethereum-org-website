@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHKL 2023",
+    "to": "https://hack.ethkl.org/",
+    "sponsor": null,
+    "location": "Kuala Lumpur, Malaysia",
+    "description": "Ethereum Kuala Lumpur 2023 is a Conference & Hackathon aimed at the objective of promoting the understanding and adoption of Ethereum smart contracts and related technologies.",
+    "startDate": "2023-10-13",
+    "endDate": "2023-10-15"
+  },
+  {
     "title": "ETHVietnam",
     "to": "https://www.eth-vietnam.com/",
     "sponsor": null,

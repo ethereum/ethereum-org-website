@@ -931,53 +931,6 @@
         "eventAction": "Clicked",
         "eventName": "Clicked Bedrock go to link"
       }
-    },
-    {
-      "name": "Origin Ether",
-      "imageName": "OriginEther",
-      "hue": 211,
-      "launchDate": "2023-05-16",
-      "url": "https://oeth.com/",
-      "audits": [
-        {
-          "name": "OpenZeppelin Security",
-          "url": "https://github.com/OriginProtocol/security/blob/master/audits/OpenZeppelin%20-%20Origin%20Dollar%20OETH%20Integration%20-%20May%202023.pdf"
-        },
-        {
-          "name": "Narya.ai",
-          "url": "https://github.com/OriginProtocol/security/blob/master/audits/Narya%20-%20Origin%20OETH%20Report%20-%20May%202023%20-%20Initial%20Report.pdf"
-        }
-      ],
-      "minEth": 0,
-      "feePercentage": 20,
-      "tokens": [
-        {
-          "name": "Origin Ether",
-          "symbol": "OETH",
-          "address": "0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3"
-        }
-      ],
-      "isFoss": true,
-      "hasBugBounty": true,
-      "isTrustless": true,
-      "hasPermissionlessNodes": true,
-      "pctMajorityClient": null,
-      "platforms": ["Browser"],
-      "ui": ["GUI"],
-      "socials": {
-        "discord": "https://discord.com/invite/ogn",
-        "twitter": "https://twitter.com/OriginProtocol",
-        "github": "https://github.com/originprotocol",
-        "linkedin": "https://www.linkedin.com/company/originprotocol/",
-        "youtube": "https://www.youtube.com/c/originprotocol",
-        "medium": "https://blog.originprotocol.com/",
-        "telegram": "https://t.me/originprotocol"
-      },
-      "matomo": {
-        "eventCategory": "StakingProductCard",
-        "eventAction": "Clicked",
-        "eventName": "Clicked Origin Ether go to link"
-      }
     }
   ]
 }
