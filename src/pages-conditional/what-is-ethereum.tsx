@@ -111,9 +111,11 @@ const TwoColumnContent = (props: FlexProps) => (
 
 const Section = (props: BoxProps) => <Box w="full" py={12} px={8} {...props} />
 
-const Width60 = (props: ChildOnlyProp) => <Box w="full" flex={3} {...props} />
+export const Width60 = (props: ChildOnlyProp) => (
+  <Box w="full" flex={3} {...props} />
+)
 
-const Width40 = (props: ChildOnlyProp) => (
+export const Width40 = (props: ChildOnlyProp) => (
   <Center w="full" flex={2} {...props} />
 )
 
