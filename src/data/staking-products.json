@@ -465,7 +465,7 @@
       "isFoss": false,
       "hasBugBounty": false,
       "isTrustless": false,
-      "isPermissionless": false,
+      "isPermissionless": true,
       "pctMajorityExecutionClient": 0,
       "pctMajorityConsensusClient": 0,
       "isSelfCustody": true,
