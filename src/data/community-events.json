@@ -243,6 +243,15 @@
     "endDate": "2023-08-13"
   },
   {
+    "title": "EthCC 6",
+    "to": "https://www.ethcc.io/",
+    "sponsor": null,
+    "location": "Paris, France",
+    "description": "The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Four intense days of conferences, networking and learning.",
+    "startDate": "2023-07-17",
+    "endDate": "2023-07-20"
+  },
+  {
     "title": "ETHLisbon 2023",
     "to": "https://www.ethlisbon.org/",
     "sponsor": null,
