@@ -57,10 +57,10 @@
     "title": "AB-Summit",
     "to": "https://blockchainsummit.africa",
     "sponsor": null,
-    "location": "Accra, Ghana",
-    "description": "Solutions For Disempowered Economies. We support the Blockchain revolution and we are establishing a movement to promote its use out of love for our African Continent and the nations that make it up.",
-    "startDate": "2023-08-26",
-    "endDate": "2023-08-27"
+    "location": "University Of Ghana - Legon. Accra, Ghana",
+    "description": "Building Blockchains for Africa's Future. We support the Blockchain revolution and we are establishing a movement to promote its use out of love for our African Continent and the nations that make it up.",
+    "startDate": "2023-10-27",
+    "endDate": "2023-10-28"
   },
   {
     "title": "ETH Montréal",
@@ -241,5 +241,23 @@
     "description": "ETH Munich is a first time Hackathon organised by the local web3 community PretzelDAO",
     "startDate": "2023-08-11",
     "endDate": "2023-08-13"
+  },
+  {
+    "title": "EthCC 6",
+    "to": "https://www.ethcc.io/",
+    "sponsor": null,
+    "location": "Paris, France",
+    "description": "The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Four intense days of conferences, networking and learning.",
+    "startDate": "2023-07-17",
+    "endDate": "2023-07-20"
+  },
+  {
+    "title": "ETHLisbon 2023",
+    "to": "https://www.ethlisbon.org/",
+    "sponsor": null,
+    "location": "Gale patio, Lisbon, Portugal",
+    "description": "ETHLisbon is an Ethereum-focused hackathon bringing together the best Web 3.0 builders to the crypto capital of Europe.",
+    "startDate": "2023-11-03",
+    "endDate": "2023-11-05"
   }
 ]
