@@ -466,14 +466,14 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityExecutionClient": null,
+      "pctMajorityExecutionClient": 0,
       "pctMajorityConsensusClient": 0,
       "isSelfCustody": true,
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
-        "discord": "https://discord.io/ethermine",
-        "twitter": "https://twitter.com/ethermine_org"
+        "discord": "https://discord.io/ethpool",
+        "twitter": "https://twitter.com/ethpool_staking"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
