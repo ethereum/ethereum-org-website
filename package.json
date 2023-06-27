@@ -30,7 +30,6 @@
     "focus-trap-react": "^10.0.0",
     "framer-motion": "^6.5.1",
     "gatsby": "^5.4.1",
-    "gatsby-plugin-emotion": "^8.4.0",
     "gatsby-plugin-gatsby-cloud": "^5.4.0",
     "gatsby-plugin-image": "^3.4.0",
     "gatsby-plugin-layout": "^3.24.0",
