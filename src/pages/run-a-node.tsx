@@ -124,6 +124,18 @@ const SoftwareHighlight = (props: CenterProps) => (
     borderRadius="base"
     color="text"
     flexDirection={{ base: "column", md: "row" }}
+    position="relative"
+    isolation="isolate"
+    sx={{
+      "&::after": {
+        content: '""',
+        position: "absolute",
+        inset: 0,
+        zIndex: -1,
+        bg: "inherit",
+        filter: "blur(1rem)",
+      },
+    }}
     {...props}
   />
 )
