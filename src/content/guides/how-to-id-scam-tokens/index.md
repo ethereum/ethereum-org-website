@@ -1,10 +1,10 @@
 ---
 title: How to identify scam tokens
-description: What are scam tokens, how do they make themselves look legitimate, and how to detect them to avoid the scam.
+description: Understanding scam tokens, how they make themselves look legitimate, and how to avoid them.
 lang: en
 ---
 
-# How to identify scam tokens {#how-to-identify-scam-tokens}
+# How to identify scam tokens {#identify-scam-tokens}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). However, anywhere there are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves.
 
@@ -63,13 +63,14 @@ There are several tricks that scam token creators do to appear legitimate.
 - **Legitimate transfers**. *Legitimate owners wouldn't pay to transfer a scam token to others, so if there are transfers it must be legitimate, right?* **Wrong**. `Transfer` events are produced by the ERC-20 contract. A scammer can easily write the contract in such a way it will produce those actions.
 
 
-## Scammy websites {#scammy-websites}
+## Scammy websites {#websites}
+
 Scammers can also produce very convincing websites, sometimes even precise clones of authentic sites with identical UIs, but with subtle tricks. Examples might be external links that seem legitimate actually sending the user to an external scam site, or incorrect instructions that guide the user to exposing their keys or sending funds to an attacker's address. 
 
 The best practise for avoiding this is to carefully check the URL for the sites you visit, and save addresses for known authentic sites in your bookmarks. Then, you can access the real site through your bookmarks without accidentally making spelling errors or relying on external links.
 
 
-## How can you protect yourself? {#how-can-you-protect-yourself}
+## How can you protect yourself? {#protect-yourself}
 
 1. **Check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's web site. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token). 
 
