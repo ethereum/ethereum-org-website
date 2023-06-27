@@ -22,7 +22,7 @@ One of the foundations of ReFi is the concept of regenerative economics pioneere
 
 ![Eight interconnected principles](../../assets/use-cases/refi-regenerative-economy-diagram.png)
 
-ReFi projects realize these principles using [smart contracts](/developers/docs/smart-contracts/) and [decentralized finance (DeFi)](/defi/) applications to incentivize regenerative behaviors and facilitate large-scale collaboration.
+ReFi projects realize these principles using [smart contracts](/developers/docs/smart-contracts/) and [decentralized finance (DeFi)](/defi/) applications to incentivize regenerative behaviors, e.g. restoring degraded ecosystems, and facilitate large-scale collaboration on global issues such as climate change and biodiversity loss.
 
 ReFi also overlaps with the [decentralized science (DeSci)](/desci/) movement, which uses Ethereum as a platform to finance, create, review, credit, store, and disseminate scientific knowledge. DeSci tools could become useful for developing verifiable standards and practices for implementing and monitoring regenerative activities like planting trees, removing plastic from the ocean, or restoring a degraded ecosystem.
 
