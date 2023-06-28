@@ -15,8 +15,8 @@ import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
-import { Divider } from "../templates/use-cases"
 import Card from "../components/Card"
+
 import {
   LeftColumn,
   RightColumn,
@@ -38,6 +38,8 @@ const Page = (props: ChildOnlyProp) => (
     {...props}
   />
 )
+
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
 export const Content = (props: BoxProps) => (
   <Box w="full" py={4} px={8} {...props} />
