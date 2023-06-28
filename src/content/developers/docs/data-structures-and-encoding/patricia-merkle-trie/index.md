@@ -199,11 +199,9 @@ From a block header there are 3 roots from 3 of these tries.
 
 There is one global state trie, and it is updated every time a client processes a block. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point, it's worth noting that this `storageRoot` is the root of another patricia trie:
 
-
-
 ### Storage Trie {#storage-trie}
 
-Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To retrieve values at specific storage positions at a given address the storage address, the integer position of the stored data in the storage, and the block ID are required. These can then be passed as arguments to the `eth_getStorageAt` defined in the JSON-RPC API, e.g. to retrieve the data in storage slot 0 for address `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To retrieve values at specific storage positions at a given address the storage address, integer position of the stored data in the storage, and the block ID are required. These can then be passed as arguments to the `eth_getStorageAt` defined in the JSON-RPC API, e.g. to retrieve the data in storage slot 0 for address `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -235,7 +233,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-Note: The `storageRoot` for an Ethereum account is empty by default if it's not a contract account. 
+Note: The `storageRoot` for an Ethereum account is empty by default if it's not a contract account.
 
 ### Transactions Trie {#transaction-trie}
 
