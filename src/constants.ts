@@ -10,3 +10,7 @@ export const INITIAL_QUIZ = "what-is-ethereum"
 export const TOTAL_QUIZ_QUESTIONS_ANSWERED = 100000
 export const TOTAL_QUIZ_AVERAGE_SCORE = 67.4
 export const TOTAL_QUIZ_RETRY_RATE = 15.6
+
+// Crowdin
+export const CROWDIN_PROJECT_ID = 363359
+export const CROWDIN_API_MAX_LIMIT = 500
