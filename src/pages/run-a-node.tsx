@@ -248,22 +248,6 @@ const ButtonContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const DappNodeButtonLink = (props: ComponentProps<typeof ButtonLink>) => (
-  <ButtonLink
-    bg="#1c1cff"
-    _hover={{ bg: "#1c1cff", opacity:0.8, boxShadow: "4px 4px 0 0 rgb(0 125 252 / 47%)" }}
-    {...props}
-  />
-)
-
-const AvadoButtonLink = (props: ComponentProps<typeof ButtonLink>) => (
-  <ButtonLink
-    bg="#1c1cff"
-    _hover={{ bg: "#1c1cff", opacity:0.8, boxShadow: "4px 4px 0 0 rgb(55 130 46 / 47%)" }}
-    {...props}
-  />
-)
-
 const BuildContainer = (props: ChildOnlyProp) => (
   <Container
     direction="column"
@@ -621,12 +605,12 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               </ul>
             </Box>
             <ButtonContainer>
-              <DappNodeButtonLink to="https://shop.dappnode.io/">
+              <ButtonLink to="https://shop.dappnode.io/">
                 <Translation id="page-run-a-node-shop-dappnode" />
-              </DappNodeButtonLink>
-              <AvadoButtonLink to="https://ava.do/">
+              </ButtonLink>
+              <ButtonLink to="https://ava.do/">
                 <Translation id="page-run-a-node-shop-avado" />
-              </AvadoButtonLink>
+              </ButtonLink>
             </ButtonContainer>
           </FullyLoaded>
 
@@ -768,9 +752,9 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                 </Text>
               </Box>
               <ButtonContainer>
-                <DappNodeButtonLink to="https://docs.dappnode.io">
+                <ButtonLink to="https://docs.dappnode.io">
                   <Translation id="page-run-a-node-build-your-own-software-option-1-button" />
-                </DappNodeButtonLink>
+                </ButtonLink>
               </ButtonContainer>
             </BuildBoxSpace>
 
