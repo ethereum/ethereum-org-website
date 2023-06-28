@@ -379,7 +379,7 @@ teku --network mainnet \
 
 共识客户端充当信标节点，让验证者来连接。 每种共识客户端都有自己的验证者软件，后者在各自的相关文档中都有详细描述。
 
-运行自己的验证者便可以进行[单独质押](https://ethereum.org/en/staking/solo/)，这是支持以太坊网络的最有影响和去信任的方法。 然而，单独质押需要存入 32 个以太币。 若想在自己的节点上运行验证者并质押较少数量的以太币，您可能会对由无需许可的节点运营商组成的去中心化池感兴趣，例如 [Rocket Pool](https://rocketpool.net/node-operators)。
+运行自己的验证者便可以进行[单独质押](/staking/solo/)，这是支持以太坊网络的最有影响和去信任的方法。 然而，单独质押需要存入 32 个以太币。 若想在自己的节点上运行验证者并质押较少数量的以太币，您可能会对由无需许可的节点运营商组成的去中心化池感兴趣，例如 [Rocket Pool](https://rocketpool.net/node-operators)。
 
 开始质押和生成验证者密钥的最简单方法是使用 [Goerli 测试网质押启动板](https://goerli.launchpad.ethereum.org/)，它允许你通过[在 Goerli 上运行节点](https://notes.ethereum.org/@launchpad/goerli)来测试你的设置。 当准备好使用主网时，你可以使用[主网质押启动板](https://launchpad.ethereum.org/)重复这些步骤。
 
