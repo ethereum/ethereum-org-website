@@ -36,7 +36,7 @@ Come Bitcoin, Ethereum in precedenza utilizzava un protocollo di consenso basato
 
 #### Creazione di blocchi {#pow-block-creation}
 
-I validatori creano i blocchi. Per ogni slot viene selezionato casualmente un validatore che funge da propositore di blocchi. Il client di consenso dei validatori richiede un pacchetto di transazioni come 'payload di esecuzione' dal client di esecuzione associato. Questo viene avvolto in dati di consenso per formare un blocco, che viene inviato ad altri nodi sulla rete Ethereum. La produzione di questo blocco è ricompensata in ETH. Nei rari casi in cui esistono diversi blocchi possibili per un singolo slot, o in cui i nodi vengono a conoscenza dei blocchi in momenti diversi, l'algoritmo di scelta della diramazione seleziona il blocco che forma la catena con il maggiore peso di attestazioni (dove il peso è il numero di validatori che attestano, scalato per il loro saldo di ETH).
+I miner competono per creare nuovi blocchi, riempiti di transazioni elaborate. Il vincitore condivide il nuovo blocco con il resto della rete e guadagna ETH appena coniati. La gara è vinta dal computer che è capace di risolvere più velocemente un rompicapo matematico. Ciò produce il collegamento crittografico tra il blocco corrente e quello precedente. Risolvere questo rompicapo rappresenta il lavoro da svolgere nel modello "proof-of-work". La catena canonica è quindi determinata da una regola di scelta della biforcazione, che seleziona la serie di blocchi che ha richiesto il maggiore lavoro per essere minata.
 
 #### Sicurezza {#pow-security}
 
@@ -50,7 +50,7 @@ Ora Ethereum utilizza un protocollo di consenso basato sul **Proof of Stake (PoS
 
 #### Creazione di blocchi {#pos-block-creation}
 
-Il Proof of Stake è reso possibile da validatori che fanno staking con i propri ETH per prendere parte al sistema. Un validatore è scelto a caso per creare nuovi blocchi, condividerli con la rete e guadagnare ricompense. Anziché svolgere un intenso lavoro di calcolo, è sufficiente fare staking con gli ETH nella rete. Questo aspetto è ciò che incentiva un comportamento sano della rete.
+I validatori creano i blocchi. Per ogni slot viene selezionato casualmente un validatore che funge da propositore di blocchi. Il client di consenso dei validatori richiede un pacchetto di transazioni come 'payload di esecuzione' dal client di esecuzione associato. Questo viene avvolto in dati di consenso per formare un blocco, che viene inviato ad altri nodi sulla rete Ethereum. La produzione di questo blocco è ricompensata in ETH. Nei rari casi in cui esistono diversi blocchi possibili per un singolo slot, o in cui i nodi vengono a conoscenza dei blocchi in momenti diversi, l'algoritmo di scelta della diramazione seleziona il blocco che forma la catena con il maggiore peso di attestazioni (dove il peso è il numero di validatori che attestano, scalato per il loro saldo di ETH).
 
 #### Sicurezza {#pos-security}
 
