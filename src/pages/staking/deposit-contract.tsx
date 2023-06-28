@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   ButtonProps,
+  Checkbox,
   Flex,
   Heading,
   Img,
@@ -16,7 +17,6 @@ import {
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import CardList from "../../components/CardList"
-import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Emoji from "../../components/Emoji"
 import InfoBanner from "../../components/InfoBanner"
@@ -358,13 +358,8 @@ const DepositContractPage = ({
                     </CardTitle>
                   </Row>
                   <Checkbox
+                    mb={2}
                     isChecked={state.userHasUsedLaunchpad}
-                    size="md"
-                    mb="0.5rem"
-                    display="flex"
-                    alignItems="top"
-                    variant="alignTop"
-                    minHeight="3.5rem"
                     onChange={() =>
                       setState({
                         ...state,
@@ -375,13 +370,8 @@ const DepositContractPage = ({
                     <Translation id="page-staking-deposit-contract-checkbox1" />
                   </Checkbox>
                   <Checkbox
+                    mb={2}
                     isChecked={state.userUnderstandsStaking}
-                    size="md"
-                    mb="0.5rem"
-                    display="flex"
-                    alignItems="top"
-                    variant="alignTop"
-                    minHeight="3.5rem"
                     onChange={() =>
                       setState({
                         ...state,
@@ -392,13 +382,8 @@ const DepositContractPage = ({
                     <Translation id="page-staking-deposit-contract-checkbox2" />
                   </Checkbox>
                   <Checkbox
+                    mb={2}
                     isChecked={state.userWillCheckOtherSources}
-                    size="md"
-                    mb="0.5rem"
-                    display="flex"
-                    alignItems="top"
-                    variant="alignTop"
-                    minHeight="3.5rem"
                     onChange={() =>
                       setState({
                         ...state,
