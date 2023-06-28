@@ -250,16 +250,16 @@ const ButtonContainer = (props: ChildOnlyProp) => (
 
 const DappNodeButtonLink = (props: ComponentProps<typeof ButtonLink>) => (
   <ButtonLink
-    bg="#007dfc"
-    _hover={{ bg: "#0077be", boxShadow: "4px 4px 0 0 rgb(0 125 252 / 47%)" }}
+    bg="#1c1cff"
+    _hover={{ bg: "#1c1cff", opacity:0.8, boxShadow: "4px 4px 0 0 rgb(0 125 252 / 47%)" }}
     {...props}
   />
 )
 
 const AvadoButtonLink = (props: ComponentProps<typeof ButtonLink>) => (
   <ButtonLink
-    bg="#37822e"
-    _hover={{ bg: "#2e6d2e", boxShadow: "4px 4px 0 0 rgb(55 130 46 / 47%)" }}
+    bg="#1c1cff"
+    _hover={{ bg: "#1c1cff", opacity:0.8, boxShadow: "4px 4px 0 0 rgb(55 130 46 / 47%)" }}
     {...props}
   />
 )
