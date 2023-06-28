@@ -1,7 +1,7 @@
-import getDirectories from "./getDirectories"
+import getAndSaveDirectories from "./getAndSaveDirectories"
 
 async function main() {
-  getDirectories()
+  getAndSaveDirectories()
   console.log("done")
 }
 
