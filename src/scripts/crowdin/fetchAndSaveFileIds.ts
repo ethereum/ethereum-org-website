@@ -33,9 +33,9 @@ async function fetchFileIdsForDirectory(directoryId) {
       }
     })
   } catch (error) {
-    // @ts-ignore
     console.error(
       `There was a problem with the fetch operation for directory ${directoryId}: ` +
+        // @ts-ignore
         error.message
     )
     return []
@@ -48,9 +48,9 @@ async function fetchFileIdsForMultipleDirectories(directoryIds) {
   )
 
   const results = await Promise.allSettled(promises)
-  // @ts-ignore
   const successfulResults = results
     .filter((result) => result.status === "fulfilled")
+    // @ts-ignore
     .map((result) => result.value)
 
   if (successfulResults.length === 0) {
@@ -85,9 +85,9 @@ function saveFileIdsToJSON(combinedData) {
     fs.writeFileSync(outputFilePath, JSON.stringify(combinedData, null, 2))
     console.log(`File id data saved to ${outputFilePath}`)
   } catch (error) {
-    // @ts-ignore
     console.error(
       "There was a problem saving the data to the file:",
+      // @ts-ignore
       error.message
     )
   }
