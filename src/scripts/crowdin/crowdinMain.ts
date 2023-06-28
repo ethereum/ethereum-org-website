@@ -1,7 +1,10 @@
 import getAndSaveDirectories from "./getAndSaveDirectories"
+import getDirectoryIds from "./getDirectoryIds"
 
 async function main() {
-  getAndSaveDirectories()
+  await getAndSaveDirectories()
+  const directoryIds = getDirectoryIds()
+  console.log(directoryIds)
   console.log("done")
 }
 
