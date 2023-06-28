@@ -1,10 +1,8 @@
 import React from "react"
 import {
   Box,
-  chakra,
   Flex,
   Heading,
-  Hide,
   List,
   ListItem,
   Text,
@@ -78,7 +76,6 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
     dropdownLinks,
     handleSelection,
     indicatorSvgStyle,
-    selectionSvgStyle,
     title,
     valid,
     warning,
@@ -137,7 +134,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         minH="410px"
         p={6}
       >
-        <StyledSvg style={selectionSvgStyle} />
+        <StyledSvg />
         <Heading
           as="h3"
           fontWeight={700}
