@@ -32,6 +32,7 @@ import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
+import ProductDisclaimer from "../components/ProductDisclaimer"
 import RandomAppList from "../components/RandomAppList"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
@@ -119,7 +120,7 @@ const Header4 = (props: ChildOnlyProp) => (
   />
 )
 
-const InfoGrid = (props: ChildOnlyProp) => (
+export const InfoGrid = (props: ChildOnlyProp) => (
   <Grid
     templateColumns="repeat(auto-fill, minmax(min(100%, 340px), 1fr))"
     gap={8}
@@ -308,6 +309,7 @@ const components = {
   InfoGrid,
   Logo,
   MeetupList,
+  ProductDisclaimer,
   RandomAppList,
   SectionNav,
   StakingComparison,

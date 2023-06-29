@@ -150,7 +150,7 @@
   "page-upgrades-secure": "Più sicura",
   "page-upgrades-secure-desc": "Ethereum deve essere più sicura; man mano che l'adozione di Ethereum aumenta, il protocollo deve essere più protetto da tutte le forme di attacco.",
   "page-upgrades-shard-date": "Lo sharding seguirà La Fusione in più fasi, tra il 2023 e il 2024.",
-  "page-upgrades-shard-desc": "Lo sharding espanderà la capacità di Ethereum di memorizzare dati e opererà in armonia con i L2 per scalare il volume e ridurre le commissioni della rete. Lo sharding sarà lanciato in diverse fasi.",
+  "page-upgrades-shard-desc": "Danksharding espanderà la capacità di Ethereum di immagazzinare dati e lavorare in armonia con L2 per scalare la portata e ridurre i costi di rete. Danksharding verrà implementato in più fasi, a partire da ProtoDanksharding.",
   "page-upgrades-shard-estimate": "Stima: 2023-2024",
   "page-upgrades-shard-lower": "Maggiori informazioni sullo sharding",
   "page-upgrades-shard-title": "Sharding",
@@ -170,8 +170,8 @@
   "page-upgrades-upgrades-docking": "La fusione",
   "page-upgrades-energy-consumption": "Maggiori informazioni sul consumo energetico di Ethereum",
   "page-upgrades-upgrading": "Aggiornare Ethereum a nuovi livelli",
-  "page-roadmap-vision": "La vision",
-  "page-roadmap-vision-btn": "Di più sulla visione di Ethereum",
+  "page-roadmap-vision": "La visione",
+  "page-roadmap-vision-btn": "Maggiori informazioni sulla visione di Ethereum",
   "page-roadmap-vision-desc": "Per portare Ethereum nella rete principale e servire tutta l'umanità, dobbiamo rendere Ethereum più scalabile, sicura e sostenibile.",
   "page-upgrades-what-happened-to-eth2-title": "Che è successo a 'Eth2?'",
   "page-upgrades-what-happened-to-eth2-1": "Il termine 'Eth2' era comunemente usato prima della Fusione, ma è in fase di graduale eliminazione in favore di una terminologia più precisa.",
@@ -203,5 +203,5 @@
   "docs-nav-proof-of-stake": "Proof of Stake",
   "docs-nav-proof-of-work": "Proof of Work",
   "page-upgrades-get-involved-ethresearch-1": "Sharding",
-  "page-upgrades-get-involved-ethresearch-2": "La Fusione"
+  "page-upgrades-get-involved-ethresearch-2": "La fusione"
 }

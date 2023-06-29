@@ -30,7 +30,7 @@
   "layer-2-why-do-we-need-layer-2-2": "以太坊目前已達到網路容量的上限，即<a href=\"https://etherscan.io/chart/tx\" target=\"_blank\">每天 100 多萬筆交易，並每筆交易都具有高需求。以太坊的成功和其使用需求導致燃料費大幅上漲。因此，擴容解決方案</a>也迫在眉睫，這就是二層網路誕生的原因。",
   "layer-2-why-do-we-need-layer-2-scalability": "可擴展性",
   "layer-2-why-do-we-need-layer-2-scalability-1": "可擴展性的主要目標是在不犧牲去中心化或安全性的情況下提高交易速度（更快達到最終性）和交易吞吐量（每秒更高的交易量）。",
-  "layer-2-why-do-we-need-layer-2-scalability-2": "以太坊社群採取了堅定的立場，它不會為了擴大規模而放棄去中心化或安全性。直到採用<a href=\"/roadmap/danksharding/\">分片</a>為止，以太坊主網（一層網路）僅能夠處理<a href=\"https://ethtps.info/Network/Ethereum\">大約每秒 15 筆交易</a>。當使用以太坊的需求提高，網路就會變得壅擠，這就增加了交易費用，而高昂的價格使得使用者難以負擔。這就是我們如今透過二層網路為以太坊擴容的原因。",
+  "layer-2-why-do-we-need-layer-2-scalability-2": "以太坊社群採取了堅定的立場，他們不會為了擴容而放棄去中心化或安全性。在實施<a href=\"/roadmap/danksharding/\">分片</a>之前，以太坊主網（一層網路）只能每秒鐘處理<a href=\"https://ethtps.info/Network/Ethereum\">大約 15 筆交易</a>。當使用以太坊的需求增加時，網路就會壅塞，這增加了交易費並迫使負擔不起這些費用的使用者退出。這就是我們如今透過二層網路為以太坊擴容的原因所在。",
   "layer-2-why-do-we-need-layer-2-scalability-3": "關於以太坊願景的更多訊息",
   "layer-2-benefits-of-layer-2-title": "二層網路的優點",
   "layer-2-lower-fees-title": "降低費用",

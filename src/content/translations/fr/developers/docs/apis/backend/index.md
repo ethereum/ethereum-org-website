@@ -6,9 +6,9 @@ lang: fr
 
 Pour qu'une application logicielle puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
 
-Dans cet objectif, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/) pour former un ensemble uniforme de [points de terminaison](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquels les applications peuvent s'appuyer.
+Dans cet objectif, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/) pour former un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
 
-Si vous souhaitez utiliser un langage de programmation spécifique pour vous connecter à un nœud Ethereum, vous pouvez développer votre propre solution, mais il existe plusieurs bibliothèques pratiques au sein de l'écosystème qui facilitent grandement cette tâche. Avec ces bibliothèques, les développeurs peuvent rédiger des méthodes intuitives d'une seule ligne pour initialiser les demandes JSON-RPC (pas directement visibles) qui interagissent avec Ethereum.
+Si vous souhaitez utiliser un langage de programmation spécifique pour vous connecter à un nœud Ethereum, vous pouvez développer votre propre solution, mais il existe plusieurs bibliothèques pratiques au sein de l'écosystème qui facilitent grandement cette tâche. Grâce à ces bibliothèques, les développeurs peuvent rédiger des méthodes intuitives d'une seule ligne pour initialiser des demandes RPC JSON (sous le capot) qui interagissent avec Ethereum.
 
 ## Prérequis {#prerequisites}
 
@@ -16,7 +16,7 @@ Il peut être utile de comprendre en quoi consiste la [pile Ethereum](/developer
 
 ## Pourquoi utiliser une bibliothèque ? {#why-use-a-library}
 
-Ces bibliothèques suppriment une grande partie de la complexité d'une interaction directe avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par ex. convertir des ETH en gwei) afin que vous puissiez, en tant que développeur, passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous consacrer aux fonctionnalités uniques de votre application.
+Les bibliothèques suppriment une grande partie de la complexité de l'interaction directe avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par ex. convertir des ETH en gwei) afin que vous puissiez, en tant que développeur, passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous consacrer aux fonctionnalités uniques de votre application.
 
 ## Bibliothèques disponibles {#available-libraries}
 
@@ -32,6 +32,12 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentation](https://www.blockcypher.com/dev/ethereum/)
 
+**Blast by Bware Labs-** **_ API décentralisées pour le réseau principal et les réseaux de tests Ethereum._**
+
+- [blastapi.io](https://blastapi.io/)
+- [Documentation](https://docs.blastapi.io)
+- [Discord](https://discord.com/invite/VPkWESgtvV)
+
 **Infura -** **_L'API Ethereum en tant que service_**
 
 - [infura.io](https://infura.io)
@@ -42,12 +48,24 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
+**Nœud Cloud Coinbase -** **_API d'infrastructure blockchain._**
+
+- [Nœud cloud de Coinbase](https://www.coinbase.com/cloud/products/node)
+- [Documentation](https://docs.cloud.coinbase.com/node/reference/welcome-to-node)
+
 **DataHub by Figment -** **_Services API Web3 avec réseau principal et réseaux de tests Ethereum._**
 
 - [DataHub](https://www.figment.io/datahub)
 - [Documentation](https://docs.figment.io/introduction/what-is-datahub)
 
-**Nodesmith -** **_Accès API JSON-RPC API au réseau principal et aux réseaux tests Ethereum._**
+**NFTPort -** **_API de frappe et de données Ethereum._**
+
+- [nftport.xyz](https://www.nftport.xyz/)
+- [Documentation](https://docs.nftport.xyz/)
+- [GitHub](https://github.com/nftport/)
+- [Discord](https://discord.com/invite/K8nNrEgqhE)
+
+**Podestat -** **_Accès API JSON-RPC au réseau principal et aux réseaux tests Ethereum._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
@@ -60,8 +78,9 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
+- [Référence de l'API Ethereum](https://docs.chainstack.com/api/ethereum/ethereum-api-reference)
 
-**QuikNode -** **_Infrastructure Blockchain en tant que service_**
+**Quinone -** **_Infrastructure Blockchain en tant que service_**
 
 - [quicknode.com](https://quicknode.com)
 - [Documentation](https://www.quicknode.com/docs)
@@ -70,8 +89,8 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 **Python Tooling -** **_Diverses bibliothèques pour interagir avec Ethereum via Python_**
 
 - [py.ethereum.org](http://python.ethereum.org/)
-- [GitHub web3.py](https://github.com/ethereum/web3.py)
-- [Chat web3.py](https://gitter.im/ethereum/web3.py)
+- [GitHub Web3.py](https://github.com/ethereum/web3.py)
+- [Chat Web3.py](https://gitter.im/ethereum/web3.py)
 
 **web3j -** **_Bibliothèque d'intégration Java/Android/Kotlin/Scala pour Ethereum_**
 
@@ -110,6 +129,24 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 - [GitHub](https://github.com/zmok-io)
 - [Documentation](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
+
+**NOWNodes - _Explorateurs de nœuds complets et de blocs._**
+
+- [NOWNodes.io](https://nownodes.io/)
+- [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+
+**Moralis -** **_Fournisseur d'API EVM de niveau entreprise._**
+
+- [moralis.io](http://moralis.io)
+- [Documentation](https://docs.moralis.io/)
+- [GitHub](https://github.com/MoralisWeb3)
+- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [Forum](https://forum.moralis.io/)
+
+**GetBlock - _Blockchain-as-a-service pour le développement Web3_**
+
+- [GetBlock.io](https://getblock.io/)
+- [Documentation](https://getblock.io/docs/)
 
 ## Complément d'information {#further-reading}
 

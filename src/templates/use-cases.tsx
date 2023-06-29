@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ComponentProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -25,6 +25,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
+  IProps as ButtonDropdownProps,
   List as ButtonDropdownList,
 } from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
@@ -62,19 +63,19 @@ const commonHeadingProps: HeadingProps = {
   lineHeight: 1.4,
 }
 
-const H1 = (props: HeadingProps) => (
+export const H1 = (props: HeadingProps) => (
   <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
-const H2 = (props: HeadingProps) => (
+export const H2 = (props: HeadingProps) => (
   <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
-const H3 = (props: HeadingProps) => (
+export const H3 = (props: HeadingProps) => (
   <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
-const H4 = (props: HeadingProps) => (
+export const H4 = (props: HeadingProps) => (
   <Heading
     as="h4"
     {...commonHeadingProps}
@@ -84,9 +85,9 @@ const H4 = (props: HeadingProps) => (
   />
 )
 
-const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
-const Pre = (props: ChildOnlyProp) => (
+export const Pre = (props: ChildOnlyProp) => (
   <chakra.pre
     bg="preBackground"
     border="1px"
@@ -100,7 +101,7 @@ const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-const Paragraph = (props: ChildOnlyProp) => (
+export const Paragraph = (props: ChildOnlyProp) => (
   <Text color="text300" mt={8} mb={4} {...props} />
 )
 
@@ -170,7 +171,7 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
+export const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
 const HeroImage = chakra(GatsbyImage, {
   baseStyle: {
@@ -226,24 +227,18 @@ export const InfoTitle = (props: ChildOnlyProp) => (
   />
 )
 
-type ButtonDropdownProps = Parameters<typeof ButtonDropdown>[0]
-
-export const StyledButtonDropdown = (
-  props: FlexProps & ButtonDropdownProps
-) => (
-  <Flex
-    as={ButtonDropdown}
-    alignSelf={{ sm: "flex-end" }}
-    justifyContent="flex-end"
-    mb={8}
-    textAlign="center"
-    {...props}
-  />
+export const StyledButtonDropdown = ({
+  list,
+  ...rest
+}: FlexProps & Pick<ButtonDropdownProps, "list">) => (
+  <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
+    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
+  </Flex>
 )
 
-export const MobileButtonDropdown = (props: ButtonDropdownProps) => (
-  <StyledButtonDropdown mb={0} {...props} />
-)
+export const MobileButtonDropdown = (
+  props: ComponentProps<typeof StyledButtonDropdown>
+) => <StyledButtonDropdown mb={0} {...props} />
 
 export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const lgBp = useToken("breakpoints", "lg")
