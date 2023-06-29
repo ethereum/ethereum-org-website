@@ -12,22 +12,18 @@ The Portal Network is a new networking design for Ethereum that aims to solve th
 
 Read more about [nodes and clients](/developers/docs/nodes-and-clients/)
 
-
-
 ## Why do we need the Portal Network {#why-do-we-need-portal-network}
 
 Ethereum nodes store their own full or partial copy of the Ethereum blockchain. This local copy is used to validate transactions and ensure the node is following the correct chain. This locally stored data allows nodes to independently verify that incoming data is valid and correct without needing to trust any other entity.
 
 This local copy of the blockchain and associated state and receipt data takes up a lot of space on the node's hard disk. For example, a 2TB hard disk is recommended for running a node  using [Geth](https://geth.ethereum.org) paired to a consensus client. Using snap sync, which only stores chain data from a relatively recent set of blocks,  Geth typically occupies about 650GB of disk space but grows at around 14GB/week (you can prune the node back down to 650GB periodically). 
 
-
-
 This means running nodes can be expensive, because a large amount of disk space has to be dedicated to Ethereum. There are several solutions to this problem on the Ethereum roadmap, including [history expiry](/roadmap/statelessness/#history-expiry), [state expiry](/roadmap/statelessness/#state-expiry) and [statelessness](/roadmap/statelessness/). However, these are likely several years away from being implemented. There are also [light nodes](/developers/docs/nodes-and-clients/light-clients/) that do not save their own copy of the chain data, they request the data they need from full nodes. However, this means light nodes have to trust full nodes to provide honest data and also stresses the full nodes that have to serve the data the light nodes need.
 
 The Portal Network aims to provide an alternative way for light nodes to get their data that does not require trusting or adding significantly to the work that has to be done by full nodes. The way this will be done is to introduce a new way for Ethereum nodes to share data across the network.
 
-
 ## How does the Portal Network work? {#how-does-portal-network-work}
+
 Ethereum nodes have strict protocols that define how they communicate with each other. Execution clients communicate using a set of subprotocols known as [DevP2P](developers/docs/networking-layer/#devp2p), while consensus clients use a different stack of subprotocols called [libP2P](/developers/docs/networking-layer/#libp2p). These define the types of data that can be passed between nodes. 
 
 ![devP2P and libP2P](portal-network-devp2p-libp2p.png)
@@ -57,6 +53,7 @@ The goal is to allow a decentralized network of lightweight Portal clients to:
 
 
 The benefits of this network design are:
+
 - reduce dependence on centralized providers
 - Reduce Internet bandwidth usage
 - Minimized or zero syncing
@@ -71,7 +68,9 @@ The diagram below shows the functions of existing clients that can be delivered 
 ## Client diversity by default {#client-diversity-as-default}
 
 The Portal Network developers also made the design choice to build three separate Portal Network clients from day one.
-The clients are:
+
+The Portal Network clients are:
+
 - [Trin](https://github.com/ethereum/trin): written in Rust
 - [Fluffy](https://nimbus.team/docs/fluffy.html): written in Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): written in Typescript
@@ -81,7 +80,7 @@ Having multiple independent client implementations enhances the resilience and d
 If one client experiences issues or vulnerabilities, other clients can continue to operate smoothly, preventing a single point of failure. Additionally, diverse client implementations foster innovation and competition, driving improvements and reducing monoculture risk within the ecosystem.
 
 
-## Further Reading {#futher-reading}
+## Further reading {#futher-reading}
 
 - [The Portal Network (Piper Merriam at Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [The Portal Network discord](https://discord.gg/6XFs56cX)
