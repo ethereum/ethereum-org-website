@@ -21,14 +21,13 @@ Ethereum nodes store their own full or partial copy of the Ethereum blockchain. 
 This local copy of the blockchain and associated state and receipt data takes up a lot of space on the node's hard disk. For example, a 2TB hard disk is recommended for running a node  using [Geth](https://geth.ethereum.org) paired to a consensus client. Using snap sync, which only stores chain data from a relatively recent set of blocks,  Geth typically occupies about 650GB of disk space but grows at around 14GB/week (you can prune the node back down to 650GB periodically). 
 
 
-![devp2p and libp2p](portal-network-devp2p-libp2p.png)
 
 This means running nodes can be expensive, because a large amount of disk space has to be dedicated to Ethereum. There are several solutions to this problem on the Ethereum roadmap, including [history expiry](https://ethereum.org/en/roadmap/statelessness/#history-expiry), [state expiry](https://ethereum.org/en/roadmap/statelessness/#state-expiry) and [statelessness](https://ethereum.org/en/roadmap/statelessness/). However, these are likely several years away from being implemented. There are also [light nodes](https://ethereum.org/en/developers/docs/nodes-and-clients/light-clients/) that do not save their own copy of the chain data, they request the data they need from full nodes. However, this means light nodes have to trust full nodes to provide honest data and also stresses the full nodes that have to serve the data the light nodes need.
 
 Portal Network aims to provide an alternative way for light nodes to get their data that does not require trusting or adding significantly to the work that has to be done by full nodes. The way this will be done is to introduce a new way for Ethereum nodes to share data across the network.
 
 
-## How does the Portal Network work? {#how-does-portal-network-work?}
+## How does the Portal Network work? {#how-does-portal-network-work}
 Ethereum nodes have strict protocols that define how they communicate with each other. Execution clients communicate using a set of subprotocols known as [DevP2P](https://ethereum.org/en/developers/docs/networking-layer/#devp2p), while consensus clients use a different stack of subprotocols called [libP2P](https://ethereum.org/en/developers/docs/networking-layer/#libp2p). These define the types of data that can be passed between nodes. 
 
 ![devP2P and libP2P](portal-network-devp2p-libp2p.png)
