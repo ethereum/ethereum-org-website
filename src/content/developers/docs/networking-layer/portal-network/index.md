@@ -84,7 +84,7 @@ If one client experiences issues or vulnerabilities, other clients can continue 
 
 ## Further Reading {#futher-reading}
 
-- The Portal Network (Piper Merriam at ETHZurich).
+- [The Portal Network (Piper Merriam at Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 
 - [Portal Network discord](https://discord.gg/6XFs56cX)
 
