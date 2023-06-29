@@ -10,7 +10,7 @@ To get around this disk storage problem, 'light' nodes have been developed that 
 
 The Portal Network is a new networking design for Ethereum that aims to solve the data availability problem for "light" nodes without having to trust or put extra strain on full nodes, by sharing the necessary data in small chunks across the network.
 
-Read more about [nodes and clients](/developers/docs/nodes-and-clients/)
+More on [nodes and clients](/developers/docs/nodes-and-clients/)
 
 ## Why do we need the Portal Network {#why-do-we-need-portal-network}
 
