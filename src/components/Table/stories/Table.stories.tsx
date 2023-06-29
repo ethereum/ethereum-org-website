@@ -15,7 +15,7 @@ const meta: Meta<TableType> = {
   component: TableComponent,
   decorators: [
     (Story) => (
-      <Flex flexDir="column" gap={2} maxW="container.md">
+      <Flex flexDir="column" gap={16} maxW="container.md">
         <Story />
       </Flex>
     ),
