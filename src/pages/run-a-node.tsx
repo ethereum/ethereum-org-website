@@ -613,12 +613,12 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               </ul>
             </Box>
             <ButtonContainer>
-              <DappNodeButtonLink to="https://shop.dappnode.io/">
+              <Button to="https://shop.dappnode.io/">
                 <Translation id="page-run-a-node-shop-dappnode" />
-              </DappNodeButtonLink>
-              <AvadoButtonLink to="https://ava.do/">
+              </Button>
+              <Button to="https://ava.do/">
                 <Translation id="page-run-a-node-shop-avado" />
-              </AvadoButtonLink>
+              </Button>
             </ButtonContainer>
           </FullyLoaded>
 
@@ -760,9 +760,9 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                 </Text>
               </Box>
               <ButtonContainer>
-                <DappNodeButtonLink to="https://docs.dappnode.io">
+                <Button to="https://docs.dappnode.io">
                   <Translation id="page-run-a-node-build-your-own-software-option-1-button" />
-                </DappNodeButtonLink>
+                </Button>
               </ButtonContainer>
             </BuildBoxSpace>
 
