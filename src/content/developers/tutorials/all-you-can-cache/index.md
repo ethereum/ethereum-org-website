@@ -252,7 +252,7 @@ One big advantage of Foundry is that it allows tests to be written in Solidity (
             return bytes.concat(INTO_CACHE, bytes32(_val));
 ```
 
-In the [EVM](https://ethereum.org/en/developers/docs/evm/) all uninitialized storage is assumed to be zeros. So if we look for the key for a value that isn't there, we get a zero. In that case the bytes that encode it are `INTO_CACHE` (so it will be cached next time), followed by the actual value.
+In the [EVM](/developers/docs/evm/) all uninitialized storage is assumed to be zeros. So if we look for the key for a value that isn't there, we get a zero. In that case the bytes that encode it are `INTO_CACHE` (so it will be cached next time), followed by the actual value.
 
 ```solidity
         // If the key is <0x10, return it as a single byte

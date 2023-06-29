@@ -375,7 +375,7 @@ Quando un client di consenso si connette al client di esecuzione per leggere il 
 
 Un client di consenso funge da Nodo Beacon a cui si connettono i validatori. Ogni client di consenso ha il proprio software del validatore, descritto nei dettagli nella rispettiva documentazione.
 
-Eseguire il proprio validatore consente lo [staking in autonomia](https://ethereum.org/en/staking/solo/), il metodo più d'impatto e senza fiducia per supportare la rete di Ethereum. Tuttavia, ciò richiede un deposito di 32 ETH. Per eseguire un validatore sul tuo nodo con un importo inferiore, potrebbe interessarti un pool decentralizzato con operatori del nodo privi di autorizzazioni, come [Rocket Pool](https://rocketpool.net/node-operators).
+Eseguire il proprio validatore consente lo [staking in autonomia](/staking/solo/), il metodo più d'impatto e senza fiducia per supportare la rete di Ethereum. Tuttavia, ciò richiede un deposito di 32 ETH. Per eseguire un validatore sul tuo nodo con un importo inferiore, potrebbe interessarti un pool decentralizzato con operatori del nodo privi di autorizzazioni, come [Rocket Pool](https://rocketpool.net/node-operators).
 
 Il metodo più facile per iniziare con lo staking e generare la chiave del validatore è usare il [Launchpad di Staking della Rete di Prova di Goerli](https://goerli.launchpad.ethereum.org/), che ti consente di testare la tua configurazione, [eseguendo i nodi su Goerli](https://notes.ethereum.org/@launchpad/goerli). Quando sei pronto per la Rete Principale, puoi ripetere questi passaggi usando il [Launchpad di Staking della Rete Principale](https://launchpad.ethereum.org/).
 
