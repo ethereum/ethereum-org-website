@@ -8,13 +8,13 @@ Ethereum is a network made up of computers that run Ethereum client software. Ea
 
 To get around this disk storage problem, 'light' nodes have been developed that request information from full nodes instead of storing it all themselves. However, this means the light node is not independently verifying the information and is trusting another node instead. It also means that full nodes are required to take on extra work to serve those light nodes.
 
-The Portal network is a new networking design for Ethereum that aims to solve the data availability problem for "light" nodes without having to trust or put extra strain on full nodes, by sharing the necessary data in small chunks across the network.
+The Portal Network is a new networking design for Ethereum that aims to solve the data availability problem for "light" nodes without having to trust or put extra strain on full nodes, by sharing the necessary data in small chunks across the network.
 
-Read more about [nodes and clients]((https://ethereum.org/en/developers/docs/nodes-and-clients/))
+Read more about [nodes and clients](/developers/docs/nodes-and-clients/)
 
 
 
-## Why do we need the Portal network {#why-do-we-need-portal-network}
+## Why do we need the Portal Network {#why-do-we-need-portal-network}
 
 Ethereum nodes store their own full or partial copy of the Ethereum blockchain. This local copy is used to validate transactions and ensure the node is following the correct chain. This locally stored data allows nodes to independently verify that incoming data is valid and correct without needing to trust any other entity.
 
@@ -22,17 +22,17 @@ This local copy of the blockchain and associated state and receipt data takes up
 
 
 
-This means running nodes can be expensive, because a large amount of disk space has to be dedicated to Ethereum. There are several solutions to this problem on the Ethereum roadmap, including [history expiry](https://ethereum.org/en/roadmap/statelessness/#history-expiry), [state expiry](https://ethereum.org/en/roadmap/statelessness/#state-expiry) and [statelessness](https://ethereum.org/en/roadmap/statelessness/). However, these are likely several years away from being implemented. There are also [light nodes](https://ethereum.org/en/developers/docs/nodes-and-clients/light-clients/) that do not save their own copy of the chain data, they request the data they need from full nodes. However, this means light nodes have to trust full nodes to provide honest data and also stresses the full nodes that have to serve the data the light nodes need.
+This means running nodes can be expensive, because a large amount of disk space has to be dedicated to Ethereum. There are several solutions to this problem on the Ethereum roadmap, including [history expiry](/roadmap/statelessness/#history-expiry), [state expiry](/roadmap/statelessness/#state-expiry) and [statelessness](/roadmap/statelessness/). However, these are likely several years away from being implemented. There are also [light nodes](/developers/docs/nodes-and-clients/light-clients/) that do not save their own copy of the chain data, they request the data they need from full nodes. However, this means light nodes have to trust full nodes to provide honest data and also stresses the full nodes that have to serve the data the light nodes need.
 
-Portal Network aims to provide an alternative way for light nodes to get their data that does not require trusting or adding significantly to the work that has to be done by full nodes. The way this will be done is to introduce a new way for Ethereum nodes to share data across the network.
+The Portal Network aims to provide an alternative way for light nodes to get their data that does not require trusting or adding significantly to the work that has to be done by full nodes. The way this will be done is to introduce a new way for Ethereum nodes to share data across the network.
 
 
 ## How does the Portal Network work? {#how-does-portal-network-work}
-Ethereum nodes have strict protocols that define how they communicate with each other. Execution clients communicate using a set of subprotocols known as [DevP2P](https://ethereum.org/en/developers/docs/networking-layer/#devp2p), while consensus clients use a different stack of subprotocols called [libP2P](https://ethereum.org/en/developers/docs/networking-layer/#libp2p). These define the types of data that can be passed between nodes. 
+Ethereum nodes have strict protocols that define how they communicate with each other. Execution clients communicate using a set of subprotocols known as [DevP2P](developers/docs/networking-layer/#devp2p), while consensus clients use a different stack of subprotocols called [libP2P](/developers/docs/networking-layer/#libp2p). These define the types of data that can be passed between nodes. 
 
 ![devP2P and libP2P](portal-network-devp2p-libp2p.png)
 
-Nodes can also serve specific data through the [JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/), which is how apps and wallets swap information with Ethereum nodes. However, none of these are ideal protocols for serving data to light clients. 
+Nodes can also serve specific data through the [JSON-RPC API](/developers/docs/apis/json-rpc/), which is how apps and wallets swap information with Ethereum nodes. However, none of these are ideal protocols for serving data to light clients. 
 
 Light clients can't currently request specific pieces of chain data over DevP2P or libP2p because those protocols are only designed to enable chain synchronization and gossiping of blocks and transactions. Light clients do not want to download this information because that would stop them from being "light".
 
@@ -53,7 +53,7 @@ The goal is to allow a decentralized network of lightweight Portal clients to:
 - sync recent and historical chain data
 - retrieve state data
 - broadcast transactions
-- execute transactions using the [EVM](https://ethereum.org/en/developers/docs/evm/)
+- execute transactions using the [EVM](/developers/docs/evm/)
 
 
 The benefits of this network design are:
@@ -84,7 +84,5 @@ If one client experiences issues or vulnerabilities, other clients can continue 
 ## Further Reading {#futher-reading}
 
 - [The Portal Network (Piper Merriam at Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
-
-- [Portal Network discord](https://discord.gg/6XFs56cX)
-
+- [The Portal Network discord](https://discord.gg/6XFs56cX)
 - [The Portal Network website](ethportal.net)
