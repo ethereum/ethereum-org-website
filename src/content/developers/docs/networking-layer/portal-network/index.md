@@ -38,9 +38,8 @@ Light clients can't currently request specific pieces of chain data over DevP2P 
 
 The JSON-RPC API is not an ideal choice for light client data requests either, because it relies upon a connection to a specific full node or centralized RPC provider that can serve the data. This means the light client has to trust that specific node/provider to be honest, and also the full node might have to handle lots of requests from many light clients, adding to their bandwidth requirements.
 
-Portal decided to rethink the whole design.
+The point of the Portal Network is to rethink the whole design, building specifically for lightness, outside of the design constraints of the existing Ethereum clients.
 
-“What if we could build outside of these design constraints.”
 
 The core idea of the Portal Network is to take the best bits of the current networking stack by enabling information needed by light clients, such as historical data and the identity of the current head of the chain to be served through a lightweight DevP2P style peer-to-peer decentralized network using a [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (similar to Bittorrent).
 
