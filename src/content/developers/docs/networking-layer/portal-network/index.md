@@ -28,10 +28,6 @@ This means running nodes can be expensive, because a large amount of disk space 
 Portal Network aims to provide an alternative way for light nodes to get their data that does not require trusting or adding significantly to the work that has to be done by full nodes. The way this will be done is to introduce a new way for Ethereum nodes to share data across the network.
 
 
-
-
-
-
 ## How does the Portal Network work? {#how-does-portal-network-work?}
 Ethereum nodes have strict protocols that define how they communicate with each other. Execution clients communicate using a set of subprotocols known as [DevP2P](https://ethereum.org/en/developers/docs/networking-layer/#devp2p), while consensus clients use a different stack of subprotocols called [libP2P](https://ethereum.org/en/developers/docs/networking-layer/#libp2p). These define the types of data that can be passed between nodes. 
 
@@ -70,7 +66,7 @@ The benefits of this network design are:
 
 The diagram below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
 
-![portal network table](portal-network-table.png)
+![portal network table](portal-network-table2.png)
 
 
 
