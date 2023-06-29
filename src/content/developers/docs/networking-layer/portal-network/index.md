@@ -39,7 +39,7 @@ Ethereum nodes have strict protocols that define how they communicate with each 
 
 Nodes can also serve specific data through the [JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/), which is how apps and wallets swap information with Ethereum nodes. However, none of these are ideal protocols for serving data to light clients. 
 
-Light client's can't currently request specific pieces of chain data over DevP2P or libP2p because those protocols are only designed to enable chain synchronization and gossiping of blocks and transactions. Light clients do not want to download this information because that would stop them from being "light".
+Light clients can't currently request specific pieces of chain data over DevP2P or libP2p because those protocols are only designed to enable chain synchronization and gossiping of blocks and transactions. Light clients do not want to download this information because that would stop them from being "light".
 
 The JSON-RPC API is not an ideal choice for light client data requests either, because it relies upon a connection to a specific full node or centralized RPC provider that can serve the data. This means the light client has to trust that specific node/provider to be honest, and also the full node might have to handle lots of requests from many light clients, adding to their bandwidth requirements.
 
@@ -47,7 +47,7 @@ Portal decided to rethink the whole design.
 
 “What if we could build outside of these design constraints.”
 
-The core idea of the Portal Network is to take the best bits of the current networking stack by enabling information needed by light clients, such as historical data and the identity of the current head of the chain to be served through a lightweight DevP2P style peer-to-peer decentralized network.
+The core idea of the Portal Network is to take the best bits of the current networking stack by enabling information needed by light clients, such as historical data and the identity of the current head of the chain to be served through a lightweight DevP2P style peer-to-peer decentralized network using a [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (similar to Bittorrent).
 
 The idea is to add small parts of the total historical Ethereum data and some specific node responsibilities to each node. Then, requests are served by seeking out the nodes storing the specific data that was requested and retrieving it from them. 
 
@@ -63,11 +63,10 @@ The goal is to allow a decentralized network of lightweight Portal clients to:
 
 
 The benefits of this network design are:
-
+- reduce dependence on centralized providers
 - Reduce Internet bandwidth usage
 - Minimized or zero syncing
 - Accessible to resource-constrained devices (<1GB ram, <100mB disk, 1CPU)
-- Residential internet connection
 
 The diagram below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
 
@@ -78,6 +77,10 @@ The diagram below shows the functions of existing clients that can be delivered 
 ## Client diversity by default {#client-diversity-as-default}
 
 The Portal Network developers also made the design choice to build three separate Portal Network clients from day one.
+The clients are:
+- [Trin](https://github.com/ethereum/trin): written in Rust
+- [Fluffy](https://nimbus.team/docs/fluffy.html): written in Nim
+- [Ultralight](https://github.com/ethereumjs/ultralight): written in Typescript
 
 Having multiple independent client implementations enhances the resilience and decentralization of the Ethereum network.
 
