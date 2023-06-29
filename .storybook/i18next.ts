@@ -1,6 +1,5 @@
 import i18n, { Resource } from "i18next"
 import { initReactI18next } from "gatsby-plugin-react-i18next"
-import { supportedLanguages } from "../src/utils/languages"
 
 export const baseLocales = {
   en: { title: "English", left: "En" },
@@ -11,7 +10,7 @@ export const baseLocales = {
 
 // Only i18n files named in this array are being exposed to Storybook. Add filenames as necessary.
 const ns = ["common", "page-about", "page-upgrades", "page-developers-index"]
-const supportedLngs = [...Object.keys(baseLocales), ...supportedLanguages]
+const supportedLngs = Object.keys(baseLocales)
 
 /**
  * Taking the ns array and combining all the ids
