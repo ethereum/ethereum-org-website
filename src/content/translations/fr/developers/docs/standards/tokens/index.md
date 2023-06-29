@@ -7,9 +7,9 @@ incomplete: true
 
 ## Introduction {#introduction}
 
-L'une des nombreuses normes de développement Ethereum est axée sur les interfaces de jetons. Ces normes aident à garantir que les contrats intelligents restent composables, afin que, par exemple, lorsqu'un nouveau projet émet un jeton, celui-ci reste compatible avec les échanges décentralisés existants.
+De nombreuses normes de développement Ethereum se concentrent sur les interfaces de jetons. Ces normes aident à garantir que les contrats intelligents restent composables, afin que, par exemple, lorsqu'un nouveau projet émet un jeton, celui-ci reste compatible avec les échanges décentralisés existants.
 
-## Pré-requis {#prerequisites}
+## Prérequis {#prerequisites}
 
 - [Normes de développement Ethereum](/developers/docs/standards/)
 - [Contrats intelligents](/developers/docs/smart-contracts/)
@@ -22,6 +22,7 @@ Voici quelques-unes des normes de jetons les plus populaires sur Ethereum :
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Une interface type pour les jetons non fongibles, comme ceux requis pour les œuvres d'art ou une chanson.
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - Permet aux personnes de créer des fonctionnalités supplémentaires en sus des jetons tels qu'un contrat mixte pour améliorer la confidentialité des transactions ou une fonction de récupération d'urgence pour vous tirer d'embarras si vous perdez vos clés privées.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Permet des transactions et des regroupements de transactions plus efficaces – réduisant ainsi les coûts. Ce type de jeton permet de créer à la fois des jetons utilitaires (comme $BNB ou $BAT) et des jetons non fongibles comme des CryptoPunks.
+- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - Un standard de coffre tokenisé conçu pour optimiser et unifier les paramètres techniques des coffres à rendement.
 
 ## Complément d'information {#further-reading}
 
