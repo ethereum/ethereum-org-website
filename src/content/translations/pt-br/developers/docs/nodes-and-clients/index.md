@@ -122,9 +122,9 @@ Se você é mais que um usuário técnico, mergulhe em mais detalhes e opções 
 
 ## Alternativas {#alternatives}
 
-Configurar seu próprio nó pode custar tempo e recursos, mas nem sempre você precisa executar sua própria instância. Nesse caso, você pode usar um provedor de API terceirizado como [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), [QuikNode](https://www.quiknode.io), [Tenderly](https://tenderly.co/web3-gateway), [Blasto](https://blastapi.io/), [DRPC](https://drpc.org/) ou [GetBlock](https://getblock.io/). Para obter uma visão geral do uso desses serviços, confira [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Configurar seu próprio nó pode custar tempo e recursos, mas nem sempre você precisa executar sua própria instância. Nesse caso, é possível usar um provedor de APIs externo. Para obter uma visão geral do uso desses serviços, confira [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Se alguém executa um nó do Ethereum com uma API pública em sua comunidade, você pode apontar suas carteiras leves (como MetaMask) para um nó da comunidade [via RPC personalizado](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) e ganhar mais privacidade do que com alguns terceiros aleatórios de confiança.
+Se alguém executar um nó do Ethereum com uma API pública em sua comunidade, você pode apontar suas carteiras para um nó da comunidade por meio de um RPC personalizado.
 
 Por outro lado, se você executar um cliente, você pode compartilhá-lo com quem precisar.
 

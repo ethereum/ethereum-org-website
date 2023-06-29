@@ -83,11 +83,11 @@ Weak statelessness is in an advanced state of research, but it relies upon propo
 
 Strong statelessness removes the need for any blocks to store state data. Instead, transactions are sent with witnesses that can be aggregated by block producers. The block producers are then responsible for storing only that state that are needed for generating witnesses for relevant accounts. The responsibility for state is almost entirely moved to users, as they send witnesses and 'access lists' to declare which accounts and storage keys they are interacting with.
 
-Strong statelessness is the most elegant solution to reducing the disk requirements for nodes but it requires some substantial updates to the Ethereum protocol. It is still in the research phase and probably won't ship for several years.
+Strong statelessness has been investigated by researchers but is not currently expected to be part of Ethereum's roadmap - it is more likely that weak statelessness is sufficient for Ethereum's scaling needs.
 
 ## Current progress {#current-progress}
 
-Full statelessness is still in the research phase and is likely several years away from being implemented. Weak statelessness, history expiry and state expiry are all milestones on the road to full statelessness. They too are still in the research phase. There is no guarantee that all of these proposals will be implemented, for example, if state expiry is implemented first there may be no need to also implement history expiry. There are also other roadmap items, such as [Verkle Trees](/roadmap/verkle-trees) and [Proposer-builder separation](/roadmap/pbs) that need to be completed first.
+Weak statelessness, history expiry and state expiry are all in the research phase and are expected to ship several years from now. There is no guarantee that all of these proposals will be implemented, for example, if state expiry is implemented first there may be no need to also implement history expiry. There are also other roadmap items, such as [Verkle Trees](/roadmap/verkle-trees) and [Proposer-builder separation](/roadmap/pbs) that need to be completed first.
 
 ## Further reading {#further-reading}
 

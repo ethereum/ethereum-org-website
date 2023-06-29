@@ -8,7 +8,7 @@ Valor Máximo Extraível (MEV, na sigla em inglês) expressa o valor máximo que
 
 ### Valor máximo extraível {#miner-extractable-value}
 
-O valor máximo extraível foi aplicado pela primeira vez no contexto de [prova de trabalho](/developers/docs/consensus-mechanisms/pow/) e inicialmente referido como "valor extraível do minerador". Isto porque na prova de trabalho, os mineradores controlam a inclusão, exclusão e ordenação das transações. No entanto, desde a transição para a prova de participação via a [Fusão](/roadmap/merge), os validadores foram responsáveis por essas funções, e a mineração não faz mais parte do protocolo Ethereum. Como os métodos de extração de valor ainda existem, o termo "valor máximo extraível" agora é usado.
+O valor máximo extraível foi aplicado pela primeira vez no contexto de [prova de trabalho](/developers/docs/consensus-mechanisms/pow/) e inicialmente referido como "valor extraível do minerador". Isto porque na prova de trabalho, os mineradores controlam a inclusão, exclusão e ordenação das transações. No entanto, desde a transição para a prova de participação por meio do [The Merge (A Fusão)](/roadmap/merge), os validadores têm sido responsáveis por essas funções, e a mineração não faz mais parte do protocolo Ethereum. Como os métodos de extração de valor ainda existem, o termo "valor máximo extraível" agora é usado.
 
 ## Pré-Requisitos {#prerequisites}
 
@@ -112,7 +112,7 @@ A extração MEV teve um grande crescimento no início de 2021, o que resultou e
 
 Enquanto muitos buscadores ainda estão ganhando um bom dinheiro com o MEV, à medida que as oportunidades se tornam mais conhecidas e mais e mais buscadores competem pela mesma oportunidade, os validadores irão capturar cada vez mais receita total do MEV (porque o mesmo tipo de leilão de gás descrito originalmente acima também ocorre em Flashbots, embora de forma particular, e os validadores irão capturar a receita de gás resultante). O MEV também não é exclusivo da Ethereum, e conforme as oportunidades se tornam mais competitivas no Ethereum, os buscadores estão migrando para blockchains alternativas, como a Binance Smart Chain, onde oportunidades de MEV semelhantes às que estão na Ethereum existem com menos concorrência.
 
-Por outro lado, a transição da prova de trabalho (proof-of-work) para prova de participação (proof-of-stake) e o esforço contínuo para dimensionar a Ethereum usando rollups (agrupamentos) e sharding (particionamentos) mudam o cenário do MEV de maneira ainda pouco clara. Ainda não se sabe bem de que maneira ter proponentes de bloco garantidos conhecidos com pouca antecedência altera a dinâmica da extração de MEV em comparação com o modelo probabilístico em prova de trabalho ou como isso será interrompido quando [a eleição de líder secreto único](https://ethresear.ch/t/secret-non-single-leader-election/11789) e [a tecnologia de validação distribuída](https://github.com/ethereum/distributed-validator-specs) forem implementados. Da mesma forma, resta saber quais são as oportunidades de MEV existentes quando a maioria das atividades do usuário é transferida do Ethereum para seus rollups e fragmentos de camada 2.
+Por outro lado, a transição da prova de trabalho para prova de participação e o esforço contínuo para escalar o Ethereum usando rollups mudam todo o panorama do MEV de maneiras que ainda não estão claras. Ainda não se sabe bem de que maneira ter proponentes de bloco garantidos conhecidos com pouca antecedência altera a dinâmica da extração de MEV em comparação com o modelo probabilístico na prova de trabalho ou como isso será interrompido quando [a eleição de líder secreto único](https://ethresear.ch/t/secret-non-single-leader-election/11789) e [a tecnologia de validador distribuído](/staking/dvt/) forem implementados. Da mesma forma, resta saber quais são as oportunidades de MEV existentes quando a maioria das atividades do usuário é transferida do Ethereum para seus rollups e fragmentos de camada 2.
 
 ## MEV na prova de participação (PoS) do Ethereum {#mev-in-ethereum-proof-of-stake}
 
@@ -122,7 +122,7 @@ Conforme explicado, o MEV tem implicações negativas para a experiência geral 
 
 No Ethereum pós-fusão, os validadores (tendo feito depósitos de segurança de 32 ETH) chegam a um consenso sobre a validade dos blocos adicionados à Beacon Chain. Como 32 ETH podem estar fora do alcance de muitos, [entrar em um staking pool](/staking/pools/) pode ser uma opção mais viável. No entanto, uma distribuição saudável de [stakers individuais](/staking/solo/) é ideal, pois mitiga a centralização dos validadores e melhora a segurança do Ethereum.
 
-No entanto, acredita-se que a extração MEV seja capaz de acelerar a centralização de validadores. Isso em parte porque os validadores [ganham menos por propor blocos](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) do que os mineradores atualmente ganham. A extração MEV pode em muito [influenciar os ganhos do validador](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) após a Fusão.
+No entanto, acredita-se que a extração MEV seja capaz de acelerar a centralização de validadores. Isso se deve em parte porque, como os validadores [ganham menos por propor blocos](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) do que os mineradores atualmente, a extração de MEV pode em muito [influenciar os ganhos do validador](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) após o The Merge (A Fusão).
 
 Staking pools maiores provavelmente terão mais recursos para investir em otimizações necessárias para capturar oportunidades de MEV. Quanto mais MEV essas pools extraem, mais recursos eles têm para melhorar suas capacidades de extração MEV (e aumentar a receita geral), criando essencialmente [economias de escala](https://www.investopedia.com/terms/e/economiesofscale.asp#).
 
@@ -210,7 +210,7 @@ Alguns projetos, como MEV Boost, usam a Builder API como parte de uma estrutura 
 ## Leitura adicional {#further-reading}
 
 - [Valor extraível da mineração (MEV)?](https://blog.chain.link/what-is-miner-extractable-value-mev/)
-- [MEV e Mim](https://research.paradigm.xyz/MEV)
+- [MEV e Mim](https://www.paradigm.xyz/2021/02/mev-and-me)
 - [O Ethereum é uma Floresta Sombria](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Escapando da Floresta Sombria](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Superando a crise MEV](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)

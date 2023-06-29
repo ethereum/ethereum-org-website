@@ -40,32 +40,37 @@ Lo staking in solo richiede una maggiore responsabilità, ma fornisce il massimo
 Per quanto vorremmo che lo staking in solo fosse accessibile e privo di rischi per tutti, questa non è la realtà. Esistono alcune serie considerazioni pratiche da tenere a mente prima di scegliere di mettere i tuoi ETH in staking in solo.
 
 <InfoGrid>
-  <ExpandableCard title="Lettura necessaria" eventCategory="SoloStaking" eventName="clicked required reading">
-    Quando utilizzi il tuo nodo, dovresti dedicare del tempo a imparare come usare il software che hai scelto. Questo include la lettura della documentazione pertinente e seguire i canali di comunicazione di tali team di sviluppo.
-    Più comprendi il software che stai operando e il funzionamento del proof-of-stake, meno rischioso sarà come staker e più sarà facile risolvere qualsiasi problema che potrebbe sorgere lungo il percorso da operatore del nodo. 
-  </ExpandableCard>
-  <ExpandableCard title="Dimestichezza con il computer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    La configurazione del nodo richiede un livello di dimestichezza ragionevole con il computer, sebbene nuovi strumenti stiano semplificando le procedure con il tempo. La comprensione dell'interfaccia della riga di comando è utile, ma non più rigorosamente richiesta.
-    Richiede anche una configurazione hardware molto basilare e una minima comprensione delle specifiche consigliate minime.
-  </ExpandableCard>
-  <ExpandableCard title="Gestione sicura delle chiavi" eventCategory="SoloStaking" eventName="clicked secure key management">
-    Proprio come le chiavi private proteggono il tuo indirizzo di Ethereum, dovrai generare chiavi specificamente per il tuo validatore. Devi comprendere come mantenere al sicuro qualsiasi frase di seed o chiave privata.
-    <p style={{marginTop: "1rem"}}><a href="/security">Sicurezza di Ethereum e prevenzione delle truffe</a></p>
-  </ExpandableCard>
-  <ExpandableCard title="Nessun prelievo (per ora)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Il prelievo degli ETH in staking o delle ricompense dal saldo di un validatore non è ancora supportato. Il supporto per i prelievi è pianificato per il prossimo aggiornamento Shanghai. Dopodiché, gli utenti potranno aderire per ricevere automaticamente i pagamenti delle ricompense e potranno prelevare il saldo per intero per ricevere i fondi.
-  </ExpandableCard>
-  <ExpandableCard title="Manutenzione" eventCategory="SoloStaking" eventName="clicked maintenance">
-    L'hardware, talvolta, si guasta, le connessioni di rete generano errori e il software del client a volte necessita di aggiornamenti. La manutenzione del nodo è inevitabile e richiederà occasionalmente la tua attenzione. Vorrai assicurarti di esser consapevole di qualsiasi aggiornamento di rete anticipato o di altri aggiornamenti critici del client.
-  </ExpandableCard>
-  <ExpandableCard title="Operatività affidabile" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    Le tue ricompense sono proporzionali al tempo in cui il tuo validatore è online e sta attestando propriamente. Le interruzioni comportano sanzioni proporzionali a quanti altri validatori sono offline nello stesso momento, ma <a href="#faq">non risultano in tagli</a>. Anche la larghezza di banda conta, poiché le ricompense sono ridotte per le attestazioni che non sono ricevute in tempo. I requisiti varieranno, ma si consiglia un minimo di 10 Mb/s in upload e download.
-  </ExpandableCard>
-  <ExpandableCard title="Rischio di taglio" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    Differente dalle sanzioni di inattività per esser offline, il <em>taglio</em> è una sanzione molto più seria, riservata alle infrazioni malevole. Operando un client di minoranza con le tue chiavi caricate su una sola macchina per volta, il tuo rischio di esser tagliato è minimizzato. Detto ciò, tutti gli staker devono esser consapevoli dei rischi di taglio.
-    
-    <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Ulteriori informazioni sul taglio e il ciclo di vita del validatore</a></p>
-  </ExpandableCard>
+<ExpandableCard title="Lettura necessaria" eventCategory="SoloStaking" eventName="clicked required reading">
+Quando utilizzi il tuo nodo, dovresti dedicare del tempo a imparare come usare il software che hai scelto. Questo include la lettura della documentazione pertinente e seguire i canali di comunicazione di tali team di sviluppo.
+
+Più comprendi il software che stai operando e il funzionamento del proof-of-stake, meno rischioso sarà come staker e più sarà facile risolvere qualsiasi problema che potrebbe sorgere lungo il percorso da operatore del nodo.
+</ExpandableCard>
+
+<ExpandableCard title="Dimestichezza con il computer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+La configurazione del nodo richiede un livello di dimestichezza ragionevole con il computer, sebbene nuovi strumenti stiano semplificando le procedure con il tempo. La comprensione dell'interfaccia della riga di comando è utile, ma non più rigorosamente richiesta.
+
+Richiede anche una configurazione hardware molto basilare e una minima comprensione delle specifiche consigliate minime.
+</ExpandableCard>
+
+<ExpandableCard title="Gestione sicura delle chiavi" eventCategory="SoloStaking" eventName="clicked secure key management">
+Proprio come le chiavi private proteggono il tuo indirizzo di Ethereum, dovrai generare delle chiavi specificamente per il tuo validatore. Devi comprendere come mantenere al sicuro qualsiasi frase di seed o chiave privata.
+
+<a href="/security/">Sicurezza di Ethereum e prevenzione delle truffe</a>
+</ExpandableCard>
+
+<ExpandableCard title="Manutenzione" eventCategory="SoloStaking" eventName="clicked maintenance">
+L'hardware, talvolta, si guasta, le connessioni di rete generano errori e il software del client a volte necessita di aggiornamenti. La manutenzione del nodo è inevitabile e richiederà occasionalmente la tua attenzione. Vorrai assicurarti di esser consapevole di qualsiasi aggiornamento di rete anticipato o di altri aggiornamenti critici del client.
+</ExpandableCard>
+
+<ExpandableCard title="Operatività affidabile" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Le tue ricompense sono proporzionali al tempo in cui il tuo validatore è online e sta attestando propriamente. Le interruzioni comportano sanzioni proporzionali a quanti altri validatori sono offline nello stesso momento, ma <a href="#faq">non risultano in tagli</a>. Anche la larghezza di banda conta, poiché le ricompense sono ridotte per le attestazioni che non sono ricevute in tempo. I requisiti varieranno, ma si consiglia un minimo di 10 Mb/s in upload e download.
+</ExpandableCard>
+
+<ExpandableCard title="Rischio di taglio" eventCategory="SoloStaking" eventName="clicked slashing risk">
+Differente dalle sanzioni di inattività per esser offline, il <em>taglio</em> è una sanzione molto più seria, riservata alle infrazioni malevole. Operando un client di minoranza con le tue chiavi caricate su una sola macchina per volta, il tuo rischio di esser tagliato è minimizzato. Detto ciò, tutti gli staker devono esser consapevoli dei rischi di taglio.
+
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Maggiori informazioni su tagli e il ciclo di vita del validatore</a>
+</ExpandableCard>
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -77,8 +82,6 @@ Per quanto vorremmo che lo staking in solo fosse accessibile e privo di rischi p
 Quando saranno attivi, riceverai le ricompense in ETH, che saranno depositate periodicamente al tuo indirizzo di prelievo.
 
 Se lo desideri, puoi smettere di essere un validatore; in questo modo viene meno il requisito di essere online e si interrompe qualsiasi ulteriore ricompensa. Il saldo rimanente sarà poi prelevato all'indirizzo di prelievo che hai indicato durante la configurazione.
-
-_L'aggiornamento Shanghai è necessario per consentire i pagamenti delle ricompense e i prelievi completi dei validatori in uscita._
 
 [Di più sulle ricompense di staking](/staking/withdrawals/)
 
@@ -126,14 +129,14 @@ Esistono alcune domande molto comuni sullo staking che meritano di essere affron
 
 <ExpandableCard title="Cos'è un validatore?">
 
-Un _validatore_ è un'entità virtuale che risiede su Ethereum e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un _client del validatore_ è il software che agisce per conto del validatore, detenendone e usandone la chiave privata. Un singolo client del validatore può detenere molte coppie di chiavi, controllando molti validatori.
+Un <em>validatore</em> è un'entità virtuale che risiede su Ethereum e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un <em>client del validatore</em> è il software che agisce per conto del validatore detenendone e usandone la chiave privata. Un singolo client del validatore può detenere molte coppie di chiavi, controllando molti validatori.
 
 </ExpandableCard>
 
 <ExpandableCard title="Posso depositare più di 32 ETH?">
 Ogni coppia di chiavi associata ad un validatore richiede esattamente 32 ETH per esser attivata. Maggiori ETH depositati in una singola serie di chiavi non aumentano le potenziali ricompense, poiché ogni validatore è limitato a un <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo effettivo</a> di 32 ETH. Questo significa che lo staking è effettuato in incrementi di 32 ETH, ognuno con la propria serie di chiavi e il proprio saldo.
 
-Non depositare più di 32 ETH per un singolo validatore. Non aumenterà le tue ricompense e sarà bloccato fino all'aggiornamento Shanghai pianificato.
+Non depositare più di 32 ETH per un singolo validatore. Non incrementerà le tue ricompense. Se un indirizzo di prelievo è stato impostato per il validatore, i fondi in eccesso oltre i 32 ETH saranno prelevati automaticamente a tale indirizzo durante la successiva <a href="/staking/withdrawals/#validator-sweeping">pulizia dei validatori</a>.
 
 Se lo staking in solo sembra troppo impegnativo per te, considera di usare un fornitore di <a href="/staking/saas/">staking come servizio</a>, o se stai operando con meno di 32 ETH, dai un'occhiata ai <a href="/staking/pools/">pool di staking</a>.
 </ExpandableCard>
@@ -155,8 +158,10 @@ Operare un client di super maggioranza (ogni client usato da oltre 2/3 della ret
 
 I bug equivalenti in un <em>client di minoranza non sarebbero mai finalizzati</em> e, ciò risulterebbe in un voto di contorno, con la semplice conseguenza di sanzioni d'inattività, <em>non tagli</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Scopri di più sull'importanza di eseguire un client di minoranza.</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Scopri di più sulla prevenzione dei tagli</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Scopri di più sull'importanza di eseguire un client di minoranza.</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Scopri di più sulla prevenzione dei tagli</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="Quale client è il migliore?">
@@ -173,14 +178,12 @@ Sebbene un server privato virtuale (VPS) possa essere usato come sostitutivo del
 Più client del validatore operano su una soluzione d'archiviazione su cloud centralizzata singola, più diventa pericoloso per questi utenti. Ogni evento che porta questi fornitori offline, che sia un attacco, domande regolatorie o solo guasti energetici o a Internet, manderanno offline al contempo ogni client del validatore che si basi su tale server.
 
 Le sanzioni offline sono proporzionali a quanti altri sono offline contemporaneamente. Usare un VPS aumenta notevolmente il rischio che le sanzioni offline saranno più severe e aumenta il rischio di fughe quadratiche o tagli nel caso in cui il guasto sia abbastanza grande. Per minimizzare i tuoi rischi e i rischi alla rete, gli utenti sono vivamente incoraggiati a procurarsi e utilizzare il proprio hardware.
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Ulteriori informazioni su ricompense e sanzioni</a>
 </ExpandableCard>
 
 <ExpandableCard title="Come sblocco le mie ricompense o riprendo i miei ETH?">
-Al momento dell'aggiornamento Shanghai, saranno disponibili i pagamenti delle ricompense e i prelievi completi per i validatori in uscita. I prelievi di ogni tipo dalla beacon chain richiedono l'impostazione delle credenziali di prelievo.
+I prelievi di ogni tipo dalla beacon chain richiedono l'impostazione delle credenziali di prelievo.
 
-I nuovi staker le hanno impostate al momento della generazione della chiave e del deposito. Gli staker esistenti che non le hanno già impostate, potranno aggiornare le proprie chiavi per supportare tale funzionalità, dopo l'aggiornamento Shanghai.
+I nuovi staker le hanno impostate al momento della generazione della chiave e del deposito. Gli staker esistenti che non lo hanno già impostato, possono aggiornare le proprie chiavi per supportare questa funzionalità.
 
 Una volta impostate le credenziali di prelievo, i pagamenti delle ricompense (gli ETH accumulati oltre i 32 iniziali) saranno distribuiti periodicamente e automaticamente all'indirizzo di prelievo.
 
@@ -197,4 +200,3 @@ Per sbloccare e ricevere il tuo intero saldo, devi inoltre completare il process
 - [How to: acquistare l'hardware del validatore di Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Passo dopo Passo: come unirsi alla Testnet di Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Suggerimenti per la prevenzione dei tagli di Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
-- [Ricompense e sanzioni su Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_
