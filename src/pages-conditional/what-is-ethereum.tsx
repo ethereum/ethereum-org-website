@@ -250,7 +250,15 @@ const WhatIsEthereumPage = ({
       eventName: "Cryptocurrency tab",
       content: (
         <TabContent>
-          <Translation id="page-what-is-ethereum-cryptocurrency-tab-content" />
+          <Text>
+            <Translation id="page-what-is-ethereum-cryptocurrency-tab-content-1" />
+          </Text>
+          <Text>
+            <Translation id="page-what-is-ethereum-cryptocurrency-tab-content-2" />
+          </Text>
+          <Text>
+            <Translation id="page-what-is-ethereum-cryptocurrency-tab-content-3" />
+          </Text>
         </TabContent>
       ),
     },
@@ -342,43 +350,40 @@ const WhatIsEthereumPage = ({
                 <Text>
                   <Translation id="page-what-is-ethereum-summary-desc-1" />
                 </Text>
-                <Text mb={0}>
+                <Text>
                   <Translation id="page-what-is-ethereum-summary-desc-2" />
+                </Text>
+                <Text mb={0}>
+                  <Translation id="page-what-is-ethereum-summary-desc-3" />
                 </Text>
               </Summary>
             </Width60>
             <Width40 />
           </TwoColumnContent>
-          <Section px={0}>
-            <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
-              <Width40>
-                <GatsbyImage
-                  image={getImage(data.whatIsCryptocurrency)!}
-                  alt=""
+
+          <br />
+          <br />
+
+          <Section>
+            <H2>
+              <Translation id="page-what-is-ethereum-what-can-eth-do-title" />
+            </H2>
+            <CardContainer>
+              {cards.map((card, idx) => (
+                <Card
+                  key={idx}
+                  emoji={card.emoji}
+                  title={card.title}
+                  description={card.description}
+                  flex="1 1 30%"
+                  minW="240px"
+                  m={4}
+                  p={6}
                 />
-              </Width40>
-              <Width60>
-                <H2>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-title" />
-                </H2>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-1" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-2" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-3" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-4" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-5" />
-                </Text>
-              </Width60>
-            </TwoColumnContent>
+              ))}
+            </CardContainer>
           </Section>
+
           <TwoColumnContent>
             <Width60>
               <Tabs
@@ -398,47 +403,73 @@ const WhatIsEthereumPage = ({
 
         <Section>
           <TwoColumnContent>
-            <Width40>
-              <GatsbyImage image={getImage(data.diffEthAndBtc)!} alt="" />
-            </Width40>
             <Width60>
               <H2>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-title" />
+                <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-title" />
               </H2>
               <Text>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-1" />
+                <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-1" />
               </Text>
               <Text>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-2" />
+                <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-2" />
               </Text>
-              <Text>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-3" />
-              </Text>
-              <Text>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-4" />
-              </Text>
-            </Width60>
-          </TwoColumnContent>
-        </Section>
 
-        <Section>
-          <H2>
-            <Translation id="page-what-is-ethereum-what-can-eth-do-title" />
-          </H2>
-          <CardContainer>
-            {cards.map((card, idx) => (
-              <Card
-                key={idx}
-                emoji={card.emoji}
-                title={card.title}
-                description={card.description}
-                flex="1 1 30%"
-                minW="240px"
-                m={4}
-                p={6}
-              />
-            ))}
-          </CardContainer>
+              <Slider
+                onSlideChange={(index) => {
+                  trackCustomEvent({
+                    eventCategory: `What is Ethereum - Slider`,
+                    eventAction: `Clicked`,
+                    eventName: slides[index].eventName,
+                  })
+                }}
+              >
+                <EmblaSlide>
+                  <H3>
+                    <Translation id="page-what-is-ethereum-slide-1-title" />
+                  </H3>
+                  <Text>
+                    <Translation id="page-what-is-ethereum-slide-1-desc-1" />
+                  </Text>
+                  <Text>
+                    <Translation id="page-what-is-ethereum-slide-1-desc-2" />
+                  </Text>
+                </EmblaSlide>
+                <EmblaSlide>
+                  <H3>
+                    <Translation id="page-what-is-ethereum-slide-2-title" />
+                  </H3>
+                  <Text>
+                    <Translation id="page-what-is-ethereum-slide-2-desc-1" />
+                  </Text>
+                  <Text>
+                    <Translation id="page-what-is-ethereum-slide-2-desc-2" />
+                  </Text>
+                </EmblaSlide>
+                <EmblaSlide>
+                  <H3>
+                    <Translation id="page-what-is-ethereum-slide-3-title" />
+                  </H3>
+                  <Text>
+                    <Translation id="page-what-is-ethereum-slide-3-desc-1" />
+                  </Text>
+                </EmblaSlide>
+                <EmblaSlide>
+                  <H3>
+                    <Translation id="page-what-is-ethereum-slide-4-title" />
+                  </H3>
+                  <Text>
+                    <Translation id="page-what-is-ethereum-slide-4-desc-1" />
+                  </Text>
+                  <Text>
+                    <Translation id="page-what-is-ethereum-slide-4-desc-2" />
+                  </Text>
+                </EmblaSlide>
+              </Slider>
+            </Width60>
+            <Width40>
+              <AdoptionChart />
+            </Width40>
+          </TwoColumnContent>
         </Section>
 
         <Section>
@@ -572,128 +603,6 @@ const WhatIsEthereumPage = ({
           </Banner>
         </Section>
 
-        <Section>
-          <TwoColumnContent>
-            <Width60>
-              <H2>
-                <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-title" />
-              </H2>
-              <Text>
-                <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-1" />
-              </Text>
-              <Text>
-                <Translation id="page-what-is-ethereum-why-would-i-use-ethereum-2" />
-              </Text>
-
-              <Slider
-                onSlideChange={(index) => {
-                  trackCustomEvent({
-                    eventCategory: `What is Ethereum - Slider`,
-                    eventAction: `Clicked`,
-                    eventName: slides[index].eventName,
-                  })
-                }}
-              >
-                <EmblaSlide>
-                  <H3>
-                    <Translation id="page-what-is-ethereum-slide-1-title" />
-                  </H3>
-                  <Text>
-                    <Translation id="page-what-is-ethereum-slide-1-desc-1" />
-                  </Text>
-                  <Text>
-                    <Translation id="page-what-is-ethereum-slide-1-desc-2" />
-                  </Text>
-                </EmblaSlide>
-                <EmblaSlide>
-                  <H3>
-                    <Translation id="page-what-is-ethereum-slide-2-title" />
-                  </H3>
-                  <Text>
-                    <Translation id="page-what-is-ethereum-slide-2-desc-1" />
-                  </Text>
-                  <Text>
-                    <Translation id="page-what-is-ethereum-slide-2-desc-2" />
-                  </Text>
-                </EmblaSlide>
-                <EmblaSlide>
-                  <H3>
-                    <Translation id="page-what-is-ethereum-slide-3-title" />
-                  </H3>
-                  <Text>
-                    <Translation id="page-what-is-ethereum-slide-3-desc-1" />
-                  </Text>
-                </EmblaSlide>
-                <EmblaSlide>
-                  <H3>
-                    <Translation id="page-what-is-ethereum-slide-4-title" />
-                  </H3>
-                  <Text>
-                    <Translation id="page-what-is-ethereum-slide-4-desc-1" />
-                  </Text>
-                  <Text>
-                    <Translation id="page-what-is-ethereum-slide-4-desc-2" />
-                  </Text>
-                </EmblaSlide>
-              </Slider>
-            </Width60>
-            <Width40>
-              <AdoptionChart />
-            </Width40>
-          </TwoColumnContent>
-        </Section>
-
-        <Section bgColor="homeBoxTurquoise">
-          <TwoColumnContent>
-            <Width40>
-              <GatsbyImage image={getImage(data.ethCoin)!} alt="" />
-            </Width40>
-            <Width60>
-              <H2>
-                <Translation id="page-what-is-ethereum-meet-ether-title" />
-              </H2>
-              <Text>
-                <Translation id="page-what-is-ethereum-meet-ether-desc-1" />
-              </Text>
-              <Text>
-                <Translation id="page-what-is-ethereum-meet-ether-desc-2" />
-              </Text>
-              <ButtonRow>
-                <ButtonLink to="/eth/">
-                  <Translation id="page-what-is-ethereum-what-is-ether" />
-                </ButtonLink>
-                <ButtonLink to="/get-eth/" variant="outline">
-                  <Translation id="page-what-is-ethereum-get-eth" />
-                </ButtonLink>
-              </ButtonRow>
-            </Width60>
-          </TwoColumnContent>
-        </Section>
-
-        <Section>
-          <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
-            <Width40>
-              <GatsbyImage image={getImage(data.meetEth)!} alt="" />
-            </Width40>
-            <Width60>
-              <H2>
-                <Translation id="page-what-is-ethereum-what-can-i-do-title" />
-              </H2>
-              <Text>
-                <Translation id="page-what-is-ethereum-what-can-i-do-desc-1" />
-              </Text>
-              <ButtonRow>
-                <ButtonLink to="/dapps/">
-                  <Translation id="page-what-is-ethereum-explore-applications" />
-                </ButtonLink>
-                <ButtonLink to="/defi/" variant="outline">
-                  <Translation id="page-what-is-ethereum-learn-defi" />
-                </ButtonLink>
-              </ButtonRow>
-            </Width60>
-          </TwoColumnContent>
-        </Section>
-
         <Section bgColor="homeBoxPurple">
           <TwoColumnContent>
             <Width40>
@@ -750,73 +659,125 @@ const WhatIsEthereumPage = ({
             </Width60>
           </TwoColumnContent>
         </Section>
-      </Box>
 
-      <Section>
-        <TwoColumnContent>
-          <Width40>
-            <GatsbyImage image={getImage(data.criminalActivity)!} alt="" />
-          </Width40>
-          <Width60>
-            <H2>
-              <Translation id="page-what-is-ethereum-criminal-activity-title" />
-            </H2>
-            <Text>
-              <Translation id="page-what-is-ethereum-criminal-activity-desc-1" />
-            </Text>
-            <Text>
-              <Translation id="page-what-is-ethereum-criminal-activity-desc-2" />
-            </Text>
-            <Text>
-              <Text as="em">
-                <Translation id="page-what-is-ethereum-criminal-activity-desc-3" />
+        <Section bgColor="homeBoxTurquoise">
+          <TwoColumnContent>
+            <Width40>
+              <GatsbyImage image={getImage(data.ethCoin)!} alt="" />
+            </Width40>
+            <Width60>
+              <H2>
+                <Translation id="page-what-is-ethereum-meet-ether-title" />
+              </H2>
+              <Text>
+                <Translation id="page-what-is-ethereum-meet-ether-desc-1" />
               </Text>
-            </Text>
-            <UnorderedList>
-              <ListItem>
-                <Link to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
-                  Europol Spotlight - Cryptocurrencies - Tracing the evolution
-                  of criminal finances.pdf
-                </Link>{" "}
-                EN (1.4 MB)
-              </ListItem>
-              <ListItem>
-                <Link to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
-                  Chainalysis (2021), The 2021 Crypto Crime report
-                </Link>{" "}
-                EN
-              </ListItem>
-            </UnorderedList>
-          </Width60>
-        </TwoColumnContent>
-      </Section>
+              <Text>
+                <Translation id="page-what-is-ethereum-meet-ether-desc-2" />
+              </Text>
+              <ButtonRow>
+                <ButtonLink to="/eth/">
+                  <Translation id="page-what-is-ethereum-what-is-ether" />
+                </ButtonLink>
+                <ButtonLink to="/get-eth/" variant="outline">
+                  <Translation id="page-what-is-ethereum-get-eth" />
+                </ButtonLink>
+              </ButtonRow>
+            </Width60>
+          </TwoColumnContent>
+        </Section>
 
-      <Section>
-        <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
-          <Width40>
-            <EnergyConsumptionChart />
-          </Width40>
-          <Width60>
-            <H2>
-              <Translation id="page-what-is-ethereum-energy-title" />
-            </H2>
-            <Text>
-              <Translation id="page-what-is-ethereum-energy-desc-1" />
-            </Text>
-            <Text>
-              <Translation id="page-what-is-ethereum-energy-desc-2" />
-            </Text>
-            <ButtonRow>
-              <ButtonLink to="/energy-consumption/">
-                <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
-              </ButtonLink>
-              <ButtonLink to="/roadmap/merge/" variant="outline">
-                <Translation id="page-what-is-ethereum-the-merge-update" />
-              </ButtonLink>
-            </ButtonRow>
-          </Width60>
-        </TwoColumnContent>
-      </Section>
+        <Section>
+          <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
+            <Width40>
+              <EnergyConsumptionChart />
+            </Width40>
+            <Width60>
+              <H2>
+                <Translation id="page-what-is-ethereum-energy-title" />
+              </H2>
+              <Text>
+                <Translation id="page-what-is-ethereum-energy-desc-1" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-energy-desc-2" />
+              </Text>
+              <ButtonRow>
+                <ButtonLink to="/energy-consumption/">
+                  <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
+                </ButtonLink>
+                <ButtonLink to="/roadmap/merge/" variant="outline">
+                  <Translation id="page-what-is-ethereum-the-merge-update" />
+                </ButtonLink>
+              </ButtonRow>
+            </Width60>
+          </TwoColumnContent>
+        </Section>
+
+        <Section>
+          <TwoColumnContent>
+            <Width40>
+              <GatsbyImage image={getImage(data.criminalActivity)!} alt="" />
+            </Width40>
+            <Width60>
+              <H2>
+                <Translation id="page-what-is-ethereum-criminal-activity-title" />
+              </H2>
+              <Text>
+                <Translation id="page-what-is-ethereum-criminal-activity-desc-1" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-criminal-activity-desc-2" />
+              </Text>
+              <Text>
+                <Text as="em">
+                  <Translation id="page-what-is-ethereum-criminal-activity-desc-3" />
+                </Text>
+              </Text>
+              <UnorderedList>
+                <ListItem>
+                  <Link to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
+                    Europol Spotlight - Cryptocurrencies - Tracing the evolution
+                    of criminal finances.pdf
+                  </Link>{" "}
+                  EN (1.4 MB)
+                </ListItem>
+                <ListItem>
+                  <Link to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
+                    Chainalysis (2021), The 2021 Crypto Crime report
+                  </Link>{" "}
+                  EN
+                </ListItem>
+              </UnorderedList>
+            </Width60>
+          </TwoColumnContent>
+        </Section>
+
+        <Section>
+          <TwoColumnContent>
+            <Width40>
+              <GatsbyImage image={getImage(data.diffEthAndBtc)!} alt="" />
+            </Width40>
+            <Width60>
+              <H2>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-title" />
+              </H2>
+              <Text>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-1" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-2" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-3" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-4" />
+              </Text>
+            </Width60>
+          </TwoColumnContent>
+        </Section>
+      </Box>
 
       <Content>
         <H2>
