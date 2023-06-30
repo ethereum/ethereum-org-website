@@ -134,7 +134,7 @@ Esta função queima `shares` do `owner` e envia exatamente tokens `assets` do c
 function maxRedeem(address owner) public view returns (uint256)
 ```
 
-Esta função retorna a quantidade máxima de shares que podem ser resgatados do saldo do `owner` com uma chamada [`redeem`](#redeem).
+Essa função retorna a quantidade máxima de ações que podem ser resgatadas do saldo do `owner` com uma chamada de [`redeem`](#redeem).
 
 #### previewRedeem {#previewredeem}
 
@@ -142,7 +142,7 @@ Esta função retorna a quantidade máxima de shares que podem ser resgatados do
 function previewRedeem(uint256 shares) public view returns (uint256)
 ```
 
-Esta função permite aos usuários simular os efeitos de seu resgate no bloco atual.
+Essa função permite aos usuários simular os efeitos de seu resgate no bloco atual.
 
 #### redeem {#redeem}
 
@@ -150,7 +150,7 @@ Esta função permite aos usuários simular os efeitos de seu resgate no bloco a
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Esta função resgata um número específico de `shares` do `owner` e envia `assets` do token subjacente do cofre para o `receiver`.
+Essa função resgata um número específico de `shares` do `owner` e envia `assets` do token subjacente do cofre para o `receiver`.
 
 #### totalSupply {#totalsupply}
 

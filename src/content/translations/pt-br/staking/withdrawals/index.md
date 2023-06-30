@@ -151,9 +151,11 @@ title="E se eu participar de derivativos líquidos de staking ou staking combina
 eventCategory="FAQ"
 eventAction="What if I participate in liquid staking derivatives or pooled staking"
 eventName="read more">
+
 Se você faz parte de um <a href="/staking/pools/">pool de stake</a> ou possui derivados de stake líquidos, você deve solicitar ao seu provedor mais detalhes sobre como os saques de stake são tratados, pois cada serviço opera de maneira diferente.
 
-Em geral, os usuários podem recuperar seu ETH subjacente em stake ou alterar o provedor de stake que utilizam quando quiserem. Se um pool em particular estiver ficando muito grande, os fundos podem ser sacados, resgatados e recolocados em stake com um [provedor menor](https://rated.network/). Ou então, se você acumulou ETH suficiente, poderá [colocar em stake de casa](/staking/solo/).
+Em geral, os usuários podem recuperar seu ETH subjacente em stake ou alterar o provedor de stake que utilizam quando quiserem. Se um pool em particular estiver ficando muito grande, os fundos podem ser encerrados, resgatados e reinvestidos com um <a href="https://rated.network/">provedor menor</a>. Ou então, se você acumulou ETH suficiente, pode fazer <a href="/staking/solo/">stake em casa</a>.
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -169,9 +171,11 @@ title="Os saques totais acontecem automaticamente?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
+
 Não, se o seu validador ainda estiver ativo na rede, um saque total não acontecerá automaticamente. Isso exige iniciar manualmente uma saída voluntária.
 
-Uma vez que um validador tenha concluído o processo de saída e, supondo que a conta tenha credenciais de saque, o saldo restante será então sacado durante a próxima [varredura do validador](#validator-sweeping).
+Após um validador ter concluído o processo de saída, e presumindo que a conta tenha credenciais de saque, o saldo restante será <em>então</em> sacado durante a próxima <a href="#validator-sweeping">varredura do validador</a>.
+
 </ExpandableCard>
 
 <ExpandableCard title="Posso sacar uma quantia personalizada?"
@@ -188,9 +192,11 @@ title="Eu opero um validador. Onde posso encontrar mais informações sobre como
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
+
 Recomenda-se que os operadores do validador visitem a página <a href="https://launchpad.ethereum.org/withdrawals/">Plataforma de Saque de Stake</a>, na qual você encontrará mais detalhes sobre como preparar seu validador para saques. preparado, tempo de eventos e mais detalhes sobre como funcionam os saques.
 
-Para testar sua configuração em uma rede de testes primeiro, visite a [Plataforma de Stake de Testes da Goerli](https://goerli.launchpad.ethereum.org) para começar.
+Para testar a sua configuração numa rede de testes, primeiro visite o <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> para começar.
+
 </ExpandableCard>
 
 <ExpandableCard

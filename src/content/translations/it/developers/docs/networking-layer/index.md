@@ -13,7 +13,7 @@ I client d'esecuzione compiono gossip sulle transazioni sulla rete tra pari del 
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere questa pagina è utile avere alcune nozioni di [nodi e client](/src/content/developers/docs/nodes-and-clients/) di Ethereum.
+Per comprendere questa pagina è utile avere alcune nozioni di [nodi e client](/developers/docs/nodes-and-clients/) di Ethereum.
 
 ## Il livello d'esecuzione {#execution-layer}
 
@@ -41,6 +41,8 @@ Una volta che il nodo riceve un elenco di vicini dal nodo d'avvio, inizia con og
 start client --> connect to bootnode --> bond to bootnode --> find neighbours --> bond to neighbours
 ```
 
+I client di esecuzione stanno attualmente utilizzando il protocollo di ricerca [Discv4](https://github.com/ethereum/devp2p/blob/master/discv4.md) e c'è uno sforzo attivo per migrare al protocollo [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5).
+
 #### ENR: Ethereum Node Records {#enr}
 
 L’[Ethereum Node Records (ENR)](/developers/docs/networking-layer/network-addresses/) è un oggetto contenente tre elementi fondamentali: una firma (hash dei contenuti del registro creato secondo qualche schema d'identità acconsentito), una sequenza numerica che monitora le modifiche al registro e un elenco arbitrario di coppie chiave-valore. Questo è un formato a prova di futuro che consente uno scambio più facile di informazioni identificative tra nuovi peer ed è preferibile rispetto al formato dell'[indirizzo di rete](/developers/docs/networking-layer/network-addresses) per i nodi di Ethereum.
@@ -53,7 +55,7 @@ UDP non supporta le funzioni di controllo degli errori, reinvio di pacchetti non
 
 DevP2P è esso stesso un intero stack di protocolli che Ethereum implementa per stabilire e mantenere la rete tra peer-to-peer. Dopo che i nuovi nodi accedono alla rete, le loro interazioni sono governate dai protocolli nello stack [DevP2P](https://github.com/ethereum/devp2p). Questi si basano tutti su TCP e includono il protocollo di trasporto RLPx, il protocollo via cavo e diversi protocolli secondari. [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md) è il protocollo che governa iniziazione, autenticazione e manutenzione delle sessioni tra nodi. RLPx codifica i messaggi usando il RLP (Recursive Length Prefix), un metodo molto efficiente in termini di spazio che codifica i dati in una struttura minimale per l'invio tra nodi.
 
-Una sessione di RLPx tra due nodi inizia con un "handshaking" crittografico iniziale, in cui il nodo invia un messaggio d'autenticazione, poi verificato dal peer. Se la verifica va a buon fine, il peer genera un messaggio di riconoscimento dell'autenticazione da restituire al nodo iniziatore. Si tratta di un processo di scambio di chiavi che consente ai nodi di comunicare privatamente e in sicurezza. Un "handshaking" crittografico andato a buon fine attiva poi entrambi i nodi spingendoli a inviare un messaggio di "saluto" (hello) all'altro "via cavo". Il protocollo via cavo è avviato da uno scambio di messaggi di saluto andato a buon fine.
+Una sessione di RLPx tra due nodi inizia con un "handshaking" crittografico iniziale, in cui il nodo invia un messaggio d'autenticazione, poi verificato dal peer. Se la verifica va a buon fine, il peer genera un messaggio di riconoscimento dell'autenticazione da restituire al nodo iniziatore. Si tratta di un processo di scambio di chiavi che consente ai nodi di comunicare privatamente e in sicurezza. Un "handshaking" crittografico andato a buon fine attiva poi entrambi i nodi spingendoli a inviare un messaggio "hello" all'altro "on the wire". Il protocollo via cavo è avviato da uno scambio di messaggi di saluto andato a buon fine.
 
 Il messaggio di saluto contiene:
 
@@ -79,7 +81,7 @@ Si tratta di un protocollo minimale per sincronizzare i client leggeri. Tradizio
 
 #### Snap {#snap}
 
-Il [protocollo snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md#ethereum-snapshot-protocol-snap) è un'estensione facoltativa che consente ai peer di scambiare istantanee degli stati recenti, consentendo ai peer di verificare i dati del conto e d'archiviazione senza dover scaricare i nodi dell'albero di Merkle intermedi.
+Il [protocollo snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md#ethereum-snapshot-protocol-snap) è un'estensione ottica che consente ai pari di scambiare istantanee degli stati recenti, consentendo ai pari di verificare i dati del conto e dell'archiviazione senza dover scaricare nodi intermedi dell'albero di Merkle.
 
 #### Wit (witness protocol) {#wit}
 
@@ -144,9 +146,7 @@ Un sommario del flusso di controllo è mostrato di seguito, con indicazione tra 
 
 Una volta che il blocco è stato attestato da sufficienti validatori, è aggiunto alla testa della catena, giustificato e, infine, finalizzato.
 
-![](cons_client_net_layer.png)
-
-![](exe_client_net_layer.png)
+![](cons_client_net_layer.png) ![](exe_client_net_layer.png)
 
 Schematica del livello di rete per i client del consenso e d'esecuzione, da [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 

@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { Box, Flex, Text } from "@chakra-ui/react"
+import { FaTools } from "react-icons/fa"
 
 import ButtonLink from "../ButtonLink"
-import Emoji from "../OldEmoji"
+import ReactSelect, { type ReactSelectOnChange } from "../ReactSelect"
 import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
-import ReactSelect, { ReactSelectOnChange } from "../ReactSelect"
 
 export interface IProps {}
 
@@ -90,8 +90,8 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           to="#node-and-client-tools"
           variant="outline"
           width={{ base: "full", md: "auto" }}
+          leftIcon={<FaTools />}
         >
-          <Emoji text="🛠" mr="1rem" />
           <Translation id="page-staking-launchpad-widget-link" />
         </ButtonLink>
       </Box>
