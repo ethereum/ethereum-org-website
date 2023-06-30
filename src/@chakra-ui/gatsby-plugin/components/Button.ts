@@ -15,6 +15,7 @@ const getBaseColor = (isSecondary: boolean) =>
 
 const baseStyle = defineStyle((props) => ({
   borderRadius: "base",
+  border: "1px",
   color: getBaseColor(props.isSecondary),
   transitionProperty: "common",
   transitionDuration: "normal",
@@ -47,7 +48,6 @@ const variantSolid = defineStyle({
 })
 
 const variantOutline = defineStyle({
-  border: "1px",
   _hover: {
     boxShadow: "buttonHover",
   },
@@ -56,9 +56,12 @@ const variantOutline = defineStyle({
   },
 })
 
-const variantGhost = {}
+const variantGhost = {
+  borderColor: "transparent",
+}
 
 const variantLink = defineStyle({
+  borderColor: "transparent",
   color: "primary.base",
   fontWeight: 700,
   textDecor: "underline",
