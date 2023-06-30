@@ -7,16 +7,15 @@ tags:
   - "hardhat"
   - "alchemy"
   - "contrats intelligents"
-  - "premiers pas"
-  - "déploiement"
+  - "déployer"
 skill: beginner
 lang: fr
 published: 2021-03-31
 ---
 
-Si vous débutez dans le développement de blockchain et ne savez pas par où commencer, ou si vous souhaitez uniquement comprendre comment déployer et interagir avec les contrats intelligents, ce guide est fait pour vous. Nous allons parcourir la création et le déploiement d'un contrat intelligent simple sur le réseau de test de Ropsten à l'aide d'un portefeuille virtuel ([MetaMask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), et [Alchemy](https://alchemyapi.io/eth) (ne vous inquiétez pas si vous ne comprenez pas à ce stade ce que cela signifie, nous allons l'expliquer).
+Si vous débutez dans le développement de blockchain et ne savez pas par où commencer, ou si vous souhaitez uniquement comprendre comment déployer et interagir avec les contrats intelligents, ce guide est fait pour vous. Nous allons parcourir la création et le déploiement d'un contrat intelligent simple sur le réseau de test de Goerli à l'aide d'un portefeuille virtuel [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), et [Alchemy](https://alchemyapi.io/eth) (ne vous inquiétez pas si vous ne comprenez pas à ce stade ce que cela signifie, nous allons l'expliquer).
 
-Dans la deuxième partie de ce tutoriel, nous allons découvrir comment interagir avec notre contrat intelligent une fois déployé et enfin dans la troisième partie nous allons découvrir comment le publier sur Etherscan.
+Dans la [partie 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) de ce tutoriel, nous allons voir comment nous pouvons interagir avec notre contrat intelligent une fois qu'il sera déployé ici, et dans la [partie 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) nous couvrirons comment le publier sur Etherscan.
 
 Si vous avez des questions à un moment ou à un autre, n'hésitez pas à en discuter sur le [Discord Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -26,13 +25,13 @@ Il existe de nombreuses façons de faire des requêtes dans la chaîne d'Ethereu
 
 ## Étape 2 : Créer votre application (et votre clé API) {#step-2}
 
-Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé API en créant une application. Cela nous permettra de réaliser des requêtes sur le réseau de test Ropsten. Si vous n'êtes pas familier avec Testnets (réseau de test), consultez [cette page](/developers/docs/networks/).
+Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé API en créant une application. Cela va nous permettre d'émettre des requêtes sur le réseau de test Goerli. Si vous n'êtes pas familier avec Testnets (réseau de test), consultez [cette page](/developers/docs/networks/).
 
-1.  Accédez à la page « Create App » dans votre Tableau de bord Alchemy, en survolant « Apps » dans la barre de navigation et en cliquant sur « Create App »
+1.  Accédez à la page « Créer une application » dans votre tableau de bord Alchemy en survolant « Apps » dans la barre de navigation et en cliquant sur « Créer une application »
 
 ![créer une application Hello world](./hello-world-create-app.png)
 
-2. Nommez votre application « Hello World », faites-en une description rapide, pour l'environnement sélectionnez « Staging » (utilisé pour la comptabilité de votre application), et pour votre réseau choisissez « Ropsten ».
+2. Nommez votre application « Hello World », faites-en une description rapide, pour l'environnement sélectionnez « Staging » (utilisé pour la comptabilité de votre application), et pour votre réseau choisissez « Goerli ».
 
 ![créer une vue de l'application Hello world](./create-app-view-hello-world.png)
 
@@ -42,17 +41,17 @@ Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé 
 
 Nous avons besoin d'un compte Ethereum pour effectuer des transactions (envoyer et recevoir). Pour ce tutoriel, nous allons utiliser MetaMask, un portefeuille virtuel intégré au navigateur, servant à gérer les adresses de votre compte Ethereum. Plus d'infos sur les [transactions](/developers/docs/transactions/).
 
-Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download.html). Quand vous créez un compte, ou si vous avez déjà un compte, assurez-vous de passer sur le « Réseau de test Ropsten » dans le coin supérieur droit (afin que nous n'utilisions pas de l'argent réel).
+Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download.html). Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer sur « Réseau de test Goerli » en haut à droite (afin de ne pas utiliser d'argent réel).
 
 ![exemple metamask ropsten](./metamask-ropsten-example.png)
 
 ## Étape 4 : Ajoutez de l'ether à partir d'un faucet {#step-4}
 
-Afin de déployer notre contrat intelligent sur le serveur test, nous aurons besoin de faux ETH. Pour obtenir de l'ETH, vous pouvez aller sur [Ropsten faucet](https://faucet.dimensions.network/) et entrer votre adresse de compte Ropsten, puis cliquer sur « Send Ropsten ETH ». Cela peut prendre un certain temps pour recevoir votre faux ETH, à cause du trafic réseau. Vous devriez voir votre ETH dans votre compte MetaMask peu de temps après !
+Afin de déployer notre contrat intelligent sur le réseau de test, nous aurons besoin de faux Eth. Pour obtenir des Eth, vous pouvez vous rendre sur le [faucet Goerli](https://goerlifaucet.com/) et vous connecter à votre compte Alchemy et entrer l'adresse de votre portefeuille, puis cliquez sur « Envoyez-moi des Eth ». Cela peut prendre un certain temps pour recevoir votre faux Eth en fonction du trafic sur le réseau. (Au moment de rédiger l'article, cela a pris environ 30 minutes.) Vous devriez voir les Eth dans votre compte Metamask peu de temps après !
 
 ## Étape 5 : Vérifiez votre solde {#step-5}
 
-Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) en utilisant [l'outil composeur d'Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va retourner la quantité d'ETH présente dans notre portefeuille. Après avoir entré l'adresse de votre compte MetaMask et cliqué sur « Send Request », vous devriez voir une réponse comme celle-ci :
+Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) en utilisant [l'outil composeur d'Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va retourner la quantité d'ETH présente dans notre portefeuille. Après avoir entré l'adresse de votre compte Metamask et cliqué sur « Send Request », vous devriez voir une réponse comme celle-ci :
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -62,7 +61,7 @@ Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.a
 >
 > Ouf ! Notre fausse monnaie est bien là <Emoji text=":money_mouth_face:" size={1} />.
 
-## Étape 6 : Initialisons notre projet {#step-6}
+## Étape 6 : Initialisez notre projet {#step-6}
 
 Pour commencer, nous allons devoir créer un dossier pour notre projet. Ouvrez votre ligne de commande et tapez :
 
@@ -106,7 +105,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 Approuvez le package.json et nous sommes prêts à démarrer !
 
-## Étape 7 : Téléchargez [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}
+## Étape 7 : Téléchargez [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
 Hardhat est un environnement de développement qui permet de compiler, déployer, tester et déboguer votre logiciel Ethereum. Il aide les développeurs à construire des contrats intelligents et des dApps localement avant de les déployer sur la chaîne en production.
 
@@ -201,7 +200,7 @@ Il s'agit d'un contrat intelligent très simple qui stocke un message lors de la
 
 ## Étape 11 : Connectez MetaMask & Alchemy à votre projet {#step-11}
 
-Maintenant que nous avons créé un portefeuille MetaMask, un compte Alchemy et écrit notre contrat intelligent, il est temps de connecter les trois.
+Maintenant que nous avons créé un portefeuille Metamask, un compte Alchemy et écrit notre contrat intelligent, il est temps de connecter les trois.
 
 Chaque transaction envoyée depuis votre portefeuille virtuel nécessite une signature en utilisant votre clé privée unique. Pour donner cette permission à notre programme, nous pouvons stocker en toute sécurité notre clé privée (et la clé API Alchemy) dans un fichier d'environnement.
 
@@ -225,13 +224,13 @@ Copiez l'URL de l'API Alchemy
 Votre `.env` devrait ressembler à ceci :
 
 ```
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
 Pour les relier à notre code, nous ferons référence à ces variables dans notre fichier `hardhat.config.js` à l'étape 13.
 
-<InfoBanner isWarning>
+<InfoBanner isWarning={true}>
 Ne propagez pas le fichier <code>.env</code> ! Veillez à ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
@@ -266,10 +265,10 @@ const { API_URL, PRIVATE_KEY } = process.env;
 */
 module.exports = {
    solidity: "0.7.3",
-   defaultNetwork: "ropsten",
+   defaultNetwork: "goerli",
    networks: {
       hardhat: {},
-      ropsten: {
+      goerli: {
          url: API_URL,
          accounts: [`0x${PRIVATE_KEY}`]
       }
@@ -330,7 +329,7 @@ Appeler `deploy()` sur un `ContractFactory` va démarrer le déploiement et reto
 Nous sommes enfin prêts à déployer notre contrat intelligent ! Naviguez vers la ligne de commande et exécutez :
 
 ```
-npx hardhat run scripts/deploy.js --network ropsten
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 Vous devriez dès lors voir quelque chose comme :
@@ -339,11 +338,11 @@ Vous devriez dès lors voir quelque chose comme :
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-Si nous allons sur [Ropsten etherscan](https://ropsten.etherscan.io/) et que nous recherchons l'adresse de notre contrat, nous devrions pouvoir voir qu'il a été déployé avec succès. La transaction ressemblera à ceci :
+Si nous allons sur l'[etherscan Goerli](https://goerli.etherscan.io/) et que nous recherchons l'adresse de notre contrat, nous devrions constater qu'il a été déployé avec succès. La transaction ressemblera à ceci :
 
 ![contrat etherscan](./etherscan-contract.png)
 
-L'adresse `From` devrait correspondre à votre adresse de compte MetaMask et l'adresse To retournera « Contract Creation », mais si nous cliquons dans la transaction, nous verrons notre adresse de contrat dans le champ `To` :
+L'adresse `From` devrait correspondre à votre adresse de compte Metamask et l'adresse To retournera « Contract Creation », mais si nous cliquons dans la transaction, nous verrons notre adresse de contrat dans le champ `To` :
 
 ![transaction etherscan](./etherscan-transaction.png)
 
@@ -351,7 +350,7 @@ Félicitations ! Vous venez de déployer un contrat intelligent sur la chaîne 
 
 Pour comprendre ce qui se passe sous le capot, naviguons dans l'onglet Explorer de notre [tableau de bord Alchemy](https://dashboard.alchemyapi.io/explorer). Si vous disposez de plusieurs applications Alchemy, assurez-vous de filtrer par application et sélectionnez « Hello World ». ![explorateur Hello world](./hello-world-explorer.png)
 
-Ici, vous verrez un certain nombre d'appels JSON-RPC que Hardhat/Ethers a réalisés pour nous lorsque nous avons appelé la fonction `.deploy()`. Ici, deux appels importants réalisés sont [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), qui est la demande d'écriture de notre contrat sur la chaîne Ropsten, et [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) qui est une requête pour lire des informations sur notre transaction compte tenu du hachage (un modèle type lors de transactions). Pour en savoir plus sur l'envoi de transactions, consultez ce tutoriel sur [l'envoi de transactions en utilisant Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+Ici, vous verrez un certain nombre d'appels JSON-RPC que Hardhat/Ethers a réalisés pour nous lorsque nous avons appelé la fonction `.deploy()`. Ici, deux appels importants réalisés sont [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), qui est la demande d'écriture de notre contrat sur la chaîne Goerli, et [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) qui est une requête pour lire des informations sur notre transaction compte tenu du hachage (un modèle type lors de transactions). Pour en savoir plus sur l'envoi de transactions, consultez ce tutoriel sur [l'envoi de transactions en utilisant Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
 C'est tout pour la première partie de ce tutoriel. Dans la deuxième partie, nous allons [interagir avec notre contrat intelligent](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract) en mettant à jour notre message initial et, dans la troisième partie, nous [publierons notre contrat intelligent sur Etherscan](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan) afin que tout le monde sache comment interagir avec lui.
 

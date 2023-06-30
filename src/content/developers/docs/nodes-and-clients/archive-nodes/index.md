@@ -9,7 +9,7 @@ An archive node is an instance of an Ethereum client configured to build an arch
 
 ## Prerequisites {#prerequisites}
 
-You should understand the concept of an [Ethereum node](/developers/docs/nodes-and-clients/), [its architecture](/developers/docs/nodes-and-clients/node-architecture/), [sync strategies](https://ethereum.org/en/developers/docs/nodes-and-clients/#sync-modes), practices of [running](/developers/docs/nodes-and-clients/run-a-node/) and [using them](/developers/docs/apis/json-rpc/).
+You should understand the concept of an [Ethereum node](/developers/docs/nodes-and-clients/), [its architecture](/developers/docs/nodes-and-clients/node-architecture/), [sync strategies](/developers/docs/nodes-and-clients/#sync-modes), practices of [running](/developers/docs/nodes-and-clients/run-a-node/) and [using them](/developers/docs/apis/json-rpc/).
 
 ## What is an archive node
 
@@ -56,7 +56,7 @@ Before starting your own archive node, learn about the differences between the c
 
 ## Recommended practices
 
-Apart from general [recommendations for running a node](developers/docs/nodes-and-clients/run-a-node/), an archive node may be more demanding on hardware and maintenance. Considering Erigons [key features](https://github.com/ledgerwatch/erigon#key-features), the most practical approach is using the [Erigon](https://ethereum.org/en/developers/docs/nodes-and-clients/#erigon) client implementation.
+Apart from general [recommendations for running a node](developers/docs/nodes-and-clients/run-a-node/), an archive node may be more demanding on hardware and maintenance. Considering Erigons [key features](https://github.com/ledgerwatch/erigon#key-features), the most practical approach is using the [Erigon](/developers/docs/nodes-and-clients/#erigon) client implementation.
 
 ### Hardware
 
