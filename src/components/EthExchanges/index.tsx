@@ -97,6 +97,7 @@ const EthExchanges = () => {
           onChange={handleSelectChange}
           placeholder={placeholderString}
           variant="outline"
+          isSearchable
         />
       </Box>
       {!hasSelectedCountry && (
