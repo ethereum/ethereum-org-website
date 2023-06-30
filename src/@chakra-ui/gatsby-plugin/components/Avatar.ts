@@ -2,10 +2,11 @@ import {
   createMultiStyleConfigHelpers,
   cssVar,
   defineStyle,
+  getToken,
 } from "@chakra-ui/react"
 import { avatarAnatomy } from "@chakra-ui/anatomy"
 import { avatarDefaultTheme, defineMergeStyles } from "./components.utils"
-import { omit, pick } from "lodash"
+import { pick } from "lodash"
 
 const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(avatarAnatomy.keys)
@@ -15,12 +16,17 @@ const { baseStyle: defaultBaseStyle, sizes: defaultSizes } = avatarDefaultTheme
 const $border = cssVar("avatar-border-color", "transparent")
 const $mlBySize = cssVar("ml-by-size")
 
-const baseStyleContainer = defineStyle((props) =>
-  defineMergeStyles(defaultBaseStyle?.(props).container, {
+const baseStyleContainer = defineStyle((props) => {
+  const primaryLowContrast = getToken(
+    "colors",
+    "primary.lowContrast"
+  )(props.theme)
+
+  return defineMergeStyles(defaultBaseStyle?.(props).container, {
     [$border.variable]: "transparent",
     borderWidth: "1px",
     "&:hover, [data-peer]:hover ~ &": {
-      boxShadow: "buttonHover",
+      boxShadow: `0.15em 0.15em 0 ${primaryLowContrast}`,
     },
     _focus: {
       outline: "4px solid",
@@ -41,7 +47,7 @@ const baseStyleContainer = defineStyle((props) =>
       },
     },
   })
-)
+})
 
 const baseStyleExessLabel = defineStyle((props) =>
   defineMergeStyles(defaultBaseStyle?.(props).excessLabel, {
