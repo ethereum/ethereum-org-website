@@ -96,7 +96,7 @@ Cela dit, évitez de considérer les audits comme un remède miracle. Les audits
 
 La mise en place d'un programme de prime de bogues est une autre approche pour implémenter des examens de code externes. Une prime de bogue est une récompense financière donnée aux individus (généralement des hackers whitehat) qui découvrent des vulnérabilités dans une application.
 
-Lorsqu'elle est utilisée correctement, la primes de bogues incitent les membres de la communauté hacker à inspecter votre code pour trouver des défauts critiques. Un exemple réel est le « bogue d'argent infini » qui aurait permis à un attaquant de créer un nombre illimité d'Ether sur [Optimisme](https://www.optimism.io/), un protocole [Couche 2](https://ethereum.org/en/layer-2/) fonctionnant sur Ethereum. Heureusement, un hacker whitehat [a découvert le défaut](https://www.saurik.com/optimism.html) et l'a notifié à l'équipe, [gagnant une grosse prime ce faisant](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Lorsqu'elle est utilisée correctement, la primes de bogues incitent les membres de la communauté hacker à inspecter votre code pour trouver des défauts critiques. Un exemple réel est le « bogue d'argent infini » qui aurait permis à un attaquant de créer un nombre illimité d'Ether sur [Optimisme](https://www.optimism.io/), un protocole [Couche 2](/layer-2/) fonctionnant sur Ethereum. Heureusement, un hacker whitehat [a découvert le défaut](https://www.saurik.com/optimism.html) et l'a notifié à l'équipe, [gagnant une grosse prime ce faisant](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Une stratégie utile est de définir le paiement d'un programme de prime de bogues proportionnellement au montant des fonds mis en jeu. Décrit comme la «[mise à l'échelle de la prime de bogue](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)», cette approche fournit des incitations financières pour les individus à divulguer de manière responsable des vulnérabilités au lieu de les exploiter.
 
@@ -462,7 +462,7 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 - **[Services d'audit de contrats intelligents](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Liste des organisations fournissant des services d'audit de contrats intelligents pour les projets de développement d'Ethereum._
 
-- **[Plateformes de récompenses de bugs](https://ethereum.org/en/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Plateformes pour coordonner les récompenses de bugs et récompensant la divulgation responsable de vulnérabilités critiques dans les contrats intelligents._
+- **[Plateformes de récompenses de bugs](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Plateformes pour coordonner les récompenses de bugs et récompensant la divulgation responsable de vulnérabilités critiques dans les contrats intelligents._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _ : Il s'agit d'un outil gratuit en ligne pour la vérification de toutes les informations disponibles concernant un contrat issu du fork._
 

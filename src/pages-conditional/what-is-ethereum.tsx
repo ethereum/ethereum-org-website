@@ -13,6 +13,7 @@ import {
   ListItem,
   Text,
   UnorderedList,
+  Icon,
 } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
@@ -23,7 +24,6 @@ import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import Tooltip from "../components/Tooltip"
 import Tabs from "../components/Tabs"
-import Icon from "../components/Icon"
 import Link from "../components/Link"
 import {
   Banner,
@@ -51,6 +51,7 @@ import useFetchStat, {
 } from "../hooks/useFetchStat"
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import type { ChildOnlyProp, Context } from "../types"
+import { MdInfoOutline } from "react-icons/md"
 
 const Slogan = (props: ChildOnlyProp) => (
   <Text
@@ -493,7 +494,7 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about Ethereum projects stats",
                         })}
                       >
-                        <Icon name="info" size="1rem" />
+                        <Icon as={MdInfoOutline} fontSize="md" />
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -512,7 +513,7 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about wallets stats",
                         })}
                       >
-                        <Icon name="info" size="1rem" />
+                        <Icon as={MdInfoOutline} fontSize="md" />
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -531,7 +532,7 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about smart contracts stats",
                         })}
                       >
-                        <Icon name="info" size="1rem" />
+                        <Icon as={MdInfoOutline} fontSize="md" />
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -549,7 +550,7 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about about Ethereum as money",
                         })}
                       >
-                        <Icon name="info" size="1rem" />
+                        <Icon as={MdInfoOutline} fontSize="md" />
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -569,7 +570,7 @@ const WhatIsEthereumPage = ({
                             "Read more about 2021 Ethereum earnings stats",
                         })}
                       >
-                        <Icon name="info" size="1rem" />
+                        <Icon as={MdInfoOutline} fontSize="md" />
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -590,7 +591,7 @@ const WhatIsEthereumPage = ({
                             "Read more about number of transactions stats",
                         })}
                       >
-                        <Icon name="info" size="1rem" />
+                        <Icon as={MdInfoOutline} fontSize="md" />
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
