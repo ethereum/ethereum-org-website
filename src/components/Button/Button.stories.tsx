@@ -9,7 +9,7 @@ import theme from "../../@chakra-ui/gatsby-plugin/theme"
 type ButtonType = typeof Button
 
 const meta: Meta<ButtonType> = {
-  title: "Atoms / Forms / Buttons",
+  title: "Atoms / Form / Buttons",
   component: Button,
   args: {
     children: "What is Ethereum?",

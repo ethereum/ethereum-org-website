@@ -17,6 +17,7 @@ const baseStyle = defineStyle((props) => ({
   borderRadius: "base",
   border: "1px",
   color: getBaseColor(props.isSecondary),
+  lineHeight: "1.6",
   transitionProperty: "common",
   transitionDuration: "normal",
   whiteSpace: "normal",
@@ -101,7 +102,6 @@ const sizes = {
     fontSize: "xs",
     py: "1.5 !important",
     px: "2 !important",
-    lineHeight: "3xs",
     [ICON_SELECTOR]: {
       fontSize: "md",
     },
