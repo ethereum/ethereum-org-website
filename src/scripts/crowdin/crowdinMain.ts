@@ -2,13 +2,14 @@ import getAndSaveDirectories from "./getAndSaveDirectories"
 import getDirectoryIds from "./getDirectoryIds"
 import { getTranslatedMarkdownPaths } from "../markdownChecker"
 import fetchAndSaveFileIds from "./fetchAndSaveFileIds"
+import fetchTranslationCostsReport from "./reports/fetchTranslationCostsReport"
 import fs from "fs"
 import path from "path"
 
 async function main() {
-  // await getAndSaveDirectories()
-  // const directoryIds = getDirectoryIds()
-  // await fetchAndSaveFileIds(directoryIds)
+  await getAndSaveDirectories()
+  const directoryIds = getDirectoryIds()
+  await fetchAndSaveFileIds(directoryIds)
   const translatedMarkdownPaths = await getTranslatedMarkdownPaths()
   await generateReports(translatedMarkdownPaths)
 }
@@ -19,18 +20,22 @@ async function generateReports(translatedMarkdownPaths) {
       translatedMarkdownPaths[lang],
       lang
     )
+    console.time(`${lang} time: Number of files: ${fileIds.length}`)
     // console.log(lang)
-    console.log(fileIds)
-    // // For each file ID...
-    // for(const fileId of fileIds) {
-    //   // If a file ID was found...
-    //   if (fileId !== null) {
-    //     // Generate the report
-    //     await generateReport(fileId, language);
-    //   } else {
-    //     console.log('Error: No file ID found for one of the paths');
-    //   }
-    // }
+    // console.log(fileIds)
+    // For each file ID...
+    for (const fileId of fileIds) {
+      // If a file ID was found...
+      if (fileId !== null) {
+        // Generate the report
+        await fetchTranslationCostsReport(fileId, lang)
+      } else {
+        console.log("Error: No file ID found for one of the paths")
+      }
+    }
+
+    console.timeEnd(`${lang} time: Number of files: ${fileIds.length}`)
+    // console.timeLog(`${lang} time: Number of ${fileIds.length}`)
   }
 }
 
@@ -55,7 +60,7 @@ async function findFileIdsByPaths(paths, lang) {
       )
 
       if (!pathToIdMap[normalizedPath]) {
-        console.warn(`Lang ${lang}, NULL ID:`, normalizedPath)
+        // console.warn(`Lang ${lang}, NULL ID:`, normalizedPath)
         return null
       }
 
