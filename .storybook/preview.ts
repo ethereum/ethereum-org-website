@@ -1,9 +1,8 @@
+import { Preview } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
 
+import i18n, { baseLocales } from "./i18next"
 import theme from "../src/@chakra-ui/gatsby-plugin/theme"
-
-import "../static/fonts/inter-font-face.css"
-import "../static/fonts/ibm-plex-font-face.css"
 
 const chakraBreakpointArray = Object.entries(theme.breakpoints)
 
@@ -26,42 +25,48 @@ window.___navigate = (pathname) => {
   action("NavigateTo:")(pathname)
 }
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  backgrounds: {
-    disable: true,
+const preview: Preview = {
+  globals: {
+    locale: "en",
+    locales: baseLocales,
   },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
+  parameters: {
+    i18n,
+    actions: { argTypesRegex: "^on[A-Z].*" },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
+    backgrounds: {
+      disable: true,
+    },
+    chakra: {
+      theme,
+    },
+    layout: "centered",
+    // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
+    viewport: {
+      viewports: chakraBreakpointArray.reduce((prevVal, currVal) => {
+        const [token, key] = currVal
+
+        // Unnecessary breakpoint
+        if (token === "base") return { ...prevVal }
+
+        return {
+          ...prevVal,
+          [token]: {
+            name: token,
+            styles: {
+              width: key,
+              height: "600px",
+            },
+          },
+        }
+      }, {}),
     },
   },
-  backgrounds: {
-    disable: true,
-  },
-  chakra: {
-    theme,
-  },
-  layout: "centered",
-  // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
-  viewport: {
-    viewports: chakraBreakpointArray.reduce((prevVal, currVal) => {
-      const [token, key] = currVal
-
-      // Unnecessary breakpoint
-      if (token === "base") return { ...prevVal }
-
-      return {
-        ...prevVal,
-        [token]: {
-          name: token,
-          styles: {
-            width: key,
-            height: "600px",
-          },
-        },
-      }
-    }, {}),
-  },
 }
+
+export default preview

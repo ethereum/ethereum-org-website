@@ -1,5 +1,4 @@
 import { useState } from "react"
-import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 // SVG imports
 import {
@@ -18,6 +17,7 @@ import {
 import { List as ButtonDropdownList } from "../../ButtonDropdown"
 import { MatomoEventOptions } from "../../../utils/matomo"
 import { IProps } from "."
+import { chakra } from "@chakra-ui/react"
 
 type DataType = {
   title: string
@@ -398,17 +398,20 @@ export const useStakingConsiderations = ({ page }: IProps) => {
     setActiveIndex(idx)
   }
 
-  const selectionSvgStyle = { width: 72, height: "auto" }
   const indicatorSvgStyle = { width: 20, height: "auto" }
   const StyledSvg = !!Svg
-    ? styled(Svg)`
-        path {
-          fill: ${({ theme }) => theme.colors.text};
-        }
-      `
-    : styled.div`
-        display: none;
-      `
+    ? chakra(Svg, {
+        baseStyle: {
+          path: {
+            fill: "text",
+          },
+        },
+      })
+    : chakra("div", {
+        baseStyle: {
+          display: "none",
+        },
+      })
 
   return {
     title,
@@ -418,7 +421,6 @@ export const useStakingConsiderations = ({ page }: IProps) => {
     warning,
     dropdownLinks,
     handleSelection,
-    selectionSvgStyle,
     indicatorSvgStyle,
     StyledSvg,
     pageData,
