@@ -106,7 +106,7 @@ const Subtitle = (props: ChildOnlyProp) => (
   <Text fontSize="xl" lineHeight={1.4} color="text200" {...props} />
 )
 
-const TwoColumnContent = (props: FlexProps) => (
+export const TwoColumnContent = (props: FlexProps) => (
   <Flex
     w="full"
     direction={{ base: "column", lg: "row" }}

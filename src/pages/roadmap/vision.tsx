@@ -16,9 +16,7 @@ import {
 
 import Translation from "../../components/Translation"
 import Card from "../../components/Card"
-import ActionCard from "../../components/ActionCard"
 import Link from "../../components/Link"
-import Emoji from "../../components/OldEmoji"
 import Trilemma from "../../components/Trilemma"
 import PageHero, {
   IContent as IPageHeroContent,
@@ -32,6 +30,7 @@ import FeedbackCard from "../../components/FeedbackCard"
 import { getImage } from "../../utils/image"
 
 import type { ChildOnlyProp } from "../../types"
+import Emoji from "../../components/Emoji"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex direction="column" align="center" w="full" {...props} />
