@@ -220,7 +220,9 @@ const components = {
 
 const Contributors = (
   props: ComponentPropsWithoutRef<typeof FileContributors>
-) => <FileContributors p={{ base: 0, lg: 2 }} pb={{ base: 8, lg: 2 }} {...props} />
+) => (
+  <FileContributors p={{ base: 0, lg: 2 }} pb={{ base: 8, lg: 2 }} {...props} />
+)
 
 const DocsPage = ({
   data: { siteData, pageData: mdx },

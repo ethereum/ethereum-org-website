@@ -772,7 +772,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-syntax-jsx@^7.0.0", "@babel/plugin-syntax-jsx@^7.17.12":
+"@babel/plugin-syntax-jsx@^7.0.0":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.18.6.tgz#a8feef63b010150abd97f1649ec296e849943ca0"
   integrity sha512-6mmljtAedFGTWu2p/8WIORGwy+61PLgOMPOdazc7YoJ9ZCWUyFy3A6CpPkRKLKD1ToAesxX8KGEViAiLo9N+7Q==
@@ -1077,7 +1077,7 @@
   dependencies:
     "@babel/plugin-transform-react-jsx" "^7.18.6"
 
-"@babel/plugin-transform-react-jsx@^7.0.0", "@babel/plugin-transform-react-jsx@^7.17.12", "@babel/plugin-transform-react-jsx@^7.18.6", "@babel/plugin-transform-react-jsx@^7.19.0":
+"@babel/plugin-transform-react-jsx@^7.0.0", "@babel/plugin-transform-react-jsx@^7.18.6", "@babel/plugin-transform-react-jsx@^7.19.0":
   version "7.21.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.21.0.tgz#656b42c2fdea0a6d8762075d58ef9d4e3c4ab8a2"
   integrity sha512-6OAWljMvQrZjR2DaNhVfRz6dkCAVV+ymcLUmaf8bccGOHn2v5rHJK3tTpij0BuhdYWP4LLaqj5lwcdlpAAPuvg==
@@ -2355,14 +2355,7 @@
     "@docsearch/css" "3.3.3"
     algoliasearch "^4.0.0"
 
-"@emotion/babel-plugin-jsx-pragmatic@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin-jsx-pragmatic/-/babel-plugin-jsx-pragmatic-0.2.0.tgz#6fdd78600417973fa2610704693158181d8505b7"
-  integrity sha512-VPfKAtb/bVyu5y+HzCPj9bb2nHnj9yX5mMAU7N0pIDcrFZo8aqDyHXLYF8BD7tY4pNL09N87dygVLKIkQvshJw==
-  dependencies:
-    "@babel/plugin-syntax-jsx" "^7.17.12"
-
-"@emotion/babel-plugin@^11.10.0", "@emotion/babel-plugin@^11.10.6":
+"@emotion/babel-plugin@^11.10.6":
   version "11.10.6"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.10.6.tgz#a68ee4b019d661d6f37dec4b8903255766925ead"
   integrity sha512-p2dAqtVrkhSa7xz1u/m9eHYdLi+en8NowrmXeF/dKtJpU8lCWli8RUAati7NcSl0afsBott48pdnANuD0wh9QQ==
@@ -2378,16 +2371,6 @@
     find-root "^1.1.0"
     source-map "^0.5.7"
     stylis "4.1.3"
-
-"@emotion/babel-preset-css-prop@^11.10.0":
-  version "11.10.0"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-preset-css-prop/-/babel-preset-css-prop-11.10.0.tgz#23922787561d8376782b0e9006323512fe797275"
-  integrity sha512-oN2lCP0NJTEt80IIeFM1RbmapeEVNYzKXYk2pYirAuom9WvV9Oz/aJQN5Hn3RyBMPaY+Of1OZYpTVMle2jUm4g==
-  dependencies:
-    "@babel/plugin-transform-react-jsx" "^7.17.12"
-    "@babel/runtime" "^7.18.3"
-    "@emotion/babel-plugin" "^11.10.0"
-    "@emotion/babel-plugin-jsx-pragmatic" "^0.2.0"
 
 "@emotion/cache@^11.10.5", "@emotion/cache@^11.4.0":
   version "11.10.5"
@@ -10707,14 +10690,6 @@ gatsby-parcel-config@^1.7.0:
     "@parcel/transformer-js" "2.8.3"
     "@parcel/transformer-json" "2.8.3"
 
-gatsby-plugin-emotion@^8.4.0:
-  version "8.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-8.7.0.tgz#bd62fbc3779917b8c27af60339dca99f28937cb7"
-  integrity sha512-zioDFPOXcCanN4/mq3vm5tayo2b8rejqCIkX6qLKSVvud9f0cWpX4RJzN52UUodQ93B1wpRoMUrTMtecThy0vg==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    "@emotion/babel-preset-css-prop" "^11.10.0"
-
 gatsby-plugin-gatsby-cloud@^5.4.0:
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-5.7.0.tgz#24133d48ccc83286158beffc362b0050c6b7de25"
@@ -18081,6 +18056,18 @@ store2@^2.14.2:
   version "2.14.2"
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.14.2.tgz#56138d200f9fe5f582ad63bc2704dbc0e4a45068"
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
+
+storybook-i18n@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/storybook-i18n/-/storybook-i18n-2.0.6.tgz#3e698db10258c67655c2c0ff427509aec7f56b02"
+  integrity sha512-4Hhy6lBSj0LzR9YN8EiZ/QFSkyurs1z/eDRkqs8sGUganc4lZOay7Nv22ugd0TaYW39gaV88upNaJ9aH21/WrQ==
+
+storybook-react-i18next@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/storybook-react-i18next/-/storybook-react-i18next-2.0.1.tgz#f727d3ab277076a0d8ebb3a505145db479195d91"
+  integrity sha512-OTRBDXLvCGaa+zgfQBPd4CKsOdwcbZbYbSGU+YCeQG+/zL35WbJPK9leF6c00rGgUbGvB5e480mMpoHI5OqoqQ==
+  dependencies:
+    storybook-i18n "^2.0.6"
 
 storybook@^7.0.6:
   version "7.0.6"

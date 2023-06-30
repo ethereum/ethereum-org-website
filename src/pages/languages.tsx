@@ -3,7 +3,6 @@ import {
   Flex,
   Heading,
   IconButton,
-  Input,
   LinkBox,
   LinkOverlay,
   Text,
@@ -14,6 +13,7 @@ import React, { useState } from "react"
 import { MdClose } from "react-icons/md"
 
 import Link from "../components/Link"
+import Input from "../components/Input"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 
@@ -93,33 +93,24 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
           w="clamp(min(400px, 100%), 50%, 600px)"
         >
           <Input
-            border="1px solid"
-            borderColor="searchBorder"
-            color="text"
-            bg="searchBackground"
-            p={2}
-            pr={8}
-            borderRadius="0.25em"
             w="full"
-            _focus={{
-              outline: "auto 1px",
-              outlineColor: "primary.base",
-            }}
             value={keyword}
             placeholder={searchString}
             onChange={(e) => setKeyword(e.target.value)}
+            rightElement={
+              keyword !== "" && (
+                <IconButton
+                  icon={<MdClose />}
+                  onClick={resetKeyword}
+                  position="absolute"
+                  insetInlineEnd={1}
+                  aria-label={t("clear")}
+                  variant="icon"
+                  _hover={{ svg: { fill: "primary" } }}
+                />
+              )
+            }
           />
-          {keyword !== "" && (
-            <IconButton
-              icon={<MdClose />}
-              onClick={resetKeyword}
-              position="absolute"
-              insetInlineEnd={1}
-              aria-label={t("clear")}
-              variant="icon"
-              _hover={{ svg: { fill: "primary.base" } }}
-            />
-          )}
         </Box>
         <Flex my={8} wrap="wrap" w="full">
           {translationsCompleted.map((lang) => {
