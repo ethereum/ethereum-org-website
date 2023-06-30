@@ -31,9 +31,6 @@ const baseStyle = defineStyle((props) => ({
   _hover: {
     color: "primary.hover",
   },
-  p: {
-    m: 0,
-  },
 }))
 
 const variantSolid = defineStyle({
