@@ -27,10 +27,10 @@ const baseStyle = defineMergeStyles(
       borderColor: "body.base",
       color: "body.base",
       textTransform: "capitalize",
+      verticalAlign: "bottom",
       ...cellPadding,
     },
     tr: {
-      verticalAlign: "text-top",
       "th, td": {
         _notLast: {
           borderRight: "2px",
@@ -43,6 +43,7 @@ const baseStyle = defineMergeStyles(
     },
     tbody: {
       tr: {
+        verticalAlign: "top",
         _hover: {
           /**
            * Override specificity when hovering
