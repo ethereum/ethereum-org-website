@@ -1,5 +1,5 @@
 ---
-title: Déployer des contrats intelligents
+title: Déployer des contrat intelligents
 description:
 lang: fr
 ---
@@ -12,7 +12,7 @@ Déployer un contrat intelligent consiste à envoyer sur la blockchain une trans
 
 Il est préférable d'avoir compris en quoi consiste les [réseaux Ethereum](/developers/docs/networks/), les [transactions](/developers/docs/transactions/) et l'[anatomie des contrats intelligents](/developers/docs/smart-contracts/anatomy/) avant de déployer des contrats intelligents.
 
-Le déploiement d'un contrat coûte également des ethers, nous vous recommandons donc de vous familiariser avec le [gaz et les frais](/developers/docs/gas/) sur Ethereum.
+Le déploiement d'un contrat coûte également de l'éther (ETH) puisqu'il est stocké sur la blockchain, vous devez donc être familiarisé avec [le gaz et les frais](/developers/docs/gas/) sur Ethereum.
 
 Enfin, comme vous devrez compiler votre contrat avant de le déployer, assurez-vous d'avoir lu la page sur la [compilation des contrats intelligents](/developers/docs/smart-contracts/compiling/).
 
@@ -23,7 +23,7 @@ Enfin, comme vous devrez compiler votre contrat avant de le déployer, assurez-v
 - Le bytecode du contrat, généré par la [compilation](/developers/docs/smart-contracts/compiling/).
 - Des ethers pour le gaz. Vous fixerez votre limite de gaz comme pour les autres transactions, mais sachez que les déploiements de contrats nécessitent beaucoup plus de gaz qu'un simple transfert d'ethers.
 - Un script de déploiement ou un plugin.
-- l'accès à un [nœud Ethereum](/developers/docs/nodes-and-clients/), soit en créant le vôtre, soit en vous connectant à un nœud public, soit via un [service de nœuds](/developers/docs/nodes-and-clients/nodes-as-a-service/) comme Infura ou Alchemy avec une clé d'API
+- l'accès à un [nœud Ethereum](/developers/docs/nodes-and-clients/), soit en créant le vôtre, soit en vous connectant à un nœud public, soit via un [service de nœuds](/developers/docs/nodes-and-clients/nodes-as-a-service/) avec une clé d'API
 
 ### Étapes pour déployer un contrat intelligent {#steps-to-deploy}
 
@@ -37,7 +37,7 @@ Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [co
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly - _Simuler, déboguer et surveiller quoi que ce soit sur des chaînes compatibles EVM, avec des données en temps réel_**
+**Tenderly - _ - Plateforme de développement Web3 qui fournit des blocs de débogage, d'observabilité et de construction d'infrastructures en vue de l'élaboration, de la mise à l'essai, du suivi et de l'exécution de contrats intelligents_**
 
 - [tenderly.co](https://tenderly.co/)
 - [Documentation](https://docs.tenderly.co/)
@@ -60,8 +60,9 @@ Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [co
 ## Tutoriels connexes {#related-tutorials}
 
 - [Déployer votre premier contrat intelligent](/developers/tutorials/deploying-your-first-smart-contract/) _– Introduction au déploiement de votre premier contrat intelligent sur un réseau de test Ethereum_
+- [Hello World | Un tutoriel sur le contrat intelligent](/developers/tutorials/hello-world-smart-contract/) _– Un tutoriel facile à suivre pour créer, & déployer un contrat intelligent de base sur Ethereum._
 - [Interagir avec d'autres contrats Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- Comment déployer et interagir avec un contrat intelligent à partir d'un contrat existant_
-- [Réduire les contrats pour respecter la limite de taille](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Comment réduire la taille de votre contrat pour le garder sous la limite et économiser du gaz_
+- [Comment réduire la taille de votre contrat](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Comment réduire la taille de votre contrat pour le garder sous la limite et économiser du gaz_
 
 ## Complément d'information {#further-reading}
 
@@ -74,3 +75,4 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 - [Infrastructures de développement](/developers/docs/frameworks/)
 - [Exécuter un nœud Ethereum](/developers/docs/nodes-and-clients/run-a-node/)
+- [Nœuds en tant que service](/developers/docs/nodes-and-clients/nodes-as-a-service)

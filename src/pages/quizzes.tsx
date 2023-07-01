@@ -16,13 +16,13 @@ import ButtonLink from "../components/ButtonLink"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import { Content } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import QuizzesList from "../components/Quiz/QuizzesList"
 import QuizzesModal from "../components/Quiz/QuizzesModal"
 import QuizzesStats from "../components/Quiz/QuizzesStats"
 import { QuizzesHubContext } from "../components/Quiz/context"
+import { Content } from "./get-eth"
 
 import { useLocalStorage } from "../hooks/useLocalStorage"
 
@@ -31,7 +31,7 @@ import { trackCustomEvent } from "../utils/matomo"
 
 import { INITIAL_QUIZ, USER_STATS_KEY } from "../constants"
 
-import { CompletedQuizzes, QuizStatus, UserStats } from "../types"
+import type { CompletedQuizzes, QuizStatus, UserStats } from "../types"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,

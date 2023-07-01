@@ -1,5 +1,6 @@
 {
   "page-dapps-1inch-logo-alt": "1inch徽标",
+  "page-dapps-dexguru-logo-alt": "DexGuru 徽标",
   "page-dapps-aave-logo-alt": "Aave徽标",
   "page-dapps-add-button": "建议去中心化应用",
   "page-dapps-add-title": "添加去中心化应用",
@@ -86,6 +87,7 @@
   "page-dapps-dapp-description-token-sets": "自动再平衡的加密投资策略。",
   "page-dapps-dapp-description-tornado-cash": "在以太坊上发送匿名交易。",
   "page-dapps-dapp-description-uniswap": "简单地交换代币或提供代币换取%的奖励。",
+  "page-dapps-dapp-description-dexguru": "去中心化金融交易者的非托管交易终端",
   "page-dapps-docklink-dapps": "去中心化应用程序简介",
   "page-dapps-docklink-smart-contracts": "智能合约",
   "page-dapps-dark-forest-logo-alt": "Dark Forest徽标",

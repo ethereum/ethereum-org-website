@@ -96,7 +96,7 @@ contract VendingMachine {
 
 バグ報奨金プログラムを設けることは、外部コードレビューを実施するためのもう一つのアプローチです。 バク報奨金とは、アプリケーション内の脆弱性を発見した個人 (通常はホワイトハットハッカー) に与えられる金銭的な報酬です。
 
-バグ報奨金プログラムが適切に機能すれば、ハッカーコミュニティのメンバーは重大な欠陥がないかコードを検査することでインセンティブを得ることができます。 実例としては「無限貨幣バグ」があります。これにより、イーサリアム上で動作している[オプティミズム](https://www.optimism.io/)という[レイヤー 2 プロトコル](https://ethereum.org/en/layer-2/)で、攻撃者が無限にイーサ (Ether) を発行できてしまうというものでした。 幸運なことに、ホワイトハットハッカーは[その欠陥](https://www.saurik.com/optimism.html)を発見しチームに通知したため、[その過程で多額の報酬を得ました](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/)。
+バグ報奨金プログラムが適切に機能すれば、ハッカーコミュニティのメンバーは重大な欠陥がないかコードを検査することでインセンティブを得ることができます。 実例としては「無限貨幣バグ」があります。これにより、イーサリアム上で動作している[オプティミズム](https://www.optimism.io/)という[レイヤー 2 プロトコル](/layer-2/)で、攻撃者が無限にイーサ (Ether) を発行できてしまうというものでした。 幸運なことに、ホワイトハットハッカーは[その欠陥](https://www.saurik.com/optimism.html)を発見しチームに通知したため、[その過程で多額の報酬を得ました](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/)。
 
 バグ報奨金プログラムの報酬額を、危機にさらされている資金の額に比例して設定すると、有効な戦略となります。 「[バグ報奨金スケール](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)」と呼ばれるこのアプローチは、脆弱性を悪用するのではなく、責任をもって開示するように、個人に金銭的なインセンティブを与えるものです。
 
@@ -460,7 +460,7 @@ DEX の価格は正確であることが多く、これは市場の均衡を取�
 
 - **[スマートコントラクト監査サービス](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _イーサリアム開発プロジェクト向けのスマートコントラクト監査サービスを提供する企業のリスト。_
 
-- **[バグ報奨金プラットフォーム](https://ethereum.org/en/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _バグ報奨金の調整と、スマートコントラクトの重大な脆弱性の責任ある開示へ報酬を与えるためのプラットフォーム。_
+- **[バグ報奨金プラットフォーム](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _バグ報奨金の調整と、スマートコントラクトの重大な脆弱性の責任ある開示へ報酬を与えるためのプラットフォーム。_
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _フォークされたコントラクトに関する利用可能なすべての情報を確認するための無料のオンラインツール。_
 
