@@ -1,54 +1,47 @@
 import fs from "fs"
 import path from "path"
-import axios from "axios"
+import {
+  SourceFilesModel,
+  ResponseList,
+  ResponseObject,
+} from "@crowdin/crowdin-api-client"
+
+import crowdinClient from "./crowdinClient"
+const { sourceFilesApi } = crowdinClient
 
 // Constants
 import { CROWDIN_PROJECT_ID, CROWDIN_API_MAX_LIMIT } from "../../constants"
 
-const headers = {
-  "Content-Type": "application/json",
-  Authorization: `Bearer a1a33522970990c7edf8d9fd71b8d6054ce31cbba24c7722908783944c753e458d6e30ba20c15b29`,
-}
-
-async function getDirectories() {
-  const url = `https://api.crowdin.com/api/v2/projects/${CROWDIN_PROJECT_ID}/directories?limit=${CROWDIN_API_MAX_LIMIT}`
-
+async function getDirectories(): Promise<
+  ResponseList<SourceFilesModel.Directory>
+> {
   try {
-    const response = await axios.get(url, { headers })
-
-    // Check for successful response
-    if (
-      response.status === 200 &&
-      response.data &&
-      Array.isArray(response.data.data)
-    ) {
-      // Return the data directly
-      return response.data.data
-    } else {
-      console.log("Invalid response from API:", response.data)
-      return []
-    }
-  } catch (error) {
-    console.error(
-      // @ts-ignore
-      `There was a problem fetching the directories: ${error.message}`
+    const response = await sourceFilesApi.listProjectDirectories(
+      CROWDIN_PROJECT_ID,
+      { limit: CROWDIN_API_MAX_LIMIT }
     )
-    return []
+    return response
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      throw new Error(
+        `There was a problem fetching the directories: ${error.message}`
+      )
+    }
+    throw new Error("An unknown error occurred while fetching the directories.")
   }
 }
 
-async function filterDirectoriesAndSave(directoriesData) {
+async function filterDirectoriesAndSave(
+  directoriesData: ResponseList<SourceFilesModel.Directory>
+): Promise<void> {
   try {
-    if (directoriesData.length === 0) {
+    if (directoriesData.data.length === 0) {
       console.log("No data received from the API. Keeping the existing data.")
       return
     }
 
-    const filteredData = directoriesData
-      .filter(
-        (item) =>
-          item.data.directoryId === null && !item.data.path.includes("v.1")
-      )
+    const filteredData = directoriesData.data
+      .filter((item) => item.data.directoryId === null)
       .map((item) => ({ id: item.data.id, name: item.data.name })) // Extract only id and name
 
     const dir = "./src/data/crowdin"
@@ -61,14 +54,22 @@ async function filterDirectoriesAndSave(directoriesData) {
     console.log(
       "Filtered directory data saved to translation-buckets-dirs.json"
     )
-  } catch (error) {
-    console.error("Error filtering and saving directories:", error)
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Error filtering and saving directories:", error.message)
+    }
   }
 }
 
-async function getAndSaveDirectories() {
-  const directoriesData = await getDirectories()
-  filterDirectoriesAndSave(directoriesData)
+async function getAndSaveDirectories(): Promise<void> {
+  try {
+    const directoriesData = await getDirectories()
+    await filterDirectoriesAndSave(directoriesData)
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Error in getAndSaveDirectories:", error.message)
+    }
+  }
 }
 
 export default getAndSaveDirectories

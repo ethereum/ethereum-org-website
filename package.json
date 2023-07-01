@@ -11,6 +11,7 @@
     "@apollo/client": "^3.3.13",
     "@chakra-ui/gatsby-plugin": "^3.0.1",
     "@chakra-ui/react": "^2.2.8",
+    "@crowdin/crowdin-api-client": "^1.23.2",
     "@docsearch/react": "^3.3.3",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",

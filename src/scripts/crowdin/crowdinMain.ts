@@ -3,15 +3,16 @@ import getDirectoryIds from "./getDirectoryIds"
 import { getTranslatedMarkdownPaths } from "../markdownChecker"
 import fetchAndSaveFileIds from "./fetchAndSaveFileIds"
 import fetchTranslationCostsReport from "./reports/fetchTranslationCostsReport"
+import getCrowdinCode from "../../utils/getCrowdinCode"
 import fs from "fs"
 import path from "path"
 
 async function main() {
   await getAndSaveDirectories()
   const directoryIds = getDirectoryIds()
-  await fetchAndSaveFileIds(directoryIds)
-  const translatedMarkdownPaths = await getTranslatedMarkdownPaths()
-  await generateReports(translatedMarkdownPaths)
+  // await fetchAndSaveFileIds(directoryIds)
+  // const translatedMarkdownPaths = await getTranslatedMarkdownPaths()
+  // await generateReports(translatedMarkdownPaths)
 }
 
 async function generateReports(translatedMarkdownPaths) {
@@ -24,11 +25,15 @@ async function generateReports(translatedMarkdownPaths) {
     // console.log(lang)
     // console.log(fileIds)
     // For each file ID...
+
+    // The CrowdinCode is often different from what we use in our repo
+    const crowdinLangCode = await getCrowdinCode(lang)
+
     for (const fileId of fileIds) {
       // If a file ID was found...
       if (fileId !== null) {
         // Generate the report
-        await fetchTranslationCostsReport(fileId, lang)
+        // await fetchTranslationCostsReport(fileId, crowdinLangCode);
       } else {
         console.log("Error: No file ID found for one of the paths")
       }
@@ -60,7 +65,7 @@ async function findFileIdsByPaths(paths, lang) {
       )
 
       if (!pathToIdMap[normalizedPath]) {
-        // console.warn(`Lang ${lang}, NULL ID:`, normalizedPath)
+        console.warn(`Lang ${lang}, NULL ID:`, normalizedPath)
         return null
       }
 
