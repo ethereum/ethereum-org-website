@@ -10,13 +10,14 @@ import path from "path"
 async function main() {
   await getAndSaveDirectories()
   const directoryIds = getDirectoryIds()
-  // await fetchAndSaveFileIds(directoryIds)
-  // const translatedMarkdownPaths = await getTranslatedMarkdownPaths()
-  // await generateReports(translatedMarkdownPaths)
+  await fetchAndSaveFileIds(directoryIds)
+  const translatedMarkdownPaths = await getTranslatedMarkdownPaths()
+  await generateReports(translatedMarkdownPaths)
 }
 
 async function generateReports(translatedMarkdownPaths) {
   for (let lang in translatedMarkdownPaths) {
+    // break into function
     const fileIds = await findFileIdsByPaths(
       translatedMarkdownPaths[lang],
       lang
@@ -33,7 +34,7 @@ async function generateReports(translatedMarkdownPaths) {
       // If a file ID was found...
       if (fileId !== null) {
         // Generate the report
-        // await fetchTranslationCostsReport(fileId, crowdinLangCode);
+        await fetchTranslationCostsReport(fileId, crowdinLangCode)
       } else {
         console.log("Error: No file ID found for one of the paths")
       }
