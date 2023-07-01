@@ -38,10 +38,11 @@ Cerchi un portafoglio Ethereum? [Esplora il nostro elenco completo di portafogli
 
 La costruzione può essere difficile. Ecco alcuni spazi focalizzati sullo sviluppo, con sviluppatori Ethereum esperti che sono felici di aiutarti.
 
+- [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
-- [Università Web3](https://www.web3.university/)
+- [Web3 University](https://www.web3.university/)
 
 Puoi anche trovare la documentazione e le guide di sviluppo nella nostra sezione [risorse per sviluppatore Ethereum](/developers/).
 

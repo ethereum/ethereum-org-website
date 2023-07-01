@@ -351,5 +351,6 @@ Decentraland 是一款虚拟现实游戏，甚至允许玩家购买代表虚拟�
 - [您需要了解的元宇宙](https://foundation.app/blog/enter-the-metaverse) - _Foundation 团队，foundation.app_
 - [CryptoArtists 没有危害地球](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [以太坊的能源消耗](/energy-consumption/)
+- [以太坊非同质化代币应用程序接口](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
 <QuizWidget quizKey="nfts" />

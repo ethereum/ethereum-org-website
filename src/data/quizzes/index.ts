@@ -8,31 +8,31 @@ const quizzes: RawQuizzes = {
     questions: ["a001", "a002", "a003", "a004", "a005"],
   },
   "what-is-ether": {
-    title: "page-what-is-ethereum-what-is-ether",
+    title: "what-is-ether",
     questions: ["b001", "b002", "b003", "b004"],
   },
   web3: {
-    title: "what-is-web3",
+    title: "web3",
     questions: ["c001", "c002", "c003", "c004", "c005"],
   },
   wallets: {
-    title: "what-is-a-wallet",
+    title: "wallets",
     questions: ["d001", "d002", "d003", "d004"],
   },
   security: {
-    title: "security",
+    title: "ethereum-security",
     questions: ["e001", "e002", "e003", "e004", "d003"],
   },
   nfts: {
-    title: "what-are-nfts",
+    title: "nft-page",
     questions: ["f001", "f002", "f003", "f004", "f005"],
   },
   "layer-2": {
-    title: "using-layer-2",
+    title: "layer-2",
     questions: ["g001", "g002", "g003", "g004"],
   },
   merge: {
-    title: "what-is-the-merge",
+    title: "page-assets-merge",
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
 }

@@ -63,7 +63,7 @@ A taxa base é calculada por uma fórmula que compara o tamanho do bloco anterio
 | 7               |          30M |           12,5% |      180,2 gwei |
 | 8               |          30M |           12,5% |      202,7 gwei |
 
-Em relação ao mercado de leilão de gás antes da atualização London, essa mudança no mecanismo de taxa de transação faz com que a previsão de taxa seja mais confiável. Conforme a tabela acima, para criar uma transação no bloco número 9, uma carteira informará o usuário que a **taxa base máxima** a ser adicionada ao próximo bloco é a `taxa base atual * 112,5%` ou `202,7 gwei * 112,5% = 228,1 gwei`.
+Em relação ao mercado de leilão de gás antes da atualização London, essa mudança no mecanismo de taxa de transação faz com que a previsão de taxa seja mais confiável. Conforme a tabela acima, para criar uma transação no bloco número 9, uma carteira informará o usuário que a **taxa base máxima** a ser adicionada ao próximo bloco é `taxa base atual * 12,5%` ou `202,7 gwei * 12,5% = 228,1 gwei`.
 
 Também é importante notar que é improvável que vejamos picos prolongados de blocos cheios devido à velocidade com que a taxa base aumenta após um bloco cheio.
 
@@ -123,7 +123,7 @@ O preço do gás por si só não determina realmente quanto temos de pagar por u
 
 ## Iniciativas para reduzir os custos do gás {#initiatives-to-reduce-gas-costs}
 
-As [atualizações de escalabilidade](/roadmap/) do Ethereum deverão em última análise resolver algumas das questões de taxas de gás, o que, por sua vez, permitirá que a plataforma processe milhares de transações por segundo e escale globalmente.
+As [atualizações de escalabilidade](/roadmap/) do Ethereum deverão em última análise resolver algumas das questões de taxas de gás que, por sua vez, permitirá que a plataforma processe milhares de transações por segundo e escale globalmente.
 
 A escalabilidade da camada 2 é uma iniciativa primária para melhorar significativamente os custos do gás, a experiência do usuário e a escalabilidade. [Mais sobre a escalabilidade de camada 2](/developers/docs/scaling/#layer-2-scaling).
 

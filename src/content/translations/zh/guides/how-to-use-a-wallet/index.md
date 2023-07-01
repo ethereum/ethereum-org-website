@@ -79,7 +79,7 @@ lang: zh
 
 ### 我还没有收到应收的加密货币，在哪可以查看交易状态？
 
-你可以使用[区块链浏览器](https://ethereum.org/en/developers/docs/data-and-analytics/block-explorers/)实时查看任何交易的状态。 你仅需搜索你的钱包地址或交易 ID。
+你可以使用[区块链浏览器](/developers/docs/data-and-analytics/block-explorers/)实时查看任何交易的状态。 你仅需搜索你的钱包地址或交易 ID。
 
 ### 我可以取消或回滚交易吗？
 

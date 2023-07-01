@@ -52,10 +52,11 @@ export const TriangleSVG: React.FC<IProps> = ({
     return (
       <chakra.circle
         fill={
-          (isActive && (isEthereum ? "primary300" : "primary")) || "background"
+          (isActive && (isEthereum ? "primary300" : "primary.base")) ||
+          "background.base"
         }
         _hover={{
-          fill: isActive ? "primary" : "primary100",
+          fill: isActive ? "primary.base" : "primary100",
         }}
         {...rest}
       />
@@ -113,7 +114,7 @@ export const TriangleSVG: React.FC<IProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       height="620px"
       viewBox="-100 100 850 915"
-      fill="background"
+      fill="background.base"
       width={{ base: "full", lg: "auto" }}
       my={{ base: -28, sm: -16, lg: 0 }}
       mt={{ lg: 32 }}

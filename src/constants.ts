@@ -1,3 +1,5 @@
+export const SITE_URL = "https://ethereum.org" as const
+export const DISCORD_PATH = "/discord/" as const
 export const GATSBY_FUNCTIONS_PATH = process.env.GATSBY_FUNCTIONS_PATH || "/api"
 
 // Quiz Hub

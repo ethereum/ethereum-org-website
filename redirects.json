@@ -256,10 +256,6 @@
     "toPath": "/en/roadmap"
   },
   {
-    "fromPath": "/quizzes",
-    "toPath": "/en/quizzes/"
-  },
-  {
     "fromPath": "/*/upgrades",
     "toPath": "/:splat/roadmap"
   },
@@ -342,9 +338,5 @@
   {
     "fromPath": "/*/staking/withdraws",
     "toPath": "/:splat/staking/withdrawals/"
-  },
-  {
-    "fromPath": "/*/writing-cohort",
-    "toPath": "https://ethereumwriterscohort.carrd.co/"
   }
 ]

@@ -44,7 +44,7 @@ Before the Shanghai/Capella upgrade, you couldn't use or access your staked ETH.
 Providing a withdrawal address is a required step for any validator account before it will be eligible to have ETH withdrawn from its balance.
 
 <InfoBanner emoji="⚠️" isWarning>
-  <strong>Each validator account can only be assigned a single withdrawal address, one time.</strong> Once an address is chosen and submitted to the Beacon Chain, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
+  <strong>Each validator account can only be assigned a single withdrawal address, one time.</strong> Once an address is chosen and submitted to the consensus layer, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
 </InfoBanner>
 
 There is <strong>no threat to your funds in the meantime</strong> for not providing this, assuming your mnemonic/seed phrase has remained safe offline, and has not been compromised in any way. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
@@ -53,7 +53,7 @@ There is <strong>no threat to your funds in the meantime</strong> for not provid
 
 Providing a withdrawal address is required before _any_ funds can be transferred out of a validator account balance.
 
-Users looking to exit staking entirely and withdraw their full balance back must also sign and broadcast a "voluntary exit" message with validator keys which will start the process of exiting from staking. This is done with your validator client and submitted to your beacon node, and does not require gas.
+Users looking to exit staking entirely and withdraw their full balance back must also sign and broadcast a "voluntary exit" message with validator keys which will start the process of exiting from staking. This is done with your validator client and submitted to your consensus node, and does not require gas.
 
 The process of a validator exiting from staking takes variable amounts of time, depending on how many others are exiting at the same time. Once complete, this account will no longer be responsible for performing validator network duties, is no longer eligible for rewards, and no longer has their ETH "at stake". At this time the account will be marked as fully “withdrawable”.
 
@@ -84,7 +84,7 @@ When a validator is scheduled to propose the next block, it is required to build
 
 <InfoBanner emoji="🕛">
 Think about an analogue clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.<br/><br/>
-Now instead of 1 through 12, imagine the clock has 0 through N <em>(the total number of validator accounts that have ever been registered on the Beacon Chain, over 500,000 as of Jan 2023).</em><br/><br/>
+Now instead of 1 through 12, imagine the clock has 0 through N <em>(the total number of validator accounts that have ever been registered on the consensus layer, over 500,000 as of Jan 2023).</em><br/><br/>
 The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning.
 </InfoBanner>
 

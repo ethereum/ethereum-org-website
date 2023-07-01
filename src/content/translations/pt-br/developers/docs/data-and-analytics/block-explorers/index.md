@@ -21,6 +21,8 @@ Você deve entender os conceitos básicos do Ethereum; para que você possa ente
 - [Ethplorer](https://ethplorer.io/) -_ Também disponível em chinês, espanhol, francês, turco, russo, coreano e vietnamita_
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
+- [Sirato](https://www.web3labs.com/sirato)
+- [EthVM](https://www.ethvm.com/)
 
 ## Dados {#data}
 
