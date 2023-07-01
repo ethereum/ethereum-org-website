@@ -38,6 +38,7 @@ Vous êtes à la recherche d'un portefeuille Ethereum ? [Explorez notre liste co
 
 Le développement d'une application décentralisée peut être difficile. Voici quelques espaces axés sur leur création, avec des développeurs Ethereum chevronnés qui seront heureux de vous faire part de leur expérience.
 
+- [Alchemy University](https://university.alchemy.com/#starter_code)
 - [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)

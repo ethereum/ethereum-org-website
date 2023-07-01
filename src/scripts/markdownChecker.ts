@@ -108,6 +108,7 @@ interface MatterData {
   published: Date
   sidebar: string
   skill: string
+  emoji: string
 }
 
 function processFrontmatter(path: string, lang: string): void {
@@ -127,6 +128,12 @@ function processFrontmatter(path: string, lang: string): void {
     console.error(
       `Invalid 'lang' frontmatter at ${path}: Expected: ${lang}'. Received: ${frontmatter.lang}.`
     )
+  }
+
+  if (frontmatter.emoji) {
+    if (!/^:\S+:$/.test(frontmatter.emoji)) {
+      console.error(`Frontmatter for 'emoji' is invalid at ${path}`)
+    }
   }
 
   if (frontmatter.sidebar) {

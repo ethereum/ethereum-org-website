@@ -31,7 +31,7 @@ Rollups post commitments to their transaction data on-chain and also make the ac
 
 ### How is blob data verified? {#how-are-blobs-verified}
 
-Rollups post the transactions they execute in data blobs. They also post a "commitment" to the data. They do this by fitting a polynomial function to the data. This function can then be evaluated at various points. For example, if we define an extremely simply function `f(x) = 2x-1` then we can evaluate this function for `x = 1`, `x = 2`, `x = 3` giving the results `1, 3, 5`. A prover applies the same function to the data and evaluates it at the same points. If the original data is changed, the function will not be identical, and therefore neither are the values evaluated at each point. In reality, the commitment and proof are more complicated because they are wrapped in cryptographic functions.
+Rollups post the transactions they execute in data blobs. They also post a "commitment" to the data. They do this by fitting a polynomial function to the data. This function can then be evaluated at various points. For example, if we define an extremely simple function `f(x) = 2x-1` then we can evaluate this function for `x = 1`, `x = 2`, `x = 3` giving the results `1, 3, 5`. A prover applies the same function to the data and evaluates it at the same points. If the original data is changed, the function will not be identical, and therefore neither are the values evaluated at each point. In reality, the commitment and proof are more complicated because they are wrapped in cryptographic functions.
 
 ### What is KZG? {#what-is-kzg}
 
