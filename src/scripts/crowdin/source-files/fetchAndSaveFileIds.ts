@@ -4,7 +4,7 @@ import path from "path"
 import { SourceFilesModel, ResponseObject } from "@crowdin/crowdin-api-client"
 
 import { CROWDIN_PROJECT_ID, CROWDIN_API_MAX_LIMIT } from "../../../constants"
-import crowdinClient from "../crowdinClient"
+import crowdinClient from "../api-client/crowdinClient"
 
 const { sourceFilesApi } = crowdinClient
 

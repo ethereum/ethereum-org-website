@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import { SourceFilesModel, ResponseList } from "@crowdin/crowdin-api-client"
 
-import crowdinClient from "../crowdinClient"
+import crowdinClient from "../api-client/crowdinClient"
 const { sourceFilesApi } = crowdinClient
 
 // Constants

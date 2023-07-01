@@ -3,7 +3,7 @@ import axios, { AxiosResponse } from "axios"
 
 import { ReportsModel } from "@crowdin/crowdin-api-client"
 
-import crowdinClient from "../crowdinClient"
+import crowdinClient from "../api-client/crowdinClient"
 import {
   CROWDIN_PROJECT_ID,
   FIRST_CROWDIN_CONTRIBUTION_DATE,
