@@ -9,6 +9,7 @@ import {
   FIRST_CROWDIN_CONTRIBUTION_DATE,
 } from "../../../constants"
 import { findFileIdsByPaths } from "../utils"
+import getCrowdinCode from "../../../../src/utils/getCrowdinCode"
 
 const { reportsApi } = crowdinClient
 

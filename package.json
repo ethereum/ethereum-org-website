@@ -132,7 +132,7 @@
     "generate-heading-ids": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/generateHeadingIds.ts",
     "unused-translations": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/unusedTranslations.ts",
     "reorg-intl": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/reorgIntlFiles.ts",
-    "crowdin-test": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/crowdinMain.ts",
+    "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts",
     "start": "gatsby develop",
     "start:lambda": "netlify-lambda serve src/lambda",
     "start:static": "gatsby build && gatsby serve",
