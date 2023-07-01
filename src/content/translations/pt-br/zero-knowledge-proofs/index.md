@@ -172,7 +172,7 @@ Assim, mesmo sem compartilhar a divisão dos votos por usuário (como costuma ac
 - Alice mostra a Bob uma transação que mostra que ela votou a favor da `opção B` (que é inválida já que a chave pública não está mais associada à identidade de Alice no sistema).
 - Ao processar mensagens, o coordenador ignora o voto de Alice para a `opção B` e conta apenas o voto na `opção A`. Assim, a tentativa de Bob de fazer conluio com Alice e manipular o voto em cadeia falha.
 
-O uso da MACI _não_ exige que o coordenador não seja conivente com subornos ou tente subornar os próprios eleitores. O coordenador pode descriptografar as mensagens do usuário (necessário para criar a prova), para que ele possa verificar com precisão como cada pessoa votou.
+O uso do MACI _faz_ requer confiança no coordenador para não conspirar com subornos ou tentativas de suborno dos próprios eleitores. O coordenador pode descriptografar as mensagens do usuário (necessário para criar a prova), para que ele possa verificar com precisão como cada pessoa votou.
 
 Porém, nos casos em que o coordenador seja honesto, a MACI representa uma ferramenta poderosa para garantir a inviolabilidade da votação em cadeia. Isso explica sua popularidade entre as aplicações de financiamento quadrático (por exemplo, [clr.fund](https://clr.fund/#/about/maci)) que dependem fortemente da integridade das escolhas de voto de cada indivíduo.
 

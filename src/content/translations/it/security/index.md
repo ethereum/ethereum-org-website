@@ -55,8 +55,8 @@ Ricordare password forti e univoche per ogni tuo conto, non è ideale. Un gestor
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
-- [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
+- O date un'occhiata agli altri [gestori di password consigliati](https://www.privacytools.io/secure-password-manager)
 
 ### Usa l'autenticazione a due fattori {#two-factor-authentication}
 
@@ -137,7 +137,7 @@ Con lo screenshot delle tue frasi seed o delle chiavi private, rischi di sincron
 
 ### Usa un portafoglio hardware {#use-hardware-wallet}
 
-Un portafoglio hardware fornisce spazio offline per le chiavi private. Sono considerati l'opzione di portafoglio più sicura per memorizzare le chiavi private.
+Un portafoglio hardware fornisce spazio offline per le chiavi private. Sono considerati l'opzione del portafoglio più sicura per memorizzare le chiavi private: la chiave privata non tocca mai Internet e rimane completamente locale sul tuo dispositivo.
 
 Mantenere le chiavi private offline riduce massicciamente il rischio di essere violati, anche se un hacker ottiene il controllo del computer.
 
@@ -158,13 +158,13 @@ Interagendo con i contratti intelligenti, non consentire limiti di spesa illimit
 
 Molti portafogli di Ethereum offrono una protezione dei limiti per salvaguardarti dal prosciugamento dei conti.
 
-[Esplora portafogli con protezione dei limiti](/wallets/find-wallet/?filters=has_limits_protection)
+[Come revocare l'accesso dei contratti intelligenti ai tuoi fondi di criptovalute](/guides/how-to-revoke-token-access/)
 
 <Divider />
 
 ## Truffe comuni {#common-scams}
 
-I truffatori sono sempre alla ricerca di modi per toglierti i fondi. È impossibile fermare completamente i truffatori, ma possiamo renderli meno efficaci essendo consapevoli delle tecniche più utilizzate. Ci sono molte varianti di queste truffe, ma generalmente seguono gli stessi schemi di alto livello. Se non altro, ricorda:
+I truffatori sono sempre alla ricerca di modi per sottrarre illecitamente fondi. È impossibile fermare completamente i truffatori, ma possiamo renderli meno efficaci grazie a una maggiore consapevolezza delle tecniche più utilizzate. Esistono molte varianti di queste truffe, ma generalmente seguono gli stessi schemi generali. Se non altro, è bene ricordare:
 
 - sii sempre scettico/a
 - nessuno ti darà ETH gratis o scontati
@@ -174,17 +174,17 @@ I truffatori sono sempre alla ricerca di modi per toglierti i fondi. È impossib
 
 Una delle truffe più comuni in criptovaluta è la truffa del giveaway. La truffa del giveaway può assumere molte forme, ma la premessa generale è che se invii ETH all'indirizzo del portafoglio fornito, riceverai indietro il tuo ETH ma raddoppiato. *Per questa ragione è conosciuta anche come la truffa del 2 per 1.*
 
-Queste truffe di solito prevedono un periodo limitato di opportunità per richiedere l'omaggio incoraggiando un processo decisionale scadente e creare un falsa senso di urgenza.
+Queste truffe di solito prevedono un periodo limitato di opportunità per richiedere l'omaggio incoraggiando un processo decisionale scadente e creare un falso senso di urgenza.
 
 #### Hack dei social media {#social-media-hacks}
 
-A luglio 2020 si è verificata una simile versione ad alto profilo, quando i profili di Twitter di celebrità e organizzazioni prominenti, sono stati violati. L'hacker ha pubblicato simultaneamente un giveaway di Bitcoin sui conti violati. Sebbene i tweet ingannevoli siano stati rapidamente notati ed eliminati, gli hacker riuscirono comunque a farla franca con un'estorsione del valore di 11 bitcoin (o $500.000 a settembre 2021).
+A luglio 2020 si è verificata una simile versione di alto profilo, quando sono stati violati i profili di Twitter di celebrità e organizzazioni importanti. L'hacker ha pubblicato simultaneamente un giveaway di Bitcoin sui conti violati. Sebbene i tweet ingannevoli siano stati rapidamente notati ed eliminati, gli hacker sono comunque riusciti a farla franca con un'estorsione del valore di 11 bitcoin (o $500.000 a settembre 2021).
 
 ![Una truffa su Twitter](./appleTwitterScam.png)
 
 #### Dono di celebrità {#celebrity-giveaway}
 
-Il giveaway di celebrità è un altro dei più comuni tipi di truffa del giveaway. I truffatori, utilizzando un'intervista video registrata o una conferenza di una celebrità, la trasmettono in streaming live su YouTube, facendo credere che la celebrità in questione stia promuovendo in diretta un giveaway di criptovalute.
+Il giveaway di celebrità è un altro dei più comuni tipi di truffa del giveaway. I truffatori, utilizzando un'intervista video registrata o la conferenza di una celebrità, la trasmettono in streaming live su YouTube, facendo credere che la celebrità in questione stia promuovendo in diretta un giveaway di criptovalute.
 
 Vitalik Buterin è la celebrità più sfruttata per questa truffa, ma vengono usate anche molte altre persone importanti coinvolte nelle criptovalute (ad esempio Elon Musk o Charles Hoskinson). L'inclusione di una persona nota dà allo streaming live dei truffatori un senso di legittimità (sembra strano, ma se ne parla Vitalik, dovrebbe essere tutto ok).
 
@@ -194,7 +194,7 @@ Vitalik Buterin è la celebrità più sfruttata per questa truffa, ma vengono us
 
 ### Truffe del finto addetto al supporto {#support-scams}
 
-Le criptovalute sono una tecnologia relativamente giovane e incompresa. Una truffa comune che sfrutta tale caratteristica è quella dei finti addetti al supporto: i truffatori fingono di essere addetti al supporto di portafogli, piattaforme di scambio o blockchain popolari.
+Le criptovalute sono una tecnologia relativamente giovane e incompresa. Una truffa comune che sfrutta tale caratteristica è quella dei finti operatori del servizio clienti: i truffatori fingono di essere operatori del servizio clienti per portafogli, piattaforme di scambio o blockchain popolari.
 
 Gran parte delle discussioni su Ethereum avviene su Discord. I finti addetti al supporto tecnico cercano di solito la propria vittima tra gli utenti che hanno inviato domande al supporto nei canali Discord pubblici e poi inviano a tali utenti un messaggio privato offrendo assistenza. Costruendo la fiducia, i finti addetti al supporto cercano di indurti a rivelare le tue chiavi private o a inviare i tuoi fondi ai loro portafogli.
 
@@ -214,7 +214,7 @@ Come regola generale, il personale non comunicherà mai con te attraverso canali
 
 ### Truffa del token "Eth2" {#eth2-token-scam}
 
-Nella corsa a [La Fusione](/roadmap/merge/), i truffatori hanno approfittato della confusione sul termine 'Eth2' per provare a convincere gli utenti a riscattare i propri ETH per un token 'ETH2'. Non esiste alcun 'ETH2' e non è stato introdotto alcun altro token legittimo con La Fusione. Gli ETH che possedevi prima de La Fusione, sono gli stessi ETH adesso. **Non serve intraprendere alcuna azione correlata ai tuoi ETH per tenere conto del passaggio dal proof-of-work al proof-of-stake**.
+Nella corsa alla [Fusione](/roadmap/merge/), i truffatori hanno approfittato della confusione sul termine 'Eth2' per provare a convincere gli utenti a riscattare i propri ETH per un token 'ETH2'. Non esiste alcun 'ETH2' e non è stato introdotto alcun altro token legittimo con La Fusione. Gli ETH che possedevi prima de La Fusione, sono gli stessi ETH adesso. **Non serve intraprendere alcuna azione correlata ai tuoi ETH per tenere conto del passaggio dal proof-of-work al proof-of-stake**.
 
 I truffatori potrebbero apparire sotto forma di "supporto", dicendoti che se depositi i tuoi ETH, riceverai degli 'ETH2' in cambio. Non esiste alcun [supporto ufficiale di Ethereum](/community/support/) e non esiste alcun nuovo token. Non condividere mai la frase di seed del tuo portafoglio con nessuno.
 
@@ -224,9 +224,9 @@ _Nota: esistono token/ticker derivativi che potrebbero rappresentare ETH in stak
 
 Le truffe di phishing sono un altro metodo sempre più comune che i truffatori utilizzeranno, per tentare di rubare i fondi del tuo portafoglio.
 
-Alcune email di phishing chiedono agli utenti di cliccare su link che li reindirizzeranno a siti web falsi, chiedendo loro di inserire la loro frase di seed, ripristinare la loro password o di inviare ETH. Gli altri potrebbero chiederti di installare inconsapevolmente un malware, per infettarti il computer e dare accesso ai file del tuo computer ai truffatori.
+Alcune e-mail di phishing chiedono agli utenti di cliccare su link che li reindirizzeranno a siti web falsi, chiedendo loro di inserire la loro frase di seed, ripristinare la loro password o di inviare ETH. Altri potrebbero chiederti di installare inconsapevolmente un malware, per infettarti il computer e dare accesso ai file del tuo computer ai truffatori.
 
-Se ricevi un'email da un mittente sconosciuto, ricorda:
+Se ricevi un'e-mail da un mittente sconosciuto, ricorda:
 
 - Non aprire mai un link o un allegato da indirizzi e-mail che non riconosci
 - Non divulgare mai le tue informazioni personali o password a nessuno
@@ -240,13 +240,13 @@ Le truffe dei broker di trading di criptovalute affermano di esser broker specia
 
 Questi broker fraudolenti trovano le proprie vittime usando profili YouTube falsi per creare conversazioni apparentemente naturali sul broker. Queste conversazioni, spesso, sono molto votate positivamente, per aumentarne la legittimità, sebbene i voti positivi provengano tutti da bot.
 
-**Non fidarti degli sconosciuti su Internet che desiderano investire per tuo conto. Perderai le tue criptovalute.**
+**Non fidarti degli sconosciuti su Internet che vogliono investire per tuo conto. Perderai le tue criptovalute.**
 
 ![Una truffa del broker di trading su YouTube](./brokerScam.png)
 
 ### Truffe dei pool di mining di criptovalute {#mining-pool-scams}
 
-Da settembre 2022, il mining su Ethereum non è più possibile. Tuttavia, le truffe dei pool di mining continuano a esistere. Le truffe dei pool di mining coinvolgono persone che ti contattano senza esser sollecitati e che affermano che tu possa ricevere grandi introiti unendoti a un pool di mining di Ethereum. Il truffatore farà affermazioni e rimarrà in contatto con te per tutto il tempo necessario. Essenzialmente, il truffatore proverà a convincerti che se ti unisci a un pool di mining di Ethereum, la tua criptovaluta sarà usata per creare ETH e che riceverai dei dividendi sotto forma di ETH. Alla fine, noterai che la tua criptovaluta avrà scarsi rendimenti. Ciò, semplicemente, serve per invogliarti a investire di più. Infine, tutti i tuoi fondi saranno inviati a un indirizzo sconosciuto e il truffatore scomparirà o, in alcuni casi, continuerà a rimanere in contatto, come successo in un caso recente.
+Da settembre 2022, il mining su Ethereum non è più possibile. Tuttavia, le truffe dei pool di mining continuano a esistere. Le truffe dei pool di mining coinvolgono persone che ti contattano di propria iniziativa e che affermano che potrai ricevere grandi introiti unendoti a un pool di mining di Ethereum. Il truffatore farà affermazioni e rimarrà in contatto con te per tutto il tempo necessario. Essenzialmente, il truffatore proverà a convincerti che se ti unisci a un pool di mining di Ethereum, la tua criptovaluta sarà usata per creare ETH e che riceverai dei dividendi sotto forma di ETH. Alla fine, noterai che la tua criptovaluta avrà scarsi rendimenti. Questo serve solo a invogliarti a investire di più. Infine, tutti i tuoi fondi saranno inviati a un indirizzo sconosciuto e il truffatore scomparirà o, in alcuni casi, continuerà a rimanere in contatto, come successo in un caso recente.
 
 In conclusione, diffida delle persone che ti contattano sui social, chiedendoti di far parte di un pool di mining. Una volta perse le tue criptovalute, non potrai fare nulla.
 
@@ -260,7 +260,7 @@ Alcune cose da ricordare:
 
 ### Truffe airdrop {#airdrop-scams}
 
-Le truffe di Airdrop prevedono un falso progetto di airdropping di una risorsa (NFT, token) nel tuo portafoglio e ti inviano a un sito web di truffa per rivendicare la risorsa in questione. Ti sarà richiesto di accedere con il tuo portafoglio di Ethereum e di "approvare" una transazione tentando di reclamare. Questa transazione compromette il tuo conto inviando la tua chiave pubblica e privata al truffatore. Una forma alternativa di questa truffa potrebbe chiederti di confermare una transazione che invia fondi al conto del truffatore.
+Le truffe di Airdrop prevedono un falso progetto di airdropping di una risorsa (NFT, token) nel tuo portafoglio e ti inviano a un sito web di truffa per rivendicare la risorsa in questione. Ti sarà chiesto di accedere con il tuo portafoglio di Ethereum e di "approvare" una transazione tentando di reclamare. Questa transazione compromette il tuo conto inviando la tua chiave pubblica e privata al truffatore. Una forma alternativa di questa truffa potrebbe chiederti di confermare una transazione che invia fondi al conto del truffatore.
 
 [Maggiori informazioni sulle truffe di airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
@@ -287,3 +287,5 @@ Le truffe di Airdrop prevedono un falso progetto di airdropping di una risorsa (
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Evitare le Truffe](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Discussione di Twitter sulle email e i messaggi di phishing di criptovalute comuni](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+
+<QuizWidget quizKey="security" />
