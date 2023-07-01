@@ -1,7 +1,7 @@
 import getAndSaveDirectories from "./source-files/fetchAndSaveDirectories"
 import getDirectoryIds from "./getDirectoryIds"
 import { getTranslatedMarkdownPaths } from "../markdownChecker"
-import fetchAndSaveFileIds from "./fetchAndSaveFileIds"
+import fetchAndSaveFileIds from "./source-files/fetchAndSaveFileIds"
 import fetchTranslationCostsReport from "./reports/fetchTranslationCostsReport"
 import getCrowdinCode from "../../utils/getCrowdinCode"
 import fs from "fs"
