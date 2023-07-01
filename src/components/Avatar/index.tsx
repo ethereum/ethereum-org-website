@@ -42,14 +42,15 @@ const Avatar = forwardRef<AvatarLinkProps, "div" | "a">((props, ref) => {
   if (label) {
     const _direction: "column-reverse" | "row-reverse" = `${direction}-reverse`
     return (
-      <LinkBox as={Center} ref={ref} flexDirection={_direction} gap={1}>
+      <LinkBox as={Center} ref={ref} flexDirection={_direction} columnGap="1">
         <LinkOverlay
           as={Link}
           data-peer
           display="inline-flex"
           textDecoration="none"
           alignItems="center"
-          gap={1}
+          gap="1"
+          p="1"
           fontSize={size !== "md" ? "12px" : "14px"}
           zIndex="overlay"
           {...linkProps}
