@@ -4,10 +4,10 @@ import { Box, chakra, Flex, Text } from "@chakra-ui/react"
 
 import { StyledSelect as Select } from "../SharedStyledComponents"
 import ButtonLink from "../ButtonLink"
-import Emoji from "../OldEmoji"
 import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
+import { FaTools } from "react-icons/fa"
 
 const StyledSelect = chakra(Select, {
   baseStyle: {
@@ -90,8 +90,8 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           to="#node-and-client-tools"
           variant="outline"
           width={{ base: "full", md: "auto" }}
+          leftIcon={<FaTools />}
         >
-          <Emoji text="🛠" mr="1rem" />
           <Translation id="page-staking-launchpad-widget-link" />
         </ButtonLink>
       </Box>

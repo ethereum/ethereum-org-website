@@ -1,145 +1,145 @@
 ---
 title: Organizzazioni autonome decentralizzate (DAO)
-description: Una panoramica dei DAO su Ethereum
+description: Una panoramica delle DAO su Ethereum
 lang: it
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 3
 image: ../../../../assets/use-cases/dao-2.png
-alt: Rappresentazione di una votazione DAO su una proposta.
-summaryPoint1: Comunità di proprietà dei membri senza leadership centralizzata.
+alt: Una rappresentazione di una votazone DAO su una proposta.
+summaryPoint1: Comunità possedute dai membri, prive di leadership centralizzata.
 summaryPoint2: Un modo sicuro per collaborare con sconosciuti su Internet.
 summaryPoint3: Un luogo sicuro per impegnare fondi in una causa specifica.
 ---
 
 ## Cosa sono le DAO? {#what-are-daos}
 
-Con il termine DAO si intende una organizzazione di proprietà collettiva governata da blockchain che lavora per realizzare una missione condivisa.
+Una DAO è un'organizzazione posseduta collettivamente e governata dalla blockchain, che opera per realizzare una missione condivisa.
 
-Le DAO permettono di lavorare con persone con la stessa mentalità provenienti da tutto il mondo doversi fidare di un leader benevolo per gestire i fondi o le operazioni. Non esiste alcun CEO che possa spendere i fondi secondo i propri capricci o un CFO che possa manipolare i libri contabili. Invece, le regole basate sulla blockchain integrate nel codice definiscono il funzionamento dell'organizzazione e come vengono spesi i fondi.
+Le DAO ci consentono di lavorare con persone dalla stessa mentalità in tutto il mondo, senza doversi fidare di un capo benevolo, per la gestione di fondi od operazioni. Non esiste alcun CEO che possa spendere fondi secondo i propri capricci, o CFO che possa manipolare i libri contabili. Invece, le regole basate sulla blockchain, integrate nel codice, definiscono il funzionamento dell'organizzazione e come sono spesi i fondi.
 
-Contengono al loro interno un patrimonio a cui nessuno ha l'autorità di accedere senza l'approvazione del gruppo. Le decisioni sono governate da proposte e votazioni per garantire che tutti nell'organizzazione abbiano voce in capitolo, e tutto si verifica in modo trasparente sulla catena.
+Contengono tesoriere integrate, a cui nessuno è autorizzato ad accedere, senza l'approvazione del gruppo. Le decisioni sono governate da proposte e votazioni, per assicurarsi che tutti nell'organizzazione abbiano voce in capitolo, e che tutto si verifichi in modo trasparente sulla catena.
 
-## Perché abbiamo bisogno delle DAO? {#why-dao}
+## Perché necessitiamo delle DAO? {#why-dao}
 
-Per avviare un'organizzazione con altre persone quando sono in ballo finanziamenti e denaro occorre riporre molta fiducia nei propri compagni di avventura. Ma è difficile fidarsi di qualcuno con cui hai interagito solo tramite Internet. Con le DAO non occorre fidarsi di nessun altro nel gruppo, bensì solamente del codice DAO, che è al 100% trasparente e verificabile da chiunque.
+Avviare un'organizzazione con altre persone, quando finanziamenti e denaro sono in ballo, richiede molta fiducia nelle persone con cui collabori. Ma fidarsi di qualcuno con cui ha interagito soltanto su Internet è difficile. Con le DAO non è necessario fidarsi di nessun altro nel gruppo, bensì, solamente del codice della DAO, trasparente al 100% e verificabile da chiunque.
 
-Ciò apre molte opportunità di cooperazione e coordinamento a livello globale.
+Ciò apre molte nuove opportunità di cooperazione e coordinmento globale.
 
 ### Un confronto {#dao-comparison}
 
-| DAO                                                                                                                         | Organizzazione tradizionale                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Di solito orizzontale e completamente democratizzata.                                                                       | Di solito gerarchica.                                                                                                         |
-| Votazione richiesta dai membri per l'implementazione di eventuali modifiche.                                                | A seconda della struttura, le modifiche possono essere richieste da una sola parte oppure sottoposte a votazione.             |
-| Conteggio dei voti e implementazione automatica del risultato senza intermediari.                                           | Se la votazione è consentita, i voti sono conteggiati internamente e l'esito della votazione deve essere gestito manualmente. |
-| I servizi offerti vengono gestiti automaticamente in modo decentralizzato (ad esempio distribuzione di fondi filantropici). | Richiede manipolazione umana o automazione controllata centralmente, suscettibile di manipolazione.                           |
-| Tutte le attività sono trasparenti e completamente pubbliche.                                                               | L'attività è tipicamente privata e limitata al pubblico.                                                                      |
+| DAO                                                                                                                          | Un'organizzazione tradizionale                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Soltamente orizzontale e interamente democraticizzata.                                                                       | Solitamente gerarchica.                                                                                                               |
+| Votazioni richieste dai membri per l'implementazione di qualsiasi modifica.                                                  | A seconda della struttura, le modifiche possono essere richieste da una sola parte, altrmenti potrebbe esser richiesta una votazione. |
+| Conteggio dei voti e implementazione automatica del risultato, senza intermediari.                                           | Se la votazione è consentita, i voti sono conteggiati internamente e il risultato dev'essere gestito manualmente.                     |
+| I servizi offerti sono automaticamente gestiti in modo decentralizzato (ad esempio, la distribuzione di fondi filantropici). | Richiede la gestione umana, o l'automazione controllata centralmente, suscettibile alla manipolazione.                                |
+| Tutte le attività sono trasparenti e interamente pubbliche.                                                                  | L'attività è tipicamente privata e limitata al pubblico.                                                                              |
 
 ### Esempi di DAO {#dao-examples}
 
 Per aiutarti a comprendere meglio, ecco alcuni esempi di come potresti utilizzare una DAO:
 
-- Beneficenza – potresti accettare donazioni da chiunque nel mondo e votare su quali cause finanziare.
-- Proprietà collettiva – potresti acquistare beni fisici o digitali e i membri possono votare su come usarli.
-- Iniziative e sovvenzioni – potresti creare un fondo di rischio che riunisce capitale di investimento e vota sulle iniziative da finanziare. Il denaro rimborsato potrebbe essere successivamente ridistribuito tra i membri del DAO.
+- Beneficenza: potresti accettare donazioni da chiunque nel mondo e votare su quali cause finanziare.
+- Proprietà collettiva: potresti acquistare beni fisici o digitali e, i membri, potrebbero votare su come utilizzarli.
+- Iniziative e sovvenzioni: potresti creare un fondo di rischio che raggruppi il capitale di investimento e votare sulle iniziative da finanziare. Il denaro rimborsato potrebbe essere in seguito redistribuito tra i membri della DAO.
 
-## Come funziona la DAO? {#how-daos-work}
+## Come funzionano le DAO? {#how-daos-work}
 
-La spina dorsale di una DAO è il suo contratto intelligente, che definisce le regole dell'organizzazione e detiene il patrimonio del gruppo. Una volta che il contratto è attivo su Ethereum, nessuno può modificare le regole se non tramite voto. Nessuno può fare qualcosa che non sia previsto dalle regole e dalla logica del codice. E poiché anche il patrimonio è definito dal contratto intelligente, ciò significa che nessuno può spendere il denaro senza l'approvazione del gruppo. Questo significa che le DAO non hanno bisogno di un'autorità centrale. Al contrario, il gruppo prende le decisioni collettivamente e i pagamenti sono autorizzati automaticamente quando le proposte sono approvate dal voto.
+La spina dorsale di una DAO è il suo contratto intelligente, che definisce le regole dell'organizzazione e ne detiene il patrimonio. Una volta che il contratto è attivo su Ethereum, nessuno può modificarne le regole, tranne tramite voto. Se qualcuno prova a fare qualcosa che non sia previsto dalle regole e dalla logica nel codice, fallirà. E poiché anche il patrimonio è definito dal contratto intelligente, ciò significa che nessuno può spendere denaro senza l'approvazione del gruppo. Ciò significa che le DAO non necessitano di un'autorità centrale. Invece, il gruppo prende le decisioni collettivamente, e i pagamenti sono autorizzati automaticamente all'approvazione del voto.
 
-Ciò è possibile perché i contratti intelligenti sono a prova di manomissione, una volta che sono attivi su Ethereum. Non è possibile modificare il codice (le regole della DAO) senza che gli altri lo notino, perché tutto è pubblico.
+Ciò è possibile perché i contratti intelligenti sono a prova di manomissione, una volta attivi su Ethereum. Non puoi semplicemente modificare il codice (le regole delle DAO), senza che gli altri lo notino, poiché tutto è pubblico.
 
 <DocLink to="/smart-contracts/">
   Di più sui contratti intelligenti
 </DocLink>
 
-## Ethereum e DAO {#ethereum-and-daos}
+## Ethereum e le DAO {#ethereum-and-daos}
 
-Ethereum è la base perfetta per le DAO per una serie di motivi:
+Ethereum è la base perfetta per le DAO per numerose motivazioni:
 
-- Il consenso di Ethereum è sufficientemente distribuito e affermato affinché le organizzazioni possano fidarsi della rete.
-- Il codice del contratto intelligente non è modificabile una volta attivato, nemmeno dai suoi proprietari. Ciò permette alla DAO di funzionare secondo le regole con cui è stata programmata.
-- I contratti intelligenti possono inviare/ricevere fondi. In caso contrario occorrerebbe un intermediario fidato per gestire i fondi del gruppo.
-- La community di Ethereum si è dimostrata più collaborativa che competitiva, consentendo l'emergere rapido di migliori pratiche e sistemi di supporto.
+- Il consenso di Ethereum è sufficientemente distribuito e affermato affinché le organizzazioni si fidino della rete.
+- Il codice del contratto intelligente non è modificabile una volta attivato, nemmeno dai suoi proprietari. Ciò consente alla DAO di operare secondo le regole con cui è stata programmata.
+- I contratti intelligenti possono inviare e ricevere fondi. Altrimenti, necessiteresti di un intermediario fidato per gestire i fondi del gruppo.
+- La community di Ethereum si è dimostrata più collaborativa che competitiva, consentendo la rapida emersione delle migliori pratiche e dei sistemi di supporto.
 
 ## Governance della DAO {#dao-governance}
 
-Ci sono molte considerazioni da fare governando una DAO, ad esempio, come funzionano le votazioni e le proposte.
+Ci sono molte considerazioni governando una DAO, come il funzionamento di votazioni e proposte.
 
 ### Delegazione {#governance-delegation}
 
-Una delegazione è la versione della democrazia rappresentativa della DAO. I titolari di token delegano i voti agli utenti da loro stessi nominati e si impegnano a gestire il protocollo e a rimanere informati.
+Una delegazione è la versione della DAO, della democrazia rappresentativa. I titolari di token delegano i voti agli utenti, che si nominano e impegnano alla salvaguardia del protocollo e a rimanere informati.
 
 #### Un celebre esempio {#governance-example}
 
-[ENS](https://claim.ens.domains/delegate-ranking) – I titolari di ENS possono delegare i propri voti a membri impegnati della community perché li rappresentino.
+[ENS](https://claim.ens.domains/delegate-ranking): I titolari di ENS possono delegare i propri voti ai membri impegnati della community, affinché li rappresentino.
 
 ### Governance automatica delle transazioni {#governance-example}
 
-In molte DAO, le transazioni saranno eseguite automaticamente se un quorum dei membri vota in modo affermativo.
+In molte DAO, le transazioni saranno eseguite automaticamente se un quorum di membri vota in modo affermativo.
 
 #### Un celebre esempio {#governance-example}
 
-[Nouns](https://nouns.wtf) – Nelle DAO di Nouns, una transazione è eseguita automaticamente al raggiungimento di un quorum di voti e una maggioranza di voti affermativi, se non ha ricevuto veti dai fondatori.
+[Nouns](https://nouns.wtf): Nella DAO di Nouns, una transazione è eseguita automaticamente se è raggiunto un quorum di voti e una maggioranza vota in modo affermativo, se non ha ricevuto veti dai fondatori.
 
 ### Governance multifirma {#governance-example}
 
-Mentre le DAO potrebbero avere migliaia di membri votanti, i fondi possono vivere in un portafoglio condiviso da 5-20 membri attivi della community, ritenuti affidabili e solitamente doxxati (identità pubbliche note alla community). Dopo un voto, i firmatari multifirma eseguono la volontà della community.
+Mentre le DAO potrebbero avere migliaia di membri votati, i fondi possono risiedere in un portafoglio condiviso da 5-20 membri della community attivi, affidati e solitamente doxxati (identità pubbliche, note alla community). Dopo un voto, i firmatari multifirma eseguono la volontà della community.
 
 ## Leggi sulle DAO {#dao-laws}
 
-Nel 1977, il Wyoming inventò la LLC, che protegge gli imprenditori e ne limita le responsabilità. Più di recente, lo Stato è stato il pioniere della legge sulle DAO, che stabilisce lo status giuridico delle DAO. Al momento, Wyoming, Vermont e le Isole Vergini hanno una qualche forma di legge sulle DAO.
+Nel 1977, il Wyoming inventò la LLC, che protegge gli imprenditori e ne limita le responsabilità. Più di recente, lo Stato è stato il pioniere della legge sulle DAO, che ne stabilisce lo stato legale. Al momento, Wyoming, Vermont e Isole Vergini hanno una qualche forma di leggi sulle DAO.
 
 #### Un celebre esempio {#law-example}
 
-[CityDAO](https://citydao.io) – CityDao ha utilizzato la legge sulle DAO del Wyoming per acquistare 40 acri di terreno nei pressi del Parco Nazionale di Yellowstone.
+[CityDAO](https://citydao.io): Ha sfruttato la legge sulle DAO del Wyoming per acquistare 40 acri di terreno, nei pressi del Parco Nazionale di Yellowstone.
 
-## Aderire a una DAO {#dao-membership}
+## Adesione alla DAO {#dao-membership}
 
-Ci sono diversi modelli per aderire a una DAO. L'adesione può determinare come funziona il voto e altri aspetti chiave della DAO.
+Esistono diversi modelli per aderire a una DAO. L'adesione può determinare il funzionamento del voto e di altri aspetti chiave della DAO.
 
 ### Adesione basata su token {#token-based-membership}
 
-In genere è completamente senza permessi, a seconda del token utilizzato. Questi token di governance possono essere per lo più scambiati senza permessi su uno scambio decentralizzato. Altri, invece, devono esser guadagnati fornendo liquidità o altri tipi di "Proof of Work". In entrambi i casi, la semplice detenzione del token garantisce l'accesso al voto.
+Solitamente, completamente priva di permessi, a seconda del token utilizzato. Principalmente, tali token di governance sono scambiabili senza permessi su una piattaforma di scambio decentralizzata. Altri, invece, devono essere guadagnati fornendo liquidità o altri tipi di 'proof-of-work'. In entrambi i casi, semplicemente detenere il token concede l'accesso al voto.
 
-_Di solito usato per governare ampi protocolli decentralizzati e/o i token stessi._
+_Tipicamente utilizzato per governare ampi protocolli decentralizzati e/o gli stessi token._
 
 #### Un celebre esempio {#token-example}
 
-[MakerDAO](https://makerdao.com) – Il token MKR di MakerDAO è ampiamente disponibile sugli scambi decentralizzati e chiunque può acquistare il potere di voto sul futuro del protocollo di Maker.
+[MakerDAO](https://makerdao.com): Il token MKR di MakerDAO è ampiamente disponibile sulle piattaforme di scambio decentralizzate e chiunque può acquistarne per avere potere di voto sul futuro del protocollo di Maker.
 
 ### Adesione basata su quote {#share-based-membership}
 
-I DAO basati su quote sono maggiormente soggetti a permessi, ma comunque abbastanza aperti. Tutti i potenziali membri possono inviare una proposta di adesione alla DAO, solitamente offrendo un tributo di qualche valore sotto forma di token o di lavoro. Le quote rappresentano il potere di voto diretto e la proprietà. I membri possono uscire in qualsiasi momento con la propria quota proporzionale del patrimonio.
+Le DAO basate sulle quote sono maggiormente soggette a permessi, ma comunque abbastanza aperte. Tutti i potenziali membri possono inviare una proposta d'adesione alla DAO, offrendo solitamente un tributo di qualche valore, sotto forma di token o lavoro. Le quote rappresentano il potere di voto diretto e la proprietà. I membri possono uscire in qualsiasi momento con la propria quota proporzionale del patrimonio.
 
-_In genere usato per organizzazioni più compatte e incentrate sul fattore umano, come enti di beneficenza, collettivi di lavoratori e club di investimento. Può anche governare protocolli e token._
+_Tipicamente utilizzata per organizzazioni più compatte e incentrate sul fattore umano, quali beneficenze, collettivi di lavoratori e club di investimento. Può anche governare protocolli e token._
 
 #### Un celebre esempio {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO si concentra sul finanziamento di progetti Ethereum. Richiede una proposta di adesione in modo che il gruppo possa valutare se il richiedente ha la competenza e il capitale necessari per formulare giudizi informati sui potenziali beneficiari. Non si può semplicemente acquistare l'accesso al DAO sul mercato.
+[MolochDAO](http://molochdao.com/): MolochDAO è incentrata sul finanziamento di progetti di Ethereum. Richiede una proposta di adesione, così che il gruppo possa valutare che tu abbia l'esperienza e il capitale per compiere giudizi informati, sui potenziali beneficiari. Non puoi semplicemente acquistare l'accesso alla DAO sul mercato aperto.
 
 ### Adesione basata sulla reputazione {#reputation-based-membership}
 
-La reputazione rappresenta la prova di partecipazione e conferisce potere di voto nella DAO. A differenza dell'adesione basata sui token o le quote, le DAO basate sulla reputazione non trasferiscono la proprietà ai collaboratori. La reputazione non può esser comprata, trasferita o delegata; i membri della DAO devono ottenere la reputazione tramite la loro partecipazione. Il voto su catena è privo di permessi e i potenziali membri possono inviare liberamente proposte per unirsi alla DAO e richiedere di ricevere reputazione e token come ricompensa in cambio dei loro contributi.
+La reputazione rappresenta la prova di partecipazione e conferisce il potere di voto nella DAO. A differenza dell'adesione basata su token o quote, le DAO basate sulla reputazione non trasferiscono la proprietà ai collaboratori. La reputazione non è acquistabile, trasferibile o delegabile; i membri della DAO devono ottenere la reputazione, tramite la partecipazione. Il voto sulla catena è privo di permessi e i potenziali membri possono inviare liberamente le proposte di adesione alla DAO, richiedendo di ricevere reputazione e token come ricompense, in cambio dei propri contributi.
 
-_Tipicamente usati per lo sviluppo e la governance decentralizzati di protocolli e dApp, ma anche adatti a una serie eterogenea di organizzazioni, quali enti di beneficenza, collettivi di lavoratori, club d'investimento, etc._
+_Utilizzata tipicamente per lo sviluppo decentralizzato e la governance di protocolli e dadpp, nonché idonea a una serie eterogenea di organizzazioni, quali beneficenze, collettivi di lavoratori, club di investimento, etc._
 
 #### Un celebre esempio {#reputation-example}
 
-[DXdao](https://DXdao.eth.link) – DXdao è un collettivo sovrano globale che dal 2019 crea e amministra protocolli e applicazioni decentralizzati. Sfrutta la governance basata sulla reputazione e il consenso olografico per coordinare e gestire i fondi, il che significa che nessuno può comprarsi il potere per influenzarne il futuro.
+[DXdao](https://DXdao.eth.link): DXdao è un collettivo sovrano globale che, dal 2019, crea e amministra i protocolli e le applicazioni decentralizzati. Sfrutta la governance basata sulla reputazione e il consenso olografico, per coordinare e gestire i fondi, a significare che nessuno può acquistare il potere di influenzare il futuro.
 
-## Aderisci a / Crea una DAO {#join-start-a-dao}
+## Aderire a / Creare una DAO {#join-start-a-dao}
 
 ### Aderisci a una DAO {#join-a-dao}
 
-- [Community di Ethereum](/community/get-involved/#decentralized-autonomous-organizations-daos)
-- [Lista delle DAO di DAOHaus](https://app.daohaus.club/explore)
+- [DAO della community di Ethereum](/community/get-involved/#decentralized-autonomous-organizations-daos)
+- [Elenco di DAO di DAOHaus](https://app.daohaus.club/explore)
 - [Elenco di DAO di Tally.xyz](https://www.tally.xyz)
 
-### Crea una DAO {#start-a-dao}
+### Avviare una DAO {#start-a-dao}
 
-- [Evoca una DAO con DAOHaus](https://app.daohaus.club/summon)
+- [Avvia una DAO con DAOHaus](https://app.daohaus.club/summon)
 - [Crea una DAO di Governance con Tally](https://www.tally.xyz/add-a-dao)
 - [Crea una DAO basata su Aragon](https://aragon.org/product)
 - [Avvia una colonia](https://colony.io/)
@@ -149,17 +149,17 @@ _Tipicamente usati per lo sviluppo e la governance decentralizzati di protocolli
 
 ### Articoli sulle DAO {#dao-articles}
 
-- [Che cos'è una DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Che cos'è una DAO?](https://aragon.org/dao): [Aragon](https://aragon.org/)
 - [Il manuale delle DAO](https://daohandbook.xyz)
-- [La casa delle DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
-- [Che cos'è una DAO e a cosa serve?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
-- [Come avviare una comunità digitale basata su DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
-- [Che cos'è una DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
-- [Cos'è il consenso olografico?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [Le DAO non sono società: dove è importante la decentralizzazione nelle organizzazioni autonome, di Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
-- [DAO, DAC, DA e altro: una guida incompleta alla terminologia](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blog di Ethereum](https://blog.ethereum.org)
+- [La casa delle DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos): [Metagame](https://wiki.metagame.wtf/)
+- [Che cos'è una DAO e a cosa serve?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for): [DAOhaus](https://daohaus.club/)
+- [Come avviare una community digitale basata su DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a): [DAOhaus](https://daohaus.club/)
+- [Che cos'è una DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao): [Coinmarketcap](https://coinmarketcap.com)
+- [Cos'è il consenso olografico?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c): [DAOstack](https://daostack.io/)
+- [Le DAO non sono società: dov'è importante la decentralizzazione nelle organizzazioni decentralizzate, di Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO, DAC, DA e altro: una guida incompleta alla terminologia](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide): [Blog di Ethereum](https://blog.ethereum.org)
 
 ### Video {#videos}
 
 - [Che cos'è una DAO nel mondo delle criptovalute?](https://youtu.be/KHm0uUPqmVE)
-- [Può una DAO costruire una città?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+- [Una DAO può costruire una città?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city): [TED](https://www.ted.com/)

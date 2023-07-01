@@ -33,7 +33,7 @@ Il costo delle transazioni su L2 ha due componenti:
 1. Elaborazione su L2, solitamente estremamente economica
 2. Archiviazione sul L1, legata ai costi del gas della Rete Principale
 
-Al momento della scrittura, su Optimism il costo del gas del L2 è 0,001 [Gwei](https://ethereum.org/en/developers/docs/gas/#pre-london). Il costo del gas del L1, d'altra parte, è approssimativamente di 40 gwei. [Puoi visualizzare i prezzi correnti qui](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Al momento della scrittura, su Optimism il costo del gas del L2 è 0,001 [Gwei](/developers/docs/gas/#pre-london). Il costo del gas del L1, d'altra parte, è approssimativamente di 40 gwei. [Puoi visualizzare i prezzi correnti qui](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
 Un byte di dati di chiamata costa 4 gas (se è zero) o 16 gas (se ha qualsiasi altro valore). Una delle operazioni più costose sull'EVM è scrivere in memoria. Il costo massimo della scrittura di una parola di 32 byte all'archiviazione sul L2, è di 22.100 gas. Attualmente, ciò equivale a 22,1 gwei. Quindi, se possiamo risparmiare un singolo byte zero di calldata, potremo scrivere circa 200 byte in memoria e ne usciremo comunque bene.
 

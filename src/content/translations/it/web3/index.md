@@ -117,7 +117,7 @@ Nonostante i numerosi benefici di Web3 nella sua forma corrente, esistono ancora
 
 ### Accessibilità {#accessibility}
 
-Importanti funzionalità di Web3, come Accedi con Ethereum, sono già disponibili per esser usati da chiunque, a costo zero. Ma, il costo relativo delle transazioni è ancora proibitivo per molti. A causa delle commissioni di transazione elevate, è meno probabile che Web3 sia usato nei paesi meno sviluppati e in via di sviluppo. Su Ethereum, queste difficoltà sono risolte tramite gli [aggiornamenti della rete](/roadmap/) e le [soluzioni di ridimensionamento del livello 2](/developers/docs/scaling/). La tecnologia è pronta, ma necessitiamo di una maggiore adozione del livello 2 per rendere Web3 accessibile a tutti.
+Importanti funzionalità di Web3, come Accedi con Ethereum, sono già disponibili per esser usati da chiunque, a costo zero. Ma, il costo relativo delle transazioni è ancora proibitivo per molti. A causa delle commissioni di transazione elevate, è meno probabile che Web3 sia usato nei paesi meno sviluppati e in via di sviluppo. Su Ethereum, queste sfide saranno risolte tramite [la tabella di marcia](/roadmap/) e le [soluzioni di ridimensionamento del livello 2](/developers/docs/scaling/). La tecnologia è pronta, ma necessitiamo di una maggiore adozione del livello 2 per rendere Web3 accessibile a tutti.
 
 ### Esperienza utente {#user-experience}
 
@@ -157,3 +157,5 @@ Il Web3 non ha una definizione rigida. Vari partecipanti della community hanno p
 - [Perché la Decentralizzazione È Importante](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Il Panorama di Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [Il Dibattito su Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+
+<QuizWidget quizKey="web3" />

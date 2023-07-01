@@ -18,6 +18,8 @@ Do you want to start your Ethereum journey? Ethereum is not a corporation with a
 
 1. [How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/) - If you suddenly see a transaction in your wallet that you did not initiate, this guide will teach you how to prevent that from happening again.
 
+2. [How to identify scam tokens](/guides/how-to-id-scam-tokens/) - What are scam tokens, how do they make themselves look legitimate, and how to identify them to protect yourself and avoid being scammed.
+
 ## Using Ethereum
 
 1. [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/) - Are Ethereum transactions too costly? Consider moving to Ethereum scaling solutions called layer 2s.

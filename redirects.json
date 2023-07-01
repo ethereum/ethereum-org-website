@@ -256,10 +256,6 @@
     "toPath": "/en/roadmap"
   },
   {
-    "fromPath": "/quizzes",
-    "toPath": "/en/quizzes/"
-  },
-  {
     "fromPath": "/*/upgrades",
     "toPath": "/:splat/roadmap"
   },
