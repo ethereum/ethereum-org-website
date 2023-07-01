@@ -98,7 +98,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Verkle trees](/roadmap/verkle-trees/)
 - [Statelessness, state expiry and history expiry](/roadmap/statelessness/)
 
-
 ## 10) Community pages {#community-pages}
 
 - [Ethereum events](/community/events/)

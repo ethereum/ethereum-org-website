@@ -75,7 +75,9 @@ Per "indirizzare" la diversità dei client non basta che i singoli utenti scelga
 
 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
 
-[Lodestar](https://github.com/ChainSafe/lodestar) - _In fase di revisione e controllo_
+[Lodestar](https://github.com/ChainSafe/lodestar)
+
+[Prysm](https://docs.prylabs.network/docs/getting-started)
 
 Gli utenti tecnici possono aiutare ad accelerare questo processo scrivendo più tutorial e documentazioni per i client di minoranza e incoraggiando i propri peer che eseguono dei nodi a migrare dai client dominanti. Le guide per passare a un client di consenso di minoranza sono disponibili su [clientdiversity.org](https://clientdiversity.org/).
 
@@ -86,9 +88,7 @@ Diversi pannelli di controllo forniscono statistiche sulla diversità dei client
 **Livello di consenso:**
 
 - [Rated.network](https://www.rated.network/)
-- [clientdiversity.org](https://clientdiversity.org/)
-
-**Livello di esecuzione:**
+- [clientdiversity.org](https://clientdiversity.org/) **Livello di esecuzione:**
 
 - [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)

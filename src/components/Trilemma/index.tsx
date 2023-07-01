@@ -77,7 +77,7 @@ const Trilemma: React.FC<IProps> = () => {
           <DrawerContent
             border="none"
             borderTopRadius="1rem"
-            background="background"
+            background="background.base"
           >
             <Card
               {...cardDetail}

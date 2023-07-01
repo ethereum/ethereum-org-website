@@ -63,7 +63,7 @@ const HeroCopy = (props: ChildOnlyProp) => (
     p={8}
     m={{ base: 0, sm: 8 }}
     mt={{ base: -2, md: 8 }}
-    bg="background"
+    bg="background.base"
     borderRadius="4px"
     border="1px solid border"
     {...props}

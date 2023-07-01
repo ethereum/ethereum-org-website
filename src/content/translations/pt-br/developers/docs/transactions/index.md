@@ -8,7 +8,7 @@ Transações são instruções assinadas criptograficamente de contas. Uma conta
 
 ## Pré-Requisitos {#prerequisites}
 
-Mas para ajudá-lo a entender melhor esta página, recomendamos que você primeiro leia [Contas](/developers/docs/accounts/), [Transações](/en/developers/docs/transactions/)e nossa [introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
+Mas para ajudá-lo a entender melhor esta página, recomendamos que você primeiro leia [Contas](/developers/docs/accounts/), [Transações](/developers/docs/transactions/)e nossa [introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## O que é uma transação? {#whats-a-transaction}
 
@@ -28,7 +28,7 @@ Uma transação enviada inclui as seguintes informações:
 - `nonce`: um contador de incremento sequencial que indica o número da transação a partir da conta.
 - `value`: a quantidade de ETH a transferir do remetente para o destinatário (denominado em WEI, onde 1ETH equivale a 1e+18wei).
 - `data`: o campo opcional para incluir dados arbitrários.
-- `gasLimit`: a quantidade máxima de gás que pode ser consumida pela transação. A [EVM](https://ethereum.org/en/developers/docs/evm/opcodes) especifica as unidades de gás necessárias para cada etapa computacional.
+- `gasLimit`: a quantidade máxima de gás que pode ser consumida pela transação. A [EVM](/developers/docs/evm/opcodes) especifica as unidades de gás necessárias para cada etapa computacional.
 - `maxPriorityFeePerGas`: o preço máximo do gás consumido a ser incluído como gorjeta para o validador.
 - `maxFeePerGas`: a taxa máxima por unidade de gás disposta a ser paga pela transação (inclusive de `baseFeePerGas` e `maxPriorityFeePerGas`)
 
@@ -99,7 +99,7 @@ Exemplo de resposta:
 }
 ```
 
-- o `raw` é a transação assinada no [Prefixo de Tamanho Recursivo (RLP)](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp) na forma codificada
+- o `raw` é a transação assinada no [Prefixo de Tamanho Recursivo (RLP)](/developers/docs/data-structures-and-encoding/rlp) na forma codificada
 - `tx` é a transação assinada no formato JSON
 
 Com o hash da assinatura, a transação pode ser provada criptograficamente de que veio do remetente e enviada para a rede.

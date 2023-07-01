@@ -124,24 +124,6 @@ const TableOfContents: React.FC<IProps> = ({
                 </FormLabel>
                 <Switch
                   id="zen-mode"
-                  size="sm"
-                  // TODO: Consider moving the below styling to the custom Chakra Theme
-                  sx={{
-                    "& .chakra-switch__track": {
-                      background: "transparent",
-                      border: "2px solid",
-                      borderColor: "secondary",
-                      p: 0,
-                      "&[data-checked]": {
-                        background: "secondary",
-                      },
-                    },
-                    "& .chakra-switch__thumb": {
-                      background: "ednBackground",
-                      outline: "2px solid",
-                      outlineColor: "secondary",
-                    },
-                  }}
                   isChecked={isZenMode}
                   onChange={() => {
                     handleZenModeChange()
