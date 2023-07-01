@@ -9,8 +9,8 @@ import {
   Center,
   Heading,
   useTheme,
-  SkipNavLink,
 } from "@chakra-ui/react"
+import { SkipNavLink } from "@chakra-ui/skip-nav"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"

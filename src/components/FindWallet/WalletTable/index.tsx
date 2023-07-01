@@ -21,11 +21,11 @@ import {
   ListItem,
   SimpleGrid,
   Text,
-  SkipNavContent,
   useToken,
   VisuallyHidden,
   StackItem,
 } from "@chakra-ui/react"
+import { SkipNavContent } from "@chakra-ui/skip-nav"
 
 // Components
 import Link, { IProps as LinkProps } from "../../Link"
