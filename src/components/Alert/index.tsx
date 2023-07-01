@@ -42,15 +42,8 @@ const Alert = forwardRef<AlertProps, "div">((props, ref) => {
 
   const isCloseable = !!onClose
 
-  const commonCloseButtonStateStyles = {
-    boxShadow: "4px 4px 0 0 currentColor",
-    bg: "rgba(0,0,0,0.2)",
-    transform: "translate(-3px, -3px)",
-  }
   const closeButtonStateStyles = {
     borderRadius: "base",
-    _focusVisible: commonCloseButtonStateStyles,
-    _hover: commonCloseButtonStateStyles,
     _active: {
       boxShadow: "none",
       transform: "translate(0)",
