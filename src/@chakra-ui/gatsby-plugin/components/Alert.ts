@@ -12,37 +12,37 @@ const STATUS_COLORS: Record<
 > = {
   solid: {
     error: {
-      bg: "error",
-      color: "errorLight",
+      bg: "error.base",
+      color: "error.light",
     },
     info: {
-      bg: "bodyMedium",
-      color: "background",
+      bg: "body.medium",
+      color: "background.base",
     },
     warning: {
-      bg: "attention",
-      color: "attentionLight",
+      bg: "attention.base",
+      color: "attention.light",
     },
     success: {
-      bg: "success",
-      color: "successLight",
+      bg: "success.base",
+      color: "success.light",
     },
   },
   subtle: {
     error: {
-      bg: "errorLight",
-      color: "error",
+      bg: "error.light",
+      color: "error.base",
     },
     info: {
-      bg: "backgroundHighlight",
-      color: "body",
+      bg: "background.highlight",
+      color: "body.base",
     },
     warning: {
-      bg: "attentionLight",
+      bg: "attention.light",
       color: "gray.700",
     },
     success: {
-      bg: "successLight",
+      bg: "success.light",
       color: "success",
     },
   },
