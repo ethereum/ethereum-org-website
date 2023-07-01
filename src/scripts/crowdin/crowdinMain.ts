@@ -1,4 +1,4 @@
-import getAndSaveDirectories from "./getAndSaveDirectories"
+import getAndSaveDirectories from "./source-files/fetchAndSaveDirectories"
 import getDirectoryIds from "./getDirectoryIds"
 import { getTranslatedMarkdownPaths } from "../markdownChecker"
 import fetchAndSaveFileIds from "./fetchAndSaveFileIds"

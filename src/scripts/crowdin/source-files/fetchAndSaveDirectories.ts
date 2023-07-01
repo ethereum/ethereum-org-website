@@ -1,16 +1,12 @@
 import fs from "fs"
 import path from "path"
-import {
-  SourceFilesModel,
-  ResponseList,
-  ResponseObject,
-} from "@crowdin/crowdin-api-client"
+import { SourceFilesModel, ResponseList } from "@crowdin/crowdin-api-client"
 
-import crowdinClient from "./crowdinClient"
+import crowdinClient from "../crowdinClient"
 const { sourceFilesApi } = crowdinClient
 
 // Constants
-import { CROWDIN_PROJECT_ID, CROWDIN_API_MAX_LIMIT } from "../../constants"
+import { CROWDIN_PROJECT_ID, CROWDIN_API_MAX_LIMIT } from "../../../constants"
 
 async function getDirectories(): Promise<
   ResponseList<SourceFilesModel.Directory>
