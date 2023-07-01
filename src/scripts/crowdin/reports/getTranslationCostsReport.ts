@@ -8,6 +8,7 @@ import {
   CROWDIN_PROJECT_ID,
   FIRST_CROWDIN_CONTRIBUTION_DATE,
 } from "../../../constants"
+import { findFileIdsByPaths } from "../utils"
 
 const { reportsApi } = crowdinClient
 
@@ -182,4 +183,24 @@ async function saveReportDataToJson(
   }
 }
 
-export default fetchTranslationCostsReport
+async function getTranslationCostsReports(translatedMarkdownPaths) {
+  for (let lang in translatedMarkdownPaths) {
+    const fileIds = await findFileIdsByPaths(
+      translatedMarkdownPaths[lang],
+      lang
+    )
+
+    // The CrowdinCode is often different from what we use in our repo
+    const crowdinLangCode = await getCrowdinCode(lang)
+
+    for (const fileId of fileIds) {
+      if (fileId !== null) {
+        await fetchTranslationCostsReport(fileId, crowdinLangCode)
+      } else {
+        console.log("Error: No file ID found for one of the paths")
+      }
+    }
+  }
+}
+
+export default getTranslationCostsReports
