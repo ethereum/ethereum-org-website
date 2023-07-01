@@ -5,9 +5,7 @@
     "description": "What is fuzz testing? What are invariant tests? We introduce how to use these tools in Web3 & Solidity and explain why they are essential, especially for security. ",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "security"
-    ],
+    "tags": ["security"],
     "skillLevel": "beginner",
     "timeToRead": "9",
     "lang": "en",

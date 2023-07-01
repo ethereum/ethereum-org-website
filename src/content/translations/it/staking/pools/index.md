@@ -17,7 +17,7 @@ summaryPoints:
 
 I pool di staking sono un approccio collaborativo per consentire a molti, con quantità minori di ETH, di ottenere i 32 ETH necessari per attivare un insieme di chiavi di validazione. La funzionalità di pooling non è supportata nativamente all'interno del protocollo, quindi le soluzioni sono state sviluppate separatamente per rispondere a questa esigenza.
 
-Alcuni pool operano utilizzando i contratti intelligenti, dove i fondi possono essere depositati in un contratto, che gestisce e traccia in modo affidabile il tuo stake, e ti emette un token che rappresenta questo valore. Altri pool potrebbero non coinvolgere i contratti intelligenti ed essere invece mediati al di fuori dalla catena.
+Alcuni pool operano utilizzando i contratti intelligenti, dove i fondi possono essere depositati in un contratto, che gestisce e traccia senza fiducia il tuo stake, e ti emette un token che rappresenta questo valore. Altri pool potrebbero non coinvolgere i contratti intelligenti ed essere invece mediati al di fuori dalla catena.
 
 ## Perché mettere in stake con un pool? {#why-stake-with-a-pool}
 
@@ -64,11 +64,7 @@ Tipicamente, i token di liquidità ERC-20 sono emessi agli staker che rappresent
 </ExpandableCard>
 
 <ExpandableCard title="Quando posso prelevare il mio stake?">
-Al momento, è impossibile prelevare fondi da un validatore di Ethereum, il che limita l'abilità di <i>riscattare</i> effettivamente il tuo token di liquidità per le ricompense in ETH bloccate nel livello del consenso.
-
-L'aggiornamento della rete Shanghai introdurrà la funzionalità di prelievo, pianificata per il primo o secondo trimestre del 2023. Tutti gli ETH in staking resteranno bloccati fino ad allora.
-
-Dopo questo aggiornamento, i conti dei validatori che sostengono i pool di staking avranno la possibilità di uscire e prelevare ETH al proprio indirizzo designato di prelievo. Ciò consentirà di riscattare la porzione di stake per gli ETH sottostanti. Confrontati con il tuo fornitore per scoprire come supporta tale funzionalità.
+Subito! L'aggiornamento della rete di Shanghai/Capella è avvenuto ad aprile 2023 e ha introdotto i prelievi di staking. I conti del validatore che sostengono i pool di staking hanno ora la possibilità di uscire e prelevare ETH al proprio indirizzo di prelievo designato. Ciò consente di riscattare la propria parte di stake per gli ETH sottostanti. Confrontati con il tuo fornitore per scoprire come supporta tale funzionalità.
 
 Altrimenti, i pool che usano un token di liquidità ERC-20 consentono agli utenti di scambiarlo nel mercato aperto, consentendoti di vendere la tua posizione di staking, "prelevando" effettivamente senza rimuovere realmente ETH dal contratto di staking.
 

@@ -1,8 +1,8 @@
-import React from "react"
+import React, { ComponentPropsWithRef } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { Box, Flex, Heading, Img, Text } from "@chakra-ui/react"
+import { Box, BoxProps, Flex, Heading, Img, Text } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import CardList from "../components/CardList"
@@ -13,19 +13,48 @@ import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
-import {
-  Content,
-  Divider,
-  LeftColumn,
-  Page,
-  RightColumn,
-  StyledCard,
-  TwoColumnContent,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
+import Card from "../components/Card"
+
+import {
+  LeftColumn,
+  RightColumn,
+  TwoColumnContent,
+} from "../pages-conditional/eth"
+
 import { getImage } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
+
+import type { ChildOnlyProp } from "../types"
+
+const Page = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    align="center"
+    width="full"
+    mx="auto"
+    my={0}
+    {...props}
+  />
+)
+
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+
+export const Content = (props: BoxProps) => (
+  <Box w="full" py={4} px={8} {...props} />
+)
+
+export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
+  <Card
+    flex="1 1 30%"
+    minW="280px"
+    maxW={{ base: "full", md: "46%", lg: "31%" }}
+    m={4}
+    p={6}
+    {...props}
+  />
+)
 
 const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
   const { t } = useTranslation()
@@ -92,11 +121,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         position="relative"
         width="full"
         maxWidth="1440px"
-        flexDir={{
+        direction={{
           base: "column-reverse",
-          sm: "column-reverse",
           md: "column",
-          lg: "column",
         }}
         mt={8}
         mx={0}

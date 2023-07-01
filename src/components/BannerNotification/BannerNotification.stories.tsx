@@ -1,35 +1,27 @@
-import { Meta, StoryObj } from "@storybook/react"
 import React from "react"
+import { Text } from "@chakra-ui/react"
+import { Meta, StoryFn } from "@storybook/react"
+import { useTranslation } from "react-i18next"
 import BannerNotification from "."
 
 export default {
   component: BannerNotification,
+  args: {
+    shouldShow: true,
+  },
+  decorators: [(Story) => <Story />],
 } as Meta<typeof BannerNotification>
 
 /**
  * Story taken from PostMergeBanner component
  * and content from `../../content/developers/tutorials/hello-world-smart-contract-fullstack/index.md`
  */
-export const PostMergeBanner: StoryObj<typeof BannerNotification> = {
-  args: {
-    shouldShow: true,
-    justify: "center",
-    textAlign: "center",
-    sx: {
-      "& p": {
-        maxWidth: "100ch",
-        m: 0,
-        p: 0,
-      },
-      "& a": {
-        textDecor: "underline",
-      },
-    },
-    children: (
-      <p>
-        This tutorial is out of date after the merge and may not work. Please
-        raise a PR if you would like to contribute.
-      </p>
-    ),
-  },
+export const PostMergeBanner: StoryFn<typeof BannerNotification> = (args) => {
+  const { t } = useTranslation()
+
+  return (
+    <BannerNotification {...args}>
+      <Text m={0}>{t("page-upgrades-post-merge-banner-tutorial-ood")}</Text>
+    </BannerNotification>
+  )
 }

@@ -1,32 +1,33 @@
 ---
-title: Alberi di Patricia Merkle
-description: Introduzione ai Trie di Patricia Merkle.
+title: Trie di Patricia Merkle
+description: Introduzione al Trie di Patricia Merkle.
 lang: it
 sidebarDepth: 2
 ---
 
-Un Trie di Patricia Merkle fornisce una struttura di dati autenticata crittograficamente, utilizzabile per memorizzare tutte le coppie `(chiave, valore) `.
+Un Trie di Patricia Merkle fornisce una struttura di dati autenticata crittograficamente, utilizzabile per memorizzare tutte le associazioni `(key, value)` (chiave, valore).
 
-I Trie di Patricia Merkle sono completamente deterministici, quindi è garantito che un trie con le stesse coppie `(chiave, valore)` sia identico, fino all'ultimo byte. Ciò significa che hanno lo stesso hash di root, fornendo così il sacro graal dell'efficienza di `O(log(n))` per inserimenti, ricerche ed eliminazioni. Inoltre, sono più semplici da comprendere e programmare rispetto ad alternative più complesse basate sul confronto, come gli alberi rosso-neri.
+I Trie di Patricia Merkle sono interamente deterministici, a significare che è garantito che degli alberi con le stesse associazioni `(key, value)` siano identici, fino all'ultimo byte. Ciò significa che hanno lo stesso hash di root, fornendo il Sacro Graal dell'efficienza di `O(log(n))` per inserimenti, ricerche ed eliminazioni. Inoltre, sono più semplici da comprendere e programmare rispetto alle più complesse alternative basate sul confronto, come gli alberi rosso-nero.
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere questa pagina è utile avere una conoscenza di base degli alberi di Merkle e della serializzazione.
+Per meglio comprendere questa pagina, sarebbe utile avere una conoscenza di base di [hash](https://en.wikipedia.org/wiki/Hash_function), [alberi di Merkle](https://en.wikipedia.org/wiki/Merkle_tree), [trie](https://en.wikipedia.org/wiki/Trie) e [serializzazione](https://en.wikipedia.org/wiki/Serialization).
 
 ## Trie della radice di base {#basic-radix-tries}
 
 In un trie della radice di base, ogni nodo si presenta così:
 
 ```
-    [i0, i1 ... in, value]
-
+    [i_0, i_1 ... i_n, value]
 ```
 
-Dove `i0 ... in` rappresenta i simboli dell'alfabeto (spesso binari o esadecimali), `value` è il valore terminale al nodo e i valori negli slot `i0 ... in` sono `NULL` o puntatori ad (nel nostro caso, hash di) altri nodi. Questo forma un'archiviazione di base `(chiave, valore)`. Ad esempio, se sei interessato al valore correntemente mappato a `dog` nel trie, prima devi convertire `dog` in lettere dell'alfabeto (ottenendo `64 6f 67`) e poi scendere dal trie seguendo il percorso, fino a trovare il valore. Dunque, prima dovresti cercare l'hash della radice in un DB flat chiave/valore per trovare il nodo di root del trie (che è un insieme di chiavi ad altri nodi), usando come chiave il valore all'indice `6` (cercando nel DB chiave/valore) per ottenere il nodo al livello inferiore successivo, poi dovresti selezionarne l'indice `4` per cercare il valore successivo, poi prendere l'indice `6` e così via, finché, una volta seguito il percorso: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, dovresti leggere il valore che hai e restituire il risultato.
+Dove `i_0 ... i_n` rappresenta i simboli dell'alfabeto (spesso binari o esadecimali), `value` è il valore terminale al nodo e i valori negli spazi `i_0, i_1 ... i_n` sono `NULL` o puntano ad (nel nostro caso, a hash di) altri nodi. Questo forma un'archiviazione di base `(chiave, valore)`.
+
+Ipotizziamo che si voglia utilizzare una struttura dei dati ad albero radicato per perdurare un ordine su una serie di coppie chiave-valore. Per trovare il valore attualmente mappato alla chiave `dog` nell'albero, occorre convertire prima `dog` in lettere dell'alfabeto (restituendo `64 6f 67`) e poi discendere l'albero seguendo tale percorso, fino a trovare il valore. Quindi, iniziare guardando l'hash radice in un database chiave/valore piatto per trovare il nodo radice dell'albero. È rappresentato come un insieme di chiavi che puntano ad altri nodi. Occorre utilizzare il valore all'indice `6` come una chiave e cercarlo nel database chiave/valore piatto per ottenere il nodo al livello inferiore. Poi si deve scegliere l'indice `4` per cercare il valore successivo, quindi, l'indice `6` e così via, finché, una volta seguito il percorso: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7` si cerca il valore del nodo e si trova il risultato.
 
 Esiste una differenza tra cercare qualcosa nel 'trie' e nel 'DB' flat chiave/valore sottostante. Entrambi definiscono degli schemi chiave/valori, ma il DB sottostante può effettuare una tradizionale ricerca di una chiave in 1 passaggio. Cercare una chiave nel trie richiede diverse ricerche DB sottostanti, per ottenere il valore finale descritto sopra. Facciamo riferimento a quest'ultimo come `path`, per eliminare ogni ambiguità.
 
-Le operazioni di aggiornamento ed eliminazione per i trie di radice sono semplici e possono essere approssimativamente così definite:
+Le operazioni di aggiornamento ed eliminazione per gli alberi radicati sono definibili come segue:
 
 ```
     def update(node,path,value):
@@ -54,37 +55,39 @@ Le operazioni di aggiornamento ed eliminazione per i trie di radice sono semplic
                 newindex = delete(curnode[path[0]],path[1:])
                 newnode[path[0]] = newindex
 
-            if len(filter(x -> x is not NULL, newnode)) == 0:
+            if all(x is NULL for x in newnode):
                 return NULL
             else:
                 db.put(hash(newnode),newnode)
                 return hash(newnode)
 ```
 
-La parte "Merkle" del trie della radice nasce dal fatto che, come puntatore al nodo, è usato un hash crittografico deterministico di un nodo (per ogni ricerca nel DB chiave/valore `key == keccak256(rlp(value))`, piuttosto che una qualche posizione della memoria a 32 o 64 bit, come potrebbe avvenire in un trie più tradizionale implementato in C. Questo fornisce una forma d'autenticazione crittografica alla struttura dei dati; se l'hash della radice di un dato trie è pubblicamente noto, allora chiunque può fornire una prova che il trie abbia un dato valore a un percorso specifico, fornendo gli hash di ogni nodo che si unisce a un valore specifico alla radice dell'albero. È impossibile per un utente malevolo fornire una prova di una coppia (percorso, valore) che non esiste, poiché l'hash della radice è basato in definitiva su tutti gli hash successivi, quindi, ogni modifica modificherebbe l'hash della radice.
+Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinossi di hash crittografici generati deterministicamente. Questo indirizzamento dei contenuti (nel database chiave/valore `key == keccak256(rlp(value))`) fornisce l'autenticazione crittografica dei dati archiviati. Se l'hash radice di un dato albero è noto pubblicamente, allora chiunque può fornire una prova che l'albero includa un dato valore in un percorso specifico, fornendo gli hash di ogni nodo che unisce un valore specifico alla radice dell'albero.
 
-Pur attraversando un percorso un nibble alla volta, come descritto sopra, gran parte dei nodi contiene un insieme di 17 elementi. Un indice per ogni possibile valore tenuto dal carattere esadecimale successivo (nibble) nel percorso e uno per detenere il valore di destinazione finale se il percorso è stato attraversato interamente. Questi nodi dell'array di 17 elementi sono detti nodi del `branch`.
+È impossibile, per un utente malevolo, fornire una prova di una coppia `(percorso, valore)` che non esiste, poiché l'hash radice in definitiva si basa su tutti gli hash inferiori. Qualsiasi modifica sottostante modificherebbe l'hash radice.
+
+Chiameremo "nibble" l'unità atomica di un albero radicato (es., un singolo carattere esadecimale o un numero binario a 4 bit). Attraversando un percorso un "nibble" per volta, come descritto sopra, i nodi possono fare riferimento massimale a 16 figli, ma includono un elemento `value`. Dunque, li rappresentiamo come un insieme di lunghezza 17. Chiamiamo questi insiemi da 17 elementi "nodi ramo".
 
 ## Trie di Patricia Merkle {#merkle-patricia-trees}
 
-I trie della radice presentano però una grande limitazione: sono inefficienti. Se si vuole memorizzare solo una coppia (percorso, valore) in cui si trova il percorso (nel caso del trie di stato di Ethereum), lunga 64 caratteri (numero di nibble in `bytes32`), servirà oltre un kilobyte di spazio aggiuntivo per memorizzare un livello per carattere, e per ogni ricerca o eliminazione verranno eseguiti tutti i 64 passaggi. Il trie di Patricia risolve questo problema.
+Gli alberi radicati hanno una grande limitazione: non sono efficienti. Se si desidera memorizzare una coppia `(percorso, valore)` dove il percorso, come in Ethereum, è lungo 64 caratteri (il numero di "nibble" in `bytes32`), servirà oltre un kilobyte di spazio aggiuntivo per memorizzare un livello per carattere e, ogni ricerca o eliminazione, richiederebbe tutti e 64 i passaggi. L'albero di Patricia introdotto di seguito risolve tale problema.
 
 ### Ottimizzazione {#optimization}
 
-I trie di Patricia Merkle risolvono il problema d'inefficienza aggiungendo una certa complessità aggiuntiva alla struttura dei dati. Un nodo in un trie di Patricia Merkle è uno dei seguenti:
+Un nodo in un trie di Patricia Merkle è uno dei seguenti:
 
 1.  `NULL` (rappresentato come la stringa vuota)
 2.  `branch` Un nodo da 17 elementi `[ v0 ... v15, vt ]`
 3.  `leaf` Un nodo da 2 elementi `[ encodedPath, value ]`
 4.  `extension` Un nodo da 2 elementi `[ encodedPath, key ]`
 
-Con i percorsi da 64 caratteri è inevitabile che dopo aver attraversato i primi pochi livelli del trie, si raggiunge un nodo privo di alcun percorso divergente per almeno parte del percorso. Sarebbe ingenuo richiedere che un nodo simile abbia valori vuoti in ogni indice (uno per ognuno dei 16 caratteri esadecimali), oltre all'indice di destinazione (accanto al nibble nel percorso). Al contrario, accorciamo la discesa configurando un nodo `extension` con la forma `[ encodedPath, key ]`, in cui `encodedPath` contiene il "percorso parziale" per saltare avanti (usando la codifica compatta sopra descritta) e la `key` è per la prossima ricerca DB.
+Con i percorsi da 64 caratteri è inevitabile che dopo aver attraversato i primi pochi livelli del trie, si raggiunge un nodo privo di alcun percorso divergente per almeno parte del percorso. Per evitare di dover creare 15 nodi `NULL` sparsi lungo il percorso, abbreviamo la discesa configurando un nodo `extension` della forma `[ encodedPath, key ]`, in cui `encodedPath` contiene il "percorso parziale" a cui saltare (utilizzando una codifica compatta spiegata di seguito) e `key` è per la prossima ricerca sul database.
 
-Nel caso di un nodo `leaf`, determinabile da un flag nel primo nibble di `encodedPath`, si verifica la suddetta situazione e anche il "percorso parziale" per saltare avanti completa la restante parte di un percorso. In questo caso, `value` è lo stesso valore di destinazione.
+Per un nodo `leaf`, contrassegnabile da un flag nel primo nibble del `encodedPath`, il percorso codifica tutti i frammenti precedenti del percorso del nodo e possiamo cercare direttamente il `value`.
 
-Questa ottimizzazione introduce però delle ambiguità.
+Tale suddetta ottimizzazione, tuttavia, introduce delle ambiguità.
 
-Attraversando i percorsi in nibble, potremmo finire con un numero dispari di nibble da attraversare, ma poiché tutti i dati sono memorizzati nel formato `bytes`, non è possibile distinguere, ad esempio, tra il nibble `1` e i nibble `01` (entrambi devono essere memorizzati come `<01>`). Per specificare una lunghezza dispari, il percorso parziale è prefissato con un flag.
+Attraversando i percorsi in "nibble", potremmo finire con un numero dispari di nibble da attraversare; questo perché tutti i dati sono memorizzati nel fromato `bytes`. Non è possibile differenziare tra, ad esempio, il nibble `1` e i nibble `01` (entrambi devono essere memorizzati come `<01>`). Per specificare una lunghezza dispari, il percorso parziale è prefissato con un flag.
 
 ### Specifica: codifica compatta della sequenza esadecimale con terminatore facoltativo {#specification}
 
@@ -178,7 +181,7 @@ Ora, costruiamo un trie di questo tipo con le seguenti coppie chiave/valore nel 
     hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Quando in un nodo si fa riferimento a un altro nodo, viene inserito `H(rlp.encode(x))`, dove `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp.encode` è la funzione di codifica [RLP](/fundamentals/rlp).
+Quando in un nodo si fa riferimento a un altro nodo, viene inserito `H(rlp.encode(x))`, dove `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp.encode` è la funzione di codifica [RLP](/developers/docs/data-structures-and-encoding/rlp).
 
 Nota che, aggiornando un trie, si deve memorizzare la coppia chiave/valore `(keccak256(x), x)` in una tabella di ricerca persistente _se_ il nodo appena creato ha una lunghezza >= 32. Se invece il nodo è inferiore a questo valore, non è necessario memorizzare nulla, poiché la funzione f(x) = x è reversibile.
 
@@ -194,11 +197,11 @@ Dall'intestazione di un blocco ci sono 3 radici provenienti da 3 di questi trie.
 
 ### Trie di Stato {#state-trie}
 
-Esiste un trie di stato globale che si aggiorna nel tempo. In esso, un `path` è sempre: `keccak256(ethereumAddress)` e un `value` è sempre: `rlp(ethereumAccount)`. Più nello specifico, un `account` di Ethereum è un insieme di 4 elementi di `[nonce,balance,storageRoot,codeHash]`. A questo punto, vale la pena di notare che questo `storageRoot` è la radice di un altro trie di Patricia:
+Esiste un albero di stato globale ed è aggiornato ogni volta che un client elabora un blocco. In esso, un `path` è sempre: `keccak256(ethereumAddress)` e un `value` è sempre: `rlp(ethereumAccount)`. Più nello specifico, un `account` di Ethereum è un insieme di 4 elementi di `[nonce,balance,storageRoot,codeHash]`. A questo punto, vale la pena di notare che tale `storageRoot` è la radice di un altro albero di Patricia:
 
 ### Trie d'archiviazione {#storage-trie}
 
-Il trie d'archiviazione è dove risiedono _tutti_ i dati del contratto. Esiste un trie d'archiviazione distinto per ogni conto. Per recuperare i valori a posizioni d'archiviazione specifiche a un dato indirizzo, servono l'indirizzo d'archiviazione, la posizione intera dei dati memorizzati in archiviazione e l'ID del blocco. Questi possono poi essere passati come argomenti al `eth_getStorageAt`, definito nell'API JSON-RPC, es. per recuperare i dati allo slot d'archiviazione 0 per l'indirizzo `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Il trie d'archiviazione è dove risiedono _tutti_ i dati del contratto. Esiste un albero d'archiviazione separato per ogni conto. Per recuperare i valori a posizioni d'archiviazione specifiche a un dato indirizzo, servono l'indirizzo d'archiviazione, la posizione intera dei dati memorizzati in archiviazione e l'ID del blocco. Questi possono essere passati come argomenti al `eth_getStorageAt`, definito nell'APi di JSON-RPC, es., per recuperare i dati nello slot 0 d'archiviazione per l'indirizzo `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -209,8 +212,8 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Il recupero di altri elementi in archiviazione è lievemente più impegnativo, poiché deve essere calcolata prima la posizione nel trie d'archiviazione. La posizione è calcolata come l'hash `keccak256` dell'indirizzo e della posizione d'archiviazione, entrambi con padding di zeri a sinistra, fino a una lunghezza di 32 byte. Ad esempio, la posizione dei dati nello slot d'archiviazione 1 per l'indirizzo `0x391694e7e0b0cce554cb130d723a9d27458f9298` è:
 
-```keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
-
+```
+keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
 In una console Geth, si può calcolare in questo modo:
@@ -232,7 +235,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ### Trie delle transazioni {#transaction-trie}
 
-Esiste un trie delle transazioni distinto per ogni blocco, che memorizza ancora coppie (chiave, valore). Qui, un percorso è: rlp(transactionIndex) che rappresenta la chiave corrispondente a un valore determinato da:
+Esiste un albero di transazioni separato per ogni blocco, anch'esso che memorizza coppie `(key, value)`. Qui, un percorso è: `rlp(transactionIndex)`, rappresentante la chiave corrispondente a un valore determinato da:
 
 ```
 if legacyTx:
@@ -245,11 +248,12 @@ Maggiori informazioni a riguardo si possono trovare nella documentazione [EIP 27
 
 ### Trie delle ricevute {#receipts-trie}
 
-Ogni blocco ha il proprio trie delle ricevute. Qui, un `path` è: `rlp(transactionIndex)`. `transactionIndex` è il suo indice nel blocco estratto. Il trie delle ricevute non si aggiorna mai. Analogamente al trie delle transazioni, esistono ricevute correnti e legacy. Per interrogare una ricevuta specifica nel trie delle ricevute, servono l'indice della transazione nel suo blocco, il payload della ricevuta e il tipo di transazione. La ricevuta restituita può essere di tipo `Receipt`, definita come la concatenazione del `transaction type` e del `transaction payload`, oppure può essere di tipo `LegacyReceipt`, definito come `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
+Ogni blocco ha il proprio trie delle ricevute. Qui, un `path` è: `rlp(transactionIndex)`. `transactionIndex` è il suo indice nel blocco estratto. L'albero delle ricevute non è mai aggiornato. Analogamento all'albero delle Transazioni, esistono ricevute correnti e legacy. Per interrogare una ricevuta specifica nell'albero delle Ricevute, l'indice della transazione nel suo blocco, il carico utile di ricevute e il tipo di transazione sono necessari. La ricevuta Restituita può essere di tipo `Receipt`, definita come la concatenazione di `TransactionType` e `ReceiptPayload` o di tipo `LegacyReceipt`, definibile come `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
 
 Maggiori informazioni a riguardo si possono trovare nella documentazione [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
 ## Letture consigliate {#further-reading}
 
-- [Trie di Patricia Merkle modificato - Come Ethereum salva uno stato](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Merkling su Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/) -[Comprendere il trie di Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
+- [Albero di Patricia Merkle Modificato - Come Ethereum risparmia uno stato](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
+- ["Merkling" su Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [Comprendere l'albero di Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
