@@ -13,10 +13,16 @@ import getCrowdinCode from "../../../../src/utils/getCrowdinCode"
 
 const { reportsApi } = crowdinClient
 
-interface UserData {
-  userId: number
+interface User {
+  id: number
   username: string
   totalCosts: number
+  avatarUrl: string
+}
+
+interface UserData {
+  user: User
+  // languages: any[];
 }
 
 interface ReportData {
@@ -126,10 +132,12 @@ async function downloadReport(
       identifier
     )
     const jsonUrl = response.data.url
+    console.log(jsonUrl)
     console.log(`Retrieved JSON URL for report of file ID ${fileId}`)
 
     const reportData: AxiosResponse<ReportData> = await axios.get(jsonUrl)
     console.log(`Downloaded report data for file ID ${fileId}`)
+    console.log(reportData.data)
 
     await saveReportDataToJson(reportData.data, fileId, language)
     console.log(`Saved report data for file ID ${fileId} to JSON file`)
@@ -147,7 +155,7 @@ async function saveReportDataToJson(
   fileId: number,
   language: string
 ): Promise<void> {
-  let combinedData: Record<number, UserData[]>
+  let combinedData: Record<number, User[]>
   const filename = `${language}-translators-by-file-id.json`
 
   if (!fs.existsSync(filename)) {
@@ -164,10 +172,11 @@ async function saveReportDataToJson(
     combinedData = {}
   }
 
-  const formattedData = reportData.data.map((user) => ({
-    userId: user.userId,
-    username: user.username,
-    totalCosts: user.totalCosts,
+  const formattedData = reportData.data.map((userObj) => ({
+    id: userObj.user.id,
+    username: userObj.user.username,
+    totalCosts: userObj.user.totalCosts,
+    avatarUrl: userObj.user.avatarUrl,
   }))
 
   // Todo: Find out if we want to order the contributors in any particular way
