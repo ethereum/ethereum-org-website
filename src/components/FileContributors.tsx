@@ -32,10 +32,12 @@ import Translation from "./Translation"
 import Button from "./Button"
 
 interface Author {
-  name: string
-  email: string
-  avatarUrl: string
-  user: {
+  name?: string
+  email?: string
+  username?: string
+  id?: string
+  avatarUrl?: string
+  user?: {
     login: string
     url: string
   }
@@ -121,47 +123,28 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
 export interface IProps extends FlexProps {
   relativePath: string
   editPath?: string
+  contributors: Array<Author>
+  lastContributor: Author
+  loading: Boolean
+  error: any
 }
 
 const FileContributors: React.FC<IProps> = ({
   relativePath,
   editPath,
+  contributors,
+  lastContributor,
+  loading,
+  error,
   ...props
 }) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const { language } = useI18next()
 
-  const { loading, error, data } = useQuery(COMMIT_HISTORY, {
-    variables: { relativePath },
-  })
-
   if (error) return null
-
-  const commits: Array<Commit> =
-    data?.repository?.ref?.target?.history?.edges?.map((commit) => commit.node)
-
-  const lastCommit = commits?.[0] || {}
-  const lastContributor = lastCommit?.author || {}
-  const uniqueContributors =
-    commits?.reduce(
-      (res: Array<Author>, cur: Commit) => {
-        if (cur.author.user === null) {
-          return res
-        }
-        for (const contributor of res) {
-          const hasAuthorInfo = !!contributor.user && !!cur.author.user
-          if (
-            hasAuthorInfo &&
-            contributor.user.login === cur.author.user.login
-          ) {
-            return res
-          }
-        }
-        res.push(cur.author)
-        return res
-      },
-      [lastContributor]
-    ) || []
+  // const { loading, error, data } = useQuery(COMMIT_HISTORY, {
+  //   variables: { relativePath },
+  // })
 
   return (
     <>
@@ -174,12 +157,16 @@ const FileContributors: React.FC<IProps> = ({
 
         <ModalBody>
           <Translation id="contributors-thanks" />
-
-          <ContributorList>
-            {uniqueContributors.map((contributor) => (
-              <Contributor contributor={contributor} key={contributor.email} />
-            ))}
-          </ContributorList>
+          {contributors ? (
+            <ContributorList>
+              {contributors.map((contributor) => (
+                <Contributor
+                  contributor={contributor}
+                  key={contributor.email}
+                />
+              ))}
+            </ContributorList>
+          ) : null}
         </ModalBody>
       </Modal>
 
@@ -211,7 +198,7 @@ const FileContributors: React.FC<IProps> = ({
                 </Link>
               )}
               {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-              {getLocaleTimestamp(language as Lang, lastCommit.committedDate)}
+              {/* {getLocaleTimestamp(language as Lang, lastCommit.committedDate)} */}
             </Text>
           </Skeleton>
         </Flex>
