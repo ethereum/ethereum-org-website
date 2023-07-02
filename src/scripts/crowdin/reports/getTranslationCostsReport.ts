@@ -155,21 +155,12 @@ async function saveReportDataToJson(
   fileId: number,
   language: string
 ): Promise<void> {
-  let combinedData: Record<number, User[]>
-  const filename = `${language}-translators-by-file-id.json`
+  let combinedData: any[] = []
+  const filename = `combined-translators.json`
 
-  if (!fs.existsSync(filename)) {
-    fs.writeFileSync(filename, "{}", "utf8")
-  }
-
-  try {
+  if (fs.existsSync(filename)) {
     const rawData = fs.readFileSync(filename, "utf8")
-    combinedData = rawData ? JSON.parse(rawData) : {}
-  } catch (error: unknown) {
-    if (error instanceof Error) {
-      console.log("Error reading from " + filename + ":", error.message)
-    }
-    combinedData = {}
+    combinedData = rawData ? JSON.parse(rawData) : []
   }
 
   const formattedData = reportData.data.map((userObj) => ({
@@ -179,10 +170,25 @@ async function saveReportDataToJson(
     avatarUrl: userObj.user.avatarUrl,
   }))
 
-  // Todo: Find out if we want to order the contributors in any particular way
-  // formattedData.sort((a, b) => b.totalCosts - a.totalCosts)
+  // Find if the language data already exists in the array
+  const languageData = combinedData.find((data) => data.lang === language)
 
-  combinedData[fileId] = formattedData
+  if (languageData) {
+    languageData.data.push({
+      fileId: fileId.toString(),
+      contributors: formattedData,
+    })
+  } else {
+    combinedData.push({
+      lang: language,
+      data: [
+        {
+          fileId: fileId.toString(),
+          contributors: formattedData,
+        },
+      ],
+    })
+  }
 
   try {
     await fs.promises.writeFile(filename, JSON.stringify(combinedData, null, 2))
