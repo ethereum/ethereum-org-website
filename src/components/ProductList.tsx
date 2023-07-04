@@ -31,13 +31,13 @@ export interface IProps {
 const ProductList: React.FC<IProps> = ({ content, category }) => {
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
-  const ariaLabelledby = "cat-name"
+  const CATEGORY_NAME = "category-name"
 
   return (
     <Box boxSize="full">
       <Heading
         as="h3"
-        id={ariaLabelledby}
+        id={CATEGORY_NAME}
         fontSize="2xl"
         borderBottom="2px solid"
         borderColor="border"
@@ -48,7 +48,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
       </Heading>
       <Flex
         as={List}
-        aria-labelledby={ariaLabelledby}
+        aria-labelledby={CATEGORY_NAME}
         m={0}
         flexDirection="column"
         height="inherit"
