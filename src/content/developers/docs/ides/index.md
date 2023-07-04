@@ -65,6 +65,7 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Code formatter using prettier
 
 ## Further reading {#further-reading}
-- [Other Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum)
+
+- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy's list of Ethereunm IDEs_
 
 _Know of a community resource that helped you? Edit this page and add it!_
