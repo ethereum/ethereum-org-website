@@ -352,7 +352,6 @@ export const query = graphql`
     quarterData: quarterJson {
       data {
         user {
-          totalCosts
           username
           fullName
           avatarUrl
