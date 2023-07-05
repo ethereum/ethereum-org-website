@@ -325,7 +325,7 @@
   "h005-c-explanation": "Eth1 was the original name given to the execution layer, not the consensus layer.",
   "h005-d-label": "Staking",
   "h005-d-explanation": "Staking is depositing ETH into a smart contract to help secure the chain.",
-  "i001-prompt": "What is required to 'run a node'?",
+  "i001-prompt": "What is required to run a node?",
   "i001-a-label": "Running client software with modest hardware while staying online.",
   "i001-a-explanation": "Operating a node consists of running software that communicates using the language of the Ethereum protocol with other computers doing the same. This software downloads a copy of the Ethereum blockchain, verifies the validity of every block, then keeps it up-to-date with new blocks and transactions, while helping others download and update their own copies.",
   "i001-b-label": "Deposit 32 ETH to earn rewards",
