@@ -13,6 +13,7 @@ import {
   ListItem,
   Text,
   UnorderedList,
+  Icon,
 } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
@@ -23,7 +24,6 @@ import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import Tooltip from "../components/Tooltip"
 import Tabs from "../components/Tabs"
-import Icon from "../components/Icon"
 import Link from "../components/Link"
 import {
   Banner,
@@ -51,6 +51,7 @@ import useFetchStat, {
 } from "../hooks/useFetchStat"
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import type { ChildOnlyProp, Context } from "../types"
+import { MdInfoOutline } from "react-icons/md"
 
 const Slogan = (props: ChildOnlyProp) => (
   <Text
@@ -250,7 +251,15 @@ const WhatIsEthereumPage = ({
       eventName: "Cryptocurrency tab",
       content: (
         <TabContent>
-          <Translation id="page-what-is-ethereum-cryptocurrency-tab-content" />
+          <Text>
+            <Translation id="page-what-is-ethereum-cryptocurrency-tab-content-1" />
+          </Text>
+          <Text>
+            <Translation id="page-what-is-ethereum-cryptocurrency-tab-content-2" />
+          </Text>
+          <Text>
+            <Translation id="page-what-is-ethereum-cryptocurrency-tab-content-3" />
+          </Text>
         </TabContent>
       ),
     },
@@ -342,43 +351,40 @@ const WhatIsEthereumPage = ({
                 <Text>
                   <Translation id="page-what-is-ethereum-summary-desc-1" />
                 </Text>
-                <Text mb={0}>
+                <Text>
                   <Translation id="page-what-is-ethereum-summary-desc-2" />
+                </Text>
+                <Text mb={0}>
+                  <Translation id="page-what-is-ethereum-summary-desc-3" />
                 </Text>
               </Summary>
             </Width60>
             <Width40 />
           </TwoColumnContent>
-          <Section px={0}>
-            <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
-              <Width40>
-                <GatsbyImage
-                  image={getImage(data.whatIsCryptocurrency)!}
-                  alt=""
+
+          <br />
+          <br />
+
+          <Section>
+            <H2>
+              <Translation id="page-what-is-ethereum-what-can-eth-do-title" />
+            </H2>
+            <CardContainer>
+              {cards.map((card, idx) => (
+                <Card
+                  key={idx}
+                  emoji={card.emoji}
+                  title={card.title}
+                  description={card.description}
+                  flex="1 1 30%"
+                  minW="240px"
+                  m={4}
+                  p={6}
                 />
-              </Width40>
-              <Width60>
-                <H2>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-title" />
-                </H2>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-1" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-2" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-3" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-4" />
-                </Text>
-                <Text>
-                  <Translation id="page-what-is-ethereum-what-is-crypto-desc-5" />
-                </Text>
-              </Width60>
-            </TwoColumnContent>
+              ))}
+            </CardContainer>
           </Section>
+
           <TwoColumnContent>
             <Width60>
               <Tabs
@@ -394,182 +400,6 @@ const WhatIsEthereumPage = ({
             </Width60>
             <Width40 />
           </TwoColumnContent>
-        </Section>
-
-        <Section>
-          <TwoColumnContent>
-            <Width40>
-              <GatsbyImage image={getImage(data.diffEthAndBtc)!} alt="" />
-            </Width40>
-            <Width60>
-              <H2>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-title" />
-              </H2>
-              <Text>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-1" />
-              </Text>
-              <Text>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-2" />
-              </Text>
-              <Text>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-3" />
-              </Text>
-              <Text>
-                <Translation id="page-what-is-ethereum-btc-eth-diff-4" />
-              </Text>
-            </Width60>
-          </TwoColumnContent>
-        </Section>
-
-        <Section>
-          <H2>
-            <Translation id="page-what-is-ethereum-what-can-eth-do-title" />
-          </H2>
-          <CardContainer>
-            {cards.map((card, idx) => (
-              <Card
-                key={idx}
-                emoji={card.emoji}
-                title={card.title}
-                description={card.description}
-                flex="1 1 30%"
-                minW="240px"
-                m={4}
-                p={6}
-              />
-            ))}
-          </CardContainer>
-        </Section>
-
-        <Section>
-          <Banner>
-            <BannerBody>
-              <H2>
-                <Translation id="page-what-is-ethereum-ethereum-in-numbers-title" />
-              </H2>
-              <BannerGrid>
-                <BannerGridCell>
-                  <StatPrimary>4k+</StatPrimary>
-                  <StatDescription>
-                    Projects built on{" "}
-                    <NoWrapText>
-                      Ethereum{" "}
-                      <Tooltip
-                        content={tooltipContent({
-                          apiUrl:
-                            "https://dappradar.com/rankings/protocol/ethereum",
-                          apiProvider: "State of the dapps",
-                          ariaLabel: "Read more about Ethereum projects stats",
-                        })}
-                      >
-                        <Icon name="info" size="1rem" />
-                      </Tooltip>
-                    </NoWrapText>
-                  </StatDescription>
-                </BannerGridCell>
-                <BannerGridCell>
-                  <StatPrimary>96M+</StatPrimary>
-                  <StatDescription>
-                    Accounts (wallets) with an ETH{" "}
-                    <NoWrapText>
-                      balance{" "}
-                      <Tooltip
-                        content={tooltipContent({
-                          apiUrl:
-                            "https://messari.io/asset/ethereum/metrics/all",
-                          apiProvider: "Messari",
-                          ariaLabel: "Read more about wallets stats",
-                        })}
-                      >
-                        <Icon name="info" size="1rem" />
-                      </Tooltip>
-                    </NoWrapText>
-                  </StatDescription>
-                </BannerGridCell>
-                <BannerGridCell>
-                  <StatPrimary>53.3M+</StatPrimary>
-                  <StatDescription>
-                    Smart contracts on{" "}
-                    <NoWrapText>
-                      Ethereum{" "}
-                      <Tooltip
-                        content={tooltipContent({
-                          apiUrl:
-                            "https://dune.com/sawmon_and_natalie/smart-contracts-on-ethereum",
-                          apiProvider: "Dune",
-                          ariaLabel: "Read more about smart contracts stats",
-                        })}
-                      >
-                        <Icon name="info" size="1rem" />
-                      </Tooltip>
-                    </NoWrapText>
-                  </StatDescription>
-                </BannerGridCell>
-                <BannerGridCell>
-                  <StatPrimary>$410B</StatPrimary>
-                  <StatDescription>
-                    Value secured on{" "}
-                    <NoWrapText>
-                      Ethereum{" "}
-                      <Tooltip
-                        content={tooltipContent({
-                          apiUrl: "https://ultrasound.money/#tvs",
-                          apiProvider: "Ultrasound Money",
-                          ariaLabel: "Read more about about Ethereum as money",
-                        })}
-                      >
-                        <Icon name="info" size="1rem" />
-                      </Tooltip>
-                    </NoWrapText>
-                  </StatDescription>
-                </BannerGridCell>
-                <BannerGridCell>
-                  <StatPrimary>$3.5B</StatPrimary>
-                  <StatDescription>
-                    Creator earnings on Ethereum in{" "}
-                    <NoWrapText>
-                      2021{" "}
-                      <Tooltip
-                        content={tooltipContent({
-                          apiUrl:
-                            "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
-                          apiProvider: "Josh Stark",
-                          ariaLabel:
-                            "Read more about 2021 Ethereum earnings stats",
-                        })}
-                      >
-                        <Icon name="info" size="1rem" />
-                      </Tooltip>
-                    </NoWrapText>
-                  </StatDescription>
-                </BannerGridCell>
-                <BannerGridCell>
-                  <StatPrimary>
-                    <Stat stat={txCount} />
-                  </StatPrimary>
-                  <StatDescription>
-                    Number of transactions{" "}
-                    <NoWrapText>
-                      today{" "}
-                      <Tooltip
-                        content={tooltipContent({
-                          apiUrl: "https://etherscan.io/",
-                          apiProvider: "Etherscan",
-                          ariaLabel:
-                            "Read more about number of transactions stats",
-                        })}
-                      >
-                        <Icon name="info" size="1rem" />
-                      </Tooltip>
-                    </NoWrapText>
-                  </StatDescription>
-                </BannerGridCell>
-              </BannerGrid>
-            </BannerBody>
-            <BannerImage>
-              <GatsbyImage image={getImage(data.stats)!} alt="" />
-            </BannerImage>
-          </Banner>
         </Section>
 
         <Section>
@@ -643,55 +473,135 @@ const WhatIsEthereumPage = ({
           </TwoColumnContent>
         </Section>
 
-        <Section bgColor="homeBoxTurquoise">
-          <TwoColumnContent>
-            <Width40>
-              <GatsbyImage image={getImage(data.ethCoin)!} alt="" />
-            </Width40>
-            <Width60>
-              <H2>
-                <Translation id="page-what-is-ethereum-meet-ether-title" />
-              </H2>
-              <Text>
-                <Translation id="page-what-is-ethereum-meet-ether-desc-1" />
-              </Text>
-              <Text>
-                <Translation id="page-what-is-ethereum-meet-ether-desc-2" />
-              </Text>
-              <ButtonRow>
-                <ButtonLink to="/eth/">
-                  <Translation id="page-what-is-ethereum-what-is-ether" />
-                </ButtonLink>
-                <ButtonLink to="/get-eth/" variant="outline">
-                  <Translation id="page-what-is-ethereum-get-eth" />
-                </ButtonLink>
-              </ButtonRow>
-            </Width60>
-          </TwoColumnContent>
-        </Section>
-
         <Section>
-          <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
-            <Width40>
-              <GatsbyImage image={getImage(data.meetEth)!} alt="" />
-            </Width40>
-            <Width60>
+          <Banner>
+            <BannerBody>
               <H2>
-                <Translation id="page-what-is-ethereum-what-can-i-do-title" />
+                <Translation id="page-what-is-ethereum-ethereum-in-numbers-title" />
               </H2>
-              <Text>
-                <Translation id="page-what-is-ethereum-what-can-i-do-desc-1" />
-              </Text>
-              <ButtonRow>
-                <ButtonLink to="/dapps/">
-                  <Translation id="page-what-is-ethereum-explore-applications" />
-                </ButtonLink>
-                <ButtonLink to="/defi/" variant="outline">
-                  <Translation id="page-what-is-ethereum-learn-defi" />
-                </ButtonLink>
-              </ButtonRow>
-            </Width60>
-          </TwoColumnContent>
+              <BannerGrid>
+                <BannerGridCell>
+                  <StatPrimary>4k+</StatPrimary>
+                  <StatDescription>
+                    Projects built on{" "}
+                    <NoWrapText>
+                      Ethereum{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl:
+                            "https://dappradar.com/rankings/protocol/ethereum",
+                          apiProvider: "State of the dapps",
+                          ariaLabel: "Read more about Ethereum projects stats",
+                        })}
+                      >
+                        <Icon as={MdInfoOutline} fontSize="md" />
+                      </Tooltip>
+                    </NoWrapText>
+                  </StatDescription>
+                </BannerGridCell>
+                <BannerGridCell>
+                  <StatPrimary>96M+</StatPrimary>
+                  <StatDescription>
+                    Accounts (wallets) with an ETH{" "}
+                    <NoWrapText>
+                      balance{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl:
+                            "https://messari.io/asset/ethereum/metrics/all",
+                          apiProvider: "Messari",
+                          ariaLabel: "Read more about wallets stats",
+                        })}
+                      >
+                        <Icon as={MdInfoOutline} fontSize="md" />
+                      </Tooltip>
+                    </NoWrapText>
+                  </StatDescription>
+                </BannerGridCell>
+                <BannerGridCell>
+                  <StatPrimary>53.3M+</StatPrimary>
+                  <StatDescription>
+                    Smart contracts on{" "}
+                    <NoWrapText>
+                      Ethereum{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl:
+                            "https://dune.com/sawmon_and_natalie/smart-contracts-on-ethereum",
+                          apiProvider: "Dune",
+                          ariaLabel: "Read more about smart contracts stats",
+                        })}
+                      >
+                        <Icon as={MdInfoOutline} fontSize="md" />
+                      </Tooltip>
+                    </NoWrapText>
+                  </StatDescription>
+                </BannerGridCell>
+                <BannerGridCell>
+                  <StatPrimary>$410B</StatPrimary>
+                  <StatDescription>
+                    Value secured on{" "}
+                    <NoWrapText>
+                      Ethereum{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl: "https://ultrasound.money/#tvs",
+                          apiProvider: "Ultrasound Money",
+                          ariaLabel: "Read more about about Ethereum as money",
+                        })}
+                      >
+                        <Icon as={MdInfoOutline} fontSize="md" />
+                      </Tooltip>
+                    </NoWrapText>
+                  </StatDescription>
+                </BannerGridCell>
+                <BannerGridCell>
+                  <StatPrimary>$3.5B</StatPrimary>
+                  <StatDescription>
+                    Creator earnings on Ethereum in{" "}
+                    <NoWrapText>
+                      2021{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl:
+                            "https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I",
+                          apiProvider: "Josh Stark",
+                          ariaLabel:
+                            "Read more about 2021 Ethereum earnings stats",
+                        })}
+                      >
+                        <Icon as={MdInfoOutline} fontSize="md" />
+                      </Tooltip>
+                    </NoWrapText>
+                  </StatDescription>
+                </BannerGridCell>
+                <BannerGridCell>
+                  <StatPrimary>
+                    <Stat stat={txCount} />
+                  </StatPrimary>
+                  <StatDescription>
+                    Number of transactions{" "}
+                    <NoWrapText>
+                      today{" "}
+                      <Tooltip
+                        content={tooltipContent({
+                          apiUrl: "https://etherscan.io/",
+                          apiProvider: "Etherscan",
+                          ariaLabel:
+                            "Read more about number of transactions stats",
+                        })}
+                      >
+                        <Icon as={MdInfoOutline} fontSize="md" />
+                      </Tooltip>
+                    </NoWrapText>
+                  </StatDescription>
+                </BannerGridCell>
+              </BannerGrid>
+            </BannerBody>
+            <BannerImage>
+              <GatsbyImage image={getImage(data.stats)!} alt="" />
+            </BannerImage>
+          </Banner>
         </Section>
 
         <Section bgColor="homeBoxPurple">
@@ -750,73 +660,125 @@ const WhatIsEthereumPage = ({
             </Width60>
           </TwoColumnContent>
         </Section>
-      </Box>
 
-      <Section>
-        <TwoColumnContent>
-          <Width40>
-            <GatsbyImage image={getImage(data.criminalActivity)!} alt="" />
-          </Width40>
-          <Width60>
-            <H2>
-              <Translation id="page-what-is-ethereum-criminal-activity-title" />
-            </H2>
-            <Text>
-              <Translation id="page-what-is-ethereum-criminal-activity-desc-1" />
-            </Text>
-            <Text>
-              <Translation id="page-what-is-ethereum-criminal-activity-desc-2" />
-            </Text>
-            <Text>
-              <Text as="em">
-                <Translation id="page-what-is-ethereum-criminal-activity-desc-3" />
+        <Section bgColor="homeBoxTurquoise">
+          <TwoColumnContent>
+            <Width40>
+              <GatsbyImage image={getImage(data.ethCoin)!} alt="" />
+            </Width40>
+            <Width60>
+              <H2>
+                <Translation id="page-what-is-ethereum-meet-ether-title" />
+              </H2>
+              <Text>
+                <Translation id="page-what-is-ethereum-meet-ether-desc-1" />
               </Text>
-            </Text>
-            <UnorderedList>
-              <ListItem>
-                <Link to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
-                  Europol Spotlight - Cryptocurrencies - Tracing the evolution
-                  of criminal finances.pdf
-                </Link>{" "}
-                EN (1.4 MB)
-              </ListItem>
-              <ListItem>
-                <Link to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
-                  Chainalysis (2021), The 2021 Crypto Crime report
-                </Link>{" "}
-                EN
-              </ListItem>
-            </UnorderedList>
-          </Width60>
-        </TwoColumnContent>
-      </Section>
+              <Text>
+                <Translation id="page-what-is-ethereum-meet-ether-desc-2" />
+              </Text>
+              <ButtonRow>
+                <ButtonLink to="/eth/">
+                  <Translation id="page-what-is-ethereum-what-is-ether" />
+                </ButtonLink>
+                <ButtonLink to="/get-eth/" variant="outline">
+                  <Translation id="page-what-is-ethereum-get-eth" />
+                </ButtonLink>
+              </ButtonRow>
+            </Width60>
+          </TwoColumnContent>
+        </Section>
 
-      <Section>
-        <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
-          <Width40>
-            <EnergyConsumptionChart />
-          </Width40>
-          <Width60>
-            <H2>
-              <Translation id="page-what-is-ethereum-energy-title" />
-            </H2>
-            <Text>
-              <Translation id="page-what-is-ethereum-energy-desc-1" />
-            </Text>
-            <Text>
-              <Translation id="page-what-is-ethereum-energy-desc-2" />
-            </Text>
-            <ButtonRow>
-              <ButtonLink to="/energy-consumption/">
-                <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
-              </ButtonLink>
-              <ButtonLink to="/roadmap/merge/" variant="outline">
-                <Translation id="page-what-is-ethereum-the-merge-update" />
-              </ButtonLink>
-            </ButtonRow>
-          </Width60>
-        </TwoColumnContent>
-      </Section>
+        <Section>
+          <TwoColumnContent direction={{ base: "column", lg: "row-reverse" }}>
+            <Width40>
+              <EnergyConsumptionChart />
+            </Width40>
+            <Width60>
+              <H2>
+                <Translation id="page-what-is-ethereum-energy-title" />
+              </H2>
+              <Text>
+                <Translation id="page-what-is-ethereum-energy-desc-1" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-energy-desc-2" />
+              </Text>
+              <ButtonRow>
+                <ButtonLink to="/energy-consumption/">
+                  <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
+                </ButtonLink>
+                <ButtonLink to="/roadmap/merge/" variant="outline">
+                  <Translation id="page-what-is-ethereum-the-merge-update" />
+                </ButtonLink>
+              </ButtonRow>
+            </Width60>
+          </TwoColumnContent>
+        </Section>
+
+        <Section>
+          <TwoColumnContent>
+            <Width40>
+              <GatsbyImage image={getImage(data.criminalActivity)!} alt="" />
+            </Width40>
+            <Width60>
+              <H2>
+                <Translation id="page-what-is-ethereum-criminal-activity-title" />
+              </H2>
+              <Text>
+                <Translation id="page-what-is-ethereum-criminal-activity-desc-1" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-criminal-activity-desc-2" />
+              </Text>
+              <Text>
+                <Text as="em">
+                  <Translation id="page-what-is-ethereum-criminal-activity-desc-3" />
+                </Text>
+              </Text>
+              <UnorderedList>
+                <ListItem>
+                  <Link to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
+                    Europol Spotlight - Cryptocurrencies - Tracing the evolution
+                    of criminal finances.pdf
+                  </Link>{" "}
+                  EN (1.4 MB)
+                </ListItem>
+                <ListItem>
+                  <Link to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
+                    Chainalysis (2021), The 2021 Crypto Crime report
+                  </Link>{" "}
+                  EN
+                </ListItem>
+              </UnorderedList>
+            </Width60>
+          </TwoColumnContent>
+        </Section>
+
+        <Section>
+          <TwoColumnContent>
+            <Width40>
+              <GatsbyImage image={getImage(data.diffEthAndBtc)!} alt="" />
+            </Width40>
+            <Width60>
+              <H2>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-title" />
+              </H2>
+              <Text>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-1" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-2" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-3" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum-btc-eth-diff-4" />
+              </Text>
+            </Width60>
+          </TwoColumnContent>
+        </Section>
+      </Box>
 
       <Content>
         <H2>

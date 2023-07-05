@@ -207,6 +207,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Support for multi-cloud, multi-region and hybrid deployment orchestrations
     - Simple hourly SaaS-based pricing
     - SLAs and 24x7 support
+- [**Lava Network**](https://www.lavanet.xyz/)
+  - [Docs](https://docs.lavanet.xyz/)
+  - Features
+    - Free Testnet Use
+    - Decentralized Redundancy for High Uptime
+    - Open-source
+    - Fully Decentralized SDK
+    - Ethers.js Integration
+    - Intuitive Project Management Interface
+    - Consensus-Based Data Integrity
+    - Multi-chain Support
 - [**Moralis**](https://moralis.io/)
   - [Docs](https://docs.moralis.io/)
   - Features

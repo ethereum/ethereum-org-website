@@ -153,7 +153,7 @@ Il processo di governance di Ethereum spesso rinuncia a velocità ed efficienza 
 
 Lo sviluppo di specifiche e implementazioni è sempre stato totalmente open source, non sono stati invece utilizzati i processi formali descritti sopra per proporre gli aggiornamenti. Questo ha consentito a ricercatori e implementatori di specificare e concordare le modifiche più rapidamente.
 
-Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 september 2022 La Fusione è stata completata, come parte dell'[aggiornamento di rete di Parigi](https://ethereum.org/en/history/#paris). La proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) è stata modificata da 'Ultimo Appello' a 'Definitiva', completando la transizione al proof-of-stake.
+Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 september 2022 La Fusione è stata completata, come parte dell'[aggiornamento di rete di Parigi](/history/#paris). La proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) è stata modificata da 'Ultimo Appello' a 'Definitiva', completando la transizione al proof-of-stake.
 
 <ButtonLink to="/roadmap/merge/">
   Maggiori informazioni sulla fusione
