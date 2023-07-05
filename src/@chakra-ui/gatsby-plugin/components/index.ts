@@ -7,6 +7,7 @@ import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
 import { Progress } from "./Progress"
 import { Tabs } from "./Tabs"
+import { Text } from "./Text"
 import { Radio } from "./Radio"
 import { Select } from "./Select"
 import { Switch } from "./Switch"
@@ -53,4 +54,5 @@ export default {
   Table: tableDefaultTheme,
   Tabs,
   Tag,
+  Text,
 }
