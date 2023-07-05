@@ -85,8 +85,8 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
     next: "staking",
   },
   {
-    id: "staking",
-    level: "intermediate",
+    id: "solo-staking",
+    level: "advanced",
   },
 ]
 
