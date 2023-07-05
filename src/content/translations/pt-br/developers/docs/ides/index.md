@@ -20,7 +20,7 @@ Se você quer brincar com o código antes de [configurar um ambiente de desenvol
 - [Documentação](https://chainide.gitbook.io/chainide-english-1/)
 - [Fórum de ajuda](https://forum.chainide.com/)
 
-**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - \*\*\_Um ambiente de desenvolvimento personalizável para Ethereum com hot reloading, verificação de erros e suporte a rede de testes de primeira classe
+**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_Um ambiente de desenvolvimento personalizável para Ethereum com hot reloading, verificação de erros e suporte a rede de testes de primeira classe_**
 
 - [Documentação](https://docs.replit.com/)
 

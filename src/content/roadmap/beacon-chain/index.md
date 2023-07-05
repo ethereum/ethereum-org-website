@@ -20,7 +20,7 @@ The Beacon Chain is the name of the original proof-of-stake blockchain that was 
 ## What does the Beacon Chain do? {#what-does-the-beacon-chain-do}
 
 The Beacon Chain is the name given to a ledger of accounts that conducted and coordinated the network of Ethereum [stakers](/staking/) before those stakers started validating real Ethereum blocks. It does not process transactions or handle smart contract interactions though because that is being done in the execution layer.
-The Beacon Chain is responsible for things like block and attestation handling, running the fork choice algorithm, and managing rewards and penalties. 
+The Beacon Chain is responsible for things like block and attestation handling, running the fork choice algorithm, and managing rewards and penalties.
 Read more on our [node architecture page](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
 ## Beacon Chain impact {#beacon-chain-features}

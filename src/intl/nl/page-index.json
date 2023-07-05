@@ -48,6 +48,7 @@
   "page-index-developers-code-example-description-3": "Je kunt bestaande diensten herontwerpen als gedecentraliseerde, open applicaties.",
   "page-index-network-stats-title": "Ethereum vandaag",
   "page-index-network-stats-subtitle": "De laatste netwerkstatistieken",
+  "page-index-network-stats-total-eth-staked": "Totaal gestakete ETH",
   "page-index-network-stats-eth-price-description": "ETH-koers (USD)",
   "page-index-network-stats-eth-price-explainer": "De meest recente prijs voor 1 ether. Je kunt zo weinig kopen als 0,000000000000000001 – je hoeft niet 1 hele ETH te kopen.",
   "page-index-network-stats-tx-day-description": "Transacties vandaag",

@@ -93,9 +93,9 @@ const StyledInfoIcon = () => (
     mr={2}
     opacity={0.8}
     boxSize="full"
-    _hover={{ color: "primary" }}
-    _active={{ color: "primary" }}
-    _focus={{ color: "primary" }}
+    _hover={{ color: "primary.base" }}
+    _active={{ color: "primary.base" }}
+    _focus={{ color: "primary.base" }}
   />
 )
 
@@ -134,7 +134,7 @@ const StatBox = (props: ChildOnlyType) => (
 
 const StatPrimary = (props: { content: string }) => (
   <Text
-    color="primary"
+    color="primary.base"
     fontFamily="monospace"
     fontWeight="bold"
     fontSize="2rem"

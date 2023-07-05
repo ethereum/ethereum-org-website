@@ -69,6 +69,15 @@ const frameworksList: Array<IFramework> = [
     alt: "page-local-environment-waffle-logo-alt",
   },
   {
+    id: "kurtosis",
+    url: "https://www.kurtosis.com/",
+    githubUrl: "https://github.com/kurtosis-tech/kurtosis",
+    background: "#000000",
+    name: "Kurtosis",
+    description: "page-local-environment-kurtosis-desc",
+    alt: "page-local-environment-kurtosis-logo-alt",
+  },
+  {
     id: "hardhat",
     url: "https://hardhat.org/",
     githubUrl: "https://github.com/nomiclabs/hardhat",
@@ -157,6 +166,15 @@ const ChooseStackPage = ({
       name: "Waffle",
       description: t("page-local-environment-waffle-desc"),
       alt: t("page-local-environment-waffle-logo-alt"),
+    },
+    {
+      id: "kurtosis",
+      url: "https://www.kurtosis.com/",
+      githubUrl: "https://github.com/kurtosis-tech/kurtosis",
+      background: "#000000",
+      name: "Kurtosis",
+      description: t("page-local-environment-kurtosis-desc"),
+      alt: t("page-local-environment-kurtosis-logo-alt"),
     },
     {
       id: "hardhat",
@@ -465,6 +483,9 @@ export const query = graphql`
       ...devtoolImage
     }
     foundry: file(relativePath: { eq: "dev-tools/foundry.png" }) {
+      ...devtoolImage
+    }
+    kurtosis: file(relativePath: {eq: "dev-tools/kurtosis.png" }) {
       ...devtoolImage
     }
   }

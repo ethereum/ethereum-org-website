@@ -31,12 +31,12 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
   const $dotBg = cssVar("dot-bg")
 
   const hoverOrActiveStyle: SystemStyleObject = {
-    color: "primary",
+    color: "primary.base",
     _after: {
       content: `""`,
       background: $dotBg.reference,
       border: "1px",
-      borderColor: "primary",
+      borderColor: "primary.base",
       borderRadius: "50%",
       boxSize: 2,
       position: "absolute",

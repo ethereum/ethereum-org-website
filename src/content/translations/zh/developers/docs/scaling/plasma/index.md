@@ -150,11 +150,13 @@ Plasma、侧链、分片技术有一定的相似度，因为它们都以某种�
 
 ### Plasma 与分片 {#plasma-vs-sharding}
 
-Plasma 链和[分片链](/roadmap/danksharding/)都会定期向以太坊主网发布加密证明。 但是，两者具有不同的安全属性。
+Plasma 链和分片链都定期向以太坊主网发布加密证明。 但是，两者具有不同的安全属性。
 
 分片链向主网提交“汇总头”，其中包含有关每个数据分片的详细信息。 主网上的节点验证和执行数据分片的有效性，减少无效分片转换的可能性并防止网络上出现恶意活动。
 
 Plasma 不同于此，因为主网只接收最少量的子链状态信息。 这意味着主网无法有效验证子链上进行的交易，降低了交易的安全性。
+
+**注意**：以太坊区块链分片已经不再包含在路线图中。 它已被卷叠及 [Danksharding](/roadmap/danksharding) 扩容方案所取代。
 
 ### 使用 Plasma {#use-plasma}
 
@@ -173,4 +175,4 @@ Plasma 不同于此，因为主网只接收最少量的子链状态信息。 这
 - [了解 Plasma（第一部分）：基础知识](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Plasma 的一生](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_

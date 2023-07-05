@@ -97,8 +97,8 @@ const Breadcrumbs: React.FC<IProps> = ({
               as={Link}
               to={crumb.fullPath}
               isPartiallyActive={isCurrentPage}
-              _hover={{ color: "primary", textDecor: "none" }}
-              _active={{ color: "primary" }}
+              _hover={{ color: "primary.base", textDecor: "none" }}
+              _active={{ color: "primary.base" }}
             >
               {crumb.text.toUpperCase()}
             </BreadcrumbLink>
