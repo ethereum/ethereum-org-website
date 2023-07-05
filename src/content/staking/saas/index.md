@@ -41,13 +41,13 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 Below are some available SaaS provider. Use the above indicators to help guide you through these services
 
-<InfoBanner emoji="⚠️" isWarning>
-Please note the importance of supporting <a href="/developers/docs/nodes-and-clients/client-diversity/">client diversity</a> as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style="text-transform: uppercase;">"execution client diversity"</em> and <em style="text-transform: uppercase;">"consensus client diversity."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### SaaS providers
 
 <StakingProductsCardGrid category="saas" />
+
+Please note the importance of supporting [client diversity](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style="text-transform: uppercase;">"execution client diversity"</em> and <em style="text-transform: uppercase;">"consensus client diversity."</em>
 
 #### Key Generators
 

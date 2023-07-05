@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Checkbox,
   GridItem,
   Heading,
   HStack,
@@ -18,7 +19,6 @@ import {
   VStack,
 } from "@chakra-ui/react"
 import { uniqueId } from "lodash"
-import Checkbox from "../../Checkbox"
 import { useWalletFilterSidebar } from "./useWalletFilterSidebar"
 import { trackCustomEvent } from "../../../utils/matomo"
 
@@ -235,7 +235,6 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
                                   isChecked={
                                     restProps.filters[option.filterKey!]
                                   }
-                                  size="md"
                                   width="full"
                                   onChange={handleClick}
                                 >

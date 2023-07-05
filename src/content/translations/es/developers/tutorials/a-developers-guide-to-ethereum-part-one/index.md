@@ -84,7 +84,7 @@ En este tutorial, trabajaremos solo con el intérprete de Python. No crearemos n
 
 <div class="featured">Nota: en los ejemplos de abajo, los comandos que empiezan con `$` están destinados a ser ejecutados en la terminal. (No escriba el símbolo `$`, ya que sólo significa el inicio de la línea).</div>
 
-Primero, instale [IPython](https://ipython.org/) para tener un entorno fácil de usar para explorar. IPython ofrece el autocompletado de pestañas —entre otras características—, haciendo mucho más fácil ver qué es posible con Web3.py.
+Primero, instale [IPython](https://ipython.org/) para tener un entorno fácil de usar para explorar. IPython ofrece el autocompletado mediante la tecla de tabulación —entre otras características—, haciendo mucho más fácil ver qué es posible con Web3.py.
 
 ```bash
 pip install ipython

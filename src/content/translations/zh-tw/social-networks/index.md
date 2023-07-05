@@ -79,7 +79,7 @@ Reddit 擁有[回饋式社群積分](https://cointelegraph.com/news/reddit-to-re
 
 該程式現已上線，使用[運行名為「Moons」的社群積分版本](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)的 r/CryptoCurrency subreddit。 根據官方描述，Moons“會為對 subreddit 做出貢獻的發佈者、評論者、修改者提供獎勵。” 由於這些代幣位於區塊鏈上（使用者通過錢包接收），他們獨立於 Reddit 且不會丟失。
 
-在 Rinkeby 測試網進行初步測試後，Reddit 社群積分現已位於 [Arbitrum Nova](https://nova.arbitrum.io/)。Arbitrum Nova 是一個集合了 [validium](/developers/docs/scaling/validium/) 資產和[樂觀卷軸](/developers/docs/scaling/optimistic-rollups/)的區塊鏈。 除使用社群積分來解鎖特殊功能外，使用者亦可以在交易所用它們來換取法定貨幣。 此外，使用者擁有社群積分的數量決定了他們在社群決策過程中的影響力。
+在 Rinkeby 測試網進行初步測試後，Reddit 社群積分現已整合至 [Arbitrum Nova](https://nova.arbitrum.io/)。Arbitrum Nova 是一條集合了[側鏈](/developers/docs/scaling/sidechains/)和[樂觀卷軸](/developers/docs/scaling/optimistic-rollups/)屬性的區塊鏈。 除使用社群積分來解鎖特殊功能外，使用者亦可以在交易所用它們來換取法定貨幣。 此外，使用者擁有社群積分的數量決定了他們在社群決策過程中的影響力。
 
 ### Twitter {#twitter}
 
@@ -87,23 +87,26 @@ Reddit 擁有[回饋式社群積分](https://cointelegraph.com/news/reddit-to-re
 
 ### Instagram {#instagram}
 
-2022 年 5 月，[Instagram 宣布支援以太坊上的非同質化代幣](https://about.instagram.com/blog/announcements/instagram-digital-collectibles)和 Polygon。 使用者可以透過連接他們的以太坊錢包將非同質化代幣直接發佈到 Instagram。
+2022 年 5 月，[Instagram 宣布支援以太坊和 Polygon 上的非同質化代幣](https://about.instagram.com/blog/announcements/instagram-digital-collectibles)。 使用者可以透過連接他們的以太坊錢包將非同質化代幣直接發佈到 Instagram。
 
 ## 使用去中心化社交網路 {#use-decentralized-social-networks}
 
-- **[Status.im](https://status.im/)** - _ Status 是安全的訊息傳遞應用程式，使用開放程式碼、點對點協定和端到端加密來保護您的訊息免受第三方的侵害。_
+- **[Status.im](https://status.im/)** - _ Status 是安全的訊息傳遞應用程式，使用開放程式碼、點對點協議和端到端加密來保護你的訊息免受第三方的侵害。_
 - **[Mirror.xyz](https://mirror.xyz/)** - _Ｍ irror 是一個基於以太坊構建的使用者擁有的去中心化發布平台，供使用者眾籌創意、將內容貨幣化並建立高價值社群。_
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol 是一個可組合和去中心化的社交圖譜，可幫助創作者在去中心化網際網路的數位花園中的任何地方擁有自己的內容。_
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster 是一個充分去中心化的社交網路。 它是個支持多種用戶端的開放式協議，如電子郵件。_
 
 ## 延伸閱讀 {#further-reading}
 
 ### 文章 {#articles}
 
+- [去中心化社群媒體：Web3 社交技巧指南](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [社交網路是下一個大的去中心化機會](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 承諾實現由社群推動的去中心化社交網路](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [區塊鏈社交媒體發展形勢概覽](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [區塊鏈如何解決社交媒體隱私問題](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [社交媒體網路正在進入區塊鏈](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [社交網絡的充分去中心化](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### 影片 {#videos}
 
