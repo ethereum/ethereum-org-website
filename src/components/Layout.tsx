@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
-import { useColorModeValue, Text } from "@chakra-ui/react"
-import { ThemeProvider } from "@emotion/react"
-
 import { Flex } from "@chakra-ui/react"
-
-import { lightTheme, darkTheme } from "../theme"
 
 import Footer from "./Footer"
 import ZenMode from "./ZenMode"
@@ -18,6 +13,7 @@ import FeedbackWidget from "./FeedbackWidget"
 import { SkipLink } from "./SkipLink"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
+import { lightTheme as oldTheme } from "../theme"
 
 import { useKeyPress } from "../hooks/useKeyPress"
 
@@ -55,9 +51,6 @@ const Layout: React.FC<IProps> = ({
   pageContext,
   children,
 }) => {
-  // TODO: tmp - for backward compatibility with old theme
-  const theme = useColorModeValue(lightTheme, darkTheme)
-
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
 
@@ -108,63 +101,61 @@ const Layout: React.FC<IProps> = ({
 
   return (
     <ApolloProvider client={client}>
-      <ThemeProvider theme={theme}>
-        <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
-          <SkipLink hrefId="#main-content" />
-          <TranslationBanner
-            shouldShow={shouldShowTranslationBanner}
-            isPageContentEnglish={isPageContentEnglish}
-            isPageRightToLeft={isPageRightToLeft}
-            originalPagePath={pageContext.i18n.originalPath || ""}
-          />
-          <TranslationBannerLegal
-            shouldShow={isLegal}
-            isPageRightToLeft={isPageRightToLeft}
-            originalPagePath={pageContext.i18n.originalPath || ""}
-          />
+      <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
+        <SkipLink hrefId="#main-content" />
+        <TranslationBanner
+          shouldShow={shouldShowTranslationBanner}
+          isPageContentEnglish={isPageContentEnglish}
+          isPageRightToLeft={isPageRightToLeft}
+          originalPagePath={pageContext.i18n.originalPath || ""}
+        />
+        <TranslationBannerLegal
+          shouldShow={isLegal}
+          isPageRightToLeft={isPageRightToLeft}
+          originalPagePath={pageContext.i18n.originalPath || ""}
+        />
 
+        <Flex
+          position="relative"
+          margin="0px auto"
+          minHeight="100vh"
+          flexFlow="column"
+          maxW={{
+            lg: oldTheme.variables.maxPageWidth,
+          }}
+        >
+          <ZenMode>
+            <Nav path={path} />
+            {shouldShowSideNav && <SideNavMobile path={path} />}
+          </ZenMode>
           <Flex
-            position="relative"
-            margin="0px auto"
-            minHeight="100vh"
-            flexFlow="column"
-            maxW={{
-              lg: lightTheme.variables.maxPageWidth,
-            }}
+            flexDirection={{ base: "column", lg: "row" }}
+            id="main-content"
+            scrollMarginTop={20}
           >
-            <ZenMode>
-              <Nav path={path} />
-              {shouldShowSideNav && <SideNavMobile path={path} />}
-            </ZenMode>
-            <Flex
-              flexDirection={{ base: "column", lg: "row" }}
-              id="main-content"
-              scrollMarginTop={20}
-            >
-              {shouldShowSideNav && (
-                <ZenMode>
-                  <SideNav path={path} />
-                </ZenMode>
-              )}
-              <Flex flexDirection="column" width="100%">
-                <Flex
-                  justifyContent="space-around"
-                  alignItems="flex-start"
-                  overflow="visible"
-                  width="100%"
-                  flexGrow="1"
-                >
-                  {children}
-                </Flex>
+            {shouldShowSideNav && (
+              <ZenMode>
+                <SideNav path={path} />
+              </ZenMode>
+            )}
+            <Flex flexDirection="column" width="100%">
+              <Flex
+                justifyContent="space-around"
+                alignItems="flex-start"
+                overflow="visible"
+                width="100%"
+                flexGrow="1"
+              >
+                {children}
               </Flex>
             </Flex>
-            <ZenMode>
-              <Footer />
-            </ZenMode>
-            <FeedbackWidget location={path} />
           </Flex>
-        </ZenModeContext.Provider>
-      </ThemeProvider>
+          <ZenMode>
+            <Footer />
+          </ZenMode>
+          <FeedbackWidget location={path} />
+        </Flex>
+      </ZenModeContext.Provider>
     </ApolloProvider>
   )
 }

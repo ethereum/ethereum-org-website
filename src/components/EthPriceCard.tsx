@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
+import { Box, Flex, FlexProps, Heading, Icon } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 import axios from "axios"
 
@@ -7,13 +7,12 @@ import Translation from "./Translation"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
 
-export interface IProps {
-  className?: string
+export interface IProps extends FlexProps {
   isLeftAlign?: boolean
 }
 
 // TODO add prop to left vs. center align
-const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
+const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
   const [state, setState] = useState({
     currentPriceUSD: "",
     percentChangeUSD: 0,
@@ -75,7 +74,6 @@ const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
 
   return (
     <Flex
-      className={className}
       direction="column"
       align={isLeftAlign ? "flex-start" : "center"}
       justify="space-between"
@@ -93,6 +91,7 @@ const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
       maxW="420px"
       maxH="192px"
       borderRadius="base"
+      {...rest}
     >
       <Heading
         as="h4"
@@ -128,7 +127,7 @@ const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
           fontSize="2xl"
           lineHeight="140%"
           mr={4}
-          color={isNegativeChange ? "fail300" : "success"}
+          color={isNegativeChange ? "fail300" : "success.base"}
         >
           {change}
         </Box>

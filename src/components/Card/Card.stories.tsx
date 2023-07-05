@@ -1,6 +1,7 @@
+import React from "react"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryFn } from "@storybook/react"
-import React from "react"
+import { useTranslation } from "react-i18next"
 import Card, { IProps } from "."
 import Button from "../Button"
 
@@ -17,14 +18,18 @@ export default {
   ],
 } as Meta<typeof Component>
 
-const defaultProps: IProps = {
-  emoji: ":woman_student:",
-  title: "Learn Ethereum development",
-  description: "Read up on core concepts and the Ethereum stack with our docs",
-}
+export const Default: StoryFn<typeof Component> = (args) => {
+  const { t } = useTranslation()
 
-export const Default: StoryFn<typeof Component> = (args) => (
-  <Component {...defaultProps} {...args}>
-    <Button>Read the docs</Button>
-  </Component>
-)
+  const defaultProps: IProps = {
+    emoji: ":woman_student:",
+    title: t("page-developers-learn"),
+    description: t("page-developers-learn-desc"),
+  }
+
+  return (
+    <Component {...defaultProps} {...args}>
+      <Button>{t("page-developers-read-docs")}</Button>
+    </Component>
+  )
+}
