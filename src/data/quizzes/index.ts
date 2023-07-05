@@ -35,9 +35,9 @@ const quizzes: RawQuizzes = {
     title: "page-assets-merge",
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
-  staking: {
-    title: "staking",
-    questions: ["j001", "j002", "j003", "j004", "j005", "j006", "j007", "j008"],
+  solo-staking: {
+    title: "solo-staking",
+    questions: ["j001", "j002", "j004", "j005", "j006", "j007", "j008"],
   },
 }
 
