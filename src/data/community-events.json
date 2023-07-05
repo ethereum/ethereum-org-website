@@ -259,5 +259,14 @@
     "description": "ETHLisbon is an Ethereum-focused hackathon bringing together the best Web 3.0 builders to the crypto capital of Europe.",
     "startDate": "2023-11-03",
     "endDate": "2023-11-05"
+  },
+    {
+    "title": "ETHChiangmai 2023",
+    "to": "https://www.ethchiangmai.com/",
+    "sponsor": null,
+    "location": "Chiang Mai, Thailand",
+    "description": "ETHChiangMai is an event that merges the worlds of Ethereum technology and social impact.",
+    "startDate": "2023-11-24",
+    "endDate": "2023-11-26"
   }
 ]
