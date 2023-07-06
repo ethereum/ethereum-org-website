@@ -1,6 +1,7 @@
 import * as React from "react"
 import {
   Box,
+  Center,
   Flex,
   Link as ChakraLink,
   Stack,
@@ -21,9 +22,9 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Flex align="center" minH="100vh">
+      <Center minH="100vh">
         <Story />
-      </Flex>
+      </Center>
     ),
   ],
 } satisfies Meta<TextType>
@@ -137,4 +138,17 @@ export const Link: StoryObj<typeof ChakraLink> = {
       </VStack>
     )
   },
+}
+
+export const BodyCopy: Story = {
+  render: () => (
+    <Box maxW="prose" px="4">
+      <Text>
+        Text body normal. Ethereum is open access to digital money and
+        data-friendly services for everyone - no matter your background or
+        location. It's a community-built technology behind the cryptocurrency
+        ether (ETH) and thousands of applications you can use today!
+      </Text>
+    </Box>
+  ),
 }

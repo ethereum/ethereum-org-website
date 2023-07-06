@@ -45,7 +45,4 @@ const sizes = {
 
 export const Text = defineStyleConfig({
   sizes,
-  defaultProps: {
-    size: "lg",
-  },
 })

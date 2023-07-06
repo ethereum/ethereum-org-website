@@ -17,16 +17,17 @@ const styles = {
       // TODO: when we have Chakra v2, this should be done by overriding the
       // native Chakra semantic tokens
       bg: mode("white", "gray.700")(props),
-      lineHeight: "1.6rem",
+      lineHeight: "base",
+      fontSize: ["sm", null, "lg"],
     },
     a: {
       color: "primary.base",
       textDecoration: "underline",
     },
     // should be replace with https://chakra-ui.com/docs/components/text
-    p: {
-      margin: "0px 0px 1.45rem",
-    },
+    // p: {
+    //   margin: "0px 0px 1.45rem",
+    // },
     // should be replace with https://chakra-ui.com/docs/components/list
     "ul, ol": {
       margin: "0px 0px 1.45rem 1.45rem",
@@ -54,9 +55,6 @@ const styles = {
     },
 
     "li *:last-child": {
-      "margin-bottom": "0",
-    },
-    "p *:last-child": {
       "margin-bottom": "0",
     },
     "li > p": {
