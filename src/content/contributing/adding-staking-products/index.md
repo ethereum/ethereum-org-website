@@ -53,7 +53,7 @@ Staking products or services submissions will be assessed by the following crite
 **Does the project provide accurate and reliable information?**
 
 - It is crucial that the product's website features up-to-date, accurate, and non-misleading information, particularly if it pertains to the Ethereum protocol or other related technologies.
-- Submissions containing misinformation, outdated details, or potentially misleading statements about Ethereum or other relevant subjects will not be listed.
+- Submissions containing misinformation, outdated details, or potentially misleading statements about Ethereum or other relevant subjects will not be listed or will be removed if already listed.
 
 **What platforms are supported?**
 
