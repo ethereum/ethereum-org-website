@@ -13,7 +13,7 @@ Optimistic rollups can process transactions for a much lower price than Ethereum
 At the same time, the data is all written to L1 so everything can be proved and reconstructed with all the integrity and availability guarantees of Mainnet.
 
 To use L1 assets on Optimism (or any other L2), the assets need to be [bridged](/bridges/#prerequisites).
-One way to achieve this is for users to lock assets (ETH and [ERC-20 tokens](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) are the most common ones) on L1, and receive equivalent assets to use on L2.
+One way to achieve this is for users to lock assets (ETH and [ERC-20 tokens](/developers/docs/standards/tokens/erc-20/) are the most common ones) on L1, and receive equivalent assets to use on L2.
 Eventually, whoever ends up with them might want to bridge them back to L1.
 When doing this, the assets are burned on L2 and then released back to the user on L1.
 
@@ -1077,7 +1077,7 @@ The L2 bridge uses ERC-165 as a sanity check to make sure that the ERC-20 contra
 
 Only the L2 bridge is allowed to mint and burn assets.
 
-`_mint` and `_burn` are actually defined in the [OpenZeppelin ERC-20 contract](https://ethereum.org/en/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+`_mint` and `_burn` are actually defined in the [OpenZeppelin ERC-20 contract](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 That contract just doesn't expose them externally, because the conditions to mint and burn tokens are as varied as the number of ways to use ERC-20.
 
 ## L2 Bridge Code {#l2-bridge-code}

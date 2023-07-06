@@ -35,6 +35,7 @@ These projects have created their own grants for projects aimed at developing an
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
+- [SKALE Network Grants Program](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/) ecosystem_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
 - [UMA Grants Program](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) developer support_
 - [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) community_

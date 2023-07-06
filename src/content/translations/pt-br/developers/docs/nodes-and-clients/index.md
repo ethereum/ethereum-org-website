@@ -95,9 +95,9 @@ A execução de seu próprio nó permite que você use o Ethereum de maneira pri
 - Seu nó verifica todas as transações e blocos contra as regras de consenso por si só. Isso significa que você não precisa confiar em nenhum outro nó da rede nem confiar totalmente neles.
 - Você pode usar uma carteira Ethereum com seu próprio nó. Você pode usar dapps com mais segurança e privacidade porque não precisará vazar seus endereços e saldos para nós aleatórios. Tudo pode ser verificado com seu próprio cliente. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) e [muitas outras carteiras](/wallets/find-wallet/) oferecem importação de RPC, permitindo que elas usem seu nó.
 - Você pode executar e auto-hospedar outros serviços que dependem de dados do Ethereum. Por exemplo, isso pode ser um validador Beacon Chain, software como camada 2, infraestrutura, exploradores de bloco, processadores de pagamento etc.
-- Você pode fornecer seus próprios [pontos de extremidade RPC](https://ethereum.org/en/developers/docs/apis/json-rpc/) personalizados. O ponto de extremidade Ethereum hospedado publicamente pela comunidade ou de modo privado, permite que as pessoas usem seu nó e evitem grandes provedores centralizados.
+- Você pode fornecer seus próprios [pontos de extremidade RPC](/developers/docs/apis/json-rpc/) personalizados. O ponto de extremidade Ethereum hospedado publicamente pela comunidade ou de modo privado, permite que as pessoas usem seu nó e evitem grandes provedores centralizados.
 - Você pode se conectar ao seu nó usando **Comunicações entre processos (IPC)** ou reescrever o nó para carregar seu programa como um plugin. Isso garante baixa latência, o que ajuda muito, por exemplo, ao processar muitos dados usando bibliotecas Web3 ou quando você precisa substituir suas transações o mais rápido possível (isto é, de forma acelerada).
-- Você pode colocar ETH diretamente para proteger a rede e ganhar recompensas. Veja [participação solo](https://ethereum.org/en/staking/solo/) para começar.
+- Você pode colocar ETH diretamente para proteger a rede e ganhar recompensas. Veja [participação solo](/staking/solo/) para começar.
 
 ![Como você acessar o Ethereum através do seu aplicativo e nós](./nodes.png)
 

@@ -286,7 +286,7 @@ Sortie [13] : 1000003000000000000000000
 
 Ce dernier semble bon ! Le solde est passé de 1 000 000 à 1 000 003 ethers. Mais qu'est-il arrivé au premier compte ? Il semble avoir perdu un peu plus que trois ethers. Hélas, rien dans la vie n'est gratuit et l'utilisation du réseau public Ethereum exige que vous compensiez vos pairs pour leur rôle de soutien. Une petite commission de transaction a été déduite du compte qui a soumis la transaction - cette commission correspond à la quantité de gaz brûlé (21 000 unités de gaz pour un transfert ETH) multipliée par une commission de base qui varie en fonction de l'activité du réseau plus un pourboire qui va au validateur qui inclut la transaction dans un bloc.
 
-En savoir plus sur les[gaz](https://ethereum.org/en/developers/docs/gas/#post-london)
+En savoir plus sur les[gaz](/developers/docs/gas/#post-london)
 
 <div class="featured">Remarque : sur le réseau public, les commissions de transaction sont variables en fonction de la demande du réseau et de la rapidité avec laquelle vous souhaitez que soit traitée une transaction. Si vous êtes intéressé par la façon dont les frais sont calculés, vous pouvez consulter mon précédent article sur <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">la manière dont les transactions sont incluses dans un bloc</a>.</div>
 
