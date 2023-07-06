@@ -255,6 +255,7 @@ const DocsPage = ({
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
+          {/* flip these positive first */}
           {mdx.frontmatter.lang !== "en" ? (
             <CrowdinContributors
               relativePath={relativePath}
