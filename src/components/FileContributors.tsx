@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import { useI18next } from "gatsby-plugin-react-i18next"
 import { useQuery, gql } from "@apollo/client"
@@ -103,15 +103,27 @@ const ContributorList = ({ children }: { children: React.ReactNode }) => {
 }
 
 const Contributor = ({ contributor }: { contributor: Author }) => {
+  const [isImageLoaded, setImageLoaded] = useState(false)
+
+  useEffect(() => {
+    const image = new Image()
+    image.src = contributor.avatarUrl || ""
+    image.onload = () => setImageLoaded(true)
+  }, [contributor.avatarUrl])
+
   return (
     <ListItem p={2} display="flex" alignItems="center">
-      <Avatar
-        height="40px"
-        width="40px"
-        src={contributor.avatarUrl}
-        name={contributor.name}
-        mr={2}
-      />
+      {isImageLoaded ? (
+        <Avatar
+          height="40px"
+          width="40px"
+          src={contributor.avatarUrl}
+          name={contributor.name}
+          mr={2}
+        />
+      ) : (
+        <ChakraSkeletonCircle size="10" mr={2} />
+      )}
       {contributor.user && (
         <Link to={contributor.user.url}>@{contributor.user.login}</Link>
       )}

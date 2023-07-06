@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import { useI18next } from "gatsby-plugin-react-i18next"
-import FileContributors from "./FileContributors"
 import { useStaticQuery, graphql } from "gatsby"
 import { FlexProps } from "@chakra-ui/react"
+import FileContributors from "./FileContributors"
 
 interface Author {
   name: string
@@ -43,7 +43,7 @@ const CrowdinContributors: React.FC<IProps> = ({
   langContributors,
   ...props
 }) => {
-  const [mappedContributors, setMappedContributors] = useState([]) // initialize with empty array
+  const [mappedContributors, setMappedContributors] = useState<Author[]>([])
   const [error, setError] = useState(false)
   const { language } = useI18next()
   const { allFileIdsJson } = useStaticQuery(
@@ -61,15 +61,13 @@ const CrowdinContributors: React.FC<IProps> = ({
 
   const fileIdsData = allFileIdsJson.nodes
 
-  // @ts-ignore
-  getFileIdByPath(fileIdsData, relativePath, language)
-    .then((id) => {
+  useEffect(() => {
+    const fetchAndSetAvatar = async () => {
+      const id = await getFileIdByPath(fileIdsData, relativePath, language)
       const crowdinContributorsForLang = langContributors[0].data
-      // console.log('Crowdin contributors for lang', crowdinContributorsForLang)
       const crowdinContributorsForFile = crowdinContributorsForLang.find(
         (file) => file.fileId === id.toString()
       )
-      // console.log('For file', crowdinContributorsForFile)
 
       if (
         !crowdinContributorsForFile ||
@@ -80,11 +78,10 @@ const CrowdinContributors: React.FC<IProps> = ({
         return
       }
 
-      const mapped =
+      const mapped: Author[] =
         crowdinContributorsForFile.contributors.map((contributor) => {
           return {
             name: contributor.username,
-            // Rename email to id?
             email: contributor.id,
             avatarUrl: contributor.avatarUrl,
             user: {
@@ -93,11 +90,17 @@ const CrowdinContributors: React.FC<IProps> = ({
             },
           }
         }) || []
-      setMappedContributors(mapped) // update state
-    })
-    .catch((error) => {
-      setError(true)
-    })
+
+      // Preload avatar images
+      mapped.forEach((author) => {
+        new Image().src = author.avatarUrl!
+      })
+
+      setMappedContributors(mapped)
+    }
+
+    fetchAndSetAvatar()
+  }, [fileIdsData, relativePath, language, langContributors])
 
   const lastContributor = mappedContributors.length ? mappedContributors[0] : {}
 
