@@ -75,14 +75,14 @@ Etherscan にアクセスするとコントラクトのオペコードを入手�
 
 このスニペットは、`JUMPDEST`で始まります。 イーサリアム仮想マシン(EVM)プログラムは、`JUMPDEST`ではないオペコードにジャンプした場合に例外を投げます。 次に、CALLDATASIZE を確認し、それが「true」の場合(ゼロではない場合)、0x7C にジャンプします。 これについては後述します。
 
-| オフセット | オペコード | スタック(オペコードの後)                                                                                              |
-| ---------: | ---------- | --------------------------------------------------------------------------------------------------------------------- |
-|         64 | CALLVALUE  | [Wei](https://ethereum.org/en/glossary/#wei)が呼び出しによって提供されます。 Solidity で`msg.value`が呼び出されます。 |
-|         65 | PUSH1 0x06 | 6 CALLVALUE                                                                                                           |
-|         67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                                                         |
-|         69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                                                               |
-|         6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                                                             |
-|         6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                                                                    |
+| オフセット | オペコード | スタック(オペコードの後)                                                                       |
+| ---------: | ---------- | ---------------------------------------------------------------------------------------------- |
+|         64 | CALLVALUE  | [Wei](/glossary/#wei)が呼び出しによって提供されます。 Solidity で`msg.value`が呼び出されます。 |
+|         65 | PUSH1 0x06 | 6 CALLVALUE                                                                                    |
+|         67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                                  |
+|         69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                                        |
+|         6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                                      |
+|         6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                                             |
 
 コールデータがない場合、Storage[6]の値を読み取ります。 この Storage[6] の値はまだわかりませんが、コールデータなしで受信したコントラクトのトランザクションを探すことはできます。 コールデータなしで(つまりメソッドなしで)ETH を送金するだけのトランザクションの場合、Etherscan に`Transfer`メソッドがあります。 実際、[コントラクトが受信した最初のトランザクション](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7)は、送金(transfer)です。
 

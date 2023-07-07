@@ -20,8 +20,9 @@ const shadows = {
   gridBlueBowShadow: "8px 8px 0px 0px var(--eth-colors-gridBlue)",
 
   // * Part of new DS
-  // TODO: From current theme. Rename to 'buttonHover'
+  // TODO: From current theme. Deprecate for 'buttonHover'
   primary: "4px 4px 0px 0px var(--eth-colors-primary-light)",
+  buttonHover: "4px 4px 0 0 var(--eth-colors-primary-lowContrast)",
   tooltip: "0 0 16px var(--eth-colors-tooltipShadow)",
 }
 
