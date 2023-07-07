@@ -24,4 +24,5 @@ export async function filterAndFormatData(data: UserData[]) {
       totalCosts: userObj.user.totalCosts,
       avatarUrl: userObj.user.avatarUrl,
     }))
+    .sort((a, b) => b.totalCosts - a.totalCosts) // sort users by totalCosts, highest first
 }
