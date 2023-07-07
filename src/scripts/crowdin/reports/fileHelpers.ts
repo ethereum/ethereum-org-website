@@ -41,12 +41,19 @@ export async function saveReportDataToJson(
   const languageData = combinedData.find((data) => data.lang === language)
 
   if (languageData) {
-    languageData.data.push({
-      fileId: fileId.toString(),
-      contributors: formattedData,
-    })
+    const existingData = languageData.data.find(
+      (data) => data.fileId === fileId.toString()
+    )
+    if (existingData) {
+      existingData.contributors = formattedData
+    } else {
+      languageData.data.push({
+        fileId: fileId.toString(),
+        contributors: formattedData,
+      })
+    }
   } else {
-    combinedData!.push({
+    combinedData.push({
       lang: language,
       data: [
         {
