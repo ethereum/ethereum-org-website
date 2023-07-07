@@ -22,7 +22,7 @@ Your address (which is sometimes called a "public key") is like your home addres
 
 You need to provide whoever wants to send you money with your public address. Many wallet apps let you copy your address or show a QR code to scan for easier usage. Avoid typing any Ethereum address manually. This can easily lead to clerical errors and lost funds.
 
-Different apps may vary or use different language, but they should take you through a similar process if you are trying to transfer funds.
+Different apps may vary or use different languages, but they should take you through a similar process if you are trying to transfer funds.
 
 1. Open your wallet app.
 2. Click on "Receive" (or similarly worded option).
@@ -78,7 +78,7 @@ You can use the same address on all EVM compatible blockchains (if you have the 
 
 ### Can I use the same address on multiple devices?
 
-Yes you can use the same address on multiple devices. Wallets are technically only an interface to show you your balance and to make transactions, your account isn't stored inside the wallet, but on the blockchain.
+Yes, you can use the same address on multiple devices. Wallets are technically only an interface to show you your balance and to make transactions, your account isn't stored inside the wallet, but on the blockchain.
 
 ### I have not received the crypto, where can I check the status of a transaction?
 
