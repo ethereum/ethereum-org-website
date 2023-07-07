@@ -18,7 +18,7 @@ function getPreviousDayISOString(): string {
 
 export async function fetchTranslationCostsReport(
   fileId: number,
-  language: string
+  crowdinLangCode: string
 ): Promise<void> {
   const now = new Date()
   now.setDate(now.getDate() - 1) // set the date to one day in the past (yesterday)
@@ -36,7 +36,7 @@ export async function fetchTranslationCostsReport(
     dateFrom: FIRST_CROWDIN_CONTRIBUTION_DATE,
     dateTo,
     // @ts-ignore
-    languageId: language,
+    languageId: crowdinLangCode,
     fileIds: [fileId],
   }
 
@@ -51,7 +51,7 @@ export async function fetchTranslationCostsReport(
       reportRequest
     )
     if (response.data.status === "created") {
-      await checkReportStatus(response.data.identifier, fileId, language)
+      await checkReportStatus(response.data.identifier, fileId, crowdinLangCode)
     }
   } catch (error: unknown) {
     if (error instanceof Error) {
@@ -65,7 +65,7 @@ export async function fetchTranslationCostsReport(
 export async function checkReportStatus(
   identifier: string,
   fileId: number,
-  language: string
+  crowdinLangCode: string
 ): Promise<void> {
   try {
     const response = await reportsApi.checkReportStatus(
@@ -74,11 +74,11 @@ export async function checkReportStatus(
     )
     if (response.data.status === "finished" && response.data.progress === 100) {
       console.log(`Report for identifier ${identifier} is finished`)
-      await downloadReport(identifier, fileId, language)
+      await downloadReport(identifier, fileId, crowdinLangCode)
     } else {
       console.log("Not ready")
       await new Promise((resolve) => setTimeout(resolve, 1000))
-      await checkReportStatus(identifier, fileId, language)
+      await checkReportStatus(identifier, fileId, crowdinLangCode)
     }
   } catch (error: unknown) {
     if (error instanceof Error) {
@@ -92,7 +92,7 @@ export async function checkReportStatus(
 export async function downloadReport(
   identifier: string,
   fileId: number,
-  language: string
+  crowdinLangCode: string
 ): Promise<void> {
   console.log(`Starting download of report for file ID ${fileId}`)
 
@@ -103,13 +103,13 @@ export async function downloadReport(
     )
     const jsonUrl = response.data.url
     console.log(
-      `${language}—Retrieved JSON URL for report of file ID ${fileId}`
+      `${crowdinLangCode}—Retrieved JSON URL for report of file ID ${fileId}`
     )
 
     const reportData: AxiosResponse<ReportData> = await axios.get(jsonUrl)
     console.log(`Downloaded report data for file ID ${fileId}`)
 
-    await saveReportDataToJson(reportData.data, fileId, language)
+    await saveReportDataToJson(reportData.data, fileId, crowdinLangCode)
     console.log(`Saved report data for file ID ${fileId} to JSON file`)
   } catch (error: unknown) {
     if (error instanceof Error) {

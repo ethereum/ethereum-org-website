@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 import { filterAndFormatData } from "./dataHelpers"
+import { getLangCodeFromCrowdinCode } from "../../../utils/getCrowdinCode"
 
 export type CombinedData = {
   lang: string
@@ -36,9 +37,10 @@ export async function saveReportDataToJson(
   fileId: number,
   language: string
 ): Promise<void> {
+  const repoLangCode = await getLangCodeFromCrowdinCode(language)
   const combinedData = await loadCombinedTranslators()
   const formattedData = await filterAndFormatData(reportData.data)
-  const languageData = combinedData.find((data) => data.lang === language)
+  const languageData = combinedData.find((data) => data.lang === repoLangCode)
 
   if (languageData) {
     const existingData = languageData.data.find(
@@ -54,7 +56,7 @@ export async function saveReportDataToJson(
     }
   } else {
     combinedData.push({
-      lang: language,
+      lang: repoLangCode,
       data: [
         {
           fileId: fileId.toString(),
