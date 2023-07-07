@@ -1,5 +1,5 @@
 {
   "excludedNames": ["ethdotorg"],
-  "excludedUsernames": ["ethdotorg"],
+  "excludedUsernames": ["ethdotorg", "corwintines", "wackerow"],
   "excludedPhrases": ["aco"]
 }
