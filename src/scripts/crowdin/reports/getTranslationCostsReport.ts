@@ -7,6 +7,7 @@ import crowdinClient from "../api-client/crowdinClient"
 import {
   CROWDIN_PROJECT_ID,
   FIRST_CROWDIN_CONTRIBUTION_DATE,
+  REGULAR_RATES,
 } from "../../../constants"
 import { findFileIdsByPaths } from "../utils"
 import getCrowdinCode from "../../../../src/utils/getCrowdinCode"
@@ -40,17 +41,6 @@ interface ReportData {
   data: UserData[]
 }
 
-const regularRates: ReportsModel.RegularRate[] = [
-  {
-    mode: "tm_match",
-    value: 1.01,
-  },
-  {
-    mode: "no_match",
-    value: 1.01,
-  },
-]
-
 function getPreviousDayISOString(): string {
   const now = new Date()
   now.setDate(now.getDate() - 1)
@@ -73,7 +63,7 @@ async function fetchTranslationCostsReport(
     mode: "simple",
     format: "json",
     groupBy: "user",
-    regularRates,
+    regularRates: REGULAR_RATES,
     dateFrom: FIRST_CROWDIN_CONTRIBUTION_DATE,
     dateTo,
     // @ts-ignore
