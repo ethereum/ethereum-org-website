@@ -10,8 +10,19 @@ import {
 } from "../../../constants"
 import { findFileIdsByPaths } from "../utils"
 import getCrowdinCode from "../../../../src/utils/getCrowdinCode"
+import path from "path"
 
 const { reportsApi } = crowdinClient
+const combinedFilePath = path.join(
+  __dirname,
+  "../../../data/crowdin/combined-translators.json"
+)
+let excludedTranslatorsGlobal: {
+  excludedNames: string[]
+  excludedUsernames: string[]
+  excludedPhrases: string[]
+} = { excludedNames: [], excludedUsernames: [], excludedPhrases: [] }
+let combinedDataGlobal: any[]
 
 interface User {
   id: number
@@ -150,28 +161,87 @@ async function downloadReport(
   }
 }
 
+async function loadExcludedTranslators(): Promise<{
+  excludedNames: string[]
+  excludedUsernames: string[]
+  excludedPhrases: string[]
+}> {
+  const filePath = path.join(
+    __dirname,
+    "../../../data/crowdin/excluded-translators.json"
+  )
+  let excludedTranslators = {
+    excludedNames: [],
+    excludedUsernames: [],
+    excludedPhrases: [],
+  }
+  if (fs.existsSync(filePath)) {
+    const rawData = fs.readFileSync(filePath, "utf8")
+    excludedTranslators = rawData
+      ? JSON.parse(rawData)
+      : { excludedNames: [], excludedUsernames: [], excludedPhrases: [] }
+  }
+
+  return excludedTranslators
+}
+
+async function loadCombinedTranslators(): Promise<any[]> {
+  let combinedData: any[] = []
+  if (fs.existsSync(combinedFilePath)) {
+    const rawData = fs.readFileSync(combinedFilePath, "utf8")
+    combinedData = rawData ? JSON.parse(rawData) : []
+  }
+  return combinedData
+}
+
+function filterAndFormatData(data: any[]) {
+  return data
+    .filter(
+      (userObj) =>
+        !excludedTranslatorsGlobal.excludedNames.includes(userObj.user.name) &&
+        !excludedTranslatorsGlobal.excludedUsernames.includes(
+          userObj.user.username
+        ) &&
+        !excludedTranslatorsGlobal.excludedPhrases.some(
+          (phrase) =>
+            userObj.user.name.toLowerCase().includes(phrase) ||
+            userObj.user.username.toLowerCase().includes(phrase)
+        )
+    )
+    .map((userObj) => ({
+      id: userObj.user.id,
+      username: userObj.user.username,
+      totalCosts: userObj.user.totalCosts,
+      avatarUrl: userObj.user.avatarUrl,
+    }))
+}
+
+async function ensureDataIsLoaded(): Promise<void> {
+  if (
+    excludedTranslatorsGlobal.excludedNames.length === 0 &&
+    excludedTranslatorsGlobal.excludedUsernames.length === 0
+  ) {
+    excludedTranslatorsGlobal = await loadExcludedTranslators()
+  }
+
+  if (combinedDataGlobal === undefined || combinedDataGlobal.length === 0) {
+    combinedDataGlobal = await loadCombinedTranslators()
+  }
+}
+
 async function saveReportDataToJson(
   reportData: ReportData,
   fileId: number,
   language: string
 ): Promise<void> {
-  let combinedData: any[] = []
-  const filename = `combined-translators.json`
+  // Make sure data is loaded
+  await ensureDataIsLoaded()
 
-  if (fs.existsSync(filename)) {
-    const rawData = fs.readFileSync(filename, "utf8")
-    combinedData = rawData ? JSON.parse(rawData) : []
-  }
-
-  const formattedData = reportData.data.map((userObj) => ({
-    id: userObj.user.id,
-    username: userObj.user.username,
-    totalCosts: userObj.user.totalCosts,
-    avatarUrl: userObj.user.avatarUrl,
-  }))
+  const formattedData = filterAndFormatData(reportData.data)
 
   // Find if the language data already exists in the array
-  const languageData = combinedData.find((data) => data.lang === language)
+  console.log(combinedDataGlobal)
+  const languageData = combinedDataGlobal.find((data) => data.lang === language)
 
   if (languageData) {
     languageData.data.push({
@@ -179,7 +249,7 @@ async function saveReportDataToJson(
       contributors: formattedData,
     })
   } else {
-    combinedData.push({
+    combinedDataGlobal!.push({
       lang: language,
       data: [
         {
@@ -190,11 +260,16 @@ async function saveReportDataToJson(
     })
   }
 
+  // Write to the file every time
+  // Might be optimized further by only writing once per batch, depending on the exact requirements
   try {
-    await fs.promises.writeFile(filename, JSON.stringify(combinedData, null, 2))
+    await fs.promises.writeFile(
+      combinedFilePath,
+      JSON.stringify(combinedDataGlobal, null, 2)
+    )
   } catch (error: unknown) {
     if (error instanceof Error) {
-      console.log(`Error writing to ${filename}:`, error.message)
+      console.log(`Error writing to ${combinedFilePath}:`, error.message)
     }
   }
 }
