@@ -3,23 +3,35 @@ import React, { useEffect, useState } from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
 import { FlexProps } from "@chakra-ui/react"
-import FileContributors from "./FileContributors"
-
-interface Author {
-  name: string
-  email: string
-  avatarUrl: string
-  user: {
-    login: string
-    url: string
-  }
-}
+import FileContributors, { Author, Commit } from "./FileContributors"
+import { useQuery, gql } from "@apollo/client"
 
 export interface IProps extends FlexProps {
   relativePath: string
   editPath?: string
   langContributors: any
 }
+
+const COMMIT_HISTORY = gql`
+  query CommitHistory($relativePath: String) {
+    repository(name: "ethereum-org-website", owner: "ethereum") {
+      ref(qualifiedName: "master") {
+        target {
+          ... on Commit {
+            id
+            history(path: $relativePath) {
+              edges {
+                node {
+                  committedDate
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export async function getFileIdByPath(fileIdsData, path, language) {
   const normalizedPath = path.replace(
@@ -58,6 +70,15 @@ const CrowdinContributors: React.FC<IProps> = ({
       }
     `
   )
+
+  const { data, loading } = useQuery(COMMIT_HISTORY, {
+    variables: { relativePath },
+  })
+
+  const commits: Array<Commit> =
+    data?.repository?.ref?.target?.history?.edges?.map((commit) => commit.node)
+  const lastCommit = commits?.[0] || {}
+  const lastEdit = lastCommit.committedDate
 
   const fileIdsData = allFileIdsJson.nodes
 
@@ -107,10 +128,11 @@ const CrowdinContributors: React.FC<IProps> = ({
   return (
     <FileContributors
       error={error}
-      loading={!mappedContributors.length}
+      loading={!mappedContributors.length && loading}
       relativePath={relativePath}
       contributors={mappedContributors}
       lastContributor={lastContributor}
+      lastEdit={lastEdit}
     />
   )
 }

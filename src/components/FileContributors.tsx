@@ -31,19 +31,17 @@ import Modal from "./Modal"
 import Translation from "./Translation"
 import Button from "./Button"
 
-interface Author {
-  name?: string
-  email?: string
-  username?: string
-  id?: string
-  avatarUrl?: string
-  user?: {
+export interface Author {
+  name: string
+  email: string
+  avatarUrl: string
+  user: {
     login: string
     url: string
   }
 }
 
-interface Commit {
+export interface Commit {
   author: Author
   committedDate: string
 }
@@ -136,9 +134,10 @@ export interface IProps extends FlexProps {
   relativePath: string
   editPath?: string
   contributors: Array<Author>
-  lastContributor: Author
+  lastContributor: any
   loading: Boolean
   error: any
+  lastEdit: string
 }
 
 const FileContributors: React.FC<IProps> = ({
@@ -148,6 +147,7 @@ const FileContributors: React.FC<IProps> = ({
   lastContributor,
   loading,
   error,
+  lastEdit,
   ...props
 }) => {
   const [isModalOpen, setModalOpen] = useState(false)
@@ -210,7 +210,7 @@ const FileContributors: React.FC<IProps> = ({
                 </Link>
               )}
               {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-              {/* {getLocaleTimestamp(language as Lang, lastCommit.committedDate)} */}
+              {getLocaleTimestamp(language as Lang, lastEdit)}
             </Text>
           </Skeleton>
         </Flex>

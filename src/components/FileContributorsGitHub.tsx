@@ -1,24 +1,9 @@
 import React from "react"
 
 import { useQuery, gql } from "@apollo/client"
-import FileContributors from "./FileContributors"
+import FileContributors, { Author, Commit } from "./FileContributors"
 
 import { FlexProps } from "@chakra-ui/react"
-
-interface Author {
-  name: string
-  email: string
-  avatarUrl: string
-  user: {
-    login: string
-    url: string
-  }
-}
-
-interface Commit {
-  author: Author
-  committedDate: string
-}
 
 const COMMIT_HISTORY = gql`
   query CommitHistory($relativePath: String) {
@@ -97,6 +82,7 @@ const GitHubContributors: React.FC<IProps> = ({
       relativePath={relativePath}
       contributors={uniqueContributors}
       lastContributor={lastContributor}
+      lastEdit={lastCommit.committedDate}
     />
   )
 }

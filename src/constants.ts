@@ -16,7 +16,7 @@ export const TOTAL_QUIZ_RETRY_RATE = 15.6
 // Crowdin
 export const CROWDIN_PROJECT_ID = 363359
 export const CROWDIN_API_MAX_LIMIT = 500
-export const FIRST_CROWDIN_CONTRIBUTION_DATE = "2021-09-23T07:00:14+00:00"
+export const FIRST_CROWDIN_CONTRIBUTION_DATE = "2019-07-01T00:00:00+00:00"
 export const REGULAR_RATES: ReportsModel.RegularRate[] = [
   {
     mode: "tm_match",
