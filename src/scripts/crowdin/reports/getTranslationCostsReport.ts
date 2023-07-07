@@ -198,15 +198,20 @@ function filterAndFormatData(data: any[]) {
   return data
     .filter(
       (userObj) =>
-        !excludedTranslatorsGlobal.excludedNames.includes(userObj.user.name) &&
-        !excludedTranslatorsGlobal.excludedUsernames.includes(
-          userObj.user.username
+        !excludedTranslatorsGlobal.excludedNames.includes(
+          userObj.user.fullName.toLowerCase()
         ) &&
-        !excludedTranslatorsGlobal.excludedPhrases.some(
-          (phrase) =>
-            userObj.user.name.toLowerCase().includes(phrase) ||
+        !excludedTranslatorsGlobal.excludedUsernames.includes(
+          userObj.user.username.toLowerCase()
+        ) &&
+        !excludedTranslatorsGlobal.excludedPhrases.some((phrase) => {
+          console.log(phrase)
+
+          return (
+            userObj.user.fullName.toLowerCase().includes(phrase) ||
             userObj.user.username.toLowerCase().includes(phrase)
-        )
+          )
+        })
     )
     .map((userObj) => ({
       id: userObj.user.id,
@@ -275,6 +280,8 @@ async function saveReportDataToJson(
 }
 
 async function getTranslationCostsReports(translatedMarkdownPaths) {
+  combinedDataGlobal = []
+
   for (let lang in translatedMarkdownPaths) {
     const fileIds = await findFileIdsByPaths(
       translatedMarkdownPaths[lang],
