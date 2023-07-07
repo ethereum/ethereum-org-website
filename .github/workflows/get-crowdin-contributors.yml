@@ -1,0 +1,47 @@
+name: Get Crowdin Contributors
+
+on:
+  schedule:
+    - cron: "0 * * * *" # Runs every day at midnight
+  workflow_dispatch:
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Install ts-node
+        run: yarn global add ts-node
+
+      - name: Run script
+        run: ts-node ./src/scripts/crowdin/getCrowdinContributors.ts
+
+      - name: Set up git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Commit and push
+        run: |
+          git add -A
+          git commit -m "Automated update"
+          git push
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automated-update
+          title: Automated update
+          body: This is an automated update.
