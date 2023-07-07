@@ -94,6 +94,7 @@ const sizes = {
   md: {
     py: "2 !important",
     px: "4 !important",
+    fontSize: "md",
     [ICON_SELECTOR]: {
       fontSize: "2xl",
     },
