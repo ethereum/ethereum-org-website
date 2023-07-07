@@ -133,7 +133,7 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
       py: 3,
     },
     '&[aria-selected="true"] a': {
-      "--docsearch-hit-active-color": "colors.background",
+      "--docsearch-hit-active-color": "colors.background.base",
       bg: "primary.hover",
       boxShadow: `4px 4px 0 0 var(--eth-colors-primary-light)`,
       borderColor: "transparent",
