@@ -8,7 +8,7 @@ export function getDirectoryIdsFromJson() {
       "../../data/crowdin/translation-buckets-dirs.json"
     )
     const directoriesData = fs.readFileSync(filePath)
-    const directories = JSON.parse(directoriesData.toString()) // Convert Buffer to string
+    const directories = JSON.parse(directoriesData.toString())
     return directories.map((directory) => directory.id)
   } catch (error) {
     console.error(`Error reading translation-buckets-dirs.json: ${error}`)
@@ -18,9 +18,7 @@ export function getDirectoryIdsFromJson() {
 
 export async function findFileIdsByPaths(paths, lang) {
   const filePath = path.join(__dirname, "../../data/crowdin/file-ids.json")
-
   const fileData = JSON.parse(fs.readFileSync(filePath, "utf8"))
-  // console.log(fileData)
 
   const pathToIdMap = fileData.reduce((map, item) => {
     // Normalize the item path: remove leading and trailing slashes
