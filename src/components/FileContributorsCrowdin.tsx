@@ -83,7 +83,7 @@ const CrowdinContributors: React.FC<IProps> = ({
   const fileIdsData = allFileIdsJson.nodes
 
   useEffect(() => {
-    const fetchAndSetAvatar = async () => {
+    const fetchContributors = async () => {
       const id = await getFileIdByPath(fileIdsData, relativePath, language)
       const crowdinContributorsForLang = langContributors[0].data
       const crowdinContributorsForFile = crowdinContributorsForLang.find(
@@ -112,15 +112,10 @@ const CrowdinContributors: React.FC<IProps> = ({
           }
         }) || []
 
-      // Preload avatar images
-      mapped.forEach((author) => {
-        new Image().src = author.avatarUrl!
-      })
-
       setMappedContributors(mapped)
     }
 
-    fetchAndSetAvatar()
+    fetchContributors()
   }, [fileIdsData, relativePath, language, langContributors])
 
   const lastContributor = mappedContributors.length ? mappedContributors[0] : {}
