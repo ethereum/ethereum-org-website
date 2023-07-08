@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { useQuery, gql } from "@apollo/client"
+import { gql } from "@apollo/client"
 
 import {
   Avatar,
@@ -12,7 +12,6 @@ import {
   ListItem,
   ModalBody,
   ModalHeader,
-  Show,
   Skeleton as ChakraSkeleton,
   SkeletonCircle as ChakraSkeletonCircle,
   Text,
