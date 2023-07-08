@@ -219,24 +219,25 @@ const FileContributors: React.FC<IProps> = ({
               <Translation id="see-contributors" />
             </Button>
           </Skeleton>
-
           {editPath && (
-            <Show below="l">
-              {/* TODO: switch `l` to `lg` after UI migration and use `hideBelow` prop */}
-              <ButtonLink to={editPath} hideArrow variant="outline">
-                <Flex
-                  h="100%"
-                  alignItems="center"
-                  justifyContent="center"
-                  gap={2}
-                >
-                  <Icon as={FaGithub} fontSize="2xl" />
-                  <span>
-                    <Translation id="edit-page" />
-                  </span>
-                </Flex>
-              </ButtonLink>
-            </Show>
+            <ButtonLink
+              to={editPath}
+              hideArrow
+              variant="outline"
+              hideBelow="lg"
+            >
+              <Flex
+                h="100%"
+                alignItems="center"
+                justifyContent="center"
+                gap={2}
+              >
+                <Icon as={FaGithub} fontSize="2xl" />
+                <span>
+                  <Translation id="edit-page" />
+                </span>
+              </Flex>
+            </ButtonLink>
           )}
         </VStack>
       </Flex>
