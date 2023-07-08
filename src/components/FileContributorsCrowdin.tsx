@@ -6,10 +6,27 @@ import { FlexProps } from "@chakra-ui/react"
 import FileContributors, { Author, Commit } from "./FileContributors"
 import { useQuery, gql } from "@apollo/client"
 
+interface Contributor {
+  id: string
+  username: string
+  avatarUrl: string
+  totalCosts: number
+}
+
+interface Data {
+  fileId: string
+  contributors: Contributor[]
+}
+
+interface LangContributor {
+  lang: string
+  data: Data[]
+}
+
 export interface IProps extends FlexProps {
   relativePath: string
   editPath?: string
-  langContributors: any
+  langContributors: LangContributor[]
 }
 
 const COMMIT_HISTORY = gql`
