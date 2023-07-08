@@ -50,6 +50,17 @@ const COMMIT_HISTORY = gql`
   }
 `
 
+const FILE_IDS_QUERY = graphql`
+  {
+    allFileIdsJson {
+      nodes {
+        jsonId
+        path
+      }
+    }
+  }
+`
+
 export async function getFileIdByPath(fileIdsData, path, language) {
   const normalizedPath = path.replace(
     new RegExp(`^src/content/translations/${language}/`),
@@ -75,18 +86,7 @@ const CrowdinContributors: React.FC<IProps> = ({
   const [mappedContributors, setMappedContributors] = useState<Author[]>([])
   const [error, setError] = useState(false)
   const { language } = useI18next()
-  const { allFileIdsJson } = useStaticQuery(
-    graphql`
-      {
-        allFileIdsJson {
-          nodes {
-            jsonId
-            path
-          }
-        }
-      }
-    `
-  )
+  const { allFileIdsJson } = useStaticQuery(FILE_IDS_QUERY)
 
   const { data, loading } = useQuery(COMMIT_HISTORY, {
     variables: { relativePath },
