@@ -38,6 +38,21 @@ const NavDropdown: React.FC<IProps> & {
           <>
             <MenuButton
               dir={direction}
+              borderRadius="base"
+              _focusVisible={{
+                outline: "4px solid",
+                outlineColor: "primary.hover",
+                color: "primary.base",
+              }}
+              _hover={{
+                color: "primary.base",
+              }}
+              _active={{
+                bg: "primary.lowContrast",
+              }}
+              _expanded={{
+                bg: "background.highlight",
+              }}
               sx={{
                 "& > span": {
                   display: "inline-flex",
@@ -50,7 +65,7 @@ const NavDropdown: React.FC<IProps> & {
               <Icon
                 as={MdExpandMore}
                 fontSize="2xl"
-                color="text200"
+                color="currentcolor"
                 transform={isOpen ? "rotate(180deg)" : undefined}
               />
             </MenuButton>
