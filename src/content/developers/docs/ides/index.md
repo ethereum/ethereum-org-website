@@ -66,4 +66,6 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 
 ## Further reading {#further-reading}
 
+- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy's list of Ethereunm IDEs_
+
 _Know of a community resource that helped you? Edit this page and add it!_
