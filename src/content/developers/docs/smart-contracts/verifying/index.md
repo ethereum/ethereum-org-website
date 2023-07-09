@@ -104,5 +104,5 @@ Using the Tenderly Hardhat plugin allows for more control over the verification 
 
 ## Further reading {#further-reading}
 
-- [How to verify the source code of Ethereum smart contract](https://developpaper.com/how-to-verify-the-source-code-of-ethereum-smart-contract/)
+- [How to verify the source code of Ethereum smart contract](https://ethereum.org/en/developers/docs/smart-contracts/verifying/)
 - [Verifying contract source code](https://programtheblockchain.com/posts/2018/01/16/verifying-contract-source-code/)
