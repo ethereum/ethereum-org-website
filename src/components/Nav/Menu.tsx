@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { Flex, List } from "@chakra-ui/react"
+import { Flex, HStack, List } from "@chakra-ui/react"
 
 import { getDirection } from "../../utils/translations"
 
@@ -20,11 +20,11 @@ const Menu: React.FC<IProps> = ({ sections }) => {
 
   const [start, basics, protocol] = learn.items
   return (
-    <Flex
+    <HStack
       as={List}
       aria-label="Main Navigation Link Groups"
       m={0}
-      gap={{ base: 3, xl: 6 }}
+      spacing="2"
     >
       <NavDropdown section={useEthereum}>
         {useEthereum.items.map((item, idx) => (
@@ -58,7 +58,7 @@ const Menu: React.FC<IProps> = ({ sections }) => {
           </NavDropdown>
         )
       })}
-    </Flex>
+    </HStack>
   )
 }
 

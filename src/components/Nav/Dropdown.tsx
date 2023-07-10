@@ -39,6 +39,8 @@ const NavDropdown: React.FC<IProps> & {
             <MenuButton
               dir={direction}
               borderRadius="base"
+              px="3"
+              py="0.5"
               _focusVisible={{
                 outline: "4px solid",
                 outlineColor: "primary.hover",
@@ -57,7 +59,6 @@ const NavDropdown: React.FC<IProps> & {
                 "& > span": {
                   display: "inline-flex",
                   alignItems: "center",
-                  py: 2,
                 },
               }}
             >
