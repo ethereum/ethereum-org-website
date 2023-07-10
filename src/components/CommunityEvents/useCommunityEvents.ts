@@ -33,7 +33,7 @@ export const useCommunityEvents = () => {
   useEffect(() => {
     try {
       const fetchCalendarData = async () => {
-        const events = await getData(`${GATSBY_FUNCTIONS_PATH}/calendarEvents`)
+        const events = await getData<ReqEvents>(`${GATSBY_FUNCTIONS_PATH}/calendarEvents`)
         const pastEventData = events.pastEvents.map((event) => {
           return {
             date: event.start.dateTime,
