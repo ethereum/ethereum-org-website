@@ -49,7 +49,7 @@ const renderEventDateTime = (
   return DateTime.fromISO(date).setLocale(language).toLocaleString(params)
 }
 
-const EventLink = (props) => <Link fontWeight="700" {...props} />
+const EventLink = (props:  ComponentProps<typeof Link>) => <Link fontWeight="700" {...props} />
 
 const Event = ({ event, language, type }) => {
   const { date, title, calendarLink } = event
