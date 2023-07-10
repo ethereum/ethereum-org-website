@@ -51,7 +51,14 @@ const renderEventDateTime = (
 
 const EventLink = (props:  ComponentProps<typeof Link>) => <Link fontWeight="700" {...props} />
 
-const Event = ({ event, language, type }) => {
+interface EventProps {
+  event: Event
+  language: string
+  type: "upcoming" | "past"
+}
+
+
+const Event = ({ event, language, type }: EventProps) => {
   const { date, title, calendarLink } = event
   const params: DateTimeFormatOptions = {
     year: "numeric",
