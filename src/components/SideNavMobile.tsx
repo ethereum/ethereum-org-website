@@ -7,8 +7,10 @@ import { MdExpandMore } from "react-icons/md"
 import Link, { IProps as ILinkProps } from "./Link"
 import Translation from "./Translation"
 import { isLang } from "../utils/languages"
-import { dropdownIconContainerVariant } from "./SharedStyledComponents"
-import { IPropsNavLink as INavLinkProps } from "./SideNav"
+import {
+  dropdownIconContainerVariant,
+  IPropsNavLink as INavLinkProps,
+} from "./SideNav"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
@@ -69,10 +71,10 @@ const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
       color="text"
       _hover={{
         textDecoration: "none",
-        color: "primary",
+        color: "primary.base",
       }}
       _active={{
-        color: "primary",
+        color: "primary.base",
       }}
       {...props}
     >
@@ -172,7 +174,7 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
       <Center
         as={motion.div}
         fontWeight="medium"
-        color="primary"
+        color="primary.base"
         cursor="pointer"
         py={4}
         px={8}

@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "Akun Ethereum Anda",
   "page-wallets-your-ethereum-account-desc": "Dompet adalah jendela ke akun Ethereum Anda – saldo Anda, riwayat transaksi, dan banyak lagi. Tapi Anda bisa menukar penyedia layanan dompet kapan pun.",
   "page-wallets-your-login": "Masuk ke aplikasi Ethereum",
-  "page-wallets-your-login-desc": "Dompet Anda memungkinkan Anda terhubung ke aplikasi terdesentralisasi menggunakan akun Ethereum Anda. Ini seperti proses masuk yang dapat Anda gunakan di banyak dapp."
+  "page-wallets-your-login-desc": "Dompet Anda memungkinkan Anda terhubung ke aplikasi terdesentralisasi menggunakan akun Ethereum Anda. Ini seperti proses masuk yang dapat Anda gunakan di banyak dapp.",
+  "additional-reading-how-to-register-an-ethereum-account": "Cara \"mendaftarkan\" akun Ethereum",
+  "additional-reading-how-to-use-a-wallet": "Cara menggunakan dompet"
 }

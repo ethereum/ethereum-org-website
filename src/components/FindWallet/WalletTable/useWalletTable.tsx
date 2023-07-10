@@ -1,4 +1,3 @@
-import * as React from "react"
 import { Icon } from "@chakra-ui/react"
 import { useState } from "react"
 import { WalletTableProps } from "."
@@ -32,7 +31,7 @@ export interface DropdownOption {
   icon: typeof Icon
 }
 
-type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
+export type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
 
 type UseWalletTableProps = Pick<WalletTableProps, "filters" | "walletData"> & {
   t: (x: string) => string
