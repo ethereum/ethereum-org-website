@@ -26,7 +26,7 @@ import { trackCustomEvent } from "../../utils/matomo"
 // Hooks
 import { useCommunityEvents } from "./useCommunityEvents"
 
-const matomoEvent = (buttonType) => {
+const matomoEvent = (buttonType: string) => {
   trackCustomEvent({
     eventCategory: "CommunityEventsWidget",
     eventAction: "clicked",
