@@ -76,6 +76,44 @@ export const useCommunityEvents = () => {
     } catch {
       setState({ ...state, loading: false, hasError: true })
     }
+
+    const fetchCalendarData = async () => {
+      let events
+
+      try {
+        events = await getData<ReqEvents>(
+          `${GATSBY_FUNCTIONS_PATH}/calendarEvents`
+        )
+      } catch {
+        setState({ ...state, loading: false, hasError: true })
+      }
+
+      const pastEventData = events.pastEvents.map((event) => {
+        return {
+          date: event.start.dateTime,
+          title: event.summary,
+          calendarLink: event.htmlLink,
+          pastEventLink: event.location,
+        }
+      })
+      const upcomingEventData = events.futureEvents.map((event) => {
+        return {
+          date: event.start.dateTime,
+          title: event.summary,
+          calendarLink: event.htmlLink,
+          pastEventLink: event.location,
+        }
+      })
+
+      setState({
+        ...state,
+        pastEventData,
+        upcomingEventData,
+        loading: false,
+        hasError: false,
+      })
+    }
+    fetchCalendarData()
   }, [])
 
   return state
