@@ -35,7 +35,7 @@ const Menu: React.FC<IProps> = ({ sections }) => {
       </NavDropdown>
 
       <NavDropdown section={learn}>
-        <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"}>
+        <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"} gap="8">
           <Flex flexDir="column" gap={4}>
             {[start, basics].map((section, idx) => (
               <NavDropdown.ItemGroup key={idx} item={section} />
