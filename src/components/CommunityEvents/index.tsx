@@ -67,7 +67,7 @@ const Event = ({ event, language, type }: EventProps) => {
   }
 
   return (
-    <Grid gap={6} templateColumns="100px auto">
+    <Grid gap={6} templateColumns="auto 1fr">
       <GridItem>
         <Text>{renderEventDateTime(date, language, params)}</Text>
       </GridItem>
