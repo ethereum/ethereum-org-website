@@ -128,7 +128,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 - [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _2022 年 1 月 8 日 - Vitalik Buterin_
 - [什么是区块链桥以及我们如何对其进行分类？](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _2021 年 2 月 18 日 - Arjun Chand_
 - [什么是跨链桥接？](https://www.alchemy.com/overviews/cross-chain-bridges) _2022 年 5 月 10 日 - Alchemy_
-- [区块链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _2021 年 9 月 8 日 - Dmitriy Berenzon _
+- [区块链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _2021 年 9 月 8 日 - Dmitriy Berenzon_
 - [加密空间中的桥梁](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _2021 年 8 月 23 日 - Ben Adar Hyman_
 - [互操作性三难困境](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _2021 年 10 月 1 日 - Arjun Bhuptani_
 - [保护桥梁：正确完成跨链通信](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _2021 年 8 月 23 日 - Celia Wan_
