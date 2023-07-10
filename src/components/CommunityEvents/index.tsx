@@ -35,9 +35,9 @@ const matomoEvent = (buttonType) => {
 }
 
 const renderEventDateTime = (
-  date,
-  language,
-  params = {
+  date: string,
+  language: string,
+  params: DateTimeFormatOptions = {
     year: "numeric",
     month: "long",
     day: "numeric",
