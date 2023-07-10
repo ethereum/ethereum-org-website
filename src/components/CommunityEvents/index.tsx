@@ -13,7 +13,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import { FaDiscord } from "react-icons/fa"
-import { DateTime } from "luxon"
+import { DateTime, DateTimeFormatOptions } from "luxon"
 
 // Components
 import ButtonLink from "../ButtonLink"
