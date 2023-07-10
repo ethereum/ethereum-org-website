@@ -145,7 +145,7 @@ const CommunityEvents = () => {
               )}
               <Flex flexDirection="column" gap={6}>
                 <ButtonLink
-                  to={"/discord/"}
+                  to="/discord/"
                   gap={2}
                   onClick={() => matomoEvent("discord")}
                 >
