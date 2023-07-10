@@ -128,15 +128,14 @@ const ItemGroup = ({ item }: { item: Pick<IItem, "text" | "items"> }) => {
     <MenuGroup
       title={text}
       color="text"
-      display="block"
       fontFamily="heading"
-      fontSize="1.3rem"
+      fontSize="2xl"
       fontWeight="normal"
-      lineHeight={1.4}
+      lineHeight="1.5"
       mt={0}
       mx={0}
       mb={2}
-      px={4}
+      px={2}
     >
       {(items || []).map((item, idx) => (
         <NavDropdown.Item key={idx} to={item.to}>
