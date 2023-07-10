@@ -155,7 +155,7 @@ const CommunityEvents = () => {
                 {upcomingEventData[0] && (
                   <EventLink
                     to={upcomingEventData[0].calendarLink}
-                    onClick={matomoEvent("Add to calendar")}
+                    onClick={() => matomoEvent("Add to calendar")}
                   >
                     {t("community-events-add-to-calendar")}
                   </EventLink>
