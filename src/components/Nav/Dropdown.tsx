@@ -74,7 +74,7 @@ const NavDropdown: React.FC<IProps> & {
               border="1px"
               borderColor="dropdownBorder"
               borderRadius="none"
-              py={4}
+              p={4}
               sx={{ "--menu-bg": "colors.dropdownBackground" }}
               // Override the dark styles from the default theme
               _dark={{}}
@@ -95,11 +95,21 @@ const Item = (props: Pick<LinkProps, "to" | "children">) => (
   <MenuItem
     color="text200"
     display="block"
-    py={2}
-    px={4}
+    p="2"
     _hover={{
-      bg: "dropdownBackgroundHover",
+      bg: "primary.hover",
+      color: "background.base",
+    }}
+    _active={{
+      bg: "primary.lowContrast",
+      color: "primary.highContrast",
+    }}
+    _focusVisible={{
+      outline: "4px solid",
+      outlineColor: "primary.hover",
+      outlineOffset: "-1px",
       color: "primary.base",
+      bg: "none",
     }}
   >
     <Link
