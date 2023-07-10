@@ -65,7 +65,7 @@ const Event = ({ event, language, type }) => {
         <Text>{renderEventDateTime(date, language, params)}</Text>
       </GridItem>
       <GridItem>
-        <EventLink to={calendarLink} onClick={matomoEvent(type)}>
+        <EventLink to={calendarLink} onClick={() => matomoEvent(type)}>
           {title}
         </EventLink>
       </GridItem>
