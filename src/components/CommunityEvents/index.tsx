@@ -147,7 +147,7 @@ const CommunityEvents = () => {
                 <ButtonLink
                   to={"/discord/"}
                   gap={2}
-                  onClick={matomoEvent("discord")}
+                  onClick={() => matomoEvent("discord")}
                 >
                   <Icon as={FaDiscord} fontSize={25} />
                   Join Discord
