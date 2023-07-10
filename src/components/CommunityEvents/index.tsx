@@ -53,7 +53,7 @@ const EventLink = (props) => <Link fontWeight="700" {...props} />
 
 const Event = ({ event, language, type }) => {
   const { date, title, calendarLink } = event
-  const params = {
+  const params: DateTimeFormatOptions = {
     year: "numeric",
     month: "short",
     day: "numeric",
