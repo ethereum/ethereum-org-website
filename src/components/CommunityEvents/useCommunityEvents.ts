@@ -22,6 +22,18 @@ interface State {
   hasError: boolean
 }
 
+interface ReqEvent {
+  start: { dateTime: string }
+  summary: string
+  htmlLink: string
+  location: string
+}
+
+interface ReqEvents {
+  pastEvents: Array<ReqEvent>
+  futureEvents: Array<ReqEvent>
+}
+
 export const useCommunityEvents = () => {
   const [state, setState] = useState<State>({
     pastEventData: [],
@@ -33,7 +45,9 @@ export const useCommunityEvents = () => {
   useEffect(() => {
     try {
       const fetchCalendarData = async () => {
-        const events = await getData<ReqEvents>(`${GATSBY_FUNCTIONS_PATH}/calendarEvents`)
+        const events = await getData<ReqEvents>(
+          `${GATSBY_FUNCTIONS_PATH}/calendarEvents`
+        )
         const pastEventData = events.pastEvents.map((event) => {
           return {
             date: event.start.dateTime,
