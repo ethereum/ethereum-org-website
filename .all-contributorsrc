@@ -10276,6 +10276,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "cnn-rnn",
+      "name": "cnn-rnn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44789658?v=4",
+      "profile": "https://github.com/cnn-rnn",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
