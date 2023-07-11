@@ -99,7 +99,7 @@ Esempio di risposta:
 }
 ```
 
-- `raw` è la transazione firmata in formato codificato [Recursive Length Prefix (RLP)](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp)
+- `raw` è la transazione firmata in formato codificato [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` è la transazione firmata in formato JSON
 
 Con l'hash di firma, la transazione può provare crittograficamente che proviene dal mittente ed è stata inviata alla rete.
