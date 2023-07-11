@@ -71,7 +71,7 @@ The Ethereum developer community is strong, but the design community is falling 
 Visualisations are one of the most powerful tools to explain abstract topics. There is an enormous potential by adding diagrams and infographics. After all, one image can say thousand words.
 
 1. Go to our website and see pages where some new infographics could be added.
-2. Make sure that the illustration style corresponds to our [assets](https://ethereum.org/en/assets/).
+2. Make sure that the illustration style corresponds to our [assets](/assets/).
 3. Go to our GitHub repository and [raise an issue](https://github.com/ethereum/ethereum-org-website/issues/new) proposing the illustration.
 4. The design team will review it.
 5. We create a new issue to ask a developer to implement the new image.

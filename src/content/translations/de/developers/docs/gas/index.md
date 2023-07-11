@@ -18,7 +18,7 @@ Da jede Ethereum-Transaktion Rechenressourcen benötigt, um ausgeführt zu werde
 
 ![Ein Diagramm, das zeigt, wo Gas im EVM-Betrieb benötigt wird](./gas.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Im Wesentlichen werden Gasgebühren in Ethereums Eigenwährung, Ether (ETH) gezahlt. Die Gaspreise sind in Gwei angegeben, was selbst eine Bezeichnung für ETH ist. Jeder Gwei ist gleich 0,00000001 ETH (10<sup>-9</sup> ETH). Anstatt z. B. zu sagen, dass dein Gas 0,000000001 Ether kostet, kannst du sagen, dass dein Gas 1 Gwei kostet. Das Wort "gwei" selbst bedeutet "giga-wei" und entspricht 1.000.000.000 wei. Wei selbst (benannt nach [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), dem Erfinder von [B-Geld](https://www.investopedia.com/terms/b/bmoney.asp)) ist die kleinste Einheit von ETH.
+Im Wesentlichen werden Gasgebühren in Ethereums Eigenwährung, Ether (ETH) gezahlt. Die Gaspreise sind in Gwei angegeben, was selbst eine Bezeichnung für ETH ist. Jeder Gwei ist gleich 0,000000001 ETH (10<sup>-9</sup> ETH). Anstatt z. B. zu sagen, dass dein Gas 0,000000001 Ether kostet, kannst du sagen, dass dein Gas 1 Gwei kostet. Das Wort "gwei" selbst bedeutet "giga-wei" und entspricht 1.000.000.000 wei. Wei selbst (benannt nach [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), dem Erfinder von [B-Geld](https://www.investopedia.com/terms/b/bmoney.asp)) ist die kleinste Einheit von ETH.
 
 ## Vor dem London-Upgrade {#pre-london}
 

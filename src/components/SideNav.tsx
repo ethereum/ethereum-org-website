@@ -7,10 +7,20 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Link, { IProps as ILinkProps } from "./Link"
 import Translation from "./Translation"
-import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
+
+export const dropdownIconContainerVariant = {
+  open: {
+    rotate: 0,
+    y: 3,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  closed: { rotate: -90, y: 0 },
+}
 
 const innerLinksVariants = {
   open: {

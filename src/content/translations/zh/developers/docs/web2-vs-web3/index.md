@@ -59,4 +59,4 @@ Web2 指的是如今我们众所周知的互联网版本。 互联网由互联�
 - [去中心化的含义](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _2017 年 2 月 6 日 - Vitalik Buterin_
 - [去中心化缘何如此重要](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _2018 年 2 月 18 日 - Chris Dixon_
 - [什么是 Web 3.0 以及为何它很重要](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _2019 年 12 月 31 日 - Max Mersch 与 Richard Muirhead_
-- [我们为什么需要 Web 3.0](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab)_ 2018 年 9 月 12 日 - Gavin Wood_
+- [我们为什么需要 Web 3.0](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab) _2018 年 9 月 12 日 - Gavin Wood_

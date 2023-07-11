@@ -121,6 +121,8 @@ Watch Austin walk you through hash functions, and key pairs.
 
 ## Further reading {#further-reading}
 
+- [Understanding Ethereum Accounts](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
+
 _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}

@@ -375,7 +375,7 @@ Quando um cliente de consenso se conecta ao cliente de execução para ler o con
 
 Um cliente de consenso serve como um Beacon Node para os validadores se conectarem. Cada cliente de consenso tem seu próprio software de validador descrito em detalhes em sua respectiva documentação.
 
-Executar seu próprio validador permite a [participação individual](https://ethereum.org/en/staking/solo/), o método mais impactante e não confiável para dar suporte à rede Ethereum. No entanto, isso requer um depósito de 32 ETH. Para executar um validador em seu próprio nó com uma quantidade menor, um pool descentralizado com operadores de nós sem permissão, como [Rocket Pool](https://rocketpool.net/node-operators), poderá ser interessante.
+Executar seu próprio validador permite a [participação individual](/staking/solo/), o método mais impactante e não confiável para dar suporte à rede Ethereum. No entanto, isso requer um depósito de 32 ETH. Para executar um validador em seu próprio nó com uma quantidade menor, um pool descentralizado com operadores de nós sem permissão, como [Rocket Pool](https://rocketpool.net/node-operators), poderá ser interessante.
 
 A maneira mais fácil de começar com a participação e a geração de chaves de validação é usar a [Plataforma de lançamento de participação da rede de testes Goerli](https://goerli.launchpad.ethereum.org/), que permite testar sua configuração [executando nós no Goerli](https://notes.ethereum.org/@launchpad/goerli). Quando você estiver pronto para a Mainnet (Rede principal), você poderá repetir essas etapas usando a [Plataforma de lançamento de participação da Mainnet](https://launchpad.ethereum.org/).
 

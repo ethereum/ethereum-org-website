@@ -9,7 +9,7 @@ Un nodo archivio è un'istanza di un client di Ethereum configurata per creare u
 
 ## Prerequisiti {#prerequisites}
 
-Dovresti comprendere il concetto di [nodo di Ethereum](/developers/docs/nodes-and-clients/), [la sua architettura](/developers/docs/nodes-and-clients/node-architecture/), le [strategie di sincronizzazione](https://ethereum.org/en/developers/docs/nodes-and-clients/#sync-modes) e le pratiche della sua [esecuzione](/developers/docs/nodes-and-clients/run-a-node/) e [utilizzo](/developers/docs/apis/json-rpc/).
+Dovresti comprendere il concetto di [nodo di Ethereum](/developers/docs/nodes-and-clients/), [la sua architettura](/developers/docs/nodes-and-clients/node-architecture/), le [strategie di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes) e le pratiche della sua [esecuzione](/developers/docs/nodes-and-clients/run-a-node/) e [utilizzo](/developers/docs/apis/json-rpc/).
 
 ## Cos'è un nodo archivio
 
@@ -56,7 +56,7 @@ Prima di avviare il tuo nodo archivio, scopri le differenze tra i client e, in p
 
 ## Pratiche consigliate
 
-Oltre ai [consigli generali per eseguire un nodo](/developers/docs/nodes-and-clients/run-a-node/), un nodo archivio potrebbe avere requisiti maggiori in termini di hardware e manutenzione. Considerando le [funzionalità chiave](https://github.com/ledgerwatch/erigon#key-features) di Erigon, l'approccio più pratico è utilizzare l'implementazione del client di [Erigon](https://ethereum.org/en/developers/docs/nodes-and-clients/#erigon).
+Oltre ai [consigli generali per eseguire un nodo](/developers/docs/nodes-and-clients/run-a-node/), un nodo archivio potrebbe avere requisiti maggiori in termini di hardware e manutenzione. Considerando le [funzionalità chiave](https://github.com/ledgerwatch/erigon#key-features) di Erigon, l'approccio più pratico è utilizzare l'implementazione del client di [Erigon](/developers/docs/nodes-and-clients/#erigon).
 
 ### Hardware
 
