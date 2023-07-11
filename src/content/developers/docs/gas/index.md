@@ -85,9 +85,9 @@ It's also important to note it is unlikely we will see extended spikes of full b
 
 Before the London Upgrade, miners would receive the total gas fee from any transaction included in a block.
 
-With the new base fee getting burned, the London Upgrade introduced a priority fee (tip) to incentivize miners to include a transaction in the block. Without tips, miners would find it economically viable to mine empty blocks, as they would receive the same block reward. Under normal conditions, a small tip provided miners a minimal incentive to include a transaction. For transactions that need to get preferentially executed ahead of other transactions in the same block, a higher tip was necessary to attempt to outbid competing transactions.
+With the new base fee getting burned, the London Upgrade introduced a priority fee (tip) to incentivize miners to include a transaction in the block. Without tips, miners would find it economically viable to mine empty blocks, as they would receive the same block reward. Under normal conditions, a small tip gave miners a minimal incentive to include a transaction. For transactions that needed to get preferentially executed ahead of other transactions in the same block, a higher tip was necessary to attempt to outbid competing transactions.
 
-Ethereum has since swapped it's proof-of-work based consensus mechanism for one based on proof-of-stake, but the base and priority fee and burning mechanism stayed the same. The only difference is in today's system miners are replaced with validators who secure the network by sending their ETH to a smart contract rather than proof-of-work mining.
+Ethereum has since swapped its proof-of-work-based consensus mechanism for one based on proof-of-stake, but the base fee, priority fee and burning mechanism stayed the same. The only difference is, in today's system, miners are replaced with validators who secure the network by sending their ETH to a smart contract rather than proof-of-work mining.
 
 ### Max fee {#maxfee}
 
