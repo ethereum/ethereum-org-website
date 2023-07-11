@@ -462,7 +462,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Servizi di controllo dei contratti intelligenti](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)**: _elenco di organizzazioni che forniscono servizi di controllo dei contratti intelligenti per progetti di sviluppo per Ethereum._
 
-- **[Piattaforme di bug bounty](https://ethereum.org/en/developers/docs/smart-contracts/testing/#bug-bounty-platforms)**: _piattaforme per coordinare le ricompense per la caccia ai bug e ricompensare la divulgazione responsabile delle vulnerabilità critiche nei contratti intelligenti._
+- **[Piattaforme di bug bounty](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)**: _piattaforme per coordinare le ricompense per la caccia ai bug e ricompensare la divulgazione responsabile delle vulnerabilità critiche nei contratti intelligenti._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)**: _uno strumento online gratuito per verificare tutte le informazioni disponibili riguardanti un contratto diramato._
 
