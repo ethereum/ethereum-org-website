@@ -8756,7 +8756,8 @@
       "profile": "https://github.com/MahendraBishnoi29",
       "contributions": [
         "ideas",
-        "code"
+        "code",
+        "bug"
       ]
     },
     {
@@ -10209,6 +10210,44 @@
       "contributions": [
         "content",
         "code"
+      ]
+    },
+    {
+      "login": "maxime216-pro",
+      "name": "Maxime Dessez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66296351?v=4",
+      "profile": "http://maximedessez.fr",
+      "contributions": [
+        "bug",
+        "translation"
+      ]
+    },
+    {
+      "login": "Tyler-233",
+      "name": "Tyler-233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44740396?v=4",
+      "profile": "https://github.com/Tyler-233",
+      "contributions": [
+        "translation",
+        "content"
+      ]
+    },
+    {
+      "login": "neodaoist",
+      "name": "neodaoist",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3170590?v=4",
+      "profile": "http://neodaoist.xyz",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "atharvadeosthale",
+      "name": "Atharva Deosthale",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11805367?v=4",
+      "profile": "https://links.atharva.codes",
+      "contributions": [
+        "content"
       ]
     }
   ],

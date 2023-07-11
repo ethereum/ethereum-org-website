@@ -89,8 +89,8 @@ const Option = (
       alignItems="center"
       justifyContent={{ base: "center", lg: "flex-start" }}
       boxShadow={props.isActive ? tableBoxShadow : `none`}
-      color={props.isActive ? "primary" : "text"}
-      borderColor={props.isActive ? "primary" : "text"}
+      color={props.isActive ? "primary.base" : "text"}
+      borderColor={props.isActive ? "primary.base" : "text"}
       borderRadius="2rem"
       height="auto"
       w={{ base: "full", lg: "auto" }}
@@ -100,8 +100,8 @@ const Option = (
       px={6}
       transition="none"
       _hover={{
-        color: "primary",
-        borderColor: "primary",
+        color: "primary.base",
+        borderColor: "primary.base",
       }}
       _active={{ bg: "transparent" }}
       {...props}
@@ -169,7 +169,7 @@ const IntroRow = (props: ChildOnlyProp) => (
     w="full"
     direction={{ base: "column", lg: "row" }}
     align="flex-start"
-    bg="background"
+    bg="background.base"
     p={8}
     borderRadius="32px"
     {...props}
@@ -633,6 +633,13 @@ const DappsPage = ({
       link: "https://yearn.finance/",
       image: getImage(data.yearn),
       alt: t("page-dapps-yearn-image-alt"),
+    },
+    {
+      title: "Convex",
+      description: t("page-dapps-dapp-description-convex"),
+      link: "https://www.convexfinance.com/",
+      image: getImage(data.convex),
+      alt: t("page-dapps-convex-image-alt"),
     },
   ]
 
@@ -1661,6 +1668,9 @@ export const query = graphql`
       ...dappImage
     }
     compound: file(relativePath: { eq: "dapps/compound.png" }) {
+      ...dappImage
+    }
+    convex: file(relativePath: { eq: "dapps/convex.png" }) {
       ...dappImage
     }
     pooltogether: file(relativePath: { eq: "dapps/pooltogether.png" }) {

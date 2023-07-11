@@ -89,5 +89,6 @@
   "page-find-wallet-browser": "瀏覽器",
   "page-find-wallet-browser-desc": "有瀏覽器擴充功能的錢包",
   "page-find-wallet-device": "裝置",
-  "page-find-choose-to-compare": "選擇比較對象"
+  "page-find-choose-to-compare": "選擇比較對象",
+  "page-find-wallet-choose-features": "選擇功能"
 }

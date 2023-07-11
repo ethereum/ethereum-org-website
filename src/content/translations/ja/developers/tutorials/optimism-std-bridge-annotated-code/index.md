@@ -14,7 +14,7 @@ lang: ja
 
 [Optimism](https://www.optimism.io/)は、[Optimisitc ロールアップ](/developers/docs/scaling/optimistic-rollups/)を行うメカニズムのひとつです。 Optimistic ロールアップでは、ネットワークに含まれるすべてノードではなく一部のノードのみを対象としてトランザクションが処理されるため、イーサリアム・メインネット（「レイヤー 1」または「L1」とも呼ばれます）よりも手数料が低くなります。 一部のノードのみを対象として処理されるものの、すべてのデータは L1 に書き込まれるため、あらゆる事項につき、メインネットにおける完全性および可用性についての保証に基づいて証明、再構築することが可能です。
 
-Optimism（またはその他の L2）上で L1 のアセットを使用するには、当該アセットを[ブリッジ](/bridges/#prerequisites)する必要があります。 アセットをブリッジする方法のひとつとして、アセット（最も一般的なのは、ETH や[ERC-20 トークン](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)です）を L1 上でロックし、L2 上で同等のアセットを受け取る方法があります。 最終的に、これらのアセットを所持するユーザーは、再度 L1 にブリッジする必要があるでしょう。 L1 にアセットをブリッジすると、L2 上のアセットはバーンされ、L1 上のアセットがユーザーに戻されます。
+Optimism（またはその他の L2）上で L1 のアセットを使用するには、当該アセットを[ブリッジ](/bridges/#prerequisites)する必要があります。 アセットをブリッジする方法のひとつとして、アセット（最も一般的なのは、ETH や[ERC-20 トークン](/developers/docs/standards/tokens/erc-20/)です）を L1 上でロックし、L2 上で同等のアセットを受け取る方法があります。 最終的に、これらのアセットを所持するユーザーは、再度 L1 にブリッジする必要があるでしょう。 L1 にアセットをブリッジすると、L2 上のアセットはバーンされ、L1 上のアセットがユーザーに戻されます。
 
 以上が、[Optimism における標準ブリッジ](https://community.optimism.io/docs/developers/bridge/standard-bridge)の仕組みです。 この記事では、このブリッジ機能について Solidity 上で適切に作成したソースコードを確認しながら、その仕組みを学びます。
 
@@ -1014,7 +1014,7 @@ L2 のブリッジは、ERC-165 を健全性チェックとして用いて、資
 
 資産をミント／バーンできるのは、L2 のブリッジのみです。
 
-`_mint`および`_burn`は、実際には、[OpenZeppelin で作成した ERC-20 コントラクト](https://ethereum.org/en/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)で定義されています。 トークンをミント／バーンできる条件は、ERC-20 を使用する方法と同じように多種多様であるため、このコントラクトは単純に外部に露出していないのです。
+`_mint`および`_burn`は、実際には、[OpenZeppelin で作成した ERC-20 コントラクト](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)で定義されています。 トークンをミント／バーンできる条件は、ERC-20 を使用する方法と同じように多種多様であるため、このコントラクトは単純に外部に露出していないのです。
 
 ## L2 ブリッジのコード {#l2-bridge-code}
 

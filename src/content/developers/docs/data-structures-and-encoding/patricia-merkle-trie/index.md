@@ -233,6 +233,8 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
+Note: The `storageRoot` for an Ethereum account is empty by default if it's not a contract account.
+
 ### Transactions Trie {#transaction-trie}
 
 There is a separate transactions trie for every block, again storing `(key, value)` pairs. A path here is: `rlp(transactionIndex)` which represents the key that corresponds to a value determined by:

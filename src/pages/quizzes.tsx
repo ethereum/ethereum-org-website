@@ -16,13 +16,13 @@ import ButtonLink from "../components/ButtonLink"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import { Content } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import QuizzesList from "../components/Quiz/QuizzesList"
 import QuizzesModal from "../components/Quiz/QuizzesModal"
 import QuizzesStats from "../components/Quiz/QuizzesStats"
 import { QuizzesHubContext } from "../components/Quiz/context"
+import { Content } from "./get-eth"
 
 import { useLocalStorage } from "../hooks/useLocalStorage"
 
@@ -31,7 +31,7 @@ import { trackCustomEvent } from "../utils/matomo"
 
 import { INITIAL_QUIZ, USER_STATS_KEY } from "../constants"
 
-import { CompletedQuizzes, QuizStatus, UserStats } from "../types"
+import type { CompletedQuizzes, QuizStatus, UserStats } from "../types"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,
@@ -121,12 +121,12 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
               <Box px={{ base: 8, lg: 0 }}>
                 <Heading
                   fontSize={{ base: "1.75rem", lg: "2rem" }}
-                  color="body"
+                  color="body.base"
                 >
                   <Translation id="basics" />
                 </Heading>
 
-                <Text mb={8} color="body">
+                <Text mb={8} color="body.base">
                   <Translation id="basics-description" />
                 </Text>
 
@@ -140,12 +140,12 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
               <Box px={{ base: 8, lg: 0 }} mb={10}>
                 <Heading
                   fontSize={{ base: "1.75rem", lg: "2rem" }}
-                  color="body"
+                  color="body.base"
                 >
                   <Translation id="using-ethereum" />
                 </Heading>
 
-                <Text mb={8} color="body">
+                <Text mb={8} color="body.base">
                   <Translation id="using-ethereum-description" />
                 </Text>
 
@@ -160,7 +160,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                 direction={{ base: "column", xl: "row" }}
                 justifyContent="space-between"
                 alignItems="center"
-                bg="backgroundHighlight"
+                bg="background.highlight"
                 borderRadius={{ base: "none", lg: "lg" }}
                 border="none"
                 p={8}
@@ -169,13 +169,16 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
                   <Text
                     align={{ base: "center", xl: "left" }}
                     fontWeight="bold"
-                    color="body"
+                    color="body.base"
                     mb={-2}
                   >
                     <Translation id="want-more-quizzes" />
                   </Text>
 
-                  <Text align={{ base: "center", xl: "left" }} color="body">
+                  <Text
+                    align={{ base: "center", xl: "left" }}
+                    color="body.base"
+                  >
                     <Translation id="contribute" />
                   </Text>
                 </Stack>
