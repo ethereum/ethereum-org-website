@@ -627,6 +627,13 @@ const DappsPage = ({
       image: getImage(data.pwn),
       alt: t("page-dapps-pwn-image-alt"),
     },
+    {
+      title: "Convex",
+      description: t("page-dapps-dapp-description-convex"),
+      link: "https://www.convexfinance.com/",
+      image: getImage(data.convex),
+      alt: t("page-dapps-convex-image-alt"),
+    },
   ]
 
   const dex = [
@@ -1654,6 +1661,9 @@ export const query = graphql`
       ...dappImage
     }
     compound: file(relativePath: { eq: "dapps/compound.png" }) {
+      ...dappImage
+    }
+    convex: file(relativePath: { eq: "dapps/convex.png" }) {
       ...dappImage
     }
     pooltogether: file(relativePath: { eq: "dapps/pooltogether.png" }) {
