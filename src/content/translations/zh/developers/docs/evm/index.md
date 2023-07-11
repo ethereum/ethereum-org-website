@@ -56,9 +56,9 @@ EVM 作为一个[堆栈机](https://wikipedia.org/wiki/Stack_machine)运行，�
 
 EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 
-在以太坊 7 年历史中，以太坊虚拟机经历了几次修订，并且还出现了用各种编程语言编写的多种以太坊虚拟机实现。
+在以太坊九年的历程中，以太坊虚拟机经过了几次修订，并且存在不同编程语言实现的以太坊虚拟机版本。
 
-所有[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)都包含一个 EVM 实现。 此外，还有多个独立的实现方法，包括：
+[以太坊执行客户端](/developers/docs/nodes-and-clients/#execution-clients)都包含一个以太坊虚拟机实现。 此外，还有多个独立的实现，包括：
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
