@@ -62,7 +62,7 @@ The update and delete operations for radix tries can be defined as follows:
                 return hash(newnode)
 ```
 
-A "Merkle" Radix tree is built by linking nodes using deterministically-generated cryptographic hash digests. This content-addressing (in the key/value DB `key == keccak256(rlp(value))`) provides a cryptographic integerity guarantee of the stored data. If the root hash of a given trie is publicly known, then anyone with access to the underlying leaf data can construct a proof that the trie includes a given value at a specific path by providing the hashes of each node joining a specific value to the tree root.
+A "Merkle" Radix tree is built by linking nodes using deterministically-generated cryptographic hash digests. This content-addressing (in the key/value DB `key == keccak256(rlp(value))`) provides a cryptographic integrity guarantee of the stored data. If the root hash of a given trie is publicly known, then anyone with access to the underlying leaf data can construct a proof that the trie includes a given value at a specific path by providing the hashes of each node joining a specific value to the tree root.
 
 It is impossible for an attacker to provide a proof of a `(path, value)` pair that does not exist since the root hash is ultimately based on all hashes below it. Any underlying modification would change the root hash. You can think of the hash as a compressed representation of structural information about the data, secured by the pre-image protection of the hashing function.
 
