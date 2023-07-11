@@ -46,7 +46,7 @@ I rollup ottimistici si affidano al protocollo principale di Ethereum per quanto
 
 Come accennato, i rollup ottimistici pubblicano i dati della transazione in Ethereum come `calldata`. Poiché l'esecuzione della catena di rollup si basa sulle transazioni inviate, chiunque può usare queste informazioni, ancorate al livello di base di Ethereum, per eseguire lo stato del rollup e verificare la correttezza delle transizioni di stato.
 
-[La disponibilità dei dati](https://ethereum.org/en/developers/docs/data-availability/) è critica perché senza accesso ai dati di stato, gli autori della contestazione non possono costruire prove di frode per contestare operazioni di rollup non valide. Con Ethereum che fornisce la disponibilità dei dati, il rischio che gli operatori di rollup la passino liscia con atti malevoli (ad es. inviare blocchi non validi) è ridotto.
+[La disponibilità dei dati](/developers/docs/data-availability/) è critica perché senza accesso ai dati di stato, gli autori della contestazione non possono costruire prove di frode per contestare operazioni di rollup non valide. Con Ethereum che fornisce la disponibilità dei dati, il rischio che gli operatori di rollup la passino liscia con atti malevoli (ad es. inviare blocchi non validi) è ridotto.
 
 ### Resistenza alla censura {#censorship-resistance}
 
