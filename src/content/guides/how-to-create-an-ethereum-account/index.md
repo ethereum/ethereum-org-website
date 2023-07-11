@@ -51,9 +51,9 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
 
 No, just like online banking you can have many different accounts all stored in one wallet application. Your 12 or 24 word phrase secures them all: it is like the seed of a big tree (which is why you must keep it safe). Each branch of the tree holds a key, and every key is one of your accounts. If you lose access to the wallet (i.e. your tree gets cut down), you can always restore all your different accounts using other software and the same seed (which will always grow the same tree).
 
-### Can I send Bitcoin to an Ethereum address, or Ether to a Bitcoin address?
+### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
 
-No, you cannot. Bitcoin and Ether exist on two separate networks (i.e. different blockchains), each with their own bookkeeping models and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped Bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
+No, you cannot. Bitcoin and ether exist on two separate networks (i.e. different blockchains), each with their own bookkeeping models and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 
