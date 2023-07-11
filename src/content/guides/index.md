@@ -6,7 +6,7 @@ lang: en
 
 # Ethereum guides
 
-Do you want to start your Ethereum journey? Our practical guides will teach you how to get started step-by-step, and make it easier to navigate this new technology.
+Do you want to start your Ethereum journey? Our practical guides lead you step-by-step on getting started, and make it easier to navigate this new technology.
 
 ## Getting started
 
