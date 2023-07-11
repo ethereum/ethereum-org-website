@@ -10211,6 +10211,16 @@
         "content",
         "code"
       ]
+    },
+    {
+      "login": "maxime216-pro",
+      "name": "Maxime Dessez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66296351?v=4",
+      "profile": "http://maximedessez.fr",
+      "contributions": [
+        "bug",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
