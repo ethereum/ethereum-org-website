@@ -10231,6 +10231,15 @@
         "translation",
         "content"
       ]
+    },
+    {
+      "login": "neodaoist",
+      "name": "neodaoist",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3170590?v=4",
+      "profile": "http://neodaoist.xyz",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
