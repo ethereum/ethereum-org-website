@@ -10249,6 +10249,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ckartik",
+      "name": "Kartik Chopra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13803371?v=4",
+      "profile": "https://github.com/ckartik",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

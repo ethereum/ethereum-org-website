@@ -1605,6 +1605,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Tyler-233"><img src="https://avatars.githubusercontent.com/u/44740396?v=4?s=100" width="100px;" alt="Tyler-233"/><br /><sub><b>Tyler-233</b></sub></a><br /><a href="#translation-Tyler-233" title="Translation">🌍</a> <a href="#content-Tyler-233" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://neodaoist.xyz"><img src="https://avatars.githubusercontent.com/u/3170590?v=4?s=100" width="100px;" alt="neodaoist"/><br /><sub><b>neodaoist</b></sub></a><br /><a href="#content-neodaoist" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://links.atharva.codes"><img src="https://avatars.githubusercontent.com/u/11805367?v=4?s=100" width="100px;" alt="Atharva Deosthale"/><br /><sub><b>Atharva Deosthale</b></sub></a><br /><a href="#content-atharvadeosthale" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ckartik"><img src="https://avatars.githubusercontent.com/u/13803371?v=4?s=100" width="100px;" alt="Kartik Chopra"/><br /><sub><b>Kartik Chopra</b></sub></a><br /><a href="#content-ckartik" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
