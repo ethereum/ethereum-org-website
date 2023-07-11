@@ -97,7 +97,6 @@ Explore projects and join the DeSci community.
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [DeSci Labs](https://www.desci.com/)
 - [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 - [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 - [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
@@ -112,6 +111,7 @@ Explore projects and join the DeSci community.
 - [Active Inference Lab](https://www.activeinference.org/)
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
 - [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
+- [DeSci Labs](https://www.desci.com/)
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 
