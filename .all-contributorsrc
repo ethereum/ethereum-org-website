@@ -10267,6 +10267,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "vaibhavtevatia",
+      "name": "Vaibhav Tevatia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86671961?v=4",
+      "profile": "https://github.com/vaibhavtevatia",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
