@@ -28,7 +28,7 @@ Una transazione inviata contiene le seguenti informazioni:
 - `nonce` – un contatore con incremento sequenziale, che indica il numero della transazione dal conto
 - `value` – quantità di ETH da trasferire dal mittente al destinatario (denominata in WEI, dove 1 ETH corrisponde a 1e+18wei)
 - `data` – campo facoltativo per includere dati arbitrari
-- `gasLimit` – importo massimo di unità di carburante che possono essere consumate dalla transazione. La [EVM](https://ethereum.org/en/developers/docs/evm/opcodes) specifica le unità di carburante richiesti da ogni passaggio di calcolo
+- `gasLimit` – importo massimo di unità di carburante che possono essere consumate dalla transazione. La [EVM](/developers/docs/evm/opcodes) specifica le unità di carburante richiesti da ogni passaggio di calcolo
 - `maxPriorityFeePerGas` – il prezzo massimo del carburante consumato da includere come mancia al validatore
 - `maxFeePerGas` – la commissione massima per unità di carburante che si desidera pagare per la transazione (che include `baseFeePerGas` e `maxPriorityFeePerGas`)
 
