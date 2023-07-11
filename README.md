@@ -1607,6 +1607,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://links.atharva.codes"><img src="https://avatars.githubusercontent.com/u/11805367?v=4?s=100" width="100px;" alt="Atharva Deosthale"/><br /><sub><b>Atharva Deosthale</b></sub></a><br /><a href="#content-atharvadeosthale" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ckartik"><img src="https://avatars.githubusercontent.com/u/13803371?v=4?s=100" width="100px;" alt="Kartik Chopra"/><br /><sub><b>Kartik Chopra</b></sub></a><br /><a href="#content-ckartik" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/BBashh"><img src="https://avatars.githubusercontent.com/u/125178349?v=4?s=100" width="100px;" alt="Bibash Tandon"/><br /><sub><b>Bibash Tandon</b></sub></a><br /><a href="#content-BBashh" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vaibhavtevatia"><img src="https://avatars.githubusercontent.com/u/86671961?v=4?s=100" width="100px;" alt="Vaibhav Tevatia"/><br /><sub><b>Vaibhav Tevatia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vaibhavtevatia" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
