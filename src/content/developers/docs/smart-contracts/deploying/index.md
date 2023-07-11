@@ -33,10 +33,6 @@ Once deployed, your contract will have an Ethereum address like other [accounts]
 
 ## Related tools {#related-tools}
 
-**thirdweb - _Easily deploy any contract to any EVM compatible chain, using a single command_**
-
-- [Documentation](https://portal.thirdweb.com/deploy/)
-
 **Remix - _Remix IDE allows developing, deploying and administering smart contracts for Ethereum like blockchains_**
 
 - [Remix](https://remix.ethereum.org)
@@ -60,6 +56,10 @@ Once deployed, your contract will have an Ethereum address like other [accounts]
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [Docs on networks and app deployment](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
 - [GitHub](https://github.com/trufflesuite/truffle)
+
+**thirdweb - _Easily deploy any contract to any EVM compatible chain, using a single command_**
+
+- [Documentation](https://portal.thirdweb.com/deploy/)
 
 ## Related tutorials {#related-tutorials}
 
