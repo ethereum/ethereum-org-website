@@ -8,7 +8,7 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-区块提议是权益证明协议的一部分。 为了帮助理解本页面，我们建议您阅读有关[权益证明](src/content/developers/docs/consensus-mechanisms/pos/)和[区块架构](src/content/developers/docs/blocks/)的内容。
+区块提议是权益证明协议的一部分。 为了帮助理解本页面，我们建议您阅读有关[权益证明](/developers/docs/consensus-mechanisms/pos/)和[区块架构](/developers/docs/blocks/)的内容。
 
 ## 谁产生区块？ {#who-produces-blocks}
 
