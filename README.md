@@ -1601,6 +1601,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/rpalakkal"><img src="https://avatars.githubusercontent.com/u/19766713?v=4?s=100" width="100px;" alt="Roshan"/><br /><sub><b>Roshan</b></sub></a><br /><a href="#content-rpalakkal" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=rpalakkal" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://maximedessez.fr"><img src="https://avatars.githubusercontent.com/u/66296351?v=4?s=100" width="100px;" alt="Maxime Dessez"/><br /><sub><b>Maxime Dessez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amaxime216-pro" title="Bug reports">🐛</a> <a href="#translation-maxime216-pro" title="Translation">🌍</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Tyler-233"><img src="https://avatars.githubusercontent.com/u/44740396?v=4?s=100" width="100px;" alt="Tyler-233"/><br /><sub><b>Tyler-233</b></sub></a><br /><a href="#translation-Tyler-233" title="Translation">🌍</a> <a href="#content-Tyler-233" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
