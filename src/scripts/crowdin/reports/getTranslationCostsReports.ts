@@ -1,5 +1,5 @@
 import { findFileIdsByPaths } from "../utils"
-import getCrowdinCode from "../../../../src/utils/getCrowdinCode"
+import getCrowdinCode from "../../../utils/getCrowdinCode"
 import { fetchTranslationCostsReport } from "./reportsHelpers"
 
 async function getTranslationCostsReports(translatedMarkdownPaths) {
