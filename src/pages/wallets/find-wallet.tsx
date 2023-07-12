@@ -18,6 +18,7 @@ import { MdOutlineCancel } from "react-icons/md"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 
 // Components
+import BannerNotification from "../../components/BannerNotification"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
@@ -163,6 +164,10 @@ const FindWalletPage = ({ data, location }) => {
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
       />
+
+      <BannerNotification shouldShow={true}>
+        <Translation id="page-find-wallet-footnote-1" />
+      </BannerNotification>
 
       <Flex
         direction={{ base: "column-reverse", sm: "row" }}
