@@ -493,15 +493,16 @@ export const useEthExchanges = () => {
   }
 
   // Add `value` & `label` for Select component
-  const exchangesByCountry: Array<ExchangeByCountry> = shuffle(
-    data.exchangesByCountry.nodes.map((node) => {
-      return {
-        value: node.country,
-        label: node.country,
-        exchanges: node,
-      }
-    })
-  )
+  const exchangesByCountry: Array<ExchangeByCountry> =
+    data.exchangesByCountry.nodes
+      .map((node) => {
+        return {
+          value: node.country,
+          label: node.country,
+          exchanges: node,
+        }
+      })
+      .sort((a, b) => a.value.localeCompare(b.value))
 
   const exchangesArray = Object.keys(exchanges) as Array<ExchangeName>
   const walletProvidersArray = Object.keys(
