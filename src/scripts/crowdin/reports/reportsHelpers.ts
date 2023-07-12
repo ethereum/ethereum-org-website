@@ -21,7 +21,6 @@ export async function fetchTranslationCostsReport(
   crowdinLangCode: string
 ): Promise<void> {
   const now = new Date()
-  now.setDate(now.getDate() - 1) // set the date to one day in the past (yesterday)
   const dateTo = getPreviousDayISOString()
 
   // Todo: Remove ts-ignore when this PR gets merged
