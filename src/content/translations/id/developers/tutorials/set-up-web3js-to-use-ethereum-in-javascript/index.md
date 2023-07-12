@@ -68,7 +68,7 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-You can see all the functions available on the Web3 instance in [the official web3.js documentation](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
+You can see all the functions available on the Web3 instance in [the official web3.js documentation](https://docs.web3js.org/).
 
 Kebanyakan dari pustaka Web3 bersifat asinkron karena pada latar belakang, pustaka membuat JSON RPC memanggil node yang mengirimkan kembali hasilnya.
 
