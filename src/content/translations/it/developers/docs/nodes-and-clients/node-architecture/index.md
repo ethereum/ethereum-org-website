@@ -22,7 +22,7 @@ Il client di esecuzione è responsabile della gestione e del gossip delle transa
 
 Il client di esecuzione crea carichi utili di esecuzione: l'elenco di transazioni, l'albero di stato aggiornato e altri dati correlati all'esecuzione. I client di consenso includono il carico utile di esecuzione in ogni blocco. Il client di esecuzione è inoltre responsabile per la ri-esecuzione delle transazioni nei nuovi blocchi per assicurarsi che siano validi. L'esecuzione delle transazioni avviene sul computer incorporato del client di esecuzione, noto come [Macchina Virtuale di Ethereum (EVM)](/developers/docs/evm).
 
-Inoltre, il client di esecuzione offre un'interfaccia utente a Ethereum tramite i [metodi RPC](/developers/docs/apis/json-rpc) che consentono agli utenti di interrogare la blockchain di Ethereum, inviare transazioni e distribuire contratti intelligenti. È comune che le chiamate RPC siano gestite da una libreria come [Web3js](https://web3js.readthedocs.io/en/v1.8.0/), [Web3py](https://web3py.readthedocs.io/en/v5/) o da un'interfaccia utente come un portafoglio su browser.
+Inoltre, il client di esecuzione offre un'interfaccia utente a Ethereum tramite i [metodi RPC](/developers/docs/apis/json-rpc) che consentono agli utenti di interrogare la blockchain di Ethereum, inviare transazioni e distribuire contratti intelligenti. È comune che le chiamate RPC siano gestite da una libreria come [Web3js](https://docs.web3js.org/), [Web3py](https://web3py.readthedocs.io/en/v5/) o da un'interfaccia utente come un portafoglio su browser.
 
 In sintesi, il client di esecuzione è:
 
