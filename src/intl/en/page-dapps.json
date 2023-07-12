@@ -212,6 +212,10 @@
   "page-dapps-more-on-nft-gaming-button": "More on tokenised in-game items",
   "page-dapps-dapp-description-pwn": "Easy loans backed by any token or NFTs on Ethereum.",
   "page-dapps-pwn-image-alt": "PWN logo",
+  "page-dapps-dapp-description-yearn": "Yearn Finance is a yield aggregator. Giving individuals, DAOs and other protocols a way to deposit digital assets and receive yield.",
+  "page-dapps-yearn-image-alt": "Yearn logo",
+  "page-dapps-dapp-description-convex": "Convex allows Curve liquidity providers to earn trading fees and claim boosted CRV without locking their CRV.",
+  "page-dapps-convex-image-alt": "Convex logo",
   "foundation": "Foundation",
   "transaction-fees": "What are transaction fees?",
   "page-wallets-get-some": "Get some ETH"

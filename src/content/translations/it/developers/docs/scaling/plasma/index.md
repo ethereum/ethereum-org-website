@@ -72,7 +72,7 @@ Se il periodo di contestazione scade senza che nessuno fornisca una prova di fro
 
 ### Arbitrato delle dispute {#dispute-arbitration}
 
-Come ogni blockchain, le catene Plasma necessitano di un meccanismo per imporre l'integrità delle transazioni nel caso in cui i partecipanti inizino ad agire in modo malevolo (ad es. doppia spesa di fondi). A tal fine, le catene Plasma usano le prove di frode per arbitrare le dispute relative alla validità delle transizioni di stato e penalizzare i cattivi comportamenti.
+Come ogni blockchain, le catene di plasma necessitano di un meccanismo per applicare l'integrità delle transazioni, nel caso in cui i partecipanti agiscano in modo malevolo (es., doppia spesa dei fondi). A tal fine, le catene Plasma usano le prove di frode per arbitrare le dispute relative alla validità delle transizioni di stato e penalizzare i cattivi comportamenti. Le prove di frode sono utilizzate come un meccanismo tramite cui, una catena secondaria di Plasma presenta un reclamo alla sua catena principale o alla catena di root.
 
 Una prova di frode è semplicemente l'affermazione che una particolare transizione di stato non è valida. Un esempio è se un utente (Alice) prova a spendere gli stessi fondi due volte. Forse ha speso l'UTXO in una transazione con Bob e desidera spendere lo stesso UTXO (che ora è di Bob) in un'altra transazione.
 
@@ -94,7 +94,7 @@ Le catene Plasma memorizzano principalmente i dati delle transazioni con l'opera
 
 Il problema nasce quando l'operatore, non un utente qualsiasi, è la parte che agisce in modo malevolo. Poiché l'operatore ha il controllo esclusivo della blockchain, ha un maggiore incentivo a portare avanti transizioni di stato non valide su una scala maggiore, come rubare i fondi appartenenti ad utenti sulla catena Plasma.
 
-In questo caso, usare il classico sistema basato sulla prova di frode non può funzionare. L'operatore potrebbe facilmente creare una transazione non valida trasferendo i fondi di Alice e Bob al proprio portafoglio e nascondendo i dati necessari per creare la prova di frode. Questo è possibile perché l'operatore non è tenuto a rendere disponibili i dati agli utenti o alla Rete principale.
+In questo caso, l'utilizzo del classico sistema di prova di frode non funziona. L'operatore potrebbe facilmente creare una transazione non valida trasferendo i fondi di Alice e Bob al proprio portafoglio e nascondendo i dati necessari per creare la prova di frode. Questo è possibile perché l'operatore non è tenuto a rendere disponibili i dati agli utenti o alla Rete principale.
 
 Dunque, la soluzione più ottimistica è quella di tentare una "uscita di massa" degli utenti dalla catena Plasma. L'uscita di massa rallenta il piano dell'operatore malevolo di rubare fondi e fornisce una certa misura di protezione agli utenti. Le richieste di prelievo sono ordinate in base al momento di creazione di ogni UTXO (o token), impedendo agli operatori malevoli dal danneggiare gli utenti onesti.
 
@@ -150,11 +150,13 @@ Viceversa, le catene Plasma derivano la propria sicurezza dalla Rete principale.
 
 ### Plasma vs sharding {#plasma-vs-sharding}
 
-Sia le catene Plasma che le [shard chain](/roadmap/danksharding/) pubblicano periodicamente prove crittografiche sulla Rete principale di Ethereum. Tuttavia, le due catene hanno proprietà di sicurezza diverse.
+Sia le catene Plasma che le shard chain pubblicano periodicamente prove crittografiche sulla Rete principale di Ethereum. Tuttavia, le due catene hanno proprietà di sicurezza diverse.
 
 Le shard chain inviano "intestazioni di collazione" alla Rete principale contenenti informazioni dettagliate su ogni frammento di dati. I nodi sulla Rete principale verificano e applicano la validità dei frammenti di dati, riducendo la possibilità di transazioni di shard non valide e proteggendo la rete dalle attività malevole.
 
 Plasma è differente perché la Rete principale riceve solo informazioni minime sullo stato delle catene figlio. Questo significa che la Rete principale non può verificare efficientemente le transazioni condotte sulle catene figlio, rendendole meno sicure.
+
+**Nota** che lo sharding della blockchain di Ethereum non è più sulla tabella di marcia. È stato sostituito dal ridimensionamento tramite rollup e dal [Danksharding](/roadmap/danksharding).
 
 ### Usare Plasma {#use-plasma}
 
@@ -167,10 +169,10 @@ Diversi progetti forniscono implementazioni di Plasma che puoi integrare nelle t
 
 ## Letture consigliate {#further-reading}
 
-- [Learn Plasma](https://www.learnplasma.org/en/)
-- [A quick reminder of what "shared security" means and why it's so important](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
+- [Scopri plasma](https://www.learnplasma.org/en/)
+- [Un rapido promemoria su che cos'è la "sicurezza condivisa" e perché è così importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Sidechains vs Plasma vs Sharding](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
-- [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
+- [Comprendere Plasma, Parte 1: Fondamenti](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [The Life and Death of Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_

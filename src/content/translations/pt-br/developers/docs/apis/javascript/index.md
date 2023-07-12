@@ -231,14 +231,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Funções utilitárias da Web3js](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Funções utilitárias da Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funções utilitárias da EthersJs](https://docs.ethers.io/v5/api/utils/)
 
 ## Bibliotecas disponíveis {#available-libraries}
 
 **Web3.js -** **_API para Ethereum em JavaScript._**
 
-- [Documentação](https://web3js.readthedocs.io/en/1.0/)
+- [Documentação](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_Implementação completa de uma carteira Ethereum e utilidades em JavaScript e TypeScript._**

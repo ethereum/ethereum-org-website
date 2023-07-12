@@ -102,6 +102,11 @@ Last, when deciding on whether to include a library, consider its overall usage.
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**thirdweb Solidity SDK -** **_Provides the tools needed to build custom smart contracts efficiently_**
+
+- [Documentation](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## Related tutorials {#related-tutorials}
 
 - [Security considerations for Ethereum developers](/developers/docs/smart-contracts/security/) _– A tutorial on security considerations when building smart contracts, including library usage._
