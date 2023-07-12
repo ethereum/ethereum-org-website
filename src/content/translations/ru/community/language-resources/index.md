@@ -96,15 +96,19 @@ lang: ru
 - [Microsoft Learn (смарт-контракты)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) — узнайте, как писать умные контракты с использованием Solidity
 - [Microsoft Learn (децентрализованные приложения)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) — создание пользовательского интерфейса с децентрализованными приложениями
 
+### Русский {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) — образовательное пространство для разработчиков Web3
+
 ### Испанский {#es}
 
-- [Ethereum Madrid](https://ethereummadrid.com/) — курсы, мероприятия и блог по блокчейну, децентрализованным финансам (DeFi) и управлению
+- [Ethereum Madrid](https://ethereummadrid.com/) — курсы, мероприятия и блог по блокчейну, децентрализованным финансам (DeFi) и управлению
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) — руководство по Ethereum для начинающих на испанском языке
 - [Tutoriales online](https://tutoriales.online/curso/solidity) — изучите Solidity и программирование на Ethereum
-- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) — основы Solidity, тестирование и развертывание вашего первого умного контракта
-- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) — понимание распространенных уязвимостей и проблем безопасности в реальных умных контрактах
-- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) — узнайте, как умные контракты с децентрализованными финансами (DeFi) работают в Solidity, и создайте собственного автоматизированного маркет-мейкера
-- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) — нетехнические учебные материалы по блокчейну, от начинающих до продвинутых. Узнайте все о криптовалютах и Ethereum.
+- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) — основы Solidity, тестирование и развертывание вашего первого смарт-контракта
+- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) — понимание распространенных уязвимостей и проблем безопасности в реальных смарт-контрактах
+- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) — узнайте, как смарт-контракты с децентрализованными финансами (DeFi) работают в Solidity, и создайте собственного автоматизированного маркет-мейкера
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) — нетехнические учебные материалы по блокчейну для разных уровней — от начального до продвинутого. Узнайте все о криптовалютах и Ethereum.
 
 ### Турецкий {#tr}
 
@@ -113,7 +117,7 @@ lang: ru
 
 ### Вьетнамский {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) — обзор Ethereum, децентрализованных приложений, кошельков, а также часто задаваемых вопросов
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) — обзор Ethereum, децентрализованных приложений и кошельков, а также часто задаваемые вопросы
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) — веб-платформа, на которой есть образовательные и новостные подстраницы по Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) — криптовалютный портал с новостями и образовательным контентом по Ethereum
 
@@ -122,5 +126,5 @@ lang: ru
 - [Японская ассоциация обмена виртуальными и криптовалютными активами](https://jvcea.or.jp/)
 - [Японская бизнес-ассоциация криптовалютных активов](https://cryptocurrency-association.org/)
 - [Начало блокчейн-разработки — обучение | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) — данный учебный материал знакомит вас с блокчейном и разработкой на платформе Ethereum
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) — Mastering Ethereum на японском языке
-- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) — практическая разработка умных контрактов с Solidity и Ethereum на японском языке
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) — «Освоение Ethereum» (на японском языке)
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) — практическая разработка смарт-контрактов с Solidity и Ethereum (на японском языке)

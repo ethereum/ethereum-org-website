@@ -44,10 +44,10 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 
 `eth_sendTransaction`と `eth_sendRawTransaction`はどちらも、トランザクションをイーサリアムのネットワークにブロードキャストし、将来のブロックに追加するためのイーサリアム API の関数です。 ただし、トランザクションの署名については、以下のような違いがあります：
 
-- [`eth_sendTransaction`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#eth-sendtransaction)は、 *未署名*のトランザクションを送信するために使用します。 つまり、送信先のノードがあなたの秘密鍵を管理し、チェーンに対してブロードキャストする前にトランザクションに署名する必要があります。 Alchemy はユーザーの秘密鍵を保持しないため、このメソッドはサポートしていません。
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)はすでに署名済みのトランザクションをブロードキャストするために使用されます。 これは最初に [`signTransaction(tx, private_key)`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#signtransaction)を使用し、 `eth_sendRawTransaction` に結果を渡すことを意味します。
+- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction)は、 *未署名*のトランザクションを送信するために使用します。 つまり、送信先のノードがあなたの秘密鍵を管理し、チェーンに対してブロードキャストする前にトランザクションに署名する必要があります。 Alchemy はユーザーの秘密鍵を保持しないため、このメソッドはサポートしていません。
+- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction)はすでに署名済みのトランザクションをブロードキャストするために使用されます。 これは最初に [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction)を使用し、 `eth_sendRawTransaction` に結果を渡すことを意味します。
 
-Web3 を使用する場合、 `eth_sendRawTransaction`は [web3.eth.sendSignedTransaction](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#sendsignedtransaction)の関数を呼び出すことでアクセスできます。
+Web3 を使用する場合、 `eth_sendRawTransaction`は [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction)の関数を呼び出すことでアクセスできます。
 
 このチュートリアルでは、これを使用します。
 

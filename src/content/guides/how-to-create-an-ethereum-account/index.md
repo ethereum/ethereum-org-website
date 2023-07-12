@@ -51,13 +51,14 @@ No. Each account has a unique Ethereum address and a secret key. The secret key 
 
 ### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
 
-No you cannot. Bitcoin and ether exist on two separate networks (i.e. different blockchains), each with their own bookkeeping models and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
+No, you cannot. Bitcoin and ether exist on two separate networks (i.e. different blockchains), each with their own bookkeeping models and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 
 You can use the same address on all EVM compatible blockchains. This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains, like Bitcoin, implement a completely separate set of network rules and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on which blockchains are supported.
 
 ### Is having my own wallet safer than keeping my funds on an exchange?
+
 
 Having your own wallet means you take responsibility for the security of your assets. There are unfortunately many examples of failed exchanges that lost their customers' money. Owning a wallet (with a recovery phrase) removes the risk associated with trusting some entity to hold your assets. However, you have to secure your own keys and avoid phishing scams, accidentally approving transactions or exposing keys, interacting with fake websites and other self-custody risks. The risks are different.
 

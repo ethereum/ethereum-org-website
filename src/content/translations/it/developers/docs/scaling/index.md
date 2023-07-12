@@ -2,6 +2,7 @@
 title: Scalabilità
 description: Introduzione alle diverse opzioni di scalabilità attualmente in fase di sviluppo da parte della community Ethereum.
 lang: it
+sidebarDepth: 3
 ---
 
 ## Panoramica della scalabilità {#scaling-overview}
@@ -20,27 +21,25 @@ Dovresti avere una buona conoscenza di tutti gli argomenti fondamentali. L'imple
 
 ## Scalabilità on-chain {#on-chain-scaling}
 
-Questo metodo di scalabilità richiede modifiche al protocollo Ethereum ([rete principale](/glossary/#mainnet) di livello 1). Al momento lo sharding costituisce il focus principale di questo metodo di scalabilità.
+La scalabilità on-chain richiede modifiche al protocollo Ethereum ([rete principale](/glossary/#mainnet) di livello 1). Per molto tempo si è pensato che lo sharding della blockchain avrebbe ridimensionato Ethereum. Questo avrebbe coinvolto la divisione della blockchain in pezzi discreti (shard), che sarebbero stati verificati da sottoinsiemi dei validatori. Tuttavia, il ridimensionamento dai rollup di livello 2 ha preso il controllo come la tecnica di ridimensionamento principale. Questa è supportata dall'aggiunta di una nuova e più economica forma di dati connessi ai blocchi di Ethereum, progettati specificamente per rendere i rollup economici per gli utenti.
 
 ### Sharding {#sharding}
 
-Sharding è il processo di suddivisione orizzontale di un database per distribuire il carico. In un contesto Ethereum, lo sharding ridurrà la congestione della rete e aumenterà le transazioni al secondo creando nuove catene, note come "shard". Questo alleggerirà anche il carico per ogni validatore, che non dovrà più elaborare la totalità di tutte le transazioni sulla rete.
-
-Scopri di più sullo [sharding](/roadmap/danksharding/).
+Lo sharding è il processo di frammentazione di un database. Sottoinsiemi di validatori sarebbero responsabili dei singoli shard invece di tenere traccia di tutta la rete Ethereum. Un tempo destinato a essere trasferito verso il proof-of-stake prima della Fusione, lo sharding è stato per molto tempo sulla [tabella di marcia](/roadmap/) di Ethereum. Tuttavia, il rapido sviluppo dei [rollup di livello 2](#layer-2-scaling) e l'invenzione del [Dansharding](/roadmap/danksharding) (aggiunta di blob di dati di rollup ai blocchi di Ethereum che possono essere verificati in modo molto efficiente dai validatori), ha portato la community di Ethereum a preferire il ridimensionamento incentrato sui rollup piuttosto che sullo sharding. Ciò aiuterà anche a mantenere più semplice la logica del consenso di Ethereum.
 
 ## Scalabilità off-chain {#off-chain-scaling}
 
-Le soluzioni off-chain sono implementate separatamente dalla rete principale di livello 1 - non richiedono alcuna modifica al protocollo Ethereum esistente. Alcune soluzioni, note come soluzioni di "livello 2", derivano la loro sicurezza direttamente dal consenso del livello 1 di Ethereum, come i [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/), i [rollup a conoscenza zero](/developers/docs/scaling/zk-rollups/) o i [canali di stato](/developers/docs/scaling/state-channels/). Altre soluzioni comportano la creazione di nuove catene in varie forme, che derivano la propria sicurezza separatamente dalla Rete principale, come le [catene secondarie](#sidechains), i [validium](#validium) o le [catene Plasma](#plasma). Queste soluzioni comunicano con la rete principale, ma derivano la loro sicurezza in modo diverso per raggiungere una serie di obiettivi.
+Le soluzioni off-chain sono implementate separatamente dalla Rete principale di livello 1, e non richiedono alcuna modifica al protocollo Ethereum esistente. Alcune soluzioni, note come soluzioni di "livello 2", derivano la loro sicurezza direttamente dal consenso del livello 1 di Ethereum, come i [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/), i [rollup a conoscenza zero](/developers/docs/scaling/zk-rollups/) o i [canali di stato](/developers/docs/scaling/state-channels/). Altre soluzioni comportano la creazione di nuove catene in varie forme, che derivano la propria sicurezza separatamente dalla Rete principale, come le [catene secondarie](#sidechains), i [validium](#validium) o le [catene Plasma](#plasma). Queste soluzioni comunicano con la Rete principale, ma derivano la loro sicurezza in modo diverso per raggiungere una serie di obiettivi.
 
 ### Scalabilità di livello 2 {#layer-2-scaling}
 
-Questa categoria di soluzioni off-chain trae la sua sicurezza dalla rete principale di Ethereum.
+Questa categoria di soluzioni off-chain deriva la sua sicurezza dalla Rete principale di Ethereum.
 
-Livello 2 è un termine collettivo per le soluzioni progettate per aiutare a ridimensionare la tua applicazione gestendo le transazioni al di fuori della rete principale di Ethereum (livello 1), sfruttando il robusto modello di sicurezza decentralizzato della Rete principale. La velocità delle transazioni ne risente quando la rete è molto carica, e l'esperienza utente può risultare poco piacevole per alcuni tipi di dApp. E, man mano che la rete si congestiona, i prezzi del gas aumentano mentre i mittenti delle transazioni mirano a superarsi a vicenda. Ciò può rendere l'utilizzo di Ethereum alquanto dispendioso.
+Livello 2 è un termine collettivo per le soluzioni progettate per aiutare a ridimensionare la tua applicazione gestendo le transazioni al di fuori della rete principale di Ethereum (livello 1), sfruttando il robusto modello di sicurezza decentralizzato della Rete principale. La velocità delle transazioni ne risente quando la rete è molto carica, e l'esperienza utente può risultare poco piacevole per alcuni tipi di dApp. E, man mano che la rete si congestiona, i prezzi del carburante aumentano mentre i mittenti delle transazioni mirano a superarsi a vicenda. Ciò può rendere l'utilizzo di Ethereum alquanto dispendioso.
 
-Gran parte delle soluzioni del Livello 2 sono incentrate su un server o un gruppo di server, ognuno dei quali potrebbe essere definito nodo, validatore, operatore, sequenziatore, produttore di blocchi o termini simili. In base all'implementazione, questi nodi di Livello 2 potrebbero essere eseguiti da singoli individui, aziende o entità che li usano, da un operatore di terze parti o da un grande gruppo di individui (in modo simile alla Rete principale). In generale, le transazioni sono inviate a questi nodi del Livello 2, anziché essere inviate direttamente al Livello 1 (Rete principale). Per alcune soluzioni, l'istanza del Livello 2 le riunisce poi in gruppi, prima di ancorarle al Livello 1, dopodiché sono protette dal Livello 1 e non sono alterabili. I dettagli di tale processo variano significativamente tra le diverse tecnologie e implementazioni del Livello 2.
+La maggior parte delle soluzioni di livello 2 è incentrata su un server o su un cluster di server, ognuno dei quali può essere denominato nodo, validatore, operatore, sequenziatore, produttore di blocchi o termini simili. A seconda dell'implementazione, questi nodi di livello 2 possono essere gestiti da persone, aziende o entità che li usano, da operatori terzi o da un grande gruppo di individui (in modo simile alla Rete principale). In linea generale, le transazioni vengono inviate a questi nodi di livello 2 anziché essere inviate direttamente al livello 1 (Rete principale). Per alcune soluzioni, l'istanza di livello 2 le riunisce in gruppi prima di collegarle al livello 1, a quel punto sono protette dal livello 1 e non possono essere alterate. I dettagli dell'esecuzione vera e propria variano notevolmente tra le varie tecnologie e implementazioni di livello 2.
 
-Un'istanza specifica del Livello 2 potrebbe essere aperta e condivisa da molte applicazioni o essere distribuita da un progetto e dedicata a supportare solo la propria applicazione.
+Un'istanza specifica di livello 2 può essere aperta e condivisa da molte applicazioni, oppure può essere implementata da un progetto e dedicata a sostenere solo quell'applicazione specifica.
 
 #### Perché il Livello 2 è necessario? {#why-is-layer-2-needed}
 
@@ -53,16 +52,16 @@ Un'istanza specifica del Livello 2 potrebbe essere aperta e condivisa da molte a
 
 #### Rollup {#rollups}
 
-I rollup provvedono all'esecuzione delle transazioni al di fuori del livello 1, dopodiché i dati vengono inviati al livello 1, dove viene raggiunto il consenso. Poiché i dati della transazione sono inclusi nei blocchi del livello 1, ciò consente ai rollup di essere protetti dalla sicurezza nativa di Ethereum.
+I rollup eseguono le transazioni al di fuori del livello 1, dopodiché i dati vengono pubblicati al livello 1, dove viene raggiunto il consenso. Poiché i dati della transazione sono inclusi nei blocchi del livello 1, ciò consente ai rollup di essere protetti dalla sicurezza nativa di Ethereum.
 
-Ci sono due tipi di rollup con diversi modelli di sicurezza:
+Esistono due tipi di rollup con diversi modelli di sicurezza:
 
 - **Rollup ottimistici**: presumono che le transazioni siano valide di default ed eseguono solo il calcolo, tramite una [**prova di frode**](/glossary/#fraud-proof), nel caso di una contestazione. [Maggiori informazioni sui rollup ottimistici](/developers/docs/scaling/optimistic-rollups/).
 - **Rollup a conoscenza zero**: esegue il calcolo al di fuori della catena e invia una [**prova di validità**](/glossary/#validity-proof) alla catena. [Maggiori informazioni sui rollup a conoscenza zero](/developers/docs/scaling/zk-rollups/).
 
 #### Canali di stato {#channels}
 
-I canali di stato utilizzano contratti multisig per consentire ai partecipanti di effettuare transazioni rapidamente e liberamente al di fuori della catena, regolando la finalità con la Rete principale. In questo modo si riducono al minimo la congestione, le commissioni e i ritardi sulla rete. Al momento esistono due tipi di canali: canali di stato e canali di pagamento.
+I canali di stato utilizzano contratti multifirma per consentire ai partecipanti di effettuare transazioni rapidamente e liberamente al di fuori della catena, regolando la finalità con la Rete principale. In questo modo si riducono al minimo la congestione, le commissioni e i ritardi sulla rete. Al momento esistono due tipi di canali: canali di stato e canali di pagamento.
 
 Maggiori informazioni sui [canali di stato](/developers/docs/scaling/state-channels/).
 
@@ -95,7 +94,7 @@ Scopri di più su [Validium](/developers/docs/scaling/validium/).
 
 <YouTube id="BgCgauWVTs0" />
 
-_Nota che la spiegazione nel video usa il termine "Livello 2" per fare riferimento a tutte le soluzioni di ridimensionamento off-chain, mentre noi distinguiamo il "Livello 2" come soluzione off-chain, la sua sicurezza deriva dal consenso di livello 1 (Rete principale)._
+_Si noti che la spiegazione nel video usa il termine "Livello 2" per fare riferimento a tutte le soluzioni di ridimensionamento off-chain, mentre noi distinguiamo il "Livello 2" come soluzione off-chain che deriva la sua sicurezza dal consenso di livello 1 (Rete principale)._
 
 <YouTube id="7pWxCklcNsU" />
 
@@ -109,5 +108,6 @@ _Nota che la spiegazione nel video usa il termine "Livello 2" per fare riferimen
 - [Rollup ottimistici vs Rollup ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Scalabilità della blockchain a conoscenza zero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Perché i rollup e i frammenti di dati sono la sola soluzione sostenibile per un'elevata scalabilità](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [Che tipo di Livelli 3 hanno senso?](https://vitalik.ca/general/2022/09/17/layer_3.html)
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
