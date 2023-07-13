@@ -10294,6 +10294,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "Keecointoken",
+      "name": "KeeCoin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99338330?v=4",
+      "profile": "https://www.keecoin.io",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

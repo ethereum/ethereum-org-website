@@ -1612,6 +1612,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/sahitya-roy-244b941a2/"><img src="https://avatars.githubusercontent.com/u/72821604?v=4?s=100" width="100px;" alt="Sahitya Roy"/><br /><sub><b>Sahitya Roy</b></sub></a><br /><a href="#ideas-SahityaRoy" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.keecoin.io"><img src="https://avatars.githubusercontent.com/u/99338330?v=4?s=100" width="100px;" alt="KeeCoin"/><br /><sub><b>KeeCoin</b></sub></a><br /><a href="#ideas-Keecointoken" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
