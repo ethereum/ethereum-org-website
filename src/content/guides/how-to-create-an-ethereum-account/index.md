@@ -6,7 +6,7 @@ lang: en
 
 # How to create an Ethereum account
 
-Anyone can create an Ethereum account at any time, for free. There are several ways, but the easiest and most common way is to use an app known as a wallet. Wallets create and secure the keys that enable you to use Ethereum. You can use your wallet to send transactions, check your token balances and connect to apps built on Ethereum. Some "web2" apps now allow you to sign in with Ethereum too.
+Anyone can create an Ethereum account at any time, for free. There are several ways, but the easiest and most common way is to use an app known as a wallet. Wallets create and secure the keys that enable you to use Ethereum. You can use your wallet to send transactions, check your token balances and connect to apps built on Ethereum, such as token exchanges, games, NFT marketplaces and more. Some "web2" apps now allow you to sign in with Ethereum too.
 
 Unlike opening a new account with a company, creating an Ethereum account is done freely, privately and without requiring permission. Accounts are controlled by keys that your wallet software helps you create, and are not issued by a third party, nor stored in a central registry.
 
