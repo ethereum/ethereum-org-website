@@ -696,6 +696,13 @@ const DappsPage = ({
       image: getImage(data.loopring),
       alt: t("page-dapps-loopring-logo-alt"),
     },
+    {
+      title: "Synthetix",
+      description: t("page-dapps-dapp-description-synthetix"),
+      link: "https://synthetix.io/",
+      image: getImage(data.synthetix),
+      alt: t("page-dapps-sythetix-logo-alt"),
+    },
   ]
 
   const lottery = [
@@ -1800,6 +1807,9 @@ export const query = graphql`
       ...dappImage
     }
     dexguru: file(relativePath: { eq: "dapps/dexguru.png" }) {
+      ...dappImage
+    }
+    synthetix: file(relativePath: { eq: "dapps/synthetix.png" }) {
       ...dappImage
     }
   }
