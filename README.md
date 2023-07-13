@@ -1610,6 +1610,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vaibhavtevatia"><img src="https://avatars.githubusercontent.com/u/86671961?v=4?s=100" width="100px;" alt="Vaibhav Tevatia"/><br /><sub><b>Vaibhav Tevatia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vaibhavtevatia" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cnn-rnn"><img src="https://avatars.githubusercontent.com/u/44789658?v=4?s=100" width="100px;" alt="cnn-rnn"/><br /><sub><b>cnn-rnn</b></sub></a><br /><a href="#ideas-cnn-rnn" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/sahitya-roy-244b941a2/"><img src="https://avatars.githubusercontent.com/u/72821604?v=4?s=100" width="100px;" alt="Sahitya Roy"/><br /><sub><b>Sahitya Roy</b></sub></a><br /><a href="#ideas-SahityaRoy" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
   </tbody>
 </table>
 
