@@ -24,6 +24,20 @@
     "publishDate": "04/06/2023"
   },
   {
+    "url": "https://patrickalphac.medium.com/formal-verification-symbolic-execution-the-security-silver-bullet-38e0ac9072eb",
+    "title": "Formal Verification & Symbolic Execution",
+    "description": "We look at formal verification & symbolic execution with two Trail of Bits Web3 security team members. Additionally, we review the value these techniques bring and compare them to other tools.",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "security"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "10",
+    "lang": "en",
+    "publishDate": "04/25/2023"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=veBu03A6ptw",
     "title": "How to develop an NFT Smart Contract (ERC721) with Alchemy",
     "description": "A tutorial showing how to develop your first NFT smart contract quickly using OpenZeppelin, Remix, Alchemy, and Opensea. The first lesson of Road to Web3, a series of community-focused weekly Web3 development projects!",

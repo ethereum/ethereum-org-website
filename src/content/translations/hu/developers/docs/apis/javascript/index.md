@@ -230,14 +230,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Web3js használati függvények](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Web3js használati függvények](https://docs.web3js.org/api/web3-utils)
 - [Ethers használati függvények](https://docs.ethers.io/v5/api/utils/)
 
 ## Elérhető könyvtárak {#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
-- [Dokumentáció](https://web3js.readthedocs.io/en/1.0/)
+- [Dokumentáció](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_Teljes Ethereum tárca implementáció és segédprogramok JavaScript-ben és TypeScript-ben._**

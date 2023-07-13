@@ -6,7 +6,7 @@ lang: zh
 
 # 如何兑换代币
 
-疲于搜索一个上架所有你喜欢的代币的交易所？ 在去中心化交易所，你就可以兑换大多数的代币。
+是否厌倦了寻找一个上架了所有你喜欢的代币的交易所？ 在去中心化交易所，你就可以兑换大多数的代币。
 
 代币兑换是指在以太坊网络上交换两种不同的资产，例如用以太币去兑换 DAI 稳定币（一种 ERC-20 代币）。 兑换过程非常快，也很便宜。 要进行代币兑换，你需要有一个加密货币钱包。
 
@@ -23,6 +23,8 @@ lang: zh
 - [SushiSwap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
+
+如果想详细了解什么是去中心化金融以及这些新型交易所如何运作，我们建议你访问 [Kernel Library](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi)。
 
 ## 2. 选择你想兑换的代币交易对
 

@@ -339,6 +339,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unlimited TX fee and infinite Gas for sending transactions
     - Fastest getting of the new block and reading of the blockchain
     - The best price per API call guarantee
+      
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Docs](https://docs.chainbase.com)
+  - Features
+    - Highly available, fast, and scalable RPC service
+    - Multi-chain support
+    - Free tariffs
+    - User-friendly dashboard
+    - Provides blockchain data services beyond RPC
 
 [**Zeeve**](https://www.zeeve.io/)
 

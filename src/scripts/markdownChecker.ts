@@ -74,7 +74,10 @@ function getAllMarkdownPaths(
   return arrayOfMarkdownPaths
 }
 
-function sortMarkdownPathsIntoLanguages(paths: Array<string>): Languages {
+function sortMarkdownPathsIntoLanguages(
+  paths: Array<string>,
+  excludeDefaultLang: boolean = false
+): Languages {
   const languages: Languages = langsArray.reduce((accumulator, value) => {
     return { ...accumulator, [value]: [] }
   }, {})
@@ -90,14 +93,26 @@ function sortMarkdownPathsIntoLanguages(paths: Array<string>): Languages {
     const lang = isTranslation && match && match.length > 1 ? match[1] : "en"
 
     if (LANG_ARG) {
-      if (LANG_ARG === lang) {
+      if (LANG_ARG === lang && (lang !== "en" || !excludeDefaultLang)) {
         languages[lang].push(path)
       }
     } else {
-      languages[lang].push(path)
+      if (lang !== "en" || !excludeDefaultLang) {
+        languages[lang].push(path)
+      }
     }
   }
 
+  return languages
+}
+
+export async function getTranslatedMarkdownPaths() {
+  const markdownPaths: Array<string> = getAllMarkdownPaths(PATH_TO_ALL_CONTENT)
+  const excludeDefaultLang = true
+  const languages = sortMarkdownPathsIntoLanguages(
+    markdownPaths,
+    excludeDefaultLang
+  )
   return languages
 }
 
