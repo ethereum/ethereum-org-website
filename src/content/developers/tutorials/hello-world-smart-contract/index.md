@@ -16,7 +16,7 @@ If you are new to blockchain development and don’t know where to start, or if 
 > 
 > For the entirety of this guide, the Goerli test network is being used for creating and deploying a smart contract. However, please note that the Ethereum Foundation has announced that [Goerli will soon be deprecated](https://www.alchemy.com/blog/goerli-faucet-deprecation).
 > 
-> We therefore recommend you to use the [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) testnet as Alchemy has full Sepolia support and a free [Sepolia faucet](https://sepoliafaucet.com/) also.
+> We recommend you to use the [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) and [Sepolia faucet](https://sepoliafaucet.com/) for this tutorial.
 
 In [part 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) of this tutorial we’ll go through how we can interact with our smart contract once it’s deployed here, and in [part 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) we’ll cover how to publish it on Etherscan.
 
