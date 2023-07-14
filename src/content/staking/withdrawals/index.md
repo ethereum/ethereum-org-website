@@ -148,7 +148,7 @@ As an alternative to changing the withdrawal address for a particular validator,
 </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in  staking tokens or pooled staking"
+title="What if I participate in staking tokens or pooled staking"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
