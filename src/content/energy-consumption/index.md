@@ -14,13 +14,12 @@ To contextualize Ethereum's energy consumption, we can compare annualized estima
 
 <EnergyConsumptionChart />
 
-The chart above displays the estimated energy consumption in TWh/yr for Ethereum, compared to several other products and industries. The estimates provided are sourced from publicly available information, accessed in June 2023, with links to the sources available in the table below.
+The chart above displays the estimated energy consumption in TWh/yr for Ethereum, compared to several other products and industries. The estimates provided are sourced from publicly available information, accessed in July 2023, with links to the sources available in the table below.
 
 |                     | Annualized energy consumption (TWh) | Comparison to PoS Ethereum |                                                                                      Source                                                                                       |
 | :------------------ | :---------------------------------: | :------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Banking system      |                 239                 |          92,000x           |                                                                [source](https://docsend.com/view/adwmdeeyfvqwecj2)                                                                |
 | Global data centers |                 190                 |          73,000x           |                                    [source](https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches)                                    |
-| Bitcoin             |                 139                 |          53,000x           |                                                                 [source](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
+| Bitcoin             |                 149                 |          53,000x           |                                                                 [source](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
 | Gold mining         |                 131                 |          50,000x           |                                                                 [source](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
 | Gaming in USA\*     |                 34                  |          13,000x           |                 [source](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
 | PoW Ethereum        |                 21                  |           8,100x           |                                                                    [source](https://ccaf.io/cbnsi/ethereum/1)                                                                     |

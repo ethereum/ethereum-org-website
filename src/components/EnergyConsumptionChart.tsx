@@ -49,18 +49,13 @@ const EnergyConsumptionChart: React.FC = () => {
 
   const data = [
     {
-      name: "Banking system",
-      amount: 239,
-      color: "#C1B6F5",
-    },
-    {
       name: "Global data centers",
       amount: 190,
       color: "#C1B6F5",
     },
     {
       name: "Bitcoin",
-      amount: 139,
+      amount: 149,
       color: "#C1B6F5",
     },
     {
