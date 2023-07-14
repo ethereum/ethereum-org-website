@@ -124,6 +124,7 @@ The `execution_payload` itself contains the following (notice this is identical 
 | `withdrawals`      | list of withdrawal objects                                          |
 
 The `withdrawals` list contains `withdrawal` objects structured in the following way:
+
 | Field              | Description                                                         |
 | :----------------- | :------------------------------------------------------------------ |
 | `address`          | account address that has withdrawn                                  |
