@@ -14,9 +14,9 @@ Una blockchain si può descrivere come un database pubblico che viene aggiornato
 
 Ogni computer nella rete deve acconsentire a ogni nuovo blocco e alla catena nel complesso. Questi computer sono noti come "nodi". I nodi assicurano che tutti coloro che interagiscono con la blockchain dispongono degli stessi dati. Per compiere questo accordo distribuito, le blockchain necessitano di un meccanismo di consenso.
 
-Ethereum usa un [meccanismo di consenso basato sul Proof of Stake](/developers/docs/consensus-mechanisms/pos/). Chiunque voglia aggiungere nuovi blocchi alla catena deve mettere almeno 32 ETH in staking nel contratto di deposito ed eseguire il software del validatore. Può essere selezionato casualmente per proporre i blocchi che gli altri validatori verificano e aggiungono alla blockchain. In questo modello, solitamente c'è solo una catena, ma la latenza di rete e i comportamenti disonesti possono causare l'esistenza di diversi blocchi alla stessa posizione vicino alla testa della catena. Per risolvere questo problema, un algoritmo di scelta della diramazione seleziona una serie canonica di blocchi. I blocchi selezionati sono quelli che formano la catena più pesante possibile, dove 'pesante' si riferisce al numero di validatori che hanno convalidato i blocchi (ponderati per gli ETH che hanno in staking). Esiste un sistema di ricompense e sanzioni che incentiva fortemente i partecipanti a essere onesti e online il più possibile.
+Ethereum usa un [meccanismo di consenso basato sul Proof of Stake](/developers/docs/consensus-mechanisms/pos/). Chiunque voglia aggiungere nuovi blocchi alla catena deve mettere ETH – la valuta nativa di Ethereum – in staking a titolo di garanzia ed eseguire il software del validatore. Questi "validatori" possono quindi essere selezionati casualmente per proporre i blocchi che gli altri validatori verificano e aggiungono alla blockchain. Esiste un sistema di ricompense e sanzioni che incentiva fortemente i partecipanti a essere onesti e il più possibile disponibili online.
 
-Se vuoi vedere come i dati degli hash della blockchain e il blocco precedente si riferiscono tutti ai blocchi passati, dai un'occhiata a [questa demo](https://andersbrownworth.com/blockchain/blockchain) di Anders Brownworth e guarda il video d'accompagnamento riportato sotto.
+Se desideri vedere come avviene l'hashing dei dati della blockchain e la loro successiva aggiunta alla storia dei riferimenti dei blocchi, assicurati di consultare [questa demo](https://andersbrownworth.com/blockchain/blockchain) di Anders Brownworth e di guardare il video d'accompagnamento seguente.
 
 Guarda Anders che spiega gli hash nelle blockchain:
 
@@ -107,7 +107,7 @@ Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica n
 ## Letture consigliate {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)
-- [How does Ethereum work, anyway?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_
+- [How does Ethereum work, anyway?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** questa risorsa è ancora preziosa ma tieni presente che è antecedente a [La Fusione](/roadmap/merge) e quindi si riferisce ancora al meccanismo proof-of-work di Ethereum: attualmente Ethereum è protetta da un meccanismo [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
 

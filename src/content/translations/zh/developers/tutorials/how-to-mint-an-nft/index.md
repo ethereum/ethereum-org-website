@@ -117,7 +117,7 @@ node scripts/mint-nft.js
 
 在上面的示例中，我们的合约地址是 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778。
 
-接下来我们将使用 Web3 的[合约方法](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract)，创建使用应用程序二进制接口和地址的合约。 在你的 `mint-nft.js` 文件中，添加以下内容:
+接下来我们将使用 Web3 的[合约方法](https://docs.web3js.org/api/web3-eth-contract/class/Contract)，创建使用应用程序二进制接口和地址的合约。 在你的 `mint-nft.js` 文件中，添加以下内容:
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef778"

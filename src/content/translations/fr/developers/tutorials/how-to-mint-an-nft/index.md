@@ -117,7 +117,7 @@ Une fois que vous avez fini de modifier le fichier JSON, enregistrez les modific
 
 Dans l'exemple ci-dessus, notre adresse de contrat est 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
-Ensuite, nous utiliserons la [méthode pour contrat](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) Web3 pour créer notre contrat en utilisant l'ABI et l'adresse. Ajoutez ce qui suit dans votre fichier `mint-nft.js` :
+Ensuite, nous utiliserons la [méthode pour contrat](https://docs.web3js.org/api/web3-eth-contract/class/Contract) Web3 pour créer notre contrat en utilisant l'ABI et l'adresse. Ajoutez ce qui suit dans votre fichier `mint-nft.js` :
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"

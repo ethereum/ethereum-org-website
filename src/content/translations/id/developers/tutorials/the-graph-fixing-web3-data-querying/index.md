@@ -52,7 +52,7 @@ Now let's say in our Dapp, we want to display total bets, the total games lost/w
 2. Ambilkan `totalGamesPlayerLost`.
 3. Berlangganan dengan aksi `BetPlaced`.
 
-Kita bisa mendengarkan [aksi di Web3](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#contract-events) seperti yang ditunjukkan di sebelah kanan, tapi ini memerlukan beberapa kasus.
+Kita bisa mendengarkan [aksi di Web3](https://docs.web3js.org/api/web3/class/Contract#events) seperti yang ditunjukkan di sebelah kanan, tapi ini memerlukan beberapa kasus.
 
 ```solidity
 GameContract.events.BetPlaced({

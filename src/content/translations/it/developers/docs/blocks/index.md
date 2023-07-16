@@ -22,7 +22,7 @@ Scaglionando gli invii, diamo a tutti i partecipanti della rete abbastanza tempo
 
 Per preservare la cronologia delle transazioni, i blocchi sono ordinati in modo rigoroso (ogni nuovo blocco che viene creato contiene un riferimento al blocco padre) e anche le transazioni all'interno del blocco sono ordinate altrettanto rigorosamente. A parte in rari casi, in ogni momento, tutti i partecipanti della rete concordano sul numero e sulla cronologia esatta dei blocchi e lavorano per raggruppare le richieste di transazione live nel blocco successivo.
 
-Dopo essere stato realizzato da alcuni validatori della rete, un blocco viene propagato al resto della rete; tutti i nodi vengono aggiunti al blocco alla fine della relativa blockchain e un nuovo validatore viene selezionato per creare il successivo. Il processo esatto di costruzione dei blocchi e il processo di invio/consenso è attualmente specificato nel protocollo "Proof of Stake" di Ethereum.
+Dopo essere stato realizzato da un validatore della rete selezionato casualmente, un blocco viene propagato al resto della rete; tutti i nodi vengono aggiunti al blocco alla fine della relativa blockchain e un nuovo validatore viene selezionato per creare il successivo. Il processo esatto di costruzione dei blocchi e il processo di invio/consenso è attualmente specificato nel protocollo "Proof of Stake" di Ethereum.
 
 ## Protocollo Proof of Stake {#proof-of-work-protocol}
 
@@ -39,98 +39,100 @@ Proof of Stake significa quanto segue:
 
 In un blocco sono contenute molte informazioni. Al livello più alto, un blocco contiene i seguenti campi:
 
-```
-slot: lo slot a cui appartiene il blocco
-proposer_index: l'ID del validatore che ha proposto il blocco
-parent_root: l'hash del blocco precedente
-state_root: l'hash radice dell'oggetto di stato
-body: un oggetto contenente diversi campi, come definito di seguito
-```
+| Campo               | Descrizione                                               |
+| :------------------ | :-------------------------------------------------------- |
+| `slot`              | lo slot a cui appartiene il blocco                        |
+| `indice_proponente` | l'ID del validatore che propone il blocco                 |
+| `parent_root`       | l'hash del blocco precedente                              |
+| `state_root`        | l'hash radice dell'oggetto di stato                       |
+| `corpo`             | un oggetto contenente più campi, come definito di seguito |
 
 Il blocco `body` contiene a sua volta diversi campi:
 
-```
-randao_reveal: un valore usato per selezionare il prossimo propositore del blocco
-eth1_data: informazioni sul contratto di deposito
-graffiti: dati arbitrari usati per etichettare i blocchi
-proposer_slashings: elenco di validatori da sottoporre a slashing
-attester_slashings: elenco di validatori da sottoporre a slashing
-attestations: elenco di attestazioni in favore del blocco corrente
-deposits: elenco di nuovi depositi al contratto di deposito
-voluntary_exits: elenco di validatori in uscita dalla rete
-sync_aggregate: sottoinsieme di validatori usati per servire i client leggeri
-execution_payload: transazioni passate dal client di esecuzione
-```
+| Campo                | Descrizione                                                            |
+| :------------------- | :--------------------------------------------------------------------- |
+| `randao_reveal`      | un valore utilizzato per selezionare il prossimo proponente di blocchi |
+| `et1_data`           | informazioni sul contratto di deposito                                 |
+| `graffiti`           | dati arbitrari utilizzati per contrassegnare blocchi                   |
+| `proposer_slashings` | elenco di validatori da tagliare                                       |
+| `taglio_attestatori` | elenco di validatori da tagliare                                       |
+| `attestazioni`       | elenco di attestazioni a favore del blocco corrente                    |
+| `depositi`           | elenco dei nuovi depositi nel contratto di deposito                    |
+| `uscite_volontarie`  | elenco di validatori che escono dalla rete                             |
+| `sync_aggregate`     | sottoinsieme di validatori, utilizzato per servire i client leggeri    |
+| `execution_payload`  | transazioni passate dal client di esecuzione                           |
 
 Il campo `attestations` contiene un elenco di tutte le attestazioni nel blocco. Le attestazioni hanno il proprio tipo di dati, contenente diversi pezzi di dati. Ogni attestazione contiene:
 
-```
-aggregation_bits: un elenco di quali validatori hanno partecipato all'attestazione
-data: un contenitore con diversi campi secondari
-signature: la firma aggregata di tutti i validatori attestanti
-```
+| Campo              | Descrizione                                                          |
+| :----------------- | :------------------------------------------------------------------- |
+| `aggregation_bits` | un elenco dei validatori che hanno partecipato a questa attestazione |
+| `dati`             | un contenitore con diversi campi secondari                           |
+| `firma`            | firma aggregata di tutti i validatori attestanti                     |
 
 Il campo `data` nell'`attestation` contiene quanto segue:
 
-```
-slot: lo slot cui si correla l'attestazione
-index: indici per i validatori attestanti
-beacon_block_root: l'hash radice del blocco Beacon contenente questo oggetto
-source: l'ultimo punto di controllo giustificato
-target: il blocco di confine dell'ultima epoca
-```
+| Campo               | Descrizione                                               |
+| :------------------ | :-------------------------------------------------------- |
+| `slot`              | lo slot cui si riferisce l'attestazione                   |
+| `indice`            | indici per l'attestazione dei validatori                  |
+| `beacon_block_root` | l'hash radice del blocco Beacon contenente questo oggetto |
+| `fonte`             | l'ultimo punto di controllo giustificato                  |
+| `obiettivo`         | il blocco di confine dell'ultima epoca                    |
 
 L'esecuzione delle transazioni nell'`execution_payload` aggiorna lo stato globale. Tutti i client ri-eseguono le transazioni nell'`execution_payload` per assicurare che il nuovo stato corrisponda a quello nel campo `state_root` del nuovo blocco. Così, i client, possono dire che un nuovo blocco è valido e sicuro da aggiungere alla loro blockchain. L'`execution payload` stesso è un oggetto composto da diversi campi. Inoltre, esiste un `execution_payload_header`, contenente importanti informazioni sommarie sui dati di esecuzione. Queste strutture di dati sono organizzate come segue:
 
 L'`execution_payload_header` contiene i seguenti campi:
 
-```
-parent_hash: hash del blocco padre
-fee_recipient: indirizzo del conto a cui pagare le commissioni sulla transazione
-state_root: hash radice per lo stato globale dopo l'applicazione delle modifiche in questo blocco
-receipts_root: hash del trie delle ricevute delle transazioni
-logs_bloom: struttura di dati contenente i registri dell'evento
-prev_randao: valore usato nella selezione casuale del validatore
-block_number: il numero del blocco corrente
-gas_limit: il carburante massimo consentito in questo blocco
-gas_used: la quantità effettiva di carburante usata in questo blocco
-timestamp: il tempo di blocco
-extra_data: dati aggiuntivi arbitrari come byte grezzi
-base_fee_per_gas: il valore della commissione di base
-block_hash: hash del blocco di esecuzione
-transactions_root: hash radice delle transazioni nel payload
-```
+| Campo               | Descrizione                                                                           |
+| :------------------ | :------------------------------------------------------------------------------------ |
+| `parent_hash`       | hash del blocco padre                                                                 |
+| `fee_recipient`     | indirizzo del conto a cui pagare le commissioni sulla transazione                     |
+| `state_root`        | hash radice per lo stato globale dopo l'applicazione delle modifiche in questo blocco |
+| `receipts_root`     | hash del trie delle ricevute delle transazioni                                        |
+| `logs_bloom`        | struttura di dati contenente i registri dell'evento                                   |
+| `prev_randao`       | valore usato nella selezione casuale del validatore                                   |
+| `numero_blocco`     | numero del blocco corrente                                                            |
+| `limite_gas`        | carburante massimo consentito in questo blocco                                        |
+| `gas_utilizzato`    | quantità effettiva di carburante usata in questo blocco                               |
+| `marca oraria`      | tempo di blocco                                                                       |
+| `dati_extra`        | dati aggiuntivi arbitrari come byte grezzi                                            |
+| `fee_base_per_gas`  | il valore base della commissione                                                      |
+| `hash_del_blocco`   | Hash del blocco di esecuzione                                                         |
+| `transactions_root` | hash radice delle transazioni nel payload                                             |
 
 Lo stesso `execution_payload` contiene quanto segue (si noti che è identico all'intestazione, tranne per il fatto che, invece dell'hash radice delle transazioni, include l'elenco effettivo delle transazioni):
 
-```
-parent_hash: hash del blocco padre
-fee_recipient: indirizzo del conto a cui pagare le commissioni sulla transazione
-state_root: hash radice per lo stato globale dopo l'applicazione delle modifiche in questo blocco
-receipts_root: hash del trie delle ricevute delle transazioni
-logs_bloom: struttura di dati contenente i registri dell'evento
-prev_randao: valore usato nella selezione casuale del validatore
-block_number: il numero del blocco corrente
-gas_limit: il carburante massimo consentito in questo blocco
-gas_used: la quantità effettiva di carburante usata in questo blocco
-timestamp: il tempo di blocco
-extra_data: dati aggiuntivi arbitrari come byte grezzi
-base_fee_per_gas: il valore della commissione di base
-block_hash: hash del blocco di esecuzione
-transactions: elenco delle transazioni da eseguire
-```
+| Campo              | Descrizione                                                                         |
+| :----------------- | :---------------------------------------------------------------------------------- |
+| `parent_hash`      | hash del blocco genitore                                                            |
+| `fee_recipient`    | indirizzo del conto a cui pagare le commissioni di transazione                      |
+| `stato_del_root`   | hash radice per lo stato globale, dopo l'applicazione di modifiche in questo blocco |
+| `receipts_root`    | hash dell'albero delle ricevute di transazione                                      |
+| `logs_bloom`       | struttura dei dati contenente registri di eventi                                    |
+| `prev_randao`      | valore usato in una selezione casuale del validatore                                |
+| `numero_blocco`    | numero del blocco corrente                                                          |
+| `limite_gas`       | gas massimo allocato in questo blocco                                               |
+| `gas_utilizzato`   | l'attuale ammontare di gas utilizzato in questo blocco                              |
+| `marca oraria`     | tempo del blocco                                                                    |
+| `dati_extra`       | dati arbitrari aggiuntivi, in byte grezzi                                           |
+| `fee_base_per_gas` | il valore base della commissione                                                    |
+| `hash_del_blocco`  | Hash dell'esecuzione del blocco                                                     |
+| `transazioni`      | elenco delle transazioni da eseguire                                                |
 
 ## Tempo di blocco {#block-time}
 
-Il tempo di blocco si riferisce al tempo che separa i blocchi. In Ethereum, il tempo è diviso in unità da dodici secondi, dette 'slot'. In ogni slot viene selezionato un singolo validatore per proporre un blocco. Supponendo che tutti i validatori siano online e totalmente operativi, ci sarà un blocco in ogni slot, a significare che il tempo del blocco è 12 secondi. Tuttavia, occasionalmente, i validatori potrebbero essere offline quando chiamati a proporre un blocco, a significare che talvolta gli slot possono rimanere vuoti. Questo differisce dai sistemi basati sul Proof of Work, in cui i tempi di blocco sono probabilistici e regolati dalla difficoltà di mining.
+Il tempo di blocco si riferisce al tempo che separa i blocchi. In Ethereum, il tempo è diviso in unità da dodici secondi, dette 'slot'. In ogni slot viene selezionato un singolo validatore per proporre un blocco. Supponendo che tutti i validatori siano online e totalmente operativi, ci sarà un blocco in ogni slot, a significare che il tempo del blocco è 12 secondi. Tuttavia, occasionalmente, i validatori potrebbero essere offline quando chiamati a proporre un blocco, a significare che talvolta gli slot possono rimanere vuoti.
+
+Questa implementazione differisce dai sistemi basati sul proof-of-work, in cui i tempi di blocco sono probabilistici e regolati dalla difficoltà di estrazione del target del protocollo. Ne è un esempio perfetto il [tempo medio di blocco](https://etherscan.io/chart/blocktime) di Ethereum, in cui la transazione da proof-of-work a a proof-of-stake è facilmente deducibile in base alla consistenza del nuovo tempo di blocco da 12 secondi.
 
 ## Dimensioni del blocco {#block-size}
 
-Un'ultima nota importante: i blocchi stessi sono limitati in termini di dimensioni. Ogni blocco ha una dimensione prevista di 15 milioni di gas, ma la dimensione dei blocchi aumenterà o diminuirà a seconda della domanda della rete, fino al limite del blocco di 30 milioni di gas (2 volte la dimensione prevista del blocco). L'importo totale di gas consumato da tutte le transazioni nel blocco dev'essere inferiore al limite di gas del blocco. Ciò è importante perché evita che i blocchi siano arbitrariamente grandi. Se i blocchi potessero essere arbitrariamente grandi, i nodi completi meno performanti, gradualmente, non riuscirebbero più stare al passo con la rete per via dei requisiti di spazio e velocità. Più grande è il blocco, maggiore sarà la potenza di calcolo richiesta per elaborarlo in tempo per il prossimo slot. Questa è una forza centralizzante, a cui si resiste limitando le dimensioni dei blocchi.
+Un'ultima nota importante: i blocchi stessi sono limitati in termini di dimensioni. Ogni blocco ha una dimensione prevista di 15 milioni di carburante, ma la dimensione dei blocchi aumenta o diminuisce in base alla domanda della rete, fino al limite massimo di 30 milioni di carburante del blocco (2 volte la dimensione previste del blocco). La quantità totale di carburante usato da tutte le transazioni nel blocco deve essere inferiore al limite di carburante del blocco. Questo è importante perché evita che i blocchi siano arbitrariamente grandi. Se i blocchi potessero essere arbitrariamente grandi, i nodi completi meno performanti, gradualmente, non riuscirebbero più stare al passo con la rete per via dei requisiti di spazio e velocità. Più grande è il blocco, maggiore sarà la potenza di calcolo richiesta per elaborarlo in tempo per lo slot successivo. Questa è una forza centralizzante, a cui si resiste limitando le dimensioni dei blocchi.
 
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 

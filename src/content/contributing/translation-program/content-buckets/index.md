@@ -237,7 +237,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Patricia Merkle Trees](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 - [Data structures and encoding](/developers/docs/data-structures-and-encoding/)
 - [Recursive-length prefix (RLP) serialization](/developers/docs/data-structures-and-encoding/rlp/)
-- [Network adresses](/developers/docs/networking-layer/network-addresses/)
+- [Network addresses](/developers/docs/networking-layer/network-addresses/)
 - [Simple serialize](/developers/docs/data-structures-and-encoding/ssz/)
 - [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
 - [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)
