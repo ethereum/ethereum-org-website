@@ -39,6 +39,8 @@ import FeedbackCard from "../components/FeedbackCard"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
+import CrowdinContributors from "../components/FileContributorsCrowdin"
+import GitHubContributors from "../components/FileContributorsGitHub"
 
 // Apply styles for classes within markdown here
 const ContentContainer = (props) => {
@@ -218,7 +220,7 @@ const components = {
 }
 
 const TutorialPage = ({
-  data: { siteData, pageData: mdx },
+  data: { siteData, pageData: mdx, allCombinedTranslatorsJson },
   pageContext: { relativePath },
 }: PageProps<Queries.TutorialPageQuery, Context>) => {
   if (!siteData || !mdx?.frontmatter)
@@ -275,15 +277,19 @@ const TutorialPage = ({
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-          <FileContributors
-            relativePath={relativePath}
-            editPath={absoluteEditPath}
-            mt={12}
-            p={2}
-            borderRadius="4px"
-            border={`1px solid ${borderColor}`}
-            background="ednBackground"
-          />
+          {mdx.frontmatter.lang !== "en" ? (
+            <CrowdinContributors
+              relativePath={relativePath}
+              editPath={absoluteEditPath}
+              //@ts-ignore
+              langContributors={allCombinedTranslatorsJson.nodes}
+            />
+          ) : (
+            <GitHubContributors
+              relativePath={relativePath}
+              editPath={absoluteEditPath}
+            />
+          )}
           <FeedbackCard />
         </ContentContainer>
         {tocItems && (
@@ -303,7 +309,11 @@ const TutorialPage = ({
 export default TutorialPage
 
 export const query = graphql`
-  query TutorialPage($languagesToFetch: [String!]!, $relativePath: String) {
+  query TutorialPage(
+    $language: String!
+    $languagesToFetch: [String!]!
+    $relativePath: String
+  ) {
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
@@ -348,6 +358,20 @@ export const query = graphql`
       }
       body
       tableOfContents
+    }
+    allCombinedTranslatorsJson(filter: { lang: { eq: $language } }) {
+      nodes {
+        lang
+        data {
+          fileId
+          contributors {
+            id
+            username
+            avatarUrl
+            totalCosts
+          }
+        }
+      }
     }
   }
 `

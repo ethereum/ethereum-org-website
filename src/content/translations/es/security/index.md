@@ -1,5 +1,5 @@
 ---
-title: Seguridad en Ethereum y prevención de fraudes
+title: Seguridad y prevención de fraudes en Ethereum
 description: Actuar con seguridad en Ethereum
 lang: es
 ---
@@ -55,8 +55,8 @@ Recordar contraseñas seguras y únicas para cada cuenta que tenga no es la solu
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
-- [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
+- O revise otros [gestores de contraseñas recomendados](https://www.privacytools.io/secure-password-manager)
 
 ### Use la autenticación de dos factores {#two-factor-authentication}
 
@@ -119,13 +119,13 @@ Una de las razones más importantes por las que se sufren estafas con las cripto
 </DocLink>
 <Divider />
 
-## Seguridad de la cartera {#wallet-security}
+## Seguridad de la billetera {#wallet-security}
 
 ### No entregue sus claves privadas {#protect-private-keys}
 
 **Bajo ninguna razón, comparta nunca sus claves privadas.**
 
-La clave privada de su cartera actúa como una contraseña para su cartera Ethereum. ¡Es lo único que impide que alguien que conozca la dirección de su cartera saque todos los activos de su cuenta!
+La clave privada de su billetera actúa como una contraseña para su billetera de Ethereum. ¡Es lo único que impide que alguien que conozca la dirección de su billetera saque todos los activos de su cuenta!
 
 <DocLink to="/wallets/">
   ¿Qué es una cartera de Ethereum?
@@ -135,13 +135,13 @@ La clave privada de su cartera actúa como una contraseña para su cartera Ether
 
 Al hacer una captura de pantalla de sus frases semilla o claves privadas, se arriesga a sincronizarlas en la nube y hacerlas potencialmente accesibles a los hackers. Obtener claves privadas de la nube es un vector de ataque común para los hackers.
 
-### Use una cartera de hardware {#use-hardware-wallet}
+### Use una billetera de hardware {#use-hardware-wallet}
 
-Un monedero de hardware proporciona almacenamiento sin conexión para claves privadas. Se consideran la opción más segura para almacenar sus claves privadas.
+Una billetera de hardware proporciona almacenamiento sin conexión para claves privadas. Son considerados la opción de billetera más segura para almacenar sus claves privadas: su clave privada nunca toca Internet y permanece completamente local en su dispositivo.
 
 Mantener las claves privadas sin conexión reduce altamente el riesgo de se pirateen, incluso si un hacker llega a controlar su computadora.
 
-#### Pruebe una cartera hardware: {#try-hardware-wallet}
+#### Pruebe una billetera de hardware: {#try-hardware-wallet}
 
 - [Ledger](https://www.ledger.com/)
 - [Trezor](https://trezor.io/)
@@ -158,11 +158,13 @@ Cuando firme contratos inteligentes, no permita un techo ilimitado de gasto. Un 
 
 Muchas carteras de Ethereum ofrecen una protección de límites para evitar que las cuentas se vacíen.
 
+[Cómo revocar el acceso al contrato inteligente a sus fondos en criptomonedas](/guides/how-to-revoke-token-access/)
+
 <Divider />
 
 ## Estafas comunes {#common-scams}
 
-Los estafadores siempre están buscando maneras de quitarle sus fondos. Aunque es imposible detener completamente a los estafadores, sí podemos mermar sus intentos al conocer la mayoría de las técnicas utilizadas. Estas estafas se presentan de muchas formas, pero suelen seguir los mismos patrones de alto nivel. Si no puede hacer más, tenga esto presente:
+Los estafadores siempre están buscando maneras de quitarle sus fondos. Aunque es imposible detener completamente a los estafadores, sí podemos mermar sus intentos intentando conocer la mayoría de las técnicas utilizadas. Estas estafas se presentan de muchas formas, pero suelen seguir los mismos patrones a grandes rasgos. Si no puede hacer más, tenga esto presente:
 
 - actúe siempre con escepticismo,
 - nadie le va a dar ETH gratis o con descuento
@@ -170,35 +172,35 @@ Los estafadores siempre están buscando maneras de quitarle sus fondos. Aunque e
 
 ### La estafa de los regalos {#giveaway}
 
-Una de las estafas más comunes en criptomoneda es la de ofrecer regalos. La estafa de ofrecer regalos puede manifestarse de múltiples maneras, pero la premisa común es prometerle que si envía ETH a la dirección de la cartera proporcionada, usted recibirá el doble de los ETH que ha enviado. *Por esta razón, también se le conoce como la estafa del 2 por 1.*
+Una de las estafas más comunes en torno a las criptomonedas es la de ofrecer regalos. La estafa de ofrecer regalos puede manifestarse de múltiples maneras, pero la premisa común es prometerle que, si envía ETH a la dirección de la billetera proporcionada, recibirá el doble de ETH enviado. *Por esta razón, también se la conoce como estafa del 2 por 1.*
 
-Estas estafas de fraude suelen estipular un tiempo limitado para aprovechar la oportunidad de reclamar su regalo con el fin de apresurar la toma de una decisión equívoca y crear una sensación de falsa urgencia.
+Estas estafas suelen estipular un tiempo limitado para aprovechar la oportunidad de reclamar su regalo con el fin de apresurar la toma de una decisión equívoca y crear una sensación de falsa urgencia.
 
-#### Hacks en redes sociales {#social-media-hacks}
+#### Hackeos en redes sociales {#social-media-hacks}
 
-Un ejemplo concreto de esto a gran escala ocurrió en julio de 2020, cuando las cuentas de Twitter de celebridades y organizaciones destacadas fueron hackeadas. El hacker publicó simultáneamente un Bitcoin como regalo en las cuentas hackeadas. Aunque los tweets engañosos se detectaron y eliminaron rápidamente, los hackers todavía lograron hacerse con 11 bitcoins (o 500.000 $ en septiembre de 2021).
+Un ejemplo concreto de esto a gran escala ocurrió en julio de 2020 cuando cuentas de Twitter de celebridades y organizaciones destacadas fueron hackeadas. El hacker publicó simultáneamente una oferta de regalar Bitcoin en las diferentes cuentas hackeadas. Aunque los tweets engañosos se detectaron y eliminaron rápidamente, los hackers lograron igualmente hacerse con 11 bitcoins (o $500.000 en septiembre de 2021).
 
-![Una estafa en Twitter](./appleTwitterScam.png)
+![Estafa en Twitter](./appleTwitterScam.png)
 
-#### Aunque los tweets engañosos se notaron y eliminaron rápidamente, los hackers todavía lograron hacerse con 11 bitcoin (o 500.000 $ en septiembre de 2021). {#celebrity-giveaway}
+#### Regalo de celebridades {#celebrity-giveaway}
 
-Que las celebridades hagan un regalo es otra estafa común que camufla este tipo de fraude. Los estafadores toman una entrevista de vídeo grabada o charla de una conferencia que haya realizado alguien famoso y la retransmiten en directo en YouTube, haciendo que aparezca como si la persona famosa estuviera haciendo una entrevista de vídeo en directo y refrendará la oferta de criptomonedas como regalo.
+Que las celebridades hagan un regalo suele ser otra estafa común. Los estafadores toman una entrevista de video grabada o charla de una conferencia que haya realizado alguien famoso y la retransmiten en directo en YouTube, haciendo que aparezca como si la persona famosa estuviera haciendo una entrevista de video en directo apoyando una oferta de criptomonedas como regalo.
 
-Para este tipo de estafa, se suele elegir a Vitalik Buterin, aunque tales tentativas también utilizan la imagen de muchas otras personas prominentes involucradas en criptografía (como Elon Musk o Charles Hoskinson). Incluir una persona bien conocida, da a los estafadores el sentido de legitimidad (esto parece sospechoso, pero si Vitalik lo apoya, ¡debe estar bien!).
+Para este tipo de estafa, se suele elegir a Vitalik Buterin, aunque tales tentativas también utilizan la imagen de muchas otras personas prominentes involucradas en las criptomonedas (como Elon Musk o Charles Hoskinson). Incluir a una persona conocida da a los estafadores sentido de legitimidad (la situación parece sospechosa, pero, si Vitalik, ¡debe ser real!).
 
 **Los regalos son siempre estafas. Si envía sus fondos a estas cuentas, los perderá para siempre.**
 
-![Una estafa en YouTube](./youtubeScam.png)
+![Estafa en YouTube](./youtubeScam.png)
 
-### Las estafas de ofrecer ayuda {#support-scams}
+### Estafas de soporte {#support-scams}
 
-La criptomoneda es una tecnología relativamente joven y mal entendida. Un fraude común que se aprovecha de esto es la estafa de la ayuda, donde los estafadores se hacen pasar por técnicos de soporte para carteras, intercambios o cadenas de bloque populares.
+Las criptomonedas son una tecnología relativamente nueva y mal entendida. Un fraude común que se aprovecha de esto es la estafa de brindar ayuda o soporte, donde los estafadores se hacen pasar por técnicos de billeteras, exchanges o cadenas de bloques populares.
 
-Gran parte del debate sobre Ethereum se produce en Discord. Los estafadores de soporte técnico generalmente encontrarán a sus víctimas buscando preguntas de soporte en canales de Discord públicos y luego enviando al solicitante un mensaje privado que ofrezca soporte. Al ganarse su confianza, los estafadores de soporte técnico intentarán engañarle para que revele sus claves privadas o les envíe sus fondos a sus carteras.
+Gran parte del debate sobre Ethereum tiene lugar en Discord. Los estafadores que ofrecen soporte técnico generalmente encontrarán a sus víctimas buscando preguntas de soporte en canales de Discord públicos y luego enviando al solicitante un mensaje privado para ofrecer soporte. Al ganarse su confianza, los estafadores de soporte técnico intentarán engañarlo para que revele sus claves privadas o les envíe fondos a sus billeteras.
 
-![Una estafa de soporte en Discord](./discordScam.png)
+![Estafa de soporte en Discord](./discordScam.png)
 
-Como norma general, el personal nunca se comunicará con usted a través de canales privados y extraoficiales. He aquí algunas cosas sencillas que debe tener en cuenta cuando trate con el soporte:
+Como norma general, el personal nunca se comunicará con usted a través de canales privados no oficiales. He aquí algunas cosas sencillas que debe tener en cuenta cuando trate con Soporte:
 
 - Nunca comparta sus claves privadas, frases semilla o contraseñas.
 - Nunca permita a nadie acceso remoto a su ordenador.
@@ -210,11 +212,19 @@ Como norma general, el personal nunca se comunicará con usted a través de cana
   </div>
 </InfoBanner>
 
-### Estafas de phishing {#phishing-scams}
+### Estafa del token Eth2 {#eth2-token-scam}
 
-Las estafas de phishing (o suplantación de identidad) son otra tentativa cada vez más socorrida que los estafadores usarán para intentar robarle los fondos de su cartera.
+En el período previo a [La Fusión](/roadmap/merge/), los estafadores se aprovechaban de la confusión en torno al término "Eth2" para intentar que los usuarios canjearan su ETH por un token "ETH2". No existe el "ETH2", y no se introdujo ningún otro token legítimo con La Fusión. El ETH que usted poseía antes de La Fusión es el mismo ETH ahora. No hay **necesidad de realizar ninguna acción relacionada con su ETH para el cambio de prueba de trabajo a prueba de participación**.
 
-Algunos correos electrónicos de suplantación de identidad piden a los usuarios que hagan clic en enlaces que los redirigirán a sitios web de imitación, pidiéndoles que introduzcan su frase semilla, restablezcan su contraseña o envíen ETH. Otros le pueden pedir que instale malware, sin saberlo, para infectar su computadora y permitir el acceso a los archivos de su computadora.
+Los estafadores pueden presentarse como personal de "soporte", diciéndole que, si deposita ETH, recibirá de vuelta "ETH2". No hay [soporte oficial de Ethereum](/community/support/), y tampoco hay tokens nuevos. Nunca comparta la frase semilla de su billetera con nadie.
+
+_Nota: Hay etiquetas/tokens derivados que pueden representar ETH apostado (p. ej., rETH de Rocket Pool, stETH de Lido, ETH2 de Coinbase), pero son algo a lo que deba "migrar"._
+
+### Estafas de suplantación de identidad {#phishing-scams}
+
+Las estafas de suplantación de identidad (o phishing) son otra forma común que los estafadores usarán para intentar robarle los fondos de su billetera.
+
+Algunos correos electrónicos de suplantación de identidad piden a los usuarios que hagan clic en enlaces que los redirigirán a sitios web de imitación, pidiéndoles que introduzcan su frase semilla, restablezcan su contraseña o envíen ETH. Otros le pueden pedir que instale malware sin saber lo que hace para infectar su computadora y permitir el acceso a los archivos.
 
 Si recibe un correo electrónico de un remitente desconocido, recuerde:
 
@@ -222,45 +232,37 @@ Si recibe un correo electrónico de un remitente desconocido, recuerde:
 - No facilite nunca su información personal o contraseñas a nadie.
 - Elimine correos de remitentes desconocidos.
 
-[Más información sobre cómo evitar las estafas de phishing.](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
+[Más información sobre cómo evitar las estafas de suplantación de identidad.](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
 
-### Estafas de brókeres de criptomonedas {#broker-scams}
+### Estafas de brokers de trading de criptomonedas {#broker-scams}
 
-Los brókeres de criptomonedas afirman ser agentes especializados en criptomonedas que se ofrecerán a que usted le confíe su dinero y ellos lo inviertan en su nombre. Esta oferta suele ir acompañada de promesas de conseguir un rendimiento poco realista. Después de que el estafador reciba sus fondos, le pueden engañar y pedirle que envíe más fondos para que no te se pierda más ganancias con su inversión, o pueden esfumarse como el humo.
+Los brokers de trading de criptomonedas afirman ser agentes especializados que se ofrecerán a que usted le confíe su dinero y ellos lo inviertan en su nombre. Esta oferta suele ir acompañada de promesas de conseguir rendimientos poco realistas. Después de que el estafador recibe sus fondos, podría inducirlo a que envíe más para que no se pierda más posibles ganancias o desaparecer por completo.
 
-Estos brókeres estafadores encuentran a sus víctimas usando cuentas falsas en YouTube para iniciar conversaciones aparentemente naturales sobre el bróker. Conversaciones que a menudo suelen pretender aumentar la legitimidad, pero los votos positivos son de cuentas bot.
+Estos brokers estafadores encuentran a sus víctimas usando cuentas falsas en YouTube para iniciar conversaciones aparentemente naturales sobre el servicio. Las conversaciones a menudo suelen contar con gente que los apoya, pero los votos de confianza son de cuentas bot.
 
-**No confíe en extraños de Internet para que inviertan en su nombre. Perderá su criptomoneda.**
+**No confíe en extraños de Internet para que inviertan en su nombre. Perderá sus criptomonedas.**
 
-![Un estafa de bróker en YouTube](./brokerScam.png)
+![Estafa de broker de trading en YouTube](./brokerScam.png)
 
-### Estafas mineras de cripto {#mining-pool-scams}
+### Estafas de fondos de minado de criptomonedas {#mining-pool-scams}
 
-Las estafas de reservas de minería involucran a personas que se pongan voluntariamente en contacto con usted y afirmen que usted puede obtener grandes ganancias uniéndose a una reserva minera de Ethereum. El estafador le pedirá dinero y permanecerá en contacto con usted todo el tiempo que dure la estafa. Esencialmente, el estafador intentará convencerle de que cuando se una a una reserva minera de Ethereum, su criptomoneda se utilizará para crear ETH y se le pagarán dividendos en forma de ETH. Lo que acabará sucediendo es que usted notará que su criptomoneda va produciendo pequeños rendimientos. Esto es simplemente es un anzuelo para que usted invierta más. Finalmente, todos sus fondos se enviarán a una dirección desconocida y el estafador desaparecerá, o en algunos casos seguirá en contacto con usted, como ha ocurrido en un caso reciente.
+Desde septiembre de 2022, el minado en Ethereum ya no es posible. Sin embargo, las estafas basadas en fondos de minado siguen existiendo. Las estafas de fondos de minado de criptomonedas implican a personas que se ponen en contacto con usted sin haberlo solicitado y que afirman que podría obtener grandes beneficios si se une a un fondo de Ethereum. El estafador le pedirá dinero y permanecerá en contacto con usted todo el tiempo que sea necesario. Esencialmente, el estafador intentará convencerlo de que, cuando se una a un fondo de minado de Ethereum, sus criptomonedas se utilizarán para crear ETH y se le pagarán dividendos en forma de ETH. Lo que acabará sucediendo es que usted notará que sus criptomonedas van produciendo pequeños rendimientos. Esto es simplemente un anzuelo para que invierta más. Eventualmente, todos sus fondos serán enviados a una dirección desconocida, y el estafador desaparecerá o, en algunos casos, seguirá en contacto como ha ocurrido en un caso reciente.
 
-La moraleja de estos consejos es que tenga cuidado con las personas que se pongan en contacto con usted a través de las redes sociales, invitándole a que forma parte de una reserva minera. Una vez que pierda su criptomoneda, ¡se acabó!
+La moraleja de estos consejos es que tenga cuidado con las personas que se pongan en contacto con usted a través de las redes sociales para invitarlo a que forma parte de un fondo de minado. Una vez que pierda sus criptomonedas, ¡se acabó!
 
-He aquí un compendio de puntos que recordar:
+He aquí un compendio de puntos para recordar:
 
 - Tenga cuidado si alguien se pone en contacto con usted y le habla de formas de ganar dinero con sus criptomonedas.
-- Indague sobre su apuesta, reservas de liquidez u otras formas de invertir sus criptomonedas.
+- Indague sobre staking, fondos de liquidez u otras formas de invertir sus criptomonedas.
 - Rara vez son legítimos esos planes, si es que alguna vez lo son. Y si lo fueran, probablemente serían de dominio público y ya habría oído hablar de ellos.
 
-[Un hombre pierde 200.000 $ en una estafa de una reserva minera.](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
+[Un hombre pierde $200.000 en una estafa de un fondo de minado](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
-### Estafa del token Eth2 {#eth2-token-scam}
+### Estafas de distribución de criptomonedas (airdropping) {#airdrop-scams}
 
-Con [la fusión](/roadmap/merge/) en 2022, los estafadores han aprovechado la confusión en torno al término «Eth2» para intentar que los usuarios canjeen su ETH por un token «Eth2». La fusión no ha traído ningún token «Eth2», ni ningún otro token nuevo. El ETH que posee hoy seguirá siendo el mismo ETH después de la fusión, y no hay necesidad de hacer ningún intercambio de ETH de cara a la fusión.
+Las estafas de distribución de criptomonedas, o airdropping, implican una tentativa de estafa en el que un proyecto falso distribuye un activo (NFT, token) en su billetera para lo cual deben enviarlo a un un sitio web fraudulento a fin de reclamar el activo. Se le pedirá que inicie sesión con su billetera de Ethereum y que "apruebe" una transacción al intentar reclamar el activo. Esta transacción compromete su cuenta enviando sus claves públicas y privadas al estafador. Otra forma de esta estafa consiste en pedirle que confirme una transacción en la que se envían fondos a la cuenta del estafador.
 
-Los estafadores pueden hacerse pasar por técnicos de soporte diciéndole que si deposita su ETH, recibirá de vuelta «Eth2». No hay [soporte técnico oficial de Ethereum](/community/support/), y tampoco hay tókenes nuevos. Nunca comparta su frase semilla con nadie.
-
-_Nota: hay tókenes/etiquetas derivados que pueden representar ETH apostado (p. ej., rETH de Rocket Pool, stETH de Lido, ETH2 de Coinbase), pero son algo que usted deba «migrar»._
-
-### Estafas de AirDrop {#airdrop-scams}
-
-Las estafas de AirDrop implican una tentativa de estafa que emite un activo (NFT,) en su cartera y le reenvía a un sitio web de estafa para reclamar el activo emitido. Se le pedirá que inicie sesión con su cartera de Ethereum y que «apruebe» una transacción al intentar reclamarlo. Esta transacción deja al descubierto su cuenta enviando sus claves públicas y privadas al estafador. Otra forma de estafa puede pedirle que usted confirme una transacción en la que se envían fondos a la cuenta del estafador.
-
-[Más acerca de estafas de AirDrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+[Más información sobre las estafas de airdropping](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 <Divider />
 
@@ -283,4 +285,7 @@ Las estafas de AirDrop implican una tentativa de estafa que emite un activo (NFT
 ### Recursos para evitar estafas {#reading-scam-education}
 
 - [Operar con seguridad: estafas comunes](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [Evitar estafas](https://bitcoin.org/en/scams) _Bitcoin.org_
+- [Evitar estafas](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [Hilo de Twitter sobre correos electrónicos y mensajes comunes de phishing de criptomonedas](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+
+<QuizWidget quizKey="security" />
