@@ -44,10 +44,10 @@ Bu, Web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uy
 
 `eth_sendTransaction` ve `eth_sendRawTransaction`, gelecekteki bir bloğa eklenmesi için Ethereum ağına bir işlem yayınlayan Ethereum API fonksiyonlarıdır. İşlemlerin imzalanmasını nasıl ele aldıkları konusunda farklılık gösterirler.
 
-- [`eth_sendTransaction`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#eth-sendtransaction) _imzasız_ işlemler göndermek için kullanılır, yani işlemi zincire yayınlamadan önce imzalayabili için gönderdiğiniz düğüm sizin özel anahtarınızı yönetmelidir. Alchemy, kullanıcının özel anahtarlarını tutmadığından bu yöntemi desteklemez.
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) hâlihazırda imzalanmış işlemleri yayınlamak için kullanılır. Yani ilk olarak [`signTransaction(tx, private_key)`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#signtransaction) kullanmanız, sonrasında sonucunu `eth_sendRawTransaction` içine geçirmeniz gerekir.
+- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) _imzasız_ işlemler göndermek için kullanılır, yani işlemi zincire yayınlamadan önce imzalayabili için gönderdiğiniz düğüm sizin özel anahtarınızı yönetmelidir. Alchemy, kullanıcının özel anahtarlarını tutmadığından bu yöntemi desteklemez.
+- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) hâlihazırda imzalanmış işlemleri yayınlamak için kullanılır. Yani ilk olarak [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction) kullanmanız, sonrasında sonucunu `eth_sendRawTransaction` içine geçirmeniz gerekir.
 
-Web3 kullanırken, `eth_sendRawTransaction` erişimi [web3.eth.sendSignedTransaction](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#sendsignedtransaction) fonksiyonu çağrılarak sağlanır.
+Web3 kullanırken, `eth_sendRawTransaction` erişimi [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction) fonksiyonu çağrılarak sağlanır.
 
 Bu öğreticide kullanacağımız şey budur.
 
