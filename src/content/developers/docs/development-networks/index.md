@@ -28,17 +28,6 @@ You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-no
 
 **Note**: Most [development frameworks](/developers/docs/frameworks/) include a built-in development network. We recommend starting with a framework to [set up your local development environment](/developers/local-environment/).
 
-### Kurtosis Ethereum Package {#kurtosis}
-
-Kurtosis is a build system for multi-container test environments which enables developers to locally spin up reproducible instances of blockchain networks.
-
-The Ethereum Kurtosis package locally instantiates a containerized and parameterizable Ethereum testnet, with support for multiple different Execution Layer (EL) and Consensus Layer (CL) clients and an n-number of nodes. Kurtosis gracefully handles all local port mappings and service connections for easy dApp and smart contract prototyping and testing.
-
-- [Ethereum network package](https://github.com/kurtosis-tech/eth-network-package)
-- [Website](https://www.kurtosis.com/)
-- [Github](https://github.com/kurtosis-tech/kurtosis)
-- [Documentation](https://docs.kurtosis.com/)
-
 ### Ganache {#ganache}
 
 Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
@@ -72,6 +61,17 @@ There are also two maintained public test implementations of Ethereum: Goerli an
 
 - [Goerli Staking Launchpad](https://goerli.launchpad.ethereum.org/)
 - [Ropsten, Rinkeby & Kiln Deprecation Announcement](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+
+### Kurtosis Ethereum Package {#kurtosis}
+
+Kurtosis is a build system for multi-container test environments which enables developers to locally spin up reproducible instances of blockchain networks.
+
+The Ethereum Kurtosis package locally instantiates a containerized and parameterizable Ethereum testnet, with support for multiple different Execution Layer (EL) and Consensus Layer (CL) clients and an n-number of nodes. Kurtosis gracefully handles all local port mappings and service connections for easy dApp and smart contract prototyping and testing.
+
+- [Ethereum network package](https://github.com/kurtosis-tech/eth-network-package)
+- [Website](https://www.kurtosis.com/)
+- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [Documentation](https://docs.kurtosis.com/)
 
 ## Further reading {#further-reading}
 

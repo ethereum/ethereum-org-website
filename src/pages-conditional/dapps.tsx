@@ -627,6 +627,20 @@ const DappsPage = ({
       image: getImage(data.pwn),
       alt: t("page-dapps-pwn-image-alt"),
     },
+    {
+      title: "Yearn",
+      description: t("page-dapps-dapp-description-yearn"),
+      link: "https://yearn.finance/",
+      image: getImage(data.yearn),
+      alt: t("page-dapps-yearn-image-alt"),
+    },
+    {
+      title: "Convex",
+      description: t("page-dapps-dapp-description-convex"),
+      link: "https://www.convexfinance.com/",
+      image: getImage(data.convex),
+      alt: t("page-dapps-convex-image-alt"),
+    },
   ]
 
   const dex = [
@@ -681,6 +695,13 @@ const DappsPage = ({
       link: "https://loopring.org/#/",
       image: getImage(data.loopring),
       alt: t("page-dapps-loopring-logo-alt"),
+    },
+    {
+      title: "Synthetix",
+      description: t("page-dapps-dapp-description-synthetix"),
+      link: "https://synthetix.io/",
+      image: getImage(data.synthetix),
+      alt: t("page-dapps-sythetix-logo-alt"),
     },
   ]
 
@@ -1656,6 +1677,9 @@ export const query = graphql`
     compound: file(relativePath: { eq: "dapps/compound.png" }) {
       ...dappImage
     }
+    convex: file(relativePath: { eq: "dapps/convex.png" }) {
+      ...dappImage
+    }
     pooltogether: file(relativePath: { eq: "dapps/pooltogether.png" }) {
       ...dappImage
     }
@@ -1776,10 +1800,16 @@ export const query = graphql`
     pwn: file(relativePath: { eq: "dapps/pwn.png" }) {
       ...dappImage
     }
+    yearn: file(relativePath: { eq: "dapps/yearn.png" }) {
+      ...dappImage
+    }
     balancer: file(relativePath: { eq: "dapps/balancer.png" }) {
       ...dappImage
     }
     dexguru: file(relativePath: { eq: "dapps/dexguru.png" }) {
+      ...dappImage
+    }
+    synthetix: file(relativePath: { eq: "dapps/synthetix.png" }) {
       ...dappImage
     }
   }

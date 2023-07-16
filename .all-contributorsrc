@@ -8756,7 +8756,8 @@
       "profile": "https://github.com/MahendraBishnoi29",
       "contributions": [
         "ideas",
-        "code"
+        "code",
+        "bug"
       ]
     },
     {
@@ -10209,6 +10210,107 @@
       "contributions": [
         "content",
         "code"
+      ]
+    },
+    {
+      "login": "maxime216-pro",
+      "name": "Maxime Dessez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66296351?v=4",
+      "profile": "http://maximedessez.fr",
+      "contributions": [
+        "bug",
+        "translation"
+      ]
+    },
+    {
+      "login": "Tyler-233",
+      "name": "Tyler-233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44740396?v=4",
+      "profile": "https://github.com/Tyler-233",
+      "contributions": [
+        "translation",
+        "content"
+      ]
+    },
+    {
+      "login": "neodaoist",
+      "name": "neodaoist",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3170590?v=4",
+      "profile": "http://neodaoist.xyz",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "atharvadeosthale",
+      "name": "Atharva Deosthale",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11805367?v=4",
+      "profile": "https://links.atharva.codes",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ckartik",
+      "name": "Kartik Chopra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13803371?v=4",
+      "profile": "https://github.com/ckartik",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "BBashh",
+      "name": "Bibash Tandon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/125178349?v=4",
+      "profile": "https://github.com/BBashh",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "vaibhavtevatia",
+      "name": "Vaibhav Tevatia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86671961?v=4",
+      "profile": "https://github.com/vaibhavtevatia",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "cnn-rnn",
+      "name": "cnn-rnn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44789658?v=4",
+      "profile": "https://github.com/cnn-rnn",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "SahityaRoy",
+      "name": "Sahitya Roy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72821604?v=4",
+      "profile": "https://www.linkedin.com/in/sahitya-roy-244b941a2/",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Keecointoken",
+      "name": "KeeCoin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99338330?v=4",
+      "profile": "https://www.keecoin.io",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "tomatowax",
+      "name": "Seungwook Chi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/799503?v=4",
+      "profile": "http://www.tomatowax.com/",
+      "contributions": [
+        "content"
       ]
     }
   ],
