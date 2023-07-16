@@ -2,7 +2,6 @@
 title: Canali di stato
 description: Un'introduzione ai canali di stato e ai canali di pagamento come soluzione di scalabilità, attualmente utilizzata dalla comunità Ethereum.
 lang: it
-incomplete: true
 sidebarDepth: 3
 ---
 
@@ -14,9 +13,9 @@ Dovresti aver letto e compreso le nostre pagine sul [ridimensionamento di Ethere
 
 ## Cosa sono i canali? {#what-are-channels}
 
-Le blockchain pubbliche, come Ethereum, affrontano sfide di scalabilità dovute alla loro architettura distribuita: le transazioni on-chain devono essere eseguite da tutti i nodi. I nodi devono poter gestire il volume di transazioni in un blocco usando hardware modesto, imponendo un limite al volume di transazioni per mantenere decentralizzata la rete. I canali della blockchain risolvono questo problema consentendo agli utenti di interagire al di fuori della blockchain principale.
+Le blockchain pubbliche, come Ethereum, affrontano sfide di scalabilità dovute alla loro architettura distribuita: le transazioni on-chain devono essere eseguite da tutti i nodi. I nodi devono poter gestire il volume di transazioni in un blocco usando hardware modesto, imponendo un limite al volume di transazioni per mantenere decentralizzata la rete. I canali della blockchain risolvono questo problema consentendo agli utenti di interagire all'esterno della catena, pur affidandosi alla sicurezza della catena principale per l'accordo finale.
 
-I canali sono semplici protocolli peer-to-peer che consentono a due parti di effettuare molte transazioni tra loro e poi di pubblicare solo i risultati finali nella blockchain. Il canale usa la crittografia per dimostrare che i dati sommari che generano sono davvero il risultato di una serie valida di transazioni intermedie. Un contratto intelligente ["multifirma"](developers/docs/smart-contracts/#multisig) assicura che le transazioni siano firmate dalle parti corrette.
+I canali sono semplici protocolli peer-to-peer che consentono a due parti di effettuare molte transazioni tra loro e poi di pubblicare solo i risultati finali nella blockchain. Il canale usa la crittografia per dimostrare che i dati sommari che generano sono davvero il risultato di una serie valida di transazioni intermedie. Un contratto intelligente ["multifirma"](/developers/docs/smart-contracts/#multisig) assicura che le transazioni siano firmate dalle parti corrette.
 
 Con i canali, i cambiamenti di stato sono eseguiti e convalidati dalle parti interessate, riducendo al minimo il calcolo sul livello di esecuzione di Ethereum. Questo riduce la congestione su Ethereum e, inoltre, aumenta le velocità di elaborazione delle transazioni per gli utenti.
 
@@ -28,17 +27,17 @@ I canali peer-to-peer sono particolarmente utili per situazioni in cui alcuni pa
 
 ## Canali di pagamento {#payment-channels}
 
-Un canale di pagamento è meglio descritto come un "registro bidirezionale" tenuto collettivamente da due utenti. Il saldo iniziale del registro è la somma dei depositi bloccati nel contratto on-chain durante la fase di apertura del canale.
+Un canale di pagamento è meglio descritto come un "registro bidirezionale" tenuto collettivamente da due utenti. Il saldo iniziale del registro è la somma dei depositi bloccati nel contratto on-chain durante la fase di apertura del canale. I trasferimenti del canale di pagamento sono eseguibili istantaneamente e senza coinvolgere la stessa effettiva blockchain, tranne che per l'iniziale creazione una tantum sulla catena e per un'eventuale chiusura del canale.
 
 Gli aggiornamenti al saldo del registro (cioè, lo stato del canale di pagamento) richiedono l'approvazione di tutte le parti nel canale. Un aggiornamento del canale firmato da tutti i partecipanti al canale è considerato finalizzato, analogamente a una transazione su Ethereum.
 
-I canali di pagamento sono stati tra le prime soluzioni di ridimensionamento progettate per minimizzare l costosa attività on-chain nelle interazioni semplici tra utenti (ad es. trasferimenti di ETH, scambi atomici, micropagamenti). I partecipanti al canale possono condurre una quantità illimitata di transazioni istantanee e senza commissioni tra loro purché la somma netta dei loro trasferimenti non superi i token depositati.
+I canali di pagamento furono tra le primissime soluzioni di ridimensionamento progettate per minimizzare l'attività costosa sulla catena delle semplici interazioni tra utenti (es., trasferimenti di ETH, scambi atomici, micro-pagamenti). I partecipanti al canale possono condurre una quantità illimitata di transazioni istantanee e senza commissioni tra loro purché la somma netta dei loro trasferimenti non superi i token depositati.
 
 ## Canali di stato {#state-channels}
 
 Oltre a supportare i pagamenti off-chain, i canali di pagamento non si sono dimostrati utili per gestire la logica di transizione di stato generale. I canali di stato sono stati creati per risolvere questo problema e rendere i canali utili per ridimensionare il calcolo a scopo generale.
 
-I canali di stato hanno comunque molto in comune con i canali di pagamento. Ad esempio, gli utenti interagiscono scambiando messaggi firmati in modo crittografico (transazioni), che anche gli altri devono firmare. Se un aggiornamento di stato proposto non è firmato da tutti i partecipanti, non è valido.
+I canali di stato hanno comunque molto in comune con i canali di pagamento. Ad esempio, gli utenti interagiscono scambiandosi messaggi firmati crittograficamente (transazioni), che devono esser firmati anche dagli altri partecipanti del canale. Se un aggiornamento di stato proposto non è firmato da tutti i partecipanti, non è considerato valido.
 
 Tuttavia, oltre a detenere i saldi degli utenti, il canale monitora anche lo stato corrente dell'archiviazione del contratto (cioè, i valori delle variabili del contratto).
 
@@ -166,6 +165,8 @@ I pagamenti basati sul canale hanno i seguenti vantaggi:
 
 3. **Latenza**: Le transazioni off-chain condotte tra i partecipanti del canale sono risolvibili istantaneamente, se ambe le parti cooperano, riducendo i ritardi. In contrasto, inviare una transazione sulla Rete Principale richiede che i nodi elaborino la transazione, producano un nuovo blocco con la transazione e raggiungano il consenso. Gli utenti potrebbero anche dover attendere più conferme del blocco prima di considerare finalizzata una transazione.
 
+4. **Costo**: i canali di stato sono particolarmente utili nelle situazioni in cui, una serie di partecipanti, si scambierà numerosi aggiornamenti di stato su un lungo periodo. I soli costi sostenuti sono l'apertura e la chiusura del contratto intelligente del canale di stato; ogni cambiamento di stato tra l'apertura e chiusura del canale sarà più economico dell'ultimo, poiché il costo dell'accordo è distribuito di conseguenza.
+
 Implementare i canali di stato su soluzioni di livello 2, come i [rollup](/developers/docs/scaling/#rollups), potrebbe renderli persino più attraenti per i pagamenti. Sebbene i canali offrano pagamenti economici, i costi di configurazione del contratto su catena sulla Rete Principale durante la fase d'apertura possono divenire costosi, specialmente ai picchi delle commissioni sul gas. I rollup basati su Ethereum offrono [commissioni di transazione inferiori](https://l2fees.info/) e possono ridurre il sovraccarico per i partecipanti del canale per aver ridotto le commissioni di configurazione.
 
 ### Microtransazioni {#microtransactions}
@@ -252,11 +253,9 @@ Diversi progetti forniscono implementazioni dei canali di stato che puoi integra
 
 **State channels**
 
-- [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 feb 2018_
-- [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _6 nov 2015 - Jeff Coleman_
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
-- [Blockchain State Channels: A State of the Art](https://ieeexplore.ieee.org/document/9627997)
-
-**Payment channels**
+- [Comprendere le soluzioni di scalabilità di livello 2 di Ethereum: canali di stato, plasma e Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 febbraio 2018_
+- [Canali di stato: una spiegazione](https://www.jeffcoleman.ca/state-channels/) _6 novembre 2015 - Jeff Coleman_
+- [Fondamenti dei canali di stato](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Canali di stato della blockchain: stato dell'arte](https://ieeexplore.ieee.org/document/9627997)
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_

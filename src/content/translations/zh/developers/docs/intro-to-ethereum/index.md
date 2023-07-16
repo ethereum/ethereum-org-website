@@ -14,9 +14,9 @@ lang: zh
 
 网络中的每台计算机都必须就每个新区块和链达成一致。 这些计算机被称为“节点”。 节点保证所有与区块链交互的人都有相同的数据。 要完成此分布式协议，区块链需要一个共识机制。
 
-以太坊采用[权益证明共识机制](/developers/docs/consensus-mechanisms/pos/)。 任何想在链上添加新区块的人都需要往存款合约里至少质押 32 个以太币并运行验证者软件。 然后，他们会被随机选择去提议区块，其他验证者检查区块并将其添加入区块链。 在这种模型中，通常只有一条链，但由于网络延迟和不诚实的行为，可能导致多个区块存在于链头部附近的同一位置。 为解决此问题，一种分叉选择算法会选择一组规范区块。 选择的区块是构成权重可能最大的链的区块，“权重”是指认可区块的验证者数量（并以验证者质押的以太币加权）。 还有一种奖罚制度，大力鼓励参与者尽可能诚实并在线。
+以太坊采用[权益证明共识机制](/developers/docs/consensus-mechanisms/pos/)。 任何想在链上添加新区块的人都必须质押以太币（以太坊原生货币）做为抵押品并运行验证者软件。 接着，可以随机选择这些“验证者"来提出区块，再由其他验证者检查并添加到区块链中。 存在一种奖励和惩罚体系，有力地激励参与者尽可能地诚实和保持在线。
 
-如果想查看区块链如何哈希数据以及上一个区块如何引用所有过去的区块，请务必查看 Anders Brownworth 的[本次演示](https://andersbrownworth.com/blockchain/blockchain)并观看以下随附视频。
+如果你想了解如何对区块链数据进行哈希运算并随后附加到区块引用的历史记录中，请务必查看 Anders Brownworth 进行的[这个演示](https://andersbrownworth.com/blockchain/blockchain)并观看下方的相关视频。
 
 观看 Anders 介绍区块链中的哈希：
 
@@ -107,7 +107,7 @@ lang: zh
 ## 延伸阅读 {#further-reading}
 
 - [以太坊白皮书](/whitepaper/)
-- [所以以太坊到底如何工作？](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway)- _Preethi Kasireddy_
+- [那么，以太坊是如何工作的？](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_（**注意**此资源仍然有价值，但请注意它早于[合并](/roadmap/merge)，因此仍然引用以太坊的工作量证明机制 - 实际上现在使用[权益证明](/developers/docs/consensus-mechanisms/pos)来保护以太坊的安全）
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 

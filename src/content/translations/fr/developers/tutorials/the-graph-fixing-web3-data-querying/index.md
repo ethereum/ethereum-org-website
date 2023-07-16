@@ -52,7 +52,7 @@ Maintenant, disons que dans notre dApp, nous voulons afficher le total des mises
 2. Récupérer `totalGamesPlayerLost`.
 3. S'abonner aux événements `BetPlaced`.
 
-Nous pouvons considérer [l'événement sur Web3](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#contract-events) comme indiqué sur la droite, mais cela nécessite de traiter pas mal de cas.
+Nous pouvons considérer [l'événement sur Web3](https://docs.web3js.org/api/web3/class/Contract#events) comme indiqué sur la droite, mais cela nécessite de traiter pas mal de cas.
 
 ```solidity
 GameContract.events.BetPlaced({
