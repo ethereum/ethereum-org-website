@@ -632,7 +632,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 是 [Web3.js](https://web3js.readthedocs.io/en/v1.2.9/) 的包装类，提供增强的应用程序接口方法和其他重要优势，让 Web3 开发者的工作更轻松。 它设计成只需经过最少的配置即可使用，因此您可以直接在您的应用程序中开始使用它！
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 是 [Web3.js](https://docs.web3js.org/) 的包装类，提供增强的应用程序接口方法和其他重要优势，让 Web3 开发者的工作更轻松。 它设计成只需经过最少的配置即可使用，因此您可以直接在您的应用程序中开始使用它！
 
 接下来，我们将合约应用程序二进制接口和合约地址添加到我们的文件中。
 

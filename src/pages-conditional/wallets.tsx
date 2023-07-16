@@ -487,7 +487,7 @@ export const query = graphql`
         }
       }
     }
-    hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
+    hero: file(relativePath: { eq: "wallets/wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

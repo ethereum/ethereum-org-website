@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "Tài khoản Ethereum của bạn",
   "page-wallets-your-ethereum-account-desc": "Ví là cửa sổ giúp bạn tiếp cận vào tài khoản Ethereum của mình – số dư, lịch sử giao dịch và nhiều nội dung khác. Tuy nhiên, bạn có thể hoán đổi nhà cung cấp ví bất kỳ lúc nào.",
   "page-wallets-your-login": "Phương tiện đăng nhập vào các ứng dụng Ethereum",
-  "page-wallets-your-login-desc": "Ví cho phép bạn kết nối với ứng dụng phi tập trung (dapp) bất kỳ bằng cách sử dụng tài khoản Ethereum. Ví giống như một phương tiện đăng nhập mà bạn có thể sử dụng trên nhiều ứng dụng phi tập trung (dapp)."
+  "page-wallets-your-login-desc": "Ví cho phép bạn kết nối với ứng dụng phi tập trung (dapp) bất kỳ bằng cách sử dụng tài khoản Ethereum. Ví giống như một phương tiện đăng nhập mà bạn có thể sử dụng trên nhiều ứng dụng phi tập trung (dapp).",
+  "additional-reading-how-to-register-an-ethereum-account": "Cách \"đăng kí\" một tài khoản Ethereum",
+  "additional-reading-how-to-use-a-wallet": "Cách để sử dụng ví"
 }

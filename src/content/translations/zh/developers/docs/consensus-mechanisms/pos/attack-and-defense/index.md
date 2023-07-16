@@ -8,7 +8,7 @@ lang: zh
 
 ## 前言 {#prerequisites}
 
-阅读本文需要一些[权益证明](/developers/docs/consensus-mechanisms/pos/)的基础知识。 另外，如果对以太坊[激励层](/docs/consensus-mechanisms/pos/rewards-and-penalties)以及分叉选择算法 [LMD-GHOST](/docs/consensus-mechanisms/pos/gasper) 有基本的了解，也会有所帮助。
+阅读本文需要一些[权益证明](/developers/docs/consensus-mechanisms/pos/)的基础知识。 另外，如果对以太坊[激励层](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)以及分叉选择算法 [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper) 有基本的了解，也会有所帮助。
 
 ## 攻击者想要什么？ {#what-do-attackers-want}
 
@@ -156,7 +156,7 @@ LMD-GHOST 分叉选择算法的“最新消息驱动”部分减轻了雪崩攻�
 - [此页面的更详细版本](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Vitalik 关于结算最终确定性的看法](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 - [有关最新消息驱动的幽灵协议的论文](https://arxiv.org/abs/2003.03052)
-- [“Casper-友好的确定性小工具”论文](https://arxiv.org/abs/1710.09437)
+- [“Casper-友好的最终确定性小工具”论文](https://arxiv.org/abs/1710.09437)
 - [Gasper 论文](https://arxiv.org/pdf/2003.03052.pdf)
 - [提议者权重增强共识层规范](https://github.com/ethereum/consensus-specs/pull/2730)
 - [ethresear.ch 的弹跳攻击](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114)
