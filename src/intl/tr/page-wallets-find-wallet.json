@@ -88,5 +88,7 @@
   "page-find-wallet-desktop-desc": "Masaüstü uygulaması olan cüzdanlar",
   "page-find-wallet-browser": "Tarayıcı",
   "page-find-wallet-browser-desc": "Tarayıcı uzantılı cüzdanlar",
-  "page-find-wallet-device": "Cihaz"
+  "page-find-wallet-device": "Cihaz",
+  "page-find-choose-to-compare": "Karşılaştırmak için seç",
+  "page-find-wallet-choose-features": "Özellikleri seçin"
 }

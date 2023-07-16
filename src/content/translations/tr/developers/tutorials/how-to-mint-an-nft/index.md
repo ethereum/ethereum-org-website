@@ -118,7 +118,7 @@ Json dosyasını düzenlemeyi bitirdikten sonra, görüntüyü yüklemek için y
 
 Yukarıdaki örnekte, sözleşme adresimiz 0x81c587EB0fE773404c42c1d2666b5f557C470eED'dir.
 
-Sonrasında ise ABI ve adresi kullanarak sözleşmemizi oluşturmak için web3 [sözleşme metodunu](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) kullanacağız. mint-nft.js dosyanızda, şunu ekleyin:
+Sonrasında ise ABI ve adresi kullanarak sözleşmemizi oluşturmak için web3 [sözleşme metodunu](https://docs.web3js.org/api/web3-eth-contract/class/Contract) kullanacağız. mint-nft.js dosyanızda, şunu ekleyin:
 
 ```js
 const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
