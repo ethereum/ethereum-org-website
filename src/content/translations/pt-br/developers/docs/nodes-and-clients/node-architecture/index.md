@@ -22,7 +22,7 @@ O cliente de execução é responsável pelo tratamento de transações, transmi
 
 O cliente de execução cria payloads (cargas) de execução — a lista de transações, triagem de estado atualizada e outros dados relacionados à execução. Os clientes de consenso incluem o payload em cada bloco. O cliente de execução também é responsável por reexecutar transações em novos blocos, para garantir que eles sejam válidos. A execução das transações é feita no computador embutido do cliente de execução, conhecido como [Máquina Virtual Ethereum (EVM)](/developers/docs/evm).
 
-O cliente de execução também oferece uma interface de usuário para Ethereum por meio de [métodos RPC](/developers/docs/apis/json-rpc), que permitem aos usuários consultar a blockchain Ethereum, enviar transações e implantar contratos inteligentes. É comum que as chamadas RPC sejam tratadas por uma biblioteca como [Web3js](https://web3js.readthedocs.io/en/v1.8.0/), [Web3py](https://web3py.readthedocs.io/en/v5/) ou por uma interface de usuário, como uma carteira de navegador.
+O cliente de execução também oferece uma interface de usuário para Ethereum por meio de [métodos RPC](/developers/docs/apis/json-rpc), que permitem aos usuários consultar a blockchain Ethereum, enviar transações e implantar contratos inteligentes. É comum que as chamadas RPC sejam tratadas por uma biblioteca como [Web3js](https://docs.web3js.org/), [Web3py](https://web3py.readthedocs.io/en/v5/) ou por uma interface de usuário, como uma carteira de navegador.
 
 Em resumo, o cliente de execução é:
 

@@ -38,6 +38,7 @@ _Это не полный список. Нужна помощь в поиске 
 
 Этот процесс может быть сложным. Вот несколько ориентированных на разработку ресурсов с опытными разработчиками Ethereum, которые будут рады помочь.
 
+- [Университет Alchemy](https://university.alchemy.com/#starter_code)
 - [CryptoDevs на платформе Discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
@@ -57,6 +58,7 @@ _Это не полный список. Нужна помощь в поиске 
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## Запуск узла {#node-support}
 

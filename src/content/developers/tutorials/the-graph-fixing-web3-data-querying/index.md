@@ -54,7 +54,7 @@ Now let's say in our dapp, we want to display total bets, the total games lost/w
 2. Fetch `totalGamesPlayerLost`.
 3. Subscribe to `BetPlaced` events.
 
-We can listen to the [event in Web3](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#contract-events) as shown on the right, but it requires handling quite a few cases.
+We can listen to the [event in Web3](https://docs.web3js.org/api/web3/class/Contract#events) as shown on the right, but it requires handling quite a few cases.
 
 ```solidity
 GameContract.events.BetPlaced({
