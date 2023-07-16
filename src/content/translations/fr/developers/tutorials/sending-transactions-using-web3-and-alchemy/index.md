@@ -44,10 +44,10 @@ Comme la plupart des développeurs blockchain débutants, vous avez peut-être f
 
 `eth_sendTransaction` et `eth_sendRawTransaction` sont des fonctions API Ethereum qui diffusent une transaction sur le réseau Ethereum afin qu'elle soit ajoutée à un bloc futur. Elles diffèrent dans la façon dont elles gèrent la signature des transactions.
 
-- [`eth_sendTransaction`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#eth-sendtransaction) est utilisée pour envoyer des transactions _non signées_, ce qui signifie que le nœud auquel vous envoyez la transaction doit gérer votre clé privée pour pouvoir signer la transaction avant de la transmettre à la chaîne. Puisqu'Alchemy ne possède pas les clés privées de l'utilisateur, il ne prend pas en charge cette méthode.
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) est utilisée pour propager des transactions qui ont déjà été signées. Cela signifie que vous devez d'abord utiliser [`signTransaction(tx, private_key)`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#signtransaction), puis passer le résultat dans `eth_sendRawTransaction`.
+- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) est utilisée pour envoyer des transactions _non signées_, ce qui signifie que le nœud auquel vous envoyez la transaction doit gérer votre clé privée pour pouvoir signer la transaction avant de la transmettre à la chaîne. Puisqu'Alchemy ne possède pas les clés privées de l'utilisateur, il ne prend pas en charge cette méthode.
+- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) est utilisée pour propager des transactions qui ont déjà été signées. Cela signifie que vous devez d'abord utiliser [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction), puis passer le résultat dans `eth_sendRawTransaction`.
 
-Lorsque vous utilisez web3, `eth_sendRawTransaction` est accessible en appelant la fonction [web3.eth.sendSignedTransaction](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#sendsignedtransaction).
+Lorsque vous utilisez web3, `eth_sendRawTransaction` est accessible en appelant la fonction [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction).
 
 C'est ce que nous utiliserons dans notre tutoriel.
 

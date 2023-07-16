@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "Ethereum hesabınız",
   "page-wallets-your-ethereum-account-desc": "Cüzdanınız Ethereum hesabınıza, bakiyenize, işlem geçmişinize ve daha fazlasına açılan pencerenizdir. Cüzdan sağlayıcınızı istediğiniz zaman değiştirebilirsiniz.",
   "page-wallets-your-login": "Ethereum uygulamaları için oturum açma aracınız",
-  "page-wallets-your-login-desc": "Cüzdanınız Ethereum hesabınızı kullanarak sizi merkezi olmayan uygulamalara bağlar. Pek çok dapps uygulamasında kullanabileceğiniz bir üyelik gibi."
+  "page-wallets-your-login-desc": "Cüzdanınız Ethereum hesabınızı kullanarak sizi merkezi olmayan uygulamalara bağlar. Pek çok dapps uygulamasında kullanabileceğiniz bir üyelik gibi.",
+  "additional-reading-how-to-register-an-ethereum-account": "Ethereum hesabı nasıl \"kayıt\" edilir?",
+  "additional-reading-how-to-use-a-wallet": "Cüzdan nasıl kullanılır?"
 }
