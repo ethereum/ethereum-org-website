@@ -42,7 +42,7 @@ lang: zh
 
 以太坊帐户有四个字段：
 
-- `nonce` – 显示从帐户发送的交易数量的计数器。 这将确保交易只处理一次。 在合约帐户中，这个数字代表该帐户创建的合约数量
+- `nonce` -一个计数器，用来显示外部帐户发送的交易数量或合约帐户创建的合约数量。 每个帐户只能执行具有一个给定随机数的一笔交易，以防范重放攻击，重放攻击指多次广播和重复执行已签署的交易。
 - `balance` – 这个地址拥有的 Wei 数量。 Wei 是以太币的计数单位，每个 ETH 有 1e+18 Wei。
 - `codeHash` - 该哈希表示以太坊虚拟机 (EVM) 上的帐户*代码*。 合约帐户具有编程的代码片段，可以执行不同的操作。 如果帐户收到消息调用，则执行此 EVM 代码。 与其他帐户字段不同，不能更改。 所有代码片段都被保存在状态数据库的相应哈希下，供后续检索。 此哈希值称为 codeHash。 对于外部所有的帐户，codeHash 字段是空字符串的哈希。
 - `storageRoot` – 有时被称为存储哈希。 Merkle Patricia trie 根节点的 256 位哈希已编码了帐户的存储内容（256 位整数值映射），并编码为 Trie，作为来自 256 的 Keccak 256 位哈希的映射位整数键，用于 RLP 编码的 256 位整数值。 此 Trie 对此帐户存储内容的哈希进行编码，默认情况下为空。
@@ -69,19 +69,22 @@ lang: zh
 
 使用[椭圆曲线数字签名算法](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)从私钥生成公钥。 通过获取公钥 Keccak-256 哈希的最后 20 个字节并校验码前面添加 `0x`，可以为帐户获取公共地址。
 
-下面是使用 GETH 的 `personal_newAccount` 在控制台中创建一个帐户的例子
+下面的示例显示如何使用一种名为 [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) 的签名工具生成一个新帐户。 Clef 是一个集成在以太坊客户端[Geth](https://geth.ethereum.org) 中的账户管理和签名工具。 `clef newaccount` 命令创建一个新的密钥对并保存在加密的密钥库中。
 
-```go
-> personal.newAccount()
-Passphrase:
-Repeat passphrase:
-"0x5e97870f263700f46aa00d967821199b9bc5a120"
+```
+> clef newaccount --keystore <path>
 
-> personal.newAccount("h4ck3r")
-"0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
+Please enter a password for the new account to be created:
+> <password>
+
+------------
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+生成账户 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
-[GETH 相关文档](https://geth.ethereum.org/docs)
+[Geth 相关文档](https://geth.ethereum.org/docs)
 
 可以通过您的私钥获取公钥，但您不能通过公钥获取私钥。 这意味着保持私人密钥的安全至关重要，如同名称所建议的 **PRIVATE**。
 

@@ -254,7 +254,7 @@ Plusieurs projets fournissent des implémentations de canaux d'état que vous po
 **Canaux d'état**
 
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12 février 2018_
-- [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _- \_Jeff Colmar, 6 novembre 2015_
+- [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _- Jeff Colmar, 6 novembre 2015_
 - [Fondamentaux des canaux d'état](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 - [Canaux d'état de la blockchain : Un état de l'art](https://ieeexplore.ieee.org/document/9627997)
 
