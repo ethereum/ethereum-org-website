@@ -6,7 +6,7 @@ import { Box, HStack } from "@chakra-ui/react"
 type DropdownType = typeof ReactSelect
 
 const meta = {
-  title: "Atoms / Forms / Dropdown",
+  title: "Atoms / Form / Dropdown",
   component: ReactSelect,
   decorators: [
     (Story) => (
