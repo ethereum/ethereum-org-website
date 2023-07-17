@@ -351,5 +351,6 @@ A maioria dos NFTs é criada usando um padrão consistente conhecido como [ERC-7
 - [Tudo o que você precisa saber sobre o metaverso](https://foundation.app/blog/enter-the-metaverse) – _ (em inglês) equipe da Fundação, foundation.app_
 - [Não, criptoartistas não abraçam o planeta](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Consumo de energia do Ethereum](/energy-consumption/)
+- [APIs Ethereum NFT](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
 <QuizWidget quizKey="nfts" />
