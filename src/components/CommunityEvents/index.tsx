@@ -49,14 +49,15 @@ const renderEventDateTime = (
   return DateTime.fromISO(date).setLocale(language).toLocaleString(params)
 }
 
-const EventLink = (props:  ComponentProps<typeof Link>) => <Link fontWeight="700" {...props} />
+const EventLink = (props: ComponentProps<typeof Link>) => (
+  <Link fontWeight="700" {...props} />
+)
 
 interface EventProps {
   event: Event
   language: string
   type: "upcoming" | "past"
 }
-
 
 const Event = ({ event, language, type }: EventProps) => {
   const { date, title, calendarLink } = event
@@ -97,7 +98,7 @@ const CommunityEvents = () => {
       }}
     >
       <Center w={{ base: "100%", lg: "40%" }}>
-        <Box px={8}>
+        <Box pr={8} pl={{ base: 8, lg: 0 }}>
           <Heading>
             <Translation id="community-events-content-heading" />
           </Heading>
