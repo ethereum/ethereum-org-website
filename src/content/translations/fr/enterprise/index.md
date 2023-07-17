@@ -57,11 +57,13 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 - [- Hyperledger Besu](https://www.hyperledger.org/use/besu) _- Client Ethereum en open source axé sur les entreprises, développé sous la licence Apache 2.0 et rédigé en Java_
 - [Infura](https://infura.io/) _- Accès évolutif aux API des réseaux Ethereum et IPFS_
 - [Kaleido](https://kaleido.io/) _- Plateforme de développement orientée vers les entreprises, qui offre une blockchain simplifiée et des applications dédiées aux actifs numériques_
-- [Provide](https://provide.services/) _- Infrastructure et API pour les applications d'entreprise Web3_
+- [NodeReal](https://nodereal.io/) _Fournit une infrastructure blockchain évolutive et des services API pour l'écosystème Web3_
+- [Fournit](https://provide.services/) _ une infrastructure et des API pour les applications d'entreprise Web_
 - [QuickNode](https://www.quicknode.com/) _fournit des nœuds fiables et rapides avec des API de haut niveau comme NFT API, Token API, etc. tout en offrant une suite de produits unifiée et des solutions pour entreprise_
 - [Tenderly](https://tenderly.co) _ - Plateforme de développement Web3 qui fournit des blocs de débogage, d'observabilité et de construction d'infrastructures en vue de l'élaboration, de la mise à l'essai, du suivi et de l'exécution de contrats intelligents_
 - [Unibright](https://unibright.io/) _- Équipe de spécialistes de la blockchain, d'architectes, de développeurs et de consultants ayant plus de 20 ans d'expérience dans les processus métiers et l'intégration_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _- Fournisseur de services gérés répartis sur plusieurs sites en Europe et en Asie. Exploite & surveille vos nœuds de façon sécurisée et fiable_
+- [Zeeve](https://www.zeeve.io/) _offre un large panel de produits et d'outils pour le développement d'Ethereum, c'est-à-dire des infrastructures et des API pour les applications d'entreprise Web3._
 
 ### Outils et bibliothèques {#tooling-and-libraries}
 
@@ -129,7 +131,7 @@ Voici quelques-unes des applications d'entreprise qui ont été construites sur 
 
 ### Identifications et certifications {#credentials}
 
-- [Deux lycées italiens](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _ - Délivrance de diplômes numériques sur le réseau principal Ethereum_
+- [Deux lycées italiens](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _- Délivrance de diplômes numériques sur le réseau principal Ethereum_
 - [Université de St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _- Projet pilote d'une université suisse pour vérifier les diplômes_
 - [Hyland Credentials](https://www.hylandcredentials.com) _- Diplômes d'études numériques ou autres diplômes d'études, licences et certificats_
 - [OpenCerts](https://opencerts.io/faq) _délivre des diplômes et certificats d'enseignement via la blockchain à Singapour_
@@ -137,6 +139,6 @@ Voici quelques-unes des applications d'entreprise qui ont été construites sur 
 
 ### Utilitaires {#utilities}
 
-- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _Paiements de factures d'électricité_
+- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _- Paiements de factures d'électricité_
 
 Si vous souhaitez ajouter des éléments à cette liste, veuillez consulter [les instructions pour contribuer](/contributing/).
