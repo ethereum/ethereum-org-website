@@ -37,7 +37,7 @@ Now that we included the library in the project we need to initialize it. Your p
 const web3 = new Web3("http://localhost:8545")
 ```
 
-If you’d like to directly access a hosted node you can use Infura. You can also use the free ones provided by [Cloudflare](https://cloudflare-eth.com/), [Moralis](https://moralis.io), or [Alchemy](https://alchemy.com/ethereum):
+If you’d like to directly access a hosted node you can find options on [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service).
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
@@ -66,7 +66,7 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-You can see all the functions available on the Web3 instance in [the official web3.js documentation](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
+You can see all the functions available on the Web3 instance in [the official web3.js documentation](https://docs.web3js.org/).
 
 Most of Web3 libraries are asynchronous because in the background the library makes JSON RPC calls to the node which send backs the result.
 

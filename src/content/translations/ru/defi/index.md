@@ -5,7 +5,7 @@ lang: ru
 template: use-cases
 emoji: ":money_with_wings:"
 image: ../../../../assets/use-cases/defi.png
-alt: Логотип Eth, сложенный из деталей Лего.
+alt: Логотип Eth, составленный из деталей Лего.
 sidebarDepth: 2
 summaryPoint1: Глобальная открытая альтернатива существующей финансовой системе.
 summaryPoint2: Продукты, которые позволяют вам заимствовать, сберегать, инвестировать, торговать и не только.
@@ -334,10 +334,11 @@ DeFi — это движение с открытым исходным кодом
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### Статьи о DeFi {#defi-articles}
 
-- [Руководство по DeFi для новичков](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) — _Сид Коэльо-Прабху, 6 января 2020_
+- [Руководство по DeFi для начинающих](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) — _Сид Коэльо-Прабху, 6 января 2020 г._
 
 ### Видео {#videos}
 

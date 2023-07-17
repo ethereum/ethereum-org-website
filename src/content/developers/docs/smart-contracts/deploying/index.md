@@ -23,7 +23,7 @@ Finally, you'll need to compile your contract before deploying it, so make sure 
 - your contract's bytecode – this is generated through [compilation](/developers/docs/smart-contracts/compiling/)
 - ETH for gas – you'll set your gas limit like other transactions so be aware that contract deployment needs a lot more gas than a simple ETH transfer
 - a deployment script or plugin
-- access to an [Ethereum node](/developers/docs/nodes-and-clients/), either by running your own, connecting to a public node, or via an API key using a [node service](/developers/docs/nodes-and-clients/nodes-as-a-service/) like [Infura](https://www.infura.io/) or [Alchemy](https://docs.alchemy.com/).
+- access to an [Ethereum node](/developers/docs/nodes-and-clients/), either by running your own, connecting to a public node, or via an API key using a [node service](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
 ### Steps to deploy a smart contract {#steps-to-deploy}
 
@@ -57,6 +57,10 @@ Once deployed, your contract will have an Ethereum address like other [accounts]
 - [Docs on networks and app deployment](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
+**thirdweb - _Easily deploy any contract to any EVM compatible chain, using a single command_**
+
+- [Documentation](https://portal.thirdweb.com/deploy/)
+
 ## Related tutorials {#related-tutorials}
 
 - [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/) _– An introduction to deploying your first smart contract on an Ethereum test network._
@@ -75,3 +79,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 - [Development frameworks](/developers/docs/frameworks/)
 - [Run an Ethereum node](/developers/docs/nodes-and-clients/run-a-node/)
+- [Nodes-as-a-service](/developers/docs/nodes-and-clients/nodes-as-a-service)

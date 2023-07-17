@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ComponentProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -25,6 +25,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
+  IProps as ButtonDropdownProps,
   List as ButtonDropdownList,
 } from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
@@ -62,19 +63,19 @@ const commonHeadingProps: HeadingProps = {
   lineHeight: 1.4,
 }
 
-const H1 = (props: HeadingProps) => (
+export const H1 = (props: HeadingProps) => (
   <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
-const H2 = (props: HeadingProps) => (
+export const H2 = (props: HeadingProps) => (
   <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
-const H3 = (props: HeadingProps) => (
+export const H3 = (props: HeadingProps) => (
   <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
-const H4 = (props: HeadingProps) => (
+export const H4 = (props: HeadingProps) => (
   <Heading
     as="h4"
     {...commonHeadingProps}
@@ -84,9 +85,9 @@ const H4 = (props: HeadingProps) => (
   />
 )
 
-const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
-const Pre = (props: ChildOnlyProp) => (
+export const Pre = (props: ChildOnlyProp) => (
   <chakra.pre
     bg="preBackground"
     border="1px"
@@ -100,7 +101,7 @@ const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-const Paragraph = (props: ChildOnlyProp) => (
+export const Paragraph = (props: ChildOnlyProp) => (
   <Text color="text300" mt={8} mb={4} {...props} />
 )
 
@@ -152,7 +153,7 @@ const TitleCard = (props: ChildOnlyProp) => {
 
   return (
     <Flex
-      bg={{ base: "ednBackground", lg: "background" }}
+      bg={{ base: "ednBackground", lg: "background.base" }}
       border="1px"
       borderColor="border"
       borderRadius="base"
@@ -170,7 +171,7 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
+export const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
 const HeroImage = chakra(GatsbyImage, {
   baseStyle: {
@@ -191,7 +192,7 @@ const HeroImage = chakra(GatsbyImage, {
   },
 })
 
-const Page = (props: FlexProps) => (
+export const Page = (props: FlexProps) => (
   <Flex
     flexDirection={{ base: "column", lg: "row" }}
     justifyContent="space-between"
@@ -199,11 +200,12 @@ const Page = (props: FlexProps) => (
     mb={16}
     pt={{ lg: 16 }}
     width="full"
+    sx={{ "h2:first-of-type": { mt: { lg: 0 } } }}
     {...props}
   />
 )
 
-const InfoColumn = (props: ChildOnlyProp) => (
+export const InfoColumn = (props: ChildOnlyProp) => (
   <Flex
     flexDirection="column"
     flex="0 1 400px"
@@ -216,7 +218,7 @@ const InfoColumn = (props: ChildOnlyProp) => (
   />
 )
 
-const InfoTitle = (props: ChildOnlyProp) => (
+export const InfoTitle = (props: ChildOnlyProp) => (
   <H2
     fontSize={{ base: "2.5rem", lg: "5xl" }}
     textAlign={{ base: "left", lg: "right" }}
@@ -225,50 +227,50 @@ const InfoTitle = (props: ChildOnlyProp) => (
   />
 )
 
-type ButtonDropdownProps = Parameters<typeof ButtonDropdown>[0]
-
-const StyledButtonDropdown = (props: FlexProps & ButtonDropdownProps) => (
-  <Flex
-    as={ButtonDropdown}
-    alignSelf={{ sm: "flex-end" }}
-    justifyContent="flex-end"
-    mb={8}
-    textAlign="center"
-    {...props}
-  />
+export const StyledButtonDropdown = ({
+  list,
+  ...rest
+}: FlexProps & Pick<ButtonDropdownProps, "list">) => (
+  <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
+    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
+  </Flex>
 )
 
-const MobileButtonDropdown = (props: ButtonDropdownProps) => (
-  <StyledButtonDropdown mb={0} {...props} />
-)
+export const MobileButtonDropdown = (
+  props: ComponentProps<typeof StyledButtonDropdown>
+) => <StyledButtonDropdown mb={0} {...props} />
 
-const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => (
-  <Box
-    as="article"
-    flex="1 1 1024px"
-    position="relative"
-    px={8}
-    pb={8}
-    {...props}
-    sx={{
-      ".featured": {
-        pl: 4,
-        ml: -4,
-        borderLeft: "1px dotted",
-        borderColor: "primary",
-      },
-      ".citation p": {
-        color: "text200",
-      },
-    }}
-  />
-)
+export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+  const lgBp = useToken("breakpoints", "lg")
 
-const MobileButton = (props: ChildOnlyProp) => {
+  return (
+    <Box
+      as="article"
+      flex={`1 1 ${lgBp}`}
+      position="relative"
+      px={8}
+      pb={8}
+      {...props}
+      sx={{
+        ".featured": {
+          pl: 4,
+          ml: -4,
+          borderLeft: "1px dotted",
+          borderColor: "primary.base",
+        },
+        ".citation p": {
+          color: "text200",
+        },
+      }}
+    />
+  )
+}
+
+export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
     <Box
-      bg="background"
+      bg="background.base"
       boxShadow={`0 -1px 0 ${borderColor}`}
       position="sticky"
       bottom={0}
@@ -285,6 +287,8 @@ const UseCasePage = ({
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
   const { t } = useTranslation()
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
 
   if (!siteData || !mdx?.frontmatter)
     throw new Error(
@@ -369,11 +373,9 @@ const UseCasePage = ({
     ],
   }
 
-  const lgBreakpoint = useToken("breakpoints", "lg")
-
   return (
     <Box position="relative" width="full">
-      <Show above={lgBreakpoint}>
+      <Show above={lgBp}>
         <BannerNotification shouldShow>
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <div>
@@ -415,7 +417,7 @@ const UseCasePage = ({
           }}
         />
       </HeroContainer>
-      <Show above={lgBreakpoint}>
+      <Show above={lgBp}>
         <Flex
           as={Link}
           to="#content"
@@ -424,7 +426,7 @@ const UseCasePage = ({
           p={4}
           width="full"
           _hover={{
-            bg: "background",
+            bg: "background.base",
           }}
         >
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
@@ -435,7 +437,7 @@ const UseCasePage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above={lgBreakpoint}>
+        <Show above={lgBp}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />
             <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
@@ -454,7 +456,7 @@ const UseCasePage = ({
           </MDXProvider>
           <FeedbackCard />
         </ContentContainer>
-        <Show below={lgBreakpoint}>
+        <Show below={lgBp}>
           <MobileButton>
             <MobileButtonDropdown list={dropdownLinks} />
           </MobileButton>

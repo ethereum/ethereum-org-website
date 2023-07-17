@@ -1,9 +1,19 @@
 // Libraries
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import React, { useState } from "react"
-import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  chakra,
+  Flex,
+  Heading,
+  Img,
+  ListItem,
+  SimpleGrid,
+  Stack,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 // Components
 import ButtonLink from "../ButtonLink"
@@ -20,153 +30,60 @@ import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
 
 //Utils
 import { trackCustomEvent } from "../../utils/matomo"
+import { ChildOnlyProp } from "../../types"
 
 // Styles
-const Content = styled.div`
-  background: ${(props) => props.theme.colors.layer2Gradient};
-  padding: 2.5rem;
-  border-radius: 2px;
-`
+const Flex50 = (props: ChildOnlyProp) => (
+  <Box flex={{ base: "100%", md: "50%" }} {...props} />
+)
 
-const Description = styled.div`
-  text-align: center;
-  max-width: 75ch;
-  margin: auto;
-`
+const TwoColumnContent = (props: ChildOnlyProp) => (
+  <Flex
+    flexDir={{ base: "column", lg: "row" }}
+    alignItems={{ base: "flex-start", lg: "normal" }}
+    gap={8}
+    justifyContent="space-between"
+    {...props}
+  />
+)
 
-const H3 = styled.h3`
-  margin-top: 0;
-`
+const ChakraSelect = chakra((props: { className?: string }) => (
+  <Select {...props} />
+))
+const StyledSelect = (props: any) => (
+  <Box mt="auto">
+    <ChakraSelect
+      maxW="none"
+      sx={{ ".react-select__control": { py: { base: "14px", sm: "0" } } }}
+      {...props}
+    />
+  </Box>
+)
 
-const Flex50 = styled.div`
-  flex: 50%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex: 100%;
-  }
-`
+const SelectedContainer = (props: ChildOnlyProp) => (
+  <Box bg="rgba(255, 255, 255, 0.02)" mt={2} p="21px" {...props} />
+)
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
+const H3 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h3"
+    mt={0}
+    fontSize={{ base: "xl", md: "2xl" }}
+    lineHeight={1.4}
+    fontWeight={600}
+    {...props}
+  />
+)
 
-// https://react-select.com/styles#using-classnames
-// Pass menuIsOpen to component to debug
-const StyledSelect = styled(Select)`
-  max-width: none;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    .react-select__control {
-      padding: 14px 0;
-    }
-  }
-`
-
-const SelectedContainer = styled.div`
-  background: rgba(255, 255, 255, 0.02);
-  margin-top: 0.5rem;
-  padding: 21px;
-`
-
-const ButtonLinkMargin = styled(ButtonLink)`
-  margin-top: 2.5rem;
-`
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(21, 1fr);
-  gap: 10px;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: repeat(11, 1fr);
-    margin: auto;
-  }
-`
-
-const LeftDescription = styled.div`
-  grid-column: 1/11;
-  grid-row: 1;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/12;
-    grid-row: 1;
-  }
-`
-
-const LeftSelect = styled.div`
-  grid-column: 1/11;
-  grid-row: 2;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/12;
-    grid-row: 2;
-  }
-`
-
-const RightDescription = styled.div`
-  grid-column: 12/22;
-  grid-row: 1;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/12;
-    grid-row: 5;
-  }
-`
-
-const RightSelect = styled.div`
-  grid-column: 12/22;
-  grid-row: 2;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/12;
-    grid-row: 6;
-  }
-`
-
-const LeftSelected = styled.div`
-  grid-column: 1/11;
-  grid-row: 3/6;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/12;
-    grid-row: 3;
-  }
-`
-
-const EthLogo = styled.div`
-  grid-column: 11;
-  grid-row: 4;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/12;
-    grid-row: 4;
-  }
-`
-
-const Image = styled(GatsbyImage)`
-  width: 100%;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 1.5rem;
-  }
-`
-
-const RightSelected = styled.div`
-  grid-column: 12/22;
-  grid-row: 3/6;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-column: 1/12;
-    grid-row: 7;
-  }
-`
+const H4 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h4"
+    fontSize={{ base: "md", md: "xl" }}
+    fontWeight={500}
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
 interface Exchange {
   name: string
@@ -259,7 +176,7 @@ const Layer2Onboard: React.FC<IProps> = ({
     )
   }
 
-  const selectExchangeOnboard = (option: ExchangeOption | CexOnboardOption) => {
+  const selectExchangeOnboard = (option: ExchangeOption & CexOnboardOption) => {
     if (Object.hasOwn(option, "cex")) {
       trackCustomEvent({
         eventCategory: `Selected cex to onboard`,
@@ -281,31 +198,63 @@ const Layer2Onboard: React.FC<IProps> = ({
     }
   }
 
+  const gridContentPlacementStyles = {
+    gridContainer: {
+      columns: { base: 1, md: 2 },
+      templateRows: {
+        base: "repeat(3, min-content)",
+        md: "repeat(2, min-content)",
+      },
+      columnGap: "70px",
+      rowGap: "10px",
+    },
+    selectedL2: {
+      gridRow: { base: 2, md: "2/-1" },
+      gridColumn: { md: "1/2" },
+    },
+    rightSideSelected: {
+      gridRow: { md: "2/-1" },
+      gridColumn: { md: "2/-1" },
+    },
+    logo: {
+      gridColumn: { md: "1 / 3" },
+      gridRow: { base: selectedL2 ? 3 : 2, md: 2 },
+      placeSelf: "center",
+    },
+  } as const
+
   return (
-    <Content>
-      <Description>
-        <h2>
+    <Box bg="layer2Gradient" borderRadius="sm" p={10}>
+      <Box textAlign="center" maxW="75ch" m="auto">
+        <Heading
+          fontSize={{ base: "2xl", md: "2rem" }}
+          mt="12"
+          fontWeight={600}
+          lineHeight={1.4}
+        >
           <Translation id="layer-2-onboard-title" />
-        </h2>
-        <p>
+        </Heading>
+        <Text>
           <Translation id="layer-2-onboard-1" />
-        </p>
-      </Description>
-      <Grid>
-        <LeftDescription>
-          <h4>
-            <Translation id="layer-2-onboard-wallet-title" />
-          </h4>
-          <p>
-            <Translation id="layer-2-onboard-wallet-1" />
-          </p>
-          <p>
-            <Link to="/bridges/">
-              <Translation id="layer-2-more-on-bridges" />
-            </Link>
-          </p>
-        </LeftDescription>
-        <LeftSelect>
+        </Text>
+      </Box>
+      <SimpleGrid {...gridContentPlacementStyles.gridContainer}>
+        <Flex flexDir="column">
+          {/* LeftDescription */}
+          <Box>
+            <H4>
+              <Translation id="layer-2-onboard-wallet-title" />
+            </H4>
+            <Text>
+              <Translation id="layer-2-onboard-wallet-1" />
+            </Text>
+            <Text>
+              <Link to="/bridges/">
+                <Translation id="layer-2-more-on-bridges" />
+              </Link>
+            </Text>
+          </Box>
+          {/* LeftSelected */}
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
@@ -321,37 +270,24 @@ const Layer2Onboard: React.FC<IProps> = ({
             }}
             placeholder={t("layer-2-onboard-wallet-input-placeholder")}
           />
-        </LeftSelect>
-        {selectedL2 && (
-          <LeftSelected>
-            <SelectedContainer>
-              <p>
-                <b>{`${t("layer-2-onboard-wallet-selected-1")} ${
-                  selectedL2.name
-                } ${t("layer-2-onboard-wallet-selected-2")}`}</b>
-              </p>
-              <p>{selectedL2.bridgeWallets.join(", ")}</p>
-              <ButtonLinkMargin to={selectedL2.bridge}>
-                {`${selectedL2.name} ${t("layer-2-bridge")}`}
-              </ButtonLinkMargin>
-            </SelectedContainer>
-          </LeftSelected>
-        )}
-        <RightDescription>
-          <h4>
-            <Translation id="layer-2-onboard-exchange-title" />
-          </h4>
-          <p>
-            <Translation id="layer-2-onboard-exchange-1" />
-          </p>
-          <p>
-            <Translation id="layer-2-onboard-exchange-2" />{" "}
-            <Link to="/wallets/find-wallet/">
-              <Translation id="layer-2-onboard-find-a-wallet" />
-            </Link>
-          </p>
-        </RightDescription>
-        <RightSelect>
+        </Flex>
+        <Flex flexDir="column">
+          {/* RightDescription */}
+          <Box>
+            <H4>
+              <Translation id="layer-2-onboard-exchange-title" />
+            </H4>
+            <Text>
+              <Translation id="layer-2-onboard-exchange-1" />
+            </Text>
+            <Text>
+              <Translation id="layer-2-onboard-exchange-2" />{" "}
+              <Link to="/wallets/find-wallet/">
+                <Translation id="layer-2-onboard-find-a-wallet" />
+              </Link>
+            </Text>
+          </Box>
+          {/* RightSelect */}
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
@@ -365,62 +301,87 @@ const Layer2Onboard: React.FC<IProps> = ({
                 options: [...cexOnboardOptions],
               },
             ]}
-            onChange={(selectedOption: ExchangeOption | CexOnboardOption) => {
+            onChange={(selectedOption: ExchangeOption & CexOnboardOption) => {
               selectExchangeOnboard(selectedOption)
             }}
             placeholder={t("layer-2-onboard-exchange-input-placeholder")}
             formatGroupLabel={formatGroupLabel}
           />
-        </RightSelect>
-        <EthLogo>
-          <Image image={ethIcon} objectFit="contain" alt={ethIconAlt} />
-        </EthLogo>
+        </Flex>
+        {/* LeftSelected extra */}
+        {selectedL2 && (
+          <Box {...gridContentPlacementStyles.selectedL2}>
+            <SelectedContainer>
+              <Text>
+                <b>{`${t("layer-2-onboard-wallet-selected-1")} ${
+                  selectedL2.name
+                } ${t("layer-2-onboard-wallet-selected-2")}`}</b>
+              </Text>
+              <Text>{selectedL2.bridgeWallets.join(", ")}</Text>
+              <ButtonLink to={selectedL2.bridge} mt={10}>
+                {`${selectedL2.name} ${t("layer-2-bridge")}`}
+              </ButtonLink>
+            </SelectedContainer>
+          </Box>
+        )}
+        {/* RightSelect exchange */}
         {selectedExchange && (
-          <RightSelected>
+          <Box {...gridContentPlacementStyles.rightSideSelected}>
             <SelectedContainer>
               <TwoColumnContent>
                 <Flex50>
                   <H3>
                     <Translation id="layer-2-deposits" />
                   </H3>
-                  <ul>
+                  <UnorderedList>
                     {selectedExchange.supports_deposits.map((l2) => (
-                      <li key={l2}>{l2}</li>
+                      <ListItem key={l2}>{l2}</ListItem>
                     ))}
-                  </ul>
+                  </UnorderedList>
                 </Flex50>
                 <Flex50>
                   <H3>
                     <Translation id="layer-2-withdrawals" />
                   </H3>
-                  <ul>
+                  <UnorderedList>
                     {selectedExchange.supports_withdrawals.map((l2) => (
-                      <li key={l2}>{l2}</li>
+                      <ListItem key={l2}>{l2}</ListItem>
                     ))}
-                  </ul>
+                  </UnorderedList>
                 </Flex50>
               </TwoColumnContent>
               <ButtonLink to={selectedExchange.url}>
                 {`${t("layer-2-go-to")} ${selectedExchange.name}`}
               </ButtonLink>
             </SelectedContainer>
-          </RightSelected>
+          </Box>
         )}
+        {/* RightSelect Cex */}
         {selectedCexOnboard && (
-          <RightSelected>
+          <Box {...gridContentPlacementStyles.rightSideSelected}>
             <SelectedContainer>
               <H3>Supported exchanges</H3>
-              <p>{selectedCexOnboard.cex_support.join(", ")}</p>
+              <Text>{selectedCexOnboard.cex_support.join(", ")}</Text>
               <H3>Supported layer 2s</H3>
-              <p>{selectedCexOnboard.network_support.join(", ")}</p>
+              <Text>{selectedCexOnboard.network_support.join(", ")}</Text>
               <ButtonLink to={selectedCexOnboard.url}>
                 {`${t("layer-2-go-to")} ${selectedCexOnboard.name}`}
               </ButtonLink>
             </SelectedContainer>
-          </RightSelected>
+          </Box>
         )}
-      </Grid>
-    </Content>
+        {/* EthLogo */}
+        <Box {...gridContentPlacementStyles.logo}>
+          <Img
+            as={GatsbyImage}
+            image={ethIcon}
+            objectFit="contain"
+            alt={ethIconAlt}
+            w="full"
+          />
+        </Box>
+      </SimpleGrid>
+    </Box>
   )
 }
 

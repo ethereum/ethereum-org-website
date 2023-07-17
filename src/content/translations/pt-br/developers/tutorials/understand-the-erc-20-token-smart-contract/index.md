@@ -7,7 +7,7 @@ tags:
   - "tokens"
   - "solidity"
   - "erc-20"
-skill: iniciante
+skill: beginner
 lang: pt-br
 published: 2020-04-05
 source: EthereumDev

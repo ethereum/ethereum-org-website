@@ -5,7 +5,7 @@ lang: pt-br
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: ../../assets/future_transparent.png
+image: ../../../../assets/future_transparent.png
 alt: ""
 summaryPoint1: Uma alternativa global e aberta ao sistema científico atual.
 summaryPoint2: Tecnologia que permite aos cientistas levantar fundos, realizar experimentos, compartilhar dados, distribuir informações e muito mais.
@@ -20,9 +20,9 @@ A DeSci visa criar um ecossistema em que os cientistas sejam incentivados a part
 
 A ciência descentralizada permite o acesso a fontes de financiamento mais diversificadas (de [DAOs](/dao/), [doações quadráticas](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) a financiamento coletivo, entre outros), dados de acesso e métodos mais acessíveis, assim como incentiva a reprodutibilidade.
 
-### Juan Benet - DeSci, Laboratórios Independentes, & Ciência de Dados em Grande Escala
+### Juan Benet — O Movimento DeSci
 
-<YouTube id="zkXM9H90g_E" />
+<YouTube id="5ORvbCIW39o" />
 
 ## Como a DeSci melhora a ciência {#desci-improves-science}
 
@@ -68,7 +68,7 @@ O modelo padrão atual para o financiamento da ciência é que indivíduos ou gr
 
 Estudos mostraram que os painéis de revisão de bolsas fazem um trabalho ruim na seleção de propostas de alta qualidade, pois as mesmas propostas apresentadas a diferentes painéis têm resultados totalmente diferentes. Como o financiamento se tornou mais escasso, ele se concentrou em um grupo menor de pesquisadores mais experientes com projetos mais intelectualmente conservadores. O efeito criou um cenário de financiamento hipercompetitivo, entrincheirando incentivos perversos e asfixiando a inovação.
 
-A Web3 tem o potencial de interromper este modelo de financiamento quebrado, experimentando diferentes modelos de incentivo desenvolvidos pelos DAOs e Web3 mais amplos. [Financiamento retroativo de bens públicos](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [financiamento quadrático](https://papers.ssrn. com/sol3/papers.cfm?abstract_id=2003531), [governança DAO](https://www.antler.co/blog/daos-and-web3-governance) e [estruturas de incentivo tokenizadas](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) são algumas das ferramentas Web3 que podem revolucionar o financiamento da ciência.
+A Web3 tem o potencial de interromper este modelo de financiamento quebrado, experimentando diferentes modelos de incentivo desenvolvidos pelos DAOs e Web3 mais amplos. [Financiamento retroativo de bens públicos](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [financiamento quadrático](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [governança DAO](https://www.antler.co/blog/daos-and-web3-governance) e [estruturas de incentivo tokenizadas](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) são algumas das ferramentas Web3 que podem revolucionar o financiamento da ciência.
 
 ### Propriedade e desenvolvimento de IP {#ip-ownership}
 
@@ -108,7 +108,6 @@ Explore projetos e junte-se à comunidade DeSci.
 - [Virotada: receba financiamento por meio de acordos de pesquisa patrocinados para pesquisas sobre longevidade](https://www.vitadao.com/)
 - [Fleming Protocol: economia de dados de código aberto que alimenta a descoberta biomédica colaborativa](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Active Inference Lab](https://www.activeinference.org/)
-- [Cherubs DAO: NFT financiado e governado por DAO para o fundo de impacto para saúde mental e bem-estar cerebral](https://cherubsdao.com/)
 - [CureDAO: plataforma de saúde de precisão de propriedade da comunidade](https://docs.curedao.org/)
 - [IdeaMarkets: para uma credibilidade científica descentralizada](https://ideamarket.io/)
 
@@ -135,5 +134,5 @@ Agradecemos o envio de sugestões para novos projetos a serem listados — veja 
 - [O que é ciência descentralizada?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversa entre Vitalik Buterin e o cientista Aubrey de Gray sobre a interseção de pesquisas de longevidade e criptomoedas](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [A publicação científica está em pane. A Web3 pode resolver isso?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
-- [Juan Benet — DeSci, Laboratórios Independentes e Ciência de Dados em Grande Escala](https://www.youtube.com/watch?v=zkXM9H90g_E)
+- [Juan Benet - DeSci, Laboratórios Independentes, & Ciência de Dados em Grande Escala](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier — Como a DeSci pode transformar a Pesquisa Biomédica e o Capital de Risco](https://www.youtube.com/watch?v=qB4Tc3FcVbM)

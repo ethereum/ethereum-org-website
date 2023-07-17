@@ -6,6 +6,7 @@ import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Badge,
   Box,
+  BoxProps,
   Center,
   Divider,
   DividerProps,
@@ -72,20 +73,17 @@ const SectionHeading = (props: HeadingProps) => {
   return <Heading {...mergeProps} />
 }
 
-const ContentBox = (
-  props: HTMLAttributes<"div"> & {
-    children: ReactNode
-    isLightGrayBg?: boolean
-  }
-) => (
+interface ContentBoxProps extends BoxProps {
+  isLightGrayBg?: boolean
+}
+const ContentBox: React.FC<ContentBoxProps> = ({ isLightGrayBg, ...rest }) => (
   <Box
     px={8}
     py={12}
     width="full"
-    {...(props.isLightGrayBg && { background: "layer2ContentSecondary" })}
-  >
-    {props.children}
-  </Box>
+    {...(isLightGrayBg && { background: "layer2ContentSecondary" })}
+    {...rest}
+  />
 )
 
 const StyledInfoIcon = () => (
@@ -95,9 +93,9 @@ const StyledInfoIcon = () => (
     mr={2}
     opacity={0.8}
     boxSize="full"
-    _hover={{ color: "primary" }}
-    _active={{ color: "primary" }}
-    _focus={{ color: "primary" }}
+    _hover={{ color: "primary.base" }}
+    _active={{ color: "primary.base" }}
+    _focus={{ color: "primary.base" }}
   />
 )
 
@@ -136,7 +134,7 @@ const StatBox = (props: ChildOnlyType) => (
 
 const StatPrimary = (props: { content: string }) => (
   <Text
-    color="primary"
+    color="primary.base"
     fontFamily="monospace"
     fontWeight="bold"
     fontSize="2rem"
@@ -173,7 +171,11 @@ interface L2DataResponse {
 }
 
 interface FeeDataResponse {
-  data: Array<{ id: string; results: { feeTransferEth: number } }>
+  data: Array<{
+    id: string
+    results: { feeTransferEth: number }
+    errors?: { [key: string]: string }
+  }>
 }
 
 const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
@@ -231,7 +233,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         )
 
         // filtering out L2's we arent listing
-        const feeData = feeDataResponse.data.filter((l2) => l2.id !== "hermez")
+        const feeData = feeDataResponse.data.filter(
+          (l2) => l2.id !== "hermez" && !l2.errors
+        )
 
         const feeAverage =
           feeData.reduce(
@@ -764,16 +768,18 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Text>
               <Translation id="layer-2-sidechains-2" />
             </Text>
-            <Text>
-              <Link to="/developers/docs/scaling/sidechains/">
-                <Translation id="layer-2-more-on-sidechains" />
-              </Link>
-            </Text>
-            <Text>
-              <Link to="/developers/docs/scaling/validium/">
-                <Translation id="layer-2-more-on-validiums" />
-              </Link>
-            </Text>
+            <UnorderedList>
+              <ListItem>
+                <Link to="/developers/docs/scaling/sidechains/">
+                  <Translation id="layer-2-more-on-sidechains" />
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link to="/developers/docs/scaling/validium/">
+                  <Translation id="layer-2-more-on-validiums" />
+                </Link>
+              </ListItem>
+            </UnorderedList>
           </Box>
           <Box flex="50%">
             <Text>

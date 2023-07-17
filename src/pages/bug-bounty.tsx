@@ -69,7 +69,7 @@ const H2 = (props: ChildOnlyProp) => (
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <Box
+  <Text
     fontSize="1.5rem"
     lineHeight="140%"
     color="text200"
@@ -118,7 +118,7 @@ const GradientContainer = (props: ChildOnlyProp) => (
     px={0}
     mt={8}
     bg="cardGradient"
-    boxShadow="inset 0px 1px 0px tableItemBoxShadow"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
     {...props}
   />
 )
@@ -255,7 +255,7 @@ const StyledGrayContainer = ({ children, ...props }) => (
     mt={8}
     mb={12}
     bg="grayBackground"
-    boxShadow="inset 0px 1px 0px tableItemBoxShadow"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
     {...props}
   >
     {children}
@@ -921,7 +921,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-upgrades-get-involved-bug-bounty", "common"] }
+        ns: { in: ["page-bug-bounty", "common"] }
       }
     ) {
       edges {

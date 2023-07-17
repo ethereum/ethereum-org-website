@@ -116,6 +116,10 @@ export const useNav = ({ path }: { path: string }) => {
               text: t("smart-contracts"),
               to: "/smart-contracts/",
             },
+            {
+              text: t("quizzes-title"),
+              to: "/quizzes/",
+            },
           ],
         },
         {

@@ -48,6 +48,7 @@
   "page-index-developers-code-example-description-3": "기존 서비스를 개방적인 분산형 애플리케이션으로 재구성할 수 있습니다.",
   "page-index-network-stats-title": "오늘의 이더리움",
   "page-index-network-stats-subtitle": "최신 네트워크 통계",
+  "page-index-network-stats-total-eth-staked": "총  스테이킹된 ETH",
   "page-index-network-stats-eth-price-description": "ETH 가격(미국 달러)",
   "page-index-network-stats-eth-price-explainer": "1이더(ETH)의 최신 가격입니다. 최저 0.000000000000000001을 구입할 수 있으며, 1이더(ETH) 전액을 구입할 필요는 없습니다.",
   "page-index-network-stats-tx-day-description": "오늘의 거래",

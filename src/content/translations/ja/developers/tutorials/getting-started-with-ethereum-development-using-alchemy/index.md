@@ -8,7 +8,7 @@ tags:
   - "ノード"
   - "クエリ"
   - "Alchemy"
-skill: 初級
+skill: beginner
 lang: ja
 published: 2020-10-30
 source: Medium

@@ -4,7 +4,6 @@ description: 乐观解决方案标准链桥如何运作？ 为什么它会这样
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "乐观解决方案"
   - "链桥"
   - "二层网络"
 skill: intermediate
@@ -14,7 +13,7 @@ lang: zh
 
 [乐观解决方案](https://www.optimism.io/)采用[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)技术。 乐观卷叠能够以比以太坊主网（也称“第一层”）低得多的价格处理交易，因为交易只是由几个节点而非网络上的所有节点处理。 同时所有数据都已写入第一层，因此一切都能够得到证明并重建，并且具有主网的所有完整性和可用性保证。
 
-要在乐观解决方案（或任何其他第二层）上使用第一层资产，需要[桥接](/bridges/#prerequisites)该资产。 实现这一点的一种方法是，用户在第一层上锁定资产（以太币和 [ERC-20 代币](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)是最常见的资产）并收到相应资产，供在第二层上使用。 最后，拥有这些资产的任何人可能想把它们桥接回第一层。 在桥接过程中，资产会在第二层销毁，然后在第一层上发放给用户。
+要在乐观解决方案（或任何其他第二层）上使用第一层资产，需要[桥接](/bridges/#prerequisites)该资产。 实现这一点的一种方法是，用户在第一层上锁定资产（以太币和 [ERC-20 代币](/developers/docs/standards/tokens/erc-20/)是最常见的资产）并收到相应资产，供在第二层上使用。 最后，拥有这些资产的任何人可能想把它们桥接回第一层。 在桥接过程中，资产会在第二层销毁，然后在第一层上发放给用户。
 
 这就是[乐观解决方案标准链桥](https://community.optimism.io/docs/developers/bridge/standard-bridge)的工作方式。 在本文中，我们将学习链桥的源代码，看看它如何工作，并将它作为精心编写的 Solidity 代码示例加以研究。
 
@@ -170,7 +169,7 @@ lang: zh
      * @param _to L2 address to credit the withdrawal to.
      * @param _amount Amount of the ERC20 to deposit.
      * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
+     * @param _data 可选数据转发到 L2。 This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -643,7 +642,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
      * @param _from Account to pull the deposit from on L1.
      * @param _to Account to give the deposit to on L2.
      * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
+     * @param _data 可选数据转发到 L2。 This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -734,7 +733,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
      * @param _to Account to give the deposit to on L2
      * @param _amount Amount of the ERC20 to deposit.
      * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
+     * @param _data 可选数据转发到 L2。 This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -1014,7 +1013,7 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 
 只允许第二层链桥铸造和销毁资产。
 
-`_mint` 和 `_burn` 实际上是在 [OpenZeppelin ERC-20 合约](https://ethereum.org/en/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)中定义的。 该合约只是没有将它们暴露在外部，因为铸造和销毁代币的条件与 ERC-20 使用方式的数量一样多变。
+`_mint` 和 `_burn` 实际上是在 [OpenZeppelin ERC-20 合约](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)中定义的。 该合约只是没有将它们暴露在外部，因为铸造和销毁代币的条件与 ERC-20 使用方式的数量一样多变。
 
 ## 第二层链桥代码 {#l2-bridge-code}
 

@@ -32,7 +32,7 @@ Estes projetos criaram seus próprios programas de recompensas destinados a dese
 - [Programa de concessões da Chainlink](https://chain.link/community/grants) – _Concessões da comunidade da [Chainlink](https://chain.link/)_
 - [Programa de concessões Compound](https://compoundgrants.org/) – _Ecossistema financeiro [Compound](https://compound.finance/)_
 - [Programa de Recompensas Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/)Metaverso DAO_
-- [Organização de concessões do ecossistema Lido (LEGO)](https://lego.lido.fi/) – _Ecossistema financeiro [Lido](https://lido. fi/)_
+- [Organização de concessões do ecossistema Lido (LEGO)](https://lego.lido.fi/) – _Ecossistema financeiro [Lido](https://lido.fi/)_
 - [Programa MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) bolsas lideradas por funcionários DAO_
 - [Programa de bolsas mStable](https://docs.mstable.org/advanced/grants-program) – _Comunidade [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecossistema [The Graph](https://thegraph.com/)_

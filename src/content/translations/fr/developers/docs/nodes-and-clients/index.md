@@ -75,7 +75,7 @@ Le client d'exécution Geth intègre une option de [synchronisation simplifiée]
 
 Les clients légers sont un domaine de développement actif pour Ethereum et nous nous attendons à prochainement voir apparaître de nouveaux clients légers pour la couche de consensus et la couche d'exécution. Il existe également des routes potentielles pour fournir des données client légers sur le [réseau gossip](https://www.ethportal.net/). Ceci est avantageux dans la mesure où le réseau gossip pourrait supporter un réseau de nœuds légers sans avoir besoin que des nœuds complets servent les requêtes.
 
-Ethereum ne prend pas encore en charge un nombre important de ces nœuds légers mais la prise en charge des nœuds légers est une thématique qui devrait fortement développer dans un futur proche. En particulier, des clients comme [Nimbus](https://nimbus. team/), [Helios](https://github. com/a16z/helios), et [LodeStar](https://lodestar. chainsafe. io/) se focalisent actuellement fortement sur les nœuds légers.
+Ethereum ne prend pas encore en charge un nombre important de ces nœuds légers mais la prise en charge des nœuds légers est une thématique qui devrait fortement développer dans un futur proche. En particulier, des clients comme [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios), et [LodeStar](https://lodestar.chainsafe.io/) se focalisent actuellement fortement sur les nœuds légers.
 
 ### Nœud d'archive {#archive-node}
 
@@ -97,9 +97,9 @@ L'exécution de votre propre nœud vous permet d'utiliser Ethereum de façon pri
 - Votre nœud vérifie lui-même toutes les transactions et tous les blocs par rapport aux règles de consensus. Cela signifie que vous n’avez ni à vous fier à d’autres nœuds du réseau ni à leur faire entièrement confiance.
 - Vous pouvez utiliser un portefeuille Ethereum avec votre propre nœud. Vous pouvez utiliser des dapps de manière plus sécurisée et privée parce que vous n'aurez pas à communiquer vos adresses et soldes avec des nœuds aléatoires. Tout peut être contrôlé avec votre propre client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), et [de nombreux autres portefeuilles](/wallets/find-wallet/) proposent l'importation du RPC, leur permettant d'utiliser votre nœud.
 - Vous pouvez exécuter et autohéberger d'autres services qui dépendent des données d'Ethereum. Par exemple, il peut s'agir d'un validateur de Chaîne Phare, d'un logiciel comme la couche 2, d'une infrastructure, d'explorateur de blocs, de processeurs de paiement, etc.
-- Vous pouvez fournir vos propres [points de terminaison RPC personnalisés](https://ethereum.org/en/developers/docs/apis/json-rpc/). Publiquement pour la communauté, ou même hébergé en privé, un point de terminaison Ethereum permet aux gens d'utiliser votre nœud et d'éviter les grands fournisseurs centralisés.
+- Vous pouvez fournir vos propres [points de terminaison RPC personnalisés](/developers/docs/apis/json-rpc/). Publiquement pour la communauté, ou même hébergé en privé, un point de terminaison Ethereum permet aux gens d'utiliser votre nœud et d'éviter les grands fournisseurs centralisés.
 - Vous pouvez vous connecter à votre nœud en utilisant **les communications interprocessus (IPC)** ou réécrire le nœud pour charger votre programme en tant que plugin. Cette démarche garantit une faible latence, or cela est très utile, par exemple lorsque vous traitez beaucoup de données en utilisant des bibliothèques web3 ou lorsque vous avez besoin de remplacer vos transactions le plus rapidement possible (cas du frontrunning).
-- Vous pouvez directement miser de l'ETH pour sécuriser le réseau et gagner des récompenses. Voir [la mise en jeu individuelle](https://ethereum.org/en/staking/solo/) pour commencer.
+- Vous pouvez directement miser de l'ETH pour sécuriser le réseau et gagner des récompenses. Voir [la mise en jeu individuelle](/staking/solo/) pour commencer.
 
 ![Comment accéder à Ethereum via votre application et vos nœuds](./nodes.png)
 
@@ -277,7 +277,7 @@ La synchronisation optimiste est une stratégie de synchronisation post-fusion c
 
 #### Synchronisation des points de contrôle {#checkpoint-sync}
 
-La Synchronisation des points de contrôle, également connue sous le nom de synchronisation à faible subjectivité, génère une expérience utilisateur supérieure pour la synchronisation du Nœud Phare. Elle est basée sur des hypothèses de [faible subjectivité ](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) qui permettent de synchroniser la Chaîne phare à partir d'un point de contrôle de faible subjectivité récent plutôt que de la genèse. La synchronisation des points de contrôle réduit sensiblement le temps de synchronisation initiale avec des hypothèses de confiance similaires à la synchronisation effectuée à partir de la [genèse](/glossary/#genesis-block).
+La Synchronisation des points de contrôle, également connue sous le nom de synchronisation à faible subjectivité, génère une expérience utilisateur supérieure pour la synchronisation du Nœud Phare. Elle est basée sur des hypothèses de [faible subjectivité](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) qui permettent de synchroniser la Chaîne phare à partir d'un point de contrôle de faible subjectivité récent plutôt que de la genèse. La synchronisation des points de contrôle réduit sensiblement le temps de synchronisation initiale avec des hypothèses de confiance similaires à la synchronisation effectuée à partir de la [genèse](/glossary/#genesis-block).
 
 En pratique, cela signifie que votre nœud se connecte à un service distant pour télécharger les états finalisés récents et continue de vérifier les données à partir de ce point. Les tiers qui fournissent les données sont de confiance et doivent être soigneusement sélectionnés.
 

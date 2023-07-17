@@ -383,7 +383,7 @@ Lorsqu'un client de consensus se connecte au client d'exécution pour lire le co
 
 Un client de consensus joue le rôle de nœud phare pour que les validateurs puissent se connecter. Chaque client de consensus a son propre logiciel de validateur décrit en détail dans sa documentation respective.
 
-Exécuter votre propre validateur permet la [mise en jeu individuelle](https://ethereum.org/en/staking/solo/), la méthode la plus efficace et la plus fiable pour soutenir le réseau Ethereum. Cependant, cela nécessite un dépôt de 32 ETH. Pour exécuter un validateur sur votre propre nœud avec un montant moindre, un groupe d'enjeu décentralisé comportant des opérateurs de nœuds sans intermédiaire de confiance, comme [Rocket Pool](https://rocketpool.net/node-operators), pourrait vous intéresser.
+Exécuter votre propre validateur permet la [mise en jeu individuelle](/staking/solo/), la méthode la plus efficace et la plus fiable pour soutenir le réseau Ethereum. Cependant, cela nécessite un dépôt de 32 ETH. Pour exécuter un validateur sur votre propre nœud avec un montant moindre, un groupe d'enjeu décentralisé comportant des opérateurs de nœuds sans intermédiaire de confiance, comme [Rocket Pool](https://rocketpool.net/node-operators), pourrait vous intéresser.
 
 La façon la plus simple de commencer avec la mise en jeu et la génération de clés de validateur est d'utiliser [la plateforme de lancement de mise en jeu du réseau de test Goerli](https://goerli.launchpad.ethereum.org/), qui vous permet de tester votre configuration en [exécutant des nœuds sur Goerli](https://notes.ethereum.org/@launchpad/goerli). Lorsque vous êtes prêt pour le réseau principal, vous pouvez répéter ces étapes en utilisant la [plateforme de lancement de mise en jeu du réseau principal](https://launchpad.ethereum.org/).
 
@@ -439,7 +439,7 @@ Envisagez de créer un service pour exécuter automatiquement votre client au d�
 
 Vous devez conserver votre logiciel client à jour avec les derniers patchs de sécurité, les dernières fonctionnalités et les [EIPs](/eips/). Tout particulièrement avant [les fourches majeures](/history/), assurez-vous d'utiliser la bonne version client.
 
-> Avant les mises à jour importantes du réseau, EF publie un message sur son [blog ](https://blog.ethereum.org). Vous pouvez [vous abonner à ces annonces](https://groups.google.com/a/ethereum.org/g/announcements) pour recevoir une notification par email lorsque votre nœud a besoin d'une mise à jour.
+> Avant les mises à jour importantes du réseau, EF publie un message sur son [blog](https://blog.ethereum.org). Vous pouvez [vous abonner à ces annonces](https://groups.google.com/a/ethereum.org/g/announcements) pour recevoir une notification par email lorsque votre nœud a besoin d'une mise à jour.
 
 La mise à jour des clients est très simple. Chaque client a des instructions spécifiques dans sa documentation, mais le processus consiste généralement à simplement télécharger la dernière version et à redémarrer le client avec le nouvel exécutable. Le client devrait reprendre là où il s'est arrêté, mais avec les mises à jour appliquées.
 

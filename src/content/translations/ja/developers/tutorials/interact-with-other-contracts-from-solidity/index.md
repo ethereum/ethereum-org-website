@@ -8,7 +8,7 @@ tags:
   - "Remix"
   - "デプロイ"
   - "構成可能性"
-skill: 詳細
+skill: advanced
 lang: ja
 published: 2020-04-05
 source: EthereumDev

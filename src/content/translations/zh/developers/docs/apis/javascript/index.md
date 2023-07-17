@@ -10,7 +10,7 @@ lang: zh
 
 如果您想要用 JavaScript 连接到一个以太坊节点， 可以使用原生 JavaScript，不过生态系统中存在一些方便的库，使得这个事情变得更加容易。 通过这些库，开发者可以写下直观易懂甚至单行的代码就能初始化与以太坊的互动（背后使用 JSON RPC 请求）。
 
-请注意，自从[合并](/roadmap/merge/)以来，运行一个节点需要两个连接的以太坊软件 - 一个执行客户端和一个共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
+请注意，[合并](/roadmap/merge/)后，运行节点需要两种互联的以太坊软件 - 执行客户端和共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
 
 ## 前提条件 {#prerequisites}
 
@@ -231,14 +231,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Web3js 实用功能](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Web3js 实用功能](https://docs.web3js.org/api/web3-utils)
 - [Ethers 实用功能](https://docs.ethers.io/v5/api/utils/)
 
 ## 可用的库 {#available-libraries}
 
 **Web3.js -** **_以太坊 JavaScript API。_**
 
-- [相关文档](https://web3js.readthedocs.io/en/1.0/)
+- [相关文档](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_JavaScript 和 TypeScript 中完整的以太坊钱包实现和实用工具。_**
@@ -273,9 +273,14 @@ ethers.utils.formatEther(balance)
 - [相关文档](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**viem -** **_以太坊的 TypeScript 接口。_**
+
+- [相关文档](https://viem.sh)
+- [Github](https://github.com/wagmi-dev/viem)
+
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对你有所帮助？ 编辑本页面以添加！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
 
 ## 相关主题 {#related-topics}
 
@@ -285,5 +290,5 @@ _还有哪些社区资源对你有所帮助？ 编辑本页面以添加！_
 ## 相关教程 {#related-tutorials}
 
 - [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
-- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用稳定币 DAI 代币，了解如何使用 JavaScript 调用合约函数。_
+- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI 代币，从而借助 JavaScript 调用合约函数。_
 - [使用 Web3 和 Alchemy 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– 从后端发送交易分步指南。_

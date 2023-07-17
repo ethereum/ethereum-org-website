@@ -55,88 +55,14 @@ const EnergyConsumptionChart: React.FC = () => {
   const data = useBreakpointValue<Data>({
     base: [
       {
-        name: t("energy-consumption-chart-youtube-label"),
-        amount: 244,
-        color: "#FF0000",
-      },
-      {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 100,
-        color: "#F2A900",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
-        color: "#C1B6F5",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pos-label"),
-        amount: 0.0026,
-        color: "#C1B6F5",
-      },
-    ],
-    sm: [
-      {
-        name: t("energy-consumption-chart-youtube-label"),
-        amount: 244,
-        color: "#FF0000",
-      },
-      {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 100,
-        color: "#F2A900",
-      },
-      {
-        name: t("energy-consumption-chart-netflix-label"),
-        amount: 94,
-        color: "#E50914",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
-        color: "#C1B6F5",
-      },
-      {
-        name: t("energy-consumption-chart-paypal-label"),
-        amount: 0.26,
-        color: "#C1B6F5",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pos-label"),
-        amount: 0.0026,
-        color: "#C1B6F5",
-      },
-    ],
-    md: [
-      {
-        name: t("energy-consumption-chart-youtube-label"),
-        amount: 244,
-        color: "#FF0000",
-      },
-      {
-        name: t("energy-consumption-chart-gold-mining-galaxy-label"),
-        amount: 240,
-        color: "#D7B14A",
-      },
-      {
         name: t("energy-consumption-chart-global-data-centers-label"),
         amount: 200,
-        color: "#D7B14A",
-      },
-      {
-        name: t("energy-consumption-chart-gold-mining-cbeci-label"),
-        amount: 130,
-        color: "#D7B14A",
+        color: "#FF0000",
       },
       {
         name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 100,
+        amount: 131,
         color: "#F2A900",
-      },
-      {
-        name: t("energy-consumption-chart-netflix-label"),
-        amount: 94,
-        color: "#E50914",
       },
       {
         name: t("energy-consumption-chart-eth-pow-label"),
@@ -149,9 +75,83 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#71BB8A",
       },
       {
+        name: t("energy-consumption-chart-eth-pos-label"),
+        amount: 0.0026,
+        color: "#C1B6F5",
+      },
+    ],
+    sm: [
+      {
+        name: t("energy-consumption-chart-global-data-centers-label"),
+        amount: 200,
+        color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-gold-mining-cbeci-label"),
+        amount: 131,
+        color: "#F2A900",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 131,
+        color: "#D7B14A",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 78,
+        color: "#C1B6F5",
+      },
+      {
+        name: t("energy-consumption-chart-netflix-label"),
+        amount: 0.451,
+        color: "#E50914",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pos-label"),
+        amount: 0.0026,
+        color: "#C1B6F5",
+      },
+    ],
+    md: [
+      {
+        name: t("energy-consumption-chart-global-data-centers-label"),
+        amount: 200,
+        color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-gold-mining-cbeci-label"),
+        amount: 131,
+        color: "#D7B14A",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 131,
+        color: "#D7B14A",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 78,
+        color: "#C1B6F5",
+      },
+      {
+        name: t("energy-consumption-chart-gaming-us-label"),
+        amount: 34,
+        color: "#71BB8A",
+      },
+      {
+        name: t("energy-consumption-chart-netflix-label"),
+        amount: 0.451,
+        color: "#E50914",
+      },
+      {
         name: t("energy-consumption-chart-paypal-label"),
         amount: 0.26,
         color: "#C1B6F5",
+      },
+      {
+        name: "AirBnB",
+        amount: 0.02,
+        color: "#E50914",
       },
       {
         name: t("energy-consumption-chart-eth-pos-label"),

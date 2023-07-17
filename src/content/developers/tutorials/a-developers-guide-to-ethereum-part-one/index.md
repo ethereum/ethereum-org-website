@@ -18,8 +18,8 @@ This post aspires to be accessible to a wide range of developers. [Python tools]
 
 Assumptions:
 
-- you can get around in a terminal,
-- you've written a few lines of Python code,
+- You can get around in a terminal,
+- You've written a few lines of Python code,
 - Python version 3.6 or greater is installed on your machine (use of a [virtual environment](https://realpython.com/effective-python-environment/#virtual-environments) is strongly encouraged), and
 - you’ve used `pip`, Python’s package installer.
   Again, if any of these are untrue, or you don’t plan to reproduce the code in this article, you can likely still follow along just fine.
@@ -60,7 +60,7 @@ Python developers that want to interact with Ethereum are likely to reach for [W
 
 [Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
 
-![A diagram showing how web3.py uses IPC to connect your applicaction to an Ethereum node](./web3py-and-nodes.png)
+![A diagram showing how web3.py uses IPC to connect your application to an Ethereum node](./web3py-and-nodes.png)
 
 _Configure the Ethereum node and Web3.py to communicate via the same protocol, e.g., IPC in this diagram._
 
@@ -100,6 +100,8 @@ pip install 'web3[tester]'
 
 You’re all set up to go!
 
+Note: The `web3[tester]` package works up to Python 3.10.xx
+
 ## Spin up a sandbox {#spin-up-a-sandbox}
 
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.
@@ -114,7 +116,7 @@ This will print out some information about the versions of Python and IPython yo
 In [1]:
 ```
 
-You’re looking at an interactive Python shell now. Essentially, its a sandbox to play in. If you’ve made it this far, its time to import Web3.py:
+You’re looking at an interactive Python shell now. Essentially, it's a sandbox to play in. If you’ve made it this far, it's time to import Web3.py:
 
 ```python
 In [1]: from web3 import Web3
@@ -289,7 +291,7 @@ Out[13]: 1000003000000000000000000
 
 The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account that submitted the transaction - this fee is the amount of gas burned (21000 units of gas for an ETH transfer) multiplied by a base fee that varies according to network activity plus a tip that goes to the validator that includes the transaction in a block.
 
-More on [gas](https://ethereum.org/en/developers/docs/gas/#post-london)
+More on [gas](/developers/docs/gas/#post-london)
 
 <div class="featured">Note: On the public network, transaction fees are variable based on network demand and how quickly you'd like a transaction to be processed. If you're interested in a breakdown of how fees are calculated, see my earlier post on <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">how transactions are included in a block</a>.</div>
 

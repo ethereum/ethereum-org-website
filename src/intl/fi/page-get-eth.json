@@ -43,8 +43,6 @@
   "page-get-eth-security": "Tämä tarkoittaa myös sitä, että sinun on syytä varmistaa varojesi suojaaminen huolellisesti. Kun hankit Ethereitä, pankki ei huolehdi varoistasi, vaan ne ovat sinun vastuullasi.",
   "page-get-eth-smart-contract-link": "Lisätietoa älysopimuksista",
   "page-get-eth-swapping": "Vaihda rahakkeitasi toisten Ethereihin ja päinvastoin.",
-  "page-get-eth-traditional-currencies": "Osta perinteisillä valuutoilla",
-  "page-get-eth-traditional-payments": "Osta Ethereitä perinteisillä maksutavoilla suoraan myyjiltä.",
   "page-get-eth-try-dex": "Kokeile hajautettua vaihtopörssiä (DEX)",
   "page-get-eth-use-your-eth": "Käytä Ethereitäsi",
   "page-get-eth-use-your-eth-dapps": "Kun sinulla on nyt Ethereitä, tutustu muutamaan Ethereum-sovellukseen (dApp). Niitä on tarjolla niin rahoitukseen, sosiaaliseen mediaan, pelaamiseen kuin muihinkin aloihin liittyen.",

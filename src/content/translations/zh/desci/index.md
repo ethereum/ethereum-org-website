@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: ../../assets/future_transparent.png
+image: ../../../../assets/future_transparent.png
 alt: ""
 summaryPoint1: 当前科学体系的全球性、开放性替代方案。
 summaryPoint2: 一种能帮助科学家做诸多事情的技术，例如筹集资金、进行实验、分享数据、传播见解等。
@@ -20,9 +20,9 @@ summaryPoint3: 它以开放科学运动为基础。
 
 去中心化科学允许更多样化的资金来源(从[去中心化自治组织](/dao/)、[二次捐赠](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)到众筹等等)，让数据和方法更加容易获得，并为可重复性提供激励。
 
-### Juan Benet - 去中心化科学、独立实验室以及大规模数据科学
+### Juan Benet - 去中心化科学运动
 
-<YouTube id="zkXM9H90g_E" />
+<YouTube id="5ORvbCIW39o" />
 
 ## 去中心化科学如何改善科学 {#desci-improves-science}
 
@@ -108,7 +108,6 @@ summaryPoint3: 它以开放科学运动为基础。
 - [VitaDAO: 从赞助研究协议获取资金用于长寿研究](https://www.vitadao.com/)
 - [Fleming Protocol: 助长生物医学合作发现的开源数据经济](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [活跃的推理实验室](https://www.activeinference.org/)
-- [Cherubs DAO：非同质化代币资助和去中心化自治组织管理的影响资金，用于心理健康和大脑健康领域](https://cherubsdao.com/)
 - [CureDAO：由社区所有的精准健康平台](https://docs.curedao.org/)
 - [IdeaMarkets：实现去中心化科学的诚信](https://ideamarket.io/)
 
@@ -128,7 +127,7 @@ summaryPoint3: 它以开放科学运动为基础。
 - [去中心化科学的主动推理本体论：从情境意义建构到认知共享](https://zenodo.org/record/6320575)
 - [Samuel Akinosho 的《去中心化科学：研究的未来》](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Nadia 的《科学基金（结语：去中心化科学和新的加密原语）》](https://nadia.xyz/science-funding)
-- [去中心化正在破坏药物开发](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [去中心化正在颠覆药物开发](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
 ### 相关视频 {#videos}
 

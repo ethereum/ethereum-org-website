@@ -252,7 +252,7 @@ One big advantage of Foundry is that it allows tests to be written in Solidity (
             return bytes.concat(INTO_CACHE, bytes32(_val));
 ```
 
-In the [EVM](https://ethereum.org/en/developers/docs/evm/) all uninitialized storage is assumed to be zeros. So if we look for the key for a value that isn't there, we get a zero. In that case the bytes that encode it are `INTO_CACHE` (so it will be cached next time), followed by the actual value.
+In the [EVM](/developers/docs/evm/) all uninitialized storage is assumed to be zeros. So if we look for the key for a value that isn't there, we get a zero. In that case the bytes that encode it are `INTO_CACHE` (so it will be cached next time), followed by the actual value.
 
 ```solidity
         // If the key is <0x10, return it as a single byte
@@ -295,7 +295,7 @@ The other values (3 bytes, 4 bytes, etc.) are handled the same way, just with di
         revert("Error in encodeVal, should not happen");
 ```
 
-If we get here it means we got a key that's not less than than 16\*256<sup>15</sup>. But `cacheWrite` limits the keys so we can't even get up to 14\*256<sup>16</sup> (which would have a first byte of 0xFE, so it would look like `DONT_CACHE`). But it doesn't cost us much to add a test in case a future programmer introduces a bug.
+If we get here it means we got a key that's not less than 16\*256<sup>15</sup>. But `cacheWrite` limits the keys so we can't even get up to 14\*256<sup>16</sup> (which would have a first byte of 0xFE, so it would look like `DONT_CACHE`). But it doesn't cost us much to add a test in case a future programmer introduces a bug.
 
 ```solidity
     } // encodeVal
@@ -551,7 +551,7 @@ The only additional test in `testEncodeVal()` is to verify that the length of `_
 
 The `testEncodeVal` function above only writes four values into the cache, so [the part of the function that deals with multi-byte values](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol#L144-L171) is not checked. But that code is complicated and error-prone.
 
-The first part of this function is a loop that writes all the values from 1 to 0x1FFF to the cache is order, so we'll be able to encode those values and know where they are going.
+The first part of this function is a loop that writes all the values from 1 to 0x1FFF to the cache in order, so we'll be able to encode those values and know where they are going.
 
 ```solidity
         .
@@ -849,13 +849,13 @@ The code in this article is a proof of concept, the purpose is to make the idea 
 - Handle values that aren't `uint256`. For example, strings.
 - Instead of a global cache, maybe have a mapping between users and caches. Different users use different values.
 - Values used for addresses are distinct from those used for other purposes. It might make sense to have a separate cache just for addresses.
-- Currently the cache keys are on a "first come, smallest key" algorithm. The first sixteen values can be sent as a single byte. The next 4080 values can be sent as two bytes. The next approximately million values are three bytes, etc. A production system should keep usage counters on cache entries and reorganize them so that the sixteen _most common_ values are one byte, the next 4080 most common values two bytes, etc.
+- Currently, the cache keys are on a "first come, smallest key" algorithm. The first sixteen values can be sent as a single byte. The next 4080 values can be sent as two bytes. The next approximately million values are three bytes, etc. A production system should keep usage counters on cache entries and reorganize them so that the sixteen _most common_ values are one byte, the next 4080 most common values two bytes, etc.
 
   However, that is a potentially dangerous operation. Imagine the following sequence of events:
 
   1. Noam Naive calls `encodeVal` to encode the address to which he wants to send tokens. That address is one of the first used on the application, so the encoded value is 0x06. This is a `view` function, not a transaction, so it's between Noam and the node he uses, and nobody else knows about it
 
-  2. Owen Owner runs the cache reoredring operation. Very few people actually use that address, so it is now encoded as 0x201122. A different value, 10<sup>18</sup>, is assigned 0x06.
+  2. Owen Owner runs the cache reordering operation. Very few people actually use that address, so it is now encoded as 0x201122. A different value, 10<sup>18</sup>, is assigned 0x06.
 
   3. Noam Naive sends his tokens to 0x06. They go to the address `0x0000000000000000000000000de0b6b3a7640000`, and since nobody knows the private key for that address, they are just stuck there. Noam is _not happy_.
 

@@ -49,17 +49,7 @@ To simplify, let's think about running a node on both a local physical machine a
   - An option to buy preconfigured machines
   - You have to physically prepare, maintain, and potentially troubleshoot the machine and networking
 
-Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. For example:
-
-- [QuikNode](https://www.quiknode.io/)
-- [Blockdaemon](https://blockdaemon.com)
-- [Alchemy](https://www.alchemy.com/)
-- [Blast](https://blastapi.io/)
-- [Getblock](https://getblock.io/)
-- [NodeReal](https://nodereal.io/)
-- [NOWNodes](https://nownodes.io/)
-
-Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
+Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. Check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
 #### Hardware {#hardware}
 
@@ -387,7 +377,7 @@ When a consensus client connects to the execution client to read the deposit con
 
 A consensus client serves as a Beacon Node for validators to connect. Each consensus client has its own validator software described in detail in its respective documentation.
 
-Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless method to support the Ethereum network. However, this requires a deposit of 32 ETH. To run a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
+Running your own validator allows for [solo staking](/staking/solo/), the most impactful and trustless method to support the Ethereum network. However, this requires a deposit of 32 ETH. To run a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
 
 The easiest way to get started with staking and validator key generation is to use the [Goerli Testnet Staking Launchpad](https://goerli.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
 

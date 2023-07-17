@@ -143,6 +143,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Direct 24/7 Support
     - Pay in Crypto (Enterprise)
+- [DRPC](https://drpc.org/)
+  - [Docs](https://docs.drpc.org/)
+  - Features
+    - Decentralized RPC nodes
+    - 15+ Node providers
+    - Node balancing
+    - Unlimited compute units per month on the free tier
+    - Data verification
+    - Custom endpoints
+    - http and WSS endpoints
+    - Unlimited keys (free and paid tier)
+    - Flexible fallback options
+    - [Public Endpoint](https://eth.drpc.org)
+    - Free shared archive nodes
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Features
@@ -193,6 +207,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Support for multi-cloud, multi-region and hybrid deployment orchestrations
     - Simple hourly SaaS-based pricing
     - SLAs and 24x7 support
+- [**Lava Network**](https://www.lavanet.xyz/)
+  - [Docs](https://docs.lavanet.xyz/)
+  - Features
+    - Free Testnet Use
+    - Decentralized Redundancy for High Uptime
+    - Open-source
+    - Fully Decentralized SDK
+    - Ethers.js Integration
+    - Intuitive Project Management Interface
+    - Consensus-Based Data Integrity
+    - Multi-chain Support
 - [**Moralis**](https://moralis.io/)
   - [Docs](https://docs.moralis.io/)
   - Features
@@ -314,6 +339,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unlimited TX fee and infinite Gas for sending transactions
     - Fastest getting of the new block and reading of the blockchain
     - The best price per API call guarantee
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Docs](https://docs.chainbase.com)
+  - Features
+    - Highly available, fast, and scalable RPC service
+    - Multi-chain support
+    - Free tariffs
+    - User-friendly dashboard
+    - Provides blockchain data services beyond RPC
 
 [**Zeeve**](https://www.zeeve.io/)
 

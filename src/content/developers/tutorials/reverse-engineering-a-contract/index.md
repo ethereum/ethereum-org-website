@@ -14,7 +14,7 @@ _There are no secrets on the blockchain_, everything that happens is consistent,
 
 There are reverse compilers, but they don't always produce [usable results](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). In this article you learn how to manually reverse engineer and understand a contract from [the opcodes](https://github.com/wolflo/evm-opcodes), as well as how to interpret the results of a decompiler.
 
-To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You can read about about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
+To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You can read about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
 ## Prepare the Executable Code {#prepare-the-executable-code}
 
@@ -73,14 +73,14 @@ This code does two things:
 
 This snippet starts with a `JUMPDEST`. EVM (Ethereum virtual machine) programs throw an exception if you jump to an opcode that isn't `JUMPDEST`. Then it looks at the CALLDATASIZE, and if it is "true" (that is, not zero) jumps to 0x7C. We'll get to that below.
 
-| Offset | Opcode     | Stack (after opcode)                                                                              |
-| -----: | ---------- | ------------------------------------------------------------------------------------------------- |
-|     64 | CALLVALUE  | [Wei](https://ethereum.org/en/glossary/#wei) provided by the call. Called `msg.value` in Solidity |
-|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                                       |
-|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                                     |
-|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                                           |
-|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                                         |
-|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                                                |
+| Offset | Opcode     | Stack (after opcode)                                                       |
+| -----: | ---------- | -------------------------------------------------------------------------- |
+|     64 | CALLVALUE  | [Wei](/glossary/#wei) provided by the call. Called `msg.value` in Solidity |
+|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
+|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                              |
+|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                    |
+|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
+|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
 So when there is no call data we read the value of Storage[6]. We don't know what this value is yet, but we can look for transactions that the contract received with no call data. Transactions which just transfer ETH without any call data (and therefore no method) have in Etherscan the method `Transfer`. In fact, [the very first transaction the contract received](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) is a transfer.
 

@@ -341,15 +341,16 @@ Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügerei
 
 ## NFTs erstellen {#build-with-nfts}
 
-Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/docs/standards/tokens/erc-721/) erstellt. Es gibt jedoch noch andere Standards, die für Sie unter Umständen von Interesse sind. Der Standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) erlaubt halb-fungible Token, die besonders im Gaming-Bereich nützlich sind. Kürzlich wurde [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) vorgeschlagen, um das Prägen von NFTs wesentlich effizienter zu machen. Dieser Standard ermöglicht es Ihnen, so viele Tokens wie Sie möchten in einer Transaktion zu prägen!
+Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/docs/standards/tokens/erc-721/) erstellt. Es gibt jedoch noch andere Standards, die für Sie unter Umständen von Interesse sind. Der Standard [ERC-1155](/developers/docs/standards/tokens/erc-1155/) erlaubt halb-fungible Token, die besonders im Gaming-Bereich nützlich sind. Kürzlich wurde [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) vorgeschlagen, um das Prägen von NFTs wesentlich effizienter zu machen. Dieser Standard ermöglicht es Ihnen, so viele Tokens wie Sie möchten in einer Transaktion zu prägen!
 
 ## Weiterführende Informationen {#further-reading}
 
-- [Daten zu Krypto art-Kunst](https://cryptoart.io/data) – Richard Chen, automatisch aktualisiert
+- [Daten zu Krypto art-Kunst](https://cryptoart.io/data) – _Richard Chen, automatisch aktualisiert_
 - [OpenSea: OpenSea: die NFT-Bibel](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, 10. Januar 2020_
 - [NFT-Leitfaden für Einsteiger](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Januar 2020_
 - [Alles, was Sie über das Metaverse wissen müssen](https://foundation.app/blog/enter-the-metaverse) – _Foundation-Team, foundation.app_
 - [Nein, Krypto-Künstler schaden dem Planeten nicht](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Der Energieverbrauch von Ethereum](/energy-consumption/)
+- [Ethereum NFT APIs](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
 <QuizWidget quizKey="nfts" />

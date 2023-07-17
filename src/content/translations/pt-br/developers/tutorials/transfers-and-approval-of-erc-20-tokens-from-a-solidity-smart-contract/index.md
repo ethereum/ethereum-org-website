@@ -8,7 +8,7 @@ tags:
   - "solidity"
   - "introdução"
   - "erc-20"
-skill: intermediário
+skill: intermediate
 lang: pt-br
 published: 2020-04-07
 source: EthereumDev

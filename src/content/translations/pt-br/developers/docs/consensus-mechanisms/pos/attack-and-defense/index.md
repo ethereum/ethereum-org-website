@@ -8,7 +8,7 @@ Ladrões e sabotadores estão constantemente buscando oportunidades para atacar 
 
 ## Pré-requisitos {#prerequisites}
 
-São necessários alguns conhecimentos básicos de [prova de participação](/developers/docs/consensus-mechanisms/pos/). Além disso, será útil ter um entendimento básico da [camada de incentivo](/docs/consensus-mechanisms/pos/rewards-and-penalties) do Ethereum e do algoritmo de escolha de fork, [LMD-GHOST](/docs/consensus-mechanisms/pos/gasper).
+São necessários alguns conhecimentos básicos de [prova de participação](/developers/docs/consensus-mechanisms/pos/). Além disso, será útil ter conhecimentos básicos sobre a [camada de incentivo](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) do Ethereum e do algoritmo de escolha de bifurcação (fork), [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
 ## O que os invasores querem? {#what-do-attackers-want}
 
@@ -129,7 +129,7 @@ Seja qual for a penalidade imposta ao invasor, a comunidade também tem de decid
 
 No entanto, isso constituiria um desafio substancial em termos de governança. Alguns usuários e validadores certamente se perderiam ao retornar à cadeia honesta. As transações em blocos validados após o ataque poderiam ser revertidas, perturbando a camada de aplicação, o que simplesmente compromete a ética de alguns usuários que tendem a acreditar que “código é lei”. Agências de câmbio e aplicações teriam provavelmente vinculado ações fora da cadeia a transações na cadeia, que agora podem ser revertidas, começando uma cascata de retratações e revisões que seria difícil de desfazer de forma justa, especialmente se os ganhos obtidos ilicitamente tiverem sido misturados, depositados em DeFi ou em outros derivados com efeitos secundários para usuários honestos. Sem dúvida que alguns usuários, talvez mesmo institucionais, já teriam se beneficiado da cadeia desonesta, seja por esperteza ou por acaso, e poderiam se opor a um fork para proteger seus ganhos. Já foram feitos pedidos para simular a resposta da comunidade a ataques de >51%, a fim de coordenar uma ação de mitigação sensata que possa ser executada rapidamente. Existem algumas discussões úteis de Vitalik no ethresear.ch [aqui](https://ethresear.ch/t/timeliness-detectors-and-51-attack-recovery-in-blockchains/6925) e [aqui](https://ethresear.ch/t/responding-to-51-attacks-in-casper-ffg/6363) e no Twitter [aqui](https://twitter.com/skylar_eth/status/1551798684727508992?s=20&t=oHZ1xv8QZdOgAXhxZKtHEw). O objetivo de uma resposta social coordenada é o de ser muito direcionada e específica para punir o invasor e minimizar os efeitos para outros usuários.
 
-Governança já é um tema complicado. Gerenciar uma resposta de emergência de Camada 0 para uma cadeia de finalização desonesta seria, sem dúvida, desafiante para a comunidade Ethereum, mas [aconteceu](https://ethereum.org/en/history/#dao-fork-summary) - [duas vezes](https://ethereum.org/en/history/#tangerine-whistle) no histórico do Ethereum).
+Governança já é um tema complicado. Gerenciar uma resposta de emergência de Camada 0 para uma cadeia de finalização desonesta seria, sem dúvida, desafiante para a comunidade Ethereum, mas [aconteceu](/history/#dao-fork-summary) - [duas vezes](/history/#tangerine-whistle) no histórico do Ethereum).
 
 No entanto, há algo que é bastante satisfatório na última tentativa no mundo real. Em última análise, mesmo com essa pilha fenomenal de tecnologia acima de nós, se o pior alguma vez acontecer, pessoas reais terão de coordenar a solução.
 

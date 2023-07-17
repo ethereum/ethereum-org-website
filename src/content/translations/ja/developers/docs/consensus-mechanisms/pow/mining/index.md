@@ -41,6 +41,8 @@ Ether のマイニング ＝ ネットワークの保護
 
 ## イーサリアムトランザクションのマイニング方法 {#how-ethereum-transactions-were-mined}
 
+以下に、イーサリアムのプルーフ・オブ・ワークにおいてトランザクションがどのようにミントされていたのかについて概要を説明します。 イーサリアムのプルーフ・オブ・ステークにおけるミントのプロセスについては、[こちら](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos)にも同様の説明があります。
+
 1. [アカウント](/developers/docs/accounts/)の秘密鍵を使って、[トランザクション](/developers/docs/transactions/)リクエストを書き込み、署名する。
 2. 次に[ノード](/developers/docs/nodes-and-clients/)からイーサリアムネットワーク全体にトランザクションリクエストをブロードキャストする。
 3. 新しいトランザクションリクエストを受けると、イーサリアムネットワークの各ノードがリクエストをローカルのメンプールに追加する(メンプールとはブロックのブロックチェーンにまだコミットされていないすべてのトランザクションリクエストのリスト)。
@@ -52,30 +54,28 @@ Ether のマイニング ＝ ネットワークの保護
 7. 各ノードは、条件を満たしていないトランザクションリクエストのローカルのメンプールから、新しいブロック内の全トランザクションを削除する。
 8. ネットワークに新たに参加する新規ノードは、このトランザクションを含むブロックを含む、すべてのブロックを順にダウンロードする。 ローカル EVM コピーを初期化し(ブランク状態の EVM として開始)、ローカル EVM コピーの上でブロックですべてのトランザクションを実行するプロセスを実行し、各ブロックの状態チェックサムを検証する。
 
-すべてのトランザクションは一度だけマイニングされますが(新しいブロックに追加され、初めて伝播される)、正規の EVM 状態を進める過程ですべての参加者によって実行・検証されます。 これは、**信頼せず、確認する**というブロックチェーンの主要な考え方を反映したものです。
+すべてのトランザクションは、マイニング(新しいブロックに追加し、最初に伝播すること)が 1 回だけ実行され、その後 EVM の正規ステートを前進させるプロセスですべての参加者が実行、検証します。 これは、**信頼せず、確認する**というブロックチェーンの中心的な考え方を反映したものです。
+
+## オマー (アンクル) ブロック {#ommer-blocks}
+
+プルーフ・オブ・ワークによるブロックのマイニングは、確率論的な作業でした。つまり、ネットワークが遅延すると、2 つの有効なブロックが同時に公開される可能性がありました。 この場合、プロトコルは最長の（つまり、「正当性」が最も高い）チェーンを決定するのと同時に、チェーンに含まれなかったが正当である提案されたブロックに対しても部分的な報酬を提供することで、公平性を保証する必要がありました。 これにより、より小規模なマイナー（レイテンシーが大きくなる可能性が高い）も[オマー](/glossary/#ommer)のブロック報酬を通じて収益を得られるため、イーサリアムの分散化に貢献しました。
+
+オマーとは、親の同生を示すジェンダーニュートラルで好ましい用語であるが、「アンクル」と呼ばれることもります。 **イーサリアムがプルーフ・オブ・ステークに移行して以来、各スロットにつき 1 名の提案者のみが選択されるため**、オマーブロックのマイニングは実行されていません。 この変更については、マイニングされたオマーブロックの[履歴チャート](https://ycharts.com/indicators/ethereum_uncle_rate)で確認できます。
 
 ## ビジュアルデモ {#a-visual-demo}
 
-マイニングとプルーフ・オブ・ワークのブロックチェーンに関する Austin の説明動画をご視聴ください。
+オースティンによるブロックチェーンにおけるマイニングやプルーフ・オブ・ワークについての説明動画をご覧ください。
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-## マイニングアルゴリズム {#mining-algorithm}
+## マイニングのアルゴリズム {#mining-algorithm}
 
-イーサリアムメインネットでは、[「Ethash」](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)という 1 つのマイニングアルゴリズムのみが使用されました。 Ethhash とは、[「Dagger-Hashimoto」](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)として知られるオリジナルの研究開発アルゴリズムを受け継いだものです。
+イーサリアム・メインネットにおいて、マイニングのために用いられたアルゴリズムは[「Ethash」](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)のみです。 Ethhash は、[「Dagger-Hashimoto」](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)という当初の研究開発用アルゴリズムの後継アルゴリズムです。
 
-[マイニングアルゴリズムの詳細](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
-
-## 参考文献 {#further-reading}
-
-## 関連ツール {#related-tools}
-
-- [上位のイーサリアムマイナー](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
-- [Etherscan マイニング計算機](https://etherscan.io/ether-mining-calculator)
-- [Minerstat マイニング計算機](https://minerstat.com/coin/ETH)
+[マイニングのアルゴリズムについての詳細](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
 
 ## 関連トピック {#related-topics}
 
 - [ガス](/developers/docs/gas/)
-- [EVM](/developers/docs/evm/)
+- [EVM(イーサリアム仮想マシン)](/developers/docs/evm/)
 - [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)
