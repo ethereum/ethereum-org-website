@@ -282,7 +282,7 @@ Lo staking/votazione, inoltre, protegge gli oracoli decentralizzati dagli "attac
 
 ##### Meccanismi del punto di Schelling
 
-Il [punto di Schelling](https://en.wikipedia.org/wiki/Focal_point_(game_theory)) è un concetto della teoria dei giochi che presuppone che più entità, in assenza di qualsiasi comunicazione, sceglieranno sempre una soluzione comune a un problema. I meccanismi del punto di Schelling sono spesso utilizzati nelle reti di oracoli decentralizzati per consentire ai nodi di raggiungere un consenso sulle risposte alle richieste di dati.
+Il [punto di Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) è un concetto della teoria dei giochi che presuppone che più entità, in assenza di qualsiasi comunicazione, sceglieranno sempre una soluzione comune a un problema. I meccanismi del punto di Schelling sono spesso utilizzati nelle reti di oracoli decentralizzati per consentire ai nodi di raggiungere un consenso sulle risposte alle richieste di dati.
 
 Un primo esempio è [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), un feed di dati proposto in cui i partecipanti inviano risposte a domande "scalari" (domande le cui risposte sono descritte da una grandezza, ad esempio "qual è il prezzo di ETH?"), insieme a un deposito. Gli utenti che forniscono valori compresi tra il 25° e il 75° [percentile](https://en.wikipedia.org/wiki/Percentile) vengono premiati, mentre quelli i cui valori si discostano ampiamente dal valore mediano vengono penalizzati.
 

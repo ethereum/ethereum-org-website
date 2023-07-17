@@ -508,6 +508,19 @@ const FindWalletPage = ({ data, location }) => {
 
 export default FindWalletPage
 
+export const walletImage = graphql`
+  fragment walletImage on File {
+    childImageSharp {
+      gatsbyImageData(
+        width: 56
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
+    }
+  }
+`
+
 export const query = graphql`
   query FindWalletPage($languagesToFetch: [String!]!) {
     locales: allLocale(
@@ -526,258 +539,163 @@ export const query = graphql`
     }
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     argent: file(relativePath: { eq: "wallets/argent.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     brave: file(relativePath: { eq: "wallets/brave.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     frame: file(relativePath: { eq: "wallets/frame.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     numio: file(relativePath: { eq: "wallets/numio.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     portis: file(relativePath: { eq: "wallets/portis.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     taho: file(relativePath: { eq: "wallets/taho.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     safe: file(relativePath: { eq: "wallets/safe.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     coinwallet: file(relativePath: { eq: "wallets/coinwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     ambire: file(relativePath: { eq: "wallets/ambire.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     linen: file(relativePath: { eq: "wallets/linen.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     foxwallet: file(relativePath: { eq: "wallets/foxwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     pillar: file(relativePath: { eq: "wallets/pillar.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     mew: file(relativePath: { eq: "wallets/mew.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     opera: file(relativePath: { eq: "wallets/opera.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     guarda: file(relativePath: { eq: "wallets/guarda.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     web3auth: file(relativePath: { eq: "wallets/web3auth.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     bridge: file(relativePath: { eq: "wallets/bridge.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     torus: file(relativePath: { eq: "wallets/torus.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     oneinch: file(relativePath: { eq: "wallets/1inch.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     status: file(relativePath: { eq: "wallets/status.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     aktionariat: file(relativePath: { eq: "wallets/aktionariat.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     sequence: file(relativePath: { eq: "wallets/sequence.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     infinity_wallet: file(relativePath: { eq: "wallets/infinity_wallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     exodus: file(relativePath: { eq: "wallets/exodus.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     rabbywallet: file(relativePath: { eq: "wallets/rabbywallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     zerion: file(relativePath: { eq: "wallets/zerion.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     enkrypt: file(relativePath: { eq: "wallets/enkrypt.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     gridplus: file(relativePath: { eq: "wallets/gridplus.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     blockwallet: file(relativePath: { eq: "wallets/blockwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     okx: file(relativePath: { eq: "wallets/okx.jpeg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     onekey: file(relativePath: { eq: "wallets/onekey.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     apex: file(relativePath: { eq: "wallets/apex.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     shapeshift: file(relativePath: { eq: "wallets/shapeshift.png" }) {
       childImageSharp {
