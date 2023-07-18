@@ -53,9 +53,9 @@ It also requires very basic hardware setup, and some understanding of minimum re
 </ExpandableCard>
 
 <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
-Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
+Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.{' '}
 
-<a href="/security/"> Ethereum security and scam prevention</a>
+<a href="/security/">Ethereum security and scam prevention</a>
 </ExpandableCard>
 
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
