@@ -143,14 +143,6 @@ lang: zh
 - [Discord](https://discord.com/invite/KYswaxwEtg)
 - [论坛](https://forum.moralis.io/)
 
-- **BlockPi -** **提供更加高效快速的RPC服务。_**
-
-- [blockpi.io](https://blockpi.io/)
-- [相关文档](https://docs.blockpi.io/)
-- [GitHub](https://github.com/BlockPILabs)
-- [Discord](https://discord.com/invite/xTvGVrGVZv)
-
-
 \*_GetBlock - 用于 Web3 开发的区块链即服务_
 
 - [GetBlock.io](https://getblock.io/)

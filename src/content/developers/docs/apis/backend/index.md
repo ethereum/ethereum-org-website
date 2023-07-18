@@ -149,18 +149,17 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.chainbase.com/)
 - [Discord](https://discord.gg/Wx6qpqz4AF)
 
-**BlockPi -** **Provide more efficient and fast RPC services。_**
+\*_GetBlock- Blockchain-as-a-service for Web3 developement_
+
+- [GetBlock.io](https://getblock.io/)
+- [Documentation](https://getblock.io/docs/)
+
+**BlockPi -** **Provide more efficient and fast RPC services。\_**
 
 - [blockpi.io](https://blockpi.io/)
 - [Documentation](https://docs.blockpi.io/)
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
-
-
-\*_GetBlock- Blockchain-as-a-service for Web3 developement_
-
-- [GetBlock.io](https://getblock.io/)
-- [Documentation](https://getblock.io/docs/)
 
 ## Further reading {#further-reading}
 
