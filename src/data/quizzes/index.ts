@@ -36,7 +36,7 @@ const quizzes: RawQuizzes = {
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
   "solo-staking": {
-    title: "solo-staking",
+    title: "solo",
     questions: ["j001", "j002", "j004", "j005", "j006", "j007", "j008"],
   },
 }
@@ -82,7 +82,7 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "layer-2",
     level: "intermediate",
-    next: "staking",
+    next: "solo-staking",
   },
   {
     id: "solo-staking",
