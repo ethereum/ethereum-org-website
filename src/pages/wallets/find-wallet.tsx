@@ -1,12 +1,11 @@
 // Libraries
-import React, { useState, useRef, ReactNode } from "react"
+import React, { useState, useRef } from "react"
 import {
   Flex,
   Box,
   Image,
   Icon,
   Text,
-  Center,
   Heading,
   useTheme,
 } from "@chakra-ui/react"
@@ -15,7 +14,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
 import { MdOutlineCancel } from "react-icons/md"
-import { BsArrowCounterclockwise } from "react-icons/bs"
 
 // Components
 import BannerNotification from "../../components/BannerNotification"
@@ -23,7 +21,6 @@ import Breadcrumbs from "../../components/Breadcrumbs"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
-import WalletPersonasSidebar from "../../components/FindWallet/WalletPersonasSidebar"
 import WalletTable from "../../components/FindWallet/WalletTable"
 
 // Data
@@ -51,39 +48,6 @@ const Subtitle = ({ children }: ChildOnlyProp) => {
     >
       {children}
     </Text>
-  )
-}
-
-interface IFilterTabProps {
-  children: ReactNode
-  active: boolean
-  onClick?: React.MouseEventHandler<HTMLDivElement>
-}
-
-const FilterTab = ({ children, active, onClick }: IFilterTabProps) => {
-  return (
-    <Flex
-      justifyContent="center"
-      alignItems="center"
-      onClick={onClick}
-      w="50%"
-      textAlign="center"
-      bg={active ? "primary.base" : "none"}
-      py="0.9rem"
-      px="0.4rem"
-      color={active ? "background.base" : "text"}
-      _first={{
-        borderTopLeftRadius: "lg",
-      }}
-      _last={{
-        borderTopRightRadius: "lg",
-      }}
-      _hover={{
-        bg: active ? "primary.base" : "selectHover",
-      }}
-    >
-      {children}
-    </Flex>
   )
 }
 
@@ -116,6 +80,8 @@ const filterDefault = {
   eip_1559_support: false,
 }
 
+export type FiltersType = typeof filterDefault
+
 const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
@@ -124,7 +90,6 @@ const FindWalletPage = ({ data, location }) => {
   const resetWalletFilter = React.useRef(() => {})
   const wrapperRef = useRef<HTMLDivElement>(null)
 
-  const [showFeatureFilters, setShowFeatureFilters] = useState(false)
   const [showMobileSidebar, setShowMobileSidebar] = useState(false)
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
@@ -289,161 +254,20 @@ const FindWalletPage = ({ data, location }) => {
         borderBottom="1px solid"
         borderBottomColor="secondary"
       >
-        <Flex
-          maxW="330px"
-          direction="column"
-          gap="0.55rem"
-          overflowY="scroll"
-          bg="background.base"
-          transition="0.5s all"
-          zIndex={20}
-          borderTopRightRadius="lg"
+        <WalletFilterSidebar
           ref={wrapperRef}
-          pointerEvents="auto"
-          sx={{
-            scrollbarWidth: "thin",
-            scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
-
-            "::-webkit-scrollbar": {
-              width: 2,
-            },
-            "::-webkit-scrollbar-track": {
-              bg: "background.base",
-            },
-            "::-webkit-scrollbar-thumb": {
-              bgColor: "lightBorder",
-              borderRadius: "base",
-              border: "2px solid",
-              borderColor: "background.base",
-            },
+          {...{
+            filters,
+            resetWalletFilter,
+            updateFilterOption,
+            updateFilterOptions,
+            resetFilters,
+            selectedPersona,
+            setFilters,
+            setSelectedPersona,
+            showMobileSidebar,
           }}
-          width={{ base: "90%", sm: "350px", lg: "full" }}
-          height={{ base: "full", lg: "auto" }}
-          display={{ base: showMobileSidebar ? "flex" : "none", lg: "flex" }}
-          position={{
-            base: showMobileSidebar ? "absolute" : "relative",
-            lg: "static",
-          }}
-          boxShadow={{
-            base: showMobileSidebar
-              ? "0 800px 0 800px rgb(0 0 0 / 65%)"
-              : "none",
-            lg: "none",
-          }}
-          left={showMobileSidebar ? 0 : "-400px"}
-        >
-          <Flex
-            borderBottom="1px solid"
-            borderBottomColor="primary.base"
-            cursor="pointer"
-            position="sticky"
-            top={0}
-            bg="background.base"
-            zIndex={1}
-            sx={{
-              p: {
-                m: 0,
-                letterSpacing: "0.02rem",
-                fontSize: "0.9rem",
-                w: "full",
-              },
-            }}
-          >
-            <FilterTab
-              active={!showFeatureFilters}
-              onClick={() => {
-                setShowFeatureFilters(false)
-                trackCustomEvent({
-                  eventCategory: "WalletFilterSidebar",
-                  eventAction: `WalletFilterSidebar tab clicked`,
-                  eventName: `show user personas`,
-                })
-              }}
-            >
-              <Text>
-                <Translation id="page-find-wallet-profile-filters" />
-              </Text>
-            </FilterTab>
-            <FilterTab
-              active={showFeatureFilters}
-              onClick={() => {
-                setShowFeatureFilters(true)
-                trackCustomEvent({
-                  eventCategory: "WalletFilterSidebar",
-                  eventAction: `WalletFilterSidebar tab clicked`,
-                  eventName: `show feature filters`,
-                })
-              }}
-            >
-              <Text>
-                {t("page-find-wallet-feature-filters")} (
-                {Object.values(filters).reduce((acc, filter) => {
-                  if (filter) {
-                    acc += 1
-                  }
-                  return acc
-                }, 0)}
-                )
-              </Text>
-            </FilterTab>
-          </Flex>
-          <Center
-            py={0.5}
-            px={1}
-            borderRadius="base"
-            w="full"
-            mx="auto"
-            gap={1}
-            fontSize="xs"
-            cursor="pointer"
-            role="button"
-            aria-labelledby="reset-filter"
-            onClick={() => {
-              resetFilters()
-              resetWalletFilter.current()
-              trackCustomEvent({
-                eventCategory: "WalletFilterReset",
-                eventAction: `WalletFilterReset clicked`,
-                eventName: `reset filters`,
-              })
-            }}
-            data-group
-          >
-            <Icon
-              as={BsArrowCounterclockwise}
-              aria-hidden="true"
-              fontSize="sm"
-              fill="primary.base"
-              _groupHover={{ fill: "selectHover" }}
-            />
-            <Text
-              m={0}
-              color="primary.base"
-              _groupHover={{ color: "selectHover" }}
-              id="reset-filter"
-              aria-hidden="true"
-            >
-              {"Reset filters".toUpperCase()}
-            </Text>
-          </Center>
-          <Box>
-            {showFeatureFilters ? (
-              <WalletFilterSidebar
-                resetWalletFilter={resetWalletFilter}
-                filters={filters}
-                updateFilterOption={updateFilterOption}
-                updateFilterOptions={updateFilterOptions}
-              />
-            ) : (
-              <WalletPersonasSidebar
-                resetFilters={resetFilters}
-                setFilters={setFilters}
-                selectedPersona={selectedPersona}
-                setSelectedPersona={setSelectedPersona}
-              />
-            )}
-          </Box>
-        </Flex>
+        />
         <Box
           w="full"
           overflowY="scroll"
