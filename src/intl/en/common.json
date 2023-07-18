@@ -124,6 +124,7 @@
   "loading": "Loading...",
   "loading-error": "Loading error.",
   "loading-error-refresh": "Error, please refresh.",
+  "loading-error-try-again-later": "Unable to load data. Try again later.",
   "logo": "logo",
   "mainnet-ethereum": "Mainnet Ethereum",
   "more": "More",
