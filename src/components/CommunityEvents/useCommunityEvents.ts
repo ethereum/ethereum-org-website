@@ -8,7 +8,7 @@ import { GATSBY_FUNCTIONS_PATH } from "../../constants"
 import { getData } from "../../utils/cache"
 
 // Interface
-interface Event {
+export interface Event {
   date: string
   title: string
   calendarLink: string
@@ -43,40 +43,6 @@ export const useCommunityEvents = () => {
   })
 
   useEffect(() => {
-    try {
-      const fetchCalendarData = async () => {
-        const events = await getData<ReqEvents>(
-          `${GATSBY_FUNCTIONS_PATH}/calendarEvents`
-        )
-        const pastEventData = events.pastEvents.map((event) => {
-          return {
-            date: event.start.dateTime,
-            title: event.summary,
-            calendarLink: event.htmlLink,
-            pastEventLink: event.location,
-          }
-        })
-        const upcomingEventData = events.futureEvents.map((event) => {
-          return {
-            date: event.start.dateTime,
-            title: event.summary,
-            calendarLink: event.htmlLink,
-            pastEventLink: event.location,
-          }
-        })
-        setState({
-          ...state,
-          pastEventData,
-          upcomingEventData,
-          loading: false,
-          hasError: false,
-        })
-      }
-      fetchCalendarData()
-    } catch {
-      setState({ ...state, loading: false, hasError: true })
-    }
-
     const fetchCalendarData = async () => {
       let events
 

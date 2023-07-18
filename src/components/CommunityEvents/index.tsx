@@ -1,5 +1,5 @@
 //Libraries
-import React from "react"
+import React, { ComponentProps } from "react"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
@@ -24,7 +24,10 @@ import Translation from "../Translation"
 import { trackCustomEvent } from "../../utils/matomo"
 
 // Hooks
-import { useCommunityEvents } from "./useCommunityEvents"
+import {
+  type Event as EventType,
+  useCommunityEvents,
+} from "./useCommunityEvents"
 
 const matomoEvent = (buttonType: string) => {
   trackCustomEvent({
@@ -54,7 +57,7 @@ const EventLink = (props: ComponentProps<typeof Link>) => (
 )
 
 interface EventProps {
-  event: Event
+  event: EventType
   language: string
   type: "upcoming" | "past"
 }
