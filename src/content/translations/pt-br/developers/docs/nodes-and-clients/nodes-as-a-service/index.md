@@ -158,7 +158,7 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - [Ponto de extremidade público](https://eth.drpc.org)
     - Nós de arquivos compartilhados gratuitos
 - [**GetBlock**](https://getblock.io/)
-  - [Documentação](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - [Documentos](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Recursos
     - Acesso a mais de 40 nós de blockchain
     - 40.000 solicitações diárias gratuitas
@@ -207,6 +207,17 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Suporte a orquestrações multinuvem, multirregião e de implantação híbrida
     - Preços simples baseados em SaaS por hora
     - SLAs e suporte 24x7
+- [**Lava Network**](https://www.lavanet.xyz/)
+  - [Documentação](https://docs.lavanet.xyz/)
+  - Recursos
+    - Utilização gratuita da Testnet
+    - Redundância descentralizada para um tempo de atividade elevado
+    - Código aberto
+    - SDK totalmente descentralizado
+    - Integração Ethers.js
+    - Interface intuitiva de gestão de projetos
+    - Integridade dos dados baseada em consenso
+    - Suporte multicadeia
 - [**Moralis**](https://moralis.io/)
   - [Documentação](https://docs.moralis.io/)
   - Recursos
@@ -222,46 +233,46 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
 - [**NodeReal MegaNode**](https://nodereal.io/)
   - [Documentação](https://docs.nodereal.io/nodereal/meganode/introduction)
   - Recursos
-    - Serviços da API RPC confiáveis, rápidos e escalonáveis
+    - Serviços confiáveis, rápidos e dimensionáveis da API RPC
     - API aprimorada para desenvolvedores Web3
-    - Suporte multicadeias
+    - Suporte multicadeia
     - Comece gratuitamente
 - [**NOWNodes**](https://nownodes.io/)
   - [Documentação](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Recursos
     - Acesso a mais de 50 nós da blockchain
     - Chave de API gratuita
-    - Exploradores de Blocos
-    - Tempo de Resposta da API ⩽ 1 segundo
+    - Exploradores de bloco
+    - Tempo de resposta da API ⩽ 1 segundo
     - Equipe de suporte 24/7
-    - Gerente de Conta Pessoal
+    - Gerente de conta pessoal
     - Nós compartilhados, de arquivo, de cópia de segurança e dedicados
-- [**Rede Pocket**](https://www.pokt.network/)
+- [**Pocket Network**](https://www.pokt.network/)
   - [Documentação](https://docs.pokt.network/home/)
   - Recursos
-    - Protocolo RPC e mercado descentralizados
+    - Protocolo RPC descentralizado e mercado
     - 1 milhão de solicitações gratuitas por dia (por ponto de extremidade, máx. 2)
     - [Pontos de extremidade públicos](https://docs.pokt.network/home/resources/public-rpc-endpoints)
     - Programa Pre-Stake+ (se você precisar de mais de 1 milhão de solicitações por dia)
-    - Mais de 15 blockchains suportadas
-    - Mais de 6.400 nós com ganhos de POKT por atender a aplicativos
-    - Nó de arquivamento, nó de arquivamento com rastreamento e suporte a nós na Mainnet (Rede principal)
-    - Diversidade do cliente do nó da Mainnet (Rede principal) Ethereum
+    - Mais de 15 blockchains compatíveis
+    - Mais de 6.400 nós com ganhos de POKT a serviço dos aplicativos
+    - Nó de arquivamento, nó de arquivamento com rastreamento e suporte a nós na rede de teste
+    - Diversidade do cliente do nó da rede principal Ethereum
     - Nenhum ponto único de falha
     - Sem tempo de inatividade
     - Tokenomics rentáveis e perto de zero (participação de POKT uma vez para a largura de banda da rede)
     - Sem custos irrecuperáveis mensais. Transforme sua infraestrutura em um ativo
     - Balanceamento de carga incorporado ao protocolo
-    - Dimensiona infinitamente o número de solicitações por dia e nós por hora conforme o uso
-    - A opção mais privada e resistente à censura
+    - Dimensione infinitamente o número de solicitações por dia e nós por hora conforme o uso
+    - A opção mais particular e resistente à censura
     - Suporte prático para desenvolvedores
     - Painel e ferramentas de análise do [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
 - [**QuickNode**](https://www.quicknode.com)
-  - [Documentação](https://www.quicknode.com/docs/)
+  - [Documentos](https://www.quicknode.com/docs/)
   - Recursos
-    - Desempenho e confiabilidade líder do setor
+    - Desempenho e confiabilidade líderes do setor
     - Suporte técnico 24/7 e comunidade de desenvolvedores do Discord
-    - Equilibrado geograficamente, multinuvem/metal, rede de baixa latência
+    - Rede de baixa latência, geograficamente equilibrada e multinuvem/metal
     - Suporte multicadeia (Optimism, Arbitrum, Polygon + 11 outros)
     - Camadas intermediárias para velocidade e estabilidade (roteamento de chamadas, cache, indexação)
     - Monitoramento de contratos inteligentes via Webhooks
@@ -300,14 +311,14 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
   - Recursos
     - Nível gratuito, incluindo 25 milhões de unidades Tenderly por mês
     - Acesso gratuito aos dados históricos
-    - Cargas de trabalho de leitura pesada até 8x mais rápidas
+    - Cargas de trabalho de leitura pesada até 8 vezes mais rápidas
     - Acesso de leitura 100% consistente
     - Pontos de extremidade RPC JSON
     - Construtor de solicitações RPC baseado em interface de usuário e pré-visualização de solicitações
     - Integração rigorosa com as ferramentas de desenvolvimento, depuração e teste do Tenderly
     - Simulações de transação
     - Análise de uso e filtragem
-    - Gerenciamento de chaves de acesso fácil
+    - Gerenciamento fácil de chaves de acesso
     - Suporte técnico dedicado via chat, e-mail e Discord
 - [**Watchdata**](https://watchdata.io/)
   - [Documentos](https://docs.watchdata.io/)
@@ -318,20 +329,20 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Tarifas gratuitas
     - Limites altos que se adaptam a qualquer usuário
     - Suporte a vários nós
-    - Escalabilidade de recursos
-    - Alta velocidade de processamento
+    - Dimensionamento de recursos
+    - Velocidades de processamento altas
 - [**ZMOK**](https://zmok.io/)
-  - [Documentação](https://docs.zmok.io/)
+  - [Documentos](https://docs.zmok.io/)
   - Recursos
     - Front-running como serviço
     - Mempool de transações globais com métodos de pesquisa/filtragem
     - Taxa TX ilimitada e Gás infinito para envio de transações
     - O máximo de velocidade na obtenção do novo bloco e leitura da blockchain
-    - O melhor preço por garantia de chamada de API
+    - O melhor preço garantido por chamada de API
 
 [**Zeeve**](https://www.zeeve.io/)
 
-- [Documentação](https://www.zeeve.io/docs/)
+- [Documentos](https://www.zeeve.io/docs/)
 - Recursos
   - Plataforma de automação sem código de nível empresarial que fornece implantação, monitoramento e gerenciamento de nós e redes da Blockchain
   - Mais de 30 protocolos e integrações, e adicionando mais
