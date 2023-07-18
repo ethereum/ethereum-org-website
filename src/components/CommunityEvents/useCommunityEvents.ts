@@ -44,7 +44,7 @@ export const useCommunityEvents = () => {
 
   useEffect(() => {
     const fetchCalendarData = async () => {
-      let events
+      let events: ReqEvents
 
       try {
         events = await getData<ReqEvents>(
@@ -52,6 +52,7 @@ export const useCommunityEvents = () => {
         )
       } catch {
         setState({ ...state, loading: false, hasError: true })
+        return
       }
 
       const pastEventData = events.pastEvents.map((event) => {
