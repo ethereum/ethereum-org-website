@@ -309,12 +309,13 @@ const QuizWidget: React.FC<IProps> = ({
 
   // Render QuizWidget component
   return (
-    <Flex width="full" direction="column" alignItems="center">
+    <Flex width="full" direction="column" alignItems="center" my={16}>
       {/* Hide heading if quiz is not in Learning Quizzes Hub page */}
       {isStandaloneQuiz && (
         <Heading
           as="h2"
           mb={12}
+          mt={0}
           textAlign="center"
           scrollBehavior="smooth"
           scrollMarginTop={24}

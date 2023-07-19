@@ -12,13 +12,13 @@ export interface IProps extends ButtonProps {
   isSecondary?: boolean
 }
 
-const Button: React.FC<IProps> = ({ toId, isSecondary, ...props }) => {
+const Button: React.FC<IProps> = ({ toId, isSecondary, onClick, ...props }) => {
   const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (toId) {
       scrollIntoView(toId)
     }
 
-    props.onClick?.(e)
+    onClick?.(e)
   }
 
   /**

@@ -71,6 +71,7 @@ Os [clientes de execução Ethereum](/developers/docs/nodes-and-clients/#executi
 - [Jellopaper também conhecido como KEVM: semânticos de EVM em K](https://jellopaper.org/)
 - [O Beigepaper](https://github.com/chronaeon/beigepaper)
 - [Códigos de operação da EVM](https://www.ethervm.io/)
+- [Referência interativa dos códigos de operação da máquina virtual Ethereum](https://www.evm.codes/)
 - [Uma breve introdução à documentação do Solidy](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
 ## Tópicos relacionados {#related-topics}
