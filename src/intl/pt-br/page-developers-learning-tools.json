@@ -35,8 +35,6 @@
   "page-learning-tools-replit-description": "Um ambiente de desenvolvimento personalizável para Ethereum com recarregamento a quente, verificação de erros e suporte de rede de teste (testnet) de primeira classe.",
   "page-learning-tools-chainIDE-description": "Comece sua jornada até a Web3 escrevendo contratos inteligentes para Ethereum com ChainIDE. Use os modelos nativos para aprender e economizar tempo.",
   "page-learning-tools-chainIDE-logo-alt": "Logotipo da ChainIDE",
-  "page-learning-tools-tenderly-description": "Tenderly Sandbox é um ambiente de desenvolvimento onde é possivél escrever, executar ou depurar contratos inteligentes no navegador usando Solidity e JavaScript.",
-  "page-learning-tools-tenderly-logo-alt": "Tenderly logo",
   "page-learning-tools-replit-logo-alt": "Logotipo da Replit",
   "page-learning-tools-remix-logo-alt": "Logotipo Remix",
   "page-learning-tools-sandbox": "Ambientes educacionais para programação",
