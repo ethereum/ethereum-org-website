@@ -22,9 +22,9 @@ Un écosystème aussi puissant qu'Ethereum doit être géré selon une norme rob
 
 **Qu'est-ce que l'ERC-20 ?**
 
-L'ERC-20 introduit une norme pour les jetons fongibles. En d'autres termes, ils disposent d'une propriété qui fait que chaque jeton est exactement le même (en termes de type et de valeur) qu'un autre jeton. Par exemple, un jeton ERC-20 agit exactement comme de l'ETH, ce qui signifie que 1 jeton est et sera toujours égal à tous les autres jetons.
+L'ERC-20 introduit une norme standard pour les Jetons Fongibles. En d'autres termes, ils disposent d'une propriété qui fait que chaque jeton est exactement le même (en termes de type et de valeur) qu'un autre jeton. Par exemple, un jeton ERC-20 agit exactement comme de l'ETH, ce qui signifie que 1 jeton est et sera toujours égal à tous les autres jetons.
 
-## Pré-requis {#prerequisites}
+## Prérequis {#prerequisites}
 
 - [Comptes](/developers/docs/accounts)
 - [Contrats intelligents](/developers/docs/smart-contracts/)
@@ -36,10 +36,10 @@ La demande de commentaires ERC-20, proposée par Fabian Vogelsteller en novembre
 
 Exemples de fonctionnalités fournies par ERC-20 :
 
-- Transférer des jetons d'un compte à un autre
-- Obtenir le solde actuel du jeton d'un compte
-- Obtenir la quantité totale du jeton disponible sur le réseau
-- Approuver si un montant de jeton d'un compte peut être dépensé par un compte tiers
+- transférer des jetons d'un compte à un autre
+- obtenir le solde actuel du jeton d'un compte
+- obtenir la quantité totale du jeton disponible sur le réseau
+- approuver si un montant de jeton d'un compte peut être dépensé par un compte tiers
 
 Si un contrat intelligent implémente les méthodes et les événements suivants, il peut être nommé Contrat de jeton ERC-20 et, une fois déployé, sera responsable d'effectuer un suivi des jetons créés sur Ethereum.
 
@@ -59,7 +59,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-#### Évènements {#events}
+#### Événements {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
@@ -70,9 +70,9 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 Voyons pourquoi une norme est importante et pourquoi elle nous facilite le contrôle de tout contrat de jeton ERC-20 sur Ethereum. Nous avons juste besoin de l'interface binaire-programme (ABI) du contrat pour créer une interface à n'importe quel jeton ERC-20. Comme vous pouvez le voir ci-dessous, nous utiliserons une ABI simplifiée, pour en faire un exemple facile à comprendre.
 
-#### Exemple Web3.py {#web3py-example}
+#### Exempl Web3.py {#web3py-example}
 
-Pour commencer, assurez-vous d'avoir installé la bibliothèque Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
+Pour commencer, assurez-vous d'avoir installé la bibliothèque Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) :
 
 ```
 pip install web3
@@ -118,7 +118,7 @@ simplified_abi = [
     }
 ]
 
-dai_contract = w3.eth.contract(address=w3.toChecksumAddress(dai_token_addr), abi=simplified_abi)
+dai_contract = w3.eth.contract(address=w3.to_checksum_address(dai_token_addr), abi=simplified_abi)
 symbol = dai_contract.functions.symbol().call()
 decimals = dai_contract.functions.decimals().call()
 totalSupply = dai_contract.functions.totalSupply().call() / 10**decimals
@@ -129,7 +129,7 @@ print("===== %s =====" % symbol)
 print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 
-weth_contract = w3.eth.contract(address=w3.toChecksumAddress(weth_token_addr), abi=simplified_abi)
+weth_contract = w3.eth.contract(address=w3.to_checksum_address(weth_token_addr), abi=simplified_abi)
 symbol = weth_contract.functions.symbol().call()
 decimals = weth_contract.functions.decimals().call()
 totalSupply = weth_contract.functions.totalSupply().call() / 10**decimals
@@ -143,6 +143,7 @@ print("Addr Balance:", addr_balance)
 
 ## Complément d'information {#further-reading}
 
-- [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
+- [EIP-20 : ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - Implémentation ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy - Guide des jetons ERC20 Solidity](https://www.alchemy.com/overviews/erc20-solidity)

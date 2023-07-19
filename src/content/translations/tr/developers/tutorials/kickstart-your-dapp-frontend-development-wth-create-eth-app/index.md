@@ -51,7 +51,7 @@ Perde arkasında [create-react-app](https://github.com/facebook/create-react-app
 
 ### ethers.js {#ethersjs}
 
-[Web3](https://web3js.readthedocs.io/en/v1.2.7/) hâlâ çoğunlukla kullanılıyor olsa da, [ethers.js](https://docs.ethers.io/) son yıl içinde bir alternatif olarak büyük bir ivme kazanmıştır ve _create-eth-app_ içine entegre edilmiştir. Bununla çalışabilir, onu Web3 olarak değiştirebilir veya neredeyse beta sürümünden çıkmış olan [ethers.js v5](https://docs-beta.ethers.io/)'e yükseltmeyi düşünebilirsiniz.
+[Web3](https://docs.web3js.org/) hâlâ çoğunlukla kullanılıyor olsa da, [ethers.js](https://docs.ethers.io/) son yıl içinde bir alternatif olarak büyük bir ivme kazanmıştır ve _create-eth-app_ içine entegre edilmiştir. Bununla çalışabilir, onu Web3 olarak değiştirebilir veya neredeyse beta sürümünden çıkmış olan [ethers.js v5](https://docs-beta.ethers.io/)'e yükseltmeyi düşünebilirsiniz.
 
 ### The Graph {#the-graph}
 

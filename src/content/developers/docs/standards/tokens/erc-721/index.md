@@ -141,7 +141,7 @@ ck_extra_abi = [
     }
 ]
 
-ck_contract = w3.eth.contract(address=w3.toChecksumAddress(ck_token_addr), abi=simplified_abi+ck_extra_abi)
+ck_contract = w3.eth.contract(address=w3.to_checksum_address(ck_token_addr), abi=simplified_abi+ck_extra_abi)
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
 kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
@@ -162,25 +162,25 @@ tx_event_abi = {
 }
 
 # We need the event's signature to filter the logs
-event_signature = w3.sha3(text="Transfer(address,address,uint256)").hex()
+event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
-logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [event_signature]
 })
 
 # Notes:
-#   - 120 blocks is the max range for CloudFlare Provider
+#   - Increase the number of blocks up from 120 if no Transfer event is returned.
 #   - If you didn't find any Transfer event you can also try to get a tokenId at:
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
 #       Click to expand the event's logs and copy its "tokenId" argument
-
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
-kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
-is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
-print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
+if recent_tx:
+    kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
+    is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
+    print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
 CryptoKitties Contract has some interesting Events other than the Standard ones.
@@ -214,15 +214,15 @@ ck_extra_events_abi = [
 
 # We need the event's signature to filter the logs
 ck_event_signatures = [
-    w3.sha3(text="Pregnant(address,uint256,uint256,uint256)").hex(),
-    w3.sha3(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
+    w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
+    w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
 # Here is a Pregnant Event:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
-pregnant_logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+pregnant_logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[0]]
 })
 
@@ -230,9 +230,9 @@ recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"
 
 # Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
-birth_logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+birth_logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[1]]
 })
 

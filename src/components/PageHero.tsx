@@ -56,15 +56,17 @@ const PageHero: React.FC<IProps> = ({
       >
         <Box
           maxW={{ base: "full", lg: "container.sm" }}
-          py={{ base: 16, lg: 32 }}
+          pt={{ base: isReverse ? 0 : 8, lg: 32 }}
+          pb={{ base: isReverse ? 8 : 0, lg: 32 }}
           pl={{ base: 0, lg: 8 }}
-          mr={4}
+          mr={{ base: 0, lg: 4 }}
         >
           <Heading
             as="h1"
             textTransform="uppercase"
             fontSize="md"
             fontWeight="normal"
+            mt={{ base: 0, lg: 8 }}
             mb={4}
             color="text300"
             lineHeight={1.4}
@@ -77,6 +79,7 @@ const PageHero: React.FC<IProps> = ({
             fontSize={{ base: "2.5rem", lg: "5xl" }}
             maxW="full"
             mb={0}
+            mt={{ base: 8, lg: 12 }}
             color="text00"
             lineHeight={1.4}
           >

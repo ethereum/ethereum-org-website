@@ -82,11 +82,9 @@ PROPOSER_WEIGHT uint64(8)
 
 - [升级以太坊：激励层](https://eth2book.info/altair/part2/incentives)
 - [以太坊混合型 Casper 协议中的激励措施](https://arxiv.org/pdf/1903.04205.pdf)
-- [以太坊 2.0 的奖励和惩罚](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)
 - [Vitalik 的注释规范](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [防止以太坊 2 罚没的技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
 
 _来源_
 
-- _[https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)_
 - _[https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/)_

@@ -8,7 +8,7 @@ lang: zh
 
 ## 前言 {#prerequisites}
 
-阅读本文需要一些[权益证明](/developers/docs/consensus-mechanisms/pos/)的基础知识。 另外，如果对以太坊[激励层](/docs/consensus-mechanisms/pos/rewards-and-penalties)以及分叉选择算法 [LMD-GHOST](/docs/consensus-mechanisms/pos/gasper) 有基本的了解，也会有所帮助。
+阅读本文需要一些[权益证明](/developers/docs/consensus-mechanisms/pos/)的基础知识。 另外，如果对以太坊[激励层](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)以及分叉选择算法 [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper) 有基本的了解，也会有所帮助。
 
 ## 攻击者想要什么？ {#what-do-attackers-want}
 
@@ -129,7 +129,7 @@ LMD-GHOST 分叉选择算法的“最新消息驱动”部分减轻了雪崩攻�
 
 但是，这是一个重大的治理挑战。 有些用户和验证者会在切换回诚实链时无可避免地产生损失，因为攻击后被验证的区块中的交易可能会回滚，从而扰乱应用层。这很容易破坏一些相信“代码就是法律”的用户的道德原则。 交易所和应用很可能已经把脱链行为和现在可能要回滚的链上交易关联起来，并开始一连串的撤回和修订，很难公平地进行取舍，特别是如果不义之财混杂在其中，存入了去中心化金融或其他衍生品，会对诚实用户产生二次影响。 毫无疑问，那些因为精明或机缘巧合已经从不诚实链获利的一些用户甚至机构，可能会反对分叉以此保护他们的利益。 目前已经有呼吁要求社区对大于 51% 攻击的响应进行演练，以便可以快速执行合理的协调缓解措施。 Vitalik 发起一些有用的讨论，在 ethresear.ch 上：[这里](https://ethresear.ch/t/timeliness-detectors-and-51-attack-recovery-in-blockchains/6925)和[这里](https://ethresear.ch/t/responding-to-51-attacks-in-casper-ffg/6363)，以及在 Twitter 上：[这里](https://twitter.com/skylar_eth/status/1551798684727508992?s=20&t=oHZ1xv8QZdOgAXhxZKtHEw)。 协调的社会响应的目的应该是非常有针对性和具体地惩罚攻击者并尽量减少对其他用户的影响。
 
-治理已经是一个复杂的话题。 要管理 0 层网络紧急响应通过不诚实行为确定下来的链，对于以太坊社区来说毋庸置疑是一个挑战，但在以太坊历史上[已经发生过](https://ethereum.org/en/history/#dao-fork-summary) - [2 次](https://ethereum.org/en/history/#tangerine-whistle)。
+治理已经是一个复杂的话题。 要管理 0 层网络紧急响应通过不诚实行为确定下来的链，对于以太坊社区来说毋庸置疑是一个挑战，但在以太坊历史上[已经发生过](/history/#dao-fork-summary) - [2 次](/history/#tangerine-whistle)。
 
 尽管如此，在现实世界的最后回滚中，还是有一些令人相当满意的东西。 最后，即使在我们之上有着如此惊人的技术堆栈，但如果最坏的情况发生了，现实中的人们也必将协调出一条属于他们的出路。
 
@@ -156,7 +156,7 @@ LMD-GHOST 分叉选择算法的“最新消息驱动”部分减轻了雪崩攻�
 - [此页面的更详细版本](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Vitalik 关于结算最终确定性的看法](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 - [有关最新消息驱动的幽灵协议的论文](https://arxiv.org/abs/2003.03052)
-- [“Casper-友好的确定性小工具”论文](https://arxiv.org/abs/1710.09437)
+- [“Casper-友好的最终确定性小工具”论文](https://arxiv.org/abs/1710.09437)
 - [Gasper 论文](https://arxiv.org/pdf/2003.03052.pdf)
 - [提议者权重增强共识层规范](https://github.com/ethereum/consensus-specs/pull/2730)
 - [ethresear.ch 的弹跳攻击](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114)

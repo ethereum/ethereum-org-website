@@ -62,6 +62,17 @@ There are also two maintained public test implementations of Ethereum: Goerli an
 - [Goerli Staking Launchpad](https://goerli.launchpad.ethereum.org/)
 - [Ropsten, Rinkeby & Kiln Deprecation Announcement](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
+### Kurtosis Ethereum Package {#kurtosis}
+
+Kurtosis is a build system for multi-container test environments which enables developers to locally spin up reproducible instances of blockchain networks.
+
+The Ethereum Kurtosis package locally instantiates a containerized and parameterizable Ethereum testnet, with support for multiple different Execution Layer (EL) and Consensus Layer (CL) clients and an n-number of nodes. Kurtosis gracefully handles all local port mappings and service connections for easy dApp and smart contract prototyping and testing.
+
+- [Ethereum network package](https://github.com/kurtosis-tech/eth-network-package)
+- [Website](https://www.kurtosis.com/)
+- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [Documentation](https://docs.kurtosis.com/)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

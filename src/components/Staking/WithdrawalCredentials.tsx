@@ -1,11 +1,12 @@
 // Import libraries
 import React, { FC, useState, useMemo, ChangeEvent } from "react"
-import { Button, Flex, Input, Text } from "@chakra-ui/react"
+import { Button, Flex, Text } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 // Components
 import CopyToClipboard from "../CopyToClipboard"
 import Emoji from "../Emoji"
 import Translation from "../Translation"
+import Input from "../Input"
 // Utilites
 import { trackCustomEvent } from "../../utils/matomo"
 
@@ -79,8 +80,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const resultText = useMemo<string | JSX.Element>(() => {
     if (hasError)
       return (
-        <Flex bg="errorNeutral" p={4}>
-          <Text m={0} color="error">
+        <Flex bg="error.neutral" p={4}>
+          <Text m={0} color="error.base">
             <Translation id="comp-withdrawal-credentials-error" />
           </Text>
         </Flex>
@@ -88,8 +89,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
     if (!validator) return " "
     if (validator.isUpgraded)
       return (
-        <Flex bg="successNeutral" p={4}>
-          <Text m={0} color="success">
+        <Flex bg="success.neutral" p={4}>
+          <Text m={0} color="success.base">
             <Text as="span" fontWeight="bold">
               <Translation
                 id="comp-withdrawal-credentials-upgraded-1"
@@ -120,8 +121,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
         </Flex>
       )
     return (
-      <Flex bg="errorNeutral" p={4}>
-        <Text m={0} color="error">
+      <Flex bg="error.neutral" p={4}>
+        <Text m={0} color="error.base">
           <Text as="span" fontWeight="bold">
             {validator.isTestnet ? (
               <Translation id="comp-withdrawal-credentials-not-upgraded-1-testnet" />
@@ -139,15 +140,11 @@ const WithdrawalCredentials: FC<IProps> = () => {
     <Flex direction="column" gap={4}>
       <Flex alignItems="center" gap={2} flexWrap="wrap">
         <Input
-          size="lg"
-          padding=".5rem"
-          borderRadius="base"
           id="validatorIndex"
           value={inputValue}
           onChange={handleChange}
           w={{ base: "full", sm: "18ch" }}
           placeholder={t("comp-withdrawal-credentials-placeholder")}
-          bg="background"
         />
         <Flex
           w={{ base: "full", sm: "fit-content" }}

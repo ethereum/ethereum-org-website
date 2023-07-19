@@ -1,4 +1,6 @@
-export const babelConfig = {
+import { TransformOptions } from "@babel/core"
+
+export const babelConfig: TransformOptions = {
   sourceType: "unambiguous",
   presets: [
     [

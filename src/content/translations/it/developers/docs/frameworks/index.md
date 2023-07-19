@@ -46,32 +46,37 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 
 - [Home page](https://www.web3labs.com/web3j-sdk)
 - [Documentazione](https://docs.web3j.io)
-- [GitHub](https://github.com/web3j/web3j)
+- [Github](https://github.com/web3j/web3j)
 
-**OpenZeppelin SDK:** **_Gli Strumenti Definitivi per i Contratti Intelligenti: Una suite di strumenti per aiutarti a sviluppare, compilare, aggiornare, distribuire e interagire con i contratti intelligenti_**
+**OpenZeppelin SDK:** **_Il kit di strumenti definitivo per i contratti intelligenti: una suite di strumenti per aiutarti a sviluppare, compilare, aggiornare, distribuire e interagire con i contratti intelligenti_**
 
 - [SDK OpenZeppelin](https://openzeppelin.com/sdk/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum della community](https://forum.openzeppelin.com/c/support/17)
 
-**Create Eth App:** **_crea app per Ethereum con un comando. Offre una vasta scelta di framework per l'interfaccia utente e modelli DeFI tra cui scegliere._**
+**Create Eth App -** **_Crea app per Ethereum con un comando. Offre una vasta scelta di framework per l'interfaccia utente e modelli DeFI tra cui scegliere._**
 
-- [GitHub](https://github.com/paulrberg/create-eth-app)
-- [Template](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
+- [Github](https://github.com/paulrberg/create-eth-app)
+- [Modelli](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth:** **_I componenti Ethers.js + Hardhat + React e gli hook per web3: tutto ciò che ti serve per iniziare a creare applicazioni decentralizzate alimentate dai contratti intelligenti._**
+**Scaffold-Eth -** **_I componenti Ethers.js + Hardhat + React e gli hook per web3: tutto ciò che ti serve per iniziare a creare applicazioni decentralizzate alimentate da contratti intelligenti._**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
+
+**Tenderly -** **_Piattaforma di sviluppo di Web3 che consente agli sviluppatori della blockchain di costruire, testare, eseguire il debug, monitorare e gestire i contratti intelligenti, nonché di migliorare l'UX della dapp._**
+
+- [Sito Web](https://tenderly.co/)
+- [Documentazione](https://docs.tenderly.co/ethereum-development-practices)
 
 **The Graph:** **_ The Graph per interrogare efficientemente i dati della blockchain_**
 
 - [Sito Web](https://thegraph.com/)
-- [Guida](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
-**Alchemy:** **_ piattaforma di sviluppo di Ethereum._**
+**Alchemy -** **_Piattaforma di sviluppo Ethereum_**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [GitHub](https://github.com/alchemyplatform)
+- [Github](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
 **Foundry -** **_Un toolkit velocissimo, portatile e modulare per lo sviluppo di applicazioni di Ethereum scritte in Rust._**
@@ -80,10 +85,16 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Strumenti per Foundry](https://github.com/crisgarner/awesome-foundry)
 
+**NodeReal**: **_Piattaforma di sviluppo per Ethereum._**
+
+- [Nodereal.io](https://nodereal.io/)
+- [GitHub](https://github.com/node-real)
+- [Discord](https://discord.gg/V5k5gsuE)
+
 ## Letture consigliate {#further-reading}
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Configura un ambiente di sviluppo locale](/developers/local-environment/)
+- [Imposta un ambiente di sviluppo locale](/developers/local-environment/)
