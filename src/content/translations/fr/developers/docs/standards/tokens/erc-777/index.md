@@ -4,11 +4,15 @@ description:
 lang: fr
 ---
 
+## Avertissement  {#warning}
+
+**ERC-777 est difficile à implémenter correctement, en raison de sa sensibilité [à différentes formes d'attaque](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). Il est recommandé d'utiliser [ERC-20](/developers/docs/standards/tokens/erc-20/) à la place.** Cette page reste comme une archive historique.
+
 ## Introduction ? {#introduction}
 
 ERC-777 est un type de jeton fongible améliorant le standard [ERC-20](/developers/docs/standards/tokens/erc-20/) existant.
 
-## Pré-requis {#prerequisites}
+## Les prérequis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de lire en premier lieu la page [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
@@ -30,7 +34,7 @@ Les crochets sont enregistrés et accessibles en utilisant la norme [ERC-1820](h
 
 ### Décimales {#decimals}
 
-La norme résout également la confusion relative aux `decimals` générée par ERC-20. Cette clarification améliore l'expérience développeurs.
+La norme résout également la confusion relative aux `décimales` générées par ERC-20. Cette clarification améliore l'expérience développeurs.
 
 ### Rétro-compatibilité avec ERC-20 {#backwards-compatibility-with-erc-20}
 
@@ -38,4 +42,4 @@ Les contrats ERC-777 peuvent interagir comme s'il s'agissait de contrats ERC-20.
 
 ## Complément d'information {#further-reading}
 
-[Norme de jeton EIP-777](https://eips.ethereum.org/EIPS/eip-777)
+[EIP-777 : Norme de jeton](https://eips.ethereum.org/EIPS/eip-777)

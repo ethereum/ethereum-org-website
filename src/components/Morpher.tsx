@@ -144,7 +144,7 @@ const Morpher = () => {
       textDecor="none"
       fontSize="md"
       color="text"
-      _hover={{ color: "primary" }}
+      _hover={{ color: "primary.base" }}
       to="/languages/"
     >
       <span>{state.text}</span>

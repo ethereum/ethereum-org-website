@@ -35,7 +35,7 @@ Les deux types de comptes peuvent :
 
 - La création d'un contrat a un coût dû à l'utilisation de stockage réseau
 - Vous pouvez seulement envoyer des transactions en réponse à la réception d'une transaction
-- Les transactions depuis un compte externe vers un compte de contrat peuvent déclencher un code pouvant exécutant plein d'actions différentes, comme transférer des tokens ou même créer un nouveau contrat
+- Les transactions depuis un compte externe vers un compte de contrat peuvent déclencher un code pouvant exécuter plein d'actions différentes, comme transférer des tokens ou même créer un nouveau contrat
 - Les comptes de contrat n'ont pas de clés privées. Au lieu de cela, ils sont contrôlés par la logique du code du contrat intelligent
 
 ## Description d'un compte {#an-account-examined}

@@ -155,7 +155,7 @@ const QuizWidget: React.FC<IProps> = ({
           currentQuestionAnswerChoice?.isCorrect) ||
         userQuizProgress[index]?.isCorrect
       ) {
-        return "success"
+        return "success.base"
       }
 
       if (
@@ -164,7 +164,7 @@ const QuizWidget: React.FC<IProps> = ({
           !currentQuestionAnswerChoice?.isCorrect) ||
         (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
       ) {
-        return "error"
+        return "error.base"
       }
 
       if (index === currentQuestionIndex) {
@@ -309,12 +309,13 @@ const QuizWidget: React.FC<IProps> = ({
 
   // Render QuizWidget component
   return (
-    <Flex width="full" direction="column" alignItems="center">
+    <Flex width="full" direction="column" alignItems="center" my={16}>
       {/* Hide heading if quiz is not in Learning Quizzes Hub page */}
       {isStandaloneQuiz && (
         <Heading
           as="h2"
           mb={12}
+          mt={0}
           textAlign="center"
           scrollBehavior="smooth"
           scrollMarginTop={24}
@@ -337,8 +338,8 @@ const QuizWidget: React.FC<IProps> = ({
           !showAnswer
             ? "neutral"
             : currentQuestionAnswerChoice?.isCorrect
-            ? "successNeutral"
-            : "errorNeutral"
+            ? "success.neutral"
+            : "error.neutral"
         }
         borderRadius="base"
         boxShadow={isStandaloneQuiz ? "drop" : "none"}
@@ -372,10 +373,10 @@ const QuizWidget: React.FC<IProps> = ({
             size="50px"
             bg={
               !showAnswer
-                ? "primary"
+                ? "primary.base"
                 : currentQuestionAnswerChoice?.isCorrect
-                ? "success"
-                : "error"
+                ? "success.base"
+                : "error.base"
             }
             position={{ base: "relative", md: "absolute" }}
             top={{ base: 2, md: 0 }}
@@ -394,10 +395,10 @@ const QuizWidget: React.FC<IProps> = ({
                   fontWeight="700"
                   color={
                     showAnswer && currentQuestionAnswerChoice?.isCorrect
-                      ? "success"
+                      ? "success.base"
                       : showAnswer && !currentQuestionAnswerChoice?.isCorrect
-                      ? "fail"
-                      : "primaryHover"
+                      ? "fail.base"
+                      : "primary.hover"
                   }
                 >
                   {showAnswer && currentQuestionAnswerChoice?.isCorrect
@@ -513,7 +514,7 @@ const QuizWidget: React.FC<IProps> = ({
                     <Button
                       onClick={initialize}
                       variant="unstyled"
-                      color="primary"
+                      color="primary.base"
                       _hover={{ boxShadow: "none" }}
                     >
                       <Text textDecoration="underline" fontWeight="bold" m={0}>

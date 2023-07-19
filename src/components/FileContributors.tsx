@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { useQuery, gql } from "@apollo/client"
+import { gql } from "@apollo/client"
 
 import {
   Avatar,
@@ -12,7 +12,6 @@ import {
   ListItem,
   ModalBody,
   ModalHeader,
-  Show,
   Skeleton as ChakraSkeleton,
   SkeletonCircle as ChakraSkeletonCircle,
   Text,
@@ -31,7 +30,7 @@ import Modal from "./Modal"
 import Translation from "./Translation"
 import Button from "./Button"
 
-interface Author {
+export interface Author {
   name: string
   email: string
   avatarUrl: string
@@ -41,7 +40,7 @@ interface Author {
   }
 }
 
-interface Commit {
+export interface Commit {
   author: Author
   committedDate: string
 }
@@ -121,47 +120,27 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
 export interface IProps extends FlexProps {
   relativePath: string
   editPath?: string
+  contributors: Array<Author>
+  lastContributor: any
+  loading: Boolean
+  error: any
+  lastEdit: string
 }
 
 const FileContributors: React.FC<IProps> = ({
   relativePath,
   editPath,
+  contributors,
+  lastContributor,
+  loading,
+  error,
+  lastEdit,
   ...props
 }) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const { language } = useI18next()
 
-  const { loading, error, data } = useQuery(COMMIT_HISTORY, {
-    variables: { relativePath },
-  })
-
   if (error) return null
-
-  const commits: Array<Commit> =
-    data?.repository?.ref?.target?.history?.edges?.map((commit) => commit.node)
-
-  const lastCommit = commits?.[0] || {}
-  const lastContributor = lastCommit?.author || {}
-  const uniqueContributors =
-    commits?.reduce(
-      (res: Array<Author>, cur: Commit) => {
-        if (cur.author.user === null) {
-          return res
-        }
-        for (const contributor of res) {
-          const hasAuthorInfo = !!contributor.user && !!cur.author.user
-          if (
-            hasAuthorInfo &&
-            contributor.user.login === cur.author.user.login
-          ) {
-            return res
-          }
-        }
-        res.push(cur.author)
-        return res
-      },
-      [lastContributor]
-    ) || []
 
   return (
     <>
@@ -174,12 +153,16 @@ const FileContributors: React.FC<IProps> = ({
 
         <ModalBody>
           <Translation id="contributors-thanks" />
-
-          <ContributorList>
-            {uniqueContributors.map((contributor) => (
-              <Contributor contributor={contributor} key={contributor.email} />
-            ))}
-          </ContributorList>
+          {contributors ? (
+            <ContributorList>
+              {contributors.map((contributor) => (
+                <Contributor
+                  contributor={contributor}
+                  key={contributor.email}
+                />
+              ))}
+            </ContributorList>
+          ) : null}
         </ModalBody>
       </Modal>
 
@@ -211,7 +194,7 @@ const FileContributors: React.FC<IProps> = ({
                 </Link>
               )}
               {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-              {getLocaleTimestamp(language as Lang, lastCommit.committedDate)}
+              {getLocaleTimestamp(language as Lang, lastEdit)}
             </Text>
           </Skeleton>
         </Flex>
@@ -220,7 +203,7 @@ const FileContributors: React.FC<IProps> = ({
           <Skeleton isLoaded={!loading} mt={{ base: 4, md: 0 }}>
             <Button
               variant="outline"
-              bg="background"
+              bg="background.base"
               border={0}
               onClick={() => {
                 setModalOpen(true)
@@ -235,24 +218,25 @@ const FileContributors: React.FC<IProps> = ({
               <Translation id="see-contributors" />
             </Button>
           </Skeleton>
-
           {editPath && (
-            <Show below="l">
-              {/* TODO: switch `l` to `lg` after UI migration and use `hideBelow` prop */}
-              <ButtonLink to={editPath} hideArrow variant="outline">
-                <Flex
-                  h="100%"
-                  alignItems="center"
-                  justifyContent="center"
-                  gap={2}
-                >
-                  <Icon as={FaGithub} fontSize="2xl" />
-                  <span>
-                    <Translation id="edit-page" />
-                  </span>
-                </Flex>
-              </ButtonLink>
-            </Show>
+            <ButtonLink
+              to={editPath}
+              hideArrow
+              variant="outline"
+              hideBelow="lg"
+            >
+              <Flex
+                h="100%"
+                alignItems="center"
+                justifyContent="center"
+                gap={2}
+              >
+                <Icon as={FaGithub} fontSize="2xl" />
+                <span>
+                  <Translation id="edit-page" />
+                </span>
+              </Flex>
+            </ButtonLink>
           )}
         </VStack>
       </Flex>

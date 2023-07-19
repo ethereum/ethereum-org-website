@@ -48,6 +48,7 @@
   "page-index-developers-code-example-description-3": "Puede replantear servicios ya existentes como aplicaciones abiertas descentralizadas.",
   "page-index-network-stats-title": "Ethereum hoy",
   "page-index-network-stats-subtitle": "Las estadísticas más recientes de la red",
+  "page-index-network-stats-total-eth-staked": "Total de ETH apostados",
   "page-index-network-stats-eth-price-description": "Precio del ETH (USD)",
   "page-index-network-stats-eth-price-explainer": "El precio más reciente para 1 ether. Puede comprar tan solo 0,00000000000000001; no necesita comprar 1 ETH.",
   "page-index-network-stats-tx-day-description": "Transacciones de hoy",

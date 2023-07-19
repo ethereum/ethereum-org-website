@@ -96,7 +96,7 @@ That said, you should avoid treating audits as a silver bullet. Smart contract a
 
 Setting up a bug bounty program is another approach for implementing external code reviews. A bug bounty is a financial reward given to individuals (usually whitehat hackers) that discover vulnerabilities in an application.
 
-When used properly, bug bounties give members of the hacker community incentive to inspect your code for critical flaws. A real-life example is the “infinite money bug” that would have let an attacker create an unlimited amount of Ether on [Optimism](https://www.optimism.io/), a [Layer 2](https://ethereum.org/en/layer-2/) protocol running on Ethereum. Fortunately, a whitehat hacker [discovered the flaw](https://www.saurik.com/optimism.html) and notified the team, [earning a large payout in the process](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+When used properly, bug bounties give members of the hacker community incentive to inspect your code for critical flaws. A real-life example is the “infinite money bug” that would have let an attacker create an unlimited amount of Ether on [Optimism](https://www.optimism.io/), a [Layer 2](/layer-2/) protocol running on Ethereum. Fortunately, a whitehat hacker [discovered the flaw](https://www.saurik.com/optimism.html) and notified the team, [earning a large payout in the process](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 A useful strategy is to set the payout of a bug bounty program in proportion to the amount of funds at stake. Described as the “[scaling bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)”, this approach provides financial incentives for individuals to responsibly disclose vulnerabilities instead of exploiting them.
 
@@ -462,7 +462,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Smart contract auditing services](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Listing of organizations providing smart contract auditing services for Ethereum development projects._
 
-- **[Bug bounty platforms](https://ethereum.org/en/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Platforms for coordinating bug bounties and rewarding responsible disclosure of critical vulnerabilities in smart contracts._
+- **[Bug bounty platforms](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Platforms for coordinating bug bounties and rewarding responsible disclosure of critical vulnerabilities in smart contracts._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _A free online tool for checking all available information regarding a forked contract._
 
@@ -503,6 +503,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity and Cairo auditing services, ensuring the integrity of smart contracts and the safety of users across Ethereum and Starknet._
 
 - **[HashEx](https://hashex.org/)** - _HashEx focuses on blockchain and smart contract auditing to ensure the security of cryptocurrencies, providing services such as smart contract development, penetration testing, blockchain consulting._
+
+- **[Code4rena](https://code4rena.com/)** - _Competitive audit platform that incentivizes smart contract security experts to find vulnerabilities and help make web3 more secure._
 
 ### Bug bounty platforms {#bug-bounty-platforms}
 

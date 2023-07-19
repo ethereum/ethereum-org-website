@@ -99,6 +99,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
+**thirdweb SDK -** **_Build web3 applications that can interact with your smart contracts using our powerful SDKs and CLI._**
+
+- [Documentation](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
 **Chainstack -** **_Web3 (Ethereum and otherwise) Development Platform._**
 
 - [chainstack.com](https://www.chainstack.com/)

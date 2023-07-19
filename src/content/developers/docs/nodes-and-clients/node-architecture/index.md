@@ -22,7 +22,7 @@ The execution client is responsible for transaction handling, transaction gossip
 
 The execution client creates execution payloads - the list of transactions, updated state trie, and other execution-related data. Consensus clients include the execution payload in every block. The execution client is also responsible for re-executing transactions in new blocks to ensure they are valid. Executing transactions is done on the execution client's embedded computer, known as the [Ethereum Virtual Machine (EVM)](/developers/docs/evm).
 
-The execution client also offers a user interface to Ethereum through [RPC methods](/developers/docs/apis/json-rpc) that enable users to query the Ethereum blockchain, submit transactions and deploy smart contracts. It's common for RPC calls to be handled by a library like [Web3js](https://web3js.readthedocs.io/en/v1.8.0/), [Web3py](https://web3py.readthedocs.io/en/v5/), or by a user-interface such as a browser wallet.
+The execution client also offers a user interface to Ethereum through [RPC methods](/developers/docs/apis/json-rpc) that enable users to query the Ethereum blockchain, submit transactions and deploy smart contracts. It's common for RPC calls to be handled by a library like [Web3js](https://docs.web3js.org/), [Web3py](https://web3py.readthedocs.io/en/v5/), or by a user-interface such as a browser wallet.
 
 In summary, the execution client is:
 
@@ -45,7 +45,7 @@ Node operators can add a validator to their consensus clients by depositing 32 E
 
 | Execution Client                                   | Consensus Client                                                 | Validator                    |
 | -------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------- |
-| Gossips transactions over its p2p network          | Gossips blocks and attestations overs its p2p network            | Proposes blocks              |
+| Gossips transactions over its p2p network          | Gossips blocks and attestations over its p2p network             | Proposes blocks              |
 | Executes/re-executes transactions                  | Runs the fork choice algorithm                                   | Accrues rewards/penalties    |
 | Verifies incoming state changes                    | Keeps track of the head of the chain                             | Makes attestations           |
 | Manages state and receipts tries                   | Manages the Beacon state (contains consensus and execution info) | Requires 32 ETH to be staked |

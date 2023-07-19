@@ -32,7 +32,7 @@ export const SearchIconButton = forwardRef<IconButtonProps, "button">(
       icon={<MdSearch />}
       fontSize="2xl"
       variant="icon"
-      _hover={{ svg: { fill: "primary" } }}
+      _hover={{ svg: { fill: "primary.base" } }}
       {...props}
     />
   )

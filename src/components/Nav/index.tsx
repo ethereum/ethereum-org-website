@@ -37,7 +37,7 @@ const Nav: FC<IProps> = ({ path }) => {
         ref={navWrapperRef}
         as="nav"
         aria-label={t("nav-primary")}
-        bg="background"
+        bg="background.base"
         borderBottom="1px"
         borderColor="rgba(0, 0, 0, 0.1)"
         height="4.75rem"
@@ -83,7 +83,7 @@ const Nav: FC<IProps> = ({ path }) => {
                 size="sm"
                 fontSize="2xl"
                 ms={{ xl: 2 }}
-                _hover={{ color: "primary" }}
+                _hover={{ color: "primary.base" }}
                 onClick={toggleColorMode}
               />
               <ButtonLink
@@ -131,7 +131,7 @@ const Nav: FC<IProps> = ({ path }) => {
               textDecor="none"
               mr={8}
               _hover={{
-                color: "primary",
+                color: "primary.base",
                 svg: {
                   fill: "currentColor",
                 },

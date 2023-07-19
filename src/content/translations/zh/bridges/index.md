@@ -57,7 +57,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 ### 拥有原生加密资产 {#own-native}
 
-假设你想拥有原生比特币 (BTC)，但你只有以太坊主网上的资金。 要在以太坊上接触比特币，你可以购买包装比特币 (WBTC)。 然而，包装以太币是以太坊网络原生的 ERC-20 代币，这意味着它是比特币的以太坊版本，而不是比特币区块链上的原始资产。 要拥有原生以太币，你必须使用桥梁将你的资产从以太坊连接到比特币。 这将连接你的包装以太币并将其转换为原生以太币。 或者，你可能拥有以太币并希望在以太坊去中心化金融协议中使用。 这将需要以另一种方式桥接，从比特币到包装比特币，然后可以将其作为以太坊上的资产使用。
+如果你只有以太坊网络资产但想拥有原生比特币， 你可以先兑换得到以太坊上的 BTC - WBTC（Wrapped Bitcoin）， 但 WBTC 是以太坊网络上的 ERC-20 代币，仍不是原生比特币。 然后你可以通过跨链桥，将资产从以太坊网络跨到比特币网络， 即将 WBTC 转换为原生 BTC。 当然你也可以反向跨链，通过跨链桥，将原生 BTC 转换为 WBTC， 用于以太坊网络的 DeFi 协议中。
 
 <InfoBanner shouldCenter emoji=":bulb:">
   你还可以使用<a href="/get-eth/">中心化交易所</a>完成上述所有操作。 但是，除非你的资金已经在交易所，否则将涉及多个步骤，而且你最好使用桥梁。
@@ -128,7 +128,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 - [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _2022 年 1 月 8 日 - Vitalik Buterin_
 - [什么是区块链桥以及我们如何对其进行分类？](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _2021 年 2 月 18 日 - Arjun Chand_
 - [什么是跨链桥接？](https://www.alchemy.com/overviews/cross-chain-bridges) _2022 年 5 月 10 日 - Alchemy_
-- [区块链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _2021 年 9 月 8 日 - Dmitriy Berenzon _
+- [区块链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _2021 年 9 月 8 日 - Dmitriy Berenzon_
 - [加密空间中的桥梁](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _2021 年 8 月 23 日 - Ben Adar Hyman_
 - [互操作性三难困境](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _2021 年 10 月 1 日 - Arjun Bhuptani_
 - [保护桥梁：正确完成跨链通信](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _2021 年 8 月 23 日 - Celia Wan_

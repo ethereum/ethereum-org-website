@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithRef } from "react"
+import React, { ComponentProps, ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
@@ -26,9 +26,6 @@ import {
 import { MdExpandMore } from "react-icons/md"
 
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown, {
-  List as ButtonDropdownList,
-} from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
@@ -53,12 +50,19 @@ import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import {
+  MobileButton,
+  MobileButtonDropdown,
+  StyledButtonDropdown,
+} from "./use-cases"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
+
+import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
 import type { ChildOnlyProp, Context } from "../types"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
@@ -95,23 +99,6 @@ const InfoColumn = (props: ChildOnlyProp) => (
   />
 )
 
-const MobileButton = (props: ChildOnlyProp) => {
-  const borderColor = useToken("colors", "border")
-
-  return (
-    <Box
-      bg="background"
-      boxShadow={`0 -1px 0 ${borderColor}`}
-      position="sticky"
-      bottom={0}
-      zIndex={99}
-      p={8}
-      w="full"
-      {...props}
-    />
-  )
-}
-
 // Apply styles for classes within markdown here
 const ContentContainer = (props: BoxProps) => (
   <Box
@@ -126,7 +113,7 @@ const ContentContainer = (props: BoxProps) => (
         pl: 4,
         ml: -4,
         borderLeft: "1px dotted",
-        borderColor: "primary",
+        borderColor: "primary.base",
       },
       ".citation p": {
         color: "text200",
@@ -264,26 +251,6 @@ const SummaryPoint = (props: ChildOnlyProp) => (
   <ListItem color="text300" mb={0} {...props} />
 )
 
-type ButtonDropdownProps = Pick<
-  ComponentPropsWithRef<typeof ButtonDropdown>,
-  "list"
->
-
-const StyledButtonDropdown = (props: FlexProps & ButtonDropdownProps) => (
-  <Flex
-    as={ButtonDropdown}
-    justify="flex-end"
-    align={{ sm: "flex-end" }}
-    textAlign="center"
-    mb={8}
-    {...props}
-  />
-)
-
-const MobileButtonDropdown = (props: ButtonDropdownProps) => (
-  <StyledButtonDropdown mb={0} {...props} />
-)
-
 const Container = (props: ChildOnlyProp) => (
   <Box position="relative" {...props} />
 )
@@ -325,7 +292,7 @@ const MoreContent = (props: ChildOnlyProp & { to: string }) => (
     p={4}
     w="full"
     _hover={{
-      bg: "background",
+      bg: "background.base",
     }}
     {...props}
   />
@@ -339,7 +306,7 @@ const TitleCard = (props: ChildOnlyProp) => {
       direction="column"
       justify="flex-start"
       position={{ base: "relative", lg: "absolute" }}
-      bg={{ base: "ednBackground", lg: "background" }}
+      bg={{ base: "ednBackground", lg: "background.base" }}
       border="1px"
       borderColor="border"
       borderRadius="sm"

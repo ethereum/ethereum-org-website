@@ -10,7 +10,7 @@ lang: zh
 
 如果您想要用 JavaScript 连接到一个以太坊节点， 可以使用原生 JavaScript，不过生态系统中存在一些方便的库，使得这个事情变得更加容易。 通过这些库，开发者可以写下直观易懂甚至单行的代码就能初始化与以太坊的互动（背后使用 JSON RPC 请求）。
 
-请注意，自从[合并](/roadmap/merge/)以来，运行一个节点需要两个连接的以太坊软件 - 一个执行客户端和一个共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
+请注意，[合并](/roadmap/merge/)后，运行节点需要两种互联的以太坊软件 - 执行客户端和共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
 
 ## 前提条件 {#prerequisites}
 
@@ -231,14 +231,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Web3js 实用功能](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Web3js 实用功能](https://docs.web3js.org/api/web3-utils)
 - [Ethers 实用功能](https://docs.ethers.io/v5/api/utils/)
 
 ## 可用的库 {#available-libraries}
 
 **Web3.js -** **_以太坊 JavaScript API。_**
 
-- [相关文档](https://web3js.readthedocs.io/en/1.0/)
+- [相关文档](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_JavaScript 和 TypeScript 中完整的以太坊钱包实现和实用工具。_**

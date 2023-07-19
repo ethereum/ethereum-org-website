@@ -96,7 +96,7 @@ Com isto em mente, há que evitar tratar as auditorias como uma bala de prata. A
 
 A criação de um programa de recompensas por bugs é outra abordagem para implementar revisões de código externas. Uma recompensa por bugs é uma recompensa financeira dada a indivíduos (geralmente hackers de chapéu branco) que descobrem vulnerabilidades em um aplicativo.
 
-Quando usadas corretamente, as recompensas por bugs dão aos membros da comunidade hacker incentivo para inspecionar seu código em busca de falhas críticas. Um exemplo da vida real é o “bug do dinheiro infinito” que teria deixado um invasor criar uma quantidade ilimitada de Ether no [Optimism](https://www.optimism.io/), um protocolo da [Camada 2](https://ethereum.org/en/layer-2/) em execução na Ethereum. Felizmente, um hacker de chapéu branco [descobriu a falha](https://www.saurik.com/optimism.html) e notificou a equipe, [ganhando um grande pagamento no processo](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Quando usadas corretamente, as recompensas por bugs dão aos membros da comunidade hacker incentivo para inspecionar seu código em busca de falhas críticas. Um exemplo da vida real é o “bug do dinheiro infinito” que teria deixado um invasor criar uma quantidade ilimitada de Ether no [Optimism](https://www.optimism.io/), um protocolo da [Camada 2](/layer-2/) em execução na Ethereum. Felizmente, um hacker de chapéu branco [descobriu a falha](https://www.saurik.com/optimism.html) e notificou a equipe, [ganhando um grande pagamento no processo](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Uma estratégia útil é definir o pagamento de um programa de recompensas por bugs proporcionalmente à quantidade de fundos em jogo. Descrita como a “[recompensa por bugs que escala](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)”, essa abordagem fornece incentivos financeiros para que os indivíduos revelem vulnerabilidades de forma responsável em vez de explorá-las.
 
@@ -462,7 +462,7 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 - **[Serviços de auditoria de contrato inteligente](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Lista de organizações que fornecem serviços de auditoria de contrato inteligente para projetos de desenvolvimento Ethereum._
 
-- **[Plataformas de recompensa por bugs](https://ethereum.org/en/developers/docs/smart-contracts/testing/#bug-bounty-platforms) ** - _Plataformas para coordenar recompensas por bugs e recompensar a divulgação responsável de vulnerabilidades críticas em contratos inteligentes._
+- **[Plataformas de recompensa por bugs](/developers/docs/smart-contracts/testing/#bug-bounty-platforms) ** - _Plataformas para coordenar recompensas por bugs e recompensar a divulgação responsável de vulnerabilidades críticas em contratos inteligentes._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** – _Uma ferramenta online gratuita para verificar todas as informações disponíveis sobre um contrato bifurcado._
 

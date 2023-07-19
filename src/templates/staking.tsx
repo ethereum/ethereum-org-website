@@ -32,6 +32,7 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
+import ProductDisclaimer from "../components/ProductDisclaimer"
 import RandomAppList from "../components/RandomAppList"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
@@ -119,7 +120,7 @@ const Header4 = (props: ChildOnlyProp) => (
   />
 )
 
-const InfoGrid = (props: ChildOnlyProp) => (
+export const InfoGrid = (props: ChildOnlyProp) => (
   <Grid
     templateColumns="repeat(auto-fill, minmax(min(100%, 340px), 1fr))"
     gap={8}
@@ -173,14 +174,14 @@ const H2 = (props: ChildOnlyProp) => (
         verticalAlign: "middle",
 
         "&:hover": {
-          fill: "primary",
+          fill: "primary.base",
           opacity: 1,
         },
       },
     }}
     _hover={{
       a: {
-        fill: "primary",
+        fill: "primary.base",
         opacity: 1,
       },
     }}
@@ -205,14 +206,14 @@ const H3 = (props: ChildOnlyProp) => (
         verticalAlign: "middle",
 
         "&:hover": {
-          fill: "primary",
+          fill: "primary.base",
           opacity: 1,
         },
       },
     }}
     _hover={{
       a: {
-        fill: "primary",
+        fill: "primary.base",
         opacity: 1,
       },
     }}
@@ -308,6 +309,7 @@ const components = {
   InfoGrid,
   Logo,
   MeetupList,
+  ProductDisclaimer,
   RandomAppList,
   SectionNav,
   StakingComparison,

@@ -118,7 +118,7 @@ După ce ați terminat de editat fișierul json, salvați-l și încărcați-l �
 
 În exemplul de mai sus, adresa contractului nostru este 0x81c587EB0fE773404c42c1d2666b5f557C470eED.
 
-Apoi vom utiliza [metoda contract](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) web3 pentru a crea contractul, folosind „ABI” și „address”. În fișierul „mint-nft.js”, adăugați următoarele:
+Apoi vom utiliza [metoda contract](https://docs.web3js.org/api/web3-eth-contract/class/Contract) web3 pentru a crea contractul, folosind „ABI” și „address”. În fișierul „mint-nft.js”, adăugați următoarele:
 
 ```js
 const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
