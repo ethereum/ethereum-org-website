@@ -155,11 +155,12 @@ Os ataques Sybil referem-se a humanos individuais enganando um sistema para pens
 
 Existem muitos projetos ambiciosos usando Ethereum como base para soluções de identidade descentralizadas:
 
-- **[Nomes de Serviço Ethereum (ENS)](https://ens.domains/)** - _ Um sistema de nomes descentralizado para identificadores legíveis por máquina on-chain, como endereços de carteira Ethereum, hashes de conteúdo e metadados._
+- **[Nomes de Serviço Ethereum (ENS)](https://ens.domains/)** - _Um sistema de nomes descentralizado para identificadores legíveis por máquina on-chain, como endereços de carteira Ethereum, hashes de conteúdo e metadados._
 - **[SpruceID](https://www.spruceid.com/)** - _Um projeto de identidade descentralizada que permite aos usuários controlar a identidade digital com contas Ethereum e perfis ENS em vez de depender de serviços de terceiros._
+- **[Serviço de Atestação do Ethereum (EAS)](https://attest.sh/)** - _Um ledger/protocolo descentralizado para fazer atestações on-chain ou off-chain sobre qualquer coisa._
 - **[Prova de Humanidade](https://www.proofofhumanity.id)** - _Prova de Humanidade (ou PoH) é um sistema de verificação de identidade social construído no Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Uma descentralizada, rede de identidade social de código aberto que busca reformar a verificação de identidade por meio da criação e análise de um grafo social._
-- **[Passaporte de prova de personalidade](https://proofofpersonhood.com/)** - _ Um agregador de identidade digital descentralizado._
+- **[Passaporte de prova de personalidade](https://proofofpersonhood.com/)** - _Um agregador de identidade digital descentralizado._
 
 ## Leitura adicional {#further-reading}
 
