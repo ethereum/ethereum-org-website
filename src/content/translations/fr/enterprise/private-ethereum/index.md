@@ -19,9 +19,10 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 
 ### Protocole et infrastructure {#protocol-and-infrastructure}
 
-- [Chainstack](https://chainstack.com/) _ - Plateforme multicloud et multiprotocole en tant que service permettant aux entreprises de construire, déployer et gérer rapidement des réseaux et des services décentralisés_
-- [Clearmatics Autonity](https://www.clearmatics.com/about/) _- Suite de protocoles qui implémente les protocoles P2P et fournit le logiciel client et l'infrastructure_
-- [Hyperledger Besu](https://www.hyperledger.org/use/besu) _- Client Ethereum open source développé sous Apache 2 et rédigé en Java, qui comprend plusieurs algorithmes de consensus, y compris PoW, et PoA (IBFT, IBFT 2.0, Etherhash et Clique). Ses systèmes d'autorisation complets sont conçus spécifiquement pour être utilisés dans un environnement de consortium._
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _ - Client de blockchain modulaire avec interprète de contrats intelligents autorisé, partiellement développé pour la spécification de la machine virtuelle Ethereum (EVM)_
-- [Kaleido](https://kaleido.io/) _ - Plateforme full-stack pour la construction et l'exécution d'écosystèmes d'entreprise hybrides et multicloud_
-- [Quorum](https://consensys.net/quorum/) _- Plateforme de blockchain d'entreprise open source basée sur Ethereum, avec des fonctionnalités avancées de niveau entreprise offrant confidentialité, autorisations et performances_
+- [Chainstack](https://chainstack.com/) - _plateforme multicloud et multiprotocole en tant que service permettant aux entreprises de construire, déployer et gérer rapidement des réseaux et des services décentralisés_
+- [Clearmatics Autonity](https://www.clearmatics.com/about/) - _suite de protocoles qui implémente les protocoles P2P et fournit le logiciel client et l'infrastructure_
+- [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _client Ethereum open source développé sous Apache 2 et rédigé en Java, qui comprend plusieurs algorithmes de consensus, y compris PoW, et PoA (IBFT, IBFT 2.0, Etherhash et Clique). Ses systèmes d'autorisation complets sont conçus spécifiquement pour être utilisés dans un environnement de consortium._
+- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) - _Client de blockchain modulaire avec interprète de contrats intelligents autorisé, partiellement développé pour la spécification de la machine virtuelle Ethereum (EVM)_
+- [Kaleido](https://kaleido.io/) - _plateforme full-stack pour la construction et l'exécution d'écosystèmes d'entreprise hybrides et multicloud_
+- [Quorum](https://consensys.net/quorum/) - _une plateforme de blockchain d'entreprise de source ouverte basée sur Ethereum, avec des fonctionnalités avancées en matière d'entreprise permettant d'assurer le respect de la vie privée, d'accorder les autorisations et d'accroître les performances_
+- [Zeeve](https://www.zeeve.io/) - _offre un large panel de produits et d'outils pour le développement sur Ethereum, c'est-à-dire des infrastructures et des API pour les applications d'entreprise Web3_

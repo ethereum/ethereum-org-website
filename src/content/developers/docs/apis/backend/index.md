@@ -154,6 +154,13 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GetBlock.io](https://getblock.io/)
 - [Documentation](https://getblock.io/docs/)
 
+**BlockPi -** **Provide more efficient and fast RPC services。\_**
+
+- [blockpi.io](https://blockpi.io/)
+- [Documentation](https://docs.blockpi.io/)
+- [GitHub](https://github.com/BlockPILabs)
+- [Discord](https://discord.com/invite/xTvGVrGVZv)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

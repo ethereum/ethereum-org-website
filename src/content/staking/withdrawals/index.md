@@ -148,12 +148,12 @@ As an alternative to changing the withdrawal address for a particular validator,
 </ExpandableCard>
 
 <ExpandableCard
-title="What if I participate in liquid staking derivatives or pooled staking"
+title="What if I participate in staking tokens or pooled staking"
 eventCategory="FAQ"
-eventAction="What if I participate in liquid staking derivatives or pooled staking"
+eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
+If you are part of a <a href="/staking/pools/">staking pool</a> or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
 
 In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a <a href="https://rated.network/">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.
 

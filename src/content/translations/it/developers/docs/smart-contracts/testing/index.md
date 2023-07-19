@@ -239,7 +239,7 @@ Tuttavia, puoi aumentare maggiormente la possibilità di identificare le vulnera
 
 I controlli sono eseguiti da revisori esperti nel trovare i casi di falle di sicurezza e pratiche di sviluppo inadeguate nei contratti intelligenti. Un controllo, solitamente, includerà test (e verosimilmente una verifica formale), nonché una revisione manuale dell'intera base di codice.
 
-Viceversa, un programma di bug bounty comporta solitamente l'offerta di una ricompensa economica a una persona (comunemente descritto come [hacker whitehat](https://en.wikipedia.org/wiki/White_hat_(computer_security)) che scopre una vulnerabilità in un contratto intelligente e la comunica agli sviluppatori. Le bug bounty sono simili ai controlli poiché comportano di chiedere ad altri di aiutare a trovare difetti nei contratti intelligenti.
+Viceversa, un programma di bug bounty comporta solitamente l'offerta di una ricompensa economica a una persona (comunemente descritto come [hacker whitehat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) che scopre una vulnerabilità in un contratto intelligente e la comunica agli sviluppatori. Le bug bounty sono simili ai controlli poiché comportano di chiedere ad altri di aiutare a trovare difetti nei contratti intelligenti.
 
 La differenza principale è che i programmi di bug bounty sono aperti alla più ampia community di sviluppatori/hacker e attrae un'ampia classe di hacker etici e professionisti della sicurezza indipendenti dotati di competenze uniche ed esperienza. Questo potrebbe essere un vantaggio rispetto ai controlli del contratto intelligente che si affidano principalmente ai team che potrebbero possedere esperienza limitata o minima.
 
