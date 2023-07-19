@@ -10,6 +10,14 @@ published: 2021-03-31
 
 If you are new to blockchain development and don’t know where to start, or if you just want to understand how to deploy and interact with smart contracts, this guide is for you. We will walk through creating and deploying a simple smart contract on the Goerli test network using a virtual wallet [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), and [Alchemy](https://alchemyapi.io/eth) (don’t worry if you don’t understand what any of this means yet, we will explain it).
 
+> **Warning**
+>
+> 🚧 Deprecation Notice
+>
+> For the entirety of this guide, the Goerli test network is being used for creating and deploying a smart contract. However, please note that the Ethereum Foundation has announced that [Goerli will soon be deprecated](https://www.alchemy.com/blog/goerli-faucet-deprecation).
+>
+> We recommend you to use the [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) and [Sepolia faucet](https://sepoliafaucet.com/) for this tutorial.
+
 In [part 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) of this tutorial we’ll go through how we can interact with our smart contract once it’s deployed here, and in [part 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) we’ll cover how to publish it on Etherscan.
 
 If you have questions at any point feel free to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!

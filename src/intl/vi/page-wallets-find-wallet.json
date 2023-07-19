@@ -88,5 +88,7 @@
   "page-find-wallet-desktop-desc": "Ví mà có trên ứng dụng cho máy tính để bàn",
   "page-find-wallet-browser": "Trình duyệt",
   "page-find-wallet-browser-desc": "Ví với các tiện ích trình duyệt",
-  "page-find-wallet-device": "Thiết bị"
+  "page-find-wallet-device": "Thiết bị",
+  "page-find-choose-to-compare": "Chọn để so sánh",
+  "page-find-wallet-choose-features": "Chọn một tính năng"
 }

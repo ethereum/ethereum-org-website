@@ -8,7 +8,7 @@ Il valore estraibile massimo (MEV) si riferisce al valore massimo che può esser
 
 ### Valore estraibile dal miner {#miner-extractable-value}
 
-Il valore estraibile massimo fu applicato per la prima volta nel contesto del [proof-of-work](/developers/docs/consensus-mechanisms/pow/) e fu inizialmente definito come "valore estraibile dal miner". Questo perché nel Proof of Work i miner controllano l'inclusione, l'esclusione e l'ordinamento della transazione. Tuttavia, a partire dalla transizione al proof-of-stake tramite [La Fusione](/roadmap/merge), i validatori sono responsabili di tali ruoli e il mining non è più parte del protocollo di Ethereum. I metodi d'estrazione del valore però esistono ancora, quindi il termine usato adesso è invece "Valore estraibile massimo".
+Il valore estraibile massimo fu applicato per la prima volta nel contesto del [proof-of-work](/developers/docs/consensus-mechanisms/pow/) e fu inizialmente definito come "valore estraibile dal miner". Questo perché nel Proof of Work i miner controllano l'inclusione, l'esclusione e l'ordinamento della transazione. Tuttavia, a partire dalla transizione al proof-of-stake tramite [La Fusione](/roadmap/merge), i validatori sono responsabili di tali ruoli e il mining non fa più parte del protocollo di Ethereum. I metodi d'estrazione del valore però esistono ancora, quindi il termine usato adesso è invece "Valore estraibile massimo".
 
 ## Prerequisiti {#prerequisites}
 
@@ -112,20 +112,110 @@ L'estrazione del MEV è aumentata a dismisura agli inizi del 2021, risultando in
 
 Mentre molti ricercatori guadagnano ancora molto dal MEV, con il diffondersi delle opportunità e la competizione di sempre più ricercatori per la stessa opportunità, i validatori cattureranno sempre più ricavi totali del MEV (poiché lo stesso tipo di aste del gas originariamente descritte in precedenza, si verificano anche nei Flashbot, seppur privatamente, e i validatori cattureranno i ricavi di gas risultanti). Inoltre, il MEV non è un'esclusiva di Ethereum e, man mano che le opportunità su Ethereum diventano più competitive, i ricercatori si spostano su blockchain alternative come Binance Smart Chain, dove esistono opportunità di MEV simili a quelle di Ethereum ma con minore competizione.
 
-D'altra parte, la transizione dal proof-of-work al proof-of-stake e lo sforzo di ridimensionamento di Ethereum in corso usando i rollup e lo sharding stanno modificando il panorama del MEV in modi ancora piuttosto nebuloso. Non è ancora noto come il fatto di conoscere i propositori di blocchi garantiti lievemente in anticipo modifichi le dinamiche di estrazione del MEV rispetto al modello probabilistico nel proof-of-work, o come questo sarà sconvolto quando l'[elezione del leader segreto singolo](https://ethresear.ch/t/secret-non-single-leader-election/11789) e la [tecnologia distribuita del validatore](https://github.com/ethereum/distributed-validator-specs) saranno implementate. Similmente, resta da vedere quali opportunità del MEV esistono quando gran parte dell'attività degli utenti è portata via da Ethereum e sui suoi rollup e shard di livello 2.
+D'altra parte, la transizione dal proof-of-work al proof-of-stake e lo sforzo di ridimensionamento di Ethereum in corso usando i rollup stanno modificando il panorama del MEV in modi ancora piuttosto nebulosi. Non è ancora noto come il fatto di conoscere i propositori di blocchi garantiti lievemente in anticipo modifichi le dinamiche di estrazione del MEV rispetto al modello probabilistico nel proof-of-work, o come questo sarà sconvolto quando l'[elezione segreta di un singolo capo ](https://ethresear.ch/t/secret-non-single-leader-election/11789) e la [tecnologia distribuita del validatore](/staking/dvt/) saranno implementate. Similmente, resta da vedere quali opportunità del MEV esistono quando gran parte dell'attività degli utenti è portata via da Ethereum e sui suoi rollup e shard di livello 2.
+
+## MEV nel proof-of-stake (PoS) di Ethereum {#mev-in-ethereum-proof-of-stake}
+
+Come spiegato, il MEV ha implicazioni negative per l’esperienza complessiva degli utenti e per la sicurezza al livello di consenso. Ma la transizione di Ethereum al protocollo di consenso proof-of-stake (soprannominato “La Fusione”) introduce potenzialmente nuovi rischi legati al MEV:
+
+### Centralizzazione dei validatori {#validator-centralization}
+
+Dopo La Fusione di Ethereum, i validatori (dopo aver effettuato depositi di sicurezza di 32 ETH) raggiungono il consenso sulla validità dei blocchi aggiunti alla Beacon Chain. Dal momento che 32 ETH possono essere fuori dalla portata di molti, [unirsi a un pool di staking](/staking/pools/) può essere un'opzione più fattibile. Ciò nonostante, una sana distribuzione di [staker autonomi](/staking/solo/) è ideale, in quanto attenua la centralizzazione dei validatori e migliora la sicurezza di Ethereum.
+
+Tuttavia, si ritiene che l'estrazione del MEV sia in grado di accelerare la centralizzazione dei validatori. Questo è in parte dovuto al fatto che, poiché i validatori [guadagnano meno per i blocchi proposti](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) rispetto a quanto attualmente ottenuto dai miner, l'estrazione del MEV può notevolmente [influenzare i guadagni dei validatori](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) dopo La Fusione.
+
+I pool di staking più grandi avranno probabilmente più risorse da investire nelle ottimizzazioni necessarie per cogliere le opportunità del MEV. Quanto più MEV questi pool estraggono, tanto più risorse avranno per migliorare le loro capacità di estrazione del MEV (e aumentare le entrate complessive), creando essenzialmente [economie di scala](https://www.investopedia.com/terms/e/economiesofscale.asp#).
+
+Con un minor numero di risorse a loro disposizione, gli staker autonomi potrebbero non essere in grado di trarre profitto dalle opportunità offerte dal MEV. Questo potrebbe aumentare la pressione sui validatori autonomi per unire potenti pool di staking per aumentare i loro guadagni, riducendo la decentralizzazione in Ethereum.
+
+### Mempool con permessi (permissioned) {#permissioned-mempools}
+
+In risposta agli attacchi di sandwiching e di frontrunning, i trader possono iniziare a condurre operazioni off-chain con validatori per la privacy delle transazioni. Invece di inviare una potenziale transazione MEV al mempool pubblico, il trader la invia direttamente al validatore, che la include in un blocco e divide i profitti con il trader.
+
+I “dark pool” sono una versione più ampia di questo accordo e funzionano come mempool di solo accesso, con permessi, aperti agli utenti disposti a pagare determinate commissioni. Questa tendenza diminuirebbe la mancanza di permessi e la mancanza di fiducia di Ethereum e trasformerebbe potenzialmente la blockchain in un meccanismo “pay-to-play” che favorisce il miglior offerente.
+
+I mempool con permessi accelererebbero anche i rischi di centralizzazione descritti nella sezione precedente. I grandi pool che eseguono più validatori trarranno probabilmente vantaggio dall'offrire la privacy delle transazioni ai trader e agli utenti, aumentando i loro ricavi in MEV.
+
+La lotta a questi problemi legati al MEV successivamente alla Fusione di Ethereum è un ambito centrale di ricerca. Ad oggi, due soluzioni proposte per ridurre l'impatto negativo del MEV sulla decentralizzazione e la sicurezza di Ethereum dopo La Fusione sono la **Separazione propositore-costruttore (PBS)** e l'**API Builder**.
+
+### Separazione propositore-costruttore {#proposer-builder-separation}
+
+Sia nel proof-of-of-work che nel proof-of-stake, un nodo che costruisce un blocco propone di aggiungerlo alla catena ad altri nodi che partecipano al consenso. Un nuovo blocco diventa parte della catena principale dopo che un altro miner costruisce sopra di esso (nella PoW) o riceve attestazioni dalla maggior parte dei validatori (nella Pos).
+
+La combinazione dei ruoli del produttore di blocchi e del propositore di blocchi è ciò che introduce la maggior parte dei problemi relativi al MEV descritti in precedenza. Ad esempio, i nodi di consenso sono incentivati a innescare le riorganizzazioni della catena in attacchi di time-bandit per massimizzare i guadagni di MEV.
+
+La [Separazione propositore-costruttore](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725) (PBS) è concepita per mitigare l'impatto del MEV, soprattutto al livello di consenso. La caratteristica principale della PBS è la separazione dei produttori di blocchi e le regole del propositore di blocchi. I validatori sono ancora responsabili di proporre e votare i blocchi, ma una nuova classe di entità specializzate, chiamati **costruttori di blocchi**, sono incaricati di ordinare transazioni e costruire i blocchi.
+
+Nella PBS, un costruttore di blocchi crea un pacchetto di transazioni e mette un'offerta per la sua inclusione in un blocco della Beacon Chain (come il “payload di esecuzione”). Il validatore selezionato per proporre il blocco successivo quindi controlla le diverse offerte e sceglie il pacchetto con la commissione più alta. La PBS crea essenzialmente un mercato d'asta, dove i costruttori negoziano con validatori che vendono lo spazio del blocco.
+
+Gli attuali progetti PBS utilizzano uno [schema commit-reveal](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) in cui i costruttori pubblicano solo un impegno crittografico per i contenuti di un blocco (intestazione del blocco) insieme alle loro offerte. Dopo aver accettato l'offerta vincente, il propositore crea una proposta di blocco firmata che include l'intestazione del blocco. Il costruttore di blocchi dovrebbe pubblicare il corpo completo del blocco dopo aver visualizzato la proposta del blocco firmata e, inoltre, deve ricevere abbastanza [attestazioni](/glossary/#attestation) dai validatori prima che sia finalizzata.
+
+#### In che modo la separazione propositore-costruttore riduce l’impatto del MEV? {#how-does-pbs-curb-mev-impact}
+
+La separazione del propositore e del costruttore riduce l’effetto del MEV sul consenso eliminando l’estrazione del MEV dal campo di applicazione dei validatori. Invece, da ora in poi saranno i costruttori di blocchi che eseguono hardware specializzato a cogliere le opportunità di MEV.
+
+Ciò, però, non esclude del tutto i validatori dal reddito relativo al MEV, poiché i costruttori devono offrire alti pagamenti per far accettare i propri blocchi dai validatori. Tuttavia, con i validatori non più direttamente focalizzati sull'ottimizzazione del reddito da MEV, la minaccia di attacchi di time-bandit si riduce.
+
+La separazione propositore-costruttore riduce anche i rischi di centralizzazione del MEV. Per esempio, l'uso di uno schema commit-reveal elimina la necessità per i costruttori di fidarsi del fatto che i validatori non ruberanno l'opportunità di MEV o non la esporranno ad altri costruttori. In questo modo si riduce la barriera per gli operatori autonomi di beneficiare del MEV, altrimenti i costruttori tenderebbero a favorire grandi pool con buona reputazione off-chain e a condurre delle trattative off-chain con loro.
+
+Allo stesso modo, i validatori non devono fidarsi del fatto che i costruttori non tratterranno i corpi dei blocchi o non pubblicheranno blocchi non validi perché il pagamento è incondizionato. La commissione del validatore continua a essere elaborata anche se il blocco proposto non è disponibile o è dichiarato non valido da altri validatori. In quest'ultimo caso, il blocco viene semplicemente scartato, costringendo il costruttore di blocchi a perdere tutte le commissioni di transazione e i ricavi di MEV.
+
+### API Builder {#builder-api}
+
+Mentre la separazione tra propositori e creatori promette di ridurre gli effetti dell'estrazione del MEV, la sua attuazione richiede modifiche al protocollo di consenso. In particolare, la regola [scelta della diramazione](/developers/docs/consensus-mechanisms/pos/#fork-choice) sulla Beacon Chain dovrebbe essere aggiornata. L'API [Builder](https://github.com/ethereum/builder-specs) è una soluzione temporanea volta a fornire un'implementazione funzionante della separazione propositore-costruttore, anche se con presupposti di fiducia più elevati.
+
+L'API Builder è una versione modificata dell'[API Engine](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) utilizzata dai client del livello di consenso per richiedere payload di esecuzione dai client del livello di esecuzione. Come indicato nella [specifica del validatore onesto](https://github.com/ethereum/consensus-specs/blob/dev/specs/bellatrix/validator.md), i validatori selezionati per i compiti di proposta dei blocchi richiedono un pacchetto di transazioni da un client di esecuzione connesso, che includono nel blocco della Beacon Chain proposto.
+
+L'API Builder funge anche da middleware tra validatori e client al livello di esecuzione, ma è diverso perché permette ai validatori sulla Beacon Chain di procurarsi blocchi da entità esterne (invece di costruire un blocco localmente utilizzando un client di esecuzione).
+
+Di seguito una panoramica di come funziona l'API Builder:
+
+1. L'API Builder collega il validatore a una rete di costruttori di blocchi che eseguono client del livello di esecuzione. Come nella PBS, i costruttori sono parti specializzate che investono nella costruzione di blocchi ad alta intensità di risorse e utilizzano diverse strategie per massimizzare i ricavi guadagnati dai MEV + mance di priorità.
+
+2. Un validatore (che esegue un client del livello di consenso) richiede payload di esecuzione insieme alle offerte dalla rete di costruttori. Le offerte dei costruttori conterranno l'intestazione del payload di esecuzione – un impegno crittografico per i contenuti del payload – e una commissione da pagare al validatore.
+
+3. Il validatore esamina le offerte in arrivo e sceglie il payload di esecuzione con la commissione più alta. Usando l'API Builder, il validatore crea una proposta di blocco Beacon "alla cieca" che include solo la sua firma e l'intestazione del payload di esecuzione e la invia al costruttore.
+
+4. Il costruttore che esegue l'API Builder dovrebbe rispondere con il payload di esecuzione completo quando si vede la proposta di blocco alla cieca. Questo permette al validatore di creare un blocco Beacon "firmato", che propaga in tutta la rete.
+
+5. Un validatore che utilizza l'API Builder dovrebbe ancora costruire un blocco localmente nel caso in cui il costruttore del blocco non risponda tempestivamente, in modo da non perdere le ricompense della proposta di blocco. Tuttavia, il validatore non può creare un altro blocco utilizzando le transazioni ormai rivelate o un altro set, in quanto equivarrebbe a un _equivoco_ (firmare due blocchi all'interno dello stesso slot), che è un illecito tagliabile.
+
+Un esempio di implementazione dell'API Builder è [MEV Boost](https://github.com/flashbots/mev-boost), un miglioramento rispetto al [meccanismo di asta di Flashbots](https://docs.flashbots.net/Flashbots-auction/overview/) progettato per frenare le esternalità negative del MEV su Ethereum. L'asta di Flashbots permette ai miner in proof-of-work di esternalizzare il lavoro di costruzione di blocchi redditizi ad entità specializzate chiamate **ricercatori**.
+
+I ricercatori cercano opportunità di MEV redditizie e inviano pacchetti di transazioni ai miner insieme a un'[offerta in busta chiusa](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) per l'inclusione nel blocco. Il miner che esegue mev-geth, una versione diramata del client go-ethereum (Geth), deve solo scegliere il pacchetto con il maggior profitto e minarlo come parte del nuovo blocco. Per proteggere i miner dallo spam e dalle transazioni non valide, i pacchetti di transazioni passano attraverso **relayer** per la convalida prima di arrivare ai miner.
+
+MEV Boost mantiene lo stesso funzionamento dell’asta originale di Flashbots, anche se con nuove funzionalità progettate per il passaggio di Ethereum al proof-of-stake. I ricercatori trovano ancora transazioni MEV redditizie per l'inclusione nei blocchi, ma una nuova classe di soggetti specializzati, chiamati **costruttori**, sono responsabili dell'aggregazione delle transazioni e dei pacchetti nei blocchi. Un costruttore accetta offerte in busta chiusa dai ricercatori ed esegue ottimizzazioni per trovare l'ordine più redditizio.
+
+Il relayer è ancora responsabile della convalida dei pacchetti di transazioni prima di trasmetterli al propositore. Tuttavia, MEV Boost introduce **escrow ** responsabili di fornire la [disponibilità di dati](/developers/docs/data-availability/) memorizzando i corpi dei blocchi inviati dai costruttori e le intestazioni dei blocchi inviati dai validatori. Qui, un validatore collegato a un relay chiede i payload di esecuzione disponibili e utilizza l'algoritmo di ordinamento di MEV Boost per selezionare l'intestazione del payload con l'offerta più alta + mance in MEV.
+
+#### Come fa l'API Builder a mitigare l'impatto del MEV? {#how-does-builder-api-curb-mev-impact}
+
+Il vantaggio principale dell'API Builder è il suo potenziale per democratizzare l'accesso alle opportunità del MEV. Il ricorso a sistemi di commit-reveal elimina le ipotesi di fiducia e riduce le barriere all’ingresso per i validatori che cercano di trarre vantaggio dai MEV. Ciò dovrebbe ridurre la pressione sugli staker autonomi per integrarsi con grandi pool di staking al fine di aumentare i profitti in MEV.
+
+L'implementazione generalizzata dell'API Builder incoraggerà una maggiore concorrenza tra i costruttori di blocchi, il che aumenta la resistenza alla censura. Dato che i validatori selezionano le offerte da più costruttori, un costruttore intenzionato a censurare una o più transazioni deve superare tutti gli altri costruttori senza censura per avere successo. Ciò aumenta drasticamente il costo della censura degli utenti e ne scoraggia la pratica.
+
+Alcuni progetti, come MEV Boost, utilizzano l'API Builder come parte di una struttura generale progettata per fornire privacy delle transazioni a determinate parti, come i trader che cercano di evitare attacchi frontrunning/sandwiching. Questo obiettivo è conseguito fornendo un canale di comunicazione privato tra gli utenti e i costruttori di blocchi. A differenza dei mempool con permessi (permissioned) descritti in precedenza, questo approccio è vantaggioso per i seguenti motivi:
+
+1. L'esistenza di più costruttori sul mercato rende la censura impraticabile, il che va a vantaggio degli utenti. Al contrario, l'esistenza di pool centralizzati e basati sulla fiducia concentrerebbe il potere nelle mani di pochi costruttori di blocchi e aumenterebbe la possibilità di censura.
+
+2. Il software API Builder è open-source e consente a chiunque di offrire servizi di costruttore di blocchi. Ciò significa che gli utenti non sono obbligati a utilizzare un particolare costruttore di blocca, migliorando la neutralità e la mancanza di permessi di Ethereum. Inoltre, i trader in cerca di MEV non contribuiranno inavvertitamente alla centralizzazione utilizzando canali di transazione privati.
 
 ## Risorse correlate {#related-resources}
 
 - [Documentazione dei Flashbot](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Dashboard e piattaforma di ricerca live delle transazioni MEV_
+- [MEV-Explore](https://explore.flashbots.net/) _Pannello di controllo ed esploratore live delle transazioni per transazioni MEV_
+- [mevboost.org](https://www.mevboost.org/) - _Tracker con statistiche in tempo reale per relay e costruttori di blocchi di MEV Boost_
 
-## Letture consigliate {#further-reading}
+## Ulteriori letture {#further-reading}
 
 - [What Is Miner-Extractable Value (MEV)?](https://blog.chain.link/what-is-miner-extractable-value-mev/)
-- [MEV and Me](https://research.paradigm.xyz/MEV)
+- [MEV and Me](https://www.paradigm.xyz/2021/02/mev-and-me)
 - [Ethereum is a Dark Forest](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Escaping the Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning the MEV Crisis](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
 - [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [MEV-Boost: architettura Flashbots pronta per la Fusione](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
+- [Che cos'è MEV Boost?](https://www.alchemy.com/overviews/mev-boost)
+- [Perché eseguire mev-boost?](https://writings.flashbots.net/writings/why-run-mevboost/)
 - [The Hitchhikers Guide To Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)

@@ -66,6 +66,7 @@ Before contributing, make sure you're familiar with:
 - the evolving [vision of ethereum.org](/about/)
 - our [design principles](/contributing/design-principles/)
 - our [style guide](/contributing/style-guide/)
+- our [code of conduct](/community/code-of-conduct)
 
 ## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 
