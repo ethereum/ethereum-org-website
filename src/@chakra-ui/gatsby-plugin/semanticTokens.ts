@@ -101,12 +101,6 @@ const semanticTokens = {
         "linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%)",
     },
   },
-  shadows: {
-    buttonHover: {
-      _light: "4px 4px 0 var(--eth-colors-blue-100)",
-      _dark: "4px 4px 0 #352313",
-    },
-  },
 }
 
 export default semanticTokens
