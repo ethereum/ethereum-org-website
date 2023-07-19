@@ -1,3 +1,4 @@
+import { Avatar } from "./Avatar"
 import { Badge } from "./Badge"
 import { Button } from "./Button"
 import { Link } from "./Link"
@@ -12,7 +13,6 @@ import { Switch } from "./Switch"
 import { Input } from "./Input"
 import {
   accordionDefaultTheme,
-  avatarDefaultTheme,
   breadcrumbDefaultTheme,
   closeButtonDefaultTheme,
   codeDefaultTheme,
@@ -28,7 +28,7 @@ import {
 
 export default {
   Accordion: accordionDefaultTheme,
-  Avatar: avatarDefaultTheme,
+  Avatar,
   Badge,
   Breadcrumb: breadcrumbDefaultTheme,
   Button,
