@@ -139,6 +139,15 @@ const LearningToolsPage = ({
         background: "#2C60A3",
         subjects: ["Solidity", "web3"],
       },
+      {
+        name: "Tenderly",
+        description: "page-learning-tools-tenderly-description",
+        url: "https://sandbox.tenderly.co",
+        image: getImage(data.tenderly)!,
+        alt: "page-learning-tools-tenderly-logo-alt",
+        background: "#0f1524",
+        subjects: ["Solidity", "Vyper", "web3"],
+      },
     ]
     const randomizedSandboxes = shuffle(sandboxes)
     setRandomizedSandboxes(randomizedSandboxes)
@@ -420,6 +429,9 @@ export const query = graphql`
       ...learningToolImage
     }
     chainIDE: file(relativePath: { eq: "dev-tools/chainIDE.png" }) {
+      ...learningToolImage
+    }
+    tenderly: file(relativePath: { eq: "dev-tools/tenderly.png" }) {
       ...learningToolImage
     }
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
