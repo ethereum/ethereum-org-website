@@ -318,7 +318,7 @@ export const query = graphql`
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 800
+          width: 700
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
