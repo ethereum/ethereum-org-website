@@ -20,7 +20,7 @@ A wallet is like an online bank account for Ethereum. There are dozens of differ
 
 ## Step 2: Choose a wallet that suits your needs
 
-If you are new, you can activate the “New to crypto” filter to view only those wallets that include all necessary features we think would be particularly suitable for beginners. There are also other profile filters to cater to your needs.
+If you are new, you can activate the “New to crypto” filter to view only those wallets that include all the necessary features we think would be particularly suitable for beginners. There are also other profile filters to cater to your needs.
 
 ## Step 3: Download and install your wallet app
 
@@ -53,7 +53,7 @@ No, just like online banking you can have many different accounts all stored in 
 
 ### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
 
-No you cannot. Bitcoin and ether exist on two separate networks (i.e. different blockchains), each with their own bookkeeping models and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
+No, you cannot. Bitcoin and ether exist on two separate networks (i.e. different blockchains), each with their own bookkeeping models and address formats. There have been various attempts to bridge the two different networks, of which the most active one is currently [Wrapped bitcoin or WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). This is not an endorsement, as WBTC is a custodial solution (meaning a single group of people controls certain critical functions) and is provided here for informational purposes only.
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 
@@ -61,7 +61,7 @@ You can use the same address on all EVM compatible blockchains (if you have the 
 
 ### Is having my own wallet safer than keeping my funds on an exchange?
 
-Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankruptcy resulting in users' losing their savings which were being held in custody. Hacks, frozen accounts, or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. Nonetheless, a poorly backed up recovery phrase potentially exposes you to more risks as compared to having your keys managed by an exchange. Make sure to store your recovery phrase well.
+Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankruptcy resulting in users' losing their savings which were being held in custody. Hacks, frozen accounts, or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. Nonetheless, a poorly backed-up recovery phrase potentially exposes you to more risks as compared to having your keys managed by an exchange. Make sure to store your recovery phrase well.
 
 ### If I lose my phone/hardware wallet, do I need to use the same wallet app again to recover the lost funds?
 

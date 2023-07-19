@@ -11,7 +11,7 @@ One of the most common uses for Ethereum is for a group to create a tradable tok
 There are two ways in which they are likely to deceive you:
 
 - **Selling you a scam token**, which may look like the legitimate token you want to purchase, but are issued by the scammers and worth nothing.
-- **Tricking you into signing bad transactions**, usually by directing you into their own user interface. They mignt try to get you into giving their contracts an allowance on your ERC-20 tokens, exposing sensitive information that gives them access to your assets, etc.. These user interfaces might be near-perfect clones of honest sites, but with hidden tricks.
+- **Tricking you into signing bad transactions**, usually by directing you into their own user interface. They might try to get you into giving their contracts an allowance on your ERC-20 tokens, exposing sensitive information that gives them access to your assets, etc. These user interfaces might be near-perfect clones of honest sites, but with hidden tricks.
 
 To illustrate what scam tokens are, and how to identify them, we are going to look at an example of one: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
@@ -19,7 +19,7 @@ To illustrate what scam tokens are, and how to identify them, we are going to lo
 title="What is ARB?"
 contentPreview=''>
 
-Arbitrum is an organization that develops and manages <a href="/developers/docs/scaling/optimistic-rollups/">optimistic rollups</a>. Initially Arbitrum was organized as a for-profit company, but then took steps to decentralize. As part of that process, they issued a tradeable <a href="/dao/#token-based-membership">governance token</a>.
+Arbitrum is an organization that develops and manages <a href="/developers/docs/scaling/optimistic-rollups/">optimistic rollups</a>. Initially, Arbitrum was organized as a for-profit company, but then took steps to decentralize. As part of that process, they issued a tradeable <a href="/dao/#token-based-membership">governance token</a>.
 
 </ExpandableCard>
 
@@ -55,7 +55,7 @@ There are several tricks that scam token creators do to appear legitimate.
 
 - **Legitimate owners**. Scam tokens often airdrop significant balances to addresses that can be expected to be legitimate holders of the real token.
 
-  For example, lets look at `wARB` again. [About 16% of the tokens](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) are held by an address whose public tag is [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). This is _not_ a fake address, it really is the address that [deployed the real ARB contract on Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
+  For example, let's look at `wARB` again. [About 16% of the tokens](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) are held by an address whose public tag is [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). This is _not_ a fake address, it really is the address that [deployed the real ARB contract on Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
 
   Because the ERC-20 balance of an address is part of the ERC-20 contract's storage, it can be specified by the contract to be whatever the contract developer wishes. It is also possible for a contract to forbid transfers so the legitimate users won't be able to get rid of those scam tokens.
 
@@ -65,11 +65,11 @@ There are several tricks that scam token creators do to appear legitimate.
 
 Scammers can also produce very convincing websites, sometimes even precise clones of authentic sites with identical UIs, but with subtle tricks. Examples might be external links that seem legitimate actually sending the user to an external scam site, or incorrect instructions that guide the user to exposing their keys or sending funds to an attacker's address.
 
-The best practise for avoiding this is to carefully check the URL for the sites you visit, and save addresses for known authentic sites in your bookmarks. Then, you can access the real site through your bookmarks without accidentally making spelling errors or relying on external links.
+The best practice for avoiding this is to carefully check the URL for the sites you visit, and save addresses for known authentic sites in your bookmarks. Then, you can access the real site through your bookmarks without accidentally making spelling errors or relying on external links.
 
 ## How can you protect yourself? {#protect-yourself}
 
-1. **Check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's web site. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token).
+1. **Check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's website. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token).
 
 2. **Real tokens have liquidity**. Another option is to look at liquidity pool size on [Uniswap](https://uniswap.org/), one of the most common token swapping protocols. This protocol works using liquidity pools, into which investors deposit their tokens in hope of a return from trading fees.
 
@@ -83,7 +83,7 @@ But when you try to buy the scam token `wARB`, even a tiny purchase would change
 
 This is another piece of evidence that shows us `wARB` is not likely to be a legitimate token.
 
-3. **Look in Etherscan**. A lot of scam tokens have already been identified and reported by the community. Such tokens are [marked in Etherscan](https://info.etherscan.com/etherscan-token-reputation/). While Etherscan is not authoritative source of truth (it is the nature of decentralized networks that there can't be an authoritative source for legitimacy), tokens that are identified by Etherscan as scams are likely to be scams.
+3. **Look in Etherscan**. A lot of scam tokens have already been identified and reported by the community. Such tokens are [marked in Etherscan](https://info.etherscan.com/etherscan-token-reputation/). While Etherscan is not an authoritative source of truth (it is the nature of decentralized networks that there can't be an authoritative source for legitimacy), tokens that are identified by Etherscan as scams are likely to be scams.
 
    ![Scam token in Etherscan](./etherscan-scam.png)
 

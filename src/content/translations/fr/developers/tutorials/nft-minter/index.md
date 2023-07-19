@@ -629,7 +629,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) est un wrapper autour de [Web3.js](https://web3js.readthedocs.io/en/v1.2.9/), fournissant des méthodes API améliorées et d'autres avantages pour faciliter votre vie en tant que développeur Web3. Il est conçu pour nécessiter une configuration minimale afin que vous puissiez commencer à l'utiliser immédiatement dans votre application !
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) est un wrapper autour de [Web3.js](https://docs.web3js.org/), fournissant des méthodes API améliorées et d'autres avantages pour faciliter votre vie en tant que développeur Web3. Il est conçu pour nécessiter une configuration minimale afin que vous puissiez commencer à l'utiliser immédiatement dans votre application !
 
 Ensuite, ajoutons notre contrat ABI et l'adresse de notre contrat à notre fichier.
 

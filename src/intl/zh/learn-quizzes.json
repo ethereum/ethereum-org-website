@@ -7,6 +7,7 @@
   "share-results": "分享成绩",
   "submit-answer": "提交答案",
   "test-your-knowledge": "检验掌握的知识",
+  "total": "总计",
   "try-again": "重试",
   "a001-prompt": "以太坊和比特币之间最大的差异是：",
   "a001-a-label": "以太坊不允许用户向他人付款",
@@ -303,7 +304,9 @@
   "h005-b-explanation": "在被重新命名为“共识层”前，它原来叫做“以太坊 2”。",
   "h005-c-label": "Eth1。",
   "h005-c-explanation": "“以太坊 1”是执行层原来的名称，而不是共识层的。",
-  "h005-d-label": "分片。",
-  "h005-d-explanation": "分片是以太坊路线图上与扩容相关的更新。",
-  "page-assets-merge": "合并"
+  "h005-d-label": "权益质押",
+  "h005-d-explanation": "质押是指将以太币存入智能合约，帮助保护区块链的安全。",
+  "page-assets-merge": "合并",
+  "security": "安全性",
+  "page-what-is-ethereum-what-is-ether": "什么是以太币 (ETH)？"
 }

@@ -143,10 +143,23 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Discord](https://discord.com/invite/KYswaxwEtg)
 - [Forum](https://forum.moralis.io/)
 
+**Chainbase -** **_All-in-one web3 data infrastructure for Ethereum._**
+
+- [chainbase.com](https://chainbase.com/)
+- [Documentation](https://docs.chainbase.com/)
+- [Discord](https://discord.gg/Wx6qpqz4AF)
+
 \*_GetBlock- Blockchain-as-a-service for Web3 developement_
 
 - [GetBlock.io](https://getblock.io/)
 - [Documentation](https://getblock.io/docs/)
+
+**BlockPi -** **Provide more efficient and fast RPC services。\_**
+
+- [blockpi.io](https://blockpi.io/)
+- [Documentation](https://docs.blockpi.io/)
+- [GitHub](https://github.com/BlockPILabs)
+- [Discord](https://discord.com/invite/xTvGVrGVZv)
 
 ## Further reading {#further-reading}
 

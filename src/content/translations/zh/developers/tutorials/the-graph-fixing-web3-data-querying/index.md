@@ -52,7 +52,7 @@ contract Game {
 2. 获取`totalGamesPlayerLost`。
 3. 订阅`BetPlaced`事件。
 
-我们可以侦听如右侧所示的[Web3 中的事件](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#contract-events)，但它需要处理相当多的情况。
+我们可以侦听如右侧所示的[Web3 中的事件](https://docs.web3js.org/api/web3/class/Contract#events)，但它需要处理相当多的情况。
 
 ```solidity
 GameContract.events.BetPlaced({
