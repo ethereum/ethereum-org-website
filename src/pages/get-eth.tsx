@@ -197,12 +197,22 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       </Flex>
       <Flex flexWrap="wrap" mx={{ base: 4, lg: 8 }} my={{ base: 4, lg: 0 }}>
         <StyledCard
+          emoji=":busts_in_silhouette:"
+          title={t("page-get-eth-peers")}
+          description={t("page-get-eth-peers-desc")}
+        ></StyledCard>
+        <StyledCard
+          emoji=":building_construction:"
+          title={t("page-get-eth-earn")}
+          description={t("page-get-eth-earn-desc")}
+        ></StyledCard>
+        <StyledCard
           emoji=":office_building:"
           title={t("page-get-eth-cex")}
           description={t("page-get-eth-cex-desc")}
         />
         <StyledCard
-          emoji=":busts_in_silhouette:"
+          emoji=":robot:"
           title={t("page-get-eth-dex")}
           description={t("page-get-eth-dex-desc")}
         >
@@ -211,7 +221,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </Link>
         </StyledCard>
         <StyledCard
-          emoji=":robot:"
+          emoji=":key:"
           title={t("page-get-eth-wallets")}
           description={t("page-get-eth-wallets-purchasing")}
         >
@@ -219,6 +229,11 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             <Translation id="page-get-eth-wallets-link" />
           </Link>
         </StyledCard>
+        <StyledCard
+          emoji=":shield:"
+          title={t("page-get-eth-staking")}
+          description={t("page-get-eth-staking-desc")}
+        ></StyledCard>
         <Content>
           <Text>
             <Text as="em">
