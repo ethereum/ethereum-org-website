@@ -51,7 +51,7 @@ const Avatar = forwardRef<AvatarLinkProps, "div" | "a">((props, ref) => {
           alignItems="center"
           gap="1"
           p="1"
-          fontSize={size !== "md" ? "12px" : "14px"}
+          fontSize={size !== "md" ? "xs" : "sm"}
           zIndex="overlay"
           {...linkProps}
         >
