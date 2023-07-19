@@ -284,8 +284,9 @@ _注意：有一些衍生的代币/票据可能代表了被质押的以太币（
 
 ### 防诈骗指南 {#reading-scam-education}
 
-- [保持安全: 常见的诈骗手段](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [避免诈骗](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [关于常见加密网络钓鱼电子邮件和消息的 Twitter 线程](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [指南：如何识别诈骗代币](/guides/how-to-id-scam-tokens/)
+- [保持安全：常见骗局](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
+- [避免骗局](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [关于常见加密货币网络钓鱼电子邮件和消息的 Twitter 线程](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

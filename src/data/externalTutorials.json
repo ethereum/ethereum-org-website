@@ -58,9 +58,7 @@
     "description": "We look at formal verification & symbolic execution with two Trail of Bits Web3 security team members. Additionally, we review the value these techniques bring and compare them to other tools.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "security"
-    ],
+    "tags": ["security"],
     "skillLevel": "intermediate",
     "timeToRead": "10",
     "lang": "en",
