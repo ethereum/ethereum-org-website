@@ -1,6 +1,6 @@
 ---
 title: ERC-223 Token Standard
-description: An overview of the ERC-223 fungible token standard, how it works, and a comparison to ERC-20. 
+description: An overview of the ERC-223 fungible token standard, how it works, and a comparison to ERC-20.
 lang: en
 ---
 
@@ -67,7 +67,7 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 ### Examples {#examples}
 
-The API of ERC-223 token is similar to that of ERC-20, so from UI development point of view there is no difference. The only exception here is that ERC-223 tokens may  not have `approve` + `transferFrom` functions as these are optional for this standard.
+The API of ERC-223 token is similar to that of ERC-20, so from UI development point of view there is no difference. The only exception here is that ERC-223 tokens may not have `approve` + `transferFrom` functions as these are optional for this standard.
 
 ### Solidity examples {#solidity-example}
 
@@ -89,7 +89,7 @@ contract VeryBasicERC223Token {
     string  private _symbol;
     uint8   private _decimals;
     uint256 private _totalSupply;
-    
+
     mapping(address => uint256) private balances;
     function name() public view returns (string memory) { return _name; }
     function symbol() public view returns (string memory) {return _symbol; }

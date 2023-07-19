@@ -504,6 +504,8 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[HashEx](https://hashex.org/)**: _HashEx è incentrata sul controllo della blockchain e dei controlli intelligenti allo scopo di garantire la sicurezza delle criptovalute, fornendo servizi come lo sviluppo di contratti intelligenti, test di penetrazione o consulenza sulla blockchain._
 
+- **[Code4rena](https://code4rena.com/)**: _Piattaforma di controllo competitiva che incentiva gli esperti di sicurezza dei contratti intelligenti a trovare le vulnerabilità e ad aiutare a rendere il Web3 più sicuro._
+
 ### Piattaforme di bug bounty {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)**: _piattaforma di bug bounty per contratti intelligenti e progetti di DeFi, in cui i ricercatori revisionano il codice, divulgano le vulnerabilità, vengono pagati e rendono le criptovalute più sicure._
