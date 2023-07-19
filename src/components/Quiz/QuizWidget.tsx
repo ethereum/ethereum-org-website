@@ -60,8 +60,8 @@ import questionBank from "../../data/quizzes/questionBank"
 
 interface IProps {
   quizKey?: string
-  currentHandler: (next?: string) => void
-  statusHandler: (status: QuizStatus) => void
+  currentHandler?: (next?: string) => void
+  statusHandler?: (status: QuizStatus) => void
   maxQuestions?: number
   isStandaloneQuiz?: boolean
 }
