@@ -53,6 +53,7 @@ import StakingGuides from "../components/Staking/StakingGuides"
 import WithdrawalCredentials from "../components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "../components/Staking/WithdrawalsTabComparison"
 import Callout from "../components/Callout"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -309,6 +310,7 @@ const components = {
   InfoGrid,
   Logo,
   MeetupList,
+  QuizWidget,
   ProductDisclaimer,
   RandomAppList,
   SectionNav,
@@ -472,7 +474,7 @@ export const stakingPageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-staking", "common"] }
+        ns: { in: ["page-staking", "learn-quizzes", "common"] }
       }
     ) {
       edges {
