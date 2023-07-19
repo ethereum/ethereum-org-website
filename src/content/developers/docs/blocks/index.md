@@ -125,12 +125,12 @@ The `execution_payload` itself contains the following (notice this is identical 
 
 The `withdrawals` list contains `withdrawal` objects structured in the following way:
 
-| Field              | Description                                                         |
-| :----------------- | :------------------------------------------------------------------ |
-| `address`          | account address that has withdrawn                                  |
-| `amount`           | withdrawal amount                                                   |
-| `index`            | withdrawal index value                                              |
-| `validatorIndex`   | validator index value                                               |
+| Field            | Description                        |
+| :--------------- | :--------------------------------- |
+| `address`        | account address that has withdrawn |
+| `amount`         | withdrawal amount                  |
+| `index`          | withdrawal index value             |
+| `validatorIndex` | validator index value              |
 
 ## Block time {#block-time}
 
