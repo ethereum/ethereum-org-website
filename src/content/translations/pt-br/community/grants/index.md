@@ -35,10 +35,11 @@ Estes projetos criaram seus próprios programas de recompensas destinados a dese
 - [Organização de concessões do ecossistema Lido (LEGO)](https://lego.lido.fi/) – _Ecossistema financeiro [Lido](https://lido.fi/)_
 - [Programa MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) bolsas lideradas por funcionários DAO_
 - [Programa de bolsas mStable](https://docs.mstable.org/advanced/grants-program) – _Comunidade [mStable](https://mstable.org/)_
+- [Programa de bolsas da SKALE Network](https://skale.space/developers#grants) - _[Ecossistema da SKALE Network](https://skale.space/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecossistema [The Graph](https://thegraph.com/)_
 - [Programa de bolsas UMA](https://grants.umaproject.org/): _[suporte ao desenvolvedor](https://umaproject.org/)UMA_
-- [Programa de bolsas Uniswap](https://www.unigrants.org/) – _Comunidade [Uniswap](https://uniswap.org/)_
-- [Web3 Grants](https://web3grants.net) – _Uma extensa lista de programas de bolsas relacionados com web3/criptomoedas_
+- [Programa de bolsas da Uniswap](https://www.unigrants.org/) – _Comunidade [Uniswap](https://uniswap.org/)_
+- [Bolsas Web3](https://web3grants.net) – _Uma extensa lista de programas de bolsas relacionados com web3/criptomoedas_
 
 ## Financiamento quadrático {#quadratic-funding}
 

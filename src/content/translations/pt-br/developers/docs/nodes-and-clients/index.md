@@ -141,7 +141,7 @@ Essa tabela resume os diferentes clientes. Todos eles passam em [testes de clien
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java                     | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo, Rápido, Completo                | Arquivo, Removido |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Completo                                     | Arquivo, Removido |
 
-**Observe que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-form-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e, de preferência, mude para outra implementação de cliente!
+**Observe que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e, de preferência, mude para outra implementação de cliente!
 
 Para saber mais sobre redes suportadas, leia sobre as [redes Ethereum](/developers/docs/networks/).
 

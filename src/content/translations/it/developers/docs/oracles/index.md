@@ -364,7 +364,7 @@ L'approccio abituale è quello di utilizzare funzioni crittografiche pseudocasua
 
 È possibile generare il valore casuale off-chain e inviarlo sulla catena, ma ciò impone agli utenti requisiti di fiducia elevati. Devono credere che il valore sia stato realmente generato attraverso meccanismi imprevedibili e non sia stato alterato in transito.
 
-Gli oracoli progettati per il calcolo off-chain risolvono questo problema generando in modo sicuro risultati casuali fuori catena che trasmettono sulla catena insieme a prove crittografiche che attestano l'imprevedibilità del processo. Un esempio è [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), che è un generatore di numeri casuali (RNG) dimostrabilmente equo e a prova di manomissione, utile per costruire contratti intelligenti affidabili per applicazioni che si basano su risultati imprevedibili.
+Gli oracoli progettati per il calcolo off-chain risolvono questo problema generando in modo sicuro risultati casuali fuori catena che trasmettono sulla catena insieme a prove crittografiche che attestano l'imprevedibilità del processo. Un esempio è [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), che è un generatore di numeri casuali (RNG) dimostrabilmente equo e a prova di manomissione, utile per costruire contratti intelligenti affidabili per applicazioni che si basano su risultati imprevedibili. Un altro esempio è [API3 QRNG](https://docs.api3.org/explore/qrng/) che svolge la Generazione quantistica dei numeri casuali (QRNG); si tratta di un metodo pubblico di RNG del Web3, basato sul fenomeno quantistico, servito con cortesia dell'Università Nazionale Australiana (ANU).
 
 ### Ottenere risultati per gli eventi {#getting-outcomes-for-events}
 
@@ -402,6 +402,8 @@ Ci sono più applicazioni di oracoli che puoi integrare nella tua dapp su Ethere
 
 **[Pyth Network](https://pyth.network/)** - _La rete Pyth è una rete di oracoli finanziari di prima parte progettata per pubblicare dati continui del mondo reale sulla catena in un ambiente resistente alle manomissioni, decentralizzato e autosostenibile._
 
+**[DAO di API3](https://www.api3.org/)**: _La DAO di API3 distribuisce soluzioni di prima parte dell'oracolo che offrono una maggiore trasparenza della fonte, sicurezza e scalabilità, in una soluzione decentralizzata per i contratti intelligenti_
+
 ## Ulteriori letture {#further-reading}
 
 **Articoli**
@@ -417,11 +419,12 @@ Ci sono più applicazioni di oracoli che puoi integrare nella tua dapp su Ethere
 **Video**
 
 - [Oracoli ed espansione dell'utilità della blockchain](https://youtu.be/BVUZpWa8vpw) - _Real Vision Finance_
+- [Le differenze tra gli oracoli di prime e terze parti](https://blockchainoraclesummit.io/first-party-vs-third-party-oracles/): _Blockchain Oracle Summit_
 
 **Tutorial**
 
 - [Come recuperare il prezzo corrente di Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) - _Chainlink_
 
-**Progetti di esempio**
+**Esempi di progetti**
 
 - [Progetto iniziale e completo di Chainlink per Ethereum in Solidity](https://github.com/hackbg/chainlink-fullstack) - _HackBG_
