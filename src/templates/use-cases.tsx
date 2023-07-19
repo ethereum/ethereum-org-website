@@ -338,7 +338,7 @@ const UseCasePage = ({
         text: t("template-usecase-dropdown-nft"),
         to: "/nft/",
         matomo: {
-          eventCategory: "use cases menuy",
+          eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "nft",
         },
@@ -347,7 +347,7 @@ const UseCasePage = ({
         text: t("template-usecase-dropdown-dao"),
         to: "/dao/",
         matomo: {
-          eventCategory: "use cases menuy",
+          eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "dao",
         },
@@ -356,7 +356,7 @@ const UseCasePage = ({
         text: t("template-usecase-dropdown-social-networks"),
         to: "/social-networks/",
         matomo: {
-          eventCategory: "use cases menuy",
+          eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "social-networks",
         },
@@ -365,9 +365,18 @@ const UseCasePage = ({
         text: t("template-usecase-dropdown-identity"),
         to: "/decentralized-identity/",
         matomo: {
-          eventCategory: "use cases menuy",
+          eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "decentralized-identity",
+        },
+      },
+      {
+        text: t("decentralized-science"),
+        to: "/desci/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "desci",
         },
       },
     ],
