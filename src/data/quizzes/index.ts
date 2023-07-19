@@ -35,6 +35,10 @@ const quizzes: RawQuizzes = {
     title: "page-assets-merge",
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
+  "run-a-node": {
+    title: "run-a-node",
+    questions: ["i001", "i002", "i003", "i004", "i005", "i006"],
+  },
 }
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
@@ -77,6 +81,11 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   },
   {
     id: "layer-2",
+    level: "intermediate",
+    next: "run-a-node",
+  },
+  {
+    id: "run-a-node",
     level: "intermediate",
   },
 ]
