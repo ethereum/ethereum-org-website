@@ -123,7 +123,7 @@ export interface RawQuizzes {
   [key: string]: RawQuiz
 }
 
-type QuizLevel = "beginner" | "intermediate"
+type QuizLevel = "beginner" | "intermediate" | "advanced"
 
 export type QuizzesSection = {
   id: string
