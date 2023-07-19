@@ -1,5 +1,70 @@
 [
   {
+    "url": "https://docs.chainstack.com/docs/uncovering-the-power-of-ethgetblockreceipts",
+    "title": "Uncovering the power of eth_getBlockReceipts",
+    "description": "Explaining eth_getBlockReceipts and how to leverage it to create more powerful and efficient applications.",
+    "author": "Davide Zambiasi",
+    "authorGithub": "https://github.com/soos3d",
+    "tags": [
+      "chainstack",
+      "ethers.js",
+      "nodes"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "30",
+    "lang": "en",
+    "publishDate": "03/07/2023"
+  },
+  {
+    "url": "https://docs.chainstack.com/docs/ethereum-tutorial-trust-fund-account-with-remix",
+    "title": "Trust fund account with Remix",
+    "description": "Ethereum smart contract tutorial. Learn how to develop and deploy a trust fund contract. Built using Remix IDE.",
+    "author": "Ake Gaviar",
+    "authorGithub": "https://github.com/akegaviar",
+    "tags": [
+      "chainstack",
+      "remix",
+      "solidity"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "20",
+    "lang": "en",
+    "publishDate": "01/31/2023"
+  },
+  {
+    "url": "https://docs.chainstack.com/docs/subgraphs-tutorial-indexing-erc-20-token-balance",
+    "title": "Indexing ERC-20 token balance using Subgraphs",
+    "description": "Learn how to use subgraphs to easily fetch, process, and organize data that is as scattered as ERC-20 token balances across Ethereum accounts.",
+    "author": "Sethu Raman Omanakuttan",
+    "authorGithub": "https://github.com/SethuRamanOmanakuttan",
+    "tags": [
+      "chainstack",
+      "the graph",
+      "querying",
+      "tokens"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "20",
+    "lang": "en",
+    "publishDate": "04/10/2023"
+  },
+  {
+    "url": "https://docs.chainstack.com/docs/ethereum-tutorial-academic-certificates-with-truffle",
+    "title": "Academic certificates with Truffle",
+    "description": "Ethereum smart contract tutorial. Learn how to develop and deploy a contract that issues academic certificates. Built using Truffle suite.",
+    "author": "Ake Gaviar",
+    "authorGithub": "https://github.com/akegaviar",
+    "tags": [
+      "chainstack",
+      "truffle",
+      "solidity"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "25",
+    "lang": "en",
+    "publishDate": "01/31/2023"
+  },
+  {
     "url": "https://patrickalphac.medium.com/fuzz-invariant-tests-the-new-bare-minimum-for-smart-contract-security-87ebe150e88c",
     "title": "Fuzzing & Invariant Testing Introduction",
     "description": "What is fuzz testing? What are invariant tests? We introduce how to use these tools in Web3 & Solidity and explain why they are essential, especially for security. ",
