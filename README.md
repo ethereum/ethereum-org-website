@@ -1615,6 +1615,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://www.keecoin.io"><img src="https://avatars.githubusercontent.com/u/99338330?v=4?s=100" width="100px;" alt="KeeCoin"/><br /><sub><b>KeeCoin</b></sub></a><br /><a href="#ideas-Keecointoken" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.tomatowax.com/"><img src="https://avatars.githubusercontent.com/u/799503?v=4?s=100" width="100px;" alt="Seungwook Chi"/><br /><sub><b>Seungwook Chi</b></sub></a><br /><a href="#content-tomatowax" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xx92"><img src="https://avatars.githubusercontent.com/u/133748557?v=4?s=100" width="100px;" alt="0xx92"/><br /><sub><b>0xx92</b></sub></a><br /><a href="#content-0xx92" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/altinocoelho"><img src="https://avatars.githubusercontent.com/u/92543849?v=4?s=100" width="100px;" alt="altinocoelho"/><br /><sub><b>altinocoelho</b></sub></a><br /><a href="#content-altinocoelho" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
