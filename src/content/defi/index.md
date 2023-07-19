@@ -40,7 +40,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 | DeFi                                                                                               | Traditional finance                                                                                                            |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | You hold your money.                                                                               | Your money is held by companies.                                                                                               |
-| You control where your money goes and how it's spent.                                              | You have to trust companies not to mismanage your money, like lending to risky borrowers.                                         |
+| You control where your money goes and how it's spent.                                              | You have to trust companies not to mismanage your money, like lending to risky borrowers.                                      |
 | Transfers of funds happen in minutes.                                                              | Payments can take days due to manual processes.                                                                                |
 | Transaction activity is pseudonymous.                                                              | Financial activity is tightly coupled with your identity.                                                                      |
 | DeFi is open to anyone.                                                                            | You must apply to use financial services.                                                                                      |
@@ -106,7 +106,7 @@ And if you don't want to send or stream [ETH](/eth/) because of how much its val
 
 ### Access stable currencies {#stablecoins}
 
-Cryptocurrency volatility is a problem for lots of financial products and general spending. The DeFi community has solved this with stablecoins. Their value stays pegged to an another asset, usually a popular currency like the dollar.
+Cryptocurrency volatility is a problem for lots of financial products and general spending. The DeFi community has solved this with stablecoins. Their value stays pegged to an another asset, usually a popular currency like dollars.
 
 Coins like Dai or USDC have a value that stays within a few cents of a dollar. This makes them perfect for earning or retail. Many people in Latin America have used stablecoins as a way of protecting their savings in a time of great uncertainty with their government-issued currencies.
 
@@ -147,7 +147,7 @@ Borrowing can give you access to the funds you need without needing to sell your
 
 #### Flash loans {#flash-loans}
 
-Flash loans are a more experimental form of decentralized lending that lets you borrow without collateral or providing any personal information.
+Flash loans are a more experimental form of decentralized lending that let you borrow without collateral or providing any personal information.
 
 They're not widely accessible to non-technical folks right now but they hint at what might be possible to everyone in the future.
 
@@ -176,7 +176,7 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 #### Lending {#lending}
 
-You can earn interest on your crypto by lending it and seeing your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). Here's an example:
+You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). Here's an example:
 
 - You lend your 100 Dai, a [stablecoin](/stablecoins/), to a product like Aave.
 - You receive 100 Aave Dai (aDai) which is a token that represents your loaned Dai.
