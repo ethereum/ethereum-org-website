@@ -18,7 +18,11 @@ A wallet is an app that helps you manage your Ethereum account. It uses your key
   Find a wallet
 </ButtonLink>
 
-If you are new, you can select the “New to crypto” filter on the "find a wallet" page to identify wallets that should include all necessary features suitable for beginners. There are also other profile filters to cater to your needs. These are examples of commonly used wallets - you should do your own research before trusting any software.
+If you are new, you can select the “New to crypto” filter on the "find a wallet" page to identify wallets that should include all necessary features suitable for beginners. 
+
+!img[filter selection on 'find a wallet' page](/assets/wallets/wallet-box.png)
+
+There are also other profile filters to cater to your needs. These are examples of commonly used wallets - you should do your own research before trusting any software.
 
 ## Step 2: Download and install your wallet app
 
