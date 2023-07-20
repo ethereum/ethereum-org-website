@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef, ReactNode, useContext } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -43,9 +43,6 @@ import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 import RollupProductDevDoc from "../components/RollupProductDevDoc"
 import YouTube from "../components/YouTube"
 
-import PostMergeBanner from "../components/Banners/PostMergeBanner"
-
-import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { ChildOnlyProp, Context } from "../types"
@@ -138,9 +135,9 @@ const ListItem = (props: ListItemProps) => (
   <ChakraListItem color="text300" {...props} />
 )
 
-const ContentContainer = (props: ChildOnlyProp & { isZenMode: boolean }) => (
+const ContentContainer = (props: ChildOnlyProp) => (
   <Flex
-    justify={props.isZenMode ? "center" : "space-between"}
+    justify={"space-between"}
     w="full"
     py={0}
     pl={0}
@@ -224,8 +221,6 @@ const DocsPage = ({
   data: { siteData, pageData: mdx, allCombinedTranslatorsJson },
   pageContext: { relativePath, slug },
 }: PageProps<Queries.DocsPageQuery, Context>) => {
-  const { isZenMode } = useContext(ZenModeContext)
-
   if (!siteData || !mdx?.frontmatter)
     throw new Error("Docs page template query does not return expected values")
   if (!mdx?.frontmatter?.title)
@@ -252,7 +247,7 @@ const DocsPage = ({
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
       )}
-      <ContentContainer isZenMode={isZenMode}>
+      <ContentContainer>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
           {/* flip these positive first */}
