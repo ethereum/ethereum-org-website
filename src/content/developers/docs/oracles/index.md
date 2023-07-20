@@ -6,7 +6,7 @@ lang: en
 
 Oracles are data feeds that make data from off-chain sources available to the blockchain for smart contracts to use. This is necessary because Ethereum-based smart contracts cannot, by default, access information stored outside the blockchain network.
 
-Giving smart contracts the ability to execute using off-chain data inputs extends the utility and value of decentralized applications. For instance, on-chain prediction markets rely on oracles to provide information about outcomes that they use to validate user predictions. Suppose Alice bets 20 ETH on who will become the next U.S. President. In that case, the prediction-market dapp needs an oracle to confirm election results and determine if Alice is eligible for a payout.
+Giving smart contracts the ability to execute using off-chain data extends the utility and value of decentralized applications. For instance, on-chain prediction markets rely on oracles to provide information about outcomes that they use to validate user predictions. Suppose Alice bets 20 ETH on who will become the next U.S. President. In that case, the prediction-market dapp needs an oracle to confirm election results and determine if Alice is eligible for a payout.
 
 ## Prerequisites {#prerequisites}
 
