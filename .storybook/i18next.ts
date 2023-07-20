@@ -12,6 +12,7 @@ export const baseLocales = {
 const ns = [
   "common",
   "page-about",
+  "page-learn",
   "page-index",
   "page-upgrades",
   "page-developers-index",
@@ -24,11 +25,21 @@ const supportedLngs = Object.keys(baseLocales)
  */
 const resources: Resource = ns.reduce((acc, n) => {
   supportedLngs.forEach((lng) => {
+    let langFile: object
+
+    try {
+      langFile = require(`../src/intl/${lng}/${n}.json`)
+    } catch {
+      // If the search file is not found
+      return acc
+    }
+
     if (!acc[lng]) acc[lng] = {}
+
     acc[lng] = {
       translation: {
         ...acc[lng].translation,
-        ...require(`../src/intl/${lng}/${n}.json`),
+        ...langFile,
       },
     }
   })
