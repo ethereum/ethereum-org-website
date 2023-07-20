@@ -17,6 +17,10 @@ const BROKEN_LINK_REGEX = new RegExp(
   "\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)",
   "g"
 )
+const INCORRECT_PATH_IN_TRANSLATED_MARKDOWN = new RegExp(
+  "image: ../../(assets/|../assets/)",
+  "g"
+)
 
 // add <emoji
 // add /developers/docs/scaling/#layer-2-scaling
@@ -192,6 +196,22 @@ function processMarkdown(path: string) {
     console.warn(`Broken link found: ${path}:${lineNumber}`)
 
     // if (!BROKEN_LINK_REGEX.global) break
+  }
+
+  let incorrectImagePathMatch: RegExpExecArray | null
+
+  // Todo: refactor to simply check if the image exists relative to the path
+  if (path.includes("/translations/")) {
+    while (
+      (incorrectImagePathMatch =
+        INCORRECT_PATH_IN_TRANSLATED_MARKDOWN.exec(markdownFile))
+    ) {
+      const lineNumber = getLineNumber(
+        markdownFile,
+        incorrectImagePathMatch.index
+      )
+      console.warn(`Incorrect image path: ${path}:${lineNumber}`)
+    }
   }
 
   // TODO: refactor history pages to use a component for network upgrade summaries

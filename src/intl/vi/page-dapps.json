@@ -1,5 +1,6 @@
 {
   "page-dapps-1inch-logo-alt": "Biểu trưng 1inch",
+  "page-dapps-dexguru-logo-alt": "Logo DexGuru",
   "page-dapps-aave-logo-alt": "Biểu trưng Aave",
   "page-dapps-add-button": "Đề xuất ứng dụng phi tập trung (dapp)",
   "page-dapps-add-title": "Thêm ứng dụng phi tập trung (dapp)",
@@ -86,6 +87,7 @@
   "page-dapps-dapp-description-token-sets": "Các chiến lược đầu tư tái cân bằng tự động cho tiền mã hoá.",
   "page-dapps-dapp-description-tornado-cash": "Gửi các giao dịch ẩn danh trên Ethereum.",
   "page-dapps-dapp-description-uniswap": "Chỉ cần hoán đổi token hoặc phân phối token dưới dạng % phần thưởng.",
+  "page-dapps-dapp-description-dexguru": "Cổng giao dịch không qua trung gian cho các nhà giao dịch tài chính phi tập trung (DeFi)",
   "page-dapps-docklink-dapps": "Giới thiệu về ứng dụng phi tập trung (dapp)",
   "page-dapps-docklink-smart-contracts": "Hợp đồng thông minh",
   "page-dapps-dark-forest-logo-alt": "Biểu trưng Dark Forest",
