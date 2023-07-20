@@ -256,15 +256,15 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("where-can-i-get-eth-card-title")}
-                description={t("where-can-i-get-eth-card-description")}
+                title={t("what-is-web3-card-title")}
+                description={t("what-is-web3-card-description")}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.impact)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/get-eth/">
-                    <Translation id="where-can-i-get-eth-card-title" />
+                    <Translation id="what-is-web3-card-title" />
                   </ButtonLink>
                 </>
               </Card>
@@ -276,25 +276,13 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
             <DocsContainer>
               <DocLink to="/guides/">
-                <Translation id="guides-hub" />
+                <Translation id="guides-hub-desc" />
               </DocLink>
               <DocLink to="/quizzes/">
-                <Translation id="quizzes-title" />
+                <Translation id="quiz-hub-desc" />
               </DocLink>
               <DocLink to="/smart-contracts/">
                 <Translation id="additional-reading-what-are-smart-contracts" />
-              </DocLink>
-              <DocLink to="/developers/docs/intro-to-ethereum/">
-                <Translation id="additional-reading-a-developers-intro" />
-              </DocLink>
-              <DocLink to="/web3/">
-                <Translation id="additional-reading-what-is-web3" />
-              </DocLink>
-              <DocLink
-                to="https://www.kernel.community/en/learn/module-1/value"
-                isExternal
-              >
-                <Translation id="additional-reading-value" />
               </DocLink>
               <DocLink
                 to="https://www.youtube.com/watch?v=WSN5BaCzsbo"
@@ -399,6 +387,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </DocLink>
               <DocLink to="/layer-2/">
                 <Translation id="additional-reading-layer-2" />
+              </DocLink>
+              <DocLink to="/get-eth/">
+                <Translation id="additional-reading-get-eth" />
               </DocLink>
             </DocsContainer>
           </Section>
