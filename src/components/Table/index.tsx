@@ -11,6 +11,12 @@ import {
 } from "@chakra-ui/react"
 import { MDXProviderComponentsProp } from "@mdx-js/react"
 
+/*
+ * TODO: Currently, there are cell spacing issues with some table content.
+ * Prefer `layout="fixed"` in the future when content has been addressed
+ * to provide equal cell widths.
+ */
+
 interface TableProps extends ThemingProps<"Table"> {
   children: React.ReactNode
 }
