@@ -19,7 +19,7 @@ const Table = (props: TableProps) => {
   const { variant, ...rest } = props
   return (
     <TableContainer whiteSpace="normal">
-      <ChakraTable layout="fixed" variant={variant} {...rest} />
+      <ChakraTable variant={variant} {...rest} />
     </TableContainer>
   )
 }
