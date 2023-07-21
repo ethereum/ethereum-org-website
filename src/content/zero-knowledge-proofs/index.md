@@ -6,37 +6,28 @@ lang: en
 
 ## What are zero-knowledge proofs? {#what-are-zk-proofs}
 
-A zero-knowledge proof is a way of proving the validity of a statement without revealing the statement itself. The ‘prover’ is the party trying to prove a claim, while the ‘verifier’ is responsible for validating the claim.
+A zero-knowledge proof is "a method by which one party (the prover) can prove to another party (the verifier) that something is true, without revealing any information apart from the fact that this specific statement is true" ([Goldwasser, Micali, and Rackoff (1995)](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)).  
 
-Zero-knowledge proofs first appeared in a 1985 paper, “[The knowledge complexity of interactive proof systems](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)” which provides a definition of zero-knowledge proofs widely used today:
-
-> A zero-knowledge protocol is a method by which one party (the prover) can prove to another party (the verifier) that something is true, without revealing any information apart from the fact that this specific statement is true.
-
-Zero-knowledge proofs have improved over the years and they are now being used in several real-world applications.
+Zero-knowledge proofs have grown in poularity over time and are now used in several cryptocurrency applications.
 
 ## Why do we need zero-knowledge proofs? {#why-zero-knowledge-proofs-are-important}
 
-Zero-knowledge proofs represented a breakthrough in applied cryptography, as they promised to improve security of information for individuals. Consider how you might prove a claim (e.g., “I am a citizen of X country”) to another party (e.g., a service provider). You’d need to provide “evidence” to back up your claim, such as a national passport or driver’s license.
+Consider the problem of proving to someone that you are a citizen of a particular country. The conventional way to solve this problem is to provide hard-to-forge idenitification, like a passport. However, you might be cautious of sharing the details of your passport, for instance, if you are concerned about the security of the database that will be storing your information. What you want here is some way to prove that you _have_ a passport withotu actually showing it.
 
-But there are problems with this approach, chiefly the lack of privacy. Personally Identifiable Information (PII) shared with third-party services is stored in central databases, which are vulnerable to hacks. With identity theft becoming a critical issue, there are calls for more privacy-protecting means of sharing sensitive information.
+Zero-knowledge proofs cryptographically solve this problem. Zero-knowledge protocols rely on algorithms that take some data as input (called a 'witness'), return ‘true’ or ‘false’ as output, and provide strong guarantees that that statement is true or false, all without exposing the information used in creating it.
 
-Zero-knowledge proofs solve this problem by eliminating the need to reveal information to prove validity of claims. The zero-knowledge protocol uses the statement (called a ‘witness’) as input to generate a succinct proof of its validity. This proof provides strong guarantees that a statement is true without exposing the information used in creating it.
-
-Going back to our earlier example, the only evidence you need to prove your citizenship claim is a zero-knowledge proof. The verifier only has to check if certain properties of the proof hold true to be convinced that the underlying statement holds true as well.
-
-## How do zero-knowledge proofs work? {#how-do-zero-knowledge-proofs-work}
-
-A zero-knowledge proof allows you to prove the truth of a statement without sharing the statement’s contents or revealing how you discovered the truth. To make this possible, zero-knowledge protocols rely on algorithms that take some data as input and return ‘true’ or ‘false’ as output.
-
+## How zero-knowledge proofs are evaluated
 A zero-knowledge protocol must satisfy the following criteria:
 
 1. **Completeness**: If the input is valid, the zero-knowledge protocol always returns ‘true’. Hence, if the underlying statement is true, and the prover and verifier act honestly, the proof can be accepted.
 
-2. **Soundness**: If the input is invalid, it is theoretically impossible to fool the zero-knowledge protocol to return ‘true’. Hence, a lying prover cannot trick an honest verifier into believing an invalid statement is valid (except with a tiny margin of probability).
+2. **Soundness**: If the input is invalid, it is theoretically impossible for the zero-knowledge protocol to return ‘true’. Hence, a lying prover cannot trick an honest verifier into believing an invalid statement is valid (except with a tiny margin of probability).
 
-3. **Zero-knowledge**: The verifier learns nothing about a statement beyond its validity or falsity (they have “zero knowledge” of the statement). This requirement also prevents the verifier from deriving the original input (the statement’s contents) from the proof.
+3. **Zero-knowledge**: The verifier learns nothing about a statement beyond whether it is true or false (they have “zero knowledge” of the statement). This requirement also prevents the verifier from deriving the original input (the statement’s contents) from the proof.
 
-In basic form, a zero-knowledge proof is made up of three elements: **witness**, **challenge**, and **response**.
+## How do zero-knowledge proofs work? {#how-do-zero-knowledge-proofs-work}
+
+A zero-knowledge proof is made up of three elements: **witness**, **challenge**, and **response**.
 
 - **Witness**: With a zero-knowledge proof, the prover wants to prove knowledge of some hidden information. The secret information is the “witness” to the proof, and the prover's assumed knowledge of the witness establishes a set of questions that can only be answered by a party with knowledge of the information. Thus, the prover starts the proving process by randomly choosing a question, calculating the answer, and sending it to the verifier.
 
@@ -46,13 +37,13 @@ In basic form, a zero-knowledge proof is made up of three elements: **witness**,
 
 The above describes the structure of an ‘interactive zero-knowledge proof’. Early zero-knowledge protocols used interactive proving, where verifying the validity of a statement required back-and-forth communication between provers and verifiers.
 
-A good example that illustrates how interactive proofs work is Jean-Jacques Quisquater’s famous [Ali Baba cave story](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave). In the story, Peggy (the prover) wants to prove to Victor (the verifier) that she knows the secret phrase to open a magic door without revealing the phrase.
+A good example that illustrates how interactive proofs work is Jean-Jacques Quisquater’s [Ali Baba cave story](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave), where Peggy (the prover) wants to prove to Victor (the verifier) that she knows the secret phrase to open a magic door without revealing the phrase.
 
 ### Non-interactive zero-knowledge proofs {#non-interactive-zero-knowledge-proofs}
 
 While revolutionary, interactive proving had limited usefulness since it required the two parties to be available and interact repeatedly. Even if a verifier was convinced of a prover’s honesty, the proof would be unavailable for independent verification (computing a new proof required a new set of messages between the prover and verifier).
 
-To solve this problem, Manuel Blum, Paul Feldman, and Silvio Micali suggested the first [non-interactive zero-knowledge proofs](https://dl.acm.org/doi/10.1145/62212.62222) where the prover and verifier have a shared key. This allows the prover to demonstrate their knowledge of some information (i.e., witness) without providing the information itself.
+To solve this problem, Blum, Feldman, and Micali suggested the first [non-interactive zero-knowledge proofs](https://dl.acm.org/doi/10.1145/62212.62222) where the prover and verifier have a shared key. This allows the prover to demonstrate their knowledge of some information (i.e., witness) without providing the information itself.
 
 Unlike interactive proofs, noninteractive proofs required only one round of communication between participants (prover and verifier). The prover passes the secret information to a special algorithm to compute a zero-knowledge proof. This proof is sent to the verifier, who checks that the prover knows the secret information using another algorithm.
 
@@ -88,7 +79,7 @@ ZK-STARK is an acronym for **Zero-Knowledge Scalable Transparent Argument of Kno
 
 - **Scalable**: ZK-STARK is faster than ZK-SNARK at generating and verifying proofs when the size of the witness is larger. With STARK proofs, prover and verification times only slightly increase as the witness grows (SNARK prover and verifier times increase linearly with witness size).
 
-- **Transparent**: ZK-STARK relies on publicly verifiable randomness to generate public parameters for proving and verification instead of a trusted setup. Thus, they are more transparent compared to ZK-SNARKs.
+- **Transparent**: ZK-STARK relies on publicly verifiable randomness to generate public parameters for proving and verification instead of a trusted setup. This method is more transparent than that used by ZK-SNARKs.
 
 ZK-STARKs produce larger proofs than ZK-SNARKs meaning they generally have higher verification overheads. However, there are cases (such as proving large datasets) where ZK-STARKs may be more cost-effective than ZK-SNARKs.
 
@@ -96,19 +87,15 @@ ZK-STARKs produce larger proofs than ZK-SNARKs meaning they generally have highe
 
 ### Anonymous payments {#anonymous-payments}
 
-Credit card payments are often visible to multiple parties, including the payments provider, banks, and other interested parties (e.g., government authorities). While financial surveillance has benefits for identifying illegal activity, it also undermines the privacy of ordinary citizens.
+Privacy-focused blockchains use zero-knolwedge protocools to preserve anonymity. Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous, but they can often be linked to real-world  identities via information that a use provides (e.g. by including ETH addresses on Twitter or GitHub profiles) or by using basic on- and off-chain data analysis.
 
-Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and off-chain data analysis.
+Privacy-focused blockchains, such as Zcash and Monero, often use zero-knowledge proofs to shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline. THese blockchain networks allow nodes to validate transactions without needing to access transaction data.
 
-There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as Zcash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
-
-By baking in zero-knowledge technology into the protocol, privacy-focused blockchain networks allow nodes to validate transactions without needing to access transaction data.
-
-Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy. Unfortunately, because these are "opt-in" privacy tools they are associated with illicit activity. To overcome this, privacy has to eventually become the default on public blockchains.
+Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy. (Tornado Cash has been subject to [government sanctions](https://home.treasury.gov/news/press-releases/jy0916).)
 
 ### Identity protection {#identity-protection}
 
-Current identity management systems put personal information at risk. Zero-knowledge proofs can help individuals validate identity whilst protecting sensitive details.
+Zero-knowledge proofs can help individuals validate identity while protecting sensitive details.
 
 Zero-knowledge proofs are particularly useful in the context of [decentralized identity](/decentralized-identity/). Decentralized identity (also described as ‘self-sovereign identity’) gives the individual the ability to control access to personal identifiers. Proving your citizenship without revealing your tax ID or passport details is a good example of how zero-knowledge technology enables decentralized identity.
 
@@ -116,7 +103,7 @@ Zero-knowledge proofs are particularly useful in the context of [decentralized i
 
 Using online services requires proving your identity and right to access those platforms. This often requires providing personal information, like names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
 
-Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a ZK-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves the experience for users and frees organizations from the need to store huge amounts of user information.
+Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a ZK-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves user experience and reduces organizations'  need to indefinitely store user information.
 
 ### Verifiable computation {#verifiable-computation}
 
@@ -134,11 +121,11 @@ Here’s how that works in practice:
 
 - After processing transactions, the other chain returns the results to be applied to Ethereum’s state.
 
-The benefit here is that Ethereum doesn’t have to do any execution and only needs to apply results from outsourced computation to its state. This reduces network congestion and also improves transaction speeds (off-chain protocols optimize for faster execution).
+The benefit is that Ethereum doesn’t have to do any execution and only needs to apply results from outsourced computation to its state. This reduces network congestion and also improves transaction speeds (off-chain protocols optimize for faster execution).
 
 The chain needs a way to validate off-chain transactions without re-executing them, or else the value of off-chain execution is lost.
 
-This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of off-chain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state—without waiting for anyone to dispute it.
+This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of off-chain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state without waiting for anyone to dispute it.
 
 [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two off-chain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions off-chain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
 
@@ -146,9 +133,7 @@ This is where verifiable computation comes into play. When a node executes a tra
 
 Blockchain voting schemes have many favorable characteristics: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even on-chain voting schemes aren't immune to the problem of **collusion**.
 
-Defined as “coordinating to limit open competition by deceiving, defrauding, and misleading others,” collusion may take the form of a malicious actor influencing voting by offering bribes. For example, Alice might receive a bribe from Bob to vote for `option B` on a ballot even if she prefers `option A`.
-
-Bribery and collusion limit the effectiveness of any process that uses voting as a signaling mechanism (especially where users can prove how they voted). This can have significant consequences, especially where the votes are responsible for allocating scarce resources.
+Collusion is the act of “coordinating to limit open competition by deceiving, defrauding, and misleading others." Bribery is a form of collusion. Collusion limits the effectiveness of any process that uses voting as a signaling mechanism (especially where users can prove how they voted) because it means that votes are no longer a sincere signal.
 
 For example, [quadratic funding mechanisms](https://www.radicalxchange.org/concepts/plural-funding/) rely on donations to measure preference for certain options among different public good projects. Each donation counts as a "vote" for a specific project, with projects that receive more votes getting more funds from the matching pool.
 
@@ -162,7 +147,7 @@ At the start, the coordinator deploys the MACI contract on Ethereum, after which
 
 In MACI, zero-knowledge proofs are used to ensure correctness of computation by making it impossible for the coordinator to incorrectly process votes and tally results. This is achieved by requiring the coordinator to generate ZK-SNARK proofs verifying that a) all messages were processed correctly b) the final result corresponds to the sum of all _valid_ votes.
 
-Thus, even without sharing a breakdown of votes per user (as is usually the case), MACI guarantees the integrity of results calculated during the tallying process. This feature is useful in reducing the effectiveness of basic collusion schemes. We can explore this possibility by using the previous example of Bob bribing Alice to vote for an option:
+Thus, even without sharing a breakdown of votes per user (as is usually the case), MACI guarantees the integrity of results calculated during the tallying process. This feature is useful in reducing the effectiveness of basic collusion schemes. Suppose that Bob wishes to bribe Alice to vote a certain way:
 
 - Alice registers to vote by sending their public key to a smart contract.
 - Alice agrees to vote for `option B` in exchange for a bribe from Bob.
@@ -210,3 +195,4 @@ ZK-STARK is considered immune to the threat of quantum computing, as it uses col
 - [ZK-STARKs — Create Verifiable Trust, even against Quantum Computers](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [An approximate introduction to how zk-SNARKs are possible](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [What is Zero-Knowledge Proof and Its Role in Blockchain?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_
+- [The Knowledge Complexity of Interactive Proof Systems](https://dl.acm.org/doi/pdf/10.1145/3335741.3335750?casa_token=A3aD62bYTf4AAAAA:QOFDJa80Yrq5N7VmZpa8s5FMKkVotBM42TeBEUWn8uXFdViDzYnKDk6h9nYLvXKdqErSQn53rstl), a textbook chapter that walks through the original zero-knowledge paper and discusses applications and implications.
