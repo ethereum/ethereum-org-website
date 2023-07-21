@@ -285,10 +285,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <Translation id="additional-reading-what-are-smart-contracts" />
               </DocLink>
               <DocLink
-                to="https://www.youtube.com/watch?v=WSN5BaCzsbo"
+                to="https://www.youtube.com/watch?v=UihMqcj-cqc"
                 isExternal
               >
-                <Translation id="additional-reading-decentralize-everything" />
+                <Translation id="additional-reading-ethereum-in-thirty-minutes" />
               </DocLink>
             </DocsContainer>
           </Section>
