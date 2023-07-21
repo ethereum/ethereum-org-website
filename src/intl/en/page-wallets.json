@@ -3,7 +3,7 @@
   "page-wallets-accounts-addresses-desc": "It's worth understanding the differences between some key terms.",
   "page-wallets-accounts-ethereum-addresses": "An Ethereum account has an address, like an inbox has an email address. This is used to identify your digital assets.",
   "page-wallets-alt": "Illustration of a robot with a vault for a body, representing an Ethereum wallet",
-  "page-wallets-ethereum-account": "An Ethereum account is really a pair of keys - one becomes an address that you can share freely and the other must be kept secret and can be used to make signatures. Together, these keys allow you to hold assets and make transactions.",
+  "page-wallets-ethereum-account": "An Ethereum account is a pair of keys. One key is used to create the address you can share freely, and the other key you need to keep secret because it's used to sign things. Together, these keys let you hold assets and make transactions.",
   "page-wallets-blog": "Coinbase blog",
   "page-wallets-bookmarking": "Bookmark your wallet",
   "page-wallets-bookmarking-desc": "If you use a web wallet, bookmark the site to protect yourself against phishing scams.",
