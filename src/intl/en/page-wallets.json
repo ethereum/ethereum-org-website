@@ -11,7 +11,7 @@
   "page-wallets-desc-2": "Wallets are what most people use to handle their digital assets and identity.",
   "page-wallets-desc-2-link": "More on ETH",
   "page-wallets-desc-3": "Your wallet is a tool for interacting with your Ethereum account. That means you can swap wallet providers at any time. Many wallets also let you manage several Ethereum accounts from one application.",
-  "page-wallets-desc-4": "Wallet providers don't have custody of your funds, you do, because you have safely stored your keys. The wallet is just a software that helps you control your keys and manage your assets.",
+  "page-wallets-desc-4": "Wallet providers don't have custody of your funds. They just provide you a window to see your assets on Ethereum and tools to easily manage them.",
   "page-wallets-description": "Ethereum wallets are applications that give you control over your account. Just like your physical wallet, it contains everything you need to prove your identity and handle your assets. Your wallet allows you to sign in to applications, read your balance, send transactions and verify your identity.",
   "page-wallets-desktop": "Desktop applications if you prefer to manage your funds via macOS, Windows or Linux",
   "page-wallets-ethereum-wallet": "A wallet is a tool that lets you interact with your account, using your keys. It allows you to view your account balance, send transactions, and more.",
