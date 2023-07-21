@@ -170,47 +170,38 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           >
             <Translation id="page-get-eth-where-to-buy-desc" />
           </Text>
-          <Text
-            fontSize="xl"
-            lineHeight="140%"
-            maxWidth="45ch"
-            color="text200"
-            textAlign="center"
-            mb={8}
-          >
-            <Translation id="page-get-eth-where-to-buy-desc-2" />
-          </Text>
+          <br />
           <Box as={EthPriceCard} mb={8} />
-          <ButtonLink
-            to="#country-picker"
-            onClick={() =>
-              trackCustomEvent({
-                eventCategory: "Search by country button",
-                eventAction: "click",
-                eventName: "search_by_country",
-              })
-            }
-          >
-            <Translation id="page-get-eth-search-by-country" />
-          </ButtonLink>
         </Flex>
       </Flex>
       <Flex flexWrap="wrap" mx={{ base: 4, lg: 8 }} my={{ base: 4, lg: 0 }}>
         <StyledCard
-          emoji=":busts_in_silhouette:"
-          title={t("page-get-eth-peers")}
-          description={t("page-get-eth-peers-desc")}
-        ></StyledCard>
+          emoji=":office_building:"
+          title={t("page-get-eth-cex")}
+          description={t("page-get-eth-cex-desc")}
+        >
+          <Link to="#country-picker">
+            <Translation id="page-get-eth-cex-link-desc" />
+          </Link>
+        </StyledCard>
         <StyledCard
           emoji=":building_construction:"
           title={t("page-get-eth-earn")}
           description={t("page-get-eth-earn-desc")}
-        ></StyledCard>
+        >
+          <Link to="/dao/">
+            <Translation id="page-get-eth-daos-link-desc" />
+          </Link>
+        </StyledCard>
         <StyledCard
-          emoji=":office_building:"
-          title={t("page-get-eth-cex")}
-          description={t("page-get-eth-cex-desc")}
-        />
+          emoji=":busts_in_silhouette:"
+          title={t("page-get-eth-peers")}
+          description={t("page-get-eth-peers-desc")}
+        >
+          <Link to="/wallets/">
+            <Translation id="page-get-eth-wallets-link-desc" />
+          </Link>
+        </StyledCard>
         <StyledCard
           emoji=":robot:"
           title={t("page-get-eth-dex")}
@@ -233,7 +224,11 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           emoji=":shield:"
           title={t("page-get-eth-staking")}
           description={t("page-get-eth-staking-desc")}
-        ></StyledCard>
+        >
+          <Link to="/staking">
+            <Translation id="page-get-eth-staking-link-desc" />
+          </Link>
+        </StyledCard>
         <Content>
           <Text>
             <Text as="em">
