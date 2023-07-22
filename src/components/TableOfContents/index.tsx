@@ -22,7 +22,7 @@ import Translation from "../Translation"
 
 import Mobile from "./TableOfContentsMobile"
 import ItemsList from "./ItemsList"
-import { getCustomId, Item, outerListProps } from "./utils"
+import { getCustomId, type Item, outerListProps } from "./utils"
 import { trackCustomEvent } from "../../utils/matomo"
 
 export { Item }
