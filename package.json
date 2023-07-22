@@ -125,8 +125,10 @@
   "scripts": {
     "postinstall": "yarn theme",
     "build": "gatsby build",
-    "build:lambda": "cross-env NODE_OPTIONS=--openssl-legacy-provider netlify-lambda build src/lambda --config=./webpack.lambda.js",
-    "build:10gb": "cross-env NODE_OPTIONS=--max-old-space-size=10240 gatsby build",
+    "build:lambda": "NODE_OPTIONS=--openssl-legacy-provider netlify-lambda build src/lambda --config=./webpack.lambda.js",
+    "build:10gb": "NODE_OPTIONS=--max-old-space-size=10240 gatsby build",
+    "build:lambda-cross-env": "cross-env NODE_OPTIONS=--openssl-legacy-provider netlify-lambda build src/lambda --config=./webpack.lambda.js",
+    "build:10gb-cross-env": "cross-env NODE_OPTIONS=--max-old-space-size=10240 gatsby build",
     "clean": "gatsby clean",
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
