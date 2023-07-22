@@ -136,6 +136,7 @@ const Nav: FC<IProps> = ({ path }) => {
                   fill: "currentColor",
                 },
               }}
+              _visited={{}}
               sx={{
                 svg: {
                   fill: "currentColor",

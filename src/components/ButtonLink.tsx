@@ -26,7 +26,9 @@ const ButtonLink: React.FC<IProps> = ({ children, isSecondary, ...props }) => {
         ...styles,
         textDecoration: "none",
         _hover: { ...styles["_hover"], textDecoration: "none" },
+        _visited: { color: styles["color"] },
       }}
+      fontWeight="normal"
       {...props}
     >
       {children}
