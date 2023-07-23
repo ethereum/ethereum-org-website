@@ -56,7 +56,6 @@
     "gatsby-transformer-json": "^5.4.0",
     "gatsby-transformer-remark": "^6.4.0",
     "gatsby-transformer-sharp": "^5.4.0",
-    "googleapis": "^118.0.0",
     "htmr": "^1.0.2",
     "i18next": "^21.9.2",
     "is-relative-url": "^3.0.0",
