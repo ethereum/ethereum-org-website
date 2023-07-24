@@ -1,4 +1,4 @@
-import { google } from "googleapis"
+import { calendar as googleCalendar } from "@googleapis/calendar"
 
 import type { HandlerResponse } from "@netlify/functions"
 
@@ -7,7 +7,7 @@ export const lambda = async (
   calenderId: string
 ): Promise<HandlerResponse> => {
   try {
-    const calendar = google.calendar({ version: "v3", auth: apiKey })
+    const calendar = await googleCalendar({ version: "v3", auth: apiKey })
     const futureEvents = await calendar.events.list({
       calendarId: calenderId,
       timeMin: new Date().toISOString(),
