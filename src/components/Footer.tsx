@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
+import { FaGithub, FaTwitter, FaDiscord } from "react-icons/fa"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
 import { Lang } from "../utils/languages"
@@ -29,11 +29,6 @@ const socialLinks = [
     icon: FaTwitter,
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
-  },
-  {
-    icon: FaYoutube,
-    to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
-    ariaLabel: "Youtube",
   },
   {
     icon: FaDiscord,
