@@ -1,10 +1,17 @@
 [
   {
+    "title": "Web3 Lebanon",
+    "emoji": ":lb:",
+    "location": "Beirut",
+    "link": "https://www.eventbrite.com/e/web3-lebanon-dev-meet-tickets-684658059687"
+  },
+  {
     "title": "ETH Nanjing",
     "emoji": ":cn:",
     "location": "Nanjing",
     "link": "https://lu.ma/ETHNanJing"
-  },{
+  },
+  {
     "title": "852dev.xyz",
     "emoji": ":hong_kong:",
     "location": "Hong Kong",
