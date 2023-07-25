@@ -17,7 +17,6 @@
     "@emotion/styled": "^11.9.3",
     "@formatjs/intl-locale": "^2.4.14",
     "@formatjs/intl-numberformat": "^6.1.4",
-    "@googleapis/calendar": "^6.0.0",
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
     "algoliasearch": "^4.3.0",
