@@ -77,7 +77,7 @@ export const useNav = ({ path }: { path: string }) => {
       ariaLabel: t("learn-menu"),
       items: [
         {
-          text: t("page-index-header-start-here"),
+          text: t("start-here"),
           items: [
             {
               text: t("learn-hub"),
@@ -90,7 +90,7 @@ export const useNav = ({ path }: { path: string }) => {
           ],
         },
         {
-          text: t("page-index-header-ethereum-basics"),
+          text: t("ethereum-basics"),
           items: [
             {
               text: t("what-is-ethereum"),
@@ -123,7 +123,7 @@ export const useNav = ({ path }: { path: string }) => {
           ],
         },
         {
-          text: t("page-index-header-ethereum-protocol"),
+          text: t("ethereum-protocol"),
           items: [
             {
               text: t("energy-consumption"),
