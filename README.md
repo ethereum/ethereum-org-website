@@ -1617,6 +1617,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xx92"><img src="https://avatars.githubusercontent.com/u/133748557?v=4?s=100" width="100px;" alt="0xx92"/><br /><sub><b>0xx92</b></sub></a><br /><a href="#content-0xx92" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/altinocoelho"><img src="https://avatars.githubusercontent.com/u/92543849?v=4?s=100" width="100px;" alt="altinocoelho"/><br /><sub><b>altinocoelho</b></sub></a><br /><a href="#content-altinocoelho" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/viac92"><img src="https://avatars.githubusercontent.com/u/64146594?v=4?s=100" width="100px;" alt="viac92"/><br /><sub><b>viac92</b></sub></a><br /><a href="#content-viac92" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/GDdark"><img src="https://avatars.githubusercontent.com/u/15982894?v=4?s=100" width="100px;" alt="DongXi Huang"/><br /><sub><b>DongXi Huang</b></sub></a><br /><a href="#content-GDdark" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
