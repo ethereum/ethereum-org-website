@@ -1345,7 +1345,7 @@ const questionBank: QuestionBank = {
       },
     ],
     correctAnswerId: "k004-b",
-  }
+  },
 }
 
 export default questionBank
