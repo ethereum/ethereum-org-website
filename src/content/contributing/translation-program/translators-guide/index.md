@@ -2,7 +2,6 @@
 title: Translators guide
 lang: en
 description: Instructions and tips for ethereum.org translators
-sidebar: true
 ---
 
 # Ethereum.org Translation Style Guide {#style-guide}
@@ -53,7 +52,7 @@ When translating the content, you should ensure that the translations are consis
 
 A common misconception is that Ethereum should always be written in Latin. This is mostly incorrect, please use the spelling of Ethereum, native to your language (e.g. 以太坊 in Chinese, إيثيريوم in Arabic, etc.).
 
-**The above doesn’t apply to languages, where proper nouns shouldn’t be translated as a rule.**
+**The above doesn’t apply to languages, where proper names shouldn’t be translated as a rule.**
 
 ### Translating page metadata {#translating-metadata}
 
@@ -101,12 +100,12 @@ A lot of the source content contains tags and variables, which are highlighted i
 To make it easier to manage tags and copy them directly from the source, we recommend changing your settings in the Crowdin editor.
 
 1. Open settings
-![How to open settings in the editor](./editor-settings.png)
+   ![How to open settings in the editor](./editor-settings.png)
 
 2. Scroll down to the 'HTML tags displaying' section
 
 3. Select 'Hide'
-![Please select 'Hide'](./hide-tags.png)
+   ![Please select 'Hide'](./hide-tags.png)
 
 4. Click 'Save'
 

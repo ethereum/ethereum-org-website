@@ -6,11 +6,9 @@ tags:
   - "contrats intelligents"
   - "jetons"
   - "solidity"
-  - "premiers pas"
   - "erc-20"
 skill: beginner
 lang: fr
-sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/

@@ -4,11 +4,9 @@ description: Jak pobrać, zainstalować i uruchomić Geth. Obejmuje tryby synchr
 author: "Brian Gu"
 tags:
   - "klienty"
-  - "geth"
   - "węzły"
 skill: intermediate
 lang: pl
-sidebar: true
 published: 2020-06-14
 ---
 

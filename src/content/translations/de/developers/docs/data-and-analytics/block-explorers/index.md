@@ -2,7 +2,6 @@
 title: Block-Explorer
 description: Eine Einführung in Block-Explorer, Ihr Portal in die Welt der Blockchain-Daten – dort können Sie Informationen über Transaktionen, Konten, Verträge und mehr abfragen
 lang: de
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -152,7 +151,7 @@ Natürlich gibt es einige Daten, die Informationen zum Netzwerkzustand bieten. D
 
 Verbesserungen für die Skalierbarkeit befinden sich noch in der Entwicklung, doch es lohnt sich, über einige der Datenpunkte zu sprechen, die Sie über Explorer erhalten können. Alle diese Daten sind bereits für die Testnets verfügbar.
 
-Wenn Sie mit der Roadmap nicht vertraut sind, finden Sie Informationen in [unserem Überblick über die Ethereum-Upgrades](/upgrades/).
+Wenn Sie mit der Roadmap nicht vertraut sind, finden Sie Informationen in [unserem Überblick über die Ethereum-Upgrades](/roadmap/).
 
 ### Epoche {#epoch}
 

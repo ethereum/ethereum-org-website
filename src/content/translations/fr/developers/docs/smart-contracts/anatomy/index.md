@@ -2,7 +2,6 @@
 title: Anatomie des contrats intelligents
 description: "Examen approfondi des composantes d'un contrat intelligent : les fonctions, les données et les variables."
 lang: fr
-sidebar: true
 ---
 
 Les contrats intelligents sont des programmes qui s'exécutent à une adresse sur Ethereum. Ils sont constitués de données et de fonctions qui peuvent s'exécuter lors de la réception d'une transaction. Cette page explique la composition d'un contrat intelligent.
@@ -640,7 +639,7 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## En lire plus {#further-reading}
+## Complément d'information {#further-reading}
 
 Consultez la documentation Solidity et Vyper pour une vue d'ensemble plus complète des contrats intelligents :
 

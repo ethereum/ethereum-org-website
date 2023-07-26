@@ -2,7 +2,6 @@
 title: Ethereum for JavaScript developers
 description: Learn how to develop for Ethereum using JavaScript-based projects and tooling.
 lang: en
-sidebar: true
 ---
 
 JavaScript is among the most popular languages in the Ethereum ecosystem. In fact, there's a [team](https://github.com/ethereumjs) dedicated to bringing as much of Ethereum to JavaScript as possible.
@@ -21,10 +20,11 @@ You can use these libraries to interact with smart contracts on Ethereum so it's
 
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Ethers.js](https://docs.ethers.io/) _– includes Ethereum wallet implementation and utilities in JavaScript and TypeScript._
+- [viem](https://viem.sh) – a TypeScript Interface for Ethereum that provides low-level stateless primitives for interacting with Ethereum.
 
 ### Smart contracts {#smart-contracts}
 
-If you're a JavaScript developer and wanting to write your own smart contract, you may want to get familiar with [Solidity](https://solidity.readthedocs.io). This is the most popular smart contract language and it's syntactically similar to JavaScript, which may make it easier to learn.
+If you're a JavaScript developer and want to write your own smart contract, you may want to get familiar with [Solidity](https://solidity.readthedocs.io). This is the most popular smart contract language and it's syntactically similar to JavaScript, which may make it easier to learn.
 
 More on [smart contracts](/developers/docs/smart-contracts/).
 
@@ -51,10 +51,12 @@ If you prefer to read code, this JavaScript could be a great alternative to read
 
 ### Nodes and clients {#nodes-and-clients}
 
-There's an Ethereumjs client in development. This will let you dig into how Ethereum clients work in a language you understand.
+An Ethereumjs client is in active development that lets you dig into how Ethereum clients work in a language you understand; JavaScript!
+
+It used to be housed in a standalone [`repository`](https://github.com/ethereumjs/ethereumjs-client), however, was later merged into the EthereumVM monorepo as a package.
 
 **Check out the client**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-client)
+[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## Other projects {#other-projects}
 
@@ -64,7 +66,7 @@ There are also plenty of other things going on in the land of Ethereum JavaScrip
 - tools to generate, import, and export Ethereum keys.
 - an implementation of the `merkle-patricia-tree` – a data structure outlined in the Ethereum yellow paper.
 
-Dig in to whatever interests you most over at the [EthereumJS repo](https://github.com/ethereumjs)
+Dig into whatever interests you most over at the [EthereumJS repo](https://github.com/ethereumjs)
 
 ## Further reading {#further-reading}
 

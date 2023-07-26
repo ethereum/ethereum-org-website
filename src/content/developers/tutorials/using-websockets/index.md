@@ -3,16 +3,7 @@ title: Using WebSockets
 description: Guide to using WebSockets and Alchemy to make JSON-RPC requests and subscribe to events.
 author: "Elan Halpern"
 lang: en
-sidebar: true
-tags:
-  [
-    "alchemy",
-    "websockets",
-    "querying",
-    "getting started",
-    "subscription",
-    "javascript",
-  ]
+tags: ["alchemy", "websockets", "querying", "javascript"]
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
@@ -27,16 +18,16 @@ Unlike HTTP, with WebSockets, you don't need to continuously make requests when 
 
 As with any network connection, you should not assume that a WebSocket will remain open forever without interruption, but correctly handling dropped connections and reconnection by hand can be challenging to get right. Another downside of WebSockets is that you do not get HTTP status codes in the response, but only the error message.
 
-​[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) automatically adds handling for WebSocket failures and retries with no configuration necessary.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automatically adds handling for WebSocket failures and retries with no configuration necessary.
 
 ## Try it out {#try-it-out}
 
 The easiest way to test out WebSockets is to install a command line tool for making WebSocket requests such as [wscat](https://github.com/websockets/wscat). Using wscat, you can send requests as follows:
 
-_Note: if you have an Alchemy account you can replace `demo` with your own API key. [Sign up for a free Alchemy account here!](https://dashboard.alchemyapi.io/signup/)_
+_Note: if you have an Alchemy account you can replace `demo` with your own API key. [Sign up for a free Alchemy account here!](https://auth.alchemyapi.io/signup)_
 
 ```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
@@ -68,7 +59,7 @@ When connected through a WebSocket, you may use two additional methods: `eth_sub
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Creates a new subscription for specified events. [Learn more about `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
+Creates a new subscription for specified events. [Learn more about `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parameters {#parameters}
 
@@ -145,13 +136,11 @@ Example:
   "method":  "eth_subscription",
   "params":  {
       "result":  {
-          "difficulty":  "0x15d9223a23aa",
           "extraData":  "0xd983010305844765746887676f312e342e328777696e646f7773",
           "gasLimit":  "0x47e7c4",
           "gasUsed":  "0x38658",
           "logsBloom":
 "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-          "miner":  "0xf8b483dba2c3b7176a3da549ad41a48bb3121069",
           "nonce":  "0x084149998194cc5f",
           "number":  "0x1348c9",
           "parentHash":  "0x7736fab79e05dc611604d22470dadad26f56fe494421b5b333de816ce1f25701",
@@ -253,4 +242,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Sign up with Alchemy](https://dashboard.alchemyapi.io/signup/) for free, check out [our documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform).
+[Sign up with Alchemy](https://auth.alchemyapi.io/signup) for free, check out [our documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform).

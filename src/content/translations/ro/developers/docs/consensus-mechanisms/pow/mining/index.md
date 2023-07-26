@@ -2,7 +2,6 @@
 title: Minarea
 description: O explicație a modului în care funcționează minarea în Ethereum și modul în care aceasta ajută la menținerea lui Ethereum în securitate și descentralizat.
 lang: ro
-sidebar: true
 incomplete: true
 ---
 
@@ -61,8 +60,6 @@ Urmăriți cum vă îndrumă Austin în procesul de minare și blockchain-ul dov
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## Referințe suplimentare {#further-reading}
-
-- [Ce înseamnă să minezi în Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
 ## Instrumente corelate {#related-tools}
 

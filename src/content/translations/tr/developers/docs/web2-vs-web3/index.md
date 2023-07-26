@@ -2,7 +2,6 @@
 title: Web2 ve Web3
 description:
 lang: tr
-sidebar: true
 ---
 
 Web2, bugün bir çoğumuzun bildiği internet sürümünü ifade eder. Kişisel verilerinizin karşılığında, size hizmet sağlayan şirketlerin hakim olduğu bir internet. Web3 ise Ethereum bağlamında, blok zincirinde çalışan merkeziyetsiz uygulamaları ifade eder. Bu uygulamalar, kişisel verileri parasallaştırmadan, herkesin katılmasına izin veren uygulamalardır.

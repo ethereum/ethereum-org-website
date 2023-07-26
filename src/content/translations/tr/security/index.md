@@ -2,7 +2,6 @@
 title: Ethereum güvenliği ve dolandırıcılık önleme
 description: Ethereum'da güvende kalmak
 lang: tr
-sidebar: true
 ---
 
 # Ethereum güvenliği ve dolandırıcılık önleme {#introduction}
@@ -159,8 +158,6 @@ Akıllı sözleşmelerle etkileşim kurarken sınırsız harcama limitlerine izi
 
 Birçok Ethereum cüzdanı, boşaltılan hesaplara karşı koruma sağlamak için limit koruması sunar.
 
-[Limit korumalı cüzdanları keşfedin](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Yaygın dolandırıcılıklar {#common-scams}
@@ -253,7 +250,7 @@ Hatırlanacak birkaç şey:
 
 ### "Eth2" token dolandırıcılığı {#eth2-token-scam}
 
-2022'de gelen [Birleştirme](/upgrades/merge/) ile dolandırıcılar, kullanıcıların ETH'lerini bir "ETH2" token'ı için kullanmalarını sağlamak için "Eth2" terimi hakkındaki karışıklıktan faydalandı. Birleştirme ile kullanıma giren hiçbir "ETH2" veya başka bir yeni token yok. Bugün sahip olduğunuz ETH, Birleştirme sonrasında da aynı ETH olmaya devam edecek ve Birleştirme için ETH'nizde herhangi bir takas yapmanıza gerek yok.
+2022'de gelen [Birleştirme](/roadmap/merge/) ile dolandırıcılar, kullanıcıların ETH'lerini bir "ETH2" token'ı için kullanmalarını sağlamak için "Eth2" terimi hakkındaki karışıklıktan faydalandı. Birleştirme ile kullanıma giren hiçbir "ETH2" veya başka bir yeni token yok. Bugün sahip olduğunuz ETH, Birleştirme sonrasında da aynı ETH olmaya devam edecek ve Birleştirme için ETH'nizde herhangi bir takas yapmanıza gerek yok.
 
 Dolandırıcılar, "destek ekibindenmiş" gibi görünebilir ve size ETH'nizi yatırırsanız karşılığında "ETH2" alacağınızı söylerler. [Ne resmi bir Ethereum destek ekibi](/community/support/) ne de yeni bir token yok. Cüzdan güvenlik kelimelerini asla kimseyle paylaşmayın.
 

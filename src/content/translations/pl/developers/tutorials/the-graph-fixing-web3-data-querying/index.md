@@ -3,7 +3,6 @@ title: "The Graph: zapytania o dane Web3"
 description: Blockchain jest jak baza danych, ale bez SQL. Wszystkie dane tam są, ale nie ma do nich dostępu. Pokażę ci, jak to naprawić za pomocą The Graph i GraphQL.
 author: Markus Waas
 lang: pl
-sidebar: true
 tags:
   - "solidity"
   - "inteligentne kontrakty"
@@ -53,7 +52,7 @@ Załóżmy teraz, że w naszej aplikacji dapp chcemy wyświetlić całkowitą li
 2. Pobierz `totalGamesPlayerlost`.
 3. Subskrybuj zdarzenia `BetPlaceed`.
 
-Możemy nasłuchiwać zdarzeń [w sieci Web3](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#contract-events), jak widać po prawej stronie, ale wymaga to obsługi kilku przypadków.
+Możemy nasłuchiwać zdarzeń [w sieci Web3](https://docs.web3js.org/api/web3/class/Contract#events), jak widać po prawej stronie, ale wymaga to obsługi kilku przypadków.
 
 ```solidity
 GameContract.events.BetPlaced({

@@ -1,7 +1,7 @@
 ---
 title: 以太坊基金会
 description: 了解以太坊基金会（EF），一个致力于支持以太坊和相关技术的非营利组织。
-sidebar: false
+hideEditButton: true
 lang: zh
 ---
 
@@ -11,7 +11,7 @@ lang: zh
 
 [以太坊基金会](http://ethereum.foundation/) (EF) 是一个非营利性组织，致力于支持 [以太坊](/what-is-ethereum/) 以及相关技术。
 
-EF 不是一家公司，甚至不是传统的非营利组织。 他们的作用不是控制或领导以太坊，也不是为与以太坊相关的关键技术开发提供资金的唯一组织。 EF 只是巨大的[生态系统](/community/) 的一部分。
+EF 不是一家公司，甚至不是传统的非营利组织。 他们的作用不是控制或领导以太坊，也不是为以太坊相关技术的重大开发提供资金的唯一组织。 EF 只是巨大的[生态系统](/community/) 的一部分。
 
 ## 以太基基金会倡议 {#ethereum-foundation-initiatives}
 
@@ -23,7 +23,7 @@ EF 不是一家公司，甚至不是传统的非营利组织。 他们的作用�
 
 ### 测试版 {#devcon}
 
-从 2014 年开始，以太坊基金会开始组织“测试版“——所有以太坊开发人员、研究人员、思想家和开发人员的年度会议。
+从 2014 年开始，以太坊基金会开始组织“测试版”——所有以太坊开发人员、研究人员、思想家和开发人员的年度会议。
 
 从会议开始以来，您每年都可以在 [archive.devcon.org](https://archive.devcon.org/) 访问会议的视频内容。
 
@@ -31,12 +31,10 @@ EF 不是一家公司，甚至不是传统的非营利组织。 他们的作用�
 
 ### Fellowship 计划 {#fellowship-program}
 
-[以太坊基金会 Fellowship 计划](https://fellowship.ethereum.foundation/) 是一个试点项目，其重点是在新兴经济体寻找机会。 今天，发展中国家占全球人口的 80% 以上。 在全世界每天出生的大约 40 万名婴儿中，36 万多人出生在发展中国家。 发展中国家的人民不仅代表着我们作为一个民族的未来，而且还代表着未来十亿人口的积极使用者。
+[以太坊基金会团体计划](https://fellowship.ethereum.foundation/)是一项旨在帮助解决不同文化、国籍和经济阶层之间代表力差距的倡议。 团体计划旨在通过识别和支持独特和有才华的个人来弥补这些差距，帮助实现以太坊的相关性，并为那些将成为 Web3 未来但未被充分代表的人和社区打破进入壁垒。
 
-Fellowship 计划为以太坊基金提供了与改变世界的人合作的机会。 其项目很有可能通过使用以太坊对新兴经济体产生影响。 该方案具有独特的经验，包括辅导、专门知识和接触以太坊生态系统领袖。
-
-在 [ellowship.ethereum.foundation](https://fellowship.ethereum.foundation/) 或查看 [最近在 Fellowship 发表的博客](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/)
+[从“团体.以太坊.基金会”了解更多](https://fellowship.ethereum.foundation/)。
 
 <br/>
 
-关于更多关于基金会的内容和他们的工作，请访问[以太坊基金会](http://ethereum.foundation/)，或者查看[以太坊基金会博客](https://blog.ethereum.org/) 来了解最新的新闻或者通告。
+有关基金会及其工作的详细信息，请访问[以太坊基金会](http://ethereum.foundation/)，或者查看[以太坊基金会博客](https://blog.ethereum.org/)，了解以太坊基金会的最新消息和通告。

@@ -3,8 +3,7 @@ title: "Short ABIs for Calldata Optimization"
 description: Optimizing smart contracts for Optimistic Rollups
 author: Ori Pomerantz
 lang: en
-sidebar: true
-tags: ["layer 2", "optimism", "gas"]
+tags: ["layer 2"]
 skill: intermediate
 published: 2022-04-01
 ---
@@ -37,7 +36,7 @@ The cost of L2 transactions is composed of two components:
 1. L2 processing, which is usually extremely cheap
 2. L1 storage, which is tied to Mainnet gas costs
 
-As I'm writing this, on Optimism the cost of L2 gas is 0.001 [Gwei](https://ethereum.org/en/developers/docs/gas/#pre-london).
+As I'm writing this, on Optimism the cost of L2 gas is 0.001 [Gwei](/developers/docs/gas/#pre-london).
 The cost of L1 gas, on the other hand, is approximately 40 gwei.
 [You can see the current prices here](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
@@ -83,7 +82,7 @@ The total cost is therefore `109*16+576+160=2480`, and we are wasting about 6.5%
 Assuming that you do not have control over the destination contract, you can still use a solution similar to [this one](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
 Let's go over the relevant files.
 
-### Token.sol {#token.sol}
+### Token.sol {#token-sol}
 
 [This is the destination contract](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
 It is a standard ERC-20 contract, with one additional feature.
@@ -101,7 +100,7 @@ It would make a production ERC-20 contract useless, but it makes life easier whe
 
 [You can see an example of this contract being deployed here](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
 
-### CalldataInterpreter.sol {#calldatainterpreter.sol}
+### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
 [This is the contract that transactions are supposed to call with shorter calldata](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
 Let's go over it line by line.
@@ -206,7 +205,7 @@ There are two reasons why a function would not be available here:
    The value of `msg.sender` is going to be `CalldataInterpreter`'s address, not the caller.
 
 Unfortunately, [looking at the ERC-20 specifications](https://eips.ethereum.org/EIPS/eip-20), this leaves only one function, `transfer`.
-This leaves us with only two functions: `transfer` (because we can call `transferFrom`) and `faucet` (because we can transfer the tokens back to whever called us).
+This leaves us with only two functions: `transfer` (because we can call `transferFrom`) and `faucet` (because we can transfer the tokens back to whoever called us).
 
 ```solidity
 
@@ -276,7 +275,7 @@ Overall, a transfer takes 35 bytes of calldata:
 }       // contract CalldataInterpreter
 ```
 
-### test.js {#test.js}
+### test.js {#test-js}
 
 [This JavaScript unit test](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) shows us how to use this mechanism (and how to verify it works correctly).
 I am going to assume you understand [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.io/v5/) and only explain the parts that specifically apply to the contract.
@@ -389,7 +388,7 @@ If the contract were responding only to external transactions, we could get by w
 However, that would break [composability](/developers/docs/smart-contracts/composability/).
 It is much better to have a contract that responds to normal ERC-20 calls, and another contract that responds to transactions with short call data.
 
-### Token.sol {#token.sol-2}
+### Token.sol {#token-sol-2}
 
 In this example we can modify `Token.sol`.
 This lets us have a number of functions that only the proxy may call.
@@ -489,13 +488,13 @@ If so, run the function which we modify.
     }
 ```
 
-These are three operations that normally require the message to come directly from the entity transfering tokens or approving an allowance.
+These are three operations that normally require the message to come directly from the entity transferring tokens or approving an allowance.
 Here we have a proxy version these operations which:
 
 1. Is modified by `onlyProxy()` so nobody else is allowed to control them.
 2. Gets the address that would normally be `msg.sender` as an extra parameter.
 
-### CalldataInterpreter.sol {#calldatainterpreter.sol-2}
+### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
 The calldata interpreter is nearly identical to the one above, except that the proxied functions receive a `msg.sender` parameter and there is no need for an allowance for `transfer`.
 
@@ -529,7 +528,7 @@ The calldata interpreter is nearly identical to the one above, except that the p
         }
 ```
 
-### Test.js {#test.js-2}
+### Test.js {#test-js-2}
 
 There are a few changes between the previous testing code and this one.
 
@@ -582,12 +581,12 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Check the approve / transeferFrom combo was done correctly
+// Check the approve / transferFrom combo was done correctly
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 
 Test the two new functions.
-Note that `transeferFromTx` requires two address parameters: the giver of the allowance and the receiver.
+Note that `transferFromTx` requires two address parameters: the giver of the allowance and the receiver.
 
 ### Example {#example-2}
 

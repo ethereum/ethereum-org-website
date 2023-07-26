@@ -1,8 +1,7 @@
 ---
-title: Glossario Ethereum
+title: Glossario di Ethereum
 description: Glossario non esaustivo di termini tecnici e non relativi a Ethereum
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -20,19 +19,19 @@ Tipo di attacco nei confronti di una [rete](#network) decentralizzata dove un gr
 
 ### conto {#account}
 
-Oggetto contenente un [indirizzo](#address), saldo, [nonce](#nonce), e facoltativamente uno spazio di archiviazione e codice. Può essere un [account contratto](#contract-account) o un [account con proprietà esterna (EOA)](#eoa).
+Oggetto contenente un [indirizzo](#address), saldo, [nonce](#nonce), e facoltativamente uno spazio di archiviazione e codice. Un conto può essere [di un contratto](#contract-account) o un [conto posseduto esternamente (EOA)](#eoa).
 
 <DocLink to="/developers/docs/accounts">
-  Account Ethereum
+  Conti di Ethereum
 </DocLink>
 
-### address {#address}
+### indirizzo {#address}
 
-In generale, rappresenta un [EOA](#eoa) o un [contratto](#contract-accouint) che può ricevere (indirizzo di destinazione) o inviare (indirizzo di origine) [transazioni](#transaction) sulla blockchain. Più nello specifico, si tratta dei 160 bit più a destra di un [hash di Keccak](#keccak-256) di una [chiave pubblica](#public-key) [ECDSA](#ecdsa).
+In generale, rappresenta un [EOA](#eoa) o un [contratto](#contract-account) che può ricevere (indirizzo di destinazione) o inviare (indirizzo di origine) [transazioni](#transaction) sulla blockchain. Più nello specifico, si tratta dei 160 bit più a destra di un [hash di Keccak](#keccak-256) di una [chiave pubblica](#public-key) [ECDSA](#ecdsa).
 
 ### interfaccia binaria dell'applicazione (ABI) {#abi}
 
-Il metodo standard di interagire con i [contratti](#contract-account) nell'ecosistema di Ethereum, sia dall'esterno della blockchain che per le interazioni tra contratti.
+Il metodo standard per interagire con i [contratti](#contract-account) nell'ecosistema di Ethereum, sia dall'esterno della blockchain che per le interazioni tra contratti.
 
 <DocLink to="/developers/docs/smart-contracts/compiling/#web-applications">
   ABI
@@ -42,17 +41,25 @@ Il metodo standard di interagire con i [contratti](#contract-account) nell'ecosi
 
 Un'interfaccia di programmazione dell'applicazione (API) è una serie di definizioni per l'utilizzo di un software. Un'API si trova tra un'applicazione e un server web e facilita il trasferimento di dati tra di essi.
 
+### ASIC {#asic}
+
+Circuito integrato specifico per l'applicazione. Si riferisce solitamente a un circuito integrato, costruito su misura per il mining di criptovalute.
+
 ### assert {#assert}
 
-In [Solidity](#solidity), `assert(false)` viene compilata in `0xfe`, un opcode non valido che consuma tutto il [carburante](#gas) rimanente e annulla tutte le modifiche. Quando un'istruzione `assert()` fallisce, significa che sta avvenendo qualcosa di molto grave e imprevisto ed è necessario correggere il codice. Un'istruzione `assert()` va utilizzata per evitare condizioni che non dovrebbero verificarsi mai.
+In [Solidity](#solidity), `assert(false)` si compila in `0xfe`, un opcode non valido, che usa tutto il [gas](#gas) rimanente e annulla tutte le modifiche. Quando un'istruzione `assert()` fallisce, avviene qualcosa di molto grave e imprevisto ed è necessario correggere il codice. Devi usare `assert()` per evitare condizioni che non dovrebbero verificarsi mai.
 
 <DocLink to="/developers/docs/smart-contracts/security/">
-  Sicurezza degli smart contract
+  Sicurezza dei contratti intelligenti
 </DocLink>
 
 ### attestazione {#attestation}
 
-Il voto di un validatore per una [beacon chain](#beacon-chain) o un [blocco](#block) di [shard](#shard). I validatori devono attestare i blocchi, segnalando di acconsentire con lo stato proposto dal blocco.
+Un'attestazione fatta da un'entità che qualcosa è vero. Nel contesto di Ethereum, i validatori del consenso devono dichiarare ciò che ritengono essere lo stato della catena. In determinati momenti, ogni validatore è responsabile della pubblicazione di diversi attestati che dichiarano formalmente il parere del validatore sulla catena, incluso l'ultimo checkpoint finalizzato e l'attuale testa della catena.
+
+<DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
+  Attestazioni
+</DocLink>
 
 <Divider />
 
@@ -60,7 +67,7 @@ Il voto di un validatore per una [beacon chain](#beacon-chain) o un [blocco](#bl
 
 ### Commissione base {#base-fee}
 
-Ogni [blocco](#block) ha un prezzo di riserva noto come la "commissione base". È la commissione minima di [gas](#gas) che un utente deve pagare per inserire una transazione nel blocco successivo.
+Ogni [blocco](#block) ha un prezzo di riserva noto come "commissione base". È la commissione minima di [gas](#gas) che un utente deve pagare per includere una transazione nel blocco successivo.
 
 <DocLink to="/developers/docs/gas/">
   Gas e commissioni
@@ -68,67 +75,116 @@ Ogni [blocco](#block) ha un prezzo di riserva noto come la "commissione base". �
 
 ### Beacon Chain {#beacon-chain}
 
-Un aggiornamento della rete che ha introdotto un nuovo livello di consenso, che diverrà il coordinatore dell'intera rete di Ethereum. Introduce il [Proof of Stake](#pos) e i [validatori](#validator) in Ethereum. Alla fine sarà fusa con la [rete principale](#mainnet).
+La Beacon Chain è stata la blockchain che ha introdotto il [Proof of Stake](#pos) e i [validatori](#validator) in Ethereum. Ha operato insieme alla Rete principale di Proof-of-Work di Ethereum dal novembre 2020 fino alla fusione delle due catene, che a settembre 2022 ha dato vita all'Ethereum odierna.
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Beacon Chain
 </DocLink>
 
 ### big-endian {#big-endian}
 
-Rappresentazione numerica posizionale dove la cifra più significativa è la prima in memoria. Opposto di little-endian, dove la cifra meno significativa è la prima.
+Rappresentazione numerica posizionale in cui la cifra più significativa è la prima in memoria. Opposto di little-endian, dove la cifra meno significativa è la prima.
 
 ### blocco {#block}
 
-Raccolta di informazioni necessarie (intestazione di un blocco) sulle [transazioni](#transaction) incluse, e una serie di altre intestazioni di blocco dette [ommer](#ommer). I blocchi vengono aggiunti alla rete Ethereum dai [miner](#miner).
+Un blocco è un insieme di informazioni che includono un elenco ordinato di transazioni e informazioni relative al consenso. I blocchi sono proposti dai validatori proof-of-stake, e sono condivisi in tutta la rete peer-to-peer, dove possono essere facilmente verificati in modo indipendente da tutti gli altri nodi. Le regole di consenso disciplinano i contenuti di un blocco considerati validi e gli eventuali blocchi non validi non sono considerati dalla rete. L'ordine di questi blocchi e le transazioni al loro interno creano una catena deterministica di eventi la cui fine rappresenta lo stato attuale della rete.
 
 <DocLink to="/developers/docs/blocks/">
   Blocchi
 </DocLink>
 
+### esploratore del blocco {#block-explorer}
+
+Un'interfaccia che consente a un utente di cercare informazioni da e su una blockchain, tra cui il recupero delle transazioni individuali, delle attività associate a indirizzi specifici e informazioni sulla rete.
+
+### intestazioni dei blocchi {#block-header}
+
+L'intestazione del blocco è una raccolta di meta-dati su un blocco e un riepilogo delle transazioni incluse nel payload di esecuzione.
+
+### propagazione dei blocchi {#block-propagation}
+
+Il processo di trasmissione di un blocco confermato a tutti gli altri nodi nella rete.
+
+### propositore del blocco {#block-proposer}
+
+Il validatore specifico scelto per creare un blocco in uno [slot](#slot) specifico.
+
+### ricompensa del blocco {#block-reward}
+
+L'importo di ether versato in ricompensa al produttore di un nuovo blocco valido.
+
+### stato del blocco {#block-status}
+
+Gli stati in cui può esistere un blocco. Gli stati possibili includono:
+
+- proposto: il blocco è stato proposto da un validatore
+- pianificato: i validatori stanno attualmente inviando dati
+- mancato/saltato: il propositore non ha proposto un blocco entro il lasso di tempo idoneo.
+- orfano: il blocco è stato sostituito dall'[algoritmo di scelta della diramazione](#fork-choice-algorithm)
+
+### tempo di blocco {#block-time}
+
+L'intervallo temporale tra i blocchi aggiunti alla blockchain.
+
+### convalida del blocco {#block-validation}
+
+Il processo di verifica che un nuovo blocco contenga transazioni valide e che si basi sulla catena storica più lunga. Blocchi validi vengono aggiunti in coda alla catena e propagati ad altri sulla rete. I blocchi non validi sono ignorati.
+
 ### blockchain {#blockchain}
 
-In Ethereum, sequenza di [blocchi](#block) convalidati con il sistema [Proof of Work](#pow), ognuna collegata al proprio predecessore fino al [blocco genesi](#genesis-block). Non esiste un limite della dimensione del blocco, ma ci sono diversi [limiti per il carburante](#gas-limit).
+Una sequenza di [blocchi](#block), ognuno collegato al predecessore fino al [blocco genesi](#genesis-block). L'integrità della blockchain è protetta cripto-economicamente usando un meccanismo di consenso basato sul Proof of Stake.
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
-  Cos'è una Blockchain?
+  Cos'è una blockchain?
 </DocLink>
+
+### bootnode {#bootnode}
+
+I nodi utilizzabili per avviare il processo di scoperta eseguendo un nodo. Gli endpoint di questi nodi sono registrati nel codice sorgente di Ethereum.
 
 ### bytecode {#bytecode}
 
-Serie astratta di istruzioni progettata per essere eseguite in modo efficiente da un interprete software o una macchina virtuale. A differenza del codice sorgente leggibile dall'uomo, il bytecode è espresso in formato numerico.
+Serie astratta di istruzioni progettata per l'esecuzione efficiente da parte di un interprete software o una macchina virtuale. A differenza del codice sorgente leggibile dall'uomo, il bytecode è espresso in formato numerico.
 
 ### Diramazione Byzantium {#byzantium-fork}
 
-La prima di due [diramazioni permanenti](#hard-fork) per la fase di sviluppo di [Metropolis](#metropolis). Includeva [bomba di difficoltà](#difficulty-bomb) il ritardo e la riduzione della ricompensa dei blocchi di EIP-649 Metropolis, dove l'[Ice Age](#ice-age) era stata ritardata di 1 anno e la ricompensa sul blocco era stata ridotta da 5 a 3 ether.
+La prima di due [diramazioni permanenti](#hard-fork) per la fase di sviluppo di [Metropolis](#metropolis). Includeva EIP-649 Metropolis [Difficulty Bomb](#difficulty-bomb) Delay e Block Reward Reduction, dove l'[Era Glaciale](#ice-age) era stata ritardata di 1 anno e la ricompensa sul blocco era stata ridotta da 5 a 3 ether.
 
 <Divider />
 
 ## C {#section-c}
 
+### Casper-FFG {#casper-ffg}
+
+Casper-FFG è un protocollo di consenso di Proof of Stake usato insieme all'algoritmo di scelta della diramazione [LMD-GHOST](#lmd-ghost) per consentire ai [client di consenso](#consensus-client) di trovare un accordo sulla testa della Beacon Chain.
+
 ### checkpoint {#checkpoint}
 
-La [Beacon Chain](#beacon-chain) ha un tempo diviso in slot (12 secondi) ed epoche (32 slot). Il primo slot in ogni epoca è un checkpoint. Quando una [super maggioranza](#supermajority) di validatori si attesta al collegamento tra due checkpoint, questi possono essere [giustificati](#justification), per poi essere [finalizzati](#finality) quando un altro checkpoint viene giustificato in posizione più elevata.
+La [Beacon Chain](#beacon-chain) ha un tempo diviso in slot (12 secondi) ed epoche (32 slot). Il primo slot in ogni epoca è un checkpoint. Quando una [super-maggioranza](#supermajority) di validatori attesta il collegamento tra due checkpoint, questi possono essere [giustificati](#justification), per poi essere [finalizzati](#finality) quando un altro checkpoint viene giustificato in posizione più elevata.
 
 ### compilare {#compiling}
 
 Convertire il codice scritto in un linguaggio di programmazione di alto livello (es. [Solidity](#solidity)) in un linguaggio di livello inferiore (ad es. [bytecode](#bytecode) di EVM).
 
 <DocLink to="/developers/docs/smart-contracts/compiling/">
-  Compilare Smart Contract
+  Compilare i Contratti Intelligenti
 </DocLink>
 
 ### commissione {#committee}
 
-Gruppo composto da almeno 128 [validatori](#validator) assegnato a beacon e shard block casualmente dalla [beacon chain](#beacon-chain).
+Un gruppo di almeno 128 [validatori](#validator) assegnati alla convalida dei blocchi di ogni slot. Uno dei validatori nella commissione è l'aggregatore, responsabile dell'aggregazione delle firme di tutti gli altri validatori nella commissione che concordano su un'attestazione. Da non confondere con la [commissione di sincronizzazione](#sync-committee).
+
+### infattibilità computazionale {#computational-infeasibility}
+
+Un processo è infattibile a livello computazionale se ci vorrebbe un tempo eccessivamente lungo (es. miliardi di anni) per realizzarlo per chiunque possa ragionevolmente avere un interesse nel realizzarlo.
 
 ### consenso {#consensus}
 
-Si verifica quando numerosi nodi (di solito la maggior parte dei nodi sulla rete) hanno tutti gli stessi blocchi nella migliore blockchain convalidata localmente. Da non confondere con le [regole di consenso](#consensus-rules).
+Si verifica quando una super-maggioranza di nodi sulla rete hanno tutti gli stessi blocchi nella migliore blockchain convalidata localmente. Da non confondere con le [regole di consenso](#consensus-rules).
 
 ### client di consenso {#consensus-client}
 
-I client di consenso (come Prysm, Teku, Nimbus, Lighthouse, Lodestar) eseguono l'algoritmo di consenso di [proof-of-stake](#pos) di Ethereum, consentendo alla rete di raggiungere un accordo sull'inizio della Beacon Chain. I client del consenso non partecipano alle transazioni di convalida/trasmissione o all'esecuzione delle transizioni di stato. Questo viene fatto dai [client di esecuzione](#execution-client).
+I client di consenso (come Prysm, Teku, Nimbus, Lighthouse, Lodestar) eseguono l'algoritmo di consenso di [Proof of Stake](#pos) di Ethereum consentendo alla rete di raggiungere un accordo sulla testa della Beacon Chain. I client di consenso non partecipano alle transazioni di convalida/trasmissione o all'esecuzione delle transizioni di stato. Questo viene fatto dai [client di esecuzione](#execution-client).
 
 ### livello di consenso {#consensus-layer}
 
@@ -136,59 +192,77 @@ Il livello di consenso di Ethereum è la rete dei [client di consenso](#consensu
 
 ### regole di consenso {#consensus-rules}
 
-Le regole di convalida del blocco che i nodi completi seguono per mantenere il consenso con gli altri nodi. Da non confondere con il [consenso](#consensus).
+Le regole di convalida dei blocchi che i nodi completi seguono per mantenere il consenso con gli altri nodi. Da non confondere con il [consenso](#consensus).
 
-### Diramazione Costantinople {#constantinople-fork}
+### Considerato per l'Inclusione (CFI) {#cfi}
 
-Seconda parte della fase [Metropolis](#metropolis), originariamente prevista per la metà del 2018. Tra i vari cambiamenti, era previsto il passaggio a un algoritmo di consenso ibrido [Proof of Work](#pow)/[Proof of Stake](#pos).
+Una [EIP](#eip) principale che non è ancora attiva su Rete principale, verso la quale gli sviluppatori di client sono generalmente favorevoli. Supponendo che soddisfi tutti i requisiti per l'inclusione nella Rete principale, potrebbe essere incluso in un aggiornamento della rete (non necessariamente il successivo).
 
-### account contratto {#contract-account}
+### Diramazione Constantinople {#constantinople-fork}
 
-Account che contiene codice che viene eseguito ogni volta che viene ricevuta una [transazione](#transaction) da un altro [account](#account) ([EOA](#eoa) o [contratto](#contract-account)).
+Seconda parte della fase [Metropolis](#metropolis), originariamente prevista per la metà del 2018. Tra i vari cambiamenti, era previsto il passaggio a un algoritmo di consenso ibrido [Proof-of-Work](#pow)/[Proof-of-Stake](#pos).
 
-### transazione per la creazione di un contratto {#contract-creation-transaction}
+### conto del contratto {#contract-account}
 
-[Transazione](#transaction) speciale, con [indirizzo zero](#zero-address) come destinatario, usata per registrare un [contratto](#contract-account) e memorizzarlo sulla blockchain Ethereum.
+Un conto contenente del codice eseguito ogni volta che riceve una [transazione](#transaction) da un altro [conto](#account) ([EOA](#eoa) o [contratto](#contract-account)).
 
-### crosslink {#crosslink}
+### transazione di creazione del contratto {#contract-creation-transaction}
 
-Un crosslink fornisce un riepilogo dello stato di uno shard. È così che le catene di [frammenti](#shard) comunicheranno tra loro tramite la [Beacon Chain](#beacon-chain) nel [sistema di proof-of-stake](#proof-of-stake) frammentato.
+Una [transazione](#transaction) speciale che include il codice di avvio di un contratto. Il destinatario è impostato a `null` e il contratto è distribuito a un indirizzo generato dall'indirizzo utente e `nonce`. che viene utilizzato per registrare un [contratto](#contract-account) e registrarlo sulla blockchain Ethereum.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
-  Proof of Stake
-</DocLink>
+### criptoeconomia {#cryptoeconomics}
 
-<Divider />
+L'economia delle criptovalute.
 
 ## D {#section-d}
 
-### Organizzazione Autonoma Decentralizzata (DAO) {#dao}
+### Đ {#d-with-stroke}
 
-Azienda o altra organizzazione che opera senza gestione gerarchica. DAO potrebbe anche riferirsi a un contratto denominato "The DAO" lanciato il 30 aprile 2016, che fu poi hackerato a giugno 2016; questo motivò alla fine una [hard fork](#hard-fork) (denominata DAO) al blocco 1.192.000 che annullò il contratto DAO hackerato e causò la divisione di Ethereum ed Ethereum Classic in due sistemi concorrenti.
+Đ (D con trattino) è usato in inglese antico, inglese medio, islandese e faroese e indica una lettera "Eth" maiuscola. È usato in parole come ĐEV o Đapp (applicazione decentralizzata), dove la Đ è la lettera nordica “eth”. L'eth maiuscolo (Ð) è usato anche per simbolizzare la criptovaluta Dogecoin. Era usato comunemente nella vecchia letteratura di Ethereum, mentre oggi è meno diffuso.
 
-<DocLink to="/dao/">
-  Organizzazioni Autonome Decentralizzate (DAO)
-</DocLink>
+### DAG {#dag}
+
+DAG sta per Grafico Aciclico Diretto. È una struttura di dati composta da nodi e collegamenti tra di essi. Prima della Fusione, Ethereum usava un DAG nel suo algoritmo [proof-of-work](#pow), [Ethash](#ethash), ma in [proof-of-stake](#pos) non è più utilizzato.
 
 ### dapp {#dapp}
 
-Applicazione decentralizzata. È come minimo uno [Smart Contract](#smart-contract) con un'interfaccia utente Web. Più in generale, una dapp è un'applicazione Web creata sulla base di servizi di infrastruttura peer-to-peer, decentralizzati e aperti. Inoltre, molte dapp includono memoria decentralizzata e/o un protocollo e una piattaforma per messaggi.
+Applicazione decentralizzata. Come minimo, si tratta di un [contratto intelligente](#smart-contract) e di un'interfaccia utente web. Più in generale, una dapp è un'applicazione web basata su servizi dell'infrastruttura peer-to-peer aperta e decentralizzata. Inoltre, molte dapp includono un'archiviazione decentralizzata e/o un protocollo di messaggistica e una piattaforma.
 
 <DocLink to="/developers/docs/dapps/">
   Introduzione alle dapp
 </DocLink>
 
+### disponibilità dei dati {#data-availability}
+
+La proprietà di uno stato in cui ogni nodo connesso alla rete potrebbe scaricare qualsiasi parte specifica dello stato che desidera.
+
+### decentralizzazione {#decentralization}
+
+L'idea di spostare il controllo e l'esecuzione dei processi da un'entità centrale.
+
+### organizzazione autonoma decentralizzata (OAD) {#dao}
+
+Società o altra organizzazione che opera senza gestione gerarchica. OAD potrebbe anche riferirsi a un contratto denominato "The OAD" lanciato il 30 aprile 2016, che fu poi hackerato a giugno 2016; questo fatto portò a una [diramazione permanente](#hard-fork) (denominata OAD) sul blocco 1.192.000 che invertì il contratto OAD hackerato e causò la divisione di Ethereum ed Ethereum Classic in due sistemi concorrenti.
+
+<DocLink to="/dao/">
+  Organizzazioni autonome decentralizzate (DAO)
+</DocLink>
+
 ### scambio decentralizzato (DEX) {#dex}
 
-Tipo di [dapp](#dapp) che permette di scambiare token con altri utenti allo stesso livello sulla rete. Per l'uso servono [ether](#ether) (per pagare le [commissioni sulle transazioni](#transaction-fee)) ma non sono soggetti a restrizioni geografiche come gli scambi centralizzati. Tutti possono partecipare.
+Tipo di [dapp](#dapp) che permette di scambiare token con altri peer allo stesso livello sulla rete. Per usarli servono degli [ether](#ether) (per pagare le [commissioni sulle transazioni](#transaction-fee)) ma non sono soggetti a restrizioni geografiche come gli scambi centralizzati. Tutti possono partecipare.
 
 <DocLink to="/get-eth/#dex">
   Scambi decentralizzati
 </DocLink>
 
-### atto (deed) {#deed}
+### atto {#deed}
 
-Vedi [token non fungibile (NFT)](#nft)
+Vedi [token non fungibile (NFT)](#nft).
+
+### contratto di deposito {#deposit-contract}
+
+L'accesso allo staking su Ethereum. Il contratto di deposito è un contratto intelligente su Ethereum che accetta i depositi di ETH e gestisce i saldi del validatore. Un validatore non può essere attivato senza depositare ETH in questo contratto. Il contratto richiede ETH e dati di input. Questi dati di input includono la chiave pubblica del validatore e la chiave pubblica di prelievo, firmate dalla chiave privata del validatore. Questi dati sono necessari affinché un validatore possa essere identificato e approvato dalla rete di [Proof-of-Stake](#pos).
 
 ### DeFi {#defi}
 
@@ -200,11 +274,11 @@ Abbreviazione di "finanza decentralizzata", un'ampia categoria di [dapp](#dapp) 
 
 ### difficoltà {#difficulty}
 
-Impostazione a livello della rete che controlla quanto calcolo è necessario per produrre un [Proof of Work](#pow).
+Un'impostazione a livello di rete in reti [proof-of-work](#pow) che controlla quanto calcolo in media è necessario per trovare un nonce valido. La difficoltà è rappresentata dal numero di zeri iniziali che sono necessari nell'hash del blocco risultante per essere considerato valido. Questo concetto è deprecato in Ethereum dal passaggio al proof-of-stake.
 
 ### bomba di difficoltà {#difficulty-bomb}
 
-Aumento esponenziale pianificato nell'impostazione di [difficoltà](#difficulty) di [proof-of-work](#pow) per motivare la transizione al [proof-of-stake](#pos), riducendo le possibilità di una [biforcazione](#hard-fork)
+Aumento esponenziale pianificato nell'impostazione di [difficoltà](#difficulty) di [proof-of-work](#pow) per motivare la transizione al [proof-of-stake](#pos), riducendo le probabilità di una [diramazione](#hard-fork). La bomba di difficoltà è stata deprecata con la transizione alla [proof-of-stake](/roadmap/merge).
 
 ### firma digitale {#digital-signatures}
 
@@ -212,65 +286,85 @@ Breve stringa di dati che un utente produce per un documento utilizzando una [ch
 
 <Divider />
 
+### scoperta {#discovery}
+
+Il processo per cui un nodo di Ethereum trova altri nodi a cui connettersi.
+
+### tabella di hash distribuita (DHT) {#distributed-hash-table}
+
+Una struttura di dati contenente coppie `(key, value)` usate dai nodi di Ethereum per identificare peer a cui connettersi e determinare quali protocolli usare per comunicare.
+
+### doppia spesa {#double-spend}
+
+Una diramazione deliberata della blockchain in cui un utente con una quantità sufficientemente consistente di potere di mining/stake invia una transazione spostando valuta al di fuori della catena (es. uscendo con moneta legale o effettuando un acquisto off-chain), quindi riorganizzando la blockchain per rimuovere quella transazione. Una doppia spesa riuscita lascia l'utente malevolo con le risorse sia sulla catena sia al di fuori di essa.
+
 ## E {#section-e}
 
-### algoritmo di firma digitale con curva ellittica (ECDSA) {#ecdsa}
+### algoritmo di firma digitale della curva ellittica (ECDSA) {#ecdsa}
 
-Algoritmo crittografico utilizzato da Ethereum per garantire che i fondi possano essere spesi solo dai loro proprietari. È il metodo preferito per la creazione di chiavi pubbliche e private. Rilevante per la generazione degli [indirizzi](#address) dell'account e per la verifica della [transazione](#transaction).
+Algoritmo crittografico utilizzato da Ethereum per garantire che i fondi possano essere spesi solo dai loro proprietari. È il metodo preferito per la creazione di chiavi pubbliche e private. Rilevante per la generazione degli [indirizzi](#address) del conto e la verifica della [transazione](#transaction).
+
+### crittografia {#encryption}
+
+La crittografia è la conversione di dati elettronici in una forma non leggibile da nessuno tranne che dal titolare della chiave di decodifica corretta.
+
+### entropia {#entropy}
+
+Nel contesto della crittografia, mancanza di prevedibilità o livello di casualità. Durante la generazione di informazioni segrete, come le [chiavi private](#private-key), gli algoritmi si basano solitamente su una fonte di alta entropia per assicurarsi che l'output sia imprevedibile.
 
 ### epoca {#epoch}
 
-Periodo di 32 [slot](#slot) (6,4 minuti) nel sistema coordinato [beacon chain](#beacon-chain). In ogni epoca, per motivi di sicurezza, le [commissioni](#committee) di [validatori](#validator) vengono cambiate. In ogni epoca esiste un'opportunità per [finalizzare](#finality) la catena.
+Un periodo di 32 [slot](#slot), ogni slot è di 12 secondi, per un totale di 6,4 minuti. Le [commissioni](#committee) di validazione vengono mescolate ogni epoca per motivi di sicurezza. Ogni epoca ha un'opportunità per [finalizzare](#finality) la catena. Ad ogni validatore vengono assegnate nuove responsabilità all'inizio di ogni epoca.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Proof of Stake
 </DocLink>
 
+### equivoco {#equivocation}
+
+Un validatore che invia due messaggi contraddittori. Un semplice esempio è il mittente di una transazione che invia due transazioni con lo stesso nonce. Un altro è un propositore di un blocco che propone due blocchi alla stessa altezza del blocco (o per lo stesso slot).
+
 ### Eth1 {#eth1}
 
-'Eth1' è un termine riferito alla Rete principale di Ethereum, la blockchain di proof-of-work esistente. Questo termine è stato scartato a favore di 'livello d'esecuzione'. [Scopri di più su questo cambio di nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+'Eth1' è un termine che si riferiva alla Rete principale di Ethereum, la blockchain di Proof-of-Work esistente. Questo termine è stato abbandonato a favore di 'livello di esecuzione'. [Scopri di più su questo cambio di nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Maggiori informazioni sugli aggiornamenti di Ethereum
 </DocLink>
 
 ### Eth2 {#eth2}
 
-'Eth2' è un termine riferito a una serie di aggiornamenti di protocollo di Ethereum, inclusa la transizione di Ethereum al proof-of-stake. Questo termine è stato scartato a favore di 'livello di consenso'. [Scopri di più su questo cambio di nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+'Eth2' è un termine che si riferiva a una serie di aggiornamenti del protocollo Ethereum, inclusa la transizione di Ethereum al Proof-of-Stake. Questo termine è stato abbandonato a favore di "livello di consenso". [Scopri di più su questo cambio di nome](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Maggiori informazioni sugli aggiornamenti di Ethereum
 </DocLink>
 
 ### Proposta di miglioramento di Ethereum (EIP) {#eip}
 
-Un documento di progettazione che fornisce informazioni alla community Ethereum, descrivendo una nuova funzionalità proposta, i processi o l'ambiente (vedi [ERC](#erc)).
+Un documento progettuale che fornisce informazioni alla community Ethereum, descrivendo una nuova funzionalità proposta, i processi o l'ambiente (vedi [ERC](#erc)).
 
 <DocLink to="/eips/">
   Introduzione alle EIP
 </DocLink>
 
-### Servizio dei nomi Ethereum (ENS) {#ens}
+### Ethereum Name Service (ENS) {#ens}
 
-Il registro ENS è un unico [contract](#smart-contract) centrale che fornisce una mappatura tra nomi di dominio, proprietari e resolver, come descritto in [EIP](#eip) 137.
+Il registro ENS è un unico [contratto](#smart-contract) centrale che fornisce una mappatura tra nomi di dominio, proprietari e resolver, come descritto in [EIP](#eip) 137.
 
 [Ulteriori informazioni su ens.domains](https://ens.domains)
 
-### entropia {#entropy}
+### client di esecuzione {#execution-client}
 
-Nel contesto della crittografia, mancanza di prevedibilità o livello di casualità. Durante la generazione di informazioni segrete, come [chiavi private](#private-key), gli algoritmi si basano solitamente su una fonte di alta entropia per assicurarsi che l'output sia imprevedibile.
-
-### client d'esecuzione {#execution-client}
-
-Client d'esecuzione (o "client Eth1"), come Besu, Erigon, go-ethereum, Nethermind, sono incaricati di elaborare e trasmettere le transazioni, nonché di gestire lo stato di Ethereum. Eseguono i calcoli per ogni transazione nella [Macchina Virtuale di Ethereum](#evm) per assicurarsi che le regole del protocollo siano seguite. Oggi, gestiscono anche il consenso di [proof-of-work](#pow). Dopo la transizione al [proof-of-stake](#pos), delegheranno questo compito ai client del consenso.
+I client di esecuzione (precedentemente noti come "client Eth1"), come Besu, Erigon, go-ethereum, Nethermind, sono incaricati di elaborare e trasmettere le transazioni, nonché di gestire lo stato di Ethereum. Eseguono i calcoli per ogni transazione nella [Macchina Virtuale di Ethereum](#evm) per assicurarsi che le regole del protocollo siano seguite.
 
 ### livello di esecuzione {#execution-layer}
 
-Il livello d'esecuzione di Ethereum è la rete dei [client d'esecuzione](#execution-client).
+Il livello di esecuzione di Ethereum è la rete dei [client di esecuzione](#execution-client).
 
-### account di proprietà esterna (EOA) {#eoa}
+### conto posseduto esternamente (EOA) {#eoa}
 
-[Account](#account) creato da o per utenti della rete Ethereum.
+I conti posseduti esternamente (Externally owned accounts – EOA) sono [conti](#account) controllati da [chiavi private](#private-key), generate tipicamente usando una [frase di seed](#hd-wallet-seed). Al contrario dei contratti intelligenti, gli EOA sono conti privi di qualunque codice associato. Tipicamente, questi conti sono gestiti con un [portafoglio](#wallet).
 
 ### richiesta di commenti di Ethereum (ERC) {#erc}
 
@@ -282,9 +376,9 @@ Etichetta assegnata ad alcune [EIP](#eip) per tentare di definire uno standard s
 
 ### Ethash {#ethash}
 
-Algoritmo [Proof of Work](#pow) per Ethereum 1.0.
+Un algoritmo [proof-of-work](#pow) usato su Ethereum prima che passasse al [Proof-of-Stake](#pos).
 
-[Per saperne di più: https://eth.wiki/](https://eth.wiki/en/concepts/ethash/ethash)
+[Leggi altro](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
 
 ### ether {#ether}
 
@@ -294,15 +388,15 @@ Criptovaluta nativa usata dall'ecosistema di Ethereum, che copre i costi del [ca
   Valuta del nostro futuro digitale
 </DocLink>
 
-### Eventi {#events}
+### eventi {#events}
 
-Consentono l'uso delle risorse di registrazione dell'[EVM](#evm). Le [dapp](#dapp) possono rimanere in attesa di eventi e usarli per innescare callback JavaScript nell'interfaccia utente.
+Consentono l'uso delle risorse di registrazione dell'[EVM](#evm). Le [dapp](#dapp) possono rimanere in attesa di eventi e usarli per innescare dei callback JavaScript nell'interfaccia utente.
 
 <DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs">
   Eventi e registri
 </DocLink>
 
-### Macchina virtuale Ethereum (EVM) {#evm}
+### Macchina Virtuale Ethereum (EVM) {#evm}
 
 Macchina virtuale basata su stack che esegue il [bytecode](#bytecode). In Ethereum, il modello di esecuzione specifica in che modo lo stato di sistema viene alterato in base a una serie di istruzioni bytecode e una piccola tupla di dati ambientali. È specificato tramite un modello formale di macchina a stati virtuale.
 
@@ -318,13 +412,13 @@ Modulo leggibile dall'uomo di [bytecode](#bytecode) dell'EVM.
 
 ## F {#section-f}
 
-### funzione fallback {#fallback-function}
+### funzione di fallback {#fallback-function}
 
 Funzione predefinita chiamata in assenza di dati o di un nome di funzione dichiarato.
 
 ### faucet {#faucet}
 
-Servizio fornito tramite [Smart Contract](#smart-contract) che eroga fondi sotto forma di ether di test gratuiti, utilizzabili su una rete di prova.
+Un servizio fornito tramite [contratto intelligente](#smart-contract) che dispensa fondi nella forma di ether di prova gratuiti, utilizzabili su una rete di prova.
 
 <DocLink to="/developers/docs/networks/#testnet-faucets">
   Faucet della rete di prova
@@ -332,13 +426,10 @@ Servizio fornito tramite [Smart Contract](#smart-contract) che eroga fondi sotto
 
 ### finalità {#finality}
 
-La finalità è la garanzia che una serie di transazioni prima di un dato periodo non cambierà né sarà annullata.
+La finalità è la garanzia che una serie di transazioni non cambieranno né saranno annullate prima di un dato periodo.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality">
-  Finalità della Proof of Work
-</DocLink>
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
-  Finalità della Proof of Stake
+  Finalità del Proof of Stake
 </DocLink>
 
 ### finney {#finney}
@@ -347,23 +438,23 @@ Un taglio dell'[ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<sup>3
 
 ### diramazione {#fork}
 
-Cambio nel protocollo che causa la creazione di una catena alternativa o divergenza temporale in due percorsi potenziali di un blocco durante il mining.
+Cambio nel protocollo che causa la creazione di una catena alternativa o divergenza temporale in due percorsi potenziali di un blocco.
 
-### algoritmo fork-choice {#fork-choice-algorithm}
+### algoritmo di scelta della diramazione {#fork-choice-algorithm}
 
-L'algoritmo usato per identificare la testa della blockchain. Sul livello d'esecuzione, la testa della catena è identificata come quella con la maggiore difficoltà totale alle spalle. Questo significa che la vera testa della catena è quella che ha richiesto il maggior carico di lavoro per minarla. Sul livello di consenso, l'algoritmo osserva le attestazioni accumulate dai validatori ([LMD_GHOST](#lmd-ghost)).
+L'algoritmo usato per identificare la testa della blockchain. Al livello d'esecuzione, la testa della catena è identificata come quella con la maggiore difficoltà totale alle spalle. Questo significa che la vera testa della catena è quella che ha richiesto il maggior carico di lavoro per essere minata. Sul livello di consenso, l'algoritmo osserva le attestazioni accumulate dai validatori ([LMD_GHOST](#lmd-ghost)).
 
 ### prova di frode {#fraud-proof}
 
-Modello di sicurezza per determinate soluzioni di [livello 2](#layer-2) in cui, per aumentare la velocità, viene eseguito il [roll up](#rollups) delle transazioni in blocco e poi queste ultime vengono inviate a Ethereum come una sola transazione. Sono considerate valide ma sono contestabili se si sospetta una frode. In questo caso, una prova di frode eseguirà la transazione per controllare se si sia effettivamente verificata una frode. Questo metodo aumenta la quantità di transazioni possibili mantenendo la sicurezza. Alcuni [rollup](#rollups) usano [prove di validità](#validity-proof).
+Modello di sicurezza per determinate soluzioni di [livello 2](#layer-2) in cui, per aumentare la velocità, viene eseguito il [roll up](#rollups) delle transazioni in batch e poi queste ultime vengono inviate a Ethereum come una sola transazione. Sono considerate valide ma sono contestabili se si sospetta una frode. In questo caso, una prova di frode eseguirà la transazione per controllare se si sia effettivamente verificata una frode. Questo metodo aumenta la quantità di transazioni possibili mantenendo allo stesso tempo la sicurezza. Alcuni [rollup](#rollups) usano [prove di validità](#validity-proof).
 
 <DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Rollup ottimistici
 </DocLink>
 
-### frontiera {#frontier}
+### frontier {#frontier}
 
-Fase di sviluppo di test iniziale di Ethereum, che durò dal luglio 2015 al marzo 2016.
+Fase di sviluppo di test iniziale di Ethereum, durata dal luglio 2015 al marzo 2016.
 
 <Divider />
 
@@ -371,15 +462,19 @@ Fase di sviluppo di test iniziale di Ethereum, che durò dal luglio 2015 al marz
 
 ### carburante {#gas}
 
-Carburante virtuale usato in Ethereum per eseguire gli Smart Contract. L'[EVM](#evm) usa un meccanismo di contabilità per misurare il consumo di carburante e limitare il consumo delle risorse informatiche (vedi [Turing completo](#turing-complete)).
+Un carburante virtuale usato su Ethereum per eseguire i contratti intelligenti. L'[EVM](#evm) usa un meccanismo di contabilità per misurare il consumo di carburante e limitare il consumo delle risorse informatiche (vedi [Turing completo](#turing-complete)).
 
 <DocLink to="/developers/docs/gas/">
-  Carburante e commissioni
+  Gas e Commissioni
 </DocLink>
 
-### limite di carburante {#gas-limit}
+### limite del carburante {#gas-limit}
 
 La massima quantità di [carburante](#gas) consumabile da una [transazione](#transaction) o da un [blocco](#block).
+
+### prezzo del carburante {#gas-price}
+
+Prezzo in ether di un'unità di carburante specificata in una transazione.
 
 ### blocco genesi {#genesis-block}
 
@@ -387,9 +482,9 @@ Il primo blocco in una [blockchain](#blockchain), usato per inizializzare una de
 
 ### geth {#geth}
 
-Go Ethereum. Una delle implementazioni più prominenti del protocollo di Ethereum, scritta in Go.
+Go Ethereum. Una delle implementazioni più importanti del protocollo Ethereum, scritta in Go.
 
-[Leggi di più su geth.ethereum.org](https://geth.ethereum.org/)
+[Ulteriori informazioni su geth.ethereum.org](https://geth.ethereum.org/)
 
 ### gwei {#gwei}
 
@@ -399,13 +494,17 @@ Abbreviazione di gigawei, un taglio dell'[ether](#ether), comunemente usato per 
 
 ## H {#section-h}
 
-### diramazione permanente {#hard-fork}
+### hard fork {#hard-fork}
 
-Divergenza permanente nella [blockchain](#blockchain); detta anche hard fork o hard-forking change. Si verifica comunemente quando i nodi non aggiornati non possono convalidare i blocchi creati dai nodi aggiornati che seguono le [regole di consenso](#consensus-rules) più recenti. Da non confondere con diramazione (fork), soft fork, software fork o Git fork.
+Divergenza permanente nella [blockchain](#blockchain); detta anche "cambiamento hard-forking". Si verifica comunemente quando i nodi non aggiornati non possono convalidare i blocchi creati dai nodi aggiornati che seguono le [regole di consenso](#consensus-rules) più recenti. Da non confondere con diramazione (fork), soft fork, software fork o Git fork.
 
 ### hash {#hash}
 
-Fingerprint di lunghezza fissa di input di dimensione variabile, prodotto da una funzione hash. (Vedi [keccak-256](#keccak-256))
+Fingerprint di lunghezza fissa di input di dimensione variabile, prodotto da una funzione hash. (Vedi [keccak-256](#keccak-256)).
+
+### hashrate {#hash-rate}
+
+Il numero di calcoli di hash effettuati al secondo dai computer che eseguono il software di mining.
 
 ### portafoglio HD {#hd-wallet}
 
@@ -431,15 +530,15 @@ Una struttura di rete pensata per ottimizzare l'interrogazione di informazioni d
 
 ### Inter-exchange Client Address Protocol (ICAP) {#icap}
 
-Codifica degli indirizzi Ethereum parzialmente compatibile con la codifica IBAN (International Bank Account Number), per offrire una codifica versatile, dotata di checksum e interoperabile per gli indirizzi Ethereum. Gli indirizzi ICAP usano un nuovo codice IBAN pseudo-nazionale, XE, che sta per "eXtended Ethereum", come si usa nelle valute non giurisdizionali (es. XBT, XRP, XCP).
+Una codifica degli indirizzi di Ethereum, parzialmente compatibile con la codifica IBAN (International Bank Account Number), offrendo una codifica versatile, controllata e interoperabile per gli indirizzi di Ethereum. Gli indirizzi ICAP usano un nuovo codice IBAN pseudo-nazionale, XE, che sta per "eXtended Ethereum", come nelle valute non giurisdizionali (es. XBT, XRP, XCP).
 
-### era glaciale (Ice Age) {#ice-age}
+### Ice Age {#ice-age}
 
-[Diramazione permanente](#hard-fork) di Ethereum sul blocco 200.000 per introdurre un aumento esponenziale della [difficoltà](#difficulty) (o [bomba di difficoltà](#difficulty-bomb)), che motivi una transizione a passare al [Proof of Stake](#pos).
+[Diramazione permanente](#hard-fork) di Ethereum sul blocco 200.000 per introdurre un aumento esponenziale della [difficoltà](#difficulty) (o [bomba di difficoltà](#difficulty-bomb)), che motivi una transizione al [Proof-of-Stake](#pos).
 
 ### ambiente di sviluppo integrato (IDE) {#ide}
 
-Interfaccia utente che tipicamente combina un editor di codice, un compilatore, un ambiente runtime e un debugger.
+Interfaccia utente che solitamente combina un editor di codice, un compilatore, un ambiente runtime e un debugger.
 
 <DocLink to="/developers/docs/ides/">
   Ambienti di sviluppo integrati
@@ -447,17 +546,21 @@ Interfaccia utente che tipicamente combina un editor di codice, un compilatore, 
 
 ### problema del codice distribuito immutabile {#immutable-deployed-code-problem}
 
-Una volta distribuito il codice di un [contratto](#smart-contract) (o di una [libreria](#library)), questo diventa immutabile. Le pratiche di sviluppo standard del software si basano sulla capacità di risolvere possibili bug e aggiungere nuove funzionalità, quindi questo punto rappresenta una sfida per lo sviluppo degli Smart Contract.
+Una volta distribuito il codice di un [contratto](#smart-contract) (o di una [libreria](#library)), questo diventa immutabile. Le pratiche standard di sviluppo dei software si affidano al poter risolvere i possibili bug e aggiungere nuove funzionalità, quindi, questo rappresenta una sfida per lo sviluppo dei contratti intelligenti.
 
 <DocLink to="/developers/docs/smart-contracts/deploying/">
-  Distribuzione di Smart Contract
+  Distribuire i Contratti Intelligenti
 </DocLink>
 
 ### transazione interna {#internal-transaction}
 
-[Transazione](#transaction) inviata da un [account contratto](#contract-account) a un altro account dello stesso tipo o a un [EOA](#eoa) (vedi [messaggio](#message)).
+Una [transazione](#transaction) inviata da un [conto del contratto](#contract-account) a un altro, o a un [EOA](#eoa) (vedi [messaggio](#message)).
 
 <Divider />
+
+### emissione
+
+Il conio di nuovo ether per ricompensare la proposta, l'attestazione e la segnalazione del blocco.
 
 ## K {#section-k}
 
@@ -466,16 +569,16 @@ Una volta distribuito il codice di un [contratto](#smart-contract) (o di una [li
 Detta anche "algoritmo di allungamento della password", è usata dai formati [keystore](#keystore-file) per proteggere contro attacchi di forza bruta, dictionary e rainbow table ai danni della crittografia di una passphrase, mediante continuo hashing della passphrase.
 
 <DocLink to="/developers/docs/smart-contracts/security/">
-  Sicurezza degli smart contract
+  Sicurezza del contratto intelligente
 </DocLink>
+
+### keystore {#keyfile}
+
+Ogni coppia chiave privata/indirizzo del conto esiste come un singolo file chiave in un client di Ethereum. Questi sono file di testo JSON contenenti la chiave privata crittografata del conto, che può esser decrittografata solo con la password inserita alla creazione del conto.
 
 ### keccak-256 {#keccak-256}
 
 Funzione crittografica dell'[hash](#hash) usata in Ethereum. Keccak-256 è stata standardizzata come [SHA](#sha)-3.
-
-### file keystore {#keystore-file}
-
-File con codifica JSON che contiene una [chiave privata](#private-key) singola (generata casualmente), crittografata con passphrase per maggior sicurezza.
 
 <Divider />
 
@@ -483,25 +586,25 @@ File con codifica JSON che contiene una [chiave privata](#private-key) singola (
 
 ### livello 2 {#layer-2}
 
-Un'area di sviluppo incentrata sui miglioramenti di stratificazione in aggiunta al protocollo Ethereum. Questi miglioramenti riguardano la velocità delle [transazioni](#transaction), l'importo delle [commissioni sulle transazioni](#transaction-fee) e la privacy delle transazioni.
+Un'area di sviluppo incentrata sui miglioramenti di stratificazione in aggiunta al protocollo Ethereum. Questi miglioramenti riguardano la velocità delle [transazioni](#transaction), il minor importo delle [commissioni sulle transazioni](#transaction-fee) e la privacy delle transazioni.
 
-<DocLink to="/developers/docs/scaling/#layer-2-scaling">
+<DocLink to="/layer-2/">
   Livello 2
 </DocLink>
 
 ### LevelDB {#level-db}
 
-Store open source chiave-valore su disco, implementato come [libreria](#library) leggera, con scopo singolo, e legami con molte piattaforme.
+Store open source chiave-valore su disco, implementato come [libreria](#library) leggera, con scopo singolo, con binding con molte piattaforme.
 
 ### libreria {#library}
 
-Tipo speciale di [contratto](#smart-contract) privo di funzioni pagabili, funzione di fallback e storage dati. Non può quindi ricevere o contenere ether o archiviare dati. Una libreria funge da codice distribuito precedentemente che altri contratti possono chiamare per calcoli di sola lettura.
+Tipo speciale di [contratto](#smart-contract) privo di funzioni pagabili, funzione di fallback e storage dati. Non può quindi ricevere o contenere ether né archiviare dati. Una libreria funge da codice distribuito precedentemente che altri contratti possono chiamare per calcoli in sola lettura.
 
 <DocLink to="/developers/docs/smart-contracts/libraries/">
-  Librerie degli Smart Contract
+  Librerie dei Contratti Intelligenti
 </DocLink>
 
-### client leggero {#lightweight-client}
+### client leggero {#light-client}
 
 Client di Ethereum che non memorizza una copia locale della [blockchain](#blockchain) né convalida i blocchi e le [transazioni](#transaction). Offre le funzioni di un [portafoglio](#wallet) e può creare e trasmettere transazioni.
 
@@ -509,41 +612,53 @@ Client di Ethereum che non memorizza una copia locale della [blockchain](#blockc
 
 ### LMD_GHOST {#lmd-ghost}
 
-L'[algoritmo di fork-choice](#fork-choice-algorithm) usato dai client del consenso di Ethereum per identificare la testa della catena. LMD-GHOST è un acronimo che sta per "Ultimo Albero Secondario Osservato Guidato dal Messaggio Più Avido e Più Pesante", che significa che la testa della catena è il blocco col maggior accumulo di [attestazioni](#attestation) nella sua storia.
+L'[algoritmo di scelta della diramazione](#fork-choice-algorithm) usato dai client del consenso di Ethereum per identificare la testa della catena. LMD-GHOST è un acronimo che sta per "Latest Message Driven Greediest Heaviest Observed SubTree" (Ultimo albero secondario osservato guidato dal messaggio più avido e più pesante), che significa che la testa della catena è il blocco col maggior accumulo di [attestazioni](#attestation) nella sua storia.
 
 ## M {#section-m}
 
 ### Rete principale {#mainnet}
 
-In inglese mainnet, è la [blockchain](#blockchain) Ethereum pubblica principale. ETH reali, valore reale e conseguenze reali. Viene detta livello 1 quando si parla di soluzioni per passare al [livello 2](#layer-2). (Vedi anche [rete di prova](#testnet))
+In inglese mainnet, abbreviazione di "main network", è la [blockchain](#blockchain) Ethereum pubblica principale. ETH reali, valore reale e conseguenze reali. Viene detta livello 1 quando si parla di soluzioni di scalabilità di [livello 2](#layer-2). (Vedi anche [rete di prova](#testnet)).
 
-### Merkle Patricia trie {#merkle-patricia-tree}
+<DocLink to="/developers/docs/networks/">
+  Reti Ethereum
+</DocLink>
+
+### memory-hard {#memory-hard}
+
+Le funzioni memory-hard (a uso intensivo di memoria) sono processi che sperimentano una riduzione drastica della velocità o della fattibilità quando la quantità di memoria disponibile cala anche lievemente. Un esempio è l'algoritmo di mining di Ethereum, [Ethash](#ethash).
+
+### Albero di Merkle Patricia {#merkle-patricia-tree}
 
 Struttura dati usata in Ethereum per memorizzare in modo efficiente coppie chiave-valore.
 
 ### messaggio {#message}
 
-[Transazione interna](#internal-transaction) mai serializzata e inviata solo all'interno dell'[EVM](#evm).
+Una [transazione interna](#internal-transaction) che non è mai serializzata e inviata solo all'interno dell'[EVM](#evm).
 
-### chiamata del messaggio {#message-call}
+### chiamata di messaggio {#message-call}
 
-Atto di passare un [messaggio](#message) da un account a un altro. Se l'account di destinazione è associato al codice dell'[EVM](#evm), la VM sarà avviata con lo stato di quell'oggetto e del messaggio che ha avviato l'azione.
+Atto di passare un [messaggio](#message) da un conto a un altro. Se il conto di destinazione è associato al codice dell'[EVM](#evm), allora la VM sarà avviata con lo stato di quel messaggio e il messaggio che ha avviato l'azione.
 
 ### Metropolis {#metropolis}
 
 Terza fase di sviluppo di Ethereum, lanciata nell'ottobre 2017.
 
+### mining {#mining}
+
+Il processo di hashing ripetuto dell'intestazione di un blocco mentre incrementa un [nonce](#nonce) fino a quando il risultato non contiene un numero arbitrario di zeri binari principali. Questo è il processo con il quale i nuovi [blocchi](#block) vengono aggiunti a una blockchain [proof-of-work](#blockchain). Ethereum era protetto così, prima di passare al [Proof-of-Stake](#pos).
+
 ### miner {#miner}
 
-[Nodo](#node) della rete che trova [Proof of Work](#pow) valide per i nuovi blocchi, tramite passaggi ripetuti di hash (vedi [Ethash](#ethash)).
+[Nodo](#node) della rete che trova [Proof-of-Work](#pow) validi per i nuovi blocchi, tramite passaggi ripetuti di hash (vedi [Ethash](#ethash)). I miner non fanno più parte di Ethereum: sono stati sostituiti dai validatori quando Ethereum è passato al [Proof-of-Stake](#pos).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
   Mining
 </DocLink>
 
-### Conio {#mint}
+### conio {#mint}
 
-La coniatura è il processo di creazione di nuovi token e la loro messa in circolazione in modo che siano utilizzabili. È un meccanismo decentralizzato per creare un nuovo token senza il coinvolgimento dell'autorità centrale.
+Il conio è il processo di creazione di nuovi token e la loro messa in circolazione così che siano utilizzabili. È un meccanismo decentralizzato per creare un nuovo token senza coinvolgere l'autorità centrale.
 
 <Divider />
 
@@ -551,26 +666,30 @@ La coniatura è il processo di creazione di nuovi token e la loro messa in circo
 
 ### rete {#network}
 
-Parlando di rete Ethereum, rete peer-to-peer che propaga le transazioni e i blocchi a ogni nodo di Ethereum (partecipante alla rete).
+In riferimento alla rete Ethereum, rete peer-to-peer che propaga le transazioni e i blocchi a ogni nodo di Ethereum (partecipante alla rete).
 
 <DocLink to="/developers/docs/networks/">
   Reti
 </DocLink>
 
+### hashrate della rete {#network-hashrate}
+
+L'[hashrate](#hashrate) collettivo prodotto da un'intera rete di mining. Il mining su Ethereum è stato disattivato quando Ethereum è passato al [Proof-of-Stake](#pos).
+
 ### token non fungibile (NFT) {#nft}
 
-Detto anche "atto" (deed), si tratta di uno standard token introdotto dalla proposta ERC-721. I NFT possono essere tracciati e scambiati, ma ogni token è unico e distinto; non sono intercambiabili come i [token ERC-20](#token-standard). Gli NFT possono rappresentare la proprietà di risorse digitali o fisiche.
+Detto anche "atto" (deed), si tratta di uno standard token introdotto dalla proposta ERC-721. Gli NFT sono tracciabili e scambiabili, ma ogni token è univoco e distinto; non sono intercambiabili come gli ETH e i [token ERC-20](#token-standard). Gli NFT possono rappresentare la proprietà delle risorse digitali o fisiche.
 
 <DocLink to="/nft/">
   Token Non Fungibili (NFT)
 </DocLink>
 <DocLink to="/developers/docs/standards/tokens/erc-721/">
-  Standard token non fungibile ERC-721
+  Standard di token non fungibile ERC-721
 </DocLink>
 
 ### nodo {#node}
 
-Software client che partecipa alla rete.
+Client software che partecipa alla rete.
 
 <DocLink to="/developers/docs/nodes-and-clients/">
   Nodi e client
@@ -578,7 +697,7 @@ Software client che partecipa alla rete.
 
 ### nonce {#nonce}
 
-In termini crittografici è un valore che può essere usato una volta sola. Vi sono due tipi di nonce utilizzati in Ethereum: un nonce account è un contatore di transazioni in ogni account, che viene usato per impedire attacchi replay; un nonce [Proof of Work](#pow) è il valore casuale di un blocco che è stato utilizzato per soddisfare la [Proof of Work](#pow).
+In termini crittografici è un valore che può essere usato una volta sola. Il nonce di un conto è un contatore di transazioni in ogni conto, utilizzato per prevenire gli attacchi replay.
 
 <Divider />
 
@@ -586,9 +705,9 @@ In termini crittografici è un valore che può essere usato una volta sola. Vi s
 
 ### blocco ommer (zio) {#ommer}
 
-Nel momento in cui un [miner](#miner) trova un [blocco](#block) valido, un altro miner potrebbe aver pubblicato un blocco concorrente e averlo aggiunto alla fine della blockchain. Questo blocco valido, ma non aggiornato, può essere incluso dai nuovi blocchi come _ommer_ e ricevere una ricompensa parziale per i blocchi. Il termine "ommer" è il termine preferito, neutro dal punto di vista del genere, per lo stesso livello di un blocco padre, ma a volte viene anche indicato come "zio".
+Nel momento in cui un [miner](#miner) di Proof-of-Work trova un [blocco](#block) valido, un altro miner potrebbe aver pubblicato un blocco concorrente e averlo aggiunto alla fine della blockchain. Questo blocco valido, ma non aggiornato, può essere incluso dai nuovi blocchi come _ommer_ e ricevere una ricompensa parziale per i blocchi. Il termine "ommer" è il termine preferito, neutro dal punto di vista del genere, per lo stesso livello di un blocco padre, ma a volte viene anche indicato come "zio". Ciò era rilevante per Ethereum quando era una rete di [Proof-of-Work](pow), ma gli ommer non sono una caratteristica dell'Ethereum [Proof-of-Stake](#pos), perché in ogni slot è selezionato precisamente un propositore del blocco.
 
-### Rollup ottimistico {#optimistic-rollup}
+### rollup ottimistico {#optimistic-rollup}
 
 Un [rollup](#rollups) di transazioni che usa le [prove di frode](#fraud-proof) per offrire un maggiore volume di transazione del [livello 2](#layer-2) usando la sicurezza fornita dalla [Rete principale](#mainnet) (livello 1). A differenza di [Plasma](#plasma), una soluzione simile di livello 2, i rollup ottimistici possono gestire tipi di transazioni più complessi. Tutto ciò è possibile nell'[EVM](#evm). Hanno problemi di latenza rispetto ai [rollup a conoscenza zero](#zk-rollups) perché una transazione può essere contestata tramite la prova di frode.
 
@@ -598,7 +717,7 @@ Un [rollup](#rollups) di transazioni che usa le [prove di frode](#fraud-proof) p
 
 ### Oracolo {#oracle}
 
-Un oracolo è un ponte tra la blockchain [blockchain](#blockchain) e il mondo reale. Funge da [API](#api) on-chain, che può essere interrogato per ricevere informazioni e utilizzato negli [smart contract](#smart-contract).
+Un oracolo è un ponte tra la blockchain [blockchain](#blockchain) e il mondo reale. Agiscono da [API](#api) sulla catena, interrogabili per informazioni e utilizzabili nei [contratti intelligenti](#smart-contract).
 
 <DocLink to="/developers/docs/oracles/">
   Oracoli
@@ -610,11 +729,19 @@ Un oracolo è un ponte tra la blockchain [blockchain](#blockchain) e il mondo re
 
 ### parità {#parity}
 
-Una delle implementazioni interoperabili più importanti del software client Ethereum.
+Una delle implementazioni interoperabili più importanti del software del client di Ethereum.
+
+### peer {#peer}
+
+Computer connessi che eseguono il software del client di Ethereum, caratterizzati da copie della [blockchain](#blockchain) identiche.
+
+### rete peer-to-peer {#peer-to-peer-network}
+
+Una rete di computer ([peer](#peer)) che collettivamente sono capaci di eseguire funzionalità senza il bisogno di servizi centralizzati e basati sul server.
 
 ### Plasma {#plasma}
 
-Una soluzione di ridimensionamento esterna alla catena che usa le [prove di frode](#fraud-proof), come i [rollup ottimistici](#optimistic-rollups). Plasma è limitato a transazioni semplici come trasferimenti e scambi base di token.
+Una soluzione di scalabilità esterna alla catena che usa le [prove di frode](#fraud-proof), come i [rollup ottimistici](#optimistic-rollups). Plasma è limitato a transazioni semplici, come trasferimenti e scambi basilari di token.
 
 <DocLink to="/developers/docs/scaling/plasma">
   Plasma
@@ -622,22 +749,26 @@ Una soluzione di ridimensionamento esterna alla catena che usa le [prove di frod
 
 ### chiave privata (chiave segreta) {#private-key}
 
-Numero segreto che consente agli utenti di Ethereum di dimostrare la proprietà di un account o di un contratto, producendo una firma digitale (vedi [chiave pubblica](#public-key), [indirizzo](#address), [ECDSA](#ecdsa)).
+Un numero segreto che consente agli utenti di Ethereum di provare la proprietà di un conto o dei contratti, producendo una firma digitale (vedi [chiave pubblica](#public-key), [indirizzo](#address), [ECDSA](#ecdsa)).
 
-### Proof-of-stake (PoS) {#pos}
+### catena privata {#private-chain}
 
-Metodo con cui un protocollo blockchain di criptovalute mira a raggiungere il [consenso distribuito](#consensus). La PoS chiede agli utenti di dimostrare la proprietà di una determinata quantità di criptovalute (la loro "stake", o quota, nella rete) per poter partecipare alla convalida delle transazioni.
+Una blockchain interamente privata ha accesso con autorizzazioni, non è disponibile all'uso pubblico.
+
+### proof-of-stake (PoS) {#pos}
+
+Metodo con cui un protocollo blockchain di criptovalute mira a raggiungere il [consenso](#consensus) distribuito. Il proof-of-stake chiede agli utenti di dimostrare la proprietà di una determinata quantità di criptovalute (lo "stake", o quota, nella rete) per poter partecipare alla convalida delle transazioni.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/">
-  Proof of Stake
+  proof-of-stake
 </DocLink>
 
-### Proof of Work (PoW) {#pow}
+### Proof-of-Work (PoW) {#pow}
 
-Informazioni (la prova) che richiedono calcoli significativi per essere trovate. In Ethereum, i [miner](#miner) devono trovare una soluzione numerica per l'algoritmo [Ethash](#ethash) che soddisfi una [difficoltà](#difficulty) specificata a livello di rete.
+Un'informazione (la prova) che richiede calcoli significativi per essere trovata.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/">
-  Proof of Work
+  proof-of-work
 </DocLink>
 
 ### chiave pubblica {#public-key}
@@ -650,11 +781,11 @@ Numero derivato tramite una funzione unidirezionale da una [chiave privata](#pri
 
 ### ricevuta {#receipt}
 
-Dati restituiti da un client Ethereum per rappresentare il risultato di una particolare [transazione](#transaction), che includono un [hash](#hash) della transazione, il relativo numero di [blocco](#block), il quantitativo di [carburante](#gas) utilizzato e, in caso di distribuzione di uno [Smart Contract](#smart-contract), l'indirizzo [](#address) del contratto.
+Dati restituiti da un client Ethereum per rappresentare il risultato di una particolare [transazione](#transaction), che includono un [hash](#hash) della transazione, il relativo numero di [blocco](#block), il quantitativo di [carburante](#gas) utilizzato e, in caso di distribuzione di uno [contratto intelligente](#smart-contract), l'indirizzo [](#address) del contratto.
 
 ### attacco con codice rientrante {#re-entrancy-attack}
 
-Attacco che consiste nella chiamata da parte del contratto di un aggressore alla funzione del contratto della vittima in modo che, durante l'esecuzione, la vittima chiami di nuovo il contratto dell'aggressore, in modo ricorsivo. Questo può causare, ad esempio, il furto di fondi perché vengono ignorate le parti del contratto della vittima che aggiornano i saldi o contano gli importi prelevati.
+Attacco che consiste nella chiamata, da parte del contratto di un aggressore, alla funzione del contratto della vittima in modo che, durante l'esecuzione, la vittima chiami di nuovo il contratto dell'aggressore, in modo ricorsivo. Questo può causare, ad esempio, il furto di fondi perché vengono ignorate le parti del contratto della vittima che aggiornano i saldi o contano gli importi prelevati.
 
 <DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
   Codice rientrante
@@ -662,15 +793,15 @@ Attacco che consiste nella chiamata da parte del contratto di un aggressore alla
 
 ### ricompensa {#reward}
 
-Quantità di ether inclusa in ogni nuovo blocco come ricompensa da parte della rete al [miner](#miner) che ha trovato la soluzione [Proof of Work](#pow).
+Quantità di ether inclusa in ogni nuovo blocco come ricompensa da parte della rete al [miner](#miner) che ha trovato la soluzione [Proof-of-Work](#pow).
 
-### prefisso a lunghezza ricorsiva (RLP) {#rlp}
+### prefisso di lunghezza ricorsiva (RLP) {#rlp}
 
 Standard di codifica progettato dagli sviluppatori di Ethereum per codificare e serializzare oggetti (strutture di dati) di complessità e lunghezza arbitrarie.
 
 ### rollup {#rollups}
 
-Tipo di soluzione per il passaggio al [livello 2](#layer-2) che raggruppa più transazioni e le invia alla [catena principale Ethereum](#mainnet) in una sola transazione. Consente di ridurre i costi del [carburante](#gas) e di aumentare il volume delle [transazioni](#transaction). I rollup possono essere di tipo ottimistico o a conoscenza zero. Utilizzano metodi di sicurezza diversi per offrire vantaggi in termini di scalabilità.
+Tipo di soluzione per il passaggio al [livello 2](#layer-2) che raggruppa più transazioni e le invia alla [catena principale Ethereum](#mainnet) in una sola transazione. Consente di ridurre i costi del [carburante](#gas) e di aumentare il volume delle [transazioni](#transaction). I rollup possono essere di tipo ottimistico o a conoscenza zero. Utilizzano diversi metodi di sicurezza per offrire vantaggi in termini di scalabilità.
 
 <DocLink to="/developers/docs/scaling/#rollups">
   Rollup
@@ -678,83 +809,103 @@ Tipo di soluzione per il passaggio al [livello 2](#layer-2) che raggruppa più t
 
 <Divider />
 
+### RPC {#rpc}
+
+La **Chiamata di procedura remota (RPC)** è un protocollo utilizzato da un programma per richiedere un servizio da un programma situato su un altro computer in una rete, senza dover comprendere i dettagli della rete.
+
 ## S {#section-s}
-
-### Serenity {#serenity}
-
-La fase dello sviluppo di Ethereum che ha dato il via a una serie di aggiornamenti di scalabilità e sostenibilità, precedentemente nota come "Ethereum 2.0" o "Eth2".
-
-<DocLink to="/upgrades/">
-  Aggiornamenti di Ethereum
-</DocLink>
 
 ### Secure Hash Algorithm (SHA) {#sha}
 
 Famiglia di funzioni hash crittografiche pubblicata dal National Institute of Standards and Technology (NIST).
 
+### Serenity {#serenity}
+
+La fase dello sviluppo di Ethereum che ha dato il via a una serie di aggiornamenti di scalabilità e sostenibilità, precedentemente nota come "Ethereum 2.0" o "Eth2".
+
+<DocLink to="/roadmap/">
+  Aggiornamenti di Ethereum
+</DocLink>
+
+### serializzazione {#serialization}
+
+Il processo di conversione di una struttura dati in una sequenza di byte.
+
 ### shard/shard chain {#shard}
 
-Catena [Proof of Stake](#pos) coordinata dalla [beacon chain](#beacon-chain) e protetta dai [validatori](#validator). Ne saranno aggiunte 64 alla rete nell'ambito dell'aggiornamento della catena di shard. Le catene di frammenti offriranno un maggior volume di transazioni per Ethereum, fornendo dati aggiuntivi alle soluzioni del [livello 2](#layer-2), come i [rollup ottimistici](#optimistic-rollups) e i [rollup ZK](#zk-rollups).
+Le shard chain sono sezioni discrete della blockchain totale per le quali possono essere responsabili serie secondarie di validatori. Questo offrirà maggiori volumi di transazioni a Ethereum e migliorerà la disponibilità dei dati per le soluzioni di [livello 2](#layer-2), come i [rollup ottimistici](#optimistic-rollups) e i [rollup ZK](#zk-rollups).
 
-<DocLink to="/upgrades/sharding">
-  Shard chain
+<DocLink to="/roadmap/danksharding">
+  Danksharding
 </DocLink>
 
 ### sidechain {#sidechain}
 
-Una soluzione di ridimensionamento che usa una catena separata con [regole di consenso](#consensus-rules) differenti e spesso più veloci. È necessario un ponte per connettere queste sidechain alla [Rete principale](#mainnet). I [rollup](#rollups) usano anche le sidechain, ma operano invece in collaborazione con la [Rete principale](#mainnet).
+Una soluzione di scalabilità che usa una catena separata con [regole di consenso](#consensus-rules) differenti e spesso più veloci. Serve un ponte per connettere queste sidechain alla [Rete principale](#mainnet). Anche i [rollup](#rollups) usano le sidechain, ma operano invece in collaborazione con la [Rete principale](#mainnet).
 
 <DocLink to="/developers/docs/scaling/sidechains/">
   Sidechain
 </DocLink>
 
+### firma {#signing}
+
+Dimostrazione crittografica che una transazione è stata approvata dal titolare di una chiave privata specifica.
+
 ### singleton {#singleton}
 
 Termine appartenente al contesto di programmazione che descrive un oggetto di cui può esistere solo un'istanza.
 
+### slasher {#slasher}
+
+Uno slasher è un'entità che scansiona le attestazioni alla ricerca di infrazioni suscettibile di slashing. I casi di slashing sono trasmessi alla rete, il propositore del blocco successivo somma la prova al blocco. Il propositore del blocco riceve poi una ricompensa per aver effettuato lo slashing del validatore malevolo.
+
 ### slot {#slot}
 
-Periodo di tempo (12 secondi) in cui un nuovo blocco della [beacon chain](#beacon-chain) e della [catena di shard](#shard) può essere proposto da un [validatore](#validator) nel sistema [Proof of Stake](#pos). Uno slot può rimanere vuoto. 32 slot formano un'[epoca](#epoch).
+Periodo di tempo (12 secondi) in cui un nuovo blocco può essere proposto da un [validatore](#validator) nel sistema di [Proof-of-Stake](#pos). Uno slot potrebbe essere vuoto. 32 slot formano un'[epoca](#epoch).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
-  Proof of Stake
+  Proof-of-stake
 </DocLink>
 
-### smart contract {#smart-contract}
+### contratto intelligente {#smart-contract}
 
-Programma eseguito sull'infrastruttura di calcolo Ethereum.
+Un programma che opera sull'infrastruttura di calcolo di Ethereum.
 
 <DocLink to="/developers/docs/smart-contracts/">
-  Introduzione agli Smart Contract
+  Introduzione ai Contratti Intelligenti
 </DocLink>
 
 ### SNARK {#snark}
 
-Abbreviazione per "argomento non interattivo succinto di conoscenza", uno SNARK è un tipo di [prova a conoscenza zero](#zk-proof).
+Abbreviazione per "succinct non-interactive argument of knowledge (argomento di conoscenza non interattivo e succinto)", uno SNARK è un tipo di [prova a conoscenza zero](#zk-proof).
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
-  Rollup a conoscenza zero (zero-knowledge)
+  Rollup a conoscenza zero
 </DocLink>
+
+### soft fork {#soft-fork}
+
+Una divergenza in una [blockchain](#blockchain) che si verifica quando le [regole di consenso](#consensus-rules) cambiano. A differenza di una [diramazione permanente o hard fork](#hard-fork), una soft fork è retrocompatibile; i nodi aggiornati possono validare i blocchi creati dai nodi non aggiornati a condizione che seguano le nuove regole di consenso.
 
 ### Solidity {#solidity}
 
-Linguaggio di programmazione procedurale (imperativo) con sintassi simile a JavaScript, C++ o Java. Il linguaggio più popolare e più usato per gli [Smart Contract](#smart-contract) Ethereum. Creato dal dott. Gavin Wood.
+Linguaggio di programmazione procedurale (imperativo) con sintassi simile a JavaScript, C++ o Java. Il linguaggio più popolare e più usato per i [contratti intelligenti](#smart-contract) di Ethereum. Creato dal dott. Gavin Wood.
 
 <DocLink to="/developers/docs/smart-contracts/languages/#solidity">
   Solidity
 </DocLink>
 
-### Assembly in linea Solidity {#solidity-inline-assembly}
+### Assembly inline Solidity {#solidity-inline-assembly}
 
-Linguaggio assembly dell'[EVM](#evm) in un programma [Solidity](#solidity). Il supporto di Solidity per l'assembly in linea facilita la scrittura di determinate operazioni.
+Linguaggio assembly dell'[EVM](#evm) in un programma [Solidity](#solidity). Il supporto di Solidity per l'assembly inline facilita la scrittura di determinate operazioni.
 
 ### Spurious Dragon {#spurious-dragon}
 
-[Diramazione permanente](#hard-fork) della blockchain Ethereum, che si è verificata sul blocco 2.675.000 per affrontare più vettori di attacchi denial-of-service e cancellare lo stato (vedi [Tangerine Whistle](#tangerine-whistle)). Anche meccanismo di protezione contro gli attacchi replay (vedi [nonce](#nonce)).
+[Diramazione permanente (hard fork)](#hard-fork) della blockchain Ethereum, che si è verificata sul blocco 2.675.000 per affrontare più vettori di attacchi denial-of-service e cancellare lo stato (vedi [Tangerine Whistle](#tangerine-whistle)). È anche un meccanismo di protezione contro gli attacchi replay (vedi [nonce](#nonce)).
 
 ### stablecoin {#stablecoin}
 
-Token [ERC-20](#token-standard) con un valore ancorato al valore di un'altra risorsa. Esistono stablecoin supportati da valute legali come dollari, metalli preziosi come l'oro e altre criptovalute come bitcoin.
+Token [ERC-20](#token-standard) con un valore ancorato al valore di un'altra risorsa. Esistono stablecoin supportati da valute legali come dollari, metalli preziosi come l'oro e altre criptovalute come Bitcoin.
 
 <DocLink to="/eth/#tokens">
   ETH non è l'unica criptovaluta su Ethereum
@@ -762,35 +913,51 @@ Token [ERC-20](#token-standard) con un valore ancorato al valore di un'altra ris
 
 ### staking {#staking}
 
-Depositare una quantità di [ether](#ether) (lo stake) per diventare validatore e proteggere la [rete](#network). Un validatore controlla [transazioni](#transaction) e propone [blocchi](#block) secondo un modello di consenso [Proof of Stake](#pos). Lo staking dà un incentivo economico per agire nel miglior interesse della rete. Si ottengono ricompense per svolgere i compiti di [validatore](#validator), ma si perdono quantità variabili di ETH se non si svolgono tali compiti.
+Depositare una quantità di [ether](#ether) (lo stake) per diventare validatore e proteggere la [rete](#network). Un validatore controlla [transazioni](#transaction) e propone [blocchi](#block) secondo un modello di consenso [Proof-of-Stake](#pos). Lo staking dà un incentivo economico per agire nel miglior interesse della rete. Si ottengono ricompense per svolgere i compiti di [validatore](#validator), ma si perdono quantità variabili di ETH se non si svolgono tali compiti.
 
 <DocLink to="/staking/">
   Fai staking con i tuoi ETH per diventare validatore di Ethereum
 </DocLink>
 
+### gruppo di staking {#staking-pool}
+
+Aggregazione degli ETH di più staker Ethereum, utilizzata per raggiungere il limite di 32 ETH necessari per attivare un insieme di chiavi di validazione. Un operatore di un nodo utilizza queste chiavi per partecipare al consenso e le [ricompense di blocco](#block-reward) sono divise tra gli staker partecipanti alla pool. I gruppi di staking o lo staking delegato non sono soluzioni native del protocollo Ethereum, ma molte soluzioni sono state costruite dalla comunità.
+
+<DocLink to="/staking/pools/">
+  Staking in pool
+</DocLink>
+
 ### STARK {#stark}
 
-Abbreviazione per "argomento trasparente scalabile di conoscenza", uno STARK è un tipo di [prova di conoscenza zero](#zk-proof).
+Abbreviazione per "scalable transparent argument of knowledge" (argomento trasparente scalabile di conoscenza), uno STARK è un tipo di [prova di conoscenza zero](#zk-proof).
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
   Rollup a conoscenza zero
 </DocLink>
 
+### stato {#state}
+
+Un'istantanea di tutti i saldi e dati in un dato momento sulla blockchain, normalmente riferita alla condizione a un blocco in particolare.
+
 ### canali di stato {#state-channels}
 
-Soluzione di [livello 2](#layer-2) in cui un canale è configurato tra i partecipanti per eseguire transazioni liberamente e in modo economico. Solo una [transazione](#transaction) per configurare il canale e chiudere il canale è inviata alla [Rete principale](#mainnet). Questo consente un volume di transazioni molto elevato, ma si basa sulla conoscenza del numero di partecipanti in anticipo e sul blocco dei fondi.
+Soluzione di [livello 2](#layer-2) in cui un canale è configurato tra i partecipanti per eseguire transazioni liberamente e in modo economico. Alla [rete principale](#mainnet) viene inviata solo una [transazione](#transaction) per configurare e chiudere il canale. Questo consente un volume di transazioni molto elevato, ma richiede di conoscere il numero di partecipanti in anticipo e di bloccare i fondi.
 
 <DocLink to="/developers/docs/scaling/state-channels/#state-channels">
   Canali di stato
 </DocLink>
 
-### super maggioranza {#supermajority}
+### super-maggioranza {#supermajority}
 
-Super maggioranza è il termine dato per un importo superiore ai 2/3 (66%) dell'ether in staking totale sulla [Beacon Chain](#beacon-chain). Occorre un voto di super maggioranza affinché i blocchi siano [finalizzati](#finality) sulla Beacon Chain.
+Super-maggioranza è il termine dato a un importo superiore ai 2/3 (66%) dell'ether in staking totale che protegge Ethereum. Occorre un voto di super maggioranza affinché i blocchi siano [finalizzati](#finality) sulla Beacon Chain.
 
-### comitato di sincronizzazione {#sync-committee}
+### sincronizzazione {#syncing}
 
-Un comitato di sincronizzazione è un gruppo selezionato casualmente di [validatori](#validator) sulla [Beacon Chain](#beacon-chain) che si aggiorna circa ogni 27 ore. Il loro obiettivo è aggiungere le proprie firme alle intestazioni di blocchi valide. I comitati di sincronizzazione consentono ai [client leggeri](#lightweight-client) di tenere traccia della testa della blockchain senza dover accedere all'intera serie di validatori.
+Il processo di scaricare l'intera ultima versione della blockchain su un nodo.
+
+### commissione di sincronizzazione {#sync-committee}
+
+Una commissione di sincronizzazione è un gruppo selezionato casualmente di [validatori](#validator) che si aggiorna circa ogni 27 ore. Il loro scopo è aggiungere le proprie firme alle intestazioni dei blocchi validi. Le commissioni di sincronizzazione consentono ai [client leggeri](#light-client) di tenere traccia della testa della blockchain senza dover accedere all'intera serie del validatore.
 
 ### szabo {#szabo}
 
@@ -802,19 +969,27 @@ Un taglio dell'[ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6<
 
 ### Tangerine Whistle {#tangerine-whistle}
 
-Un [hard fork](#hard-fork) della blockchain Ethereum, che si è verificato sul blocco 2.463.000 per modificare il calcolo del [gas](#gas) per alcune operazioni I/O ad alta intensità e per eliminare lo stato accumulato da un attacco denial-of-service, che ha sfruttato il basso costo di tali operazioni.
+Una [diramazione permanente](#hard-fork) della blockchain di Ethereum, verificatasi al blocco 2.463.000 per modificare il calcolo del [carburante](#gas) per alcune operazioni I/O ad alta intensità ed eliminare lo stato accumulato da un attacco denial-of-service, che ha sfruttato il basso costo del carburante di tali operazioni.
 
-### testnet {#testnet}
+### difficoltà totale terminale (TTD) {#terminal-total-difficulty}
 
-Contrazione per "rete di prova", una rete usata per simulare il comportamento della rete principale di Ethereum (vedi [Mainnet](#mainnet)).
+La difficoltà totale è la somma della difficoltà di mining di Ethash per tutti i blocchi fino a un dato punto nella blockchain. La difficoltà totale terminale è un valore specifico per la difficoltà totale che era usato come innesco per i client d'esecuzione per disattivare il proprio mining e bloccare le funzioni di gossip, consentendo alla rete di passare al Proof-of-Stake.
 
-<DocLink to="/developers/docs/networks/#testnets">
+### rete di prova {#testnet}
+
+Contrazione che sta per "rete di prova" (test network), una rete usata per simulare il comportamento della rete principale di Ethereum (vedi [rete principale](#mainnet)).
+
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Testnet
 </DocLink>
 
+### token {#token}
+
+Un bene virtuale scambiabile, definito nei contratti intelligenti sulla blockchain di Ethereum.
+
 ### standard token {#token-standard}
 
-Introdotto dalla proposta ERC-20, offre una struttura standardizzata per [Smart Contract](#smart-contract) per i token fungibili. I token dallo stesso contratto sono tracciabili, scambiabili e intercambiabili, a differenza degli [NFT](#nft).
+Introdotto dalla proposta dell'ERC-20, fornisce una struttura standardizzata del [contratto intelligente](#smart-contract) per dei token fungibili. I token dello stesso contratto sono tracciabili, scambiabili e intercambiabili, a differenza degli [NFT](#nft).
 
 <DocLink to="/developers/docs/standards/tokens/erc-20/">
   Standard token ERC-20
@@ -822,7 +997,7 @@ Introdotto dalla proposta ERC-20, offre una struttura standardizzata per [Smart 
 
 ### transazione {#transaction}
 
-Dati salvati nella blockchain Ethereum firmati da un [account](#account) di origine, che puntano a un [indirizzo](#address) specifico. La transazione contiene metadati come il [limite di carburante](#gas-limit) per la transazione.
+Dati inviati alla Blockchain di Ethereum, firmati da un [conto](#account) d'origine, che puntano a un [indirizzo](#address) specifico. La transazione contiene metadati, come il suo [del carburante](#gas-limit).
 
 <DocLink to="/developers/docs/transactions/">
   Transazioni
@@ -830,11 +1005,15 @@ Dati salvati nella blockchain Ethereum firmati da un [account](#account) di orig
 
 ### commissione sulle transazioni {#transaction-fee}
 
-Commissione da pagare ogni volta che si usa la rete Ethereum. Tra gli esempi citiamo l'invio di fondi da un [portafoglio](#wallet) o un'interazione con una [dapp](#dapp), come lo scambio di token o l'acquisto di un oggetto collezionabile. Può essere paragonata a una commissione di servizio e cambia in base a quanto è congestionata la rete, perché i [miner](#miner), cioè i responsabili dell'elaborazione della transazione, danno verosimilmente priorità alle transazioni con commissioni più elevate, quindi la congestione fa salire il prezzo.
+Commissione da pagare ogni volta che si usa la rete Ethereum. Esempi includono l'invio di fondi da un [portafoglio](#wallet) o un'interazione con una [dapp](#dapp), come lo scambio di token o l'acquisto di un oggetto collezionabile. Può essere paragonata a una commissione di servizio, e cambia in base a quanto è congestionata la rete, perché i [validatori](#validator), cioè i responsabili dell'elaborazione della transazione, danno verosimilmente priorità alle transazioni con commissioni più elevate, quindi la congestione fa salire il prezzo.
 
 A livello tecnico, la commissione sulle transazioni fa riferimento a quanto [carburante](#gas) richiede la transazione.
 
-La riduzione delle commissioni sulle transazioni è un tema caldo in questo momento. Vedi [livello 2](#layer-2)
+La riduzione delle commissioni sulle transazioni è un argomento di grande interesse in questo momento. Vedi [livello 2](#layer-2).
+
+### mancanza di fiducia {#trustlessness}
+
+La capacità di una rete di mediare le transazioni senza che alcuna delle parti coinvolte debba affidarsi a una terza parte.
 
 ### Turing completo {#turing-complete}
 
@@ -846,24 +1025,34 @@ Concetto che prende il nome dal matematico e informatico inglese Alan Turing. Un
 
 ### validatore {#validator}
 
-[Nodo](#node) in un sistema [Proof of Stake](#pos) responsabile della memorizzazione dei dati, dell'elaborazione delle transazioni e dell'aggiunta di nuovi blocchi alla blockchain. Per il software di validatore attivo, è necessario essere in grado di fare [staking](#staking) con 32 ETH.
+[Nodo](#node) in un sistema [Proof-of-Stake](#pos) responsabile della memorizzazione dei dati, dell'elaborazione delle transazioni e dell'aggiunta di nuovi blocchi alla blockchain. Per attivare il software validatore, è necessario essere in grado di fare [staking](#staking) di 32 ETH.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
-  Proof of Stake
+  Proof-of-Stake
 </DocLink>
 <DocLink to="/staking/">
   Staking in Ethereum
 </DocLink>
 
+### ciclo di vita del validatore {#validator-lifecycle}
+
+La sequenza di stati in cui può esistere un validatore. Tra questi vi sono:
+
+- depositato: il validatore ha depositato almeno 32 ETH al [contratto di deposito](#deposit-contract)
+- in sospeso: il validatore è nella coda di attivazione, in attesa di essere votato nella rete dai validatori esistenti
+- attivo: attualmente attesta e propone blocchi
+- in slashing: il validatore si è comportato in modo disonesto ed è stato sottoposto a slashing
+- in uscita: il validatore è stato segnalato per essere uscito dalla rete, volontariamente o perché espulso.
+
 ### prova di validità {#validity-proof}
 
-Modello di sicurezza per determinate soluzioni di [livello 2](#layer-2) in cui, per aumentare la velocità, viene eseguito il [rollup](/#rollups) delle transazioni in batch e poi queste ultime vengono inviate a Ethereum come una sola transazione. Il calcolo della transazione viene effettuato esternamente alla catena e poi fornito alla catena principale con una prova di validità. Questo metodo aumenta la quantità di transazioni possibili mantenendo la sicurezza. Alcuni [rollup](#rollups) usano [prove di frode](#fraud-proof).
+Modello di sicurezza per determinate soluzioni di [livello 2](#layer-2) in cui, per aumentare la velocità, viene eseguito il [rollup](/#rollups) delle transazioni in blocco e poi queste ultime vengono inviate a Ethereum come una sola transazione. Il calcolo della transazione viene effettuato al di fuori della catena e poi fornito alla catena principale con una prova di validità. Questo metodo aumenta la quantità di transazioni possibili mantenendo allo stesso tempo la sicurezza. Alcuni [rollup](#rollups) usano le [prove di frode](#fraud-proof).
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
-  Rollup a conoscenza zero (zero-knowledge)
+  Rollup a conoscenza zero
 </DocLink>
 
-### Validium {#validium}
+### validium {#validium}
 
 Una soluzione esterna alla catena che usa le [prove di validità](#validity-proof) per migliorare il volume delle transazioni. A differenza dei [rollup a conoscenza zero](#zk-rollup), i dati di Validium non sono archiviati sulla [Rete principale](#mainnet) (livello 1).
 
@@ -885,18 +1074,18 @@ Linguaggio di programmazione di alto livello con sintassi simile a Python. Pensa
 
 ### portafoglio {#wallet}
 
-Software che contiene [chiavi private](#private-key). Utilizzato per accedere agli [account](#account), permetterne il controllo e interagire con gli [Smart Contract](#smart-contract). Le chiavi non devono essere memorizzate in un portafoglio, ma possono essere recuperate offline (ad esempio da una scheda di memoria o su carta) per migliorare la sicurezza. Nonostante il nome, i portafogli non contengono mai le monete o i token reali.
+Software che contiene [chiavi private](#private-key). Utilizzato per accedere ai [conti](#account), permetterne il controllo e interagire con i [contratti intelligenti](#smart-contract). Per migliorare la sicurezza, le chiavi non devono essere memorizzate in un portafoglio, ma possono essere recuperate offline (ad esempio da una scheda di memoria o su carta). Nonostante il nome, i portafogli non contengono mai le monete o i token reali.
 
 <DocLink to="/wallets/">
-  Portafogli di Ethereum
+  Portafogli Ethereum
 </DocLink>
 
 ### Web3 {#web3}
 
-Terza versione del Web. Proposto per la prima volta dal dott. Gavin Wood, il Web3 rappresenta una nuova visione per le applicazioni web: dalle applicazioni centralizzate e gestite alle applicazioni create sulla base di protocolli decentralizzati (vedi [dapp](#dapp)).
+Terza versione del Web. Proposto per la prima volta dal dott. Gavin Wood, il Web3 rappresenta una nuova visione per le applicazioni web: dalle applicazioni centralizzate e gestite, alle applicazioni create sulla base di protocolli decentralizzati (vedi [dApp](#dapp)).
 
 <DocLink to="/developers/docs/web2-vs-web3/">
-  Web2 rispetto a Web3
+  Confronto tra Web2 e Web3
 </DocLink>
 
 ### wei {#wei}
@@ -909,19 +1098,19 @@ Il taglio più piccolo dell'[ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### indirizzo zero {#zero-address}
 
-Indirizzo Ethereum speciale, composto interamente da zeri, specificato come indirizzo di destinazione di una [transazione per la creazione di un contratto](#contract-creation-transaction).
+Un indirizzo di Ethereum, composto interamente da zero, utilizzato frequentemente come un indirizzo per rimuovere token dalla circolazione di proprietà. Occorre fare una distinzione tra token rimossi in modo formale dall’indice di un contratto intelligente tramite il metodo di burn() e i token che vengono inviati a questo indirizzo.
 
-### Prova di conoscenza zero {#zk-proof}
+### prova a conoscenza zero {#zk-proof}
 
-Una prova di conoscenza zero è un metodo crittografico che consente a un individuo di provare che una dichiarazione sia vera senza trasmettere alcuna informazione aggiuntiva.
+Una prova a conoscenza zero è un metodo crittografico che consente a un individuo di provare l'autenticità di una dichiarazione senza trasmettere alcuna informazione aggiuntiva.
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
-  Rollup a conoscenza zero (zero-knowledge)
+  Rollup a conoscenza zero
 </DocLink>
 
-### Rollup a conoscenza zero (zero-knowledge) {#zk-rollup}
+### rollup zero-knowledge {#zk-rollup}
 
-Un [rollup](#rollups) di transazioni che usa le [prove di validità](#validity-proof) per offrire un maggiore volume di transazioni del [livello 2](#layer-2) usando la sicurezza fornita dalla [Rete principale](#mainnet) (livello 1). Anche se non sono in grado di gestire tipi di transazioni complessi, come i [rollup ottimistici](#optimistic-rollups), non hanno problemi di latenza perché le transazioni sono già dimostrate come valide quando vengono inviate.
+Un [rollup](#rollups) di transazioni che usa le [prove di validità](#validity-proof) per offrire un maggiore volume di transazioni del [livello 2](#layer-2) usando la sicurezza fornita dalla [Rete principale](#mainnet) (livello 1). Anche se non sono in grado di gestire tipi di transazioni complessi, come i [rollup ottimistici](#optimistic-rollups), non hanno problemi di latenza perché la validità delle transazioni è già dimostrata quando vengono inviate.
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
   Rollup a conoscenza zero
@@ -937,6 +1126,6 @@ _Fornito in parte da [Mastering Ethereum](https://github.com/ethereumbook/ethere
 
 ## Contribuisci a questa pagina {#contribute-to-this-page}
 
-Manca qualcosa? Hai trovato qualche imprecisione? Aiutaci a migliorare contribuendo a questo glossario su GitHub!
+Manca qualcosa? Hai trovato errori? Aiutaci a migliorare contribuendo a questo glossario su GitHub!
 
 [Scopri di più su come contribuire](/contributing/adding-glossary-terms)

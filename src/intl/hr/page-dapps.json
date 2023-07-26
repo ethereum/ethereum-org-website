@@ -51,7 +51,6 @@
   "page-dapps-dapp-description-cryptovoxels": "Stvarajte umjetničke galerije, gradite trgovine i kupujte zemlju – virtualni svijet Ethereuma.",
   "page-dapps-dapp-description-dark-forest": "Osvajajte planete u beskonačnom, proceduralno generiranom, kriptografski specificiranom svemiru.",
   "page-dapps-dapp-description-decentraland": "Skupljajte, trgujte virtualnom zemljom u virtualnom svijetu koji možete istraživati.",
-  "page-dapps-dapp-description-dydx": "Otvorite kratke ili polužne položaje do 10x. Moguće je i posuđivanje i iznajmljivanje.",
   "page-dapps-dapp-description-ens": "Nazivi za Ethereumove adrese i decentralizirane web stranice jednostavni za korištenje.",
   "page-dapps-dapp-description-foundation": "Uložite u jedinstvena izdanja digitalnih umjetničkih djela i trgujte s drugim kupcima.",
   "page-dapps-dapp-description-gitcoin": "Zaradite kripto radeći na softveru otvorenog koda.",
@@ -77,7 +76,6 @@
   "page-dapps-decentraland-logo-alt": "Decentraland logo",
   "page-dapps-desc": "Pronađite aplikaciju Ethereum za isprobavanje.",
   "page-dapps-doge-img-alt": "Ilustracija psa Doge-a koji upotrebljava računalo",
-  "page-dapps-dydx-logo-alt": "dYdX logo",
   "page-dapps-editors-choice-dark-forest": "Igrajte protiv drugih da biste osvojili planete i isprobajte najbolju tehnologiju skaliranja/privatnosti Ethereuma. Možda onih koji su već upoznati s Ethereumom.",
   "page-dapps-editors-choice-description": "Nekoliko dapp-ova koje tim ethereum.org trenutno voli. Istražite još dapp-ova u nastavku.",
   "page-dapps-editors-choice-foundation": "Ulažite u kulturu. Kupujte, trgujte i prodajte jedinstvena digitalna umjetnička djela i modu od nevjerojatnih umjetnika, glazbenika i brendova.",
@@ -180,5 +178,8 @@
   "page-dapps-wallet-callout-title": "Pogledajte novčanike",
   "page-dapps-warning-header": "Uvijek provedite vlastita istraživanja",
   "page-dapps-warning-message": "Ethereum je nova tehnologija i većina aplikacija je nova. Prije polaganja velike količine novca, provjerite razumijete li rizike.",
-  "page-dapps-what-are-dapps": "Što su dapps-ovi?"
+  "page-dapps-what-are-dapps": "Što su dapps-ovi?",
+  "foundation": "Zaklada",
+  "transaction-fees": "Što su naknade za transakcije?",
+  "page-wallets-get-some": "Nabavite nešto ETH-a"
 }

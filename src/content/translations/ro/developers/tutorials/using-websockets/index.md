@@ -3,7 +3,6 @@ title: Utilizarea WebSockets
 description: Ghid de utilizare a WebSockets și Alchemy pentru a face cereri JSON-RPC și a vă abona la evenimente.
 author: "Elan Halpern"
 lang: ro
-sidebar: true
 tags:
   - "alchemy"
   - "websockets"
@@ -25,16 +24,16 @@ Spre deosebire de HTTP, cu WebSockets nu este nevoie să faceți încontinuu cer
 
 Ca și în cazul oricărei conexiuni la rețea, nu ar trebui să presupunem că un WebSocket va rămâne deschis pentru totdeauna fără întrerupere, dar manipularea corectă a conexiunilor pierdute și reconectarea manuală de o manieră corectă poate fi o provocare. Un alt dezavantaj al WebSocket-urilor este că nu obții codurile de stare HTTP ca răspuns, ci numai mesajul de eroare.
 
-[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) adaugă automat manipularea pentru eșecuri WebSocket și reîncercări fără nici o configurație necesară.
+[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) adaugă automat manipularea pentru eșecuri WebSocket și reîncercări fără nici o configurație necesară.
 
 ## Încearcă-l {#try-it-out}
 
 Cel mai simplu mod de a testa WebSockets este de a instala un instrument de linie de comandă pentru a face cereri WebSocket, cum ar fi [wscat](https://github.com/websockets/wscat). Folosind wscat, puteți trimite cereri după cum urmează:
 
-_Observație: dacă aveți un cont Alchemy, puteți înlocui `demo` cu propria dvs. cheie API. [Înscrieți-vă pentru un cont gratuit Alchemy aici!](https://dashboard.alchemyapi.io/signup/)_
+_Observație: dacă aveți un cont Alchemy, puteți înlocui `demo` cu propria dvs. cheie API. [Înscrieți-vă pentru un cont gratuit Alchemy aici!](https://auth.alchemyapi.io/signup)_
 
-```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+```bash
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
@@ -251,4 +250,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[nregistrează-te la Alchemy](https://dashboard.alchemyapi.io/signup/) gratis, consultă [documentația noastră](https://docs.alchemyapi.io/) și pentru cele mai recente știri, urmărește-ne pe [Twitter](https://twitter.com/AlchemyPlatform).
+[nregistrează-te la Alchemy](https://auth.alchemyapi.io/signup) gratis, consultă [documentația noastră](https://docs.alchemyapi.io/) și pentru cele mai recente știri, urmărește-ne pe [Twitter](https://twitter.com/AlchemyPlatform).

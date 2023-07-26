@@ -1,20 +1,37 @@
-import React from "react"
-import { useIntl } from "react-intl"
+import React, { ComponentProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
+import {
+  Badge,
+  Box,
+  BoxProps,
+  calc,
+  chakra,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  Icon,
+  ListItem as ChakraListItem,
+  Show,
+  Text,
+  UnorderedList,
+  useToken,
+} from "@chakra-ui/react"
+import { MdExpandMore } from "react-icons/md"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
+  IProps as ButtonDropdownProps,
   List as ButtonDropdownList,
 } from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
-import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
@@ -23,141 +40,85 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
-import UpgradeTableOfContents, {
-  Item as ItemTableOfContents,
-} from "../components/UpgradeTableOfContents"
-import TableOfContents from "../components/TableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import TableOfContents, {
+  type Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
-import {
-  Divider,
-  Paragraph,
-  Header1,
-  Header4,
-  ListItem,
-} from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
-import PreMergeBanner from "../components/PreMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
-import { Context } from "../types"
+import { getImage } from "../utils/image"
+import { ChildOnlyProp, Context } from "../types"
 
-const Page = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto 4rem;
+const commonHeadingProps: HeadingProps = {
+  fontWeight: 700,
+  lineHeight: 1.4,
+}
 
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 4rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+export const H1 = (props: HeadingProps) => (
+  <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+)
 
-const InfoColumn = styled.aside`
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 6.25rem; /* account for navbar */
-  height: calc(100vh - 80px);
-  flex: 0 1 400px;
-  margin-right: 4rem;
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+export const H2 = (props: HeadingProps) => (
+  <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
+)
 
-const MobileButton = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    background: ${(props) => props.theme.colors.background};
-    box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
-    width: 100%;
-    bottom: 0;
-    position: sticky;
-    padding: 2rem;
-    z-index: 99;
-    margin-bottom: 0rem;
-  }
-`
+export const H3 = (props: HeadingProps) => (
+  <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+)
 
-// Apply styles for classes within markdown here
-const ContentContainer = styled.article`
-  flex: 1 1 ${(props) => props.theme.breakpoints.l};
-  position: relative;
-  padding: 2rem;
-  padding-top: 0rem;
+export const H4 = (props: HeadingProps) => (
+  <Heading
+    as="h4"
+    {...commonHeadingProps}
+    fontSize="xl"
+    fontWeight={600}
+    {...props}
+  />
+)
 
-  .featured {
-    padding-left: 1rem;
-    margin-left: -1rem;
-    border-left: 1px dotted ${(props) => props.theme.colors.primary};
-  }
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
-  .citation {
-    p {
-      color: ${(props) => props.theme.colors.text200};
-    }
-  }
-`
+export const Pre = (props: ChildOnlyProp) => (
+  <chakra.pre
+    bg="preBackground"
+    border="1px"
+    borderColor="preBorder"
+    borderRadius="base"
+    maxW="full"
+    overflowX="scroll"
+    p={4}
+    whiteSpace="pre-wrap"
+    {...props}
+  />
+)
 
-const Pre = styled.pre`
-  max-width: 100%;
-  overflow-x: scroll;
-  background-color: ${(props) => props.theme.colors.preBackground};
-  border-radius: 0.25rem;
-  padding: 1rem;
-  border: 1px solid ${(props) => props.theme.colors.preBorder};
-  white-space: pre-wrap;
-`
-
-const InfoTitle = styled.h2`
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: right;
-  margin-top: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    text-align: left;
-    font-size: 2.5rem;
-    display: none;
-  }
-`
-
-const H2 = styled.h2`
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 4rem;
-`
-
-const H3 = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 700;
-`
+export const Paragraph = (props: ChildOnlyProp) => (
+  <Text color="text300" mt={8} mb={4} {...props} />
+)
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
   a: Link,
-  h1: Header1,
+  h1: H1,
   h2: H2,
   h3: H3,
-  h4: Header4,
+  h4: H4,
   p: Paragraph,
-  li: ListItem,
+  li: chakra.li,
   pre: Pre,
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
-  Roadmap,
   Logo,
   ButtonLink,
   Contributors,
@@ -165,148 +126,171 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
+  Badge,
   Emoji,
   UpgradeStatus,
   DocLink,
   ExpandableCard,
   YouTube,
+  QuizWidget,
 }
 
-const Title = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 1rem;
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Flex
+    bg="cardGradient"
+    boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
+    flexDirection={{ base: "column-reverse", lg: "row" }}
+    justifyContent="flex-end"
+    minHeight="608px"
+    maxHeight={{ base: "full", lg: "608px" }}
+    width="full"
+    {...props}
+  />
+)
 
-const SummaryPoint = styled.li`
-  font-size: 1rem;
-  color: ${(props) => props.theme.colors.text300};
-  margin-bottom: 0rem;
-  line-height: auto;
-`
+const TitleCard = (props: ChildOnlyProp) => {
+  const boxShadow = useToken("colors", "cardBoxShadow")
 
-const SummaryBox = styled.div``
+  return (
+    <Flex
+      bg={{ base: "ednBackground", lg: "background.base" }}
+      border="1px"
+      borderColor="border"
+      borderRadius="base"
+      boxShadow={{ lg: boxShadow }}
+      flexDirection="column"
+      maxWidth={{ base: "full", lg: "container.sm" }}
+      mt={{ base: 0, lg: 12 }}
+      zIndex="docked"
+      p={8}
+      position={{ base: "relative", lg: "absolute" }}
+      top={{ lg: 24 }}
+      left={{ lg: 24 }}
+      {...props}
+    />
+  )
+}
 
-const StyledButtonDropdown = styled(ButtonDropdown)`
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    align-self: flex-end;
-  }
-`
+export const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
-const StyledEmoji = styled(Emoji)`
-  margin-right: 1rem;
-  flex-shrink: 0;
-`
+const HeroImage = chakra(GatsbyImage, {
+  baseStyle: {
+    alignSelf: {
+      base: "center",
+      lg: "normal",
+    },
+    backgroundSize: "cover",
+    flex: "1 1 100%",
+    right: 0,
+    bottom: 0,
+    width: "full",
+    overflow: "initial",
+    maxH: {
+      base: "340px",
+      lg: "full",
+    },
+  },
+})
 
-const MobileButtonDropdown = styled(StyledButtonDropdown)`
-  margin-bottom: 0rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+export const Page = (props: FlexProps) => (
+  <Flex
+    flexDirection={{ base: "column", lg: "row" }}
+    justifyContent="space-between"
+    mx="auto"
+    mb={16}
+    pt={{ lg: 16 }}
+    width="full"
+    sx={{ "h2:first-of-type": { mt: { lg: 0 } } }}
+    {...props}
+  />
+)
 
-const Container = styled.div`
-  position: relative;
-`
+export const InfoColumn = (props: ChildOnlyProp) => (
+  <Flex
+    as="aside"
+    flexDirection="column"
+    flex="0 1 400px"
+    ml={8}
+    mr={16}
+    position="sticky"
+    top="6.25rem"
+    height={calc("100vh").subtract("80px").toString()}
+    {...props}
+  />
+)
 
-const HeroContainer = styled.div`
-  background: ${(props) => props.theme.colors.cardGradient};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: flex-end;
-  max-height: 608px;
-  min-height: 608px;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    max-height: 100%;
-  }
-`
+export const InfoTitle = (props: ChildOnlyProp) => (
+  <H2
+    fontSize={{ base: "2.5rem", lg: "5xl" }}
+    textAlign={{ base: "left", lg: "right" }}
+    mt={0}
+    {...props}
+  />
+)
 
-const Image = styled(GatsbyImage)`
-  flex: 1 1 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  max-width: ${({ useCase }) =>
-    useCase === `dao` ? `572px` : useCase === `defi` ? `80%` : `640px`};
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    width: 100%;
-    height: 100%;
-    max-height: 340px;
-    max-width: ${({ useCase }) =>
-      useCase === "defi" ? "100%" : "min(405px, 98%)"};
-    overflow: initial;
-    align-self: center;
-    margin: 0;
-  }
-`
+export const StyledButtonDropdown = ({
+  list,
+  ...rest
+}: FlexProps & Pick<ButtonDropdownProps, "list">) => (
+  <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
+    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
+  </Flex>
+)
 
-const MoreContent = styled(Link)`
-  width: 100%;
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  &:hover {
-    background: ${(props) => props.theme.colors.background};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+export const MobileButtonDropdown = (
+  props: ComponentProps<typeof StyledButtonDropdown>
+) => <StyledButtonDropdown mb={0} {...props} />
 
-const MobileTableOfContents = styled(TableOfContents)`
-  position: relative;
-  z-index: 2;
-`
+export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+  const lgBp = useToken("breakpoints", "lg")
 
-const StyledBannerNotification = styled(BannerNotification)`
-  display: flex;
-  justify-content: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    display: none;
-  }
-`
+  return (
+    <Box
+      as="article"
+      flex={`1 1 ${lgBp}`}
+      position="relative"
+      px={8}
+      pb={8}
+      {...props}
+      sx={{
+        ".featured": {
+          pl: 4,
+          ml: -4,
+          borderLeft: "1px dotted",
+          borderColor: "primary.base",
+        },
+        ".citation p": {
+          color: "text200",
+        },
+      }}
+    />
+  )
+}
 
-const TitleCard = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-  padding: 2rem;
-  display: flex;
-  position: absolute;
-  left: 6rem;
-  top: 6rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 2px;
-  z-index: 10;
-  max-width: 640px;
-  margin-top: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-    position: relative;
-    left: 0rem;
-    top: 0rem;
-    background: ${(props) => props.theme.colors.ednBackground};
-    box-shadow: none;
-    margin-top: 0;
-  }
-`
+export const MobileButton = (props: ChildOnlyProp) => {
+  const borderColor = useToken("colors", "border")
+  return (
+    <Box
+      bg="background.base"
+      boxShadow={`0 -1px 0 ${borderColor}`}
+      position="sticky"
+      bottom={0}
+      zIndex={99}
+      p={8}
+      width="full"
+      {...props}
+    />
+  )
+}
 
 const UseCasePage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
+
   if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"
@@ -315,8 +299,7 @@ const UseCasePage = ({
     throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
-  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
+  const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -340,105 +323,175 @@ const UseCasePage = ({
   }
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "template-usecase-dropdown",
-    ariaLabel: "template-usecase-dropdown-aria",
+    text: t("template-usecase-dropdown"),
+    ariaLabel: t("template-usecase-dropdown-aria"),
     items: [
       {
-        text: "template-usecase-dropdown-defi",
+        text: t("template-usecase-dropdown-defi"),
         to: "/defi/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "defi",
+        },
       },
       {
-        text: "template-usecase-dropdown-nft",
+        text: t("template-usecase-dropdown-nft"),
         to: "/nft/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "nft",
+        },
       },
       {
-        text: "template-usecase-dropdown-dao",
+        text: t("template-usecase-dropdown-dao"),
         to: "/dao/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "dao",
+        },
       },
       {
-        text: "template-usecase-dropdown-social-networks",
+        text: t("template-usecase-dropdown-social-networks"),
         to: "/social-networks/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "social-networks",
+        },
       },
       {
-        text: "template-usecase-dropdown-identity",
+        text: t("template-usecase-dropdown-identity"),
         to: "/decentralized-identity/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "decentralized-identity",
+        },
+      },
+      {
+        text: t("decentralized-science"),
+        to: "/desci/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "desci",
+        },
       },
     ],
   }
 
   return (
-    <Container>
-      {showMergeBanner ? (
-        <PreMergeBanner />
-      ) : (
-        <StyledBannerNotification shouldShow>
-          <StyledEmoji text=":pencil:" />
+    <Box position="relative" width="full">
+      <Show above={lgBp}>
+        <BannerNotification shouldShow>
+          <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <div>
             <Translation id="template-usecase-banner" />{" "}
             <Link to={absoluteEditPath}>
               <Translation id="template-usecase-edit-link" />
             </Link>
           </div>
-        </StyledBannerNotification>
-      )}
+        </BannerNotification>
+      </Show>
       <HeroContainer>
         <TitleCard>
-          <Emoji size={4} text={mdx.frontmatter.emoji!} />
+          <Emoji fontSize="4rem" text={mdx.frontmatter.emoji!} />
           <Title>{mdx.frontmatter.title}</Title>
-          <SummaryBox>
-            <ul>
+          <Box>
+            <UnorderedList ms="1.45rem">
               {summaryPoints.map((point, idx) => (
-                <SummaryPoint key={idx}>{point}</SummaryPoint>
+                <ChakraListItem key={idx} color="text300" mb={0}>
+                  {point}
+                </ChakraListItem>
               ))}
-            </ul>
-          </SummaryBox>
-          <MobileTableOfContents
-            items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth!}
-            isMobile={true}
-          />
+            </UnorderedList>
+            <TableOfContents
+              items={tocItems}
+              maxDepth={mdx.frontmatter.sidebarDepth!}
+              isMobile
+            />
+          </Box>
         </TitleCard>
-        <Image
-          useCase={useCase}
-          image={getImage(mdx.frontmatter.image)}
-          alt={mdx.frontmatter.alt}
+        <HeroImage
+          image={getImage(mdx.frontmatter.image)!}
+          alt={mdx.frontmatter.alt || ""}
+          maxW={{
+            base: useCase === "defi" ? "full" : "min(405px, 98%)",
+            lg:
+              (useCase === "dao" && "572px") ||
+              (useCase === "defi" && "80%") ||
+              "640px",
+          }}
         />
       </HeroContainer>
-      <MoreContent to="#content">
-        <Icon name="chevronDown" />
-      </MoreContent>
+      <Show above={lgBp}>
+        <Flex
+          as={Link}
+          to="#content"
+          bg="ednBackground"
+          justifyContent="center"
+          p={4}
+          width="full"
+          _hover={{
+            bg: "background.base",
+          }}
+        >
+          <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
+        </Flex>
+      </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <InfoColumn>
-          <StyledButtonDropdown list={dropdownLinks} />
-          <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
+        <Show above={lgBp}>
+          <InfoColumn>
+            <StyledButtonDropdown list={dropdownLinks} />
+            <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
-          {mdx.frontmatter.sidebar && tocItems && (
-            <UpgradeTableOfContents
-              items={tocItems}
-              maxDepth={mdx.frontmatter.sidebarDepth!}
-            />
-          )}
-        </InfoColumn>
+            {tocItems && (
+              <UpgradeTableOfContents
+                items={tocItems}
+                maxDepth={mdx.frontmatter.sidebarDepth!}
+              />
+            )}
+          </InfoColumn>
+        </Show>
         <ContentContainer id="content">
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
           <FeedbackCard />
         </ContentContainer>
-        <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
-        </MobileButton>
+        <Show below={lgBp}>
+          <MobileButton>
+            <MobileButtonDropdown list={dropdownLinks} />
+          </MobileButton>
+        </Show>
       </Page>
-    </Container>
+    </Box>
   )
 }
 
 export const useCasePageQuery = graphql`
-  query UseCasePage($relativePath: String) {
+  query UseCasePage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["template-usecase", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl
@@ -452,7 +505,6 @@ export const useCasePageQuery = graphql`
         title
         description
         lang
-        sidebar
         emoji
         sidebarDepth
         summaryPoint1
@@ -469,7 +521,6 @@ export const useCasePageQuery = graphql`
           }
         }
         isOutdated
-        preMergeBanner
       }
       body
       tableOfContents

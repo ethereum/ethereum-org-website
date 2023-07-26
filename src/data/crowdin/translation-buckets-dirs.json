@@ -1,0 +1,114 @@
+[
+  {
+    "id": 5497,
+    "name": "01) Homepage"
+  },
+  {
+    "id": 5499,
+    "name": "04) Use Ethereum Pages"
+  },
+  {
+    "id": 5501,
+    "name": "03) Exploring"
+  },
+  {
+    "id": 5503,
+    "name": "11) Foundational Docs"
+  },
+  {
+    "id": 5505,
+    "name": "15) Docs – Tech Stack Pages"
+  },
+  {
+    "id": 5507,
+    "name": "18) Whitepaper"
+  },
+  {
+    "id": 5509,
+    "name": "20) Advanced Docs"
+  },
+  {
+    "id": 5513,
+    "name": "19) Learn Pages 2"
+  },
+  {
+    "id": 5515,
+    "name": "25) Developer Tutorials I"
+  },
+  {
+    "id": 6189,
+    "name": "10) Community Pages"
+  },
+  {
+    "id": 6197,
+    "name": "09) Upgrades"
+  },
+  {
+    "id": 6201,
+    "name": "26) Developer Tutorials II"
+  },
+  {
+    "id": 6203,
+    "name": "27) Developer Tutorials III"
+  },
+  {
+    "id": 6386,
+    "name": "24) Contributing"
+  },
+  {
+    "id": 6534,
+    "name": "22) Research Documentation"
+  },
+  {
+    "id": 7290,
+    "name": "06) Staking Pages"
+  },
+  {
+    "id": 7292,
+    "name": "02) Essentials"
+  },
+  {
+    "id": 7296,
+    "name": "07) Learn Pages"
+  },
+  {
+    "id": 7300,
+    "name": "05) Use Cases"
+  },
+  {
+    "id": 7517,
+    "name": "08) Learn Hub & Guides"
+  },
+  {
+    "id": 7819,
+    "name": "12) Foundational Docs – Nodes and Clients"
+  },
+  {
+    "id": 7821,
+    "name": "13) Foundational Docs – Proof-of-Stake"
+  },
+  {
+    "id": 7823,
+    "name": "14) Foundational Docs – Proof-of-Work"
+  },
+  {
+    "id": 7825,
+    "name": "16) Smart Contracts – Basics"
+  },
+  {
+    "id": 7827,
+    "name": "17) Smart Contracts – Advanced"
+  },
+  {
+    "id": 7829,
+    "name": "21) Advanced Docs – Scaling"
+  },
+  {
+    "id": 7831,
+    "name": "23) Miscellaneous"
+  },
+  {
+    "id": 7833,
+    "name": "28) Developer Tutorials IV"
+  }
+]

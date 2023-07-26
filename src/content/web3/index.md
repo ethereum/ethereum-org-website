@@ -2,7 +2,6 @@
 title: What is Web3 and why is it important?
 description: An introduction to Web3—the next evolution of the World Wide Web—and why it matters.
 lang: en
-sidebar: true
 ---
 
 # Introduction to Web3 {#introduction}
@@ -120,7 +119,7 @@ Despite the numerous benefits of Web3 in its current form, there are still many 
 
 ### Accessibility {#accessibility}
 
-Important Web3 features, like Sign-in with Ethereum, are already available for anyone to use at zero cost. But, the relative cost of transactions is still prohibitive to many. Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved through [network upgrades](/upgrades/) and [layer 2 scaling solutions](/developers/docs/scaling/). The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
+Important Web3 features, like Sign-in with Ethereum, are already available for anyone to use at zero cost. But, the relative cost of transactions is still prohibitive to many. Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved through [the roadmap](/roadmap/) and [layer 2 scaling solutions](/developers/docs/scaling/). The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
 
 ### User experience {#user-experience}
 
@@ -160,3 +159,5 @@ Web3 isn’t rigidly defined. Various community participants have different pers
 - [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [The Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [The Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+
+<QuizWidget quizKey="web3" />

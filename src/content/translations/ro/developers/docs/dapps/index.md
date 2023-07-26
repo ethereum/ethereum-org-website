@@ -2,7 +2,6 @@
 title: Introducere despre aplicațiile dapp
 description:
 lang: ro
-sidebar: true
 ---
 
 O aplicație descentralizată (dapp) este o aplicație construită pe o rețea descentralizată care combină un [contract inteligent](/developers/docs/smart-contracts/) cu o interfață-utilizator frontend. În Ethereum, contractele inteligente sunt accesibile și transparente – ca API-uri deschise – astfel încât aplicația dvs. dapp poate include un contract inteligent scris de altcineva.

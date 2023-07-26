@@ -2,7 +2,6 @@
 title: Sidechains
 description: Eine Einführung in Sidechains als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
 lang: de
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -33,7 +32,6 @@ Mehrere Projekte bieten Implementierungen von Sidechains, die Sie in Ihre dApps 
 
 ## Weiterführende Informationen {#further-reading}
 
-- [EthHub auf sidechains](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Skalieren von Ethereum dApps durch Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

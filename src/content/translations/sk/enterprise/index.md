@@ -2,7 +2,6 @@
 title: Podniky
 description: Návody, články a nástroje na poskytovanie verejných aj súkromných blockchainov Etherea pre podnikanie
 lang: sk
-sidebar: true
 ---
 
 # Ethereum pre podniky {#ethereum-for-enterprise}

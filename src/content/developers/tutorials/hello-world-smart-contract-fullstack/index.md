@@ -8,21 +8,17 @@ tags:
     "hardhat",
     "alchemy",
     "smart contracts",
-    "getting started",
     "deploying",
-    "etherscan",
-    "verifying",
+    "blockexplorer",
     "frontend",
     "transactions",
-    "web3js",
   ]
 skill: beginner
 lang: en
-sidebar: true
 published: 2021-10-25
 ---
 
-This guide is for you if you are new to blockchain development and don't know where to start or how to deploy and interact with smart contracts. We will walk through creating and deploying a simple, smart contract on the Ropsten test network using [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), and [Alchemy](https://alchemyapi.io/eth).
+This guide is for you if you are new to blockchain development and don't know where to start or how to deploy and interact with smart contracts. We will walk through creating and deploying a simple, smart contract on the Goerli test network using [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), and [Alchemy](https://alchemyapi.io/eth).
 
 You'll need an Alchemy account to complete this tutorial. [Sign up for a free account](https://www.alchemy.com/).
 
@@ -36,17 +32,17 @@ There are many ways to make requests to the Ethereum chain. For simplicity, we'l
 
 ### Create your app and API key {#create-your-app-and-api-key}
 
-Once you've created an Alchemy account, you can generate an API key by creating an app. This will allow you to make requests to the Ropsten testnet. If you're not familiar with testnets you can [read Alchemy's guide to choosing a network](https://docs.alchemyapi.io/guides/choosing-a-network).
+Once you've created an Alchemy account, you can generate an API key by creating an app. This will allow you to make requests to the Goerli testnet. If you're not familiar with testnets you can [read Alchemy's guide to choosing a network](https://docs.alchemyapi.io/guides/choosing-a-network).
 
 On the Alchemy dashboard, find the **Apps** dropdown in the navigation bar and click **Create App**.
 
 ![Hello world create app](./hello-world-create-app.png)
 
-Give your app the name '_Hello World_' and write a short description. Select **Staging** as your environment and **Ropsten** as your network.
+Give your app the name '_Hello World_' and write a short description. Select **Staging** as your environment and **Goerli** as your network.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_Note: be sure to select **Ropsten**, or this tutorial won't work._
+_Note: be sure to select **Goerli**, or this tutorial won't work._
 
 Click **Create app**. Your app will appear in the table below.
 
@@ -54,13 +50,11 @@ Click **Create app**. Your app will appear in the table below.
 
 You need an Ethereum account to send and receive transactions. We'll use MetaMask, a virtual wallet in the browser that lets users manage their Ethereum account address.
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right (so that we’re not dealing with real money).
-
-![](./metamask-ropsten-example.png)
+You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
 
 ### Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
 
-To deploy your smart contract to the test network, you'll need some fake ETH. To get ETH on the Ropsten network, go to the [Ropsten faucet](https://faucet.dimensions.network) and enter your Ropsten account address.
+To deploy your smart contract to the test network, you'll need some fake ETH. To get ETH on the Goerli network, go to a Goerli faucet and enter your Goerli account address. Nopte that Goerli faucets can be a bit unreliable recently - see the [test networks page](/developers/docs/networks/#goerli) for a list of options to try:
 
 _Note: due to network congestion, this might take a while._
 ``
@@ -223,7 +217,7 @@ contract HelloWorld {
 
 This is a basic smart contract that stores a message upon creation. It can be updated by calling the `update` function.
 
-### Step 11: Connect MetaMask & Alchemy to your project {#step-11-connect-metamask-&-alchemy-to-your-project}
+### Step 11: Connect MetaMask & Alchemy to your project {#step-11-connect-metamask-alchemy-to-your-project}
 
 We’ve created a MetaMask wallet, Alchemy account, and written our smart contract, now it’s time to connect the three.
 
@@ -251,13 +245,13 @@ Do not name it `process.env` or `.env-custom` or anything else.
 Your `.env` should look like this:
 
 ```
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
 To actually connect these to our code, we’ll reference these variables in our `hardhat.config.js` file on step 13.
 
-### Step 12: Install Ethers.js {#step-12-install-ethers.js}
+### Step 12: Install Ethers.js {#step-12-install-ethersjs}
 
 Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) with more user friendly methods.
 
@@ -269,7 +263,7 @@ In your project directory type:
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### Step 13: Update hardhat.config.js {#step-13-update-hardhat.config.js}
+### Step 13: Update hardhat.config.js {#step-13-update-hardhat.configjs}
 
 We’ve added several dependencies and plugins so far, now we need to update `hardhat.config.js` so that our project knows about all of them.
 
@@ -287,10 +281,10 @@ const { API_URL, PRIVATE_KEY } = process.env
 
 module.exports = {
   solidity: "0.7.3",
-  defaultNetwork: "ropsten",
+  defaultNetwork: "goerli",
   networks: {
     hardhat: {},
-    ropsten: {
+    goerli: {
       url: API_URL,
       accounts: [`0x${PRIVATE_KEY}`],
     },
@@ -352,7 +346,7 @@ Calling `deploy()` on a `ContractFactory` will start the deployment, and return 
 We’re finally ready to deploy our smart contract! Navigate to the command line and run:
 
 ```bash
-npx hardhat run scripts/deploy.js --network ropsten
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 You should then see something like:
@@ -363,7 +357,7 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 **Please save this address**. We will be using it later in the tutorial.
 
-If we go to the [Ropsten etherscan](https://ropsten.etherscan.io) and search for our contract address we should able to see that it has been deployed successfully. The transaction will look something like this:
+If we go to the [Goerli etherscan](https://goerli.etherscan.io) and search for our contract address we should able to see that it has been deployed successfully. The transaction will look something like this:
 
 ![](./etherscan-contract.png)
 
@@ -377,11 +371,11 @@ To understand what’s going on under the hood, let’s navigate to the Explorer
 
 ![](./hello-world-explorer.png)
 
-Here you’ll see a handful of JSON-RPC methods that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important methods here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to write our contract onto the Ropsten chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), which is a request to read information about our transaction given the hash. To learn more about sending transactions, check out [our tutorial on sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Here you’ll see a handful of JSON-RPC methods that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important methods here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to write our contract onto the Goerli chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), which is a request to read information about our transaction given the hash. To learn more about sending transactions, check out [our tutorial on sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 ## Part 2: Interact with your Smart Contract {#part-2-interact-with-your-smart-contract}
 
-Now that we've successfully deployed a smart contract to the Ropsten network let's learn how to interact with it.
+Now that we've successfully deployed a smart contract to the Goerli network let's learn how to interact with it.
 
 ### Create a interact.js file {#create-a-interactjs-file}
 
@@ -408,7 +402,7 @@ Your `.env` file should look something like this:
 ```bash
 # .env
 
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/<your-api-key>"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/<your-api-key>"
 API_KEY = "<your-api-key>"
 PRIVATE_KEY = "<your-metamask-private-key>"
 CONTRACT_ADDRESS = "0x<your contract address>"
@@ -450,7 +444,7 @@ We'll use the contract ABI from the previous step to create our instance of the 
 
 // Provider
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "ropsten"),
+  (network = "goerli"),
   API_KEY
 )
 
@@ -536,7 +530,7 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 
 // provider - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "ropsten"),
+  (network = "goerli"),
   API_KEY
 )
 
@@ -567,7 +561,7 @@ main()
 
 Now just run the script and you should be able to see the old message, the updating status, and the new message printed out to your terminal!
 
-`npx hardhat run scripts/interact.js --network ropsten`
+`npx hardhat run scripts/interact.js --network goerli`
 
 ```
 The message is: Hello World!
@@ -575,7 +569,7 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-While running that script, you may notice that the `Updating the message...` step takes a while to load before the new message loads. That is due to the mining process; if you are curious about tracking transactions while they are being mined, visit the [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of a transaction. If the transaction is dropped, it's also helpful to check [Ropsten Etherscan](https://ropsten.etherscan.io) and search for your transaction hash.
+While running that script, you may notice that the `Updating the message...` step takes a while to load before the new message loads. That is due to the mining process; if you are curious about tracking transactions while they are being mined, visit the [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of a transaction. If the transaction is dropped, it's also helpful to check [Goerli Etherscan](https://goerli.etherscan.io) and search for your transaction hash.
 
 ## Part 3: Publish your Smart Contract to Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
@@ -600,7 +594,7 @@ Next, we need to add the Etherscan API key to our `.env` file.
 After adding it, your `.env`file should look like this:
 
 ```javascript
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
 PUBLIC_KEY = "your-public-account-address"
 PRIVATE_KEY = "your-private-account-address"
 CONTRACT_ADDRESS = "your-contract-address"
@@ -630,10 +624,10 @@ const { API_URL, PRIVATE_KEY, ETHERSCAN_API_KEY } = process.env
 
 module.exports = {
   solidity: "0.7.3",
-  defaultNetwork: "ropsten",
+  defaultNetwork: "goerli",
   networks: {
     hardhat: {},
-    ropsten: {
+    goerli: {
       url: API_URL,
       accounts: [`0x${PRIVATE_KEY}`],
     },
@@ -653,10 +647,10 @@ Ensure all files are saved and all `.env` variables are correctly configured.
 Run the `verify` task, passing the contract address, and the network to where it's deployed:
 
 ```text
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-Make sure that `DEPLOYED_CONTRACT_ADDRESS` is the address of your deployed smart contract on the Ropsten test network. Also, the final argument (`'Hello World!'`) must be the same string value used [during the deploy step in part 1](#write-our-deploy-script).
+Make sure that `DEPLOYED_CONTRACT_ADDRESS` is the address of your deployed smart contract on the Goerli test network. Also, the final argument (`'Hello World!'`) must be the same string value used [during the deploy step in part 1](#write-our-deploy-script).
 
 If all goes well, you will see the following message in your terminal:
 
@@ -667,7 +661,7 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https://ropsten.etherscan.io/address/<contract-address>#contracts
+https://goerli.etherscan.io/address/<contract-address>#contracts
 ```
 
 Congrats! Your smart contract code is on Etherescan!
@@ -912,7 +906,7 @@ If you don't have it already, first install [Alchemy Web3](https://github.com/al
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) is a wrapper around [Web3.js](https://web3js.readthedocs.io/en/v1.2.9/), providing enhanced API methods and other crucial benefits to make your life as a web3 developer easier. It is designed to require minimal configuration so you can start using it in your app right away!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) is a wrapper around [Web3.js](https://docs.web3js.org/), providing enhanced API methods and other crucial benefits to make your life as a web3 developer easier. It is designed to require minimal configuration so you can start using it in your app right away!
 
 Then, install the [dotenv](https://www.npmjs.com/package/dotenv) package in your project directory, so we have a secure place to store our API key after we fetch it.
 
@@ -925,7 +919,7 @@ For our dapp, **we'll be using our Websockets API key** instead of our HTTP API 
 Once you have your API key, create a `.env` file in your root directory and add your Alchemy Websockets url to it. Afterwards, your `.env` file should look like so:
 
 ```javascript
-REACT_APP_ALCHEMY_KEY = wss://eth-ropsten.ws.alchemyapi.io/v2/<key>
+REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
 Now, we're ready to set up our Alchemy Web3 endpoint in our dapp! Let's go back to our `interact.js`, which is nested inside our `util` folder and add the following code at the top of the file:
@@ -951,13 +945,13 @@ To load your Hello World smart contract, you'll need its contract address and AB
 
 #### How to get your contract ABI from Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
-If you skipped Part 3 of this tutorial, you can use the HelloWorld contract with address [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://ropsten.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). It's ABI can be found [here](https://ropsten.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
+If you skipped Part 3 of this tutorial, you can use the HelloWorld contract with address [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). It's ABI can be found [here](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
 
 A contract ABI is necessary for specifying which function a contract will invoke as well ensuring that the function will return data in the format you're expecting. Once we've copied our contract ABI, let's save it as a JSON file called `contract-abi.json` in your `src` directory.
 
 Your contract-abi.json should be stored in your src folder.
 
-Armed with our contract address, ABI, and Alchemy Web3 endpoint, we can use the [contract method](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) to load an instance of our smart contract. Import your contract ABI into the `interact.js` file and add your contract address.
+Armed with our contract address, ABI, and Alchemy Web3 endpoint, we can use the [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) to load an instance of our smart contract. Import your contract ABI into the `interact.js` file and add your contract address.
 
 ```javascript
 // interact.js
@@ -1125,11 +1119,11 @@ If you want to understand more about how transactions on Ethereum work, check ou
 
 #### Download MetaMask {#download-metamask}
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
+You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right \(so that we’re not dealing with real money\).
 
 #### Add ether from a Faucet {#add-ether-from-a-faucet}
 
-To sign a transaction on the Ethereum blockchain, we’ll need some fake Eth. To get Eth you can go to the [FaucETH](https://fauceth.komputing.org) and enter your Ropsten account address, click “Request funds”, then select “Ethereum Testnet Ropsten” in the dropdown and finally click “Request funds” button again. You should see Eth in your MetaMask account soon after!
+To sign a transaction on the Ethereum blockchain, we’ll need some fake Eth. To get Eth you can go to the [FaucETH](https://fauceth.komputing.org) and enter your Goerli account address, click “Request funds”, then select “Ethereum Testnet Goerli” in the dropdown and finally click “Request funds” button again. You should see Eth in your MetaMask account soon after!
 
 #### Check your Balance {#check-your-balance}
 
@@ -1434,7 +1428,7 @@ try {
     status: (
       <span>
         ✅{" "}
-        <a target="_blank" href={`https://ropsten.etherscan.io/tx/${txHash}`}>
+        <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
           View the status of your transaction on Etherscan!
         </a>
         <br />
@@ -1500,7 +1494,7 @@ export const updateMessage = async (address, message) => {
       status: (
         <span>
           ✅{" "}
-          <a target="_blank" href={`https://ropsten.etherscan.io/tx/${txHash}`}>
+          <a target="_blank" href={`https://goerli.etherscan.io/tx/${txHash}`}>
             View the status of your transaction on Etherscan!
           </a>
           <br />

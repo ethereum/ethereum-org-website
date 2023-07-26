@@ -2,7 +2,6 @@
 title: Verslui
 description: Vadovai, straipsniai ir įrankiai apie viešąsias ir privačiąsias Ethereum blokų grandines verslui
 lang: lt
-sidebar: true
 sidebarDepth: 1
 ---
 

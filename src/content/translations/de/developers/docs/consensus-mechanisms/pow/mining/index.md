@@ -2,7 +2,6 @@
 title: Mining
 description: Eine Erklärung, wie "Mining" in Ethereum funktioniert und wie es dazu beiträgt, Ethereum sicher und dezentral zu halten.
 lang: de
-sidebar: true
 incomplete: true
 ---
 
@@ -61,8 +60,6 @@ Schaue zu, wie Austin dich durch Mining und die Proof-of-Work-Blockchain führt.
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## Weiterführende Informationen {#further-reading}
-
-- [Was bedeutet es, Ethereum zu minen?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
 ## Verwandte Tools {#related-tools}
 

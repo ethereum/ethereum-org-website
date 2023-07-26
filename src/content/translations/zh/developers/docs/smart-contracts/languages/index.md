@@ -2,7 +2,6 @@
 title: 智能合约语言
 description: 两种主要的智能合约语言（Solidity 和 Vyper）的概述和比较。
 lang: zh
-sidebar: true
 ---
 
 关于以太坊的一个重要方面是，智能合约可以使用相对友好的开发者语言编程。 如果您熟悉 Python 或任何[大括号语言](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)，可以找到一种语法熟悉的语言。
@@ -16,7 +15,7 @@ sidebar: true
 
 如果您很好奇，喜欢帮助测试仍在大力发展的新语言，则可以尝试使用 Fe，这是一种新兴的智能合约语言，目前仍处于起步阶段。
 
-## 先决条件 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 如果已经有编程语言（特别是关于 JavaScript 或 Python）知识，可以帮助您体验到智能合约语言的差异。 同时，我们建议您在深入理解语言差异之前，先理解作为概念的智能合约。 [智能合约简介](/developers/docs/smart-contracts/)。
 
@@ -89,12 +88,13 @@ contract Coin {
 - 类 Python 编程语言
 - 强类型
 - 小而且易懂的编译器代码
-- 为了更安全和易于审阅，特意提供比 Solidity 少的功能。 Vyper 不支持：
+- 高效的字节码生成
+- 为了让合约更安全和易于审核，特意提供比 Solidity 少的功能。 Vyper 不支持：
   - 修饰符
   - 继承
-  - 内联装配
+  - 内联汇编
   - 函数重载
-  - 操作重载
+  - 操作符重载
   - 递归调用
   - 无限长度循环
   - 二进制定长浮点
@@ -105,10 +105,16 @@ contract Coin {
 
 - [相关文档](https://vyper.readthedocs.io)
 - [Vyper 示例](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [更多 Vyper 示例](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Vyper Gitter 聊天室](https://gitter.im/vyperlang/community)
+- [Vyper 社区 Discord 聊天](https://discord.gg/SdvKC79cJk)
 - [备忘单](https://reference.auditless.com/cheatsheet)
-- [更新日期：2020 年 1 月 8 日](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
+- [Vyper 的智能合约开发框架和工具](/developers/docs/programming-languages/python/)
+- [VyperPunk - 学习保护和破解 Vyper 智能合约](https://github.com/SupremacyTeam/VyperPunk)
+- [VyperExamples - Vyper 漏洞示例](https://www.vyperexamples.com/reentrancy)
+- [Vyper 开发中心](https://github.com/zcor/vyper-dev)
+- [Vyper 最热门的智能合约示例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [出色的 Vyper 精选资源](https://github.com/spadebuilders/awesome-vyper)
 
 ### 示例 {#example}
 

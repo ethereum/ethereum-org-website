@@ -4,11 +4,9 @@ description:
 author: "Mario Havel"
 tags:
   - "client"
-  - "geth"
   - "nodi"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2021-01-13
 ---
 

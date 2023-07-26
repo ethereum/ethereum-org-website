@@ -2,7 +2,6 @@
 title: Cuentas de Ethereum
 description: Una explicación sobre las cuentas Ethereum, su estructura de datos y su relación con el par de claves criptográficas.
 lang: es
-sidebar: true
 ---
 
 Una cuenta Ethereum cuenta con un saldo en ether (ETH), que permite realizar transacciones en Ethereum. Los usuarios pueden controlar las cuentas, o bien se pueden implementar como contratos inteligentes.

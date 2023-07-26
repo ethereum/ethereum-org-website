@@ -4,11 +4,9 @@ description: 怎样使用 Geth 下载、安装和运行轻客户端。
 authors: "Brian Gu"
 tags:
   - "客户端"
-  - "geth"
   - "节点"
 skill: beginner
 lang: zh
-sidebar: true
 published: 2022-03-04
 ---
 

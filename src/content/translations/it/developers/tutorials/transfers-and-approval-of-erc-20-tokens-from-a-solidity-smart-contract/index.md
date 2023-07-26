@@ -1,16 +1,15 @@
 ---
 title: Trasferimento e approvazione di token ERC-20 da uno Smart Contract Solidity
-description: Come usare uno Smart Contract per interagire con un token utilizzando il linguaggio Solidity
+description: Come usare uno smart contract per interagire con un token utilizzando il linguaggio Solidity
 author: "jdourlens"
 tags:
-  - "Smart Contract"
-  - "token"
+  - "smart contract"
+  - "tokens"
   - "Solidity"
   - "primi passi"
-  - "erc-20"
+  - "ERC-20"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2020-04-07
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-solidity-smart-contract/
@@ -96,7 +95,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
@@ -278,7 +277,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
@@ -301,8 +300,8 @@ contract DEX {
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "Devi inviare qualche ether");
-        require(amountTobuy <= dexBalance, "Non abbastanza token nella riserva");
+        require(amountTobuy > 0, "Devi inviare dell'ether");
+        require(amountTobuy <= dexBalance, "Non hai abbastanza token nella riserva");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);
     }

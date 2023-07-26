@@ -2,7 +2,6 @@
 title: Aggiungere Livelli 2
 description: La politica utilizzata quando aggiungiamo un livello 2 a ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Aggiungere Livelli 2 {#adding-layer-2}

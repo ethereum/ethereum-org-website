@@ -2,7 +2,6 @@
 title: Ethereum virtuális gép (EVM)
 description: Bevezetés az Ethereum virtuális gépbe és arról, hogy hogyan kapcsolódik az állapothoz, tranzakciókhoz és okosszerződésekhez.
 lang: hu
-sidebar: true
 ---
 
 Az EVM fizikai megtestesülését nem lehet úgy leírni, mint ahogy azt egy felhő vagy egy óceáni hullám esetében tennénk, de attól még _létezik_ egy egyedüli entitásként több ezer összekapcsolt számítógép által, melyek egy Ethereum klienst futtatnak.

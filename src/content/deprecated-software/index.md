@@ -2,7 +2,6 @@
 title: Deprecated software
 description: Software which has been deprecated by its maintainers
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -11,6 +10,10 @@ sidebarDepth: 2
 This is a list of key Ethereum-related projects and resources which have been deprecated or are no longer maintained. It is important to highlight deprecated work so that users can find viable alternatives and to prevent malicious versions from being distributed.
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
+
+## Proof-of-work {#pow}
+
+[Proof of work](/developers/docs/consensus-mechanisms/pow) is a consensus engine that was implemented in Ethereum until September 2022. It was deprecated when Ethereum swapped to a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) based consensus mechanism. This was achieved by deprecating the parts of the client software related to proof-of-work mining, including [Ethhash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethhash) (the mining algorithm) and all the consensus logic and block gossiping functionality that was originally built in to execution clients. The clients themselves were not deprecated but several of their core components were. The concept of proof-of-work was deprecated as the total effect of removing the related components of the client software.
 
 ## Software {#software}
 
@@ -424,11 +427,11 @@ In 2019 and 2020, eth.wiki became the successor to Legacy Wiki, but an enduring 
 
 **Alternatives**
 
-Community-driven content: [Ethereum.org Website](/), [EthHub Docs](https://docs.ethhub.io/)
+Community-driven content: [Ethereum.org Website](/)
 
 Ethereum software projects often host their documentation on [Read the Docs](https://readthedocs.org/)
 
-GitHub-hosted technical specifications: [EIPs](https://github.com/ethereum/eips), [Execution Specs](https://github.com/ethereum/execution-specs), [Consensus Specs](https://github.com/ethereum/consensus-specs)
+GitHub-hosted technical specifications: [EIPs](https://github.com/ethereum/EIPs), [Execution Specs](https://github.com/ethereum/execution-specs), [Consensus Specs](https://github.com/ethereum/consensus-specs)
 
 ### forum.ethereum.org {#forum-ethereum-org}
 

@@ -2,7 +2,6 @@
 title: Ethereum para desarrolladores de Rust
 description: Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Rust
 lang: es
-sidebar: true
 incomplete: true
 ---
 
@@ -27,13 +26,9 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [El cliente de Ethereum basado en Rust](https://wiki.parity.io/Setup)
 - [Enviar una transacción a Ethereum mediante Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Una introducción a los contratos inteligentes con el cliente de Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Configurar un entorno de desarrollo de Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Un tutorial paso a paso sobre cómo escribir contratos en Rust Wasm para Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artículos de nivel intermedio {#intermediate-articles}
-
-- [Documentación de Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Ejemplos de trabajo de Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
 
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
@@ -42,7 +37,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Crear una aplicación descentralizada de tareas con Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Introducción a Enigma: Un lenguaje de programación de Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Una introducción a los contratos secretos](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Implementación de contratos de Solidity en Oasis (compuesto)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## Proyectos y herramientas de Rust {#rust-projects-and-tools}
 
@@ -52,7 +46,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm): _Implementación de máquina virtual de Ethereum_
 - [Paridad](https://github.com/paritytech/parity-ethereum): _Cliente de Ethereum basado en Rust_
-- [rust-web3:](https://github.com/tomusdrw/rust-web3) _Implementación en Rust de la biblioteca de Web3.js_
 - [Wavelet:](https://wavelet.perlin.net/docs/smart-contracts) _Contrato inteligente de Wavelet en Rust_
 
 ¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/developers/)

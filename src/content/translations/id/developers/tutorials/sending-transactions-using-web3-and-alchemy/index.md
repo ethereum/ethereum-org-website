@@ -8,15 +8,14 @@ tags:
   - "alchemy"
 skill: beginner
 lang: id
-sidebar: true
 published: 2020-11-04
 source: Dokumen Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-This is a beginner friendly guide to sending Ethereum transactions using web3. Ada tiga langkah utama untuk mengirim transaksi ke blockchain ethereum: buat, tandatangani, dan siarkan. Kita akan membahas ketiganya, dengan harapan menjawab pertanyaan apa pun yang Anda miliki! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
+This is a beginner friendly guide to sending Ethereum transactions using web3. Ada tiga langkah utama untuk mengirim transaksi ke blockchain ethereum: buat, tandatangani, dan siarkan. Kita akan membahas ketiganya, dengan harapan menjawab pertanyaan apa pun yang Anda miliki! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://auth.alchemyapi.io/signup).
 
-**NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
+**NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider).
 
 ## Dasar-Dasar {#the-basics}
 
@@ -45,23 +44,23 @@ Seperti kebanyakan pengembang blockchain ketika mereka baru memulai, Anda mungki
 
 `eth_sendTransaction` dan `eth_sendRawTransaction` keduanya adalah fungsi API Ethereum yang menyiarkan transaksi ke jaringan Ethereum, sehingga transaksi akan ditambahkan ke blok berikutnya. Fungsi ini berbeda dalam cara menangani penandatanganan transaksi.
 
-- [`eth_sendTransaction`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#eth-sendtransaction) digunakan untuk mengirim transaksi _yang belum ditandatangani_, yang berarti node tujuan pengiriman harus mengelola kunci privat Anda agar dapat menandatangani transaksi sebelum menyiarkannya ke rantai. Since Alchemy doesn't hold user's private keys, they do not support this method.
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) digunakan untuk menyiarkan transaksi yang telah ditandatangani. Ini berarti pertama-tama Anda harus menggunakan [`signTransaction(tx, private_key)`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#signtransaction), lalu teruskan hasilnya ke `eth_sendRawTransaction`.
+- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) digunakan untuk mengirim transaksi _yang belum ditandatangani_, yang berarti node tujuan pengiriman harus mengelola kunci privat Anda agar dapat menandatangani transaksi sebelum menyiarkannya ke rantai. Since Alchemy doesn't hold user's private keys, they do not support this method.
+- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) digunakan untuk menyiarkan transaksi yang telah ditandatangani. Ini berarti pertama-tama Anda harus menggunakan [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction), lalu teruskan hasilnya ke `eth_sendRawTransaction`.
 
-Ketika menggunakan web3, `eth_sendRawTransaction` diakses dengan memanggil fungsi [web3.eth.sendSignedTransaction](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#sendsignedtransaction).
+Ketika menggunakan web3, `eth_sendRawTransaction` diakses dengan memanggil fungsi [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction).
 
 This is what we will be using in this tutorial.
 
 ### 6\. Apa itu pustaka web3? {#what-is-the-web3-library}
 
 - Web3.js adalah pustaka pembungkus seputar pemanggilan JSON-RPC standar yang cukup umum untuk digunakan dalam pengembangan Ethereum.
-- Ada banyak pustaka web3 untuk bahasa pemrograman berbeda. Dalam tutorial ini, kita akan menggunakan [Web3 Alchemy](https://docs.alchemyapi.io/documentation/alchemy-web3) yang ditulis dalam JavaScript. Anda dapat memeriksa opsi lainnya [di sini](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
+- Ada banyak pustaka web3 untuk bahasa pemrograman berbeda. Dalam tutorial ini, kita akan menggunakan [Web3 Alchemy](https://docs.alchemy.com/reference/api-overview) yang ditulis dalam JavaScript. Anda dapat memeriksa opsi lainnya [di sini](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
 
 Baiklah, karena kita telah menjawab beberapa pertanyaan, mari kita teruskan ke bagian tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/gWuC7zB)!
 
 **NOTE:** This guide requires an Alchemy account, an Ethereum address or MetaMask wallet, NodeJs, and npm installed. Jika tidak, ikuti langkah-langkah ini:
 
-1.  [Buat akun Alchemy gratis](https://dashboard.alchemyapi.io/signup/)
+1.  [Buat akun Alchemy gratis](https://auth.alchemyapi.io/signup)
 2.  [Create MetaMask account](https://metamask.io/) (or get an Ethereum address)
 3.  [Ikuti langkah-langkah ini untuk menginstal NodeJs dan NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
@@ -86,7 +85,7 @@ cd sendtx-example
 
 ### 4\. Instal Web3 Alchemy (atau pustaka web3 mana pun) {#install-alchemy-web3}
 
-Jalankan perintah berikut dalam direktori proyek Anda untuk menginstal [Web3 Alchemy](https://docs.alchemyapi.io/documentation/alchemy-web3):
+Jalankan perintah berikut dalam direktori proyek Anda untuk menginstal [Web3 Alchemy](https://docs.alchemy.com/reference/api-overview):
 
 ```
 npm install @alch/alchemy-web3
@@ -112,7 +111,7 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
 </InfoBanner>
 

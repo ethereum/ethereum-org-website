@@ -49,7 +49,7 @@
   },
   {
     "fromPath": "/eth2/",
-    "toPath": "/en/upgrades/"
+    "toPath": "/en/roadmap/"
   },
   {
     "fromPath": "/build/",
@@ -110,6 +110,10 @@
   {
     "fromPath": "/no/*",
     "toPath": "/nb/:splat"
+  },
+  {
+    "fromPath": "/ph/*",
+    "toPath": "/fil/:splat"
   },
   {
     "fromPath": "/en/java/",
@@ -197,11 +201,71 @@
   },
   {
     "fromPath": "/*/eth2/shard-chains/",
-    "toPath": "/:splat/upgrades/sharding/"
+    "toPath": "/:splat/roadmap/danksharding/"
   },
   {
     "fromPath": "/*/upgrades/shard-chains/",
-    "toPath": "/:splat/upgrades/sharding/"
+    "toPath": "/:splat/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/upgrades/sharding/",
+    "toPath": "/en/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/*/upgrades/sharding/",
+    "toPath": "/:splat/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/upgrades/shard-chains/",
+    "toPath": "/en/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/upgrades/merge",
+    "toPath": "/en/roadmap/merge/"
+  },
+  {
+    "fromPath": "/*/upgrades/merge",
+    "toPath": "/:splat/roadmap/merge/"
+  },
+  {
+    "fromPath": "/upgrades/merge/issuance",
+    "toPath": "/en/roadmap/merge/issuance"
+  },
+  {
+    "fromPath": "/*/upgrades/merge/issuance",
+    "toPath": "/:splat/roadmap/merge/issuance"
+  },
+  {
+    "fromPath": "/upgrades/beacon-chain",
+    "toPath": "/en/roadmap/beacon-chain"
+  },
+  {
+    "fromPath": "/*/upgrades/beacon-chain",
+    "toPath": "/:splat/roadmap/beacon-chain"
+  },
+  {
+    "fromPath": "/upgrades/vision/",
+    "toPath": "/en/roadmap/vision/"
+  },
+  {
+    "fromPath": "/*/upgrades/vision/",
+    "toPath": "/:splat/roadmap/vision/"
+  },
+  {
+    "fromPath": "/upgrades",
+    "toPath": "/en/roadmap"
+  },
+  {
+    "fromPath": "/*/upgrades",
+    "toPath": "/:splat/roadmap"
+  },
+  {
+    "fromPath": "/upgrades/get-involved",
+    "toPath": "/contributing"
+  },
+  {
+    "fromPath": "/*/upgrades/get-involved",
+    "toPath": "/:splat/contributing"
   },
   {
     "fromPath": "/*/eth2/staking/",
@@ -209,7 +273,7 @@
   },
   {
     "fromPath": "/*/eth2/vision/",
-    "toPath": "/:splat/upgrades/vision/"
+    "toPath": "/:splat/roadmap/vision/"
   },
   {
     "fromPath": "/*/eth2/get-involved/",
@@ -228,14 +292,6 @@
     "toPath": "/:splat/staking/deposit-contract/"
   },
   {
-    "fromPath": "/*/eth2/get-involved/medalla-data-challenge",
-    "toPath": "/:splat/community/grants/medalla-data-challenge/"
-  },
-  {
-    "fromPath": "/*/eth2/get-involved/staking-community-grants",
-    "toPath": "/:splat/community/grants/staking-community-grants/"
-  },
-  {
     "fromPath": "/*/eth2",
     "toPath": "/:splat/upgrades/"
   },
@@ -249,10 +305,6 @@
   },
   {
     "fromPath": "/*/about/web-developer",
-    "toPath": "/:splat/about/#open-jobs"
-  },
-  {
-    "fromPath": "/*/about/community-lead",
     "toPath": "/:splat/about/#open-jobs"
   },
   {
@@ -278,5 +330,13 @@
   {
     "fromPath": "/*/developers/docs/smart-contracts/upgrading-smart-contracts/",
     "toPath": "/:splat/developers/docs/smart-contracts/upgrading/"
+  },
+  {
+    "fromPath": "/staking/withdraws",
+    "toPath": "/en/staking/withdrawals/"
+  },
+  {
+    "fromPath": "/*/staking/withdraws",
+    "toPath": "/:splat/staking/withdrawals/"
   }
 ]

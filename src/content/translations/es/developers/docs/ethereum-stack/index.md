@@ -2,7 +2,6 @@
 title: Introducción a la pila de Ethereum
 description: Un tutorial de las diferentes capas de la pila de Ethereum y acerca de cómo encajan.
 lang: es
-sidebar: true
 ---
 
 Como cualquier paquete de software, la "pila de Ethereum" completa variará de un proyecto a otro, en función de tus objetivos de negocio.

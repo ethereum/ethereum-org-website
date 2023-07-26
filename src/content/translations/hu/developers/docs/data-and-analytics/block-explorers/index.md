@@ -2,7 +2,6 @@
 title: Blokk felfedezők
 description: Egy bevezetés a blokkfelfedezőkbe, a blokklánc adatok portáljába, ahol információs lekérdezéseket indíthatsz tranzakciókról, számlákról, szerződésekről és más egyébről.
 lang: hu
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -152,7 +151,7 @@ Természetesen olyan adat is rendelkezésünkre áll, mely a hálózat egészsé
 
 Az Eth2 frissítések még fejlesztés alatt állnak, de érdemes megemlíteni az adatokat, melyet a felfedezők biztosítanak majd számodra. Valójában az összes adat elérhető a tesztneteken jelenleg.
 
-Ha nem ismered az Eth2-t, akkor tekintsd meg az [összefoglalónkat az Eth2 fejlesztésekről](/upgrades/).
+Ha nem ismered az Eth2-t, akkor tekintsd meg az [összefoglalónkat az Eth2 fejlesztésekről](/roadmap/).
 
 ### Korszak {#epoch}
 

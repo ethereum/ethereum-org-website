@@ -3,7 +3,6 @@ title: "Ridimensionare i contratti per combattere i limiti di dimensioni"
 description: Cosa puoi fare per impedire che i tuoi smart contract diventino troppo grandi?
 author: Markus Waas
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "smart contract"
@@ -21,9 +20,9 @@ Il [22 Novembre 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurio
 
 `Attenzione: La dimensione del codice del contratto eccede i 24576 byte (un limite introdotto in Spurious Dragon). Questo contratto potrebbe non esser distribuibile sulla Mainnet. Considera di abilitare l'ottimizzatore (con un valore di "esecuzioni" basso!), disattivare le stringhe di ripristino o usare le librerie.`
 
-Questo limite è stato introdotto per prevenire gli attacchi DOS (denial-of-service). Ogni chiamata di un contratto è relativamente economica in termini di carburante. Tuttavia, l'impatto della chiamata di un contratto per i nodi di Ethereum aumenta sproporzionatamente in base alla dimensione del codice del contratto chiamato (lettura del codice dal disco, pre-elaborazione del codice, aggiunta di dati alla prova di Merkle). Ogni volta che ti trovi in una situazione in cui il malintenzionato richiede poche risorse per causare molto lavoro per altri, esiste il potenziale di attacchi DOS.
+Questo limite è stato introdotto per prevenire gli attacchi DOS (denial-of-service). Qualsiasi chiamata a un contratto è relativamente economica in termini di gas. Tuttavia, l'impatto della chiamata di un contratto per i nodi di Ethereum aumenta sproporzionatamente in base alla dimensione del codice del contratto chiamato (lettura del codice dal disco, pre-elaborazione del codice, aggiunta di dati alla prova di Merkle). Ogni volta che ti trovi in una situazione in cui il malintenzionato richiede poche risorse per causare molto lavoro per altri, esiste il potenziale di attacchi DOS.
 
-In origine questo era un problema minore, poiché il limite naturale della dimensione del contratto è il limite di carburante del blocco. Ovviamente, un contratto deve essere distribuito in una transazione che ha il bytecode di tutto il contratto. Se includi solo quella transazione in un blocco, puoi usare anche tutto il carburante, che però non è infinito. Il problema in quel caso, tuttavia, è che il limite di carburante del blocco cambia col tempo ed è in teoria illimitato. Al momento dell'EIP-170, il limite di carburante del blocco era di solo 4,7 milioni. Ora il limite del carburante del blocco è appena [aumentato di nuovo](https://etherscan.io/chart/gaslimit), lo scorso mese, a 11,9 milioni.
+In origine, questo era un problema minore, dato che il limite naturale di dimensioni del contratto è il limite di gas del blocco. Ovviamente, un contratto dev'esser distribuito entro una transazione che detenga tutto il codice del byte del contratto. Se includi solo quella transazione in un blocco, puoi usare anche tutto il gas, ma non è infinito. Dall'[Aggiornamento di Londra](/history/#london), il limite di gas del blocco è stato capace di variare tra le 15M e le 30M unità, a seconda della domanda di rete.
 
 ## Affrontare la lotta {#taking-on-the-fight}
 
@@ -98,7 +97,7 @@ require(msg.sender == owner, "OW1");
 
 ### Considera un valore d'esecuzione basso nell'ottimizzatore {#consider-a-low-run-value-in-the-optimizer}
 
-Puoi anche cambiare le impostazioni dell'ottimizzatore. Il valore predefinito di 200 significa che sta provando a ottimizzare il bytecode come se una funzione fosse chiamata 200 volte. Se lo modifichi a 1, fondamentalmente dici all'ottimizzatore di ottimizzare nel caso dell'esecuzione di ogni funzione una sola volta. Una funzione ottimizzata per essere eseguita solo una volta è ottimizzata per la distribuzione stessa. Sappi che **questo aumenta i [costi del carburante](/developers/docs/gas/) per l'esecuzione delle funzioni**, quindi potrebbe essere meglio non farlo.
+Puoi anche cambiare le impostazioni dell'ottimizzatore. Il valore predefinito di 200 significa che sta provando a ottimizzare il bytecode come se una funzione fosse chiamata 200 volte. Se lo modifichi a 1, fondamentalmente dici all'ottimizzatore di ottimizzare nel caso dell'esecuzione di ogni funzione una sola volta. Una funzione ottimizzata per essere eseguita solo una volta è ottimizzata per la distribuzione stessa. Sappi che **ciò aumenta i [costi del gas](/developers/docs/gas/) per l'esecuzione delle funzioni**, quindi potresti non volerlo fare.
 
 ## Piccolo impatto {#small-impact}
 
@@ -150,9 +149,3 @@ function doSomething() { checkStuff(); }
 ```
 
 Questi suggerimenti dovrebbero aiutarti a ridurre significativamente le dimensioni del contratto. Ancora una volta, non smetterò mai di insistere sull'importanza di concentrarsi sempre sulla divisione dei contratti, se possibile, per avere il massimo impatto.
-
-## Il futuro per i limiti delle dimensioni dei contratti {#the-future-for-the-contract-size-limits}
-
-Vi è una [proposta aperta](https://github.com/ethereum/EIPs/issues/1662) per la rimozione del limite di dimensioni dei contratti. L'idea è fondamentalmente quella di rendere le chiamate del contratto più costose per i grandi contratti. Non sarebbe troppo difficile da implementare, ha una semplice retrocompatibilità (mettere tutti i contratti precedentemente distribuiti nella categoria più economica), ma [non tutti sono convinti](https://ethereum-magicians.org/t/removing-or-increasing-the-contract-size-limit/3045/24).
-
-Solo il tempo dirà se tali limiti cambieranno in futuro, le reazioni (vedi l'immagine a destra) mostrano sicuramente un chiaro requisito per noi sviluppatori. Sfortunatamente, non è qualcosa che possiamo aspettarci di vedere a breve.

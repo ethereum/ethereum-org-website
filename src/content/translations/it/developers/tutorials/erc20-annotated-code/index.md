@@ -3,7 +3,6 @@ title: "Guida dettagliata al contratto ERC-20"
 description: Cosa c'è nel contratto ERC-20 di OpenZeppelin e a cosa serve?
 author: Ori Pomerantz
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "erc-20"
@@ -83,7 +82,7 @@ Questa funzione è `external`, a significare che [può essere chiamata solo dal 
     function balanceOf(address account) external view returns (uint256);
 ```
 
-Come dice il nome, `balanceOf` restituisce il saldo di un conto. I conti di Ethereum sono identificati in Solidity usando il tipo `address`, che contiene 160 bit. È anche `external` e `view`.
+Come dice il nome `balanceOf` restituisce il saldo di un conto. I conti di Ethereum sono identificati in Solidity usando il tipo `address`, contenente 160 bit. È anche `external` e `view`.
 
 &nbsp;
 
@@ -98,7 +97,7 @@ Come dice il nome, `balanceOf` restituisce il saldo di un conto. I conti di Ethe
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-La funzione `transfer` trasferisce i token dal chiamante a un indirizzo diverso. Ciò implica un cambio di stato, quindi non è una `view`. Quando un utente chiama questa funzione, viene creata una transazione e utilizzato del gas. Inoltre viene emesso un evento, `Transfer`, per informare tutti sulla blockchain dell'evento.
+La funzione `transfer` trasferisce i token dal chiamante a un indirizzo diverso. Ciò implica un cambio di stato, quindi non è una `view`. Quando un utente chiama questa funzione, crea una transazione e consuma del gas. Inoltre viene emesso un evento, `Transfer`, per informare tutti sulla blockchain dell'evento.
 
 La funzione ha due tipi di output per due diversi tipi di chiamanti:
 
@@ -109,7 +108,7 @@ Lo stesso tipo di output è creato da altre funzioni che cambiano lo stato del c
 
 &nbsp;
 
-I margini di tolleranza (allowance) permettono a un conto di spendere token appartenenti a un altro proprietario. Ciò è utile, ad esempio, per i contratti che fungono da venditori. I contratti non possono monitorare gli eventi, quindi se un acquirente dovesse trasferire token al contratto del venditore direttamente, quel contratto non saprebbe di aver ricevuto il pagamento. Invece, l'acquirente permette al contratto del venditore di spendere un certo importo e il venditore trasferisce quell'importo. Questo avviene tramite un funzione chiamata dal contratto del venditore, in modo tale che il contratto del venditore possa sapere se è andata a buon fine.
+Le indennità permettono a un conto di spendere dei token appartenenti a un altro proprietario. Ciò è utile, ad esempio, per i contratti che fungono da venditori. I contratti non possono monitorare gli eventi, quindi se un acquirente dovesse trasferire token al contratto del venditore direttamente, quel contratto non saprebbe di aver ricevuto il pagamento. Invece, l'acquirente permette al contratto del venditore di spendere un certo importo e il venditore trasferisce quell'importo. Questo avviene tramite un funzione chiamata dal contratto del venditore, in modo tale che il contratto del venditore possa sapere se è andata a buon fine.
 
 ```solidity
     /**
@@ -365,7 +364,7 @@ Queste funzioni, `name`, `symbol`, e `decimals` aiutano le interfacce utente a c
 
 Il tipo di restituzione è `string memory`, a significare che la restituzione è una stringa archiviata in memoria. Le variabili, come le stringhe, sono memorizzabili in tre posizioni:
 
-|               | Durata                  | Accesso al contratto | Costo del gas                                                                      |
+|               | Durata                  | Accesso al contratto | Costo del Gas                                                                      |
 | ------------- | ----------------------- | -------------------- | ---------------------------------------------------------------------------------- |
 | Memoria       | Chiamata della funzione | Lettura/Scrittura    | Decine o centinaia (maggiori per maggiori posizioni)                               |
 | Calldata      | Chiamata della funzione | Sola Lettura         | Inutilizzabile come tipo di restituzione, solo un tipo di parametro della funzione |
@@ -415,7 +414,7 @@ Leggi il saldo di un conto. Nota che chiunque può ottenere il saldo del conto d
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
 ```
 
-La funzione `transfer` è chiamata per trasferire i token dal conto del mittente a un altro conto. Nota che anche se viene restituito un valore booleano, quel valore è sempre **true**. Se il trasferimento fallisce, il contratto ripristina la chiamata.
+La funzione `transfer` è chiamata per trasferire i token dal conto del mittente a un altro. Nota che anche se viene restituito un valore booleano, quel valore è sempre **true**. Se il trasferimento fallisce, il contratto ripristina la chiamata.
 
 &nbsp;
 
@@ -512,7 +511,7 @@ La funzione `a.sub(b, "message")` produce due azioni. Innanzi tutto calcola `a-b
 
 È pericoloso impostare un margine di tolleranza diverso da zero su un altro valore diverso da zero, perché puoi controllare solo l'ordine delle tue transazioni, ma non di quelle altrui. Immagina che ci siano due utenti: Alice, una ragazza ingenua, e Bill, un uomo disonesto. Alice vuole ricevere da Bill un servizio che secondo lei costa cinque token, quindi concede a Bill un margine di tolleranza di cinque token.
 
-Poi qualcosa cambia e il prezzo di Bill aumenta a dieci token. Alice, che è ancora interessata a ricevere il servizio, invia una transazione che imposta il margine di tolleranza di Bill a dieci. Quando Bill vede questa nuova transazione nel pool, invia una transazione che spende i cinque token di Alice e ha un prezzo di gas molto più elevato, quindi sarà minato più velocemente. In questo modo Bill può spendere prima i cinque token e poi, una volta minato il nuovo margine di tolleranza di Alice, spenderne altri dieci per un prezzo complessivo di quindici token, più di quanto Alice volesse autorizzare. Questa tecnica è detta [front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
+Poi qualcosa cambia e il prezzo di Bill aumenta a dieci token. Alice, che è ancora interessata a ricevere il servizio, invia una transazione che imposta il margine di tolleranza di Bill a dieci. Quando Bill vede questa nuova transazione nel pool della transazione, invia una transazione che spende cinque token di Alice e ha un prezzo del gas molto maggiore, così che sarà minata più rapidamente. In questo modo Bill può spendere prima i cinque token e poi, una volta minato il nuovo margine di tolleranza di Alice, spenderne altri dieci per un prezzo complessivo di quindici token, più di quanto Alice volesse autorizzare. Questa tecnica è detta [front-running](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
 
 | Transazione di Alice | Nonce di Alice | Transazione di Bill           | Nonce di Bill | Tolleranza di Bill | Entrate totali di Bill da Alice |
 | -------------------- | -------------- | ----------------------------- | ------------- | ------------------ | ------------------------------- |
@@ -608,7 +607,7 @@ Queste sono le quattro funzioni che effettuano il lavoro effettivo: `_transfer`,
     function _transfer(address sender, address recipient, uint256 amount) internal virtual {
 ```
 
-La funzione `_transfer` trasferisce i token da un conto all'altro. È chiamata sia da `transfer` (per i trasferimenti dal conto del mittente) sia da `transferFrom` (per usare le tolleranze e trasferire dal conto di qualcun altro).
+Questa funzione, `_transfer`, trasferisce i token da un conto all'altro. È chiamata sia da `transfer` (per i trasferimenti dal conto del mittente) che da `transferFrom` (per usare le indennità per trasferire dal conto di qualcun altro).
 
 &nbsp;
 

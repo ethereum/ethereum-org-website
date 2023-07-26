@@ -2,7 +2,6 @@
 title: JavaScript API kütüphaneleri
 description: Uygulamanızdan blok zinciri ile etkileşime girmenizi sağlayan JavaScript istemci kütüphanelerine giriş.
 lang: tr
-sidebar: true
 ---
 
 Bir web uygulamasının Ethereum blok zinciri ile etkileşime girebilmesi için (yani blok zinciri verilerini okuması ve/veya ağa işlem gönderebilmesi) bir Ethereum düğümüne bağlanması gerekir.
@@ -231,14 +230,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Web3js yardımcı fonksiyonları](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Web3js yardımcı fonksiyonları](https://docs.web3js.org/api/web3-utils)
 - [Ethers yardımcı fonksiyonları](https://docs.ethers.io/v5/api/utils/)
 
 ## Mevcut kütüphaneler {#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
-- [Belgeler](https://web3js.readthedocs.io/en/1.0/)
+- [Belgeler](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_JavaScript ve TypeScript'te eksiksiz Ethereum cüzdan uygulamaları ve araçları._**
@@ -265,7 +264,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Otomatik yeniden denemeler ve geliştirilmiş API'ler ile Web3.js odaklı paketleyici._**
 
-- [Belgeler](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Belgeler](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API -** **_Sahiplik, meta veri özellikleri ve daha fazlası dahil olmak üzere NFT verilerini almak için API._**

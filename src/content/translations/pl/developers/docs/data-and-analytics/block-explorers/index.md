@@ -2,7 +2,6 @@
 title: Eksploratory bloków
 description: Wprowadzenie do eksploratorów bloków, portalu do świata danych blockchain, w którym możesz wyszukiwać informacje o transakcjach, kontach, kontraktach i nie tylko.
 lang: pl
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -152,7 +151,7 @@ Oczywiście są pewne dane, które mówią o stanie sieci. Są one dość specyf
 
 Ulepszenia Eth2 są nadal w fazie rozwoju, ale warto wspomnieć o niektórych punktach danych, które eksplorery będą mogły Ci dostarczyć. W rzeczywistości wszystkie te dane są obecnie dostępne dla sieci testowych.
 
-Jeśli brak Ci wiedzy o Eth2, sprawdź [nasz przegląd ulepszeń Eth2](/upgrades/).
+Jeśli brak Ci wiedzy o Eth2, sprawdź [nasz przegląd ulepszeń Eth2](/roadmap/).
 
 ### Epoka {#epoch}
 

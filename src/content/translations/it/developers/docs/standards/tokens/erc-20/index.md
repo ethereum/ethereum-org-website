@@ -2,7 +2,6 @@
 title: Standard token ERC-20
 description:
 lang: it
-sidebar: true
 ---
 
 ## Introduzione {#introduction}
@@ -19,30 +18,30 @@ I token possono rappresentare praticamente tutto in Ethereum:
 - un'oncia d'oro
 - e molto altro...
 
-Una caratteristica così potente di Ethereum deve essere gestita da uno standard robusto. Questo è esattamente il ruolo di ERC-20! Questi standard permette agli sviluppatori di creare applicazioni token interoperabili con altri prodotti e servizi.
+Una caratteristica così potente di Ethereum deve essere gestita da uno standard robusto. Questo è esattamente il ruolo di ERC-20! Questo standard permette agli sviluppatori di creare applicazioni token interoperabili con altri prodotti e servizi.
 
 **Cos'è ERC-20?**
 
-ERC-20 introduce uno standard per i token fungibili. In altre parole questi token hanno una proprietà che rende ogni token esattamente uguale (per tipo e valore) a un altro token. Per esempio, un token ERC-20 funziona esattamente come ETH, ossia 1 token è e sarà sempre uguale a tutti gli altri token.
+ERC-20 introduce uno standard per i token fungibili. In altre parole, questi token hanno una proprietà che rende ogni token esattamente uguale (per tipo e valore) a un altro token. Per esempio, un token ERC-20 funziona esattamente come ETH, ossia 1 token è e sarà sempre uguale a tutti gli altri token.
 
 ## Prerequisiti {#prerequisites}
 
-- [Account](/developers/docs/accounts)
-- [Smart Contract](/developers/docs/smart-contracts/)
+- [Conti](/developers/docs/accounts)
+- [Contratti Intelligenti](/developers/docs/smart-contracts/)
 - [Standard per i token](/developers/docs/standards/tokens/)
 
 ## Corpo {#body}
 
-ERC-20 (Ethereum Request for Comments 20), proposto da Fabian Vogelsteller nel novembre 2015, è uno standard token che implementa un'API per token all'interno di Smart Contract.
+L'ERC-20 (Ethereum Request for Comments 20), proposto da Fabian Vogelsteller nel novembre del 2015, è uno Standard del Token che implementa un'API per i token nei Contratti Intelligenti.
 
 Esempio di funzionalità fornite da ERC-20:
 
-- trasferire token da un account a un altro
-- richiedere il saldo corrente di token di un account
+- trasferire token da un conto all'altro
+- ottenere il saldo corrente di token di un conto
 - richiedere la quantità totale di token disponibile sulla rete
-- approvare che una quantità di token di un account possa essere spesa da un account di terze parti
+- approvare se un importo di token da un conto è spendibile da un conto di terze parti
 
-Se uno Smart Contract implementa i seguenti metodi ed eventi può essere chiamato contratto token ERC-20 e, una volta distribuito, sarà responsabile di tenere traccia dei token creati su Ethereum.
+Se un Contratto Intelligente implementa i seguenti metodi ed eventi, può esser definito un Contratto a Token ERC-20 e, una volta distribuito, sarà responsabile di tenere traccia dei token creati su Ethereum.
 
 Da [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
@@ -76,7 +75,7 @@ Vediamo perché uno standard è così importante per semplificare l'ispezione de
 Prima di tutto, controlla di avere installato la libreria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python
@@ -91,7 +90,7 @@ weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ethe
 acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
 # questa è un'ABI (Contract Application Binary Interface) semplificata per un contratto token ERC-20.
-# Espone solo i metodi balanceOf(address), decimals(), symbol() e totalSupply()
+# It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'account', 'type': 'address'}],
@@ -119,7 +118,7 @@ simplified_abi = [
     }
 ]
 
-dai_contract = w3.eth.contract(address=w3.toChecksumAddress(dai_token_addr), abi=simplified_abi)
+dai_contract = w3.eth.contract(address=w3.to_checksum_address(dai_token_addr), abi=simplified_abi)
 symbol = dai_contract.functions.symbol().call()
 decimals = dai_contract.functions.decimals().call()
 totalSupply = dai_contract.functions.totalSupply().call() / 10**decimals
@@ -130,7 +129,7 @@ print("===== %s =====" % symbol)
 print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 
-weth_contract = w3.eth.contract(address=w3.toChecksumAddress(weth_token_addr), abi=simplified_abi)
+weth_contract = w3.eth.contract(address=w3.to_checksum_address(weth_token_addr), abi=simplified_abi)
 symbol = weth_contract.functions.symbol().call()
 decimals = weth_contract.functions.decimals().call()
 totalSupply = weth_contract.functions.totalSupply().call() / 10**decimals
@@ -147,3 +146,4 @@ print("Addr Balance:", addr_balance)
 - [EIP-20: Standard dei token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - Implementazione ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy - Guida ai token ERC20 di Solidity](https://www.alchemy.com/overviews/erc20-solidity)

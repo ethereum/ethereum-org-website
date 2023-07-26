@@ -54,7 +54,6 @@
   "page-dapps-dapp-description-cryptovoxels": "Unda nyumba za sanaa, jenga maduka, na nunua ardhi - Ulimwengu wa mtandaoni wa Ethereum.",
   "page-dapps-dapp-description-dark-forest": "Jishindie sayari bila ukomo, zinazoundwa kwa utaratibu, kwa ulimwengu maalumu wa kriptografia.",
   "page-dapps-dapp-description-decentraland": "Kusanya, fanya biashara kwenye ardhi ya mtandaoni kwenye ulimwengu wa mtandaoni unaoweza kuvinjari.",
-  "page-dapps-dapp-description-dydx": "Fungua nafasi fupi au nafasi ya kujiinua na nafasi hadi mara kumi (x10). Kukopesha na kukopa vinapatikana pia.",
   "page-dapps-dapp-description-ens": "Majina rafiki ya anunuani za Ethereum na tovuti zilizogatuliwa.",
   "page-dapps-dapp-description-foundation": "Wekeza kwenye matoleo ya pekee ya sanaa za kidijitali na fanya biashara na wanunuzi wengine.",
   "page-dapps-dapp-description-gitcoin": "Jipatie kripto kwa kufanya kazi kwenye programu zilizo na vyanzo vya wazi.",
@@ -96,7 +95,6 @@
   "page-dapps-rotki-logo-alt": "Nembo ya Rotiki",
   "page-dapps-desc": "Tafuta programu ya Ethereum ujaribishe.",
   "page-dapps-doge-img-alt": "Kielelezo cha doge akitumia tarakilishi",
-  "page-dapps-dydx-logo-alt": "nembo ya Dydx",
   "page-dapps-editors-choice-dark-forest": "Cheza dhidi ya wengine kujipatia sayari na jaribishe upanga unaovuja wa Ethereum inayotanuka/teknolojia binafsi. Labda kwa wale wanaoitambua Ethereum tayari.",
   "page-dapps-editors-choice-description": "Dapps chache ambazo wana Ethereum wanazipenda hivi sasa. Chunguza dapps zaidi hapo chini.",
   "page-dapps-editors-choice-foundation": "Wekeza katika utamaduni. Nunua, fanya biashara na uza kazi za kipekee za kidijitali na mitindo kutoka kwa wasanii, wanamuziki na chapa za ajabu.",
@@ -204,5 +202,8 @@
   "page-dapps-what-are-dapps": "Dapps ni nini?",
   "page-dapps-more-on-defi-button": "Zaidi juu fedha zilizogatuliwa (DeFi)",
   "page-dapps-more-on-nft-button": "Zaidi juu ya vifurushi vilivofanya tokeni/ishara",
-  "page-dapps-more-on-nft-gaming-button": "Zaidi juu ya michezo ya ndani iliofanya tokeni"
+  "page-dapps-more-on-nft-gaming-button": "Zaidi juu ya michezo ya ndani iliofanya tokeni",
+  "foundation": "Msingi",
+  "transaction-fees": "Ada ya manunuzi ni nini?",
+  "page-wallets-get-some": "Pata ETH"
 }

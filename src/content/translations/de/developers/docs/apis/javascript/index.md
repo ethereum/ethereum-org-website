@@ -2,7 +2,6 @@
 title: JavaScript-API-Bibliotheken
 description: Eine Einführung in die JavaScript-Client-Bibliotheken, über die Sie von Ihrer Anwendung aus mit der Blockchain interagieren können.
 lang: de
-sidebar: true
 ---
 
 Damit eine Web-Anwendung mit der Ethereum-Blockchain interagieren kann (z. B. Auslesen von Blockchain-Daten und/oder Senden von Transaktionen an das Netzwerk), muss sie sich mit einem Ethereum-Node verbinden.
@@ -233,14 +232,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Web3js-Dienstprogrammfunktionen](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Web3js-Dienstprogrammfunktionen](https://docs.web3js.org/api/web3-utils)
 - [Ethers-Dienstprogrammfunktionen](https://docs.ethers.io/v5/api/utils/)
 
 ## Verfügbare Programmbibliotheken {#available-libraries}
 
 **Web3.js –** **_Ethereum-JavaScript-API_**
 
-- [Dokumentation](https://web3js.readthedocs.io/en/1.0/)
+- [Dokumentation](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js –** **_Eine vollständige Ethereum-Wallet-Implementierung und Dienstprogramme in JavaScript und TypeScript_**
@@ -267,7 +266,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 –** **_Wrapper um Web3.js mit automatischen Wiederholungen und erweiterten APIs_**
 
-- [Dokumentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Dokumentation](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API –** **_API für den Abruf von NFT-Daten, einschließlich Eigentumsrechten, Metadatenattributen und mehr_**

@@ -2,26 +2,25 @@
 title: Was ist Web3 und warum ist es wichtig?
 description: Eine Einführung in Web3 – die nächste Entwicklung des Internets – und warum es wichtig ist.
 lang: de
-sidebar: true
 ---
 
 # Einführung in Web3 {#introduction}
 
-Zentralisierung hat es ermöglicht, dass Milliarden von Menschen Zugang zum Internet haben, und daraus hat sich die stabile, robuste Infrastruktur entwickelt, von der das Internet lebt. Gleichzeitig nimmt eine Handvoll zentralisierter Einrichtungen eine starke Stellung in weiten Teilen des Internets ein und entscheidet einseitig, was erlaubt sein soll und was nicht.
+Zentralisierung hat es ermöglicht, dass Milliarden von Menschen Zugang zum Internet haben, und daraus hat sich die stabile, robuste Infrastruktur entwickelt, von der das Internet lebt. Gleichzeitig nimmt eine Handvoll zentralisierter Einheiten eine starke Stellung in weiten Teilen des Internets ein und entscheidet einseitig, was erlaubt sein soll und was nicht.
 
-Web3 ist die Antwort auf diese Misere. Anstelle eines Internets, das von großen Technologieunternehmen monopolisiert wird, setzt Web3 auf Dezentralisierung und wird von seinen Nutzern aufgebaut, betrieben und gehalten. Web3 legt die Macht in die Hände von Einzelpersonen und nicht von Unternehmen. Bevor wir über Web3 sprechen, sehen wir uns an, wie wir hierher gekommen sind.
+Web3 ist die Antwort auf diese Misere. Anstelle eines Internets, das von großen Technologieunternehmen monopolisiert wird, setzt Web3 auf Dezentralisierung und wird von seinen Benutzern aufgebaut, betrieben und gehalten. Web3 legt die Macht in die Hände von Einzelpersonen und nicht von Unternehmen. Bevor wir über Web3 sprechen, sehen wir uns an, wie wir hierher gekommen sind.
 
 <Divider />
 
-## Die Anfänge des Internets {#early-internet}
+## Das frühe Internet {#early-internet}
 
-Die meisten Menschen betrachten das Internet als eine immerwährende Säule des modernen Lebens – es wurde erfunden und existiert seitdem einfach. Doch das Internet, das die meisten von uns heute kennen, ist ganz anders, als es ursprünglich gedacht war. Um das besser zu verstehen ist es hilfreich, die kurze Geschichte des Internets in lose Phasen zu unterteilen: Web 1.0 und Web 2.0.
+Die meisten Menschen betrachten das Internet als eine immerwährende Säule des modernen Lebens – es wurde erfunden und existiert seitdem einfach. Doch das Internet, das die meisten von uns heute kennen, ist ganz anders, als es ursprünglich gedacht war. Um das besser zu verstehen, ist es hilfreich, die kurze Geschichte des Internets in lose Phasen zu unterteilen: Web 1.0 und Web 2.0.
 
 ### Web 1.0: nur lesen (1990-2004) {#web1}
 
 1989 war Tim Berners-Lee im CERN in Genf mit der Entwicklung der Protokolle beschäftigt, aus denen das Internet entstehen sollte. Was war seine Idee? Offene, dezentrale Protokolle zu schaffen, die einen Informationsaustausch von jedem Ort der Erde aus ermöglichen.
 
-Die Anfänge des Internets, heute als "Web 1.0" bekannt, liegen etwa zwischen 1990 und 2004. Das Internet im Web 1.0 bestand hauptsächlich aus statischen Webseiten, die sich im Besitz von Unternehmen befanden. Es gab so gut wie keine Interaktion zwischen den Nutzern, Einzelpersonen produzierten nur selten Inhalte. Das führte dazu, dass es als reines Lese-Web bekannt wurde.
+Die Anfänge des Internets, heute als „Web 1.0" bekannt, liegen etwa zwischen 1990 und 2004. Das Internet im Web 1.0 bestand hauptsächlich aus statischen Webseiten, die sich im Besitz von Unternehmen befanden. Es gab so gut wie keine Interaktion zwischen den Benutzern, Einzelpersonen produzierten nur selten Inhalte. Das führte dazu, dass es als reines Lese-Web bekannt wurde.
 
 ![Client-Server-Architektur, die Web 1.0 darstellt](./web1.png)
 
@@ -35,7 +34,7 @@ Die Zeit des Web 2.0 begann 2004 mit dem Aufkommen der Social-Media-Plattformen.
 
 ## Web 3.0: lesen, schreiben, besitzen {#web3}
 
-Der Begriff "Web 3.0" wurde von [Ethereum](/what-is-ethereum/)-Mitbegründer Gavin Wood kurz nach dem Start von Ethereum im Jahr 2014 geprägt. Gavin formulierte eine Lösung für ein Problem, das viele frühe Krypto-Befürworter empfanden: Das Internet erforderte zu viel Vertrauen. Das bedeutet, der größte Teil des Internets, das die Menschen heute kennen und nutzen, beruht auf dem Vertrauen in eine Handvoll privater Unternehmen, die im Interesse der Öffentlichkeit handeln.
+Der Begriff "Web 3.0" wurde von [Ethereum](/what-is-ethereum/)-Mitbegründer Gavin Wood kurz nach dem Start von Ethereum im Jahr 2014 geprägt. Gavin formulierte eine Lösung für ein Problem, das viele frühzeitige Krypto-Anwender empfanden: Das Internet erforderte zu viel Vertrauen. Das heißt, der größte Teil des Internets, das die Menschen heute kennen und nutzen, beruht auf dem Vertrauen in eine Handvoll privater Unternehmen, die im Interesse der Öffentlichkeit handeln.
 
 ![Dezentralisierte Knotenarchitektur, die Web3 darstellt](./web3.png)
 
@@ -58,12 +57,12 @@ Obwohl sich die großartigen Funktionen von Web3 nicht klar voneinander abgrenze
 
 #### Eigentum {#ownership}
 
-Web3 verschafft Ihnen auf eine beispiellose Weise das Eigentum an Ihren digitalen Ressourcen. Nehmen wir beispielsweise an, Sie spielen ein Web2-Spiel. Kaufen Sie einen Gegenstand im Spiel, ist dieser direkt an Ihr Konto gebunden. Wenn die Anbieter des Spielt Ihr Konto löschen, verlieren Sie diese Gegenstände. Oder wenn Sie das Spiel nicht mehr spielen, verlieren Sie den Wert, den Sie in die Spielgegenstände investiert haben.
+Web3 verschafft Ihnen auf eine beispiellose Weise das Eigentum an Ihren digitalen Ressourcen. Nehmen wir beispielsweise an, Sie spielen ein Web2-Spiel. Kaufen Sie einen Gegenstand im Spiel, ist dieser direkt an Ihr Konto gebunden. Wenn die Anbieter des Spiels Ihr Konto löschen, verlieren Sie diese Gegenstände. Oder wenn Sie das Spiel nicht mehr spielen, verlieren Sie den Wert, den Sie in die Spielgegenstände investiert haben.
 
 Web3 ermöglicht direktes Eigentum durch [Non-Fungible Token (NFTs)](/nft/). Niemand, nicht einmal die Macher des Spiels, hat die Macht, Ihnen Ihr Eigentum wegzunehmen. Und sollten Sie mit dem Spielen aufhören, können Sie Ihre Spielgegenstände auf offenen Märkten verkaufen oder tauschen und so ihren Wert zurückerlangen.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Mehr erfahren über NFTs</div>
+  <div>Mehr über NFTs erfahren</div>
   <ButtonLink to="/nft/">
     Mehr zu NFTs
   </ButtonLink>
@@ -79,11 +78,26 @@ Bei Web3 befinden sich die Daten in der Blockchain. Wenn Sie sich entscheiden, e
 
 Im Web 2.0 müssen die Urheber von Inhalten darauf vertrauen, dass die Plattformen die Regeln nicht ändern. Doch Resistenz gegenüber Zensur ist eine grundlegende Eigenschaft von Web3-Plattformen.
 
+#### Dezentralisierte Autonome Organisationen (DAO) {#daos}
+
+Neben dem Besitz Ihrer Daten in Web3 können Sie die Plattform als Kollektiv besitzen und dabei Token verwenden, die wie Aktien eines Unternehmens wirken. Mit DAOs können Sie dezentrale Eigentumsverhältnisse einer Plattform koordinieren und Entscheidungen über dessen Zukunft treffen.
+
+DAOs sind technisch als vereinbarte intelligente Verträge definiert, die dezentrale Entscheidungen über einen Ressourcen-Pool (Token) automatisieren. Benutzer mit Token stimmen darüber ab, wie Ressourcen verwendet werden, und der Code führt automatisch das Abstimmungsergebnis aus.
+
+Allerdings definieren Menschen viele Web3-Communities als DAOs. Diese Gemeinschaften haben alle unterschiedliche Ebenen der Dezentralisierung und Automatisierung per Code. Derzeit untersuchen wir, was DAOs sind und wie sie sich in Zukunft entwickeln könnten.
+
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
+  <div>Erfahren Sie mehr über DAOs</div>
+  <ButtonLink to="/dao/">
+    Mehr über DAOs
+  </ButtonLink>
+</InfoBanner>
+
 ### Identität {#identity}
 
-Normalerweise würden Sie für jede von Ihnen genutzte Plattform ein Konto anlegen. Vielleicht haben Sie ein Twitter-Konto, ein YouTube-Konto und ein Reddit-Konto. Möchten Sie Ihren Anzeigenamen oder Ihr Profilbild ändern? Dann müssen Sie das für jedes einzelne Konto tun. In einigen Fällen können Sie sich über soziale Netzwerke anmelden, aber das birgt ein bekanntes Problem: Zensur. Mit einem einzigen Klick können diese Plattformen Sie aus Ihrem gesamten Online-Leben aussperren. Schlimmer noch, viele Plattformen verlangen, dass Sie ihnen persönliche Daten anvertrauen, um ein Konto zu erstellen.
+Normalerweise würden Sie für jede von Ihnen genutzte Plattform ein Konto anlegen. Vielleicht haben Sie zum Beispiel ein Twitter-Konto, ein YouTube-Konto und ein Reddit-Konto. Möchten Sie Ihren Anzeigenamen oder Ihr Profilbild ändern? Dann müssen Sie das für jedes einzelne Konto tun. In einigen Fällen können Sie sich über soziale Netzwerke anmelden, aber das birgt ein bekanntes Problem: Zensur. Mit einem einzigen Klick können diese Plattformen Sie aus Ihrem gesamten Online-Leben aussperren. Schlimmer noch, viele Plattformen verlangen, dass Sie ihnen persönliche Daten anvertrauen, um ein Konto zu erstellen.
 
-Web3 löst diese Probleme, indem es Ihnen ermöglicht, Ihre digitale Identität mit einer Ethereum-Adresse und einem ENS-Profil zu kontrollieren. Wenn Sie eine Ethereum-Adresse nutzen, können Sie eine einzige plattformübergreifende Anmeldung nutzen, die sicher, zensurresistent und anonym ist.
+Web3 löst diese Probleme, indem es Ihnen ermöglicht, Ihre digitale Identität mit einer Ethereum-Adresse und einem ENS-Profil zu kontrollieren. Wenn Sie eine Ethereum-Adresse benutzen, können Sie eine einzige plattformübergreifende Anmeldung nutzen, die sicher, zensurresistent und anonym ist.
 
 <ButtonLink to="https://login.xyz/">
   Anmelden mit Ethereum
@@ -99,11 +113,11 @@ Die Zahlungsinfrastruktur von Web2 stützt sich auf Banken und Zahlungsdienstlei
 
 ## Web3-Einschränkungen {#web3-limitations}
 
-Trotz der zahlreichen Vorteile von Web3 in seiner jetzigen Form gibt es nach wie vor viele Einschränkungen, die das Ökosystem überwinden muss, um sich weiterzuentfalten.
+Trotz der zahlreichen Vorteile von Web3 in seiner jetzigen Form gibt es nach wie vor viele Einschränkungen, die das Ökosystem überwinden muss, um sich weiter zu entfalten.
 
 ### Zugänglichkeit {#accessibility}
 
-Wichtige Web3-Funktionen, wie z. B. das Anmelden mit Ethereum, sind bereits für jedermann zum Nulltarif verfügbar. Doch die relativen Transaktionskosten sind für viele noch immer unerschwinglich. Es ist wahrscheinlich, dass Web3 aufgrund der hohen Transaktionsgebühren in weniger wohlhabenden Entwicklungsländern womöglich weniger genutzt wird. Bei Ethereum werden diese Herausforderungen durch [Netzwerk-Upgrades](/upgrades/) und [Layer-2-Skalierungslösungen](/developers/docs/scaling/) gelöst. Die Technologie steht bereit. Doch wir benötigen einen höheren Grad an Akzeptanz auf Ebene 2, um Web3 allen zugänglich zu machen.
+Wichtige Web3-Funktionen, wie z. B. das Anmelden mit Ethereum, sind bereits für jedermann zum Nulltarif verfügbar. Doch die relativen Transaktionskosten sind für viele noch immer unerschwinglich. Es ist wahrscheinlich, dass Web3 aufgrund der hohen Transaktionsgebühren in weniger wohlhabenden Entwicklungsländern womöglich weniger genutzt wird. Bei Ethereum werden diese Herausforderungen durch [die Roadmap](/roadmap/) und [Layer-2-Skalierungslösungen](/developers/docs/scaling/) gelöst. Die Technologie steht bereit. Doch wir benötigen einen höheren Grad an Akzeptanz auf Ebene 2, um Web3 allen zugänglich zu machen.
 
 ### Benutzererfahrung {#user-experience}
 
@@ -111,7 +125,7 @@ Die technische Hürde für den Einstieg in die Nutzung von Web3 ist derzeit zu h
 
 ### Bildung {#education}
 
-Das Web3 führt neue Paradigmen ein, für die es erforderlich ist, andere Denkmuster als die im Web2.0 verwendeten zu erlernen. Eine ähnliche Aufklärungskampagne fand statt, als das Web1.0 in den späten 1990er Jahren an Popularität gewann. Die Befürworter des World Wide Web nutzten eine Reihe von Aufklärungstechniken, um die Öffentlichkeit aufzuklären, von einfachen Metaphern (die Datenautobahn, Browser, Surfen im Web) bis hin zu [TV-Übertragungen](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 ist nicht schwierig, es ist einfach anders. Aufklärungsinitiativen, die Web2-Nutzer über diese Web3-Paradigmen informieren, sind für den Erfolg von entscheidender Bedeutung.
+Web3 führt neue Paradigmen ein, für die es erforderlich ist, andere Denkmuster als die im Web2.0 verwendeten zu erlernen. Eine ähnliche Aufklärungskampagne fand statt, als das Web1.0 in den späten 1990er Jahren an Popularität gewann. Die Befürworter des World Wide Web nutzten eine Reihe von Aufklärungstechniken, um die Öffentlichkeit aufzuklären, von einfachen Metaphern (die Datenautobahn, Browser, Surfen im Web) bis hin zu [TV-Übertragungen](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 ist nicht schwierig, es ist einfach anders. Aufklärungsinitiativen, die Web2-Nutzer über diese Web3-Paradigmen informieren, sind für den Erfolg von entscheidender Bedeutung.
 
 Ethereum.org trägt zur Aufklärung über Web3 durch unser [Übersetzungsprogramm](/contributing/translation-program/) bei, das darauf abzielt, wichtige Ethereum-Inhalte in so viele Sprachen wie möglich zu übersetzen.
 
@@ -127,7 +141,7 @@ Wir stehen erst am Anfang der Entwicklung eines besseren Internets mit Web3, doc
 
 ## Wie kann ich mich einbringen {#get-involved}
 
-- [Wählen Sie eine Wallet](/wallets/)
+- [Eine Wallet wählen](/wallets/)
 - [Eine Community finden](/community/)
 - [Web3-Anwendungen erkunden](/dapps/)
 - [Einer DAO beitreten](/dao/)
@@ -135,7 +149,7 @@ Wir stehen erst am Anfang der Entwicklung eines besseren Internets mit Web3, doc
 
 ## Weiterführende Informationen {#further-reading}
 
-Web3 ist nicht starr definiert. Zahlreiche Community-Teilnehmer haben unterschiedliche Ansichten dazu. Hier sind einige davon:
+Web3 ist nicht starr definiert. Zahlreiche Community-Teilnehmer haben unterschiedliche Ansichten dazu. Hier sind einige von ihnen:
 
 - [Was ist Web3? Das dezentralisierte Internet der Zukunft erklärt](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
 - [Sinnhaftigkeit von Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) _, Josh Stark_
@@ -143,3 +157,5 @@ Web3 ist nicht starr definiert. Zahlreiche Community-Teilnehmer haben unterschie
 - [Warum Dezentralisierung wichtig ist](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Chris Dixon_
 - [Die Web3-Landschaft](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [Die Web3-Debatte](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+
+<QuizWidget quizKey="web3" />

@@ -4,12 +4,11 @@ description: An overview of how to get started solo staking your ETH
 lang: en
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../assets/staking/leslie-solo.png
 alt: Leslie the rhino on her own computer chip.
 sidebarDepth: 2
 summaryPoints:
-  - Receive maximum rewards directly from the protocol (including unburnt fees after The Merge) for keeping your validator properly functioning and online
+  - Receive maximum rewards directly from the protocol for keeping your validator properly functioning and online
   - Run home hardware and personally add to the security and decentralization of the Ethereum network
   - Remove trust, and never give up control of the keys to your funds
 ---
@@ -17,6 +16,8 @@ summaryPoints:
 ## What is solo staking? {#what-is-solo-staking}
 
 Solo staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
+
+**Solo staking increases the decentralization of the Ethereum network**, making Ethereum more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. Solo staking is the best staking option for securing Ethereum.
 
 An Ethereum node consists of both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
 
@@ -26,18 +27,12 @@ A solo staker receives rewards directly from the protocol for keeping their vali
 
 ## Why stake solo? {#why-stake-solo}
 
-Solo staking comes with more responsibility, but provides you with maximum control over your funds and staking setup.
+Solo staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
 <CardGrid>
-  <Card title="Earn fresh ETH" emoji="💸">
-    Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut.
-  </Card>
-  <Card title="Full control" emoji="🎛️">
-    Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices.
-  </Card>
-  <Card title="Network security" emoji="🔐">
-    Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol.
-  </Card>
+  <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Network security" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Considerations before staking solo {#considerations-before-staking-solo}
@@ -45,32 +40,37 @@ Solo staking comes with more responsibility, but provides you with maximum contr
 As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
 
 <InfoGrid>
-  <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
-    When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
-    The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator. 
-  </ExpandableCard>
-  <ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required.
-    It also requires very basic hardware setup, and some understanding of minimum recommended specs.
-  </ExpandableCard>
-  <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
-    Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
-    <p style={{marginTop: "1rem"}}><a href="/security">Ethereum security and scam prevention</a></p>
-  </ExpandableCard>
-  <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After the Shanghai upgrade you will be able to freely withdraw portions or all of your stake if you wish.
-  </ExpandableCard>
-  <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
-    Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
-  </ExpandableCard>
-  <ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>. Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but a minimum of 10 Mb/s up and down is recommended.
-  </ExpandableCard>
-  <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
-    
-    <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">More on slashing and validator lifecycle</a></p>
-  </ExpandableCard>
+<ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
+When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
+
+The more you understand about the software you're running and how proof-of-stake works, the less risky it will be as a staker, and the easier it will be to fix any issues that may arise along the way as a node operator.
+</ExpandableCard>
+
+<ExpandableCard title="Comfortable with computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+Node setup requires a reasonable comfort level when working with computers, although new tools are making this easier over time. Understanding of the command-line interface is helpful, but no longer strictly required.
+
+It also requires very basic hardware setup, and some understanding of minimum recommended specs.
+</ExpandableCard>
+
+<ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
+Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.{' '}
+
+<a href="/security/">Ethereum security and scam prevention</a>
+</ExpandableCard>
+
+<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
+</ExpandableCard>
+
+<ExpandableCard title="Reliable uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Your rewards are proportional to the time your validator is online and properly attesting. Downtime incurs penalties proportional to how many other validators are offline at the same time, but <a href="#faq">does not result in slashing</a>. Bandwidth also matters, as rewards are decreased for attestations that are not received in time. Requirements will vary, but a minimum of 10 Mb/s up and down is recommended.
+</ExpandableCard>
+
+<ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
+Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
+
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> More on slashing and validator lifecycle</a>
+</ExpandableCard>
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -79,19 +79,17 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 
 <StakingHowSoloWorks />
 
-If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Be aware that until the planned Shanghai upgrade _withdrawing_ those funds will not be possible.
+While active you will earn ETH rewards, which will be periodically deposited into your withdrawal address.
 
-After Shanghai, users will be able to withdraw their rewards as well as their stake if they choose.
+If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Your remaining balance will then be withdrawn to the withdrawal address that you designate during setup.
+
+[More on staking withdrawals](/staking/withdrawals/)
 
 ## Get started on the Staking Launchpad {#get-started-on-the-staking-launchpad}
 
 The Staking Launchpad is an open source application that will help you become a staker. It will guide you through choosing your clients, generate your keys and depositing your ETH to the staking deposit contract. A checklist is provided to make sure you've covered everything to get your validator set up safely.
 
 <StakingLaunchpadWidget />
-
-<InfoBanner emoji=":panda:" isWarning>
-<strong>Note for existing stakers:</strong> The Merge is approaching, which brings a few changes since staking was launched. Make sure you're prepared with the <a href="https://launchpad.ethereum.org/en/merge-readiness">Merge readiness checklist</a> over on the Staking Launchpad.
-</InfoBanner>
 
 ## What to consider with node and client setup tools {#node-tool-considerations}
 
@@ -105,13 +103,13 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
-<InfoBanner emoji="⚠️" isWarning>
-Please note the importance of choosing a <a href="/developers/docs/nodes-and-clients/client-diversity/">minority client</a> as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style="text-transform: uppercase;">"multi-client."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### Node tools
 
 <StakingProductsCardGrid category="nodeTools" />
+
+Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style="text-transform: uppercase;">"multi-client."</em>
 
 #### Key Generators
 
@@ -125,18 +123,20 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 
 <StakingGuides />
 
-## FAQ {#faq}
+## Frequently asked questions {#faq}
 
 These are a few of the most common questions about staking that are worth knowing about.
 
 <ExpandableCard title="What is a validator?">
-A <em>validator</em> is a virtual entity that lives on the Beacon Chain and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A <em>validator client</em> is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+
+A <em>validator</em> is a virtual entity that lives on Ethereum and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A <em>validator client</em> is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+
 </ExpandableCard>
 
 <ExpandableCard title="Can I deposit more than 32 ETH?">
 Each key-pair associated with a validator requires exactly 32 ETH to be activated. More ETH deposited to a single set of keys does not increase rewards potential, as each validator is limited to an <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effective balance</a> of 32 ETH. This means that staking is done in 32 ETH increments, each with it's own set of keys and balance.
 
-Do not deposit more than 32 ETH for a single validator. It will not increase your rewards, and it will be locked until the planned Shanghai update.
+Do not deposit more than 32 ETH for a single validator. It will not increase your rewards. If a withdrawal address has been set for the validator, excess funds over 32 ETH will be automatically withdrawn to this address during the next <a href="/staking/withdrawals/#validator-sweeping">validator sweep</a>.
 
 If solo staking seems too demanding for you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
 </ExpandableCard>
@@ -158,8 +158,10 @@ Running a supermajority client (any client used by over 2/3 the network) also ho
 
 Equivalent bugs in a <em>minority client would never finalize</em> and thus would never result in a surround vote, and would simply result in inactivity penalties, <em>not slashing</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Learn more about the important of running a minority client.</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Learn more about slashing prevention</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Learn more about the importance of running a minority client.</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Learn more about slashing prevention</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="Which client is best?">
@@ -176,20 +178,19 @@ Although a virtual private server (VPS) can be used as a replacement to home har
 The more validator clients running on a single centralized cloud storage solution, the more dangerous it becomes for these users. Any event that takes these providers offline, whether by an attack, regulatory demands, or just power/internet outages, will result in every validator client that relies on this server to go offline at the same time.
 
 Offline penalties are proportional to how many others are offline at the same time. Using a VPS greatly increases the risk that offline penalties will be more severe, and increases your risk of quadratic leaking or slashing in the event the outage is large enough. To minimize your own risk, and the risk to the network, users are strongly encouraged to obtain and operate their own hardware.
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">More on rewards and penalties</a>
 </ExpandableCard>
 
-<ExpandableCard title="Do I need to do anything before The Merge?">
-Stakers currently running a consensus layer client (Beacon Chain) will also be required to run an execution layer client after The Merge. The new Engine API will be used to interface between the two layers, requiring a JWT secret. If you currently run a Beacon Chain without an execution layer client, you will need to sync the execution layer before The Merge to stay in sync with the network.
+<ExpandableCard title="How do I unlock my rewards or get my ETH back?">
 
-The Merge will also bring unburnt transaction fees to validators. These fees do not accumulate in the balance associated with the validator keys but instead can be directed to a regular Ethereum address of your choice. To receive your tips (priority fees) from proposed blocks, you should update your client settings with the address you want your tips sent to.
+Withdrawals of any kind from the Beacon Chain require withdrawal credentials to be set.
 
-Links to individual client documentation and additional information can be found on the Merge readiness checklist over on the Launchpad.
+New stakers set this at time of key generation and deposit. Existing stakers who did not already set this can upgrade their keys to support this functionality.
 
-<ButtonLink to="https://launchpad.ethereum.org/merge-readiness/">
-Merge readiness checklist
-</ButtonLink>
+Once withdrawal credentials are set, reward payments (accumulated ETH over the initial 32) will be periodically distributed to the withdrawal address automatically.
+
+To unlock and receive your entire balance back you must also complete the process of exiting your validator.
+
+<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 ## Further reading {#further-reading}
@@ -200,4 +201,5 @@ Merge readiness checklist
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
-- [Rewards and Penalties on Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_
+
+<QuizWidget quizKey="solo-staking" />

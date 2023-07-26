@@ -4,7 +4,6 @@ description: Gambaran umum tentang DeFi di Ethereum
 lang: id
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Logo Eth yang terbuat dari batu bata lego.
 sidebarDepth: 2
@@ -333,13 +332,11 @@ DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan ber
 
 ### Data DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
 ### Artikel DeFi {#defi-articles}
 
-- [Apa itu Keuangan Terdesentralisasi?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, diperbarui secara teratur_
 - [Panduan bagi pemula tentang DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 Januari 2020_
 
 ### Video {#videos}

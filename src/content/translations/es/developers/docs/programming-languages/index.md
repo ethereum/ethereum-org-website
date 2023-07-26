@@ -2,7 +2,6 @@
 title: Lenguajes de programación
 description:
 lang: es
-sidebar: true
 ---
 
 Una idea errónea común es que los desarrolladores deben escribir contratos inteligentes para construir sobre Ethereum. Esto es falso. Una de las bellezas de la red y la comunidad Ethereum es que puedes [participar](/community/) en cualquier lenguaje de programación.

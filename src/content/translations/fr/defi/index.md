@@ -4,7 +4,6 @@ description: Un aperçu de la DeFi sur Ethereum
 lang: fr
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Un logo Eth fait en briques lego.
 sidebarDepth: 2
@@ -234,8 +233,7 @@ Avec le trading centralisé, vous devez déposer vos actifs avant les échanges 
 
 Il existe des outils de gestion de fonds sur Ethereum qui vous permettront de développer votre portefeuille en vous appuyant sur la stratégie de votre choix. C'est automatique, ouvert à tous, et personne ne pourra vous demander de commission.
 
-Voilà un bon exemple [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). C'est un fond qui se rééquilibre automatiquement pour garantir qu'il inclue toujours
-les meilleurs DeFi tokens par capitalisation boursière. Pas besoin de gérer les détails et vous pouvez retirer les fonds quand bon vous semble.
+Voilà un bon exemple [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). C'est un fond qui se rééquilibre automatiquement pour garantir qu'il inclue toujours [les meilleurs DeFi tokens par capitalisation boursière](https://www.coingecko.com/en/defi). Pas besoin de gérer les détails et vous pouvez retirer les fonds quand bon vous semble.
 
 <ButtonLink to="/dapps/?category=finance">
   Voir les applications d'investissement dapps
@@ -334,20 +332,19 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
 
 ### Données DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### Articles DeFi {#defi-articles}
 
-- [What is Decentralized Finance?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) _ETHHub, mis à jour régulièrement_
-- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) _Sid Coelho-Prabhu, 6 janvier 2020_
+- [Guide de la DeFi pour débutants](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) - _Sid Coelho-Prabhu, 6 janvier 2020_
 
 ### Vidéos {#videos}
 
 - [Finematics - decentralized finance education](https://finematics.com/) _vidéos de DeFi_
-- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi basics: Everything you need to know to get started in this occasionally baffling space_
-- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _What is DeFi?_
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Les bases de la DeFi : Tout ce que vous avez besoin de savoir pour commencer dans cet espace parfois déroutant_
+- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _Qu'est-ce que DeFi?_
 
 ### Communautés {#communities}
 

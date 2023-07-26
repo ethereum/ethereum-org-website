@@ -2,7 +2,6 @@
 title: Inhaltsressourcen hinzufügen
 lang: de
 description: Unsere Kriterien für die Auflistung von Inhaltsressourcen auf ethereum.org
-sidebar: true
 ---
 
 # Inhaltsressourcen hinzufügen {#adding-content-resources}
@@ -11,7 +10,7 @@ Ethereum vollständig abzubilden, ist wegen des Umfangs nicht möglich. Daher ve
 
 Wenn Sie eine Ressource kennen, die Ihrer Meinung nach nützlich ist, können Sie sie an geeigneter Stelle zur Hinzufügung vorschlagen.
 
-## So treffen wir Entscheidungen {#how-we-decide}
+## Die Entscheidungsfindung {#how-we-decide}
 
 Die Lernressourcen werden anhand der folgenden Kriterien bewertet:
 
@@ -28,6 +27,6 @@ Die Lernressourcen werden anhand der folgenden Kriterien bewertet:
 
 Wenn Sie eine Inhaltsressource zu ethereum.org hinzufügen möchten und diese die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request">
   Eintrag erstellen
 </ButtonLink>

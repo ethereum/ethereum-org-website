@@ -3,7 +3,6 @@ title: Token integration checklist
 description: A checklist of things to consider when interacting with tokens
 author: "Trailofbits"
 lang: en
-sidebar: true
 tags: ["solidity", "smart contracts", "security", "tokens"]
 skill: intermediate
 published: 2020-08-13

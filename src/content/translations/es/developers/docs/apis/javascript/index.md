@@ -2,7 +2,6 @@
 title: Bibliotecas de API de JavaScript
 description: Una introducción a las bibliotecas de cliente de JavaScript, que te permiten interactuar con la blockchain desde tu aplicación.
 lang: es
-sidebar: true
 ---
 
 Para que una aplicación web interactúe con el blockchain de Ethereum (es decir, para que lea datos de blockchain y/o envíe transacciones a la red), este debe conectarse a un nodo de Ethereum.
@@ -232,14 +231,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Funciones de utilidad de Web3js](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Funciones de utilidad de Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funciones de utilidad de Ethers](https://docs.ethers.io/v5/api/utils/)
 
 ## Bibliotecas disponibles {#available-libraries}
 
 **Web3.js:** **_API de JavaScript de Ethereum._**
 
-- [Documentación](https://web3js.readthedocs.io/en/1.0/)
+- [Documentación](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js:** **_ Implementación completa de la cartera de Ethereum y utilidades en JavaScript y TypeScript._**
@@ -266,7 +265,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3:** **_Wrapper alrededor de Web3.js con reintentos automáticos y API mejoradas._**
 
-- [Documentación](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Documentación](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## Más información {#further-reading}

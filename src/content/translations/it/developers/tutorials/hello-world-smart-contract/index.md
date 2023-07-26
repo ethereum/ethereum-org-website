@@ -11,7 +11,6 @@ tags:
   - "distribuzione"
 skill: beginner
 lang: it
-sidebar: true
 published: 2021-03-31
 ---
 
@@ -23,11 +22,11 @@ Se in qualsiasi momento hai domande, non esitare a contattarci nel [Discord di A
 
 ## Fase 1: connettersi alla rete di Ethereum {#step-1}
 
-Esistono molti modi per effettuare richieste alla catena di Ethereum. Per semplicità, ci serviremo di un account gratuito su Alchemy, una piattaforma per sviluppatori di blockchain e API che ci consentirà di comunicare con la catena di Ethereum senza aver bisogno di eseguire dei nostri nodi. La piattaforma offre anche strumenti di analisi e monitoraggio di cui ci serviremo in questo tutorial per comprendere al meglio l'andamento della distribuzione del nostro smart contract. Se non sei già in possesso di un account Alchemy gratuito, [puoi iscriverti gratuitamente qui](https://dashboard.alchemyapi.io/signup).
+Esistono molti modi per effettuare richieste alla catena di Ethereum. Per semplicità, ci serviremo di un conto gratuito su Alchemy, una piattaforma per sviluppatori di blockchain e API che ci consentirà di comunicare con la catena di Ethereum senza dover operare i nostri nodi. La piattaforma offre anche strumenti di analisi e monitoraggio di cui ci serviremo in questo tutorial per comprendere al meglio l'andamento della distribuzione del nostro smart contract. Se non possiedi già un conto di Alchemy, [puoi iscriverti gratuitamente qui](https://dashboard.alchemyapi.io/signup).
 
 ## Fase 2: crea la tua app (e chiave API) {#step-2}
 
-Una volta creato un profilo di Alchemy, puoi generare una chiave API creando un'app. Questo ci consentirà di effettuare richieste alla rete di prova di Ropsten. Se non hai familiarità con le reti di prova, dai un'occhiata a [questa pagina](/developers/docs/networks/).
+Una volta creato un conto di Alchemy, puoi generare una chiave API creando un'app. Questo ci consentirà di effettuare richieste alla rete di prova di Ropsten. Se non hai familiarità con le reti di prova, dai un'occhiata a [questa pagina](/developers/docs/networks/).
 
 1.  Vai alla pagina “Crea App” nella tua dashboard di Alchemy passando su “App” nella barra di navigazione e cliccando “Crea App”
 
@@ -37,23 +36,23 @@ Una volta creato un profilo di Alchemy, puoi generare una chiave API creando un'
 
 ![Vista della creazione dell'app Hello world](./create-app-view-hello-world.png)
 
-3. Clicca “Create app” ed è tutto! La tua app dovrebbe apparire nella tabella seguente.
+3. Clicca “Create app” ed è tutto! La tua app dovrebbe apparire nella tabella sottostante.
 
-## Fase 3: crea un profilo di Ethereum (indirizzo) {#step-3}
+## Fase 3: Crea un conto di Ethereum (indirizzo) {#step-3}
 
-Per inviare e ricevere transazioni serve un profilo Ethereum. Per questo tutorial, useremo MetaMask, un portafoglio virtuale nel browser per gestire l'indirizzo del tuo profilo Ethereum. Maggiori informazioni sulle [transazioni](/developers/docs/transactions/).
+Per inviare e ricevere le transazioni, necessitiamo di un conto di Ethereum. Per questo tutorial, useremo MetaMask, un portafoglio virtuale nel browser per gestire l'indirizzo del tuo conto di Ethereum. Maggiori informazioni sulle [transazioni](/developers/docs/transactions/).
 
-Puoi scaricare e creare gratuitamente un account MetaMask [qui](https://metamask.io/download.html). Quando crei un profilo, o se ne hai già uno, assicurati di passare alla "Rete di Prova Ropsten" in alto a destra (per non avere a che fare con soldi reali).
+Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download.html). Quando crei un conto, o se ne possiedi già uno, assicurati di passare alla "Rete di Prova di MetaMask" in alto a destra (così da non avere a che fare con denaro reale).
 
 ![esempio ropsten metamask](./metamask-ropsten-example.png)
 
 ## Fase 4: aggiungi ether da un Faucet {#step-4}
 
-Per poter distribuire il nostro smart contract alla rete di prova, avremo bisogno di di ETH finti. Per ottenere ETH puoi andare al [faucet di Ropsten](https://faucet.dimensions.network/) e inserire l'indirizzo del tuo profilo di Ropsten, poi clicca su “Invia ETH a Ropsten. A causa del traffico in rete, potrebbe essere necessario un po' di tempo per ricevere i tuoi ETH fittizi. Subito dopo dovresti vedere gli ETH nel tuo account MetaMask!
+Per poter distribuire il nostro smart contract alla rete di prova, avremo bisogno di di ETH finti. Per ottenere ETH puoi andare al [faucet di Ropsten](https://faucet.dimensions.network/) e inserire l'indirizzo del tuo conto di Ropsten, cliccando poi su “Invia ETH a Ropsten" A causa del traffico in rete, potrebbe essere necessario un po' di tempo per ricevere i tuoi ETH fittizi. Subito dopo, dovresti vedere gli ETH nel tuo conto di MetaMask!
 
 ## Fase 5: controlla il saldo {#step-5}
 
-Per ricontrollare che ci sia il saldo, facciamo una richiesta [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando lo [strumento compositore di Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Questo restituirà l'importo di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo account di MetaMask e aver cliccato “Invia richiesta”, dovresti vedere una risposta come questa:
+Per ricontrollare che ci sia il saldo, facciamo una richiesta [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando lo [strumento compositore di Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Questo restituirà l'importo di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo conto di MetaMask e aver cliccato su “Invia Richiesta”, dovresti vedere una risposta come questa:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
@@ -109,7 +108,7 @@ Approva il package.json e siamo pronti!
 
 ## Fase 7: scarica [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}
 
-Hardhat è un ambiente di sviluppo per compilare, distribuire, testare ed effettuare il debug del tuo software di Ethereum. Aiuta gli sviluppatori nella creazione di smart contract e di dApps localmente, prima di distribuirli alla catena dal vivo.
+Hardhat è un ambiente di sviluppo per compilare, distribuire, testare ed effettuare il debug del tuo software di Ethereum. Aiuta gli sviluppatori nella costruzione di contratti intelligenti e dapp localmente, prima di distribuirli alla catena.
 
 Nel nostro progetto `hello-world` esegui:
 
@@ -202,7 +201,7 @@ Questo è uno smart contract semplicissimo che memorizza un messaggio alla creaz
 
 ## Fase 11: connetti MetaMask e Alchemy al tuo progetto {#step-11}
 
-Ora che abbiamo creato un portafoglio MetaMask, un profilo di Alchemy e scritto il nostro smart contract, è il momento di collegare questi tre elementi.
+Abbiamo creato un portafoglio di MetaMask, un conto di Alchemy e scritto il nostro contratto intelligente; è arrivato il momento di collegarli.
 
 Ogni transazione inviata dal tuo portafoglio virtuale richiede una firma tramite la tua chiave privata unica. Per fornire al nostro programma quest'autorizzazione, possiamo memorizzare in sicurezza la nostra chiave privata (e la chiave API di Alchemy) in un file ambientale.
 
@@ -232,7 +231,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Per connetterli realmente al nostro codice, faremo riferimento a queste variabili nel nostro file `hardhat.config.js` nella fase 13.
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 Non eseguire il commit di <code>.env</code>! Assicurati di non condividere o esporre mai il tuo file <code>.env</code> con nessuno, poiché così facendo comprometteresti i tuoi segreti. Se stai usando il controllo di versione, aggiungi il tuo <code>.env</code> a un file <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
@@ -344,7 +343,7 @@ Se andiamo a [Ropsten etherscan](https://ropsten.etherscan.io/) e cerchiamo l'in
 
 ![contratto etherscan](./etherscan-contract.png)
 
-L'indirizzo `Da` dovrebbe corrispondere all'indirizzo del tuo account di MetaMask mentre l'indirizzo "A" indichrà "Creazione del Contratto", ma se clicchiamo nella transazione vedremo l'indirizzo del nostro contratto nel campo `A`:
+L'indirizzo `From` dovrebbe corrispondere all'indirizzo del tuo conto di MetaMask e, l'indirizzo To indicherà la "Creazione del Contratto"; ma cliccando sulla transazione, vedremo l'indirizzo del nostro contratto nel campo `To`:
 
 ![transazione etherscan](./etherscan-transaction.png)
 

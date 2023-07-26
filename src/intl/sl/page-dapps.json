@@ -54,7 +54,6 @@
   "page-dapps-dapp-description-cryptovoxels": "Ustvarjajte umetnostne galerije, postavljajte trgovine in kupujte zemljišča – virtualni svet na Ethereumu.",
   "page-dapps-dapp-description-dark-forest": "Osvajajte planete v neskončnem vesolju, ki je postopkovno generirano in kriptografsko določeno.",
   "page-dapps-dapp-description-decentraland": "Zbirajte virtualna zemljišča v in trgujte z njimi v virtualnem svetu, ki ga lahko raziskujete.",
-  "page-dapps-dapp-description-dydx": "Odprite kratke pozicije ali pozicije z največ 10-kratnim vzvodom. Na voljo so tudi kreditiranje in posojila.",
   "page-dapps-dapp-description-ens": "Uporabnikom prijazna imena za naslove Ethereum in decentralizirana spletna mesta.",
   "page-dapps-dapp-description-foundation": "Vlagajte v edinstvene izdaje digitalnih umetnin in z izdelki trgujte z drugimi kupci.",
   "page-dapps-dapp-description-gitcoin": "Zaslužite kriptovalute s sodelovanjem na odprtokodni programski opremi.",
@@ -94,7 +93,6 @@
   "page-dapps-rotki-logo-alt": "Logotip Rotki",
   "page-dapps-desc": "Poiščite aplikacijo Ethereum in jo preizkusite.",
   "page-dapps-doge-img-alt": "Slika psa »doge«, ki uporablja računalnik",
-  "page-dapps-dydx-logo-alt": "Logotip dYdX",
   "page-dapps-editors-choice-dark-forest": "Igrajte proti drugim in osvajajte planete ter preizkusite vrhunsko tehnologijo za razširljivost in zasebnost Ethereuma. Morda je primernejše za tiste, ki že poznajo Ethereum.",
   "page-dapps-editors-choice-description": "Nekaj decentraliziranih aplikacij, ki jih ekipa ethereum.org trenutno obožuje. Spodaj raziščite več aplikacij.",
   "page-dapps-editors-choice-foundation": "Vlagajte v kulturo. Kupujte, trgujte in prodajajte edinstvene digitalne umetnine in modne izdelke nekaterih neverjetnih umetnikov, glasbenikov in blagovnih znamk.",
@@ -202,5 +200,8 @@
   "page-dapps-what-are-dapps": "Kaj so dec. aplikacije?",
   "page-dapps-more-on-defi-button": "Več o decentraliziranih financah",
   "page-dapps-more-on-nft-button": "Več o tokeniziranih zbirateljskih predmetih",
-  "page-dapps-more-on-nft-gaming-button": "Več o tokeniziranih predmetih v igrah"
+  "page-dapps-more-on-nft-gaming-button": "Več o tokeniziranih predmetih v igrah",
+  "foundation": "Fundacija",
+  "transaction-fees": "Kaj so provizije za transakcijo?",
+  "page-wallets-get-some": "Pridobite nekaj ETH"
 }

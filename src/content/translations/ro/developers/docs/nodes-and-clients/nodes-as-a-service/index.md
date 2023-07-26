@@ -2,7 +2,6 @@
 title: Noduri ca serviciu
 description: O prezentare generală pentru începători a serviciilor nodurilor, a avantajelor și a dezavantajelor acestora și a furnizorilor cunoscuţi.
 lang: ro
-sidebar: true
 sidebarDepth: 2
 ---
 

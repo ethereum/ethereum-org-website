@@ -54,7 +54,6 @@
   "page-dapps-dapp-description-cryptovoxels": "Creeu galeries d'art, construïu botigues i compreu terrenys: un món virtual a Ethereum.",
   "page-dapps-dapp-description-dark-forest": "Conqueriu planetes en un univers infinit, criptogràficament específic i generat procedimentalment.",
   "page-dapps-dapp-description-decentraland": "Col·leccioneu i comercialitzeu amb terrenys virtuals en un món virtual que podeu explorar.",
-  "page-dapps-dapp-description-dydx": "Obriu posicions curtes o profitoses fins a 10x. També es pot prestar i demanar prestat.",
   "page-dapps-dapp-description-ens": "Noms fàcils d'utilitzar per a adreces Ethereum i llocs web descentralitzats.",
   "page-dapps-dapp-description-foundation": "Invertiu en edicions úniques d'obres d'art digitals i peces comercials amb altres compradors.",
   "page-dapps-dapp-description-gitcoin": "Guanyeu criptomonedes treballant en un programari de codi obert.",
@@ -96,7 +95,6 @@
   "page-dapps-rotki-logo-alt": "Logotip de Rotki",
   "page-dapps-desc": "Trobeu una aplicació Ethereum per provar.",
   "page-dapps-doge-img-alt": "Il·lustració d'un gos utilitzant un ordinador",
-  "page-dapps-dydx-logo-alt": "Logotip de dYdX",
   "page-dapps-editors-choice-dark-forest": "Jugueu contra altres persones per conquerir planetes i proveu la tecnologia puntera d'escalada/privacitat d'Ethereum. Potser una per als qui ja estan familiaritzats amb Ethereum.",
   "page-dapps-editors-choice-description": "Unes quantes dapps que agraden molt a l'equip d'ethereum-org. Exploreu més dapps a continuació.",
   "page-dapps-editors-choice-foundation": "Invertiu en cultura. Compreu, comercieu i veneu obres d'art digitals i moda úniques, d'artistes, músics i marques increïbles.",
@@ -204,5 +202,8 @@
   "page-dapps-what-are-dapps": "Què són les dapps?",
   "page-dapps-more-on-defi-button": "Més informació sobre finances descentralitzades",
   "page-dapps-more-on-nft-button": "Més informació sobre col·leccionables tokenitzats",
-  "page-dapps-more-on-nft-gaming-button": "Més informació sobre objectes de joc tokenitzats"
+  "page-dapps-more-on-nft-gaming-button": "Més informació sobre objectes de joc tokenitzats",
+  "foundation": "Fundació",
+  "transaction-fees": "Què són les taxes per transacció?",
+  "page-wallets-get-some": "Aconseguiu ETH"
 }

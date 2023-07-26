@@ -2,7 +2,6 @@
 title: ERC-4626 Tokenized Vault Standard
 description: A standard for yield bearing vaults.
 lang: en
-sidebar: true
 ---
 
 ## Introduction {#introduction}
@@ -135,7 +134,7 @@ This function burns `shares` from `owner` and send exactly `assets` token from t
 function maxRedeem(address owner) public view returns (uint256)
 ```
 
-This function returns the maximum amount of shares that can be redeem from the `owner` balance through a [`redeem`](#redeem) call.
+This function returns the maximum amount of shares that can be redeemed from the `owner` balance through a [`redeem`](#redeem) call.
 
 #### previewRedeem {#previewredeem}
 
@@ -143,7 +142,7 @@ This function returns the maximum amount of shares that can be redeem from the `
 function previewRedeem(uint256 shares) public view returns (uint256)
 ```
 
-This function allows users to simulate the effects of their redeemption at the current block.
+This function allows users to simulate the effects of their redemption at the current block.
 
 #### redeem {#redeem}
 
@@ -151,7 +150,7 @@ This function allows users to simulate the effects of their redeemption at the c
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-This function redeems a specific number of `shares` from `owner` and send `assets` of underlying token from the vault to `receiver`.
+This function redeems a specific number of `shares` from `owner` and sends `assets` of underlying token from the vault to `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -186,7 +185,7 @@ event Deposit(
 
 Where `sender` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
-#### Widthdraw Event
+#### Withdraw Event
 
 **MUST** be emitted when shares are withdrawn from the vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
 

@@ -2,7 +2,6 @@
 title: Майнинг
 description: Объяснение того, как работает майнинг Ethereum и как он помогает сохранять безопасность и децентрализованность Ethereum.
 lang: ru
-sidebar: true
 incomplete: true
 ---
 
@@ -61,8 +60,6 @@ incomplete: true
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## Дополнительные ресурсы {#further-reading}
-
-- [Что такое майнинг в Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) — _EthHub_
 
 ## Связанные инструменты {#related-tools}
 

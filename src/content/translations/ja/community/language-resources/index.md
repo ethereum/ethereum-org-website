@@ -1,7 +1,6 @@
 ---
 title: 言語リソース
 description: イーサリアムに関する英語以外のリソース
-sidebar: true
 lang: ja
 ---
 
@@ -34,7 +33,7 @@ ethereum.org は[言語ページ](/languages)に記載されている、40 以�
 
 **教育**
 
-- [web3dev](https://www.web3dev.com.br/) - Web3 開発者向けコンテンツハブと Discord コミュニティ
+- [web3dev](https://www.web3dev.com.br/) - Web3 デベロッパー向けコンテンツハブと Discord コミュニティ
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - Web3 と分散型金融(DeFi)に関するリソース
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - 「初心者のためのイーサリアム」や「分散型金融(DeFi)」などの暗号通貨ニュースと教育
 - [CriptoAtivos](http://www.criptoativos.wiki.br/) - 暗号通貨、教育、ブログ
@@ -45,7 +44,7 @@ ethereum.org は[言語ページ](/languages)に記載されている、40 以�
 
 **一般リソース**
 
-- [Ethereum.cn](https://www.ethereum.cn/) - コンセンサスレイヤーのアップグレード、すべてのコア開発者会議メモ、レイヤー 2 など、コミュニティにより維持されているコンテンツ
+- [Ethereum.cn](https://www.ethereum.cn/) - コンセンサスレイヤーのアップグレード、すべてのコアデベロッパー会議メモ、レイヤー 2 など、コミュニティにより維持されているコンテンツ
 - [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - 基本から高度なトピックまでイーサリアムのすべて
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - イーサリアム、分散型金融(DeFi)、非代替性トークン(NFT)、Web3 関連のコミュニティにより維持されているコンテンツ
 - [123ETH](https://123eth.org/) -イーサリアムエコシステムのポータル
@@ -58,15 +57,22 @@ ethereum.org は[言語ページ](/languages)に記載されている、40 以�
 - [PrimitivesLane](https://www.primitiveslane.org/) - ブロックチェーン技術に焦点を当てた非営利研究グループ
 - [Ethereum Translation Community CN](https://www.notion.so/Ethereum-Translation-Community-CN-05375fe0a94c4214acaf90f42ba40171) - イーサリアム教育コンテンツの翻訳に専念するコミュニティ
 
-**開発者向け**
+**デベロッパー向け**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - 主流の分散型アプリ(Dapp)プロジェクトを研究し、毎週意見やコメントを共有する学習グループ
-- [LearnBlockchain](https://learnblockchain.cn/) - 開発者向けコミュニティ、ブロックチェーン技術に関する情報共有
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - 主流の分散型アプリ(Dapp)プロジェクトを研究し、考えやコメントを毎週共有する学習グループ
+- [LearnBlockchain](https://learnblockchain.cn/) - デベロッパー向けコミュニティ、ブロックチェーン技術に関する情報共有
 
 **暗号技術研究者向け**
 
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - 暗号技術、セキュリティなどに関する WeChat アカウント
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - ZK(ゼロ知識証明)技術に関する WeChat アカウント
+
+### チェコ語 {#cs}
+
+- [Gwei.cz](https://gwei.cz) - Web3 に関するローカル コミュニティ、教育コンテンツの作成、オンラインおよび対面イベントの開催
+- [Gwei.cz Příručka](https://prirucka.gwei.cz/) - 初心者向けイーサリアムガイド
+- [DAO Příručka](https://dao.gwei.cz/) - 初心者向け分散型アプリ(Dapp)ガイド
+- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - チェコ語でイーサリアムをマスター
 
 ### フランス語 {#fr}
 
@@ -88,7 +94,11 @@ ethereum.org は[言語ページ](/languages)に記載されている、40 以�
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - イタリア語のイーサリアムポッドキャスト
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - Solidity の使い方
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidity を使ったイーサリアムのスマートコントラクトの書き方
-- [Microsoft Learn (分散型アプリ)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - 非中央集権型アプリケーションを使用したユーザーインターフェイスの作成
+- [Microsoft Learn 分散型アプリ(Dapp)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - 分散型アプリでユーザーインターフェースを作成
+
+### ロシア語 {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) - Web3 ビルダーのための学習スペース
 
 ### スペイン語 {#es}
 
@@ -98,6 +108,7 @@ ethereum.org は[言語ページ](/languages)に記載されている、40 以�
 - [Curso Introduction a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity の基本、はじめてのスマートコントラクト(テストとデプロイ)
 - [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - 実際のスマートコントラクトでよくある脆弱性とセキュリティ問題の理解
 - [Curso Introduction a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - 分散型金融(DeFi)スマートコントラクトが Solidity でどのように動作し、独自の自動マーケットメーカーを作成するかの学習
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - 初心者から上級者までの非技術的なブロックチェーン学習。 暗号技術とイーサリアムに関するすべての学び
 
 ### トルコ語 {#tr}
 

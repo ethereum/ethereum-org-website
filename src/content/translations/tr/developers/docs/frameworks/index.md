@@ -2,7 +2,6 @@
 title: Dapp Geliştirme Çerçeveleri
 description: Çerçevelerin avantajlarını keşfedin ve uygun seçenekleri karşılaştırın.
 lang: tr
-sidebar: true
 ---
 
 ## Çerçevelere giriş {#introduction-to-frameworks}
@@ -42,11 +41,6 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 - [Belgeler](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-
-**Embark -** **_Ethereum, IPFS ve Whisper ile entegre edilmiş bir geliştirme ortamı, test çerçevesi ve diğer araçlar._**
-
-- [Belgeler](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
 
 **Web3j -** **_JVM üzerinde blok zinciri uygulamaları geliştirmek için bir platform._**
 

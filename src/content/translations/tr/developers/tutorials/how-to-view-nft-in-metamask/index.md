@@ -6,12 +6,10 @@ tags:
   - "NFT'ler"
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
   - "değiştirilemez token'lar"
   - "Solidity"
 skill: beginner
 lang: tr
-sidebar: true
 published: 2021-04-22
 ---
 

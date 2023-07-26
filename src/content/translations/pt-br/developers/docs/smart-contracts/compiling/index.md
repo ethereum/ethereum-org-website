@@ -2,7 +2,6 @@
 title: Compilação de contratos inteligentes
 description: Uma explicação do motivo pelo qual você precisa compilar contratos inteligentes e o que a compilação realmente faz.
 lang: pt-br
-sidebar: true
 incomplete: true
 ---
 
@@ -40,7 +39,7 @@ O compilador também produzirá a ** Interface Binária de Aplicação (ABI)** d
 
 A ABI é um arquivo JSON que descreve o contrato implantado e suas funções de contrato inteligente. Ele faz a ponte entre a web2 e web3
 
-A [JavaScript client library](/developers/docs/apis/javascript/) will read the **ABI** in order for you to call on your smart contract in your web app's interface.
+Uma [biblioteca cliente JavaScript](/developers/docs/apis/javascript/) vai ler a **ABI** para que você chame seu contrato inteligente na interface do seu aplicativo da web.
 
 Abaixo está a ABI para o contrato de token ERC-20. Um ERC-20 é um token que você pode negociar no Ethereum.
 
@@ -275,5 +274,5 @@ Abaixo está a ABI para o contrato de token ERC-20. Um ERC-20 é um token que vo
 
 ## Tópicos relacionados {#related-topics}
 
-- [JavaScript client libraries](/developers/docs/apis/javascript/)
+- [Bibliotecas cliente JavaScript](/developers/docs/apis/javascript/)
 - [Máquina virtual Ethereum](/developers/docs/evm/)

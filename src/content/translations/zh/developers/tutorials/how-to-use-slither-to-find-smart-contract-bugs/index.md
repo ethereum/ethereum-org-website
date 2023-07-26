@@ -3,14 +3,13 @@ title: 如何使用Slither发现智能合约漏洞
 description: 如何使用Slither自动发现智能合约中的漏洞
 author: Trailofbits
 lang: zh
-sidebar: true
 tags:
   - "solidity"
-  - "智能合约"
+  - "智能合同"
   - "安全性"
   - "测试"
   - "静态分析"
-skill: advanced
+skill: intermediate
 published: 2020-06-09
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -27,7 +26,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 ## 安装 {#installation}
 
-Slither 需要 Python3.6 及以上版本。 它可以通过 pip 或使用 docker 来安装。
+Slither 需要 Python3.6 及以上版本。 它可以通过 pip 安装或使用 docker。
 
 通过 pip 安装 Slither：
 
@@ -69,7 +68,7 @@ slither project_paths
 
 除了检测器之外，Slither 还通过其[打印机](https://github.com/crytic/slither#printers)和[工具](https://github.com/crytic/slither#tools)提供代码审查功能。
 
-使用[crytic.io](https://crytic.io)以获得对私有探测器和 GitHub 集成功能的访问权限。
+使用 [crytic.io](https://github.com/crytic) 以获得对私有探测器和 GitHub 集成功能的访问权限。
 
 ## 静态分析 {#static-analysis}
 
@@ -104,7 +103,7 @@ function safeAdd(uint a, uint b) pure internal returns(uint){
 
 相应的 AST 如图所示：
 
-![抽象语法树（AST）](../../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/ast.png)
+![抽象语法树（AST）](./ast.png)
 
 Slither 使用由 solc 工具导出的 AST。
 
@@ -133,7 +132,7 @@ print(f'The expression {expression} has a addition: {visitor.result()}')
 
 第二种最常见的代码表示是控制流图（CFG）。 顾名思义，它是一种基于图的表示方法，展现了所有的代码执行路径。 每个节点包含一条或多条指令。 图中的边代表控制流操作（if/then/else，循环，等等）。 我们上一个例子的 CFG 是：
 
-![控制流图（CFG）](../../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/cfg.png)
+![控制流图（CFG）](./cfg.png)
 
 大多数的代码分析技术都是建立在 CFG 的基础表示之上。
 
@@ -186,7 +185,7 @@ for(uint i; i < range; ++){
 
 您的分析将需要知道何时停止。 这里有两种主要策略：1）在每个节点上迭代有限次数，2）通过计算所谓的*定点*。 一个定点基本上意味着分析此节点不会提供任何有意义的信息。
 
-在代码可重入检测器中可以找到使用的定点的示例：Slither 探索这些节点，寻找外部调用、写入和读取存储。 一旦到达某个定点 ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131))，分析器就会停止代码遍历，并通过不同的重入模式来分析结果，了解是否存在代码重入现象。（[reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py)、[reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py)、[reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py))。
+在代码可重入检测器中可以找到使用的定点的示例：Slither 探索这些节点，寻找外部调用、写入和读取存储。 一旦到达某个定点 ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131))，分析器就会停止代码遍历，并通过不同的重入模式来分析结果，了解是否存在代码重入现象。（[reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py)、[reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py)、[reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)）。
 
 使用高效的定点计算方法编写分析，需要很好地理解分析是如何传播其信息的。
 

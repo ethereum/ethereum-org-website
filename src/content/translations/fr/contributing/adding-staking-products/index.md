@@ -2,14 +2,13 @@
 title: Ajout de produits ou services de mise en jeu
 description: Les conditions générales que nous appliquons pour ajouter des produits ou des services de mise en jeu sur ethereum.org
 lang: fr
-sidebar: true
 ---
 
 # Ajouter des produits ou services de mise en jeu {#adding-staking-products-or-services}
 
 Nous souhaitons nous assurer de lister les meilleures ressources possibles tout en préservant la sécurité et la confiance des utilisateurs.
 
-Toute personne est libre de suggérer l'ajout de produits ou de services mis en jeu sur ethereum.org. S'il en existe que nous avons manqué, **[merci de bien vouloir les suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md) !**
+Toute personne est libre de suggérer l'ajout de produits ou de services mis en jeu sur ethereum.org. S'il en existe un que nous avons manqué, **[merci de bien vouloir le suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service) !**
 
 Nous listons actuellement les produits et services de mise en jeu sur les pages suivantes :
 
@@ -167,6 +166,6 @@ La logique de code et les valeurs de ces critères sont actuellement contenus da
 
 Si vous souhaitez ajouter un produit ou un service de mise en jeu sur ethereum.org, il vous suffit de créer un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service">
   Créez un ticket
 </ButtonLink>

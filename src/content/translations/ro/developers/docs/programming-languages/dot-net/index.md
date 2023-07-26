@@ -2,7 +2,6 @@
 title: Ethereum pentru dezvoltatorii .NET
 description: Învăţaţi să faceţi dezvoltare pentru Ethereum folosind proiecte și instrumente .NET
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

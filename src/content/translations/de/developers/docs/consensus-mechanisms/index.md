@@ -2,7 +2,6 @@
 title: Konsensmechanismus
 description: Eine Erklärung von Konsensprotokollen in verteilten Systemen und die Rolle, die sie in Ethereum spielen.
 lang: de
-sidebar: true
 incomplete: true
 ---
 
@@ -76,7 +75,7 @@ Eine **Kettenauswahlregel** wird verwendet, um zu entscheiden, welche Kette die 
 
 Die Kombination aus Proof-of-Work und Longest-Chain-Regel ist als "Nakamoto-Konsens" bekannt.
 
-Die [Beacon Chain](/upgrades/beacon-chain/) verwendet einen Konsensmechanismus namens [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), der auf einem Proof-of-Stake basiert.
+Die [Beacon Chain](/roadmap/beacon-chain/) verwendet einen Konsensmechanismus namens [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), der auf einem Proof-of-Stake basiert.
 
 ## Weiterführende Informationen {#further-reading}
 

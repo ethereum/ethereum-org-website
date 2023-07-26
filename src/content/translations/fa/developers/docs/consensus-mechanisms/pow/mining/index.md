@@ -2,7 +2,6 @@
 title: استخراج
 description: توضیحی در مورد نحوه کار استخراج در اتریوم و اینکه چگونه اتریوم را امن و غیرمتمرکز نگه می‌دارد.
 lang: fa
-sidebar: true
 incomplete: true
 ---
 
@@ -61,8 +60,6 @@ incomplete: true
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## بیشتر بخوانید {#further-reading}
-
-- [منظور از استخراج اتریوم چیست؟](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
 ## ابزارهای مرتبط {#related-tools}
 

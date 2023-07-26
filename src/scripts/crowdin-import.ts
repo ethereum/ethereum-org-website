@@ -1,8 +1,8 @@
 // Library requires
+const i18Config = require("../../i18n/config.json")
 const { copyFileSync, existsSync, mkdirSync, readdirSync } = require("fs")
 const { resolve, join } = require("path")
 const argv = require("minimist")(process.argv.slice(2))
-
 /**
  * Console flags
  * -v,--verbose    Prints verbose console logs
@@ -43,9 +43,11 @@ const USER_SELECTION: UserSelectionObject = {
   el: [],
   es: [],
   fa: [],
-  fi: [],
+  fi: [2, 3, 4],
+  fil: [],
   fr: [],
   gl: [],
+  gu: [],
   hi: [],
   hr: [],
   hu: [],
@@ -55,6 +57,7 @@ const USER_SELECTION: UserSelectionObject = {
   ja: [],
   ka: [],
   kk: [],
+  km: [],
   ko: [],
   lt: [],
   ml: [],
@@ -62,7 +65,7 @@ const USER_SELECTION: UserSelectionObject = {
   mr: [],
   nb: [],
   nl: [],
-  ph: [],
+  pcm: [],
   pl: [],
   pt: [],
   "pt-br": [],
@@ -73,9 +76,11 @@ const USER_SELECTION: UserSelectionObject = {
   sl: [],
   sr: [],
   sw: [],
+  ta: [],
   th: [],
   tr: [],
   uk: [],
+  uz: [],
   vi: [],
   zh: [],
   "zh-tw": [],
@@ -121,22 +126,13 @@ const crowdinRoot: string = join(repoRoot, ".crowdin")
 // If first time, create directory for user
 if (!existsSync(crowdinRoot)) mkdirSync(crowdinRoot)
 
-// Dictionaries
 /**
  * Some language codes used in the repo differ from those used by Crowdin.
  * This is used to convert any codes that may differ when performing folder lookup.
- * Codes that are the same will default as such.
  */
-const repoToCrowdinCode: { [key: string]: string } = {
-  zh: "zh-CN",
-  "zh-tw": "zh-TW",
-  ph: "fil",
-  es: "es-EM",
-  "pt-br": "pt-BR",
-  pt: "pt-PT",
-  ml: "ml-IN",
-  sr: "sr-CS",
-}
+const getCrowdinCode = (code: string): string =>
+  i18Config.filter((lang) => lang.code === code)?.[0].crowdinCode || code
+
 /**
  * Names for each bucket in order, zero indexed.
  * Used for lookup in summary if FULL_BUCKET_NAME_SUMMARY (-f,--full) flag enabled.
@@ -223,7 +219,7 @@ const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (item.endsWith(".md")) {
+    } else if (item.endsWith(".md") || item.endsWith(".svg")) {
       const mdDestDirPath: string = join(
         repoRoot,
         "src",
@@ -265,7 +261,7 @@ const importSelection: Array<SelectionItem> = Object.keys(USER_SELECTION)
   .map(
     (repoLangCode: string): SelectionItem => ({
       repoLangCode,
-      crowdinLangCode: repoToCrowdinCode[repoLangCode] || repoLangCode,
+      crowdinLangCode: getCrowdinCode(repoLangCode),
       buckets: USER_SELECTION[repoLangCode],
     })
   )

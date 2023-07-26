@@ -2,7 +2,6 @@
 title: Prevajalski program
 lang: sl
 description: Kako prispevati k ethereum.org prevajalskemu programu?
-sidebar: true
 ---
 
 # Prevajalski program {#translation-program}

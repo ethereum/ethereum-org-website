@@ -2,7 +2,6 @@
 title: Testen von Smart Contracts
 description:
 lang: de
-sidebar: true
 incomplete: true
 ---
 

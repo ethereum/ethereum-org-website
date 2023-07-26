@@ -2,7 +2,6 @@
 title: Plasma-Kette
 description: Eine Einführung in Plasma-Ketten als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
 lang: de
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -33,7 +32,6 @@ Mehrere Projekte bieten Implementierungen von Plasma an, die Sie in Ihre dApps i
 
 ## Weiterführende Informationen {#further-reading}
 
-- [EthHub auf Plasma](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Lernen Sie Plasma](https://www.learnplasma.org/en/)
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

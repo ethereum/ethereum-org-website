@@ -2,7 +2,6 @@
 title: Çevirmen rehberi
 lang: tr
 description: Ethereum.org çevirmenleri için talimatlar ve ipuçları
-sidebar: true
 ---
 
 # Ethereum.org Çeviri Stili Rehberi {#style-guide}

@@ -2,7 +2,6 @@
 title: Prueba de contratos inteligentes
 description:
 lang: es
-sidebar: true
 incomplete: true
 ---
 

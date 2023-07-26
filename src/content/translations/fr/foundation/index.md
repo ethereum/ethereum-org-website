@@ -1,7 +1,7 @@
 ---
 title: Ethereum Foundation
 description: L'Ethereum Foundation (EF) est une organisation à but non lucratif destinée à soutenir Ethereum et les technologies qui y sont associées.
-sidebar: false
+hideEditButton: true
 lang: fr
 ---
 
@@ -11,11 +11,11 @@ lang: fr
 
 L'[Ethereum Foundation](http://ethereum.foundation/) (la fondation Ethereum, EF) est une organisation à but non lucratif vouée à soutenir [Ethereum](/what-is-ethereum/) et les technologies qui y sont associées.
 
-L'EF n'est pas une entreprise, ni un organisme à but non lucratif traditionnel. Son rôle n'est ni de contrôler ni de diriger Ethereum, ni d'être la seule à financer le développement essentiel des technologies liées à Ethereum. L'EF fait partie d'un [écosystème](/community/) bien plus grand.
+L'EF n'est pas une entreprise, ni un organisme à but non lucratif traditionnel. Son rôle n'est ni de contrôler ni de diriger Ethereum, ni d'être la seule organisation à financer le développement essentiel des technologies liées à Ethereum. L'EF fait partie d'un [écosystème](/community/) bien plus grand.
 
 ## Initiatives de l'Ethereum Foundation {#ethereum-foundation-initiatives}
 
-### Programme de soutien à l'écosystème {#ecosystem-support-program}
+### Programme de soutien aux écosystèmes {#ecosystem-support-program}
 
 Le [programme de soutien aux écosystèmes](https://esp.ethereum.foundation/) a été créé pour offrir un soutien financier et non financier aux projets et aux entités au sein de la communauté Ethereum élargie, afin d’accélérer la croissance de l’écosystème. Ce programme est une extension du programme de subvention Ethereum d'origine, qui se concentrait principalement sur le financement.
 
@@ -31,12 +31,10 @@ Pour en savoir plus, visitez [devcon.org](https://devcon.org/), consultez le [bl
 
 ### Programme de bourses {#fellowship-program}
 
-Le [programme de bourses de l'Ethereum Foundation](https://fellowship.ethereum.foundation/) est un projet pilote qui se concentre sur la recherche d'opportunités dans les économies émergentes. Aujourd'hui, les pays en développement représentent plus de 80 % de la population mondiale. Parmi les quelque 400 000 bébés nés chaque jour dans le monde, plus de 360 000 naissent dans les pays en développement. Les populations de ces pays représentent donc non seulement notre avenir en tant que peuple, mais elles peuvent aussi représenter le prochain milliard d'utilisateurs actifs d'Ethereum.
+Le [programme de bourses de la Fondation Ethereum](https://fellowship.ethereum.foundation/) est une initiative visant à combler les lacunes en matière de représentation entre les cultures, les nationalités et les classes économiques. Le programme de bourses s'attache à combler ces écarts en identifiant et en soutenant les individus talentueux qui participent à rendre Ethereum plus pertinent, et en éliminant les obstacles à l'entrée pour les personnes sous-représentées et les communautés qui deviendront le futur du Web3.
 
-Le programme de bourses offre à l'EF l'opportunité de travailler avec des initiateurs de changements dont les projets ont un fort potentiel de générer des retombées dans les économies émergentes par le biais de l'utilisation d'Ethereum. Le programme propose une expérience unique qui regroupe mentorat, expertise et accès aux leaders de l'écosystème Ethereum.
-
-Apprenez-en davantage à l'adresse [fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/) ou consultez l'[article de blog récemment publié sur le programme de bourses](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/).
+[Plus d'informations sur fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/).
 
 <br/>
 
-Pour plus de renseignements sur la fondation et ses travaux, visitez le site [ethereum.foundation](http://ethereum.foundation/) ou lisez le [blog de l'Ethereum Foundation](https://blog.ethereum.org/).
+Pour plus de renseignements sur la fondation et ses travaux, visitez le site [ethereum.foundation](http://ethereum.foundation/) ou lisez le [blog de l'Ethereum Foundation](https://blog.ethereum.org/) pour obtenir les dernières actualités et annonces d'EF.

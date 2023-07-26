@@ -2,7 +2,6 @@
 title: Contas Ethereum
 description: Uma explicação das contas Ethereum – suas estruturas de dados e sua relação com a criptografia de pares de chaves.
 lang: pt-br
-sidebar: true
 ---
 
 Uma conta Ethereum é uma entidade com um saldo de ether (ETH) que pode enviar transações no Ethereum. As contas podem ser controladas pelo usuário ou implementadas como contratos inteligentes.
@@ -15,8 +14,8 @@ As contas são um tema muito amigável para iniciantes. Mas para ajudá-lo a ent
 
 Ethereum tem dois tipos de contas:
 
-- Propriedade externa — controlada por qualquer pessoa com as chaves privadas
-- Contrato – um contrato inteligente implantado para a rede, controlado por código. Saiba mais sobre [contratos inteligentes](/developers/docs/smart-contracts/)
+- Conta de propriedade externa (EOA) — controlada por qualquer pessoa com as chaves privadas
+- Conta de contrato — um contrato inteligente implantado na rede, controlado por código. Saiba mais sobre [contratos inteligentes](/developers/docs/smart-contracts/)
 
 Ambos os tipos de conta têm capacidade para:
 
@@ -30,18 +29,20 @@ Ambos os tipos de conta têm capacidade para:
 - Não há custo para criar uma conta
 - Pode iniciar transações
 - Transações entre contas de propriedade externa só podem ser transferências de ETH/token
+- Composto por um par de chaves criptográficas: chaves públicas e privadas que controlam as atividades da conta
 
 **Contrato**
 
 - Criar um contrato tem um custo porque você está usando o armazenamento de rede
 - Só pode enviar transações em resposta ao recebimento de transação
 - Transações de uma conta externa para uma conta contrato podem acionar um código que pode executar muitas ações diferentes, como transferir tokens ou até mesmo criar um contrato
+- As contas de contrato não têm chaves privadas. Em vez disso, eles são controlados pela lógica do código do contrato inteligente
 
 ## Uma conta analisada {#an-account-examined}
 
 As contas Ethereum têm quatro campos:
 
-- `nonce` - um contador que indica o número de transações enviadas pela conta. Isso garante que as transações sejam processadas apenas uma vez. Em uma conta contratual, este número representa o número de contratos criados pela conta.
+- `nonce` – Um contador que indica o número de transações enviadas de uma conta de propriedade externa ou o número de contratos criados por uma conta de contrato. Apenas uma transação com um dado nonce pode ser executada para cada conta, protegendo contra ataques de repetição em que as transações assinadas são repetidamente transmitidas e reexecutadas.
 - `balance` – o número de Wei pertencentes a este endereço. Wei é uma denominação de ETH e existem 1e + 18 Wei por ETH.
 - `codeHash` - este hash se refere ao _código_ de uma conta na máquina virtual Ethereum (EVM). Contas contratuais têm fragmentos de código programados que podem executar diferentes operações. Este código EVM é executado se a conta receber uma chamada de mensagem. Diferentemente dos outros campos da conta, ele não pode ser alterado. Todos esses fragmentos de código estão contidos na base de dados de estados sob suas hashes correspondentes para recuperação posterior. Este valor de hash é conhecido como codeHash. Para contas de propriedade externa, o campo codeHash é o hash de uma “string” vazia.
 - `storageRoot` – Às vezes conhecido como um hash de armazenamento. Um hash de 256 bits do nó raiz de uma árvore de Merkle que codifica o conteúdo de armazenamento da conta (um mapeamento entre valores inteiros de 256 bits), codificado para o mapeamento a partir do hash Keccak de 256 bits das chaves inteiras de 256 bits para os valores inteiros codificados no RLP-256 bits. Esta árvore codifica o hash do conteúdo de armazenamento desta conta e está vazia por padrão.
@@ -68,19 +69,22 @@ Exemplo:
 
 A chave pública é gerada a partir da chave privada usando o [Algoritmo de assinatura digital da curva elíptica](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Você recebe um endereço público para sua conta a partir dos últimos 20 “bytes” do hash Keccak-256 da chave pública e adiciona `0x` no início.
 
-Aqui está um exemplo da criação de uma conta no terminal usando `personal_newAccount` do GETH's
+O exemplo a seguir mostra como usar uma ferramenta de assinatura chamada [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) para gerar uma nova conta. Clef é uma ferramenta de assinatura e gerenciamento de contas que vem com o cliente Ethereum, [Geth](https://geth.ethereum.org). O comando `clef newaccount` cria um novo par de chaves e os salva em um repositório de chaves criptografado.
 
-```go
-> personal.newAccount()
-Passphrase:
-Repeat passphrase:
-"0x5e97870f263700f46aa00d967821199b9bc5a120"
+```
+> clef newaccount --keystore <path>
 
-> personal.newAccount("h4ck3r")
-"0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
+Please enter a password for the new account to be created:
+> <password>
+
+------------
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
-[Documentação do GETH](https://geth.ethereum.org/docs)
+[Documentação do Geth](https://geth.ethereum.org/docs)
 
 É possível obter novas chaves públicas de sua chave privada, mas você não pode obter uma chave privada de chaves públicas. Isso significa que é vital manter a chave privada segura e, como o nome sugere, **PRIVADA**.
 
@@ -96,13 +100,19 @@ Exemplo:
 
 O endereço do contrato é geralmente dado quando um contrato é implantado na Blockchain do Ethereum. O endereço vem do endereço do criador e do número de transações enviadas desse endereço (o “nonce”).
 
-## Mais informações sobre carteiras {#a-note-on-wallets}
+## Chaves de validação {#validators-keys}
 
-Uma conta não é uma carteira. Uma conta é o par de chaves para uma conta Ethereum de propriedade do usuário. Uma carteira é uma “interface” ou aplicativo que permite você interagir com a sua conta Ethereum.
+Há também outro tipo de chave no Ethereum, introduzida quando o Ethereum mudou de prova de trabalho para prova de participação baseado no consenso. Essas chaves são "BLS" e são usadas para identificar validadores. Essas chaves podem ser agregadas de forma eficiente para reduzir a largura de banda necessária para que a rede chegue a um consenso. Sem essa agregação de chaves, a participação mínima para um validador seria muito maior.
+
+[Mais sobre chaves de validação](/developers/docs/consensus-mechanisms/pos/keys/).
+
+## Observação sobre carteiras {#a-note-on-wallets}
+
+Uma conta não é uma carteira. Uma conta é o par de chaves para uma conta Ethereum de propriedade do usuário. Uma carteira é uma interface ou um aplicativo que permite interagir com a sua conta Ethereum.
 
 ## Uma demonstração visual {#a-visual-demo}
 
-Assista a Austin guiar você pelas funções hash e pelos pares de chaves.
+Assista a Austin mostrando passo a passo as funções de hash e os pares de chaves.
 
 <YouTube id="QJ010l-pBpE" />
 
@@ -110,7 +120,7 @@ Assista a Austin guiar você pelas funções hash e pelos pares de chaves.
 
 ## Leitura adicional {#further-reading}
 
-_Conhece um recurso da comunidade que ajudou você? Edite esta página e adicione-o!_
+_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione-a!_
 
 ## Tópicos relacionados {#related-topics}
 

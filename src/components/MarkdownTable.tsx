@@ -1,22 +1,24 @@
 import React from "react"
-import styled from "@emotion/styled"
+import { Box, Table } from "@chakra-ui/react"
 
-const TableContainer = styled.div`
-  overflow-x: auto;
-  margin: 2rem 0;
-
-  th {
-    border-bottom: 1px solid ${(props) => props.theme.colors.border};
-    white-space: nowrap;
-  }
-`
-
-export interface IProps {}
+export interface IProps {
+  children?: React.ReactNode
+}
 
 const MarkdownTable: React.FC<IProps> = ({ children }) => (
-  <TableContainer>
-    <table>{children}</table>
-  </TableContainer>
+  <Box position="relative" my={8} overflowX="auto">
+    <Table
+      sx={{
+        th: {
+          borderBottom: "1px solid",
+          borderColor: "border",
+          whiteSpace: "nowrap",
+        },
+      }}
+    >
+      {children}
+    </Table>
+  </Box>
 )
 
 export default MarkdownTable

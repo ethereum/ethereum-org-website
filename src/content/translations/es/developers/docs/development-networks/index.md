@@ -2,7 +2,6 @@
 title: Redes de desarrollo
 description: Una descripción general de las redes de desarrollo y las herramientas disponibles para ayudar a construir aplicaciones de Ethereum.
 lang: es
-sidebar: true
 ---
 
 Cuando construyes una aplicación de Ethereum con contratos inteligentes, desearás ejecutar en una red local para ver cómo funciona antes de implementarla.

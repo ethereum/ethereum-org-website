@@ -2,7 +2,6 @@
 title: Okos szerződések fordítása
 description: Egy magyarázat arról, hogy miért kell az okosszerződéseket fordítani és hogy pontosan mit csinál a fordítás.
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

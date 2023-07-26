@@ -2,7 +2,6 @@
 title: Dokumentacja dotycząca rozwoju Ethereum
 description: Wprowadzenie dokumentacji dla deweloperów Ethereum.
 lang: pl
-sidebar: true
 ---
 
 Ta dokumentacja jest zaprojektowana tak, aby pomóc Ci budować z Ethereum. Obejmuje ona Ethereum jako koncepcję, wyjaśnia stoso technologii Ethereum, a także porusza zaawansowane tematy dotyczące bardziej złożonych zastosowań i przypadków.

@@ -2,7 +2,6 @@
 title: Ethereum dla deweloperów Java
 description: Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi w języku Java
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

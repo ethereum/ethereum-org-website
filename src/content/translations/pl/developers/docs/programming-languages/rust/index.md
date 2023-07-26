@@ -2,7 +2,6 @@
 title: Ethereum dla deweloperów Rust
 description: Dowiedz się, jak rozwijać się dla Ethereum, korzystając z projektów i narzędzi opartych na Rust
 lang: pl
-sidebar: true
 incomplete: true
 ---
 
@@ -27,13 +26,9 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Klient Ethereum Rust](https://wiki.parity.io/Setup)
 - [Wysyłanie transakcji do Ethereum za pomocą Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Wprowadzenie do inteligentnych kontraktów z klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Konfigurowanie środowiska deweloperskiego Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Samouczek krok po kroku, jak pisać umowy w Rust Wasm dla Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artykuły dla średniozaawansowanych {#intermediate-articles}
-
-- [Dokumentacja Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Przykłady działania Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
 
 ## Przykłady zaawansowane {#advanced-use-patterns}
 
@@ -42,7 +37,6 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Zbuduj zdecentralizowaną aplikację Todo za pomocą Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Pierwsze kroki z Enigma - w języku programowania Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Wprowadzenie do tajnych kontraktów](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Wdrażanie kontraktów Solidity na Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## Projekty i Narzędzia Rust {#rust-projects-and-tools}
 
@@ -52,7 +46,6 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Wdrażanie maszyny wirtualnej Rust Ethereum_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust klient_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Wdrożenie biblioteki Web3.js przez Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Inteligentny kontrakt Wavelet w Rust_
 
 Szukasz więcej zasobów? Zajrzyj na [ethereum.org/developers.](/developers/)

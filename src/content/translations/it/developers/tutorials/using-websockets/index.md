@@ -3,7 +3,6 @@ title: Uso dei WebSocket
 description: Guida all'uso di WebSocket e Alchemy per creare richieste JSON-RPC e iscriversi a eventi.
 author: "Elan Halpern"
 lang: it
-sidebar: true
 tags:
   - "alchemy"
   - "websocket"
@@ -25,16 +24,16 @@ A differenza di HTTP, con i WebSocket non serve fare continuamente richieste qua
 
 Come avviene con ogni connessione di rete, non presupporre che un WebSocket rimanga aperto per sempre senza interruzioni; gestire correttamente a mano la caduta di connessione e la riconnessione può essere complicato. Un altro lato negativo dei WebSocket è che non si ottengono codici di stato HTTP come risposta ma solo il messaggio di errore.
 
-​[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) aggiunge automaticamente la gestione degli errori WebSocket e i nuovi tentativi senza necessità di configurazione.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) aggiunge automaticamente la gestione degli errori di WebSocket e i nuovi tentativi senza necessità di configurazione alcuna.
 
 ## Facciamo una prova {#try-it-out}
 
 Il modo più facile per testare i WebSocket è installare uno strumento da riga di comando per eseguire richieste WebSocket come [wscat](https://github.com/websockets/wscat). Usando wscat, è possibile inviare richieste come di seguito:
 
-_Nota: se hai un account Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un account Alchemy gratuito!](https://dashboard.alchemyapi.io/signup/)_
+_Nota: se hai un conto di Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un conto gratuito di Alchemy!](https://auth.alchemyapi.io/signup)_
 
 ```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
@@ -143,13 +142,11 @@ Esempio:
   "method":  "eth_subscription",
   "params":  {
       "result":  {
-          "difficulty":  "0x15d9223a23aa",
           "extraData":  "0xd983010305844765746887676f312e342e328777696e646f7773",
           "gasLimit":  "0x47e7c4",
           "gasUsed":  "0x38658",
           "logsBloom":
 "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-          "miner":  "0xf8b483dba2c3b7176a3da549ad41a48bb3121069",
           "nonce":  "0x084149998194cc5f",
           "number":  "0x1348c9",
           "parentHash":  "0x7736fab79e05dc611604d22470dadad26f56fe494421b5b333de816ce1f25701",
@@ -251,4 +248,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Registrati ad Alchemy](https://dashboard.alchemyapi.io/signup/) gratis, dai un'occhiata alla [nostra documentazione](https://docs.alchemyapi.io/) e, per le ultime novità, seguici su [Twitter](https://twitter.com/AlchemyPlatform).
+[Registrati con Alchemy](https://auth.alchemyapi.io/signup) gratuitamente, dai un'occhiata alla [nostra documentazione](https://docs.alchemyapi.io/) e, per le notizie più recenti, seguici su [Twitter](https://twitter.com/AlchemyPlatform).

@@ -2,7 +2,6 @@
 title: Bloki
 description: Przegląd bloków w blockchainie Ethereum – ich struktura danych, dlaczego są potrzebne i jak są wytwarzane.
 lang: pl
-sidebar: true
 ---
 
 Bloki są zestawami transakcji z kryptograficznym skrótem poprzedniego bloku w łańcuchu. Łączy to bloki (w łańcuch), ponieważ skróty są kryptograficznymi pochodnymi danych umieszczanych w blokach. Zapobiega to nadużyciom, ponieważ pojedyncza zmiana w dowolnym, historycznym bloku unieważniłaby wszystkie bloki następujące po nim, gdyż zmianie uległyby kolejne kryptograficzne skróty, co wychwyciłby każdy, kto korzysta z blokchaina.

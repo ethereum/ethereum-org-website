@@ -2,7 +2,6 @@
 title: Introdução à aplicativos descentralizados (dapps)
 description:
 lang: pt-br
-sidebar: true
 ---
 
 Um aplicativo descentralizado (dapp) é um aplicativo construído em uma rede descentralizada que combina um [contrato inteligente](/developers/docs/smart-contracts/) e uma interface de usuário de front-end. Observe que no Ethereum os contratos inteligentes são acessíveis e transparentes – como APIs abertas — então, seu dapp pode até incluir um contrato inteligente que outra pessoa escreveu.
@@ -34,12 +33,12 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 - **Privacidade**: você não precisa fornecer identidade real para implantar ou interagir com um dapp.
 - **Resistância à censura**: nenhuma entidade na rede pode impedir que os usuários enviem transações, implantem dapps ou leiam dados da blockchain.
 - **Completar a integridade dos dados**: os dados armazenados na blockchain são imutáveis e indiscutíveis, graças aos primitivos criptográficos. Atores mal-intencionados não podem forjar transações ou outros dados que já foram tornados públicos.
-- **Computação insegura/comportamento verificável**: os contratos inteligentes podem ser analisados e garantidos para execução de formas previsíveis, sem a necessidade de confiar em uma autoridade central. Isso não é verdade nos modelos tradicionais; por exemplo, quando usamos sistemas bancários on-line, temos que confiar que as instituições financeiras não usarão indevidamente nossos dados financeiros, adulterarão registros ou serão hackeadas.
+- **Computação sem confiança/comportamento verificável** – Contratos inteligentes podem ser analisados e têm garantia de execução de maneiras previsíveis, sem a necessidade de confiar em uma autoridade central. Isso não é verdade nos modelos tradicionais; por exemplo, quando usamos sistemas bancários on-line, temos que confiar que as instituições financeiras não usarão indevidamente nossos dados financeiros, adulterarão registros ou serão hackeadas.
 
 ## Benefícios do desenvolvimento de dapps {#drawbacks-of-dapp-development}
 
-- **Manutenção**: os dapps podem ser mais difíceis de manter, porque o código e os dados publicados na blockchain são mais difíceis de modificar. É difícil para os desenvolvedores fazerem atualizações em seus dapps (ou nos dados subjacentes armazenados por um dapp) quando eles são implantados, mesmo que bugs ou riscos de segurança sejam identificados em uma versão antiga.
-- **Impactos no desempenho**: há um grande impacto no desempenho, e o dimensionamento é realmente difícil. Para alcançar o nível de segurança, integridade, transparência e confiabilidade que o Ethereum aspira, cada nó executa e armazena cada transação. Além disso, a prova de trabalho também leva tempo. Um cálculo rápido permite estimar a sobrecarga em torno de 1.000.000 vezes o cálculo padrão atual.
+- **Manutenção**: os dapps podem ser mais difíceis de manter, porque o código e os dados publicados na blockchain são mais difíceis de modificar. É difícil para os desenvolvedores fazerem atualizações em seus dapps (ou nos dados armazenados sob um dapp) uma vez que eles foram implantados, mesmo se bugs ou riscos de segurança forem identificados em uma versão antiga.
+- **Impactos no desempenho**: há um grande impacto no desempenho, e o dimensionamento é realmente difícil. Para alcançar o nível de segurança, integridade, transparência e confiabilidade que o Ethereum aspira, cada nó executa e armazena cada transação. Além disso, o consenso de prova de participação também leva tempo.
 - **Congestionamento da rede **: pelo menos no modelo atual, se um dapp estiver usando muitos recursos computacionais, toda a rede é apoiada. Atualmente, a rede só é capaz de processar cerca de 10 transações por segundo; se as transações estiverem sendo enviadas mais rápido do que isso, o pool de transações não confirmadas poderá aumentar rapidamente.
 - **Experiência do usuário**: pode ser mais difícil projetar experiências amigáveis ao usuário porque o usuário final pode achar muito difícil configurar uma pilha de ferramentas necessária para interagir com a blockchain de uma forma verdadeiramente segura.
 - **Centralização**: soluções amigáveis para o usuário e amigáveis ao desenvolvedor construídas sobre a camada base do Ethereum podem acabar parecendo serviços centralizados. Por exemplo, tais serviços podem armazenar chaves ou outros pontos sensíveis do servidor de informações, servir um front-end usando um servidor centralizado ou executar uma lógica de negócios importante em um servidor centralizado antes de escrever na blockchain. A centralização elimina muitas (se não todas) das vantagens da blockchain sobre o modelo tradicional.
@@ -48,7 +47,7 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Ferramentas para os dapps {#dapp-tools}
+## Ferramentas para criar dapps {#dapp-tools}
 
 **Scaffold-ETH _: experimente rápido com Solidity usando um front-end que se adapta ao seu contrato inteligente._**
 
@@ -71,9 +70,11 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 
 ## Leitura adicional {#further-reading}
 
-- [A arquitetura de um aplicativo web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
+- [Ver dapps](/dapps)
+- [A arquitetura de um aplicativo Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [Um guia de 2021 para aplicativos descentralizados](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [O que são aplicativos descentralizados?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
+- [Dapps populares](https://www.alchemy.com/dapps) - _Alchemy_
 
 _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
 

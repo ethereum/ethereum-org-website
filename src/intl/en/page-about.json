@@ -21,5 +21,16 @@
   "page-about-p-5": "Tasks that we're implementing.",
   "page-about-p-6": "Tasks we've queued up to implement next.",
   "page-about-p-7": "Recently completed tasks.",
-  "page-about-p-8": "Do you have an idea for how to improve ethereum.org? We'd love to collaborate with you!"
+  "page-about-p-8": "Do you have an idea for how to improve ethereum.org? We'd love to collaborate with you!",
+  "page-what-is-ethereum-energy-consumption-chart-legend": "Annual Energy Consumption in TWh/yr",
+  "page-upgrades-post-merge-banner-governance-ood": "Some content on this page is out-of-date after the merge. Please raise a PR if you would like to contribute.",
+  "energy-consumption-chart-global-data-centers-label": "Global data centers",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-gold-mining-cbeci-label": "Gold mining",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "Gaming in the US",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS"
 }

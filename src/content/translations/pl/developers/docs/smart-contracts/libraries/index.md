@@ -2,7 +2,6 @@
 title: Biblioteki inteligentnych kontraktów
 description:
 lang: pl
-sidebar: true
 ---
 
 Nie musisz pisać każdego inteligentnego kontraktu w swoim projekcie od zera. Istnieje wiele bibliotek open source inteligentnych kontraktów. Można w nich znaleźć elementy do utworzenia Twojego projektu, więc nie musisz wymyślać koła od nowa.

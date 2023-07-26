@@ -1,79 +1,15 @@
 import React from "react"
-import styled from "@emotion/styled"
+import { Flex, FlexProps, LightMode, Text } from "@chakra-ui/react"
 import Emoji from "./Emoji"
-import { margin } from "styled-system"
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-const Banner = styled.div<{
-  shouldCenter: boolean
-  isWarning: boolean
-}>`
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  padding: 1.5rem;
-  border-radius: 2px;
-  max-width: ${(props) => (props.shouldCenter ? `55rem` : `100%`)};
-  color: ${(props) => props.theme.colors.black300};
-  background: ${(props) =>
-    props.isWarning
-      ? props.theme.colors.warning
-      : props.theme.colors.infoBanner};
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-  }
-
-  a {
-    color: ${(props) =>
-      props.isWarning
-        ? props.theme.colors.warningLink
-        : props.theme.colors.infoLink};
-    &:hover {
-      color: ${(props) =>
-        props.isWarning
-          ? props.theme.colors.warningLinkHover
-          : props.theme.colors.infoLinkHover};
-    }
-  }
-  ${margin}
-`
-
-const StyledEmoji = styled(Emoji)`
-  flex-grow: 0;
-  flex-shrink: 0;
-  margin-right: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    align-self: flex-start;
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
-`
-
-const Content = styled.div<{
-  shouldSpaceBetween: boolean
-}>`
-  display: ${(props) => (props.shouldSpaceBetween ? `flex` : `block`)};
-  align-items: ${(props) => (props.shouldSpaceBetween ? `center` : `auto`)};
-  width: ${(props) => (props.shouldSpaceBetween ? `100%` : `auto`)};
-  justify-content: ${(props) =>
-    props.shouldSpaceBetween ? `space-between` : `auto`};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: block;
-  }
-`
-
-export interface IProps {
+export interface IProps extends FlexProps {
+  children?: React.ReactNode
   className?: string
   emoji?: string
   isWarning?: boolean
   shouldCenter?: boolean
   shouldSpaceBetween?: boolean
+  title?: string
 }
 
 const InfoBanner: React.FC<IProps> = ({
@@ -83,20 +19,53 @@ const InfoBanner: React.FC<IProps> = ({
   isWarning = false,
   shouldCenter = false,
   shouldSpaceBetween = false,
+  title,
   ...props
 }) => {
   const banner = (
-    <Banner
-      className={className}
-      isWarning={isWarning}
-      shouldCenter={shouldCenter}
-      {...props}
-    >
-      {emoji && <StyledEmoji text={emoji} size={2} />}
-      <Content shouldSpaceBetween={shouldSpaceBetween}>{children}</Content>
-    </Banner>
+    <LightMode>
+      <Flex
+        align="center"
+        p={6}
+        borderRadius={"sm"}
+        maxW={shouldCenter ? "55rem" : "100%"}
+        sx={{
+          ":not(button)": {
+            color: "black300 !important",
+          },
+        }}
+        bg={isWarning ? "warning" : "infoBanner"}
+        direction={{ base: "column", sm: "row" }}
+        {...props}
+      >
+        {emoji && (
+          <Emoji
+            flexGrow="0"
+            flexShrink="0"
+            mr={{ base: 0, sm: 6 }}
+            mb={{ base: 2, sm: 0 }}
+            alignSelf={{ base: "flex-start", sm: "auto" }}
+            text={emoji}
+            fontSize="4xl"
+          />
+        )}
+        <Flex
+          display={{ base: "block", sm: shouldSpaceBetween ? "flex" : "block" }}
+          align={shouldSpaceBetween ? "center" : "auto"}
+          w={shouldSpaceBetween ? "100%" : "auto"}
+          justify={shouldSpaceBetween ? "space-between" : "auto"}
+        >
+          {title && (
+            <Text fontSize="lg" fontWeight="700">
+              {title}
+            </Text>
+          )}
+          {children}
+        </Flex>
+      </Flex>
+    </LightMode>
   )
-  return shouldCenter ? <Container>{banner}</Container> : banner
+  return shouldCenter ? <Flex justify="center">{banner}</Flex> : banner
 }
 
 export default InfoBanner

@@ -54,7 +54,6 @@
   "page-dapps-dapp-description-cryptovoxels": "Creați galerii de artă, construiți magazine și cumpărați terenuri – o lume virtuală Ethereum.",
   "page-dapps-dapp-description-dark-forest": "Cuceriți planetele într-un univers infinit, generat procedural, specificat criptografic.",
   "page-dapps-dapp-description-decentraland": "Colecționați și comercializați terenuri virtuale într-o lume virtuală pe care o puteți explora.",
-  "page-dapps-dapp-description-dydx": "Deschideți poziții de vânzare (short) sau folosite ca atu mobilizând până la de 10x mai mult. Se pot și da și lua împrumuturi.",
   "page-dapps-dapp-description-ens": "Nume ușor de folosit pentru adresele Ethereum și site-urile descentralizate.",
   "page-dapps-dapp-description-foundation": "Investiți în ediții unice de opere de artă digitală și tranzacționați piese cu alți cumpărători.",
   "page-dapps-dapp-description-gitcoin": "Câștigați cripto lucrând la software open-source.",
@@ -96,7 +95,6 @@
   "page-dapps-rotki-logo-alt": "Sigla Rotki",
   "page-dapps-desc": "Găsiți o aplicație Ethereum pe care să o încercați.",
   "page-dapps-doge-img-alt": "Imaginea unui câine așezat la calculator",
-  "page-dapps-dydx-logo-alt": "Sigla dYdX",
   "page-dapps-editors-choice-dark-forest": "Jucați cu alți parteneri pentru a cuceri planete și încercați tehnologia cea mai avansată de scalare/confidențialitate Ethereum. Poate pentru cei care cunosc deja Ethereum.",
   "page-dapps-editors-choice-description": "Câteva aplicații descentralizate (dapps) pe care echipa ethereum.org le adoră acum. Explorați și alte aplicații descentralizate mai jos.",
   "page-dapps-editors-choice-foundation": "Investiți în cultură. Cumpărați, tranzacționați și vindeți opere de artă digitale unice și articole de modă de la incredibili artiști, muzicieni și mărci.",
@@ -204,5 +202,8 @@
   "page-dapps-what-are-dapps": "Ce sunt dapp-urile?",
   "page-dapps-more-on-defi-button": "Aflați mai multe despre finanțele descentralizate",
   "page-dapps-more-on-nft-button": "Mai multe despre piesele colecționabile marcate prin jetoane",
-  "page-dapps-more-on-nft-gaming-button": "Aflați mai multe despre articolele marcate prin jetoane din cadrul jocurilor"
+  "page-dapps-more-on-nft-gaming-button": "Aflați mai multe despre articolele marcate prin jetoane din cadrul jocurilor",
+  "foundation": "Fundația",
+  "transaction-fees": "Ce sunt taxele de tranzacționare?",
+  "page-wallets-get-some": "Obțineți niște ETH"
 }

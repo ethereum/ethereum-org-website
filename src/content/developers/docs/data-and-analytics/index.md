@@ -2,7 +2,6 @@
 title: Data and analytics
 description: How to get on-chain analytics and data for use in your dapps
 lang: en
-sidebar: true
 ---
 
 ## Introduction {#Introduction}
@@ -21,7 +20,7 @@ In terms of architectural fundamentals, understanding what an [API](https://www.
 
 Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
 
-Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain).
+Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](https://etherscan.io) provides execution and consensus data for every 12s slot.
 
 ## The Graph {#the-graph}
 
@@ -29,13 +28,18 @@ The [Graph Network](https://thegraph.com/) is a decentralized indexing protocol 
 
 Using [GraphQL](https://graphql.org/), developers can query any of the curated open APIs, known as sub-graphs, to acquire the necessary information they need to drive their dapp. By querying these indexed sub-graphs, Reports and dapps not only get performance and scalability benefits but also the built in accuracy provided by network consensus. As new improvements and/or sub-graphs are added to the network, your projects can rapidly iterate to take advantage of these enhancements.
 
+## Client diversity
+
+[Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several client diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](rated.network), [execution-diversity.info](https://execution-diversity.info/) and [Ethernodes](https://ethernodes.org/).
+
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) pre-processes blockchain data into relational database (PostgreSQL and DatabricksSQL) tables, allows users to query blockchain data using SQL and build dashboards based on query results. On-chain data are organized into 4 raw tables: `blocks`, `transactions`, (event)  `logs` and (call) `traces`. Popular contracts and protocols have been decoded, and each has its own set of event and call tables. Those event and call tables are processed further and organized into abstraction tables by the type of protocols, for example, dex, lending, stablecoins, etc.
+[Dune Analytics](https://dune.com/) pre-processes blockchain data into relational database (PostgreSQL and DatabricksSQL) tables, allows users to query blockchain data using SQL and build dashboards based on query results. On-chain data are organized into 4 raw tables: `blocks`, `transactions`, (event) `logs` and (call) `traces`. Popular contracts and protocols have been decoded, and each has its own set of event and call tables. Those event and call tables are processed further and organized into abstraction tables by the type of protocols, for example, dex, lending, stablecoins, etc.
 
 ## Further Reading {#further-reading}
 
 - [Graph Network Overview](https://thegraph.com/docs/en/about/network/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
-- [Dune Basics](https://docs.dune.com/#dune-basics) 
+- [Beaconcha.in Beacon Chain explorer](https://beaconcha.in)
+- [Dune Basics](https://docs.dune.com/#dune-basics)

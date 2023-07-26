@@ -2,7 +2,6 @@
 title: Exploratori de blocuri
 description: O introducere despre exploratorii de blocuri, portalul dvs. în lumea datelor blockchain, unde puteți interoga informații despre tranzacții, conturi, contracte și multe altele.
 lang: ro
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -152,7 +151,7 @@ Desigur, există unele date care vorbesc despre sănătatea rețelei. Acestea su
 
 Actualizările de scalabilitate sunt încă în curs de dezvoltare, dar merită să vorbim despre unele dintre punctele de date pe care exploratorii vor putea să vi le furnizeze. De fapt, toate aceste date sunt disponibile chiar acum pentru testnet-uri.
 
-Dacă nu cunoașteți foaia de parcurs, consultați [prezentarea noastră generală a actualizărilor Ethereum](/upgrades/).
+Dacă nu cunoașteți foaia de parcurs, consultați [prezentarea noastră generală a actualizărilor Ethereum](/roadmap/).
 
 ### Epocă {#epoch}
 

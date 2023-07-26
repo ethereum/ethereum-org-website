@@ -2,7 +2,6 @@
 title: Biblioteci API JavaScript
 description: O introducere în bibliotecile client JavaScript care vă permit să interacționaţi cu blockchain-ul din aplicația dvs.
 lang: ro
-sidebar: true
 ---
 
 Pentru ca o aplicație web să interacționeze cu blockchain-ul Ethereum (adică să citească datele blockchain-ului și/sau să trimită tranzacții către rețea), trebuie să se conecteze la un nod Ethereum.
@@ -231,14 +230,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Funcții utilitare Web3js](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Funcții utilitare Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funcții utilitare Ethers](https://docs.ethers.io/v5/api/utils/)
 
 ## Biblioteci disponibile {#available-libraries}
 
 **Web3.js -** **_API JavaScript Ethereum._**
 
-- [Documentație](https://web3js.readthedocs.io/en/1.0/)
+- [Documentație](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_Implementare completă de portofel Ethereum și utilitare în JavaScript și TypeScript._**
@@ -265,7 +264,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Wrapper în jurul Web3.js cu reîncercare automată și api-uri îmbunătățite._**
 
-- [Documentație](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Documentație](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API -** **_API for fetching NFT data, including ownership, metadata attributes and more._**

@@ -2,8 +2,6 @@
 title: Translation Program
 lang: en
 description: Information about the ethereum.org Translation Program
-sidebar: true
-sidebarDepth: 3
 ---
 
 # Translation Program {#translation-program}
@@ -22,6 +20,8 @@ The ethereum.org Translation Program is open and anyone can contribute!
 4. Machine translations will not be approved.
 5. All translations are reviewed before being added to the site, so there will be a short delay before your translations go live.
 
+_Join the [ethereum.org Discord](/discord/) to collaborate on translations, ask questions, share feedback and ideas, or join a translation group._
+
 <ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Start translating
 </ButtonLink>
@@ -36,54 +36,34 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Our progress so far {#our-progress}
 
-- [**3,800 +** translators](/contributing/translation-program/contributors/)
-- [**48** languages live on site](/languages/)
-- [**2.9 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
-- [**1.9 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
+- [**5,100 +** translators](/contributing/translation-program/contributors/)
+- [**54** languages live on site](/languages/)
+- [**3 million** words translated in 2022](/contributing/translation-program/acknowledgements/)
 
-If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
+<TranslationChartImage />
 
-<InfoBanner emoji=":tada:">
-  Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
-  claim your POAP token! If you translated ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
-  <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
-</InfoBanner>
+### Acknowledgements {#acknowledgements}
 
-### What we're working on {#our-projects}
+Ethereum.org is translated by thousands of community members and they are the key part of the Translation Program.
+We want to acknowledge our translators and support them on their career paths. Here are some of our translator acknowledgements:
 
-Our community of contributors is actively translating multiple high-impact websites and resources for the global Ethereum community.
+#### Certificate {#certificate}
 
-#### Ethereum.org {#ethereumorg}
+If you have contributed to the Translation Program and at least 5,000 of your translated words have been approved, you are eligible for an ethereum.org translator certificate. [More on certificates](/contributing/translation-program/acknowledgements/#certificate)
 
-![](./ethereum-org-screenshot.png)
+#### POAPs {#poaps}
 
-[Ethereum.org](/) is a key educational resource for the Ethereum community and is the primary focus of the Translation Program. Given the size, scope, and reach of the website, it's the most impactful site to translate and we recommend starting here!
+All of our translators are eligible for a POAP (Proof of Attendance Protocol) - an NFT that proves their contribution to the ethereum.org Translation Program. [More on POAPs](/contributing/translation-program/acknowledgements/#poap)
 
-Get involved:
+#### Translator acknowledgements {#translator-acknowledgements}
 
-- Join the [ethereum.org translations project in Crowdin](https://crowdin.com/project/ethereum-org/invite)
+Public acknowledgements of our top translators using [leaderboards](/contributing/translation-program/acknowledgements/) and a [list of all contributors to the Translation Program](/contributing/translation-program/contributors/).
 
-#### Ethereum Staking Launchpad {#ethereum-staking-launchpad}
+#### Rewards {#rewards}
 
-![](./launchpad-screenshot.png)
+In the past, we have retroactively rewarded our most active contributors with tickets to Ethereum conferences like [Devcon](https://devcon.org/en/) and [Devconnect](https://devconnect.org/), as well as exclusive ethereum.org merch.
 
-The [Staking Launchpad](https://launchpad.ethereum.org/en/) enables Ethereum users to become validators and help secure the future of Ethereum by staking ETH.
-
-Get involved:
-
-- Visit the [Launchpad translations page](/contributing/translation-program/launchpad-translations/)
-- Join the [Launchpad translations project in Crowdin](https://crowdin.com/project/ethereum-staking-launchpad)
-
-#### Ethereum Foundation blog {#ethereum-foundation-blog}
-
-![](./blog-screenshot.png)
-
-The [Ethereum Foundation blog](https://blog.ethereum.org/) is the primary publication tool for many EF-supported teams and is the source of announcements, updates, reports, roundups, and other public communication for the Ethereum community.
-
-Get involved:
-
-- Visit the [Blog translations page](/contributing/translation-program/blog-translations/)
-- Join the [Blog translations project in Crowdin](https://crowdin.com/project/ethereum-foundation-blog)
+We're constantly thinking of new and innovative ways to reward our contributors, so stay tuned!
 
 ### Guides and resources {#guides-and-resources}
 

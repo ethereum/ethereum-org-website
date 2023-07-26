@@ -2,7 +2,6 @@
 title: Jaringan Pengembangan
 description: Gambaran umum tentang jaringan pengembangan dan peralatan yang tersedia untuk membantu menyusun aplikasi Ethereum.
 lang: id
-sidebar: true
 ---
 
 Ketika menyusun aplikasi Ethereum dengan kontrak pintar, Anda ingin menjalankannya pada jaringan lokal untuk melihat bagaimana cara kerjanya sebelum digunakan.

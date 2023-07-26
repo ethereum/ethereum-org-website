@@ -8,7 +8,6 @@ tags:
   - "stocare"
 skill: advanced
 lang: ro
-sidebar: true
 published: 2021-12-30
 ---
 

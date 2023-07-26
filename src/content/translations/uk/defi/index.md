@@ -4,7 +4,6 @@ description: Огляд DeFi на Ethereum
 lang: uk
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Логотип Eth із блоків Lego.
 sidebarDepth: 2
@@ -333,14 +332,13 @@ DeFi — це ініціатива з відкритим вихідним код
 
 ### Інформація про DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### Статті про DeFi {#defi-articles}
 
-- [Що таке децентралізовані фінанси?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) — _ETHHub, регулярні оновлення_
-- [Посібник з роботи з DeFi для початківців](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) — _Сід Коельо-Прабху, 6 січня 2020 р._
+- [Посібник із роботи з DeFi для початківців](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) — _Сід Коельо-Прабху, 6 січня 2020 р._
 
 ### Відео {#videos}
 

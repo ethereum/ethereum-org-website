@@ -3,20 +3,9 @@ title: Kickstart your dapp frontend development with create-eth-app
 description: An overview of how to use create-eth-app and its features
 author: "Markus Waas"
 tags:
-  [
-    "create-eth-app",
-    "frontend",
-    "javascript",
-    "ethers.js",
-    "the graph",
-    "aave",
-    "compound",
-    "uniswap",
-    "sablier",
-  ]
+  ["create-eth-app", "frontend", "javascript", "ethers.js", "the graph", "defi"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
@@ -57,13 +46,13 @@ The _create-eth-app_ in particular is making use of the new [hooks effects](http
 
 ### ethers.js {#ethersjs}
 
-While [Web3](https://web3js.readthedocs.io/en/v1.2.7/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs-beta.ethers.io/) which is almost out of beta.
+While [Web3](https://docs.web3js.org/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs-beta.ethers.io/) which is almost out of beta.
 
 ### The Graph {#the-graph}
 
 [GraphQL](https://graphql.org/) is an alternative way for handling data compared to a [Restful API](https://restfulapi.net/). They have several advantages over Restful Apis, especially for decentralized blockchain data. If you are interested in the reasoning behind this, have a look at [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
 
-Usually you would fetch data from your smart contract directly. Want to read the time of the latest trade? Just call `MyContract.methods.latestTradeTime().call()` which fetches the data from an Ethereum node like Infura into your dapp. But what if you need hundreds of different data points? That would result in hundreds of data fetches to the node, each time requiring an [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) making your dapp slow and inefficient. One workaround might be a fetcher call function inside your contract that returns multiple data at once. This is not always ideal though.
+Usually you would fetch data from your smart contract directly. Want to read the time of the latest trade? Just call `MyContract.methods.latestTradeTime().call()` which fetches the data from an Ethereum node into your dapp. But what if you need hundreds of different data points? That would result in hundreds of data fetches to the node, each time requiring an [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) making your dapp slow and inefficient. One workaround might be a fetcher call function inside your contract that returns multiple data at once. This is not always ideal though.
 
 And then you might be interested in historical data as well. You want to know not only the last trade time, but the times for all trades that you ever did yourself. Use the _create-eth-app_ subgraph package, read the [documentation](https://thegraph.com/docs/define-a-subgraph) and adapt it to your own contracts. If you are looking for popular smart contracts, there may even already be a subgraph. Check out the [subgraph explorer](https://thegraph.com/explorer/).
 

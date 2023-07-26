@@ -1,15 +1,15 @@
 ---
-title: 使用 Waffle 测试智能合约
-description: 学习如何测试 Solidity 智能合约，以及如何将智能合约匹配器与 Waffle 配合使用
+title: 使用 Waffle 测试 ERC-20 代币
+description: 学习如何测试 Solidity 智能合约，以及如何将智能合约匹配器与 Waffle 配合使用。
 author: Vladislav Starostenko
 tags:
   - "waffle"
   - "智能合约"
   - "solidity"
   - "测试"
+  - "erc-20"
 skill: intermediate
 lang: zh
-sidebar: true
 published: 2020-10-16
 ---
 
@@ -34,7 +34,7 @@ published: 2020-10-16
 
 使用 [JavaScript API](/developers/docs/apis/javascript/) ethers-js。
 
-您可以在 [Waffle 文档](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation) 中阅读更多详细信息！
+您可以在 [Waffle 文档](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation)中阅读更多详细信息！
 
 ## 快速教程 {#the-quick-tutorial}
 
@@ -687,7 +687,7 @@ contract BasicToken is ERC20 {
 }
 ```
 
-在项目的根目录添加一个 `waffle.json` 文件：
+并且在项目的根目录中添加 `waffle.json` 文件。
 
 一个 `waffle.json` 配置实例：
 
@@ -702,7 +702,7 @@ contract BasicToken is ERC20 {
 
 您可以在[这里](https://ethereum-waffle.readthedocs.io/en/latest/configuration.html#configuration)阅读更多关于 Waffle 配置的信息。
 
-然后运行 `yarn build` 来编译智能合约。
+然后只需运行 `yarn build` 来编译智能合约。
 
 您应该看到 Waffle 编译了您的合约，并将由此产生的 JSON 输出放置在 `build` 目录内。
 
@@ -1007,7 +1007,7 @@ contract BasicToken is ERC20 {
 
 </details>
 
-## 第 4 步：编译智能合约 [文档链接](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-test-your-smart-contract}
+## 第 4 步：测试智能合约 [文档链接](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-test-your-smart-contract}
 
 ### 第 4.1 步：安装必要依赖项 [文档链接](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-1}
 
@@ -1043,11 +1043,11 @@ describe("BasicToken", () => {
 })
 ```
 
-因此，我们使用 `Waffle` 的 `deployContract` 方法来部署我们的代币。 对于参数来说，我们应该传递 `wallet`、我们合约的编译的 json 文件和默认余额。
+因此，我们使用 `Waffle` 的 `deployContract` 方法来部署我们的代币。 对于参数来说，我们应该传递 `wallet`、我们合约的已编译 json 文件和默认余额。
 
 `Waffle` 也允许我们创建一个 `wallet`，这使得部署合约变得很容易。
 
-您可以在[这里](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#getting-wallets)阅读更多关于 `wallet`的信息，并且您可以在[这里](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#deploying-contracts)阅读更多关于部署功能的信息。
+您可以在[这里](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#getting-wallets)阅读更多关于 `wallet` 的信息，并且您可以在[这里](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#deploying-contracts)阅读更多关于部署功能的信息。
 
 让我们写一个简单的测试来检查钱包的余额。 由于我们在部署合约期间提交了 1000 的价值，所以钱包余额必须是 1000 个代币，我们可以在第一次测试中检查。
 
@@ -1059,11 +1059,11 @@ it("Assigns initial balance", async () => {
 
 要运行测试，请使用 `yarn test`
 
-### 第 4.3 步：发出事件 [文档链接](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) {#step-4-3}
+### 第 4.3 步：触发事件 [文档链接](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) {#step-4-3}
 
 在本教程中，我想向您展示 `Waffle` 最有用的匹配器，所以让我们从第一个开始。
 
-`Waffle` 允许我们测试在哪里发出了哪些事件。
+`Waffle` 允许我们测试在哪里触发了哪些事件。
 
 在本教程中，我将测试我们合约的 `transfer` 方法。
 
@@ -1077,17 +1077,17 @@ it("Transfer emits event", async () => {
 })
 ```
 
-另外，这个匹配器的一大优点是，通过将 `with Args` 添加到我们的测试中，我们可以检查调用该事件时使用了哪些参数。
+另外，这个匹配器的一大优点是，通过将 `withArgs` 添加到我们的测试中，我们可以检查调用该事件时使用了哪些参数。
 
 这将可以确保我们的函数被正确地调用！
 
-### 第 4.4 步：使用消息回滚 [文档链接](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) {#step-4-4}
+### 第 4.4 步：回滚时显示消息 [文档链接](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) {#step-4-4}
 
-`Waffle` 允许我们测试使用了哪些消息对其进行回滚。
+`Waffle` 允许我们测试回滚时显示哪些消息。
 
-我们将使用 ` revertWith` 匹配器来对它进行检查。
+我们在测试中将使用 `revertedWith` 匹配器来对它进行检查。
 
-我们可以编写一个测试，我们将在测试中进行一笔大于我们钱包金额的转帐。 然后，我们将检查是否有交易回滚所使用的确切消息！
+我们可以编写一个测试，我们将在测试中进行一笔大于我们钱包金额的转帐。 然后，我们将检查交易回滚时显示确切的消息！
 
 ```ts
 it("Can not transfer above the amount", async () => {
@@ -1103,7 +1103,7 @@ it("Can not transfer above the amount", async () => {
 
 我们可以使用 `changeTokenBalance` 匹配器来检查余额变化或使用 `changeTokenBalances` 检查多个帐户。
 
-匹配器可以接受`数字`、`字符串` 和 `BigNumbers` 作为余额变化，但是地址应该指定为钱包或合约。
+匹配器可以接受 `numbers`、`strings` 和 `BigNumbers` 作为余额变化，但是地址应该指定为钱包或合约。
 
 我们来编写下一个测试：
 
@@ -1129,10 +1129,10 @@ it("Send transaction changes sender and receiver balances", async () => {
 
 该交易应作为回调（我们需要在调用之前检查余额）或作为交易响应传递。
 
-## 恭喜您！ {#congratulations}
+## 恭喜您 {#congratulations}
 
 **恭喜您！ 您通过这个教程，成功完成了测试。 您已经迈出了使用 Waffle 测试智能合约的第一大步。**
 
 **您可以在[这里](https://github.com/VladStarostenko/tutorial-for-ethereum-org-website)找到本教程的代码。**
 
-**更多关于 `Waffle` 的文档可在[这里获取](https://getwaffle.io) 。**
+**更多关于 `Waffle` 的文档可在[这里](https://getwaffle.io)获取 。**

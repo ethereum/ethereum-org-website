@@ -3,7 +3,6 @@ title: Używanie WebSockets
 description: Przewodnik korzystania z WebSockets i Alchemy do wysyłania żądań JSON-RPC i subskrybowania zdarzeń.
 author: "Elan Halpern"
 lang: pl
-sidebar: true
 tags:
   - "alchemy"
   - "websockets"
@@ -25,16 +24,16 @@ W odróżnieniu od HTTP, z WebSockets, nie musisz ciągle wysyłać żądań, gd
 
 Podobnie jak w przypadku jakiegokolwiek połączenia sieciowego, nie należy zakładać, że WebSocket pozostanie otwarty na zawsze bez przerwy, ale właściwa obsługa zerwanego połączenia i ponowne nawiązanie połączenie może zapewnić ciągłość jego prawidłowego działania. Następną niedogodnością WebSocketów jest to, że nie otrzymujesz kodów statusu HTTP w odpowiedzi, ale tylko komunikat o błędzie.
 
-​[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) automatycznie dodaje obsługę awarii WebSocket i ponawiania prób bez konieczności konfiguracji.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automatycznie dodaje obsługę awarii WebSocket i ponawiania prób bez konieczności konfiguracji.
 
 ## Wypróbuj {#try-it-out}
 
 Najprostszym sposobem na przetestowanie WebSockets jest zainstalowanie narzędzia wiersza poleceń do tworzenia żądań WebSocket, takich jak [wscat](https://github.com/websockets/wscat). Używając wscat, możesz wysyłać następujące żądania:
 
-_Uwaga: jeśli posiadasz konto Alchemy, możesz zastąpić `demo` własnym kluczem API. [Sign up for a free Alchemy account here!](https://dashboard.alchemyapi.io/signup/)_
+_Uwaga: jeśli posiadasz konto Alchemy, możesz zastąpić `demo` własnym kluczem API. [Sign up for a free Alchemy account here!](https://auth.alchemyapi.io/signup)_
 
 ```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 >  {"jsonrpc": "2.0", "id": 0, "method": "eth_gasPrice"}
 <  {"jsonrpc": "2.0", "result": "0xb2d05e00", "id": 0}
 
@@ -249,4 +248,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Zarejestruj się w Alchemy](https://dashboard.alchemyapi.io/signup/) za darmo, sprawdź [naszą dokumentację](https://docs.alchemyapi.io/) aby uzyskać najnowsze wiadomości, obserwuj nas na [Twitterze](https://twitter.com/AlchemyPlatform).
+[Zarejestruj się w Alchemy](https://auth.alchemyapi.io/signup) za darmo, sprawdź [naszą dokumentację](https://docs.alchemyapi.io/) aby uzyskać najnowsze wiadomości, obserwuj nas na [Twitterze](https://twitter.com/AlchemyPlatform).

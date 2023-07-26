@@ -3,8 +3,7 @@ title: "Reverse Engineering a Contract"
 description: How to understand a contract when you don't have the source code
 author: Ori Pomerantz
 lang: en
-sidebar: true
-tags: ["evm", "opcodes", "reverse engineering", "decompiler"]
+tags: ["evm", "opcodes"]
 skill: advanced
 published: 2021-12-30
 ---
@@ -15,7 +14,7 @@ _There are no secrets on the blockchain_, everything that happens is consistent,
 
 There are reverse compilers, but they don't always produce [usable results](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). In this article you learn how to manually reverse engineer and understand a contract from [the opcodes](https://github.com/wolflo/evm-opcodes), as well as how to interpret the results of a decompiler.
 
-To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You can read about about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
+To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You can read about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
 ## Prepare the Executable Code {#prepare-the-executable-code}
 
@@ -33,7 +32,7 @@ The next step is to get the correct code locations so we'll be able to understan
 
 First this function adds one byte for the opcode itself, and then looks for `PUSH`. Push opcodes are special because they need to have additional bytes for the value being pushed. If the opcode is a `PUSH`, we extract the number of bytes and add that.
 
-In `A1` put the first offest, zero. Then, in `A2`, put this function and again copy and paste it for the rest of column A:
+In `A1` put the first offset, zero. Then, in `A2`, put this function and again copy and paste it for the rest of column A:
 
 ```
 =dec2hex(hex2dec(A1)+B1)
@@ -74,14 +73,14 @@ This code does two things:
 
 This snippet starts with a `JUMPDEST`. EVM (Ethereum virtual machine) programs throw an exception if you jump to an opcode that isn't `JUMPDEST`. Then it looks at the CALLDATASIZE, and if it is "true" (that is, not zero) jumps to 0x7C. We'll get to that below.
 
-| Offset | Opcode     | Stack (after opcode)                                                                              |
-| -----: | ---------- | ------------------------------------------------------------------------------------------------- |
-|     64 | CALLVALUE  | [Wei](https://ethereum.org/en/glossary/#wei) provided by the call. Called `msg.value` in Solidity |
-|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                                       |
-|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                                     |
-|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                                           |
-|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                                         |
-|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                                                |
+| Offset | Opcode     | Stack (after opcode)                                                       |
+| -----: | ---------- | -------------------------------------------------------------------------- |
+|     64 | CALLVALUE  | [Wei](/glossary/#wei) provided by the call. Called `msg.value` in Solidity |
+|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
+|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                              |
+|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                    |
+|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
+|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
 So when there is no call data we read the value of Storage[6]. We don't know what this value is yet, but we can look for transactions that the contract received with no call data. Transactions which just transfer ETH without any call data (and therefore no method) have in Etherscan the method `Transfer`. In fact, [the very first transaction the contract received](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) is a transfer.
 
@@ -313,7 +312,7 @@ If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler
 |    10D | DUP1         | 0x00 0x00 CALLVALUE           |
 |    10E | REVERT       |
 
-The first thing this function does is check that the call did not send any ETH. This function is not [`payable`](https://solidity-by-example.org/payable/). If somebody sent us ETH that much be a mistake and we want to `REVERT` to avoid having that ETH where they can't get it back.
+The first thing this function does is check that the call did not send any ETH. This function is not [`payable`](https://solidity-by-example.org/payable/). If somebody sent us ETH that must be a mistake and we want to `REVERT` to avoid having that ETH where they can't get it back.
 
 | Offset | Opcode                                            | Stack                                                                       |
 | -----: | ------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -575,7 +574,7 @@ And that the methods it supports are:
 | ???                                                                                                             | [0x81e580d3](#0x81e580d3)    | 0x0122              |
 | ???                                                                                                             | [0x1f135823](#0x1f135823)    | 0x00D8              |
 
-We can ignore the bottom four methods because we will never get to them. Their signatures are such that our original contract takes care of them by itself (you can click the signatures to see the details above), so they must be [methods that are overriden](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf).
+We can ignore the bottom four methods because we will never get to them. Their signatures are such that our original contract takes care of them by itself (you can click the signatures to see the details above), so they must be [methods that are overridden](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf).
 
 One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`, so it looks like an airdrop contract. Instead of going through the rest opcode by opcode, we can [try the decompiler](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), which produces usable results for three functions from this contract. Reverse engineering the other ones is left as an exercise to the reader.
 
@@ -649,7 +648,7 @@ We know that `unknown2eb4a7ab` is actually the function `merkleRoot()`, so this 
        gas 30000 wei
 ```
 
-This is how a contract transfers its own ETH to another address (contract or externally owned). It calls it with a value that is the amount to be transfered. So it looks like this is an airdrop of ETH.
+This is how a contract transfers its own ETH to another address (contract or externally owned). It calls it with a value that is the amount to be transferred. So it looks like this is an airdrop of ETH.
 
 ```python
   if not return_data.size:

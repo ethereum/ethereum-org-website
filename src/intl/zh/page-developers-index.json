@@ -8,7 +8,6 @@
   "page-developers-advanced": "高级",
   "page-developers-api-desc": "使用库与智能合约互动",
   "page-developers-api-link": "后端应用程序接口",
-  "page-developers-aria-label": "开发者菜单",
   "page-developers-block-desc": "交易批量添加到区块链中",
   "page-developers-block-explorers-desc": "您的以太坊数据门户网站",
   "page-developers-block-explorers-link": "区块浏览器",
@@ -52,7 +51,7 @@
   "page-developers-meta-desc": "本页为以太坊开发者提供相关文档、教程以及工具。",
   "page-developers-mev-desc": "最大可提取价值 (MEV) 简介",
   "page-developers-mev-link": "最大可提取价值 (MEV)",
-  "page-developers-mining-desc": "如何创建新块并达成协商一致意见",
+  "page-developers-mining-desc": "如何使用工作量证明创建新区块并达成共识",
   "page-developers-mining-link": "挖矿",
   "page-developers-mining-algorithms-desc": "关于以太坊挖矿算法的信息",
   "page-developers-mining-algorithms-link": "挖矿算法",
@@ -92,5 +91,7 @@
   "page-developers-networking-layer-desc": "以太坊网络层的简介",
   "page-developers-data-structures-and-encoding": "数据结构和编码",
   "page-developers-data-structures-and-encoding-link": "数据结构和编码",
-  "page-developers-data-structures-and-encoding-desc": "以太坊堆栈中使用的数据结构和编码方案简介"
+  "page-developers-data-structures-and-encoding-desc": "以太坊堆栈中使用的数据结构和编码方案简介",
+  "alt-eth-blocks": "积木被搭建成以太坊符号的图示",
+  "page-assets-doge": "使用去中心化应用程序的拟人狗"
 }

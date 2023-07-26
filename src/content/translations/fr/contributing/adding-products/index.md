@@ -2,7 +2,6 @@
 title: Ajouter des produits
 description: La politique que nous appliquons pour l'ajout de portefeuilles et de dApps à ethereum.org
 lang: fr
-sidebar: true
 ---
 
 _Remarque sur l'ajout de portefeuilles : dans le cadre de [notre feuille de route sur les produits pour le premier trimestre](https://github.com/ethereum/ethereum-org-website/issues/5105), nous remanions notre page de portefeuilles. Cela comprend la révision des critères de listage sur notre page des portefeuilles. Tant que nous n'aurons pas étudié, défini et publié les nouveaux critères de listage, nous n'ajouterons aucun nouveau portefeuille au site web._
@@ -98,7 +97,7 @@ Ethereum étant flexible par nature, les équipes et les produits vont et vienne
 - nous assurer que tous les portefeuilles et dApps répertoriés répondent toujours à nos critères ;
 - vérifier si de nouveaux produits suggérés répondent à plus de nos critères que ceux actuellement répertoriés.
 
-Vous pouvez nous aider en vérifiant par vous-même et en nous le faisant savoir. [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) ou envoyez un email à l'adresse [website@ethereum.org](mailto:website@ethereum.org)
+Vous pouvez nous aider en vérifiant par vous-même et en nous le faisant savoir. [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) ou envoyez un email à l'adresse [website@ethereum.org](mailto:website@ethereum.org)
 
 _Nous étudions également des options de vote afin que la communauté puisse indiquer ses préférences et mettre en évidence les meilleurs produits pour que nous puissions les recommander._
 

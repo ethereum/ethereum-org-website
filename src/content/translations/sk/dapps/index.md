@@ -22,11 +22,10 @@ Tu je zopár aplikácií postavených na Ethereu – tento zoznam však často o
 
 Chceli by ste spoznať ďalšie aplikácie postavené na Ethereu?
 
-- [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) _pravidelne aktualizované – EthHub_
 - [90+ Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _24. apríla 2019 - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _pravidelne aktualizované - State of the Dapps_
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _pravidelne aktualizované - Defiprime_
-- [DeFi Pulse](https://defipulse.com/) _analýza a hodnotenie protokolov DeFi - Defi Pulse_
+- [DeFi Llama](https://defillama.com/) _analýza a hodnotenie protokolov DeFi - Defi Llama_
 
 Niektoré aplikácie Etherea vyžadujú peňaženku - [tu sa dozviete viac o peňaženkách Etherea](/sk/wallets/).
 

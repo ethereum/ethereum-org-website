@@ -11,7 +11,6 @@ tags:
   - "alchemy"
 skill: beginner
 lang: it
-sidebar: true
 published: 2020-10-30
 source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
@@ -23,9 +22,9 @@ Questa è una guida per principianti per muovere i primi passi con lo sviluppo d
 
 Inizieremo dalla registrazione ad Alchemy e passeremo alla scrittura del tuo primo script web3! Non è necessaria alcuna esperienza di sviluppo con blockchain.
 
-## 1. Crea un profilo Alchemy gratuito {#sign-up-for-a-free-alchemy-account}
+## 1. Registrati per un Conto Gratuito di Alchemy {#sign-up-for-a-free-alchemy-account}
 
-Creare un account Alchemy è facile. [Registrati gratuitamente qui](https://dashboard.alchemyapi.io/signup/).
+Creare un conto di Alchemy è facile, [registrati gratuitamente qui](https://auth.alchemyapi.io/signup).
 
 ## 2. Crea un'app con Alchemy {#create-an-alchemy-app}
 
@@ -56,7 +55,7 @@ Per le richieste manuali, consigliamo di interagire con `JSON-RPC` tramite richi
 - `params`: elenco di parametri da passare al metodo.
 - `id`: ID della richiesta. Sarà restituita dalla risposta, e potrai controllare sempre a quale richiesta appartiene la risposta.
 
-Ecco un'esempio che puoi eseguire dalla riga di comando per recuperare il prezzo corrente del carburante:
+Ecco un esempio che puoi eseguire dalla riga di comando per recuperare il prezzo corrente del gas:
 
 ```bash
 curl https://eth-mainnet.alchemyapi.io/v2/demo \
@@ -65,7 +64,7 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-_**NOTA:** Sostituisci [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) con la tua chiave API `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`\*\*._
+_**NOTA:** Sostituisci [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) con la tua chiave API `https://eth-mainnet.alchemyapi.io/v2/**your-api-key`._
 
 **Risultati:**
 
@@ -79,7 +78,7 @@ _**NOTA:** Sostituisci [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-m
 
 **_NOTA:_** gli script qui sotto devono essere eseguiti in un **contesto node** o **salvati in un file**, non devono essere eseguiti dalla riga di comando. Se non hai installato Node o npm, dai un'occhiata a questa [guida di configurazione per Mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
 
-Ci sono tantissime [librerie Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) che possono essere integrate con Alchemy, ma consigliamo di usare [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3), un sostituto di web3.js, creato e configurato per funzionare perfettamente con Alchemy. Fornisce diversi vantaggi, come tentativi automatici e supporto affidabile per WebSocket.
+Ci sono tantissime [librerie Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) che puoi integrare con Alchemy, tuttavia, consigliamo di usare [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), un sostituto di web3.js, creato e configurato per funzionare senza problemi con Alchemy. Fornisce diversi vantaggi, come tentativi automatici e supporto affidabile per WebSocket.
 
 Per installare AlchemyWeb3.js, **passa alla directory del tuo progetto** ed esegui:
 
@@ -153,4 +152,4 @@ The latest block number is 11043912
 
 Non sai come proseguire? Prova a distribuire il tuo primo smart contract e fai qualche prova pratica di programmazione in Solidity nella nostra [Guida agli smart contract Hello World](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract) o testa la tua conoscenza della Dashboard con l'[_App Demo della Dashboard_](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Iscriviti gratis ad Alchemy](https://dashboard.alchemyapi.io/signup/), dai un'occhiata alla nostra [documentazione](https://docs.alchemyapi.io/) e, per le ultime notizie, seguici su [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Iscriviti gratis ad Alchemy](https://auth.alchemyapi.io/signup), dai un'occhiata alla nostra [documentazione](https://docs.alchemyapi.io/) e, per le ultime notizie, seguici su [Twitter](https://twitter.com/AlchemyPlatform)_.

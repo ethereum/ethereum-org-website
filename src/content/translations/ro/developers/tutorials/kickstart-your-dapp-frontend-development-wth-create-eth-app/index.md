@@ -8,13 +8,9 @@ tags:
   - "javascript"
   - "ethers.js"
   - "the graph"
-  - "aave"
-  - "compound"
-  - "uniswap"
-  - "sablier"
+  - "defi"
 skill: beginner
 lang: ro
-sidebar: true
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
@@ -55,7 +51,7 @@ Acesta folosește [create-react-app](https://github.com/facebook/create-react-ap
 
 ### ethers.js {#ethersjs}
 
-Chiar dacă [Web3](https://web3js.readthedocs.io/en/v1.2.7/) este încă utilizat cel mai des, sunt mult mai mulţi cei care au aderat la [ethers.js](https://docs.ethers.io/) ca alternativă în ultimul an și este cel integrat în _create-eth-app_. Puteți lucra cu acesta, să îl schimbați cu Web3 sau să luați în considerare actualizarea la [ethers.js v5](https://docs-beta.ethers.io/), care mai are puţin şi iese din stadiul beta.
+Chiar dacă [Web3](https://docs.web3js.org/) este încă utilizat cel mai des, sunt mult mai mulţi cei care au aderat la [ethers.js](https://docs.ethers.io/) ca alternativă în ultimul an și este cel integrat în _create-eth-app_. Puteți lucra cu acesta, să îl schimbați cu Web3 sau să luați în considerare actualizarea la [ethers.js v5](https://docs-beta.ethers.io/), care mai are puţin şi iese din stadiul beta.
 
 ### The Graph {#the-graph}
 

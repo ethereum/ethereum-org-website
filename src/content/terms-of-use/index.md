@@ -1,6 +1,7 @@
 ---
 title: Terms of Use
 lang: en
+hideEditButton: true
 ---
 
 # Terms of Use {#terms-of-use}

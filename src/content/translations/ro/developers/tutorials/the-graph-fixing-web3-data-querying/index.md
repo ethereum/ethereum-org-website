@@ -3,7 +3,6 @@ title: "The Graph: Remedierea interogării datelor Web3"
 description: Blockchain este ca o bază de date, dar fără SQL. Toate datele sunt acolo, dar nu există nicio modalitate de a le accesa. O să-ți arăt cum să reparăm acest lucru cu Graph și GraphQL.
 author: Markus Waas
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"
@@ -53,7 +52,7 @@ Now let's say in our Dapp, we want to display total bets, the total games lost/w
 2. Preia `totalGamesPlayerLost`.
 3. Abonează-te la `evenimente BetPlaced`.
 
-Putem asculta [evenimentul în Web3](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#contract-events) așa cum se arată în dreapta, dar necesită manipularea destul de multor cazuri.
+Putem asculta [evenimentul în Web3](https://docs.web3js.org/api/web3/class/Contract#events) așa cum se arată în dreapta, dar necesită manipularea destul de multor cazuri.
 
 ```solidity
 GameContract.events.BetPlaced({

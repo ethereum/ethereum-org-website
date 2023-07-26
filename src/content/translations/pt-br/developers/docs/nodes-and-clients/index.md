@@ -2,74 +2,113 @@
 title: Nós e clientes
 description: Uma visão geral dos nós do Ethereum e do software do cliente, além de como configurar um nó e por que você deve fazer isso.
 lang: pt-br
-sidebar: true
 sidebarDepth: 2
 ---
 
-O Ethereum é uma rede distribuída de computadores executando software (conhecidos como nós) que pode verificar blocos e dados de transação. Você precisa de um aplicativo, conhecido como cliente, no seu dispositivo para "executar" um nó.
+O Ethereum é uma rede distribuída de computadores (conhecidos como nós) executando softwares que podem verificar blocos e dados de transação. O aplicativo de software, conhecido como cliente, deve ser executado no seu computador para transformá-lo em um nó Ethereum.
+
+**Nota: não é mais possível executar um cliente de execução por conta própria. Após [A Fusão](/roadmap/merge) (The Merge), ambos os clientes de execução e de consenso devem ser executados juntos para um usuário obter acesso à rede Ethereum.**
 
 ## Pré-requisitos {#prerequisites}
 
-Você deve entender o conceito de uma rede peer-to-peer e os conceitos básicos [do EVM](/developers/docs/evm/) antes de mergulhar mais fundo e executar a sua própria instância de um cliente Ethereum. Veja nossa [introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
+Você deve entender o conceito de uma rede peer-to-peer e os [conceitos básicos da EVM](/developers/docs/evm/) antes de mergulhar mais fundo e executar a sua própria instância de um cliente Ethereum. Veja nossa [introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
 
-If you're new to the topic of nodes, we recommend first checking out our user-friendly introduction on [running an Ethereum node](/run-a-node).
+Se você é novo no tema dos nós, recomendamos primeiro verificar nossa introdução simplificada no [rodando um nó Ethereum](/run-a-node).
 
 ## O que são nós e clientes? {#what-are-nodes-and-clients}
 
-"Nó" refere-se a um software conhecido como cliente. Um cliente é uma implementação do Ethereum que verifica todas as transações em cada bloco, mantendo a rede segura e os dados precisos.
+Um "nó" é qualquer instância de software do cliente Ethereum que esteja conectado a outros computadores também executando o software Ethereum, formando uma rede. Um cliente é uma implementação do Ethereum que verifica os dados em relação às regras do protocolo e mantém a rede segura.
 
-Você pode ter uma visão em tempo real da rede Ethereum olhando este [mapa dos nós](https://etherscan.io/nodetracker).
+O Ethereum pós Fusão consiste em duas partes: a camada de execução e a camada de consenso. Ambas as camadas são executadas por software cliente diferente. Nesta página, vamos nos referir a eles como cliente de execução e cliente de consenso.
 
-Existem muitos [clientes de Ethereum](/developers/docs/nodes-and-clients/#execution-clients) em uma variedade de linguagens de programação, como Go, Rust, JavaScript, Python, C# .NET e Java. O que essas implementações têm em comum é que todas elas seguem uma especificação formal (originalmente o [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf)). Esta especificação determina como funciona a rede Ethereum e a blockchain.
+- O cliente de execução (também conhecido como Execution Engine, cliente EL ou anteriormente cliente Eth1) ouve novas transações transmitidas na rede, executa-as na EVM e mantém o estado mais recente e o banco de dados de todos os dados atuais do Ethereum.
+- O cliente de consenso (também conhecido como Beacon Node, cliente CL ou anteriormente cliente Eth2) implementa o algoritmo de consenso de prova de participação, o qual permite que a rede realize um acordo com base nos dados validados do cliente de execução.
 
-![Cliente de execução](./client-diagram.png) Diagrama simplificado sobre as características do cliente Ethereum.
+Antes da [Fusão](/roadmap/merge/) (The Merge), a camada de consenso e execução eram redes separadas, com todas as transações e atividades do usuário no Ethereum acontecendo, no que agora é a camada de execução. Um software do cliente forneceu ambiente de execução e verificação de consenso de blocos produzidos por mineradores. A camada de consenso, [a Beacon Chain](/roadmap/beacon-chain/), está sendo executada separadamente desde dezembro de 2020. Ela introduziu a prova de participação e coordenou a rede de validadores com base nos dados da rede Ethereum.
+
+Com a Fusão, o Ethereum transita para a prova de participação conectando essas redes. Os clientes de execução e consenso trabalham juntos para verificar o estado do Ethereum.
+
+O design modular com várias peças de software trabalhando em conjunto é chamado de [complexidade encapsulada](https://vitalik.ca/general/2022/02/28/complexity.html). Essa abordagem facilita executar A Fusão sem problemas e permite a reutilização de clientes individuais, por exemplo, no [ecossistema de camada 2](/layer-2/).
+
+![Execução de acoplamento e clientes de consenso](./eth1eth2client.png) Diagrama simplificado de uma execução associada e de um cliente de consenso.
+
+### Diversidade dos clientes {#client-diversity}
+
+Tanto [clientes de execução](/developers/docs/nodes-and-clients/#execution-clients) quanto [clientes de consenso](/developers/docs/nodes-and-clients/#consensus-clients) existem em uma variedade de linguagens de programação desenvolvidas por diferentes equipes.
+
+As implementações de vários clientes podem tornar a rede mais forte, reduzindo sua dependência de uma única base de código. O objetivo ideal é alcançar a diversidade sem que nenhum cliente domine a rede, eliminando assim um ponto único de falha potencial. A variedade de idiomas também convida uma comunidade de desenvolvedores mais ampla e permite que eles criem integrações em seu idioma preferido.
+
+Saiba mais sobre a [diversidade do cliente](/developers/docs/nodes-and-clients/client-diversity/).
+
+O que essas implementações têm em comum é que todas seguem uma única especificação. As especificações ditam como a rede Ethereum e a cadeia de blocos funcionam. Cada detalhe técnico é definido e as especificações podem ser encontradas como:
+
+- Originalmente, o [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Especificações de execução](https://github.com/ethereum/execution-specs/)
+- [Especificações de consenso](https://github.com/ethereum/consensus-specs)
+- [EIPs](https://eips.ethereum.org/) implementados em várias [atualizações de rede](/history/)
+
+### Rastreamento de nós na rede {#network-overview}
+
+Vários rastreadores oferecem uma visão geral em tempo real dos nós na rede Ethereum. Observe que, devido à natureza das redes descentralizadas, esses rastreadores podem fornecer apenas uma visão limitada da rede e podem relatar resultados diferentes.
+
+- Mapa de nós pela Etherscan
+- Ethernodes da Bitfly
+- [Rastreador de nós Ethereum](https://crawler.ethereum.org/)
+- [Nodewatch](https://www.nodewatch.io/) por Chainsafe, rastreando nós de consenso
 
 ## Tipos de nó {#node-types}
 
-Se você quer [executar o seu próprio nó](/developers/docs/nodes-and-clients/run-a-node/), você deve entender que existem diferentes tipos de nós que consomem dados diferentemente. Na verdade, os clientes podem executar 3 tipos diferentes de nó: light, full e archive. Existem também opções de diferentes estratégias de sincronização que permitem uma sincronização mais rápida. A sincronização se refere ao quão rápido ele pode obter as informações mais atualizadas sobre o estado do Ethereum.
+Se você quer [executar o seu próprio nó](/developers/docs/nodes-and-clients/run-a-node/), você deve entender que existem diferentes tipos de nós que consomem dados de modo diferente. Na verdade, os clientes podem executar 3 tipos diferentes de nó: leve, completo e arquivo. Existem também opções de diferentes estratégias de sincronização que permitem um tempo de sincronização mais rápida. A sincronização se refere ao quão rápido ele pode obter as informações mais atualizadas sobre o estado do Ethereum.
 
-### Nó Full {#full-node}
+### Nó completo {#full-node}
 
-- Armazena dados completos da blockchain.
+- Armazena os dados completos da cadeia de blocos (embora isso seja periodicamente reduzido para que um nó completo não armazene todos os dados de estado de volta à origem)
 - Participa na validação de bloco, verifica todos os blocos e estados.
-- Todos os estados podem ser derivados de um nó completo.
+- Todos os estados podem ser derivados de um nó completo (embora estados muito antigos sejam reconstruídos a partir de solicitações feitas a nós de arquivo).
 - Serve a rede e fornece dados mediante solicitação.
 
-### Nó Light {#light-node}
+### Nó leve {#light-node}
 
-- Armazena a cadeia do cabeçalho e solicita todo o resto.
-- Pode verificar a validade dos dados contra os state roots nos cabeçalhos do bloco.
-- Útil para dispositivos de baixa capacidade, como dispositivos integrados ou celulares, que não possuem recursos para armazenar gigabytes de dados blockchain.
+Em vez de baixar cada bloco, nós leves baixam os cabeçalhos dos blocos. Esses cabeçalhos contêm apenas informações resumidas sobre o conteúdo dos blocos. Qualquer outra informação pelo nó leve é solicitada de um nó completo. O nó leve pode então verificar de modo independente os dados que ele recebe em relação às raízes de estado nos cabeçalhos de bloco. Os nós leves permitem que os usuários participem da rede Ethereum sem o hardware poderoso ou a alta largura de banda necessária para executar nós completos. Por fim, os nós leves podem ser executados em telefones celulares ou dispositivos embutidos. Os nós leves não participam do consenso (ou seja, eles não podem ser mineradores/validadores), mas podem acessar a cadeia de blocos Ethereum com as mesmas funcionalidades e garantias de segurança de um nó completo.
 
-### Nó Archive {#archive-node}
+Clientes leves são uma área de desenvolvimento ativo para o Ethereum e esperamos ver em breve novos clientes leves para a camada de consenso e a camada de execução. Também existem rotas em potencial para fornecer dados de clientes leves pela [rede gossip](https://www.ethportal.net/). Isso é vantajoso porque a rede gossip pode suportar uma rede de nós leves sem exigir nós completos para atender às solicitações.
 
-- Armazena tudo no nó inteiro e cria um arquivo de estados históricos. Necessário se você quiser consultar algo como um saldo de conta no bloco #4.000.000 ou simplesmente [testar de maneira simples e confiável suas próprias transações definidas sem minerá-las usando OpenEthereum](https://openethereum.github.io/Jsonrpc-trace-module#trace_callmany).
-- Esses dados representam unidades de terabytes que tornam os nós de arquivo menos atrativos para usuários médios, mas podem ser úteis para serviços como exploradores de blocos, fornecedores de carteiras e análises de cadeia.
+O Ethereum ainda não suporta uma grande quantidade de nós leves, mas o suporte a nós leves é uma área que deve se desenvolver rapidamente em um futuro próximo. Em particular, clientes como [Nimbus](https://nimbus.team/), [Hélios](https://github.com/a16z/helios), e [LodeStar](https://lodestar.chainsafe.io/) atualmente estão bastante concentrados em nós leves.
 
-Sincronizar clientes em qualquer modo que não seja o de arquivo resultará na remoção de dados da blockchain. Isso significa que não há arquivo de todo o estado histórico, mas o nó completo é capaz de criá-lo sob demanda.
+### Nó de arquivo {#archive-node}
+
+- Armazena tudo o que é mantido no nó completo e constrói um arquivo de estados históricos. Ele é necessário se você quiser consultar algo como um saldo de conta no bloco #4.000.000, ou testar de forma simples e confiável seu próprio conjunto de transações sem minerá-las usando rastreamento.
+- Esses dados representam unidades de terabytes, o que torna os nós de arquivo menos atraentes para usuários comuns, mas pode ser útil para serviços como exploradores de blocos, fornecedores de carteiras e análises da cadeia.
+
+Sincronizar clientes em qualquer modo que não seja o de arquivo resultará na remoção de dados da cadeia de blocos. Isso significa que não há arquivo de todo o estado histórico, mas o nó completo é capaz de criá-lo sob demanda.
+
+Saiba mais sobre [Nós de arquivo](/developers/docs/nodes-and-clients/archive-nodes).
 
 ## Por que devo executar um nó Ethereum? {#why-should-i-run-an-ethereum-node}
 
-A execução de um nó permite que você use o Ethereum de forma confiável e privada, ao mesmo tempo que apoia o ecossistema.
+A execução de um nó permite que você use o Ethereum de forma direta, confiável e privada, enquanto dá suporte à rede, mantendo-a mais robusta e descentralizada.
 
 ### Vantagens para você {#benefits-to-you}
 
-A execução do seu próprio nó permite que você use o Ethereum de forma verdadeiramente privada, autossuficiente e confiável. Você não precisa confiar na rede porque você pode verificar os dados por conta própria com seu cliente. "Não confie, verifique" é um mantra popular da blockchain.
+A execução de seu próprio nó permite que você use o Ethereum de maneira privada, autossuficiente e confiável. Você não precisa confiar na rede porque você pode verificar os dados por conta própria com seu cliente. “Não confie, verifique” é um mantra popular da cadeia de blocos.
 
 - Seu nó verifica todas as transações e blocos contra as regras de consenso por si só. Isso significa que você não precisa confiar em nenhum outro nó da rede nem confiar totalmente neles.
-- Você não terá que transmitir seus endereços e saldos para nós aleatórios. Tudo pode ser verificado com seu próprio cliente.
-- Seu dapp pode ser mais seguro e privado se você usar seu próprio nó. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) and some other wallets can be easily pointed to your own local node.
-- Você pode programar seus próprios endpoints de RPC personalizados.
-- Você pode se conectar ao seu nó usando **Inter-process Communications (IPC)** ou reescrever o nó para carregar seu programa como um plugin. Isto concede baixa latência, que é necessária para substituir suas transações o mais rápido possível (por exemplo, frontrunning).
+- Você pode usar uma carteira Ethereum com seu próprio nó. Você pode usar dapps com mais segurança e privacidade porque não precisará vazar seus endereços e saldos para nós aleatórios. Tudo pode ser verificado com seu próprio cliente. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) e [muitas outras carteiras](/wallets/find-wallet/) oferecem importação de RPC, permitindo que elas usem seu nó.
+- Você pode executar e auto-hospedar outros serviços que dependem de dados do Ethereum. Por exemplo, isso pode ser um validador Beacon Chain, software como camada 2, infraestrutura, exploradores de bloco, processadores de pagamento etc.
+- Você pode fornecer seus próprios [pontos de extremidade RPC](/developers/docs/apis/json-rpc/) personalizados. O ponto de extremidade Ethereum hospedado publicamente pela comunidade ou de modo privado, permite que as pessoas usem seu nó e evitem grandes provedores centralizados.
+- Você pode se conectar ao seu nó usando **Comunicações entre processos (IPC)** ou reescrever o nó para carregar seu programa como um plugin. Isso garante baixa latência, o que ajuda muito, por exemplo, ao processar muitos dados usando bibliotecas Web3 ou quando você precisa substituir suas transações o mais rápido possível (isto é, de forma acelerada).
+- Você pode colocar ETH diretamente para proteger a rede e ganhar recompensas. Veja [participação solo](/staking/solo/) para começar.
 
-![Como você acessr Ethereum através do seu aplicativo e nós](./nodes.png)
+![Como você acessar o Ethereum através do seu aplicativo e nós](./nodes.png)
 
 ### Benefícios da rede {#network-benefits}
 
 Um conjunto diversificado de nós é importante para a integridade, segurança e resiliência operacional do Ethereum.
 
-- Eles fornecem acesso a dados blockchain para clientes leves que dependem disso. Em picos altos de uso, é necessário que haja nós cheios suficientes para ajudar na sincronização dos nós. Os nós leves não armazenam toda a blockchain. Em vez disso, eles verificam dados através das [raízes do estado nos cabeçalhos de blocos](/developers/docs/blocks/#block-anatomy). Eles podem solicitar mais informações a partir dos blocos, se precisarem.
-- Nós completos impõem regras de consenso de prova de trabalho para que não possam ser enganados a aceitar blocos que não os seguem. Isto fornece segurança extra na rede porque se todos os nós fossem nós leves, que não fazem verificação completa, os minderadores poderiam atacar a rede e, por exemplo, criar blocos com recompensas maiores.
+- Os nós completos impõem as regras de consenso para que não possam ser induzidos a aceitar blocos que não as seguem. Isso fornece segurança extra na rede, pois se todos os nós fossem nós leves, que não fazem a verificação completa, os validadores poderiam atacar a rede.
+- No caso de um ataque que supere as defesas criptoeconômicas de [prova de participação](/developers/docs/consensus-mechanisms/pos/#what-is-pos), uma recuperação social pode ser realizada por nós completos escolhendo seguir a cadeia honesta.
+- Mais nós na rede resultam em uma rede mais diversificada e robusta, o objetivo final da descentralização, que permite um sistema confiável e resistente à censura.
+- Eles fornecem acesso a dados da cadeia de blocos para clientes leves que dependem disso. Em picos altos de uso, é necessário que haja nós completos suficientes para ajudar na sincronização dos nós. Os nós leves não armazenam toda a cadeia de blocos. Em vez disso, eles verificam dados por meio das [raízes do estado nos cabeçalhos de blocos](/developers/docs/blocks/#block-anatomy). Eles podem solicitar mais informações a partir dos blocos, se precisarem.
 
 Se você executa um nó completo, toda a rede Ethereum se beneficia disso.
 
@@ -77,241 +116,176 @@ Se você executa um nó completo, toda a rede Ethereum se beneficia disso.
 
 Interessado em executar o seu próprio cliente Ethereum?
 
-For a beginner-friendly introduction visit our [run a node](/run-a-node) page to learn more.
+Para ver uma introdução simplificada para iniciantes, visite a nossa página [Executar um nó](/run-a-node) para saber mais.
 
-If you're more of a technical user, learn how to [spin up your own node](/developers/docs/nodes-and-clients/run-a-node/) with the command line!
-
-### Projetos {#projects}
-
-[**Selecione um cliente e siga suas instruções**](#clients)
-
-**ethnode -** **_Execute um nó Ethereum (Geth ou Parity) para desenvolvimento local._**
-
-- [GitHub](https://github.com/vrde/ethnode)
-
-**DAppNode -** **_Um sistema operacional para executar nós Web3, incluindo Ethereum, em uma máquina dedicada._**
-
-- [dappnode.io](https://dappnode.io)
-
-### Recursos {#resources}
-
-- [Executando nós completos do Ethereum: um guia completo](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _ - Justin Leroux, 7 de novembro de 2019_
-- [Resumo sobre configuração de nós](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _ - Afri Schoeden, 5 de janeiro de 2019_
-- [Como instalar e executar um nó Geth](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _ - Sahil Sen, 4 de outubro de 2020_
-- [Como instalar e executar um nó OpenEthereum (também conhecido com. Parity)](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _ - Sahil Sen, 22 de setembro de 2020_
+Se você é mais que um usuário técnico, mergulhe em mais detalhes e opções sobre como [executar o seu próprio nó](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Alternativas {#alternatives}
 
-Executar seu próprio nó pode ser difícil e você não precisa sempre executar sua própria instância. Neste caso, você pode usar um provedor de API de terceiros como [Infura](https://infura.io), [Alquemy](https://alchemyapi.io) ou [QuikNode](https://www.quiknode.io). Alternativamente [ArchiveNode](https://archivenode.io/) é um nó de arquivo financiado pela comunidade que espera trazer dados de arquivos na blockchain Ethereum para desenvolvedores independentes que, de outro modo, não poderiam pagar por isso. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Configurar seu próprio nó pode custar tempo e recursos, mas nem sempre você precisa executar sua própria instância. Nesse caso, é possível usar um provedor de APIs externo. Para obter uma visão geral do uso desses serviços, confira [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Se alguém executa um nó Ethereum com uma API pública em sua comunidade, você pode apontar suas carteiras ligeiras (como MetaMask) para um nó da comunidade [via RPC personalizado](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) e ganhar mais privacidade do que com alguns terceiros aleatórios de confiança.
+Se alguém executar um nó do Ethereum com uma API pública em sua comunidade, você pode apontar suas carteiras para um nó da comunidade por meio de um RPC personalizado.
 
 Por outro lado, se você executar um cliente, você pode compartilhá-lo com quem precisar.
 
 ## Clientes de execução (antigos clientes 'Eth1') {#execution-clients}
 
-A comunidade de Ethereum mantém vários clientes de execução (previamente conhecidos como clientes 'Eth1', ou apenas 'clientes de Ethereum') de código aberto, desenvolvidos por diferentes equipes usando diferentes linguagens de programação. Isto torna a rede mais forte e mais diversificada. O objectivo ideal é alcançar a diversidade sem que qualquer cliente domine para reduzir quaisquer pontos de fracasso.
+A comunidade do Ethereum mantém vários clientes de execução (previamente conhecidos como clientes “Eth1”, ou apenas “clientes Ethereum”) de código aberto, desenvolvidos por diferentes equipes usando diferentes linguagens de programação. Isso torna a rede mais forte e [diversificada](/developers/docs/nodes-and-clients/client-diversity/). O objetivo ideal é alcançar a diversidade sem que nenhum cliente predomine, a fim de reduzir os pontos únicos de falha.
 
-Esta tabela resume os diferentes clientes. Todos eles passam em [testes de cliente](https://github.com/ethereum/tests) e são ativamente mantidos para ficarem atualizados com as atualizações da rede.
+Essa tabela resume os diferentes clientes. Todos eles passam em [testes de cliente](https://github.com/ethereum/tests) e são mantidos ativamente para se manterem atualizados com atualizações de rede.
 
-| Client                                                                    | Linguagem de programação | Sistemas operacionais | Redes                                            | Estratégias de sincronização | Limpeza de estado |
-| ------------------------------------------------------------------------- | ------------------------ | --------------------- | ------------------------------------------------ | ---------------------------- | ----------------- |
-| [Geth](https://geth.ethereum.org/)                                        | Go                       | Linux, Windows, macOS | Rede principal, Görli, Rinkeby, Ropsten          | Snap, Full                   | Archive, Pruned   |
-| [Nethermind](http://nethermind.io/)                                       | C#, .NET                 | Linux, Windows, macOS | Rede principal, Görli, Ropsten, Rinkeby e outras | Fast, Beam, Archive          | Archive, Pruned   |
-| [Besu](https://besu.hyperledger.org/en/stable/)                           | Java                     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more       | Fast, Full                   | Archive, Pruned   |
-| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go                       | Linux, Windows, macOS | Rede principal, Görli, Rinkeby, Ropsten          | Full                         | Archive, Pruned   |
-| [OpenEthereum (Deprecated)](https://github.com/openethereum/openethereum) | Rust                     | Linux, Windows, macOS | Rede principal, Kovan, Ropsten e outros          | Warp, completo               | Archive, Pruned   |
+| Client                                          | Linguagem de programação | Sistemas operacionais | Redes                                     | Estratégias de sincronização                 | Limpeza de estado |
+| ----------------------------------------------- | ------------------------ | --------------------- | ----------------------------------------- | -------------------------------------------- | ----------------- |
+| [Geth](https://geth.ethereum.org/)              | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Goerli           | Instantâneo, Completo                        | Arquivo, Removido |
+| [Nethermind](http://nethermind.io/)             | C#, .NET                 | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo (sem servidor), Rápido, Completo | Arquivo, Removido |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java                     | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo, Rápido, Completo                | Arquivo, Removido |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Completo                                     | Arquivo, Removido |
 
-**Note que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e de preferência mude para outra implementação do cliente.
+**Observe que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e, de preferência, mude para outra implementação de cliente!
 
-Para mais informações sobre as redes suportadas, leia[redes Ethereum](/developers/docs/networks/).
+Para saber mais sobre redes suportadas, leia sobre as [redes Ethereum](/developers/docs/networks/).
 
-### Vantagens de diferentes implementações {#advantages-of-different-implementations}
+Cada cliente tem casos de uso e vantagens exclusivas, então você deve escolher um com base nas suas próprias preferências. A diversidade permite que as implementações sejam focadas em diferentes recursos e públicos de usuários. Você pode escolher um cliente baseado em recursos, suporte, linguagem de programação ou licenças.
 
-Cada cliente tem casos de uso únicos e vantagens exclusivas, o que permite você escolher um com base nas suas próprias preferências. A diversidade permite que as implementações sejam focadas em diferentes recursos e públicos de usuários. Você pode escolher um cliente baseado em recursos, suporte, linguagem de programação ou licenças.
+### Besu {#besu}
 
-#### Go Ethereum {#geth}
+Hyperledger Besu é um cliente Ethereum de nível empresarial para redes públicas e autorizadas. Ele executa todos os recursos da Rede principal (Mainnet) do Ethereum, do rastreamento ao GraphQL, possui monitoramento extensivo e é suportado pela ConsenSys, tanto em canais comunitários abertos, quanto por meio de SLAs (contratos) comerciais para empresas. Ele é escrito em Java e é licenciado pelo Apache 2.0.
 
-Go Ethereum (Geth for short) é uma das implementações originais do protocolo Ethereum. Atualmente, é o cliente mais difundido com a maior base de usuários e a maior variedade de ferramentas para usuários e desenvolvedores. É escrito em Go, totalmente aberto e licenciado sob a GNU LGPL v3.
+A extensa [documentação](https://besu.hyperledger.org/en/stable/) do Besu irá guiar você por todos os detalhes sobre seus recursos e configurações.
 
-#### OpenEthereum {#openethereum}
+### Erigon {#erigon}
 
-O OpenEthereum é um cliente de Ethereum rápido, rico em recursos e avançado. Criado para fornecer a infraestrutura essencial para serviços rápidos e confiáveis, que requerem sincronização rápida e tempo máximo. O objetivo do OpenEthereum é ser o cliente Ethereum mais rápido, mais leve e mais seguro. Ele fornece uma base de código limpa e modular para:
+Erigon, anteriormente conhecido como Turbo-Geth, começou como uma bifurcação do Go Ethereum orientado para velocidade e eficiência de espaço em disco. Erigon é uma implementação completamente rearquitetada do Ethereum, atualmente escrita em Go, mas com implementações em outras linguagens em desenvolvimento. O objetivo da Erigon é fornecer uma implementação mais rápida, modular e otimizada do Ethereum. Ele pode realizar uma sincronização completa do nó de arquivamento usando cerca de 2 TB de espaço em disco, em menos de 3 dias.
 
-- fácil personalização.
-- integração leve a serviços ou produtos.
-- suporte mínimo de memória e armazenamento.
+### Go Ethereum {#geth}
 
-O OpenEthereum é desenvolvido utilizando a linguagem de programação Rust de ponta e licenciado sob a GPLv3.
+Go Ethereum (Geth, para abreviar) é uma das implementações originais do protocolo Ethereum. Atualmente, é o cliente mais difundido com a maior base de usuários e variedade de ferramentas para usuários e desenvolvedores. Ele está escrito em Go, é totalmente de código aberto e sob licença GNU LGPL v3.
 
-**Note que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e de preferência mude para outra implementação do cliente.
+Saiba mais sobre Geth em sua [documentação](https://geth.ethereum.org/docs/).
 
-#### Nethermind {#nethermind}
+### Nethermind {#nethermind}
 
-Nethermind é uma implementação Ethereum criada com a pilha tecnológica C# .NET, em execução em todas as principais plataformas, incluindo a ARM. Ele oferece grande desempenho com:
+Nethermind é uma implementação do Ethereum criada com a pilha de tecnologia C# .NET, licenciada com LGPL-3.0, rodando em todas as principais plataformas, incluindo ARM. Ele oferece grande desempenho com:
 
 - uma máquina virtual otimizada
 - acesso ao estado
 - rede e recursos ricos como painéis Prometheus/Graphana, suporte ao registro empresarial seq, rastreamento JSON RPC e plugins de análise.
 
-Nethermind também tem [documentação detalhada](https://docs.nethermind.io), forte suporte a desenvolvedores, uma comunidade online e suporte 24/7 disponível para usuários premium.
-
-#### Besu {#besu}
-
-Hyperledger Besu é um cliente Ethereum de nível empresarial para redes públicas e autorizadas. Ele executa todos os recursos do mainnet da Ethereum, do rastreamento ao GraphQL, tem um extenso monitoramento e é suportado pelo ConsenSys, tanto em canais comunitários abertos como através de SLAs comerciais para as empresas. Ele é escrito em Java e é licenciado pelo Apache 2.0.
-
-#### Erigon {#erigon}
-
-Erigon, outrora conhecida como Turbo├Geth, é uma bifurcação da Go Ethereum orientada para velocidade e eficiência de espaço em disco. A Erigon é uma implementação completamente re-arquitetada da Ethereum, atualmente escrita em Go mas com implementações de outras línguas planejadas. O objetivo da Erigon é fornecer um mais rápido, mais módulo e uma implementação mais otimizada do Ethereum. Ele pode executar uma sincronização completa do nó de arquivo usando menos de 2TB de espaço em disco, em menos de 3 dias
-
-### Modos de sincronização {#sync-modes}
-
-Para acompanhar e verificar os dados atuais na rede, o cliente Ethereum precisa sincronizar com o estado da rede mais recente. Isso é feito baixando dados de pares, verificando criptograficamente sua integridade e construindo um banco de dados de blockchain local.
-
-Os modos de sincronização representam diferentes abordagens para este processo com vários trade-offs. Os clientes também variam na implementação dos algoritmos de sincronização. Sempre consulte a documentação oficial do cliente escolhido para obter detalhes sobre a implementação.
-
-#### Visão geral das estratégias {#overview-of-strategies}
-
-Visão geral das abordagens de sincronização usadas nos clientes preparados para o Mainnet:
-
-##### Sincronização completa {#full-sync}
-
-A sincronização completa baixa todos os blocos (incluindo cabeçalhos, transações e recibos) e gera o estado da blockchain de maneira incremental ao executar todos os blocos a partir da gênesis.
-
-- Minimiza a confiança e oferece a maior segurança, verificando todas as transações.
-- Com um número crescente de transações, pode levar dias a semanas para processar todas as transações.
-
-##### Sincronização rápida
-
-Rápido (Padrão) - baixa todos os blocos (incluindo cabeçalhos, transações e recibos), verifica todos os cabeçalhos e baixa o estado e verifica-os contra os cabeçalhos.
-
-- Se baseia na segurança do mecanismo de consenso.
-- A sincronização demora apenas algumas horas.
-
-##### Sincronização leve
-
-Modo cliente leve baixa todos os cabeçalhos de bloco, bloqueia dados e verifica alguns aleatoriamente. Somente sincroniza a ponta da cadeia no ponto de verificação confiável.
-
-- Obtém apenas o estado mais recente enquanto confia em desenvolvedores e no mecanismo de consenso.
-- Cliente pronto para usar com o estado atual da rede em alguns minutos.
-
-[Mais sobre clientes Light](https://www.parity.io/blog/what-is-a-light-client/)
-
-##### Sincronização instantânea
-
-Implementado por Geth. Usar snapshots dinâmicos servidos por pares, recupera toda a conta e dados de armazenamento sem baixar nós de trie intermediários e depois reconstrui o Trie Merkle localmente.
-
-- Estratégia de sincronização mais rápida desenvolvida pela Geth, atualmente o padrão dela
-- Economiza muito uso de disco e largura de banda de rede sem sacrificar a segurança.
-
-[Mais no Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
-
-##### Sincronização Warp
-
-Implementado por OpenEthereum. Os nós geram regularmente um instantâneo de estado crítico do consenso e qualquer ponto pode buscar essas capturas instantâneas pela rede, permitindo uma sincronização rápida a partir deste ponto.
-
-- O modo de sincronização mais rápido e padrão do OpenEthereum depende de snapshots estáticos disponibilizados por pares.
-- Estratégia similar à sincronização instantânea, mas sem certas vantagens de segurança.
-
-[Beam sync](https://openethereum.github.io/Beginner-Introduction#warping---no-warp)
-
-##### Sincronização Beam
-
-Implementado por Nethermind e Trinity. Funciona como sincronização rápida, mas também baixa os dados necessários para executar os blocos mais recentes, o que te permite consultar a cadeia dentro dos primeiros minutos desde o início.
-
-- Sincroniza o estado primeiro e permite que você consulte RPC em alguns minutos.
-- Ainda em desenvolvimento e não totalmente confiável, a sincronização em segundo plano é desacelerada e as respostas do RPC podem falhar.
-
-[Mais em Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
-
-#### Configuração no cliente {#client-setup}
-
-Os clientes oferecem opções de configuração ricas para atender às suas necessidades. Escolha o que melhor lhe convier com base no nível de segurança, dados disponíveis e custo. Além do algoritmo de sincronização, você pode também definir a limpeza de diferentes tipos de dados antigos. A limpeza habilita a exclusão de dados desatualizados, por exemplo, remover nós de trie do estado que são inacessíveis de blocos recentes.
-
-Preste atenção à documentação do cliente ou página de ajuda para descobrir qual modo de sincronização é o padrão. Você define o tipo de sincronização quando você está configurado, assim:
-
-**Configurando sincronização de luz em [GETH](https://geth.ethereum.org/) ou [ERIGON](https://github.com/ledgerwatch/erigon)**
-
-`geth --syncmode "light"`
-
-Para mais detalhes, confira o tutorial em [rodando Geth light node](/developers/tutorials/run-light-node-geth/).
-
-**Configuração de sincronização completa com arquivo no [Besu](https://besu.hyperledger.org/)**
-
-`besu --sync-mode=FULL`
-
-Como qualquer outra configuração, pode ser definida com a bandeira de inicialização ou no arquivo de configuração. Outro exemplo é o [Nethermind](https://docs.nethermind.io/nethermind/) que pede que você escolha uma configuração durante a primeira inicialização e cria um arquivo de configuração.
+Nethermind também tem uma [documentação detalhada](https://docs.nethermind.io), um suporte eficaz ao desenvolvedor, uma comunidade online e suporte 24 horas por dia disponível para usuários Premium.
 
 ## Clientes de consenso (antigos clientes 'Eth2') {#consensus-clients}
 
-Existem vários clientes de consenso (anteriormente conhecidos como clientes 'Eth2') para dar suporte às [implementações de consenso](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
+Existem vários clientes de consenso (anteriormente conhecidos como clientes “Eth2”) para oferecer suporte às [atualizações de consenso](/roadmap/beacon-chain/). Eles estão executando a Beacon Chain e fornecerão um mecanismo de consenso de prova de participação para clientes de execução após [A Fusão](/roadmap/merge/) (The Merge).
 
-[Ver os clientes de consenso](/upgrades/get-involved/#clients).
+| Cliente                                                       | Linguagem de programação | Sistemas operacionais | Redes                                                          |
+| ------------------------------------------------------------- | ------------------------ | --------------------- | -------------------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust                     | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten e mais         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript               | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten e mais                  |
+| [Nimbus](https://nimbus.team/)                                | Nim                      | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten e mais                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go                       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten e mais |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java                     | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten e mais          |
 
-| Cliente                                                     | Linguagem de programação | Sistemas operacionais | Redes                                 |
-| ----------------------------------------------------------- | ------------------------ | --------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java                     | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim                      | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust                     | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript               | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Vamos                    | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
+### Lighthouse {#lighthouse}
 
-## Hardware {#hardware}
+Lighthouse é uma implementação de cliente de consenso escrita em Rust sob licença Apache-2.0. Ele é mantido pela Sigma Prime e tem estado estável e pronto para produção desde a origem da Beacon Chain. Ele é utilizado por várias empresas, pools de participação (staking) e indivíduos. Ele visa ser seguro, eficiente e interoperável em uma ampla gama de ambientes, desde PCs de mesa até implantações automatizadas sofisticadas.
 
-Requisitos de hardware diferem pelo cliente mas geralmente não são tão altos, já que o nó só precisa ser sincronizado. Não confunda isso com mineração, o que requer muito mais poder de computação. Sincronize tempo e desempenho no entanto melhore com hardware mais poderoso. Dependendo das suas necessidades e desejos, a Ethereum pode ser executada em seu computador, servidor doméstico, computadores de placa única ou servidores virtuais privados na nuvem.
+A documentação está disponível no [Livro da Lighthouse](https://lighthouse-book.sigmaprime.io/)
 
-Uma maneira fácil de executar o seu próprio nó é usando caixas 'plug and play' como [DAppNode](https://dappnode.io/). Ele fornece hardware para rodar clientes e aplicativos que dependem deles com uma interface simples de usuário.
+### Lodestar {#lodestar}
 
-### Requisitos {#requirements}
+Lodestar é uma implementação de cliente de consenso pronta para produção escrita em Typescript sob a licença LGPL-3.0. Ele é mantido pela ChainSafe Systems e é o mais novo dos clientes de consenso para participantes-solo (solo-stakers), desenvolvedores e pesquisadores. O Lodestar consiste em um nó beacon e um cliente validador alimentado por implementações JavaScript de protocolos Ethereum. O Lodestar visa melhorar a usabilidade do Ethereum com clientes leves, expandir a acessibilidade a um grupo maior de desenvolvedores e contribuir ainda mais para a diversidade do ecossistema.
 
-Antes de instalar qualquer cliente, por favor certifique-se de que seu computador tem recursos suficientes para executá-lo. Requisitos mínimos e recomendados podem ser encontrados abaixo, no entanto a parte chave é o espaço em disco. Sincronizar a blockchain Ethereum é muito de entrada/saída intensiva. É melhor ter um drive de estado sólido (SSD). Para executar um cliente Ethereum no HDD, você precisará de pelo menos 8GB de RAM para usar como cache.
+Mais informações podem ser encontradas em nosso [site](https://lodestar.chainsafe.io/)
 
-#### Requisitos mínimos {#recommended-specifications}
+### Nimbus {#nimbus}
 
-- CPU com mais de 2 núcleos
-- Mínimo de 4 GB de RAM com SSD, 8 GB ou mais se você tiver um HDD
-- 8+ MBit/s de largura de banda
+Nimbus é uma implementação de cliente de consenso escrita em Nim sob a licença Apache-2.0. Ele é um cliente pronto para produção em uso por participantes-solo e pools de participação (staking). O Nimbus foi projetado para eficiência de recursos, facilitando a execução em dispositivos com recursos restritos e infraestrutura corporativa com a mesma facilidade, sem comprometer a estabilidade ou o desempenho da recompensa. Uma ocupação de recursos mais leve significa que o cliente tem uma maior margem de segurança quando a rede está sob estresse.
 
-#### Especificações recomendadas {#recommended-specifications}
+Implementado pela Trinity. Funciona como sincronização rápida, mas também baixa os dados necessários para executar os blocos mais recentes, o que permite consultar a cadeia nos primeiros minutos desde o início.
 
-- CPU rápida com mais de 4 núcleos
-- - de 16 GB de RAM
-- SSD rápido com pelo menos 500 GB de espaço livre
-- - de 25 MBit/s de largura de banda
+- Sincroniza o estado primeiro e permite que você consulte RPC em poucos minutos.
+- Ainda em desenvolvimento e não totalmente confiável, a sincronização em segundo plano é desacelerada e as respostas do RPC podem falhar.
 
-O modo de sincronização que você escolher afetará os requisitos de espaço, mas estimamos o espaço em disco que você precisará para cada cliente abaixo.
+Saiba mais na [documentação do Nimbus](https://nimbus.guide/)
 
-| Cliente      | Tamanho do disco (sincronização rápida) | Tamanho do disco (arquivo completo) |
-| ------------ | --------------------------------------- | ----------------------------------- |
-| Geth         | 400GB+                                  | 6TB+                                |
-| OpenEthereum | 280GB+                                  | 6TB+                                |
-| Nethermind   | 200GB+                                  | 5TB+                                |
-| Besu         | 750GB+                                  | 5TB+                                |
-| Erigon       | N/A                                     | 1TB+                                |
+### Prysm {#prysm}
 
-- Observação: Erigon não faz sincronização rápida, mas a limpeza completa é possível (~500GB)
+O Prysm é um cliente de consenso de código aberto completo, escrito em Go sob a licença GPL-3.0. Ele apresenta uma interface de usuário de aplicativo Web opcional e prioriza a experiência do usuário, a documentação e a configurabilidade para usuários institucionais e particulares.
 
-![Um gráfico que mostra que o GB necessário para uma sincronização completa está em alta](./full-sync.png)
+Visite a [documentação do Prysm](https://docs.prylabs.network/docs/getting-started/) para saber mais.
 
-![Um gráfico que mostra que o GB necessário para uma sincronização completa está em alta](./archive-sync.png)
+### Teku {#teku}
 
-Estes gráficos mostram como os requisitos de armazenamento estão sempre mudando. Para os dados mais atualizados para Geth e Parity, consulte [a sincronização completa dos dados](https://etherscan.io/chartsync/chaindefault) e [arquivos sincronizados](https://etherscan.io/chartsync/chainarchive).
+Teku é um dos clientes originais da origem da Beacon Chain. Além dos objetivos habituais (segurança, robustez, estabilidade, usabilidade, desempenho), o Teku visa especificamente cumprir integralmente todos os padrões de cliente de consenso.
 
-### Ethereum em um computador de placa única {#ethereum-on-a-single-board-computer}
+O Teku oferece opções de implantação muito flexíveis. O nó beacon e o cliente validador podem ser executados juntos como um único processo, o que é extremamente conveniente para participantes solo (solo stakers), ou os nós podem ser executados separadamente para operações de participação sofisticadas. Além disso, o Teku é totalmente interoperável com o [Web3Signer](https://github.com/ConsenSys/web3signer/) para proteger as chaves de assinatura e protegê-las contra remoções.
 
-A maneira mais conveniente e barata de executar o nó Ethereum é usar um único computador de mesa com arquitetura ARM como o Raspberry Pi. [Ethereum em ARM](https://twitter.com/EthereumOnARM) fornece imagens de clientes Geth, Parity, Nethermind e Besu. Aqui está um tutorial simples sobre [como criar e configurar um cliente ARM](/developers/tutorials/run-node-raspberry-pi/).
+O Teku é escrito em Java e sob a licença Apache 2.0. Ele é desenvolvido pela equipe de Protocolos da ConsenSys, que também é responsável pelo Besu e Web3Signer. Saiba mais na [documentação do Teku](https://docs.teku.consensys.net/en/latest/).
 
-Dispositivos pequenos, acessíveis e eficientes como estes são ideais para executar um nó em casa.
+## Modos de sincronização {#sync-modes}
+
+Para acompanhar e verificar os dados atuais na rede, o cliente Ethereum precisa sincronizar com o estado da rede mais recente. Para isso, é necessário baixar dados de pares, verificar criptograficamente sua integridade e construir um banco de dados local da cadeia de blocos.
+
+Os modos de sincronização representam diferentes abordagens para esse processo com várias compensações. Os clientes também variam em sua implementação de algoritmos de sincronização. Sempre consulte a documentação oficial do cliente escolhido para obter detalhes sobre a implementação.
+
+### Modos de sincronização na camada de execução {#execution-layer-sync-modes}
+
+#### Sincronização completa {#full-sync}
+
+A sincronização completa baixa todos os blocos (incluindo cabeçalhos, transações e recibos) e gera o estado da cadeia de blocos de forma incremental, executando cada bloco desde a origem.
+
+- Minimiza a confiança e oferece a mais alta segurança, verificando cada transação.
+- Com um número crescente de transações, pode levar dias ou semanas para processar todas as transações.
+
+#### Sincronização rápida {#fast-sync}
+
+A sincronização rápida baixa todos os blocos (incluindo cabeçalhos, transações e recibos), verifica todos os cabeçalhos, baixa o estado e verifica-os em relação aos cabeçalhos.
+
+- Depende da segurança do mecanismo de consenso.
+- A sincronização leva apenas algumas horas.
+
+#### Sincronização leve {#light-sync}
+
+O modo cliente leve baixa todos os cabeçalhos de bloco, dados de bloco e verifica alguns aleatoriamente. Somente sincroniza a ponta da cadeia do ponto de verificação confiável.
+
+- Obtém apenas o estado mais recente, enquanto conta com a confiança dos desenvolvedores e o mecanismo de consenso.
+- Cliente pronto para uso com o estado atual da rede em poucos minutos.
+
+**NB** A sincronização leve ainda não funciona com a prova de participação do Ethereum — novas versões de sincronização leve deverão ser lançadas em breve!
+
+[Mais sobre clientes leves](/developers/docs/nodes-and-clients/light-clients/)
+
+#### Sincronização instantânea {#snap-sync}
+
+A sincronização instantânea é a abordagem mais recente para sincronizar um cliente, iniciada pela equipe Geth. O uso de instantâneos dinâmicos servidos por pares recupera todos os dados de conta e armazenamento sem baixar nós de árvores intermediárias e, em seguida, reconstrói a árvore Merkle localmente.
+
+- Estratégia de sincronização mais rápida, atualmente padrão na rede principal do Ethereum
+- Economiza muito uso de disco e largura de banda de rede sem sacrificar a segurança
+
+[Mais sobre sincronização instantânea](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+
+### Modos de sincronização de camada de consenso {#consensus-layer-sync-modes}
+
+#### Sincronização otimista {#optimistic-sync}
+
+A sincronização otimista é uma estratégia de sincronização pós-fusão projetada para ser compatível por aceitação (opt-in) e com versões anteriores, permitindo que os nós de execução sincronizem por meio de métodos estabelecidos. O mecanismo de execução pode, de modo _otimista_, importar blocos beacon sem verificá-los completamente, encontrar o cabeçalho mais recente e começar a sincronizar a cadeia com os métodos acima. Em seguida, após a atualização do cliente de execução, ele informará ao cliente de consenso sobre a validade das transações na Beacon Chain.
+
+[Mais sobre sincronização otimista](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+
+#### Sincronização de ponto de verificação {#checkpoint-sync}
+
+A sincronização do ponto de verificação, também conhecida como sincronização de subjetividade fraca, cria uma experiência de usuário superior para sincronizar a Beacon Node. Ela é baseada em suposições de [subjetividade fraca](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/), que permitem sincronizar a Beacon Chain de um ponto de verificação de subjetividade fraca recente em vez da origem. A sincronização do ponto de verificação torna o tempo de sincronização inicial significativamente mais rápido com suposições de confiança semelhantes às da sincronização da [origem](/glossary/#genesis-block).
+
+Na prática, isso significa que seu nó se conecta a um serviço remoto para baixar os estados finalizados recentes e continua verificando os dados a partir desse ponto. A terceira parte que fornece os dados é confiável e deve ser escolhida com cuidado.
+
+Mais sobre [sincronização do ponto de verificação](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Leitura adicional {#further-reading}
 
-Há muitas informações sobre os clientes Ethereum na Internet. Aqui estão alguns recursos que podem ser úteis.
+Há muitas informações sobre clientes Ethereum na Internet. Aqui estão alguns recursos que podem ser úteis.
 
-- [Fundamentos do Ethereum - Parte 2: Entendendo os nós](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 de fevereiro de 2019_
-- [Executando nós completos do Ethereum: um guia completo](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _ - Justin Leroux, 7 de novembro de 2019_
-- [Executando um nó Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, atualizado frequentemente_
-- [Analisando os requisitos de hardware para um nó validado completo do Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 de setembro de 2018_
-- [Executando um nó Hyperledger Besu na rede principal de Ethereum: benefícios, requisitos e configuração](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 de maio de 2020_
+- [Ethereum 101 – Parte 2 – Entendendo os nós](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _–Wil Barnes, 13 de fevereiro de 2019_
+- [Executando nós completos do Ethereum: um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 de novembro de 2019_
 
 ## Tópicos relacionados {#related-topics}
 
@@ -320,5 +294,4 @@ Há muitas informações sobre os clientes Ethereum na Internet. Aqui estão alg
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Executando um nó com Geth](/developers/tutorials/run-light-node-geth/) _: como baixar, instalar e executar o Geth. Covering syncmodes, the JavaScript console, and more._
-- [Transforme sua Raspberry Pi em um nó de validação apenas instalando a configuração em um cartão MicroSD: guia de instalação](/developers/tutorials/run-node-raspberry-pi/) _- Formate sua Raspberry Pi 4, conecte o disco SSD e ligue o dispositivo para transformar sua Raspberry Pi 4 em um full node de Ethereum para executar a camada de execução (rede principal) e/ou a camada de consenso (Beacon Chain/validador)._
+- [Transforme seu Raspberry Pi 4 em um nó validador apenas instalando o cartão MicroSD – Guia de instalação](/developers/tutorials/run-node-raspberry-pi/) _– Ligue seu Raspberry Pi 4, conecte um cabo Ethernet, conecte o disco SSD e ligue o dispositivo para transformar o Raspberry Pi 4 em um nó Ethereum completo executando a camada de execução (Rede principal) e/ou a camada de consenso (Beacon Chain / validador)._

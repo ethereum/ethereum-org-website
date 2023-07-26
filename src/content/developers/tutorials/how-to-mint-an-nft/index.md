@@ -2,10 +2,9 @@
 title: How to Mint an NFT (Part 2/3 of NFT Tutorial Series)
 description: This tutorial describes how to mint an NFT on the Ethereum blockchain using our smart contract and Web3.
 author: "Sumi Mudgil"
-tags: ["NFTs", "ERC-721", "alchemy", "solidity", "smart contracts"]
+tags: ["ERC-721", "alchemy", "solidity", "smart contracts"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -74,11 +73,11 @@ Once you’ve created an account:
 
 - Upload an image to Pinata — this will be the image asset for your NFT. Feel free to name the asset whatever you wish
 
-- After you upload, you'll see the file info in the table on the "Files" page. You'll also see a CID column. You can copy the CID by clicking the copy button next to it. You can view your upload at: `https://gateway.pinata.cloud/ipfs/<CID>`. You can find the image we used on IPFS [here](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f), for example.
+- After you upload, you'll see the file info in the table on the "Files" page. You'll also see a CID column. You can copy the CID by clicking the copy button next to it. You can view your upload at: `https://gateway.pinata.cloud/ipfs/<CID>`. You can find the image we used on IPFS [here](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5), for example.
 
 For the more visual learners, the steps above are summarized here:
 
-![How to upload your image to Pinata](https://gateway.pinata.cloud/ipfs/Qmcdt5VezYzAJDBc4qN5JbANy5paFg9iKDjq8YksRvZhtL)
+![How to upload your image to Pinata](./instructionsPinata.gif)
 
 Now, we’re going to want to upload one more document to Pinata. But before we do that, we need to create it!
 
@@ -110,16 +109,16 @@ Once you’re done editing the JSON file, save it and upload it to Pinata, follo
 
 ## Step 5: Create an instance of your contract {#instance-contract}
 
-Now, to interact with our contract, we need to create an instance of it in our code. To do so we’ll need our contract address which we can get from the deployment or [Etherscan](https://ropsten.etherscan.io/) by looking up the address you used to deploy the contract.
+Now, to interact with our contract, we need to create an instance of it in our code. To do so we’ll need our contract address which we can get from the deployment or [Etherscan](https://sepolia.etherscan.io/) by looking up the address you used to deploy the contract.
 
-![View your contract address on Etherscan](./viewContractEtherscan.png)
+![View your contract address on Etherscan](./view-contract-etherscan.png)
 
-In the above example, our contract address is 0x81c587EB0fE773404c42c1d2666b5f557C470eED.
+In the above example, our contract address is 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
-Next we will use the Web3 [contract method](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) to create our contract using the ABI and address. In your `mint-nft.js` file, add the following:
+Next we will use the Web3 [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) to create our contract using the ABI and address. In your `mint-nft.js` file, add the following:
 
 ```js
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
@@ -131,7 +130,7 @@ Now, in order to create and send transactions to the Ethereum chain, we’ll use
 Add your public key to your `.env` file — if you completed part 1 of the tutorial, our `.env` file should now look like this:
 
 ```js
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
@@ -150,7 +149,7 @@ First, let’s define a function named `mintNFT(tokenData)` and create our trans
 
 - `'to': contractAddress` — The contract we wish to interact with and send the transaction
 
-- `'nonce': nonce` — The account nonce with the number of transactions send from our address
+- `'nonce': nonce` — The account nonce with the number of transactions sent from our address
 
 - `'gas': estimatedGas` — The estimated gas needed to complete the transaction
 
@@ -168,7 +167,7 @@ Your `mint-nft.js` file should look like this now:
    const web3 = createAlchemyWeb3(API_URL);
 
    const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
-   const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED";
+   const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778";
    const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
    async function mintNFT(tokenURI) {
@@ -201,7 +200,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
@@ -267,7 +266,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
@@ -313,13 +312,13 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
 Now, run `node scripts/mint-nft.js` to deploy your NFT. After a couple of seconds, you should see a response like this in your terminal:
 
-    The hash of your transaction is: 0x10e5062309de0cd0be7edc92e8dbab191aa2791111c44274483fa766039e0e00
+    The hash of your transaction is: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
 
     Check Alchemy's Mempool to view the status of your transaction!
 
-Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Ropsten Etherscan](https://ropsten.etherscan.io/) and search for your transaction hash.
+Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of your transaction (whether it’s pending, mined, or got dropped by the network). If your transaction got dropped, it’s also helpful to check [Sepolia Etherscan](https://sepolia.etherscan.io/) and search for your transaction hash.
 
-![View your NFT transaction hash on Etherscan](./viewNFTEtherscan.png)_View your NFT transaction hash on Etherscan_
+![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_View your NFT transaction hash on Etherscan_
 
 And that’s it! You’ve now deployed AND minted with a NFT on the Ethereum blockchain <Emoji text=":money_mouth_face:" size={1} />
 

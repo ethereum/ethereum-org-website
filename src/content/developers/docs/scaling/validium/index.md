@@ -2,7 +2,6 @@
 title: Validium
 description: An introduction to Validium as a scaling solution currently utilized by the Ethereum community.
 lang: en
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -68,7 +67,7 @@ As an anti-censorship mechanism, the validium protocol allows users to withdraw 
 
 ### Batch submission {#batch-submission}
 
-After executing a batch of transactions, the operator submits the associated validity proof to the Lverifier contract and proposes a new state root to the main contract. If the proof is valid, the main contract updates the validium's state and finalizes the results of transactions in the batch.
+After executing a batch of transactions, the operator submits the associated validity proof to the verifier contract and proposes a new state root to the main contract. If the proof is valid, the main contract updates the validium's state and finalizes the results of transactions in the batch.
 
 Unlike a ZK-rollup, block producers on a validium are not required to publish transaction data for transaction batches (only block headers). This makes validium a purely off-chain scaling protocol, as opposed to "hybrid" scaling protocols (i.e., [layer 2](/layer-2/)) that publish state data on the main Ethereum chain as `calldata`.
 
@@ -84,7 +83,7 @@ Data availability managers in validium attest to the availability of data for of
 
 Validiums differ in their approach to data availability management. Some rely on trusted parties to store state data, while others use randomly assigned validators for the task.
 
-#### Data availability committee (DAC) {#data-availability-committee)
+#### Data availability committee (DAC) {#data-availability-committee}
 
 To guarantee the availability of off-chain data, some validium solutions appoint a group of trusted entities, collectively known as a data availability committee (DAC), to store copies of the state and provide proof of data availability. DACs are easier to implement and require less coordination since membership is low.
 
@@ -114,7 +113,7 @@ Like ZK-rollups, validiums are mostly suited to simple applications, such as tok
 
 Some validium projects attempt to sidestep this problem by compiling EVM-compatible languages (e.g., Solidity, Vyper) into creating custom bytecode optimized for efficient proving. A drawback of this approach is that new zero-knowledge proof-friendly VMs may not support important EVM opcodes, and developers have to write directly in the high-level language for an optimal experience. This creates even more problems: it forces developers to build dapps with an entirely new development stack and breaks compatibility with current Ethereum infrastructure.
 
-Some teams, however, are attempting to optimize existing EVM opcodes for zk-proving circuits. This will result in the development of a zero-knowledge Ethereum Virtual Machine (zkEVM), an EVM-compatible VM that produces proofs to verify the correctness of program execution. With a zkEVM, validium chains can execute smart contracts off-chain and submit validity proofs to verify an off-chain computation (without having to re-execute it) on Ethereum.
+Some teams, however, are attempting to optimize existing EVM opcodes for ZK-proving circuits. This will result in the development of a zero-knowledge Ethereum Virtual Machine (zkEVM), an EVM-compatible VM that produces proofs to verify the correctness of program execution. With a zkEVM, validium chains can execute smart contracts off-chain and submit validity proofs to verify an off-chain computation (without having to re-execute it) on Ethereum.
 
 [More on zkEVMs](https://www.alchemy.com/overviews/zkevm).
 
@@ -122,7 +121,7 @@ Some teams, however, are attempting to optimize existing EVM opcodes for zk-prov
 
 ### 1. Off-chain data storage {#off-chain-data-storage}
 
-Layer 2 scaling projects, such as optimistic rollups and ZK-rollups, trade the infinite scalability of pure off-chain scaling protocols (e.g., [Plasma](/developers/docs/scaling/plasma/)) for security by publishing some transaction data on L1. But this means the scalability properties of rollups is limited by data bandwith on Ethereum Mainnet ([data sharding](/upgrades/sharding/) proposes to improve Ethereum's data storage capacity for this reason).
+Layer 2 scaling projects, such as optimistic rollups and ZK-rollups, trade the infinite scalability of pure off-chain scaling protocols (e.g., [Plasma](/developers/docs/scaling/plasma/)) for security by publishing some transaction data on L1. But this means the scalability properties of rollups is limited by data bandwidth on Ethereum Mainnet ([data sharding](/roadmap/danksharding/) proposes to improve Ethereum's data storage capacity for this reason).
 
 Validiums achieve scalability by keeping all transaction data off-chain and only post state commitments (and validity proofs) when relaying state updates to the main Ethereum chain. The existence of validity proofs, however, gives validiums higher security guarantees than other pure off-chain scaling solutions, including Plasma and [sidechains](/developers/docs/scaling/sidechains/). By reducing the amount of data Ethereum has to process before validating off-chain transactions, validium designs greatly extend throughput on Mainnet.
 

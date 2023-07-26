@@ -1,0 +1,77 @@
+name: Suggest a developer tool
+description: Anything a developer can use when building with Ethereum
+title: Suggest a developer tool
+labels: ["feature :sparkles:", "content :fountain_pen:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting this suggestion, be sure to read our [listing policy for dev tools](https://ethereum.org/en/contributing/adding-developer-tools/)
+  - type: markdown
+    id: project_info
+    attributes:
+      value: "## Project info"
+  - type: input
+    id: dev_tool_name
+    attributes:
+      label: Dev tool name
+    validations:
+      required: true
+  - type: textarea
+    id: dev_tool_description
+    attributes:
+      label: Dev tool description
+    validations:
+      required: true
+  - type: input
+    id: dev_tool_live_date
+    attributes:
+      label: When did the dev tool go live?
+      description: We prioritize products that are battle-tested
+    validations:
+      required: true
+  - type: textarea
+    id: dev_tool_where_should_it_live
+    attributes:
+      label: Where do you think this page should be shown?
+      description: List the pages where you think this tool is most relevant on ethereum.org
+    validations:
+      required: true
+  - type: dropdown
+    id: dev_tool_open_source
+    attributes:
+      label: Is the product open source?
+      description: We prioritize open source projects when possible
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: dev_tool_github
+    attributes:
+      label: GitHub URL
+      description: If the project is open source, please provide a link to the product's repo
+  - type: input
+    id: dev_tool_docs
+    attributes:
+      label: Documentation URL
+      description: Please provide a link to the product's documentation
+    validations:
+      required: true
+  - type: textarea
+    id: dev_tools_additional_context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the dev tool here
+  - type: checkboxes
+    id: dev_tools_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

@@ -2,7 +2,6 @@
 title: Gaz i opłaty
 description:
 lang: pl
-sidebar: true
 incomplete: true
 isOutdated: true
 ---

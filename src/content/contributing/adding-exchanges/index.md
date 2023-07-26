@@ -2,7 +2,6 @@
 title: Adding exchanges
 description: The policy we use when adding exchanges to ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Adding Ethereum exchanges {#adding-ethereum-exchanges}
@@ -36,6 +35,6 @@ And so that ethereum.org can be more confident that the exchange is a legitimate
 
 If you want to add an exchange to ethereum.org, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Create an issue
 </ButtonLink>

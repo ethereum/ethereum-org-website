@@ -2,7 +2,6 @@
 title: Web3 nedir ve neden önemlidir?
 description: Web3’e (internet’in bir sonraki evrimine) giriş ve Web3'ün önemi.
 lang: tr
-sidebar: true
 ---
 
 # Web3'e Giriş {#introduction}
@@ -103,7 +102,7 @@ Web3'ün mevcut halindeki sayısız faydasına rağmen ekosistemin gelişmesi i�
 
 ### Erişilebilirlik {#accessibility}
 
-Ethereum ile Giriş Yapma gibi önemli Web3 özellikleri, herkesin sıfır maliyetle kullanması için zaten mevcuttur. Ancak işlemlerin göreli maliyeti hâlâ birçok kişi için engelleyicidir. Yüksek işlem ücretleri nedeniyle Web3'ün daha az varlıklı, gelişmekte olan ülkelerde kullanılması daha az olasıdır. Ethereum'da bu zorluklar, [ağ yükseltmeleri](/upgrades/) ve [katman 2 ölçeklendirme çözümleri](/developers/docs/scaling/) aracılığıyla çözülüyor. Teknoloji hazır, ancak Web3'ü herkese erişilebilir kılmak için katman 2'nin daha yüksek düzeyde benimsenmesine ihtiyacımız var.
+Ethereum ile Giriş Yapma gibi önemli Web3 özellikleri, herkesin sıfır maliyetle kullanması için zaten mevcuttur. Ancak işlemlerin göreli maliyeti hâlâ birçok kişi için engelleyicidir. Yüksek işlem ücretleri nedeniyle Web3'ün daha az varlıklı, gelişmekte olan ülkelerde kullanılması daha az olasıdır. Ethereum'da bu zorluklar, [ağ yükseltmeleri](/roadmap/) ve [katman 2 ölçeklendirme çözümleri](/developers/docs/scaling/) aracılığıyla çözülüyor. Teknoloji hazır, ancak Web3'ü herkese erişilebilir kılmak için katman 2'nin daha yüksek düzeyde benimsenmesine ihtiyacımız var.
 
 ### Kullanıcı deneyimi {#user-experience}
 

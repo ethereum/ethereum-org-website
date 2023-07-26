@@ -2,7 +2,6 @@
 title: Proposal Peningkatan Ethereum (EIP)
 description: Informasi dasar yang Anda perlukan untuk memahami Proposal Peningkatan Ethereum (EIP).
 lang: id
-sidebar: true
 ---
 
 # Pengantar pada Proposal Peningkatan Ethereum (EIP) {#introduction-to-ethereum-improvement-proposals-eips}

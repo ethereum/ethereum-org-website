@@ -2,7 +2,6 @@
 title: Web2 vs Web3
 description:
 lang: hu
-sidebar: true
 ---
 
 A web2 arra az internetre utal, melyet ma legtöbbünk ismer. Egy internet, melyet olyan cégek dominálnak, melyek szolgáltatásokat nyújtanak a személyes adataidért cserébe. A web3 az Ethereum kontextusában decentralizált alkalmazásokra utal, melyek a blokkláncon futnak. Ezek olyan alkalmazások, amelyek lehetővé teszik, hogy bárki részt vegyen anélkül, hogy monetizálná a személyes adatait.

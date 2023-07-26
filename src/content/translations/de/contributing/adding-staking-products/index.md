@@ -2,7 +2,6 @@
 title: Staking-Produkte oder -Services hinzufügen
 description: Richtlinien, die wir beim Hinzufügen von Staking-Produkten oder -Dienstleistungen zu ethereum.org anwenden
 lang: de
-sidebar: true
 ---
 
 # Staking-Produkte oder -Services hinzufügen {#adding-staking-products-or-services}
@@ -14,7 +13,7 @@ Jeder kann ein Staking-Produkt oder einen Service zur Hinzufügung auf ethereum.
 Auf den folgenden Seiten finden Sie eine Liste der Staking-Produkte und Services, die wir derzeit anbieten:
 
 - [Solo-Staking](/staking/solo/)
-- [Staking als Service](/staking/saas/)
+- [Staking als Dienstleistung](/staking/saas/)
 - [Staking-Pool](/staking/pools/)
 
 Der Proof-of-Stake wurde am 1. Dezember 2020 auf der Beacon Chain eingeführt. Das Staking ist ein noch relativ neues Verfahren. Dennoch haben wir versucht, einen fairen und transparenten Rahmen für die Berücksichtigung auf ethereum.org zu schaffen. Die Kriterien für die Auflistung werden sich jedoch im Laufe der Zeit ändern und weiterentwickeln und liegen letztendlich im Ermessen des ethereum.org-Website-Teams.
