@@ -139,6 +139,15 @@ const LearningToolsPage = ({
         background: "#2C60A3",
         subjects: ["Solidity", "web3"],
       },
+      {
+        name: "Atlas",
+        description: "page-learning-tools-atlas-description",
+        url: "https://app.atlaszk.com",
+        image: getImage(data.atlas)!,
+        alt: "page-learning-tools-atlas-logo-alt",
+        background: "#080808",
+        subjects: ["Solidity", "web3"],
+      },
     ]
     const randomizedSandboxes = shuffle(sandboxes)
     setRandomizedSandboxes(randomizedSandboxes)
@@ -420,6 +429,9 @@ export const query = graphql`
       ...learningToolImage
     }
     chainIDE: file(relativePath: { eq: "dev-tools/chainIDE.png" }) {
+      ...learningToolImage
+    }
+    atlas: file(relativePath: { eq: "dev-tools/atlas.png" }) {
       ...learningToolImage
     }
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {

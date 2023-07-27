@@ -15,6 +15,10 @@ If you're looking to fiddle with code before you [set up a local development env
 - [Docs](https://remix-ide.readthedocs.io/en/latest/#)
 - [Gitter](https://gitter.im/ethereum/remix)
 
+**[Atlas](https://app.atlaszk.com/)** - **_An AI-powered, browser-based, smart contract development IDE_**
+
+- [Discord](https://discord.com/invite/HK9J8KreQp)
+
 **[ChainIDE](https://chainide.com/)** - **_A cloud-based multi-chain IDE_**
 
 - [Docs](https://chainide.gitbook.io/chainide-english-1/)
