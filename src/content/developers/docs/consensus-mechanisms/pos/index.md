@@ -89,3 +89,4 @@ Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated
 ## Related topics {#related-topics}
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-authority](/developers/docs/consensus-mechanisms/poa/)

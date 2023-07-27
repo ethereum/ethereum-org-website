@@ -102,7 +102,7 @@
   items:
     - id: docs-nav-intro-to-the-stack
       to: /developers/docs/ethereum-stack/
-      description: docs-nav-intro-to-the-stack-description
+      description: docs-nav-intro-topow-the-stack-description
     - id: docs-nav-smart-contracts
       to: /developers/docs/smart-contracts/
       description: docs-nav-smart-contracts-description
