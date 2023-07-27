@@ -57,7 +57,7 @@
   "page-roadmap-vision-understanding": "Understanding the Ethereum vision",
   "page-roadmap-vision-upgrade-needs": "The need for upgrades",
   "page-roadmap-vision-upgrade-needs-desc": "The Ethereum protocol that launched in 2015 has had incredible success. But the Ethereum community always expected that a few key upgrades would be necessary to unlock Ethereum's full potential.",
-  "page-roadmap-vision-upgrade-needs-desc-2": "High demand is driving up transaction fees that make Ethereum expensive for the average user. The disk space needed to run an Ethereum client is growing at a fast rate. And the underlying proof-of-work consensus algorithm that keeps Ethereum secure and decentralized has a big environmental impact.",
+  "page-roadmap-vision-upgrade-needs-desc-2": "High demand is driving up transaction fees that make Ethereum expensive for the average user. The disk space needed to run an Ethereum client is growing at a fast rate.",
   "page-roadmap-vision-upgrade-needs-desc-3": "Ethereum has a set of upgrades that address these problems and more. This set of upgrades was originally called 'Serenity' and 'Eth2,' and they've been an active area of research and development since 2014.",
   "page-roadmap-vision-upgrade-needs-desc-5": "Now that the technology is ready, these upgrades will re-architect Ethereum to make it more scalable, secure, and sustainable - to make life better for existing users and entice new ones. All while preserving Ethereum's core value of decentralization.",
   "page-roadmap-vision-upgrade-needs-desc-6": "This means there's no on-switch for scalability. Improvements will ship incrementally over time.",

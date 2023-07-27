@@ -68,7 +68,7 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-Web3 インスタンス上で利用可能なすべての関数は、 [web3.js の公式ドキュメンテーション](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#)をご覧ください。
+Web3 インスタンス上で利用可能なすべての関数は、 [web3.js の公式ドキュメンテーション](https://docs.web3js.org/)をご覧ください。
 
 ほとんどの Web3 ライブラリでは、結果を送り返すノードに対してバックグラウンドで JSON RPC を呼び出すため、非同期で処理を行います。
 

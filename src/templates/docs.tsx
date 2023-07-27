@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef, useContext } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -26,7 +26,8 @@ import CallToContribute from "../components/CallToContribute"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
 import FeedbackCard from "../components/FeedbackCard"
-import FileContributors from "../components/FileContributors"
+import CrowdinContributors from "../components/FileContributorsCrowdin"
+import GitHubContributors from "../components/FileContributorsGitHub"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
@@ -42,9 +43,6 @@ import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 import RollupProductDevDoc from "../components/RollupProductDevDoc"
 import YouTube from "../components/YouTube"
 
-import PostMergeBanner from "../components/Banners/PostMergeBanner"
-
-import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { ChildOnlyProp, Context } from "../types"
@@ -137,9 +135,9 @@ const ListItem = (props: ListItemProps) => (
   <ChakraListItem color="text300" {...props} />
 )
 
-const ContentContainer = (props: ChildOnlyProp & { isZenMode: boolean }) => (
+const ContentContainer = (props: ChildOnlyProp) => (
   <Flex
-    justify={props.isZenMode ? "center" : "space-between"}
+    justify={"space-between"}
     w="full"
     py={0}
     pl={0}
@@ -218,18 +216,11 @@ const components = {
   RollupProductDevDoc,
 }
 
-const Contributors = (
-  props: ComponentPropsWithoutRef<typeof FileContributors>
-) => (
-  <FileContributors p={{ base: 0, lg: 2 }} pb={{ base: 8, lg: 2 }} {...props} />
-)
-
 const DocsPage = ({
-  data: { siteData, pageData: mdx },
+  // @ts-ignore
+  data: { siteData, pageData: mdx, allCombinedTranslatorsJson },
   pageContext: { relativePath, slug },
 }: PageProps<Queries.DocsPageQuery, Context>) => {
-  const { isZenMode } = useContext(ZenModeContext)
-
   if (!siteData || !mdx?.frontmatter)
     throw new Error("Docs page template query does not return expected values")
   if (!mdx?.frontmatter?.title)
@@ -256,13 +247,22 @@ const DocsPage = ({
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
       )}
-      <ContentContainer isZenMode={isZenMode}>
+      <ContentContainer>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
-          <Contributors
-            relativePath={relativePath}
-            editPath={absoluteEditPath}
-          />
+          {/* flip these positive first */}
+          {mdx.frontmatter.lang !== "en" ? (
+            <CrowdinContributors
+              relativePath={relativePath}
+              editPath={absoluteEditPath}
+              langContributors={allCombinedTranslatorsJson.nodes}
+            />
+          ) : (
+            <GitHubContributors
+              relativePath={relativePath}
+              editPath={absoluteEditPath}
+            />
+          )}
           <TableOfContents
             slug={slug}
             editPath={absoluteEditPath}
@@ -299,7 +299,11 @@ const DocsPage = ({
 }
 
 export const query = graphql`
-  query DocsPage($languagesToFetch: [String!]!, $relativePath: String) {
+  query DocsPage(
+    $language: String!
+    $languagesToFetch: [String!]!
+    $relativePath: String
+  ) {
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
@@ -334,6 +338,20 @@ export const query = graphql`
       }
       body
       tableOfContents
+    }
+    allCombinedTranslatorsJson(filter: { lang: { eq: $language } }) {
+      nodes {
+        lang
+        data {
+          fileId
+          contributors {
+            id
+            username
+            avatarUrl
+            totalCosts
+          }
+        }
+      }
     }
   }
 `

@@ -232,14 +232,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Web3js のユーティリティ関数](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Web3js のユーティリティ関数](https://docs.web3js.org/api/web3-utils)
 - [Ethers のユーティリティ関数](https://docs.ethers.io/v5/api/utils/)
 
 ## 利用可能なライブラリ {#available-libraries}
 
 **Web3.js -** **_イーサリアムの JavaScript API_**
 
-- [ドキュメント](https://web3js.readthedocs.io/en/1.0/)
+- [ドキュメント](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_JavaScript と TypeScript での完全なイーサリアムウォレットの実装とユーティリティ_**

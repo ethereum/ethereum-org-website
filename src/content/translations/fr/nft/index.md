@@ -351,5 +351,6 @@ La plupart des NFT sont construits via une norme cohérente connue sous le nom d
 - [Everything you need to know about the metaverse](https://foundation.app/blog/enter-the-metaverse) – _Foundation team, foundation.app_
 - [No, CryptoArtists Aren’t Harming the Planet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Consommation énergétique d'Ethereum](/energy-consumption/)
+- [API Ethereum NFT](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
 <QuizWidget quizKey="nfts" />

@@ -125,5 +125,4 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_
 
-
 Please remember to abide by the ethereum.org [code of conduct](/community/code-of-conduct) whenever and however you contribute to ethereum.org!
