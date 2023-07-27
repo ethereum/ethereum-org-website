@@ -16,6 +16,21 @@
     "publishDate": "03/07/2023"
   },
   {
+    "url": "https://www.youtube.com/playlist?list=PLUVFgi-dxojQdPOK09nmpnrLg5gA9b5Aj",
+    "title": "Byte-Size BUIDLing with Chainstack",
+    "description": "A collection of short video tutorials diving into various components of Ethereum development.",
+    "author": "Ethan Francis",
+    "authorGithub": "https://github.com/TABASCOatw",
+    "tags": [
+      "chainstack",
+      "video"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "46",
+    "lang": "en",
+    "publishDate": "07/25/2023"
+  },
+  {
     "url": "https://docs.chainstack.com/docs/ethereum-tutorial-trust-fund-account-with-remix",
     "title": "Trust fund account with Remix",
     "description": "Ethereum smart contract tutorial. Learn how to develop and deploy a trust fund contract. Built using Remix IDE.",
