@@ -114,7 +114,6 @@ const Layout: React.FC<IProps> = ({
               overflow="visible"
               width="100%"
               flexGrow="1"
-              //display={{ base: "none", lg: "none" }}
             >
               {children}
             </Flex>
