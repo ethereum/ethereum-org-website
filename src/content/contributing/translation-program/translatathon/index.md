@@ -1,14 +1,18 @@
 ---
+# image: ../../../../assets/assets/translatathon-hero.png
+# alt: "Translatathon hero"
+# summaryPoints:
+# #   - Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
+# # buttons:
+# #   - label: Apply to participate
+# #     toId: applications
 title: Ethereum.org Translatathon
 description: A competition to translate ethereum.org content
 lang: en
-template: roadmap
-emoji: ":earth_americas:"
+template: event
 sidebarDepth: 2
-image: ../../assets/translatathon-hero.png
-alt: "Translatathon hero"
-summaryPoints:
-  - Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
+image: ../../../../assets/assets/translatathon-hero.png
+summaryPoint1: Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
 buttons:
   - label: Apply to participate
     toId: applications
@@ -137,7 +141,7 @@ All translations will also be subject to a thorough review before being added to
 
 ### Calls and office hours {#calls}
 
-## Terms & conditions {#T&C}
+## Terms & conditions {#Terms-and-Conditions}
 
 _The Translatathon is an experimental initiative by ethereum.org to incentivize and reward contributions to the ethereum.org Translation program. We reserve the right to modify the rules or cancel the event at any time, and the eligibility, score, and distribution of prizes are at the sole and final discretion of the ethereum.org team._
 
