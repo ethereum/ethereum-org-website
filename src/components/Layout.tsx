@@ -51,6 +51,9 @@ const Layout: React.FC<IProps> = ({
   useEffect(() => {
     if (path.includes("/docs/")) {
       setShouldShowSideNav(true)
+    } else {
+      !path.includes("/docs/")
+      setShouldShowSideNav(false)
     }
 
     if (location.hash && !location.hash.includes("gatsby")) {
@@ -111,6 +114,7 @@ const Layout: React.FC<IProps> = ({
               overflow="visible"
               width="100%"
               flexGrow="1"
+              //display={{ base: "none", lg: "none" }}
             >
               {children}
             </Flex>
