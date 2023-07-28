@@ -1,16 +1,21 @@
 ---
+# image: ../../../../assets/assets/translatathon-hero.png
+# alt: "Translatathon hero"
+# summaryPoints:
+# #   - Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
+# # buttons:
+# #   - label: Apply to participate
+# #     toId: applications
 title: Ethereum.org Translatathon
 description: A competition to translate ethereum.org content
 lang: en
-template: roadmap
-emoji: ":earth_americas:"
+template: event
 sidebarDepth: 2
-image: ../../assets/translatathon-hero.png
-alt: "Translatathon hero"
-summaryPoints: Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
+image: ../../../../assets/assets/translatathon-hero.png
+summaryPoint1: Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
 buttons:
   - label: Apply to participate
-    toId: 
+    toId: applications
 ---
 
 Welcome to the first ever ethereum.org Translatathon!
@@ -27,7 +32,7 @@ We invite you to join us in breaking down language barriers and making ethereum.
 
 - Application period: August 1st - August 15th
 - Translation period: August 16th - August 22nd
-- Evaluation & QA period: August 23rd -  August 30th
+- Evaluation & QA period: August 23rd - August 30th
 - Results announcement: August 31st
 
 ### Where {#where}
@@ -136,13 +141,9 @@ All translations will also be subject to a thorough review before being added to
 
 ### Calls and office hours {#calls}
 
+## Terms & conditions {#Terms-and-Conditions}
 
-
-
-
-## Terms & conditions {#T&C}
-
-*The Translatathon is an experimental initiative by ethereum.org to incentivize and reward contributions to the ethereum.org Translation program. We reserve the right to modify the rules or cancel the event at any time, and the eligibility, score, and distribution of prizes are at the sole and final discretion of the ethereum.org team.*
+_The Translatathon is an experimental initiative by ethereum.org to incentivize and reward contributions to the ethereum.org Translation program. We reserve the right to modify the rules or cancel the event at any time, and the eligibility, score, and distribution of prizes are at the sole and final discretion of the ethereum.org team._
 
 - By submitting the application form, you consent to sharing all the mandatory information with the organizers. All of the information you provide will be kept private between yourself and the ethereum.org team, but your Crowdin username and profile image will be used in public announcements of the results and winners.
 

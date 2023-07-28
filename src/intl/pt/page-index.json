@@ -1,5 +1,5 @@
 {
-  "page-index-hero-image-alt": "Uma ilustração de uma cidade futurista, representando o ecossistema Ethereum.",
+  "page-index-hero-image-alt": "Uma ilustração de uma cidade futurista, a representar o ecossistema Ethereum.",
   "page-index-meta-description": "O Ethereum é uma plataforma global e descentralizada para dinheiro e novos tipos de aplicações. No Ethereum, pode criar código que controla dinheiro e criar aplicações acessíveis em qualquer lugar do mundo.",
   "page-index-meta-title": "Início",
   "page-index-title": "Bem-vindo ao Ethereum",
@@ -48,8 +48,10 @@
   "page-index-developers-code-example-description-3": "Pode re-imaginar serviços existentes como descentralizados, aplicações abertas.",
   "page-index-network-stats-title": "Ethereum hoje",
   "page-index-network-stats-subtitle": "Últimas estatísticas da rede",
+  "page-index-network-stats-total-eth-staked": "Total ETH staked",
   "page-index-network-stats-eth-price-description": "Preço do ETH (USD)",
   "page-index-network-stats-eth-price-explainer": "O último preço para 1 ether. Pode comprar tão pouco quanto 0,000000000000000001 - não é necessário comprar 1 ETH inteiro.",
+  "page-index-network-stats-total-eth-staked-explainer": "A quantidade total de ETH está atualmente em staking e garantida na rede.",
   "page-index-network-stats-tx-day-description": "Transações de hoje",
   "page-index-network-stats-tx-day-explainer": "O número de transações processadas com sucesso na rede nas últimas 24 horas.",
   "page-index-network-stats-value-defi-description": "Valor bloqueado no Defi (USD)",
