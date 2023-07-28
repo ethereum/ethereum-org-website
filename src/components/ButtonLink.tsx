@@ -21,6 +21,7 @@ const ButtonLink: React.FC<IProps> = ({ children, isSecondary, ...props }) => {
     <Button
       as={Link}
       activeStyle={{}}
+      hideArrow
       // `styles` object sent to `sx` prop per convention
       sx={{
         ...styles,
