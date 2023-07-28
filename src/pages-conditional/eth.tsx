@@ -489,7 +489,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             </Text>
             <UnorderedList>
               <ListItem>
-                <Link to="https://sablier.finance">
+                <Link to="https://sablier.com">
                   <Translation id="page-eth-stream-link" />
                 </Link>{" "}
                 – <Translation id="page-eth-uses-desc-3" />
