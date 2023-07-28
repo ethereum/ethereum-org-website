@@ -15,14 +15,14 @@ image: ../../../../assets/assets/translatathon-hero.png
 summaryPoint1: Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
 buttons:
   - label: Apply to participate
-    toId: applications
+    toId: https://paperform.co/edit/translatathon
 ---
 
 Welcome to the first ever ethereum.org Translatathon!
 
 A translatathon is a collaborative and competitive hackathon-style event where individuals and teams compete for prizes by translating ethereum.org content into different languages.
 
-The goal is to translate website content and help make ethereum.org more accessible to non-English speakers, raise awareness of the importance of localization and the [Translation program](/contributing/translation-program/), and onboard new contributors and give back to our community, while fostering a sense of community by teaming up, collaborating on translations, and competing against other teams.
+The goal is to translate website content and help make ethereum.org more accessible to non-English speakers, raise awareness of the importance of localization and the [Translation program](/contributing/translation-program/), onboard new contributors and give back to our community, while fostering a sense of community by teaming up, collaborating on translations, and competing against other teams.
 
 We invite you to join us in breaking down language barriers and making ethereum.org content available to a truly global audience. By participating in the Translatathon, you’ll have an opportunity to meet and collaborate with like-minded individuals from across the globe, compete for exciting prizes, and contribute to making Ethereum content more accessible to the world!
 
@@ -53,7 +53,7 @@ All participants in the Translatathon are required to apply in order to particip
 
 During this period, we will be organizing several team formation calls on the Discord, where participants will be able to form teams and apply to compete in the ‘Teams’ category.
 
-Participants planning to compete as a team need to fill out the Team application form by the end of the application period, adding links to the Crowdin profiles of each team member.
+Participants planning to compete as a team need to fill out the [Team registration form](https://teams.paperform.co/) by the end of the application period, adding links to the Crowdin profiles of each team member.
 
 #### Categories {#categories}
 
@@ -69,11 +69,11 @@ Individuals will participate in the Translatathon as normal, competing only agai
 
 1. Learn more about the Translatathon and read up on the timeline, process, requirements, and evaluation process
 
-2. Apply to participate
+2. Apply to participate [here](https://paperform.co/edit/translatathon)
 
 3. Join the team formation and Onboarding calls on the [ethereum.org Discord](https://www.ethereum.org/discord)
 
-4. If you’re planning to participate as part of a team, fill out the Team application form
+4. If you’re planning to participate as part of a team, fill out the [Team registration form](https://teams.paperform.co/)
 
 5. Check out the resources on [how to join the project and how to use Crowdin](/contributing/translation-program/how-to-translate/), and read through the [Translation style guide](/contributing/translation-program/translators-guide/) for in-depth guidelines on translating ethereum.org content
 
@@ -83,7 +83,7 @@ Individuals will participate in the Translatathon as normal, competing only agai
   When translating, do not use machine translation or submit low-quality translations, since all translations will be reviewed, and participants found using machine translation or submitting inaccurate translations will be disqualified from competing for prizes!
 </InfoBanner>
 
-## Translatathon details and submission criteria {#details}
+## Details and submission criteria {#details}
 
 ### Requirements and scoring {#requirements-scoring}
 
@@ -139,8 +139,6 @@ The evaluation period will take one week after the translation period ends, and 
 
 All translations will also be subject to a thorough review before being added to the website.
 
-### Calls and office hours {#calls}
-
 ## Terms & conditions {#Terms-and-Conditions}
 
 _The Translatathon is an experimental initiative by ethereum.org to incentivize and reward contributions to the ethereum.org Translation program. We reserve the right to modify the rules or cancel the event at any time, and the eligibility, score, and distribution of prizes are at the sole and final discretion of the ethereum.org team._
@@ -160,7 +158,7 @@ _The Translatathon is an experimental initiative by ethereum.org to incentivize 
 <ExpandableCard title="Who can I contact if I need help or have questions, feedback, or ideas?" eventCategory="/translation-program/translatathon" eventName="clicked Who can I contact if I need help or have questions, feedback, or ideas?">
 
 - In Crowdin, you can send a direct message to [Ethereum.org Team](https://crowdin.com/profile/ethdotorg)
-- On the [ethereum.org Discord](https://www.ethereum.org/discord), you can send a message in the **#translatathon** & **#translate** channels, or DM **@lukassim** or **@isabelladebrito**
+- On the [ethereum.org Discord](https://www.ethereum.org/discord), you can send a message in the **#translatathon** & **#translate** channels
 - You can send an email to **translations@ethereum.org**
 
 </ExpandableCard>
@@ -169,7 +167,15 @@ _The Translatathon is an experimental initiative by ethereum.org to incentivize 
 
 You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.
 
-In case you would like to translate into a language that is not available in the [ethereum.org project in Crowdin](https://crowdin.com/project/ethereum-org), please send a message to [Ethereum.org Team](https://crowdin.com/profile/ethdotorg) in Crowdin, send a message in the **#translatathon** or **#translate** channels on the [ethereum.org Discord](https://www.ethereum.org/discord) or reach out to **@lukassim**, and we’ll add the language to the project.
+In case you would like to translate into a language that is not available in the [ethereum.org project in Crowdin](https://crowdin.com/project/ethereum-org), please send a message to [Ethereum.org Team](https://crowdin.com/profile/ethdotorg) in Crowdin, or send a message in the **#translatathon** or **#translate** channels on the [ethereum.org Discord](https://www.ethereum.org/discord) and we’ll add the language to the project.
+
+</ExpandableCard>
+
+<ExpandableCard title="I want to participate as part of a team. Do I need to apply as an individual as well?" eventCategory="/translation-program/translatathon" eventName="clicked I want to participate as part of a team. Do I need to apply as an individual as well?">
+
+Yes, all Translatathon participants are required to submit the individual application form to participate.
+
+Only one member of a team needs to submit the team registration form, so we can keep track of teams and their members.
 
 </ExpandableCard>
 
@@ -183,7 +189,7 @@ You can learn more about navigating Crowdin and using the Translation memory and
 
 <ExpandableCard title="How can I find teammates to compete in the Teams category?" eventCategory="/translation-program/translatathon" eventName="clicked How can I find teammates to compete in the Teams category?">
 
-If you are already connected with other translators or people who would be interested in participating, you can simply apply to form a team and add the Crowdin accounts for everyone that will be part of the team.
+If you are already connected with other translators or people who would be interested in participating, you can simply [apply to register as a team](https://teams.paperform.co/) and add the Crowdin accounts for everyone that will be part of the team.
 
 You can also invite your friends and form a team with them.
 
