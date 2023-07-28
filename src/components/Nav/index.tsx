@@ -1,7 +1,7 @@
 import React, { FC, useRef } from "react"
 import { Icon, IconButton, Flex, Text, Box } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
-
+import { motion } from "framer-motion"
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
@@ -78,28 +78,35 @@ const Nav: FC<IProps> = ({ path }) => {
                 aria-label={
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
                 }
+                _hover={{
+                  color: "primary.base",
+                  transform: "scale(1.1) rotate(20deg)",
+                }} // Scale and rotate the icon on hover
+                transition="transform 0.2s ease-in-out, color 0.2s ease-in-out"
                 icon={<Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />}
                 variant="icon"
-                size="sm"
+                size="md"
                 fontSize="2xl"
                 ms={{ xl: 2 }}
-                _hover={{ color: "primary.base" }}
+                // _hover={{ color: "primary.base" }}
                 onClick={toggleColorMode}
               />
               <ButtonLink
                 to={`/languages/${fromPageParameter}`}
                 variant="icon"
                 px={{ base: 1, xl: 1.5 }}
-                size="sm"
+                size="md"
                 fontSize="md"
               >
-                <Icon as={MdLanguage} fontSize="2xl" />
-                <Text as="span" pl={2}>
-                  <Box as="span" hideBelow="lg">
-                    {t("languages")}
-                  </Box>{" "}
-                  {i18n.language.toUpperCase()}
-                </Text>
+                <Icon
+                  _hover={{
+                    color: "primary.base",
+                    transform: "scale(1.1) rotate(360deg)",
+                  }}
+                  transition="transform 0.2s ease-in-out, color 0.2s ease-in-out"
+                  as={MdLanguage}
+                  fontSize="2xl"
+                />
               </ButtonLink>
             </Flex>
           </Flex>
