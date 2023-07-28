@@ -1,12 +1,11 @@
-import React, { ComponentProps } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, IGatsbyImageData, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import {
   Box,
   BoxProps,
-  calc,
   chakra,
   Flex,
   FlexProps,
@@ -15,8 +14,6 @@ import {
   Show,
   Text,
   useToken,
-  Wrap,
-  WrapItem,
 } from "@chakra-ui/react"
 
 import Button from "../components/Button"
@@ -27,7 +24,6 @@ import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 
 import { ChildOnlyProp, Context } from "../types"
-import ButtonLink from "../components/ButtonLink"
 
 const commonHeadingProps: HeadingProps = {
   fontWeight: 700,
@@ -126,8 +122,6 @@ export const InfoColumn = (props: ChildOnlyProp) => (
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
-    bg="cardGradient"
-    boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
     flexDirection={{ base: "column-reverse", lg: "row" }}
     alignItems="flex-start"
     minHeight="608px"
