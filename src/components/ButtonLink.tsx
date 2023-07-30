@@ -6,7 +6,7 @@ import Link, { IBaseProps as ILinkProps } from "./Link"
 export interface IProps extends ILinkProps, ButtonProps {}
 
 const ButtonLink: React.FC<IProps> = ({ children, ...props }) => {
-  const buttonStyles = useStyleConfig("Button")
+  const buttonStyles = useStyleConfig("Button", { ...props })
 
   return (
     <Button
