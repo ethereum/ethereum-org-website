@@ -77,11 +77,11 @@ const Nav: FC<IProps> = ({ path }) => {
               {/* Mobile */}
               <MobileNavMenu
                 {...mobileNavProps}
-                hideFrom="xl"
+                hideFrom="lg"
                 toggleSearch={searchModalDisclosure.onOpen}
                 drawerContainerRef={navWrapperRef}
               />
-              <HStack spacing={2} hideBelow="xl">
+              <HStack spacing={2} hideBelow="lg">
                 <Button
                   aria-label={
                     isDarkTheme
