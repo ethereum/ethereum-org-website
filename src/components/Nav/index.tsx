@@ -1,5 +1,5 @@
 import React, { FC, useRef } from "react"
-import { Icon, Flex, Box, HStack } from "@chakra-ui/react"
+import { Icon, Flex, Box, HStack, useDisclosure } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 
 import Menu from "./Menu"
@@ -26,9 +26,9 @@ const Nav: FC<IProps> = ({ path }) => {
     t,
     toggleColorMode,
     linkSections,
-    searchRef,
     mobileNavProps,
   } = useNav({ path })
+  const searchModalDisclosure = useDisclosure()
 
   const navWrapperRef = useRef(null)
 
@@ -73,11 +73,12 @@ const Nav: FC<IProps> = ({ path }) => {
               justifyContent="space-between"
               gap={{ base: 2, xl: 4 }}
             >
-              <Search ref={searchRef} />
+              <Search {...searchModalDisclosure} />
               {/* Mobile */}
               <MobileNavMenu
                 {...mobileNavProps}
                 hideFrom="xl"
+                toggleSearch={searchModalDisclosure.onOpen}
                 drawerContainerRef={navWrapperRef}
               />
               <HStack spacing={2} hideBelow="xl">
