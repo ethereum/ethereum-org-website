@@ -406,4 +406,11 @@
     "location": "Brussels",
     "link": "https://dao.brussels/"
   }
+  ,
+  {
+    "title": "ETH Canal Meetup",
+    "emoji": ":panama:",
+    "location": "Panama",
+    "link": "https://www.meetup.com/eth-canal/"
+  }
 ]
