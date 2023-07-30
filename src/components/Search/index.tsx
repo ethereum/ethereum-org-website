@@ -3,7 +3,6 @@ import React from "react"
 import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import { MdSearch } from "react-icons/md"
 import {
-  IconButton,
   forwardRef,
   Portal,
   useDisclosure,
@@ -14,6 +13,7 @@ import {
 } from "@chakra-ui/react"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
+import Button from "../Button"
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
 import { sanitizeHitUrl } from "../../utils/url"
@@ -27,14 +27,9 @@ import { trackCustomEvent } from "../../utils/matomo"
 
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (
-    <IconButton
-      ref={ref}
-      icon={<MdSearch />}
-      fontSize="2xl"
-      variant="icon"
-      _hover={{ svg: { fill: "primary.base" } }}
-      {...props}
-    />
+    <Button ref={ref} variant="secondaryGhost" px={1.5} {...props}>
+      <MdSearch />
+    </Button>
   )
 )
 
@@ -91,7 +86,6 @@ const Search = forwardRef<{}, "button">((_, ref) => {
           }}
           ref={mergedButtonRefs}
           aria-label={t("aria-toggle-search-button")}
-          size="sm"
         />
       )}
       <Portal>

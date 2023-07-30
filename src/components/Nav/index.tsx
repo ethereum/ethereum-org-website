@@ -1,11 +1,12 @@
 import React, { FC, useRef } from "react"
-import { Icon, IconButton, Flex, Text, Box } from "@chakra-ui/react"
+import { Icon, Flex, Box, HStack } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
 import Link from "../Link"
+import Button from "../Button"
 import Search from "../Search"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
@@ -62,52 +63,47 @@ const Nav: FC<IProps> = ({ path }) => {
           </Link>
           {/* Desktop */}
           <Flex
-            justifyContent="space-between"
-            w="100%"
-            display={{ base: "none", lg: "flex" }}
+            w="full"
+            justifyContent={{ base: "flex-end", lg: "space-between" }}
             ml={{ base: 3, xl: 8 }}
           >
-            <Menu path={path} sections={linkSections} />
+            <Menu hideBelow="lg" path={path} sections={linkSections} />
             <Flex
               alignItems="center"
               justifyContent="space-between"
-              gap={{ base: 1, xl: 0 }}
+              gap={{ base: 2, xl: 4 }}
             >
               <Search ref={searchRef} />
-              <IconButton
-                aria-label={
-                  isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
-                }
-                icon={<Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />}
-                variant="icon"
-                size="sm"
-                fontSize="2xl"
-                ms={{ xl: 2 }}
-                _hover={{ color: "primary.base" }}
-                onClick={toggleColorMode}
+              {/* Mobile */}
+              <MobileNavMenu
+                {...mobileNavProps}
+                hideFrom="xl"
+                drawerContainerRef={navWrapperRef}
               />
-              <ButtonLink
-                to={`/languages/${fromPageParameter}`}
-                variant="icon"
-                px={{ base: 1, xl: 1.5 }}
-                size="sm"
-                fontSize="md"
-              >
-                <Icon as={MdLanguage} fontSize="2xl" />
-                <Text as="span" pl={2}>
-                  <Box as="span" hideBelow="lg">
-                    {t("languages")}
-                  </Box>{" "}
-                  {i18n.language.toUpperCase()}
-                </Text>
-              </ButtonLink>
+              <HStack spacing={2} hideBelow="xl">
+                <Button
+                  aria-label={
+                    isDarkTheme
+                      ? "Switch to Light Theme"
+                      : "Switch to Dark Theme"
+                  }
+                  variant="secondaryGhost"
+                  px={1.5}
+                  onClick={toggleColorMode}
+                >
+                  <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
+                </Button>
+                <ButtonLink
+                  to={`/languages/${fromPageParameter}`}
+                  leftIcon={<Icon as={MdLanguage} />}
+                  variant="secondaryGhost"
+                  px={1.5}
+                >
+                  {t("languages")} {i18n.language.toUpperCase()}
+                </ButtonLink>
+              </HStack>
             </Flex>
           </Flex>
-          {/* Mobile */}
-          <MobileNavMenu
-            {...mobileNavProps}
-            drawerContainerRef={navWrapperRef}
-          />
         </Flex>
       </Flex>
       {shouldShowSubNav && (

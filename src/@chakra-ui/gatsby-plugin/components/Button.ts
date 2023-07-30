@@ -10,13 +10,10 @@ import { defineStyle, defineStyleConfig } from "@chakra-ui/react"
  */
 const ICON_SELECTOR = "& svg"
 
-const getBaseColor = (isSecondary: boolean) =>
-  !isSecondary ? "primary.base" : "body.base"
-
 const baseStyle = defineStyle((props) => ({
   borderRadius: "base",
   border: "1px",
-  color: getBaseColor(props.isSecondary),
+  color: "primary.base",
   lineHeight: "1.6",
   transitionProperty: "common",
   transitionDuration: "normal",
@@ -58,8 +55,18 @@ const variantOutline = defineStyle({
   },
 })
 
+const variantSecondaryOutline = defineStyle({
+  ...variantOutline,
+  color: "body.base",
+})
+
 const variantGhost = {
   borderColor: "transparent",
+}
+
+const variantSecondaryGhost = {
+  ...variantGhost,
+  color: "body.base",
 }
 
 const variantLink = defineStyle({
@@ -92,27 +99,29 @@ const variantIcon = defineStyle({
 })
 
 const sizes = {
-  md: {
-    py: "2 !important",
-    px: "4 !important",
+  md: defineStyle({
+    py: "2",
+    px: "4",
     [ICON_SELECTOR]: {
       fontSize: "2xl",
     },
-  },
-  sm: {
+  }),
+  sm: defineStyle({
     fontSize: "xs",
-    py: "1.5 !important",
-    px: "2 !important",
+    py: "1.5",
+    px: "2",
     [ICON_SELECTOR]: {
       fontSize: "md",
     },
-  },
+  }),
 }
 
 const variants = {
   solid: variantSolid,
   outline: variantOutline,
+  secondaryOutline: variantSecondaryOutline,
   ghost: variantGhost,
+  secondaryGhost: variantSecondaryGhost,
   link: variantLink,
   icon: variantIcon,
 }
