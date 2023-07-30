@@ -260,4 +260,14 @@
     "startDate": "2023-11-03",
     "endDate": "2023-11-05"
   }
+  ,
+  {
+    "title": "ETH Canal",
+    "to": "https://www.ethcanal.xyz/",
+    "sponsor": null,
+    "location": "Ciudad del Saber, Panama City, Panamá",
+    "description": "ETH Canal - Uniting Ethereum technology enthusiasts at the City of Knowledge alongside the legendary Panama Canal, this transformative event features a conference and hackathon, fostering blockchain innovation and knowledge exchange at the heart of technological crossroads.",
+    "startDate": "2023-11-14",
+    "endDate": "2023-11-16"
+  }
 ]
