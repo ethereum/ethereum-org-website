@@ -1,4 +1,3 @@
-import React from "react"
 import { Box, Table } from "@chakra-ui/react"
 
 export interface IProps {

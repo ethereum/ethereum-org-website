@@ -1,4 +1,3 @@
-import React from "react"
 import { Flex, FlexProps, LightMode, Text } from "@chakra-ui/react"
 import Emoji from "./Emoji"
 
