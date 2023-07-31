@@ -52,7 +52,6 @@ const Layout: React.FC<IProps> = ({
     if (path.includes("/docs/")) {
       setShouldShowSideNav(true)
     } else {
-      !path.includes("/docs/")
       setShouldShowSideNav(false)
     }
 
