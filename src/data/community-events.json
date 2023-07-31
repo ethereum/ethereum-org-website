@@ -252,6 +252,15 @@
     "endDate": "2023-07-20"
   },
   {
+    "title": "Not Another Virtual Hackathon (NAVH)",
+    "to": "https://navhackathon.consensys.io/",
+    "sponsor": null,
+    "location": "Virtual (Global)",
+    "description": "Consensys' annual virtual global hackathon aimed to scale Ethereum.",
+    "startDate": "2023-07-06",
+    "endDate": "2023-09-06"
+  },
+  {
     "title": "ETHLisbon 2023",
     "to": "https://www.ethlisbon.org/",
     "sponsor": null,
@@ -259,5 +268,14 @@
     "description": "ETHLisbon is an Ethereum-focused hackathon bringing together the best Web 3.0 builders to the crypto capital of Europe.",
     "startDate": "2023-11-03",
     "endDate": "2023-11-05"
+  },
+  {
+    "title": "TUM Blockchain Conference",
+    "to": "https://www.tum-blockchain.com/conference",
+    "sponsor": null,
+    "location": "Munich, Germany",
+    "description": "Join us at Germany's leading student-run conference in order to explore the frontiers of blockchain technology during the Octoberfest!",
+    "startDate": "2023-9-22",
+    "endDate": "2023-9-23"
   }
 ]
