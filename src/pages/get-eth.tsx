@@ -96,17 +96,17 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
     {
       title: t("page-get-eth-article-protecting-yourself"),
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
-      description: "MyCrypto",
+      description: t("page-get-eth-article-protecting-yourself-desc"),
     },
     {
       title: t("page-get-eth-article-keeping-crypto-safe"),
       link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
-      description: "Coinbase",
+      description: t("page-get-eth-article-keeping-crypto-safe-desc"),
     },
     {
       title: t("page-get-eth-article-store-digital-assets"),
       link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
-      description: "ConsenSys",
+      description: t("page-get-eth-article-store-digital-assets-desc"),
     },
   ]
 

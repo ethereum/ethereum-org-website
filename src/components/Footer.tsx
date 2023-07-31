@@ -66,8 +66,8 @@ const Footer: React.FC<IProps> = () => {
       title: t("use-ethereum"),
       links: [
         {
-          text: t("find-wallet"),
           to: "/wallets/find-wallet/",
+          text: t("find-wallet"),
         },
         {
           to: `/get-eth/`,
@@ -115,24 +115,24 @@ const Footer: React.FC<IProps> = () => {
           text: t("ethereum-wallets"),
         },
         {
-          text: t("ethereum-security"),
           to: "/security/",
+          text: t("ethereum-security"),
         },
         {
-          text: t("web3"),
           to: "/web3/",
+          text: t("web3"),
         },
         {
-          text: t("smart-contracts"),
           to: "/smart-contracts/",
+          text: t("smart-contracts"),
         },
         {
-          text: t("energy-consumption"),
           to: "/energy-consumption/",
+          text: t("energy-consumption"),
         },
         {
-          text: t("ethereum-roadmap"),
           to: "/roadmap/",
+          text: t("ethereum-roadmap"),
         },
         {
           to: "/eips/",
@@ -151,20 +151,20 @@ const Footer: React.FC<IProps> = () => {
           text: t("ethereum-glossary"),
         },
         {
-          text: t("ethereum-governance"),
           to: "/governance/",
+          text: t("ethereum-governance"),
         },
         {
-          text: t("bridges"),
           to: "/bridges/",
+          text: t("bridges"),
         },
         {
-          text: t("zero-knowledge-proofs"),
           to: "/zero-knowledge-proofs/",
+          text: t("zero-knowledge-proofs"),
         },
         {
-          text: t("quizzes-title"),
           to: "/quizzes/",
+          text: t("quizzes-title"),
         },
       ],
     },

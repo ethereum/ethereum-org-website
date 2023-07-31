@@ -5,7 +5,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
   chakra,
-  Divider,
   Flex,
   FlexProps,
   Heading,
@@ -26,7 +25,6 @@ import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import CodeModal from "../components/CodeModal"
 import Codeblock from "../components/Codeblock"
-import CommunityEvents from "../components/CommunityEvents"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
@@ -556,8 +554,6 @@ const HomePage = ({
         </ContentBox>
         <StatsBoxGrid />
       </GrayContainer>
-      <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
-      <CommunityEvents />
       {/* Explore Section */}
       <ContentBox>
         <Box pb={4}>
