@@ -28,23 +28,19 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 - Write or review an Ethereum Improvement Proposal
   - Write an EIP
     1. Submit your idea on [Ethereum Magicians](https://ethereum-magicians.org)
-    2. Read [EIP-1](https://eip.ethereum.org/EIPS/eip-1) - **Yes, that's the *entire* document.**
+    2. Read [EIP-1](https://eip.ethereum.org/EIPS/eip-1) - **Yes, that's the _entire_ document.**
     3. Follow the directons in EIP-1. Reference it as you write your draft.
   - Learn how to become an [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069)
     - You can peer-review EIPs right now! See [open PRs with the `e-review` tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Provide technical feedback on the `discussion-to` link.
   - Participate in [EIP Governance](https://github.com/ethereum-cat-herders/EIPIP)
     - Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+  - [More on EIPs](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - An ongoing Q&A series with researchers. As each next part opens, anyone can post questions.
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
-<ButtonLink to="/eips/">
-  More active areas of research
-</ButtonLink>
-<ButtonLink to="/eips/">
-  More on EIPs
-</ButtonLink>
+[Explore more active areas of research](/community/research/).
 
 ## Non-technical skillsets <Emoji text=":briefcase:" size={1} />‍ {#non-technical}
 
