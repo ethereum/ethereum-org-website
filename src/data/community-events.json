@@ -268,5 +268,14 @@
     "description": "ETHLisbon is an Ethereum-focused hackathon bringing together the best Web 3.0 builders to the crypto capital of Europe.",
     "startDate": "2023-11-03",
     "endDate": "2023-11-05"
+  },
+  {
+    "title": "TUM Blockchain Conference",
+    "to": "https://www.tum-blockchain.com/conference",
+    "sponsor": null,
+    "location": "Munich, Germany",
+    "description": "Join us at Germany's leading student-run conference in order to explore the frontiers of blockchain technology during the Octoberfest!",
+    "startDate": "2023-9-22",
+    "endDate": "2023-9-23"
   }
 ]
