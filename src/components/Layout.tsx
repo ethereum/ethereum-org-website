@@ -51,6 +51,8 @@ const Layout: React.FC<IProps> = ({
   useEffect(() => {
     if (path.includes("/docs/")) {
       setShouldShowSideNav(true)
+    } else {
+      setShouldShowSideNav(false)
     }
 
     if (location.hash && !location.hash.includes("gatsby")) {
