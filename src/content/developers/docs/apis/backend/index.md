@@ -166,8 +166,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Documentation](https://services.tokeniew/docs?type=api)
 - [Github](https://github.com/Tokenview)
-- [Telegram](https://t.me/+hnSqLa49eHA5MGU1)
-  
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
