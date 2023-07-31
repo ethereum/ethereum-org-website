@@ -15,7 +15,7 @@ image: ../../../../assets/assets/translatathon-hero.png
 summaryPoint1: Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
 buttons:
   - label: Apply to participate
-    toId: https://paperform.co/edit/translatathon
+    toId: https://translatathon.paperform.co/
 ---
 
 Welcome to the first ever ethereum.org Translatathon!
@@ -69,7 +69,7 @@ Individuals will participate in the Translatathon as normal, competing only agai
 
 1. Learn more about the Translatathon and read up on the timeline, process, requirements, and evaluation process
 
-2. Apply to participate [here](https://paperform.co/edit/translatathon)
+2. Apply to participate [here](https://translatathon.paperform.co/)
 
 3. Join the team formation and Onboarding calls on the [ethereum.org Discord](https://www.ethereum.org/discord)
 
