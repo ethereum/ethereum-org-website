@@ -141,22 +141,13 @@ const Row = (props: { children: ReactNode; isReversed?: boolean }) => (
   </Flex>
 )
 
-const ButtonLinkRow = (props: {
-  firstButton: { to: string; child: ReactNode }
-  secondButton?: { to: string; child: ReactNode }
-}) => (
+const ButtonLinkRow = (props: ChildOnlyProp) => (
   <Stack
     alignItems="flex-start"
     direction={{ base: "column", md: "row" }}
     spacing={{ base: 6, md: 2 }}
-  >
-    <ButtonLink to={props.firstButton.to}>{props.firstButton.child}</ButtonLink>
-    {!!props.secondButton && (
-      <ButtonLink variant="outline" gap={2} to={props.secondButton.to}>
-        {props.secondButton.child}
-      </ButtonLink>
-    )}
-  </Stack>
+    {...props}
+  />
 )
 
 const PageHeader = () => (
@@ -175,12 +166,11 @@ const PageHeader = () => (
     <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>
       <Translation id="page-index-description" />
     </Text>
-    <ButtonLinkRow
-      firstButton={{
-        to: "/learn/",
-        child: <Translation id="page-index-title-button" />,
-      }}
-    />
+    <ButtonLinkRow>
+      <ButtonLink to="/learn/">
+        <Translation id="page-index-title-button" />
+      </ButtonLink>
+    </ButtonLinkRow>
   </Flex>
 )
 
@@ -366,18 +356,14 @@ const HomePage = ({
             <SectionDecription>
               <Translation id="page-index-what-is-ethereum-description" />
             </SectionDecription>
-            <ButtonLinkRow
-              firstButton={{
-                to: "/what-is-ethereum/",
-                child: <Translation id="page-index-what-is-ethereum-button" />,
-              }}
-              secondButton={{
-                to: "/eth/",
-                child: (
-                  <Translation id="page-index-what-is-ethereum-secondary-button" />
-                ),
-              }}
-            />
+            <ButtonLinkRow>
+              <ButtonLink to="/what-is-ethereum/">
+                <Translation id="page-index-what-is-ethereum-button" />
+              </ButtonLink>
+              <ButtonLink to="/eth/" variant="outline">
+                <Translation id="page-index-what-is-ethereum-secondary-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer pl={{ lg: 8 }}>
             <Img
@@ -399,12 +385,11 @@ const HomePage = ({
             <SectionDecription>
               <Translation id="page-index-defi-description" />
             </SectionDecription>
-            <ButtonLinkRow
-              firstButton={{
-                to: "/defi/",
-                child: <Translation id="page-index-defi-button" />,
-              }}
-            />
+            <ButtonLinkRow>
+              <ButtonLink to="/defi/">
+                <Translation id="page-index-defi-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
             <Img
@@ -426,12 +411,11 @@ const HomePage = ({
             <SectionDecription>
               <Translation id="page-index-nft-description" />
             </SectionDecription>
-            <ButtonLinkRow
-              firstButton={{
-                to: "/nft/",
-                child: <Translation id="page-index-nft-button" />,
-              }}
-            />
+            <ButtonLinkRow>
+              <ButtonLink to="/nft/">
+                <Translation id="page-index-nft-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
             <Img
@@ -454,18 +438,14 @@ const HomePage = ({
               <SectionDecription>
                 <Translation id="page-index-internet-description" />
               </SectionDecription>
-              <ButtonLinkRow
-                firstButton={{
-                  to: "/dapps/?category=technology",
-                  child: <Translation id="page-index-internet-button" />,
-                }}
-                secondButton={{
-                  to: "/wallets/",
-                  child: (
-                    <Translation id="page-index-internet-secondary-button" />
-                  ),
-                }}
-              />
+              <ButtonLinkRow>
+                <ButtonLink to="/dapps/?category=technology">
+                  <Translation id="page-index-internet-button" />
+                </ButtonLink>
+                <ButtonLink to="/wallets/" variant="outline">
+                  <Translation id="page-index-internet-secondary-button" />
+                </ButtonLink>
+              </ButtonLinkRow>
             </FeatureContent>
             <ImageContainer>
               <Img
@@ -501,12 +481,11 @@ const HomePage = ({
             <SectionDecription>
               <Translation id="page-index-developers-description" />
             </SectionDecription>
-            <ButtonLinkRow
-              firstButton={{
-                to: "/dapps/?category=technology",
-                child: <Translation id="page-index-developers-button" />,
-              }}
-            />
+            <ButtonLinkRow>
+              <ButtonLink to="/dapps/?category=technology">
+                <Translation id="page-index-developers-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
           <StyledCodeModal
             isOpen={isModalOpen}
@@ -586,28 +565,18 @@ const HomePage = ({
           mb={16}
           mx={0}
         >
-          <ButtonLinkRow
-            firstButton={{
-              to: "/contributing/",
-              child: <Translation id="page-index-contribution-banner-button" />,
-            }}
-            secondButton={{
-              to: "https://github.com/ethereum/ethereum-org-website",
-              child: (
-                <>
-                  <Icon
-                    as={FaGithub}
-                    color="text"
-                    fontSize="2xl"
-                    _hover={{ color: "primary.base" }}
-                    _active={{ color: "primary.base" }}
-                    _focus={{ color: "primary.base" }}
-                  />
-                  GitHub
-                </>
-              ),
-            }}
-          />
+          <ButtonLinkRow>
+            <ButtonLink to="/contributing/">
+              <Translation id="page-index-contribution-banner-button" />
+            </ButtonLink>
+            <ButtonLink
+              to="https://github.com/ethereum/ethereum-org-website"
+              leftIcon={<Icon as={FaGithub} fontSize="2xl" />}
+              variant="outline"
+            >
+              GitHub
+            </ButtonLink>
+          </ButtonLinkRow>
         </CalloutBanner>
       </ContentBox>
     </Flex>
