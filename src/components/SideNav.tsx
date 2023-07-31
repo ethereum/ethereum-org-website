@@ -54,8 +54,10 @@ const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
       w="full"
       textDecoration="none"
       color="text"
+      fontWeight="normal"
       _hover={{ textDecoration: "none", color: "primary.base" }}
       _active={{ color: "primary.base" }}
+      _visited={{}}
       {...props}
     >
       {children}
