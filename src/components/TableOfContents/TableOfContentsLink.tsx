@@ -55,11 +55,13 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
       display="inline-block"
       position="relative"
       color="textTableOfContents"
+      fontWeight="normal"
       mb="0.5rem !important"
       width={{ base: "100%", lg: "auto" }}
       _hover={{
         ...hoverOrActiveStyle,
       }}
+      _visited={{}}
       sx={{
         [$dotBg.variable]: "colors.background",
         "&.active": {
