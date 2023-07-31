@@ -1,11 +1,10 @@
 ---
 title: Ethereum.org Translatathon
-description: A competition to translate ethereum.org content
+description: Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
 lang: en
 template: event
 sidebarDepth: 2
 image: ../../../../assets/assets/translatathon-hero.png
-summaryPoint1: Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
 buttons:
   - label: Apply to participate
     to: https://translatathon.paperform.co/
@@ -58,6 +57,8 @@ Team members can translate into different languages!
 
 Individuals will participate in the Translatathon as normal, competing only against other individuals, and the final scores will be calculated based on their number of translated words and the content buckets they translated.
 
+**Only translations, submitted during the Translation period - starting 15th of August at 4:00am UTC and ending 23rd of August at 4:00am UTC - will count towards the final score.**
+
 ## Step-by-step instructions {#instructions}
 
 1. Learn more about the Translatathon and read up on the timeline, process, requirements, and evaluation process
@@ -109,6 +110,7 @@ Full breakdown of multipliers by content bucket:
 - Content buckets 1-8: 1.2x points multiplier
 - Content buckets 9-15: 1.1x points multiplier
 - Content buckets 16-28: 1x points multiplier
+- Remix translations: 0.8x points multiplier
 
 ### Prizes {#prizes}
 
@@ -187,5 +189,16 @@ If you are already connected with other translators or people who would be inter
 You can also invite your friends and form a team with them.
 
 Finally, we’ll be hosting team formation calls on the [ethereum.org Discord](https://www.ethereum.org/discord), where you can connect with other individuals looking for teammates.
+
+</ExpandableCard>
+
+<ExpandableCard title="What should I do if my language is 100% translated?" eventCategory="/translation-program/translatathon" eventName="clicked What should I do if my language is 100% translated?">
+
+If the ethereum.org content in Crowdin has been 100% translated into your language, congratulations!
+
+Once the Translatathon is over, all the translated content will be fully reviewed and added to the website.
+
+However, despite your language being completely translated, you can still participate in the Translatathon by translating [Remix content](https://crowdin.com/project/remix-translation).
+These translations will be used in the Remix IDE documentation and have a lower score multiplier than ethereum.org content.
 
 </ExpandableCard>
