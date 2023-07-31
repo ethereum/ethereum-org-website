@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
+import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import ExpandableCard from "../components/ExpandableCard"
 import PageMetadata from "../components/PageMetadata"
@@ -143,6 +144,7 @@ const components = {
   li: chakra.li,
   pre: Pre,
   ExpandableCard,
+  InfoBanner,
 }
 
 const HeroImage = chakra(GatsbyImage, {
