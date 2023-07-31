@@ -16,7 +16,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import Link from "../components/Link"
 import ExpandableCard from "../components/ExpandableCard"
 import PageMetadata from "../components/PageMetadata"
@@ -184,9 +184,9 @@ const EventPage = ({
           </H1>
           <Text color="gray.900">{mdx?.frontmatter?.description}</Text>
           {mdx?.frontmatter?.buttons && (
-            <Button toId={mdx.frontmatter.buttons[0].toId}>
+            <ButtonLink to={mdx.frontmatter.buttons[0].to}>
               {mdx.frontmatter.buttons[0].label}
-            </Button>
+            </ButtonLink>
           )}
         </Box>
       </HeroContainer>
@@ -243,7 +243,7 @@ export const eventPageQuery = graphql`
         alt
         buttons {
           label
-          toId
+          to
         }
         image {
           childImageSharp {

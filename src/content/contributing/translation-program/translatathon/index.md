@@ -1,11 +1,4 @@
 ---
-# image: ../../../../assets/assets/translatathon-hero.png
-# alt: "Translatathon hero"
-# summaryPoints:
-# #   - Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
-# # buttons:
-# #   - label: Apply to participate
-# #     toId: applications
 title: Ethereum.org Translatathon
 description: A competition to translate ethereum.org content
 lang: en
@@ -15,7 +8,7 @@ image: ../../../../assets/assets/translatathon-hero.png
 summaryPoint1: Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
 buttons:
   - label: Apply to participate
-    toId: https://translatathon.paperform.co/
+    to: https://translatathon.paperform.co/
 ---
 
 Welcome to the first ever ethereum.org Translatathon!
