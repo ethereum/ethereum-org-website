@@ -1,36 +1,30 @@
-import React from "react"
-import {
-  Box,
-  Icon,
-  Link as ChakraLink,
-  LinkProps,
-  useTheme,
-  VisuallyHidden,
-} from "@chakra-ui/react"
-import { navigate as gatsbyNavigate } from "gatsby"
-import { Link as IntlLink } from "gatsby-plugin-react-i18next"
-import { NavigateOptions } from "@reach/router"
-
+import { Box, Icon, Link as ChakraLink, LinkProps, useTheme, VisuallyHidden } from "@chakra-ui/react"
 import { BsQuestionSquareFill } from "react-icons/bs"
+// import { navigate as gatsbyNavigate } from "gatsby"
+// import { Link as IntlLink } from "gatsby-plugin-react-i18next"
+// import { NavigateOptions } from "@reach/router"
 
-import { Lang } from "../utils/languages"
-import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
-import * as url from "../utils/url"
-import { Direction } from "../types"
-import { SITE_URL, DISCORD_PATH } from "../constants"
+// import { BsQuestionSquareFill } from "react-icons/bs"
+
+// import { Lang } from "../utils/languages"
+// import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
+import * as url from "../lib/utils/url"
+
+import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
+// import { Direction } from "../types"
 
 export interface IBaseProps {
   to?: string
   href?: string
-  language?: Lang
+  // language?: Lang
   hideArrow?: boolean
-  isPartiallyActive?: boolean
-  customEventOptions?: MatomoEventOptions
-  activeStyle?: object
+  // isPartiallyActive?: boolean
+  // customEventOptions?: MatomoEventOptions
+  // activeStyle?: object
 }
 
 export interface IProps extends IBaseProps, LinkProps {
-  dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
+  // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
 
 /**
@@ -51,13 +45,13 @@ export interface IProps extends IBaseProps, LinkProps {
 const Link: React.FC<IProps> = ({
   to: toProp,
   href,
-  language,
+  // language,
   dir = "ltr",
   children,
   hideArrow = false,
-  isPartiallyActive = true,
-  customEventOptions,
-  activeStyle = null,
+  // isPartiallyActive = true,
+  // customEventOptions,
+  // activeStyle = null,
   ...restProps
 }) => {
   const theme = useTheme()
@@ -74,18 +68,6 @@ const Link: React.FC<IProps> = ({
   const isStatic = url.isStatic(to)
   const isPdf = url.isPdf(to)
 
-  const externalLinkEvent: MatomoEventOptions = {
-    eventCategory: `External link`,
-    eventAction: `Clicked`,
-    eventName: to,
-  }
-
-  const hashLinkEvent: MatomoEventOptions = {
-    eventCategory: `Hash link`,
-    eventAction: `Clicked`,
-    eventName: to,
-  }
-
   const commonProps = {
     dir,
     ...restProps,
@@ -96,21 +78,7 @@ const Link: React.FC<IProps> = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <ChakraLink
-        href={to}
-        onClick={(e) => {
-          // only track events on external links and hash links
-          if (!isHash) {
-            return
-          }
-
-          e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ? customEventOptions : hashLinkEvent
-          )
-        }}
-        {...commonProps}
-      >
+      <ChakraLink href={to} {...commonProps}>
         {children}
       </ChakraLink>
     )
@@ -120,22 +88,7 @@ const Link: React.FC<IProps> = ({
   // Opens in separate window.
   if (isExternal || isPdf || isStatic) {
     return (
-      <ChakraLink
-        href={to}
-        isExternal
-        onClick={(e) => {
-          // only track events on external links and hash links
-          if (!isExternal) {
-            return
-          }
-
-          e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ? customEventOptions : externalLinkEvent
-          )
-        }}
-        {...commonProps}
-      >
+      <ChakraLink href={to} isExternal {...commonProps}>
         <>
           {children}
           <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
@@ -149,14 +102,13 @@ const Link: React.FC<IProps> = ({
     )
   }
 
-  // Use `gatsby-theme-i18n` Link (which prepends lang path)
   return (
     <ChakraLink
       to={to}
-      as={IntlLink}
-      language={language}
-      partiallyActive={isPartiallyActive}
-      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
+      // as={IntlLink}
+      // language={language}
+      // partiallyActive={isPartiallyActive}
+      // activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
     >
@@ -179,17 +131,13 @@ const Link: React.FC<IProps> = ({
   )
 }
 
-export function navigate(
-  to: string,
-  language: Lang,
-  options?: NavigateOptions<{}>
-) {
-  if (typeof window === "undefined") {
-    return
-  }
+// export function navigate(to: string, language: Lang, options?: NavigateOptions<{}>) {
+//   if (typeof window === "undefined") {
+//     return
+//   }
 
-  const link = `/${language}${to}`
-  gatsbyNavigate(link, options)
-}
+//   const link = `/${language}${to}`
+//   gatsbyNavigate(link, options)
+// }
 
 export default Link
