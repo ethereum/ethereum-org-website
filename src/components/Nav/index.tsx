@@ -128,6 +128,7 @@ const Nav: FC<IProps> = ({ path }) => {
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
               color="text"
+              fontWeight="normal"
               textDecor="none"
               mr={8}
               _hover={{
