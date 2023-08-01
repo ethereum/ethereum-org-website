@@ -726,7 +726,7 @@ const DappsPage = ({
     {
       title: "Sablier",
       description: t("page-dapps-dapp-description-sablier"),
-      link: "https://pay.sablier.finance/",
+      link: "https://app.sablier.com",
       image: getImage(data.sablier),
       alt: t("page-dapps-sablier-logo-alt"),
     },
