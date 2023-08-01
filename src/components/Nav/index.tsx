@@ -101,7 +101,7 @@ const Nav: FC<IProps> = ({ path }) => {
                 <Icon
                   _hover={{
                     color: "primary.base",
-                    transform: "scale(1.1) rotate(360deg)",
+                    transform: "scale(1.1)",
                   }}
                   transition="transform 0.2s ease-in-out, color 0.2s ease-in-out"
                   as={MdLanguage}
