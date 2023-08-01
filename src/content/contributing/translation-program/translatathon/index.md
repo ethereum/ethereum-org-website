@@ -74,7 +74,7 @@ Individuals will participate in the Translatathon as normal, competing only agai
 6. Translate!
 
 <InfoBanner shouldCenter emoji=":heavy_exclamation_mark:">
-  When translating, do not use machine translation or submit low-quality translations, since all translations will be reviewed, and participants found using machine translation or submitting inaccurate translations will be disqualified from competing for prizes!
+  When translating, do not use machine translation or submit low-quality translations, since all translations will be reviewed, and <strong>participants found using machine translation or submitting inaccurate translations will be disqualified from competing for prizes!</strong>
 </InfoBanner>
 
 ## Details and submission criteria {#details}
