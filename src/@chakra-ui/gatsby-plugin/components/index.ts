@@ -1,3 +1,4 @@
+import { Alert } from "./Alert"
 import { Avatar } from "./Avatar"
 import { Badge } from "./Badge"
 import { Button } from "./Button"
@@ -29,6 +30,7 @@ import {
 
 export default {
   Accordion: accordionDefaultTheme,
+  Alert,
   Avatar,
   Badge,
   Breadcrumb: breadcrumbDefaultTheme,
