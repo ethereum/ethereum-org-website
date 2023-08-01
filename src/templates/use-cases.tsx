@@ -207,6 +207,7 @@ export const Page = (props: FlexProps) => (
 
 export const InfoColumn = (props: ChildOnlyProp) => (
   <Flex
+    as="aside"
     flexDirection="column"
     flex="0 1 400px"
     ml={8}

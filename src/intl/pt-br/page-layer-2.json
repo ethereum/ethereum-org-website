@@ -117,7 +117,7 @@
   "rollups-the-ultimate-ethereum-scaling-strategy": "ROLLUPS – A estratégia definitiva de escalabilidade do Ethereum? Arbitrum e Optimism explicados",
   "scaling-layer-1-with-shard-chains": "Escalando a camada 1 com cadeias de fragmentos",
   "understanding-rollup-economics-from-first-principals": "Entendendo a economia de rollup a partir dos primeiros princípios",
-  "arbitrum-description": "Arbitrum é um Rollup Otimista que visa exatamente como interagir com o Ethereum, mas com transações custando uma fração do que eles fazem em L1.",
+  "arbitrum-description": "Arbitrum One é um Rollup Otimista que visa exatamente como interagir com o Ethereum, mas com transações custando uma fração do que eles fazem em L1.",
   "optimism-description": "O Optimism é um rollup otimista equivalente a uma EVM rápida, simples e segura. Ele dimensiona a tecnologia do Ethereum enquanto também dimensiona seus valores por meio de financiamento retroativo de bens públicos.",
   "boba-description": "Boba é um Rollup Otimista originalmente bifurcado do otimismo, o qual é uma solução de escalabilidade que visa reduzir as taxas de gás, melhorar a vazão das transações e estender as capacidades dos contratos inteligentes.",
   "loopring-description": "A solução zkRollup L2 da Loopring visa oferecer as mesmas garantias de segurança que a rede principal Ethereum, com um grande aumento de escalabilidade: taxa de transferência aumentada em 1000x e custo reduzido para apenas 0,1% da L1.",

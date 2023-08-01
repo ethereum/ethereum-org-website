@@ -1,28 +1,24 @@
-import React, { useContext } from "react"
+import React from "react"
 
 import {
   Box,
   BoxProps,
   calc,
   Flex,
-  FormControl,
-  FormLabel,
   Icon,
   List,
   ListItem,
   Show,
-  Switch,
   useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 import { useActiveHash } from "../../hooks/useActiveHash"
-import { ZenModeContext } from "../../contexts/ZenModeContext"
 import ButtonLink from "../ButtonLink"
 import Translation from "../Translation"
 
 import Mobile from "./TableOfContentsMobile"
 import ItemsList from "./ItemsList"
-import { getCustomId, Item, outerListProps } from "./utils"
+import { getCustomId, type Item, outerListProps } from "./utils"
 import { trackCustomEvent } from "../../utils/matomo"
 
 export { Item }
@@ -45,7 +41,6 @@ const TableOfContents: React.FC<IProps> = ({
   isMobile = false,
   ...rest
 }) => {
-  const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
@@ -81,8 +76,6 @@ const TableOfContents: React.FC<IProps> = ({
     return <Mobile items={items} maxDepth={maxDepth} />
   }
 
-  const shouldShowZenModeToggle = slug?.includes("/docs/")
-
   return (
     // TODO: Switch to `above="lg"` after completion of Chakra Migration
     <Show above={lgBp}>
@@ -108,34 +101,6 @@ const TableOfContents: React.FC<IProps> = ({
                 </Flex>
               </ButtonLink>
             </ListItem>
-          )}
-          {shouldShowZenModeToggle && (
-            <Flex
-              as={ListItem}
-              alignItems="center"
-              mb={2}
-              py="2px"
-              opacity={0.8}
-              fontSize="sm"
-            >
-              <FormControl as={Flex} alignItems="center">
-                <FormLabel htmlFor="zen-mode" mb={0} me={2} fontSize="sm">
-                  <Translation id="zen-mode" />
-                </FormLabel>
-                <Switch
-                  id="zen-mode"
-                  isChecked={isZenMode}
-                  onChange={() => {
-                    handleZenModeChange()
-                    trackCustomEvent({
-                      eventCategory: "zen mode",
-                      eventAction: "click",
-                      eventName: isZenMode ? "activate" : "deactivate",
-                    })
-                  }}
-                />
-              </FormControl>
-            </Flex>
           )}
           <ListItem>
             <Box mb={2} textTransform="uppercase">
