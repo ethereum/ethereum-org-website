@@ -8,9 +8,10 @@ import {
   Heading,
   HeadingProps,
   ListItem,
+  Show,
   Text,
   UnorderedList,
-  useTheme,
+  useToken,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -28,6 +29,11 @@ import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
+import {
+  ContentContainer,
+  InfoColumn,
+  InfoTitle,
+} from "../../templates/use-cases"
 
 // Utils
 import { Lang } from "../../utils/languages"
@@ -114,10 +120,10 @@ const H3 = ({ children, ...props }: HeadingProps) => {
 }
 
 const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
-  const theme = useTheme()
   const { t } = useTranslation()
   const { language } = useI18next()
   const isRightToLeft = isLangRightToLeft(language as Lang)
+  const lgBp = useToken("breakpoints", "lg")
 
   const tocItems = [
     {
@@ -188,36 +194,16 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
         pt={{ lg: 16 }}
         dir={isRightToLeft ? "rtl" : "ltr"}
       >
-        <Box
-          as="aside"
-          display={{ base: "none", lg: "flex" }}
-          flexDirection="column"
-          position="sticky"
-          top="6.25rem" // account for navbar
-          h="calc(100vh - 80px)"
-          flex="0 1 330px"
-          mx={8}
-        >
-          <Heading
-            lineHeight={1.4}
-            fontSize={{ base: "2.5rem", lg: "5xl" }}
-            fontWeight="bold"
-            textAlign={{ base: "left", lg: "right" }}
-            mt={0}
-            display={{ base: "none", lg: "block" }}
-          >
-            <Translation id="toc-learn-hub" />
-          </Heading>
-          <UpgradeTableOfContents items={tocItems} />
-        </Box>
+        <Show above={lgBp}>
+          <InfoColumn>
+            <InfoTitle>
+              <Translation id="toc-learn-hub" />
+            </InfoTitle>
+            <UpgradeTableOfContents items={tocItems} />
+          </InfoColumn>
+        </Show>
 
-        <Box
-          as="article"
-          flex={`1 1 ${theme.breakpoints.l}`}
-          pb={8}
-          px={8}
-          id="content"
-        >
+        <ContentContainer id="content">
           <Section>
             <H2 mt={{ lg: 0 }} id={tocItems[0].id}>
               {tocItems[0].title}
@@ -864,7 +850,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <FeedbackCard />
-        </Box>
+        </ContentContainer>
       </Flex>
     </Box>
   )

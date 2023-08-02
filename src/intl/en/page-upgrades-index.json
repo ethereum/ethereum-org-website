@@ -11,6 +11,7 @@
   "page-upgrades-answer-1": "The Beacon Chain was used as a tool to upgrade Ethereum Mainnet at The Merge.",
   "page-upgrades-answer-2": "With The Merge, Ethereum had its most substantial upgrade ever swapping proof-of-work for a new proof-of-stake based consensus layer.",
   "page-upgrades-answer-4": "The Beacon Chain was used to develop the proof-of-stake-based consensus Ethereum uses today. It was run separately to Ethereum Mainnet so developers could observe the consensus mechanism in isolation before using it to coordinate real activity.",
+  "page-upgrade-article-author-status": "Status",
   "page-upgrade-article-author-ethmerge": "Ethmerge",
   "page-upgrade-article-author-alchemy": "Alchemy",
   "page-upgrade-article-author-consensys": "Consensys",

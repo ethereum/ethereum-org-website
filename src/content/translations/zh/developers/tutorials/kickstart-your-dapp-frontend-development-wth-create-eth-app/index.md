@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-上一次，我们了解 [Solidity](https://soliditydeveloper.com/solidity-overview-2020) 大的框架时，已经提到了 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)。 现在，您将了解如何使用它，它集成了哪些功能以及如何对其进行扩展等内容。 这个应用程序由 [Sablier](http://sablier.finance/)创始人 Paul Razvan Berg 启动，它将启动您的前端开发，并且具有多个可选集成供您选择。
+上一次，我们了解 [Solidity](https://soliditydeveloper.com/solidity-overview-2020) 大的框架时，已经提到了 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)。 现在，您将了解如何使用它，它集成了哪些功能以及如何对其进行扩展等内容。 这个应用程序由 [Sablier](http://sablier.com/)创始人 Paul Razvan Berg 启动，它将启动您的前端开发，并且具有多个可选集成供您选择。
 
 ## 安装 {#installation}
 
@@ -103,7 +103,7 @@ React.useEffect(() => {
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.finance/) 允许用户进行流支付。 完成最初的设置后，您实际上是不断地得到您的货币，而不是在某个支付日，并且不需要进行进一步的管理。 该集成包含了它[自己的子图](https://thegraph.com/explorer/subgraph/sablierhq/sablier)。
+[Sablier](https://sablier.com/) 允许用户进行流支付。 完成最初的设置后，您实际上是不断地得到您的货币，而不是在某个支付日，并且不需要进行进一步的管理。 该集成包含了它[自己的子图](https://thegraph.com/explorer/subgraph/sablierhq/sablier)。
 
 ## 接下来是什么？ {#whats-next}
 

@@ -67,7 +67,7 @@ Like how a vending machine removes the need for a vendor employee, smart contrac
 
 ## Permissionless {#permissionless}
 
-Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in a [smart contract language](/developers/docs/smart-contracts/languages/), and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay [Gas](/developers/docs/gas/) in the same way you need to pay gas for a simple ETH transfer. However, gas costs for contract deployment are far higher.
+Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in a [smart contract language](/developers/docs/smart-contracts/languages/), and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay [gas](/developers/docs/gas/) in the same way you need to pay gas for a simple ETH transfer. However, gas costs for contract deployment are far higher.
 
 Ethereum has developer-friendly languages for writing smart contracts:
 
@@ -86,9 +86,9 @@ Learn more about [smart contract composability](/developers/docs/smart-contracts
 
 ## Limitations {#limitations}
 
-Smart contracts alone cannot get information about "real-world" events because they can't send HTTP requests. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
+Smart contracts alone cannot get information about "real-world" events because they can't retrieve data from off-chain sources. This means they can't respond to events in the real world. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
 
-There are ways to get around this using [oracles](/developers/docs/oracles/).
+However, it is important for blockchain applications to be able to use off-chain data. The solution is [oracles](/developers/docs/oracles/) which are tools that ingest off-chain data and make it available to smart contracts.
 
 Another limitation of smart contracts is the maximum contract size. A smart contract can be a maximum of 24KB or it will run out of gas. This can be circumnavigated by using [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 
@@ -104,13 +104,8 @@ Multisig (multiple-signature) contracts are smart contract accounts that require
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Community Forum](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_Safe, simple, flexible building-blocks for smart-contracts._**
-
-- [Dappsys](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
-
 ## Further reading {#further-reading}
 
-- [Smart Contracts: The Blockchain Technology That Will Replace Lawyers](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
-- [Best Practices for Smart Contract Development](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– Nov 10, 2019 - Yos Riady_
-- [Clean contracts - a guide on smart contract patterns & practices](https://www.wslyvh.com/clean-contracts/) _– Jul 30, 2020 - wslyvh_
+- [Coinbase: What is a smart contract?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [Chainlink: What is a smart contract?](https://chain.link/education/smart-contracts)
+- [Video: Simply Explained - Smart Contracts](https://youtu.be/ZE2HxTmxfrI)
