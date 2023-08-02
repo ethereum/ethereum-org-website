@@ -1,4 +1,4 @@
-import { google } from "googleapis"
+import axios from "axios"
 
 import type { HandlerResponse } from "@netlify/functions"
 
@@ -7,25 +7,35 @@ export const lambda = async (
   calenderId: string
 ): Promise<HandlerResponse> => {
   try {
-    const calendar = google.calendar({ version: "v3", auth: apiKey })
-    const futureEvents = await calendar.events.list({
-      calendarId: calenderId,
-      timeMin: new Date().toISOString(),
-      maxResults: 3,
-      singleEvents: true,
-      orderBy: "startTime",
-    })
-    const pastEvents = await calendar.events.list({
-      calendarId: calenderId,
-      timeMax: new Date().toISOString(),
-      maxResults: 4,
-      singleEvents: true,
-      orderBy: "startTime",
-    })
+    const futureEventsReq = await axios.get(
+      `https://content.googleapis.com/calendar/v3/calendars/${calenderId}/events`,
+      {
+        params: {
+          key: apiKey,
+          timeMin: new Date().toISOString(),
+          maxResults: 3,
+          singleEvents: true,
+          orderBy: "startTime",
+        },
+      }
+    )
+
+    const pastEventsReq = await axios.get(
+      `https://content.googleapis.com/calendar/v3/calendars/${calenderId}/events`,
+      {
+        params: {
+          key: apiKey,
+          timeMax: new Date().toISOString(),
+          maxResults: 4,
+          singleEvents: true,
+          orderBy: "startTime",
+        },
+      }
+    )
 
     const response = {
-      pastEvents: pastEvents.data.items,
-      futureEvents: futureEvents.data.items,
+      pastEvents: pastEventsReq.data.items,
+      futureEvents: futureEventsReq.data.items,
     }
     return { statusCode: 200, body: JSON.stringify(response) }
   } catch (error) {

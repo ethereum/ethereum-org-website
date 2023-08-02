@@ -204,8 +204,8 @@ const StakingPage = ({
   ]
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Options",
-    ariaLabel: "Staking options dropdown menu",
+    text: t("page-staking-dropdown-staking-options"),
+    ariaLabel: t("page-staking-dropdown-staking-options-alt"),
     items: [
       {
         text: t("page-staking-dropdown-home"),
@@ -244,7 +244,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "page-staking-dropdown-withdrawals",
+        text: t("page-staking-dropdown-withdrawals"),
         to: "/staking/withdrawals/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -253,7 +253,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "page-staking-dropdown-dvt",
+        text: t("page-staking-dropdown-dvt"),
         to: "/staking/dvt/",
         matomo: {
           eventCategory: `Staking dropdown`,
