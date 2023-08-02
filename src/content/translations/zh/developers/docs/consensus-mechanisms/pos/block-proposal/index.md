@@ -42,7 +42,7 @@ class BeaconBlockBody(Container):
     execution_payload: ExecutionPayload
 ```
 
-`randao_reveal` 字段取一个可验证的随机值，该值由区块提议者将一些自己的熵添加到前面区块的累积 RANDAO 值而创建。 `eth1_data` 是就区块提议者对存款合约的看法进行的投票，包括存款默克尔树的根和使新存款能够被验证的总存款数。 `graffiti` 是一个可选字段，可以用来在区块中添加一条消息。 `proposer_slashings` 和 `attester_slashings` 字段包含了某些验证者根据区块提议者对链的看法已经犯下可罚没行为的证据。 `deposits` 是区块提议者所知道的新验证者存款的列表，`voluntary_exits` 是区块提议者从共识层广播网络上监听到的希望退出的验证者的列表。 `sync_aggregate` 是一个向量，显示哪些验证者之前被分配到一个同步委员会（服务于轻量客户端数据的验证者子集）并参与了数据签名。
+`randao_reveal` 字段取一个可验证的随机值，该值是区块提议者通过签署当前的时段编号创建的。 `eth1_data` 是就区块提议者对存款合约的看法进行的投票，包括存款默克尔树的根和使新存款能够被验证的总存款数。 `graffiti` 是一个可选字段，可以用来在区块中添加一条消息。 `proposer_slashings` 和 `attester_slashings` 字段包含了某些验证者根据区块提议者对链的看法已经犯下可罚没行为的证据。 `deposits` 是区块提议者所知道的新验证者存款的列表，`voluntary_exits` 是区块提议者从共识层广播网络上监听到的希望退出的验证者的列表。 `sync_aggregate` 是一个向量，显示哪些验证者之前被分配到一个同步委员会（服务于轻量客户端数据的验证者子集）并参与了数据签名。
 
 `execution_payload` 使得关于交易的信息可以在执行和共识客户端之间传递。 `execution_payload` 是一个被嵌套在信标链区块内部的执行数据区块。 `execution_payload` 中的字段反映了以太坊黄皮书中概述的区块结构，只不过其中没有叔块，并且 `prev_randao` 取代了 `difficulty`。 执行客户端可以访问它在自己的广播网络上监听到的本地交易池。 这些交易在本地执行，以生成一个被称为“后状态”的更新的状态树。 这些交易被包括在 `execution_payload` 中名为 `transactions` 的列表中，后状态则在 `state-root` 字段中提供。
 
