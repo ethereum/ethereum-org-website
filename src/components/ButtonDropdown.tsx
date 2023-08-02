@@ -84,8 +84,10 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
               isPartiallyActive={false}
               textDecor="none"
               color="text"
+              fontWeight="normal"
               _hover={{ textDecor: "none", color: "primary.base" }}
               _focus={{ textDecor: "none", color: "primary.base" }}
+              _visited={{}}
             >
               <MenuItem
                 as="span"
