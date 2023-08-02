@@ -22,6 +22,7 @@ import {
   Text,
   chakra,
   useToken,
+  StyleProps,
 } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
@@ -44,6 +45,10 @@ import FeedbackCard from "../components/FeedbackCard"
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
 import { ChildOnlyProp, Context } from "../types"
+
+const commonLinkStyleOverrides: StyleProps = {
+  fontWeight: "normal",
+}
 
 const Page = (props: ChildOnlyProp & FlexProps) => (
   <Flex direction="column" align="center" mx="auto" w="full" {...props} />
@@ -291,6 +296,7 @@ const StepBox = (props: ComponentPropsWithRef<typeof Link>) => (
       bg: "ednBackground",
       transform: "scale(1.05)",
     }}
+    {...commonLinkStyleOverrides}
     {...props}
   />
 )
@@ -1071,7 +1077,7 @@ const DappsPage = ({
         </StyledH2>
         <Text>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
-          <Link to="/glossary/#transaction-fee">
+          <Link to="/glossary/#transaction-fee" {...commonLinkStyleOverrides}>
             <Translation id="transaction-fees" />
           </Link>
         </Text>
@@ -1517,7 +1523,7 @@ const DappsPage = ({
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             <Translation id="page-dapps-magic-behind-dapps-description" />
           </Text>
-          <Link to="/what-is-ethereum/">
+          <Link to="/what-is-ethereum/" {...commonLinkStyleOverrides}>
             <Translation id="page-dapps-magic-behind-dapps-link" />
           </Link>
         </Flex>
