@@ -3,8 +3,6 @@ title: Prove di Merkle per l'integrità dei dati offline
 description: Garantire l'integrità dei dati sulla catena per i dati memorizzati principalmente al di fuori di essa
 author: Ori Pomerantz
 tags:
-  - "merkle"
-  - "integrità"
   - "archiviazione"
 skill: advanced
 lang: it
@@ -78,7 +76,7 @@ const hash = (x) =>
 La funzione hash di ethers prevede di ottenere una stringa in JavaScript con un numero esadecimale, come `0x60A7` e rispondere con un'altra stringa con la stessa struttura. Tuttavia, per il resto del codice è più facile usare `BigInt`, in modo da poter convertire in una stringa esadecimale e tornare indietro.
 
 ```javascript
-// Hash simmetrico di una coppia, quindi non ci preoccupiamo se l'ordine è invertito.
+// Hash simmetrico di una coppia, così che non ci importerà se l'ordine è invertito.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
@@ -207,7 +205,7 @@ Imposta e ottieni le funzioni per il root di Merkle. Consentire a chiunque di ag
     }
 ```
 
-Questa funzione genera l'hash di una coppia. È solo la traduzione in Solidity del codice in JavaScript per `hash` e `pairHash`.
+Questa funzione genera l'hash di una coppia. È semplicemente la traduzione di Solidity del codice in JavaScript per `hash` e `pairHash`.
 
 **Nota:** Questo è un altro caso d'ottimizzazione per migliorare la leggibilità. In base alla [definizione della funzione](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), potrebbe essere possibile memorizzare i dati come valore [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) ed evitare le conversioni.
 

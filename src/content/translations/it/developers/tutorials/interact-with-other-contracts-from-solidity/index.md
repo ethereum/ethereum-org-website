@@ -6,8 +6,7 @@ tags:
   - "smart contract"
   - "Solidity"
   - "remix"
-  - "factory"
-  - "rilascio"
+  - "distribuzione"
   - "componibilità"
 skill: advanced
 lang: it

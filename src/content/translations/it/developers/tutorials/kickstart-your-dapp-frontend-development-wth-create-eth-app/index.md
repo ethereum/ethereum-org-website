@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-L'ultima volta abbiamo dato un'occhiata al [quadro generale di Solidity](https://soliditydeveloper.com/solidity-overview-2020) e abbiamo già accennato a [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Ora scoprirai come usarlo, quali funzionalità sono integrate e alcune idee aggiuntive su come approfondilo. Creata da Paul Razvan Berg, fondatore di [Sablier](http://sablier.com/), quest'app avvierà lo sviluppo del tuo frontend, offrendo diverse integrazioni opzionali tra cui scegliere.
+L'ultima volta abbiamo dato un'occhiata al [quadro generale di Solidity](https://soliditydeveloper.com/solidity-overview-2020) e abbiamo già accennato a [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Ora scoprirai come usarlo, quali funzionalità sono integrate e alcune idee aggiuntive su come approfondilo. Creata da Paul Razvan Berg, fondatore di [Sablier](http://sablier.finance/), quest'app avvierà lo sviluppo del tuo frontend, offrendo diverse integrazioni opzionali tra cui scegliere.
 
 ## Installazione {#installation}
 
@@ -51,13 +51,13 @@ _create-eth-app_ in particolare, fa uso dei nuovi [effetti hook](https://reactjs
 
 ### ethers.js {#ethersjs}
 
-Mentre [Web3](https://docs.web3js.org/) è ancora molto usato, nell'ultimo anno [ethers.js](https://docs.ethers.io/) ha riscosso molto successo come strumento alternativo ed è integrato in _create-eth-app_. Puoi lavorare con questo strumento, passare a Web3 o considerare di aggiornare a [ethers.js v5](https://docs-beta.ethers.io/), che ha quasi terminato la fase beta.
+Mentre [Web3](https://web3js.readthedocs.io/en/v1.2.7/) è ancora molto usato, nell'ultimo anno [ethers.js](https://docs.ethers.io/) ha riscosso molto successo come strumento alternativo ed è integrato in _create-eth-app_. Puoi lavorare con questo strumento, passare a Web3 o considerare di aggiornare a [ethers.js v5](https://docs-beta.ethers.io/), che ha quasi terminato la fase beta.
 
 ### Graph {#the-graph}
 
 [GraphQL](https://graphql.org/) è un metodo alternativo per gestire i dati rispetto a un'[API di Restful](https://restfulapi.net/). Ha diversi vantaggi rispetto alle Api di Restful, specialmente per i dati della blockchain decentralizzata. Se sei interessato al ragionamento dietro questo metodo, dai un'occhiata a [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
 
-Solitamente recupereresti i dati direttamente dal tuo smart contract. Vuoi leggere l'ora dell'ultima operazione? Basta chiamare `MyContract.methods.latestTradeTime().call()`, che recupera i dati da un nodo di Ethereum come Infura, nella tua dapp. E se ci fossero centinaia di punti di dati diversi? Ciò risulterebbe in centinaia di recuperi di dati al nodo, richiedendo ogni volta un [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) e rendendo la tua dapp lenta e inefficace. Una scappatoia potrebbe essere una funzione di chiamata del recuperatore nel tuo contratto, in modo da restituire più dati in una volta. Questa soluzione però non è sempre ideale.
+Solitamente recupereresti i dati direttamente dal tuo smart contract. Vuoi leggere l'ora dell'ultima operazione? Basta chiamare `MyContract.methods.latestTradeTime().call()`, che recupera i dati da un nodo di Ethereum nella tua dapp. E se ci fossero centinaia di punti di dati diversi? Ciò risulterebbe in centinaia di recuperi di dati al nodo, richiedendo ogni volta un [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) e rendendo la tua dapp lenta e inefficace. Una scappatoia potrebbe essere una funzione di chiamata del recuperatore nel tuo contratto, in modo da restituire più dati in una volta. Questa soluzione però non è sempre ideale.
 
 E poi potresti essere interessato anche ai dati storici. Vuoi sapere non solo l'orario dell'ultima operazione, ma gli orari per tutte le operazioni che tu stesso hai mai eseguito? Usa il pacchetto subgraph _create-eth-app_, leggi la [documentazione](https://thegraph.com/docs/define-a-subgraph) e adattalo ai tuoi contratti. Se stai cercando degli smart contract popolari, potrebbe anche esistere già un subgraph. Dai un'occhiata al [subgraph explorer](https://thegraph.com/explorer/).
 
@@ -103,7 +103,7 @@ Sfortunatamente, al momento della redazione del del presente articolo, l'integra
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.com/) consente agli utenti di trasmettere pagamenti in denaro. Invece di un singolo giorno di pagamento, in realtà puoi ricevere denaro costantemente senza ulteriore amministrazione dopo la configurazione iniziale. L'integrazione include i [propri subgraph](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
+[Sablier](https://sablier.finance/) consente agli utenti di trasmettere pagamenti in denaro. Invece di un singolo giorno di pagamento, in realtà puoi ricevere denaro costantemente senza ulteriore amministrazione dopo la configurazione iniziale. L'integrazione include i [propri subgraph](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
 
 ## E poi? {#whats-next}
 
