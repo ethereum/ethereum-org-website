@@ -227,7 +227,9 @@ const RoadmapPage = ({
             <Title>{mdx.frontmatter.title}</Title>
             <Text>{mdx.frontmatter.description}</Text>
             {mdx?.frontmatter?.buttons && (
-              <Wrap spacing={2} marginBottom={4}>
+              // FIXME: remove the `ul` override once removed the corresponding
+              // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
+              <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
                 {mdx.frontmatter.buttons.map((button, idx) => {
                   if (button?.to) {
                     return (
