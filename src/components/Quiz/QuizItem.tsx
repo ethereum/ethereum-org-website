@@ -21,7 +21,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
     userStats: { completed },
   } = useContext(QuizzesHubContext)
   const numberOfQuestions = allQuizzesData[id].questions.length
-  const isCompleted = JSON.parse(completed)[id][0]
+  const isCompleted = JSON.parse(completed)?.[id]?.[0] || false
 
   const { t } = useTranslation()
 
