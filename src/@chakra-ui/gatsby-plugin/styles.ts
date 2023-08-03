@@ -18,11 +18,6 @@ const styles = {
       lineHeight: "base",
       fontSize: ["sm", null, "lg"],
     },
-    p: {
-      _last: {
-        mb: 0,
-      },
-    },
     a: {
       color: "primary.base",
       textDecoration: "underline",
