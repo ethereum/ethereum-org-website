@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Sebelumnya, kita membahas tentang [gambaran besar Solidity](https://soliditydeveloper.com/solidity-overview-2020) dan telah menyebutkan [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sekarang Anda akan melihat cara menggunakannya, fitur apa saja yang terintegrasi di dalamnya, dan ide tambahan untuk memperluas penggunaanya. Dimulai oleh Paul Razvan Berg, pendiri [Sablier](http://sablier.finance/), aplikasi ini akan memulai pengembangan frontend Anda dan memiliki beberapa integrasi opsional yang dapat dipilih.
+Sebelumnya, kita membahas tentang [gambaran besar Solidity](https://soliditydeveloper.com/solidity-overview-2020) dan telah menyebutkan [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sekarang Anda akan melihat cara menggunakannya, fitur apa saja yang terintegrasi di dalamnya, dan ide tambahan untuk memperluas penggunaanya. Dimulai oleh Paul Razvan Berg, pendiri [Sablier](http://sablier.com/), aplikasi ini akan memulai pengembangan frontend Anda dan memiliki beberapa integrasi opsional yang dapat dipilih.
 
 ## Instalasi {#installation}
 
@@ -103,7 +103,7 @@ Sayangnya, pada saat penulisan ini, integrasi hanya dapat dilakukan untuk Uniswa
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.finance/) memungkinkan para pengguna menyiarkan pembayaran uang. Alih alih sekali pembayaran, Anda mendapatkan uang secara konstan tanpa administrasi tambahan setelah pengaturan awalnya selesai. Integrasinya mencakup [subgraphnya](https://thegraph.com/explorer/subgraph/sablierhq/sablier) sendiri.
+[Sablier](https://sablier.com/) memungkinkan para pengguna menyiarkan pembayaran uang. Alih alih sekali pembayaran, Anda mendapatkan uang secara konstan tanpa administrasi tambahan setelah pengaturan awalnya selesai. Integrasinya mencakup [subgraphnya](https://thegraph.com/explorer/subgraph/sablierhq/sablier) sendiri.
 
 ## Selajutnya? {#whats-next}
 
