@@ -263,7 +263,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <CardImage>
                     <GatsbyImage image={getImage(data.impact)!} alt="" />
                   </CardImage>
-                  <ButtonLink to="/get-eth/">
+                  <ButtonLink to="/web3/">
                     <Translation id="what-is-web3-card-title" />
                   </ButtonLink>
                 </>
