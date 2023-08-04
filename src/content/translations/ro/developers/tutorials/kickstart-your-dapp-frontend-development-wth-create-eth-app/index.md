@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Ultima dată am examinat [imaginea Solidity în ansamblu](https://soliditydeveloper.com/solidity-overview-2020) şi am menționat deja [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Acum veţi afla cum să o folosiţi, ce funcţionalităţi sunt integrate şi câteva idei suplimentare despre cum să-i dezvoltaţi utilitatea. Lansat de Paul Răzvan Berg, fondatorul [Sablier](http://sablier.finance/), această aplicație vă va da startul pentru dezvoltarea frontend și pune la dispoziţie mai multe integrări opționale din care să alegeți.
+Ultima dată am examinat [imaginea Solidity în ansamblu](https://soliditydeveloper.com/solidity-overview-2020) şi am menționat deja [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Acum veţi afla cum să o folosiţi, ce funcţionalităţi sunt integrate şi câteva idei suplimentare despre cum să-i dezvoltaţi utilitatea. Lansat de Paul Răzvan Berg, fondatorul [Sablier](http://sablier.com/), această aplicație vă va da startul pentru dezvoltarea frontend și pune la dispoziţie mai multe integrări opționale din care să alegeți.
 
 ## Instalare {#installation}
 
@@ -103,7 +103,7 @@ Din nefericire, în momentul la care scriem acestea integrarea este doar pentru 
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.finance/) permite utilizatorilor să acceseze bani în streaming. În loc de o singură plată, primiți banii în mod constant, fără alte necesităţi de administrare după configurarea inițială. Integrarea include [propriul subgraf](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
+[Sablier](https://sablier.com/) permite utilizatorilor să acceseze bani în streaming. În loc de o singură plată, primiți banii în mod constant, fără alte necesităţi de administrare după configurarea inițială. Integrarea include [propriul subgraf](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
 
 ## Ce urmează? {#whats-next}
 

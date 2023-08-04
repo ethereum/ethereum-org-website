@@ -44,6 +44,7 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
+import QuizWidget from "../components/Quiz/QuizWidget"
 import {
   Page,
   InfoColumn,
@@ -145,6 +146,7 @@ const components = {
   YouTube,
   RoadmapActionCard,
   RoadmapImageContent,
+  QuizWidget,
 }
 
 const RoadmapPage = ({
@@ -225,7 +227,9 @@ const RoadmapPage = ({
             <Title>{mdx.frontmatter.title}</Title>
             <Text>{mdx.frontmatter.description}</Text>
             {mdx?.frontmatter?.buttons && (
-              <Wrap spacing={2} marginBottom={4}>
+              // FIXME: remove the `ul` override once removed the corresponding
+              // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
+              <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
                 {mdx.frontmatter.buttons.map((button, idx) => {
                   if (button?.to) {
                     return (
@@ -305,7 +309,10 @@ const RoadmapPage = ({
 export const roadmapPageQuery = graphql`
   query RoadmapPage($languagesToFetch: [String!]!, $relativePath: String) {
     locales: allLocale(
-      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["common", "learn-quizzes"] }
+      }
     ) {
       edges {
         node {

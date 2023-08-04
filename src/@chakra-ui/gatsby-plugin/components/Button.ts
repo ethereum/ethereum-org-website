@@ -38,6 +38,11 @@ const baseStyle = defineStyle((props) => ({
 const variantSolid = defineStyle({
   color: "background.base",
   bg: "primary.base",
+  borderColor: "transparent",
+  _disabled: {
+    bg: "disabled",
+    color: "background.base",
+  },
   _hover: {
     color: "background.base",
     bg: "primary.hover",
