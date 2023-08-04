@@ -7,11 +7,37 @@ import {
 
 import { scrollIntoView } from "../../utils/scrollIntoView"
 
-export interface IProps extends ButtonProps {
-  toId?: string
+export const checkIsSecondary = (props: {
+  variant?: string
+  isSecondary?: boolean
+}) => {
+  const { variant, isSecondary } = props
+  // These two variants do not have secondary styling, so prevent overrides
+  return {
+    "data-secondary":
+      !["solid", "link"].includes(variant || "solid") && isSecondary,
+  }
 }
 
-const Button = forwardRef<IProps, "button">(({ toId, onClick, ...props }) => {
+export interface IProps extends ButtonProps {
+  /**
+   * Set string value that matches the `id` attribute value used
+   * on another element in a given page. Selecting the button will then
+   * trigger a scroll to that element.
+   */
+  toId?: string
+  /**
+   * Custom theme prop. If true, `body` color is used instead of
+   * `primary` color in the theming.
+   *
+   * `NOTE`: Does not apply to the `Solid` or `Link` variants
+   */
+  isSecondary?: boolean
+}
+
+const Button = forwardRef<IProps, "button">((props, ref) => {
+  const { toId, onClick, isSecondary, ...rest } = props
+
   const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (toId) {
       scrollIntoView(toId)
@@ -20,7 +46,14 @@ const Button = forwardRef<IProps, "button">(({ toId, onClick, ...props }) => {
     onClick?.(e)
   }
 
-  return <ChakraButton onClick={handleOnClick} {...props} />
+  return (
+    <ChakraButton
+      ref={ref}
+      onClick={handleOnClick}
+      {...checkIsSecondary({ variant: rest.variant?.toString(), isSecondary })}
+      {...rest}
+    />
+  )
 })
 
 export default Button
