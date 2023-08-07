@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode }  from "react"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 
 import type { Messages } from "./interfaces"
