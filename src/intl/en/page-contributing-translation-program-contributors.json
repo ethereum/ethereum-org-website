@@ -1,0 +1,10 @@
+{
+  "page-contributing-translation-program-contributors-thank-you": "We'd like to thank all of our contributors!",
+  "page-contributing-translation-program-contributors-title": "Our translators",
+  "page-contributing-translation-program-contributors-our-translators-1": "Community is at the heart of the ethereum.org Translation Program.",
+  "page-contributing-translation-program-contributors-our-translators-2": "With thousands of community members contributing translations to our project, it is difficult to acknowledge everyone.",
+  "page-contributing-translation-program-contributors-our-translators-3": "All translators are listed alphabetically based on their chosen name in Crowdin. If you are a translator and would like to use your real name, nickname, ENS domain, etc., you can change your Full Name in Crowdin.",
+  "page-contributing-translation-program-contributors-meta-title": "Our Translations",
+  "page-contributing-translation-program-contributors-meta-description": "A list of our translation contributors.",
+  "page-contributing-translation-program-contributors-number-of-contributors": "Number of contributors:"
+}

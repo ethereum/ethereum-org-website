@@ -1,0 +1,17 @@
+{
+  "page-upgrades-beacon-date": "Sevk edildi!",
+  "page-upgrades-merge-date": "Eylül 2022",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-upgrades-guide": "Ethereum yükseltme kılavuzu",
+  "page-upgrades-upgrades-docking": "Birleştirme",
+  "page-upgrades-shard-title": "Parça zincirleri",
+  "page-upgrades-upgrades-beacon-chain": "İşaret Zinciri",
+  "consensus-beaconcha-in-desc": "Açık kaynak Beacon Zinciri gezgini",
+  "consensus-beaconscan-desc": "Beacon Zinciri gezgini - Mutabakat katmanı için Etherscan",
+  "consensus-become-staker": "Bir staker olun",
+  "consensus-become-staker-desc": "Staking artık yayında! Ağın güvenliğini sağlamak için ETH'nizi stake etmek istiyorsanız risklerin farkında olduğunuzdan emin olun.",
+  "consensus-explore": "Verileri keşfedin",
+  "consensus-run-beacon-chain": "Bir mutabakat istemcisi çalıştırın",
+  "consensus-run-beacon-chain-desc": "Ethereum için olabildiğince fazla çalışan istemci gerekiyor. Bu Ethereum kamu malı için yardım edin!",
+  "read-more": "Devamını Oku"
+}

@@ -1,0 +1,17 @@
+{
+  "page-upgrades-beacon-date": "Terkirim!",
+  "page-upgrades-merge-date": "September 2022",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-upgrades-guide": "Panduan peningkatan Ethereum",
+  "page-upgrades-upgrades-docking": "Penggabungan",
+  "page-upgrades-shard-title": "Rantai shard",
+  "page-upgrades-upgrades-beacon-chain": "Rantai Suar",
+  "consensus-beaconcha-in-desc": "Penjelajah Rantai Suar sumber terbuka",
+  "consensus-beaconscan-desc": "Penjelajah Rantai Suar - Etherscan untuk lapisan konsensus",
+  "consensus-become-staker": "Menjadi penaruh",
+  "consensus-become-staker-desc": "Penaruhan sudah berjalan! Jika ingin menaruhkan ETH Anda untuk membantu mengamankan jaringan, pastikan Anda mengetahui setiap resikonya.",
+  "consensus-explore": "Jelajahi data",
+  "consensus-run-beacon-chain": "Jalankan klien konsensus",
+  "consensus-run-beacon-chain-desc": "Ethereum membutuhkan klien yang aktif sebanyak mungkin. Bantu terkait barang publik Ethereum ini!",
+  "read-more": "Baca lebih lanjut"
+}

@@ -1,0 +1,11 @@
+{
+  "template-usecase-dropdown-defi": "Finance décentralisée (DeFi)",
+  "template-usecase-dropdown-nft": "Jetons non fongibles (NFT)",
+  "template-usecase-dropdown-dao": "Organisations Autonomes Décentralisées (DAO)",
+  "template-usecase-dropdown-social-networks": "Réseaux sociaux décentralisés",
+  "template-usecase-dropdown-identity": "Identité décentralisée",
+  "template-usecase-dropdown": "Cas d'utilisation d'Ethereum",
+  "template-usecase-banner": "Les utilisations d'Ethereum sont en cours de développement et d'évolution. Si vous pensez à une information qui rendra les choses plus claires ou plus à jour, ajoutez la.",
+  "template-usecase-edit-link": "Modifier la page",
+  "template-usecase-dropdown-aria": "Menu déroulant du cas d'utilisation"
+}

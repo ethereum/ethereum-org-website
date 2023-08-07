@@ -26,7 +26,7 @@
     "./src/intl",
     "./src/data",
     "./src/assets",
-    // TODO: Remove these as we migrate them to be compatible with Next
+    // TODO: Remove these exclusions as we migrate the pages & templates that use these components
     "./src/components/ActionCard.tsx",
     "./src/components/AdoptionChart.tsx",
     "./src/components/Alert/Alert.stories.tsx",

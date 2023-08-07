@@ -1,0 +1,9 @@
+{
+  "page-staking-image-alt": "Egy orrszarvú kabala ábrája az eth2 indítópultra.",
+  "page-staking-description": "A letétbe helyezés 32 ETH letételét jelenti a validátor szoftver aktiválásához. Validátorként felelős leszel az adatok tárolásáért, a tranzakciók feldolgozásáért és az új blokkok hozzáadásáért a blokkláncra. Ez az Ethereumot mindenki számára biztonságossá teszi és új ETH-et kapsz a folyamat során. Ezt a folyamatot, melyet proof-of-stake-nek hívunk, a Beacon Chain vezeti be.",
+  "page-staking-join-community": "Csatlakozz a staker közösséghez",
+  "page-staking-join-community-desc": "Az r/ethstaker egy közösség az Ethereum stakinggel kapcsolat dolgok megvitatására - csatlakozz, hogy tanácsot, támogatást kaphass és hogy a beszélgess mindenről, ami staking.",
+  "page-staking-meta-description": "Egy áttekintés az Ethereum stakingről: kockázatok, jutalmak, követelmények és hogy hol lehet csinálni.",
+  "page-staking-meta-title": "Ethereum staking",
+  "page-upgrades-merge-btn": "Többet a dokkolásról"
+}
