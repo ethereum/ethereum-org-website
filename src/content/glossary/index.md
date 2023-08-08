@@ -2,7 +2,6 @@
 title: Ethereum Glossary
 description: An incomplete glossary of technical and non-technical terms related to Ethereum
 lang: en
-sidebarDepth: 2
 ---
 
 # Glossary {#ethereum-glossary}
@@ -11,19 +10,11 @@ sidebarDepth: 2
 
 ## \# {#section-numbers}
 
-### 51% attack {#51-attack}
-
-A type of attack on a decentralized [network](#network) where a group gains control of the majority of [nodes](#node). This would allow them to defraud the blockchain by reversing [transactions](#transaction) and double spending [ether](#ether) and other tokens.
+<GlossaryDefinition term="51%-attack" />
 
 ## A {#section-a}
 
-### account {#account}
-
-An object containing an [address](#address), balance, [nonce](#nonce), and optional storage and code. An account can be a [contract account](#contract-account) or an [externally owned account (EOA)](#eoa).
-
-<DocLink to="/developers/docs/accounts">
-  Ethereum Accounts
-</DocLink>
+<GlossaryDefinition term="account" />
 
 ### address {#address}
 
