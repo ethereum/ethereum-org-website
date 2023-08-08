@@ -30,7 +30,7 @@ import CrowdinContributors from "../components/FileContributorsCrowdin"
 import GitHubContributors from "../components/FileContributorsGitHub"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -202,7 +202,7 @@ const components = {
   ol: OrderedList,
   li: ListItem,
   pre: Codeblock,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   ButtonLink,
   InfoBanner,
   Card,
