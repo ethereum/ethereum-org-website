@@ -74,7 +74,7 @@ Individuals will participate in the Translatathon as normal, competing only agai
 6. Translate!
 
 <InfoBanner shouldCenter emoji=":heavy_exclamation_mark:">
-  When translating, do not use machine translation or submit low-quality translations, since all translations will be reviewed, and participants found using machine translation or submitting inaccurate translations will be disqualified from competing for prizes!
+  When translating, do not use machine translation or submit low-quality translations, since all translations will be reviewed, and <strong>participants found using machine translation or submitting inaccurate translations will be disqualified from competing for prizes!</strong>
 </InfoBanner>
 
 ## Details and submission criteria {#details}
@@ -136,17 +136,25 @@ All translations will also be subject to a thorough review before being added to
 
 ## Terms & conditions {#Terms-and-Conditions}
 
-_The Translatathon is an experimental initiative by ethereum.org to incentivize and reward contributions to the ethereum.org Translation program. We reserve the right to modify the rules or cancel the event at any time, and the eligibility, score, and distribution of prizes are at the sole and final discretion of the ethereum.org team._
+_The Ethereum.org Translation Competition, also referred to as the “Translatathon”, is an experimental initiative by the ethereum.org team to incentivise and reward contributions to the ethereum.org Translation Program._
 
-- By submitting the application form, you consent to sharing all the mandatory information with the organizers. All of the information you provide will be kept private between yourself and the ethereum.org team, but your Crowdin username and profile image will be used in public announcements of the results and winners.
+- <strong>Modification and Termination.</strong> We reserve the right to modify the rules or to terminate the Translatathon at any time, without prior notice. All changes will be effective immediately upon announcement.
 
-- Using machine translation or suggesting incorrect and inaccurate translations will lead to disqualification and make you ineligible to compete for prizes. The ethereum.org team reserves the right to disqualify participants based on the above, and all such decisions are final.
+- <strong>Eligibility, Judging, and Prizes.</strong> The determination of eligibility, scoring and judging methodology, and prize distribution fall solely and irrevocably under our discretion.
 
-- Any suggested translations for strings that have already been translated or reviewed will not be counted towards your final score.
+- <strong>Data Privacy.</strong> By submitting the application form, applicants and participants confirm that they have read and agree to our Privacy Policy and consent to share with us the requested information, which may include information that constitutes personal data. We will keep all information provided confidential, except for the participants’ provided Crowdin usernames and profile images which may be used in public announcements related to competition results and winners.
 
-- Prize winners will be subject to KYC before receiving prizes, and any taxes this might incur are the sole responsibility of the participant.
+- <strong>Translation Standards.</strong> The use of machine translation tools, as determined by us in our sole discretion, may result in disqualification from the competition. In addition, the submission of incorrect and/or inaccurate translations, as determined by us in our sole discretion, may result in ineligibility for prize consideration. Further, any contributions towards strings that have already been translated or reviewed, as determined by us in our sole discretion, will not be included in the participants’ final score. We reserve the right to make such determinations, which shall be final and binding.
 
-- We are unable to issue prizes to participants from countries that are on sanctions lists (e.g. North Korea, Syria, Iran, and Cuba).
+- <strong>Intellectual Property.</strong> Participants agree that by submitting a translation work during the Translatathon, they grant the Ethereum Foundation an irrevocable, non-exclusive, royalty-free licence to use, reproduce, distribute, display, modify, adapt, create derivative works from, and otherwise alter their translation work. Further, participants agree that their translation works may be made publicly available on the ethereum.org website under an open-source licence, including a Creative Commons licence, which allows others to use, share, and build upon the work.
+
+- <strong>Taxes.</strong> Any tax implications arising from the receipt of prizes are the sole responsibility of the prize recipient.
+
+- <strong>Comprehensively Sanctioned Countries.</strong> Participants from regions or countries that are subject to comprehensive international sanctions (including, but not limited to Cuba, Iran, North Korea, and Syria) will not be eligible for participation.
+
+- <strong>Waiver of Liability.</strong> Participants agree that the Ethereum Foundation, its affiliates, and all of their respective officers, directors, employees, and agents will have no liability whatsoever for any injuries, losses, or damages of any kind arising from or in connection with their participation in the Translatathon.
+
+- <strong>Governing Law.</strong> Any dispute or claim arising out of or relating to the Translatathon (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the laws of Switzerland without giving effect to any choice or conflict of law provision or rule (whether of Switzerland or any other jurisdiction).
 
 ## Frequently asked questions {#FAQ}
 

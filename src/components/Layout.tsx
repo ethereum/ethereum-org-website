@@ -10,6 +10,7 @@ import TranslationBanner from "./TranslationBanner"
 import TranslationBannerLegal from "./TranslationBannerLegal"
 import FeedbackWidget from "./FeedbackWidget"
 import { SkipLink } from "./SkipLink"
+import TranslatathonBanner from "./Banners/TranslatathonBanner"
 
 import { lightTheme as oldTheme } from "../theme"
 
@@ -74,6 +75,12 @@ const Layout: React.FC<IProps> = ({
       (isPageContentEnglish && !isPageLanguageEnglish)) &&
     !isTranslationBannerIgnored
 
+  const strippedPathname = path.replace(/^\/[a-z]{2,3}(-[a-z]{2})?\//, "/")
+  const shouldShowTranslatathonBanner =
+    strippedPathname === "/community/get-involved/" ||
+    strippedPathname === "/" ||
+    strippedPathname === "/contributing/translation-program/"
+
   return (
     <ApolloProvider client={client}>
       <SkipLink hrefId="#main-content" />
@@ -100,6 +107,7 @@ const Layout: React.FC<IProps> = ({
       >
         <Nav path={path} />
         {shouldShowSideNav && <SideNavMobile path={path} />}
+        {shouldShowTranslatathonBanner && <TranslatathonBanner />}
         <Flex
           flexDirection={{ base: "column", lg: "row" }}
           id="main-content"
