@@ -32,10 +32,12 @@ export const Simulator = () => (
       direction={{ base: "column", md: "row" }}
       bg="background.base"
       py={{ base: 4, md: 16 }}
-      px={16}
+      px={{ base: 4, md: 16 }}
       alignItems="center"
-      gap={{ base: 8, lg: 16 }}
+      textAlign={{ base: "center", md: "start" }}
+      gap={{ base: 4, lg: 16 }}
       maxW="1000px"
+      w="full"
     >
       {/* TEXT CONTENT */}
       <Flex direction="column">
@@ -56,7 +58,11 @@ export const Simulator = () => (
           How to use a wallet
         </Text>
       </Flex>
-      <Flex direction="column" gap={8} w="min(100%, 300px)">
+      <Flex
+        direction="column"
+        gap={8}
+        w={{ base: "min(100%, 320px)", md: "300px" }}
+      >
         {/* Button stack for path options */}
         {pathOptions.map((pathOption) => (
           <PathButton pathOption={pathOption} />
