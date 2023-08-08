@@ -1,6 +1,5 @@
 import React, { type ComponentType, type SVGProps } from "react"
-import { Flex, type FlexProps, Text } from "@chakra-ui/react"
-import Button from "../Button"
+import { Button, Flex, type FlexProps, Text } from "@chakra-ui/react"
 import type { PathOption } from "../../interfaces"
 
 const getIconFromName = (
