@@ -1,6 +1,7 @@
-import React, { ComponentType, SVGProps } from "react"
+import React, { type ComponentType, type SVGProps } from "react"
 import { Flex, type FlexProps, Text } from "@chakra-ui/react"
 import Button from "../Button"
+import type { PathOption } from "../../interfaces"
 
 const getIconFromName = (
   iconName: string
@@ -10,14 +11,10 @@ const getIconFromName = (
 }
 
 interface IProps extends FlexProps {
-  primaryText: string
-  secondaryText?: string
-  iconName: string
+  pathOption: PathOption
 }
 export const PathButton: React.FC<IProps> = ({
-  primaryText,
-  secondaryText,
-  iconName,
+  pathOption: { primaryText, secondaryText, iconName, onClick },
 }) => {
   const Icon = getIconFromName(iconName)
   return (
@@ -29,6 +26,7 @@ export const PathButton: React.FC<IProps> = ({
       textAlign="start"
       w="full"
       py={6}
+      onClick={onClick}
     >
       <Flex direction="column">
         <Text fontWeight="bold" m={0} lineHeight={6} letterSpacing="-1.1%">
