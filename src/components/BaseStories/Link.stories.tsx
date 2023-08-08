@@ -56,7 +56,11 @@ export const LinkList: Story = {
       <UnorderedList>
         {Array.from({ length: 9 }).map((_, idx) => (
           <ListItem key={idx + 1}>
-            <Link to="#">{`List Item ${idx + 1}`}</Link>
+            <Link
+              to={idx % 2 === 0 ? "https://example.com" : "#"}
+            >{`List Item ${idx % 2 === 0 ? "External" : "Internal"} ${
+              idx + 1
+            }`}</Link>
           </ListItem>
         ))}
       </UnorderedList>
