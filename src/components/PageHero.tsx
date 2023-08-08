@@ -95,7 +95,9 @@ const PageHero: React.FC<IProps> = ({
             {subtitle}
           </Text>
           {buttons && (
-            <Wrap spacing={2} overflow="visible">
+            // FIXME: remove the `ul` override once removed the corresponding
+            // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
+            <Wrap spacing={2} overflow="visible" sx={{ ul: { m: 0 } }}>
               {buttons.map((button, idx) => {
                 if (isButtonLink(button)) {
                   return (

@@ -18,7 +18,7 @@ const QuizzesModal: React.FC<IProps> = ({ children, ...rest }) => {
 
   const statusColor =
     quizStatus === "neutral"
-      ? "white"
+      ? "neutral"
       : quizStatus === "success"
       ? "success.light"
       : "error.light"
@@ -30,10 +30,7 @@ const QuizzesModal: React.FC<IProps> = ({ children, ...rest }) => {
       scrollBehavior="inside"
       {...rest}
     >
-      <ModalOverlay
-        bg="blackAlpha.700"
-        display={{ base: "none", md: "block" }}
-      />
+      <ModalOverlay bg="blackAlpha.700" hideBelow="md" />
 
       <ModalContent justifyContent="center" bg={statusColor}>
         <ModalCloseButton size="lg" p={6} zIndex={1} />
