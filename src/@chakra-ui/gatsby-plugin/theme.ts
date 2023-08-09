@@ -1,5 +1,5 @@
 import {
-  extendTheme,
+  extendBaseTheme,
   type ThemeConfig,
   type ThemeOverride,
 } from "@chakra-ui/react"
@@ -11,7 +11,7 @@ import styles from "./styles"
 import foundations from "./foundations"
 
 // Component style overrides
-import * as components from "./components"
+import components from "./components"
 
 import semanticTokens from "./semanticTokens"
 
@@ -29,17 +29,10 @@ const config: ThemeConfig = {
  */
 const theme: ThemeOverride = {
   config,
-  fonts: {
-    // old fonts from the previous theme
-    // TODO: update the fonts when we transition to the Design System
-    heading:
-      "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
-    body: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
-  },
   styles,
   ...foundations,
   semanticTokens,
   components,
 }
 
-export default extendTheme(theme)
+export default extendBaseTheme(theme)

@@ -2,7 +2,6 @@
 title: Ethereum Teknik Raporu
 description: Ethereum'un başlangıcından önce 2013'te yayınlanan giriş yazısı.
 lang: tr
-sidebar: true
 sidebarDepth: 2
 ---
 

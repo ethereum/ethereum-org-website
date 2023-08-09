@@ -100,5 +100,13 @@
   "page-calltocontribute-link": "dokümantasyon şablonu",
   "page-calltocontribute-link-2": "Discord sunucusu",
   "page-calltocontribute-span": "Sayfayı düzenle",
-  "page-calltocontribute-title": "Bu sayfada bize yardım edin"
+  "page-calltocontribute-title": "Bu sayfada bize yardım edin",
+  "layer-2-arbitrum-note": "Sahtekarlık kanıtları sadece ön listede olan kullanıcılar içindir. Ön liste henüz açık değil.",
+  "layer-2-boba-note": "Durum doğrulaması geliştirme aşamasında",
+  "layer-2-metis-note": "Sahtekarlık kanıtları geliştirme aşamasında",
+  "layer-2-optimism-note": "Sahtekarlık kanıtları geliştirme aşamasında",
+  "back-to-top": "Başa dön",
+  "banner-page-incomplete": "Bu sayfa eksik ve yardım etmenizden mutluluk duyarız. Bu sayfayı düzenleyin ve başkaları için yararlı olabileceğini düşündüğünüz her şeyi ekleyin.",
+  "next": "Sonraki",
+  "previous": "Önceki"
 }

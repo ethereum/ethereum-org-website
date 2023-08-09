@@ -2,7 +2,6 @@
 title: Smart-Contract-Bibliotheken
 description:
 lang: de
-sidebar: true
 ---
 
 Sie müssen in Ihrem Projekt nicht jeden Smart Contract von Grund auf neu erstellen. Es gibt viele Open-Source-Smart-Contract-Bibliotheken, die wiederverwendbare Bausteine für Ihr Projekt bereitstellen. Damit müssen Sie das Rad nicht neu erfinden.

@@ -1,14 +1,13 @@
 ---
-title: 面向 .NET 开发者的以太坊资源
+title: 面向 .NET 开发者的以太坊
 description: 学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发
 lang: zh
-sidebar: true
 incomplete: true
 ---
 
 <div class="featured">学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发</div>
 
-使用以太坊来创建去中心化应用程序 (或称“dapp”)，发挥加密货币和区块链技术的优势。 这些 dapp 可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
+使用以太坊来创建去中心化应用程序（或称“dapp”），发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
 
 使用 Microsoft 技术堆栈中的工具和语言在以太坊上搭建去中心化应用程序和与智能合约交互 —— .NET Framework/.NET Core/.NET Standard 支持 VSCode 和 Visual Studio 等工具上的 C#、# Visual Basic .NET、F#。 使用 Microsoft Azure 区块链在 Azure 上部署一条以太坊区块链，几分钟即可完成。 将人们对 .NET 的喜爱带到以太坊上！
 
@@ -69,7 +68,7 @@ incomplete: true
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _在 Blazor 中具有 UI 的 Nethereum 代码生成_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _.NET Wasm SPA 轻区块链浏览器和简单钱包_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _业务规则引擎（同时适用于 .NET 平台和以太坊平台），本质上是由元数据驱动的_
-- [Nethermind](https://github.com/NethermindEth/nethermind) - _.NET 核心以太坊客户端，适用于 Linux、Windows 和 MacOs_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _面向 Linux、Windows、MacOS 操作系统的 .NET Core 以太坊客户端_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用函数工具_
 - [TestChains](https://github.com/Nethereum/TestChains) - _预先配置的 .NET devchains，用于快速回应 (PoA)_
 
@@ -77,9 +76,9 @@ incomplete: true
 
 ## .NET 社区贡献者 {#dot-net-community-contributors}
 
-在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum GitHub 库](https://github.com/Nethereum)上提交拉取请求或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 您可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我们！
+在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 可以随意在 [Nethereum GitHub 存储库](https://github.com/Nethereum)上提交拉取请求或者打开一个问题，或者仅仅浏览我们提供的许多小项目/示例项目。 您可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我们！
 
-在 Nethermind，让我们通过 [Gitter](https://gitter.im/nethermindeth/nethermind) 取得联系。 关于拉取请求或者问题，请查看 [Nethermind GitHub 库](https://github.com/NethermindEth/nethermind)。
+如果你是 Nethermind 的新手并且需要入门帮助，请加入我们的 [Discord](http://discord.gg/PaCMRFdvWT)。 我们的开发人员随时准备回答你的问题。 不要犹豫，在 [Nethermind GitHub 存储库](https://github.com/NethermindEth/nethermind)上打开一个拉取请求或提出任何问题。
 
 ## 其他汇总列表 {#other-aggregated-lists}
 

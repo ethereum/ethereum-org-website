@@ -2,7 +2,6 @@
 title: Blok
 description: Gambaran umum tentang blok di blockchain Ethereum – struktur datanya, mengapa dibutuhkan, dan bagaimana pembuatannya.
 lang: id
-sidebar: true
 ---
 
 Blok adalah kumpulan transaksi dengan hash dari blok sebelumnya dalam rantai. Ini menghubungkan blok bersama (dalam rantai) karena hash secara kriptografis berasal dari data blok. Ini mencegah penipuan, karena satu perubahan di blok mana pun dalam riwayat akan membatalkan semua blok berikut karena semua hash berikutnya akan berubah dan semua orang yang menjalankan blockchain akan mengetahuinya.

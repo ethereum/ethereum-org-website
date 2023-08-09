@@ -2,7 +2,6 @@
 title: Biztonság
 description: Biztonsági megfontolások Ethereum fejlesztőknek
 lang: hu
-sidebar: true
 ---
 
 Az Ethereum okosszerződések rendkívül flexibilisek, képesek nagy mennyiségű tokent tárolni (néha meghaladja az 1 Mrd. Usd-t) és megváltoztathatatlan logikát futtatni, mely korábban telepített okosszerződés kódon alapszik. Bár ez egy élénk és kreatív ökoszisztémát hozott létre a bizalom nélküli, egymással összekapcsolt okosszerződésekből, ugyanakkor tökéletes ökoszisztéma a profitra törekvő támadók számára is, aki az okosszerződések sebezhető pontjainak és az Ethereum váratlan viselkedésének kihasználásával szeretnének profitra szert tenni. Az okosszerződés kódot _általában_ nem lehet megváltoztatni biztonsági hibák javítása céljából, az okosszerződésekből ellopott vagyont nem lehet visszaszerezni, és a lopott vagyont rendkívül nehéz nyomon követni. Az okosszerződés hibák miatt ellopott vagy elveszett érték teljes összege már könnyedén meghaladja az 1 Mrd. USD-t. A nagyobb okosszerződés hibák között van a:

@@ -2,7 +2,6 @@
 title: Frameworki programistyczne zdecentralizowanych aplikacji
 description: Zapoznaj się z zaletami frameworków i porównaj dostępne opcje.
 lang: pl
-sidebar: true
 ---
 
 ## Wprowadzenie do frameworków {#introduction-to-frameworks}
@@ -27,11 +26,6 @@ Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzeni
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
-
-**Embark —** **_środowisko programistyczne, framework testowy i inne narzędzia zintegrowane z Ethereum, IPFS i Whisper._**
-
-- [Dokumentacja](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
 
 **Epirus —** **_platforma do tworzenia, wdrażania i monitorowania aplikacji blockchain na JVM_**
 

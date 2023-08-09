@@ -2,7 +2,6 @@
 title: ERC-721 – standard tokenów niewymiennych
 description:
 lang: pl
-sidebar: true
 ---
 
 ## Wprowadzenie {#introduction}
@@ -15,7 +14,7 @@ Niewymienne tokeny (NFT) służą do identyfikacji czegoś lub kogoś w unikalny
 
 ERC-721 wprowadza standard dla NFT, innymi słowy ten typ tokena jest unikalny i może mieć różną wartość niż inny token z tego samego inteligentnego kontraktu, być może ze względu na jego wiek, rzadkość, a nawet coś innego, jak jego wygląd. Czekaj, wizualnie?
 
-Tak! Wszystkie NFT mają zmienną `uint256` o nazwie `tokenId`, więc dla każdeego kontraktu ERC-721, para `contract address, uint256 tokenId` musi być unikatowa globalnie. Powiedział, że aplikacja zdecentralizowana może mieć „konwerter”, który używa `tokenId` jako danych wejściowych i wyświetla obraz czegoś fajnego, takiego jak zombie, broń, umiejętności lub niesamowite kociaki!
+Tak! Wszystkie NFT mają zmienną `uint256` o nazwie `tokenId`, więc dla każdego kontraktu ERC-721, para `contract address, uint256 tokenId` musi być unikatowa globalnie. Dzięki temu zdecentralizowana aplikacja może mieć „konwerter”, który używa `tokenId` jako danych wejściowych i wyświetla obraz czegoś fajnego, takiego jak zombie, broń, umiejętności lub niesamowite kociaki!
 
 ## Warunki wstępne {#prerequisites}
 
@@ -64,7 +63,7 @@ Zobaczmy, dlaczego standard jest tak ważny, aby ułatwić nam sprawdza kontrakt
 Najpierw upewnij się, że zainstalowałeś [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) bibliotekę Pythona:
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

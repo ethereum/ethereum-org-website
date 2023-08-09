@@ -2,16 +2,15 @@
 title: Smart Contracts
 description: Eine nicht-technische Einführung in Smart Contracts
 lang: de
-sidebar: true
 ---
 
 # Einführung in Smart Contracts {#introduction-to-smart-contracts}
 
-Smart Contracts (Inteligente Verträge) bilden die Grundlage der [Ethereum-Anwendungen](/dapps/). Es handelt sich dabei um Computerprogramme, die auf der Blockchain gespeichert sind und die es ermöglichen, herkömmliche Verträge digital abzubilden. Smart Contracts sind sehr logisch aufgebaut. Sie folgen einer Wenn-Das-Dann-Das-Struktur. Das bedeutet, dass sie sich genau so verhalten wie sie programmiert sind. Es ist nicht möglich, sie zu verändern.
+Smart Contracts (Intelligente Verträge) bilden die Grundlage der [Ethereum-Anwendungen](/dapps/). Es handelt sich dabei um Computerprogramme, die auf der Blockchain gespeichert sind und es ermöglichen, herkömmliche Verträge digital abzubilden. Smart Contracts sind sehr logisch aufgebaut. Sie folgen einer Wenn-Das-Dann-Das-Struktur. Das bedeutet, dass sie sich genau so verhalten wie sie programmiert sind. Es ist nicht möglich, sie zu verändern.
 
-Nick Szabo hat den Begriff "Smart Contract" geprägt. Er verfasste 1994 [eine Einführung in das Konzept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) und 1996 [eine Erläuterung darüber, was mit Smart Contracts möglich wäre](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Nick Szabo hat den Begriff „Smart Contract" geprägt. Er verfasste 1994 [eine Einführung in das Konzept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) und 1996 [eine Erläuterung darüber, was mit Smart Contracts möglich wäre](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Nick Szabo stellte sich einen digitalen Marktplatz vor, der auf automatischen, kryptographisch sicheren Prozessen beruht. Ein Ort an dem Transaktionen und Geschäftsabläufe ohne Vermittler erfolgen können, ohne dabei der Gegenseite Vertrauen entgegen bringen zu müssen. Smart Contracts auf Ethereum realisieren eben diese Vision.
+Nick Szabo stellte sich einen digitalen Marktplatz vor, der auf automatischen, kryptographisch sicheren Prozessen beruht. Ein Ort, an dem Transaktionen und Geschäftsabläufe ohne Vermittler erfolgen können, ohne dabei der Gegenseite Vertrauen entgegenbringen zu müssen. Smart Contracts auf Ethereum realisieren eben diese Vision.
 
 ## Wieso Verträge? {#what-are-contracts}
 
@@ -21,11 +20,11 @@ Verträge sind einfach Vereinbarungen. Das heißt jede Art von Vereinbarung kann
 
 ### Vertrauen und Verträge {#trust-and-contracts}
 
-Eines der größten Probleme bei herkömmlichen Verträgen ist die Notwendigkeit, dass die Personen, denen Vertrauen entgegen gebracht wird, die vertraglichen Regelungen auch einhalten.
+Eines der größten Probleme bei herkömmlichen Verträgen ist die Notwendigkeit, dass die Personen, denen Vertrauen entgegengebracht wird, die vertraglichen Regelungen auch einhalten.
 
 Hier ist ein Beispiel:
 
-Alice und Bob liefern sich ein Fahrradrennen. Nehmen wir an Alice wettet mit Bob um 10 EUR, dass sie das Rennen gewinnt. Bob ist zuversichtlich, dass er der Gewinner sein wird, und nimmt die Wette an. Am Ende fährt Alice weit vor Bob ins Ziel und ist die klare Siegerin. Doch Bob weigert sich den Wetteinsatz zu bezahlen und behauptet, Alice hätte betrogen.
+Alice und Bob liefern sich ein Fahrradrennen. Nehmen wir an, Alice wettet mit Bob um 10 EUR, dass sie das Rennen gewinnt. Bob ist zuversichtlich, dass er der Gewinner sein wird, und nimmt die Wette an. Am Ende fährt Alice weit vor Bob ins Ziel und ist die klare Siegerin. Doch Bob weigert sich, den Wetteinsatz zu bezahlen und behauptet, Alice hätte betrogen.
 
 Dieses einfache Beispiel veranschaulicht, dass nicht kluge Vereinbarungen Probleme mit sich bringen können. Selbst wenn die Bedingungen der Vereinbarung erfüllt werden (z. B. Sie sind der Gewinner des Rennens), müssen Sie dennoch einer anderen Person vertrauen, dass die Vereinbarung erfüllt wird (z. B. Auszahlung des Wetteinsatzes).
 
@@ -35,7 +34,7 @@ Smart Contracts digitalisieren Vereinbarungen, indem sie die Vertragsbedingungen
 
 ### Ein digitaler Verkaufsautomat {#vending-machine}
 
-Eine einfache Metapher für einen Smart Contract ist ein Verkaufsautomat, dessen Funktionsweise mit einem Smart Contract verglichbar ist: konkrete Eingaben garantieren vorab festgelegte Leistungen.
+Eine einfache Metapher für einen Smart Contract ist ein Verkaufsautomat, dessen Funktionsweise mit einem Smart Contract vergleichbar ist: konkrete Eingaben garantieren vorab festgelegte Leistungen.
 
 - Sie wählen ein Produkt.
 - Der Verkaufsautomat zeigt den für den Kauf benötigten Betrag an.
@@ -43,7 +42,7 @@ Eine einfache Metapher für einen Smart Contract ist ein Verkaufsautomat, dessen
 - Der Verkaufsautomat prüft, ob Sie den richtigen Betrag eingeworfen haben.
 - Der Automat gibt das gewählte Produkt aus.
 
-Der Verkaufsautomat gibt das gewünscht Procukt erst dann aus, wenn alle Anforderungen erfüllt sind. Wenn Sie beispielsweise kein Produkt auswählen oder nicht genug Geld einwerfen, gibt der Automat das Produkt nicht aus.
+Der Verkaufsautomat gibt das gewünschte Produkt erst dann aus, wenn alle Anforderungen erfüllt sind. Wenn Sie beispielsweise kein Produkt auswählen oder nicht genug Geld einwerfen, gibt der Automat das Produkt nicht aus.
 
 ### Automatische Ausführung {#automation}
 
@@ -57,15 +56,15 @@ Der Faktor Mensch ist eine der größten Fehlerquellen bei herkömmlichen Vertr�
 
 ### Öffentliche Aufzeichnung {#public-record}
 
-Smart Contracts sind auch für Audits und eine Nachverfolgung nützlich. Da sich die Smart Contracts von Ethereum auf einer öffentlichen Blockchain befinden, kann jeder umgehend die Übertragung von Vermögenswerten und weiterer damit verbundenen Informationen nachvollziehen. Sie können beispielsweis überprüfen, ob jemand Geld an Ihre Adresse geschickt hat.
+Smart Contracts sind auch für Audits und eine Nachverfolgung nützlich. Da sich die Smart Contracts von Ethereum auf einer öffentlichen Blockchain befinden, kann jeder umgehend die Übertragung von Vermögenswerten und weiterer damit verbundenen Informationen nachvollziehen. Sie können beispielsweise überprüfen, ob jemand Geld an Ihre Adresse geschickt hat.
 
 ### Schutz der Privatsphäre {#privacy-protection}
 
-Smart Contracts können auch unsere Privatsphäre schützen. Da Ethereum ein pseudonymes Netzwerk ist (Transaktionen sind öffentlich an eine eindeutige kryptographische Adresse gebunden, nicht an eine Identität), können Sie Ihre Privatsphäre vor Beobachtern schützen.
+Intelligente Verträge können zudem auch Ihre Privatsphäre schützen. Da Ethereum ein pseudonymes Netzwerk ist (Transaktionen sind öffentlich an eine eindeutige kryptographische Adresse gebunden, nicht an eine Identität), können Sie Ihre Privatsphäre vor Beobachtern schützen.
 
 ### Sichtbare Bedingungen {#visible-terms}
 
-Schließlich können Sie wie auch bei Verträgen vorab die Inhalte eines Smart Contracts prüfen, bevor Sie ihn annehmen (oder anderweitig damit interagieren). Und da die Vertragsbedingungen öffentlich sind, kann der Vertrag sogar von jedem überprüft werden.
+Schließlich können Sie, wie auch bei Verträgen, vorab die Inhalte eines Smart Contracts prüfen, bevor Sie ihn annehmen (oder anderweitig damit interagieren). Und da die Vertragsbedingungen öffentlich sind, kann der Vertrag sogar von jedem überprüft werden.
 
 ## Anwendungsfälle für Smart Contracts {#use-cases}
 
@@ -75,7 +74,7 @@ Sie können Berechnungen durchführen, Währungen erzeugen, Daten speichern, NFT
 
 - [Stablecoins](/stablecoins/)
 - [Einzigartige digitale Vermögenswerte erstellen und verteilen](/nft/)
-- [Ein automatischer, offener Währungsumtausch](/get-eth/#dex/)
+- [Ein automatischer, offener Währungsumtausch](/get-eth/#dex)
 - [Dezentralisiertes Gaming](/dapps/?category=gaming)
 - [Eine Versicherungspolice mit automatisierter Auszahlung](https://etherisc.com/)
 - [Ein Standard, der es Menschen ermöglicht, individuelle, interoperable Währungen zu schaffen](/developers/docs/standards/tokens/)

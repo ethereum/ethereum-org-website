@@ -2,7 +2,6 @@
 title: Daten und Analysen
 description: So bekommen Sie Analysen und Daten in der Chain für die Nutzung in Ihren dApps
 lang: de
-sidebar: true
 ---
 
 ## Einführung {#Introduction}

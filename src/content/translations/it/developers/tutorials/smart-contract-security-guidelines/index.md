@@ -3,14 +3,13 @@ title: Linee guida di sicurezza per gli Smart Contract
 description: Elenco di controllo con le linee guida di sicurezza da tenere presenti per la creazione di una dapp
 author: "Trailofbits"
 tags:
-  - "Solidity"
-  - "Smart Contract"
+  - "solidity"
+  - "smart contract"
   - "sicurezza"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2020-09-06
-source: Creare contratti sicuri
+source: Costruire contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 

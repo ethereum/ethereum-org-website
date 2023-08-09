@@ -2,7 +2,6 @@
 title: Dapp Fejlesztői Keretrendszerek
 description: Fedezd fel a keretrendszerek tulajdonságait és hasonlítsd össze az elérhető lehetőségeket.
 lang: hu
-sidebar: true
 ---
 
 ## Bevezetés a keretrendszerekbe {#introduction-to-frameworks}
@@ -27,11 +26,6 @@ Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a beveze
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
-
-**Embark -** **_Egy fejlesztői környezet, testing keretrendszer, és más eszközök integrálva az Ethereum-mal, IPFS-sel, és Whisper-rel._**
-
-- [Dokumentáció](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
 
 **Epirus -** **_Egy platform blokklánc alkalmazások fejlesztésére, telepítésére és monitorozására a JVM-en_**
 

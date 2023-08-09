@@ -2,7 +2,6 @@
 title: Securitatea și prevenirea fraudelor pe Ethereum
 description: Cum să vă păstrați securitatea pe Ethereum
 lang: ro
-sidebar: true
 ---
 
 # Securitatea și prevenirea fraudelor pe Ethereum {#introduction}
@@ -159,8 +158,6 @@ Atunci când interacționați cu contractele inteligente, nu permiteți limite d
 
 Multe portofele Ethereum oferă „protecție a limitelor” pentru a vă apăra împotriva golirii conturilor.
 
-[Explorați portofelele cu „protecție a limitelor”](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Escrocherii comune {#common-scams}
@@ -253,7 +250,7 @@ Câteva lucruri de reținut:
 
 ### Escrocheria cu tokenuri „Eth2” {#eth2-token-scam}
 
-Odată cu [fuziunea](/upgrades/merge/) care va avea loc în 2022, escrocii au profitat de confuzia legată de termenul „Eth2”, încercând să convingă utilizatorii să își răscumpere ETH-ul pe un token „ETH2”. Nu se introduce niciun alt „ETH2” sau alt nou token odată cu fuziunea. ETH-ul pe care îl dețineți astăzi va continua să fie același ETH și după fuziune și nu este nevoie de niciun schimb de ETH pentru fuziune.
+Odată cu [fuziunea](/roadmap/merge/) care va avea loc în 2022, escrocii au profitat de confuzia legată de termenul „Eth2”, încercând să convingă utilizatorii să își răscumpere ETH-ul pe un token „ETH2”. Nu se introduce niciun alt „ETH2” sau alt nou token odată cu fuziunea. ETH-ul pe care îl dețineți astăzi va continua să fie același ETH și după fuziune și nu este nevoie de niciun schimb de ETH pentru fuziune.
 
 Escrocii se pot prezenta drept „asistență”, spunându-vă că dacă depuneți ETH veți primi înapoi „ETH2”. Nu există nicio [asistență oficială pentru Ethereum](/community/support/) și nu există niciun nou token. Nu partajați niciodată fraza de securitate („seed”) a portofelului dvs. cu nimeni.
 

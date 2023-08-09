@@ -7,7 +7,7 @@
   "page-wallets-blog": "Blog de Coinbase",
   "page-wallets-bookmarking": "Ajoutez votre portefeuille aux favoris",
   "page-wallets-bookmarking-desc": "Si vous utilisez un portefeuille en ligne, ajoutez le site dans vos favoris afin de vous protéger des arnaques par fishing.",
-  "page-wallets-cd": "Les portefeuilles matériels physiques qui vous permettent de garder vos cryptomonnaies hors ligne - très sécurisés",
+  "page-wallets-cd": "Les portefeuilles matériels physiques sont des appareils qui vous permettent de garder vos cryptomonnaies hors ligne - très sécurisés",
   "page-wallets-desc-2": "Vous avez besoin d'un portefeuille pour envoyer des fonds et gérer votre ETH.",
   "page-wallets-desc-2-link": "Plus d'infos sur ETH",
   "page-wallets-desc-3": "Votre portefeuille est seulement un outil pour gérer votre compte Ethereum. Cela signifie que vous pouvez changer de fournisseur de portefeuille à tout moment. Beaucoup de portefeuilles vous permettent également de gérer plusieurs comptes Ethereum depuis une seule application.",
@@ -54,10 +54,14 @@
   "page-wallets-try-dapps-alt": "Une illustration des membres de la communauté Ethereum travaillant ensemble",
   "page-wallets-try-dapps-desc": "Les DApps sont des applications basées sur Ethereum. Elles sont moins chères, plus justes et moins gourmandes en données que la plupart des applications traditionnelles.",
   "page-wallets-types": "Types de portefeuille",
-  "page-wallets-web-browser": "Un portefeuille Web qui vous permet d'interagir avec votre compte via un navigateur Web",
+  "page-wallets-types-desc": "Il existe différentes interfaces et façons d'interagir avec votre compte :",
+  "page-wallets-web-browser": "Les portefeuilles de navigateur sont des applications Web qui vous permettent d'interagir avec votre compte directement dans le navigateur",
+  "page-wallets-web-browser-extension": "Les extensions de portefeuilles de navigateur sont des extensions que vous téléchargez et qui vous permettent d'interagir avec votre compte et vos applications à travers le navigateur",
   "page-wallets-whats-a-wallet": "Qu'est-ce qu'un portefeuille Ethereum ?",
   "page-wallets-your-ethereum-account": "Votre compte Ethereum",
   "page-wallets-your-ethereum-account-desc": "Votre portefeuille est votre fenêtre sur votre compte Ethereum - votre solde, l'historique des transactions et bien plus. Mais vous pouvez changer de fournisseur de portefeuille à tout moment.",
   "page-wallets-your-login": "Votre compte pour les applications Ethereum",
-  "page-wallets-your-login-desc": "Votre portefeuille vous permet de vous connecter à n'importe quelle application décentralisée à l'aide de votre compte Ethereum. C'est comme une connexion que vous pouvez utiliser sur plusieurs DApps."
+  "page-wallets-your-login-desc": "Votre portefeuille vous permet de vous connecter à n'importe quelle application décentralisée à l'aide de votre compte Ethereum. C'est comme une connexion que vous pouvez utiliser sur plusieurs DApps.",
+  "additional-reading-how-to-register-an-ethereum-account": "Comment \"créer\" un compte Ethereum",
+  "additional-reading-how-to-use-a-wallet": "Comment utiliser un portefeuille"
 }

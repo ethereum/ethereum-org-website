@@ -2,7 +2,6 @@
 title: Madencilik
 description: Ethereum'da madenciliğin nasıl çalıştığına ve Ethereum'un güvenli ve merkeziyetsiz kalmasına nasıl yardımcı olduğuna dair bir açıklama.
 lang: tr
-sidebar: true
 incomplete: true
 ---
 
@@ -61,8 +60,6 @@ Austin'in madenciliği ve iş ispatı blok zincirini size açıklamasını izley
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## Daha fazla okuma {#further-reading}
-
-- [Ethereum madenciliği yapmak ne anlama geliyor?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
 ## İlgili araçlar {#related-tools}
 

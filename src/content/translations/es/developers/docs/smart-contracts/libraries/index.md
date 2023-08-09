@@ -2,7 +2,6 @@
 title: Librerías de contratos inteligentes
 description:
 lang: es
-sidebar: true
 ---
 
 No es necesario que escribas cada contrato inteligente de tu proyecto desde cero. Hay muchas bibliotecas de contratos inteligentes de código abierto disponibles, que proporcionan bloques de construcción reutilizables para tu proyecto que pueden salvarte de tener que reinventar la rueda.

@@ -1,7 +1,6 @@
 ---
 title: Онлайн-сообщества
 description: Список программ грантов в рамках экосистемы Ethereum.
-sidebar: true
 lang: ru
 ---
 
@@ -27,16 +26,18 @@ lang: ru
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> — сообщество Discord, сконцентрированное на разработке Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> — сообщество, сконцентрированное на помощи при управлении проектами, связанными с разработкой Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Команда сайта Ethereum.org</Link> — возможность решить проблемы и поговорить о разработке и дизайне ethereum.org с командой и членами сообщества</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> — сообщество, сконцентрированное на изучении вопросов, связанных с разработкой web3</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> — чат для разработки Solidity (Gitter)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereumsolidity:gitter.im">Solidity Matrix</Link> — чат для разработки Solidity (Matrix)</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> — сообщество создателей Web3, где собираются разработчики, видные представители отрасли и энтузиасты Ethereum. Мы заинтересованы в разработке, дизайне и культуре Web3. Создавайте вместе с нами.</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> — чат для разработки Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — чат для разработки Solidity (Matrix)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *— форум вопросов и ответов*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *— децентрализованный форум вопросов и ответов*</SocialListItem>
 
 ## YouTube и Twitter {#youtube-and-twitter}
 
-<SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> — следите за последними новостями Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> — официальный аккаунт Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> — будьте в курсе последних новостей Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> — официальная учетная запись фонда Ethereum</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> — портал Ethereum, созданный для нашего растущего глобального сообщества</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/Ethereum?page=1">Список влиятельных твиттер-аккаунтов Ethereum</Link></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">Список важных твиттер-аккаунтов Ethereum</Link></SocialListItem>
 
 <Divider />
 

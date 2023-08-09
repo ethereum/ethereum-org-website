@@ -2,7 +2,6 @@
 title: Ruby Geliştiricileri için Ethereum
 description: Ruby tabanlı projeleri ve araçları kullanarak Ethereum için nasıl geliştirme yapacağınızı öğrenin.
 lang: tr
-sidebar: true
 incomplete: false
 ---
 

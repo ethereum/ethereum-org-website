@@ -2,7 +2,6 @@
 title: Máquina virtual de Ethereum (EVM)
 description: Una introducción sobre la máquina virtual de Ethereum y acerca de su relación con los bienes, las transacciones y los contratos inteligentes.
 lang: es
-sidebar: true
 ---
 
 La representación física de EVM no se puede describir del mismo modo que una nube o una ola, pero _existe_ como una única entidad sustentada por miles de computadoras conectadas ejecutando un cliente de Ethereum.

@@ -3,11 +3,10 @@ title: "The Graph: query di dati in Web3"
 description: La blockchain è come un database ma senza SQL. Contiene tutti i dati, ma non c'è modo di accedervi. Vediamo come risolvere la situazione con The Graph e GraphQL.
 author: Markus Waas
 lang: it
-sidebar: true
 tags:
   - "Solidity"
-  - "Smart Contract"
-  - "query"
+  - "smart contract"
+  - "interrogando"
   - "the graph"
   - "create-eth-app"
   - "react"
@@ -17,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---
 
-Questa volta daremo un'occhiata più da vicino a The Graph, che essenzialmente è diventato parte integrante dello stack standard per lo sviluppo di dapp nell'ultimo anno. Prima però vediamo come ci comporteremmo tradizionalmente...
+Questa volta daremo un'occhiata più da vicino a The Graph, che è essenzialmente diventato parte dello stack standard per sviluppare le dapp nell'ultimo anno. Prima però vediamo come ci comporteremmo tradizionalmente...
 
 ## Senza The Graph... {#without-the-graph}
 
@@ -47,13 +46,13 @@ contract Game {
 }
 ```
 
-Ora diciamo che vogliamo mostrare nella nostra dapp il totale delle partite perse/vinte, e aggiornarle ogni volta che qualcuno gioca. L'approccio sarebbe:
+Ora, diciamo che nella nostra dapp, vogliamo mostrare le scommesse totali, le partite perse/vinte totali e, inoltre, aggiornarle ogni volta che qualcuno gioca di nuovo. L'approccio sarebbe:
 
 1. Recuperare `totalGamesPlayerWon`.
 2. Recuperare `totalGamesPlayerLost`.
 3. Iscriversi agli eventi `BetPlaced`.
 
-Possiamo attendere l'[evento in Web3](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#contract-events) come mostrato sulla destra, ma richiederebbe la gestione di alcuni casi.
+Possiamo attendere l'[evento in Web3](https://docs.web3js.org/api/web3/class/Contract#events) come mostrato sulla destra, ma richiederebbe la gestione di alcuni casi.
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -70,14 +69,14 @@ GameContract.events.BetPlaced({
 });
 ```
 
-Questo va comunque bene per il nostro esempio semplice. Diciamo però che adesso vogliamo mostrare le quantità di scommesse perse/vinte solo per il giocatore corrente. In questo caso siamo sfortunati, è meglio distribuire un nuovo contratto che memorizzi questi valori e li recuperi. E ora immaginiamo uno Smart Contract e una dapp molto più complicati. Le cose si complicano in fretta.
+Questo va comunque bene per il nostro esempio semplice. Diciamo però che adesso vogliamo mostrare le quantità di scommesse perse/vinte solo per il giocatore corrente. In questo caso siamo sfortunati, è meglio distribuire un nuovo contratto che memorizzi questi valori e li recuperi. E, ora, immaginiamo un contratto intelligente e una dapp molto più complicati; le cose si complicano in fretta.
 
 ![Non basta eseguire Query](./one-does-not-simply-query.jpg)
 
 È facile capire perché questo non sia ottimale:
 
 - Non funziona per i contratti già distribuiti.
-- Serve carburante extra per memorizzare questi valori.
+- Costi aggiuntivi del gas per memorizzare tali valori.
 - Serve un'altra chiamata per recuperare i dati per un nodo Ethereum.
 
 ![Non è sufficiente](./not-good-enough.jpg)
@@ -241,7 +240,7 @@ export function handleNewBet(event: PlacedBet): void {
 
 ## Uso nel frontend {#using-it-in-the-frontend}
 
-Tramite uno strumento come Apollo Boost, puoi facilmente integrare The Graph in una dApp React (o Appolo-Vue). Specialmente se si utilizzano hook React e Apollo, per recuperare i dati basta scrivere una sola query GraphQI nel componente. Una configurazione tipica potrebbe somigliare a:
+Usando qualcosa come Apollo Boost, puoi facilmente integrare The Graph nella tua dapp di React (o di Apollo-Vue). Specialmente se si utilizzano hook React e Apollo, per recuperare i dati basta scrivere una sola query GraphQI nel componente. Una configurazione tipica potrebbe somigliare a:
 
 ```javascript
 // Vedi tutti i sotto-grafici: https://thegraph.com/explorer/

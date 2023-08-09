@@ -2,7 +2,6 @@
 title: Ethereum-beveiliging en -scampreventie
 description: Veilig blijven op Ethereum
 lang: nl
-sidebar: true
 ---
 
 # Ethereum-beveiliging en -scampreventie {#introduction}
@@ -159,8 +158,6 @@ Sta bij interactie met slimme contracten geen onbeperkte bestedingslimieten toe.
 
 Veel Ethereum-portemonnees bieden limieten aan bescherming tegen het leeglopen van rekeningen.
 
-[Onderzoek portemonnees met limietbescherming](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Veelvoorkomende scams {#common-scams}
@@ -253,7 +250,7 @@ Dingen om te onthouden:
 
 ### 'Eth2'-tokenscam {#eth2-token-scam}
 
-Met [de merge](/upgrades/merge/) die komt in 2022, hebben oplichters van de verwarring rond de term 'Eth2' gebruik gemaakt om te proberen gebruikers hun ETH te laten inwisselen voor een 'ETH2'-token. Er is geen 'ETH2' of een ander nieuw token ingevoerd bij de merge. Het ETH dat u vandaag bezit zal na de merge dezelfde ETH blijven en er is geen noodzaak om swaps van uw ETH te doen voor de merge.
+Met [de merge](/roadmap/merge/) die komt in 2022, hebben oplichters van de verwarring rond de term 'Eth2' gebruik gemaakt om te proberen gebruikers hun ETH te laten inwisselen voor een 'ETH2'-token. Er is geen 'ETH2' of een ander nieuw token ingevoerd bij de merge. Het ETH dat u vandaag bezit zal na de merge dezelfde ETH blijven en er is geen noodzaak om swaps van uw ETH te doen voor de merge.
 
 Scammers kunnen verschijnen in de vorm van "support" die u vertelt dat als u uw ETH stort, u 'ETH2' terugkrijgt. Er is geen [officiële Ethereum-ondersteuning](/community/support/), en er is geen nieuwe token. Deel nooit de seed phrase van uw portemonnee met iemand.
 

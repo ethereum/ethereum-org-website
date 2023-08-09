@@ -2,7 +2,6 @@
 title: Düğümler ve istemciler
 description: Ethereum düğümlerine ve istemci yazılımına genel bakış, ayrıca bir düğümün nasıl kurulacağı ve bunu neden yapmanız gerektiğine dair bilgi.
 lang: tr
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -174,7 +173,7 @@ Senkronizasyon modları, çeşitli değiş tokuşlarla bu sürece farklı yakla�
 
 Mainnet'e hazır istemcilerde kullanılan senkronizasyon yaklaşımlarına genel bakış:
 
-##### Full senkronizasyon {#full-sync}
+##### Full senkronizasyon
 
 Full senkronizasyon, tüm blokları (başlıklar, işlemler ve makbuzlar dahil) indirir ve her bloğu başlangıçtan yürüterek aşamalı olarak blok zincirinin durumunu oluşturur.
 
@@ -244,17 +243,15 @@ Diğer tüm yapılandırmalar gibi, başlangıç bayrağıyla veya yapılandırm
 
 ## Mutabakat istemcileri (eski adıyla "Eth2" istemcileri) {#consensus-clients}
 
-[Mutabakat yükseltmelerini](/upgrades/beacon-chain/) desteklemek için birden fazla mutabakat istemcisi (eskiden "Eth2" istemcisi olarak biliniyordu) vardır. İşaret Zincirini çalıştırırlar ve [Birleştirmeden](/upgrades/merge/) sonra yürütüm istemcilerine hisse ispatı mutabakat mekanizması sağlayacaklar.
-
-[Mutabakat istemcilerini görüntüle](/upgrades/get-involved/#clients).
+[Mutabakat yükseltmelerini](/roadmap/beacon-chain/) desteklemek için birden fazla mutabakat istemcisi (eskiden "Eth2" istemcisi olarak biliniyordu) vardır. İşaret Zincirini çalıştırırlar ve [Birleştirmeden](/roadmap/merge/) sonra yürütüm istemcilerine hisse ispatı mutabakat mekanizması sağlayacaklar.
 
 | İstemci                                                     | Dil        | İşletim sistemleri    | Ağlar                                   |
 | ----------------------------------------------------------- | ---------- | --------------------- | --------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | İşaret Zinciri, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | İşaret Zinciri, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | İşaret Zinciri, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | İşaret Zinciri, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | İşaret Zinciri, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | İşaret Zinciri, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | İşaret Zinciri, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | İşaret Zinciri, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | İşaret Zinciri, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | İşaret Zinciri, Gnosis, Goerli, Pyrmont |
 
 ## Donanım {#hardware}
 
@@ -309,7 +306,6 @@ Bunun gibi küçük, uygun fiyatlı ve verimli cihazlar, evde bir düğüm çal�
 
 - [Ethereum 101 - 2. Bölüm - Düğümleri Anlamak](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 Şubat 2019_
 - [Ethereum Tam Düğümlerini Çalıştırmak: Pek Motivasyonu Olmayanlar İçin Bir Kılavuz](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Kasım 2019_
-- [Bir Ethereum Düğümü Çalıştırma](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, sık sık güncellenir_
 - [Tam doğrulanmış bir Ethereum düğümü olmak için gereken donanımın analizi](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Eylül 2018_
 - [Ethereum Mainnet'te Hyperledger Besu Düğümü Çalıştırma: Faydaları, Gereksinimleri ve Kurulum](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Mayıs 2020_
 

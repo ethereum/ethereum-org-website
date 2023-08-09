@@ -2,7 +2,6 @@
 title: Akıllı sözleşmeleri test etmek
 description:
 lang: tr
-sidebar: true
 incomplete: true
 ---
 

@@ -2,7 +2,6 @@
 title: Token szabványok
 description:
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

@@ -2,7 +2,6 @@
 title: Rantai plasma
 description: Pengantar rantai plasma sebagai solusi penskalaan yang saat ini digunakan oleh komunitas Ethereum.
 lang: id
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -33,7 +32,6 @@ Beberapa proyek menyediakan implementasi Plasma yang dapat Anda integrasikan ke 
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [EthHub tentang Plasma](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Belajar tentang Plasma](https://www.learnplasma.org/en/)
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

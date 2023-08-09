@@ -1,6 +1,6 @@
 ---
 title: 如何通过刷写MicroSD卡将您的Raspberry Pi 4变为一个节点
-description: 刷写您的树莓派 4，插入以太网电缆，连接固态硬盘并打开设备电源，将树莓派 4 转变为运行执行层或共识层的完整以太坊节点（信标链/验证者）
+description: 刷写树莓派 4，插入以太网电缆，连接固态硬盘并打开设备电源，将树莓派 4 变为以太坊全节点 + 验证者。
 author: "EthereumOnArm"
 tags:
   - "客户端"
@@ -8,261 +8,159 @@ tags:
   - "共识层"
   - "节点"
 lang: zh
-sidebar: true
-skill: intermediate
-published: 2020-05-07
-source: r/ethereum
-sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
+skill: advanced
+published: 2022-06-10
+source: Ethereum on ARM
+sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html
+postMergeBannerTranslation: page-upgrades-post-merge-banner-tutorial-ood
 ---
 
-**TL;DR**：刷写您的树莓派 4，插入以太网电缆，连接固态硬盘并打开设备电源，将树莓派 4 转变为运行执行层或共识层的完整以太坊节点（信标链/验证者）
+**Ethereum on Arm 是一个定制 Linux 映像，它可以将树莓派转变成以太坊节点。**
 
-[了解有关以太坊升级的信息](/upgrades/)
+为了使用 Ethereum on Arm 将树莓派转变成以太坊节点，推荐使用以下硬件：
 
-首先是一些背景。 如您所知，运行 Raspberry Pi 4 镜像时，我们已经遇到了一些内存问题[[1]](/developers/tutorials/run-node-raspberry-pi/#references)，因为 Raspbian 操作系统仍然是 32 位操作系统[[2]](/developers/tutorials/run-node-raspberry-pi/#references)（至少用户区是如此）。 虽然我们更愿意坚持使用官方操作系统，但我们得出的结论是，为了解决这些问题，我们需要迁移原生的 64 位操作系统。
-
-此外，[共识客户端](/upgrades/get-involved/#clients)不支持 32 位二进制文件，因此使用 Raspbian 会阻止树莓派 4 运行共识层节点（以及质押的可能性）。
-
-因此，几经测试，我们现将发布基于 64 位 Ubuntu 20.04 [[3]](/developers/tutorials/run-node-raspberry-pi/#references) 的两个不同映像：执行层版和共识层版。
-
-基本上，两者都是相同的映像，并且包含基于 Raspbian 的映像的相同功能。 但它们被设置为默认运行执行层或共识层软件。
-
-**程序负责所有必要的步骤**，从设置环境和格式化 SSD 磁盘到安装和运行以太坊软件，以及启动区块链同步。
-
-## 主要特性 {#main-features}
-
-- 基于 Ubuntu 20.04 64 位
-- 自动完成 USB 磁盘分区和格式化
-- 在 Armbian 工作的基础上增加了交换内存（ZRAM 内核模块 + 一个交换文件）[[7]](/developers/tutorials/run-node-raspberry-pi/#references)。
-- 根据 MAC 哈希值将主机名改为像“ethnode-e2a3e6fe”这样的名称。
-- 将软件作为 systemd 服务运行并开始同步区块链
-- 包括一个用于安装和升级以太坊软件的 APT 存储库
-- 包括一个基于 Grafana/Prometheus 的监控仪表板
-
-## 包含的软件 {#software-included}
-
-两个映像都包含相同的软件包，它们之间唯一的区别是执行版默认运行 Geth，而共识版则默认运行 Prysm 信标链。
-
-### 执行客户端 {#execution-clients}
-
-- Geth[[8]](/developers/tutorials/run-node-raspberry-pi/#references)：1.9.13 (官方二进制文件)
-- Parity[[9]](/developers/tutorials/run-node-raspberry-pi/#references)：2.7.2（交叉编译）。
-- Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references)：1.8.28（交叉编译）。
-- Hyperledger Besu[[11]](/developers/tutorials/run-node-raspberry-pi/#references)：1.4.4（已编译）。
-
-### 共识客户端 {#consensus-clients}
-
-- Prysm[[12]](/developers/tutorials/run-node-raspberry-pi/#references)：1.0.0-alpha6（官方二进制文件）。
-- Lighthouse[[13]](/developers/tutorials/run-node-raspberry-pi/#references)：0.1.1（已编译）。
-
-### 以太坊框架 {#ethereum-framework}
-
-- Swarm[[14]](/developers/tutorials/run-node-raspberry-pi/#references)：0.5.7（官方二进制文件）。
-- Raiden Network[[15]](/developers/tutorials/run-node-raspberry-pi/#references)：0.200.0~rc1（官方二进制文件）。
-- IPFS[[16]](/developers/tutorials/run-node-raspberry-pi/#references)：0.5.0（官方二进制文件）。
-- Statusd[[17]](/developers/tutorials/run-node-raspberry-pi/#references)：0.52.3（已编译）。
-- Vipnode[[18]](/developers/tutorials/run-node-raspberry-pi/#references)：2.3.3（官方二进制文件）。
-
-## 安装指南和使用方法 {#installation-guide-and-usage}
-
-### 推荐的硬件和设置 {#recommended-hardware-and-setup}
-
-- Raspberry 4（B 型）- 4GB
-- MicroSD 卡（最小 16 GB，10 级）
-- SSD USB 3.0 磁盘（见存储部分）
+- 树莓派 4（B 型，8 GB）
+- MicroSD 卡（最小 16 GB，Class 10）
+- 最小 2TB 的 USB3.0 固态硬盘或使用 USB3.0 转 SATA 转接盒的固态硬盘
 - 电源
 - 以太网电缆
-- 30303 端口转发（执行层）和 13000 端口转发（共识层）[[4]](/developers/tutorials/run-node-raspberry-pi/#references)
-- 带散热片和风扇的机箱（可选，但强烈推荐）
-- USB 键盘、显示器和 HDMI 电缆（微型 HDMI）（可选）。
+- 端口转发（详情请查看客户端）
+- 带散热片和风扇的外壳
+- USB 键盘、显示器和 HDMI 数据线（微型 HDMI）（可选）
 
-## 存储 {#storage}
+## 为什么要在 ARM 上运行以太坊？ {#why-run-ethereum-on-arm}
 
-你将需要一个固态硬盘来运行以太坊客户端（没有固态硬盘，就绝对没有机会同步以太坊区块链）。 有两种选择：
+ARM 单板机是一种便宜、灵活的小型计算机。 它们价格低廉、效率高、可配置成将全部资源专用于节点、能耗低、体积小，可以很顺利地安装在任何家庭中，因此成为运行以太坊节点的不二之选。 启动节点也非常容易，因为树莓派的 MicroSD 卡可以简单地使用预建映像刷写，无需下载或构建软件。
 
-- 使用 USB 便携式 SSD 磁盘，如三星 T5 便携式 SSD。
-- 使用带有 SSD 磁盘的 USB3.0 外置硬盘盒。 在我们的例子中，我们使用了 Inateck 2.5 硬盘盒 FE2011。 请确保购买带有 UAS 兼容芯片的机箱，特别是这些芯片之一：JMicron（JMS567 或 JMS578）或 ASMedia（ASM1153E）。
+## 工作原理 {#how-does-it-work}
 
-在两种情况下，都需避免使用劣质 SSD 磁盘，因为它是节点的关键组成部分，可能会极大地影响性能（及同步时间）。
+使用预先构建的映像刷写树莓派的内存卡。 此映像包含了运行以太坊节点所需的一切。 在刷写完内存卡后，用户只需要启动树莓派即可。 运行节点所需的所有进程自动启动。 这是可行的，因为内存卡中有基于 Linux 的操作系统，系统级进程在此操作系统上自动运行，将树莓派转变成以太坊节点。
 
-请记住，需要将磁盘插入 USB 3.0 端口（蓝色）
+以太坊不能在流行的树莓派 Linux 操作系统“Raspbian”下运行，因为 Raspbian 还在使用 32 位指令集架构，这会给以太坊用户带来内存问题，而且共识客户端也不支持 32 位二进制文件。 为了解决这一问题，Ethereum on Arm 团队迁移到原生 64 位操作系统“Armbian”。
 
-## 映像下载和安装 {#image-download-and-installation}
+**映像负责处理所有必要的步骤**，包括从设置环境和格式化固态磁盘，到安装和运行以太坊软件，以及启动区块链同步。
 
-### 1. 下载执行层和共识层映像 {#1-download-execution-or-consensus-images}
+## 执行客户端和共识客户端说明 {#note-on-execution-and-consensus-clients}
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
-  下载执行层映像
-</ButtonLink>
+Ethereum on Arm 相关文档解释了如何设置执行客户端*或*共识客户端，两个以太坊测试网（Kiln 和 Ropsten）除外。 这种可选性只有在以太坊从工作量证明过渡到权益证明（称为[合并](/roadmap/merge)）之前才有可能。
 
-sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
+<InfoBanner>
+合并后，将无法单独运行执行客户端和共识客户端 — 它们必须成对运行。 因此，在本教程中，我们将在以太坊测试网 (Kiln) 上运行一对执行客户端和共识客户端。
+</InfoBanner>
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
-  下载共识层映像
-</ButtonLink>
+## Kiln 树莓派 4 映像 {#the-kiln-raspberry-pi-4-image}
 
-sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
+Kiln 是一个专门用于测试合并的公共测试网。 Ethereum on Arm 团队开发了一个映像，让用户可以在这个合并测试网上快速启动一对以太坊客户端。 Kiln 合并已经发生，但该网络仍在运行，因此可用于本教程。 Kiln 上的以太币没有实际价值。
 
-### 2. 刷写映像 {#2-flash-the-image}
+Kiln 树莓派 4 映像是一种“即插即用”映像，它会自动安装和设置执行客户端与共识客户端，配置它们相互通信并连接到 Kiln 网络。 用户需要做的就是使用一个简单的命令启动他们的进程。 该映像包含四种执行客户端（Geth、Nethermind、Besu 和 Erigon）和四种共识客户端（Lighthouse、Prysm、Nimbus、Teku），可供用户选择。
 
-在您的台式机/笔记本电脑中插入 microSD，然后下载文件（例如执行层）。
+从 [Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/ES56R_SuvaVFkiMO1Tgnf6kB7lEbBfla5c2c18E3WQRJzA?download=1) 下载树莓派映像并验证 SHA256 哈希：
 
-```bash
-wget https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
+```sh
+# From directory containing the downloaded image
+shasum -a 256 ethonarm_kiln_22.03.01.img.zip
+# Hash should output: 485cf36128ca60a41b5de82b5fee3ee46b7c479d0fc5dfa5b9341764414c4c57
 ```
 
-注意：如果您不习惯使用命令行，或者运行的是 Windows，则可以使用[Etcher](https://etcher.io)。
+请注意，对于没有树莓派但有 AWS 帐户的用户，提供的 ARM 实例可以运行相同的映像。 说明和 AWS 映像可从 Ethereum on Arm (https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html) 下载。
 
-打开终端并检查您的 MicroSD 设备名称是否正在运行：
+## 刷写 MicroSD 卡 {#flashing-the-microsd}
 
-```bash
-sudo fdisk -l
+首先，应将用于树莓派的 MicroSD 卡插入台式机或笔记本电脑中，以便可以刷写。 接着，在终端执行以下命令，将下载的映像刷写到 SD 卡中：
+
+```shell
+# 检查 Micro SD 卡名
+sudo fdisk -I
+
+>> sdxxx
 ```
 
-您应会看到一个名为 mcblk0 或 sdd 的设备。 解压缩并刷写镜像：
+正确的 SD 卡名称非常重要，因为下一条命令中的指令 `dd` 会在写入映像前彻底清除 SD 卡上的全部已有内容。 接下来，导航到包含压缩映像文件的目录：
 
-```bash
-unzip ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
-sudo dd bs=1M if=ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img of=/dev/mmcblk0 && sync
+```shell
+# 解压并烧录镜像
+unzip ethonarm_kiln_22.03.01.img.zip
+sudo dd bs=1M if=ethonarm_kiln_22.03.01.img of=/dev/mmcblk0 conv=fdatasync status=progress
 ```
 
-### 3. 将 MicroSD 插入 Raspberry Pi 4。 连接以太网电缆并插入 USB SSD 硬盘（确保您使用的是蓝色端口）。 {#3-insert-the-microsd-into-the-raspberry-pi-4-connect-an-ethernet-cable-and-attach-the-usb-ssd-disk-make-sure-you-are-using-a-blue-port}
+现在 SD 卡已刷写完成，可以将其插入树莓派中了。
 
-### 4. 打开设备电源 {#4-power-on-the-device}
+## 启动节点 {#start-the-node}
 
-Ubuntu 操作系统将在一分钟内启动，但**您将需要等待大约 10 分钟**，以便让脚本执行必要的任务，来将设备变成以太坊节点并重新启动 Raspberry。
+将 SD 卡插入树莓派后，连接以太网电缆和固态硬盘，然后打开电源。 操作系统将启动并自动执行预先配置好的任务，包括安装和构建客户端软件，从而将树莓派转变成以太坊节点。 此过程大约需要 10-15 分钟。
 
-根据镜像，您将运行：
+所有安装和配置完成后，通过安全外壳连接登录设备，或者如果单板机已经连接了键盘和显示器，也可以直接使用终端。 使用 `ethereum` 帐户登录，因为此帐户有启动节点所需的权限。
 
-- 执行客户端：Geth 作为同步区块链的默认客户端
-- 共识客户端：Prysm 作为同步信标链的默认客户端（Prater 测试网）。
-
-### 5. 登录 {#5-log-in}
-
-您可以通过 SSH 或使用控制台登录（如果连接了显示器和键盘）。
-
-```bash
+```shell
 User: ethereum
 Password: ethereum
 ```
 
-第一次登录时会提示您更改密码，因此需要登录两次。
+然后，用户可以选择他们希望运行的执行客户端和共识客户端组合，并按如下方式启动他们的 systemctl 进程（示例中运行 Geth 和 Lighthouse）：
 
-### 6. 为 Geth 打开 30303 端口，如果您正在运行 Prysm 信标链，则打开 13000 端口。 如果不知道如何执行此操作，请搜索 "端口转发"，后跟您的路由器型号。 {#6-open-30303-port-for-geth-and-13000-if-you-are-running-prysm-beacon-chain-if-you-dont-know-how-to-do-this-google-port-forwarding-followed-by-your-router-model}
-
-### 7. 获取控制台输出 {#7-get-console-output}
-
-您可以通过输入以下命令查看后台发生了什么：
-
-```bash
-sudo tail -f /var/log/syslog
+```shell
+sudo systemctl start geth-lh
+sudo systemctl start lh-geth-beacon
 ```
 
-**恭喜！ 您现在正在您的 Raspberry Pi 4 上运行一个完整的以太坊节点。**
+可以使用以下指令检查日志
 
-## 同步区块链 {#syncing-the-blockchain}
-
-现在您需要等待区块链同步。 对于执行层，这将需要几天的时间，具体取决于若干因素，但预计最多需要约 5-7 天。
-
-如果运行的是共识层 Prater 测试网，则可以预期约 1-2 天的信标链同步时间。 请记住，您需要稍后设置验证器才能启动权益质押过程。 [如何运行共识层验证器](/developers/tutorials/run-node-raspberry-pi/#validator)
-
-## 监测仪表板 {#monitoring-dashboards}
-
-在这第一个版本中，包括了 3 个基于 Prometheus 的监测仪表板[[5]](/developers/tutorials/run-node-raspberry-pi/#references) / Grafana[[6]](/developers/tutorials/run-node-raspberry-pi/#references)，以便监测节点和客户端的数据（Geth 和 Besu）。 您可以通过您的 Web 浏览器访问：
-
-```bash
-URL: http://your_raspberrypi_IP:3000
-User: admin
-Password: ethereum
+```shell
+# logs for Geth
+sudo journalctl -u geth-lh -f
+#logs for lighthouse
+sudo journalctl -u lh-geth-beacon -f
 ```
 
-## 切换客户端 {#switching-clients}
+[Ethereum on Arm 相关文档](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#id2)中提供有每一对客户端组合的特定服务名称。 它们可用于更新此处提供的命令，以用于任何客户端组合。
 
-所有客户端都作为 systemd 服务运行。 这一点很重要，因为如果出现问题，系统将自动重启进程。
+## 验证者 {#validators}
 
-Geth 和 Prysm 信标链会默认运行（具体取决于您所同步的内容、执行层或共识层），因此如果您想切换到其他客户端（例如从 Geth 切换到 Nethermind），您需要先停止并禁用 Geth，然后启用并启动另一个客户端：
+为了运行验证者，必须首先访问 32 个测试网以太币，它们必须存入 Kiln 存款合约。 这可以按照 [Kiln 启动板](https://kiln.launchpad.ethereum.org/en/)上的分步指南来完成。 在台式机/笔记本电脑上执行此操作，但不要生成密钥 — 密钥生成可以直接在树莓派上完成。
 
-```bash
-sudo systemctl stop geth && sudo systemctl disable geth
+在树莓派上打开一个终端并运行以下命令来生成存款密钥：
+
+```
+cd && deposit new-mnemonic --num_validators 1 --chain kiln
 ```
 
-启用和运行执行客户端的命令：
+保持助记词安全！ 上面的命令在节点的密钥库中生成了两个文件：验证者密钥和存款数据文件。 存款数据需要上传到启动板，因此必须要从树莓派复制到台式机/笔记本电脑。 这可以使用安全外壳连接或任何其他复制/粘贴方法来完成。
 
-```bash
-sudo systemctl enable besu && sudo systemctl start besu
-sudo systemctl enable nethermind && sudo systemctl start nethermind
-sudo systemctl enable parity && sudo systemctl start parity
+在存款数据文件在运行启动板的计算机上可用后，就可以将其拖放到启动板界面上的 `+` 上。 按照屏幕上的说明将交易发送到存款合约。
+
+返回树莓派，可以启动验证者。 这需要导入验证者密钥，设置领取奖励的地址，然后启动预先配置好的验证者进程。 以下示例适用于 Lighthouse — 其他共识客户端的说明见 [Ethereum on Arm 相关文档](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#lighthouse)：
+
+```shell
+#导入验证器密钥
+lighthouse-kl account validator import --directory=/home/ethereum/validator_keys --datadir=/home/ethereum/.lh-geth/kiln/testnet-lh
+
+#设置收款地址地址
+sudo sed -i ‘<ETH_ADDRESS>’ /etc/ethereum/kiln/lh-geth-validator.conf
+
+#启动验证器
+sudo systemctl start lh-geth-validator
 ```
 
-共识客户端：
-
-```bash
-sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
-sudo systemctl start lighthouse && sudo systemctl enable lighthouse
-```
-
-## 更改参数 {#changing-parameters}
-
-客户端的配置文件位于/etc/ethereum/目录中。 您可以编辑这些文件，并重启 systemd 服务，以使更改生效。 唯一的例外是 Nethermind，它还有一个在以下位置的主网配置文件：
-
-```bash
-/etc/nethermind/configs/mainnet.cfg
-```
-
-区块链客户端的数据存储在以太坊主帐户上，如下所示（注意目录名称前的点）。
-
-### 执行层 {#execution-layer}
-
-```bash
-/home/ethereum/.geth
-/home/ethereum/.parity
-/home/ethereum/.besu
-/home/ethereum/.nethermind
-```
-
-### 共识层 {#consensus-layer}
-
-```bash
-/home/ethereum/.eth2
-/home/ethereum/.eth2validators
-/home/ethereum/.lighthouse
-```
-
-## Nethermind 和 Hyperledger Besu {#nethermind-and-hyperledger-besu}
-
-这两个出色的执行层客户端已经成为 Geth 和 Parity 的绝佳替代方案。 网络的多样性越多越好，所以您可以试一试，为网络健康作出贡献。
-
-两者都需要进一步的测试，所以请随时使用它们并报告您的反馈。
-
-## 如何运行共识验证器（质押） {#validator}
-
-Prater 测试网信标链同步后，您便可以在同一设备中运行验证器。 您需要遵循[这些参与步骤](https://prylabs.net/participate)。
-
-第一次，您需要通过运行 "验证器 "二进制文件手动创建一个帐户，并设置一个密码。 一旦您完成了这一步，就可以将密码添加到`/etc/ethereum/prysm-validator.conf`，并将验证器作为一个 systemd 服务启动。
+恭喜，你现在拥有运行在树莓派上的以太坊全节点和验证者！
 
 ## 感谢反馈 {#feedback-appreciated}
 
-我们投入了大量的工作，试图将 Raspberry Pi 4 设置为一个完整的以太坊节点，因为我们知道这个设备的庞大用户群可能对网络产生非常积极的影响。
+我们知道树莓派拥有庞大的用户群体，能对以太坊网络的健康产生非常积极的影响。 请深入了解本教程中的详细信息，尝试在其他测试网甚至以太坊主网上运行，查看 Ethereum on Arm GitHub，提供反馈，提出问题并拉取请求，并帮助改进技术和相关文档！
 
-请考虑到这是基于 Ubuntu 20.04 的第一个映像，所以可能会有一些错误。 如果确实出现了错误，请在 [GitHub](https://github.com/diglos/ethereumonarm) 上开一个 issue 或在 [Twitter](https://twitter.com/EthereumOnARM) 上联系我们。
+## 参考文献 {#references}
 
-## 参考： {#references}
-
-1. [Geth 反复出现 SIGSEGV 崩溃](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
-3. https://ubuntu.com/download/raspberry-pi
-4. https://wikipedia.org/wiki/Port_forwarding
-5. https://prometheus.io
-6. https://grafana.com
-7. https://forum.armbian.com/topic/5565-zram-vs-swap/
-8. https://geth.ethereum.org
-9. https://github.com/openethereum/openethereum \* **注意，OpenEthereum [已经废弃](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并停止维护。**请谨慎使用，最好切换至其他客户端实现。
-10. https://nethermind.io
-11. https://www.hyperledger.org/projects/besu
-12. https://github.com/prysmaticlabs/prysm
-13. https://lighthouse.sigmaprime.io
-14. https://ethersphere.github.io/swarm-home
-15. https://raiden.network
-16. https://ipfs.io
-17. https://status.im
-18. https://vipnode.org
+1. https://ubuntu.com/download/raspberry-pi
+2. https://wikipedia.org/wiki/Port_forwarding
+3. https://prometheus.io
+4. https://grafana.com
+5. https://forum.armbian.com/topic/5565-zram-vs-swap/
+6. https://geth.ethereum.org
+7. https://nethermind.io
+8. https://www.hyperledger.org/projects/besu
+9. https://github.com/prysmaticlabs/prysm
+10. https://lighthouse.sigmaprime.io
+11. https://ethersphere.github.io/swarm-home
+12. https://raiden.network
+13. https://ipfs.io
+14. https://status.im
+15. https://vipnode.org

@@ -2,7 +2,6 @@
 title: Standardy tokenów
 description:
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

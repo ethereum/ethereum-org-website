@@ -6,12 +6,10 @@ tags:
   - "NFT"
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
   - "token yang tidak dapat dipertukarkan"
   - "Solidity"
 skill: beginner
 lang: id
-sidebar: true
 published: 2021-04-22
 ---
 

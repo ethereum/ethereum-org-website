@@ -2,7 +2,6 @@
 title: Validium
 description: Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak Validium'a giriş.
 lang: tr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

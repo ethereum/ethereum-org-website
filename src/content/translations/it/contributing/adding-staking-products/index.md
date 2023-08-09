@@ -2,14 +2,13 @@
 title: Aggiungere prodotti o servizi di staking
 description: La politica che usiamo quando aggiungiamo prodotti o servizi di staking a ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Aggiungere prodotti o servizi di staking {#adding-staking-products-or-services}
 
 Vogliamo assicurarci di elencare le migliori risorse possibili, mantenendo gli utenti al sicuro.
 
-Chiunque è libero di suggerire e aggiungere prodotti o servizi di staking su ethereum.org. Se ce ne siamo dimenticati uno, **[sei pregato di suggerirlo](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md)!**
+Chiunque è libero di suggerire e aggiungere prodotti o servizi di staking su ethereum.org. Se ce ne siamo dimenticati uno, **[ti invitiamo a suggerirlo](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service)!**
 
 Attualmente, elenchiamo i prodotti e i servizi di staking sulle seguenti pagine:
 
@@ -97,7 +96,7 @@ Per gli [elenchi di staking come servizio](/staking/saas/) (es. operazione del n
 - Qual è la struttura tariffaria, ad esempio vi è un canone mensile per il servizio?
 - Ulteriori requisiti per lo staking?
 
-**Gli utenti sono tenuti a registrarsi per un account?**
+**Gli utenti sono tenuti a registrarsi per un conto?**
 
 - Qualcuno può usare il servizio senza permessi o KYC?
 - Questo serve a determinare il punteggio "senza permessi" dei prodotti.
@@ -167,6 +166,6 @@ La logica del codice e le ponderazioni per questi criteri sono attualmente conte
 
 Se desideri aggiungere un prodotto o servizio di staking su ethereum.org, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service">
   Crea un ticket
 </ButtonLink>

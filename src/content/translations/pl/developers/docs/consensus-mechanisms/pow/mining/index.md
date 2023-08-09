@@ -2,7 +2,6 @@
 title: Wydobywanie
 description: Wyjaśnienie jak działa wydobycie w Ethereum i jak pomaga utrzymać Ethereum bezpieczne i zdecentralizowane.
 lang: pl
-sidebar: true
 incomplete: true
 ---
 
@@ -44,8 +43,6 @@ Zobacz, jak Austin poprowadzi Cię przez wydobycie i blockchain typu „proof-of
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## Dalsza lektura {#further-reading}
-
-- [Co to znaczy kopać Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
 ## Powiązane narzędzia {#related-tools}
 

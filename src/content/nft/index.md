@@ -4,23 +4,21 @@ description: An overview of NFTs on Ethereum
 lang: en
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/infrastructure_transparent.png
 alt: An Eth logo being displayed via hologram.
 summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
 summaryPoint2: NFTs are giving more power to content creators than ever before.
 summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
-preMergeBanner: true
 ---
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
 
-If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Kanye puts a run of Yeezys on Ethereum. And one day owning your car might be proved with an NFT.
+If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Nike puts a run of Jordans on Ethereum. And one day owning your car might be proved with an NFT.
 
 ## What's an NFT? {#what-are-nfts}
 
-NFTs are tokens that we can use to represent ownership of unique items. They let us tokenise things like art, collectibles, even real estate. They can only have one official owner at a time and they're secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
+NFTs are tokens that we can use to represent ownership of unique items. They let us tokenize things like art, collectibles, even real estate. Ownership of an asset is secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
 
 NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not interchangeable for other items because they have unique properties.
 
@@ -43,7 +41,7 @@ Here's how an internet of NFTs compared to the internet most of us use today loo
 | NFTs are compatible with anything built using Ethereum. An NFT ticket for an event can be traded on every Ethereum marketplace, for an entirely different NFT. You could trade a piece of art for a ticket! | Companies with digital items must build their own infrastructure. For example an app that issues digital tickets for events would have to build their own ticket exchange. |
 | Content creators can sell their work anywhere and can access a global market.                                                                                                                               | Creators rely on the infrastructure and distribution of the platforms they use. These are often subject to terms of use and geographical restrictions.                     |
 | Creators can retain ownership rights over their own work, and claim resale royalties directly.                                                                                                              | Platforms, such as music streaming services, retain the majority of profits from sales.                                                                                    |
-| Items can be used in surprising ways. For example, you can use digital artwork as collateral in a decentralised loan.                                                                                       |                                                                                                                                                                            |
+| Items can be used in surprising ways. For example, you can use digital artwork as collateral in a decentralized loan.                                                                                       |                                                                                                                                                                            |
 
 ### NFT examples {#nft-examples}
 
@@ -96,7 +94,7 @@ NFTs are different from ERC-20 tokens, such as DAI or LINK, in that each individ
   - Signatures
 - Lots and lots more options to get creative with!
 
-An NFT can only have one owner at a time. Ownership is managed through the uniqueID and metadata that no other token can replicate. NFTs are minted through smart contracts that assign ownership and manage the transferability of the NFT's. When someone creates or mints an NFT, they execute code stored in smart contracts that conform to different standards, such as ERC-721. This information is added to the blockchain where the NFT is being managed. The minting process, from a high level, has the following steps that it goes through:
+Ownership of NFTs is managed through the unique ID and metadata that no other token can replicate. NFTs are minted through smart contracts that assign ownership and manage the transferability of the NFT's. When someone creates or mints an NFT, they execute code stored in smart contracts that conform to different standards, such as [ERC-721](/developers/docs/standards/tokens/erc-721/). This information is added to the blockchain where the NFT is being managed. The minting process, from a high level, has the following steps that it goes through:
 
 - Creating a new block
 - Validating information
@@ -155,6 +153,7 @@ Here's more information of some of the better developed use-cases and visions fo
 - [Domain names](#nft-domains)
 - [Physical items](#nft-physical-items)
 - [Investments and collateral](#nfts-and-defi)
+- [Tokengating](#tokengating)
 
 <Divider />
 
@@ -259,7 +258,7 @@ This is still experimental but you can learn more about fractional NFT ownership
 - [NIFTEX](https://landing.niftex.com/)
 - [NFTX](https://gallery.nftx.org/)
 
-In theory, this would unlock the possibility to do things like own a piece of a Picasso. You would become a shareholder in a Picasso NFT, meaning you would have a say in things like revenue sharing. It's very likely that one day soon owning a fraction of an NFT will enter you into a decentralised autonomous organisation (DAO) for managing that asset.
+In theory, this would unlock the possibility to do things like own a piece of a Picasso. You would become a shareholder in a Picasso NFT, meaning you would have a say in things like revenue sharing. It's very likely that one day soon owning a fraction of an NFT will enter you into a decentralized autonomous organisation (DAO) for managing that asset.
 
 These are Ethereum-powered organisations that allow strangers, like global shareholders of an asset, to coordinate securely without necessarily having to trust the other people. That's because not a single penny can be spent without group approval.
 
@@ -275,6 +274,24 @@ Companies offering fake certificates for university degrees are reportedly a bil
 
 <Divider />
 
+### Tokengating {#tokengating}
+
+Tokengating is a way of restricting access to something and using NFTs as a way to unlock access. These things can vary hugely based on the platform but popular examples are gated content, private chat servers, and, in the world of ecommerce, exclusive products.
+
+A platform that does tokengating will typically ask you to connect your wallet to prove you own the required NFT. If you have the NFT you need, you'll get access. If not, the thing will remain gated. NFTs are a great way to do this because of their uniqueness – you can't fake ownership to get the thing.
+
+Since NFTs are on Ethereum, they can be used to unlock Ethereum tokengates on any platform that implements them. A single NFT you own could unlock gated content, private chat servers, and exclusive products across completely different websites and applications.
+
+If minting and distributing NFTs is about community-generation or community digitization, tokengating is about community nurturing. It sees NFTs used more as a tool for membership or loyalty – and a great way to reliably deliver the rewards that come with it.
+
+#### Examples
+
+- [Collab.land](https://collab.land/) tokengates Discord chat servers or Telegram groups
+- [Unlock protocol](https://unlock-protocol.com/) is a protocol for tokengating
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) has a growing roster of apps that let merchants tokengate access to products and discounts
+
+<Divider />
+
 ## Ethereum and NFTs {#ethereum-and-nfts}
 
 Ethereum makes it possible for NFTs to work for a number of reasons:
@@ -287,15 +304,9 @@ Ethereum makes it possible for NFTs to work for a number of reasons:
 
 ## The environmental impact of NFTs {#environmental-impact-nfts}
 
-NFTs are growing in popularity which means they're also coming under increased scrutiny – especially over their carbon footprint.
+Creating and transferring NFTs are just Ethereum transactions - minting, buying, swapping or interacting with NFTs does not directly consume energy. Since [The Merge](/roadmap/merge), Ethereum is a low-energy blockchain, meaning the environmental impact of using NFTs is negligible.
 
-To clarify a few things:
-
-- NFTs aren't directly increasing the carbon footprint of Ethereum.
-- The way Ethereum keeps your funds and assets secure is currently energy-intensive but it's about to improve.
-- Once improved, Ethereum's carbon footprint will be 99.95% better, making it more energy efficient than many existing industries.
-
-To explain further we're going to have to get a little more technical so bear with us...
+[More on Ethereum's energy consumption](/energy-consumption/).
 
 ### Don't blame it on the NFTs {#nft-qualities}
 
@@ -305,72 +316,32 @@ Decentralized meaning you and everyone else can verify you own something. All wi
 
 Secure meaning no one can copy/paste your NFT or steal it.
 
-These qualities of Ethereum makes digitally owning unique items and getting a fair price for your content possible. But it comes at a cost. Blockchains like Bitcoin and Ethereum are energy intensive right now because it takes a lot of energy to preserve these qualities. If it was easy to rewrite Ethereum's history to steal NFTs or cryptocurrency, the system collapses.
+These qualities of Ethereum makes digitally owning unique items and getting a fair price for your content possible. Ethereum protects the assets using a decentralized consensus mechanism which involves ['proof-of-stake'](/developers/docs/consensus-mechanisms/pos). This is a low carbon method to determine who can add a block of transactions to the chain, and is considered more secure than the energy-intensive alternative, ['proof-of-work'](/developers/docs/consensus-mechanisms/pow). NFTs have been associated with high energy expenditure because Ethereum used to be secured using proof-of-work. This is no longer true.
 
-#### The work in minting your NFT {#minting-nfts}
+#### Minting NFTs {#minting-nfts}
 
 When you mint an NFT, a few things have to happen:
 
 - It needs to be confirmed as an asset on the blockchain.
 - The owner's account balance must be updated to include that asset. This makes it possible for it to then be traded or verifiably "owned".
-- The transactions that confirm the above need to be added to a block and "immortalised" on the chain.
-- The block needs to be confirmed by everyone in the network as "correct". This consensus removes the need for intermediaries because the network agrees that your NFT exists and belongs to you. And it's on chain so anyone can check it. This is one of the ways Ethereum helps NFT creators to maximise their earnings.
+- The transactions that confirm the above need to be added to a block and "immortalized" on the chain.
+- The block needs to be confirmed by everyone in the network as "correct". This consensus removes the need for intermediaries because the network agrees that your NFT exists and belongs to you. And it's on chain so anyone can check it. This is one of the ways Ethereum helps NFT creators to maximize their earnings.
 
-All these tasks are done by miners. And they let the rest of the network know about your NFT and who owns it. This means mining needs to be sufficiently difficult, otherwise anyone could just claim that they own the NFT you just minted and fraudulently transfer ownership. There are lots of incentives in place to make sure miners are acting honestly.
+All these tasks are done by block producers and validators. Block proposers add your NFT transaction to a block and broadcast it to the rest of the network. Validators check that the transaction is valid and then add it to their databases. There are lots of crypto-economic incentives in place to make sure validators are acting honestly. Otherwise, anyone could just claim that they own the NFT you just minted and fraudulently transfer ownership.
 
-[More on mining](/developers/docs/consensus-mechanisms/pow/)
+#### NFT security {#nft-security}
 
-#### Securing your NFT with mining {#securing-nfts}
+Ethereum's security comes from proof-of-stake. The system is designed to economically disincentivize malicious actions, making Ethereum tamper-proof. This is what makes NFTs possible. Once the block containing your NFT transaction becomes finalized it would cost an attacker millions of ETH to change it. Anyone running Ethereum software would immediately be able to detect dishonest tampering with an NFT, and the bad actor would be economically penalized and ejected.
 
-Mining difficulty comes from the fact that it takes a lot of computing power to create new blocks in the chain. Importantly, blocks are created consistently, not just when they're needed. They're created every 12 seconds or so.
+Security issues relating to NFTs are most often related to phishing scams, smart contract vulnerabilities or user errors (such as inadvertently exposing private keys), making good wallet security critical for NFT owners.
 
-This is important for making Ethereum tamper-proof, one of the qualities that makes NFTs possible. The more blocks the more secure the chain. If your NFT was created in block #600 and a hacker were to try and steal your NFT by modifying its data, the digital fingerprint of all subsequent blocks would change. That means anyone running Ethereum software would immediately be able to detect and prevent it from happening.
-
-However this means that computing power needs to be used constantly. It also means that a block that contains 0 NFT transactions will still have roughly the same carbon footprint, because computing power will still be consumed to create it. Other non-NFT transactions will fill the blocks.
-
-#### Blockchains are energy intensive, right now {#blockchains-intensive}
-
-So yes, there is a carbon footprint associated with creating blocks by mining – and this is a problem for chains like Bitcoin too – but it's not directly the fault of NFTs.
-
-A lot of mining uses renewable energy sources or untapped energy in remote locations. And there is the argument that the industries that NFTs and cryptocurrencies are disrupting have huge carbon footprints too. But just because existing industries are bad, doesn't mean we shouldn't strive to be better.
-
-And we are. Ethereum is evolving to make using Ethereum (and by virtue, NFTs) more energy efficient. And that's always been the plan.
-
-We're not here to defend the environmental footprint of mining, instead we want to explain how things are changing for the better.
-
-### A greener future... {#a-greener-future}
-
-For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible. [More on Ethereum's vision](/upgrades/vision/)
-
-This vision is being delivered right now.
-
-#### A greener Ethereum {#greener-ethereum}
-
-Ethereum is currently going through a series of upgrades that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.95%<sup>[^1]</sup>. In this world, stakers commit funds instead of computing power to secure the network.
-
-The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 525kWh per year. That's 5,250,000kWh<sup>[^1]</sup> per year for the entire network.
-
-We can use this to compare the future of Ethereum to a global service like Visa. 100,000 Visa transactions uses 149kWh of energy<sup>[^2]</sup>. In proof-of-stake Ethereum, that same number of transactions would cost 17.4kWh of energy or ~11% of the total energy<sup>[^3]</sup>. That's without considering the many optimizations being worked on in parallel to the consensus layer and shard chains, like [rollups](/glossary/#rollups). It could be as little as 0.1666666667kWh of energy for 100,000 transactions.
-
-Importantly this improves the energy efficiency while preserving Ethereum's decentralization and security. Many other blockchains out there might already use some form of staking, but they're secured by a select few stakers, not the thousands that Ethereum will have. The more decentralization, the more secure the system.
-
-[More on energy estimates](#footnotes-and-sources)
-
-_We’ve provided the basic comparison to Visa to baseline your understanding of proof-of-stake Ethereum energy consumption against a familiar name. However, in practice, it’s not really correct to compare based on number of transactions. Ethereum’s energy output is time-based. If Ethereum did more or less transactions from one minute to the next, the energy output would stay the same._
-
-_It’s also important to remember that Ethereum does more than just financial transactions, it’s a platform for applications, so a fairer comparison might be to many companies/industries including Visa, AWS and more!_
-
-#### Timelines {#timelines}
-
-The process has already started. [The Beacon Chain](/upgrades/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen sometime in 2022. This process is known as The Merge (formerly referred to as the docking). [More on The Merge](/upgrades/merge/).
-
-<ButtonLink to="/upgrades/">
-  More on Ethereum upgrades
+<ButtonLink to="/security/">
+  More on security
 </ButtonLink>
 
 ## Build with NFTs {#build-with-nfts}
 
-Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there are other standards that you might want to look into. The [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standard allows for semi-fungible tokens which is particularly useful in the realm of gaming. And more recently, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) has been proposed to make minting NFTs a lot more efficient. This standard lets you mint as many as you like in one transaction!
+Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there are other standards that you might want to look into. The [ERC-1155](/developers/docs/standards/tokens/erc-1155/) standard allows for semi-fungible tokens which is particularly useful in the realm of gaming. And more recently, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) has been proposed to make minting NFTs a lot more efficient. This standard lets you mint as many as you like in one transaction!
 
 ## Further reading {#further-reading}
 
@@ -379,71 +350,7 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 - [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, January 2020_
 - [Everything you need to know about the metaverse](https://foundation.app/blog/enter-the-metaverse) – _Foundation team, foundation.app_
 - [No, CryptoArtists Aren’t Harming the Planet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
-- [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, May 18 2021_
+- [Ethereum's energy consumption](/energy-consumption/)
+- [Ethereum NFT APIs](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
-<Divider />
-
-### Footnotes and sources {#footnotes-and-sources}
-
-This explains how we arrived at our energy estimates above. These estimates apply to the network as a whole and are not just reserved for the process of creating, buying, or selling NFTs.
-
-#### 1. 99.95% energy reduction from mining {#fn-1}
-
-The 99.95% reduction in energy consumption from a system secured by mining to a system secured by staking is calculated using the following data sources:
-
-- 44.49 TWh of annualized electrical energy is consumed by mining Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
-
-- The average desktop computer, all that's needed to run proof-of-stake, uses 0.06kWh of energy per hour – [Silicon Valley power chart](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Some estimates are a little higher at 0.15kWh)
-
-At the time of writing, there are 140 592 validators from 16 405 unique addresses.
-Of those, 87 897 validators are assumed to be staking from home.
-
-It is assumed the average person staking from home uses a 100 watt desktop personal computer setup to run an average of 5.4 validator clients.
-
-The 87 897 validators running from home gives us 16 300 users consuming ~1.64 megawatt of energy.
-
-The rest of the validators are run by custodial stakers such as exchanges and staking services.
-It can be assumed that they use 100w per 5.5 validators. This is a gross overestimation to be on the safe side.
-
-In total, Ethereum on proof-of-stake therefore consumes something on the order of 2.62 megawatt, which is about the same as a small American town.
-
-This is a reduction of at least 99.95% in total energy usage from the Digiconomist estimate of 44.94 TWh per year that the Ethereum miners currently consume.
-
-#### 2. Visa energy consumption {#fn-2}
-
-The cost of 100,000 Visa transactions is 149 kwH - [Bitcoin network average energy consumption per transaction compared to VISA network as of 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
-
-Year-ending September 2020 they processed 140,839,000,000 transactions – [Visa financials report Q4 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
-
-#### 3. Energy usage for 100,000 transactions on a sharded proof-of-stake network {#fn-3}
-
-It's estimated that scalability upgrades will allow the network to process between 25,000 and 100,000 transactions per second, with [100,000 as the theoretical maximum right now](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
-
-[Vitalik Buterin on transactions per second potential with sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
-
-At the bare minimum, sharding will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/upgrades/sharding/)
-
-That means we can estimate how long it will take to process 100,000 transactions so we can compare it to the Visa example above.
-
-- `15 * 64 = 960` transactions per second.
-- `100,000 / 960 = 104.2` seconds to process 100,000 transactions.
-
-In 104.2 seconds, the Ethereum network will use the following amount of energy:
-
-`1.44kWh daily usage * 10,000 network nodes = 14,400kWh` per day.
-
-There are 86,400 seconds in a day, so `14,400 / 86,400 = 0.1666666667kWh` per second.
-
-If we multiply that by the amount of time it takes to process 100,000 transaction: `0.1666666667 * 104.2 = 17.3666666701 kWh`.
-
-That is **11.6554809866%** of the energy consumed by the same amount of transactions on Visa.
-
-And remember, this is based on the minimum amount of transactions that Ethereum will be able to handle per second. If Ethereum reaches its potential of 100,000 transactions per second, 100,000 transactions would consume 0.1666666667kWh.
-
-To put it another way, if Visa handled 140,839,000,000 transactions at a cost of 149 kWh per 100,000 transactions that's 209,850,110 kWh energy consumed for the year.
-
-Ethereum in a single year stands to consume 5,256,000 kWh. With a potential of 788,940,000,000 - 3,153,600,000,000 transactions processed in that time.
-
-<InfoBanner emoji=":evergreen_tree:">
-  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR. These are estimates by the ethereum.org team made using publicly accessible information and the planned Ethereum design. This doesn't represent an official promise from the Ethereum Foundation.
-</InfoBanner>
+<QuizWidget quizKey="nfts" />

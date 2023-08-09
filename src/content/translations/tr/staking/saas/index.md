@@ -4,7 +4,6 @@ description: Havuzlanmış ETH faiz getirisi elde etmeye nasıl başlanacağına
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-saas.png
 alt: Gergedan Leslie bulutlarda dalgalanıyor.
 sidebarDepth: 2
@@ -70,27 +69,13 @@ Kaçırdığımız bir hizmet sağlayıcı olarak staking için bir öneriniz mi
 </ExpandableCard>
 
 <ExpandableCard title="Yani iki anahtar seti mi var?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Evet. Her hesap hem <em>imzalama</em> anahtarlarından hem de <em>para çekme</em> anahtarlarından oluşur. Bir doğrulayıcının zincirin durumunu onaylaması, senkronizasyon komitelerine katılması ve blok önermesi için, imzalama anahtarlarına bir doğrulayıcı istemcisi tarafından kolayca erişilebilir. Bunların bir şekilde internete bağlı olması gerekir ve bu nedenle doğal olarak "kısayol" tuşları olarak kabul edilirler. Bu, doğrulayıcınızın onaylayabilmesi için bir gerekliliktir ve bu nedenle, para transfer etmek veya çekmek için kullanılan anahtarlar güvenlik nedeniyle ayrılmıştır.
+Evet. Her hesap hem <em>imzalama</em> anahtarlarından hem de <em>para çekme</em> anahtarlarından oluşur. Doğrulayıcının zincirin durumunu tasdik etmesi, eşitleme kurullarına katılması ve bloklar önermesi için imzalama anahtarlarına, bir doğrulayıcı müşterisi tarafından kolayca erişilebilir olmalıdır. Bunların bir şekilde internete bağlı olması gerekir ve bu nedenle doğal olarak "kısayol" tuşları olarak kabul edilirler. Bu, doğrulayıcınızın onaylayabilmesi için bir gerekliliktir ve bu nedenle, para transfer etmek veya çekmek için kullanılan anahtarlar güvenlik nedeniyle ayrılmıştır.
 
 Bu anahtarların tümü, 24 kelimelik mnemonik güvenlik kelimelerinizi kullanılarak her zaman tekrarlanabilir bir şekilde yeniden oluşturulabilir. <em>Bu tohum ifadesini güvenli bir şekilde yedeklediğinizden emin olun, aksi takdirde zamanı geldiğinde para çekme anahtarlarınızı oluşturamazsınız</em>.
 </ExpandableCard>
 
 <ExpandableCard title="Ne zaman geri çekebilirim?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  Bir SaaS sağlayıcısıyla 32 ETH stake ettiğinizde, bu ETH hala resmi stake depozito sözleşmesine yatırılır. Bu nedenle, SaaS stakerları şu anda solo stakerlarla aynı para çekme kısıtlamalarıyla sınırlıdır. Bu, ETH'nizi stake etmenin şu anda tek yönlü bir depozito olduğu anlamına gelir. Bu, Birleşmeyi takip etmesi planlanan Şanghay yükseltmesine kadar böyle olacak.
-</ExpandableCard>
-
-<ExpandableCard title="Birleştirme ile neler değişecek?" eventCategory="SaasStaking" eventName="clicked what will change with the Merge">
-  Birleştirmeden sonra, SaaS stakerları, yanmamış işlem ücretlerini/ipuçlarını almaya başlayacaktır. Ayarlarınızı, zamanı geldiğinde bu fonların nereye gönderileceğini sizin kontrol ettiğiniz bir Ethereum adresini içerecek şekilde nasıl güncelleyeceğinizi belirlemek için sağlayıcınıza danışın.
-
-Birleşim, payınızı veya protokol ödüllerinizi geri çekmenizi <em>sağlamayacak</em>; Bu özellik, Birleşim'i yaklaşık altı ay ile bir yıl arasında takip edecek olan Şanghay yükseltmesi için planlanmıştır.
-</ExpandableCard>
-
-<ExpandableCard title="SaaS paydaşlarının Birleşim için bir şey yapması gerekiyor mu?">
-SaaS paydaşlarının Birleşim'e hazırlanmak için <strong>hiçbir şey yapmasına gerek yok</strong>.
-
-Düğüm operatörlerinin bu yükseltme için dikkat etmesi gereken birkaç husus vardır. Sistemlerinin kullanıma hazır olduğundan emin olmak için hisseleme sağlayıcınızla görüşün.
-
-[Birleşme](/yükseltmeler/birleşme/) hakkında daha fazla bilgi edinin
+  Bir SaaS sağlayıcısıyla 32 ETH stake ettiğinizde, bu ETH hala resmi stake depozito sözleşmesine yatırılır. Bu nedenle, SaaS stakerları şu anda solo stakerlarla aynı para çekme kısıtlamalarıyla sınırlıdır. Bu, ETH'nizi stake etmenin şu anda tek yönlü bir depozito olduğu anlamına gelir. Durum, Şanghay yükseltmesine kadar böyle olacak.
 </ExpandableCard>
 
 <ExpandableCard title="Kesik yersem ne olur?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

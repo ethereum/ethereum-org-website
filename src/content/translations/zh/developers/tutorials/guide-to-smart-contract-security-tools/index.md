@@ -3,14 +3,13 @@ title: 智能合约安全工具指南
 description: 三种不同的测试和程序分析技术概述
 author: "Trailofbits"
 lang: zh
-sidebar: true
 tags:
   - "solidity"
-  - "智能合约"
+  - "智能合同"
   - "安全性"
 skill: intermediate
 published: 2020-09-07
-source: 构建安全合约
+source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 
@@ -54,8 +53,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 - [快速风险评估](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html)（时间紧迫时我们的首选方法）
 - [数据中心系统威胁建模指南](https://csrc.nist.gov/publications/detail/sp/800-154/draft) (aka NIST 800-154)
 - [Shostack 线程建模](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
-- [STRIDE](<https://en.wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://en.wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
-- [PASTA](https://en.wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
+- [STRIDE](<https://wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
+- [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [使用断言](https://blog.regehr.org/archives/1091)
 
 ### 组件 {#components}
@@ -68,7 +67,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
   - Echidna 和 Manticore 是测试状态机规范的首选工具。
 
-- **访问控制**。如果您的系统有特权用户（例如负责人、控制人等），您必须确保：(1) 每个用户只能执行授权操作，并且 (2) 没有用户可以阻止拥有更多特权的用户的操作。
+- **访问控制。**如果您的系统有特权用户（例如所有者、监管者等），您必须确保 (1) 每个用户只能执行授权操作，并且 (2) 没有用户可以阻止权限更大的用户的操作。
 
   - Slither、Echidna 和 Manticore 都可以检查访问控制正确与否。 例如，Slither 可以检查是否只有白名单上的函数缺少 onlyOwner 修饰符。 Echidna 和 Manticore 可用于更复杂的访问控制，例如仅当合约达到给定状态时才授予权限。
 
@@ -85,18 +84,18 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
   - Manticore 和 Echidna 是测试您的合约外部互动的最佳选择。 Manticore 有一个内置机制来存留外部合约。
 
 - **标准一致性**。 以太坊标准（例如 ERC20）记录了他们在设计上的缺陷。 请注意您正在构建的标准的局限性。
-  - Slider、Echidna 和 Manticore 可以帮助您发现偏离特定标准的情况。
+  - Slither、Echidna 和 Manticore 可以帮助您发现偏离特定标准的情况。
 
 ### 工具选择备忘清单 {#tool-selection-cheatsheet}
 
-| 组件         | 工具                        | 示例                                                                                                                                                                                                                                                             |
-| ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 状态机       | Echidna、Manticore          |                                                                                                                                                                                                                                                                  |
-| 访问控制     | Slither、Echidna、Manticore | [Slither 练习 2](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/slither/exercise2.md)、[Echidna 练习 2](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-2.md)      |
-| 算术运算     | Manticore、Echidna          | [Echidna 练习 1](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-1.md)、[Manticore 练习 1 - 3](https://github.com/trailofbits/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
-| 继承的正确性 | Slither                     | [Slither 练习 1](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/slither/exercise1.md)                                                                                                                                     |
-| 外部交互     | Manticore、Echidna          |                                                                                                                                                                                                                                                                  |
-| 标准一致性   | Slither、Echidna、Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                          |
+| 组件         | 工具                        | 示例                                                                                                                                                                                                                                                   |
+| ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 状态机       | Echidna、Manticore          |                                                                                                                                                                                                                                                        |
+| 访问控制     | Slither、Echidna、Manticore | [Slither 练习 2](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/slither/exercise2.md)、[Echidna 练习 2](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-2.md)      |
+| 算术运算     | Manticore、Echidna          | [Echidna 练习 1](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-1.md)、[Manticore 练习 1 - 3](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
+| 继承的正确性 | Slither                     | [Slither 练习 1](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/slither/exercise1.md)                                                                                                                                |
+| 外部交互     | Manticore、Echidna          |                                                                                                                                                                                                                                                        |
+| 标准一致性   | Slither、Echidna、Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                |
 
 其他领域需要根据您的目标进行检查， 但以上囊括的大致重点领域对于所有智能合约系统来说都是一个良好的开端。
 

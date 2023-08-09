@@ -2,7 +2,6 @@
 title: Ethereum for .NET developers
 description: Learn how to develop for Ethereum using .NET-based projects and tooling
 lang: en
-sidebar: true
 incomplete: true
 ---
 
@@ -69,7 +68,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen with UI in Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _A .NET Wasm SPA light blockchain explorer and simple wallet_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _A business rules engine (for both the .NET platform and the Ethereum platform) that is inherently metadata-driven_
-- [Nethermind](https://github.com/NethermindEth/nethermind) - _A .NET Core Ethereum client for Linux, Windows, MacOs_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _A .NET Core Ethereum client for Linux, Windows, MacOS_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Pre-configured .NET devchains for fast response (PoA)_
 
@@ -77,7 +76,7 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
 ## .NET community contributors {#dot-net-community-contributors}
 
-At Nethereum, we mostly hang out on [Gitter](https://gitter.im/Nethereum/Nethereum) where everyone is welcome to ask/answer questions, get help, or just chill. Feel free to do a PR or open an issue on the [Nethereum GitHub repository](https://github.com/Nethereum), or just to browse through the many side/sample projects we have. You can also find us on [Discord](https://discord.gg/jQPrR58FxX)!
+At Nethereum, we mostly hang out on [Gitter](https://gitter.im/Nethereum/Nethereum) where everyone is welcome to ask/answer questions, get help, or just chill. Feel free to do a PR or open an issue on the [Nethereum GitHub repository](https://github.com/Nethereum), or just browse through the many side/sample projects we have. You can also find us on [Discord](https://discord.gg/jQPrR58FxX)!
 
 If you are new to Nethermind and need help getting started, join our [Discord](http://discord.gg/PaCMRFdvWT). Our developers are on hand to answer your questions. Don't hesitate to open a PR or raise any issues on the [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
 

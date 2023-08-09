@@ -2,7 +2,6 @@
 title: Handelsplätze hinzufügen
 description: Richtlinien für das Hinzufügen von Handelsplätzen auf ethereum.org
 lang: de
-sidebar: true
 ---
 
 # Ethereum-Handelsplätze hinzufügen {#adding-ethereum-exchanges}
@@ -37,5 +36,5 @@ Außerdem sind diese Informationen die Grundlage, dass ethereum.org darauf vertr
 Wenn Sie eine Börse zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-  Eintrag erstellen
+  Ein Thema erstellen
 </ButtonLink>

@@ -2,7 +2,6 @@
 title: Penjelajah blok
 description: Pengantar tentang penjelajah blok, portal Anda ke dunia data blockchain, di mana Anda dapat membuat kueri informasi tentang transaksi, akun, kontrak, dan banyak lagi.
 lang: id
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -152,7 +151,7 @@ Tentu ada beberapa data yang berbicara tentang kesehatan jaringan. Ini cukup spe
 
 Peningkatan skalabilitas masih dalam pengembangan, tetapi rasanya layak membicarakan tentang beberapa poin data yang dapat disediakan oleh penjelajah. Sebenarnya, semua data ini tersedia saat ini dalam testnet.
 
-Jika Anda belum terbiasa dengan road map, lihat [gambaran umum kami tentang peningkatan Ethereum](/upgrades/).
+Jika Anda belum terbiasa dengan road map, lihat [gambaran umum kami tentang peningkatan Ethereum](/roadmap/).
 
 ### Epoch {#epoch}
 

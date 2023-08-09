@@ -3,7 +3,6 @@ title: "Downsizing contracts to fight the contract size limit"
 description: What can you do to prevent your smart contracts from getting too large?
 author: Markus Waas
 lang: en
-sidebar: true
 tags: ["solidity", "smart contracts", "storage", "truffle"]
 skill: intermediate
 published: 2020-06-26
@@ -19,7 +18,7 @@ On [November 22, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spuri
 
 This limit was introduced to prevent denial-of-service (DOS) attacks. Any call to a contract is relatively cheap gas-wise. However, the impact of a contract call for Ethereum nodes increases disproportionately depending on the called contract code's size (reading the code from disk, pre-processing the code, adding data to the Merkle proof). Whenever you have such a situation where the attacker requires few resources to cause a lot of work for others, you get the potential for DOS attacks.
 
-Originally this was less of a problem, because one natural contract size limit is the block gas limit. Obviously a contract needs to be deployed within a transaction that holds all of the contract's bytecode. If you then include only that one transaction into a block, you can use up all of that gas, but it's not infinite. The issue in that case though is that the block gas limit changes over time and is in theory unbounded. At the time of the EIP-170 the block gas limit was only 4.7 million. Now the block gas limit just [increased again](https://etherscan.io/chart/gaslimit) last month to 11.9 million.
+Originally this was less of a problem because one natural contract size limit is the block gas limit. Obviously, a contract must be deployed within a transaction that holds all of the contract's bytecode. If you include only that one transaction into a block, you can use up all that gas, but it's not infinite. Since the [London Upgrade](/history/#london), the block gas limit has been able to vary between 15M and 30M units depending on network demand.
 
 ## Taking on the fight {#taking-on-the-fight}
 
@@ -92,6 +91,18 @@ require(msg.sender == owner, "Only the owner of this contract can call this func
 require(msg.sender == owner, "OW1");
 ```
 
+### Use custom errors instead of error messages
+
+Custom errors have been introduced in [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). They are a great way to reduce the size of your contracts, because they are ABI-encoded as selectors (just like functions are).
+
+```solidity
+error Unauthorized();
+
+if (msg.sender != owner) {
+    revert Unauthorized();
+}
+```
+
 ### Consider a low run value in the optimizer {#consider-a-low-run-value-in-the-optimizer}
 
 You can also change the optimizer settings. The default value of 200 means that it's trying to optimize the bytecode as if a function is called 200 times. If you change it to 1, you basically tell the optimizer to optimize for the case of running each function only once. An optimized function for running only one time means it is optimized for the deployment itself. Be aware that **this increases the [gas costs](/developers/docs/gas/) for running the functions**, so you may not want to do it.
@@ -146,9 +157,3 @@ function doSomething() { checkStuff(); }
 ```
 
 Those tips should help you to significantly reduce the contract size. Once again, I cannot stress enough, always focus on splitting contracts if possible for the biggest impact.
-
-## The future for the contract size limits {#the-future-for-the-contract-size-limits}
-
-There is an [open proposal](https://github.com/ethereum/EIPs/issues/1662) to remove the contract size limit. The idea is basically to make contract calls more expensive for large contracts. It wouldn't be too difficult to implement, has a simple backwards compatibility (put all previously deployed contracts in the cheapest category), but [not everyone is convinced](https://ethereum-magicians.org/t/removing-or-increasing-the-contract-size-limit/3045/24).
-
-Only time will tell if those limits will change in the future, the reactions (see image on the right) definitely show a clear requirement for us developers. Unfortunately, it is not something you can expect any time soon.

@@ -5,7 +5,6 @@ author: Kim YongJun
 tags: ["ETHERS.JS", "ERC-20", "TOKENS"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2021-04-06
 ---
 

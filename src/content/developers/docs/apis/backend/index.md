@@ -2,12 +2,11 @@
 title: Backend API libraries
 description: An introduction to the Ethereum client APIs that let you interact with the blockchain from your application.
 lang: en
-sidebar: true
 ---
 
 In order for a software application to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
 
-For this purpose, every Ethereum client implements the [JSON-RPC](/developers/docs/apis/json-rpc/) specification, so there are a uniform set of [endpoints](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
+For this purpose, every Ethereum client implements the [JSON-RPC](/developers/docs/apis/json-rpc/) specification, so there are a uniform set of [methods](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
 
 If you want to use a specific programming language to connect with an Ethereum node, there are many convenience libraries within the ecosystem that make this much easier. With these libraries, developers can write intuitive, one-line methods to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
@@ -33,6 +32,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentation](https://www.blockcypher.com/dev/ethereum/)
 
+**Blast by Bware Labs -** **_Decentralized APIs for Ethereum Mainnet and Testnets._**
+
+- [blastapi.io](https://blastapi.io/)
+- [Documentation](https://docs.blastapi.io)
+- [Discord](https://discord.com/invite/VPkWESgtvV)
+
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)
@@ -43,10 +48,22 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
+**Coinbase Cloud Node -** **_Blockchain Infrastructure API._**
+
+- [Coinbase Cloud Node](https://www.coinbase.com/cloud/products/node)
+- [Documentation](https://docs.cloud.coinbase.com/node/reference/welcome-to-node)
+
 **DataHub by Figment -** **_Web3 API services with Ethereum Mainnet and testnets._**
 
 - [DataHub](https://www.figment.io/datahub)
 - [Documentation](https://docs.figment.io/introduction/what-is-datahub)
+
+**NFTPort -** **_Ethereum Data and Mint APIs._**
+
+- [nftport.xyz](https://www.nftport.xyz/)
+- [Documentation](https://docs.nftport.xyz/)
+- [GitHub](https://github.com/nftport/)
+- [Discord](https://discord.com/invite/K8nNrEgqhE)
 
 **Nodesmith -** **_JSON-RPC API access to Ethereum Mainnet and testnets._**
 
@@ -57,10 +74,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [ethercluster.com](https://www.ethercluster.com/)
 
-**Chainstack -** **_Shared and dedicated Ethereum nodes as a service._**
+**Chainstack -** **_Elastic and dedicated Ethereum nodes as a service._**
 
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
+- [Ethereum API reference](https://docs.chainstack.com/api/ethereum/ethereum-api-reference)
 
 **QuickNode -** **_Blockchain Infrastructure as a Service._**
 
@@ -111,6 +129,43 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/zmok-io)
 - [Documentation](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
+
+**NOWNodes - _Full Nodes and Block Explorers._**
+
+- [NOWNodes.io](https://nownodes.io/)
+- [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+
+**Moralis -** **_Enterprise-Grade EVM API Provider._**
+
+- [moralis.io](http://moralis.io)
+- [Documentation](https://docs.moralis.io/)
+- [GitHub](https://github.com/MoralisWeb3)
+- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [Forum](https://forum.moralis.io/)
+
+**Chainbase -** **_All-in-one web3 data infrastructure for Ethereum._**
+
+- [chainbase.com](https://chainbase.com/)
+- [Documentation](https://docs.chainbase.com/)
+- [Discord](https://discord.gg/Wx6qpqz4AF)
+
+**GetBlock-** **_Blockchain-as-a-service for Web3 developement_**
+
+- [GetBlock.io](https://getblock.io/)
+- [Documentation](https://getblock.io/docs/)
+
+**BlockPi -** **_Provide more efficient and fast RPC services_**
+
+- [blockpi.io](https://blockpi.io/)
+- [Documentation](https://docs.blockpi.io/)
+- [GitHub](https://github.com/BlockPILabs)
+- [Discord](https://discord.com/invite/xTvGVrGVZv)
+
+**Tokenview -** **_The General Multi-Crypto Blockchain APIs Platform._**
+
+- [services.tokenview.io](https://services.tokenview.io/)
+- [Documentation](https://services.tokeniew/docs?type=api)
+- [Github](https://github.com/Tokenview)
 
 ## Further reading {#further-reading}
 

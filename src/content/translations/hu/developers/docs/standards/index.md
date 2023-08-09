@@ -2,7 +2,6 @@
 title: Ethereum fejlesztési szabványok
 description:
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

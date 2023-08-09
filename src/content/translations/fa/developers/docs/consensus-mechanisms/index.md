@@ -2,7 +2,6 @@
 title: مکانیزم‌های اجماع
 description: توضیحی درباره پروتکل‌های اجماع در سیستم‌های توزیع‌شده و نقشی که در اتریوم ایفا می‌کنند.
 lang: fa
-sidebar: true
 incomplete: true
 ---
 
@@ -76,7 +75,7 @@ incomplete: true
 
 ترکیب اثبات کار و قانون بلندترین زنجیره به عنوان «اجماع ناکاموتو» شناخته می‌شود.
 
-[زنجیره‌ی بیکن](/upgrades/beacon-chain/) از یک مکانیزم اجماعی به نام [گجت قطعیت دوستانه‌ی Casper‏ (Casper the Friendly Finality Gadget)‏](https://arxiv.org/abs/1710.09437) استفاده می‌کند که مبتنی بر اثبات سهام است.
+[زنجیره‌ی بیکن](/roadmap/beacon-chain/) از یک مکانیزم اجماعی به نام [گجت قطعیت دوستانه‌ی Casper‏ (Casper the Friendly Finality Gadget)‏](https://arxiv.org/abs/1710.09437) استفاده می‌کند که مبتنی بر اثبات سهام است.
 
 ## بیشتر بخوانید {#further-reading}
 

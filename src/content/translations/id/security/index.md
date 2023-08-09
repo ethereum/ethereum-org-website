@@ -2,7 +2,6 @@
 title: Keamanan Ethereum dan pencegahan penipuan
 description: Tetap aman di Ethereum
 lang: id
-sidebar: true
 ---
 
 # Keamanan Ethereum dan pencegahan penipuan {#introduction}
@@ -159,8 +158,6 @@ Saat berinteraksi dengan kontrak pintar, jangan izinkan batas pembelanjaan tak t
 
 Banyak dompet Ethereum menawarkan perlindungan batas untuk melindungi dari akun yang terkuras.
 
-[Jelajahi dompet dengan perlindungan terbatas](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Penipuan umum {#common-scams}
@@ -253,7 +250,7 @@ Beberapa hal yang perlu diingat:
 
 ### Penipuan token 'Eth2' {#eth2-token-scam}
 
-Dengan [penggabungan](/upgrades/merge/) yang akan datang pada tahun 2022, para penipu telah memanfaatkan kebingungan seputar istilah 'Eth2' untuk mencoba dan membuat pengguna menukarkan ETH mereka dengan 'ETH2' token. Tidak ada 'ETH2' atau token baru lainnya yang diperkenalkan dengan penggabungan. ETH yang Anda miliki hari ini akan tetap menjadi ETH yang sama setelah penggabungan, dan tidak perlu menukar ETH Anda untuk penggabungan.
+Dengan [penggabungan](/roadmap/merge/) yang akan datang pada tahun 2022, para penipu telah memanfaatkan kebingungan seputar istilah 'Eth2' untuk mencoba dan membuat pengguna menukarkan ETH mereka dengan 'ETH2' token. Tidak ada 'ETH2' atau token baru lainnya yang diperkenalkan dengan penggabungan. ETH yang Anda miliki hari ini akan tetap menjadi ETH yang sama setelah penggabungan, dan tidak perlu menukar ETH Anda untuk penggabungan.
 
 Penipu mungkin muncul dalam bentuk "dukungan" yang memberi tahu Anda jika Anda menyetor ETH, Anda akan menerima kembali 'ETH2'. Tidak ada [dukungan Ethereum resmi](/community/support/), dan tidak ada token baru. Jangan pernah membagikan frasa awal dompet Anda dengan siapa pun.
 

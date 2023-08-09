@@ -2,7 +2,6 @@
 title: Minería
 description: Una explicación sobre el funcionamiento de la minería en Ethereum y sobre cómo mantiene a Ethereum seguro y descentralizado.
 lang: es
-sidebar: true
 incomplete: true
 ---
 
@@ -61,8 +60,6 @@ Observa a Austin mientras te guía por el proceso de minado y la cadena de bloqu
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## Más información {#further-reading}
-
-- [¿Qué significa minar Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
 ## Herramientas relacionadas {#related-tools}
 

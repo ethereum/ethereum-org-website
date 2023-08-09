@@ -1,161 +1,104 @@
 import React from "react"
-import styled from "@emotion/styled"
+import {
+  Center,
+  Heading,
+  Box,
+  Flex,
+  BoxProps,
+  Text,
+  Img,
+} from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
 import PageHero from "../components/PageHero"
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
-import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
-import HorizontalCard from "../components/HorizontalCard"
+import HorizontalCard, {
+  IProps as HorizontalCardProps,
+} from "../components/HorizontalCard"
 import CardList from "../components/CardList"
-import {
-  CardContainer,
-  Content,
-  Divider,
-  GrayContainer,
-  Page,
-  StyledCard,
-  TwoColumnContent,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
+import { StyledCard } from "../pages/get-eth"
 
-import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
-import { Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
-const StyledTwoColumnContent = styled(TwoColumnContent)`
-  margin-bottom: -2rem;
-  margin-top: 2rem;
-`
+const GrayContainer = (props: BoxProps) => (
+  <Box
+    width="full"
+    py={16}
+    px={0}
+    mt={{ base: 4, lg: 8 }}
+    background="grayBackground"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+    {...props}
+  />
+)
 
-const LeftColumn = styled.div`
-  flex: 0 1 50%;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-    margin-right: 0;
-    margin-top: 0;
-  }
-`
+const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
-const RightColumn = styled.div`
-  flex: 0 1 50%;
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 3rem;
-    max-width: 100%;
-    margin-left: 0;
-  }
-`
+const TwoColumnContent = (props: BoxProps) => (
+  <Content
+    display="flex"
+    justifyContent="space-between"
+    p={8}
+    mb={12}
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const StyledRightColumn = styled(RightColumn)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 0rem;
-  }
-`
+const Intro = (props: ChildOnlyProp) => (
+  <Content pb={0} sx={{ h2: { mb: 0 } }} {...props} />
+)
 
-const StyledGrayContainer = styled(GrayContainer)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1rem;
-  }
-`
+const LeftColumn = (props: BoxProps) => (
+  <Box flex="0 1 50%" mr={{ base: 0, lg: 8 }} maxW="full" {...props} />
+)
 
-const SubtitleTwo = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  margin-bottom: 1.5rem;
-  color: ${(props) => props.theme.colors.text300};
-`
+const RightColumn = (props: BoxProps) => (
+  <Box flex="0 1 50%" ml={{ lg: 8 }} maxW="full" {...props} />
+)
 
-const SubtitleThree = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
-  margin-bottom: 1.5rem;
-  text-align: center;
-`
+const ChecklistItem = (props: HorizontalCardProps) => (
+  <HorizontalCard
+    border={0}
+    display="flex"
+    alignItems="flex-start"
+    mb={4}
+    {...props}
+  />
+)
 
-const FindWallet = styled(GatsbyImage)`
-  margin-top: 2rem;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-`
+const H2 = (props: ChildOnlyProp) => (
+  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+)
 
-const Intro = styled(Content)`
-  padding-bottom: 0;
-  h2 {
-    margin-bottom: 0;
-  }
-`
+const CalloutCardContainer = (props: ChildOnlyProp) => (
+  <CardContainer mt={16} {...props} />
+)
+const CardContainer = (props: BoxProps) => (
+  <Box
+    display={"flex"}
+    flexWrap={"wrap"}
+    marginLeft={-4}
+    marginRight={-4}
+    {...props}
+  />
+)
 
-const IntroTwoColumnContent = styled(TwoColumnContent)`
-  margin-bottom: 0;
-  padding-bottom: 0;
-`
+const Divider = (props: BoxProps) => (
+  <Box my={16} w="10%" h="0.25rem" bgColor="homeDivider" {...props} />
+)
 
-const GradientContainer = styled(GrayContainer)`
-  background: linear-gradient(
-    49.21deg,
-    rgba(127, 127, 213, 0.2) 19.87%,
-    rgba(134, 168, 231, 0.2) 58.46%,
-    rgba(145, 234, 228, 0.2) 97.05%
-  );
-  margin: 3rem 0rem;
-  width: 100%;
-`
-
-const CodeBox = styled.div`
-  background: #000000;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-`
-
-const Code = styled.p`
-  font-family: monospace;
-  color: #ffffff;
-  margin-bottom: 0rem;
-`
-
-const ChecklistItem = styled(HorizontalCard)`
-  border: 0px;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-`
-
-const WalletType = styled(HorizontalCard)`
-  min-width: 100%;
-  margin: 0.5rem 0rem;
-  border-radius: 0px;
-  align-items: center;
-`
-
-const StyledCallout = styled(Callout)`
-  flex: 1 1 424px;
-  min-height: 100%;
-`
-
-const CentralColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-`
-
-const CalloutCardContainer = styled(CardContainer)`
-  margin-top: 4rem;
-`
-
-const H2 = styled.h2`
-  /* margin: 0; */
-`
+const Page = (props: BoxProps) => (
+  <Flex direction="column" align="center" width="full" m="0 auto" {...props} />
+)
 
 const cards = [
   {
@@ -207,7 +150,7 @@ const articles = [
   {
     title: <Translation id="page-wallets-keys-to-safety" />,
     description: <Translation id="page-wallets-blog" />,
-    link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+    link: "https://www.coinbase.com/learn/crypto-basics/how-to-secure-crypto",
   },
   {
     title: <Translation id="page-wallets-how-to-store" />,
@@ -216,21 +159,39 @@ const articles = [
   },
 ]
 
+const guides = [
+  {
+    title: (
+      <Translation id="additional-reading-how-to-register-an-ethereum-account" />
+    ),
+    link: "/guides/how-to-register-an-ethereum-account/",
+  },
+  {
+    title: <Translation id="additional-reading-how-to-use-a-wallet" />,
+    link: "/guides/how-to-use-a-wallet/",
+  },
+]
+
 const WalletsPage = ({
   data,
 }: PageProps<Queries.WalletsPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const heroContent = {
-    title: translateMessageId("page-wallets-title", intl),
-    header: translateMessageId("page-wallets-slogan", intl),
-    subtitle: translateMessageId("page-wallets-subtitle", intl),
+    title: t("page-wallets-title"),
+    header: t("page-wallets-slogan"),
+    subtitle: t("page-wallets-subtitle"),
     image: getImage(data.hero)!,
-    alt: translateMessageId("page-wallets-alt", intl),
+    alt: t("page-wallets-alt"),
     buttons: [
       {
         to: "/wallets/find-wallet/",
-        content: translateMessageId("page-wallets-find-wallet-link", intl),
+        content: t("page-wallets-find-wallet-link"),
+        matomo: {
+          eventCategory: "wallet hero buttons",
+          eventAction: "click",
+          eventName: "find wallet",
+        },
       },
     ],
   }
@@ -238,38 +199,43 @@ const WalletsPage = ({
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-wallets-meta-title", intl)}
-        description={translateMessageId("page-wallets-meta-description", intl)}
+        title={t("page-wallets-meta-title")}
+        description={t("page-wallets-meta-description")}
         image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} isReverse />
-      <StyledGrayContainer>
+      <GrayContainer>
         <Intro>
           <H2>
             <Translation id="page-wallets-whats-a-wallet" />
           </H2>
         </Intro>
-        <IntroTwoColumnContent>
-          <LeftColumn>
-            <p>
+        <TwoColumnContent mb={0}>
+          <Box
+            flexGrow="0"
+            flexShrink="1"
+            flexBasis="50%"
+            mr={{ base: 0, lg: 8 }}
+            mt={{ lg: 0 }}
+            maxWidth={{ lg: "100%" }}
+          >
+            <Text>
               <Translation id="page-wallets-description" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-wallets-desc-2" />{" "}
-              <Link to="/eth/">
-                <Translation id="page-wallets-desc-2-link" />{" "}
-              </Link>
-            </p>
-          </LeftColumn>
-          <StyledRightColumn>
-            <p>
+            </Text>
+            <CardList content={guides} mb={{ base: 6, lg: 0 }} />
+          </Box>
+          <RightColumn>
+            <Text>
               <Translation id="page-wallets-desc-3" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-wallets-desc-4" />
-            </p>
-          </StyledRightColumn>
-        </IntroTwoColumnContent>
+            </Text>
+          </RightColumn>
+        </TwoColumnContent>
         <Content>
           <CardContainer>
             {cards.map((card, idx) => (
@@ -282,140 +248,150 @@ const WalletsPage = ({
             ))}
           </CardContainer>
         </Content>
-      </StyledGrayContainer>
-      <StyledTwoColumnContent>
+      </GrayContainer>
+      <TwoColumnContent marginBottom={-8} marginTop={8}>
         <LeftColumn>
           <H2>
             <Translation id="page-wallets-accounts-addresses" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-wallets-accounts-addresses-desc" />
-          </p>
+          </Text>
           <ul>
             <li>
-              <p>
+              <Text>
                 <Translation id="page-wallets-ethereum-account" />
-              </p>
+              </Text>
             </li>
             <li>
-              <p>
+              <Text>
                 <Translation id="page-wallets-accounts-ethereum-addresses" />
-              </p>
+              </Text>
             </li>
             <li>
-              <p>
+              <Text>
                 <Translation id="page-wallets-ethereum-wallet" />
-              </p>
+              </Text>
             </li>
           </ul>
-          <p>
+          <Text>
             <Translation id="page-wallets-most-wallets" />
-          </p>
+          </Text>
         </LeftColumn>
-        <RightColumn>
+        <RightColumn mt={{ base: 12, lg: 0 }}>
           <H2>
             <Translation id="page-wallets-types" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-wallets-types-desc" />
-          </p>
-          <div>
+          </Text>
+          <Box>
             {types.map((type, idx) => (
-              <WalletType
+              <HorizontalCard
+                minWidth="100%"
+                marginTop={2}
+                marginBottom={2}
+                marginLeft={0}
+                marginRight={0}
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
                 emojiSize={2.5}
               />
             ))}
-          </div>
+          </Box>
         </RightColumn>
-      </StyledTwoColumnContent>
-      <GradientContainer>
+      </TwoColumnContent>
+      <GrayContainer
+        my={12}
+        bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
+    rgba(134, 168, 231, 0.2) 58.46%,
+    rgba(145, 234, 228, 0.2) 97.05%)"
+      >
         <Content>
-          <CentralColumn>
+          <Flex flexDirection="column" alignItems="center" mb="8">
             <H2>
               <Translation id="page-wallets-features-title" />
             </H2>
-            <SubtitleThree>
+            <Box
+              fontSize="xl"
+              lineHeight={1.4}
+              color="text"
+              textAlign="center"
+              mb={6}
+            >
               <Translation id="page-wallets-features-desc" />
-            </SubtitleThree>
+            </Box>
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
-            <FindWallet image={getImage(data.findWallet)!} alt="" />
-          </CentralColumn>
+            <Img
+              as={GatsbyImage}
+              image={getImage(data.findWallet)!}
+              alt=""
+              mt={8}
+              maxW="800px"
+              backgroundSize="cover"
+              backgroundRepeat="no-repeat"
+              w="full"
+            />
+          </Flex>
         </Content>
-      </GradientContainer>
+      </GrayContainer>
       <TwoColumnContent>
         <LeftColumn>
           <H2>
             <Translation id="page-wallets-stay-safe" />
           </H2>
-          <SubtitleTwo>
+          <Box fontSize="xl" lineHeight={1.4} mb={6} color="text300">
             <Translation id="page-wallets-stay-safe-desc" />
-          </SubtitleTwo>
-          <div>
+          </Box>
+          <Box>
             <ChecklistItem
               key="0"
               emoji=":white_check_mark:"
-              title={translateMessageId(
-                "page-wallets-take-responsibility",
-                intl
-              )}
-              description={translateMessageId(
-                "page-wallets-take-responsibility-desc",
-                intl
-              )}
+              title={t("page-wallets-take-responsibility")}
+              description={t("page-wallets-take-responsibility-desc")}
             />
             <ChecklistItem
               key="1"
               emoji=":white_check_mark:"
-              title={translateMessageId("page-wallets-seed-phrase", intl)}
-              description={translateMessageId(
-                "page-wallets-seed-phrase-desc",
-                intl
-              )}
+              title={t("page-wallets-seed-phrase")}
+              description={t("page-wallets-seed-phrase-desc")}
             >
-              <p>
+              <Text>
                 <Translation id="page-wallets-seed-phrase-example" />
-              </p>
-              <CodeBox>
-                <Code>
+              </Text>
+              <Box bg="black" p={2} mb={4} borderRadius="base">
+                <Text fontFamily="monospace" fontSize="sm" color="white" mb={0}>
                   <Translation id="page-wallets-seed-phrase-snippet" />
-                </Code>
-              </CodeBox>
-              <p>
+                </Text>
+              </Box>
+              <Text>
                 <Translation id="page-wallets-seed-phrase-write-down" />
-              </p>
+              </Text>
             </ChecklistItem>
             <ChecklistItem
               key="2"
               emoji=":white_check_mark:"
-              title={translateMessageId("page-wallets-bookmarking", intl)}
-              description={translateMessageId(
-                "page-wallets-bookmarking-desc",
-                intl
-              )}
+              title={t("page-wallets-bookmarking")}
+              description={t("page-wallets-bookmarking-desc")}
             />
             <ChecklistItem
               key="3"
               emoji=":white_check_mark:"
-              title={translateMessageId("page-wallets-triple-check", intl)}
-              description={translateMessageId(
-                "page-wallets-triple-check-desc",
-                intl
-              )}
+              title={t("page-wallets-triple-check")}
+              description={t("page-wallets-triple-check-desc")}
             />
-          </div>
+          </Box>
         </LeftColumn>
-        <RightColumn>
+        <RightColumn mt={{ base: 12, lg: 0 }}>
           <H2>
             <Translation id="page-wallets-tips" />
           </H2>
-          <SubtitleTwo>
+          <Box fontSize="xl" lineHeight={1.4} color="text300" mb={6}>
             <Translation id="page-wallets-tips-community" />
-          </SubtitleTwo>
+          </Box>
           <CardList content={articles} />
         </RightColumn>
       </TwoColumnContent>
@@ -425,31 +401,40 @@ const WalletsPage = ({
           <Translation id="page-wallets-explore" />
         </H2>
         <CalloutCardContainer>
-          <StyledCallout
+          <Callout
+            flex="1 1 424px"
+            minH="full"
             image={getImage(data.eth)}
             titleKey="page-wallets-get-some"
-            alt={translateMessageId("page-wallets-get-some-alt", intl)}
+            alt={t("page-wallets-get-some-alt")}
             descriptionKey="page-wallets-get-some-desc"
           >
-            <div>
+            <Box>
               <ButtonLink to="/get-eth/">
                 <Translation id="page-wallets-get-some-btn" />
               </ButtonLink>
-            </div>
-          </StyledCallout>
-          <StyledCallout
+            </Box>
+          </Callout>
+          <Callout
+            flex="1 1 424px"
+            minH="full"
             image={getImage(data.dapps)}
             titleKey="page-wallets-try-dapps"
-            alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
+            alt={t("page-wallets-try-dapps-alt")}
             descriptionKey="page-wallets-try-dapps-desc"
           >
-            <div>
+            <Box>
               <ButtonLink to="/dapps/">
                 <Translation id="page-wallets-more-on-dapps-btn" />
               </ButtonLink>
-            </div>
-          </StyledCallout>
+            </Box>
+          </Callout>
         </CalloutCardContainer>
+      </Content>
+      <Content>
+        <Center w="100%">
+          <QuizWidget quizKey="wallets" />
+        </Center>
       </Content>
       <Content>
         <FeedbackCard />
@@ -487,10 +472,29 @@ export const listImage = graphql`
 `
 
 export const query = graphql`
-  query WalletsPage {
-    hero: file(relativePath: { eq: "wallet.png" }) {
+  query WalletsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-wallets", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    hero: file(relativePath: { eq: "wallets/wallet-hero.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     findWallet: file(relativePath: { eq: "wallets/find-wallet.png" }) {

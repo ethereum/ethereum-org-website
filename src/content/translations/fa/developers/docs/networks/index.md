@@ -2,7 +2,6 @@
 title: شبکه‌ها
 description: مروری بر شبکه‌های اتریوم و محل دریافت اتر (ETH) شبکه‌ی تست برای آزمایش برنامه‌ی خود.
 lang: fa
-sidebar: true
 ---
 
 از آنجایی که اتریوم یک پروتکل است، این بدان معناست که می‌تواند چندین «شبکه» مستقل مطابق با این پروتکل وجود داشته باشند که با یکدیگر تعامل نداشته باشند.
@@ -73,7 +72,7 @@ sidebar: true
 - [فاست Chainlink](https://faucets.chain.link/)
 - [فاست Paradigm](https://faucet.paradigm.xyz/)
 
-#### Optimisic Kovan {#optimistic-kovan}
+#### Optimistic Kovan {#optimistic-kovan}
 
 یک شبکه‌ی تست برای [Optimism](https://www.optimism.io/).
 

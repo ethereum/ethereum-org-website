@@ -4,13 +4,12 @@ description: Una panoramica sulla DeFi in Ethereum
 lang: it
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Logo di Eth in mattoncini Lego.
-sidebarDepth: 2
+sidebarDepth: 3
 summaryPoint1: Un'alternativa globale e aperta all'attuale sistema finanziario.
-summaryPoint2: Prodotti che consentono di prendere in prestito, risparmiare, investire, fare affari e altro ancora.
-summaryPoint3: Sulla base della tecnologia open-source con cui chiunque può programmare.
+summaryPoint2: Prodotti che consentono di prendere in prestito, risparmiare, investire, scambiare e altro ancora.
+summaryPoint3: Basati sulla tecnologia open-source con cui chiunque può programmare.
 ---
 
 DeFi è un sistema finanziario aperto e globale creato per l'era di internet - un'alternativa a un sistema opaco, rigidamente controllato e tenuto insieme da infrastrutture e processi vecchi di decenni. Offre controllo e visibilità sul proprio denaro. Fornisce esposizione ai mercati globali e alternative alla propria valuta locale o alle opzioni bancarie. I prodotti DeFi aprono servizi finanziari a chiunque abbia una connessione internet e sono prevalentemente detenuti e mantenuti dai loro utenti. Finora decine di miliardi di dollari di criptovalute sono fluiti attraverso le applicazioni DeFi e crescono ogni giorno.
@@ -54,9 +53,9 @@ Uno dei modi migliori per individuare il potenziale della DeFi è comprendere i 
 
 ## Tutto è iniziato con Bitcoin... {#bitcoin}
 
-Bitcoin può essere considerato sotto molti aspetti la prima applicazione DeFi. Bitcoin consente di possedere e controllare realmente il valore e inviarlo ovunque in tutto il mondo. Offre infatti a un gran numero di persone, che non si fidano l'una dell'altra, un modo per accordarsi su un registro dei conti senza bisogno di un intermediario fidato. Bitcoin è aperto a tutti e nessuno ha l'autorità di cambiarne le regole. Le regole di Bitcoin, come la sua scarsità e la sua apertura, sono scritte nella tecnologia. Non è come la finanza tradizionale, in cui i governi possono stampare moneta che svaluta i risparmi e in cui le aziende possono chiudere i mercati.
+Bitcoin può essere considerato sotto molti aspetti la prima applicazione DeFi. Bitcoin consente di possedere e controllare realmente il valore e inviarlo ovunque in tutto il mondo. Infatti, a molte persone che non si fidano l'una dell'altra, offre un metodo per accordarsi su un libro mastro di conti, senza la necessità di un intermediario fidato. Bitcoin è aperto a tutti e nessuno ha l'autorità di cambiarne le regole. Le regole di Bitcoin, come la sua scarsità e la sua apertura, sono scritte nella tecnologia. Non è come la finanza tradizionale, in cui i governi possono stampare moneta che svaluta i risparmi e in cui le aziende possono chiudere i mercati.
 
-Ethereum si basa su questo. Come per Bitcoin, le regole non cambiano da un momento all'altro e tutti possono accedervi. Inoltre, questo sistema rende il denaro digitale programmabile, grazie agli [smart contract](/glossary#smart-contract), permettendo agli utenti di andare oltre il semplice deposito e invio di valore.
+Ethereum si basa su questo. Come per Bitcoin, le regole non cambiano da un momento all'altro e tutti possono accedervi. Ma rende anche programmabile questo denaro digitale, usando i [contratti intelligenti](/glossary#smart-contract), così che tu possa andare oltre l'archiviazione e l'invio di valore.
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -91,7 +90,7 @@ Esiste un'alternativa decentralizzata a gran parte dei servizi finanziari. Ma Et
 
 ### Inviare denaro in tutto il mondo {#send-money}
 
-In quanto blockchain, Ethereum è progettato per inviare transazioni in modo sicuro e globale. Come Bitcoin, Ethereum rende l'invio di denaro in tutto il mondo tanto facile quanto l'invio di un'e-mail. Basta inserire il [nome ENS](/nft/#nft-domains) del destinatario (come bob.eth) o l'indirizzo del suo conto dal proprio portafoglio e il pagamento gli arriverà direttamente in pochi minuti (in genere). Per inviare o ricevere pagamenti, è necessario un [portafoglio](/wallets/).
+In quanto blockchain, Ethereum è progettato per inviare transazioni in modo sicuro e globale. Come Bitcoin, Ethereum rende l'invio di denaro in tutto il mondo tanto facile quanto l'invio di un'e-mail. Basta inserire il [nome ENS](/nft/#nft-domains) del tuo destinatario (come bob.eth) o l'indirizzo del suo conto dal proprio portafoglio e il pagamento gli arriverà (solitamente) in pochi minuti. Per inviare o ricevere pagamenti, è necessario un [portafoglio](/wallets/).
 
 <ButtonLink to="/dapps/?category=finance">
   Visualizza le dApp di pagamento
@@ -295,30 +294,30 @@ Con così tante cose in ballo, avrai bisogno di un modo per tenere traccia di tu
 
 ## Come funziona la DeFi? {#how-defi-works}
 
-La DeFi usa le criptovalute e gli smart contract per fornire servizi che non necessitano di intermediari. Nel mondo finanziario di oggi, gli istituti finanziari fungono da garanti delle transazioni. Questo dà a tali istituti un potere immenso, perché il denaro degli utenti fluisce attraverso di loro. Inoltre, miliardi di persone in tutto il mondo non possono nemmeno accedere a un conto bancario.
+La DeFi usa le criptovalute e i contratti intelligenti per fornire servizi che non necessitano di intermediari. Nel mondo finanziario di oggi, gli istituti finanziari fungono da garanti delle transazioni. Questo dà a tali istituti un potere immenso, perché il denaro degli utenti fluisce attraverso di loro. Inoltre, miliardi di persone in tutto il mondo non possono nemmeno accedere a un conto bancario.
 
-Con la DeFi, uno smart contract sostituisce l'istituto finanziario nella transazione. Uno smart contract è un tipo di conto Ethereum che può contenere fondi e inviarli/rimborsarli in base a certe condizioni. Nessuno può alterare lo smart contract quando è attivo, per cui verrà sempre eseguito come programmato.
+Nella DeFi, un contratto intelligente sostituisce l'istituzione finanziaria nella transazione. Un contratto intelligente è un tipo di conto di Ethereum che può detenere fondi e inviarli/rimborsarli secondo certe condizioni. Nessun può alterare quel contratto intelligente una volta attivato; sarà sempre eseguito come programmato.
 
-Un contratto progettato per recapitare un'indennità o un salario potrebbe essere programmato in modo da inviare denaro dal conto A al conto B ogni venerdì. E continuerebbe a farlo solo finché il conto A ha i fondi necessari. Nessuno può modificare il contratto e aggiungere il conto C come destinatario per sottrarre i fondi.
+Un contratto progettato per recapitare un'indennità o un salario, potrebbe esser programmato per inviare denaro dal Conto A al Conto B, ogni venerdì. E lo continuerà a fare finché il Conto A conterrà i fondi necessari. Nessuno può modificare il contratto e aggiungere il Conto C come destinatario per rubare i fondi.
 
 Inoltre, i contratti sono pubblici e possono essere ispezionati e controllati da chiunque. Questo significa che eventuali contratti malevoli tendono a finire sotto l'esame della comunità abbastanza rapidamente.
 
-Ciò significa che al momento vi è la necessità di fidarsi dei membri più tecnici della comunità di Ethereum, capaci di leggere il codice. La comunità basata sull'open source aiuta a mantenere gli sviluppatori sotto controllo, ma questa necessità si ridurrà col tempo, quando gli smart contract diverranno più facili da leggere e verranno sviluppati altri modi per provare l'affidabilità del codice.
+Ciò significa che al momento vi è la necessità di fidarsi dei membri più tecnici della comunità di Ethereum, capaci di leggere il codice. La community basata sull'open source aiuta a mantenere sotto controllo gli sviluppatori, ma questa necessità, sarà ridotta col tempo, mentre i contratti intelligenti divengono più facili da leggere e sono sviluppati nuovi metodi per provare l'affidabilità del codice.
 
 ## Ethereum e DeFi {#ethereum-and-defi}
 
 Ethereum è la base perfetta per la DeFi, per diverse ragioni:
 
-- Nessuno possiede Ethereum o gli smart contract al suo interno; ciò dà a tutti l'opportunità di usare la DeFi. Significa anche che nessuno può modificare le regole a propria discrezione.
+- Nessuno possiede Ethereum o i contratti intelligenti che vi risiedono: questo da' a tutti l'opportunità di usare le DeFi. Significa anche che nessuno può modificare le regole a propria discrezione.
 - I prodotti della DeFi parlano tutti la stessa lingua dietro le quinte: Ethereum. Questo significa che molti dei prodotti funzionano insieme senza soluzione di continuità. Puoi prestare token su una piattaforma e scambiare il token fruttifero di interessi su un altro mercato e con un'applicazione completamente diversa. È esattamente come incassare punti fedeltà presso la propria banca.
 - I token e la criptovaluta si basano su Ethereum, un registro condiviso. In fondo, tenere traccia delle transazioni e della proprietà è la specialità di Ethereum.
 - Ethereum offre la massima libertà finanziaria: gran parte dei prodotti non assume mai la custodia dei tuoi fondi, lasciandoti il controllo.
 
 Puoi pensare alla DeFi in termini di strati:
 
-1. La blockchain - Ethereum contiene lo storico delle transazioni e lo stato dei conti.
+1. La Blockchain: Ethereum contiene lo storico delle transazioni e lo stato dei conti.
 2. Gli attivi - [ETH](/eth/) e gli altri token (valute).
-3. I protocolli - [Smart contract](/glossary/#smart-contract) che forniscono la funzionalità, ad esempio un servizio che consente il prestito decentralizzato di attivi.
+3. I protocolli: [contratti intelligenti](/glossary/#smart-contract) che forniscono la funzionalità, ad esempio, un servizio che consente il prestito decentralizzato delle risorse.
 4. [Le applicazioni](/dapps/) - I prodotti che usiamo per gestire e accedere ai protocolli.
 
 ## Costruire la DeFi {#build-defi}
@@ -333,13 +332,12 @@ La DeFi è un movimento open source. I protocolli e le applicazioni della DeFi s
 
 ### Dati sulla DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### Articoli sulla DeFi {#defi-articles}
 
-- [Cos'è la Finanza Decentralizzata?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, aggiornato regolarmente_
 - [Una guida per principianti alla DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 gennaio 2020_
 
 ### Video {#videos}

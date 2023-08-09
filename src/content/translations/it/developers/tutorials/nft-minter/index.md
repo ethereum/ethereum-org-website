@@ -1,9 +1,9 @@
 ---
 title: Tutorial del Coniatore di NFT
-description: In questo tutorial, creerai un coniatore di NFT e imparerai come creare una dApp in full stack connettendo il tuo smart contract a un frontend di React, usando gli strumenti di MetaMask e Web3.
+description: In questo tutorial, creerai un coniatore di NFT e imparerai come creare una dapp in full stack connettendo il tuo smart contract a un frontend di React usando gli strumenti di MetaMask e Web3.
 author: "smudgil"
 tags:
-  - "Solidity"
+  - "solidity"
   - "NFT"
   - "coniatore"
   - "alchemy"
@@ -14,7 +14,6 @@ tags:
   - "Pinata"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2021-10-06
 ---
 
@@ -30,7 +29,7 @@ In questo tutorial, utilizzeremo [React](https://reactjs.org/) come framework di
 
 Come prerequisito, dovresti avere conoscenze di base di React e sapere come funzionano i componenti, gli accessori, useState/useEffect e la chiamata delle funzioni di base. Se non hai mai sentito parlare di alcuno di questi termini prima d'ora, è consigliabile dare un'occhiata a questo [tutorial d'introduzione a React](https://reactjs.org/tutorial/tutorial.html). Per chi preferisce l'apprendimento visivo, consigliamo vivamente quest'eccellente serie di video [Tutorial moderno e completo su React](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) di Net Ninja.
 
-E se non lo hai già, ti serve decisamente un profilo di Alchemy per completare questo tutorial, oltre che per creare qualsiasi cosa sulla blockchain. Per un profilo gratuito registrati [qui](https://alchemy.com/).
+E se non lo hai già fatto, necessiterai decisamente di un conto di Alchemy, per completare questo tutorial, nonché per creare qualsiasi cosa sulla blockchain. Registra gratuitamente un conto,[qui](https://alchemy.com/).
 
 Iniziamo quindi!
 
@@ -136,7 +135,7 @@ const onMintPressed = async () => {
 ```
 
 - [`useEffect`](https://reactjs.org/docs/hooks-effect.html) - questo è un hook di React chiamato dopo il rendering del tuo componente. Poiché in essa viene passato un array vuoto `[]` (vedi la riga 3), sarà chiamata solo al _primo_ rendering del componente. Qui chiameremo il listener del nostro portafoglio e un'altra funzione del portafoglio per aggiornare la nostra UI affinché rifletta se un portafoglio è già collegato.
-- `connectWalletPressed` - questa funzione è chiamata per connettere il portafoglio di MetaMask dell'utente alla nostra dApp.
+- `connectWalletPressed` - questa funzione sarà chiamata per connettere il portafoglio di MetaMask dell'utente alla nostra dapp.
 - `onMintPressed` - questa funzione sarà chiamata per coniare il NFT dell'utente.
 
 Vicino alla fine di questo file, abbiamo l'UI del nostro componente. Se esamini attentamente questo codice, noterai che aggiorniamo le nostre variabili di stato `url`, `name` e `description`, quando l'input nei relativi campi di testo cambia.
@@ -201,21 +200,21 @@ Ora che ci è chiaro con cosa stiamo lavorando, configuriamo il portafoglio di E
 
 ## : Configura il tuo portafoglio di Ethereum {#set-up-your-ethereum-wallet}
 
-Gli utenti capaci di interagire con il proprio smart contract dovranno connettere il proprio portafoglio di Ethereum alla dApp.
+Per poter interagire con il tuo smart contract, gli utenti dovranno connettere il proprio portafoglio di Ethereum alla tua dapp.
 
 ### Scarica MetaMask {#download-metamask}
 
-Per questo tutorial, useremo MetaMask, un portafoglio virtuale nel browser per gestire l'indirizzo del profilo Ethereum. Se vuoi capire di più su come funzionano le transazioni su Ethereum, dai un'occhiata a [questa pagina](/developers/docs/transactions/).
+Per questo tutorial, utilizzeremo MetaMask, un portafoglio virtuale nel browser, utilizzato per gestire l'indirizzo del tuo conto di Ethereum. Se vuoi capire di più su come funzionano le transazioni su Ethereum, dai un'occhiata a [questa pagina](/developers/docs/transactions/).
 
-Puoi scaricare e creare gratuitamente un account MetaMask [qui](https://metamask.io/download.html). Quando crei un profilo, o se ne hai già uno, assicurati di passare alla "Rete di Prova Ropsten" in alto a destra \(per non avere a che fare con soldi reali\).
+Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download.html). Quando stai creando un conto, o se ne hai già uno, assicurati di passare alla "Rete di Prova di Ropsten" in alto a destra \(così da non avere a che fare con denaro reale\).
 
 ### Aggiungere ether da un Faucet {#add-ether-from-faucet}
 
-Per coniare i nostri NFT (o firmare qualsiasi transazione sulla blockchain di Ethereum), avremo bisogno di qualche finto Eth. Per ottenere Eth puoi andare al [faucet di Ropsten](https://faucet.ropsten.be/) e inserire l'indirizzo del tuo account Ropsten, poi cliccare “Invia Eth a Ropsten”. Dovresti vedere gli Eth nel tuo account di MetaMask poco dopo!
+Per coniare i nostri NFT (o firmare qualsiasi transazione sulla blockchain di Ethereum), avremo bisogno di qualche finto Eth. Per ottenere degli Eth puoi andare al [faucet di Ropsten](https://faucet.ropsten.be/) e inserire l'indirizzo del tuo conto di Ropsten, poi cliccare “Invia Eth a Ropsten.” Poco dopo, dovresti vedere gli Eth nel tuo conto di MetaMask!
 
 ### Controlla il tuo saldo {#check-your-balance}
 
-Per ricontrollare che ci sia il saldo, facciamo una richiesta [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando lo [strumento compositore di Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Questo restituirà l'importo di Eth nel tuo portafoglio. Dopo aver inserito l'indirizzo del tuo account di MetaMask e aver cliccato “Invia richiesta”, dovresti vedere una risposta come questa:
+Per ricontrollare che ci sia il saldo, facciamo una richiesta [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando lo [strumento compositore di Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Questo restituirà l'importo di Eth nel tuo portafoglio. Dopo aver inserito l'indirizzo del tuo conto di MetaMask e aver cliccato "Invia Richiesta", dovresti visualizzare una risposta simile alla seguente:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
@@ -227,9 +226,9 @@ Meno male! I nostri soldi finti ci sono tutti! <Emoji text=":money_mouth_face:" 
 
 ## Connettere MetaMask alla UI {#connect-metamask-to-your-UI}
 
-Ora che il nostro portafoglio di MetaMask è configurato, connettiamo a esso la nostra dApp!
+Ora che il nostro portafoglio di MetaMask è configurato, connettiamo la nostra dapp!
 
-Poiché vogliamo seguire il modello [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), creeremo un file separato contenente le nostre funzioni per gestire logica, dati e regole della nostra dApp e poi passeremo queste funzioni al nostro frontend (il nostro componente Minter.js).
+Poiché vogliamo prescrivere al paradigma del [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), creeremo un file separato che contiene le nostre funzioni per gestire la logica, i dati e le regole della nostra dapp e poi passeremo tali funzioni al nostro frontend (il nostro componente Minter.js).
 
 ### La funzione `connectWallet` {#connect-wallet-function}
 
@@ -280,7 +279,7 @@ Analizziamo cosa fa questo codice:
 
 Per prima cosa, la nostra funzione verifica se `window.ethereum` è abilitato nel browser.
 
-`window.ethereum` è un'API globale iniettata da MetaMask e altri provider di portafogli che consente ai siti web di richiedere i conti di Ethereum degli utenti. Se approvata, può leggere i dati dalle blockchain a cui è connesso l'utente e suggerire all'utente di firmare messaggi e transazioni. Dai un'occhiata alla [documentazione di MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) per ulteriori informazioni!
+`window.ethereum` è un'API globale, iniettata da MetaMask e altri fornitori di portafogli, che consente ai siti web di richiedere i conti di Ethereum degli utenti. Se approvata, può leggere i dati dalle blockchain a cui è connesso l'utente e suggerire all'utente di firmare messaggi e transazioni. Dai un'occhiata alla [documentazione di MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) per ulteriori informazioni!
 
 Se `window.ethereum` _non è_ presente, significa che MetaMask non è installato. Verrà quindi restituito un oggetto JSON in cui l'`address` restituito è una stringa vuota e l'oggetto JSX di `status` indica che l'utente deve installare MetaMask.
 
@@ -288,9 +287,9 @@ Se `window.ethereum` _non è_ presente, significa che MetaMask non è installato
 
 Ora, se `window.ethereum` _è_ presente, le cose cominciano a farsi interessanti.
 
-Usando una struttura try/catch, proveremo a connetterci a MetaMask chiamando `[window.ethereum.request({ method: "eth_requestAccounts" });](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)`. Chiamando questa funzione si apre MetaMask nel browser, dove verrà richiesto all'utente di connettere il proprio portafoglio alla dApp.
+Utilizzando un ciclo try/catch, proveremo a connetterci a MetaMask chiamando `[window.ethereum.request({ method: "eth_requestAccounts" });](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)`. Chiamare questa funzione aprirà MetaMask nel browser, dove sarà richiesto all'utente di connettere il proprio portafoglio alla tua dapp.
 
-- Se l'utente sceglie di connettersi, `method: "eth_requestAccounts"` restituirà un array contenente tutti gli indirizzi dell'account dell'utente connessi alla dApp. Nel complesso, la nostra funzione `connectWallet` restituirà un oggetto JSON contenente il _primo_ `address` in questo array \(vedi la riga 9\) e un messaggio di `status` che richiede all'utente di scrivere un messaggio nello smart contract.
+- Se l'utente sceglie di connettersi, `method: "eth_requestAccounts"` restituirà un insieme contenente tutti gli indirizzi del conto dell'utente, connessi alla dapp. Nel complesso, la nostra funzione `connectWallet` restituirà un oggetto JSON contenente il _primo_ `address` in questo array \(vedi la riga 9\) e un messaggio di `status` che richiede all'utente di scrivere un messaggio nello smart contract.
 - Se l'utente rifiuta la connessione, allora l'oggetto JSON conterrà una stringa vuota per l'`address` restituito e un messaggio di `status` che indica che l'utente ha rifiutato la connessione.
 
 ### Aggiungi la funzione connectWallet al tuo componente UI Minter.js {#add-connect-wallet}
@@ -331,13 +330,13 @@ Ora, salviamo entrambi i file `Minter.js` e `interact.js` e testiamo la nostra U
 
 Apri il browser su localhost:3000 e premi il pulsante "Connetti Portafoglio" in alto a destra alla pagina.
 
-Se hai installato MetaMask, ti dovrebbe esser richiesto di connettere il tuo portafoglio alla tua dApp. Accetta l'invito a connetterti.
+Se hai MetaMask installato, ti dovrebbe essere richiesto di connettere il tuo portafoglio alla tua dapp. Accetta l'invito a connetterti.
 
 Dovresti vedere ora che il pulsante del portafoglio indica che l'indirizzo è connesso.
 
 Prova quindi a ricaricare la pagina... questo è strano. Il nostro pulsante del portafoglio ci sta richiedendo di connetterci a MetaMask, anche se è già connesso...
 
-Non preoccuparti! Possiamo risolvere facilmente implementando una funzione chiamata `getCurrentWalletConnected`, che verificherà se un indirizzo è già connesso alla nostra dApp e aggiornerà l'UI di conseguenza!
+Non preoccuparti! Possiamo risolverlo facilmente implementando una funzione chiamata `getCurrentWalletConnected`, che verificherà se un indirizzo è già connesso alla nostra dapp e aggiornerà l'UI di conseguenza!
 
 ### La funzione getCurrentWalletConnected {#get-current-wallet}
 
@@ -388,7 +387,7 @@ export const getCurrentWalletConnected = async () => {
 
 Questo codice è _molto_ simile alla funzione `connectWallet` che abbiamo scritto poco fa.
 
-La differenza principale è che, invece di chiamare il metodo `eth_requestAccounts`, che apre MetaMask affinché l'utente connetta il proprio portafoglio, qui chiamiamo il metodo `eth_accounts`, che restituisce semplicemente un array contenente gli indirizzi di MetaMask correntemente connessi alla nostra dApp.
+La differenza principale è che, invece di chiamare il metodo `eth_requestAccounts`, che apre MetaMask perché l'utente connetta il proprio portafoglio, qui chiamiamo il metodo `eth_accounts` che, semplicemente, restituisce un insieme contenente gli indirizzi di MetaMask correntemente connessi alla nostra dapp.
 
 Per vedere questa funzione in azione, chiamiamola nella funzione `useEffect` del nostro componente `Minter.js`.
 
@@ -418,7 +417,7 @@ Una volta aggiunto questo codice, prova a ricaricare la nostra finestra del brow
 
 ### Implementare addWalletListener {#implement-add-wallet-listener}
 
-Il passaggio finale nella configurazione del portafoglio della nostra dApp è implementare il listener del portafoglio, così che la nostra UI si aggiorni quando lo stato del nostro portafoglio cambia, come quando l'utente si scollega o cambia account.
+Il passaggio finale della configurazione del portafoglio della nostra dapp è implementare l'ascoltatore del portafoglio, così che la nostra UI si aggiorni al cambiamento dello stato del nostro portafoglio, ad esempio, quando l'utente si disconnette o cambia conto.
 
 Nel file `Minter.js`, aggiungi una funzione `addWalletListener`, simile a quanto segue:
 
@@ -451,7 +450,7 @@ Esaminiamo rapidamente cosa sta succedendo qui:
 
 - Per prima cosa, la nostra funzione verifica se `window.ethereum` è abilitata \(cioè se MetaMask è installato\).
   - Se non lo è, impostiamo semplicemente la nostra variabile di stato `status`a una stringa JSX che richiede all'utente di installare MetaMask.
-  - Se è abilitata, configuriamo il listener `window.ethereum.on("accountsChanged")` alla riga 3, che ascolta i cambiamenti di stato nel portafoglio di MetaMask, tra cui, quando l'utente connette un altro account alla dApp, cambia accunt, o scollega un account. Se è connesso almeno un account, la variabile di stato `walletAddress` è aggiornata come primo account nell'array `accounts` restituito dal listener. Altrimenti, `walletAddress` è impostato come una stringa vuota.
+  - Se è abilitato, configuriamo l'ascoltatore `window.ethereum.on("accountsChanged")` alla riga 3, affinché ascolti i cambiamenti di stato nel portafoglio di MetaMask, tra cui, quando l'utente connette un ulteriore conto alla dapp, cambia conto, o ne disconnette uno. Se è connesso almeno un conto, la variabile di stato `walletAddress` è aggiornata come primo conto nell'insieme `accounts`, restituito dall'ascoltatore. Altrimenti, `walletAddress` è impostato come una stringa vuota.
 
 Infine, dobbiamo chiamarlo nella nostra funzione `useEffect`:
 
@@ -483,7 +482,7 @@ Per memorizzare i nostri metadati su IPFS, useremo [Pinata](https://pinata.cloud
 
 ## Usare Pinata per fissare i metadati a IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-Se non hai un profilo di [Pinata](https://pinata.cloud/), registrati per ricevere un profilo gratuito [qui](https://pinata.cloud/signup) e completa i passaggi per verificare la tua email e il tuo profilo.
+Se non hai un conto di [Pinata](https://pinata.cloud/), registrane gratuitamente uno [qui](https://pinata.cloud/signup) e completa i passaggi per verificare la tua email e il tuo conto.
 
 ### Crea la tua chiave API di Pinata {#create-pinata-api-key}
 
@@ -593,9 +592,9 @@ Avremo anche bisogno di una chiave API di Alchemy e dell'API Alchemy Web3 per co
 
 ### Crea la tua chiave API di Alchemy {#create-alchemy-api}
 
-Se non hai già un profilo di Alchemy, [registrati gratis qui.](https://alchemy.com/?a=eth-org-nft-minter)
+Se non hai già un conto di Alchemy, [registrane gratuitamente uno qui.](https://alchemy.com/?a=eth-org-nft-minter)
 
-Una volta creato un profilo di Alchemy, puoi generare una chiave API creando un'app. Questo ci consentirà di effettuare richieste alla rete di prova di Ropsten.
+Una volta creato un conto di Alchemy, puoi generare una chiave API creando un'app. Questo ci consentirà di effettuare richieste alla rete di prova di Ropsten.
 
 Vai alla pagina “Crea App” nella tua dashboard di Alchemy passando su “App” nella barra di navigazione e cliccando “Crea App”.
 
@@ -633,7 +632,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) è un wrapper intorno a [Web3.js](https://web3js.readthedocs.io/en/v1.2.9/), che fornisce metodi API migliorati e altri benefici cruciali per semplificare la tua vita a uno sviluppatore web3. È progettato per richiedere una configurazione minima, così da poter iniziare a usarlo immediatamente nella tua app!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) è un wrapper intorno a [Web3.js](https://docs.web3js.org/), che fornisce metodi API migliorati e altri benefici cruciali per semplificare la tua vita a uno sviluppatore web3. È progettato per richiedere una configurazione minima, così da poter iniziare a usarlo immediatamente nella tua app!
 
 In seguito, aggiungiamo l'ABI del nostro contratto e l'indirizzo del contratto al nostro file.
 
@@ -873,6 +872,6 @@ Per ricapitolare, creando un coniatore di NFT, hai imparato correttamente come:
 - Chiamare i metodi dello smart contract dal tuo frontend
 - Firmare le transazioni usando MetaMask
 
-Molto probabilmente vorrai mostrare gli NFT coniati tramite la tua dApp nel tuo portafoglio, dai quindi un'occhiata al nostro rapido tutorial [Come visualizzare il tuo NFT nel tuo Portafoglio](https://docs.alchemyapi.io/alchemy/tutorials/how-to-write-and-deploy-a-nft-smart-contract/how-to-view-your-nft-in-your-wallet)!
+Molto probabilmente vorrai mostrare gli NFT coniati tramite la tua dapp nel tuo portafoglio, dai quindi un'occhiata al nostro rapido tutorial [Come visualizzare il tuo NFT nel tuo Portafoglio](https://docs.alchemyapi.io/alchemy/tutorials/how-to-write-and-deploy-a-nft-smart-contract/how-to-view-your-nft-in-your-wallet)!
 
 E, come sempre, se hai qualsiasi domanda, siamo qui per aiutare sul [Discord di Alchemy](https://discord.gg/gWuC7zB). Non vediamo l'ora di vedere come applicherai i concetti di questo tutorial ai tuoi progetti futuri!

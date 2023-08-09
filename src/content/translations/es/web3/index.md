@@ -2,7 +2,6 @@
 title: "¿Qué es Web3 y por qué es importante?"
 description: Una introducción a la Web3 —la próxima evolución de Internet— y por qué importa.
 lang: es
-sidebar: true
 ---
 
 # Introducción a Web3 {#introduction}
@@ -50,7 +49,7 @@ Aunque es difícil proporcionar una definición estática de lo que es la Web3, 
 - **Web3 está descentralizada:** en lugar de grandes extensiones de Internet controladas y apropiadas por entidades centralizadas, la propiedad se distribuye entre sus constructores y usuarios.
 - **Web3 no tiene permisos:** todos tienen el mismo acceso para participar en la Web3, y nadie queda excluido.
 - **Web3 tiene pagos nativos:** utiliza criptomonedas para gastar y enviar dinero en línea en lugar de depender de la infraestructura obsoleta de los bancos y procesadores de pagos.
-- <**Web3 no depende de la confianza:** opera utilizando incentivos y mecanismos económicos en lugar de depender de terceros de confianza.
+- **Web3 no depende de la confianza:** opera utilizando incentivos y mecanismos económicos en lugar de depender de terceros de confianza.
 
 ### ¿Por qué es importante Web3? {#why-is-web3-important}
 
@@ -118,7 +117,7 @@ A pesar de los numerosos beneficios de Web3 en su forma actual, todavía hay muc
 
 ### Accesibilidad {#accessibility}
 
-Las características importantes de la Web 3, como el inicio de sesión con Ethereum, ya están disponibles para que cualquiera las use sin costo alguno. Pero, el coste relativo de las transacciones sigue siendo prohibitivo para muchos. Es menos probable que Web3 se utilice en países menos ricos, o en vías de desarrollo debido a las altas comisiones de las transacciones. En Ethereum, estos desafíos se están resolviendo a través de [actualizaciones de red](/upgrades/) y [soluciones de escalabilidad de capa 2](/developers/docs/scaling/). La tecnología está lista, pero necesitamos niveles más altos de adopción en la capa 2 para que Web3 sea accesible para todos.
+Las características importantes de la Web 3, como el inicio de sesión con Ethereum, ya están disponibles para que cualquiera las use sin costo alguno. Pero, el coste relativo de las transacciones sigue siendo prohibitivo para muchos. Es menos probable que Web3 se utilice en países menos ricos, o en vías de desarrollo debido a las altas comisiones de las transacciones. En Ethereum, estos desafíos están siendo resueltos a través de la [hoja de ruta](/roadmap/) y las [soluciones de escalamiento de capa 2](/developers/docs/scaling/). La tecnología está lista, pero necesitamos niveles más altos de adopción en la capa 2 para que Web3 sea accesible para todos.
 
 ### Experiencia de usuario {#user-experience}
 
@@ -158,3 +157,5 @@ Web3 no está definida rígidamente. Varios participantes de la comunidad tienen
 - [¿Por qué es importante la Descentralización?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [El paisaje de la Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [El debate de Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+
+<QuizWidget quizKey="web3" />

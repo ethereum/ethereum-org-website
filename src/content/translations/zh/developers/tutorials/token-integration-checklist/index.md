@@ -3,10 +3,9 @@ title: 通证集成检查清单
 description: 与通证交互时需要考虑的事项检查清单
 author: "Trailofbits"
 lang: zh
-sidebar: true
 tags:
   - "solidity"
-  - "智能合约"
+  - "智能合同"
   - "安全性"
   - "通证"
 skill: intermediate
@@ -63,7 +62,7 @@ Slither 包括一个实用程序[slither-prop](https://github.com/crytic/slither
 
 - **合约避免了不必要的复杂性。**通证应该是一个简单的合约；一个具有复杂代码的通证需要更高的审查标准。 使用 Slither 的[human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary)来识别复杂的代码。
 - **合约使用了 SafeMath。**不使用 SafeMath 的合约需要更高的审查标准。 手动检查合约是否使用了 SafeMath。
-- **合约中只有几个与通证无关的函数。**与通证无关的函数增加了合约中出现问题的可能性。 使用 Slither 的[human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary)来广泛审查合约中使用的代码。
+- **合约中只有几个与通证无关的函数。**与通证无关的函数增加了合约中出现问题的可能性。 使用 Slither 的[contract-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary)来广泛审查合约中使用的代码。
 - **该通证只有一个地址。**具有多个余额更新入口点的通证可能会破坏基于地址的内部记账（例如，`balances[token_address][msg.sender]`可能不反映实际余额）。
 
 ## 用户特权 {#owner-privileges}

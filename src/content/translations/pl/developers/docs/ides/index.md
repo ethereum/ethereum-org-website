@@ -2,7 +2,6 @@
 title: Zintegrowane środowiska programistyczne (IDEs)
 description:
 lang: pl
-sidebar: true
 ---
 
 Jeśli chodzi o konfigurowanie [zintegrowanego środowiska programistycznego (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), budowanie za pomocą Ethereum jest podobne do każdego innego projektu oprogramowania. Jest wiele opcji do wyboru, więc pod koniec dnia wybierz to, które najlepiej pasuje do twoich preferencji.

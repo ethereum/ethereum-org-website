@@ -2,7 +2,6 @@
 title: Ethereum Rust fejlesztőknek
 description: Tanulj meg Ethereumra fejleszteni Rust alapú projektek és eszközök használatával
 lang: hu
-sidebar: true
 incomplete: true
 ---
 
@@ -27,13 +26,9 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [A Rust Ethereum kliens](https://wiki.parity.io/Setup)
 - [Tranzakció küldése Ethereumra Rust használatával](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Bevezetés az okosszerződésekbe a Parity Ethereum klienssel](https://wiki.parity.io/Smart-Contracts)
-- [Oasis SDK fejlesztői környezet beállítása](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Útmutató arról, hogyan lehet szerződéseket írni Rust Wasm-ben Kovanra, lépésről lépésre](https://github.com/paritytech/pwasm-tutorial)
 
 ## Középhaladó cikkek {#intermediate-articles}
-
-- [Rust-Web3 dokumentáció](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 működő példák](https://github.com/tomusdrw/rust-web3/blob/master/examples)
 
 ## Fejlett használati minták {#advanced-use-patterns}
 
@@ -42,7 +37,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Építs egy decentralizált To-Do alkalmazást Vue.js-szel & Rust-tal](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigma első lépések - Rust programozási nyelven](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Bevezetés a titkos szerződésekbe](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Solidity szerződések telepítése Oasis-ba (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## Rust projektek és eszközök {#rust-projects-and-tools}
 
@@ -52,7 +46,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum virtuális gép implementáció_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust kliens_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _A Web3.js könyvtár Rust implementációja_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet okos szerződés Rust-ban_
 
 Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt

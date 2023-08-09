@@ -2,7 +2,6 @@
 title: Scaling
 description: An introduction to the different scaling options currently being developed by the Ethereum community.
 lang: en
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -10,7 +9,7 @@ sidebarDepth: 3
 
 As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
 
-The main goal of scalability is to increase transaction speed (faster finality), and transaction throughput (high transactions per second), without sacrificing decentralization or security (more on the [Ethereum vision](/upgrades/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
+The main goal of scalability is to increase transaction speed (faster finality), and transaction throughput (high transactions per second), without sacrificing decentralization or security (more on the [Ethereum vision](/roadmap/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
 
 While speed and throughput are important, it is essential that scaling solutions enabling these goals remain decentralized and secure. Keeping the barrier to entry low for node operators is critical in preventing a progression towards centralized and insecure computing power.
 
@@ -22,13 +21,11 @@ You should have a good understanding of all the foundational topics. Implementin
 
 ## On-Chain scaling {#on-chain-scaling}
 
-This method of scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/glossary/#mainnet)). Sharding is currently the main focus for this method of scaling.
+On-chain scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/glossary/#mainnet)). For a long time, sharding the blockchain was expected to scale Ethereum. This was going to involve splitting the blockchain into discrete pieces (shards) to be verified by subsets of validators. However, scaling by layer-2 rollups has taken over as the primary scaling technique. This is supported by the addition of a new cheaper form of data attached to Ethereum blocks that is specially designed to make rollups cheap for users.
 
 ### Sharding {#sharding}
 
-Sharding is the process of splitting a database horizontally to spread the load. In an Ethereum context, sharding will reduce network congestion and increase transactions per second by creating new chains, known as “shards.” This will also lighten the load for each validator who will no longer be required to process the entirety of all transactions across the network.
-
-Learn more about [sharding](/upgrades/sharding/).
+Sharding is the process of splitting a database. Subsets of validators would be responsible for individual shards rather than keeping track of all of Ethereum. Sharding was on the Ethereum [roadmap](/roadmap/) for a long time, and was once intended to be shipped before The Merge to proof-of-stake. However, the rapid development of [layer 2 rollups](#layer-2-scaling) and the invention of [Danksharding](/roadmap/danksharding) (adding blobs of rollup data to Ethereum blocks that can be very efficiently verified by validators) has led the Ethereum community to favour rollup-centric scaling instead of scaling by sharding. This will also help to keep Ethereum's consensus logic simpler.
 
 ## Off-chain scaling {#off-chain-scaling}
 
@@ -91,7 +88,7 @@ Learn more about [Validium](/developers/docs/scaling/validium/).
 - Multiple solutions can help reduce the overall congestion on any one part of the network, and also prevents single points of failure.
 - The whole is greater than the sum of its parts. Different solutions can exist and work in harmony, allowing for an exponential effect on future transaction speed and throughput.
 - Not all solutions require utilizing the Ethereum consensus algorithm directly, and alternatives can offer benefits that would otherwise be difficult to obtain.
-- No one scaling solution is enough to fulfill the [Ethereum vision](/upgrades/vision/).
+- No one scaling solution is enough to fulfill the [Ethereum vision](/roadmap/vision/).
 
 ## More of a visual learner? {#visual-learner}
 
@@ -111,5 +108,6 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all off-c
 - [Optimistic Rollups vs ZK Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Why rollups + data shards are the only sustainable solution for high scalability](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [What kind of Layer 3s make sense?](https://vitalik.ca/general/2022/09/17/layer_3.html)
 
 _Know of a community resource that helped you? Edit this page and add it!_

@@ -2,7 +2,6 @@
 title: Über uns
 description: Über das Team, die Community und die Mission von ethereum.org
 lang: de
-sidebar: true
 ---
 
 # Über Ethereum.org {#about-ethereumorg}
@@ -57,10 +56,6 @@ Wir haben einen [Styleguide](/contributing/style-guide/), um bestimmte Aspekte d
 Wir freuen uns über Feedback sowohl zu den Designprinzipien als auch zum Styleguide. Denke daran: ethereum.org ist für die Community, von der Community.
 
 Stelle sicher, dass du [unsere Prinzipien](/contributing/design-principles/) und [unseren Styleguide](/contributing/style-guide/) durchgehst, wenn du [zur Website](/contributing/) beitragen möchten.
-
-## Roadmap {#roadmap}
-
-<Roadmap />
 
 ## Offene Stellen {#open-jobs}
 

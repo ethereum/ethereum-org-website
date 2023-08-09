@@ -1,10 +1,9 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import React, { ComponentPropsWithRef } from "react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
+import { Box, BoxProps, Flex, Heading, Img, Text } from "@chakra-ui/react"
 
-import { translateMessageId, TranslationKey } from "../utils/translations"
 import Translation from "../components/Translation"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
@@ -14,173 +13,51 @@ import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
-import {
-  Content,
-  Divider,
-  LeftColumn,
-  Page,
-  RightColumn,
-  StyledCard,
-  TwoColumnContent,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
+import Card from "../components/Card"
+
+import {
+  LeftColumn,
+  RightColumn,
+  TwoColumnContent,
+} from "../pages-conditional/eth"
+
 import { getImage } from "../utils/image"
+import { trackCustomEvent } from "../utils/matomo"
 
-const Subtitle = styled.div<{
-  mb?: string
-}>`
-  font-size: 1.25rem;
-  line-height: 140%;
-  max-width: 45ch;
-  text-align: center;
-  color: ${(props) => props.theme.colors.text200};
-  margin-bottom: ${(props) => props.mb || ""};
-`
+import type { ChildOnlyProp } from "../types"
 
-const HeroContainer = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  margin: 2rem 0;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    max-width: 100vw;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column-reverse;
-    margin-bottom: 0rem;
-  }
-`
+const Page = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    align="center"
+    width="full"
+    mx="auto"
+    my={0}
+    {...props}
+  />
+)
 
-const Hero = styled(GatsbyImage)`
-  position: absolute !important;
-  z-index: -1;
-  width: 100%;
-  max-width: 1440px;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    max-width: 100vw;
-  }
-  min-height: 300px;
-  max-height: 400px;
-  background-size: cover;
-`
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
-const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 6rem;
-  text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 2rem;
-  }
-`
+export const Content = (props: BoxProps) => (
+  <Box w="full" py={4} px={8} {...props} />
+)
 
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0rem 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 1rem;
-  }
-`
-
-const WalletImage = styled(GatsbyImage)`
-  align-self: center;
-  width: 50%;
-  max-width: 600px;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 60%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-  }
-`
-
-const WalletLeftColumn = styled(LeftColumn)`
-  display: flex;
-  flex-direction: column;
-`
-
-const GradientContainer = styled.div`
-  background: radial-gradient(
-    46.28% 66.31% at 66.95% 58.35%,
-    rgba(127, 127, 213, 0.2) 0%,
-    rgba(134, 168, 231, 0.2) 50%,
-    rgba(145, 234, 228, 0.2) 100%
-  );
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 4rem 4rem;
-  padding: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 4rem 2rem;
-  }
-`
-
-const CodeBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  background: #191919;
-  border-radius: 4px;
-  padding: 0.5rem;
-  margin-bottom: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-  }
-`
-
-const StyledEthPriceCard = styled(EthPriceCard)`
-  margin-bottom: 2rem;
-`
-
-const Code = styled.p`
-  font-family: monospace;
-  color: #ffffff;
-  margin-bottom: 0rem;
-`
-
-const CodeLabel = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.fail300};
-  margin-bottom: 0rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem;
-  }
-`
-
-const AllCapsTranslation = styled(Translation)`
-  text-transform: uppercase;
-`
-
-const StyledInfoBanner = styled(InfoBanner)<{
-  mt: string
-}>`
-  margin-top: ${(props) => props.mt};
-`
+export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
+  <Card
+    flex="1 1 30%"
+    minW="280px"
+    maxW={{ base: "full", md: "46%", lg: "31%" }}
+    m={4}
+    p={6}
+    {...props}
+  />
+)
 
 const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
-  const intl = useIntl()
-  const decentralizedExchanges: Array<CardListItem> = [
-    {
-      title: "Localcryptos.com",
-      link: "https://localcryptos.com/",
-      image: getImage(data.localcryptos)!,
-      alt: "",
-    },
-  ].sort((a, b) => a.title.localeCompare(b.title))
+  const { t } = useTranslation()
 
   const tokenSwaps: Array<CardListItem> = [
     {
@@ -217,70 +94,117 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
 
   const safetyArticles: Array<CardListItem> = [
     {
-      title: translateMessageId(
-        "page-get-eth-article-protecting-yourself",
-        intl
-      ),
+      title: t("page-get-eth-article-protecting-yourself"),
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
-      description: "MyCrypto",
+      description: t("page-get-eth-article-protecting-yourself-desc"),
     },
     {
-      title: translateMessageId(
-        "page-get-eth-article-keeping-crypto-safe",
-        intl
-      ),
+      title: t("page-get-eth-article-keeping-crypto-safe"),
       link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
-      description: "Coinbase",
+      description: t("page-get-eth-article-keeping-crypto-safe-desc"),
     },
     {
-      title: translateMessageId(
-        "page-get-eth-article-store-digital-assets",
-        intl
-      ),
+      title: t("page-get-eth-article-store-digital-assets"),
       link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
-      description: "ConsenSys",
+      description: t("page-get-eth-article-store-digital-assets-desc"),
     },
   ]
 
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-get-eth-meta-title", intl)}
-        description={translateMessageId("page-get-eth-meta-description", intl)}
+        title={t("page-get-eth-meta-title")}
+        description={t("page-get-eth-meta-description")}
       />
 
-      <HeroContainer>
-        <Hero
+      <Flex
+        position="relative"
+        width="full"
+        maxWidth="1440px"
+        direction={{
+          base: "column-reverse",
+          md: "column",
+        }}
+        mt={8}
+        mx={0}
+        mb={{ base: 0, sm: 8 }}
+        justifyContent="center"
+      >
+        <Img
+          as={GatsbyImage}
+          sx={{
+            position: "absolute !important",
+          }}
+          zIndex={-1}
+          w="full"
+          maxW={{ base: "100vh", xl: "8xl" }}
+          minH="300px"
+          maxH="400px"
+          backgroundSize="cover"
           image={getImage(data.hero)!}
-          alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
+          alt={t("page-get-eth-hero-image-alt")}
           loading="eager"
         />
-        <Header>
-          <h1>
+        <Flex
+          flexDir="column"
+          alignItems="center"
+          mx={{ base: 8, lg: 0 }}
+          mb={{ base: 8, lg: 0 }}
+          mt={{ base: 8, lg: 24 }}
+          textAlign="center"
+        >
+          <Heading
+            as="h1"
+            fontSize={{ base: "2.5rem", md: "5xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-where-to-buy-title" />
-          </h1>
-          <Subtitle>
+          </Heading>
+          <Text
+            fontSize="xl"
+            lineHeight="140%"
+            maxWidth="45ch"
+            color="text200"
+            textAlign="center"
+            mb={0}
+          >
             <Translation id="page-get-eth-where-to-buy-desc" />
-          </Subtitle>
-          <Subtitle mb="2rem">
+          </Text>
+          <Text
+            fontSize="xl"
+            lineHeight="140%"
+            maxWidth="45ch"
+            color="text200"
+            textAlign="center"
+            mb={8}
+          >
             <Translation id="page-get-eth-where-to-buy-desc-2" />
-          </Subtitle>
-          <StyledEthPriceCard />
-          <ButtonLink to="#country-picker">
+          </Text>
+          <Box as={EthPriceCard} mb={8} />
+          <ButtonLink
+            to="#country-picker"
+            onClick={() =>
+              trackCustomEvent({
+                eventCategory: "Search by country button",
+                eventAction: "click",
+                eventName: "search_by_country",
+              })
+            }
+          >
             <Translation id="page-get-eth-search-by-country" />
           </ButtonLink>
-        </Header>
-      </HeroContainer>
-      <CardContainer>
+        </Flex>
+      </Flex>
+      <Flex flexWrap="wrap" mx={{ base: 4, lg: 8 }} my={{ base: 4, lg: 0 }}>
         <StyledCard
           emoji=":office_building:"
-          title={translateMessageId("page-get-eth-cex", intl)}
-          description={translateMessageId("page-get-eth-cex-desc", intl)}
+          title={t("page-get-eth-cex")}
+          description={t("page-get-eth-cex-desc")}
         />
         <StyledCard
           emoji=":busts_in_silhouette:"
-          title={translateMessageId("page-get-eth-dex", intl)}
-          description={translateMessageId("page-get-eth-dex-desc", intl)}
+          title={t("page-get-eth-dex")}
+          description={t("page-get-eth-dex-desc")}
         >
           <Link to="#dex">
             <Translation id="page-get-eth-try-dex" />
@@ -288,154 +212,210 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         </StyledCard>
         <StyledCard
           emoji=":robot:"
-          title={translateMessageId("page-get-eth-wallets", intl)}
-          description={translateMessageId(
-            "page-get-eth-wallets-purchasing",
-            intl
-          )}
+          title={t("page-get-eth-wallets")}
+          description={t("page-get-eth-wallets-purchasing")}
         >
           <Link to="/wallets/">
             <Translation id="page-get-eth-wallets-link" />
           </Link>
         </StyledCard>
         <Content>
-          <p>
-            <em>
+          <Text>
+            <Text as="em">
               <Translation id="listing-policy-disclaimer" />{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                 <Translation id="listing-policy-raise-issue-link" />
               </Link>
-            </em>
-          </p>
-          <StyledInfoBanner emoji=":wave:" shouldCenter={true} mt={`2rem`}>
+            </Text>
+          </Text>
+          <InfoBanner emoji=":wave:" shouldCenter mt={8}>
             <Translation id="page-get-eth-new-to-eth" />{" "}
             <Link to="/eth/">
               <Translation id="page-get-eth-whats-eth-link" />
             </Link>
-          </StyledInfoBanner>
+          </InfoBanner>
         </Content>
-      </CardContainer>
-      <GradientContainer id="country-picker">
+      </Flex>
+      <Flex
+        id="country-picker"
+        bgGradient="radial-gradient(
+          46.28% 66.31% at 66.95% 58.35%,
+          rgba(127, 127, 213, 0.2) 0%,
+          rgba(134, 168, 231, 0.2) 50%,
+          rgba(145, 234, 228, 0.2) 100%
+        )"
+        w="full"
+        flexDir="column"
+        alignItems="center"
+        m={16}
+        px={{ base: 8, sm: 16 }}
+        py={{ base: 16, sm: 16 }}
+      >
         <EthExchanges />
-      </GradientContainer>
+      </Flex>
       <Content id="dex">
-        <h2>
+        <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4}>
           <Translation id="page-get-eth-dexs" />
-        </h2>
+        </Heading>
       </Content>
       <TwoColumnContent>
         <LeftColumn>
-          <h3>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-what-are-DEX's" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-dexs-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-get-eth-dexs-desc-2" />{" "}
             <Link to="/smart-contracts">
               <Translation id="page-get-eth-smart-contract-link" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-get-eth-dexs-desc-3" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-get-eth-need-wallet" />
-          </p>
+          </Text>
           <ButtonLink to="/wallets/">
             <Translation id="page-get-eth-get-wallet-btn" />
           </ButtonLink>
         </LeftColumn>
         <RightColumn>
-          <h3>
-            <Translation id="page-get-eth-traditional-currencies" />
-          </h3>
-          <p>
-            <Translation id="page-get-eth-traditional-payments" />
-          </p>
-          <CardList content={decentralizedExchanges} />
-          <h3>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-other-cryptos" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-swapping" />
-          </p>
+          </Text>
           <CardList content={tokenSwaps} />
-          <InfoBanner isWarning={true}>
+          <InfoBanner isWarning>
             <Translation id="page-get-eth-warning" />
           </InfoBanner>
         </RightColumn>
       </TwoColumnContent>
       <Divider />
       <Content>
-        <h2>
+        <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4}>
           <Translation id="page-get-eth-keep-it-safe" />
-        </h2>
+        </Heading>
       </Content>
       <TwoColumnContent>
-        <WalletLeftColumn>
-          <WalletImage image={getImage(data.wallet)!} alt="" />
-          <h3>
+        <Flex as={LeftColumn} flexDir="column">
+          <Img
+            as={GatsbyImage}
+            alignSelf="center"
+            w={{ base: "full", sm: "60%", md: "50%" }}
+            maxW="600px"
+            mb={8}
+            image={getImage(data.wallet)!}
+            alt=""
+          />
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-community-safety" />
-          </h3>
+          </Heading>
           <CardList content={safetyArticles} />
-        </WalletLeftColumn>
+        </Flex>
         <RightColumn>
-          <p>
+          <Text>
             <Translation id="page-get-eth-description" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-get-eth-security" />
-          </p>
-          <h3>
+          </Text>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-protect-eth-in-wallet" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-protect-eth-desc" />
-          </p>
+          </Text>
           <Link to="/wallets/">
             <Translation id="page-get-eth-your-address-wallet-link" />
           </Link>
-          <h3>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-your-address" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-your-address-desc" />
-          </p>
-          <CodeBox>
-            <Code>0x0125e2478d69eXaMpLe81766fef5c120d30fb53f</Code>
-            <CodeLabel>
-              <AllCapsTranslation id="page-get-eth-do-not-copy" />
-            </CodeLabel>
-          </CodeBox>
-          <p>
+          </Text>
+          <Flex
+            justifyContent="space-between"
+            bg="#191919"
+            borderRadius="base"
+            p={2}
+            mb={6}
+            userSelect="none"
+            flexDir={{ base: "column-reverse", lg: "initial" }}
+          >
+            <Text fontFamily="monospace" color="white" mb={0} fontSize="xs">
+              0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
+            </Text>
+            <Text
+              textTransform="uppercase"
+              fontSize="sm"
+              color="fail300"
+              mb={0}
+              mx={4}
+            >
+              <Text
+                as={Translation}
+                textTransform="uppercase"
+                id="page-get-eth-do-not-copy"
+              />
+            </Text>
+          </Flex>
+          <Text>
             <Translation id="page-get-eth-your-address-desc-3" />
-          </p>
-          <h3>
+          </Text>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-wallet-instructions" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-wallet-instructions-lost" />
-          </p>
+          </Text>
         </RightColumn>
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
+        mx={4}
+        mt={24}
+        mb={40}
         titleKey="page-get-eth-use-your-eth"
         descriptionKey="page-get-eth-use-your-eth-dapps"
         image={getImage(data.dapps)!}
-        alt={translateMessageId(
-          "page-index-sections-individuals-image-alt" as TranslationKey,
-          intl
-        )}
+        alt={t("page-index-sections-individuals-image-alt")}
         maxImageWidth={600}
       >
-        <div>
+        <Box>
           <ButtonLink to="/dapps/">
             <Translation id="page-get-eth-checkout-dapps-btn" />
           </ButtonLink>
-        </div>
+        </Box>
       </CalloutBanner>
       <FeedbackCard />
     </Page>
@@ -458,7 +438,21 @@ export const listItemImage = graphql`
 `
 
 export const query = graphql`
-  query GetEthPage {
+  query GetEthPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-get-eth", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "get-eth.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
@@ -483,9 +477,6 @@ export const query = graphql`
           quality: 100
         )
       }
-    }
-    localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {
-      ...listItemImage
     }
     uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
       ...listItemImage

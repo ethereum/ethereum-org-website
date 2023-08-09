@@ -2,7 +2,6 @@
 title: Ethereum untuk pengembang Java
 description: Pelajari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis Java
 lang: id
-sidebar: true
 incomplete: true
 ---
 

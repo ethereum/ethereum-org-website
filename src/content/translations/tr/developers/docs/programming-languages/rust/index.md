@@ -2,7 +2,6 @@
 title: Rust geliştiricileri için Ethereum
 description: Ethereum için Rust temelli projeler ve araçlar kullanarak nasıl geliştireceğinizi öğrenin
 lang: tr
-sidebar: true
 incomplete: true
 ---
 
@@ -27,13 +26,9 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [The Rust Ethereum Client](https://openethereum.github.io/) \* **OpenEthereum'un [kullanımdan kaldırıldığını](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ve artık bakıma tabi olmadığını unutmayın.** Dikkatli kullanın ve tercihen başka bir istemci uygulamasına geçin.
 - [Rust Kullanarak Ethereum'a İşlem Göndermek](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Parity Ethereum İstemcisiyle Akıllı Sözleşmelere Giriş](https://wiki.parity.io/Smart-Contracts)
-- [Oasis SDK geliştirme ortamınızı kurma](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Kovan için rust wasm ile sözleşme yazma hakkında adım adım öğretici](https://github.com/paritytech/pwasm-tutorial)
 
 ## Orta seviye makaleler {#intermediate-articles}
-
-- [Rust-Web3 Belgeleri](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 Çalışma Örnekleri](https://github.com/tomusdrw/rust-web3/blob/master/examples)
 
 ## İleri düzey kullanım Şşkilleri {#advanced-use-patterns}
 
@@ -42,7 +37,6 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [Vue.js ve Rust kullanarak Merkezietsiz bir Yapılacaklar Listesi Uygulaması oluşturun](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigma'ya Başlarken - Rust Programlama Dilinde](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Gizli Sözleşmelere Giriş](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Oasis üzerinde Solidity Sözleşmeleri Dağıtma (Bileşik)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## Rust Projeleri ve Araçları {#rust-projects-and-tools}
 
@@ -52,7 +46,6 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API referansı_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum Sanal Makinesi Uygulaması_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js kütüphanesinin Rust uygulaması_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust'ta Wavelet akıllı sözleşme_
 - [Foundry](https://github.com/gakonst/foundry)- _Ethereum uygulama geliştirme için araç takımı_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum kütüphanesi ve cüzdan uygulaması_

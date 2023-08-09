@@ -2,7 +2,6 @@
 title: Lingkungan Pengembangan Terintegrasi (IDE)
 description:
 lang: id
-sidebar: true
 ---
 
 Ketika berkaitan dengan menyiapkan [lingkungan pengembangan terintegrasi (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), memprogram aplikasi di Ethereum sama dengan pemrograman proyek perangkat lunak lainnya. Ada banyak opsi untuk dipilih, jadi pada akhirnya, pilihlah IDE atau editor kode yang paling sesuai dengan preferensi Anda. Sangat mungkin pilihan IDE terbaik untuk pengembangan Ethereum Anda adalah IDE yang telah Anda gunakan untuk pengembangan perangkat lunak tradisional.

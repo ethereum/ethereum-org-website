@@ -2,7 +2,6 @@
 title: Smart contract libraries
 description:
 lang: en
-sidebar: true
 ---
 
 You don't need to write every smart contract in your project from scratch. There are many open source smart contract libraries available that provide reusable building blocks for your project that can save you from having to reinvent the wheel.
@@ -102,6 +101,11 @@ Last, when deciding on whether to include a library, consider its overall usage.
 **HQ20 -** **_A Solidity project with contracts, libraries and examples to help you build fully-featured distributed applications for the real world._**
 
 - [GitHub](https://github.com/HQ20/contracts)
+
+**thirdweb Solidity SDK -** **_Provides the tools needed to build custom smart contracts efficiently_**
+
+- [Documentation](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Related tutorials {#related-tutorials}
 

@@ -1,116 +1,20 @@
 // Libraries
 import React, { useState } from "react"
-import styled from "@emotion/styled"
 import { reverse, sortBy } from "lodash"
+import {
+  Box,
+  Button as ChakraButton,
+  Flex,
+  Img,
+  Text,
+  useColorModeValue,
+  useRadio,
+  useRadioGroup,
+} from "@chakra-ui/react"
 
 // Components
-import Emoji from "./OldEmoji"
-import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
+import Emoji from "./Emoji"
 import Translation from "./Translation"
-
-const Content = styled.div`
-  margin-bottom: 2rem;
-`
-
-const Table = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  width: 100%;
-  margin-bottom: 2rem;
-`
-
-const Header = styled.div`
-  background-color: ${(props) => props.theme.colors.grayBackground};
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text} !important;
-  margin-bottom: 1px;
-  padding: 1rem;
-  width: 100%;
-  color: #000000;
-`
-
-const Item = styled.div`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  color: #000000;
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
-
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 2rem;
-  overflow-wrap: anywhere;
-`
-
-const WordsContainer = styled.div`
-  min-width: 20%;
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-`
-
-const Avatar = styled.img`
-  margin-right: 1rem;
-  height: 40px;
-  width: 40px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    height: 30px;
-    width: 30px;
-  }
-  border-radius: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
-    display: none;
-  }
-`
-
-const NameContainer = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-width: 100px;
-  }
-`
-
-const Width40 = styled.div`
-  width: 40px;
-`
-
-const ItemNumber = styled(Width40)`
-  opacity: 0.4;
-`
-
-const Language = styled.p`
-  margin: 0;
-  display: block;
-  font-size: ${(props) => props.theme.fontSizes.s};
-  opacity: 0.6;
-`
-
-const StyledEmoji = styled(Emoji)`
-  display: block;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: none;
-  }
-`
-
-const Flex = styled.div`
-  display: flex;
-`
 
 export interface IProps {
   monthData: any
@@ -118,11 +22,78 @@ export interface IProps {
   allTimeData: any
 }
 
+const Button = (props) => {
+  return (
+    <ChakraButton
+      display="flex"
+      borderRadius="2rem"
+      borderWidth="1px"
+      borderStyle="solid"
+      borderColor="text"
+      color="text"
+      alignItems="center"
+      py={4}
+      px={6}
+      m={2}
+      h="full"
+      cursor="pointer"
+      bg="transparent"
+      w={{ base: "full", lg: "initial" }}
+      justifyContent="center"
+      ml={{ base: "0", lg: "2" }}
+      mr={{ base: "0", lg: "2" }}
+      _hover={{
+        color: "primary.base",
+        borderColor: "primary.base",
+      }}
+      _focus={{}}
+      _active={{}}
+      {...props}
+    />
+  )
+}
+
+const RadioCard = (props) => {
+  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const { getInputProps, getCheckboxProps } = useRadio(props)
+
+  const input = getInputProps()
+  const checkbox = getCheckboxProps()
+
+  return (
+    <Button
+      as="label"
+      {...checkbox}
+      _checked={{
+        borderColor: "primary.base",
+        color: "primary.base",
+        boxShadow: shadow,
+      }}
+    >
+      <input {...input} />
+      <Text
+        as="span"
+        fontSize={{ base: "md", md: "lg" }}
+        lineHeight="100%"
+        textAlign="center"
+        fontWeight={{ base: "semibold", md: "normal" }}
+      >
+        {props.children}
+      </Text>
+    </Button>
+  )
+}
+
 const TranslationLeaderboard: React.FC<IProps> = ({
   monthData,
   quarterData,
   allTimeData,
 }) => {
+  const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const tableItemBoxShadow = useColorModeValue(
+    "tableItemBox.light",
+    "tableItemBox.dark"
+  )
   const leaderboardData = {
     monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
     quarterData: reverse(
@@ -143,46 +114,66 @@ const TranslationLeaderboard: React.FC<IProps> = ({
     updateFilterAmount(50)
   }
 
+  const { getRadioProps } = useRadioGroup({
+    name: "period selection",
+    defaultValue: "monthData",
+    onChange: updateDateRangeType,
+  })
+
   return (
-    <Content>
-      <OptionContainer>
-        <Option
-          onClick={() => updateDateRangeType("monthData")}
-          isActive={dateRangeType === "monthData"}
+    <Box>
+      <Flex
+        justifyContent="center"
+        py={0}
+        px={8}
+        mb={8}
+        flexDirection={{ base: "column", lg: "inherit" }}
+        w="full"
+      >
+        <RadioCard key="monthData" {...getRadioProps({ value: "monthData" })}>
+          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
+        </RadioCard>
+        <RadioCard
+          key="quarterData"
+          {...getRadioProps({ value: "quarterData" })}
         >
-          <OptionText fontSize={"18px"}>
-            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
-          </OptionText>
-        </Option>
-        <Option
-          onClick={() => updateDateRangeType("quarterData")}
-          isActive={dateRangeType === "quarterData"}
+          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
+        </RadioCard>
+        <RadioCard
+          key="allTimeData"
+          {...getRadioProps({ value: "allTimeData" })}
         >
-          <OptionText fontSize={"18px"}>
-            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
-          </OptionText>
-        </Option>
-        <Option
-          onClick={() => updateDateRangeType("allTimeData")}
-          isActive={dateRangeType === "allTimeData"}
+          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
+        </RadioCard>
+      </Flex>
+      <Box bg="background.base" boxShadow={tableBoxShadow} w="full" mb={8}>
+        <Flex
+          bg="grayBackground"
+          textDecoration="none"
+          justifyContent="space-between"
+          alignItems="center"
+          color="text"
+          mb="1px"
+          p={4}
+          w="full"
         >
-          <OptionText fontSize={"18px"}>
-            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
-          </OptionText>
-        </Option>
-      </OptionContainer>
-      <Table>
-        <Header>
           <Flex>
-            <ItemNumber>#</ItemNumber>
-            <TextContainer>
+            <Box w={10} opacity="0.4">
+              #
+            </Box>
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              mr={8}
+              overflowWrap="anywhere"
+            >
               <Translation id="page-contributing-translation-program-acknowledgements-translator" />
-            </TextContainer>
+            </Flex>
           </Flex>
-          <WordsContainer>
+          <Flex minW="20%" flexDirection="row" alignItems="left">
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
-          </WordsContainer>
-        </Header>
+          </Flex>
+        </Flex>
         {/* // TODO: Remove specific user checks once Acolad has updated their usernames */}
         {leaderboardData[dateRangeType]
           .filter(
@@ -214,34 +205,84 @@ const TranslationLeaderboard: React.FC<IProps> = ({
               emoji = ":3rd_place_medal:"
             }
             return (
-              <Item key={idx}>
+              <Flex
+                textDecoration="none"
+                justifyContent="space-between"
+                alignItems="center"
+                color="text"
+                boxShadow={tableItemBoxShadow}
+                mb="1px"
+                py={2}
+                px={4}
+                w="full"
+                _hover={{
+                  borderRadius: "base",
+                  boxShadow: "tableItemBoxHover",
+                  bg: "tableBackgroundHover",
+                }}
+                key={idx}
+              >
                 <Flex>
                   {emoji ? (
-                    <Width40>
-                      <Emoji mr={"1rem"} size={2} text={emoji} />
-                    </Width40>
+                    <Box w={10}>
+                      <Emoji mr={4} fontSize="2rem" text={emoji} />
+                    </Box>
                   ) : (
-                    <ItemNumber>{idx + 1}</ItemNumber>
+                    <Box w={10} opacity="0.4">
+                      {idx + 1}
+                    </Box>
                   )}
-                  <TextContainer>
-                    <Avatar src={user.avatarUrl} />
-                    <NameContainer>
+                  <Flex
+                    flexDirection="row"
+                    alignItems="center"
+                    mr={8}
+                    overflowWrap="anywhere"
+                  >
+                    <Img
+                      mr={4}
+                      h={{ base: "30px", sm: 10 }}
+                      w={{ base: "30px", sm: 10 }}
+                      borderRadius="50%"
+                      display={{ base: "none", s: "block" }}
+                      src={user.avatarUrl}
+                    />
+                    <Box maxW={{ base: "100px", sm: "none" }}>
                       {user.username}
-                      <Language>{sortedLanguages[0].language.name}</Language>
-                    </NameContainer>
-                  </TextContainer>
+                      <Text m={0} display="block" fontSize="sm" opacity="0.6">
+                        {sortedLanguages[0].language.name}
+                      </Text>
+                    </Box>
+                  </Flex>
                 </Flex>
-                <WordsContainer>
-                  <StyledEmoji mr={"0.5rem"} size={1.5} text={":writing:"} />
+                <Flex minW="20%" flexDirection="row" alignItems="left">
+                  <Emoji
+                    display={{ base: "none", sm: "block" }}
+                    mr={2}
+                    fontSize="2xl"
+                    text={":writing:"}
+                  />
                   {user.totalCosts}
-                </WordsContainer>
-              </Item>
+                </Flex>
+              </Flex>
             )
           })}
-      </Table>
-      <OptionContainer>
-        <Option onClick={filterAmount === 10 ? showMore : showLess}>
-          <OptionText fontSize={"18px"}>
+      </Box>
+      <Flex
+        justifyContent="center"
+        py={0}
+        px={8}
+        mb={8}
+        flexDirection={{ base: "column", lg: "inherit" }}
+        w="full"
+      >
+        <Button onClick={filterAmount === 10 ? showMore : showLess}>
+          <Text
+            as="span"
+            fontSize={{ base: "md", md: "lg" }}
+            lineHeight="100%"
+            textAlign="center"
+            fontWeight={{ base: "semibold", md: "normal" }}
+          >
             <Translation
               id={
                 filterAmount === 10
@@ -249,10 +290,10 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                   : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
               }
             />
-          </OptionText>
-        </Option>
-      </OptionContainer>
-    </Content>
+          </Text>
+        </Button>
+      </Flex>
+    </Box>
   )
 }
 

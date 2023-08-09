@@ -2,7 +2,6 @@
 title: Ethereum pentru programatorii Rust
 description: Învăţaţi să programaţi pentru Ethereum folosind proiecte și instrumente Rust
 lang: ro
-sidebar: true
 incomplete: true
 ---
 
@@ -27,13 +26,9 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [Clientul Rust Ethereum](https://openethereum.github.io/) \* **Țineţi cont că OpenEthereum [nu mai este întreținut](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd).** Folosiţi-l cu precauție și este de preferat să treceţi la implementarea unui alt client.
 - [Trimiterea tranzacțiilor în Ethereum cu clientul Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Introducere despre contractele inteligente cu clientul Parity pentru Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Setarea mediului de dezvoltare Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Tutorial pas cu pas de dezvoltare a contractelor inteligente în Rust Wasm pentru Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Articole de nivel intermediar {#intermediate-articles}
-
-- [Documentația Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Exemple practice de Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
 
 ## Modele avansate de utilizare {#advanced-use-patterns}
 
@@ -42,7 +37,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [Dezvoltă o aplicație Todo descentralizată folosind Vue.js și Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Noțiuni de bază ale Enigma - Limbaj de programare în Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Introducere despre contractele secrete](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Implementarea contractelor Solidity pe Oasis (compus)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## Proiecte și instrumente Rust {#rust-projects-and-tools}
 
@@ -52,7 +46,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _Referință API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Implementare Rust a mașinii virtuale Ethereum_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Implementare Rust a bibliotecii Web3.js_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contract inteligent Wavelet în Rust_
 - [Foundry](https://github.com/gakonst/foundry)- _Toolkit for Ethereum application development_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum library and wallet implementation_

@@ -3,7 +3,6 @@ title: Cum se folosește Echidna pentru a testa contracte inteligente
 description: Cum să utilizați Echidna pentru a testa automat contractele inteligente
 author: "Trailofbits"
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"

@@ -2,7 +2,6 @@
 title: Mecanisme de consens
 description: O explicație a protocoalelor de consens în sistemele distribuite și a rolului pe care acestea îl joacă în Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 ---
 
@@ -76,7 +75,7 @@ Este folosită o **regulă de selecție a lanțului** pentru a decide care lanț
 
 Combinația dintre dovada-muncii și regula celui mai lung lanț este cunoscută sub numele de „Consensul Nakamoto”
 
-[Lanțul Beacon](/upgrades/beacon-chain/) folosește un mecanism de consens numit [Gadgetul de finalitate prietenos Casper](https://arxiv.org/abs/1710.09437), care este bazat pe dovada-mizei.
+[Lanțul Beacon](/roadmap/beacon-chain/) folosește un mecanism de consens numit [Gadgetul de finalitate prietenos Casper](https://arxiv.org/abs/1710.09437), care este bazat pe dovada-mizei.
 
 ## Referințe suplimentare {#further-reading}
 

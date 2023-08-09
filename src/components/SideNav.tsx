@@ -1,46 +1,27 @@
-import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
-import { motion } from "framer-motion"
-import { useIntl } from "react-intl"
+import React, { useState, useEffect, ReactNode } from "react"
+import { Box, HStack, Icon } from "@chakra-ui/react"
 
-import Icon from "./Icon"
-import Link from "./Link"
+import { motion } from "framer-motion"
+import { MdExpandMore } from "react-icons/md"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+
+import Link, { IProps as ILinkProps } from "./Link"
 import Translation from "./Translation"
-import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"
-import { translateMessageId } from "../utils/translations"
 import { DeveloperDocsLink } from "../types"
 
-const IconContainer = styled(motion.div)`
-  cursor: pointer;
-`
+export const dropdownIconContainerVariant = {
+  open: {
+    rotate: 0,
+    y: 3,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  closed: { rotate: -90, y: 0 },
+}
 
-const Nav = styled.nav`
-  position: sticky;
-  top: 7.25rem; /* account for navbar */
-  padding: 2rem 0 4rem;
-  height: calc(100vh - 80px); /* TODO take footer into account for height? */
-  width: calc((100% - 1448px) / 2 + 298px);
-  min-width: 298px;
-  overflow-y: auto;
-  transition: all 0.2s ease-in-out;
-  transition: transform 0.2s ease;
-  background-color: ${(props) => props.theme.colors.background};
-  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid ${(props) => props.theme.colors.border};
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const InnerLinks = styled(motion.div)`
-  font-size: ${(props) => props.theme.fontSizes.s};
-  line-height: 1.6;
-  font-weight: 400;
-  margin-left: 1rem;
-`
 const innerLinksVariants = {
   open: {
     opacity: 1,
@@ -52,34 +33,35 @@ const innerLinksVariants = {
   },
 }
 
-const LinkContainer = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem 0.5rem 2rem;
-  &:hover {
-    background-color: ${(props) => props.theme.colors.ednBackground};
-  }
-`
-const SideNavLink = styled(Link)`
-  width: 100%;
-  text-decoration: none;
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-  }
-  &.active {
-    color: ${(props) => props.theme.colors.primary};
-  }
-`
-const SideNavGroup = styled.div`
-  width: 100%;
-  cursor: pointer;
-`
+const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <HStack
+      w="full"
+      justify="space-between"
+      py={2}
+      pr={4}
+      pl={8}
+      _hover={{ bgColor: "ednBackground" }}
+    >
+      {children}
+    </HStack>
+  )
+}
 
-const NavItem = styled.div``
+const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
+  return (
+    <Link
+      w="full"
+      textDecoration="none"
+      color="text"
+      _hover={{ textDecoration: "none", color: "primary.base" }}
+      _active={{ color: "primary.base" }}
+      {...props}
+    >
+      {children}
+    </Link>
+  )
+}
 
 export interface IPropsNavLink {
   item: DeveloperDocsLink
@@ -101,7 +83,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
 
   if (item.items) {
     return (
-      <NavItem>
+      <Box>
         <LinkContainer>
           {item.to && (
             <SideNavLink to={item.to} isPartiallyActive={false}>
@@ -109,19 +91,26 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
             </SideNavLink>
           )}
           {!item.to && (
-            <SideNavGroup onClick={() => setIsOpen(!isOpen)}>
+            <Box w="full" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
               <Translation id={item.id} />
-            </SideNavGroup>
+            </Box>
           )}
-          <IconContainer
+          <Box
+            as={motion.div}
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
+            cursor="pointer"
           >
-            <Icon name="chevronDown" />
-          </IconContainer>
+            <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+          </Box>
         </LinkContainer>
-        <InnerLinks
+        <Box
+          as={motion.div}
+          fontSize="sm"
+          lineHeight="tall"
+          fontWeight="normal"
+          ml={4}
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -130,18 +119,18 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
           {item.items.map((childItem, idx) => (
             <NavLink item={childItem} path={path} key={idx} />
           ))}
-        </InnerLinks>
-      </NavItem>
+        </Box>
+      </Box>
     )
   }
   return (
-    <NavItem>
+    <Box>
       <LinkContainer>
         <SideNavLink to={item.to} isPartiallyActive={false}>
           <Translation id={item.id} />
         </SideNavLink>
       </LinkContainer>
-    </NavItem>
+    </Box>
   )
 }
 
@@ -154,14 +143,31 @@ export interface IProps {
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
 const SideNav: React.FC<IProps> = ({ path }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
-    <Nav aria-label={translateMessageId("nav-developers-docs", intl)}>
+    <Box
+      as="nav"
+      position="sticky"
+      top="7.25rem"
+      pt={8}
+      pb={16}
+      h="calc(100vh - 80px)" // TODO take footer into account for height?
+      w="calc((100% - 1448px) / 2 + 298px)"
+      minW="298px"
+      overflowY="auto"
+      transition="transform 0.2s ease"
+      bgColor="background.base"
+      boxShadow="1px 0px 0px rgba(0, 0, 0, 0.1)"
+      borderRight="1px solid"
+      borderRightColor="border"
+      display={{ base: "none", lg: "block" }}
+      aria-label={t("nav-developers-docs")}
+    >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} />
       ))}
-    </Nav>
+    </Box>
   )
 }
 

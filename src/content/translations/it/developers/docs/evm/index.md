@@ -1,23 +1,22 @@
 ---
 title: Macchina virtuale Ethereum (EVM)
-description: Introduzione alla macchina virtuale Ethereum e al suo ruolo per quanto riguarda stato, transazioni e Smart Contract.
+description: Un'introduzione alla Macchina Virtuale di Ethereum e a come si relaziona allo stato, alle transazioni e ai contratti intelligenti.
 lang: it
-sidebar: true
 ---
 
 La creazione di istanze fisiche dell’EVM non può essere paragonata allo scrivere codice per puntare a un cloud o a un’onda dell'oceano, ma _esiste_ come entità singola gestita da migliaia di computer collegati, che eseguono un client Ethereum.
 
-Il protocollo Ethereum stesso esiste unicamente allo scopo di garantire un funzionamento continuo, ininterrotto e immutabile di questa speciale macchina a stati. È l'ambiente in cui sono presenti tutti gli account Ethereum e gli Smart Contract. In qualsiasi blocco della catena, Ethereum ha uno, e solo uno, stato "canonico", e la EVM è ciò che definisce le regole per calcolare un nuovo stato valido da blocco a blocco.
+Il protocollo di Ethereum stesso esiste unicamente allo scopo di mantenere la continua, ininterrotta e immutabile operazione di questa speciale macchina di stato. È l'ambiente in cui risiedono tutti i conti e contratti intelligenti di Ethereum. A ogni dato blocco nella catena, Ethereum ha un solo stato 'canonico' e l'EVM è ciò che definisce le regole di calcolo di un nuovo stato valido da blocco a blocco.
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere l'EVM, è richiesta una conoscenza di base dei termini comuni dell'informatica, come ad esempio [byte](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) e [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Sarebbe anche utile conoscere i concetti di crittografia/blockchain, quali le [funzioni hash](https://wikipedia.org/wiki/Cryptographic_hash_function), il [proof-of-work](https://wikipedia.org/wiki/Proof_of_work) e l'[albero di Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Per comprendere l'EVM, è richiesta una conoscenza di base dei termini comuni dell'informatica, come ad esempio [byte](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) e [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Sarebbe inoltre utile esser a conoscenza dei concetti crittografici e della blockchain come le [funzioni di hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e l'[albero di Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Dal libro mastro alla macchina a stati {#from-ledger-to-state-machine}
 
-Per descrivere blockchain come Bitcoin, viene spesso utilizzata l'analogia con un "libro mastro distribuito", che permette l'esistenza di una valuta decentralizzata utilizzando strumenti base della crittografia. Una criptovaluta si comporta come una "normale" valuta per via delle regole che decidono cosa si può e cosa non si può fare per modificare il libro mastro. Ad esempio, un indirizzo Bitcoin non può spendere più Bitcoin di quanti ne abbia ricevuti in precedenza. Queste regole sono alla base di tutte le transazioni su Bitcoin e di molte altre blockchain.
+Per descrivere blockchain come Bitcoin, viene spesso utilizzata l'analogia con un "libro mastro distribuito", che permette l'esistenza di una valuta decentralizzata utilizzando strumenti base della crittografia. Il libro mastro mantiene un registro delle attività che deve aderire a una serie di regole che governano ciò che qualcuno può e non può fare per modificarlo. Ad esempio, un indirizzo Bitcoin non può spendere più Bitcoin di quanti ne abbia ricevuti in precedenza. Queste regole sono alla base di tutte le transazioni su Bitcoin e di molte altre blockchain.
 
-Ethereum ha la sua valuta nativa (Ether), che segue quasi esattamente le stesse regole intuitive, ma consente anche una funzione molto più potente: [gli smart contract](/developers/docs/smart-contracts/). Per questa caratteristica più complessa, è necessaria un'analogia più complessa. Invece di essere un libro mastro distribuito, Ethereum è una [macchina di stato distribuita](https://wikipedia.org/wiki/Finite-state_machine). Lo stato di Ethereum è una grande enorme struttura di dati che contiene non solo tutti gli account e i saldi, ma una _macchina a stati_, che puiò cambiare da blocco a blocco in base a un set predefinito di regole, e che può eseguire codice macchina arbitrario. Le regole specifiche di cambio stato da blocco a blocco sono definite dall'EVM.
+Mentre Ethereum ha la propria criptovaluta nativa (Ether) che segue quasi esattamente le stesse regole intuitive, consente anche una funzione molto più potente: i [contratti intelligenti](/developers/docs/smart-contracts/). Per questa caratteristica più complessa, è necessaria un'analogia più complessa. Invece di essere un libro mastro distribuito, Ethereum è una [macchina di stato distribuita](https://wikipedia.org/wiki/Finite-state_machine). Lo stato di Ethereum è una grande struttura di dati che contiene non solo tutti i conti e i saldi, ma uno _stato della macchina_, che può cambiare da blocco a blocco secondo una serie predefinita di regole e che può eseguire il codice arbitrario della macchina. Le regole specifiche di cambio stato da blocco a blocco sono definite dall'EVM.
 
 ![Ddiagramma che mostra la composizione dell'EVM](./evm.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -33,13 +32,13 @@ Dato un vecchio stato valido `(S)` e un nuovo set di transazioni valide `(T)`, l
 
 ### Stato {#state}
 
-Nell'ambito di Ethereum, lo stato è un'enorme struttura di dati chiamata [albero di Merkle Patricia modificato](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), che tiene tutti gli [account](/developers/docs/accounts/) collegati tramite hash e riducibili a un singolo hash radice memorizzato sulla blockchain.
+Nel contesto di Ethereum, lo stato è un'enorme struttura di dati detta un [albero di Patricia Merkle modificato](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), che contiene tutti i [conti](/developers/docs/accounts/) collegati da hash e riducibili a un singolo hash di radice, archiviato sulla blockchain.
 
 ### Transazioni {#transactions}
 
-Le transazioni sono istruzioni provenienti dagli account firmate crittograficamente. Esistono due tipi di transazioni: quelle che danno luogo a chiamate di messaggio e quelle che invece danno luogo alla creazione di contratti.
+Le transazioni sono istruzioni firmate crittograficamente, provenienti dai conti. Esistono due tipi di transazioni: quelle che danno luogo a chiamate di messaggio e quelle che invece danno luogo alla creazione di contratti.
 
-La creazione di contratti porta alla creazione di nuovo account contratto contenente bytecode di [Smart Contract](/developers/docs/smart-contracts/anatomy/) compilato. Quando un altro account fa una chiamata di messaggio a questo contratto, esegue il suo bytecode.
+La creazione del contratto risulta nella creazione di un nuovo conto del contratto, contenente bytecode compilato del [contratto intelligente](/developers/docs/smart-contracts/anatomy/). Ogni volta che un altro conto effettua una chiamata di messaggio a quel contratto, esegue il suo bytecode.
 
 ## Istruzioni dell'EVM {#evm-instructions}
 
@@ -47,17 +46,17 @@ L'EVM viene eseguita come una [macchina a stack](https://wikipedia.org/wiki/Stac
 
 Durante l'esecuzione, l'EVM mantiene una _memoria_ transitoria (sotto forma di array di byte con indirizzamento a parola), che non rimane persistente tra le transazioni.
 
-I contratti, invece, contengono un trie di _memorizzazione_ di Merkle Patricia (sotto forma di array di parole con indirizzamento a parola), associato all'account in questione e parte dello stato globale.
+I contratti, comunque, contengono un albero d'_archiviazione_ di Merkle Patricia (come un insieme indirizzabile alle parole contenute), associato al conto in questione e parte dello stato globale.
 
-Il bytecode compilato dello smart contract compilato viene eseguito come numero di [opcode](/developers/docs/evm/opcodes) dell'EVM, che eseguono operazioni stack standard come `XOR`, `AND`, `ADD`, `SUB`, ecc. L'EVM implementa anche una serie di operazioni di stack specifiche della blockchain, come `INDIRIZZO`, `SALDO`, `BLOCKHASH`, etc.
+Il bytecode compilato del contratto intelligente è eseguito come un numero degli [opcode](/developers/docs/evm/opcodes) dell'EVM, che eseguono operazioni standard dello stack come `XOR`, `AND`, `ADD`, `SUB`, etc. L'EVM implementa anche una serie di operazioni di stack specifiche della blockchain, come `INDIRIZZO`, `SALDO`, `BLOCKHASH`, etc.
 
-![Diagramma che mostra dove occorre carburante nelle operazioni dell'EVM](../gas/gas.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagramma che mostra dove è necessario il gas per le operazioni dell'EVM](../gas/gas.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Implementazioni dell'EVM {#evm-implementations}
 
 Tutte le implementazioni dell'EVM devono rispettare le specifiche descritte nello Yellowpaper di Ethereum.
 
-Nei 7 anni di storia di Ethereum, l'EVM ha subito diverse revisioni, ed esistono diverse implementazioni dell'EVM in vari linguaggi di programmazione.
+Nei nove anni di storia di Ethereum, l'EVM ha subito diverse revisioni, ed esistono diverse implementazioni dell'EVM in vari linguaggi di programmazione.
 
 Tutti i [client Ethereum](/developers/docs/nodes-and-clients/#execution-clients) includono un'implementazione dell'EVM. Inoltre, esistono diverse implementazioni standalone, tra cui:
 
@@ -76,4 +75,4 @@ Tutti i [client Ethereum](/developers/docs/nodes-and-clients/#execution-clients)
 
 ## Argomenti correlati {#related-topics}
 
-- [Carburante](/developers/docs/gas/)
+- [Gas](/developers/docs/gas/)

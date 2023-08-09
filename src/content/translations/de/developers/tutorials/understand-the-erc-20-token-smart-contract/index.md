@@ -8,9 +8,8 @@ tags:
   - "Solidity"
   - "Erste Schritte"
   - "Erc-20"
-skill: Einsteiger
+skill: beginner
 lang: de
-sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/

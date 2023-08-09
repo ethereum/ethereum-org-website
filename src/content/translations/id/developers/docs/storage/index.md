@@ -2,7 +2,6 @@
 title: Penyimpanan Terdesentralisasi
 description: Gambaran umum tentang penyimpanan terdesentralisasi dan peralatan yang tersedia untuk menintegrasikannya ke dalam dapp.
 lang: id
-sidebar: true
 ---
 
 Tidak seperti server terpusat yang dijalankan oleh satu perusahaan atau organisasi, sistem penyimpanan terdesentralisasi terdiri dari jaringan peer-to-peer dari operator pengguna yang memegang satu bagian dari keseluruhan data, yang menciptakan sistem berbagi penyimpana file yang tangguh. Ini dapat dalam bentuk aplikasi berbasis blockchain atau jaringan berbasis peer-to-peer.

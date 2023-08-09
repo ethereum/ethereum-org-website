@@ -2,7 +2,6 @@
 title: Bányászat
 description: Egy magyarázat arról, hogyan működik a bányászat az Ethereumon és hogyan segíti az Ethereum biztonságát és decentralizáltságát.
 lang: hu
-sidebar: true
 incomplete: true
 ---
 
@@ -44,8 +43,6 @@ Nézd meg ahogy Austin végig kísér a bányászaton és a proof-of-work blokkl
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## További olvasnivaló {#further-reading}
-
-- [Mit jelent Ethereumot bányászni?](https://docs.ethhub.io/using-ethereum/mining/) _Ethhub_
 
 ## Kapcsolódó eszközök {#related-tools}
 

@@ -11,7 +11,6 @@ tags:
   - "alchemy"
 skill: beginner
 lang: ro
-sidebar: true
 published: 2020-10-30
 source: Mediu
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f

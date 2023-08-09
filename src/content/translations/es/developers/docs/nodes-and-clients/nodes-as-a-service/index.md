@@ -2,7 +2,6 @@
 title: Nodos como servicio
 description: Una visión general para principiantes de los servicios de nodos, los pros y los contras, y los proveedores populares.
 lang: es
-sidebar: true
 sidebarDepth: 2
 ---
 

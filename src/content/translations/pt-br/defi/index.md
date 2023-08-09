@@ -4,12 +4,11 @@ description: Uma visão geral do DeFi na Ethereum
 lang: pt-br
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
-alt: Um logotipo Eth feito de blocos lego.
+alt: Um logotipo Eth feito de blocos de lego.
 sidebarDepth: 2
 summaryPoint1: Uma alternativa global e aberta ao sistema financeiro atual.
-summaryPoint2: Produtos que deixam você pedir emprestado, economizar, investir, comercializar e mais.
+summaryPoint2: Produtos que deixam você pedir emprestado, economizar, investir, comercializar e muito mais.
 summaryPoint3: Com base na tecnologia de código aberto com a qual qualquer pessoa pode programar.
 ---
 
@@ -54,18 +53,18 @@ Uma das melhores maneiras de avaliar o potencial das DeFi é compreender os prob
 
 ## Tudo começou com o Bitcoin... {#bitcoin}
 
-O Bitcoin, de muitas maneiras, foi a primeira aplicação DeFi. Bitcoin permite que você realmente tenha e controle valores e os envie para qualquer lugar ao redor do mundo. Isso é feito oferecendo uma maneira para que um grande número de pessoas, que não confiam umas nas outras, estejam de acordo com um livro de contas sem a necessidade de um intermediário confiável. O Bitcoin é aberto a qualquer um e ninguém tem autoridade para alterar suas regras. As regras do Bitcoin, como sua escassez e acessibilidade, estão incorporadas na tecnologia. Não é como as finanças tradicionais na qual os governos podem imprimir dinheiro que desvaloriza sua poupança e empresas podem fechar mercados.
+O Bitcoin, de muitas maneiras, foi a primeira aplicação DeFi. O Bitcoin permite que você realmente tenha e controle valores e os envie para qualquer lugar ao redor do mundo. Isso é feito oferecendo uma maneira para que um grande número de pessoas, que não confiam umas nas outras, concordem com um livro de contas sem a necessidade de um intermediário confiável. O Bitcoin é aberto a qualquer um e ninguém tem autoridade para alterar suas regras. As regras do Bitcoin, como sua escassez e acessibilidade, estão incorporadas na tecnologia. Não é como as finanças tradicionais na qual os governos podem imprimir dinheiro que desvaloriza sua poupança e empresas podem fechar mercados.
 
-Ethereum baseia-se nisso. Como o Bitcoin, as regras não mudam por causa de você, e todos têm acesso. Mas ele também torna esse dinheiro digital programável, usando [contratos inteligentes](/glossary#smart-contract). Então você pode fazer mais do que guardar e enviar valores.
+Ethereum baseia-se nisso. Como o Bitcoin, as regras não mudam por você, e todos têm acesso. Mas ele também torna esse dinheiro digital programável, usando [contratos inteligentes](/glossary#smart-contract). Então você pode fazer mais do que guardar e enviar valores.
 
 <YouTube id="qFBYB4W2tqU" />
 
 ## Dinheiro programável {#programmable-money}
 
-Isso soa estranho... "Por que eu gostaria de programar meu dinheiro"? No entanto, esta é mais uma característica padrão dos tokens na Ethereum. Qualquer um pode programar a lógica em pagamentos. Assim, você pode ter o controle e a segurança do Bitcoin somados aos serviços fornecidos por instituições financeiras. Isso permite fazer coisas com criptomoedas que você não poderia fazer com o Bitcoin, tais como emprestar e tomar empréstimos, agendar pagamentos, investir em fundos de índices e mais.
+Isso soa estranho... "Por que eu gostaria de programar meu dinheiro"? No entanto, esta é mais uma característica padrão dos tokens no Ethereum. Qualquer um pode programar a lógica em pagamentos. Assim, você pode ter o controle e a segurança do Bitcoin somados aos serviços fornecidos por instituições financeiras. Isso permite fazer coisas com criptomoedas que você não poderia fazer com o Bitcoin, tais como emprestar e tomar empréstimos, agendar pagamentos, investir em fundos de índices e mais.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Explore nossas sugestões de aplicativos DeFi para iniciar se você é novo na Ethereum.</div>
+  <div>Explore nossas sugestões de aplicativos DeFi para iniciar se você é novo no Ethereum.</div>
   <ButtonLink to="/dapps/?category=finance">
     Ver aplicativos DeFi
   </ButtonLink>
@@ -73,7 +72,7 @@ Isso soa estranho... "Por que eu gostaria de programar meu dinheiro"? No entanto
 
 ## O que você pode fazer com DeFi? {#defi-use-cases}
 
-Há uma alternativa descentralizada para a maioria dos serviços financeiros. Mas Ethereum também abre oportunidades para a criação de produtos financeiros completamente novos. Esta lista está em constante crescimento.
+Há uma alternativa descentralizada para a maioria dos serviços financeiros. Mas o Ethereum também cria oportunidades para a criação de produtos financeiros completamente novos. Esta lista está em constante crescimento.
 
 - [Envie dinheiro para qualquer lugar do mundo](#send-money)
 - [Pagamentos em tempo real ao redor do mundo](#stream-money)
@@ -91,7 +90,7 @@ Há uma alternativa descentralizada para a maioria dos serviços financeiros. Ma
 
 ### Envie dinheiro ao redor do mundo rapidamente {#send-money}
 
-Como um blockchain, o Ethereum é projetado para o envio de transações de forma segura e de modo global. Assim como o Bitcoin, o Ethereum torna o envio de dinheiro ao redor do mundo tão fácil quanto enviar um e-mail. Basta digitar o nome do seu beneficiário [nome ENS](/nft/#nft-domains) (como bob.eth) ou o endereço de conta da respectiva carteira e seu pagamento será enviado em minutos (normalmente). Para enviar ou receber pagamentos, você precisará de uma [carteira](/wallets/).
+Como um blockchain, o Ethereum foi concebido para o envio de transações de forma segura e de modo global. Assim como o Bitcoin, o Ethereum torna o envio de dinheiro ao redor do mundo tão fácil quanto enviar um e-mail. Basta digitar o nome do seu beneficiário [nome ENS](/nft/#nft-domains) (como bob.eth) ou o endereço de conta da respectiva carteira e seu pagamento será enviado em minutos (normalmente). Para enviar ou receber pagamentos, você precisará de uma [carteira](/wallets/).
 
 <ButtonLink to="/dapps/?category=finance">
   Ver dapps de pagamento
@@ -156,16 +155,16 @@ Funciona com base no princípio de que o empréstimo é tomado e pago na mesma t
 
 Os fundos que são mais frequentemente utilizados são mantidos em pools de liquidez (grandes pools de fundos utilizados para empréstimos). Se não estiverem sendo utilizados em um dado momento, isso cria uma oportunidade para alguém pedir esses fundos emprestados, fazer negócio com eles e devolver o valor integral literalmente no mesmo momento em que se toma emprestado.
 
-Isto significa que muita lógica tem de ser incluída em uma transação sob medida. Um exemplo simples pode ser alguém pedir um empréstimo rápido para adquirir um ativo a um preço para vendê-lo em outra exchange onde o preço seja mais alto.
+Isto significa que muita lógica tem de ser incluída em uma transação sob medida. Um exemplo simples pode ser alguém pedir um empréstimo rápido para adquirir um ativo a um preço para vendê-lo em outra exchange (corretora) onde o preço seja mais alto.
 
 Assim, em uma única transação acontece o seguinte:
 
-- Você pega emprestado a quantia X de um ativo $asset por $1,00 de uma exchange A
-- Você vende X do $asset na exchange B por $1,10
-- Você paga o empréstimo na exchange A
+- Você pega emprestado a quantia X de um ativo $asset por $ 1,00 de uma exchange A
+- Você vende X do $asset na exchange B por $ 1,10
+- Então, você paga o empréstimo na exchange A
 - Você embolsa o lucro menos a taxa de transação
 
-Se o estoque da exchange B cair de repente e o usuário não for capaz de comprar o suficiente para cobrir o empréstimo original, a transação simplesmente não acontecerá.
+Se o estoque da exchange B cair de repente e o usuário não conseguir comprar o suficiente para cobrir o empréstimo original, a transação simplesmente não acontecerá.
 
 Para ser capaz de fazer o exemplo acima no mundo financeiro tradicional, você precisaria de uma quantidade enorme de dinheiro. Estas estratégias de fazer dinheiro só são acessíveis aos que já possuem economias. Os empréstimos rápidos são um exemplo do futuro em que possuir dinheiro não é necessariamente uma condição prévia para se fazer dinheiro.
 
@@ -208,12 +207,12 @@ O dinheiro acumulado para premiação é gerado por todos os juros gerados pelo 
 
 ### Negociar tokens {#swaps}
 
-Existem milhares de tokens na Ethereum. Exchanges descentralizadas (DEXs) permitem que você opere diferentes tokens sempre que quiser. Você nunca entrega o controle de seus ativos. Isso é como usar uma exchange quando você visita um país diferente. Mas a versão de DeFi nunca fecha. Os mercados funcionam de maneira ininterrupta e a tecnologia garante que sempre haverá alguém disposto a fazer negociações.
+Existem milhares de tokens no Ethereum. Exchanges descentralizadas (DEXs) permitem que você opere diferentes tokens sempre que quiser. Você nunca entrega o controle de seus ativos. Isso é como usar uma exchange quando você visita um país diferente. Mas a versão de DeFi nunca fecha. Os mercados funcionam de maneira ininterrupta e a tecnologia garante que sempre haverá alguém disposto a fazer negociações.
 
 Por exemplo, se você quiser usar a loteria sem perda PoolTogether (descrita acima), você precisará de um token como Dai ou USDC. Estas DEXs permitem que você troque seus ETH por esses tokens e reverta novamente quando terminar.
 
 <ButtonLink to="/dapps/?category=finance">
-  Ver exchanges de token
+  Exibir exchanges de token
 </ButtonLink>
 
 <Divider />
@@ -293,7 +292,7 @@ Com tanta coisa acontecendo, você precisará de uma maneira de acompanhar todos
 
 <Divider />
 
-## Como funciona o Defi? {#how-defi-works}
+## Como o funciona Defi? {#how-defi-works}
 
 O DeFi usa criptomoedas e contratos inteligentes para fornecer serviços que não precisam de intermediários. No mundo financeiro de hoje, as instituições financeiras atuam como garantidoras das transações. Isto confere a essas instituições um poder enorme, porque seu dinheiro flui por elas. Além disso, bilhões de pessoas ao redor do mundo não têm acesso a uma conta bancária.
 
@@ -301,7 +300,7 @@ No DeFi, um contrato inteligente substitui a instituição financeira na transa�
 
 Um contrato que foi concebido para distribuir um subsídio ou mesada poderia ser programado para enviar dinheiro da Conta A para Conta B todas as sextas-feiras. E isso só poderá acontecer enquanto a Conta A tiver os fundos necessários. Ninguém pode alterar o contrato e adicionar Conta C como beneficiário para roubar fundos.
 
-Os contratos também são públicos para qualquer pessoa inspecionar e auditar. Isto significa que os contratos pouco fiáveis passarão frequentemente a estar sob escrutínio comunitário muito rapidamente.
+Os contratos também são públicos para qualquer pessoa inspecionar e auditar. Isto significa que os contratos pouco confiáveis passarão frequentemente a estar sob escrutínio comunitário muito rapidamente.
 
 Isto significa que atualmente há uma necessidade de confiar nos membros mais técnicos da comunidade Ethereum, que podem ler códigos. A comunidade baseada em código aberto ajuda a manter os desenvolvedores sob controle, mas esta necessidade diminuirá ao longo do tempo, à medida que os contratos inteligentes se tornem mais fáceis de ler e que se desenvolvam outras formas de provar a confiança no código.
 
@@ -310,7 +309,7 @@ Isto significa que atualmente há uma necessidade de confiar nos membros mais t�
 O Ethereum é a base perfeita para DeFi por várias razões:
 
 - Ninguém é proprietário do Ethereum ou dos contratos inteligentes que existem nele – isso dá a todos uma oportunidade de usar o DeFi. Isto também significa que ninguém pode alterar as regras que são aplicadas a ele.
-- Os produtos de DeFi falam todos o mesmo idioma nos bastidores: Ethereum. Isto significa que muitos dos produtos funcionam muito bem em conjunto. Você pode emprestar tokens em uma plataforma e trocar os juros do token em um mercado diferente através de uma aplicação totalmente distinta. Isso é como juntar pontos de fidelidade em seu banco.
+- Os produtos de DeFi falam todos o mesmo idioma nos bastidores: Ethereum. Isto significa que muitos dos produtos funcionam muito bem em conjunto. Você pode emprestar tokens em uma plataforma e negociar os juros do token em um mercado diferente através de uma aplicação totalmente distinta. Isso é como juntar pontos de fidelidade em seu banco.
 - Tokens e criptomoedas estão integrados no Ethereum, um registro compartilhado – manter o controle das transações e a propriedade são a área de domínio do Ethereum.
 - O Ethereum permite a liberdade financeira total – a maioria dos produtos nunca terá a custódia dos seus fundos, deixando você no controle.
 
@@ -333,13 +332,12 @@ DeFi é um movimento de código aberto. Os protocolos e aplicações DeFi são t
 
 ### Dados DeFi {#defi-data}
 
-- [Defi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### Artigos sobre DeFi {#defi-articles}
 
-- [O que são finanças descentralizadas?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, atualizado regularmente_
 - [Um guia para iniciantes em DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de janeiro de 2020_
 
 ### Vídeos {#videos}

@@ -2,7 +2,6 @@
 title: Nilai yang dapat diekstrak penambang (MEV)
 description: Pengantar nilai yang dapat diekstrak penambang (MEV)
 lang: id
-sidebar: true
 ---
 
 Maximal (sebelumnya "miner") extractable value (MEV) merujuk pada nilai maksimum yang dapat diekstrak dari produksi blok dalam bentuk nilai kelebihan dari imbalan blok dan biaya gas standar dengan memasukkan, mengecualikan, dan mengubah urutan transaksi dalam sebuah blok.
@@ -15,7 +14,7 @@ Pastikan Anda telah mengetahui [transaksi](/developers/docs/transactions/), [blo
 
 ## Ekstraksi MEV {#mev-extraction}
 
-Secara teori, MEV sepenuhnya bertambah sesuai jumlah para penambang karena penambang merupakan satu-satunya pihak yang dapat memastikan eksekusi peluang MEV yang menguntungkan (setidaknya dalam bukti kerja saat ini — ini akan berubah setelah [penggabungan](/upgrades/merge/)). Namun, dalam prakteknya, sebagian besar MEV diekstrak oleh para peserta jaringan independen yang disebut sebagai "para pencari." Para pencari menjalankan algoritma kompleks di data blockchain untuk mendeteksi peluang MEV yang menguntungkan dan memiliki bot untuk secara otomatis mengirimkan transaksi yang menguntungkan tersebut ke jaringan.
+Secara teori, MEV sepenuhnya bertambah sesuai jumlah para penambang karena penambang merupakan satu-satunya pihak yang dapat memastikan eksekusi peluang MEV yang menguntungkan (setidaknya dalam bukti kerja saat ini — ini akan berubah setelah [penggabungan](/roadmap/merge/)). Namun, dalam prakteknya, sebagian besar MEV diekstrak oleh para peserta jaringan independen yang disebut sebagai "para pencari." Para pencari menjalankan algoritma kompleks di data blockchain untuk mendeteksi peluang MEV yang menguntungkan dan memiliki bot untuk secara otomatis mengirimkan transaksi yang menguntungkan tersebut ke jaringan.
 
 Para penambang memang mendapatkan sebagian dari jumlah MEV penuh karena para pencari rela membayar harga gas yang tinggi (yang masuk sebagai penghasilan bagi para penambang) sebagai ganti peluang yang lebih tinggi untuk pemasukan transaksi mereka yang menguntungkan dalam sebuah blok. Dengan mengganggap para pencari secara ekonomis rasional, biaya gas yang rela dibayarkan oleh seorang pencari akan berjumlah hingga 100% dari MEV para pencari (karena jika biaya gas lebih tinggi, pencari tersebut akan kehilangan uang).
 

@@ -2,16 +2,15 @@
 title: 面向 JavaScript 开发者的以太坊资源
 description: 学习如何使用并通过基于 JavaScript 的项目及工具参与以太坊的开发。
 lang: zh
-sidebar: true
 ---
 
 JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有一个 [团队](https://github.com/ethereumjs) 致力于尽可能多地在以太坊引入 JavaScript。
 
 有机会在[堆栈的所有级别](/developers/docs/ethereum-stack/)使用 JavaScript（或接近）。
 
-## JavaScript 和以太坊的交互 {#interact-with-ethereum}
+## Javascript 和以太坊的交互 {#interact-with-ethereum}
 
-### JavaScript 应用编程接口库 {#javascript-api-libraries}
+### JavaScript API 库 {#javascript-api-libraries}
 
 如果您想要写入 JavaScript 来查询区块链、发送交易等，则最方便的方法是使用 [JavaScript API 库](/developers/docs/apis/javascript/)。 这些 API 允许开发者轻松与[以太坊网络节点](/developers/docs/nodes-and-clients/)交互。
 
@@ -24,7 +23,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 ### 智能合约 {#smart-contracts}
 
-作为 JavaScript 开发者，如果希望开发自己的智能合约，请了解：[Solidity](https://solidity.readthedocs.io)。 这是最受欢迎的智能合约语言，它在语法上类似于 JavaScript，可能会更容易学习。
+作为 JavaScript 开发者，如果希望编写自己的智能合约，你可能想要了解 [Solidity](https://solidity.readthedocs.io)。 这是最受欢迎的智能合约语言，它在语法上类似于 JavaScript，可能会更容易学习。
 
 关于[智能合约](/developers/docs/smart-contracts/)的更多信息。
 
@@ -64,7 +63,7 @@ Ethereumjs 客户端正在开发中。 这将让您深入了解以太坊客户�
 - 生成、导入和导出以太坊密钥的工具。
 - 一个 `merkle-patricia-tree` 的实现 - 一种在以太坊黄皮书中描述的数据结构。
 
-发掘最让您感兴趣的： [EthereumJS repo](https://github.com/ethereumjs)
+可以在 [EthereumJS 存储库](https://github.com/ethereumjs)中深入了解你最感兴趣的内容
 
 ## 延伸阅读 {#further-reading}
 

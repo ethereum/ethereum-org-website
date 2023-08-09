@@ -2,7 +2,6 @@
 title: Keamanan kontrak pintar
 description: Pertimbangan keamanan untuk pengembang Ethereum
 lang: id
-sidebar: true
 ---
 
 Kontrak pintar Ethereum sangat fleksibel, mampu menampung sejumlah besar token (sering kali lebih dari $1 Miliar) dan menjalankan logika yang tak bisa diubah berdasarkan kode kontrak pintar yang digunakan sebelumnya. Sekalipun hal ini telah menciptakan ekosistem kontrak pintar yang saling berhubungan dan tidak memerlukan kepercayaan yang penuh energi dan kreatif, juga merupakan ekosistem yang sempurna untuk menarik penyerang yang mencari keuntungan dengan mengeksploitasi kerentanan dalam kontrak pintar dan perilaku tak terduga di Ethereum. Kode kontrak pintar _biasanya_ tidak bisa diubah untuk menambal kelemahan keamanan, aset yang telah dicuri dari kontrak pintar tidak bisa didapatkan kembali, dan aset yang dicuri sangat sulit untuk dilacak. Jumlah total nilai yang dicuri atau hilang karena masalah kontrak pintardengan mudah bernilai $1 Miliar. Beberapa nilai yang lebih besar karena kesalahan pengodean kontrak pintar meliputi:

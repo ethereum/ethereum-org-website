@@ -7,9 +7,8 @@ tags:
   - "Frontend"
   - "JavaScript"
   - "web3.js"
-skill: Einsteiger
+skill: beginner
 lang: de
-sidebar: true
 published: 2020-04-19
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/

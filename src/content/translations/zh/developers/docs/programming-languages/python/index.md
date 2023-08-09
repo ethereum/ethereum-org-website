@@ -2,7 +2,6 @@
 title: 面向 Python 开发者的以太坊资源
 description: 学习如何使用并通过基于 Python 的项目及工具参与以太坊的开发
 lang: zh
-sidebar: true
 incomplete: true
 ---
 
@@ -14,7 +13,7 @@ incomplete: true
 
 **迈出第一步，将 Python 与以太坊集成**
 
-需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或 [ethereum.org/developers](/developers/)。
+需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或者 [ethereum.org/developers](/developers/)。
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -24,10 +23,11 @@ incomplete: true
 ## 初学者文章 {#beginner-articles}
 
 - [以太坊开发者指南 (Python)](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
+- [2023 区块链报告中的 Python 状态](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 - [基于 Vyper 的智能合约简介](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
-- [使用 Python 和 Brownie 部署您自己的 ERC20 令牌](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
-- [如何使用 Python Flask 开发以太坊合约？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
-- [Web3.py 简介 ·面向 Python 开发者的以太坊](https://www.dappuniversity.com/articles/web3-py-intro)
+- [使用 Python 和 Brownie 部署您自己的 ERC20 代币](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
+- [如何使用 Python Flask 开发 Ethereum 合约？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
+- [Web3.py 简介 · 面向 Python 开发者的以太坊资源](https://www.dappuniversity.com/articles/web3-py-intro)
 - [如何通过 Python 和 web3.py 调用智能合约函数？](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## 面向中等程度用户的文章 {#intermediate-articles}
@@ -49,9 +49,9 @@ incomplete: true
 ### 活跃： {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _用于与以太坊交互的 Python 库_
+- [Vyper](https://github.com/ethereum/vyper/) - _一种适用于以太坊虚拟机的 Python 智能合约语言_
 - [Ape](https://github.com/ApeWorX/ape) - _面向 Pythonista、数据科学家和安全专业人员的智能合约开发工具_
 - [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试以太坊智能合约并与之交互的 Python 框架_
-- [Vyper](https://github.com/ethereum/vyper/) - _一种具有 Python 风格的以太坊虚拟机智能合约编程语言_
 - [py-evm](https://github.com/ethereum/py-evm) - _以太坊虚拟机的实现_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _用于测试以太坊应用程序的工具_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用程序函数_
@@ -60,14 +60,14 @@ incomplete: true
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _使用 Python 实现 P2P 协议栈_
 - [pymaker](https://github.com/makerdao/pymaker) - _面向 Maker 合约的 Python 应用程序接口_
 - [siwe](https://github.com/spruceid/siwe-py) - _面向 Python 的以太坊登录服务 (siwe)_
-- [用于测试的智能合约](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _ERC-20、Uniswap 和其他常见合约随附的一个 Python 包，供使用 Web3.py 编写测试_
+- [用于以太坊集成的 Web3 去中心化金融](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _一个 Python 包，具有适用于 ERC-20、Uniswap 和其他流行项目的现成集成_
 
 ### 已归档/不再维护： {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _以太坊的 Python 客户端_
-- [Mamba](https://mamba.black) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
 
-正在寻找更多资源？ 请查看 [ethereum.org/developers](/developers/)。
+想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
 
 ## 使用 Python 工具的项目 {#projects-using-python-tooling}
 
@@ -79,10 +79,11 @@ incomplete: true
 - [Sushiswap](https://sushi.com/) 使用 [Python 来管理和部署他们的归属合约](https://github.com/sushiswap/sushi-vesting-protocols)
 - 因 Alpha Homora 而知名的 [Alpha Finance](https://alphafinance.io/) 使用 [Brownie 来测试和部署他们的智能合约](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
-## Python 社区贡献者 {#python-community-contributors}
+## Python 社区讨论 {#python-community-contributors}
 
-[以太坊 Python Discord 社区](https://discord.gg/9zk7snTfWe)是一个迅速发展壮大的社区，专门用于讨论上述任何项目和相关主题的资源。
+- [以太坊 Python 社区 Discord](https://discord.gg/9zk7snTfWe)，适合讨论 Web3.py 和其他 Python 框架
+- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>)，适合讨论 Vyper 智能合约编程
 
 ## 其他汇总列表 {#other-aggregated-lists}
 
-维基百科中关于 Vyper 的[可靠资源列表](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+Vyper 维基百科包含[丰富的 Vyper 资源列表](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)

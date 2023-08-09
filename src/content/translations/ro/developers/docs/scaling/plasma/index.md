@@ -2,7 +2,6 @@
 title: Lanțurile Plasma
 description: O introducere despre lanțurile plasma ca soluție de scalare utilizată actualmente de comunitatea Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -33,7 +32,6 @@ Numeroase proiecte oferă implementări ale Plasma pe care le puteți integra î
 
 ## Referințe suplimentare {#further-reading}
 
-- [EthHub pe Plasma](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Învățați Plasma](https://www.learnplasma.org/en/)
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editați această pagină și adăugați-o!_

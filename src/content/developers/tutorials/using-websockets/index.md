@@ -3,16 +3,7 @@ title: Using WebSockets
 description: Guide to using WebSockets and Alchemy to make JSON-RPC requests and subscribe to events.
 author: "Elan Halpern"
 lang: en
-sidebar: true
-tags:
-  [
-    "alchemy",
-    "websockets",
-    "querying",
-    "getting started",
-    "subscription",
-    "javascript",
-  ]
+tags: ["alchemy", "websockets", "querying", "javascript"]
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
@@ -36,7 +27,7 @@ The easiest way to test out WebSockets is to install a command line tool for mak
 _Note: if you have an Alchemy account you can replace `demo` with your own API key. [Sign up for a free Alchemy account here!](https://auth.alchemyapi.io/signup)_
 
 ```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
@@ -68,7 +59,7 @@ When connected through a WebSocket, you may use two additional methods: `eth_sub
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Creates a new subscription for specified events. [Learn more about `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
+Creates a new subscription for specified events. [Learn more about `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parameters {#parameters}
 
@@ -145,13 +136,11 @@ Example:
   "method":  "eth_subscription",
   "params":  {
       "result":  {
-          "difficulty":  "0x15d9223a23aa",
           "extraData":  "0xd983010305844765746887676f312e342e328777696e646f7773",
           "gasLimit":  "0x47e7c4",
           "gasUsed":  "0x38658",
           "logsBloom":
 "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-          "miner":  "0xf8b483dba2c3b7176a3da549ad41a48bb3121069",
           "nonce":  "0x084149998194cc5f",
           "number":  "0x1348c9",
           "parentHash":  "0x7736fab79e05dc611604d22470dadad26f56fe494421b5b333de816ce1f25701",

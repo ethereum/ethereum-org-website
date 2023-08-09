@@ -1,93 +1,27 @@
 import React, { useState } from "react"
-import styled from "@emotion/styled"
-import Emoji from "./OldEmoji"
+import {
+  Box,
+  Flex,
+  GridItem,
+  Heading,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react"
+
+import Emoji from "./Emoji"
+
+import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
 
 export interface IBoxItem {
   emoji: string
   title: string
   description: string
+  matomo: MatomoEventOptions
 }
 
 export interface IProps {
   items: Array<IBoxItem>
 }
-
-interface IBoxStyle {
-  isOpen: boolean
-  columnNumber: number
-  color: string
-}
-
-interface IGridItemProps extends IBoxItem, IBoxStyle {
-  index: number
-  callback: (idx: number) => void
-}
-
-const Title = styled.h3`
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-top: 0rem;
-`
-
-const Body = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.black300};
-`
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 4rem 0rem;
-  border-radius: 2px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: flex;
-    flex-direction: column;
-  }
-`
-
-const StyledEmoji = styled(Emoji)`
-  margin: 0.5rem;
-  align-self: center;
-  &:hover {
-    transition: transform 50s;
-    transform: rotate(10turn);
-  }
-`
-
-const Box = styled.div<IBoxStyle>`
-  grid-row-start: ${(props) => (props.isOpen ? `1` : `auto`)};
-  grid-row-end: ${(props) => (props.isOpen ? `span 2` : `auto`)};
-  grid-column-start: ${(props) => (props.isOpen ? props.columnNumber : `auto`)};
-  color: ${(props) =>
-    props.isOpen ? props.theme.colors.black300 : props.theme.colors.text};
-  cursor: pointer;
-  background: ${(props) =>
-    props.isOpen
-      ? props.theme.colors[props.color]
-      : props.theme.colors.background};
-  display: flex;
-  flex-direction: ${(props) => (props.isOpen ? `column` : `column-reverse`)};
-  justify-content: space-between;
-  border: 1px solid ${(props) => props.theme.colors.text};
-  padding: 1.5rem;
-  &:hover {
-    background: ${(props) =>
-      props.isOpen
-        ? props.theme.colors[props.color]
-        : props.theme.colors.ednBackground};
-    transition: transform 0.5s;
-    transform: skewX(-5deg);
-    box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: ${(props) => (props.isOpen ? `column` : `row-reverse`)};
-    align-items: center;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: ${(props) => (props.isOpen ? `column` : `column-reverse`)};
-  }
-`
 
 // Represent string as 32-bit integer
 const hashCode = (stringPhrase: string): number => {
@@ -106,49 +40,16 @@ const colors = [
   "gridRed",
   "gridBlue",
   "gridGreen",
-  "gridOrange",
+  "warning",
   "gridPink",
   "gridPurple",
 ]
-
-const GridItem: React.FC<IGridItemProps> = ({
-  description,
-  columnNumber,
-  emoji,
-  index,
-  title,
-  isOpen,
-  callback,
-  color,
-}) => {
-  const handleClick = () => {
-    callback(index)
-  }
-  return (
-    <Box
-      onClick={() => handleClick()}
-      isOpen={isOpen}
-      columnNumber={columnNumber}
-      color={color}
-    >
-      {isOpen ? (
-        <Emoji mb={"2rem"} text={emoji} size={6} />
-      ) : (
-        <StyledEmoji size={6} text={emoji} />
-      )}
-      <div>
-        <Title>{title}</Title>
-        {isOpen && <Body>{description}</Body>}
-      </div>
-    </Box>
-  )
-}
 
 const BoxGrid: React.FC<IProps> = ({ items }) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (
-    <Grid>
+    <SimpleGrid columns={{ base: 1, lg: 4 }} my={16} borderRadius="sm">
       {items.map((item, idx: number) => {
         let columnNumber = idx + 1
         if (columnNumber > 4) {
@@ -156,21 +57,77 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
         }
         const colorIdx = hashCode(item.emoji) % colors.length
         const color = colors[colorIdx]
+        const isOpen = idx === indexOpen
+
         return (
           <GridItem
+            as={Flex}
+            rowStart={{ ...(isOpen && { lg: 1 }) }}
+            rowEnd={{ ...(isOpen && { lg: 3 }) }}
+            colStart={{ ...(isOpen && { lg: columnNumber }) }}
+            color={isOpen ? "black300" : "text"}
+            cursor="pointer"
+            bg={isOpen ? color : "background.base"}
+            direction={{
+              base: isOpen ? "column" : "column-reverse",
+              sm: isOpen ? "column" : "row-reverse",
+              lg: isOpen ? "column" : "column-reverse",
+            }}
+            align={{ base: "center", lg: "stretch" }}
+            justify="space-between"
+            border="1px solid"
+            borderColor="text"
+            p={6}
+            _hover={{
+              bg: isOpen ? color : "ednBackground",
+              transition: "transform 0.5s",
+              transform: "skewX(-5deg)",
+              boxShadow: "tableBoxShadow",
+            }}
+            onClick={() => {
+              setOpenIndex(idx)
+              trackCustomEvent({
+                eventCategory: item.matomo.eventCategory,
+                eventAction: item.matomo.eventAction,
+                eventName: item.matomo.eventName,
+              })
+            }}
             key={idx}
-            title={item.title}
-            emoji={item.emoji}
-            description={item.description}
-            index={idx}
-            columnNumber={columnNumber}
-            isOpen={idx === indexOpen}
-            callback={setOpenIndex}
-            color={color}
-          />
+          >
+            <Emoji
+              m={2}
+              text={item.emoji}
+              fontSize="8xl"
+              {...(isOpen
+                ? { mb: 8 }
+                : {
+                    alignSelf: "center",
+                    _hover: {
+                      transition: "transform 50s",
+                      transform: "rotate(10turn)",
+                    },
+                  })}
+            />
+            <Box>
+              <Heading
+                as="h3"
+                fontSize="2.5rem"
+                fontWeight="normal"
+                mt={0}
+                lineHeight={1.4}
+              >
+                {item.title}
+              </Heading>
+              {isOpen && (
+                <Text fontSize="xl" lineHeight={1.4} color="black300">
+                  {item.description}
+                </Text>
+              )}
+            </Box>
+          </GridItem>
         )
       })}
-    </Grid>
+    </SimpleGrid>
   )
 }
 

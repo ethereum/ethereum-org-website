@@ -3,7 +3,6 @@ title: Come Configurare Tellor come tuo Oracolo
 description: Una guida per iniziare a integrare l'oracolo di Tellor nel tuo protocollo
 author: "Tellor"
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "smart contract"

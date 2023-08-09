@@ -4,7 +4,6 @@ description: イーサリアム上の分散型ソーシャルネットワーク�
 lang: ja
 template: use-cases
 emoji: ":mega:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/ethereum-learn.png
 summaryPoint1: ソーシャル・インタラクションとコンテンツの作成と配信のためのブロックチェーンベースのプラットフォーム
@@ -12,7 +11,7 @@ summaryPoint2: 分散型ソーシャル・メディア・ネットワークは�
 summaryPoint3: トークンと非代替性トークン(NFT)により、コンテンツを収益化する新しい方法の創出
 ---
 
-ソーシャルネットワークは、私たちの日常的なコミュニケーションにおいて大きな役割を果たしています。 ただし、これらのプラットフォームが集中管理されると、多くの問題が発生します。データ侵害、サーバーの停止、 プラットフォーム解除、検閲、プライバシー侵害は、ソーシャルメディアが度々行うことがあり、トレードオフの一部となります。 これらの問題に対抗するため、開発者達は現在イーサリアム上でソーシャルネットワークを構築しています。 分散型ソーシャルネットワークは、従来のソーシャルネットワーキングのプラットフォームが持つ多くの問題を解決し、ユーザーの全般的なエクスペリエンスの向上につながります。
+ソーシャルネットワークは、私たちの日常的なコミュニケーションにおいて大きな役割を果たしています。 ただし、これらのプラットフォームが集中管理されると、多くの問題が発生します。データ侵害、サーバの停止、 プラットフォーム解除、検閲、プライバシー侵害は、ソーシャルメディアが度々行うことがあり、トレードオフの一部となります。 これらの問題に対抗するため、デベロッパー達は現在イーサリアム上でソーシャルネットワークを構築しています。 分散型ソーシャルネットワークは、従来のソーシャルネットワーキングのプラットフォームが持つ多くの問題を解決し、ユーザーの全般的なエクスペリエンスの向上につながります。
 
 ## 分散型ソーシャルネットワークとは {#what-are-decentralized-social-networks}
 
@@ -24,7 +23,7 @@ summaryPoint3: トークンと非代替性トークン(NFT)により、コンテ
 
 分散型ソーシャルネットワークは、[分散型アプリケーション(Dapp)](/dapps/)の一種です(分散型アプリケーションとは、ブロックチェーン上にデプロイされた[スマートコントラクト](/developers/docs/smart-contracts/)を活用したアプリケーション)。 コントラクトコードは、これらのアプリのバックエンドとして機能し、ビジネスロジックを定義します。
 
-従来のソーシャルメディアのプラットフォームは、データベースに依存して、ユーザー情報やプログラムコードなどのデータを保存しています。 しかし、これは単一障害点となり、大きなリスクをもたらします。 例えば、昨年、Facebook のサーバーが[何時間もオフライン](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact)となり、プラットフォームが遮断されたことはよく知られています。
+従来のソーシャルメディアのプラットフォームは、データベースに依存して、ユーザー情報やプログラムコードなどのデータを保存しています。 しかし、これは単一障害点となり、大きなリスクをもたらします。 例えば、昨年、Facebook のサーバが[何時間もオフライン](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact)となり、プラットフォームが遮断されたことはよく知られています。
 
 分散型ソーシャルネットワークは、世界中の数千のノードからなるピアツーピアのネットワーク上に存在します。 一部のノードに障害が発生しても、ネットワークは途切れずに稼働できるため、障害や停電に強いアプリケーションを実現することができます。
 
@@ -38,9 +37,9 @@ summaryPoint3: トークンと非代替性トークン(NFT)により、コンテ
 
 2. 分散型ソーシャルネットワークは、オープンソースの理想に基づいて構築されており、アプリケーションのソースコードは誰もが検閲できるように公開されています。 従来のソーシャル・メディアによくある不透明なアルゴリズムの実装を排除することで、ブロックチェーンベースのソーシャルネットワークは、ユーザーとプラットフォーム作成者の利害を一致させることができます。
 
-3. 分散型ソーシャルネットワークは、「仲介者 」が存在しません。 コンテンツ制作者は、コンテンツに対する直接的な所有権を持ち、フォロワー、ファン、購入者、その他の関係者と直接関わることができ、両者間にはスマートコントラクト以外のものは存在しません。
+3. 分散型ソーシャルネットワークには「仲介者 」が存在しません。 コンテンツ制作者は、コンテンツに対する直接的な所有権を持ち、フォロワー、ファン、購入者、その他の関係者と直接関わることができ、両者間にはスマートコントラクト以外のものは存在しません。
 
-4. 分散型ソーシャルネットワークは、グローバルなピアツーピアネットワークであるイーサリアムネットワークで動作する分散型アプリ(Dapp)であるため、サーバーのダウンタイムや機能停止の影響を受けにくい利点があります。
+4. 分散型ソーシャルネットワークは、グローバルなピアツーピアネットワークであるイーサリアムネットワークで動作する分散型アプリ(Dapp)であるため、サーバのダウンタイムや機能停止の影響を受けにくい利点があります。
 
 5. 分散型ソーシャル・プラットフォームでは、コンテンツ制作者は、非代替性トークン(NFT)、アプリ内暗号支払いなどを介した、より良い収益化フレームワークを享受することができます。
 
@@ -50,7 +49,7 @@ summaryPoint3: トークンと非代替性トークン(NFT)により、コンテ
 
 ## イーサリアム上の分散型ソーシャルネットワーク {#ethereum-social-networks}
 
-イーサリアムネットワークは、トークン(ERC-20/ERC-721)の普及と膨大なユーザーベースを持つ人気により、分散型ソーシャルメディアの開発者により好まれているツールとなっています。 ここでは、イーサリアムベースのソーシャルネットワークの例を紹介します。
+イーサリアムネットワークは、トークン(ERC-20/ERC-721)の普及と膨大なユーザーベースを持つ人気により、分散型ソーシャルメディアのデベロッパーにより好まれているツールとなっています。 ここでは、イーサリアムベースのソーシャルネットワークの例を紹介します。
 
 ### Peepeth(ピーペス) {#peepeth}
 
@@ -76,11 +75,11 @@ Mirror で公開された投稿は、分散型ストレージプラットフォ�
 
 ### Reddit(レディット) {#reddit}
 
-Reddit は、ユーザーが質の高いコンテンツを投稿し、オンラインコミュニティ(subreddit)に貢献することで獲得できる ERC-20 トークンである[コミュニティポイント](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users)を使っています。 このトークンを使って、[subreddit 内での限定特典や特権](https://www.reddit.com/community-points/)を獲得することができます。 Reddit はイーサリアムのトランザクションをスケールアップする[レイヤー 2](/layer-2/)ロールアップである Arbitrum と連携しています。
+Reddit は、ERC-20 トークンである[コミュニティポイント](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users)を使っており、これはユーザーが良質のコンテンツを投稿し、オンラインコミュニティ(subreddit)に貢献することで獲得できます。 このトークンを使って、[subreddit 内での限定特典や特権](https://www.reddit.com/community-points/)を獲得することができます。 Reddit はイーサリアムのトランザクションをスケールアップする[レイヤー 2](/layer-2/)ロールアップである Arbitrum と連携しています。
 
-このプログラムはすでにベータ段階にあり、r/CryptoCurrency subreddit が[「Moons」というバージョンのコミュニティポイント](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)を稼働しています。 下記はコミュニティの wiki からの引用です。
+このプログラムはすでに稼働しており、r/CryptoCurrency subreddit が[「Moons」というバージョンのコミュニティポイント](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)を稼働しています。 公式の説明では、Moons は「subreddits への貢献に対して、投稿者、コメント投稿者、モデレーターに報酬を与える」というものです。 これらのトークンはブロックチェーン上にあるため(ユーザーはトークンをウォレットで受領)、Reddit から独立しており、奪われることはありません。
 
-> _Moons は、2020 年 5 月に Reddit の管理者がコミュニティポイントプロジェクトの一環として立ち上げた、Rinkeby ネットワーク上の ERC-20 トークンです。 コミュニティポイントとは、ユーザーの r/CryptoCurrency での貢献に対して、subreddit の所有権単位で報酬を得るシステムです。 Moons は Reddit から独立しており、一度ユーザーが獲得した Moons を、管理者や subreddit のモデレーターが取り上げることはできません。 Moons は、残高、送金、分配/請求、特別メンバーシップの購入を行う一連のスマートコントラクトによって管理されています。 スマートコントラクトとモバイルアプリは、独立系セキュリティ企業である Trail of Bits 社による審査・監査を受けています。_
+Rinkeby テストネットでのベータフェーズを終え、Reddit コミュニティポイントは、[サイドチェーン](/developers/docs/scaling/sidechains/)と[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups/)の特性を兼ね備えたブロックチェーンの[Arbitrum Nova](https://nova.arbitrum.io/)に移行しています。 コミュニティポイントは、様々な特典のために使用するほかに、取引所でフィアットと交換することも可能です。 また、ユーザーが所有するコミュニティポイントの量によって、コミュニティの意思決定に影響を与えられます。
 
 ### Twitter(ツイッター) {#twitter}
 
@@ -95,16 +94,19 @@ Reddit は、ユーザーが質の高いコンテンツを投稿し、オンラ�
 - **[Status.im](https://status.im/)** - _Status は、オープンソースのピアツーピアプロトコルを使用し、エンドツーエンドの暗号化により、サードパーティからのメッセージの検閲を保護する、安全なメッセージングアプリ_
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror は、ユーザーがアイデアをクラウドファンディングし、コンテンツを収益化し、価値の高いコミュニティを構築するための、イーサリアム上に構築されたユーザー所有の分散型出版プラットフォーム_
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol は、分散型インターネットのデジタルガーデンにおいて、制作者がどこにいても自分のコンテンツの所有権を持てるように支援する、構成可能で分散型のソーシャルグラフ_
+- **[Farcaster](https://farcaster.xyz/)** - _十分に分散化されたソーシャルネットワークで、 E メールのように、多くのクライアントをサポートできるオープンプロトコル_
 
 ## 参考文献 {#further-reading}
 
 ### 記事 {#articles}
 
+- [ソーシャルメディアの分散化: web3 ソーシャルスタックのガイド](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [ソーシャルネットワークは次の大きな非中央集権化の機会](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [分散型でコミュニティ型のソーシャルネットワークの可能性を秘めた Web3](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [ブロックチェーンソーシャルメディアの概要](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [ソーシャルメディアのプライバシー問題を解決するブロックチェーン](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [ソーシャルメディアネットワークがブロックチェーンに登場](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [ソーシャルネットワークのための十分な分散化](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### ビデオ {#videos}
 
@@ -114,6 +116,6 @@ Reddit は、ユーザーが質の高いコンテンツを投稿し、オンラ�
 
 ### コミュニティ {#communities}
 
-- [Status Discord サーバー](https://discord.com/invite/3Exux7Y)
-- [Mirror Discord サーバー](https://discord.com/invite/txuCHcE8wV)
+- [Status Discord サーバ](https://discord.com/invite/3Exux7Y)
+- [Mirror Discord サーバ](https://discord.com/invite/txuCHcE8wV)
 - [r/CryptoCurrency subreddit](https://www.reddit.com/r/CryptoCurrency/)

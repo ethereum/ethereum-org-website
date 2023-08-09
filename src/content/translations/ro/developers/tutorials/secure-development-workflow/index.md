@@ -8,7 +8,6 @@ tags:
   - "solidity"
 skill: intermediate
 lang: ro
-sidebar: true
 published: 2020-09-07
 source: Construirea de contracte securizate
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md

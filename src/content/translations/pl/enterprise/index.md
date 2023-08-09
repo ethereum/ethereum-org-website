@@ -2,7 +2,6 @@
 title: Przedsiębiorstwo w sieci głównej Ethereum
 description: Przewodniki, artykuły i narzędzia dotyczące aplikacji korporacyjnych w publicznym blockchainie Ethereum
 lang: pl
-sidebar: true
 ---
 
 # Sieć główna Ethereum dla przedsiębiorstw {#ethereum-for-enterprise}

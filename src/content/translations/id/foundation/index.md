@@ -1,7 +1,7 @@
 ---
 title: Yayasan Ethereum
 description: Pelajari tentang Ethereum Foundation (EF), sebuah organisasi nirlaba yang didedikasikan untuk mendukung Ethereum beserta teknologi yang terkait dengannya.
-sidebar: false
+hideEditButton: true
 lang: id
 ---
 

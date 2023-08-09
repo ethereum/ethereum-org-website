@@ -1,13 +1,14 @@
 ---
 title: How can I get involved?
 description: How to get involved in the Ethereum community.
-sidebar: true
 lang: en
 ---
 
 # How can I get involved? {#get-involved}
 
 The Ethereum community includes people of many different backgrounds and skillsets. Whether you’re a developer, an artist, or an accountant, there are ways to get involved. Here’s a list of suggestions that might help you get started.
+
+Start by reading about the ethereum.org mission and values in our [code of conduct](/community/code-of-conduct).
 
 ## Developers <Emoji text=":computer:" size={1} />‍ {#developers}
 
@@ -22,10 +23,21 @@ The Ethereum community includes people of many different backgrounds and skillse
 
 ## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
-Do you have a background in mathematics, cryptography, or economics? You might be interested in some of the cutting-edge work being done within the Ethereum ecosystem
+Do you have a background in mathematics, cryptography, or economics? You might be interested in some of the cutting-edge work being done within the Ethereum ecosystem:
 
+- Write or review an Ethereum Improvement Proposal
+  - Write an EIP
+    1. Submit your idea on [Ethereum Magicians](https://ethereum-magicians.org)
+    2. Read [EIP-1](https://eip.ethereum.org/EIPS/eip-1) - **Yes, that's the _entire_ document.**
+    3. Follow the directons in EIP-1. Reference it as you write your draft.
+  - Learn how to become an [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069)
+    - You can peer-review EIPs right now! See [open PRs with the `e-review` tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Provide technical feedback on the `discussion-to` link.
+  - Participate in [EIP Governance](https://github.com/ethereum-cat-herders/EIPIP)
+    - Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+  - [More on EIPs](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - An ongoing Q&A series with researchers. As each next part opens, anyone can post questions.
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
 [Explore more active areas of research](/community/research/).
@@ -41,7 +53,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 ### Write content about Ethereum {#write-content}
 
 - Ethereum needs good writers who can explain its value in plain language
-- Not ready to publish your own articles? Consider contributing to the existing content on community resources like [EthHub](https://docs.ethhub.io/), or propose new content for ethereum.org!
+- Not ready to publish your own articles? Consider contributing to the existing content on community resources, or [propose new content for ethereum.org](/contributing/)!
 
 ### Offer to take notes for community calls {#take-notes}
 
@@ -73,7 +85,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 ## Financial professionals & Accountants <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
 
-- Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Pulse](https://defipulse.com/) or [DeFiPrime](https://defiprime.com)
+- Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Llama](https://defillama.com/) or [DeFiPrime](https://defiprime.com)
 - Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [Rotki](https://rotki.com/)
 
 ## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
@@ -100,6 +112,8 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
+- [Ethereum Jobs](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Join a DAO {#decentralized-autonomous-organizations-daos}
 
@@ -120,3 +134,5 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Women-led projects_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_
+
+Please remember to abide by the ethereum.org [code of conduct](/community/code-of-conduct) whenever and however you contribute to ethereum.org!

@@ -6,12 +6,10 @@ tags:
   - "NFT-uri"
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
   - "tokenuri nefungibile"
   - "Solidity"
 skill: beginner
 lang: ro
-sidebar: true
 published: 2021-04-22
 ---
 

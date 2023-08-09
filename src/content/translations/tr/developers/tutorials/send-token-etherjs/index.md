@@ -8,7 +8,6 @@ tags:
   - "TOKEN'LAR"
 skill: beginner
 lang: tr
-sidebar: true
 published: 2021-04-06
 ---
 

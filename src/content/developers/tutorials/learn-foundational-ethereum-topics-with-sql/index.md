@@ -2,20 +2,9 @@
 title: Learn Foundational Ethereum Topics with SQL
 description: This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying on-chain data with Structured Query Language (SQL).
 author: "Paul Apivat"
-tags:
-  [
-    "SQL",
-    "Querying",
-    "Analytics",
-    "Getting Started",
-    "Dune Analytics",
-    "Blocks",
-    "Transactions",
-    "Gas",
-  ]
+tags: ["SQL", "Querying", "Transactions"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
@@ -73,13 +62,13 @@ This will yield the same information as provided on Etherscan's transaction page
 
 #### Etherscan {#etherscan}
 
-![etherscan_view](./etherscan_view.png)
+![](./etherscan_view.png)
 
 [EF's contract page on Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![dune_view](./dune_view.png)
+![](./dune_view.png)
 
 You can find dashboard [here](https://duneanalytics.com/paulapivat/Learn-Ethereum). Click on the table to see the query (also see above).
 
@@ -91,8 +80,9 @@ A submitted transaction includes several pieces of information including ([sourc
 - **Signature**: While a sender's private keys signs a transaction, what we can query with SQL is a sender's public address ("from").
 - **Value**: This is the amount of ETH transferred (see `ether` column).
 - **Data**: This is arbitrary data that's been hashed (see `data` column)
-- **gasLimit**: The maximum amount of gas, or the cost of computation, that can be consumed by a transaction (see `gas_limit`).
-- **gasPrice**: The fee the sender pays to sign a transaction to the blockchain. Gas is denominated in Gwei which is 0.000000001 ETH (nine decimal places).
+- **gasLimit** – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
+- **maxPriorityFeePerGas** - the maximum amount of gas to be included as a tip to the miner
+- **maxFeePerGas** - the maximum amount of gas willing to be paid for the transaction (inclusive of baseFeePerGas and maxPriorityFeePerGas)
 
 We can query these specific pieces of information for transactions to the Ethereum Foundation public address:
 
@@ -127,7 +117,6 @@ Here is the [query](https://duneanalytics.com/queries/44856/88292) on Dune Analy
 SELECT
    time,
    number,
-   difficulty,
    hash,
    parent_hash,
    nonce
@@ -157,7 +146,7 @@ ORDER BY block_time DESC`
 
 Here's the SQL output on Dune:
 
-![list_of_txn](./list_of_txn.png)
+![](./list_of_txn.png)
 
 This single block being added to the chain changes the state of the Ethereum virtual machine ([EVM](/developers/docs/evm/)). Dozens sometimes, hundreds of transactions are verified at once. In this specific case, 222 transactions were included.
 
@@ -176,19 +165,19 @@ FROM temp_table
 
 For block 12396854, out of 222 total transactions, 204 were successfully verified:
 
-![successful_txn](./successful_txn.png)
+![](./successful_txn.png)
 
 Transactions requests occur dozens of times per second, but blocks are committed approximately once every 15 seconds ([source](/developers/docs/blocks/)).
 
-To see that there is one block produced approximately every 15 seconds, we could take the number of seconds in a day (86400) divided by 15 to get an _estimate_ average number of blocks per day (~ 5760).
+To see that there is one block produced approximately every 15 seconds, we could take the number of seconds in a day (86400) divided by 15 to get an estimated average number of blocks per day (~ 5760).
 
 The chart for Ethereum blocks produced per day (2016 - present) is:
 
-![daily_blocks](./daily_blocks.png)
+![](./daily_blocks.png)
 
 The average number of blocks produced daily over this time period is ~5,874:
 
-![avg_daily_blocks](./avg_daily_blocks.png)
+![](./avg_daily_blocks.png)
 
 The queries are:
 
@@ -221,11 +210,11 @@ The average number of blocks produced per day since 2016 is slightly above that 
 
 ### Gas {#gas}
 
-Blocks are bounded in size. Each block has a gas limit which is collectively set by miners and the network to prevent arbitrarily large block size to be less of a strain on full node in terms of disk space and speed requirements ([source](/developers/docs/blocks/)).
+Blocks are bounded in size. The maximum block size is dynamic and varies according to network demand between 12,500,000 and 25,000,000 units. Limits are required to prevent arbitrarily large block sizes putting strain on full nodes in terms of disk space and speed requirements ([source](/developers/docs/blocks/)).
 
 One way to conceptualize block gas limit is to think of it as the **supply** of available block space in which to batch transactions. The block gas limit can be queried and visualized from 2016 to present day:
 
-![avg_gas_limit](./avg_gas_limit.png)
+![](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -238,7 +227,7 @@ OFFSET 1
 
 Then there is the actual gas used daily to pay for computing done on the Ethereum chain (i.e., sending transaction, calling a smart contract, minting an NFT). This is the **demand** for available Ethereum block space:
 
-![daily_gas_used](./daily_gas_used.png)
+![](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -257,9 +246,9 @@ Therefore we can understand gas prices as a function of demand for Ethereum bloc
 
 Finally, we may want to query average daily gas prices for the Ethereum chain, however, doing so will result in an especially long query time, so we’ll filter our query to the average amount of gas paid per transaction by the Ethereum Foundation.
 
-![ef_daily_gas](./ef_daily_gas.png)
+![](./ef_daily_gas.png)
 
-We can see gas prices paid in transaction to the Ethereum Foundation address over the years. Here is the query:
+We can see gas prices paid for all transactions made to the Ethereum Foundation address over the years. Here is the query:
 
 ```sql
 SELECT

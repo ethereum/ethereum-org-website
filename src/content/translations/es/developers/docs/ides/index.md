@@ -2,7 +2,6 @@
 title: Entornos de desarrollo integrados (IDE)
 description:
 lang: es
-sidebar: true
 ---
 
 Cuando se trata de configurar un [entorno de desarrollo integrado (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), la implantación con Ethereum es similar a con cualquier otro proyecto de software. Como hay muchas opciones para elegir, te recomendamos que selecciones la que mejor se adapte a tus preferencias.

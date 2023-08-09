@@ -2,7 +2,6 @@
 title: Ethereum para desarrolladores de JavaScript
 description: Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en JavaScript.
 lang: es
-sidebar: true
 ---
 
 JavaScript se encuentra entre los lenguajes más populares del ecosistema Ethereum. De hecho, hay un [equipo](https://github.com/ethereumjs) dedicado a programar la mayor cantidad posible de Ethereum en JavaScript.

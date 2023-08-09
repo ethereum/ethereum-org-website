@@ -2,7 +2,6 @@
 title: Cadenas laterales
 description: Introducción a las cadenas laterales como solución de escalado actualmente utilizada por la comunidad de Ethereum.
 lang: es
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -33,7 +32,6 @@ Múltiples proyectos proporcionan implementaciones de cadenas laterales que pued
 
 ## Más lecturas {#further-reading}
 
-- [EthHub en sidechains](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Escalado de dApps de Ethereum por medio de cadenas laterales](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 de febrero de 2018, Georgios Konstantopoulos_
 
 _¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite esta página y añádalo._

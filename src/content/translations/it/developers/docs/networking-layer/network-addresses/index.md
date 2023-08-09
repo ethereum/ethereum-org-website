@@ -2,7 +2,6 @@
 title: Indirizzi di rete
 description: Un'introduzione agli indirizzi di rete.
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -36,6 +35,4 @@ Ethereum Node Records (ENR) è un formato standardizzato per gli indirizzi di re
 
 ## Letture consigliate {#further-reading}
 
-- [EIP-778: Ethereum Node Records (ENR)](https://eips.ethereum.org/EIPS/eip-778)
-- [Indirizzi di rete su Ethereum](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
-- [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
+[EIP-778: Ethereum Node Records (ENR)](https://eips.ethereum.org/EIPS/eip-778) [Indirizzi di rete su Ethereum](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/) [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

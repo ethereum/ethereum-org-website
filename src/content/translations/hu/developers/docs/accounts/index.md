@@ -2,7 +2,6 @@
 title: Ethereum számlák
 description: Az Ethereum számlák magyarázata – az adatstruktúrájuk és a kapcsolatuk a kulcspár kriptográfiával.
 lang: hu
-sidebar: true
 isOutdated: true
 ---
 

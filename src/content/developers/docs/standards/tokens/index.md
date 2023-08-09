@@ -2,7 +2,6 @@
 title: Token Standards
 description:
 lang: en
-sidebar: true
 incomplete: true
 ---
 
@@ -24,6 +23,8 @@ Here are some of the most popular token standards on Ethereum:
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - ERC-777 allows people to build extra functionality on top of tokens such as a mixer contract for improved transaction privacy or an emergency recover function to bail you out if you lose your private keys.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155 allows for more efficient trades and bundling of transactions – thus saving costs. This token standard allows for creating both utility tokens (such as $BNB or $BAT) and Non-Fungible Tokens like CryptoPunks.
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - A tokenized vault standard designed to optimize and unify the technical parameters of yield-bearing vaults.
+
+The full list of [ERC](https://eips.ethereum.org/erc) proposals.
 
 ## Further reading {#further-reading}
 

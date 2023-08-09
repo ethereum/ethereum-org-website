@@ -2,7 +2,6 @@
 title: Akıllı kontratlar derlemek
 description: Neden akıllı sözleşmeleri derlemeniz gerektiği ve derlemenin aslen ne yaptığı hakkında bir açıklama.
 lang: tr
-sidebar: true
 incomplete: true
 ---
 

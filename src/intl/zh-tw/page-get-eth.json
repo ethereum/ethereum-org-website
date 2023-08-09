@@ -11,7 +11,7 @@
   "page-get-eth-dex-desc": "如果您希望握有更多控制權，透過點對點交易購買以太幣。透過去中心化交易所，您的資金就不受中心化公司的控制。",
   "page-get-eth-dexs": "去中心化交易所 (DEX)",
   "page-get-eth-dexs-desc": "去中心化交易所是用於交易以太幣或者其他代幣的開放自由市場，直接聯繫買賣雙方。",
-  "page-get-eth-dexs-desc-2": "它們並非藉由可信任的第三方保障交易的資金安全，而是透過程式碼。只有付款確定時，以太幣才會從賣方轉出。這樣的程式碼被稱為「智能合約」。",
+  "page-get-eth-dexs-desc-2": "它們並非藉由可信任的第三方保障交易的資金安全，而是透過程式碼。只有付款確定時，以太幣才會從賣方轉出。這樣的程式碼被稱為「智慧型合約」。",
   "page-get-eth-dexs-desc-3": "這代表與中心化的交易方案相比更不受地理限制。如果有人販賣您想要的商品，賣方也接受您可以使用的支付方式，那麼您就可以進行交易。去中心化交易所可以讓您購買以太幣的途徑包括：其他代幣、PayPal，甚至是親自用現金交易。",
   "page-get-eth-do-not-copy": "此為範例：請勿複製",
   "page-get-eth-exchanges-disclaimer": "這些資訊是我們以人工收集，如果您發現錯誤，請發郵件給",
@@ -41,10 +41,8 @@
   "page-get-eth-protect-eth-in-wallet": "使用錢包保護您的以太幣",
   "page-get-eth-search-by-country": "根據國家或地區搜尋",
   "page-get-eth-security": "然而，這也代表您必須認真維護資金安全。不要信任銀行代管您的以太幣，您只能相信自己。",
-  "page-get-eth-smart-contract-link": "了解更多關於智能合約的資訊",
+  "page-get-eth-smart-contract-link": "了解更多關於智慧型合約的資訊",
   "page-get-eth-swapping": "用您的代幣與他人交易以太幣，反之亦然。",
-  "page-get-eth-traditional-currencies": "使用傳統貨幣購買",
-  "page-get-eth-traditional-payments": "透過傳統支付方式直接向賣方購買以太幣。",
   "page-get-eth-try-dex": "嘗試使用去中心化交易所",
   "page-get-eth-use-your-eth": "使用您的以太幣",
   "page-get-eth-use-your-eth-dapps": "現在，您已經持有了一些以太幣。您可以查看一些以太坊應用程式（去中心化應用程式）。去中心化應用程式涵蓋金融、社群媒體、遊戲，還有很多其他領域。",
@@ -62,5 +60,7 @@
   "page-get-eth-your-address": "您的以太幣位址",
   "page-get-eth-your-address-desc": "在您下載錢包時，為您建立一個公開的以太幣位址，如下圖為一範例：",
   "page-get-eth-your-address-desc-3": "請將其想像為電子郵件地址，但是接收的是以太幣而非郵件。如果您想要將以太幣從交易所轉移到您的錢包，使用您的位址作為目的地。發送前請記得檢查！",
-  "page-get-eth-your-address-wallet-link": "查看錢包"
+  "page-get-eth-your-address-wallet-link": "查看錢包",
+  "listing-policy-raise-issue-link": "提出問題",
+  "page-find-wallet-last-updated": "最後更新"
 }

@@ -2,7 +2,6 @@
 title: Despre noi
 description: Despre echipa, comunitatea și misiunea ethereum.org
 lang: ro
-sidebar: true
 ---
 
 # Despre ethereum.org {#about-ethereumorg}
@@ -57,10 +56,6 @@ Avem un [ghid de stil](/contributing/style-guide/) care standardizează anumite 
 Primim cu plăcere feedback atât despre principiile de concepţie, cât și despre ghidul de stil. Nu uitaţi, ethereum.org este destinat comunităţii de către comunitate.
 
 Aveţi grijă să citiţi [principiile noastre](/contributing/design-principles/) și [ghidul nostru de stil](/contributing/style-guide/) dacă doriți să [vă aduceţi contribuţia la site](/contributing/).
-
-## Foaie de parcurs {#roadmap}
-
-<Roadmap />
 
 ## Posturi vacante {#open-jobs}
 

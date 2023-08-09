@@ -2,7 +2,6 @@
 title: Penambangan
 description: Penjelasan tentang cara kerja penambangan Ethereum dan bagaimana hal itu membantu menjaga Ethereum tetap aman dan terdesentralisasi.
 lang: id
-sidebar: true
 incomplete: true
 ---
 
@@ -61,8 +60,6 @@ Amati Austin memandu Anda melalui penambangan dan blockchain bukti kerja.
 <YouTube id="zcX7OJ-L8XQ" />
 
 ## Bacaan lebih lanjut {#further-reading}
-
-- [Apa artinya menambang Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
 ## Peralatan terkait {#related-tools}
 

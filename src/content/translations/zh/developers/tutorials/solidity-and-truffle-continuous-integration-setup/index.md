@@ -3,13 +3,11 @@ title: "Solidity 和 Truffle 持续集成设置"
 description: 如何为 Truffle 测试设置 Travis 或 Circle CI 以及有用的插件
 author: Markus Waas
 lang: zh
-sidebar: true
 tags:
   - "solidity"
-  - "智能合约"
+  - "智能合同"
   - "测试"
   - "truffle"
-  - "持续集成"
   - "ganache"
 skill: intermediate
 published: 2020-06-05
@@ -103,11 +101,11 @@ workflows:
 
 Eth-gas-reporter 插件对于记录您的智能合约函数的 gas 成本相当有用。 在您的 CI 中使用它，将进一步有助于在添加拉取请求时显示差异。
 
-### 第 1 步：安装 eth-gas-reporter 插件和 Codechecks {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
+### 第 1 步：安装 eth-gas-reporter 插件和 {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
-$ npm install --save-dev eth-gas-reporter
-$ npm install --save-dev @codechecks/client
+npm install --save-dev eth-gas-reporter
+npm install --save-dev @codechecks/client
 ```
 
 ### 第 2 步：在您的 truffle-config.js 内的 mocha 设置中加入该插件 {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
@@ -143,13 +141,13 @@ checks:
 ### 第 5 步：创建一个 Codechecks 帐户 {#step-5-create-a-codechecks-account}
 
 - 使用 [Codechecks](http://codechecks.io/) 创建一个帐户。
-- 将 GitHub repo 添加到其中。
+- 将 GitHub 存储库添加到其中。
 - 复制密钥并将 `CC_SECRET=COPIED SECRET` 添加到您的 CI（ [Travis](https://docs.travis-ci.com/user/environment-variables/) 参见这里，[CircleCi](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project) 参见这里）。
 - 现在继续创建拉取请求。
 
 这就完成了。 现在，您将看到一份关于您的拉取请求的 gas 成本变化的报告。
 
-![Gas 成本报告示例](../../../../../developers/tutorials/solidity-and-truffle-continuous-integration-setup/gas-reports.png)
+![Gas 成本报告示例](./gas-reports.png)
 
 ## 添加 solidity-coverage 插件 {#adding-the-solidity-coverage-plugin}
 
@@ -158,9 +156,7 @@ checks:
 ### 第 1 步：创建一个 metacoin 项目并安装覆盖工具 {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
-$ npm install --save-dev truffle
-$ npm install --save-dev coveralls
-$ npm install --save-dev solidity-coverage
+npm install --save-dev truffle coveralls solidity-coverage
 ```
 
 ### 第 2 步：将 solidity-coverage 添加到 truffle-config.js 的插件数组中。 {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
@@ -184,15 +180,15 @@ Solidity coverage 启动了它自己的 ganache-cli，所以我们不必担心�
 ### 第 4 步：将 repository 添加到 Coveralls {#step-4-add-repository-to-coveralls}
 
 - 使用 [Coveralls](https://coveralls.io/) 创建一个帐户
-- 添加 GitHub repo 到 Coverall
-- 创建拉取请求
+- 将 GitHub 存储库添加到其中。
+- 现在继续创建拉取请求。
 
-![Coverall 示例](../../../../../developers/tutorials/solidity-and-truffle-continuous-integration-setup/coverall.png)
+![Coverall 示例](./coverall.png)
 
 ## 进一步的想法 {#further-ideas}
 
 - [MythX](https://mythx.io/)：使用 MythX，您可以自动分析智能合约的安全性。 因此， [将其添加到您的 CI](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/) 是非常有意义的。
-- [检查](https://wikipedia.org/wiki/Lint_%28software%29)：好的代码在某种程度上可以通过检查工具来实现。 [Eslint](https://eslint.org/) 对于 JavaScript 来说非常有用，[很容易设置](https://eslint.org/docs/user-guide/getting-started)，[Solhint](https://protofire.github.io/solhint/) 可以用于 Solidity。
+- [Linting](https://wikipedia.org/wiki/Lint_%28software%29)：好代码可以在一定程度上通过 linting 工具强制执行。 [Eslint](https://eslint.org/) 非常适合 JavaScript 并且[便于设置](https://eslint.org/docs/user-guide/getting-started)，而 [Solhint](https://protofire.github.io/solhint/) 可用于 Solidity。
 - 长测试：有时您可能想要添加极端测试，例如使用数百名用户测试一个合约。 这需要很长时间。 不要在每次测试运行中都运行它们，而是将它们添加到 CI 中。
 
 这是全部内容了。 持续集成是您开发中非常有用的战略。 您可以在 [Truffle-CI-example](https://github.com/gorgos/Truffle-CI-Example) 查看完整的示例。 请务必移除 Circle-CI 或 Travis，只使用一个就够了！

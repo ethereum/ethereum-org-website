@@ -2,7 +2,6 @@
 title: 设计原则
 lang: zh
 description: Ethereum.org 设计和内容决策背后的原则
-sidebar: true
 ---
 
 # 我们的设计原则 {#contributing-to-ethereumorg-}
@@ -24,7 +23,7 @@ sidebar: true
 让我们来看一个例子： 其中一项原则是“可信”，这意味着我们希望网站的访问者*感觉*并*知道*该网站是值得信赖的——就像更开放的以太坊生态系统一样。 在该原则下，我们有 3 个功能性“子原则”，我们认为这些是我们可以采取的可行步骤，以使网站具有可信度：
 
 - _“最新”_，即保持内容最新。
-- _“社会认同”_，即展示生态系统的规模、多样性和活跃度（您知道的：以太坊升级进度、去中心化金融、游戏、所有黑客马拉松等)
+- _“社会认同”_，即展示生态系统的规模、多样性和活跃度（您知道的：以太坊升级进度、去中心化金融、游戏、所有黑客马拉松等）
 - _“一致”_，即网站设计以及写作的基调和准确性是一致的。
 
 因此，当我们做出设计或文案决策时，我们可以参考“可信”原则并自问：
@@ -91,4 +90,4 @@ sidebar: true
 
 虽然这些原则主要体现在 ethereum.org 网站上，但我们希望其中许多原则能够代表以太坊生态系统的整体价值（例如，您可以看到[以太坊原则白皮书](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)的影响）。 也许您甚至想将其中一些原则运用到您自己的项目中！
 
-请通过 [Discord 服务器](https://discord.gg/CetY6Y4)或者[创建一个提议](<(https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)>)来分享您的想法。
+在 [Discord 服务器](https://discord.gg/CetY6Y4)上或通过[创建问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request)，让我们知道你的想法。

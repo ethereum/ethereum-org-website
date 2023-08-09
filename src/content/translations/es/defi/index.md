@@ -4,9 +4,8 @@ description: Una visión de las finanzas descentralizadas en Ethereum
 lang: es
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
-alt: Un logo de Ethereum hecho de bloques de Lego.
+alt: Un logotipo de Ethereum hecho de bloques de Lego.
 sidebarDepth: 2
 summaryPoint1: Una alternativa global y abierta al sistema financiero actual.
 summaryPoint2: Productos que le permiten tomar prestado, ahorrar, invertir, comerciar y más.
@@ -275,7 +274,7 @@ Esto significa que el Proyecto A con sus 100 donaciones de 1 dólar puede termin
 
 El aseguramiento descentralizado tiene como objetivo hacer que el aseguramiento sea más barato, se pague más rápido y sea más transparente. Con más automatización, la cobertura es más asequible y los pagos son mucho más rápidos. Los datos usados para decidir sobre su solicitud son completamente transparentes.
 
-Los productos de Ethereum —al igual que el software— pueden sufrir virus y aprovechamiento. Ahora mismo hay muchos productos de seguros enfocándose en proteger a sus usuarios de pérdidas de fondos. Sin embargo, hay proyectos que están empezando a crear cobertura para todo lo que la vida pueda lanzarnos. Un buen ejemplo es la cobertura de Etherisc Crop, que pretende [proteger a los pequeños agricultores en Kenya contra las sequías y las inundaciones](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). El aseguramiento descentralizado ofrece una cobertura más barata para los granjeros a los que se les cobra con precios fuera del de los seguros tradicionales.
+Los productos de Ethereum —al igual que el software— pueden sufrir virus y aprovechamiento. Ahora mismo hay muchos productos de seguros enfocándose en proteger a sus usuarios de pérdidas de fondos. Sin embargo, hay proyectos que están empezando a crear cobertura para todo lo que la vida pueda lanzarnos. Un buen ejemplo es la cobertura de Etherisc Crop, que pretende [proteger a los pequeños agricultores en Kenia contra las sequías y las inundaciones](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). El aseguramiento descentralizado ofrece una cobertura más barata para los granjeros a los que se les cobra con precios fuera del de los seguros tradicionales.
 
 <ButtonLink to="/dapps/?category=finance">
   Ver dapps de aseguramiento
@@ -288,7 +287,7 @@ Los productos de Ethereum —al igual que el software— pueden sufrir virus y a
 Con tantas cosas en marcha, necesitará una forma de realizar un seguimiento de todas sus inversiones, préstamos y operaciones. Existen una gran cantidad de productos que le permiten coordinar toda su actividad de DeFi (Finanzas Descentralizadas) desde un solo lugar. Esta es la belleza de la arquitectura abierta de DeFi. Los equipos pueden crear interfaces en las que no solo puede ver sus saldos entre productos, sino que también puede usar sus funciones. Le resultará más útil a medida que explora más sobre DeFi.
 
 <ButtonLink to="/dapps/?category=finance">
-  Ver dApps de portafolios
+  Ver dapps de portafolios
 </ButtonLink>
 
 <Divider />
@@ -333,14 +332,13 @@ DeFi es un proyecto de código abierto. Puede inspeccionar, copiar e innovar tod
 
 ### Datos sobre DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### Artículos sobre DeFi {#defi-articles}
 
-- [¿Qué son las Finanzas Descentralizadas?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, actualizado periódicamente_
-- [Una guía sobre DeFi para principiantes](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de Enero del 2020_
+- [Una guía sobre DeFi para principiantes](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4): _Sid Coelho-Prabhu, 6 de enero de 2020_
 
 ### Vídeos {#videos}
 

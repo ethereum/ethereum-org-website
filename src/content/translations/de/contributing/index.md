@@ -2,7 +2,6 @@
 title: Mitwirken
 description: Mehr erfahren über die verschiedenen Wege, um einen Beitrag zu ethereum.org zu leisten
 lang: de
-sidebar: true
 ---
 
 # Mitwirken bei ethereum.org 🦄 {#contributing-to-ethereumorg}
@@ -17,16 +16,17 @@ Die ethereum.org-Website, wie Ethereum im Großen und Ganzen, ist ein Open-Sourc
 
 - [Arbeiten an offenen Themen](https://github.com/ethereum/ethereum-org-website/issues) _ – Arbeit, die wir als notwendig erachten_
 - [Beitrag zum Überstzungsprogramm](/contributing/translation-program/)_ – Helfen Sie uns, ethereum.org in neuen Sprachen verfügbar zu machen_
-- [Community-Beiträge hinzufügen](/contributing/content-resources/) _ – Fügen Sie einen hilfreichen Beitrag zu einer relevanten Seite hinzu_
+- [Community-Ressourcen hinzufügen](/contributing/content-resources/) _– Fügen Sie eine(n) hilfreiche(n) Artikel oder Ressource zu einer relevanten Seite hinzu_
 - [Produkt hinzufügen](/contributing/adding-products/) _ – Fügen Sie eine dApp oder ein Wallet zu einer relvanten Seite hinzu_
 - [Entwicklungstools hinzufügen](/contributing/adding-developer-tools/) _ – Fügen Sie Entwicklungstools zu einer relvanten Seite hinzu_
 - [Handelsplatz hinzufügen](/contributing/adding-exchanges/) _ – Fügen Sie einen Handelsplatz zu unserer [Börsensuche hinzu](/get-eth/#country-picker)_
 - [ Unsere Forschung verbessern](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) _ – Geben Sie uns Feedback zu unserer Forschung oder betreiben Sie Ihre eigene_
-- [Funktionsanfrage](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) _ – Informieren Sie uns über Ihre Ideen zu neuen Funktionen oder Desings_
+- [Funktionsanfrage](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) _ – Informieren Sie uns über Ihre Ideen zu neuen Funktionen oder Desings_
 - [Glossarbegriff hinzufügen](/contributing/adding-glossary-terms) _ – Helfen Sie uns, das Ethereum-[Wörterbuch](/glossary/) zu vergrößern_
 - [Inhalte erstellen/bearbeiten](/contributing/#how-to-update-content) _ – Empfehlen Sie neue Seiten oder verbessern Sie bereits bestehende_
-- [Ebene 2 hinzufügen](/contributing/adding-layer-2) _ – Fügen Sie einer relevanten Seite eine Ebene 2 hinzu_
-- [Staking-Produkt oder -Service hinzufügen](/contributing/adding-staking-product/) – _Fügen Sie ein Projekt hinzu, dass das Solo-Staking, das Pool-Staking oder das Staking als Service ermöglicht_
+- [Ebene 2 hinzufügen](/contributing/adding-layer-2s/) _ – Fügen Sie einer relevanten Seite eine Ebene 2 hinzu_
+- [Staking-Produkt oder -Service hinzufügen](/contributing/adding-staking-products/) – _Fügen Sie ein Projekt hinzu, dass das Solo-Staking, das Pool-Staking oder das Staking als Service ermöglicht_
+- [Eine Wallet hinzufügen](/contributing/adding-wallets/) _- Fügen Sie eine Wallet für die [Finde-Wallets-Seite](/wallets/find-wallet/) hinzu._
 
 _Haben Sie Fragen?_ 🤔 Sie erreichen uns auf unserem [Discord-Server](https://discord.gg/CetY6Y4).
 
@@ -72,7 +72,7 @@ Wenn Ihr Beitrag in ethereum.org eingebunden wird, prägen wir Ihnen einen einzi
 ### So werden sie beansprucht {#how-to-claim}
 
 1. Treten Sie unserem [Discord-Server](https://discord.gg/E8dET2ux8y) bei.
-2. Kopieren Sie einen Link zu Ihrem Beitrag in den Kanal `#🥇 | poaps`.
+2. Fügen Sie einen Link zu Ihrem Beitrag in den `#🥇 | poaps` [Kanal](https://discord.com/channels/714888181740339261/804005643211898911) ein.
 3. Warten Sie, bis ein Mitglied unseres Teams Ihnen einen Link zu Ihrem POAP schickt.
 4. Beanspruchen Sie Ihren POAP.
 

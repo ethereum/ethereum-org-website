@@ -1,40 +1,21 @@
 import React from "react"
-import { useIntl } from "react-intl"
-import styled from "@emotion/styled"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, useStaticQuery } from "gatsby"
+import { Flex, FlexProps } from "@chakra-ui/react"
 
 import ButtonLink from "../ButtonLink"
 import CalloutBanner from "../CalloutBanner"
 import Translation from "../Translation"
 
-import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 
-const StyledCallout = styled(CalloutBanner)`
-  margin: 4rem 0;
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
-
-const StyledButtonLink = styled(ButtonLink)`
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: 100%;
-  }
-`
-
-export interface IProps {
+export interface IProps extends FlexProps {
   id?: string
 }
 
 const StakingCommunityCallout: React.FC<IProps> = (props) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const { image } = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "enterprise-eth.png" }) {
@@ -51,15 +32,15 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
   `)
 
   return (
-    <StyledCallout
+    <CalloutBanner
       {...props}
       image={getImage(image)!}
-      alt={translateMessageId("page-staking-image-alt", intl)}
+      alt={t("page-staking-image-alt")}
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}
     >
-      <ButtonContainer>
-        <StyledButtonLink
+      <Flex gap={4} direction={{ base: "column", md: "row" }}>
+        <ButtonLink
           onClick={() => {
             trackCustomEvent({
               eventCategory: `StakingCommunityCallout`,
@@ -68,10 +49,11 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
             })
           }}
           to="https://discord.io/ethstaker"
+          w={{ base: "full", md: "auto" }}
         >
           Discord
-        </StyledButtonLink>
-        <StyledButtonLink
+        </ButtonLink>
+        <ButtonLink
           onClick={() => {
             trackCustomEvent({
               eventCategory: `StakingCommunityCallout`,
@@ -80,10 +62,11 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
             })
           }}
           to="https://reddit.com/r/ethstaker"
+          w={{ base: "full", md: "auto" }}
         >
           Reddit
-        </StyledButtonLink>
-        <StyledButtonLink
+        </ButtonLink>
+        <ButtonLink
           onClick={() => {
             trackCustomEvent({
               eventCategory: `StakingCommunityCallout`,
@@ -92,11 +75,12 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
             })
           }}
           to="https://ethstaker.cc"
+          w={{ base: "full", md: "auto" }}
         >
           <Translation id="rollup-component-website" />
-        </StyledButtonLink>
-      </ButtonContainer>
-    </StyledCallout>
+        </ButtonLink>
+      </Flex>
+    </CalloutBanner>
   )
 }
 

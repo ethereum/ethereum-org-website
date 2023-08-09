@@ -1,19 +1,17 @@
 ---
 title: Imparare gli argomenti fondamentali di Ethereum con SQL
-description: Questo tutorial aiuta i lettori a comprendere i concetti fondamentali di Ethereum, incluse transazioni, blocchi e carburante, effettuando query di dati sulla catena con lo Structured Query Language (SQL).
+description: Questo tutorial aiuta i lettori a comprendere i concetti fondamentali di Ethereum, incluse le transazioni, i blocchi e il gas, interrogando i dati sulla catena con il Linguaggio di Richiesta Strutturato (SQL).
 author: "Paul Apivat"
 tags:
   - "SQL"
   - "Interrogazioni"
   - "Analisi"
   - "Primi passi"
-  - "Dune Analytics"
   - "Blocchi"
   - "Transazioni"
-  - "Carburante"
+  - "Gas"
 skill: beginner
 lang: it
-sidebar: true
 published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
@@ -21,21 +19,21 @@ sourceUrl: https://paulapivat.com/post/query_ethereum/
 
 Molti tutorial di Ethereum sono rivolti agli sviluppatori, mancano invece risorse educative per gli analisti di dati o per le persone che vogliono visualizzare dati sulla catena senza eseguire un client o un nodo.
 
-Questo tutorial aiuta i lettori a comprendere i concetti fondamentali di Ethereum, incluse transazioni, blocchi e carburante, effettuando query di dati sulla catena con lo Structured Query Language (SQL) tramite un'interfaccia fornita da [Dune Analytics](https://dune.xyz/home).
+Questo tutorial aiuta i lettori a comprendere i concetti fondamentali di Ethereum, incluse le transazioni, i blocchi e il gas, interrogando i dati sulla catena con il linguaggio di richiesta strutturato (SQL), tramite un'interfaccia fornita da [Dune Analytics](https://dune.xyz/home).
 
-I dati sulla catena possono aiutarci a comprendere Ethereum, la rete e, un'economia per la potenza di calcolo, e dovrebbero servire come una base per la comprensione delle sfide che Ethereum sta affrontando oggi (es., aumento dei prezzi del carburante) e, soprattutto, come confronto sulle soluzioni di scaling.
+I dati sulla catena possono aiutarci a comprendere Ethereum, la rete, come un'economia per la potenza di calcolo, e dovrebbero servire da base per comprendere le sfide che Ethereum affronta oggi (cioè, l'aumento dei prezzi del gas) e, soprattutto, le discussioni sulle soluzioni di ridimensionamento.
 
 ### Transazioni {#transactions}
 
-Il percorso di un utente su Ethereum inizia inizializzando l'account controllato da un utente o un'entità con un saldo di ETH. Esistono due tipi di account: account controllato dall'utente o smart contract (vedi [ethereum.org](/developers/docs/accounts/)).
+Il percorso di un utente su Ethereum inizia inizializzando il conto controllato da un utente o da un'entità, con un saldo di ETH. Esistono due tipi di conto: controllato dall'utente o contratto intelligente (vedi [ethereum.org](/developers/docs/accounts/)).
 
-Ogni conto è visualizzabile su un esploratore di blocchi come [Etherscan](https://etherscan.io/). Gli esploratori di blocchi sono un portale ai dati di Ethereum. Mostrano, in tempo reale, i dati su blocchi, transazioni, miner, account e altre attività sulla catena (vedi [qui](/developers/docs/data-and-analytics/block-explorers/)).
+Ogni conto è visualizzabile su un esploratore di blocchi come [Etherscan](https://etherscan.io/). Gli esploratori di blocchi sono un portale ai dati di Ethereum. Mostrano, in tempo reale, i dati su blocchi, transazioni, miner, conti e altre attività sulla catena (vedi [qui](/developers/docs/data-and-analytics/block-explorers/)).
 
 Tuttavia, è possibile che un utente voglia interrogare i dati direttamente per riconciliare le informazioni fornite da esploratori di blocchi esterni. [Dune Analytics](https://duneanalytics.com/)mette a disposizione questa capacità a chiunque abbia una conoscenza di SQL.
 
-Per riferimento, l'account dello smart contract per la Ethereum Foundation (EF) può visualizzato visto su [Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae).
+Per riferimento, il conto del contratto intelligente per la Ethereum Foundation (EF) può essere visualizzato su [Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae).
 
-Una cosa da notare è che tutti gli account, incluso quello dell'EF, hanno un indirizzo pubblico utilizzabile per inviare e ricevere le transazioni.
+Una cosa da notare è che tutti i conti, incluso quello dell'EF, hanno un indirizzo pubblico, utilizzabile per inviare e ricevere le transazioni.
 
 Il saldo del conto su Etherscan comprende transazioni regolari e interne. Le transazioni interne, nonostante il nome, non sono transazioni _reali_ che modificano lo stato della catena. Sono trasferimenti di valore avviati eseguendo un contratto ([sorgente](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Poiché le transazioni interne non hanno firma, **non** sono incluse sulla blockchain e non sono interrogabili con Dune Analytics.
 
@@ -71,13 +69,13 @@ Questo produrrà le stesse informazioni fornite sulla pagina della transazione d
 
 #### Etherscan {#etherscan}
 
-![etherscan_view](./etherscan_view.png)
+![](./etherscan_view.png)
 
 [Pagina del contratto dell'EF su Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![dune_view](./dune_view.png)
+![](./dune_view.png)
 
 Puoi trovare la dashboard [qui](https://duneanalytics.com/paulapivat/Learn-Ethereum). Clicca sulla tabella per vedere l'interrogazione (vedi anche sopra).
 
@@ -89,8 +87,9 @@ Una transazione inviata presenta diverse informazioni, tra cui ([sorgente](/deve
 - **Firma**: mentre le chiavi private di un mittente firmano una transazione, con SQL possiamo interrogare l'indirizzo pubblico di un mittente ("da").
 - **Valore**: questo è l'importo di ETH trasferito (vedi la colonna di `ether`).
 - **Dati**: sono i dati arbitrari che hanno ricevuto l'hashing (vedi la colonna `data`)
-- **gasLimit**: la massima quantità di carburante, o il costo del calcolo, consumabile da una transazione (vedi `gas_limit`).
-- **gasPrice**: la commissione che il mittente paga per firmare una transazione sulla blockchain. Il carburante è denominato in Gwei, ovvero 0,000000001 ETH (nove decimali).
+- **gasLimit**: l'importo massimo di unità di gas consumabili dalla transazione. Le unità di gas rappresentano le fasi di calcolo
+- **maxPriorityFeePerGas**: l'importo massimo di gas da includere come mancia al miner
+- **maxFeePerGas**: l'importo massimo di gas che si è disposti a pagare per la transazione (inclusiva di baseFeePerGas e maxPriorityFeePerGas)
 
 Possiamo richiedere informazioni specifici per le transazioni all'indirizzo pubblico della Ethereum Foundation:
 
@@ -125,7 +124,6 @@ Ecco l'[interrogazione](https://duneanalytics.com/queries/44856/88292) su Dune A
 SELECT
    time,
    number,
-   difficulty,
    hash,
    parent_hash,
    nonce
@@ -155,7 +153,7 @@ ORDER BY block_time DESC`
 
 Ecco l'output in SQL su Dune:
 
-![list_of_txn](./list_of_txn.png)
+![](./list_of_txn.png)
 
 Questo singolo blocco aggiunto alla catena cambia lo stato della macchina virtuale di Ethereum ([EVM](/developers/docs/evm/)). Dozzine, a volte, centinaia di transazioni vengono verificate in un solo colpo. In questo caso specifico, sono state incluse 222 transazioni.
 
@@ -174,19 +172,19 @@ FROM temp_table
 
 Per il blocco 12396854, di 222 transazioni totali, 204 sono state verificate correttamente:
 
-![successful_txn](./successful_txn.png)
+![](./successful_txn.png)
 
 Le richieste di transazioni si verificano dozzine di volte al secondo, ma i blocchi sono impegnati approssimativamente ogni 15 secondi ([sorgente](/developers/docs/blocks/)).
 
-Per vedere che un blocco è prodotto approssimativamente ogni 15 secondi, potremmo prendere il numero di secondi in un giorno (86400) diviso per 15 per ottenere una _stima_ del numero medio di blocchi al giorno (~ 5760).
+Per vedere che un blocco è prodotto approssimativamente ogni 15 secondi, potremmo prendere il numero di secondi in una giornata (86400) diviso per 15 per ottenere un numero medio stimato di blocchi al giorno (circa 5760).
 
 Il grafico per i blocchi di Ethereum prodotti al giorno (2016 - presente) è:
 
-![daily_blocks](./daily_blocks.png)
+![](./daily_blocks.png)
 
 Il numero medio di blocchi prodotti giornalmente in questo periodo di tempo è di ~5.874:
 
-![avg_daily_blocks](./avg_daily_blocks.png)
+![](./avg_daily_blocks.png)
 
 Le interrogazioni sono:
 
@@ -217,13 +215,13 @@ FROM temp_table
 
 Il numero medio di blocchi prodotto ogni giorno dal 2016 è lievemente superiore a quel numero, a 5.874. In alternativa, dividendo 86400 secondi per i 5874 blocchi medi, si ottiene 14,7 secondi, pari a circa un blocco ogni 15 secondi.
 
-### Carburante {#gas}
+### Gas {#gas}
 
-I blocchi hanno dimensioni limitate. Ogni blocco ha un limite di carburante che è collettivamente impostato dai miner e dalla rete per prevenire una dimensione del blocco arbitrariamente grande, così da ridurre il peso sul nodo completo in termini di requisiti di spazio su disco e velocità ([sorgente](/developers/docs/blocks/)).
+I blocchi hanno dimensioni limitate. La dimensione massima del blocco è dinamica e varia a seconda della domanda di rete, tra le 12.500.000 e le 25.000.000 unità. I limiti sono necessari per evitare che le dimensioni arbitrariamente grandi dei blocchi mettano a dura prova i nodi completi, in termini di requisiti di spazio su disco e velocità ([fonte](/developers/docs/blocks/)).
 
-Un modo per concettualizzare il limite di carburante del blocco è pensare a esso come la **fornitura** di spazio per i blocchi disponibile in cui raggruppare le transazioni. Il limite di carburante del blocco è interrogabile e visualizzabile dal 2016 a oggi:
+Un modo per concettualizzare il limite di gas del blocco è immaginarlo come l'**offerta** di spazio del blocco disponibile, in cui raggruppare le transazioni. Il limite di gas del blocco è interrogabile e visualizzabile dal 2016 a oggi:
 
-![avg_gas_limit](./avg_gas_limit.png)
+![](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -234,9 +232,9 @@ GROUP BY dt
 OFFSET 1
 ```
 
-Poi c'è il carburante reale usato giornalmente per pagare per i calcoli effettuati sulla catena di Ethereum (es., inviare una transazione, chiamare uno smart contract, coniare un NFT). Questa è la **domanda** di spazio per i blocchi disponibile di Ethereum:
+Poi, c'è il gas effettivo, usato quotidianamente per pagare i calcoli effettuati sulla catena di Ethereum (cioè, l'invio della transazione, la chiamata di un contratto intelligente, il conio di un NFT). Questa è la **domanda** di spazio per i blocchi disponibile di Ethereum:
 
-![daily_gas_used](./daily_gas_used.png)
+![](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -251,13 +249,13 @@ Possiamo anche giustapporre questi due grafici insieme per vedere come si alline
 
 ![gas_demand_supply](./gas_demand_supply.png)
 
-Possiamo quindi vedere i prezzi del carburante come una funzione della domanda di spazio per i blocchi di Ethereum, alla luce dell'offerta disponibile.
+Dunque, possiamo comprendere i prezzi del gas come una funzione di domanda per lo spazio del blocco di Ethereum, data l'offerta disponibile.
 
-Infine, potremmo voler interrogare i prezzi giornalieri medi del carburante per la catena di Ethereum, per farlo occorrerà però un tempo di interrogazione particolarmente lungo, quindi filtreremo la nostra interrogazione alla quantità di carburante media pagata per transazione dalla Ethereum Foundation.
+Infine, potremmo voler interrogare i prezzi del gas quotidiani medi per la catena di Ethereum, tuttavia, farlo risulterà in un tempo di richiesta particolarmente lungo, quindi filtreremo la nostra richiesta all'importo medio di gas pagato per transazione dall'Ethereum Foundation.
 
-![ef_daily_gas](./ef_daily_gas.png)
+![](./ef_daily_gas.png)
 
-Possiamo vedere i prezzi del carburante pagati negli anni nelle transazioni all'indirizzo dell'Ethereum Foundation. Ecco l'interrogazione:
+Possiamo vedere i prezzi del gas pagati per tutte le transazioni effettuate all'indirizzo dell'Ethereum Foundation negli anni. Ecco l'interrogazione:
 
 ```sql
 SELECT
