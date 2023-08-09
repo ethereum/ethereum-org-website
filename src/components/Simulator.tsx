@@ -1,8 +1,7 @@
 import { Flex, type FlexProps, Grid, Text } from "@chakra-ui/react"
 import React from "react"
-import { PathButton, SimulatorModal } from "../components/Simulator/"
+import { PathButton } from "./Simulator/index"
 import type { PathOption } from "../interfaces"
-import { useDisclosure } from "@chakra-ui/react"
 
 const InnerContainer: React.FC<Pick<FlexProps, "children">> = ({
   children,
@@ -21,28 +20,22 @@ const InnerContainer: React.FC<Pick<FlexProps, "children">> = ({
   </Flex>
 )
 
-interface StartingPointProps {
-  onOpen: () => void
-}
-const StartingPoint: React.FC<StartingPointProps> = ({ onOpen }) => {
+const StartingPoint: React.FC = () => {
   const pathOptions: Array<PathOption> = [
     {
       primaryText: "Create account",
       secondaryText: "How to?",
       iconName: "EthWalletIcon",
-      onClick: onOpen,
     },
     {
       primaryText: "Send/receive",
       secondaryText: "How to?",
       iconName: "WalletAppIcon",
-      onClick: onOpen,
     },
     {
       primaryText: "Connect to Web3",
       secondaryText: "How to?",
       iconName: "ConnectWeb3Icon",
-      onClick: onOpen,
     },
   ]
 
@@ -82,22 +75,10 @@ const StartingPoint: React.FC<StartingPointProps> = ({ onOpen }) => {
   )
 }
 
-export const Simulator: React.FC = () => {
-  const { isOpen, onClose, onOpen } = useDisclosure()
-  const setIsOpen = () => {
-    isOpen ? onClose() : onOpen()
-  }
-  return (
-    <Grid
-      bg="cardGradient"
-      placeItems="center"
-      p={{ base: 4, md: 16 }}
-      w="full"
-    >
-      <InnerContainer>
-        <StartingPoint onOpen={onOpen} />
-        {isOpen && <SimulatorModal isOpen={isOpen} setIsOpen={setIsOpen} />}
-      </InnerContainer>
-    </Grid>
-  )
-}
+export const Simulator: React.FC = () => (
+  <Grid bg="cardGradient" placeItems="center" p={{ base: 4, md: 16 }} w="full">
+    <InnerContainer>
+      <StartingPoint />
+    </InnerContainer>
+  </Grid>
+)
