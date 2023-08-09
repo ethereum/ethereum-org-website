@@ -57,7 +57,7 @@ _Note: any individual can be part of multiple of these groups (e.g. a protocol d
 
 ## What is an EIP? {#what-is-an-eip}
 
-One important process used in Ethereum governance is the proposal of **Ethereum Improvement Proposals (EIPs)**. EIPs are standards specifying potential new features or processes for Ethereum. Anyone within the Ethereum community can create an EIP. For example, none of the authors of EIP-721, the EIP that standardized NFTs, have worked directly on Ethereum's protocol development.
+One important process used in Ethereum governance is the proposal of **Ethereum Improvement Proposals (EIPs)**. EIPs are standards specifying potential new features or processes for Ethereum. Anyone within the Ethereum community can create an EIP. If you're interested in writing an EIP or participating in peer-review and/or governance, see:
 
 <ButtonLink to="/eips/">
   More on EIPs

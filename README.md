@@ -1622,6 +1622,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://surajanand88.github.io/portfolio/"><img src="https://avatars.githubusercontent.com/u/120190623?v=4?s=100" width="100px;" alt="Suraj Anand"/><br /><sub><b>Suraj Anand</b></sub></a><br /><a href="#content-SurajAnand88" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MwitahJob"><img src="https://avatars.githubusercontent.com/u/136892656?v=4?s=100" width="100px;" alt="Mwitah "/><br /><sub><b>Mwitah </b></sub></a><br /><a href="#content-MwitahJob" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/TucksonDev"><img src="https://avatars.githubusercontent.com/u/105675159?v=4?s=100" width="100px;" alt="Tuckson"/><br /><sub><b>Tuckson</b></sub></a><br /><a href="#content-TucksonDev" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/_Akamig"><img src="https://avatars.githubusercontent.com/u/6278999?v=4?s=100" width="100px;" alt="Akamig"/><br /><sub><b>Akamig</b></sub></a><br /><a href="#content-Akamig" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
