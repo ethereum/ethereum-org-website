@@ -9,13 +9,17 @@ const getIconFromName = (
   return Icon
 }
 
-interface IProps extends FlexProps {
+interface IProps {
   pathOption: PathOption
 }
 export const PathButton: React.FC<IProps> = ({
-  pathOption: { primaryText, secondaryText, iconName, onClick },
+  pathOption: { primaryText, secondaryText, iconName },
 }) => {
   const Icon = getIconFromName(iconName)
+  const handleClick = () => {
+    // TODO: Open appropriate modal
+    console.log("Clicked:", primaryText)
+  }
   return (
     <Button
       variant="outline"
@@ -25,7 +29,7 @@ export const PathButton: React.FC<IProps> = ({
       textAlign="start"
       w="full"
       py={6}
-      onClick={onClick}
+      onClick={handleClick}
     >
       <Flex direction="column">
         <Text fontWeight="bold" m={0} lineHeight={6} letterSpacing="-1.1%">

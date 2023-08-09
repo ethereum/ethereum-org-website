@@ -7,5 +7,4 @@ export interface PathOption {
   primaryText: string
   secondaryText?: string
   iconName: string
-  onClick: () => void
 }
