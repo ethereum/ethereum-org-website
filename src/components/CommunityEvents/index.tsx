@@ -130,7 +130,7 @@ const CommunityEvents = () => {
           ) : (
             <Flex direction="column" h="full" gap={16}>
               {hasError ? (
-                <Text color="error">
+                <Text color="error.base">
                   <Translation id="loading-error-try-again-later" />
                 </Text>
               ) : upcomingEventData.length ? (
@@ -187,7 +187,7 @@ const CommunityEvents = () => {
               <Translation id="loading" />
             </Text>
           ) : hasError ? (
-            <Text color="error">
+            <Text color="error.base">
               <Translation id="loading-error-try-again-later" />
             </Text>
           ) : upcomingEventData.slice(1).length ? (
@@ -208,7 +208,7 @@ const CommunityEvents = () => {
               <Translation id="loading" />
             </Text>
           ) : hasError ? (
-            <Text color="error">
+            <Text color="error.base">
               <Translation id="loading-error-try-again-later" />
             </Text>
           ) : pastEventData.length ? (
