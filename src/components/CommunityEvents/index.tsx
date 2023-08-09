@@ -129,7 +129,7 @@ const CommunityEvents = () => {
               <Translation id="loading" />
             </Text>
           ) : (
-            <Flex direction="column" h="full" gap={{ base: 8, lg: 16 }}>
+            <Flex direction="column" h="full" gap={8}>
               {hasError ? (
                 <Text color="error.base">
                   <Translation id="loading-error-try-again-later" />
