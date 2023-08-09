@@ -11,9 +11,13 @@ import { MDXRemote } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 
+import DocLink from "../components/DocLink"
+import Emoji from "../components/Emoji"
+import ExpandableCard from "../components/ExpandableCard"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
+import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 
@@ -168,9 +172,13 @@ const components = {
   li: ListItem,
   hr: HR,
   table: MarkdownTable,
-  Link,
   Divider,
+  DocLink,
+  Emoji,
+  ExpandableCard,
   InfoBanner,
+  Link,
+  NetworkUpgradeSummary,
 }
 
 const ContentPage: NextPage<Props> = ({ content }) => {
