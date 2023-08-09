@@ -1,0 +1,17 @@
+{
+  "page-upgrades-beacon-date": "Versendet!",
+  "page-upgrades-merge-date": "September 2022",
+  "page-upgrades-shards-date": "etwa 2023",
+  "page-upgrades-upgrades-guide": "Anleitung zu den Ethereum-Upgrades",
+  "page-upgrades-upgrades-docking": "Die Zusammenführung",
+  "page-upgrades-shard-title": "Shard Chains",
+  "page-upgrades-upgrades-beacon-chain": "Die Beacon Chain",
+  "consensus-beaconcha-in-desc": "Open-Source Beacon Chain Explorer",
+  "consensus-beaconscan-desc": "Beacon Chain Explorer – Etherscan für die Konsensebene",
+  "consensus-become-staker": "Werden Sie ein Staker",
+  "consensus-become-staker-desc": "Staking ist hier! Wenn Sie Ihre ETH staken möchten, um das Netzwerk zu sichern, sollten Sie sich der Risiken bewusst sein.",
+  "consensus-explore": "Erkunden Sie die Daten",
+  "consensus-run-beacon-chain": "Einen Konsensus-Client ausführen",
+  "consensus-run-beacon-chain-desc": "Ethereum braucht so viele Clients wie möglich. Helfen Sie mit diesem öffentlichen Gut!",
+  "read-more": "Weiterlesen"
+}
