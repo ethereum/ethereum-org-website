@@ -33,7 +33,7 @@ The translations and review process will take place in the [ethereum.org project
 
 All of the Translatathon participants will be required to join the project in Crowdin and translate directly on the platform, where you can translate as individuals or collaborate as part of a team.
 
-Office hours, workshops, team formation and FAQ sessions will be hosted on the [ethereum.org Discord](https://www.ethereum.org/discord), where you’ll also be able to find all the relevant information on the Translathon, follow along with announcements and updates, and reach out to other participants and the ethereum.org team.
+Office hours, workshops, team formation and FAQ sessions will be hosted on the [ethereum.org Discord](https://www.ethereum.org/discord), where you’ll also be able to find all the relevant information on the Translatathon, follow along with announcements and updates, and reach out to other participants and the ethereum.org team.
 
 ### How {#how}
 
@@ -81,7 +81,7 @@ Individuals will participate in the Translatathon as normal, competing only agai
 
 ### Requirements and scoring {#requirements-scoring}
 
-With the translation process taking place in Crowdin, the deliverable for Translathon participants is simply the content you have translated in the [ethereum.org project](https://crowdin.com/project/ethereum-org). No need to manually submit anything.
+With the translation process taking place in Crowdin, the deliverable for Translatathon participants is simply the content you have translated in the [ethereum.org project](https://crowdin.com/project/ethereum-org). No need to manually submit anything.
 
 In order for your submissions to be counted, make sure that you are only translating untranslated and unapproved strings.
 
