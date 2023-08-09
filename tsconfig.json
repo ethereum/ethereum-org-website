@@ -41,6 +41,7 @@
     "./src/components/BannerNotification/index.tsx",
     "./src/components/Banners/DismissableBanner.tsx",
     "./src/components/Banners/PostMergeBanner.tsx",
+    "./src/components/Banners/TranslatathonBanner.tsx",
     "./src/components/BaseStories/Checkbox.stories.tsx",
     "./src/components/BaseStories/Radio.stories.tsx",
     "./src/components/BaseStories/Switch.stories.tsx",
