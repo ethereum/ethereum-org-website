@@ -67,7 +67,7 @@ const Event = ({ event, language, type }: EventProps) => {
   }
 
   return (
-    <Grid gap={6} templateColumns="auto 1fr" mb={4} _last={{ mb: 0 }}>
+    <Grid gap={6} templateColumns="auto 1fr" mb={4}>
       <GridItem>
         <Text color="body.medium" m={0}>
           {renderEventDateTime(date, language, params)}
@@ -114,6 +114,7 @@ const CommunityEvents = () => {
       <Flex
         w={{ base: "100%", lg: "60%" }}
         flexDirection={{ base: "column", lg: "row" }}
+        gap={{ base: 0, lg: 8 }}
       >
         <Flex
           w={{ base: "100%", lg: "50%" }}
@@ -128,7 +129,7 @@ const CommunityEvents = () => {
               <Translation id="loading" />
             </Text>
           ) : (
-            <Flex direction="column" h="full" gap={16}>
+            <Flex direction="column" h="full" gap={{ base: 8, lg: 16 }}>
               {hasError ? (
                 <Text color="error.base">
                   <Translation id="loading-error-try-again-later" />
@@ -175,7 +176,8 @@ const CommunityEvents = () => {
         <Flex
           w={{ base: "100%", lg: "50%" }}
           bg="backgroundHighlight"
-          p={8}
+          px={{ base: 8, lg: 0 }}
+          py={8}
           flexDir="column"
         >
           <Text fontSize="lg" fontWeight="bold" mb={2}>
