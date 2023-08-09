@@ -38,9 +38,9 @@ Despite its development over recent decades, the VCM continues to suffer from a 
 2. Opaque transaction mechanisms
 3. High fees
 4. Very slow trading speed
-5. Lack of scalability to meet the necessary 10–20x growth to mitigate the climate crisis
+5. Lack of scalability
 
-Transitioning the VCM to the new blockchain-based **digital carbon market (DCM)** might be an opportunity to upgrade the existing technology for validating, transacting and consuming carbon credits. Blockchains allow for publicly verifiable data, access for a broad range of users and more liquidity.
+Transitioning the VCM to the new blockchain-based **digital carbon market (DCM)** might be an opportunity to upgrade the existing technology for validating, transacting and consuming carbon credits. Blockchains allow for publicly verifiable data, access for a broad range of users, and more liquidity.
 
 ReFi projects employ blockchain technology to alleviate many of the problems of the traditional market:
 
@@ -59,7 +59,7 @@ Four major components make up the current landscape of the DCM:
 There is a new wave of innovative projects being built on blockchains that are attempting to disrupt incumbents in this sector.
 
 2. Carbon bridges, a.k.a. tokenizers, provide technology to represent or transfer carbon credits from traditional registries into the DCM. Notable examples include [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/), and [Moss.Earth](https://moss.earth/).
-3. Integrated services offer carbon avoidance and/or removal credits to end-users so they can claim the environmental benefit of a credit and share their support of climate action with the world. 
+3. Integrated services offer carbon avoidance and/or removal credits to end-users so they can claim the environmental benefit of a credit and share their support of climate action with the world.
 
 Some such as [Klima Infinity](https://www.klimadao.finance/infinity) and [Senken](https://senken.io/) offer a wide variety of projects developed by third parties and issued under established standards like Verra; others like [Nori](https://nori.com/) only offer specific projects developed under their own carbon credit standard, which they issue and for which they have their own dedicated marketplace.
 
