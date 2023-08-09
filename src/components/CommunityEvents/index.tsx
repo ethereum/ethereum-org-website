@@ -1,5 +1,5 @@
 //Libraries
-import React, { ComponentProps } from "react"
+import React from "react"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
@@ -52,10 +52,6 @@ const renderEventDateTime = (
   return DateTime.fromISO(date).setLocale(language).toLocaleString(params)
 }
 
-const EventLink = (props: ComponentProps<typeof Link>) => (
-  <Link fontWeight="700" {...props} />
-)
-
 interface EventProps {
   event: EventType
   language: string
@@ -71,14 +67,16 @@ const Event = ({ event, language, type }: EventProps) => {
   }
 
   return (
-    <Grid gap={6} templateColumns="auto 1fr">
+    <Grid gap={6} templateColumns="auto 1fr" mb={4} _last={{ mb: 0 }}>
       <GridItem>
-        <Text>{renderEventDateTime(date, language, params)}</Text>
+        <Text color="body.medium" m={0}>
+          {renderEventDateTime(date, language, params)}
+        </Text>
       </GridItem>
       <GridItem>
-        <EventLink to={calendarLink} onClick={() => matomoEvent(type)}>
+        <Link to={calendarLink} onClick={() => matomoEvent(type)}>
           {title}
-        </EventLink>
+        </Link>
       </GridItem>
     </Grid>
   )
@@ -120,35 +118,33 @@ const CommunityEvents = () => {
         <Flex
           w={{ base: "100%", lg: "50%" }}
           bg="layer2Gradient"
-          p={8}
+          px={8}
+          py={16}
           textAlign="center"
           flexDir="column"
         >
-          <Text fontSize="md" fontWeight="bold">
-            <Translation id="community-events-next-event" />
-          </Text>
           {loading ? (
             <Text>
               <Translation id="loading" />
             </Text>
           ) : (
-            <Box>
+            <Flex direction="column" h="full" gap={16}>
               {hasError ? (
                 <Text color="error">
                   <Translation id="loading-error-try-again-later" />
                 </Text>
               ) : upcomingEventData.length ? (
-                <>
+                <Box flex={1}>
+                  <Text fontSize="3xl" fontWeight="bold" lineHeight={1.2}>
+                    {upcomingEventData[0].title}
+                  </Text>
                   <Text m={0} fontSize="xl">
                     {renderEventDateTime(upcomingEventData[0].date, language)}
                   </Text>
-                  <Text color={"bodyLight"} fontSize="md">
+                  <Text color="body.medium" fontSize="md">
                     ({Intl.DateTimeFormat().resolvedOptions().timeZone})
                   </Text>
-                  <Text fontSize="3xl" fontWeight="bold" mb={10}>
-                    {upcomingEventData[0].title}
-                  </Text>
-                </>
+                </Box>
               ) : (
                 <Text fontSize="3xl" fontWeight="bold" mb={8}>
                   <Translation id="community-events-no-events-planned" />
@@ -164,15 +160,16 @@ const CommunityEvents = () => {
                   Join Discord
                 </ButtonLink>
                 {upcomingEventData[0] && (
-                  <EventLink
+                  <Link
                     to={upcomingEventData[0].calendarLink}
                     onClick={() => matomoEvent("Add to calendar")}
+                    fontWeight={700}
                   >
                     {t("community-events-add-to-calendar")}
-                  </EventLink>
+                  </Link>
                 )}
               </Flex>
-            </Box>
+            </Flex>
           )}
         </Flex>
         <Flex
