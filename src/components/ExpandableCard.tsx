@@ -2,10 +2,12 @@
 import React, { ComponentType, ReactNode, SVGProps, useState } from "react"
 
 // Components
-import Translation from "./Translation"
+// TODO: add Translation
+// import Translation from "./Translation"
 
 // Utils
-import { trackCustomEvent } from "../utils/matomo"
+// TODO: add trackCustomEvent
+// import { trackCustomEvent } from "../utils/matomo"
 import {
   Accordion,
   AccordionButton,
@@ -50,7 +52,8 @@ const ExpandableCard: React.FC<IProps> = ({
         "ExternalLink"
       )
     ) {
-      !isVisible && trackCustomEvent(matomo)
+      // TODO: add trackCustomEvent
+      // !isVisible && trackCustomEvent(matomo)
       setIsVisible(!isVisible)
     }
   }
@@ -121,7 +124,8 @@ const ExpandableCard: React.FC<IProps> = ({
                 mt="auto"
                 mb="auto"
               >
-                <Translation id={isVisible ? "less" : "more"} />
+                {/* TODO */}
+                {/* <Translation id={isVisible ? "less" : "more"} /> */}
               </Text>
             </Box>
           </AccordionButton>
