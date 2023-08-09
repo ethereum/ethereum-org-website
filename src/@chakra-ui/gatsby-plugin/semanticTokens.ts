@@ -73,14 +73,14 @@ const semanticTokens = {
     // ? Keep "error" or rename to "fail" ?
     error: {
       base: "red.500",
-      light: "red.100",
+      light: { _light: "red.100", _dark: "red.900" },
       outline: { _light: "error.base", _dark: "error.light" },
       // ! Deprecating error.neutral
       neutral: { _light: "red.100", _dark: "red.900" },
     },
     success: {
       base: "green.500",
-      light: "green.100",
+      light: { _light: "green.100", _dark: "green.900" },
       outline: { _light: "success.base", _dark: "success.light" },
       // ! Deprecating success.neutral
       neutral: { _light: "green.100", _dark: "green.900" },
