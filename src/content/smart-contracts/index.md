@@ -7,7 +7,7 @@ sidebar: true
 
 Smart contracts turn the terms of an agreement into computer code that executes when the contract terms are met.
 
-A smart contract is a computer program following "if X then Y" logic, which means they behave exactly as programmed and are resistant to participants' reneging on the terms of the contract. They are the fundamental building blocks of Ethereum's application layer.
+A smart contract is a computer program that often follows an "if this then that" logic, which means they behave exactly as programmed and are resistant to participants' reneging on the terms of the contract. They are the fundamental building blocks of Ethereum's application layer.
 
 Nick Szabo coined the term "smart contract". In 1994, he wrote [an introduction to the concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), and in 1996 he wrote [an exploration of what smart contracts could do](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
@@ -37,7 +37,7 @@ The vending machine will only dispense your desired product after all requiremen
 
 ### Automatic execution {#automation}
 
-The main benefit of a smart contract is that it deterministically executes unambiguous code when certain conditions are met. There is no need to wait for a humans to interpret or negotiate the result. This removes the need for trusted intermediaries.
+The main benefit of a smart contract is that it deterministically executes unambiguous code when certain conditions are met. There is no need to wait for a human to interpret or negotiate the result. This removes the need for trusted intermediaries.
 
 For example, you could write a smart contract that holds funds in escrow for a child, allowing them to withdraw funds after a specific date. If they try to withdraw before that date, the smart contract won't execute. Or you could write a contract that automatically gives you a digital version of a car's title when you pay the dealer.
 
