@@ -71,7 +71,7 @@ export const useNav = ({ path }: { path: string }) => {
           to: "/desci/",
         },
         {
-          text: "regenerative-finance",
+          text: t("regenerative-finance"),
           to: "/refi/",
         },
       ],
