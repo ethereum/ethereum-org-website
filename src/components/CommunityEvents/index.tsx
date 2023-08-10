@@ -114,7 +114,6 @@ const CommunityEvents = () => {
       <Flex
         w={{ base: "100%", lg: "60%" }}
         flexDirection={{ base: "column", lg: "row" }}
-        gap={{ base: 0, lg: 8 }}
       >
         <Flex
           w={{ base: "100%", lg: "50%" }}
@@ -136,7 +135,7 @@ const CommunityEvents = () => {
                 </Text>
               ) : upcomingEventData.length ? (
                 <Box flex={1}>
-                  <Text fontSize="3xl" fontWeight="bold" lineHeight={1.2}>
+                  <Text fontSize="3xl" fontWeight="bold" lineHeight={1.4}>
                     {upcomingEventData[0].title}
                   </Text>
                   <Text m={0} fontSize="xl">
@@ -151,7 +150,7 @@ const CommunityEvents = () => {
                   <Translation id="community-events-no-events-planned" />
                 </Text>
               )}
-              <Flex flexDirection="column" gap={6}>
+              <Flex flexDirection="column" gap={2}>
                 <ButtonLink
                   to="/discord/"
                   gap={2}
@@ -175,9 +174,8 @@ const CommunityEvents = () => {
         </Flex>
         <Flex
           w={{ base: "100%", lg: "50%" }}
-          bg="backgroundHighlight"
-          px={{ base: 8, lg: 0 }}
-          py={8}
+          bg="background.highlight"
+          p={8}
           flexDir="column"
         >
           <Text fontSize="lg" fontWeight="bold" mb={2}>
@@ -201,7 +199,7 @@ const CommunityEvents = () => {
               <Translation id="community-events-no-upcoming-calls" />
             </Text>
           )}
-          <Text fontSize="lg" fontWeight="bold" mb={2}>
+          <Text fontSize="lg" fontWeight="bold" mb={2} mt={4}>
             <Translation id="community-events-previous-calls" />
           </Text>
           <Divider mb={4} />
