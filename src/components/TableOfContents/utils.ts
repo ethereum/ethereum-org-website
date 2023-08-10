@@ -53,8 +53,6 @@ export const outerListProps: ListProps = {
       borderTopColor: "primary300",
       ps: 0,
       pt: 4,
-      mt: 2,
-      mb: 2,
     },
   },
 }
