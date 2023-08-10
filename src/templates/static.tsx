@@ -96,6 +96,7 @@ const Header1 = (props: ChildOnlyProp) => (
       a: {
         display: "none",
       },
+      position: "inherit !important",
     }}
     {...props}
   />
