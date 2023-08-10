@@ -22,7 +22,7 @@ import Contributors from "../components/Contributors"
 import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -177,7 +177,7 @@ const components = {
   li: ListItem,
   pre: Pre,
   hr: HR,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   MeetupList,
   RandomAppList,
   Link,

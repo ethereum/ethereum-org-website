@@ -27,7 +27,7 @@ import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -123,7 +123,7 @@ const components = {
   h3: H3,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   li: ListItem,
   ul: UnorderedList,
   MeetupList,
@@ -225,7 +225,9 @@ const RoadmapPage = ({
             <Title>{mdx.frontmatter.title}</Title>
             <Text>{mdx.frontmatter.description}</Text>
             {mdx?.frontmatter?.buttons && (
-              <Wrap spacing={2} marginBottom={4}>
+              // FIXME: remove the `ul` override once removed the corresponding
+              // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
+              <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
                 {mdx.frontmatter.buttons.map((button, idx) => {
                   if (button?.to) {
                     return (
