@@ -128,6 +128,7 @@ const Nav: FC<IProps> = ({ path }) => {
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
               color="text"
+              fontWeight="normal"
               textDecor="none"
               mr={8}
               _hover={{
@@ -136,6 +137,7 @@ const Nav: FC<IProps> = ({ path }) => {
                   fill: "currentColor",
                 },
               }}
+              _visited={{}}
               sx={{
                 svg: {
                   fill: "currentColor",

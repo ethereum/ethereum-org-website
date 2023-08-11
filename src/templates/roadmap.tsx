@@ -27,7 +27,7 @@ import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -44,7 +44,6 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
-import QuizWidget from "../components/Quiz/QuizWidget"
 import {
   Page,
   InfoColumn,
@@ -124,7 +123,7 @@ const components = {
   h3: H3,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   li: ListItem,
   ul: UnorderedList,
   MeetupList,
@@ -146,7 +145,6 @@ const components = {
   YouTube,
   RoadmapActionCard,
   RoadmapImageContent,
-  QuizWidget,
 }
 
 const RoadmapPage = ({
@@ -309,10 +307,7 @@ const RoadmapPage = ({
 export const roadmapPageQuery = graphql`
   query RoadmapPage($languagesToFetch: [String!]!, $relativePath: String) {
     locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["common", "learn-quizzes"] }
-      }
+      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
     ) {
       edges {
         node {

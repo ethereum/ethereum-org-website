@@ -58,6 +58,8 @@ const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
       // `li :last-child` global selector wants to override this without `!important`
       mb="0.5rem !important"
       color="text300"
+      fontWeight="normal"
+      _visited={{}}
     >
       {trimmedTitle(item.title)}
     </Link>
@@ -113,7 +115,6 @@ function UpgradeTableOfContents(props: {
         ps={4}
         pe={1}
         fontSize="xl"
-        fontWeight="normal"
         lineHeight="1.6"
         styleType="none"
       >

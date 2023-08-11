@@ -397,6 +397,7 @@ const TutorialsPage = ({
               textDecoration="none"
               flexDirection="column"
               justifyContent="space-between"
+              fontWeight="normal"
               color="text"
               boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
               mb="px"

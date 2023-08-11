@@ -326,6 +326,7 @@ const Footer: React.FC<IProps> = () => {
                 hideArrow
                 color="secondary"
                 aria-label={link.ariaLabel}
+                _visited={{}}
               >
                 <Icon
                   as={link.icon}
@@ -372,6 +373,7 @@ const Footer: React.FC<IProps> = () => {
                     dir={isPageRightToLeft ? "auto" : "ltr"}
                     textDecor="none"
                     color="text200"
+                    fontWeight="normal"
                     _hover={{
                       textDecor: "none",
                       color: "primary.base",
@@ -382,6 +384,7 @@ const Footer: React.FC<IProps> = () => {
                         fill: "primary.base",
                       },
                     }}
+                    _visited={{}}
                     sx={{
                       "& svg": {
                         fill: "text200",

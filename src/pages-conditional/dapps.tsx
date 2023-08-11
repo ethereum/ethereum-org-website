@@ -291,6 +291,8 @@ const StepBox = (props: ComponentPropsWithRef<typeof Link>) => (
       bg: "ednBackground",
       transform: "scale(1.05)",
     }}
+    fontWeight="normal"
+    _visited={{}}
     {...props}
   />
 )

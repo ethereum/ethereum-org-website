@@ -121,7 +121,7 @@ const ColorH3 = (props: { color: string; id: TranslationKey }) => (
 
 const StyledButtonLink = (props: { to: string; id: TranslationKey }) => {
   return (
-    <ButtonLink to={props.to} sx={{ width: { base: "100%", sm: "initial" } }}>
+    <ButtonLink to={props.to}>
       <Translation id={props.id} />
     </ButtonLink>
   )

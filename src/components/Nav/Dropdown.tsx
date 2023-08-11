@@ -26,11 +26,13 @@ const NavLink = (props: LinkProps) => (
     textDecor="none"
     py={2}
     px={4}
+    fontWeight="normal"
     _hover={{
       textDecor: "none",
       color: "primary.base",
       svg: { fill: "currentColor" },
     }}
+    _visited={{}}
     sx={{ svg: { fill: "currentColor" } }}
     {...props}
   />
