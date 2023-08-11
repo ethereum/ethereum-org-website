@@ -18,6 +18,7 @@ import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
 import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
+import YouTube from "../components/YouTube"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 
@@ -67,6 +68,21 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     },
   }
 }
+
+const Pre = (props: ChildOnlyProp) => (
+  <Text
+    as="pre"
+    maxW="full"
+    overflowX="scroll"
+    bgColor="preBackground"
+    borderRadius="base"
+    p={4}
+    border="1px solid"
+    borderColor="preBorder"
+    whiteSpace="pre-wrap"
+    {...props}
+  />
+)
 
 const HR = () => (
   <ChakraDivider
@@ -170,6 +186,7 @@ const components = {
   h4: Header4,
   p: Paragraph,
   li: ListItem,
+  pre: Pre,
   hr: HR,
   table: MarkdownTable,
   Divider,
@@ -179,6 +196,7 @@ const components = {
   InfoBanner,
   Link,
   NetworkUpgradeSummary,
+  YouTube,
 }
 
 const ContentPage: NextPage<Props> = ({ content }) => {
@@ -187,10 +205,12 @@ const ContentPage: NextPage<Props> = ({ content }) => {
       <Flex
         justifyContent="space-between"
         w="full"
-        mx="auto"
+        // mx="auto"
+        ml={24}
         mb={16}
         p={8}
         pt={{ base: 8, lg: 16 }}
+        // TODO: set isRightToLeft
         // dir={isRightToLeft ? "rtl" : "ltr"}
       >
         <Box
