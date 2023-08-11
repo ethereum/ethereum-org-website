@@ -15,10 +15,12 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/community/code-of-conduct",
     "/community/support",
     "/history/",
+    "/smart-contracts",
   ]
 
   // Skip /translations dir for now until we set up i18n
-  if (dir.includes("/translations")) return []
+  // Skip /developers dir for now until we set up required layout
+  if (dir.includes("/translations") || dir.includes("/developers")) return []
 
   // Get an array of all files and directories in the passed directory using fs.readdirSync
   const fileList = fs.readdirSync(dir)
