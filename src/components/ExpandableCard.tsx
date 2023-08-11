@@ -1,12 +1,12 @@
 // Libraries
-import React, { ComponentType, ReactNode, SVGProps, useState } from "react"
+import { ComponentType, ReactNode, SVGProps, useState } from "react"
 
 // Components
-// TODO: add Translation
+// TODO: add Translation when i18n is set up
 // import Translation from "./Translation"
 
 // Utils
-// TODO: add trackCustomEvent
+// TODO: add trackCustomEvent when util is migrated
 // import { trackCustomEvent } from "../utils/matomo"
 import {
   Accordion,
@@ -124,8 +124,9 @@ const ExpandableCard: React.FC<IProps> = ({
                 mt="auto"
                 mb="auto"
               >
-                {/* TODO */}
+                {/* TODO: add Translation component when i18n is set up */}
                 {/* <Translation id={isVisible ? "less" : "more"} /> */}
+                More
               </Text>
             </Box>
           </AccordionButton>

@@ -1,7 +1,6 @@
 // Libraries
-import React from "react"
 import { Flex, Stack, Text } from "@chakra-ui/react"
-// TODO
+// TODO: look for replacement lib when i18n is set up
 // import { useI18next } from "gatsby-plugin-react-i18next"
 
 // Components
@@ -24,9 +23,12 @@ interface IProps {
 }
 
 const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
-  // TODO
+  // TODO: remove hardcoded locale "en" values when i18n is set up
+  // const { language } = useI18next()
   const language = "en"
   // const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+  const localeForStatsBoxNumbers = "en"
+
   const {
     dateTimeAsString,
     ethPriceInUSD,
@@ -49,14 +51,20 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   const formattedUTC = `${formattedDate} +UTC`
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
+    // TODO: remove temporalGetValue after i18n is set up
+    const temporalGetValue = {
+      "page-history-block-number": "Block number",
+      "page-history-epoch-number": "Epoch number",
+      "page-history-slot-number": "Slot number",
+    }
+
     return (
       <Flex>
         <Emoji fontSize="sm" mr={2} text=":bricks:" />
         {/* <Translation id={translationKey} /> */}
-        :&nbsp;
+        {temporalGetValue[translationKey]}:&nbsp;
         <Link to={`${explorerUrl}${number}`}>
-          {/* // TODO */}
-          {/* {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)} */}
+          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </Link>
       </Flex>
     )
@@ -93,22 +101,22 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       {ethPriceInUSD && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":money_bag:" />
-          {/* TODO */}
+          {/* TODO: remove hardcoded text when Translation & i18n are set up */}
           {/* <Translation id="page-history-eth-price" /> */}
-          :&nbsp;
-          {/* TODO */}
-          {/* {new Intl.NumberFormat(localeForStatsBoxNumbers, {
+          ETH price: &nbsp;
+          {new Intl.NumberFormat(localeForStatsBoxNumbers, {
             style: "currency",
             currency: "USD",
-          }).format(ethPriceInUSD)} */}
+          }).format(ethPriceInUSD)}
         </Flex>
       )}
       {waybackLink && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
           <Link to={waybackLink}>
-            {/* TODO */}
+            {/* TODO: remove hardcoded text when Translation & i18n are set up */}
             {/* <Translation id="page-history-ethereum-org-wayback" /> */}
+            ethereum.org on waybackmachine
           </Link>
         </Flex>
       )}
