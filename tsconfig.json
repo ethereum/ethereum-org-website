@@ -200,7 +200,6 @@
     "./src/components/UpgradeBannerNotification.tsx",
     "./src/components/UpgradeStatus.tsx",
     "./src/components/UpgradeTableOfContents.tsx",
-    "./src/components/YouTube.tsx",
     "./src/components/icons/EthHomeIcon.tsx",
     "./src/components/icons/FeedbackGlyphIcon.tsx",
     "./src/components/icons/FeedbackThumbsUpIcon.tsx",
