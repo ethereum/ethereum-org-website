@@ -1,7 +1,6 @@
 import React, { FC, useRef } from "react"
 import { Icon, IconButton, Flex, Text, Box } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
-import { motion } from "framer-motion"
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
@@ -101,12 +100,18 @@ const Nav: FC<IProps> = ({ path }) => {
                 <Icon
                   _hover={{
                     color: "primary.base",
-                    transform: "scale(1.1)",
-                  }}
+                    transform: "scale(1.1) rotate(20deg)",
+                  }} // Scale and rotate the icon on hover
                   transition="transform 0.2s ease-in-out, color 0.2s ease-in-out"
                   as={MdLanguage}
                   fontSize="2xl"
                 />
+                <Text as="span" pl={2}>
+                  <Box as="span" hideBelow="lg">
+                    {t("languages")}
+                  </Box>{" "}
+                  {i18n.language.toUpperCase()}
+                </Text>
               </ButtonLink>
             </Flex>
           </Flex>
