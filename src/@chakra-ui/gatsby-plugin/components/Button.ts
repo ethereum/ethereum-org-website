@@ -34,6 +34,12 @@ const baseStyle = defineStyle({
   "&[data-secondary='true']": {
     color: "body.base",
   },
+  "&.chakra-link": {
+    textDecoration: "none",
+    _hover: {
+      textDecoration: "none",
+    },
+  },
 })
 
 const variantSolid = defineStyle({
