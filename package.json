@@ -16,7 +16,7 @@
     "framer-motion": "^10.13.0",
     "gray-matter": "^4.0.3",
     "lodash.merge": "^4.6.2",
-    "next": "13.4.10",
+    "next": "13.4.13",
     "next-mdx-remote": "^4.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
