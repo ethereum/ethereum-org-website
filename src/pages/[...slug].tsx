@@ -3,6 +3,8 @@ import {
   Divider as ChakraDivider,
   Flex,
   Heading,
+  Image,
+  Link as ChakraLink,
   Text,
   chakra,
 } from "@chakra-ui/react"
@@ -24,6 +26,7 @@ import { getContent, getContentBySlug } from "@/lib/utils/md"
 
 import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
 import { ChildOnlyProp } from "@/lib/types"
+import { getFilePath } from "@/lib/utils/getFilePath"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -178,16 +181,19 @@ const ListItem = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
 )
 
+// public/_static/whitepaper/ethereum-blocks.png
+
 const components = {
   a: Link,
   h1: Header1,
   h2: Header2,
   h3: Header3,
   h4: Header4,
-  p: Paragraph,
-  li: ListItem,
-  pre: Pre,
   hr: HR,
+  // img: Img,
+  li: ListItem,
+  p: Paragraph,
+  pre: Pre,
   table: MarkdownTable,
   Divider,
   DocLink,
@@ -200,6 +206,15 @@ const components = {
 }
 
 const ContentPage: NextPage<Props> = ({ content }) => {
+  // Img component defined inside as it needs access to `staticPath` value to get image relativ path inside /public/_static
+  const Img = (img: any) => {
+    return (
+      <ChakraLink href={`/_static/${"staticPath"}/${img.src}`} isExternal>
+        <Image src={`/_static/${"staticPath"}/${img.src}`} alt={img.alt} />
+      </ChakraLink>
+    )
+  }
+
   return (
     <Box w="full">
       <Flex
@@ -233,7 +248,10 @@ const ContentPage: NextPage<Props> = ({ content }) => {
           }}
         >
           {/* TODO: check if content type can be fixed */}
-          <MDXRemote {...(content as any)} components={components} />
+          <MDXRemote
+            {...(content as any)}
+            components={{ ...components, img: Img }}
+          />
         </Box>
       </Flex>
     </Box>

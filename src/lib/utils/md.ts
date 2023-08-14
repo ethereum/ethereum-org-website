@@ -1,6 +1,9 @@
 import fs from "fs"
+import { extname } from "path"
 import { join } from "path"
 import matter from "gray-matter"
+
+import { copyLinkedFiles } from "@/lib/utils/copyLinkedFiles"
 
 import { CONTENT_DIR } from "../constants"
 
@@ -16,6 +19,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/community/support",
     "/history/",
     "/smart-contracts",
+    "/whitepaper",
   ]
 
   // Skip /translations dir for now until we set up i18n
@@ -26,6 +30,8 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
   const fileList = fs.readdirSync(dir)
 
   // Create the full path of the file/directory by concatenating the passed directory and file/directory name
+  let staticFilesDir = ""
+
   for (const file of fileList) {
     const name = `${dir}/${file}`
 
@@ -34,10 +40,19 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
       // If it is a directory, recursively call the getFiles function with the directory path and the files array
       getPostSlugs(name, files)
     } else {
-      // If it is a file (allowed content page), push the path to the files array
-      for (const page of temporalAllowedPages) {
-        if (name.includes(page)) {
-          files.push(name.replace("src/content", "").replace("/index.md", ""))
+      const fileExtension = extname(name)
+
+      if (fileExtension !== ".md") {
+        // Copy non-markdown files (images, pdf, etc) to /public dir
+        // Util that replaces "gatsby-remark-copy-linked-files" logic
+        staticFilesDir = copyLinkedFiles(name)
+        console.log({ staticFilesDir })
+      } else {
+        // If it is a .md file (allowed content page), push the path to the files array
+        for (const page of temporalAllowedPages) {
+          if (name.includes(page)) {
+            files.push(name.replace("src/content", "").replace("/index.md", ""))
+          }
         }
       }
     }
@@ -77,11 +92,13 @@ export const getContentBySlug = (slug: string, fields: string[] = []) => {
     }
   })
 
+  // return { items, staticPath }
   return items
 }
 
 export const getContent = (fields: string[] = []) => {
   const slugs = getPostSlugs(CONTENT_DIR)
+  // const staticPath = getPostSlugs(CONTENT_DIR)[1] as string
   const content = slugs.map((slug) => getContentBySlug(slug as string, fields))
 
   return content
