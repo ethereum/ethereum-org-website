@@ -14,6 +14,7 @@ export interface Controller {
   regressStepper: () => void
   resetStepper: () => void
   step: number
+  totalSteps: number
 }
 
 export interface ControllerProps {

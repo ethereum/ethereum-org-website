@@ -57,14 +57,43 @@ const Explanation: React.FC<ControllerProps> = ({ controller }) => {
       </Text>
       <Description display={{ base: "none", md: "block" }} />
       <Flex display={{ md: "none" }} alignItems="center">
-        <Text as="span">More info</Text>
         <Tooltip content={<Description />}>
-          <Icon as={MdInfoOutline} />
+          <Text as="span">More info</Text>
+          <Icon as={MdInfoOutline} size={24} />
         </Tooltip>
       </Flex>
     </Flex>
   )
 }
+
+const TestPathway = [
+  {
+    header: "Hello header world long header one",
+    description: (
+      <>
+        <Text>Description part 1</Text>
+        <Text>
+          Description part 2, Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Nemo labore quos quaerat officia ipsa voluptatum,
+          consequuntur, amet molestiae eligendi, molestias ut!
+        </Text>
+      </>
+    ),
+  },
+  {
+    header: "Two hello header world long header text",
+    description: (
+      <>
+        <Text>Description part 2.1</Text>
+        <Text>
+          Description part 2.2, Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Nemo labore quos quaerat officia ipsa voluptatum,
+          consequuntur, amet molestiae eligendi, molestias ut!
+        </Text>
+      </>
+    ),
+  },
+]
 
 export const Template: React.FC = () => {
   const [step, setStep] = useState<number>(0)
@@ -82,6 +111,7 @@ export const Template: React.FC = () => {
     regressStepper,
     resetStepper,
     step,
+    totalSteps: TestPathway.length,
   }
 
   return (
