@@ -6,7 +6,7 @@ lang: de
 
 # So verwenden Sie eine Wallet
 
-Lernen Sie die grundlegenden Funktionen einer Krypto-Wallet kennen. Falls Sie noch keine besitzen, schauen Sie sich mal die Seite [Wie erstelle ich einen Ethereum "Account"](/guides/how-to-register-an-ethereum-account/) an.
+Lernen Sie die grundlegenden Funktionen einer Krypto-Wallet kennen. Falls Sie noch keine besitzen, schauen Sie sich mal die Seite [Wie erstelle ich einen Ethereum "Account"](/guides/how-to-create-an-ethereum-account/) an.
 
 ## Öffnen Sie Ihre Wallet
 
