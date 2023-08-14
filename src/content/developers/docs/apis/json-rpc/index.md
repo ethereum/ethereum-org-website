@@ -431,7 +431,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 
 ### eth_mining {#eth_mining}
 
-Returns `true` if client is actively mining new blocks. This can only return `true` for proof-of-work networks and may not be available in some clients since The Merge to proof of stake..
+Returns `true` if client is actively mining new blocks. This can only return `true` for proof-of-work networks and may not be available in some clients since [The Merge](/roadmap/merge/).
 
 **Parameters**
 
