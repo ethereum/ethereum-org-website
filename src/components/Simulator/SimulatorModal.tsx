@@ -41,8 +41,15 @@ export const SimulatorModal: React.FC<IProps> = ({
         border="1px"
         borderColor="border"
         borderRadius="md"
-        maxW={{ base: "100%", md: "1000px" }}
-        mx={{ base: 4, md: "auto" }}
+        minH="unset"
+        maxH={{
+          base: "calc(100vh - 1rem)",
+          md: "min(calc(100vh - 2rem), 792px)",
+        }}
+        maxW={{
+          base: "calc(100vw - 1rem)",
+          md: "min(calc(100vw - 2rem), 1000px)",
+        }}
         {...restProps}
       >
         <ModalCloseButton />
