@@ -12,6 +12,7 @@ import {
 import { MdArrowDownward } from "react-icons/md"
 import Button from "../Button"
 import { motion } from "framer-motion"
+import type { ControllerProps } from "../../interfaces"
 
 const MotionFlex = motion(Flex)
 const DownArrowLong = createIcon({
@@ -98,7 +99,8 @@ export const ProgressCta: React.FC = () => {
   )
 }
 
-export const Phone: React.FC<Pick<BoxProps, "children">> = ({ children }) => (
+interface PhoneProps extends Pick<BoxProps, "children">, ControllerProps {}
+export const Phone: React.FC<PhoneProps> = ({ children, controller }) => (
   <Box w={{ base: "min(100%, 300px)", md: 286 }} isolation="isolate">
     <Box
       h={600}

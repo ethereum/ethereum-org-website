@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { Box, Flex, Text } from "@chakra-ui/react"
 import { Phone } from "./"
 import Button from "../Button"
 import { MdChevronLeft } from "react-icons/md"
+import type { Controller, ControllerProps } from "../../interfaces"
 
-const Explanation: React.FC = () => (
+const Explanation: React.FC<ControllerProps> = ({ controller }) => (
   <Flex direction="column" flex={1} alignItems="start">
     <Button
       variant="ghost"
@@ -48,17 +49,35 @@ const Explanation: React.FC = () => (
   </Flex>
 )
 
-export const Template: React.FC = () => (
-  <Flex
-    px={16}
-    w="full"
-    justify="center"
-    outline="1px solid red"
-    direction={{ base: "column", md: "row" }}
-    pt={8}
-    gap={8}
-  >
-    <Explanation />
-    <Phone>Hello inside phone world</Phone>
-  </Flex>
-)
+export const Template: React.FC = () => {
+  const [step, setStep] = useState<number>(0)
+  const progressStepper = () => {
+    setStep((step) => step + 1)
+  }
+  const regressStepper = () => {
+    setStep((step) => Math.max(step - 1, 0))
+  }
+  const resetStepper = () => {
+    setStep(0)
+  }
+  const controller: Controller = {
+    progressStepper,
+    regressStepper,
+    resetStepper,
+    step,
+  }
+
+  return (
+    <Flex
+      px={16}
+      w="full"
+      justify="center"
+      direction={{ base: "column", md: "row" }}
+      pt={8}
+      gap={8}
+    >
+      <Explanation controller={controller} />
+      <Phone controller={controller}>Hello inside phone world</Phone>
+    </Flex>
+  )
+}

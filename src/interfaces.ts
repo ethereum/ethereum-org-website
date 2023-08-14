@@ -8,3 +8,14 @@ export interface PathOption {
   secondaryText?: string
   iconName: string
 }
+
+export interface Controller {
+  progressStepper: () => void
+  regressStepper: () => void
+  resetStepper: () => void
+  step: number
+}
+
+export interface ControllerProps {
+  controller: Controller
+}
