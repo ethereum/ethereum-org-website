@@ -70,6 +70,10 @@ export const useNav = ({ path }: { path: string }) => {
           text: t("decentralized-science"),
           to: "/desci/",
         },
+        {
+          text: t("regenerative-finance"),
+          to: "/refi/",
+        },
       ],
     },
     learn: {

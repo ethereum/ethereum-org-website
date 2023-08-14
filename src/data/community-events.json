@@ -277,5 +277,14 @@
     "description": "Join us at Germany's leading student-run conference in order to explore the frontiers of blockchain technology during the Octoberfest!",
     "startDate": "2023-9-22",
     "endDate": "2023-9-23"
+  },
+  {
+    "title": "ETHChicago 2023",
+    "to": "https://ethchicago.xyz",
+    "sponsor": null,
+    "location": "Chicago, Illinois, USA",
+    "description": "Three days of building bridges between web3 builders, creators, traditional businesses, financial experts, and policymakers.",
+    "startDate": "2023-9-15",
+    "endDate": "2023-9-17"
   }
 ]

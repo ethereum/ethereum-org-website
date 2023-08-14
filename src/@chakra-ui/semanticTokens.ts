@@ -57,7 +57,7 @@ const semanticTokens: any = {
       base: { _light: "white", _dark: "gray.700" },
       highlight: { _light: "gray.100", _dark: "gray.900" },
     },
-    disabled: { _light: "gray.300", _dark: "gray.500" },
+    disabled: { _light: "gray.400", _dark: "gray.500" },
     // ! Deprecating neutral
     neutral: { _light: "white", _dark: "gray.900" },
 
