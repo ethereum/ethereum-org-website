@@ -67,3 +67,12 @@ export const LinkList: Story = {
     </Box>
   ),
 }
+
+export const GlossaryTooltipLink: Story = {
+  render: () => (
+    <Text>
+      This is an example of a glossary tooltip for{" "}
+      <Link to="/glossary/#big-endian">big-endian</Link>.
+    </Text>
+  ),
+}

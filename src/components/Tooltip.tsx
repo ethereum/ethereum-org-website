@@ -41,16 +41,14 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
         {children}
         {isVisible && (
           <Box
-            textAlign="center"
             whiteSpace="normal"
-            w={{ base: "140px", md: "200px" }}
+            w={{ base: "140px", md: "300px" }}
             color="text"
-            bg="background.base"
+            bg="background.highlight"
             boxShadow={shadow}
             position="absolute"
             zIndex="docked"
-            py={4}
-            px={2}
+            p={4}
             textTransform="none"
             fontSize="sm"
             fontWeight="medium"
