@@ -23,7 +23,7 @@ We invite you to join us in breaking down language barriers and making ethereum.
 ### When {#when}
 
 - Application period: August 1st - August 15th
-- Translation period: August 16th - August 22nd
+- Translation period: August 16th - August 23rd
 - Evaluation & QA period: August 23rd - August 30th
 - Results announcement: August 31st
 
@@ -57,7 +57,7 @@ Team members can translate into different languages!
 
 Individuals will participate in the Translatathon as normal, competing only against other individuals, and the final scores will be calculated based on their number of translated words and the content buckets they translated.
 
-**Only translations, submitted during the Translation period - starting 15th of August at 4:00am UTC and ending 23rd of August at 4:00am UTC - will count towards the final score.**
+**Only translations, submitted during the Translation period - starting 16th of August at 5:00am UTC and ending 23rd of August at 5:00am UTC - will count towards the final score.**
 
 ## Step-by-step instructions {#instructions}
 
