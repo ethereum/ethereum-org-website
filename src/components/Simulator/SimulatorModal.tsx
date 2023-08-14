@@ -41,6 +41,7 @@ export const SimulatorModal: React.FC<IProps> = ({
         border="1px"
         borderColor="border"
         borderRadius="md"
+        overflow="auto"
         minH="unset"
         maxH={{
           base: "calc(100vh - 1rem)",

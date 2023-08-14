@@ -101,9 +101,9 @@ export const ProgressCta: React.FC = () => {
 
 interface PhoneProps extends Pick<BoxProps, "children">, ControllerProps {}
 export const Phone: React.FC<PhoneProps> = ({ children, controller }) => (
-  <Box w={{ base: "min(100%, 300px)", md: 286 }} isolation="isolate">
+  <Box w={{ base: "min(100%, 300px)", md: 286 }} mx="auto">
     <Box
-      h={600}
+      h={{ base: 420, md: 600 }}
       w="full"
       border="8px"
       borderColor="body.medium"
