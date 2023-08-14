@@ -13,7 +13,7 @@ sidebarDepth: 2
 
 ### 51% attack {#51-attack}
 
-A type of attack on a decentralized [network](#network) where a group gains control of the majority of [nodes](#node). This would allow them to defraud the blockchain by reversing [transactions](#transaction) and double spending [ether](#ether) and other tokens.
+A type of attack on a decentralized [network](#network) where a group gains control of the majority of the staked ether securing the network. With the majority stake, they can determine what gets added to the blockchain. However, they cannot change the chain history unless they have over 66% of the staked ether.
 
 ## A {#section-a}
 
@@ -27,12 +27,11 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 ### address {#address}
 
-Most generally, this represents an [EOA](#eoa) or [contract](#contract-account) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
+Most generally, this is 64 characters representing an [EOA](#eoa) or [contract](#contract-account) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
 ### application binary interface (ABI) {#abi}
 
-The standard way to interact with [contracts](#contract-account) in the Ethereum ecosystem,
-both from outside the blockchain and for contract-to-contract interactions.
+ABIs are JSON files that define the functions and variables included in a [contract](#contract-account).
 
 <DocLink to="/developers/docs/smart-contracts/compiling/#web-applications">
   ABI
@@ -129,11 +128,11 @@ The time interval between blocks being added to the blockchain.
 
 ### block validation {#block-validation}
 
-The process of checking that a new block contains valid transactions and signatures, builds on the heaviest historical chain, and follows all other consensus rules. Valid blocks are added to the end of the chain and propagated to others on the network. Invalid blocks are disregarded.
+The process of checking that a new block contains valid transactions and signatures, builds on the heaviest historical chain (meaning the on with the most accumulated attestations), and follows all other consensus rules. Valid blocks are added to the end of the chain and propagated to others on the network. Invalid blocks are disregarded.
 
 ### blockchain {#blockchain}
 
-A sequence of [blocks](#block), each linking to its predecessor all the way to the [genesis block](#genesis-block) by referencing the hash of the previous block. The integrity of the blockchain is crypto-economically secured using a proof-of-stake-based consensus mechanism.
+A sequence of [blocks](#block), each linking to its predecessor all the way to the [genesis block](#genesis-block) by referencing the hash of the previous block. The integrity of the Ethereum blockchain is crypto-economically secured using a proof-of-stake-based consensus mechanism.
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
   What is a blockchain?
@@ -141,11 +140,11 @@ A sequence of [blocks](#block), each linking to its predecessor all the way to t
 
 ### bootnode {#bootnode}
 
-The nodes which can be used to initiate the discovery process when running a node. The endpoints of these nodes are recorded in the Ethereum source code.
+The nodes which can be used to initiate the discovery process when running a node. The endpoints for a set of default bootnodes are generally included in Ethereum client source code, but users can also specify alternative bootnodes when they start their nodes.
 
 ### bytecode {#bytecode}
 
-An abstract instruction set designed for efficient execution by a software interpreter or a virtual machine. Unlike human-readable source code, bytecode is expressed in numeric format.
+Source code compiled into a compact, numeric form that can be efficiently executed by the EVM. Unlike human-readable source code which is expressed in some programming language, bytecode is expressed as a collection of bytes.
 
 ### Byzantium fork {#byzantium-fork}
 
