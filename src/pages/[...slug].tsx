@@ -184,6 +184,7 @@ const ListItem = (props: ChildOnlyProp) => (
 const Img = (img: any) => {
   // use router to get correct image relative path inside /public/content/ dynamically
   const router = useRouter()
+  // TODO: update how `imgRelativePath` is computed for translated assets inside /translations, will depend on value of locale after setting up i18n
   const imgRelativePath = `content${router.asPath}${img.src.slice(1)}`
 
   return (
@@ -192,7 +193,7 @@ const Img = (img: any) => {
     </ChakraLink>
   )
 }
-
+// code
 const components = {
   a: Link,
   h1: Header1,

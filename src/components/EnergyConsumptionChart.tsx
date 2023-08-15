@@ -1,4 +1,3 @@
-import React from "react"
 import { Box, Center, useBreakpointValue, useToken } from "@chakra-ui/react"
 import {
   BarChart,
@@ -10,7 +9,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+// import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Translation from "./Translation"
 
