@@ -7,7 +7,7 @@ import {
   BreadcrumbProps,
 } from "@chakra-ui/react"
 
-import Link from "./Link"
+import { BaseLink } from "./Link"
 
 export interface IProps extends BreadcrumbProps {
   slug: string
@@ -94,15 +94,12 @@ const Breadcrumbs: React.FC<IProps> = ({
             m={0}
           >
             <BreadcrumbLink
-              as={Link}
+              as={BaseLink}
               to={crumb.fullPath}
               isPartiallyActive={isCurrentPage}
               fontWeight="normal"
               _hover={{ color: "primary.base", textDecor: "none" }}
               _active={{ color: "primary.base" }}
-              _visited={{
-                color: "inherit",
-              }}
             >
               {crumb.text.toUpperCase()}
             </BreadcrumbLink>

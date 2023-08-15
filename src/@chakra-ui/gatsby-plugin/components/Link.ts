@@ -16,8 +16,10 @@ export const Link = defineStyleConfig({
     _hover: {
       color: "primary.hover",
     },
-    _visited: {
-      color: "primary.visited",
+    "&[data-inline-link]": {
+      _visited: {
+        color: "primary.visited",
+      },
     },
   }),
 })

@@ -5,7 +5,7 @@ import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
-import Link from "../Link"
+import Link, { BaseLink } from "../Link"
 import Search from "../Search"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
@@ -51,7 +51,7 @@ const Nav: FC<IProps> = ({ path }) => {
           width="full"
           maxW="container.2xl"
         >
-          <Link
+          <BaseLink
             to="/"
             aria-label={t("home")}
             display="inline-flex"
@@ -59,7 +59,7 @@ const Nav: FC<IProps> = ({ path }) => {
             textDecor="none"
           >
             <EthHomeIcon opacity={0.85} _hover={{ opacity: 1 }} />
-          </Link>
+          </BaseLink>
           {/* Desktop */}
           <Flex
             justifyContent="space-between"
@@ -123,7 +123,7 @@ const Nav: FC<IProps> = ({ path }) => {
           px={8}
         >
           {ednLinks.map((link, idx) => (
-            <Link
+            <BaseLink
               key={idx}
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
@@ -145,7 +145,7 @@ const Nav: FC<IProps> = ({ path }) => {
               }}
             >
               {link.text}
-            </Link>
+            </BaseLink>
           ))}
         </Flex>
       )}

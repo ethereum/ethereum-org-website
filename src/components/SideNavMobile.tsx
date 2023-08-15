@@ -4,7 +4,7 @@ import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
 
-import Link, { IProps as ILinkProps } from "./Link"
+import { BaseLink, IProps as ILinkProps } from "./Link"
 import Translation from "./Translation"
 import { isLang } from "../utils/languages"
 import {
@@ -65,7 +65,7 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
 
 const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
   return (
-    <Link
+    <BaseLink
       w="full"
       textDecoration="none"
       color="text"
@@ -79,7 +79,7 @@ const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
       {...props}
     >
       {children}
-    </Link>
+    </BaseLink>
   )
 }
 

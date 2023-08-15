@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 import { Box, List, ListItem } from "@chakra-ui/react"
-import Link from "./Link"
+import { BaseLink } from "./Link"
 import { Item as TableOfContentsItem } from "./TableOfContents"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
@@ -50,7 +50,7 @@ const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
   }
 
   return (
-    <Link
+    <BaseLink
       to={url}
       className={classes}
       position="relative"
@@ -62,7 +62,7 @@ const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
       _visited={{}}
     >
       {trimmedTitle(item.title)}
-    </Link>
+    </BaseLink>
   )
 }
 
