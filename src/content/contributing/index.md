@@ -19,6 +19,8 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Work we've identified that needs doing_
 - [Join the translation program](/contributing/translation-program/)
   _– Help us bring ethereum.org to new languages_
+- [Help design the website](/contributing/design/)
+  _– Designers of all levels can contribute to improve the website_
 - [Add community resources](/contributing/content-resources/)
   _– Add a helpful article or resource to a relevant page_
 - [Add a product](/contributing/adding-products/)
@@ -29,16 +31,22 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Add an exchange to our [exchange finder](/get-eth/#country-picker)_
 - [Improve our research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
   _– Let us know your feedback on our research or contribute your own_
-- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)
+- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)
   _– Let us know about any ideas you have for a new feature or design_
 - [Add a glossary term](/contributing/adding-glossary-terms)
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
 - [Create/edit content](/contributing/#how-to-update-content)
-  _– Suggest new pages or makes tweaks to what's here already_
+  _– Suggest new pages or make tweaks to what's here already_
 - [Add a layer 2](/contributing/adding-layer-2s/)
-  _- Add a layer 2 to a relevant page_
-- [Add a staking product or service](/contributing/adding-staking-products/) - _Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
-- [Add a wallet](/contributing/adding-wallets/) _- Add a wallet for the [find wallets page](/wallets/find-wallet/)._
+  _– Add a layer 2 to a relevant page_
+- [Add a staking product or service](/contributing/adding-staking-products/)
+  _– Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
+- [Add a wallet](/contributing/adding-wallets/)
+  _– Add a wallet for the [find wallets page](/wallets/find-wallet/)_
+- [Suggest a project for our DeSci page](/contributing/adding-desci-projects/)
+  _- Add a project built on Ethereum that contributes to decentralized science_
+- [Quizzes](/contributing/quizzes/) _- Add, update, and delete quiz question banks for a relevant page_
+- [Suggest a design resource](/contributing/design/adding-design-resources/) _- Add, update, and delete helpful design resources_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 
@@ -58,6 +66,7 @@ Before contributing, make sure you're familiar with:
 - the evolving [vision of ethereum.org](/about/)
 - our [design principles](/contributing/design-principles/)
 - our [style guide](/contributing/style-guide/)
+- our [code of conduct](/community/code-of-conduct)
 
 ## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 

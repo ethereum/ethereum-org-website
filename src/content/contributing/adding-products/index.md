@@ -1,31 +1,27 @@
 ---
 title: Adding Products
-description: The policy we use when adding wallets and dapps to ethereum.org
+description: The policy we use when adding dapps to ethereum.org
 lang: en
 ---
 
-_A note on adding wallets: as part of [our Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/5105), we are refining our wallets page. This will include refining the listing criteria for our wallets page. Until we have researched, established, and published refined listing criteria, we will not be actively adding new wallets to the website._
-
 # Adding Ethereum products {#adding-products}
 
-Anyone is free to suggest new wallets and dapps to the content on ethereum.org, where it's appropriate to do so. **No, we won't list your dapp on our homepage** 😜
+Anyone is free to suggest new dapps to the content on ethereum.org, where it's appropriate to do so. **No, we won't list your dapp on our homepage** 😜
 
-Wallets and dapps are currently listed on:
+Dapps are currently listed on:
 
-- ethereum.org/wallets
-- ethereum.org/wallets/find-wallet
 - ethereum.org/dapps
 - ethereum.org/get-eth
 
 **Please only suggest new additions on these pages.**
 
-Although we welcome new additions, we chose the current wallets and dapps based on an experience we're trying to create for our users. These are based on some of our design principles:
+Although we welcome new additions, we chose the current dapps based on an experience we're trying to create for our users. These are based on some of our design principles:
 
 - _Inspirational_: anything on ethereum.org should offer something new to users
 - _A good story_: what's listed should provide an "aha" moment
 - _Credible_: everything should be legitimate businesses/projects to minimize risk to users
 
-Overall **ethereum.org wants to provide a "seamless onboarding experience" for new users**. For that reason, we add wallets/dapps based on their:
+Overall **ethereum.org wants to provide a "seamless onboarding experience" for new users**. For that reason, we add dapps based on their:
 
 - ease of use
 - interoperability with other products
@@ -45,20 +41,12 @@ Here's our decision framework in more detail. Feel free to provide feedback or s
 
 ### Criteria for ranking: the nice-to-haves {#criteria-for-ranking-the-nice-to-haves}
 
-Your dapp or wallet may not be listed on ethereum.org as prominently as others because of the following criteria.
-
-**Wallets**
-
-- **Fiat on-ramps** – this prevents a lot of potential friction in a new user's experience with a wallet. If a user has to fund a wallet via an exchange, it can be days before they can try the wallet because of know-your-customer checks.
-- **Supported by majority of dapps** – ethereum.org content aims to get users up and running with a wallet and ETH before showing them dapps. If dapps don't support connecting with your wallet, it could ruin their experience.
+Your dapp may not be listed on ethereum.org as prominently as others because of the following criteria.
 
 **Dapps**
 
 - **You can access it via the majority of listed wallets** – dapps should work with the majority of wallets that are listed on ethereum.org.
 - **Users can try it out themselves –** an individual user should be able to use your dapp and achieve something tangible.
-
-**Both**
-
 - **Onboarding** – your product should have a well-designed onboarding experience to help and educate users. Or evidence of how-to content like articles or videos.
 - **Non-custodial** – users control their funds. If your product disappears, users can still access and move their funds.
 - **Globally accessible** – your product doesn't have geographic limitations or KYC requirements that exclude certain people from accessing your service.
@@ -80,7 +68,7 @@ Other things that will factor into this decision:
 
 This is a design decision that ethereum.org is responsible for.
 
-But rest assured, **there will be links to other websites that rank more dapps/wallets**
+But rest assured, **there will be links to other websites that rank more dapps**
 
 ### Product Ordering {#product-ordering}
 
@@ -94,10 +82,10 @@ Please also refer to our [terms of use](/terms-of-use/). Information on ethereum
 
 As is the fluid nature of Ethereum, teams and products come and go and innovation happens daily, so we'll undertake routine checks of our content to:
 
-- ensure that all wallets and dapps listed still fulfil our criteria
+- ensure that all dapps listed still fulfil our criteria
 - verify there aren't products that have been suggested that meet more of our criteria than the ones currently listed
 
-You can help with this by checking and letting us know. [Create an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) or send an email to [website@ethereum.org](mailto:website@ethereum.org)
+You can help with this by checking and letting us know. [Create an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) or send an email to [website@ethereum.org](mailto:website@ethereum.org)
 
 _We're also investigating options for voting so the community can indicate their preferences and highlight the best products out there for us to recommend._
 
@@ -105,8 +93,8 @@ _We're also investigating options for voting so the community can indicate their
 
 ## Add your product {#add-your-product}
 
-If you want to add a wallet or dapp to ethereum.org and it meets the criteria, create an issue on GitHub.
+If you want to add a dapp to ethereum.org and it meets the criteria, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Create an issue
 </ButtonLink>

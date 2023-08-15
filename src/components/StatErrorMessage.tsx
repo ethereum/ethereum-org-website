@@ -1,15 +1,14 @@
 import React from "react"
-import { TypographyProps } from "styled-system"
+import { Text, TextProps } from "@chakra-ui/react"
 
 import Translation from "./Translation"
-import { IndicatorSpan } from "./StatLoadingMessage"
 
-export interface IProps extends TypographyProps {}
+export interface IProps extends TextProps {}
 
 const StatErrorMessage: React.FC<IProps> = (props) => (
-  <IndicatorSpan fontSize="2rem" {...props}>
+  <Text as="span" fontSize="2rem" {...props}>
     <Translation id="loading-error-refresh" />
-  </IndicatorSpan>
+  </Text>
 )
 
 export default StatErrorMessage

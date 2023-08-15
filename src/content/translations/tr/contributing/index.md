@@ -21,7 +21,7 @@ Ethereum.org web sitesi, daha geniş anlamda Ethereum gibi açık kaynaklı bir 
 - [Geliştirici araçları ekleyin](/contributing/adding-developer-tools/) _– İlgili sayfaya bir geliştirici aracı ekleyin_
 - [Bir borsa ekleyin](/contributing/adding-exchanges/) _– [Borsa bulucumuza](/get-eth/#country-picker) bir borsa ekleyin_
 - [Araştırmamızı geliştirin](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) _– Araştırmamız hakkında geri bildiriminizi bize bildirin veya kendiniz katkıda bulunun_
-- [Bir özellik isteyin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) _– Yeni bir özellik veya tasarım hakkında herhangi bir fikrinizi bize bildirin_
+- [Bir özellik isteyin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) _– Yeni bir özellik veya tasarım hakkında herhangi bir fikrinizi bize bildirin_
 - [Bir sözlük terimi ekleyin](/contributing/adding-glossary-terms) _– Ethereum [sözlüğünü](/glossary/) genişletmeye devam etmemize yardımcı olun_
 - [İçerik oluşturun/düzenleyin](/contributing/#how-to-update-content) _– Yeni sayfalar önerin veya zaten burada olanlar üzerinde değişiklikler yapın_
 - [Bir katman 2 ekleyin](/contributing/adding-layer-2) _- İlgili bir sayfaya bir katman 2 ekleyin_

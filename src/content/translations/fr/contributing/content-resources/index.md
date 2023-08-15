@@ -27,6 +27,6 @@ Les ressources d'apprentissage seront évaluées selon les critères suivants :
 
 Si vous souhaitez ajouter une ressource de contenu à ethereum.org et qu'elle répond aux critères, créez un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request">
   Créez un ticket
 </ButtonLink>

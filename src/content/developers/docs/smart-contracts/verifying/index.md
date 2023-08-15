@@ -18,13 +18,13 @@ Smart contract verification enables investigating what a contract does through t
 
 ### What is full verification? {#full-verification}
 
-There are some parts of the source code that do not affect the compiled bytecode such as comments or variable names. That means two source codes with different variable names and different comments would both be able to verify the same contract. With that, a malicous actor can add deceiving comments or give misleading variable names inside the source code and get the contract verified with a source code different than the original source code.
+There are some parts of the source code that do not affect the compiled bytecode such as comments or variable names. That means two source codes with different variable names and different comments would both be able to verify the same contract. With that, a malicious actor can add deceiving comments or give misleading variable names inside the source code and get the contract verified with a source code different than the original source code.
 
 It is possible to avoid this by appending extra data to the bytecode to serve as a _cryptographical guarantee_ for the exactness of the source code, and as a _fingerprint_ of the compilation information. The necessary information is found in the [Solidity's contract metadata](https://docs.soliditylang.org/en/v0.8.15/metadata.html), and the hash of this file is appended to the bytecode of a contract. You can see it in action in the [metadata playground](https://playground.sourcify.dev)
 
 The metadata file contains information about the compilation of the contract including the source files and their hashes. Meaning, if any of the compilation settings or even a byte in one of the source files change, the metadata file changes. Consequently the hash of the metadata file, which is appended to the bytecode, also changes. That means if a contract's bytecode + the appended metadata hash match with the given source code and compilation settings, we can be sure this is exactly the same source code used in the original compilation, not even a single byte is different.
 
-This type of verification that leverages the metadata hash is referred to as **"[full verification](https://docs.sourcify.dev/docs/full-vs-partial-match/))"** (also "perfect verification"). If the metadata hashes do not match or are not considered in verification it would be a "partial match", which currently is the more common way to verify contracts. It is possible to [insert malicious code](https://samczsun.com/hiding-in-plain-sight/) that wouldn't be reflected in the verified source code without full verification. Most developers are not aware of the full verification and don't keep the metadata file of their compilation, hence partial verification has been the de facto method to verify contracts so far.
+This type of verification that leverages the metadata hash is referred to as **"[full verification](https://docs.sourcify.dev/docs/full-vs-partial-match/)"** (also "perfect verification"). If the metadata hashes do not match or are not considered in verification it would be a "partial match", which currently is the more common way to verify contracts. It is possible to [insert malicious code](https://samczsun.com/hiding-in-plain-sight/) that wouldn't be reflected in the verified source code without full verification. Most developers are not aware of the full verification and don't keep the metadata file of their compilation, hence partial verification has been the de facto method to verify contracts so far.
 
 ## Why is source code verification important? {#importance-of-source-code-verification}
 
@@ -40,7 +40,7 @@ Source code verification tools provide guarantees that a smart contract’s sour
 
 ### User Safety {#user-safety}
 
-With smart contracts, there’s usually a lot of money at stake. This calls for higher security guarantees and verification of a smart contract’s logic before using it. The problem is that unscruplous developers can deceive users by inserting malicious code in a smart contract. Without verification, malicious smart contracts can have [backdoors](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts), controversial access control mechanisms, exploitable vulnerabilities, and other things that jeopardize user safety that would go undetected.
+With smart contracts, there’s usually a lot of money at stake. This calls for higher security guarantees and verification of a smart contract’s logic before using it. The problem is that unscrupulous developers can deceive users by inserting malicious code in a smart contract. Without verification, malicious smart contracts can have [backdoors](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts), controversial access control mechanisms, exploitable vulnerabilities, and other things that jeopardize user safety that would go undetected.
 
 Publishing a smart contract's source code files makes it easier for those interested, such as auditors, to assess the contract for potential attack vectors. With multiple parties independently verifying a smart contract, users have stronger guarantees of its security.
 
@@ -92,15 +92,16 @@ Additionally, one can also retrieve the source code files over IPFS, as IPFS has
 
 ### Tenderly {#tenderly}
 
-[Tenderly](https://tenderly.co/) is a platform aimed at accelerating workflow for Ethereum smart contract developers. It also [offers source code verification as a service](https://docs.tenderly.co/monitoring/verifying-a-smart-contract) for developers.
+The [Tenderly platform](https://tenderly.co/) enables Web3 developers to build, test, monitor, and operate smart contracts. Combining debugging tools with observability and infrastructure building blocks, Tenderly helps developers accelerate smart contract development. To fully enable Tenderly features, developers need to [perform source code verification](https://docs.tenderly.co/monitoring/contract-verification) using several methods.
 
-You can choose to verify your contract with Tenderly by importing the source file or the metadata file generated by the Solidity compiler. Like other verification tools, Tenderly requires details like the contract address/network, compiler settings, and optimization features to verify any smart contract.
+It's possible to verify a contract privately or publicly. If verified privately, the smart contract is visible only to you (and other members in your project). Verifying a contract publicly makes it visible to everyone using the Tenderly platform.
 
-It is possible to verify a contract _privately_, making it visible only to you (and other members of your team). Verifying a contract publicly makes it visible to everyone using the Tenderly platform.
+You can verify your contracts using the [Dashboard](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-a-smart-contract), [Tenderly Hardhat plugin](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-the-tenderly-hardhat-plugin), or [CLI](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-cli).
 
-While useful for verifying contracts, Tenderly doesn't have useful features available with other tools on the list. For example, it doesn't allow end-users to check if a contract is verified (except the developers opt for public verification) and doesn't check for a match between metadata hashes.
+When verifying contracts through the Dashboard, you need to import the source file or the metadata file generated by the Solidity compiler, the address/network, and compiler settings.
+
+Using the Tenderly Hardhat plugin allows for more control over the verification process with less effort, enabling you to choose between automatic (no-code) and manual (code-based) verification.
 
 ## Further reading {#further-reading}
 
-- [How to verify the source code of Ethereum smart contract](https://developpaper.com/how-to-verify-the-source-code-of-ethereum-smart-contract/)
 - [Verifying contract source code](https://programtheblockchain.com/posts/2018/01/16/verifying-contract-source-code/)

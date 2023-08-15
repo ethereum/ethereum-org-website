@@ -84,22 +84,22 @@ En este tutorial, trabajaremos solo con el intérprete de Python. No crearemos n
 
 <div class="featured">Nota: en los ejemplos de abajo, los comandos que empiezan con `$` están destinados a ser ejecutados en la terminal. (No escriba el símbolo `$`, ya que sólo significa el inicio de la línea).</div>
 
-Primero, instale [IPython](https://ipython.org/) para tener un entorno fácil de usar para explorar. IPython ofrece el autocompletado de pestañas —entre otras características—, haciendo mucho más fácil ver qué es posible con Web3.py.
+Primero, instale [IPython](https://ipython.org/) para tener un entorno fácil de usar para explorar. IPython ofrece el autocompletado mediante la tecla de tabulación —entre otras características—, haciendo mucho más fácil ver qué es posible con Web3.py.
 
 ```bash
-$ pip install ipython
+pip install ipython
 ```
 
 Web3.py se publica bajo el nombre `web3`. Instálelo de la siguiente manera:
 
 ```bash
-$ pip install web3
+pip install web3
 ```
 
 Una cosa más: vamos a simular una cadena de bloques posteriormente, lo que requerirá un par de dependencias más. Puede instalarlos todos mediante:
 
 ```bash
-$ pip install 'web3[tester]'
+pip install 'web3[tester]'
 ```
 
 ¡Ya está listo para comenzar!
@@ -109,7 +109,7 @@ $ pip install 'web3[tester]'
 Abra un nuevo entorno de Python escribiendo `ipython` en su terminal. Esto es comparable a escribir `python`, pero tiene más funciones.
 
 ```bash
-$ ipython
+ipython
 ```
 
 Esto imprimirá información sobre las versiones de Python e IPython que están instaladas. Después, verá que la terminal está esperando que escriba algo:

@@ -1,72 +1,33 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
+import {
+  Box,
+  Flex,
+  Text,
+  Heading,
+  BoxProps,
+  LinkBox,
+  LinkOverlay,
+  Image,
+  useColorModeValue,
+  LinkBoxProps,
+} from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
-const Content = styled.div`
-  padding: 1.5rem;
-`
+const linkBoxFocusStyles: BoxProps = {
+  borderRadius: "base",
+  boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
+  bg: "tableBackgroundHover",
+  transition: "transform 0.1s",
+  transform: "scale(1.02)",
+}
 
-const Description = styled.p`
-  opacity: 0.8;
-  margin-bottom: 0rem;
-`
+const linkFocusStyles: BoxProps = {
+  textDecoration: "none",
+}
 
-const ChildrenContainer = styled.div`
-  margin-top: 2rem;
-`
-
-const ImageWrapper = styled.div<{
-  isRight: boolean | undefined
-  isBottom: boolean | undefined
-}>`
-  display: flex;
-  flex-direction: row;
-  justify-content: ${(props) => (props.isRight ? `flex-end` : `center`)};
-  align-items: ${(props) => (props.isBottom ? `flex-end` : `center`)};
-  background: ${(props) => props.theme.colors.cardGradient};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  min-height: 260px;
-`
-
-const Title = styled.h3`
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-`
-
-const Image = styled(GatsbyImage)`
-  width: 100%;
-  height: 100%;
-  min-width: 100px;
-  min-height: 100px;
-  max-width: 372px;
-  max-height: 257px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-width: 311px;
-  }
-`
-
-const Card = styled(Link)`
-  text-decoration: none;
-  flex: 1 1 372px;
-  color: ${(props) => props.theme.colors.text};
-  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
-    0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05);
-  margin: 1rem;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
-
-export interface IProps {
+export interface IProps extends Omit<LinkBoxProps, "title"> {
   children?: React.ReactNode
   to: string
   alt?: string
@@ -88,27 +49,85 @@ const ActionCard: React.FC<IProps> = ({
   className,
   isRight,
   isBottom = true,
+  ...rest
 }) => {
   const isImageURL = typeof image === "string"
+  const descriptionColor = useColorModeValue("blackAlpha.700", "whiteAlpha.800")
 
   return (
-    <Card to={to} className={className} hideArrow={true}>
-      <ImageWrapper
-        isRight={isRight}
-        isBottom={isBottom}
+    <LinkBox
+      boxShadow="
+	  0px 14px 66px rgba(0, 0, 0, 0.07),
+    0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)"
+      color="text"
+      flex="1 1 372px"
+      _hover={linkBoxFocusStyles}
+      _focus={linkBoxFocusStyles}
+      className={className}
+      m={4}
+      {...rest}
+    >
+      <Flex
+        minH="260px"
+        bg="cardGradient"
+        direction="row"
+        justify={isRight ? "flex-end" : "center"}
+        align={isBottom ? "flex-end" : "center"}
         className="action-card-image-wrapper"
+        boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
       >
-        {!isImageURL && <Image image={image} alt={alt || ""} />}
-        {isImageURL && (
-          <img src={image} alt={alt} className="action-card-image" />
+        {!isImageURL && (
+          <Image
+            alt={alt || ""}
+            as={GatsbyImage}
+            maxH="257px"
+            maxW={{ base: "311px", sm: "372px" }}
+            minW="100px"
+            minH="100px"
+            image={image}
+            sizes="full"
+          />
         )}
-      </ImageWrapper>
-      <Content className="action-card-content">
-        <Title>{title}</Title>
-        <Description>{description}</Description>
-        {children && <ChildrenContainer>{children}</ChildrenContainer>}
-      </Content>
-    </Card>
+        {isImageURL && (
+          <Image
+            alt={alt || ""}
+            maxH="257px"
+            maxW={{ base: "311px", sm: "372px" }}
+            minW="100px"
+            minH="100px"
+            src={image}
+            sizes="full"
+            className="action-card-image"
+          />
+        )}
+      </Flex>
+      <Box p={6} className="action-card-content">
+        <Heading
+          as="h3"
+          fontSize="2xl"
+          mt={2}
+          mb={4}
+          fontWeight={600}
+          lineHeight={1.4}
+        >
+          <LinkOverlay
+            as={Link}
+            color="text"
+            hideArrow
+            textDecoration="none"
+            to={to}
+            _hover={linkFocusStyles}
+            _focus={linkFocusStyles}
+          >
+            {title}
+          </LinkOverlay>
+        </Heading>
+        <Text mb={0} color={descriptionColor}>
+          {description}
+        </Text>
+        {children && <Box mt={8}>{children}</Box>}
+      </Box>
+    </LinkBox>
   )
 }
 

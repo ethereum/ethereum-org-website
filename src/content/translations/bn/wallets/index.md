@@ -26,13 +26,12 @@ lang: bn
 
 ইথেরিয়াম ওয়ালেট সম্বন্ধে আরও জানতে চান?
 
-- [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _প্রায়শই আপডেট করা হয় - EthHub_
 - [Absolute Beginner Introduction to Ethereum: The Full Download](https://www.mewtopia.com/absolute-beginners-guide/) _23 জুলাই, 2019 - MyEtherWallet_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _ডিসেম্বর 15, 2018 - Blockonomi_
 
 নিরাপদে তহবিল সংরক্ষণ এবং ব্যক্তিগত কী (private key) পরিচালনা সম্পর্কে আরও জানতে চান?
 
 - [Protecting Yourself and Your Funds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) _প্রায়শই আপডেট করা হয় - MyCrypto_
-- [The keys to keeping your crypto safe](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) _জানুয়ারী 16, 2019 - কয়েনবেস ব্লগ_
+- [The keys to keeping your crypto safe](https://web.archive.org/web/20190716160333/https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf?gi=548619266f28) _জানুয়ারী 16, 2019 - কয়েনবেস ব্লগ_
 - [How to Store Digital Assets on Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) _ 30 মে, 2018 - কনসেনসিস_
 - [Do you really need a hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) _সেপ্টেম্বর 24, 2018 - লেজার_

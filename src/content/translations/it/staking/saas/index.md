@@ -22,23 +22,16 @@ Lo staking come un servizio ("SaaS") rappresenta una categoria di servizi di sta
 Il protocollo di Ethereum non supporta nativamente la delegazione dello staking, quindi questi servizi sono stati creati per soddisfare questa domanda. Se hai 32 ETH da mettere in staking, ma non hai dimestichezza con l'hardware, i servizi di SaaS ti consentono di delegare la parte hardware e ottenere le ricompense del blocco nativo.
 
 <CardGrid>
-  <Card title="Il tuo validatore" emoji=":desktop_computer:">
-    Deposita i tuoi 32 ETH per attivare la tua serie di chiavi di firma che parteciperanno al consenso di Ethereum. Monitora i tuoi progressi con i dashboard per veder accumulare queste ricompense di ETH.
-  </Card>
-  <Card title="Facile iniziare" emoji="🏁">
-    Dimentica le specifiche hardware, la configurazione, la manutenzione del nodo e gli aggiornamenti.
-    I fornitori di SaaS ti consentono di esternalizzare la parte hardware caricando le tue credenziali di firma, consentendo loro di eseguire un validatore per conto tuo, per un piccolo costo.
-  </Card>
-  <Card title="Limita i tuoi rischi" emoji=":shield:">
-    In molti casi, gli utenti non rinunciano all'accesso alle chiavi che consentono il prelievo o il trasferimento dei fondi in staking. Queste sono differenti dalle chiavi di firma e sono memorizzabili separatamente per limitare (ma non eliminare) il tuo rischio, in qualità di staker.
-  </Card>
+  <Card title="Il tuo validatore" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Facile iniziare" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you to outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
+  <Card title="Limita i tuoi rischi" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
 
 ## Cosa considerare {#what-to-consider}
 
-Esiste un numero crescente di fornitori di staking come servizio per aiutarti a mettere in staking i tuoi ETH, ma ognuno presenta diversi rischi e benefici.
+Esiste un numero crescente di fornitori di SaaS, per aiutarti a mettere i tuoi ETH in staking, ma ognuno presenta diversi benefici e rischi. Dovresti considerare che tutte le opzioni di SaaS richiedono ipotesi di fiducia aggiuntive, rispetto allo staking domestico. Le opzioni di SaaS potrebbero contenere del codice aggiuntivo, avvolto dai client di Ethereum, che non è aperto o verificabile. I SaaS hanno inoltre un effetto negativo sulla decentralizzazione della rete. A seconda della configurazione, potresti non controllare il tuo validatore; l'operatore potrebbe agire in modo disonesto, utilizzando i tuoi ETH.
 
 Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di forza o debolezze che un fornitore di SaaS elencato potrebbe avere. Usa questa sezione come un riferimento per come definiamo questi attributi mentre stai scegliendo un servizio per aiutarti con il tuo percorso di staking.
 
@@ -65,37 +58,35 @@ Hai un suggerimento per un fornitore di staking come servizio che abbiamo diment
 ## Domande frequenti {#faq}
 
 <ExpandableCard title="Chi detiene le mie chiavi?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-  Le disposizioni differiranno da fornitore a fornitore, ma in genere, sarai guidato alla configurazione di qualsiasi chiave di firma necessaria (una per 32 ETH) e al loro caricamento al tuo fornitore per consentirgli di validare per conto tuo. Le sole chiavi di firma non danno alcuna possibilità di prelevare, trasferire o spendere i tuoi fondi. Tuttavia, forniscono la possibilità di trasmettere voti a favore di un consenso, il che, se non fatto propriamente, può risultare in sanzioni offline o tagli.
+Le disposizioni differiranno da fornitore a fornitore, ma in genere, sarai guidato alla configurazione di qualsiasi chiave di firma necessaria (una per 32 ETH) e al loro caricamento al tuo fornitore per consentirgli di validare per conto tuo. Le sole chiavi di firma non danno alcuna possibilità di prelevare, trasferire o spendere i tuoi fondi. Tuttavia, forniscono la possibilità di trasmettere voti a favore di un consenso, il che, se non fatto propriamente, può risultare in sanzioni offline o tagli.
 </ExpandableCard>
 
 <ExpandableCard title="Quindi esistono due serie di chiavi?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Sì. Ogni profilo è composto sia da chiavi di <em>firma</em> che da chiavi di <em>prelievo</em>. Perché un validatore possa attestare lo stato della catena, partecipare a comitati di sincronizzazione e proporre blocchi, le chiavi di firma devono essere prontamente accessibili presso un client del validatore. Queste devono esser connesse a Internet in qualche modo e sono dunque intrinsecamente considerate chiavi "calde". Questo è un requisito affinché il tuo validatore possa attestare e, dunque, le chiavi usate per trasferire o prelevare i fondi sono separate per motivi di sicurezza.
+Sì. Ogni conto si compone sia di chiavi di <em>firma</em> che di chiavi di <em>prelievo</em> BLS. Affinché un validatore possa attestare allo stato della catena, partecipare ai comitati di sincronizzazione e proporre blocchi, le chiavi di firma devono essere prontamente accessibili dal client di un validatore. Queste devono esser connesse a Internet in qualche modo e sono dunque intrinsecamente considerate chiavi "calde". Questo è un requisito affinché il tuo validatore possa attestare e, dunque, le chiavi usate per trasferire o prelevare i fondi sono separate per motivi di sicurezza.
 
-Tutte queste chiavi possono sempre essere rigenerate in un modo riproducibile, usando la tua frase di seed mnemonica di 24 parole. <em>Assicurati di mettere questo seed al sicuro o non potrai generare le tue chiavi di prelievo quando arriverà il momento</em>.
+Le chiavi di prelievo BLS sono utilizzate per firmare un messaggio una tantum che dichiara a chi dovrebbero andare le ricompense di staking del conto del livello d'esecuzione e i fondi prelevati. Una volta trasmesso questo messaggio, le chiavi di <em>prelievo BLS</em> non saranno più necessarie. Invece, il controllo dei fondi prelevati è permanentemente delegato all'indirizzo fornito. Ciò consente di impostare un indirizzo di prelievo protetto tramite l'archiviazione a freddo, minimizzando il rischio per i tuoi fondi del validatore, anche se qualcun altro controlla le chiavi di firma del tuo validatore.
+
+Aggiornare le credenziali di prelievo è un passaggio necessario per consentire i prelievi\*. Questo processo comporta la generazione delle chiavi di prelievo, utilizzando la tua frase di seed mnemonica.
+
+<strong>Accertati di eseguire in sicurezza il backup di questa frase di seed, o non potrai generare le tue chiavi di prelievo quando arriverà il momento.</strong>
+
+\*Gli staker che hanno fornito un indirizzo di prelievo con il deposito iniziale non hanno necessità di impostarle. Confrontati con il tuo fornitore SaaS per ricevere assistenza con la preparazione del validatore.
 </ExpandableCard>
 
 <ExpandableCard title="Quando posso prelevare?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  Quando metti 32 ETH in stake con un fornitore di SaaS, quegli ETH sono ancora depositati al contratto di deposito di staking ufficiale. Come tali, gli staker SaaS sono attualmente limitati alle stesse restrizioni di prelievo degli staker in solo. Questo significa che mettere in staking i tuoi ETH è attualmente un deposito unidirezionale. Questo sarà il caso fino all'aggiornamento Shanghai che si pianifica seguirà la Fusione.
-</ExpandableCard>
+I prelievi di staking sono stati implementati nell'aggiornamento di Shanghai/Capella, ad aprile 2023. Gli staker devono fornire un indirizzo di prelievo (se non è stato fornito al deposito iniziale) e i pagamenti delle ricompense inizieranno a essere distribuiti automaticamente su base periodica, a intervalli di pochi giorni.
 
-<ExpandableCard title="Cosa cambierà con la Fusione?" eventCategory="SaasStaking" eventName="clicked what will change with the Merge">
-  Dopo la Fusione, gli staker in SaaS inizieranno a ricevere le commissioni/mance di transazione non bruciate. Verifica con il tuo fornitore per determinare come aggiornare le tue impostazioni per includere un indirizzo di Ethereum che usi e al quale saranno inviati questi fondi quando arriverà il momento.
+I validatori, inoltre, possono uscire interamente come tali, il che sbloccherà il loro saldo in ETH rimanente per il prelievo. I conti che hanno fornito un indirizzo di prelievo d'esecuzione e hanno completato il procedimento di uscita riceveranno interamente il proprio saldo all'indirizzo di prelievo fornito durante la successiva pulizia dei validatori.
 
-La Fusione <em>non</em> consentirà di prelevare il tuo stake o le ricompense del protocollo; queste funzionalità sono pianificate per l'aggiornamento Shanghai, che seguirà la fusione di un periodo stimato a sei mesi fino a un anno.
-</ExpandableCard>
-
-<ExpandableCard title="Gli staker in SaaS devono fare qualcosa per La Fusione?">
-Gli staker in SaaS <strong>non devono fare nulla per prepararsi alla Fusione</strong>.
-
-Esistono alcune cose a cui gli operatori del nodo devono partecipare per questo aggiornamento. Verifica col tuo fornitore di staking per garantire che i loro sistemi siano pronti.
-
-Scopri di più su [La Fusione](/upgrades/merge/)
+<ButtonLink to="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Cosa succede se vengo tagliato?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
-Usando un fornitore di Saas, affidi l'operazione del tuo nodo a qualcun altro. Questo comporta il rischio delle scarse prestazioni del nodo, che non dipendono da te. Nell'evento in cui il tuo validatore sia tagliato, il saldo del tuo validatore sarà sanzionato e forzatamente rimosso dal pool dei validatori. Questi fondi saranno bloccati finché i prelievi non saranno abilitati a livello del protocollo.
+Usando un fornitore di Saas, affidi l'operazione del tuo nodo a qualcun altro. Questo comporta il rischio delle scarse prestazioni del nodo, che non dipendono da te. Nell'evento in cui il tuo validatore sia tagliato, il saldo del tuo validatore sarà sanzionato e forzatamente rimosso dal pool dei validatori.
 
-Contatta il singolo fornitore di SaaS per ulteriori dettagli su qualsiasi garanzia od opzione d'assicurazione. Se preferisci avere il pieno controllo della configurazione del tuo validatore, <a href="/staking/solo/">scopri di più su come fare staking in solo dei tuoi ETH</a>.
+Fino al completamento del procedimento di taglio/uscita, questi fondi saranno trasferiti all'indirizzo di prelievo assegnato al validatore. Ciò richiede di fornire un indirizzo di prelievo, per poter essere abilitato. Questo potrebbe essere stato fornito al deposito iniziale. Altrimenti, le chiavi di prelievo del validatore dovranno essere usate per firmare un messaggio che dichiari un indirizzo di prelievo. Se non è stato fornito alcun indirizzo di prelievo, i fondi resteranno bloccati finché non sarà fornito.
+
+Contatta il singolo fornitore di SaaS per ulteriori dettagli su qualsiasi opzione di garanzia o assicurazione e per le istruzioni su come fornire un indirizzo di prelievo. Se preferisci avere il pieno controllo della configurazione del tuo validatore, <a href="/staking/solo/">scopri di più su come fare staking in solo dei tuoi ETH</a>.
 </ExpandableCard>
 
 ## Approfondimenti {#further-reading}

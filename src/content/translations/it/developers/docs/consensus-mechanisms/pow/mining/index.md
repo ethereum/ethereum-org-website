@@ -5,9 +5,7 @@ lang: it
 ---
 
 <InfoBanner emoji=":wave:">
-
-Il Proof of Work non è più il meccanismo di consenso alla base di Ethereum, il che significa che il mining è stato disattivato. Invece, Ethereum è protetto dai validatori che mettono ETH in staking. Puoi iniziare fin da subito a mettere in staking i tuoi ETH. Leggi di più su [La Fusione](/upgrades/merge/), il [Proof of Stake](/developers/docs/consensus-mechanisms/pos/) e lo [staking](/staking/). Questa pagina è per interesse storico.
-
+Il Proof of Work non è più il meccanismo di consenso alla base di Ethereum, il che significa che il mining è stato disattivato. Invece, Ethereum è protetto dai validatori che mettono ETH in staking. Puoi iniziare fin da subito a mettere in staking i tuoi ETH. Leggi di più su <a href='/roadmap/merge/'>La Fusione</a>, il <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake</a> e lo <a href='/staking/'>staking</a>. Questa pagina è solo per interesse storico.
 </InfoBanner>
 
 ## Prerequisiti {#prerequisites}
@@ -43,11 +41,13 @@ Per approfondire ulteriormente la redditività del mining, usa un apposito calco
 
 ## Come avveniva il mining delle transazioni Ethereum {#how-ethereum-transactions-were-mined}
 
-1. Un utente scrive e firma una richiesta di [transazione](/developers/docs/transactions/) con la chiave privata di un [account](/developers/docs/accounts/).
+Quanto segue fornisce una panoramica di come erano minate le transazioni, nel proof-of-work di Ethereum. Una descrizione analoga di questo processo per il proof-of-stake di Ethereum, si può trovare [qui](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
+
+1. Un utente scrive e firma una richiesta di [transazione](/developers/docs/transactions/) con la chiave privata di un [conto](/developers/docs/accounts/).
 2. L'utente trasmette la richiesta di transazione all'intera rete Ethereum attraverso un [nodo](/developers/docs/nodes-and-clients/).
 3. Dopo aver recepito la richiesta della nuova transazione, ogni nodo nella rete Ethereum aggiunge la richiesta alla propria mempool locale, un elenco di tutte le richieste di transazioni delle quali è venuto a conoscenza e che non sono ancora state inviate alla blockchain in un blocco.
-4. A un certo punto, un nodo di mining aggrega diverse decine o centinaia di richieste di transazioni in un [blocco](/developers/docs/blocks/) potenziale, in modo da massimizzare le [commissioni sulle transazioni](/developers/docs/gas/) che verranno guadagnate, rimanendo comunque entro il limite di gas per blocco. A questo punto, il nodo di mining:
-   1. Verifica la validità di ogni richiesta di transazione (ad esempio che nessuno stia provando a trasferire ether da un account senza firma, che una richiesta non abbia un formato scorretto ecc.), dopodiché esegue il codice della richiesta, cambiando lo stato della propria copia locale dell'EVM. Il miner assegna la commissione sulle transazioni per ogni richiesta di transazione al proprio account.
+4. A un certo punto, un nodo di mining aggrega diverse dozzine o centinaia di richieste di transazione in un [blocco](/developers/docs/blocks/) potenziale, così da massimizzare le [commissioni di transazione](/developers/docs/gas/) che saranno guadagnate, entro il limite di gas del blocco. A questo punto, il nodo di mining:
+   1. Verifica la validità di ogni richiesta di transazione (cioè, che nessuno stia provando a trasferire ether da un conto per cui non ha prodotto una firma, la richiesta non è malformata, etc.) e, poi, esegue il codice della richiesta, alterando lo stato della loro copia locale dell'EVM. Il miner assegna la commissione sulla transazione per ogni simile richiesta di transazione, al proprio conto.
    2. Inizia il processo di produzione del "certificato di legittimità" Proof of Work per il blocco potenziale, una volta che tutte le richieste di transazione nel blocco sono state verificate ed eseguite nella copia dell'EVM locale.
 5. Infine un miner concluderà la produzione di un certificato per un blocco che include la nostra richiesta di transazione specifica. Il miner trasmetterà quindi il blocco completato, che include il certificato e una checksum del nuovo stato dell'EVM dichiarato.
 6. Gli altri nodi vengono a conoscenza del nuovo blocco. Verificano il certificato, eseguono tutte le transazioni sul blocco (includendo la transazione originalmente inviata dal nostro utente) e verificano che la checksum del nuovo stato dell'EVM dopo l'esecuzione di tutte le transazioni combaci quella dello stato dichiarato dal blocco del miner. Solo a questo punto allora questi nodi aggiungeranno il blocco alla coda della blockchain e accetteranno il nuovo stato dell'EVM come canonico.
@@ -56,7 +56,13 @@ Per approfondire ulteriormente la redditività del mining, usa un apposito calco
 
 Il mining di ogni transazione (cioè l'inclusione in un nuovo blocco e la prima propagazione) avviene una volta sola, ma la transazione viene eseguita e verificata da ogni partecipante nel processo di avanzamento dello stato canonico dell'EVM. Questa è una delle regole fondamentali della blockchain: **non ti fidare, verifica**.
 
-## Dimostrazione visiva {#a-visual-demo}
+## Blocchi ommer (zio) {#ommer-blocks}
+
+L'estrazione di blocchi basata sul proof-of-work era solo probabilistica, il che significa che a volte due blocchi validi venivano pubblicati simultaneamente a causa della latenza della rete. In questo caso, il protocollo doveva determinare la catena più lunga (e quindi più "valida") garantendo al tempo stesso un trattamento equo dei miner, ricompensando parzialmente il blocco valido proposto non incluso. Ciò incoraggiava l'ulteriore decentralizzazione della rete in quanto i piccoli miner, che potevano trovarsi ad affrontare una latenza più elevata, potevano comunque generare rendimenti tramite ricompense per blocchi [ommer](/glossary/#ommer).
+
+"Ommer" è il termine preferito, neutro dal punto di vista del genere, per lo stesso livello di un blocco padre, ma a volte viene anche indicato come "zio". **Da quando Ethereum è passato alla proof-of-stake, i blocchi ommer non vengono più estratti** poiché in ogni slot viene eletto solo un proponente. Questo cambiamento può essere osservato nel [grafico storico](https://ycharts.com/indicators/ethereum_uncle_rate) dei blocchi ommer estratti.
+
+## Demo visiva {#a-visual-demo}
 
 Austin ti guiderà attraverso il mining e la blockchain basata sul proof-of-work.
 
@@ -64,19 +70,9 @@ Austin ti guiderà attraverso il mining e la blockchain basata sul proof-of-work
 
 ## L'algoritmo di mining {#mining-algorithm}
 
-La Rete principale di Ethereum ha sempre e solo usato un algoritmo di mining: ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethash era il successore di un algoritmo di R&S originale, noto come ['Dagger-Hashamoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashamoto).
+La Rete principale di Ethereum ha sempre e solo usato un algoritmo di mining: ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash fu il successore di un algoritmo R&D originale, noto come ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 [Maggiori informazioni sugli algoritmi di mining](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
-
-## Letture consigliate {#further-reading}
-
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
-## Strumenti correlati {#related-tools}
-
-- [I top miner di Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
-- [Calcolatore di mining Etherscan](https://etherscan.io/ether-mining-calculator)
-- [Calcolatore di mining Minerstat](https://minerstat.com/coin/ETH)
 
 ## Argomenti correlati {#related-topics}
 

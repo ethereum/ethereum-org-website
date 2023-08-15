@@ -8,7 +8,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "Smart Contracts"
-skill: Einsteiger
+skill: beginner
 lang: de
 published: 2021-04-22
 ---
@@ -240,7 +240,7 @@ Ihre `.env`-Datei sollte nun wie folgt aussehen:
 
 Um nun die Verbindung mit unserem Code zu erstellen, werden wir diese Variablen in der Datei hardhat.config.js in Schritt 13 referenzieren.
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 Führen Sie keinen Commit für <code>.env</code> aus. Stellen Sie sicher, dass Sie Ihre <code>.env</code>-Datei niemals an andere weitergeben, denn damit würden Sie Ihre geheimen Daten weitergeben. Wenn Sie die Versionskontrolle verwenden, fügen Sie Ihre <code>Env-Datei</code> zu einer Datei <a href="https://git-scm.com/docs/gitignore">gitignore</a> hinzu.
 </InfoBanner>
 

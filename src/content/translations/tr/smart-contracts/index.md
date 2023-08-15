@@ -6,7 +6,7 @@ lang: tr
 
 # Akıllı sözleşmelere giriş {#introduction-to-smart-contracts}
 
-Akıllı sözleşmeler [Ethereum uygulamalarının](/dapps/) temel yapı taşıdır. Bunlar, geleneksel sözleşmeleri dijital benzerlerine çevirmemizi sağlayan blokzincir üzerinde depolanan bilgisayar programlarıdır. Akıllı sözleşmeler gayet mantıksaldır; "bu olduysa şu olmalı" yapısını takip ederler. Bu, programlandıkları gibi davranacakları ve değiştirilemeyecekleri anlamına gelir.
+Akıllı sözleşmeler [Ethereum uygulamalarının](/dapps/) temel yapı taşıdır. Bunlar, geleneksel sözleşmeleri dijital benzerlerine çevrilmesine olanak tanıyan blokzincir üzerinde depolanan bilgisayar programlarıdır. Akıllı sözleşmeler gayet mantıksaldır; "bu olduysa şu olmalı" yapısını takip ederler. Bu, programlandıkları gibi davranacakları ve değiştirilemeyecekleri anlamına gelir.
 
 "Akıllı sözleşme" terimini Nick Szabo ortaya atmıştır. 1994'te [konsepte bir giriş](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) ve 1996'da [akıllı sözleşmelerin neler yapabildiğiyle ilgili bir inceleme](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html) yazdı.
 

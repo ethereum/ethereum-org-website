@@ -3,6 +3,7 @@ title: 以太坊白皮书
 description: 以太坊的介绍性论文，2013年在以太坊启动前发布。
 lang: zh
 sidebarDepth: 2
+hideEditButton: true
 ---
 
 # 以太坊白皮书 {#ethereum-whitepaper}
@@ -314,7 +315,7 @@ def register(name, value):
 - `[1,i]` 注册一张赞成提案 `i` 的投票
 - `[2,i]` 如果投票有足够票数，则确认提案 `i`
 
-合约为每一种交易都提供有子句。 它将维护所有开放存储更改的记录以及投票支持者的列表。 合约还包括所有成员的列表。 当任何存储更改获得三分之二成员投票赞成时，一个确认交易将执行这项更改。 更复杂的框架可能还有针对如发送交易、增减成员等功能的内置投票功能，甚至可以提供[委任式民主](https://wikipedia.org/wiki/Delegative_democracy)投票委托（即任何人都可以委托另外一个人来代表自己投票，而且这种委托关系是可以传递的，如果 A 委托了 B 然后 B 委托了 C，那么 C 将决定 A 的投票）。 这种设计将使去中心化自治组织作为一个去中心化社区有机地成长，允许人们最终将筛选成员的任务委派给专家，但与“现有系统”不同，随着时间的推移，当个别社区成员改变他们的阵营时，专家可以很容易地加入或退出。
+合约为每一种交易都提供有子句。 它将维护所有开放存储更改的记录以及投票支持者的列表。 合约还包括所有成员的列表。 当任何存储更改获得三分之二成员投票赞成时，一个确认交易将执行这项更改。 更复杂的框架可能还有针对发送交易、增减成员等功能的内置投票功能，甚至可以提供[委任式民主](https://wikipedia.org/wiki/Liquid_democracy)投票委托（即任何人都可以委托另外一个人代表自己投票，而且这种委托关系是可以传递的，如果 A 委托了 B，然后 B 委托了 C，那么 C 将决定 A 的投票）。 这种设计将使去中心化自治组织作为一个去中心化社区有机地成长，允许人们最终将筛选成员的任务委派给专家，但与“现有系统”不同，随着时间的推移，当个别社区成员改变他们的阵营时，专家可以很容易地加入或退出。
 
 另一个模型是去中心化公司，其中任何帐户可以拥有零份或多份股份，决策需要持有三分之二多数股份。 完整框架将包括资产管理功能，即能够出价购买或出售股份并且能够接受报价（最好是合约里有订单匹配机制）。 委托还提供委任制民主形式，普及了“董事会”的概念。
 
@@ -504,7 +505,7 @@ _尽管采用了线性发行方式，然而和比特币一样，以太币的长�
 10. [彩色币白皮书](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [万事达币白皮书](https://github.com/mastercoin-MSC/spec)
 12. [去中心化自治公司，比特币杂志](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
-13. [简化支付确认](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
+13. [简化支付确认](https://en.bitcoin.it/wiki/Scalability#Simplified_payment_verification)
 14. [默克尔树](https://wikipedia.org/wiki/Merkle_tree)
 15. [帕特里夏树](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST 协议](https://eprint.iacr.org/2013/881.pdf)
@@ -512,7 +513,7 @@ _尽管采用了线性发行方式，然而和比特币一样，以太币的长�
 18. [Mike Hearn 在图灵节上谈论智能资产](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
 19. [以太坊递归长度前缀编码 (RLP)](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
 20. [以太坊默克尔帕特里夏树](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
-21. [Peter Todd 论默克尔求和树](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
+21. [Peter Todd 论默克尔求和树](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _有关本白皮书的历史，请参阅[此维基文章](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)。_
 

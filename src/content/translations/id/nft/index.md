@@ -9,16 +9,16 @@ image: ../../../../assets/infrastructure_transparent.png
 alt: Logo Eth yang ditampilkan melalui hologram.
 summaryPoint1: Cara untuk mewakili apa pun yang unik sebagai aset berbasis Ethereum.
 summaryPoint2: NFT memberi lebih banyak pemberdayaan terhadap para pembuat konten daripada sebelumnya.
-summaryPoint3: Digerakkan oleh kontrak pintar di blockchain Ethereum.
+summaryPoint3: Digerakkan oleh kontrak pintar di rantai blok Ethereum.
 ---
 
 NFT saat ini mengambil alih dunia seni digital dan barang koleksi dengan cepat. Seniman digital melihat kehidupan mereka berubah berkat penjualan yang besar kepada audiens kripto baru. Dan para selebriti bergabung saat mereka melihat kesempatan baru untuk terhubung dengan para penggemar. Tapi seni digital hanyalah salah satu cara untuk menggunakan NFT. Benar-benar dapat digunakan untuk menggambarkan kepemilikan aset unik apa pun, seperti akta untuk sebuah barang di dunia digital atau fisik.
 
-Jika Andy Warhol telah lahir di akhir tahun 90-an, dia mungkin akan mencetak Campbell’s Soup sebagai NFT. Hanya tinggal masalah waktu sebelum Kanye meluncurkan Yeezys di Ethereum. Dan suatu hari kepemilikan mobil Anda dapat dibuktikan dengan NFT.
+Jika Andy Warhol telah lahir di akhir tahun 90-an, dia mungkin akan mencetak Campbell’s Soup sebagai NFT. Hanya masalah waktu saja sebelum Nike meluncurkan Jordan di Ethereum. Dan suatu hari kepemilikan mobil Anda dapat dibuktikan dengan NFT.
 
 ## Apa itu NFT? {#what-are-nfts}
 
-NFT adalah token yang dapat kita gunakan untuk mewakili kepemilikan barang yang unik. Mereka membiarkan kita menandai barang-barang seperti seni, barang koleksi, dan bahkan properti. Kepemilikan suatu aset diamankan oleh blockchain Ethereum – tidak seorang pun dapat memodifikasi catatan kepemilikan atau menyalin/menempel NFT baru untuk mengadakannya.
+NFT adalah token yang dapat kita gunakan untuk mewakili kepemilikan barang yang unik. Mereka membiarkan kita menandai barang-barang seperti seni, barang koleksi, dan bahkan properti. Kepemilikan suatu aset diamankan oleh rantai blok Ethereum – tidak seorang pun dapat memodifikasi catatan kepemilikan atau menyalin/menempel NFT baru untuk mengadakannya.
 
 NFT adalah singkatan dari non-fungible token. Non-fungible adalah istilah ekonomi yang Anda dapat gunakan untuk menggambarkan beberapa barang seperti furnitur, file lagu, atau komputer Anda. Barang-barang ini tidak dapat dipertukarkan dengan barang-barang lain karena mereka memiliki properti yang unik.
 
@@ -94,7 +94,7 @@ NFT berbeda dari token ERC-20, seperti DAI atau LINK, karena setiap token indivi
   - Tanda tangan
 - Banyak dan lebih banyak pilihan untuk berkreasi!
 
-Kepemilikan NFT dikelola melalui uniqueID dan metadata yang tidak dapat direplikasikan oleh token lain. NFT dicetak melalui kontrak pintar yang menetapkan kepemilikan dan mengelola kemampuan transfer NFT. Ketika seseorang membuat atau mencetak NFT, dia mengeksekusi kode yang disimpan dalam kontrak pintar yang sesuai dengan standar yang berbeda, seperti [ERC-721](/developers/docs/standards/tokens/erc-721/). Informasi ini ditambahkan ke rantai blok tempat NFT sedang dikelola. Proses pencetakan, dari level tinggi, memiliki langkah-langkah berikut yang dilaluinya:
+Kepemilikan NFT dikelola melalui unique ID dan metadata yang tidak dapat direplikasikan oleh token lain. NFT dicetak melalui kontrak pintar yang menetapkan kepemilikan dan mengelola kemampuan transfer NFT. Ketika seseorang membuat atau mencetak NFT, dia mengeksekusi kode yang disimpan dalam kontrak pintar yang sesuai dengan standar yang berbeda, seperti [ERC-721](/developers/docs/standards/tokens/erc-721/). Informasi ini ditambahkan ke rantai blok tempat NFT sedang dikelola. Proses pencetakan, dari level tinggi, memiliki langkah-langkah berikut yang dilaluinya:
 
 - Membuat blok baru
 - Memvalidasi informasi
@@ -153,6 +153,7 @@ Berikut ini adalah informasi lebih lanjut mengenai beberapa kasus penggunaan dan
 - [Nama domain](#nft-domains)
 - [Barang fisik](#nft-physical-items)
 - [Investasi dan jaminan](#nfts-and-defi)
+- [Tokengating](#tokengating)
 
 <Divider />
 
@@ -273,26 +274,39 @@ Perusahaan yang menawarkan sertifikat palsu untuk gelar universitas dilaporkan m
 
 <Divider />
 
+### Tokengating {#tokengating}
+
+Tokengating adalah cara untuk membatasi akses terhadap sesuatu dan menggunakan NFT sebagai cara untuk membuka akses. Contoh berikut ini dapat sangat bervariasi tergantung pada platformnya tapi yang populer termaksud konten yang di-gated, peladen obrolan privat, dan, dalam dunia perdagangan elektronik, produk ekslusif.
+
+Suatu platform yang menjalankan tokengating umumnya akan meminta Anda terhubung ke dompet untuk membuktikan Anda memiliki NFT yang dipersyaratkan. Jika Anda memiliki NFT yang diperlukan, Anda akan mendapatkan akses. Jika tidak, konten akan tetap ter-gated. NFT adalah cara ampuh untuk melakukan ini karena keunikannya - Anda tidak dapat memalsukan kepemilikan untuk mendapat kontennya.
+
+Karena NFT ada di Ethereum, itu dapat digunakan untuk membuka tokengate Ethereum pada platform mana pun yang menerapkannya. Suatu NFT yang Anda miliki dapat membuka konten yang di-gated, peladen obrolan privat, dan produk ekslusif di website yang berbeda dan aplikasi.
+
+Jika pencetakan dan penyaluran NFT adalah tentang pembuatan atau digitisasi komunitas, tokengating adalah tentang pengasuhan komunitas. Tokengating lebih melihat NFT digunakan sebagai peralatan untuk keanggotaan atau loyalitas - dan sebagai cara ampuh untuk memberikan hadiah yang terdapat dalam NFT.
+
+#### Contoh
+
+- [Collab.land](https://collab.land/) mengaitkan server obrolan Discord atau grup Telegram
+- [Buka kunci protokol](https://unlock-protocol.com/) adalah protokol untuk tokengating
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) memiliki daftar aplikasi yang terus bertambah yang memungkinkan pedagang untuk memberikan akses ke produk dan diskon
+
+<Divider />
+
 ## Ethereum dan NFT {#ethereum-and-nfts}
 
-Ethereum memungkinkan NFT untuk beroperasi dikarenakan sejumlah alasan:
+Ethereum memungkinkan NFT beroperasi dikarenakan sejumlah alasan:
 
 - Riwayat transaksi dan metadata token dapat diverifikasi secara publik – riwayat kepemilikannya mudah untuk dibuktikan.
 - Setelah sebuah transaksi dikonfirmasi, hampir mustahil untuk memanipulasi data tersebut untuk "mencuri" kepemilikan.
 - Berdagang NFT bisa dilakukan secara peer-to-peer tanpa memerlukan platform yang bisa mengambil imbalan yang besar sebagai kompensasi.
-- Semua produk Ethereum berbagi "backend" yang sama. Dengan kata lain, semua produk Ethereum dapat dengan mudah saling memahami – ini membuat NFT dapat dipindahkan di seluruh produk. Anda dapat membeli sebuah NFT dari satu produk dan menjualnya di produk yang lain dengan mudah. Sebagai kreator, Anda dapat mencantumkan NFT Anda di berbagai produk pada saat yang sama – setiap produk akan memiliki informasi kepemilikan yang terbaru.
+- Semua produk Ethereum berbagi "backend" yang sama. Dengan kata lain, semua produk Ethereum dapat dengan mudah saling memahami – ini membuat NFT dapat dipindahkan di seluruh produk. Anda dapat membeli sebuah NFT dari satu produk dan menjualnya di produk yang lain dengan mudah. Sebagai pembuat, Anda dapat mendaftarkan NFT Anda di berbagai produk pada saat yang sama – setiap produk akan memiliki informasi kepemilikan yang terbaru.
 - Ethereum tidak pernah down, yang berarti token Anda akan selalu tersedia untuk dijual.
 
 ## Dampak lingkungan dari NFT {#environmental-impact-nfts}
 
-Popularitas NFT semakin berkembang, yang berarti juga semakin diawasi – khususnya mengenai jejak karbonnya.
+Membuat dan mentransfer NFT merupakan transaksi Ethereum - mencetak, membeli, menukar atau berinteraksi dengan NFT tidak secara langsung memerlukan energi. Sejak [Penggabungan](/roadmap/merge), Ethereum adalah rantai blok rendah energi, yang berarti dampak lingkungan dari menggunakan NFT dapat diabaikan.
 
-Untuk mengklarifikasi beberapa hal:
-
-- Membuat dan mentransfer NFT hanyalah merupakan transaksi Ethereum - mereka tidak berdampak langsung terhadap pengeluaran energi Ethereum, dan mereka juga tidak secara tersendiri mengeluarkan energinya sendiri.
-- Ethereum adalah blockchain hemat energi, yang berarti dampak lingkungan dari membuat, membeli dan mentrasfer NFT sangatlah kecil.
-
-Bagian berikutnya menjelaskan lebih lanjut tentang detil yang sedikit lebih teknis...
+[Lebih lanjut tentang penggunaan Energi Ethereum](/energy-consumption/).
 
 ### Jangan salahkan NFT {#nft-qualities}
 
@@ -302,7 +316,7 @@ Terdesentralisasi berarti Anda dan semua orang lainnya dapat memverifikasi kepem
 
 Aman berarti tidak seorang pun dapat menyalin/menempelkan NFT Anda atau mencurinya.
 
-Kualitas Ethereum ini membuat kepemilikan barang unik secara digital dan memungkinkan mendapatkan harga yang sesuai untuk konten Anda. Ethereum melindungi aset menggunakan mekanisme konsensus desentralisasi yang melibatkan ['bukti penaruhan'](/developers/docs/consensus-mechanisms/pos). Ini adalah metode rendah emisi karbon untuk menentukan siapa yang dapat menambahkan suatu blok transaksi ke rantai, dan dianggap lebih aman daripada alternatif tinggi energi, ['bukti kerja'](/developers/docs/consensus-mechanisms/pow). NFT telah dihubungkan dengan pengeluaran energi yang tinggi karena Ethereum dulunya diamankan dengan menggunakan bukti kerja. Ini sudah tidak berlaku lagi.
+Kualitas Ethereum ini membuat kepemilikan barang unik secara digital dan memungkinkan mendapatkan harga yang sesuai untuk konten Anda. Ethereum melindungi aset menggunakan mekanisme konsensus desentralisasi yang melibatkan ['bukti taruhan'](/developers/docs/consensus-mechanisms/pos). Ini adalah metode rendah emisi karbon untuk menentukan siapa yang dapat menambahkan suatu blok transaksi ke rantai, dan dianggap lebih aman daripada alternatif tinggi energi, ['bukti kerja'](/developers/docs/consensus-mechanisms/pow). NFT telah dihubungkan dengan pengeluaran energi yang tinggi karena Ethereum dulunya diamankan dengan menggunakan bukti kerja. Ini sudah tidak berlaku lagi.
 
 #### Mencetak NFT {#minting-nfts}
 
@@ -313,21 +327,21 @@ Ketika Anda mencetak NFT, beberapa hal harus dilakukan:
 - Transaksi yang mengonfirmasi hal di atas perlu ditambahkan ke sebuah blok dan "diabadikan" di rantai.
 - Blok perlu dikonfirmasi oleh semua orang di jaringan sebagai blok yang "benar". Konsensus ini menghilangkan kebutuhan menggunakan jasa pengantara karena jaringan sepakat bahwa NFT Anda ada dan milik Anda. Dan NFT ada di rantai sehingga siapa pun dapat memeriksanya. Ini merupakan salah satu cara Ethereum untuk membantu kreator NFT memaksimalkan pendapatan mereka.
 
-All these tasks are done by block producers and validators. Block proposers add your NFT transaction to a block and broadcast it to the rest of the network. Validators check that the transaction is valid and then add it to their databases. There are lots of crypto-economic incentives in place to make sure validators are acting honestly. Otherwise, anyone could just claim that they own the NFT you just minted and fraudulently transfer ownership.
+Semua tugas-tugas ini dilakukan oleh produsen blok dan validator. Pemilik blok menambahkan transaksi NFT Anda ke dalam blok dan menyiarkannya ke seluruh jaringan. Validator memeriksa apakah transaksi tersebut valid, lalu menambahkannya ke dalam database mereka. Ada banyak insentif kripto-ekonomi yang diterapkan untuk memastikan validator bertindak dengan jujur. Jika tidak, siapa saja dapat mengklaim bahwa mereka memiliki NFT yang baru saja Anda buat dan secara curang mentransfer kepemilikan.
 
-#### NFT security {#nft-security}
+#### Keamanan NFT {#nft-security}
 
-Ethereum's security comes from proof-of-stake. The system is designed to economically disincentivize malicious actions, making Ethereum tamper-proof. This is what makes NFTs possible. Once the block containing your NFT transaction becomes finalized it would cost an attacker millions of ETH to change it. Anyone running Ethereum software would immediately be able to detect dishonest tampering with an NFT, and the bad actor would be economically penalized and ejected.
+Keamanan Ethereum berasal dari bukti taruhan. Sistem dirancang untuk memberikan insentif ekonomi yang mengurangi kemungkinan tindakan jahat, sehingga Ethereum menjadi tidak mungkin dimanipulasi. Inilah yang membuat NFT menjadi mungkin. Setelah blok yang berisi transaksi NFT Anda menjadi final, biaya yang diperlukan bagi penyerang untuk mengubahnya akan mencapai jutaan ETH. Setiap orang yang menjalankan perangkat lunak Ethereum akan segera dapat mendeteksi manipulasi yang tidak jujur terhadap NFT, dan pelaku yang buruk akan dikenakan sanksi ekonomi dan diusir.
 
-Security issues relating to NFTs are most often related to phishing scams, smart contract vulnerabilities or user errors (such as inadvertently exposing private keys), making good wallet security critical for NFT owners.
+Masalah keamanan terkait NFT sering kali terkait dengan penipuan phishing, kerentanan kontrak pintar, atau kesalahan pengguna (seperti secara tidak sengaja mengekspos kunci pribadi), sehingga keamanan dompet yang baik menjadi sangat penting bagi pemilik NFT.
 
 <ButtonLink to="/security/">
-  More on security
+  Lebih lanjut tentang keamanan
 </ButtonLink>
 
 ## Membangun dengan NFT {#build-with-nfts}
 
-Kebanyakan NFT dibangun dengan menggunakan standar yang dikenal sebagai [ERC-721](/developers/docs/standards/tokens/erc-721/). Namun, ada standar lainnya yang mungkin Anda ingin periksa. Standar [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) memungkinkan token semi-fungible yang terutama berguna di dunia game. Dan yang lebih baru, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) telah diusulkan untuk membuat pencetakan NFT menjadi lebih efisien. Standar ini memungkinkan Anda mencetak NFT sebanyak yang Anda inginkan dalam satu transaksi!
+Kebanyakan NFT dibangun dengan menggunakan standar yang dikenal sebagai [ERC-721](/developers/docs/standards/tokens/erc-721/). Namun, ada standar lainnya yang mungkin Anda ingin periksa. Standar [ERC-1155](/developers/docs/standards/tokens/erc-1155/) memungkinkan token dapat dipertukarkan yang terutama berguna di dunia game. Dan yang lebih baru, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) telah diusulkan untuk membuat pencetakan NFT menjadi lebih efisien. Standar ini memungkinkan Anda mencetak NFT sebanyak yang Anda inginkan dalam satu transaksi!
 
 ## Bacaan lebih lanjut {#further-reading}
 
@@ -337,4 +351,5 @@ Kebanyakan NFT dibangun dengan menggunakan standar yang dikenal sebagai [ERC-721
 - [Semu ahal yang perlu Anda ketahui tentang metaverse](https://foundation.app/blog/enter-the-metaverse) – _Tim yayasan, foundation.app_
 - [Tidak, Seniman Kripto Tidak Merugikan Planet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Konsumsi energi Ethereum](/energy-consumption/)
-- [Nilai kekuatan sebuah negara, tidak lagi](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 Mei 2021_
+
+<QuizWidget quizKey="nfts" />

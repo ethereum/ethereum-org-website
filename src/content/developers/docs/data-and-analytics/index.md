@@ -20,7 +20,7 @@ In terms of architectural fundamentals, understanding what an [API](https://www.
 
 Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
 
-Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](etherscan.io) provides execution and consensus data for every 12s slot.
+Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](https://etherscan.io) provides execution and consensus data for every 12s slot.
 
 ## The Graph {#the-graph}
 
@@ -30,7 +30,7 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 ## Client diversity
 
-[Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several client diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](rated.network), [pool.invis.cloud](pool.invis.cloud), [slashed.info](slahed.info) and [Ethernodes](https://ethernodes.org/).
+[Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several client diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](rated.network), [execution-diversity.info](https://execution-diversity.info/) and [Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 

@@ -152,9 +152,9 @@ Het governance-proces van Ethereum weegt vaak snelheid en efficiëntie af tegen 
 
 Hoewel de ontwikkeling van specificaties en implementaties altijd volledig open source is geweest, werden de formele processen die werden gebruikt om de hierboven beschreven updates voor te stellen niet gebruikt. Hierdoor konden onderzoekers en uitvoerders sneller wijzigingen doorvoeren en hierover overeenstemming bereiken.
 
-Wanneer de Beacon Chain samenvalt met de uitvoeringslaag van Ethereum, zal het governance-proces om wijzigingen voor te stellen worden geharmoniseerd. Dit proces om de merge te implementeren is [al gaande](https://github.com/ethereum/EIPs/pull/3675).
+Wanneer de Beacon Chain samenvalt met de uitvoeringslaag van Ethereum, zal het governance-proces om wijzigingen voor te stellen worden geharmoniseerd. Dit proces om de merge te implementeren is [al gaande](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Meer over de merge
 </ButtonLink>
 
@@ -175,7 +175,6 @@ Wanneer de Beacon Chain samenvalt met de uitvoeringslaag van Ethereum, zal het g
 Governance in Ethereum is niet strikt gedefinieerd. Verschillende deelnemers van de gemeenschap hebben er verschillende perspectieven op. Hier zijn er een paar:
 
 - [Notes on Blockchain Governance](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Governance on Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_

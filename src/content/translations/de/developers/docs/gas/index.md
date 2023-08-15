@@ -18,7 +18,7 @@ Da jede Ethereum-Transaktion Rechenressourcen benötigt, um ausgeführt zu werde
 
 ![Ein Diagramm, das zeigt, wo Gas im EVM-Betrieb benötigt wird](./gas.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Im Wesentlichen werden Gasgebühren in Ethereums Eigenwährung, Ether (ETH) gezahlt. Die Gaspreise sind in Gwei angegeben, was selbst eine Bezeichnung für ETH ist. Jeder Gwei ist gleich 0,00000001 ETH (10<sup>-9</sup> ETH). Anstatt z. B. zu sagen, dass dein Gas 0,000000001 Ether kostet, kannst du sagen, dass dein Gas 1 Gwei kostet. Das Wort "gwei" selbst bedeutet "giga-wei" und entspricht 1.000.000.000 wei. Wei selbst (benannt nach [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), dem Erfinder von [B-Geld](https://www.investopedia.com/terms/b/bmoney.asp)) ist die kleinste Einheit von ETH.
+Im Wesentlichen werden Gasgebühren in Ethereums Eigenwährung, Ether (ETH) gezahlt. Die Gaspreise sind in Gwei angegeben, was selbst eine Bezeichnung für ETH ist. Jeder Gwei ist gleich 0,000000001 ETH (10<sup>-9</sup> ETH). Anstatt z. B. zu sagen, dass dein Gas 0,000000001 Ether kostet, kannst du sagen, dass dein Gas 1 Gwei kostet. Das Wort "gwei" selbst bedeutet "giga-wei" und entspricht 1.000.000.000 wei. Wei selbst (benannt nach [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), dem Erfinder von [B-Geld](https://www.investopedia.com/terms/b/bmoney.asp)) ist die kleinste Einheit von ETH.
 
 ## Vor dem London-Upgrade {#pre-london}
 
@@ -101,13 +101,13 @@ Einer der Hauptvorteile des London-Upgrades ist die Verbesserung der Benutzererf
 
 ## EIP-1559 {#eip-1559}
 
-Die Implementierung der [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) im London-Upgrade hat den Mechanismus der Transaktionsgebühren komplexer gemacht als die vorherige Gaspreisauktion. Dies hat aber den Vorteil, dass die Gasgebühren berechenbarer sind, was zu einem effizienteren Markt für Transaktionsgebühren führt. Nutzer können Transaktionen mit einem `maxFeePerGas` einreichen, der angibt, wie viel sie bereit sind, für die Ausführung der Transaktion zu zahlen. Dabei können sie sicher sein, dass sie nicht mehr als den Marktpreis für Gas (`baseFeePerGas`) zahlen und alles, was darüber hinausgeht, abzüglich ihres Trinkgelds zurückerstattet bekommen.
+Die Implementierung der [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) im London-Upgrade hat den Mechanismus der Transaktionsgebühren komplexer gemacht als die vorherige Gaspreisauktion. Dies hat aber den Vorteil, dass die Gasgebühren berechenbarer sind, was zu einem effizienteren Markt für Transaktionsgebühren führt. Nutzer können Transaktionen mit einem `maxFeePerGas` einreichen, der angibt, wie viel sie bereit sind, für die Ausführung der Transaktion zu zahlen. Dabei können sie sicher sein, dass sie nicht mehr als den Marktpreis für Gas (`baseFeePerGas`) zahlen und alles, was darüber hinausgeht, abzüglich ihres Trinkgelds zurückerstattet bekommen.
 
 Dieses Video erklärt EIP-1559 und die Vorteile, die es bringt:
 
 <YouTube id="MGemhK9t44Q" />
 
-Wenn du interessiert bist, kannst du hier die genauen [EIP-1559 Spezifikationen](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) nachlesen.
+Wenn du interessiert bist, kannst du hier die genauen [EIP-1559 Spezifikationen](https://eips.ethereum.org/EIPS/eip-1559) nachlesen.
 
 Gehe mit diesem Link weiter in den Kaninchenbau hinein: [EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources).
 
@@ -133,7 +133,7 @@ Wie viel wir für eine bestimmte Transaktion bezahlen müssen, wird nicht allein
 
 ## Initiativen zur Senkung der Gaskosten {#initiatives-to-reduce-gas-costs}
 
-Die Ethereum-[Skalierbarkeits-Upgrades](/upgrades/) sollten letztendlich einige der Probleme mit den Gasgebühren lösen, was wiederum die Plattform in die Lage versetzen wird, Tausende von Transaktionen pro Sekunde zu verarbeiten und global zu skalieren.
+Die Ethereum-[Skalierbarkeits-Upgrades](/roadmap/) sollten letztendlich einige der Probleme mit den Gasgebühren lösen, was wiederum die Plattform in die Lage versetzen wird, Tausende von Transaktionen pro Sekunde zu verarbeiten und global zu skalieren.
 
 Die Skalierung auf Layer 2 ist eine der wichtigsten Initiativen, um die Gaskosten, das Nutzererlebnis und die Skalierbarkeit deutlich zu verbessern. [Mehr zur Skalierung mit Layer 2](/developers/docs/scaling/#layer-2-scaling)
 
@@ -161,7 +161,6 @@ Wenn du die Gaspreise überwachen willst, damit du deine ETH günstiger verschic
 ## Weiterführende Informationen {#further-reading}
 
 - [Ethereum Gas erklärt](https://defiprime.com/gas)
-- [Wird die Nutzung von Ethereum mit steigendem Preis teurer?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reduziere den Gasverbrauch deiner Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof-of-Stake vs. Proof-of-Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

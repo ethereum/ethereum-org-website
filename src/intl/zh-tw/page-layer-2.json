@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "欺詐證明僅適用於白名單使用者，白名單尚未開放",
   "layer-2-boba-note": "狀態驗證正在開發中",
-  "layer-2-metis-note": "欺詐證明正在開發中",
   "layer-2-optimism-note": "錯誤性證明正在開發中",
   "layer-2-hero-title": "二層網路",
   "layer-2-hero-header": "以太坊為所有人而生",
@@ -14,7 +13,7 @@
   "layer-2-statsbox-2": "二層網路平均的以太幣轉帳費用 (USD)",
   "layer-2-statsbox-3": "二層網路總價值變化（30天）",
   "layer-2-what-is-layer-2-title": "什麼是二層網路",
-  "layer-2-what-is-layer-2-1": "二層網路 (L2) 是一個集體術語，用以描述一套具體的以太坊擴容解決方案。<strong>二層網路是單獨的區塊鏈，其擴展了以太坊並繼承了以太坊的安全保障</strong>。",
+  "layer-2-what-is-layer-2-1": "二層網路 (L2) 為描述一系列特定的以太坊擴容解決方案的統稱。<strong>二層網路為一條擴展以太坊，並承襲以太坊安全性保證的獨立區塊鏈</strong>。",
   "layer-2-what-is-layer-2-2": "現在讓我們深入研究一下，為此我們需要解釋一層網路 (L1)。",
   "layer-2-what-is-layer-1-title": "什麼是一層網路?",
   "layer-2-what-is-layer-1-1": "一層網路是區塊鏈的底層。以太坊和比特幣兩者都是一層網路的區塊鏈，<strong>因為它們是整個網路的基石，讓各式各樣的二層網路能夠建立在它們之上。</strong>二層網路方案的例子包括以太坊上的「卷軸」和基於比特幣的閃電網路。所有這些二層網路上的使用者交易活動最終都可以傳輸回一層網路區塊鏈。",
@@ -31,7 +30,7 @@
   "layer-2-why-do-we-need-layer-2-2": "以太坊目前已達到網路容量的上限，即<a href=\"https://etherscan.io/chart/tx\" target=\"_blank\">每天 100 多萬筆交易，並每筆交易都具有高需求。以太坊的成功和其使用需求導致燃料費大幅上漲。因此，擴容解決方案</a>也迫在眉睫，這就是二層網路誕生的原因。",
   "layer-2-why-do-we-need-layer-2-scalability": "可擴展性",
   "layer-2-why-do-we-need-layer-2-scalability-1": "可擴展性的主要目標是在不犧牲去中心化或安全性的情況下提高交易速度（更快達到最終性）和交易吞吐量（每秒更高的交易量）。",
-  "layer-2-why-do-we-need-layer-2-scalability-2": "以太坊社群採取了堅定的立場，它不會為了擴大規模而放棄去中心化或安全性。直到採用<a href=\"/upgrades/sharding/\">分片</a>為止，以太坊主網（一層網路）僅能夠處理<a href=\"https://ethtps.info/Network/Ethereum\">大約每秒 15 筆交易</a>。當使用以太坊的需求提高，網路就會變得壅擠，這就增加了交易費用，而高昂的價格使得使用者難以負擔。這就是我們如今透過二層網路為以太坊擴容的原因。",
+  "layer-2-why-do-we-need-layer-2-scalability-2": "以太坊社群採取了堅定的立場，他們不會為了擴容而放棄去中心化或安全性。在實施<a href=\"/roadmap/danksharding/\">分片</a>之前，以太坊主網（一層網路）只能每秒鐘處理<a href=\"https://ethtps.info/Network/Ethereum\">大約 15 筆交易</a>。當使用以太坊的需求增加時，網路就會壅塞，這增加了交易費並迫使負擔不起這些費用的使用者退出。這就是我們如今透過二層網路為以太坊擴容的原因所在。",
   "layer-2-why-do-we-need-layer-2-scalability-3": "關於以太坊願景的更多訊息",
   "layer-2-benefits-of-layer-2-title": "二層網路的優點",
   "layer-2-lower-fees-title": "降低費用",
@@ -58,7 +57,7 @@
   "layer-2-dyor-3": "前往 L2BEAT",
   "layer-2-use-layer-2-title": "使用二層網路",
   "layer-2-use-layer-2-1": "現在你知道了為什麼二層網路會存在和它是如何工作的，讓我們開始行動吧！",
-  "layer-2-contract-accounts": "<strong>注意：</strong>在橋接和使用二層網路時，請務必注意，你將控制你的外部帳戶（一個只由一組私鑰控制的帳戶），就像在以太坊主網上一樣。然而當你使用合約帳戶，例如 <a href=\"https://gnosis-safe.io/\"  target=”_blank”>Gnosis Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，你將無法在二層網路上控制此地址，直到你將你的合約帳戶重新部署到二層網路上的該地址。如果你正在橋接或發送資金到合約帳戶，並且你沒有辦法控制該合約帳戶的地址，你的資金可能會遺失。",
+  "layer-2-contract-accounts": "<strong>備註：</strong>在橋接到二層網路並使用時，一定要格外注意，如同在以太坊主網上一樣，你將控制你的外部帳戶 (EOA)（只有一個私密金鑰控制帳戶的帳戶）的地址。但如果你使用合約帳戶，例如 <a href=\"https://safe.global/\"  target=”_blank”>Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，除非將該合約帳戶重新部署到二層網路上的相應地址，否則在二層網路上你將沒有該地址的控制權。如果你打算將資金橋接或發送到合約帳戶，但無法控制該合約帳戶的地址，你很可能會失去這筆資金。",
   "layer-2-use-layer-2-generalized-title": "廣義二層網路",
   "layer-2-use-layer-2-generalized-1": "廣義二層網路的行為和以太坊並無區別，但更便宜。你在以太坊一層網路上能夠做到的任何事情，在二層網路同樣能做到。許多去中心化應用程式已經開始遷移到這些二層網路上，或是直接跳過主網，直接部署在二層網路上。",
   "layer-2-use-layer-2-application-specific-title": "應用程式特定的二層網路",
@@ -103,9 +102,6 @@
   "layer-2-faq-question-2-description-3": "目前，大部分零知識證明卷軸是特定於應用程式的，而樂觀卷軸則基本上可以被廣泛應用。",
   "layer-2-more-info-on-optimistic-rollups": "關於樂觀卷軸的更多資訊",
   "layer-2-more-info-on-zk-rollups": "關於零知識卷軸的更多資訊",
-  "layer-2-faq-question-3-title": "有可能在一層網路上擴容嗎？",
-  "layer-2-faq-question-3-description-1": "是的。目前在以太坊的路線圖中有分片鏈的計畫。雖然這些都在路線圖中，但仍需透過二層網路擴容。",
-  "layer-2-more-on-sharding": "關於分片的更多資訊",
   "layer-2-faq-question-4-title": "二層網路的風險是什麼?",
   "layer-2-faq-question-4-description-1": "與在以太坊主網上持有資產和直接交易相比，二層網路計畫有著額外的風險。例如，定序器可能出現故障，那你就得等待其恢復正常才能夠存取資金。",
   "layer-2-faq-question-4-description-2": "我們鼓勵你在轉移大筆資金到二層網路之前，自行進行研究。更多關於二層網路的技術、風險和信任假設的資訊，我們建議你查閱<a href=\"https://l2beat.com/?view=risk\">L2BEAT</a>，它為每個計畫提供了一個全面性風險評估框架。",
@@ -131,5 +127,6 @@
   "layer-2-note": "備註：",
   "layer-2-ecosystem-portal": "生態系統相關入口網站",
   "layer-2-token-lists": "代幣清單",
-  "layer-2-explore": "探索"
+  "layer-2-explore": "探索",
+  "page-dapps-ready-button": "開始"
 }

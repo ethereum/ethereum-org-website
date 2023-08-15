@@ -1,5 +1,5 @@
 ---
-title: Havuzlanmış Staking
+title: Havuzlanmış hisseleme
 description: Ortak ETH hisselemeye nasıl başlanacağına dair genel bir bakış
 lang: tr
 template: staking
@@ -8,14 +8,14 @@ image: ../../../../../assets/staking/leslie-pool.png
 alt: Gergedan Leslie havuzda yüzüyor.
 sidebarDepth: 2
 summaryPoints:
-  - Elinizdeki ETH miktarı farketmeksizin istediğiniz hisselemeye katılın ve ödüller kazanın
-  - Zor kısmı geçip, doğrulayıcı görevini bir üçüncü partiye bırakın
-  - Cüzdanınızda likidite tokenleri tutun
+  - Diğerleriyle güçlerinizi birleştirerek istediğiniz miktarda ETH ile hisse alın ve ödüller kazanın
+  - Zor kısmı atlayıp doğrulayıcı görevini bir üçüncü tarafa bırakın
+  - Cüzdanınızda likidite token'ları tutun
 ---
 
 ## Paydaşlık havuzları nedir? {#what-are-staking-pools}
 
-Stake havuzları, daha az miktarda ETH'ye sahip birçok kişinin bir dizi doğrulayıcı anahtarını etkinleştirmek için gereken 32 ETH'yi elde etmesine olanak tanıyan ortaklık temelli bir yaklaşımdır. Havuzlama işlevi protokol içinde yerel olarak desteklenmez, bu nedenle çözümler bu ihtiyacı karşılamak için ayrı olarak oluşturulmuştur.
+Paydaşlık havuzları, daha az miktarda ETH'ye sahip birçok kişinin bir dizi doğrulayıcı anahtarını etkinleştirmek için gereken 32 ETH'yi elde etmesine olanak tanıyan ortaklık temelli bir yaklaşımdır. Havuzlama işlevi protokol içinde yerel olarak desteklenmez, bu nedenle çözümler bu ihtiyacı karşılamak için ayrı olarak oluşturulmuştur.
 
 Bazı havuzlar, fonların bir sözleşmeye yatırılabileceği, bahis tutarınızı güvenilir bir şekilde yöneten ve izleyen ve size bu değeri temsil eden bir token veren akıllı sözleşmeler kullanarak çalışır. Başka havuzlar ise akıllı sözleşmelere dahil olmayabilirler, onun yerine zincir dışı çalışırlar.
 
@@ -47,7 +47,7 @@ Nitelik göstergeleri, listelenen bir stake havuzunun sahip olabileceği dikkate
 
 <StakingConsiderations page="pools" />
 
-## Staking havuzlarını keşfet {#explore-staking-pools}
+## Paydaşlık havuzlarını keşfet {#explore-staking-pools}
 
 Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıdaki araçlarda size rehberlik etmesi için yukarıdaki göstergeleri kullanın.
 

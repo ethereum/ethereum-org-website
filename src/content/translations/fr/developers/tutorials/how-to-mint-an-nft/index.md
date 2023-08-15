@@ -3,7 +3,6 @@ title: Comment frapper un NFT (Partie 2/3 du tutoriel NFT)
 description: Ce tutoriel explique comment frapper un NFT sur la blockchain Ethereum grâce à notre contrat intelligent et à Web3.
 author: "Sumi Mudgil"
 tags:
-  - "NFTs"
   - "ERC-721"
   - "alchemy"
   - "solidity"
@@ -76,11 +75,11 @@ Une fois que vous avez créé un compte :
 
 - Téléchargez une image sur Pinata — ce sera l'image de votre NFT. N’hésitez pas à nommer la ressource comme vous le souhaitez
 
-- Après le téléchargement, vous verrez les informations sur le fichier dans le tableau de la page « Fichiers ». Vous verrez également une colonne CID. Vous pouvez copier le CID en cliquant sur le bouton copier à côté de celui-ci. Vous pouvez voir votre téléchargement sur `https://gateway.pinata.cloud/ipfs/<CID>`. Vous pouvez trouver l'image que nous avons utilisée sur IPFS [ici](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f), par exemple.
+- Après le téléchargement, vous verrez les informations sur le fichier dans le tableau de la page « Fichiers ». Vous verrez également une colonne CID. Vous pouvez copier le CID en cliquant sur le bouton copier à côté de celui-ci. Vous pouvez voir votre téléchargement sur `https://gateway.pinata.cloud/ipfs/<CID>`. Vous pouvez trouver l'image que nous avons utilisée sur IPFS [ici](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5), par exemple.
 
 Pour les apprenants plus visuels, les étapes ci-dessus sont résumées ici :
 
-![Comment télécharger votre image sur Pinata](https://gateway.pinata.cloud/ipfs/Qmcdt5VezYzAJDBc4qN5JbANy5paFg9iKDjq8YksRvZhtL)
+![Comment télécharger votre image sur Pinata](./instructionsPinata.gif)
 
 Maintenant, nous allons vouloir télécharger un document de plus sur Pinata. Mais avant de le faire, nous devons le créer !
 
@@ -112,16 +111,16 @@ Une fois que vous avez fini de modifier le fichier JSON, enregistrez les modific
 
 ## Étape 5 : Créer une instance de votre contrat {#instance-contract}
 
-À présent, pour interagir avec notre contrat, nous avons besoin de l'instancier dans notre code. Pour ce faire, nous aurons besoin de l'adresse de notre contrat que nous pouvons obtenir du déploiement ou d'[Etherscan](https://ropsten.etherscan.io/) en recherchant l'adresse que vous avez utilisée pour déployer le contrat.
+À présent, pour interagir avec notre contrat, nous avons besoin de l'instancier dans notre code. Pour ce faire, nous aurons besoin de l'adresse du contrat que nous pouvons obtenir à partir du déploiement ou d'[Etherscan](https://goerli.etherscan.io/) en recherchant l'adresse que vous avez utilisée pour déployer le contrat.
 
 ![Consultez l'adresse de votre contrat sur Etherscan](./viewContractEtherscan.png)
 
-Dans l'exemple ci-dessus, notre adresse de contrat est 0x81c587EB0fE773404c42c1d2666b5f557C470eED.
+Dans l'exemple ci-dessus, notre adresse de contrat est 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
-Ensuite, nous utiliserons la [méthode pour contrat](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) Web3 pour créer notre contrat en utilisant l'ABI et l'adresse. Ajoutez ce qui suit dans votre fichier `mint-nft.js` :
+Ensuite, nous utiliserons la [méthode pour contrat](https://docs.web3js.org/api/web3-eth-contract/class/Contract) Web3 pour créer notre contrat en utilisant l'ABI et l'adresse. Ajoutez ce qui suit dans votre fichier `mint-nft.js` :
 
 ```js
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
@@ -133,7 +132,7 @@ Maintenant, pour créer et envoyer des transactions sur la chaîne Ethereum, nou
 Ajoutez votre clé publique à votre fichier `.env` — si vous avez terminé la première partie du tutoriel, notre fichier `.env` devrait maintenant ressembler à ceci :
 
 ```js
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-goerli.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
@@ -170,7 +169,7 @@ Votre fichier `mint-nft.js` devrait ressembler à ceci maintenant :
    const web3 = createAlchemyWeb3(API_URL);
 
    const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
-   const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED";
+   const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778";
    const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
    async function mintNFT(tokenURI) {
@@ -203,7 +202,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
@@ -269,7 +268,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
@@ -315,11 +314,11 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
 Maintenant, exécutez `node scripts/mint-nft.js` pour déployer votre NFT. Après quelques secondes, vous devriez voir une réponse comme celle-ci dans votre terminal :
 
-    The hash of your transaction is: 0x10e5062309de0cd0be7edc92e8dbab191aa2791111c44274483fa766039e0e00
+    Le hachage de votre transaction est : 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8e8
 
-    Check Alchemy's Mempool to view the status of your transaction!
+    Vérifiez le Mempool d'Alchemy pour voir l'état de votre transaction !
 
-Ensuite, consultez votre [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) pour voir l'état de votre transaction (en attente, minée ou rejetée par le réseau). Si votre transaction a été rejetée, il est également utile de vérifier [Ropsten Etherscan](https://ropsten.etherscan.io/) et rechercher votre hachage de transaction.
+Ensuite, consultez votre [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) pour voir l'état de votre transaction (en attente, minée ou rejetée par le réseau). Si votre transaction a été rejetée, il est également utile de vérifier [Goerli Etherscan](https://goerli.etherscan.io/) et rechercher votre hachage de transaction.
 
 ![Voir le hachage de votre transaction NFT sur Etherscan](./viewNFTEtherscan.png)_Voir le hachage de votre transaction NFT sur Etherscan_
 

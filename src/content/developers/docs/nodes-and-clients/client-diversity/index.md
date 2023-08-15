@@ -25,11 +25,11 @@ A bug in an individual client is less of a risk to the network when representing
 
 ### Resilience to attacks {#resilience}
 
-Client diversity also offers resilience to attacks. For example, an attack that [tricks a particular client](https://twitter.com/vdWijden/status/1437712249926393858) onto a particular branch of the chain is unlikely to be successful because other clients are unlikely to be exploitable in the same way and the canonical chain remains uncorrupted. Low client diversity increases the risk associated with a hack on the dominant client. Client diversity has already proven to be an important defence against malicious attacks on the network, for example the Shanghai denial-of-service attack in 2016 was possible because attackers were able to trick the dominant client (Geth) into executing a slow disk i/o operation tens of thousands of times per block. Because alternative clients were also online which did not share the vulnerability, Ethereum was able to resist the attack and continue to operate while the vulnerability in Geth was fixed.
+Client diversity also offers resilience to attacks. For example, an attack that [tricks a particular client](https://twitter.com/vdWijden/status/1437712249926393858) onto a particular branch of the chain is unlikely to be successful because other clients are unlikely to be exploitable in the same way and the canonical chain remains uncorrupted. Low client diversity increases the risk associated with a hack on the dominant client. Client diversity has already proven to be an important defense against malicious attacks on the network, for example the Shanghai denial-of-service attack in 2016 was possible because attackers were able to trick the dominant client (Geth) into executing a slow disk i/o operation tens of thousands of times per block. Because alternative clients were also online which did not share the vulnerability, Ethereum was able to resist the attack and continue to operate while the vulnerability in Geth was fixed.
 
 ### Proof-of-stake finality {#finality}
 
-A bug in a consensus client with over 33% of the Ethereum nodes could prevent the Beacon Chain from finalizing, meaning users could not trust that transactions would not be reverted or changed at some point. This would be very problematic for many of the apps built on top of Ethereum, particularly DeFi.
+A bug in a consensus client with over 33% of the Ethereum nodes could prevent the consensus layer from finalizing, meaning users could not trust that transactions would not be reverted or changed at some point. This would be very problematic for many of the apps built on top of Ethereum, particularly DeFi.
 
 <Emoji text="🚨" mr="1rem" /> Worse still, a critical bug in a client with a two-thirds majority could cause the chain to <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">incorrectly split and finalize</a>, leading to a large set of validators getting stuck on an invalid chain. If they want to rejoin the correct chain, these validators face slashing or a slow and expensive voluntary withdrawal and reactivation. The magnitude of a slashing scales with the number of culpable nodes with a two-thirds majority slashed maximally (32 ETH).
 
@@ -46,9 +46,9 @@ _Diagram data from [ethernodes.org](https://ethernodes.org) and [clientdiversity
 
 The two pie charts above show snapshots of the current client diversity for the execution and consensus layers (at time of writing in January 2022). The execution layer is overwhelmingly dominated by [Geth](https://geth.ethereum.org/), with [Open Ethereum](https://openethereum.github.io/) a distant second, [Erigon](https://github.com/ledgerwatch/erigon) third and [Nethermind](https://nethermind.io/) fourth, with other clients comprising less than 1 % of the network. The most commonly used client on the consensus layer - [Prysm](https://prysmaticlabs.com/#projects) - is not as dominant as Geth but still represents over 60% of the network. [Lighthouse](https://lighthouse.sigmaprime.io/) and [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) make up ~20% and ~14% respectively, and other clients are rarely used.
 
-The execution layer data were obtained from [Ethernodes](https://ethernodes.org) on 23/01/22. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the Beacon Chain clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. The data is a snapshot over a fixed set of blocks (in this case Beacon blocks in slots 2048001 to 2164916) and Prysm's dominance has sometimes been higher, exceeding 68%. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
+The execution layer data were obtained from [Ethernodes](https://ethernodes.org) on 23/01/2022. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the consensus layer clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. The data is a snapshot over a fixed set of blocks (in this case Beacon blocks in slots 2048001 to 2164916) and Prysm's dominance has sometimes been higher, exceeding 68%. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
 
-Up to date client diversity data for the consensus layer is now available at https://clientdiversity.org/.
+Up to date client diversity data for the consensus layer is now available at [clientdiversity.org](https://clientdiversity.org/).
 
 ## Execution layer {#execution-layer}
 
@@ -66,8 +66,6 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[Akula](https://akula.app)
-
 [Go-Ethereum](https://geth.ethereum.org/)
 
 ### Consensus clients {#consensus-clients}
@@ -78,7 +76,9 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
 
-[Lodestar](https://github.com/ChainSafe/lodestar) - _Under review and audit_
+[Lodestar](https://github.com/ChainSafe/lodestar)
+
+[Prysm](https://docs.prylabs.network/docs/getting-started)
 
 Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. Guides for switching to a minority consensus client are available on [clientdiversity.org](https://clientdiversity.org/).
 
@@ -90,11 +90,9 @@ Several dashboards give real-time client diversity statistics for the execution 
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-- [pools.invis.cloud](https://pools.invis.cloud/)
-- [slashed.info](https://www.slashed.info/)
+  **Execution layer:**
 
-**Execution layer:**
-
+- [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Further reading {#further-reading}
@@ -104,7 +102,7 @@ Several dashboards give real-time client diversity statistics for the execution 
 - [Importance of client diversity](https://our.status.im/the-importance-of-client-diversity/)
 - [List of Ethereum node services](https://ethereumnodes.com/)
 - ["Five Whys" of the client diversity problem](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
-- [Ethereum Diversity and How to Solve For It (Youtube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
+- [Ethereum Diversity and How to Solve For It (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
 ## Related topics {#related-topics}

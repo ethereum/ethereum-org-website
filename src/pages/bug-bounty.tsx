@@ -1,235 +1,284 @@
-import React, { ReactNode, useContext } from "react"
+import React, { ReactNode } from "react"
 import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Box,
+  Center,
+  Heading,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react"
 
-import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import Card from "../components/Card"
 import Leaderboard from "../components/Leaderboard"
 import BugBountyCards from "../components/BugBountyCards"
 import Link from "../components/Link"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import CardList from "../components/CardList"
 import Breadcrumbs from "../components/Breadcrumbs"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
-import {
-  CardContainer,
-  Content,
-  Divider,
-  Page,
-  GrayContainer,
-  GradientContainer,
-  SloganGradient,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
-import { Context } from "../types"
 import { getImage } from "../utils/image"
 
-const HeroCard = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: -2rem;
-  }
-`
+import type { ChildOnlyProp, Context } from "../types"
 
-const HeroContainer = styled.div`
-  flex: 1 1 50%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-`
+const Page = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    w="full"
+    my={0}
+    mx="auto"
+    {...props}
+  />
+)
 
-const LeaderboardContainer = styled.div`
-  flex: 1 1 50%;
-  padding-left: 0rem;
-  padding-right: 2rem;
-  padding-top: 6rem;
-  padding-bottom: 8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 0;
-  }
-`
+const Content = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
 
-const Title = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.text};
-  margin-bottom: 0rem;
-  margin-left: 0.5rem;
-`
+const Title = (props: ChildOnlyProp) => (
+  <Text
+    textTransform="uppercase"
+    fontSize="0.875rem"
+    color="text"
+    mb={0}
+    ml={2}
+    {...props}
+  />
+)
 
-const Subtitle = styled.div`
-  font-size: 1.5rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  max-width: 480px;
-  margin-top: 1rem;
-`
+const H2 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h2"
+    fontSize="1.5rem"
+    fontStyle="normal"
+    fontWeight="700"
+    lineHeight="22px"
+    letterSpacing="0rem"
+    textAlign="left"
+    {...props}
+  />
+)
 
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-wrap: wrap;
-  }
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Text
+    fontSize="1.5rem"
+    lineHeight="140%"
+    color="text200"
+    maxW="480px"
+    mt={4}
+    {...props}
+  />
+)
 
-const ClientRow = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const SloganGradient = (props: ChildOnlyProp) => (
+  <Box
+    fontWeight="800"
+    fontSize={{ base: "2.5rem", lg: "3rem" }}
+    lineHeight="140%"
+    maxW="720px"
+    mt={4}
+    mb={0}
+    bgClip="text"
+    sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+    bg="upgradesGradient"
+  >
+    <Text>{props.children}</Text>
+  </Box>
+)
 
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-`
+const Rules = (props: ChildOnlyProp) => (
+  <Box
+    my={0}
+    mx="auto"
+    maxW="3xl"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    {...props}
+  />
+)
 
-const StyledButton = styled(ButtonLink)`
-  margin-right: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
-  }
-`
+const SubmitInstructions = (props: ChildOnlyProp) => (
+  <Box flex="1 1 600px" mr={8} maxW="100ch" {...props} />
+)
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
+const GradientContainer = (props: ChildOnlyProp) => (
+  <Box
+    w="full"
+    py={16}
+    px={0}
+    mt={8}
+    bg="cardGradient"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+    {...props}
+  />
+)
 
-const H2 = styled.h2`
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
-`
+const LeaderboardContainer = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 50%"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    p={{ lg: "6rem 2rem 8rem 0rem", base: "0" }}
+    {...props}
+  />
+)
 
-const CenterH2 = styled(H2)`
-  text-align: center;
-`
+const FullLeaderboardContainer = (props: ChildOnlyProp) => (
+  <Box
+    my={8}
+    mx="auto"
+    py={0}
+    px={8}
+    maxW="3xl"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    {...props}
+  />
+)
 
-const StyledCard = styled(Card)`
-  flex: 1 1 464px;
-  margin: 1rem;
-  padding: 1.5rem;
-  justify-content: flex-start;
-`
+const On = () => <Box w="8px" h="8px" bg="success400" borderRadius="64px" />
 
-const On = styled.div`
-  width: 8px;
-  height: 8px;
-  background: ${(props) => props.theme.colors.success400};
-  border-radius: 64px;
-`
+const Divider = () => (
+  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider" />
+)
 
-const StyledGrayContainer = styled(GrayContainer)`
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-`
+const Contact = (props: ChildOnlyProp) => (
+  <Box
+    borderRadius="2px"
+    border="1px"
+    borderStyle="solid"
+    borderColor="border"
+    display="flex"
+    justifyContent="space-between"
+    alignItems="center"
+    p={6}
+    my={12}
+    mx={32}
+    w="80%"
+    {...props}
+  />
+)
 
-const FullLeaderboardContainer = styled.div`
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: ${(props) => props.theme.breakpoints.m};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
+const ButtonRow = (props: ChildOnlyProp) => (
+  <Box display="flex" alignItems="center" mt={4} flexWrap="wrap" {...props} />
+)
 
-const Client = styled(GatsbyImage)`
-  margin: 4rem;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-`
+const StyledButton = ({ children, ...props }) => {
+  return (
+    <ButtonLink mr={4} mb={0} {...props}>
+      {children}
+    </ButtonLink>
+  )
+}
 
-const ClientIntro = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.text300};
-  font-weight: 600;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 3rem;
-  }
-`
+const ClientIntro = (props: ChildOnlyProp) => (
+  <Text
+    textTransform="uppercase"
+    fontSize="0.875rem"
+    color="text300"
+    fontWeight="600"
+    mt={{ base: "3rem", lg: "0" }}
+    {...props}
+  />
+)
 
-const Rules = styled.div`
-  margin: 0 auto;
-  max-width: ${(props) => props.theme.breakpoints.m};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
+const ClientRow = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    alignItems="center"
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const SubmitInstructions = styled.div`
-  flex: 1 1 600px;
-  margin-right: 2rem;
-  max-width: 100ch;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0;
-  }
-`
+const Client = (props: ChildOnlyProp) => (
+  <Box m={16} mt={4} mb={12} {...props} />
+)
 
-const TextNoMargin = styled.p`
-  margin-bottom: 0rem;
-`
-const Contact = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 3rem 8rem;
-  width: 80%;
-`
+const HeroCard = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    justifyContent="space-between"
+    flexDirection={{ base: "column", lg: "row" }}
+    pl={{ lg: "0" }}
+    mt={{ base: "-2rem", lg: "0" }}
+    {...props}
+  />
+)
 
-const LeftColumn = styled.div`
-  width: 100%;
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 50%"
+    p={{ lg: "8rem 2rem 8rem 2rem", base: "6rem 0 4rem 0" }}
+    {...props}
+  />
+)
 
-const RightColumn = styled.div`
-  width: 100%;
-  margin-left: 2rem;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    flex-direction: column;
-  }
-`
+const Row = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    alignItems="center"
+    flexWrap={{ base: "nowrap", lg: "wrap" }}
+    {...props}
+  />
+)
 
-const Faq = styled.div`
-  display: flex;
-  margin-top: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const StyledCardContainer = (props: ChildOnlyProp) => (
+  <Box display="flex" flexWrap="wrap" m="2rem -1rem 3rem -1rem" {...props} />
+)
+
+const StyledCard = ({ children, ...props }) => {
+  return (
+    <Card flex="1 1 464px" m={4} p={6} justifyContent="flex-start" {...props}>
+      {children}
+    </Card>
+  )
+}
+
+const StyledGrayContainer = ({ children, ...props }) => (
+  <Box
+    w="full"
+    py={16}
+    px={0}
+    mt={8}
+    mb={12}
+    bg="grayBackground"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+    {...props}
+  >
+    {children}
+  </Box>
+)
+
+const Faq = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    mt={16}
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
+const LeftColumn = (props: ChildOnlyProp) => <Box w="full" {...props} />
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box
+    w="full"
+    ml={{ base: "0rem", lg: "2rem" }}
+    flexDirection={{ base: "column", lg: "column" }}
+    {...props}
+  />
+)
 
 type BountyHuntersArg = {
   score?: number | null
@@ -264,7 +313,7 @@ const BugBountiesPage = ({
   data,
   location,
 }: PageProps<Queries.BugBountyPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const theme = useTheme()
   const isDarkTheme = theme.isDark
 
@@ -392,11 +441,8 @@ const BugBountiesPage = ({
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-upgrades-bug-bounty-meta-title", intl)}
-        description={translateMessageId(
-          "page-upgrades-bug-bounty-meta-description",
-          intl
-        )}
+        title={t("page-upgrades-bug-bounty-meta-title")}
+        description={t("page-upgrades-bug-bounty-meta-description")}
       />
       <Content>
         <HeroCard>
@@ -410,7 +456,7 @@ const BugBountiesPage = ({
             </Row>
             <SloganGradient>
               <Translation id="page-upgrades-bug-bounty-slogan" />{" "}
-              <Emoji size={1} text=":bug:" />
+              <Emoji text=":bug:" />
             </SloganGradient>
             <Subtitle>
               <Translation id="page-upgrades-bug-bounty-subtitle" />
@@ -436,37 +482,49 @@ const BugBountiesPage = ({
         <Translation id="page-upgrades-bug-bounty-clients" />
       </ClientIntro>
       <ClientRow>
-        <Client image={getImage(data.besu)!} alt="" />
-        <Client image={getImage(data.erigon)!} alt="" />
-        <Client image={getImage(data.geth)!} alt="" />
-        <Client image={getImage(data.nethermind)!} alt="" />
+        <Client>
+          <GatsbyImage image={getImage(data.besu)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.erigon)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.geth)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.nethermind)!} alt=""></GatsbyImage>
+        </Client>
       </ClientRow>
       <ClientRow>
-        <Client image={lighthouseImage!} alt="" />
-        <Client image={getImage(data.lodestar)!} alt="" />
-        <Client image={getImage(data.nimbus)!} alt="" />
-        <Client image={getImage(data.prysm)!} alt="" />
-        <Client image={tekuImage!} alt="" />
+        <Client>
+          <GatsbyImage image={lighthouseImage!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.lodestar)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.nimbus)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.prysm)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={tekuImage!} alt=""></GatsbyImage>
+        </Client>
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
           <H2>
             <Translation id="page-upgrades-bug-bounty-validity" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-validity-desc" />
-          </p>
+          </Text>
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"
-              title={translateMessageId(
-                "page-upgrades-bug-bounty-ledger-title",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-bug-bounty-ledger-desc",
-                intl
-              )}
+              title={t("page-upgrades-bug-bounty-ledger-title")}
+              description={t("page-upgrades-bug-bounty-ledger-desc")}
             >
               <Link to="https://github.com/ethereum/consensus-specs">
                 <Translation id="page-upgrades-bug-bounty-specs" />
@@ -476,129 +534,141 @@ const BugBountiesPage = ({
                 <Translation id="page-upgrades-bug-bounty-execution-specs" />
               </Link>
               <br />
-              <div>
-                <p>
+              <Box>
+                <Text>
                   <Translation id="page-upgrades-bug-bounty-annotations" />
-                </p>
-                <ul>
-                  <li>
+                </Text>
+                <UnorderedList>
+                  <ListItem>
                     <Link to="https://benjaminion.xyz/eth2-annotated-spec/">
                       Ben Edgington's{" "}
                       <Translation id="page-upgrades-bug-bounty-annotated-specs" />
                     </Link>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Link to="https://github.com/ethereum/annotated-spec">
                       Vitalik Buterin's{" "}
                       <Translation id="page-upgrades-bug-bounty-annotated-specs" />
                     </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </h4>
-                <ul>
-                  <li>
+                </Heading>
+                <UnorderedList>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-1" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-2" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-3" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-4" />
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-specs-docs" />
-                </h4>
+                </Heading>
                 <CardList content={specs} />
-              </div>
+              </Box>
             </StyledCard>
             <StyledCard
               emoji=":computer:"
-              title={translateMessageId(
-                "page-upgrades-bug-bounty-client-bugs",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-bug-bounty-client-bugs-desc",
-                intl
-              )}
+              title={t("page-upgrades-bug-bounty-client-bugs")}
+              description={t("page-upgrades-bug-bounty-client-bugs-desc")}
             >
-              <div>
-                <p>
+              <Box>
+                <Text>
                   <Translation id="page-upgrades-bug-bounty-client-bugs-desc-2" />
-                </p>
-                <h4>
+                </Text>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </h4>
-                <ul>
-                  <li>
+                </Heading>
+                <UnorderedList>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-clients-type-1" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-clients-type-2" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {" "}
                     <Translation id="page-upgrades-bug-bounty-clients-type-3" />
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </h4>
+                </Heading>
                 <CardList content={clients} />
-              </div>
+              </Box>
             </StyledCard>
             <StyledCard
               emoji=":book:"
-              title={translateMessageId(
-                "page-upgrades-bug-bounty-misc-bugs",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-bug-bounty-misc-bugs-desc",
-                intl
-              )}
+              title={t("page-upgrades-bug-bounty-misc-bugs")}
+              description={t("page-upgrades-bug-bounty-misc-bugs-desc")}
             >
-              <div>
-                <p>
+              <Box>
+                <Text>
                   <Translation id="page-upgrades-bug-bounty-misc-bugs-desc-2" />
-                </p>
-              </div>
-              <div>
-                <h4>
+                </Text>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </h4>
+                </Heading>
                 <Link to="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
                   SECURITY.md
                 </Link>
-              </div>
+              </Box>
             </StyledCard>
             <StyledCard
               emoji=":scroll:"
-              title={translateMessageId(
-                "page-upgrades-bug-bounty-deposit-bugs",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-bug-bounty-deposit-bugs-desc",
-                intl
-              )}
+              title={t("page-upgrades-bug-bounty-deposit-bugs")}
+              description={t("page-upgrades-bug-bounty-deposit-bugs-desc")}
             >
-              <div>
-                <h4>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </h4>
+                </Heading>
                 <Link to="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
                   Deposit Contract Specifications
                 </Link>
@@ -606,15 +676,15 @@ const BugBountiesPage = ({
                 <Link to="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
                   Deposit Contract Source Code
                 </Link>
-              </div>
+              </Box>
             </StyledCard>
           </StyledCardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-not-included" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-not-included-desc" />
-          </p>
+          </Text>
         </Content>
       </StyledGrayContainer>
       <Content>
@@ -623,30 +693,30 @@ const BugBountiesPage = ({
             <H2>
               <Translation id="page-upgrades-bug-bounty-submit" />
             </H2>
-            <p>
+            <Text>
               <Translation id="page-upgrades-bug-bounty-submit-desc" />{" "}
               <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
                 <Translation id="page-upgrades-bug-bounty-owasp" />
               </Link>
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-upgrades-bug-bounty-points" />
-            </p>
-            <p>
-              <b>
+            </Text>
+            <Text>
+              <Text as="b">
                 <Translation id="page-upgrades-bug-bounty-quality" />
-              </b>
+              </Text>
               <Translation id="page-upgrades-bug-bounty-quality-desc" />
-            </p>
-            <p>
-              <b>
+            </Text>
+            <Text>
+              <Text as="b">
                 <Translation id="page-upgrades-bug-bounty-quality-repro" />
-              </b>
+              </Text>
               <Translation id="page-upgrades-bug-bounty-quality-repro-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-upgrades-bug-bounty-quality-fix" />
-            </p>
+            </Text>
           </SubmitInstructions>
           {/* TODO: Re-add Points Exchange (BugBountyPoints Component) */}
         </Row>
@@ -657,25 +727,25 @@ const BugBountiesPage = ({
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting" />
           </H2>
-          <p>
-            <em>
+          <Text>
+            <Text as="em">
               <Translation id="page-upgrades-bug-bounty-hunting-desc" />
-            </em>
-          </p>
-          <ul>
-            <li>
+            </Text>
+          </Text>
+          <UnorderedList>
+            <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-1" />
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-2" />
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-3" />
-            </li>
-            <li id="leaderboard">
+            </ListItem>
+            <ListItem id="leaderboard">
               <Translation id="page-upgrades-bug-bounty-hunting-li-4" />
-            </li>
-          </ul>
+            </ListItem>
+          </UnorderedList>
         </Rules>
       </Content>
       <GradientContainer>
@@ -683,158 +753,118 @@ const BugBountiesPage = ({
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle" />
-          </p>
+          </Text>
           <Leaderboard content={executionBountyHunters} />
         </FullLeaderboardContainer>
-
         <FullLeaderboardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard-subtitle" />
-          </p>
+          </Text>
           <Leaderboard content={consensusBountyHunters} />
         </FullLeaderboardContainer>
       </GradientContainer>
       <Divider />
       <Content>
-        <CenterH2>
-          <Translation id="page-upgrades-question-title" />
-        </CenterH2>
+        <Center>
+          <H2>
+            <Translation id="page-upgrades-question-title" />
+          </H2>
+        </Center>
         <Faq>
           <LeftColumn>
             <ExpandableCard
-              title="What should a good vulnerability submission look like?"
-              contentPreview="See a real example of a quality vulnerability submission."
+              title={t("bug-bounty-faq-q1-title")}
+              contentPreview={t("bug-bounty-faq-q1-contentPreview")}
             >
-              <p>
-                <b>Description:</b> Remote Denial-of-service using non-validated
-                blocks
-              </p>
-              <p>
-                <b>Attack scenario:</b> An attacker can send blocks that may
-                require a high amount of computation (the maximum gasLimit) but
-                has no proof-of-work. If the attacker sends blocks continuously,
-                the attacker may force the victim node to 100% CPU utilization.
-              </p>
-              <p>
-                <b>Impact:</b> An attacker can abuse CPU utilization on remote
-                nodes, possibly causing full DoS.
-              </p>
-              <p>
-                <b>Components:</b> Go client version v0.6.8
-              </p>
-              <p>
-                <b>Reproduction:</b> Send a block to a Go node that contains
-                many txs but no valid PoW.
-              </p>
-              <p>
-                <b>Details:</b> Blocks are validated in the method{" "}
-                <code>Process(Block, dontReact)</code>. This method performs
-                expensive CPU-intensive tasks, such as executing transactions (
-                <code>sm.ApplyDiff</code>) and afterward it verifies the
-                proof-of-work (<code>sm.ValidateBlock()</code>). This allows an
-                attacker to send blocks that may require a high amount of
-                computation (the maximum <code>gasLimit</code>) but has no
-                proof-of-work. If the attacker sends blocks continuously, the
-                attacker may force the victim node to 100% CPU utilization.
-              </p>
-              <p>
-                <b>Fix:</b> Invert the order of the checks.
-              </p>
+              <Text>
+                <Translation id="bug-bounty-faq-q1-content-1" />
+              </Text>
+              <Text>
+                <Translation id="bug-bounty-faq-q1-content-2" />
+              </Text>
+              <Text>
+                <Translation id="bug-bounty-faq-q1-content-3" />
+              </Text>
+              <Text>
+                <Translation id="bug-bounty-faq-q1-content-4" />
+              </Text>
+              <Text>
+                <Translation id="bug-bounty-faq-q1-content-5" />
+              </Text>
+              <Text>
+                <Translation id="bug-bounty-faq-q1-content-6" />
+              </Text>
+              <Text>
+                <Translation id="bug-bounty-faq-q1-content-7" />
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title="Is the bug bounty program is time limited?"
-              contentPreview="No."
+              title={t("bug-bounty-faq-q2-title")}
+              contentPreview={t("bug-bounty-faq-q2-contentPreview")}
             >
-              <p>
-                No end date is currently set. See{" "}
-                <a
-                  href="https://blog.ethereum.org/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  the Ethereum Foundation blog
-                </a>{" "}
-                for the latest news.
-              </p>
+              <Text>
+                <Translation id="bug-bounty-faq-q2-content-1" />
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title="How are bounties paid out?"
-              contentPreview="Rewards are paid out in ETH or DAI."
+              title={t("bug-bounty-faq-q3-title")}
+              contentPreview={t("bug-bounty-faq-q3-contentPreview")}
             >
-              <p>
-                Rewards are paid out in ETH or DAI after the submission has been
-                validated, usually a few days later. Local laws require us to
-                ask for <b>proof of your identity</b>. In addition, we will need
-                your ETH address.
-              </p>
+              <Text>
+                <Translation id="bug-bounty-faq-q3-content-1" />
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title="Can I donate my reward to charity?"
-              contentPreview="Yes!"
+              title={t("bug-bounty-faq-q4-title")}
+              contentPreview={t("bug-bounty-faq-q4-contentPreview")}
             >
-              <p>
-                We can donate your reward to an established charitable
-                organization of your choice.
-              </p>
+              <Text>
+                <Translation id="bug-bounty-faq-q4-content-1" />
+              </Text>
             </ExpandableCard>
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
-              title="I reported an issue / vulnerability but have not received a response!"
-              contentPreview="Please allow a few days for someone to respond to your submission."
+              title={t("bug-bounty-faq-q5-title")}
+              contentPreview={t("bug-bounty-faq-q5-contentPreview")}
             >
-              <p>
-                We aim to respond to submissions as fast as possible. Feel free
-                to email us at{" "}
-                <a
-                  href="mailto:bounty@ethereum.org"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  bounty@ethereum.org
-                </a>{" "}
-                if you have not received a response within a day or two.
-              </p>
+              <Text>
+                <Translation id="bug-bounty-faq-q5-content-1" />
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title="I want to be anonymous / I do not want my name on the leader board."
-              contentPreview="You can do this, but it might make you ineligble for rewards."
+              title={t("bug-bounty-faq-q6-title")}
+              contentPreview={t("bug-bounty-faq-q6-contentPreview")}
             >
-              <p>
-                Submitting anonymously or with a pseudonym is OK, but will make
-                you ineligible for ETH/DAI rewards. To be eligible for ETH/DAI
-                rewards, we require your real name and a proof of your identity.
-                Donating your bounty to a charity doesn’t require your identity.
-              </p>
-              <p>
-                Please let us know if you do not want your name/nick displayed
-                on the leader board.
-              </p>
+              <Text>
+                <Translation id="bug-bounty-faq-q6-content-1" />
+              </Text>
+              <Text>
+                <Translation id="bug-bounty-faq-q6-content-2" />
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title="What are the points in the leaderboard?"
-              contentPreview="Every found vulnerability / issue is assigned a score"
+              title={t("bug-bounty-faq-q7-title")}
+              contentPreview={t("bug-bounty-faq-q7-contentPreview")}
             >
-              <p>
-                Every found vulnerability / issue is assigned a score. Bounty
-                hunters are ranked on our leaderboard by total points.
-              </p>
+              <Text>
+                <Translation id="bug-bounty-faq-q7-content-1" />
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title="Do you have a PGP key?"
-              contentPreview="Yes. Expand for details."
+              title={t("bug-bounty-faq-q8-title")}
+              contentPreview={t("bug-bounty-faq-q8-contentPreview")}
             >
-              <p>
-                Please use{" "}
-                <code>AE96 ED96 9E47 9B00 84F3 E17F E88D 3334 FA5F 6A0A</code>
-              </p>
+              <Text>
+                <Translation id="bug-bounty-faq-q8-content-1" />
+              </Text>
               <Link to="https://ethereum.org/security_at_ethereum.org.asc">
-                PGP Key
+                <Translation id="bug-bounty-faq-q8-PGP-key" />
               </Link>
             </ExpandableCard>
           </RightColumn>
@@ -842,16 +872,16 @@ const BugBountiesPage = ({
       </Content>
       <Divider />
       <Contact>
-        <div>
+        <Box>
           <H2>
             <Translation id="page-upgrades-bug-bounty-questions" />
           </H2>
-          <TextNoMargin>
+          <Text mb="0rem">
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
             <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
-          </TextNoMargin>
-        </div>
-        <Emoji size={3} text=":email:" />
+          </Text>
+        </Box>
+        <Emoji fontSize="5xl" text=":email:" />
       </Contact>
       <FeedbackCard />
     </Page>
@@ -887,9 +917,23 @@ export const ClientLogosSmall = graphql`
 `
 
 export const query = graphql`
-  query BugBountyPage {
+  query BugBountyPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-bug-bounty", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     consensusBountyHunters: allConsensusBountyHuntersCsv(
-      sort: { order: DESC, fields: score }
+      sort: { score: DESC }
     ) {
       nodes {
         username
@@ -898,7 +942,7 @@ export const query = graphql`
       }
     }
     executionBountyHunters: allExecutionBountyHuntersCsv(
-      sort: { order: DESC, fields: score }
+      sort: { score: DESC }
     ) {
       nodes {
         username

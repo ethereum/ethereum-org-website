@@ -1,312 +1,130 @@
 import React from "react"
-import styled from "@emotion/styled"
+import {
+  Box,
+  Flex,
+  Heading,
+  HeadingProps,
+  Image,
+  SimpleGrid,
+  Text,
+  useTheme,
+} from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink, {
+  IProps as IButtonLinkProps,
+} from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
 
-import {
-  CardContainer,
-  Content,
-  Divider,
-  GrayContainer,
-  Page,
-} from "../components/SharedStyledComponents"
-import { translateMessageId } from "../utils/translations"
 import { getImage } from "../utils/image"
-import { Context } from "../types"
 
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+import type { ChildOnlyProp, Context } from "../types"
 
-const StyledButtonLink = styled(ButtonLink)`
-  margin-left: 0.5rem;
-  margin-top: 0rem;
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 1rem;
-    margin-left: 0rem;
-  }
-`
+const CardContainer = ({ children }: ChildOnlyProp) => {
+  return (
+    <Flex wrap="wrap" mx={-4}>
+      {children}
+    </Flex>
+  )
+}
 
-const StyledContent = styled(Content)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 1rem;
-  }
-`
+const Content = ({ children }: ChildOnlyProp) => {
+  return (
+    <Box py={4} px={8} w="full">
+      {children}
+    </Box>
+  )
+}
 
-const StyledCard = styled(ActionCard)`
-  min-width: 480px;
-  margin: 1rem;
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0;
-    min-width: min(100%, 240px);
-  }
-`
+const Divider = () => {
+  return <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+}
 
-const StyledGetInvolvedCard = styled(Card)`
-  margin: 1rem;
-  padding: 1.5rem;
-  flex: 1 0 30%;
-  min-width: 280px;
-  max-width: 31%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 46%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-`
+const Page = ({ children }: ChildOnlyProp) => {
+  return (
+    <Flex direction="column" alignItems="center" w="full" mx="auto">
+      {children}
+    </Flex>
+  )
+}
 
-const StyledPurpleContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxTurquoise};
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  padding-left: 2rem;
-  width: 100%;
-  height: 720px;
-  margin-top: -1px;
-  /* border-top: 1px solid ${(props) => props.theme.colors.text}; */
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    height: 100%;
-    padding-top: 2rem;
-    padding-left: 0rem;
-    padding-bottom: 2rem;
-  }
-`
+const ButtonRow = ({ children }: ChildOnlyProp) => {
+  return (
+    <Flex alignItems="flex-start" direction={{ base: "column", md: "row" }}>
+      {children}
+    </Flex>
+  )
+}
 
-const StyledGrayContainer = styled(GrayContainer)`
-  box-shadow: inset 0px 0px 0px
-    ${(props) => props.theme.colors.tableItemBoxShadow};
-  padding: 0rem;
-  padding-bottom: 4rem;
-  margin-top: 0rem;
-`
+const StyledButtonLink = ({ children, ...props }: IButtonLinkProps) => {
+  return (
+    <ButtonLink
+      mt={{ base: 4, md: 0 }}
+      ml={{ base: 0, md: 2 }}
+      display="flex"
+      alignItems="center"
+      {...props}
+    >
+      {children}
+    </ButtonLink>
+  )
+}
 
-const StyledCardContainer = styled(CardContainer)`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-columns: 1fr;
-  }
-`
+const RowReverse = ({ children }: ChildOnlyProp) => {
+  return (
+    <Flex
+      direction={{ base: "column-reverse", lg: "row-reverse" }}
+      alignItems={{ base: "center", lg: "normal" }}
+    >
+      {children}
+    </Flex>
+  )
+}
 
-const IntroRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 3rem;
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-    margin: 0rem;
-  }
-`
+const ImageContainer = ({ children }: ChildOnlyProp) => {
+  return (
+    <Flex h="full" w={{ base: "75%", lg: "full" }}>
+      {children}
+    </Flex>
+  )
+}
 
-const RowReverse = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-`
+const Subtitle = ({ children }: ChildOnlyProp) => {
+  return (
+    <Text mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
+      {children}
+    </Text>
+  )
+}
 
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-`
+const FeatureContent = ({ children }: ChildOnlyProp) => {
+  return (
+    <Flex
+      direction="column"
+      boxSize="full"
+      justifyContent="center"
+      p={{ base: 8, lg: 24 }}
+    >
+      {children}
+    </Flex>
+  )
+}
 
-const CentralColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-`
-
-const ImageContainer = styled.div`
-  background: "#f1fffd";
-  display: flex;
-  height: 100%;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 75%;
-  }
-`
-
-const IntroImage = styled(GatsbyImage)`
-  width: 100%;
-  background-size: cover;
-  background: no-repeat 50px;
-`
-
-const FeatureImage = styled(GatsbyImage)`
-  width: 100%;
-`
-
-const Subtitle = styled.div`
-  margin-bottom: 2rem;
-  font-size: 1.25rem;
-  line-height: 140%;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 1rem;
-  }
-`
-
-const H2 = styled.h2`
-  margin-top: 0rem;
-`
-
-const OpenSourceContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxTurquoise};
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  padding-left: 2rem;
-  width: 100%;
-  height: 720px;
-  margin-top: -1px;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    height: 100%;
-    padding-top: 2rem;
-    padding-left: 0rem;
-    padding-bottom: 2rem;
-  }
-`
-
-const PoapContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxPink};
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  padding-left: 2rem;
-  height: 720px;
-  width: 100%;
-  margin-top: -1px;
-  margin-bottom: 0rem;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    height: 100%;
-    padding-top: 2rem;
-    padding-left: 0rem;
-    padding-bottom: 2rem;
-  }
-`
-
-const SupportContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxPurple};
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  height: 720px;
-  width: 100%;
-  margin-top: -1px;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    height: 100%;
-  }
-`
-
-const LeftColumn = styled.div`
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-  }
-`
-
-const FeatureContent = styled(LeftColumn)`
-  padding: 6rem;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 2rem;
-  }
-`
-
-const LeftColumnContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`
-
-const IntroLeftColumn = styled(LeftColumn)`
-  padding: 6rem;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 0rem;
-  }
-`
-
-const TwoColumnContent = styled(Content)`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
-const Column = styled.div`
-  flex: 0 0 50%;
-  max-width: 75%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-  margin-bottom: 1.5rem;
-`
-
-const StyledCallout = styled(Callout)`
-  flex: 1 1 416px;
-  min-height: 100%;
-`
+const H2 = ({ children, ...props }: HeadingProps) => {
+  return (
+    <Heading fontSize={{ base: "2xl", md: "2rem" }} mt={0} {...props}>
+      {children}
+    </Heading>
+  )
+}
 
 interface ICard {
   image: any
@@ -324,56 +142,45 @@ interface IGetInvolvedCard {
 
 const CommunityPage = ({
   data,
+  location,
 }: PageProps<Queries.CommunityPageQuery, Context>) => {
-  const intl = useIntl()
-
+  const { t } = useTranslation()
+  const theme = useTheme()
   const heroContent = {
-    title: translateMessageId("page-community-hero-title", intl),
-    header: translateMessageId("page-community-hero-header", intl),
-    subtitle: translateMessageId("page-community-hero-subtitle", intl),
+    title: t("page-community-hero-title"),
+    header: t("page-community-hero-header"),
+    subtitle: t("page-community-hero-subtitle"),
     image: getImage(data.enterprise)!,
-    alt: translateMessageId("page-community-hero-alt", intl),
+    alt: t("page-community-hero-alt"),
   }
 
   const cards: Array<ICard> = [
     {
       image: getImage(data.docking),
-      title: translateMessageId("page-community-card-1-title", intl),
-      description: translateMessageId(
-        "page-community-card-1-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
+      title: t("page-community-card-1-title"),
+      description: t("page-community-card-1-description"),
+      alt: t("page-index-get-started-wallet-image-alt"),
       to: "/community/online/",
     },
     {
       image: getImage(data.eth),
-      title: translateMessageId("page-community-card-2-title", intl),
-      description: translateMessageId(
-        "page-community-card-2-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-eth-image-alt", intl),
+      title: t("page-community-card-2-title"),
+      description: t("page-community-card-2-description"),
+      alt: t("page-index-get-started-eth-image-alt"),
       to: "/community/events/",
     },
     {
       image: getImage(data.doge),
-      title: translateMessageId("page-community-card-3-title", intl),
-      description: translateMessageId(
-        "page-community-card-3-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
+      title: t("page-community-card-3-title"),
+      description: t("page-community-card-3-description"),
+      alt: t("page-index-get-started-dapps-image-alt"),
       to: "/community/get-involved/",
     },
     {
       image: getImage(data.future),
-      title: translateMessageId("page-community-card-4-title", intl),
-      description: translateMessageId(
-        "page-community-card-4-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
+      title: t("page-community-card-4-title"),
+      description: t("page-community-card-4-description"),
+      alt: t("page-index-get-started-dapps-image-alt"),
       to: "/community/grants/",
     },
   ]
@@ -381,60 +188,55 @@ const CommunityPage = ({
   const whyGetInvolvedCards: Array<IGetInvolvedCard> = [
     {
       emoji: ":mage:",
-      title: translateMessageId(
-        "page-community-why-get-involved-card-1-title",
-        intl
-      ),
-      description: translateMessageId(
-        "page-community-why-get-involved-card-1-description",
-        intl
-      ),
+      title: t("page-community-why-get-involved-card-1-title"),
+      description: t("page-community-why-get-involved-card-1-description"),
     },
     {
       emoji: ":dollar:",
-      title: translateMessageId(
-        "page-community-why-get-involved-card-2-title",
-        intl
-      ),
-      description: translateMessageId(
-        "page-community-why-get-involved-card-2-description",
-        intl
-      ),
+      title: t("page-community-why-get-involved-card-2-title"),
+      description: t("page-community-why-get-involved-card-2-description"),
     },
     {
       emoji: ":collision:",
-      title: translateMessageId(
-        "page-community-why-get-involved-card-3-title",
-        intl
-      ),
-      description: translateMessageId(
-        "page-community-why-get-involved-card-3-description",
-        intl
-      ),
+      title: t("page-community-why-get-involved-card-3-title"),
+      description: t("page-community-why-get-involved-card-3-description"),
     },
   ]
 
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-community-meta-title", intl)}
-        description={translateMessageId(
-          "page-community-meta-description",
-          intl
-        )}
+        title={t("page-community-meta-title")}
+        description={t("page-community-meta-description")}
       />
       <PageHero isReverse content={heroContent} />
       <Divider />
-      <StyledPurpleContainer>
+      <Flex
+        bg="homeBoxTurquoise"
+        alignItems="center"
+        direction="row-reverse"
+        py={{ base: 8, lg: 0 }}
+        pl={{ base: 0, lg: 8 }}
+        w="full"
+        h={{ base: "full", lg: "720px" }}
+        mt="-1px"
+        borderBottom="1px solid"
+        borderColor="text"
+      >
         <Content>
-          <CentralColumn>
+          <Flex direction="column" alignItems="center" mb={8}>
             <H2>
               <Translation id="page-community-why-get-involved-title" />
             </H2>
-          </CentralColumn>
+          </Flex>
           <CardContainer>
             {whyGetInvolvedCards.map((card, idx) => (
-              <StyledGetInvolvedCard
+              <Card
+                m={4}
+                p={6}
+                flex="1 0 30%"
+                minW="280px"
+                maxW={{ base: "full", md: "46%", lg: "31%" }}
                 key={idx}
                 emoji={card.emoji}
                 title={card.title}
@@ -443,31 +245,50 @@ const CommunityPage = ({
             ))}
           </CardContainer>
         </Content>
-      </StyledPurpleContainer>
-      <StyledGrayContainer>
-        <StyledContent>
-          <IntroRow>
-            <IntroLeftColumn>
+      </Flex>
+      <Box
+        w="full"
+        pb={16}
+        bg="grayBackground"
+        boxShadow={`inset 0px 0px 0px ${theme.colors.tableItemBoxShadow}`}
+      >
+        <Box py={4} px={{ base: 4, lg: 8 }} w="full">
+          <Flex
+            direction={{ base: "column-reverse", md: "row" }}
+            alignItems="center"
+            mb={{ base: 0, m: 12 }}
+            mt={{ base: 0, m: 4 }}
+          >
+            <Box p={{ base: 0, sm: 8, lg: 24 }} boxSize="full">
               <H2 id="get-involved">
                 <Translation id="page-community-get-involved-title" />
               </H2>
               <Subtitle>
                 <Translation id="page-community-get-involved-description" />
               </Subtitle>
-            </IntroLeftColumn>
+            </Box>
             <ImageContainer>
-              <IntroImage
+              <Image
+                as={GatsbyImage}
+                w="full"
+                bgSize="cover"
+                bg="no-repeat 50px"
                 image={getImage(data.developerBlocks)!}
-                alt={translateMessageId(
-                  "page-community-get-involved-image-alt",
-                  intl
-                )}
+                alt={t("page-community-get-involved-image-alt")}
               />
             </ImageContainer>
-          </IntroRow>
-          <StyledCardContainer>
+          </Flex>
+          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 8, lg: 0 }}>
             {cards.map((card, idx) => (
-              <StyledCard
+              <Box
+                as={ActionCard}
+                minW={{ base: "min(100%, 240px)", lg: "440px" }}
+                m={{ base: 0, lg: 4 }}
+                borderRadius="sm"
+                border="1px solid"
+                borderColor="text"
+                bg="background.base"
+                boxShadow={theme.colors.cardBoxShadow}
                 key={idx}
                 title={card.title}
                 description={card.description}
@@ -476,10 +297,22 @@ const CommunityPage = ({
                 alt={card.alt}
               />
             ))}
-          </StyledCardContainer>
-        </StyledContent>
-      </StyledGrayContainer>
-      <OpenSourceContainer>
+          </SimpleGrid>
+        </Box>
+      </Box>
+      <Flex
+        bg="homeBoxTurquoise"
+        alignItems="center"
+        direction={{ base: "column-reverse", lg: "row-reverse" }}
+        pl={{ base: 0, lg: 8 }}
+        py={{ base: 8, lg: 0 }}
+        w="full"
+        h={{ base: "full", lg: "720px" }}
+        mt="-1px"
+        borderTop="1px solid"
+        borderBottom="1px solid"
+        borderColor="text"
+      >
         <RowReverse>
           <FeatureContent>
             <H2>
@@ -498,20 +331,34 @@ const CommunityPage = ({
             </ButtonRow>
           </FeatureContent>
           <ImageContainer>
-            <FeatureImage
+            <Image
+              as={GatsbyImage}
+              w="full"
               image={getImage(data.ethereum)!}
-              alt={translateMessageId(
-                "page-community-open-source-image-alt",
-                intl
-              )}
+              alt={t("page-community-open-source-image-alt")}
             />
           </ImageContainer>
         </RowReverse>
-      </OpenSourceContainer>
-      <PoapContainer>
-        <Row>
+      </Flex>
+      <Flex
+        bg="homeBoxPink"
+        alignItems="center"
+        direction={{ base: "column-reverse", lg: "row-reverse" }}
+        pl={{ base: 0, lg: 8 }}
+        py={{ base: 8, lg: 0 }}
+        h={{ base: "full", lg: "720px" }}
+        w="full"
+        mt="-1px"
+        borderTop="1px solid"
+        borderBottom="1px solid"
+        borderColor="text"
+      >
+        <Flex
+          direction={{ base: "column-reverse", lg: "row" }}
+          alignItems="center"
+        >
           <FeatureContent>
-            <LeftColumnContent>
+            <Flex direction="column" justifyContent="center">
               <H2>
                 <Translation id="page-community-contribute" />
               </H2>
@@ -529,17 +376,29 @@ const CommunityPage = ({
                   <Translation id="page-community-contribute-secondary-button" />
                 </StyledButtonLink>
               </ButtonRow>
-            </LeftColumnContent>
+            </Flex>
           </FeatureContent>
           <ImageContainer>
-            <FeatureImage
+            <Image
+              as={GatsbyImage}
+              w="full"
               image={getImage(data.finance)!}
-              alt={translateMessageId("page-index-internet-image-alt", intl)}
+              alt={t("page-index-internet-image-alt")}
             />
           </ImageContainer>
-        </Row>
-      </PoapContainer>
-      <SupportContainer>
+        </Flex>
+      </Flex>
+      <Flex
+        bg="homeBoxPurple"
+        alignItems="center"
+        direction={{ base: "column-reverse", lg: "row" }}
+        h={{ base: "full", lg: "720px" }}
+        w="full"
+        mt="-1px"
+        borderTop="1px solid"
+        borderBottom="1px solid"
+        borderColor="text"
+      >
         <RowReverse>
           <FeatureContent>
             <H2>
@@ -548,54 +407,68 @@ const CommunityPage = ({
             <Subtitle>
               <Translation id="page-community-support-description" />
             </Subtitle>
-            <div>
+            <Box>
               <ButtonLink to="/community/support/">
                 <Translation id="page-community-support-button" />
               </ButtonLink>
-            </div>
+            </Box>
           </FeatureContent>
           <ImageContainer>
-            <FeatureImage
+            <Image
+              as={GatsbyImage}
+              w="full"
               image={getImage(data.hackathon)!}
-              alt={translateMessageId("page-community-support-alt", intl)}
+              alt={t("page-community-support-alt")}
             />
           </ImageContainer>
         </RowReverse>
-      </SupportContainer>
+      </Flex>
       <Divider />
-      <TwoColumnContent>
-        <Column>
-          <h2>
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        alignItems={{ base: "felx-start", lg: "center" }}
+        w="full"
+        py={4}
+        px={8}
+      >
+        <Box flex="0 0 50%" maxW={{ base: "full", md: "75%" }} mb={6}>
+          <Heading fontSize={{ base: "2xl", md: "2rem" }}>
             <Translation id="page-community-try-ethereum" />
-          </h2>
-        </Column>
-      </TwoColumnContent>
+          </Heading>
+        </Box>
+      </Flex>
       <Content>
         <CardContainer>
-          <StyledCallout
+          <Box
+            as={Callout}
+            flex="1 1 416px"
+            minH="full"
             image={getImage(data.eth)}
             titleKey="page-community-get-eth-title"
-            alt={translateMessageId("page-community-get-eth-alt", intl)}
+            alt={t("page-community-get-eth-alt")}
             descriptionKey="page-community-get-eth-description"
           >
-            <div>
+            <Box>
               <ButtonLink to="/get-eth/">
                 <Translation id="page-community-get-eth" />
               </ButtonLink>
-            </div>
-          </StyledCallout>
-          <StyledCallout
+            </Box>
+          </Box>
+          <Box
+            as={Callout}
+            flex="1 1 416px"
+            minH="full"
             image={getImage(data.doge)}
             titleKey="page-community-explore-dapps-title"
-            alt={translateMessageId("page-community-explore-dapps-alt", intl)}
+            alt={t("page-community-explore-dapps-alt")}
             descriptionKey="page-community-explore-dapps-description"
           >
-            <div>
+            <Box>
               <ButtonLink to="/dapps/">
                 <Translation id="page-community-explore-dapps" />
               </ButtonLink>
-            </div>
-          </StyledCallout>
+            </Box>
+          </Box>
         </CardContainer>
       </Content>
       <FeedbackCard />
@@ -606,11 +479,25 @@ const CommunityPage = ({
 export default CommunityPage
 
 export const query = graphql`
-  query CommunityPage {
+  query CommunityPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-community", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 800
+          width: 624
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -630,7 +517,7 @@ export const query = graphql`
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 1440
+          width: 740
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -640,7 +527,7 @@ export const query = graphql`
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 800
+          width: 600
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -650,7 +537,7 @@ export const query = graphql`
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 1440
+          width: 700
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

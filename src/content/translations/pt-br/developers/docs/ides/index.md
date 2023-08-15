@@ -4,28 +4,31 @@ description:
 lang: pt-br
 ---
 
-Quando se trata de construir um [ambiente de trabalho integrado (IDE)](https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado) programar em Ethereum é similar a programar qualquer outro projeto de software. Há muitas opções para escolher, então simplesmente escolha o IDE ou editor de código que melhor se adapta a suas preferências. A melhor escolha para o seu desenvolvimento em Ethereum provavelmente vai ser o IDE que você já usa para o desenvolvimento tradicional de softwares.
+Quando se trata de desenvolver um [ambiente de trabalho integrado (IDE)](https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado) programar em Ethereum é similar a programar qualquer outro projeto de software. Há muitas opções para escolher, então simplesmente escolha o IDE ou editor de código que melhor se adapta a suas preferências. A melhor escolha para o seu desenvolvimento em Ethereum provavelmente vai ser o IDE que você já usa para o desenvolvimento tradicional de softwares.
 
 ## IDEs baseados na Web {#web-based-ides}
 
-Se você quer brincar com o código antes de [configurar um ambiente de desenvolvimento local](/developers/local-environment/), esses aplicativos na web são customizados para o desenvolvimento de contratos inteligentes em Ethereum.
+Se você quer brincar com o código antes de [configurar um ambiente de desenvolvimento local](/developers/local-environment/), esses aplicativos na web são personalizados para o desenvolvimento de contratos inteligentes em Ethereum.
 
-**Remix -** **_IDE baseado na web com análise estática integrada e uma máquina virtual de blockchain para testes._**
+**[Remix](https://remix.ethereum.org/)** - **_IDE baseada na Web com análise estática integrada e uma máquina virtual de blockchain de teste_**
 
-- [remix.ethereum.org](https://remix.ethereum.org/)
+- [Documentação](https://remix-ide.readthedocs.io/en/latest/#)
+- [Gitter](https://gitter.im/ethereum/remix)
 
-**EthFiddle -** **_IDE baseado na web que permite que você escreva, compile e depure seu contrato inteligente._**
+**[ChainIDE](https://chainide.com/)** - **_Uma IDE multicadeia baseada na nuvem_**
 
-- [ethfiddle.com](https://ethfiddle.com/)
+- [Documentação](https://chainide.gitbook.io/chainide-english-1/)
+- [Fórum de ajuda](https://forum.chainide.com/)
+
+**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_Um ambiente de desenvolvimento personalizável para Ethereum com hot reloading, verificação de erros e suporte a rede de testes de primeira classe_**
+
+- [Documentação](https://docs.replit.com/)
+
+**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_Um ambiente de prototipagem rápida onde você pode escrever, executar e depurar contratos inteligentes no navegador usando Solidity e JavaScript_**
+
+**[EthFiddle](https://ethfiddle.com/)** - **_IDE baseada na Web que permite escrever, compilar e depurar seu contrato inteligente_**
+
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
-
-**ChainIDE -** **_IDE Multi-Chain baseado em nuvem._**
-
-- [chainide.com](https://chainide.com/)
-
-**Replit -** **_Um ambiente customizável de desenvolvimento para Ethereum com recarregamento rápido, checagem de erros, e suporte de primeira classe para Testnet._**
-
-- [Solidity starter](https://replit.com/@replit/Solidity-starter-beta)
 
 ## Aplicativos IDEs {#desktop-ides}
 
@@ -44,7 +47,7 @@ A maioria dos IDEs estabelecidos possuem plugins integrados para melhorar a expe
 - [GitHub](https://github.com/atom)
 - [Pacotes Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
-**IDEs de JetBrains (IntelliJ IDEA, etc.) -** **_Ferramentas essenciais para desenvolvedores de software e equipes_**
+**IDEs de JetBrains (IntelliJ IDEA etc.) -** **_Ferramentas essenciais para desenvolvedores de software e equipes_**
 
 - [JetBrains](https://www.jetbrains.com/)
 - [GitHub](https://github.com/JetBrains)
@@ -58,8 +61,9 @@ A maioria dos IDEs estabelecidos possuem plugins integrados para melhorar a expe
 ## Plugins e extensões {#plugins-extensions}
 
 - [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Linguagem Ethereum Solidity para Visual Studio Code
+- [Solidity + Hardhat para VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Suporte Solidity e Hardhat oferecido pela equipe Hardhat
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Formatador de código que faz uso do Prettier
 
 ## Leitura adicional {#further-reading}
 
-_Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
+_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_

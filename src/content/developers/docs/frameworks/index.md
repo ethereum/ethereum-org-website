@@ -50,11 +50,6 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark -** **_A development environment, testing framework, and other tools integrated with Ethereum, IPFS, and Whisper._**
-
-- [Documentation](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
 **Web3j -** **_A platform for developing blockchain applications on the JVM._**
 
 - [Homepage](https://www.web3labs.com/web3j-sdk)
@@ -76,6 +71,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
+**Tenderly -** **_Web3 development platform that enables blockchain developers to build, test, debug, monitor, and operate smart contracts and improve dapp UX._**
+
+- [Website](https://tenderly.co/)
+- [Documentation](https://docs.tenderly.co/ethereum-development-practices)
+
 **The Graph -** **_The Graph for querying blockchain data efficiently._**
 
 - [Website](https://thegraph.com/)
@@ -92,6 +92,23 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Tools for Foundry](https://github.com/crisgarner/awesome-foundry)
+
+**NodeReal -** **_Ethereum Development Platform._**
+
+- [Nodereal.io](https://nodereal.io/)
+- [GitHub](https://github.com/node-real)
+- [Discord](https://discord.gg/V5k5gsuE)
+
+**thirdweb SDK -** **_Build web3 applications that can interact with your smart contracts using our powerful SDKs and CLI._**
+
+- [Documentation](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
+**Chainstack -** **_Web3 (Ethereum and otherwise) Development Platform._**
+
+- [chainstack.com](https://www.chainstack.com/)
+- [GitHub](https://github.com/chainstack)
+- [Discord](https://discord.gg/BSb5zfp9AT)
 
 ## Further reading {#further-reading}
 

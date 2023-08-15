@@ -13,7 +13,7 @@ lang: zh
 了解以太坊的去中心化性质至关重要，因为任何自称是以太坊官方支持人员的人都可能在试图诈骗您！ 预防诈骗的最好办法就是自学并认真对待安全问题。
 
 <DocLink to="/security/">
-  以太坊安全和预防诈骗措施
+  以太坊安全和预防欺诈措施
 </DocLink>
 
 <DocLink to="/learn/">
@@ -38,10 +38,11 @@ _这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加�
 
 构建这类应用可能很困难。 以下提供了一些专注于开发的平台，其中有经验丰富的以太坊开发人员，他们会乐意提供帮助。
 
+- [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
-- [以太坊 StackExchange](https://ethereum.stackexchange.com/)
+- [以太坊堆栈交易所](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
-- [Web3 大学](https://www.web3.university/)
+- [Web3 University](https://www.web3.university/)
 
 您还可以在我们的[以太坊开发者资源](/developers/)部分找到文档和开发指南。
 
@@ -57,6 +58,7 @@ _这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加�
 - [安全帽](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## 运行节点 {#node-support}
 

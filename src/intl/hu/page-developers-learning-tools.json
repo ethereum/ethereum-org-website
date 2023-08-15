@@ -26,5 +26,6 @@
   "page-learning-tools-sandbox-desc": "Ezek a sandboxot helyet adnak, hogy kísérletezhess az okosszerződés írással és megérthesd az Ethereumot.",
   "page-learning-tools-studio-description": "Egy web-alapú IDE, ahol útmutatók alapján készíthetsz és tesztelhetsz okosszerződéseket és frontendet is építhetsz.",
   "page-learning-tools-vyperfun-description": "Tanuld meg a Vypert egy Pokémon játék építésével.",
-  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun logo"
+  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun logo",
+  "alt-eth-blocks": "A blokkok ábrázolása úgy van elrendezve, hogy egy ETH szimbólumot formázzon"
 }

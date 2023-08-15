@@ -1,420 +1,186 @@
-import React, { useState } from "react"
-import { useIntl } from "react-intl"
+import React, { ReactNode, useState } from "react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import styled from "@emotion/styled"
+import {
+  Box,
+  chakra,
+  Divider,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  Icon,
+  Img,
+  SimpleGridProps,
+  Stack,
+  Text,
+  useToken,
+} from "@chakra-ui/react"
+import { FaGithub } from "react-icons/fa"
 
-import type { Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
 import ActionCard from "../components/ActionCard"
 import ButtonLink from "../components/ButtonLink"
-import Icon from "../components/Icon"
 import CalloutBanner from "../components/CalloutBanner"
 import CodeModal from "../components/CodeModal"
 import Codeblock from "../components/Codeblock"
+import CommunityEvents from "../components/CommunityEvents"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import Translation from "../components/Translation"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
-import {
-  CardContainer,
-  Content,
-  GrayContainer,
-  LeftColumn,
-} from "../components/SharedStyledComponents"
-import { translateMessageId, isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 
 import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
-import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
 
-const Hero = styled(GatsbyImage)`
-  width: 100%;
-  min-height: 380px;
-  max-height: 440px;
-  background-size: cover;
-  background: no-repeat 50px;
-  margin-bottom: 2rem;
-`
+const SectionHeading = (props: HeadingProps) => (
+  <Heading
+    lineHeight={1.4}
+    fontFamily="sans-serif"
+    fontSize={{ base: "2xl", sm: "2rem" }}
+    fontWeight={600}
+    mt={0}
+    mb={2}
+    {...props}
+  />
+)
 
-const StyledContent = styled(Content)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 1rem;
-  }
-`
+const SectionDecription = (props: ChildOnlyProp) => (
+  <Box mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4} {...props} />
+)
 
-const H1 = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
-  text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 2rem;
-  }
-`
+const ImageContainer = (props: FlexProps & { children: ReactNode }) => (
+  <Flex width={{ base: "75%", lg: "full" }} height="full" {...props} />
+)
 
-const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const CardContainer = (props: {
+  children: ReactNode
+  minChildWidth: SimpleGridProps["minChildWidth"]
+}) => (
+  <Flex
+    flexWrap="wrap"
+    gap={8}
+    p={{ lg: 4 }}
+    width="full"
+    sx={{
+      "& > *": {
+        minW: props.minChildWidth,
+      },
+    }}
+  >
+    {props.children}
+  </Flex>
+)
 
-  width: 100%;
-  margin: 0 auto;
-`
+const ContentBox = (props: ChildOnlyProp) => (
+  <Box py={4} px={{ base: 4, lg: 8 }} {...props} />
+)
 
-const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  padding: 0 2rem;
-`
+const StyledActionCard = chakra(ActionCard, {
+  baseStyle: {
+    background: "background.base",
+    borderRadius: "sm",
+    border: "1px",
+    borderColor: "text",
+    margin: 0,
+  },
+})
 
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+const StyledCodeModal = chakra(CodeModal)
 
-const StyledButtonLink = styled(ButtonLink)`
-  gap: 0.5rem;
-  margin-top: 0rem;
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 1rem;
-    margin-left: 0rem;
-  }
-`
+const StyledTitleCardList = chakra(TitleCardList)
 
-const CodeExampleContent = styled(Content)`
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    padding: 1rem;
-  }
-`
+const GrayContainer = (props: ChildOnlyProp) => (
+  <Box width="full" pb={16} background="grayBackground" {...props} />
+)
 
-const CodeboxModal = styled(CodeModal)`
-  .modal-component-container {
-    padding: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 50%;
-  }
-  .modal-component {
-    max-width: 100%;
-    max-height: 50%;
-    padding: 0rem;
-  }
-  .modal-component-content {
-    margin-top: 3rem;
-    width: 100%;
-    overflow: auto;
-  }
-`
+const MainSectionContainer = (props: {
+  children: ReactNode
+  containerBg: FlexProps["bg"]
+}) => (
+  <Flex
+    alignItems="center"
+    background={props.containerBg}
+    borderBlock="1px"
+    borderColor="text"
+    height={{ base: "100%", lg: "720px" }}
+    mt="-1px"
+    py={{ base: 8, lg: 0 }}
+    width="full"
+  >
+    {props.children}
+  </Flex>
+)
 
-const IntroRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 3rem;
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-    margin: 0rem;
-  }
-`
+const FeatureContent = (props: ChildOnlyProp) => (
+  <Flex
+    flex="0 0 50%"
+    flexDirection="column"
+    justifyContent="center"
+    boxSize="full"
+    maxWidth={{ lg: "75%" }}
+    p={{ base: 8, lg: 24 }}
+    {...props}
+  />
+)
 
-const RowReverse = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-`
+const Row = (props: { children: ReactNode; isReversed?: boolean }) => (
+  <Flex
+    alignItems="center"
+    flexDirection={{
+      base: "column-reverse",
+      lg: props.isReversed ? "row-reverse" : "row",
+    }}
+  >
+    {props.children}
+  </Flex>
+)
 
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-`
+const ButtonLinkRow = (props: ChildOnlyProp) => (
+  <Stack
+    alignItems="flex-start"
+    direction={{ base: "column", md: "row" }}
+    spacing={{ base: 6, md: 2 }}
+    {...props}
+  />
+)
 
-const ImageContainer = styled.div`
-  background: "#f1fffd";
-  display: flex;
-  height: 100%;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 75%;
-  }
-`
-
-const Description = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-  max-width: 55ch;
-  text-align: center;
-  align-self: center;
-  font-size: 1.25rem;
-  margin-top: 1rem;
-`
-
-const StyledGrayContainer = styled(GrayContainer)`
-  box-shadow: inset 0px 0px 0px
-    ${(props) => props.theme.colors.tableItemBoxShadow};
-  padding: 0rem;
-  padding-bottom: 4rem;
-  margin-top: 0rem;
-`
-const StyledCard = styled(ActionCard)`
-  min-width: 480px;
-  margin: 1rem;
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0;
-    min-width: min(100%, 240px);
-  }
-`
-const Tout = styled(ActionCard)`
-  min-width: 400px;
-  margin: 1rem;
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0;
-    min-width: min(100%, 240px);
-  }
-`
-const StyledCardContainer = styled(CardContainer)`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-columns: 1fr;
-  }
-`
-
-const IntroImage = styled(GatsbyImage)`
-  width: 100%;
-  background-size: cover;
-  background: no-repeat 50px;
-`
-
-const FeatureImage = styled(GatsbyImage)`
-  width: 100%;
-`
-
-const Subtitle = styled.div`
-  margin-bottom: 2rem;
-  font-size: 1.25rem;
-  line-height: 140%;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 1rem;
-  }
-`
-
-const EthereumIntroContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxTurquoise};
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  padding-left: 2rem;
-  width: 100%;
-  height: 720px;
-  margin-top: -1px;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    height: 100%;
-    padding-top: 2rem;
-    padding-left: 0rem;
-    padding-bottom: 2rem;
-  }
-`
-
-const FinanceContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxOrange};
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  height: 720px;
-  margin-top: -1px;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    height: 100%;
-    height: 100%;
-    padding-top: 2rem;
-    padding-right: 0rem;
-    padding-bottom: 2rem;
-  }
-`
-
-const NftContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxMint};
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  height: 720px;
-  margin-top: -1px;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    height: 100%;
-    height: 100%;
-    padding-top: 2rem;
-    padding-right: 0rem;
-    padding-bottom: 2rem;
-  }
-`
-
-const InternetContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxPink};
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  padding-left: 2rem;
-  height: 720px;
-  width: 100%;
-  margin-top: -1px;
-  margin-bottom: 0rem;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    height: 100%;
-    padding-top: 2rem;
-    padding-left: 0rem;
-    padding-bottom: 2rem;
-  }
-`
-
-const DeveloperContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxPurple};
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  height: 720px;
-  width: 100%;
-  margin-top: -1px;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    height: 100%;
-  }
-`
-
-const FeatureContent = styled(LeftColumn)`
-  padding: 6rem;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 2rem;
-  }
-`
-
-const LeftColumnContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`
-
-const IntroLeftColumn = styled(LeftColumn)`
-  padding: 6rem;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 0rem;
-  }
-`
-
-const StyledIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-  }
-  &:hover {
-    fill: ${(props) => props.theme.colors.primary};
-  }
-  &:active {
-    fill: ${(props) => props.theme.colors.primary};
-  }
-  &:focus {
-    fill: ${(props) => props.theme.colors.primary};
-  }
-`
-
-const H2 = styled.h2`
-  margin: 0 0 1.5rem;
-`
-
-const StyledH2 = styled.h2`
-  margin-bottom: 0.5rem;
-  font-family: sans-serif;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 1.5rem;
-  }
-`
-
-const StyledCardList = styled(TitleCardList)`
-  margin-left: 4rem;
-  max-width: 624px;
-  border: 1px solid ${(props) => props.theme.colors.text};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    max-width: 100%;
-  }
-`
-
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 8rem 0 4rem;
-  padding: 2rem 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 4rem;
-    padding: 2rem;
-  }
-`
+const PageHeader = () => (
+  <Flex
+    as="header"
+    flexDirection="column"
+    alignItems="center"
+    textAlign="center"
+    mt={4}
+    mb={8}
+    px={8}
+  >
+    <Heading as="h1" fontSize={{ base: "2rem", sm: "2.5rem" }} m={0}>
+      <Translation id="page-index-title" />
+    </Heading>
+    <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>
+      <Translation id="page-index-description" />
+    </Text>
+    <ButtonLinkRow>
+      <ButtonLink to="/learn/">
+        <Translation id="page-index-title-button" />
+      </ButtonLink>
+    </ButtonLinkRow>
+  </Flex>
+)
 
 const HomePage = ({
   data,
   pageContext: { language = "en" },
 }: PageProps<Queries.IndexPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
   const dir = isLangRightToLeft(language) ? "rtl" : "ltr"
@@ -424,47 +190,33 @@ const HomePage = ({
     setModalOpen(true)
   }
 
-  useConsoleEasterEgg()
-
   const cards = [
     {
       image: getImage(data.robotfixed),
-      title: translateMessageId("page-index-get-started-wallet-title", intl),
-      description: translateMessageId(
-        "page-index-get-started-wallet-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
+      title: t("page-index-get-started-wallet-title"),
+      description: t("page-index-get-started-wallet-description"),
+      alt: t("page-index-get-started-wallet-image-alt"),
       to: "/wallets/find-wallet/",
     },
     {
       image: getImage(data.ethfixed),
-      title: translateMessageId("page-index-get-started-eth-title", intl),
-      description: translateMessageId(
-        "page-index-get-started-eth-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-eth-image-alt", intl),
+      title: t("page-index-get-started-eth-title"),
+      description: t("page-index-get-started-eth-description"),
+      alt: t("page-index-get-started-eth-image-alt"),
       to: "/get-eth/",
     },
     {
       image: getImage(data.dogefixed),
-      title: translateMessageId("page-index-get-started-dapps-title", intl),
-      description: translateMessageId(
-        "page-index-get-started-dapps-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
+      title: t("page-index-get-started-dapps-title"),
+      description: t("page-index-get-started-dapps-description"),
+      alt: t("page-index-get-started-dapps-image-alt"),
       to: "/dapps/",
     },
     {
       image: getImage(data.devfixed),
-      title: translateMessageId("page-index-get-started-devs-title", intl),
-      description: translateMessageId(
-        "page-index-get-started-devs-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-devs-image-alt", intl),
+      title: t("page-index-get-started-devs-title"),
+      description: t("page-index-get-started-devs-description"),
+      alt: t("page-index-get-started-devs-image-alt"),
       to: "/developers/",
     },
   ]
@@ -472,32 +224,23 @@ const HomePage = ({
   const touts = [
     {
       image: getImage(data.merge),
-      alt: translateMessageId("page-index-tout-upgrades-image-alt", intl),
-      title: translateMessageId("page-index-tout-upgrades-title", intl),
-      description: translateMessageId(
-        "page-index-tout-upgrades-description",
-        intl
-      ),
-      to: "/upgrades/",
+      alt: t("page-index-tout-upgrades-image-alt"),
+      title: t("page-index-tout-upgrades-title"),
+      description: t("page-index-tout-upgrades-description"),
+      to: "/roadmap/",
     },
     {
       image: getImage(data.infrastructurefixed),
-      alt: translateMessageId("page-index-tout-enterprise-image-alt", intl),
-      title: translateMessageId("page-index-tout-enterprise-title", intl),
-      description: translateMessageId(
-        "page-index-tout-enterprise-description",
-        intl
-      ),
+      alt: t("page-index-tout-enterprise-image-alt"),
+      title: t("page-index-tout-enterprise-title"),
+      description: t("page-index-tout-enterprise-description"),
       to: "/enterprise/",
     },
     {
       image: getImage(data.enterprise),
-      alt: translateMessageId("page-index-tout-community-image-alt", intl),
-      title: translateMessageId("page-index-tout-community-title", intl),
-      description: translateMessageId(
-        "page-index-tout-community-description",
-        intl
-      ),
+      alt: t("page-index-tout-community-image-alt"),
+      title: t("page-index-tout-community-title"),
+      description: t("page-index-tout-community-description"),
       to: "/community/",
     },
   ]
@@ -509,321 +252,359 @@ const HomePage = ({
 
   const codeExamples: Array<CodeExample> = [
     {
-      title: translateMessageId(
-        "page-index-developers-code-example-title-0",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-developers-code-example-description-0",
-        intl
-      ),
+      title: t("page-index-developers-code-example-title-0"),
+      description: t("page-index-developers-code-example-description-0"),
       codeLanguage: "language-solidity",
       code: SimpleWalletContent,
     },
     {
-      title: translateMessageId(
-        "page-index-developers-code-example-title-1",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-developers-code-example-description-1",
-        intl
-      ),
+      title: t("page-index-developers-code-example-title-1"),
+      description: t("page-index-developers-code-example-description-1"),
       codeLanguage: "language-solidity",
       code: SimpleTokenContent,
     },
     {
-      title: translateMessageId(
-        "page-index-developers-code-example-title-2",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-developers-code-example-description-2",
-        intl
-      ),
+      title: t("page-index-developers-code-example-title-2"),
+      description: t("page-index-developers-code-example-description-2"),
       codeLanguage: "language-javascript",
       code: CreateWalletContent,
     },
     {
-      title: translateMessageId(
-        "page-index-developers-code-example-title-3",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-developers-code-example-description-3",
-        intl
-      ),
+      title: t("page-index-developers-code-example-title-3"),
+      description: t("page-index-developers-code-example-description-3"),
       codeLanguage: "language-solidity",
       code: SimpleDomainRegistryContent,
     },
   ]
 
+  const cardBoxShadow = useToken("colors", "cardBoxShadow")
+
   return (
-    <Page dir={dir}>
+    <Flex flexDirection="column" alignItems="center" dir={dir} width="full">
       <PageMetadata
-        title={translateMessageId("page-index-meta-title", intl)}
-        description={translateMessageId("page-index-meta-description", intl)}
+        title={t("page-index-meta-title")}
+        description={t("page-index-meta-description")}
       />
-      <Hero
+      <Img
+        as={GatsbyImage}
         image={getImage(data.hero)!}
-        alt={translateMessageId("page-index-hero-image-alt", intl)}
+        alt={t("page-index-hero-image-alt")}
         loading="eager"
+        width="full"
+        minH="380px"
+        maxH="440px"
+        backgroundSize="cover"
+        background="no-repeat 50px"
+        mb={8}
       />
       <Morpher />
-      <Header>
-        <H1>
-          <Translation id="page-index-title" />
-        </H1>
-        <Description>
-          <Translation id="page-index-description" />
-        </Description>
-        <ButtonLink variant="outline" to="/learn/">
-          <Translation id="page-index-title-button" />
-        </ButtonLink>
-      </Header>
-      <StyledGrayContainer>
-        <StyledContent>
-          <IntroRow>
-            <IntroLeftColumn>
-              <H2>
+      <PageHeader />
+      {/* Getting Started Section */}
+      <GrayContainer>
+        <ContentBox>
+          <Flex
+            alignItems="center"
+            flexDirection={{ base: "column-reverse", md: "row" }}
+            mt={{ md: 4 }}
+            mb={{ md: 12 }}
+          >
+            <Box
+              flex="0 0 50%"
+              maxW={{ lg: "75%" }}
+              p={{ sm: 8, lg: 24 }}
+              boxSize="full"
+            >
+              <SectionHeading fontFamily="inherit" mb={6}>
                 <Translation id="page-index-get-started" />
-              </H2>
-              <Subtitle>
+              </SectionHeading>
+              <SectionDecription>
                 <Translation id="page-index-get-started-description" />
-              </Subtitle>
-            </IntroLeftColumn>
+              </SectionDecription>
+            </Box>
             <ImageContainer>
-              <IntroImage
+              <Img
+                as={GatsbyImage}
                 image={getImage(data.hackathon)!}
-                alt={translateMessageId(
-                  "page-index-get-started-image-alt",
-                  intl
-                )}
+                alt={t("page-index-get-started-image-alt")}
+                width="full"
+                backgroundSize="cover"
+                background="no-repeat 50px"
               />
             </ImageContainer>
-          </IntroRow>
-          <StyledCardContainer>
+          </Flex>
+          <CardContainer minChildWidth={{ lg: "480px" }}>
             {cards.map((card, idx) => (
-              <StyledCard
+              <StyledActionCard
                 key={idx}
+                boxShadow={cardBoxShadow}
+                m={0}
                 title={card.title}
                 description={card.description}
+                alt={card.alt}
                 to={card.to}
                 image={card.image!}
-                alt={card.alt}
               />
             ))}
-          </StyledCardContainer>
-        </StyledContent>
-      </StyledGrayContainer>
-      <EthereumIntroContainer>
-        <RowReverse>
+          </CardContainer>
+        </ContentBox>
+      </GrayContainer>
+      {/* What is Eth Section */}
+      <MainSectionContainer containerBg="homeBoxTurquoise">
+        <Row isReversed>
           <FeatureContent>
-            <StyledH2>
+            <SectionHeading>
               <Translation id="page-index-what-is-ethereum" />
-            </StyledH2>
-            <Subtitle>
+            </SectionHeading>
+            <SectionDecription>
               <Translation id="page-index-what-is-ethereum-description" />
-            </Subtitle>
-            <ButtonRow>
+            </SectionDecription>
+            <ButtonLinkRow>
               <ButtonLink to="/what-is-ethereum/">
                 <Translation id="page-index-what-is-ethereum-button" />
               </ButtonLink>
-              <StyledButtonLink variant="outline" to="/eth/">
+              <ButtonLink to="/eth/" variant="outline">
                 <Translation id="page-index-what-is-ethereum-secondary-button" />
-              </StyledButtonLink>
-            </ButtonRow>
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
-          <ImageContainer>
-            <FeatureImage
+          <ImageContainer pl={{ lg: 8 }}>
+            <Img
+              as={GatsbyImage}
+              width="full"
               image={getImage(data.ethereum)!}
-              alt={translateMessageId(
-                "page-index-what-is-ethereum-image-alt",
-                intl
-              )}
+              alt={t("page-index-what-is-ethereum-image-alt")}
             />
           </ImageContainer>
-        </RowReverse>
-      </EthereumIntroContainer>
-      <FinanceContainer>
+        </Row>
+      </MainSectionContainer>
+      {/* Finance Section */}
+      <MainSectionContainer containerBg="homeBoxOrange">
         <Row>
           <FeatureContent>
-            <LeftColumnContent>
-              <StyledH2>
-                <Translation id="page-index-defi" />
-              </StyledH2>
-              <Subtitle>
-                <Translation id="page-index-defi-description" />
-              </Subtitle>
-              <div>
-                <ButtonLink to="/defi/">
-                  <Translation id="page-index-defi-button" />
-                </ButtonLink>
-              </div>
-            </LeftColumnContent>
+            <SectionHeading>
+              <Translation id="page-index-defi" />
+            </SectionHeading>
+            <SectionDecription>
+              <Translation id="page-index-defi-description" />
+            </SectionDecription>
+            <ButtonLinkRow>
+              <ButtonLink to="/defi/">
+                <Translation id="page-index-defi-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
-            <FeatureImage
+            <Img
+              as={GatsbyImage}
+              width="full"
               image={getImage(data.impact)!}
-              alt={translateMessageId("page-index-defi-image-alt", intl)}
+              alt={t("page-index-defi-image-alt")}
             />
           </ImageContainer>
         </Row>
-      </FinanceContainer>
-      <NftContainer>
-        <Row>
-          <ImageContainer>
-            <FeatureImage
-              image={getImage(data.infrastructure)!}
-              alt={translateMessageId("page-index-nft-alt", intl)}
-            />
-          </ImageContainer>
+      </MainSectionContainer>
+      {/* NFT Section */}
+      <MainSectionContainer containerBg="homeBoxMint">
+        <Row isReversed>
           <FeatureContent>
-            <LeftColumnContent>
-              <StyledH2>
-                <Translation id="page-index-nft" />
-              </StyledH2>
-              <Subtitle>
-                <Translation id="page-index-nft-description" />
-              </Subtitle>
-              <div>
-                <ButtonLink to="/nft/">
-                  <Translation id="page-index-nft-button" />
-                </ButtonLink>
-              </div>
-            </LeftColumnContent>
+            <SectionHeading>
+              <Translation id="page-index-nft" />
+            </SectionHeading>
+            <SectionDecription>
+              <Translation id="page-index-nft-description" />
+            </SectionDecription>
+            <ButtonLinkRow>
+              <ButtonLink to="/nft/">
+                <Translation id="page-index-nft-button" />
+              </ButtonLink>
+            </ButtonLinkRow>
           </FeatureContent>
+          <ImageContainer>
+            <Img
+              as={GatsbyImage}
+              width="full"
+              image={getImage(data.infrastructure)!}
+              alt={t("page-index-nft-alt")}
+            />
+          </ImageContainer>
         </Row>
-      </NftContainer>
-      <InternetContainer>
-        <Row>
-          <FeatureContent>
-            <LeftColumnContent>
-              <StyledH2>
+      </MainSectionContainer>
+      {/* Internet Section */}
+      <MainSectionContainer containerBg="homeBoxPink">
+        <Box pl={{ lg: 8 }}>
+          <Row>
+            <FeatureContent>
+              <SectionHeading>
                 <Translation id="page-index-internet" />
-              </StyledH2>
-              <Subtitle>
+              </SectionHeading>
+              <SectionDecription>
                 <Translation id="page-index-internet-description" />
-              </Subtitle>
-              <ButtonRow>
+              </SectionDecription>
+              <ButtonLinkRow>
                 <ButtonLink to="/dapps/?category=technology">
                   <Translation id="page-index-internet-button" />
                 </ButtonLink>
-                <StyledButtonLink variant="outline" to="/wallets/">
+                <ButtonLink to="/wallets/" variant="outline">
                   <Translation id="page-index-internet-secondary-button" />
-                </StyledButtonLink>
-              </ButtonRow>
-            </LeftColumnContent>
-          </FeatureContent>
-          <ImageContainer>
-            <FeatureImage
-              image={getImage(data.future)!}
-              alt={translateMessageId("page-index-internet-image-alt", intl)}
+                </ButtonLink>
+              </ButtonLinkRow>
+            </FeatureContent>
+            <ImageContainer>
+              <Img
+                as={GatsbyImage}
+                width="full"
+                image={getImage(data.future)!}
+                alt={t("page-index-internet-image-alt")}
+              />
+            </ImageContainer>
+          </Row>
+        </Box>
+      </MainSectionContainer>
+      {/* Developer Section */}
+      <MainSectionContainer containerBg="homeBoxPurple">
+        <Row>
+          <Box py={4} px={{ base: 4, sm: 8 }} width="full">
+            <StyledTitleCardList
+              content={codeExamples}
+              clickHandler={toggleCodeExample}
+              headerKey="page-index-developers-code-examples"
+              isCode
+              border="1px"
+              borderColor="text"
+              boxShadow={cardBoxShadow}
+              maxWidth={{ lg: "624px" }}
+              ml={{ lg: 16 }}
             />
-          </ImageContainer>
-        </Row>
-      </InternetContainer>
-      <DeveloperContainer>
-        <CodeExampleContent>
-          <StyledCardList
-            content={codeExamples}
-            clickHandler={toggleCodeExample}
-            headerKey="page-index-developers-code-examples"
-            icon="code"
-            isCode
-          />
-        </CodeExampleContent>
-        <FeatureContent>
-          <LeftColumnContent>
-            <StyledH2>
+          </Box>
+          <FeatureContent>
+            <SectionHeading>
               <Translation id="page-index-developers" />
-            </StyledH2>
-            <Subtitle>
+            </SectionHeading>
+            <SectionDecription>
               <Translation id="page-index-developers-description" />
-            </Subtitle>
-            <ButtonRow>
-              <ButtonLink to="/developers/">
+            </SectionDecription>
+            <ButtonLinkRow>
+              <ButtonLink to="/dapps/?category=technology">
                 <Translation id="page-index-developers-button" />
               </ButtonLink>
-            </ButtonRow>
-          </LeftColumnContent>
-        </FeatureContent>
-        <CodeboxModal
-          isOpen={isModalOpen}
-          setIsOpen={setModalOpen}
-          title={codeExamples[activeCode].title}
-        >
-          <Codeblock
-            codeLanguage={codeExamples[activeCode].codeLanguage}
-            allowCollapse={false}
-            fromHomepage
+            </ButtonLinkRow>
+          </FeatureContent>
+          <StyledCodeModal
+            isOpen={isModalOpen}
+            setIsOpen={setModalOpen}
+            title={codeExamples[activeCode].title}
+            sx={{
+              ".modal-component-container": {
+                padding: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                top: "50%",
+              },
+              ".modal-component": {
+                maxWidth: "100%",
+                maxHeight: "50%",
+                padding: 0,
+              },
+              ".modal-component-content": {
+                marginTop: "3rem",
+                width: "100%",
+                overflow: "auto",
+              },
+            }}
           >
-            {codeExamples[activeCode].code}
-          </Codeblock>
-        </CodeboxModal>
-      </DeveloperContainer>
-      <StyledGrayContainer>
-        <StyledContent>
-          <h2>
+            <Codeblock
+              codeLanguage={codeExamples[activeCode].codeLanguage}
+              allowCollapse={false}
+              fromHomepage
+            >
+              {codeExamples[activeCode].code}
+            </Codeblock>
+          </StyledCodeModal>
+        </Row>
+      </MainSectionContainer>
+      {/* Eth Today Section */}
+      <GrayContainer>
+        <ContentBox>
+          <SectionHeading mt={12} mb={8} fontFamily="heading">
             <Translation id="page-index-network-stats-title" />
-          </h2>
-          <Subtitle>
+          </SectionHeading>
+          <SectionDecription>
             <Translation id="page-index-network-stats-subtitle" />
-          </Subtitle>
-        </StyledContent>
+          </SectionDecription>
+        </ContentBox>
         <StatsBoxGrid />
-      </StyledGrayContainer>
-      <StyledContent>
-        <h2>
-          <Translation id="page-index-touts-header" />
-        </h2>
-      </StyledContent>
-      <StyledContent>
-        <StyledCardContainer>
+      </GrayContainer>
+      <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
+      <CommunityEvents />
+      {/* Explore Section */}
+      <ContentBox>
+        <Box pb={4}>
+          <SectionHeading mt={12} mb={8} fontFamily="heading">
+            <Translation id="page-index-touts-header" />
+          </SectionHeading>
+        </Box>
+        <CardContainer minChildWidth={{ lg: "400px" }}>
           {touts.map((tout, idx) => {
             return (
-              <Tout
+              <StyledActionCard
                 key={idx}
                 title={tout.title}
                 description={tout.description}
                 alt={tout.alt}
                 to={tout.to}
                 image={tout.image!}
+                boxShadow={cardBoxShadow}
               />
             )
           })}
-        </StyledCardContainer>
-        <StyledCalloutBanner
+        </CardContainer>
+        <CalloutBanner
           titleKey={"page-index-contribution-banner-title"}
           descriptionKey={"page-index-contribution-banner-description"}
           image={getImage(data.finance)!}
           maxImageWidth={600}
-          alt={translateMessageId(
-            "page-index-contribution-banner-image-alt",
-            intl
-          )}
+          alt={t("page-index-contribution-banner-image-alt")}
+          mt={32}
+          mb={16}
+          mx={0}
         >
-          <ButtonRow>
+          <ButtonLinkRow>
             <ButtonLink to="/contributing/">
               <Translation id="page-index-contribution-banner-button" />
             </ButtonLink>
-            <StyledButtonLink
-              variant="outline"
+            <ButtonLink
               to="https://github.com/ethereum/ethereum-org-website"
+              leftIcon={<Icon as={FaGithub} fontSize="2xl" />}
+              variant="outline"
             >
-              <StyledIcon name="github" /> GitHub
-            </StyledButtonLink>
-          </ButtonRow>
-        </StyledCalloutBanner>
-      </StyledContent>
-    </Page>
+              GitHub
+            </ButtonLink>
+          </ButtonLinkRow>
+        </CalloutBanner>
+      </ContentBox>
+    </Flex>
   )
 }
 
 export default HomePage
 
 export const query = graphql`
-  query IndexPage {
+  query IndexPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-index", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
@@ -831,7 +612,12 @@ export const query = graphql`
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 740
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
@@ -891,7 +677,12 @@ export const query = graphql`
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 760
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
@@ -906,14 +697,24 @@ export const query = graphql`
     }
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 720
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     infrastructure: file(
       relativePath: { eq: "infrastructure_transparent.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 760
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     infrastructurefixed: file(

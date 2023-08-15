@@ -101,13 +101,13 @@ Unul dintre beneficiile principale ale actualizării Londra este creşterea sati
 
 ## EIP-1559 {#eip-1559}
 
-Punerea în aplicare a [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) în cadrul Actualizării Londra a făcut ca mecanismul taxelor de tranzacție să fie mai complex decât licitația anterioară a prețului gazului, dar are avantajul de a face ca taxele de gaz mai previzibile, conducând la o piață a taxelor de tranzacție mai eficientă. Utilizatorii pot transmite tranzacții cu un `maxFeePerGas` care corespunde sumei pe care sunt dispuși să o plătească pentru executarea tranzacţiei, ştiind că nu vor plăti mai mult decât prețul de piață pentru gaz (`baseFeePerGas`) și că orice sumă în plus, mai puțin bacșișul, le va fi rambursată.
+Punerea în aplicare a [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) în cadrul Actualizării Londra a făcut ca mecanismul taxelor de tranzacție să fie mai complex decât licitația anterioară a prețului gazului, dar are avantajul de a face ca taxele de gaz mai previzibile, conducând la o piață a taxelor de tranzacție mai eficientă. Utilizatorii pot transmite tranzacții cu un `maxFeePerGas` care corespunde sumei pe care sunt dispuși să o plătească pentru executarea tranzacţiei, ştiind că nu vor plăti mai mult decât prețul de piață pentru gaz (`baseFeePerGas`) și că orice sumă în plus, mai puțin bacșișul, le va fi rambursată.
 
 Acest videoclip explică EIP-1559 și beneficiile aduse de acesta:
 
 <YouTube id="MGemhK9t44Q" />
 
-Dacă sunteți interesat, puteți citi [Specificațiile EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)exacte.
+Dacă sunteți interesat, puteți citi [Specificațiile EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)exacte.
 
 Aprofundați-vă cunoștințele cu aceste [Resurse EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
 
@@ -133,7 +133,7 @@ Nu este numai preţul gazului cel care determină de fapt cât trebuie să plăt
 
 ## Inițiative de reducere a costurilor gazului {#initiatives-to-reduce-gas-costs}
 
-[Actualizările de scalabilitate](/upgrades/) ale lui Ethereum ar trebui să rezolve câteva din problemele taxei pe gaz, ceea ce va permite la rândul său platformei să proceseze mii de tranzacții pe secundă și să se extindă la nivel global.
+[Actualizările de scalabilitate](/roadmap/) ale lui Ethereum ar trebui să rezolve câteva din problemele taxei pe gaz, ceea ce va permite la rândul său platformei să proceseze mii de tranzacții pe secundă și să se extindă la nivel global.
 
 Scalarea de Nivel 2 este o inițiativă primordială pentru a îmbunătăți considerabil costurile gazului, satisfacţia utilizatorilor și scalabilitatea. [Mai multe despre scalarea de nivel 2](/developers/docs/scaling/#layer-2-scaling).
 
@@ -161,7 +161,6 @@ Dacă doriți să monitorizați prețurile gazului ca să vă puteți trimite ET
 ## Referințe suplimentare {#further-reading}
 
 - [Gazul Ethereum explicat](https://defiprime.com/gas)
-- [Este Ethereum mai scump de utilizat pe măsură ce prețul crește?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducerea consumului de gaz al contractelor dvs. inteligente](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Dovada-mizei comparativ cu dovada-muncii](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

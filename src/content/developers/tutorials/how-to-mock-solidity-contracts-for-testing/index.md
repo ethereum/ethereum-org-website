@@ -16,7 +16,7 @@ sourceUrl: https://soliditydeveloper.com/mocking-contracts
 
 Mocking a contract essentially means creating a second version of that contract which behaves very similar to the original one, but in a way that can be easily controlled by the developer. You often end up with complex contracts where you only want to [unit-test small parts of the contract](/developers/docs/smart-contracts/testing/). The problem is what if testing this small part requires a very specific contract state that is difficult to end up in?
 
-You could write complex test setup logic everytime that brings in the contract in the required state or you write a mock. Mocking a contract is easy with inheritance. Simply create a second mock contract that inherits from the original one. Now you can override functions to your mock. Let us see it with an example.
+You could write complex test setup logic every time that brings in the contract in the required state or you write a mock. Mocking a contract is easy with inheritance. Simply create a second mock contract that inherits from the original one. Now you can override functions to your mock. Let us see it with an example.
 
 ## Example: Private ERC20 {#example-private-erc20}
 
@@ -88,11 +88,11 @@ You will get one of the following error messages:
 
 Since we are using the new 0.6 Solidity version, we have to add the `virtual` keyword for functions that can be overridden and override for the overriding function. So let us add those to both `isPublic` functions.
 
-Now in your unit tests, you can use `PrivateERC20Mock` instead. When you want to test the behaviour during the private usage time, use `setIsPublic(false)` and likewise `setIsPublic(true)` for testing the public usage time. Of course in our example, we could just use [time helpers](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) to change the times accordingly as well. But the idea of mocking should be clear now and you can imagine scenarios where it is not as easy as simply advancing the time.
+Now in your unit tests, you can use `PrivateERC20Mock` instead. When you want to test the behavior during the private usage time, use `setIsPublic(false)` and likewise `setIsPublic(true)` for testing the public usage time. Of course in our example, we could just use [time helpers](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) to change the times accordingly as well. But the idea of mocking should be clear now and you can imagine scenarios where it is not as easy as simply advancing the time.
 
 ## Mocking many contracts {#mocking-many-contracts}
 
-It can become messy if you have to create another contract for every single mock. If this bothers you, you can take a look at the [MockContract](https://github.com/gnosis/mock-contract) library. It allows you to override and change behaviours of contracts on-the-fly. However, it works only for mocking calls to another contract, so it would not work for our example.
+It can become messy if you have to create another contract for every single mock. If this bothers you, you can take a look at the [MockContract](https://github.com/gnosis/mock-contract) library. It allows you to override and change behaviors of contracts on-the-fly. However, it works only for mocking calls to another contract, so it would not work for our example.
 
 ## Mocking can be even more powerful {#mocking-can-be-even-more-powerful}
 

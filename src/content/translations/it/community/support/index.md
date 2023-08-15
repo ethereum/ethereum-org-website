@@ -38,10 +38,11 @@ Cerchi un portafoglio Ethereum? [Esplora il nostro elenco completo di portafogli
 
 La costruzione può essere difficile. Ecco alcuni spazi focalizzati sullo sviluppo, con sviluppatori Ethereum esperti che sono felici di aiutarti.
 
+- [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
-- [Università Web3](https://www.web3.university/)
+- [Web3 University](https://www.web3.university/)
 
 Puoi anche trovare la documentazione e le guide di sviluppo nella nostra sezione [risorse per sviluppatore Ethereum](/developers/).
 
@@ -57,6 +58,7 @@ Ecco alcuni esempi più diffusi:
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## Eseguire un nodo {#node-support}
 
@@ -106,4 +108,8 @@ Le transazioni su Ethereum a volte possono bloccarsi se hai inviato una commissi
 
 #### Come posso fare mining in Ethereum? {#mining-ethereum}
 
-Non consigliamo di acquistare attrezzature per mining se non si sta già facendo mining in Ethereum. Circa tra il terzo e il quarto trimestre del 2022, avrà luogo [La Fusione](/upgrades/merge/), con il passaggio dal proof-of-work al proof-of-stake. Questo cambiamento significa che fare mining in Ethereum non sarà più possibile.
+Il mining su Ethereum non è più possibile. Il mining è stato disattivato quando Ethereum è passato dal proof-of-work al proof-of-stake. Ora, invece dei miner, Ethereum ha i validatori. I validatori mettono ETH in staking e ricevono ricompense per proteggere la rete.
+
+#### Come divento uno staker/validatore? {#become-validator}
+
+Per diventare un validatore, devi mettere in staking 32 ETH nel contratto di deposito di Ethereum e configurare un nodo del validatore. Ulteriori informazioni sono disponibili sulle nostre [pagine di staking](/staking) e al [launchpad di staking](https://launchpad.ethereum.org/).

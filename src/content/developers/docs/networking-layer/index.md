@@ -31,7 +31,7 @@ Discovery is the process of finding other nodes in network. This is bootstrapped
 
 The protocol used for the node-bootnode interactions is a modified form of [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f) which uses a [distributed hash table](https://en.wikipedia.org/wiki/Distributed_hash_table) to share lists of nodes. Each node has a version of this table containing the information required to connect to its closest peers. This 'closeness' is not geographical - distance is defined by the similarity of the node's ID. Each node's table is regularly refreshed as a security feature. For example, in the [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5), discovery protocol nodes are also able to send 'ads' that display the subprotocols that the client supports, allowing peers to negotiate about the protocols they can both use to communicate over.
 
-Discovery starts wih a game of PING-PONG. A successful PING-PONG "bonds" the new node to a bootnode. The initial message that alerts a bootnode to the existence of a new node entering the network is a `PING`. This `PING` includes hashed information about the new node, the bootnode and an expiry time-stamp. The bootnode receives the PING and returns a `PONG` containing the `PING` hash. If the `PING` and `PONG` hashes match then the connection between the new node and bootnode is verified and they are said to have "bonded".
+Discovery starts with a game of PING-PONG. A successful PING-PONG "bonds" the new node to a bootnode. The initial message that alerts a bootnode to the existence of a new node entering the network is a `PING`. This `PING` includes hashed information about the new node, the bootnode and an expiry time-stamp. The bootnode receives the `PING` and returns a `PONG` containing the `PING` hash. If the `PING` and `PONG` hashes match then the connection between the new node and bootnode is verified and they are said to have "bonded".
 
 Once bonded, the new node can send a `FIND-NEIGHBOURS` request to the bootnode. The data returned by the bootnode includes a list of peers that the new node can connect to. If the nodes are not bonded, the `FIND-NEIGHBOURS` request will fail, so the new node will not be able to enter the network.
 
@@ -40,6 +40,8 @@ Once the new node receives a list of neighbours from the bootnode, it begins a P
 ```
 start client --> connect to bootnode --> bond to bootnode --> find neighbours --> bond to neighbours
 ```
+
+Execution clients are currently using the [Discv4](https://github.com/ethereum/devp2p/blob/master/discv4.md) discovery protocol and there is an active effort to migrate to the [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5) protocol.
 
 #### ENR: Ethereum Node Records {#enr}
 
@@ -75,7 +77,7 @@ Once peers are connected, and an RLPx session has been started, the wire protoco
 
 #### les (light ethereum subprotocol) {#les}
 
-This is a minimal protocol for syncing light clients. Traditionally this protocol has rarely been used because full nodes are required to serve data to light clients without being incentivized. The default behaviour of execution clients is not to serve light client data over les. More information is available in the les [spec](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
+This is a minimal protocol for syncing light clients. Traditionally this protocol has rarely been used because full nodes are required to serve data to light clients without being incentivized. The default behavior of execution clients is not to serve light client data over les. More information is available in the les [spec](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
 
 #### Snap {#snap}
 
@@ -91,11 +93,11 @@ Whisper was a protocol that aimed to deliver secure messaging between peers with
 
 ## The consensus layer {#consensus-layer}
 
-The consensus clients participate in a separate peer-to-peer network with a different specification. Consensus clients need to participate in block gossip so that they can receive new blocks from peers and broadcast them when it is their turn to be block proposer. Similarly to the execution layer, this first requires a discovery protocol so that a node can find peers and establish secure sessions for exchanging blocks, attestations etc.
+The consensus clients participate in a separate peer-to-peer network with a different specification. Consensus clients need to participate in block gossip so that they can receive new blocks from peers and broadcast them when it is their turn to be block proposer. Similar to the execution layer, this first requires a discovery protocol so that a node can find peers and establish secure sessions for exchanging blocks, attestations etc.
 
 ### Discovery {#consensus-discovery}
 
-Similarly to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating DevP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
+Similar to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating DevP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
 
 ### ENRs {#consensus-enr}
 
@@ -119,7 +121,7 @@ SSZ stands for simple serialization. It uses fixed offsets that make it easy to 
 
 ## Connecting the execution and consensus clients {#connecting-clients}
 
-Both consensus and execution clients run in parallel. They need to be connected so that the consensus client can provide instructions to the execution client, and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. The communication between the two clients can be achieved using a local RPC connection. An API known as the ['Engine-API'](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) defines the instructions sent between the two clients. Since both clients sit behind a single network identity, they share an ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
+Both consensus and execution clients run in parallel. They need to be connected so that the consensus client can provide instructions to the execution client, and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. The communication between the two clients can be achieved using a local RPC connection. An API known as the ['Engine-API'](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) defines the instructions sent between the two clients. Since both clients sit behind a single network identity, they share an ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
 
 A summary of the control flow is shown below, with the relevant networking stack in brackets.
 

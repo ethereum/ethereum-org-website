@@ -1,5 +1,5 @@
 import React from "react"
-import { ListItem } from "./SharedStyledComponents"
+import { ListItem, UnorderedList } from "@chakra-ui/react"
 import Translation from "./Translation"
 import Link from "./Link"
 import docLinks from "../data/developer-docs-links.yaml"
@@ -13,7 +13,7 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
     {docLinks
       .filter(({ id }) => id.includes(headerId))
       .map(({ items, id }) => (
-        <ul key={id}>
+        <UnorderedList ml={6} spacing={3} key={id}>
           {items &&
             items.map(({ id, to, path, description, items }) => (
               <ListItem key={id}>
@@ -28,7 +28,12 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
                   {" – "}
                   <Translation id={description} />
                 </i>
-                <ul>
+                <UnorderedList
+                  ml={6}
+                  mt={3}
+                  spacing={3}
+                  style={{ listStyleType: "circle" }}
+                >
                   {items &&
                     items.map(({ id, to, path }) => (
                       <ListItem key={id}>
@@ -37,10 +42,10 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
                         </Link>
                       </ListItem>
                     ))}
-                </ul>
+                </UnorderedList>
               </ListItem>
             ))}
-        </ul>
+        </UnorderedList>
       ))}
   </React.Fragment>
 )

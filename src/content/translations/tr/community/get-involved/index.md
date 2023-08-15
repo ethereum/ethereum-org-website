@@ -39,7 +39,7 @@ Bir geliştirici değilseniz Ethereum'da nereden başlayacağınızı bilmek zor
 ### Ethereum hakkında içerik yazın {#write-content}
 
 - Ethereum'un değerini sade bir dille açıklayabilecek iyi yazarlara ihtiyacı var
-- Kendi makalelerinizi yayınlamaya hazır değil misiniz? [EthHub](https://docs.ethhub.io/) gibi topluluk kaynaklarındaki mevcut içeriklere katkı sağlamayı veya ethereum.org için yeni içerikler önermeyi göz önünde bulundurun!
+- Kendi makalelerinizi yayınlamaya hazır değil misiniz? gibi topluluk kaynaklarındaki mevcut içeriklere katkı sağlamayı veya ethereum.org için yeni içerikler önermeyi göz önünde bulundurun!
 
 ### Topluluk çağrıları için not alma teklifi {#take-notes}
 
@@ -71,7 +71,7 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 
 ## Finans uzmanları ve Muhasebeciler <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum, alternatif bir finansal sistem sunan bir protokoller ve uygulamalar ağı olan “Merkeziyetsiz Finans” ekosistemine ev sahipliği yapmaktadır. Finans uzmanıysanız bazı DeFi uygulamalarına [DeFi Pulse](https://defipulse.com/) veya [DeFiPrime](https://defiprime.com) üzerinden bakabilirsiniz
+- Ethereum, alternatif bir finansal sistem sunan bir protokoller ve uygulamalar ağı olan “Merkeziyetsiz Finans” ekosistemine ev sahipliği yapmaktadır. Finans uzmanıysanız bazı DeFi uygulamalarına [DeFi Llama](https://defillama.com/) veya [DeFiPrime](https://defiprime.com) üzerinden bakabilirsiniz
 - Muhasebeci misiniz? Ethereum üzerindeki ETH, token'lar, DeFi vb. varlıklar, birçok yeni muhasebecilik sorununu beraberinde getirir. [Rotki](https://rotki.com/) gibi, kullanıcıların saymanlık ve muhasebecilik sorunlarını çözmeye yardımcı olmayı hedefleyen bazı projeleri inceleyerek başlayabilirsiniz
 
 ## Ürün Yöneticileri <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

@@ -1,5 +1,5 @@
 {
-  "page-wallets-accounts-addresses": "Carteras, cuentas y direcciones",
+  "page-wallets-accounts-addresses": "Billeteras, cuentas y direcciones",
   "page-wallets-accounts-addresses-desc": "Conviene comprender las diferencias entre algunos términos clave.",
   "page-wallets-accounts-ethereum-addresses": "Una cuenta Ethereum tiene una dirección Ethereum, como una bandeja de entrada tiene una dirección de correo. Puede usar esta dirección para enviar fondos a una cuenta.",
   "page-wallets-alt": "Imagen de un robot con una caja fuerte como cuerpo, que representa una cartera de Ethereum",
@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "Su cuenta de Ethereum",
   "page-wallets-your-ethereum-account-desc": "Su cartera es la ventana a su cuenta de Ethereum: a su saldo, historial de transacciones y más. Pero puede intercambiar proveedores de cartera en cualquier momento.",
   "page-wallets-your-login": "Su inicio de sesión para aplicaciones de Ethereum",
-  "page-wallets-your-login-desc": "Su cartera le permite conectarse a cualquier aplicación descentralizada mediante su cuenta de Ethereum. Es como un inicio de sesión que puede usar en muchas dapps."
+  "page-wallets-your-login-desc": "Su cartera le permite conectarse a cualquier aplicación descentralizada mediante su cuenta de Ethereum. Es como un inicio de sesión que puede usar en muchas dapps.",
+  "additional-reading-how-to-register-an-ethereum-account": "Cómo «registrar» una cuenta de Ethereum",
+  "additional-reading-how-to-use-a-wallet": "Cómo utilizar una cartera"
 }

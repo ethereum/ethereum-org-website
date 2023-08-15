@@ -58,9 +58,9 @@ _Diagrams adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/
 
 All implementations of the EVM must adhere to the specification described in the Ethereum Yellowpaper.
 
-Over Ethereum's 7 year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages.
+Over Ethereum's nine year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages.
 
-All [Ethereum clients](/developers/docs/nodes-and-clients/#execution-clients) include an EVM implementation. Additionally there are multiple standalone implementations, including:
+[Ethereum execution clients](/developers/docs/nodes-and-clients/#execution-clients) include an EVM implementation. Additionally, there are multiple standalone implementations, including:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
@@ -73,6 +73,7 @@ All [Ethereum clients](/developers/docs/nodes-and-clients/#execution-clients) in
 - [Jellopaper aka KEVM: Semantics of EVM in K](https://jellopaper.org/)
 - [The Beigepaper](https://github.com/chronaeon/beigepaper)
 - [Ethereum Virtual Machine Opcodes](https://www.ethervm.io/)
+- [Ethereum Virtual Machine Opcodes Interactive Reference](https://www.evm.codes/)
 - [A short introduction in Solidity's documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
 ## Related Topics {#related-topics}

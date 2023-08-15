@@ -16,10 +16,12 @@ lang: ru
 
 - [Программа поддержки экосистемы EF](https://esp.ethereum.foundation) — _финансирование проектов с открытым исходным кодом, которые приносят пользу Ethereum, с особым акцентом на универсальные инструменты, инфраструктуру, исследования и общественные блага_
 - [Запросы предложений (RFP) Ethereum](https://github.com/ethereum/requests-for-proposals) — _запросы предложений Фондом Ethereum для работы и проектов в экосистеме Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) — _разработка децентрализованных приложений, создание децентрализованной автономной организации (DAO)_ Гранты в размере от 1000 до 8000 долл. США.
+- [MetaCartel](https://www.metacartel.org/grants/) — _разработка децентрализованных приложений, создание DAO_
 - [Децентрализованная автономная организация (DAO) Moloch](https://www.molochdao.com/) — _конфиденциальность, масштабирование второго уровня, безопасность клиентов и многое другое_
 - [Открытые гранты](https://opengrants.com/explore)
 - [Гранты DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) — _таблица Google организаций, предлагающих гранты_
+- [Аналог Crunchbase для грантов по Web3](https://www.cryptoneur.xyz/web3-grants) — _отфильтровывайте и ищите гранты по категории, назначению, количеству и другим характеристикам. Внесите свой вклад, чтобы помочь другим найти нужный грант._
+- [Академические гранты](https://esp.ethereum.foundation/academic-grants) — _гранты на поддержку академической работы, связанной с Ethereum_
 
 ## Отдельные проекты {#project-specific}
 
@@ -27,12 +29,16 @@ lang: ru
 
 - [Программа грантов Aave](https://aavegrants.org/) — _гранты DAO от [Aave](https://aave.com/)_
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) — _фонд экосистемы [Balancer](https://balancer.fi/)_
+- [Программа грантов Chainlink](https://chain.link/community/grants) — _гранты сообщества [Chainlink](https://chain.link/)_
 - [Программа грантов Compound](https://compoundgrants.org/) — _финансовая экосистема [Compound](https://compound.finance/)_
-- [Программа грантов Consensys](https://consensys.net/grants/) — _гранты Ethereum и финансирование блокчейна [Consensys](https://consensys.net/)_
-- [Организация грантов Lido Ecosystem (LEGO)](https://lego.lido.fi/) — _финансовая экосистема [Lido](https://lido.fi/)_
+- [ Программа грантов Decentraland](https://governance.decentraland.org/grants/) — _метавселенная децентрализованных автономных организаций (DAO) [Decentraland](https://decentraland.org/)_
+- [Организация грантов экосистемы Lido (LEGO)](https://lego.lido.fi/) — _финансовая экосистема [Lido](https://lido.fi/)_
+- [ Программа MetaMask](https://metamaskgrants.org/) — _децентрализованная автономная организация (DAO) по выдаче грантов, возглавляемая сотрудниками [MetaMask](https://metamask.io/)_
 - [Программа грантов mStable](https://docs.mstable.org/advanced/grants-program) — _сообщество [mStable](https://mstable.org/)_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _экосистема [The Graph](https://thegraph.com/)_
-- [Программа грантов Uniswap](https://www.unigrants.org/) — _сообщество [Uniswap](https://uniswap.org/)_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _экосистема [The Graph](https://thegraph.com/)_
+- [Программа грантов UMA](https://grants.umaproject.org/) — _поддержка разработчиков [UMA](https://umaproject.org/)_
+- [Программа грантов Uniswap](https://www.unigrants.org/) — _сообщество [Uniswap](https://uniswap.org/)_
+- [Гранты по Web3](https://web3grants.net) — _исчерпывающий список программ грантов, связанных с Web3/криптовалютами_
 
 ## Квадратичное финансирование {#quadratic-funding}
 

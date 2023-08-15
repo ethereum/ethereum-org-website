@@ -181,7 +181,7 @@ Ethereum'un başlangıçta işlemler için tek bir formatı vardı. Her işlem, 
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum, erişim listelerini ve [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)'un eski işlem formatlarını etkilemeden uygulanmasını mümkün kılmak için birçok işlem türünü destekleyecek şekilde evrildi.
+Ethereum, erişim listelerini ve [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)'un eski işlem formatlarını etkilemeden uygulanmasını mümkün kılmak için birçok işlem türünü destekleyecek şekilde evrildi.
 
 [EIP-2718: Yazılan İşlem Zarfı](https://eips.ethereum.org/EIPS/eip-2718), gelecekteki işlem türleri için bir zarf olan bir işlem türünü tanımlar.
 

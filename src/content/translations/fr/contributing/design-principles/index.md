@@ -16,7 +16,7 @@ Lisez-les avant de [contribuer à ethereum.org](/contributing/).
 
 Ne vous inquiétez pas, ils sont assez simples ! **Les principes de conception** sont un ensemble de lignes directrices auxquelles nous nous référons lors de la conception (c'est-à-dire la création, la maintenance ou la mise à jour) de quelque chose.
 
-Dans le contexte d'ethereum.org, ces principes de conception sont la base de ce que nous voulons que le site web représente et projette au monde. Ils sont à la fois ambitieux et fonctionnels. Il ne s'agit pas seulement de l'_apparence_ du site, mais également de son _fonctionnement_, et même de ce qu'une personne _ressent_ en le parcourant. Tout, des couleurs aux mises en page en passant par la façon dont nous parlons d'Ethereum sur le site web, doit s'appuyer sur ces principes.
+Dans le contexte d'ethereum.org, ces principes de conception sont la base de ce que nous voulons que le site web représente et projette au monde. Ils sont à la fois ambitieux **et** fonctionnels. Il ne s'agit pas seulement de l'_apparence_ du site, mais également de son _fonctionnement_, et même de ce qu'une personne _ressent_ en le parcourant. Tout, des couleurs aux mises en page en passant par la façon dont nous parlons d'Ethereum sur le site web, doit s'appuyer sur ces principes.
 
 ## Les principes en pratique {#how-decisions-about-the-site-are-made}
 
@@ -90,4 +90,4 @@ Vous pouvez voir nos principes de conception en action [dans l'ensemble de notre
 
 Bien que ces principes soient axés sur le site web ethereum.org, nous espérons que beaucoup d'entre eux sont représentatifs des valeurs de l'écosystème Ethereum dans son ensemble (par exemple, vous pouvez voir l'influence des [principes du livre blanc Ethereum](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)). Peut-être voudrez-vous même incorporer certains d'entre eux dans votre propre projet !
 
-Faites-nous part de vos réflexions sur le [serveur Discord](https://discord.gg/CetY6Y4) ou en [créant un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=).
+Faites-nous part de vos réflexions sur le [serveur Discord](https://discord.gg/CetY6Y4) ou en [créant un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request).

@@ -6,7 +6,6 @@ tags:
   - "智能合约"
   - "通证"
   - "solidity"
-  - "入门指南"
   - "erc-20"
 skill: beginner
 lang: zh

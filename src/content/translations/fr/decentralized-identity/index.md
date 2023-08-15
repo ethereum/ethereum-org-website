@@ -17,7 +17,7 @@ Cependant, les systèmes traditionnels de gestion d'identité reposent depuis lo
 
 Pour résoudre ces problèmes, nous avons des systèmes d'identité décentralisés construits sur des blockchains publiques comme Ethereum. L'identité décentralisée permet aux individus de gérer les informations relatives à leur identité. Avec des solutions d’identité décentralisées, _vous_ pouvez créer des identifiants et réclamer et détenir vos attestations sans compter sur les autorités centrales, comme les fournisseurs de services ou les gouvernements.
 
-## Qu'est-ce qu'une identité {#what-is-identity}
+## Qu'est-ce qu'une identité? {#what-is-identity}
 
 L'identité signifie le sentiment de soi d'un individu, défini par des caractéristiques uniques. L'identité désigne le fait d'être un _individu_, c'est-à-dire une entité humaine distincte. L'identité pourrait également se référer à d'autres entités non humaines, comme une organisation ou une autorité.
 
@@ -157,6 +157,7 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _Un système de nommage décentralisé pour les identifiants sur la chaîne, lisibles par machine, tels que les adresses de portefeuilles Ethereum, les hachages de contenu et les métadonnées._
 - **[SprunceID](https://www.spruceid.com/)** - _Un projet d'identité décentralisé qui permet aux utilisateurs de contrôler leur identité numérique avec des comptes Ethereum et des profils ENS au lieu de s'appuyer sur des services tiers._
+- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Un registre/protocole décentralisé pour faire des attestations en chaîne ou hors chaîne sur quoi que ce soit._
 - **[Preuve d'humanité](https://www.proofofhumanity.id)** - _Preuve d'humanité (ou PoH) est un système de vérification d'identité sociale construit sur Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Un réseau d'identité sociale décentralisé et open-source qui cherche à réformer la vérification d'identité par la création et l'analyse d'un graphe social._
 - **[Passeport de preuve d'identité ](https://proofofpersonhood.com/)** - _Un agrégateur d'identité numérique décentralisé._
@@ -175,7 +176,7 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [Identité décentralisée (Bonus Session Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Une formidable vidéo explicative sur l'identité décentralisée par Andreas Antonopolous_
 - [Connexion avec Ethereum et Decentralized Identity avec Ceramic, IDX, React, et 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutoriel YouTube sur la création d'un système de gestion d'identité pour créer, lire et mettre à jour un profil d'utilisateur en utilisant son portefeuille Ethereum par Nader Dabit_
 - [BrightID - Identité décentralisée sur Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Épisode de podcast non bancaire parlant de BrightID, une solution d'identité décentralisée pour Ethereum_
-- [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _Présentation EthDenver 2022 par Evin McMullen_
+- [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Présentation EthDenver 2022 par Evin McMullen
 
 ### Communautés {#communities}
 

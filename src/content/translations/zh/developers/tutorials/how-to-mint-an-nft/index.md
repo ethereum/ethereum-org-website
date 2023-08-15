@@ -3,10 +3,9 @@ title: 如何铸造非同质化代币（非同质化代币教程系列 2/3）
 description: 本教程描述了如何使用我们的智能合约和 Web3 在以太坊区块链上铸造非同质化代币。
 author: "苏米-穆德吉尔"
 tags:
-  - "非同质化代币"
   - "ERC-721"
-  - "alchemy"
-  - "Solidity"
+  - "Alchemy"
+  - "solidity"
   - "智能合约"
 skill: beginner
 lang: zh
@@ -62,7 +61,7 @@ console.log(JSON.stringify(contract.abi))
 node scripts/mint-nft.js
 ```
 
-## 第 4 步：使用星际文件系统为您的非同质化代币配置元数据 {#config-meta}
+## 第 4 步：使用 IPFS 系统为您的 NFT 配置元数据 {#config-meta}
 
 如果你还记得我们第 1 部分的教程，我们的 `mintNFT` 智能合约函数使用 tokenURI 参数，该参数应解析为描述非同质化代币元数据的 JSON 文档，正是它生成非同质化代币并赋予非同质化代币可配置的属性，如名称、描述、图像和其他属性。
 
@@ -76,11 +75,11 @@ node scripts/mint-nft.js
 
 - 将图像上传到 Pinata — 这将是你的非同质化代币的图像资产。 您可以随意为该资产命名。
 
-- 上传之后，你将在“File”页面的表格中看到文件信息。 您还会看到 CID 列。 您可以通过单击旁边的复制按钮来复制 CID。 您可以通过 `https://gateway.pinata.cloud/ipfs/<CID>` 查看您上传的信息。 例如，您可以在[这里](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f)找到我们在星际文件系统上使用的图片。
+- 上传之后，你将在“File”页面的表格中看到文件信息。 您还会看到 CID 列。 您可以通过单击旁边的复制按钮来复制 CID。 您可以通过 `https://gateway.pinata.cloud/ipfs/<CID>` 查看您上传的信息。 例如，你可以在[此处](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5)找到我们在星际文件系统上使用的图片。
 
 为了方便更偏向视觉型的学习者理解，上述步骤总结如下：
 
-![如何将您的图像上传到 Pinata](https://gateway.pinata.cloud/ipfs/Qmcdt5VezYzAJDBc4qN5JbANy5paFg9iKDjq8YksRvZhtL)
+![如何将您的图像上传到 Pinata](./instructionsPinata.gif)
 
 现在，我们要再上传一份文件到 Pinata。 但在我们上传之前，需要先创建该文件！
 
@@ -112,18 +111,18 @@ node scripts/mint-nft.js
 
 ## 第 5 步：创建您的合约实例 {#instance-contract}
 
-现在，为了与我们的合约进行交互，我们需要在代码中创建一个实例。 要做到这一点，我们需要合约地址，可以从部署或 [Etherscan](https://ropsten.etherscan.io/) 中查找您用来部署合约的地址。
+现在，为了与我们的合约进行交互，我们需要在代码中创建一个实例。 为此，我们需要合约地址，可以从部署或 [Etherscan](https://goerli.etherscan.io/) 中查找用来部署合约的地址。
 
 ![在 Etherscan 上查看您的合约地址](./viewContractEtherscan.png)
 
-在上例中，我们的合约地址是 0x81c587EB0fE773404c42c1d2666b5f557C470eED。
+在上面的示例中，我们的合约地址是 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778。
 
-接下来我们将使用 Web3 的[合约方法](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract)，创建使用应用程序二进制接口和地址的合约。 在你的 `mint-nft.js` 文件中，添加以下内容:
+接下来我们将使用 Web3 的[合约方法](https://docs.web3js.org/api/web3-eth-contract/class/Contract)，创建使用应用程序二进制接口和地址的合约。 在你的 `mint-nft.js` 文件中，添加以下内容:
 
 ```js
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef778"
 
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = new web3.eth.Contract(contracts.abi, contracttAddress)
 ```
 
 ## 第 6 步：更新 `.env` 文件 {#update-env}
@@ -133,7 +132,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 将你的公钥添加到你的 `.env` 文件中 — 如果你完成了教程第 1 部分，我们的 `.env` 文件现在应该如下所示：
 
 ```js
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-goerli.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
@@ -152,7 +151,7 @@ PUBLIC_KEY = "your-public-account-address"
 
 - `'to': contractAddress`——我们希望与之交互并发送交易的合约
 
-- `'nonce': nonce`——帐户随机数和从我们的地址发送的交易数量
+- `'nonce': nonce` — 帐户随机数和从我们的地址发送的交易数量
 
 - `'gas': estimatedGas`——预估完成交易所需的燃料
 
@@ -170,7 +169,7 @@ PUBLIC_KEY = "your-public-account-address"
    const web3 = createAlchemyWeb3(API_URL);
 
    const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
-   const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED";
+   const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778";
    const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
    async function mintNFT(tokenURI) {
@@ -203,7 +202,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
@@ -269,7 +268,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
@@ -315,11 +314,11 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
 现在，运行 `node scripts/mint-nft.js` 来部署您的非同质化代币。 几秒钟后，您应该在终端中看到这样的响应：
 
-    The hash of your transaction is: 0x10e5062309de0cd0be7edc92e8dbab191aa2791111c44274483fa766039e0e00
+    你的交易哈希值为：0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
 
-    Check Alchemy's Mempool to view the status of your transaction!
+    检查 Alchem 的内存池以查看您的交易状态！
 
-接下来，访问您的 [Alchemy 内存池](https://dashboard.alchemyapi.io/mempool)，查看您的交易状态（待定、已开采还是被网络放弃）。 如果您的交易被放弃，可以通过 [Ropsten Etherscan](https://ropsten.etherscan.io/) 搜索您的交易哈希值查看具体情况。
+接下来，访问您的 [Alchemy 内存池](https://dashboard.alchemyapi.io/mempool)，查看您的交易状态（待定、已开采还是被网络放弃）。 如果你的交易被丢弃，可以访问 [Goerli Etherscan](https://goerli.etherscan.io/) 并搜索你的交易哈希值。
 
 ![在 Etherscan 上查看您的非同质化代币交易哈希值](./viewNFTEtherscan.png)_View your NFT transaction hash on Etherscan_
 

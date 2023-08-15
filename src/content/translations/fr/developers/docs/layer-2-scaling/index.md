@@ -84,7 +84,7 @@ Les rollups optimisés utilisent une chaîne latérale positionnée en parallèl
 
 Avec les rollups optimisés, les transactions sont écrites sur la chaîne principale Ethereum en tant que données d'appel, ce qui les optimise davantage en réduisant le coût du carburant.
 
-Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de la mise à niveau Eth2 vers les [chaînes de fragments](/upgrades/sharding). Cela est dû au fait qu'il y aura plus de données disponibles en cas de contestation d'une transaction.
+Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de la mise à niveau Eth2 vers les [chaînes de fragments](/roadmap/danksharding). Cela est dû au fait qu'il y aura plus de données disponibles en cas de contestation d'une transaction.
 
 #### Contestation des transactions {#disputing-transactions}
 
@@ -222,25 +222,18 @@ Combine les meilleures parties des multiples technologies de couche 2, et peut o
 
 **Canaux d'états**
 
-- [EthHub sur les canaux d'état](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _- Josh Stark, 12 février 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _- Jeff Coleman, 6 novembre 2015 _
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
 **Canaux de paiement**
 
-- [EthHub sur les canaux d'état](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
-
 **Rollups ZK**
-
-- [EthHub sur rollups ZK](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 **Rollups optimisés**
 
-- [EthHub sur rollups optimisés](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic-rollups/)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 
 **Chaînes latérales**
 
-- [EthHub sur les canaux d'état](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Scaling Ethereum DApps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _- Georgios Konstantopoulos, 8 février 2018_

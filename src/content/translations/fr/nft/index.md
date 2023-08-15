@@ -9,12 +9,12 @@ image: ../../../../assets/infrastructure_transparent.png
 alt: Un logo Eth affiché par hologramme.
 summaryPoint1: Un moyen de représenter toute chose unique en tant qu'actif Ethereum.
 summaryPoint2: Les NFT offrent plus de possibilités que jamais aux créateurs de contenus.
-summaryPoint3: Alimentés par des contrats intelligents sur la blockchain Ethereum.
+summaryPoint3: Propulsés par des contrats intelligents sur la blockchain Ethereum.
 ---
 
 Les NFT révolutionnent actuellement le monde de l'art numérique et des objets de collection. La vie des artistes numériques est bouleversée avec les ventes énormes à un nouveau public crypto. Et les célébrités se joignent à elles car elles voient là une nouvelle occasion de se rapprocher de leurs fans. Mais l'art numérique n'est qu'une façon d'utiliser les NFT. Ils peuvent être utilisés pour attester de la propriété de n'importe quel actif unique, à l'instar d'un acte de propriété d'un objet dans la sphère numérique ou physique.
 
-Si Andy Warhol était né à la fin des années 90, il aurait probablement créé sa Campbell's Soup sous forme de NFT. Ce n'est qu'une question de temps avant que Kanye ne lance une paire de baskets Yeezys sur Ethereum. Les NFT pourraient, demain, vous permettre de prouver que vous êtes bien le propriétaire de votre voiture.
+Si Andy Warhol était né à la fin des années 90, il aurait probablement créé sa Campbell's Soup sous forme de NFT. Ce n'est qu'une question de temps avant que Nike ne lance une paire de baskets Jordan sur Ethereum. Les NFT pourraient, demain, vous permettre de prouver que vous êtes bien le propriétaire de votre voiture.
 
 ## Qu'est-ce qu'un NFT ? {#what-are-nfts}
 
@@ -153,6 +153,7 @@ Voici plus d'informations à propos de certains des cas d'utilisation et idées 
 - [Noms de domaine](#nft-domains)
 - [Objets réels](#nft-physical-items)
 - [Investissements et garanties](#nfts-and-defi)
+- [Token-gating](#tokengating)
 
 <Divider />
 
@@ -273,53 +274,66 @@ Les entreprises proposant de faux certificats pour des diplômes universitaires 
 
 <Divider />
 
+### Token-gating {#tokengating}
+
+Le token-gating est un moyen de restreindre l'accès à quelque chose et d'utiliser les NFT pour en déverrouiller l'accès. Les éléments concernés peuvent varier considérablement en fonction de la plateforme mais les exemples les plus courants comprennent le contenu restreint, les serveurs de chat privés et, dans le monde du commerce électronique, les produits exclusifs.
+
+Une plateforme qui applique le token-gating vous demandera généralement de connecter votre portefeuille pour prouver que vous possédez le NFT requis. Si vous avez le NFT requis, vous aurez l'accès. Sinon, le contenu restera inaccessible. Les NFT sont un excellent moyen de procéder en raison de leur unicité – vous ne pouvez pas en simuler la propriété pour accéder à la chose visée.
+
+Étant donné que les NFT sont sur Ethereum, ils peuvent être utilisés pour déverrouiller les token-gates Ethereum sur n'importe quelle plateforme qui les implémente. Un seul NFT en votre possession pourrait débloquer du contenu restreint, des serveurs de chat privés et des produits exclusifs sur des sites et applications complètement différents.
+
+Si la frappe et la distribution des NFT permet de générer ou de digitaliser une communauté, le token-gating permet quant à lui de nourrir la communauté. Il considère que les NFT soit davantage utilisés comme un outil d'adhésion ou de fidélisation – et comme un excellent moyen d’offrir de manière fiable les récompenses qui en découlent.
+
+#### Exemples
+
+- [Collab.land](https://collab.land/) token-gate les serveurs de discussion Discord ou les groupes Telegram
+- [Unlock protocol](https://unlock-protocol.com/) est un protocole de token-gating
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) a une liste grandissante d'applications qui permettent aux marchands de restreindre l'accès aux produits et réductions
+
+<Divider />
+
 ## Ethereum et NFTs {#ethereum-and-nfts}
 
 Ethereum permet aux NFT de fonctionner pour plusieurs raisons :
 
 - L'historique des transactions et les métadonnées de jetons sont vérifiables publiquement - il est facile de prouver l'historique de propriété.
 - Une fois qu'une transaction est confirmée, il est presque impossible de manipuler ces données pour "voler" la propriété.
-- Le trading des NFT peut se faire de pair à pair sans avoir besoin de platesformes qui peuvent prendre des parts importantes en guise de compensation.
-- Tous les produits Ethereum partagent le même « backend ». En d’autres termes, tous les produits Ethereum peuvent facilement se comprendre les uns les autres, ce qui rend les NFT portables à travers les produits. Vous pouvez acheter un NFT sur un produit et le vendre sur un autre facilement. En tant que créateur, vous pouvez lister vos NFT sur plusieurs produits en même temps – chaque produit aura les informations de propriété les plus à jour.
-- Ethereum n'est jamais hors-ligne, ce qui signifie que vos jetons seront toujours disponibles pour la vente.
+- Le trading des NFT peut se faire de pair à pair sans avoir besoin de platesformes susceptibles de prendre des parts importantes en guise de compensation.
+- Tous les produits Ethereum partagent le même « backend ». En d’autres termes, tous les produits Ethereum peuvent facilement se comprendre les uns les autres : cela rend les NFT transférables à travers les produits. Vous pouvez acheter un NFT sur un produit et le vendre sur un autre sans difficulté. En tant que créateur, vous pouvez lister vos NFT sur plusieurs produits en même temps – chaque produit disposera des informations de propriété les plus à jour.
+- Ethereum ne s'arrête jamais, ce qui signifie que vos jetons seront toujours disponibles pour la vente.
 
 ## L'impact environnemental des NFT {#environmental-impact-nfts}
 
-Les NFT gagnent en popularité, ils font donc l'objet d'une surveillance accrue, en particulier en ce qui concerne leur empreinte carbone.
+La création et le transfert de NFT ne sont que des transactions d'Ethereum - le fait de frapper, acheter, échanger ou interagir avec des NFT ne consomme pas directement d'énergie. Depuis [La fusion](/roadmap/merge), Ethereum est une blockchain basse énergie, de sorte que l'impact environnemental généré par l'utilisation des NFT est négligeable.
 
-Pour clarifier certaines choses :
-
-- La création et le transfert de NFT ne sont que des transactions Ethereum - ils n'ont aucun impact direct sur l'énergie consommée par Ethereum, ni ne dépensent leur propre énergie de manière autonome.
-- Ethereum est une blockchain à basse consommation d'énergie, ce qui signifie que l’impact environnemental de la création, de l’achat et du transfert de NFT est très faible.
-
-Les sections suivantes expliquent un peu plus en détail la technique...
+[Plus d'infos sur la consommation d'énergie d'Ethereum](/energy-consumption/).
 
 ### Ne rejetez pas la faute sur les NFT {#nft-qualities}
 
 L'ensemble de l'écosystème NFT fonctionne, car Ethereum est décentralisé et sécurisé.
 
-Décentralisé signifie que n'importe qui, y compris vous-même, peut vérifier que vous possédez quelque chose. Tout cela sans faire confiance ni accorder de droit de de garde à un tiers qui pourrait imposer ses propres règles. Cela signifie également que votre NFT est transférable sur de nombreux produits et marchés différents.
+Décentralisé signifie que n'importe qui, y compris vous-même, peut vérifier que vous possédez quelque chose. Tout cela sans faire confiance ni accorder de droit de garde à un tiers qui pourrait imposer ses propres règles. Cela signifie également que votre NFT est transférable sur de nombreux produits et marchés différents.
 
 Sécurisé signifie que personne ne peut copier/coller votre NFT ou le voler.
 
-Ces qualités d'Ethereum permettent de posséder électroniquement des objets uniques et de tirer un prix juste du contenu que vous créez. Ethereum protège les actifs à l'aide d'un mécanisme de consensus décentralisé qui implique [« preuve d'enjeu »](/developers/docs/consensus-mechanisms/pos). C'est une méthode peu gourmande en carbone, permet de déterminer qui peut ajouter un bloc de transactions à la chaîne, et est considéré comme plus sûr que l'alternative consommant beaucoup d'énergie : la [« preuve de travail »](/developers/docs/consensus-mechanisms/pow). Les NFT ont été associés à de gros consommateurs énergétiques parce qu'Ethereum était autrefois sécurisé via la preuve de travail. Ceci n'est plus vrai.
+Ces qualités d'Ethereum permettent de posséder électroniquement des objets uniques et d'obtenir un prix équitable pour votre contenu. Ethereum protège les actifs à l'aide d'un mécanisme de consensus décentralisé qui implique la [« preuve d'enjeu »](/developers/docs/consensus-mechanisms/pos). Cette méthode peu gourmande en carbone permet de déterminer qui peut ajouter un bloc de transactions à la chaîne. Elle est considérée comme plus sûre que son alternative énergivore : la [« preuve de travail »](/developers/docs/consensus-mechanisms/pow). Les NFT ont été associés à une forte dépense énergétique parce qu'Ethereum était autrefois sécurisé via la preuve de travail. Ce n'est plus le cas.
 
 #### La frappe des NFT {#minting-nfts}
 
-Lorsque vous frappez un NFT, certaines choses doivent se produire :
+Lorsque vous créez un NFT, certaines choses doivent se produire :
 
 - Il doit être confirmé comme étant un élément de la blockchain.
 - Le solde du compte du propriétaire du NFT doit être mis à jour pour intégrer cet élément. Cela rend possible les échanges, mais aussi de vérifier à qui il « appartient ».
 - Les transactions qui confirment ce qui précède doivent être ajoutées à un bloc et « immortalisées » sur la blockchain.
 - Ce bloc doit être confirmé par tous les membres du réseau comme étant « valide ». Ce consensus permet d'éviter le besoin d'intermédiaires, car le réseau reconnaît que le NFT existe et vous appartient. De plus, il se trouve sur la blockchain, donc tout le monde peut le vérifier. Voici l'une des façons dont Ethereum aide les créateurs de NFT à maximiser leurs revenus.
 
-Toutes ces tâches sont effectuées par les producteurs de blocs et les validateurs. Les proposants de blocs ajoutent votre transaction NFT à un bloc et le diffuse au reste du réseau. Les validateurs vérifient que la transaction est valide et l'ajoutent ensuite à leurs bases de données. Il existe de nombreuses incitations crypto-économiques en place pour s'assurer que les validateurs agissent honnêtement. Sinon, n'importe qui pourrait simplement prétendre être propriétaire de la NFT que vous venez de frapper et en transférer frauduleusement la propriété.
+Toutes ces tâches sont effectuées par les producteurs de blocs et les validateurs. Les proposants de blocs ajoutent votre transaction NFT à un bloc et le diffuse auprès du reste du réseau. Les validateurs vérifient que la transaction est valide et l'ajoutent ensuite à leurs bases de données. Il existe de nombreuses incitations crypto-économiques en place pour s'assurer que les validateurs agissent honnêtement. Sinon, n'importe qui pourrait simplement prétendre être propriétaire de la NFT que vous venez de frapper et en transférer frauduleusement la propriété.
 
 #### Sécurité NFT {#nft-security}
 
-La sécurité d'Ethereum émane de la preuve d'enjeu. Le système est conçu pour décourager économiquement les actions malveillantes, ce qui rend Ethereum infalsifiable. C'est ce qui rend possibles les NFT. Une fois le bloc contenant votre transaction NFT finalisé, cela coûterait à un attaquant des millions d'ETH pour le modifier. Quiconque exécute un logiciel Ethereum serait immédiatement capable de détecter des manipulations malhonnêtes avec un NFT, et le mauvais « acteur » serait économiquement pénalisé et rejeté.
+La sécurité d'Ethereum émane de la preuve d'enjeu. Le système est conçu pour décourager économiquement les actions malveillantes, ce qui rend Ethereum infalsifiable. C'est ce qui rend possibles les NFT. Une fois le bloc contenant votre transaction NFT finalisé, un attaquant devrait dépenser des millions d'ETH pour le modifier. Quiconque exécute un logiciel Ethereum serait immédiatement capable de détecter des manipulations malhonnêtes avec un NFT, et la personne malveillante serait économiquement pénalisée et rejetée.
 
-Les questions de sécurité concernant les NFT sont le plus souvent liées aux escroqueries par hameçonnage, les vulnérabilités des contrats intelligents ou erreurs utilisateur (comme exposer par inadvertance des clés privées), rendant la sécurité du portefeuille critique pour les propriétaires de NFT.
+Les questions de sécurité concernant les NFT sont le plus souvent liées aux escroqueries par hameçonnage, aux vulnérabilités des contrats intelligents ou aux erreurs utilisateur (comme exposer par inadvertance des clés privées), rendant la sécurité du portefeuille critique pour les propriétaires de NFT.
 
 <ButtonLink to="/security/">
   En savoir plus sur la sécurité
@@ -327,7 +341,7 @@ Les questions de sécurité concernant les NFT sont le plus souvent liées aux e
 
 ## Créer avec les NFT {#build-with-nfts}
 
-La plupart des NFT sont basés sur une norme connue en tant que [ERC-721](/developers/docs/standards/tokens/erc-721/). Il y a cependant d'autres normes qui pourraient vous intéresser. La norme [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) autorise les jetons à moitié fongibles qui pourraient être particulièrement utiles dans l'univers des jeux vidéos. Et plus récemment, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) a été proposé pour fabriquer des NFT frappés bien plus efficaces. Cette norme vous laisse le droit de frapper autant que vous le souhaitez en une transaction !
+La plupart des NFT sont construits via une norme cohérente connue sous le nom de [ERC-721](/developers/docs/standards/tokens/erc-721/). Il existe cependant d'autres normes qui pourraient vous intéresser. La norme [ERC-1155](/developers/docs/standards/tokens/erc-1155/) autorise les jetons à moitié fongibles, ce qui est particulièrement utiles dans l'univers des jeux vidéos. Et plus récemment, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) a été proposé pour rendre la frappe de NFT bien plus efficace. Cette norme vous laisse le droit de frapper autant que vous le souhaitez en une seule transaction !
 
 ## Complément d'information {#further-reading}
 
@@ -337,4 +351,6 @@ La plupart des NFT sont basés sur une norme connue en tant que [ERC-721](/devel
 - [Everything you need to know about the metaverse](https://foundation.app/blog/enter-the-metaverse) – _Foundation team, foundation.app_
 - [No, CryptoArtists Aren’t Harming the Planet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Consommation énergétique d'Ethereum](/energy-consumption/)
-- [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 mai 2021_
+- [API Ethereum NFT](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
+
+<QuizWidget quizKey="nfts" />

@@ -1,8 +1,9 @@
-import type { ComponentStyleConfig } from "@chakra-ui/theme"
+import { defineStyleConfig } from "@chakra-ui/react"
+import { defineMergeStyles, linkDefaultTheme } from "./components.utils"
 
-export const Link: ComponentStyleConfig = {
-  baseStyle: {
-    color: "primary",
+export const Link = defineStyleConfig({
+  baseStyle: defineMergeStyles(linkDefaultTheme.baseStyle, {
+    color: "primary.base",
     textDecoration: "underline",
     _focus: {
       boxShadow: "none",
@@ -11,5 +12,5 @@ export const Link: ComponentStyleConfig = {
       boxShadow: "none",
       outline: "auto",
     },
-  },
-}
+  }),
+})

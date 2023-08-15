@@ -8,7 +8,7 @@ image: ../../../../assets/use-cases/defi.png
 alt: Lego parçalarından yapılmış bir Eth logosu.
 sidebarDepth: 2
 summaryPoint1: Mevcut finansal sisteme küresel ve açık bir alternatif.
-summaryPoint2: Ödünç almanıza, tasarruf etmenize, yatırım yapmanıza, ticaret yapmanıza ve daha pek çok şeye izin veren ürünler.
+summaryPoint2: Ödünç almanıza, tasarruf etmenize, yatırım yapmanıza, ticaret yapmanıza ve daha pek çok şeye olanak veren ürünler.
 summaryPoint3: Herkesin programlayabileceği açık kaynak teknolojisine dayalıdır.
 ---
 
@@ -332,13 +332,12 @@ DeFi, açık kaynaklı bir akımdır. DeFi protokolleri ve uygulamaları; incele
 
 ### DeFi verisi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Oranı](https://defirate.com/)
 
 ### DeFi makaleleri {#defi-articles}
 
-- [Merkeziyetsiz Finans Nedir?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, düzenli olarak güncellenir_
 - [DeFi'ye yeni başlayanlar için rehber](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 Ocak 2020_
 
 ### Videolar {#videos}

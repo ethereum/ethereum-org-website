@@ -1,94 +1,44 @@
+import {
+  Box,
+  Flex,
+  Heading,
+  IconButton,
+  LinkBox,
+  LinkOverlay,
+  Text,
+} from "@chakra-ui/react"
+import { graphql, PageProps } from "gatsby"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React, { useState } from "react"
-import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { MdClose } from "react-icons/md"
 
+import Link from "../components/Link"
+import Input from "../components/Input"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import Link from "../components/Link"
-import { Page, Content } from "../components/SharedStyledComponents"
 
-import { Lang, Language, languageMetadata } from "../utils/languages"
-import { translateMessageId, TranslationKey } from "../utils/translations"
-import { CardItem as LangItem } from "../components/SharedStyledComponents"
-import Icon from "../components/Icon"
-import NakedButton from "../components/NakedButton"
+import { Language, languageMetadata } from "../utils/languages"
+import { TranslationKey } from "../utils/translations"
 
-const StyledPage = styled(Page)`
-  margin-top: 4rem;
-`
+const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
+  const { t } = useTranslation()
+  const { language } = useI18next()
 
-const ContentContainer = styled.div``
-
-const LangContainer = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-`
-
-const LangTitle = styled.div`
-  font-size: 0.875rem;
-  line-height: 1.6;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  margin: 1.14em 0;
-  text-transform: uppercase;
-`
-
-const Form = styled.form`
-  margin: 0;
-  position: relative;
-  border-radius: 0.25em;
-  width: clamp(min(400px, 100%), 50%, 600px);
-`
-
-const StyledInput = styled.input`
-  border: 1px solid ${(props) => props.theme.colors.searchBorder};
-  color: ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.searchBackground};
-  padding: 0.5rem;
-  padding-right: 2rem;
-  border-radius: 0.25em;
-  width: 100%;
-
-  &:focus {
-    outline: ${(props) => props.theme.colors.primary} auto 1px;
-  }
-`
-
-const IconButton = styled(NakedButton)`
-  position: absolute;
-  top: 50%;
-  margin-top: -12px;
-  right: 6px;
-`
-
-const ResetIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-`
-
-interface TranslatedLanguage extends Language {
-  path: string
-}
-
-const LanguagesPage = () => {
-  const intl = useIntl()
+  const redirectTo =
+    location.search.split("from=").length > 1
+      ? location.search.split("from=")[1]
+      : "/"
   const [keyword, setKeyword] = useState<string>("")
   const resetKeyword = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     setKeyword("")
   }
-  const searchString = translateMessageId(
-    "page-languages-filter-placeholder",
-    intl
-  )
-  let translationsCompleted: Array<TranslatedLanguage> = []
+  const searchString = t("page-languages-filter-placeholder")
+  let translationsCompleted: Array<Language> = []
   for (const lang in languageMetadata) {
     const langMetadata = {
       ...languageMetadata[lang],
-      path: "/",
-      name: translateMessageId(`language-${lang}` as TranslationKey, intl),
+      name: t(`language-${lang}` as TranslationKey),
     }
 
     const nativeLangTitle = langMetadata.localName
@@ -103,70 +53,150 @@ const LanguagesPage = () => {
   translationsCompleted.sort((a, b) => a["name"].localeCompare(b["name"]))
 
   return (
-    <StyledPage>
+    <Flex direction="column" align="center" w="full" mx="auto" mt={16}>
       <PageMetadata
-        title={translateMessageId("page-languages-meta-title", intl)}
-        description={translateMessageId("page-languages-meta-desc", intl)}
+        title={t("page-languages-meta-title")}
+        description={t("page-languages-meta-desc")}
       />
-      <Content>
-        <ContentContainer>
-          <h1>
-            <Translation id="page-languages-h1" />
-          </h1>
-          <p>
-            <Translation id="page-languages-p1" />
-          </p>
-          <p>
-            <Translation id="page-languages-interested" />{" "}
-            <Link to="/contributing/translation-program/">
-              <Translation id="page-languages-learn-more" />
-            </Link>
-            .
-          </p>
-          <p>
-            <Translation id="page-languages-resources-paragraph" />{" "}
-            <Link to="/community/language-resources">
-              <Translation id="page-languages-resources-link" />
-            </Link>
-            .
-          </p>
-          <h2>
-            <Translation id="page-languages-translations-available" />:
-          </h2>
-          <Form>
-            <StyledInput
-              value={keyword}
-              placeholder={searchString}
-              onChange={(e) => setKeyword(e.target.value)}
-            />
-            {keyword === "" ? null : (
-              <IconButton onClick={resetKeyword}>
-                <ResetIcon name="close" />
-              </IconButton>
-            )}
-          </Form>
-          <LangContainer>
-            {translationsCompleted.map((lang) => (
-              <LangItem to={lang.path} language={lang.code} key={lang["name"]}>
-                <LangTitle>{lang["name"]}</LangTitle>
-                <h4>{lang.localName}</h4>
-              </LangItem>
-            ))}
-          </LangContainer>
-          <h2>
-            <Translation id="page-languages-want-more-header" />
-          </h2>
-          <p>
-            <Translation id="page-languages-want-more-paragraph" />{" "}
-            <Link to="/contributing/translation-program/">
-              <Translation id="page-languages-want-more-link" />
-            </Link>
-            .
-          </p>
-        </ContentContainer>
-      </Content>
-    </StyledPage>
+      <Box py={4} px={8} w="full">
+        <Heading
+          as="h1"
+          lineHeight={1.4}
+          fontSize={{ base: "2.5rem", md: "3rem" }}
+        >
+          <Translation id="page-languages-h1" />
+        </Heading>
+        <Text>
+          <Translation id="page-languages-p1" />
+        </Text>
+        <Text>
+          <Translation id="page-languages-interested" />{" "}
+          <Link to="/contributing/translation-program/">
+            <Translation id="page-languages-learn-more" />
+          </Link>
+          .
+        </Text>
+        <Text>
+          <Translation id="page-languages-resources-paragraph" />{" "}
+          <Link to="/community/language-resources">
+            <Translation id="page-languages-resources-link" />
+          </Link>
+          .
+        </Text>
+        <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+          <Translation id="page-languages-translations-available" />:
+        </Heading>
+        <Box
+          as="form"
+          position="relative"
+          borderRadius="0.25em"
+          w="clamp(min(400px, 100%), 50%, 600px)"
+        >
+          <Input
+            w="full"
+            value={keyword}
+            placeholder={searchString}
+            onChange={(e) => setKeyword(e.target.value)}
+            rightElement={
+              keyword !== "" && (
+                <IconButton
+                  icon={<MdClose />}
+                  onClick={resetKeyword}
+                  position="absolute"
+                  insetInlineEnd={1}
+                  aria-label={t("clear")}
+                  variant="icon"
+                  _hover={{ svg: { fill: "primary" } }}
+                />
+              )
+            }
+          />
+        </Box>
+        <Flex my={8} wrap="wrap" w="full">
+          {translationsCompleted.map((lang) => {
+            const isActive = language === lang.code
+
+            return (
+              <LinkBox
+                key={lang["name"]}
+                textDecor="none"
+                m={4}
+                ml={0}
+                p={4}
+                flexBasis="240px"
+                flexGrow={{ base: 1, sm: 0 }}
+                flexShrink={0}
+                border="1px solid"
+                borderColor="lightBorder"
+                borderRadius="sm"
+                color={isActive ? "primary.base" : "text"}
+                transitionProperty="common"
+                transitionDuration="normal"
+                _hover={{ boxShadow: "primary.base", borderColor: "black300" }}
+              >
+                <Box
+                  fontSize="sm"
+                  lineHeight={1.6}
+                  fontWeight="normal"
+                  letterSpacing="0.04em"
+                  my="1.14em"
+                  textTransform="uppercase"
+                >
+                  {lang["name"]}
+                </Box>
+                <Heading
+                  as="h4"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
+                  <LinkOverlay
+                    as={Link}
+                    to={redirectTo}
+                    language={lang.code}
+                    textDecoration="none"
+                    fontWeight="medium"
+                    color="body.base"
+                    _hover={{ textDecoration: "none" }}
+                  >
+                    {lang.localName}
+                  </LinkOverlay>
+                </Heading>
+              </LinkBox>
+            )
+          })}
+        </Flex>
+        <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+          <Translation id="page-languages-want-more-header" />
+        </Heading>
+        <Text>
+          <Translation id="page-languages-want-more-paragraph" />{" "}
+          <Link to="/contributing/translation-program/">
+            <Translation id="page-languages-want-more-link" />
+          </Link>
+          .
+        </Text>
+      </Box>
+    </Flex>
   )
 }
 
 export default LanguagesPage
+
+export const query = graphql`
+  query LanguagesPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-languages", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

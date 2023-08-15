@@ -1,5 +1,5 @@
 ---
-title: Componibilità degli Smart Contract
+title: Componibilità dei contratti intelligenti
 description:
 lang: it
 incomplete: true
@@ -7,23 +7,23 @@ incomplete: true
 
 ## Breve introduzione {#a-brief-introduction}
 
-Gli Smart Contract sono pubblici su Ethereum e possono essere considerati come API aperte. Non serve scrivere uno Smart Contract personalizzato per diventare sviluppatore di dapp, basta sapere come interagirvi. Ad esempio, puoi utilizzare gli Smart Contract esistenti di [Uniswap](https://uniswap.exchange/swap), una piattaforma di scambio decentralizzata, per gestire tutta la logica di scambio di token in un'app, non è necessario iniziare da zero. Dai un'occhiata ai loro contratti [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) e [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts).
+I contratti intelligenti sono pubblici su Ethereum e possono esser considerati come API aperte. Non ti serve di scrivere il tuo contratto intelligente per diventare uno sviluppatore di dapp, basta sapere come interagirvi. Ad esempio, puoi usare i contratti intelligenti esistenti di [Uniswap](https://uniswap.exchange/swap), una borsa decentralizzata, per gestire tutta la logica di scambio di token nella tua app: non devi iniziare da zero. Dai un'occhiata ai loro contratti [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) e [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts).
 
 ## Cos'è la componibilità? {#what-is-composability}
 
 La componibilità è la combinazione di componenti distinti per creare nuovi sistemi e risultati. Nello sviluppo software, la componibilità indica che gli sviluppatori possono riutilizzare componenti software esistenti per creare nuove applicazioni. Un modo efficace per comprendere la componibilità è pensare a elementi componibili come i blocchi Lego. I vari tasselli di Lego possono essere combinati tra loro per creare strutture complesse.
 
-In Ethereum, ogni smart contract è un Lego di qualche tipo: puoi usare smart contract di altri progetti come blocchi di partenza per nuovi progetti. Ciò significa che non devi passare tempo a reinventare la ruota o costruire da zero.
+Su Ethereum, ogni contratto intelligente è un Lego di qualche tipo: puoi usare i contratti intelligenti da altri progetti come blocchi di partenza per il tuo progetto. Ciò significa che non devi passare tempo a reinventare la ruota o costruire da zero.
 
 ## Come funziona la componibilità? {#how-does-composability-work}
 
-Gli smart contract di Ethereum sono come API pubbliche, quindi chiunque può interagire col contratto o integrarlo nelle dapp per maggiori funzionalità. La componibilità dello smart contract si basa generalmente su tre principi: modularità, autonomia e scopribilità:
+I contratti intelligenti di Ethereum sono come API pubbliche, quindi, chiunque può interagire con il contratto o integrarlo nelle dapp per maggiori funzionalità. La componibilità dei contratti intelligenti si basa generalmente su tre principi: modularità, autonomia e scopribilità:
 
-**1. Modularità**: la capacità dei singoli componenti di eseguire un'attività specifica. In Ethereum, ogni smart contract ha un caso d'uso specifico (come visto nell'esempio di Uniswap).
+**1. Modularità**: la capacità dei singoli componenti di eseguire un'attività specifica. Su Ethereum, ogni contratto intelligente ha un caso d'uso specifico (come visto nell'esempio di Uniswap).
 
-**2. Autonomia**: i componenti componibili devono poter operare indipendentemente. Ogni smart contract in Ethereum è auto-eseguibile e può funzionare senza affidarsi ad altre parti del sistema.
+**2. Autonomia**: i componenti componibili devono poter operare indipendentemente. Ogni contratto intelligente su Ethereum è auto-eseguibile e può funzionare senza affidarsi ad altre parti del sistema.
 
-**3. Scopribilità**: gli sviluppatori non possono chiamare smart contract o integrare librerie software nelle applicazioni se queste non sono disponibili pubblicamente. Per progettazione, gli smart contract sono open source; chiunque può chiamare uno smart contract o biforcare un codebase.
+**3. Scopribilità**: Gli sviluppatori non possono chiamare i contratti esterni o integrare librerie software nelle applicazioni se queste non sono disponibili pubblicamente. Di design, i contratti intelligenti sono open source; chiunque può chiamare un contratto intelligente o biforcare un codebase.
 
 ## Vantaggi della componibilità {#benefits-of-composability}
 
@@ -31,7 +31,7 @@ Gli smart contract di Ethereum sono come API pubbliche, quindi chiunque può int
 
 La componibilità riduce il lavoro degli sviluppatori per la creazione delle [dapp](/dapps/#what-are-dapps). [Come dice Naval Ravikant:](https://twitter.com/naval/status/1444366754650656770) "Open source significa che ogni problema va risolto una sola volta."
 
-Se c'è uno smart contract che risolve un problema, gli altri sviluppatori possono riutilizzarlo, così da non dover risolvere lo stesso problema. In questo modo, gli sviluppatori possono utilizzare librerie software esistenti e aggiungere funzionalità supplementari per creare nuove dapp.
+Se esiste un contratto intelligente che risolve un problema, altri sviluppatori possono riutilizzarlo, così che non debbano risolvere lo stesso problema. In questo modo, gli sviluppatori possono utilizzare librerie software esistenti e aggiungere funzionalità supplementari per creare nuove dapp.
 
 ### Maggiore innovazione {#greater-innovation}
 
@@ -47,7 +47,7 @@ Se un token ha un valore maggiore sull'`exchange A` rispetto all'`exchange B`, p
 
 In uno scenario in cui non hai fondi sufficienti per coprire lo scambio, un prestito flash potrebbe essere ideale. I [prestiti Flash](/defi/#flash-loans) sono altamente tecnici, ma l'idea di base è che puoi prendere in prestito risorse (senza garanzia) e restituirle entro _una_ transazione.
 
-Tornando al nostro esempio iniziale, un trader d'arbitraggio può assumere un grande prestito flash, acquistare i token dall'`exchange B`, venderli sull'`exchange A`, ripagare il capitale e gli interessi e conservare il profitto, il tutto nella stessa transazione. Questa logica complessa richiede la combinazione di chiamate a più contratti, il che sarebbe impossibile se gli smart contract non fossero interoperabili.
+Tornando al nostro esempio iniziale, un trader d'arbitraggio può assumere un grande prestito flash, acquistare i token dall'`exchange B`, venderli sull'`exchange A`, ripagare il capitale e gli interessi e conservare il profitto, il tutto nella stessa transazione. Questa logica complessa richiede la combinazione di chiamate a più contratti, che sarebbe impossibile se i contratti intelligenti mancassero di interoperabilità.
 
 ## Esempi di componibilità su Ethereum {#composability-in-ethereum}
 
@@ -65,8 +65,8 @@ Invece di creare un sistema di autenticazione personalizzato o affidarti a forni
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Contract Composability: The Building Blocks of Ethereum Smart Contract Development](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
-- [Avvia lo sviluppo del frontend della tua dapp con create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/) _– Una panoramica di come usare create-eth-app per creare app con smart contract popolari._
+- [Componibilità del Contratto: I Blocchi di Partenza dello Sviluppo di Contratti Intelligenti su Ethereum](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
+- [Avvia lo sviluppo del frontend della tua dapp con create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/) _– Una panoramica di come usare create-eth-app per creare app con contratti intelligenti popolari, pronti all'uso._
 
 ## Lettura consigliate {#further-reading}
 

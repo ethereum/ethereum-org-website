@@ -35,24 +35,6 @@ const config: GatsbyConfig = {
     editContentUrl: `https://github.com/ethereum/ethereum-org-website/tree/dev/`,
   },
   plugins: [
-    // i18n support
-    {
-      resolve: `gatsby-theme-i18n`,
-      options: {
-        defaultLang: defaultLanguage,
-        prefixDefault: true,
-        locales: supportedLanguages.length
-          ? supportedLanguages.join(" ")
-          : null,
-        configPath: path.resolve(`./i18n/config.json`),
-      },
-    },
-    {
-      resolve: `gatsby-theme-i18n-react-intl`,
-      options: {
-        defaultLocale: `./src/intl/en.json`,
-      },
-    },
     // Web app manifest
     {
       resolve: `gatsby-plugin-manifest`,
@@ -70,6 +52,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
+        output: "/sitemap",
         query: `{
           site {
             siteMetadata {
@@ -195,12 +178,6 @@ const config: GatsbyConfig = {
     },
     // CSS in JS
     {
-      resolve: `gatsby-plugin-emotion`,
-      options: {
-        labelFormat: "[filename]--[local]",
-      },
-    },
-    {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
         resetCSS: true,
@@ -265,6 +242,59 @@ const config: GatsbyConfig = {
         generateMatchPathRewrites: false,
       },
     },
+    // i18n support
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: path.resolve(`./i18n/locales`),
+        name: `locale`,
+      },
+    },
+    // Wraps the entire page with a custom layout component
+    // Note: keep this before the i18n plugin declaration in order to have the
+    // i18n provider wrapping the layout component
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: path.resolve(`./src/components/Layout`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: supportedLanguages,
+        defaultLanguage,
+        generateDefaultLanguagePage: true,
+        redirect: false,
+        siteUrl,
+        trailingSlash: "always",
+        // i18next options
+        i18nextOptions: {
+          fallbackLng: defaultLanguage,
+          interpolation: {
+            escapeValue: false,
+          },
+          load: "currentOnly",
+          lowerCaseLng: true,
+          cleanCode: true,
+          react: {
+            transSupportBasicHtmlNodes: true,
+            transKeepBasicHtmlNodesFor: [
+              "br",
+              "strong",
+              "i",
+              "bold",
+              "b",
+              "em",
+              "sup",
+            ],
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+      },
+    },
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
@@ -282,7 +312,7 @@ if (!IS_PREVIEW) {
       resolve: "gatsby-plugin-matomo",
       options: {
         siteId: "4",
-        matomoUrl: "https://matomo.ethereum.org",
+        matomoUrl: "https://ethereumfoundation.matomo.cloud",
         siteUrl,
         matomoPhpScript: "matomo.php",
         matomoJsScript: "matomo.js",

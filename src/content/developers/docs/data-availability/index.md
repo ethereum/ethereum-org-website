@@ -4,164 +4,80 @@ description: An overview of problems and solutions relating to data availability
 lang: en
 ---
 
-Trustlessness is a major premise of public blockchains ("don't trust, verify"). One of the ways Ethereum reduces trust assumptions is by enforcing rules on data availability. Block producers are required to publish the data for each block, which nodes participating in Ethereum's consensus store locally.
+"Don't trust, verify" is a common maxim in Ethereum. The idea is that your node can independently verify that the information it receives is correct by executing all the transactions in the blocks they receive from peers to ensure that the changes proposed precisely match those computed independently by the node. This means nodes do not have to trust that the senders of the block are honest. This is not possible if data is missing.
 
-All nodes on the Ethereum network execute the transactions in blocks they receive from peers to ensure that the changes proposed by a block producer precisely match those computed independently by the node. This is how nodes verify that new information is valid, rather than having to trust that block producers are honest. This is not possible if any data is missing.
-
-Data availability is important because if we can’t reproduce something with the data we have available, from the blockchain’s perspective, it does not exist. Access to a block's data enables validating nodes to trustlessly replay transactions using their version of Ethereum's world state and independently verify the correctness of each block.
+**Data availability** refers to the confidence a user can have that the data required to verify a block is really available to all network participants. For full nodes on Ethereum layer 1 this is relatively simple; the full node downloads a copy of all the data in each block - the data _has_ to be available for the downloading to be possible. A block with missing data would be discarded rather than being added to the blockchain. This is "on chain data availability" and it is a feature of monolithic blockchains. Full nodes cannot be tricked into accepting invalid transactions because they download and execute every transaction for themselves. However, for modular blockchains, layer 2 rollups and light clients, the data availability landscape is more complex, requiring some more sophisticated verification procedures.
 
 ## Prerequisites {#prerequisites}
 
 You should have a good understanding of [blockchain fundamentals](/developers/docs/intro-to-ethereum/), especially [consensus mechanisms](/developers/docs/consensus-mechanisms/). This page also assumes the reader is familiar with [blocks](/developers/docs/blocks/), [transactions](/developers/docs/transactions/), [nodes](/developers/docs/nodes-and-clients/), [scaling solutions](/developers/docs/scaling/), and other relevant topics.
 
-## What is data availability? {#what-is-data-availability}
+## The data availability problem {#the-data-availability-problem}
 
-Data availability is the guarantee that the block proposer published all transaction data for a block and that the transaction data is available to other network participants. Ethereum transactions get processed in [blocks](/developers/docs/blocks/). These blocks are chained together to form the "blockchain".
+The data availability problem is the need to prove to the whole network that the summarized form of some transaction data that is being added to the blockchain really represents a set of valid transactions, but doing so without requiring all nodes to download all data. The full transaction data is necessary for independently verifying blocks, but requiring all nodes to download all transaction data is a barrier to scaling. Solutions to the data availability problem aim to provide sufficient assurances that the full transaction data was made available for verification to network participants that do not download and store the data for themselves.
 
-Each block has two major parts:
+[Light nodes](/developers/docs/nodes-and-clients/light-clients) and [Layer 2 rollups](/developers/docs/scaling) are important examples of network participants that require strong data availability assurances but cannot download and process transaction data for themselves. Avoiding downloading transaction data is what makes light nodes light and enables rollups to be effective scaling solutions.
 
-- The **block header**: This contains general information (metadata) about the block, such as the timestamp, block hash, block number, etc.
-- The **block body**: This contains the actual transactions processed as part of the block.
+Data availability is also a critical concern for future ["stateless"](/roadmap/statelessness) Ethereum clients that do not need to download and store state data in order to verify blocks. The stateless clients still need to be certain that the data is available _somewhere_ and that it has been processed correctly.
 
-When proposing new blocks, block producers must publish the entire block, including the transaction data (contained in the block body). Nodes participating in consensus can then download the block's data and re-execute the transactions to confirm their validity. Without nodes verifying transactions, block proposers could get away with inserting malicious transactions in blocks.
+## Data availability solutions {#data-availability-solutions}
 
-### The data availability problem {#the-data-availability-problem}
+### Data availability sampling (DAS) {#data-availability-sampling}
 
-We can encapsulate the data availability problem into the question: "how do we verify that the data for a newly produced block is available?". This data being available is crucial as the security of Ethereum assumes that full nodes have access to block data.
+Data Availability Sampling (DAS) is a way for the network to check that data is available without putting too much strain on any individual node. Each node (including non-staking nodes) downloads some small, randomly selected subset of the total data. Successfully downloading the samples confirms with high confidence that all of the data is available. This relies upon data erasure coding, which expands a given dataset with redundant information (the way this is done is to fit a function known as a _polynomial_ over the data and evaluating that polynomial at additional points). This allows the original data to be recovered from the redundant data when necessary. A consequence of this data creation is that if _any_ of the original data is unavailable, _half_ of the expanded data will be missing! The amount of data samples downloaded by each node can be tuned so that it is _extremely_ likely that at least one of the data fragments sampled by each client will be missing _if_ less than half the data is really available.
 
-If a block producer proposes a block without all the data being available, it could reach finality whilst containing invalid transactions. Even if the block is valid, the block's data not being fully available to validate has negative implications for users and the functionality of the network.
-
-The data availability problem is also relevant when discussing [scaling solutions](/developers/docs/scaling/), such as rollups. These protocols increase throughput by executing transactions off Ethereum Mainnet. However, for them to derive security from Ethereum, they must post transaction data on Mainnet, allowing anyone to verify the correctness of computations performed off the main chain.
-
-#### Data availability and light clients
-
-Although the classic notion of data availability concerned the visibility of transaction data to validating nodes, newer research has focused on verifying data availability with light clients. For light clients, the data availability problem concerns validating a block’s availability without having to download the entire block.
-
-A light client is an Ethereum node that only syncs to the latest block header and requests other information from full nodes. As they don't download blocks, light clients cannot validate transactions or help secure Ethereum.
-
-However, work is underway to ensure light clients can prove data availability without needing to download blocks. If light clients can verify the availability of a block, they can contribute to Ethereum's security by alerting other nodes to a block's unavailability.
-
-A related area of research is focused on mechanisms for making data provably available in a stateless Ethereum. The [stateless client concept](https://ethresear.ch/t/the-stateless-client-concept/172) is a proposed version of Ethereum, where validating nodes don't have to store state data before verifying blocks.
-
-Statelessness is expected to improve the security, scalability, and long-term sustainability of Ethereum. With lower hardware requirements for validating nodes, more validators can join the network and secure it against malicious actors.
-
-### Data availability vs. data retrievability {#data-availability-vs-data-retrievability}
-
-Data availability is different from data retrievability. Data availability is the ability of nodes to download transaction data for a block while it is being proposed for addition to the chain. In other words, data availability is relevant when a block is yet to pass consensus.
-
-Data retrievability is the ability of nodes to retrieve _historical information_ from the blockchain. A blockchain's history is made up of ancient blocks and receipts that store information about past events. While historical blockchain data may be necessary for archiving purposes, nodes can validate the chain and process transactions without it.
-
-The core Ethereum protocol is primarily concerned with data availability, not data retrievability. Ethereum will not store data for every transaction it has processed forever, as doing so increases storage requirements for full nodes, negatively impacting Ethereum's decentralization.
-
-Fortunately, data retrievability is a much easier problem to solve than data availability. The ability to retrieve historical blockchain data only needs one honest node to store it for it to be retrievable. Furthermore, some entities, such as blockchain explorers, have incentives to store archival data and make it available to others on request.
-
-[More on solutions to the data retrievability problem](https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding).
-
-## Why is data availability important? {#why-is-data-availability-important}
-
-### Blockchain security {#blockchain-security}
-
-Data availability is crucial for blockchain security, or else “data withholding attacks” would become commonplace. A data withholding attack occurs when a block producer publishes a block but doesn’t share the transaction data used to build the block.
-
-If a data withholding attack happens, full nodes cannot verify the correctness of updates to Ethereum’s world state. This gives malicious block proposers leeway to subvert protocol rules and advance invalid state transitions on the Ethereum network.
-
-Visibility of block data to full nodes is critical because other network participants, such as light clients, rely on full nodes to verify the network’s state. Unlike full nodes, light clients only check block headers and don’t download block body. Therefore, the rules around data availability ensure full nodes can validate blocks and prevent the chain from getting corrupted.
-
-### Decentralized scalability {#decentralized-scalability}
-
-[Ethereum’s goal is to scale computation without trading off decentralization and security](/upgrades/vision/). Due to the constraints of the monolithic blockchain architecture, data availability is critical to achieving decentralized scalability.
-
-#### Data availability and layer 2 scaling {#data-availability-and-layer-2-scaling}
-
-[Layer 2 scaling solutions](/layer-2/), such as [rollups](/glossary/#rollups), scale network throughput and latency by processing transactions off Ethereum's main execution layer. Off-chain transactions are compressed and posted on Ethereum in batches—thousands of transactions could happen off-chain, but Ethereum needs to process _one_ on-chain transaction associated with each batch submission. This reduces congestion on the base layer and reduces fees for users, while ensuring faster transactions.
-
-However, for Ethereum to guarantee the security of rollups, it needs a mechanism for verifying the validity of off-chain transactions. This is where data availability comes into the picture.
-
-[Optimistic rollups](/developers/docs/scaling/optimistic-rollups/) post compressed transaction data to Ethereum as `calldata`. This allows anyone to verify the state of the rollup and also provides guarantees of transaction validity. If a transaction is invalid, a verifier can use the available transaction data to construct a [fraud proof](/glossary/#fraud-proof) to challenge it.
-
-[Zero-knowledge (ZK) rollups](/developers/docs/scaling/zk-rollups) don't need to post transaction data since [zero-knowledge validity proofs](/glossary/#zk-proof) guarantee the correctness of state transitions. However, we cannot guarantee the functionality of the ZK-rollup (or interact with it) without access to its state data.
-
-For example, users cannot know their balances if an operator withholds details about the rollup’s state. Also, they cannot perform state updates using information contained in a newly added block.
-
-## Types of data availability systems in blockchains {#types-of-data-availability-systems-in-blockchains}
-
-### On-chain data availability {#on-chain-data-availability}
-
-The standard solution to solving data availability is to force block producers to publish all transaction data on-chain and have validating nodes download it. On-chain data availability is a feature of "monolithic blockchains" that manage data availability, transaction execution, and consensus, on a single layer. By storing state data redundantly across the network, the Ethereum protocol ensures that nodes have access to data necessary to reproduce transactions, verify state updates, and flag invalid state transitions.
-
-However, on-chain data availability places bottlenecks on scalability. Monolithic blockchains often have slow processing speeds as nodes must download every block and replay the same transactions. It also requires full nodes to store increasing amounts of state—a trend that could affect decentralization. If Ethereum’s state spirals, validators must invest in larger machines, which would likely reduce the number of people willing to run a validating node.
-
-### Off-chain data availability {#off-chain-data-availability}
-
-Off-chain data availability systems move data storage off the blockchain: block producers don't publish transaction data on-chain, but provide a cryptographic commitment to prove the availability of the data. This is a method used by [modular blockchains](https://celestia.org/learn/basics-of-modular-blockchains/), where the chain manages some tasks, such as transaction execution and consensus, and offloads others (e.g., data availability) to another layer.
-
-Many scaling solutions adopt a modular approach by separating data availability from consensus and execution, as this is considered the ideal way to scale blockchains without increasing node requirements. For example, [validiums](/developers/docs/scaling/validium/) and [plasma](/developers/docs/scaling/plasma/) use off-chain storage to reduce the amount of data posted on-chain.
-
-While off-chain data availability improves efficiency, it has negative implications for decentralization, security, and trustlessness. For example, participants in validiums and plasma chains must trust block producers not to include invalid transactions in proposed blocks. Block producers can act maliciously (ie., by advancing invalid state transitions) and cripple attempts to challenge malicious transactions by withholding state data.
-
-Due to the problems associated with off-chain storage, some scaling solutions store transaction data on the parent blockchain, like Ethereum. Optimistic rollups and ZK-rollups, for example, don't store transaction data, but use Ethereum Mainnet as a data availability layer.
-
-## What are some solutions to the data availability problem? {#solutions-to-data-availability-problem}
-
-As mentioned, the data availability problem concerns the ability to verify availability of the transaction data for a newly proposed block. Solutions to this problem employ some mechanism for guaranteeing data availability.
-
-### Data availability sampling {#data-availability-sampling}
-
-Data availability sampling is a cryptographic mechanism for guaranteeing data availability. Data availability sampling allows blockchain nodes to verify that data for a proposed block is available without having to download the entire block.
-
-In a DAS system, a node samples small, random chunks of a block over multiple rounds to verify data availability. With many nodes sampling different parts of a block simultaneously, its availability can be verified with high statistical certainty.
-
-When applied to blockchains, like Ethereum, data availability sampling ensures light clients also participate in guaranteeing the chain's security and functionality. Light clients can run without expensive hardware, making it easier for anyone to validate on the Ethereum network.
-
-[More on data availability sampling.](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
-
-#### Data availability proofs {#data-availability-proofs}
-
-While data availability sampling gives statistical guarantees of a block's availability, a malicious node can still hide some data. DAS techniques only prove that the majority of the block data is available, not that the entire block is available. And much harm can come from block producers hiding even a tiny amount of transaction data.
-
-To solve this problem, we combine data availability sampling with [erasure coding](https://en.wikipedia.org/wiki/Erasure_code) to create “data availability proofs”. Erasure coding is a technique that allows us to double a dataset by adding redundant pieces (called erasure codes). If the original data is lost, the erasure codes can be used to reconstruct the original piece of data.
-
-When implemented in blockchains, erasure codes improve data availability because a small fraction of the data is enough to reconstruct the whole transaction set in a block. In this system, a malicious block producer would need to withhold more than 50% of the block to perform a data withholding attack. Previously, a block producer only needed to seize 1% of block data to act maliciously.
-
-With erasure-coded blocks, light clients have statistical certainty that the entire block data was published on the network. It also means that light clients don't have to rely on full nodes to alert them of the unavailability of a block.
-
-[More on data availability proofs.](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
+DAS will be used to ensure rollup operators make their transaction data available after [EIP-4844](/roadmap/danksharding) has been implemented. Ethereum nodes will randomly sample the transaction data provided in blobs using the redundancy scheme explained above to ensure that all the data exists. The same technique could also be employed to ensure block producers are making all their data available to secure light clients. Similarly, under [proposer-builder separation](/roadmap/pbs), only the block builder would be required to process an entire block - other validators would verify using data availability sampling.
 
 ### Data availability committees {#data-availability-committees}
 
-Pure validiums store transaction data off-chain with a block producer, making them centralized to an extent. This reduces decentralization and security, since the block producer can publish invalid transactions and conceal the rollup's true state by hiding transaction data.
+Data Availability Committees (DACs) are trusted parties that provide, or attest to, data availability. DACs can be used instead of, [or in combination with](https://hackmd.io/@vbuterin/sharding_proposal#Why-not-use-just-committees-and-not-DAS) DAS. The security guarantees that come with committees depends on the specific set up. Ethereum uses randomly sampled subsets of validators to attest to data availability for light nodes, for example.
 
-Some validiums attempt to solve this problem by asking block producers to store transaction data with trusted parties that form the Data Availability Committee (DAC). The DAC stories copies of off-chain data offline, but is required to make it available in the event of a dispute. Members of the DAC also publish on-chain attestations to prove that the said data is indeed available.
+DACs are also used by some validiums. The DAC is a trusted set of nodes that stores copies of data offline. The DAC is required to make the data available in the event of a dispute. Members of the DAC also publish on-chain attestations to prove that the said data is indeed available. Some validiums replace DACs with a proof-of-stake (PoS) validator system. Here, anyone can become a validator and store data off-chain. However, they must provide a “bond”, which is deposited in a smart contract. In the event of malicious behavior, such as the validator withholding data, the bond can be slashed. Proof-of-stake data availability committees are considerably more secure than regular DACs because they directly incentivize honest behavior.
 
-[More on data availability committees.](https://medium.com/starkware/data-availability-e5564c416424)
+## Data availability and light nodes {#data-availability-and-light-nodes}
 
-### Proof-of-stake data availability committees {#proof-of-stake-data-availability-committees}
+[Light nodes](/developers/docs/nodes-and-clients/light-clients) need to validate the correctness of the block headers they receive without downloading the block data. The cost of this lightness is the inability to independently verify the block headers by re-executing transactions locally in the way full nodes do.
 
-While data availability committees are better than the status quo in a validium, trust assumptions still persist. What if the DAC colludes with the block producer to withhold transaction data? DACs are often small in size, increasing the risk of collusion and the possibility of an external actor compromising the group.
+Ethereum light nodes trust random sets of 512 validators that have been assigned to a _sync committee_. The sync committee acts as a DAC that signals to light clients that the data in the header is correct using a cryptographic signature. Every day, the sync committee refreshes. Each block header alerts light nodes as to which validators to expect to sign off the _next_ block, so they can't be tricked into trusting a malicious group pretending to be the real sync-committee.
 
-Some validiums replace DACs with a proof-of-stake (PoS) validator system. Here, anyone can become a validator and store data off-chain. However, they must provide a “bond”, which is deposited in a smart contract. In the event of malicious behavior, such as the validator withholding data, the bond can be slashed.
+However, what happens if an attacker somehow _does_ manage to pass a malicious block header to light clients and convince them that it was signed off by an honest sync-committee? In that case, the attacker could include invalid transactions and the light client would blindly accept them, as they do not independently check all the state changes summarized in the block header. To protect against this, the light client could use fraud proofs.
 
-Proof-of-stake data availability committees are considerably more secure than regular DACs. Not only are they permissionless and trustless, but they also have well-designed incentives to encourage honest behavior.
+The way these fraud proofs work is that a full node, seeing an invalid state transition being gossiped around the network, could quickly generate a small piece of data demonstrating that a proposed state transition could not possibly arise from a given set of transactions and broadcast that data to peers. Light nodes could pick up those fraud-proofs and use them to discard bad block headers, ensuring they stay on the same honest chain as the full nodes.
 
-[More on proof-of-stake data availability committees.](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
+This relies on full nodes having access to full transaction data. An attacker who broadcasts a bad block header and also fails to make the transaction data available would be able to prevent full nodes from generating fraud proofs. The full nodes might be able to signal a warning about a bad block, but they couldn't back up their warning with proof, because the data wasn't made available to generate the proof from!
 
-## Ethereum and the future of data availability {#ethereum-and-the-future-of-data-availability}
+The solution to this data availability problem is DAS. Light nodes download very small random chunks of the full state data and use the samples to verify that the full data set is available. The actual likelihood of incorrectly assuming full data availability after downloading N random chunks can be calculated ([for 100 chunks the chance is 10^-30](https://dankradfeist.de/ethereum/2019/12/20/data-availability-checks.html), i.e. incredibly unlikely).
 
-Although rollups can scale throughput with off-chain computation, their capacity is limited by the data throughput of the underlying blockchain. If rollups are to use Ethereum as a data availability layer, it must increase its data storage and processing capabilities.
+Even in this scenario, attacks that withhold just a few bytes could feasibly go unnoticed by clients making random data requests. Erasure coding fixes this by reconstructing small missing pieces of data that can be used to check proposed state changes. A fraud proof could then be constructed using the reconstructed data, preventing light nodes from accepting bad headers.
 
-[Sharding](/upgrades/shard-chains/) is a proposed method for increasing data throughput on Ethereum’s execution layer. In sharding, the network is split into a select number of sub-chains—each with a dedicated set of validators.
+**Note:** DAS and fraud proofs have not yet been implemented for proof-of-stake Ethereum light clients, but they are on the roadmap, most likely taking the form of ZK-SNARK based proofs. Today's light clients rely on a form of DAC: they verify the identities of the sync-committee and then trust the signed block headers they receive.
 
-Validators will only need to run full nodes for their shard and run in light-client capacity for other shards. Sharding increases data space available to rollups since the job of storing data is split across different shards.
+## Data availability and layer 2 rollups {#data-availability-and-layer-2-rollups}
 
-But data sharding introduces a new problem: “What if validators on one shard become malicious and start processing invalid state transitions?”. This is possible since full nodes no longer have access to the same transaction data as is currently the case. Implementing data sharding requires creating a system for nodes to verify data availability in other shards without downloading blocks, or else the purpose of sharding is defeated.
+[Layer 2 scaling solutions](/layer-2/), such as [rollups](/glossary/#rollups), reduce transaction costs and increase Ethereum's throughput by processing transactions off-chain. Rollup transactions are compressed and posted on Ethereum in batches. Batches represent thousands of individual off-chain transactions in a single transaction on Ethereum. This reduces congestion on the base layer and reduces fees for users.
 
-To solve this problem, newer scaling proposals for Ethereum, such as [Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq), rely upon data availability sampling to verify that the entire contents of a blob have been seen by the network. This system relieves individual nodes from the burden of downloading and validating it all directly.
+However, it is only possible to trust the 'summary' transactions posted to Ethereum if the state change proposed can be independently verified and confirmed to be the result of applying all the individual off-chain transactions. If rollup operators do not make the transaction data available for this verification, then they could send incorrect data to Ethereum.
+
+[Optimistic rollups](/developers/docs/scaling/optimistic-rollups/) post compressed transaction data to Ethereum and wait for some amount of time (typically 7 days) to allow independent verifiers to check the data. If anyone identifies a problem, they can generate a fraud-proof and use it to challenge the rollup. This would cause the chain to roll back and omit the invalid block. This is only possible if data is available. Currently, data is made permanently available as `CALLDATA` which lives permanently on-chain. However, EIP-4844 will soon allow rollups to post their transaction data to cheaper blob storage instead. This is not permanent storage. Independent verifiers will have to query the blobs and raise their challenges within ~1-3 months before the data is deleted from Ethereum layer-1. Data availability is only guaranteed by the Ethereum protocol for that short fixed window. After that, it becomes the responsibility of other entities in the Ethereum ecosystem. Any node can verify data availability using DAS, i.e. by downloading small, random samples of the blob data.
+
+[Zero-knowledge (ZK) rollups](/developers/docs/scaling/zk-rollups) don't need to post transaction data since [zero-knowledge validity proofs](/glossary/#zk-proof) guarantee the correctness of state transitions. However, data availability is still an issue because we can't guarantee the functionality of the ZK-rollup (or interact with it) without access to its state data. For example, users cannot know their balances if an operator withholds details about the rollup’s state. Also, they cannot perform state updates using information contained in a newly added block.
+
+## Data availability vs. data retrievability {#data-availability-vs-data-retrievability}
+
+Data availability is different from data retrievability. Data availability is the assurance that full nodes have been able to access and verify the full set of transactions associated with a specific block. It does not necessarily follow that the data is accessible forever.
+
+Data retrievability is the ability of nodes to retrieve _historical information_ from the blockchain. This historical data is not needed for verifying new blocks, it is only required for syncing full nodes from the genesis block or serving specific historical requests.
+
+The core Ethereum protocol is primarily concerned with data availability, not data retrievability. Data retrievability can be provided by a small population of archive nodes run by third parties, or it can be distributed across the network using decentralized file storage such as the [Portal Network](https://www.ethportal.net/).
 
 ## Further reading {#further-reading}
 
 - [WTF is Data Availability?](https://medium.com/blockchain-capital-blog/wtf-is-data-availability-80c2c95ded0f)
 - [What Is Data Availability?](https://coinmarketcap.com/alexandria/article/what-is-data-availability)
-- [The Data Availability Problem](https://blog.polygon.technology/the-data-availability-problem-6b74b619ffcc/)
 - [The Ethereum Off-Chain Data Availability Landscape](https://blog.celestia.org/ethereum-off-chain-data-availability-landscape/)
 - [A primer on data availability checks](https://dankradfeist.de/ethereum/2019/12/20/data-availability-checks.html)
 - [An explanation of the sharding + DAS proposal](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
+- [A note on data availability and erasure coding](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding#can-an-attacker-not-circumvent-this-scheme-by-releasing-a-full-unavailable-block-but-then-only-releasing-individual-bits-of-data-as-clients-query-for-them)
+- [Data availability committees.](https://medium.com/starkware/data-availability-e5564c416424)
+- [Proof-of-stake data availability committees.](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
+- [Solutions to the data retrievability problem](https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding)

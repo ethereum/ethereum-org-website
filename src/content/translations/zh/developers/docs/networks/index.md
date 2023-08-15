@@ -6,9 +6,9 @@ lang: zh
 
 网络是指可在其中进行开发、测试或布置生产用例的各种不同以太坊环境。 以太坊是一种协议，因此可以有多个符合该协议且彼此不会影响的独立“网络”。
 
-以太坊帐户可在不同的网络上使用，但是帐户余额和交易历史记录不会结转到以太坊主网以外。 进行测试时，了解哪些网络可用以及如何获取可以试用的测试网以太币是很有用的。
+以太坊帐户可在不同的网络上使用，但是帐户余额和交易历史记录不会结转到以太坊主网以外。 进行测试时，了解哪些网络可用以及如何获取可以试用的测试网以太币是很有用的。 一般来说，出于安全考虑，不建议在测试网上重复使用主网帐户，反之亦然。
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 你应该先了解[以太坊基础知识](/developers/docs/intro-to-ethereum/)，然后再深入研究不同的网络，因为测试网络将提供一种低廉、安全的以太坊供你试用。
 
@@ -28,103 +28,106 @@ lang: zh
 
 在部署到主网之前，你应该在测试网测试编写的任何合约代码。 在与现有智能合约集成的去中心化应用程序中，大多数项目将副本部署到测试网。
 
-大多数测试网使用权威证明的共识机制。 这意味着会选择少量节点来验证交易并创建新区块——在此过程中将他们的身份进行抵押。 测试网不鼓励工作量证明挖矿，这种挖矿可能会使它们容易受到攻击。
+大多数测试网最初都使用需要许可的权威证明共识机制。 这意味着会选择少量节点来验证交易并创建新区块——在此过程中将他们的身份进行抵押。 或者，有些测试网采用开放的权益证明共识机制，每个人都可以测试运行验证者，就跟以太坊主网一样。
 
-随着[合并](/upgrades/merge)临近，更多工作量证明和权威证明公共测试网正在向权益证明转变。 转换它们的共识机制可作为以太坊主网合并的预演。 Ropsten、Sepolia 和 Goerli 测试网预计将在 2022 年夏末成为权益证明网络，而 Goerli 测试网将得到长期维护。
+测试网上的以太币没有实际价值；因此测试网以太币没有市场。 由于实际中与以太坊进行交互时需要以太币，所以大多数人从水龙头获取测试网以太币。 大多数水龙头是网络应用程序，你可以给它输入一个请求发送以太币的地址。
 
-测试网上的以太币没有实际价值；因此没有测试网以太币市场。 由于与以太坊进行实际交互需要使用以太币，因此大多数人从水龙头获取测试网以太币。 大多数水龙头是网络应用程序，你可以向其中输入一个地址并要求向该地址发送以太币。
+#### 我应该使用哪个测试网？
+
+客户端开发者目前还在维护的两个公共测试网是 Sepolia 和 Goerli。 Sepolia 是一个供合约和应用程序开发者测试其应用程序的网络。 Goerli 网络是让协议开发者测试网络升级，并让质押人测试运行验证者。
 
 #### Sepolia {#sepolia}
 
-一个工作量证明测试网；这意味着它是以太坊最好的相似代表。 预计 Sepolia 将在 2022 年夏天进行合并，并转变为权益证明测试网。 目前还不能确定该测试网是否会得到长期维护。
+**Sepolia 是应用程序开发时推荐使用的默认测试网**。 Sepolia 网络使用一种需要许可的验证者设置。 它相对较新，即它的状态和历史记录都非常小。 这意味着网络可以快速同步，并且在其上运行节点需要的存储空间更少。 这对于希望快速启动节点并直接与网络交互的用户来讲，是非常有用的。
+
+- 封闭式验证者设置，由客户端和测试团队控制
+- 新测试网，与其他测试网相比，部署的应用程序较少
+- 同步速度快，运行节点需要的磁盘空间最小
+
+##### 更多资源
 
 - [网站](https://sepolia.dev/)
-- [GitHub](https://github.com/goerli/sepolia)
+- [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 
-##### Sepolia 水龙头
+##### 水龙头
 
+- [QuickNode Sepolia 水龙头](https://faucet.quicknode.com/drip)
+- [Grabteeth](https://grabteeth.xyz/)
+- [PoW 水龙头](https://sepolia-faucet.pk910.de/)
 - [Sepolia 水龙头](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
+- [Coinbase Wallet 水龙头 | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia 水龙头](https://sepoliafaucet.com/)
+- [Infura Sepolia 水龙头](https://www.infura.io/faucet)
 
-#### Goerli {#goerli}
+#### Goerli _（长期支持）_ {#goerli}
 
-一个可以跨客户端使用的权威证明测试网，是应用程序开发者的理想测试网。 Goerli 将是以太坊主网合并前最后一个合并且过渡到权益证明共识机制的测试网。 预计 Goerli 合并将在 2022 年夏天进行。 Goerli 有望作为权益证明测试网得到长期维护。
+_注意：[Goerli 测试网已弃用](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)，它将在 2023 年被 [Holesovice](https://github.com/eth-clients/holesovice) 取代。 请考虑把你的应用程序迁移至 Sepolia。_
+
+Goerli 是用于测试验证和质押的测试网。 Goerli 网络对想要运行测试网验证者的用户开放。 因此，希望在部署到主网之前测试协议升级的质押人应该使用 Goerli。
+
+- 开放式验证者设置，质押者可以测试网络升级
+- 状态比较大，用于测试复杂的智能合约交互
+- 同步时间更长，运行节点需要更多存储空间
+
+##### 更多资源
 
 - [网站](https://goerli.net/)
-- [GitHub](https://github.com/goerli/testnet)
+- [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
 
-##### Goerli 水龙头
+##### 水龙头
 
+- [QuickNode Goerli 水龙头](https://faucet.quicknode.com/drip)
+- [Grabteeth](https://grabteeth.xyz/)
+- [PoW 水龙头](https://goerli-faucet.pk910.de/)
 - [Goerli 水龙头](https://faucet.goerli.mudit.blog/)
-- [Chainlink 水龙头](https://faucets.chain.link/)
-- [Alchemy Goerli 水龙头](https://goerlifaucet.com/)
-
-#### Ropsten*（已弃用）* {#ropsten}
-
-_注意，[Ropsten 测试网已弃用](https://github.com/ethereum/pm/issues/460)并且将不再获得协议升级。 请考虑将你的应用程序迁移到 Sepolia 或 Goerli。_
-
-Ropsten 是一个工作量证明测试网，它在 2022 年 5 月经历了合并，过渡到权益证明共识机制。 可通过 Ropsten 在合并后网络上测试应用程序，但预计它不会得到长期维护并且可能在 2023 年夏季之前弃用。
-
-##### Ropsten 水龙头
-
-- [FaucETH](https://fauceth.komputing.org)（无需社交帐户的多链水龙头）
 - [Paradigm 水龙头](https://faucet.paradigm.xyz/)
+- [Alchemy Goerli 水龙头](https://goerlifaucet.com/)
+- [All That Node Goerli 水龙头](https://www.allthatnode.com/faucet/ethereum.dsrv)
+- [Coinbase Wallet 水龙头 | Sepolia](https://coinbase.com/faucets/ethereum-goerli-faucet)
+
+要在 Goerli 测试网上启动验证者，请使用 ethstaker 的 [“cheap goerli validator”启动板](https://goerli.launchpad.ethstaker.cc/en/)。
 
 #### Rinkeby*（已弃用）* {#rinkeby}
 
-_注意：[Rinkeby 测试网已弃用](https://github.com/ethereum/pm/issues/460)并且将不再获得协议升级。 请考虑将你的应用程序迁移到 Sepolia 或 Goerli。_
+_注意：[Rinkeby 测试网已弃用](https://blog.ethereum.org/2022/11/30/ropsten-shutdown-announcement)并且将不再获得协议升级。 请考虑将你的应用程序迁移到 Sepolia 或 Goerli。_
 
 一个权威证明测试网，面向运行旧版本 Geth 客户端的用户。
 
-##### Rinkeby 水龙头
+##### 水龙头
 
 - [FaucETH](https://fauceth.komputing.org)（无需社交帐户的多链水龙头）
-- [Alchemy 水龙头](https://RinkebyFaucet.com)
 - [Chainlink 水龙头](https://faucets.chain.link/)
 - [Paradigm 水龙头](https://faucet.paradigm.xyz/)
 - [Rinkeby 水龙头](https://faucet.rinkeby.io/)
 
-#### Kovan _（已弃用）_ {#kovan}
-
-_注意：[Kovan 测试网已弃用](https://github.com/ethereum/pm/issues/460)并且将不再获得协议升级。 请考虑将你的应用程序迁移到 Sepolia 或 Goerli。_
-
-一个元老级权威证明测试网，面向仍在运行 OpenEthereum 客户端的用户。
-
-##### Kovan 水龙头
-
-- [FaucETH](https://fauceth.komputing.org)（无需社交帐户的多链水龙头）
-- [Chainlink 水龙头](https://faucets.chain.link/)
-- [Paradigm 水龙头](https://faucet.paradigm.xyz/)
-
 ### 二层网络测试网 {#layer-2-testnets}
 
-[二层网络 (L2)](/layer-2/) 是一种统称，用来描述一组特定的以太坊扩容解决方案。 二层网络是一条扩展以太坊并继承以太坊安全保障的独立区块链。 二层网络测试网通常与公共以太坊测试网紧密关联。
+[二层网络 (L2)](/layer-2/) 是一种统称，用来描述一系列特定的以太坊扩容解决方案。 二层网络是一条扩展以太坊并继承以太坊安全保障的独立区块链。 二层网络测试网通常与公共以太坊测试网紧密关联。
 
-#### Arbitrum Rinkeby {#arbitrum-rinkeby}
+#### Arbitrum Goerli {#arbitrum-goerli}
 
-[Arbitrum ](https://arbitrum.io/)测试网。
+[Arbitrum](https://arbitrum.io/) 测试网。
 
-Arbitrum Rinkeby 水龙头：
+##### 水龙头
 
-- [FaucETH](https://fauceth.komputing.org)（无需社交帐户的多链水龙头）
 - [Chainlink 水龙头](https://faucets.chain.link/)
-- [Paradigm 水龙头](https://faucet.paradigm.xyz/)
 
-#### Optimistic Kovan {#optimistic-kovan}
+#### Optimistic Goerli {#optimistic-goerli}
 
 [Optimism](https://www.optimism.io/) 测试网。
 
-Optimistic Kovan 水龙头：
+##### 水龙头
 
-- [FaucETH](https://fauceth.komputing.org)（无需社交帐户的多链水龙头）
 - [Paradigm 水龙头](https://faucet.paradigm.xyz/)
+- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
 ## 私有网络 {#private-networks}
 
-如果以太坊网络的节点未连接到公共网络（即 主网或测试网），则以太坊网络就是私有网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。
+如果以太坊网络的节点未连接到公共网络（即， 主网或测试网），则以太坊网络就是私有网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。
 
 ### 开发网络 {#development-networks}
 
@@ -145,4 +148,5 @@ Optimistic Kovan 水龙头：
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
+- [提议：可预测的以太坊测试网生命周期](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
+- [以太坊测试网的演变](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
