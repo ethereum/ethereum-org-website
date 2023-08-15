@@ -15,9 +15,6 @@
 # production
 /build
 
-# public linked images
-/public/_static
-
 # misc
 .DS_Store
 *.pem
