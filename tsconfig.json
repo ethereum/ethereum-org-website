@@ -22,10 +22,10 @@
   "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules",
-    "./src/content",
+    "./public/content",
+    "./public/assets",
     "./src/intl",
-    "./src/data",
-    "./src/assets",
+    "./src/data", // TODO: move to /public?
     // TODO: Remove these exclusions as we migrate the pages & templates that use these components
     "./src/components/ActionCard.tsx",
     "./src/components/AdoptionChart.tsx",
