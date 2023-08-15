@@ -1,4 +1,4 @@
-export const CONTENT_DIR = "src/content"
+export const CONTENT_DIR = "public/content"
 
 // Site urls
 export const SITE_URL = "https://ethereum.org" as const

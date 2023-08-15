@@ -21,14 +21,14 @@
   - .all-contributorsrc
 
 "translation :earth_africa:":
-  - src/content/translations/**/*
+  - /content/translations/**/*
   - src/intl/*
   - src/utils/translations.js
 
 "content :fountain_pen:":
   - src/pages/*
   - src/pages-conditional/*
-  - src/content/**/*
+  - /content/**/*
 
 "event :date:":
   - src/data/community-events.json
