@@ -27,6 +27,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
+**OMNIA Protocol -** **Ethereum Secure, Private and Compliant Infrastructure**
+
+- [omniatech.io](https://omniatech.io/)
+- [Documentation](https://docs.omniatech.io/)
+- [Discord](https://discord.com/invite/omniaprotocol)
+
 **BlockCypher -** **_Ethereum Web APIs._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
