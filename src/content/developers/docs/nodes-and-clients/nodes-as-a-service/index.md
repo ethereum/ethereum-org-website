@@ -247,6 +247,32 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - 24/7 Support Team
     - Personal Account Manager
     - Shared, archive, backup and dedicated nodes
+- [**OMNIA Protocol**](https://omniatech.io/)
+  - [Docs](https://docs.omniatech.io/)
+  - Features
+    - Get started for Free (100,000 requests daily)
+    - Reliable, fast, secure and scalable RPC API services
+    - SLA of 99.9%
+    - Low Latency
+    - Advanced Caching
+    - Decentralized Infrastructure
+    - 24/7 Monitoring and Real-time Alerts
+    - Benchmark HealthCheck Monitor
+    - RPC, HTTPS, WSS endpoints and Graph QL Support
+    - Access to 33+ blockchain nodes for Bitcoin, Ethereum, Binance Smart Chain, Polygon, Avalanche, Aurora, Near, Solana, Fantom, Arbitrum, Harmony, Optimism
+    - Bring a Node, Run a Node
+    - RPC Protect (DeFi)
+    - Reinforced Transactions
+    - Frontrunning Protection
+    - Private Transactions
+    - Metadata Protection
+    - Honeypot Protection
+    - MEV Cashback, honeypot and frontrunning protection for Ethereum, BSC, Polygon, Avalanche, Aurora, Aribitrum
+    - OMNIA Dashboard & Advanced Analytics
+    - Advanced Debugging
+    - Integrated Testnet Faucet on EthSepolia for tOMNIA
+    - Multiple Pricing Tiers. Pay in Crypto or credit card.
+    - 24/7 Discord Support & Direct Support option
 - [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/home/)
   - Features
