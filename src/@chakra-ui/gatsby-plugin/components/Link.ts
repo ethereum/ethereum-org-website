@@ -4,7 +4,6 @@ import { defineMergeStyles, linkDefaultTheme } from "./components.utils"
 export const Link = defineStyleConfig({
   baseStyle: defineMergeStyles(linkDefaultTheme.baseStyle, {
     color: "primary.base",
-    fontWeight: "bold",
     textDecor: "underline",
     textUnderlineOffset: "3px",
     _focusVisible: {
