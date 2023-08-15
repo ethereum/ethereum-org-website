@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react"
 import { ParsedUrlQuery } from "querystring"
 import { MDXRemote } from "next-mdx-remote"
+import { useRouter } from "next/router"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 
@@ -26,7 +27,6 @@ import { getContent, getContentBySlug } from "@/lib/utils/md"
 
 import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
 import { ChildOnlyProp } from "@/lib/types"
-import { getFilePath } from "@/lib/utils/getFilePath"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -181,7 +181,17 @@ const ListItem = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
 )
 
-// public/_static/whitepaper/ethereum-blocks.png
+const Img = (img: any) => {
+  // use router to get correct image relative path inside /public/content/ dynamically
+  const router = useRouter()
+  const imgRelativePath = `content${router.asPath}${img.src.slice(1)}`
+
+  return (
+    <ChakraLink href={imgRelativePath} isExternal>
+      <Image src={imgRelativePath} alt={img.alt} />
+    </ChakraLink>
+  )
+}
 
 const components = {
   a: Link,
@@ -190,7 +200,7 @@ const components = {
   h3: Header3,
   h4: Header4,
   hr: HR,
-  // img: Img,
+  img: Img,
   li: ListItem,
   p: Paragraph,
   pre: Pre,
@@ -206,15 +216,6 @@ const components = {
 }
 
 const ContentPage: NextPage<Props> = ({ content }) => {
-  // Img component defined inside as it needs access to `staticPath` value to get image relativ path inside /public/_static
-  const Img = (img: any) => {
-    return (
-      <ChakraLink href={`/_static/${"staticPath"}/${img.src}`} isExternal>
-        <Image src={`/_static/${"staticPath"}/${img.src}`} alt={img.alt} />
-      </ChakraLink>
-    )
-  }
-
   return (
     <Box w="full">
       <Flex
@@ -247,11 +248,7 @@ const ContentPage: NextPage<Props> = ({ content }) => {
             },
           }}
         >
-          {/* TODO: check if content type can be fixed */}
-          <MDXRemote
-            {...(content as any)}
-            components={{ ...components, img: Img }}
-          />
+          <MDXRemote {...(content as any)} components={components} />
         </Box>
       </Flex>
     </Box>
