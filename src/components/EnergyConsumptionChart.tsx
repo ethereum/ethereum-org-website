@@ -1,4 +1,5 @@
 import { Box, Center, useBreakpointValue, useToken } from "@chakra-ui/react"
+import React from "react"
 import {
   BarChart,
   Bar,
@@ -11,7 +12,7 @@ import {
 } from "recharts"
 // import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Translation from "./Translation"
+// import Translation from "./Translation"
 
 interface ITickProps {
   x: number
@@ -47,113 +48,113 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
 }
 
 const EnergyConsumptionChart: React.FC = () => {
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   const textColor = useToken("colors", "text")
 
   const data = useBreakpointValue<Data>({
     base: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
+        name: "Global data centers", // t("energy-consumption-chart-global-data-centers-label")
         amount: 200,
         color: "#FF0000",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
+        name: "BTC PoW", // t("energy-consumption-chart-btc-pow-label")
         amount: 131,
         color: "#F2A900",
       },
       {
-        name: t("energy-consumption-chart-eth-pow-label"),
+        name: "ETH PoW", //t("energy-consumption-chart-eth-pow-label"),
         amount: 78,
         color: "#C1B6F5",
       },
       {
-        name: t("energy-consumption-chart-gaming-us-label"),
+        name: "Gaming in the US", // t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
       },
       {
-        name: t("energy-consumption-chart-eth-pos-label"),
+        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label"),
         amount: 0.0026,
         color: "#C1B6F5",
       },
     ],
     sm: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
+        name: "Global data centers", // t("energy-consumption-chart-global-data-centers-label")
         amount: 200,
         color: "#FF0000",
       },
       {
-        name: t("energy-consumption-gold-mining-cbeci-label"),
+        name: "Gold mining", // t("energy-consumption-gold-mining-cbeci-label")
         amount: 131,
         color: "#F2A900",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
+        name: "BTC PoW", // t("energy-consumption-chart-btc-pow-label")
         amount: 131,
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-chart-eth-pow-label"),
+        name: "ETH PoW", // t("energy-consumption-chart-eth-pow-label")
         amount: 78,
         color: "#C1B6F5",
       },
       {
-        name: t("energy-consumption-chart-netflix-label"),
+        name: "Netflix", // t("energy-consumption-chart-netflix-label")
         amount: 0.451,
         color: "#E50914",
       },
       {
-        name: t("energy-consumption-chart-eth-pos-label"),
+        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label")
         amount: 0.0026,
         color: "#C1B6F5",
       },
     ],
     md: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
+        name: "Global data centers", // t("energy-consumption-chart-global-data-centers-label")
         amount: 200,
         color: "#FF0000",
       },
       {
-        name: t("energy-consumption-gold-mining-cbeci-label"),
+        name: "Gold mining", // t("energy-consumption-gold-mining-cbeci-label")
         amount: 131,
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
+        name: "BTC PoW", // t("energy-consumption-chart-btc-pow-label")
         amount: 131,
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-chart-eth-pow-label"),
+        name: "ETH PoW", // t("energy-consumption-chart-eth-pow-label")
         amount: 78,
         color: "#C1B6F5",
       },
       {
-        name: t("energy-consumption-chart-gaming-us-label"),
+        name: "Gaming in the US", // t("energy-consumption-chart-gaming-us-label")
         amount: 34,
         color: "#71BB8A",
       },
       {
-        name: t("energy-consumption-chart-netflix-label"),
+        name: "Netflix", // t("energy-consumption-chart-netflix-label")
         amount: 0.451,
         color: "#E50914",
       },
       {
-        name: t("energy-consumption-chart-paypal-label"),
+        name: "PayPal", // t("energy-consumption-chart-paypal-label")
         amount: 0.26,
         color: "#C1B6F5",
       },
       {
-        name: t("energy-consumption-chart-airbnb-label"),
+        name: "AirBnB", // t("energy-consumption-chart-airbnb-label")
         amount: 0.02,
         color: "#E50914",
       },
       {
-        name: t("energy-consumption-chart-eth-pos-label"),
+        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label")
         amount: 0.0026,
         color: "#C1B6F5",
       },
@@ -181,7 +182,9 @@ const EnergyConsumptionChart: React.FC = () => {
             <Legend
               content={
                 <Box textAlign="center" color="text" fontWeight="600" mt={8}>
-                  <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" />
+                  {/* TODO: add `Translation` after setting up i18n */}
+                  {/* <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" /> */}
+                  Annual Energy Consumption in TWh/yr
                 </Box>
               }
             />

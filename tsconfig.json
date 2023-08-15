@@ -70,7 +70,6 @@
     "./src/components/DataProductCard.tsx",
     "./src/components/DeveloperDocsLinks.tsx",
     "./src/components/DocsNav.tsx",
-    "./src/components/EnergyConsumptionChart.tsx",
     "./src/components/EnvWarningBanner.tsx",
     "./src/components/EthExchanges/index.tsx",
     "./src/components/EthExchanges/use-eth-exchanges.ts",
