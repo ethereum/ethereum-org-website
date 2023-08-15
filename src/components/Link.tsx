@@ -1,5 +1,13 @@
-import { Box, Icon, Link as ChakraLink, LinkProps, useTheme, VisuallyHidden } from "@chakra-ui/react"
+import {
+  Box,
+  Icon,
+  Link as ChakraLink,
+  LinkProps,
+  useTheme,
+  VisuallyHidden,
+} from "@chakra-ui/react"
 import { BsQuestionSquareFill } from "react-icons/bs"
+import { useRouter } from "next/router"
 // import { navigate as gatsbyNavigate } from "gatsby"
 // import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 // import { NavigateOptions } from "@reach/router"
@@ -55,6 +63,7 @@ const Link: React.FC<IProps> = ({
   ...restProps
 }) => {
   const theme = useTheme()
+  const router = useRouter()
 
   // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
   // this is to support the ButtonLink component which uses the `to` prop
@@ -84,9 +93,27 @@ const Link: React.FC<IProps> = ({
     )
   }
 
-  // Download link for internally hosted PDF's & static files (ex: whitepaper)
+  // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
-  if (isExternal || isPdf || isStatic) {
+  if (isPdf || isStatic) {
+    const relativePath = `content/${router.asPath}${to.slice(1)}`
+
+    return (
+      <ChakraLink href={relativePath} isExternal {...commonProps}>
+        <>
+          {children}
+          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+          {!hideArrow && (
+            <Box as="span" ml={0.5} mr={1.5} aria-hidden>
+              ↗
+            </Box>
+          )}
+        </>
+      </ChakraLink>
+    )
+  }
+
+  if (isExternal) {
     return (
       <ChakraLink href={to} isExternal {...commonProps}>
         <>
