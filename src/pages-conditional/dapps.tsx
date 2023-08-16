@@ -761,6 +761,13 @@ const DappsPage = ({
       image: getImage(data.balancer),
       alt: t("page-dapps-balancer-logo-alt"),
     },
+    {
+      title: "Origin Protocol",
+      description: t("page-dapps-dapp-description-origin"),
+      link: "https://www.originprotocol.com/",
+      image: getImage(data.origin),
+      alt: t("page-dapps-origin-logo-alt"),
+    },
   ]
 
   const insurance = [
@@ -1810,6 +1817,9 @@ export const query = graphql`
       ...dappImage
     }
     synthetix: file(relativePath: { eq: "dapps/synthetix.png" }) {
+      ...dappImage
+    }
+    origin: file(relativePath: { eq: "dapps/origin.png" }) {
       ...dappImage
     }
   }
