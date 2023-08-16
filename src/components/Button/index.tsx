@@ -5,7 +5,8 @@ import {
   useStyleConfig,
 } from "@chakra-ui/react"
 
-import { scrollIntoView } from "../../utils/scrollIntoView"
+// TODO: migrate scrollIntoView util
+// import { scrollIntoView } from "../../utils/scrollIntoView"
 
 export interface IProps extends ButtonProps {
   toId?: string
@@ -15,7 +16,7 @@ export interface IProps extends ButtonProps {
 const Button: React.FC<IProps> = ({ toId, isSecondary, onClick, ...props }) => {
   const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (toId) {
-      scrollIntoView(toId)
+      // scrollIntoView(toId)
     }
 
     onClick?.(e)

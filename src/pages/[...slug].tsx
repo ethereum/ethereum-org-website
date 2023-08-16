@@ -16,6 +16,7 @@ import remarkGfm from "remark-gfm"
 
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
+import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import ExpandableCard from "../components/ExpandableCard"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
@@ -209,6 +210,7 @@ const components = {
   Divider,
   DocLink,
   Emoji,
+  EnergyConsumptionChart,
   ExpandableCard,
   InfoBanner,
   Link,

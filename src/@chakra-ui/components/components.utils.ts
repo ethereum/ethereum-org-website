@@ -1,8 +1,9 @@
 import { cssVar, SystemStyleObject, theme } from "@chakra-ui/react"
-import { merge } from "lodash.merge"
+import merge from "lodash.merge"
 
 const {
   Accordion: accordionDefaultTheme,
+  Alert: alertDefaultTheme,
   Avatar: avatarDefaultTheme,
   Badge: badgeDefaultTheme,
   Breadcrumb: breadcrumbDefaultTheme,
@@ -30,6 +31,7 @@ const {
 
 export {
   accordionDefaultTheme,
+  alertDefaultTheme,
   avatarDefaultTheme,
   badgeDefaultTheme,
   breadcrumbDefaultTheme,
@@ -67,11 +69,12 @@ export {
 export function defineMergeStyles(
   defaultTheming?: SystemStyleObject | unknown,
   ...styleObjs: SystemStyleObject[] | unknown[]
-): any {
+): Record<string, SystemStyleObject> {
   return merge(defaultTheming, ...styleObjs)
 }
 
-export const _notDisabledReadOnly = "&:not([data-disabled], [disabled], [data-readonly])"
+export const _notDisabledReadOnly =
+  "&:not([data-disabled], [disabled], [data-readonly])"
 
 const $inputTriggerDisableColor = cssVar("input-trigger-disable-color")
 
