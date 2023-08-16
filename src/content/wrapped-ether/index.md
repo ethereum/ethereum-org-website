@@ -22,7 +22,7 @@ Common benefits for wrapping tokens include extending its functionality and allo
 
 ETH token was created before newer and widely accepted [ERC-20](/developers/docs/standards/tokens/erc-20/) token standard was introduced. Most tokens and application of today use the ERC-20 standard and therefore there was a need to create an ERC-20 compliant version of ETH.   
 
-Wrapped ether (WETH) was created to **make ETH compatible with applications and tokens implementing ERC-20 interfaces**. WETH also extends the functionality of native ETH token and gives you the opportunity to do the following:
+Wrapped ether (WETH) extends the functionality of native ETH token:
 
 - **Exchange ETH for ERC-20 tokens**: You cannot exchange ETH directly for other ERC-20 tokens (not without introducing trusted third parties or complex technical processes). WETH is a representation of ether that complies with the ERC-20 fungible token standard and can be exchanged 1:1 for other ERC-20 tokens.
 
