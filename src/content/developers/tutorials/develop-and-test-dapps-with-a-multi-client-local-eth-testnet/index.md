@@ -4,18 +4,13 @@ description: This guide will first walk you through how to instantiate and confi
 author: "Tedi Mitiku"
 tags:
   [
-    "kurtosis",
     "clients",
     "nodes",
     "smart contracts",
     "composability",
     "consensus layer",
     "execution layer",
-    "hardhat",
     "testing",
-    "development",
-    "testnet",
-    "prototyping",
   ]
 skill: intermediate
 lang: en
