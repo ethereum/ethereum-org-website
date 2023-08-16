@@ -214,5 +214,5 @@ No. Once a validator has exited and its full balance has been withdrawn, any add
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)
