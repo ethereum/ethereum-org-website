@@ -18,7 +18,9 @@ In all cases, the conversion between WETH and ETH is always completed at a 1:1 r
 
 ## Why do we need to wrap ETH? {#why-do-we-need-to-wrap-eth}
 
-Common use cases for wrapping tokens include extending the functionality of a token and allowing the use of a token outside its native blockchain. With wrapped ether (WETH), the goal is to make ETH more useful by giving it the features of an ERC-20 token. [ERC-20](/developers/docs/standards/tokens/erc-20/) defines a standard interface for fungible tokens, so anyone can create tokens that interact with applications and other tokens in Ethereum's ecosystem. The creation of ETH predates the ERC-20 standard, so ETH tokens don’t conform to this specification.
+Common benefits for wrapping tokens include extending its functionality and allowing the use of a token outside its native blockchain (e.g. using ETH on other networks like Arbitrum or Polygon). 
+
+ETH token was created before newer and widely accepted [ERC-20](/developers/docs/standards/tokens/erc-20/) token standard was introduced. Most tokens and application of today use the ERC-20 standard and therefore there was a need to create an ERC-20 compliant version of ETH.   
 
 Wrapped ether (WETH) was created to **make ETH compatible with applications and tokens implementing ERC-20 interfaces**. WETH also extends the functionality of native ETH token and gives you the opportunity to do the following:
 
