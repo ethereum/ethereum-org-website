@@ -52,7 +52,7 @@ In comparison, wrapped ether (WETH) is not issued and secured natively by the Et
 Some unique qualities that WETH has are:
 
 - **Simplistic design**: The canonical WETH smart contract has less than 60 lines of code and lacks complexities that can produce unintended bugs or exploitable vulnerabilities.
-- **Zero admin controls**: Your interaction with WETH is fully **trustless** as no one has administrative control of the WETH token contract. As such, you don't have to worry about a malicious admin arbitrarily minting or burning tokens, censoring attempts to withdraw your ETH, or blacklisting transfers.
+- **No centralized control*: WETH cannot be changed as no one has administrative control over the WETH token smart contract. As such, you don't have to worry about a malicious admin arbitrarily taking advantage of WETH tokens, censoring or attempts to withdraw your ETH.
 - **Non-upgradeable**: The WETH contract is non-upgradeable (unlike many variants) and has remained the same since its launch many years ago.
 - **Extensively audited and tested**: Members of the Ethereum community (including auditors, developers, and security researchers) have tested the security of the WETH contract before _and_ after its launch. The WETH contract has also passed formal verification, which is used as a high security standard for Ethereum-based applications.
 
