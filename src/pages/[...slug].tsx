@@ -29,6 +29,7 @@ import { getContent, getContentBySlug } from "@/lib/utils/md"
 
 import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
 import { ChildOnlyProp } from "@/lib/types"
+import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -191,8 +192,11 @@ const Img = (img: any) => {
 
   return (
     <ChakraLink href={imgRelativePath} isExternal>
-      {/* TODO: add maxWidth: 1200 */}
-      <Image src={imgRelativePath} alt={img.alt} />
+      <Image
+        src={imgRelativePath}
+        alt={img.alt}
+        maxW={CONTENT_IMAGES_MAX_WIDTH}
+      />
     </ChakraLink>
   )
 }
