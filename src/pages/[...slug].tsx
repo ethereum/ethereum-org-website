@@ -14,6 +14,7 @@ import { useRouter } from "next/router"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 
+import ButtonLink from "../components/ButtonLink"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
@@ -186,10 +187,11 @@ const Img = (img: any) => {
   // use router to get correct image relative path inside /public/content/ dynamically
   const router = useRouter()
   // TODO: update how `imgRelativePath` is computed for translated assets inside /translations, will depend on value of locale after setting up i18n
-  const imgRelativePath = `content${router.asPath}${img.src.slice(1)}`
+  const imgRelativePath = `/content${router.asPath}/${img.src.slice(1)}`
 
   return (
     <ChakraLink href={imgRelativePath} isExternal>
+      {/* TODO: add maxWidth: 1200 */}
       <Image src={imgRelativePath} alt={img.alt} />
     </ChakraLink>
   )
@@ -207,6 +209,7 @@ const components = {
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
+  ButtonLink,
   Divider,
   DocLink,
   Emoji,

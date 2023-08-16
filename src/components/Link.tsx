@@ -12,8 +12,6 @@ import { useRouter } from "next/router"
 // import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 // import { NavigateOptions } from "@reach/router"
 
-// import { BsQuestionSquareFill } from "react-icons/bs"
-
 // import { Lang } from "../utils/languages"
 // import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
 import * as url from "../lib/utils/url"
@@ -26,9 +24,9 @@ export interface IBaseProps {
   href?: string
   // language?: Lang
   hideArrow?: boolean
-  // isPartiallyActive?: boolean
+  isPartiallyActive?: boolean
   // customEventOptions?: MatomoEventOptions
-  // activeStyle?: object
+  activeStyle?: object
 }
 
 export interface IProps extends IBaseProps, LinkProps {
@@ -57,9 +55,9 @@ const Link: React.FC<IProps> = ({
   dir = "ltr",
   children,
   hideArrow = false,
-  // isPartiallyActive = true,
+  isPartiallyActive = true,
   // customEventOptions,
-  // activeStyle = null,
+  activeStyle = null,
   ...restProps
 }) => {
   const theme = useTheme()
@@ -85,6 +83,7 @@ const Link: React.FC<IProps> = ({
   // Must use Chakra's native <Link> for anchor links
   // Otherwise the Gatsby <Link> functionality will navigate to homepage
   // See https://github.com/gatsbyjs/gatsby/issues/21909
+  // TODO: review the comments above for NextJS version
   if (isHash) {
     return (
       <ChakraLink href={to} {...commonProps}>
@@ -134,8 +133,8 @@ const Link: React.FC<IProps> = ({
       to={to}
       // as={IntlLink}
       // language={language}
-      // partiallyActive={isPartiallyActive}
-      // activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
+      partiallyActive={isPartiallyActive}
+      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
     >
