@@ -785,9 +785,6 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Text>
               <Translation id="layer-2-sidechains-4" />
             </Text>
-            <Text>
-              <Translation id="layer-2-sidechains-5" />
-            </Text>
           </Box>
         </TwoColumnContent>
       </ContentBox>
