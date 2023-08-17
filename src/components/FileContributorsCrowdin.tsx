@@ -63,7 +63,7 @@ const FILE_IDS_QUERY = graphql`
 
 export async function getFileIdByPath(fileIdsData, path, language) {
   const normalizedPath = path.replace(
-    new RegExp(`^src/content/translations/${language}/`),
+    new RegExp(`^public/content/translations/${language}/`),
     ""
   )
 

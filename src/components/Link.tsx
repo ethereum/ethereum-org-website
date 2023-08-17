@@ -1,14 +1,21 @@
-import { Box, Icon, Link as ChakraLink, LinkProps, useTheme, VisuallyHidden } from "@chakra-ui/react"
+import {
+  Box,
+  Icon,
+  Link as ChakraLink,
+  LinkProps,
+  useTheme,
+  VisuallyHidden,
+} from "@chakra-ui/react"
 import { BsQuestionSquareFill } from "react-icons/bs"
+import { useRouter } from "next/router"
 // import { navigate as gatsbyNavigate } from "gatsby"
 // import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 // import { NavigateOptions } from "@reach/router"
 
-// import { BsQuestionSquareFill } from "react-icons/bs"
-
 // import { Lang } from "../utils/languages"
 // import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
-import * as url from "../lib/utils/url"
+import * as url from "@/lib/utils/url"
+import { getRelativePath } from "@/lib/utils/relativePath"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 // import { Direction } from "../types"
@@ -18,9 +25,9 @@ export interface IBaseProps {
   href?: string
   // language?: Lang
   hideArrow?: boolean
-  // isPartiallyActive?: boolean
+  isPartiallyActive?: boolean
   // customEventOptions?: MatomoEventOptions
-  // activeStyle?: object
+  activeStyle?: object
 }
 
 export interface IProps extends IBaseProps, LinkProps {
@@ -49,12 +56,13 @@ const Link: React.FC<IProps> = ({
   dir = "ltr",
   children,
   hideArrow = false,
-  // isPartiallyActive = true,
+  isPartiallyActive = true,
   // customEventOptions,
-  // activeStyle = null,
+  activeStyle = null,
   ...restProps
 }) => {
   const theme = useTheme()
+  const router = useRouter()
 
   // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
   // this is to support the ButtonLink component which uses the `to` prop
@@ -76,6 +84,7 @@ const Link: React.FC<IProps> = ({
   // Must use Chakra's native <Link> for anchor links
   // Otherwise the Gatsby <Link> functionality will navigate to homepage
   // See https://github.com/gatsbyjs/gatsby/issues/21909
+  // TODO: review the comments above for NextJS version
   if (isHash) {
     return (
       <ChakraLink href={to} {...commonProps}>
@@ -84,9 +93,27 @@ const Link: React.FC<IProps> = ({
     )
   }
 
-  // Download link for internally hosted PDF's & static files (ex: whitepaper)
+  // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
-  if (isExternal || isPdf || isStatic) {
+  if ((isPdf && !isExternal) || isStatic) {
+    const relativePath = getRelativePath(router.asPath, to)
+
+    return (
+      <ChakraLink href={relativePath} isExternal {...commonProps}>
+        <>
+          {children}
+          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+          {!hideArrow && (
+            <Box as="span" ml={0.5} mr={1.5} aria-hidden>
+              ↗
+            </Box>
+          )}
+        </>
+      </ChakraLink>
+    )
+  }
+
+  if (isExternal) {
     return (
       <ChakraLink href={to} isExternal {...commonProps}>
         <>
@@ -107,8 +134,8 @@ const Link: React.FC<IProps> = ({
       to={to}
       // as={IntlLink}
       // language={language}
-      // partiallyActive={isPartiallyActive}
-      // activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
+      partiallyActive={isPartiallyActive}
+      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
     >

@@ -1,7 +1,7 @@
 import { Box, BoxProps } from "@chakra-ui/react"
 import { Twemoji, BaseProps } from "react-emoji-render"
 
-// import { IS_DEV } from "../utils/env"
+import { IS_DEV } from "@/lib/utils/env"
 
 export interface IProps extends Omit<BoxProps, "children">, BaseProps {}
 
@@ -14,7 +14,7 @@ const Emoji = (props: IProps) => {
       // https://github.com/tommoor/react-emoji-render/blob/master/src/index.js#L8
       // Hence, here we are defining how we want it to handle the protocol to
       // avoid differences in SSR
-      // options={{ protocol: IS_DEV ? "http" : "https" }}
+      options={{ protocol: IS_DEV ? "http" : "https" }}
       svg
       display="inline-block"
       sx={{

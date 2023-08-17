@@ -1,4 +1,3 @@
-import React from "react"
 import {
   Icon,
   Box,
@@ -54,9 +53,10 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
             _hover={{ textDecoration: "none" }}
             hideArrow
           >
-            <Text color="text300" fontWeight="semibold" margin={0}>
-              {children}
-            </Text>
+            {/* FIX: this Text is causing rendering issues */}
+            {/* <Text color="text300" fontWeight="semibold" margin={0}> */}
+            {children}
+            {/* </Text> */}
           </LinkOverlay>
         </Box>
         <Icon

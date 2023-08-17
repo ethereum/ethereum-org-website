@@ -1,27 +1,34 @@
 // Libraries
-import React from "react"
 import { Flex, Stack, Text } from "@chakra-ui/react"
-import { useI18next } from "gatsby-plugin-react-i18next"
+// TODO: look for replacement lib when i18n is set up
+// import { useI18next } from "gatsby-plugin-react-i18next"
 
 // Components
 import Emoji from "../Emoji"
 import Link from "../Link"
-import Translation from "../Translation"
+// TODO add Translation
+// import Translation from "../Translation"
 
 // Data
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 
 // Utils
-import { Lang } from "../../utils/languages"
-import { getLocaleForNumberFormat } from "../../utils/translations"
+// TODO
+// import { Lang } from "../../utils/languages"
+// TODO
+// import { getLocaleForNumberFormat } from "../../utils/translations"
 
 interface IProps {
   name: string
 }
 
 const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
-  const { language } = useI18next()
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+  // TODO: remove hardcoded locale "en" values when i18n is set up
+  // const { language } = useI18next()
+  const language = "en"
+  // const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+  const localeForStatsBoxNumbers = "en"
+
   const {
     dateTimeAsString,
     ethPriceInUSD,
@@ -30,7 +37,8 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
     epochNumber,
     slotNumber,
   } = NetworkUpgradeSummaryData[name]
-  const date = new Date(dateTimeAsString)
+  // TODO fix dateTimeAsString
+  const date = new Date(dateTimeAsString as any)
   const formattedDate = date.toLocaleString(language, {
     timeZone: "UTC",
     month: "short",
@@ -43,11 +51,18 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   const formattedUTC = `${formattedDate} +UTC`
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
+    // TODO: remove temporalGetValue after i18n is set up
+    const temporalGetValue = {
+      "page-history-block-number": "Block number",
+      "page-history-epoch-number": "Epoch number",
+      "page-history-slot-number": "Slot number",
+    }
+
     return (
       <Flex>
         <Emoji fontSize="sm" mr={2} text=":bricks:" />
-        <Translation id={translationKey} />
-        :&nbsp;
+        {/* <Translation id={translationKey} /> */}
+        {temporalGetValue[translationKey]}:&nbsp;
         <Link to={`${explorerUrl}${number}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </Link>
@@ -86,8 +101,9 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       {ethPriceInUSD && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":money_bag:" />
-          <Translation id="page-history-eth-price" />
-          :&nbsp;
+          {/* TODO: remove hardcoded text when Translation & i18n are set up */}
+          {/* <Translation id="page-history-eth-price" /> */}
+          ETH price: &nbsp;
           {new Intl.NumberFormat(localeForStatsBoxNumbers, {
             style: "currency",
             currency: "USD",
@@ -98,7 +114,9 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
           <Link to={waybackLink}>
-            <Translation id="page-history-ethereum-org-wayback" />
+            {/* TODO: remove hardcoded text when Translation & i18n are set up */}
+            {/* <Translation id="page-history-ethereum-org-wayback" /> */}
+            ethereum.org on waybackmachine
           </Link>
         </Flex>
       )}

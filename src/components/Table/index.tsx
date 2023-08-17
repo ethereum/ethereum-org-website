@@ -9,7 +9,6 @@ import {
   Tbody,
   Thead,
 } from "@chakra-ui/react"
-import { MDXProviderComponentsProp } from "@mdx-js/react"
 
 /*
  * TODO: Currently, there are cell spacing issues with some table content.
@@ -30,7 +29,7 @@ const Table = (props: TableProps) => {
   )
 }
 
-export const mdxTableComponents: MDXProviderComponentsProp = {
+export const mdxTableComponents = {
   table: Table,
   th: ({ align, ...rest }) => <Th textAlign={align} {...rest} />,
   td: ({ align, ...rest }) => <Td textAlign={align} {...rest} />,

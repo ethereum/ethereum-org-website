@@ -16,12 +16,13 @@
     "framer-motion": "^10.13.0",
     "gray-matter": "^4.0.3",
     "lodash.merge": "^4.6.2",
-    "next": "13.4.10",
+    "next": "13.4.13",
     "next-mdx-remote": "^4.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-emoji-render": "^2.0.1",
     "react-icons": "^4.10.1",
+    "recharts": "^2.7.3",
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {

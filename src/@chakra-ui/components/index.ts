@@ -1,18 +1,20 @@
+// import { Alert } from "./Alert"
+// import { Avatar } from "./Avatar"
 // import { Badge } from "./Badge"
-// import { Button } from "./Button"
-// import { Link } from "./Link"
+import { Button } from "./Button"
+import { Link } from "./Link"
 // import { Tag } from "./Tag"
 // import { Modal } from "./Modal"
 // import { Checkbox } from "./Checkbox"
 // import { Progress } from "./Progress"
 // import { Tabs } from "./Tabs"
+import { Table } from "./Table"
 // import { Radio } from "./Radio"
 // import { Select } from "./Select"
 // import { Switch } from "./Switch"
 // import { Input } from "./Input"
 import {
   accordionDefaultTheme,
-  avatarDefaultTheme,
   breadcrumbDefaultTheme,
   closeButtonDefaultTheme,
   codeDefaultTheme,
@@ -23,16 +25,15 @@ import {
   headingDefaultTheme,
   menuDefaultTheme,
   spinnerDefaultTheme,
-  tableDefaultTheme,
 } from "./components.utils"
 
-// TODO: update imports and exports after components being migrated
 export default {
   Accordion: accordionDefaultTheme,
-  Avatar: avatarDefaultTheme,
+  // Alert,
+  // Avatar,
   // Badge,
   Breadcrumb: breadcrumbDefaultTheme,
-  // Button,
+  Button,
   // Checkbox,
   CloseButton: closeButtonDefaultTheme,
   Code: codeDefaultTheme,
@@ -42,7 +43,7 @@ export default {
   FormLabel: formLabelDefaultTheme,
   Heading: headingDefaultTheme,
   // Input,
-  // Link,
+  Link,
   Menu: menuDefaultTheme,
   // Modal,
   // Progress,
@@ -50,7 +51,7 @@ export default {
   // Select,
   Spinner: spinnerDefaultTheme,
   // Switch,
-  Table: tableDefaultTheme,
+  Table,
   // Tabs,
   // Tag,
 }

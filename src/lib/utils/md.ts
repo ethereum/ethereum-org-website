@@ -1,4 +1,5 @@
 import fs from "fs"
+import { extname } from "path"
 import { join } from "path"
 import matter from "gray-matter"
 
@@ -13,7 +14,17 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/about",
     "/bridges",
     "/community/code-of-conduct",
+    "/community/support",
+    "/energy-consumption",
+    "/guides/how-to-swap-tokens",
+    "/history/",
+    "/smart-contracts",
+    "/whitepaper",
   ]
+
+  // Skip /translations dir for now until we set up i18n
+  // Skip /developers dir for now until we set up required layout
+  if (dir.includes("/translations") || dir.includes("/developers")) return []
 
   // Get an array of all files and directories in the passed directory using fs.readdirSync
   const fileList = fs.readdirSync(dir)
@@ -27,10 +38,16 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
       // If it is a directory, recursively call the getFiles function with the directory path and the files array
       getPostSlugs(name, files)
     } else {
-      // If it is a file (allowed content page), push the path to the files array
-      for (const page of temporalAllowedPages) {
-        if (name.includes(page)) {
-          files.push(name.replace("src/content", "").replace("/index.md", ""))
+      const fileExtension = extname(name)
+
+      if (fileExtension === ".md") {
+        // If it is a .md file (allowed content page), push the path to the files array
+        for (const page of temporalAllowedPages) {
+          if (name.includes(page)) {
+            files.push(
+              name.replace("public/content", "").replace("/index.md", "")
+            )
+          }
         }
       }
     }
@@ -70,6 +87,7 @@ export const getContentBySlug = (slug: string, fields: string[] = []) => {
     }
   })
 
+  // return { items, staticPath }
   return items
 }
 

@@ -3,22 +3,34 @@ import {
   Divider as ChakraDivider,
   Flex,
   Heading,
+  Image,
+  Link as ChakraLink,
   Text,
   chakra,
 } from "@chakra-ui/react"
 import { ParsedUrlQuery } from "querystring"
 import { MDXRemote } from "next-mdx-remote"
+import { useRouter } from "next/router"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 
+import ButtonLink from "../components/ButtonLink"
+import DocLink from "../components/DocLink"
+import Emoji from "../components/Emoji"
+import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
+import ExpandableCard from "../components/ExpandableCard"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
+import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
+import YouTube from "../components/YouTube"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
+import { getRelativePath } from "@/lib/utils/relativePath"
 
 import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
 import { ChildOnlyProp } from "@/lib/types"
+import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -63,6 +75,21 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     },
   }
 }
+
+const Pre = (props: ChildOnlyProp) => (
+  <Text
+    as="pre"
+    maxW="full"
+    overflowX="scroll"
+    bgColor="preBackground"
+    borderRadius="base"
+    p={4}
+    border="1px solid"
+    borderColor="preBorder"
+    whiteSpace="pre-wrap"
+    {...props}
+  />
+)
 
 const HR = () => (
   <ChakraDivider
@@ -158,19 +185,45 @@ const ListItem = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
 )
 
+const Img = (img: any) => {
+  // use router to get correct image relative path inside /public/content/ dynamically
+  const router = useRouter()
+  // TODO: update how `imgRelativePath` is computed for translated assets inside /translations, will depend on value of locale after setting up i18n
+  const imgRelativePath = getRelativePath(router.asPath, img.src)
+
+  return (
+    <ChakraLink href={imgRelativePath} isExternal>
+      <Image
+        src={imgRelativePath}
+        alt={img.alt}
+        maxW={CONTENT_IMAGES_MAX_WIDTH}
+      />
+    </ChakraLink>
+  )
+}
+// code
 const components = {
   a: Link,
   h1: Header1,
   h2: Header2,
   h3: Header3,
   h4: Header4,
-  p: Paragraph,
-  li: ListItem,
   hr: HR,
+  img: Img,
+  li: ListItem,
+  p: Paragraph,
+  pre: Pre,
   table: MarkdownTable,
-  Link,
+  ButtonLink,
   Divider,
+  DocLink,
+  Emoji,
+  EnergyConsumptionChart,
+  ExpandableCard,
   InfoBanner,
+  Link,
+  NetworkUpgradeSummary,
+  YouTube,
 }
 
 const ContentPage: NextPage<Props> = ({ content }) => {
@@ -179,10 +232,12 @@ const ContentPage: NextPage<Props> = ({ content }) => {
       <Flex
         justifyContent="space-between"
         w="full"
-        mx="auto"
+        // mx="auto"
+        ml={24}
         mb={16}
         p={8}
         pt={{ base: 8, lg: 16 }}
+        // TODO: set isRightToLeft
         // dir={isRightToLeft ? "rtl" : "ltr"}
       >
         <Box
@@ -204,7 +259,6 @@ const ContentPage: NextPage<Props> = ({ content }) => {
             },
           }}
         >
-          {/* TODO: check if content type can be fixed */}
           <MDXRemote {...(content as any)} components={components} />
         </Box>
       </Flex>
