@@ -21,7 +21,7 @@ import type { Context } from "../../../types"
 // Components
 import ActionCard from "../../../components/ActionCard"
 import Breadcrumbs from "../../../components/Breadcrumbs"
-import Link from "../../../components/Link"
+import InlineLink from "../../../components/Link"
 import PageMetadata from "../../../components/PageMetadata"
 import Translation from "../../../components/Translation"
 import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
@@ -98,9 +98,9 @@ const TranslatorAcknowledgements = ({
             </Text>
             <Text>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-3" />{" "}
-              <Link to="/contributing/translation-program/contributors/">
+              <InlineLink to="/contributing/translation-program/contributors/">
                 <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-link" />
-              </Link>
+              </InlineLink>
               .
             </Text>
             <Text>
@@ -241,9 +241,9 @@ const TranslatorAcknowledgements = ({
         <List as="ol" styleType="decimal">
           <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1" />{" "}
-            <Link to="https://discord.gg/CetY6Y4">
+            <InlineLink to="https://discord.gg/CetY6Y4">
               <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1-discord" />
-            </Link>
+            </InlineLink>
           </ListItem>
           <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-2" />

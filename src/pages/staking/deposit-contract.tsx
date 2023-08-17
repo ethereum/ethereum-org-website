@@ -20,7 +20,7 @@ import CardList from "../../components/CardList"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Emoji from "../../components/Emoji"
 import InfoBanner from "../../components/InfoBanner"
-import Link from "../../components/Link"
+import InlineLink from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import Tooltip from "../../components/Tooltip"
@@ -328,9 +328,9 @@ const DepositContractPage = ({
           </h2>
           <p>
             <Translation id="page-staking-deposit-contract-staking" />{" "}
-            <Link to="/staking/">
+            <InlineLink to="/staking/">
               <Translation id="page-staking-deposit-contract-staking-more-link" />
-            </Link>
+            </InlineLink>
           </p>
           <StyledButton
             to="https://launchpad.ethereum.org"
@@ -449,20 +449,20 @@ const DepositContractPage = ({
                         </CopyButton>
                       )}
                     </CopyToClipboard>
-                    <Link
+                    <InlineLink
                       to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                     >
                       <Translation id="page-staking-deposit-contract-etherscan" />
-                    </Link>
+                    </InlineLink>
                   </ButtonRow>
                 </>
               )}
               <InfoBanner isWarning emoji=":warning:">
                 <div>
                   <Translation id="page-staking-deposit-contract-warning-2" />{" "}
-                  <Link to="https://launchpad.ethereum.org">
+                  <InlineLink to="https://launchpad.ethereum.org">
                     <Translation id="page-staking-deposit-contract-launchpad-2" />
-                  </Link>
+                  </InlineLink>
                 </div>
               </InfoBanner>
             </Box>

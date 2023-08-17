@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
-import Link, { IProps as LinkProps } from "../Link"
+import { BaseLink, IProps as LinkProps } from "../Link"
 
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 import { getDirection } from "../../utils/translations"
@@ -20,17 +20,19 @@ import { Lang } from "../../utils/languages"
 import { ISection } from "./types"
 
 const NavLink = (props: LinkProps) => (
-  <Link
+  <BaseLink
     color="text200"
     display="block"
     textDecor="none"
     py={2}
     px={4}
+    fontWeight="normal"
     _hover={{
       textDecor: "none",
       color: "primary.base",
       svg: { fill: "currentColor" },
     }}
+    _visited={{}}
     sx={{ svg: { fill: "currentColor" } }}
     {...props}
   />
@@ -56,7 +58,7 @@ export interface IProps {
 
 const NavDropdown: React.FC<IProps> & {
   Item: typeof Item
-  Link: typeof Link
+  Link: typeof BaseLink
   Title: typeof Title
 } = ({ children, section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)

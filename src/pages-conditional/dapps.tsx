@@ -31,7 +31,7 @@ import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
 import ProductCard from "../components/ProductCard"
 import GhostCard from "../components/GhostCard"
-import Link from "../components/Link"
+import InlineLink, { BaseLink } from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
@@ -272,8 +272,8 @@ const StepBoxContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const StepBox = (props: ComponentPropsWithRef<typeof Link>) => (
-  <Link
+const StepBox = (props: ComponentPropsWithRef<typeof BaseLink>) => (
+  <BaseLink
     border="1px solid"
     borderColor="border"
     pt={0}
@@ -1071,9 +1071,9 @@ const DappsPage = ({
         </StyledH2>
         <Text>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
-          <Link to="/glossary/#transaction-fee">
+          <InlineLink to="/glossary/#transaction-fee">
             <Translation id="transaction-fees" />
-          </Link>
+          </InlineLink>
         </Text>
         <Row>
           <StepBoxContainer>
@@ -1517,9 +1517,9 @@ const DappsPage = ({
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             <Translation id="page-dapps-magic-behind-dapps-description" />
           </Text>
-          <Link to="/what-is-ethereum/">
+          <InlineLink to="/what-is-ethereum/">
             <Translation id="page-dapps-magic-behind-dapps-link" />
-          </Link>
+          </InlineLink>
         </Flex>
         <BoxGrid items={features} />
         <Row>

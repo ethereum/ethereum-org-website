@@ -6,7 +6,7 @@ import axios from "axios"
 
 import Emoji from "./Emoji"
 import Translation from "./Translation"
-import Link from "./Link"
+import InlineLink from "./Link"
 import Tooltip from "./Tooltip"
 
 import { getImage } from "../utils/image"
@@ -87,7 +87,9 @@ const BugBountyPoints: React.FC<IProps> = () => {
   const tooltipContent = (
     <Box>
       <Translation id="data-provided-by" />{" "}
-      <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
+      <InlineLink to="https://www.coingecko.com/en/api">
+        coingecko.com
+      </InlineLink>
     </Box>
   )
 

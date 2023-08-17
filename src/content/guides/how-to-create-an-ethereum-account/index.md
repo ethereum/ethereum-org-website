@@ -18,7 +18,7 @@ A wallet is an app that helps you manage your Ethereum account. It uses your key
   Find a wallet
 </ButtonLink>
 
-If you are new, you can select the “New to crypto” filter on the "find a wallet" page to identify wallets that should include all necessary features suitable for beginners. 
+If you are new, you can select the “New to crypto” filter on the "find a wallet" page to identify wallets that should include all necessary features suitable for beginners.
 
 ![filter selection on 'find a wallet' page](./wallet-box.png)
 
@@ -51,7 +51,7 @@ Once you have saved your seed phrase you should see your wallet dashboard with y
 
 ### Are my wallet and my Ethereum account the same?
 
-No. The wallet is a management tool that helps you to manage accounts. A single wallet might give access to several accounts, and a single account can be accessed by multiple wallets. The seed phrase is used to create accounts that are then controlled by the wallet. 
+No. The wallet is a management tool that helps you to manage accounts. A single wallet might give access to several accounts, and a single account can be accessed by multiple wallets. The seed phrase is used to create accounts that are then controlled by the wallet.
 
 You can think of the accounts as leaves on a tree that all 'grow' from a single seed phrase. Each unique seed will grow an entirely different tree of accounts.
 

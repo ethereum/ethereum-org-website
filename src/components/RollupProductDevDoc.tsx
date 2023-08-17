@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react"
 
 // Components
-import Link from "./Link"
+import InlineLink from "./Link"
 import Translation from "./Translation"
 
 // Data
@@ -70,19 +70,19 @@ const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {
                   )}
                   <UnorderedList>
                     <ListItem>
-                      <Link to={website}>
+                      <InlineLink to={website}>
                         <Translation id="rollup-component-website" />
-                      </Link>
+                      </InlineLink>
                     </ListItem>
                     <ListItem>
-                      <Link to={developerDocs}>
+                      <InlineLink to={developerDocs}>
                         <Translation id="rollup-component-developer-docs" />
-                      </Link>
+                      </InlineLink>
                     </ListItem>
                     <ListItem>
-                      <Link to={l2beat}>
+                      <InlineLink to={l2beat}>
                         <Translation id="rollup-component-technology-and-risk-summary" />
-                      </Link>
+                      </InlineLink>
                     </ListItem>
                   </UnorderedList>
                 </Box>
