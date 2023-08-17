@@ -288,6 +288,15 @@
     "endDate": "2023-9-17"
   },
   {
+    "title": "ETH LONDON Hackathon 2023",
+    "to": "https://www.encode.club/eth-london",
+    "sponsor": null,
+    "location": "London, UK",
+    "description": "Join us for the ETH London Hackathon, 27th-29th October 2023, an exciting and innovative event focusing on Ethereum technology. Network with industry leaders, showcase your skills, and innovate in the thriving Ethereum space.",
+    "startDate": "2023-10-27",
+    "endDate": "2023-10-29"
+  },
+  {
     "title": "Devconnect Istanbul",
     "to": "https://devconnect.org",
     "sponsor": null,
