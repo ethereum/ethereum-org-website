@@ -30,7 +30,7 @@ Bridges exist to connect blockchains, allowing the transfer of information and t
 
 Bridges enable:
 
-- the cross-chain transfer of assets and information
+- the cross-chain transfer of assets and information.
 - dapps to access the strengths of various blockchains – thus enhancing their capabilities (as protocols now have more design space for innovation).
 - users to access new platforms and leverage the benefits of different chains.
 - developers from different blockchain ecosystems to collaborate and build new platforms for the users.

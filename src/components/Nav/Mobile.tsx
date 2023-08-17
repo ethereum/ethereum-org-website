@@ -17,7 +17,7 @@ import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 
-import Link from "../Link"
+import { BaseLink } from "../Link"
 import Translation from "../Translation"
 
 import { ISections } from "./types"
@@ -37,7 +37,7 @@ const StyledNavLink = (props: {
   isPartiallyActive: boolean
   children: ReactNode
 }) => (
-  <Link
+  <BaseLink
     color="currentColor"
     textDecor="none"
     _hover={{
@@ -279,7 +279,7 @@ const MobileNavMenu: React.FC<IProps> = ({
             </FooterItem>
             <FooterItem onClick={handleClick}>
               <Flex
-                as={Link}
+                as={BaseLink}
                 to={`/languages/${fromPageParameter}`}
                 alignItems="center"
                 color="text"
