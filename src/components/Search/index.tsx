@@ -5,7 +5,6 @@ import { MdSearch } from "react-icons/md"
 import {
   forwardRef,
   Portal,
-  useDisclosure,
   IconButtonProps,
   useToken,
   useMediaQuery,
@@ -27,7 +26,7 @@ import { trackCustomEvent } from "../../utils/matomo"
 
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (
-    <Button ref={ref} variant="secondaryGhost" px={1.5} {...props}>
+    <Button ref={ref} variant="ghost" isSecondary px={1.5} {...props}>
       <MdSearch />
     </Button>
   )

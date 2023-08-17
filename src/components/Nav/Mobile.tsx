@@ -137,7 +137,8 @@ const MobileNavMenu: React.FC<IProps> = ({
       <Button
         onClick={toggleMenu}
         aria-label={t("aria-toggle-search-button")}
-        variant="secondaryGhost"
+        variant="ghost"
+        isSecondary
         px={0}
         zIndex={2000}
         {...props}

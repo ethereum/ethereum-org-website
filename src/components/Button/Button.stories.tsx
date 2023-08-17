@@ -79,6 +79,7 @@ export const IconVariants: Story = {
       <VStack>
         <IconButton aria-label="next" icon={<MdChevronRight />} {...args} />
         <IconButton
+          variant="ghost"
           aria-label="next"
           icon={<MdChevronRight />}
           size="sm"

@@ -6,8 +6,8 @@ import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
 import Link from "../Link"
-import Button from "../Button"
 import Search from "../Search"
+import IconButton from "../IconButton"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
 
@@ -82,22 +82,23 @@ const Nav: FC<IProps> = ({ path }) => {
                 drawerContainerRef={navWrapperRef}
               />
               <HStack spacing={2} hideBelow="lg">
-                <Button
+                <IconButton
+                  icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
                   aria-label={
                     isDarkTheme
                       ? "Switch to Light Theme"
                       : "Switch to Dark Theme"
                   }
-                  variant="secondaryGhost"
+                  variant="ghost"
+                  isSecondary
                   px={1.5}
                   onClick={toggleColorMode}
-                >
-                  <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
-                </Button>
+                ></IconButton>
                 <ButtonLink
                   to={`/languages/${fromPageParameter}`}
                   leftIcon={<Icon as={MdLanguage} />}
-                  variant="secondaryGhost"
+                  variant="ghost"
+                  isSecondary
                   px={1.5}
                 >
                   {t("languages")} {i18n.language.toUpperCase()}
