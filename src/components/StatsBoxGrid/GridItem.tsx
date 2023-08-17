@@ -5,7 +5,7 @@ import { kebabCase } from "lodash"
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis } from "recharts"
 import Tooltip from "../Tooltip"
 import Translation from "../Translation"
-import Link from "../Link"
+import InlineLink from "../Link"
 import StatErrorMessage from "../StatErrorMessage"
 import StatLoadingMessage from "../StatLoadingMessage"
 import { Metric, ranges } from "./useStatsBoxGrid"
@@ -14,7 +14,7 @@ import { Direction } from "../../types"
 const tooltipContent = (metric: Metric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
+    <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
   </div>
 )
 

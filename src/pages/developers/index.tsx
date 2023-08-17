@@ -16,7 +16,7 @@ import {
 
 import Card, { IProps as ICardProps } from "../../components/Card"
 import Callout from "../../components/Callout"
-import Link from "../../components/Link"
+import InlineLink from "../../components/Link"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
@@ -293,9 +293,9 @@ const DevelopersPage = ({
             </p>
             <p>
               <Translation id="page-developers-feedback" />{" "}
-              <Link to="https://discord.gg/CetY6Y4">
+              <InlineLink to="https://discord.gg/CetY6Y4">
                 <Translation id="page-developers-discord" />
-              </Link>
+              </InlineLink>
             </p>
           </IntroColumn>
           <StyledCallout
@@ -324,44 +324,44 @@ const DevelopersPage = ({
             <h3>
               <Translation id="page-developers-docs-introductions" />
             </h3>
-            <Link to="/developers/docs/intro-to-ethereum/">
+            <InlineLink to="/developers/docs/intro-to-ethereum/">
               <Translation id="page-developers-intro-eth-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-into-eth-desc" />
             </p>
 
-            <Link to="/developers/docs/intro-to-ether/">
+            <InlineLink to="/developers/docs/intro-to-ether/">
               <Translation id="page-developers-intro-ether-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-intro-ether-desc" />
             </p>
 
-            <Link to="/developers/docs/dapps/">
+            <InlineLink to="/developers/docs/dapps/">
               <Translation id="page-developers-intro-dapps-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-intro-dapps-desc" />
             </p>
 
-            <Link to="/developers/docs/ethereum-stack/">
+            <InlineLink to="/developers/docs/ethereum-stack/">
               <Translation id="page-developers-intro-stack" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-intro-stack-desc" />
             </p>
 
-            <Link to="/developers/docs/web2-vs-web3/">
+            <InlineLink to="/developers/docs/web2-vs-web3/">
               <Translation id="page-developers-web3-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-web3-desc" />
             </p>
 
-            <Link to="/developers/docs/programming-languages/">
+            <InlineLink to="/developers/docs/programming-languages/">
               <Translation id="page-developers-languages" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-language-desc" />
             </p>
@@ -378,65 +378,65 @@ const DevelopersPage = ({
             <h3>
               <Translation id="page-developers-fundamentals" />
             </h3>
-            <Link to="/developers/docs/accounts/">
+            <InlineLink to="/developers/docs/accounts/">
               <Translation id="page-developers-accounts-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-account-desc" />
             </p>
 
-            <Link to="/developers/docs/transactions/">
+            <InlineLink to="/developers/docs/transactions/">
               <Translation id="page-developers-transactions-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-transactions-desc" />
             </p>
 
-            <Link to="/developers/docs/blocks/">
+            <InlineLink to="/developers/docs/blocks/">
               <Translation id="page-developers-blocks-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-block-desc" />
             </p>
 
-            <Link to="/developers/docs/evm/">
+            <InlineLink to="/developers/docs/evm/">
               <Translation id="page-developers-evm-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-evm-desc" />
             </p>
 
-            <Link to="/developers/docs/gas/">
+            <InlineLink to="/developers/docs/gas/">
               <Translation id="page-developers-gas-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-gas-desc" />
             </p>
 
-            <Link to="/developers/docs/nodes-and-clients/">
+            <InlineLink to="/developers/docs/nodes-and-clients/">
               <Translation id="page-developers-node-clients-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-node-clients-desc" />
             </p>
 
-            <Link to="/developers/docs/networks/">
+            <InlineLink to="/developers/docs/networks/">
               <Translation id="page-developers-networks-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-networks-desc" />
             </p>
 
-            <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
+            <InlineLink to="/developers/docs/consensus-mechanisms/pow/mining/">
               <Translation id="page-developers-mining-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-mining-desc" />
             </p>
 
-            <Link to="/developers/docs/consensus-mechanisms/pow/mining-algorithms/">
+            <InlineLink to="/developers/docs/consensus-mechanisms/pow/mining-algorithms/">
               <Translation id="page-developers-mining-algorithms-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-mining-algorithms-desc" />
             </p>
@@ -445,90 +445,90 @@ const DevelopersPage = ({
             <h3>
               <Translation id="page-developers-stack" />
             </h3>
-            <Link to="/developers/docs/smart-contracts/">
+            <InlineLink to="/developers/docs/smart-contracts/">
               <Translation id="page-developers-smart-contracts-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-smart-contracts-desc" />
             </p>
-            <Link to="/developers/docs/frameworks/">
+            <InlineLink to="/developers/docs/frameworks/">
               <Translation id="page-developers-frameworks-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-frameworks-desc" />
             </p>
-            <Link to="/developers/docs/apis/javascript/">
+            <InlineLink to="/developers/docs/apis/javascript/">
               <Translation id="page-developers-js-libraries-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-js-libraries-desc" />
             </p>
-            <Link to="/developers/docs/apis/backend/">
+            <InlineLink to="/developers/docs/apis/backend/">
               <Translation id="page-developers-api-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-api-desc" />
             </p>
-            <Link to="/developers/docs/data-and-analytics/block-explorers/">
+            <InlineLink to="/developers/docs/data-and-analytics/block-explorers/">
               <Translation id="page-developers-block-explorers-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-block-explorers-desc" />
             </p>
-            <Link to="/developers/docs/smart-contracts/security/">
+            <InlineLink to="/developers/docs/smart-contracts/security/">
               <Translation id="page-developers-smart-contract-security-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-smart-contract-security-desc" />
             </p>
-            <Link to="/developers/docs/storage/">
+            <InlineLink to="/developers/docs/storage/">
               <Translation id="page-developers-storage-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-storage-desc" />
             </p>
-            <Link to="/developers/docs/ides/">
+            <InlineLink to="/developers/docs/ides/">
               <Translation id="page-developers-dev-env-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-dev-env-desc" />
             </p>
             <h3>
               <Translation id="page-developers-advanced" />
             </h3>
-            <Link to="/developers/docs/standards/tokens/">
+            <InlineLink to="/developers/docs/standards/tokens/">
               <Translation id="page-developers-token-standards-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-token-standards-desc" />
             </p>
-            <Link to="/developers/docs/mev/">
+            <InlineLink to="/developers/docs/mev/">
               <Translation id="page-developers-mev-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-mev-desc" />
             </p>
-            <Link to="/developers/docs/oracles/">
+            <InlineLink to="/developers/docs/oracles/">
               <Translation id="page-developers-oracles-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-oracle-desc" />
             </p>
-            <Link to="/developers/docs/scaling/">
+            <InlineLink to="/developers/docs/scaling/">
               <Translation id="page-developers-scaling-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-scaling-desc" />
             </p>
-            <Link to="/developers/docs/networking-layer/">
+            <InlineLink to="/developers/docs/networking-layer/">
               <Translation id="page-developers-networking-layer-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-networking-layer-desc" />
             </p>
-            <Link to="/developers/docs/data-structures-and-encoding/">
+            <InlineLink to="/developers/docs/data-structures-and-encoding/">
               <Translation id="page-developers-data-structures-and-encoding-link" />
-            </Link>
+            </InlineLink>
             <p>
               <Translation id="page-developers-data-structures-and-encoding-desc" />
             </p>

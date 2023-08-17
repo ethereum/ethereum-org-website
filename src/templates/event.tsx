@@ -18,7 +18,7 @@ import {
 
 import ButtonLink from "../components/ButtonLink"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import ExpandableCard from "../components/ExpandableCard"
 import PageMetadata from "../components/PageMetadata"
 import { type Item as ItemTableOfContents } from "../components/TableOfContents"
@@ -135,7 +135,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: H1,
   h2: H2,
   h3: H3,

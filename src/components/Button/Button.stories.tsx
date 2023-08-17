@@ -47,7 +47,12 @@ export const StyleVariants: Story = {
     <VStack spacing={4}>
       {variants.map((variant, idx) => {
         if (args.isSecondary && variant === "solid") return
-        return <Button key={idx} variant={variant} {...args} />
+        return (
+          <HStack spacing={4} key={idx}>
+            <Button variant={variant} {...args} />
+            <Button variant={variant} isDisabled {...args} />
+          </HStack>
+        )
       })}
     </VStack>
   ),

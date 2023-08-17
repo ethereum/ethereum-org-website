@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
-import Link, { IProps as LinkProps } from "../Link"
+import { BaseLink, IProps as LinkProps } from "../Link"
 
 import { getDirection } from "../../utils/translations"
 import { Lang } from "../../utils/languages"
@@ -112,7 +112,7 @@ const Item = (props: Pick<LinkProps, "to" | "children">) => (
       bg: "none",
     }}
   >
-    <Link
+    <BaseLink
       isPartiallyActive={false}
       color="inherit"
       textDecor="none"

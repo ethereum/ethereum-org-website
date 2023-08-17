@@ -17,7 +17,7 @@ import {
 
 // Components
 import ButtonLink from "../ButtonLink"
-import Link from "../Link"
+import InlineLink from "../Link"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
@@ -249,9 +249,9 @@ const Layer2Onboard: React.FC<IProps> = ({
               <Translation id="layer-2-onboard-wallet-1" />
             </Text>
             <Text>
-              <Link to="/bridges/">
+              <InlineLink to="/bridges/">
                 <Translation id="layer-2-more-on-bridges" />
-              </Link>
+              </InlineLink>
             </Text>
           </Box>
           {/* LeftSelected */}
@@ -282,9 +282,9 @@ const Layer2Onboard: React.FC<IProps> = ({
             </Text>
             <Text>
               <Translation id="layer-2-onboard-exchange-2" />{" "}
-              <Link to="/wallets/find-wallet/">
+              <InlineLink to="/wallets/find-wallet/">
                 <Translation id="layer-2-onboard-find-a-wallet" />
-              </Link>
+              </InlineLink>
             </Text>
           </Box>
           {/* RightSelect */}

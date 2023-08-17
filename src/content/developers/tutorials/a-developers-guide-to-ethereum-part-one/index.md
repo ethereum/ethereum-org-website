@@ -182,7 +182,7 @@ Now you’re ready to surf the chain! That’s not a thing people say. I just ma
 First things first, a sanity check:
 
 ```python
-In [5]: w3.isConnected()
+In [5]: w3.is_connected()
 Out[5]: True
 ```
 
