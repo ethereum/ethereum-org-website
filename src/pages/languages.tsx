@@ -105,7 +105,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                   position="absolute"
                   insetInlineEnd={1}
                   aria-label={t("clear")}
-                  variant="icon"
+                  variant="ghost"
                   _hover={{ svg: { fill: "primary" } }}
                 />
               )

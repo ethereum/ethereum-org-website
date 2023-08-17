@@ -84,23 +84,6 @@ const variantLink = defineStyle({
   },
 })
 
-/**
- * @deprecated This is no longer needed. Styling for just the icon is not
- * unique compared to the variants used for text (as of the new DS)
- */
-const variantIcon = defineStyle({
-  appearance: "none",
-  background: "inherit",
-  padding: "initial",
-  border: 0,
-  color: "inherit",
-  boxShadow: "none",
-  _hover: {
-    color: "primary.base",
-    boxShadow: "none",
-  },
-})
-
 const sizes = {
   md: defineStyle({
     py: "2",
@@ -124,7 +107,6 @@ const variants = {
   outline: variantOutline,
   ghost: variantGhost,
   link: variantLink,
-  icon: variantIcon,
 }
 
 export const Button = defineStyleConfig({
