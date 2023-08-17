@@ -1,104 +1,15 @@
 import React, { useState } from "react"
-import { Box, type BoxProps, Flex, Icon, Text } from "@chakra-ui/react"
-import { Phone } from "./"
-import Button from "../Button"
-import { MdChevronLeft, MdInfoOutline } from "react-icons/md"
-import type { Controller, ControllerProps } from "../../interfaces"
-import Tooltip from "../Tooltip"
+import { Flex } from "@chakra-ui/react"
+import { Explanation, Phone } from "./"
+import type { SimulatorState } from "../../interfaces"
 
-const Explanation: React.FC<ControllerProps> = ({ controller }) => {
-  const { progressStepper, regressStepper, resetStepper, step } = controller
-  // TODO: Replace with simulator data
-  const totalSteps = 9
-  const Description: React.FC<BoxProps> = (props) => (
-    <Box {...props}>
-      <Text>
-        Hello text world Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit.
-      </Text>
-      <Text>
-        Quas laudantium officia esse alias vitae sequi accusantium, magnam
-        dolorem! Consequuntur deleniti voluptatem illum repellat labore
-        obcaecati eaque voluptatibus officia odit quibusdam.
-      </Text>
-    </Box>
-  )
-  const header = "Hello header world long header text"
-  return (
-    <Flex direction="column" flex={1} alignItems="start">
-      <Button
-        variant="ghost"
-        leftIcon={<MdChevronLeft size="18px" />}
-        sx={{ paddingInlineStart: 0 }}
-        mb={8}
-        onClick={regressStepper}
-      >
-        Back
-      </Button>
-      {/* Step counter */}
-      <Text
-        borderRadius="base"
-        bg="background.highlight"
-        p={2}
-        lineHeight={1}
-        fontSize="xs"
-        fontWeight="bold"
-        mb={2}
-      >
-        {step + 1}/{totalSteps}
-      </Text>
-      <Text
-        fontSize={{ base: "2xl", md: "3xl" }}
-        lineHeight={{ base: 8, md: 10 }}
-        fontWeight="bold"
-        mb={8}
-      >
-        {header}
-      </Text>
-      <Description display={{ base: "none", md: "block" }} />
-      <Flex display={{ md: "none" }} alignItems="center">
-        <Tooltip content={<Description />}>
-          <Text as="span">More info</Text>
-          <Icon as={MdInfoOutline} size={24} />
-        </Tooltip>
-      </Flex>
-    </Flex>
-  )
-}
-
-const TestPathway = [
-  {
-    header: "Hello header world long header one",
-    description: (
-      <>
-        <Text>Description part 1</Text>
-        <Text>
-          Description part 2, Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Nemo labore quos quaerat officia ipsa voluptatum,
-          consequuntur, amet molestiae eligendi, molestias ut!
-        </Text>
-      </>
-    ),
-  },
-  {
-    header: "Two hello header world long header text",
-    description: (
-      <>
-        <Text>Description part 2.1</Text>
-        <Text>
-          Description part 2.2, Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Nemo labore quos quaerat officia ipsa voluptatum,
-          consequuntur, amet molestiae eligendi, molestias ut!
-        </Text>
-      </>
-    ),
-  },
-]
-
-export const Template: React.FC = () => {
+export const Template: React.FC = (/* { pathId } */) => {
+  const pathId = "create-account" as const // TODO: Pass as prop
   const [step, setStep] = useState<number>(0)
+  // TODO: Use pathId to pull simulator information, including steps/totalSteps
+  const totalSteps = 3 as const
   const progressStepper = (): void => {
-    setStep((step) => step + 1)
+    setStep((step) => Math.min(step + 1, totalSteps - 1))
   }
   const regressStepper = (): void => {
     setStep((step) => Math.max(step - 1, 0))
@@ -106,12 +17,13 @@ export const Template: React.FC = () => {
   const resetStepper = (): void => {
     setStep(0)
   }
-  const controller: Controller = {
+  const state: SimulatorState = {
+    pathId,
+    step,
+    totalSteps,
     progressStepper,
     regressStepper,
     resetStepper,
-    step,
-    totalSteps: TestPathway.length,
   }
 
   return (
@@ -123,8 +35,8 @@ export const Template: React.FC = () => {
       direction={{ base: "column", md: "row" }}
       gap={8}
     >
-      <Explanation controller={controller} />
-      <Phone controller={controller}>Hello inside phone world</Phone>
+      <Explanation state={state} />
+      <Phone state={state} />
     </Flex>
   )
 }
