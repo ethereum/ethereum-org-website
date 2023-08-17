@@ -26,6 +26,7 @@ import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
 import YouTube from "../components/YouTube"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
+import { getRelativePath } from "@/lib/utils/relativePath"
 
 import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
 import { ChildOnlyProp } from "@/lib/types"
@@ -188,7 +189,7 @@ const Img = (img: any) => {
   // use router to get correct image relative path inside /public/content/ dynamically
   const router = useRouter()
   // TODO: update how `imgRelativePath` is computed for translated assets inside /translations, will depend on value of locale after setting up i18n
-  const imgRelativePath = `/content${router.asPath}/${img.src.slice(1)}`
+  const imgRelativePath = getRelativePath(router.asPath, img.src)
 
   return (
     <ChakraLink href={imgRelativePath} isExternal>

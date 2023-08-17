@@ -14,7 +14,8 @@ import { useRouter } from "next/router"
 
 // import { Lang } from "../utils/languages"
 // import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
-import * as url from "../lib/utils/url"
+import * as url from "@/lib/utils/url"
+import { getRelativePath } from "@/lib/utils/relativePath"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 // import { Direction } from "../types"
@@ -94,8 +95,8 @@ const Link: React.FC<IProps> = ({
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
-  if (isPdf || isStatic) {
-    const relativePath = `content/${router.asPath}${to.slice(1)}`
+  if ((isPdf && !isExternal) || isStatic) {
+    const relativePath = getRelativePath(router.asPath, to)
 
     return (
       <ChakraLink href={relativePath} isExternal {...commonProps}>
