@@ -162,9 +162,9 @@ const articles = [
 const guides = [
   {
     title: (
-      <Translation id="additional-reading-how-to-register-an-ethereum-account" />
+      <Translation id="additional-reading-how-to-create-an-ethereum-account" />
     ),
-    link: "/guides/how-to-register-an-ethereum-account/",
+    link: "/guides/how-to-create-an-ethereum-account/",
   },
   {
     title: <Translation id="additional-reading-how-to-use-a-wallet" />,
