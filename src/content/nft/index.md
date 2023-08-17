@@ -22,7 +22,7 @@ The uniqueness of each NFT enables tokenization of things like art, collectibles
 
 ## The internet of assets {#internet-of-assets}
 
-NFTs and Ethereum solve some of the problems that exist on the internet today. As everything becomes more digital, there's a need to replicate the properties of physical items like scarcity, uniqueness, and proof of ownership. in a way that isn't controlled by a central organization. For example, with NFTs, you can own a music mp3 that is not specific to one company's specific music app, or you can own a social media handle that you can sell or swap, but can't be arbitrarily taken away from you by a platform provider.
+NFTs and Ethereum solve some of the problems that exist on the internet today. As everything becomes more digital, there's a need to replicate the properties of physical items like scarcity, uniqueness, and proof of ownership in a way that isn't controlled by a central organization. For example, with NFTs, you can own a music mp3 that is not specific to one company's specific music app, or you can own a social media handle that you can sell or swap, but can't be arbitrarily taken away from you by a platform provider.
 
 Here's how an internet of NFTs compared to the internet most of us use today looks...
 
