@@ -295,5 +295,14 @@
     "description": "Devconnect is a week-long gathering of independent Ethereum events. There is no \"main\" event. Instead, different teams host events, each with a unique focus, ranging from beginner-friendly to expert level. Throughout the week, there will also be an official Devconnect coworking space. It aims to bring together Ethereum's builders, researchers, and community in one place.",
     "startDate": "2023-11-13",
     "endDate": "2023-11-19"
+  },
+  {
+    "title": "Ethereum Costa Rica Day",
+    "to": "http://ethereum.cr",
+    "sponsor": null,
+    "location": "Costa Rica",
+    "description": "Full day of learning about Ethereum, onboarding new users and builders.",
+    "startDate": "2023-11-25",
+    "endDate": "2023-11-25"
   }
 ]

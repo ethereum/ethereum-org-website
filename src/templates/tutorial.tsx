@@ -23,7 +23,7 @@ import TutorialMetadata from "../components/TutorialMetadata"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import EnvWarningBanner from "../components/EnvWarningBanner"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
@@ -197,7 +197,7 @@ const KBD = (props) => {
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: H1,
   h2: H2,
   h3: H3,

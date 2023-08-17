@@ -4,7 +4,7 @@ import { MdInfoOutline } from "react-icons/md"
 import axios from "axios"
 
 import Translation from "./Translation"
-import Link from "./Link"
+import InlineLink from "./Link"
 import Tooltip from "./Tooltip"
 
 export interface IProps extends FlexProps {
@@ -68,7 +68,9 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
   const tooltipContent = (
     <Box>
       <Translation id="data-provided-by" />{" "}
-      <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
+      <InlineLink to="https://www.coingecko.com/en/api">
+        coingecko.com
+      </InlineLink>
     </Box>
   )
 

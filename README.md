@@ -1626,6 +1626,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/_Akamig"><img src="https://avatars.githubusercontent.com/u/6278999?v=4?s=100" width="100px;" alt="Akamig"/><br /><sub><b>Akamig</b></sub></a><br /><a href="#content-Akamig" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/perriefidelis"><img src="https://avatars.githubusercontent.com/u/30669761?v=4?s=100" width="100px;" alt="Peace Ojemeh"/><br /><sub><b>Peace Ojemeh</b></sub></a><br /><a href="#content-perriefidelis" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/woseK"><img src="https://avatars.githubusercontent.com/u/110729731?v=4?s=100" width="100px;" alt="woseK"/><br /><sub><b>woseK</b></sub></a><br /><a href="#content-woseK" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AwoseK" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/gunal-123"><img src="https://avatars.githubusercontent.com/u/103403219?v=4?s=100" width="100px;" alt="Gunal"/><br /><sub><b>Gunal</b></sub></a><br /><a href="#content-gunal-123" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LadyDhaga"><img src="https://avatars.githubusercontent.com/u/106376368?v=4?s=100" width="100px;" alt="chinaman123"/><br /><sub><b>chinaman123</b></sub></a><br /><a href="#ideas-LadyDhaga" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
