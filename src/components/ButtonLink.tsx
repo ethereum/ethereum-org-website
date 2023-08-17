@@ -1,7 +1,7 @@
 import React from "react"
 import { Button, ButtonProps, useStyleConfig } from "@chakra-ui/react"
 
-import Link, { IBaseProps as ILinkProps } from "./Link"
+import { BaseLink, IBaseProps as ILinkProps } from "./Link"
 
 export interface IProps extends ILinkProps, ButtonProps {
   isSecondary?: boolean
@@ -19,14 +19,16 @@ const ButtonLink: React.FC<IProps> = ({ children, isSecondary, ...props }) => {
 
   return (
     <Button
-      as={Link}
+      as={BaseLink}
       activeStyle={{}}
       // `styles` object sent to `sx` prop per convention
       sx={{
         ...styles,
         textDecoration: "none",
         _hover: { ...styles["_hover"], textDecoration: "none" },
+        _visited: { color: styles["color"] },
       }}
+      fontWeight="normal"
       {...props}
     >
       {children}

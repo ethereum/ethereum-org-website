@@ -28,7 +28,7 @@ import {
 } from "@chakra-ui/react"
 
 // Components
-import Link, { IProps as LinkProps } from "../../Link"
+import InlineLink, { IProps as LinkProps } from "../../Link"
 import { WalletMoreInfo } from "./WalletMoreInfo"
 
 // Icons
@@ -162,21 +162,6 @@ const FeatureIconCol = ({
   </Box>
 )
 
-const SocialLink = (props: LinkProps) => (
-  <Link
-    display="flex"
-    height={8}
-    alignItems="center"
-    verticalAlign="middle"
-    transform="scale(1)"
-    transition="transform 0.1s"
-    _hover={{
-      transform: "scale(1.15)",
-    }}
-    {...props}
-  />
-)
-
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -197,6 +182,21 @@ const fadeOut = keyframes`
 
 const StretchedStackItem = (props: ChildOnlyProp) => (
   <StackItem flex={1} {...props} />
+)
+
+const SocialLink = (props: LinkProps) => (
+  <InlineLink
+    display="flex"
+    height={8}
+    alignItems="center"
+    verticalAlign="middle"
+    transform="scale(1)"
+    transition="transform 0.1s"
+    _hover={{
+      transform: "scale(1.15)",
+    }}
+    {...props}
+  />
 )
 
 // Constants
