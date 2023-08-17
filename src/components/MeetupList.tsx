@@ -17,7 +17,7 @@ import {
 // Components
 import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
-import Link from "./Link"
+import InlineLink, { BaseLink } from "./Link"
 import Translation from "./Translation"
 
 // Data
@@ -111,7 +111,7 @@ const MeetupList: React.FC<IProps> = () => {
               </Box>
               <Box>
                 <LinkOverlay
-                  as={Link}
+                  as={BaseLink}
                   href={meetup.link}
                   textDecor="none"
                   color="text"
@@ -148,9 +148,9 @@ const MeetupList: React.FC<IProps> = () => {
         {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
             <Translation id="page-community-meetuplist-no-meetups" />{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
+            <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
               <Translation id="page-community-please-add-to-page" />
-            </Link>
+            </InlineLink>
           </InfoBanner>
         )}
       </Box>

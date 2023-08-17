@@ -21,7 +21,7 @@ import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import ButtonLink from "../../components/ButtonLink"
 import DocLink from "../../components/DocLink"
 import FeedbackCard from "../../components/FeedbackCard"
-import Link from "../../components/Link"
+import InlineLink from "../../components/Link"
 import OriginalCard, {
   IProps as IOriginalCardProps,
 } from "../../components/Card"
@@ -209,12 +209,6 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               {tocItems[0].title}
             </H2>
             <Text>
-              <Translation id="what-is-crypto-1" />{" "}
-              <Link to="/what-is-ethereum/">
-                <Translation id="what-is-crypto-link-1" />
-              </Link>
-            </Text>
-            <Text>
               <Translation id="what-is-crypto-2" />
             </Text>
             <CardGrid>
@@ -248,15 +242,15 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("where-can-i-get-eth-card-title")}
-                description={t("where-can-i-get-eth-card-description")}
+                title={t("what-is-web3-card-title")}
+                description={t("what-is-web3-card-description")}
               >
                 <>
                   <CardImage>
                     <GatsbyImage image={getImage(data.impact)!} alt="" />
                   </CardImage>
-                  <ButtonLink to="/get-eth/">
-                    <Translation id="where-can-i-get-eth-card-title" />
+                  <ButtonLink to="/web3/">
+                    <Translation id="what-is-web3-card-title" />
                   </ButtonLink>
                 </>
               </Card>
@@ -268,31 +262,19 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
             <DocsContainer>
               <DocLink to="/guides/">
-                <Translation id="guides-hub" />
+                <Translation id="guides-hub-desc" />
               </DocLink>
               <DocLink to="/quizzes/">
-                <Translation id="quizzes-title" />
+                <Translation id="quiz-hub-desc" />
               </DocLink>
               <DocLink to="/smart-contracts/">
                 <Translation id="additional-reading-what-are-smart-contracts" />
               </DocLink>
-              <DocLink to="/developers/docs/intro-to-ethereum/">
-                <Translation id="additional-reading-a-developers-intro" />
-              </DocLink>
-              <DocLink to="/web3/">
-                <Translation id="additional-reading-what-is-web3" />
-              </DocLink>
               <DocLink
-                to="https://www.kernel.community/en/learn/module-1/value"
+                to="https://www.youtube.com/watch?v=UihMqcj-cqc"
                 isExternal
               >
-                <Translation id="additional-reading-value" />
-              </DocLink>
-              <DocLink
-                to="https://www.youtube.com/watch?v=WSN5BaCzsbo"
-                isExternal
-              >
-                <Translation id="additional-reading-decentralize-everything" />
+                <Translation id="additional-reading-ethereum-in-thirty-minutes" />
               </DocLink>
             </DocsContainer>
           </Section>
@@ -367,9 +349,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </ListItem>
                   <ListItem>
                     <Translation id="things-to-consider-banner-2" />{" "}
-                    <Link to="/layer-2/">
+                    <InlineLink to="/layer-2/">
                       <Translation id="things-to-consider-banner-layer-2" />
-                    </Link>
+                    </InlineLink>
                     .
                   </ListItem>
                 </UnorderedList>
@@ -383,17 +365,17 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <Translation id="additional-reading-more-on-using-ethereum" />
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/guides/how-to-register-an-ethereum-account/">
-                <Translation id="additional-reading-how-to-register-an-ethereum-account" />
+              <DocLink to="/guides/how-to-create-an-ethereum-account/">
+                <Translation id="additional-reading-how-to-create-an-ethereum-account" />
               </DocLink>
               <DocLink to="/guides/how-to-use-a-wallet/">
                 <Translation id="additional-reading-how-to-use-a-wallet" />
               </DocLink>
-              <DocLink to="/community/support/">
-                <Translation id="additional-reading-support-for-ethereum-and-wallets" />
-              </DocLink>
               <DocLink to="/layer-2/">
                 <Translation id="additional-reading-layer-2" />
+              </DocLink>
+              <DocLink to="/get-eth/">
+                <Translation id="additional-reading-get-eth" />
               </DocLink>
             </DocsContainer>
           </Section>
@@ -492,50 +474,38 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   mb={0}
                 >
                   <ListItem>
-                    <Link to="/decentralized-identity/">
+                    <InlineLink to="/decentralized-identity/">
                       <Translation id="decentralized-identity" />
-                    </Link>
+                    </InlineLink>
                   </ListItem>
                   <ListItem>
-                    <Link to="/social-networks/">
+                    <InlineLink to="/social-networks/">
                       <Translation id="decentralized-social-networks" />
-                    </Link>
+                    </InlineLink>
                   </ListItem>
                   <ListItem>
-                    <Link to="/desci/">
+                    <InlineLink to="/desci/">
                       <Translation id="decentralized-science" />
-                    </Link>
+                    </InlineLink>
                   </ListItem>
                   <ListItem>
-                    <Link to="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
+                    <InlineLink to="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
                       <Translation id="play-to-earn" />
-                    </Link>
+                    </InlineLink>
                   </ListItem>
                   <ListItem>
-                    <Link to="https://woodstockfund.medium.com/quadratic-funding-better-way-to-fund-public-goods-76f1679b2ba2">
+                    <InlineLink to="https://woodstockfund.medium.com/quadratic-funding-better-way-to-fund-public-goods-76f1679b2ba2">
                       <Translation id="fundraising-through-quadratic-funding" />
-                    </Link>
+                    </InlineLink>
                   </ListItem>
                   <ListItem>
-                    <Link to="https://hbr.org/2022/01/how-walmart-canada-uses-blockchain-to-solve-supply-chain-challenges">
+                    <InlineLink to="https://hbr.org/2022/01/how-walmart-canada-uses-blockchain-to-solve-supply-chain-challenges">
                       <Translation id="supply-chain-management" />
-                    </Link>
+                    </InlineLink>
                   </ListItem>
                 </UnorderedList>
               </Card>
             </CardGrid>
-
-            <AdditionalReadingHeader>
-              <Translation id="more-on-ethereum-use-cases" />
-            </AdditionalReadingHeader>
-            <DocsContainer>
-              <DocLink
-                to="https://web.archive.org/web/20220708092831/http://governance40.com/wp-content/uploads/2019/06/Blockchain-in-Developing-Countries.pdf"
-                isExternal
-              >
-                <Translation id="more-on-ethereum-use-cases-link" />
-              </DocLink>
-            </DocsContainer>
           </Section>
 
           <Section>
@@ -633,23 +603,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <DocLink to="/developers/">
                 <Translation id="more-on-ethereum-protocol-ethereum-for-developers" />
               </DocLink>
-              <DocLink to="/eips/">
-                <Translation id="more-on-ethereum-protocol-eips" />
+              <DocLink to="/developers/docs/consensus-mechanisms">
+                <Translation id="more-on-ethereum-protocol-consensus" />
               </DocLink>
-              <DocLink to="/history/">
-                <Translation id="more-on-ethereum-protocol-history" />
+              <DocLink to="/developers/docs/evm/">
+                <Translation id="more-on-ethereum-protocol-evm" />
               </DocLink>
-              <DocLink to="/governance/">
-                <Translation id="more-on-ethereum-protocol-governance" />
-              </DocLink>
-              <DocLink to="/bridges/">
-                <Translation id="more-on-ethereum-protocol-bridges" />
-              </DocLink>
-              <DocLink to="https://weekinethereumnews.com/" isExternal>
-                <Translation id="more-on-ethereum-protocol-week-in-ethereum" />
-              </DocLink>
-              <DocLink to="https://kernel.community/en/learn/" isExternal>
-                <Translation id="more-on-ethereum-protocol-kernel" />
+              <DocLink to="/developers/docs/nodes-and-clients/">
+                <Translation id="more-on-ethereum-protocol-nodes-and-clients" />
               </DocLink>
             </DocsContainer>
           </Section>
@@ -713,73 +674,41 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </H3>
               <UnorderedList>
                 <ListItem>
-                  <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
+                  <InlineLink to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
                     <Translation id="cryptopians-title" />
-                  </Link>{" "}
+                  </InlineLink>{" "}
                   <Text as="i">
                     <Translation id="cryptopians-description" />
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
+                  <InlineLink to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
                     <Translation id="out-of-the-ether-title" />
-                  </Link>{" "}
+                  </InlineLink>{" "}
                   <Text as="i">
                     <Translation id="out-of-the-ether-description" />
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Link to="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
+                  <InlineLink to="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
                     <Translation id="the-infinite-machine-title" />
-                  </Link>{" "}
+                  </InlineLink>{" "}
                   <Text as="i">
                     <Translation id="the-infinite-machine-description" />
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Link to="https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency">
-                    <Translation id="the-age-of-cryptocurrency-title" />
-                  </Link>{" "}
-                  <Text as="i">
-                    <Translation id="the-age-of-cryptocurrency-description" />
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Link to="https://www.goodreads.com/en/book/show/34964890-the-truth-machine">
-                    <Translation id="the-truth-machine-title" />
-                  </Link>{" "}
-                  <Text as="i">
-                    <Translation id="the-truth-machine-description" />
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Link to="https://www.goodreads.com/book/show/23546676-digital-gold">
-                    <Translation id="digital-gold-title" />
-                  </Link>{" "}
-                  <Text as="i">
-                    <Translation id="digital-gold-description" />
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Link to="https://www.goodreads.com/en/book/show/56274031-kings-of-crypto">
-                    <Translation id="kings-of-crypto-title" />
-                  </Link>{" "}
-                  <Text as="i">
-                    <Translation id="kings-of-crypto-description" />
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Link to="https://github.com/ethereumbook/ethereumbook">
+                  <InlineLink to="https://github.com/ethereumbook/ethereumbook">
                     <Translation id="mastering-ethereum-title" />
-                  </Link>{" "}
+                  </InlineLink>{" "}
                   <Text as="i">
                     <Translation id="mastering-ethereum-description" />{" "}
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Link to="https://www.goodreads.com/en/book/show/59892281-proof-of-stake">
+                  <InlineLink to="https://www.goodreads.com/en/book/show/59892281-proof-of-stake">
                     <Translation id="proof-of-stake-title" />
-                  </Link>{" "}
+                  </InlineLink>{" "}
                   <Text as="i">
                     <Translation id="proof-of-stake-description" />
                   </Text>
@@ -790,59 +719,43 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </H3>
               <UnorderedList>
                 <ListItem>
-                  <Link to="http://podcast.banklesshq.com/">
-                    <Translation id="bankless-title" />
-                  </Link>{" "}
+                  <InlineLink to="https://www.youtube.com/@Green_Pill_Podcast">
+                    <Translation id="green-pill-title" />
+                  </InlineLink>{" "}
                   <Text as="i">
-                    <Translation id="bankless-description" />
+                    <Translation id="green-pill-description" />
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Link to="https://uncommoncore.co/podcast/">
-                    <Translation id="uncommon-core-title" />
-                  </Link>{" "}
-                  <Text as="i">
-                    <Translation id="uncommon-core-description" />
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Link to="https://www.zeroknowledge.fm/">
+                  <InlineLink to="https://www.zeroknowledge.fm/">
                     <Translation id="zeroknowledge-title" />
-                  </Link>{" "}
+                  </InlineLink>{" "}
                   <Text as="i">
                     <Translation id="zeroknowledge-description" />
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Link to="https://epicenter.tv/">
-                    <Translation id="epicenter-title" />
-                  </Link>{" "}
-                  <Text as="i">
-                    <Translation id="epicenter-description" />
-                  </Text>
-                </ListItem>
-                <ListItem>
-                  <Link to="https://unchainedpodcast.com/">
+                  <InlineLink to="https://unchainedpodcast.com/">
                     <Translation id="unchained-title" />
-                  </Link>{" "}
+                  </InlineLink>{" "}
                   <Text as="i">
                     <Translation id="unchained-description" />
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Link to="https://www.intothebytecode.xyz/">
-                    <Translation id="into-the-bytecode-title" />
-                  </Link>{" "}
+                  <InlineLink to="https://www.youtube.com/@TheDailyGwei/">
+                    <Translation id="the-daily-gwei-title" />
+                  </InlineLink>{" "}
                   <Text as="i">
-                    <Translation id="into-the-bytecode-description" />
+                    <Translation id="the-daily-gwei-description" />
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Link to="https://www.youtube.com/@TheDailyGwei/">
-                    <Translation id="the-daily-gwei-title" />
-                  </Link>{" "}
+                  <InlineLink to="http://podcast.banklesshq.com/">
+                    <Translation id="bankless-title" />
+                  </InlineLink>{" "}
                   <Text as="i">
-                    <Translation id="the-daily-gwei-description" />
+                    <Translation id="bankless-description" />
                   </Text>
                 </ListItem>
               </UnorderedList>

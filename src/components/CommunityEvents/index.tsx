@@ -17,7 +17,7 @@ import { DateTime, DateTimeFormatOptions } from "luxon"
 
 // Components
 import ButtonLink from "../ButtonLink"
-import Link from "../Link"
+import InlineLink from "../Link"
 import Translation from "../Translation"
 
 // Utils
@@ -52,8 +52,8 @@ const renderEventDateTime = (
   return DateTime.fromISO(date).setLocale(language).toLocaleString(params)
 }
 
-const EventLink = (props: ComponentProps<typeof Link>) => (
-  <Link fontWeight="700" {...props} />
+const EventLink = (props: ComponentProps<typeof InlineLink>) => (
+  <InlineLink fontWeight="700" {...props} />
 )
 
 interface EventProps {

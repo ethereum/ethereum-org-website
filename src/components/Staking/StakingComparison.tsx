@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Flex, Heading, Text, useTheme } from "@chakra-ui/react"
 
-import Link from "../Link"
+import InlineLink from "../Link"
 import Translation from "../Translation"
 
 import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
@@ -146,14 +146,14 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
               <Text>
                 <Translation id={content} />
               </Text>
-              <Link
+              <InlineLink
                 onClick={() => {
                   trackCustomEvent(matomo)
                 }}
                 to={to}
               >
                 <Translation id={linkText} />
-              </Link>
+              </InlineLink>
             </Box>
           </Flex>
         )

@@ -17,7 +17,7 @@ import type { Context } from "../../../types"
 
 // Components
 import Breadcrumbs from "../../../components/Breadcrumbs"
-import Link from "../../../components/Link"
+import InlineLink from "../../../components/Link"
 import Translation from "../../../components/Translation"
 import PageMetadata from "../../../components/PageMetadata"
 
@@ -110,9 +110,9 @@ const Contributors = ({
         </Text>
         <Text>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
-          </Link>
+          </InlineLink>
           .
         </Text>
         <ContentHeading
@@ -138,9 +138,9 @@ const Contributors = ({
         </SimpleGrid>
         <Text>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
-          </Link>
+          </InlineLink>
           .
         </Text>
       </Content>

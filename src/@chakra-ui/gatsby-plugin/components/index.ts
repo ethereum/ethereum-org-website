@@ -10,6 +10,7 @@ import { Checkbox } from "./Checkbox"
 import { Progress } from "./Progress"
 import { Tabs } from "./Tabs"
 import { Text } from "./Text"
+import { Table } from "./Table"
 import { Radio } from "./Radio"
 import { Select } from "./Select"
 import { Switch } from "./Switch"
@@ -26,7 +27,6 @@ import {
   headingDefaultTheme,
   menuDefaultTheme,
   spinnerDefaultTheme,
-  tableDefaultTheme,
 } from "./components.utils"
 
 export default {
@@ -53,7 +53,7 @@ export default {
   Select,
   Spinner: spinnerDefaultTheme,
   Switch,
-  Table: tableDefaultTheme,
+  Table,
   Tabs,
   Tag,
   Text,

@@ -24,7 +24,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Rantom](https://rantom.app/)
 - [Sirato](https://www.web3labs.com/sirato)
 - [EthVM](https://www.ethvm.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/) 
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 
 ## Data {#data}
 
