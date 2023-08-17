@@ -14,6 +14,7 @@ export interface SimulatorState {
   resetStepper: () => void
   step: number
   totalSteps: number
+  pathId: string // TODO: Type this to list of simulators
 }
 
 export interface SimulatorStateProps {

@@ -5,11 +5,58 @@ import Button from "../Button"
 import Tooltip from "../Tooltip"
 import { SimulatorStateProps } from "../../interfaces"
 
+const explanationData = {
+  "create-account": [
+    {
+      header: "Interact with Ethereum using a wallet",
+      description: (
+        <>
+          <Text>
+            To get started, you&apos;ll need to download a wallet app.
+          </Text>
+          <Text>
+            Most people use mobile apps, but you can download a desktop app, or
+            use a browser extension.
+          </Text>
+        </>
+      ),
+    },
+    {
+      header: "They are free apps you can download",
+      description: (
+        <>
+          <Text>You will need to install an app called wallet.</Text>
+          <Text>
+            Wallets can be a mobile or desktop app, browser extension and even a
+            hardware.
+          </Text>
+        </>
+      ),
+    },
+    {
+      header: "Creating an account is free and easy",
+      description: (
+        <>
+          <Text>
+            Creating an account on Ethereum is free, easy, and permissionless—no
+            documentation or proofs required!
+          </Text>
+          <Text>
+            Some wallets have &quot;smart accounts&quot; which can require ETH
+            to setup, but we won&apos;t cover those in this simulation 👽
+          </Text>
+        </>
+      ),
+    },
+  ],
+}
+
 export const Explanation: React.FC<SimulatorStateProps> = ({ state }) => {
-  const { regressStepper, step, totalSteps } = state
+  const { regressStepper, step, totalSteps, pathId } = state
   // TODO: Import simulator step data, fetch header/description for current step
-  const header = "Header text" as const
-  const description = <Text>Description text here</Text>
+  // const header = "Header text" as const
+  // const description = <Text>Description text here</Text>
+  const { header, description } = explanationData[pathId][step]
 
   const Description: React.FC<BoxProps> = (props) => (
     <Box {...props}>{description}</Box>
