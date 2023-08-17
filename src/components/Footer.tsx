@@ -9,9 +9,9 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import React from "react"
+import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
 
 import { Lang } from "../utils/languages"
 import { getLocaleTimestamp } from "../utils/time"
@@ -24,24 +24,27 @@ const socialLinks = [
     icon: FaGithub,
     to: "https://github.com/ethereum/ethereum-org-website",
     ariaLabel: "GitHub",
+    color: "#333",
   },
   {
     icon: FaTwitter,
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
+    color: "#1DA1F2",
   },
   {
     icon: FaYoutube,
     to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
     ariaLabel: "Youtube",
+    color: "#FF0000",
   },
   {
     icon: FaDiscord,
     to: "https://discord.gg/CetY6Y4",
     ariaLabel: "Discord",
+    color: "#7289da",
   },
 ]
-
 export interface LinkSection {
   title: TranslationKey
   links: Array<{
@@ -324,7 +327,16 @@ const Footer: React.FC<IProps> = () => {
                 color="secondary"
                 aria-label={link.ariaLabel}
               >
-                <Icon as={link.icon} fontSize="4xl" ml={4} />
+                <Icon
+                  as={link.icon}
+                  _hover={{
+                    color: link.color,
+                    transition:
+                      "color 0.2s ease-in-out, transform 0.2s ease-in-out",
+                  }}
+                  fontSize="4xl"
+                  ml={4}
+                />
               </Link>
             )
           })}

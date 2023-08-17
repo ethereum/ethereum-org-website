@@ -49,7 +49,10 @@ export const StyleVariants: Story = {
   render: (args) => (
     <VStack spacing={4}>
       {variants.map((variant, idx) => (
-        <Button key={idx} variant={variant} {...args} />
+        <HStack spacing={4} key={idx}>
+          <Button variant={variant} {...args} />
+          <Button variant={variant} isDisabled {...args} />
+        </HStack>
       ))}
     </VStack>
   ),
@@ -79,7 +82,6 @@ export const IconVariants: Story = {
       <VStack>
         <IconButton aria-label="next" icon={<MdChevronRight />} {...args} />
         <IconButton
-          variant="ghost"
           aria-label="next"
           icon={<MdChevronRight />}
           size="sm"

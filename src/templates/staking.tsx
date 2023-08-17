@@ -28,7 +28,7 @@ import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -53,7 +53,6 @@ import StakingGuides from "../components/Staking/StakingGuides"
 import WithdrawalCredentials from "../components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "../components/Staking/WithdrawalsTabComparison"
 import Callout from "../components/Callout"
-import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -294,7 +293,7 @@ const components = {
   h4: Header4,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   div: Box,
   Badge,
   ButtonLink,
@@ -310,7 +309,6 @@ const components = {
   InfoGrid,
   Logo,
   MeetupList,
-  QuizWidget,
   ProductDisclaimer,
   RandomAppList,
   SectionNav,
@@ -474,7 +472,7 @@ export const stakingPageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-staking", "learn-quizzes", "common"] }
+        ns: { in: ["page-staking", "common"] }
       }
     ) {
       edges {
