@@ -26,8 +26,8 @@ import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import InlineLink from "../components/Link"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -44,7 +44,6 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
-import QuizWidget from "../components/Quiz/QuizWidget"
 import {
   Page,
   InfoColumn,
@@ -118,13 +117,13 @@ const TitleCard = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: H1,
   h2: H2,
   h3: H3,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   li: ListItem,
   ul: UnorderedList,
   MeetupList,
@@ -146,7 +145,6 @@ const components = {
   YouTube,
   RoadmapActionCard,
   RoadmapImageContent,
-  QuizWidget,
 }
 
 const RoadmapPage = ({
@@ -227,7 +225,9 @@ const RoadmapPage = ({
             <Title>{mdx.frontmatter.title}</Title>
             <Text>{mdx.frontmatter.description}</Text>
             {mdx?.frontmatter?.buttons && (
-              <Wrap spacing={2} marginBottom={4}>
+              // FIXME: remove the `ul` override once removed the corresponding
+              // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
+              <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
                 {mdx.frontmatter.buttons.map((button, idx) => {
                   if (button?.to) {
                     return (
@@ -307,10 +307,7 @@ const RoadmapPage = ({
 export const roadmapPageQuery = graphql`
   query RoadmapPage($languagesToFetch: [String!]!, $relativePath: String) {
     locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["common", "learn-quizzes"] }
-      }
+      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
     ) {
       edges {
         node {

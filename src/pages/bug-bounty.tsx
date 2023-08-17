@@ -16,7 +16,7 @@ import Translation from "../components/Translation"
 import Card from "../components/Card"
 import Leaderboard from "../components/Leaderboard"
 import BugBountyCards from "../components/BugBountyCards"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import Emoji from "../components/Emoji"
 import CardList from "../components/CardList"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -526,13 +526,13 @@ const BugBountiesPage = ({
               title={t("page-upgrades-bug-bounty-ledger-title")}
               description={t("page-upgrades-bug-bounty-ledger-desc")}
             >
-              <Link to="https://github.com/ethereum/consensus-specs">
+              <InlineLink to="https://github.com/ethereum/consensus-specs">
                 <Translation id="page-upgrades-bug-bounty-specs" />
-              </Link>
+              </InlineLink>
               <br />
-              <Link to="https://github.com/ethereum/execution-specs">
+              <InlineLink to="https://github.com/ethereum/execution-specs">
                 <Translation id="page-upgrades-bug-bounty-execution-specs" />
-              </Link>
+              </InlineLink>
               <br />
               <Box>
                 <Text>
@@ -540,16 +540,16 @@ const BugBountiesPage = ({
                 </Text>
                 <UnorderedList>
                   <ListItem>
-                    <Link to="https://benjaminion.xyz/eth2-annotated-spec/">
+                    <InlineLink to="https://benjaminion.xyz/eth2-annotated-spec/">
                       Ben Edgington's{" "}
                       <Translation id="page-upgrades-bug-bounty-annotated-specs" />
-                    </Link>
+                    </InlineLink>
                   </ListItem>
                   <ListItem>
-                    <Link to="https://github.com/ethereum/annotated-spec">
+                    <InlineLink to="https://github.com/ethereum/annotated-spec">
                       Vitalik Buterin's{" "}
                       <Translation id="page-upgrades-bug-bounty-annotated-specs" />
-                    </Link>
+                    </InlineLink>
                   </ListItem>
                 </UnorderedList>
               </Box>
@@ -650,9 +650,9 @@ const BugBountiesPage = ({
                 >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
                 </Heading>
-                <Link to="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
+                <InlineLink to="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
                   SECURITY.md
-                </Link>
+                </InlineLink>
               </Box>
             </StyledCard>
             <StyledCard
@@ -669,13 +669,13 @@ const BugBountiesPage = ({
                 >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
                 </Heading>
-                <Link to="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
+                <InlineLink to="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
                   Deposit Contract Specifications
-                </Link>
+                </InlineLink>
                 <br />
-                <Link to="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
+                <InlineLink to="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
                   Deposit Contract Source Code
-                </Link>
+                </InlineLink>
               </Box>
             </StyledCard>
           </StyledCardContainer>
@@ -695,9 +695,9 @@ const BugBountiesPage = ({
             </H2>
             <Text>
               <Translation id="page-upgrades-bug-bounty-submit-desc" />{" "}
-              <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
+              <InlineLink to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
                 <Translation id="page-upgrades-bug-bounty-owasp" />
-              </Link>
+              </InlineLink>
             </Text>
             <Text>
               <Translation id="page-upgrades-bug-bounty-points" />
@@ -863,9 +863,9 @@ const BugBountiesPage = ({
               <Text>
                 <Translation id="bug-bounty-faq-q8-content-1" />
               </Text>
-              <Link to="https://ethereum.org/security_at_ethereum.org.asc">
+              <InlineLink to="https://ethereum.org/security_at_ethereum.org.asc">
                 <Translation id="bug-bounty-faq-q8-PGP-key" />
-              </Link>
+              </InlineLink>
             </ExpandableCard>
           </RightColumn>
         </Faq>
@@ -878,7 +878,9 @@ const BugBountiesPage = ({
           </H2>
           <Text mb="0rem">
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
-            <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
+            <InlineLink to="mailto:bounty@ethereum.org">
+              bounty@ethereum.org
+            </InlineLink>
           </Text>
         </Box>
         <Emoji fontSize="5xl" text=":email:" />
