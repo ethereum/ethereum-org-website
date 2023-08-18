@@ -15,10 +15,17 @@ const DownArrowLong = motion(
   })
 )
 
+const ctaLabelsByStep = [
+  "Install a wallet",
+  "Open wallet",
+  "Create account",
+  "I understand",
+  "Next",
+]
+
 export const ProgressCta: React.FC<SimulatorStateProps> = ({ state }) => {
   const { progressStepper, step } = state
-  // TODO: Import simulator step data, fetch CTA label for current step
-  const ctaLabel = "Install a wallet!" as const
+  const ctaLabel = ctaLabelsByStep[step]
   const transition = {
     duration: 2,
     times: [0, 0.25, 0.5],

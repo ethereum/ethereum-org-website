@@ -48,6 +48,11 @@ const explanationData = {
         </>
       ),
     },
+    {
+      header:
+        "The account isn't maintained by any company, only you have access to it",
+      description: <></>,
+    },
   ],
 }
 

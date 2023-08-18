@@ -1,7 +1,7 @@
 import React from "react"
-import { Box, Text } from "@chakra-ui/react"
+import { Box, Flex, Grid, Icon, Spinner, Text } from "@chakra-ui/react"
 import type { SimulatorStateProps } from "../../interfaces"
-import { HomeScreen, ProgressCta } from "./"
+import { EthGlyphIcon, HomeScreen, ProgressCta } from "./"
 
 export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
   const { pathId, step } = state
@@ -11,7 +11,41 @@ export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
         <HomeScreen state={state} />
         <ProgressCta state={state} />
       </>,
-      <HomeScreen state={state} />,
+      <>
+        <HomeScreen state={state} />
+        <ProgressCta state={state} />
+      </>,
+      <>
+        <Flex direction="column" alignItems="center" pt={8}>
+          <Icon
+            as={EthGlyphIcon}
+            color="body.base"
+            height="190px"
+            w="auto"
+            my={4}
+          />
+          <Text
+            fontSize="2xl"
+            textAlign="center"
+            px={{ base: 4, md: 8 }}
+            lineHeight={8}
+          >
+            Welcome to{" "}
+            <Text as="span" fontWeight="bold">
+              wallet simulator
+            </Text>
+          </Text>
+        </Flex>
+        <ProgressCta state={state} />
+      </>,
+      <Grid placeItems="center" h="full">
+        <Flex direction="column" alignItems="center" pt={8} gap={4}>
+          <Spinner w="4.5rem" h="4.5rem" />
+          <Text textAlign="center" px={{ base: 4, md: 8 }}>
+            Generating your recovery phrase
+          </Text>
+        </Flex>
+      </Grid>,
     ],
   }
 
