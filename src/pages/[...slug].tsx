@@ -9,28 +9,26 @@ import {
 import { ParsedUrlQuery } from "querystring"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
-import Image from "next/image"
 import remarkGfm from "remark-gfm"
 import path from "path"
-import clamp from "lodash.clamp"
 
-import ButtonLink from "../components/ButtonLink"
-import DocLink from "../components/DocLink"
-import Emoji from "../components/Emoji"
-import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
-import ExpandableCard from "../components/ExpandableCard"
+import ButtonLink from "@/components/ButtonLink"
+import DocLink from "@/components/DocLink"
+import Emoji from "@/components/Emoji"
+import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
+import ExpandableCard from "@/components/ExpandableCard"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
-import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
-import YouTube from "../components/YouTube"
+import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import YouTube from "@/components/YouTube"
+import MDImage from "@/components/MDImage"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehypeImgSize"
 
-import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
-import { ChildOnlyProp } from "@/lib/types"
-import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
+import type { ChildOnlyProp } from "@/lib/types"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -188,32 +186,6 @@ const Paragraph = (props: ChildOnlyProp) => (
 const ListItem = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
 )
-
-interface MDImageProps {
-  src: string
-  alt: string
-  width: string
-  height: string
-  aspectRatio: string
-}
-
-const MDImage = ({ width, height, aspectRatio, ...rest }: MDImageProps) => {
-  const imageWidth = parseInt(width)
-  const imageHeight = parseInt(height)
-  const imageAspectRatio = parseInt(aspectRatio)
-
-  const finalWidth = clamp(imageWidth, CONTENT_IMAGES_MAX_WIDTH)
-  const finalHeight =
-    imageWidth > CONTENT_IMAGES_MAX_WIDTH
-      ? imageHeight * imageAspectRatio
-      : imageHeight
-
-  return (
-    <Flex as="span" justify="center">
-      <Image width={finalWidth} height={finalHeight} {...rest} />
-    </Flex>
-  )
-}
 
 // code
 const components = {
