@@ -313,5 +313,14 @@
     "description": "Full day of learning about Ethereum, onboarding new users and builders.",
     "startDate": "2023-11-25",
     "endDate": "2023-11-25"
+  },
+  {
+    "title": "ETH Riyadh",
+    "to": "https://ethriyadh.com/",
+    "sponsor": null,
+    "location": "Riyadh, Saudi Arabia",
+    "description": "ETH Riyadh unites developers and builders from Saudi Arabia and the other Middle East regions, nurturing their roles and connections in the Ethereum ecosystem."
+    "startDate": "2023-09-20",
+    "endDate": "2023-10-15"
   }
 ]
