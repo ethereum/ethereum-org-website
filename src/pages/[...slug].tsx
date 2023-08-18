@@ -7,7 +7,7 @@ import {
   chakra,
 } from "@chakra-ui/react"
 import { ParsedUrlQuery } from "querystring"
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote"
+import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import Image from "next/image"
 import remarkGfm from "remark-gfm"
@@ -65,14 +65,13 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
 
-  // TODO: check if content type can be fixed
-  const mdxSource = (await serialize(markdown.content, {
+  const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
       rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }]],
     },
-  })) as any
+  })
 
   return {
     props: {
@@ -274,6 +273,7 @@ const ContentPage: NextPage<Props> = ({ mdxSource }) => {
             },
           }}
         >
+          {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
           {/* @ts-ignore */}
           <MDXRemote {...mdxSource} components={components} />
         </Box>
