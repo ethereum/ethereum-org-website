@@ -12,6 +12,7 @@ import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 import { NavigateOptions } from "@reach/router"
 
 import { BsQuestionSquareFill } from "react-icons/bs"
+import { RxExternalLink } from "react-icons/rx"
 
 import { Lang } from "../utils/languages"
 import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
@@ -48,7 +49,7 @@ export interface IProps extends IBaseProps, LinkProps {
  * - Intl links
  * e.g. <Link href="/page-2/" language="de">
  */
-const Link: React.FC<IProps> = ({
+export const BaseLink: React.FC<IProps> = ({
   to: toProp,
   href,
   language,
@@ -140,9 +141,13 @@ const Link: React.FC<IProps> = ({
           {children}
           <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
           {!hideArrow && (
-            <Box as="span" ml={0.5} mr={1.5} aria-hidden>
-              ↗
-            </Box>
+            <Icon
+              as={RxExternalLink}
+              boxSize="6"
+              p="1"
+              verticalAlign="middle"
+              me="-1"
+            />
           )}
         </>
       </ChakraLink>
@@ -192,4 +197,6 @@ export function navigate(
   gatsbyNavigate(link, options)
 }
 
-export default Link
+const InlineLink = (props: IProps) => <BaseLink data-inline-link {...props} />
+
+export default InlineLink

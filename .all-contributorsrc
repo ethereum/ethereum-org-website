@@ -10404,6 +10404,24 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "gunal-123",
+      "name": "Gunal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103403219?v=4",
+      "profile": "https://github.com/gunal-123",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "LadyDhaga",
+      "name": "chinaman123",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106376368?v=4",
+      "profile": "https://github.com/LadyDhaga",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

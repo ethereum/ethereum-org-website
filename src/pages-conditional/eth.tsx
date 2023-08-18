@@ -22,7 +22,7 @@ import CardList from "../components/CardList"
 import EthPriceCard from "../components/EthPriceCard"
 import EthVideo from "../components/EthVideo"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
 import FeedbackCard from "../components/FeedbackCard"
@@ -412,9 +412,9 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               <Translation id="page-eth-buy-some" />
             </Text>{" "}
             <Translation id="page-eth-buy-some-desc" />{" "}
-            <Link to="/what-is-ethereum/">
+            <InlineLink to="/what-is-ethereum/">
               <Translation id="page-eth-more-on-ethereum-link" />
-            </Link>
+            </InlineLink>
             <Translation id="page-eth-period" />
           </InfoBanner>
         </Content>
@@ -447,9 +447,9 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             </Text>
             <Text>
               <Translation id="page-eth-fuels-staking" />{" "}
-              <Link to="/staking/">
+              <InlineLink to="/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
-              </Link>
+              </InlineLink>
             </Text>
           </Box>
           <CentralActionCard
@@ -489,27 +489,27 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             </Text>
             <UnorderedList>
               <ListItem>
-                <Link to="https://sablier.com">
+                <InlineLink to="https://sablier.com">
                   <Translation id="page-eth-stream-link" />
-                </Link>{" "}
+                </InlineLink>{" "}
                 – <Translation id="page-eth-uses-desc-3" />
               </ListItem>
               <ListItem>
-                <Link to="/get-eth/#dex">
+                <InlineLink to="/get-eth/#dex">
                   <Translation id="page-eth-trade-link-2" />
-                </Link>{" "}
+                </InlineLink>{" "}
                 – <Translation id="page-eth-uses-desc-4" />
               </ListItem>
               <ListItem>
-                <Link to="https://app.compound.finance/">
+                <InlineLink to="https://app.compound.finance/">
                   <Translation id="page-eth-earn-interest-link" />
-                </Link>{" "}
+                </InlineLink>{" "}
                 – <Translation id="page-eth-uses-desc-5" />
               </ListItem>
               <ListItem>
-                <Link to="/stablecoins/">
+                <InlineLink to="/stablecoins/">
                   <Translation id="page-eth-stablecoins-link" />
-                </Link>{" "}
+                </InlineLink>{" "}
                 – <Translation id="page-eth-uses-desc-6" />
               </ListItem>
             </UnorderedList>

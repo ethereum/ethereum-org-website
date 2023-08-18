@@ -2,7 +2,7 @@ import React from "react"
 import { Box, Center, chakra, Flex, Heading, Text } from "@chakra-ui/react"
 
 import CardList from "../CardList"
-import Link from "../Link"
+import InlineLink from "../Link"
 import Emoji from "../Emoji"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
@@ -54,7 +54,10 @@ const NoResults = ({ children }) => (
     <Emoji text=":crying_face:" fontSize="80px" />
     <EmptyStateText>
       {children}{" "}
-      <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
+      <InlineLink to="mailto:website@ethereum.org">
+        website@ethereum.org
+      </InlineLink>
+      .
     </EmptyStateText>
   </EmptyStateContainer>
 )
@@ -63,7 +66,10 @@ const NoResultsSingle = ({ children }) => (
   <Center flexDir="column" mt={6}>
     <Text maxW="450px" mb={16}>
       {children}{" "}
-      <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
+      <InlineLink to="mailto:website@ethereum.org">
+        website@ethereum.org
+      </InlineLink>
+      .
     </Text>
     <Emoji text=":crying_face:" fontSize="80px" />
   </Center>
@@ -161,9 +167,9 @@ const EthExchanges = () => {
                 <SuccessContainer>
                   <Text>
                     <Translation id="page-get-eth-exchanges-success-wallet-paragraph" />{" "}
-                    <Link to="/wallets/">
+                    <InlineLink to="/wallets/">
                       <Translation id="page-get-eth-exchanges-success-wallet-link" />
-                    </Link>
+                    </InlineLink>
                     .
                   </Text>
                   <CardList content={filteredWallets} />
@@ -178,8 +184,10 @@ const EthExchanges = () => {
           </ResultsContainer>
           <Text w="full" maxW="876px" mt={16} mb={0}>
             <Translation id="page-get-eth-exchanges-disclaimer" />{" "}
-            <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.{" "}
-            <Translation id="page-find-wallet-last-updated" />{" "}
+            <InlineLink to="mailto:website@ethereum.org">
+              website@ethereum.org
+            </InlineLink>
+            . <Translation id="page-find-wallet-last-updated" />{" "}
             <strong>{lastUpdated}</strong>
           </Text>
         </>
