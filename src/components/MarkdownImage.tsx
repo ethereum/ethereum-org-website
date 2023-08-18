@@ -4,7 +4,7 @@ import clamp from "lodash.clamp"
 
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 
-interface MDImageProps {
+interface MarkdownImageProps {
   src: string
   alt: string
   width: string
@@ -12,7 +12,12 @@ interface MDImageProps {
   aspectRatio: string
 }
 
-const MDImage = ({ width, height, aspectRatio, ...rest }: MDImageProps) => {
+const MarkdownImage = ({
+  width,
+  height,
+  aspectRatio,
+  ...rest
+}: MarkdownImageProps) => {
   const imageWidth = parseInt(width)
   const imageHeight = parseInt(height)
   const imageAspectRatio = parseInt(aspectRatio)
@@ -30,4 +35,4 @@ const MDImage = ({ width, height, aspectRatio, ...rest }: MDImageProps) => {
   )
 }
 
-export default MDImage
+export default MarkdownImage

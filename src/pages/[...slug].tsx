@@ -20,9 +20,9 @@ import ExpandableCard from "@/components/ExpandableCard"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
+import MarkdownImage from "@/components/MarkdownImage"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import YouTube from "@/components/YouTube"
-import MDImage from "@/components/MDImage"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehypeImgSize"
@@ -195,7 +195,7 @@ const components = {
   h3: Header3,
   h4: Header4,
   hr: HR,
-  img: MDImage,
+  img: MarkdownImage,
   li: ListItem,
   p: Paragraph,
   pre: Pre,
