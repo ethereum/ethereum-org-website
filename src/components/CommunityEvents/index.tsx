@@ -17,7 +17,7 @@ import { DateTime, DateTimeFormatOptions } from "luxon"
 
 // Components
 import ButtonLink from "../ButtonLink"
-import Link from "../Link"
+import InlineLink from "../Link"
 import Translation from "../Translation"
 
 // Utils
@@ -74,9 +74,9 @@ const Event = ({ event, language, type }: EventProps) => {
         </Text>
       </GridItem>
       <GridItem>
-        <Link to={calendarLink} onClick={() => matomoEvent(type)}>
+        <InlineLink to={calendarLink} onClick={() => matomoEvent(type)}>
           {title}
-        </Link>
+        </InlineLink>
       </GridItem>
     </Grid>
   )
@@ -160,13 +160,13 @@ const CommunityEvents = () => {
                   Join Discord
                 </ButtonLink>
                 {upcomingEventData[0] && (
-                  <Link
+                  <InlineLink
                     to={upcomingEventData[0].calendarLink}
                     onClick={() => matomoEvent("Add to calendar")}
                     fontWeight={700}
                   >
                     {t("community-events-add-to-calendar")}
-                  </Link>
+                  </InlineLink>
                 )}
               </Flex>
             </Flex>

@@ -1,6 +1,6 @@
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import Link from "./Link"
+import { BaseLink } from "./Link"
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 import {
@@ -106,11 +106,8 @@ const TitleCardList: React.FC<IProps> = ({
         return isLink ? (
           <LinkBox
             key={id || idx}
-            as={Link}
-            href={link}
             display="flex"
             textDecoration="none"
-            hideArrow
             justifyContent="space-between"
             color="text"
             marginBottom="1px"
@@ -136,7 +133,7 @@ const TitleCardList: React.FC<IProps> = ({
             )}
             <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
               <LinkOverlay
-                as={Link}
+                as={BaseLink}
                 href={link}
                 hideArrow
                 color="inherit"

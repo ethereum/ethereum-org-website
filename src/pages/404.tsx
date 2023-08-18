@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { Box, Flex } from "@chakra-ui/react"
 
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import Translation from "../components/Translation"
 
 const NotFoundPage = (props: PageProps) => (
@@ -13,9 +13,9 @@ const NotFoundPage = (props: PageProps) => (
       </h1>
       <p>
         <Translation id="try-using-search" />{" "}
-        <Link to="/">
+        <InlineLink to="/">
           <Translation id="return-home" />
-        </Link>
+        </InlineLink>
         .
       </p>
     </Box>

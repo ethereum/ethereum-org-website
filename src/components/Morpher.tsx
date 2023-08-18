@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Link from "./Link"
+import { BaseLink } from "./Link"
 
 const Morpher = () => {
   const [state, setState] = useState({
@@ -140,7 +140,7 @@ const Morpher = () => {
   }, [])
 
   return (
-    <Link
+    <BaseLink
       textDecor="none"
       fontSize="md"
       color="text"
@@ -148,7 +148,7 @@ const Morpher = () => {
       to="/languages/"
     >
       <span>{state.text}</span>
-    </Link>
+    </BaseLink>
   )
 }
 

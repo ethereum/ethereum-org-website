@@ -31,7 +31,7 @@ import Card from "../components/Card"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
+import InlineLink, { BaseLink } from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
 import BeaconChainActions from "../components/BeaconChainActions"
 import ShardChainsList from "../components/ShardChainsList"
@@ -207,7 +207,7 @@ const P = (props: TextProps) => (
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: MDXH1,
   h2: H2,
   h3: H3,
@@ -286,7 +286,7 @@ const Image = chakra(GatsbyImage, {
 
 const MoreContent = (props: ChildOnlyProp & { to: string }) => (
   <Flex
-    as={Link}
+    as={BaseLink}
     bg="ednBackground"
     justify="center"
     p={4}
