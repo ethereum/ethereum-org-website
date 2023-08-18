@@ -33,7 +33,7 @@ const MarkdownImage = ({
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
     <Flex as="span" justify="center">
-      <Image width={finalWidth} height={finalHeight} {...rest} />
+      <Image width={finalWidth} height={finalHeight} loading="lazy" {...rest} />
     </Flex>
   )
 }
