@@ -19,7 +19,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-[create-eth-app](https://github.com/PaulRBerg/create-eth-app)については、前回の記事（[Solidity の全体像](https://soliditydeveloper.com/solidity-overview-2020)）で紹介しました。 今回は、create-eth-app をどのように使うか、どのような機能が統合されているか、およびさらに拡張する方法について学びます。 create-eth-app は、[ Sablier ](http://sablier.finance/)の創業者である Paul Razvan Berg が立ち上げたプロジェクトで、フロントエンド開発をすばやく開始できるだけでなく、さまざまなオプションの統合機能も活用できます。
+[create-eth-app](https://github.com/PaulRBerg/create-eth-app)については、前回の記事（[Solidity の全体像](https://soliditydeveloper.com/solidity-overview-2020)）で紹介しました。 今回は、create-eth-app をどのように使うか、どのような機能が統合されているか、およびさらに拡張する方法について学びます。 create-eth-app は、[ Sablier ](http://sablier.com/)の創業者である Paul Razvan Berg が立ち上げたプロジェクトで、フロントエンド開発をすばやく開始できるだけでなく、さまざまなオプションの統合機能も活用できます。
 
 ## インストール {#installation}
 
@@ -54,7 +54,7 @@ yarn react-app:start
 
 ### ethers.js {#ethersjs}
 
-大部分のユーザーは現在でも[Web3.js](https://web3js.readthedocs.io/en/v1.2.7/)を使用していますが、昨年は[ethers.js](https://docs.ethers.io/)を Web3.js の代替として利用するユーザーが増加したため、*create-eth-app*には ethers.js が統合されています。 このライブラリで作業してもよいですし、Web3 に切り替えてもよいです。あるいは、もうすくベータが外れる[ethers.js v5](https://docs-beta.ethers.io/)にアップグレードするのもよいでしょう。
+大部分のユーザーは現在でも[Web3.js](https://docs.web3js.org/)を使用していますが、昨年は[ethers.js](https://docs.ethers.io/)を Web3.js の代替として利用するユーザーが増加したため、*create-eth-app*には ethers.js が統合されています。 このライブラリで作業してもよいですし、Web3 に切り替えてもよいです。あるいは、もうすくベータが外れる[ethers.js v5](https://docs-beta.ethers.io/)にアップグレードするのもよいでしょう。
 
 ### The Graph {#the-graph}
 
@@ -106,7 +106,7 @@ Aave と*create-eth-app*を統合すると、[Aave 用の subgraph](https://docs
 
 ### Sablier {#sablier}
 
-[ Sablier](https://sablier.finance/)は、ストリーミング決済を可能にする分散型アプリです。 Sablier をセットアップすれば、その後の管理を必要とせずに、1 回の支払日の代わりに常にお金を受け取ることができるようになります。 create-eth-app では、[独自の subgraph](https://thegraph.com/explorer/subgraph/sablierhq/sablier)が利用できます。
+[ Sablier](https://sablier.com/)は、ストリーミング決済を可能にする分散型アプリです。 Sablier をセットアップすれば、その後の管理を必要とせずに、1 回の支払日の代わりに常にお金を受け取ることができるようになります。 create-eth-app では、[独自の subgraph](https://thegraph.com/explorer/subgraph/sablierhq/sablier)が利用できます。
 
 ## 次のステップ {#whats-next}
 

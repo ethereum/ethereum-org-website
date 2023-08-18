@@ -1,14 +1,16 @@
 ---
 title: Bibliothèques d'API JavaScript
-description: Introduction aux Api clientes Ethereum, qui vous permettent d'interagir avec la blockchain depuis votre application.
+description: Introduction aux bibliothèques clientes JavaScript, qui vous permettent d'interagir avec la blockchain depuis votre application.
 lang: fr
 ---
 
 Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
 
-Dans cet objectif, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/) pour former un ensemble uniforme de [points de terminaison](/developers/docs/apis/json-rpc/endpoints/) sur lesquels les applications peuvent s'appuyer.
+Dans cet objectif, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/) pour former un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
 
 Si vous voulez utiliser JavaScript pour vous connecter à un nœud Ethereum, il est possible d'avoir recours à Vanilla JavaScript, mais plusieurs bibliothèques de commodité existent à l'intérieur même de l'écosystème, ce qui rend les choses beaucoup plus simples. Avec ces bibliothèques, les développeurs peuvent rédiger des méthodes intuitives d'une seule ligne pour initialiser les demandes JSON RPC (pas directement visibles) qui interagissent avec Ethereum.
+
+Veuillez noter que depuis [La Fusion](/roadmap/merge/), deux parties de logiciels Ethereum connectés - un client d'exécution et un client de consensus - sont nécessaires pour exécuter un nœud. Veuillez vous assurer que votre nœud inclut à la fois un client d'exécution et un client de consensus. Si votre nœud n'est pas sur votre machine en local (par ex. votre nœud est exécuté sur une instance AWS), mettez à jour les adresses IP dans le tutoriel en conséquence. Pour plus d'informations, veuillez consulter notre page sur [l'exécution d'un noeud](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Prérequis {#prerequisites}
 
@@ -22,17 +24,17 @@ Ces bibliothèques suppriment une grande partie de la complexité d'une interact
 
 ### Se connecter à des nœud Ethereum {#connect-to-ethereum-nodes}
 
-En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou MetaMask.
+En utilisant des fournisseurs, les bibliothèques vous permettent de vous connecter à Ethereum et de lire ses données, que ce soit sur JSON-RPC, INFURA, Etherscan, Alchemy ou Metamask.
 
 **Exemple Ether**
 
 ```js
-// Un Web3Provider enveloppe un fournisseur Web3 standard, qui est
-// ce que MetaMask injecte comme window.ethereum dans chaque page.
+// A Web3Provider wraps a standard Web3 provider, which is
+// what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Le plugin MetaMask permet également de signer des transactions pour
-// envoyer de l'ether et payer pour changer l'état de la blockchain.
+// The MetaMask plugin also allows signing transactions to
+// send ether and pay to change state within the blockchain.
 // Pour cela, nous avons besoin du signataire du compte...
 const signer = provider.getSigner()
 ```
@@ -66,13 +68,13 @@ Une fois la configuration effectuée, vous pourrez interroger la blockchain pour
 - le gaz estimé ;
 - les événements du contract intelligent ;
 - l'ID du réseau ;
-- Et plus encore...
+- et plus encore...
 
 ### Fonctionnalités d'un portefeuille {#wallet-functionality}
 
 Les bibliothèques vous permettent de créer des portefeuilles, gérer vos clés et signer des transactions.
 
-Voici un exemple provenant de la bibliothèque Ethers :
+Voici un exemple provenant de la bibliothèque Ethers
 
 ```js
 // Créer une instance de portefeuille à partir d'un mnémonique...
@@ -151,7 +153,7 @@ Une fois la configuration effectuée, vous pourrez :
 
 ### Interagir avec les fonctions d'un contrat intelligent {#interact-with-smart-contract-functions}
 
-Les bibliothèques clientes JavaScript autorisent votre application à appeler des fonctions de contrat intelligent en lisant l'interface binaire-programme (ABI) d'un contrat compilé.
+Les bibliothèques clientes JavaScript autorisent votre application à appeler des fonctions de contrat intelligent en lisant l'interface binaire d'application (ABI) d'un contrat compilé.
 
 L'ABI explique principalement les fonctions du contrat au format JSON et vous permet de l'utiliser comme un objet JavaScript standard.
 
@@ -217,7 +219,7 @@ Les fonctions utilitaires vous offrent des raccourcis pour améliorer le dévelo
 
 Les valeurs ETH sont en wei par défaut. 1 ETH = 1 000 000 000 000 000 000 WEI – ça en fait, des chiffres à gérer ! `web3.utils.toWei` convertit l'ether en wei pour vous.
 
-Et dans l'Ethers cela ressemble à ce qui suit :
+Et en ethers, cela ressemble à ce qui suit :
 
 ```js
 // Obtenir le solde d'un compte (par l'adresse ou le nom ENS)
@@ -230,14 +232,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Fonctions utilitaires Web3js](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Fonctions utilitaires Web3js](https://docs.web3js.org/api/web3-utils)
 - [Fonctions utilitaires Ethers](https://docs.ethers.io/v5/api/utils/)
 
 ## Bibliothèques disponibles {#available-libraries}
 
 **Web3.js -** **_Api JavaScript Ethereum _**
 
-- [Documentation](https://web3js.readthedocs.io/en/1.0/)
+- [Documentation](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_Implémentation complète d'un portefeuille Ethereum, et utilitaires en JavaScript et TypeScript_**
@@ -272,14 +274,19 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**viem -** **_Interface TypeScript pour Ethereum._**
+
+- [Documentation](https://viem.sh)
+- [Github](https://github.com/wagmi-dev/viem)
+
 ## Complément d'information {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Thèmes connexes {#related-topics}
+## Sujets connexes {#related-topics}
 
 - [Nœuds et clients](/developers/docs/nodes-and-clients/)
-- [Infrastructures de développement](/developers/docs/frameworks/)
+- [Frameworks de développement](/developers/docs/frameworks/)
 
 ## Tutoriels connexes {#related-tutorials}
 

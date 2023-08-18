@@ -137,7 +137,7 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 ### 使用硬件钱包 {#use-hardware-wallet}
 
-硬件钱包为私钥提供离线存储。 它们被认为是用于存储您私钥的最安全的钱包选项：您的私钥接触互联网并在您的设备上保留完全本地状态。
+硬件钱包为私钥提供离线存储。 它们被认为是用来存储私钥的最安全的钱包选项：私钥永远不能放到互联网上，它们只能完全保存在本地设备中。
 
 即使黑客控制了你的电脑，将私钥保持在离线状态，可以大大降低被黑客攻击的风险。
 
@@ -214,7 +214,7 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 ### “以太坊 2”代币骗局 {#eth2-token-scam}
 
-在[合并](/roadmap/merge/)的准备阶段，骗子利用“以太坊 2”这一术语的混淆，试图让用户将他们的以太币兑换成“以太坊 2”代币。 实际上合并并没有产生任何“以太坊 2”代币，或者任何其它合法代币。 你在合并之前拥有的以太币与现在是同一个以太币。 **从工作量证明切换到权益证明，无需采取任何与你的以太币相关的操作**。
+在[合并](/roadmap/merge/)的准备阶段，骗子利用“以太坊 2”这一术语的含糊不清，试图让用户将他们的以太币兑换成“以太坊 2”代币。 实际上合并并没有产生任何“以太坊 2”代币，或者任何其它合法代币。 你在合并之前拥有的以太币与现在是同一个以太币。 **从工作量证明切换到权益证明，无需采取任何与你的以太币相关的操作**。
 
 骗子可能会以“技术支持”的面貌出现，告诉你如果存入以太币，将收到“以太坊 2”代币。 实际上，并没有[官方的以太坊技术支持](/community/support/)，也没有新代币。 永远不要与任何人分享你的钱包助记词。
 
@@ -284,8 +284,9 @@ _注意：有一些衍生的代币/票据可能代表了被质押的以太币（
 
 ### 防诈骗指南 {#reading-scam-education}
 
-- [保持安全: 常见的诈骗手段](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [避免诈骗](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [关于常见加密网络钓鱼电子邮件和消息的 Twitter 线程](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [指南：如何识别诈骗代币](/guides/how-to-id-scam-tokens/)
+- [保持安全：常见骗局](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
+- [避免骗局](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [关于常见加密货币网络钓鱼电子邮件和消息的 Twitter 线程](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

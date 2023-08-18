@@ -132,12 +132,21 @@ const LearningToolsPage = ({
       },
       {
         name: "ChainIDE",
-        description: "page-learning-tools-chainIDE-description",
+        description: t("page-learning-tools-chainIDE-description"),
         url: "https://chainide.com/",
         image: getImage(data.chainIDE)!,
-        alt: "page-learning-tools-chainIDE-logo-alt",
+        alt: t("page-learning-tools-chainIDE-logo-alt"),
         background: "#2C60A3",
         subjects: ["Solidity", "web3"],
+      },
+      {
+        name: "Tenderly",
+        description: t("page-learning-tools-tenderly-description"),
+        url: "https://sandbox.tenderly.co",
+        image: getImage(data.tenderly)!,
+        alt: t("page-learning-tools-tenderly-logo-alt"),
+        background: "#0f1524",
+        subjects: ["Solidity", "Vyper", "web3"],
       },
     ]
     const randomizedSandboxes = shuffle(sandboxes)
@@ -222,10 +231,10 @@ const LearningToolsPage = ({
     },
     {
       name: "Metaschool",
-      description: "page-learning-tools-metaschool-description",
+      description: t("page-learning-tools-metaschool-description"),
       url: "https://metaschool.so",
       image: getImage(data.metaschool)!,
-      alt: "page-learning-tools-metaschool-logo-alt",
+      alt: t("page-learning-tools-metaschool-logo-alt"),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
@@ -268,10 +277,10 @@ const LearningToolsPage = ({
     },
     {
       name: "Alchemy University",
-      description: "page-learning-tools-alchemy-university-description",
+      description: t("page-learning-tools-alchemy-university-description"),
       url: "https://university.alchemy.com/",
       image: getImage(data.alchemyuniversity)!,
-      alt: "page-learning-tools-alchemy-university-logo-alt",
+      alt: t("page-learning-tools-alchemy-university-logo-alt"),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
@@ -420,6 +429,9 @@ export const query = graphql`
       ...learningToolImage
     }
     chainIDE: file(relativePath: { eq: "dev-tools/chainIDE.png" }) {
+      ...learningToolImage
+    }
+    tenderly: file(relativePath: { eq: "dev-tools/tenderly.png" }) {
       ...learningToolImage
     }
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {

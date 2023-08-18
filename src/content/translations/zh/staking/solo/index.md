@@ -40,32 +40,37 @@ summaryPoints:
 尽管我们希望每个人都能无风险地进行单独质押，但这并不现实。 在选择单独质押以太币之前，有一些实际和严肃的事项需要记住。
 
 <InfoGrid>
-  <ExpandableCard title="必读内容" eventCategory="SoloStaking" eventName="clicked required reading">
-    在操作自己的节点时，你应该花一些时间学习如何使用你所选择的软件。 这涉及到阅读相关文档，以及了解开发团队的沟通渠道。
-    你对所运行的软件和权益证明的原理了解得越多，作为一名质押人的风险就越小，也越容易解决在节点运行过程中可能出现的任何问题。 
-  </ExpandableCard>
-  <ExpandableCard title="熟悉计算机" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    节点设置要求用户能够熟练使用计算机，尽管随着时间的推移，新的工具正在使其变得更容易。 了解命令行界面会有帮助，但并非必需。
-    节点设置还需要用户对基本的硬件设置，以及最低推荐规格有一些了解。
-  </ExpandableCard>
-  <ExpandableCard title="安全的密钥管理" eventCategory="SoloStaking" eventName="clicked secure key management">
-    就像私钥保护了你的以太坊钱包一样，你也需要为验证者单独生成密钥。 你必须了解如何保障助记词或私钥的安全。
-    <p style={{marginTop: "1rem"}}><a href="/security">以太坊安全和预防欺诈措施</a></p>
-  </ExpandableCard>
-  <ExpandableCard title="无法提款（暂时性）" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    目前还不支持从验证者余额中提取质押的以太币或奖励。 计划为即将到来的上海升级提供提款支持。 此后，用户可以选择自动接收奖励付款，并且可以提取全部余额以收回他们的资金。
-  </ExpandableCard>
-  <ExpandableCard title="维护" eventCategory="SoloStaking" eventName="clicked maintenance">
-    硬件设施会发生故障，网络连接会出错，客户端软件也需要升级。 因此节点维护不可避免，需要你偶尔关注。 你要确保知道任何预期的网络升级，或其他关键的客户端升级。
-  </ExpandableCard>
-  <ExpandableCard title="可靠的正常运行时间" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    你的回报与你的验证者在线并正确验证的时间成正比。 宕机会导致一定比例的处罚，具体与有多少其他验证者同时离线有关，但<a href="#faq">不会导致罚没</a>。 同时网络带宽也很重要，因为如果没有及时收到认证，奖励就会减少。 建议至少要有 10 Mb/s 的上行和下行带宽。
-  </ExpandableCard>
-  <ExpandableCard title="罚没风险" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    与离线导致的怠工处罚不同，<em>罚没</em>是一种更严重的处罚，专门针对恶意违规。 同一时间只在一台机器上运行加载你密钥的客户端，你被罚没的风险可以降到最低。 总得来说，所有质押人都必须意识到被罚没的风险。
-    
-    <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多关于罚没和验证者周期的信息</a></p>
-  </ExpandableCard>
+<ExpandableCard title="必读内容" eventCategory="SoloStaking" eventName="clicked required reading">
+在操作自己的节点时，你应该花一些时间学习如何使用你所选择的软件。 这涉及到阅读相关文档，以及了解开发团队的沟通渠道。
+
+你对所运行的软件和权益证明的原理了解得越多，作为一名质押人的风险就越小，也越容易解决在节点运行过程中可能出现的任何问题。
+</ExpandableCard>
+
+<ExpandableCard title="熟悉计算机" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+节点设置要求用户能够熟练使用计算机，尽管随着时间的推移，新的工具正在使其变得更容易。 了解命令行界面会有帮助，但并非必需。
+
+节点设置还需要用户对基本的硬件设置，以及最低推荐规格有一些了解。
+</ExpandableCard>
+
+<ExpandableCard title="安全的密钥管理" eventCategory="SoloStaking" eventName="clicked secure key management">
+就像私钥保护以太坊地址的方式一样，你也需要为验证者单独生成密钥。 你必须了解如何确保助记词或私钥安全无虞。
+
+<a href="/security/">以太坊安全和预防诈骗</a>
+</ExpandableCard>
+
+<ExpandableCard title="维护" eventCategory="SoloStaking" eventName="clicked maintenance">
+硬件设施会发生故障，网络连接会出错，客户端软件也需要升级。 因此节点维护不可避免，需要你偶尔关注。 你要确保知道任何预期的网络升级，或其他关键的客户端升级。
+</ExpandableCard>
+
+<ExpandableCard title="可靠的正常运行时间" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+你的回报与你的验证者在线并正确验证的时间成正比。 宕机会导致一定比例的处罚，具体与有多少其他验证者同时离线有关，但<a href="#faq">不会导致罚没</a>。 同时网络带宽也很重要，因为如果没有及时收到认证，奖励就会减少。 建议至少要有 10 Mb/s 的上行和下行带宽。
+</ExpandableCard>
+
+<ExpandableCard title="罚没风险" eventCategory="SoloStaking" eventName="clicked slashing risk">
+与离线导致的怠工处罚不同，<em>罚没</em>是一种更严重的处罚，专门针对恶意违规。 同一时间只在一台机器上运行加载你密钥的客户端，你被罚没的风险可以降到最低。 总得来说，所有质押人都必须意识到被罚没的风险。
+
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多关于罚没和验证者生命周期的信息</a>
+</ExpandableCard>
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -77,8 +82,6 @@ summaryPoints:
 在线时你将赢得以太币奖励，奖励将定期存入你的提款地址。
 
 如果需要，你可以验证者身份退出，这样就不需要在线，也不会再有任何奖励。 之后，你的余额将提取到你在设置过程指定的提款地址。
-
-_上海升级后，才支持已退出验证者的奖励支付和全额提款。_
 
 [更多关于质押提款的信息](/staking/withdrawals/)
 
@@ -126,14 +129,14 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 <ExpandableCard title="什么是验证者？">
 
-验证者是一个存在于以太坊上并参与以太坊协议共识的虚拟实体。 验证者由余额、公钥和其他属性信息表示。 验证者客户端是代表验证者通过持有和使用其私钥进行操作的软件。 一个验证者客户端可以持有多个密钥对，从而控制多个验证者。
+<em>验证者</em>是一个虚拟实体，存在于以太坊上并参与以太坊协议的共识。 验证者由余额、公钥和其他属性信息表示。 <em>验证者客户端</em>是通过持有并使用验证者的私钥代表验证者行动的软件。 一个验证者客户端可以持有多个密钥对，从而控制多个验证者。
 
 </ExpandableCard>
 
 <ExpandableCard title="我能存入超过 32 个以太币吗？">
 每个与验证者相关的密钥对都需要正好 32 个以太币才能激活。 将更多以太币存入一对密钥并不能增加可能获得的奖励，因为每个验证者的<a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">有效余额</a>被限制为 32 个以太币。 这意味着质押时需要以 32 个以太币为单位递增，每个验证者都有自己的一套密钥和余额。
 
-不要为一个验证者存入超过 32 以太币的资金。 这不会增加你的奖励，而且资金会被锁定，直到计划执行的上海更新完成为止。
+不要为一个验证者存入超过 32 以太币的资金。 这样做不会增加你的奖励。 如果为验证者设置了提款地址，超过 32 个以太币多余资金将在下一次<a href="/staking/withdrawals/#validator-sweeping">验证者扫描</a>时自动提取到该地址。
 
 如果单独质押对你来说要求太高，可以考虑使用<a href="/staking/saas/">质押即服务</a>提供商，或者如果你的资金少于 32 个以太币，则可以考虑<a href="/staking/pools/">联合质押</a>。
 </ExpandableCard>
@@ -155,8 +158,10 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 <em>非主流客户端</em>中的等效错误永远不会被最终确认，因此也不会导致环绕投票，只会导致怠工处罚，而非<em>罚没</em>。
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">详细了解运行非主流客户端的重要性。</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">了解更多关于预防罚没的信息</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">详细了解运行非主流客户端的重要性。</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">详细了解预防罚没</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="哪个客户端最好？">
@@ -176,9 +181,9 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 </ExpandableCard>
 
 <ExpandableCard title="我如何解锁我的奖励或收回我的以太币？">
-实施上海升级时，将开始支持已退出验证者的奖励支付和全额提款。 从信标链上进行任何类型的提款都需要设置提款凭据。
+从信标链上进行任何类型的提款都需要设置提款凭据。
 
-新质押人在生成密钥和存款时设置提款凭据。 尚未设置提款凭据的现有质押人可以升级他们的密钥，以便在上海升级后支持提款功能。
+新质押人在生成密钥和存款时设置提款凭据。 尚未设置提款凭证的现有质押人可以升级他们的密钥，以支持提款功能。
 
 设置提款凭据后，奖励支付（最初的 32 个以太币累积的以太币奖励）将自动定期分发到提款地址。
 

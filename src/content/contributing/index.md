@@ -46,6 +46,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 - [Suggest a project for our DeSci page](/contributing/adding-desci-projects/)
   _- Add a project built on Ethereum that contributes to decentralized science_
 - [Quizzes](/contributing/quizzes/) _- Add, update, and delete quiz question banks for a relevant page_
+- [Suggest a design resource](/contributing/design/adding-design-resources/) _- Add, update, and delete helpful design resources_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 
@@ -65,6 +66,7 @@ Before contributing, make sure you're familiar with:
 - the evolving [vision of ethereum.org](/about/)
 - our [design principles](/contributing/design-principles/)
 - our [style guide](/contributing/style-guide/)
+- our [code of conduct](/community/code-of-conduct)
 
 ## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 

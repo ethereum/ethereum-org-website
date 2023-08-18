@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-La dernière fois nous nous sommes intéressés à [Solidity](https://soliditydeveloper.com/solidity-overview-2020) et avons mentionné [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Vous allez maintenant découvrir comment l'utiliser, quelles fonctionnalités y sont intégrées et comment l'étendre encore. Initiée par Paul Razvan Berg, fondateur de [Sablier](http://sablier.finance/), cette application livrée avec plusieurs intégrations facultatives au choix va vous permettre de débuter le développement de votre interface.
+La dernière fois nous nous sommes intéressés à [Solidity](https://soliditydeveloper.com/solidity-overview-2020) et avons mentionné [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Vous allez maintenant découvrir comment l'utiliser, quelles fonctionnalités y sont intégrées et comment l'étendre encore. Initiée par Paul Razvan Berg, fondateur de [Sablier](http://sablier.com/), cette application livrée avec plusieurs intégrations facultatives au choix va vous permettre de débuter le développement de votre interface.
 
 ## Installation {#installation}
 
@@ -51,7 +51,7 @@ _create-react-app_, en particulier, fait usage des nouveaux [effets hooks](https
 
 ### ethers.js {#ethersjs}
 
-Si [Web3](https://web3js.readthedocs.io/en/v1.2.7/) est encore largement utilisé, [ethers.js](https://docs.ethers.io/) a davantage été employé comme alternative l'année dernière et est intégré à _create-eth-app_. Vous pouvez travailler avec celui-ci, le faire évoluer vers Web3 ou envisager une mise à niveau pour passer à [ethers.js v5](https://docs-beta.ethers.io/) qui n'est pratiquement plus en version bêta.
+Si [Web3](https://docs.web3js.org/) est encore largement utilisé, [ethers.js](https://docs.ethers.io/) a davantage été employé comme alternative l'année dernière et est intégré à _create-eth-app_. Vous pouvez travailler avec celui-ci, le faire évoluer vers Web3 ou envisager une mise à niveau pour passer à [ethers.js v5](https://docs-beta.ethers.io/) qui n'est pratiquement plus en version bêta.
 
 ### Le réseau Graph {#the-graph}
 
@@ -103,7 +103,7 @@ Malheureusement, à l'heure où ces lignes sont écrites, l'intégration est uni
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.finance/) permet aux utilisateurs d'effectuer des paiements en continu. Au lieu d'un seul versement, vous recevez en fait votre argent en continu sans avoir rien d'autre à faire après la mise en place initiale. L'intégration inclut son [propre sous-graphe](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
+[Sablier](https://sablier.com/) permet aux utilisateurs d'effectuer des paiements en continu. Au lieu d'un seul versement, vous recevez en fait votre argent en continu sans avoir rien d'autre à faire après la mise en place initiale. L'intégration inclut son [propre sous-graphe](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
 
 ## Et après ? {#whats-next}
 

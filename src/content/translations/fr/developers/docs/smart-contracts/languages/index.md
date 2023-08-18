@@ -1,5 +1,5 @@
 ---
-title: Langages du contrat intelligent
+title: Les langages des contrats intelligents
 description: "Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper"
 lang: fr
 ---
@@ -88,13 +88,14 @@ Cet exemple devrait vous donner une idée de la syntaxe d'un contrat Solidity. P
 - Langage de programmation pythonique
 - Typage fort
 - Code de compilation concis et compréhensible
-- A intentionnellement moins de fonctionnalités que Solidity dans le but de rendre les contrats plus sécurisés et plus faciles à auditer . Vyper ne prend pas en charge les éléments suivants :
+- Génération efficace du bytecode
+- A intentionnellement moins de fonctionnalités que Solidity dans le but de rendre les contrats plus sécurisés et plus faciles à auditer. Vyper ne prend pas en charge les éléments suivants :
   - Modificateurs
   - Héritage
   - Assemblage en ligne
   - Surcharge des fonctions
   - Surcharge d’opérateur
-  - Appels récurrent
+  - Appels récurrents
   - Boucles infinies
   - Points fixes binaires
 
@@ -103,11 +104,17 @@ Pour plus d'informations, [lisez cette page Vyper](https://vyper.readthedocs.io/
 ### Liens importants {#important-links-1}
 
 - [Documentation](https://vyper.readthedocs.io)
-- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Vyper par exemple](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Plus de Vyper par exemple](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Chatroom Gitter Vyper](https://gitter.im/vyperlang/community)
+- [Discussion Discord pour la Communauté Vyper](https://discord.gg/SdvKC79cJk)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
-- [Mise à jour du 8 janvier 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
+- [Cadres et outils de développement des Contrats intelligents pour Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk - apprendre à sécuriser et à pirater les contrats intelligents Vyper](https://github.com/SupremacyTeam/VyperPunk)
+- [VyperExamples - exemples de vulnérabilités Vyper](https://www.vyperexamples.com/reentrancy)
+- [Hub Vyper pour le développement](https://github.com/zcor/vyper-dev)
+- [Exemples des meilleurs contrats intelligents pour Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Des ressources géniales liées à Vyper](https://github.com/spadebuilders/awesome-vyper)
 
 ### Exemple {#example}
 
@@ -206,7 +213,7 @@ Si vous débutez avec Ethereum et que vous n'avez pas encore jamais codé avec d
 
 - Langage intermédiaire pour Ethereum
 - Prends en charge l'[EVM](/developers/docs/evm) et l'[Ewasm](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum conçu pour être un dénominateur commun utilisable sur les deux plateformes.
-- Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et Ewasm.
+- Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et eWASM.
 
 **Yul+**
 

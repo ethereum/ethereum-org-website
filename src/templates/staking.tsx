@@ -27,11 +27,12 @@ import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import InlineLink from "../components/Link"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
+import ProductDisclaimer from "../components/ProductDisclaimer"
 import RandomAppList from "../components/RandomAppList"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
@@ -119,7 +120,7 @@ const Header4 = (props: ChildOnlyProp) => (
   />
 )
 
-const InfoGrid = (props: ChildOnlyProp) => (
+export const InfoGrid = (props: ChildOnlyProp) => (
   <Grid
     templateColumns="repeat(auto-fill, minmax(min(100%, 340px), 1fr))"
     gap={8}
@@ -285,14 +286,14 @@ const TableContainer = (props: BoxProps) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: Header1,
   h2: H2,
   h3: H3,
   h4: Header4,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   div: Box,
   Badge,
   ButtonLink,
@@ -308,6 +309,7 @@ const components = {
   InfoGrid,
   Logo,
   MeetupList,
+  ProductDisclaimer,
   RandomAppList,
   SectionNav,
   StakingComparison,

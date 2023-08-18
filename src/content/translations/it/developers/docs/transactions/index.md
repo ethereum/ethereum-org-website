@@ -22,14 +22,15 @@ Le transazioni richiedono una commissione e devono essere incluse in un blocco v
 
 Una transazione inviata contiene le seguenti informazioni:
 
-- `recipient`: L'indirizzo ricevente (se è un conto esterno, la transazione trasferirà del valore. Se è il conto di un contratto, la transazione eseguirà il codice del contratto)
-- `signature` – Identificatore del mittente. Viene generata quando la chiave privata del mittente firma la transazione e conferma che il mittente ha autorizzato la transazione
-- `nonce` - Un contatore con incremento sequenziale, che indica il numero della transazione dal conto
-- `value` – Quantità di ETH da trasferire dal mittente al destinatario (in WEI, un taglio dell'ETH)
-- `data` – Campo opzionale per includere dati arbitrari
-- `gasLimit`: l'importo massimo di unità di gas consumabili dalla transazione. Le unità di gas rappresentano le fasi di calcolo
-- `maxPriorityFeePerGas`: la quantità massima di gas da includere come mancia al validatore
-- `maxFeePerGas`: la quantità massima di gas che si è disposti a pagare per la transazione (comprensiva di `baseFeePerGas` e `maxPriorityFeePerGas`)
+- `from` – indirizzo del mittente che firmerà la transazione. Questo sarà un conto posseduto esternamente, in quanto i conti di contratti non possono inviare transazioni.
+- `recipient` – l'indirizzo ricevente (se è un conto posseduto esternamente, la transazione trasferirà valore. Se è un conto di contratto, la transazione eseguirà il codice del contratto)
+- `signature` – l'identificativo del mittente. Viene generata quando la chiave privata del mittente firma la transazione e conferma che il mittente ha autorizzato la transazione
+- `nonce` – un contatore con incremento sequenziale, che indica il numero della transazione dal conto
+- `value` – quantità di ETH da trasferire dal mittente al destinatario (denominata in WEI, dove 1 ETH corrisponde a 1e+18wei)
+- `data` – campo facoltativo per includere dati arbitrari
+- `gasLimit` – importo massimo di unità di carburante che possono essere consumate dalla transazione. La [EVM](/developers/docs/evm/opcodes) specifica le unità di carburante richiesti da ogni passaggio di calcolo
+- `maxPriorityFeePerGas` – il prezzo massimo del carburante consumato da includere come mancia al validatore
+- `maxFeePerGas` – la commissione massima per unità di carburante che si desidera pagare per la transazione (che include `baseFeePerGas` e `maxPriorityFeePerGas`)
 
 Il gas è un riferimento al calcolo necessario perché un validatore elabori la transazione. Gli utenti devono pagare una commissione per questo calcolo. Il `gasLimit` e il `maxPriorityFeePerGas` determinano la commissione massima sulla transazione pagata al validatore. [Di più sul Gas](/developers/docs/gas/).
 
@@ -51,7 +52,7 @@ Ma l'oggetto di una transazione deve essere firmato utilizzando la chiave privat
 
 Un client Ethereum come Geth gestirà il processo di firma.
 
-Esempio di chiamata [JSON-RPC](https://eth.wiki/json-rpc/API):
+Esempio di chiamata [JSON-RPC](/developers/docs/apis/json-rpc):
 
 ```json
 {
@@ -98,7 +99,7 @@ Esempio di risposta:
 }
 ```
 
-- `raw` è la transazione firmata in formato codificato Recursive Length Prefix (RLP)
+- `raw` è la transazione firmata in formato codificato [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` è la transazione firmata in formato JSON
 
 Con l'hash di firma, la transazione può provare crittograficamente che proviene dal mittente ed è stata inviata alla rete.
@@ -162,10 +163,10 @@ Il gas non utilizzato, viene rimborsato al conto dell'utente.
 
 Una volta inviata una transazione, succede quanto segue:
 
-1. Una volta inviata una transazione, viene generato un hash crittografico della transazione: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
-2. La transazione viene poi inviata alla rete e inclusa in un gruppo di molte altre transazioni.
+1. Un hash della transazione è stato generato crittograficamente: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
+2. La transazione è quindi trasmessa alla rete e aggiunta a un pool di transazione consistente in tutte le altre transazioni in sospeso della rete.
 3. Un validatore deve scegliere la transazione e includerla in un blocco per verificarla e considerarla "riuscita".
-4. Col passare del tempo, il blocco contenente la tua transazione sarà aggiornato a "giustificato", poi "finalizzato". Questi aggiornamenti rendono molto più certo che la transazione sia "riuscita" e che non sarà mai alterata. Una volta che un blocco è "finalizzato", l'unica cosa che potrebbe cambiarlo è un attacco che costerebbe molti miliardi di dollari.
+4. Col passare del tempo, il blocco contenente la tua transazione sarà aggiornato a "giustificato", poi "finalizzato". Questi aggiornamenti rendono molto più certo che la transazione sia "riuscita" e che non sarà mai alterata. Una volta che un blocco è "finalizzato", l'unica cosa che potrebbe cambiarlo è un attacco a livello della rete che costerebbe molti miliardi di dollari.
 
 ## Dimostrazione visiva {#a-visual-demo}
 
@@ -175,15 +176,13 @@ Guarda Austin mentre ti illustra transazioni, gas e mining.
 
 ## Typed Transaction Envelope {#typed-transaction-envelope}
 
-In origine Ethereum aveva un solo formato per le transazioni. Ogni transazione conteneva un nonce, il prezzo del gas, il limite del gass, l'indirizzo di destinazione, il valore, i dati, v, r e s. Questi campi sono codificati in RLP e somigliano a qualcosa del genere:
+In origine Ethereum aveva un solo formato per le transazioni. Ogni transazione conteneva un nonce, il prezzo del gas, il limite del gass, l'indirizzo di destinazione, il valore, i dati, v, r e s. Questi campi sono [ codificati in RLP](/developers/docs/data-structures-and-encoding/rlp/) per essere simili a questo:
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum si è evoluto per supportare diversi tipi di transazioni e consentire l'implementazione di nuove funzionalità, come gli elenchi d'accesso, [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), senza interferire sui precedenti formati di transazione.
+Ethereum si è evoluto per supportare diversi tipi di transazioni e consentire l'implementazione di nuove funzionalità, come gli elenchi d'accesso e [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), senza interferire sui precedenti formati di transazione.
 
-[EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) definisce un tipo di transazione che rappresenta una busta (envelope) per i tipi di transazione futuri.
-
-L'EIP-2718 è una nuova busta generalizzata per le transazioni tipizzate. Nel nuovo standard, le transazioni sono interpretate come:
+[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) consente tale comportamento. Le transazioni sono interpretate come:
 
 `TransactionType || TransactionPayload`
 
@@ -196,7 +195,7 @@ Dove i campi sono definiti come:
 
 - [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 

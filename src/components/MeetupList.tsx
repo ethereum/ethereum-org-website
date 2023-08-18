@@ -4,7 +4,6 @@ import { sortBy } from "lodash"
 import {
   Box,
   Flex,
-  Input,
   LinkBox,
   LinkOverlay,
   List,
@@ -18,11 +17,12 @@ import {
 // Components
 import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
-import Link from "./Link"
+import InlineLink, { BaseLink } from "./Link"
 import Translation from "./Translation"
 
 // Data
 import meetups from "../data/community-meetups.json"
+import Input from "./Input"
 
 // Utils
 import { trackCustomEvent } from "../utils/matomo"
@@ -77,21 +77,9 @@ const MeetupList: React.FC<IProps> = () => {
   return (
     <Box>
       <Input
+        mb={6}
         onChange={handleSearch}
         placeholder={"Search by meetup title or location"}
-        display="block"
-        mr="auto"
-        ml="auto"
-        mb={6}
-        border="1px solid"
-        borderColor="searchBorder"
-        color="text"
-        bg="searchBackground"
-        p={2}
-        borderRadius="base"
-        w="100%"
-        _focus={{ outline: "auto 1px" }}
-        _placeholder={{ color: "text200" }}
         aria-describedby="input-instruction"
       />
       {/* hidden for attachment to input only */}
@@ -123,7 +111,7 @@ const MeetupList: React.FC<IProps> = () => {
               </Box>
               <Box>
                 <LinkOverlay
-                  as={Link}
+                  as={BaseLink}
                   href={meetup.link}
                   textDecor="none"
                   color="text"
@@ -160,9 +148,9 @@ const MeetupList: React.FC<IProps> = () => {
         {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
             <Translation id="page-community-meetuplist-no-meetups" />{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
+            <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
               <Translation id="page-community-please-add-to-page" />
-            </Link>
+            </InlineLink>
           </InfoBanner>
         )}
       </Box>

@@ -23,8 +23,8 @@ import TutorialMetadata from "../components/TutorialMetadata"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import EnvWarningBanner from "../components/EnvWarningBanner"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import InlineLink from "../components/Link"
+import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -39,6 +39,8 @@ import FeedbackCard from "../components/FeedbackCard"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
+import CrowdinContributors from "../components/FileContributorsCrowdin"
+import GitHubContributors from "../components/FileContributorsGitHub"
 
 // Apply styles for classes within markdown here
 const ContentContainer = (props) => {
@@ -195,7 +197,7 @@ const KBD = (props) => {
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -204,7 +206,7 @@ const components = {
   kbd: KBD,
   li: ListItem,
   pre: Codeblock,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   ButtonLink,
   InfoBanner,
   EnvWarningBanner,
@@ -218,7 +220,7 @@ const components = {
 }
 
 const TutorialPage = ({
-  data: { siteData, pageData: mdx },
+  data: { siteData, pageData: mdx, allCombinedTranslatorsJson },
   pageContext: { relativePath },
 }: PageProps<Queries.TutorialPageQuery, Context>) => {
   if (!siteData || !mdx?.frontmatter)
@@ -275,15 +277,19 @@ const TutorialPage = ({
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-          <FileContributors
-            relativePath={relativePath}
-            editPath={absoluteEditPath}
-            mt={12}
-            p={2}
-            borderRadius="4px"
-            border={`1px solid ${borderColor}`}
-            background="ednBackground"
-          />
+          {mdx.frontmatter.lang !== "en" ? (
+            <CrowdinContributors
+              relativePath={relativePath}
+              editPath={absoluteEditPath}
+              //@ts-ignore
+              langContributors={allCombinedTranslatorsJson.nodes}
+            />
+          ) : (
+            <GitHubContributors
+              relativePath={relativePath}
+              editPath={absoluteEditPath}
+            />
+          )}
           <FeedbackCard />
         </ContentContainer>
         {tocItems && (
@@ -303,7 +309,11 @@ const TutorialPage = ({
 export default TutorialPage
 
 export const query = graphql`
-  query TutorialPage($languagesToFetch: [String!]!, $relativePath: String) {
+  query TutorialPage(
+    $language: String!
+    $languagesToFetch: [String!]!
+    $relativePath: String
+  ) {
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
@@ -348,6 +358,20 @@ export const query = graphql`
       }
       body
       tableOfContents
+    }
+    allCombinedTranslatorsJson(filter: { lang: { eq: $language } }) {
+      nodes {
+        lang
+        data {
+          fileId
+          contributors {
+            id
+            username
+            avatarUrl
+            totalCosts
+          }
+        }
+      }
     }
   }
 `

@@ -95,9 +95,9 @@ A execução de seu próprio nó permite que você use o Ethereum de maneira pri
 - Seu nó verifica todas as transações e blocos contra as regras de consenso por si só. Isso significa que você não precisa confiar em nenhum outro nó da rede nem confiar totalmente neles.
 - Você pode usar uma carteira Ethereum com seu próprio nó. Você pode usar dapps com mais segurança e privacidade porque não precisará vazar seus endereços e saldos para nós aleatórios. Tudo pode ser verificado com seu próprio cliente. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) e [muitas outras carteiras](/wallets/find-wallet/) oferecem importação de RPC, permitindo que elas usem seu nó.
 - Você pode executar e auto-hospedar outros serviços que dependem de dados do Ethereum. Por exemplo, isso pode ser um validador Beacon Chain, software como camada 2, infraestrutura, exploradores de bloco, processadores de pagamento etc.
-- Você pode fornecer seus próprios [pontos de extremidade RPC](https://ethereum.org/en/developers/docs/apis/json-rpc/) personalizados. O ponto de extremidade Ethereum hospedado publicamente pela comunidade ou de modo privado, permite que as pessoas usem seu nó e evitem grandes provedores centralizados.
+- Você pode fornecer seus próprios [pontos de extremidade RPC](/developers/docs/apis/json-rpc/) personalizados. O ponto de extremidade Ethereum hospedado publicamente pela comunidade ou de modo privado, permite que as pessoas usem seu nó e evitem grandes provedores centralizados.
 - Você pode se conectar ao seu nó usando **Comunicações entre processos (IPC)** ou reescrever o nó para carregar seu programa como um plugin. Isso garante baixa latência, o que ajuda muito, por exemplo, ao processar muitos dados usando bibliotecas Web3 ou quando você precisa substituir suas transações o mais rápido possível (isto é, de forma acelerada).
-- Você pode colocar ETH diretamente para proteger a rede e ganhar recompensas. Veja [participação solo](https://ethereum.org/en/staking/solo/) para começar.
+- Você pode colocar ETH diretamente para proteger a rede e ganhar recompensas. Veja [participação solo](/staking/solo/) para começar.
 
 ![Como você acessar o Ethereum através do seu aplicativo e nós](./nodes.png)
 
@@ -122,9 +122,9 @@ Se você é mais que um usuário técnico, mergulhe em mais detalhes e opções 
 
 ## Alternativas {#alternatives}
 
-Configurar seu próprio nó pode custar tempo e recursos, mas nem sempre você precisa executar sua própria instância. Nesse caso, você pode usar um provedor de API terceirizado como [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), [QuikNode](https://www.quiknode.io), [Tenderly](https://tenderly.co/web3-gateway), [Blasto](https://blastapi.io/), [DRPC](https://drpc.org/) ou [GetBlock](https://getblock.io/). Para obter uma visão geral do uso desses serviços, confira [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Configurar seu próprio nó pode custar tempo e recursos, mas nem sempre você precisa executar sua própria instância. Nesse caso, é possível usar um provedor de APIs externo. Para obter uma visão geral do uso desses serviços, confira [nós como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Se alguém executa um nó do Ethereum com uma API pública em sua comunidade, você pode apontar suas carteiras leves (como MetaMask) para um nó da comunidade [via RPC personalizado](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) e ganhar mais privacidade do que com alguns terceiros aleatórios de confiança.
+Se alguém executar um nó do Ethereum com uma API pública em sua comunidade, você pode apontar suas carteiras para um nó da comunidade por meio de um RPC personalizado.
 
 Por outro lado, se você executar um cliente, você pode compartilhá-lo com quem precisar.
 
@@ -141,7 +141,7 @@ Essa tabela resume os diferentes clientes. Todos eles passam em [testes de clien
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java                     | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo, Rápido, Completo                | Arquivo, Removido |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Completo                                     | Arquivo, Removido |
 
-**Observe que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-form-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e, de preferência, mude para outra implementação de cliente!
+**Observe que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e, de preferência, mude para outra implementação de cliente!
 
 Para saber mais sobre redes suportadas, leia sobre as [redes Ethereum](/developers/docs/networks/).
 

@@ -57,7 +57,7 @@ _Note: any individual can be part of multiple of these groups (e.g. a protocol d
 
 ## What is an EIP? {#what-is-an-eip}
 
-One important process used in Ethereum governance is the proposal of **Ethereum Improvement Proposals (EIPs)**. EIPs are standards specifying potential new features or processes for Ethereum. Anyone within the Ethereum community can create an EIP. For example, none of the authors of EIP-721, the EIP that standardized NFTs, have worked directly on Ethereum's protocol development.
+One important process used in Ethereum governance is the proposal of **Ethereum Improvement Proposals (EIPs)**. EIPs are standards specifying potential new features or processes for Ethereum. Anyone within the Ethereum community can create an EIP. If you're interested in writing an EIP or participating in peer-review and/or governance, see:
 
 <ButtonLink to="/eips/">
   More on EIPs
@@ -153,7 +153,7 @@ The Ethereum governance process often trades off speed and efficiency for openne
 
 While the specification and development implementations have always been fully open source, the formal processes used to propose updates described above weren't used. This allowed changes to be specified and agreed upon quicker by researchers and implementers.
 
-When the Beacon Chain merged with the Ethereum execution layer on September 15th, 2022 The Merge was complete as part of the [Paris network upgrade](https://ethereum.org/en/history/#paris). The proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) was changed from 'Last Call' to 'Final', completing the transition to proof-of-stake.
+When the Beacon Chain merged with the Ethereum execution layer on September 15th, 2022 The Merge was complete as part of the [Paris network upgrade](/history/#paris). The proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) was changed from 'Last Call' to 'Final', completing the transition to proof-of-stake.
 
 <ButtonLink to="/roadmap/merge/">
   More on The Merge

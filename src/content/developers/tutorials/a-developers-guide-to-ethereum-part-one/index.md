@@ -182,7 +182,7 @@ Now you’re ready to surf the chain! That’s not a thing people say. I just ma
 First things first, a sanity check:
 
 ```python
-In [5]: w3.isConnected()
+In [5]: w3.is_connected()
 Out[5]: True
 ```
 
@@ -291,7 +291,7 @@ Out[13]: 1000003000000000000000000
 
 The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account that submitted the transaction - this fee is the amount of gas burned (21000 units of gas for an ETH transfer) multiplied by a base fee that varies according to network activity plus a tip that goes to the validator that includes the transaction in a block.
 
-More on [gas](https://ethereum.org/en/developers/docs/gas/#post-london)
+More on [gas](/developers/docs/gas/#post-london)
 
 <div class="featured">Note: On the public network, transaction fees are variable based on network demand and how quickly you'd like a transaction to be processed. If you're interested in a breakdown of how fees are calculated, see my earlier post on <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">how transactions are included in a block</a>.</div>
 

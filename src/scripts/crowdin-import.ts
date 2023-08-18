@@ -43,7 +43,8 @@ const USER_SELECTION: UserSelectionObject = {
   el: [],
   es: [],
   fa: [],
-  fi: [],
+  fi: [2, 3, 4],
+  fil: [],
   fr: [],
   gl: [],
   gu: [],
@@ -65,7 +66,6 @@ const USER_SELECTION: UserSelectionObject = {
   nb: [],
   nl: [],
   pcm: [],
-  ph: [],
   pl: [],
   pt: [],
   "pt-br": [],
@@ -219,7 +219,7 @@ const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (item.endsWith(".md")) {
+    } else if (item.endsWith(".md") || item.endsWith(".svg")) {
       const mdDestDirPath: string = join(
         repoRoot,
         "src",

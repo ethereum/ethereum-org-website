@@ -79,3 +79,6 @@ Get involved in professional community-driven organizations or join design group
 - [Finity, a design system for Web3 by Polygon](https://finity.polygon.technology/) (Figma)
 - [ENS Design system](https://thorin.ens.domains/)
 - [Mirror Design System](https://degen-xyz.vercel.app/)
+
+**Articles and projects listed on this page are not official endorsements**, and are provided for informational purposes only.
+We add links to this page based on criteria in our [listing policy](/contributing/design/adding-design-resources). If you'd like us to add a project/article, edit this page on [GitHub](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/developers/docs/design-and-ux/index.md).

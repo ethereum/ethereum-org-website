@@ -21,9 +21,10 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Ethplorer](https://ethplorer.io/) -_Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
-- [Rantom](https://rantom.app/) 
+- [Rantom](https://rantom.app/)
 - [Sirato](https://www.web3labs.com/sirato)
 - [EthVM](https://www.ethvm.com/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 
 ## Data {#data}
 

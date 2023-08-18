@@ -17,7 +17,7 @@ import {
 
 // Components
 import AssetDownload from "../components/AssetDownload"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
@@ -85,19 +85,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             </h1>
           </Center>
           <Center>
-            <Link to="/assets/#illustrations">
+            <InlineLink to="/assets/#illustrations">
               <Translation id="page-assets-illustrations" />
-            </Link>
+            </InlineLink>
           </Center>
           <Center>
-            <Link to="/assets/#historical">
+            <InlineLink to="/assets/#historical">
               <Translation id="page-assets-historical-artwork" />
-            </Link>
+            </InlineLink>
           </Center>
           <Center>
-            <Link to="/assets/#brand">
+            <InlineLink to="/assets/#brand">
               <Translation id="page-assets-ethereum-brand-assets" />
-            </Link>
+            </InlineLink>
           </Center>
         </Flex>
 

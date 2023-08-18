@@ -59,14 +59,14 @@ const BeaconChainActions: React.FC = () => {
 
   const datapoints: Array<CardListItem> = [
     {
-      title: "beaconscan",
+      title: t("consensus-beaconscan-title"),
       image: getImage(data.beaconscan)!,
       alt: "",
       link: "https://beaconscan.com",
       description: t("consensus-beaconscan-desc"),
     },
     {
-      title: "beaconcha.in",
+      title: t("consensus-beaconscan-in-title"),
       image: getImage(data.beaconchain)!,
       alt: "",
       link: "https://beaconcha.in",
@@ -78,12 +78,12 @@ const BeaconChainActions: React.FC = () => {
   const reads: Array<CardListItem> = [
     {
       title: t("page-upgrade-article-title-two-point-oh"),
-      description: "Status",
+      description: t("page-upgrade-article-author-status"),
       link: "https://our.status.im/two-point-oh-the-beacon-chain/",
     },
     {
       title: t("page-upgrade-article-title-beacon-chain-explainer"),
-      description: "Ethos.dev",
+      description: t("page-upgrade-article-author-ethos-dev"),
       link: "https://ethos.dev/beacon-chain/",
     },
     {

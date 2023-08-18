@@ -31,7 +31,7 @@ import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
 import ProductCard from "../components/ProductCard"
 import GhostCard from "../components/GhostCard"
-import Link from "../components/Link"
+import InlineLink, { BaseLink } from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
@@ -272,8 +272,8 @@ const StepBoxContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const StepBox = (props: ComponentPropsWithRef<typeof Link>) => (
-  <Link
+const StepBox = (props: ComponentPropsWithRef<typeof BaseLink>) => (
+  <BaseLink
     border="1px solid"
     borderColor="border"
     pt={0}
@@ -627,6 +627,20 @@ const DappsPage = ({
       image: getImage(data.pwn),
       alt: t("page-dapps-pwn-image-alt"),
     },
+    {
+      title: "Yearn",
+      description: t("page-dapps-dapp-description-yearn"),
+      link: "https://yearn.finance/",
+      image: getImage(data.yearn),
+      alt: t("page-dapps-yearn-image-alt"),
+    },
+    {
+      title: "Convex",
+      description: t("page-dapps-dapp-description-convex"),
+      link: "https://www.convexfinance.com/",
+      image: getImage(data.convex),
+      alt: t("page-dapps-convex-image-alt"),
+    },
   ]
 
   const dex = [
@@ -682,6 +696,13 @@ const DappsPage = ({
       image: getImage(data.loopring),
       alt: t("page-dapps-loopring-logo-alt"),
     },
+    {
+      title: "Synthetix",
+      description: t("page-dapps-dapp-description-synthetix"),
+      link: "https://synthetix.io/",
+      image: getImage(data.synthetix),
+      alt: t("page-dapps-sythetix-logo-alt"),
+    },
   ]
 
   const lottery = [
@@ -705,7 +726,7 @@ const DappsPage = ({
     {
       title: "Sablier",
       description: t("page-dapps-dapp-description-sablier"),
-      link: "https://pay.sablier.finance/",
+      link: "https://app.sablier.com",
       image: getImage(data.sablier),
       alt: t("page-dapps-sablier-logo-alt"),
     },
@@ -1050,9 +1071,9 @@ const DappsPage = ({
         </StyledH2>
         <Text>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
-          <Link to="/glossary/#transaction-fee">
+          <InlineLink to="/glossary/#transaction-fee">
             <Translation id="transaction-fees" />
-          </Link>
+          </InlineLink>
         </Text>
         <Row>
           <StepBoxContainer>
@@ -1496,9 +1517,9 @@ const DappsPage = ({
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             <Translation id="page-dapps-magic-behind-dapps-description" />
           </Text>
-          <Link to="/what-is-ethereum/">
+          <InlineLink to="/what-is-ethereum/">
             <Translation id="page-dapps-magic-behind-dapps-link" />
-          </Link>
+          </InlineLink>
         </Flex>
         <BoxGrid items={features} />
         <Row>
@@ -1552,7 +1573,7 @@ export const dappImage = graphql`
     childImageSharp {
       gatsbyImageData(
         width: 80
-        layout: CONSTRAINED
+        layout: FIXED
         placeholder: BLURRED
         quality: 100
       )
@@ -1654,6 +1675,9 @@ export const query = graphql`
       ...dappImage
     }
     compound: file(relativePath: { eq: "dapps/compound.png" }) {
+      ...dappImage
+    }
+    convex: file(relativePath: { eq: "dapps/convex.png" }) {
       ...dappImage
     }
     pooltogether: file(relativePath: { eq: "dapps/pooltogether.png" }) {
@@ -1776,10 +1800,16 @@ export const query = graphql`
     pwn: file(relativePath: { eq: "dapps/pwn.png" }) {
       ...dappImage
     }
+    yearn: file(relativePath: { eq: "dapps/yearn.png" }) {
+      ...dappImage
+    }
     balancer: file(relativePath: { eq: "dapps/balancer.png" }) {
       ...dappImage
     }
     dexguru: file(relativePath: { eq: "dapps/dexguru.png" }) {
+      ...dappImage
+    }
+    synthetix: file(relativePath: { eq: "dapps/synthetix.png" }) {
       ...dappImage
     }
   }

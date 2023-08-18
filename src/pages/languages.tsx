@@ -3,7 +3,6 @@ import {
   Flex,
   Heading,
   IconButton,
-  Input,
   LinkBox,
   LinkOverlay,
   Text,
@@ -13,7 +12,8 @@ import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React, { useState } from "react"
 import { MdClose } from "react-icons/md"
 
-import Link from "../components/Link"
+import InlineLink, { BaseLink } from "../components/Link"
+import Input from "../components/Input"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 
@@ -71,16 +71,16 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
         </Text>
         <Text>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
-          </Link>
+          </InlineLink>
           .
         </Text>
         <Text>
           <Translation id="page-languages-resources-paragraph" />{" "}
-          <Link to="/community/language-resources">
+          <InlineLink to="/community/language-resources">
             <Translation id="page-languages-resources-link" />
-          </Link>
+          </InlineLink>
           .
         </Text>
         <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
@@ -93,33 +93,24 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
           w="clamp(min(400px, 100%), 50%, 600px)"
         >
           <Input
-            border="1px solid"
-            borderColor="searchBorder"
-            color="text"
-            bg="searchBackground"
-            p={2}
-            pr={8}
-            borderRadius="0.25em"
             w="full"
-            _focus={{
-              outline: "auto 1px",
-              outlineColor: "primary.base",
-            }}
             value={keyword}
             placeholder={searchString}
             onChange={(e) => setKeyword(e.target.value)}
+            rightElement={
+              keyword !== "" && (
+                <IconButton
+                  icon={<MdClose />}
+                  onClick={resetKeyword}
+                  position="absolute"
+                  insetInlineEnd={1}
+                  aria-label={t("clear")}
+                  variant="icon"
+                  _hover={{ svg: { fill: "primary" } }}
+                />
+              )
+            }
           />
-          {keyword !== "" && (
-            <IconButton
-              icon={<MdClose />}
-              onClick={resetKeyword}
-              position="absolute"
-              insetInlineEnd={1}
-              aria-label={t("clear")}
-              variant="icon"
-              _hover={{ svg: { fill: "primary.base" } }}
-            />
-          )}
         </Box>
         <Flex my={8} wrap="wrap" w="full">
           {translationsCompleted.map((lang) => {
@@ -159,7 +150,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <LinkOverlay
-                    as={Link}
+                    as={BaseLink}
                     to={redirectTo}
                     language={lang.code}
                     textDecoration="none"
@@ -179,9 +170,9 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
         </Heading>
         <Text>
           <Translation id="page-languages-want-more-paragraph" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-want-more-link" />
-          </Link>
+          </InlineLink>
           .
         </Text>
       </Box>

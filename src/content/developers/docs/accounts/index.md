@@ -8,7 +8,7 @@ An Ethereum account is an entity with an ether (ETH) balance that can send trans
 
 ## Prerequisites {#prerequisites}
 
-Accounts are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read through our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
+To help you better understand this page, we recommend you first read through our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Account types {#types-of-account}
 
@@ -120,6 +120,8 @@ Watch Austin walk you through hash functions, and key pairs.
 <YouTube id="9LtBDy67Tho" />
 
 ## Further reading {#further-reading}
+
+- [Understanding Ethereum Accounts](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
