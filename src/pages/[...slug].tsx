@@ -3,16 +3,16 @@ import {
   Divider as ChakraDivider,
   Flex,
   Heading,
-  Image,
-  Link as ChakraLink,
   Text,
   chakra,
 } from "@chakra-ui/react"
 import { ParsedUrlQuery } from "querystring"
-import { MDXRemote } from "next-mdx-remote"
-import { useRouter } from "next/router"
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
+import Image from "next/image"
 import remarkGfm from "remark-gfm"
+import path from "path"
+import clamp from "lodash.clamp"
 
 import ButtonLink from "../components/ButtonLink"
 import DocLink from "../components/DocLink"
@@ -26,7 +26,7 @@ import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
 import YouTube from "../components/YouTube"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getRelativePath } from "@/lib/utils/relativePath"
+import rehypeImgSize from "@/lib/rehypeImgSize"
 
 import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
 import { ChildOnlyProp } from "@/lib/types"
@@ -37,7 +37,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 interface Props {
-  content: string
+  mdxSource: MDXRemoteSerializeResult
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -61,17 +61,22 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 ) => {
   const params = context.params!
   const markdown = getContentBySlug(params.slug.join("/"), ["slug", "content"])
+
+  const mdPath = path.join("/content", ...params.slug)
+  const mdDir = path.join("public", mdPath)
+
   // TODO: check if content type can be fixed
-  const content = (await serialize(markdown.content, {
+  const mdxSource = (await serialize(markdown.content, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
+      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }]],
     },
   })) as any
 
   return {
     props: {
-      content,
+      mdxSource,
     },
   }
 }
@@ -185,22 +190,32 @@ const ListItem = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
 )
 
-const Img = (img: any) => {
-  // use router to get correct image relative path inside /public/content/ dynamically
-  const router = useRouter()
-  // TODO: update how `imgRelativePath` is computed for translated assets inside /translations, will depend on value of locale after setting up i18n
-  const imgRelativePath = getRelativePath(router.asPath, img.src)
+interface MDImageProps {
+  src: string
+  alt: string
+  width: string
+  height: string
+  aspectRatio: string
+}
+
+const MDImage = ({ width, height, aspectRatio, ...rest }: MDImageProps) => {
+  const imageWidth = parseInt(width)
+  const imageHeight = parseInt(height)
+  const imageAspectRatio = parseInt(aspectRatio)
+
+  const finalWidth = clamp(imageWidth, CONTENT_IMAGES_MAX_WIDTH)
+  const finalHeight =
+    imageWidth > CONTENT_IMAGES_MAX_WIDTH
+      ? imageHeight * imageAspectRatio
+      : imageHeight
 
   return (
-    <ChakraLink href={imgRelativePath} isExternal>
-      <Image
-        src={imgRelativePath}
-        alt={img.alt}
-        maxW={CONTENT_IMAGES_MAX_WIDTH}
-      />
-    </ChakraLink>
+    <Flex as="span" justify="center">
+      <Image width={finalWidth} height={finalHeight} {...rest} />
+    </Flex>
   )
 }
+
 // code
 const components = {
   a: Link,
@@ -209,7 +224,7 @@ const components = {
   h3: Header3,
   h4: Header4,
   hr: HR,
-  img: Img,
+  img: MDImage,
   li: ListItem,
   p: Paragraph,
   pre: Pre,
@@ -226,7 +241,7 @@ const components = {
   YouTube,
 }
 
-const ContentPage: NextPage<Props> = ({ content }) => {
+const ContentPage: NextPage<Props> = ({ mdxSource }) => {
   return (
     <Box w="full">
       <Flex
@@ -259,7 +274,8 @@ const ContentPage: NextPage<Props> = ({ content }) => {
             },
           }}
         >
-          <MDXRemote {...(content as any)} components={components} />
+          {/* @ts-ignore */}
+          <MDXRemote {...mdxSource} components={components} />
         </Box>
       </Flex>
     </Box>

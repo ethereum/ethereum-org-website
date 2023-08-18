@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.11.0",
     "framer-motion": "^10.13.0",
     "gray-matter": "^4.0.3",
+    "lodash.clamp": "^4.0.3",
     "lodash.merge": "^4.6.2",
     "next": "13.4.13",
     "next-mdx-remote": "^4.4.1",
@@ -26,12 +27,15 @@
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
+    "@types/lodash.clamp": "^4.0.7",
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.4.10",
+    "image-size": "^1.0.2",
     "polished": "^4.2.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "unist-util-visit": "^5.0.0"
   }
 }
