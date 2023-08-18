@@ -25,7 +25,7 @@ import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import YouTube from "@/components/YouTube"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import rehypeImgSize from "@/lib/rehypeImgSize"
+import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
 
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
 import type { ChildOnlyProp } from "@/lib/types"
