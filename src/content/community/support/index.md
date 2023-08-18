@@ -60,6 +60,7 @@ Here are some popular examples:
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
+- [ChainIDE](https://discord.gg/6VCEWn6tUY)
 
 ## Running a node {#node-support}
 
