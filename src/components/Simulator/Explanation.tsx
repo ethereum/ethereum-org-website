@@ -53,14 +53,20 @@ const explanationData = {
         "The account isn't maintained by any company, only you have access to it",
       description: <></>,
     },
+    {
+      header: "Use recovery phrase to keep the account safe",
+      description: (
+        <Text>
+          The recovery phrase (sometimes called a seed phrase) is the key to
+          controlling your account.
+        </Text>
+      ),
+    },
   ],
 }
 
 export const Explanation: React.FC<SimulatorStateProps> = ({ state }) => {
   const { regressStepper, step, totalSteps, pathId } = state
-  // TODO: Import simulator step data, fetch header/description for current step
-  // const header = "Header text" as const
-  // const description = <Text>Description text here</Text>
   const { header, description } = explanationData[pathId][step]
 
   const Description: React.FC<BoxProps> = (props) => (

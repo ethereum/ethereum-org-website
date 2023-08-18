@@ -15,17 +15,20 @@ const DownArrowLong = motion(
   })
 )
 
-const ctaLabelsByStep = [
-  "Install a wallet",
-  "Open wallet",
-  "Create account",
-  "I understand",
-  "Next",
-]
+const ctaLabelsByStep = {
+  "create-account": [
+    "Install a wallet",
+    "Open wallet",
+    "Create account",
+    "",
+    "I understand",
+    "Next",
+  ],
+}
 
 export const ProgressCta: React.FC<SimulatorStateProps> = ({ state }) => {
-  const { progressStepper, step } = state
-  const ctaLabel = ctaLabelsByStep[step]
+  const { progressStepper, step, pathId } = state
+  const ctaLabel = ctaLabelsByStep[pathId][step]
   const transition = {
     duration: 2,
     times: [0, 0.25, 0.5],

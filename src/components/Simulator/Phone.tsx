@@ -1,10 +1,30 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Box, Flex, Grid, Icon, Spinner, Text } from "@chakra-ui/react"
 import type { SimulatorStateProps } from "../../interfaces"
 import { EthGlyphIcon, HomeScreen, ProgressCta } from "./"
 
+const GeneratingKeysComponent: React.FC<SimulatorStateProps> = ({ state }) => {
+  const { progressStepper } = state
+  useEffect(() => {
+    const timeout = setTimeout(progressStepper, 2100)
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [])
+  return (
+    <Grid placeItems="center" h="full">
+      <Flex direction="column" alignItems="center" pt={8} gap={4}>
+        <Spinner w="4.5rem" h="4.5rem" />
+        <Text textAlign="center" px={{ base: 4, md: 8 }}>
+          Generating your recovery phrase
+        </Text>
+      </Flex>
+    </Grid>
+  )
+}
 export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
   const { pathId, step } = state
+
   const screenData = {
     "create-account": [
       <>
@@ -38,20 +58,28 @@ export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
         </Flex>
         <ProgressCta state={state} />
       </>,
-      <Grid placeItems="center" h="full">
-        <Flex direction="column" alignItems="center" pt={8} gap={4}>
-          <Spinner w="4.5rem" h="4.5rem" />
-          <Text textAlign="center" px={{ base: 4, md: 8 }}>
-            Generating your recovery phrase
+      <GeneratingKeysComponent state={state} />,
+      <>
+        <Box py={8} px={{ base: 4, md: 8 }}>
+          <Text fontSize="2xl" lineHeight={8} fontWeight="bold">
+            Recovery phrase
           </Text>
-        </Flex>
-      </Grid>,
+          <Text>Ethereum accounts are controlled by recovery phrase.</Text>
+          <Text>
+            Any person knowing this secret recovery phrase can make transactions
+            on behalf of your account.
+          </Text>
+          <Text>
+            Wallet app providers do not have access to your account. Only you
+            have.
+          </Text>
+        </Box>
+        <ProgressCta state={state} />
+      </>,
     ],
   }
 
-  // TODO: Import simulator step data, fetch phone contents for current step
-  // const phoneContents = <Text>Hello world phone contents</Text>
-  const phoneContents = screenData[pathId][step]
+  const screen = screenData[pathId][step]
   return (
     <Box as="figure" w={{ base: "min(100%, 300px)", md: 286 }} mx="auto">
       {/* Phone frame */}
@@ -66,7 +94,7 @@ export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
         zIndex={1}
         overflow="hidden"
       >
-        {phoneContents}
+        {screen}
       </Box>
       {/* Phone drop shadow */}
       <Box
