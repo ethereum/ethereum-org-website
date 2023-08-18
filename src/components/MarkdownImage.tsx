@@ -22,6 +22,7 @@ const MarkdownImage = ({
   const imageHeight = parseInt(height)
   const imageAspectRatio = parseInt(aspectRatio)
 
+  // keep the size of the images proportional to the max width constraint on md pages
   const finalWidth = clamp(imageWidth, CONTENT_IMAGES_MAX_WIDTH)
   const finalHeight =
     imageWidth > CONTENT_IMAGES_MAX_WIDTH
@@ -29,6 +30,8 @@ const MarkdownImage = ({
       : imageHeight
 
   return (
+    // display the wrapper as a `span` to avoid dom nesting warnings as mdx
+    // sometimes wraps images in `p` tags
     <Flex as="span" justify="center">
       <Image width={finalWidth} height={finalHeight} {...rest} />
     </Flex>
