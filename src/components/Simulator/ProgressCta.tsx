@@ -45,27 +45,34 @@ export const ProgressCta: React.FC<SimulatorStateProps> = ({ state }) => {
       bottom="0"
       initial={{ opacity: 1 }}
     >
-      <MotionFlex
-        position="absolute"
-        direction="column"
-        alignItems="center"
-        top={-4}
-        insetInline={0}
-        color="primary.base"
-        initial={{ y: -4 }}
-        animate={{ y: [-4, -24, -4] }}
-        transition={transition}
-      >
-        <Text fontSize="xs" fontStyle="italic" textTransform="lowercase" m={0}>
-          click!
-        </Text>
-        <DownArrowLong
-          transformOrigin={{ top: 0 }}
-          initial={{ scaleY: 1 }}
-          animate={{ scaleY: [1, 1.5, 1] }}
+      {step === 0 && (
+        <MotionFlex
+          position="absolute"
+          direction="column"
+          alignItems="center"
+          top={-4}
+          insetInline={0}
+          color="primary.base"
+          initial={{ y: -4 }}
+          animate={{ y: [-4, -24, -4] }}
           transition={transition}
-        />
-      </MotionFlex>
+        >
+          <Text
+            fontSize="xs"
+            fontStyle="italic"
+            textTransform="lowercase"
+            m={0}
+          >
+            click!
+          </Text>
+          <DownArrowLong
+            transformOrigin={{ top: 0 }}
+            initial={{ scaleY: 1 }}
+            animate={{ scaleY: [1, 1.5, 1] }}
+            transition={transition}
+          />
+        </MotionFlex>
+      )}
       <Button w="full" onClick={progressStepper}>
         {ctaLabel}
       </Button>
