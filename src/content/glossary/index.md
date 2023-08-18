@@ -13,7 +13,7 @@ sidebarDepth: 2
 
 ### 51% attack {#51-attack}
 
-A type of attack on a decentralized [network](#network) where a group gains control of the majority of the staked ether securing the network. With the majority stake, they can determine what gets added to the blockchain. However, they cannot change the chain history unless they have over 66% of the staked ether.
+A type of attack on a decentralized [network](#network) where a group gains control of the majority of the decision making power regarding the contents of the chain. In Ethereum proof-of-stake this would be achieved by accumulating more than half of the total staked ether. This would allow an attacker to decide which new blocks are added to the blockchain. However, to revert the chain or double-spend an attacker would require at least 66% of the total staked ether.
 
 ## A {#section-a}
 
@@ -27,11 +27,11 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 ### address {#address}
 
-Most generally, this is 64 characters representing an [EOA](#eoa) or [contract](#contract-account) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
+A string of 64 characters representing an [EOA](#eoa) or [contract](#contract-account) account in Ethereum's state tree. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
 ### application binary interface (ABI) {#abi}
 
-ABIs are JSON files that define the functions and variables included in a [contract](#contract-account).
+A JSON file that defines the functions and variables included in a smart contract. The ABI allows bytecode to be mapped into human-readable formats.
 
 <DocLink to="/developers/docs/smart-contracts/compiling/#web-applications">
   ABI
@@ -128,7 +128,7 @@ The time interval between blocks being added to the blockchain.
 
 ### block validation {#block-validation}
 
-The process of checking that a new block contains valid transactions and signatures, builds on the heaviest historical chain (meaning the on with the most accumulated attestations), and follows all other consensus rules. Valid blocks are added to the end of the chain and propagated to others on the network. Invalid blocks are disregarded.
+The process of checking that a new block contains valid transactions and signatures, builds on the heaviest historical chain (meaning the oen that has accumulated the most attestations in its history), and follows all other consensus rules. Valid blocks are added to the head of the chain and propagated to others on the network. Invalid blocks are disregarded.
 
 ### blockchain {#blockchain}
 
@@ -140,11 +140,11 @@ A sequence of [blocks](#block), each linking to its predecessor all the way to t
 
 ### bootnode {#bootnode}
 
-The nodes which can be used to initiate the discovery process when running a node. The endpoints for a set of default bootnodes are generally included in Ethereum client source code, but users can also specify alternative bootnodes when they start their nodes.
+The nodes which can be used to initiate the discovery process when running a node. Bootnodes 'introduce' new nodes to other existing nodes so that they can quickly gain peers, rather than having to search for an initial peer. The endpoints of these nodes are usually provided in Ethereum client source code, but users can provide their own list of bootnodes.
 
 ### bytecode {#bytecode}
 
-Source code compiled into a compact, numeric form that can be efficiently executed by the EVM. Unlike human-readable source code which is expressed in some programming language, bytecode is expressed as a collection of bytes.
+Code expressed in a compact, numeric form so that it can be executed efficiently by the [EVM](#ethereum-virtual-machine).
 
 ### Byzantium fork {#byzantium-fork}
 
@@ -172,7 +172,7 @@ Converting code written in a high-level programming language (e.g., [Solidity](#
 
 ### committee {#committee}
 
-A group of at least 128 [validators](#validator) assigned to validate blocks in each slot. One of the validators in the committee is the aggregator, responsible for aggregating the signatures of all other validators in the committee that agree on an attestation. Not to be confused with [sync committee](#sync-committee).
+A group of at least 128 [validators](#validator) assigned to validate blocks in each slot. One of the validators in the committee is the aggregator, responsible for aggregating the signatures of all other validators in the committee that agree on an attestation. Committees rotate such that every active validator attests in every [epoch](#epoch). Not to be confused with [sync committee](#sync-committee).
 
 ### computational infeasibility {#computational-infeasibility}
 
@@ -180,11 +180,11 @@ A process is computationally infeasible if it would take an impracticably long t
 
 ### consensus {#consensus}
 
-When a supermajority of nodes on the network all have the same blocks in their locally validated best blockchain. Not to be confused with [consensus rules](#consensus-rules).
+When a supermajority of nodes on the network all have the same blocks in their local copy of the blockchain. Not to be confused with [consensus rules](#consensus-rules).
 
 ### consensus client {#consensus-client}
 
-Consensus clients (such as Prysm, Teku, Nimbus, Lighthouse, Lodestar) run Ethereum's [proof-of-stake](#pos) consensus algorithm allowing the network to reach agreement about the head of the Beacon Chain. Consensus clients do not participate in validating/broadcasting transactions or executing state transitions. This is done by [execution clients](#execution-client).
+Consensus clients (such as Prysm, Teku, Nimbus, Lighthouse, Lodestar) run Ethereum's [proof-of-stake](#pos) consensus algorithm allowing the network to reach agreement about the head of the Beacon Chain. Consensus clients do not participate in validating/broadcasting transactions or executing state transitions. This is done by [execution clients](#execution-client). Consensus client do not attest to, or propose new blocks. This is done by the [validator client](#validator) which is an optional add-on to the consensus client.
 
 ### consensus layer {#consensus-layer}
 
@@ -214,6 +214,8 @@ A special [transaction](#transaction) that includes a contract's initiation code
 
 The economics of cryptocurrencies.
 
+<Divider />
+
 ## D {#section-d}
 
 ### Đ {#d-with-stroke}
@@ -242,7 +244,7 @@ The concept of moving the control and execution of processes away from a central
 
 ### decentralized autonomous organization (DAO) {#dao}
 
-A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a [hard fork](#hard-fork) (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
+A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a [hard fork](#hard-fork) (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two separate networks.
 
 <DocLink to="/dao/">
   Decentralized autonomous organizations (DAOs)
@@ -284,8 +286,6 @@ Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) 
 
 A short string of data a user produces for a document using a [private key](#private-key) such that anyone with the corresponding [public key](#public-key), the signature, and the document can verify that (1) the document was "signed" by the owner of that particular private key, and (2) the document was not changed after it was signed.
 
-<Divider />
-
 ### discovery {#discovery}
 
 The process by which an Ethereum node finds other nodes to connect to.
@@ -297,6 +297,8 @@ A data structure containing `(key, value)` pairs used by Ethereum nodes to ident
 ### double spend {#double-spend}
 
 A deliberate blockchain fork, where a user with a sufficiently large amount of mining power/stake sends a transaction moving some currency off-chain (e.g. exiting into fiat money or making an off-chain purchase) then reorganizing the blockchain to remove that transaction. A successful double spend leaves the attacker with both their on and off-chain assets.
+
+<Divider />
 
 ## E {#section-e}
 
@@ -426,7 +428,7 @@ A service carried out via [smart contract](#smart-contract) that dispenses funds
 
 ### finality {#finality}
 
-Finality is the guarantee that a set of transactions before a given time will not change and can't be reverted.
+Finality is the guarantee that a set of transactions cannot be changed without a huge amount of ETH being lost.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
   Proof-of-stake finality
@@ -438,15 +440,15 @@ A denomination of [ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<su
 
 ### fork {#fork}
 
-A change in protocol causing the creation of an alternative chain or a temporal divergence into two potential block paths.
+A change in protocol causing the creation of an alternative chain.
 
 ### fork-choice algorithm {#fork-choice-algorithm}
 
-The algorithm used to identify the head of the blockchain. On the execution layer the head of the chain is identified as the one with the greatest total difficulty behind it. This means the true head of the chain is the one that required the most work to mine it. On the consensus layer the algorithm observes the accumulated attestations from validators ([LMD_GHOST](#lmd-ghost)).
+The algorithm used to identify the head of the blockchain. On Ethereum the head of the chain is identified as the fork with the greatest "weight" of attestations. The weight is the product of the number of attestations and the effective balance of the attesting validators. This means the true head of the chain is the one that most staked ether has voted for. On the consensus layer the fork choice algorithm is called [LMD_GHOST](#lmd-ghost).
 
 ### fraud proof {#fraud-proof}
 
-A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](#rollups) into batches and submitted to Ethereum in a single transaction. They are assumed valid but can be challenged if fraud is suspected. A fraud proof will then run the transaction to see if fraud took place. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [validity proofs](#validity-proof).
+A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](#rollups) into batches and submitted to Ethereum in a single transaction. Other network participants can re-execute the transactions to check that they were executed honestly. If they uncover a discrepancy between the posted data and their own version they can post a cryptographic proof that demonstrates where some fraud took place. Some [rollups](#rollups) use [validity proofs](#validity-proof).
 
 <DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Optimistic rollups
@@ -504,7 +506,7 @@ A fixed-length fingerprint of variable-size input, produced by a hash function. 
 
 ### hashrate {#hash-rate}
 
-The number of hash calculations made per second by computers running mining software.
+The number of hash calculations made per second by computers running proof-of-work mining software.
 
 ### HD wallet {#hd-wallet}
 
@@ -556,11 +558,11 @@ Once a [contract's](#smart-contract) (or [library's](#library)) code is deployed
 
 A [transaction](#transaction) sent from a [contract account](#contract-account) to another contract account or an [EOA](#eoa) (see [message](#message)).
 
-<Divider />
-
 ### issuance
 
 The minting of new ether to reward block proposal, attestation and whistle-blowing.
+
+<Divider />
 
 ## K {#section-k}
 
