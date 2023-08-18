@@ -7762,7 +7762,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/9850322?v=4",
       "profile": "http://setharielgreen.com",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -10392,6 +10393,16 @@
       "profile": "https://github.com/perriefidelis",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "woseK",
+      "name": "woseK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110729731?v=4",
+      "profile": "https://github.com/woseK",
+      "contributions": [
+        "content",
+        "bug"
       ]
     }
   ],

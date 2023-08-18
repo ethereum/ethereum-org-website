@@ -5,9 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software application, known as a client, must be run on your computer to turn it into an Ethereum node.
-
-**Note: it is not possible to run an execution client on its own anymore. After [The Merge](/roadmap/merge), both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network.**
+Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software must be run on your computer to turn it into an Ethereum node. There are two separate pieces of software (known as 'clients') required to form a node.
 
 ## Prerequisites {#prerequisites}
 
@@ -17,19 +15,12 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 
 ## What are nodes and clients? {#what-are-nodes-and-clients}
 
-A "node" is any instance of Ethereum client software that is connected to other computers also running Ethereum software, forming a network. A client is an implementation of Ethereum that verifies data against the protocol rules and keeps the network secure.
-
-Post-Merge Ethereum consists of two parts: the execution layer and the consensus layer. Both layers are run by different client software. On this page, we'll refer to them as the execution client and consensus client.
+A "node" is any instance of Ethereum client software that is connected to other computers also running Ethereum software, forming a network. A client is an implementation of Ethereum that verifies data against the protocol rules and keeps the network secure. A node has to run two clients: a consensus client and an execution client.
 
 - The execution client (also known as the Execution Engine, EL client or formerly the Eth1 client) listens to new transactions broadcasted in the network, executes them in EVM, and holds the latest state and database of all current Ethereum data.
-- The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client.
+- The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client. There is also a third piece of software, known as a 'validator' that can be added to the consensus client, allowing a node to participate in securing the network.
 
-Before [The Merge](/roadmap/merge/), consensus and execution layer were separate networks, with all transactions and user activity on the Ethereum happening at what is now the execution layer. One client software provided both execution environment and consensus verification of blocks produced by miners.
-The consensus layer, [the Beacon Chain](/roadmap/beacon-chain/), has been running separately since December 2020. It introduced proof-of-stake and coordinated the network of validators based on data from the Ethereum network.
-
-With the Merge, Ethereum transitions to proof-of-stake by connecting these networks. Execution and consensus clients work together to verify Ethereum's state.
-
-Modular design with various software pieces working together is called [encapsulated complexity](https://vitalik.ca/general/2022/02/28/complexity.html). This approach makes it easier to execute The Merge seamlessly and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
+These clients work together to keep track of the head of the Ethereum chain and allow users to interact with the Ethereum network. The modular design with multiple pieces of software working together is called [encapsulated complexity](https://vitalik.ca/general/2022/02/28/complexity.html). This approach made it easier to execute [The Merge](/roadmap/merge) seamlessly, makes client software easier to maintain and develop, and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
 
 ![Coupled execution and consensus clients](./eth1eth2client.png)
 Simplified diagram of a coupled execution and consensus client.
@@ -65,21 +56,16 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Full node {#full-node}
 
+Full nodes do a block-by-block validation of the blockchain, including downloading and verifying the block body and state data for each block. There are different classes of full node - some start from the genesis block and verify every single block in the entie history of the blockchain. Others start their verification at a more recent block that they trust to be valid (e.g. Geth's 'snap sync'). Regardless of where the verification starts, full nodes only keep a local copy of relatively recent data (typically the msot recent 128 blocks), allowing older data to be deleted to save disk space. Older data can be regenerated when it is needed.
+
 - Stores full blockchain data (although this is periodically pruned so a full node does not store all state data back to genesis)
 - Participates in block validation, verifies all blocks and states.
-- All states can be derived from a full node (although very old states are reconstructed from requests made to archive nodes).
+- All states can be either retrieved from local storage or regenerated from 'snapshots' by a full node.
 - Serves the network and provides data on request.
 
-### Light node {#light-node}
-
-Instead of downloading every block, light nodes download block headers. These headers only contain summary information about the contents of the blocks. Any other information required by the light node gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality and security guarantees as a full node.
-
-Light clients are an area of active development for Ethereum and we expect to see new light clients for the consensus layer and execution layer soon.
-There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
-
-Ethereum does not support a large population of light nodes yet, but light node support is an area expected to develop rapidly in the near future. In particular, clients like [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios), and [LodeStar](https://lodestar.chainsafe.io/) are currently heavily focused on light nodes.
-
 ### Archive node {#archive-node}
+
+Archive nodes are full nodes that verify every block from genesis and never delete any of the downloaded data.
 
 - Stores everything kept in the full node and builds an archive of historical states. It is needed if you want to query something like an account balance at block #4,000,000, or simply and reliably test your own transactions set without mining them using tracing.
 - This data represents units of terabytes, which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics.
@@ -87,6 +73,15 @@ Ethereum does not support a large population of light nodes yet, but light node 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical states but the full node is able to build them on demand.
 
 Learn more about [Archive nodes](/developers/docs/nodes-and-clients/archive-nodes).
+
+### Light node {#light-node}
+
+Instead of downloading every block, light nodes only download block headers. These headers contain summary information about the contents of the blocks. Any other information the light node requires gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality and security guarantees as a full node.
+
+Light clients are an area of active development for Ethereum and we expect to see new light clients for the consensus layer and execution layer soon.
+There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
+
+Ethereum does not support a large population of light nodes yet, but light node support is an area expected to develop rapidly in the near future. In particular, clients like [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios), and [LodeStar](https://lodestar.chainsafe.io/) are currently heavily focused on light nodes.
 
 ## Why should I run an Ethereum node? {#why-should-i-run-an-ethereum-node}
 
@@ -97,9 +92,9 @@ Running a node allows you to directly, trustlessly and privately use Ethereum wh
 Running your own node enables you to use Ethereum in a private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
 
 - Your node verifies all the transactions and blocks against consensus rules by itself. This means you don’t have to rely on any other nodes in the network or fully trust them.
-- You can use an Ethereum wallet with your own node. You can use dapps more securely and privately because you won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), and [many other wallets](/wallets/find-wallet/) offer RPC-importing, allowing them to use your node.
+- You can use an Ethereum wallet with your own node. You can use dapps more securely and privately because you won't have to leak your addresses and balances to intermediaries. Everything can be checked with your own client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), and [many other wallets](/wallets/find-wallet/) offer RPC-importing, allowing them to use your node.
 - You can run and self-host other services which depend on data from Ethereum. For example, this might be a Beacon Chain validator, software like layer 2, infrastructure, block explorers, payment processors, etc.
-- You can provide your own custom [RPC endpoints](/developers/docs/apis/json-rpc/). Publicly for the community or even privately hosted Ethereum endpoint enables people to use your node and avoid big centralized providers.
+- You can provide your own custom [RPC endpoints](/developers/docs/apis/json-rpc/). You could even offer these endpoints publicly to the community to help them avoid big centralized providers.
 - You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which helps a lot, e.g. when processing a lot of data using web3 libraries or when you need to replace your transactions as fast as possible (i.e. frontrunning).
 - You can directly stake ETH to secure the network and earn rewards. See [solo staking](/staking/solo/) to get started.
 
@@ -112,9 +107,9 @@ A diverse set of nodes is important for Ethereum’s health, security and operat
 - Full nodes enforce the consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, validators could attack the network.
 - In case of an attack which overcomes the crypto-economic defenses of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/#what-is-pos), a social recovery can be performed by full nodes choosing to follow the honest chain.
 - More nodes in the network result in a more diverse and robust network, the ultimate goal of decentralization, which enables a censorship-resistant and reliable system.
-- They provide access to blockchain data for lightweight clients that depend on it. In high peaks of usage, there need to be enough full nodes to help light nodes sync. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/developers/docs/blocks/#block-anatomy). They can request more information from blocks if they need it.
+- Full nodes provide access to blockchain data for lightweight clients that depend on it. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/developers/docs/blocks/#block-anatomy). They can request more information from full nodes if they need it.
 
-If you run a full node, the whole Ethereum network benefits from it.
+If you run a full node, the whole Ethereum network benefits from it, even if you don't run a validator.
 
 ## Running your own node {#running-your-own-node}
 
@@ -132,7 +127,7 @@ If somebody runs an Ethereum node with a public API in your community, you can p
 
 On the other hand, if you run a client, you can share it with your friends who might need it.
 
-## Execution clients (formerly 'Eth1 clients') {#execution-clients}
+## Execution clients {#execution-clients}
 
 The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more [diverse](/developers/docs/nodes-and-clients/client-diversity/). The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
@@ -144,8 +139,6 @@ This table summarizes the different clients. All of them pass [client tests](htt
 | [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap (without serving), Fast, Full | Archive, Pruned |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap, Fast, Full                   | Archive, Pruned |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Full                               | Archive, Pruned |
-
-**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use another client implementation!
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -177,9 +170,9 @@ Nethermind is an Ethereum implementation created with the C# .NET tech stack, li
 
 Nethermind also has [detailed documentation](https://docs.nethermind.io), strong dev support, an online community and 24/7 support available for premium users.
 
-## Consensus clients (formerly 'Eth2' clients) {#consensus-clients}
+## Consensus clients {#consensus-clients}
 
-There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide a proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are responsible for all consensus-related logic including the fork-choice algorithm, processing attestations and managing [proof-of-stake](/developers/docs/consensus-mechanisms/pos) rewards and penalties.
 
 | Client                                                        | Language   | Operating systems     | Networks                                                          |
 | ------------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------------------------------- |
@@ -205,11 +198,6 @@ More information can be found on our [Lodestar website](https://lodestar.chainsa
 
 Nimbus is a consensus client implementation written in Nim under the Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. Nimbus is designed for resource efficiency, making it easy to run on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has a greater margin of safety when the network is under stress.
 
-Implemented by Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
-
-- Syncs state first and enables you to query RPC in a few minutes.
-- Still in development and not fully reliable, background sync is slowed down and RPC responses might fail.
-
 Learn more in [Nimbus docs](https://nimbus.guide/)
 
 ### Prysm {#prysm}
@@ -234,19 +222,21 @@ Synchronization modes represent different approaches to this process with variou
 
 ### Execution layer sync modes {#execution-layer-sync-modes}
 
-#### Full sync {#full-sync}
+#### Full archive sync {#full-sync}
 
 Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
 
 - Minimizes trust and offers the highest security by verifying every transaction.
 - With an increasing number of transactions, it can take days to weeks to process all transactions.
 
-#### Fast sync {#fast-sync}
+#### Full snap sync {#snap-sync}
 
-Fast sync downloads all blocks (including headers, transactions, and receipts), verifies all headers, downloads the state and verifies it against the headers.
+Snap sync verifies the chain block-by-block, just like a full archive sync; however, instead of starting at the genesis block, it starts at a more recent 'trusted' checkpoint that is known to be part of the true blockchain. The node saves periodic checkpoints while deleting data older than a certain age. Those snapshots are used to regenerate state data when it is needed, rather than having to store it all forever.
 
-- Relies on the security of the consensus mechanism.
-- Synchronization takes only a few hours.
+- Fastest sync strategy, currently default in Ethereum mainnet
+- Saves a lot of disk usage and network bandwidth without sacrificing security
+
+[More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
 #### Light sync {#light-sync}
 
@@ -258,15 +248,6 @@ Light client mode downloads all block headers, block data, and verifies some ran
 **NB** Light sync does not yet work with proof-of-stake Ethereum - new versions of light sync should ship soon!
 
 [More on light clients](/developers/docs/nodes-and-clients/light-clients/)
-
-#### Snap sync {#snap-sync}
-
-Snap sync is the latest approach to syncing a client, pioneered by the Geth team. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
-
-- Fastest sync strategy, currently default in Ethereum mainnet
-- Saves a lot of disk usage and network bandwidth without sacrificing security
-
-[More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
 ### Consensus layer sync modes {#consensus-layer-sync-modes}
 
