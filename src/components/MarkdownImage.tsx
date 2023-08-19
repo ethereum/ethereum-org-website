@@ -18,9 +18,9 @@ const MarkdownImage = ({
   aspectRatio,
   ...rest
 }: MarkdownImageProps) => {
-  const imageWidth = parseInt(width)
-  const imageHeight = parseInt(height)
-  const imageAspectRatio = parseInt(aspectRatio)
+  const imageWidth = parseFloat(width)
+  const imageHeight = parseFloat(height)
+  const imageAspectRatio = parseFloat(aspectRatio)
 
   // keep the size of the images proportional to the max width constraint on md pages
   const finalWidth = clamp(imageWidth, CONTENT_IMAGES_MAX_WIDTH)
