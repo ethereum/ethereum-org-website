@@ -24,7 +24,7 @@ const MarkdownImage = ({
   // keep the size of the images proportional to the max width constraint
   if (imageWidth > CONTENT_IMAGES_MAX_WIDTH) {
     imageWidth = CONTENT_IMAGES_MAX_WIDTH
-    imageHeight = imageHeight * imageAspectRatio
+    imageHeight = CONTENT_IMAGES_MAX_WIDTH / imageAspectRatio
   }
 
   return (
