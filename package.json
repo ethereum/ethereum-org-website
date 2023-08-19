@@ -27,6 +27,7 @@
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
+    "@types/hast": "^3.0.0",
     "@types/lodash.clamp": "^4.0.7",
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
@@ -36,6 +37,7 @@
     "image-size": "^1.0.2",
     "polished": "^4.2.2",
     "typescript": "^5.1.6",
+    "unified": "^10.0.0",
     "unist-util-visit": "^5.0.0"
   }
 }
