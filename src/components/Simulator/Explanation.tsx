@@ -1,5 +1,13 @@
 import React from "react"
-import { Box, type BoxProps, Flex, Icon, Text } from "@chakra-ui/react"
+import {
+  Box,
+  type BoxProps,
+  Flex,
+  Icon,
+  Text,
+  UnorderedList,
+  ListItem,
+} from "@chakra-ui/react"
 import { MdChevronLeft, MdInfoOutline } from "react-icons/md"
 import Button from "../Button"
 import Tooltip from "../Tooltip"
@@ -55,6 +63,44 @@ const explanationData = {
     },
     {
       header: "Use recovery phrase to keep the account safe",
+      description: (
+        <Text>
+          The recovery phrase (sometimes called a seed phrase) is the key to
+          controlling your account.
+        </Text>
+      ),
+    },
+    {
+      header: "Keep it safe!",
+      description: (
+        <>
+          <Text fontWeight="bold" m={0}>
+            Storing smaller amount of funds:
+          </Text>
+          {/* TODO: Add checks and x's as list marker */}
+          <UnorderedList listStyleType="none">
+            <ListItem>Backup file in cloud storage</ListItem>
+          </UnorderedList>
+          <Text fontWeight="bold" m={0}>
+            Storing significant funds:
+          </Text>
+          <UnorderedList listStyleType="none">
+            <ListItem>Use durable offline method</ListItem>
+            <ListItem>Use a hardware wallet</ListItem>
+          </UnorderedList>
+          <Text fontWeight="bold" m={0}>
+            Risky ways to store your recovery phrase:
+          </Text>
+          <UnorderedList listStyleType="none">
+            <ListItem>Texting it to a friend</ListItem>
+            <ListItem>Taking a picture of the phrase</ListItem>
+            <ListItem>Saving it in a file on your computer</ListItem>
+          </UnorderedList>
+        </>
+      ),
+    },
+    {
+      header: "You may be asked to repeat it to ensure you saved it",
       description: (
         <Text>
           The recovery phrase (sometimes called a seed phrase) is the key to
