@@ -49,7 +49,7 @@ There are several light clients in development, including execution, consensus a
 
 To our knowledge none of these are considered production-ready yet.
 
-There is also a lot of work being done to improve the ways that light clients can access Ethereum data. Currently, light clients rely on RPC requests to full nodes using a client/server model, but in the future the data could be requested in a more decentralized way using a dedicated network such as the [Portal Network](https://www.ethportal.net/) that could serve the data to light clients using a peer-to-peer gossip protocol.
+There is also a lot of work being done to improve the ways that light clients can access Ethereum data. Currently, light clients rely on RPC requests to full nodes using a client/server model, but in the future the data could be requested in a more decentralized way using a dedicated network such as the [Portal Network](/developers/docs/networking-layer/portal-network/) that could serve the data to light clients using a peer-to-peer gossip protocol.
 
 Other [roadmap](/roadmap/) items such as [Verkle trees](/roadmap/verkle-trees/) and [statelessness](/roadmap/statelessness/) will eventually bring the security guarantees of light clients equal to those of full clients.
 
