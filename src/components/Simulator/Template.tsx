@@ -7,7 +7,7 @@ export const Template: React.FC = (/* { pathId } */) => {
   const pathId = "create-account" as const // TODO: Pass as prop
   const [step, setStep] = useState<number>(0)
   // TODO: Use pathId to pull simulator information, including steps/totalSteps
-  const totalSteps = 5 as const
+  const totalSteps = 7 as const
   const progressStepper = (): void => {
     setStep((step) => Math.min(step + 1, totalSteps - 1))
   }

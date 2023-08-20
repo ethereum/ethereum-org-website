@@ -43,6 +43,7 @@ export const SimulatorModal: React.FC<IProps> = ({
         borderRadius="md"
         overflow="auto"
         minH="unset"
+        h="100%"
         maxH={{
           base: "calc(100vh - 1rem)",
           md: "min(calc(100vh - 2rem), 792px)",
