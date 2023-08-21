@@ -588,7 +588,7 @@ Cryptographic [hash](#hash) function used in Ethereum. Keccak-256 was standardiz
 
 ### layer 2 {#layer-2}
 
-An area of development focused on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
+An area of development focused on moving transactions off of Ethereum layer-1 to enable Ethereum to scale. These improvements reduce transaction fees for users.
 
 <DocLink to="/layer-2/">
   Layer 2
@@ -632,7 +632,7 @@ Memory hard functions are processes that experience a drastic decrease in speed 
 
 ### Merkle Patricia trie {#merkle-patricia-tree}
 
-A data structure used in Ethereum to efficiently store key-value pairs.
+A [data structure](developers/docs/data-structures-and-encoding) used in Ethereum to efficiently store key-value pairs.
 
 ### message {#message}
 
@@ -648,7 +648,7 @@ The third development stage of Ethereum, launched in October 2017.
 
 ### mining {#mining}
 
-The process of repeatedly hashing a block header while incrementing a [nonce](#nonce) until the result contains an arbitrary number of leading binary zeros. This is the process by which new [blocks](#block) are added to a proof-of-work [blockchain](#blockchain). This was how Ethereum was secured before it moved to [proof-of-stake](#pos).
+The process of repeatedly hashing a block header while incrementing a [nonce](#nonce) until the result contains a certain number of leading binary zeros. This is the process by which new [blocks](#block) are added to a proof-of-work [blockchain](#blockchain). This was how Ethereum was secured before it moved to [proof-of-stake](#pos).
 
 ### miner {#miner}
 
@@ -680,7 +680,7 @@ The collective [hashrate](#hashrate) produced by an entire mining network. Minin
 
 ### non-fungible token (NFT) {#nft}
 
-Also known as a "deed," this is a token standard introduced by the ERC-721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ETH and [ERC-20 tokens](#token-standard). NFTs can represent ownership of digital or physical assets.
+An instance of one of several contract standards, commonly [ERC-721](developers/docs/standards/tokens/erc-721) or [ERC-1155](developers/docs/standards/tokens/erc-1155). Each token is unique and distinct; they are not interchangeable like ETH and [ERC-20 tokens](#token-standard). NFTs can represent ownership of digital or physical assets.
 
 <DocLink to="/nft/">
   Non-Fungible Tokens (NFTs)
@@ -707,7 +707,7 @@ In cryptography, a value that can only be used once. An account nonce is a trans
 
 ### ommer (uncle) block {#ommer}
 
-When a proof-of-work [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain first. This valid, but stale, block can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle". This was relevant for Ethereum when it was a [proof-of-work](pow) network, but ommers are not a feature of [proof-of-stake](#pos) Ethereum because precisely one block proposer is selected in each slot.
+When a proof-of-work [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain first. This valid, but stale, block can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle". This was common for Ethereum when it was a [proof-of-work](#pow) network. Now that Ethereum uses [proof-of-stake](#pos), only one block proposer is selected per slot.
 
 ### optimistic rollup {#optimistic-rollup}
 
@@ -728,10 +728,6 @@ An oracle is a bridge between the [blockchain](#blockchain) and the real world. 
 <Divider />
 
 ## P {#section-p}
-
-### parity {#parity}
-
-One of the most prominent interoperable implementations of the Ethereum client software.
 
 ### peer {#peer}
 
@@ -767,7 +763,7 @@ A method by which a cryptocurrency blockchain protocol aims to achieve distribut
 
 ### proof-of-work (PoW) {#pow}
 
-A piece of data (the proof) that requires significant computation to find.
+A security mechanism for blockchains that requires nodes to expend energy in the form of computation to find a certain value.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/">
   Proof-of-work
@@ -795,11 +791,11 @@ An attack that consists of an attacker contract calling a victim contract functi
 
 ### reward {#reward}
 
-An amount of ether included in each new block as a reward by the network to the [miner](#miner) who found the [proof-of-work](#pow) solution.
+An amount of ether [awarded to validators](developers/docs/consensus-mechanisms/pos/rewards-and-penalties) that perform certain functions, including proposing a block or participating in a sync-committee, in each slot.
 
 ### Recursive Length Prefix (RLP) {#rlp}
 
-An encoding standard designed by the Ethereum developers to encode and serialize objects (data structures) of arbitrary complexity and length.
+An [encoding standard](developers/docs/data-structures-and-encoding) designed by the Ethereum developers to encode and serialize objects (data structures) of arbitrary complexity and length.
 
 ### rollups {#rollups}
 
@@ -835,7 +831,7 @@ The process of converting a data structure into a sequence of bytes.
 
 ### shard / shard chain {#shard}
 
-Shard chains are discrete sections of the total blockchain that subsets of validators can be responsible for. This will offer increased transaction throughput for Ethereum and improve data availability for [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
+Shard chains are discrete sections of the total blockchain that subsets of validators can be responsible for. This was originally intended to be the way that Ethereum scaled to millions of transactions per second, but it has now been superseded by the rapid development of scaling using [rollups](#rollups).
 
 <DocLink to="/roadmap/danksharding">
   Danksharding
@@ -975,7 +971,7 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 
 ### terminal total difficulty (TTD) {#terminal-total-difficulty}
 
-The total difficulty is the sum of the Ethash mining difficulty for all blocks up to some specific point in the blockchain. The terminal total difficulty is a specific value for the total difficulty that was used as the trigger for execution clients to switch off their mining and block gossip functions enabling the network to transition to proof-of-stake.
+The total difficulty is the sum of the Ethash mining difficulty for all blocks up to some specific point in the blockchain. The terminal total difficulty is a specific value for the total difficulty that was used as the trigger for execution clients to switch off their mining and block gossip functions enabling the network to transition to proof-of-stake. It is no longer relevant because Ethereum moved to [proof-of-stake](#pos).
 
 ### testnet {#testnet}
 
@@ -991,7 +987,7 @@ A tradable virtual good defined in smart contracts on the Ethereum blockchain.
 
 ### token standard {#token-standard}
 
-Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangeable, unlike [NFTs](#nft).
+A standardized [smart contract](#smart-contract) structure for tokens.
 
 <DocLink to="/developers/docs/standards/tokens/erc-20/">
   ERC-20 Token Standard
