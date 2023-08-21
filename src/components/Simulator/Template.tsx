@@ -4,20 +4,28 @@ import { Explanation, Phone } from "./"
 import type { SimulatorState } from "../../interfaces"
 import { simulatorData } from "./data"
 
-export const Template: React.FC = (/* { pathId } */) => {
-  const pathId = "create-account" as const // TODO: Pass as prop
+interface IProps {
+  pathId?: string
+}
+
+// TODO: Remove fallback path and make pathId required
+export const Template: React.FC<IProps> = ({ pathId = "create-account" }) => {
   const [step, setStep] = useState<number>(0)
   const totalSteps: number =
     simulatorData[pathId].stepDetails.explanations.length
+
   const progressStepper = (): void => {
     setStep((step) => Math.min(step + 1, totalSteps - 1))
   }
+
   const regressStepper = (): void => {
     setStep((step) => Math.max(step - 1, 0))
   }
+
   const resetStepper = (): void => {
     setStep(0)
   }
+
   const state: SimulatorState = {
     pathId,
     step,

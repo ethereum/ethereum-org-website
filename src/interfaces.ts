@@ -4,7 +4,7 @@ export interface Messages {
   [key: string]: string
 }
 
-export interface PathOption {
+export interface SimulatorPathSummary {
   primaryText: string
   secondaryText?: string
   iconName: string
@@ -33,6 +33,7 @@ export interface SimulatorDetails {
     explanations: Array<SimulatorExplanation>
     ctaLabels: Array<string>
   }
+  pathSummary: SimulatorPathSummary
 }
 
 export interface SimulatorData {

@@ -1,27 +1,15 @@
-import { Flex, Grid, Text } from "@chakra-ui/react"
-import React from "react"
-import { PathButton } from "./index"
-import type { PathOption } from "../../interfaces"
+import { Flex, Grid, Text, useDisclosure } from "@chakra-ui/react"
+import React, { useState } from "react"
+import { PathButton, SimulatorModal, Template } from "."
+import { simulatorData } from "./data"
 
 export const StartingPoint: React.FC = () => {
-  const pathOptions: Array<PathOption> = [
-    {
-      primaryText: "Create account",
-      secondaryText: "How to?",
-      iconName: "EthWalletIcon",
-    },
-    {
-      primaryText: "Send/receive",
-      secondaryText: "How to?",
-      iconName: "WalletAppIcon",
-    },
-    {
-      primaryText: "Connect to Web3",
-      secondaryText: "How to?",
-      iconName: "ConnectWeb3Icon",
-    },
-  ]
-
+  const [pathId, setPathId] = useState<string | null>()
+  const disclosure = useDisclosure()
+  const handleClick = (pathId: string): void => {
+    setPathId(pathId)
+    disclosure.onOpen()
+  }
   return (
     <Grid
       bg="cardGradient"
@@ -65,11 +53,14 @@ export const StartingPoint: React.FC = () => {
           w={{ base: "min(100%, 320px)", md: "300px" }}
           minW={{ md: "300px" }}
         >
-          {pathOptions.map((pathOption) => (
-            <PathButton pathOption={pathOption} />
+          {Object.keys(simulatorData).map((pathId) => (
+            <PathButton pathId={pathId} handleClick={handleClick} />
           ))}
         </Flex>
       </Flex>
+      <SimulatorModal disclosure={disclosure}>
+        {pathId && <Template pathId={pathId} />}
+      </SimulatorModal>
     </Grid>
   )
 }

@@ -1,25 +1,18 @@
 import React, { type ComponentType, type SVGProps } from "react"
 import { Button, Flex, Text } from "@chakra-ui/react"
-import type { PathOption } from "../../interfaces"
-
-const getIconFromName = (
-  iconName: string
-): ComponentType<SVGProps<SVGElement>> => {
-  const { [iconName]: Icon } = require("./icons")
-  return Icon
-}
+import type { SimulatorPathSummary } from "../../interfaces"
+import { simulatorData } from "./data"
 
 interface IProps {
-  pathOption: PathOption
+  pathId: string // TODO: Type this against available paths
+  handleClick: (pathId: string) => void
 }
-export const PathButton: React.FC<IProps> = ({
-  pathOption: { primaryText, secondaryText, iconName },
-}) => {
-  const Icon = getIconFromName(iconName)
-  const handleClick = () => {
-    // TODO: Open appropriate modal
-    console.log("Clicked:", primaryText)
-  }
+export const PathButton: React.FC<IProps> = ({ pathId, handleClick }) => {
+  const {
+    pathSummary: { primaryText, secondaryText, iconName },
+  } = simulatorData[pathId]
+  const { [iconName]: Icon } = require("./icons")
+
   return (
     <Button
       variant="outline"
@@ -29,7 +22,7 @@ export const PathButton: React.FC<IProps> = ({
       textAlign="start"
       w="full"
       py={6}
-      onClick={handleClick}
+      onClick={() => handleClick(pathId)}
     >
       <Flex direction="column">
         <Text fontWeight="bold" m={0} lineHeight={6} letterSpacing="-1.1%">
