@@ -18,10 +18,10 @@ const tooltipContentStyle: Omit<PopoverContentProps, "children"> = {
   p: 2,
   bg: "background.highlight",
   fontSize: "sm",
+  fontWeight: "normal",
   borderRadius: "base",
   cursor: "default",
   textAlign: "center",
-  whiteSpace: "normal",
   userSelect: "none",
   zIndex: "docked",
   outline: 0,
@@ -32,7 +32,6 @@ export interface IProps {
   children?: React.ReactNode
 }
 
-// TODO add `position` prop
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
   const { isOpen, hide, show } = useTooltip()
   const isMobile = utils.isMobile()
@@ -57,8 +56,14 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
   }
 
   return (
-    <Box title="More Info!" position="relative" display="inline-block" ml={2}>
-      <Popover placement="top" trigger="hover" offset={[0, 6]} isOpen={isOpen}>
+    <Box title="More Info!" display="inline-block" ml={2}>
+      <Popover
+        placement="top"
+        trigger="hover"
+        strategy="fixed"
+        offset={[0, 6]}
+        isOpen={isOpen}
+      >
         <PopoverTrigger>
           <Center
             p={1}
