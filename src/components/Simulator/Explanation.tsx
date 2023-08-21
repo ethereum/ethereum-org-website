@@ -14,6 +14,7 @@ import Tooltip from "../Tooltip"
 import { SimulatorStateProps } from "../../interfaces"
 import Emoji from "../Emoji"
 
+// TODO: Relocate data
 const explanationData = {
   "create-account": [
     {
