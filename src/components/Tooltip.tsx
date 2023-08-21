@@ -1,6 +1,31 @@
-import React, { ReactNode, useState } from "react"
-import { Box, useColorModeValue } from "@chakra-ui/react"
+import React, { ReactNode } from "react"
+import {
+  Box,
+  Center,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverContent,
+  PopoverContentProps,
+  PopoverTrigger,
+  useColorModeValue,
+  useTooltip,
+} from "@chakra-ui/react"
 import * as utils from "../utils/isMobile"
+
+const tooltipContentStyle: Omit<PopoverContentProps, "children"> = {
+  maxW: 48,
+  p: 2,
+  bg: "background.highlight",
+  fontSize: "sm",
+  borderRadius: "base",
+  cursor: "default",
+  textAlign: "center",
+  whiteSpace: "normal",
+  userSelect: "none",
+  zIndex: "docked",
+  outline: 0,
+}
 
 export interface IProps {
   content: ReactNode
@@ -9,77 +34,74 @@ export interface IProps {
 
 // TODO add `position` prop
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
-  const [isVisible, setIsVisible] = useState<boolean>(false)
+  const { isOpen, hide, show } = useTooltip()
   const isMobile = utils.isMobile()
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
+  let hideTimeout: ReturnType<typeof setTimeout>
+
+  const handleOpen = () => {
+    if (hideTimeout) clearTimeout(hideTimeout)
+    show()
+  }
+
+  const handleClose = () => {
+    hideTimeout = setTimeout(() => {
+      hide()
+    }, 500)
+  }
+
+  const resetCloseTimeout = () => {
+    if (hideTimeout) clearTimeout(hideTimeout)
+    show()
+  }
+
   return (
-    <>
-      {isVisible && isMobile && (
-        // Invisible full screen div "below" the clickable link
-        // Added so clicking away anywhere will hide Tooltip
-        <Box
-          position="fixed"
-          top={0}
-          left={0}
-          w="full"
-          h="full"
-          zIndex={1}
-          onClick={() => setIsVisible(false)}
-        />
-      )}
-      <Box
-        position="relative"
-        display="inline-flex"
-        userSelect="none"
-        cursor="pointer"
-        title="More info"
-        onMouseEnter={!isMobile ? () => setIsVisible(true) : undefined}
-        onMouseLeave={!isMobile ? () => setIsVisible(false) : undefined}
-        onClick={isMobile ? () => setIsVisible(!isVisible) : undefined}
-      >
-        {children}
-        {isVisible && (
-          <Box
-            textAlign="center"
-            whiteSpace="normal"
-            w={{ base: "140px", md: "200px" }}
-            color="text"
-            bg="background.base"
-            boxShadow={shadow}
-            position="absolute"
-            zIndex="docked"
-            py={4}
-            px={2}
-            textTransform="none"
-            fontSize="sm"
-            fontWeight="medium"
-            cursor="default"
-            borderRadius="base"
-            bottom="125%"
-            left="25%"
-            transform="translateX(-50%)"
+    <Box title="More Info!" position="relative" display="inline-block" ml={2}>
+      <Popover placement="top" trigger="hover" offset={[0, 6]} isOpen={isOpen}>
+        <PopoverTrigger>
+          <Center
+            p={1}
+            tabIndex={0}
+            _focusVisible={{
+              outline: "none",
+              border: "2px",
+              borderColor: "primary.hover",
+              borderRadius: "full",
+            }}
+            sx={{
+              "&:hover svg": {
+                color: isMobile ? "primary.hover" : "primary.base",
+              },
+              "&:focus-visible svg": {
+                color: "primary.base",
+              },
+              svg: {
+                w: 3,
+                h: 3,
+                ml: 0,
+                color: "body.base",
+              },
+            }}
+            onMouseEnter={!isMobile ? handleOpen : undefined}
+            onMouseLeave={!isMobile ? handleClose : undefined}
+            onClick={isMobile ? () => (isOpen ? hide() : show()) : undefined}
+            onBlur={isMobile ? hide : undefined}
           >
-            <Box
-              as="span"
-              position="absolute"
-              bottom={-2}
-              left="calc(50% - 6px)"
-              borderRightWidth={10}
-              borderRightStyle="solid"
-              borderRightColor="transparent"
-              borderTopWidth={10}
-              borderTopStyle="solid"
-              borderTopColor="background.base"
-              borderLeftWidth={10}
-              borderLeftStyle="solid"
-              borderLeftColor="transparent"
-            />
-            {content}
-          </Box>
-        )}
-      </Box>
-    </>
+            {children}
+          </Center>
+        </PopoverTrigger>
+        <PopoverContent
+          {...tooltipContentStyle}
+          boxShadow={shadow}
+          onMouseEnter={!isMobile ? resetCloseTimeout : undefined}
+          onMouseLeave={!isMobile ? handleClose : undefined}
+        >
+          <PopoverArrow bg="background.highlight" />
+          <PopoverBody>{content}</PopoverBody>
+        </PopoverContent>
+      </Popover>
+    </Box>
   )
 }
 
