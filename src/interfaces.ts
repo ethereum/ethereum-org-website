@@ -1,3 +1,5 @@
+import type { ReactElement } from "react"
+
 export interface Messages {
   [key: string]: string
 }
@@ -19,4 +21,20 @@ export interface SimulatorState {
 
 export interface SimulatorStateProps {
   state: SimulatorState
+}
+
+export interface SimulatorExplanation {
+  header: string
+  description: ReactElement
+}
+export interface SimulatorDetails {
+  screens: string
+  stepDetails: {
+    explanations: Array<SimulatorExplanation>
+    ctaLabels: Array<string>
+  }
+}
+
+export interface SimulatorData {
+  [key: string]: SimulatorDetails
 }
