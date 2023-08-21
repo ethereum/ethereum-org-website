@@ -57,7 +57,7 @@ The execution layer is concerned with executing transactions, running the [Ether
 
 - building out light client support;
 - researching gas limits;
-- and incorporating new data structures (e.g. Verkle Tries).
+- and incorporating new data structures (e.g. Verkle Trees).
 
 #### Background reading {#background-reading-1}
 
