@@ -8,8 +8,10 @@ import {
 } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import type { SimulatorStateProps } from "../../interfaces"
+import { simulatorData } from "./data"
 
 const MotionFlex = motion(Flex)
+
 const DownArrowLong = motion(
   createIcon({
     displayName: "DownArrowLong",
@@ -21,22 +23,10 @@ const DownArrowLong = motion(
   })
 )
 
-// TODO: Relocate data
-const ctaLabelsByStep = {
-  "create-account": [
-    "Install a wallet",
-    "Open wallet",
-    "Create account",
-    "",
-    "I understand",
-    "Next",
-  ],
-}
-
 interface IProps extends SimulatorStateProps, FlexProps {}
 export const ProgressCta: React.FC<IProps> = ({ state, ...flexProps }) => {
   const { progressStepper, step, pathId } = state
-  const ctaLabel = ctaLabelsByStep[pathId][step]
+  const ctaLabel = simulatorData[pathId].stepDetails.ctaLabels[step]
   const transition = {
     duration: 2,
     times: [0, 0.25, 0.5],

@@ -1,17 +1,13 @@
 import React from "react"
 import { Box } from "@chakra-ui/react"
 import type { SimulatorStateProps } from "../../interfaces"
-import { CreateAccountScreens } from "."
+import { simulatorData } from "./data"
 
 export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
   const { pathId } = state
+  const { screens } = simulatorData[pathId]
+  const { [screens]: Screen } = require("./screens")
 
-  // TODO: Relocate data: store component name, dynamically load component then pass state
-  const screenData = {
-    "create-account": <CreateAccountScreens state={state} />,
-  }
-
-  const screen = screenData[pathId]
   return (
     <Box as="figure" w="min(100%, 300px)" mx="auto">
       {/* Phone frame */}
@@ -27,7 +23,7 @@ export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
         zIndex={1}
         overflow="hidden"
       >
-        {screen}
+        <Screen state={state} />
       </Box>
       {/* Phone drop shadow */}
       <Box
