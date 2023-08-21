@@ -22,11 +22,3 @@
   src: url("./Inter-Bold.woff2") format("woff2"),
     url("./Inter-Bold.woff") format("woff");
 }
-@font-face {
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url("./Inter-BoldItalic.woff2") format("woff2"),
-    url("./Inter-BoldItalic.woff") format("woff");
-}
