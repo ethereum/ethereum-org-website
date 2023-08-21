@@ -1,4 +1,4 @@
-export const WORDLISTS = {
+const WORDLISTS = {
   en: [
     "abandon",
     "ability",
@@ -2049,4 +2049,14 @@ export const WORDLISTS = {
     "zone",
     "zoo",
   ],
+} as const
+
+export const generateSeedWithoutChecksum = (
+  length: number = 12
+): Array<string> => {
+  const lang = "en" as const
+  const words = WORDLISTS[lang]
+  return Array(length)
+    .fill(0)
+    .map(() => words[Math.floor(Math.random() * words.length)])
 }
