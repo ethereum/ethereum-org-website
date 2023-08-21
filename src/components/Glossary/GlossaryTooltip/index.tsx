@@ -1,31 +1,33 @@
 import React, { ReactNode } from "react"
-import { Text } from "@chakra-ui/react"
+import { Text, useBreakpointValue } from "@chakra-ui/react"
 
 import GlossaryDefinition from "../GlossaryDefinition"
 import Tooltip from "../../Tooltip"
 
-import { isMobile } from "../../../utils/isMobile"
-
 interface IProps {
   children: ReactNode
-  to: string
+  termKey: string
 }
 
-const GlossaryTooltip: React.FC<IProps> = ({ children, to }) => {
-  var hash = to.match(/#(.*)/)?.[1]
+const GlossaryTooltip: React.FC<IProps> = ({ children, termKey }) => {
+  const isLargeScreen = useBreakpointValue({ base: false, lg: true })
 
-  return isMobile() ? (
-    <Text>{children}</Text>
-  ) : (
-    <Tooltip content={<GlossaryDefinition term={hash!} tooltip={true} />}>
+  return isLargeScreen ? (
+    <Tooltip content={<GlossaryDefinition term={termKey} size="sm" />}>
       <Text
         as="u"
         textDecorationStyle="dotted"
-        _hover={{ textDecorationColor: "primary.hover" }}
+        _hover={{
+          textDecorationColor: "primary.hover",
+          color: "primary.hover",
+        }}
+        cursor="help"
       >
         {children}
       </Text>
     </Tooltip>
+  ) : (
+    <Text>{children}</Text>
   )
 }
 

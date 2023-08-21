@@ -5,15 +5,16 @@ import Translation from "../../Translation"
 
 interface IProps {
   term: string
-  tooltip?: boolean
+  size?: "md" | "sm"
 }
 
-const GlossaryDefinition: React.FC<IProps> = ({ term, tooltip = false }) => {
-  const headingStyles = tooltip
-    ? { fontSize: "md", mt: 0, mb: 2 }
-    : { fontSize: { base: "xl", md: "2xl" } }
+const GlossaryDefinition: React.FC<IProps> = ({ term, size = "md" }) => {
+  const headingStyles =
+    size === "sm"
+      ? { fontSize: "md", mt: 0, mb: 2 }
+      : { fontSize: { base: "xl", md: "2xl" } }
 
-  const textStyles = tooltip ? { mb: 0 } : {}
+  const textStyles = size === "sm" ? { mb: 0 } : {}
 
   return (
     <Box>

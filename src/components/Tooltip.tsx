@@ -68,7 +68,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
               borderRightColor="transparent"
               borderTopWidth={10}
               borderTopStyle="solid"
-              borderTopColor="background.base"
+              borderTopColor="background.highlight"
               borderLeftWidth={10}
               borderLeftStyle="solid"
               borderLeftColor="transparent"

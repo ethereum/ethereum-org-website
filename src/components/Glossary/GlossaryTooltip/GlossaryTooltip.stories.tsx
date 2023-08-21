@@ -7,5 +7,5 @@ export default {
 } as Meta<typeof GlossaryTooltip>
 
 export const Basic: StoryFn<typeof GlossaryTooltip> = () => (
-  <GlossaryTooltip to="/glossary/#big-endian">big-endian</GlossaryTooltip>
+  <GlossaryTooltip termKey="big-endian">big-endian</GlossaryTooltip>
 )
