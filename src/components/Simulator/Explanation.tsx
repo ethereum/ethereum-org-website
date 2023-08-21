@@ -12,6 +12,7 @@ import { MdChevronLeft, MdInfoOutline } from "react-icons/md"
 import Button from "../Button"
 import Tooltip from "../Tooltip"
 import { SimulatorStateProps } from "../../interfaces"
+import Emoji from "../Emoji"
 
 const explanationData = {
   "create-account": [
@@ -74,27 +75,44 @@ const explanationData = {
       header: "Keep it safe!",
       description: (
         <>
-          <Text fontWeight="bold" m={0}>
+          <Text fontWeight="bold" mb={2}>
             Storing smaller amount of funds:
           </Text>
-          {/* TODO: Add checks and x's as list marker */}
-          <UnorderedList listStyleType="none">
-            <ListItem>Backup file in cloud storage</ListItem>
+          <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
+            <ListItem>
+              <Emoji text="✅" me={2} />
+              Backup file in cloud storage
+            </ListItem>
           </UnorderedList>
-          <Text fontWeight="bold" m={0}>
+          <Text fontWeight="bold" mb={2}>
             Storing significant funds:
           </Text>
-          <UnorderedList listStyleType="none">
-            <ListItem>Use durable offline method</ListItem>
-            <ListItem>Use a hardware wallet</ListItem>
+          <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
+            <ListItem>
+              <Emoji text="✅" me={2} />
+              Use durable offline method
+            </ListItem>
+            <ListItem>
+              <Emoji text="✅" me={2} />
+              Use a hardware wallet
+            </ListItem>
           </UnorderedList>
-          <Text fontWeight="bold" m={0}>
+          <Text fontWeight="bold" mb={2}>
             Risky ways to store your recovery phrase:
           </Text>
-          <UnorderedList listStyleType="none">
-            <ListItem>Texting it to a friend</ListItem>
-            <ListItem>Taking a picture of the phrase</ListItem>
-            <ListItem>Saving it in a file on your computer</ListItem>
+          <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
+            <ListItem>
+              <Emoji text="❌" me={2} />
+              Texting it to a friend
+            </ListItem>
+            <ListItem>
+              <Emoji text="❌" me={2} />
+              Taking a picture of the phrase
+            </ListItem>
+            <ListItem>
+              <Emoji text="❌" me={2} />
+              Saving it in a file on your computer
+            </ListItem>
           </UnorderedList>
         </>
       ),
