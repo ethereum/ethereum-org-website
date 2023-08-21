@@ -45,7 +45,6 @@ export const ProgressCta: React.FC<IProps> = ({ state, ...flexProps }) => {
   } as const
   return (
     <MotionFlex
-      bg="background.highlight"
       py={10}
       px={6}
       position="absolute"

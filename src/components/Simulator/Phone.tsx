@@ -104,7 +104,7 @@ interface WordListProps {
   words: Array<string>
   variant: WordStyleVariant
 }
-const WordList: React.FC<WordListProps> = ({ words, variant = "disabled" }) => {
+const WordList: React.FC<WordListProps> = ({ words, variant }) => {
   const sharedStyles = {
     m: 0,
     display: "flex",
@@ -121,7 +121,13 @@ const WordList: React.FC<WordListProps> = ({ words, variant = "disabled" }) => {
   const styles = { ...sharedStyles, ...variantStyles } as ListProps
   const splitIndex = Math.floor(words.length / 2)
   return (
-    <Grid templateColumns="repeat(2, 1fr)" columnGap={8}>
+    <Grid
+      templateColumns="repeat(2, 1fr)"
+      columnGap={7}
+      whiteSpace="nowrap"
+      px={{ base: 4, md: 8 }}
+      bg="background.base"
+    >
       <OrderedList {...styles} start={1}>
         {words.slice(0, splitIndex).map((word) => (
           <WordDisplay variant={variant}>{word}</WordDisplay>
@@ -197,22 +203,39 @@ const CreateAccountScreens: React.FC<SimulatorStateProps> = ({ state }) => {
         </Box>
       )}
       {[5].includes(step) && (
-        <Box my={8} px={{ base: 4, md: 8 }}>
-          <Text fontSize="2xl" lineHeight={8} fontWeight="bold">
-            Recovery phrase example
-          </Text>
+        <Box bg="background.highlight">
+          <Box py={8}>
+            <Text
+              fontSize="2xl"
+              lineHeight={8}
+              fontWeight="bold"
+              px={{ base: 4, md: 8 }}
+            >
+              Recovery phrase example
+            </Text>
+          </Box>
           <WordList words={words} variant="display" />
         </Box>
       )}
       {[6].includes(step) && (
-        <Box my={8} px={{ base: 4, md: 8 }}>
-          <Text fontSize="2xl" lineHeight={8} fontWeight="bold">
+        <Box my={8}>
+          <Text
+            fontSize="2xl"
+            lineHeight={8}
+            fontWeight="bold"
+            px={{ base: 4, md: 8 }}
+          >
             Repeat the words
           </Text>
           <InteractiveWordSelector state={state} words={words} />
         </Box>
       )}
-      {[0, 1, 2, 4, 5, 7].includes(step) && <ProgressCta state={state} />}
+      {[0, 1, 2, 4, 5, 7].includes(step) && (
+        <ProgressCta
+          state={state}
+          bg={[5].includes(step) ? "background.base" : "background.highlight"}
+        />
+      )}
     </>
   )
 }
