@@ -52,7 +52,8 @@ const explanationData = {
           </Text>
           <Text>
             Some wallets have &quot;smart accounts&quot; which can require ETH
-            to setup, but we won&apos;t cover those in this simulation 👽
+            to setup, but we won&apos;t cover those in this simulation{" "}
+            <Emoji text="👽" ms={1} />
           </Text>
         </>
       ),
