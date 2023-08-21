@@ -12,8 +12,6 @@ import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 import { NavigateOptions } from "@reach/router"
 import { RxExternalLink } from "react-icons/rx"
 
-import GlossaryTooltip from "./Glossary/GlossaryTooltip"
-
 import { Lang } from "../utils/languages"
 import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
 import * as url from "../utils/url"
@@ -71,7 +69,6 @@ export const BaseLink: React.FC<IProps> = ({
   if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
   const isExternal = url.isExternal(to)
   const isHash = url.isHash(to)
-  const isGlossary = url.isGlossary(to)
   const isStatic = url.isStatic(to)
   const isPdf = url.isPdf(to)
 
@@ -152,10 +149,6 @@ export const BaseLink: React.FC<IProps> = ({
         </>
       </ChakraLink>
     )
-  }
-
-  if (isGlossary) {
-    return <GlossaryTooltip to={to}>{children}</GlossaryTooltip>
   }
 
   // Use `gatsby-theme-i18n` Link (which prepends lang path)
