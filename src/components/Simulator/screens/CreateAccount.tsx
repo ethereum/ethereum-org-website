@@ -154,7 +154,6 @@ const InteractiveWordSelector: React.FC<WordSelectorProps> = ({
   return <WordList words={words} variant="disabled" />
 }
 
-// ONLY EXPORT!
 export const CreateAccountScreens: React.FC<SimulatorStateProps> = ({
   state,
 }) => {

@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react"
+import React from "react"
 import { ListItem, Text, UnorderedList } from "@chakra-ui/react"
 import Emoji from "../../Emoji"
 import type { SimulatorData } from "../../../interfaces"
@@ -129,5 +129,28 @@ export const simulatorData: SimulatorData = {
         "Next",
       ],
     },
+    pathSummary: {
+      primaryText: "Create account",
+      secondaryText: "How to?",
+      iconName: "EthWalletIcon",
+    },
   },
 }
+
+// const pathOptions: Array<PathOption> = [
+//   {
+//     primaryText: "Create account",
+//     secondaryText: "How to?",
+//     iconName: "EthWalletIcon",
+//   },
+//   {
+//     primaryText: "Send/receive",
+//     secondaryText: "How to?",
+//     iconName: "WalletAppIcon",
+//   },
+//   {
+//     primaryText: "Connect to Web3",
+//     secondaryText: "How to?",
+//     iconName: "ConnectWeb3Icon",
+//   },
+// ]
