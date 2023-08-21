@@ -21,40 +21,38 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
     >
       {Array(ICON_COUNT)
         .fill(0)
-        .map((_, i) => {
-          const isLast = i === ICON_COUNT - 1
-          return (
-            <Grid
-              key={i}
-              minW="44px"
-              aspectRatio={1}
-              borderRadius="xl"
-              placeItems="center"
-              bg="body.light"
-              _last={{
-                border: step === 1 ? "none" : "2px dashed",
-                borderColor: "primary.hover",
-                bg: step === 1 ? "body.base" : "none",
-                boxShadow:
-                  step === 1
-                    ? "0 0 7px 0 #000000C0"
-                    : "" /* TODO: Add shadow as token? */,
-              }}
-            >
-              {/* Insert down-arrow icon */}
-              {isLast &&
-                (step === 1 ? (
-                  <Icon
-                    as={EthGlyphIcon}
-                    color="background.base"
-                    height="26px"
-                  />
-                ) : (
-                  <Icon as={MdArrowDownward} color="primary.hover" />
-                ))}
-            </Grid>
-          )
-        })}
+        .map((_, i) => (
+          <Grid
+            key={i}
+            minW="44px"
+            aspectRatio={1}
+            borderRadius="xl"
+            placeItems="center"
+            bg="body.light"
+            {...props}
+          />
+        ))}
+      <Grid
+        minW="44px"
+        aspectRatio={1}
+        borderRadius="xl"
+        placeItems="center"
+        bg={step === 1 ? "body.base" : "none"}
+        transition="background-color 2000ms ease-in-out, border 200ms ease-in--out"
+        border={step === 1 ? "none" : "2px dashed"}
+        borderColor="primary.hover"
+        boxShadow={
+          step === 1
+            ? "0 0 7px 0 #000000C0"
+            : "" /* TODO: Add shadow as token? */
+        }
+      >
+        {step === 1 ? (
+          <Icon as={EthGlyphIcon} color="background.base" height="26px" />
+        ) : (
+          <Icon as={MdArrowDownward} color="primary.hover" />
+        )}
+      </Grid>
     </Flex>
   )
 }
