@@ -117,9 +117,7 @@ const InteractiveWordSelector: React.FC<WordSelectorProps> = ({
   state,
   words,
 }) => {
-  return (
-    <WordList words={words} variant="disabled" />
-  )
+  return <WordList words={words} variant="disabled" />
 }
 
 const CreateAccountScreens: React.FC<SimulatorStateProps> = ({ state }) => {
@@ -195,7 +193,7 @@ export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
 
   const screen = screenData[pathId]
   return (
-    <Box as="figure" w="min(100%, 320px)" mx="auto">
+    <Box as="figure" w="min(100%, 300px)" mx="auto">
       {/* Phone frame */}
       <Box
         h={{ base: 480, md: 600 }}
