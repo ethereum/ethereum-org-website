@@ -11,6 +11,7 @@ import {
   OrderedList,
   Spinner,
   Text,
+  BoxProps,
 } from "@chakra-ui/react"
 import React, { useEffect, useMemo, useState } from "react"
 import { SimulatorStateProps } from "../../../interfaces"
@@ -115,12 +116,18 @@ const wordStyleVariants = {
 
 type WordStyleVariant = keyof typeof wordStyleVariants
 
-interface WordDisplayProps extends Pick<ListItemProps, "children"> {
+interface WordDisplayProps
+  extends Pick<ListItemProps, "children">,
+    Omit<BoxProps, "children"> {
   variant: WordStyleVariant
 }
 
-const WordDisplay: React.FC<WordDisplayProps> = ({ children, variant }) => (
-  <Box {...wordStyleVariants[variant]}>
+const WordDisplay: React.FC<WordDisplayProps> = ({
+  children,
+  variant,
+  ...boxProps
+}) => (
+  <Box {...wordStyleVariants[variant]} {...boxProps}>
     <ListItem fontSize="sm" lineHeight={9} mb={0} listStylePos="inside">
       {children}
     </ListItem>
@@ -134,12 +141,12 @@ interface WordListProps {
 
 const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
   const sharedStyles = {
-    m: 0,
     display: "flex",
     flexDirection: "column",
-    h: "calc(6 * (16px + 37px))",
     columnGap: 8,
     rowGap: 3,
+    pb: 5,
+    m: 0,
   } as const
   const styleVariants = {
     display: {
@@ -166,7 +173,20 @@ const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
       ? "incomplete"
       : "disabled"
     const showLabel = initialWordDisplay || variant === "complete"
-    return <WordDisplay variant={variant}>{showLabel && word}</WordDisplay>
+    return (
+      <WordDisplay
+        key={word + index}
+        variant={variant}
+        transition={`
+          color 1s ease-in-out,
+          background-color 1s ease-in-out,
+          border-color 1s ease-in-out
+        `}
+        transitionDelay={`${index * 100}ms`}
+      >
+        {showLabel && word}
+      </WordDisplay>
+    )
   }
 
   return (
@@ -213,31 +233,35 @@ const WordSelectorButtons: React.FC<WordsSelectorButtonsProps> = ({
       whiteSpace="nowrap"
       flexWrap="wrap"
       justify="space-between"
-      px={{ base: 4, md: 8 }}
+      p={4}
+      pb={{ base: 6, md: 4 }}
       bg="background.highlight"
+      h={{ base: 120, md: 187 }}
+      overflow="hidden"
+      position="absolute"
+      bottom={0}
+      w="full"
     >
-      {randomizedWords.map(({ word, index }) => {
-        const isCurrent = index === wordsSelected
-        return (
-          <Button
-            variant="solid"
-            onClick={incrementWordsSelected}
-            bg="primary.hover"
-            color="background.base"
-            w="fit-content"
-            px={2}
-            borderRadius="xl"
-            isDisabled={!isCurrent}
-            _disabled={{
-              bg: "body.light",
-              color: "body.base",
-              pointerEvents: "none",
-            }}
-          >
-            {word}
-          </Button>
-        )
-      })}
+      {randomizedWords.map(({ word, index }) => (
+        <Button
+          key={word + index}
+          variant="solid"
+          onClick={incrementWordsSelected}
+          bg="primary.hover"
+          color="background.base"
+          w="fit-content"
+          px={1}
+          borderRadius="xl"
+          isDisabled={index !== wordsSelected}
+          _disabled={{
+            bg: "body.light",
+            color: "body.base",
+            pointerEvents: "none",
+          }}
+        >
+          {word}
+        </Button>
+      ))}
     </Flex>
   )
 }
@@ -334,8 +358,9 @@ export const CreateAccountScreens: React.FC<SimulatorStateProps> = ({
         </Box>
       )}
       {[6].includes(step) && (
-        <Box my={8}>
+        <Box mt={8}>
           <Text
+            display={{ base: "none", md: "block" }}
             fontSize="2xl"
             lineHeight={8}
             fontWeight="bold"
