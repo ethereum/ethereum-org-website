@@ -9,7 +9,7 @@ export interface IProps {
 
 // TODO add `position` prop
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
-  const [isVisible, setIsVisible] = useState<boolean>(true)
+  const [isVisible, setIsVisible] = useState<boolean>(false)
   const isMobile = utils.isMobile()
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
