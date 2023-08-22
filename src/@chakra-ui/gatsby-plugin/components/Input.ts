@@ -1,4 +1,5 @@
 import { inputAnatomy } from "@chakra-ui/anatomy"
+import { cssVar } from "@chakra-ui/react"
 import {
   createMultiStyleConfigHelpers,
   defineStyle,
@@ -7,6 +8,9 @@ import { defineMergeStyles, inputDefaultTheme } from "./components.utils"
 
 const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(inputAnatomy.keys)
+
+// From the default theme
+const $height = cssVar("input-height")
 
 const baseStyle = definePartsStyle((props) => {
   const {
@@ -19,10 +23,10 @@ const baseStyle = definePartsStyle((props) => {
     inputDefaultTheme.variants?.outline(props),
     {
       field: {
-        borderColor: "currentColor",
         borderRadius: "base",
         outline: "3px solid transparent",
         lineHeight: 1,
+        px: "2",
         _placeholder: {
           color: "disabled",
           opacity: 1,
@@ -34,9 +38,6 @@ const baseStyle = definePartsStyle((props) => {
           boxShadow: "none",
         },
         _hover: null, // override default
-        _groupHover: {
-          borderColor: "primary.hover",
-        },
         _invalid: {
           borderColor: ec,
           boxShadow: "none",
@@ -46,9 +47,13 @@ const baseStyle = definePartsStyle((props) => {
           opacity: 1,
         },
         "&:not(:disabled)": {
+          borderColor: "body.base",
           _active: {
             bg: "background.highlight",
             borderColor: "primary.highContrast",
+          },
+          "[data-group] &:hover, &:hover": {
+            borderColor: "primary.hover",
           },
         },
       },
@@ -84,12 +89,10 @@ const baseStyle = definePartsStyle((props) => {
 
 const size = {
   md: defineStyle({
-    h: 10.5,
-    px: 2,
+    [$height.variable]: "sizes.10.5",
   }),
   sm: defineStyle({
-    h: 8,
-    px: 1,
+    [$height.variable]: "sizes.8",
   }),
 }
 

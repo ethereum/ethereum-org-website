@@ -1,33 +1,29 @@
 import * as React from "react"
 import {
+  Icon,
   Input as ChakraInput,
   InputGroup,
   InputGroupProps,
-  InputLeftElement,
   InputProps as ChakraInputProps,
   InputRightElement,
 } from "@chakra-ui/react"
+import { IconType } from "react-icons/lib"
 
 interface InputProps extends ChakraInputProps {
   /**
-   * The Element or Icon used to render `InputLeftElement`
+   * The Icon used to render `InputRightElement` on the right side of the input
    */
-  leftElement?: React.ReactNode
-  /**
-   * The Element or Icon used to render `InputRightElement`
-   */
-  rightElement?: React.ReactNode
+  rightIcon?: IconType | typeof Icon
   inputGroupProps?: InputGroupProps
 }
 
 function Input(props: InputProps) {
-  if ("leftElement" in props || "rightElement" in props) {
-    const { size, inputGroupProps, leftElement, rightElement, ...rest } = props
+  if (props.rightIcon) {
+    const { size, inputGroupProps, rightIcon: Icon, ...rest } = props
     return (
       <InputGroup size={size} {...inputGroupProps}>
         <ChakraInput data-peer {...rest} />
-        {leftElement ? <InputLeftElement children={leftElement} /> : null}
-        {rightElement ? <InputRightElement children={rightElement} /> : null}
+        <InputRightElement children={<Icon />} />
       </InputGroup>
     )
   }
