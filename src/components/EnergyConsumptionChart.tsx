@@ -12,6 +12,7 @@ import {
 } from "recharts"
 // import { useTranslation } from "gatsby-plugin-react-i18next"
 
+// TODO: add Translation when i18n is set up
 // import Translation from "./Translation"
 
 interface ITickProps {

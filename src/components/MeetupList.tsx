@@ -18,14 +18,16 @@ import {
 import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
 import Link from "./Link"
-import Translation from "./Translation"
+// TODO: add Translation when i18n is set up
+// import Translation from "./Translation"
 
 // Data
 import meetups from "../data/community-meetups.json"
 import Input from "./Input"
 
 // Utils
-import { trackCustomEvent } from "../utils/matomo"
+// TODO: add trackCustomEvent when util is migrated
+// import { trackCustomEvent } from "../utils/matomo"
 
 export interface Meetup {
   title: string
@@ -65,11 +67,12 @@ const MeetupList: React.FC<IProps> = () => {
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchField(event.target.value)
-    trackCustomEvent({
-      eventCategory: "events search",
-      eventAction: "click",
-      eventName: event.target.value,
-    })
+    // TODO: add trackCustomEvent when util is migrated
+    // trackCustomEvent({
+    //   eventCategory: "events search",
+    //   eventAction: "click",
+    //   eventName: event.target.value,
+    // })
   }
 
   const primaryBaseColor = useToken("colors", "primary.base")
@@ -147,9 +150,13 @@ const MeetupList: React.FC<IProps> = () => {
       <Box aria-live="assertive" aria-atomic>
         {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
-            <Translation id="page-community-meetuplist-no-meetups" />{" "}
+            {/* TODO: add Translation when i18n is set up */}
+            {/* <Translation id="page-community-meetuplist-no-meetups" />{" "} */}
+            We don't have any meetups matching this search. Know of one?
             <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
-              <Translation id="page-community-please-add-to-page" />
+              {/* TODO: add Translation when i18n is set up */}
+              {/* <Translation id="page-community-please-add-to-page" /> */}
+              Please add it to this page!
             </Link>
           </InfoBanner>
         )}

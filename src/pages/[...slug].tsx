@@ -21,6 +21,7 @@ import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
 import MarkdownImage from "@/components/MarkdownImage"
+import MeetupList from "../components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import YouTube from "@/components/YouTube"
 
@@ -208,6 +209,7 @@ const components = {
   ExpandableCard,
   InfoBanner,
   Link,
+  MeetupList,
   NetworkUpgradeSummary,
   YouTube,
 }

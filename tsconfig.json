@@ -103,7 +103,6 @@
     "./src/components/LearningToolsCardGrid.tsx",
     "./src/components/Logo.tsx",
     "./src/components/MatomoOptOut.tsx",
-    "./src/components/MeetupList.tsx",
     "./src/components/MergeArticleList.tsx",
     "./src/components/MergeInfographic.tsx",
     "./src/components/Modal.tsx",
