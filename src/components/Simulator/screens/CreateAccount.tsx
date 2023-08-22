@@ -21,6 +21,7 @@ import { EthGlyphIcon } from "../icons"
 import { ProgressCta } from "../ProgressCta"
 import { motion } from "framer-motion"
 import { PiCheckThin } from "react-icons/pi"
+import { NewWalletPreview } from ".."
 
 const WORDS_REQUIRED = 2 as const
 
@@ -371,7 +372,8 @@ export const CreateAccountScreens: React.FC<SimulatorStateProps> = ({
           <InteractiveWordSelector state={state} words={words} />
         </Box>
       )}
-      {[0, 1, 2, 4, 5, 7].includes(step) && (
+      {[7].includes(step) && <NewWalletPreview />}
+      {[0, 1, 2, 4, 5].includes(step) && (
         <ProgressCta
           state={state}
           bg={[5].includes(step) ? "background.base" : "background.highlight"}

@@ -1,7 +1,8 @@
 import React from "react"
-import { ListItem, Text, UnorderedList } from "@chakra-ui/react"
+import { Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react"
 import Emoji from "../../Emoji"
 import type { SimulatorData } from "../../../interfaces"
+import Button from "../../Button"
 
 export const simulatorData: SimulatorData = {
   "create-account": {
@@ -117,6 +118,16 @@ export const simulatorData: SimulatorData = {
               The recovery phrase (sometimes called a seed phrase) is the key to
               controlling your account.
             </Text>
+          ),
+        },
+        {
+          // ? Change type for header to allow components, ie. Emoji?
+          header: "Thats it! Welcome to Ethereum 🎉",
+          description: (
+            <Flex direction="column" gap={5}>
+              <Button variant="solid">Start next lesson</Button>
+              <Button variant="outline">See a list of wallets</Button>
+            </Flex>
           ),
         },
       ],
