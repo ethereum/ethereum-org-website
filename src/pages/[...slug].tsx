@@ -3,41 +3,39 @@ import {
   Divider as ChakraDivider,
   Flex,
   Heading,
-  Image,
-  Link as ChakraLink,
   Text,
   chakra,
 } from "@chakra-ui/react"
 import { ParsedUrlQuery } from "querystring"
-import { MDXRemote } from "next-mdx-remote"
-import { useRouter } from "next/router"
+import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
+import path from "path"
 
-import ButtonLink from "../components/ButtonLink"
-import DocLink from "../components/DocLink"
-import Emoji from "../components/Emoji"
-import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
-import ExpandableCard from "../components/ExpandableCard"
+import ButtonLink from "@/components/ButtonLink"
+import DocLink from "@/components/DocLink"
+import Emoji from "@/components/Emoji"
+import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
+import ExpandableCard from "@/components/ExpandableCard"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
-import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
-import YouTube from "../components/YouTube"
+import MarkdownImage from "@/components/MarkdownImage"
+import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import YouTube from "@/components/YouTube"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getRelativePath } from "@/lib/utils/relativePath"
+import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
 
-import { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
-import { ChildOnlyProp } from "@/lib/types"
-import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
+import type { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
+import type { ChildOnlyProp } from "@/lib/types"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
 }
 
 interface Props {
-  content: string
+  mdxSource: MDXRemoteSerializeResult
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -61,17 +59,21 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 ) => {
   const params = context.params!
   const markdown = getContentBySlug(params.slug.join("/"), ["slug", "content"])
-  // TODO: check if content type can be fixed
-  const content = (await serialize(markdown.content, {
+
+  const mdPath = path.join("/content", ...params.slug)
+  const mdDir = path.join("public", mdPath)
+
+  const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
+      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }]],
     },
-  })) as any
+  })
 
   return {
     props: {
-      content,
+      mdxSource,
     },
   }
 }
@@ -185,22 +187,6 @@ const ListItem = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
 )
 
-const Img = (img: any) => {
-  // use router to get correct image relative path inside /public/content/ dynamically
-  const router = useRouter()
-  // TODO: update how `imgRelativePath` is computed for translated assets inside /translations, will depend on value of locale after setting up i18n
-  const imgRelativePath = getRelativePath(router.asPath, img.src)
-
-  return (
-    <ChakraLink href={imgRelativePath} isExternal>
-      <Image
-        src={imgRelativePath}
-        alt={img.alt}
-        maxW={CONTENT_IMAGES_MAX_WIDTH}
-      />
-    </ChakraLink>
-  )
-}
 // code
 const components = {
   a: Link,
@@ -209,7 +195,7 @@ const components = {
   h3: Header3,
   h4: Header4,
   hr: HR,
-  img: Img,
+  img: MarkdownImage,
   li: ListItem,
   p: Paragraph,
   pre: Pre,
@@ -226,7 +212,7 @@ const components = {
   YouTube,
 }
 
-const ContentPage: NextPage<Props> = ({ content }) => {
+const ContentPage: NextPage<Props> = ({ mdxSource }) => {
   return (
     <Box w="full">
       <Flex
@@ -259,7 +245,9 @@ const ContentPage: NextPage<Props> = ({ content }) => {
             },
           }}
         >
-          <MDXRemote {...(content as any)} components={components} />
+          {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
+          {/* @ts-ignore */}
+          <MDXRemote {...mdxSource} components={components} />
         </Box>
       </Flex>
     </Box>
