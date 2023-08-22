@@ -147,6 +147,40 @@ export const simulatorData: SimulatorData = {
       iconName: "EthWalletIcon",
     },
   },
+  "send-receive": {
+    screens: "SendReceiveScreens",
+    stepDetails: {
+      explanations: [
+        {
+          header: "Send/receive header",
+          description: <Text>Send/receive description</Text>,
+        },
+      ],
+      ctaLabels: ["Coming soon™"],
+    },
+    pathSummary: {
+      primaryText: "Send/receive",
+      secondaryText: "How to?",
+      iconName: "WalletAppIcon",
+    },
+  },
+  "connect-web3": {
+    screens: "ConnectWeb3",
+    stepDetails: {
+      explanations: [
+        {
+          header: "Connect to Web3 header",
+          description: <Text>Connect to Web3 description</Text>,
+        },
+      ],
+      ctaLabels: ["Coming soon™"],
+    },
+    pathSummary: {
+      primaryText: "Connect to Web3",
+      secondaryText: "How to?",
+      iconName: "ConnectWeb3Icon",
+    },
+  },
 }
 
 // const pathOptions: Array<PathOption> = [
