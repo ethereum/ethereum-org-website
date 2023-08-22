@@ -57,7 +57,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
               cursor="default"
               borderRadius="base"
               bottom="125%"
-              left="-130px"
+              left="-140px"
               initial="exit"
               animate="enter"
               exit="exit"
