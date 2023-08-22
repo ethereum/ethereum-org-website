@@ -10,7 +10,6 @@ import {
   GridItem,
   Heading,
   Icon,
-  Text,
 } from "@chakra-ui/react"
 import { FaDiscord } from "react-icons/fa"
 import { DateTime, DateTimeFormatOptions } from "luxon"
@@ -19,6 +18,7 @@ import { DateTime, DateTimeFormatOptions } from "luxon"
 import ButtonLink from "../ButtonLink"
 import InlineLink from "../Link"
 import Translation from "../Translation"
+import Text from "../OldText"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"

@@ -1,8 +1,9 @@
 import * as React from "react"
-import { Box, Flex, Heading, HStack, Icon, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { MdInfoOutline } from "react-icons/md"
 
+import Text from "../../OldText"
 import Tooltip from "../../Tooltip"
 import { DropdownOption } from "./useWalletTable"
 

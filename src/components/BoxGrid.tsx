@@ -1,14 +1,8 @@
 import React, { useState } from "react"
-import {
-  Box,
-  Flex,
-  GridItem,
-  Heading,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react"
+import { Box, Flex, GridItem, Heading, SimpleGrid } from "@chakra-ui/react"
 
 import Emoji from "./Emoji"
+import Text from "./OldText"
 
 import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
 

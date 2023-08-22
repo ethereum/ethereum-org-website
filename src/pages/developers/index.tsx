@@ -9,7 +9,6 @@ import {
   Heading,
   Image,
   SimpleGrid,
-  Text,
   TextProps,
   useColorModeValue,
 } from "@chakra-ui/react"
@@ -21,6 +20,7 @@ import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import FeedbackCard from "../../components/FeedbackCard"
+import Text from "../../components/OldText"
 
 import { getImage } from "../../utils/image"
 

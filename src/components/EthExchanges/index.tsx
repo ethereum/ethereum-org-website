@@ -1,11 +1,12 @@
 import React from "react"
-import { Box, Center, chakra, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Center, chakra, Flex, Heading } from "@chakra-ui/react"
 
 import CardList from "../CardList"
 import InlineLink from "../Link"
 import Emoji from "../Emoji"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
+import Text from "../OldText"
 
 import { ChildOnlyProp } from "../../types"
 import { useEthExchanges } from "./use-eth-exchanges"

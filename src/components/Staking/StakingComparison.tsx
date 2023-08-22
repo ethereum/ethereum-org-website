@@ -1,8 +1,9 @@
 import React from "react"
-import { Box, Flex, Heading, Text, useTheme } from "@chakra-ui/react"
+import { Box, Flex, Heading, useTheme } from "@chakra-ui/react"
 
 import InlineLink from "../Link"
 import Translation from "../Translation"
+import Text from "../OldText"
 
 import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
 import { TranslationKey } from "../../utils/translations"

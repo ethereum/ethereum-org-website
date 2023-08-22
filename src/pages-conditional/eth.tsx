@@ -7,7 +7,6 @@ import {
   Heading,
   HeadingProps,
   ListItem,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -28,6 +27,7 @@ import PageMetadata from "../components/PageMetadata"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Card from "../components/Card"
+import Text from "../components/OldText"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"

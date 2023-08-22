@@ -11,7 +11,6 @@ import {
   Heading,
   HeadingProps,
   ListItem,
-  Text,
   UnorderedList,
   Icon,
 } from "@chakra-ui/react"
@@ -39,6 +38,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import StatErrorMessage from "../components/StatErrorMessage"
 import StatLoadingMessage from "../components/StatLoadingMessage"
+import Text from "../components/OldText"
 
 import { getLocaleForNumberFormat } from "../utils/translations"
 import { Lang } from "../utils/languages"

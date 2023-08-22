@@ -10,7 +10,6 @@ import {
   HeadingProps,
   List,
   ListItem,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 
@@ -26,6 +25,7 @@ import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import InfoBanner from "../../components/InfoBanner"
 import FeedbackCard from "../../components/FeedbackCard"
+import Text from "../../components/OldText"
 
 import { getImage } from "../../utils/image"
 

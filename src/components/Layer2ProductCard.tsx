@@ -2,11 +2,12 @@
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Center, Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Box, Center, Flex, Heading, Image } from "@chakra-ui/react"
 
 // Components
 import ButtonLink from "./ButtonLink"
 import InlineLink from "./Link"
+import Text from "./OldText"
 
 export interface IProps {
   children?: React.ReactNode

@@ -11,7 +11,6 @@ import {
   ListItem,
   SimpleGrid,
   Stack,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 
@@ -20,6 +19,7 @@ import ButtonLink from "../ButtonLink"
 import InlineLink from "../Link"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
+import Text from "../OldText"
 
 // Data
 import {

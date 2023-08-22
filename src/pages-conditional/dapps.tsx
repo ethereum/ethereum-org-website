@@ -19,7 +19,6 @@ import {
   Heading,
   HeadingProps,
   SimpleGrid,
-  Text,
   chakra,
   useToken,
 } from "@chakra-ui/react"
@@ -40,6 +39,7 @@ import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+import Text from "../components/OldText"
 
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"

@@ -87,7 +87,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
                     </Pill>
                   )}
                 </Flex>
-                <Text color="text200" mb={0} textAlign="start">
+                <Text color="text200" textAlign="start">
                   <Translation id={contentObj.textPreview} />
                 </Text>
               </Box>

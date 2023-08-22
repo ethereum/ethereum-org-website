@@ -8,7 +8,6 @@ import {
   HeadingProps,
   ListItem,
   SimpleGrid,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -20,6 +19,7 @@ import Breadcrumbs from "../../../components/Breadcrumbs"
 import InlineLink from "../../../components/Link"
 import Translation from "../../../components/Translation"
 import PageMetadata from "../../../components/PageMetadata"
+import Text from "../../../components/OldText"
 
 // Utils
 import FeedbackCard from "../../../components/FeedbackCard"

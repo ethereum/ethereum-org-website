@@ -2,7 +2,7 @@ import React, { ComponentPropsWithRef } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { Box, BoxProps, Flex, Heading, Img, Text } from "@chakra-ui/react"
+import { Box, BoxProps, Flex, Heading, Img } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import CardList from "../components/CardList"
@@ -16,6 +16,7 @@ import CalloutBanner from "../components/CalloutBanner"
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import Card from "../components/Card"
+import Text from "../components/OldText"
 
 import {
   LeftColumn,

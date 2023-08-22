@@ -7,7 +7,6 @@ import {
   Icon,
   LinkBox,
   LinkOverlay,
-  Text,
 } from "@chakra-ui/react"
 import { MdArrowForward } from "react-icons/md"
 import ButtonLink from "../ButtonLink"
@@ -15,6 +14,7 @@ import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
 import InlineLink, { BaseLink } from "../Link"
 import Translation from "../Translation"
+import Text from "../OldText"
 import {
   AccordionCustomItem,
   LeftColumnPanel,

@@ -14,7 +14,6 @@ import {
   Img,
   SimpleGridProps,
   Stack,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
@@ -32,6 +31,7 @@ import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import Translation from "../components/Translation"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
+import Text from "../components/OldText"
 import { isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 

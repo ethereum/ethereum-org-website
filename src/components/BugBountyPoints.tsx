@@ -2,15 +2,16 @@ import React, { useState, useEffect } from "react"
 import { useTheme } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
 import axios from "axios"
 
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import InlineLink from "./Link"
 import Tooltip from "./Tooltip"
+import Text from "./OldText"
 
 import { getImage } from "../utils/image"
-import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 
 export const TokenLogo = graphql`

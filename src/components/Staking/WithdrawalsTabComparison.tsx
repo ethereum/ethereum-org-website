@@ -7,12 +7,12 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 import WithdrawalCredentials from "./WithdrawalCredentials"
 import ButtonLink from "../ButtonLink"
 import Translation from "../Translation"
+import Text from "../OldText"
 import { trackCustomEvent } from "../../utils/matomo"
 
 interface IProps {}

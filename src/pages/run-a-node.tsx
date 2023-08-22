@@ -13,7 +13,6 @@ import {
   Heading,
   HeadingProps,
   Img,
-  Text,
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 import { FaDiscord } from "react-icons/fa"
@@ -43,6 +42,9 @@ import Emoji from "../components/Emoji"
 import InlineLink from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
+import Text from "../components/OldText"
+
+// Utils
 import Button from "../components/Button"
 import { InfoGrid } from "../templates/staking"
 import { Width40, Width60 } from "../pages-conditional/what-is-ethereum"

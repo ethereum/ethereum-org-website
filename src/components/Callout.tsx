@@ -1,11 +1,12 @@
 // Libraries
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, FlexProps, Heading, Image, Text } from "@chakra-ui/react"
+import { Flex, FlexProps, Heading, Image } from "@chakra-ui/react"
 
 // Components
 import Translation from "./Translation"
 import Emoji from "./Emoji"
+import Text from "./OldText"
 
 import type { TranslationKey } from "../utils/translations"
 

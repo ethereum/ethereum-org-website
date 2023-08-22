@@ -13,7 +13,6 @@ import {
   ImgProps,
   List,
   ListItem,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react"
 import type { Context } from "../../../types"
@@ -26,6 +25,7 @@ import PageMetadata from "../../../components/PageMetadata"
 import Translation from "../../../components/Translation"
 import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
 import FeedbackCard from "../../../components/FeedbackCard"
+import Text from "../../../components/OldText"
 
 // Utils
 import { getImage } from "../../../utils/image"

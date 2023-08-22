@@ -10,7 +10,6 @@ import {
   Box,
   Flex,
   Heading,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
@@ -25,6 +24,7 @@ import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
 import FeedbackCard from "../../components/FeedbackCard"
 import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
+import Text from "../../components/OldText"
 
 // Data
 import externalTutorials from "../../data/externalTutorials.json"

@@ -60,9 +60,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       {formattedUTC && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":calendar:" />
-          <Text fontFamily="monospace" m={0}>
-            {formattedUTC}
-          </Text>
+          <Text fontFamily="monospace">{formattedUTC}</Text>
         </Flex>
       )}
       {blockNumber &&

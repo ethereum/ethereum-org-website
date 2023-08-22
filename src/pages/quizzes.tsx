@@ -5,7 +5,6 @@ import {
   Heading,
   Icon,
   Stack,
-  Text,
   useDisclosure,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
@@ -22,6 +21,7 @@ import QuizzesList from "../components/Quiz/QuizzesList"
 import QuizzesModal from "../components/Quiz/QuizzesModal"
 import QuizzesStats from "../components/Quiz/QuizzesStats"
 import { QuizzesHubContext } from "../components/Quiz/context"
+import Text from "../components/OldText"
 import { Content } from "./get-eth"
 
 import { useLocalStorage } from "../hooks/useLocalStorage"

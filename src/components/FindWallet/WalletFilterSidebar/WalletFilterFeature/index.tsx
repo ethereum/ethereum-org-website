@@ -238,7 +238,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                                   width="full"
                                   onChange={handleClick}
                                 >
-                                  <Text as="p" aria-hidden="true" m={0}>
+                                  <Text as="p" aria-hidden="true">
                                     {option.name}
                                   </Text>
                                 </Checkbox>

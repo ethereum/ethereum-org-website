@@ -1,15 +1,7 @@
 import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  Show,
-  Text,
-  useToken,
-} from "@chakra-ui/react"
+import { Box, Flex, Grid, Heading, Show, useToken } from "@chakra-ui/react"
 
 import { List as ButtonDropdownList } from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
@@ -24,6 +16,7 @@ import StakingStatsBox from "../../components/Staking/StakingStatsBox"
 import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
+import Text from "../../components/OldText"
 
 import { getImage } from "../../utils/image"
 import type { TranslationKey } from "../../utils/translations"

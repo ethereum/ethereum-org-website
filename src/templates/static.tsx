@@ -3,7 +3,6 @@ import {
   Badge,
   Box,
   Flex,
-  Text,
   Divider as ChakraDivider,
   Heading,
   Icon,
@@ -45,6 +44,7 @@ import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
+import Text from "../components/OldText"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"

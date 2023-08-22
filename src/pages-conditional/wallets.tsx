@@ -1,13 +1,5 @@
 import React from "react"
-import {
-  Center,
-  Heading,
-  Box,
-  Flex,
-  BoxProps,
-  Text,
-  Img,
-} from "@chakra-ui/react"
+import { Center, Heading, Box, Flex, BoxProps, Img } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
@@ -23,6 +15,7 @@ import HorizontalCard, {
 import CardList from "../components/CardList"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import Text from "../components/OldText"
 import { StyledCard } from "../pages/get-eth"
 
 import { getImage, getSrc } from "../utils/image"

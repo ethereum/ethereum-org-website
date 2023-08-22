@@ -1,8 +1,9 @@
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, FlexProps, Heading, Image, Text } from "@chakra-ui/react"
+import { Flex, FlexProps, Heading, Image } from "@chakra-ui/react"
 
 import Translation from "./Translation"
+import Text from "./OldText"
 import { TranslationKey } from "../utils/translations"
 
 export interface IProps extends FlexProps {

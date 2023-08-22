@@ -12,7 +12,6 @@ import {
   Flex,
   Heading,
   Icon,
-  Text,
   Spinner,
   Stack,
   Container,
@@ -25,6 +24,7 @@ import Button from "../Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
+import Text from "../OldText"
 
 import {
   CorrectIcon,

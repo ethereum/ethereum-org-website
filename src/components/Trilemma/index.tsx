@@ -7,11 +7,11 @@ import {
   Flex,
   Heading,
   Hide,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 import Card from "../Card"
 import Translation from "../Translation"
+import Text from "../OldText"
 import { TriangleSVG, IProps as TriangleSVGProps } from "./Triangle"
 import { useTrilemma } from "./useTrilemma"
 

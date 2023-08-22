@@ -3,14 +3,7 @@ import { useTheme } from "@emotion/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import {
-  Box,
-  Center,
-  Heading,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react"
+import { Box, Center, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import Card from "../components/Card"
@@ -24,6 +17,7 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
+import Text from "../components/OldText"
 import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp, Context } from "../types"

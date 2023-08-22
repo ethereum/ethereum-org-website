@@ -6,13 +6,13 @@ import {
   CloseButton,
   Flex,
   Heading,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 
 // Component
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 export interface IProps {
   shouldShow: boolean

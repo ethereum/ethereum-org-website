@@ -6,7 +6,6 @@ import {
   Box,
   Flex,
   Heading,
-  Text,
   Img,
   Icon,
   Grid,
@@ -33,6 +32,7 @@ import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
 
 import { getData } from "../utils/cache"
 import { getImage } from "../utils/image"

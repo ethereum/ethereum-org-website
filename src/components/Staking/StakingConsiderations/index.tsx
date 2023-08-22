@@ -5,7 +5,6 @@ import {
   Heading,
   List,
   ListItem,
-  Text,
   useToken,
   VStack,
 } from "@chakra-ui/react"
@@ -20,6 +19,7 @@ import {
 // Component imports
 import ButtonDropdown from "../../ButtonDropdown"
 import Translation from "../../Translation"
+import Text from "../../OldText"
 import { trackCustomEvent } from "../../../utils/matomo"
 import { useStakingConsiderations } from "./use-staking-considerations"
 

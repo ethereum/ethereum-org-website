@@ -5,7 +5,6 @@ import {
   IconButton,
   LinkBox,
   LinkOverlay,
-  Text,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
@@ -16,6 +15,7 @@ import InlineLink, { BaseLink } from "../components/Link"
 import Input from "../components/Input"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
 
 import { Language, languageMetadata } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"

@@ -1,14 +1,6 @@
 // Libraries
 import React, { useState, useRef } from "react"
-import {
-  Flex,
-  Box,
-  Image,
-  Icon,
-  Text,
-  Heading,
-  useTheme,
-} from "@chakra-ui/react"
+import { Flex, Box, Image, Icon, Heading, useTheme } from "@chakra-ui/react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -22,6 +14,7 @@ import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
 import WalletTable from "../../components/FindWallet/WalletTable"
+import Text from "../../components/OldText"
 
 // Data
 import walletData from "../../data/wallets/wallet-data"

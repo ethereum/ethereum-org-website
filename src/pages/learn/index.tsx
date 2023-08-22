@@ -9,7 +9,6 @@ import {
   HeadingProps,
   ListItem,
   Show,
-  Text,
   UnorderedList,
   useToken,
 } from "@chakra-ui/react"
@@ -29,6 +28,7 @@ import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
+import Text from "../../components/OldText"
 import {
   ContentContainer,
   InfoColumn,

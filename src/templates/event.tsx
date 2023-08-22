@@ -12,7 +12,6 @@ import {
   Heading,
   HeadingProps,
   Show,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 
@@ -23,6 +22,7 @@ import ExpandableCard from "../components/ExpandableCard"
 import PageMetadata from "../components/PageMetadata"
 import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import Text from "../components/OldText"
 
 import { ChildOnlyProp, Context } from "../types"
 

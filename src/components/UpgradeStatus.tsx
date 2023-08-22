@@ -1,7 +1,10 @@
 import React from "react"
-import { TranslationKey } from "../utils/translations"
+import { Heading, useColorModeValue, VStack } from "@chakra-ui/react"
+
 import Translation from "./Translation"
-import { Heading, Text, useColorModeValue, VStack } from "@chakra-ui/react"
+import Text from "./OldText"
+
+import { TranslationKey } from "../utils/translations"
 
 export interface IStyledContainer {
   isShipped: boolean
