@@ -5,11 +5,9 @@ import type { SimulatorState } from "../../interfaces"
 import { simulatorData } from "./data"
 
 interface IProps {
-  pathId?: string
+  pathId: string
 }
-
-// TODO: Remove fallback path and make pathId required
-export const Template: React.FC<IProps> = ({ pathId = "create-account" }) => {
+export const Template: React.FC<IProps> = ({ pathId }) => {
   const [step, setStep] = useState<number>(0)
   const totalSteps: number =
     simulatorData[pathId].stepDetails.explanations.length

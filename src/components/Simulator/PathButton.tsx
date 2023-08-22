@@ -1,6 +1,5 @@
-import React, { type ComponentType, type SVGProps } from "react"
+import React from "react"
 import { Button, Flex, Text } from "@chakra-ui/react"
-import type { SimulatorPathSummary } from "../../interfaces"
 import { simulatorData } from "./data"
 
 interface IProps {

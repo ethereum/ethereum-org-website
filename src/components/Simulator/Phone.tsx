@@ -15,7 +15,7 @@ export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
         h={{ base: 480, md: 600 }}
         maxH="100%"
         w="full"
-        border="5px solid"
+        border="8px"
         borderColor="body.medium"
         borderRadius="3xl"
         bg="background.base"
