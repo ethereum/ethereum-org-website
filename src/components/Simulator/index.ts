@@ -1,6 +1,7 @@
 export * from "./Explanation"
 export * from "./HomeScreen"
 export * from "./icons"
+export * from "./NewWalletPreview"
 export * from "./PathButton"
 export * from "./Phone"
 export * from "./ProgressCta"
