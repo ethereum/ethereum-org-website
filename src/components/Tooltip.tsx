@@ -1,5 +1,6 @@
 import React, { ReactNode, useState } from "react"
 import { Box, useColorModeValue } from "@chakra-ui/react"
+import { motion, AnimatePresence } from "framer-motion"
 import * as utils from "../utils/isMobile"
 
 export interface IProps {
@@ -40,41 +41,64 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
       >
         {children}
         {isVisible && (
-          <Box
-            whiteSpace="normal"
-            w={{ base: "140px", md: "300px" }}
-            color="text"
-            bg="background.highlight"
-            boxShadow={shadow}
-            position="absolute"
-            zIndex="docked"
-            p={4}
-            textTransform="none"
-            fontSize="sm"
-            fontWeight="medium"
-            cursor="default"
-            borderRadius="base"
-            bottom="125%"
-            left="25%"
-            transform="translateX(-50%)"
-          >
+          <AnimatePresence>
             <Box
-              as="span"
+              as={motion.div}
+              whiteSpace="normal"
+              w={{ base: "140px", md: "300px" }}
+              color="text"
+              bg="background.highlight"
+              boxShadow={shadow}
               position="absolute"
-              bottom={-2}
-              left="calc(50% - 6px)"
-              borderRightWidth={10}
-              borderRightStyle="solid"
-              borderRightColor="transparent"
-              borderTopWidth={10}
-              borderTopStyle="solid"
-              borderTopColor="background.highlight"
-              borderLeftWidth={10}
-              borderLeftStyle="solid"
-              borderLeftColor="transparent"
-            />
-            {content}
-          </Box>
+              zIndex="docked"
+              p={4}
+              textTransform="none"
+              fontSize="sm"
+              fontWeight="medium"
+              cursor="default"
+              borderRadius="base"
+              bottom="125%"
+              left="-150%"
+              initial="exit"
+              animate="enter"
+              exit="exit"
+              variants={{
+                exit: {
+                  scale: 0.85,
+                  opacity: 0,
+                  transition: {
+                    opacity: { duration: 0.15, easings: "easeInOut" },
+                    scale: { duration: 0.2, easings: "easeInOut" },
+                  },
+                },
+                enter: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    opacity: { easings: "easeOut", duration: 0.5 },
+                    scale: { duration: 0.5, ease: [0.175, 0.885, 0.4, 1.1] },
+                  },
+                },
+              }}
+            >
+              <Box
+                as="span"
+                position="absolute"
+                bottom={-2}
+                left="calc(50% - 6px)"
+                borderRightWidth={10}
+                borderRightStyle="solid"
+                borderRightColor="transparent"
+                borderTopWidth={10}
+                borderTopStyle="solid"
+                borderTopColor="background.highlight"
+                borderLeftWidth={10}
+                borderLeftStyle="solid"
+                borderLeftColor="transparent"
+              />
+              {content}
+            </Box>
+          </AnimatePresence>
         )}
       </Box>
     </>
