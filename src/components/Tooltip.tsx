@@ -34,7 +34,6 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
         display="inline-flex"
         userSelect="none"
         cursor="pointer"
-        title="More info"
         onMouseEnter={!isMobile ? () => setIsVisible(true) : undefined}
         onMouseLeave={!isMobile ? () => setIsVisible(false) : undefined}
         onClick={isMobile ? () => setIsVisible(!isVisible) : undefined}
@@ -58,7 +57,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
               cursor="default"
               borderRadius="base"
               bottom="125%"
-              left="-150%"
+              left="-130px"
               initial="exit"
               animate="enter"
               exit="exit"

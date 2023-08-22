@@ -317,7 +317,7 @@ You can think of DeFi in layers:
 
 1. The blockchain – Ethereum contains the transaction history and state of accounts.
 2. The assets – [ETH](/eth/) and the other tokens (currencies).
-3. The protocols – [smart contracts](/glossary/#smart-contract) that provide the functionality, for example, a service that allows for decentralized lending of assets.
+3. The protocols – <GlossaryTooltip termKey="smart-contract">smart contracts</GlossaryTooltip> that provide the functionality, for example, a service that allows for decentralized lending of assets.
 4. [The applications](/dapps/) – the products we use to manage and access the protocols.
 
 ## Build DeFi {#build-defi}
