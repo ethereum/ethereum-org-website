@@ -17,6 +17,7 @@ const GlossaryTooltip: React.FC<IProps> = ({ children, termKey }) => {
       <Text
         as="u"
         textDecorationStyle="dotted"
+        textUnderlineOffset="3px"
         _hover={{
           textDecorationColor: "primary.hover",
           color: "primary.hover",
