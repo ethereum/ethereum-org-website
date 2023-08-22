@@ -1,4 +1,4 @@
-import { Box, Center, Wrap, WrapItem } from "@chakra-ui/react"
+import { Box, Center, StackDivider, VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 import * as React from "react"
 import { EthHomeIcon } from "./EthHomeIcon"
@@ -90,8 +90,8 @@ import {
 } from "./wallets"
 
 export default {
-  component: Wrap,
-} as Meta<typeof Wrap>
+  component: VStack,
+} as Meta<typeof VStack>
 
 const iconsDefinitions = [
   CorrectIcon,
@@ -178,19 +178,31 @@ const iconsDefinitions = [
 iconsDefinitions.sort((a, b) =>
   (a?.displayName || "") > (b?.displayName || "") ? 1 : -1
 )
-const wrapItems = iconsDefinitions.map((IconDef) => (
-  <WrapItem key={IconDef.displayName}>
-    <Box border="1px" borderStyle="solid" borderColor="border" p={1}>
-      <Center>
-        <IconDef />
-      </Center>
-      <Center>{IconDef.displayName}</Center>
-    </Box>
-  </WrapItem>
+const items = iconsDefinitions.map((IconDef) => (
+  <Box
+    key={IconDef.displayName}
+    border="1px"
+    borderStyle="solid"
+    borderColor="border"
+    p={1}
+  >
+    <Center>
+      <IconDef />
+    </Center>
+    <Center>{IconDef.displayName}</Center>
+  </Box>
 ))
 
-export const IconsList: StoryObj<typeof Wrap> = {
+export const IconsList: StoryObj<typeof VStack> = {
   render: () => {
-    return <Wrap>{wrapItems}</Wrap>
+    return (
+      <VStack
+        divider={<StackDivider borderColor="gray.200" />}
+        spacing={4}
+        align="stretch"
+      >
+        {items}
+      </VStack>
+    )
   },
 }
