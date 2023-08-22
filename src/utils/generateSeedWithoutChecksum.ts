@@ -2052,10 +2052,11 @@ const WORDLISTS = {
 } as const
 
 export const generateSeedWithoutChecksum = (
-  length: number = 12
+  length: number = 12,
+  characterLimit: number = 5
 ): Array<string> => {
   const lang = "en" as const
-  const words = WORDLISTS[lang]
+  const words = WORDLISTS[lang].filter((word) => word.length <= characterLimit)
   return Array(length)
     .fill(0)
     .map(() => words[Math.floor(Math.random() * words.length)])

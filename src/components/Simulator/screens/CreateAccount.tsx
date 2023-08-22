@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Flex,
   Grid,
   type GridProps,
@@ -19,6 +20,8 @@ import { EthGlyphIcon } from "../icons"
 import { ProgressCta } from "../ProgressCta"
 import { motion } from "framer-motion"
 import { PiCheckThin } from "react-icons/pi"
+
+const WORDS_REQUIRED = 2 as const
 
 const MotionFlex = motion(Flex)
 
@@ -76,9 +79,32 @@ const wordStyleVariants = {
     borderBottom: "1px",
     borderColor: "body.medium",
     mt: 4,
+    zIndex: 1,
   },
-  active: {},
-  inactive: {},
+  complete: {
+    borderRadius: "md",
+    bg: "background.base",
+    color: "body.base",
+    border: "1px",
+    borderColor: "body.base",
+    px: 2,
+  },
+  active: {
+    borderRadius: "md",
+    bg: "background.base",
+    color: "primary.base",
+    border: "1px",
+    borderColor: "primary.base",
+    px: 2,
+  },
+  incomplete: {
+    borderRadius: "md",
+    bg: "background.base",
+    color: "body.base",
+    border: "1px",
+    borderColor: "body.light",
+    px: 2,
+  },
   disabled: {
     borderRadius: "md",
     bg: "body.light",
@@ -103,25 +129,46 @@ const WordDisplay: React.FC<WordDisplayProps> = ({ children, variant }) => (
 
 interface WordListProps {
   words: Array<string>
-  variant: WordStyleVariant
+  wordsSelected?: number
 }
 
-const WordList: React.FC<WordListProps> = ({ words, variant }) => {
+const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
   const sharedStyles = {
     m: 0,
     display: "flex",
     flexDirection: "column",
     h: "calc(6 * (16px + 37px))",
     columnGap: 8,
+    rowGap: 3,
   } as const
   const styleVariants = {
-    disabled: {
-      rowGap: 3,
+    display: {
+      rowGap: 0,
     },
   } as const
-  const variantStyles: GridProps = styleVariants[variant] ?? {}
+
+  const variantStyles: GridProps =
+    styleVariants[typeof wordsSelected === "undefined" ? "display" : ""] ?? {}
   const styles = { ...sharedStyles, ...variantStyles } as ListProps
   const splitIndex = Math.floor(words.length / 2)
+
+  const wordMapping = (word: string, index: number): React.ReactElement => {
+    const initialWordDisplay = typeof wordsSelected === "undefined"
+    const variant: WordStyleVariant = initialWordDisplay
+      ? "display"
+      : wordsSelected >= WORDS_REQUIRED
+      ? "complete"
+      : index === wordsSelected
+      ? "active"
+      : index < wordsSelected
+      ? "complete"
+      : index < 2
+      ? "incomplete"
+      : "disabled"
+    const showLabel = initialWordDisplay || variant === "complete"
+    return <WordDisplay variant={variant}>{showLabel && word}</WordDisplay>
+  }
+
   return (
     <Grid
       templateColumns="repeat(2, 1fr)"
@@ -131,16 +178,67 @@ const WordList: React.FC<WordListProps> = ({ words, variant }) => {
       bg="background.base"
     >
       <OrderedList {...styles} start={1}>
-        {words.slice(0, splitIndex).map((word) => (
-          <WordDisplay variant={variant}>{word}</WordDisplay>
-        ))}
+        {words.map(wordMapping).slice(0, splitIndex)}
       </OrderedList>
       <OrderedList {...styles} start={splitIndex + 1}>
-        {words.slice(splitIndex).map((word) => (
-          <WordDisplay variant={variant}>{word}</WordDisplay>
-        ))}
+        {words.map(wordMapping).slice(splitIndex)}
       </OrderedList>
     </Grid>
+  )
+}
+
+interface WordsSelectorButtonsProps {
+  words: Array<string>
+  wordsSelected: number
+  setWordsSelected: (value: React.SetStateAction<number>) => void
+}
+const WordSelectorButtons: React.FC<WordsSelectorButtonsProps> = ({
+  words,
+  wordsSelected,
+  setWordsSelected,
+}) => {
+  const wordIndices: Array<{ word: string; index: number }> = words.map(
+    (word, index) => ({ word, index })
+  )
+  const randomizedWords = useMemo(
+    () => wordIndices.sort(() => Math.random() - 0.5),
+    [words]
+  )
+  const incrementWordsSelected = () => {
+    setWordsSelected((prev) => prev + 1)
+  }
+  return (
+    <Flex
+      gap={2}
+      whiteSpace="nowrap"
+      flexWrap="wrap"
+      justify="space-between"
+      px={{ base: 4, md: 8 }}
+      bg="background.highlight"
+    >
+      {randomizedWords.map(({ word, index }) => {
+        const isCurrent = index === wordsSelected
+        return (
+          <Button
+            variant="solid"
+            onClick={incrementWordsSelected}
+            bg="primary.hover"
+            color="background.base"
+            w="fit-content"
+            px={2}
+            borderRadius="xl"
+            isDisabled={!isCurrent}
+            _disabled={{
+              bg: "body.light",
+              color: "body.base",
+              pointerEvents: "none",
+            }}
+          >
+            {word}
+          </Button>
+        )
+      })}
+    </Flex>
   )
 }
 
@@ -151,7 +249,21 @@ const InteractiveWordSelector: React.FC<WordSelectorProps> = ({
   state,
   words,
 }) => {
-  return <WordList words={words} variant="disabled" />
+  const [wordsSelected, setWordsSelected] = useState<number>(0)
+  return (
+    <>
+      <WordList words={words} wordsSelected={wordsSelected} />
+      {wordsSelected < WORDS_REQUIRED ? (
+        <WordSelectorButtons
+          words={words}
+          wordsSelected={wordsSelected}
+          setWordsSelected={setWordsSelected}
+        />
+      ) : (
+        <ProgressCta state={state} />
+      )}
+    </>
+  )
 }
 
 export const CreateAccountScreens: React.FC<SimulatorStateProps> = ({
@@ -218,7 +330,7 @@ export const CreateAccountScreens: React.FC<SimulatorStateProps> = ({
               Recovery phrase example
             </Text>
           </Box>
-          <WordList words={words} variant="display" />
+          <WordList words={words} />
         </Box>
       )}
       {[6].includes(step) && (

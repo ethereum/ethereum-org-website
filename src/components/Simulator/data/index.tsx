@@ -127,6 +127,7 @@ export const simulatorData: SimulatorData = {
         "",
         "I understand",
         "Next",
+        "Start using wallet",
       ],
     },
     pathSummary: {
