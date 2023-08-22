@@ -16,6 +16,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/community/code-of-conduct",
     "/community/support",
     "/energy-consumption",
+    "/glossary",
     "/guides/how-to-swap-tokens",
     "/history/",
     "/smart-contracts",
