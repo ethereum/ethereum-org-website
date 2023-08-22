@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Una catena Plasma è una blockchain separata collegata alla Rete principale di Ethereum ma che esegue le transazioni al di fuori della catena con il proprio meccanismo di validazione del blocco. Le catene Plasma sono solitamente note come catene "figlio", essenzialmente copie più piccole della Rete principale di Ethereum. Le catene Plasma usano le [prove di frode](/glossary/#fraud-proof) (come i [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/)) per arbitrare le dispute.
+Una catena Plasma è una blockchain separata collegata alla Rete principale di Ethereum ma che esegue le transazioni al di fuori della catena con il proprio meccanismo di validazione del blocco. Le catene Plasma sono solitamente note come catene "figlio", essenzialmente copie più piccole della Rete principale di Ethereum. Le catene Plasma usano le <GlossaryTooltip termKey="fraud-proof">prove di frode</GlossaryTooltip> (come i [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/)) per arbitrare le dispute.
 
 Gli alberi di Merkle consentono la creazione di una pila illimitata di queste catene che possono funzionare per scaricare la larghezza di banda dalle catene padre (inclusa la Rete principale di Ethereum). Tuttavia, benché queste catene derivino una certa sicurezza da Ethereum (tramite le prove di frode), la loro sicurezza ed efficienza sono influenzate da numerose limitazioni di progettazione.
 

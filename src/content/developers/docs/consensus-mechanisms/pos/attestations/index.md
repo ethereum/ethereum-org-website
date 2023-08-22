@@ -8,7 +8,7 @@ A validator is expected to create, sign and broadcast an attestation during ever
 
 ## What is an attestation? {#what-is-an-attestation}
 
-Every [epoch](/glossary/#epoch) (6.4 minutes) a validator proposes an attestation to the network. The attestation is for a specific slot in the epoch. The purpose of the attestation is to vote in favor of the validator's view of the chain, in particular the most recent justified block and the first block in the current epoch (known as `source` and `target` checkpoints). This information is combined for all participating validators, enabling the network to reach consensus about the state of the blockchain.
+Every <GlossaryTooltip termKey="epoch">epoch</GlossaryTooltip> (6.4 minutes) a validator proposes an attestation to the network. The attestation is for a specific slot in the epoch. The purpose of the attestation is to vote in favor of the validator's view of the chain, in particular the most recent justified block and the first block in the current epoch (known as `source` and `target` checkpoints). This information is combined for all participating validators, enabling the network to reach consensus about the state of the blockchain.
 
 The attestation contains the following components:
 

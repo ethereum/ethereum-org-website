@@ -58,7 +58,7 @@ Cada transação é extraída (incluída em um novo bloco e propagada pela prime
 
 ## Blocos Ommer (tio) {#ommer-blocks}
 
-Mineração de blocos na prova de trabalho era probabilística, o que significa que às vezes dois blocos válidos eram publicados simultaneamente devido à latência da rede. Nesse caso, o protocolo tinha que determinar a cadeia mais longa (e, portanto, mais “válida”), enquanto garante justiça para os mineradores, recompensando parcialmente o bloco válido proposto não incluído. Isso encorajou uma maior descentralização da rede, pois mineradores menores, que podem enfrentar maior latência, ainda poderiam gerar retornos por meio de recompensas de bloco [ommer](/glossary/#ommer).
+Mineração de blocos na prova de trabalho era probabilística, o que significa que às vezes dois blocos válidos eram publicados simultaneamente devido à latência da rede. Nesse caso, o protocolo tinha que determinar a cadeia mais longa (e, portanto, mais “válida”), enquanto garante justiça para os mineradores, recompensando parcialmente o bloco válido proposto não incluído. Isso encorajou uma maior descentralização da rede, pois mineradores menores, que podem enfrentar maior latência, ainda poderiam gerar retornos por meio de recompensas de bloco <GlossaryTooltip termKey="ommer">ommer</GlossaryTooltip>.
 
 O termo "ommer" é o termo neutro de gênero preferido para o irmão de um bloco pai, mas às vezes também é chamado de "tio". **Desde a mudança do Ethereum para prova de participação, os blocos ommer não são mais minerados**, pois apenas um proponente é eleito em cada espaço. Você pode ver essa mudança visualizando o [gráfico histórico](https://ycharts.com/indicators/ethereum_uncle_rate) dos blocos ommer minerados.
 

@@ -58,7 +58,7 @@ lang: ru
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _— FOSS-инструмент для создания интерфейсов dapp с [ABI](/glossary/#abi)._**
+**One Click Dapp _— FOSS-инструмент для создания интерфейсов dapp с <GlossaryTooltip termKey="abi">ABI</GlossaryTooltip>._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)

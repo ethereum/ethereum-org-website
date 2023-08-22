@@ -104,7 +104,7 @@ Yanıt örneği:
 
 ### Veri alanı {#the-data-field}
 
-İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](/glossary/#abi/) ile uyumlu olacak şekilde yorumlar.
+İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını <GlossaryTooltip termKey="abi/">uygulama ikili arayüzü (ABI)</GlossaryTooltip> ile uyumlu olacak şekilde yorumlar.
 
 İlk dört bayt, fonksiyonun isminin ve argümanlarının hash değerini kullanarak hangi fonksiyonun çağrılacağını belirler. Bazen seçiciden [bu veri tabanını](https://www.4byte.directory/signatures/) kullanarak fonksiyonu tespit edebilirsiniz.
 

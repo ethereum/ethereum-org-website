@@ -46,7 +46,7 @@ A [Beacon Chain](/roadmap/beacon-chain/) biztonságos elindításához 16384 dar
 
 #### Összefoglaló {#deposit-contract-summary}
 
-A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#staking) rendszerét az Ethereum ökoszisztémában. Bár [főhálózati](/glossary/#mainnet) szerződés, közvetlenül befolyásolta egy fontos [Eth2 frissítés](/roadmap/), a [Beacon Chain](/roadmap/beacon-chain/) indításának ütemezését.
+A letétbe helyezési szerződés bemutatta a <GlossaryTooltip termKey="staking">letétbe helyezés</GlossaryTooltip> rendszerét az Ethereum ökoszisztémában. Bár <GlossaryTooltip termKey="mainnet">főhálózati</GlossaryTooltip> szerződés, közvetlenül befolyásolta egy fontos [Eth2 frissítés](/roadmap/), a [Beacon Chain](/roadmap/beacon-chain/) indításának ütemezését.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -62,7 +62,7 @@ A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#st
 
 #### Összefoglaló {#muir-glacier-summary}
 
-A Muir Glacier nevű fork késleltetést vezetett be a [nehézségi bombához](/glossary/#difficulty-bomb). A blokknehézség növelése a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) konszenzus-mechanizmusában azzal fenyegetett, hogy az Ethereum használhatósága csökkenni fog, mert a tranzakciók küldése és a dappok használata több időt fog igénybe venni.
+A Muir Glacier nevű fork késleltetést vezetett be a <GlossaryTooltip termKey="difficulty-bomb">nehézségi bombához</GlossaryTooltip>. A blokknehézség növelése a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) konszenzus-mechanizmusában azzal fenyegetett, hogy az Ethereum használhatósága csökkenni fog, mert a tranzakciók küldése és a dappok használata több időt fog igénybe venni.
 
 - [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Olvasd el az Ethereum Cat Herder magyarázatát](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -85,7 +85,7 @@ A Muir Glacier nevű fork késleltetést vezetett be a [nehézségi bombához](/
 
 Az Istanbul fork:
 
-- Bizonyos műveletek [gas](/glossary/#gas) díj optimalizálása az [EVM-ben](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Bizonyos műveletek <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> díj optimalizálása az [EVM-ben](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Továbbfejlesztett szolgáltatás megtagadásos támadás elleni ellenállás.
 - A SNARKokon és a STARKokon alapuló [2. réteges skálázási](/developers/docs/layer-2-scaling/) megoldások teljesítményének javítása.
 - Az Ethereum és a Zcash közötti együttműködés bevezetése.
@@ -96,7 +96,7 @@ Az Istanbul fork:
 <ExpandableCard title="Istanbul EIP-k" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _adatvédelmet biztosító valuták használata az Ethereumon, mint a Zcash._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _olcsóbb kriptográfia a [gas](/glossary/#gas) díjak csökkentésére._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _olcsóbb kriptográfia a <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> díjak csökkentésére._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _az Ethereum védelme a visszajátszási támadásokkal szemben a `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine) bevezetésével._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _opkód gáz árak optimálása a fogyasztás alapján._
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _a CallData díjának csökkentése, hogy több adat férjen a blokkba – jó a [2. rétegű skálázásnak](/developers/docs/layer-2-scaling/)._
@@ -115,7 +115,7 @@ Az Istanbul fork:
 A Constantinople fork:
 
 - A blokklánc lefagyásának megakadályozása, mielőtt a [proof-of-stake bevezetésre kerülne](#beacon-chain-genesis).
-- Bizonyos műveletek [gas](/glossary/#gas) díj optimálása az [EVM-ben](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Bizonyos műveletek <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> díj optimálása az [EVM-ben](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Lehetőség olyan címekkel történő interakcióra, melyek még nem jöttek létre.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -142,7 +142,7 @@ A Constantinople fork:
 A Byzantium fork:
 
 - A [bányászati](/developers/docs/consensus-mechanisms/pow/mining/) blokk jutalom csökkentése 5-ről 3 ETH-re.
-- A [nehézségi bomba](/glossary/#difficulty-bomb) késleltetése egy évvel.
+- A <GlossaryTooltip termKey="difficulty-bomb">nehézségi bomba</GlossaryTooltip> késleltetése egy évvel.
 - Más szerződések is indíthatnak állapotot nem befolyásoló hívásokat.
 - Bizonyos kriptográfiai metódusok hozzáadása, mely lehetővé teszi a [2. réteges skálázást](/developers/docs/layer-2-scaling/).
 
@@ -158,7 +158,7 @@ A Byzantium fork:
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _változó hosszú visszatérítési érték támogatása._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _a `STATICCALL` opkód hozzáadása, mely lehetővé teszi az állapotot nem befolyásoló hívások indítását a többi szerződésnek._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _a nehézséget szabályozó képlet megváltoztatása._
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _a [nehézségi bomba](/glossary/#difficulty-bomb) késleltetése 1 évvel és a blokk jutalom 5-ről 3-ra csökkentése._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _a <GlossaryTooltip termKey="difficulty-bomb">nehézségi bomba</GlossaryTooltip> késleltetése 1 évvel és a blokk jutalom 5-ről 3-ra csökkentése._
 
 </ExpandableCard>
 
@@ -218,7 +218,7 @@ A Tangerine Whistle fork volt a első válasz a szolgáltatás megtagadásos (Do
 
 #### Összefoglaló {#dao-fork-summary}
 
-A DAO fork volt a válasz a [2016-os DAO támadásra](https://www.coindesk.com/understanding-dao-hack-journalists), amikor egy sérülékeny [DAO](/glossary/#dao) szerződésből 3.6 millió ETH-et ürítettek le a támadás során. A fork átmozgatta a pénzt a hibás szerződésből egy [új szerződésbe](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754), aminek csak egyetlen funkciója van: kiutalás. Bárki aki veszteséget szenvedett el kiutalhatott 1 ETH-et, minden tárcájukban lévő 100 DAO tokenre.
+A DAO fork volt a válasz a [2016-os DAO támadásra](https://www.coindesk.com/understanding-dao-hack-journalists), amikor egy sérülékeny <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip> szerződésből 3.6 millió ETH-et ürítettek le a támadás során. A fork átmozgatta a pénzt a hibás szerződésből egy [új szerződésbe](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754), aminek csak egyetlen funkciója van: kiutalás. Bárki aki veszteséget szenvedett el kiutalhatott 1 ETH-et, minden tárcájukban lévő 100 DAO tokenre.
 
 Ennek az akciónak a menetét megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](http://v1.carbonvote.com/). A fork mellett több mint a szavazók 85%-a voksolt.
 
@@ -256,7 +256,7 @@ A Homestead fork, mely a jövőbe tekintett. Számos protokoll változtatást ta
 
 #### Összefoglaló {#frontier-thawing-summary}
 
-A frontier thawing fork megszüntette az 5,000-es [gáz](/glossary/#gas) limitet egy [blokkra](/glossary/#block) és beállította az alapértelmezett gáz árat 51 [gweire](/glossary/#gwei). Ez lehetővé tette a tranzakciók létrejöttét – a tranzakciók 21,000 gázt igényeltek.
+A frontier thawing fork megszüntette az 5,000-es <GlossaryTooltip termKey="gas">gáz</GlossaryTooltip> limitet egy <GlossaryTooltip termKey="block">blokkra</GlossaryTooltip> és beállította az alapértelmezett gáz árat 51 <GlossaryTooltip termKey="gwei">gweire</GlossaryTooltip>. Ez lehetővé tette a tranzakciók létrejöttét – a tranzakciók 21,000 gázt igényeltek.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 
@@ -268,7 +268,7 @@ A frontier thawing fork megszüntette az 5,000-es [gáz](/glossary/#gas) limitet
 
 #### Összefoglaló {#frontier-summary}
 
-A Frontier egy működő, de teljesen leegyszerűsített implementációja volt az Ethereum projektnek. Az sikeres Olympic tesztelési fázist követte. A műszaki felhasználóknak készült, kimondottan fejlesztőknek. A [blokkoknak](/glossary/#block) egy 5000-es [gáz](/glossary/#gas) limit volt beállítva. Ez a ‘kiolvasztási’ időszak lehetővé tette a bányászok számára, hogy elindítsák a tevékenységüket és a korai felhasználóknak, hogy telepítsék a klienseiket anélkül, hogy 'sietniük' kellene.
+A Frontier egy működő, de teljesen leegyszerűsített implementációja volt az Ethereum projektnek. Az sikeres Olympic tesztelési fázist követte. A műszaki felhasználóknak készült, kimondottan fejlesztőknek. A <GlossaryTooltip termKey="block">blokkoknak</GlossaryTooltip> egy 5000-es <GlossaryTooltip termKey="gas">gáz</GlossaryTooltip> limit volt beállítva. Ez a ‘kiolvasztási’ időszak lehetővé tette a bányászok számára, hogy elindítsák a tevékenységüket és a korai felhasználóknak, hogy telepítsék a klienseiket anélkül, hogy 'sietniük' kellene.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

@@ -13,7 +13,7 @@ Blockchain applications help businesses:
 - Build new business models and value creation opportunities
 - Competitively future-proof their organization
 
-Enterprise blockchain applications can be built on the public permissionless Ethereum [Mainnet](/glossary/#mainnet), or on private blockchains that are based on Ethereum technology. Find more information on [private Enterprise Ethereum chains](/enterprise/private-ethereum/).
+Enterprise blockchain applications can be built on the public permissionless Ethereum <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip>, or on private blockchains that are based on Ethereum technology. Find more information on [private Enterprise Ethereum chains](/enterprise/private-ethereum/).
 
 ## Public vs private Ethereum {#private-vs-public}
 

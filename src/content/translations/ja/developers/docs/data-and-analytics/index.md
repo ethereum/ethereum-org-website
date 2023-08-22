@@ -12,7 +12,7 @@ lang: ja
 
 ## 前提知識 {#prerequisites}
 
-データ分析の文脈における[ブロックエクスプローラー](/developers/docs/data-and-analytics/block-explorers/)の使用方法をより深く理解するためには、その基本的な概念を把握しておく必要があります。 また、[インデックス](/glossary/#index)の概念について熟知していると、システム設計に追加されたメリットについても理解できます。
+データ分析の文脈における[ブロックエクスプローラー](/developers/docs/data-and-analytics/block-explorers/)の使用方法をより深く理解するためには、その基本的な概念を把握しておく必要があります。 また、<GlossaryTooltip termKey="index">インデックス</GlossaryTooltip>の概念について熟知していると、システム設計に追加されたメリットについても理解できます。
 
 アーキテクチャの基礎としては、[API](https://www.wikipedia.org/wiki/API)および[REST](https://www.wikipedia.org/wiki/Representational_state_transfer)の概念について、少なくとも理論として把握している必要があります。
 
@@ -20,7 +20,7 @@ lang: ja
 
 多くの[ブロックエクスプローラー](/developers/docs/data-and-analytics/block-explorers/)は、[RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API)ゲートウェイを提供しています。このゲートウェイにより、デベロッパーは、ブロック、トランザクション、マイナー、アカウント、およびその他のオンチェーンアクティビティについて、リアルタイムのデータを可視化できるようになります。
 
-デベロッパーはこうしたデータを処理して変換することで、[ブロックチェーン](/glossary/#blockchain)についての独自のインサイトおよびやり取りをユーザーに提供できます。 たとえば、[Etherscan](https://etherscan.io)は、12 秒のスロットごとに実行データとコンセンサスデータを提供します。
+デベロッパーはこうしたデータを処理して変換することで、<GlossaryTooltip termKey="blockchain">ブロックチェーン</GlossaryTooltip>についての独自のインサイトおよびやり取りをユーザーに提供できます。 たとえば、[Etherscan](https://etherscan.io)は、12 秒のスロットごとに実行データとコンセンサスデータを提供します。
 
 ## The Graph {#the-graph}
 

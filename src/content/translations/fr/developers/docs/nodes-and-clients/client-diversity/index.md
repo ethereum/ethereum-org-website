@@ -9,7 +9,7 @@ Le comportement d'un nœud Ethereum est contrôlé par le logiciel client qu'il 
 
 ## Prérequis {#prerequisites}
 
-Si vous ne maîtrisez pas déjà ce que sont les nœuds et les clients, consultez la page [nœuds et clients](/developers/docs/nodes-and-clients/). [Exécution](/glossary/#execution-layer) et [couches de consensus](/glossary/#consensus-layer) sont définies dans le glossaire.
+Si vous ne maîtrisez pas déjà ce que sont les nœuds et les clients, consultez la page [nœuds et clients](/developers/docs/nodes-and-clients/). <GlossaryTooltip termKey="execution-layer">Exécution</GlossaryTooltip> et <GlossaryTooltip termKey="consensus-layer">couches de consensus</GlossaryTooltip> sont définies dans le glossaire.
 
 ## Pourquoi existe-t-il différents clients ? {#why-multiple-clients}
 

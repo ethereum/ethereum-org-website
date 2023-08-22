@@ -51,7 +51,7 @@ summaryPoint3: 암호화폐 덕분에 사용자는 다시 한 번 자신의 식�
 
 ### 1. 공개 키 기반 구조(PKI) {#public-key-infrastructure}
 
-공개 키 기반 구조(PKI)는 특정 주체를 위해 [공개 키](/glossary/#public-key) 와 [개인 키](/glossary/#private-key)를 생성하는 정보 보안 장치입니다. 공개 키 암호화 기법은 블록체인 네트워크에서 사용자의 신원을 인증하고 디지털 자산의 소유권을 증명하는 용도로 사용됩니다.
+공개 키 기반 구조(PKI)는 특정 주체를 위해 <GlossaryTooltip termKey="public-key">공개 키</GlossaryTooltip> 와 <GlossaryTooltip termKey="private-key">개인 키</GlossaryTooltip>를 생성하는 정보 보안 장치입니다. 공개 키 암호화 기법은 블록체인 네트워크에서 사용자의 신원을 인증하고 디지털 자산의 소유권을 증명하는 용도로 사용됩니다.
 
 이더리움 계정과 같은 일부 분산 식별자에는 공개 키와 개인 키가 있습니다. 공개 키는 계정의 제어자를 식별하는 반면, 개인 키는 이 계정의 메시지에 서명하거나 메시지를 해독할 수 있습니다. PKI는 주체를 인증하는 데 필요한 증명을 제공하고, [암호화 서명](https://andersbrownworth.com/blockchain/public-private-keys/)을 통해 모든 주장을 검증함으로써 명의 도용 및 허위 신원 사용을 방지합니다.
 
@@ -91,7 +91,7 @@ DID는 블록체인에 저장되기 때문에 누구든지 이더리움에서 �
 
 ### 영구 액세스 권한이 있는 오프체인 증명 {#offchain-attestations-with-persistent-access}
 
-오프체인 인증 방식에서 증명은 JSON 파일로 변환된 후 오프체인(이상적으로는 IPFS 또는 Swarm과 같은 [탈중앙화된 클라우드 스토리지](/developers/docs/storage/) 플랫폼)에 저장됩니다. 한편, 해당 JSON 파일의 [해시](/glossary/#hash) 값은 온체인으로 저장되며 온체인 레지스트리를 통해 DID에 링크됩니다. 연계되는 DID는 해당 증명의 발급자의 것이거나 수신인의 것일 수도 있습니다.
+오프체인 인증 방식에서 증명은 JSON 파일로 변환된 후 오프체인(이상적으로는 IPFS 또는 Swarm과 같은 [탈중앙화된 클라우드 스토리지](/developers/docs/storage/) 플랫폼)에 저장됩니다. 한편, 해당 JSON 파일의 <GlossaryTooltip termKey="hash">해시</GlossaryTooltip> 값은 온체인으로 저장되며 온체인 레지스트리를 통해 DID에 링크됩니다. 연계되는 DID는 해당 증명의 발급자의 것이거나 수신인의 것일 수도 있습니다.
 
 이러한 방식은 증명이 블록체인 기반으로 영구 보관되는 동시에 민감한 정보는 암호화되어 필요시 검증할 수 있게 합니다. 또한 해당 증명은 개인 키의 소유자만이 복호화하여 정보를 확인할 수 있으므로, 선택적인 공개를 가능하게 합니다.
 

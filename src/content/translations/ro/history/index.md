@@ -31,7 +31,7 @@ Sunteți în căutarea unor viitoare actualizări ale protocolului? [Aflați des
 
 #### Rezumat {#arrow-glacier-summary}
 
-Actualizarea Arrow Glacier a amânat [bomba de dificultate](/glossary/#difficulty-bomb) cu câteva luni. Aceasta este singura modificare introdusă în această actualizare și este similară ca natură cu actualizarea [Muir Glacier](#muir-glacier). Modificări similare au fost efectuate cu actualizările [Byzantium](#byzantium), [Constantinople](#constantinople) și [Londra](#london) ale reţelei.
+Actualizarea Arrow Glacier a amânat <GlossaryTooltip termKey="difficulty-bomb">bomba de dificultate</GlossaryTooltip> cu câteva luni. Aceasta este singura modificare introdusă în această actualizare și este similară ca natură cu actualizarea [Muir Glacier](#muir-glacier). Modificări similare au fost efectuate cu actualizările [Byzantium](#byzantium), [Constantinople](#constantinople) și [Londra](#london) ale reţelei.
 
 - [Blogul EF - Anunțul actualizării Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Actualizarea Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -72,7 +72,7 @@ Altair a fost prima actualizare majoră a rețelei care a avut o dată exactă d
 
 #### Rezumat {#london-summary}
 
-Actualizarea Londra a introdus [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), care a reformat piața de taxe de tranzacționare, precum și schimbările modului de gestionare a rambursărilor de gaz și ale programării [Erei glaciare](/glossary/#ice-age).
+Actualizarea Londra a introdus [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), care a reformat piața de taxe de tranzacționare, precum și schimbările modului de gestionare a rambursărilor de gaz și ale programării <GlossaryTooltip termKey="ice-age">Erei glaciare</GlossaryTooltip>.
 
 - [Sunteți dezvoltator de aplicații dApp? Aveţi grijă să vă actualizați bibliotecile și instrumentele.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
 - [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -136,7 +136,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 
 #### Rezumat {#deposit-contract-summary}
 
-Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecosistemul Ethereum. Cu toate că este un contract pe [Mainnet](/glossary/#mainnet), acesta a avut un impact direct asupra termenului de lansare a [Lanțului Beacon](/roadmap/beacon-chain/), o importantă [actualizare Ethereum](/roadmap/).
+Contractul de depunere a mizei a introdus <GlossaryTooltip termKey="staking">mizarea</GlossaryTooltip> în ecosistemul Ethereum. Cu toate că este un contract pe <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip>, acesta a avut un impact direct asupra termenului de lansare a [Lanțului Beacon](/roadmap/beacon-chain/), o importantă [actualizare Ethereum](/roadmap/).
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -152,7 +152,7 @@ Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecos
 
 #### Rezumat {#muir-glacier-summary}
 
-Fork-ul Muir Glacier a introdus o întârziere a [bombei de dificultate](/glossary/#difficulty-bomb). Creșterea dificultăţii blocului în mecanismul de consens bazat pe [dovada-muncii](/developers/docs/consensus-mechanisms/pow/) ameninţa să degradeze calitățile funcționale ale lui Ethereum prin creșterea timpului de așteptare pentru trimiterea tranzacțiilor și folosirea aplicațiilor dapp.
+Fork-ul Muir Glacier a introdus o întârziere a <GlossaryTooltip termKey="difficulty-bomb">bombei de dificultate</GlossaryTooltip>. Creșterea dificultăţii blocului în mecanismul de consens bazat pe [dovada-muncii](/developers/docs/consensus-mechanisms/pow/) ameninţa să degradeze calitățile funcționale ale lui Ethereum prin creșterea timpului de așteptare pentru trimiterea tranzacțiilor și folosirea aplicațiilor dapp.
 
 - [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Citiţi explicatorul Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -175,7 +175,7 @@ Fork-ul Muir Glacier a introdus o întârziere a [bombei de dificultate](/glossa
 
 Fork-ul Istanbul:
 
-- A optimizat costul [gazului](/glossary/#gas) pentru anumite acțiuni din [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- A optimizat costul <GlossaryTooltip termKey="gas">gazului</GlossaryTooltip> pentru anumite acțiuni din [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - A îmbunătățit rezistența la atacul prin refuzul-serviciului.
 - Made [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling) solutions based on SNARKs and STARKs more performant.
 - A permis interoperabilitatea dintre Ethereum și Zcash.
@@ -186,7 +186,7 @@ Fork-ul Istanbul:
 <ExpandableCard title="EIP-urile Istanbul" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _allow Ethereum to work with privacy-preserving currency like Zcash._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _cheaper cryptography to improve [gas](/glossary/#gas) costs._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _cheaper cryptography to improve <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> costs._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protects Ethereum against replay attacks by adding `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimising opcode gas prices based on consumption._
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/#layer-2-scaling)._
@@ -205,7 +205,7 @@ Fork-ul Istanbul:
 Fork-ul Constantinopol:
 
 - A asigurat ca blockchain-ul să nu înghețe înainte de [implementarea dovezii-mizei](#beacon-chain-genesis).
-- A optimizat costul [gazului](/glossary/#gas) anumitor acțiuni din [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- A optimizat costul <GlossaryTooltip termKey="gas">gazului</GlossaryTooltip> anumitor acțiuni din [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - A adăugat capacitatea de a interacționa cu adrese care nu au fost create încă.
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -232,7 +232,7 @@ Fork-ul Constantinopol:
 Fork-ul Byzantium:
 
 - A redus recompensele pentru [minarea](/developers/docs/consensus-mechanisms/pow/mining/) pe bloc de la 5 la 3 ETH.
-- A amânat [bomba de dificultate](/glossary/#difficulty-bomb) cu un an.
+- A amânat <GlossaryTooltip termKey="difficulty-bomb">bomba de dificultate</GlossaryTooltip> cu un an.
 - A adăugat capacitatea de a efectua apeluri care nu modifică starea către alte contracte.
 - Added certain cryptography methods to allow for [layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
@@ -248,7 +248,7 @@ Fork-ul Byzantium:
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _adds support for variable length return values._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _adds `STATICCALL` opcode, allowing non-state-changing calls to other contracts._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _changes difficulty adjustment formula._
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _delays [difficulty bomb](/glossary/#difficulty-bomb) by 1 year and reduces block reward from 5 to 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _delays <GlossaryTooltip termKey="difficulty-bomb">difficulty bomb</GlossaryTooltip> by 1 year and reduces block reward from 5 to 3 ETH._
 
 </ExpandableCard>
 
@@ -308,7 +308,7 @@ Fork-ul Tangerine Whistle a fost primul răspuns la atacurile prin refuzul-servi
 
 #### Rezumat {#dao-fork-summary}
 
-Fork-ul DAO a fost un răspuns la [atacul DAO din 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/), în care un contract [DAO](/glossary/#dao) nesecurizat a fost golit de peste 3,6 milioane de ETH prin piratare. Fork-ul a mutat fondurile de pe contractul defectuos pe un [contract nou](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) cu o singură funcție: „withdraw” (retragere). Oricine a pierdut fonduri a putut retrage 1 ETH pentru fiecare 100 de tokenuri DAO din portofel.
+Fork-ul DAO a fost un răspuns la [atacul DAO din 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/), în care un contract <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip> nesecurizat a fost golit de peste 3,6 milioane de ETH prin piratare. Fork-ul a mutat fondurile de pe contractul defectuos pe un [contract nou](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) cu o singură funcție: „withdraw” (retragere). Oricine a pierdut fonduri a putut retrage 1 ETH pentru fiecare 100 de tokenuri DAO din portofel.
 
 Această măsură a fost votată de comunitatea Ethereum. Orice deținător de ETH a putut vota printr-o tranzacție pe [o platformă de vot](http://v1.carbonvote.com/). Decizia de creare a fork-ului a întrunit peste 85% din voturi.
 
@@ -346,7 +346,7 @@ Fork-ul Homestead care privea spre viitor. Acesta a inclus mai multe modificări
 
 #### Rezumat {#frontier-thawing-summary}
 
-Fork-ul frontier thawing a ridicat limita de [gaz](/glossary/#gas) de 5.000 per [bloc](/glossary/#block) și a stabilit prețul implicit al gazului la 51 [gwei](/glossary/#gwei). Acest lucru a permis tranzacțiile – tranzacțiile necesită 21.000 de gaz.
+Fork-ul frontier thawing a ridicat limita de <GlossaryTooltip termKey="gas">gaz</GlossaryTooltip> de 5.000 per <GlossaryTooltip termKey="block">bloc</GlossaryTooltip> și a stabilit prețul implicit al gazului la 51 <GlossaryTooltip termKey="gwei">gwei</GlossaryTooltip>. Acest lucru a permis tranzacțiile – tranzacțiile necesită 21.000 de gaz.
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 
@@ -358,7 +358,7 @@ Fork-ul frontier thawing a ridicat limita de [gaz](/glossary/#gas) de 5.000 per 
 
 #### Rezumat {#frontier-summary}
 
-Frontier a fost o implementare în direct, dar absolut esenţială pentru proiectul Ethereum. A urmat fazei de testare de succes Olympic. A fost destinat utilizatorilor tehnici, în special dezvoltatorilor. [Blocurile](/glossary/#block) aveau o limită de [gaz](/glossary/#gas) de 5.000. Această perioadă de „spargere a gheţii” le-a permis miner-ilor să-și înceapă operațiunile și celor care au adoptat din timp sistemul să-și instaleze clienții fără a avea nevoie să se „grăbească”.
+Frontier a fost o implementare în direct, dar absolut esenţială pentru proiectul Ethereum. A urmat fazei de testare de succes Olympic. A fost destinat utilizatorilor tehnici, în special dezvoltatorilor. <GlossaryTooltip termKey="block">Blocurile</GlossaryTooltip> aveau o limită de <GlossaryTooltip termKey="gas">gaz</GlossaryTooltip> de 5.000. Această perioadă de „spargere a gheţii” le-a permis miner-ilor să-și înceapă operațiunile și celor care au adoptat din timp sistemul să-și instaleze clienții fără a avea nevoie să se „grăbească”.
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

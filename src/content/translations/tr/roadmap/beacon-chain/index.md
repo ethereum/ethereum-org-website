@@ -16,7 +16,7 @@ summaryPoint4: Bunu teknik yol haritalarından "Aşama 0" olarak biliyor olabili
 
 ## İşaret (Beacon) Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}
 
-İşaret Zinciri, [parçalardan](/roadmap/danksharding/) ve [stake edenlerden](/staking/) oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
+İşaret Zinciri, [parçalardan](/roadmap/danksharding/) ve [stake edenlerden](/staking/) oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün <GlossaryTooltip termKey="mainnet">Ethereum ana ağı</GlossaryTooltip> gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
 
 İşaret Zincirinin rolü zamanla değişecek ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklenebilir Ethereum](/roadmap/vision/) için temel bir bileşendir.
 

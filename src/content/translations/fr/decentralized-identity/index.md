@@ -51,7 +51,7 @@ Les identifiants décentralisés sont stockés sur des registres distribués (bl
 
 ### 1. Infrastructure à clé publique (ICP) {#public-key-infrastructure}
 
-L'infrastructure à clé publique (ICP) est une mesure de sécurité de l'information qui génère une [clé publique](/glossary/#public-key) et une [clé privée](/glossary/#private-key) pour une entité. La cryptographie à clé publique est utilisée dans les réseaux blockchain pour authentifier l'identité des utilisateurs et prouver la propriété des actifs numériques.
+L'infrastructure à clé publique (ICP) est une mesure de sécurité de l'information qui génère une <GlossaryTooltip termKey="public-key">clé publique</GlossaryTooltip> et une <GlossaryTooltip termKey="private-key">clé privée</GlossaryTooltip> pour une entité. La cryptographie à clé publique est utilisée dans les réseaux blockchain pour authentifier l'identité des utilisateurs et prouver la propriété des actifs numériques.
 
 Certains identifiants décentralisés, tels qu'un compte Ethereum, possèdent des clés publiques et privées. La clé publique identifie le contrôleur du compte, tandis que les clés privées peuvent signer et déchiffrer les messages pour ce compte. L'ICP fournit les preuves nécessaires pour authentifier les entités et empêcher l'usurpation d'identité et l'utilisation de fausses identités, en utilisant [des signatures cryptographiques](https://andersbrownworth.com/blockchain/public-private-keys/) pour vérifier toutes les demandes.
 
@@ -91,7 +91,7 @@ Voici un scénario hypothétique pour expliquer les attestations hors de la cha�
 
 ### Attestations hors chaîne avec accès persistant {#offchain-attestations-with-persistent-access}
 
-Dans ce cas, les attestations sont transformées en fichiers JSON et stockées hors chaîne ( idéalement sur une plateforme [de stockage cloud décentralisée](/developers/docs/storage/), telle que IPFS ou Swarm). Cependant, un [hachage](/glossary/#hash) du fichier JSON est stocké sur la chaîne et lié à un DID via un registre sur la chaîne. Le DID associé peut être soit celui de l'émetteur de l'attestation, soit celui du destinataire.
+Dans ce cas, les attestations sont transformées en fichiers JSON et stockées hors chaîne ( idéalement sur une plateforme [de stockage cloud décentralisée](/developers/docs/storage/), telle que IPFS ou Swarm). Cependant, un <GlossaryTooltip termKey="hash">hachage</GlossaryTooltip> du fichier JSON est stocké sur la chaîne et lié à un DID via un registre sur la chaîne. Le DID associé peut être soit celui de l'émetteur de l'attestation, soit celui du destinataire.
 
 Cette approche permet aux attestations d'obtenir une persistance basée sur la blockchain, tout en conservant les informations relatives aux demandes de remboursement chiffrées et vérifiables. Elle permet également une divulgation sélective puisque le détenteur de la clé privée peut déchiffrer les informations.
 

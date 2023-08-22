@@ -317,7 +317,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 1. 区块链 - 以太坊包含交易历史和帐户状态。
 2. 资产 - [以太币](/eth/)和其他代币。
-3. 协议 - [智能合同](/glossary/#smart-contract) 提供功能，例如，允许去中心化资产借贷的服务。
+3. 协议 - <GlossaryTooltip termKey="smart-contract">智能合同</GlossaryTooltip> 提供功能，例如，允许去中心化资产借贷的服务。
 4. [应用程序](/dapps/) - 我们用来管理和访问协议的产品。
 
 ## 构建去中心化金融 {#build-defi}

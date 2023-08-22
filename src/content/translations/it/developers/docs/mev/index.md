@@ -42,7 +42,7 @@ Il MEV emerge sulla blockchain in diversi modi.
 
 ### Arbitraggio DEX {#mev-examples-dex-arbitrage}
 
-L'arbitraggio dello [scambio decentralizzato](/glossary/#dex) (DEX) è l'opportunità di MEV più semplice e più diffusa. Di conseguenza è anche la più competitiva.
+L'arbitraggio dello <GlossaryTooltip termKey="dex">scambio decentralizzato</GlossaryTooltip> (DEX) è l'opportunità di MEV più semplice e più diffusa. Di conseguenza è anche la più competitiva.
 
 Funziona come segue: se due DEX offrono un token a due prezzi diversi, qualcuno può acquistare il token sul DEX al prezzo minore e rivenderlo sul DEX al prezzo maggiore in un'unica transazione atomica. Grazie ai meccanismi della blockchain, questo è vero e proprio arbitraggio privo di rischi.
 
@@ -148,7 +148,7 @@ La [Separazione propositore-costruttore](https://ethresear.ch/t/proposer-block-b
 
 Nella PBS, un costruttore di blocchi crea un pacchetto di transazioni e mette un'offerta per la sua inclusione in un blocco della Beacon Chain (come il “payload di esecuzione”). Il validatore selezionato per proporre il blocco successivo quindi controlla le diverse offerte e sceglie il pacchetto con la commissione più alta. La PBS crea essenzialmente un mercato d'asta, dove i costruttori negoziano con validatori che vendono lo spazio del blocco.
 
-Gli attuali progetti PBS utilizzano uno [schema commit-reveal](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) in cui i costruttori pubblicano solo un impegno crittografico per i contenuti di un blocco (intestazione del blocco) insieme alle loro offerte. Dopo aver accettato l'offerta vincente, il propositore crea una proposta di blocco firmata che include l'intestazione del blocco. Il costruttore di blocchi dovrebbe pubblicare il corpo completo del blocco dopo aver visualizzato la proposta del blocco firmata e, inoltre, deve ricevere abbastanza [attestazioni](/glossary/#attestation) dai validatori prima che sia finalizzata.
+Gli attuali progetti PBS utilizzano uno [schema commit-reveal](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) in cui i costruttori pubblicano solo un impegno crittografico per i contenuti di un blocco (intestazione del blocco) insieme alle loro offerte. Dopo aver accettato l'offerta vincente, il propositore crea una proposta di blocco firmata che include l'intestazione del blocco. Il costruttore di blocchi dovrebbe pubblicare il corpo completo del blocco dopo aver visualizzato la proposta del blocco firmata e, inoltre, deve ricevere abbastanza <GlossaryTooltip termKey="attestation">attestazioni</GlossaryTooltip> dai validatori prima che sia finalizzata.
 
 #### In che modo la separazione propositore-costruttore riduce l’impatto del MEV? {#how-does-pbs-curb-mev-impact}
 

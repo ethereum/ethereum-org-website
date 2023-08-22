@@ -21,7 +21,7 @@ sidebarDepth: 3
 
 ## 链上扩容 {#on-chain-scaling}
 
-链上扩容需要更改以太坊协议（一层网络[主网](/glossary/#mainnet)）。 长期以来，区块链分片有望扩展以太坊。 分片就是将区块链拆分成单独的部分（分片），并由部分验证者进行验证。 然而，二层网络卷叠扩容方案已取而代之，成为主要的扩容技术。 更加经济的向以太坊区块添加数据的新方式旨在让卷叠方案对用户经济划算，它的出现无疑为这一形势增添了助力。
+链上扩容需要更改以太坊协议（一层网络<GlossaryTooltip termKey="mainnet">主网</GlossaryTooltip>）。 长期以来，区块链分片有望扩展以太坊。 分片就是将区块链拆分成单独的部分（分片），并由部分验证者进行验证。 然而，二层网络卷叠扩容方案已取而代之，成为主要的扩容技术。 更加经济的向以太坊区块添加数据的新方式旨在让卷叠方案对用户经济划算，它的出现无疑为这一形势增添了助力。
 
 ### 分片 {#sharding}
 
@@ -56,8 +56,8 @@ sidebarDepth: 3
 
 有两种具有不同安全模型的卷叠：
 
-- **乐观卷叠**：假设交易在默认情况下有效，并且在遇到挑战的情况下只通过[**欺诈证明**](/glossary/#fraud-proof)运行计算。 [关于乐观卷叠的更多信息](/developers/docs/scaling/optimistic-rollups/)。
-- **零知识卷叠**：在链下运行计算并向链上提交[**有效性证明**](/glossary/#validity-proof)。 [关于零知识卷叠的更多信息](/developers/docs/scaling/zk-rollups/)。
+- **乐观卷叠**：假设交易在默认情况下有效，并且在遇到挑战的情况下只通过<GlossaryTooltip termKey="fraud-proof">**欺诈证明**</GlossaryTooltip>运行计算。 [关于乐观卷叠的更多信息](/developers/docs/scaling/optimistic-rollups/)。
+- **零知识卷叠**：在链下运行计算并向链上提交<GlossaryTooltip termKey="validity-proof">**有效性证明**</GlossaryTooltip>。 [关于零知识卷叠的更多信息](/developers/docs/scaling/zk-rollups/)。
 
 #### 状态通道 {#channels}
 

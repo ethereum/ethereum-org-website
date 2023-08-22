@@ -58,7 +58,7 @@ lang: ja
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- [ABI](/glossary/#abi)から分散型アプリ(Dapp)フロントエンドを生成する FOSS ツール_**
+**One Click Dapp _- <GlossaryTooltip termKey="abi">ABI</GlossaryTooltip>から分散型アプリ(Dapp)フロントエンドを生成する FOSS ツール_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)

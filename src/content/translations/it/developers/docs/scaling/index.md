@@ -21,7 +21,7 @@ Dovresti avere una buona conoscenza di tutti gli argomenti fondamentali. L'imple
 
 ## Scalabilità on-chain {#on-chain-scaling}
 
-La scalabilità on-chain richiede modifiche al protocollo Ethereum ([rete principale](/glossary/#mainnet) di livello 1). Per molto tempo si è pensato che lo sharding della blockchain avrebbe ridimensionato Ethereum. Questo avrebbe coinvolto la divisione della blockchain in pezzi discreti (shard), che sarebbero stati verificati da sottoinsiemi dei validatori. Tuttavia, il ridimensionamento dai rollup di livello 2 ha preso il controllo come la tecnica di ridimensionamento principale. Questa è supportata dall'aggiunta di una nuova e più economica forma di dati connessi ai blocchi di Ethereum, progettati specificamente per rendere i rollup economici per gli utenti.
+La scalabilità on-chain richiede modifiche al protocollo Ethereum (<GlossaryTooltip termKey="mainnet">rete principale</GlossaryTooltip> di livello 1). Per molto tempo si è pensato che lo sharding della blockchain avrebbe ridimensionato Ethereum. Questo avrebbe coinvolto la divisione della blockchain in pezzi discreti (shard), che sarebbero stati verificati da sottoinsiemi dei validatori. Tuttavia, il ridimensionamento dai rollup di livello 2 ha preso il controllo come la tecnica di ridimensionamento principale. Questa è supportata dall'aggiunta di una nuova e più economica forma di dati connessi ai blocchi di Ethereum, progettati specificamente per rendere i rollup economici per gli utenti.
 
 ### Sharding {#sharding}
 
@@ -56,8 +56,8 @@ I rollup eseguono le transazioni al di fuori del livello 1, dopodiché i dati ve
 
 Esistono due tipi di rollup con diversi modelli di sicurezza:
 
-- **Rollup ottimistici**: presumono che le transazioni siano valide di default ed eseguono solo il calcolo, tramite una [**prova di frode**](/glossary/#fraud-proof), nel caso di una contestazione. [Maggiori informazioni sui rollup ottimistici](/developers/docs/scaling/optimistic-rollups/).
-- **Rollup a conoscenza zero**: esegue il calcolo al di fuori della catena e invia una [**prova di validità**](/glossary/#validity-proof) alla catena. [Maggiori informazioni sui rollup a conoscenza zero](/developers/docs/scaling/zk-rollups/).
+- **Rollup ottimistici**: presumono che le transazioni siano valide di default ed eseguono solo il calcolo, tramite una <GlossaryTooltip termKey="fraud-proof">**prova di frode**</GlossaryTooltip>, nel caso di una contestazione. [Maggiori informazioni sui rollup ottimistici](/developers/docs/scaling/optimistic-rollups/).
+- **Rollup a conoscenza zero**: esegue il calcolo al di fuori della catena e invia una <GlossaryTooltip termKey="validity-proof">**prova di validità**</GlossaryTooltip> alla catena. [Maggiori informazioni sui rollup a conoscenza zero](/developers/docs/scaling/zk-rollups/).
 
 #### Canali di stato {#channels}
 

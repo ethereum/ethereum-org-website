@@ -9,7 +9,7 @@ sidebarDepth: 2
 
 ## 前提条件 {#prerequisites}
 
-如果你还不了解什么是节点和客户端，请查看[节点和客户端](/developers/docs/nodes-and-clients/)。 [执行层](/glossary/#execution-layer)和[共识层](/glossary/#consensus-layer)的定义见词汇表。
+如果你还不了解什么是节点和客户端，请查看[节点和客户端](/developers/docs/nodes-and-clients/)。 <GlossaryTooltip termKey="execution-layer">执行层</GlossaryTooltip>和<GlossaryTooltip termKey="consensus-layer">共识层</GlossaryTooltip>的定义见词汇表。
 
 ## 为什么会有多种客户端？ {#why-multiple-clients}
 

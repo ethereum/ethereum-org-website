@@ -9,7 +9,7 @@ The behavior of an Ethereum node is controlled by the client software it runs. T
 
 ## Prerequisites {#prerequisites}
 
-If you don't already understand what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). [Execution](/glossary/#execution-layer) and [consensus](/glossary/#consensus-layer) layers are defined in the glossary.
+If you don't already understand what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). <GlossaryTooltip termKey="execution-layer">Execution</GlossaryTooltip> and <GlossaryTooltip termKey="consensus-layer">consensus</GlossaryTooltip> layers are defined in the glossary.
 
 ## Why are there multiple clients? {#why-multiple-clients}
 

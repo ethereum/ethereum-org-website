@@ -16,7 +16,7 @@ summaryPoint4: U kent dit wellicht als "Fase 0" op technische routekaarten.
 
 ## Wat doet de Beacon Chain? {#what-does-the-beacon-chain-do}
 
-De Beacon Chain zal het uitgebreide netwerk leiden of coördineren tussen [shards](/roadmap/danksharding/) en [stakers](/staking/). Maar het zal niet zijn zoals het [Ethereum-hoofdnet](/glossary/#mainnet) dat we nu gebruiken. Het kan geen accounts of slimme contracten aan.
+De Beacon Chain zal het uitgebreide netwerk leiden of coördineren tussen [shards](/roadmap/danksharding/) en [stakers](/staking/). Maar het zal niet zijn zoals het <GlossaryTooltip termKey="mainnet">Ethereum-hoofdnet</GlossaryTooltip> dat we nu gebruiken. Het kan geen accounts of slimme contracten aan.
 
 Het doel van de Beacon Chain zal in de loop van de tijd veranderen, maar het is een fundamenteel onderdeel voor [het veilige, duurzame en haalbare Ethereum waar we naartoe werken.](/roadmap/vision/).
 

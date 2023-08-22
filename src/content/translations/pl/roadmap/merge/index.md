@@ -20,7 +20,7 @@ Połączenie to scalenie pierwotnej warstwy wykonania Ethereum (sieci głównej,
 
 <MergeInfographic />
 
-Początkowo [łańcuch śledzący](/roadmap/beacon-chain/) wdrażano oddzielnie od [sieci głównej](/glossary/#mainnet). Sieć główna Ethereum — wraz ze wszystkimi jej kontami, saldami, inteligentnymi kontraktami i stanem sieci blockchain — nadal była zabezpieczana przez mechanizm [proof-of-work](/developers/docs/consensus-mechanisms/pow/), nawet gdy łańcuch śledzący działał równolegle, używając [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Połączenie to moment, w którym te dwa systemy w końcu się połączyły, a mechanizm proof-of-work został na stałe zastąpiony przez mechanizm proof-of-stake.
+Początkowo [łańcuch śledzący](/roadmap/beacon-chain/) wdrażano oddzielnie od <GlossaryTooltip termKey="mainnet">sieci głównej</GlossaryTooltip>. Sieć główna Ethereum — wraz ze wszystkimi jej kontami, saldami, inteligentnymi kontraktami i stanem sieci blockchain — nadal była zabezpieczana przez mechanizm [proof-of-work](/developers/docs/consensus-mechanisms/pow/), nawet gdy łańcuch śledzący działał równolegle, używając [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Połączenie to moment, w którym te dwa systemy w końcu się połączyły, a mechanizm proof-of-work został na stałe zastąpiony przez mechanizm proof-of-stake.
 
 Wyobraź sobie, że Ethereum to statek kosmiczny, który wystartował, zanim był gotowy do podróży międzygwiezdnej. Dzięki łańcuchowi śledzącemu społeczność zbudowała nowy silnik i wzmocniony kadłub. Po intensywnych testach nadszedł czas, aby w czasie jazdy zamienić stary silnik na nowy. W ten sposób nowy, wydajniejszy silnik został zainstalowany w działającej maszynie, która dzięki temu nabrała kosmicznej prędkości.
 

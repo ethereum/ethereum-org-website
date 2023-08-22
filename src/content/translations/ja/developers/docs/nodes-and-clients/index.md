@@ -278,7 +278,7 @@ Teku は Java 実装で、Apache 2.0 ライセンスです。 Besu や Web3Signe
 
 #### チェックポイント同期(Checkpoint sync) {#checkpoint-sync}
 
-チェックポイント同期は、弱い主観性同期(Weak Subjectivity Sync)とも呼ばれ、ビーコンノードの同期でユーザーエクスペリエンスが優れています。 これは[弱い主観性(Weak Subjectivity)](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)の前提に基づいており、最初のジェネシスブロック からではなく、最新の「弱い主観性チェックポイント」からビーコンチェーンを同期します。 [ジェネシスブロック](/glossary/#genesis-block)からの同期と同様の信頼性を仮定したチェックポイント同期により、初期同期の時間を大幅に短縮できます。
+チェックポイント同期は、弱い主観性同期(Weak Subjectivity Sync)とも呼ばれ、ビーコンノードの同期でユーザーエクスペリエンスが優れています。 これは[弱い主観性(Weak Subjectivity)](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)の前提に基づいており、最初のジェネシスブロック からではなく、最新の「弱い主観性チェックポイント」からビーコンチェーンを同期します。 <GlossaryTooltip termKey="genesis-block">ジェネシスブロック</GlossaryTooltip>からの同期と同様の信頼性を仮定したチェックポイント同期により、初期同期の時間を大幅に短縮できます。
 
 実運用では、ノードがリモートサービスに接続して最新のファイナライズされた状態をダウンロードし、その時点からのデータの検証を続けます。 データを提供しているサードパーティは信頼できるものであり、慎重に選ばれる必要があります。
 

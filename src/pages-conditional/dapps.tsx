@@ -31,6 +31,7 @@ import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
 import ProductCard from "../components/ProductCard"
 import GhostCard from "../components/GhostCard"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import InlineLink, { BaseLink } from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
@@ -1071,9 +1072,9 @@ const DappsPage = ({
         </StyledH2>
         <Text>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
-          <InlineLink to="/glossary/#transaction-fee">
+          <GlossaryTooltip termKey="transaction-fee">
             <Translation id="transaction-fees" />
-          </InlineLink>
+          </GlossaryTooltip>
         </Text>
         <Row>
           <StepBoxContainer>

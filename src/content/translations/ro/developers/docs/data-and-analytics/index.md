@@ -12,7 +12,7 @@ Mobilizarea furnizorilor de date existenți poate accelera dezvoltarea, poate pr
 
 ## Condiții prealabile {#prerequisites}
 
-Ar trebui să înțelegeţi conceptul de bază al [Exploratorilor de Blocuri](/developers/docs/data-and-analytics/block-explorers/) pentru a vă da mai bine seama cum să-i utilizaţi în contextul analizei datelor. În plus, familiarizaţi-vă cu conceptul unui [index](/glossary/#index) pentru a înțelege beneficiile pe care le aduce conceptului sistemului.
+Ar trebui să înțelegeţi conceptul de bază al [Exploratorilor de Blocuri](/developers/docs/data-and-analytics/block-explorers/) pentru a vă da mai bine seama cum să-i utilizaţi în contextul analizei datelor. În plus, familiarizaţi-vă cu conceptul unui <GlossaryTooltip termKey="index">index</GlossaryTooltip> pentru a înțelege beneficiile pe care le aduce conceptului sistemului.
 
 În ceea ce priveşte bazele arhitecturale, înţelegerea noţiunilor de [API](https://www.wikipedia.org/wiki/API) și [REST](https://www.wikipedia.org/wiki/Representational_state_transfer), chiar și teoretic.
 
@@ -26,7 +26,7 @@ Folosind [GraphQL](https://graphql.org/), dezvoltatorii pot interoga oricare din
 
 Mulți [Exploratori de blocuri](/developers/docs/data-and-analytics/block-explorers/) oferă gateway-uri de tip [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) care vor oferi dezvoltatorilor vizibilitatea datelor în timp real pe blocuri, tranzacțiilor, miner-ilor, conturilor și altor activități on-chain.
 
-Dezvoltatorii pot apoi procesa și transforma aceste date pentru a le oferi utilizatorilor informaţii detaliate și interacțiuni unice cu [blockchain-ul](/glossary/#blockchain).
+Dezvoltatorii pot apoi procesa și transforma aceste date pentru a le oferi utilizatorilor informaţii detaliate și interacțiuni unice cu <GlossaryTooltip termKey="blockchain">blockchain-ul</GlossaryTooltip>.
 
 ## Referințe suplimentare {#further-reading}
 

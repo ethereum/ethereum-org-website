@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Uma cadeia Plasma é uma blockchain separada ancorada à rede principal do Ethereum, mas executando transações off-chain com seu próprio mecanismo para validação de bloco. Cadeias Plasma são algumas vezes referenciadas como cadeias "filhas", essencialmente cópias menores da rede principal do Ethereum. As cadeias plasma usam [provas de fraude](/glossary/#fraud-proof) (como [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) para arbitrar conflitos.
+Uma cadeia Plasma é uma blockchain separada ancorada à rede principal do Ethereum, mas executando transações off-chain com seu próprio mecanismo para validação de bloco. Cadeias Plasma são algumas vezes referenciadas como cadeias "filhas", essencialmente cópias menores da rede principal do Ethereum. As cadeias plasma usam <GlossaryTooltip termKey="fraud-proof">provas de fraude</GlossaryTooltip> (como [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) para arbitrar conflitos.
 
 As árvores Merkle permitem a criação de uma pilha sem fim dessas cadeias, que podem funcionar para descarregar a largura de banda das cadeias pai (incluindo a rede principal do Ethereum). No entanto, embora essas cadeias obtenham alguma segurança do Ethereum (por meio de provas de fraude), a segurança e eficiência que oferecem são afetadas por várias limitações de projeto.
 

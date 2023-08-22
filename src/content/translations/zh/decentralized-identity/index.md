@@ -51,7 +51,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 ### 1. 公钥基础设施 (PKI) {#public-key-infrastructure}
 
-公钥基础设施 (PKI) 是一种信息安全措施，可为实体生成[公钥](/glossary/#public-key)和[私钥](/glossary/#private-key)。 公钥加密技术在区块链网络中用于认证用户身份和证明数字资产的所有权。
+公钥基础设施 (PKI) 是一种信息安全措施，可为实体生成<GlossaryTooltip termKey="public-key">公钥</GlossaryTooltip>和<GlossaryTooltip termKey="private-key">私钥</GlossaryTooltip>。 公钥加密技术在区块链网络中用于认证用户身份和证明数字资产的所有权。
 
 一些去中心化身份标识，如以太坊账户，都有公钥和私钥。 公钥用于识别账户的操控者，而私钥可以签名和解密此账户的消息。 公钥基础设施使用[加密签名](https://andersbrownworth.com/blockchain/public-private-keys/)来验证所有声明，从而提供验证实体身份、防止冒充身份和使用假身份所需的证明。
 
@@ -91,7 +91,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 ### 可以随时访问的链下身份证明 {#offchain-attestations-with-persistent-access}
 
-在这种协议下，身份证明将被转变为 JSON 文件并存储在链下（理想情况下存储在[去中心化云存储](/developers/docs/storage/)平台上，例如 IPFS 或 Swarm）。 但是，JSON 文件的[哈希值](/glossary/#hash)存储在链上，并通过链上注册系统链接至去中心化身份。 所关联的去中心化身份可以是身份证明的签发者或接收者。
+在这种协议下，身份证明将被转变为 JSON 文件并存储在链下（理想情况下存储在[去中心化云存储](/developers/docs/storage/)平台上，例如 IPFS 或 Swarm）。 但是，JSON 文件的<GlossaryTooltip termKey="hash">哈希值</GlossaryTooltip>存储在链上，并通过链上注册系统链接至去中心化身份。 所关联的去中心化身份可以是身份证明的签发者或接收者。
 
 这种方法使身份证明能够基于区块链长期存在，同时使声明信息保持加密并维持其可验证性。 它还允许选择性披露，因为私钥的持有者可以解密信息。
 

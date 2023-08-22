@@ -51,7 +51,7 @@ Gedecentraliseerde identificatiekenmerken worden opgeslagen op gedistribueerde l
 
 ### 1. Publieke sleutel-infrastructuur (PKI) {#public-key-infrastructure}
 
-Publieke sleutel-infrastructuur (PKI) is een informatiebeveiligingsmaatregel die een [publieke sleutel](/glossary/#public-key) en [privé-sleutel](/glossary/#private-key) voor een entiteit genereert. Publieke sleutel-cryptografie wordt gebruikt in blockchain-netwerken om gebruikersidentiteiten te verifiëren en eigendom van digitale activa te bewijzen.
+Publieke sleutel-infrastructuur (PKI) is een informatiebeveiligingsmaatregel die een <GlossaryTooltip termKey="public-key">publieke sleutel</GlossaryTooltip> en <GlossaryTooltip termKey="private-key">privé-sleutel</GlossaryTooltip> voor een entiteit genereert. Publieke sleutel-cryptografie wordt gebruikt in blockchain-netwerken om gebruikersidentiteiten te verifiëren en eigendom van digitale activa te bewijzen.
 
 Sommige gedecentraliseerde identificatiekenmerken, zoals een Ethereum-account, hebben publieke en privé-sleutels. De publieke sleutel identificeert de account-controller, terwijl de privé-sleutels berichten kunnen ondertekenen en decrypteren voor dit account. PKI biedt bewijzen die nodig zijn om entiteiten te verifiëren en impersonatie en het gebruik van valse identiteiten te voorkomen, met behulp van [cryptografische handtekeningen](https://andersbrownworth.com/blockchain/public-private-keys/) om alle claims te verifiëren.
 
@@ -91,7 +91,7 @@ Hier is een hypothetisch scenario om off-chain attesten uit te leggen:
 
 ### Off-chain attesten met persistente toegang {#offchain-attestations-with-persistent-access}
 
-Onder deze regeling worden attesten omgezet in JSON-bestanden en off-chain opgeslagen (in het ideale geval in een [gedecentraliseerde cloudopslagplatform](/developers/docs/storage/), zoals IPFS of Swarm). Een [hash](/glossary/#hash) van het JSON-bestand wordt echter on-chain opgeslagen en gekoppeld aan een DID via een on-chain register. De bijbehorende DID kan van de uitgever van het attest of van de ontvanger zijn.
+Onder deze regeling worden attesten omgezet in JSON-bestanden en off-chain opgeslagen (in het ideale geval in een [gedecentraliseerde cloudopslagplatform](/developers/docs/storage/), zoals IPFS of Swarm). Een <GlossaryTooltip termKey="hash">hash</GlossaryTooltip> van het JSON-bestand wordt echter on-chain opgeslagen en gekoppeld aan een DID via een on-chain register. De bijbehorende DID kan van de uitgever van het attest of van de ontvanger zijn.
 
 Deze aanpak maakt het mogelijk om voor attesten blockchain-gebaseerde persistentie te verkrijgen, terwijl informatie over claims versleuteld en verifieerbaar blijft. Het maakt ook een selectieve openbaarmaking mogelijk, aangezien de houder van de privé-sleutel de informatie kan decoderen.
 

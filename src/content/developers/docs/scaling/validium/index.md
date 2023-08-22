@@ -13,7 +13,7 @@ You should have read and understood our page on [Ethereum scaling](/developers/d
 
 ## What is validium? {#what-is-validium}
 
-Validiums are scaling solutions that use off-chain data availability and computation designed to improve throughput by processing transactions off the Ethereum Mainnet. Like zero-knowledge rollups (ZK-rollups), validiums publish [zero-knowledge proofs](/glossary/#zk-proof) to verify off-chain transactions on Ethereum. This prevents invalid state transitions and enhances the security guarantees of a validium chain.
+Validiums are scaling solutions that use off-chain data availability and computation designed to improve throughput by processing transactions off the Ethereum Mainnet. Like zero-knowledge rollups (ZK-rollups), validiums publish <GlossaryTooltip termKey="zk-proof">zero-knowledge proofs</GlossaryTooltip> to verify off-chain transactions on Ethereum. This prevents invalid state transitions and enhances the security guarantees of a validium chain.
 
 These "validity proofs" can come in the form of ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) or ZK-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge). More on [zero-knowledge proofs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
 

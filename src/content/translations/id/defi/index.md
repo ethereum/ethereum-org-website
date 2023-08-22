@@ -317,7 +317,7 @@ Anda dapat membayangkan tentang DeFi dalam lapisan:
 
 1. Blockchain – Ethereum berisi riwayat transaksi dan state akun.
 2. Aset – [ETH](/eth/) dan token lainnya (mata uang).
-3. Protokol – [kontrak pintar](/glossary/#smart-contract) yang menyediakan fungsionalitas, misalnya layanan yang memungkinkan untuk meminjamkan aset.
+3. Protokol – <GlossaryTooltip termKey="smart-contract">kontrak pintar</GlossaryTooltip> yang menyediakan fungsionalitas, misalnya layanan yang memungkinkan untuk meminjamkan aset.
 4. [Aplikasi](/dapps/) – produk yang kita gunakan untuk mengelola dan mengakses protokol.
 
 ## Bangun DeFi {#build-defi}

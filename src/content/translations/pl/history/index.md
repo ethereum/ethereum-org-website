@@ -38,7 +38,7 @@ Uaktualnienie Altair jest pierwszym planowanym uaktualnieniem [łańcucha śledz
 
 #### Podsumowanie {#london-summary}
 
-Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), która zreformowała rynek opłat transakcyjnych oraz wprowadziła zmiany do sposobu obsługi zwrotów kosztów gazu oraz do harmonogramu [Epoki Lodowcowej](/glossary/#ice-age) (Ice Age).
+Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), która zreformowała rynek opłat transakcyjnych oraz wprowadziła zmiany do sposobu obsługi zwrotów kosztów gazu oraz do harmonogramu <GlossaryTooltip termKey="ice-age">Epoki Lodowcowej</GlossaryTooltip> (Ice Age).
 
 - [Jesteś deweloperem aplikacji zdecentralizowanych? Pamiętaj o uaktualnieniu bibliotek i narzędzi.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
 - [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -102,7 +102,7 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 #### Podsumowanie {#deposit-contract-summary}
 
-Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt [sieci głównej](/glossary/#staking), miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/roadmap/beacon-chain/), ważnego [ulepszenia Eth2](/roadmap/).
+Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt <GlossaryTooltip termKey="staking">sieci głównej</GlossaryTooltip>, miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/roadmap/beacon-chain/), ważnego [ulepszenia Eth2](/roadmap/).
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -118,7 +118,7 @@ Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć by
 
 #### Podsumowanie {#muir-glacier-summary}
 
-Fork Muir Glacier wprowadził opóźnienie [bomby trudności](/glossary/#difficulty-bomb). Zwiększona trudność bloków konsensusu[proof-of-work](/developers/docs/consensus-mechanisms/pow/) grozi pogorszeniem przydatności Ethereum na skutek wydłużenia czasu oczekiwania na wysłanie transakcji i korzystanie z aplikacji zdecentralizowanych.
+Fork Muir Glacier wprowadził opóźnienie <GlossaryTooltip termKey="difficulty-bomb">bomby trudności</GlossaryTooltip>. Zwiększona trudność bloków konsensusu[proof-of-work](/developers/docs/consensus-mechanisms/pow/) grozi pogorszeniem przydatności Ethereum na skutek wydłużenia czasu oczekiwania na wysłanie transakcji i korzystanie z aplikacji zdecentralizowanych.
 
 - [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Przeczytaj objaśnienie Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -141,7 +141,7 @@ Fork Muir Glacier wprowadził opóźnienie [bomby trudności](/glossary/#difficu
 
 Fork Istanbul:
 
-- Zoptymalizował koszt <a href="/glossary/#gas">gazu</a> w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Zoptymalizował koszt <GlossaryTooltip termKey="gas">gazu</GlossaryTooltip> w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Poprawa odporności na ataki typu „denial-of-service”.
 - Poprawił działanie rozwiązań [skalowania warstwy 2](/developers/docs/scaling/#rollups) opartych na SNARKs i STARKs.
 - Umożliwił współpracę Ethereum i Zcash.
@@ -152,7 +152,7 @@ Fork Istanbul:
 <ExpandableCard title="EIP Istanbul" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _umożliwia Ethereum korzystanie z waluty chroniącej prywatność takiej jak Zcash._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _tańsza kryptografia w celu obniżenia kosztów [gas](/glossary/#gas)._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _tańsza kryptografia w celu obniżenia kosztów <GlossaryTooltip termKey="gas">gas</GlossaryTooltip>._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _chroni Ethereum przed atakami metodą powtórzenia dzięki dodaniu [opcode] `CHAINID` (/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optymalizacja cen gazu dla kodów operacyjnych na podstawie zużycia._
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _ograniczenie kosztów CallData w celu zwiększenia ilość danych w blokach – korzystne dla [skalowania warstwy 2](/developers/docs/scaling/#rollups)._
@@ -171,7 +171,7 @@ Fork Istanbul:
 Fork Constantinople:
 
 - Zapewnił, że blockchain nie został zamrożony przed [wdrożeniem proof-of-stake](#beacon-chain-genesis).
-- Zoptymalizował koszt <a href="/glossary/#gas">gazu</a> w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Zoptymalizował koszt <GlossaryTooltip termKey="gas">gazu</GlossaryTooltip> w niektórych działaniach [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Dodał możliwość interakcji z adresami, które nie zostały jeszcze utworzone.
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -198,7 +198,7 @@ Fork Constantinople:
 Fork Byzantium:
 
 - Zmniejszenie nagród za [wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/) bloków z 5 do 3 ETH.
-- Opóźnienie o rok [bomby trudności](/glossary/#difficulty-bomb).
+- Opóźnienie o rok <GlossaryTooltip termKey="difficulty-bomb">bomby trudności</GlossaryTooltip>.
 - Dodano możliwość wykonywania niezmieniających stanów wywołań innych kontraktów.
 - Dodano niektóre metody kryptografii, aby umożliwić [skalowanie warstwy 2](/developers/docs/scaling/#rollups).
 
@@ -214,7 +214,7 @@ Fork Byzantium:
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _dodaje obsługę wartości zwracanych o różnych długościach._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _dodaje kod operacyjny `STATICCALL` umożliwiający wykonywanie niezmieniających stanu wywołań innych kontraktów._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _zmienia wzór dostosowywania trudności._
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _opóźnia [bombę trudności](/glossary/#difficulty-bomb) o 1 rok i zmniejsza nagrody za blok z 5 do 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _opóźnia <GlossaryTooltip termKey="difficulty-bomb">bombę trudności</GlossaryTooltip> o 1 rok i zmniejsza nagrody za blok z 5 do 3 ETH._
 
 </ExpandableCard>
 
@@ -274,7 +274,7 @@ Fork Tangerine Whistle był pierwszą odpowiedzią na ataki typu „odmowa usłu
 
 #### Podsumowanie {#dao-fork-summary}
 
-Fork DAO był odpowiedzią na [atak DAO 2016](https://www.coindesk.com/understanding-dao-hack-journalists), który doprowadził do złamania niezabezpieczonego kontraktu [DAO](/glossary/#dao) i kradzieży ponad 3,6 mln ETH. Fork przeniósł fundusze z błędnego kontraktu do [nowego kontraktu](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) z jedną funkcją: wypłać. Każdy, kto stracił środki, mógł wypłacić 1 ETH za każde 100 tokenów DAO w swoim portfelu.
+Fork DAO był odpowiedzią na [atak DAO 2016](https://www.coindesk.com/understanding-dao-hack-journalists), który doprowadził do złamania niezabezpieczonego kontraktu <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip> i kradzieży ponad 3,6 mln ETH. Fork przeniósł fundusze z błędnego kontraktu do [nowego kontraktu](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) z jedną funkcją: wypłać. Każdy, kto stracił środki, mógł wypłacić 1 ETH za każde 100 tokenów DAO w swoim portfelu.
 
 Ten kierunek działania został przegłosowany przez społeczność Ethereum. Każdy posiadacz ETH mógł głosować za pośrednictwem transakcji na [platformie do głosowania](http://v1.carbonvote.com/). Decyzja o forku została poparta ponad 85% głosów.
 
@@ -312,7 +312,7 @@ Przyszłościowy fork Homestead. Obejmował kilka zmian protokołu i zmianę sie
 
 #### Podsumowanie {#frontier-thawing-summary}
 
-Fork frontier thawing podniósł wynoszący 5000 limit [gazu](/glossary/#gas) na [blok](/glossary/#block) i określił domyślną cenę gazu na 51 [gwei](/glossary/#gwei). Pozwoliło to na transakcje – transakcje wymagają 21 tys. gazu.
+Fork frontier thawing podniósł wynoszący 5000 limit <GlossaryTooltip termKey="gas">gazu</GlossaryTooltip> na <GlossaryTooltip termKey="block">blok</GlossaryTooltip> i określił domyślną cenę gazu na 51 <GlossaryTooltip termKey="gwei">gwei</GlossaryTooltip>. Pozwoliło to na transakcje – transakcje wymagają 21 tys. gazu.
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 
@@ -324,7 +324,7 @@ Fork frontier thawing podniósł wynoszący 5000 limit [gazu](/glossary/#gas) na
 
 #### Podsumowanie {#frontier-summary}
 
-Frontier był działającą, ale surową implementacją projektu Ethereum. Wprowadzono go po udanej fazie testów olimpijskich. Był przeznaczony dla użytkowników technicznych, w szczególności programistów. [Bloki](/glossary/#block) miały limit [gazu](/glossary/#gas) wynoszący 5000. Ten okres „thawing” umożliwił górnikom rozpoczęcie działalności, a wczesnym użytkownikom instalowanie klientów bez konieczności „pośpiechu”.
+Frontier był działającą, ale surową implementacją projektu Ethereum. Wprowadzono go po udanej fazie testów olimpijskich. Był przeznaczony dla użytkowników technicznych, w szczególności programistów. <GlossaryTooltip termKey="block">Bloki</GlossaryTooltip> miały limit <GlossaryTooltip termKey="gas">gazu</GlossaryTooltip> wynoszący 5000. Ten okres „thawing” umożliwił górnikom rozpoczęcie działalności, a wczesnym użytkownikom instalowanie klientów bez konieczności „pośpiechu”.
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

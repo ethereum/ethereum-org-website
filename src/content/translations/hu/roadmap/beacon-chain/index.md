@@ -16,7 +16,7 @@ summaryPoint4: A technikai ütemtervekben "Fázis 0"-ként is ismerheted.
 
 ## Mit csinál a Beacon Chain? {#what-does-the-beacon-chain-do}
 
-A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/roadmap/danksharding/) és [stakerekből](/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az [Ethereum főhálózat](/glossary/#mainnet). Nem fog tudni számlákat vagy okosszerződéseket kezelni.
+A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/roadmap/danksharding/) és [stakerekből](/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az <GlossaryTooltip termKey="mainnet">Ethereum főhálózat</GlossaryTooltip>. Nem fog tudni számlákat vagy okosszerződéseket kezelni.
 
 A Beacon Chain szerepe meg fog változni idővel, de egy olyan alapvető összetevője [ a biztonságos, fenntartható és skálázható Ethereumnak, amiért dolgozunk](/roadmap/vision/).
 

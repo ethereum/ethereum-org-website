@@ -45,7 +45,7 @@ Questo rende possibile l'esecuzione al di fuori della catena di un contratto int
 
 Se da un lato questo risolve il problema di scalabilità precedentemente descritto, dall'altro ha implicazioni per la sicurezza. Su Ethereum, la validità delle transizioni di stato è imposta dal protocollo di consenso della rete. Questo rende impossibile proporre un aggiornamento non valido allo stato di un contratto intelligente o di alterarne l'esecuzione.
 
-I canali di stato non hanno le stesse garanzie di sicurezza. In una certa misura, un canale di stato è una versione in miniatura della Rete principale. Con una serie limitata di partecipanti che impongono le regole, le possibilità di comportamenti malevoli (ad es. proporre aggiornamenti di stato non validi) aumentano. I canali di stato traggono la propria sicurezza da un sistema di arbitrato delle dispute basato sulle [prove di frode](/glossary/#fraud-proof).
+I canali di stato non hanno le stesse garanzie di sicurezza. In una certa misura, un canale di stato è una versione in miniatura della Rete principale. Con una serie limitata di partecipanti che impongono le regole, le possibilità di comportamenti malevoli (ad es. proporre aggiornamenti di stato non validi) aumentano. I canali di stato traggono la propria sicurezza da un sistema di arbitrato delle dispute basato sulle <GlossaryTooltip termKey="fraud-proof">prove di frode</GlossaryTooltip>.
 
 ## Come funzionano i canali di stato {#how-state-channels-work}
 

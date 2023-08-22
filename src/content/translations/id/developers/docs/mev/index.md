@@ -42,7 +42,7 @@ MEV muncul di blockchain dalam beberapa cara.
 
 ### Arbitrase DEX {#mev-examples-dex-arbitrage}
 
-Arbitrase [Bursa terdesentralisasi](/glossary/#dex) (DEX) adalah peluang MEV yang paling sederhana dan paling terkenal. Hasilnya, peluang ini juga merupakan peluang yang paling kompetitif.
+Arbitrase <GlossaryTooltip termKey="dex">Bursa terdesentralisasi</GlossaryTooltip> (DEX) adalah peluang MEV yang paling sederhana dan paling terkenal. Hasilnya, peluang ini juga merupakan peluang yang paling kompetitif.
 
 Cara kerjanya seperti ini: jika dua DEX menawarkan sebuah token dengan dua harga berbeda, seseorang dapat membeli token itu di DEX dengan harga lebih rendah dan menjualnya di DEX dengan harga lebih tinggi dalam satu transaksi atomik. Berkat mekanisme blockchain, ini merupakan arbitrase sejati dan tanpa resiko.
 

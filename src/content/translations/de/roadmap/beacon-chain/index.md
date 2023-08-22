@@ -16,7 +16,7 @@ summaryPoint4: Sie kennen das möglicherweise als „Phase 0“ in technischen D
 
 ## Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/roadmap/danksharding/) und [Staker](/staking/). Aber sie ist nicht mit dem [Ethereum-Mainnet](/glossary/#mainnet) von heute vergleichbar, da sie keine Konten oder Smart Contracts verarbeitet.
+Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/roadmap/danksharding/) und [Staker](/staking/). Aber sie ist nicht mit dem <GlossaryTooltip termKey="mainnet">Ethereum-Mainnet</GlossaryTooltip> von heute vergleichbar, da sie keine Konten oder Smart Contracts verarbeitet.
 
 Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/roadmap/vision/).
 

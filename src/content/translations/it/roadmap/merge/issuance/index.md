@@ -30,7 +30,7 @@ title="Tldr sull'emissione di ETH">
 
 ### Emissione del livello d'esecuzione {#el-issuance-pre-merge}
 
-Sotto il proof of work, i miner interagivano soltanto con il livello d'esecuzione, venendo ricompensati con ricompense dei blocchi, se erano i primi a risolvere il blocco successivo. Dall'[aggiornamento di Costantinopoli](/history/#constantinople) nel 2019, questa ricompensa era di 2 ETH per blocco. I miner, inoltre, erano ricompensati per la pubblicazione di blocchi [ommer](/glossary/#ommer), blocchi validi che non finivano nella catena più lunga/canonica. Queste ricompense erano massimizzate a 1,75 ETH per ommer ed erano _da sommarsi_ alla ricompensa emessa dal blocco canonico. Il processo di mining era un'attività economicamente intensiva che, storicamente, richiedeva elevati livelli di emissione di ETH per essere sostenuta.
+Sotto il proof of work, i miner interagivano soltanto con il livello d'esecuzione, venendo ricompensati con ricompense dei blocchi, se erano i primi a risolvere il blocco successivo. Dall'[aggiornamento di Costantinopoli](/history/#constantinople) nel 2019, questa ricompensa era di 2 ETH per blocco. I miner, inoltre, erano ricompensati per la pubblicazione di blocchi <GlossaryTooltip termKey="ommer">ommer</GlossaryTooltip>, blocchi validi che non finivano nella catena più lunga/canonica. Queste ricompense erano massimizzate a 1,75 ETH per ommer ed erano _da sommarsi_ alla ricompensa emessa dal blocco canonico. Il processo di mining era un'attività economicamente intensiva che, storicamente, richiedeva elevati livelli di emissione di ETH per essere sostenuta.
 
 ### Emissione del livello del consenso {#cl-issuance-pre-merge}
 
@@ -46,7 +46,7 @@ Offerta totale di ETH: **circa 120.520.000 ETH** (al momento della Fusione a set
 
 - Era stimata a 2,08 ETH ogni 13,3 secondi\*: **circa 4.930.000** ETH emessi in un anno
 - Il risultato è un tasso d'inflazione **di circa il 4,09%** (4,93M l'anno / 120,5M totali)
-- \*Ciò include i 2 ETH per blocco canonico, più una media di 0,08 ETH nel tempo dai blocchi ommer. Inoltre, utilizza 13,3 secondi, l'obiettivo temporale di base del blocco senza alcuna influenza da una [bomba di difficoltà](/glossary/#difficulty-bomb). ([Vedi fonte](https://bitinfocharts.com/ethereum/))
+- \*Ciò include i 2 ETH per blocco canonico, più una media di 0,08 ETH nel tempo dai blocchi ommer. Inoltre, utilizza 13,3 secondi, l'obiettivo temporale di base del blocco senza alcuna influenza da una <GlossaryTooltip termKey="difficulty-bomb">bomba di difficoltà</GlossaryTooltip>. ([Vedi fonte](https://bitinfocharts.com/ethereum/))
 
 **Emissione del livello d'esecuzione:**
 

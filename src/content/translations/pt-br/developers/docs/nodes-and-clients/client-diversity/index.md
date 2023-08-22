@@ -9,7 +9,7 @@ O comportamento de um nó Ethereum é controlado pelo software do cliente que el
 
 ## Pré-requisitos {#prerequisites}
 
-Se você ainda não entende o que são nós e clientes, confira [nós e clientes](/developers/docs/nodes-and-clients/). As camadas de [execução](/glossary/#execution-layer) e [consenso](/glossary/#consensus-layer) estão definidas no glossário.
+Se você ainda não entende o que são nós e clientes, confira [nós e clientes](/developers/docs/nodes-and-clients/). As camadas de <GlossaryTooltip termKey="execution-layer">execução</GlossaryTooltip> e <GlossaryTooltip termKey="consensus-layer">consenso</GlossaryTooltip> estão definidas no glossário.
 
 ## Por que existem vários clientes? {#why-multiple-clients}
 

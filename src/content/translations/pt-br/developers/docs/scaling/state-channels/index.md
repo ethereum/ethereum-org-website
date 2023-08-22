@@ -45,7 +45,7 @@ Isso torna possível a execução de um contrato inteligente off-chain entre doi
 
 Embora isso resolva o problema de dimensionamento descrito anteriormente, tem implicações para a segurança. Na Ethereum, a validade das transições de estado no Ethereum é imposta pelo protocolo de consenso da rede. Isso torna impossível propor uma atualização inválida para o estado de um contrato inteligente ou alterar a execução do contrato inteligente.
 
-Os canais de estado não têm as mesmas garantias de segurança. Até certo ponto, um canal de estado é uma versão miniatura da rede principal. Com um conjunto limitado de participantes aplicando regras, a possibilidade de comportamento malicioso (por exemplo, propondo atualizações de estado inválidas) aumenta. Canais de estado derivam sua segurança de um sistema de arbitragem de disputas baseado em [provas de fraude](/glossary/#fraud-proof).
+Os canais de estado não têm as mesmas garantias de segurança. Até certo ponto, um canal de estado é uma versão miniatura da rede principal. Com um conjunto limitado de participantes aplicando regras, a possibilidade de comportamento malicioso (por exemplo, propondo atualizações de estado inválidas) aumenta. Canais de estado derivam sua segurança de um sistema de arbitragem de disputas baseado em <GlossaryTooltip termKey="fraud-proof">provas de fraude</GlossaryTooltip>.
 
 ## Como os canais de estado funcionam {#how-state-channels-work}
 

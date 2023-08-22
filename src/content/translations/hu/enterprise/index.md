@@ -13,7 +13,7 @@ A blokklánc alkalmazások segítenek a vállalatoknak:
 - Új üzleti modelleket és értékteremtő lehetőségeket kifejleszteni
 - Versenyképesen jövőbiztossá tenni a szervezeteiket
 
-Vállalati blokklánc alkalmazások fejleszthetőek a nyilvános, engedély nélküli Ethereum [főhálózatra](/glossary/#mainnet) vagy privát blokkláncokra, melyek az Ethereum technológiáján alapulnak. Tudj meg többet a [privát vállalati Ethereum láncokról](/enterprise/private-ethereum/).
+Vállalati blokklánc alkalmazások fejleszthetőek a nyilvános, engedély nélküli Ethereum <GlossaryTooltip termKey="mainnet">főhálózatra</GlossaryTooltip> vagy privát blokkláncokra, melyek az Ethereum technológiáján alapulnak. Tudj meg többet a [privát vállalati Ethereum láncokról](/enterprise/private-ethereum/).
 
 ## Nyilvános vs privát Ethereum {#private-vs-public}
 

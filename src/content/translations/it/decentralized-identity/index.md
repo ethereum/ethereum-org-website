@@ -51,7 +51,7 @@ Gli identificativi decentralizzati sono memorizzati su libri mastri distribuiti 
 
 ### 1. Infrastruttura a Chiave Pubblica (PKI) {#public-key-infrastructure}
 
-L'infrastruttura a chiave pubblica (PKI) è una misura di sicurezza delle informazioni che genera una [chiave pubblica](/glossary/#public-key) e una [chiave privata](/glossary/#private-key) per un'entità. La crittografia della chiave pubblica è usata nelle reti blockchain per autenticare le identità dell'utente e provare la proprietà delle risorse digitali.
+L'infrastruttura a chiave pubblica (PKI) è una misura di sicurezza delle informazioni che genera una <GlossaryTooltip termKey="public-key">chiave pubblica</GlossaryTooltip> e una <GlossaryTooltip termKey="private-key">chiave privata</GlossaryTooltip> per un'entità. La crittografia della chiave pubblica è usata nelle reti blockchain per autenticare le identità dell'utente e provare la proprietà delle risorse digitali.
 
 Alcuni identificativi decentralizzati, come un conto di Ethereum, hanno chiavi pubbliche e private. La chiave pubblica identifica il controllore del conto, mentre le chiavi private possono firmare e decrittografare i messaggi per questo conto. PKI fornisce le prove necessarie ad autenticare le entità e impedire il furto di identità e l'uso di identità false, usando le [firme crittografiche](https://andersbrownworth.com/blockchain/public-private-keys/) per verificare tutte le richieste.
 
@@ -91,7 +91,7 @@ Ecco uno scenario ipotetico per spiegare le attestazioni al di fuori della caten
 
 ### Attestazioni al di fuori della catena con accesso persistente {#offchain-attestations-with-persistent-access}
 
-In questo modo, le attestazioni sono trasformate in file JSON e memorizzate al di fuori della catena (idealmente su una piattaforma di [memorizzazione su cloud decentralizzata](/developers/docs/storage/), come IPFS o Swarm). Tuttavia, un [hash](/glossary/#hash) del file JSON è memorizzato sulla catena e collegato a un DID tramite un registro sulla catena. Il DID associato potrebbe essere quello dell'emittente dell'attestazione o del destinatario.
+In questo modo, le attestazioni sono trasformate in file JSON e memorizzate al di fuori della catena (idealmente su una piattaforma di [memorizzazione su cloud decentralizzata](/developers/docs/storage/), come IPFS o Swarm). Tuttavia, un <GlossaryTooltip termKey="hash">hash</GlossaryTooltip> del file JSON è memorizzato sulla catena e collegato a un DID tramite un registro sulla catena. Il DID associato potrebbe essere quello dell'emittente dell'attestazione o del destinatario.
 
 Questo approccio consente alle attestazioni di ottenere persistenza basata sulla blockchain, mantenendo crittografate e verificabili le informazioni delle richieste. Consente anche una divulgazione selettiva, poiché il titolare della chiave privata può decifrare le informazioni.
 

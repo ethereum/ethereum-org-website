@@ -51,7 +51,7 @@ Os identificadores descentralizados são armazenados em livros-razões distribu�
 
 ### 1. Infraestrutura de chave pública (PKI) {#public-key-infrastructure}
 
-A infraestrutura de chave pública (PKI) é uma medida de segurança da informação que gera uma [chave pública](/glossary/#public-key) e uma [ chave privada](/glossary/#private-key) para uma entidade. A criptografia de chave pública é usada em redes blockchain para autenticar identidades de usuários e provar a propriedade de ativos digitais.
+A infraestrutura de chave pública (PKI) é uma medida de segurança da informação que gera uma <GlossaryTooltip termKey="public-key">chave pública</GlossaryTooltip> e uma <GlossaryTooltip termKey="private-key"> chave privada</GlossaryTooltip> para uma entidade. A criptografia de chave pública é usada em redes blockchain para autenticar identidades de usuários e provar a propriedade de ativos digitais.
 
 Alguns identificadores descentralizados, como uma conta Ethereum, possuem chaves públicas e privadas. A chave pública identifica o controlador da conta, enquanto as chaves privadas podem assinar e descriptografar mensagens para essa conta. A PKI fornece as provas necessárias para autenticar entidades e evitar falsificação e uso de identidades falsas, usando [assinaturas criptográficas](https://andersbrownworth.com/blockchain/public-private-keys/) para verificar todas as reivindicações.
 
@@ -91,7 +91,7 @@ Aqui está um cenário hipotético para explicar os atestados off-chain:
 
 ### Atestados off-chain com acesso persistente {#offchain-attestations-with-persistent-access}
 
-Sob esse arranjo, os atestados são transformados em arquivos JSON e armazenados off-chain (idealmente em uma plataforma de [armazenamento em nuvem descentralizado](/developers/docs/storage/), como IPFS ou Swarm). Entretanto, um [hash](/glossary/#hash) do arquivo JSON é armazenado on-chain e vinculado a um DID por meio de um registro on-chain. O DID associado pode ser o do emissor do atestado ou o do destinatário.
+Sob esse arranjo, os atestados são transformados em arquivos JSON e armazenados off-chain (idealmente em uma plataforma de [armazenamento em nuvem descentralizado](/developers/docs/storage/), como IPFS ou Swarm). Entretanto, um <GlossaryTooltip termKey="hash">hash</GlossaryTooltip> do arquivo JSON é armazenado on-chain e vinculado a um DID por meio de um registro on-chain. O DID associado pode ser o do emissor do atestado ou o do destinatário.
 
 Essa abordagem permite que os atestados obtenham persistência baseada em blockchain, mantendo as informações de declarações criptografadas e verificáveis. Ele também permite a divulgação seletiva, visto que o titular da chave privada pode descriptografar as informações.
 

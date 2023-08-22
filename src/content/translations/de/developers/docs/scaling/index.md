@@ -21,7 +21,7 @@ Sie sollten über ein gutes Verständnis aller grundlegenden Themen verfügen. D
 
 ## On-Chain Skalierung {#on-chain-scaling}
 
-Diese Methode der Skalierung erfordert Änderungen am Ethereum-Protokoll (Layer 1 [Mainnet](/glossary/#mainnet)). Dem Sharding gilt derzeit das Hauptaugenmerk für diese Skalierungsmethode.
+Diese Methode der Skalierung erfordert Änderungen am Ethereum-Protokoll (Layer 1 <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip>). Dem Sharding gilt derzeit das Hauptaugenmerk für diese Skalierungsmethode.
 
 ### Sharding {#sharding}
 
@@ -56,8 +56,8 @@ Rollups führen Transaktionen außerhalb von Layer-1 aus, und die Daten werden d
 
 Es gibt zwei Arten von Rollups mit verschiedenen Sicherheitsmodellen:
 
-- **Optimistische Rollups**: geht davon aus, dass Transaktionen standardmäßig gültig sind, und führt nur im Falle einer Anfechtung Berechnungen über einen [**Betrugsnachweis**](/glossary/#fraud-proof) durch. [Mehr über Optimistische Rollups](/Developers/Docs/Scaling/Optimistic-Rollups/).
-- **Zero-Knowledge Rollups**: Führt die Berechnung außerhalb der Kette durch und reicht einen [**Gültigkeitsnachweis**](/glossary/#validity-proof) an die Kette ein. [Mehr zu Zero-Knowledge Rollups](/Developers/Docs/Scaling/Zk-Rollups/).
+- **Optimistische Rollups**: geht davon aus, dass Transaktionen standardmäßig gültig sind, und führt nur im Falle einer Anfechtung Berechnungen über einen <GlossaryTooltip termKey="fraud-proof">**Betrugsnachweis**</GlossaryTooltip> durch. [Mehr über Optimistische Rollups](/Developers/Docs/Scaling/Optimistic-Rollups/).
+- **Zero-Knowledge Rollups**: Führt die Berechnung außerhalb der Kette durch und reicht einen <GlossaryTooltip termKey="validity-proof">**Gültigkeitsnachweis**</GlossaryTooltip> an die Kette ein. [Mehr zu Zero-Knowledge Rollups](/Developers/Docs/Scaling/Zk-Rollups/).
 
 #### Zustandskanäle {#channels}
 

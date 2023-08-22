@@ -104,7 +104,7 @@ Mit dem Signatur-Hash kann für die Transaktion kryptographisch nachgewiesen wer
 
 ### Das Datenfeld {#the-data-field}
 
-Die überwiegende Mehrheit der Transaktionen greift auf einen Vertrag über ein externes Konto zu. Die meisten Verträge sind in Solidity geschrieben und interpretieren ihr Datenfeld entsprechedn dem [application binary interface (ABI)](/glossary/#abi/).
+Die überwiegende Mehrheit der Transaktionen greift auf einen Vertrag über ein externes Konto zu. Die meisten Verträge sind in Solidity geschrieben und interpretieren ihr Datenfeld entsprechedn dem <GlossaryTooltip termKey="abi/">application binary interface (ABI)</GlossaryTooltip>.
 
 Die ersten vier Bytes geben an, welche Funktion aufgerufen werden soll, wobei der Hash des Funktionsnamens und der Argumente verwendet wird. Manchmal kannst du die Funktion anhand des Selektors aus [dieser Datenbank](https://www.4byte.directory/signatures/) identifizieren.
 

@@ -317,7 +317,7 @@ Puoi pensare alla DeFi in termini di strati:
 
 1. La Blockchain: Ethereum contiene lo storico delle transazioni e lo stato dei conti.
 2. Gli attivi - [ETH](/eth/) e gli altri token (valute).
-3. I protocolli: [contratti intelligenti](/glossary/#smart-contract) che forniscono la funzionalità, ad esempio, un servizio che consente il prestito decentralizzato delle risorse.
+3. I protocolli: <GlossaryTooltip termKey="smart-contract">contratti intelligenti</GlossaryTooltip> che forniscono la funzionalità, ad esempio, un servizio che consente il prestito decentralizzato delle risorse.
 4. [Le applicazioni](/dapps/) - I prodotti che usiamo per gestire e accedere ai protocolli.
 
 ## Costruire la DeFi {#build-defi}

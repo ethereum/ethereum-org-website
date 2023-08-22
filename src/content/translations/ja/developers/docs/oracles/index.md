@@ -10,7 +10,7 @@ lang: ja
 
 ## 前提知識 {#prerequisites}
 
-本ページの内容は、[ノード](/developers/docs/nodes-and-clients/)、[コンセンサスメカニズム](/developers/docs/consensus-mechanisms/)、[イーサリアム仮想マシン](/developers/docs/evm/)を含むイーサリアムの基本について理解している読者を対象としています。 また、[スマートコントラクト](/developers/docs/smart-contracts/)、[スマートコントラクトの構造](/developers/docs/smart-contracts/anatomy/)、特に[イベント](/glossary/#events)について十分に理解している必要があります。
+本ページの内容は、[ノード](/developers/docs/nodes-and-clients/)、[コンセンサスメカニズム](/developers/docs/consensus-mechanisms/)、[イーサリアム仮想マシン](/developers/docs/evm/)を含むイーサリアムの基本について理解している読者を対象としています。 また、[スマートコントラクト](/developers/docs/smart-contracts/)、[スマートコントラクトの構造](/developers/docs/smart-contracts/anatomy/)、特に<GlossaryTooltip termKey="events">イベント</GlossaryTooltip>について十分に理解している必要があります。
 
 ## ブロックチェーンにおけるオラクルとは何か？ {#what-is-a-blockchain-oracle}
 

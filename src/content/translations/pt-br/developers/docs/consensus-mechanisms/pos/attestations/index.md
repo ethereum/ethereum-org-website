@@ -8,7 +8,7 @@ Espera-se que um validador crie, assine e transmita uma atestação durante cada
 
 ## O que é uma atestação? {#what-is-an-attestation}
 
-A cada [época](/glossary/#epoch) (6,4 minutos) um validador propõe uma atestação para a rede. A atestação é para um espaço específico na época. O objetivo da atestação é votar a favor da visão do validador da cadeia, em particular, o bloco justificado mais recente e o primeiro bloco na época atual (conhecidos como pontos de verificação `source` e `target`). Essas informações são combinadas por todos os validadores participantes, permitindo que a rede chegue a consenso sobre o estado da blockchain.
+A cada <GlossaryTooltip termKey="epoch">época</GlossaryTooltip> (6,4 minutos) um validador propõe uma atestação para a rede. A atestação é para um espaço específico na época. O objetivo da atestação é votar a favor da visão do validador da cadeia, em particular, o bloco justificado mais recente e o primeiro bloco na época atual (conhecidos como pontos de verificação `source` e `target`). Essas informações são combinadas por todos os validadores participantes, permitindo que a rede chegue a consenso sobre o estado da blockchain.
 
 A atestação contém os seguintes componentes:
 

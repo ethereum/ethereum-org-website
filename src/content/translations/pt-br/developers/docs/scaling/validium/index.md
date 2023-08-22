@@ -13,7 +13,7 @@ Você deve ler e entender mais sobre em nossa página [Dimensionamento Ethereum]
 
 ## O que é validium? {#what-is-validium}
 
-Validiums são soluções de dimensionamento que usam a disponibilidade de dados off-chain e computação projetadas para melhorar a taxa de transferência processando transações fora da rede principal do Ethereum. Como rollups de conhecimento zero (ZK-rollups), os validiums publicam [provas de conhecimento zero](/glossary/#zk-proof) para verificar transações off-chain no Ethereum. Isso impede transições de estado inválidas e melhora as garantias de segurança de uma cadeia validium.
+Validiums são soluções de dimensionamento que usam a disponibilidade de dados off-chain e computação projetadas para melhorar a taxa de transferência processando transações fora da rede principal do Ethereum. Como rollups de conhecimento zero (ZK-rollups), os validiums publicam <GlossaryTooltip termKey="zk-proof">provas de conhecimento zero</GlossaryTooltip> para verificar transações off-chain no Ethereum. Isso impede transições de estado inválidas e melhora as garantias de segurança de uma cadeia validium.
 
 Essas "provas de validade" podem vir na forma de ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) ou ZK-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge). Mais sobre [provas de conhecimento zero](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
 

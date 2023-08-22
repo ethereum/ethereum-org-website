@@ -45,7 +45,7 @@ This makes it possible to execute a smart contract off-chain between two users. 
 
 While this solves the scalability problem described earlier, it has implications for security. On Ethereum, the validity of state transitions on Ethereum is enforced by the network's consensus protocol. This makes it impossible to propose an invalid update to a smart contract's state or alter smart contract execution.
 
-State channels don't have the same security guarantees. To some extent, a state channel is a miniature version of Mainnet. With a limited set of participants enforcing rules, the possibility of malicious behavior (e.g., proposing invalid state updates) increases. State channels derive their security from a dispute arbitration system based on [fraud proofs](/glossary/#fraud-proof).
+State channels don't have the same security guarantees. To some extent, a state channel is a miniature version of Mainnet. With a limited set of participants enforcing rules, the possibility of malicious behavior (e.g., proposing invalid state updates) increases. State channels derive their security from a dispute arbitration system based on <GlossaryTooltip termKey="fraud-proof">fraud proofs</GlossaryTooltip>.
 
 ## How state channels work {#how-state-channels-work}
 

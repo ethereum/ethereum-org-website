@@ -332,7 +332,7 @@ Ethereum je trenutno podvržen seriji nadgradenj poznanih kot Eth2, ki bodo nado
 
 Strošek energije Ethereuma bo postal strošek uporabe domačega računalnika pomnožen s številom vozlišč v omrežju. Če je v omrežju 10.000 vozlišč in je strošek uporabe domačega računalnika približno 525 kWh na leto. To je 5.250.000 kWh<sup>[^1]</sup> na leto za celotno omrežje.
 
-To lahko uporabimo za primerjavo Eth2 z globalnim ponudnikom storitev, kot je Visa. 100.000 Visa transakcij porabi 149 kWh energije<sup>[^2]</sup>. Pri Eth2 bi to isto število transakcij stalo le 17.4 kWh energije oziroma ~11% celotne energije<sup>[^3]</sup>. To velja brez upoštevanja mnogih optimizacij, na katerih se dela vzporedno z Eth2 kot so [zvitki](/glossary/#rollups). Lahko bi bilo le 0,1666666667kWh energije za 100.000 transakcij.
+To lahko uporabimo za primerjavo Eth2 z globalnim ponudnikom storitev, kot je Visa. 100.000 Visa transakcij porabi 149 kWh energije<sup>[^2]</sup>. Pri Eth2 bi to isto število transakcij stalo le 17.4 kWh energije oziroma ~11% celotne energije<sup>[^3]</sup>. To velja brez upoštevanja mnogih optimizacij, na katerih se dela vzporedno z Eth2 kot so <GlossaryTooltip termKey="rollups">zvitki</GlossaryTooltip>. Lahko bi bilo le 0,1666666667kWh energije za 100.000 transakcij.
 
 Pomembneje, to izboljša energetsko učinkovitost in ohranja Ethereumovo decentralizacijo in varnost. Veliko drugih blokovnih verig morda že uporablja neko obliko zastavljanja, vendar so zavarovani s strani peščice izbranih zastavljalcev in ne s strani tisočih, ki jih bo imel Ethereum. Bolj kot je sistem decentraliziran, bolj je varen.
 

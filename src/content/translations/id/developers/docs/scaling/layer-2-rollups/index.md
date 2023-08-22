@@ -38,8 +38,8 @@ Rollup membutuhkan "operator" untuk mempertaruhkan sebuah obligasi dalam kontrak
 
 Ada dua jenis rollup dengan model keamanan yang berbeda:
 
-- **Rollup Optimistic**: menganggap transaksi valid secara default dan hanya menjalankan komputasi, melalui sebuah [**bukti penipuan**](/glossary/#fraud-proof), jika ada tantangan
-- **Rollup zero knowledge**: menjalankan komputasi secara off-chain dan mengirimkan sebuah [**bukti validitas**](/glossary/#validity-proof) ke rantai
+- **Rollup Optimistic**: menganggap transaksi valid secara default dan hanya menjalankan komputasi, melalui sebuah <GlossaryTooltip termKey="fraud-proof">**bukti penipuan**</GlossaryTooltip>, jika ada tantangan
+- **Rollup zero knowledge**: menjalankan komputasi secara off-chain dan mengirimkan sebuah <GlossaryTooltip termKey="validity-proof">**bukti validitas**</GlossaryTooltip> ke rantai
 
 ### Rollup optimistic {#optimistic-rollups}
 

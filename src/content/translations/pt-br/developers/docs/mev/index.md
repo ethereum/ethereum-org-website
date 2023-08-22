@@ -42,7 +42,7 @@ O MEV surge na blockchain de diferentes maneiras.
 
 ### Arbitragem DEX {#mev-examples-dex-arbitrage}
 
-A arbitragem em [exchanges descentralizadas](/glossary/#dex) (DEX) é a oportunidade mais simples e mais conhecida de MEV. Por conseguinte, é também a mais competitiva.
+A arbitragem em <GlossaryTooltip termKey="dex">exchanges descentralizadas</GlossaryTooltip> (DEX) é a oportunidade mais simples e mais conhecida de MEV. Por conseguinte, é também a mais competitiva.
 
 Isso funciona assim: se dois DEXes estão oferecendo um token a dois preços diferentes, alguém pode comprar o token na DEX com preços mais baixos e vendê-lo nas DEX com preços mais altos em uma única transação atômica. Graças ao mecanismo da blockchain, está é sem dúvidas uma arbitragem sem risco.
 
@@ -148,7 +148,7 @@ A [Separação Proponente/Construtor](https://ethresear.ch/t/proposer-block-buil
 
 Em PBS, um construtor de blocos cria um pacote de transações e faz um lance para sua inclusão em um bloco da Beacon Chain (como o “payload de execução”). O validador selecionado para propor o próximo bloco verifica então os diferentes lances e escolhe o pacote com a taxa mais alta. O PBS cria essencialmente um mercado de leilão, no qual os construtores negociam com os validadores vendendo o espaço no bloco.
 
-O design de PBS atual usa um [esquema commit-reveal](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) no qual os construtores só publicam um compromisso criptográfico com o conteúdo de um bloco (header do bloco), juntamente com seus lances. Após aceitar o lance vencedor, o proponente cria uma proposta de bloco assinado que inclui o cabeçalho do bloco. O construtor do bloco deve publicar o corpo completo do bloco após ver a proposta do bloco assinado, e também deve receber [atestações](/glossary/#attestation) suficientes dos validadores antes de ser finalizado.
+O design de PBS atual usa um [esquema commit-reveal](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) no qual os construtores só publicam um compromisso criptográfico com o conteúdo de um bloco (header do bloco), juntamente com seus lances. Após aceitar o lance vencedor, o proponente cria uma proposta de bloco assinado que inclui o cabeçalho do bloco. O construtor do bloco deve publicar o corpo completo do bloco após ver a proposta do bloco assinado, e também deve receber <GlossaryTooltip termKey="attestation">atestações</GlossaryTooltip> suficientes dos validadores antes de ser finalizado.
 
 #### Como a separação proponente-construtor atenua o impacto do MEV? {#how-does-pbs-curb-mev-impact}
 

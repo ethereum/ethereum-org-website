@@ -16,7 +16,7 @@ summaryPoint4: Önceden bundan "kenetlenme" olarak bahsettik.
 
 ## Birleştirme nedir? {#what-is-the-docking}
 
-Başlangıçta [İşaret Zinciri](/roadmap/beacon-chain/)nin bugün kullandığımız zincir olan [Mainnet](/glossary/#mainnet)'ten ayrı olarak başladığını unutmamak gerekir. Ethereum Mainnet [iş ispatı](/developers/docs/consensus-mechanisms/pow/) İşaret Zinciri ile paralel olarak çalışırken bile [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) tarafından güvence altına alınmaya devam etmektedir. Bu iki sistem sonunda bir araya geldiği zaman Birleştirme gerçekleşmiş olacak.
+Başlangıçta [İşaret Zinciri](/roadmap/beacon-chain/)nin bugün kullandığımız zincir olan <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip>'ten ayrı olarak başladığını unutmamak gerekir. Ethereum Mainnet [iş ispatı](/developers/docs/consensus-mechanisms/pow/) İşaret Zinciri ile paralel olarak çalışırken bile [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) tarafından güvence altına alınmaya devam etmektedir. Bu iki sistem sonunda bir araya geldiği zaman Birleştirme gerçekleşmiş olacak.
 
 Ethereum'un yıldızlararası bir yolculuk için pek de hazır olmayan bir uzay aracı olduğunu hayal edin. İşaret Zinciri ile topluluk, yeni bir motor ve sertleştirilmiş bir gövde inşa etti. Zamanı geldiğinde mevcut gemi, bu yeni sistemle rıhtıma yanaşıp tek bir gemide birleşerek uzun ışık yılları mesafe alacak ve evreni ele geçirmeye hazır olacak.
 

@@ -16,7 +16,7 @@ summaryPoint4: Unaweza kua unaitambua hii kama "Awamu 0" kwenye mipango ya kitaa
 
 ## Myororo wa Kioleza ni nini? {#what-does-the-beacon-chain-do}
 
-Mnyororo wa Beacon utaendeleza mwenendo wa kutanua mtandao wake wa [shards](/roadmap/danksharding/) na [wanahisa](/staking/). Lakini haitakua kama [mtandao mkuu wa Ethereum](/glossary/#mainnet) wa leo. Inaweza kuhimili akaunti au mikataba mahiri.
+Mnyororo wa Beacon utaendeleza mwenendo wa kutanua mtandao wake wa [shards](/roadmap/danksharding/) na [wanahisa](/staking/). Lakini haitakua kama <GlossaryTooltip termKey="mainnet">mtandao mkuu wa Ethereum</GlossaryTooltip> wa leo. Inaweza kuhimili akaunti au mikataba mahiri.
 
 Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya [usalama, kuendeleza na ubadilikaji wa Ethereum tunayoijenga](/roadmap/vision/).
 

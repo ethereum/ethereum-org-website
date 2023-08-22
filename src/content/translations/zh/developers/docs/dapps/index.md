@@ -58,7 +58,7 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**一键去中心化 _- 用于从 [ABI](/glossary/#abi) 生成去中心化应用程序前端的免费和开放源代码软件工具。_**
+**一键去中心化 _- 用于从 <GlossaryTooltip termKey="abi">ABI</GlossaryTooltip> 生成去中心化应用程序前端的免费和开放源代码软件工具。_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)

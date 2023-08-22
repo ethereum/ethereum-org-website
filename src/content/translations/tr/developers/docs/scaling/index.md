@@ -21,7 +21,7 @@ Tüm temel konuları kapsamlı olarak anlamanız gerekmektedir. Bu teknoloji hen
 
 ## Zincir üstünde ölçeklendirme {#on-chain-scaling}
 
-Bu ölçeklendirme yöntemi, Ethereum protokolünde değişiklik yapılmasını gerektirir (katman 1 [Mainnet](/glossary/#mainnet)). Parçalama, şu anda bu ölçeklendirme yönteminin ana odak noktasıdır.
+Bu ölçeklendirme yöntemi, Ethereum protokolünde değişiklik yapılmasını gerektirir (katman 1 <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip>). Parçalama, şu anda bu ölçeklendirme yönteminin ana odak noktasıdır.
 
 ### Parçalama {#sharding}
 
@@ -56,8 +56,8 @@ Toplamalar, işlem yürütmesini katman 1 dışında gerçekleştirir ve ardınd
 
 Farklı güvenlik modellerine sahip iki tür toplama vardır:
 
-- **İyimser toplamalar**: İşlemlerin varsayılan olarak geçerli olduğunu varsayar ve yalnızca bir meydan okuma ile karşılaşıldığında [**dolandırıcılık kanıtı**](/glossary/#fraud-proof) aracılığıyla hesaplama çalıştırır. [İyimser toplamalar üzerine daha fazla bilgi](/developers/docs/scaling/optimistic-rollups/).
-- **Sıfır bilgi toplamaları**: Zincir dışı hesaplamalar çalıştırır ve zincire bir [**doğruluk ispatı**](/glossary/#validity-proof) gönderir. [Sıfır bilgi toplamaları üzerine daha fazla bilgi](/developers/docs/scaling/zk-rollups/).
+- **İyimser toplamalar**: İşlemlerin varsayılan olarak geçerli olduğunu varsayar ve yalnızca bir meydan okuma ile karşılaşıldığında <GlossaryTooltip termKey="fraud-proof">**dolandırıcılık kanıtı**</GlossaryTooltip> aracılığıyla hesaplama çalıştırır. [İyimser toplamalar üzerine daha fazla bilgi](/developers/docs/scaling/optimistic-rollups/).
+- **Sıfır bilgi toplamaları**: Zincir dışı hesaplamalar çalıştırır ve zincire bir <GlossaryTooltip termKey="validity-proof">**doğruluk ispatı**</GlossaryTooltip> gönderir. [Sıfır bilgi toplamaları üzerine daha fazla bilgi](/developers/docs/scaling/zk-rollups/).
 
 #### Durum kanalları {#channels}
 

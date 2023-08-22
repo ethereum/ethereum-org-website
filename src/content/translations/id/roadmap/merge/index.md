@@ -16,7 +16,7 @@ summaryPoint4: Sebelumnya kami menyebutnya sebagai "docking."
 
 ## Apa itu Penggabungan? {#what-is-the-docking}
 
-Penting untuk diingat bahwa pada awalnya [Rantai Suar](/roadmap/beacon-chain/) diluncurkan terpisah dari [Jaringan Utama](/glossary/#mainnet) - sistem rantai yang kita pakai saat ini. Jaringan Utama Ethereum terus diamankan oleh [bukti kerja](/developers/docs/consensus-mechanisms/pow/), sekalipun Rantai Suar beroperasi secara paralel menggunakan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/). Penggabungan adalah ketika pada akhirnya kedua sistem ini menjadi satu.
+Penting untuk diingat bahwa pada awalnya [Rantai Suar](/roadmap/beacon-chain/) diluncurkan terpisah dari <GlossaryTooltip termKey="mainnet">Jaringan Utama</GlossaryTooltip> - sistem rantai yang kita pakai saat ini. Jaringan Utama Ethereum terus diamankan oleh [bukti kerja](/developers/docs/consensus-mechanisms/pow/), sekalipun Rantai Suar beroperasi secara paralel menggunakan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/). Penggabungan adalah ketika pada akhirnya kedua sistem ini menjadi satu.
 
 Bayangkan Ethereum adalah sebuah kapal luar angkasa yang belum cukup siap untuk perjalanan antar bintang. Dengan Rantai Suar, komunitas telah membangun sebuah mesin baru dan lambung kapal yang lebih kuat. Ketika sudah saatnya, kapal yang ada saat ini akan bergabung dengan sistem baru, menjadi satu kapal, siap untuk melakukan perjalanan tahun cahaya yang intens, dan mengarungi alam semesta.
 

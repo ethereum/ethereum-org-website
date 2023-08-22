@@ -30,7 +30,7 @@ Vous devez avoir une bonne compréhension de tous les sujets fondamentaux. Les s
 - [Chaines latérales ou _sidechains_](#sidechains)
 - [Solutions hybrides](#hybrid-solutions)
 
-La plupart des solutions de la couche 2 sont centrées autour d'un serveur ou d'un groupe de serveurs, chacun pouvant être appelé nœud, validateur, opérateur, séquenceur, producteur de blocs ou un terme similaire. Selon l'implémentation, ces nœuds de la couche 2 peuvent être exécutés par les entreprises ou entités qui les utilisent, par un opérateur tiers ou par un grand groupe d'individus (comme sur le réseau principal). De façon générale, les transactions sont soumises à des nœuds de la couche 2 au lieu d'être soumises directement à la couche 1 ([réseau principal](/glossary/#mainnet)). L'instance de la couche 2 les rassemblent ensuite en groupes avant de les sécuriser sur la couch 1. Elles ne peuvent alors plus être modifiées. La façon détaillée dont cela se réalise varie considérablement entre les différentes technologies et implémentations de la couche 2.
+La plupart des solutions de la couche 2 sont centrées autour d'un serveur ou d'un groupe de serveurs, chacun pouvant être appelé nœud, validateur, opérateur, séquenceur, producteur de blocs ou un terme similaire. Selon l'implémentation, ces nœuds de la couche 2 peuvent être exécutés par les entreprises ou entités qui les utilisent, par un opérateur tiers ou par un grand groupe d'individus (comme sur le réseau principal). De façon générale, les transactions sont soumises à des nœuds de la couche 2 au lieu d'être soumises directement à la couche 1 (<GlossaryTooltip termKey="mainnet">réseau principal</GlossaryTooltip>). L'instance de la couche 2 les rassemblent ensuite en groupes avant de les sécuriser sur la couch 1. Elles ne peuvent alors plus être modifiées. La façon détaillée dont cela se réalise varie considérablement entre les différentes technologies et implémentations de la couche 2.
 
 Une instance spécifique de la couche 2 peut être ouverte et partagée par de nombreuses applications, ou peut être déployée par une société et dédiée à soutenir uniquement leur application.
 
@@ -52,8 +52,8 @@ Les solutions de rollup nécessitent des relayeurs qui se sont engagés dans le 
 
 Il existe deux types de rollups avec différents modèles de sécurité :
 
-- Rollup ZK : exécute le calcul hors de la blockchain principale, puis soumet une [**preuve de validité **](/glossary/#validity-proof)
-- Rollup optimisé : assume que les transactions sont valides par défaut et exécute uniquement le calcul, via une [**preuve de fraude**](/glossary/#fraud-proof),
+- Rollup ZK : exécute le calcul hors de la blockchain principale, puis soumet une <GlossaryTooltip termKey="validity-proof">**preuve de validité **</GlossaryTooltip>
+- Rollup optimisé : assume que les transactions sont valides par défaut et exécute uniquement le calcul, via une <GlossaryTooltip termKey="fraud-proof">**preuve de fraude**</GlossaryTooltip>,
 
 ### Rollups Zero Knowledge (ZK) {#zk-rollups}
 
@@ -65,11 +65,11 @@ La chaîne latérale où se produisent les rollups ZK peut être optimisée pour
 
 #### Avantages et inconvénients {#zk-pros-and-cons}
 
-| Avantages                                                                                                          | Inconvénients                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Aucun délai car les preuves sont déjà considérées comme valides lorsqu'elles sont soumises à la chaîne principale. | Cela se limite à des transactions simples, non compatibles avec l'EVM.                                                                                                                                                                                            |
-| Moindre vulnérabilité aux attaques économiques que les [rollups optimisés](#optimistic-pros-and-cons).             | Les preuves de validité étant intenses à calculer, les rollups ZK ne présentent guère d'intérêt pour les applications peu actives sur la chaîne.                                                                                                                  |
-|                                                                                                                    | Délai de [finalisation](/glossary/#finality) subjective plus long (10-30 min pour générer une preuve ZK), mais plus rapide pour une finalisation complète, car il n'existe pas de délai de contestation comme dans les [rollups optimisés](#optimistic-rollups)). |
+| Avantages                                                                                                          | Inconvénients                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Aucun délai car les preuves sont déjà considérées comme valides lorsqu'elles sont soumises à la chaîne principale. | Cela se limite à des transactions simples, non compatibles avec l'EVM.                                                                                                                                                                                                                           |
+| Moindre vulnérabilité aux attaques économiques que les [rollups optimisés](#optimistic-pros-and-cons).             | Les preuves de validité étant intenses à calculer, les rollups ZK ne présentent guère d'intérêt pour les applications peu actives sur la chaîne.                                                                                                                                                 |
+|                                                                                                                    | Délai de <GlossaryTooltip termKey="finality">finalisation</GlossaryTooltip> subjective plus long (10-30 min pour générer une preuve ZK), mais plus rapide pour une finalisation complète, car il n'existe pas de délai de contestation comme dans les [rollups optimisés](#optimistic-rollups)). |
 
 #### Rollups ZK que vous pouvez utiliser {#use-zk-rollups}
 

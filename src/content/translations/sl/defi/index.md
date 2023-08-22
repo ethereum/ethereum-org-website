@@ -293,7 +293,7 @@ DeFi si lahko predstavljate v plasteh:
 
 1. Blokovna veriga – Ethereum vsebuje zgodovino transakcij in stanje računov.
 2. Sredstva – [ETH](/eth/) in drugi žetoni (valute).
-3. Protokoli – [pametne pogodbe](/glossary/#smart-contract), ki zagotavljajo funkcionalnost, na primer storitev, ki omogoča decentralizirano posojanje sredstev.
+3. Protokoli – <GlossaryTooltip termKey="smart-contract">pametne pogodbe</GlossaryTooltip>, ki zagotavljajo funkcionalnost, na primer storitev, ki omogoča decentralizirano posojanje sredstev.
 4. [Aplikacije](/dapps/) – produkti, ki jih uporabljamo za upravljanje in dostop do protokolov.
 
 ## Razvijajte DeFi {#build-defi}

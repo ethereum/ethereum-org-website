@@ -31,7 +31,7 @@ Suchst du nach weiteren Protokoll Verbesserungen? [Erfahre etwas über bevorsteh
 
 #### Zusammenfassung {#gray-glacier-summary}
 
-Das Gray Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#difficulty-bomb) um drei Monate nach hinten verschoben. Dies ist die einzige Änderung, die in diesem Upgrade eingeführt wurde, und ähnelt den [Arrow Glacier](#arrow-glacier) und [Muir Glacier](#muir-glacier) Upgrades. Ähnliche Änderungen wurden bei den Netzwerk-Upgrades [Byzantium](#byzantium),[Constantinople](#constantinople) und [London](#london) durchgeführt.
+Das Gray Glacier Netzwerk-Upgrade hat die <GlossaryTooltip termKey="difficulty-bomb">Schwierigkeitsbombe</GlossaryTooltip> um drei Monate nach hinten verschoben. Dies ist die einzige Änderung, die in diesem Upgrade eingeführt wurde, und ähnelt den [Arrow Glacier](#arrow-glacier) und [Muir Glacier](#muir-glacier) Upgrades. Ähnliche Änderungen wurden bei den Netzwerk-Upgrades [Byzantium](#byzantium),[Constantinople](#constantinople) und [London](#london) durchgeführt.
 
 - [EF Blog - Gray Glacier Upgrade-Ankündigung](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
@@ -51,7 +51,7 @@ Das Gray Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#diffi
 
 #### Zusammenfassung {#arrow-glacier-summary}
 
-Das Arrow Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#difficulty-bomb) um mehrere Monate nach hinten geschoben. Dies ist die einzige Änderung, die mit diesem Upgrade eingeführt wird, und ähnelt dem [Muir Glacier](#muir-glacier)-Upgrade. Ähnliche Änderungen wurden bei den Netzwerk-Upgrades [Byzantium](#byzantium),[Constantinople](#constantinople) und [London](#london) durchgeführt.
+Das Arrow Glacier Netzwerk-Upgrade hat die <GlossaryTooltip termKey="difficulty-bomb">Schwierigkeitsbombe</GlossaryTooltip> um mehrere Monate nach hinten geschoben. Dies ist die einzige Änderung, die mit diesem Upgrade eingeführt wird, und ähnelt dem [Muir Glacier](#muir-glacier)-Upgrade. Ähnliche Änderungen wurden bei den Netzwerk-Upgrades [Byzantium](#byzantium),[Constantinople](#constantinople) und [London](#london) durchgeführt.
 
 - [EF Blog – Ankündigung des Arrow Glacier-Upgrades](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders – Ethereum Arrow Glacier-Upgrade](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -88,7 +88,7 @@ Altair war das erste große Netzwerk-Upgrade, für das es einen genauen Einführ
 
 #### Zusammenfassung {#london-summary}
 
-Das London-Upgrade führte die [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) ein, die den Markt für Transaktionsgebühren reformierte sowie Änderungen bei der Handhabung von Gasrückerstattungen und dem [Ice-Age](/glossary/#ice-age)-Zeitplan beinhaltete.
+Das London-Upgrade führte die [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) ein, die den Markt für Transaktionsgebühren reformierte sowie Änderungen bei der Handhabung von Gasrückerstattungen und dem <GlossaryTooltip termKey="ice-age">Ice-Age</GlossaryTooltip>-Zeitplan beinhaltete.
 
 - [Sind Sie ein DApp-Entwickler? Bitte aktualisieren Sie Ihre Bibliotheken und Werkzeuge.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Die Ankündigung der Ethereum Foundation lesen](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -152,7 +152,7 @@ Die [Beacon Chain](/roadmap/beacon-chain/) benötigte zum sicheren Betrieb 16.38
 
 #### Zusammenfassung {#deposit-contract-summary}
 
-Mit dem Stakingeinzahlungsvertrag wurde [Staking](/glossary/#staking) im Ökosystem von Ethereum eingeführt. Obwohl es sich um einen [Mainnet](/glossary/#mainnet)-Vertrag handelt, hatte er einen direkten Einfluss auf den Zeitplan für die Einführung der [Beacon Chain](/roadmap/beacon-chain/), einem wichtigen [Ethereum-Upgrade](/roadmap/).
+Mit dem Stakingeinzahlungsvertrag wurde <GlossaryTooltip termKey="staking">Staking</GlossaryTooltip> im Ökosystem von Ethereum eingeführt. Obwohl es sich um einen <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip>-Vertrag handelt, hatte er einen direkten Einfluss auf den Zeitplan für die Einführung der [Beacon Chain](/roadmap/beacon-chain/), einem wichtigen [Ethereum-Upgrade](/roadmap/).
 
 [Die Ankündigung der Ethereum Foundation lesen](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -168,7 +168,7 @@ Mit dem Stakingeinzahlungsvertrag wurde [Staking](/glossary/#staking) im Ökosys
 
 #### Zusammenfassung {#muir-glacier-summary}
 
-Die Muir-Glacier-Abspaltung führte eine Verzögerung in die [Schwierigkeitsbombe](/glossary/#difficulty-bomb) ein. Erhöhungen der Blockschwierigkeitsstufe des [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) Konsensmechanismus drohte die Nutzbarkeit von Ethereum zu verringern, indem die Wartezeiten für das Senden von Transaktionen und die Verwendung von dApps erhöht werden.
+Die Muir-Glacier-Abspaltung führte eine Verzögerung in die <GlossaryTooltip termKey="difficulty-bomb">Schwierigkeitsbombe</GlossaryTooltip> ein. Erhöhungen der Blockschwierigkeitsstufe des [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) Konsensmechanismus drohte die Nutzbarkeit von Ethereum zu verringern, indem die Wartezeiten für das Senden von Transaktionen und die Verwendung von dApps erhöht werden.
 
 - [Die Ankündigung der Ethereum Foundation lesen](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Die Erklärung der Ethereum Cat Herder lesen](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -191,7 +191,7 @@ Die Muir-Glacier-Abspaltung führte eine Verzögerung in die [Schwierigkeitsbomb
 
 Die Istanbul-Abspaltung:
 
-- Optimierte [Gas-](/glossary/#gas) Kosten für bestimmte Aktionen in der [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Optimierte <GlossaryTooltip termKey="gas">Gas-</GlossaryTooltip> Kosten für bestimmte Aktionen in der [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Verbesserte Denial-of-Service Angriffswiderstandskraft.
 - Machte [Skalierungslösungen der Ebene 2](/developers/docs/scaling/#layer-2-scaling) basierend auf SNARKs und STARKs leistungsstärker.
 - Aktivierte Ethereum und Zcash zur Interoperation.
@@ -221,7 +221,7 @@ Die Istanbul-Abspaltung:
 Die Konstantinopel-Fork:
 
 - Sie stellte sicher, dass die Blockchain nicht einfrieren konnte, bevor der [Proof-of-Stake](#beacon-chain-genesis) implementiert wurde.
-- Optimierte die [Gas-](/glossary/#gas)-Kosten für bestimmte Aktionen in der [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Optimierte die <GlossaryTooltip termKey="gas">Gas-</GlossaryTooltip>-Kosten für bestimmte Aktionen in der [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Fügte die Möglichkeit hinzu, mit Adressen zu interagieren, die noch nicht erstellt wurden.
 
 [Die Ankündigung der Ethereum Foundation lesen](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -248,7 +248,7 @@ Die Konstantinopel-Fork:
 Die Byzantium-Fork:
 
 - Reduzierte die Block-[Mining](/developers/docs/consensus-mechanisms/pow/mining/)-Belohnungen von 5 auf 3 ETH.
-- Verzögerte die [Schwierigkeitsbombe](/glossary/#difficulty-bomb) um ein Jahr.
+- Verzögerte die <GlossaryTooltip termKey="difficulty-bomb">Schwierigkeitsbombe</GlossaryTooltip> um ein Jahr.
 - Fügte die Möglichkeit hinzu, nicht zustandsverändernde Aufrufe zu anderen Verträgen zu tätigen.
 - Hinzufügung bestimmter Kryptographie-Methoden, um [Layer-2-Skalierung](/developers/docs/scaling/#layer-2-scaling) zu ermöglichen.
 
@@ -264,7 +264,7 @@ Die Byzantium-Fork:
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) - _erweitert die Unterstützung für Rückgabewerte variabler Länge._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) - _erweitert den „STATICCALL"-Opcode, der nicht zustandsverändernde Aufrufe zu anderen Verträgen erlaubt._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) - _Ändert die Formel für die Schwierigkeitsanpassung._
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) - _verzögert [difficulty bomb](/glossary/#difficulty-bomb) um 1 Jahr und reduziert die Blockbelohnung von 5 auf 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) - _verzögert <GlossaryTooltip termKey="difficulty-bomb">difficulty bomb</GlossaryTooltip> um 1 Jahr und reduziert die Blockbelohnung von 5 auf 3 ETH._
 
 </ExpandableCard>
 
@@ -324,7 +324,7 @@ Die Tangerine-Whistle-Fork war die erste Reaktion auf die Denial-of-Service (DoS
 
 #### Zusammenfassung {#dao-fork-summary}
 
-Die DAO-Abspaltung war eine Reaktion auf den [DAO-Angriff 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/), bei dem einem unsicheren [DAO](/glossary/#dao)-Vertrag durch einen Hack über 3,6 Millionen ETH entzogen wurden. Die Fork verschiebt das Guthaben aus dem fehlerhaften Vertrag in einen [neuen Vertrag](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) mit einer einzigen Funktion: Abheben. Jeder, der Geld verloren hat, konnte 1 ETH für jeden 100 DAO-Token in seiner Wallet abheben.
+Die DAO-Abspaltung war eine Reaktion auf den [DAO-Angriff 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/), bei dem einem unsicheren <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip>-Vertrag durch einen Hack über 3,6 Millionen ETH entzogen wurden. Die Fork verschiebt das Guthaben aus dem fehlerhaften Vertrag in einen [neuen Vertrag](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) mit einer einzigen Funktion: Abheben. Jeder, der Geld verloren hat, konnte 1 ETH für jeden 100 DAO-Token in seiner Wallet abheben.
 
 Über diese Vorgehensweise wurde seitens der Ethereum-Community abgestimmt. Jeder ETH-Inhaber konnte über eine Transaktion auf [, einer Abstimmungsplattform,](http://v1.carbonvote.com/) abstimmen. Die Entscheidung zur Fork erreichte mehr als 85 % der Stimmen.
 
@@ -362,7 +362,7 @@ Die Homestead-Abspaltung, die in die Zukunft schaute. Sie enthielt mehrere Proto
 
 #### Zusammenfassung {#frontier-thawing-summary}
 
-Die Frontier-Thawing-Abspaltung hob das 5.000 [Gas](/glossary/#gas)-Limit pro [Block](/glossary/#block) auf und setzte den Standardgaspreis auf 51 [gwei](/glossary/#gwei). Dies erlaubte Transaktionen – Transaktionen benötigen 21.000 Gas. Die [Schwierigkeitsbombe](/glossary/#difficulty-bomb) wurde eingeführt, um eine zukünftige harte Abspaltung zu [Proof-of-Stake](/glossary/#pos) sicherzustellen.
+Die Frontier-Thawing-Abspaltung hob das 5.000 <GlossaryTooltip termKey="gas">Gas</GlossaryTooltip>-Limit pro <GlossaryTooltip termKey="block">Block</GlossaryTooltip> auf und setzte den Standardgaspreis auf 51 <GlossaryTooltip termKey="gwei">gwei</GlossaryTooltip>. Dies erlaubte Transaktionen – Transaktionen benötigen 21.000 Gas. Die <GlossaryTooltip termKey="difficulty-bomb">Schwierigkeitsbombe</GlossaryTooltip> wurde eingeführt, um eine zukünftige harte Abspaltung zu <GlossaryTooltip termKey="pos">Proof-of-Stake</GlossaryTooltip> sicherzustellen.
 
 - [Die Ankündigung der Ethereum Foundation lesen](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [Lesen Sie das Ethereum Protokoll-Update 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
@@ -375,7 +375,7 @@ Die Frontier-Thawing-Abspaltung hob das 5.000 [Gas](/glossary/#gas)-Limit pro [B
 
 #### Zusammenfassung {#frontier-summary}
 
-Frontier war live, aber soweit nur die Implementierung eines grundsätzlichen Rahmens des Ethereum-Projekts. Es folgte der erfolgreichen olympischen Testphase. Es war für technische Benutzer gedacht, speziell für Entwickler. [Blöcke](/glossary/#block) hatten ein [Gas](/glossary/#gas)-Limit von 5.000. Diese Zeit des „Auftauens" ermöglichte es den Minern, ihren Betrieb zu starten und für Early-Adopters, ihre Kunden zu installieren, ohne dies „überstürzen“ zu müssen.
+Frontier war live, aber soweit nur die Implementierung eines grundsätzlichen Rahmens des Ethereum-Projekts. Es folgte der erfolgreichen olympischen Testphase. Es war für technische Benutzer gedacht, speziell für Entwickler. <GlossaryTooltip termKey="block">Blöcke</GlossaryTooltip> hatten ein <GlossaryTooltip termKey="gas">Gas</GlossaryTooltip>-Limit von 5.000. Diese Zeit des „Auftauens" ermöglichte es den Minern, ihren Betrieb zu starten und für Early-Adopters, ihre Kunden zu installieren, ohne dies „überstürzen“ zu müssen.
 
 [Die Ankündigung der Ethereum Foundation lesen](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

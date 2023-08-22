@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-A Plasma chain is a separate blockchain anchored to Ethereum Mainnet but executing transactions off-chain with its own mechanism for block validation. Plasma chains are sometimes referred to as "child" chains, essentially smaller copies of the Ethereum Mainnet. Plasma chains use [fraud proofs](/glossary/#fraud-proof) (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
+A Plasma chain is a separate blockchain anchored to Ethereum Mainnet but executing transactions off-chain with its own mechanism for block validation. Plasma chains are sometimes referred to as "child" chains, essentially smaller copies of the Ethereum Mainnet. Plasma chains use <GlossaryTooltip termKey="fraud-proof">fraud proofs</GlossaryTooltip> (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
 
 Merkle trees enable the creation of an endless stack of these chains that can work to offload bandwidth from parent chains (including Ethereum Mainnet). However, while these chains derive some security from Ethereum (via fraud proofs), their security and efficiency are affected by several design limitations.
 

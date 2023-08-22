@@ -20,7 +20,7 @@ Spojitev je bila združitev izvirne izvajalne plasti Ethereuma (glavno omrežje,
 
 <MergeInfographic />
 
-Najprej je [oddajniška veriga](/roadmap/beacon-chain/) stopila v uporabo ločeno od [glavnega omrežja](/glossary/#mainnet). Ethereumovo glavno omrežje z vsemi računi, zneski, pametnimi pogodbami in stanjem verige blokov je še naprej varoval mehanizem [dokaza o delu](/developers/docs/consensus-mechanisms/pow/), tudi ko je oddajniška veriga vzporedno uporabljala [dokaz o deležu](/developers/docs/consensus-mechanisms/pos/). Spojitev je končno združila oba sistema in mehanizem dokaza o delu je trajno zamenjal mehanizem dokaza o deležu.
+Najprej je [oddajniška veriga](/roadmap/beacon-chain/) stopila v uporabo ločeno od <GlossaryTooltip termKey="mainnet">glavnega omrežja</GlossaryTooltip>. Ethereumovo glavno omrežje z vsemi računi, zneski, pametnimi pogodbami in stanjem verige blokov je še naprej varoval mehanizem [dokaza o delu](/developers/docs/consensus-mechanisms/pow/), tudi ko je oddajniška veriga vzporedno uporabljala [dokaz o deležu](/developers/docs/consensus-mechanisms/pos/). Spojitev je končno združila oba sistema in mehanizem dokaza o delu je trajno zamenjal mehanizem dokaza o deležu.
 
 Predstavljajte si, da je Ethereum vesoljska ladja, ki je bila izstreljena, še preden je bila povsem pripravljena na medzvezdno potovanje. Z oddajniško verigo je skupnost pripravila nov motor in močnejši trup. Po celovitem testiranju je bil čas, da nov motor kar med poletom zamenja starega. Tako se je nov učinkovitejši motor združil z obstoječo vesoljsko ladjo, ki bo tako lahko prepotovala velike razdalje in raziskala vesolje.
 

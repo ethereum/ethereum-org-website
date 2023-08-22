@@ -31,7 +31,7 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum'da yapılacak y
 
 #### Özet {#gray-glacier-summary}
 
-Gray Glacier ağ yükseltmesi, [zorluk bombasını](/glossary/#difficulty-bomb) üç ay geriye itti. Bu yükseltmede sunulan tek değişiklik budur ve doğası gereği [Arrow Glacier](#arrow-glacier) ve [Muir Glacier](#muir-glacier) yükseltmelerine benzer. [Bizans](#byzantium), [Konstantinopolis](#constantinople) ve [Londra](#london) ağ yükseltmelerinde de benzer değişiklikler yapıldı.
+Gray Glacier ağ yükseltmesi, <GlossaryTooltip termKey="difficulty-bomb">zorluk bombasını</GlossaryTooltip> üç ay geriye itti. Bu yükseltmede sunulan tek değişiklik budur ve doğası gereği [Arrow Glacier](#arrow-glacier) ve [Muir Glacier](#muir-glacier) yükseltmelerine benzer. [Bizans](#byzantium), [Konstantinopolis](#constantinople) ve [Londra](#london) ağ yükseltmelerinde de benzer değişiklikler yapıldı.
 
 - [EF Blog - Gray Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
@@ -51,7 +51,7 @@ Gray Glacier ağ yükseltmesi, [zorluk bombasını](/glossary/#difficulty-bomb) 
 
 #### Özet {#arrow-glacier-summary}
 
-The Arrow Glacier ağ yükseltmesi [zorluk bombasını](/glossary/#difficulty-bomb) bir kaç ay ertelendi. Bu yükseltmede sunulan tek değişiklik budur ve doğası gereği [Muir Glacier](#muir-glacier) yükseltmesine benzer. [Bizans](#byzantium), [Konstantinopolis](#constantinople) ve [Londra](#london) ağ yükseltmelerinde de benzer değişiklikler yapıldı.
+The Arrow Glacier ağ yükseltmesi <GlossaryTooltip termKey="difficulty-bomb">zorluk bombasını</GlossaryTooltip> bir kaç ay ertelendi. Bu yükseltmede sunulan tek değişiklik budur ve doğası gereği [Muir Glacier](#muir-glacier) yükseltmesine benzer. [Bizans](#byzantium), [Konstantinopolis](#constantinople) ve [Londra](#london) ağ yükseltmelerinde de benzer değişiklikler yapıldı.
 
 - [EF Blog - Arrow Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Ethereum Arrow Glacier Yükseltmesi](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -88,7 +88,7 @@ Altair, kesin bir kullanıma sunma süresi olan ilk büyük ağ yükseltmesiydi.
 
 #### Özet {#london-summary}
 
-Londra yükseltmesi, işlem ücreti pazarını yeniden şekillendiren [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) ile birlikte gaz geri ödemelerinin nasıl ele alındığını ve [Buz Devri](/glossary/#ice-age) takvimindeki değişiklikleri tanıttı.
+Londra yükseltmesi, işlem ücreti pazarını yeniden şekillendiren [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) ile birlikte gaz geri ödemelerinin nasıl ele alındığını ve <GlossaryTooltip termKey="ice-age">Buz Devri</GlossaryTooltip> takvimindeki değişiklikleri tanıttı.
 
 - [dApp geliştiricisi misiniz? Kitaplıklarınızı ve araçlarınızı güncellediğinizden emin olun.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -152,7 +152,7 @@ Berlin güncellemesi, belirli EVM eylemleri için optimize edilmiş gaz maliyeti
 
 #### Özet {#deposit-contract-summary}
 
-Staking depozitosu sözleşmesi, Ethereum ekosistemine [stake](/glossary/#staking) kazandırdı. Bir [Ana Ağ](/glossary/#mainnet) sözleşmesi olmasına rağmen önemli bir [Ethereum yükseltmesi](/roadmap/) olan [İşaret Zinciri](/roadmap/beacon-chain/)'nin çıkış zamanı üzerinde doğrudan bir etkisi oldu.
+Staking depozitosu sözleşmesi, Ethereum ekosistemine <GlossaryTooltip termKey="staking">stake</GlossaryTooltip> kazandırdı. Bir <GlossaryTooltip termKey="mainnet">Ana Ağ</GlossaryTooltip> sözleşmesi olmasına rağmen önemli bir [Ethereum yükseltmesi](/roadmap/) olan [İşaret Zinciri](/roadmap/beacon-chain/)'nin çıkış zamanı üzerinde doğrudan bir etkisi oldu.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -168,7 +168,7 @@ Staking depozitosu sözleşmesi, Ethereum ekosistemine [stake](/glossary/#stakin
 
 #### Özet {#muir-glacier-summary}
 
-Muir Glacier çatalı, [zorluk bombasına](/glossary/#difficulty-bomb) bir gecikme getirdi. [İş ispatı](/developers/docs/consensus-mechanisms/pow/) konsensüs mekanizmasının blok zorluğundaki artışlar, işlem gönderme ve dapp kullanma bekleme sürelerini artırarak Ethereum'un kullanılabilirliğini düşürme tehdidinde bulundu.
+Muir Glacier çatalı, <GlossaryTooltip termKey="difficulty-bomb">zorluk bombasına</GlossaryTooltip> bir gecikme getirdi. [İş ispatı](/developers/docs/consensus-mechanisms/pow/) konsensüs mekanizmasının blok zorluğundaki artışlar, işlem gönderme ve dapp kullanma bekleme sürelerini artırarak Ethereum'un kullanılabilirliğini düşürme tehdidinde bulundu.
 
 - [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Ethereum Cat Herder'ın açıklamalarını okuyunuz](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -191,7 +191,7 @@ Muir Glacier çatalı, [zorluk bombasına](/glossary/#difficulty-bomb) bir gecik
 
 İstanbul çatallanması:
 
-- [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine)'deki belirli işlemlerin [gaz](/glossary/#gas) maliyetini optimize etti.
+- [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine)'deki belirli işlemlerin <GlossaryTooltip termKey="gas">gaz</GlossaryTooltip> maliyetini optimize etti.
 - Hizmet reddi saldırısına karşı direnci iyileştirdi.
 - SNARK'lara ve STARK'lara dayalı [Katman 2 ölçekleme](/developers/docs/scaling/#layer-2-scaling) çözümlerini daha performanslı hâle getirdi.
 - Ethereum'un ve Zcash'in birlikte çalışmasını sağladı.
@@ -202,7 +202,7 @@ Muir Glacier çatalı, [zorluk bombasına](/glossary/#difficulty-bomb) bir gecik
 <ExpandableCard title="İstanbul EIP'leri" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _Ethereum'ın Zcash gibi gizliliği koruyan para birimiyle çalışmasına izin verir._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _[gas](/glossary/#gas) maliyetlerini iyileştirmek için daha ucuz şifreleme._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _<GlossaryTooltip termKey="gas">gas</GlossaryTooltip> maliyetlerini iyileştirmek için daha ucuz şifreleme._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _"CHAINID" [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ekleyerek Ethereum'u tekrar saldırılarına karşı korur._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _tüketime dayalı işlem kodu gaz fiyatlarını optimize etme._
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _Bloklarda daha fazla veriye izin vermek için CallData maliyetini düşürür – [Katman 2 ölçekleme için iyi](/developers/docs/scaling/#layer-2-scaling)._
@@ -221,7 +221,7 @@ Muir Glacier çatalı, [zorluk bombasına](/glossary/#difficulty-bomb) bir gecik
 Konstantinopolis çatallanması:
 
 - [Stake kanıtı uygulanmadan](#beacon-chain-genesis) önce blok zincirinin donmamasını sağladı.
-- [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine)'deki belirli işlemlerin [gaz](/glossary/#gas) maliyetini optimize etti.
+- [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine)'deki belirli işlemlerin <GlossaryTooltip termKey="gas">gaz</GlossaryTooltip> maliyetini optimize etti.
 - Henüz oluşturulmamış adreslerle etkileşim kurma yeteneğini ekledi.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -248,7 +248,7 @@ Konstantinopolis çatallanması:
 Bizans çatallanması:
 
 - Blok [madenciliği](/developers/docs/consensus-mechanisms/pow/mining/) ödüllerini 5'ten 3 ETH'ye düşürdü.
-- [Zorluk bombasını](/glossary/#difficulty-bomb) bir yıl geciktirdi.
+- <GlossaryTooltip termKey="difficulty-bomb">Zorluk bombasını</GlossaryTooltip> bir yıl geciktirdi.
 - Diğer sözleşmelere durum değiştirmeyen çağrılar yapabilme kabiliyeti ekledi.
 - [Katman 2 ölçeklendirmesine](/developers/docs/scaling/#layer-2-scaling) izin vermek için belirli şifreleme yöntemleri ekledi.
 
@@ -264,7 +264,7 @@ Bizans çatallanması:
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _değişken uzunluk dönüş değerleri için destek ekler._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _Diğer sözleşmelere durum değiştirmeyen çağrılara izin vererek "STATICCALL" işlem kodunu ekler._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _zorluk ayarlama formülünü değiştirir._
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _[zorluk bombasını](/glossary/#difficulty-bomb) 1 yıl geciktirir ve blok ödülünü 5'ten 3 ETH'ye düşürür._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _<GlossaryTooltip termKey="difficulty-bomb">zorluk bombasını</GlossaryTooltip> 1 yıl geciktirir ve blok ödülünü 5'ten 3 ETH'ye düşürür._
 
 </ExpandableCard>
 
@@ -324,7 +324,7 @@ Tangerine Whistle çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (DoS) 
 
 #### Özet {#dao-fork-summary}
 
-DAO çatalı, güvenli olmayan bir [DAO](/glossary/#dao) sözleşmesinin bir saldırıda 3,6 milyon ETH'nin boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) yanıt olarak geldi. Çatallanma, hatalı sözleşmedeki fonları tek bir işlevle [yeni sözleşmeye](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) taşıdı: Geri çekme. Para kaybeden herkes, cüzdanlarındaki her 100 DAO jetonu için 1 ETH çekebilir.
+DAO çatalı, güvenli olmayan bir <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip> sözleşmesinin bir saldırıda 3,6 milyon ETH'nin boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) yanıt olarak geldi. Çatallanma, hatalı sözleşmedeki fonları tek bir işlevle [yeni sözleşmeye](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) taşıdı: Geri çekme. Para kaybeden herkes, cüzdanlarındaki her 100 DAO jetonu için 1 ETH çekebilir.
 
 Bu eylem planı, Ethereum topluluğu tarafından oylandı. Herhangi bir ETH sahibi, [bir oylama platformunda](http://v1.carbonvote.com/) yapılan bir işlem aracılığıyla oy kullanabildi. Çatallanma kararı, oyların %85'inden fazlasına ulaştı.
 
@@ -362,7 +362,7 @@ Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve E
 
 #### Özet {#frontier-thawing-summary}
 
-Sınır eritme çatalı, [blok](/glossary/#block) başına 5.000 [gaz](/glossary/#gas) sınırını kaldırdı ve varsayılan gaz fiyatını 51 [gwei](/glossary/#gwei) olarak ayarladı. Bu, işlemler için izin verdi - işlemler, 21.000 gaz gerektiriyor. [Zorluk bombası](/glossary/#difficulty-bomb), [hisse ispatına](/glossary/#pos) yönelik gelecekteki bir sert çatal olmak üzere getirilmiştir.
+Sınır eritme çatalı, <GlossaryTooltip termKey="block">blok</GlossaryTooltip> başına 5.000 <GlossaryTooltip termKey="gas">gaz</GlossaryTooltip> sınırını kaldırdı ve varsayılan gaz fiyatını 51 <GlossaryTooltip termKey="gwei">gwei</GlossaryTooltip> olarak ayarladı. Bu, işlemler için izin verdi - işlemler, 21.000 gaz gerektiriyor. <GlossaryTooltip termKey="difficulty-bomb">Zorluk bombası</GlossaryTooltip>, <GlossaryTooltip termKey="pos">hisse ispatına</GlossaryTooltip> yönelik gelecekteki bir sert çatal olmak üzere getirilmiştir.
 
 - [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [Ethereum Protokol Yükseltmesi 1'i okuyun](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
@@ -375,7 +375,7 @@ Sınır eritme çatalı, [blok](/glossary/#block) başına 5.000 [gaz](/glossary
 
 #### Özet {#frontier-summary}
 
-Frontier, Ethereum projesinin canlı ancak yalın bir uygulamasıydı. Başarılı Olimpiyat test aşamasını takip etti. Teknik kullanıcılar, özellikle geliştiriciler için tasarlanmıştır. [Blokların](/glossary/#block) 5.000'lik bir [gaz](/glossary/#gas) sınırı vardı. Bu "eritme" dönemi, madencilerin faaliyetlerine başlamasını ve erken benimseyenlerin müşterilerini "acele etmeden" kurmalarını sağladı.
+Frontier, Ethereum projesinin canlı ancak yalın bir uygulamasıydı. Başarılı Olimpiyat test aşamasını takip etti. Teknik kullanıcılar, özellikle geliştiriciler için tasarlanmıştır. <GlossaryTooltip termKey="block">Blokların</GlossaryTooltip> 5.000'lik bir <GlossaryTooltip termKey="gas">gaz</GlossaryTooltip> sınırı vardı. Bu "eritme" dönemi, madencilerin faaliyetlerine başlamasını ve erken benimseyenlerin müşterilerini "acele etmeden" kurmalarını sağladı.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

@@ -58,7 +58,7 @@ Un contract inteligent este un cod care locuieşte pe blockchain-ul Ethereum și
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- instrument FOSS pentru generarea de frontend-uri pentru aplicații dapp dintr-un [ABI](/glossary/#abi)._**
+**One Click Dapp _- instrument FOSS pentru generarea de frontend-uri pentru aplicații dapp dintr-un <GlossaryTooltip termKey="abi">ABI</GlossaryTooltip>._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)

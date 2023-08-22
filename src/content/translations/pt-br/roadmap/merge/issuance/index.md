@@ -30,7 +30,7 @@ title="Emissão de ETH tldr">
 
 ### Emissão da camada de execução {#el-issuance-pre-merge}
 
-Na prova de trabalho, os mineradores só interagiam com a camada de execução e recebiam recompensas de bloco se fossem os primeiros mineradores a resolver o bloco seguinte. Desde a [atualização Constantinople](/history/#constantinople) em 2019, essa recompensa era de 2 ETH por bloco. Os mineradores também foram recompensados por publicar blocos [ommer](/glossary/#ommer), que eram blocos válidos que não terminavam na cadeia mais longa/canônica. Essas recompensas foram de no máximo 1,75 ETH por ommer e foram _além da_ recompensa emitida pelo bloco canônico. O processo de mineração era uma atividade economicamente intensiva, que historicamente exigia altos níveis de emissão de ETH para sustentar.
+Na prova de trabalho, os mineradores só interagiam com a camada de execução e recebiam recompensas de bloco se fossem os primeiros mineradores a resolver o bloco seguinte. Desde a [atualização Constantinople](/history/#constantinople) em 2019, essa recompensa era de 2 ETH por bloco. Os mineradores também foram recompensados por publicar blocos <GlossaryTooltip termKey="ommer">ommer</GlossaryTooltip>, que eram blocos válidos que não terminavam na cadeia mais longa/canônica. Essas recompensas foram de no máximo 1,75 ETH por ommer e foram _além da_ recompensa emitida pelo bloco canônico. O processo de mineração era uma atividade economicamente intensiva, que historicamente exigia altos níveis de emissão de ETH para sustentar.
 
 ### Emissão da camada de consenso {#cl-issuance-pre-merge}
 
@@ -46,7 +46,7 @@ Fornecimento total de ETH: **~120.520.000 ETH** (até o momento do The Merge, em
 
 - Foi estimada em 2,08 ETH a cada 13,3 segundos\*: **~4.930.000** ETH emitidos em um ano
 - Resultou em uma taxa de inflação de **aproximadamente 4,09%** (4,93 milhões por ano / 120,5 milhões no total)
-- \*Isso inclui os 2 ETH por bloco canônico, mais uma média de 0,08 ETH ao longo do tempo dos blocos ommer. Também usa 13,3 segundos, o tempo base alvo do bloco sem qualquer influência de uma [bomba de dificuldade](/glossary/#difficulty-bomb). ([Ver a fonte](https://bitinfocharts.com/ethereum/))
+- \*Isso inclui os 2 ETH por bloco canônico, mais uma média de 0,08 ETH ao longo do tempo dos blocos ommer. Também usa 13,3 segundos, o tempo base alvo do bloco sem qualquer influência de uma <GlossaryTooltip termKey="difficulty-bomb">bomba de dificuldade</GlossaryTooltip>. ([Ver a fonte](https://bitinfocharts.com/ethereum/))
 
 **Emissão da camada de consenso:**
 

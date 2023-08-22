@@ -16,7 +16,7 @@ summaryPoint4: Kabla tuliita hii hatua kama "utiaji nanga"
 
 ## Muunganisho ni nini? {#what-is-the-docking}
 
-Ni muhimu kukumbuka kwamba mwanzoni, [Mnyororo Kioleza](/roadmap/beacon-chain/)ulitenganishwa na [Mtandao Mkuu](/glossary/#mainnet) wakati wa usafirishaji - mtandao tunaoutumia leo hii. Mtandao mkuu wa Ethereum utaendelea kulindwa na [uthibitisho-wa-kazi](/developers/docs/consensus-mechanisms/pow/), hata pale Myororo Kioleza utakapofanya kazi sambamba uklitumia [uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos/). Muunganisho ni pale mifumo hii miwili itakapokuwa pamoja.
+Ni muhimu kukumbuka kwamba mwanzoni, [Mnyororo Kioleza](/roadmap/beacon-chain/)ulitenganishwa na <GlossaryTooltip termKey="mainnet">Mtandao Mkuu</GlossaryTooltip> wakati wa usafirishaji - mtandao tunaoutumia leo hii. Mtandao mkuu wa Ethereum utaendelea kulindwa na [uthibitisho-wa-kazi](/developers/docs/consensus-mechanisms/pow/), hata pale Myororo Kioleza utakapofanya kazi sambamba uklitumia [uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos/). Muunganisho ni pale mifumo hii miwili itakapokuwa pamoja.
 
 Fikiria kwamba Ethereum ni chombo cha anga kilichotayari kusafiri katikati ya nyota mablimbali. Pamoja na Mnyororo wa Kioleza jamii imeunda injini mpya na ganda ngumu. Wakati ukifika, meli ya sasa itapanda gati na mfumo huu mpya, ikiungana kuwa meli moja, tayari kuweka miaka mingine mizito na kuchukua ulimwengu.
 

@@ -13,7 +13,7 @@ Las aplicaciones de cadenas de bloques ayudan a los negocios:
 - Construyendo nuevos modelos de negocio y oportunidades de creación de valor.
 - Asegurando una organización competitiva a prueba de todo futuro.
 
-Las aplicaciones de cadenas de bloques empresariales se pueden crear en la [red principal](/glossary/#mainnet), pública sin permisos, o en cadenas de bloques privadas que están basadas en tecnología de Ethereum. Más información en [cadenas privadas de Ethereum para empresa](/enterprise/private-ethereum/).
+Las aplicaciones de cadenas de bloques empresariales se pueden crear en la <GlossaryTooltip termKey="mainnet">red principal</GlossaryTooltip>, pública sin permisos, o en cadenas de bloques privadas que están basadas en tecnología de Ethereum. Más información en [cadenas privadas de Ethereum para empresa](/enterprise/private-ethereum/).
 
 ## Ethereum público frente a privado {#private-vs-public}
 

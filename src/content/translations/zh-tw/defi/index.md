@@ -317,7 +317,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 1. 區塊鏈：以太坊包含了交易記錄和帳戶狀態。
 2. 資產：[以太幣](/eth/)及其他代幣（貨幣）。
-3. 協定：提供功能的[智能合約](/glossary/#smart-contract)，例如實現去中心化資產借貸的服務。
+3. 協定：提供功能的<GlossaryTooltip termKey="smart-contract">智能合約</GlossaryTooltip>，例如實現去中心化資產借貸的服務。
 4. [應用程式](/dapps/)：我們用以管理及存取協定的產品。
 
 ## 建構去中心化金融 {#build-defi}

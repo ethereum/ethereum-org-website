@@ -38,8 +38,8 @@ Pakiety zbiorcze wymagają od „operatorów” wniesienia kaucji w kontrakcie p
 
 Istnieją dwa typy pakietów zbiorczych z różnymi modelami zabezpieczeń:
 
-- **Pakiety zbiorcze o wiedzy zerowej**: uruchamiają obliczenia off-chain i przesyłają do łańcucha [**dowód ważności**](/glossary/#validity-proof)
-- **Optymistyczne pakiety zbiorcze**: zakładają, że transakcje są domyślnie ważne i w razie problemów uruchamiają jedynie obliczenia za pośrednictwem [**dowodu oszustwa**](/glossary/#fraud-proof)
+- **Pakiety zbiorcze o wiedzy zerowej**: uruchamiają obliczenia off-chain i przesyłają do łańcucha <GlossaryTooltip termKey="validity-proof">**dowód ważności**</GlossaryTooltip>
+- **Optymistyczne pakiety zbiorcze**: zakładają, że transakcje są domyślnie ważne i w razie problemów uruchamiają jedynie obliczenia za pośrednictwem <GlossaryTooltip termKey="fraud-proof">**dowodu oszustwa**</GlossaryTooltip>
 
 ### Pakiety zbiorcze o wiedzy zerowej {#zk-rollups}
 

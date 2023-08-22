@@ -138,7 +138,7 @@ Cela a pour avantage d'exonérer Ethereum de toute exécution des tâches. Ether
 
 La chaîne a besoin d'un moyen de valider les transactions hors chaîne sans les ré-exécuter, sans quoi la valeur de l'exécution hors chaîne serait perdue.
 
-C'est ici que le calcul vérifiable entre en jeu. En effet, lorsqu'un nœud exécute une transaction en dehors d'Ethereum, il soumet une preuve à divulgation nulle pour prouver la justesse de l'exécution hors chaîne. Cette preuve (appelée [preuve de validation](/glossary/#validity-proof)) garantit la validité d'une transaction, permettant ainsi à Ethereum d'appliquer le résultat obtenu à son état, cela sans aucune contestation possible.
+C'est ici que le calcul vérifiable entre en jeu. En effet, lorsqu'un nœud exécute une transaction en dehors d'Ethereum, il soumet une preuve à divulgation nulle pour prouver la justesse de l'exécution hors chaîne. Cette preuve (appelée <GlossaryTooltip termKey="validity-proof">preuve de validation</GlossaryTooltip>) garantit la validité d'une transaction, permettant ainsi à Ethereum d'appliquer le résultat obtenu à son état, cela sans aucune contestation possible.
 
 [Les ZK-Rollups](/developers/docs/scaling/zk-rollups) et [ les validiums](/developers/docs/scaling/validium/) sont deux solutions d'évolutivité hors chaîne qui utilisent des preuves de validité pour fournir une évolutivité sécurisée. Ces protocoles exécutent des milliers de transactions hors chaîne et soumettent des preuves pour vérification sur Ethereum. Ces résultats peuvent être appliqués immédiatement une fois la preuve vérifiée, permettant ainsi à Ethereum de traiter plus de transactions, sans augmenter le calcul sur la couche de base.
 
@@ -196,7 +196,7 @@ Mais il n’y a vraiment aucun moyen pour les utilisateurs d’évaluer l’honn
 
 ### Menaces liées à l'informatique quantique {#quantum-computing-threats}
 
-ZK-SNARK utilise la cryptographie sur les courbes elliptiques ([ECDSA](/glossary/#ecdsa)) pour le chiffrement. Bien que l'algorithme ECDSA soit actuellement sûr, le développement d'ordinateurs quantiques pourrait briser son modèle de sécurité à l'avenir.
+ZK-SNARK utilise la cryptographie sur les courbes elliptiques (<GlossaryTooltip termKey="ecdsa">ECDSA</GlossaryTooltip>) pour le chiffrement. Bien que l'algorithme ECDSA soit actuellement sûr, le développement d'ordinateurs quantiques pourrait briser son modèle de sécurité à l'avenir.
 
 Le ZK-STARK est considéré comme immunisé contre la menace de l'informatique quantique, car il utilise des hachages résistants à la collision pour le chiffrement. Contrairement aux appairages de clés public-privé utilisés dans la cryptographie sur les courbes elliptiques, le hachage résistant aux collisions est plus difficile à briser pour les algorithmes de calcul quantique.
 

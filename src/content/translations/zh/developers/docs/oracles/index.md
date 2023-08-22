@@ -10,7 +10,7 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-本页面假设读者熟悉以太坊基础知识，例如[节点](/developers/docs/nodes-and-clients/)、[共识机制](/developers/docs/consensus-mechanisms/)和[以太坊虚拟机](/developers/docs/evm/)等。 读者还应该深刻了解[智能合约](/developers/docs/smart-contracts/)和[智能合约分析](/developers/docs/smart-contracts/anatomy/)，尤其要了解[事件](/glossary/#events)。
+本页面假设读者熟悉以太坊基础知识，例如[节点](/developers/docs/nodes-and-clients/)、[共识机制](/developers/docs/consensus-mechanisms/)和[以太坊虚拟机](/developers/docs/evm/)等。 读者还应该深刻了解[智能合约](/developers/docs/smart-contracts/)和[智能合约分析](/developers/docs/smart-contracts/anatomy/)，尤其要了解<GlossaryTooltip termKey="events">事件</GlossaryTooltip>。
 
 ## 什么是区块链预言机？ {#what-is-a-blockchain-oracle}
 

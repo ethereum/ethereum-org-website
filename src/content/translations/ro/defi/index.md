@@ -317,7 +317,7 @@ Puteți să vă imaginați DeFi în niveluri:
 
 1. Blockchain – Ethereum conține istoricul tranzacțiilor și situația conturilor.
 2. Activele – [ETH](/eth/) și celelalte tokenuri (monede).
-3. Protocoalele – [contracte inteligente](/glossary/#smart-contract) care oferă funcționalitatea, de exemplu un serviciu care permite a da împrumuturi descentralizat de active.
+3. Protocoalele – <GlossaryTooltip termKey="smart-contract">contracte inteligente</GlossaryTooltip> care oferă funcționalitatea, de exemplu un serviciu care permite a da împrumuturi descentralizat de active.
 4. [Aplicațiile](/dapps/) – produsele pe care le folosim pentru a gestiona și a accesa protocoalele.
 
 ## Construiţi DeFi {#build-defi}

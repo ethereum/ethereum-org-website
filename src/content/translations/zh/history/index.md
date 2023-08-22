@@ -77,7 +77,7 @@ sidebarDepth: 1
 
 #### 摘要 {#paris-summary}
 
-巴黎升级是由于工作量证明区块链超过了[终端总难度](/glossary/#terminal-total-difficulty) 58750000000000000000000 而触发的。 这发生在 2022 年 9 月 15 日区块 15537393 上，并在下一个区块处触发了巴黎升级。 巴黎升级就是[合并 ](/roadmap/merge/)过渡，以太坊的主要功能结束了[工作量证明](/developers/docs/consensus-mechanisms/pow)挖矿算法及相关共识逻辑并启动了[权益证明](/developers/docs/consensus-mechanisms/pos)。 巴黎升级本身是对[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)的升级（相当于共识层上的 Bellatrix 升级），让执行客户端能够从与其连接的[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)接受指令。 这需要激活一组新的内部应用程序接口方法，统称为[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)。 该升级可能是自[家园](#homestead)以来以太坊历史上最重要的升级！
+巴黎升级是由于工作量证明区块链超过了<GlossaryTooltip termKey="terminal-total-difficulty">终端总难度</GlossaryTooltip> 58750000000000000000000 而触发的。 这发生在 2022 年 9 月 15 日区块 15537393 上，并在下一个区块处触发了巴黎升级。 巴黎升级就是[合并 ](/roadmap/merge/)过渡，以太坊的主要功能结束了[工作量证明](/developers/docs/consensus-mechanisms/pow)挖矿算法及相关共识逻辑并启动了[权益证明](/developers/docs/consensus-mechanisms/pos)。 巴黎升级本身是对[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)的升级（相当于共识层上的 Bellatrix 升级），让执行客户端能够从与其连接的[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)接受指令。 这需要激活一组新的内部应用程序接口方法，统称为[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)。 该升级可能是自[家园](#homestead)以来以太坊历史上最重要的升级！
 
 - [阅读巴黎升级规范](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
@@ -96,7 +96,7 @@ sidebarDepth: 1
 
 #### 摘要 {#bellatrix-summary}
 
-Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，让信标链为[合并](/roadmap/merge/)做好准备。 它将验证者由于怠惰及进行了可被罚没的行为而受到的惩罚提高到其全部价值。 Bellatrix 升级还包括对分叉选择规则的更新，让信标链为合并以及从最后一个工作量证明区块过渡到第一个权益证明区块做好准备。 这包括让共识客户端意识到[终端总难度](/glossary/#terminal-total-difficulty) 58750000000000000000000。
+Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，让信标链为[合并](/roadmap/merge/)做好准备。 它将验证者由于怠惰及进行了可被罚没的行为而受到的惩罚提高到其全部价值。 Bellatrix 升级还包括对分叉选择规则的更新，让信标链为合并以及从最后一个工作量证明区块过渡到第一个权益证明区块做好准备。 这包括让共识客户端意识到<GlossaryTooltip termKey="terminal-total-difficulty">终端总难度</GlossaryTooltip> 58750000000000000000000。
 
 - [阅读 Bellatrix 升级规范](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
@@ -108,7 +108,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#gray-glacier-summary}
 
-灰色冰川网络升级将[难度炸弹](/glossary/#difficulty-bomb)推迟了三个月。 这是此次升级中引入的唯一变更，本质上类似于[箭形冰川](#arrow-glacier)和[缪尔冰川](#muir-glacier)升级。 [拜占庭](#byzantium)、[君士坦丁堡](#constantinople)和[伦敦](#london)网络升级也做了类似的变更。
+灰色冰川网络升级将<GlossaryTooltip termKey="difficulty-bomb">难度炸弹</GlossaryTooltip>推迟了三个月。 这是此次升级中引入的唯一变更，本质上类似于[箭形冰川](#arrow-glacier)和[缪尔冰川](#muir-glacier)升级。 [拜占庭](#byzantium)、[君士坦丁堡](#constantinople)和[伦敦](#london)网络升级也做了类似的变更。
 
 - [以太坊基金会博客 - 灰色冰川升级公告](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
@@ -128,7 +128,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#arrow-glacier-summary}
 
-箭形冰川网络升级将[难度炸弹](/glossary/#difficulty-bomb)推迟了数月。 这是此次升级中引入的唯一变更，本质上类似于[缪尔冰川](#muir-glacier)升级。 [拜占庭](#byzantium)、[君士坦丁堡](#constantinople)和[伦敦](#london)网络升级也做了类似的更改。
+箭形冰川网络升级将<GlossaryTooltip termKey="difficulty-bomb">难度炸弹</GlossaryTooltip>推迟了数月。 这是此次升级中引入的唯一变更，本质上类似于[缪尔冰川](#muir-glacier)升级。 [拜占庭](#byzantium)、[君士坦丁堡](#constantinople)和[伦敦](#london)网络升级也做了类似的更改。
 
 - [以太坊基金会博客 - 箭形冰川升级公告](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [以太坊牧猫人组织 - 以太坊箭形冰川升级](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -165,7 +165,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#london-summary}
 
-伦敦升级引入了 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)，对交易费市场进行了改革，同时还对燃料费的退款处理方式和[冰河世纪](/glossary/#ice-age)日程进行了修改。
+伦敦升级引入了 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)，对交易费市场进行了改革，同时还对燃料费的退款处理方式和<GlossaryTooltip termKey="ice-age">冰河世纪</GlossaryTooltip>日程进行了修改。
 
 - [你是去中心化应用程序的开发者吗？ 请务必升级你的程序库和工具。](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [请阅读以太坊基金会公告](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -229,7 +229,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#deposit-contract-summary}
 
-质押存款合约将[质押](/glossary/#staking)引入以太坊生态系统。 虽然是一个[主网](/glossary/#mainnet)合约，但它直接影响到[信标链](/roadmap/beacon-chain/)的发布时间，而后者是[以太坊升级](/roadmap/)的重要部分。
+质押存款合约将<GlossaryTooltip termKey="staking">质押</GlossaryTooltip>引入以太坊生态系统。 虽然是一个<GlossaryTooltip termKey="mainnet">主网</GlossaryTooltip>合约，但它直接影响到[信标链](/roadmap/beacon-chain/)的发布时间，而后者是[以太坊升级](/roadmap/)的重要部分。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -245,7 +245,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#muir-glacier-summary}
 
-缪尔冰川分叉使[难度炸弹](/glossary/#difficulty-bomb)延迟。 增加[工作量证明](/developers/docs/consensus-mechanisms/pow/)共识机制的区块难度可能会增加发送交易和使用去中心化应用程序的等待时间，从而降低以太坊的可用性。
+缪尔冰川分叉使<GlossaryTooltip termKey="difficulty-bomb">难度炸弹</GlossaryTooltip>延迟。 增加[工作量证明](/developers/docs/consensus-mechanisms/pow/)共识机制的区块难度可能会增加发送交易和使用去中心化应用程序的等待时间，从而降低以太坊的可用性。
 
 - [请阅读以太坊基金会公告](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [请阅读以太坊牧猫人组织的解释说明](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -268,7 +268,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 伊斯坦布尔分叉：
 
-- 优化了[以太坊虚拟机](/developers/docs/ethereum-stack/#ethereum-virtual-machine)中特定操作的[燃料](/glossary/#gas)成本。
+- 优化了[以太坊虚拟机](/developers/docs/ethereum-stack/#ethereum-virtual-machine)中特定操作的<GlossaryTooltip termKey="gas">燃料</GlossaryTooltip>成本。
 - 提高受到拒绝服务攻击后的复原能力。
 - 使基于“零知识简洁非交互式知识论证”和“零知识可扩容透明知识论证”的[二层网络扩容](/developers/docs/scaling/#layer-2-scaling)解决方案具有更佳的性能。
 - 使以太坊和 Zcash 能够互操作。
@@ -279,7 +279,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 <ExpandableCard title="以太坊改进提案 - 伊斯坦布尔分叉" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _使以太坊能够和 Zcash 之类的隐私保护币共同作用。_
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _使用更经济的加密方法来优化 [gas](/glossary/#gas) 成本。_
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _使用更经济的加密方法来优化 <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> 成本。_
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _通过增加“CHAINID”[opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine) 来保护以太坊免受重放攻击。_
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _优化基于消耗的操作码燃料价格。_
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _减少 CallData 的成本，使区块中可容纳更多数据 – 有益于 [二层网络扩容](/developers/docs/scaling/#layer-2-scaling)。_
@@ -298,7 +298,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 君士坦丁堡分叉：
 
 - 确保在[实现权益证明](#beacon-chain-genesis)之前，区块链不会冻结。
-- 优化了[以太坊虚拟机](/developers/docs/ethereum-stack/#ethereum-virtual-machine)中特定操作的[燃料](/glossary/#gas)成本。
+- 优化了[以太坊虚拟机](/developers/docs/ethereum-stack/#ethereum-virtual-machine)中特定操作的<GlossaryTooltip termKey="gas">燃料</GlossaryTooltip>成本。
 - 添加了与尚未创建的地址进行交互的能力。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -325,7 +325,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 拜占庭分叉：
 
 - 将区块[挖矿](/developers/docs/consensus-mechanisms/pow/mining/)奖励从 5 个以太币减少到 3 个以太币。
-- 将[难度炸弹](/glossary/#difficulty-bomb)推迟一年。
+- 将<GlossaryTooltip termKey="difficulty-bomb">难度炸弹</GlossaryTooltip>推迟一年。
 - 增加了调用其他合约而不更改状态的能力。
 - 增加了某些加密方法，以实现[二层网络扩容](/developers/docs/scaling/#layer-2-scaling)。
 
@@ -341,7 +341,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _增加对可变长度返回值的支持。_
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _添加“STATICCALL”操作码，可以调用其他合约，但不会改变状态。_
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _更改难度调整公式。_
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _使 [难度炸弹](/glossary/#difficulty-bomb) 延迟 1 年，并将区块奖励从 5 个以太币减少为 3 个以太币。_
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _使 <GlossaryTooltip termKey="difficulty-bomb">难度炸弹</GlossaryTooltip> 延迟 1 年，并将区块奖励从 5 个以太币减少为 3 个以太币。_
 
 </ExpandableCard>
 
@@ -401,7 +401,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#dao-fork-summary}
 
-去中心化自治组织分叉是为了响应 [2016 DAO 攻击](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/)，当时一个不安全的[去中心化自治组织](/glossary/#dao)合约被黑客盗走了超过 360 万个以太币。 此分叉将资金从有问题的合约转移到一个[新合约](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)，新合约只有一个功能：提款。 任何损失了资金的人都可以在他们的钱包中提取以太币，每 100 个 DAO 代币 1 个以太币。
+去中心化自治组织分叉是为了响应 [2016 DAO 攻击](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/)，当时一个不安全的<GlossaryTooltip termKey="dao">去中心化自治组织</GlossaryTooltip>合约被黑客盗走了超过 360 万个以太币。 此分叉将资金从有问题的合约转移到一个[新合约](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)，新合约只有一个功能：提款。 任何损失了资金的人都可以在他们的钱包中提取以太币，每 100 个 DAO 代币 1 个以太币。
 
 此操作是由以太坊社区投票决定的。 所有以太币持有者都能通过[一个投票平台](http://v1.carbonvote.com/)上的交易进行投票。 分叉的决定获得了 85% 以上的投票。
 
@@ -439,7 +439,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#frontier-thawing-summary}
 
-边境解冻分叉提高了每个[区块](/glossary/#block) 5,000 单位[燃料](/glossary/#gas)的限制，并将默认燃料价格设为 51 [gwei](/glossary/#gwei)。 这样便能进行交易 - 交易需要 21,000 单位燃料。 而引入[难度炸弹](/glossary/#difficulty-bomb)是为了确保未来硬分叉到[权益证明](/glossary/#pos)。
+边境解冻分叉提高了每个<GlossaryTooltip termKey="block">区块</GlossaryTooltip> 5,000 单位<GlossaryTooltip termKey="gas">燃料</GlossaryTooltip>的限制，并将默认燃料价格设为 51 <GlossaryTooltip termKey="gwei">gwei</GlossaryTooltip>。 这样便能进行交易 - 交易需要 21,000 单位燃料。 而引入<GlossaryTooltip termKey="difficulty-bomb">难度炸弹</GlossaryTooltip>是为了确保未来硬分叉到<GlossaryTooltip termKey="pos">权益证明</GlossaryTooltip>。
 
 - [请阅读以太坊基金会公告](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [阅读以太坊协议更新 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
@@ -452,7 +452,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#frontier-summary}
 
-边境是以太坊最初的版本，但在上面能做的事情很少。 该版本在奥利匹克测试阶段成功完成之后推出。 它面向的是技术用户，特别是开发者。 [区块](/glossary/#block)有 5,000 单位的[燃料](/glossary/#gas)限制。 此“解冻”期使矿工能够开始操作，并使早期采用者能够有足够的时间来安装客户端。
+边境是以太坊最初的版本，但在上面能做的事情很少。 该版本在奥利匹克测试阶段成功完成之后推出。 它面向的是技术用户，特别是开发者。 <GlossaryTooltip termKey="block">区块</GlossaryTooltip>有 5,000 单位的<GlossaryTooltip termKey="gas">燃料</GlossaryTooltip>限制。 此“解冻”期使矿工能够开始操作，并使早期采用者能够有足够的时间来安装客户端。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

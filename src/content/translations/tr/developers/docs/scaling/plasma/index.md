@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Plazma zinciri, ana Ethereum zincirine bağlı olan ve anlaşmazlıkları tahkim etmek için dolandırıcılık kanıtlarını ([iyimser toplamalar](/developers/docs/scaling/optimistic-rollups/) gibi) kullanan ayrı bir blok zinciridir. Bu zincirler, esasen Ethereum Mainnet'in daha küçük kopyaları oldukları için bazen "alt" zincirler olarak adlandırılır. Merkle ağaçları, üst zincirlerdeki bant genişliği yükünü (Mainnet dâhil) boşaltmak için çalışabilen bu zincirlerin, sınırsız bir yığınının oluşturulmasını sağlar. Bunlar, güvenliklerini [dolandırıcılık kanıtları](/glossary/#fraud-proof) yoluyla sağlar ve her alt zincirin blok doğrulama için kendi mekanizması vardır.
+Plazma zinciri, ana Ethereum zincirine bağlı olan ve anlaşmazlıkları tahkim etmek için dolandırıcılık kanıtlarını ([iyimser toplamalar](/developers/docs/scaling/optimistic-rollups/) gibi) kullanan ayrı bir blok zinciridir. Bu zincirler, esasen Ethereum Mainnet'in daha küçük kopyaları oldukları için bazen "alt" zincirler olarak adlandırılır. Merkle ağaçları, üst zincirlerdeki bant genişliği yükünü (Mainnet dâhil) boşaltmak için çalışabilen bu zincirlerin, sınırsız bir yığınının oluşturulmasını sağlar. Bunlar, güvenliklerini <GlossaryTooltip termKey="fraud-proof">dolandırıcılık kanıtları</GlossaryTooltip> yoluyla sağlar ve her alt zincirin blok doğrulama için kendi mekanizması vardır.
 
 ## Ön koşullar {#prerequisites}
 

@@ -10,7 +10,7 @@ summaryPoints:
 
 # Astrazione account {#account-abstraction}
 
-Gli utenti interagiscono con Ethereum utilizzando i **[conti posseduti esternamente (EOA)](/glossary/#eoa)**. Questo è il solo modo per avviare una transazione o per eseguire un contratto intelligente. Ciò limita il modo in cui gli utenti possono interagire con Ethereum. Ad esempio, rende difficile eseguire transazioni in massa e richiede agli utenti di mantenere sempre un saldo di ETH per coprire i costi del gas.
+Gli utenti interagiscono con Ethereum utilizzando i **<GlossaryTooltip termKey="eoa">conti posseduti esternamente (EOA)</GlossaryTooltip>**. Questo è il solo modo per avviare una transazione o per eseguire un contratto intelligente. Ciò limita il modo in cui gli utenti possono interagire con Ethereum. Ad esempio, rende difficile eseguire transazioni in massa e richiede agli utenti di mantenere sempre un saldo di ETH per coprire i costi del gas.
 
 L'astrazione del conto è un modo per risolvere tali problemi, consentendo agli utenti di programmare flessibilmente maggiore sicurezza e una migliore esperienza degli utenti, nei propri conti. Ciò può verificarsi [aggiornando gli EOA](https://eips.ethereum.org/EIPS/eip-3074) così che possano essere controllati da contratti intelligenti, o [aggiornando i contratti intelligenti](https://eips.ethereum.org/EIPS/eip-2938), così che possano avviare transazioni. Queste opzioni richiedono entrambe modifiche al protocollo di Ethereum. Esiste un terzo percorso che comporta l'aggiunta di un [secondo sistema separato di transazioni](https://eips.ethereum.org/EIPS/eip-4337) da eseguire in parallelo al protocollo esistente. Indipendentemente dal percorso, il risultato è l'accesso a Ethereum tramite i portafogli di contratti intelligenti, supportati nativamente come parte del protocollo esistente o tramite una rete di transazioni aggiuntiva.
 
@@ -23,7 +23,7 @@ I portafogli di contratti intelligenti sbloccano molti benefici per l'utente, tr
 - raggruppare le transazioni (es. approvare ed eseguire uno scambio in una sola volta)
 - incrementare le opportunità per gli svilupptori di dapp e portafogli, per innovare l'esperienza degli utenti
 
-Tali benefici non sono ad oggi supportati nativamente, poiché soltanto i conti posseduti esternamente ([EOA](/glossary/#eoa)) possono avviare le transazioni. Gli EOA sono semplicemente coppie di chiavi pubblica-privata. Funzionano come segue:
+Tali benefici non sono ad oggi supportati nativamente, poiché soltanto i conti posseduti esternamente (<GlossaryTooltip termKey="eoa">EOA</GlossaryTooltip>) possono avviare le transazioni. Gli EOA sono semplicemente coppie di chiavi pubblica-privata. Funzionano come segue:
 
 - se hai la chiave privata puoi fare _qualsiasi cosa_ entro le regole della Macchina Virtuale di Ethereum (EVM)
 - se non hai la chiave privata non puoi fare _nulla_.

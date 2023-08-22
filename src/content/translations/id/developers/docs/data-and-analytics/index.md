@@ -12,7 +12,7 @@ Memanfaatkan penyedia data yang ada dapat mempercepat pengembangan, menghasilkan
 
 ## Prasyarat {#prerequisites}
 
-Anda harus memahami konsep dasar [Penjelajah Blok](/developers/docs/data-and-analytics/block-explorers/) untuk lebih memahami penggunaannya dalam konteks analisis data. Selain itu, biasakan diri Anda dengan konsep [indeks](/glossary/#index) untuk memahami keuntungan yang ditambahkannya ke desain sistem.
+Anda harus memahami konsep dasar [Penjelajah Blok](/developers/docs/data-and-analytics/block-explorers/) untuk lebih memahami penggunaannya dalam konteks analisis data. Selain itu, biasakan diri Anda dengan konsep <GlossaryTooltip termKey="index">indeks</GlossaryTooltip> untuk memahami keuntungan yang ditambahkannya ke desain sistem.
 
 Dalam hal dasar arsitektur, memahami apa itu [API](https://www.wikipedia.org/wiki/API) dan [REST](https://www.wikipedia.org/wiki/Representational_state_transfer), bahkan dalam teori.
 
@@ -26,7 +26,7 @@ Dengan menggunakan [GraphQL](https://graphql.org/), pengembang dapat membuat kue
 
 Banyak [Penjelajah Blok](/developers/docs/data-and-analytics/block-explorers/) menawarkan gateway [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) yang akan memberikan visibilitas bagi pengembang ke data waktu nyata di blok, transaksi, penambang, akun, dan aktivitas on-chain lainnya.
 
-Pengembang kemudian dapat memroses dan mengubah data ini untuk memberikan wawasan dan interaksi unik kepada pengguna mereka dengan [blockchain](/glossary/#blockchain).
+Pengembang kemudian dapat memroses dan mengubah data ini untuk memberikan wawasan dan interaksi unik kepada pengguna mereka dengan <GlossaryTooltip termKey="blockchain">blockchain</GlossaryTooltip>.
 
 ## Bacaan Lebih Lanjut {#further-reading}
 

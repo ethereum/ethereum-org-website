@@ -30,7 +30,7 @@ Ar trebui să înțelegi bine toate subiectele fundamentale. Implementarea solu�
 - [Sidechain-uri](#sidechains)
 - [Soluții hibride](#hybrid-solutions)
 
-Cele mai multe soluții de nivel 2 sunt centrate în jurul unui server sau cluster de servere, fiecare dintre acestea putând fi denumite nod, validator, operator, ordonator, producător de blocuri sau un termen similar. În funcție de implementare, aceste noduri de nivel 2, pot fi rulate de întreprinderi sau entități care le utilizează sau de un operator terț sau de un grup mare de persoane (similar cu rețeaua principală). În general, tranzacțiile sunt transmise la aceste noduri nivel 2 în loc să fie transmise direct la nivelul 1 ([rețeaua principală](/glossary/#mainnet)); instanța nivelului 2 le organizează apoi în grupuri înainte de a le ancora în nivelul 1, după care sunt securizate de nivelul 1 și nu mai pot fi modificate. Detaliile despre modul în care se face acest lucru variază semnificativ între diferite tehnologii de nivel 2 și implementări.
+Cele mai multe soluții de nivel 2 sunt centrate în jurul unui server sau cluster de servere, fiecare dintre acestea putând fi denumite nod, validator, operator, ordonator, producător de blocuri sau un termen similar. În funcție de implementare, aceste noduri de nivel 2, pot fi rulate de întreprinderi sau entități care le utilizează sau de un operator terț sau de un grup mare de persoane (similar cu rețeaua principală). În general, tranzacțiile sunt transmise la aceste noduri nivel 2 în loc să fie transmise direct la nivelul 1 (<GlossaryTooltip termKey="mainnet">rețeaua principală</GlossaryTooltip>); instanța nivelului 2 le organizează apoi în grupuri înainte de a le ancora în nivelul 1, după care sunt securizate de nivelul 1 și nu mai pot fi modificate. Detaliile despre modul în care se face acest lucru variază semnificativ între diferite tehnologii de nivel 2 și implementări.
 
 O instanță specifică de nivel 2 poate fi deschisă și partajată de mai multe aplicații sau poate fi implementată de o singură companie și dedicată doar sprijinirii aplicației lor.
 
@@ -52,8 +52,8 @@ Soluțiile rollup necesită resurse-releu care au mizat o obligațiune în contr
 
 Există două tipuri de pachete cu modele de securitate diferite:
 
-- Cunoștințe zero: rulează calcule în afara lanțului și prezintă o [**dovadă de valabilitate**](/glossary/#validity-proof) lanțului
-- Optimist: presupune că tranzacțiile sunt valabile în mod implicit și rulează doar calculul, printr-o [**dovadă de fraudă**](/glossary/#fraud-proof), în cazul unei contestații
+- Cunoștințe zero: rulează calcule în afara lanțului și prezintă o <GlossaryTooltip termKey="validity-proof">**dovadă de valabilitate**</GlossaryTooltip> lanțului
+- Optimist: presupune că tranzacțiile sunt valabile în mod implicit și rulează doar calculul, printr-o <GlossaryTooltip termKey="fraud-proof">**dovadă de fraudă**</GlossaryTooltip>, în cazul unei contestații
 
 ### Rollup-uri de „Cunoștințe zero” {#zk-rollups}
 
@@ -65,11 +65,11 @@ Sidechain-ul în care se întâmplă rollup-urile ZK poate fi optimizat pentru a
 
 #### Avantaje și dezavantaje {#zk-pros-and-cons}
 
-| Avantaje                                                                                                                      | Dezavantaje                                                                                                                                                                                                                        |
-| ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nicio întârziere, deoarece dovezile sunt deja considerate valide atunci când sunt trimise lanțului principal.                 | Limitat la transferuri simple, nu este compatibil cu EVM.                                                                                                                                                                          |
-| Mai puțin vulnerabile la atacurile economice la care [Rollup-urile Optimistic](#optimistic-pros-and-cons) pot fi vulnerabile. | Dovezile de validitate necesită un mare număr de calcule – nu merită să fie folosite pentru aplicații cu activitate redusă pe lanț.                                                                                                |
-|                                                                                                                               | Timp de [finalitate](/glossary/#finality) mai lent (10-30 min pentru a genera o dovada ZK) (dar mai rapide la finalitate completă, deoarece nu există întârzieri de dispută ca în [rollup-urile Optimistic](#optimistic-rollups)). |
+| Avantaje                                                                                                                      | Dezavantaje                                                                                                                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nicio întârziere, deoarece dovezile sunt deja considerate valide atunci când sunt trimise lanțului principal.                 | Limitat la transferuri simple, nu este compatibil cu EVM.                                                                                                                                                                                                         |
+| Mai puțin vulnerabile la atacurile economice la care [Rollup-urile Optimistic](#optimistic-pros-and-cons) pot fi vulnerabile. | Dovezile de validitate necesită un mare număr de calcule – nu merită să fie folosite pentru aplicații cu activitate redusă pe lanț.                                                                                                                               |
+|                                                                                                                               | Timp de <GlossaryTooltip termKey="finality">finalitate</GlossaryTooltip> mai lent (10-30 min pentru a genera o dovada ZK) (dar mai rapide la finalitate completă, deoarece nu există întârzieri de dispută ca în [rollup-urile Optimistic](#optimistic-rollups)). |
 
 #### Folosește Rollup-uri ZK {#use-zk-rollups}
 

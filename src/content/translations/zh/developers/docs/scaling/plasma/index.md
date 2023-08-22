@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Plasma 链是一个锚定到以太坊主网的独立区块链，但却在链下执行交易，有自己的区块验证机制。 Plasma 链有时被称作“子”链，其本质是以太坊主网的较小副本。 Plasma 链使用[欺诈证明](/glossary/#fraud-proof)（如[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)）来仲裁争议。
+Plasma 链是一个锚定到以太坊主网的独立区块链，但却在链下执行交易，有自己的区块验证机制。 Plasma 链有时被称作“子”链，其本质是以太坊主网的较小副本。 Plasma 链使用<GlossaryTooltip termKey="fraud-proof">欺诈证明</GlossaryTooltip>（如[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)）来仲裁争议。
 
 利用 Merkle 树可以创建这些链的无限堆栈，可以从父链（包括以太坊主网）分流带宽。 然而，虽然这些链从以太坊获取一些安全性（通过欺诈证明），但其安全性和效率受到若干设计限制的影响。
 

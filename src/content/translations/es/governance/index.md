@@ -119,7 +119,7 @@ Por lo general, los desacuerdos se tratan en discusiones extensas en foros de ac
 
 Las bifurcaciones se dan cuando hay mejoras técnicas o modificaciones que cambian las reglas del juego en el protocolo. Los [clientes de Ethereum](/developers/docs/nodes-and-clients/) deben actualizar su software para implementar las nuevas reglas establecidas en la bifurcación.
 
-La bifurcación de una DAO surgió en respuesta al [ataque de una DAO en 2016](https://www.coindesk.com/understanding-dao-hack-journalists), donde un contrato inseguro de una [DAO](/glossary/#dao) fue drenado por más de 3,6 millones de ETH en un hack. La bifurcación movió los fondos desde el contrato corrompido a un nuevo contrato, permitiendo que las personas que perdieron sus fondos, los recuperaran.
+La bifurcación de una DAO surgió en respuesta al [ataque de una DAO en 2016](https://www.coindesk.com/understanding-dao-hack-journalists), donde un contrato inseguro de una <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip> fue drenado por más de 3,6 millones de ETH en un hack. La bifurcación movió los fondos desde el contrato corrompido a un nuevo contrato, permitiendo que las personas que perdieron sus fondos, los recuperaran.
 
 Esta acción fue votada por la comunidad Ethereum. Cualquier poseedor de ETH pudo votar a través de una transacción en [una plataforma de votación](http://v1.carbonvote.com/). La decisión de bifurcar obtuvo más del 85 % de los votos.
 

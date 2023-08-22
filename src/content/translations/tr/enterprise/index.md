@@ -13,7 +13,7 @@ Blockchain uygulamaları işletmelere yardımcı olur:
 - Yeni iş modelleri ve değer yaratma fırsatları oluşturur
 - Kuruluşlarını rekabetçi bir şekilde geleceğe hazırlar
 
-İşletmeler için blok zinciri uygulamaları, genel izinsiz Ethereum [Mainnet](/glossary/#mainnet) veya Ethereum teknolojisine dayalı özel blok zincirleri üzerine kurulabilir. [Özel İşletme Ethereum zincirleri](/enterprise/private-ethereum/) hakkında daha fazla bilgiye erişin.
+İşletmeler için blok zinciri uygulamaları, genel izinsiz Ethereum <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip> veya Ethereum teknolojisine dayalı özel blok zincirleri üzerine kurulabilir. [Özel İşletme Ethereum zincirleri](/enterprise/private-ethereum/) hakkında daha fazla bilgiye erişin.
 
 ## Genel ve özel Ethereum {#private-vs-public}
 

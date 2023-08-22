@@ -317,7 +317,7 @@ DeFi'yi katmanlar halinde düşünebilirsiniz:
 
 1. Blok zinciri: Ethereum, işlem geçmişini ve hesapların durumunu içerir.
 2. Varlıklar: [ETH](/eth/) ve diğer token'lar (para birimleri).
-3. Protokoller: Varlıkların merkezi olmayan şekilde borç verilmesin sağlayan bir hizmet gibi işlevsellik sağlayan [akıllı sözleşmeler](/glossary/#smart-contract).
+3. Protokoller: Varlıkların merkezi olmayan şekilde borç verilmesin sağlayan bir hizmet gibi işlevsellik sağlayan <GlossaryTooltip termKey="smart-contract">akıllı sözleşmeler</GlossaryTooltip>.
 4. [Uygulamalar](/dapps/): Protokolleri yönetmek ve bunlara erişmek için kullandığımız ürünler.
 
 ## DeFi oluşturun {#build-defi}

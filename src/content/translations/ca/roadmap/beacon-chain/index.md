@@ -16,7 +16,7 @@ summaryPoint4: Potser, això, ho coneixeu com la "Fase 0" dels mapes tècnics.
 
 ## Què fa la cadena de balisa? {#what-does-the-beacon-chain-do}
 
-La cadena de balisa dirigirà o coordinarà l'expansió de la xarxa de [fragments](/roadmap/danksharding/) i [participants](/staking/). Però no serà com [la xarxa principal d'Ethereum](/glossary/#mainnet) d'avui en dia. No pot gestionar comptes o contractes intel·ligents.
+La cadena de balisa dirigirà o coordinarà l'expansió de la xarxa de [fragments](/roadmap/danksharding/) i [participants](/staking/). Però no serà com <GlossaryTooltip termKey="mainnet">la xarxa principal d'Ethereum</GlossaryTooltip> d'avui en dia. No pot gestionar comptes o contractes intel·ligents.
 
 El rol de la cadena de balisa canviarà amb el pas del temps, però és un element fonamental de [l'Ethereum segur, sostenible i escalable per la qual treballem](/roadmap/vision/).
 

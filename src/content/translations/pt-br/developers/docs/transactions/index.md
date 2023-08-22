@@ -106,7 +106,7 @@ Com o hash da assinatura, a transação pode ser provada criptograficamente de q
 
 ### O campo de dados {#the-data-field}
 
-A grande maioria das transações acessa um contrato de uma conta de propriedade externa. A maioria dos contratos é escrita em Solidity e interpreta seus campos de dados de acordo com a [interface binária do aplicativo (ABI)](/glossary/#abi).
+A grande maioria das transações acessa um contrato de uma conta de propriedade externa. A maioria dos contratos é escrita em Solidity e interpreta seus campos de dados de acordo com a <GlossaryTooltip termKey="abi">interface binária do aplicativo (ABI)</GlossaryTooltip>.
 
 Os primeiros quatro bytes especificam qual função chamar, usando o hash do nome e dos argumentos da função. Às vezes, você pode identificar a função do seletor usando [este banco de dados](https://www.4byte.directory/signatures/).
 

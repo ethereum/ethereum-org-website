@@ -138,7 +138,7 @@ Il vantaggio è che Ethereum non deve fare alcuna esecuzione e deve solo applica
 
 La catena ha bisogno di un modo per convalidare le transazioni off-chain senza eseguirle nuovamente, altrimenti il valore dell'esecuzione off-chain viene perso.
 
-È qui che entra in gioco il calcolo verificabile. Quando un nodo esegue una transazione al di fuori di Ethereum, invia una prova a conoscenza zero per dimostrare la correttezza dell'esecuzione off-chain. Questa prova (chiamata [prova di validità](/glossary/#validity-proof)) garantisce che una transazione è valida, consentendo a Ethereum di applicare il risultato al suo stato, senza attendere che qualcuno contesti.
+È qui che entra in gioco il calcolo verificabile. Quando un nodo esegue una transazione al di fuori di Ethereum, invia una prova a conoscenza zero per dimostrare la correttezza dell'esecuzione off-chain. Questa prova (chiamata <GlossaryTooltip termKey="validity-proof">prova di validità</GlossaryTooltip>) garantisce che una transazione è valida, consentendo a Ethereum di applicare il risultato al suo stato, senza attendere che qualcuno contesti.
 
 I [rollup a conoscenza zero](/developers/docs/scaling/zk-rollups) e [validium](/developers/docs/scaling/validium/) sono due soluzioni di scaling off-chain che utilizzano prove di validità per fornire una scalabilità sicura. Questi protocolli eseguono centinaia di transazioni off-chain e inviano la prova di verifica su Ethereum. Questi risultati possono essere applicati immediatamente dopo che la prova è stata verificata, permettendo ad Ethereum di elaborare più transazioni senza incrementare i calcoli sul livello di base.
 
@@ -196,7 +196,7 @@ Ma non esiste davvero un modo tramite cui gli utenti possano valutare l'onestà 
 
 ### Minacce del calcolo quantistico {#quantum-computing-threats}
 
-Le ZK-SNARK utilizzano la crittografia curva ellittica ([ECDSA](/glossary/#ecdsa)) per la crittografia. Sebbene l'algoritmo ECDSA sia sicuro al momento, lo sviluppo dei computer quantistici potrebbe infrangerne il modello di sicurezza, in futuro.
+Le ZK-SNARK utilizzano la crittografia curva ellittica (<GlossaryTooltip termKey="ecdsa">ECDSA</GlossaryTooltip>) per la crittografia. Sebbene l'algoritmo ECDSA sia sicuro al momento, lo sviluppo dei computer quantistici potrebbe infrangerne il modello di sicurezza, in futuro.
 
 Le ZK-STARK sono considerate immuni alla minaccia dei computer quantistici, poiché utilizzano hash resistenti alla collisione per la crittografia. A differenza delle coppie di chiavi pubbliche-private utilizzate nella crittografia curva ellittica, gli hash resistenti alla collisione sono più difficili da rompere per gli algoritmi dei computer quantistici.
 

@@ -12,7 +12,7 @@ Les fournisseurs de données existants peuvent accélérer le développement, pr
 
 ## Pré-requis {#prerequisites}
 
-Vous devez comprendre le concept de base des [Explorateurs de bloc](/developers/docs/data-and-analytics/block-explorers/) afin de mieux comprendre leur utilisation dans le contexte de l'analyse des données. De plus, familiarisez-vous avec le concept d'[indice](/glossary/#index) pour comprendre les avantages qu'ils apportent à la conception d'un système.
+Vous devez comprendre le concept de base des [Explorateurs de bloc](/developers/docs/data-and-analytics/block-explorers/) afin de mieux comprendre leur utilisation dans le contexte de l'analyse des données. De plus, familiarisez-vous avec le concept d'<GlossaryTooltip termKey="index">indice</GlossaryTooltip> pour comprendre les avantages qu'ils apportent à la conception d'un système.
 
 En termes de fondamentaux architecturaux, comprendre ce qu'est une [API](https://www.wikipedia.org/wiki/API) et un[REST](https://www.wikipedia.org/wiki/Representational_state_transfer) (Representational state transfer), même en théorie.
 
@@ -20,7 +20,7 @@ En termes de fondamentaux architecturaux, comprendre ce qu'est une [API](https:/
 
 De nombreux [Explorateurs de bloc](/developers/docs/data-and-analytics/block-explorers/) offrent des passerelles [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) qui fournissent une visibilité aux développeurs sur les données en temps réel sur les blocs, les transactions, les mineurs, les comptes et autres activités sur la blockchain.
 
-Les développeurs peuvent alors traiter et transformer ces données afin de leur donner leurs informations d'utilisateurs uniques et leurs interactions avec la [blockchain](/glossary/#blockchain). Par exemple, [Etherscan](https://etherscan.io) fournit des données d'exécution et de consensus pour chaque créneau de 12 secondes.
+Les développeurs peuvent alors traiter et transformer ces données afin de leur donner leurs informations d'utilisateurs uniques et leurs interactions avec la <GlossaryTooltip termKey="blockchain">blockchain</GlossaryTooltip>. Par exemple, [Etherscan](https://etherscan.io) fournit des données d'exécution et de consensus pour chaque créneau de 12 secondes.
 
 ## Le réseau Graph {#the-graph}
 

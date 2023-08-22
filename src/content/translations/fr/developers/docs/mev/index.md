@@ -42,7 +42,7 @@ Les MEV apparaissent sur la blockchain de différentes façons.
 
 ### Arbitrage DEX {#mev-examples-dex-arbitrage}
 
-[L'arbitrage sur les plateformes d'échanges décentralisées](/glossary/#dex) (DEX) est la possibilité MEV la plus simple et la plus connue. Par conséquent, c'est aussi le plus compétitif.
+<GlossaryTooltip termKey="dex">L'arbitrage sur les plateformes d'échanges décentralisées</GlossaryTooltip> (DEX) est la possibilité MEV la plus simple et la plus connue. Par conséquent, c'est aussi le plus compétitif.
 
 Cela fonctionne ainsi : si deux DEX proposent un jeton à deux prix différents, quelqu'un peut acheter sur le DEX le jeton au prix le plus bas et le vendre au prix le plus élevé dans une transaction atomique unique. Grâce au mécanisme de la blockchain, c'est véritablement un arbitrage sans risque.
 
@@ -148,7 +148,7 @@ La combinaison des rôles de producteur et de proposant de blocs est à l'origin
 
 Dans le cadre de la PBS, un constructeur de blocs crée un paquet de transactions et fait une offre pour son inclusion dans un bloc de la chaîne Beacon (en tant que « charge utile d'exécution »). Le validateur sélectionné pour proposer le bloc suivant vérifie alors les différentes offres et choisit le lot ayant le tarif le plus élevé. PBS crée essentiellement un marché aux enchères, où les constructeurs négocient avec les validateurs qui vendent de l'espace de bloc.
 
-Les conceptions actuelles de PBS utilisent un [schéma d'engagement-révélation](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) dans lequel les constructeurs ne publient qu'un engagement cryptographique sur le contenu d'un bloc (en-tête de bloc) avec leurs offres. Après avoir accepté l'offre gagnante, le proposant crée une proposition de bloc signée qui comprend l'en-tête de bloc. Le constructeur de blocs est censé publier le corps complet du bloc après avoir vu la proposition de bloc signée, et il doit également recevoir suffisamment d'[attestations](/glossary/#attestation) des validateurs avant qu'il ne soit finalisé.
+Les conceptions actuelles de PBS utilisent un [schéma d'engagement-révélation](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) dans lequel les constructeurs ne publient qu'un engagement cryptographique sur le contenu d'un bloc (en-tête de bloc) avec leurs offres. Après avoir accepté l'offre gagnante, le proposant crée une proposition de bloc signée qui comprend l'en-tête de bloc. Le constructeur de blocs est censé publier le corps complet du bloc après avoir vu la proposition de bloc signée, et il doit également recevoir suffisamment d'<GlossaryTooltip termKey="attestation">attestations</GlossaryTooltip> des validateurs avant qu'il ne soit finalisé.
 
 #### Comment la séparation proposant-constructeur atténue-t-elle l'impact de la MEV ? {#how-does-pbs-curb-mev-impact}
 

@@ -20,7 +20,7 @@ Musisz dobrze rozumieć wszystkie podstawowe tematy. Wdrażanie rozwiązań skal
 
 ## Skalowanie on-chain {#on-chain-scaling}
 
-Ta metoda skalowania wymaga zmian w protokole Ethereum ([sieć główna](/glossary/#mainnet) warstwy 1). Obecnie głównym punktem zainteresowania w przypadku tej metody skalowania jest sharding.
+Ta metoda skalowania wymaga zmian w protokole Ethereum (<GlossaryTooltip termKey="mainnet">sieć główna</GlossaryTooltip> warstwy 1). Obecnie głównym punktem zainteresowania w przypadku tej metody skalowania jest sharding.
 
 ### Sharding {#sharding}
 

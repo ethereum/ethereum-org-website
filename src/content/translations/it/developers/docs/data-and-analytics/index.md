@@ -12,7 +12,7 @@ Sfruttare i fornitori di dati esistenti può accelerare lo sviluppo, produrre ri
 
 ## Prerequisiti {#prerequisites}
 
-Occorre comprendere il concetto base di [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) per capire meglio come usarli nell'ambito dell'analisi dei dati. Inoltre, è bene familiarizzare con il concetto di [indice](/glossary/#index) per comprendere i vantaggi che offrono per un design di sistema.
+Occorre comprendere il concetto base di [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) per capire meglio come usarli nell'ambito dell'analisi dei dati. Inoltre, è bene familiarizzare con il concetto di <GlossaryTooltip termKey="index">indice</GlossaryTooltip> per comprendere i vantaggi che offrono per un design di sistema.
 
 In termini di fondamenti architettonici, occorre comprendere che cosa sono le [API](https://www.wikipedia.org/wiki/API) e [REST](https://www.wikipedia.org/wiki/Representational_state_transfer), anche a livello teorico.
 
@@ -20,7 +20,7 @@ In termini di fondamenti architettonici, occorre comprendere che cosa sono le [A
 
 Molti [Esploratori di Blocchi](/developers/docs/data-and-analytics/block-explorers/) offrono gateway dell'[API](https://www.wikipedia.org/wiki/API) di [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer), che forniranno visibilità agli sviluppatori in dati in tempo reale sui blocchi, le transazioni, i miner, i conti e altra attività sulla catena.
 
-Gli sviluppatori possono quindi elaborare e trasformare questi dati per fornire agli utenti informazioni e interazioni uniche con la blockchain [](/glossary/#blockchain). Ad esempio, [Etherscan](https://etherscan.io) fornisce i dati d'esecuzione e consenso per ogni slot di 12 secondi.
+Gli sviluppatori possono quindi elaborare e trasformare questi dati per fornire agli utenti informazioni e interazioni uniche con la blockchain <GlossaryTooltip termKey="blockchain"></GlossaryTooltip>. Ad esempio, [Etherscan](https://etherscan.io) fornisce i dati d'esecuzione e consenso per ogni slot di 12 secondi.
 
 ## The Graph {#the-graph}
 

@@ -12,7 +12,7 @@ A alavancagem dos prestadores de dados existentes pode acelerar o desenvolviment
 
 ## Pré-requisitos {#prerequisites}
 
-Você deve entender o conceito básico de [Exploradores de Bloco](/developers/docs/data-and-analytics/block-explorers/) para entender melhor usá-los no contexto da análise de dados. Além disso, familiarize-se com o conceito de um [índice](/glossary/#index) para entender os benefícios que eles adicionam a uma concepção do sistema.
+Você deve entender o conceito básico de [Exploradores de Bloco](/developers/docs/data-and-analytics/block-explorers/) para entender melhor usá-los no contexto da análise de dados. Além disso, familiarize-se com o conceito de um <GlossaryTooltip termKey="index">índice</GlossaryTooltip> para entender os benefícios que eles adicionam a uma concepção do sistema.
 
 Em termos de fundamentos arquitetônicos, entendendo o que uma [API](https://www.wikipedia.org/wiki/API) e [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) são, mesmo em teoria.
 
@@ -20,7 +20,7 @@ Em termos de fundamentos arquitetônicos, entendendo o que uma [API](https://www
 
 Muitos [Exploradores de blocos](/developers/docs/data-and-analytics/block-explorers/) oferecem [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways que fornecerão aos desenvolvedores visibilidade em dados em tempo real em blocos, transações, mineiros, contas e outras atividades on-chain.
 
-Desenvolvedores podem então processar e transformar esses dados para dar aos seus usuários percepções e interações exclusivas com a [blockchain](/glossary/#blockchain). Por exemplo, [Etherscan](https://etherscan.io) fornece dados de execução e consenso para cada slot de 12s.
+Desenvolvedores podem então processar e transformar esses dados para dar aos seus usuários percepções e interações exclusivas com a <GlossaryTooltip termKey="blockchain">blockchain</GlossaryTooltip>. Por exemplo, [Etherscan](https://etherscan.io) fornece dados de execução e consenso para cada slot de 12s.
 
 ## The Graph {#the-graph}
 

@@ -51,7 +51,7 @@ Merkeziyetsiz tanımlayıcılar dağıtık defterlerde (blok zincirler) veya eş
 
 ### 1. Açık Anahtar Altyapısı (AAA) {#public-key-infrastructure}
 
-Açık Anahtar altyapısı (AAA) bir kuruluş veya birey için bir [açık anahtar](/glossary/#public-key) ve bir de [özel anahtar](/glossary/#private-key) oluşturan güvenlik önlemidir. Açık anahtar kriptografisi blok zincir ağlarında kullanıcı hesaplarını ve dijital varlıkların mülkiyetini doğrulamak için kullanılır.
+Açık Anahtar altyapısı (AAA) bir kuruluş veya birey için bir <GlossaryTooltip termKey="public-key">açık anahtar</GlossaryTooltip> ve bir de <GlossaryTooltip termKey="private-key">özel anahtar</GlossaryTooltip> oluşturan güvenlik önlemidir. Açık anahtar kriptografisi blok zincir ağlarında kullanıcı hesaplarını ve dijital varlıkların mülkiyetini doğrulamak için kullanılır.
 
 Bazı merkeziyetsiz tanımlayıcıların, (Ethereum hesabı gibi) açık ve özel anahtarları vardır. Açık anahtar hesabın yöneticisini tanımlar, özel anahtarsa bu hesap için mesajları imzalayıp şifrelerini çözebilir. AAA, tüm iddiaları doğrulamak için [kriptografik imzalar](https://andersbrownworth.com/blockchain/public-private-keys/) kullanarak varlıkların kimliğini doğrulamak ve taklitçiliği ve sahte kimliklerin kullanımını önlemek adına gereken kanıtları sağlar.
 
@@ -91,7 +91,7 @@ Burada, zincir dışı tasdikleri açıklamak için varsayımsal bir senaryo ver
 
 ### Kalıcı erişime sahip zincir dışındaki tasdikler {#offchain-attestations-with-persistent-access}
 
-Bu düzenleme kapsamında tasdikler JSON dosyalarına dönüştürülür ve zincir dışında depolanır (ideal olarak IPFS veya Swarm gibi [merkeziyetsiz bulut depolama](/developers/docs/storage/) platformlarında). Ancak JSON dosyasının [karması](/glossary/#hash) zincirde depolanır ve MT'nin zincir üztündeki kaydına bağlanır. Bağlantılı MT, tasdiğin çıkaranı veya alıcısı olabilir.
+Bu düzenleme kapsamında tasdikler JSON dosyalarına dönüştürülür ve zincir dışında depolanır (ideal olarak IPFS veya Swarm gibi [merkeziyetsiz bulut depolama](/developers/docs/storage/) platformlarında). Ancak JSON dosyasının <GlossaryTooltip termKey="hash">karması</GlossaryTooltip> zincirde depolanır ve MT'nin zincir üztündeki kaydına bağlanır. Bağlantılı MT, tasdiğin çıkaranı veya alıcısı olabilir.
 
 Bu yaklaşım tasdikleri şifreli ve doğrulanabilir kılarken blok zincir temelli kalıcılığını da sağlar. Ayrıca özel anahtarın sahibi bilginin şifresini açabilidiği için seçici gösterimi de mümkün kılar.
 

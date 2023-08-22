@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Una cadena de plasma es una cadena de bloques separada que está anclada a la cadena principal de Ethereum y utiliza pruebas de fraude (como los [rollups optimistas](/developers/docs/scaling/optimistic-rollups/)) para arbitrar las disputas. Estas cadenas a veces se denominan cadenas secundarias o, por decir, hijas, ya que son esencialmente copias más pequeñas de la red principal de Ethereum. Los árboles de Merkle permiten la creación de una batería ilimitada de estas cadenas que pueden funcionar para descargar ancho de banda de las cadenas principales o madre (incluida la red principal). Derivan su seguridad a través de [pruebas de fraude](/glossary/#fraud-proof), y cada cadena hija tiene su propio mecanismo de validación de bloques.
+Una cadena de plasma es una cadena de bloques separada que está anclada a la cadena principal de Ethereum y utiliza pruebas de fraude (como los [rollups optimistas](/developers/docs/scaling/optimistic-rollups/)) para arbitrar las disputas. Estas cadenas a veces se denominan cadenas secundarias o, por decir, hijas, ya que son esencialmente copias más pequeñas de la red principal de Ethereum. Los árboles de Merkle permiten la creación de una batería ilimitada de estas cadenas que pueden funcionar para descargar ancho de banda de las cadenas principales o madre (incluida la red principal). Derivan su seguridad a través de <GlossaryTooltip termKey="fraud-proof">pruebas de fraude</GlossaryTooltip>, y cada cadena hija tiene su propio mecanismo de validación de bloques.
 
 ## Pre requisitos {#prerequisites}
 

@@ -13,7 +13,7 @@ Les applications blockchain aident les entreprises à :
 - concevoir de nouveaux modèles économiques et favoriser la création d'opportunités ;
 - préparer l'avenir de leur organisation de manière compétitive.
 
-Les applications de blockchain d'entreprise peuvent être construites sur le [réseau principal](/glossary/#mainnet) public Ethereum sans autorisation, ou sur des blockchains privés basés sur la technologie Ethereum. Plus d'informations sur les [blockchains Ethereum privées](/enterprise/private-ethereum/).
+Les applications de blockchain d'entreprise peuvent être construites sur le <GlossaryTooltip termKey="mainnet">réseau principal</GlossaryTooltip> public Ethereum sans autorisation, ou sur des blockchains privés basés sur la technologie Ethereum. Plus d'informations sur les [blockchains Ethereum privées](/enterprise/private-ethereum/).
 
 ## Ethereum public et privé {#private-vs-public}
 

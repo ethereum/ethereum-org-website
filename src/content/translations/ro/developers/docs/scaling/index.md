@@ -21,7 +21,7 @@ Ar trebui să înțelegeți bine toate subiectele fundamentale. Implementarea so
 
 ## Scalarea on-chain {#on-chain-scaling}
 
-Această metodă de scalare necesită modificări ale protocolului Ethereum (nivelul 1 [Mainnet](/glossary/#mainnet)). Actualmente această metodă de scalare se axează în principal pe fragmentare.
+Această metodă de scalare necesită modificări ale protocolului Ethereum (nivelul 1 <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip>). Actualmente această metodă de scalare se axează în principal pe fragmentare.
 
 ### Fragmentarea {#sharding}
 
@@ -56,8 +56,8 @@ Rollup-urile execută tranzacțiile în afara nivelului 1 și apoi datele sunt p
 
 Există două tipuri de pachete cu modele de securitate diferite:
 
-- **Rollup-urile Optimistic**: presupun că tranzacțiile sunt valide în mod implicit și execută doar calculul, prin intermediul unei [**dovezi de fraudă (fraud proof)**](/glossary/#fraud-proof), în cazul unei provocări. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
-- **Rollup-urile Zero-knowledge**: rulează calculul off-chain și prezintă o [**dovadă a validității**](/glossary/#validity-proof) lanțului. [More on zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
+- **Rollup-urile Optimistic**: presupun că tranzacțiile sunt valide în mod implicit și execută doar calculul, prin intermediul unei <GlossaryTooltip termKey="fraud-proof">**dovezi de fraudă (fraud proof)**</GlossaryTooltip>, în cazul unei provocări. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
+- **Rollup-urile Zero-knowledge**: rulează calculul off-chain și prezintă o <GlossaryTooltip termKey="validity-proof">**dovadă a validității**</GlossaryTooltip> lanțului. [More on zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
 
 #### Canale de stare {#channels}
 

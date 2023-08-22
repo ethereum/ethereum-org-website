@@ -13,7 +13,7 @@ lang: zh
 - 发现新的商业模式和创造价值的机会
 - 提高组织未来的竞争力
 
-企业级的区块链应用可以建立在以太坊[主网](/glossary/#mainnet)或基于以太坊技术的私有链上。 详见[企业级私有以太坊](/enterprise/private-ethereum/)。
+企业级的区块链应用可以建立在以太坊<GlossaryTooltip termKey="mainnet">主网</GlossaryTooltip>或基于以太坊技术的私有链上。 详见[企业级私有以太坊](/enterprise/private-ethereum/)。
 
 ## 以太坊主网与私有链 {#private-vs-public}
 

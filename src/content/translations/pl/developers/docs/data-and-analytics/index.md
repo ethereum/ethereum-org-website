@@ -12,7 +12,7 @@ Wykorzystanie istniejących dostawców danych może przyspieszyć rozwój, dać 
 
 ## Warunki wstępne {#prerequisites}
 
-Musisz rozumieć koncepcję leżącą u podstaw [eksploratorów bloków](/developers/docs/data-and-analytics/block-explorers/), aby lepiej orientować się w kwestiach używania ich w kontekście analizy danych. Dodatkowo, zapoznaj się z koncepcją [indeksu](/glossary/#index), aby zrozumieć korzyści, jakie indeksy dodają do projektu systemu.
+Musisz rozumieć koncepcję leżącą u podstaw [eksploratorów bloków](/developers/docs/data-and-analytics/block-explorers/), aby lepiej orientować się w kwestiach używania ich w kontekście analizy danych. Dodatkowo, zapoznaj się z koncepcją <GlossaryTooltip termKey="index">indeksu</GlossaryTooltip>, aby zrozumieć korzyści, jakie indeksy dodają do projektu systemu.
 
 W zakresie podstaw architektury, zrozumienie, czym są [API](https://www.wikipedia.org/wiki/API) i [REST](https://www.wikipedia.org/wiki/Representational_state_transfer), nawet teoretycznie.
 
@@ -26,7 +26,7 @@ Za pomocą [GraphQL](https://graphql.org/), deweloperzy mogą korzystać z każd
 
 Wiele [eksploratorów bloków](/developers/docs/data-and-analytics/block-explorers/) oferuje bramy [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) zapewniające deweloperom widoczność w czasie rzeczywistym danych dotyczących bloków, transakcji, górników, kont i innych aktywności on-chain.
 
-Programiści mogą następnie przetwarzać i przekształcać te dane, aby umożliwić użytkownikom unikalne informacje i interakcje z [blockchainem](/glossary/#blockchain).
+Programiści mogą następnie przetwarzać i przekształcać te dane, aby umożliwić użytkownikom unikalne informacje i interakcje z <GlossaryTooltip termKey="blockchain">blockchainem</GlossaryTooltip>.
 
 ## Dalsza lektura {#further-reading}
 

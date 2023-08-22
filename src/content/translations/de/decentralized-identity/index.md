@@ -51,7 +51,7 @@ Dezentralisierte Identifikatoren werden auf sogenannten dezentralen Ledgern (Blo
 
 ### 1. Öffentliche Schlüssel-Infrastruktur (Public Key Infrastructure, PKI) {#public-key-infrastructure}
 
-Öffentliche Schlüssel-Infrastruktur (PKI) ist ein Maß zur Informationssicherheit, die einen [öffentlichen Schlüssel](/glossary/#public-key) und [einen privaten Schlüssel](/glossary/#private-key) für eine Entität generiert. Öffentliche Schlüssel-Kryptografie wird in Blockchain-Netzwerken verwendet, um Benutzeridentitäten zu authentifizieren und das Eigentum an digitalen Gütern nachzuweisen.
+Öffentliche Schlüssel-Infrastruktur (PKI) ist ein Maß zur Informationssicherheit, die einen <GlossaryTooltip termKey="public-key">öffentlichen Schlüssel</GlossaryTooltip> und <GlossaryTooltip termKey="private-key">einen privaten Schlüssel</GlossaryTooltip> für eine Entität generiert. Öffentliche Schlüssel-Kryptografie wird in Blockchain-Netzwerken verwendet, um Benutzeridentitäten zu authentifizieren und das Eigentum an digitalen Gütern nachzuweisen.
 
 Einige dezentralisierte Identifikatoren, wie z. B. ein Ethereum-Konto, haben öffentliche und private Schlüssel. Der öffentliche Schlüssel identifiziert den Controller des Kontos, während die privaten Schlüssel Nachrichten für dieses Konto signieren und entschlüsseln können. Die öffentliche Schlüssel-Infrastruktur stellt Beweise zur Verfügung, die zur Authentifizierung von Entitäten und zur Verhinderung von Identitätsdiebstahl und Nachahmung der Entitäten dient. Dabei werden [Kryptografische Unterschriften](https://andersbrownworth.com/blockchain/public-private-keys/) genutzt, um alle Ansprüche zu verifizieren.
 
@@ -91,7 +91,7 @@ Hier ist ein hypothetisches Szenario zur Erklärung von Off-Chain-Attestierungen
 
 ### Off-Chain-Attestierungen mit dauerhaftem Zugriff {#offchain-attestations-with-persistent-access}
 
-Bei dieser Regelung werden Attestierungen in JSON-Dateien umgewandelt und off-chain gespeichert (idealerweise mit einem [dezentralen Cloud-Speicher](/developers/docs/storage/), einer Plattform wie IPFS oder Swarm). Ein [Hash](/glossary/#hash) der JSON-Datei wird jedoch on-chain gespeichert und über eine On-Chain-Datenerfassung mit einer DID verbunden. Die dazugehörige DID könnte entweder die des Emittenten der Attestierung oder des Empfängers sein.
+Bei dieser Regelung werden Attestierungen in JSON-Dateien umgewandelt und off-chain gespeichert (idealerweise mit einem [dezentralen Cloud-Speicher](/developers/docs/storage/), einer Plattform wie IPFS oder Swarm). Ein <GlossaryTooltip termKey="hash">Hash</GlossaryTooltip> der JSON-Datei wird jedoch on-chain gespeichert und über eine On-Chain-Datenerfassung mit einer DID verbunden. Die dazugehörige DID könnte entweder die des Emittenten der Attestierung oder des Empfängers sein.
 
 Dieser Ansatz macht es möglich, dass Attestierungen eine Blockchain-basierte Langlebigkeit erlangen, wobei Informationen zu Ansprüchen verschlüsselt und überprüfbar bleiben. Er erlaubt auch eine selektive Offenlegung, da der Inhaber des privaten Schlüssels die Informationen entschlüsseln kann.
 

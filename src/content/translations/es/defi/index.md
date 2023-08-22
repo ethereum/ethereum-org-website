@@ -317,7 +317,7 @@ DeFi se puede dividir en varias capas:
 
 1. La cadena de bloques: Ethereum contiene el registro de transacciones y el estado de las cuentas.
 2. Los activos: [ETH](/eth/) y otros tókenes (monedas).
-3. Los protocolos: [contratos inteligentes](/glossary/#smart-contract) que proporcionan la funcionalidad, como un servicio que permite el préstamo descentralizado de activos.
+3. Los protocolos: <GlossaryTooltip termKey="smart-contract">contratos inteligentes</GlossaryTooltip> que proporcionan la funcionalidad, como un servicio que permite el préstamo descentralizado de activos.
 4. [Las aplicaciones](/dapps/): los productos que usamos para gestionar y acceder a los protocolos.
 
 ## Desarrollar DeFi {#build-defi}

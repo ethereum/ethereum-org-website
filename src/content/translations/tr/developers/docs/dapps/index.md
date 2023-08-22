@@ -58,7 +58,7 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- Bir [ABI](/glossary/#abi) ile dapp ön uçları oluşturmak için kullanılan ücretsiz ve açık kaynaklı bir araç._**
+**One Click Dapp _- Bir <GlossaryTooltip termKey="abi">ABI</GlossaryTooltip> ile dapp ön uçları oluşturmak için kullanılan ücretsiz ve açık kaynaklı bir araç._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)

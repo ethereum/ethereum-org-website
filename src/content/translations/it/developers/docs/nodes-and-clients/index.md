@@ -274,7 +274,7 @@ La sincronizzazione ottimistica è una strategia di sincronizzazione successiva 
 
 #### Sincronizzazione del punto di controllo {#checkpoint-sync}
 
-La sincronizzazione del punto di controllo, anche nota come sincronizzazione a soggettività debole, crea un'esperienza utente superiore per la sincronizzazione del Nodo Beacon. Si basa sulle ipotesi di [soggettività debole](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) che consentono di sincronizzare la Beacon Chain da un punto di controllo a soggettività debole recente invece che dalla genesi. La sincronizzazione del punto di controllo rende significativamente più breve il tempo di sincronizzazione iniziale, con ipotesi di fiducia simili a quelli della sincronizzazione dalla [genesi](/glossary/#genesis-block).
+La sincronizzazione del punto di controllo, anche nota come sincronizzazione a soggettività debole, crea un'esperienza utente superiore per la sincronizzazione del Nodo Beacon. Si basa sulle ipotesi di [soggettività debole](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) che consentono di sincronizzare la Beacon Chain da un punto di controllo a soggettività debole recente invece che dalla genesi. La sincronizzazione del punto di controllo rende significativamente più breve il tempo di sincronizzazione iniziale, con ipotesi di fiducia simili a quelli della sincronizzazione dalla <GlossaryTooltip termKey="genesis-block">genesi</GlossaryTooltip>.
 
 In pratica, ciò significa che il tuo nodo si connette a un servizio remoto per scaricare gli stati finalizzati di recente e continua a verificare i dati da quel punto. Le terze parti che forniscono i dati sono affidabili e dovrebbero essere selezionate attentamente.
 

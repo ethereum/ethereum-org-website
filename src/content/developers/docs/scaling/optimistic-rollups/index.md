@@ -18,9 +18,9 @@ An optimistic rollup is an approach to scaling Ethereum that involves moving com
 
 Optimistic rollup operators bundle multiple off-chain transactions together in large batches before submitting to Ethereum. This approach enables spreading fixed costs across multiple transactions in each batch, reducing fees for end-users. Optimistic rollups also use compression techniques to reduce the amount of data posted on Ethereum.
 
-Optimistic rollups are considered “optimistic” because they assume off-chain transactions are valid and don't publish proofs of validity for transaction batches posted on-chain. This separates optimistic rollups from [zero-knowledge rollups](/developers/docs/scaling/zk-rollups) that publish cryptographic [proofs of validity](/glossary/#validity-proof) for off-chain transactions.
+Optimistic rollups are considered “optimistic” because they assume off-chain transactions are valid and don't publish proofs of validity for transaction batches posted on-chain. This separates optimistic rollups from [zero-knowledge rollups](/developers/docs/scaling/zk-rollups) that publish cryptographic <GlossaryTooltip termKey="validity-proof">proofs of validity</GlossaryTooltip> for off-chain transactions.
 
-Optimistic rollups instead rely on a fraud-proving scheme to detect cases where transactions are not calculated correctly. After a rollup batch is submitted on Ethereum, there's a time window (called a challenge period) during which anyone can challenge the results of a rollup transaction by computing a [fraud proof](/glossary/#fraud-proof).
+Optimistic rollups instead rely on a fraud-proving scheme to detect cases where transactions are not calculated correctly. After a rollup batch is submitted on Ethereum, there's a time window (called a challenge period) during which anyone can challenge the results of a rollup transaction by computing a <GlossaryTooltip termKey="fraud-proof">fraud proof</GlossaryTooltip>.
 
 If the fraud proof succeeds, the rollup protocol re-executes the transaction(s) and updates the rollup's state accordingly. The other effect of a successful fraud proof is that the sequencer responsible for including the incorrectly executed transaction in a block receives a penalty.
 

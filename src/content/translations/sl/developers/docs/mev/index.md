@@ -44,7 +44,7 @@ MEV se na blokovni verigi pojavlja na različne načine.
 
 ### Arbitraža DEX {#mev-examples-dex-arbitrage}
 
-Arbitraža na [decentraliziranih borzah](/glossary/#dex) (DEX) je najenostavnejša in najbolj znana priložnost MEV. Posledično zanjo obstaja tudi največ konkurence.
+Arbitraža na <GlossaryTooltip termKey="dex">decentraliziranih borzah</GlossaryTooltip> (DEX) je najenostavnejša in najbolj znana priložnost MEV. Posledično zanjo obstaja tudi največ konkurence.
 
 Deluje tako: če dva DEX-a ponujata isti žeton po dveh različnih cenah, lahko nekdo kupi žeton na cenejšem DEX-u in ga proda na dražjem DEX-u z eno samo atomsko transakcijo. Zahvaljujoč mehaniki blokovne verige je to prava arbitraža brez rizika.
 

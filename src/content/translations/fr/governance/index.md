@@ -119,7 +119,7 @@ Généralement, les désaccords sont traités avec des discussions de longue dur
 
 Les fourches sont lorsque des mises à niveau techniques majeures ou des modifications doivent être apportées au réseau et modifier les « règles » du protocole. [Les clients Ethereum](/developers/docs/nodes-and-clients/) doivent mettre à jour leur logiciel pour implémenter les nouvelles règles de la fourche.
 
-La fourche DAO est la réponse à l'attaque [DAO de 2016](https://www.coindesk.com/understanding-dao-hack-journalists) où un contrat non sécurisé d'une [DAO](/glossary/#dao) a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a transféré les fonds du contrat défectueux à un nouveau contrat permettant à quiconque a perdu des fonds dans le piratage de les récupérer.
+La fourche DAO est la réponse à l'attaque [DAO de 2016](https://www.coindesk.com/understanding-dao-hack-journalists) où un contrat non sécurisé d'une <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip> a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a transféré les fonds du contrat défectueux à un nouveau contrat permettant à quiconque a perdu des fonds dans le piratage de les récupérer.
 
 Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
 

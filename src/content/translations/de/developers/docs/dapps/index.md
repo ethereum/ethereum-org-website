@@ -58,7 +58,7 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _– FOSS-Tool zur Erstellung von Dapp-Frontends aus einer [ABI](/glossary/#abi)._**
+**One Click Dapp _– FOSS-Tool zur Erstellung von Dapp-Frontends aus einer <GlossaryTooltip termKey="abi">ABI</GlossaryTooltip>._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)

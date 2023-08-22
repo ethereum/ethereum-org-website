@@ -51,7 +51,7 @@ Decentralized identifiers are stored on distributed ledgers (blockchains) or pee
 
 ### 1. Public Key Infrastructure (PKI) {#public-key-infrastructure}
 
-Public-key infrastructure (PKI) is an information security measure that generates a [public key](/glossary/#public-key) and [private key](/glossary/#private-key) for an entity. Public-key cryptography is used in blockchain networks to authenticate user identities and prove ownership of digital assets.
+Public-key infrastructure (PKI) is an information security measure that generates a <GlossaryTooltip termKey="public-key">public key</GlossaryTooltip> and <GlossaryTooltip termKey="private-key">private key</GlossaryTooltip> for an entity. Public-key cryptography is used in blockchain networks to authenticate user identities and prove ownership of digital assets.
 
 Some decentralized identifiers, such as an Ethereum account, have public and private keys. The public key identifies the account's controller, while the private keys can sign and decrypt messages for this account. PKI provides proofs needed to authenticate entities and prevent impersonation and use of fake identities, using [cryptographic signatures](https://andersbrownworth.com/blockchain/public-private-keys/) to verify all claims.
 
@@ -91,7 +91,7 @@ Here's an hypothetical scenario to explain off-chain attestations:
 
 ### Off-chain attestations with persistent access {#offchain-attestations-with-persistent-access}
 
-Under this arrangement attestations are transformed into JSON files and stored off-chain (ideally on a [decentralized cloud storage](/developers/docs/storage/) platform, such as IPFS or Swarm). However, a [hash](/glossary/#hash) of the JSON file is stored on-chain and linked to a DID via an on-chain registry. The associated DID could either be that of the issuer of the attestation or the recipient.
+Under this arrangement attestations are transformed into JSON files and stored off-chain (ideally on a [decentralized cloud storage](/developers/docs/storage/) platform, such as IPFS or Swarm). However, a <GlossaryTooltip termKey="hash">hash</GlossaryTooltip> of the JSON file is stored on-chain and linked to a DID via an on-chain registry. The associated DID could either be that of the issuer of the attestation or the recipient.
 
 This approach enables attestations to gain blockchain-based persistence, while keeping claims information encrypted and verifiable. It also allows for selective disclosure since the holder of the private key can decrypt the information.
 

@@ -317,7 +317,7 @@ Podeu pensar en les DeFi com en capes:
 
 1. La cadena de blocs («blockchain»): Ethereum conté l'historial de transaccions i l'estat dels comptes.
 2. Els actius: [ETH](/eth/) i la resta de tókens (divises).
-3. Els protocols\_ [contractes intel·ligents](/glossary/#smart-contract) que proporcionen les funcionalitats, per exemple un servei que permeti el préstec d'actius de forma descentralitzada.
+3. Els protocols\_ <GlossaryTooltip termKey="smart-contract">contractes intel·ligents</GlossaryTooltip> que proporcionen les funcionalitats, per exemple un servei que permeti el préstec d'actius de forma descentralitzada.
 4. [Les aplicacions](/dapps/): els productes que fem servir per a gestionar i accedir als protocols.
 
 ## Construir les DeFi {#build-defi}

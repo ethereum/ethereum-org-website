@@ -77,7 +77,7 @@ sidebarDepth: 1
 
 #### 要約 {#paris-summary}
 
-パリのアップグレードは、58750000000000000000000 の[最終合計難易度](/glossary/#terminal-total-difficulty)に到達した時点でプルーフ・オブ・ワークのブロックチェーンによってトリガーされました。 2022 年 9 月 15 日にブロック 15537393 で発生し、次のブロックでパリのアップグレードがトリガーされたものです。 パリは、[マージ](/upgrades/merge/)への移行でした。主要な変更は、[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow)のマイニングアルゴリズムと関連するコンセンサスロジックをオフにして、代わりに[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)をオンにするというものでした。 パリ自体は、[実行クライアント](/developers/docs/nodes-and-clients/#execution-clients)へのアップグレード(コンセンサスレイヤーのベラトリックスに相当)であり、接続されている[コンセンサスクライアント](/developers/docs/nodes-and-clients/#consensus-clients)からの指示を可能にしましたが、 これにより、[エンジン API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)と称される新しい一連の内部 API メソッドを有効にする必要がありました。 このアップグレードは間違いなく、 [ホームステッド](#homestead)以来、イーサリアム史上最も重要なものとなりました。
+パリのアップグレードは、58750000000000000000000 の<GlossaryTooltip termKey="terminal-total-difficulty">最終合計難易度</GlossaryTooltip>に到達した時点でプルーフ・オブ・ワークのブロックチェーンによってトリガーされました。 2022 年 9 月 15 日にブロック 15537393 で発生し、次のブロックでパリのアップグレードがトリガーされたものです。 パリは、[マージ](/upgrades/merge/)への移行でした。主要な変更は、[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow)のマイニングアルゴリズムと関連するコンセンサスロジックをオフにして、代わりに[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)をオンにするというものでした。 パリ自体は、[実行クライアント](/developers/docs/nodes-and-clients/#execution-clients)へのアップグレード(コンセンサスレイヤーのベラトリックスに相当)であり、接続されている[コンセンサスクライアント](/developers/docs/nodes-and-clients/#consensus-clients)からの指示を可能にしましたが、 これにより、[エンジン API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)と称される新しい一連の内部 API メソッドを有効にする必要がありました。 このアップグレードは間違いなく、 [ホームステッド](#homestead)以来、イーサリアム史上最も重要なものとなりました。
 
 - [パリのアップグレード仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
@@ -96,7 +96,7 @@ sidebarDepth: 1
 
 #### 要約 {#bellatrix-summary}
 
-ベラトリックスのアップグレードは、[ビーコンチェーン](/upgrades/beacon-chain)で 2 番目にスケジュールされたアップグレードで、 [マージ](/upgrades/merge/)へ向けてチェーンを準備しました。 これにより、バリデータのペナルティを、非アクティブおよびスラッシング可能な違反に対して完全な値にしました。 ベラトリックスには、マージ向けチェーンと、最後のプルーフ・オブ・ワークのブロックから最初のプルーフ・オブ・ステークのブロックへの移行を準備するためのフォーク選択ルールのアップデートも含まれます。 このアップグレードで、コンセンサスクライアントに 58750000000000000000000000 の[最終合計難易度](/glossary/#terminal-total-difficulty)を認識させます。
+ベラトリックスのアップグレードは、[ビーコンチェーン](/upgrades/beacon-chain)で 2 番目にスケジュールされたアップグレードで、 [マージ](/upgrades/merge/)へ向けてチェーンを準備しました。 これにより、バリデータのペナルティを、非アクティブおよびスラッシング可能な違反に対して完全な値にしました。 ベラトリックスには、マージ向けチェーンと、最後のプルーフ・オブ・ワークのブロックから最初のプルーフ・オブ・ステークのブロックへの移行を準備するためのフォーク選択ルールのアップデートも含まれます。 このアップグレードで、コンセンサスクライアントに 58750000000000000000000000 の<GlossaryTooltip termKey="terminal-total-difficulty">最終合計難易度</GlossaryTooltip>を認識させます。
 
 - [ベラトリックスのアップデート仕様を読む](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
@@ -108,7 +108,7 @@ sidebarDepth: 1
 
 #### 要約 {#gray-glacier-summary}
 
-グレイ・グレイシャー・ネットワークのアップグレードによって、[ディフィカルティボム](/glossary/#difficulty-bomb)は 3 ヶ月延期となりました。 これが今回のアップグレードで導入された唯一の変更であり、[アロー・グレイシャー](#arrow-glacier)と[ミュア・グレーシャー](#muir-glacier)と似た性質のアップグレードとなります。 [ビザンチウム](#byzantium)、[コンスタンティノープル](#constantinople)、[ロンドン](#london)のネットワークアップグレードで同様の変更が実施されています。
+グレイ・グレイシャー・ネットワークのアップグレードによって、<GlossaryTooltip termKey="difficulty-bomb">ディフィカルティボム</GlossaryTooltip>は 3 ヶ月延期となりました。 これが今回のアップグレードで導入された唯一の変更であり、[アロー・グレイシャー](#arrow-glacier)と[ミュア・グレーシャー](#muir-glacier)と似た性質のアップグレードとなります。 [ビザンチウム](#byzantium)、[コンスタンティノープル](#constantinople)、[ロンドン](#london)のネットワークアップグレードで同様の変更が実施されています。
 
 - [EF ブログ - アロー・グレイシャーのアップグレードのお知らせ](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
@@ -128,7 +128,7 @@ sidebarDepth: 1
 
 #### 要約 {#arrow-glacier-summary}
 
-アロー・グレイシャーのネットワークのアップグレードにより、[ディフィカルティボム](/glossary/#difficulty-bomb)は数ヶ月延期されました。 これが今回のアップグレードで導入された唯一の変更であり、[ミュア・グレイシャー](#muir-glacier)と似た性質のアップグレードとなります。 同様の変更は、[ビザンチウム](#byzantium)、[コンスタンティノープル](#constantinople)および[ロンドン](#london)のネットワークアップグレードで行われています。
+アロー・グレイシャーのネットワークのアップグレードにより、<GlossaryTooltip termKey="difficulty-bomb">ディフィカルティボム</GlossaryTooltip>は数ヶ月延期されました。 これが今回のアップグレードで導入された唯一の変更であり、[ミュア・グレイシャー](#muir-glacier)と似た性質のアップグレードとなります。 同様の変更は、[ビザンチウム](#byzantium)、[コンスタンティノープル](#constantinople)および[ロンドン](#london)のネットワークアップグレードで行われています。
 
 - [EF ブログ - アロー・グレイシャーのアップグレードのお知らせ](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - イーサリアムのアロー・グレイシャーのアップグレード](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -165,7 +165,7 @@ sidebarDepth: 1
 
 #### 要約 {#london-summary}
 
-ロンドンのアップグレードでは、 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)を導入し、トランザクションフィーの市場を改革するとともに、ガスの払い戻し方法や[氷河期](/glossary/#ice-age)のスケジュールを変更しました。
+ロンドンのアップグレードでは、 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)を導入し、トランザクションフィーの市場を改革するとともに、ガスの払い戻し方法や<GlossaryTooltip termKey="ice-age">氷河期</GlossaryTooltip>のスケジュールを変更しました。
 
 - [dapp デベロッパーの方は、 ライブラリとツールをアップグレードしてください。](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [イーサリアム・ファウンデーションのお知らせを読む](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -229,7 +229,7 @@ sidebarDepth: 1
 
 #### 要約 {#deposit-contract-summary}
 
-ステーキングのデポジットコントラクトによって、イーサリアムエコシステムに[ステーキング](/glossary/#staking)が導入されました。 [メインネット](/glossary/#mainnet)上のコントラクトですが、重要な[イーサリアムアップグレード](/upgrades/beacon-chain/)である[ビーコンチェーン](/upgrades/)の立ち上げスケジュールに大きな影響を与えました。
+ステーキングのデポジットコントラクトによって、イーサリアムエコシステムに<GlossaryTooltip termKey="staking">ステーキング</GlossaryTooltip>が導入されました。 <GlossaryTooltip termKey="mainnet">メインネット</GlossaryTooltip>上のコントラクトですが、重要な[イーサリアムアップグレード](/upgrades/beacon-chain/)である[ビーコンチェーン](/upgrades/)の立ち上げスケジュールに大きな影響を与えました。
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -245,7 +245,7 @@ sidebarDepth: 1
 
 #### 要約 {#muir-glacier-summary}
 
-ミュア・グレイシャーのフォークでは、[ディフィカルティボム](/glossary/#difficulty-bomb)の順延が導入されました。 [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)合意メカニズムのブロック難易度の上昇は、トランザクションの送信や Dapps の使用にかかる待ち時間を増加させることで、イーサリアムの使い勝手を低下させる恐れがありました。
+ミュア・グレイシャーのフォークでは、<GlossaryTooltip termKey="difficulty-bomb">ディフィカルティボム</GlossaryTooltip>の順延が導入されました。 [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)合意メカニズムのブロック難易度の上昇は、トランザクションの送信や Dapps の使用にかかる待ち時間を増加させることで、イーサリアムの使い勝手を低下させる恐れがありました。
 
 - [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Ethereum Cat Herder の説明を読む](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -268,7 +268,7 @@ sidebarDepth: 1
 
 イスタンブールのフォーク
 
-- [EVM](/glossary/#gas)内の特定のアクションの[ガス](/developers/docs/ethereum-stack/#ethereum-virtual-machine)コストを最適化。
+- <GlossaryTooltip termKey="gas">EVM</GlossaryTooltip>内の特定のアクションの[ガス](/developers/docs/ethereum-stack/#ethereum-virtual-machine)コストを最適化。
 - DOS 攻撃からの耐性を向上。
 - SNARKs と STARKs に基づいた[レイヤー 2 スケーリング](/developers/docs/scaling/#layer-2-scaling)ソリューションのパフォーマンスを向上。
 - イーサリアムと Zcash の相互運用を有効化。
@@ -279,7 +279,7 @@ sidebarDepth: 1
 <ExpandableCard title="イスタンブールEIP" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) - イーサリアムが Zcash のようなプライバシーを保護する通貨と連携することを許可。
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) - [gas](/glossary/#gas)のコストを改善するための安価な暗号化。
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) - <GlossaryTooltip termKey="gas">gas</GlossaryTooltip>のコストを改善するための安価な暗号化。
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) - `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)を追加することによってリプレイ攻撃からイーサリアムを保護。
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) - 消費量に基づく opcode ガス価格の最適化。
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) - ブロック内に、より多くのデータを格納するために CallData のコストを削減。 - [レイヤー 2 スケーリング](/developers/docs/scaling/#layer-2-scaling)に良い。
@@ -298,7 +298,7 @@ sidebarDepth: 1
 コンスタンティノープルのフォーク
 
 - [プルーフ・オブ・ステーク](#beacon-chain-genesis)実装前にブロックチェーンがフリーズしなかったことを確認しました。
-- [EVM](/glossary/#gas)内の特定のアクションの[ガス](/developers/docs/ethereum-stack/#ethereum-virtual-machine)コストを最適化しました。
+- <GlossaryTooltip termKey="gas">EVM</GlossaryTooltip>内の特定のアクションの[ガス](/developers/docs/ethereum-stack/#ethereum-virtual-machine)コストを最適化しました。
 - まだ作成されていないアドレスとやり取りする機能を追加しました。
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -325,7 +325,7 @@ sidebarDepth: 1
 ビザンチウムのフォーク
 
 - ブロックの[マイニング](/developers/docs/consensus-mechanisms/pow/mining/)報酬が 5ETH から 3ETH へ減額されました。
-- [ディフィカルティボム](/glossary/#difficulty-bomb)を 1 年延期しました。
+- <GlossaryTooltip termKey="difficulty-bomb">ディフィカルティボム</GlossaryTooltip>を 1 年延期しました。
 - 他のコントラクトに対して、状態変更を行わない呼び出しを行う機能を追加しました。
 - [レイヤー 2 スケーリング](/developers/docs/scaling/#layer-2-scaling)を可能にする特定の暗号技術を追加しました。
 
@@ -341,7 +341,7 @@ sidebarDepth: 1
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) - 可変長の戻り値のサポートを追加。
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) - `STATICCALL`オペコードを追加し、他のコントラクトへの非状態変化コールを有効化。
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) - 難易度調整式を変更。
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) - [ディフィカルティボム](/glossary/#difficulty-bomb)を 1 年延期し、ブロック報酬を 5 から 3ETH に減額。
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) - <GlossaryTooltip termKey="difficulty-bomb">ディフィカルティボム</GlossaryTooltip>を 1 年延期し、ブロック報酬を 5 から 3ETH に減額。
 
 </ExpandableCard>
 
@@ -401,7 +401,7 @@ sidebarDepth: 1
 
 #### 要約 {#dao-fork-summary}
 
-DAO フォークは、安全でない[自律分散型組織(DAO)](/glossary/#dao)のコントラクトが、1 回のハッキングによって、360 万以上の ETH を流出させた[2016 年の DAO 攻撃](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/)に対する対策でした。 フォークにより、欠陥のあるコントラクトから[新しいコントラクト](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)に資金が移されました。その際に使用した関数が withdraw です。 資金を失った人がウォレット内の 100DAO トークンごとに 1ETH を引き出せるようにしました。
+DAO フォークは、安全でない<GlossaryTooltip termKey="dao">自律分散型組織(DAO)</GlossaryTooltip>のコントラクトが、1 回のハッキングによって、360 万以上の ETH を流出させた[2016 年の DAO 攻撃](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/)に対する対策でした。 フォークにより、欠陥のあるコントラクトから[新しいコントラクト](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)に資金が移されました。その際に使用した関数が withdraw です。 資金を失った人がウォレット内の 100DAO トークンごとに 1ETH を引き出せるようにしました。
 
 この行動指針は Ethereum コミュニティの投票で行われました。 ETH 保有者は、 [投票プラットフォーム](http://v1.carbonvote.com/)でトランザクションを通じて投票することができました。 フォークの実行は、投票の 85%以上に支持されました。
 
@@ -439,7 +439,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 #### 要約 {#frontier-thawing-summary}
 
-フロンティアソーイングのフォークでは、1[ブロック](/glossary/#gas)あたり 5,000 の[ガス](/glossary/#block)リミットが解除され、デフォルトのガス価格が 51[gwei](/glossary/#gwei)に設定されました。 その結果、21,000 のガスが必要となるトランザクションが可能になりました。 [ディフィカルティボム](/glossary/#difficulty-bomb)は、[プルーフ・オブ・ステーク](/glossary/#pos)にハードフォークするために導入されました。
+フロンティアソーイングのフォークでは、1<GlossaryTooltip termKey="gas">ブロック</GlossaryTooltip>あたり 5,000 の<GlossaryTooltip termKey="block">ガス</GlossaryTooltip>リミットが解除され、デフォルトのガス価格が 51<GlossaryTooltip termKey="gwei">gwei</GlossaryTooltip>に設定されました。 その結果、21,000 のガスが必要となるトランザクションが可能になりました。 <GlossaryTooltip termKey="difficulty-bomb">ディフィカルティボム</GlossaryTooltip>は、<GlossaryTooltip termKey="pos">プルーフ・オブ・ステーク</GlossaryTooltip>にハードフォークするために導入されました。
 
 - [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [イーサリアムプロトコルのアップデート 1 を読む](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
@@ -452,7 +452,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 #### 要約 {#frontier-summary}
 
-フロンティアは稼動していましたが、イーサリアムプロジェクトのベアボーン実装でした。 フオリンピックのテストフェーズの成功を受けて実装されたものであり、 技術系ユーザー、特にデベロッパー向けに開発されたものでした。 [ブロック](/glossary/#block)の[ガス](/glossary/#gas)リミットは、5,000 でした。 この「解凍」期間があったおかげで、マイナーはオペレーションを開始し、アーリーアダプターは「急ぐ」必要もなくクライアントをインストールすることができました。
+フロンティアは稼動していましたが、イーサリアムプロジェクトのベアボーン実装でした。 フオリンピックのテストフェーズの成功を受けて実装されたものであり、 技術系ユーザー、特にデベロッパー向けに開発されたものでした。 <GlossaryTooltip termKey="block">ブロック</GlossaryTooltip>の<GlossaryTooltip termKey="gas">ガス</GlossaryTooltip>リミットは、5,000 でした。 この「解凍」期間があったおかげで、マイナーはオペレーションを開始し、アーリーアダプターは「急ぐ」必要もなくクライアントをインストールすることができました。
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

@@ -9,7 +9,7 @@ Il comportamento di un nodo di Ethereum è controllato dal software del client c
 
 ## Prerequisiti {#prerequisites}
 
-Se ancora non sai cosa sono i nodi e i client, dai un'occhiata a [nodi e client](/developers/docs/nodes-and-clients/). I livelli di [esecuzione](/glossary/#execution-layer) e [consenso](/glossary/#consensus-layer) sono definiti nel glossario.
+Se ancora non sai cosa sono i nodi e i client, dai un'occhiata a [nodi e client](/developers/docs/nodes-and-clients/). I livelli di <GlossaryTooltip termKey="execution-layer">esecuzione</GlossaryTooltip> e <GlossaryTooltip termKey="consensus-layer">consenso</GlossaryTooltip> sono definiti nel glossario.
 
 ## Perché esistono diversi client? {#why-multiple-clients}
 

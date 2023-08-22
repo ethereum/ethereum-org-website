@@ -10,7 +10,7 @@ summaryPoints:
 
 # Account abstraction {#account-abstraction}
 
-Users interact with Ethereum using **[externally owned accounts (EOAs)](/glossary/#eoa)**. This is the only way to start a transaction or execute a smart contract. This limits how users can interact with Ethereum. For example, it makes it difficult to do batches of transactions and requires users to always keep an ETH balance to cover gas.
+Users interact with Ethereum using **<GlossaryTooltip termKey="eoa">externally owned accounts (EOAs)</GlossaryTooltip>**. This is the only way to start a transaction or execute a smart contract. This limits how users can interact with Ethereum. For example, it makes it difficult to do batches of transactions and requires users to always keep an ETH balance to cover gas.
 
 Account abstraction is a way to solve these problems by allowing users to flexibly program more security and better user experiences into their accounts. This can happen by [upgrading EOAs](https://eips.ethereum.org/EIPS/eip-3074) so they can be controlled by smart contracts, or by [upgrading smart contracts](https://eips.ethereum.org/EIPS/eip-2938) so they can initiate transactions. These options both require changes to the Ethereum protocol. There is also a third path involving adding a [second, separate transaction system](https://eips.ethereum.org/EIPS/eip-4337) to run in parallel to the existing protocol. Regardless of the route, the outcome is access to Ethereum via smart contract wallets, either natively supported as part of the existing protocol or via an add-on transaction network.
 
@@ -23,7 +23,7 @@ Smart contract wallets unlock many benefits for the user, including:
 - batch transactions together (e.g. approve and execute a swap in one go)
 - more opportunities for dapps and wallet developers to innovate on user experiences
 
-These benefits are not natively supported today because only externally-owned accounts ([EOAs](/glossary/#eoa)) can start transactions. EOAs are simply public-private key pairs. They work like this:
+These benefits are not natively supported today because only externally-owned accounts (<GlossaryTooltip termKey="eoa">EOAs</GlossaryTooltip>) can start transactions. EOAs are simply public-private key pairs. They work like this:
 
 - if you have the private key you can do _anything_ within the rules of the Ethereum Virtual Machine (EVM)
 - if you do not have the private key you can do _nothing_.

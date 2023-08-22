@@ -16,7 +16,7 @@ summaryPoint4: Anda mungkin mengenalnya sebagai "Fase 0" pada roadmap teknis.
 
 ## Apa yang dilakukan oleh Rantai Suar? {#what-does-the-beacon-chain-do}
 
-Rantai Suar akan mengadakan atau mengoordinasi jaringan yang sudah diperluas dari [shard](/roadmap/danksharding/) dan [penaruh](/staking/). Tapi itu tidak akan sama seperti [Jaringan Utama Ethereum](/glossary/#mainnet) saat ini. Rantai suar tidak bisa menangani akun ataupun kontrak pintar.
+Rantai Suar akan mengadakan atau mengoordinasi jaringan yang sudah diperluas dari [shard](/roadmap/danksharding/) dan [penaruh](/staking/). Tapi itu tidak akan sama seperti <GlossaryTooltip termKey="mainnet">Jaringan Utama Ethereum</GlossaryTooltip> saat ini. Rantai suar tidak bisa menangani akun ataupun kontrak pintar.
 
 Peran Rantai Suar akan berubah seiring berjalannya waktu, namun rantai ini merupakan komponen dasar untuk [jaringan Ethereum yang aman, berkelanjutan, dan terukur yang sedang kami kerjakan](/roadmap/vision/).
 

@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes. Aceste lanțuri sunt denumite uneori lanțuri „copil”, deoarece sunt în esență o copie mai mică a Mainnet-ului Ethereum. Arborii Merkle permit crearea unei stive nelimitate de astfel de lanțuri, care pot lucra la descongestionarea lățimii de bandă de pe lanțurile părinte (inclusiv Mainnet). Acestea își obțin securitatea prin [dovezile de fraudă](/glossary/#fraud-proof), iar fiecare lanț copil are propriul său mecanism de validare a blocurilor.
+A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes. Aceste lanțuri sunt denumite uneori lanțuri „copil”, deoarece sunt în esență o copie mai mică a Mainnet-ului Ethereum. Arborii Merkle permit crearea unei stive nelimitate de astfel de lanțuri, care pot lucra la descongestionarea lățimii de bandă de pe lanțurile părinte (inclusiv Mainnet). Acestea își obțin securitatea prin <GlossaryTooltip termKey="fraud-proof">dovezile de fraudă</GlossaryTooltip>, iar fiecare lanț copil are propriul său mecanism de validare a blocurilor.
 
 ## Condiții prealabile {#prerequisites}
 

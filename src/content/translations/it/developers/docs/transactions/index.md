@@ -106,7 +106,7 @@ Con l'hash di firma, la transazione può provare crittograficamente che proviene
 
 ### Il campo di dati {#the-data-field}
 
-La grande maggioranza delle transazioni accede a un contratto da un conto esterno. Gran parte dei contratti è scritta in Solidity e interpreta il proprio campo dei dati secondo l'[interfaccia binaria dell'applicazione (Application Binary Interface – ABI)](/glossary/#abi/).
+La grande maggioranza delle transazioni accede a un contratto da un conto esterno. Gran parte dei contratti è scritta in Solidity e interpreta il proprio campo dei dati secondo l'<GlossaryTooltip termKey="abi/">interfaccia binaria dell'applicazione (Application Binary Interface – ABI)</GlossaryTooltip>.
 
 I primi quattro byte specificano quale funzione chiamare, usando l'hash del nome e degli argomenti della funzione. Talvolta si può identificare la funzione dal selettore, usando [questo database](https://www.4byte.directory/signatures/).
 

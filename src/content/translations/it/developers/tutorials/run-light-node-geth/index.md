@@ -76,7 +76,7 @@ Questa console consente di interagire direttamente con Ethereum. Ad esempio, ese
 
 ## Rete principale e reti di prova {#mainnet-and-testnets}
 
-Geth esegue di default il tuo nodo sulla [Rete principale di Ethereum](/glossary/#mainnet/).
+Geth esegue di default il tuo nodo sulla <GlossaryTooltip termKey="mainnet/">Rete principale di Ethereum</GlossaryTooltip>.
 
 Puoi anche usare Geth per eseguire un nodo su una delle [reti di prova pubbliche](/networks/#testnets/), eseguendo uno dei seguenti comandi nel Terminale:
 

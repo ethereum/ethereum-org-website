@@ -12,7 +12,7 @@ Wenn Sie dabei auf vorhandene Datenanbieter setzen, können Sie die Entwicklung 
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten das Grundkonzept des [Block -Explorers](/developers/docs/data-and-analytics/block-explorers/) kennen, um dessen Einsatz im Kontext der Datenanalyse besser zu verstehen. Zusätzlich sollten Sie sich mit dem Konzept eines [Index](/glossary/#index) vertraut machen, um besser verstehen zu können, welche Vorteile sie für ein Systemdesign bedeuten.
+Sie sollten das Grundkonzept des [Block -Explorers](/developers/docs/data-and-analytics/block-explorers/) kennen, um dessen Einsatz im Kontext der Datenanalyse besser zu verstehen. Zusätzlich sollten Sie sich mit dem Konzept eines <GlossaryTooltip termKey="index">Index</GlossaryTooltip> vertraut machen, um besser verstehen zu können, welche Vorteile sie für ein Systemdesign bedeuten.
 
 In puncto architektonische Grundlagen sollten Sie mit den Begriffen [API](https://www.wikipedia.org/wiki/API) und [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) vertraut sein, auch in der Theorie.
 
@@ -26,7 +26,7 @@ Mit [GraphQL](https://graphql.org/) können Entwickler jede der verfügbaren off
 
 Viele [Block-Explorer](/developers/docs/data-and-analytics/block-explorers/) bieten [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer)-[API-](https://www.wikipedia.org/wiki/API)Gateways, die Entwicklern Einblick in Echtzeitdaten zu Blöcken, Transaktionen, Minern, Konten und anderen Aktivitäten in der Chain gewähren.
 
-Entwickler können diese Daten dann verarbeiten und umwandeln, um ihren Nutzern einzigartige Einblicke und Interaktionen mit der [Blockchain](/glossary/#blockchain) zu ermöglichen.
+Entwickler können diese Daten dann verarbeiten und umwandeln, um ihren Nutzern einzigartige Einblicke und Interaktionen mit der <GlossaryTooltip termKey="blockchain">Blockchain</GlossaryTooltip> zu ermöglichen.
 
 ## Weiterführende Informationen {#further-reading}
 

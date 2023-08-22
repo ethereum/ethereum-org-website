@@ -44,7 +44,7 @@ Der MEV taucht auf der Blockchain auf mehrere Arten auf.
 
 ### DEX-Arbitrage {#mev-examples-dex-arbitrage}
 
-[Decentralized Exchange](/glossary/#dex) (DEX) Arbitrage ist die einfachste und bekannteste MEV-Möglichkeit. Infolgedessen ist sie auch die wettbewerbsfähigste.
+<GlossaryTooltip termKey="dex">Decentralized Exchange</GlossaryTooltip> (DEX) Arbitrage ist die einfachste und bekannteste MEV-Möglichkeit. Infolgedessen ist sie auch die wettbewerbsfähigste.
 
 Das funktioniert so: Wenn zwei DEX einen Token zu zwei unterschiedlichen Preisen anbieten, kann jemand den Token auf dem DEX mit dem niedrigeren Preis kaufen und auf dem DEX mit dem höheren Preis in einer einzigen, atomaren Transaktion verkaufen. Dank der Mechanik der Blockchain ist dies eine echte, risikolose Arbitrage.
 

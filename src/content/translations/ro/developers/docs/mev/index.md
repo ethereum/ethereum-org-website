@@ -44,7 +44,7 @@ MEV apare pe blockchain în câteva moduri.
 
 ### DEX arbitrage {#mev-examples-dex-arbitrage}
 
-[Arbitrajul de schimb descentralizat](/glossary/#dex) (DEX) este cea mai simplă și cea mai cunoscută oportunitate MEV. Ca urmare, este și cea mai competitivă.
+<GlossaryTooltip termKey="dex">Arbitrajul de schimb descentralizat</GlossaryTooltip> (DEX) este cea mai simplă și cea mai cunoscută oportunitate MEV. Ca urmare, este și cea mai competitivă.
 
 Funcționează astfel: dacă două DEX-uri oferă un token la două prețuri diferite, cineva poate cumpăra tokenul de pe DEX-ul cu prețul cel mai mic și îl poate vinde pe DEX-ul cu prețul cel mai mare într-o singură tranzacție atomică. Datorită mecanicii blockchain, acesta este un arbitraj adevărat, fără riscuri.
 

@@ -44,7 +44,7 @@ MEV, blok zincirinde birkaç şekilde ortaya çıkar.
 
 ### DEX arbitrajı {#mev-examples-dex-arbitrage}
 
-[Merkeziyetsiz borsa](/glossary/#dex) (DEX) arbitraj yapılması en basit ve yaygın MEV fırsatıdır. Bunun sonucu olarak ayrıca en rekabetçi olandır.
+<GlossaryTooltip termKey="dex">Merkeziyetsiz borsa</GlossaryTooltip> (DEX) arbitraj yapılması en basit ve yaygın MEV fırsatıdır. Bunun sonucu olarak ayrıca en rekabetçi olandır.
 
 Şu şekilde çalışır: İki DEX bir token'ı iki farklı fiyattan sunuyorsa, biri token'ı düşük fiyatlı DEX'te satın alabilir ve tek bir atomik işlemde daha yüksek fiyatlı DEX'te satabilir. Blok zinciri mekanikleri sayesinde, bu gerçek ve risksiz bir arbitraj sağlar.
 

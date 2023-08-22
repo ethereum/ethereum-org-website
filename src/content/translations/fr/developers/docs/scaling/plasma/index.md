@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Une chaîne Plasma est une blockchain distincte ancrée au réseau principal d'Ethereum mais exécutant des transactions hors chaîne avec son propre mécanisme de validation des blocs. Les chaînes Plasma sont parfois appelées chaînes « enfant », car elles sont essentiellement des copies plus petites du réseau principal Ethereum. Les chaînes plasma utilisent [des preuves de fraude](/glossary/#fraud-proof) (comme [des rollups optimistes](/developers/docs/scaling/optimistic-rollups/)) pour arbitrer les conflits.
+Une chaîne Plasma est une blockchain distincte ancrée au réseau principal d'Ethereum mais exécutant des transactions hors chaîne avec son propre mécanisme de validation des blocs. Les chaînes Plasma sont parfois appelées chaînes « enfant », car elles sont essentiellement des copies plus petites du réseau principal Ethereum. Les chaînes plasma utilisent <GlossaryTooltip termKey="fraud-proof">des preuves de fraude</GlossaryTooltip> (comme [des rollups optimistes](/developers/docs/scaling/optimistic-rollups/)) pour arbitrer les conflits.
 
 Les arbres de Merkle permettent de créer une pile infinie de ces chaînes qui peuvent fonctionner pour décharger la bande passante des chaînes mères (y compris le réseau principal Ethereum). Cependant, alors que ces chaînes intègrent une partie de la sécurité d'Ethereum (via des preuves de fraude), leur sécurité et leur efficacité sont affectées par plusieurs limitations de conception.
 

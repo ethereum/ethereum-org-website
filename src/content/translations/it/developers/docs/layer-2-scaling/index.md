@@ -30,7 +30,7 @@ Dovresti avere una buona conoscenza di tutti gli argomenti fondamentali. L'imple
 - [Sidechain](#sidechains)
 - [Soluzioni ibride](#hybrid-solutions)
 
-La maggior parte delle soluzioni di livello 2 è incentrata su un server o su un cluster di server, ognuno dei quali può essere denominato nodo, validatore, operatore, sequenziatore, block producer o simile. A seconda dell'implementazione, questi nodi di livello 2 possono essere gestiti da aziende, dalle entità che li usano, da operatori terzi o da un grande gruppo di individui (similmente alla rete principale). Parlando in generale, le transazioni sono inviate a questi nodi di livello 2 anziché essere sottoposte direttamente al livello 1 ([rete principale](/glossary/#mainnet)); l'istanza di livello 2 raggruppa poi i blocchi prima di ancorarli al livello 1. In seguito vengono confermati al livello 1 e non possono essere alterati. I dettagli dell'esecuzione vera e propria variano notevolmente tra le varie tecnologie e implementazioni di livello 2.
+La maggior parte delle soluzioni di livello 2 è incentrata su un server o su un cluster di server, ognuno dei quali può essere denominato nodo, validatore, operatore, sequenziatore, block producer o simile. A seconda dell'implementazione, questi nodi di livello 2 possono essere gestiti da aziende, dalle entità che li usano, da operatori terzi o da un grande gruppo di individui (similmente alla rete principale). Parlando in generale, le transazioni sono inviate a questi nodi di livello 2 anziché essere sottoposte direttamente al livello 1 (<GlossaryTooltip termKey="mainnet">rete principale</GlossaryTooltip>); l'istanza di livello 2 raggruppa poi i blocchi prima di ancorarli al livello 1. In seguito vengono confermati al livello 1 e non possono essere alterati. I dettagli dell'esecuzione vera e propria variano notevolmente tra le varie tecnologie e implementazioni di livello 2.
 
 Un'istanza specifica di livello 2 può essere aperta e condivisa da molte applicazioni o può essere distribuita da un'azienda e dedicata esclusivamente al supporto della sua applicazione.
 
@@ -52,8 +52,8 @@ Le soluzioni di rollup richiedono relayer che abbiano fatto staking con una part
 
 Ci sono due tipi di rollup che diversi modelli di sicurezza:
 
-- Zero knowledge: esegue il calcolo esternamente alla catena e invia una [**prova di validità**](/glossary/#validity-proof) alla catena
-- Optimistic: presume che le transazioni siano valide di default ed esegue il calcolo, attraverso una [**prova di frode**](/glossary/#fraud-proof), solo in caso di contestazione
+- Zero knowledge: esegue il calcolo esternamente alla catena e invia una <GlossaryTooltip termKey="validity-proof">**prova di validità**</GlossaryTooltip> alla catena
+- Optimistic: presume che le transazioni siano valide di default ed esegue il calcolo, attraverso una <GlossaryTooltip termKey="fraud-proof">**prova di frode**</GlossaryTooltip>, solo in caso di contestazione
 
 ### Rollup di tipo zero knowledge {#zk-rollups}
 
@@ -65,11 +65,11 @@ La sidechain dove si verificano gli ZK rollup può essere ottimizzata per ridurr
 
 #### Pro e contro {#zk-pros-and-cons}
 
-| Pro                                                                                                       | Contro                                                                                                                                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Nessun ritardo perché le prove sono già considerate valide quando vengono inviate alla catena principale. | Limitato a trasferimenti semplici, non compatibile con l'EVM.                                                                                                                                                                              |
-| Meno vulnerabile ad attacchi economici rispetto agli [Optimistic rollup](#optimistic-pros-and-cons).      | Le prove di validità sono ardue da calcolare, non ne vale la pena per applicazioni con poca attività sulla catena.                                                                                                                         |
-|                                                                                                           | Tempo di [finalità](/glossary/#finality) soggettivo piu' lento (10-30 min per generare una prova ZK) (ma più veloce rispetto a finalità piena, perché non ci sono ritardi di disputa come negli [optimistic rollup](#optimistic-rollups)). |
+| Pro                                                                                                       | Contro                                                                                                                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nessun ritardo perché le prove sono già considerate valide quando vengono inviate alla catena principale. | Limitato a trasferimenti semplici, non compatibile con l'EVM.                                                                                                                                                                                                             |
+| Meno vulnerabile ad attacchi economici rispetto agli [Optimistic rollup](#optimistic-pros-and-cons).      | Le prove di validità sono ardue da calcolare, non ne vale la pena per applicazioni con poca attività sulla catena.                                                                                                                                                        |
+|                                                                                                           | Tempo di <GlossaryTooltip termKey="finality">finalità</GlossaryTooltip> soggettivo piu' lento (10-30 min per generare una prova ZK) (ma più veloce rispetto a finalità piena, perché non ci sono ritardi di disputa come negli [optimistic rollup](#optimistic-rollups)). |
 
 #### Utilizzano i rollup ZK {#use-zk-rollups}
 

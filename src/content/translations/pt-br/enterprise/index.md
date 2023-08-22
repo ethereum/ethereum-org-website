@@ -13,7 +13,7 @@ Os aplicativos de blockchain ajudam empresas a:
 - Criar novos modelos de negócios e oportunidades de criação de valor
 - Preparar a organização para o futuro de maneira competitiva
 
-Aplicativos da cadeia de blocos empresarial podem ser construídos na [Rede Principal](/glossary/#mainnet) Ethereum ou em cadeias de blocos privadas baseadas na tecnologia Ethereum. Encontre mais informações em [cadeias privadas do Ethereum](/enterprise/private-ethereum/).
+Aplicativos da cadeia de blocos empresarial podem ser construídos na <GlossaryTooltip termKey="mainnet">Rede Principal</GlossaryTooltip> Ethereum ou em cadeias de blocos privadas baseadas na tecnologia Ethereum. Encontre mais informações em [cadeias privadas do Ethereum](/enterprise/private-ethereum/).
 
 ## Ethereum público x privado {#private-vs-public}
 

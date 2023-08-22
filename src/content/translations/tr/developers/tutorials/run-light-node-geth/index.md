@@ -76,7 +76,7 @@ Bu konsol, Ethereum ile doğrudan etkileşime izin verir. Örneğin, `eth.blockN
 
 ## Mainnet ve test ağları {#mainnet-and-testnets}
 
-Geth, düğümünüzü varsayılan olarak [Ethereum Mainnet](/glossary/#mainnet/) üzerinde çalıştırır.
+Geth, düğümünüzü varsayılan olarak <GlossaryTooltip termKey="mainnet/">Ethereum Mainnet</GlossaryTooltip> üzerinde çalıştırır.
 
 Terminal'de aşağıdaki komutlardan birini çalıştırarak, [genel test ağlarından](/networks/#testnets/) birinde bir düğüm çalıştırmak için Geth'i kullanmak da mümkündür:
 

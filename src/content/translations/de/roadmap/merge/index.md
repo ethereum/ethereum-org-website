@@ -16,7 +16,7 @@ summaryPoint4: Zuvor wurde dieser Vorgang als „das Andocken“ bezeichnet.
 
 ## Was ist die Zusammenführung? {#what-is-the-docking}
 
-Wichtig ist, zu erwähnen, dass die [Beacon Chain](/roadmap/beacon-chain/) anfangs getrennt vom [Mainnet](/glossary/#mainnet), also der der Chain, die wir heute verwenden, eingeführt wurde. Das Ethereum-Mainnet wird weiterhin durch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) gesichert, auch wenn die Beacon Chain parallel dazu mit [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) läuft. Die Zusammenführung ist der Moment, in dem diese beiden Systeme endlich zusammenkommen.
+Wichtig ist, zu erwähnen, dass die [Beacon Chain](/roadmap/beacon-chain/) anfangs getrennt vom <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip>, also der der Chain, die wir heute verwenden, eingeführt wurde. Das Ethereum-Mainnet wird weiterhin durch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) gesichert, auch wenn die Beacon Chain parallel dazu mit [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) läuft. Die Zusammenführung ist der Moment, in dem diese beiden Systeme endlich zusammenkommen.
 
 Stelle dir Ethereum als Raumschiff vor, das noch nicht ganz für seine interstellare Reise bereit ist. Mit der Beacon Chain hat die Community einen neuen Motor und einen gehärteten Rumpf gebaut. Wenn die Zeit reif ist, wird das aktuelle Schiff an das neue System andocken und zu einem Schiff verschmelzen, das bereit ist, einige Lichtjahre zurückzulegen und das Universum zu erobern.
 

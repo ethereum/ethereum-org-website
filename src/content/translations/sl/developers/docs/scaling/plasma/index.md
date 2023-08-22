@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Plasma veriga je ločena blokovna veriga, ki je zasidrana na glavno verigo Ethereum in uporablja dokazila o prevarah (kot [optimistični zvitki](/developers/docs/scaling/optimistic-rollups/)) za reševanje sporov. Te verige se včasih naslavlja kot "otroške" verige, saj so v bistvu manjše kopije glavne verige Ethereum. Drevesa Merkle omogočajo ustvarjanje brezmejnih skladov teh verig, ki lahko delajo za razbremenitev pasovne širine starševskih verig (vključno z glavnim omrežjem). Te svojo varnost izpeljejo prek [odporov na prevare](/glossary/#fraud-proof) in vsaka otroška veriga ima svoj lasten mehanizem za potrjevanje blokov.
+Plasma veriga je ločena blokovna veriga, ki je zasidrana na glavno verigo Ethereum in uporablja dokazila o prevarah (kot [optimistični zvitki](/developers/docs/scaling/optimistic-rollups/)) za reševanje sporov. Te verige se včasih naslavlja kot "otroške" verige, saj so v bistvu manjše kopije glavne verige Ethereum. Drevesa Merkle omogočajo ustvarjanje brezmejnih skladov teh verig, ki lahko delajo za razbremenitev pasovne širine starševskih verig (vključno z glavnim omrežjem). Te svojo varnost izpeljejo prek <GlossaryTooltip termKey="fraud-proof">odporov na prevare</GlossaryTooltip> in vsaka otroška veriga ima svoj lasten mehanizem za potrjevanje blokov.
 
 ## Predpogoji {#prerequisites}
 

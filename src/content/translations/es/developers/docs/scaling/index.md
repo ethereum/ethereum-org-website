@@ -21,7 +21,7 @@ Es necesario que comprenda todos los temas fundamentales. La implementación de 
 
 ## Escalado en cadena {#on-chain-scaling}
 
-El método de escalado en cadena ("on-chain") requiere cambios en el protocolo de Ethereum ([red principal](/glossary/#mainnet) de capa 1). El enfoque principal para este método de escalado es actualmente la fragmentación.
+El método de escalado en cadena ("on-chain") requiere cambios en el protocolo de Ethereum (<GlossaryTooltip termKey="mainnet">red principal</GlossaryTooltip> de capa 1). El enfoque principal para este método de escalado es actualmente la fragmentación.
 
 ### Fragmentación {#sharding}
 
@@ -56,8 +56,8 @@ Los rollups ejecutan transacciones fuera de la capa 1 y luego los datos se publi
 
 Hay dos tipos de rollups con diferentes modelos de seguridad:
 
-- **Rollups optimistas**: asumen que las transacciones son válidas de forma predeterminada y solo ejecutan cómputo a través de una [**prueba de fraude**](/glossary/#fraud-proof) en caso de que haya un reclamo. [Obtenga más información sobre los rollups optimistas](/developers/docs/scaling/optimistic-rollups/).
-- **Rollups de conocimiento cero**: realizan la ejecución de las transacciones fuera de la cadena y envían una [**prueba de validez**](/glossary/#validity-proof) a la cadena. [Obtenga más información sobre los rollups de conocimiento cero](/developers/docs/scaling/zk-rollups/).
+- **Rollups optimistas**: asumen que las transacciones son válidas de forma predeterminada y solo ejecutan cómputo a través de una <GlossaryTooltip termKey="fraud-proof">**prueba de fraude**</GlossaryTooltip> en caso de que haya un reclamo. [Obtenga más información sobre los rollups optimistas](/developers/docs/scaling/optimistic-rollups/).
+- **Rollups de conocimiento cero**: realizan la ejecución de las transacciones fuera de la cadena y envían una <GlossaryTooltip termKey="validity-proof">**prueba de validez**</GlossaryTooltip> a la cadena. [Obtenga más información sobre los rollups de conocimiento cero](/developers/docs/scaling/zk-rollups/).
 
 #### Canales de estado {#channels}
 

@@ -317,7 +317,7 @@ Możesz myśleć o DeFi jak o systemie wielowarstwowym:
 
 1. Łańcuch bloków — Ethereum zawiera historię transakcji i stany kont.
 2. Aktywa — [ETH](/eth/) i inne tokeny (waluty).
-3. Protokoły — [inteligentne kontrakty contracts](/glossary/#smart-contract), które zapewniają funkcjonalność, na przykład usługę pozwalającą na zdecentralizowane pożyczanie aktywów.
+3. Protokoły — <GlossaryTooltip termKey="smart-contract">inteligentne kontrakty contracts</GlossaryTooltip>, które zapewniają funkcjonalność, na przykład usługę pozwalającą na zdecentralizowane pożyczanie aktywów.
 4. [Aplikacje](/dapps/) — produkty, których używamy do zarządzania protokołami i uzyskiwania dostępu do nich.
 
 ## Pomóż nam budować DeFi {#build-defi}

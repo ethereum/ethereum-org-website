@@ -31,7 +31,7 @@ Sedang mencari peningkatan protokol di masa mendatang? [Pelajari tentang peningk
 
 #### Ringkasan {#arrow-glacier-summary}
 
-Peningkatan jaringan Arrow Glacier menjeda [bom kesulitan](/glossary/#difficulty-bomb) sebanyak beberapa bulan. Ini adalah satu-satunya perubahan yang diperkenalkan dalam peningkatan ini, dan sifatnya sama dengan peningkatan [Muir Glacier](#muir-glacier). Perubahan serupa telah diterapkan pada peningkatan jaringan [Byzantium](#byzantium), [Konstatinopel](#constantinople) dan [London](#london).
+Peningkatan jaringan Arrow Glacier menjeda <GlossaryTooltip termKey="difficulty-bomb">bom kesulitan</GlossaryTooltip> sebanyak beberapa bulan. Ini adalah satu-satunya perubahan yang diperkenalkan dalam peningkatan ini, dan sifatnya sama dengan peningkatan [Muir Glacier](#muir-glacier). Perubahan serupa telah diterapkan pada peningkatan jaringan [Byzantium](#byzantium), [Konstatinopel](#constantinople) dan [London](#london).
 
 - [Blog EF - Pengumuman Peningkatan Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Peningkatan Arrow Glacier Ethereum](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -72,7 +72,7 @@ Altair adalah peningkatan besar dan pertama untuk jaringan yang memiliki waktu r
 
 #### Ringkasan {#london-summary}
 
-Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), yang memperbarui pasar biaya transaksi, bersamaan dengan perubahan bagaimana pembayaran kembali gas ditangani dan jadwal untuk [Zaman Es](/glossary/#ice-age).
+Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), yang memperbarui pasar biaya transaksi, bersamaan dengan perubahan bagaimana pembayaran kembali gas ditangani dan jadwal untuk <GlossaryTooltip termKey="ice-age">Zaman Es</GlossaryTooltip>.
 
 - [Apakah Anda pengembang dApp? Pastikan untuk meningkatkan pustaka dan peralatan Anda.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
 - [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -136,7 +136,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 #### Ringkasan {#deposit-contract-summary}
 
-Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekosistem Ethereum. Bahkan kontrak [Jaringan Utama](/glossary/#mainnet) memiliki dampak langsung pada linimasa peluncuran [Rantai Suar](/roadmap/beacon-chain/), yaitu [peningkatan Ethereum](/roadmap/) yang penting.
+Kontrak setoran penaruhan memperkenalkan <GlossaryTooltip termKey="staking">penaruhan</GlossaryTooltip> ke ekosistem Ethereum. Bahkan kontrak <GlossaryTooltip termKey="mainnet">Jaringan Utama</GlossaryTooltip> memiliki dampak langsung pada linimasa peluncuran [Rantai Suar](/roadmap/beacon-chain/), yaitu [peningkatan Ethereum](/roadmap/) yang penting.
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -152,7 +152,7 @@ Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekos
 
 #### Ringkasan {#muir-glacier-summary}
 
-Fork Gletser Muir memperkenalkan penundaan pada [bom kesulitan](/glossary/#difficulty-bomb). Peningkatan kesulitan blok mekanisme konsensus [bukti kerja](/developers/docs/consensus-mechanisms/pow/) mengancam akan menurunkan kegunaan Ethereum dengan meningkatkan waktu tunggu untuk mengirim transaksi dan menggunakan dapps.
+Fork Gletser Muir memperkenalkan penundaan pada <GlossaryTooltip termKey="difficulty-bomb">bom kesulitan</GlossaryTooltip>. Peningkatan kesulitan blok mekanisme konsensus [bukti kerja](/developers/docs/consensus-mechanisms/pow/) mengancam akan menurunkan kegunaan Ethereum dengan meningkatkan waktu tunggu untuk mengirim transaksi dan menggunakan dapps.
 
 - [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Baca penjelasan Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -175,7 +175,7 @@ Fork Gletser Muir memperkenalkan penundaan pada [bom kesulitan](/glossary/#diffi
 
 Istanbul fork:
 
-- Mengoptimalkan biaya [gas](/glossary/#gas) dari tindakan tertentu di [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Mengoptimalkan biaya <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> dari tindakan tertentu di [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Meningkatkan ketahanan terhadap serangan penolakan layanan.
 - Membuat solusi [penskalaan Lapisan 2](/developers/docs/scaling/#layer-2-scaling) berdasarkan SNARK dan STARK berkinerja lebih baik.
 - Mengaktifkan Ethereum dan Zcash untuk saling beroperasi.
@@ -186,7 +186,7 @@ Istanbul fork:
 <ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _izinkan Ethereum bekerja dengan mata uang yang menjaga privasi seperti Zcash._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _kriptografi lebih murah untuk meningkatkan biaya [gas](/glossary/#gas)._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _kriptografi lebih murah untuk meningkatkan biaya <GlossaryTooltip termKey="gas">gas</GlossaryTooltip>._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _melindungi Ethereum dari serangan ulang dengan menambahkan `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _mengoptimalkan harga gas opcode berdasarkan konsumsi._
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _mengurangi biaya CallData untuk memungkinkan lebih banyak data dalam blok – bagus untuk [Penskalaan lapisan 2](/developers/docs/scaling/#layer-2-scaling)._
@@ -205,7 +205,7 @@ Istanbul fork:
 Fork Konstantinopel:
 
 - Memastikan blockchain tidak membeku sebelum [bukti taruhan diimplementasikan](#beacon-chain-genesis).
-- Mengoptimalkan biaya [gas](/glossary/#gas) dari tindakan tertentu di [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Mengoptimalkan biaya <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> dari tindakan tertentu di [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Menambahkan kemampuan untuk berinteraksi dengan alamat yang belum dibuat.
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -232,7 +232,7 @@ Fork Konstantinopel:
 Fork Byzantium:
 
 - Pengurangan imbalan [penambangan](/developers/docs/consensus-mechanisms/pow/mining/) blok dari 5 menjadi 3 ETH.
-- Menunda [bom kesulitan](/glossary/#difficulty-bomb) selama satu tahun.
+- Menunda <GlossaryTooltip termKey="difficulty-bomb">bom kesulitan</GlossaryTooltip> selama satu tahun.
 - Menambahkan kemampuan untuk melakukan panggilan yang tidak mengubah status ke kontrak lain.
 - Menambahkan metode kriptografi tertentu untuk memungkinkan [penskalaan lapisan ke-2](/developers/docs/scaling/#layer-2-scaling).
 
@@ -248,7 +248,7 @@ Fork Byzantium:
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _menambahkan dukungan untuk nilai pengembalian panjang variabel._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _menambahkan opcode `STATICCALL`, memungkinkan panggilan yang tidak mengubah status ke kontrak lainnya._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _mengubah formula penyesuaian tingkat kesulitan._
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _menunda [bom kesulitan](/glossary/#difficulty-bomb) hingga 1 tahun dan mengurangi imbalan blok dari 5 ETH menjadi 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _menunda <GlossaryTooltip termKey="difficulty-bomb">bom kesulitan</GlossaryTooltip> hingga 1 tahun dan mengurangi imbalan blok dari 5 ETH menjadi 3 ETH._
 
 </ExpandableCard>
 
@@ -308,7 +308,7 @@ Tangerine Whistle fork adalah respons pertama terhadap serangan penolakan layana
 
 #### Ringkasan {#dao-fork-summary}
 
-Fork DAO merupakan respons terhadap [serangan DAO 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) di mana kontrak [DAO](/glossary/#dao) yang tidak aman dikuras dananya sebanyak lebih dari 3,6 juta ETH dalam peretasan saat itu. Fork tersebut memindahkan dana dari kontrak bermasalah ke [kontrak baru](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) dengan satu fungsi tunggal: tarik. Siapa pun yang kehilangan dana dapat menarik 1 ETH untuk setiap 100 token DAO di dompet mereka.
+Fork DAO merupakan respons terhadap [serangan DAO 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) di mana kontrak <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip> yang tidak aman dikuras dananya sebanyak lebih dari 3,6 juta ETH dalam peretasan saat itu. Fork tersebut memindahkan dana dari kontrak bermasalah ke [kontrak baru](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) dengan satu fungsi tunggal: tarik. Siapa pun yang kehilangan dana dapat menarik 1 ETH untuk setiap 100 token DAO di dompet mereka.
 
 Tindakan ini dipilih oleh komunitas Ethereum. Setiap pemegang ETH dapat memilih melalui transaksi di [platform pemilihan](http://v1.carbonvote.com/). Keputusan untuk melakukan fork mencapai lebih dari 85% suara.
 
@@ -346,7 +346,7 @@ Fork Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan proto
 
 #### Ringkasan {#frontier-thawing-summary}
 
-Fork thawing garis depan mengangkat batas [gas](/glossary/#gas) 5.000 per [blok](/glossary/#block) blok dan menetapkan harga gas default menjadi 51 [gwei](/glossary/#gwei). Ini memungkinkan transaksi–transaksi membutuhkan 21.000 gas.
+Fork thawing garis depan mengangkat batas <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> 5.000 per <GlossaryTooltip termKey="block">blok</GlossaryTooltip> blok dan menetapkan harga gas default menjadi 51 <GlossaryTooltip termKey="gwei">gwei</GlossaryTooltip>. Ini memungkinkan transaksi–transaksi membutuhkan 21.000 gas.
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 
@@ -358,7 +358,7 @@ Fork thawing garis depan mengangkat batas [gas](/glossary/#gas) 5.000 per [blok]
 
 #### Ringkasan {#frontier-summary}
 
-Garis depan adalah implementasi langsung, tetapi barebone dari proyek Ethereum. Ini mengikuti fase pengujian Olimpiade yang sukses. Ditujukan untuk pengguna teknis, khususnya pengembang. [Blok](/glossary/#block) memiliki batas [gas](/glossary/#gas) sebesar 5.000. Periode 'pencairan' ini memungkinkan penambang untuk memulai operasi mereka dan bagi pengguna awal untuk menginstal klien mereka tanpa harus 'terburu-buru'.
+Garis depan adalah implementasi langsung, tetapi barebone dari proyek Ethereum. Ini mengikuti fase pengujian Olimpiade yang sukses. Ditujukan untuk pengguna teknis, khususnya pengembang. <GlossaryTooltip termKey="block">Blok</GlossaryTooltip> memiliki batas <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> sebesar 5.000. Periode 'pencairan' ini memungkinkan penambang untuk memulai operasi mereka dan bagi pengguna awal untuk menginstal klien mereka tanpa harus 'terburu-buru'.
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

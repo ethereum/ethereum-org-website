@@ -12,7 +12,7 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-您应该理解[区块浏览器](/developers/docs/data-and-analytics/block-explorers/) 的基本概念，以便更好地理解在数据分析环境中使用它们。 此外，熟悉[索引](/glossary/#index)概念，以了解它们给系统设计带来的好处。
+您应该理解[区块浏览器](/developers/docs/data-and-analytics/block-explorers/) 的基本概念，以便更好地理解在数据分析环境中使用它们。 此外，熟悉<GlossaryTooltip termKey="index">索引</GlossaryTooltip>概念，以了解它们给系统设计带来的好处。
 
 就架构基础而言，也要从理论上了解[应用程序接口](https://www.wikipedia.org/wiki/API)和 [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) 是什么。
 
@@ -20,7 +20,7 @@ lang: zh
 
 许多[区块浏览器](/developers/docs/data-and-analytics/block-explorers/)提供 [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [应用程序接口](https://www.wikipedia.org/wiki/API)网关，它将使开发者可以看见区块上的实时数据、交易、矿工、帐户和其他链上活动。
 
-然后开发者可以处理和转换此数据，让他们的用户有独特的洞察力并与[区块链](/glossary/#blockchain)交互。 例如，[Etherscan](https://etherscan.io) 在每个 12 秒时隙都提供执行和共识数据。
+然后开发者可以处理和转换此数据，让他们的用户有独特的洞察力并与<GlossaryTooltip termKey="blockchain">区块链</GlossaryTooltip>交互。 例如，[Etherscan](https://etherscan.io) 在每个 12 秒时隙都提供执行和共识数据。
 
 ## Graph {#the-graph}
 

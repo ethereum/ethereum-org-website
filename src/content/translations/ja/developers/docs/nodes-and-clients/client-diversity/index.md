@@ -9,7 +9,7 @@ sidebarDepth: 2
 
 ## 前提知識 {#prerequisites}
 
-ノードやクライアントが何かについてご存知ではない場合、[ノードとクライアント](/developers/docs/nodes-and-clients/)を参照してください。 [実行レイヤー](/glossary/#execution-layer)と[コンセンサスレイヤー](/glossary/#consensus-layer)は用語集に定義が記載されています。
+ノードやクライアントが何かについてご存知ではない場合、[ノードとクライアント](/developers/docs/nodes-and-clients/)を参照してください。 <GlossaryTooltip termKey="execution-layer">実行レイヤー</GlossaryTooltip>と<GlossaryTooltip termKey="consensus-layer">コンセンサスレイヤー</GlossaryTooltip>は用語集に定義が記載されています。
 
 ## クライアントが複数ある理由 {#why-multiple-clients}
 

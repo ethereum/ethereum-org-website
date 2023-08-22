@@ -16,7 +16,7 @@ summaryPoint4: Vroeger noemden we dit "de docking."
 
 ## Wat is de merge? {#what-is-the-docking}
 
-Het is belangrijk om te onthouden dat aanvankelijk de [Beacon Chain](/roadmap/beacon-chain/) apart werd verzonden van het [hoofdnet](/glossary/#mainnet) - de keten die we vandaag gebruiken. Het Ethereum-hoofdnet blijft beveiligd door [proof-of-work](/ontwikkelaars/docs/consensus-mechanismen/pow/), zelfs terwijl de Beacon Chain parallel draait met [proof-of-stake](/ontwikkelaars/docs/consensus-mechanisms/pos/). De merge is het moment wanneer beide systemen eindelijk samenkomen.
+Het is belangrijk om te onthouden dat aanvankelijk de [Beacon Chain](/roadmap/beacon-chain/) apart werd verzonden van het <GlossaryTooltip termKey="mainnet">hoofdnet</GlossaryTooltip> - de keten die we vandaag gebruiken. Het Ethereum-hoofdnet blijft beveiligd door [proof-of-work](/ontwikkelaars/docs/consensus-mechanismen/pow/), zelfs terwijl de Beacon Chain parallel draait met [proof-of-stake](/ontwikkelaars/docs/consensus-mechanisms/pos/). De merge is het moment wanneer beide systemen eindelijk samenkomen.
 
 Stel je voor dat Ethereum een ruimteschip is dat nog niet helemaal klaar is voor een interstellaire reis. Met de Beacon Chain heeft de gemeenschap een nieuwe motor en een geharde romp gebouwd. Als het zover is, zal het huidige schip aan dit nieuwe systeem koppelen en samensmelten tot één schip, klaar om serieuze lichtjaren te overbruggen en het heelal in te gaan.
 

@@ -44,7 +44,7 @@ El MEV surge en la cadena de bloques de varias formas.
 
 ### Arbitraje en DEX {#mev-examples-dex-arbitrage}
 
-El arbitraje en [exchanges descentralizados](/glossary/#dex) (DEX) es la oportunidad más simple y conocida de MEV. Como resultado, también es la más competitiva.
+El arbitraje en <GlossaryTooltip termKey="dex">exchanges descentralizados</GlossaryTooltip> (DEX) es la oportunidad más simple y conocida de MEV. Como resultado, también es la más competitiva.
 
 Funciona así: si dos DEX ofrecen el mismo token a diferentes precios, alguien puede comprar el token en el DEX más barato y venderlo en el DEX de mayor precio en una sola transacción atómica. Gracias a las mecánicas de la cadena de bloques, esto es un verdadero arbitraje sin riesgos.
 

@@ -10,7 +10,7 @@ Dare ai contratti intelligenti la capacità di eseguirsi sfruttando input di dat
 
 ## Prerequisiti {#prerequisites}
 
-Questa pagina presuppone che il lettore abbia familiarità con i fondamentali di Ethereum, inclusi [nodi](/developers/docs/nodes-and-clients/), [meccanismi di consenso](/developers/docs/consensus-mechanisms/)e la tecnologia [EVM](/developers/docs/evm/). Dovresti anche avere una buona comprensione dei [contratti intelligenti](/developers/docs/smart-contracts/) e dell'[anatomia dei contratti intelligenti](/developers/docs/smart-contracts/anatomy/), in particolare gli [eventi](/glossary/#events).
+Questa pagina presuppone che il lettore abbia familiarità con i fondamentali di Ethereum, inclusi [nodi](/developers/docs/nodes-and-clients/), [meccanismi di consenso](/developers/docs/consensus-mechanisms/)e la tecnologia [EVM](/developers/docs/evm/). Dovresti anche avere una buona comprensione dei [contratti intelligenti](/developers/docs/smart-contracts/) e dell'[anatomia dei contratti intelligenti](/developers/docs/smart-contracts/anatomy/), in particolare gli <GlossaryTooltip termKey="events">eventi</GlossaryTooltip>.
 
 ## Cos'è un oracolo della blockchain? {#what-is-a-blockchain-oracle}
 

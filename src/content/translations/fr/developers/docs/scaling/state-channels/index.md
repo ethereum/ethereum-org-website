@@ -45,7 +45,7 @@ Cela rend possible l'exécution d'un contrat intelligent hors chaîne entre deux
 
 Si cela résout le problème d'évolutivité décrit plus haut, cela a des conséquences sur la sécurité. Sur Ethereum, la validité des transitions d'état est assurée par le protocole de consensus du réseau. Il est ainsi impossible de proposer une mise à jour invalide de l'état d'un contrat intelligent ou de modifier l'exécution d'un contrat intelligent.
 
-Les canaux d'état ne présentent pas les mêmes garanties de sécurité. Dans une certaine mesure, un canal d'état est une version miniature du réseau principal. Avec un ensemble limité de participants chargés de faire respecter les règles, la possibilité de comportements malveillants (par exemple, proposer des mises à jour d'état invalides) augmente. Les chaînes d'état tirent leur sécurité d'un système d'arbitrage des litiges basé sur [des preuves de fraude](/glossary/#fraud-proof).
+Les canaux d'état ne présentent pas les mêmes garanties de sécurité. Dans une certaine mesure, un canal d'état est une version miniature du réseau principal. Avec un ensemble limité de participants chargés de faire respecter les règles, la possibilité de comportements malveillants (par exemple, proposer des mises à jour d'état invalides) augmente. Les chaînes d'état tirent leur sécurité d'un système d'arbitrage des litiges basé sur <GlossaryTooltip termKey="fraud-proof">des preuves de fraude</GlossaryTooltip>.
 
 ## Comment fonctionnent les canaux d'état {#how-state-channels-work}
 

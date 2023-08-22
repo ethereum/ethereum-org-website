@@ -10,7 +10,7 @@ En donnant aux contrats intelligents la possibilité de s'exécuter en utilisant
 
 ## Prérequis {#prerequisites}
 
-Cette page suppose que le lecteur est familier avec les principes fondamentaux d'Ethereum, notamment des [nœuds](/developers/docs/nodes-and-clients/), [ des mécanismes de consensus](/developers/docs/consensus-mechanisms/), et de [l'EVM](/developers/docs/evm/). Vous devez également avoir une bonne connaissance des [contrats intelligents](/developers/docs/smart-contracts/) et de [l'anatomie des contrats intelligents](/developers/docs/smart-contracts/anatomy/), notamment des [événements](/glossary/#events).
+Cette page suppose que le lecteur est familier avec les principes fondamentaux d'Ethereum, notamment des [nœuds](/developers/docs/nodes-and-clients/), [ des mécanismes de consensus](/developers/docs/consensus-mechanisms/), et de [l'EVM](/developers/docs/evm/). Vous devez également avoir une bonne connaissance des [contrats intelligents](/developers/docs/smart-contracts/) et de [l'anatomie des contrats intelligents](/developers/docs/smart-contracts/anatomy/), notamment des <GlossaryTooltip termKey="events">événements</GlossaryTooltip>.
 
 ## Qu'est-ce qu'un oracle blockchain ? {#what-is-a-blockchain-oracle}
 

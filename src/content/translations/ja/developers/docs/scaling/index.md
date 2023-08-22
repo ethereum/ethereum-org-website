@@ -21,7 +21,7 @@ sidebarDepth: 3
 
 ## オンチェーンにおけるスケーリング {#on-chain-scaling}
 
-この手法は、イーサリアムプロトコル（レイヤー 1 の[メインネット](/glossary/#mainnet)）の変更を必要とします。 この手法によるスケーリングは、現在シャーディングが主流になっています。
+この手法は、イーサリアムプロトコル（レイヤー 1 の<GlossaryTooltip termKey="mainnet">メインネット</GlossaryTooltip>）の変更を必要とします。 この手法によるスケーリングは、現在シャーディングが主流になっています。
 
 ### シャーディング {#sharding}
 
@@ -58,8 +58,8 @@ sidebarDepth: 3
 
 ロールアップには、異なるセキュリティモデルを採用した以下の 2 種類があります：
 
-- **オプティミスティック・ロールアップ**: トランザクションはデフォルトで有効であると仮定し、チャレンジが提起された場合のみ[**不正証明**](/glossary/#fraud-proof)を通じて計算を実行します。 [オプティミスティック・ロールアップの詳細](/developers/docs/scaling/optimistic-rollups/)。
-- **ゼロ知識ロールアップ**: オフチェーンで計算を実行し、[**有効性証明**](/glossary/#validity-proof)をチェーンに送信します。 [ゼロ知識ロールアップの詳細](/developers/docs/scaling/zk-rollups/)。
+- **オプティミスティック・ロールアップ**: トランザクションはデフォルトで有効であると仮定し、チャレンジが提起された場合のみ<GlossaryTooltip termKey="fraud-proof">**不正証明**</GlossaryTooltip>を通じて計算を実行します。 [オプティミスティック・ロールアップの詳細](/developers/docs/scaling/optimistic-rollups/)。
+- **ゼロ知識ロールアップ**: オフチェーンで計算を実行し、<GlossaryTooltip termKey="validity-proof">**有効性証明**</GlossaryTooltip>をチェーンに送信します。 [ゼロ知識ロールアップの詳細](/developers/docs/scaling/zk-rollups/)。
 
 #### ステートチャンネル {#channels}
 

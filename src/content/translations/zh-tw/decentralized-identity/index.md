@@ -51,7 +51,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 ### 1. 公鑰基礎設施 (PKI) {#public-key-infrastructure}
 
-公鑰基礎設施 (PKI) 是一種資訊安全措施，可為一個實體產生一組[公鑰](/glossary/#public-key)和[私鑰](/glossary/#private-key)。 公鑰密碼學在區塊鏈網路中用於驗證使用者身分並證明數位資產的所有權。
+公鑰基礎設施 (PKI) 是一種資訊安全措施，可為一個實體產生一組<GlossaryTooltip termKey="public-key">公鑰</GlossaryTooltip>和<GlossaryTooltip termKey="private-key">私鑰</GlossaryTooltip>。 公鑰密碼學在區塊鏈網路中用於驗證使用者身分並證明數位資產的所有權。
 
 一些去中心化身分識別，如以太坊帳戶，都有著公鑰與私鑰。 公鑰用於識別帳戶的控制者，而私鑰則可以簽署和解密此帳戶的訊息。 公鑰基礎設施使用[加密簽名](https://andersbrownworth.com/blockchain/public-private-keys/)來驗證所有聲明，提供所需證明來驗證實體身分以及防止冒充和使用虛假身分。
 
@@ -91,7 +91,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 ### 可持續訪問的鏈外身分證明 {#offchain-attestations-with-persistent-access}
 
-在這種場景下，身分證明被轉換為 JSON 文件並儲存在鏈外（理想情況下儲存在[去中心化雲端儲存](/developers/docs/storage/)平台上，例如 IPFS 或 Swarm）。 然而，JSON 文件的[雜凑值](/glossary/#hash)儲存在鏈上，並透過鏈上註冊系統連結到去中心化身分識別。 所關聯的去中心化身分識別可以是發行人或接收者的身分證明。
+在這種場景下，身分證明被轉換為 JSON 文件並儲存在鏈外（理想情況下儲存在[去中心化雲端儲存](/developers/docs/storage/)平台上，例如 IPFS 或 Swarm）。 然而，JSON 文件的<GlossaryTooltip termKey="hash">雜凑值</GlossaryTooltip>儲存在鏈上，並透過鏈上註冊系統連結到去中心化身分識別。 所關聯的去中心化身分識別可以是發行人或接收者的身分證明。
 
 這種方法使身份證明能夠獲得基於區塊鏈的持久性，同時確保聲明資訊的加密性和可驗證性。 它還允許選擇性揭露，因為私鑰的持有者可以解密資訊。
 

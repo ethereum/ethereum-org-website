@@ -30,7 +30,7 @@ Jó alapokkal kell rendelkezned az összes alapvető témakörről. A 2. réteg�
 - [Mellékláncok](#sidechains)
 - [Hibrid megoldások](#hybrid-solutions)
 
-A legtöbb 2. rétegű megoldás egy szerver vagy egy szerver cluster körül helyezkedik el, amelyek mindegyikét csomópontnak, validátornak, operátornak, szekvenszernek, blokkgyártónak vagy hasonlónak nevezhetjük. A megvalósítástól függően ezeket a 2. réteg csomópontokat az azokat használó vállalkozások vagy szervezetek, egy harmadik fél, vagy egyének nagy csoportja (hasonlóan a főhálózathoz) futtathatja. Általánosságban beszélve a tranzakciókat ezek a 2. réteg csomópontok kapják, ahelyett, hogy közvetlenül az első rétegre küldenénk őket ([főhálózat](/glossary/#mainnet)); a 2. rétegű instance ezután csoportokba rendezi őket, mielőtt fel kerülnek az 1. rétegre, ezután az 1. réteg szolgáltatja a biztonságot és nem lehet őket többé megváltoztatni. Ennek részletei jelentősen eltérnek a 2. réteg különböző technológiáitól és megvalósításaitól.
+A legtöbb 2. rétegű megoldás egy szerver vagy egy szerver cluster körül helyezkedik el, amelyek mindegyikét csomópontnak, validátornak, operátornak, szekvenszernek, blokkgyártónak vagy hasonlónak nevezhetjük. A megvalósítástól függően ezeket a 2. réteg csomópontokat az azokat használó vállalkozások vagy szervezetek, egy harmadik fél, vagy egyének nagy csoportja (hasonlóan a főhálózathoz) futtathatja. Általánosságban beszélve a tranzakciókat ezek a 2. réteg csomópontok kapják, ahelyett, hogy közvetlenül az első rétegre küldenénk őket (<GlossaryTooltip termKey="mainnet">főhálózat</GlossaryTooltip>); a 2. rétegű instance ezután csoportokba rendezi őket, mielőtt fel kerülnek az 1. rétegre, ezután az 1. réteg szolgáltatja a biztonságot és nem lehet őket többé megváltoztatni. Ennek részletei jelentősen eltérnek a 2. réteg különböző technológiáitól és megvalósításaitól.
 
 Egy adott 2. réteg instance esetében lehet nyitott és megosztott több alkalmazás között, vagy egy adott cég által üzemeltetve és csak a saját alkalmazásukat támogatva.
 
@@ -52,8 +52,8 @@ Az összegzős megoldások váltók (relayers) használatát igénylik, melyek e
 
 Kétfajta összegző van különböző biztonsági modellel:
 
-- Zero knowledge: a számítások off-chain történnek és egy [**érvényességi bizonyítékot**](/glossary/#validity-proof) küld fel a láncra
-- Optimista: azt feltételezi, hogy a tranzakciók alapvetően érvényesek és csak egy [**csalási bizonyítékon **](/glossary/#fraud-proof) keresztül végez számításokat egy felelősségre vonás alkalmával
+- Zero knowledge: a számítások off-chain történnek és egy <GlossaryTooltip termKey="validity-proof">**érvényességi bizonyítékot**</GlossaryTooltip> küld fel a láncra
+- Optimista: azt feltételezi, hogy a tranzakciók alapvetően érvényesek és csak egy <GlossaryTooltip termKey="fraud-proof">**csalási bizonyítékon **</GlossaryTooltip> keresztül végez számításokat egy felelősségre vonás alkalmával
 
 ### Zero-knowledge összegzők {#zk-rollups}
 
@@ -65,11 +65,11 @@ A melléklánc, ahol a ZK-összegzés történik, optimálható a tranzakció m�
 
 #### Előnyök és hátrányok {#zk-pros-and-cons}
 
-| Előnyök                                                                                                       | Hátrányok                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nincs késés, mivel a bizonyítékokat már érvényesnek tekintjük, amikor a fő láncra kerülnek.                   | Csak átutalásokra van lekorlátozva, nem kompatibilis az EVM-mel.                                                                                                                                                                               |
-| Kevésbé sérülékeny a gazdasági támadásokkal szemben, mint az [Optimista összegző](#optimistic-pros-and-cons). | Az érvényességi bizonyítékokat nehéz kiszámítani - nem érdemes kis on-chain aktivitású alkalmazásoknál használni.                                                                                                                              |
-|                                                                                                               | Lassabb szubjektív [véglegességi](/glossary/#finality) idő (10-30 perc egy ZK bizonyíték generálása) (de gyorsabb a teljes véglegesség, mivel nincsen felelősségre vonási késés, mint az [Optimista összegzők](#optimistic-rollups) esetében). |
+| Előnyök                                                                                                       | Hátrányok                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nincs késés, mivel a bizonyítékokat már érvényesnek tekintjük, amikor a fő láncra kerülnek.                   | Csak átutalásokra van lekorlátozva, nem kompatibilis az EVM-mel.                                                                                                                                                                                                              |
+| Kevésbé sérülékeny a gazdasági támadásokkal szemben, mint az [Optimista összegző](#optimistic-pros-and-cons). | Az érvényességi bizonyítékokat nehéz kiszámítani - nem érdemes kis on-chain aktivitású alkalmazásoknál használni.                                                                                                                                                             |
+|                                                                                                               | Lassabb szubjektív <GlossaryTooltip termKey="finality">véglegességi</GlossaryTooltip> idő (10-30 perc egy ZK bizonyíték generálása) (de gyorsabb a teljes véglegesség, mivel nincsen felelősségre vonási késés, mint az [Optimista összegzők](#optimistic-rollups) esetében). |
 
 #### ZK-összegzők használata {#use-zk-rollups}
 

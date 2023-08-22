@@ -317,7 +317,7 @@ Vous pouvez voir la DeFi comme des couches :
 
 1. La Blockchain, Ethereum qui trace l'historique des transactions et les états de comptes.
 2. Les actifs [ETH](/eth/) et autres jetons (devises).
-3. Les protocoles, [contrats intelligents](/glossary/#smart-contract) qui offrent des fonctionnalités comme les prêts d'actifs décentralisés.
+3. Les protocoles, <GlossaryTooltip termKey="smart-contract">contrats intelligents</GlossaryTooltip> qui offrent des fonctionnalités comme les prêts d'actifs décentralisés.
 4. [Les applications](/dapps/) les produits que vous utilisez pour accéder et gérer les protocoles.
 
 ## Fabriquer une DeFi {#build-defi}

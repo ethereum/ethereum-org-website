@@ -8,7 +8,7 @@ Un validatore dovrebbe creare, firmare e trasmettere una attestazione durante og
 
 ## Cos'è un'attestazione? {#what-is-an-attestation}
 
-Ogni [epoca](/glossary/#epoch) (6,4 minuti), un validatore propone un'attestazione alla rete. L'attestazione è per uno slot specifico nell'epoca. Lo scopo dell'attestazione è votare a favore della visione della catena del validatore, in particolare il blocco giustificato più recente e il primo blocco nell'epoca corrente (noti come punti di controllo `source` (origine) e `target` (destinazione)). Queste informazioni sono combinate per tutti i validatori partecipanti, consentendo alla rete di raggiungere il consenso sullo stato della blokchain.
+Ogni <GlossaryTooltip termKey="epoch">epoca</GlossaryTooltip> (6,4 minuti), un validatore propone un'attestazione alla rete. L'attestazione è per uno slot specifico nell'epoca. Lo scopo dell'attestazione è votare a favore della visione della catena del validatore, in particolare il blocco giustificato più recente e il primo blocco nell'epoca corrente (noti come punti di controllo `source` (origine) e `target` (destinazione)). Queste informazioni sono combinate per tutti i validatori partecipanti, consentendo alla rete di raggiungere il consenso sullo stato della blokchain.
 
 L'attestazione contiene i componenti seguenti:
 

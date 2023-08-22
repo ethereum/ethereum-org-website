@@ -51,7 +51,7 @@ Zdecentralizowane identyfikatory są przechowywane w rozproszonych księgach (ł
 
 ### 1. Infrastruktura klucza publicznego (PKI) {#public-key-infrastructure}
 
-Infrastruktura klucza publicznego (PKI) to środek bezpieczeństwa informacji, który generuje dla podmiotu [klucz publiczny](/glossary/#public-key) i [klucz prywatny](/glossary/#private-key). Kryptografia klucza publicznego jest wykorzystywana w sieciach łańcuchów bloków do uwierzytelniania tożsamości użytkowników i udawadniania własności zasobów cyfrowych.
+Infrastruktura klucza publicznego (PKI) to środek bezpieczeństwa informacji, który generuje dla podmiotu <GlossaryTooltip termKey="public-key">klucz publiczny</GlossaryTooltip> i <GlossaryTooltip termKey="private-key">klucz prywatny</GlossaryTooltip>. Kryptografia klucza publicznego jest wykorzystywana w sieciach łańcuchów bloków do uwierzytelniania tożsamości użytkowników i udawadniania własności zasobów cyfrowych.
 
 Niektóre zdecentralizowane identyfikatory, takie jak konto Ethereum, mają klucze publiczne i prywatne. Klucz publiczny identyfikuje kontrolera konta, a klucze prywatne mogą podpisywać i odszyfrowywać wiadomości dla tego konta. PKI zapewnia dowody potrzebne do uwierzytelniania podmiotów i zapobiegania podszywaniu się i używaniu fałszywych tożsamości, wykorzystując [podpisy kryptograficzne](https://andersbrownworth.com/blockchain/public-private-keys/) do weryfikacji wszystkich twierdzeń.
 

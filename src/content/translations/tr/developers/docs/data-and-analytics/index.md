@@ -12,7 +12,7 @@ Mevcut veri sağlayıcılarından yararlanmak; geliştirmeyi hızlandırabilir, 
 
 ## Ön Koşullar {#prerequisites}
 
-Veri analizi bağlamında bunları kullanmayı daha iyi anlamak için [Blok Arayıcıları](/developers/docs/data-and-analytics/block-explorers/)'nın temel mantığını anlamalısınız. Ayrıca, bir sistem tasarımına kattıkları faydaları anlamak için [indeks](/glossary/#index) kavramını öğrenin.
+Veri analizi bağlamında bunları kullanmayı daha iyi anlamak için [Blok Arayıcıları](/developers/docs/data-and-analytics/block-explorers/)'nın temel mantığını anlamalısınız. Ayrıca, bir sistem tasarımına kattıkları faydaları anlamak için <GlossaryTooltip termKey="index">indeks</GlossaryTooltip> kavramını öğrenin.
 
 Mimari kurulum temelleri açısından, teoride olsa bile [API](https://www.wikipedia.org/wiki/API) ve [REST](https://www.wikipedia.org/wiki/Representational_state_transfer)'in ne olduğunu anlamak.
 
@@ -26,7 +26,7 @@ Geliştiriciler, [GraphQL](https://graphql.org/)'yi kullanarak, alt grafikler ol
 
 Birçok [Blok Arayıcısı](/developers/docs/data-and-analytics/block-explorers/), geliştiricilere bloklar, işlemler, madenciler, hesaplar ve diğer zincir üstü etkinlikler hakkında gerçek zamanlı verilere görünürlük sağlayacak [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API)'si ağ geçitleri sunar.
 
-Geliştiriciler daha sonra, kullanıcılarına [blok zinciri](/glossary/#blockchain) ile benzersiz içgörüler ve etkileşimler sağlamak için bu verileri işleyebilir ve dönüştürebilir.
+Geliştiriciler daha sonra, kullanıcılarına <GlossaryTooltip termKey="blockchain">blok zinciri</GlossaryTooltip> ile benzersiz içgörüler ve etkileşimler sağlamak için bu verileri işleyebilir ve dönüştürebilir.
 
 ## Daha fazla bilgi {#further-reading}
 

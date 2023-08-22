@@ -138,7 +138,7 @@ The benefit here is that Ethereum doesn’t have to do any execution and only ne
 
 The chain needs a way to validate off-chain transactions without re-executing them, or else the value of off-chain execution is lost.
 
-This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of off-chain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state—without waiting for anyone to dispute it.
+This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of off-chain execution. This proof (called a <GlossaryTooltip termKey="validity-proof">validity proof</GlossaryTooltip>) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state—without waiting for anyone to dispute it.
 
 [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two off-chain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions off-chain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
 
@@ -196,7 +196,7 @@ But there’s really no way for users to assess the honesty of participants and 
 
 ### Quantum computing threats {#quantum-computing-threats}
 
-ZK-SNARK uses elliptic curve cryptography ([ECDSA](/glossary/#ecdsa)) for encryption. While the ECDSA algorithm is secure for now, the development of quantum computers could break its security model in the future.
+ZK-SNARK uses elliptic curve cryptography (<GlossaryTooltip termKey="ecdsa">ECDSA</GlossaryTooltip>) for encryption. While the ECDSA algorithm is secure for now, the development of quantum computers could break its security model in the future.
 
 ZK-STARK is considered immune to the threat of quantum computing, as it uses collision-resistant hashes for encryption. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
 

@@ -278,7 +278,7 @@ Teku 用 Java 语言编写，并依照 Apache 2.0 获得许可。 它由 ConsenS
 
 #### 检查点同步 {#checkpoint-sync}
 
-检查点同步也称为弱主观性同步，可提供卓越的信标节点同步用户体验。 它基于[弱主观性](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)假设，这使得信标链能够从最近的弱主观性检查点而不是创世块同步。 检查点同步使初始同步时间明显更快，其信任假设与从[创世块](/glossary/#genesis-block)同步类似。
+检查点同步也称为弱主观性同步，可提供卓越的信标节点同步用户体验。 它基于[弱主观性](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)假设，这使得信标链能够从最近的弱主观性检查点而不是创世块同步。 检查点同步使初始同步时间明显更快，其信任假设与从<GlossaryTooltip termKey="genesis-block">创世块</GlossaryTooltip>同步类似。
 
 实际上，这意味着你的节点连接到远程服务，以下载最近的最终确定状态并从该点继续验证数据。 提供数据的第三方要受到信任，应谨慎选择。
 

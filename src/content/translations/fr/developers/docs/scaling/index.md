@@ -21,7 +21,7 @@ Vous devez avoir une bonne compréhension de tous les sujets fondamentaux. La mi
 
 ## Mise à l’échelle de la chaîne {#on-chain-scaling}
 
-La mise à l’échelle en chaîne nécessite des modifications du protocole Ethereum (couche 1 [Réseau principal](/glossary/#mainnet)). Pendant longtemps, on s'attendait à ce que la fragmentation de la blockchain soit mise à l'échelle d'Ethereum. Cela impliquait de scinder la blockchain en morceaux discrets (fragments) pour être vérifiés par des sous-ensembles de validateurs. Cependant, la mise à l'échelle par rollups de couche 2 a pris le relais comme technique principale de mise à l'échelle. Ceci est supporté par l'ajout d'une nouvelle forme de données moins chère reliée à des blocs Ethereum qui est spécialement conçue pour rendre les rollups bon marché pour les utilisateurs.
+La mise à l’échelle en chaîne nécessite des modifications du protocole Ethereum (couche 1 <GlossaryTooltip termKey="mainnet">Réseau principal</GlossaryTooltip>). Pendant longtemps, on s'attendait à ce que la fragmentation de la blockchain soit mise à l'échelle d'Ethereum. Cela impliquait de scinder la blockchain en morceaux discrets (fragments) pour être vérifiés par des sous-ensembles de validateurs. Cependant, la mise à l'échelle par rollups de couche 2 a pris le relais comme technique principale de mise à l'échelle. Ceci est supporté par l'ajout d'une nouvelle forme de données moins chère reliée à des blocs Ethereum qui est spécialement conçue pour rendre les rollups bon marché pour les utilisateurs.
 
 ### Fragmentation {#sharding}
 
@@ -56,8 +56,8 @@ Les rollups exécutent des transactions en dehors de la couche 1, puis les donn�
 
 Il existe deux types de rollups avec différents modèles de sécurité :
 
-- **Rollups optimistes** : suppose que les transactions sont valides par défaut et n’exécute que le calcul, via une [**preuve de fraude**](/glossary/#fraud-proof), en cas de contestation. [Plus d'infos sur les rollups optimistes](/developers/docs/scaling/optimistic-rollups/).
-- **Rollups ZK** : exécute le calcul hors chaîne et soumet une [**preuve de validité**](/glossary/#validity-proof) à la chaîne. [Plus d'infos sur les rollups ZK](/developers/docs/scaling/zk-rollups/).
+- **Rollups optimistes** : suppose que les transactions sont valides par défaut et n’exécute que le calcul, via une <GlossaryTooltip termKey="fraud-proof">**preuve de fraude**</GlossaryTooltip>, en cas de contestation. [Plus d'infos sur les rollups optimistes](/developers/docs/scaling/optimistic-rollups/).
+- **Rollups ZK** : exécute le calcul hors chaîne et soumet une <GlossaryTooltip termKey="validity-proof">**preuve de validité**</GlossaryTooltip> à la chaîne. [Plus d'infos sur les rollups ZK](/developers/docs/scaling/zk-rollups/).
 
 #### Canaux d'état {#channels}
 

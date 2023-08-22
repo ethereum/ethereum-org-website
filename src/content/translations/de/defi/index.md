@@ -317,7 +317,7 @@ DeFi ist praktisch ein Ebenenmodell:
 
 1. Die Blockchain: Ethereum enthält den Transaktionsverlauf und den Status der Konten.
 2. Die Assets: [ETH](/eth/) und die anderen Token (Währungen).
-3. Die Protokolle: [Smart Contracts](/glossary/#smart-contract), die eine Funktion bieten, zum Beispiel einen Service, der dezentrales Verleihen von Vermögenswerten erlaubt.
+3. Die Protokolle: <GlossaryTooltip termKey="smart-contract">Smart Contracts</GlossaryTooltip>, die eine Funktion bieten, zum Beispiel einen Service, der dezentrales Verleihen von Vermögenswerten erlaubt.
 4. [Die Anwendungen](/dapps/): Produkte die wir benutzen, um Protokolle zu verwalten und auf diese zuzugreifen.
 
 ## DeFi aufbauen {#build-defi}

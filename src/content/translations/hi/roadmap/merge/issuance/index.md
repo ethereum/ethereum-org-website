@@ -30,7 +30,7 @@ title="ETH issuance tldr">
 
 ### Execution layer issuance {#el-issuance-pre-merge}
 
-Under proof-of-work, miners only interacted with the execution layer and were rewarded with block rewards if they were the first miner to solve the next block. Since the [Constantinople upgrade](/history/#constantinople) in 2019 this reward was 2 ETH per block. Miners were also rewarded for publishing [ommer](/glossary/#ommer) blocks, which were valid blocks that didn't end up in the longest/canonical chain. These rewards maxed out at 1.75 ETH per ommer, and were _in addition to_ the reward issued from the canonical block. The process of mining was an economically intensive activity, which historically required high levels of ETH issuance to sustain.
+Under proof-of-work, miners only interacted with the execution layer and were rewarded with block rewards if they were the first miner to solve the next block. Since the [Constantinople upgrade](/history/#constantinople) in 2019 this reward was 2 ETH per block. Miners were also rewarded for publishing <GlossaryTooltip termKey="ommer">ommer</GlossaryTooltip> blocks, which were valid blocks that didn't end up in the longest/canonical chain. These rewards maxed out at 1.75 ETH per ommer, and were _in addition to_ the reward issued from the canonical block. The process of mining was an economically intensive activity, which historically required high levels of ETH issuance to sustain.
 
 ### Consensus layer issuance {#cl-issuance-pre-merge}
 
@@ -46,7 +46,7 @@ Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
 
 - Was estimated at 2.08 ETH per 13.3 seconds\*: **~4,930,000** ETH issued in a year
 - Resulted in an inflation rate of **approximately 4.09%** (4.93M per year / 120.5M total)
-- \*This includes the 2 ETH per canonical block, plus an average of 0.08 ETH over time from ommer blocks. Also uses 13.3 seconds, the baseline block time target without any influence from a [difficulty bomb](/glossary/#difficulty-bomb). ([See source](https://bitinfocharts.com/ethereum/))
+- \*This includes the 2 ETH per canonical block, plus an average of 0.08 ETH over time from ommer blocks. Also uses 13.3 seconds, the baseline block time target without any influence from a <GlossaryTooltip termKey="difficulty-bomb">difficulty bomb</GlossaryTooltip>. ([See source](https://bitinfocharts.com/ethereum/))
 
 **Consensus layer issuance:**
 

@@ -76,7 +76,7 @@ La mise à jour a également permis la mise en place d'une fonctionnalité de ba
 
 #### Résumé {#paris-summary}
 
-La mise à jour de Paris a été déclenchée par le passage de la blockchain de preuve de travail à une [difficulté totale finale](/glossary/#terminal-total-difficulty) de 5875000000000000000. Cela s'est produit au bloc 15537393 le 15 septembre 2022, déclenchant la mise à jour du bloc suivant. Paris était la transition vers la [La Fusion](/roadmap/merge/) : sa principale fonctionnalité était de désactiver l'algorithme de minage [preuve de travail](/developers/docs/consensus-mechanisms/pow) et sa logique de consensus associée et d'activer la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) à la place. Paris lui-même était une mise à jour vers les [clients d'exécution](/developers/docs/nodes-and-clients/#execution-clients) (équivalent de Bellatrix sur la couche de consensus) qui leur permettait de recevoir des instructions depuis leurs [clients de consensus](/developers/docs/nodes-and-clients/#consensus-clients) connectés. Cela nécessitait d'activer un nouvel ensemble de méthodes internes d'API, collectivement connues sous le nom d'[API Moteur](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). C'est sans doute la mise à jour la plus significative de l'histoire d'Ethereum depuis [Homestead](#homestead) !
+La mise à jour de Paris a été déclenchée par le passage de la blockchain de preuve de travail à une <GlossaryTooltip termKey="terminal-total-difficulty">difficulté totale finale</GlossaryTooltip> de 5875000000000000000. Cela s'est produit au bloc 15537393 le 15 septembre 2022, déclenchant la mise à jour du bloc suivant. Paris était la transition vers la [La Fusion](/roadmap/merge/) : sa principale fonctionnalité était de désactiver l'algorithme de minage [preuve de travail](/developers/docs/consensus-mechanisms/pow) et sa logique de consensus associée et d'activer la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) à la place. Paris lui-même était une mise à jour vers les [clients d'exécution](/developers/docs/nodes-and-clients/#execution-clients) (équivalent de Bellatrix sur la couche de consensus) qui leur permettait de recevoir des instructions depuis leurs [clients de consensus](/developers/docs/nodes-and-clients/#consensus-clients) connectés. Cela nécessitait d'activer un nouvel ensemble de méthodes internes d'API, collectivement connues sous le nom d'[API Moteur](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). C'est sans doute la mise à jour la plus significative de l'histoire d'Ethereum depuis [Homestead](#homestead) !
 
 - [Lisez la spécification de la mise à jour Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
@@ -97,7 +97,7 @@ La mise à jour de Paris a été déclenchée par le passage de la blockchain de
 
 #### Résumé {#bellatrix-summary}
 
-La mise à jour de Bellatrix était la seconde mise à jour planifiée pour la [Chaîne Phare](/roadmap/beacon-chain), préparant la chaîne à [La Fusion](/roadmap/merge/). Elle porte les pénalités de validateur à leurs valeurs maximales en cas d'inactivité ou d'infractions sanctionnables. Bellatrix inclut également une mise à jour des règles de choix de fourche pour préparer la chaîne à La Fusion et à la transition du dernier bloc de preuve de travail vers le premier bloc de preuve d'enjeu. Cela inclut la sensibilisation des clients de consensus à la [difficulté totale du terminal](/glossary/#terminal-total-difficulty) de 5875000000000000000.
+La mise à jour de Bellatrix était la seconde mise à jour planifiée pour la [Chaîne Phare](/roadmap/beacon-chain), préparant la chaîne à [La Fusion](/roadmap/merge/). Elle porte les pénalités de validateur à leurs valeurs maximales en cas d'inactivité ou d'infractions sanctionnables. Bellatrix inclut également une mise à jour des règles de choix de fourche pour préparer la chaîne à La Fusion et à la transition du dernier bloc de preuve de travail vers le premier bloc de preuve d'enjeu. Cela inclut la sensibilisation des clients de consensus à la <GlossaryTooltip termKey="terminal-total-difficulty">difficulté totale du terminal</GlossaryTooltip> de 5875000000000000000.
 
 - [Lire les spécifications de la mise à niveau Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
@@ -109,7 +109,7 @@ La mise à jour de Bellatrix était la seconde mise à jour planifiée pour la [
 
 #### Résumé {#gray-glacier-summary}
 
-La mise à niveau Gray Glacier a retardé le déclenchement de la [bombe de difficulté](/glossary/#difficulty-bomb) de trois mois. Il s'agit de la seule modification apportée par cette mise à niveau. En essence, elle est donc très semblable aux mises à niveau [Arrow Glacier](#arrow-glacier) et [Muir Glacier](#muir-glacier). Des changements similaires avaient également été effectués lors des mises à niveau [Byzantium](#byzantium), [Constantinople](#constantinople) et [London](#london).
+La mise à niveau Gray Glacier a retardé le déclenchement de la <GlossaryTooltip termKey="difficulty-bomb">bombe de difficulté</GlossaryTooltip> de trois mois. Il s'agit de la seule modification apportée par cette mise à niveau. En essence, elle est donc très semblable aux mises à niveau [Arrow Glacier](#arrow-glacier) et [Muir Glacier](#muir-glacier). Des changements similaires avaient également été effectués lors des mises à niveau [Byzantium](#byzantium), [Constantinople](#constantinople) et [London](#london).
 
 - [Blog de l'Ethereum Foundation - Annonce de la mise à niveau Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
@@ -131,7 +131,7 @@ La mise à niveau Gray Glacier a retardé le déclenchement de la [bombe de diff
 
 #### Résumé {#arrow-glacier-summary}
 
-La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de difficulté](/glossary/#difficulty-bomb) de plusieurs mois. Il s'agit de la seule modification apportée par cette mise à niveau. En essence, elle est donc très semblable à la mise à niveau [Muir Glacier](#muir-glacier). Des changements similaires avaient également été effectués lors des mises à niveau [Byzantium](#byzantium), [Constantinople](#constantinople) et [London](#london).
+La mise à niveau Arrow Glacier a retardé le déclenchement de la <GlossaryTooltip termKey="difficulty-bomb">bombe de difficulté</GlossaryTooltip> de plusieurs mois. Il s'agit de la seule modification apportée par cette mise à niveau. En essence, elle est donc très semblable à la mise à niveau [Muir Glacier](#muir-glacier). Des changements similaires avaient également été effectués lors des mises à niveau [Byzantium](#byzantium), [Constantinople](#constantinople) et [London](#london).
 
 - [Blog de l'Ethereum Foundation - Annonce de la mise à niveau Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Mise à niveau Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -170,7 +170,7 @@ Altair a été la première mise à jour majeure du réseau à disposer d'un dé
 
 #### Résumé {#london-summary}
 
-La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), qui a réorganisé le marché des frais de transaction, ainsi que des changements dans le traitement des remboursements de gaz et le calendrier [Ice Age](/glossary/#ice-age).
+La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), qui a réorganisé le marché des frais de transaction, ainsi que des changements dans le traitement des remboursements de gaz et le calendrier <GlossaryTooltip termKey="ice-age">Ice Age</GlossaryTooltip>.
 
 - [Êtes-vous un développeur d'applications décentralisées ? Assurez-vous de mettre à niveau vos bibliothèques et vos outils.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -238,7 +238,7 @@ La [chaîne phare](/roadmap/beacon-chain/) avait besoin de 16 384 dépôts de 3
 
 #### Résumé {#deposit-contract-summary}
 
-Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#staking) dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat sur le [réseau principal](/glossary/#mainnet), il a eu des conséquences directes sur le calendrier de lancement de la [chaîne phare](/roadmap/beacon-chain/), une importante [mise à niveau d'Ethereum](/roadmap/).
+Le contrat de dépôt de mise en jeu a introduit la <GlossaryTooltip termKey="staking">mise en jeu</GlossaryTooltip> dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat sur le <GlossaryTooltip termKey="mainnet">réseau principal</GlossaryTooltip>, il a eu des conséquences directes sur le calendrier de lancement de la [chaîne phare](/roadmap/beacon-chain/), une importante [mise à niveau d'Ethereum](/roadmap/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -254,7 +254,7 @@ Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#sta
 
 #### Résumé {#muir-glacier-summary}
 
-La fourche Muir Glacier a entraîné un report de la [bombe de difficulté](/glossary/#difficulty-bomb). L'augmentation de la difficulté des blocs du mécanisme de consensus de [preuve de travail](/developers/docs/consensus-mechanisms/pow/) menaçait de dégrader l'utilisation d'Ethereum en allongeant les temps d'attente pour l'envoi de transactions et l'utilisation d'applications décentralisées.
+La fourche Muir Glacier a entraîné un report de la <GlossaryTooltip termKey="difficulty-bomb">bombe de difficulté</GlossaryTooltip>. L'augmentation de la difficulté des blocs du mécanisme de consensus de [preuve de travail](/developers/docs/consensus-mechanisms/pow/) menaçait de dégrader l'utilisation d'Ethereum en allongeant les temps d'attente pour l'envoi de transactions et l'utilisation d'applications décentralisées.
 
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Lire l'explication du site Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -279,7 +279,7 @@ La fourche Muir Glacier a entraîné un report de la [bombe de difficulté](/glo
 
 La fourche Istanbul a :
 
-- optimisé le coût de [gaz](/glossary/#gas) de certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
+- optimisé le coût de <GlossaryTooltip termKey="gas">gaz</GlossaryTooltip> de certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
 - amélioré la résilience face aux attaques par déni de service ;
 - rendu plus performantes les solutions de [mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling) basées sur les SNARK et les STARK ;
 - permis à Ethereum et Zcash d'interagir ;
@@ -291,7 +291,7 @@ La fourche Istanbul a :
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-152">EIP-152</a> – <em>permet à Ethereum de travailler avec une devise préservant la vie privée comme Zcash.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cryptographie à bas coût pour l'optimisation <a href="/glossary/#gas">des coûts</a> de gas.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a> – <em>cryptographie à bas coût pour l'optimisation <GlossaryTooltip termKey="gas">des coûts</GlossaryTooltip> de gas.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a> – <em>protège Ethereum contre les attaques replay en ajoutant le code d'opération <code>CHAINID</code> <a href="/developers/docs/ethereum-stack/#ethereum-virtual-machine"></a>.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1884">EIP-1884</a> – <em>l'optimisation des prix du gaz opcode basée sur la consommation.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2028">EIP-2028</a> – <em>réduit le coût de CallData pour permettre plus de données en blocs – bon pour <a href="/developers/docs/scaling/#layer-2-scaling">la mise à l'échelle de la couche 2</a>.</em></li>
@@ -311,7 +311,7 @@ La fourche Istanbul a :
 La fourche Constantinople a :
 
 - protégé la blockchain d'un blocage avant [l'implémentation de la preuve d'enjeu](#beacon-chain-genesis)  ;
-- optimisé le coût de [gaz](/glossary/#gas) certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
+- optimisé le coût de <GlossaryTooltip termKey="gas">gaz</GlossaryTooltip> certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
 - ajouté la possibilité d'interagir avec des adresses qui n'ont pas encore été créées.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -340,7 +340,7 @@ La fourche Constantinople a :
 La fourche Byzantium a :
 
 - réduit les récompenses pour le [minage](/developers/docs/consensus-mechanisms/pow/mining/)des blocs de 5 à 3 ETH ;
-- retardé la [bombe de difficulté](/glossary/#difficulty-bomb) d'un an ;
+- retardé la <GlossaryTooltip termKey="difficulty-bomb">bombe de difficulté</GlossaryTooltip> d'un an ;
 - ajouté la possibilité d'effectuer des appels sans changement d'état vers d'autres contrats ;
 - ajouté certaines méthodes de cryptographie pour permettre la [mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling).
 
@@ -357,7 +357,7 @@ La fourche Byzantium a :
   <li><a href="https://eips.ethereum.org/EIPS/eip-211">EIP-211</a> – <em>intègre le support pour les valeurs retournées de longueur variable.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-214">L'EIP-214</a> – <em>intègre le code d'opération <code>STATICCALL</code>, ce qui permettra aux autres contrats de ne pas changer l'état des Calls.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-100">EIP-100</a> – <em>change la formule d'ajustement de difficulté.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>retarde <a href="/glossary/#difficulty-bomb">la bombe de difficulté</a> de 1 an et réduit la récompense de bloc de 5 à 3 ETH.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-649">EIP-649</a> – <em>retarde <GlossaryTooltip termKey="difficulty-bomb">la bombe de difficulté</GlossaryTooltip> de 1 an et réduit la récompense de bloc de 5 à 3 ETH.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -422,7 +422,7 @@ La fourche Tangerine Whistle a été la première réponse aux attaques par dén
 
 #### Résumé {#dao-fork-summary}
 
-La fourche DAO est la réponse à l'[attaque DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) au cours de laquelle le contrat non sécurisé d'une [DAO](/glossary/#dao) a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a déplacé les fonds du contrat défectueux vers un [nouveau contrat](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) avec une seule fonction : withdraw (retrait). Toute personne ayant perdu des fonds pouvait retirer 1 ETH pour chaque tranche de 100 jetons DAO dans son portefeuille.
+La fourche DAO est la réponse à l'[attaque DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) au cours de laquelle le contrat non sécurisé d'une <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip> a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a déplacé les fonds du contrat défectueux vers un [nouveau contrat](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) avec une seule fonction : withdraw (retrait). Toute personne ayant perdu des fonds pouvait retirer 1 ETH pour chaque tranche de 100 jetons DAO dans son portefeuille.
 
 Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
 
@@ -462,7 +462,7 @@ La fourche Homestead qui regardait vers l'avenir. Elle comprenait plusieurs chan
 
 #### Résumé {#frontier-thawing-summary}
 
-La fourche Frontier Thawing a levé la [limite de gaz](/glossary/#gas) de 5 000 par [bloc](/glossary/#block) et défini le prix du gaz par défaut à 51 [gwei](/glossary/#gwei). Cela a permis de réaliser des transactions. Les transactions nécessitent 21 000 unités de gaz. La [bombe de difficulté](/glossary/#difficulty-bomb) a été introduite pour assurer une future fourche dure vers la [preuve d'enjeu](/glossary/#pos).
+La fourche Frontier Thawing a levé la <GlossaryTooltip termKey="gas">limite de gaz</GlossaryTooltip> de 5 000 par <GlossaryTooltip termKey="block">bloc</GlossaryTooltip> et défini le prix du gaz par défaut à 51 <GlossaryTooltip termKey="gwei">gwei</GlossaryTooltip>. Cela a permis de réaliser des transactions. Les transactions nécessitent 21 000 unités de gaz. La <GlossaryTooltip termKey="difficulty-bomb">bombe de difficulté</GlossaryTooltip> a été introduite pour assurer une future fourche dure vers la <GlossaryTooltip termKey="pos">preuve d'enjeu</GlossaryTooltip>.
 
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [Lire la mise à jour du protocole Ethereum 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
@@ -475,7 +475,7 @@ La fourche Frontier Thawing a levé la [limite de gaz](/glossary/#gas) de 5 000
 
 #### Résumé {#frontier-summary}
 
-Frontier était une implémentation réelle, mais sans structure, du projet Ethereum. Elle faisait suite à la phase de tests réussie Olympic. Elle était destinée aux utilisateurs techniques, en particulier aux développeurs. Les [blocs](/glossary/#block) avaient une limite de [gaz](/glossary/#gas) de 5 000. La période « Thawing » a permis aux mineurs de démarrer leurs opérations et aux premiers adoptants d’installer leurs clients sans avoir à « se précipiter ».
+Frontier était une implémentation réelle, mais sans structure, du projet Ethereum. Elle faisait suite à la phase de tests réussie Olympic. Elle était destinée aux utilisateurs techniques, en particulier aux développeurs. Les <GlossaryTooltip termKey="block">blocs</GlossaryTooltip> avaient une limite de <GlossaryTooltip termKey="gas">gaz</GlossaryTooltip> de 5 000. La période « Thawing » a permis aux mineurs de démarrer leurs opérations et aux premiers adoptants d’installer leurs clients sans avoir à « se précipiter ».
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

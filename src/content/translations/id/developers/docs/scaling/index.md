@@ -20,7 +20,7 @@ Anda harus memiliki pemahaman yang baik tentang semua topik dasar. Menerapkan so
 
 ## Penskalaan On-Chain {#on-chain-scaling}
 
-Metode penskalaan ini memerlukan perubahan pada protokol Ethereum (lapisan 1 [Jaringan Utama](/glossary/#mainnet)). Sharding saat ini menjadi fokus utama untuk metode penskalaan ini.
+Metode penskalaan ini memerlukan perubahan pada protokol Ethereum (lapisan 1 <GlossaryTooltip termKey="mainnet">Jaringan Utama</GlossaryTooltip>). Sharding saat ini menjadi fokus utama untuk metode penskalaan ini.
 
 ### Sharding {#sharding}
 

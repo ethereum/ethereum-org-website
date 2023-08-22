@@ -51,7 +51,7 @@ Los identificadores descentralizados se almacenan en las cadenas de bloques o re
 
 ### 1. Infraestructura de clave pública (ICP) {#public-key-infrastructure}
 
-La infraestructura de clave pública (ICP) es una medida de seguridad de la información que genera una [clave pública](/glossary/#public-key) y una [clave privada](/glossary/#private-key) para una entidad. La criptografía de clave pública se utiliza en las redes de cadena de bloques para autenticar las identidades del usuario y demostrar la propiedad de los activos digitales.
+La infraestructura de clave pública (ICP) es una medida de seguridad de la información que genera una <GlossaryTooltip termKey="public-key">clave pública</GlossaryTooltip> y una <GlossaryTooltip termKey="private-key">clave privada</GlossaryTooltip> para una entidad. La criptografía de clave pública se utiliza en las redes de cadena de bloques para autenticar las identidades del usuario y demostrar la propiedad de los activos digitales.
 
 Algunos identificadores descentralizados, como una cuenta de Ethereum, tienen claves públicas y privadas. La clave pública identifica al controlador de la cuenta, mientras que las claves privadas pueden firmar y descifrar mensajes para esta cuenta. Los ICP proporcionan pruebas necesarias para autenticar entidades y prevenir la suplantación y el uso de identidades falsas, utilizando [firmas criptográficas](https://andersbrownworth.com/blockchain/public-private-keys/) para verificar todas las reclamaciones.
 
@@ -91,7 +91,7 @@ Este es un escenario hipotético para explicar los certificados fuera de la cade
 
 ### Certificaciones fuera de cadena con acceso permanente {#offchain-attestations-with-persistent-access}
 
-Bajo este sistema, los cerficados se transforman en un archivo JSON y son almacenados off-chain (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un hash [](/glossary/#hash) del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
+Bajo este sistema, los cerficados se transforman en un archivo JSON y son almacenados off-chain (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un hash <GlossaryTooltip termKey="hash"></GlossaryTooltip> del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
 
 Este enfoque permite que las certificaciones obtengan permanencia basada en la cadena de bloques, manteniendo la información de reclamaciones cifrada y verificable. También permite la divulgación selectiva, ya que el titular de la clave privada puede descifrar la información.
 

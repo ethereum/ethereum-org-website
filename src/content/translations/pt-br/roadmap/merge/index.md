@@ -20,7 +20,7 @@ A Fusão foi a junção da camada de execução original do Ethereum (a Rede pri
 
 <MergeInfographic />
 
-Inicialmente, a [Beacon Chain](/roadmap/beacon-chain/) foi enviada separadamente da [Mainnet](/glossary/#mainnet). A rede principal da Ethereum - com todas as suas contas, saldos, contratos inteligentes e estado da cadeia de blocos - continuou a ser protegida pela [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), mesmo enquanto a Beacon Chain funcionava em paralelo usando a [prova de participação](/developers/docs/consensus-mechanisms/pos/). A Fusão foi quando esses dois sistemas finalmente se uniram, e a prova de trabalho foi permanentemente substituída pela prova de participação.
+Inicialmente, a [Beacon Chain](/roadmap/beacon-chain/) foi enviada separadamente da <GlossaryTooltip termKey="mainnet">Mainnet</GlossaryTooltip>. A rede principal da Ethereum - com todas as suas contas, saldos, contratos inteligentes e estado da cadeia de blocos - continuou a ser protegida pela [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), mesmo enquanto a Beacon Chain funcionava em paralelo usando a [prova de participação](/developers/docs/consensus-mechanisms/pos/). A Fusão foi quando esses dois sistemas finalmente se uniram, e a prova de trabalho foi permanentemente substituída pela prova de participação.
 
 Imagine que o Ethereum é uma espaçonave que foi lançada antes que estivesse pronta para uma viagem interestelar. Com a Beacon Chain, a comunidade construiu um novo motor e um casco reforçado. Após muitos testes, chegou a hora de trocar o novo motor a quente pelo antigo em pleno voo. Isso integrou o novo e mais eficiente motor à nave existente, o que lhe permitiu cruzar anos-luz e conquistar o universo.
 

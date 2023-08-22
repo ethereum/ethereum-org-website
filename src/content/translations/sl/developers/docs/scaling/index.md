@@ -21,7 +21,7 @@ Dobro morate razumeti vsa temeljna področja. Implementacija rešitev za širjen
 
 ## Širjenje na verigi {#on-chain-scaling}
 
-Ta metoda širjenja zahteva spremembe protokola Ethereum (plast 1 [glavno omrežje](/glossary/#mainnet)). Drobljenje je trenutno glavna naloga pri tej metodi širitve.
+Ta metoda širjenja zahteva spremembe protokola Ethereum (plast 1 <GlossaryTooltip termKey="mainnet">glavno omrežje</GlossaryTooltip>). Drobljenje je trenutno glavna naloga pri tej metodi širitve.
 
 ### Razdrobitev {#sharding}
 
@@ -56,8 +56,8 @@ Zvitki izvajajo izvedbo transakcij izven plasti 1 in nato podatke objavijo na pl
 
 Obstajata dva tipa zvitkov z različnima varnostnima modeloma:
 
-- **Optimistični zvitki**: predvidevajo, da so transakcije privzeto veljavne, in izvedejo računanje le v primeru izpodbijanja prek [**odpora na prevare**](/glossary/#fraud-proof). [Več o optimističnih zvitkih](/developers/docs/scaling/optimistic-rollups/).
-- **Zvitki brez znanja**: izvedejo računanje izven verige in predložijo[**dokaz o veljavnosti**](/glossary/#validity-proof) na verigo. [Več o zvitkih brez znanja](/developers/docs/scaling/zk-rollups/).
+- **Optimistični zvitki**: predvidevajo, da so transakcije privzeto veljavne, in izvedejo računanje le v primeru izpodbijanja prek <GlossaryTooltip termKey="fraud-proof">**odpora na prevare**</GlossaryTooltip>. [Več o optimističnih zvitkih](/developers/docs/scaling/optimistic-rollups/).
+- **Zvitki brez znanja**: izvedejo računanje izven verige in predložijo<GlossaryTooltip termKey="validity-proof">**dokaz o veljavnosti**</GlossaryTooltip> na verigo. [Več o zvitkih brez znanja](/developers/docs/scaling/zk-rollups/).
 
 #### Kanali stanja {#channels}
 

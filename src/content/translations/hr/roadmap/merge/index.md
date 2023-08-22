@@ -20,7 +20,7 @@ Spajanje predstavlja objedinjavanje izvornog izvršnog sloja Ethereuma (glavne m
 
 <MergeInfographic />
 
-U početku je [Beacon Chain](/roadmap/beacon-chain/) bio odvojen od [glavne mreže](/glossary/#mainnet). Glavna mreža Ethereuma, sa svim svojim računima, stanjima, pametnim ugovorima i stanjima lanaca blokova, ostaje zaštićena [dokazom rada](/developers/docs/consensus-mechanisms/pow/), čak i za vrijeme paralelnog rada značajke Beacon Chain i njegova [dokaza uloga](/developers/docs/consensus-mechanisms/pos/). Spajanjem su ta dva sustava konačno objedinjena, pri čemu je dokaz rada trajno zamijenjen dokazom uloga.
+U početku je [Beacon Chain](/roadmap/beacon-chain/) bio odvojen od <GlossaryTooltip termKey="mainnet">glavne mreže</GlossaryTooltip>. Glavna mreža Ethereuma, sa svim svojim računima, stanjima, pametnim ugovorima i stanjima lanaca blokova, ostaje zaštićena [dokazom rada](/developers/docs/consensus-mechanisms/pow/), čak i za vrijeme paralelnog rada značajke Beacon Chain i njegova [dokaza uloga](/developers/docs/consensus-mechanisms/pos/). Spajanjem su ta dva sustava konačno objedinjena, pri čemu je dokaz rada trajno zamijenjen dokazom uloga.
 
 Zamislite Ethereum kao svemirski brod koji je izbačen u orbitu prije nogo što je bio spreman za zvjezdano putovanje. Uz Beacon Chain zajednica je izgradila novi stroj i ojačala njegov trup. Nakon iscrpnog testiranja, odlučeno je da je vrijeme za zamjenu starog stroja u radu novim. Time je uveden nov i učinkovitiji motor u postojeći brod koji mu omogućuje dodatne svjetlosne godine i osvajanje novih svjetova.
 

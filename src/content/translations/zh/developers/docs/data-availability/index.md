@@ -73,13 +73,13 @@ lang: zh
 
 #### 数据可用性和二层网络扩容 {#data-availability-and-layer-2-scaling}
 
-[二层网络扩容解决方案](/layer-2/)（例如[卷叠](/glossary/#rollups)）通过在以太坊主执行层之外执行交易来扩展网络的吞吐量并减少延迟。 链下交易在压缩后分批次发布到以太坊上 — 数千笔交易可以在链下进行，但是以太坊需处理与每个提交批次相关的*一笔*链上交易。 这就缓解了基础层上的拥塞并减少了用户的费用，同时保证了更快捷的交易。
+[二层网络扩容解决方案](/layer-2/)（例如<GlossaryTooltip termKey="rollups">卷叠</GlossaryTooltip>）通过在以太坊主执行层之外执行交易来扩展网络的吞吐量并减少延迟。 链下交易在压缩后分批次发布到以太坊上 — 数千笔交易可以在链下进行，但是以太坊需处理与每个提交批次相关的*一笔*链上交易。 这就缓解了基础层上的拥塞并减少了用户的费用，同时保证了更快捷的交易。
 
 然而，为了让以太坊保证卷叠的安全，需要一种机制来验证链下交易的有效性。 这就是数据可用性的用武之地。
 
-[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)将压缩后的交易数据作为 `calldata` 发布到以太坊。 这让任何人都能验证卷叠的状态并保证交易的有效性。 如果一笔交易是无效的，验证者可以使用可用数据构造一个[欺诈证明](/glossary/#fraud-proof)，来质疑该交易。
+[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)将压缩后的交易数据作为 `calldata` 发布到以太坊。 这让任何人都能验证卷叠的状态并保证交易的有效性。 如果一笔交易是无效的，验证者可以使用可用数据构造一个<GlossaryTooltip termKey="fraud-proof">欺诈证明</GlossaryTooltip>，来质疑该交易。
 
-[零知识 (ZK) 卷叠](/developers/docs/scaling/zk-rollups)无需发布交易数据，因为[零知识有效性证明](/glossary/#zk-proof)可保证状态转换的正确性。 然而，如果不能获取其状态数据，我们就不能保证零知识卷叠的功能（或者与它交互）。
+[零知识 (ZK) 卷叠](/developers/docs/scaling/zk-rollups)无需发布交易数据，因为<GlossaryTooltip termKey="zk-proof">零知识有效性证明</GlossaryTooltip>可保证状态转换的正确性。 然而，如果不能获取其状态数据，我们就不能保证零知识卷叠的功能（或者与它交互）。
 
 例如，如果运营者隐瞒了卷叠状态的细节，用户就无法知道自己的余额。 而且，用户也不能使用新添加区块中的信息来执行状态更新。
 

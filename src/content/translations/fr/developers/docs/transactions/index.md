@@ -105,7 +105,7 @@ Grâce au hachage de la signature, il est possible de prouver de façon cryptogr
 
 ### Le champ de données {#the-data-field}
 
-La grande majorité des transactions accèdent à un contrat provenant d'un compte externe. La plupart des contrats sont écrits en Solidity et interprètent leur champ de données conformément à l'[interface binaire-programme (ABI)](/glossary/#abi).
+La grande majorité des transactions accèdent à un contrat provenant d'un compte externe. La plupart des contrats sont écrits en Solidity et interprètent leur champ de données conformément à l'<GlossaryTooltip termKey="abi">interface binaire-programme (ABI)</GlossaryTooltip>.
 
 Les quatre premiers octets indiquent la fonction à appeler, en utilisant les hachages de son nom et de ses arguments. Vous pouvez parfois identifier la fonction depuis le sélecteur à l'aide de [cette base de données](https://www.4byte.directory/signatures/).
 

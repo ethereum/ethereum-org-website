@@ -317,7 +317,7 @@ Pense no DeFi como camadas:
 
 1. O blockchain: Ethereum contém o histórico das transações e o estado das contas.
 2. Os ativos: [ETH](/eth/) e outros tokens (moedas).
-3. Os protocolos: [contratos inteligentes](/glossary/#smart-contract) que fornecem a funcionalidade, por exemplo, um serviço que permite empréstimos de ativos descentralizados.
+3. Os protocolos: <GlossaryTooltip termKey="smart-contract">contratos inteligentes</GlossaryTooltip> que fornecem a funcionalidade, por exemplo, um serviço que permite empréstimos de ativos descentralizados.
 4. [As aplicações](/dapps/): os produtos que usamos para gerenciar e acessar os protocolos.
 
 ## Criar Defi {#build-defi}

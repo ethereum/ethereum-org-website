@@ -13,7 +13,7 @@ Validium 是一种[扩容解决方案](/developers/docs/scaling/)，使用[零�
 
 ## 什么是 Validium？ {#what-is-validium}
 
-Validium 是使用链下数据可用性和计算的扩展解决方案，旨在通过在以太坊主网外处理交易来提高吞吐量。 与零知识卷叠（ZK 卷叠）一样，Validium 发布[零知识证明](/glossary/#zk-proof)以便在以太坊上验证链下交易。 这样可以防止无效的状态转换并增强 Validium 链的安全保障。
+Validium 是使用链下数据可用性和计算的扩展解决方案，旨在通过在以太坊主网外处理交易来提高吞吐量。 与零知识卷叠（ZK 卷叠）一样，Validium 发布<GlossaryTooltip termKey="zk-proof">零知识证明</GlossaryTooltip>以便在以太坊上验证链下交易。 这样可以防止无效的状态转换并增强 Validium 链的安全保障。
 
 这些“有效性证明”可以有 ZK-SNARK（零知识简洁非交互式知识论证）或 ZK-STARK（零知识可扩展透明知识论证）等形式。 更多关于[零知识证明](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)的信息。
 

@@ -21,7 +21,7 @@ Você deveria ter um bom entendimento de todos os tópicos fundamentais. Impleme
 
 ## Dimensionamento on-chain {#on-chain-scaling}
 
-Este método de dimensionamento requer alterações no protocolo Ethereum ([rede principal](/glossary/#mainnet) da camada 1). A fragmentação é atualmente o principal objetivo deste método de dimensionamento.
+Este método de dimensionamento requer alterações no protocolo Ethereum (<GlossaryTooltip termKey="mainnet">rede principal</GlossaryTooltip> da camada 1). A fragmentação é atualmente o principal objetivo deste método de dimensionamento.
 
 ### Fragmentação {#sharding}
 
@@ -58,8 +58,8 @@ Os rollups levam a execução das transações para fora da camada 1 e, posterio
 
 Existem dois tipos de rolllups com diferentes modelos de segurança:
 
-- **Optimistic rollups**: assumem que as transações são válidas por padrão e só executam computação através de uma [**prova de fraude**](/glossary/#fraud-proof), caso alguém levante alguma objeção. [Mais sobre optimistic-rollups](/developers/docs/scaling/optimistic-rollups/).
-- **Rollups de conhecimento zero**: executam a computação off-chain e enviam uma [**prova de validade**](/glossary/#validity-proof) para a cadeia. [Mais sobre rollups de conhecimento zero](/developers/docs/scaling/zk-rollups/).
+- **Optimistic rollups**: assumem que as transações são válidas por padrão e só executam computação através de uma <GlossaryTooltip termKey="fraud-proof">**prova de fraude**</GlossaryTooltip>, caso alguém levante alguma objeção. [Mais sobre optimistic-rollups](/developers/docs/scaling/optimistic-rollups/).
+- **Rollups de conhecimento zero**: executam a computação off-chain e enviam uma <GlossaryTooltip termKey="validity-proof">**prova de validade**</GlossaryTooltip> para a cadeia. [Mais sobre rollups de conhecimento zero](/developers/docs/scaling/zk-rollups/).
 
 #### Canais de Estado {#channels}
 

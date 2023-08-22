@@ -274,7 +274,7 @@ A sincronização otimista é uma estratégia de sincronização pós-fusão pro
 
 #### Sincronização de ponto de verificação {#checkpoint-sync}
 
-A sincronização do ponto de verificação, também conhecida como sincronização de subjetividade fraca, cria uma experiência de usuário superior para sincronizar a Beacon Node. Ela é baseada em suposições de [subjetividade fraca](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/), que permitem sincronizar a Beacon Chain de um ponto de verificação de subjetividade fraca recente em vez da origem. A sincronização do ponto de verificação torna o tempo de sincronização inicial significativamente mais rápido com suposições de confiança semelhantes às da sincronização da [origem](/glossary/#genesis-block).
+A sincronização do ponto de verificação, também conhecida como sincronização de subjetividade fraca, cria uma experiência de usuário superior para sincronizar a Beacon Node. Ela é baseada em suposições de [subjetividade fraca](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/), que permitem sincronizar a Beacon Chain de um ponto de verificação de subjetividade fraca recente em vez da origem. A sincronização do ponto de verificação torna o tempo de sincronização inicial significativamente mais rápido com suposições de confiança semelhantes às da sincronização da <GlossaryTooltip termKey="genesis-block">origem</GlossaryTooltip>.
 
 Na prática, isso significa que seu nó se conecta a um serviço remoto para baixar os estados finalizados recentes e continua verificando os dados a partir desse ponto. A terceira parte que fornece os dados é confiável e deve ser escolhida com cuidado.
 

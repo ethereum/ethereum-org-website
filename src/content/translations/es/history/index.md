@@ -31,7 +31,7 @@ Estos cambios de reglas pueden crear una ruptura temporal en la red. Los bloques
 
 #### Sumario {#arrow-glacier-summary}
 
-La actualización de la red Arrow Glacier hizo retroceder la [bomba de dificultad](/glossary/#difficulty-bomb) durante varios meses. Este es el único cambio introducido en esta actualización, y es similar en naturaleza a la actualización de [Muir Glacier](#muir-glacier). En las actualizaciones de red [Byzantium](#byzantium),[Constantinopla](#constantinople) y [Londres](#london) se han realizado cambios similares.
+La actualización de la red Arrow Glacier hizo retroceder la <GlossaryTooltip termKey="difficulty-bomb">bomba de dificultad</GlossaryTooltip> durante varios meses. Este es el único cambio introducido en esta actualización, y es similar en naturaleza a la actualización de [Muir Glacier](#muir-glacier). En las actualizaciones de red [Byzantium](#byzantium),[Constantinopla](#constantinople) y [Londres](#london) se han realizado cambios similares.
 
 - [BLog de EF - anuncio de actualización de Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Actualización de Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -72,7 +72,7 @@ Altair fue la primera gran actualización de red que ha tenido un tiempo de impl
 
 #### Resumen {#london-summary}
 
-La actualización de Londres introdujo [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), que ha reformado el mercado de las cuotas de transacción, junto con cambios en la forma en que se manejan los reembolsos de gas y el plan [Era de hielo](/glossary/#ice-age).
+La actualización de Londres introdujo [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), que ha reformado el mercado de las cuotas de transacción, junto con cambios en la forma en que se manejan los reembolsos de gas y el plan <GlossaryTooltip termKey="ice-age">Era de hielo</GlossaryTooltip>.
 
 - [¿Desarrolla usted dApp? Asegúrese de actualizar sus bibliotecas y herramientas.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -136,7 +136,7 @@ La [cadena de baliza](/roadmap/beacon-chain/) necesita 16.384 depósitos de 32 E
 
 #### Resumen {#deposit-contract-summary}
 
-El contrato de depósito de apuesta introdujo la [apuesta](/glossary/#staking) en el ecosistema de Ethereum. A pesar de ser un contrato en la [red principal](/glossary/#mainnet), ha tenido impacto directo sobre la secuenciación de lanzamiento de [cadena de baliza](/roadmap/beacon-chain/), una importante [ actualización de Ethereum](/roadmap/).
+El contrato de depósito de apuesta introdujo la <GlossaryTooltip termKey="staking">apuesta</GlossaryTooltip> en el ecosistema de Ethereum. A pesar de ser un contrato en la <GlossaryTooltip termKey="mainnet">red principal</GlossaryTooltip>, ha tenido impacto directo sobre la secuenciación de lanzamiento de [cadena de baliza](/roadmap/beacon-chain/), una importante [ actualización de Ethereum](/roadmap/).
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -152,7 +152,7 @@ El contrato de depósito de apuesta introdujo la [apuesta](/glossary/#staking) e
 
 #### Sumario {#muir-glacier-summary}
 
-La bifurcación Muir Glacier introdujo una demora en la [bomba de dificultad](/glossary/#difficulty-bomb). El aumento de la dificultad del bloque del mecanismo de consenso de la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/) amenazó con degradar la usabilidad de Ethereum, debido al incremento de los tiempos de espera para enviar transacciones y utilizar dapps.
+La bifurcación Muir Glacier introdujo una demora en la <GlossaryTooltip termKey="difficulty-bomb">bomba de dificultad</GlossaryTooltip>. El aumento de la dificultad del bloque del mecanismo de consenso de la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/) amenazó con degradar la usabilidad de Ethereum, debido al incremento de los tiempos de espera para enviar transacciones y utilizar dapps.
 
 - [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Leer la explicación de Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -175,7 +175,7 @@ La bifurcación Muir Glacier introdujo una demora en la [bomba de dificultad](/g
 
 La bifurcación de Estambul:
 
-- Se ha optimizado el coste del [gas](/glossary/#gas) de ciertas acciones en la [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Se ha optimizado el coste del <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> de ciertas acciones en la [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Mejora de la resistencia al ataque de denegación de servicio.
 - Realizó soluciones de escala de [capa 2](/developers/docs/scaling/#layer-2-scaling) basadas en SNARK y STARK más eficientes.
 - Habilitó Ethereum y Zcash para que interoperasen.
@@ -186,7 +186,7 @@ La bifurcación de Estambul:
 <ExpandableCard title="EIP de Estambul" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) - _permitir a Ethereum que opere con una divisa que vele por la privacidad, como Zcash._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _criptografía más barata para mejorar [gas](/glossary/#gas)._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _criptografía más barata para mejorar <GlossaryTooltip termKey="gas">gas</GlossaryTooltip>._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protege a Ethereum contra ataques de repetición mediante la adición de `CHAINID` [opcode](/Developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimizando los precios de gas de código opcional basado en el consumo._
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduce el coste de CallData para permitir más datos en bloques - bueno para [Escalado de capa 2](/developers/docs/scaling/#layer-2-scaling)._
@@ -205,7 +205,7 @@ La bifurcación de Estambul:
 La bifurcación Constantinopla:
 
 - Te has cerciorado de que la cadena de bloques no se congelara antes de que se implementara la [prueba de participación](#beacon-chain-genesis).
-- Se ha optimizado el coste del [gas](/glossary/#gas) de ciertas acciones en la [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Se ha optimizado el coste del <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> de ciertas acciones en la [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Se ha añadido la capacidad de interactuar con direcciones que aún no se han creado.
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -232,7 +232,7 @@ La bifurcación Constantinopla:
 La bifurcación de Bizancio:
 
 - Se redujo la recompensa del [minero](/developers/docs/consensus-mechanisms/pow/mining/) de bloque de 5 a 3 ETH.
-- Se ha retrasado un año la [bomba de dificultad](/glossary/#difficulty-bomb).
+- Se ha retrasado un año la <GlossaryTooltip termKey="difficulty-bomb">bomba de dificultad</GlossaryTooltip>.
 - Se ha añadido la habilidad para realizar llamadas «sin cambiar de estado» a otros contratos.
 - Se añadieron ciertos métodos de criptografía para permitir [escalado de capa 2](/developers/docs/scaling/#layer-2-scaling).
 
@@ -248,7 +248,7 @@ La bifurcación de Bizancio:
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _añade soporte para valores de retorno de longitud variable._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _añade el código `STATICALL`, permitiendo llamadas no estatales a otros contratos._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) - _cambia la fórmula de ajuste de dificultad._
-- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _retrasa [bomba de dificultad](/glossary/#difficulty-bomb) 1 año y reduce la recompensa de bloque de 5 a 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _retrasa <GlossaryTooltip termKey="difficulty-bomb">bomba de dificultad</GlossaryTooltip> 1 año y reduce la recompensa de bloque de 5 a 3 ETH._
 
 </ExpandableCard>
 
@@ -308,7 +308,7 @@ La bifurcación Tangerine Whistle fue la primera respuesta a los ataques de dene
 
 #### Resumen {#dao-fork-summary}
 
-La bifurcación DAO surgió como respuesta al [ataque de DAO de 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) donde un contrato [DAO](/glossary/#dao) inseguro fue drenando más de 3,6 millones de ETH en un hackeo. La bifurcación movió los fondos del contrato defectuoso a un [nuevo contrato](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una única función: retirar. Cualquiera que haya perdido fondos podría retirar 1 ETH por cada 100 tókenes DAO en sus billeteras.
+La bifurcación DAO surgió como respuesta al [ataque de DAO de 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) donde un contrato <GlossaryTooltip termKey="dao">DAO</GlossaryTooltip> inseguro fue drenando más de 3,6 millones de ETH en un hackeo. La bifurcación movió los fondos del contrato defectuoso a un [nuevo contrato](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una única función: retirar. Cualquiera que haya perdido fondos podría retirar 1 ETH por cada 100 tókenes DAO en sus billeteras.
 
 Esta acción fue votada por la comunidad Ethereum. Cualquier titular de ETH pudo votar a través de una transacción en [una plataforma de votación](http://v1.carbonvote.com/). La decisión de bifurcar obtuvo más del 85 % de los votos.
 
@@ -346,7 +346,7 @@ La bifurcación Homestead que miró hacia el futuro. Incluyó varios cambios de 
 
 #### Resumen {#frontier-thawing-summary}
 
-La bifurcación de deshielo Frontier elevó el limite del [combustible](/glossary/#gas) de 5.000 por [bloque](/glossary/#block) y fijó el precio por defecto en 51 [gwei](/glossary/#gwei). Esto se permite en las transacciones - transacciones que requieren 21.000 de combustible.
+La bifurcación de deshielo Frontier elevó el limite del <GlossaryTooltip termKey="gas">combustible</GlossaryTooltip> de 5.000 por <GlossaryTooltip termKey="block">bloque</GlossaryTooltip> y fijó el precio por defecto en 51 <GlossaryTooltip termKey="gwei">gwei</GlossaryTooltip>. Esto se permite en las transacciones - transacciones que requieren 21.000 de combustible.
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 
@@ -358,7 +358,7 @@ La bifurcación de deshielo Frontier elevó el limite del [combustible](/glossar
 
 #### Resumen {#frontier-summary}
 
-Frontier fue una implementación en vivo, pero básica, del proyecto Ethereum. Siguió a la exitosa fase de pruebas olímpicas. Estaba destinada a usuarios técnicos, específicamente a desarrolladores. [Los bloques](/glossary/#block) tenían un límite de [gas](/glossary/#gas) de 5.000. Este período de «deshielo» permitió a los mineros iniciar sus operaciones y a los primeros adoptantes instalar sus clientes sin tener que «precipitarse».
+Frontier fue una implementación en vivo, pero básica, del proyecto Ethereum. Siguió a la exitosa fase de pruebas olímpicas. Estaba destinada a usuarios técnicos, específicamente a desarrolladores. <GlossaryTooltip termKey="block">Los bloques</GlossaryTooltip> tenían un límite de <GlossaryTooltip termKey="gas">gas</GlossaryTooltip> de 5.000. Este período de «deshielo» permitió a los mineros iniciar sus operaciones y a los primeros adoptantes instalar sus clientes sin tener que «precipitarse».
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
