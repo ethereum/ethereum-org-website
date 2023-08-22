@@ -28,6 +28,7 @@ import Codeblock from "../components/Codeblock"
 import FeedbackCard from "../components/FeedbackCard"
 import CrowdinContributors from "../components/FileContributorsCrowdin"
 import GitHubContributors from "../components/FileContributorsGitHub"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import InfoBanner from "../components/InfoBanner"
 import InlineLink from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
@@ -205,6 +206,7 @@ const components = {
   ...mdxTableComponents,
   ButtonLink,
   InfoBanner,
+  GlossaryTooltip,
   Card,
   Divider,
   SectionNav,
@@ -307,7 +309,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-developers-docs", "common"] }
+        ns: { in: ["page-developers-docs", "common", "glossary"] }
       }
     ) {
       edges {

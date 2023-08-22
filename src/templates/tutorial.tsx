@@ -35,6 +35,7 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -217,6 +218,7 @@ const components = {
   CallToContribute,
   Emoji,
   YouTube,
+  GlossaryTooltip,
 }
 
 const TutorialPage = ({
@@ -317,7 +319,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-developers-tutorials", "common"] }
+        ns: { in: ["page-developers-tutorials", "common", "glossary"] }
       }
     ) {
       edges {
