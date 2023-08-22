@@ -27,7 +27,7 @@ const GlossaryTooltip: React.FC<IProps> = ({ children, termKey }) => {
       </Text>
     </Tooltip>
   ) : (
-    <Text>{children}</Text>
+    <Text as="span">{children}</Text>
   )
 }
 
