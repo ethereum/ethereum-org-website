@@ -9,13 +9,13 @@ export const Phone: React.FC<SimulatorStateProps> = ({ state }) => {
   const { [screens]: Screen } = require("./screens")
 
   return (
-    <Box as="figure" w="min(100%, 300px)" mx="auto">
+    <Box as="figure" w="min(100%, 322px)" mx="auto">
       {/* Phone frame */}
       <Box
         h={{ base: 480, md: 600 }}
         maxH="100%"
         w="full"
-        border="8px"
+        border="5px solid"
         borderColor="body.medium"
         borderRadius="3xl"
         bg="background.base"
