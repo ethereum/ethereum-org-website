@@ -18,7 +18,7 @@ import { FaGithub } from "react-icons/fa"
 // Components
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
-import Link from "../../components/Link"
+import InlineLink, { BaseLink } from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
 import TutorialTags from "../../components/TutorialTags"
@@ -219,9 +219,9 @@ const TutorialsPage = ({
         </Heading>
         <Text>
           <Translation id="page-tutorial-listing-policy-intro" />{" "}
-          <Link to="/contributing/content-resources/">
+          <InlineLink to="/contributing/content-resources/">
             <Translation id="page-tutorial-listing-policy" />
-          </Link>
+          </InlineLink>
         </Text>
         <Text>
           <Translation id="page-tutorial-submit-tutorial" />
@@ -393,10 +393,11 @@ const TutorialsPage = ({
         {filteredTutorials.map((tutorial) => {
           return (
             <Flex
-              as={Link}
+              as={BaseLink}
               textDecoration="none"
               flexDirection="column"
               justifyContent="space-between"
+              fontWeight="normal"
               color="text"
               boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
               mb="px"

@@ -35,8 +35,8 @@ import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import InlineLink, { BaseLink } from "../components/Link"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -108,7 +108,7 @@ export const Paragraph = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -116,7 +116,7 @@ const components = {
   p: Paragraph,
   li: chakra.li,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   MeetupList,
   RandomAppList,
   Logo,
@@ -380,6 +380,15 @@ const UseCasePage = ({
           eventName: "desci",
         },
       },
+      {
+        text: "template-usecase-dropdown-refi",
+        to: "/refi/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "refi",
+        },
+      },
     ],
   }
 
@@ -390,9 +399,9 @@ const UseCasePage = ({
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <div>
             <Translation id="template-usecase-banner" />{" "}
-            <Link to={absoluteEditPath}>
+            <InlineLink to={absoluteEditPath}>
               <Translation id="template-usecase-edit-link" />
-            </Link>
+            </InlineLink>
           </div>
         </BannerNotification>
       </Show>
@@ -429,7 +438,7 @@ const UseCasePage = ({
       </HeroContainer>
       <Show above={lgBp}>
         <Flex
-          as={Link}
+          as={BaseLink}
           to="#content"
           bg="ednBackground"
           justifyContent="center"
