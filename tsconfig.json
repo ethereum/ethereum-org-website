@@ -194,7 +194,6 @@
     "./src/components/Trilemma/useTrilemma.tsx",
     "./src/components/TutorialMetadata.tsx",
     "./src/components/TutorialTags.tsx",
-    "./src/components/UpcomingEventsList.tsx",
     "./src/components/UpgradeBannerNotification.tsx",
     "./src/components/UpgradeStatus.tsx",
     "./src/components/UpgradeTableOfContents.tsx",
