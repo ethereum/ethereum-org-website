@@ -286,5 +286,32 @@
     "description": "Three days of building bridges between web3 builders, creators, traditional businesses, financial experts, and policymakers.",
     "startDate": "2023-9-15",
     "endDate": "2023-9-17"
+  },
+  {
+    "title": "ETH LONDON Hackathon 2023",
+    "to": "https://www.encode.club/eth-london",
+    "sponsor": null,
+    "location": "London, UK",
+    "description": "Join us for the ETH London Hackathon, 27th-29th October 2023, an exciting and innovative event focusing on Ethereum technology. Network with industry leaders, showcase your skills, and innovate in the thriving Ethereum space.",
+    "startDate": "2023-10-27",
+    "endDate": "2023-10-29"
+  },
+  {
+    "title": "Devconnect Istanbul",
+    "to": "https://devconnect.org",
+    "sponsor": null,
+    "location": "Istanbul, Turkey",
+    "description": "Devconnect is a week-long gathering of independent Ethereum events. There is no \"main\" event. Instead, different teams host events, each with a unique focus, ranging from beginner-friendly to expert level. Throughout the week, there will also be an official Devconnect coworking space. It aims to bring together Ethereum's builders, researchers, and community in one place.",
+    "startDate": "2023-11-13",
+    "endDate": "2023-11-19"
+  },
+  {
+    "title": "Ethereum Costa Rica Day",
+    "to": "http://ethereum.cr",
+    "sponsor": null,
+    "location": "Costa Rica",
+    "description": "Full day of learning about Ethereum, onboarding new users and builders.",
+    "startDate": "2023-11-25",
+    "endDate": "2023-11-25"
   }
 ]

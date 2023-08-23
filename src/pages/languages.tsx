@@ -12,7 +12,7 @@ import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React, { useState } from "react"
 import { MdClose } from "react-icons/md"
 
-import Link from "../components/Link"
+import InlineLink, { BaseLink } from "../components/Link"
 import Input from "../components/Input"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
@@ -71,16 +71,16 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
         </Text>
         <Text>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
-          </Link>
+          </InlineLink>
           .
         </Text>
         <Text>
           <Translation id="page-languages-resources-paragraph" />{" "}
-          <Link to="/community/language-resources">
+          <InlineLink to="/community/language-resources">
             <Translation id="page-languages-resources-link" />
-          </Link>
+          </InlineLink>
           .
         </Text>
         <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
@@ -105,7 +105,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                   position="absolute"
                   insetInlineEnd={1}
                   aria-label={t("clear")}
-                  variant="icon"
+                  variant="ghost"
                   _hover={{ svg: { fill: "primary" } }}
                 />
               )
@@ -150,7 +150,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <LinkOverlay
-                    as={Link}
+                    as={BaseLink}
                     to={redirectTo}
                     language={lang.code}
                     textDecoration="none"
@@ -170,9 +170,9 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
         </Heading>
         <Text>
           <Translation id="page-languages-want-more-paragraph" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-want-more-link" />
-          </Link>
+          </InlineLink>
           .
         </Text>
       </Box>

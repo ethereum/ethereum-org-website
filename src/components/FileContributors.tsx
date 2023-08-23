@@ -25,7 +25,7 @@ import { trackCustomEvent } from "../utils/matomo"
 import { Lang } from "../utils/languages"
 
 import ButtonLink from "./ButtonLink"
-import Link from "./Link"
+import InlineLink from "./Link"
 import Modal from "./Modal"
 import Translation from "./Translation"
 import Button from "./Button"
@@ -110,7 +110,9 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
         mr={2}
       />
       {contributor.user && (
-        <Link to={contributor.user.url}>@{contributor.user.login}</Link>
+        <InlineLink to={contributor.user.url}>
+          @{contributor.user.login}
+        </InlineLink>
       )}
       {!contributor.user && <span>{contributor.name}</span>}
     </ListItem>
@@ -189,9 +191,9 @@ const FileContributors: React.FC<IProps> = ({
             <Text m={0} color="text200">
               <Translation id="last-edit" />:{" "}
               {lastContributor.user && (
-                <Link to={lastContributor.user.url}>
+                <InlineLink to={lastContributor.user.url}>
                   @{lastContributor.user.login}
-                </Link>
+                </InlineLink>
               )}
               {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
               {getLocaleTimestamp(language as Lang, lastEdit)}
