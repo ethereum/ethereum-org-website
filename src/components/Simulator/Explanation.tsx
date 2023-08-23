@@ -3,17 +3,27 @@ import { Box, type BoxProps, Flex, Icon, Text } from "@chakra-ui/react"
 import { MdChevronLeft, MdInfoOutline } from "react-icons/md"
 import Button from "../Button"
 import Tooltip from "../Tooltip"
-import { SimulatorStateProps } from "../../interfaces"
-import { simulatorData } from "./data"
+import type {
+  SimulatorExplanation,
+  SimulatorStateProps,
+} from "../../interfaces"
 
-export const Explanation: React.FC<SimulatorStateProps> = ({ state }) => {
-  const { regressStepper, step, totalSteps, pathId } = state
-  const { header, description } =
-    simulatorData[pathId].stepDetails.explanations[step]
+interface ExplanationProps extends SimulatorStateProps {
+  explanation: SimulatorExplanation
+  onClose?: () => void
+}
+export const Explanation: React.FC<ExplanationProps> = ({
+  state,
+  explanation,
+  onClose,
+}) => {
+  const { regressStepper, step, totalSteps } = state
+  const { header, description } = explanation
 
   const Description: React.FC<BoxProps> = (props) => (
     <Box {...props}>{description}</Box>
   )
+  const isLastStep = state.step + 1 === totalSteps
   return (
     <Flex direction="column" flex={1} alignItems="start">
       <Button
@@ -21,7 +31,8 @@ export const Explanation: React.FC<SimulatorStateProps> = ({ state }) => {
         leftIcon={<MdChevronLeft size="18px" />}
         sx={{ paddingInlineStart: 0 }}
         mb={8}
-        onClick={regressStepper}
+        onClick={step === 0 && onClose ? onClose : regressStepper}
+        visibility={step === 0 && !onClose ? "hidden" : "unset"}
       >
         Back
       </Button>

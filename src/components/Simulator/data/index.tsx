@@ -4,10 +4,11 @@ import Emoji from "../../Emoji"
 import type { SimulatorData } from "../../../interfaces"
 import Button from "../../Button"
 import ButtonLink from "../../ButtonLink"
+import { ConnectWeb3, CreateAccount, SendReceive } from "../screens"
 
 export const simulatorData: SimulatorData = {
   "create-account": {
-    screens: "CreateAccountScreens",
+    Screen: CreateAccount,
     stepDetails: {
       explanations: [
         {
@@ -151,7 +152,7 @@ export const simulatorData: SimulatorData = {
     },
   },
   "send-receive": {
-    screens: "SendReceiveScreens",
+    Screen: SendReceive,
     stepDetails: {
       explanations: [
         {
@@ -168,7 +169,7 @@ export const simulatorData: SimulatorData = {
     },
   },
   "connect-web3": {
-    screens: "ConnectWeb3",
+    Screen: ConnectWeb3,
     stepDetails: {
       explanations: [
         {
@@ -185,21 +186,3 @@ export const simulatorData: SimulatorData = {
     },
   },
 }
-
-// const pathOptions: Array<PathOption> = [
-//   {
-//     primaryText: "Create account",
-//     secondaryText: "How to?",
-//     iconName: "EthWalletIcon",
-//   },
-//   {
-//     primaryText: "Send/receive",
-//     secondaryText: "How to?",
-//     iconName: "WalletAppIcon",
-//   },
-//   {
-//     primaryText: "Connect to Web3",
-//     secondaryText: "How to?",
-//     iconName: "ConnectWeb3Icon",
-//   },
-// ]

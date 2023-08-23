@@ -289,9 +289,7 @@ const InteractiveWordSelector: React.FC<WordSelectorProps> = ({
   )
 }
 
-export const CreateAccountScreens: React.FC<SimulatorStateProps> = ({
-  state,
-}) => {
+export const CreateAccount: React.FC<SimulatorStateProps> = ({ state }) => {
   const { step } = state
   const words = useMemo<Array<string>>(generateSeedWithoutChecksum, [])
   return (

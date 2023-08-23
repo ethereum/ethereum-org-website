@@ -10,25 +10,25 @@ export interface SimulatorPathSummary {
   iconName: string
 }
 
-export interface SimulatorState {
-  progressStepper: () => void
-  regressStepper: () => void
-  resetStepper: () => void
-  step: number
-  totalSteps: number
-  pathId: string // TODO: Type this to list of simulators
-}
-
-export interface SimulatorStateProps {
-  state: SimulatorState
-}
-
 export interface SimulatorExplanation {
   header: string
   description: ReactElement
 }
+
+export type SimulatorType = "create-account" | "send-receive" | "connect-web3"
+
+export interface SimulatorState {
+  pathId: SimulatorType
+  step: number
+  totalSteps: number
+  progressStepper: () => void
+  regressStepper: () => void
+  openPath: (pathId: SimulatorType) => void
+}
+
+export interface PhoneScreenProps extends SimulatorStateProps {}
 export interface SimulatorDetails {
-  screens: string
+  Screen: React.FC<PhoneScreenProps>
   stepDetails: {
     explanations: Array<SimulatorExplanation>
     ctaLabels: Array<string>
@@ -36,6 +36,8 @@ export interface SimulatorDetails {
   pathSummary: SimulatorPathSummary
 }
 
-export interface SimulatorData {
-  [key: string]: SimulatorDetails
+export type SimulatorData = Record<SimulatorType, SimulatorDetails>
+
+export interface SimulatorStateProps {
+  state: SimulatorState
 }
