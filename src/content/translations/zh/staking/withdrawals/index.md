@@ -3,21 +3,23 @@ title: 质押提款
 description: 本页面概述质押推送提款是什么，它们如何工作，质押人需要做什么才能获得奖励
 lang: zh
 template: staking
-image: ../../../assets/staking/leslie-withdrawal.png
+image: ../../../../../assets/staking/leslie-withdrawal.png
 alt: 犀牛莱斯利与她的质押奖励
 sidebarDepth: 2
 summaryPoints:
-  - 上海升级在以太坊上启用质押提款
+  - 上海/卡佩拉升级实现了以太坊上的质押提款功能。
   - 验证者操作员必须提供一个提款地址以启用
   - 奖励每隔几天自动分发
   - 完全退出质押的验证者将收到他们的剩余余额
 ---
 
 <UpgradeStatus dateKey="page-staking-withdrawals-when">
-  质押提款将通过上海/卡佩拉升级启用。 这次以太坊网络升级预计将在 2023 年上半年进行。 <a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>更多内容如下</a>
+2023 年 4 月 12 日进行的上海/卡佩拉升级已实现质押提款功能。&nbsp;<a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>更多关于上海/卡佩拉升级的信息</a>
 </UpgradeStatus>
 
-上海/卡佩拉升级在以太坊上启用**质押提款**，允许人们解锁以太币质押奖励。 奖励支付将自动定期发送到与各个验证者关联的提款地址。 用户还可以完全退出质押，解锁他们全部的验证者余额。
+**质押提款**是指将以太币从以太坊共识层（信标链）上的验证者帐户转移到可以进行交易的执行层。
+
+用户提供提款地址后，超过 32 个以太币的余额的**奖励支付**将自动定期发送到和每个验证者相关的提款地址。 用户还可以**完全退出质押**，解锁他们全部的验证者余额。
 
 ## 质押奖励 {#staking-rewards}
 
@@ -29,9 +31,9 @@ summaryPoints:
 
 在过去的几年里，以太坊经历了几次网络升级，从依赖能源密集型挖矿的网络转变为由以太坊本身保护的网络。 现在，在以太坊上参与共识被称为“质押”，因为参与者自愿锁定以太币，将其“押注”以参与网络。 遵守规则的用户将获得奖励，而尝试欺骗的行为可能会受到惩罚。
 
-自 2020 年 11 月质押存款合约启动以来，一些勇敢的以太坊先驱者自愿锁定资金以激活“验证者”，这些账户有权按照网络规则正式证明和提议区块。
+自 2020 年 11 月推出质押存款合约以来，一些勇敢的以太坊先驱者自愿锁定资金以激活“验证者”，验证者即遵循网络规则有权正式证明和提出区块的特殊帐户。
 
-在上海升级之前，您无法使用或访问您质押的以太币。 但现在，您可以选择自动将奖励发送到提供的帐户，并且还可以随时提取您抵押的以太币。
+在上海/卡佩拉升级之前，你可能无法使用或访问自己质押的以太币。 但现在，你可以选择在选定的帐户自动接收你的奖励，也可以随时提取质押的以太币。
 
 ### 我应该如何准备？ {#how-do-i-prepare}
 
@@ -45,7 +47,7 @@ summaryPoints:
   <strong>每个验证者帐号只能分配一个提款地址，且仅限一次。</strong>一旦选择一个地址并将其提交到信标链，这个地址不能撤消或再次更改。 在提交前，请仔细检查所提供地址的所有权和准确性。
 </InfoBanner>
 
-同时，<strong>您的资金不会因不提供提款地址而受到威胁</strong>。 未添加提款凭据只会将以太币保持锁定在验证者帐户中，直到提供提款地址为止。
+同时，如果你的助记符/助记词在离线时一直保持安全，没有受到任何损害。不提供提款地址<strong>不会给你的资金带来任何威胁</strong>。 未添加提款凭据只会将以太币保持锁定在验证者帐户中，直到提供提款地址为止。
 
 ## 完全退出质押 {#exiting-staking-entirely}
 
@@ -53,15 +55,18 @@ summaryPoints:
 
 希望完全退出质押并取回全部余额的用户还必须使用验证者密钥签署并广播一个“自愿退出”的消息，这将启动退出质押的过程。 这是通过您的验证者客户端完成的，并提交给您的信标节点，无需燃料。
 
-验证者从抵押退出的过程所需时间不同，具体取决于同时退出的人数。 一旦完成，此帐户将不再负责执行验证者网络职责，不再有资格获得奖励，并且不再拥有“质押”的以太币。 此时，帐户将被标记为完全“可提款”。
+验证者从抵押退出的过程所需时间不同，具体取决于同时退出的人数。 一旦完成，此帐户将不再负责执行验证者网络职责，不再有资格获得奖励，并且不再拥有“质押”的以太币。 此时，该帐户将被标记为完全“可提款”。
 
 一旦帐户被标记为“可提款”，并且已提供提款凭据，用户除了等待之外，无需再做任何事情。 区块提议者会自动且持续地扫描是否有可退出资金，并在下一次<a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>扫描</a>期间将您帐户的余额全额转移（也称为“全额提款”）。
 
 ## 何时启用质押提款？ {#when}
 
-提款功能将通过两部分同时进行的网络升级启用，即**上海 + 卡佩拉**。
+质押提款已经上线！ 提款功能已在 2023 年 4 月 12 日进行的上海/卡佩拉升级中实现。
 
-<ShanghaiCapella />
+上海/卡佩拉升级后，可以将之前质押的以太币收回到普通以太坊帐户中。 这就结束了质押流动性循环，并使以太坊向着建立一个可持续、可扩展、安全的去中心化生态系统迈进一步。
+
+- [更多关于以太坊历史的信息](/history/)
+- [更多关于以太坊路线图的信息](/roadmap/)
 
 ## 提款支付是如何运作的？ {#how-do-withdrawals-work}
 
@@ -98,7 +103,7 @@ summaryPoints:
 
 ### 免燃料费 {#gas-free}
 
-这种质押提款方法不需要质押人手动提交交易来请求提款特定数量以太币。 这也意味着**不需要支付燃料（交易费用）**，并且提款也不会争夺现有执行层区块空间。
+这种质押提款方法不需要质押人手动提交交易来请求提款特定数量以太币。 这意味着**不需要提交燃料费（交易费）**，并且提款也不争夺现有的执行层区块空间。
 
 ### 我会多久收到一次质押奖励？ {#how-soon}
 
@@ -118,7 +123,7 @@ summaryPoints:
 
 </TableContainer>
 
-正如您所看到的，随着网络上的验证者数量增加，完成该过程的速度也会变慢。 增加错过区块可能会成比例地减缓该过程，但这通常代表了可能结果中较慢的一面。
+正如您所看到的，随着网络上的验证者数量增加，完成该过程的速度也会变慢。 错过的时隙数增加可能成比例减慢提款速度，但这通常代表了可能的结果中较慢的情况。
 
 ## 常见问题 {#faq}
 
@@ -148,9 +153,10 @@ eventCategory="FAQ"
 eventAction="What if I participate in liquid staking derivatives or pooled staking"
 eventName="read more">
 
-<p>如果你是<a href="/staking/pools/">质押池</a>的一部分或持有流动性质押衍生品，则应向你的提供商详细咨询质押提款将如何影响您的安排，因为每个服务运作方式不同。</p>
-<p>一般来说，用户可能不需要做任何事情，在升级后，这些服务将不再受到无法提取奖励或退出验证者资金的限制。</p>
-<p>这意味着用户现在可以决定赎回其正在被质押的以太币，或更改他们使用的质押服务提供商。 如果特定的质押池变得过于庞大，资金可以退出并赎回，并重新使用<a href="https://rated.network/">规模较小的提供商</a>进行质押。 或者，如果你已经积累了足够的以太币，你可以<a href="/staking/solo/">自行质押</a>。</p>
+如果你参加了<a href="/staking/pools/">质押池</a>，或持有流动性质押衍生品，你应该咨询你的提供商查，了解更多关于如何处理质押提款的细节，因为每种服务的运作方式不同。
+
+一般来说，用户应该可以随意收回他们的底层质押以太币，或者更换他们使用的质押服务提供商。 如果某个质押池变得过大，可以退出、收回资金，并通过<a href="https://rated.network/">较小的提供商</a>重新质押。 或者，如果你已经积攒了足够多的以太币，你就可以<a href="/staking/solo/">自行质押</a>。
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -158,8 +164,7 @@ title="奖励支付（部分提款）是否会自动进行？"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-
-<p>是的，只要你的验证者提供了提款地址。 必须提供一次才能启用任何提款，然后每隔几天，每次验证者扫描都会自动触发奖励支付。</p>
+是的，只要你的验证者提供了提款地址。 提款地址必须要提供一次，以便在最初时启用任何提款，之后奖励支付将每隔几天在进行验证者扫描时自动分发。
 </ExpandableCard>
 
 <ExpandableCard
@@ -168,26 +173,31 @@ eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
 
-<p>不。如果您的验证者仍在网络上运行，则不会自动执行完全提款。 需要手动发起自愿退出。</p>
-<p>一旦验证者完成退出过程，并且假设该账户具有提款凭证，则剩余余额<em>将</em>在下一个验证者扫描期间进行提款。</p>
+不。如果您的验证者仍在网络上运行，则不会自动执行完全提款。 需要手动发起自愿退出。
+
+一旦验证者完成退出流程，并且假设该帐户具有提款凭证，则剩余余额<em>随后将在</em>下一次<a href="#validator-sweeping">验证者扫描</a>期间提取。
+
 </ExpandableCard>
 
 <ExpandableCard title="我可以提取自定义数量的资金吗？"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
+提款旨在自动推送，转移任何未积极为质押做贡献的以太币。 这包括已完成退出流程的帐户的全部余额。
 
-<p>提款旨在自动推送，转移任何未积极为质押做贡献的以太币。 这包括帐号的全部余额。 </p>
-<p>无法手动请求要提取以太币的具体数量。</p>
+无法手动请求要提取以太币的具体数量。
 </ExpandableCard>
 
 <ExpandableCard
-title="我是一名验证者操作者，我在哪里可以找到更多关于准备的详细信息？"
+title="我运行一个验证者。 我在哪里可以找到更多关于启用提款的信息？"
 eventCategory="FAQ"
-eventAction="I operate a validator, where can I find more information on preparing?"
+eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-<p>建议验证者操作者访问<a href="https://launchpad.ethereum.org/withdrawals/">质押启动板提款</a>页面，详细了解如何做好准备、事件的时间安排以及提款如何运作。</p>
+建议验证者操作员访问<a href="https://launchpad.ethereum.org/withdrawals/">质押启动板提款</a>页面，了解有关如何准备验证者以进行提款的更多详细信息。 做好准备、安排好事件进行时间，了解有关提款功能的更多详细信息。
+
+要首先在测试网上测试你的设置，请访问 <a href="https://goerli.launchpad.ethereum.org">Goerli 测试网质押启动板</a>开始测试。
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -195,8 +205,7 @@ title="退出后，我可以通过存入更多以太币来重新激活验证者�
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-
-<p>否。 一旦验证者退出并提取其全部余额，存入该验证者的任何额外资金将在下一次验证者扫描期间自动转移到提款地址。 要重新质押以太币，必须激活新的验证者。</p>
+否。 一旦验证者退出并提取其全部余额，存入该验证者的任何额外资金将在下一次验证者扫描期间自动转移到提款地址。 要重新质押以太币，必须激活新的验证者。
 </ExpandableCard>
 
 ## 延伸阅读 {#further-reading}

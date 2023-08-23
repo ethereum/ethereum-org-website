@@ -43,8 +43,6 @@
   "page-get-eth-security": "Mas isso também significa que você precisa levar a sério a segurança dos seus fundos. Com ETH, você não confia em um banco para cuidar do seu dinheiro, você está confiando em você mesmo.",
   "page-get-eth-smart-contract-link": "Mais sobre contratos inteligentes",
   "page-get-eth-swapping": "Troque seus tokens por ETH de outras pessoas. E vice-versa.",
-  "page-get-eth-traditional-currencies": "Compre com moedas tradicionais",
-  "page-get-eth-traditional-payments": "Compre ETH com tipos de pagamento tradicionais diretamente de vendedores.",
   "page-get-eth-try-dex": "Veja como funciona um DEX",
   "page-get-eth-use-your-eth": "Use seu ETH",
   "page-get-eth-use-your-eth-dapps": "Agora que você possui alguns ETH, confira alguns aplicativos Ethereum (dapps). Existem dapps para finanças, mídias sociais, jogos e muitas outras categorias.",
@@ -63,6 +61,6 @@
   "page-get-eth-your-address-desc": "Quando você baixar uma carteira, ela criará um endereço ETH público para você. Ele se verá assim:",
   "page-get-eth-your-address-desc-3": "Pense nele como seu endereço de e-mail, mas em vez de mensagem, ele pode receber ETH. Se você quiser transferir ETH de uma exchange para sua carteira, use seu endereço como o destino. Não deixe de verificar o endereço antes de enviar!",
   "page-get-eth-your-address-wallet-link": "Confira as carteiras",
-  "listing-policy-raise-issue-link": "Fazer uma consulta",
+  "listing-policy-raise-issue-link": "Levante um problema",
   "page-find-wallet-last-updated": "Última atualização"
 }

@@ -2,7 +2,7 @@
 title: A more secure Ethereum
 description: Ethereum is the most secure and decentralized smart-contract platform in existence. However, there are still improvements that can be made so that Ethereum stays resilient to any level of attack far into the future.
 lang: en
-image: ../../../assets/hackathon_transparent.png
+image: ../../../assets/roadmap/roadmap-security.png
 alt: "Ethereum roadmap"
 template: roadmap
 ---
@@ -28,6 +28,8 @@ Reducing the time Ethereum takes to finalize blocks would provide a better user 
 ## Defending against censorship {#defending-against-censorship}
 
 Decentralization prevents individuals or small groups of validators from becoming too influential. New staking technologies can help to ensure Ethereum's validators stay as decentralized as possible while also defending them against hardware, software and network failures. This includes software that shares validator responsibilities across multiple nodes. This is known as **distributed validator technology (DVT)**. Staking pools are incentivized to use DVT because it allows multiple computers to collectively participate in validation, adding redundancy and fault-tolerance. It also splits validator keys across several systems, rather than having single operators running multiple validators. This makes it harder for dishonest operators to coordinate attacks on Ethereum. Overall, the idea is to derive security benefits by running validators as _communities_ rather than as individuals.
+
+<ButtonLink variant="outline-color" to="/staking/dvt/">Read about distributed validator technology</ButtonLink>
 
 Implementing **proposer-builder separation (PBS)** will drastically improve Ethereum's built-in defenses against censorship. PBS allows one validator to create a block and another to broadcast it across the Ethereum network. This ensures that the gains from professional profit-maximizing block building algorithms are shared more fairly across the network, **preventing stake from concentrating** with the best-performing institutional stakers over time. The block proposer gets to select the most profitable block offered to them by a market of block builders. To censor, a block proposer would often have to choose a less profitable block, which would be **economically irrational and also obvious to the rest of the validators** on the network.
 

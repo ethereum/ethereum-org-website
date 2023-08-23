@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-L'ultima volta abbiamo dato un'occhiata al [quadro generale di Solidity](https://soliditydeveloper.com/solidity-overview-2020) e abbiamo già accennato a [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Ora scoprirai come usarlo, quali funzionalità sono integrate e alcune idee aggiuntive su come approfondilo. Creata da Paul Razvan Berg, fondatore di [Sablier](http://sablier.finance/), quest'app avvierà lo sviluppo del tuo frontend, offrendo diverse integrazioni opzionali tra cui scegliere.
+L'ultima volta abbiamo dato un'occhiata al [quadro generale di Solidity](https://soliditydeveloper.com/solidity-overview-2020) e abbiamo già accennato a [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Ora scoprirai come usarlo, quali funzionalità sono integrate e alcune idee aggiuntive su come approfondilo. Creata da Paul Razvan Berg, fondatore di [Sablier](http://sablier.com/), quest'app avvierà lo sviluppo del tuo frontend, offrendo diverse integrazioni opzionali tra cui scegliere.
 
 ## Installazione {#installation}
 
@@ -51,7 +51,7 @@ _create-eth-app_ in particolare, fa uso dei nuovi [effetti hook](https://reactjs
 
 ### ethers.js {#ethersjs}
 
-Mentre [Web3](https://web3js.readthedocs.io/en/v1.2.7/) è ancora molto usato, nell'ultimo anno [ethers.js](https://docs.ethers.io/) ha riscosso molto successo come strumento alternativo ed è integrato in _create-eth-app_. Puoi lavorare con questo strumento, passare a Web3 o considerare di aggiornare a [ethers.js v5](https://docs-beta.ethers.io/), che ha quasi terminato la fase beta.
+Mentre [Web3](https://docs.web3js.org/) è ancora molto usato, nell'ultimo anno [ethers.js](https://docs.ethers.io/) ha riscosso molto successo come strumento alternativo ed è integrato in _create-eth-app_. Puoi lavorare con questo strumento, passare a Web3 o considerare di aggiornare a [ethers.js v5](https://docs-beta.ethers.io/), che ha quasi terminato la fase beta.
 
 ### Graph {#the-graph}
 
@@ -103,7 +103,7 @@ Sfortunatamente, al momento della redazione del del presente articolo, l'integra
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.finance/) consente agli utenti di trasmettere pagamenti in denaro. Invece di un singolo giorno di pagamento, in realtà puoi ricevere denaro costantemente senza ulteriore amministrazione dopo la configurazione iniziale. L'integrazione include i [propri subgraph](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
+[Sablier](https://sablier.com/) consente agli utenti di trasmettere pagamenti in denaro. Invece di un singolo giorno di pagamento, in realtà puoi ricevere denaro costantemente senza ulteriore amministrazione dopo la configurazione iniziale. L'integrazione include i [propri subgraph](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
 
 ## E poi? {#whats-next}
 

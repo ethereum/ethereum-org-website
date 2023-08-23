@@ -5,12 +5,22 @@ import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Link, { IProps as ILinkProps } from "./Link"
+import Link, { BaseLink, IProps as ILinkProps } from "./Link"
 import Translation from "./Translation"
-import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
+
+export const dropdownIconContainerVariant = {
+  open: {
+    rotate: 0,
+    y: 3,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  closed: { rotate: -90, y: 0 },
+}
 
 const innerLinksVariants = {
   open: {
@@ -40,16 +50,17 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
 
 const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
   return (
-    <Link
+    <BaseLink
       w="full"
       textDecoration="none"
       color="text"
-      _hover={{ textDecoration: "none", color: "primary" }}
-      _active={{ color: "primary" }}
+      fontWeight="normal"
+      _hover={{ textDecoration: "none", color: "primary.base" }}
+      _active={{ color: "primary.base" }}
       {...props}
     >
       {children}
-    </Link>
+    </BaseLink>
   )
 }
 
@@ -147,7 +158,7 @@ const SideNav: React.FC<IProps> = ({ path }) => {
       minW="298px"
       overflowY="auto"
       transition="transform 0.2s ease"
-      bgColor="background"
+      bgColor="background.base"
       boxShadow="1px 0px 0px rgba(0, 0, 0, 0.1)"
       borderRight="1px solid"
       borderRightColor="border"

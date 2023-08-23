@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   ButtonProps,
+  Checkbox,
   Flex,
   Heading,
   Img,
@@ -16,11 +17,10 @@ import {
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import CardList from "../../components/CardList"
-import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Emoji from "../../components/Emoji"
 import InfoBanner from "../../components/InfoBanner"
-import Link from "../../components/Link"
+import InlineLink from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import Tooltip from "../../components/Tooltip"
@@ -91,7 +91,7 @@ const CardTag = (props: ChildOnlyProp) => (
     alignItems="center"
     justifyContent="center"
     p={2}
-    bg="primary"
+    bg="primary.base"
     borderBottom="1px solid border"
     color="buttonColor"
     borderRadius="3px 3px 0px 0px"
@@ -105,7 +105,7 @@ const AddressCard = (props: ChildOnlyProp) => {
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
   return (
     <Box
-      bg="background"
+      bg="background.base"
       border="1px solid"
       borderColor="border"
       borderRadius="4px"
@@ -184,7 +184,7 @@ const StyledFakeLink = (props: { onClick: any; children: ReactNode }) => (
     as="button"
     onClick={props.onClick}
     mr={2}
-    color="primary"
+    color="primary.base"
     cursor="pointer"
   >
     {props.children}
@@ -328,9 +328,9 @@ const DepositContractPage = ({
           </h2>
           <p>
             <Translation id="page-staking-deposit-contract-staking" />{" "}
-            <Link to="/staking/">
+            <InlineLink to="/staking/">
               <Translation id="page-staking-deposit-contract-staking-more-link" />
-            </Link>
+            </InlineLink>
           </p>
           <StyledButton
             to="https://launchpad.ethereum.org"
@@ -358,13 +358,8 @@ const DepositContractPage = ({
                     </CardTitle>
                   </Row>
                   <Checkbox
+                    mb={2}
                     isChecked={state.userHasUsedLaunchpad}
-                    size="md"
-                    mb="0.5rem"
-                    display="flex"
-                    alignItems="top"
-                    variant="alignTop"
-                    minHeight="3.5rem"
                     onChange={() =>
                       setState({
                         ...state,
@@ -375,13 +370,8 @@ const DepositContractPage = ({
                     <Translation id="page-staking-deposit-contract-checkbox1" />
                   </Checkbox>
                   <Checkbox
+                    mb={2}
                     isChecked={state.userUnderstandsStaking}
-                    size="md"
-                    mb="0.5rem"
-                    display="flex"
-                    alignItems="top"
-                    variant="alignTop"
-                    minHeight="3.5rem"
                     onChange={() =>
                       setState({
                         ...state,
@@ -392,13 +382,8 @@ const DepositContractPage = ({
                     <Translation id="page-staking-deposit-contract-checkbox2" />
                   </Checkbox>
                   <Checkbox
+                    mb={2}
                     isChecked={state.userWillCheckOtherSources}
-                    size="md"
-                    mb="0.5rem"
-                    display="flex"
-                    alignItems="top"
-                    variant="alignTop"
-                    minHeight="3.5rem"
                     onChange={() =>
                       setState({
                         ...state,
@@ -464,20 +449,20 @@ const DepositContractPage = ({
                         </CopyButton>
                       )}
                     </CopyToClipboard>
-                    <Link
+                    <InlineLink
                       to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                     >
                       <Translation id="page-staking-deposit-contract-etherscan" />
-                    </Link>
+                    </InlineLink>
                   </ButtonRow>
                 </>
               )}
               <InfoBanner isWarning emoji=":warning:">
                 <div>
                   <Translation id="page-staking-deposit-contract-warning-2" />{" "}
-                  <Link to="https://launchpad.ethereum.org">
+                  <InlineLink to="https://launchpad.ethereum.org">
                     <Translation id="page-staking-deposit-contract-launchpad-2" />
-                  </Link>
+                  </InlineLink>
                 </div>
               </InfoBanner>
             </Box>

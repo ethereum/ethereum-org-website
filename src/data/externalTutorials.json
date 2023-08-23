@@ -1,5 +1,46 @@
 [
   {
+    "url": "https://youtu.be/umepbfKp5rI",
+    "title": "Learn Solidity, Blockchain Development, & Smart Contracts using Foundry",
+    "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, Foundry, DeFi, Chainlink, Ethereum, upgradable smart contracts, DAOs, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "video",
+      "oracles",
+      "NFT",
+      "ERC-20",
+      "foundry",
+      "mocking",
+      "testing",
+      "defi",
+      "openzeppelin",
+      "slither",
+      "storage",
+      "alchemy",
+      "block explorer",
+      "fuzzing"
+    ],
+    "skillLevel": "beginner",
+    "timeToRead": "504",
+    "lang": "en",
+    "publishDate": "06/07/2023"
+  },
+  {
+    "url": "https://patrickalphac.medium.com/fuzz-invariant-tests-the-new-bare-minimum-for-smart-contract-security-87ebe150e88c",
+    "title": "Fuzzing & Invariant Testing Introduction",
+    "description": "What is fuzz testing? What are invariant tests? We introduce how to use these tools in Web3 & Solidity and explain why they are essential, especially for security. ",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": ["security"],
+    "skillLevel": "beginner",
+    "timeToRead": "9",
+    "lang": "en",
+    "publishDate": "04/13/2023"
+  },
+  {
     "url": "https://www.cyfrin.io/blog/what-is-a-smart-contract-audit",
     "title": "What is a Smart Contract Audit",
     "description": "Smart Contract Auditing | What it is, what to expect, and where to look for one. Everything you need to know!",
@@ -10,6 +51,18 @@
     "timeToRead": "5",
     "lang": "en",
     "publishDate": "04/06/2023"
+  },
+  {
+    "url": "https://patrickalphac.medium.com/formal-verification-symbolic-execution-the-security-silver-bullet-38e0ac9072eb",
+    "title": "Formal Verification & Symbolic Execution",
+    "description": "We look at formal verification & symbolic execution with two Trail of Bits Web3 security team members. Additionally, we review the value these techniques bring and compare them to other tools.",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": ["security"],
+    "skillLevel": "intermediate",
+    "timeToRead": "10",
+    "lang": "en",
+    "publishDate": "04/25/2023"
   },
   {
     "url": "https://www.youtube.com/watch?v=veBu03A6ptw",

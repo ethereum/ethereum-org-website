@@ -1,42 +1,63 @@
-import React from "react"
+import React, { ComponentPropsWithRef } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { Box, Flex, Heading, Img, Text } from "@chakra-ui/react"
+import { Box, BoxProps, Flex, Heading, Img, Text } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
 import EthPriceCard from "../components/EthPriceCard"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
-import {
-  Content,
-  Divider,
-  LeftColumn,
-  Page,
-  RightColumn,
-  StyledCard,
-  TwoColumnContent,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
+import Card from "../components/Card"
+
+import {
+  LeftColumn,
+  RightColumn,
+  TwoColumnContent,
+} from "../pages-conditional/eth"
+
 import { getImage } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
 
+import type { ChildOnlyProp } from "../types"
+
+const Page = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    align="center"
+    width="full"
+    mx="auto"
+    my={0}
+    {...props}
+  />
+)
+
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+
+export const Content = (props: BoxProps) => (
+  <Box w="full" py={4} px={8} {...props} />
+)
+
+export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
+  <Card
+    flex="1 1 30%"
+    minW="280px"
+    maxW={{ base: "full", md: "46%", lg: "31%" }}
+    m={4}
+    p={6}
+    {...props}
+  />
+)
+
 const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
   const { t } = useTranslation()
-  const decentralizedExchanges: Array<CardListItem> = [
-    {
-      title: "Localcryptos.com",
-      link: "https://localcryptos.com/",
-      image: getImage(data.localcryptos)!,
-      alt: "",
-    },
-  ].sort((a, b) => a.title.localeCompare(b.title))
 
   const tokenSwaps: Array<CardListItem> = [
     {
@@ -75,17 +96,17 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
     {
       title: t("page-get-eth-article-protecting-yourself"),
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
-      description: "MyCrypto",
+      description: t("page-get-eth-article-protecting-yourself-desc"),
     },
     {
       title: t("page-get-eth-article-keeping-crypto-safe"),
       link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
-      description: "Coinbase",
+      description: t("page-get-eth-article-keeping-crypto-safe-desc"),
     },
     {
       title: t("page-get-eth-article-store-digital-assets"),
       link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
-      description: "ConsenSys",
+      description: t("page-get-eth-article-store-digital-assets-desc"),
     },
   ]
 
@@ -100,11 +121,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         position="relative"
         width="full"
         maxWidth="1440px"
-        flexDir={{
+        direction={{
           base: "column-reverse",
-          sm: "column-reverse",
           md: "column",
-          lg: "column",
         }}
         mt={8}
         mx={0}
@@ -187,33 +206,33 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           title={t("page-get-eth-dex")}
           description={t("page-get-eth-dex-desc")}
         >
-          <Link to="#dex">
+          <InlineLink to="#dex">
             <Translation id="page-get-eth-try-dex" />
-          </Link>
+          </InlineLink>
         </StyledCard>
         <StyledCard
           emoji=":robot:"
           title={t("page-get-eth-wallets")}
           description={t("page-get-eth-wallets-purchasing")}
         >
-          <Link to="/wallets/">
+          <InlineLink to="/wallets/">
             <Translation id="page-get-eth-wallets-link" />
-          </Link>
+          </InlineLink>
         </StyledCard>
         <Content>
           <Text>
             <Text as="em">
               <Translation id="listing-policy-disclaimer" />{" "}
-              <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+              <InlineLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                 <Translation id="listing-policy-raise-issue-link" />
-              </Link>
+              </InlineLink>
             </Text>
           </Text>
           <InfoBanner emoji=":wave:" shouldCenter mt={8}>
             <Translation id="page-get-eth-new-to-eth" />{" "}
-            <Link to="/eth/">
+            <InlineLink to="/eth/">
               <Translation id="page-get-eth-whats-eth-link" />
-            </Link>
+            </InlineLink>
           </InfoBanner>
         </Content>
       </Flex>
@@ -253,9 +272,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </Text>
           <Text>
             <Translation id="page-get-eth-dexs-desc-2" />{" "}
-            <Link to="/smart-contracts">
+            <InlineLink to="/smart-contracts">
               <Translation id="page-get-eth-smart-contract-link" />
-            </Link>
+            </InlineLink>
           </Text>
           <Text>
             <Translation id="page-get-eth-dexs-desc-3" />
@@ -268,17 +287,6 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </ButtonLink>
         </LeftColumn>
         <RightColumn>
-          <Heading
-            as="h3"
-            fontSize={{ base: "xl", md: "2xl" }}
-            lineHeight={1.4}
-          >
-            <Translation id="page-get-eth-traditional-currencies" />
-          </Heading>
-          <Text>
-            <Translation id="page-get-eth-traditional-payments" />
-          </Text>
-          <CardList content={decentralizedExchanges} />
           <Heading
             as="h3"
             fontSize={{ base: "xl", md: "2xl" }}
@@ -338,9 +346,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           <Text>
             <Translation id="page-get-eth-protect-eth-desc" />
           </Text>
-          <Link to="/wallets/">
+          <InlineLink to="/wallets/">
             <Translation id="page-get-eth-your-address-wallet-link" />
-          </Link>
+          </InlineLink>
           <Heading
             as="h3"
             fontSize={{ base: "xl", md: "2xl" }}
@@ -469,9 +477,6 @@ export const query = graphql`
           quality: 100
         )
       }
-    }
-    localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {
-      ...listItemImage
     }
     uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
       ...listItemImage

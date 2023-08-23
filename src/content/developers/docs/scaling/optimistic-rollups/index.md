@@ -46,7 +46,7 @@ Optimistic rollups rely on the main Ethereum protocol for the following:
 
 As mentioned, optimistic rollups post transaction data to Ethereum as `calldata`. Since the rollup chain's execution is based on submitted transactions, anyone can use this information—anchored on Ethereum’s base layer—to execute the rollup’s state and verify the correctness of state transitions.
 
-[Data availability](https://ethereum.org/en/developers/docs/data-availability/) is critical because without access to state data, challengers cannot construct fraud proofs to dispute invalid rollup operations. With Ethereum providing data availability, the risk of rollup operators getting away with malicious acts (e.g., submitting invalid blocks) is reduced.
+[Data availability](/developers/docs/data-availability/) is critical because without access to state data, challengers cannot construct fraud proofs to dispute invalid rollup operations. With Ethereum providing data availability, the risk of rollup operators getting away with malicious acts (e.g., submitting invalid blocks) is reduced.
 
 ### Censorship resistance {#censorship-resistance}
 
@@ -198,7 +198,7 @@ Optimistic rollups use a gas fee scheme, much like Ethereum, to denote how much 
 
 2. **`calldata`**: Beyond the base transaction fee, the cost of each state write depends on the size of `calldata` posted to L1. `calldata` costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of `calldata`, respectively. To reduce user fees, rollup operators compress transactions to reduce the number of `calldata` bytes published on Ethereum.
 
-3. **L2 operator fees**: This is the amount paid to the rollup nodes as compensation for computational costs incurred in processing transactions, much like miner fees on Ethereum. Rollup nodes charge lower transaction fees since L2s have higher processing capacities and aren't faced with the network congestions that force miners on Ethereum to prioritize transactions with higher fees.
+3. **L2 operator fees**: This is the amount paid to the rollup nodes as compensation for computational costs incurred in processing transactions, much like gas fees on Ethereum. Rollup nodes charge lower transaction fees since L2s have higher processing capacities and aren't faced with the network congestions that force validators on Ethereum to prioritize transactions with higher fees.
 
 Optimistic rollups apply several mechanisms to reducing fees for users, including batching transactions and compressing `calldata` to reduce data publication costs. You can check the [L2 fee tracker](https://l2fees.info/) for a real-time overview of how much it costs to use Ethereum-based optimistic rollups.
 

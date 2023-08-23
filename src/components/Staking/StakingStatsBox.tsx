@@ -6,7 +6,7 @@ import { Code, Flex, Icon, Spinner, Text, VStack } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
 import Tooltip from "../Tooltip"
-import Link from "../Link"
+import InlineLink from "../Link"
 // Import utilities
 import { Lang } from "../../utils/languages"
 import { getData } from "../../utils/cache"
@@ -46,7 +46,7 @@ const Value: React.FC<{ children: ReactNode; title: string }> = ({
       fontWeight="bold"
       fontSize="2rem"
       background="none"
-      color="primary"
+      color="primary.base"
       p={0}
     >
       {children}
@@ -74,9 +74,9 @@ const BeaconchainTooltip: React.FC<BeaconchainTooltipProps> = ({
       as={MdInfoOutline}
       color="text"
       marginInlineStart={2}
-      _hover={{ color: "primary" }}
-      _active={{ color: "primary" }}
-      _focus={{ color: "primary" }}
+      _hover={{ color: "primary.base" }}
+      _active={{ color: "primary.base" }}
+      _focus={{ color: "primary.base" }}
       boxSize={4}
     />
   </Tooltip>
@@ -175,7 +175,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
               <Translation id="page-staking-stats-box-metric-1-tooltip" />
             </Text>
             <Translation id="data-provided-by" />{" "}
-            <Link to="https://beaconcha.in/">Beaconcha.in</Link>
+            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -194,7 +194,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
               <Translation id="page-staking-stats-box-metric-2-tooltip" />
             </Text>
             <Translation id="data-provided-by" />{" "}
-            <Link to="https://beaconcha.in/">Beaconcha.in</Link>
+            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -213,7 +213,9 @@ const StakingStatsBox: React.FC<IProps> = () => {
               <Translation id="page-staking-stats-box-metric-3-tooltip" />
             </Text>
             <Translation id="data-provided-by" />{" "}
-            <Link to="https://beaconcha.in/ethstore">Beaconcha.in</Link>
+            <InlineLink to="https://beaconcha.in/ethstore">
+              Beaconcha.in
+            </InlineLink>
           </BeaconchainTooltip>
         </Label>
       </Cell>

@@ -5,7 +5,7 @@ lang: pt-br
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../assets/infrastructure_transparent.png
+image: ../../../../assets/infrastructure_transparent.png
 alt: Um logotipo Eth sendo exibido via holograma.
 summaryPoint1: Uma forma de representar qualquer coisa única como um ativo baseado no Ethereum.
 summaryPoint2: Os NFTs estão dando mais poder do que nunca aos criadores de conteúdo.
@@ -341,15 +341,16 @@ Os problemas de segurança relacionados aos NFTs são mais frequentemente relaci
 
 ## Criar com NFTs {#build-with-nfts}
 
-A maioria dos NFTs é criada usando um padrão consistente conhecido como [ERC-721](/developers/docs/standards/tokens/erc-721/). No entanto, há outros padrões que você pode querer analisar. O padrão [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) permite o uso de tokens semifungíveis, particularmente úteis no mundo dos jogos. E, mais recentemente, o [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) foi proposto para tornar a cunhagem de NFTs muito mais eficiente. Esse padrão deixa você cunhar o quanto quiser em uma transação!
+A maioria dos NFTs é criada usando um padrão consistente conhecido como [ERC-721](/developers/docs/standards/tokens/erc-721/). No entanto, há outros padrões que você pode querer analisar. A norma [ERC-1155](/developers/docs/standards/tokens/erc-1155/) permite o uso de tokens semifungíveis, que são particularmente úteis no mundo dos jogos. E, mais recentemente, o [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) foi proposto para tornar a cunhagem de NFTs muito mais eficiente. Esse padrão deixa você cunhar o quanto quiser em uma transação!
 
 ## Leitura adicional {#further-reading}
 
 - [Dados de arte cripto](https://cryptoart.io/data) – Richard Chen, atualizados automaticamente
 - [OpenSea: A Bíblia sobre NFT](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, 10 de janeiro de 2020_
 - [Um guia para iniciantes em NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, janeiro de 2020_
-- [Tudo o que você precisa saber sobre o metaverso](https://foundation.app/blog/enter-the-metaverse) – _ (em inglês) equipe da Fundação, foundation.app_
+- [Tudo o que você precisa saber sobre o metaverso](https://foundation.app/blog/enter-the-metaverse) – _(em inglês) equipe da Fundação, foundation.app_
 - [Não, criptoartistas não abraçam o planeta](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Consumo de energia do Ethereum](/energy-consumption/)
+- [APIs Ethereum NFT](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
 <QuizWidget quizKey="nfts" />

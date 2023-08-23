@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: ../../assets/future_transparent.png
+image: ../../../../assets/future_transparent.png
 alt: ""
 summaryPoint1: Eine globale, offene Alternative zum derzeitigen wissenschaftlichen System.
 summaryPoint2: Technologie, die es Wissenschaftlern ermöglicht, Finanzierung zu erhalten, Experimente durchzuführen, Daten zu teilen, Erkenntnisse zu verbreiten und vieles mehr.
@@ -20,9 +20,9 @@ DeSci zielt darauf ab, ein Ökosystem zu schaffen, in dem Wissenschaftler ermuti
 
 Dezentralisierte Wissenschaft ermöglicht eine Vielzahl von Finanzierungsmöglichkeiten (von [DAOs](/dao/), [quadratischen Spenden](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) bis hin zu Crowdfunding und mehr), einen leichteren Zugang zu Daten und Methoden sowie Anreize für Reproduzierbarkeit.
 
-### Juan Benet - DeSci, unabhängige Labore und datenintensive Wissenschaft im großen Maßstab
+### Juan Benet - Die DeSci-Bewegung
 
-<YouTube id="zkXM9H90g_E" />
+<YouTube id="5ORvbCIW39o" />
 
 ## Wie DeSci die Wissenschaft verbessert {#desci-improves-science}
 
@@ -108,7 +108,6 @@ Erkunden Sie Projekte und werden Sie Teil der DeSci-Gemeinschaft.
 - [VitaDAO: Langfristige Forschung finanziert durch gesponserte Forschungsverträge](https://www.vitadao.com/)
 - [Flamming-Protokoll: Open-Source-Datenwirtschaft, die die kollaborative biomedizinische Entdeckung fördert](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Aktives Inferenz-Labor](https://www.activeinference.org/)
-- [Cherubs DAO: NFT finanzierte und DAO regelte Impact Fonds für psychische Gesundheit & Gehirn-Wellness](https://cherubsdao.com/)
 - [CureDAO: Community-eigene Gesundheitsplattform](https://docs.curedao.org/)
 - [IdeaMarkets: Ermöglicht dezentralisierte wissenschaftliche Glaubwürdigkeit](https://ideamarket.io/)
 
@@ -135,5 +134,5 @@ Wir freuen uns über Vorschläge für neue Projekte, die in die Liste aufgenomme
 - [Was ist die dezentralisierte Wissenschaft?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Gespräch zwischen Vitalik Buterin und dem Wissenschaftler Aubrey de Grey über den Schnittpunkt der Langlebigkeitsforschung und Kryptographie](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [Wissenschaftliche Veröffentlichung ist kaputt. Kann Web3 das reparieren?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
-- [Juan Benet - DeSci, Independent Labs, & groß angelegte Datenwissenschaft](https://www.youtube.com/watch?v=zkXM9H90g_E)
+- [Juan Benet - DeSci, unabhängige Labore und datenintensive Wissenschaft im großen Maßstab](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier – Wie DeSci die biomedizinische Forschung verändern kann & Risikokapital](https://www.youtube.com/watch?v=qB4Tc3FcVbM)

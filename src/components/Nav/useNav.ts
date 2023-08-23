@@ -70,6 +70,10 @@ export const useNav = ({ path }: { path: string }) => {
           text: t("decentralized-science"),
           to: "/desci/",
         },
+        {
+          text: t("regenerative-finance"),
+          to: "/refi/",
+        },
       ],
     },
     learn: {
@@ -77,7 +81,7 @@ export const useNav = ({ path }: { path: string }) => {
       ariaLabel: t("learn-menu"),
       items: [
         {
-          text: "Start here",
+          text: t("start-here"),
           items: [
             {
               text: t("learn-hub"),
@@ -90,7 +94,7 @@ export const useNav = ({ path }: { path: string }) => {
           ],
         },
         {
-          text: "Ethereum basics",
+          text: t("ethereum-basics"),
           items: [
             {
               text: t("what-is-ethereum"),
@@ -116,10 +120,14 @@ export const useNav = ({ path }: { path: string }) => {
               text: t("smart-contracts"),
               to: "/smart-contracts/",
             },
+            {
+              text: t("quizzes-title"),
+              to: "/quizzes/",
+            },
           ],
         },
         {
-          text: "Ethereum protocol",
+          text: t("ethereum-protocol"),
           items: [
             {
               text: t("energy-consumption"),

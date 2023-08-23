@@ -117,7 +117,7 @@ JSON ファイルの編集が終わったら、保存して、画像のアップ
 
 上記の例では、コントラクトのアドレスは、0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778 です。
 
-次に、Web3 の[コントラクトメソッド](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract)を活用して、ABI とアドレスを使用したコントラクトを作成します。 `mint-nft.js`ファイルに以下を追加します。
+次に、Web3 の[コントラクトメソッド](https://docs.web3js.org/api/web3-eth-contract/class/Contract)を活用して、ABI とアドレスを使用したコントラクトを作成します。 `mint-nft.js`ファイルに以下を追加します。
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"

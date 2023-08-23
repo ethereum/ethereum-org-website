@@ -58,7 +58,7 @@ Our design system makes designing ethereum.org fun and easy. If you are an exper
 
 ### <Emoji text=":six:" size={1} /> Write design-related content on the website {#write-design-articles}
 
-The Ethereum developer community is strong, but the design community is falling slightly behind. If you are a designer with web3 knowledge, please consider sharing your learnings with the larger community so that we can all grow and improve together!
+The Ethereum developer community is strong, but the design community is falling slightly behind. If you are a designer with web3 knowledge, please consider sharing your learnings with the larger community so that we can all grow and improve together; we have [a page on designing for Ethereum](/developers/docs/design-and-ux/) you can contribute to. You can also check our [listing policies](/contributing/design/adding-design-resources).
 
 1. Ideate on design topics that should be covered on ethereum.org and would be beneficial for the designers in the space.
 2. Go to our GitHub repository and [raise an issue](https://github.com/ethereum/ethereum-org-website/issues/new) proposing a topic (do not write the content yet).
@@ -71,7 +71,7 @@ The Ethereum developer community is strong, but the design community is falling 
 Visualisations are one of the most powerful tools to explain abstract topics. There is an enormous potential by adding diagrams and infographics. After all, one image can say thousand words.
 
 1. Go to our website and see pages where some new infographics could be added.
-2. Make sure that the illustration style corresponds to our [assets](https://ethereum.org/en/assets/).
+2. Make sure that the illustration style corresponds to our [assets](/assets/).
 3. Go to our GitHub repository and [raise an issue](https://github.com/ethereum/ethereum-org-website/issues/new) proposing the illustration.
 4. The design team will review it.
 5. We create a new issue to ask a developer to implement the new image.

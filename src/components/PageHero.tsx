@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { Box, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
+import { Box, Flex, Heading, Text, Wrap, WrapItem } from "@chakra-ui/react"
 
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
@@ -56,15 +56,17 @@ const PageHero: React.FC<IProps> = ({
       >
         <Box
           maxW={{ base: "full", lg: "container.sm" }}
-          py={{ base: 16, lg: 32 }}
+          pt={{ base: isReverse ? 0 : 8, lg: 32 }}
+          pb={{ base: isReverse ? 8 : 0, lg: 32 }}
           pl={{ base: 0, lg: 8 }}
-          mr={4}
+          mr={{ base: 0, lg: 4 }}
         >
           <Heading
             as="h1"
             textTransform="uppercase"
             fontSize="md"
             fontWeight="normal"
+            mt={{ base: 0, lg: 8 }}
             mb={4}
             color="text300"
             lineHeight={1.4}
@@ -77,12 +79,13 @@ const PageHero: React.FC<IProps> = ({
             fontSize={{ base: "2.5rem", lg: "5xl" }}
             maxW="full"
             mb={0}
+            mt={{ base: 8, lg: 12 }}
             color="text00"
             lineHeight={1.4}
           >
             {header}
           </Heading>
-          <Box
+          <Text
             fontSize={{ base: "xl", lg: "2xl" }}
             lineHeight={1.4}
             color="text200"
@@ -90,9 +93,11 @@ const PageHero: React.FC<IProps> = ({
             mb={8}
           >
             {subtitle}
-          </Box>
+          </Text>
           {buttons && (
-            <Wrap spacing={2} overflow="visible">
+            // FIXME: remove the `ul` override once removed the corresponding
+            // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
+            <Wrap spacing={2} overflow="visible" sx={{ ul: { m: 0 } }}>
               {buttons.map((button, idx) => {
                 if (isButtonLink(button)) {
                   return (

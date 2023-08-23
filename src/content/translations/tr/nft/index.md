@@ -304,7 +304,7 @@ Ethereum, birkaç nedenden dolayı NFT'lerin çalışmasını mümkün kılıyor
 
 ## NFT'lerin çevreye etkisi {#environmental-impact-nfts}
 
-NFT'leri oluşturmak ve transfer etmek yanlızca Ethereum işlemleridir; oluşturmak, satın almak, el değiştirmek ya da NFT'ler ile etkileşime girmek doğrudan enerji harcamaz. ["Birleşim"](/roadmap/merge), Ethereum az enerji harcayan bir blokzincirdir. Bu NFTlerin çevresel etkisinin göz ardı edilebilecek kadar ufak olduğu anlamına geliyor.
+NFT'leri oluşturmak ve transfer etmek yanlızca Ethereum işlemleridir; oluşturmak, satın almak, el değiştirmek ya da NFT'ler ile etkileşime girmek doğrudan enerji harcamaz. ["Birleşim"](/roadmap/merge/), Ethereum az enerji harcayan bir blokzincirdir. Bu NFT'leri kullanmanın çevresel etkisinin göz ardı edilebilecek kadar ufak olduğu anlamına geliyor.
 
 [Ethereum'un enerji tüketimi hakkında dahası](/energy-consumption/).
 
@@ -341,11 +341,11 @@ NFT'lerle ilgili güvenlik sorunları çoğunlukla kimlik avı dolandırıcılı
 
 ## NFT'ler ile oluşturun {#build-with-nfts}
 
-Çoğu NFT, [ERC-721](/developers/docs/standards/tokens/erc-721/) olarak bilinen tutarlı bir standart kullanılarak oluşturulur. Ancak incelemek isteyebileceğiniz başka standartlar da mevcuttur. [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standardı, özellikle oyun alanında faydalı olan yarı değiştirilebilir token'lara izin verir. Ayrıca daha yakın zamanda, NFT'lerin basımını çok daha verimli hale getirmek için [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) standardı da önerildi. Bu standart, tek bir işlemde istediğiniz kadar basmanıza olanak tanır!
+Çoğu NFT, [ERC-721](/developers/docs/standards/tokens/erc-721/) olarak bilinen tutarlı bir standart kullanılarak oluşturulur. Ancak incelemek isteyebileceğiniz başka standartlar da mevcuttur. [ERC-1155](/developers/docs/standards/tokens/erc-1155/) standardı, özellikle oyun alanında faydalı olan yarı değiştirilebilir token'lara izin verir. Ayrıca daha yakın zamanda, NFT'lerin basımını çok daha verimli hale getirmek için [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) standardı da önerildi. Bu standart, tek bir işlemde istediğiniz kadar basmanıza olanak tanır!
 
 ## Daha fazla bilgi {#further-reading}
 
-- [Kripto sanatı verileri](https://cryptoart.io/data) – _Richard Chen, otomatik olarak güncellenir_
+- [Kripto sanatı verileri](https://cryptoart.io/data) – Richard Chen, otomatik olarak güncellenir
 - [OpenSea: NFT İncili](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, 10 Ocak 2020_
 - [NFT'lere yeni başlayanlar için kılavuz](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Ocak 2020_
 - [Metaverse hakkında bilmeniz gereken her şey](https://foundation.app/blog/enter-the-metaverse) – _Foundation ekibi, Foundation.app_

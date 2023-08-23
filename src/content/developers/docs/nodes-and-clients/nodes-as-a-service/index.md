@@ -143,6 +143,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Direct 24/7 Support
     - Pay in Crypto (Enterprise)
+- [DRPC](https://drpc.org/)
+  - [Docs](https://docs.drpc.org/)
+  - Features
+    - Decentralized RPC nodes
+    - 15+ Node providers
+    - Node balancing
+    - Unlimited compute units per month on the free tier
+    - Data verification
+    - Custom endpoints
+    - http and WSS endpoints
+    - Unlimited keys (free and paid tier)
+    - Flexible fallback options
+    - [Public Endpoint](https://eth.drpc.org)
+    - Free shared archive nodes
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Features
@@ -193,6 +207,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Support for multi-cloud, multi-region and hybrid deployment orchestrations
     - Simple hourly SaaS-based pricing
     - SLAs and 24x7 support
+- [**Lava Network**](https://www.lavanet.xyz/)
+  - [Docs](https://docs.lavanet.xyz/)
+  - Features
+    - Free Testnet Use
+    - Decentralized Redundancy for High Uptime
+    - Open-source
+    - Fully Decentralized SDK
+    - Ethers.js Integration
+    - Intuitive Project Management Interface
+    - Consensus-Based Data Integrity
+    - Multi-chain Support
 - [**Moralis**](https://moralis.io/)
   - [Docs](https://docs.moralis.io/)
   - Features
@@ -245,7 +270,6 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 - [**QuickNode**](https://www.quicknode.com)
   - [Docs](https://www.quicknode.com/docs/)
   - Features
-    - Industry-leading performance and reliability
     - 24/7 technical support & dev Discord community
     - Geo-balanced, multi cloud/metal, low-latency network
     - Multichain support (Optimism, Arbitrum, Polygon + 11 others)
@@ -314,6 +338,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unlimited TX fee and infinite Gas for sending transactions
     - Fastest getting of the new block and reading of the blockchain
     - The best price per API call guarantee
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Docs](https://docs.chainbase.com)
+  - Features
+    - Highly available, fast, and scalable RPC service
+    - Multi-chain support
+    - Free tariffs
+    - User-friendly dashboard
+    - Provides blockchain data services beyond RPC
 
 [**Zeeve**](https://www.zeeve.io/)
 
@@ -326,6 +358,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - RPC endpoints offer authenticated access to API’s, hassle free management with intuitive dashboard and analytics.
   - Provides both managed cloud and bring your own cloud options to choose from and supports all major cloud providers like AWS, Azure, Google Cloud, Digital Ocean and on-premise.
   - We use intelligent routing to hit the node closest to your user every time
+
+[**Tokenview**](https://services.tokenview.io/)
+
+- [Docs](https://services.tokeniew/docs?type=nodeService)
+- Features
+  - 24/7 technical support & Dev Telegram community
+  - Multichain support (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+  - Both rpc and wss endpoints are open to use
+  - Unlimited access to archive data API
+  - Dashboard with Request Explorer and Mempool Watcher
+  - NFT data API and Webhook notify
+  - Pay in Crypto
+  - External support for extra behavior requirements
 
 ## Further reading {#further-reading}
 

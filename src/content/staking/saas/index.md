@@ -23,15 +23,15 @@ The Ethereum protocol does not natively support delegation of stake, so these se
 
 <CardGrid>
   <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
-  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you to outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Easy to start" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
+  <Card title="Limit your risk" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
 
 ## What to consider {#what-to-consider}
 
-There are a growing number of SaaS providers to help you stake your ETH, but each comes with different benefits and risks. You should consider that all SaaS options require additional trust assumptions compared to home-staking. Saas options may have additional code wrapping the Ethereum clients that is not open or auditable. SaaS also has a detrimental effect on network decentralization. Depending on the setup, you may not control your validator - the operator could act dishonestly using your ETH.
+There are a growing number of SaaS providers to help you stake your ETH, but they all have their own benefits and risks. All SaaS options require additional trust assumptions compared to home-staking. Saas options may have additional code wrapping the Ethereum clients that is not open or auditable. SaaS also has a detrimental effect on network decentralization. Depending on the setup, you may not control your validator - the operator could act dishonestly using your ETH.
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed SaaS provider may have. Use this section as a reference for how we define these attributes while you're choosing a service to help with your staking journey.
 
@@ -41,13 +41,13 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 Below are some available SaaS provider. Use the above indicators to help guide you through these services
 
-<InfoBanner emoji="⚠️" isWarning>
-Please note the importance of supporting <a href="/developers/docs/nodes-and-clients/client-diversity/">client diversity</a> as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are marked as <em style="text-transform: uppercase;">"diverse clients."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### SaaS providers
 
 <StakingProductsCardGrid category="saas" />
+
+Please note the importance of supporting [client diversity](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style="text-transform: uppercase;">"execution client diversity"</em> and <em style="text-transform: uppercase;">"consensus client diversity."</em>
 
 #### Key Generators
 

@@ -5,7 +5,7 @@ lang: pl
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: ../../assets/eth-gif-cat.png
+image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: W tradycyjnych systemach tożsamościwydawanie, utrzymywanie i kontrola identyfikatorów są scentralizowane.
 summaryPoint2: Tożsamość zdecentralizowana usuwa zależność od scentralizowanych podmiotów trzecich.
 summaryPoint3: Dzięki crypto użytkownicy, po raz kolejny, mają teraz narzędzia do wydawania i kontrolowania własnych identyfikatorów i zaświadczeń.
@@ -155,11 +155,12 @@ Ataki typu Sybil polegają na tym, że pojedynczy człowiek oszukuje system, aby
 
 Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zdecentralizowanych rozwiązań w zakresie tożsamości:
 
-- **[Ethereum Name Service (ENS)](https://ens.domains/)** — _zdecentralizowany system nazewnictwa w łańcuchu, odczytywalnych maszynowo, takich jak adresy portfeli Ethereum, skróty treści i metadane._
-- **[SpruceID](https://www.spruceid.com/)** — _zdecentralizowany projekt tożsamości, który pozwala użytkownikom kontrolować tożsamość cyfrową za pomocą kont Ethereum i profili ENS, zamiast polegać na usługach stron trzecich._
-- **[Proof of Humanity (lub PoH)](https://www.proofofhumanity.id)** — _ system weryfikacji tożsamości społecznościowej oparty na Ethereum._
-- **[BrightID](https://www.brightid.org/)** — _sieć zdecentralizowanych tożsamości społecznościowych typu open source. Jej celem jest zreformowanie weryfikacji tożsamości poprzez tworzenie i analizę wykresu społecznego._
-- **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** — _zdecentralizowany agregator tożsamości cyfrowych._
+- **[Ethereum Name Service (ENS)](https://ens.domains/)** — _Zdecentralizowany system nazewnictwa w łańcuchu, odczytywalnych maszynowo, takich jak adresy portfeli Ethereum, skróty treści i metadane._
+- **[SpruceID](https://www.spruceid.com/)** — _Zdecentralizowany projekt tożsamości, który pozwala użytkownikom kontrolować tożsamość cyfrową za pomocą kont Ethereum i profili ENS, zamiast polegać na usługach stron trzecich._
+- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Zdecentralizowany ledger/protokół umożliwiający tworzenie poświadczeń o dowolnym elemencie w łańcuchu (on-chain) lub poza nim (off-chain)._
+- **[Proof of Humanity (lub PoH)](https://www.proofofhumanity.id)** — _System weryfikacji tożsamości społecznościowej oparty na Ethereum._
+- **[BrightID](https://www.brightid.org/)** — _Sieć zdecentralizowanych tożsamości społecznościowych typu open source. Jej celem jest zreformowanie weryfikacji tożsamości poprzez tworzenie i analizę wykresu społecznego._
+- **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** — _Zdecentralizowany agregator tożsamości cyfrowych._
 
 ## Dalsza lektura {#further-reading}
 

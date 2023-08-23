@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import Link from "./Link"
+import { BaseLink } from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 
@@ -56,7 +56,7 @@ const CardLink = (props: {
       mt={4}
       w="262px"
       h="82px"
-      bg="background"
+      bg="background.base"
       border="1px"
       borderColor="border"
       borderRadius={1}
@@ -73,7 +73,7 @@ const CardLink = (props: {
           <Translation id={isPrev ? "previous" : "next"} />
         </Text>
         <LinkOverlay
-          as={Link}
+          as={BaseLink}
           href={docData.to}
           textAlign={isPrev ? "start" : "end"}
           rel={isPrev ? "prev" : "next"}

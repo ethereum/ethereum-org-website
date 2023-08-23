@@ -137,7 +137,7 @@ Ao capturar a tela com as suas frases semente ou chaves privadas, você corre o 
 
 ### Use uma carteira de hardware {#use-hardware-wallet}
 
-Uma carteira de hardware fornece armazenamento off-line para chaves privadas. Eles são considerados a opção de carteira mais segura para armazenar suas chaves privadas: sua chave privada não toca a internet e permanece completamente local no seu dispositivo.
+Uma carteira de hardware fornece armazenamento off-line para chaves privadas. Elas são consideradas a opção de carteira mais segura para armazenar suas chaves privadas, pois elas nunca entram em contato com a Internet e permanecem completamente locais em seu dispositivo.
 
 Manter chaves privadas off-line reduz maciçamente o risco de serem hackeadas, mesmo que um hacker tenha controle de seu computador.
 
@@ -214,7 +214,7 @@ Como regra geral, o pessoal de suporte nunca se comunicará com você por meio d
 
 ### Golpe com o token 'Eth2' {#eth2-token-scam}
 
-Na fase de preparação para [A Fusão](/roadmap/merge/), os golpistas aproveitaram a confusão em torno do termo "Eth2" para tentar fazer com que os usuários resgatassem seu ETH por um token "ETH2". Não há "ETH2" e nenhum outro token legítimo foi introduzido com a A Fusão. O ETH que você possuía antes da fusão é o mesmo ETH agora. Não há **necessidade de realizar nenhuma ação relacionada ao seu ETH para contabilizar a mudança de prova de trabalho para prova de participação**.
+Na fase de preparação para [The Merge](/roadmap/merge/) (A Fusão), os golpistas aproveitaram a confusão em torno do termo "Eth2" para tentar fazer com que os usuários resgatassem seu ETH por um token "ETH2". Não há "ETH2" e nenhum outro token legítimo foi introduzido com a A Fusão. O ETH que você possuía antes da fusão é o mesmo ETH agora. Não há **necessidade de realizar nenhuma ação relacionada ao seu ETH para contabilizar a mudança de prova de trabalho para prova de participação**.
 
 Os golpistas podem aparecer como "suporte", informando que, se você depositar seu ETH, você receberá de volta "ETH2". Não há [suporte oficial ao Ethereum](/community/support/)e não há nenhum novo token. Jamais compartilhe a frase de recuperação de sua carteira com ninguém.
 

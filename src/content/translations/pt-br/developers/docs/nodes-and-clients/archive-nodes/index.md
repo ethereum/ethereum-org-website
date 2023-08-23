@@ -9,7 +9,7 @@ Um nó de arquivo é uma instância de um cliente Ethereum configurado para cons
 
 ## Pré-requisitos {#prerequisites}
 
-Você deve entender o conceito de um [nó Ethereum](/developers/docs/nodes-and-clients/), [sua arquitetura](/developers/docs/nodes-and-clients/node-architecture/), [estratégias de sincronização](/developers/docs/nodes-and-clients/#sync-modes), práticas de [execução](/developers/docs/nodes-and-clients/run-a-node/) e [uso deles](/developers/docs/apis/json-rpc/).
+Você deve entender o conceito de um [nó Ethereum](/developers/docs/nodes-and-clients/), [a arquitetura deles, assim como suas](/developers/docs/nodes-and-clients/node-architecture/) [estratégias de sincronização](/developers/docs/nodes-and-clients/#sync-modes), práticas de [execução](/developers/docs/nodes-and-clients/run-a-node/), e como [usá-los](/developers/docs/apis/json-rpc/).
 
 ## O que é um nó de arquivo
 
@@ -62,7 +62,7 @@ Além das [recomendações gerais para executar um nó](developers/docs/nodes-an
 
 Sempre verifique os requisitos de hardware para um determinado modo na documentação de um cliente. O maior requisito para nós de arquivo é o espaço em disco. Dependendo do cliente, varia de 3 TB a 12 TB. Mesmo que o HDD possa ser considerado uma solução melhor para grandes quantidades de dados, sincronizá-lo e atualizar constantemente o topo da cadeia exigirá unidades SSD. As unidades [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) são boas o suficiente, mas devem ser de qualidade confiável, pelo menos [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Os discos podem ser inseridos em um computador ou servidor com slots suficientes. Esses dispositivos dedicados são ideais para executar um nó de alto tempo de atividade. É totalmente possível executá-lo em um laptop, mas a portabilidade virá com um custo adicional.
 
-Todos os dados precisam se encaixar em um volume, portanto, os discos devem estar unidos, por exemplo, com [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) ou [LVM](https://web.mit.edu/rhel-doc/5/ RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html). Também pode valer a pena considerar o uso de [ZFS](https://en.wikipedia.org/wiki/ZFS), pois ele suporta "Copy-on-write", que garante que os dados sejam gravados corretamente no disco sem quaisquer erros de baixo nível.
+Todos os dados precisam se encaixar em um volume, portanto, os discos devem estar unidos, por exemplo, com [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) ou [LVM](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html). Também pode valer a pena considerar o uso de [ZFS](https://en.wikipedia.org/wiki/ZFS), pois ele suporta "Copy-on-write", que garante que os dados sejam gravados corretamente no disco sem quaisquer erros de baixo nível.
 
 Para obter mais estabilidade e segurança na prevenção de corrupção acidental do banco de dados, especialmente em uma configuração profissional, considere usar [memória ECC](https://en.wikipedia.org/wiki/ECC_memory) se o seu sistema a suportar. O tamanho de RAM é geralmente recomendado para ser o mesmo de um nó completo, mas mais RAM pode ajudar a acelerar a sincronização.
 

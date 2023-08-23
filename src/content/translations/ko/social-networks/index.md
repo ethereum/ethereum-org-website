@@ -4,6 +4,7 @@ description: 이더리움에서의 분산형 소셜 네트워크에 대한 개�
 lang: ko
 template: use-cases
 emoji: ":mega:"
+sidebarDepth: 2
 image: ../../../../assets/ethereum-learn.png
 summaryPoint1: 소셜 상호작용, 콘텐츠 창작 및 배포를 위한 블록체인 기반 플랫폼입니다.
 summaryPoint2: 분산형 소셜 미디어 네트워크는 사용자의 개인 정보를 보호하고 데이터 보안을 강화합니다.
@@ -36,7 +37,7 @@ summaryPoint3: 토큰과 NFT는 콘텐츠를 통한 수익 창출의 새로운 �
 
 2. 분산형 소셜 네트워크는 오픈 소스의 이상에 따라 구축되며, 애플리케이션의 소스 코드를 공개적으로 확인할 수 있게 합니다. 전통적인 소셜 미디어에 존재하는 일반적인 불투명한 알고리즘의 구현을 제거함으로써, 블록체인 기반의 소셜 네트워크는 사용자와 플랫폼 제작자의 기대에 더욱 부응할 수 있습니다.
 
-3. 분산형 소셜 네트워크는 "중개자"를 제거합니다. 콘텐츠 창작자는 콘텐츠에 대한 직접적인 소유권을 가지며, 팔로워, 팬, 구매자 및 다른 대상자들과 스마트 계약만을 통해 직접 관계를 맺게 됩니다.
+3. 분산형 소셜 네트워크에서는 "중개자"가 필요 없습니다. 콘텐츠 창작자는 콘텐츠에 대한 직접적인 소유권을 가지며, 팔로워, 팬, 구매자 및 다른 대상자들과 스마트 계약만을 통해 직접 관계를 맺게 됩니다.
 
 4. 노드의 글로벌 P2P 네트워크에서 유지되는 이더리움 네트워크에서 실행되는 디앱으로서의 분산형 소셜 네트워크는 서버 다운타임 및 중단의 영향을 적게 받습니다.
 
@@ -78,7 +79,7 @@ Reddit은 [ERC-20 토큰](/developers/docs/standards/tokens/erc-20/) 기반의
 
 해당 프로그램은 이미 ["Moons"라는 커뮤니티 포인트](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)의 가상화폐 서브레딧에서 실제로 진행되고 있습니다. 공식 발표에 따르면, Moons는 "게시자, 코멘트 생성자, 중재자 등 서브레딧에 기여하고 있는 사람들에게 보상"을 제공하고 있습니다. 이 토큰은 블록체인 상에 존재하기 때문에(사용자는 지갑에 토큰을 받음) Reddit과는 독립적이며 제거할 수 없습니다.
 
-레딧 커뮤니티 포인트는 Rinkeby 테스트넷에서의 베타 테스트를 마치고, 이제 [발리디움](/developers/docs/scaling/validium/)과 [낙관적 롤업](/developers/docs/scaling/optimistic-rollups/)의 특성을 결합한 [Arbitrum Nova](https://nova.arbitrum.io/) 블록체인 상에서 운영되고 있습니다. 토큰은 커뮤니티 포인트에서의 특전 이외에, 실제 화폐와의 교환에도 사용될 수 있습니다. 또한 커뮤니티 포인트의 보유량이 많을수록 커뮤니티 내에서 의사결정 과정에 영향력을 키울 수 있습니다.
+레딧 커뮤니티 포인트는 Rinkeby 테스트넷에서의 베타 테스트를 마치고, 이제 [아비트럼 노바](/developers/docs/scaling/sidechains/)와 [낙관적 롤업](/developers/docs/scaling/optimistic-rollups/)의 특성을 결합한 [Arbitrum Nova](https://nova.arbitrum.io/) 블록체인 상에서 운영되고 있습니다. 토큰은 커뮤니티 포인트에서의 특전 이외에, 실제 화폐와의 교환에도 사용될 수 있습니다. 또한 커뮤니티 포인트의 보유량이 많을수록 커뮤니티 내에서 의사결정 과정에 영향력을 키울 수 있습니다.
 
 ### 트위터 {#twitter}
 
@@ -93,16 +94,19 @@ Reddit은 [ERC-20 토큰](/developers/docs/standards/tokens/erc-20/) 기반의
 - **[Status.im](https://status.im/)**: *Status는 오픈소스의 P2P 프로토콜과 종단 간 암호화 기술을 사용하여 제3자로부터 메시지를 보호하는 안전한 메시징 앱입니다.*
 - **[Mirror.xyz](https://mirror.xyz/)**: *Mirror는 이더리움 기반의 탈중앙화, 사용자 소유형 퍼블리싱 앱으로, 사용자는 아이디어를 크라우드펀딩하고, 콘텐츠로 수익을 올리며, 고급 커뮤니티를 만들 수 있습니다.*
 - **[Lens Protocol](https://lens.xyz/)**: *Lens Protocol은 탈중앙화된 구성 가능한 소셜 그래프로, 창작자가 탈중앙화 인터넷에 있는 디지털 가든의 어디에서든지 자신의 콘텐츠에 대한 소유권을 가질 수 있게 도와줍니다.*
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster는 충분히 탈중앙화된 소셜 네트워크입니다. 이메일과 마찬가지로 많은 클라이언트를 지원할 수 있는 오픈 프로토콜입니다._
 
 ## 더 읽을거리 {#further-reading}
 
 ### 문서 {#articles}
 
+- [탈중앙화 소셜 미디어: web3 소셜 스택 가이드](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [탈중앙화 기술의 다음 큰 기회: 소셜 네트워크](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3는 탈중앙화, 커뮤니티 기반 소셜 네트워크의 핵심이다](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — *Sumit Ghosh*
 - [블록체인 소셜 미디어의 개요](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — *Gemini Cryptopedia*
 - [블록체인은 어떻게 소셜 미디어의 개인 정보 문제를 어떻게 해결하는가](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — *Prableen Bajpai*
 - [블록체인에 소셜 미디어 네트워크가 다가오고 있다](https://businesstechguides.co/what-are-decentralized-social-networks) — *Emmanuel Awosika*
+- [소셜 네트워크를 위한 충분한 탈중앙화](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### 영상 {#videos}
 

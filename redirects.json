@@ -112,6 +112,10 @@
     "toPath": "/nb/:splat"
   },
   {
+    "fromPath": "/ph/*",
+    "toPath": "/fil/:splat"
+  },
+  {
     "fromPath": "/en/java/",
     "toPath": "/en/developers/docs/programming-languages/java/"
   },
@@ -336,7 +340,7 @@
     "toPath": "/:splat/staking/withdrawals/"
   },
   {
-    "fromPath": "/*/writing-cohort",
-    "toPath": "https://ethereumwriterscohort.carrd.co/"
+    "fromPath": "/*/guides/how-to-register-an-ethereum-account",
+    "toPath": "/:splat/guides/how-to-create-an-ethereum-account/"
   }
 ]

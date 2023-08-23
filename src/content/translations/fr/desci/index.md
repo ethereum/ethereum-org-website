@@ -3,7 +3,7 @@ title: La science décentralisée (DeSci)
 description: Présentation de la science décentralisée sur Ethereum
 lang: fr
 template: use-cases
-emoji: ":microscope :"
+emoji: ":microscope:"
 sidebarDepth: 2
 image: ../../../../assets/future_transparent.png
 alt: ""
@@ -20,9 +20,9 @@ La DeSci vise à créer un écosystème dans lequel les scientifiques sont incit
 
 La science décentralisée permet d'accéder à des sources de financement plus variées (des [DAO](/dao/), [dons quadratiques](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) aux financements participatifs et plus encore), des données et méthodes d'accès plus accessibles, et incite à la reproductibilité.
 
-### Juan Benet - DeSci, laboratoires indépendants, & dcience des données à grande échelle
+### Juan Benet - Le Mouvement DeSci
 
-<YouTube id="zkXM9H90g_E" />
+<YouTube id="5ORvbCIW39o" />
 
 ## En quoi la DeSci fait avancer la science {#desci-improves-science}
 
@@ -108,7 +108,6 @@ Explorer les projets et rejoindre la communauté DeSci.
 - [VitaDAO : recevoir des fonds pour mener des recherches sur la longévité par le biais d'accords de recherche sponsorisés](https://www.vitadao.com/)
 - [Protocole Fleming : économie de données open-source qui alimente la découverte biomédicale collaborative](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Active Inference Lab](https://www.activeinference.org/)
-- [Cherubs DAO : Fonds d'impact dédié à la santé mentale et au & le bien-être cérébral financé par des NFT et régi par une DAO](https://cherubsdao.com/)
 - [CureDAO : plateforme de santé de précision détenue par une communauté](https://docs.curedao.org/)
 - [IdeaMarkets : pour une crédibilité scientifique décentralisée renforcée](https://ideamarket.io/)
 
@@ -135,5 +134,5 @@ Nous accueillons volontiers les suggestions de nouveaux projets à répertorier 
 - [Qu'est-ce que la science décentralisée ?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversation entre Vitalik Buterin et le scientifique Aubrey de Grey sur le croisement entre recherche sur la longévité et cryptomonnaie](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [La publication scientifique est en panne. Est-ce que le Web3 peut améliorer ?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
-- [Juan Benet - DeSci, Laboratoires indépendants, & Science des données à grande échelle](https://www.youtube.com/watch?v=zkXM9H90g_E)
+- [Juan Benet - DeSci, laboratoires indépendants, & dcience des données à grande échelle](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - Comment la DeSci peut transformer la recherche biomédicale & le capital risque](https://www.youtube.com/watch?v=qB4Tc3FcVbM)

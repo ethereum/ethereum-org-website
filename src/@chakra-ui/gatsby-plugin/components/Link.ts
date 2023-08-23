@@ -3,14 +3,23 @@ import { defineMergeStyles, linkDefaultTheme } from "./components.utils"
 
 export const Link = defineStyleConfig({
   baseStyle: defineMergeStyles(linkDefaultTheme.baseStyle, {
-    color: "primary",
-    textDecoration: "underline",
-    _focus: {
-      boxShadow: "none",
-    },
+    color: "primary.base",
+    textDecor: "underline",
+    textUnderlineOffset: "3px",
     _focusVisible: {
       boxShadow: "none",
-      outline: "auto",
+      outline: "2px solid",
+      outlineColor: "primary.hover",
+      outlineOffset: "2px",
+      borderRadius: "sm",
+    },
+    _hover: {
+      color: "primary.hover",
+    },
+    "&[data-inline-link]": {
+      _visited: {
+        color: "primary.visited",
+      },
     },
   }),
 })

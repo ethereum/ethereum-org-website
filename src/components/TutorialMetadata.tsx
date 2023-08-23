@@ -2,7 +2,7 @@ import React from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 import CopyToClipboard from "./CopyToClipboard"
-import Link from "./Link"
+import InlineLink from "./Link"
 import TutorialTags from "./TutorialTags"
 import { getLocaleTimestamp } from "../utils/time"
 import Emoji from "./Emoji"
@@ -72,7 +72,9 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         {hasSource && (
           <Box>
             <Emoji fontSize="sm" mr={2} text=":books:" />
-            <Link to={frontmatter.sourceUrl}>{frontmatter.source}</Link>
+            <InlineLink to={frontmatter.sourceUrl}>
+              {frontmatter.source}
+            </InlineLink>
           </Box>
         )}
         {published && (
@@ -99,7 +101,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           <Flex flexWrap="wrap" w="full" mr={4}>
             <CopyToClipboard text={frontmatter.address}>
               {(isCopied) => (
-                <Text color="primary" cursor="pointer">
+                <Text color="primary.base" cursor="pointer">
                   {!isCopied ? (
                     <Box
                       overflow="hidden"

@@ -15,7 +15,7 @@ Se você ainda não sabe o que são os nós e os clientes e como eles funcionam,
 
 ## Participantes {#stakoooooooooooooors}
 
-Os participantes individuais devem executar sua própria infraestrutura, em vez de depender de provedores de terceiros. Isso significa executar um cliente de execução acoplado a um cliente de consenso. Antes da [Fusão](/roadmap/merge), era possível executar apenas um cliente de consenso e usar um provedor centralizado para dados de execução; isso não é mais possível: um participante solo deve executar ambos os clientes. No entanto, há serviços disponíveis para facilitar este processo.
+Os participantes individuais devem executar sua própria infraestrutura, em vez de depender de provedores de terceiros. Isso significa executar um cliente de execução acoplado a um cliente de consenso. Antes da [Fusão](/roadmap/merge) (The Merge), era possível executar apenas um cliente de consenso e usar um provedor centralizado para dados de execução. Porém, isso não é mais possível: um participante individual deve executar ambos os clientes. No entanto, há serviços disponíveis para facilitar este processo.
 
 [Leia mais sobre execução de um nó](/developers/docs/nodes-and-clients/run-a-node/).
 
@@ -143,10 +143,24 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Painel
     - Suporte Direto 24/7
     - Pague em criptomoedas (Enterprise)
-- [**GetBlock**](https://getblock.io/)
-  - [Documentação](https://getblock.io/docs/get-started/authentication-with-api-key/)
+- [DRPC](https://drpc.org/)
+  - [Documentação](https://docs.drpc.org/)
   - Recursos
-    - Acesso a mais de 40 nós da cadeia de blocos
+    - Nós RPC descentralizados
+    - Mais de 15 provedores de nós
+    - Balanceamento de nós
+    - Unidades de computação ilimitadas por mês na camada gratuita
+    - Verificação de dados
+    - Pontos de extremidade personalizados
+    - Pontos de extremidade Http e WSS
+    - Chaves ilimitadas (camada paga e gratuita)
+    - Opções de fallback flexíveis
+    - [Ponto de extremidade público](https://eth.drpc.org)
+    - Nós de arquivos compartilhados gratuitos
+- [**GetBlock**](https://getblock.io/)
+  - [Documentos](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - Recursos
+    - Acesso a mais de 40 nós de blockchain
     - 40.000 solicitações diárias gratuitas
     - Número ilimitado de chaves de API
     - Alta velocidade de conexão em 1GB/segundo
@@ -164,7 +178,7 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Nós completos dedicados
     - Tempo de sincronização rápido para implantações dedicadas
     - Suporte direto 24/7
-    - Acesso a mais de 50 nós da cadeia de blocos
+    - Acesso a mais de 50 nós da blockchain
 - [**Infura**](https://infura.io/)
   - [Documentação](https://infura.io/docs)
   - Recursos
@@ -178,21 +192,32 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
   - Recursos
     - Nível inicial gratuito
     - Implementação do nó Ethereum em um clique
-    - Clientes e algoritmos personalizáveis (Geth, Quorum & Besu || PoA, IBFT & Raft)
+    - Clientes e algoritmos personalizáveis (Geth, Quorum e Besu || PoA, IBFT e Raft)
     - Mais de 500 APIs administrativas e de serviço
     - Interface RESTful para envio de transação Ethereum (com Apache Kafka)
     - Fluxos de saída para entrega de eventos (com Apache Kafka)
-    - Profunda coleção de serviços "fora da cadeia" e auxiliares (por exemplo, transporte de mensagens criptografadas bilaterais)
-    - Encaminhamento de rede com controle de governança e acesso baseado em funções
-    - Sofisticado gerenciamento de usuários para administradores e usuários finais
+    - Profunda coleção de serviços “fora da cadeia” e auxiliares (por exemplo, transporte de mensagens criptografadas bilaterais)
+    - Integração de rede direta com controle de governança e acesso baseado em funções
+    - Gerenciamento de usuários sofisticado para administradores e usuários finais
     - Infraestrutura altamente escalonável, resiliente e de nível empresarial
     - Gerenciamento de chaves privadas HSM
-    - Tethering da Rede principal Ethereum
+    - Compartilhamento de Internet da Mainnet (Rede principal) Ethereum
     - Certificações de tipo 2, ISO 27k e SOC 2
     - Configuração dinâmica de execução (por exemplo, adicionar integrações na nuvem, alterar entradas do nó, etc.)
-    - Suporte para orquestrações multinuvem, multirregião e de implantação híbrida
+    - Suporte a orquestrações multinuvem, multirregião e de implantação híbrida
     - Preços simples baseados em SaaS por hora
     - SLAs e suporte 24x7
+- [**Lava Network**](https://www.lavanet.xyz/)
+  - [Documentação](https://docs.lavanet.xyz/)
+  - Recursos
+    - Utilização gratuita da Testnet
+    - Redundância descentralizada para um tempo de atividade elevado
+    - Código aberto
+    - SDK totalmente descentralizado
+    - Integração Ethers.js
+    - Interface intuitiva de gestão de projetos
+    - Integridade dos dados baseada em consenso
+    - Suporte multicadeia
 - [**Moralis**](https://moralis.io/)
   - [Documentação](https://docs.moralis.io/)
   - Recursos
@@ -208,56 +233,56 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
 - [**NodeReal MegaNode**](https://nodereal.io/)
   - [Documentação](https://docs.nodereal.io/nodereal/meganode/introduction)
   - Recursos
-    - Serviços de API RPC confiáveis, rápidos e escalonáveis
-    - API aprimorada para desenvolvedores web3
-    - Suporte multicadeias
-    - Comece de graça
+    - Serviços confiáveis, rápidos e dimensionáveis da API RPC
+    - API aprimorada para desenvolvedores Web3
+    - Suporte multicadeia
+    - Comece gratuitamente
 - [**NOWNodes**](https://nownodes.io/)
   - [Documentação](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Recursos
-    - Acesso a mais de 50 nós da cadeia de blocos
-    - Chave de API Gratuita
-    - Exploradores de Bloco
-    - Tempo de Resposta da API ⩽1 segundo
+    - Acesso a mais de 50 nós da blockchain
+    - Chave de API gratuita
+    - Exploradores de bloco
+    - Tempo de resposta da API ⩽ 1 segundo
     - Equipe de suporte 24/7
-    - Gerente de Conta Pessoal
+    - Gerente de conta pessoal
     - Nós compartilhados, de arquivo, de cópia de segurança e dedicados
-- [**Rede Pocket**](https://www.pokt.network/)
+- [**Pocket Network**](https://www.pokt.network/)
   - [Documentação](https://docs.pokt.network/home/)
   - Recursos
-    - Protocolo RPC e mercado descentralizados
+    - Protocolo RPC descentralizado e mercado
     - 1 milhão de solicitações gratuitas por dia (por ponto de extremidade, máx. 2)
     - [Pontos de extremidade públicos](https://docs.pokt.network/home/resources/public-rpc-endpoints)
     - Programa Pre-Stake+ (se você precisar de mais de 1 milhão de solicitações por dia)
-    - Mais de 15 cadeias de blocos suportadas
-    - Mais de 6.400 nós com ganhos de POKT por atender a aplicativos
-    - Nó de arquivamento, nó de arquivamento com rastreamento e suporte a nó de rede de testes
+    - Mais de 15 blockchains compatíveis
+    - Mais de 6.400 nós com ganhos de POKT a serviço dos aplicativos
+    - Nó de arquivamento, nó de arquivamento com rastreamento e suporte a nós na rede de teste
     - Diversidade do cliente do nó da rede principal Ethereum
     - Nenhum ponto único de falha
     - Sem tempo de inatividade
     - Tokenomics rentáveis e perto de zero (participação de POKT uma vez para a largura de banda da rede)
     - Sem custos irrecuperáveis mensais. Transforme sua infraestrutura em um ativo
     - Balanceamento de carga incorporado ao protocolo
-    - Dimensiona infinitamente o número de solicitações por dia e nós por hora conforme o uso
-    - A opção mais privada e resistente à censura
-    - Suporte prático para os desenvolvedores
-    - Painel e ferramentas de análise [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
+    - Dimensione infinitamente o número de solicitações por dia e nós por hora conforme o uso
+    - A opção mais particular e resistente à censura
+    - Suporte prático para desenvolvedores
+    - Painel e ferramentas de análise do [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
 - [**QuickNode**](https://www.quicknode.com)
-  - [Documentação](https://www.quicknode.com/docs/)
+  - [Documentos](https://www.quicknode.com/docs/)
   - Recursos
-    - Desempenho e confiabilidade líder do setor
-    - Suporte técnico 24/7 e comunidade Discord de desenvolvedores
-    - Balanceamento geográfico, multinuvem/metal, rede de baixa latência
-    - Suporte de multicadeia (Optimism, Arbitrum, Polygon + 11 outros)
+    - Desempenho e confiabilidade líderes do setor
+    - Suporte técnico 24/7 e comunidade de desenvolvedores do Discord
+    - Rede de baixa latência, geograficamente equilibrada e multinuvem/metal
+    - Suporte multicadeia (Optimism, Arbitrum, Polygon + 11 outros)
     - Camadas intermediárias para velocidade e estabilidade (roteamento de chamadas, cache, indexação)
     - Monitoramento de contratos inteligentes via Webhooks
     - Painel intuitivo, conjunto de análises, compositor RPC
     - Funcionalidades avançadas de segurança (JWT, mascaramento, lista de permissões)
     - Dados e API de análise de NFT
-    - [Certificado SOC2](https://www.quicknode.com/security)
+    - [Certificação SOC2](https://www.quicknode.com/security)
     - Adequado para desenvolvedores e empresas
 - [**Rivet**](https://rivet.cloud/)
-  - [Documentação](https://rivet.readthedocs.io/en/latest/)
+  - [Documentos](https://rivet.readthedocs.io/en/latest/)
   - Recursos
     - Opção de nível gratuito
     - Dimensione conforme suas necessidades
@@ -284,16 +309,16 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Documentos](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Recursos
-    - Nível gratuito, incluindo 25 milhões de Unidades Tenderly por mês
+    - Nível gratuito, incluindo 25 milhões de unidades Tenderly por mês
     - Acesso gratuito aos dados históricos
-    - Cargas de trabalho de leitura pesada até 8x mais rápidas
+    - Cargas de trabalho de leitura pesada até 8 vezes mais rápidas
     - Acesso de leitura 100% consistente
     - Pontos de extremidade RPC JSON
-    - Construtor de requisições RPC baseado em UI e pré-visualização de requisições
+    - Construtor de solicitações RPC baseado em interface de usuário e pré-visualização de solicitações
     - Integração rigorosa com as ferramentas de desenvolvimento, depuração e teste do Tenderly
     - Simulações de transação
     - Análise de uso e filtragem
-    - Gerenciamento de chaves de acesso fácil
+    - Gerenciamento fácil de chaves de acesso
     - Suporte técnico dedicado via chat, e-mail e Discord
 - [**Watchdata**](https://watchdata.io/)
   - [Documentos](https://docs.watchdata.io/)
@@ -302,22 +327,22 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Conexão ininterrupta sem tempo de inatividade
     - Automação do processo
     - Tarifas gratuitas
-    - Altos limites que se adaptam a qualquer usuário
-    - Suporte para vários nós
-    - Escalabilidade de recursos
-    - Alta velocidade de processamento
+    - Limites altos que se adaptam a qualquer usuário
+    - Suporte a vários nós
+    - Dimensionamento de recursos
+    - Velocidades de processamento altas
 - [**ZMOK**](https://zmok.io/)
   - [Documentos](https://docs.zmok.io/)
   - Recursos
     - Front-running como serviço
     - Mempool de transações globais com métodos de pesquisa/filtragem
-    - Taxa TX ilimitada e Gás infinita para envio de transações
-    - O máximo de velocidade na obtenção do novo bloco e leitura da cadeia de blocos
-    - O melhor preço por garantia de chamada de API
+    - Taxa TX ilimitada e Gás infinito para envio de transações
+    - O máximo de velocidade na obtenção do novo bloco e leitura da blockchain
+    - O melhor preço garantido por chamada de API
 
 [**Zeeve**](https://www.zeeve.io/)
 
-- [Documentação](https://www.zeeve.io/docs/)
+- [Documentos](https://www.zeeve.io/docs/)
 - Recursos
   - Plataforma de automação sem código de nível empresarial que fornece implantação, monitoramento e gerenciamento de nós e redes da Blockchain
   - Mais de 30 protocolos e integrações, e adicionando mais
@@ -333,9 +358,9 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
 
 ## Tópicos relacionados {#related-topics}
 
-- [Nós e clientes](/developers/docs/nodes-and-clients/)
+- [ Nós e clientes](/developers/docs/nodes-and-clients/)
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Introdução ao desenvolvimento do Ethereum usando o Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Guia para enviar transações usando web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Introdução ao desenvolvimento do Ethereum usando o Alquimia](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Guia para enviar transações usando web3 e Alquimia](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

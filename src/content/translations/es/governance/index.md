@@ -1,30 +1,31 @@
 ---
 title: Gobernanza de Ethereum
-description: Una introducción sobre cómo se toman las decisiones relativas a Ethereum.
+description: Introducción sobre cómo se toman las decisiones relativas a Ethereum
 lang: es
+postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Introducción a la gobernanza de Ethereum {#introduction}
 
-_Si Ethereum no le pertenece a nadie, ¿cómo se tomaron las decisiones sobre los cambios pasados y cómo se tomarán las de los cambios futuros? La gobernanza de Ethereum se refiere al proceso por el cual se toman tales decisiones._
+_Si Ethereum no le pertenece a nadie, ¿cómo se toman las decisiones sobre los cambios pasados y futuros? La gobernanza de Ethereum se refiere al proceso por el cual se toman tales decisiones._
 
 <Divider />
 
 ## ¿Qué es la gobernanza? {#what-is-governance}
 
-La gobernanza es el sistema por el cual se toman las decisiones que deben llevarse a cabo. En una estructura organizacional típica, el equipo ejecutivo o la junta directiva son los que tienen la última palabra en la toma de decisiones. También puede suceder que los accionistas voten para implementar algún cambio. En un sistema político, los funcionarios electos legislan para representar los deseos de sus electores.
+La gobernanza es el sistema por el cual se toman las decisiones. En una estructura organizacional típica, el equipo o junta directivos son los que tienen la última palabra en la toma de decisiones. También puede suceder que los accionistas voten para implementar algún cambio. En un sistema político, los funcionarios electos legislan para representar los deseos de sus electores.
 
 ## Gobernanza descentralizada {#decentralized-governance}
 
-Ninguna persona controla el protocolo de Ethereum; sin embargo, eso no quita que deban tomarse desiciones acerca de la implementación de cambios con el objeto de asegurar la longevidad y prosperidad de la red. La ausencia de un control central hace de la gobernanza organizativa tradicional una solución poco viable.
+Ninguna persona controla el protocolo de Ethereum; sin embargo, eso no quita que deban tomarse decisiones acerca de la implementación de cambios con el objeto de asegurar la longevidad y prosperidad de la red. La ausencia de un control central hace de la gobernanza organizativa tradicional una solución poco viable.
 
 ## Gobernanza de Ethereum {#ethereum-governance}
 
-La gobernanza de Ethereum es el proceso mediante el cual se realizan cambios en el protocolo. Es importante señalar que este proceso no está relacionado con el uso que la gente y las aplicaciones hacen del protocolo: Ethereum es una red pública. Cualquier individuo, independientemente de su procedencia, puede participar en actividades desarrolladas en la cadena de bloques. No hay reglas establecidas con respecto a quién puede o no puede crear una aplicación o realizar una transacción. Sin embargo, existe un proceso para proponer cambios en el protocolo central, protocolo sobre el que se ejecutan estas aplicaciones. Puesto que tanta gente depende de la estabilidad de Ethereum, existen unos estrictos criterios de coordinación aplicables a los cambios fundamentales, que incluyen procesos sociales y técnicos. El objetivo es garantizar que cualquier cambio en Ethereum sea seguro y cuente con el respaldo unánime de la comunidad.
+La gobernanza de Ethereum es el proceso mediante el cual se realizan cambios en el protocolo. Es importante señalar que este proceso no está relacionado con el uso que la gente y las aplicaciones hacen del protocolo: Ethereum es una red pública. Cualquier individuo, independientemente de su procedencia, puede participar en actividades desarrolladas en la cadena de bloques. No hay reglas establecidas con respecto a quién puede o no puede crear una aplicación o realizar una transacción. Sin embargo, existe un proceso para proponer cambios en el protocolo central, sobre el que se ejecutan las aplicaciones descentralizadas. Puesto que tanta gente depende de la estabilidad de Ethereum, existen unos estrictos criterios de coordinación aplicables a los cambios fundamentales, que incluyen procesos sociales y técnicos. El objetivo es garantizar que cualquier cambio en Ethereum sea seguro y cuente con el respaldo unánime de la comunidad.
 
 ### Gobernanza «on-chain» frente a gobernanza «off-chain» {#on-chain-vs-off-chain}
 
-La tecnología de cadenas de bloques abre la posibilidad a nuevas opciones de gobernanza, conocidas como gobernanza «on-chain» o dentro de la cadena. La gobernanza dentro de la cadena se da cuando las propuestas de cambios en el protocolo se deciden mediante los votos de las partes interesadas. Por lo general, estos actores son los tenedores de un token de gobernanza y la votación ocurre en la cadena de bloques. En algunas formas de gobernanza dentro de la cadena, los cambios de protocolo propuestos ya están escritos en código y se implementan automáticamente si las partes interesadas aprueban los cambios.
+La tecnología de cadenas de bloques abre la posibilidad a nuevas opciones de gobernanza, conocidas como gobernanza «on-chain» o dentro de la cadena. La gobernanza dentro de la cadena se da cuando las propuestas de cambios en el protocolo se deciden mediante los votos de las partes interesadas. Por lo general, estos actores son los tenedores de un token de gobernanza y la votación ocurre en la cadena de bloques. En algunas formas de gobernanza en cadena, los cambios de protocolo propuestos ya están escritos en código y se implementan automáticamente si las partes interesadas aprueban los cambios.
 
 El enfoque opuesto, la gobernanza «off-chain» o externa a la cadena, consiste en que cualquier decisión de modificación del protocolo se produce a través de un proceso informal de debate social que, de aprobarse, se aplicaría en código.
 
@@ -47,7 +48,7 @@ En la [comunidad Ethereum](/community/), hay diversos actores y cada uno cumple 
 - **Desarrolladores de aplicaciones o herramientas**: estas personas programan aplicaciones que se ejecutan en la cadena de bloques de Ethereum (p. ej., DeFi, NFT, etc.) o diseñan herramientas para interactuar con Ethereum (p. ej., carteras, series de pruebas, etc.). [Más información sobre dapps](/dapps/).
 - **Operadores de nodos**: estas personas ejecutan nodos que propagan bloques y transacciones y rechazan cualquier transacción o bloque inválido con el que se encuentren. [Más información sobre los nodos](/developers/docs/nodes-and-clients/).
 - **Autores de EIP**: estas personas proponen cambios en el protocolo Ethereum en calidad de propuestas de mejora de Ethereum (EIP, «Ethereum Improvement Proposals»). [Más información sobre las EIP](/eips/).
-- **Mineros o validadores**: estas personas ejecutan nodos que pueden añadir nuevos bloques a la cadena de bloques de Ethereum.
+- **Validadores**: estas personas ejecutan nodos que pueden añadir nuevos bloques a la cadena de bloques de Ethereum.
 - **Desarrolladores del protocolo** (también conocidos como «desarrolladores principales» ): estas personas mantienen las diversas implementaciones de Ethereum (p. ej., go-ethereum, mind, Besu, Erigon en la capa de ejecución, o Prisma, Lighthouse, Nimbus, Teku, Lodestar en la capa de consenso). [Más información sobre los clientes de Ethereum](/developers/docs/nodes-and-clients/).
 
 _Nota: cualquier persona puede ser parte de varios de estos grupos (p. ej., un desarrollador de protocolos podría abogar por una EIP, ejecutar un validador de la cadena de baliza y utilizar aplicaciones DeFi). Sin embargo, por motivos de claridad conceptual, resulta más práctico hacer una distinción entre ellos._
@@ -90,7 +91,7 @@ Esta secuencia, aunque muy simplificada, da una visión general de las etapas si
 
 ### Comprensión del trabajo previo {#prior-work}
 
-Los defensores de una determinada EIP deberían familiarizarse con el trabajo y las propuestas previas antes de crear una EIP que pueda llegar a considerarse seriamente para su implementación en la red principal de Ethereum. De esta forma, la EIP traerá consigo una idea novedosa que no se haya rechazado anteriormente. Los tres lugares principales para estas investigaciones son: el [repositorio de EIP](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) y [ethinvestig.ch](https://ethresear.ch/).
+Los defensores de una determinada EIP deberían familiarizarse con el trabajo y las propuestas previas antes de crear una EIP que pueda llegar a considerarse seriamente para su implementación en la red principal de Ethereum. De esta forma, la EIP traerá consigo una idea novedosa que no se haya rechazado anteriormente. Los tres lugares principales para estas investigaciones son: el [repositorio de EIP](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) y [ethinvestig.ch](https://ethresear.ch/).
 
 ### Grupos de trabajo {#working-groups}
 
@@ -98,9 +99,9 @@ Es poco probable que el borrador inicial de una EIP se implemente en la red prin
 
 ### Consenso comunitario {#community-consensus}
 
-Si bien algunas EIP son simples mejoras técnicas con matices mínimos, otras son más complejas y constituyen inherentemente soluciones intermedias que afectarán a distintos actores de diferentes maneras. Esto significa que dentro de la comunidad algunas EIP serán en la práctica más polémicas que otras.
+Si bien algunas EIP son simples mejoras técnicas con matices mínimos, otras son más complejas y constituyen soluciones intermedias que afectarán a distintos actores de diferentes maneras. Esto significa que algunas EIP serán más polémicas dentro de la comunidad que otras.
 
-No hay un proceso definido sobre cómo tratar propuestas polémicas. Dado que los desarrolladores del protocolo no pueden forzar a la gente a adoptar actualizaciones de red, por lo general, evitarán la implementación de la EIP si los puntos controversiales sobrepasan los beneficios que pueden aportar a la comunidad en general.
+No hay un proceso definido sobre cómo tratar propuestas polémicas. Este es el resultado del diseño descentralizado de Ethereum, en el cual ningún grupo de partes interesadas puede coaccionar al otro a través de la fuerza bruta: los desarrolladores de protocolos pueden elegir no implementar cambios de código; los operadores de nodos pueden elegir no ejecutar el último cliente de Ethereum; los equipos de aplicaciones y los usuarios pueden elegir no transaccionar en la cadena. Dado que los desarrolladores de protocolos no pueden forzar a la gente a adoptar actualizaciones de la red, por lo general, evitarán la implementación de EIP si los puntos controversiales pesan más que los beneficios que pueden aportar a la comunidad en general.
 
 Se espera que los defensores de la EIP soliciten una devolución de parte de todos los actores. Si en algún momento usted es el defensor de una EIP polémica, debería intentar lidiar con las objeciones con el fin de generar un consenso en torno a la EIP. Dado el tamaño y la diversidad de la comunidad Ethereum, no hay una sola medida (p. ej. un voto ejercido con una moneda) que puede ser utilizada para determinar el consenso comunitario, y se espera que los defensores de la EIP se adapten a las circunstancias de su propuesta.
 
@@ -146,13 +147,13 @@ La habilidad de bifurcar en relación a desacuerdos políticos, económicos y fi
 
 <Divider />
 
-## Desarrollo de la cadena de baliza {#beacon-chain}
+## Gobernanza de la cadena de baliza (Beacon) {#beacon-chain}
 
 El proceso de gobernanza de Ethereum usualmente cambia velocidad y eficiencia por inclusión y honestidad. Con el fin de acelerar el desarrollo de la cadena de baliza, esta fue lanzada de forma separada a la red de Ethereum, que utiliza prueba de trabajo, y siguió sus propias reglas y gobernanza.
 
-Mientras que la especificación e implementaciones siempre han sido totalmente abiertas, no se utilizaron los procesos formales arriba descritos para proponer actualizaciones. Esto permitió que los investigadores y los implementadores especificaran los cambios y los acordaran más rápidamente.
+Si bien la especificación y las implementaciones de desarrollo siempre han sido totalmente de código abierto, no se utilizaron los procesos formales arriba descritos para proponer actualizaciones. Esto permitió que los investigadores y los implementadores especificaran los cambios y los acordaran más rápidamente.
 
-Cuando la cadena de baliza se fusione con la capa de ejecución de Ethereum, el proceso de gobernanza para proponer cambios será uniforme. Este proceso para implementar la fusión ya está [en marcha](https://eips.ethereum.org/EIPS/eip-3675).
+Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La Fusión se completó como parte de la [actualización de la red Paris](/history/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
 
 <ButtonLink to="/roadmap/merge/">
   Más sobre la fusión
@@ -175,8 +176,8 @@ Cuando la cadena de baliza se fusione con la capa de ejecución de Ethereum, el 
 La gobernanza en Ethereum no está estrictamente definida. Muchos participantes de la comunidad tienen diversas perspectivas al respecto. Aquí nombramos algunas de ellas:
 
 - [Notas sobre la gobernanza en la cadena de bloques](https://vitalik.ca/general/2017/12/17/voting.html) – _Vitalik Buterin_
-- [¿Cómo funciona la gobernanza de Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Criptotestres_
-- [Cómo funciona la gobernanza de Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [¿Qué es un desarrollador principal de Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
+- [¿Cómo funciona la gobernanza de Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
+- [Cómo funciona la gobernanza de Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) - _Micah Zoltu_
+- [¿Qué es un desarrollador del núcleo de Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Gobernanza, parte 2: la plutocracia sigue siendo mala](https://vitalik.ca/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
-- [Más allá de la gobernanza por votación con monedas](https://vitalik.ca/general/2021/08/16/voting3.html) – _Vitalik Buterin_
+- [Más allá de la gobernanza de votación con monedas](https://vitalik.ca/general/2021/08/16/voting3.html) – _Vitalik Buterin_

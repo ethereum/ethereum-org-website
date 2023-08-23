@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Sebelumnya, kita membahas tentang [gambaran besar Solidity](https://soliditydeveloper.com/solidity-overview-2020) dan telah menyebutkan [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sekarang Anda akan melihat cara menggunakannya, fitur apa saja yang terintegrasi di dalamnya, dan ide tambahan untuk memperluas penggunaanya. Dimulai oleh Paul Razvan Berg, pendiri [Sablier](http://sablier.finance/), aplikasi ini akan memulai pengembangan frontend Anda dan memiliki beberapa integrasi opsional yang dapat dipilih.
+Sebelumnya, kita membahas tentang [gambaran besar Solidity](https://soliditydeveloper.com/solidity-overview-2020) dan telah menyebutkan [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sekarang Anda akan melihat cara menggunakannya, fitur apa saja yang terintegrasi di dalamnya, dan ide tambahan untuk memperluas penggunaanya. Dimulai oleh Paul Razvan Berg, pendiri [Sablier](http://sablier.com/), aplikasi ini akan memulai pengembangan frontend Anda dan memiliki beberapa integrasi opsional yang dapat dipilih.
 
 ## Instalasi {#installation}
 
@@ -51,7 +51,7 @@ _create-eth-app_ secara khusus memanfaatkan [efek kaitan](https://reactjs.org/do
 
 ### ethers.js {#ethersjs}
 
-Meskipun [Web3](https://web3js.readthedocs.io/en/v1.2.7/) masih menjadi yang paling sering digunakan, [ether.js](https://docs.ethers.io/) telah mendapatkan lebih banyak daya tarik sebagai alternatif pada tahun lalu dan merupakan salah satu yang diintegrasikan ke dalam _create-eth-app_. Anda dapat bekerja dengan ini, mengubahnya ke Web3, atau mempertimbangkan untuk meningkatkannya ke [ether.js v5](https://docs-beta.ethers.io/) yang hampir keluar dari versi beta.
+Meskipun [Web3](https://docs.web3js.org/) masih menjadi yang paling sering digunakan, [ether.js](https://docs.ethers.io/) telah mendapatkan lebih banyak daya tarik sebagai alternatif pada tahun lalu dan merupakan salah satu yang diintegrasikan ke dalam _create-eth-app_. Anda dapat bekerja dengan ini, mengubahnya ke Web3, atau mempertimbangkan untuk meningkatkannya ke [ether.js v5](https://docs-beta.ethers.io/) yang hampir keluar dari versi beta.
 
 ### The Graph {#the-graph}
 
@@ -103,7 +103,7 @@ Sayangnya, pada saat penulisan ini, integrasi hanya dapat dilakukan untuk Uniswa
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.finance/) memungkinkan para pengguna menyiarkan pembayaran uang. Alih alih sekali pembayaran, Anda mendapatkan uang secara konstan tanpa administrasi tambahan setelah pengaturan awalnya selesai. Integrasinya mencakup [subgraphnya](https://thegraph.com/explorer/subgraph/sablierhq/sablier) sendiri.
+[Sablier](https://sablier.com/) memungkinkan para pengguna menyiarkan pembayaran uang. Alih alih sekali pembayaran, Anda mendapatkan uang secara konstan tanpa administrasi tambahan setelah pengaturan awalnya selesai. Integrasinya mencakup [subgraphnya](https://thegraph.com/explorer/subgraph/sablierhq/sablier) sendiri.
 
 ## Selajutnya? {#whats-next}
 

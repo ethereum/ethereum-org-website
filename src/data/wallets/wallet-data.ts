@@ -1,4 +1,4 @@
-interface WalletData {
+export interface WalletData {
   last_updated: string
   name: string
   image_name: string
@@ -1124,9 +1124,9 @@ const walletData: WalletData[] = [
     security_audit: [""],
     scam_protection: true,
     hardware_support: false,
-    walletconnect: false,
+    walletconnect: true,
     rpc_importing: false,
-    nft_support: false,
+    nft_support: true,
     connect_to_dapps: true,
     staking: true,
     swaps: true,
@@ -1171,7 +1171,7 @@ const walletData: WalletData[] = [
     scam_protection: true,
     hardware_support: false,
     walletconnect: true,
-    rpc_importing: false,
+    rpc_importing: true,
     nft_support: true,
     connect_to_dapps: true,
     staking: false,
@@ -1180,7 +1180,7 @@ const walletData: WalletData[] = [
     layer_2: true,
     gas_fee_customization: true,
     ens_support: true,
-    erc_20_support: false,
+    erc_20_support: true,
     eip_1559_support: true,
     buy_crypto: false,
     withdraw_crypto: false,
@@ -1223,7 +1223,7 @@ const walletData: WalletData[] = [
     staking: true,
     swaps: true,
     multichain: false,
-    layer_2: false,
+    layer_2: true,
     gas_fee_customization: true,
     ens_support: true,
     erc_20_support: true,
@@ -1596,7 +1596,7 @@ const walletData: WalletData[] = [
     non_custodial: true,
     security_audit: [""],
     scam_protection: true,
-    hardware_support: false,
+    hardware_support: true,
     walletconnect: true,
     rpc_importing: false,
     nft_support: true,
@@ -2286,7 +2286,7 @@ const walletData: WalletData[] = [
     documentation: "https://docs.bitkeep.com/guide/",
   },
   {
-    last_updated: "2023-01-24",
+    last_updated: "2023-07-06",
     name: "BlockWallet",
     image_name: "blockwallet",
     brand_color: "#FFFFFF",
@@ -2295,7 +2295,7 @@ const walletData: WalletData[] = [
     active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/GetBlockWallet",
-    discord: "https://discord.com/invite/EKVZ2xWXEH",
+    discord: "https://discord.gg/blockwallet",
     reddit: "",
     telegram: "https://t.me/blockwallet",
     ios: false,
@@ -2329,7 +2329,7 @@ const walletData: WalletData[] = [
     ens_support: true,
     erc_20_support: true,
     eip_1559_support: true,
-    buy_crypto: false,
+    buy_crypto: true,
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
@@ -2571,7 +2571,7 @@ const walletData: WalletData[] = [
     multisig: false,
     social_recovery: false,
     onboard_documentation: "https://shapeshift.zendesk.com/hc/en-us/",
-    documentation:"https://docs.shapeshift.com/",
+    documentation: "https://docs.shapeshift.com/",
   },
 ]
 

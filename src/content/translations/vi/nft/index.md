@@ -5,7 +5,7 @@ lang: vi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../assets/infrastructure_transparent.png
+image: ../../../../assets/infrastructure_transparent.png
 alt: Biểu trưng của Eth được hiển thị qua ảnh ba chiều.
 summaryPoint1: Một cách để đại diện cho bất kỳ thứ gì độc nhất dưới dạng tài sản dựa trên Ethereum.
 summaryPoint2: NFT đang mang lại nhiều quyền lực hơn cho người tạo nội dung hơn bao giờ hết.
@@ -304,7 +304,7 @@ Ethereum giúp cho NFT trở nên khả thi vì một số lý do:
 
 ## Tác động môi trường của NFT {#environmental-impact-nfts}
 
-Tạo ra và chuyển giao các NFT chỉ là các giao dịch Ethereum - tạo, mua, hoán đổi hay tương tác với các NFT không trực tiếp làm tiêu hao năng lượng. Kể từ [The Merge](/roadmap/merge), Ethereum là một blockchaim dùng ít năng lượng, nghĩa là tác động môi trường khi sử dụng NFT là không đáng kể.
+Tạo ra và chuyển giao các NFT chỉ là các giao dịch Ethereum - tạo, mua, hoán đổi hay tương tác với các NFT không trực tiếp làm tiêu hao năng lượng. Kể từ [The Merge](/roadmap/merge), Ethereum là một chuỗi khối dùng ít năng lượng, nghĩa là tác động môi trường khi sử dụng NFT là không đáng kể.
 
 [Thông tin thêm về mức tiêu thụ năng lượng của Ethereum](/energy-consumption/).
 
@@ -341,7 +341,7 @@ Các vấn đề bảo mật liên quan đến NFT thường ít hay nhiều li�
 
 ## Xây dựng với NFT {#build-with-nfts}
 
-Đa phần NFT được xây dựng dưới một tiêu chuẩn chung với tên gọi là [ERC-721](/developers/docs/standards/tokens/erc-721/). Tuy nhiên, có những tiêu chuẩn khác nữa mà có thể bạn sẽ muốn tham khảo. Tiêu chuẩn [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) cho phép những token gần như có thể phân tách vô cùng hữu ích trong thế giới game. Và gần đây, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) đã được đề xuất để giúp việc phát hành NFT trở nên năng suất hơn nhiều. Tiêu chuẩn này cho phép bạn phát hành số lượng NFT tùy thích trong một giao dịch!
+Đa phần NFT được xây dựng dưới một tiêu chuẩn chung với tên gọi là [ERC-721](/developers/docs/standards/tokens/erc-721/). Tuy nhiên, có những tiêu chuẩn khác nữa mà có thể bạn sẽ muốn tham khảo. Tiêu chuẩn [ERC-1155](/developers/docs/standards/tokens/erc-1155/) cho phép những token gần như có thể phân tách vô cùng hữu ích trong thế giới game. Và gần đây, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) đã được đề xuất để giúp việc phát hành NFT trở nên năng suất hơn nhiều. Tiêu chuẩn này cho phép bạn phát hành số lượng NFT tùy thích trong một giao dịch!
 
 ## Đọc thêm {#further-reading}
 
@@ -351,5 +351,6 @@ Các vấn đề bảo mật liên quan đến NFT thường ít hay nhiều li�
 - [Mọi điều bạn cần biết về thế giới ảo (metaverse)](https://foundation.app/blog/enter-the-metaverse) - _đội Foundation, foundation.app_
 - [Không, các nghệ sĩ crypto không làm hại Trái Đất](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Tiêu thụ năng lượng của Ethereum](/energy-consumption/)
+- [Ethereum NFT API](https://www.alchemy.com/list-of/nft-apis-on-ethereum)-_Alchemy_
 
 <QuizWidget quizKey="nfts" />

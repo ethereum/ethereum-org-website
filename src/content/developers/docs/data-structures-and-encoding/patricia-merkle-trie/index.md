@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 A Merkle Patricia Trie provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings.
 
-Merkle Patricia Tries are fully deterministic, meaning that tries with the same `(key, value)` bindings is guaranteed to be identical—down to the last byte. This means that they have the same root hash, providing the holy grail of `O(log(n))` efficiency for inserts, lookups and deletes. Moreover, they are simpler to understand and code than more complex comparison-based alternatives, like red-black trees.
+Merkle Patricia Tries are fully deterministic, meaning that tries with the same `(key, value)` bindings are guaranteed to be identical—down to the last byte. This means that they have the same root hash, providing the holy grail of `O(log(n))` efficiency for inserts, lookups and deletes. Moreover, they are simpler to understand and code than more complex comparison-based alternatives, like red-black trees.
 
 ## Prerequisites {#prerequisites}
 
@@ -25,7 +25,7 @@ Where `i_0 ... i_n` represent the symbols of the alphabet (often binary or hex),
 
 Say you wanted to use a radix tree data structure for persisting an order over a set of key value pairs. To find the value currently mapped to the key `dog` in the trie, you would first convert `dog` into letters of the alphabet (giving `64 6f 67`), and then descend the trie following that path until you find the value. That is, you start by looking up the root hash in a flat key/value DB to find the root node of the trie. It is represented as an array of keys pointing to other nodes. You would use the value at index `6` as a key and look it up in the flat key/value DB to get the node one level down. Then pick index `4` to look up the next value, then pick index `6`, and so on, until, once you followed the path: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, you would look up the value of the node and return the result.
 
-There is a difference between looking something up in the 'trie' and the underlying flat key/value 'DB'. They both define key/values arrangements, but the underlying DB can do a traditional 1 step lookup of a key. Looking up a key in the trie requires multiple underlying DB lookups to get to the final value described above. Let's refer to the latter as a `path` to eliminate ambiguity.
+There is a difference between looking something up in the 'trie' and the underlying flat key/value 'DB'. They both define key/value arrangements, but the underlying DB can do a traditional 1 step lookup of a key. Looking up a key in the trie requires multiple underlying DB lookups to get to the final value described above. Let's refer to the latter as a `path` to eliminate ambiguity.
 
 The update and delete operations for radix tries can be defined as follows:
 
@@ -62,9 +62,9 @@ The update and delete operations for radix tries can be defined as follows:
                 return hash(newnode)
 ```
 
-A "Merkle" Radix tree is built by linking nodes using deterministically-generated cryptographic hash digests. This content-addressing (in the key/value DB `key == keccak256(rlp(value))`) provides cryptographic authentication of the stored data. If the root hash of a given trie is publicly known, then anyone can provide a proof that the trie includes a given value at a specific path by providing the hashes of each node joining a specific value to the tree root.
+A "Merkle" Radix tree is built by linking nodes using deterministically-generated cryptographic hash digests. This content-addressing (in the key/value DB `key == keccak256(rlp(value))`) provides a cryptographic integrity guarantee of the stored data. If the root hash of a given trie is publicly known, then anyone with access to the underlying leaf data can construct a proof that the trie includes a given value at a specific path by providing the hashes of each node joining a specific value to the tree root.
 
-It is impossible for an attacker to provide a proof of a `(path, value)` pair that does not exist since the root hash is ultimately based on all hashes below it. Any underlying modification would change the root hash.
+It is impossible for an attacker to provide a proof of a `(path, value)` pair that does not exist since the root hash is ultimately based on all hashes below it. Any underlying modification would change the root hash. You can think of the hash as a compressed representation of structural information about the data, secured by the pre-image protection of the hashing function.
 
 We'll refer to an atomic unit of a radix tree (e.g. a single hex character, or 4 bit binary number) as a "nibble". While traversing a path one nibble at a time, as described above, nodes can maximally refer to 16 children but include a `value` element. We, hence, represent them as an array of length 17. We call these 17-element arrays "branch nodes".
 
@@ -232,6 +232,8 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
+
+Note: The `storageRoot` for an Ethereum account is empty by default if it's not a contract account.
 
 ### Transactions Trie {#transaction-trie}
 

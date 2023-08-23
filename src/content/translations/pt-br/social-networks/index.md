@@ -100,14 +100,12 @@ Em maio de 2022, o [Instagram anunciou suporte para NFTs](https://about.instagra
 
 ### Artigos {#articles}
 
-- [Descentralizando mídias sociais: um guia para a pilha social da Web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) — _Coinbase Ventures _
-- As redes sociais são a próxima grande oportunidade de descentralização< /a> — _Ben Goertzel_
-  - [A Web3 mantém a promessa de redes sociais descentralizadas e sustentadas pela comunidade.](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
+- [Descentralizando mídias sociais: um guia para a pilha social da Web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) — _Coinbase Ventures_ -[As redes sociais são a próxima grande oportunidade de descentralização](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
+- [A Web3 mantém a promessa de redes sociais descentralizadas e sustentadas pela comunidade.](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Uma visão geral do cenário de mídia social do Blockchain](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [Como o Blockchain pode resolver a privacidade das mídias sociais](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
-- [As redes de mídia social estão chegando ao Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — \_Emmanuel Awosika
-
-  - [Descentralização suficiente para as redes sociais](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
+- [As redes de mídia social estão chegando ao Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Descentralização suficiente para as redes sociais](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Vídeos {#videos}
 

@@ -1,12 +1,11 @@
 // Libraries
-import React, { useState, useRef, ReactNode } from "react"
+import React, { useState, useRef } from "react"
 import {
   Flex,
   Box,
   Image,
   Icon,
   Text,
-  Center,
   Heading,
   useTheme,
 } from "@chakra-ui/react"
@@ -15,14 +14,13 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
 import { MdOutlineCancel } from "react-icons/md"
-import { BsArrowCounterclockwise } from "react-icons/bs"
 
 // Components
+import BannerNotification from "../../components/BannerNotification"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
-import WalletPersonasSidebar from "../../components/FindWallet/WalletPersonasSidebar"
 import WalletTable from "../../components/FindWallet/WalletTable"
 
 // Data
@@ -40,7 +38,7 @@ import type { ChildOnlyProp } from "../../types"
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
-    <Box
+    <Text
       fontSize="xl"
       lineHeight={1.4}
       color="text200"
@@ -49,40 +47,7 @@ const Subtitle = ({ children }: ChildOnlyProp) => {
       }}
     >
       {children}
-    </Box>
-  )
-}
-
-interface IFilterTabProps {
-  children: ReactNode
-  active: boolean
-  onClick?: React.MouseEventHandler<HTMLDivElement>
-}
-
-const FilterTab = ({ children, active, onClick }: IFilterTabProps) => {
-  return (
-    <Flex
-      justifyContent="center"
-      alignItems="center"
-      onClick={onClick}
-      w="50%"
-      textAlign="center"
-      bg={active ? "primary" : "none"}
-      py="0.9rem"
-      px="0.4rem"
-      color={active ? "background" : "text"}
-      _first={{
-        borderTopLeftRadius: "lg",
-      }}
-      _last={{
-        borderTopRightRadius: "lg",
-      }}
-      _hover={{
-        bg: active ? "primary" : "selectHover",
-      }}
-    >
-      {children}
-    </Flex>
+    </Text>
   )
 }
 
@@ -115,6 +80,8 @@ const filterDefault = {
   eip_1559_support: false,
 }
 
+export type FiltersType = typeof filterDefault
+
 const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
@@ -123,7 +90,6 @@ const FindWalletPage = ({ data, location }) => {
   const resetWalletFilter = React.useRef(() => {})
   const wrapperRef = useRef<HTMLDivElement>(null)
 
-  const [showFeatureFilters, setShowFeatureFilters] = useState(false)
   const [showMobileSidebar, setShowMobileSidebar] = useState(false)
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
@@ -164,6 +130,10 @@ const FindWalletPage = ({ data, location }) => {
         description={t("page-find-wallet-meta-description")}
       />
 
+      <BannerNotification shouldShow={true}>
+        <Translation id="page-find-wallet-footnote-1" />
+      </BannerNotification>
+
       <Flex
         direction={{ base: "column-reverse", sm: "row" }}
         position="relative"
@@ -202,7 +172,7 @@ const FindWalletPage = ({ data, location }) => {
       <Box
         position="sticky"
         top="76px"
-        bg="background"
+        bg="background.base"
         w="full"
         zIndex={1}
         py="5px"
@@ -213,7 +183,7 @@ const FindWalletPage = ({ data, location }) => {
           justifyContent="space-between"
           alignItems="center"
           border="1px solid"
-          borderColor="primary"
+          borderColor="primary.base"
           borderLeft="none"
           borderRightRadius="base"
           pt={1.5}
@@ -224,7 +194,7 @@ const FindWalletPage = ({ data, location }) => {
           zIndex={1}
           w="full"
           maxW={showMobileSidebar ? "330px" : "150px"}
-          bg="background"
+          bg="background.base"
           onClick={() => {
             setShowMobileSidebar(!showMobileSidebar)
             trackCustomEvent({
@@ -241,10 +211,10 @@ const FindWalletPage = ({ data, location }) => {
               pointerEvents: "none",
               boxSize: 8,
               line: {
-                stroke: "primary",
+                stroke: "primary.base",
               },
               circle: {
-                stroke: "primary",
+                stroke: "primary.base",
               },
             },
           }}
@@ -264,7 +234,7 @@ const FindWalletPage = ({ data, location }) => {
             </Text>
           </Box>
           {showMobileSidebar ? (
-            <Icon as={MdOutlineCancel} fill="primary" />
+            <Icon as={MdOutlineCancel} fill="primary.base" />
           ) : (
             <FilterBurgerIcon />
           )}
@@ -284,161 +254,20 @@ const FindWalletPage = ({ data, location }) => {
         borderBottom="1px solid"
         borderBottomColor="secondary"
       >
-        <Flex
-          maxW="330px"
-          direction="column"
-          gap="0.55rem"
-          overflowY="scroll"
-          bg="background"
-          transition="0.5s all"
-          zIndex={20}
-          borderTopRightRadius="lg"
+        <WalletFilterSidebar
           ref={wrapperRef}
-          pointerEvents="auto"
-          sx={{
-            scrollbarWidth: "thin",
-            scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
-
-            "::-webkit-scrollbar": {
-              width: 2,
-            },
-            "::-webkit-scrollbar-track": {
-              bg: "background",
-            },
-            "::-webkit-scrollbar-thumb": {
-              bgColor: "lightBorder",
-              borderRadius: "base",
-              border: "2px solid",
-              borderColor: "background",
-            },
+          {...{
+            filters,
+            resetWalletFilter,
+            updateFilterOption,
+            updateFilterOptions,
+            resetFilters,
+            selectedPersona,
+            setFilters,
+            setSelectedPersona,
+            showMobileSidebar,
           }}
-          width={{ base: "90%", sm: "350px", lg: "full" }}
-          height={{ base: "full", lg: "auto" }}
-          display={{ base: showMobileSidebar ? "flex" : "none", lg: "flex" }}
-          position={{
-            base: showMobileSidebar ? "absolute" : "relative",
-            lg: "static",
-          }}
-          boxShadow={{
-            base: showMobileSidebar
-              ? "0 800px 0 800px rgb(0 0 0 / 65%)"
-              : "none",
-            lg: "none",
-          }}
-          left={showMobileSidebar ? 0 : "-400px"}
-        >
-          <Flex
-            borderBottom="1px solid"
-            borderBottomColor="primary"
-            cursor="pointer"
-            position="sticky"
-            top={0}
-            bg="background"
-            zIndex={1}
-            sx={{
-              p: {
-                m: 0,
-                letterSpacing: "0.02rem",
-                fontSize: "0.9rem",
-                w: "full",
-              },
-            }}
-          >
-            <FilterTab
-              active={!showFeatureFilters}
-              onClick={() => {
-                setShowFeatureFilters(false)
-                trackCustomEvent({
-                  eventCategory: "WalletFilterSidebar",
-                  eventAction: `WalletFilterSidebar tab clicked`,
-                  eventName: `show user personas`,
-                })
-              }}
-            >
-              <Text>
-                <Translation id="page-find-wallet-profile-filters" />
-              </Text>
-            </FilterTab>
-            <FilterTab
-              active={showFeatureFilters}
-              onClick={() => {
-                setShowFeatureFilters(true)
-                trackCustomEvent({
-                  eventCategory: "WalletFilterSidebar",
-                  eventAction: `WalletFilterSidebar tab clicked`,
-                  eventName: `show feature filters`,
-                })
-              }}
-            >
-              <Text>
-                {t("page-find-wallet-feature-filters")} (
-                {Object.values(filters).reduce((acc, filter) => {
-                  if (filter) {
-                    acc += 1
-                  }
-                  return acc
-                }, 0)}
-                )
-              </Text>
-            </FilterTab>
-          </Flex>
-          <Center
-            py={0.5}
-            px={1}
-            borderRadius="base"
-            w="full"
-            mx="auto"
-            gap={1}
-            fontSize="xs"
-            cursor="pointer"
-            role="button"
-            aria-labelledby="reset-filter"
-            onClick={() => {
-              resetFilters()
-              resetWalletFilter.current()
-              trackCustomEvent({
-                eventCategory: "WalletFilterReset",
-                eventAction: `WalletFilterReset clicked`,
-                eventName: `reset filters`,
-              })
-            }}
-            data-group
-          >
-            <Icon
-              as={BsArrowCounterclockwise}
-              aria-hidden="true"
-              fontSize="sm"
-              fill="primary"
-              _groupHover={{ fill: "selectHover" }}
-            />
-            <Text
-              m={0}
-              color="primary"
-              _groupHover={{ color: "selectHover" }}
-              id="reset-filter"
-              aria-hidden="true"
-            >
-              {"Reset filters".toUpperCase()}
-            </Text>
-          </Center>
-          <Box>
-            {showFeatureFilters ? (
-              <WalletFilterSidebar
-                resetWalletFilter={resetWalletFilter}
-                filters={filters}
-                updateFilterOption={updateFilterOption}
-                updateFilterOptions={updateFilterOptions}
-              />
-            ) : (
-              <WalletPersonasSidebar
-                resetFilters={resetFilters}
-                setFilters={setFilters}
-                selectedPersona={selectedPersona}
-                setSelectedPersona={setSelectedPersona}
-              />
-            )}
-          </Box>
-        </Flex>
+        />
         <Box
           w="full"
           overflowY="scroll"
@@ -450,13 +279,13 @@ const FindWalletPage = ({ data, location }) => {
               width: 2,
             },
             "::-webkit-scrollbar-track": {
-              bg: "background",
+              bg: "background.base",
             },
             "::-webkit-scrollbar-thumb": {
               bgColor: "lightBorder",
               borderRadius: "base",
               border: "2px solid",
-              borderColor: "background",
+              borderColor: "background.base",
             },
             table: {
               m: 0,
@@ -508,6 +337,19 @@ const FindWalletPage = ({ data, location }) => {
 
 export default FindWalletPage
 
+export const walletImage = graphql`
+  fragment walletImage on File {
+    childImageSharp {
+      gatsbyImageData(
+        width: 56
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
+    }
+  }
+`
+
 export const query = graphql`
   query FindWalletPage($languagesToFetch: [String!]!) {
     locales: allLocale(
@@ -526,258 +368,163 @@ export const query = graphql`
     }
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     argent: file(relativePath: { eq: "wallets/argent.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     brave: file(relativePath: { eq: "wallets/brave.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     frame: file(relativePath: { eq: "wallets/frame.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     numio: file(relativePath: { eq: "wallets/numio.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     portis: file(relativePath: { eq: "wallets/portis.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     taho: file(relativePath: { eq: "wallets/taho.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     safe: file(relativePath: { eq: "wallets/safe.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     coinwallet: file(relativePath: { eq: "wallets/coinwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     ambire: file(relativePath: { eq: "wallets/ambire.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     linen: file(relativePath: { eq: "wallets/linen.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     foxwallet: file(relativePath: { eq: "wallets/foxwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     pillar: file(relativePath: { eq: "wallets/pillar.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     mew: file(relativePath: { eq: "wallets/mew.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     opera: file(relativePath: { eq: "wallets/opera.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     guarda: file(relativePath: { eq: "wallets/guarda.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     web3auth: file(relativePath: { eq: "wallets/web3auth.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     bridge: file(relativePath: { eq: "wallets/bridge.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     torus: file(relativePath: { eq: "wallets/torus.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     oneinch: file(relativePath: { eq: "wallets/1inch.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     status: file(relativePath: { eq: "wallets/status.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     aktionariat: file(relativePath: { eq: "wallets/aktionariat.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     sequence: file(relativePath: { eq: "wallets/sequence.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     infinity_wallet: file(relativePath: { eq: "wallets/infinity_wallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     exodus: file(relativePath: { eq: "wallets/exodus.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     rabbywallet: file(relativePath: { eq: "wallets/rabbywallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     zerion: file(relativePath: { eq: "wallets/zerion.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     enkrypt: file(relativePath: { eq: "wallets/enkrypt.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     gridplus: file(relativePath: { eq: "wallets/gridplus.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     blockwallet: file(relativePath: { eq: "wallets/blockwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     okx: file(relativePath: { eq: "wallets/okx.jpeg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     onekey: file(relativePath: { eq: "wallets/onekey.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     apex: file(relativePath: { eq: "wallets/apex.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
+      ...walletImage
     }
     shapeshift: file(relativePath: { eq: "wallets/shapeshift.png" }) {
       childImageSharp {

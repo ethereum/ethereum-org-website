@@ -53,11 +53,12 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 
 ##### Faucets
 
+- [Faucet do QuickNode Sepolia](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Faucet de PoW](https://sepolia-faucet.pk910.de/)
 - [Faucet Sepolia](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Faucet da Carteira da Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Faucet do Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet do Infura Sepolia](https://www.infura.io/faucet)
 
@@ -79,17 +80,18 @@ Goerli é a rede de testes usada para testar a validação e a participação. A
 
 ##### Faucets
 
+- [Faucet Goerli do QuickNode](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Faucet de PoW](https://goerli-faucet.pk910.de/)
 - [Faucet Goerli](https://faucet.goerli.mudit.blog/)
-- [Faucet Paradigm](https://faucet.paradigm.xyz/)
-- [Faucet Alchemy Goerli](https://goerlifaucet.com/)
+- [Faucet do Paradigm](https://faucet.paradigm.xyz/)
+- [Faucet Goreli do Alchemy](https://goerlifaucet.com/)
 - [Todas as faucets do nó Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
+- [Faucet da Carteira Coinbase | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 
 Para iniciar um Validador na rede de testes Goerli, use a barra de inicialização ["validador goerli barato"](https://goerli.launchpad.ethstaker.cc/en/) do ethstaker.
 
-#### Rinkeby*(suporte a longo prazo)* {#rinkeby}
+#### Rinkeby _(descontinuada)_ {#rinkeby}
 
 _Observação: [a rede de testes Rinkeby foi descontinuada](https://blog.ethereum.org/2022/11/30/ropsten-shutdown-announcement) e não receberá mais atualizações de protocolo. Considere migrar seus aplicativos para a Sepolia._
 
@@ -112,9 +114,7 @@ Uma rede de testes para [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
-- [FaucETH](https://fauceth.komputing.org) (torneira multi-cadeia sem a necessidade de conta social)
-- [Faucet do Chainlink](https://faucets.chain.link/)
-- [Faucet do Paradigm](https://faucet.paradigm.xyz/)
+- [Faucet Chainlink](https://faucets.chain.link/)
 
 #### Goerli otimista {#optimistic-goerli}
 
@@ -122,7 +122,6 @@ Uma rede de testes para [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
-- [FaucETH](https://fauceth.komputing.org) (torneira multi-cadeia sem a necessidade de conta social)
 - [Faucet do Paradigm](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 

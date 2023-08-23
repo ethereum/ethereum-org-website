@@ -21,9 +21,9 @@ import HorizontalCard, {
   IProps as HorizontalCardProps,
 } from "../components/HorizontalCard"
 import CardList from "../components/CardList"
-import { StyledCard } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import { StyledCard } from "../pages/get-eth"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
@@ -162,9 +162,9 @@ const articles = [
 const guides = [
   {
     title: (
-      <Translation id="additional-reading-how-to-register-an-ethereum-account" />
+      <Translation id="additional-reading-how-to-create-an-ethereum-account" />
     ),
-    link: "/guides/how-to-register-an-ethereum-account/",
+    link: "/guides/how-to-create-an-ethereum-account/",
   },
   {
     title: <Translation id="additional-reading-how-to-use-a-wallet" />,
@@ -487,9 +487,14 @@ export const query = graphql`
         }
       }
     }
-    hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
+    hero: file(relativePath: { eq: "wallets/wallet-hero.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     findWallet: file(relativePath: { eq: "wallets/find-wallet.png" }) {

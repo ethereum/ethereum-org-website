@@ -10,7 +10,7 @@ Para esse propósito, cada cliente Ethereum implementa a especificação [JSON-R
 
 Se você quiser usar JavaScript para se conectar a um nó Ethereum, é possível usar o JavaScript vanilla, mas existem várias bibliotecas convenientes dentro do ecossistema que tornam isso muito mais fácil. Com essas bibliotecas, desenvolvedores podem escrever métodos intuitivos, one-line para inicializar solicitações JSON RPC (sob o capô) que interagem com Ethereum.
 
-Note que desde a [A Fusão](/roadmap/merge/) (The Merge), duas partes conectadas do software Ethereum - um cliente de execução e um cliente de consenso - são necessárias para executar um nó. Certifique-se de que seu nó inclui tanto o cliente de execução quanto o consensual. Se o seu nó não estiver na sua máquina local (por exemplo, seu nó está sendo executado em uma instância da AWS) atualize os endereços IP no tutorial adequadamente. Para obter mais informações, veja nossa página no [executando um nó](/developers/docs/nodes-and-clients/run-a-node/).
+Observe que, desde [A Fusão](/roadmap/merge/) (The Merge), duas partes conectadas do software Ethereum — um cliente de execução e um cliente de consenso — são necessárias para executar um nó. Certifique-se de que seu nó inclui tanto o cliente de execução quanto o consensual. Se o seu nó não estiver na sua máquina local (por exemplo, seu nó está sendo executado em uma instância da AWS) atualize os endereços IP no tutorial adequadamente. Para obter mais informações, veja nossa página no [executando um nó](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Pré-requisitos {#prerequisites}
 
@@ -231,14 +231,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Funções utilitárias da Web3js](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Funções utilitárias da Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funções utilitárias da EthersJs](https://docs.ethers.io/v5/api/utils/)
 
 ## Bibliotecas disponíveis {#available-libraries}
 
 **Web3.js -** **_API para Ethereum em JavaScript._**
 
-- [Documentação](https://web3js.readthedocs.io/en/1.0/)
+- [Documentação](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_Implementação completa de uma carteira Ethereum e utilidades em JavaScript e TypeScript._**

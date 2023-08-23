@@ -30,7 +30,7 @@ Se il batch del rollup non viene contestata (cioè, tutte le transazioni sono es
 
 I rollup ottimistici sono [soluzioni di ridimensionamento off-chain](/developers/docs/scaling/#off-chain-scaling) create per funzionare su Ethereum. Ogni rollup ottimistico è gestito da una serie di contratti intelligenti distribuiti sulla rete di Ethereum. I rollup ottimistici elaborano le transazioni al di fuori della catena principale di Ethereum, ma pubblicano le transazioni off-chain (in batch) in un contratto di rollup on-chain. Come la blockchain di Ethereum, questo registro delle transazioni è immutabile e forma la "catena di rollup ottimistico".
 
-L'architettura di un rollup ottimistico comprende le seguenti parti:
+L'architettura di un optimistic rollup comprende le seguenti parti:
 
 **Contratti su catena**: L'operazione del rollup ottimistico è controllata dai contratti intelligenti eseguiti su Ethereum. Questo include i contratti che memorizzano i blocchi del rollup, monitorano gli aggiornamenti di stato sul rollup e tracciano i depositi degli utenti. In questo senso, Ethereum serve da livello di base o "livello 1" per i rollup ottimistici.
 
@@ -46,7 +46,7 @@ I rollup ottimistici si affidano al protocollo principale di Ethereum per quanto
 
 Come accennato, i rollup ottimistici pubblicano i dati della transazione in Ethereum come `calldata`. Poiché l'esecuzione della catena di rollup si basa sulle transazioni inviate, chiunque può usare queste informazioni, ancorate al livello di base di Ethereum, per eseguire lo stato del rollup e verificare la correttezza delle transizioni di stato.
 
-La disponibilità dei dati è essenziale perché senza accesso ai dati di stato, gli autori delle contestazioni non possono costruire le prove di frode per contestare le operazioni di rollup non valide. Con Ethereum che fornisce la disponibilità dei dati, il rischio che gli operatori di rollup la passino liscia con atti malevoli (ad es. inviare blocchi non validi) è ridotto.
+[La disponibilità dei dati](/developers/docs/data-availability/) è critica perché senza accesso ai dati di stato, gli autori della contestazione non possono costruire prove di frode per contestare operazioni di rollup non valide. Con Ethereum che fornisce la disponibilità dei dati, il rischio che gli operatori di rollup la passino liscia con atti malevoli (ad es. inviare blocchi non validi) è ridotto.
 
 ### Resistenza alla censura {#censorship-resistance}
 
@@ -198,7 +198,7 @@ I rollup ottimistici usano uno schema di commissioni sul gas, molto simile a Eth
 
 2. **`calldata`**: oltre la commissione di base della transazione, il costo di ogni scrittura di stato dipende dalla dimensione di `calldata` pubblicata al L1. I costi di `calldata` sono correntemente disciplinati dall'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che stipula un costo di 16 gas per i byte diversi da zero e 4 gas ber i byte pari a zero di `calldata`, rispettivamente. Per ridurre le commissioni dell'utente, gli operatori dei rollup comprimono le transazioni per ridurre il numero di byte di `calldata` pubblicati su Ethereum.
 
-3. **Commissioni dell'operatore del L2**: questo è l'importo pagato al nodo del rollup come compenso per i costi di calcolo sostenuti nell'elaborazione delle transazioni, proprio come le commissioni del miner su Ethereum. I nodi del rollup addebitano commissioni di transazione inferiori, poiché gli L2 hanno capacità di elaborazione maggiori e non affrontano congestioni di rete che forzano i miner su Ethereum a dare priorità alle transazioni con commissioni maggiori.
+3. **Commissioni dell'operatore del L2**: questo è l'importo pagato al nodo del rollup come compenso per i costi di calcolo sostenuti nell'elaborazione delle transazioni, proprio come le commissioni sul carburante su Ethereum. I nodi del rollup addebitano commissioni di transazione inferiori, poiché gli L2 hanno capacità di elaborazione maggiori e non affrontano congestioni di rete che forzano i validatori su Ethereum a dare priorità alle transazioni con commissioni maggiori.
 
 I rollup ottimistici applicano diversi meccanismi per ridurre le commissioni per gli utenti, inclusi il raggruppamento delle transazioni e la compressione dei `calldata` per ridurre i costi di pubblicazione dei dati. Puoi controllare il [tracker delle commissioni del L2](https://l2fees.info/) per una panoramica in tempo reale dei costi d'uso dei rollup ottimistici basati su Ethereum.
 
@@ -229,7 +229,7 @@ Fare qualche calcolo approssimativo su queste cifre può aiutare a mostrare i mi
 
 Questa è una stima piuttosto ottimistica, dato che le transazioni del rollup ottimistico non possono verosimilmente comprendere un intero blocco su Ethereum. Tuttavia, può dare un'idea approssimativa di quanti guadagni in termini di scalabilità i rollup ottimistici possono offrire agli utenti di Ethereum (le implementazioni correnti offrono fino a 2.000 TPS).
 
-L'introduzione dello [sharding dei dati](/roadmap/danksharding/) su Ethereum dovrebbe migliorare la scalabilità nei rollup ottimistici. Poiché le transazioni del rollup devono condividere lo spazio del blocco con altre transazioni non del rollup, la loro capacità di elaborazione è limitata dal volume di dati sulla catena principale di Ethereum. Lo sharding aumenterà lo spazio disponibile per le catene del L2 per pubblicare dati per blocco, potenziando ulteriormente il volume sui rollup.
+L'introduzione dello [sharding dei dati](/roadmap/danksharding/) su Ethereum dovrebbe migliorare la scalabilità nei rollup ottimistici. Poiché le transazioni del rollup devono condividere lo spazio del blocco con altre transazioni non del rollup, la loro capacità di elaborazione è limitata dal volume di dati sulla catena principale di Ethereum. Il danksharding aumenterà lo spazio disponibile alle catene L2 per pubblicare i dati per blocco, utilizzando un'archiviazione a "blob" più economica e non permanente, invece di costosi `CALLDATA` permanenti.
 
 ### Pro e contro dei rollup ottimistici {#optimistic-rollups-pros-and-cons}
 
@@ -257,10 +257,9 @@ Esistono molteplici implementazioni dei rollup ottimistici, che puoi integrare n
 
 ## Ulteriori letture sui rollup ottimistici
 
-- [How do optimistic rollups work (The complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)
+- [Come funzionano gli Optimistic Rollup (La guida completa)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups)
-- [The Essential Guide to Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [How does Optimism's Rollup really work?](https://research.paradigm.xyz/optimism)
-- [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+- [Guida essenziale ad Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
+- [Come funziona davvero il rollup di Optimism?](https://research.paradigm.xyz/optimism)
+- [Approfondimento su OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-- [How Do Optimistic Rollups Work? (The Complete Guide)](https://www.alchemy.com/overviews/optimistic-rollups)
