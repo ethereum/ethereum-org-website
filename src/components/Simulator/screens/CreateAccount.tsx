@@ -229,11 +229,10 @@ const WordSelectorButtons: React.FC<WordsSelectorButtonsProps> = ({
     setWordsSelected((prev) => prev + 1)
   }
   return (
-    <Flex
+    <Grid
+      templateColumns="repeat(4, 1fr)"
       gap={2}
       whiteSpace="nowrap"
-      flexWrap="wrap"
-      justify="space-between"
       p={4}
       pb={{ base: 6, md: 4 }}
       bg="background.highlight"
@@ -250,7 +249,6 @@ const WordSelectorButtons: React.FC<WordsSelectorButtonsProps> = ({
           onClick={incrementWordsSelected}
           bg="primary.hover"
           color="background.base"
-          w="fit-content"
           px={1}
           borderRadius="xl"
           isDisabled={index !== wordsSelected}
@@ -263,7 +261,7 @@ const WordSelectorButtons: React.FC<WordsSelectorButtonsProps> = ({
           {word}
         </Button>
       ))}
-    </Flex>
+    </Grid>
   )
 }
 

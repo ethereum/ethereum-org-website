@@ -38,15 +38,20 @@ export const Explanation: React.FC<SimulatorStateProps> = ({ state }) => {
         {step + 1}/{totalSteps}
       </Text>
       <Text
-        fontSize={{ base: "2xl", md: "3xl" }}
+        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
         lineHeight={{ base: 8, md: 10 }}
         fontWeight="bold"
         mb={8}
       >
         {header}
       </Text>
-      <Description display={{ base: "none", md: "block" }} />
-      <Flex display={{ md: "none" }} alignItems="center">
+      <Description
+        display={{ base: isLastStep ? "block" : "none", md: "block" }}
+      />
+      <Flex
+        display={{ base: isLastStep ? "none" : "flex", md: "none" }}
+        alignItems="center"
+      >
         <Tooltip content={<Description />}>
           <Text as="span">More info</Text>
           <Icon as={MdInfoOutline} size={24} />

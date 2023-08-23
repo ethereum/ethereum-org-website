@@ -6,6 +6,7 @@ import {
   Icon,
   createIcon,
   GridProps,
+  Box,
 } from "@chakra-ui/react"
 import { MdArrowDownward } from "react-icons/md"
 import type { SimulatorStateProps } from "../../interfaces"
@@ -16,7 +17,7 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
   const { step } = state
   const ICON_COUNT = 8 as const
   const sharedIconStyles = {
-    w: "44px",
+    w: "full",
     aspectRatio: 1,
     borderRadius: "xl",
     placeItems: "center",
@@ -26,7 +27,7 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
   } as const
   return (
     <Grid
-      px={4}
+      px={6}
       py={8}
       maxW="full"
       gap={5}
@@ -36,7 +37,7 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
       {Array(ICON_COUNT)
         .fill(0)
         .map((_, i) => (
-          <Grid key={i} {...sharedIconStyles} bg="body.light" {...props} />
+          <Box key={i} {...sharedIconStyles} bg="body.light" {...props} />
         ))}
       <Grid
         {...sharedIconStyles}

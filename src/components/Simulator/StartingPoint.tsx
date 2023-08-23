@@ -23,7 +23,7 @@ export const StartingPoint: React.FC = () => {
         p={{ base: 4, md: 16 }}
         alignItems="center"
         textAlign={{ base: "center", md: "start" }}
-        gap={{ base: 4, md: 8, lg: 16 }}
+        gap={{ base: 16, md: 8, lg: 16 }}
         maxW="1000px"
         w="full"
       >

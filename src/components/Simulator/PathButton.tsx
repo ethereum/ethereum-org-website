@@ -23,12 +23,24 @@ export const PathButton: React.FC<IProps> = ({ pathId, handleClick }) => {
       py={6}
       onClick={() => handleClick(pathId)}
     >
-      <Flex direction="column">
-        <Text fontWeight="bold" m={0} lineHeight={6} letterSpacing="-1.1%">
+      <Flex direction="column" as="span">
+        <Text
+          as="span"
+          fontWeight="bold"
+          m={0}
+          lineHeight={6}
+          letterSpacing="-1.1%"
+        >
           {primaryText}
         </Text>
         {secondaryText && (
-          <Text m={0} color="body.medium" fontSize="xs" lineHeight={5}>
+          <Text
+            as="span"
+            m={0}
+            color="body.medium"
+            fontSize="xs"
+            lineHeight={5}
+          >
             {secondaryText}
           </Text>
         )}

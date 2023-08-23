@@ -3,6 +3,7 @@ import { Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react"
 import Emoji from "../../Emoji"
 import type { SimulatorData } from "../../../interfaces"
 import Button from "../../Button"
+import ButtonLink from "../../ButtonLink"
 
 export const simulatorData: SimulatorData = {
   "create-account": {
@@ -126,7 +127,9 @@ export const simulatorData: SimulatorData = {
           description: (
             <Flex direction="column" gap={5}>
               <Button variant="solid">Start next lesson</Button>
-              <Button variant="outline">See a list of wallets</Button>
+              <ButtonLink variant="outline" href="/wallets/find-wallet/">
+                See a list of wallets
+              </ButtonLink>
             </Flex>
           ),
         },
