@@ -284,7 +284,7 @@ O staking/votação também protege oráculos descentralizados de "ataques Sybil
 
 O [ponto de Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) é um conceito da teoria dos jogos que assume que várias entidades encontrarão sempre por padrão uma solução comum para um problema na ausência de qualquer comunicação. Os mecanismos do ponto de Schelling são frequentemente utilizados em redes descentralizadas de oráculos para permitir que os nós cheguem a consenso sobre as respostas às solicitações de dados.
 
-Um exemplo inicial é [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), um feed de dados proposto em que os participantes submetem respostas para perguntas "escalares" (perguntas cujas respostas são descritas pela magnitude, como, "Qual é o preço do ETH?", juntamente com um depósito. Os usuários que fornecem valores entre o 25º e 75º [percentil](https://en.wikipedia.org/wiki/Percentile) são recompensados, enquanto aqueles cujos valores se desviam amplamente da mediana são penalizados.
+Um exemplo inicial é o [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), uma proposta de feed de dados (oráculo), na qual os participantes submetem respostas para "escalar" perguntas (perguntas cujas respostas são descritas por magnitude, por exemplo, "qual é o preço do ETH?"), juntamente com um depósito. Os usuários que fornecem valores entre o 25º e 75º [percentil](https://en.wikipedia.org/wiki/Percentile) são recompensados, enquanto aqueles cujos valores se desviam amplamente da mediana são penalizados.
 
 Embora o SchellingCoin não exista hoje, uma série de oráculos descentralizados, principalmente [Oráculos do Maker Protocol](https://docs.makerdao.com/smart-contract-modules/oracle-module), usam o mecanismo schelling-point para melhorar a precisão dos dados do oráculo. Cada Maker Oracle consiste de uma rede off-chain P2P de nós ("relayers" e "feeds") que submetem preços de mercado para ativos colaterais e um contrato on-chain "Medianizer" que calcula a mediana de todos os valores fornecidos. Quando o período de atraso especificado acaba, esta mediana se torna o novo preço de referência para o ativo associado.
 
@@ -304,7 +304,7 @@ Também é possível que os oráculos baseados em stake consigam cortar operador
 
 Oráculos descentralizados implementam vários designs de incentivo para evitar o comportamento [bizantino](https://en.wikipedia.org/wiki/Byzantine_fault) entre os nós oráculos. Especificamente, eles alcançam a _atribuibilidade_ e _responsabilidade_:
 
-1. Nós oráculos descentralizados são frequentemente obrigados a assinar os dados que eles fornecem em resposta a solicitações de dados. Essa informação ajuda a avaliar o desempenho histórico de nós oráculos, para que os usuários possam filtrar nós oráculos não confiáveis ao fazer solicitações de dados. Um exemplo é o [Oracle Reputation](https://oracle.reputation.link/) da Chainlink ou o [Sistema de Reputação Algoritmica](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system) da Witnet.
+1. Nós oráculos descentralizados são frequentemente obrigados a assinar os dados que eles fornecem em resposta a solicitações de dados. Essa informação ajuda a avaliar o desempenho histórico de nós oráculos, para que os usuários possam filtrar nós oráculos não confiáveis ao fazer solicitações de dados. Um exemplo é o [Sistema de Reputação de Algoritmos](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system) da Witnet.
 
 2. Os oráculos descentralizados, conforme explicado anteriormente, podem exigir que os nós façam stake confiando somente na verdade dos dados que eles submetem. Se a reivindicação é confirmada, esse staking pode ser restituído juntamente com recompensas por um serviço honesto. Mas também pode ser reduzido no caso de a informação ser incorreta, o que impões certa responsabilização.
 
@@ -361,7 +361,7 @@ contract PriceConsumerV3 {
 
 Certas aplicações da blockchain, como jogos baseados em blockchain ou esquemas de loteria, requerem um alto nível de imprevisibilidade e aleatoriedade para funcionar efetivamente. No entanto, a execução determinística de blockchains elimina qualquer fonte de aleatoriedade.
 
-A abordagem habitual é usar funções criptográficas pseudoaleatórias, como o `blockhash`, mas isso é passível de [manipulação por outros atores](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.), nomeadamente mineradores resolvendo o algoritmo de prova de trabalho. Além disso, a [troca para a prova de participação](/roadmap/merge/) do Ethereum significa que os desenvolvedores não podem mais confiar em `blockhash` para aleatoriedade on-chain (entretanto, o [mecanismo RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) da Beacon Chain fornece uma fonte alternativa de aleatoriedade).
+A abordagem habitual é usar funções criptográficas pseudoaleatórias, como o `blockhash`, mas isso é passível de [manipulação por outros atores](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.), nomeadamente mineradores resolvendo o algoritmo de prova de trabalho. Além disso, a [mudança para a prova de participação](/roadmap/merge/) do Ethereum significa que os desenvolvedores não podem mais confiar em `blockhash` para obter aleatoriedade on-chain (no entanto, o [mecanismo RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) da Beacon Chain fornece uma fonte alternativa de aleatoriedade).
 
 É possível gerar o valor aleatório off-chain e enviá-lo on-chain, mas fazer isso impõe requisitos de confiança elevados aos usuários. Eles devem acreditar que o valor foi verdadeiramente gerado através de mecanismos imprevisíveis e não foi alterado em trânsito.
 
@@ -383,7 +383,7 @@ Os desenvolvedores precisarão acionar essas funções em intervalos para manter
 
 Algumas redes descentralizadas de oráculos oferecem serviços de automação, que permitem que nós de oráculos off-chain acionem funções de contrato inteligente de acordo com parâmetros definidos pelo usuário. Normalmente, isso requer "registrar" o contrato-alvo com o serviço oráculo, fornecendo fundos para pagar o operador do oráculo, e especificar as condições ou horários para disparar o contrato.
 
-Um exemplo é a [Keeper Network](https://chain.link/keepers) da rede Chainlink, que fornece opções para que os contratos inteligentes terceirizem tarefas de manutenção regulares de maneira minimizada e descentralizada. Leia a [documentação oficial da Keepers](https://docs.chain.link/docs/chainlink-keepers/introduction/) para obter informações sobre como tornar o seu contrato compatível com Keeper e usar o serviço UpKeep.
+Um exemplo é a [Keeper Network](https://chain.link/keepers) da rede Chainlink, que fornece opções para que os contratos inteligentes terceirizem tarefas de manutenção regulares de maneira minimizada e descentralizada. Leia a [documentação oficial do Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) para obter informações sobre como tornar seu contrato compatível com o Keeper e usar o serviço Upkeep.
 
 ## Usar oráculos da blockchain {#use-blockchain-oracles}
 
@@ -393,17 +393,15 @@ Existem vários aplicativos de oráculos que você pode integrar no seu dapp Eth
 
 **[Witnet](https://witnet.io/)**: _Witnet é um óraculo sem permissão, descentralizado e resistente à censura, que ajuda os contratos inteligentes a reagir a eventos do mundo real com fortes garantias criptoeconômicas._
 
-**[UMA Oracle](https://umaproject.org/products/optimistic-oracle)**: _o oráculo otimista da UMA permite que os contratos inteligentes recebam qualquer tipo de dados para diferentes aplicações, incluindo seguros, derivados financeiros e mercado de previsão._
+**[UMA Oracle](https://uma.xyz)** – _UMA é um oráculo otimista que permite contratos de receber, rapidamente, qualquer tipo de dados para diferentes aplicações, incluindo seguros, derivativos financeiros e mercados de previsão._
 
 **[Tellor](https://tellor.io/)**: _Tellor é um protocolo de oráculo transparente e sem permissão para que seu contrato inteligente obtenha facilmente quaisquer dados sempre que precisar._
 
 **[Band Protocol](https://bandprotocol.com/)**: _Band Protocol é uma plataforma de dados de oráculos cross-chain que agrega e conecta dados do mundo real e APIs a contratos inteligentes._
 
-**[Provable](https://provable.xyz/)**: _conecta dapps de blockchain com qualquer Web API externa e aproveita provas TLSNotary, ambientes de execução confiáveis (TEEs) e primitivos criptográficos seguros para garantir a autenticidade dos dados._
+**[Paralink](https://paralink.network/)** — _ o Paralink fornece uma plataforma de código aberto e descentralizada de oráculos para contratos inteligentes em execução no Ethereum e em outras blockchains populares._
 
-**[Paralink](https://paralink.network/)**: _Paralink fornece uma plataforma de código aberto e descentralizada de oráculos para contratos inteligentes em execução no Ethereum e em outras blockchains populares._
-
-**[Dos.Network](https://dos.network/)**: _é uma rede de serviços de oráculos descentralizada para impulsionar a usabilidade da blockchain com dados do mundo real e poder de computação._
+**[Rede Pyth](https://pyth.network/)** — _A rede Pyth é uma rede de oráculos financeiros internos projetada para publicar dados contínuos do mundo real em cadeia em um ambiente autossustentável, descentralizado e inviolável._
 
 ## Leitura Adicional {#further-reading}
 

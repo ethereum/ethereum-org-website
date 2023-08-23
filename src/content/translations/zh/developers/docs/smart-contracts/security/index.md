@@ -96,7 +96,7 @@ contract VendingMachine {
 
 执行外部代码审查的另一种方法是设立漏洞奖励计划。 漏洞奖励是一种经济奖励，提供给发现应用程序中漏洞的个人（通常是白帽黑客）。
 
-应用得当，漏洞奖励可以激励黑客群体中的成员检查你的代码是否存在重大缺陷。 一个真实的示例是“无限复制倾向漏洞”，它可以让攻击者在以太坊上运行的[二层网络](https://ethereum.org/en/layer-2/)协议 [Optimism](https://www.optimism.io/) 上创建无限量的以太币。 幸运的是，一位白帽黑客[发现了这一漏洞](https://www.saurik.com/optimism.html)并告知了以太坊团队，[并获得了一大笔报酬](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/)。
+应用得当，漏洞奖励可以激励黑客群体中的成员检查你的代码是否存在重大缺陷。 一个真实的示例是“无限复制倾向漏洞”，它可以让攻击者在以太坊上运行的[二层网络](/layer-2/)协议 [Optimism](https://www.optimism.io/) 上创建无限量的以太币。 幸运的是，一位白帽黑客[发现了这一漏洞](https://www.saurik.com/optimism.html)并告知了以太坊团队，[并获得了一大笔报酬](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/)。
 
 一种实用策略是按有风险资金数额的比例设置漏洞奖励计划的报酬金额。 这种方法被描述成“[比例漏洞奖励](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)”，通过提供经济激励让大家负责任地披露而非利用漏洞。
 
@@ -440,7 +440,7 @@ contract Attack {
 
 但如果预言机损坏并向链上发送错误信息，智能合约将基于错误的输入执行，这会造成问题。 这就是“预言机问题”的根源，它涉及确保区块链预言机提供准确、最新、即时的信息。
 
-相关的安全问题就是利用链上预言机（例如去中心化交易所）获取一种资产的现货价格。 [去中心化金融 (DeFi) ](/defi/)行业中的借贷平台经常利用这种方法确定用户抵押品的价值，进而确定他们能借入多少。
+相关的安全问题就是利用链上预言机（例如去中心化交易所）获取一种资产的现货价格。 [去中心化金融 (DeFi)](/defi/) 行业中的借贷平台经常利用这种方法确定用户抵押品的价值，进而确定他们能借入多少。
 
 去中心化交易所 (DEX) 的价格往往是准确的，很大程度上源于套利者的套利行为帮助市场恢复平价。 然而，去中心化交易所的价格容易受到操纵，尤其当链上预言机根据历史交易模式计算资产价格时（通常是这种情况）。
 
@@ -462,7 +462,11 @@ contract Attack {
 
 - **[智能合约审计服务](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _为以太坊开发项目提供智能合约审计服务的组织的列表。_
 
-- **[漏洞奖励平台](https://ethereum.org/en/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _协调漏洞奖励并对发现智能合约中重大漏洞的负责人进行奖励的平台。_
+- **[漏洞奖励平台](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _协调漏洞奖励并对发现智能合约中重大漏洞的负责人进行奖励的平台。_
+
+- **[Fork Checker](https://forkchecker.hashex.org/)** - _免费的在线工具，用于检查所有关于分叉合同的现有信息。_
+
+- **[ABI 编码器](https://abi.hashex.org/)** - _免费在线服务，用于编码您的 Solidity 合约函数和构造函数参数。_
 
 ### 智能合约监测工具 {#smart-contract-monitoring-tools}
 
@@ -497,6 +501,8 @@ contract Attack {
 - **[Hacken](https://hacken.io)** - _Web3 网络安全审计公司，为区块链安全提供全方位解决方案。_
 
 - **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity 和 Cairo 审计服务，确保智能合约的完整性和跨以太坊和 Starknet 的用户安全_
+
+- **[HashEx](https://hashex.org/)** - _HashEx 专注于区块链和智能合约审计，确保加密货币安全，提供智能合约开发、渗透测试、区块链咨询等服务。_
 
 ### 漏洞奖励平台 {#bug-bounty-platforms}
 

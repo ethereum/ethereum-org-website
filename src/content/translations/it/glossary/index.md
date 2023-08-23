@@ -278,7 +278,7 @@ Un'impostazione a livello di rete in reti [proof-of-work](#pow) che controlla qu
 
 ### bomba di difficoltà {#difficulty-bomb}
 
-Aumento esponenziale pianificato nell'impostazione di [difficoltà](#difficulty) di [proof-of-work](#pow) per motivare la transizione al [proof-of-stake](#pos), riducendo le probabilità di una [diramazione](#hard-fork). La bomba di difficoltà è stata deprecata con la transizione al [proof-of-stake](/roadmap/merge).
+Aumento esponenziale pianificato nell'impostazione di [difficoltà](#difficulty) di [proof-of-work](#pow) per motivare la transizione al [proof-of-stake](#pos), riducendo le probabilità di una [diramazione](#hard-fork). La bomba di difficoltà è stata deprecata con la transizione alla [proof-of-stake](/roadmap/merge).
 
 ### firma digitale {#digital-signatures}
 
@@ -612,7 +612,7 @@ Client di Ethereum che non memorizza una copia locale della [blockchain](#blockc
 
 ### LMD_GHOST {#lmd-ghost}
 
-L'[algoritmo di scelta della diramazione](#scelta della diramazione-algorithm) usato dai client del consenso di Ethereum per identificare la testa della catena. LMD-GHOST è un acronimo che sta per "Latest Message Driven Greediest Heaviest Observed SubTree" (Ultimo albero secondario osservato guidato dal messaggio più avido e più pesante), che significa che la testa della catena è il blocco col maggior accumulo di [attestazioni](#attestation) nella sua storia.
+L'[algoritmo di scelta della diramazione](#fork-choice-algorithm) usato dai client del consenso di Ethereum per identificare la testa della catena. LMD-GHOST è un acronimo che sta per "Latest Message Driven Greediest Heaviest Observed SubTree" (Ultimo albero secondario osservato guidato dal messaggio più avido e più pesante), che significa che la testa della catena è il blocco col maggior accumulo di [attestazioni](#attestation) nella sua storia.
 
 ## M {#section-m}
 
@@ -833,7 +833,7 @@ Il processo di conversione di una struttura dati in una sequenza di byte.
 
 ### shard/shard chain {#shard}
 
-Le shard chain sono sezioni discrete della blockchain totale per le quali possono essere responsabili sottoserie di validatori. Questo offrirà maggiori volumi di transazioni a Ethereum e migliorerà la disponibilità dei dati per le soluzioni di [livello 2](#layer-2), come i [rollup ottimistici](#optimistic-rollups) e i [rollup ZK](#zk-rollups).
+Le shard chain sono sezioni discrete della blockchain totale per le quali possono essere responsabili serie secondarie di validatori. Questo offrirà maggiori volumi di transazioni a Ethereum e migliorerà la disponibilità dei dati per le soluzioni di [livello 2](#layer-2), come i [rollup ottimistici](#optimistic-rollups) e i [rollup ZK](#zk-rollups).
 
 <DocLink to="/roadmap/danksharding">
   Danksharding
@@ -1098,7 +1098,7 @@ Il taglio più piccolo dell'[ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### indirizzo zero {#zero-address}
 
-Un indirizzo Ethereum, composto interamente da zeri, che viene spesso utilizzato come indirizzo di distruzione per fondi indesiderati.
+Un indirizzo di Ethereum, composto interamente da zero, utilizzato frequentemente come un indirizzo per rimuovere token dalla circolazione di proprietà. Occorre fare una distinzione tra token rimossi in modo formale dall’indice di un contratto intelligente tramite il metodo di burn() e i token che vengono inviati a questo indirizzo.
 
 ### prova a conoscenza zero {#zk-proof}
 

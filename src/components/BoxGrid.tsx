@@ -10,10 +10,13 @@ import {
 
 import Emoji from "./Emoji"
 
+import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
+
 export interface IBoxItem {
   emoji: string
   title: string
   description: string
+  matomo: MatomoEventOptions
 }
 
 export interface IProps {
@@ -37,7 +40,7 @@ const colors = [
   "gridRed",
   "gridBlue",
   "gridGreen",
-  "gridOrange",
+  "warning",
   "gridPink",
   "gridPurple",
 ]
@@ -64,7 +67,7 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
             colStart={{ ...(isOpen && { lg: columnNumber }) }}
             color={isOpen ? "black300" : "text"}
             cursor="pointer"
-            bg={isOpen ? color : "background"}
+            bg={isOpen ? color : "background.base"}
             direction={{
               base: isOpen ? "column" : "column-reverse",
               sm: isOpen ? "column" : "row-reverse",
@@ -81,7 +84,14 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
               transform: "skewX(-5deg)",
               boxShadow: "tableBoxShadow",
             }}
-            onClick={() => setOpenIndex(idx)}
+            onClick={() => {
+              setOpenIndex(idx)
+              trackCustomEvent({
+                eventCategory: item.matomo.eventCategory,
+                eventAction: item.matomo.eventAction,
+                eventName: item.matomo.eventName,
+              })
+            }}
             key={idx}
           >
             <Emoji

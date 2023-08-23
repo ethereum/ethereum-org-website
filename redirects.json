@@ -112,6 +112,10 @@
     "toPath": "/nb/:splat"
   },
   {
+    "fromPath": "/ph/*",
+    "toPath": "/fil/:splat"
+  },
+  {
     "fromPath": "/en/java/",
     "toPath": "/en/developers/docs/programming-languages/java/"
   },
@@ -288,14 +292,6 @@
     "toPath": "/:splat/staking/deposit-contract/"
   },
   {
-    "fromPath": "/*/eth2/get-involved/medalla-data-challenge",
-    "toPath": "/:splat/community/grants/medalla-data-challenge/"
-  },
-  {
-    "fromPath": "/*/eth2/get-involved/staking-community-grants",
-    "toPath": "/:splat/community/grants/staking-community-grants/"
-  },
-  {
     "fromPath": "/*/eth2",
     "toPath": "/:splat/upgrades/"
   },
@@ -342,5 +338,9 @@
   {
     "fromPath": "/*/staking/withdraws",
     "toPath": "/:splat/staking/withdrawals/"
+  },
+  {
+    "fromPath": "/*/guides/how-to-register-an-ethereum-account",
+    "toPath": "/:splat/guides/how-to-create-an-ethereum-account/"
   }
 ]

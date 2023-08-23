@@ -234,6 +234,8 @@
       items:
         - id: docs-nav-networking-layer-network-addresses
           to: /developers/docs/networking-layer/network-addresses/
+        - id: docs-nav-networking-layer-portal-network
+          to: /developers/docs/networking-layer/portal-network/
     - id: docs-nav-data-structures-and-encoding
       to: /developers/docs/data-structures-and-encoding/
       description: docs-nav-data-structures-and-encoding-description
@@ -246,3 +248,9 @@
           to: /developers/docs/data-structures-and-encoding/ssz/
         - id: docs-nav-data-structures-and-encoding-web3-secret-storage
           to: /developers/docs/data-structures-and-encoding/web3-secret-storage/
+- id: docs-nav-design-fundamentals
+  path: /developers/docs/
+  items:
+    - id: docs-nav-design-and-ux
+      to: /developers/docs/design-and-ux/
+      description: docs-nav-design-and-ux-description

@@ -137,7 +137,7 @@ By screenshotting your seed phrases or private keys, you risk syncing them to th
 
 ### Use a hardware wallet {#use-hardware-wallet}
 
-A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys: your private key touches the internet and stays completely local on your device.
+A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys: your private key never touches the internet and stays completely local on your device.
 
 Keeping private keys offline massively reduces the risk of being hacked, even if a hacker gets control of your computer.
 
@@ -285,6 +285,7 @@ Airdrop scams involve a scam project airdropping an asset (NFT, token) into your
 
 ### Scam education {#reading-scam-education}
 
+- [Guide: How to identify scam tokens](/guides/how-to-id-scam-tokens/)
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Twitter thread on common crypto phishing emails and messages](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_

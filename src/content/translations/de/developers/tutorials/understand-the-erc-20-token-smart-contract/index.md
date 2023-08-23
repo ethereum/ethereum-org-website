@@ -8,7 +8,7 @@ tags:
   - "Solidity"
   - "Erste Schritte"
   - "Erc-20"
-skill: Einsteiger
+skill: beginner
 lang: de
 published: 2020-04-05
 source: EthereumDev

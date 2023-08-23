@@ -10,8 +10,6 @@
   "page-eth-currency-for-future": "デジタル未来のための通貨",
   "page-eth-description": "ETHは暗号通貨です。ビットコインと同様に、インターネット上で使用できるデジタルマネーは不足しています。 暗号を初めて使う場合は、ETHと従来のお金の違いをご覧ください。",
   "page-eth-earn-interest-link": "利息を得る",
-  "page-eth-ethhub-caption": "頻繁に更新",
-  "page-eth-ethhub-overview": "EthHubには素晴らしい概要があります",
   "page-eth-flexible-amounts": "柔軟な金額で利用可能",
   "page-eth-flexible-amounts-desc": "ETHは小数点以下18桁まで割れるので、ETH全体を1つ購入する必要はありません。 必要に応じて、最低0000000000000 001 ETHを一度に購入することができます 。",
   "page-eth-fuels": "ETH燃料とイーサリアムの確保",
@@ -41,7 +39,6 @@
   "page-eth-not-only-crypto": "ETHはイーサリアムの唯一の暗号ではありません",
   "page-eth-not-only-crypto-desc": "誰でも新しい種類の資産を作成し、イーサリアムで取引することができます。これらは「トークン」として知られています。 人々は従来の通貨、不動産、アート、さらには自分自身をトークン化してきました!",
   "page-eth-not-only-crypto-desc-2": "Ethereumには何千ものトークンがあります。他のトークンよりも有用で価値があります。 開発者は常に新しい可能性を開き、新しい市場を開く新しいトークンを構築しています。",
-  "page-eth-not-only-crypto-desc-3": "トークンについてもっと知りたい場合は、EthHubの友人がいくつかの素晴らしい概要を書いています。",
   "page-eth-open": "誰にでも公開",
   "page-eth-open-desc": "ETHを受け入れるにはインターネット接続とウォレットのみが必要です。支払いを受け入れるには銀行口座へのアクセスは必要ありません。 ",
   "page-eth-p2p-payments": "ピアツーピアでの支払い",
@@ -93,5 +90,5 @@
   "page-eth-tokens-dao-description": "大抵トークン保有者によって管理されるインターネットコミュニティ。",
   "page-eth-whats-defi": "分散型金融(DeFi)の詳細",
   "page-eth-whats-defi-description": "分散型金融(DeFi) とはイーサリアム上に構築された分散型金融システムのことです。 この分散型金融により、何ができるかをこの概要で説明します。",
-  "page-what-is-ethereum-what-is-ether": "Etherとは"
+  "page-what-is-ethereum-what-is-ether": "イーサとは"
 }

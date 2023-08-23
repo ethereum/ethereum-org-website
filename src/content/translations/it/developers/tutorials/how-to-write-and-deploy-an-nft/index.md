@@ -24,7 +24,7 @@ E, ovviamente, se in qualsiasi momento hai domande, non esitare a contattarci ne
 
 ## Fase 1: connettersi alla rete di Ethereum {#connect-to-ethereum}
 
-Esistono molti modi per effettuare richieste alla blockchain di Ethereum, ma per semplificare le cose, utilizzeremo un conto gratuito su [Alchemy](https://alchemy.com/signup/eth), una piattaforma per sviluppatori della blockchain e API, che ci consente di comunicare con la catena di Etereum senza dover operare i nostri nodi.
+Esistono molti modi per effettuare richieste alla blockchain di Ethereum, ma per semplificare le cose, utilizzeremo un conto gratuito su [Alchemy](https://alchemy.com/signup/eth), una piattaforma per sviluppatori della blockchain e API, che ci consente di comunicare con la catena di Ethereum senza dover operare i nostri nodi.
 
 In questo tutorial, approfitteremo anche degli strumenti per monitoraggio e analisi per sviluppatori messi a disposizione da Alchemy per comprendere cosa succede dietro le quinte quando distribuiamo il nostro contratto intelligente. Se non hai già un conto di Alchemy, puoi iscriverti gratuitamente [qui](https://alchemy.com/signup/eth).
 

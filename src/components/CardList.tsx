@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react"
 
 import * as url from "../utils/url"
-import Link from "./Link"
+import { BaseLink } from "./Link"
 
 export type CardListItem = {
   title?: ReactNode
@@ -63,7 +63,7 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
           <LinkOverlay
-            as={Link}
+            as={BaseLink}
             href={link}
             hideArrow
             color="text"
@@ -97,7 +97,7 @@ const CardList: React.FC<IProps> = ({
   clickHandler = () => null,
   ...rest
 }) => (
-  <Box bg="background" w="full" {...rest}>
+  <Box bg="background.base" w="full" {...rest}>
     {content.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link

@@ -471,7 +471,7 @@ The text in the "Link to Asset", "Name", "Description" fields will comprise the 
 
 To store our metadata on IPFS, we will use [Pinata](https://pinata.cloud/), a convenient IPFS API and toolkit. In the next step, we'll explain exactly how to do this!
 
-## Use Pintata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Use Pinata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
 If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email and account.
 
@@ -623,7 +623,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) is a wrapper around [Web3.js](https://web3js.readthedocs.io/en/v1.2.9/), providing enhanced API methods and other crucial benefits to make your life as a web3 developer easier. It is designed to require minimal configuration so you can start using it in your app right away!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) is a wrapper around [Web3.js](https://docs.web3js.org/), providing enhanced API methods and other crucial benefits to make your life as a web3 developer easier. It is designed to require minimal configuration so you can start using it in your app right away!
 
 Next, let's add our contract ABI and contract address to our file.
 

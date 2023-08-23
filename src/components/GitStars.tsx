@@ -2,7 +2,7 @@ import React from "react"
 import { Icon, Text, Center, Flex } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 import Emoji from "./Emoji"
-import Link from "./Link"
+import { BaseLink } from "./Link"
 
 export interface GitHubRepo {
   stargazerCount: number
@@ -24,7 +24,7 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
   }
 
   return (
-    <Link className={className} to={gitHubRepo.url} hideArrow>
+    <BaseLink className={className} to={gitHubRepo.url} hideArrow>
       <Flex
         background="lightBorder"
         textDecoration="none"
@@ -34,8 +34,8 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
         float="right"
         color="text"
         _hover={{
-          boxShadow: "0 0 1px var(--eth-colors-primary)",
-          path: { fill: "primary" },
+          boxShadow: "0 0 1px var(--eth-colors-primary-base)",
+          path: { fill: "primary.base" },
         }}
       >
         {hideStars ? (
@@ -62,7 +62,7 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
           </>
         )}
       </Flex>
-    </Link>
+    </BaseLink>
   )
 }
 

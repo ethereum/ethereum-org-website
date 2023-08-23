@@ -20,7 +20,7 @@ const styles = {
       lineHeight: "1.6rem",
     },
     a: {
-      color: "primary",
+      color: "primary.base",
       textDecoration: "underline",
     },
     // should be replace with https://chakra-ui.com/docs/components/text
@@ -121,7 +121,7 @@ const styles = {
 
       svg: {
         display: "inline",
-        fill: "primary",
+        fill: "primary.base",
         visibility: "hidden",
       },
     },

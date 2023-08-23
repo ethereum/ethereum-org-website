@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import {
   Box,
   Flex,
@@ -6,6 +6,7 @@ import {
   HeadingProps,
   Image,
   SimpleGrid,
+  Text,
   useTheme,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -98,9 +99,9 @@ const ImageContainer = ({ children }: ChildOnlyProp) => {
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
-    <Box mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
+    <Text mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
       {children}
-    </Box>
+    </Text>
   )
 }
 
@@ -141,6 +142,7 @@ interface IGetInvolvedCard {
 
 const CommunityPage = ({
   data,
+  location,
 }: PageProps<Queries.CommunityPageQuery, Context>) => {
   const { t } = useTranslation()
   const theme = useTheme()
@@ -285,7 +287,7 @@ const CommunityPage = ({
                 borderRadius="sm"
                 border="1px solid"
                 borderColor="text"
-                bg="background"
+                bg="background.base"
                 boxShadow={theme.colors.cardBoxShadow}
                 key={idx}
                 title={card.title}
@@ -495,7 +497,7 @@ export const query = graphql`
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 800
+          width: 624
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -515,7 +517,7 @@ export const query = graphql`
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 1440
+          width: 740
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -525,7 +527,7 @@ export const query = graphql`
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 800
+          width: 600
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -535,7 +537,7 @@ export const query = graphql`
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 1440
+          width: 700
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

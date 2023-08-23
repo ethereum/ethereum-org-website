@@ -4,12 +4,13 @@
   "page-upgrades-beacon-date": "Spedita!",
   "page-upgrades-merge-date": "Settembre 2022",
   "page-upgrades-shards-date": "~2023",
+  "page-upgrades-pbs": "Non imminente, previsto 2024/25",
   "page-upgrades-post-merge-banner-tutorial-ood": "Questo tutorial è deprecato dopo La Fusione e potrebbe non funzionare. Sei pregato di effettuare una PR se vorresti contribuire.",
   "page-upgrades-post-merge-banner-governance-ood": "Alcuni contenuti su questa pagina sono obsoleti dopo La Fusione. Sei pregato di effettuare una PR, se vorresti contribuire.",
   "page-upgrades-upgrades-guide": "Guida agli aggiornamenti di Ethereum",
   "page-upgrades-upgrades-docking": "La fusione",
   "page-upgrades-shard-title": "Sharding",
-  "page-upgrades-upgrades-beacon-chain": "La Cadena de Baliza",
+  "page-upgrades-upgrades-beacon-chain": "La beacon chain",
   "consensus-beaconcha-in-desc": "Piattaforma di ricerca Beacon Chain open source",
   "consensus-beaconscan-desc": "Piattaforma di ricerca Beacon Chain - Etherscan per il livello di consenso",
   "consensus-become-staker": "Diventa uno staker",
@@ -17,5 +18,5 @@
   "consensus-explore": "Esplora i dati",
   "consensus-run-beacon-chain": "Esegui un client di consenso",
   "consensus-run-beacon-chain-desc": "Ethereum ha bisogno del maggior numero possibile di client in esecuzione. Contribuisci con questo bene pubblico di Ethereum!",
-  "read-more": "Ulteriori contenuti"
+  "read-more": "Leggi altro"
 }

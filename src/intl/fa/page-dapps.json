@@ -1,5 +1,6 @@
 {
   "page-dapps-1inch-logo-alt": "لوگوی 1اینچی",
+  "page-dapps-dexguru-logo-alt": "لوگوی DexGuru",
   "page-dapps-aave-logo-alt": "لوگوی Aave",
   "page-dapps-add-button": "پیشنهاد دپ",
   "page-dapps-add-title": "افزودن دپ",
@@ -86,6 +87,7 @@
   "page-dapps-dapp-description-token-sets": "راهبرد‌های سرمایه‌گذاری بر ارز دیجیتال که به‌صورت خودکار تعادل خود را بازیافته است.",
   "page-dapps-dapp-description-tornado-cash": "معاملات ناشناس را بر بستر اتریوم انجام دهید.",
   "page-dapps-dapp-description-uniswap": "توکن‌ها را به‌سادگی تعویض کنید یا با درصدی به‌عنوان پاداش، توکن فراهم کنید.",
+  "page-dapps-dapp-description-dexguru": "ترمینال معاملاتی غیرحضانتی برای تریدرهای دیفای",
   "page-dapps-docklink-dapps": "معرفی دپ‌ها",
   "page-dapps-docklink-smart-contracts": "قرارداد‌های هوشمند",
   "page-dapps-dark-forest-logo-alt": "لوگوی Dark Forest",
@@ -211,6 +213,6 @@
   "page-dapps-dapp-description-pwn": "وام‌های آسان با پشتیبانی هر توکن یا NFT در اتریوم.",
   "page-dapps-pwn-image-alt": "لوگوی PWN",
   "foundation": "بنیاد",
-  "transaction-fees": "هزینه تراکنش چیست؟",
-  "page-wallets-get-some": "کمی Eth بگیرید"
+  "transaction-fees": "هزینه‌های تراکنش چیست؟",
+  "page-wallets-get-some": "کمی اتر بگیرید"
 }

@@ -44,8 +44,6 @@ Zobacz, jak Austin poprowadzi Cię przez wydobycie i blockchain typu „proof-of
 
 ## Dalsza lektura {#further-reading}
 
-- [Co to znaczy kopać Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
 ## Powiązane narzędzia {#related-tools}
 
 - [Najlepsi górnicy Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

@@ -47,42 +47,6 @@ Wenn Sie sich engagieren und uns helfen möchten, die globale Ethereum-Community
   <Link to="/contributing/translation-program/acknowledgements/#poap">Mehr zu POAPs</Link>
 </InfoBanner>
 
-### Woran wir gerade arbeiten {#our-projects}
-
-Unsere Community von Mitwirkenden übersetzt aktiv mehrere Websites mit großer Wirkung sowie Ressourcen für die globale Ethereum-Community.
-
-#### Ethereum.org {#ethereumorg}
-
-![](./ethereum-org-screenshot.png)
-
-[Ethereum.org](/) ist die wichtigste Bildungsquelle für die Ethereum-Community und steht im Mittelpunkt des Übersetzungsprogramms. Angesichts der Größe, des Umfangs und der Reichweite der Website, ist es die effektivste Seite zu übersetzen und wir empfehlen, hier anzufangen!
-
-Machen Sie mit:
-
-- Treten Sie dem [ethereum.org Übersetzungsprojekt in Crowdin](https://crowdin.com/project/ethereum-org/invite) bei
-
-#### Ethereum Staking Launchpad {#ethereum-staking-launchpad}
-
-![](./launchpad-screenshot.png)
-
-Das [Staking Launchpad](https://launchpad.ethereum.org/en/) ermöglicht es Ethereum-Benutzern, Validatoren zu werden und die Zukunft von Ethereum durch das Staking von ETH zu sichern.
-
-Machen Sie mit:
-
-- Besuchen Sie die [Launchpad-Übersetzungsseite](/contributing/translation-program/launchpad-translations/)
-- Treten Sie dem [Launchpad Übersetzungsprojekt in Crowdin](https://crowdin.com/project/ethereum-staking-launchpad) bei
-
-#### Ethereum Foundation Blog {#ethereum-foundation-blog}
-
-![](./blog-screenshot.png)
-
-Der [Ethereum Foundation Blog](https://blog.ethereum.org/) ist das primäre Publikationsmittel für viele EF-unterstützte Teams und ist die Quelle von Ankündigungen, Aktualisierungen, Berichten, Zusammenfassungen und anderer öffentlicher Kommunikation für die Ethereum Community.
-
-Machen Sie mit:
-
-- Besuchen Sie die [Blog-Übersetzungsseite](/contributing/translation-program/blog-translations/)
-- Treten Sie dem [ Blog-Übersetzungsprojekt in Crowdin](https://crowdin.com/project/ethereum-foundation-blog) bei
-
 ### Anleitungen & Ressourcen {#guides-and-resources}
 
 Wenn Sie zum Übersetzungsprogramm beitragen oder daran denken, sich zu beteiligen, sollten Sie sich die folgenden Übersetzungsanleitungen ansehen:

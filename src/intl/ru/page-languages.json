@@ -28,6 +28,7 @@
   "language-fr": "Французский",
   "language-gl": "Галисийский",
   "language-gu": "Гуджарати",
+  "language-he": "Иврит",
   "language-hi": "Хинди",
   "language-hr": "Хорватский",
   "language-hu": "Венгерский",
@@ -44,7 +45,8 @@
   "language-mr": "Маратхи",
   "language-ms": "Малайский",
   "language-nb": "Норвежский",
-  "language-nl": "Голландский",
+  "language-nl": "Нидерландский",
+  "language-pcm": "Нигерийский пиджин",
   "language-ph": "Филиппинский",
   "language-pl": "Польский",
   "language-pt": "Португальский",
@@ -60,8 +62,9 @@
   "language-ta": "Тамильский",
   "language-tr": "Турецкий",
   "language-uk": "Украинский",
+  "language-ur": "Урду",
   "language-uz": "Узбекский",
-  "language-vi": "Въетнамский",
+  "language-vi": "Вьетнамский",
   "language-zh": "Китайский (упрощенный)",
   "language-zh-tw": "Китайский (традиционный)"
 }

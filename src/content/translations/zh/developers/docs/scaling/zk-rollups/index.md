@@ -30,7 +30,7 @@ lang: zh
 
 2. **链下虚拟机 (VM)**：虽然零知识卷叠协议存在于以太坊上，但交易执行和状态存储却在独立于[以太坊虚拟机](/developers/docs/evm/)的单独虚拟机中进行。 这种链下虚拟机是零知识卷叠上交易的执行环境，并作为零知识卷叠协议的第二层或“二层网络”。 在以太坊主网上验证的有效性证明保证链下虚拟机中状态转换的正确性。
 
-零知识卷叠是“混合扩容解决方案” — 独立运行但从以太坊获得安全性的链下协议。 具体来说，以太坊网络强制执行零知识卷叠上状态更新的有效性，并保证每次更新卷叠状态时后台数据的可用性。 因此，零知识卷叠比纯链下扩容解决方案安全得多，例如负责其安全属性的[侧链](/developers/docs/scaling/sidechains/)，或 [Validium](/developers/docs/scaling/validiums/)，它也使用有效性证明在以太坊上验证交易但将交易数据存储在别处。
+零知识卷叠是“混合扩容解决方案” — 独立运行但从以太坊获得安全性的链下协议。 具体来说，以太坊网络强制执行零知识卷叠上状态更新的有效性，并保证每次更新卷叠状态时后台数据的可用性。 因此，零知识卷叠比纯链下扩容解决方案安全得多，例如负责其安全属性的[侧链](/developers/docs/scaling/sidechains/)，或 [Validium](/developers/docs/scaling/validium/)，它也使用有效性证明在以太坊上验证交易但将交易数据存储在别处。
 
 零知识卷叠依赖以太坊主协议获得：
 
@@ -232,13 +232,15 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 
 零知识以太坊虚拟机上运行的项目包括：
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 是由 Matter Labs 构建的与以太坊虚拟机兼容的零知识卷叠，由其自己的零知识以太坊虚拟机提供支持。_
-
 - **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP 是由以太坊基金会资助的项目，旨在开发与以太坊虚拟机兼容的零知识卷叠以及为以太坊区块生成有效性证明的机制。_
+
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _是以太坊主网上的去中心化零知识卷叠，它在零知识以太坊虚拟机 (zkEVM) 上运行，以透明的方式执行以太坊交易，包括智能合约与零知识证明验证。_
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll 是 一家致力于为以太坊构建原生零知识以太坊虚拟机二层解决方案的技术驱动型公司。_
 
-- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _是以太坊主网上的去中心化零知识卷叠，它在零知识以太坊虚拟机 (zkEVM) 上运行，以透明的方式执行以太坊交易，包括智能合约与零知识证明验证。_
+- **[Taiko](https://taiko.xyz)** - _Taiko 是去中心化的、等同于以太坊的零知识卷叠（[1 类零知识以太坊虚拟机](https://vitalik.ca/general/2022/08/04/zkevm.html)）。_
+
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 是与以太坊虚拟机兼容的零知识卷叠，由 Matter Labs 构建并由它自己的零知识以太坊虚拟机提供支持。_
 
 ## 进一步阅读零知识卷叠的相关内容 {#further-reading-on-zk-rollups}
 

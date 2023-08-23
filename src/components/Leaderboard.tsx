@@ -13,7 +13,7 @@ import {
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Emoji from "./Emoji"
-import Link from "./Link"
+import { BaseLink } from "./Link"
 import Translation from "./Translation"
 
 const githubUrl = `https://github.com/`
@@ -47,7 +47,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
 
   return (
     <List
-      bgColor="background"
+      bgColor="background.base"
       boxShadow={colorModeStyles.listBoxShadow}
       w="100%"
       mb={8}
@@ -94,7 +94,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                 _hover={{
                   textDecor: "none",
                   borderRadius: 0.5,
-                  boxShadow: "0 0 1px primary",
+                  boxShadow: "0 0 1px var(--eth-colors-primary-base)",
                   background: "tableBackgroundHover",
                 }}
               >
@@ -111,7 +111,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                 />
                 <Flex flex="1 1 75%" direction="column" mr={8}>
                   <LinkOverlay
-                    as={Link}
+                    as={BaseLink}
                     href={hasGitHub ? `${githubUrl}${username}` : "#"}
                     textDecor="none"
                     color="text"

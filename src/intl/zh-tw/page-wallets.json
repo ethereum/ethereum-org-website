@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "您的以太坊帳戶",
   "page-wallets-your-ethereum-account-desc": "您的錢包為連接以太坊帳戶的窗口 -- 紀錄您的餘額、交易歷史及其他相關資訊。但您也能隨意切換錢包服務提供者。",
   "page-wallets-your-login": "以太坊應用程式登入",
-  "page-wallets-your-login-desc": "您的錢包讓您能透過以太坊帳戶連結去中央化應用程式。就像可以在多款去中心應用程式使用同一帳戶登入。"
+  "page-wallets-your-login-desc": "您的錢包讓您能透過以太坊帳戶連結去中央化應用程式。就像可以在多款去中心應用程式使用同一帳戶登入。",
+  "additional-reading-how-to-register-an-ethereum-account": "如何「註冊」以太坊帳戶",
+  "additional-reading-how-to-use-a-wallet": "如何使用錢包"
 }

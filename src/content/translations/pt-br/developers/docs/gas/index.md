@@ -18,7 +18,7 @@ Dado que as transações Ethereum requer recursos computacionais para ser execut
 
 ![Diagrama mostrando onde o consumo de gás é utilizado para as operações da EVM](./gas.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Essencialmente, as taxas de gas são pagas na moeda nativa do Ethereum (ETH). Os preços do gás são indicados em Gwei, uma denominação propria do ETH na qual cada Gwei é igual a 0,00000001 ETH (10<sup>-9</sup> OTH). Por exemplo, em vez de dizer que seu gás custa 0.000000001 Ether, pode-se dizer que ele custa 1 Gwei. A própria palavra "gwei" quer dizer "giga-wei", e equivale a 1.000.000.000 "wei". O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/Wei Dai), criador do [B-Money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
+Essencialmente, as taxas de gas são pagas na moeda nativa do Ethereum (ETH). Os preços do gás são indicados em Gwei, uma denominação propria do ETH na qual cada Gwei é igual a 0,00000001 ETH (10<sup>-9</sup> OTH). Por exemplo, em vez de dizer que seu gás custa 0.000000001 Ether, pode-se dizer que ele custa 1 Gwei. A própria palavra "gwei" quer dizer "giga-wei", e equivale a 1.000.000.000 "wei". O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), criador do [B-Money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
 
 ## Antes da atualização de Londres {#pre-london}
 
@@ -123,7 +123,7 @@ O preço do gás por si só não determina realmente quanto temos de pagar por u
 
 ## Iniciativas para reduzir os custos do gás {#initiatives-to-reduce-gas-costs}
 
-As [atualizações de escalabilidade](/roadmap/) do Ethereum deverão em última análise resolver algumas das questões de taxas de gás, o que, por sua vez, permitirá que a plataforma processe milhares de transações por segundo e escale globalmente.
+As [atualizações de escalabilidade](/roadmap/) do Ethereum deverão em última análise resolver algumas das questões de taxas de gás que, por sua vez, permitirá que a plataforma processe milhares de transações por segundo e escale globalmente.
 
 A escalabilidade da camada 2 é uma iniciativa primária para melhorar significativamente os custos do gás, a experiência do usuário e a escalabilidade. [Mais sobre a escalabilidade de camada 2](/developers/docs/scaling/#layer-2-scaling).
 
@@ -148,6 +148,7 @@ Se você deseja monitorar os preços do gás, para poder enviar seu ETH por meno
 - [Explicação sobre o gás de Ethereum](https://defiprime.com/gas)
 - [Reduzindo o consumo de gás de seus Contratos Inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Prova de participação em comparação à Prova de trabalho](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
+- [Estratégias de otimização de gás para desenvolvedores](https://www.alchemy.com/overviews/solidity-gas-optimization)
 
 ## Tópicos relacionados {#related-topics}
 

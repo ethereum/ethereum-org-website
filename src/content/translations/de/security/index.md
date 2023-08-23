@@ -6,7 +6,7 @@ lang: de
 
 # Ethereum – Sicherheits- und Betrugsvorbeugung {#introduction}
 
-Da Kryptowährungen immer beliebter werden, ist es unerlässlich, sich Best Practices für die Nutzung von Kryptowährungen anzueignen. Kryptowährungen können Spaß machen und aufregend sein, aber es gibt auch ernste Risiken. Wenn Sie bereits im Vorfeld etwas Zeit investieren, können Sie diese Risiken mildern.
+Da Kryptowährungen immer beliebter werden, ist es unerlässlich, sich die besten Praktiken für die Nutzung von Kryptowährungen anzueignen. Kryptowährungen können Spaß machen und aufregend sein, aber es gibt auch ernsthafte Risiken. Wenn Sie bereits im Vorfeld etwas Zeit investieren, können Sie diese Risiken mildern.
 
 <Divider />
 
@@ -28,7 +28,7 @@ Ein weiter häufiger Fehler ist die Verwendung von Kennwörtern, die leicht erra
 
 #### Guter Umgang mit Kennwörtern: {#good-password-practices}
 
-- Erstellen Sie Kennwörter, die die maximal mögliche Länge im Kennwortgenerator oder dem Formular, das Sie ausfüllen, in Anspruch nehmen
+- Erstellen Sie Kennwörter, welche die maximal mögliche Länge im Kennwortgenerator oder dem Formular, das Sie ausfüllen, in Anspruch nehmen
 - Verwenden Sie eine Kombination aus Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen
 - Verwenden Sie in Ihrem Kennwort keine persönlichen Daten, wie beispielsweise Familiennamen
 - Vermeiden Sie häufige Wörter, die aus Wörterbüchern stammen
@@ -43,7 +43,7 @@ Ein starkes Kennwort bietet nicht viel Schutz, wenn es durch eine Datenpanne off
 
 <InfoBanner emoji=":bulb:">
   <div>
-    Ein Kennwortmanager ist hilfreich, um starke einzigartige Kennwörter zu erstellen und sich diese zu merken. Wir empfehlen <strong>dringend</strong> die Verwendung eines Kennwortmanagers! Es gibt viele gute, kostenlose Angebote.
+    Ein Kennwortmanager ist hilfreich bei der Erstellung starker, einzigartiger Kennwörter und dabei sich diese zu merken! Wir empfehlen <strong>dringend</strong> die Verwendung eines Kennwortmanagers! Es gibt viele gute, kostenlose Angebote.
   </div>
 </InfoBanner>
 
@@ -137,7 +137,7 @@ Wenn Sie Screenshots Ihrer Seed-Phrasen oder Private-Keys machen, riskieren Sie,
 
 ### Eine Hardware-Wallet verwenden {#use-hardware-wallet}
 
-Eine Hardware-Wallet bietet einen Offline-Speicherplatz für Ihre Private-Keys. Sie gelten als die sicherste Wallet-Option zum Speichern Ihrer privaten Schlüssel: Ihr privater Schlüssel berührt das Internet und bleibt vollständig lokal auf Ihrem Gerät.
+Eine Hardware-Wallet bietet einen Offline-Speicherplatz für Ihre Private-Keys. Sie gelten als die sicherste Wallet-Option zum Speichern Ihrer privaten Schlüssel: Ihr privater Schlüssel berührt niemals das Internet und bleibt vollständig lokal auf Ihrem Gerät.
 
 Ihre Private-Keys offline aufzubewahren reduziert das Risiko gehackt zu werden, auch wenn ein Hacker Zugang zu Ihrem Computer bekommt.
 

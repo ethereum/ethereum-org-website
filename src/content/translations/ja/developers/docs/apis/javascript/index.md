@@ -232,14 +232,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Web3js のユーティリティ関数](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Web3js のユーティリティ関数](https://docs.web3js.org/api/web3-utils)
 - [Ethers のユーティリティ関数](https://docs.ethers.io/v5/api/utils/)
 
 ## 利用可能なライブラリ {#available-libraries}
 
 **Web3.js -** **_イーサリアムの JavaScript API_**
 
-- [ドキュメント](https://web3js.readthedocs.io/en/1.0/)
+- [ドキュメント](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_JavaScript と TypeScript での完全なイーサリアムウォレットの実装とユーティリティ_**
@@ -274,17 +274,22 @@ ethers.utils.formatEther(balance)
 - [ドキュメント](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**viem -** **_イーサリアム用の TypeScript インターフェース。_**
+
+- [ドキュメント](https://viem.sh)
+- [GitHub](https://github.com/wagmi-dev/viem)
+
 ## 参考文献 {#further-reading}
 
 _役に立つコミュニティリソースをご存知の場合は、 このページを編集して追加してください。_
 
 ## 関連トピック {#related-topics}
 
-- [ノードとクライアント](/developers/docs/nodes-and-clients/)
+- [ ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [開発フレームワーク](/developers/docs/frameworks/)
 
 ## 関連チュートリアル {#related-tutorials}
 
 - [Javascript でイーサリアムブロックチェーンを使用するための Web3js のセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトで web3.js をセットアップするための手順。_
-- [JavaScript からスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Dai トークンを使用することで、JavaScript を使用してスマートコントラクト関数を呼び出す方法を確認できます。_
+- [JavaScript からスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI トークンを使って、JavaScript からスマートコントラクトを呼び出す方法を確認する。_
 - [Web3 と Alchemy を使用してトランザクションを送信する](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– バックエンドからトランザクションを送信するための段階的ガイド。_

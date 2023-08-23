@@ -21,7 +21,7 @@ Düğümünüzü başlatmak için atmanız gereken ilk adım bir yaklaşım seç
 
 İstemci uygulamaları farklı senkronizasyon modları ve çeşitli diğer özellikler sağlar. [Senkronizasyon modları](/developers/docs/nodes-and-clients/#sync-modes) farklı blok zinciri verileri indirme ve doğrulama yöntemlerini temsil eder. Düğümü başlatmadan önce, hangi ağı ve senkronizasyon modunu kullanacağınıza karar vermelisiniz. Göz önünde bulundurulması gereken en önemli şeyler ise disk alanı ve istemcinin ihtiyaç duyacağı senkronizasyon süresidir.
 
-Tüm özellikler ve seçenekler istemcilerin belgelerinde bulunabilir. İstemciyi uyumlu bayraklarla çalıştırarak çeşitli istemci yapılandırmaları belirlenebilir. [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) veya istemci belgelerinden bayraklarla ilgili daha fazla bilgi alabilirsiniz. Amaç test etmek ise, test ağlarından birinde istemci çalıştırmayı tercih edebilirsiniz. [Desteklenen ağları gözden geçirin](/developers/docs/nodes-and-clients/#execution-clients).
+Tüm özellikler ve seçenekler istemcilerin belgelerinde bulunabilir. İstemciyi uyumlu bayraklarla çalıştırarak çeşitli istemci yapılandırmaları belirlenebilir. Amaç test etmek ise, test ağlarından birinde istemci çalıştırmayı tercih edebilirsiniz. [Desteklenen ağları gözden geçirin](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Ortam ve donanım {#environment-and-hardware}
 
@@ -154,7 +154,6 @@ Düğümünüzü düzgün şekilde gözlemlemek istiyorsanız, metrik toplamayı
 
 - [Tam doğrulanmış bir Ethereum düğümü olmak için gereken donanımın analizi](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Eylül 2018_
 - [Ethereum Tam Düğümlerini Çalıştırmak: Pek Motivasyonu Olmayanlar İçin Bir Kılavuz](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Kasım 2019_
-- [Bir Ethereum Düğümü Çalıştırma](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, sık sık güncellenir_
 - [Ethereum Mainnet'te Hyperledger Besu Düğümü Çalıştırma: Faydaları, Gereksinimleri ve Kurulum](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Mayıs 2020_
 - [Gözetleme Yığını ile Nethermind Ethereum İstemcisi Dağıtma](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 Temmuz 2020_
 

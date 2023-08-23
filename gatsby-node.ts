@@ -98,12 +98,15 @@ const checkIsPageOutdated = async (
 
   const joinedFilepath = filePath.join("-")
   const srcPath = path.resolve(`src/intl/${lang}/page-${joinedFilepath}.json`)
-  const englishPath = path.resolve(`src/intl/en/page-${joinedFilepath}.json`)
+  const englishPath = path.resolve(
+    `src/intl/${defaultLanguage}/page-${joinedFilepath}.json`
+  )
 
   // If no file exists, default to english
   if (!fs.existsSync(srcPath)) {
     return {
-      isOutdated: true,
+      // Consider always defaultLanguage paths as updated
+      isOutdated: lang !== defaultLanguage,
       isContentEnglish: true,
     }
   } else {
@@ -291,6 +294,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
               isOutdated: false,
               isContentEnglish: true,
               relativePath, // Use English path for template MDX query
+              isDefaultLang: lang === defaultLanguage,
               // gatsby i18n plugin
               i18n: {
                 language: lang,
@@ -366,6 +370,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
             slug,
             isContentEnglish,
             isOutdated,
+            isDefaultLang: lang === defaultLanguage,
             // gatsby i18n plugin
             i18n: {
               language: lang,
@@ -391,6 +396,8 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   actions,
 }) => {
   const { createPage, deletePage, createRedirect } = actions
+  const rootPath = page.path.slice(3)
+  const is404Page = rootPath.match(/^\/404(\/|.html)$/)
 
   if (!page.context) {
     return
@@ -417,9 +424,11 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
       context: {
         ...page.context,
         languagesToFetch: [language],
-        isOutdated,
-        //display TranslationBanner for translation-component pages that are still in English
+        // hide the outdated content banner for 404 pages
+        isOutdated: is404Page ? false : isOutdated,
+        // display TranslationBanner for translation-component pages that are still in English
         isContentEnglish,
+        isDefaultLang,
       },
     }
 
@@ -445,8 +454,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
     if (!IS_DEV && i18n.routed) {
       createPage<Context>(newPage)
 
-      const rootPath = page.path.slice(3)
-      if (isDefaultLang && !rootPath.match(/^\/404(\/|.html)$/)) {
+      if (isDefaultLang && !is404Page) {
         createRedirect({
           ...commonRedirectProps,
           fromPath: rootPath,

@@ -8,7 +8,7 @@ tags:
 skill: beginner
 lang: zh
 published: 2020-04-11
-source: 以太坊開發團隊
+source: EthereumDev
 sourceUrl: https://ethereumdev.io/setup-web3js-to-use-the-ethereum-blockchain-in-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
@@ -39,7 +39,7 @@ const Web3 = require("web3")
 const web3 = new Web3("http://localhost:8545")
 ```
 
-如果您想直接访问托管节点，可以使用 Infura 或 [Cloudflare](https://cloudflare-eth.com/) 提供的免费节点：
+如果您想直接访问一个托管节点，您可以使用 Infura。 您也可以使用由 [Cloudflare](https://cloudflare-eth.com/)、[Moralis](https://moralis.io) 或 [Alchemy](https://alchemy.com/ethereum)提供的免费节点：
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
@@ -68,7 +68,7 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-您可以在[官方 web3.js 文档](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#)中查看该 Web3 实例上可用的所有函数。
+您可以在[官方 web3.js 文档](https://docs.web3js.org/)中查看该 Web3 实例上可用的所有函数。
 
 大多数 Web3 库都是异步的，因为在后台，该库对返回结果的节点进行 JSON RPC 调用。
 
@@ -84,11 +84,11 @@ if (window.ethereum != null) {
   try {
     // Request account access if needed
     await window.ethereum.enable()
-    // Acccounts now exposed
+    // Accounts now exposed
   } catch (error) {
     // User denied account access...
   }
 }
 ```
 
-诸如 [Ethers.js](https://docs.ethers.io/) 这样的 web3.js 替代者确实存在，但我们的 JavaScript 教程将侧重于 web3.js，因为它是在浏览器中与以太坊交互的官方库。 在下一个教程中，我们将了解[如何轻松监听区块链上的新传入区块并查看它们包含的内容](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/)。
+web3.js 的替代品，如 [Ethers.js](https://docs.ethers.io/)，确实存在，也已经被广泛使用。 在下一个教程中，我们将了解[如何轻松监听区块链上的新传入区块并查看它们包含的内容](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/)。

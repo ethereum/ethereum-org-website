@@ -36,8 +36,8 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Our progress so far {#our-progress}
 
-- [**4,700 +** translators](/contributing/translation-program/contributors/)
-- [**52** languages live on site](/languages/)
+- [**5,100 +** translators](/contributing/translation-program/contributors/)
+- [**54** languages live on site](/languages/)
 - [**3 million** words translated in 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
@@ -64,42 +64,6 @@ Public acknowledgements of our top translators using [leaderboards](/contributin
 In the past, we have retroactively rewarded our most active contributors with tickets to Ethereum conferences like [Devcon](https://devcon.org/en/) and [Devconnect](https://devconnect.org/), as well as exclusive ethereum.org merch.
 
 We're constantly thinking of new and innovative ways to reward our contributors, so stay tuned!
-
-### What we're working on {#our-projects}
-
-Our community of contributors is actively translating multiple high-impact websites and resources for the global Ethereum community.
-
-#### Ethereum.org {#ethereumorg}
-
-![](./ethereum-org-screenshot.png)
-
-[Ethereum.org](/) is a key educational resource for the Ethereum community and is the primary focus of the Translation Program. Given the size, scope, and reach of the website, it's the most impactful site to translate and we recommend starting here!
-
-Get involved:
-
-- Join the [ethereum.org translations project in Crowdin](https://crowdin.com/project/ethereum-org/invite)
-
-#### Ethereum Staking Launchpad {#ethereum-staking-launchpad}
-
-![](./launchpad-screenshot.png)
-
-The [Staking Launchpad](https://launchpad.ethereum.org/en/) enables Ethereum users to become validators and help secure the future of Ethereum by staking ETH.
-
-Get involved:
-
-- Visit the [Launchpad translations page](/contributing/translation-program/launchpad-translations/)
-- Join the [Launchpad translations project in Crowdin](https://crowdin.com/project/ethereum-staking-launchpad)
-
-#### Ethereum Foundation blog {#ethereum-foundation-blog}
-
-![](./blog-screenshot.png)
-
-The [Ethereum Foundation blog](https://blog.ethereum.org/) is the primary publication tool for many EF-supported teams and is the source of announcements, updates, reports, roundups, and other public communication for the Ethereum community.
-
-Get involved:
-
-- Visit the [Blog translations page](/contributing/translation-program/blog-translations/)
-- Join the [Blog translations project in Crowdin](https://crowdin.com/project/ethereum-foundation-blog)
 
 ### Guides and resources {#guides-and-resources}
 

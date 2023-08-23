@@ -5,12 +5,15 @@ import { Box } from "@chakra-ui/react"
 // Components
 import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
-import Link from "./Link"
+import InlineLink from "./Link"
 import Translation from "./Translation"
 import Button from "./Button"
 
 // Data
 import events from "../data/community-events.json"
+
+// Utils
+import { trackCustomEvent } from "../utils/matomo"
 
 interface ICommunityEventData {
   title: string
@@ -89,15 +92,20 @@ const UpcomingEventsList: React.FC<IProps> = () => {
   const loadMoreEvents = () => {
     setMaxRange((counter) => counter + eventsPerLoad)
     setIsVisible(maxRange + eventsPerLoad <= orderedUpcomingEvents.length)
+    trackCustomEvent({
+      eventCategory: "more events button",
+      eventAction: "click",
+      eventName: "load more",
+    })
   }
 
   if (orderedUpcomingEvents.length === 0) {
     return (
       <InfoBanner emoji=":information_source:">
         <Translation id="page-community-upcoming-events-no-events" />{" "}
-        <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+        <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
           <Translation id="page-community-please-add-to-page" />
-        </Link>
+        </InlineLink>
       </InfoBanner>
     )
   }
@@ -115,7 +123,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
           position: "absolute",
           width: "3px",
           height: "full",
-          background: "primary",
+          background: "primary.base",
           top: 0,
           left: "50%",
         }}

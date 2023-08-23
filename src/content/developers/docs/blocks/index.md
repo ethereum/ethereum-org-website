@@ -101,8 +101,9 @@ The `execution_payload_header` contains the following fields:
 | `base_fee_per_gas`  | the base fee value                                                  |
 | `block_hash`        | Hash of execution block                                             |
 | `transactions_root` | root hash of the transactions in the payload                        |
+| `withdrawal_root`   | root hash of the withdrawals in the payload                         |
 
-The `execution_payload` itself contains the following (notice this is identical to the header except that instead of the root hash of the transactions it includes the actual list of transactions) :
+The `execution_payload` itself contains the following (notice this is identical to the header except that instead of the root hash of the transactions it includes the actual list of transactions and withdrawal information) :
 
 | Field              | Description                                                         |
 | :----------------- | :------------------------------------------------------------------ |
@@ -120,6 +121,16 @@ The `execution_payload` itself contains the following (notice this is identical 
 | `base_fee_per_gas` | the base fee value                                                  |
 | `block_hash`       | Hash of execution block                                             |
 | `transactions`     | list of transactions to be executed                                 |
+| `withdrawals`      | list of withdrawal objects                                          |
+
+The `withdrawals` list contains `withdrawal` objects structured in the following way:
+
+| Field            | Description                        |
+| :--------------- | :--------------------------------- |
+| `address`        | account address that has withdrawn |
+| `amount`         | withdrawal amount                  |
+| `index`          | withdrawal index value             |
+| `validatorIndex` | validator index value              |
 
 ## Block time {#block-time}
 

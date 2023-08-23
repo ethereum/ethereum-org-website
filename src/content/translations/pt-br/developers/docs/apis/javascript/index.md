@@ -10,7 +10,7 @@ Para esse propósito, cada cliente Ethereum implementa a especificação [JSON-R
 
 Se você quiser usar JavaScript para se conectar a um nó Ethereum, é possível usar o JavaScript vanilla, mas existem várias bibliotecas convenientes dentro do ecossistema que tornam isso muito mais fácil. Com essas bibliotecas, desenvolvedores podem escrever métodos intuitivos, one-line para inicializar solicitações JSON RPC (sob o capô) que interagem com Ethereum.
 
-Note que desde a [A Fusão](/roadmap/merge/) (The Merge), duas partes conectadas do software Ethereum - um cliente de execução e um cliente de consenso - são necessárias para executar um nó. Certifique-se de que seu nó inclui tanto o cliente de execução quanto o consensual. Se o seu nó não estiver na sua máquina local (por exemplo, seu nó está sendo executado em uma instância da AWS) atualize os endereços IP no tutorial adequadamente. Para obter mais informações, veja nossa página no [executando um nó](/developers/docs/nodes-and-clients/run-a-node/).
+Observe que, desde [A Fusão](/roadmap/merge/) (The Merge), duas partes conectadas do software Ethereum — um cliente de execução e um cliente de consenso — são necessárias para executar um nó. Certifique-se de que seu nó inclui tanto o cliente de execução quanto o consensual. Se o seu nó não estiver na sua máquina local (por exemplo, seu nó está sendo executado em uma instância da AWS) atualize os endereços IP no tutorial adequadamente. Para obter mais informações, veja nossa página no [executando um nó](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Pré-requisitos {#prerequisites}
 
@@ -231,14 +231,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Funções utilitárias da Web3js](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Funções utilitárias da Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funções utilitárias da EthersJs](https://docs.ethers.io/v5/api/utils/)
 
 ## Bibliotecas disponíveis {#available-libraries}
 
 **Web3.js -** **_API para Ethereum em JavaScript._**
 
-- [Documentação](https://web3js.readthedocs.io/en/1.0/)
+- [Documentação](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_Implementação completa de uma carteira Ethereum e utilidades em JavaScript e TypeScript._**
@@ -273,9 +273,14 @@ ethers.utils.formatEther(balance)
 - [Documentação](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**viem -** **_Interface TypeScript para Ethereum._**
+
+- [Documentação](https://viem.sh)
+- [Github](https://github.com/wagmi-dev/viem)
+
 ## Leitura adicional {#further-reading}
 
-_Conhece algum recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
+_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
 
 ## Tópicos relacionados {#related-topics}
 
@@ -284,6 +289,6 @@ _Conhece algum recurso da comunidade que o ajudou? Edite esta página e adicione
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Configure Web3js para usar a blockchain Ethereum em Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruções para configurar web3.js no seu projeto._
-- [Chamando um contrato inteligente do JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando o token do DAI, veja como os contratos de chamadas funcionam usando JavaScript._
-- [Enviando transações usando web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Passo a passo para enviar transações pelo backend._
+- [Configure Web3js para usar a blockchain Ethereum em Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _ – Instruções para configurar web3.js no seu projeto._
+- [Chamando um contrato inteligente do JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ – Usando o token do DAI, veja como os contratos de chamadas funcionam usando JavaScript._
+- [Enviando transações usando web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _ – Passo a passo para enviar transações pelo back-end._

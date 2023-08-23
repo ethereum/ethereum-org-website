@@ -9,10 +9,11 @@ import {
   LinkOverlay,
   Image,
   useColorModeValue,
+  LinkBoxProps,
 } from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
-import Link from "./Link"
+import { BaseLink } from "./Link"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",
@@ -26,7 +27,7 @@ const linkFocusStyles: BoxProps = {
   textDecoration: "none",
 }
 
-export interface IProps {
+export interface IProps extends Omit<LinkBoxProps, "title"> {
   children?: React.ReactNode
   to: string
   alt?: string
@@ -48,6 +49,7 @@ const ActionCard: React.FC<IProps> = ({
   className,
   isRight,
   isBottom = true,
+  ...rest
 }) => {
   const isImageURL = typeof image === "string"
   const descriptionColor = useColorModeValue("blackAlpha.700", "whiteAlpha.800")
@@ -63,6 +65,7 @@ const ActionCard: React.FC<IProps> = ({
       _focus={linkBoxFocusStyles}
       className={className}
       m={4}
+      {...rest}
     >
       <Flex
         minH="260px"
@@ -108,7 +111,7 @@ const ActionCard: React.FC<IProps> = ({
           lineHeight={1.4}
         >
           <LinkOverlay
-            as={Link}
+            as={BaseLink}
             color="text"
             hideArrow
             textDecoration="none"

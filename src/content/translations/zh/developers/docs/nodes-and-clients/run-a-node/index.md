@@ -379,7 +379,7 @@ teku --network mainnet \
 
 共识客户端充当信标节点，让验证者来连接。 每种共识客户端都有自己的验证者软件，后者在各自的相关文档中都有详细描述。
 
-运行自己的验证者便可以进行[单独质押](https://ethereum.org/en/staking/solo/)，这是支持以太坊网络的最有影响和去信任的方法。 然而，单独质押需要存入 32 个以太币。 若想在自己的节点上运行验证者并质押较少数量的以太币，您可能会对由无需许可的节点运营商组成的去中心化池感兴趣，例如 [Rocket Pool](https://rocketpool.net/node-operators)。
+运行自己的验证者便可以进行[单独质押](/staking/solo/)，这是支持以太坊网络的最有影响和去信任的方法。 然而，单独质押需要存入 32 个以太币。 若想在自己的节点上运行验证者并质押较少数量的以太币，您可能会对由无需许可的节点运营商组成的去中心化池感兴趣，例如 [Rocket Pool](https://rocketpool.net/node-operators)。
 
 开始质押和生成验证者密钥的最简单方法是使用 [Goerli 测试网质押启动板](https://goerli.launchpad.ethereum.org/)，它允许你通过[在 Goerli 上运行节点](https://notes.ethereum.org/@launchpad/goerli)来测试你的设置。 当准备好使用主网时，你可以使用[主网质押启动板](https://launchpad.ethereum.org/)重复这些步骤。
 
@@ -460,7 +460,6 @@ teku --network mainnet \
 - [针对节点运营商的合并常见问题解答](https://notes.ethereum.org/@launchpad/node-faq-merge) - _2022 年 7 月_
 - [分析成为已验证以太坊全节点的硬件要求](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902)_ - Albert Palau，2018 年 9 月 24 日_
 - [运行以太坊全节点：勉励者指南](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux，2019 年 11 月 7 日_
-- [运行以太坊节点](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub，定期更新_
 - [在以太坊主网上运行 Hyperledger Besu 节点：优点、要求和设置](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi，2020 年 5 月 7 日_
 - [部署具有监测堆栈的 Nethermind 以太坊客户端](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth，2020 年 7 月 8 日_
 

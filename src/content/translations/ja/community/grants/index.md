@@ -20,7 +20,7 @@ lang: ja
 - [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー 2 スケーリング、クライアントセキュリティなど_
 - [公開されている助成プログラム](https://opengrants.com/explore)
 - [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織の Google スプレッドシート_
-- [レイヤー 2 助成](https://esp.ethereum.foundation/layer-2-grants) - _ レイヤー 2 アプリケーション、分析、教育をサポートするイーサリアム・ファウンデーションがスポンサーの女性プログラム_
+- [レイヤー 2 助成](https://esp.ethereum.foundation/layer-2-grants) - _ レイヤー 2 アプリケーション、分析、教育をサポートするイーサリアム・ファウンデーションがスポンサーの助成プログラム_
 
 ## 固有のプロジェクト {#project-specific}
 

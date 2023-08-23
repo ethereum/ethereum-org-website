@@ -23,11 +23,12 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 ## Artigos para Iniciantes {#beginner-articles}
 
 - [Um (Python) Guia do desenvolvedor para Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
+- [O estado do Python no relatório de 2023 da blockchain](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 - [Uma Introdução aos Smart Contracts com Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Instale seu próprio Token ERC20 com Python e Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [Como desenvolver um contrato Ethereum utilizando Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Intro para Web3.py · Ethereum para desenvolvedores Python](https://www.dappuniversity.com/articles/web3-py-intro)
-- [Como chamar uma função de Contrato Inteligente usando Python e web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
+- [Como chamar uma função do Smart Contract utilizando Python e web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## Artigos intermediários {#intermediate-articles}
 
@@ -52,10 +53,10 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Ape](https://github.com/ApeWorX/ape) - _A ferramenta de desenvolvimento de contrato inteligente (smart contract) para Pythonistas, Cientistas de Dados e Profissionais de Segurança_
 - [Brownie](https://github.com/eth-brownie/brownie) - _Framework em Python para implantar, testar e interagir com contratos inteligentes Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementação de uma Máquina Virtual Ethereum_
-- [eth-tester](https://github. com/ethereum/eth-tester) - _ferramentas para testar aplicativos baseados na Ethereum_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _ferramentas para testar aplicativos baseados na Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _funções de utilidade para trabalhar com bases de código relacionadas com a Ethereum_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper em Python em cima do compilador solc solidity com suporte à versão 0.5.x _
-- [py-wasm](https://github.com/ethereum/py-wasm) - _implementação em Python de um intérprete de montagem web _
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper em Python em cima do compilador solc solidity com suporte à versão 0.5._
+- [py-wasm](https://github.com/ethereum/py-wasm) - _implementação em Python de um intérprete de montagem web_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implementação de uma pilha P2P Ethereum_
 - [pymaker](https://github.com/makerdao/pymaker) - _API em Python para contratos Maker_
 - [siwe](https://github.com/spruceid/siwe-py) - _Registre-se com Ethereum (siwe) para Python_

@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: ../../assets/eth-gif-cat.png
+image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: Traditionelle Identitätssysteme haben die Ausgabe, Wartung und Kontrolle Ihrer Identifikatoren zentralisiert.
 summaryPoint2: Eine dezentralisierte Identität beseitigt die Abhängigkeit von zentralisierten Dritten.
 summaryPoint3: Dank Krypto haben Benutzer jetzt die Werkzeuge, um ihre eigenen Identifikatoren und Bescheinigungen wieder auszugeben, zu halten und zu kontrollieren.
@@ -157,6 +157,7 @@ Es gibt viele ehrgeizige Projekte, die Ethereum als Grundlage für dezentrale Id
 
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _Ein dezentralisiertes Namenssystem für maschinenlesbare On-chain-Identifikatoren, wie Ethereum Wallet-Adressen, Content-Hashes und Metadaten._
 - **[SpruceID](https://www.spruceid.com/)** - _Ein dezentralisiertes Identitätsprojekt, das es Benutzern erlaubt, digitale Identitäten mit Hilfe von Ethereum-Konten und ENS-Profilen zu kontrollieren, statt sich auf Dienste Dritter zu verlassen._
+- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Ein dezentralisiertes Ledger/Protokoll zum Erstellen von On-Ketten- oder Off-Kettenbescheinigungen über irgendetwas._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (Beweis des Menschseins) ist ein auf Ethereum basierendes System zur Überprüfung der sozialen Identität._
 - **[BrightID](https://www.brightid.org/)**- _Ein dezentralisiertes quelloffenes Netzwerk zur sozialen Identität, das versucht, die Identitätsüberprüfung durch die Schaffung und Analyse eines sozialen Diagramms zu reformieren._
 - **[Personennachweis-Passport](https://proofofpersonhood.com/)** - _Ein dezentraler digitaler Identitätsaggregator._

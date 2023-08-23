@@ -61,8 +61,6 @@ incomplete: true
 
 ## Дополнительные ресурсы {#further-reading}
 
-- [Что такое майнинг в Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) — _EthHub_
-
 ## Связанные инструменты {#related-tools}
 
 - [Лучшие майнеры Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)

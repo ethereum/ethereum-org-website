@@ -10,8 +10,6 @@
   "page-eth-currency-for-future": "屬於未來數位世界的貨幣",
   "page-eth-description": "以太幣是加密貨幣，是類似比特幣的數位貨幣。如果您剛接觸加密貨幣，以下介紹以太幣與傳統貨幣的差別。",
   "page-eth-earn-interest-link": "賺取利息",
-  "page-eth-ethhub-caption": "時常更新",
-  "page-eth-ethhub-overview": "只要您需要，EthHub 能提供您全面的基本概要",
   "page-eth-flexible-amounts": "具有良好分割性",
   "page-eth-flexible-amounts-desc": "以太幣能分割至小數點後 18 位，因此您不一定要每次購入一整枚以太幣。您可以每次購入少量以太幣，只要您想要，甚至可以購買 0.000000000000000001 以太幣。",
   "page-eth-fuels": "以太幣是以太坊的原動力，並確保以太坊安全運作。",
@@ -41,7 +39,6 @@
   "page-eth-not-only-crypto": "以太幣並非以太坊生態的唯一加密貨幣",
   "page-eth-not-only-crypto-desc": "任何人都能在以太坊創造並交易新資產。此資產也被稱為「代幣」。現在人們代幣化傳統貨幣、房地產、藝術品或甚至身分！",
   "page-eth-not-only-crypto-desc-2": "以太坊是上千種代幣的家鄉 – 價格與用途有高低之別。開發者不斷打造新代幣，挑戰新可能性，並打開新市場。",
-  "page-eth-not-only-crypto-desc-3": "如果您想了解更多代幣相關資訊，我們在 EthHub 的夥伴寫了不少很棒的概覽：",
   "page-eth-open": "對每個人都開放",
   "page-eth-open-desc": "您只需要網路連結及錢包來接收以太幣 (ETH)。接收付款無需設立任何銀行帳戶。",
   "page-eth-p2p-payments": "點對點支付",
@@ -93,5 +90,5 @@
   "page-eth-tokens-dao-description": "網路社群時常由代幣持有者共同管理。",
   "page-eth-whats-defi": "關於去中心化金融的更多資訊",
   "page-eth-whats-defi-description": "去中心化金融為建立於以太坊的去中心化金融系統。這份概覽將解釋您可以做什麼。",
-  "page-what-is-ethereum-what-is-ether": "甚麼是以太幣？"
+  "page-what-is-ethereum-what-is-ether": "甚麼是以太(ETH)？"
 }

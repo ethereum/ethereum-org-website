@@ -178,12 +178,6 @@ const config: GatsbyConfig = {
     },
     // CSS in JS
     {
-      resolve: `gatsby-plugin-emotion`,
-      options: {
-        labelFormat: "[filename]--[local]",
-      },
-    },
-    {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
         resetCSS: true,
@@ -318,7 +312,7 @@ if (!IS_PREVIEW) {
       resolve: "gatsby-plugin-matomo",
       options: {
         siteId: "4",
-        matomoUrl: "https://matomo.ethereum.org",
+        matomoUrl: "https://ethereumfoundation.matomo.cloud",
         siteUrl,
         matomoPhpScript: "matomo.php",
         matomoJsScript: "matomo.js",

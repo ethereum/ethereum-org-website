@@ -10,7 +10,7 @@ tags:
   - "the graph"
   - "create-eth-app"
   - "react"
-skill: 中級
+skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
@@ -52,7 +52,7 @@ contract Game {
 2. `totalGamesPlayerLost`の取得
 3. `BetPlaced`イベントのサブスクライブ
 
-右に示したように[Web3 イベント](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#contract-events)をリッスンできますが、多くのケースを処理する必要があります。
+右に示したように[Web3 イベント](https://docs.web3js.org/api/web3/class/Contract#events)をリッスンできますが、多くのケースを処理する必要があります。
 
 ```solidity
 GameContract.events.BetPlaced({

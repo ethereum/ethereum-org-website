@@ -9,7 +9,7 @@ tags:
   - "セキュリティ"
   - "テスト"
   - "フォーマルな検証"
-skill: 上級
+skill: advanced
 published: 2020-01-13
 source: セキュアなコントラクトの構築
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

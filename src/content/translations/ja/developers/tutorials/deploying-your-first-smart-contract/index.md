@@ -7,7 +7,7 @@ tags:
   - "Remix"
   - "Solidity"
   - "デプロイ"
-skill: 初級
+skill: beginner
 lang: ja
 published: 2020-04-03
 source: EthereumDev

@@ -10,7 +10,7 @@ description: ethereum.orgのデザインとコンテンツに関する原則
 
 本原則は、サイトの見た目、雰囲気、掲載するコンテンツに関するものです。
 
-[etherem.org への貢献にあたって、まずはこちら](/contributing/)を読んでください。
+[ethereum.org への貢献にあたって、まずはこちら](/contributing/)を読んでください。
 
 ## デザイン原則とは {#ways-to-contribute}
 
@@ -90,4 +90,4 @@ ethereum.org では、本デザイン原則は、ウェブサイトを表現し�
 
 本原則は ethereum.org のウェブサイトに焦点を当てていますが、その多くがイーサリアムエコシステム全体の価値を表すことを望んでいます(例えば、[イーサリアムホワイトペーパーの原則](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)からの影響を参照してください)。 ご自由にこれらの一部を自分のプロジェクトに取り入れてみてください。
 
-ぜひ[Discord サーバー](https://discord.gg/CetY6Y4)や[問題の作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)からご意見をお聞かせください。
+ぜひ[Discord サーバー](https://discord.gg/CetY6Y4)や[問題の作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request)からご意見をお聞かせください。

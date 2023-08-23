@@ -52,7 +52,6 @@ Obstaja več implementacij optimističnih zvitkov, ki jih lahko integrirate v sv
 **Gradivo za branje o optimističnih zvitkih**
 
 - [Vse kar morate vedeti o Optimističnih zvitkih](https://research.paradigm.xyz/rollups)
-- [EthHub o optimističnih zvitkih](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Ključni vodnik za Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Kako zares deluje zvitek Optimizma?](https://research.paradigm.xyz/optimism)
 - [Globoki vpogled v OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

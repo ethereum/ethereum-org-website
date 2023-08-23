@@ -201,4 +201,3 @@ _Ucieszyłaby nas większa ilość dokumentacji dotyczącej tworzenia inteligent
 
 - [Zdecentralizowane wyrocznie: kompleksowy przegląd](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Wdrażanie wyroczni blockchainu w Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
-- [Wyrocznie](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_

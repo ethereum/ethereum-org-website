@@ -379,7 +379,7 @@ teku --network mainnet \
 
 コンセンサスクライアントは、バリデータが接続するビーコンノードとして機能します。 各コンセンサスクライアントは、それぞれのバリデータ・ソフトウェアを搭載しています。詳細については、各ドキュメントに記載されています。
 
-自分でバリデータを実行すると、[ソロステーキング](https://ethereum.org/en/staking/solo/)ができます。これはイーサリアムネットワークをサポートする上で、最も影響があり、トラストレスな方法です。 しかし、これには 32 ETH のデポジットが必要になります。 より少ない金額で自分のノードでバリデータを実行するには、[Rocket Pool](https://rocketpool.net/node-operators)など、パーミッションレスなノードオペレータの分散型プールに関心を持つかもしれません。
+自分でバリデータを実行すると、[ソロステーキング](/staking/solo/)ができます。これはイーサリアムネットワークをサポートする上で、最も影響があり、トラストレスな方法です。 しかし、これには 32 ETH のデポジットが必要になります。 より少ない金額で自分のノードでバリデータを実行するには、[Rocket Pool](https://rocketpool.net/node-operators)など、パーミッションレスなノードオペレータの分散型プールに関心を持つかもしれません。
 
 ステーキングとバリデータのキー生成の最も簡単な方法は、[Goerli テストネット・ステーキングランチパッド](https://goerli.launchpad.ethereum.org/)を使うことです。これにより、[Goerli でノードを実行](https://notes.ethereum.org/@launchpad/goerli)し、自分のセットアップをテストすることができます。 メインネットへの準備ができたら、今度は[メインネット・ステーキングランチパッド](https://launchpad.ethereum.org/)を使って、同じ手順を繰り返します。
 
@@ -460,7 +460,6 @@ RPC インターフェイスへのアクセスは、エッジレイヤー API �
 - [ノード運用者向けのマージに関するよくある質問](https://notes.ethereum.org/@launchpad/node-faq-merge) - _2022 年 7 月_
 - [イーサリアムのフル検証ノードになるためのハードウェア要件の分析](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau、2018 年 9 月 24 日_
 - [イーサリアムフルノードの運用: 完全ガイド](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _2019 年 11 月 7 日 - Justin Leroux_
-- [イーサリアムノードの運用](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub、頻繁に更新_
 - [イーサリアムメインネットでハイパーレジャー Besu ノードの運用: メリット・要件・セットアップ](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi、2020 年 5 月 7 日_
 - [モニタリングスタックで Nethermind イーサリアムクアイアントのデプロイ](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth、2020 年 7 月 8 日_
 

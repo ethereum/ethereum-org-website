@@ -1,5 +1,29 @@
 [
   {
+    "title": "ETH Nanjing",
+    "emoji": ":cn:",
+    "location": "Nanjing",
+    "link": "https://lu.ma/ETHNanJing"
+  },
+  {
+    "title": "852dev.xyz",
+    "emoji": ":hong_kong:",
+    "location": "Hong Kong",
+    "link": "https://twitter.com/852devxyz"
+  },
+  {
+    "title": "Ethereum Ecuador",
+    "emoji": ":ec:",
+    "location": "Ecuador",
+    "link": "https://www.eventbrite.com/o/ethereum-ecuador-64512134823"
+  },
+  {
+    "title": "Kyiv Ethereum",
+    "emoji": "🇺🇦",
+    "location": "Ukraine",
+    "link": "https://kyivethereum.com/"
+  },
+  {
     "title": "Ethereum Bogota",
     "emoji": ":co:",
     "location": "Colombia",
@@ -11,9 +35,9 @@
     "location": "Sydney",
     "link": "https://www.meetup.com/BokkyPooBahs-Ethereum-Workshop/"
   },
-   {
+  {
     "title": "Web3Mi",
-    "emoji": ":ita:",
+    "emoji": ":it:",
     "location": "Milan",
     "link": "https://www.eventbrite.it/o/web3mi-52766466683"
   },
@@ -370,5 +394,17 @@
     "emoji": ":taiwan:",
     "location": "Taipei",
     "link": "https://www.meetup.com/taipei-ethereum-meetup/"
+  },
+  {
+    "title": "Web3 Timisoara",
+    "emoji": ":romania:",
+    "location": "Timisoara",
+    "link": "https://www.meetup.com/web3-timisoara/"
+  },
+  {
+    "title": "Crypto Wednesdays",
+    "emoji": ":belgium:",
+    "location": "Brussels",
+    "link": "https://dao.brussels/"
   }
 ]

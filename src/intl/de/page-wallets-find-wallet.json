@@ -88,5 +88,7 @@
   "page-find-wallet-desktop-desc": "Wallets mit Desktop-Apps",
   "page-find-wallet-browser": "Browser",
   "page-find-wallet-browser-desc": "Wallets mit Browser-Erweiterungen",
-  "page-find-wallet-device": "Gerät"
+  "page-find-wallet-device": "Gerät",
+  "page-find-choose-to-compare": "Zum Vergleich auswählen",
+  "page-find-wallet-choose-features": "Funktionen auswählen"
 }

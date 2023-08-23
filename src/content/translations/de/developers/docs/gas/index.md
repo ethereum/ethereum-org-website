@@ -18,7 +18,7 @@ Da jede Ethereum-Transaktion Rechenressourcen benötigt, um ausgeführt zu werde
 
 ![Ein Diagramm, das zeigt, wo Gas im EVM-Betrieb benötigt wird](./gas.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Im Wesentlichen werden Gasgebühren in Ethereums Eigenwährung, Ether (ETH) gezahlt. Die Gaspreise sind in Gwei angegeben, was selbst eine Bezeichnung für ETH ist. Jeder Gwei ist gleich 0,00000001 ETH (10<sup>-9</sup> ETH). Anstatt z. B. zu sagen, dass dein Gas 0,000000001 Ether kostet, kannst du sagen, dass dein Gas 1 Gwei kostet. Das Wort "gwei" selbst bedeutet "giga-wei" und entspricht 1.000.000.000 wei. Wei selbst (benannt nach [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), dem Erfinder von [B-Geld](https://www.investopedia.com/terms/b/bmoney.asp)) ist die kleinste Einheit von ETH.
+Im Wesentlichen werden Gasgebühren in Ethereums Eigenwährung, Ether (ETH) gezahlt. Die Gaspreise sind in Gwei angegeben, was selbst eine Bezeichnung für ETH ist. Jeder Gwei ist gleich 0,000000001 ETH (10<sup>-9</sup> ETH). Anstatt z. B. zu sagen, dass dein Gas 0,000000001 Ether kostet, kannst du sagen, dass dein Gas 1 Gwei kostet. Das Wort "gwei" selbst bedeutet "giga-wei" und entspricht 1.000.000.000 wei. Wei selbst (benannt nach [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), dem Erfinder von [B-Geld](https://www.investopedia.com/terms/b/bmoney.asp)) ist die kleinste Einheit von ETH.
 
 ## Vor dem London-Upgrade {#pre-london}
 
@@ -161,7 +161,6 @@ Wenn du die Gaspreise überwachen willst, damit du deine ETH günstiger verschic
 ## Weiterführende Informationen {#further-reading}
 
 - [Ethereum Gas erklärt](https://defiprime.com/gas)
-- [Wird die Nutzung von Ethereum mit steigendem Preis teurer?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reduziere den Gasverbrauch deiner Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof-of-Stake vs. Proof-of-Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

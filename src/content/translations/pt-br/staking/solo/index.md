@@ -40,32 +40,37 @@ A participação individual vem com mais responsabilidades, mas fornece o máxim
 Por mais que desejemos que o staking individual fosse acessível e sem riscos para todos, isso não é a realidade. Existem algumas considerações práticas e sérias a serem lembradas antes de optar por fazer staking individual de seu ETH.
 
 <InfoGrid>
-  <ExpandableCard title="Leitura obrigatória" eventCategory="SoloStaking" eventName="clicked required reading">
-    Ao operar seu próprio nó, você deve gastar algum tempo aprendendo a usar o software que escolheu. Isso envolve ler a documentação relevante e estar em sintonia com os canais de comunicação dessas equipes de desenvolvimento.
-    Quanto mais você entender sobre o software que está executando e como funciona a prova de participação (proof of sake), menos arriscado será como um staker e mais fácil será corrigir quaisquer problemas que possam surgir ao longo do caminho como operador de nó. 
-  </ExpandableCard>
-  <ExpandableCard title="À vontade com computadores" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    A configuração do nó requer um nível de conforto razoável ao trabalhar com computadores, embora novas ferramentas estejam tornando isso mais fácil com o tempo. A compreensão da interface de linha de comando é útil, mas não é mais estritamente necessária.
-    Também requer uma configuração de hardware muito básica e alguma compreensão das especificações mínimas recomendadas.
-  </ExpandableCard>
-  <ExpandableCard title="Gerenciamento seguro de chaves" eventCategory="SoloStaking" eventName="clicked secure key management">
-    Assim como as chaves privadas protegem seu endereço Ethereum, você precisará gerar chaves especificamente para seu validador. Você deve entender como manter quaisquer frases iniciais ou chaves privadas seguras e protegidas.
-    <p style={{marginTop: "1rem"}}><a href="/security">Segurança e prevenção de fraude do Ethereum</a></p>
-  </ExpandableCard>
-  <ExpandableCard title="Sem saques (por enquanto)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    O saque de ETH ou recompensas em stake de um saldo de validador ainda não é suportada. O suporte para retiradas está planejado para a próxima atualização de Xangai. Após isso, os usuários podem optar por receber pagamentos de recompensas automaticamente e podem retirar todo o seu saldo para receber os seus fundos de volta.
-  </ExpandableCard>
-  <ExpandableCard title="Manutenção" eventCategory="SoloStaking" eventName="clicked maintenance">
-    O hardware falha ocasionalmente, as conexões de rede falham e o software cliente ocasionalmente precisa ser atualizado. A manutenção do nó é inevitável e ocasionalmente exigirá sua atenção. Você deve estar ciente de quaisquer informações de atualizações de rede ou outras atualizações críticas de clientes.
-  </ExpandableCard>
-  <ExpandableCard title="Tempo de atividade confiável" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    Suas recompensas são proporcionais ao tempo que seu validador está on-line e atestando corretamente. O tempo de inatividade incorre em penalidades proporcionais a quantos outros validadores estão off-line ao mesmo tempo, mas <a href="#faq">não resulta em cortes</a>. A largura de banda também é importante, pois as recompensas são reduzidas para declarações que não são recebidos a tempo. Os requisitos variam, mas é recomendado um mínimo de 10 Mb/s de upload e download.
-  </ExpandableCard>
-  <ExpandableCard title="Risco de corte" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    Diferente das penalidades de inatividade por estar off-line, <em>o corte</em> é uma penalidade muito mais séria reservada para infrações maliciosas. Ao executar um cliente minoritário com suas chaves carregadas em apenas uma máquina por vez, o risco de ser cortado é minimizado. Dito isto, todos os stakers devem estar cientes dos riscos de serem cortados.
-    
-    <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Mais sobre cortes e ciclo de vida do validador</a></p>
-  </ExpandableCard>
+<ExpandableCard title="Leitura obrigatória" eventCategory="SoloStaking" eventName="clicked required reading">
+Ao operar seu próprio nó, você deve gastar algum tempo aprendendo a usar o software que escolheu. Isso envolve ler a documentação relevante e estar em sintonia com os canais de comunicação dessas equipes de desenvolvimento.
+
+Quanto mais você entender sobre o software que está executando e como funciona a prova de participação (proof of sake), menos arriscado será como um staker e mais fácil será corrigir quaisquer problemas que possam surgir ao longo do caminho como operador de nó.
+</ExpandableCard>
+
+<ExpandableCard title="À vontade com computadores" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+A configuração do nó requer um nível de conforto razoável ao trabalhar com computadores, embora novas ferramentas estejam tornando isso mais fácil com o tempo. A compreensão da interface de linha de comando é útil, mas não é mais estritamente necessária.
+
+Também requer uma configuração de hardware muito básica e alguma compreensão das especificações mínimas recomendadas.
+</ExpandableCard>
+
+<ExpandableCard title="Gerenciamento seguro de chaves" eventCategory="SoloStaking" eventName="clicked secure key management">
+Assim como as chaves privadas protegem seu endereço Ethereum, você precisará gerar chaves especificamente para seu validador. Você deve saber como manter todas as frases de recuperação ou chaves privadas seguras e protegidas.
+
+<a href="/security/">Segurança e prevenção contra fraudes do Ethereum</a>
+</ExpandableCard>
+
+<ExpandableCard title="Manutenção" eventCategory="SoloStaking" eventName="clicked maintenance">
+O hardware falha ocasionalmente, as conexões de rede falham e o software cliente ocasionalmente precisa ser atualizado. A manutenção do nó é inevitável e ocasionalmente exigirá sua atenção. Você deve estar ciente de quaisquer informações de atualizações de rede ou outras atualizações críticas de clientes.
+</ExpandableCard>
+
+<ExpandableCard title="Tempo de atividade confiável" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Suas recompensas são proporcionais ao tempo que seu validador está on-line e atestando corretamente. O tempo de inatividade incorre em penalidades proporcionais a quantos outros validadores estão off-line ao mesmo tempo, mas <a href="#faq">não resulta em cortes</a>. A largura de banda também é importante, pois as recompensas são reduzidas para declarações que não são recebidos a tempo. Os requisitos variam, mas é recomendado um mínimo de 10 Mb/s de upload e download.
+</ExpandableCard>
+
+<ExpandableCard title="Risco de corte" eventCategory="SoloStaking" eventName="clicked slashing risk">
+Diferente das penalidades de inatividade por estar off-line, <em>o corte</em> é uma penalidade muito mais séria reservada para infrações maliciosas. Ao executar um cliente minoritário com suas chaves carregadas em apenas uma máquina por vez, o risco de ser cortado é minimizado. Dito isto, todos os stakers devem estar cientes dos riscos de serem cortados.
+
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Mais sobre remoção e o ciclo de vida do validador</a>
+</ExpandableCard>
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -77,8 +82,6 @@ Por mais que desejemos que o staking individual fosse acessível e sem riscos pa
 Enquanto ativo, você ganhará recompensas ETH, que serão depositadas periodicamente no seu endereço de saque.
 
 Se desejar, você pode parar suas atividades como um validador, o que elimina a necessidade de estar on-line e interrompe outras recompensas. O seu saldo restante será sacado para o endereço de saque que você indicou durante a configuração.
-
-_Atualização Shanghai necessária para habilitar os pagamentos de recompensa e saques totais de validadores saídos._
 
 [Mais sobre saques de participação](/staking/withdrawals/)
 
@@ -126,14 +129,14 @@ Estas são algumas das perguntas mais comuns sobre staking que vale a pena conhe
 
 <ExpandableCard title="O que é um validador?">
 
-Um _validador_ é uma entidade virtual que vive no Ethereum e participa do consenso do protocolo Ethereum. Os validadores são representados por um saldo, chave pública e outras propriedades. Um _cliente validador_ é o software que atua em nome do validador mantendo e usando sua chave privada. Um único cliente validador pode conter muitos pares de chaves, controlando muitos validadores.
+Um <em>validador</em> é uma entidade virtual que vive no Ethereum e participa no consenso do protocolo Ethereum. Os validadores são representados por um saldo, chave pública e outras propriedades. Um <em>cliente validador</em> é o software que atua em nome do validador mantendo e usando sua chave privada. Um único cliente validador pode conter muitos pares de chaves, controlando muitos validadores.
 
 </ExpandableCard>
 
 <ExpandableCard title="Posso depositar mais de 32 ETH?">
 Cada par de chaves associado a um validador requer exatamente 32 ETH para ser ativado. Mais ETH depositado em um único conjunto de chaves não aumenta o potencial de recompensas, pois cada validador está limitado a um <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efetivo</a> de 32 ETH. Isso significa que o staking é feito em 32 incrementos de ETH, cada um com seu próprio conjunto de chaves e saldo.
 
-Não deposite mais de 32 ETH para um único validador. Este depósito não aumentará suas recompensas e ficará bloqueado até a atualização Xangai já planejada.
+Não deposite mais de 32 ETH para um único validador. Isso não aumentará suas recompensas. Se um endereço de saque tiver sido definido para o validador, os fundos excedentes acima de 32 ETH serão automaticamente sacados para esse endereço durante a próxima <a href="/staking/withdrawals/#validator-sweeping">varredura do validador</a>.
 
 Se o staking individual demandar muito de você, considere usar um provedor de <a href="/staking/saas/">staking-as-a-service</a> (staking como um serviço) ou, se estiver trabalhando com menos de 32 ETH, verifique as <a href="/staking/pools/">staking pools</a> (pools de staking).
 </ExpandableCard>
@@ -155,8 +158,10 @@ A execução de um cliente supermajoritário (qualquer cliente usado por mais de
 
 Falhas equivalentes em um <em>cliente minoritário jamais seriam finalizadas</em>, portanto, nunca resultariam em um voto cercado, e simplesmente resultariam em penalidades de inatividade, <em>não em cortes</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Saiba mais sobre a importância de administrar um cliente minoritário.</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Saiba mais sobre a prevenção de cortes</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Saiba mais sobre a importância de administrar um cliente minoritário.</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Saiba mais sobre prevenção contra remoções</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="Qual cliente é melhor?">
@@ -176,9 +181,9 @@ As penalidades por ficar off-line são proporcionais a quantos outros estão off
 </ExpandableCard>
 
 <ExpandableCard title="Como posso desbloquear minhas recompensas ou obter meu ETH de volta?">
-No momento da atualização Shangai, serão iniciados os pagamentos de recompensa e os saques totais para os validadores saídos. Saques de qualquer tipo da Beacon Chain exigem que sejam definidas credenciais de retirada.
+Saques de qualquer tipo da Beacon Chain exigem que sejam definidas credenciais de retirada.
 
-Os novos participantes estabeleceram isso no momento da geração da chave e do depósito. Os participantes existentes que ainda não definiram isso podem atualizar suas chaves para dar suporte a essa funcionalidade após a atualização Shangai.
+Os novos participantes estabeleceram isso no momento da geração da chave e do depósito. Os stakers existentes que ainda não definiram isso podem atualizar suas chaves para dar suporte a essa funcionalidade.
 
 Depois que as credenciais de saque estiverem definidas, os pagamentos de recompensa (ETH acumulado sobre os 32 iniciais) serão periodicamente distribuídos para o endereço de saque automaticamente.
 
