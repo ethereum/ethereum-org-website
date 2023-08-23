@@ -26,7 +26,7 @@ const oldColors = Object.keys(oldLightThemeColors).reduce((colors, color) => {
   }
 }, {})
 
-const semanticTokens: any = {
+const semanticTokens = {
   colors: {
     // define old colors from the old theme as semanticTokens to transition
     // from emotion components to chakra
