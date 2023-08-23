@@ -6,11 +6,24 @@ import { ChakraProvider } from "@chakra-ui/provider"
 // Chakra custom theme
 import theme from "@/@chakra-ui/theme"
 
+// Fonts
+import { inter, mono } from "@/lib/fonts"
+
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+      <style jsx global>
+        {`
+          :root {
+            --font-inter: ${inter.style.fontFamily};
+            --font-mono: ${mono.style.fontFamily};
+          }
+        `}
+      </style>
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   )
 }
 

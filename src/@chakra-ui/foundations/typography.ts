@@ -1,8 +1,8 @@
 const typography = {
   fonts: {
-    heading: "Inter, sans-serif",
-    body: "Inter, sans-serif",
-    monospace: "'IBM Plex Mono', Courier, monospace",
+    heading: "var(--font-inter)",
+    body: "var(--font-inter)",
+    monospace: "var(--font-mono)",
   },
 
   lineHeights: {
