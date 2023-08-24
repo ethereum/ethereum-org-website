@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React, { useState } from "react"
 import type { SimulatorStateProps } from "../../../interfaces"
 import { generateSeedWithoutChecksum } from "../../../utils/generateSeedWithoutChecksum"
 import { NewWalletPreview, ProgressCta } from ".."
@@ -13,12 +13,19 @@ import {
 
 export const CreateAccount: React.FC<SimulatorStateProps> = ({ state }) => {
   const { step } = state
-  const words = useMemo<Array<string>>(generateSeedWithoutChecksum, [])
+  const [words, setWords] = useState<Array<string>>(
+    generateSeedWithoutChecksum()
+  )
+  const generateNewWords = () => {
+    setWords(generateSeedWithoutChecksum())
+  }
   return (
     <>
       {[0, 1].includes(step) && <HomeScreen state={state} />}
       {[2].includes(step) && <WelcomeScreen />}
-      {[3].includes(step) && <GeneratingKeys state={state} />}
+      {[3].includes(step) && (
+        <GeneratingKeys state={state} generateNewWords={generateNewWords} />
+      )}
       {[4].includes(step) && <RecoveryPhraseNotice />}
       {[5].includes(step) && <InitialWordDisplay words={words} />}
       {[6].includes(step) && (
@@ -28,7 +35,7 @@ export const CreateAccount: React.FC<SimulatorStateProps> = ({ state }) => {
       {[0, 1, 2, 4, 5].includes(step) && (
         <ProgressCta
           state={state}
-          // bg={[5].includes(step) ? "background.base" : "background.highlight"}
+          bg={[5].includes(step) ? "background.base" : "background.highlight"}
         />
       )}
     </>

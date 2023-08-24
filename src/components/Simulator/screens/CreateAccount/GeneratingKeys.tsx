@@ -3,9 +3,16 @@ import React, { useEffect, useState } from "react"
 import { PiCheckThin } from "react-icons/pi"
 import { SimulatorStateProps } from "../../../../interfaces"
 
-export const GeneratingKeys: React.FC<SimulatorStateProps> = ({ state }) => {
+interface IProps extends SimulatorStateProps {
+  generateNewWords: () => void
+}
+export const GeneratingKeys: React.FC<IProps> = ({
+  state,
+  generateNewWords,
+}) => {
   const [loading, setLoading] = useState<boolean>(true)
   const { progressStepper } = state
+  useEffect(generateNewWords, [])
 
   // Show spinner for 2100ms, switching "loading" state to false when complete
   useEffect(() => {
