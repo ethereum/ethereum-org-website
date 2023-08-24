@@ -1,7 +1,8 @@
 import React, { ReactNode, useState } from "react"
-import { Box, useColorModeValue } from "@chakra-ui/react"
+import { Box, useColorModeValue, useToken } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 import * as utils from "../utils/isMobile"
+import { border } from "styled-system"
 
 export interface IProps {
   content: ReactNode
@@ -13,6 +14,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
   const isMobile = utils.isMobile()
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const borderColor = useToken("colors", "primary.lowContrast")
 
   return (
     <>
@@ -56,6 +58,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
               fontWeight="medium"
               cursor="default"
               borderRadius="base"
+              border={`1px solid ${borderColor}`}
               bottom="125%"
               left={{ base: "-70px", md: "-150px" }}
               marginLeft="50%"
