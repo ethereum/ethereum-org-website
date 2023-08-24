@@ -26,6 +26,11 @@ export interface SimulatorState {
   openPath: (pathId: PathId) => void
 }
 
+export interface LabelHref {
+  label: string
+  href: string
+}
+
 export interface PhoneScreenProps extends SimulatorStateProps {}
 export interface SimulatorDetails {
   title: string
@@ -33,6 +38,7 @@ export interface SimulatorDetails {
   Screen: React.FC<PhoneScreenProps>
   explanations: Array<SimulatorExplanation>
   ctaLabels: Array<string>
+  finalCtaLink?: LabelHref | null
   nextPathId?: PathId | null
 }
 

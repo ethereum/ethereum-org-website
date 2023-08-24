@@ -22,7 +22,7 @@ export const Template: React.FC<IProps> = ({
   openPath,
 }) => {
   const { step } = state
-  const { Screen, explanations, nextPathId } = simulator
+  const { Screen, explanations, nextPathId, finalCtaLink } = simulator
   const explanation = explanations[step]
 
   return (
@@ -39,6 +39,7 @@ export const Template: React.FC<IProps> = ({
         explanation={explanation}
         nextPathSummary={nextPathSummary}
         nextPathId={nextPathId ?? null}
+        finalCtaLink={finalCtaLink}
         onClose={onClose}
         openPath={openPath}
       />

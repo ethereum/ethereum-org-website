@@ -127,13 +127,7 @@ export const simulatorData: SimulatorData = {
       {
         // ? Change type for header to allow components, ie. Emoji?
         header: "Thats it! Welcome to Ethereum 🎉",
-        description: (
-          <Flex direction="column" gap={5}>
-            <ButtonLink variant="outline" href="/wallets/find-wallet/">
-              See a list of wallets
-            </ButtonLink>
-          </Flex>
-        ),
+        description: <></>,
       },
     ],
     ctaLabels: [
@@ -145,6 +139,10 @@ export const simulatorData: SimulatorData = {
       "Next",
       "Start using wallet",
     ],
+    finalCtaLink: {
+      label: "See a list of wallets",
+      href: "/wallets/find-wallets/",
+    },
     nextPathId: SEND_RECEIVE,
   },
   [SEND_RECEIVE]: {

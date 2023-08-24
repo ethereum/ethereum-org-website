@@ -4,17 +4,20 @@ import { MdChevronLeft, MdInfoOutline } from "react-icons/md"
 import Button from "../Button"
 import Tooltip from "../Tooltip"
 import type {
+  LabelHref,
   SimulatorExplanation,
   SimulatorPathSummary,
   SimulatorStateProps,
 } from "../../interfaces"
 import type { PathId } from "./types"
 import { PathButton } from "."
+import ButtonLink from "../ButtonLink"
 
 interface ExplanationProps extends SimulatorStateProps {
   explanation: SimulatorExplanation
   nextPathSummary: SimulatorPathSummary | null
   nextPathId: PathId | null
+  finalCtaLink?: LabelHref | null
   onClose?: () => void
   openPath?: (pathId: PathId) => void
 }
@@ -23,6 +26,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
   explanation,
   nextPathSummary,
   nextPathId,
+  finalCtaLink,
   onClose,
   openPath,
 }) => {
@@ -80,11 +84,20 @@ export const Explanation: React.FC<ExplanationProps> = ({
         </Tooltip>
       </Flex>
       {/* Last step navigation buttons */}
-      {isLastStep && nextPathSummary && openPath && nextPathId && (
-        <PathButton
-          pathSummary={nextPathSummary}
-          handleClick={() => openPath(nextPathId)}
-        />
+      {isLastStep && (
+        <Flex direction="column" gap={4} maxW="300px" w="full">
+          {nextPathSummary && openPath && nextPathId && (
+            <PathButton
+              pathSummary={nextPathSummary}
+              handleClick={() => openPath(nextPathId)}
+            />
+          )}
+          {finalCtaLink && (
+            <ButtonLink variant="outline" href={finalCtaLink.href}>
+              {finalCtaLink.label}
+            </ButtonLink>
+          )}
+        </Flex>
       )}
     </Flex>
   )
