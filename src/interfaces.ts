@@ -1,4 +1,6 @@
+import { IconProps } from "@chakra-ui/react"
 import type { ReactElement } from "react"
+import type { PathId } from "./components/Simulator/types"
 
 export interface Messages {
   [key: string]: string
@@ -7,7 +9,7 @@ export interface Messages {
 export interface SimulatorPathSummary {
   primaryText: string
   secondaryText?: string
-  iconName: string
+  Icon: React.FC<IconProps>
 }
 
 export interface SimulatorExplanation {
@@ -15,15 +17,13 @@ export interface SimulatorExplanation {
   description: ReactElement
 }
 
-export type SimulatorType = "create-account" | "send-receive" | "connect-web3"
-
 export interface SimulatorState {
-  pathId: SimulatorType
+  pathId: PathId
   step: number
   totalSteps: number
   progressStepper: () => void
   regressStepper: () => void
-  openPath: (pathId: SimulatorType) => void
+  openPath: (pathId: PathId) => void
 }
 
 export interface PhoneScreenProps extends SimulatorStateProps {}
@@ -34,9 +34,10 @@ export interface SimulatorDetails {
     ctaLabels: Array<string>
   }
   pathSummary: SimulatorPathSummary
+  nextPathId?: PathId | null
 }
 
-export type SimulatorData = Record<SimulatorType, SimulatorDetails>
+export type SimulatorData = Record<PathId, SimulatorDetails>
 
 export interface SimulatorStateProps {
   state: SimulatorState

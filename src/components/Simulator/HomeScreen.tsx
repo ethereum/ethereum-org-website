@@ -1,13 +1,5 @@
 import React from "react"
-import {
-  Flex,
-  type FlexProps,
-  Grid,
-  Icon,
-  createIcon,
-  GridProps,
-  Box,
-} from "@chakra-ui/react"
+import { Grid, Icon, GridProps, Box } from "@chakra-ui/react"
 import { MdArrowDownward } from "react-icons/md"
 import type { SimulatorStateProps } from "../../interfaces"
 import { EthGlyphIcon } from "./icons"

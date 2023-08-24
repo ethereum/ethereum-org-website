@@ -1,12 +1,13 @@
 import React from "react"
 import { Box, type BoxProps } from "@chakra-ui/react"
 
-export const Phone: React.FC<BoxProps> = ({ children }) => (
-  <Box as="figure" w="min(100%, 322px)" mx="auto">
+interface IProps extends Pick<BoxProps, "children"> {}
+export const Phone: React.FC<IProps> = ({ children }) => (
+  <Box as="figure" minW="min(100%, 322px)" mx="auto">
     {/* Phone frame */}
     <Box
       h={{ base: 480, md: 600 }}
-      maxH="100%"
+      maxH="full"
       w="full"
       border="8px"
       borderColor="body.medium"

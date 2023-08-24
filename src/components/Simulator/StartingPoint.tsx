@@ -1,17 +1,17 @@
 import { Flex, Grid, Text, useDisclosure } from "@chakra-ui/react"
-import React, { useState } from "react"
+import React, { useMemo, useState } from "react"
 import { PathButton, SimulatorModal, Template } from "."
 import type {
-  PhoneScreenProps,
-  SimulatorExplanation,
+  SimulatorDetails,
+  SimulatorPathSummary,
   SimulatorState,
-  SimulatorType,
 } from "../../interfaces"
+import type { PathId } from "./types"
 import { simulatorData } from "./data"
 
 export const StartingPoint: React.FC = () => {
   const [step, setStep] = useState<number>(0) // Start with step zero to use as array index
-  const [pathId, setPathId] = useState<SimulatorType | null>(null)
+  const [pathId, setPathId] = useState<PathId | null>(null)
   const disclosure = useDisclosure()
 
   const totalSteps: number = pathId
@@ -30,7 +30,7 @@ export const StartingPoint: React.FC = () => {
     setStep(0)
   }
 
-  const openPath = (pathId: SimulatorType): void => {
+  const openPath = (pathId: PathId): void => {
     resetStepper()
     setPathId(pathId)
     disclosure.onOpen()
@@ -47,12 +47,20 @@ export const StartingPoint: React.FC = () => {
       }
     : null
 
-  const explanation: SimulatorExplanation | null = pathId
-    ? simulatorData[pathId].stepDetails.explanations[step]
-    : null
+  const nextPathSummary = useMemo<SimulatorPathSummary | null>(() => {
+    if (!pathId) return null
+    const { nextPathId } = simulatorData[pathId]
+    if (!nextPathId) return null
+    const { pathSummary } = simulatorData[nextPathId]
+    return {
+      primaryText: "Start next lesson",
+      secondaryText: pathSummary.primaryText,
+      Icon: pathSummary.Icon,
+    }
+  }, [pathId])
 
-  const Screen: React.FC<PhoneScreenProps> | null = pathId
-    ? simulatorData[pathId].Screen
+  const simulator: SimulatorDetails | null = pathId
+    ? simulatorData[pathId]
     : null
 
   return (
@@ -101,20 +109,20 @@ export const StartingPoint: React.FC = () => {
           {Object.keys(simulatorData).map((pathId) => (
             <PathButton
               key={pathId}
-              pathId={pathId as SimulatorType}
               pathSummary={simulatorData[pathId].pathSummary}
-              handleClick={openPath}
+              handleClick={() => openPath(pathId as PathId)}
             />
           ))}
         </Flex>
       </Flex>
       <SimulatorModal disclosure={disclosure}>
-        {Screen && state && explanation && (
+        {state && simulator && (
           <Template
             state={state!}
-            explanation={explanation!}
+            nextPathSummary={nextPathSummary}
+            simulator={simulator}
             onClose={disclosure.onClose}
-            Screen={Screen}
+            openPath={openPath}
           />
         )}
       </SimulatorModal>

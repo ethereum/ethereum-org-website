@@ -5,9 +5,11 @@ import type { SimulatorData } from "../../../interfaces"
 import Button from "../../Button"
 import ButtonLink from "../../ButtonLink"
 import { ConnectWeb3, CreateAccount, SendReceive } from "../screens"
+import { ConnectWeb3Icon, EthWalletIcon, WalletAppIcon } from "../icons"
+import { CONNECT_WEB3, CREATE_ACCOUNT, SEND_RECEIVE } from "../constants"
 
 export const simulatorData: SimulatorData = {
-  "create-account": {
+  [CREATE_ACCOUNT]: {
     Screen: CreateAccount,
     stepDetails: {
       explanations: [
@@ -148,10 +150,11 @@ export const simulatorData: SimulatorData = {
     pathSummary: {
       primaryText: "Create account",
       secondaryText: "How to?",
-      iconName: "EthWalletIcon",
+      Icon: EthWalletIcon,
     },
+    nextPathId: SEND_RECEIVE,
   },
-  "send-receive": {
+  [SEND_RECEIVE]: {
     Screen: SendReceive,
     stepDetails: {
       explanations: [
@@ -163,12 +166,13 @@ export const simulatorData: SimulatorData = {
       ctaLabels: ["Coming soon™"],
     },
     pathSummary: {
-      primaryText: "Send/receive",
+      primaryText: "Send / receive tokens",
       secondaryText: "How to?",
-      iconName: "WalletAppIcon",
+      Icon: WalletAppIcon,
     },
+    nextPathId: CONNECT_WEB3,
   },
-  "connect-web3": {
+  [CONNECT_WEB3]: {
     Screen: ConnectWeb3,
     stepDetails: {
       explanations: [
@@ -182,7 +186,7 @@ export const simulatorData: SimulatorData = {
     pathSummary: {
       primaryText: "Connect to Web3",
       secondaryText: "How to?",
-      iconName: "ConnectWeb3Icon",
+      Icon: ConnectWeb3Icon,
     },
   },
 }

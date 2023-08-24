@@ -1,17 +1,13 @@
 import React from "react"
 import { Button, Flex, Text } from "@chakra-ui/react"
-import { simulatorData } from "./data"
+import type { SimulatorPathSummary } from "../../interfaces"
 
 interface IProps {
-  pathId: string // TODO: Type this against available paths
-  handleClick: (pathId: string) => void
+  pathSummary: SimulatorPathSummary
+  handleClick: () => void
 }
-export const PathButton: React.FC<IProps> = ({ pathId, handleClick }) => {
-  const {
-    pathSummary: { primaryText, secondaryText, iconName },
-  } = simulatorData[pathId]
-  const { [iconName]: Icon } = require("./icons")
-
+export const PathButton: React.FC<IProps> = ({ pathSummary, handleClick }) => {
+  const { primaryText, secondaryText, Icon } = pathSummary
   return (
     <Button
       variant="outline"
@@ -21,7 +17,7 @@ export const PathButton: React.FC<IProps> = ({ pathId, handleClick }) => {
       textAlign="start"
       w="full"
       py={6}
-      onClick={() => handleClick(pathId)}
+      onClick={handleClick}
     >
       <Flex direction="column" as="span">
         <Text
