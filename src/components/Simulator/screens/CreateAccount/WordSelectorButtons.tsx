@@ -1,24 +1,40 @@
 import { Button, Grid } from "@chakra-ui/react"
 import React from "react"
 import { useMemo } from "react"
+import { WORDS_REQUIRED } from "./constants"
+
+interface WordIndex {
+  word: string
+  index: number
+}
+type WordsWithIndex = Array<WordIndex>
 
 interface IProps {
   words: Array<string>
   wordsSelected: number
   setWordsSelected: (value: React.SetStateAction<number>) => void
 }
+
 export const WordSelectorButtons: React.FC<IProps> = ({
   words,
   wordsSelected,
   setWordsSelected,
 }) => {
-  const wordIndices: Array<{ word: string; index: number }> = words.map(
-    (word, index) => ({ word, index })
-  )
-  const randomizedWords = useMemo(
-    () => wordIndices.sort(() => Math.random() - 0.5),
-    [words]
-  )
+  const wordIndices: WordsWithIndex = words.map((word, index) => ({
+    word,
+    index,
+  }))
+  const pseudoRandomizedWords = useMemo<WordsWithIndex>(() => {
+    const answers = wordIndices.slice(0, WORDS_REQUIRED)
+    const rest = wordIndices.slice(WORDS_REQUIRED)
+    const restRandom = rest.sort(() => Math.random() - 0.5)
+    const pseudoRandom: WordsWithIndex = answers.reduce((acc, item) => {
+      const ANSWER_POSITION_MAX = WORDS_REQUIRED + 4
+      const randIndex = (Math.random() * 1e3) % ANSWER_POSITION_MAX
+      return [...acc.slice(0, randIndex), item, ...acc.slice(randIndex)]
+    }, restRandom)
+    return pseudoRandom
+  }, [words])
   const incrementWordsSelected = () => {
     setWordsSelected((prev) => prev + 1)
   }
@@ -36,7 +52,7 @@ export const WordSelectorButtons: React.FC<IProps> = ({
       bottom={0}
       w="full"
     >
-      {randomizedWords.map(({ word, index }) => (
+      {pseudoRandomizedWords.map(({ word, index }) => (
         <Button
           key={word + index}
           variant="solid"
