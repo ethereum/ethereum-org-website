@@ -5,7 +5,7 @@ import type {
   SimulatorDetails,
   SimulatorPathSummary,
   SimulatorState,
-} from "../../interfaces"
+} from "./interfaces"
 import type { PathId } from "./types"
 import { simulatorData } from "./data"
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { Button, Flex, Text } from "@chakra-ui/react"
-import type { SimulatorPathSummary } from "../../interfaces"
+import type { SimulatorPathSummary } from "./interfaces"
 
 interface IProps {
   pathSummary: SimulatorPathSummary

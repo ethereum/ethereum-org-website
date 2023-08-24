@@ -1,7 +1,7 @@
 import { Grid, Flex, Spinner, Icon, Text } from "@chakra-ui/react"
 import React, { useEffect, useState } from "react"
 import { PiCheckThin } from "react-icons/pi"
-import { SimulatorStateProps } from "../../../../interfaces"
+import { SimulatorStateProps } from "../../interfaces"
 
 interface IProps extends SimulatorStateProps {
   generateNewWords: () => void

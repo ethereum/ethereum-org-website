@@ -5,7 +5,7 @@ import type {
   SimulatorDetails,
   SimulatorPathSummary,
   SimulatorStateProps,
-} from "../../interfaces"
+} from "./interfaces"
 import type { PathId } from "./types"
 
 interface IProps extends SimulatorStateProps {

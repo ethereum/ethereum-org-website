@@ -7,7 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import { motion } from "framer-motion"
-import type { SimulatorStateProps } from "../../interfaces"
+import type { SimulatorStateProps } from "./interfaces"
 import { simulatorData } from "./data"
 // TODO: Remove simulatorData import; pass data needed as props
 

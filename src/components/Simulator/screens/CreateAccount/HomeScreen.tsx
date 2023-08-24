@@ -1,7 +1,7 @@
 import React from "react"
 import { Grid, Icon, GridProps, Box } from "@chakra-ui/react"
 import { MdArrowDownward } from "react-icons/md"
-import type { SimulatorStateProps } from "../../../../interfaces"
+import type { SimulatorStateProps } from "../../interfaces"
 import { EthGlyphIcon } from "../../icons"
 
 interface IProps extends GridProps, SimulatorStateProps {}

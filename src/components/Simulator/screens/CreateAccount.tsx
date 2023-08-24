@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import type { SimulatorStateProps } from "../../../interfaces"
+import type { SimulatorStateProps } from "../interfaces"
 import { generateSeedWithoutChecksum } from "../../../utils/generateSeedWithoutChecksum"
 import { NewWalletPreview, ProgressCta } from ".."
 import {

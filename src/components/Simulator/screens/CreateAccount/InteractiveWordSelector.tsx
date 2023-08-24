@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { SimulatorStateProps } from "../../../../interfaces"
+import { SimulatorStateProps } from "../../interfaces"
 import { WordList, WordSelectorButtons } from "./index"
 import { WORDS_REQUIRED } from "./constants"
 import { ProgressCta } from "../.."

@@ -8,7 +8,7 @@ import type {
   SimulatorExplanation,
   SimulatorPathSummary,
   SimulatorStateProps,
-} from "../../interfaces"
+} from "./interfaces"
 import type { PathId } from "./types"
 import { PathButton } from "."
 import ButtonLink from "../ButtonLink"
