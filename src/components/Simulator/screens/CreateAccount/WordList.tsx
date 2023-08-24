@@ -24,20 +24,20 @@ export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
     m: 0,
   } as const
   const styleVariants = {
-    display: {
+    initial: {
       rowGap: 0,
     },
   } as const
 
   const variantStyles: GridProps =
-    styleVariants[typeof wordsSelected === "undefined" ? "display" : ""] ?? {}
+    styleVariants[typeof wordsSelected === "undefined" ? "initial" : ""] ?? {}
   const styles = { ...sharedStyles, ...variantStyles } as ListProps
   const splitIndex = Math.floor(words.length / 2)
 
   const wordMapping = (word: string, index: number): React.ReactElement => {
     const initialWordDisplay = typeof wordsSelected === "undefined"
     const variant: WordStyleVariant = initialWordDisplay
-      ? "display"
+      ? "initial"
       : wordsSelected >= WORDS_REQUIRED
       ? "complete"
       : index === wordsSelected

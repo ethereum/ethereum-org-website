@@ -7,10 +7,10 @@ import {
 import React from "react"
 
 const wordStyleVariants = {
-  display: {
+  initial: {
     borderBottom: "1px",
     borderColor: "body.medium",
-    mt: 4,
+    mt: { base: 0, md: 4 },
     zIndex: 1,
   },
   complete: {
