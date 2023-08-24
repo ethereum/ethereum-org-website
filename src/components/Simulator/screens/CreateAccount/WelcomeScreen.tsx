@@ -14,6 +14,7 @@ export const WelcomeScreen: React.FC = () => (
     bg="background.highlight"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
+    transition={{ duration: 0.8 }}
   >
     <Icon as={EthGlyphIcon} color="body.base" height="190px" w="auto" my={4} />
     <Text
