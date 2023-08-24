@@ -22,11 +22,7 @@ export const Template: React.FC<IProps> = ({
   openPath,
 }) => {
   const { step } = state
-  const {
-    Screen,
-    stepDetails: { explanations },
-    nextPathId,
-  } = simulator
+  const { Screen, explanations, nextPathId } = simulator
   const explanation = explanations[step]
 
   return (

@@ -9,6 +9,7 @@ import {
 import { motion } from "framer-motion"
 import type { SimulatorStateProps } from "../../interfaces"
 import { simulatorData } from "./data"
+// TODO: Remove simulatorData import; pass data needed as props
 
 const MotionFlex = motion(Flex)
 
@@ -26,7 +27,7 @@ const DownArrowLong = motion(
 interface IProps extends SimulatorStateProps, FlexProps {}
 export const ProgressCta: React.FC<IProps> = ({ state, ...flexProps }) => {
   const { progressStepper, step, pathId } = state
-  const ctaLabel = simulatorData[pathId].stepDetails.ctaLabels[step]
+  const ctaLabel = simulatorData[pathId].ctaLabels[step]
   const transition = {
     duration: 2,
     times: [0, 0.25, 0.5],

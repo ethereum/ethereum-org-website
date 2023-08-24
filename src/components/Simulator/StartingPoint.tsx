@@ -15,7 +15,7 @@ export const StartingPoint: React.FC = () => {
   const disclosure = useDisclosure()
 
   const totalSteps: number = pathId
-    ? simulatorData[pathId].stepDetails.explanations.length
+    ? simulatorData[pathId].explanations.length
     : 0
 
   const progressStepper = (): void => {
@@ -47,21 +47,21 @@ export const StartingPoint: React.FC = () => {
       }
     : null
 
-  const nextPathSummary = useMemo<SimulatorPathSummary | null>(() => {
-    if (!pathId) return null
-    const { nextPathId } = simulatorData[pathId]
-    if (!nextPathId) return null
-    const { pathSummary } = simulatorData[nextPathId]
-    return {
-      primaryText: "Start next lesson",
-      secondaryText: pathSummary.primaryText,
-      Icon: pathSummary.Icon,
-    }
-  }, [pathId])
-
   const simulator: SimulatorDetails | null = pathId
     ? simulatorData[pathId]
     : null
+
+  const nextPathSummary = useMemo<SimulatorPathSummary | null>(() => {
+    if (!simulator) return null
+    const { nextPathId } = simulator
+    if (!nextPathId) return null
+    const { title, Icon } = simulatorData[nextPathId]
+    return {
+      primaryText: "Start next lesson",
+      secondaryText: title,
+      Icon,
+    }
+  }, [pathId])
 
   return (
     <Grid
@@ -106,13 +106,21 @@ export const StartingPoint: React.FC = () => {
           w={{ base: "min(100%, 320px)", md: "300px" }}
           minW={{ md: "300px" }}
         >
-          {Object.keys(simulatorData).map((pathId) => (
-            <PathButton
-              key={pathId}
-              pathSummary={simulatorData[pathId].pathSummary}
-              handleClick={() => openPath(pathId as PathId)}
-            />
-          ))}
+          {Object.keys(simulatorData).map((pathId) => {
+            const sim = simulatorData[pathId]
+            const pathSummary = {
+              primaryText: sim.title,
+              secondaryText: "How to?",
+              Icon: sim.Icon,
+            }
+            return (
+              <PathButton
+                key={pathId}
+                pathSummary={pathSummary}
+                handleClick={() => openPath(pathId as PathId)}
+              />
+            )
+          })}
         </Flex>
       </Flex>
       <SimulatorModal disclosure={disclosure}>

@@ -28,12 +28,11 @@ export interface SimulatorState {
 
 export interface PhoneScreenProps extends SimulatorStateProps {}
 export interface SimulatorDetails {
+  title: string
+  Icon: React.FC<IconProps>
   Screen: React.FC<PhoneScreenProps>
-  stepDetails: {
-    explanations: Array<SimulatorExplanation>
-    ctaLabels: Array<string>
-  }
-  pathSummary: SimulatorPathSummary
+  explanations: Array<SimulatorExplanation>
+  ctaLabels: Array<string>
   nextPathId?: PathId | null
 }
 
