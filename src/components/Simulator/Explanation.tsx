@@ -60,7 +60,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
       </Text>
       {/* Header and description */}
       <Text
-        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+        fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
         lineHeight={{ base: 8, md: 10 }}
         fontWeight="bold"
         mb={8}

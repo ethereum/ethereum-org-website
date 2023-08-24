@@ -15,6 +15,7 @@ export const InitialWordDisplay: React.FC<IProps> = ({ words }) => {
           lineHeight={8}
           fontWeight="bold"
           px={{ base: 4, md: 8 }}
+          mb={{ base: 0, md: 6 }}
         >
           Recovery phrase example
         </Text>
