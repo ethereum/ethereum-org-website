@@ -88,7 +88,7 @@ export const StartingPoint: React.FC = () => {
             color="body.medium"
             mb={2}
           >
-            Interactive explainer with extra long text intl
+            Interactive explainer
           </Text>
           <Text
             fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
@@ -96,7 +96,7 @@ export const StartingPoint: React.FC = () => {
             fontWeight="bold"
             m={0}
           >
-            How to use a wallet with extra long text intl
+            How to use a wallet
           </Text>
         </Flex>
         {/* Button stack for path options */}
