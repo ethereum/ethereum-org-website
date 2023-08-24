@@ -10,11 +10,7 @@ import {
   UseDisclosureReturn,
 } from "@chakra-ui/react"
 
-export interface IPropsOverlay {
-  isActive: boolean
-}
-
-export interface IProps extends ModalContentProps, Pick<ModalProps, "size"> {
+interface IProps extends ModalContentProps, Pick<ModalProps, "size"> {
   disclosure: UseDisclosureReturn
   children?: React.ReactNode
 }
@@ -36,7 +32,8 @@ export const SimulatorModal: React.FC<IProps> = ({
       <ModalOverlay bgColor="blackAlpha.700" />
 
       <ModalContent
-        p={8}
+        py={8}
+        px={{ base: 4, sm: 8 }}
         shadow="md"
         border="1px"
         borderColor="border"
