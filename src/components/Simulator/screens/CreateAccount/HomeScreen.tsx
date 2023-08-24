@@ -21,7 +21,7 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
     <Grid
       px={6}
       py={8}
-      maxW="full"
+      w="full"
       gap={5}
       templateColumns="repeat(4, 1fr)"
       {...props}
@@ -31,23 +31,36 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
         .map((_, i) => (
           <Box key={i} {...sharedIconStyles} bg="body.light" {...props} />
         ))}
-      <Grid
-        {...sharedIconStyles}
-        bg={step === 1 ? "body.base" : "none"}
-        borderStyle="dashed"
-        borderColor={step === 1 ? "transparent" : "primary.hover"}
-        boxShadow={
-          step === 1
-            ? "0 0 7px 0 #000000C0"
-            : "" /* TODO: Add shadow as token? */
-        }
-      >
-        {step === 1 ? (
-          <Icon as={EthGlyphIcon} color="background.base" height="26px" />
-        ) : (
+      {step === 1 ? (
+        <Grid
+          {...sharedIconStyles}
+          onClick={state.progressStepper}
+          cursor="pointer"
+          transition={`
+            background 0.8s ease-in-out,
+            border-color 0.8s ease-in-out,
+            box-shadow 0.8s ease-in-out
+          `}
+          bg="body.base"
+          borderColor="body.base"
+          boxShadow="0 0 7px 0 #000000C0"
+        >
+          <Icon
+            as={EthGlyphIcon}
+            color="background.base"
+            fontSize={{ base: "xl", sm: "3xl" }}
+          />
+        </Grid>
+      ) : (
+        <Grid
+          {...sharedIconStyles}
+          bg="background.base"
+          borderStyle="dashed"
+          borderColor="primary.hover"
+        >
           <Icon as={MdArrowDownward} color="primary.hover" />
-        )}
-      </Grid>
+        </Grid>
+      )}
     </Grid>
   )
 }
