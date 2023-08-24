@@ -2,9 +2,7 @@ import React from "react"
 import { Flex } from "@chakra-ui/react"
 import { Explanation, Phone } from "./"
 import type {
-  PhoneScreenProps,
   SimulatorDetails,
-  SimulatorExplanation,
   SimulatorPathSummary,
   SimulatorStateProps,
 } from "../../interfaces"

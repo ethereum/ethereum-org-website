@@ -129,7 +129,6 @@ export const simulatorData: SimulatorData = {
           header: "Thats it! Welcome to Ethereum 🎉",
           description: (
             <Flex direction="column" gap={5}>
-              <Button variant="solid">Start next lesson</Button>
               <ButtonLink variant="outline" href="/wallets/find-wallet/">
                 See a list of wallets
               </ButtonLink>
