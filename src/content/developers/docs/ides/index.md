@@ -15,6 +15,11 @@ If you're looking to fiddle with code before you [set up a local development env
 - [Docs](https://remix-ide.readthedocs.io/en/latest/#)
 - [Gitter](https://gitter.im/ethereum/remix)
 
+**[WELLDONE Code](https://docs.welldonestudio.io/)** - **_Official Remix IDE Plugin for multi-chain_**
+
+- [Docs](https://docs.welldonestudio.io/code)
+- [Help](https://support.welldonestudio.io/)
+
 **[ChainIDE](https://chainide.com/)** - **_A cloud-based multi-chain IDE_**
 
 - [Docs](https://chainide.gitbook.io/chainide-english-1/)
