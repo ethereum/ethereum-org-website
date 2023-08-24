@@ -20,7 +20,6 @@ export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
     flexDirection: "column",
     columnGap: 8,
     rowGap: 3,
-    pb: 5,
     m: 0,
   } as const
   const styleVariants = {

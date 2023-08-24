@@ -9,7 +9,7 @@ export const InitialWordDisplay: React.FC<IProps> = ({ words }) => (
   <Box bg="background.highlight">
     <Box py={8}>
       <Text
-        fontSize="2xl"
+        fontSize={{ base: "xl", md: "2xl" }}
         lineHeight={8}
         fontWeight="bold"
         px={{ base: 4, md: 8 }}

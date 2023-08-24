@@ -9,22 +9,28 @@ export const WelcomeScreen: React.FC = () => (
   <MotionFlex
     direction="column"
     alignItems="center"
-    pt={8}
+    pt={16}
     h="full"
     bg="background.highlight"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 0.8 }}
   >
-    <Icon as={EthGlyphIcon} color="body.base" height="190px" w="auto" my={4} />
+    <Icon
+      as={EthGlyphIcon}
+      color="body.base"
+      height={{ base: "110px", md: "190px" }}
+      w="auto"
+      my={4}
+    />
     <Text
       fontSize="2xl"
       textAlign="center"
       px={{ base: 4, md: 8 }}
       lineHeight={8}
     >
-      Welcome to{" "}
-      <Text as="span" fontWeight="bold">
+      Welcome to
+      <Text as="span" display="block" fontWeight="bold">
         wallet simulator
       </Text>
     </Text>

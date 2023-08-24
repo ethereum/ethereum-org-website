@@ -140,7 +140,7 @@ export const simulatorData: SimulatorData = {
     ],
     finalCtaLink: {
       label: "See a list of wallets",
-      href: "/wallets/find-wallets/",
+      href: "/wallets/find-wallet/",
     },
     nextPathId: SEND_RECEIVE,
   },

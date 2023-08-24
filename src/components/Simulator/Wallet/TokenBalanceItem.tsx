@@ -14,14 +14,14 @@ export const TokenBalanceItem: React.FC<IProps> = ({ item, ...flexProps }) => {
   return (
     <Flex gap={4} {...flexProps}>
       <Icon />
-      <Text flex={1} fontWeight="semibold">
+      <Text flex={1} fontWeight="medium">
         {name}
       </Text>
       <Box textAlign="end" lineHeight={1.5}>
-        <Text fontWeight="semibold" m={0}>
+        <Text fontWeight="medium" m={0}>
           {usdValue}
         </Text>
-        <Text fontWeight="semibold" m={0} color="body.medium">
+        <Text fontWeight="medium" m={0} color="body.medium">
           {amount} {ticker}
         </Text>
       </Box>

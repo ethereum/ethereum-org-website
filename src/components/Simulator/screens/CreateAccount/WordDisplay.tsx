@@ -10,7 +10,7 @@ const wordStyleVariants = {
   initial: {
     borderBottom: "1px",
     borderColor: "body.medium",
-    mt: { base: 0, md: 4 },
+    mt: { base: 1.5, md: 4 },
     zIndex: 1,
   },
   complete: {
