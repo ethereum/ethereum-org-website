@@ -34,7 +34,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
   )
   const isLastStep = state.step + 1 === totalSteps
   return (
-    <Flex direction="column" alignItems="start">
+    <Flex direction="column" alignItems="start" flex={1}>
       {/* Back button */}
       <Button
         variant="ghost"

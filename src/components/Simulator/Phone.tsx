@@ -3,7 +3,7 @@ import { Box, type BoxProps } from "@chakra-ui/react"
 
 interface IProps extends Pick<BoxProps, "children"> {}
 export const Phone: React.FC<IProps> = ({ children }) => (
-  <Box as="figure" minW="min(100%, 322px)" mx="auto">
+  <Box as="figure" minW="min(100%, 322px)" maxW="min(100%, 322px)" mx="auto">
     {/* Phone frame */}
     <Box
       h={{ base: 480, md: 600 }}
