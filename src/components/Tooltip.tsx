@@ -84,6 +84,16 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
                 },
               }}
             >
+              {/* This box is used as an area to keep the tooltip open when transitioning from the children content into the tooltip box content */}
+              <Box
+                as="span"
+                position="absolute"
+                bg="transparent"
+                bottom={-2}
+                left={0}
+                width="100%"
+                height={5}
+              />
               <Box
                 as="span"
                 position="absolute"
