@@ -75,7 +75,6 @@
     "./src/components/EthVideo.tsx",
     "./src/components/EventCard.tsx",
     "./src/components/ExpandableInfo.tsx",
-    "./src/components/FeedbackCard.tsx",
     "./src/components/FeedbackWidget.tsx",
     "./src/components/FileContributors.tsx",
     "./src/components/FileContributorsCrowdin.tsx",

@@ -3,13 +3,16 @@ import React, { ReactNode, useState } from "react"
 import { Flex, FlexProps, Heading } from "@chakra-ui/react"
 // Component imports
 import Button from "./Button"
-import Translation from "./Translation"
+// TODO: add Translation when i18n is set up
+// import Translation from "./Translation"
 // SVG imports
 import { FeedbackThumbsUpIcon } from "./icons"
 // Utility imports
-import { trackCustomEvent } from "../utils/matomo"
+// TODO: add trackCustomEvent when util is migrated
+// import { trackCustomEvent } from "../utils/matomo"
 // Hook imports
-import { useSurvey } from "../hooks/useSurvey"
+// TODO: add useSurvey after hook is migrated
+// import { useSurvey } from "../hooks/useSurvey"
 
 export interface IProps extends FlexProps {
   prompt?: string
@@ -22,7 +25,7 @@ const FeedbackCard: React.FC<IProps> = ({
   ...props
 }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
-  const surveyUrl = useSurvey(feedbackSubmitted)
+  // const surveyUrl = useSurvey(feedbackSubmitted)
 
   const location = typeof window !== "undefined" ? window.location.href : ""
   const isTutorial = location.includes("tutorials")
@@ -30,28 +33,38 @@ const FeedbackCard: React.FC<IProps> = ({
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {
       if (prompt) return prompt
-      if (isTutorial) return <Translation id="feedback-card-prompt-tutorial" />
-      if (isArticle) return <Translation id="feedback-card-prompt-article" />
-      return <Translation id="feedback-card-prompt-page" />
+      // TODO: add Translation when i18n is set up
+      // if (isTutorial) return <Translation id="feedback-card-prompt-tutorial" />
+      // if (isArticle) return <Translation id="feedback-card-prompt-article" />
+      // return <Translation id="feedback-card-prompt-page" />
+
+      if (isTutorial) return "Was this tutorial helpful?"
+      if (isArticle) return "Was this article helpful?"
+      return "Was this page helpful?"
     }
-    return <Translation id="feedback-widget-thank-you-title" />
+
+    // TODO: add Translation when i18n is set up
+    // return <Translation id="feedback-widget-thank-you-title" />
+    return "Thank you for your feedback!"
   }
 
   const handleSubmit = (choice: boolean): void => {
-    trackCustomEvent({
-      eventCategory: `Page is helpful feedback`,
-      eventAction: `Clicked`,
-      eventName: String(choice),
-    })
+    // TODO: add trackCustomEvent when util is migrated
+    // trackCustomEvent({
+    //   eventCategory: `Page is helpful feedback`,
+    //   eventAction: `Clicked`,
+    //   eventName: String(choice),
+    // })
     setFeedbackSubmitted(true)
   }
   const handleSurveyOpen = (): void => {
-    trackCustomEvent({
-      eventCategory: `Feedback survey opened`,
-      eventAction: `Clicked`,
-      eventName: "Feedback survey opened",
-    })
-    window && surveyUrl && window.open(surveyUrl, "_blank")
+    // TODO: add trackCustomEvent when util is migrated
+    // trackCustomEvent({
+    //   eventCategory: `Feedback survey opened`,
+    //   eventAction: `Clicked`,
+    //   eventName: "Feedback survey opened",
+    // })
+    // window && surveyUrl && window.open(surveyUrl, "_blank")
   }
   return (
     <Flex
@@ -72,8 +85,15 @@ const FeedbackCard: React.FC<IProps> = ({
         </Heading>
         {feedbackSubmitted && (
           <p>
-            <Translation id="feedback-widget-thank-you-subtitle" />{" "}
-            <Translation id="feedback-widget-thank-you-subtitle-ext" />
+            {/* TODO: add Translation when i18n is set up */}
+            Make this page even better by answering a few questions.
+            {/* <Translation id="feedback-widget-thank-you-subtitle" />{" "} */}
+            {/* <Translation id="feedback-widget-thank-you-subtitle-ext" /> */}
+            If you need help, you can reach out to the community on our{" "}
+            <a href="https://discord.gg/rZz26QWfCg\" target="_blank\">
+              Discord
+            </a>
+            .
           </p>
         )}
         <Flex gap={4}>
@@ -84,19 +104,25 @@ const FeedbackCard: React.FC<IProps> = ({
                 leftIcon={<FeedbackThumbsUpIcon />}
                 onClick={() => handleSubmit(true)}
               >
-                <Translation id="yes" />
+                {/* TODO: add Translation when i18n is set up */}
+                {/* <Translation id="yes" /> */}
+                Yes
               </Button>
               <Button
                 variant="outline-color"
                 leftIcon={<FeedbackThumbsUpIcon transform="scaleY(-1)" />}
                 onClick={() => handleSubmit(false)}
               >
-                <Translation id="no" />
+                {/* TODO: add Translation when i18n is set up */}
+                {/* <Translation id="no" /> */}
+                No
               </Button>
             </>
           ) : (
             <Button variant="outline-color" onClick={handleSurveyOpen}>
-              <Translation id="feedback-widget-thank-you-cta" />
+              {/* TODO: add Translation when i18n is set up */}
+              {/* <Translation id="feedback-widget-thank-you-cta" /> */}
+              Open short survey
             </Button>
           )}
         </Flex>
