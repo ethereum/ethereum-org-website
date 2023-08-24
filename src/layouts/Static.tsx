@@ -162,7 +162,7 @@ export const StaticLayout = ({ children }) => (
       justifyContent="space-between"
       w="full"
       // mx="auto"
-      ml={24}
+      ml={2}
       mb={16}
       p={8}
       pt={{ base: 8, lg: 16 }}
