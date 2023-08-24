@@ -15,7 +15,6 @@ interface WordListProps {
 // ?: Consider not generating
 // ?: Keep in mind translations... English only? BIP39 Langs only?
 export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
-  console.log("inside WordList")
   const sharedStyles = {
     display: "flex",
     flexDirection: "column",
@@ -36,7 +35,6 @@ export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
   const splitIndex = Math.floor(words.length / 2)
 
   const wordMapping = (word: string, index: number): React.ReactElement => {
-    console.log("inside wordMapping")
     const initialWordDisplay = typeof wordsSelected === "undefined"
     const variant: WordStyleVariant = initialWordDisplay
       ? "display"

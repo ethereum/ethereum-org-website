@@ -5,22 +5,19 @@ import { WordList } from "./index"
 interface IProps {
   words: Array<string>
 }
-export const InitialWordDisplay: React.FC<IProps> = ({ words }) => {
-  console.log("inside InitialWordDisplay")
-  return (
-    <Box bg="background.highlight">
-      <Box py={8}>
-        <Text
-          fontSize="2xl"
-          lineHeight={8}
-          fontWeight="bold"
-          px={{ base: 4, md: 8 }}
-          mb={{ base: 0, md: 6 }}
-        >
-          Recovery phrase example
-        </Text>
-      </Box>
-      <WordList words={words} />
+export const InitialWordDisplay: React.FC<IProps> = ({ words }) => (
+  <Box bg="background.highlight">
+    <Box py={8}>
+      <Text
+        fontSize="2xl"
+        lineHeight={8}
+        fontWeight="bold"
+        px={{ base: 4, md: 8 }}
+        mb={{ base: 0, md: 6 }}
+      >
+        Recovery phrase example
+      </Text>
     </Box>
-  )
-}
+    <WordList words={words} />
+  </Box>
+)

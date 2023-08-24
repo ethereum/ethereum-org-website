@@ -14,7 +14,6 @@ import {
 export const CreateAccount: React.FC<SimulatorStateProps> = ({ state }) => {
   const { step } = state
   const words = useMemo<Array<string>>(generateSeedWithoutChecksum, [])
-  console.log({ step })
   return (
     <>
       {[0, 1].includes(step) && <HomeScreen state={state} />}

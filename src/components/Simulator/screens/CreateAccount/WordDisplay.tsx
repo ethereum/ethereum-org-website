@@ -57,13 +57,10 @@ export const WordDisplay: React.FC<IProps> = ({
   children,
   variant,
   ...boxProps
-}) => {
-  console.log("inside WordDisplay")
-  return (
-    <Box {...wordStyleVariants[variant]} {...boxProps}>
-      <ListItem fontSize="sm" lineHeight={9} mb={0} listStylePos="inside">
-        {children}
-      </ListItem>
-    </Box>
-  )
-}
+}) => (
+  <Box {...wordStyleVariants[variant]} {...boxProps}>
+    <ListItem fontSize="sm" lineHeight={9} mb={0} listStylePos="inside">
+      {children}
+    </ListItem>
+  </Box>
+)
