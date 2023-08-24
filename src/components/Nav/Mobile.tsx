@@ -14,14 +14,15 @@ import {
   Flex,
 } from "@chakra-ui/react"
 import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+// import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 
 import Link from "../Link"
-import Translation from "../Translation"
+// import Translation from "../Translation"
 
 import { ISections } from "./types"
-import { ChildOnlyProp } from "../../types"
+import type { ChildOnlyProp } from "../../lib/types"
+
 import { SearchIconButton } from "../Search"
 
 const NavListItem = forwardRef<{ "aria-label"?: string }, typeof List>(
@@ -125,7 +126,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   fromPageParameter,
   drawerContainerRef,
 }) => {
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   const handleClick = (): void => {
     toggleMenu()
@@ -139,7 +140,8 @@ const MobileNavMenu: React.FC<IProps> = ({
     >
       <SearchIconButton
         onClick={toggleSearch}
-        aria-label={t("aria-toggle-search-button")}
+        // aria-label={t("aria-toggle-search-button")}
+        aria-label=""
         size="sm"
       />
       <IconButton
@@ -174,7 +176,8 @@ const MobileNavMenu: React.FC<IProps> = ({
           </Icon>
         }
         onClick={toggleMenu}
-        aria-label={t("aria-toggle-search-button")}
+        // aria-label={t("aria-toggle-search-button")}
+        aria-label=""
         variant="icon"
         size="sm"
         zIndex={2000}
@@ -268,13 +271,17 @@ const MobileNavMenu: React.FC<IProps> = ({
             >
               <Icon as={MdSearch} />
               <FooterItemText>
-                <Translation id="search" />
+                {/* TODO */}
+                {/* <Translation id="search" /> */}
+                Search
               </FooterItemText>
             </FooterItem>
             <FooterItem onClick={toggleTheme}>
               <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
               <FooterItemText>
-                <Translation id={isDarkTheme ? "light-mode" : "dark-mode"} />
+                {/* TODO */}
+                {/* <Translation id={isDarkTheme ? "light-mode" : "dark-mode"} /> */}
+                {isDarkTheme ? "light-mode" : "dark-mode"}
               </FooterItemText>
             </FooterItem>
             <FooterItem onClick={handleClick}>
@@ -292,7 +299,9 @@ const MobileNavMenu: React.FC<IProps> = ({
               >
                 <Icon as={MdLanguage} />
                 <FooterItemText>
-                  <Translation id="languages" />
+                  {/* TODO */}
+                  {/* <Translation id="languages" /> */}
+                  Languages
                 </FooterItemText>
               </Flex>
             </FooterItem>

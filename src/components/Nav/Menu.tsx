@@ -1,11 +1,11 @@
 import React from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
+// import { useI18next } from "gatsby-plugin-react-i18next"
 import { Flex, List } from "@chakra-ui/react"
 
 import NavDropdown from "./Dropdown"
-import { getDirection } from "../../utils/translations"
+// import { getDirection } from "../../utils/translations"
 
-import { Lang } from "../../utils/languages"
+// import { Lang } from "../../utils/languages"
 import { ISections } from "./types"
 
 export interface IProps {
@@ -14,8 +14,9 @@ export interface IProps {
 }
 
 const Menu: React.FC<IProps> = ({ path, sections }) => {
-  const { language } = useI18next()
-  const direction = getDirection(language as Lang)
+  // const { language } = useI18next()
+  const direction = "ltr"
+  // const direction = getDirection(language as Lang)
   const shouldShowSubNav = path.includes("/developers/")
 
   const { useEthereum, learn, ...restSections } = sections
@@ -38,7 +39,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
       </NavDropdown>
 
       <NavDropdown section={learn} hasSubNav={shouldShowSubNav}>
-        <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"}>
+        <Flex flexDir={direction === "ltr" ? "row" : "row-reverse"}>
           <Flex flexDir="column" gap={4}>
             {[start, basics].map((section, index) => (
               <List m={0} key={index}>
