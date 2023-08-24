@@ -1,8 +1,10 @@
 import {
+  Badge,
   Box,
   Divider as ChakraDivider,
   Flex,
   Heading,
+  Icon,
   Text,
   chakra,
 } from "@chakra-ui/react"
@@ -16,6 +18,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import MarkdownImage from "@/components/MarkdownImage"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import YouTube from "@/components/YouTube"
@@ -141,57 +144,70 @@ export const staticComponents = {
   hr: HR,
   img: MarkdownImage,
   li: ListItem,
+  ...mdxTableComponents,
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
   ButtonLink,
+  Badge,
   Divider,
   DocLink,
   Emoji,
   EnergyConsumptionChart,
   ExpandableCard,
+  Icon,
   InfoBanner,
   Link,
   NetworkUpgradeSummary,
   YouTube,
 }
 
-export const StaticLayout = ({ children }) => (
-  <Box w="full">
-    <Flex
-      justifyContent="space-between"
-      w="full"
-      // mx="auto"
-      ml={2}
-      mb={16}
-      p={8}
-      pt={{ base: 8, lg: 16 }}
-      // TODO: set isRightToLeft
-      // dir={isRightToLeft ? "rtl" : "ltr"}
-    >
-      <Box
-        as="article"
-        maxW="container.md"
+export const StaticLayout = ({ children }) => {
+  return (
+    <Box w="full" ml={2}>
+      <Flex
+        justifyContent="space-between"
         w="full"
-        sx={{
-          ".featured": {
-            pl: 4,
-            ml: -4,
-            borderLeft: "1px dotted",
-            borderLeftColor: "primary.base",
-          },
-
-          ".citation": {
-            p: {
-              color: "text200",
-            },
-          },
-        }}
+        mx="auto"
+        mb={16}
+        p={8}
+        pt={{ base: 8, lg: 16 }}
+        // dir={isRightToLeft ? "rtl" : "ltr"}
       >
-        {children}
+        <Box
+          as="article"
+          maxW="container.md"
+          w="full"
+          sx={{
+            ".featured": {
+              pl: 4,
+              ml: -4,
+              borderLeft: "1px dotted",
+              borderLeftColor: "primary.base",
+            },
 
-        <FeedbackCard />
-      </Box>
-    </Flex>
-  </Box>
-)
+            ".citation": {
+              p: {
+                color: "text200",
+              },
+            },
+          }}
+        >
+          <Text
+            color="text200"
+            // dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
+          >
+            {/* TODO: add Translation and remove hardcoded date  */}
+            {/* <Translation id="page-last-updated" />:{" "} */}
+            Page last updated: August 17, 2023
+            {/* {getLocaleTimestamp(language as Lang, lastUpdatedDate)} */}
+          </Text>
+
+          {children}
+
+          <FeedbackCard isArticle />
+        </Box>
+      </Flex>
+    </Box>
+  )
+}
