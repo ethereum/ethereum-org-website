@@ -53,7 +53,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Coinbase Cloud Node](https://www.coinbase.com/cloud/products/node)
 - [Documentation](https://docs.cloud.coinbase.com/node/reference/welcome-to-node)
 
-**Covalent -** **_Enriched APIs for 100+ Chains._**
+**Covalent -** **_Enriched blockchain APIs for 100+ Chains._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
 - [Documentation](https://www.covalenthq.com/docs/api/)
