@@ -18,21 +18,5 @@ export const onRenderBody = ({ setHeadComponents }: RenderBodyArgs) => {
       crossOrigin="anonymous"
       key="interFont"
     />,
-    <link
-      rel="preload"
-      href="/fonts/Inter-Regular.woff"
-      as="font"
-      type="font/woff"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/IBMPlexMono-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossOrigin="anonymous"
-      key="interFont"
-    />,
   ])
 }

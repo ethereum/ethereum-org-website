@@ -6,7 +6,7 @@ import { Box, Center, Flex, Heading, Image, Text } from "@chakra-ui/react"
 
 // Components
 import ButtonLink from "./ButtonLink"
-import Link from "./Link"
+import InlineLink from "./Link"
 
 export interface IProps {
   children?: React.ReactNode
@@ -85,19 +85,19 @@ const Layer2ProductCard: React.FC<IProps> = ({
           )}
         </Box>
         {bridge && (
-          <Link to={bridge}>
+          <InlineLink to={bridge}>
             {name} {t("layer-2-bridge")}
-          </Link>
+          </InlineLink>
         )}
         {ecosystemPortal && (
-          <Link to={ecosystemPortal}>
+          <InlineLink to={ecosystemPortal}>
             {name} {t("layer-2-ecosystem-portal")}
-          </Link>
+          </InlineLink>
         )}
         {tokenLists && (
-          <Link to={tokenLists}>
+          <InlineLink to={tokenLists}>
             {name} {t("layer-2-token-lists")}
-          </Link>
+          </InlineLink>
         )}
       </Flex>
       <Box>
