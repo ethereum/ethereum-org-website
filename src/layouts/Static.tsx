@@ -18,7 +18,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
-import { mdxTableComponents } from "../components/Table"
 import MarkdownImage from "@/components/MarkdownImage"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import YouTube from "@/components/YouTube"
@@ -144,7 +143,6 @@ export const staticComponents = {
   hr: HR,
   img: MarkdownImage,
   li: ListItem,
-  ...mdxTableComponents,
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
@@ -202,7 +200,6 @@ export const StaticLayout = ({ children }) => {
             Page last updated: August 17, 2023
             {/* {getLocaleTimestamp(language as Lang, lastUpdatedDate)} */}
           </Text>
-
           {children}
 
           <FeedbackCard isArticle />
