@@ -44,8 +44,8 @@ export const simulatorData: SimulatorData = {
           description: (
             <>
               <Text>
-                Creating an account on Ethereum is free, easy, and
-                permissionless—no documentation or proofs required!
+                Ethereum accounts do not require any permission to create—no
+                documentation or proofs required!
               </Text>
               <Text>
                 Some wallets have &quot;smart accounts&quot; which can require
