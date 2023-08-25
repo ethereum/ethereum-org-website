@@ -51,6 +51,7 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -133,6 +134,7 @@ const components = {
   ExpandableCard,
   YouTube,
   QuizWidget,
+  GlossaryTooltip,
 }
 
 const HeroContainer = (props: ChildOnlyProp) => (
@@ -490,7 +492,7 @@ export const useCasePageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["template-usecase", "learn-quizzes", "common"] }
+        ns: { in: ["template-usecase", "learn-quizzes", "common", "glossary"] }
       }
     ) {
       edges {

@@ -45,6 +45,8 @@ import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
+import GlossaryDefinition from "../components/Glossary/GlossaryDefinition"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -207,6 +209,8 @@ const components = {
   EnergyConsumptionChart,
   QuizWidget,
   UpgradeStatus,
+  GlossaryDefinition,
+  GlossaryTooltip,
 }
 
 const StaticPage = ({
@@ -327,6 +331,7 @@ export const staticPageQuery = graphql`
             "learn-quizzes"
             "page-history"
             "common"
+            "glossary"
           ]
         }
       }
