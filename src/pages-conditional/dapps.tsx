@@ -1143,11 +1143,11 @@ const DappsPage = ({
           </StepBoxContainer>
         </Row>
         <H3>
-          <Translation id="page-dapps-editors-choice-header" />{" "}
+          <Translation id="page-dapps-beginner-friendly-header" />{" "}
           <Emoji text=":+1:" />
         </H3>
         <Text>
-          <Translation id="page-dapps-editors-choice-description" />
+          <Translation id="page-dapps-beginner-friendly-description" />
         </Text>
         <StyledCardGrid>
           {editorChoices.map((choice, idx) => (
