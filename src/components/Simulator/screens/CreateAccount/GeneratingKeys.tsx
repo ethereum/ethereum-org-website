@@ -4,8 +4,6 @@ import { PiCheckThin } from "react-icons/pi"
 import { SimulatorStateProps } from "../../interfaces"
 import { motion } from "framer-motion"
 
-const MotionBox = motion(Box)
-
 interface IProps extends SimulatorStateProps {
   generateNewWords: () => void
 }
@@ -43,12 +41,20 @@ export const GeneratingKeys: React.FC<IProps> = ({
     <Grid placeItems="center" h="full" bg="background.highlight">
       <Flex direction="column" alignItems="center" pt={8} gap={4}>
         {loading ? (
-          <Spinner w={ICON_SIZE} h={ICON_SIZE} />
+          <motion.div
+            key="spinner"
+            initial={{ x: -200 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.25 }}
+          >
+            <Spinner w={ICON_SIZE} h={ICON_SIZE} />
+          </motion.div>
         ) : (
-          <MotionBox
+          <motion.div
+            key="checkmark"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ type: "spring" }}
+            transition={{ type: "spring", delay: 0.25 }}
           >
             <Icon
               as={PiCheckThin}
@@ -56,8 +62,9 @@ export const GeneratingKeys: React.FC<IProps> = ({
               h={ICON_SIZE}
               transform="rotate(-10deg)"
             />
-          </MotionBox>
+          </motion.div>
         )}
+
         <Text textAlign="center" px={{ base: 4, md: 8 }}>
           {loading ? "Generating your recovery phrase" : "Account created"}
         </Text>
