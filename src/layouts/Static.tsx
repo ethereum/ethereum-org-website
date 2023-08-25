@@ -19,7 +19,9 @@ import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownTable from "@/components/MarkdownTable"
 import MarkdownImage from "@/components/MarkdownImage"
+import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
 
 import type { ChildOnlyProp } from "@/lib/types"
@@ -156,7 +158,9 @@ export const staticComponents = {
   Icon,
   InfoBanner,
   Link,
+  MeetupList,
   NetworkUpgradeSummary,
+  UpcomingEventsList,
   YouTube,
 }
 
