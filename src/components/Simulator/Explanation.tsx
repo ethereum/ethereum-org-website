@@ -1,8 +1,7 @@
 import React from "react"
-import { Box, type BoxProps, Flex, Icon, Text } from "@chakra-ui/react"
-import { MdChevronLeft, MdInfoOutline } from "react-icons/md"
+import { Box, type BoxProps, Flex, Text } from "@chakra-ui/react"
+import { MdChevronLeft } from "react-icons/md"
 import Button from "../Button"
-import Tooltip from "../Tooltip"
 import type {
   LabelHref,
   SimulatorExplanation,
@@ -10,7 +9,7 @@ import type {
   SimulatorStateProps,
 } from "./interfaces"
 import type { PathId } from "./types"
-import { PathButton } from "."
+import { MoreInfoPopover, PathButton } from "."
 import ButtonLink from "../ButtonLink"
 
 interface ExplanationProps extends SimulatorStateProps {
@@ -38,7 +37,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
   )
   const isLastStep = state.step + 1 === totalSteps
   return (
-    <Flex direction="column" alignItems="start" flex={1}>
+    <Flex direction="column" alignItems="start" flex={1} zIndex={1}>
       {/* Back button */}
       <Button
         variant="ghost"
@@ -74,15 +73,14 @@ export const Explanation: React.FC<ExplanationProps> = ({
       <Description
         display={{ base: isLastStep ? "block" : "none", md: "block" }}
       />
-      <Flex
+      <Box
         display={{ base: isLastStep ? "none" : "flex", md: "none" }}
-        alignItems="center"
+        position="relative"
       >
-        <Tooltip content={<Description />}>
-          <Text as="span">More info</Text>
-          <Icon as={MdInfoOutline} size={24} />
-        </Tooltip>
-      </Flex>
+        <MoreInfoPopover>
+          <Description />
+        </MoreInfoPopover>
+      </Box>
       {/* Last step navigation buttons */}
       {isLastStep && (
         <Flex direction="column" gap={4} maxW="300px" w="full">

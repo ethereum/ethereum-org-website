@@ -14,7 +14,7 @@ export const Phone: React.FC<IProps> = ({ children }) => (
       borderRadius="3xl"
       bg="background.base"
       position="relative"
-      zIndex={1}
+      zIndex={0}
       overflow="hidden"
     >
       {children}
