@@ -314,29 +314,6 @@ const RightColumn = (props: ChildOnlyProp) => (
   <Box w="full" m={{ base: "auto 0", lg: 0 }} ml={{ lg: 8 }} {...props} />
 )
 
-const AddDapp = (props: ChildOnlyProp) => (
-  <Flex
-    direction={{ base: "column", sm: "row" }}
-    justify="space-between"
-    align={{ base: "flex-start", sm: "center" }}
-    borderRadius="base"
-    border="1px solid"
-    borderColor="border"
-    p={6}
-    mt={6}
-    {...props}
-  />
-)
-
-const AddDappButton = (props: ComponentPropsWithRef<typeof ButtonLink>) => (
-  <ButtonLink
-    variant="outline"
-    mt={{ base: 8, sm: 0 }}
-    ml={{ base: 0, md: 8 }}
-    {...props}
-  />
-)
-
 const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
   <Callout flex="1 1 416px" minH="full" mt={{ base: 48, lg: 32 }} {...props} />
 )
@@ -1428,19 +1405,6 @@ const DappsPage = ({
         )}
         {/* General content for all categories */}
         <Content>
-          <AddDapp>
-            <Box>
-              <StyledH2>
-                <Translation id="page-dapps-add-title" />
-              </StyledH2>
-              <Text mb={0} mr={4}>
-                <Translation id="listing-policy-disclaimer" />{" "}
-              </Text>
-            </Box>
-            <AddDappButton to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.yaml&title=">
-              <Translation id="page-dapps-add-button" />
-            </AddDappButton>
-          </AddDapp>
           <CenterDivider />
           {categories[selectedCategory].benefits && (
             <Box mt={12}>
