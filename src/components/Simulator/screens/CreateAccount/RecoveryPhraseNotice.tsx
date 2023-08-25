@@ -1,8 +1,13 @@
 import { Box, Text } from "@chakra-ui/react"
 import React from "react"
+import { motion } from "framer-motion"
 
+const MotionBox = motion(Box)
 export const RecoveryPhraseNotice: React.FC = () => (
-  <Box
+  <MotionBox
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.25 }}
     py={8}
     px={{ base: 4, md: 8 }}
     h="full"
@@ -20,5 +25,5 @@ export const RecoveryPhraseNotice: React.FC = () => (
     <Text>
       Wallet app providers do not have access to your account—only you do.
     </Text>
-  </Box>
+  </MotionBox>
 )

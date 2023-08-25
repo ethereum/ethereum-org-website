@@ -1,7 +1,7 @@
 import { Box, Button, Grid } from "@chakra-ui/react"
-import React from "react"
+import React, { useEffect } from "react"
 import { useMemo } from "react"
-import { WORDS_REQUIRED } from "./constants"
+import { DELAY_MULTIPLIER_MS, WORDS_REQUIRED } from "./constants"
 
 interface WordIndex {
   word: string
@@ -35,6 +35,22 @@ export const WordSelectorButtons: React.FC<IProps> = ({
     }, restRandom)
     return pseudoRandom
   }, [words])
+
+  const autocomplete = () => {
+    const interval = setInterval(() => {
+      incrementWordsSelected()
+      if (wordsSelected >= words.length) {
+        clearInterval(interval)
+      }
+    }, DELAY_MULTIPLIER_MS)
+  }
+
+  useEffect(() => {
+    if (wordsSelected === WORDS_REQUIRED) {
+      autocomplete()
+    }
+  }, [wordsSelected])
+
   const incrementWordsSelected = () => {
     setWordsSelected((prev) => prev + 1)
   }

@@ -6,7 +6,13 @@ import {
 } from "@chakra-ui/react"
 import React from "react"
 import { WordDisplay, type WordStyleVariant } from "./index"
-import { WORDS_REQUIRED } from "./constants"
+import {
+  DELAY_MULTIPLIER_MS,
+  EXTRA_DELAY_MS,
+  WORDS_REQUIRED,
+} from "./constants"
+import { motion } from "framer-motion"
+
 interface WordListProps {
   words: Array<string>
   wordsSelected?: number
@@ -37,8 +43,6 @@ export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
     const initialWordDisplay = typeof wordsSelected === "undefined"
     const variant: WordStyleVariant = initialWordDisplay
       ? "initial"
-      : wordsSelected >= WORDS_REQUIRED
-      ? "complete"
       : index === wordsSelected
       ? "active"
       : index < wordsSelected
@@ -47,6 +51,13 @@ export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
       ? "incomplete"
       : "disabled"
     const showLabel = initialWordDisplay || variant === "complete"
+
+    const getDelayFromIndex = (index: number, isInitial?: boolean): number => {
+      if (isInitial) return index * DELAY_MULTIPLIER_MS
+      if (index < WORDS_REQUIRED) return 0
+      return index * DELAY_MULTIPLIER_MS + EXTRA_DELAY_MS
+    }
+    const numToMsString = (x: number): string => `${x}ms`
     return (
       <WordDisplay
         key={word + index}
@@ -56,9 +67,35 @@ export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
           background-color 1s ease-in-out,
           border-color 1s ease-in-out
         `}
-        transitionDelay={`${index * 100}ms`}
+        transitionDelay={numToMsString(getDelayFromIndex(index))}
+        position="relative"
       >
-        {showLabel && word}
+        {showLabel && (
+          <>
+            <motion.span
+              initial={{ opacity: initialWordDisplay ? 1 : 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.25 }}
+            >
+              {word}
+            </motion.span>
+            {initialWordDisplay && (
+              <motion.div
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 0 }}
+                transition={{
+                  duration: 0.25,
+                  delay: getDelayFromIndex(index, true) * 1e-3,
+                }}
+                style={{
+                  position: "absolute",
+                  inset: -8,
+                  backdropFilter: "blur(2px)",
+                }}
+              />
+            )}
+          </>
+        )}
       </WordDisplay>
     )
   }

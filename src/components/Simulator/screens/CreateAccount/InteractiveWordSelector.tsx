@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { SimulatorStateProps } from "../../interfaces"
 import { WordList, WordSelectorButtons } from "./index"
-import { WORDS_REQUIRED } from "./constants"
 import { ProgressCta } from "../.."
 import { Box, Text } from "@chakra-ui/react"
 
@@ -23,7 +22,7 @@ export const InteractiveWordSelector: React.FC<IProps> = ({ state, words }) => {
         Repeat the words
       </Text>
       <WordList words={words} wordsSelected={wordsSelected} />
-      {wordsSelected < WORDS_REQUIRED ? (
+      {wordsSelected < words.length ? (
         <WordSelectorButtons
           words={words}
           wordsSelected={wordsSelected}
