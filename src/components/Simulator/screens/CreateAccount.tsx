@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import type { SimulatorStateProps } from "../interfaces"
 import { generateSeedWithoutChecksum } from "../../../utils/generateSeedWithoutChecksum"
-import { NewWalletPreview, ProgressCta } from ".."
+import { WalletHome, ProgressCta } from ".."
 import {
   GeneratingKeys,
   HomeScreen,
@@ -31,7 +31,7 @@ export const CreateAccount: React.FC<SimulatorStateProps> = ({ state }) => {
       {[6].includes(step) && (
         <InteractiveWordSelector state={state} words={words} />
       )}
-      {[7].includes(step) && <NewWalletPreview />}
+      {[7].includes(step) && <WalletHome />}
       {[0, 1, 2, 4, 5].includes(step) && (
         <ProgressCta
           state={state}
