@@ -70,17 +70,16 @@ export const Explanation: React.FC<ExplanationProps> = ({
       >
         {header}
       </Text>
-      <Description
-        display={{ base: isLastStep ? "block" : "none", md: "block" }}
-      />
-      <Box
-        display={{ base: isLastStep ? "none" : "flex", md: "none" }}
-        position="relative"
-      >
-        <MoreInfoPopover>
-          <Description />
-        </MoreInfoPopover>
-      </Box>
+      {description && (
+        <>
+          <Description display={{ base: "none", md: "block" }} />
+          <Box display={{ base: "block", md: "none" }} position="relative">
+            <MoreInfoPopover>
+              <Description />
+            </MoreInfoPopover>
+          </Box>
+        </>
+      )}
       {/* Last step navigation buttons */}
       {isLastStep && (
         <Flex direction="column" gap={4} maxW="300px" w="full">

@@ -10,7 +10,7 @@ export interface SimulatorPathSummary {
 
 export interface SimulatorExplanation {
   header: string
-  description: ReactElement
+  description: ReactElement | null
 }
 
 export interface SimulatorState {

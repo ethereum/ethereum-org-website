@@ -57,7 +57,7 @@ export const simulatorData: SimulatorData = {
       {
         header:
           "The account isn't maintained by any company, only you have access to it",
-        description: <></>,
+        description: null,
       },
       {
         header: "Use recovery phrase to keep the account safe",
@@ -126,7 +126,7 @@ export const simulatorData: SimulatorData = {
       {
         // ? Change type for header to allow components, ie. Emoji?
         header: "Thats it! Welcome to Ethereum 🎉",
-        description: <></>,
+        description: null,
       },
     ],
     ctaLabels: [
