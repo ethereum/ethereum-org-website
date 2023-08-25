@@ -133,7 +133,7 @@ export const simulatorData: SimulatorData = {
       "Install a wallet",
       "Open wallet",
       "Create account",
-      "",
+      "Next",
       "I understand",
       "Next",
       "Start using wallet",

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 import { PiCheckThin } from "react-icons/pi"
 import { SimulatorStateProps } from "../../interfaces"
 import { motion } from "framer-motion"
+import { ProgressCta } from "../.."
 
 interface IProps extends SimulatorStateProps {
   generateNewWords: () => void
@@ -12,7 +13,8 @@ export const GeneratingKeys: React.FC<IProps> = ({
   generateNewWords,
 }) => {
   const [loading, setLoading] = useState<boolean>(true)
-  const { progressStepper } = state
+  const [complete, setComplete] = useState<boolean>(false)
+
   useEffect(generateNewWords, [])
 
   // Show spinner for defined number of milliseconds, switching "loading" state to false when complete
@@ -27,10 +29,11 @@ export const GeneratingKeys: React.FC<IProps> = ({
   }, [])
 
   // After loading is complete, delay before calling progressStepper
-  const DELAY_DURATION = 1600 as const
+  const DELAY_DURATION = 1350 as const
+  const BUTTON_FADE_DURATION = 250 as const
   useEffect(() => {
     if (loading) return
-    const timeout = setTimeout(progressStepper, DELAY_DURATION)
+    const timeout = setTimeout(() => setComplete(true), DELAY_DURATION)
     return () => {
       clearTimeout(timeout)
     }
@@ -43,9 +46,9 @@ export const GeneratingKeys: React.FC<IProps> = ({
         {loading ? (
           <motion.div
             key="spinner"
-            initial={{ x: -200 }}
-            animate={{ x: 0 }}
-            transition={{ duration: 0.25 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
             <Spinner w={ICON_SIZE} h={ICON_SIZE} />
           </motion.div>
@@ -67,6 +70,15 @@ export const GeneratingKeys: React.FC<IProps> = ({
 
         <Text textAlign="center" px={{ base: 4, md: 8 }}>
           {loading ? "Generating your recovery phrase" : "Account created"}
+          {complete && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: BUTTON_FADE_DURATION * 1e-3 }}
+            >
+              <ProgressCta state={state} insetInline={0} />
+            </motion.div>
+          )}
         </Text>
       </Flex>
     </Grid>

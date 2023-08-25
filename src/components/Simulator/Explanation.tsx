@@ -82,7 +82,13 @@ export const Explanation: React.FC<ExplanationProps> = ({
       )}
       {/* Last step navigation buttons */}
       {isLastStep && (
-        <Flex direction="column" gap={4} maxW="300px" w="full">
+        <Flex
+          direction="column"
+          gap={4}
+          maxW="300px"
+          w="full"
+          mx={{ base: "auto", md: 0 }}
+        >
           {nextPathSummary && openPath && nextPathId && (
             <PathButton
               pathSummary={nextPathSummary}

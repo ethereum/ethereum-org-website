@@ -73,9 +73,12 @@ export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
         {showLabel && (
           <>
             <motion.span
-              initial={{ opacity: initialWordDisplay ? 1 : 0 }}
+              initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.25 }}
+              transition={{
+                duration: 0.25,
+                delay: initialWordDisplay ? getDelayFromIndex(index, true) : 0,
+              }}
             >
               {word}
             </motion.span>
@@ -89,7 +92,7 @@ export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
                 }}
                 style={{
                   position: "absolute",
-                  inset: -8,
+                  inset: 0,
                   backdropFilter: "blur(2px)",
                 }}
               />

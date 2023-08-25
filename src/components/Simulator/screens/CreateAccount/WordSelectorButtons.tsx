@@ -1,7 +1,8 @@
-import { Box, Button, Grid } from "@chakra-ui/react"
+import { Box, Button, Grid, Icon } from "@chakra-ui/react"
 import React, { useEffect } from "react"
 import { useMemo } from "react"
 import { DELAY_MULTIPLIER_MS, WORDS_REQUIRED } from "./constants"
+import { LiaHandPointerSolid } from "react-icons/lia"
 
 interface WordIndex {
   word: string
@@ -85,8 +86,21 @@ export const WordSelectorButtons: React.FC<IProps> = ({
               color: "body.base",
               pointerEvents: "none",
             }}
+            position="relative"
           >
-            {word}
+            <>
+              {word}
+              {index === wordsSelected && (
+                <Icon
+                  as={LiaHandPointerSolid}
+                  position="absolute"
+                  top="75%"
+                  left="65%"
+                  fill="body.base"
+                  zIndex="popover"
+                />
+              )}
+            </>
           </Button>
         ))}
       </Grid>
