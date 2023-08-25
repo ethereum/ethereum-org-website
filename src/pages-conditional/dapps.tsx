@@ -1014,7 +1014,7 @@ const DappsPage = ({
     buttons: [
       {
         content: t("page-dapps-explore-dapps-title"),
-        to: "#explore",
+        to: "#beginner",
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1119,7 +1119,7 @@ const DappsPage = ({
             </StepBox>
           </StepBoxContainer>
         </Row>
-        <H3>
+        <H3 id="beginner">
           <Translation id="page-dapps-beginner-friendly-header" />{" "}
           <Emoji text=":+1:" />
         </H3>
