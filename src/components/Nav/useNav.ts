@@ -1,168 +1,169 @@
 import { useColorMode } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+// import { useTranslation } from "gatsby-plugin-react-i18next"
 import { cloneDeep } from "lodash"
 import { useRef, useState } from "react"
 import { IItem, ISections } from "./types"
 
-import { trackCustomEvent } from "../../utils/matomo"
+// TODO: add trackCustomEvent when util is migrated
+// import { trackCustomEvent } from "../../utils/matomo"
 
 export const useNav = ({ path }: { path: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { colorMode, toggleColorMode } = useColorMode()
-  const { t, i18n } = useTranslation()
+  // const { t, i18n } = useTranslation()
 
   const isDarkTheme = colorMode === "dark"
 
   const linkSections: ISections = {
     useEthereum: {
-      text: t("use-ethereum"),
-      ariaLabel: t("use-ethereum-menu"),
+      text: "Use Ethereum", // t("use-ethereum"),
+      ariaLabel: "Use Ethereum menu", // t("use-ethereum-menu"),
       items: [
         {
-          text: t("find-wallet"),
+          text: "Find wallet", // t("find-wallet"),
           to: "/wallets/find-wallet/",
         },
         {
-          text: t("get-eth"),
+          text: "Get ETH", // t("get-eth"),
           to: "/get-eth/",
         },
         {
-          text: t("decentralized-applications-dapps"),
+          text: "Decentralized applications (dapps)", // t("decentralized-applications-dapps"),
           to: "/dapps/",
         },
         {
-          text: t("layer-2"),
+          text: "Layer 2", // t("layer-2"),
           to: "/layer-2/",
         },
         {
-          text: t("nft-page"),
+          text: "Non-fungible tokens (NFTs)", // t("nft-page"),
           to: "/nft/",
         },
         {
-          text: t("defi-page"),
+          text: "Decentralized finance (DeFi)", // t("defi-page"),
           to: "/defi/",
         },
         {
-          text: t("dao-page"),
+          text: "Decentralized autonomous organisations (DAOs)", // t("dao-page"),
           to: "/dao/",
         },
         {
-          text: t("stablecoins"),
+          text: "Stablecoins", // t("stablecoins"),
           to: "/stablecoins/",
         },
         {
-          text: t("stake-eth"),
+          text: "Stake ETH", // t("stake-eth"),
           to: "/staking/",
         },
         {
-          text: t("run-a-node"),
+          text: "Run a node", // t("run-a-node"),
           to: "/run-a-node/",
         },
         {
-          text: t("decentralized-social-networks"),
+          text: "Decentralized social networks", // t("decentralized-social-networks"),
           to: "/social-networks/",
         },
         {
-          text: t("decentralized-identity"),
+          text: "Decentralized identity", // t("decentralized-identity"),
           to: "/decentralized-identity/",
         },
         {
-          text: t("decentralized-science"),
+          text: "Decentralized science (DeSci)", // t("decentralized-science"),
           to: "/desci/",
         },
         {
-          text: t("regenerative-finance"),
+          text: "Regenerative finance (ReFi)", // t("regenerative-finance"),
           to: "/refi/",
         },
       ],
     },
     learn: {
-      text: t("learn"),
-      ariaLabel: t("learn-menu"),
+      text: "Learn", // t("learn"),
+      ariaLabel: "Learn menu", // t("learn-menu"),
       items: [
         {
-          text: t("start-here"),
+          text: "Start here", // t("start-here"),
           items: [
             {
-              text: t("learn-hub"),
+              text: "Learn Hub", // t("learn-hub"),
               to: "/learn/",
             },
             {
-              text: t("guides-hub"),
+              text: "Guides hub", // t("guides-hub"),
               to: "/guides/",
             },
           ],
         },
         {
-          text: t("ethereum-basics"),
+          text: "Ethereum basics", // t("ethereum-basics"),
           items: [
             {
-              text: t("what-is-ethereum"),
+              text: "What is Ethereum?", // t("what-is-ethereum"),
               to: "/what-is-ethereum/",
             },
             {
-              text: t("what-is-ether"),
+              text: "What is ether (ETH)?", // t("what-is-ether"),
               to: "/eth/",
             },
             {
-              text: t("ethereum-wallets"),
+              text: "Ethereum wallets", // t("ethereum-wallets"),
               to: "/wallets/",
             },
             {
-              text: t("ethereum-security"),
+              text: "Ethereum security and scam prevention", // t("ethereum-security"),
               to: "/security/",
             },
             {
-              text: t("web3"),
+              text: "What is Web3?", // t("web3"),
               to: "/web3/",
             },
             {
-              text: t("smart-contracts"),
+              text: "Smart contracts", // t("smart-contracts"),
               to: "/smart-contracts/",
             },
             {
-              text: t("quizzes-title"),
+              text: "Quiz Hub", // t("quizzes-title"),
               to: "/quizzes/",
             },
           ],
         },
         {
-          text: t("ethereum-protocol"),
+          text: "Ethereum protocol", // t("ethereum-protocol"),
           items: [
             {
-              text: t("energy-consumption"),
+              text: "Ethereum energy consumption", // t("energy-consumption"),
               to: "/energy-consumption/",
             },
             {
-              text: t("ethereum-roadmap"),
+              text: "Ethereum roadmap", // t("ethereum-roadmap"),
               to: "/roadmap/",
             },
             {
-              text: t("eips"),
+              text: "Ethereum Improvement Proposals", // t("eips"),
               to: "/eips/",
             },
             {
-              text: t("history-of-ethereum"),
+              text: "History of Ethereum", // t("history-of-ethereum"),
               to: "/history/",
             },
             {
-              text: t("ethereum-whitepaper"),
+              text: "Ethereum Whitepaper", // t("ethereum-whitepaper"),
               to: "/whitepaper/",
             },
             {
-              text: t("ethereum-glossary"),
+              text: "Ethereum glossary", // t("ethereum-glossary"),
               to: "/glossary/",
             },
             {
-              text: t("ethereum-governance"),
+              text: "Ethereum governance", // t("ethereum-governance"),
               to: "/governance/",
             },
             {
-              text: t("bridges"),
+              text: "Blockchain bridges", // t("bridges"),
               to: "/bridges/",
             },
             {
-              text: t("zero-knowledge-proofs"),
+              text: "Zero-knowledge proofs", // t("zero-knowledge-proofs"),
               to: "/zero-knowledge-proofs/",
             },
           ],
@@ -170,79 +171,79 @@ export const useNav = ({ path }: { path: string }) => {
       ],
     },
     developers: {
-      text: t("developers"),
-      ariaLabel: t("page-developers-aria-label"),
+      text: "Developers", // t("developers"),
+      ariaLabel: "Developers' Menu", // t("page-developers-aria-label"),
       items: [
         {
-          text: t("developers-home"),
+          text: "Developers' home", // t("developers-home"),
           to: "/developers/",
         },
         {
-          text: t("documentation"),
+          text: "Documentation", // t("documentation"),
           to: "/developers/docs/",
         },
         {
-          text: t("tutorials"),
+          text: "Tutorials", // t("tutorials"),
           to: "/developers/tutorials/",
         },
         {
-          text: t("learn-by-coding"),
+          text: "Learn by coding", // t("learn-by-coding"),
           to: "/developers/learning-tools/",
         },
         {
-          text: t("set-up-local-env"),
+          text: "Set up local environment", // t("set-up-local-env"),
           to: "/developers/local-environment/",
         },
       ],
     },
     enterprise: {
-      text: t("enterprise"),
-      ariaLabel: t("enterprise-menu"),
+      text: "Enterprise", // t("enterprise"),
+      ariaLabel: "Enterprise Menu", // t("enterprise-menu"),
       items: [
         {
-          text: t("mainnet-ethereum"),
+          text: "Mainnet Ethereum", // t("mainnet-ethereum"),
           to: "/enterprise/",
         },
         {
-          text: t("private-ethereum"),
+          text: "Private Ethereum", // t("private-ethereum"),
           to: "/enterprise/private-ethereum/",
         },
       ],
     },
     community: {
-      text: t("community"),
-      ariaLabel: t("community-menu"),
+      text: "Community", // t("community"),
+      ariaLabel: "Community Menu", // t("community-menu"),
       items: [
         {
-          text: t("community-hub"),
+          text: "Community hub", // t("community-hub"),
           to: "/community/",
         },
         {
-          text: t("ethereum-online"),
+          text: "Online communities", // t("ethereum-online"),
           to: "/community/online/",
         },
         {
-          text: t("ethereum-events"),
+          text: "Ethereum events", // t("ethereum-events"),
           to: "/community/events/",
         },
         {
-          text: t("get-involved"),
+          text: "Get involved", // t("get-involved"),
           to: "/community/get-involved/",
         },
         {
-          text: t("open-research"),
+          text: "Open research", // t("open-research"),
           to: "/community/research/",
         },
         {
-          text: t("grants"),
+          text: "Grants", // t("grants"),
           to: "/community/grants/",
         },
         {
-          text: t("ethereum-support"),
+          text: "Ethereum support", // t("ethereum-support"),
           to: "/community/support/",
         },
         {
-          text: t("language-resources"),
+          text: "Language resources", // t("language-resources"),
           to: "/community/language-resources/",
         },
       ],
@@ -251,24 +252,24 @@ export const useNav = ({ path }: { path: string }) => {
 
   const ednLinks: Array<IItem> = [
     {
-      text: t("home"),
+      text: "Home", // t("home"),
       to: "/developers/",
       isPartiallyActive: false,
     },
     {
-      text: t("docs"),
+      text: "Docs", // t("docs"),
       to: "/developers/docs/",
     },
     {
-      text: t("tutorials"),
+      text: "Tutorials", // t("tutorials"),
       to: "/developers/tutorials/",
     },
     {
-      text: t("learn-by-coding"),
+      text: "Learn by coding", // t("learn-by-coding"),
       to: "/developers/learning-tools/",
     },
     {
-      text: t("set-up-local-env"),
+      text: "Set up local environment", // t("set-up-local-env"),
       to: "/developers/local-environment/",
     },
   ]
@@ -292,11 +293,12 @@ export const useNav = ({ path }: { path: string }) => {
 
   const changeColorMode = () => {
     toggleColorMode()
-    trackCustomEvent({
-      eventCategory: "nav bar",
-      eventAction: "click",
-      eventName: isDarkTheme ? "light mode" : "dark mode", // This will be inverted as the state is changing
-    })
+    // TODO: add trackCustomEvent when util is migrated
+    // trackCustomEvent({
+    //   eventCategory: "nav bar",
+    //   eventAction: "click",
+    //   eventName: isDarkTheme ? "light mode" : "dark mode", // This will be inverted as the state is changing
+    // })
   }
 
   const mobileNavProps = {
@@ -311,8 +313,8 @@ export const useNav = ({ path }: { path: string }) => {
 
   return {
     toggleColorMode: changeColorMode,
-    t,
-    i18n,
+    // t,
+    // i18n,
     isDarkTheme,
     ednLinks,
     linkSections,

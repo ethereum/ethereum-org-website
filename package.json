@@ -11,8 +11,10 @@
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.0",
+    "@docsearch/react": "^3.5.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@storybook/react": "^7.3.2",
     "framer-motion": "^10.13.0",
     "gray-matter": "^4.0.3",
     "lodash.merge": "^4.6.2",

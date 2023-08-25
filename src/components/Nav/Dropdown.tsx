@@ -1,5 +1,6 @@
 import React, { useState, createRef, useContext } from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
+// TODO
+// import { useI18next } from "gatsby-plugin-react-i18next"
 import {
   Box,
   Fade,
@@ -12,10 +13,10 @@ import {
 import { MdExpandMore } from "react-icons/md"
 
 import Link, { IProps as LinkProps } from "../Link"
-
-import { useOnClickOutside } from "../../hooks/useOnClickOutside"
-import { getDirection } from "../../utils/translations"
-import { Lang } from "../../utils/languages"
+// TODO
+// import { useOnClickOutside } from "../../hooks/useOnClickOutside"
+// import { getDirection } from "../../utils/translations"
+// import { Lang } from "../../utils/languages"
 
 import { ISection } from "./types"
 
@@ -60,15 +61,18 @@ const NavDropdown: React.FC<IProps> & {
   Title: typeof Title
 } = ({ children, section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { language } = useI18next()
+  // TODO
+  // const { language } = useI18next()
   const ref = createRef<HTMLLIElement>()
 
-  const direction = getDirection(language as Lang)
+  // TODO
+  // const direction = getDirection(language as Lang)
 
   const toggle = () => setIsOpen((isOpen) => !isOpen)
   const close = () => setIsOpen(false)
 
-  useOnClickOutside(ref, () => setIsOpen(false))
+  // TODO
+  // useOnClickOutside(ref, () => setIsOpen(false))
 
   // Toggle on `enter` key
   const onKeyDownHandler = (e: React.KeyboardEvent<HTMLElement>): void => {
@@ -104,7 +108,8 @@ const NavDropdown: React.FC<IProps> & {
       >
         <Flex
           as="span"
-          dir={direction}
+          // TODO
+          // dir={direction}
           onClick={() => toggle()}
           onKeyDown={onKeyDownHandler}
           tabIndex={0}

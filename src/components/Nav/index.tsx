@@ -19,10 +19,12 @@ const Nav: FC<IProps> = ({ path }) => {
   const {
     ednLinks,
     fromPageParameter,
-    i18n,
+    // TODO
+    // i18n,
     isDarkTheme,
     shouldShowSubNav,
-    t,
+    // TODO
+    // t,
     toggleColorMode,
     linkSections,
     searchRef,
@@ -36,7 +38,8 @@ const Nav: FC<IProps> = ({ path }) => {
       <Flex
         ref={navWrapperRef}
         as="nav"
-        aria-label={t("nav-primary")}
+        // TODO
+        // aria-label={t("nav-primary")}
         bg="background.base"
         borderBottom="1px"
         borderColor="rgba(0, 0, 0, 0.1)"
@@ -53,7 +56,8 @@ const Nav: FC<IProps> = ({ path }) => {
         >
           <Link
             to="/"
-            aria-label={t("home")}
+            // TODO
+            // aria-label={t("home")}
             display="inline-flex"
             alignItems="center"
             textDecor="none"
@@ -96,9 +100,12 @@ const Nav: FC<IProps> = ({ path }) => {
                 <Icon as={MdLanguage} fontSize="2xl" />
                 <Text as="span" pl={2}>
                   <Box as="span" hideBelow="lg">
-                    {t("languages")}
+                    {/* TODO */}
+                    {/* {t("languages")} */}
+                    Languages EN
                   </Box>{" "}
-                  {i18n.language.toUpperCase()}
+                  {/* TODO */}
+                  {/* {i18n.language.toUpperCase()} */}
                 </Text>
               </ButtonLink>
             </Flex>
@@ -113,7 +120,8 @@ const Nav: FC<IProps> = ({ path }) => {
       {shouldShowSubNav && (
         <Flex
           as="nav"
-          aria-label={t("nav-developers")}
+          // TODO
+          // aria-label={t("nav-developers")}
           display={{ base: "none", lg: "flex" }}
           bg="ednBackground"
           borderBottom="1px"

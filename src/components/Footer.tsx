@@ -8,16 +8,20 @@ import {
   SimpleGrid,
   useToken,
 } from "@chakra-ui/react"
-import { graphql, useStaticQuery } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+// TODO
+// import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
 
-import { Lang } from "../utils/languages"
-import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft, TranslationKey } from "../utils/translations"
+// TODO
+// import { Lang } from "../utils/languages"
+// import { getLocaleTimestamp } from "../utils/time"
+// import { isLangRightToLeft, TranslationKey } from "../utils/translations"
+// TODO: remove TranslationKey type below
+export type TranslationKey = string
 import Link from "./Link"
-import Translation from "./Translation"
+// TODO
+// import Translation from "./Translation"
 
 const socialLinks = [
   {
@@ -57,250 +61,240 @@ export interface LinkSection {
 export interface IProps {}
 
 const Footer: React.FC<IProps> = () => {
-  const { language } = useI18next()
-  const { t } = useTranslation()
+  // const { language } = useI18next()
+  // const { t } = useTranslation()
 
-  const isPageRightToLeft = isLangRightToLeft(language as Lang)
+  // TODO
+  // const isPageRightToLeft = isLangRightToLeft(language as Lang)
+  const isPageRightToLeft = false
 
   const [medBp] = useToken("breakpoints", ["md"])
 
   const linkSections: Array<LinkSection> = [
     {
-      title: t("use-ethereum"),
+      title: "Use Ethereum", // t("use-ethereum"),
       links: [
         {
           to: "/wallets/find-wallet/",
-          text: t("find-wallet"),
+          text: "Find wallet", // t("find-wallet"),
         },
         {
           to: `/get-eth/`,
-          text: t("get-eth"),
+          text: "Get ETH", // t("get-eth"),
         },
         {
           to: `/dapps/`,
-          text: t("decentralized-applications-dapps"),
+          text: "Decentralized applications (dapps)", // t("decentralized-applications-dapps"),
         },
         {
           to: "/layer-2/",
-          text: t("layer-2"),
+          text: "Layer 2", // t("layer-2"),
         },
         {
           to: "/run-a-node/",
-          text: t("run-a-node"),
+          text: "Run a node", // t("run-a-node"),
         },
         {
           to: `/stablecoins/`,
-          text: t("stablecoins"),
+          text: "Stablecoins", // t("stablecoins"),
         },
         {
           to: `/staking/`,
-          text: t("stake-eth"),
+          text: "Stake ETH", // t("stake-eth"),
         },
       ],
     },
     {
-      title: t("learn"),
+      title: "Learn", // t("learn"),
       links: [
         {
           to: `/learn/`,
-          text: t("learn-hub"),
+          text: "Learn Hub", // t("learn-hub"),
         },
         {
           to: `/what-is-ethereum/`,
-          text: t("what-is-ethereum"),
+          text: "What is Ethereum?", // t("what-is-ethereum"),
         },
         {
           to: `/eth/`,
-          text: t("what-is-ether"),
+          text: "What is ether (ETH)?", // t("what-is-ether"),
         },
         {
           to: `/wallets/`,
-          text: t("ethereum-wallets"),
+          text: "Ethereum wallets", // t("ethereum-wallets"),
         },
         {
           to: "/security/",
-          text: t("ethereum-security"),
+          text: "Ethereum security and scam prevention", // t("ethereum-security"),
         },
         {
           to: "/web3/",
-          text: t("web3"),
+          text: "What is Web3?", // t("web3"),
         },
         {
           to: "/smart-contracts/",
-          text: t("smart-contracts"),
+          text: "Smart contracts", // t("smart-contracts"),
         },
         {
           to: "/energy-consumption/",
-          text: t("energy-consumption"),
+          text: "Ethereum energy consumption", // t("energy-consumption"),
         },
         {
           to: "/roadmap/",
-          text: t("ethereum-roadmap"),
+          text: "Ethereum roadmap", // t("ethereum-roadmap"),
         },
         {
           to: "/eips/",
-          text: t("eips"),
+          text: "Ethereum Improvement Proposals", // t("eips"),
         },
         {
           to: "/history/",
-          text: t("history-of-ethereum"),
+          text: "History of Ethereum", // t("history-of-ethereum"),
         },
         {
           to: "/whitepaper/",
-          text: t("ethereum-whitepaper"),
+          text: "Ethereum Whitepaper", // t("ethereum-whitepaper"),
         },
         {
           to: `/glossary/`,
-          text: t("ethereum-glossary"),
+          text: "Ethereum glossary", // t("ethereum-glossary"),
         },
         {
           to: "/governance/",
-          text: t("ethereum-governance"),
+          text: "Ethereum governance", // t("ethereum-governance"),
         },
         {
           to: "/bridges/",
-          text: t("bridges"),
+          text: "Blockchain bridges", // t("bridges"),
         },
         {
           to: "/zero-knowledge-proofs/",
-          text: t("zero-knowledge-proofs"),
+          text: "Zero-knowledge proofs", // t("zero-knowledge-proofs"),
         },
         {
           to: "/quizzes/",
-          text: t("quizzes-title"),
+          text: "Quiz Hub", // t("quizzes-title"),
         },
       ],
     },
     {
-      title: t("developers"),
+      title: "Developers", // t("developers"),
       links: [
         {
           to: `/developers/`,
-          text: t("get-started"),
+          text: "Get started", // t("get-started"),
           isPartiallyActive: false,
         },
         {
           to: `/developers/docs/`,
-          text: t("documentation"),
+          text: "Documentation", // t("documentation"),
         },
         {
           to: `/developers/tutorials/`,
-          text: t("tutorials"),
+          text: "Tutorials", // t("tutorials"),
         },
         {
           to: `/developers/learning-tools/`,
-          text: t("learn-by-coding"),
+          text: "Learn by coding", // t("learn-by-coding"),
         },
         {
           to: `/developers/local-environment/`,
-          text: t("set-up-local-env"),
+          text: "Set up local environment", // t("set-up-local-env"),
         },
       ],
     },
     {
-      title: t("ecosystem"),
+      title: "Ecosystem", // t("ecosystem"),
       links: [
         {
           to: `/community/`,
-          text: t("community-hub"),
+          text: "Community hub", // t("community-hub"),
         },
         {
           to: "/foundation/",
-          text: t("ethereum-foundation"),
+          text: "Ethereum Foundation", // t("ethereum-foundation"),
         },
         {
           to: "https://blog.ethereum.org/",
-          text: t("ef-blog"),
+          text: "Ethereum Foundation Blog", // t("ef-blog"),
         },
         {
           to: "https://esp.ethereum.foundation",
-          text: t("esp"),
+          text: "Ecosystem Support Program", // t("esp"),
         },
         {
           to: "/bug-bounty/",
-          text: t("ethereum-bug-bounty"),
+          text: "Ethereum bug bounty program", // t("ethereum-bug-bounty"),
         },
         {
           to: "/community/grants",
-          text: t("grant-programs"),
+          text: "Ecosystem Grant Programs", // t("grant-programs"),
         },
         {
           to: "/assets/",
-          text: t("ethereum-brand-assets"),
+          text: "Ethereum brand assets", // t("ethereum-brand-assets"),
         },
         {
           to: "https://devcon.org/",
-          text: t("devcon"),
+          text: "Devcon", // t("devcon"),
         },
       ],
     },
     {
-      title: t("enterprise"),
+      title: "Enterprise", // t("enterprise"),
       links: [
         {
           to: "/enterprise/",
-          text: t("mainnet-ethereum"),
+          text: "Mainnet Ethereum", // t("mainnet-ethereum"),
         },
         {
           to: "/enterprise/private-ethereum/",
-          text: t("private-ethereum"),
+          text: "Private Ethereum", // t("private-ethereum"),
         },
         {
           to: "/enterprise/",
-          text: t("enterprise"),
+          text: "Enterprise", // t("enterprise"),
         },
       ],
     },
     {
-      title: t("about-ethereum-org"),
+      title: "About ethereum.org", // t("about-ethereum-org"),
       links: [
         {
           to: "/about/",
-          text: t("about-us"),
+          text: "About us", // t("about-us"),
         },
         {
           to: "/about/#open-jobs",
-          text: t("jobs"),
+          text: "Jobs", // t("jobs"),
         },
         {
           to: "/contributing/",
-          text: t("contributing"),
+          text: "Contributing", // t("contributing"),
         },
         {
           to: "/languages/",
-          text: t("language-support"),
+          text: "Language support", // t("language-support"),
         },
         {
           to: "/privacy-policy/",
-          text: t("privacy-policy"),
+          text: "Privacy policy", // t("privacy-policy"),
         },
         {
           to: "/terms-of-use/",
-          text: t("terms-of-use"),
+          text: "Terms of use", // t("terms-of-use"),
         },
         {
           to: "/cookie-policy/",
-          text: t("cookie-policy"),
+          text: "Cookie policy", // t("cookie-policy"),
         },
         {
           to: "mailto:press@ethereum.org",
-          text: t("contact"),
+          text: "Contact", // t("contact"),
         },
       ],
     },
   ]
-
-  const data = useStaticQuery(graphql`
-    query {
-      allSiteBuildMetadata {
-        edges {
-          node {
-            buildTime
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Box as="footer" p="1rem 2rem">
@@ -311,11 +305,13 @@ const Footer: React.FC<IProps> = () => {
         flexWrap="wrap"
       >
         <Box color="text200">
-          <Translation id="website-last-updated" />:{" "}
-          {getLocaleTimestamp(
+          {/* TODO */}
+          {/* <Translation id="website-last-updated" />:{" "} */}
+          Website last updated: August 17, 2023
+          {/* {getLocaleTimestamp(
             language as Lang,
             data.allSiteBuildMetadata.edges[0].node.buildTime
-          )}
+          )} */}
         </Box>
         <Box my={4}>
           {socialLinks.map((link, idk) => {
@@ -361,7 +357,9 @@ const Footer: React.FC<IProps> = () => {
         {linkSections.map((section: LinkSection, idx) => (
           <Box key={idx}>
             <Heading as="h3" fontSize="sm" lineHeight="1.6" my="1.14em">
-              <Translation id={section.title} />
+              {/* TODO */}
+              {/* <Translation id={section.title} /> */}
+              {section.title}
             </Heading>
             <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
               {section.links.map((link, linkIdx) => (
