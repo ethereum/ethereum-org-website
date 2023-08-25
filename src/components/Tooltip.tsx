@@ -2,7 +2,6 @@ import React, { ReactNode, useState } from "react"
 import { Box, useColorModeValue, useToken } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 import * as utils from "../utils/isMobile"
-import { border } from "styled-system"
 
 export interface IProps {
   content: ReactNode
