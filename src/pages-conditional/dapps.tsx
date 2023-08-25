@@ -1910,7 +1910,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-dapps", "common"] }
+        ns: { in: ["page-dapps", "common", "glossary"] }
       }
     ) {
       edges {

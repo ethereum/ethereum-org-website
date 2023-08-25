@@ -1630,6 +1630,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/LadyDhaga"><img src="https://avatars.githubusercontent.com/u/106376368?v=4?s=100" width="100px;" alt="chinaman123"/><br /><sub><b>chinaman123</b></sub></a><br /><a href="#ideas-LadyDhaga" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://t.me/mevsinternet"><img src="https://avatars.githubusercontent.com/u/32142853?v=4?s=100" width="100px;" alt="Alex"/><br /><sub><b>Alex</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=z0rats" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Az0rats" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
