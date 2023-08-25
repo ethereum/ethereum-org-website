@@ -1,5 +1,6 @@
 export * from "./Explanation"
 export * from "./icons"
+export * from "./MoreInfoPopover"
 export * from "./NewWalletPreview"
 export * from "./PathButton"
 export * from "./Phone"
