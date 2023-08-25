@@ -10,6 +10,7 @@ export const TokenBalanceItem: React.FC<IProps> = ({ item, ...flexProps }) => {
   const usdValue = Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
+    notation: "compact",
   }).format(amount * usdConversion)
   return (
     <Flex gap={4} {...flexProps}>

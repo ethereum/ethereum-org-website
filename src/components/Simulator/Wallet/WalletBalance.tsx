@@ -18,7 +18,11 @@ export const WalletBalance: React.FC<IProps> = ({
       fontSize={{ base: "3xl", md: "5xl" }}
       fontWeight="bold"
     >
-      ${usdAmount}
+      {Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+        notation: "compact",
+      }).format(usdAmount)}
     </Text>
   </Box>
 )
