@@ -1,3 +1,4 @@
+import { ReactElement } from "react"
 import { ParsedUrlQuery } from "querystring"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
@@ -7,10 +8,13 @@ import path from "path"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
 
-import { StaticLayout } from "@/layouts"
+// Layouts
+import { RootLayout, StaticLayout } from "@/layouts"
 import { staticComponents as components } from "@/layouts/Static"
 
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next/types"
+// Types
+import type { GetStaticPaths, GetStaticProps } from "next/types"
+import { NextPageWithLayout } from "@/lib/types"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -60,13 +64,22 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   }
 }
 
-const ContentPage: NextPage<Props> = ({ mdxSource }) => {
+const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
   return (
-    <StaticLayout>
+    <>
       {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
       {/* @ts-ignore */}
       <MDXRemote {...mdxSource} components={components} />
-    </StaticLayout>
+    </>
+  )
+}
+
+// Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
+ContentPage.getLayout = (page: ReactElement) => {
+  return (
+    <RootLayout>
+      <StaticLayout>{page}</StaticLayout>
+    </RootLayout>
   )
 }
 
