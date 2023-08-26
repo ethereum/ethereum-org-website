@@ -23,7 +23,6 @@ import {
   formDefaultTheme,
   formLabelDefaultTheme,
   headingDefaultTheme,
-  inputDefaultTheme,
   menuDefaultTheme,
   spinnerDefaultTheme,
 } from "./components.utils"
