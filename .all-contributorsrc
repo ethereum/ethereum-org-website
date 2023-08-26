@@ -7762,7 +7762,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/9850322?v=4",
       "profile": "http://setharielgreen.com",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -10365,6 +10366,71 @@
       "profile": "https://github.com/MwitahJob",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "TucksonDev",
+      "name": "Tuckson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105675159?v=4",
+      "profile": "https://github.com/TucksonDev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Akamig",
+      "name": "Akamig",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6278999?v=4",
+      "profile": "https://twitter.com/_Akamig",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "perriefidelis",
+      "name": "Peace Ojemeh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30669761?v=4",
+      "profile": "https://github.com/perriefidelis",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "woseK",
+      "name": "woseK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110729731?v=4",
+      "profile": "https://github.com/woseK",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "gunal-123",
+      "name": "Gunal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103403219?v=4",
+      "profile": "https://github.com/gunal-123",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "LadyDhaga",
+      "name": "chinaman123",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106376368?v=4",
+      "profile": "https://github.com/LadyDhaga",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "z0rats",
+      "name": "Alex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32142853?v=4",
+      "profile": "http://t.me/mevsinternet",
+      "contributions": [
+        "doc",
+        "bug"
       ]
     }
   ],

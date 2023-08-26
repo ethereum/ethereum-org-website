@@ -21,8 +21,8 @@ import Callout from "../components/Callout"
 import Contributors from "../components/Contributors"
 import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import InlineLink from "../components/Link"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -45,6 +45,8 @@ import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
+import GlossaryDefinition from "../components/Glossary/GlossaryDefinition"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -96,6 +98,7 @@ const Header1 = (props: ChildOnlyProp) => (
       a: {
         display: "none",
       },
+      position: "inherit !important",
     }}
     {...props}
   />
@@ -168,7 +171,7 @@ const CardContainer = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: Header1,
   h2: Header2,
   h3: Header3,
@@ -177,10 +180,10 @@ const components = {
   li: ListItem,
   pre: Pre,
   hr: HR,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   MeetupList,
   RandomAppList,
-  Link,
+  Link: InlineLink,
   Logo,
   ButtonLink,
   Contributors,
@@ -206,6 +209,8 @@ const components = {
   EnergyConsumptionChart,
   QuizWidget,
   UpgradeStatus,
+  GlossaryDefinition,
+  GlossaryTooltip,
 }
 
 const StaticPage = ({
@@ -326,6 +331,7 @@ export const staticPageQuery = graphql`
             "learn-quizzes"
             "page-history"
             "common"
+            "glossary"
           ]
         }
       }

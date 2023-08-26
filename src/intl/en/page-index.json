@@ -74,5 +74,16 @@
   "page-index-tout-community-image-alt": "Illustration of a group of builders working together.",
   "page-index-nft": "The internet of assets",
   "page-index-nft-description": "Ethereum isn't just for digital money. Anything you can own can be represented, traded and put to use as non-fungible tokens (NFTs). You can tokenise your art and get royalties automatically every time it's re-sold. Or use a token for something you own to take out a loan. The possibilities are growing all the time.",
-  "page-index-nft-button": "More on NFTs"
+  "page-index-nft-button": "More on NFTs",
+  "page-index-nft-alt": "An Eth logo being displayed via hologram.",
+  "community-events-content-heading": "Join the ethereum.org community",
+  "community-events-content-1": "Join almost <strong>40 000 members</strong> on our <a href=\"/discord/\">Discord server</a>.",
+  "community-events-content-2": "Join our monthly community calls for exciting updates on Ethereum.org development and important ecosystem news. Get the chance to ask questions, share ideas, and provide feedback - it's the perfect opportunity to be part of the thriving Ethereum community.",
+  "community-events-next-event": "Next event",
+  "community-events-no-events-planned": "No events planned",
+  "community-events-upcoming-calls": "Upcoming calls",
+  "community-events-no-upcoming-calls": "No upcoming calls",
+  "community-events-previous-calls": "Previous calls",
+  "community-events-there-are-no-past-calls": "There are no past calls",
+  "community-events-add-to-calendar": "Add to calendar"
 }

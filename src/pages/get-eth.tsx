@@ -9,7 +9,7 @@ import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
 import EthPriceCard from "../components/EthPriceCard"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
@@ -206,33 +206,33 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           title={t("page-get-eth-dex")}
           description={t("page-get-eth-dex-desc")}
         >
-          <Link to="#dex">
+          <InlineLink to="#dex">
             <Translation id="page-get-eth-try-dex" />
-          </Link>
+          </InlineLink>
         </StyledCard>
         <StyledCard
           emoji=":robot:"
           title={t("page-get-eth-wallets")}
           description={t("page-get-eth-wallets-purchasing")}
         >
-          <Link to="/wallets/">
+          <InlineLink to="/wallets/">
             <Translation id="page-get-eth-wallets-link" />
-          </Link>
+          </InlineLink>
         </StyledCard>
         <Content>
           <Text>
             <Text as="em">
               <Translation id="listing-policy-disclaimer" />{" "}
-              <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+              <InlineLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                 <Translation id="listing-policy-raise-issue-link" />
-              </Link>
+              </InlineLink>
             </Text>
           </Text>
           <InfoBanner emoji=":wave:" shouldCenter mt={8}>
             <Translation id="page-get-eth-new-to-eth" />{" "}
-            <Link to="/eth/">
+            <InlineLink to="/eth/">
               <Translation id="page-get-eth-whats-eth-link" />
-            </Link>
+            </InlineLink>
           </InfoBanner>
         </Content>
       </Flex>
@@ -272,9 +272,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </Text>
           <Text>
             <Translation id="page-get-eth-dexs-desc-2" />{" "}
-            <Link to="/smart-contracts">
+            <InlineLink to="/smart-contracts">
               <Translation id="page-get-eth-smart-contract-link" />
-            </Link>
+            </InlineLink>
           </Text>
           <Text>
             <Translation id="page-get-eth-dexs-desc-3" />
@@ -346,9 +346,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           <Text>
             <Translation id="page-get-eth-protect-eth-desc" />
           </Text>
-          <Link to="/wallets/">
+          <InlineLink to="/wallets/">
             <Translation id="page-get-eth-your-address-wallet-link" />
-          </Link>
+          </InlineLink>
           <Heading
             as="h3"
             fontSize={{ base: "xl", md: "2xl" }}

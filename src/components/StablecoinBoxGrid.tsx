@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import Link, { navigate } from "./Link"
+import InlineLink, { navigate } from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { isMobile } from "../utils/isMobile"
@@ -232,7 +232,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
                 <ul>
                   {links.map((link, idx) => (
                     <li key={idx}>
-                      <Link
+                      <InlineLink
                         key={idx}
                         to={link.url}
                         color="black300"
@@ -241,7 +241,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
                         }}
                       >
                         {link.text}
-                      </Link>
+                      </InlineLink>
                     </li>
                   ))}
                 </ul>

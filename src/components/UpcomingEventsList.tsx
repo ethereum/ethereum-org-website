@@ -5,7 +5,7 @@ import { Box } from "@chakra-ui/react"
 // Components
 import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
-import Link from "./Link"
+import InlineLink from "./Link"
 import Translation from "./Translation"
 import Button from "./Button"
 
@@ -103,9 +103,9 @@ const UpcomingEventsList: React.FC<IProps> = () => {
     return (
       <InfoBanner emoji=":information_source:">
         <Translation id="page-community-upcoming-events-no-events" />{" "}
-        <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+        <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
           <Translation id="page-community-please-add-to-page" />
-        </Link>
+        </InlineLink>
       </InfoBanner>
     )
   }

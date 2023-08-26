@@ -6,7 +6,7 @@ import { Box, Center, CloseButton } from "@chakra-ui/react"
 // Components
 import BannerNotification from "./BannerNotification"
 import Emoji from "./Emoji"
-import Link from "./Link"
+import InlineLink from "./Link"
 import Translation from "./Translation"
 
 // Utils
@@ -105,9 +105,9 @@ const ReleaseBanner: React.FC<IProps> = ({ storageKey }) => {
               id={"london-upgrade-banner-released" as TranslationKey}
             />
             <Box paddingLeft="5px">
-              <Link to="/history/#london">
+              <InlineLink to="/history/#london">
                 <Translation id="learn-more" />
-              </Link>
+              </InlineLink>
             </Box>
           </>
         </BannerWrapper>
@@ -122,9 +122,9 @@ const ReleaseBanner: React.FC<IProps> = ({ storageKey }) => {
               {zeroPad(seconds, 2)}!
             </Box>
             <Box paddingLeft="5px">
-              <Link to="/history/#london">
+              <InlineLink to="/history/#london">
                 <Translation id="learn-more" />
-              </Link>
+              </InlineLink>
             </Box>
           </>
         </BannerWrapper>

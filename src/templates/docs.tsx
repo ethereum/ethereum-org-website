@@ -28,9 +28,10 @@ import Codeblock from "../components/Codeblock"
 import FeedbackCard from "../components/FeedbackCard"
 import CrowdinContributors from "../components/FileContributorsCrowdin"
 import GitHubContributors from "../components/FileContributorsGitHub"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import InlineLink from "../components/Link"
+import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -192,7 +193,7 @@ const BackToTop = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -202,9 +203,10 @@ const components = {
   ol: OrderedList,
   li: ListItem,
   pre: Codeblock,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   ButtonLink,
   InfoBanner,
+  GlossaryTooltip,
   Card,
   Divider,
   SectionNav,
@@ -307,7 +309,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-developers-docs", "common"] }
+        ns: { in: ["page-developers-docs", "common", "glossary"] }
       }
     ) {
       edges {
