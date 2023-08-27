@@ -87,6 +87,7 @@ export const WordSelectorButtons: React.FC<IProps> = ({
               pointerEvents: "none",
             }}
             position="relative"
+            data-group
           >
             <>
               {word}
@@ -98,6 +99,8 @@ export const WordSelectorButtons: React.FC<IProps> = ({
                   left="65%"
                   fill="body.base"
                   zIndex="popover"
+                  transition="opacity 0.2s"
+                  _groupHover={{ opacity: 0, transition: "opacity 0.2s" }}
                 />
               )}
             </>
