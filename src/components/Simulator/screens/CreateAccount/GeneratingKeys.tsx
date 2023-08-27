@@ -1,4 +1,4 @@
-import { Grid, Flex, Spinner, Icon, Text, Box } from "@chakra-ui/react"
+import { Grid, Flex, Spinner, Icon, Text } from "@chakra-ui/react"
 import React, { useEffect, useState } from "react"
 import { PiCheckThin } from "react-icons/pi"
 import { SimulatorStateProps } from "../../interfaces"

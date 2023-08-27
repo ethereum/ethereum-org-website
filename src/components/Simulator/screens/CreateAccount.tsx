@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import type { SimulatorStateProps } from "../interfaces"
-import { generateSeedWithoutChecksum } from "../../../utils/generateSeedWithoutChecksum"
+import { generateInvalidSafeSeed } from "../../../utils/generateSeed"
 import { WalletHome, ProgressCta } from ".."
 import {
   GeneratingKeys,
@@ -13,11 +13,9 @@ import {
 
 export const CreateAccount: React.FC<SimulatorStateProps> = ({ state }) => {
   const { step } = state
-  const [words, setWords] = useState<Array<string>>(
-    generateSeedWithoutChecksum()
-  )
+  const [words, setWords] = useState<Array<string>>(generateInvalidSafeSeed())
   const generateNewWords = () => {
-    setWords(generateSeedWithoutChecksum())
+    setWords(generateInvalidSafeSeed())
   }
   return (
     <>

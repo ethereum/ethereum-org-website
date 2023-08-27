@@ -2061,3 +2061,20 @@ export const generateSeedWithoutChecksum = (
     .fill(0)
     .map(() => words[Math.floor(Math.random() * words.length)])
 }
+
+const NON_BIP39_WORDS = {
+  en: ["fake", "none", "nope", "back", "stop", "halt", "cease"],
+}
+
+export const generateInvalidSafeSeed = (
+  length: number = 12,
+  characterLimit: number = 5
+): Array<string> => {
+  const lang = "en" as const
+  const unsafeSeed = generateSeedWithoutChecksum(length, characterLimit)
+  const trimmedSeed = unsafeSeed.slice(0, unsafeSeed.length - 1)
+  const words = NON_BIP39_WORDS[lang]
+  const randomSafeWord = words[Math.floor(Math.random() * words.length)]
+  trimmedSeed.push(randomSafeWord)
+  return trimmedSeed
+}
