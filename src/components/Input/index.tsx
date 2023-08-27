@@ -9,14 +9,27 @@ import {
 } from "@chakra-ui/react"
 import { IconType } from "react-icons/lib"
 
-interface InputProps extends ChakraInputProps {
+type RightIconType = IconType | typeof Icon
+
+type CommonProps = ChakraInputProps
+
+type NoIconProps = CommonProps & { rightIcon?: never }
+
+type WithIconProps = CommonProps & {
   /**
    * The Icon used to render `InputRightElement` on the right side of the input
    */
-  rightIcon?: IconType | typeof Icon
+  rightIcon: RightIconType
+  /**
+   * Primarily for style props to be applied to the wrapper
+   */
   inputGroupProps?: InputGroupProps
 }
 
+type InputProps = NoIconProps | WithIconProps
+
+function Input(props: NoIconProps): JSX.Element
+function Input(props: WithIconProps): JSX.Element
 function Input(props: InputProps) {
   if (props.rightIcon) {
     const { size, inputGroupProps, rightIcon: Icon, ...rest } = props
