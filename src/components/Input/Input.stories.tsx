@@ -27,8 +27,6 @@ export const Sizes: Story = {
 export const ElementVariations: Story = {
   render: () => (
     <VStack width="258px" spacing={4}>
-      <Input rightIcon={BsSlashSquare} placeholder="input text" />
-      <Input placeholder="input text" />
       <Input placeholder="input text" />
       <Input rightIcon={BsSlashSquare} placeholder="input text" />
       <Input rightIcon={BsSlashSquare} placeholder="input text" isDisabled />
