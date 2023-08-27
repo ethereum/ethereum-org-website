@@ -51,7 +51,7 @@ Your address will be the same in all Ethereum projects. You do not need to regis
 
 1. Visit any project’s website.
 2. If the project's landing page is just a static description of the project, you should be able to click on an "Open the App" button in the menu which will navigate you to the actual web app.
-3. Once you are in the app click on “Connect”
+3. Once you are in the app click on “Connect”.
 
 ![Button allowing user to connect to the website with a wallet](./connect1.png)
 
