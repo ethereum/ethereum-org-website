@@ -29,6 +29,7 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import Card from "../components/Card"
 import ButtonLink from "../components/ButtonLink"
+import InlineLink from "../components/Link"
 
 import { getImage } from "../utils/image"
 
@@ -236,9 +237,12 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                 poorly written smart contract, it will consume more gas and
                 could inadvertently cause network congestion.
               </Text>
-              <Link href="/developers/docs/gas/">
-                Want to dive deeper? Check out the developer docs.
-              </Link>
+              <Text>
+                Want to dive deeper?{" "}
+                <InlineLink to="/developers/docs/gas/">
+                  Check out the developer docs.
+                </InlineLink>
+              </Text>
             </Box>
             <GhostCard
               flex="40%"
