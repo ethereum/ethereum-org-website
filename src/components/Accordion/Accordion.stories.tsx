@@ -9,7 +9,7 @@ import {
   Box,
 } from "@chakra-ui/react"
 
-const Accordions = () => {
+const ChakraAccordion = () => {
   const { toggleColorMode } = useColorMode()
   const primary = useColorModeValue("#8282FF", "#FFE3D3")
   return (
@@ -56,4 +56,4 @@ const Accordions = () => {
     </>
   )
 }
-export default Accordions
+export default ChakraAccordion
