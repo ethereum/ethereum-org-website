@@ -243,7 +243,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                 could inadvertently cause network congestion.
               </Text>
               <Link href="/developers/docs/gas/">
-                Want to dive deeper? Check out developer docs.
+                Want to dive deeper? Check out the developer docs.
               </Link>
             </Box>
             <GhostCard
@@ -374,8 +374,10 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                 transaction.
               </Text>
               <Text>
-                You can read a detailed description of the process in the gas
-                developer docs.
+                You can read a detailed description of the process in{" "}
+                <Link href="/developers/docs/gas/">
+                  the gas developer docs.
+                </Link>
               </Text>
             </ExpandableCard>
             <ExpandableCard title="Do I need to pay gas in ETH?">
