@@ -16,7 +16,6 @@ import {
   Tbody,
   Thead,
   Table,
-  Show,
   Link,
 } from "@chakra-ui/react"
 import { ListItem, UnorderedList } from "@chakra-ui/react"
@@ -144,7 +143,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
         <Content mb={{ base: 16, md: 16, lg: 32 }} mt={16}>
           <Flex
             direction={{ base: "column", lg: "row" }}
-            align="flex-start"
+            align={{ base: "center", lg: "flex-start" }}
             w="full"
           >
             <Box flex="60%" w="full" mr={{ base: "auto", lg: 2 }}>
@@ -176,16 +175,18 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
               </Text>
             </Box>
 
-            <Show above="lg">
-              <Box flex="50%">
-                <GatsbyImage
-                  image={getImage(data.robot)!}
-                  alt=""
-                  style={{ maxHeight: "450px" }}
-                  objectFit="contain"
-                />
-              </Box>
-            </Show>
+            <Box
+              flex="50%"
+              display={["none", "none", "none", "flex"]}
+              justifyContent="center"
+              style={{ maxHeight: "450px" }}
+            >
+              <GatsbyImage
+                image={getImage(data.robot)!}
+                alt=""
+                objectFit="contain"
+              />
+            </Box>
           </Flex>
         </Content>
 
@@ -516,7 +517,7 @@ export const query = graphql`
     robot: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 600
+          height: 450
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
