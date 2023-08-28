@@ -1,6 +1,7 @@
 import React, { ComponentPropsWithRef } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   Flex,
@@ -29,9 +30,12 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import Card from "../components/Card"
 import ButtonLink from "../components/ButtonLink"
+import Callout from "../components/Callout"
 import InlineLink from "../components/Link"
+import Translation from "../components/Translation"
 
 import { getImage } from "../utils/image"
+import FeedbackCard from "../components/FeedbackCard"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
@@ -74,6 +78,8 @@ const H3 = (props: HeadingProps) => (
 )
 
 const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
+  const { t } = useTranslation()
+
   const tokens = [
     {
       emoji: "🪪",
@@ -400,7 +406,40 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
           </Box>
         </Content>
       </>
-      <Divider mb={0} />
+      <Divider />
+      <Content>
+        <Flex wrap="wrap" mx={-4}>
+          <Box
+            as={Callout}
+            flex="1 1 416px"
+            minH="full"
+            image={getImage(data.whatIsEthereum)}
+            titleKey="Use Layer 2"
+            alt=""
+            descriptionKey="Layer 2 extends Ethereum, reducing costs and increasing accessibility for decentralized applications."
+          >
+            <Box>
+              <ButtonLink to="/get-eth/">Use layer 2</ButtonLink>
+            </Box>
+          </Box>
+          <Box
+            as={Callout}
+            flex="1 1 416px"
+            minH="full"
+            image={getImage(data.doge)}
+            titleKey="page-community-explore-dapps-title"
+            alt={t("page-community-explore-dapps-alt")}
+            descriptionKey="page-community-explore-dapps-description"
+          >
+            <Box>
+              <ButtonLink to="/dapps/">
+                <Translation id="page-community-explore-dapps" />
+              </ButtonLink>
+            </Box>
+          </Box>
+        </Flex>
+      </Content>
+      <FeedbackCard />
     </Page>
   )
 }
@@ -412,7 +451,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["learn-quizzes", "common"] }
+        ns: { in: ["learn-quizzes", "page-community", "common"] }
       }
     ) {
       edges {
@@ -456,6 +495,16 @@ export const query = graphql`
       }
     }
     robot: file(relativePath: { eq: "wallet.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 600
