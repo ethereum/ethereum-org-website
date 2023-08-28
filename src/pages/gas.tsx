@@ -354,8 +354,12 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
               </Thead>
               <Tbody>
                 <Tr>
-                  <Td>Simple ETH transaction</Td>
+                  <Td>Sending ETH</Td>
                   <Td>21,000</Td>
+                </Tr>
+                <Tr>
+                  <Td>Sending an ERC-20 token</Td>
+                  <Td>65,000</Td>
                 </Tr>
                 <Tr>
                   <Td>Transferring an NFT</Td>
