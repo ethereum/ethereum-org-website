@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { SimulatorStateProps } from "../interfaces"
 import { ProgressCta, WalletHome } from "../"
-import { ReceiveEther } from "./SendReceive/index"
+import { ReceiveEther, SendEther } from "./SendReceive/index"
 import { defaultTokenBalances } from "../data"
 import { TokenBalance } from "../Wallet/interfaces"
 import axios from "axios"
@@ -11,6 +11,13 @@ const FALLBACK_ETH_PRICE = 1600 as const
 export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
   const { step } = state
   const [ethPrice, setEthPrice] = useState<number>(0)
+  const [chosenAmount, setChosenAmount] = useState<number>(0)
+
+  useEffect(() => {
+    if (step !== 2) return
+    setChosenAmount(0)
+  }, [step])
+
   useEffect(() => {
     ;(async () => {
       try {
@@ -61,7 +68,14 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
           tokenBalances={tokensWithEthBalance}
         />
       )}
-      {[1, 3, 5].includes(step) && <ProgressCta state={state} />}
+      {[3].includes(step) && (
+        <SendEther
+          state={state}
+          chosenAmount={chosenAmount}
+          setChosenAmount={setChosenAmount}
+        />
+      )}
+      {[1, 5].includes(step) && <ProgressCta state={state} />}
     </>
   )
 }
