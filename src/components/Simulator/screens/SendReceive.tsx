@@ -70,12 +70,13 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
       )}
       {[3].includes(step) && (
         <SendEther
-          state={state}
           chosenAmount={chosenAmount}
           setChosenAmount={setChosenAmount}
         />
       )}
-      {[1, 5].includes(step) && <ProgressCta state={state} />}
+      {[1, 3, 5].includes(step) && (
+        <ProgressCta state={state} isDisabled={step === 3 && !chosenAmount} />
+      )}
     </>
   )
 }

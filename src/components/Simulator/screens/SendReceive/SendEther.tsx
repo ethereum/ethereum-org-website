@@ -2,17 +2,15 @@ import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
 import { MdChevronRight } from "react-icons/md"
 import { EthTokenIcon } from "../../icons"
-import type { SimulatorStateProps } from "../../interfaces"
 
 // TODO: Pass ethPrice and ethBalance
-interface IProps extends SimulatorStateProps {
+interface IProps {
   ethPrice?: number
   ethBalance?: number
   chosenAmount: number
   setChosenAmount: (amount: number) => void
 }
 export const SendEther: React.FC<IProps> = ({
-  state,
   ethPrice = 1000,
   ethBalance = 0.5,
   chosenAmount,
@@ -134,15 +132,6 @@ export const SendEther: React.FC<IProps> = ({
             {formatAmount(amount)}
           </Button>
         ))}
-      </Flex>
-      <Flex py={10} px={6} position="absolute" w="full" bottom="0">
-        <Button
-          w="full"
-          isDisabled={chosenAmount === 0}
-          onClick={state.progressStepper}
-        >
-          Next
-        </Button>
       </Flex>
     </Box>
   )
