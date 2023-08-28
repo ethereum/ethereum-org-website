@@ -253,11 +253,55 @@ export const simulatorData: SimulatorData = {
     Screen: ConnectWeb3,
     explanations: [
       {
-        header: "Connect to Web3 header",
-        description: <Text>Connect to Web3 description</Text>,
+        header: "Explore web3: From NFTs to decentralized finance and identity",
+        description: (
+          <>
+            <Text>
+              Wallets are free apps you can download from{" "}
+              <Link href="/wallets/find-wallet/">here</Link>.
+            </Text>
+            <Text>
+              Wallets can be a mobile or desktop app, browser extension and even
+              a hardware.
+            </Text>
+          </>
+        ),
+      },
+      {
+        header:
+          "You can have a single, private login in most Ethereum based projects",
+        description: (
+          <Text>
+            The same account address will also represent your identity on many
+            different Ethereum compatible blockchains such as Arbitrum, Polygon
+            or Optimism.
+          </Text>
+        ),
+      },
+      {
+        header: "No need to share any of your personal information or e-mail",
+        description: <Text>TODO: Copy needed</Text>,
+      },
+      {
+        header:
+          "No geographical or political discrimination against who can use Ethereum services",
+        description: (
+          <>
+            <Text>You can use the same address on multiple devices.</Text>
+            <Text>
+              Wallets are technically only an interface to show you your balance
+              and to make transactions, your account isn't stored inside the
+              wallet, but on the blockchain.
+            </Text>
+          </>
+        ),
+      },
+      {
+        header: "Start your journey now",
+        description: null,
       },
     ],
-    ctaLabels: ["Coming soon™"],
+    ctaLabels: ["Connect wallet", "Connect to app", "Done", "Finished"],
   },
 }
 
