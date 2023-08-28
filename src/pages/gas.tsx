@@ -383,7 +383,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </ExpandableCard>
             <ExpandableCard title="What is gwei?">
               <Text>
-                In some wallets or gas trackers, you will see gas prices
+                In most wallets or gas trackers, you will see gas prices
                 denominated as ‘gwei’.
               </Text>
               <Text>
