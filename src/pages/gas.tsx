@@ -36,6 +36,7 @@ import Translation from "../components/Translation"
 
 import { getImage } from "../utils/image"
 import FeedbackCard from "../components/FeedbackCard"
+import InfoBanner from "../components/InfoBanner"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
@@ -139,14 +140,18 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             w="full"
           >
             <Box flex="60%" w="full" mr={{ base: "auto", lg: 2 }}>
-              <Box mb={16}>
-                <Text>
-                  Every transaction on Ethereum requires a small form of payment
-                  to process—these fees are known as ‘gas’ fee. Just like you
-                  need to pay for postage to send a letter, Ethereum requires
-                  you to pay gas fee to send a transaction.
-                </Text>
-              </Box>
+              <InfoBanner mb={8} title="Summary">
+                <UnorderedList>
+                  <ListItem>
+                    Every transaction on Ethereum requires a small form of
+                    payment to process
+                  </ListItem>
+                  <ListItem>These fees are known as ‘gas’ fee.</ListItem>
+                  <ListItem>
+                    Gas fees change based on network congestion
+                  </ListItem>
+                </UnorderedList>
+              </InfoBanner>
               <H2 mt={0}>What are gas fees?</H2>
               <Text>
                 Think of Ethereum as a large computer network where people can
@@ -166,7 +171,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                 <GatsbyImage
                   image={getImage(data.robot)!}
                   alt=""
-                  style={{ maxHeight: "400px" }}
+                  style={{ maxHeight: "450px" }}
                   objectFit="contain"
                 />
               </Box>
