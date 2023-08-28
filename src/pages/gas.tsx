@@ -196,7 +196,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             align="center"
             justify="center"
             width="full"
-            // mr={{ base: 0, lg: 8 }}
           >
             <Box w="full">
               <H2 mt={0}>How do I pay less gas?</H2>
