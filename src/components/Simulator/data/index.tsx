@@ -175,19 +175,76 @@ export const simulatorData: SimulatorData = {
         ),
       },
       {
-        header: "Send or receive digital assets from anywhere",
+        header: "Receiving tokens is as easy as sharing your address",
         description: (
           <>
+            <Text>You can use the same address on multiple devices.</Text>
             <Text>
-              Your wallet helps you manage your tokens, NFTs, and Web3 identity.
+              Wallets are technically only an interface to show you your balance
+              and to make transactions, your assets aren't stored inside the
+              wallet, but on the blockchain.
             </Text>
-            <Text>Let’s look at sending and receiving tokens on Ethereum.</Text>
-            <Text>Don't have a wallet yet? Find one here.</Text>
           </>
         ),
       },
+      {
+        header: "Lets look at how to send tokens now",
+        description: (
+          <>
+            <Text>
+              Ensure that your account has sufficient ETH to cover the
+              transaction fee, which varies depending on network conditions.
+            </Text>
+            <Text>
+              Most wallets will automatically add the suggested fee to the
+              transaction which you can then confirm.
+            </Text>
+          </>
+        ),
+      },
+      {
+        header: "Sending tokens is quick and irreversible",
+        description: (
+          <>
+            <Text>
+              Unlike with traditional banking, there are no borders, hidden fees
+              or third parties intervening and stopping your transactions.
+            </Text>
+          </>
+        ),
+      },
+      {
+        header: "You can save contacts to make it easier",
+        description: (
+          <>
+            <Text>
+              To send tokens, you only need to know recipients ethereum address.
+            </Text>
+            <Text>You can send tokens anywhere globally at any time.</Text>
+          </>
+        ),
+      },
+      {
+        header: "You will need small amount of ETH to send tokens (fee)",
+        description: (
+          <>
+            <Text>
+              Ensure that your account has sufficient ETH to cover the
+              transaction fee, which varies depending on network conditions.
+            </Text>
+            <Text>
+              Most wallets will automatically add the suggested fee to the
+              transaction which you can then confirm.
+            </Text>
+          </>
+        ),
+      },
+      {
+        header: "Thats it! You should know the basics of using a wallet  🎉",
+        description: null,
+      },
     ],
-    ctaLabels: ["Receive coins"],
+    ctaLabels: ["", "Done", "", "Next", "", "Send now"],
     nextPathId: CONNECT_WEB3,
   },
   [CONNECT_WEB3]: {
