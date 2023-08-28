@@ -53,6 +53,7 @@ type ExchangeName =
   | "shakepay"
   | "wazirx"
   | "korbit"
+  | "ramp"
 
 type WalletProviderName = "simplex" | "moonpay" | "wyre"
 
@@ -140,6 +141,7 @@ export const useEthExchanges = () => {
           wazirx
           wyre
           korbit
+          ramp
         }
       }
       timestamp: exchangesByCountryCsv {
@@ -253,6 +255,9 @@ export const useEthExchanges = () => {
         ...cardListImage
       }
       korbit: file(relativePath: { eq: "exchanges/korbit.png" }) {
+        ...cardListImage
+      }
+      ramp: file(relativePath: { eq: "exchanges/ramp.png" }) {
         ...cardListImage
       }
     }
@@ -425,6 +430,12 @@ export const useEthExchanges = () => {
       name: "Korbit",
       url: "https://korbit.co.kr",
       image: data.korbit,
+      usaExceptions: [],
+    },
+    ramp: {
+      name: "Ramp",
+      url: "https://ramp.network",
+      image: data.ramp,
       usaExceptions: [],
     },
   }
