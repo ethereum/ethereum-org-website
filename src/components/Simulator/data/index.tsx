@@ -13,7 +13,7 @@ import {
 } from "../icons"
 import { CONNECT_WEB3, CREATE_ACCOUNT, SEND_RECEIVE } from "../constants"
 import Link from "../../Link"
-import { TokenBalance } from "../Wallet/interfaces"
+import { Contact, TokenBalance } from "../Wallet/interfaces"
 
 export const simulatorData: SimulatorData = {
   [CREATE_ACCOUNT]: {
@@ -326,5 +326,20 @@ export const defaultTokenBalances: Array<TokenBalance> = [
     amount: 0,
     usdConversion: 4.5, // TODO: Fetch?
     Icon: UniTokenIcon,
+  },
+]
+
+export const CONTACTS: Array<Contact> = [
+  {
+    name: "Jacob",
+    lastAction: "Sent to 5 days ago",
+  },
+  {
+    name: "Mom",
+    lastAction: "Sent to 2 weeks ago",
+  },
+  {
+    name: "Uncle",
+    lastAction: "Sent to 1 month ago",
   },
 ]

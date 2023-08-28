@@ -7,3 +7,8 @@ export interface TokenBalance {
   usdConversion: number
   Icon: React.FC<IconProps>
 }
+
+export interface Contact {
+  name: string
+  lastAction: string
+}

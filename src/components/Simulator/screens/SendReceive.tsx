@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { SimulatorStateProps } from "../interfaces"
 import { ProgressCta, WalletHome } from "../"
-import { ReceiveEther, SendEther } from "./SendReceive/index"
+import { ReceiveEther, SendEther, SendFromContacts } from "./SendReceive/index"
 import { defaultTokenBalances } from "../data"
 import { TokenBalance } from "../Wallet/interfaces"
 import axios from "axios"
@@ -74,6 +74,7 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
           setChosenAmount={setChosenAmount}
         />
       )}
+      {[4].includes(step) && <SendFromContacts state={state} />}
       {[1, 3, 5].includes(step) && (
         <ProgressCta state={state} isDisabled={step === 3 && !chosenAmount} />
       )}
