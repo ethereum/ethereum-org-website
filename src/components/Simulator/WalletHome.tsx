@@ -3,7 +3,7 @@ import React from "react"
 import {
   SendReceiveButtons,
   TokenBalanceList,
-  TokenCategoryTabs,
+  CategoryTabs,
   WalletBalance,
 } from "./Wallet"
 import { TokenBalance } from "./Wallet/interfaces"
@@ -54,7 +54,7 @@ export const WalletHome: React.FC<IProps> = ({
         w="full"
         bg="background.highlight"
       >
-        <TokenCategoryTabs categories={["Crypto", "NFTs"]} />
+        <CategoryTabs categories={["Crypto", "NFTs"]} />
         <TokenBalanceList tokenBalances={data} />
       </Flex>
     </Flex>

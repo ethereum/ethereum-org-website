@@ -5,7 +5,7 @@ interface IProps extends FlexProps {
   categories: Array<string>
   activeIndex?: number
 }
-export const TokenCategoryTabs: React.FC<IProps> = ({
+export const CategoryTabs: React.FC<IProps> = ({
   categories,
   activeIndex = 0,
   ...flexProps
