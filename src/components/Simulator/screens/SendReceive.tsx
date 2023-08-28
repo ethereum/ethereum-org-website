@@ -1,16 +1,24 @@
 import React, { useEffect, useMemo, useState } from "react"
 import { SimulatorStateProps } from "../interfaces"
 import { ProgressCta, WalletHome } from "../"
-import { ReceiveEther, SendEther, SendFromContacts } from "./SendReceive/index"
+import {
+  ReceiveEther,
+  SendEther,
+  SendFromContacts,
+  SendSummary,
+  Success,
+} from "./SendReceive/index"
 import { defaultTokenBalances } from "../data"
 import { TokenBalance } from "../Wallet/interfaces"
 import axios from "axios"
 
 const FALLBACK_ETH_PRICE = 1600 as const
+const USD_RECEIVE_AMOUNT = 500 as const
 
 export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
   const { step } = state
-  const [ethPrice, setEthPrice] = useState<number>(0)
+  const [ethPrice, setEthPrice] = useState<number>(FALLBACK_ETH_PRICE)
+  const ethReceiveAmount = USD_RECEIVE_AMOUNT / ethPrice
   const [chosenAmount, setChosenAmount] = useState<number>(0)
 
   useEffect(() => {
@@ -41,14 +49,13 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
     })()
   }, [])
 
-  const USD_RECEIVE_AMOUNT = 500 as const
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
     () =>
       defaultTokenBalances.map((token) =>
         token.ticker === "ETH"
           ? {
               ...token,
-              amount: USD_RECEIVE_AMOUNT / ethPrice,
+              amount: ethReceiveAmount,
               usdConversion: ethPrice,
             }
           : token
@@ -71,10 +78,16 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
       {[3].includes(step) && (
         <SendEther
           chosenAmount={chosenAmount}
+          ethPrice={ethPrice}
+          ethBalance={ethReceiveAmount}
           setChosenAmount={setChosenAmount}
         />
       )}
       {[4].includes(step) && <SendFromContacts state={state} />}
+      {[5].includes(step) && (
+        <SendSummary chosenAmount={chosenAmount} ethPrice={ethPrice} />
+      )}
+      {[6].includes(step) && <Success />}
       {[1, 3, 5].includes(step) && (
         <ProgressCta state={state} isDisabled={step === 3 && !chosenAmount} />
       )}

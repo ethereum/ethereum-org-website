@@ -245,6 +245,10 @@ export const simulatorData: SimulatorData = {
       },
     ],
     ctaLabels: ["", "Done", "", "Next", "", "Send now"],
+    finalCtaLink: {
+      label: "See a list of wallets",
+      href: "/wallets/find-wallet/",
+    },
     nextPathId: CONNECT_WEB3,
   },
   [CONNECT_WEB3]: {

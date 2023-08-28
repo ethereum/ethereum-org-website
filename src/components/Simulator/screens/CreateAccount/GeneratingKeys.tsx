@@ -70,16 +70,16 @@ export const GeneratingKeys: React.FC<IProps> = ({
 
         <Text textAlign="center" px={{ base: 4, md: 8 }}>
           {loading ? "Generating your recovery phrase" : "Account created"}
-          {complete && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: BUTTON_FADE_DURATION * 1e-3 }}
-            >
-              <ProgressCta state={state} insetInline={0} />
-            </motion.div>
-          )}
         </Text>
+        {complete && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: BUTTON_FADE_DURATION * 1e-3 }}
+          >
+            <ProgressCta state={state} insetInline={0} />
+          </motion.div>
+        )}
       </Flex>
     </Grid>
   )

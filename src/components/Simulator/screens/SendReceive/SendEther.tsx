@@ -3,16 +3,15 @@ import React from "react"
 import { MdChevronRight } from "react-icons/md"
 import { EthTokenIcon } from "../../icons"
 
-// TODO: Pass ethPrice and ethBalance
 interface IProps {
-  ethPrice?: number
-  ethBalance?: number
+  ethPrice: number
+  ethBalance: number
   chosenAmount: number
   setChosenAmount: (amount: number) => void
 }
 export const SendEther: React.FC<IProps> = ({
-  ethPrice = 1000,
-  ethBalance = 0.5,
+  ethPrice,
+  ethBalance,
   chosenAmount,
   setChosenAmount,
 }) => {
@@ -25,7 +24,7 @@ export const SendEther: React.FC<IProps> = ({
 
   const usdAmount = formatDollars(ethPrice * ethBalance)
 
-  const ethAmount = Intl.NumberFormat("en", {
+  const ethAmount = new Intl.NumberFormat("en", {
     maximumFractionDigits: 5,
   }).format(ethBalance)
 
@@ -41,6 +40,9 @@ export const SendEther: React.FC<IProps> = ({
     if (amount === Infinity) return "Max"
     return formatDollars(amount)
   }
+  const formatChosenAmount = new Intl.NumberFormat("en", {
+    maximumFractionDigits: 2,
+  }).format(chosenAmount)
   return (
     <Box h="100%">
       <Box px={6} py={8}>
@@ -70,7 +72,7 @@ export const SendEther: React.FC<IProps> = ({
           color={chosenAmount > 0 ? "body.base" : "inherit"}
         >
           <Text fontSize="6xl" h="full" lineHeight="1em">
-            {chosenAmount}
+            {formatChosenAmount}
           </Text>
           <Text fontSize="3xl" lineHeight="1.4em">
             $
