@@ -20,7 +20,6 @@ import {
 } from "@chakra-ui/react"
 import { ListItem, UnorderedList } from "@chakra-ui/react"
 
-import QuizWidget from "../components/Quiz/QuizWidget"
 import Emoji from "../components/Emoji"
 import ExpandableCard from "../components/ExpandableCard"
 import GhostCard from "../components/GhostCard"
@@ -398,9 +397,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
         </Content>
       </>
       <Divider mb={0} />
-      <Box mt={0}>
-        <QuizWidget quizKey="layer-2" />
-      </Box>
     </Page>
   )
 }
