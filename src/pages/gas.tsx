@@ -4,6 +4,7 @@ import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
+  ButtonProps,
   Flex,
   Heading,
   Text,
@@ -20,6 +21,7 @@ import {
 } from "@chakra-ui/react"
 import { ListItem, UnorderedList } from "@chakra-ui/react"
 
+import Button from "../components/Button/index"
 import Emoji from "../components/Emoji"
 import ExpandableCard from "../components/ExpandableCard"
 import GhostCard from "../components/GhostCard"
@@ -30,12 +32,14 @@ import Pill from "../components/Pill"
 import Card from "../components/Card"
 import ButtonLink from "../components/ButtonLink"
 import Callout from "../components/Callout"
-import InlineLink from "../components/Link"
+import InlineLink, { BaseLink } from "../components/Link"
 import Translation from "../components/Translation"
-
-import { getImage } from "../utils/image"
 import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
+
+import { getImage } from "../utils/image"
+import { trackCustomEvent } from "../utils/matomo"
+import { ChildOnlyProp } from "../types"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
@@ -73,6 +77,82 @@ const H3 = (props: HeadingProps) => (
     as="h3"
     fontSize={{ base: "xl", m: "2xl" }}
     lineHeight={1.4}
+    {...props}
+  />
+)
+
+const Row = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    direction={{ base: "column", lg: "row" }}
+    align="flex-start"
+    {...props}
+  />
+)
+
+const StepBoxContainer = (props: ChildOnlyProp) => (
+  <Flex
+    flexWrap={{ base: "wrap", lg: "nowrap" }}
+    w="full"
+    my={4}
+    // mb={16}
+    mx={0}
+    {...props}
+  />
+)
+
+const StepBox = (props: ComponentPropsWithRef<typeof BaseLink>) => (
+  <BaseLink
+    border="1px solid"
+    borderColor="border"
+    pt={0}
+    pb={{ base: 8, md: 0 }}
+    px={8}
+    display="flex"
+    flexDirection={{ base: "column", md: "row" }}
+    justifyContent="space-between"
+    alignItems={{ base: "flex-start", md: "center" }}
+    color="text"
+    textDecor="none"
+    w="full"
+    transition="transform 0.2s"
+    _hover={{
+      bg: "ednBackground",
+      transform: "scale(1.05)",
+    }}
+    {...props}
+  />
+)
+
+const ButtonPrimary = (props: Pick<ButtonProps, "children" | "onClick">) => (
+  <Button py={2} px={3} borderRadius="0.25em" whiteSpace="nowrap" {...props} />
+)
+
+const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
+  <Button
+    variant="outline"
+    isSecondary
+    py={2}
+    px={3}
+    borderRadius="0.25em"
+    whiteSpace="nowrap"
+    {...props}
+  />
+)
+
+const StyledH3 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h3"
+    lineHeight={1.4}
+    fontSize="xl"
+    fontWeight="bold"
+    mb={2}
+    mt={6}
+    sx={{
+      a: {
+        dispalay: "none",
+      },
+    }}
     {...props}
   />
 )
@@ -203,27 +283,70 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                 While higher fees on Ethereum are sometimes inevitable, there
                 are strategies you can use to reduce the cost:
               </Text>
-              <Flex flexWrap="wrap" my={{ base: 4, lg: 0 }} gap={8}>
-                <StyledCard
-                  emoji=":alarm_clock:"
-                  title="Time your transactions"
-                  description="Just like travelling off-peak is less crowded and more affordable, Ethereum is generally cheaper to use when North America is asleep."
-                ></StyledCard>
-                <StyledCard
-                  emoji=":robot:"
-                  title="Wait for gas to go down"
-                  description="Gas prices go up and down every twelve seconds based on how congested Ethereum is. When gas prices are high, waiting just a few minutes before making a transaction could see a significant drop in what you pay."
-                ></StyledCard>
-                <StyledCard
-                  emoji=":rocket:"
-                  title="Use layer 2"
-                  description="Layer-2 chains are built atop Ethereum, offering lower fees and handling more transactions. They're a good choice to save on fees for transactions that don't need to happen on the main Ethereum network."
-                >
-                  <ButtonLink w="fit-content" to="/layer-2/">
-                    Try layer 2
-                  </ButtonLink>
-                </StyledCard>
-              </Flex>
+              <Row>
+                <StepBoxContainer>
+                  <StepBox to="/get-eth/">
+                    <Box>
+                      <StyledH3>⏰ Time your Transactions</StyledH3>
+                      <Text mr={4}>
+                        Ethereum is generally cheaper to use when North America
+                        is asleep.
+                      </Text>
+                    </Box>
+                    <ButtonSecondary
+                      onClick={() =>
+                        trackCustomEvent({
+                          eventCategory: "dapp hero buttons",
+                          eventAction: "click",
+                          eventName: "get eth",
+                        })
+                      }
+                    >
+                      See timeline
+                    </ButtonSecondary>
+                  </StepBox>
+                  <StepBox to="/wallets/find-wallet/">
+                    <Box>
+                      <StyledH3>😴 Wait for gas to go down</StyledH3>
+                      <Text mr={4}>
+                        Fee prices go up and down every 12 seconds based on how
+                        congested Ethereum is.
+                      </Text>
+                    </Box>
+                    <ButtonSecondary
+                      onClick={() =>
+                        trackCustomEvent({
+                          eventCategory: "dapp hero buttons",
+                          eventAction: "click",
+                          eventName: "find wallet",
+                        })
+                      }
+                    >
+                      Check fees
+                    </ButtonSecondary>
+                  </StepBox>
+                  <StepBox to="#explore">
+                    <Box>
+                      <StyledH3>🚀 Use Layer 2</StyledH3>
+                      <Text mr={4}>
+                        Layer-2 chains are built atop Ethereum, offering lower
+                        fees and handling more transactions.
+                      </Text>
+                    </Box>
+                    <ButtonPrimary
+                      onClick={() =>
+                        trackCustomEvent({
+                          eventCategory: "dapp hero buttons",
+                          eventAction: "click",
+                          eventName: "go",
+                        })
+                      }
+                    >
+                      Go
+                    </ButtonPrimary>
+                  </StepBox>
+                </StepBoxContainer>
+              </Row>
             </Box>
           </Flex>
         </Content>
