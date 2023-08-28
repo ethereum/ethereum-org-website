@@ -107,7 +107,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
     buttons: [
       {
         content: "What is gas?",
-        toId: "explore",
+        toId: "what-is-gas",
         matomo: {
           eventCategory: "gas hero buttons",
           eventAction: "click",
@@ -160,7 +160,9 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                   </ListItem>
                 </UnorderedList>
               </InfoBanner>
-              <H2 mt={0}>What are gas fees?</H2>
+              <H2 id="what-is-gas" mt={0}>
+                What are gas fees?
+              </H2>
               <Text>
                 Think of Ethereum as a large computer network where people can
                 do tasks like sending messages or running programs. Just like in
