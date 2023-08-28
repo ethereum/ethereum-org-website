@@ -54,8 +54,7 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
     flex="1 1 30%"
     minW="280px"
-    maxW={{ base: "full", md: "46%" }}
-    m={4}
+    maxW={{ base: "full", lg: "46%" }}
     p={6}
     {...props}
   />
@@ -183,11 +182,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                 While higher fees on Ethereum are sometimes inevitable, there
                 are strategies you can use to reduce the cost:
               </Text>
-              <Flex
-                flexWrap="wrap"
-                mx={{ base: 0, lg: 8 }}
-                my={{ base: 4, lg: 0 }}
-              >
+              <Flex flexWrap="wrap" my={{ base: 4, lg: 0 }} gap={8}>
                 <StyledCard
                   emoji=":alarm_clock:"
                   title="Time your transactions"
