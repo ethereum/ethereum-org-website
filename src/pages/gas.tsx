@@ -80,7 +80,7 @@ const H3 = (props: HeadingProps) => (
 const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
   const { t } = useTranslation()
 
-  const tokens = [
+  const benefits = [
     {
       emoji: "🪪",
       description:
@@ -300,12 +300,12 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                   processing transactions. Gas helps in many ways:
                 </Text>
               </Box>
-              {tokens.map((token, idx) => (
+              {benefits.map((benefit) => (
                 <Box minWidth="full" my={2}>
                   <HorizontalCard
-                    key={idx}
-                    emoji={token.emoji}
-                    description={token.description}
+                    key={benefit.emoji}
+                    emoji={benefit.emoji}
+                    description={benefit.description}
                     emojiSize={3}
                     align="center"
                   />
