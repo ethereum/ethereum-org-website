@@ -5,6 +5,7 @@ import {
   Flex,
   type FlexProps,
   Text,
+  ButtonProps,
 } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import type { SimulatorStateProps } from "./interfaces"
@@ -24,8 +25,15 @@ const DownArrowLong = motion(
   })
 )
 
-interface IProps extends SimulatorStateProps, FlexProps {}
-export const ProgressCta: React.FC<IProps> = ({ state, ...flexProps }) => {
+interface IProps
+  extends SimulatorStateProps,
+    FlexProps,
+    Pick<ButtonProps, "isDisabled"> {}
+export const ProgressCta: React.FC<IProps> = ({
+  state,
+  isDisabled,
+  ...flexProps
+}) => {
   const { progressStepper, step, pathId } = state
   const ctaLabel = simulatorData[pathId].ctaLabels[step]
   const transition = {
@@ -72,7 +80,7 @@ export const ProgressCta: React.FC<IProps> = ({ state, ...flexProps }) => {
           />
         </MotionFlex>
       )}
-      <Button w="full" onClick={progressStepper}>
+      <Button w="full" onClick={progressStepper} isDisabled={isDisabled}>
         {ctaLabel}
       </Button>
     </MotionFlex>
