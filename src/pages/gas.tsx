@@ -102,8 +102,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
   const heroContent = {
     title: "Network fees",
     header: "Network fees",
-    subtitle:
-      "Network fees on Ethereum are called gas. Gas is the fuel that powers Ethereum.",
     image: getImage(data.infrastructure)!,
     alt: "",
     buttons: [
@@ -128,7 +126,17 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
       {/* Hero Section */}
       <Box background="layer2Gradient" width="full">
         <Box pb={8}>
-          <PageHero content={heroContent} />
+          <PageHero
+            content={{
+              subtitle: (
+                <Box>
+                  <Text mb={0}>Network fees on Ethereum are called gas.</Text>
+                  <Text>Gas is the fuel that powers Ethereum.</Text>
+                </Box>
+              ),
+              ...heroContent,
+            }}
+          />
         </Box>
       </Box>
       <>
