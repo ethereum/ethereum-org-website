@@ -121,7 +121,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
       {/* Hero Section */}
       <Box background="layer2Gradient" width="full">
         <Box pb={8}>
-          <PageHero content={heroContent} isReverse />
+          <PageHero content={heroContent} />
         </Box>
       </Box>
       <>
