@@ -3,8 +3,17 @@ import { ListItem, Text, UnorderedList } from "@chakra-ui/react"
 import Emoji from "../../Emoji"
 import type { SimulatorData } from "../types"
 import { ConnectWeb3, CreateAccount, SendReceive } from "../screens"
-import { ConnectWeb3Icon, EthWalletIcon, WalletAppIcon } from "../icons"
+import {
+  ConnectWeb3Icon,
+  DaiTokenIcon,
+  EthTokenIcon,
+  EthWalletIcon,
+  UniTokenIcon,
+  WalletAppIcon,
+} from "../icons"
 import { CONNECT_WEB3, CREATE_ACCOUNT, SEND_RECEIVE } from "../constants"
+import Link from "../../Link"
+import { TokenBalance } from "../Wallet/interfaces"
 
 export const simulatorData: SimulatorData = {
   [CREATE_ACCOUNT]: {
@@ -150,11 +159,35 @@ export const simulatorData: SimulatorData = {
     Screen: SendReceive,
     explanations: [
       {
-        header: "Send/receive header",
-        description: <Text>Send/receive description</Text>,
+        header: "Send or receive digital assets from anywhere",
+        description: (
+          <>
+            <Text>
+              Your wallet helps you manage your tokens, NFTs, and Web3 identity.
+            </Text>
+            <Text>Let’s look at sending and receiving tokens on Ethereum.</Text>
+            <Text>
+              Don't have a wallet yet?{" "}
+              <Link href="/wallets/find-wallet/">Find one here.</Link>
+            </Text>
+            <Text>Click the "Receive" button to get your address.</Text>
+          </>
+        ),
+      },
+      {
+        header: "Send or receive digital assets from anywhere",
+        description: (
+          <>
+            <Text>
+              Your wallet helps you manage your tokens, NFTs, and Web3 identity.
+            </Text>
+            <Text>Let’s look at sending and receiving tokens on Ethereum.</Text>
+            <Text>Don't have a wallet yet? Find one here.</Text>
+          </>
+        ),
       },
     ],
-    ctaLabels: ["Coming soon™"],
+    ctaLabels: ["Receive coins"],
     nextPathId: CONNECT_WEB3,
   },
   [CONNECT_WEB3]: {
@@ -170,3 +203,27 @@ export const simulatorData: SimulatorData = {
     ctaLabels: ["Coming soon™"],
   },
 }
+
+export const defaultTokenBalances: Array<TokenBalance> = [
+  {
+    name: "Ether",
+    ticker: "ETH",
+    amount: 0,
+    usdConversion: 1600, // TODO: Fetch?
+    Icon: EthTokenIcon,
+  },
+  {
+    name: "DAI",
+    ticker: "DAI",
+    amount: 0,
+    usdConversion: 1,
+    Icon: DaiTokenIcon,
+  },
+  {
+    name: "Uniswap",
+    ticker: "UNI",
+    amount: 0,
+    usdConversion: 4.5, // TODO: Fetch?
+    Icon: UniTokenIcon,
+  },
+]

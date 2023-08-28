@@ -1,6 +1,5 @@
 import { Flex } from "@chakra-ui/react"
 import React from "react"
-import { EthTokenIcon, DaiTokenIcon, UniTokenIcon } from "./icons"
 import {
   SendReceiveButtons,
   TokenBalanceList,
@@ -8,33 +7,22 @@ import {
   WalletBalance,
 } from "./Wallet"
 import { TokenBalance } from "./Wallet/interfaces"
+import { defaultTokenBalances } from "./data"
+import type { SimulatorState } from "./interfaces"
+import type { SendReceiveEnabled } from "./Wallet/types"
 
-const tokenBalances: Array<TokenBalance> = [
-  {
-    name: "Ether",
-    ticker: "ETH",
-    amount: 0,
-    usdConversion: 1600, // TODO: Fetch?
-    Icon: EthTokenIcon,
-  },
-  {
-    name: "DAI",
-    ticker: "DAI",
-    amount: 0,
-    usdConversion: 1,
-    Icon: DaiTokenIcon,
-  },
-  {
-    name: "Uniswap",
-    ticker: "UNI",
-    amount: 0,
-    usdConversion: 4.5, // TODO: Fetch?
-    Icon: UniTokenIcon,
-  },
-]
-
-export const WalletHome: React.FC = () => {
-  const totalAmounts = tokenBalances.reduce(
+interface IProps {
+  state?: SimulatorState
+  isEnabled?: SendReceiveEnabled
+  tokenBalances?: Array<TokenBalance>
+}
+export const WalletHome: React.FC<IProps> = ({
+  state,
+  isEnabled,
+  tokenBalances,
+}) => {
+  const data: Array<TokenBalance> = tokenBalances ?? defaultTokenBalances
+  const totalAmounts = data.reduce(
     (acc, { amount, usdConversion }) => acc + amount * usdConversion,
     0
   )
@@ -55,7 +43,7 @@ export const WalletHome: React.FC = () => {
         w="full"
       >
         <WalletBalance usdAmount={totalAmounts} />
-        <SendReceiveButtons />
+        <SendReceiveButtons state={state} isEnabled={isEnabled} />
       </Flex>
       <Flex
         direction="column"
@@ -67,7 +55,7 @@ export const WalletHome: React.FC = () => {
         bg="background.highlight"
       >
         <TokenCategoryTabs categories={["Crypto", "NFTs"]} />
-        <TokenBalanceList tokenBalances={tokenBalances} />
+        <TokenBalanceList tokenBalances={data} />
       </Flex>
     </Flex>
   )
