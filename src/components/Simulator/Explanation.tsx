@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, type BoxProps, Flex, Text } from "@chakra-ui/react"
+import { Box, type BoxProps, Flex, Text, Grid } from "@chakra-ui/react"
 import { MdChevronLeft } from "react-icons/md"
 import Button from "../Button"
 import type {
@@ -37,49 +37,56 @@ export const Explanation: React.FC<ExplanationProps> = ({
   )
   const isLastStep = state.step + 1 === totalSteps
   return (
-    <Flex direction="column" alignItems="start" flex={1} zIndex={1}>
+    <Flex direction="column" flex={1} zIndex={1}>
       {/* Back button */}
       <Button
         variant="ghost"
         leftIcon={<MdChevronLeft size="18px" />}
         sx={{ paddingInlineStart: 0 }}
-        mb={8}
+        mt={{ base: -6, md: 0 }}
+        mb={{ base: 6, md: 8 }}
         onClick={step === 0 && onClose ? onClose : regressStepper}
         visibility={step === 0 && !onClose ? "hidden" : "unset"}
+        w="fit-content"
       >
         Back
       </Button>
-      {/* Step counter */}
-      <Text
-        borderRadius="base"
-        bg="background.highlight"
-        p={2}
-        lineHeight={1}
-        fontSize="xs"
-        fontWeight="bold"
-        mb={2}
-      >
-        {step + 1}/{totalSteps}
-      </Text>
-      {/* Header and description */}
-      <Text
-        fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
-        lineHeight={{ base: 8, md: 10 }}
-        fontWeight="bold"
-        mb={{ base: 4, md: 8 }}
-      >
-        {header}
-      </Text>
-      {description && (
-        <>
-          <Description display={{ base: "none", md: "block" }} />
-          <Box display={{ base: "block", md: "none" }} position="relative">
-            <MoreInfoPopover>
-              <Description />
-            </MoreInfoPopover>
-          </Box>
-        </>
-      )}
+      <Flex direction={{ base: "row", md: "column" }} gap={{ base: 3, md: 2 }}>
+        {/* Step counter */}
+        <Grid
+          placeItems="center"
+          bg="background.highlight"
+          borderRadius="lg"
+          p={2}
+          w="fit-content"
+          h="fit-content"
+          aspectRatio={1}
+          fontSize="xs"
+        >
+          <Text as="span" lineHeight={1} fontWeight="bold" m={0}>
+            {step + 1}/{totalSteps}
+          </Text>
+        </Grid>
+        {/* Header and description */}
+        <Box>
+          <Text
+            fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
+            lineHeight={{ base: 8, md: 10 }}
+            fontWeight="bold"
+            mb={{ base: 4, md: 8 }}
+          >
+            {header}
+          </Text>
+          {description && (
+            <Box display={{ base: "block", md: "none" }} position="relative">
+              <MoreInfoPopover>
+                <Description />
+              </MoreInfoPopover>
+            </Box>
+          )}
+        </Box>
+      </Flex>
+      {description && <Description display={{ base: "none", md: "block" }} />}
       {/* Last step navigation buttons */}
       {isLastStep && (
         <Flex
