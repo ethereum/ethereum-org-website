@@ -363,7 +363,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
           </Box>
           <Table maxW={"100%"} minW={"auto"}>
             <TableCaption fontSize="sm">
-              Figure 1: Gas used by transaction type
+              <i>Figure 1: Gas used by transaction type</i>
             </TableCaption>
             <Thead>
               <Tr>
