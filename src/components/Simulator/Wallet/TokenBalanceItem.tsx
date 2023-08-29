@@ -21,11 +21,14 @@ export const TokenBalanceItem: React.FC<IProps> = ({ item, ...flexProps }) => {
       <Text flex={1} fontWeight="medium">
         {name}
       </Text>
-      <Box textAlign="end" lineHeight={1.5}>
-        <Text fontWeight="medium" m={0}>
-          {usdValue}
-        </Text>
-        <Text fontWeight="medium" m={0} color="body.medium">
+      <Box
+        textAlign="end"
+        lineHeight={1.5}
+        fontWeight="bold"
+        sx={{ p: { m: 0 } }}
+      >
+        <Text>{usdValue}</Text>
+        <Text color="body.medium">
           {tokenAmount} {ticker}
         </Text>
       </Box>

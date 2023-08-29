@@ -15,8 +15,13 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
 
   return (
     <>
-      <Box py={8} px={6}>
-        <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={8}>
+      {/* Top section */}
+      <Box py={{ base: 6, md: 8 }} px={6}>
+        <Text
+          fontSize={{ base: "xl", md: "2xl" }}
+          fontWeight="bold"
+          mb={{ base: 4, md: 8 }}
+        >
           You are sending
         </Text>
         <Flex
@@ -24,12 +29,17 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
           flex={1}
           fontWeight="bold"
           color={chosenAmount > 0 ? "body.base" : "inherit"}
-          mb={2}
+          mb={{ base: 0, md: 2 }}
         >
-          <Text fontSize="6xl" h="full" lineHeight="1em" m={0}>
+          <Text
+            fontSize={{ base: "5xl", md: "6xl" }}
+            h="full"
+            lineHeight="1em"
+            m={0}
+          >
             {formatChosenAmount}
           </Text>
-          <Text fontSize="3xl" lineHeight="1.4em" m={0}>
+          <Text fontSize={{ base: "2xl", md: "3xl" }} lineHeight="1.4em" m={0}>
             $
           </Text>
         </Flex>
@@ -37,28 +47,27 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
           {formatEth(chosenAmount / ethPrice)} ETH
         </Text>
       </Box>
+      {/* Bottom section */}
       <Flex
-        py={8}
+        py={{ base: 4, md: 8 }}
         px={6}
         bg="background.highlight"
         h="full"
-        gap={6}
+        gap={{ base: 3, md: 6 }}
         direction="column"
+        sx={{ p: { m: 0 } }}
+        fontSize={{ base: "sm", md: "md" }}
       >
         <Box>
-          <Text m={0}>To</Text>
-          <Text m={0} fontWeight="bold">
-            Jacob
-          </Text>
+          <Text>To</Text>
+          <Text fontWeight="bold">Jacob</Text>
         </Box>
         <Box>
-          <Text m={0}>Arrival time</Text>
-          <Text m={0} fontWeight="bold">
-            est. about 12 seconds
-          </Text>
+          <Text>Arrival time</Text>
+          <Text fontWeight="bold">est. about 12 seconds</Text>
         </Box>
         <Box>
-          <Text m={0}>Nework fees</Text>
+          <Text>Nework fees</Text>
           <Text m={0} fontWeight="bold">
             {Intl.NumberFormat("en", {
               maximumFractionDigits: 2,

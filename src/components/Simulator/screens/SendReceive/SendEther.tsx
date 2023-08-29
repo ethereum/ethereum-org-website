@@ -50,13 +50,17 @@ export const SendEther: React.FC<IProps> = ({
           fontSize={{ base: "xl", md: "2xl" }}
           fontWeight="bold"
           color="body.medium"
+          mb={{ base: 4, md: 6 }}
         >
           Send
         </Text>
-        <Text color="body.medium">How much do you want to send?</Text>
+        <Text color="body.medium" mb={{ base: 0, md: 6 }}>
+          How much do you want to send?
+        </Text>
       </Box>
       <Flex
-        p={6}
+        px={6}
+        py={{ base: 4, md: 6 }}
         borderTop="1px"
         borderBottom="1px"
         borderColor="background.highlight"
@@ -64,7 +68,7 @@ export const SendEther: React.FC<IProps> = ({
         color="body.medium"
         fontSize="xs"
       >
-        {/* Displayed send amount */}
+        {/* Left side: Displayed send amount */}
         <Flex
           alignItems="top"
           flex={1}
@@ -78,6 +82,7 @@ export const SendEther: React.FC<IProps> = ({
             $
           </Text>
         </Flex>
+        {/* Right side */}
         <Flex direction="column" alignItems="end">
           {/* Token selector pill */}
           <Flex

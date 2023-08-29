@@ -5,6 +5,7 @@ import {
   PopoverContent,
   PopoverArrow,
   PopoverBody,
+  useBreakpointValue,
 } from "@chakra-ui/react"
 
 import React from "react"
@@ -16,6 +17,7 @@ const MotionBox = motion(Box)
 
 export const ReceiveEther = () => {
   const SPACING = 5 as const
+  const QR_SIZE = useBreakpointValue({ base: 100, md: 150 })
   return (
     <MotionBox
       initial={{ opacity: 0 }}
@@ -30,20 +32,22 @@ export const ReceiveEther = () => {
       <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold">
         Receive assets
       </Text>
-      <Text mb={SPACING}>
-        Show this QR code containing your address with others
-      </Text>
-      {/* QR Code */}
-      <Flex justify="center" mb={SPACING}>
-        <Icon
-          as={QrCodeEthereumOrg}
-          w={150}
-          h={150}
-          color="body.base"
-          p={3}
-          bg="background.base"
-          borderRadius="base"
-        />
+      <Flex direction={{ base: "row", md: "column" }} gap={SPACING}>
+        <Text m={0}>
+          Share this QR code containing your address with others
+        </Text>
+        {/* QR Code */}
+        <Flex justify="center" mb={SPACING}>
+          <Icon
+            as={QrCodeEthereumOrg}
+            w={QR_SIZE}
+            h={QR_SIZE}
+            color="body.base"
+            p={3}
+            bg="background.base"
+            borderRadius="base"
+          />
+        </Flex>
       </Flex>
       <Flex
         borderRadius="base"

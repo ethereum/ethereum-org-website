@@ -66,7 +66,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
         fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
         lineHeight={{ base: 8, md: 10 }}
         fontWeight="bold"
-        mb={8}
+        mb={{ base: 4, md: 8 }}
       >
         {header}
       </Text>
@@ -88,6 +88,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
           maxW="300px"
           w="full"
           mx={{ base: "auto", md: 0 }}
+          mt={{ base: 4, md: 16 }}
         >
           {nextPathSummary && openPath && nextPathId && (
             <PathButton

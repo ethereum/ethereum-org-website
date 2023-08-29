@@ -54,13 +54,19 @@ export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
       </AnimatePresence>
       {[3].includes(step) && (
         <Web3App bg="background.base">
-          <Box p={6} fontSize="lg">
+          <Box px={6} py={{ base: 2, md: 6 }} fontSize="lg">
             <Text fontWeight="bold" mb={2}>
               Your staked ETH
             </Text>
-            <Text>2.1824 ETH</Text>
+            <Text mb={{ base: 4, md: 6 }}>2.1824 ETH</Text>
           </Box>
-          <Box h="full" w="full" bg="background.highlight" p={6}>
+          <Box
+            h="full"
+            w="full"
+            bg="background.highlight"
+            px={6}
+            py={{ base: 4, md: 6 }}
+          >
             <Text fontWeight="bold" m={0}>
               Yearly APR
             </Text>
