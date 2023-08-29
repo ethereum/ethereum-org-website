@@ -21,7 +21,7 @@ Effective design goes beyond creating visually appealing user interfaces. It inv
 
 This is a curated list of user research done in web3 that may help with design and product decisions or work as an inspiration to conduct own study.
 
-| Area of focus               | Link to study                                              |
+| Area of focus               | Name                                              |
 | :------------------ | :------------------------------------------------------- |
 |               | [CRADL: Crypto Research and Design Lab](https://project-cradl.notion.site/Crypto-Research-and-Design-Lab-50a7127f34ed4c88ad95c7cedf7fbe36)                     |
 | `UX heuristics`             | [CRADL: UX in Cryptocurrency](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                        |
