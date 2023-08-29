@@ -27,7 +27,6 @@ import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import InlineLink from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
@@ -53,6 +52,8 @@ import StakingGuides from "../components/Staking/StakingGuides"
 import WithdrawalCredentials from "../components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "../components/Staking/WithdrawalsTabComparison"
 import Callout from "../components/Callout"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -286,7 +287,7 @@ const TableContainer = (props: BoxProps) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: InlineLink,
+  a: MdLink,
   h1: Header1,
   h2: H2,
   h3: H3,
@@ -305,6 +306,7 @@ const components = {
   DocLink,
   Emoji,
   ExpandableCard,
+  GlossaryTooltip,
   InfoBanner,
   InfoGrid,
   Logo,
@@ -472,7 +474,7 @@ export const stakingPageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-staking", "common"] }
+        ns: { in: ["page-staking", "common", "glossary"] }
       }
     ) {
       edges {
