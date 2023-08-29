@@ -141,8 +141,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
           />
         </Box>
       </Box>
-      <>
-        <Content mb={{ base: 16, md: 16, lg: 32 }} mt={16}>
+        <Content mb={{ base: 16, lg: 32 }} mt={16}>
           <Flex
             direction={{ base: "column", lg: "row" }}
             align={{ base: "center", lg: "flex-start" }}
@@ -191,7 +190,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </Box>
           </Flex>
         </Content>
-        <Content mb={{ base: 16, md: 16, lg: 32 }}>
+        <Content mb={{ base: 16, lg: 32 }}>
           <Flex
             direction={{ base: "column", lg: "row" }}
             align="center"
@@ -228,7 +227,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </Box>
           </Flex>
         </Content>
-        <Content mb={{ base: 16, md: 16, lg: 32 }}>
+        <Content mb={{ base: 16, lg: 32 }}>
           <Flex
             direction={{ base: "column", lg: "row" }}
             align="flex-start"
@@ -282,7 +281,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </GhostCard>
           </Flex>
         </Content>
-        <Content mb={{ base: 16, md: 16, lg: 32 }}>
+        <Content mb={{ base: 16, lg: 32 }}>
           <Flex
             direction={{ base: "column", lg: "row" }}
             align="flex-start"
@@ -319,7 +318,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </Box>
           </Flex>
         </Content>
-        <Content mb={{ base: 16, md: 16, lg: 32 }}>
+        <Content mb={{ base: 16, lg: 32 }}>
           <Flex direction={{ base: "column", lg: "row" }} align="flex-start">
             <Box w="full" mr={{ base: "auto", lg: 8 }}>
               <Flex alignItems="flex-start">
@@ -419,7 +418,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </ExpandableCard>
           </Box>
         </Content>
-      </>
       <Divider />
       <Content>
         <Flex wrap="wrap" mx={-4}>
@@ -453,7 +451,9 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
           </Box>
         </Flex>
       </Content>
-      <FeedbackCard />
+      <Content>
+        <FeedbackCard />
+      </Content>
     </Page>
   )
 }
