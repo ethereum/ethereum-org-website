@@ -13,6 +13,7 @@ import { Radio } from "./Radio"
 import { Select } from "./Select"
 import { Switch } from "./Switch"
 import { Input } from "./Input"
+import { Tooltip } from "./Tooltip"
 import {
   accordionDefaultTheme,
   breadcrumbDefaultTheme,
@@ -54,4 +55,5 @@ export default {
   Table,
   Tabs,
   Tag,
+  Tooltip,
 }
