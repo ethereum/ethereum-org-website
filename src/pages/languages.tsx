@@ -97,8 +97,8 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
             value={keyword}
             placeholder={searchString}
             onChange={(e) => setKeyword(e.target.value)}
-            rightElement={
-              keyword !== "" && (
+            rightIcon={
+              keyword !== "" ? (
                 <IconButton
                   icon={<MdClose />}
                   onClick={resetKeyword}
@@ -108,7 +108,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                   variant="icon"
                   _hover={{ svg: { fill: "primary" } }}
                 />
-              )
+              ) : undefined
             }
           />
         </Box>
