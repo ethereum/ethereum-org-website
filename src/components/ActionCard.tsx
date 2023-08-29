@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
-import Link from "./Link"
+import { BaseLink } from "./Link"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",
@@ -111,7 +111,7 @@ const ActionCard: React.FC<IProps> = ({
           lineHeight={1.4}
         >
           <LinkOverlay
-            as={Link}
+            as={BaseLink}
             color="text"
             hideArrow
             textDecoration="none"

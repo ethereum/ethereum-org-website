@@ -4,7 +4,7 @@ import React from "react"
 // import { TOptions } from "i18next"
 // import htmr from "htmr"
 
-import Link from "./Link"
+import InlineLink from "./Link"
 
 interface Props {
   id: string
@@ -14,7 +14,7 @@ interface Props {
 // Custom components mapping to be used by `htmr` when parsing the translation
 // text
 const transform = {
-  a: Link,
+  a: InlineLink,
 }
 
 // Renders the translation string for the given translation key `id`. It

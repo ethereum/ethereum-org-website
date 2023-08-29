@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react"
 
 // Components
-import Link from "./Link"
+import Link, { BaseLink } from "./Link"
 import Translation from "./Translation"
 
 // Utils
@@ -78,12 +78,13 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
           const { text, to } = item
 
           return to ? (
-            <Link
+            <BaseLink
               key={idx}
               to={to!}
               isPartiallyActive={false}
               textDecor="none"
               color="text"
+              fontWeight="normal"
               _hover={{ textDecor: "none", color: "primary.base" }}
               _focus={{ textDecor: "none", color: "primary.base" }}
             >
@@ -105,7 +106,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
               >
                 <Translation id={text} />
               </MenuItem>
-            </Link>
+            </BaseLink>
           ) : (
             <MenuItem key={idx} onClick={(e) => handleClick(e, item, idx)}>
               <Translation id={text} />

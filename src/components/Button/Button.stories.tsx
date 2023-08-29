@@ -1,10 +1,13 @@
 import * as React from "react"
-import { HStack, IconButton, ThemingProps, VStack } from "@chakra-ui/react"
+import { HStack, ThemingProps, Text, VStack } from "@chakra-ui/react"
 import { getThemingArgTypes } from "@chakra-ui/storybook-addon"
 import { Meta, StoryObj } from "@storybook/react"
-import { MdExpandMore, MdChevronRight } from "react-icons/md"
-import Button from "."
+import { MdExpandMore, MdChevronRight, MdNightlight } from "react-icons/md"
 import theme from "../../@chakra-ui/gatsby-plugin/theme"
+import ButtonLink from "../ButtonLink"
+import IconButton from "../IconButton"
+import Translation from "../Translation"
+import Button from "."
 
 type ButtonType = typeof Button
 
@@ -45,15 +48,12 @@ export const StyleVariants: Story = {
   },
   render: (args) => (
     <VStack spacing={4}>
-      {variants.map((variant, idx) => {
-        if (args.isSecondary && variant === "solid") return
-        return (
-          <HStack spacing={4} key={idx}>
-            <Button variant={variant} {...args} />
-            <Button variant={variant} isDisabled {...args} />
-          </HStack>
-        )
-      })}
+      {variants.map((variant, idx) => (
+        <HStack spacing={4} key={idx}>
+          <Button variant={variant} {...args} />
+          <Button variant={variant} isDisabled {...args} />
+        </HStack>
+      ))}
     </VStack>
   ),
 }
@@ -116,5 +116,22 @@ export const MultiLineText: Story = {
         />
       </VStack>
     </HStack>
+  ),
+}
+
+export const OverrideStyles: Story = {
+  render: () => (
+    <>
+      <Text>
+        Show custom styling examples here for visual testing of overrides from
+        the theme config
+      </Text>
+      <VStack>
+        <IconButton aria-label="toggle" icon={<MdNightlight />} px="1.5" />
+        <ButtonLink to="#" borderRadius="full" px="0" py="0">
+          <Translation id="get-involved" />
+        </ButtonLink>
+      </VStack>
+    </>
   ),
 }

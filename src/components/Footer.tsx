@@ -19,7 +19,7 @@ import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
 // import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 // TODO: remove TranslationKey type below
 export type TranslationKey = string
-import Link from "./Link"
+import { BaseLink } from "./Link"
 // TODO
 // import Translation from "./Translation"
 
@@ -316,7 +316,7 @@ const Footer: React.FC<IProps> = () => {
         <Box my={4}>
           {socialLinks.map((link, idk) => {
             return (
-              <Link
+              <BaseLink
                 key={idk}
                 to={link.to}
                 hideArrow
@@ -333,7 +333,7 @@ const Footer: React.FC<IProps> = () => {
                   fontSize="4xl"
                   ml={4}
                 />
-              </Link>
+              </BaseLink>
             )
           })}
         </Box>
@@ -364,12 +364,13 @@ const Footer: React.FC<IProps> = () => {
             <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} mb={4}>
-                  <Link
+                  <BaseLink
                     to={link.to}
                     isPartiallyActive={false}
                     dir={isPageRightToLeft ? "auto" : "ltr"}
                     textDecor="none"
                     color="text200"
+                    fontWeight="normal"
                     _hover={{
                       textDecor: "none",
                       color: "primary.base",
@@ -387,7 +388,7 @@ const Footer: React.FC<IProps> = () => {
                     }}
                   >
                     {link.text}
-                  </Link>
+                  </BaseLink>
                 </ListItem>
               ))}
             </List>

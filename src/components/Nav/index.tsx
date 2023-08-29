@@ -1,12 +1,13 @@
 import React, { FC, useRef } from "react"
-import { Icon, IconButton, Flex, Text, Box } from "@chakra-ui/react"
+import { Icon, Flex, Box, HStack, useDisclosure } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
-import Link from "../Link"
+import Link, { BaseLink } from "../Link"
 import Search from "../Search"
+import IconButton from "../IconButton"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
 
@@ -27,9 +28,9 @@ const Nav: FC<IProps> = ({ path }) => {
     // t,
     toggleColorMode,
     linkSections,
-    searchRef,
     mobileNavProps,
   } = useNav({ path })
+  const searchModalDisclosure = useDisclosure()
 
   const navWrapperRef = useRef(null)
 
@@ -54,7 +55,7 @@ const Nav: FC<IProps> = ({ path }) => {
           width="full"
           maxW="container.2xl"
         >
-          <Link
+          <BaseLink
             to="/"
             // TODO
             // aria-label={t("home")}
@@ -63,58 +64,54 @@ const Nav: FC<IProps> = ({ path }) => {
             textDecor="none"
           >
             <EthHomeIcon opacity={0.85} _hover={{ opacity: 1 }} />
-          </Link>
+          </BaseLink>
           {/* Desktop */}
           <Flex
-            justifyContent="space-between"
-            w="100%"
-            display={{ base: "none", lg: "flex" }}
+            w="full"
+            justifyContent={{ base: "flex-end", lg: "space-between" }}
             ml={{ base: 3, xl: 8 }}
           >
-            <Menu path={path} sections={linkSections} />
+            <Menu hideBelow="lg" path={path} sections={linkSections} />
             <Flex
               alignItems="center"
               justifyContent="space-between"
-              gap={{ base: 1, xl: 0 }}
+              gap={{ base: 2, xl: 4 }}
             >
-              <Search ref={searchRef} />
-              <IconButton
-                aria-label={
-                  isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
-                }
-                icon={<Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />}
-                variant="icon"
-                size="sm"
-                fontSize="2xl"
-                ms={{ xl: 2 }}
-                _hover={{ color: "primary.base" }}
-                onClick={toggleColorMode}
+              <Search {...searchModalDisclosure} />
+              {/* Mobile */}
+              <MobileNavMenu
+                {...mobileNavProps}
+                hideFrom="lg"
+                toggleSearch={searchModalDisclosure.onOpen}
+                drawerContainerRef={navWrapperRef}
               />
-              <ButtonLink
-                to={`/languages/${fromPageParameter}`}
-                variant="icon"
-                px={{ base: 1, xl: 1.5 }}
-                size="sm"
-                fontSize="md"
-              >
-                <Icon as={MdLanguage} fontSize="2xl" />
-                <Text as="span" pl={2}>
-                  <Box as="span" hideBelow="lg">
-                    {/* TODO */}
-                    {/* {t("languages")} */}
-                    Languages EN
-                  </Box>{" "}
+              <HStack spacing={2} hideBelow="lg">
+                <IconButton
+                  icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
+                  aria-label={
+                    isDarkTheme
+                      ? "Switch to Light Theme"
+                      : "Switch to Dark Theme"
+                  }
+                  variant="ghost"
+                  isSecondary
+                  px={1.5}
+                  onClick={toggleColorMode}
+                ></IconButton>
+                <ButtonLink
+                  to={`/languages/${fromPageParameter}`}
+                  leftIcon={<Icon as={MdLanguage} />}
+                  variant="ghost"
+                  isSecondary
+                  px={1.5}
+                >
                   {/* TODO */}
-                  {/* {i18n.language.toUpperCase()} */}
-                </Text>
-              </ButtonLink>
+                  {/* {t("languages")} {i18n.language.toUpperCase()} */}
+                  Languages EN
+                </ButtonLink>
+              </HStack>
             </Flex>
           </Flex>
-          {/* Mobile */}
-          <MobileNavMenu
-            {...mobileNavProps}
-            drawerContainerRef={navWrapperRef}
-          />
         </Flex>
       </Flex>
       {shouldShowSubNav && (
@@ -131,11 +128,12 @@ const Nav: FC<IProps> = ({ path }) => {
           px={8}
         >
           {ednLinks.map((link, idx) => (
-            <Link
+            <BaseLink
               key={idx}
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
               color="text"
+              fontWeight="normal"
               textDecor="none"
               mr={8}
               _hover={{
@@ -144,6 +142,7 @@ const Nav: FC<IProps> = ({ path }) => {
                   fill: "currentColor",
                 },
               }}
+              _visited={{}}
               sx={{
                 svg: {
                   fill: "currentColor",
@@ -151,7 +150,7 @@ const Nav: FC<IProps> = ({ path }) => {
               }}
             >
               {link.text}
-            </Link>
+            </BaseLink>
           ))}
         </Flex>
       )}
