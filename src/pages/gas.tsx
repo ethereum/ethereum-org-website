@@ -1,41 +1,45 @@
+// Third-party libraries
 import React, { ComponentPropsWithRef } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
-  Flex,
-  Heading,
-  Text,
   BoxProps,
+  Flex,
   FlexProps,
+  Heading,
   HeadingProps,
-  Td,
-  Th,
-  Tr,
-  Tbody,
-  Thead,
-  Table,
   Link,
+  ListItem,
+  Table,
+  Tbody,
+  Text,
+  Th,
+  Thead,
+  Td,
+  Tr,
+  UnorderedList,
 } from "@chakra-ui/react"
-import { ListItem, UnorderedList } from "@chakra-ui/react"
 
+// Internal libraries
+import { getImage } from "../utils/image"
+
+// Components
+import ButtonLink from "../components/ButtonLink"
+import Callout from "../components/Callout"
+import Card from "../components/Card"
 import Emoji from "../components/Emoji"
 import ExpandableCard from "../components/ExpandableCard"
+import FeedbackCard from "../components/FeedbackCard"
 import GhostCard from "../components/GhostCard"
 import HorizontalCard from "../components/HorizontalCard"
+import InfoBanner from "../components/InfoBanner"
+import InlineLink from "../components/Link"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import Card from "../components/Card"
-import ButtonLink from "../components/ButtonLink"
-import Callout from "../components/Callout"
-import InlineLink from "../components/Link"
 import Translation from "../components/Translation"
-
-import { getImage } from "../utils/image"
-import FeedbackCard from "../components/FeedbackCard"
-import InfoBanner from "../components/InfoBanner"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
@@ -122,7 +126,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
         title="Gas fees on Ethereum: how do they work?"
         description="Learn about gas on Ethereum: how they work and how to pay less in gas fees"
       />
-      {/* Hero Section */}
       <Box background="layer2Gradient" width="full">
         <Box pb={8}>
           <PageHero
@@ -139,7 +142,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
         </Box>
       </Box>
       <>
-        {/* Introduction / What are gas fees */}
         <Content mb={{ base: 16, md: 16, lg: 32 }} mt={16}>
           <Flex
             direction={{ base: "column", lg: "row" }}
@@ -189,7 +191,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </Box>
           </Flex>
         </Content>
-
         <Content mb={{ base: 16, md: 16, lg: 32 }}>
           <Flex
             direction={{ base: "column", lg: "row" }}
@@ -227,7 +228,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </Box>
           </Flex>
         </Content>
-        {/* What causes high gas fees / Attack of the Cryptokitties */}
         <Content mb={{ base: 16, md: 16, lg: 32 }}>
           <Flex
             direction={{ base: "column", lg: "row" }}
@@ -283,7 +283,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </GhostCard>
           </Flex>
         </Content>
-        {/* Why do we need gas section */}
         <Content mb={{ base: 16, md: 16, lg: 32 }}>
           <Flex
             direction={{ base: "column", lg: "row" }}
@@ -321,7 +320,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </Box>
           </Flex>
         </Content>
-        {/* How is gas calculated? */}
         <Content mb={{ base: 16, md: 16, lg: 32 }}>
           <Flex direction={{ base: "column", lg: "row" }} align="flex-start">
             <Box w="full" mr={{ base: "auto", lg: 8 }}>
@@ -383,8 +381,6 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             </Table>
           </Flex>
         </Content>
-
-        {/* Faq section */}
         <Content>
           <H2 mt="0">Frequently asked questions</H2>
           {/* MaxWidth will be enforced by FAQ component once implemented */}
@@ -470,7 +466,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["learn-quizzes", "page-community", "common"] }
+        ns: { in: ["page-community", "common"] }
       }
     ) {
       edges {
