@@ -118,6 +118,10 @@ const Footer: React.FC<IProps> = () => {
           text: t("ethereum-wallets"),
         },
         {
+          to: "/gas/",
+          text: "Gas fees",
+        },
+        {
           to: "/security/",
           text: t("ethereum-security"),
         },
