@@ -21,20 +21,22 @@ Effective design goes beyond creating visually appealing user interfaces. It inv
 
 This is a curated list of user research done in web3 that may help with design and product decisions or work as an inspiration to conduct own study.
 
-- [CRADL: Crypto Research and Design Lab](https://project-cradl.notion.site/Crypto-Research-and-Design-Lab-50a7127f34ed4c88ad95c7cedf7fbe36)
-- [CRADL: UX in Cryptocurrency](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)
-- [CRADL: Onboarding to Cryptocurrency](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)
-- [ConSensys: The State of Web3 perception around the world 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)
-- [Staking survey: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)
-- [Survey: The state of Defi 2023](https://stateofdefi.org/)
-- [Usability and user satisfaction survey - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)
-- [Usability study: Coverage pools](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)
-- [Usability study: Multi App Staking](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)
-- [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)
-- [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)
-- [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)
-- [Metaverse: User Research Report](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)
-- [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)
+| Type               | Description                                              |
+| :------------------ | :------------------------------------------------------- |
+| `Research institute`              | [CRADL: Crypto Research and Design Lab](https://project-cradl.notion.site/Crypto-Research-and-Design-Lab-50a7127f34ed4c88ad95c7cedf7fbe36)                     |
+| `UX heuristic analysis`             | [CRADL: UX in Cryptocurrency](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                        |
+| `Survey` | [CRADL: Onboarding to Cryptocurrency](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing) |
+| `Survey`            | [ConSensys: The State of Web3 perception around the world 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                            |
+| `Survey`            | [Staking: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)                          |
+| `Survey`            | [The state of Defi 2023](https://stateofdefi.org/)                         |
+| `Survey`            | [Usability and user satisfaction survey - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                          |
+| `Usability study`            | [Coverage pools](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                         |
+| `Usability study`            | [Multi App Staking](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)                          |
+| `In-depth interviews`            | [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)                          |
+| `In-depth interviews`            | [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                          |
+| `In-depth interviews`            | [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                         |
+| `In-depth interviews` `Survey`            | [Metaverse: User Research Report](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                         |
+| `In-depth interviews` `Survey`            | [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)                          |
 
 ## Design for web3 {#Design-for-web3}
 
