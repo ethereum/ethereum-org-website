@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, type BoxProps, Flex, Text, Grid } from "@chakra-ui/react"
-import { MdChevronLeft } from "react-icons/md"
+import { MdArrowBack } from "react-icons/md"
 import Button from "../Button"
 import type {
   LabelHref,
@@ -41,7 +41,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
       {/* Back button */}
       <Button
         variant="ghost"
-        leftIcon={<MdChevronLeft size="18px" />}
+        leftIcon={<MdArrowBack size="18px" />}
         sx={{ paddingInlineStart: 0 }}
         mt={{ base: -6, md: 0 }}
         mb={{ base: 6, md: 8 }}
