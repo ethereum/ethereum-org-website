@@ -48,7 +48,7 @@ export interface IProps extends IBaseProps, LinkProps {
  * - Intl links
  * e.g. <Link href="/page-2/" language="de">
  */
-const BaseLink: React.FC<IProps> = ({
+export const BaseLink: React.FC<IProps> = ({
   to: toProp,
   href,
   // language,

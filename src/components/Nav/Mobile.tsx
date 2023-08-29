@@ -18,8 +18,8 @@ import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import { motion } from "framer-motion"
 
 import { BaseLink } from "../Link"
-// import Button from "../Button"
-import Translation from "../Translation"
+// import Translation from "../Translation"
+import Button from "../Button"
 
 import { ISections } from "./types"
 import type { ChildOnlyProp } from "../../lib/types"

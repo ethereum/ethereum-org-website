@@ -48,16 +48,16 @@ const Search = forwardRef<IProps, "button">(
     const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
 
     // TODO
-  // useDocSearchKeyboardEvents({
+    // useDocSearchKeyboardEvents({
     //   isOpen,
     //   onOpen,
     //   onClose,
     //   searchButtonRef,
     // })
     // TODO
-  // const { t } = useTranslation()
+    // const { t } = useTranslation()
     // TODO
-  // const { language } = useI18next()
+    // const { language } = useI18next()
     const appId = process.env.GATSBY_ALGOLIA_APP_ID || ""
     const apiKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY || ""
     const indexName =
@@ -75,14 +75,14 @@ const Search = forwardRef<IProps, "button">(
             onClick={() => {
               onOpen()
               // TODO
-            // trackCustomEvent({
+              // trackCustomEvent({
               //   eventCategory: "nav bar",
               //   eventAction: "click",
               //   eventName: "search open",
               // })
             }}
             // TODO
-          // translations={{
+            // translations={{
             //   buttonText: t("search"),
             //   buttonAriaLabel: t("search"),
             // }}
@@ -92,7 +92,7 @@ const Search = forwardRef<IProps, "button">(
             onClick={() => {
               onOpen()
               // TODO
-            // trackCustomEvent({
+              // trackCustomEvent({
               //   eventCategory: "nav bar",
               //   eventAction: "click",
               //   eventName: "search open",
@@ -100,8 +100,8 @@ const Search = forwardRef<IProps, "button">(
             }}
             ref={mergedButtonRefs}
             // TODO
-          // aria-label={t("aria-toggle-search-button")}
-          aria-label=""
+            // aria-label={t("aria-toggle-search-button")}
+            aria-label=""
           />
         )}
         <Portal>
@@ -112,11 +112,11 @@ const Search = forwardRef<IProps, "button">(
               indexName={indexName}
               onClose={onClose}
               // TODO
-            // searchParameters={{
+              // searchParameters={{
               //   facetFilters: [`lang:${language}`],
               // }}
               // TODO
-            // transformItems={(items) =>
+              // transformItems={(items) =>
               //   items.map((item: DocSearchHit) => {
               //     const newItem: DocSearchHit = structuredClone(item)
               //     newItem.url = sanitizeHitUrl(item.url)
@@ -126,10 +126,10 @@ const Search = forwardRef<IProps, "button">(
               //   })
               // }
               // TODO
-            // placeholder={t("search-ethereum-org")}
+              // placeholder={t("search-ethereum-org")}
               placeholder="Search ethereum.org"
-            // TODO
-            // translations={{
+              // TODO
+              // translations={{
               //   searchBox: {
               //     resetButtonTitle: t("clear"),
               //     resetButtonAriaLabel: t("clear"),
@@ -152,8 +152,8 @@ const Search = forwardRef<IProps, "button">(
               //   },
               //   startScreen: {
               //     recentSearchesTitle: t(
-                    "docsearch-start-recent-searches-title"
-                  ),
+              //   "docsearch-start-recent-searches-title"
+              // ),
               //     noRecentSearchesText: t("docsearch-start-no-recent-searches"),
               //     saveRecentSearchButtonTitle: t(
               //       "docsearch-start-save-recent-search"
