@@ -18,8 +18,8 @@ type Story = StoryObj<InputType>
 export const Sizes: Story = {
   render: () => (
     <VStack width="154px">
-      <Input rightIcon={BsSlashSquare} placeholder="Search" />
-      <Input rightIcon={BsSlashSquare} placeholder="Search" size="sm" />
+      <Input rightIcon={<BsSlashSquare />} placeholder="Search" />
+      <Input rightIcon={<BsSlashSquare />} placeholder="Search" size="sm" />
     </VStack>
   ),
 }
@@ -28,8 +28,12 @@ export const ElementVariations: Story = {
   render: () => (
     <VStack width="258px" spacing={4}>
       <Input placeholder="input text" />
-      <Input rightIcon={BsSlashSquare} placeholder="input text" />
-      <Input rightIcon={BsSlashSquare} placeholder="input text" isDisabled />
+      <Input rightIcon={<BsSlashSquare />} placeholder="input text" />
+      <Input
+        rightIcon={<BsSlashSquare />}
+        placeholder="input text"
+        isDisabled
+      />
     </VStack>
   ),
 }

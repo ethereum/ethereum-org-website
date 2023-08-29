@@ -1,15 +1,11 @@
 import * as React from "react"
 import {
-  Icon,
   Input as ChakraInput,
   InputGroup,
   InputGroupProps,
   InputProps as ChakraInputProps,
   InputRightElement,
 } from "@chakra-ui/react"
-import { IconType } from "react-icons/lib"
-
-type RightIconType = IconType | typeof Icon
 
 type CommonProps = ChakraInputProps
 
@@ -19,7 +15,7 @@ type WithIconProps = CommonProps & {
   /**
    * The Icon used to render `InputRightElement` on the right side of the input
    */
-  rightIcon: RightIconType
+  rightIcon?: JSX.Element
   /**
    * Primarily for style props to be applied to the wrapper
    */
@@ -36,7 +32,7 @@ function Input(props: InputProps) {
     return (
       <InputGroup size={size} {...inputGroupProps}>
         <ChakraInput data-peer {...rest} />
-        <InputRightElement children={<Icon />} />
+        <InputRightElement children={Icon} />
       </InputGroup>
     )
   }
