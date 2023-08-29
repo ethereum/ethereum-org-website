@@ -155,7 +155,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                     Every transaction on Ethereum requires a small form of
                     payment to process
                   </ListItem>
-                  <ListItem>These fees are known as ‘gas’ fee.</ListItem>
+                  <ListItem>These fees are known as ‘gas’ fee</ListItem>
                   <ListItem>
                     Gas fees change based on network congestion
                   </ListItem>
