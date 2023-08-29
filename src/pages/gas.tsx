@@ -103,7 +103,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
   ]
 
   const heroContent = {
-    title: "Network fees",
+    title: "Gas fees",
     header: "Network fees",
     image: getImage(data.infrastructure)!,
     alt: "",
@@ -114,7 +114,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
         matomo: {
           eventCategory: "gas hero buttons",
           eventAction: "click",
-          eventName: "wgat is gas",
+          eventName: "what is gas",
         },
       },
     ],
