@@ -9,7 +9,7 @@ export const Phone: React.FC<IProps> = ({ children }) => (
       h={{ base: 480, md: 600 }}
       maxH="full"
       w="full"
-      border="8px"
+      border="5px solid"
       borderColor="body.medium"
       borderRadius="3xl"
       bg="background.base"
