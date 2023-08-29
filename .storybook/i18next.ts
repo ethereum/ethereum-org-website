@@ -1,5 +1,6 @@
 import i18n, { Resource } from "i18next"
 import { initReactI18next } from "gatsby-plugin-react-i18next"
+import fs from "fs"
 
 export const baseLocales = {
   en: { title: "English", left: "En" },
@@ -9,7 +10,13 @@ export const baseLocales = {
 }
 
 // Only i18n files named in this array are being exposed to Storybook. Add filenames as necessary.
-const ns = ["common", "page-about", "page-upgrades", "page-developers-index"]
+const ns = [
+  "common",
+  "glossary",
+  "page-about",
+  "page-upgrades",
+  "page-developers-index",
+]
 const supportedLngs = Object.keys(baseLocales)
 
 /**
@@ -19,11 +26,22 @@ const supportedLngs = Object.keys(baseLocales)
 const resources: Resource = ns.reduce((acc, n) => {
   supportedLngs.forEach((lng) => {
     if (!acc[lng]) acc[lng] = {}
-    acc[lng] = {
-      translation: {
-        ...acc[lng].translation,
-        ...require(`../src/intl/${lng}/${n}.json`),
-      },
+    try {
+      acc[lng] = {
+        translation: {
+          ...acc[lng].translation,
+
+          ...require(`../src/intl/${lng}/${n}.json`),
+        },
+      }
+    } catch {
+      acc[lng] = {
+        translation: {
+          ...acc[lng].translation,
+
+          ...require(`../src/intl/en/${n}.json`),
+        },
+      }
     }
   })
   return acc
