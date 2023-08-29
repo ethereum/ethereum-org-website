@@ -10,44 +10,23 @@ import {
 } from "./SendReceive/index"
 import { defaultTokenBalances } from "../data"
 import { TokenBalance } from "../Wallet/interfaces"
-import axios from "axios"
+import { useEthPrice } from "../hooks"
 
 const FALLBACK_ETH_PRICE = 1600 as const
 const USD_RECEIVE_AMOUNT = 500 as const
 
 export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
   const { step } = state
-  const [ethPrice, setEthPrice] = useState<number>(FALLBACK_ETH_PRICE)
+  const fetchedPrice = useEthPrice()
+  const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const ethReceiveAmount = USD_RECEIVE_AMOUNT / ethPrice
   const [chosenAmount, setChosenAmount] = useState<number>(0)
 
   useEffect(() => {
     if (step !== 2) return
+    // Reset chosen amount if user goes back to step 2
     setChosenAmount(0)
   }, [step])
-
-  useEffect(() => {
-    ;(async () => {
-      try {
-        const response = await axios.get(
-          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
-        )
-        if (
-          response.status !== 200 ||
-          !response.data ||
-          !response.data.ethereum
-        )
-          throw new Error(
-            "Unable to fetch ETH price from CoinGecko, using fallback"
-          )
-        const currentPriceUSD = response.data.ethereum.usd
-        setEthPrice(currentPriceUSD)
-      } catch (error) {
-        console.error(error)
-        setEthPrice(FALLBACK_ETH_PRICE)
-      }
-    })()
-  }, [])
 
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
     () =>
