@@ -11,6 +11,7 @@ const baseStyle = defineStyle((props) => {
   const tableBoxShadow = getToken("colors", "tableBoxShadow")(props.theme)
 
   return {
+    w: 44,
     maxW: 48,
     p: 2,
     bg: "background.highlight",

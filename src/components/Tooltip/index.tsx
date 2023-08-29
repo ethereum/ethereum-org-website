@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { Box, Center, Tooltip as ChakraTooltip } from "@chakra-ui/react"
-import * as utils from "../utils/isMobile"
+import * as utils from "../../utils/isMobile"
 
 export interface IProps {
   content: ReactNode
