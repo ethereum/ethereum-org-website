@@ -25,6 +25,7 @@ export interface SimulatorState {
 export interface LabelHref {
   label: string
   href: string
+  isPrimary?: boolean
 }
 
 export interface PhoneScreenProps extends SimulatorStateProps {}
@@ -34,7 +35,7 @@ export interface SimulatorDetails {
   Screen: React.FC<PhoneScreenProps>
   explanations: Array<SimulatorExplanation>
   ctaLabels: Array<string>
-  finalCtaLink?: LabelHref | null
+  finalCtaLink: LabelHref
   nextPathId?: PathId | null
 }
 

@@ -16,7 +16,7 @@ interface ExplanationProps extends SimulatorStateProps {
   explanation: SimulatorExplanation
   nextPathSummary: SimulatorPathSummary | null
   nextPathId: PathId | null
-  finalCtaLink?: LabelHref | null
+  finalCtaLink: LabelHref
   onClose?: () => void
   openPath?: (pathId: PathId) => void
 }
@@ -96,9 +96,17 @@ export const Explanation: React.FC<ExplanationProps> = ({
             />
           )}
           {finalCtaLink && (
-            <ButtonLink variant="outline" href={finalCtaLink.href}>
+            <ButtonLink
+              variant={finalCtaLink.isPrimary ? "solid" : "outline"}
+              href={finalCtaLink.href}
+            >
               {finalCtaLink.label}
             </ButtonLink>
+          )}
+          {!nextPathId && (
+            <Button onClick={onClose} variant="outline">
+              Go back
+            </Button>
           )}
         </Flex>
       )}

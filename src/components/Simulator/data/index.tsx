@@ -306,6 +306,11 @@ export const simulatorData: SimulatorData = {
       },
     ],
     ctaLabels: ["Connect wallet", "Connect to app", "Done", "Finished"],
+    finalCtaLink: {
+      label: "Get a wallet",
+      href: "/wallets/find-wallet/",
+      isPrimary: true,
+    },
   },
 }
 

@@ -1,7 +1,6 @@
 import { type As, Grid, Icon, Text, type TextProps } from "@chakra-ui/react"
 import React from "react"
 import Button from "../../Button"
-
 interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
   icon: As
   isHighlighted: boolean
