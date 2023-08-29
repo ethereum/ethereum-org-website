@@ -20,7 +20,7 @@ export const Web3App: React.FC<IProps> = ({ children, ...boxProps }) => (
     </Box>
     <Flex justify="space-between" p={6} fontSize="4xl">
       <Icon as={EthGlyphIcon} />
-      <Icon as={GrMenu} ms="auto" />
+      <Icon as={GrMenu} sx={{ path: { stroke: "body.base" } }} />
     </Flex>
     <>{children}</>
   </Box>
