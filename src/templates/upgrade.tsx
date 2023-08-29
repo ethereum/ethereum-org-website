@@ -31,7 +31,7 @@ import Card from "../components/Card"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import InlineLink, { BaseLink } from "../components/Link"
+import { BaseLink } from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
 import BeaconChainActions from "../components/BeaconChainActions"
 import ShardChainsList from "../components/ShardChainsList"
@@ -51,6 +51,7 @@ import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
 import {
   MobileButton,
   MobileButtonDropdown,
@@ -208,7 +209,7 @@ const P = (props: TextProps) => (
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 
 const components = {
-  a: InlineLink,
+  a: MdLink,
   h1: MDXH1,
   h2: H2,
   h3: H3,
