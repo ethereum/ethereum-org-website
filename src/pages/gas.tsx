@@ -346,7 +346,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                 actions, like interacting with a smart contract, use more gas
                 than simple ones, such as sending a transaction.
                 <UnorderedList ml={6} spacing={3} styleType="none">
-                  <ListItem fontSize="sm">
+                  <ListItem color="body.medium" fontSize="sm">
                     <i>
                       <span>*</span> See Figure 1 to see how much gas different
                       types of transactions use
