@@ -17,7 +17,7 @@ import {
 // Components
 import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
-import Link from "./Link"
+import InlineLink, { BaseLink } from "./Link"
 // TODO: add Translation when i18n is set up
 // import Translation from "./Translation"
 
@@ -114,7 +114,7 @@ const MeetupList: React.FC<IProps> = () => {
               </Box>
               <Box>
                 <LinkOverlay
-                  as={Link}
+                  as={BaseLink}
                   href={meetup.link}
                   textDecor="none"
                   color="text"
@@ -153,11 +153,11 @@ const MeetupList: React.FC<IProps> = () => {
             {/* TODO: add Translation when i18n is set up */}
             {/* <Translation id="page-community-meetuplist-no-meetups" />{" "} */}
             We don't have any meetups matching this search. Know of one?
-            <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
+            <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
               {/* TODO: add Translation when i18n is set up */}
               {/* <Translation id="page-community-please-add-to-page" /> */}
               Please add it to this page!
-            </Link>
+            </InlineLink>
           </InfoBanner>
         )}
       </Box>

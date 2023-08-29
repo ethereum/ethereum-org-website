@@ -5,7 +5,7 @@ import { Flex, Stack, Text } from "@chakra-ui/react"
 
 // Components
 import Emoji from "../Emoji"
-import Link from "../Link"
+import InlineLink from "../Link"
 // TODO add Translation
 // import Translation from "../Translation"
 
@@ -63,9 +63,9 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
         <Emoji fontSize="sm" mr={2} text=":bricks:" />
         {/* <Translation id={translationKey} /> */}
         {temporalGetValue[translationKey]}:&nbsp;
-        <Link to={`${explorerUrl}${number}`}>
+        <InlineLink to={`${explorerUrl}${number}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
-        </Link>
+        </InlineLink>
       </Flex>
     )
   }
@@ -113,11 +113,11 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       {waybackLink && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
-          <Link to={waybackLink}>
+          <InlineLink to={waybackLink}>
             {/* TODO: remove hardcoded text when Translation & i18n are set up */}
             {/* <Translation id="page-history-ethereum-org-wayback" /> */}
             ethereum.org on waybackmachine
-          </Link>
+          </InlineLink>
         </Flex>
       )}
     </Stack>

@@ -279,11 +279,6 @@ export const useNav = ({ path }: { path: string }) => {
     setIsMenuOpen((prev) => !prev)
   }
 
-  const searchRef = useRef<HTMLButtonElement>(null)
-
-  const toggleSearch = (): void => {
-    searchRef.current?.click()
-  }
   const shouldShowSubNav = path.includes("/developers/")
   const splitPath = path.split("/")
   const fromPageParameter =
@@ -306,7 +301,6 @@ export const useNav = ({ path }: { path: string }) => {
     isDarkTheme,
     toggleMenu,
     toggleTheme: changeColorMode,
-    toggleSearch,
     linkSections: mobileLinkSections,
     fromPageParameter,
   }
@@ -318,7 +312,6 @@ export const useNav = ({ path }: { path: string }) => {
     isDarkTheme,
     ednLinks,
     linkSections,
-    searchRef,
     shouldShowSubNav,
     fromPageParameter,
     mobileNavProps,
