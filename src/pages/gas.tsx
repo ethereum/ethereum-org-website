@@ -155,7 +155,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
                     Every transaction on Ethereum requires a small form of
                     payment to process
                   </ListItem>
-                  <ListItem>These fees are known as ‘gas’ fee</ListItem>
+                  <ListItem>These fees are known as ‘gas’ fee.</ListItem>
                   <ListItem>
                     Gas fees change based on network congestion
                   </ListItem>
@@ -242,10 +242,9 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             >
               <H3 mt={0}>What causes high gas fees?</H3>
               <Text>
-                Whenever the amount of computation (gas) being done on Ethereum
-                exceeds its target level, gas fees will begin to increase. The
-                more it goes over the target level, the quicker gas fees
-                increase.
+                Whenever the amount of computation (gas) on Ethereum exceeds a
+                certain threshold, gas fees begin to rise. The more the gas
+                exceeds this threshold, the quicker gas fees increase.
               </Text>
               <Text>
                 Higher fees could be caused by things like popular dapps or
