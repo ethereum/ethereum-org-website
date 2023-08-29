@@ -50,6 +50,7 @@ import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import {
   MobileButton,
   MobileButtonDropdown,
@@ -234,6 +235,7 @@ const components = {
   ExpandableCard,
   MergeInfographic,
   QuizWidget,
+  GlossaryTooltip,
 }
 
 const Title = (props: ChildOnlyProp) => (
@@ -447,6 +449,7 @@ export const upgradePageQuery = graphql`
             "page-upgrades-index"
             "learn-quizzes"
             "common"
+            "glossary"
           ]
         }
       }

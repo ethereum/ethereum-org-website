@@ -10,8 +10,6 @@ import {
 import { navigate as gatsbyNavigate } from "gatsby"
 import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 import { NavigateOptions } from "@reach/router"
-
-import { BsQuestionSquareFill } from "react-icons/bs"
 import { RxExternalLink } from "react-icons/rx"
 
 import { Lang } from "../utils/languages"
@@ -71,7 +69,6 @@ export const BaseLink: React.FC<IProps> = ({
   if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
   const isExternal = url.isExternal(to)
   const isHash = url.isHash(to)
-  const isGlossary = url.isGlossary(to)
   const isStatic = url.isStatic(to)
   const isPdf = url.isPdf(to)
 
@@ -162,24 +159,10 @@ export const BaseLink: React.FC<IProps> = ({
       language={language}
       partiallyActive={isPartiallyActive}
       activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
-      whiteSpace={isGlossary ? "nowrap" : "normal"}
+      whiteSpace={"normal"}
       {...commonProps}
     >
-      <>
-        {children}
-        {isGlossary && (
-          <Icon
-            as={BsQuestionSquareFill}
-            aria-label="See definition"
-            fontSize="12px"
-            margin="0 0.25rem 0 0.35rem"
-            _hover={{
-              transition: "transform 0.1s",
-              transform: "scale(1.2)",
-            }}
-          />
-        )}
-      </>
+      {children}
     </ChakraLink>
   )
 }

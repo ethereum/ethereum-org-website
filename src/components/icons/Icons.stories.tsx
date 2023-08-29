@@ -90,8 +90,9 @@ import {
 } from "./wallets"
 
 export default {
+  title: "Atoms / Media & Icons / Icons",
   component: VStack,
-} as Meta<typeof VStack>
+} satisfies Meta<typeof VStack>
 
 const iconsDefinitions = [
   CorrectIcon,
@@ -193,7 +194,7 @@ const items = iconsDefinitions.map((IconDef) => (
   </Box>
 ))
 
-export const IconsList: StoryObj<typeof VStack> = {
+export const Icons: StoryObj<typeof VStack> = {
   render: () => {
     return (
       <VStack
