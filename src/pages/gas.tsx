@@ -131,10 +131,11 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
           <PageHero
             content={{
               subtitle: (
-                <Box>
-                  <Text mb={0}>Network fees on Ethereum are called gas.</Text>
-                  <Text>Gas is the fuel that powers Ethereum.</Text>
-                </Box>
+                <>
+                  Network fees on Ethereum are called gas.
+                  <br />
+                  Gas is the fuel that powers Ethereum.
+                </>
               ),
               ...heroContent,
             }}
