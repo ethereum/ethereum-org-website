@@ -40,6 +40,7 @@ import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
@@ -1263,9 +1264,9 @@ const DappsPage = ({
         </StyledH2>
         <Text>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
-          <InlineLink to="/glossary/#transaction-fee">
+          <GlossaryTooltip termKey="transaction-fee">
             <Translation id="transaction-fees" />
-          </InlineLink>
+          </GlossaryTooltip>
         </Text>
         <Row>
           <StepBoxContainer>
