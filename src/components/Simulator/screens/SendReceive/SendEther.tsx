@@ -28,21 +28,28 @@ export const SendEther: React.FC<IProps> = ({
     maximumFractionDigits: 5,
   }).format(ethBalance)
 
+  const maxUsdAmount = ethPrice * ethBalance
+
   const handleSelection = (amount: number): void => {
-    if (amount === Infinity) {
-      setChosenAmount(ethBalance * ethPrice)
+    if (amount === maxUsdAmount) {
+      setChosenAmount(maxUsdAmount)
       return
     }
     setChosenAmount(amount)
   }
-  const AMOUNTS: Array<number> = [5, 10, 20, Infinity]
-  const formatAmount = (amount: number): string => {
-    if (amount === Infinity) return "Max"
+
+  const AMOUNTS: Array<number> = [5, 10, 20, maxUsdAmount]
+  const formatButtonLabel = (amount: number): string => {
+    if (amount === maxUsdAmount) return "Max"
     return formatDollars(amount)
   }
   const formatChosenAmount = new Intl.NumberFormat("en", {
-    maximumFractionDigits: 2,
+    style: "currency",
+    currency: "USD",
+    notation: "compact",
+    maximumFractionDigits: 0,
   }).format(chosenAmount)
+
   return (
     <Box h="100%">
       <Box px={6} py={8}>
@@ -73,13 +80,10 @@ export const SendEther: React.FC<IProps> = ({
           alignItems="top"
           flex={1}
           fontWeight="bold"
-          color={chosenAmount > 0 ? "body.base" : "body.medium"}
+          color={chosenAmount > 0 ? "body.base" : "disabled"}
         >
           <Text fontSize="6xl" h="full" lineHeight="1em">
             {formatChosenAmount}
-          </Text>
-          <Text fontSize="3xl" lineHeight="1.4em">
-            $
           </Text>
         </Flex>
         {/* Right side */}
@@ -129,19 +133,28 @@ export const SendEther: React.FC<IProps> = ({
           position="relative"
         >
           {/* Amount buttons */}
-          {AMOUNTS.map((amount, i) => (
-            <Button
-              key={i}
-              onClick={() => handleSelection(amount)}
-              borderRadius="10px"
-              bg={amount === chosenAmount ? "primary.hover" : "primary.base"}
-              fontWeight="bold"
-              textTransform="uppercase"
-              fontSize="sm"
-            >
-              {formatAmount(amount)}
-            </Button>
-          ))}
+          {AMOUNTS.map((amount, i) => {
+            console.log("inside AMOUNTS.map")
+            console.log({
+              amount,
+              chosenAmount,
+              isSame: amount === chosenAmount,
+              i,
+            })
+            return (
+              <Button
+                key={i}
+                onClick={() => handleSelection(amount)}
+                borderRadius="10px"
+                bg={amount === chosenAmount ? "primary.hover" : "primary.base"}
+                fontWeight="bold"
+                textTransform="uppercase"
+                fontSize="sm"
+              >
+                {formatButtonLabel(amount)}
+              </Button>
+            )
+          })}
         </Flex>
       </Box>
     </Box>
