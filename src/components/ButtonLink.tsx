@@ -1,39 +1,13 @@
 import React from "react"
-import { Button, ButtonProps, useStyleConfig } from "@chakra-ui/react"
 
+import type { IProps as IButtonProps } from "./Button"
 import { BaseLink, IBaseProps as ILinkProps } from "./Link"
+import Button from "./Button"
 
-export interface IProps extends ILinkProps, ButtonProps {
-  isSecondary?: boolean
-}
+export interface IProps extends ILinkProps, Omit<IButtonProps, "toId"> {}
 
-const ButtonLink: React.FC<IProps> = ({ children, isSecondary, ...props }) => {
-  /**
-   *  Prevent React warning that does not recognize `isSecondary` on DOM
-   *  while still sending prop to the theme config
-   */
-  const styles = useStyleConfig("Button", {
-    ...props,
-    isSecondary,
-  })
-
-  return (
-    <Button
-      as={BaseLink}
-      activeStyle={{}}
-      // `styles` object sent to `sx` prop per convention
-      sx={{
-        ...styles,
-        textDecoration: "none",
-        _hover: { ...styles["_hover"], textDecoration: "none" },
-        _visited: { color: styles["color"] },
-      }}
-      fontWeight="normal"
-      {...props}
-    >
-      {children}
-    </Button>
-  )
+const ButtonLink: React.FC<IProps> = (props) => {
+  return <Button as={BaseLink} activeStyle={{}} {...props} />
 }
 
 export default ButtonLink
