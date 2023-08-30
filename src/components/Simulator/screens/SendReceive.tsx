@@ -43,7 +43,7 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
     [ethPrice]
   )
   return (
-    <AnimatePresence>
+    <>
       {[0].includes(step) && (
         <WalletHome state={state} isEnabled={[false, true]} />
       )}
@@ -78,6 +78,6 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
       {[1, 3, 5].includes(step) && (
         <ProgressCta state={state} isDisabled={step === 3 && !chosenAmount} />
       )}
-    </AnimatePresence>
+    </>
   )
 }
