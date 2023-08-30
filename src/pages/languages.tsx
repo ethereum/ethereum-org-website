@@ -1,5 +1,6 @@
 import {
   Box,
+  CloseButton,
   Flex,
   Heading,
   IconButton,
@@ -98,17 +99,14 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
             placeholder={searchString}
             onChange={(e) => setKeyword(e.target.value)}
             rightIcon={
-              keyword !== "" ? (
-                <IconButton
-                  icon={<MdClose />}
-                  onClick={resetKeyword}
-                  position="absolute"
-                  insetInlineEnd={1}
-                  aria-label={t("clear")}
-                  variant="ghost"
-                  _hover={{ svg: { fill: "primary" } }}
-                />
-              ) : undefined
+              <IconButton
+                icon={<MdClose />}
+                onClick={resetKeyword}
+                display={keyword === "" ? "none" : undefined}
+                aria-label={t("clear")}
+                variant="ghost"
+                _hover={{ svg: { fill: "primary" } }}
+              />
             }
           />
         </Box>

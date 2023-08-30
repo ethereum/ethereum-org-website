@@ -15,7 +15,7 @@ type WithIconProps = CommonProps & {
   /**
    * The Icon used to render `InputRightElement` on the right side of the input
    */
-  rightIcon?: JSX.Element
+  rightIcon: JSX.Element
   /**
    * Primarily for style props to be applied to the wrapper
    */
