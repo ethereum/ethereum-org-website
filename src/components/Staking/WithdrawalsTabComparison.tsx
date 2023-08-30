@@ -1,6 +1,5 @@
 import React from "react"
 import {
-  Heading,
   ListItem,
   Tab,
   TabList,
@@ -13,6 +12,7 @@ import WithdrawalCredentials from "./WithdrawalCredentials"
 import ButtonLink from "../ButtonLink"
 import Translation from "../Translation"
 import Text from "../OldText"
+import OldHeading from "../OldHeading"
 import { trackCustomEvent } from "../../utils/matomo"
 
 interface IProps {}
@@ -37,9 +37,9 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => {
 
       <TabPanels>
         <TabPanel>
-          <Heading as="h3">
+          <OldHeading as="h3">
             <Translation id="comp-withdrawal-comparison-current-title" />
-          </Heading>
+          </OldHeading>
           <UnorderedList>
             <ListItem>
               <Translation id="comp-withdrawal-comparison-current-li-1" />
@@ -56,9 +56,9 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => {
         </TabPanel>
 
         <TabPanel>
-          <Heading as="h3">
+          <OldHeading as="h3">
             <Translation id="comp-withdrawal-comparison-new-title" />
-          </Heading>
+          </OldHeading>
           <UnorderedList>
             <ListItem>
               <Translation id="comp-withdrawal-comparison-new-li-1" />

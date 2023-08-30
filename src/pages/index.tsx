@@ -46,7 +46,6 @@ const SectionHeading = (props: HeadingProps) => (
     fontFamily="sans-serif"
     fontSize={{ base: "2xl", sm: "2rem" }}
     fontWeight={600}
-    mt={0}
     mb={2}
     {...props}
   />
@@ -162,7 +161,7 @@ const PageHeader = () => (
     mb={8}
     px={8}
   >
-    <Heading as="h1" fontSize={{ base: "2rem", sm: "2.5rem" }} m={0}>
+    <Heading as="h1" fontSize={{ base: "2rem", sm: "2.5rem" }}>
       <Translation id="page-index-title" />
     </Heading>
     <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>

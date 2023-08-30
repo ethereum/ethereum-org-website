@@ -214,7 +214,7 @@ const TutorialsPage = ({
       </Text>
 
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <Heading fontSize="2rem" lineHeight="1.4" mt={0} mb={4}>
+        <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
           <Translation id="page-tutorial-submit-btn" />
         </Heading>
         <Text>

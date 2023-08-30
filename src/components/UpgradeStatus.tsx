@@ -44,12 +44,7 @@ const UpgradeStatus: React.FC<IProps> = ({
       spacing={6}
       width="100%"
     >
-      <Heading
-        fontSize="sm"
-        fontWeight="normal"
-        my={0}
-        textTransform="uppercase"
-      >
+      <Heading fontSize="sm" fontWeight="normal" textTransform="uppercase">
         <Translation id="consensus-when-shipping" />
       </Heading>
       <Text fontSize="2.5rem" fontWeight="bold" lineHeight="100%">

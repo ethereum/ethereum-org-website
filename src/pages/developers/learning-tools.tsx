@@ -46,7 +46,6 @@ const Header = (props: ChildOnlyProp) => (
 const H1 = (props: ChildOnlyProp) => (
   <Heading
     as="h1"
-    my={0}
     color="text"
     fontStyle="normal"
     fontFamily="monospace"

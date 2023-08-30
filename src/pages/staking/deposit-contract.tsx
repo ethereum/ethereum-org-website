@@ -25,6 +25,7 @@ import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import Tooltip from "../../components/Tooltip"
 import FeedbackCard from "../../components/FeedbackCard"
+import OldHeading from "../../components/OldHeading"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
 import { TranslationKey } from "../../utils/translations"
@@ -57,7 +58,7 @@ const RightColumn = (props: ChildOnlyProp) => (
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontWeight="700"
     fontSize="2rem"
@@ -156,7 +157,6 @@ const Row = (props: ChildOnlyProp) => (
 const CardTitle = (props: ChildOnlyProp) => (
   <Heading
     as="h2"
-    mt={0}
     mb={4}
     fontWeight="600"
     fontSize="2rem"

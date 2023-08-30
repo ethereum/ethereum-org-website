@@ -32,7 +32,6 @@ export const WalletMoreInfoCategory = ({
         fontSize="md"
         fontWeight={500}
         color="primary.base"
-        mt={0}
         mx="0.2rem"
         mb={2}
       >

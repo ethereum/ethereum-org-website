@@ -1,8 +1,9 @@
 import React, { useState } from "react"
-import { Box, Flex, GridItem, Heading, SimpleGrid } from "@chakra-ui/react"
+import { Box, Flex, GridItem, SimpleGrid } from "@chakra-ui/react"
 
 import Emoji from "./Emoji"
 import Text from "./OldText"
+import OldHeading from "./OldHeading"
 
 import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
 
@@ -103,7 +104,7 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
                   })}
             />
             <Box>
-              <Heading
+              <OldHeading
                 as="h3"
                 fontSize="2.5rem"
                 fontWeight="normal"
@@ -111,7 +112,7 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
                 lineHeight={1.4}
               >
                 {item.title}
-              </Heading>
+              </OldHeading>
               {isOpen && (
                 <Text fontSize="xl" lineHeight={1.4} color="black300">
                   {item.description}

@@ -4,7 +4,6 @@ import {
   Box,
   BoxProps,
   Flex,
-  Heading,
   HeadingProps,
   ListItem,
   SimpleGrid,
@@ -20,13 +19,14 @@ import InlineLink from "../../../components/Link"
 import Translation from "../../../components/Translation"
 import PageMetadata from "../../../components/PageMetadata"
 import Text from "../../../components/OldText"
+import OldHeading from "../../../components/OldHeading"
 
 // Utils
 import FeedbackCard from "../../../components/FeedbackCard"
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 const ContentHeading = (props: HeadingProps) => (
-  <Heading lineHeight={1.4} {...props} />
+  <OldHeading lineHeight={1.4} {...props} />
 )
 
 const Contributors = ({

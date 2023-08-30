@@ -10,7 +10,6 @@ import {
   CenterProps,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Img,
   type Icon as ChakraIcon,
@@ -43,6 +42,7 @@ import InlineLink from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
 import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 // Utils
 import Button from "../components/Button"
@@ -281,11 +281,15 @@ const StrongParagraph = (props: BoxProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
@@ -294,7 +298,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     lineHeight={1.4}

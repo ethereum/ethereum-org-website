@@ -6,7 +6,6 @@ import {
   Box,
   chakra,
   Flex,
-  Heading,
   Image,
   SimpleGrid,
   TextProps,
@@ -21,6 +20,7 @@ import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import FeedbackCard from "../../components/FeedbackCard"
 import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
 
 import { getImage } from "../../utils/image"
 
@@ -71,7 +71,7 @@ const HeroCopy = (props: ChildOnlyProp) => (
 )
 
 const H1 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize="2rem"
     fontWeight="medium"

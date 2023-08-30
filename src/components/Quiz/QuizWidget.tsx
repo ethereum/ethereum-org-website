@@ -315,7 +315,6 @@ const QuizWidget: React.FC<IProps> = ({
         <Heading
           as="h2"
           mb={12}
-          mt={0}
           textAlign="center"
           scrollBehavior="smooth"
           scrollMarginTop={24}

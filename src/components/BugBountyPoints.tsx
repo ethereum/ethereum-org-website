@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useTheme } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
+import { Box, Flex, Icon } from "@chakra-ui/react"
 import axios from "axios"
 
 import Emoji from "./Emoji"
@@ -10,6 +10,7 @@ import Translation from "./Translation"
 import InlineLink from "./Link"
 import Tooltip from "./Tooltip"
 import Text from "./OldText"
+import OldHeading from "./OldHeading"
 
 import { getImage } from "../utils/image"
 import { MdInfoOutline } from "react-icons/md"
@@ -126,7 +127,7 @@ const BugBountyPoints: React.FC<IProps> = () => {
           <Icon as={MdInfoOutline} fill="text200" boxSize="4" />
         </Tooltip>
       </Box>
-      <Heading
+      <OldHeading
         as="h2"
         mt={0}
         fontFamily="monospace"
@@ -134,7 +135,7 @@ const BugBountyPoints: React.FC<IProps> = () => {
         fontWeight="bold"
       >
         <Translation id="page-upgrades-bug-bounty-points-point" />
-      </Heading>
+      </OldHeading>
       {state.hasError && (
         <Flex
           align={{ base: "start", sm: "center" }}

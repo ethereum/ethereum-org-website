@@ -3,7 +3,7 @@ import { useTheme } from "@emotion/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Center, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
+import { Box, Center, ListItem, UnorderedList } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import Card from "../components/Card"
@@ -18,6 +18,7 @@ import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
 import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp, Context } from "../types"
@@ -50,7 +51,7 @@ const Title = (props: ChildOnlyProp) => (
 )
 
 const H2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h2"
     fontSize="1.5rem"
     fontStyle="normal"
@@ -548,14 +549,14 @@ const BugBountiesPage = ({
                 </UnorderedList>
               </Box>
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </Heading>
+                </OldHeading>
                 <UnorderedList>
                   <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-1" />
@@ -572,14 +573,14 @@ const BugBountiesPage = ({
                 </UnorderedList>
               </Box>
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-specs-docs" />
-                </Heading>
+                </OldHeading>
                 <CardList content={specs} />
               </Box>
             </StyledCard>
@@ -592,14 +593,14 @@ const BugBountiesPage = ({
                 <Text>
                   <Translation id="page-upgrades-bug-bounty-client-bugs-desc-2" />
                 </Text>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </Heading>
+                </OldHeading>
                 <UnorderedList>
                   <ListItem>
                     <Translation id="page-upgrades-bug-bounty-clients-type-1" />
@@ -614,14 +615,14 @@ const BugBountiesPage = ({
                 </UnorderedList>
               </Box>
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </Heading>
+                </OldHeading>
                 <CardList content={clients} />
               </Box>
             </StyledCard>
@@ -636,14 +637,14 @@ const BugBountiesPage = ({
                 </Text>
               </Box>
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </Heading>
+                </OldHeading>
                 <InlineLink to="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
                   SECURITY.md
                 </InlineLink>
@@ -655,14 +656,14 @@ const BugBountiesPage = ({
               description={t("page-upgrades-bug-bounty-deposit-bugs-desc")}
             >
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </Heading>
+                </OldHeading>
                 <InlineLink to="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
                   Deposit Contract Specifications
                 </InlineLink>

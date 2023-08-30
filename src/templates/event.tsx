@@ -9,7 +9,6 @@ import {
   chakra,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Show,
   useToken,
@@ -23,6 +22,7 @@ import PageMetadata from "../components/PageMetadata"
 import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 import { ChildOnlyProp, Context } from "../types"
 
@@ -32,19 +32,19 @@ const commonHeadingProps: HeadingProps = {
 }
 
 export const H1 = (props: HeadingProps) => (
-  <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
 export const H2 = (props: HeadingProps) => (
-  <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
+  <OldHeading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
 export const H3 = (props: HeadingProps) => (
-  <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
 export const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     {...commonHeadingProps}
     fontSize="xl"

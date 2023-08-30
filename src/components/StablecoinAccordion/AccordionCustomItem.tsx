@@ -77,7 +77,6 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
                     as="h3"
                     fontSize={{ base: "1.25rem", md: "1.5rem" }}
                     lineHeight={1.4}
-                    my={0}
                   >
                     <Translation id={contentObj.title} />
                   </Heading>

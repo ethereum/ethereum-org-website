@@ -21,6 +21,7 @@ import InlineLink from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
+import OldHeading from "../components/OldHeading"
 
 // Types
 import type { ChildOnlyProp, Context } from "../types"
@@ -48,7 +49,7 @@ const H2 = (prop: ChildOnlyProp & HeadingProps) => (
 )
 
 const H3 = (prop: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}

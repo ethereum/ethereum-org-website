@@ -8,7 +8,6 @@ import {
   BoxProps,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Link,
   ListItem,
@@ -41,6 +40,7 @@ import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import Translation from "../components/Translation"
+import OldHeading from "../components/OldHeading"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
@@ -70,11 +70,15 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", m: "2xl" }}
     lineHeight={1.4}

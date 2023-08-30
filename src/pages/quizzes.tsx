@@ -1,12 +1,5 @@
 import React, { useState } from "react"
-import {
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  Stack,
-  useDisclosure,
-} from "@chakra-ui/react"
+import { Box, Flex, Icon, Stack, useDisclosure } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { FaGithub } from "react-icons/fa"
@@ -23,6 +16,7 @@ import QuizzesStats from "../components/Quiz/QuizzesStats"
 import { QuizzesHubContext } from "../components/Quiz/context"
 import Text from "../components/OldText"
 import { Content } from "./get-eth"
+import OldHeading from "../components/OldHeading"
 
 import { useLocalStorage } from "../hooks/useLocalStorage"
 
@@ -119,12 +113,12 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
             {/* quizzes list */}
             <Box flex={1} order={{ base: 2, lg: 1 }}>
               <Box px={{ base: 8, lg: 0 }}>
-                <Heading
+                <OldHeading
                   fontSize={{ base: "1.75rem", lg: "2rem" }}
                   color="body.base"
                 >
                   <Translation id="basics" />
-                </Heading>
+                </OldHeading>
 
                 <Text mb={8} color="body.base">
                   <Translation id="basics-description" />
@@ -138,12 +132,12 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
               </Box>
 
               <Box px={{ base: 8, lg: 0 }} mb={10}>
-                <Heading
+                <OldHeading
                   fontSize={{ base: "1.75rem", lg: "2rem" }}
                   color="body.base"
                 >
                   <Translation id="using-ethereum" />
-                </Heading>
+                </OldHeading>
 
                 <Text mb={8} color="body.base">
                   <Translation id="using-ethereum-description" />

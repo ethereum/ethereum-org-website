@@ -88,7 +88,6 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                   fontSize="2xl"
                   fontWeight={600}
                   lineHeight={1.4}
-                  m={0}
                   pb={isExpanded ? 3 : 0}
                   px={4}
                 >

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Flex, Grid, Heading, Show, useToken } from "@chakra-ui/react"
+import { Box, Flex, Grid, Show, useToken } from "@chakra-ui/react"
 
 import { List as ButtonDropdownList } from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
@@ -17,6 +17,7 @@ import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
 import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
 
 import { getImage } from "../../utils/image"
 import type { TranslationKey } from "../../utils/translations"
@@ -98,7 +99,7 @@ const ComparisonGrid = (props: ChildOnlyProp) => {
 }
 
 const H2 = (props) => (
-  <Heading
+  <OldHeading
     fontSize={{ base: "2xl", md: "2rem" }}
     lineHeight={1.4}
     mt={0}
@@ -107,9 +108,9 @@ const H2 = (props) => (
 )
 
 const ColorH3 = (props: { color: string; id: TranslationKey }) => (
-  <Heading as="h3" fontSize="2xl" color={props.color}>
+  <OldHeading as="h3" fontSize="2xl" color={props.color}>
     <Translation id={props.id} />
-  </Heading>
+  </OldHeading>
 )
 
 const StyledButtonLink = (props: { to: string; id: TranslationKey }) => {
