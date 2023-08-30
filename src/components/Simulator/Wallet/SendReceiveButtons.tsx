@@ -38,6 +38,7 @@ export const SendReceiveButtons: React.FC<SendReceiveButtonsProps> = ({
         isDisabled={disableReceive}
         isHighlighted={highlightReceive}
         icon={QrCodeIcon}
+        isAnimated
       >
         Receive
       </SendReceiveButton>

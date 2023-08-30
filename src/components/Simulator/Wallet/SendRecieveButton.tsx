@@ -17,6 +17,7 @@ interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
   isHighlighted: boolean
   isDisabled: boolean
   onClick?: () => void
+  isAnimated?: boolean
 }
 
 export const SendReceiveButton: React.FC<SendReceiveButtonProps> = ({
@@ -25,6 +26,7 @@ export const SendReceiveButton: React.FC<SendReceiveButtonProps> = ({
   isHighlighted,
   isDisabled,
   onClick,
+  isAnimated,
 }) => (
   <Button
     variant="ghost"
@@ -48,7 +50,7 @@ export const SendReceiveButton: React.FC<SendReceiveButtonProps> = ({
       }}
       position="relative"
     >
-      {!isDisabled && (
+      {!isDisabled && isAnimated && (
         <MotionBox
           position="absolute"
           inset={0}
