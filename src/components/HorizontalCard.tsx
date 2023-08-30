@@ -6,7 +6,7 @@ import Text from "./OldText"
 
 export interface IProps extends Omit<FlexProps, "title"> {
   emoji: string
-  title: ReactNode
+  title?: ReactNode
   description: ReactNode
   emojiSize?: number
 }

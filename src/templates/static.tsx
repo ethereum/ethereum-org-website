@@ -45,6 +45,9 @@ import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
 import Text from "../components/OldText"
+import GlossaryDefinition from "../components/Glossary/GlossaryDefinition"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -96,6 +99,7 @@ const Header1 = (props: ChildOnlyProp) => (
       a: {
         display: "none",
       },
+      position: "inherit !important",
     }}
     {...props}
   />
@@ -168,7 +172,7 @@ const CardContainer = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: InlineLink,
+  a: MdLink,
   h1: Header1,
   h2: Header2,
   h3: Header3,
@@ -206,6 +210,8 @@ const components = {
   EnergyConsumptionChart,
   QuizWidget,
   UpgradeStatus,
+  GlossaryDefinition,
+  GlossaryTooltip,
 }
 
 const StaticPage = ({
@@ -326,6 +332,7 @@ export const staticPageQuery = graphql`
             "learn-quizzes"
             "page-history"
             "common"
+            "glossary"
           ]
         }
       }
