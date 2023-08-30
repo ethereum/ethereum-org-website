@@ -16,38 +16,40 @@ import { QrCodeEthereumOrg } from "../../icons"
 const MotionBox = motion(Box)
 
 export const ReceiveEther = () => {
-  const SPACING = 5 as const
+  const SPACING = useBreakpointValue({ base: 3, md: 5 })
   const QR_SIZE = useBreakpointValue({ base: 100, md: 150 })
   return (
     <MotionBox
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.25 }}
-      py={8}
+      py={{ base: 6, md: 8 }}
       px={{ base: 4, md: 6 }}
       h="full"
       bg="background.highlight"
       fontSize={{ base: "sm", md: "md" }}
     >
-      <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold">
+      <Text
+        fontSize={{ base: "xl", md: "2xl" }}
+        fontWeight="bold"
+        mb={{ base: 3, md: 6 }}
+      >
         Receive assets
       </Text>
-      <Flex direction={{ base: "row", md: "column" }} gap={SPACING}>
-        <Text m={0}>
-          Share this QR code containing your address with others
-        </Text>
-        {/* QR Code */}
-        <Flex justify="center" mb={SPACING}>
-          <Icon
-            as={QrCodeEthereumOrg}
-            w={QR_SIZE}
-            h={QR_SIZE}
-            color="body.base"
-            p={3}
-            bg="background.base"
-            borderRadius="base"
-          />
-        </Flex>
+      <Text mb={SPACING}>
+        Share this QR code containing your address with others
+      </Text>
+      {/* QR Code */}
+      <Flex justify="center" mb={SPACING}>
+        <Icon
+          as={QrCodeEthereumOrg}
+          w={QR_SIZE}
+          h={QR_SIZE}
+          color="body.base"
+          p={3}
+          bg="background.base"
+          borderRadius="base"
+        />
       </Flex>
       <Flex
         borderRadius="base"
@@ -102,7 +104,7 @@ export const ReceiveEther = () => {
           </PopoverContent>
         </Popover>
       </Flex>
-      <Text m={0} fontSize="sm">
+      <Text m={0} fontSize="xs" lineHeight={1.7}>
         Use this address for receiving tokens and NFTs on Ethereum network.
       </Text>
     </MotionBox>
