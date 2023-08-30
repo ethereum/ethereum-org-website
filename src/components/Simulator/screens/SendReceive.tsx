@@ -11,6 +11,7 @@ import {
 import { defaultTokenBalances } from "../data"
 import { TokenBalance } from "../Wallet/interfaces"
 import { useEthPrice } from "../hooks"
+import { AnimatePresence, motion } from "framer-motion"
 
 const FALLBACK_ETH_PRICE = 1600 as const
 const USD_RECEIVE_AMOUNT = 500 as const
@@ -42,17 +43,24 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
     [ethPrice]
   )
   return (
-    <>
+    <AnimatePresence>
       {[0].includes(step) && (
         <WalletHome state={state} isEnabled={[false, true]} />
       )}
       {[1].includes(step) && <ReceiveEther />}
       {[2].includes(step) && (
-        <WalletHome
-          state={state}
-          isEnabled={[true, false]}
-          tokenBalances={tokensWithEthBalance}
-        />
+        <motion.div
+          key="wallet-step-index-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25 }}
+        >
+          <WalletHome
+            state={state}
+            isEnabled={[true, false]}
+            tokenBalances={tokensWithEthBalance}
+          />
+        </motion.div>
       )}
       {[3].includes(step) && (
         <SendEther
@@ -70,6 +78,6 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
       {[1, 3, 5].includes(step) && (
         <ProgressCta state={state} isDisabled={step === 3 && !chosenAmount} />
       )}
-    </>
+    </AnimatePresence>
   )
 }

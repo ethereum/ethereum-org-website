@@ -22,6 +22,7 @@ export const ReceiveEther = () => {
     <MotionBox
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
       py={{ base: 6, md: 8 }}
       px={{ base: 4, md: 6 }}

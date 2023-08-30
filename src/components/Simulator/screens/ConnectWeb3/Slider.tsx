@@ -10,24 +10,25 @@ interface IProps {
 export const Slider: React.FC<IProps> = ({ isConnected }) => {
   const ICON_SIZE = "4.5rem" as const
   return (
-    <Box
-      key="backdrop"
-      as={motion.div}
-      position="absolute"
-      inset={0}
-      bg="blackAlpha.300"
-      backdropFilter="blur(2px)"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <>
+      <Box
+        key="backdrop"
+        as={motion.div}
+        position="absolute"
+        inset={0}
+        bg="blackAlpha.300"
+        backdropFilter="blur(2px)"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      />
       <motion.div
         key="slider"
         style={{ position: "absolute", height: "360px", width: "100%" }}
         initial={{ bottom: "-100%" }}
-        exit={{ bottom: "-100%" }}
         animate={{ bottom: 0 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        exit={{ bottom: "-100%" }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
       >
         <Flex
           direction="column"
@@ -107,6 +108,6 @@ export const Slider: React.FC<IProps> = ({ isConnected }) => {
           )}
         </Flex>
       </motion.div>
-    </Box>
+    </>
   )
 }

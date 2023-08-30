@@ -76,6 +76,7 @@ export const GeneratingKeys: React.FC<IProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: BUTTON_FADE_DURATION * 1e-3 }}
+            style={{ position: "absolute", bottom: 0, width: "100%" }}
           >
             <ProgressCta state={state} insetInline={0} />
           </motion.div>

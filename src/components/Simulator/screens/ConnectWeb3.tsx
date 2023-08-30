@@ -3,7 +3,7 @@ import { Box, Flex, Text } from "@chakra-ui/react"
 import { SimulatorStateProps } from "../interfaces"
 import { ProgressCta } from "../ProgressCta"
 import { Slider, Web3App } from "./ConnectWeb3/index"
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { WalletHome } from "../WalletHome"
 import { defaultTokenBalances } from "../data"
 import { TokenBalance } from "../Wallet/interfaces"
@@ -26,6 +26,10 @@ export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
     [ethPrice]
   )
 
+  const fadeInProps = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+  }
   return (
     <>
       {[0, 1, 2].includes(step) && (
@@ -39,13 +43,26 @@ export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
             direction="column"
             textAlign="center"
           >
-            <Text fontSize={{ base: "xl", md: "2xl" }} m={0}>
+            <Text
+              as={motion.p}
+              fontSize={{ base: "xl", md: "2xl" }}
+              m={0}
+              {...fadeInProps}
+              transitionDuration="0.75s"
+            >
               Welcome to
-              <Text as="span" display="block" fontWeight="bold">
+              <Text display="block" mt={2} fontWeight="bold">
                 Web3
               </Text>
             </Text>
-            <Text>Stake ETH to earn rewards and help secure the network</Text>
+            <Text
+              as={motion.p}
+              {...fadeInProps}
+              transitionDuration="0.75s"
+              transitionDelay="0.5s"
+            >
+              Stake ETH to earn rewards and help secure the network
+            </Text>
           </Flex>
         </Web3App>
       )}
@@ -53,34 +70,47 @@ export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
         {[1, 2].includes(step) && <Slider isConnected={step === 2} />}
       </AnimatePresence>
       {[3].includes(step) && (
-        <Web3App bg="background.base">
-          <Box px={6} py={{ base: 2, md: 6 }} fontSize="lg">
-            <Text fontWeight="bold" mb={2}>
-              Your staked ETH
-            </Text>
-            <Text mb={{ base: 4, md: 6 }}>2.1824 ETH</Text>
-          </Box>
-          <Box
-            h="full"
-            w="full"
-            bg="background.highlight"
-            px={6}
-            py={{ base: 4, md: 6 }}
-          >
-            <Text fontWeight="bold" m={0}>
-              Yearly APR
-            </Text>
-            <Text>4.15%</Text>
-            <Text fontWeight="bold" m={0}>
-              Rewards
-            </Text>
-            <Text>0.1824 ETH</Text>
-          </Box>
-        </Web3App>
+        <motion.div
+          {...fadeInProps}
+          exit={{ opacity: 0 }}
+          style={{ height: "100%" }}
+        >
+          <Web3App bg="background.base">
+            <Box px={6} py={{ base: 2, md: 6 }} fontSize="lg">
+              <Text fontWeight="bold" mb={2}>
+                Your staked ETH
+              </Text>
+              <Text mb={{ base: 4, md: 6 }}>2.1824 ETH</Text>
+            </Box>
+            <Box
+              h="full"
+              w="full"
+              bg="background.highlight"
+              px={6}
+              py={{ base: 4, md: 6 }}
+            >
+              <Text fontWeight="bold" m={0}>
+                Yearly APR
+              </Text>
+              <Text>4.15%</Text>
+              <Text fontWeight="bold" m={0}>
+                Rewards
+              </Text>
+              <Text>0.1824 ETH</Text>
+            </Box>
+          </Web3App>
+        </motion.div>
       )}
       {[0, 1, 2, 3].includes(step) && <ProgressCta state={state} />}
       {[4].includes(step) && (
-        <WalletHome tokenBalances={tokensWithEthBalance} />
+        <motion.div
+          key="final-wallet-display"
+          {...fadeInProps}
+          transition={{ duration: 0.5 }}
+          style={{ height: "100%" }}
+        >
+          <WalletHome tokenBalances={tokensWithEthBalance} />
+        </motion.div>
       )}
     </>
   )

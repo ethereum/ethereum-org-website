@@ -36,6 +36,7 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
           {...sharedIconStyles}
           onClick={state.progressStepper}
           cursor="pointer"
+          as="button"
           transition={`
             background 0.8s ease-in-out,
             border-color 0.8s ease-in-out,
@@ -44,6 +45,10 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
           bg="body.base"
           borderColor="body.base"
           boxShadow="0 0 7px 0 #000000C0"
+          _hover={{
+            outline: "2px solid var(--eth-colors-primary-hover)",
+            outlineOffset: "2px",
+          }}
         >
           <Icon
             as={EthGlyphIcon}
@@ -54,11 +59,22 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
       ) : (
         <Grid
           {...sharedIconStyles}
+          as="button"
           bg="background.base"
           borderStyle="dashed"
           borderColor="primary.hover"
+          onClick={state.progressStepper}
+          cursor="pointer"
+          _hover={{
+            borderColor: "primary.base",
+          }}
+          data-group
         >
-          <Icon as={MdArrowDownward} color="primary.hover" />
+          <Icon
+            as={MdArrowDownward}
+            color="primary.hover"
+            _groupHover={{ color: "primary.base" }}
+          />
         </Grid>
       )}
     </Grid>

@@ -30,9 +30,9 @@ export const WalletHome: React.FC<IProps> = ({
     <Flex
       direction="column"
       alignItems="center"
-      h="full"
-      w="full"
       bg="background.base"
+      position="absolute"
+      inset={0}
     >
       <Flex
         direction="column"

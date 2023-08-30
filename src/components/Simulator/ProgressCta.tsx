@@ -1,5 +1,6 @@
 import React from "react"
 import {
+  Box,
   Button,
   createIcon,
   Flex,
@@ -13,6 +14,7 @@ import { simulatorData } from "./data"
 // TODO: Remove simulatorData import; pass data needed as props
 
 const MotionFlex = motion(Flex)
+const MotionBox = motion(Box)
 
 const DownArrowLong = motion(
   createIcon({
@@ -52,7 +54,7 @@ export const ProgressCta: React.FC<IProps> = ({
       initial={{ opacity: 1 }}
       {...flexProps}
     >
-      {step === 0 && (
+      {/* {step === 0 && (
         <MotionFlex
           position="absolute"
           direction="column"
@@ -79,8 +81,26 @@ export const ProgressCta: React.FC<IProps> = ({
             transition={transition}
           />
         </MotionFlex>
-      )}
-      <Button w="full" onClick={progressStepper} isDisabled={isDisabled}>
+      )} */}
+      <Button
+        w="full"
+        onClick={progressStepper}
+        isDisabled={isDisabled}
+        position="relative"
+      >
+        {step === 0 && (
+          <MotionBox
+            as={motion.div}
+            position="absolute"
+            inset={0}
+            borderRadius="base"
+            border="2px"
+            borderColor="primary.hover"
+            initial={{ scale: 1, opacity: 1 }}
+            animate={{ scaleX: 1.1, scaleY: 1.7, opacity: 0 }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }}
+          />
+        )}
         {ctaLabel}
       </Button>
     </MotionFlex>
