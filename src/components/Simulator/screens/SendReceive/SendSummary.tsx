@@ -10,7 +10,10 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
     new Intl.NumberFormat("en", { maximumFractionDigits: 5 }).format(amount)
 
   const formatChosenAmount = new Intl.NumberFormat("en", {
-    maximumFractionDigits: 2,
+    style: "currency",
+    currency: "USD",
+    notation: "compact",
+    maximumFractionDigits: 0,
   }).format(chosenAmount)
 
   return (
@@ -38,9 +41,6 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
             m={0}
           >
             {formatChosenAmount}
-          </Text>
-          <Text fontSize={{ base: "2xl", md: "3xl" }} lineHeight="1.4em" m={0}>
-            $
           </Text>
         </Flex>
         <Text fontSize="xs" color="body.medium" m={0}>
