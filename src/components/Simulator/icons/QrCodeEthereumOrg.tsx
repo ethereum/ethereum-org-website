@@ -353,15 +353,15 @@ export const QrCodeEthereumOrg = createIcon({
       cy="174.016"
       rx="54.0061"
       ry="54.0403"
-      fill="#8282FF"
+      fill="var(--eth-colors-primary-hover)"
     />,
     <path
       d="M195.129 174.689L173.768 137.99L152.392 174.689L173.768 187.748L195.129 174.689Z"
-      fill="white"
+      fill="var(--eth-colors-background-base)"
     />,
     <path
       d="M173.993 210.043L195.369 178.888L173.993 191.947L152.617 178.888L173.993 210.043Z"
-      fill="white"
+      fill="var(--eth-colors-background-base)"
     />,
   ],
 })

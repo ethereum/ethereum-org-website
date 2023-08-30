@@ -73,7 +73,7 @@ export const SendEther: React.FC<IProps> = ({
           alignItems="top"
           flex={1}
           fontWeight="bold"
-          color={chosenAmount > 0 ? "body.base" : "inherit"}
+          color={chosenAmount > 0 ? "body.base" : "body.medium"}
         >
           <Text fontSize="6xl" h="full" lineHeight="1em">
             {formatChosenAmount}
@@ -118,28 +118,31 @@ export const SendEther: React.FC<IProps> = ({
           </Text>
         </Flex>
       </Flex>
-      <Flex
-        flexWrap="nowrap"
-        justify="space-between"
-        px={6}
-        py={6}
-        fontWeight="bold"
-      >
-        {/* Amount buttons */}
-        {AMOUNTS.map((amount, i) => (
-          <Button
-            key={i}
-            onClick={() => handleSelection(amount)}
-            borderRadius="10px"
-            bg={amount === chosenAmount ? "primary.hover" : "primary.base"}
-            fontWeight="bold"
-            textTransform="uppercase"
-            fontSize="sm"
-          >
-            {formatAmount(amount)}
-          </Button>
-        ))}
-      </Flex>
+      <Box bg="background.highlight" h="full">
+        <Flex
+          flexWrap="nowrap"
+          justify="space-between"
+          px={6}
+          py={6}
+          fontWeight="bold"
+          bg="background.highlight"
+        >
+          {/* Amount buttons */}
+          {AMOUNTS.map((amount, i) => (
+            <Button
+              key={i}
+              onClick={() => handleSelection(amount)}
+              borderRadius="10px"
+              bg={amount === chosenAmount ? "primary.hover" : "primary.base"}
+              fontWeight="bold"
+              textTransform="uppercase"
+              fontSize="sm"
+            >
+              {formatAmount(amount)}
+            </Button>
+          ))}
+        </Flex>
+      </Box>
     </Box>
   )
 }

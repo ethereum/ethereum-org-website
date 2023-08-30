@@ -63,10 +63,12 @@ export const ReceiveEther = () => {
         mb={SPACING}
       >
         <Box>
-          <Text color="body.medium" m={0}>
-            Your address
+          <Text color="body.medium" m={0} fontSize="xs">
+            Your Ethereum address
           </Text>
-          <Text m={0}>0x8235...755e</Text>
+          <Text m={0} fontSize="sm">
+            0x8235...755e
+          </Text>
         </Box>
         <Popover placement="top-start">
           <PopoverTrigger>
@@ -77,6 +79,8 @@ export const ReceiveEther = () => {
               bg="body.light"
               borderRadius="10px"
               h="fit-content"
+              py={1.5}
+              px={2}
             >
               Copy
             </Button>

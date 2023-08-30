@@ -55,7 +55,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
         {/* Step counter */}
         <Grid
           placeItems="center"
-          bg="background.highlight"
+          bg="body.light"
           borderRadius="lg"
           p={2}
           w="fit-content"

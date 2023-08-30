@@ -33,14 +33,14 @@ export const SendReceiveButton: React.FC<SendReceiveButtonProps> = ({
       aspectRatio={1}
       _groupHover={{ bg: "primary.hover" }}
       _groupDisabled={{
-        background: isHighlighted ? "primary.base" : "body.medium",
+        background: isHighlighted ? "primary.base" : "body.light",
       }}
     >
       <Icon
         as={icon}
         w={{ base: 4, md: 6 }}
         h={{ base: 4, md: 6 }}
-        fill="white"
+        color="background.base"
       />
     </Grid>
     <Text

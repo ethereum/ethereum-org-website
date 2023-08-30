@@ -1,10 +1,10 @@
 import { Flex } from "@chakra-ui/react"
 import React from "react"
-import { FaQrcode } from "react-icons/fa"
 import { PiPaperPlaneRightFill } from "react-icons/pi"
 import { SendReceiveButton } from "./"
 import type { SimulatorState } from "../interfaces"
 import type { SendReceiveEnabled } from "./types"
+import { QrCodeIcon } from "../icons"
 
 interface SendReceiveButtonsProps {
   state?: SimulatorState
@@ -37,7 +37,7 @@ export const SendReceiveButtons: React.FC<SendReceiveButtonsProps> = ({
         onClick={state?.progressStepper}
         isDisabled={disableReceive}
         isHighlighted={highlightReceive}
-        icon={FaQrcode}
+        icon={QrCodeIcon}
       >
         Receive
       </SendReceiveButton>

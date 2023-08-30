@@ -1,10 +1,9 @@
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
-import { FaQrcode } from "react-icons/fa"
 import { PiMagnifyingGlass } from "react-icons/pi"
 import { CategoryTabs } from "../../Wallet"
 import { CONTACTS } from "../../data"
-import { EthTokenIcon } from "../../icons"
+import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
 import type { SimulatorStateProps } from "../../interfaces"
 
 export const SendFromContacts: React.FC<SimulatorStateProps> = ({ state }) => (
@@ -17,9 +16,15 @@ export const SendFromContacts: React.FC<SimulatorStateProps> = ({ state }) => (
         variant="outline"
         isDisabled
         leftIcon={<Icon as={PiMagnifyingGlass} />}
-        rightIcon={<Icon as={FaQrcode} />}
+        rightIcon={<Icon as={QrCodeIcon} />}
+        _disabled={{ color: "body.medium" }}
+        py={4}
+        fontSize="sm"
+        w="full"
       >
-        Address or contacts
+        <Text as="span" me="auto">
+          Address or contacts
+        </Text>
       </Button>
     </Box>
     <Box py={8} px={6} bg="background.highlight" h="full">
@@ -28,12 +33,14 @@ export const SendFromContacts: React.FC<SimulatorStateProps> = ({ state }) => (
         {CONTACTS.map(({ name, lastAction }, i) => (
           <Button
             key={name + i}
-            leftIcon={<Icon as={EthTokenIcon} />}
+            leftIcon={
+              <Icon as={EthTokenIconGrayscale} fill="black" w="30px" h="30px" />
+            }
             isDisabled={i > 0}
             gap={2}
             _disabled={{
               color: "body.base",
-              bg: "blackAlpha.200",
+              bg: "background.base",
               pointerEvents: "none",
             }}
             data-group
@@ -51,9 +58,9 @@ export const SendFromContacts: React.FC<SimulatorStateProps> = ({ state }) => (
               <Text
                 as="span"
                 display="block"
-                color="whiteAlpha.700" /* TODO: Replace with color mode responsive token */
+                color="body.light"
                 textAlign="start"
-                _groupDisabled={{ color: "blackAlpha.600" }}
+                _groupDisabled={{ color: "body.medium" }}
               >
                 {lastAction}
               </Text>

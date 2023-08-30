@@ -37,7 +37,8 @@ export const WalletHome: React.FC<IProps> = ({
       <Flex
         direction="column"
         flex={1}
-        py={8}
+        pt={8}
+        pb={{ base: 4, md: 8 }}
         px={6}
         justify="space-between"
         w="full"
