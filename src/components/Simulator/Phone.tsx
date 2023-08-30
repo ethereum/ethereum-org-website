@@ -26,8 +26,8 @@ export const Phone: React.FC<IProps> = ({ children }) => (
       borderRadius="100%"
       position="relative"
       filter="blur(14px)"
-      bg="body.base"
-      opacity={0.5}
+      bg="black"
+      opacity={0.4}
       zIndex={-1}
     />
   </Box>
