@@ -1,7 +1,6 @@
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
-import { motion } from "framer-motion"
 import React from "react"
-import { MdArrowUpward, MdChevronRight } from "react-icons/md"
+import { MdChevronRight } from "react-icons/md"
 import { EthTokenIcon } from "../../icons"
 
 interface IProps {
@@ -143,21 +142,6 @@ export const SendEther: React.FC<IProps> = ({
               {formatAmount(amount)}
             </Button>
           ))}
-          {/* Animated helper arrow */}
-          {!chosenAmount && (
-            <motion.div
-              style={{
-                position: "absolute",
-                top: "100%",
-                width: "fit-content",
-              }}
-              initial={{ x: "75%" }}
-              animate={{ x: ["75%", "900%", "75%"] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <Icon as={MdArrowUpward} fontSize="2xl" color="primary.hover" />
-            </motion.div>
-          )}
         </Flex>
       </Box>
     </Box>
