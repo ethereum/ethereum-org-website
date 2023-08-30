@@ -11,12 +11,14 @@ import {
 } from "@chakra-ui/react"
 
 interface IProps extends ModalContentProps, Pick<ModalProps, "size"> {
-  disclosure: UseDisclosureReturn
+  isOpen: UseDisclosureReturn["isOpen"]
+  onClose: UseDisclosureReturn["onClose"]
   children?: React.ReactNode
 }
 
 export const SimulatorModal: React.FC<IProps> = ({
-  disclosure: { isOpen, onClose },
+  isOpen,
+  onClose,
   children,
   size,
   ...restProps
