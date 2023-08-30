@@ -11,7 +11,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Translation from "./Translation"
 
 export interface Content {

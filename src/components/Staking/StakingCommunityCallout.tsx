@@ -3,7 +3,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, useStaticQuery } from "gatsby"
 import { Flex, FlexProps } from "@chakra-ui/react"
 
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import CalloutBanner from "../CalloutBanner"
 import Translation from "../Translation"
 

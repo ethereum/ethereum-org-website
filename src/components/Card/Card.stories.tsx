@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react"
 import { Meta, StoryFn } from "@storybook/react"
 import { useTranslation } from "react-i18next"
 import Card, { IProps } from "."
-import Button from "../Button"
+import { Button } from "../Buttons"
 
 const Component = Card
 

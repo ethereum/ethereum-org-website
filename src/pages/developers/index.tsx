@@ -18,7 +18,7 @@ import Card, { IProps as ICardProps } from "../../components/Card"
 import Callout from "../../components/Callout"
 import InlineLink from "../../components/Link"
 import Translation from "../../components/Translation"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import FeedbackCard from "../../components/FeedbackCard"
 

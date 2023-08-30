@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 import { useActiveHash } from "../../hooks/useActiveHash"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import Translation from "../Translation"
 
 import Mobile from "./TableOfContentsMobile"

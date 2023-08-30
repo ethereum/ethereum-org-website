@@ -12,7 +12,7 @@ import {
   Tr,
   useToken,
 } from "@chakra-ui/react"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 
 export interface TableRow {
   name: string

@@ -9,7 +9,7 @@ import {
 import { FaGithub } from "react-icons/fa"
 import React, { ReactNode } from "react"
 import InlineLink from "./Link"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 
 import Translation from "./Translation"
 

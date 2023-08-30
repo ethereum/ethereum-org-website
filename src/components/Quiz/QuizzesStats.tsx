@@ -12,7 +12,7 @@ import {
 import { FaTwitter } from "react-icons/fa"
 import { useI18next } from "gatsby-plugin-react-i18next"
 
-import Button from "../Button"
+import { Button } from "../Buttons"
 import Translation from "../Translation"
 import { TrophyIcon } from "../icons/quiz"
 

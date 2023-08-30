@@ -3,17 +3,16 @@ import { Box, Flex, Heading, Text, Wrap, WrapItem } from "@chakra-ui/react"
 
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
-import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
-import Button, { IProps as IButtonProps } from "./Button"
+import { Button, IButtonProps, ButtonLink, IButtonLinkProps } from "./Buttons"
 
 import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
 
-export interface IButtonLink extends IButtonLinkProps {
+export interface IButtonLink extends Omit<IButtonLinkProps, "content"> {
   content: ReactNode
   matomo: MatomoEventOptions
 }
 
-export interface IButton extends IButtonProps {
+export interface IButton extends Omit<IButtonProps, "content"> {
   content: ReactNode
   matomo: MatomoEventOptions
 }

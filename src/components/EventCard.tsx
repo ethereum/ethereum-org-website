@@ -1,6 +1,6 @@
 import React from "react"
 import Emoji from "./Emoji"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import { Box, Text, Heading } from "@chakra-ui/react"
 
 const clearStyles = {

@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react"
 
 import GitStars from "./GitStars"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 
 const REPO_DATA = gql`
   query RepoData(

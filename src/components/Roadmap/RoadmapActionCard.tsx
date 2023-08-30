@@ -10,10 +10,9 @@ import {
   LinkOverlay,
   Text,
 } from "@chakra-ui/react"
+import { ButtonLink } from "../Buttons"
 
 import { getImage } from "../../utils/image"
-
-import ButtonLink from "../ButtonLink"
 
 interface IProps {
   to: string

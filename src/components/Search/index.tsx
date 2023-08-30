@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
-import Button from "../Button"
+import { Button } from "../Buttons"
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
 import { sanitizeHitUrl } from "../../utils/url"

@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react"
 
 // Components
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import Translation from "../Translation"
 
 // SVG icons

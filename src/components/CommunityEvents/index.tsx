@@ -16,7 +16,7 @@ import { FaDiscord } from "react-icons/fa"
 import { DateTime, DateTimeFormatOptions } from "luxon"
 
 // Components
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
 import Translation from "../Translation"
 

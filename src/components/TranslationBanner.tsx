@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Translation from "./Translation"
 import Emoji from "./Emoji"
 

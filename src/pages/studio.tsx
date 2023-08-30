@@ -4,7 +4,7 @@ import { Box, Container, Divider, Heading, useToken } from "@chakra-ui/react"
 
 import InlineLink from "../components/Link"
 import Emoji from "../components/Emoji"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 
 const StudioRedirectPage = () => {
   const largeBp = useToken("breakpoints", "lg")

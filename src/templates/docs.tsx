@@ -21,7 +21,7 @@ import {
 } from "@chakra-ui/react"
 
 import BannerNotification from "../components/BannerNotification"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CallToContribute from "../components/CallToContribute"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"

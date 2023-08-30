@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react"
 
 import { List as ButtonDropdownList } from "../../components/ButtonDropdown"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import Card from "../../components/Card"
 import InlineLink from "../../components/Link"
 import PageHero from "../../components/PageHero"

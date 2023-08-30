@@ -7,7 +7,7 @@ import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
 import InlineLink from "./Link"
 import Translation from "./Translation"
-import Button from "./Button"
+import { Button } from "./Buttons"
 
 // Data
 import events from "../data/community-events.json"
