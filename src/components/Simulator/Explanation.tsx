@@ -95,7 +95,8 @@ export const Explanation: React.FC<ExplanationProps> = ({
           maxW="300px"
           w="full"
           mx={{ base: "auto", md: 0 }}
-          mt={{ base: 4, md: 16 }}
+          mt={4}
+          zIndex={-1}
         >
           {nextPathSummary && openPath && nextPathId && (
             <PathButton
