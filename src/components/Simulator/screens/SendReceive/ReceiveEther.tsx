@@ -106,7 +106,7 @@ export const ReceiveEther = () => {
         </Popover>
       </Flex>
       <Text m={0} fontSize="xs" lineHeight={1.7}>
-        Use this address for receiving tokens and NFTs on Ethereum network.
+        Use this address for receiving tokens and NFTs on the Ethereum network.
       </Text>
     </MotionBox>
   )

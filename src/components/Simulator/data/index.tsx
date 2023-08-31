@@ -141,8 +141,8 @@ export const simulatorData: SimulatorData = {
               </ListItem>
             </UnorderedList>
             <Text>
-              Feels old-fashioned, but <em>some things we don't want online</em>
-              .
+              Feels old-fashioned, but{" "}
+              <em>some things we don't want online!</em>
             </Text>
           </>
         ),
@@ -161,8 +161,8 @@ export const simulatorData: SimulatorData = {
               this every time you use your wallet.
             </Text>
             <Text>
-              Almost done! Click the words in the correct order to prove you've
-              backed up your phrase.
+              You're almost done! Click the words in the correct order to prove
+              you've backed up your phrase.
             </Text>
           </>
         ),
@@ -205,12 +205,13 @@ export const simulatorData: SimulatorData = {
         description: (
           <>
             <Text>
-              Your wallet helps you manage your tokens, NFTs, and Web3 identity.
+              Your wallet helps you manage your funds, NFTs, web3 identity and
+              more. Here we'll go over how to send and receive some tokens on
+              Ethereum.
             </Text>
-            <Text>Let’s look at sending and receiving tokens on Ethereum.</Text>
             <Text>
-              Don't have a wallet yet?{" "}
-              <Link href="/wallets/find-wallet/">Find one here.</Link>
+              New accounts are of course empty, so let's first look at how to
+              receive some ETH to a new address.
             </Text>
             <Text>Click the "Receive" button to get your address.</Text>
           </>
@@ -220,26 +221,38 @@ export const simulatorData: SimulatorData = {
         header: "Receiving tokens is as easy as sharing your address",
         description: (
           <>
-            <Text>You can use the same address on multiple devices.</Text>
             <Text>
-              Wallets are technically only an interface to show you your balance
-              and to make transactions, your assets aren't stored inside the
-              wallet, but on the blockchain.
+              Your address is a <em>public</em> identifier for your
+              account—share this with others to receive tokens.
+            </Text>
+            <Text>
+              An Ethereum address is like a transparent public dropbox, with
+              your own unique number on it—anyone can see in, or make a deposit,
+              but only you have the key to unlock and use what's inside.
+            </Text>
+            <Text>
+              Your wallet holds the key to this lockbox, not the contents
+              themselves.
             </Text>
           </>
         ),
       },
       {
-        header: "Lets look at how to send tokens now",
+        header: "You received funds! Now let's send some",
         description: (
           <>
             <Text>
-              Ensure that your account has sufficient ETH to cover the
-              transaction fee, which varies depending on network conditions.
+              Now you have some ETH for network fees, allowing you to submit
+              transactions yourself.
             </Text>
             <Text>
-              Most wallets will automatically add the suggested fee to the
-              transaction which you can then confirm.
+              Note that you didn't need to provide any personal information, or
+              have any funds to begin with you start receiving assets to your
+              address—receiving is free. <Emoji text="😉" />
+            </Text>
+            <Text>
+              Let's try sending some funds to a friend by clicking the "Send"
+              button.
             </Text>
           </>
         ),
@@ -252,6 +265,11 @@ export const simulatorData: SimulatorData = {
               Unlike with traditional banking, there are no borders, hidden fees
               or third parties intervening and stopping your transactions.
             </Text>
+            <Text>
+              Ethereum never stops, allowing you full control over your funds
+              24/7.
+            </Text>
+            <Text>Select an amount to send then click "Next".</Text>
           </>
         ),
       },
@@ -260,9 +278,14 @@ export const simulatorData: SimulatorData = {
         description: (
           <>
             <Text>
-              To send tokens, you only need to know recipients ethereum address.
+              To send tokens, you only need to know the recipients Ethereum
+              address.
             </Text>
             <Text>You can send tokens anywhere globally at any time.</Text>
+            <Text>
+              As you use your wallet, you can save users as contacts for
+              repeated use. Let's send some funds to Jacob.
+            </Text>
           </>
         ),
       },
@@ -282,11 +305,23 @@ export const simulatorData: SimulatorData = {
         ),
       },
       {
-        header: "Thats it! You should know the basics of using a wallet  🎉",
-        description: null,
+        header: "Thats it! You know the basics of transferring tokens 🎉",
+        description: (
+          <>
+            <Text>
+              Receive tokens just by sharing your address. Send tokens with just
+              a recipient address.
+            </Text>
+            <Text>Peer-to-peer. Global. 24/7. Powerful stuff, right?</Text>
+            <Text>
+              Start the next lesson to learn how to use your wallet to log into
+              web3 applications.
+            </Text>
+          </>
+        ),
       },
     ],
-    ctaLabels: ["", "Done", "", "Next", "", "Send now"],
+    ctaLabels: ["", "Share address", "", "Next", "", "Send now"],
     finalCtaLink: {
       label: "See a list of wallets",
       href: "/wallets/find-wallet/",
@@ -383,7 +418,7 @@ export const defaultTokenBalances: Array<TokenBalance> = [
 export const CONTACTS: Array<Contact> = [
   {
     name: "Jacob",
-    lastAction: "Sent to 5 days ago",
+    lastAction: "Received 1 hour ago",
   },
   {
     name: "Mom",
