@@ -62,6 +62,7 @@ export const SendFromContacts: React.FC<SimulatorStateProps> = ({ state }) => (
                 color="body.light"
                 textAlign="start"
                 _groupDisabled={{ color: "body.medium" }}
+                fontSize="sm"
               >
                 {lastAction}
               </Text>
