@@ -4,12 +4,12 @@ import Emoji from "../../Emoji"
 import type { SimulatorData } from "../types"
 import { ConnectWeb3, CreateAccount, SendReceive } from "../screens"
 import {
+  CreateAccountIcon,
   ConnectWeb3Icon,
   DaiTokenIcon,
   EthTokenIcon,
-  EthWalletIcon,
+  SendReceiveIcon,
   UniTokenIcon,
-  WalletAppIcon,
 } from "../icons"
 import { CONNECT_WEB3, CREATE_ACCOUNT, SEND_RECEIVE } from "../constants"
 import Link from "../../Link"
@@ -18,7 +18,7 @@ import { Contact, TokenBalance } from "../Wallet/interfaces"
 export const simulatorData: SimulatorData = {
   [CREATE_ACCOUNT]: {
     title: "Create account",
-    Icon: EthWalletIcon,
+    Icon: CreateAccountIcon,
     Screen: CreateAccount,
     explanations: [
       {
@@ -155,7 +155,7 @@ export const simulatorData: SimulatorData = {
   },
   [SEND_RECEIVE]: {
     title: "Send / receive tokens",
-    Icon: WalletAppIcon,
+    Icon: SendReceiveIcon,
     Screen: SendReceive,
     explanations: [
       {
