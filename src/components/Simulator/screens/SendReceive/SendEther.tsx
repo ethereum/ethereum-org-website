@@ -133,28 +133,19 @@ export const SendEther: React.FC<IProps> = ({
           position="relative"
         >
           {/* Amount buttons */}
-          {AMOUNTS.map((amount, i) => {
-            console.log("inside AMOUNTS.map")
-            console.log({
-              amount,
-              chosenAmount,
-              isSame: amount === chosenAmount,
-              i,
-            })
-            return (
-              <Button
-                key={i}
-                onClick={() => handleSelection(amount)}
-                borderRadius="10px"
-                bg={amount === chosenAmount ? "primary.hover" : "primary.base"}
-                fontWeight="bold"
-                textTransform="uppercase"
-                fontSize="sm"
-              >
-                {formatButtonLabel(amount)}
-              </Button>
-            )
-          })}
+          {AMOUNTS.map((amount, i) => (
+            <Button
+              key={i}
+              onClick={() => handleSelection(amount)}
+              borderRadius="10px"
+              bg={amount === chosenAmount ? "primary.hover" : "primary.base"}
+              fontWeight="bold"
+              textTransform="uppercase"
+              fontSize="sm"
+            >
+              {formatButtonLabel(amount)}
+            </Button>
+          ))}
         </Flex>
       </Box>
     </Box>
