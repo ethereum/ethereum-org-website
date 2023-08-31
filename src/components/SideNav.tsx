@@ -1,5 +1,14 @@
 import React, { useState, useEffect, ReactNode } from "react"
-import { Box, HStack, Icon } from "@chakra-ui/react"
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  HStack,
+  Icon,
+} from "@chakra-ui/react"
 
 import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
@@ -147,7 +156,7 @@ const SideNav: React.FC<IProps> = ({ path }) => {
   const { t } = useTranslation()
 
   return (
-    <Box
+    <Accordion
       as="nav"
       position="sticky"
       top="7.25rem"
@@ -165,10 +174,14 @@ const SideNav: React.FC<IProps> = ({ path }) => {
       display={{ base: "none", lg: "block" }}
       aria-label={t("nav-developers-docs")}
     >
-      {docLinks.map((item, idx) => (
-        <NavLink item={item} path={path} key={idx} />
-      ))}
-    </Box>
+      <AccordionItem>
+        <AccordionPanel pb={4}>
+          {docLinks.map((item, idx) => (
+            <NavLink item={item} path={path} key={idx} />
+          ))}
+        </AccordionPanel>
+      </AccordionItem>
+    </Accordion>
   )
 }
 
