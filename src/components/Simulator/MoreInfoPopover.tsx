@@ -36,7 +36,7 @@ export const MoreInfoPopover: React.FC<Pick<PopoverBodyProps, "children">> = ({
       boxShadow="tooltip"
     >
       <PopoverArrow bg="background.highlight" />
-      <PopoverBody>{children}</PopoverBody>
+      <PopoverBody sx={{ "p:last-of-type": { mb: 0 } }}>{children}</PopoverBody>
     </PopoverContent>
   </Popover>
 )
