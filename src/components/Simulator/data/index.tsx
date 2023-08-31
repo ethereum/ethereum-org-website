@@ -22,15 +22,19 @@ export const simulatorData: SimulatorData = {
     Screen: CreateAccount,
     explanations: [
       {
-        header: "Interact with Ethereum using a wallet",
+        header: "Wallets are used to interact with Ethereum",
         description: (
           <>
             <Text>
               To get started, you&apos;ll need to download a wallet app.
             </Text>
             <Text>
-              Most people use mobile apps, but you can download a desktop app,
-              or use a browser extension.
+              Most people use mobile apps, but desktop apps and browser
+              extensions are also available.
+            </Text>
+            <Text>
+              Let's set up a mobile wallet. Click "Install a wallet" to get
+              started.
             </Text>
           </>
         ),
@@ -39,77 +43,93 @@ export const simulatorData: SimulatorData = {
         header: "They are free apps you can download",
         description: (
           <>
-            <Text>You will need to install an app called wallet.</Text>
             <Text>
-              Wallets can be a mobile or desktop app, browser extension and even
-              a hardware.
+              Mobile wallet apps can be downloaded and installed using app
+              stores.
             </Text>
+            <Text>
+              Wallets provide an easy way to create an Ethereum account, and
+              then interact with Ethereum and its applications.
+            </Text>
+            <Text>Go ahead and open your new wallet app.</Text>
           </>
         ),
       },
       {
-        header: "Creating an account is free and easy",
+        header: "Creating an account is free, private and easy",
         description: (
           <>
             <Text>
-              Ethereum accounts do not require any permission to create—no
-              documentation or proofs required!
+              Ethereum accounts are created privately and do not require any
+              forms or approval—no personal identifying information required!
             </Text>
-            <Text>
-              Some wallets have &quot;smart accounts&quot; which can require ETH
-              to setup, but we won&apos;t cover those in this simulation{" "}
-              <Emoji text="👽" ms={1} />
-            </Text>
+            <Text>Click on "Create account" to generate a new account.</Text>
           </>
         ),
       },
       {
         header:
-          "The account isn't maintained by any company, only you have access to it",
-        description: null,
-      },
-      {
-        header: "Use recovery phrase to keep the account safe",
+          "This is YOUR account, and nobody else's—you control it completely",
         description: (
           <Text>
-            The recovery phrase (sometimes called a seed phrase) is the key to
-            controlling your account.
+            No company, including your wallet provider, has access to your
+            account.
           </Text>
         ),
       },
       {
-        header: "Keep it safe!",
+        header: "A recovery phrase is used to keep the account safe",
+        description: (
+          <>
+            <Text>
+              Sometimes called a "seed phrase", this unique sequence of 12-24
+              words is used to generate new accounts. This phrase can also
+              recover your account to a new wallet or device.
+            </Text>
+            <Text>
+              Read notice and click "I understand" to see and backup your
+              recovery phrase.
+            </Text>
+          </>
+        ),
+      },
+      {
+        header: "Keep your phrase safe!",
         description: (
           <>
             <Text fontWeight="bold" mb={2}>
-              Storing smaller amount of funds:
+              Storing small amount of value:
             </Text>
             <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
               <ListItem>
-                <Emoji text="✅" me={2} />
-                Backup file in cloud storage
+                <Emoji text="🔐" me={2} /> Consider saving in a password manager
               </ListItem>
             </UnorderedList>
             <Text fontWeight="bold" mb={2}>
-              Storing significant funds:
+              Storing any significant value:
             </Text>
             <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
               <ListItem>
-                <Emoji text="✅" me={2} />
-                Use durable offline method
+                <Emoji text="✍️" me={2} /> Write your recovery phrase down
               </ListItem>
               <ListItem>
-                <Emoji text="✅" me={2} />
-                Use a hardware wallet
+                <Emoji text="🔒" me={2} /> Store it in a safe place (consider
+                multiple backups)
+              </ListItem>
+              <ListItem>
+                <Emoji text="👩‍🏫" me={2} />{" "}
+                <Link href="#TODO-link-out">
+                  Learn more on protecting your recovery phrase
+                </Link>
               </ListItem>
             </UnorderedList>
             <Text fontWeight="bold" mb={2}>
-              Risky ways to store your recovery phrase:
+              Unsafe backup methods:
             </Text>
             <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
               <ListItem>
                 <Emoji text="❌" me={2} />
-                Texting it to a friend
+                Texting it to a friend (or anyone!)
               </ListItem>
               <ListItem>
                 <Emoji text="❌" me={2} />
@@ -120,22 +140,44 @@ export const simulatorData: SimulatorData = {
                 Saving it in a file on your computer
               </ListItem>
             </UnorderedList>
+            <Text>
+              Feels old-fashioned, but <em>some things we don't want online</em>
+              .
+            </Text>
           </>
         ),
       },
       {
-        header: "You may be asked to repeat it to ensure you saved it",
+        header: "You may be asked to repeat it to ensure you've saved it",
         description: (
-          <Text>
-            The recovery phrase (sometimes called a seed phrase) is the key to
-            controlling your account.
-          </Text>
+          <>
+            <Text>
+              Since you and only you control this phrase, it is critical to take
+              steps to backup and secure it.
+            </Text>
+            <Text>
+              Wallets usually ask you to repeat this on initial setup to ensure
+              you've backed it up, but you do <strong>not</strong> have to enter
+              this every time you use your wallet.
+            </Text>
+            <Text>
+              Almost done! Click the words in the correct order to prove you've
+              backed up your phrase.
+            </Text>
+          </>
         ),
       },
       {
-        // ? Change type for header to allow components, ie. Emoji?
         header: "Thats it! Welcome to Ethereum 🎉",
-        description: null,
+        description: (
+          <>
+            <Text>That's all it takes to create an Ethereum account!</Text>
+            <Text>
+              In the next lesson we'll learn how to use your new account to
+              receive and send some funds.
+            </Text>
+          </>
+        ),
       },
     ],
     ctaLabels: [
