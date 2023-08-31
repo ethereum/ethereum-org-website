@@ -10422,6 +10422,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "z0rats",
+      "name": "Alex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32142853?v=4",
+      "profile": "http://t.me/mevsinternet",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

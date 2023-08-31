@@ -51,6 +51,8 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -108,7 +110,7 @@ export const Paragraph = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: InlineLink,
+  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -133,6 +135,7 @@ const components = {
   ExpandableCard,
   YouTube,
   QuizWidget,
+  GlossaryTooltip,
 }
 
 const HeroContainer = (props: ChildOnlyProp) => (
@@ -490,7 +493,7 @@ export const useCasePageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["template-usecase", "learn-quizzes", "common"] }
+        ns: { in: ["template-usecase", "learn-quizzes", "common", "glossary"] }
       }
     ) {
       edges {

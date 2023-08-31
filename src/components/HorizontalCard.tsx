@@ -4,7 +4,7 @@ import { Text, Box, Flex, FlexProps } from "@chakra-ui/react"
 
 export interface IProps extends Omit<FlexProps, "title"> {
   emoji: string
-  title: ReactNode
+  title?: ReactNode
   description: ReactNode
   emojiSize?: number
 }
