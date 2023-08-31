@@ -16,6 +16,7 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
     maximumFractionDigits: 0,
   }).format(chosenAmount)
 
+  const USD_FEE = 0.69 as const
   return (
     <>
       {/* Top section */}
@@ -74,7 +75,7 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
               style: "currency",
               currency: "USD",
               notation: "compact",
-            }).format(0.17)}
+            }).format(USD_FEE)}
           </Text>
         </Box>
       </Flex>

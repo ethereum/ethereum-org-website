@@ -19,6 +19,7 @@ export const SendFromContacts: React.FC<SimulatorStateProps> = ({ state }) => (
         rightIcon={<Icon as={QrCodeIcon} />}
         _disabled={{ color: "body.medium" }}
         py={4}
+        pointerEvents="none"
         fontSize="sm"
         w="full"
       >
