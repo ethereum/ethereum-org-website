@@ -386,7 +386,7 @@
       "isTrustless": true,
       "isPermissionless": true,
       "pctMajorityExecutionClient": null,
-      "pctMajorityConsensusClient": 64.1,
+      "pctMajorityConsensusClient": 0,
       "isSelfCustody": true,
       "platforms": ["Browser", "Wallet", "Linux", "macOS", "Windows"],
       "ui": ["GUI"],
