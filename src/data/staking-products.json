@@ -386,9 +386,9 @@
       "isTrustless": true,
       "isPermissionless": true,
       "pctMajorityExecutionClient": null,
-      "pctMajorityConsensusClient": null,
+      "pctMajorityConsensusClient": 64.1,
       "isSelfCustody": true,
-      "platforms": ["Browser", "Wallet"],
+      "platforms": ["Browser", "Wallet", "Linux", "macOS", "Windows"],
       "ui": ["GUI"],
       "socials": {
         "github": "https://github.com/stakefish",
