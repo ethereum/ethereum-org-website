@@ -1,5 +1,5 @@
 import React, { useMemo } from "react"
-import { Box, Flex, Text } from "@chakra-ui/react"
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import { SimulatorStateProps } from "../interfaces"
 import { ProgressCta } from "../ProgressCta"
 import { Slider, Web3App } from "./ConnectWeb3/index"
@@ -8,9 +8,31 @@ import { WalletHome } from "../WalletHome"
 import { defaultTokenBalances } from "../data"
 import { TokenBalance } from "../Wallet/interfaces"
 import { useEthPrice } from "../hooks"
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {
+  RiPriceTag2Line,
+  RiAuctionLine,
+  RiFileTransferLine,
+} from "react-icons/ri"
 
 export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
   const { step } = state
+  const { nftImage } = useStaticQuery(graphql`
+    {
+      nftImage: file(relativePath: { eq: "deep-panic.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 120
+            height: 120
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
+        }
+      }
+    }
+  `)
   const ethPrice = useEthPrice()
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
     () =>
@@ -49,10 +71,11 @@ export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
               m={0}
               {...fadeInProps}
               transitionDuration="0.75s"
+              lineHeight={1.4}
             >
-              Welcome to
-              <Text display="block" mt={2} fontWeight="bold">
-                Web3
+              Welcome to web3
+              <Text as="span" display="block" mt={2} fontWeight="bold">
+                NFT Marketplace
               </Text>
             </Text>
             <Text
@@ -61,7 +84,7 @@ export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
               transitionDuration="0.75s"
               transitionDelay="0.5s"
             >
-              Stake ETH to earn rewards and help secure the network
+              Connect your wallet to view your collection
             </Text>
           </Flex>
         </Web3App>
@@ -77,26 +100,46 @@ export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
         >
           <Web3App bg="background.base">
             <Box px={6} py={{ base: 2, md: 6 }} fontSize="lg">
-              <Text fontWeight="bold" mb={2}>
-                Your staked ETH
+              <Text fontWeight="bold" mb={4}>
+                Your collection
               </Text>
-              <Text mb={{ base: 4, md: 6 }}>2.1824 ETH</Text>
-            </Box>
-            <Box
-              h="full"
-              w="full"
-              bg="background.highlight"
-              px={6}
-              py={{ base: 4, md: 6 }}
-            >
-              <Text fontWeight="bold" m={0}>
-                Yearly APR
-              </Text>
-              <Text>4.15%</Text>
-              <Text fontWeight="bold" m={0}>
-                Rewards
-              </Text>
-              <Text>0.1824 ETH</Text>
+              <Flex gap={2} mb={6}>
+                <GatsbyImage image={getImage(nftImage)!} alt="NFT Image" />
+                <Flex
+                  direction="column"
+                  fontSize="sm"
+                  alignItems="start"
+                  gap={1}
+                >
+                  <Text fontWeight="bold" fontSize="md" mb="auto" ms={2}>
+                    Cool art
+                  </Text>
+                  <Button
+                    variant="link"
+                    isDisabled
+                    leftIcon={<Icon as={RiAuctionLine} fontSize="xs" />}
+                  >
+                    Set a price
+                  </Button>
+                  <Button
+                    variant="link"
+                    isDisabled
+                    leftIcon={<Icon as={RiPriceTag2Line} fontSize="xs" />}
+                  >
+                    Auction item
+                  </Button>
+                  <Button
+                    variant="link"
+                    isDisabled
+                    leftIcon={<Icon as={RiFileTransferLine} fontSize="xs" />}
+                  >
+                    Transfer item
+                  </Button>
+                </Flex>
+              </Flex>
+              <Button variant="outline" w="full" isDisabled>
+                Browser other artwork
+              </Button>
             </Box>
           </Web3App>
         </motion.div>

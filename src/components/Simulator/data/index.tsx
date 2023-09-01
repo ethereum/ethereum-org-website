@@ -334,34 +334,51 @@ export const simulatorData: SimulatorData = {
     Screen: ConnectWeb3,
     explanations: [
       {
-        header: "Explore web3: From NFTs to decentralized finance and identity",
+        header: "Explore web3: from NFTs to decentralized finance and identity",
         description: (
           <>
             <Text>
-              Wallets are free apps you can download from{" "}
-              <Link href="/wallets/find-wallet/">here</Link>.
+              Your wallet can be used to connect to and interact with Ethereum
+              applications such as gaming, lending platforms, or NFT
+              marketplaces.
             </Text>
             <Text>
-              Wallets can be a mobile or desktop app, browser extension and even
-              a hardware.
+              It uses your own Ethereum account as a login, removing the need
+              for any new usernames or passwords.
+            </Text>
+            <Text>
+              A friend mentioned they just send you an NFT! Let's check it out
+              on a new NFT marketplace. Connect your wallet to get started.
+            </Text>
+          </>
+        ),
+      },
+      {
+        header: "You can have a single login for most Ethereum based projects",
+        description: (
+          <>
+            <Text>
+              Assets stored on Ethereum can be accessed from any application,
+              adding portability to your accounts.
+            </Text>
+            <Text>
+              The same account address will also represent your identity on many
+              different Ethereum compatible blockchains such as Arbitrum,
+              Polygon or Optimism.
             </Text>
           </>
         ),
       },
       {
         header:
-          "You can have a single, private login in most Ethereum based projects",
+          "No need to share any phone number, e-mail, or other identifying information",
         description: (
           <Text>
-            The same account address will also represent your identity on many
-            different Ethereum compatible blockchains such as Arbitrum, Polygon
-            or Optimism.
+            Your public Ethereum address serves as a way to identify yourself,
+            and can be authenticated using the keys in your wallet. No need to
+            create a new account—you already own one.
           </Text>
         ),
-      },
-      {
-        header: "No need to share any of your personal information or e-mail",
-        description: <Text>TODO: Copy needed</Text>,
       },
       {
         header:
@@ -371,8 +388,11 @@ export const simulatorData: SimulatorData = {
             <Text>You can use the same address on multiple devices.</Text>
             <Text>
               Wallets are technically only an interface to show you your balance
-              and to make transactions, your account isn't stored inside the
-              wallet, but on the blockchain.
+              and to make transactions—
+              <strong>
+                your assets aren't stored inside the wallet, but on the
+                blockchain.
+              </strong>
             </Text>
           </>
         ),
