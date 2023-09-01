@@ -12,6 +12,7 @@ import React from "react"
 import { Box, Flex, Icon, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { QrCodeEthereumOrg } from "../../icons"
+import { FAKE_DEMO_ADDRESS } from "../../constants"
 
 const MotionBox = motion(Box)
 
@@ -70,7 +71,7 @@ export const ReceiveEther = () => {
             Your Ethereum address
           </Text>
           <Text m={0} fontSize="sm">
-            0x8235...755e
+            {FAKE_DEMO_ADDRESS}
           </Text>
         </Box>
         <Popover placement="top-start">
