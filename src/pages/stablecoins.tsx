@@ -86,7 +86,7 @@ const H2 = (props: HeadingProps) => (
 const H3 = (props: HeadingProps) => (
   <OldHeading
     as="h3"
-    fontSize={{ base: "xl", m: "2xl" }}
+    fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
     {...props}
   />

@@ -14,7 +14,6 @@ import {
   Table,
   TableCaption,
   Tbody,
-  Text,
   Th,
   Thead,
   Td,
@@ -40,6 +39,7 @@ import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
@@ -80,7 +80,7 @@ const H2 = (props: HeadingProps) => (
 const H3 = (props: HeadingProps) => (
   <OldHeading
     as="h3"
-    fontSize={{ base: "xl", m: "2xl" }}
+    fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
     {...props}
   />

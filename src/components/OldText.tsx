@@ -6,6 +6,9 @@ import { Text, TextProps } from "@chakra-ui/react"
  *
  * Renders body copy with a defined margin bottom for spacing (old theme)
  */
-const OldText = (props: TextProps) => <Text mb="1.45rem" {...props} />
+const OldText = (props: TextProps) => {
+  const mb = props.as && props.as !== "p" ? 0 : "1.45rem"
+  return <Text mb={mb} lineHeight="1.6rem" {...props} />
+}
 
 export default OldText
