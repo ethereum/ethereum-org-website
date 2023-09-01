@@ -11,10 +11,10 @@ import {
 import { defaultTokenBalances } from "../data"
 import { TokenBalance } from "../Wallet/interfaces"
 import { useEthPrice } from "../hooks"
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
-const FALLBACK_ETH_PRICE = 1600 as const
-const USD_RECEIVE_AMOUNT = 500 as const
+const FALLBACK_ETH_PRICE = 1000 as const
+const USD_RECEIVE_AMOUNT = 50 as const
 
 export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
   const { step } = state

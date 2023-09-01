@@ -95,10 +95,15 @@ export const ProgressCta: React.FC<IProps> = ({
             inset={0}
             borderRadius="base"
             border="2px"
-            borderColor="primary.hover"
+            borderColor="primary.base"
             initial={{ scale: 1, opacity: 1 }}
             animate={{ scaleX: 1.1, scaleY: 1.7, opacity: 0 }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              ease: "easeOut",
+              delay: 1,
+            }}
           />
         )}
         {ctaLabel}
