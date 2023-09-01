@@ -9,6 +9,8 @@ import {
   type PopoverBodyProps,
   Checkbox,
   PopoverFooter,
+  PopoverCloseButton,
+  PopoverHeader,
 } from "@chakra-ui/react"
 import React, { ChangeEvent, useEffect, useRef, useState } from "react"
 import { MdInfoOutline } from "react-icons/md"
@@ -17,10 +19,11 @@ interface IProps extends Pick<PopoverBodyProps, "children"> {
   step: number
 }
 export const MoreInfoPopover: React.FC<IProps> = ({ step, children }) => {
-  const [hidden, setHidden] = useState<boolean>(false)
+  const DEFAULT_HIDDEN = true as const
+  const [hidden, setHidden] = useState<boolean>(DEFAULT_HIDDEN)
   const buttonRef = useRef<HTMLButtonElement>(null)
   useEffect(() => {
-    if (hidden) return
+    if (hidden && step !== 0) return
     buttonRef.current?.click()
   }, [step])
 
@@ -45,16 +48,26 @@ export const MoreInfoPopover: React.FC<IProps> = ({ step, children }) => {
       </PopoverTrigger>
       <PopoverContent
         bg="background.highlight"
-        p={4}
+        px={4}
+        py={6}
         insetStart={{ base: 4, sm: 8 }}
         maxW={{ base: "calc(100vw - 3rem)", sm: "calc(100vw - 5rem)" }}
         borderRadius="base"
         boxShadow="tooltip"
       >
         <PopoverArrow bg="background.highlight" boxShadow="2xl" />
+        <PopoverHeader mb={2}>
+          <PopoverCloseButton ms="auto" />
+        </PopoverHeader>
         <PopoverBody>{children}</PopoverBody>
-        <PopoverFooter>
-          <Checkbox onChange={handleCheckbox}>Hide by default</Checkbox>
+        <PopoverFooter display="flex">
+          <Checkbox
+            defaultChecked={DEFAULT_HIDDEN}
+            ms="auto"
+            onChange={handleCheckbox}
+          >
+            Hide by default
+          </Checkbox>
         </PopoverFooter>
       </PopoverContent>
     </Popover>
