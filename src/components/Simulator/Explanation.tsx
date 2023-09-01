@@ -11,6 +11,7 @@ import type {
 import type { PathId } from "./types"
 import { MoreInfoPopover, PathButton } from "."
 import ButtonLink from "../ButtonLink"
+import { motion } from "framer-motion"
 
 interface ExplanationProps extends SimulatorStateProps {
   explanation: SimulatorExplanation
@@ -36,17 +37,27 @@ export const Explanation: React.FC<ExplanationProps> = ({
     <Box {...props}>{description}</Box>
   )
   const isLastStep = state.step + 1 === totalSteps
+
+  const backButtonVariants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  }
   return (
     <Flex direction="column" flex={1} zIndex={1}>
       {/* Back button */}
       <Button
+        as={motion.button}
         variant="ghost"
         leftIcon={<MdArrowBack size="18px" />}
         sx={{ paddingInlineStart: 0 }}
         mt={{ base: -6, md: 0 }}
         mb={{ base: 6, md: 8 }}
-        onClick={step === 0 && onClose ? onClose : regressStepper}
-        visibility={step === 0 && !onClose ? "hidden" : "unset"}
+        onClick={regressStepper}
+        pointerEvents={step === 0 ? "none" : "all"}
+        variants={backButtonVariants}
+        initial="hidden"
+        animate={step === 0 ? "hidden" : "visible"}
+        transitionDuration="10ms"
         w="fit-content"
       >
         Back

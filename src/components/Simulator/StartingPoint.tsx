@@ -61,6 +61,10 @@ export const StartingPoint: React.FC = () => {
   }
 
   const regressStepper = (): void => {
+    if (step === 0) {
+      onClose()
+      return
+    }
     setStep((step) => Math.max(step - 1, 0))
   }
 
