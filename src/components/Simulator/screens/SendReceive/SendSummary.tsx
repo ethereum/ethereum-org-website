@@ -76,6 +76,19 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
               currency: "USD",
               notation: "compact",
             }).format(USD_FEE)}
+            <Text
+              as="span"
+              color="body.medium"
+              fontSize="xs"
+              fontWeight="normal"
+              ms={2}
+            >
+              (
+              {Intl.NumberFormat("en", {
+                maximumFractionDigits: 6,
+              }).format(USD_FEE / ethPrice)}{" "}
+              ETH)
+            </Text>
           </Text>
         </Box>
       </Flex>
