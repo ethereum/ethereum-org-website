@@ -1,5 +1,6 @@
-import { Box, type BoxProps, Text } from "@chakra-ui/react"
+import { Box, type BoxProps, Text, Flex } from "@chakra-ui/react"
 import React from "react"
+import { AddressPill } from "."
 
 interface IProps extends BoxProps {
   usdAmount?: number
@@ -24,5 +25,8 @@ export const WalletBalance: React.FC<IProps> = ({
         notation: "compact",
       }).format(usdAmount)}
     </Text>
+    <Flex justify="center" mb={4}>
+      <AddressPill />
+    </Flex>
   </Box>
 )

@@ -8,7 +8,7 @@ import type {
 } from "./interfaces"
 import type { PathId } from "./types"
 import { simulatorData } from "./data"
-import { PATH_IDS } from "./constants"
+import { PATH_IDS, PATH_ID_QUERY_PARAM } from "./constants"
 
 export const StartingPoint: React.FC = () => {
   const [step, setStep] = useState<number>(0) // 0-indexed to use as array index
@@ -23,9 +23,6 @@ export const StartingPoint: React.FC = () => {
   const totalSteps: number = pathId
     ? simulatorData[pathId].explanations.length
     : 0
-
-  const PATH_ID_QUERY_PARAM = "sim" as const
-  const STEP_QUERY_PARAM = "step" as const
 
   const clearUrlParams = (): void => {
     if (!window) return
@@ -43,23 +40,10 @@ export const StartingPoint: React.FC = () => {
       return
     }
     setPathId(pathId)
-    const paramStepString = params.get(STEP_QUERY_PARAM)
-    if (!paramStepString) {
-      onOpen()
-      return
-    }
-    const paramStep = parseInt(paramStepString)
-    if (!paramStep) {
-      onOpen()
-      return
-    }
-    const total = simulatorData[pathId].explanations.length
-    const targetStep = paramStep <= total ? paramStep - 1 : 0
-    setStep(targetStep)
     onOpen()
   }, [])
 
-  // Set URL search params for pathId and step every time they change
+  // Set URL search params for pathId when it changes
   useEffect(() => {
     if (!window) return
     if (!pathId) {
@@ -68,10 +52,9 @@ export const StartingPoint: React.FC = () => {
     }
     const params = new URLSearchParams()
     params.set(PATH_ID_QUERY_PARAM, pathId)
-    if (step) params.set(STEP_QUERY_PARAM, (step + 1).toString())
     const url = `?${params.toString()}`
     window.history.replaceState({}, "", url)
-  }, [pathId, step])
+  }, [pathId])
 
   const progressStepper = (): void => {
     setStep((step) => Math.min(step + 1, totalSteps - 1))
