@@ -12,6 +12,8 @@ import type { PathId } from "./types"
 import { MoreInfoPopover, PathButton } from "."
 import ButtonLink from "../ButtonLink"
 import { motion } from "framer-motion"
+import { shareOnTwitter } from "./utils"
+import { FaTwitter } from "react-icons/fa"
 
 interface ExplanationProps extends SimulatorStateProps {
   explanation: SimulatorExplanation
@@ -123,6 +125,15 @@ export const Explanation: React.FC<ExplanationProps> = ({
               {finalCtaLink.label}
             </ButtonLink>
           )}
+          <Button
+            variant="outline-color"
+            leftIcon={<FaTwitter />}
+            onClick={shareOnTwitter}
+            w={{ base: "full", lg: "auto" }}
+            mt={{ base: 2, lg: 0 }}
+          >
+            Share experience
+          </Button>
           {!nextPathId && (
             <Button onClick={onClose} variant="outline">
               Go back
