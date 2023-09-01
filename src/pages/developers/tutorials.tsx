@@ -25,6 +25,7 @@ import Emoji from "../../components/Emoji"
 import FeedbackCard from "../../components/FeedbackCard"
 import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
 import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
 
 // Data
 import externalTutorials from "../../data/externalTutorials.json"
@@ -382,12 +383,12 @@ const TutorialsPage = ({
         {filteredTutorials.length === 0 && (
           <Box mt={0} textAlign="center" padding={12}>
             <Emoji text=":crying_face:" fontSize="5xl" mb={8} mt={8} />
-            <h2>
+            <OldHeading>
               <Translation id="page-tutorial-tags-error" />
-            </h2>
-            <p>
+            </OldHeading>
+            <Text>
               <Translation id="page-find-wallet-try-removing" />
-            </p>
+            </Text>
           </Box>
         )}
         {filteredTutorials.map((tutorial) => {

@@ -323,25 +323,25 @@ const DepositContractPage = ({
           <Subtitle>
             <Translation id="page-staking-deposit-contract-subtitle" />
           </Subtitle>
-          <h2>
+          <OldHeading>
             <Translation id="page-staking-deposit-contract-h2" />
-          </h2>
-          <p>
+          </OldHeading>
+          <Text>
             <Translation id="page-staking-deposit-contract-staking" />{" "}
             <InlineLink to="/staking/">
               <Translation id="page-staking-deposit-contract-staking-more-link" />
             </InlineLink>
-          </p>
+          </Text>
           <StyledButton
             to="https://launchpad.ethereum.org"
             id="page-staking-deposit-contract-launchpad"
           />
-          <h2>
+          <OldHeading>
             <Translation id="page-staking-deposit-contract-staking-check" />
-          </h2>
-          <p>
+          </OldHeading>
+          <Text>
             <Translation id="page-staking-deposit-contract-staking-check-desc" />
-          </p>
+          </Text>
           <CardList content={addressSources} />
         </LeftColumn>
         <RightColumn>

@@ -81,9 +81,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             />
           </Center>
           <Center>
-            <h1>
+            <Heading as="h1" size="2xl" my={8}>
               <Translation id="page-assets-h1" />
-            </h1>
+            </Heading>
           </Center>
           <Center>
             <InlineLink to="/assets/#illustrations">

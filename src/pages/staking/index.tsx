@@ -381,9 +381,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-rewards-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-solo-rewards-li1" />
@@ -402,9 +402,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-risks-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-solo-risks-li1" />
@@ -418,9 +418,9 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "solo-reqs" }}>
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-requirements-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-solo-requirements-li1" />
@@ -446,9 +446,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-rewards-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-saas-rewards-li1" />
@@ -464,9 +464,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-risks-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-saas-risks-li1" />
@@ -477,9 +477,9 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "saas-reqs" }}>
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-requirements-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-saas-requirements-li1" />
@@ -506,9 +506,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-rewards-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-pools-rewards-li1" />
@@ -527,9 +527,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-risks-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-pools-risks-li1" />
@@ -540,9 +540,9 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "pool-reqs" }}>
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-requirements-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-pools-requirements-li1" />
