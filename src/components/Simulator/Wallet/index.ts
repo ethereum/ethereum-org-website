@@ -1,3 +1,4 @@
+export * from "./AddressPill"
 export * from "./SendRecieveButton"
 export * from "./SendReceiveButtons"
 export * from "./TokenBalanceItem"
