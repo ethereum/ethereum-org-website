@@ -8,7 +8,7 @@ published: 2023-09-15
 lang: en
 ---
 
-In this tutorial we dissect [a scam token](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code) to see some of the tricks that scammers play and how they implement them. By the end of the tutorial you will have a more comprehensive view of ERC-20 token contracts, their capabilities, and why skepticism is necessary.
+In this tutorial we dissect [a scam token](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code) to see some of the tricks that scammers play and how they implement them. By the end of the tutorial you will have a more comprehensive view of ERC-20 token contracts, their capabilities, and why skepticism is necessary. Then we look at the events emitted by that scam token and see how we can identify that it is not legitimate automatically.
 
 ## Scam tokens - what are they, why do people do them, and how to avoid them {#scam-tokens}
 
@@ -38,7 +38,7 @@ While contract deployers can choose whether or not to publish the source code, t
 We are going to compare this token to legitimate ERC-20 tokens. If you are not familiar with how legitimate ERC-20 tokens are typically written, [see this tutorial](/developers/tutorials/erc20-annotated-code/).
 
 
-### Constants for privileged addresses
+### Constants for privileged addresses {#constants-for-privileged-addresses}
 
 Contracts sometimes need privileged addresses. Contracts that are designed for long term use allow some privileged address to change those addresses, for example to enable the use of a new multisig contract. There are several ways to do this.
 
@@ -85,9 +85,7 @@ contract WrappedArbitrum is Context, IERC20 {
 And indeed, if we look in Etherscan we see that the scammer only used this contract for only 12 hours ([first transaction](https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2) to [last transaction](https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b)) during May 19th, 2023.
 
 
-
-
-### The fake `_transfer` function
+### The fake `_transfer` function {#the-fake-transfer-function}
 
 It is standard to have actual transfers happen using [an internal `_transfer` function](/developers/tutorials/erc20-annotated-code/#the-_transfer-function-_transfer). 
 
@@ -138,7 +136,7 @@ However, there is a more important issue. Who calls this `_transfer` function? I
 When we look at the functions that are called to transfer tokens, `transfer` and `transferFrom`, we see that they call a completely different function, `_f_`.
 
 
-### The real `_f_` function
+### The real `_f_` function {#the-real-f-function}
 
 
 ```solidity
@@ -171,7 +169,7 @@ There are two potential red flags in this function.
 - The same issue we saw in `_transfer`, which is when `contract_owner` sends tokens they appear to come from `deployer`.
 
 
-### The fake events function `dropNewTokens`
+### The fake events function `dropNewTokens` {#the-fake-events-function-dropNewTokens}
 
 Now we come to something that looks like an actual scam. I edited the function a bit for readability, but it's functionally equivalent.
 
@@ -205,7 +203,7 @@ A function to transfer from a pool account to an array of receivers an array of 
 However, `dropNewTokens` doesn't do that. It emits [`Transfer` events](https://eips.ethereum.org/EIPS/eip-20#transfer-1), but does not actually transfer any tokens. There is no legitimate reason to confuse offchain applications by telling them of a transfer that did not really happen.
 
 
-### The burning `Approve` function
+### The burning `Approve` function {#the-burning-approve-function}
 
 ERC-20 contracts are supposed to have [an `approve` function](/developers/tutorials/erc20-annotated-code/#approve) for allowances, and indeed our scam token has such a function, and it is even correct. However, because Solidity is descended from C it is case significant. "Approve" and "approve" are different strings. 
 
@@ -242,11 +240,11 @@ The `approver()` modifying makes sure only `contract_owner` is allowed to call t
 For every holder address the function moves the holder's entire balance to the address `0x00...01`, effectively burning it (the actual `burn` in the standard also changes the total supply, and transfers the tokens to `0x00...00`). This means that `contract_owner` can remove the assets of any user. That doesn't seem like a feature you'd want in a governance token.
 
 
-### Code quality issues
+### Code quality issues {#code-quality-issues}
 
 These code quality issues don't *prove* that this code is a scam, but they make it appear suspicious. Organized companies such as Arbitrum don't usually release code this bad.
 
-#### The `mount` function
+#### The `mount` function {#the-mount-function}
 
 While it is not specified in [the standard](https://eips.ethereum.org/EIPS/eip-20), generally speaking the function that creates new tokens is called [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn). 
 
@@ -291,7 +289,7 @@ There are two more suspicious facts, directly related to minting:
 - While the balance increased belongs to `contract_owner`, the event emitted shows a transfer to `account`.
 
 
-### Why both `auth` and `approver`? Why the `mod` that does nothing?
+### Why both `auth` and `approver`? Why the `mod` that does nothing? {#why-both-autho-and-approver-why-the-mod-that-does-nothing}
 
 This contract contains three modifiers: `_mod_`, `auth`, and `approver`.
 
@@ -319,18 +317,155 @@ This contract contains three modifiers: `_mod_`, `auth`, and `approver`.
 `auth` and `approver` make more sense, because they check that the contract was called by `contract_owner`. We'd expect certain privileged actions, such as minting, to be limited to that account. However, what is the point of having two separate functions that do *precisely the same thing*?
 
 
-## What can we detect automatically?
+## What can we detect automatically? {#what-can-we-detect-automatically}
 
 We can see that `wARB` is a scam token by looking at Etherscan. However, that is a centralized solution. In theory, Etherscan could be subverted or hacked. It is better to be able to figure out independently if a token is legitimate or not.
 
-There are some algorithms we can use to identify that an ERC-20 token is suspicious (either a scam or very badly written). If we look at [the events emitted by `wARB`](https://etherscan.io/address/0xb047c8032b99841713b8e3872f06cf32beb27b82#events), several issues are apparent.
+There are some tricks we can use to identify that an ERC-20 token is suspicious (either a scam or very badly written), by looking at the events they emit. 
 
-- 
+## Suspicious `Approval` events {#suspicious-approval-events}
+
+[`Approval` events](https://eips.ethereum.org/EIPS/eip-20#approval) should only happen with a direct request (in contrast to [`Transfer` events](https://eips.ethereum.org/EIPS/eip-20#transfer-1) which can happen as a result of an allowance). [See the Solidity docs](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin) for a detailed explanation of this issue and why the requests need to be direct, rather than mediated by a contract.
 
 
-### Weird transfers
-### Events that don't make sense together
+This means that `Approval` events that approve spending from an [externally owned account](/developers/docs/accounts/#types-of-account) have to come from transactions that originate in that account, and whose destination is the ERC-20 contract. Any other kind of approval from an externally owned account is suspicious.
 
-## Conclusions
-### Always get the token address from a trusted source
-### Code quality and readability matter
+Here is [a program that identifies this kind of event](https://github.com/qbzzt/20230915-scam-token-detection), using (viem)[https://viem.sh/] and (TypeScript)[https://www.typescriptlang.org/docs/], a JavaScript variant with type safety. To run it:
+
+1. Copy `.env.example` to `.env`.
+2. Edit `.env` to provide the URL to an Ethereum mainnet node.
+3. Run `pnpm install` to install the necessary packages.
+4. Run `pnpm susApproval` to look for suspicious approvals.
+
+Here is a line by line explanation:
+
+```typescript
+import { Address, TransactionReceipt, createPublicClient, http, parseAbiItem } from 'viem'
+import { mainnet } from 'viem/chains'
+```
+
+Import type definitions, functions, and the chain definition from `viem`. 
+
+```typescript
+import { config } from 'dotenv'
+config()
+```
+
+Read `.env` to get the URL.
+
+```typescript
+const client = createPublicClient({
+  chain: mainnet,
+  transport: http(process.env.URL),
+})
+```
+
+Create a Viem client. We only need to read from the blockchain, so this client does not need a private key.
+
+```typescript
+const testedAddress = '0xb047c8032b99841713b8e3872f06cf32beb27b82'
+const fromBlock = 16859812n
+const toBlock = 16873372n
+```
+
+The address of the suspicious ERC-20 contract, and the blocks within which we'll look for events. Node providers typically limit our ability to read events because the bandwidth can get expensive. Luckily `wARB` wasn't in use for an eighteen hour period, so we can look for all the events (there were only 13 in total).
+
+```typescript
+const approvalEvents = await client.getLogs({
+    address: testedAddress,
+    fromBlock,
+    toBlock,
+    event: parseAbiItem('event Approval(address indexed _owner, address indexed _spender, uint256 _value)'),
+})
+```
+
+This is the way to ask Viem for event information. When we provide it with the exact event signature, including field names, it parses the event for us.
+
+
+```typescript
+const isContract = async (addr : Address) : boolean => (await client.getBytecode({address: addr}))
+```
+
+Our algorithm is only applicable to externally owned accounts. If there is any bytecode returned by `client.getBytecode` it means that this is a contract and we should just skip it.
+
+If you haven't used TypeScript before, the function definition might look a bit weird. We don't just tell it the first (and only) parameter is called `addr`, but also that it is of type `Address`. Similarly, the `: boolean` part tells TypeScript that the return value of the function is a boolean.
+
+```typescript
+const getEventTxn = async (ev : Event) : TransactionReceipt => (await client.getTransactionReceipt({hash: ev.transactionHash}))
+```
+
+This function gets the transaction receipt from an event. We need the receipt to ensure we know what was the transaction destination.
+
+```typescript
+const suspiciousApprovalEvent = async (ev : Event) : (Event | null) => {
+```
+
+This is the most important function, the one that actually decides if an event is suspicious or not. The return type, `(Event | null)`, tells TypeScript that this function can return either an `Event` or `null`. We return `null` is the event is not suspicious.
+
+```typescript
+    const owner = ev.args._owner
+```
+
+Viem has the field names, so it parsed the event for us. `_owner` is the owner of the tokens to be spent,
+
+```typescript
+    // Approvals by contracts are not suspicious
+    if (await isContract(owner))
+        return null
+```
+
+If the owner is a contract, assume this approval is not suspicious. To check if a contract's approval is suspicious or not we'll need to trace the full execution of the transaction to see if it ever got to the owner contract, and if that contract called the ERC-20 contract directly. That is a lot more resource expensive than we'd like to do
+
+```typescript
+    const txn = await getEventTxn(ev)
+```
+
+If the approval comes from an externally owned account, get the transaction that caused it.
+
+```typescript
+    // The approval is suspicious if it comes an EOA owner that isn't the transaction's `from`
+    if (owner.toLowerCase() != txn.from.toLowerCase())
+        return ev
+```
+
+We can't just check for string equality because addresses are hexadecimal, so they contain letters. Sometimes, for example in `txn.from`, those letters are all lowercase. In other cases, such as `ev.args._owner`, the address is in [mixed-case for error identification](https://eips.ethereum.org/EIPS/eip-55).
+
+But if the transaction isn't from the owner, and that owner is externally owned, then we have a suspicious transaction.
+
+```typescript
+    // It is also suspicious if the transaction destination isn't the ERC-20 contract we are
+    // investigating
+    if (txn.to.toLowerCase() != testedAddress)
+        return ev
+```
+
+Similarly, if the transaction's `to` address, the first contract called, isn't the ERC-20 contract under investigation then it is suspicious.
+
+```typescript
+    // If there is no reason to be suspicious, return null.
+    return null
+}
+```
+
+If neither condition is true then the `Approval` event is not suspicious.
+
+```typescript
+const testPromises = approvalEvents.map(ev => suspiciousApprovalEvent(ev))
+const testResults = (await Promise.all(testPromises)).filter(x => x != null)
+
+console.log(testResults)
+```
+
+[An `async` function](https://www.w3schools.com/js/js_async.asp) returns a `Promise` object. With the common syntax, `await x()`, we wait for that `Promise` to be fulfilled before we continue processing. This is simple to program and follow, but it is also inefficient. While we are waiting for the `Promise` for a specific event to be fulfilled we can already get working on the next event.
+
+Here we use [`map`](https://www.w3schools.com/jsref/jsref_map.asp) to create an array of `Promise` objects. Then we use [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/) to wait for all of those promises to the resolved. We then [`filter`](https://www.w3schools.com/jsref/jsref_filter.asp) those results to remove the non-suspicious events.
+
+### Suspicious `Transfer` events {#suspicious-transfer-events}
+
+Another possible way to identify scam tokens is to see if they have any suspicious transfers. For example, transfers from accounts that don't have that many tokens. You can see [how to implement this test](https://github.com/qbzzt/20230915-scam-token-detection/blob/main/susTransfer.ts), but `wARB` doesn't have this issue.
+
+## Conclusion {#conclusion}
+
+Automated detection of ERC-20 scams suffers from [false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error), because a scam can use a perfectly normal ERC-20 token contract that just doesn't represent anything real. So you should always attempt to *get the token address from a trusted source*.
+
+Automated detection can help in certain cases, such as DeFi pieces, where there are many tokens and they need to be handled automatically. But as always [caveat emptor](https://www.investopedia.com/terms/c/caveatemptor.asp), do your own research, and encourage your users to do likewise.
