@@ -175,11 +175,9 @@ const SideNav: React.FC<IProps> = ({ path }) => {
       aria-label={t("nav-developers-docs")}
     >
       <AccordionItem>
-        <AccordionPanel pb={4}>
-          {docLinks.map((item, idx) => (
-            <NavLink item={item} path={path} key={idx} />
-          ))}
-        </AccordionPanel>
+        {docLinks.map((item, idx) => (
+          <NavLink item={item} path={path} key={idx} />
+        ))}
       </AccordionItem>
     </Accordion>
   )
