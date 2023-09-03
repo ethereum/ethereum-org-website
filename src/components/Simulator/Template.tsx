@@ -13,6 +13,7 @@ interface IProps extends SimulatorStateProps {
   nextPathSummary: SimulatorPathSummary | null
   onClose: () => void
   openPath?: (pathId: PathId) => void
+  logFinalCta?: () => void
 }
 export const Template: React.FC<IProps> = ({
   state,
@@ -20,6 +21,7 @@ export const Template: React.FC<IProps> = ({
   nextPathSummary,
   onClose,
   openPath,
+  logFinalCta,
 }) => {
   const { step } = state
   const { Screen, explanations, nextPathId, finalCtaLink } = simulator
@@ -42,6 +44,7 @@ export const Template: React.FC<IProps> = ({
         finalCtaLink={finalCtaLink}
         onClose={onClose}
         openPath={openPath}
+        logFinalCta={logFinalCta}
       />
       <Phone>
         <Screen state={state} />

@@ -9,6 +9,7 @@ import type {
 import type { PathId } from "./types"
 import { simulatorData } from "./data"
 import { PATH_IDS, PATH_ID_QUERY_PARAM } from "./constants"
+import { trackCustomEvent } from "../../utils/matomo"
 
 export const StartingPoint: React.FC = () => {
   const [step, setStep] = useState<number>(0) // 0-indexed to use as array index
@@ -16,6 +17,11 @@ export const StartingPoint: React.FC = () => {
   const { onClose, onOpen, isOpen } = useDisclosure()
 
   const handleClose = (): void => {
+    trackCustomEvent({
+      eventCategory: "simulator",
+      eventAction: `${pathId}_click`,
+      eventName: `close-from-step-${step + 1}`,
+    })
     clearUrlParams()
     onClose()
   }
@@ -57,10 +63,20 @@ export const StartingPoint: React.FC = () => {
   }, [pathId])
 
   const progressStepper = (): void => {
+    trackCustomEvent({
+      eventCategory: "simulator",
+      eventAction: `${pathId}_click`,
+      eventName: `progress-from-step-${step + 1}`,
+    })
     setStep((step) => Math.min(step + 1, totalSteps - 1))
   }
 
   const regressStepper = (): void => {
+    trackCustomEvent({
+      eventCategory: "simulator",
+      eventAction: `${pathId}_click`,
+      eventName: `back-from-step-${step + 1}`,
+    })
     if (step === 0) {
       onClose()
       return
@@ -105,6 +121,13 @@ export const StartingPoint: React.FC = () => {
     }
   }, [pathId])
 
+  const logFinalCta = (): void => {
+    trackCustomEvent({
+      eventCategory: "simulator",
+      eventAction: `${pathId}_click`,
+      eventName: `find-wallet`,
+    })
+  }
   return (
     <Grid
       bg="cardGradient"
@@ -148,8 +171,8 @@ export const StartingPoint: React.FC = () => {
           w={{ base: "min(100%, 320px)", md: "300px" }}
           minW={{ md: "300px" }}
         >
-          {Object.keys(simulatorData).map((pathId) => {
-            const sim = simulatorData[pathId]
+          {Object.keys(simulatorData).map((id) => {
+            const sim = simulatorData[id]
             const pathSummary = {
               primaryText: sim.title,
               secondaryText: "How to?",
@@ -157,9 +180,16 @@ export const StartingPoint: React.FC = () => {
             }
             return (
               <PathButton
-                key={pathId}
+                key={id}
                 pathSummary={pathSummary}
-                handleClick={() => openPath(pathId as PathId)}
+                handleClick={() => {
+                  trackCustomEvent({
+                    eventCategory: "simulator",
+                    eventAction: `main-buttons_click`,
+                    eventName: id,
+                  })
+                  openPath(id as PathId)
+                }}
               />
             )
           })}
@@ -168,11 +198,19 @@ export const StartingPoint: React.FC = () => {
       <SimulatorModal isOpen={isOpen} onClose={handleClose}>
         {state && simulator && (
           <Template
-            state={state!}
+            state={state}
             nextPathSummary={nextPathSummary}
             simulator={simulator}
             onClose={handleClose}
-            openPath={openPath}
+            openPath={(id: PathId) => {
+              trackCustomEvent({
+                eventCategory: "simulator",
+                eventAction: `${pathId}_click`,
+                eventName: `next-lession-${id}`,
+              })
+              openPath(id)
+            }}
+            logFinalCta={logFinalCta}
           />
         )}
       </SimulatorModal>

@@ -22,6 +22,7 @@ interface ExplanationProps extends SimulatorStateProps {
   finalCtaLink: LabelHref
   onClose?: () => void
   openPath?: (pathId: PathId) => void
+  logFinalCta?: () => void
 }
 export const Explanation: React.FC<ExplanationProps> = ({
   state,
@@ -31,6 +32,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
   finalCtaLink,
   onClose,
   openPath,
+  logFinalCta,
 }) => {
   const { regressStepper, step, totalSteps } = state
   const { header, description } = explanation
@@ -121,6 +123,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
             <ButtonLink
               variant={finalCtaLink.isPrimary ? "solid" : "outline"}
               href={finalCtaLink.href}
+              onClick={logFinalCta}
             >
               {finalCtaLink.label}
             </ButtonLink>
