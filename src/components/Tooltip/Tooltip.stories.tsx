@@ -12,7 +12,7 @@ const meta = {
 
 export default meta
 
-type Story = StoryObj<TooltipType>
+type Story = StoryObj<typeof meta>
 
 export const Tooltip: Story = {
   render: () => (
