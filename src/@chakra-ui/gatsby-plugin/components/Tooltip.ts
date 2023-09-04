@@ -1,15 +1,8 @@
-import {
-  cssVar,
-  defineStyle,
-  defineStyleConfig,
-  getToken,
-} from "@chakra-ui/react"
+import { cssVar, defineStyle, defineStyleConfig } from "@chakra-ui/react"
 
 const $arrowBg = cssVar("popper-arrow-bg")
 
 const baseStyle = defineStyle((props) => {
-  const tableBoxShadow = getToken("colors", "tableBoxShadow")(props.theme)
-
   return {
     w: 44,
     maxW: 48,
@@ -21,7 +14,7 @@ const baseStyle = defineStyle((props) => {
     cursor: "default",
     textAlign: "center",
     zIndex: "docked",
-    boxShadow: tableBoxShadow,
+    boxShadow: `0px 0px 16px 0px #00000040`,
     [$arrowBg.variable]: "colors.background.highlight",
   }
 })
