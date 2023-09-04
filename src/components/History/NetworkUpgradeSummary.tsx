@@ -1,4 +1,5 @@
 // Libraries
+import { useEffect, useState } from "react"
 import { Flex, Stack, Text } from "@chakra-ui/react"
 // TODO: look for replacement lib when i18n is set up
 // import { useI18next } from "gatsby-plugin-react-i18next"
@@ -23,6 +24,8 @@ interface IProps {
 }
 
 const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
+  const [formattedUTC, setFormattedUTC] = useState("")
+
   // TODO: remove hardcoded locale "en" values when i18n is set up
   // const { language } = useI18next()
   const language = "en"
@@ -38,17 +41,21 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
     slotNumber,
   } = NetworkUpgradeSummaryData[name]
   // TODO fix dateTimeAsString
-  const date = new Date(dateTimeAsString as any)
-  const formattedDate = date.toLocaleString(language, {
-    timeZone: "UTC",
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
+
+  // calculate date format only on the client side to avoid hydration issues
+  useEffect(() => {
+    const date = new Date(dateTimeAsString as any)
+    const formattedDate = date.toLocaleString(language, {
+      timeZone: "UTC",
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    })
+    setFormattedUTC(`${formattedDate} +UTC`)
   })
-  const formattedUTC = `${formattedDate} +UTC`
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     // TODO: remove temporalGetValue after i18n is set up
