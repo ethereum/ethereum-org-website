@@ -15,9 +15,8 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Tooltip: Story = {
-  render: () => (
-    <TooltipComponent content="Text here">
-      <Icon fill="'text" name="info" />
-    </TooltipComponent>
-  ),
+  args: {
+    content: "text here",
+    children: <Icon fill="text" name="info" />,
+  },
 }
