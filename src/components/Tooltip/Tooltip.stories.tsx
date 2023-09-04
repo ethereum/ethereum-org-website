@@ -5,10 +5,10 @@ import TooltipComponent from "."
 
 type TooltipType = typeof TooltipComponent
 
-const meta: Meta<TooltipType> = {
+const meta = {
   title: "Molecules / Overlay Content / Tooltip",
   component: TooltipComponent,
-}
+} satisfies Meta<TooltipType>
 
 export default meta
 
