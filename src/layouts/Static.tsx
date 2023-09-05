@@ -17,12 +17,12 @@ import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
-import MarkdownTable from "@/components/MarkdownTable"
 import MarkdownImage from "@/components/MarkdownImage"
 import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
+import { mdxTableComponents } from "@/components/Table"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -147,7 +147,7 @@ export const staticComponents = {
   li: ListItem,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   ButtonLink,
   Badge,
   Divider,
