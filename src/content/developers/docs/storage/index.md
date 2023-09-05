@@ -57,6 +57,7 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/) _(IPFS pinning service)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
+- [Spheron Network](https://spheron.network/) _(IPFS/Filecoin pinning service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
@@ -185,6 +186,12 @@ Proof-of-stake based:
 - [Filebase.com](https://filebase.com/)
 - [Documentation](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
+
+**Spheron Network - _Spheron is a PaaS designed for dApps looking to launch their applications on decentralised infra with best performance. It provides compute, decentralised storage, CDN & web hosting out of the box._**
+
+- [spheron.network](https://spheron.network/)
+- [Documentation](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 **4EVERLAND - _A Web 3.0 cloud computing platform that integrates storage, compute and networking core capabilities, is S3 compatible and provides synchronous data storage on decentralized storage networks such as IPFS and Arweave._**
 
