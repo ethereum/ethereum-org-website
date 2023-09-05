@@ -10432,6 +10432,16 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "mteam88",
+      "name": "Matthew",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84196639?v=4",
+      "profile": "https://mteam88.github.io",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
