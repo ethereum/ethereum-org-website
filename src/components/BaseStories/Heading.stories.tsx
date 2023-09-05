@@ -53,7 +53,6 @@ const headingScale: Array<HeadingProps> = [
   },
   {
     as: "h4",
-
     size: "md",
   },
   {
