@@ -10,11 +10,28 @@ import type { PathId } from "./types"
 import { simulatorData } from "./data"
 import { PATH_IDS, PATH_ID_QUERY_PARAM } from "./constants"
 import { trackCustomEvent } from "../../utils/matomo"
+import { navigate } from "gatsby"
 
-export const StartingPoint: React.FC = () => {
-  const [step, setStep] = useState<number>(0) // 0-indexed to use as array index
-  const [pathId, setPathId] = useState<PathId | null>(null)
-  const { onClose, onOpen, isOpen } = useDisclosure()
+const getValidPathId = (pathIdString: PathId | null): PathId | null => {
+  if (!pathIdString) return null
+  if (!PATH_IDS.includes(pathIdString)) return null
+  return pathIdString as PathId
+}
+
+interface IProps {
+  location: Location
+}
+export const StartingPoint: React.FC<IProps> = ({ location }) => {
+  const params = new URLSearchParams(location.search)
+  const pathIdString = params.get(PATH_ID_QUERY_PARAM)
+  const pathId: PathId | null = getValidPathId(pathIdString as PathId | null)
+  const [step, setStep] = useState(0) // 0-indexed to use as array index
+
+  const totalSteps: number = pathId
+    ? simulatorData[pathId].explanations.length
+    : 0
+
+  const { onClose, onOpen, isOpen } = useDisclosure({ isOpen: !!pathId })
 
   const handleClose = (): void => {
     trackCustomEvent({
@@ -26,32 +43,19 @@ export const StartingPoint: React.FC = () => {
     onClose()
   }
 
-  const totalSteps: number = pathId
-    ? simulatorData[pathId].explanations.length
-    : 0
-
   const clearUrlParams = (): void => {
-    if (!window) return
-    window.history.replaceState({}, "", window.location.pathname)
+    navigate(location.pathname, { replace: true })
   }
 
-  // On page load, check if URL search params contain pathId and step
-  // If so, set pathId and step to those values
-  useEffect(() => {
-    if (!window) return
-    const params = new URLSearchParams(window.location.search)
-    const pathId = params.get(PATH_ID_QUERY_PARAM) as PathId | null
-    if (!pathId || !PATH_IDS.includes(pathId)) {
-      clearUrlParams()
-      return
-    }
-    setPathId(pathId)
-    onOpen()
-  }, [])
+  const setUrlPathId = (pathId: PathId): void => {
+    const params = new URLSearchParams()
+    params.set(PATH_ID_QUERY_PARAM, pathId)
+    const url = `?${params.toString()}`
+    navigate(url, { replace: true })
+  }
 
   // Set URL search params for pathId when it changes
   useEffect(() => {
-    if (!window) return
     if (!pathId) {
       clearUrlParams()
       return
@@ -59,7 +63,7 @@ export const StartingPoint: React.FC = () => {
     const params = new URLSearchParams()
     params.set(PATH_ID_QUERY_PARAM, pathId)
     const url = `?${params.toString()}`
-    window.history.replaceState({}, "", url)
+    navigate(url, { replace: true })
   }, [pathId])
 
   const progressStepper = (): void => {
@@ -90,7 +94,7 @@ export const StartingPoint: React.FC = () => {
 
   const openPath = (pathId: PathId): void => {
     resetStepper()
-    setPathId(pathId)
+    setUrlPathId(pathId)
     onOpen()
   }
 
