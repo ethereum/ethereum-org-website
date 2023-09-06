@@ -77,7 +77,7 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({
               transitionDuration="0.75s"
               lineHeight={1.4}
             >
-              Welcome to web3
+              Welcome to Web3
               <Text as="span" display="block" mt={2} fontWeight="bold">
                 NFT Marketplace
               </Text>

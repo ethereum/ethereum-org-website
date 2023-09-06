@@ -1,5 +1,5 @@
 import React from "react"
-import { ListItem, Text, UnorderedList } from "@chakra-ui/react"
+import { ListItem, OrderedList, Text, UnorderedList } from "@chakra-ui/react"
 import Emoji from "../../Emoji"
 import type { SimulatorData } from "../types"
 import { ConnectWeb3, CreateAccount, SendReceive } from "../screens"
@@ -205,7 +205,7 @@ export const simulatorData: SimulatorData = {
         description: (
           <>
             <Text>
-              Your wallet helps you manage your funds, NFTs, web3 identity and
+              Your wallet helps you manage your funds, NFTs, Web3 identity and
               more. Here we'll go over how to send and receive some tokens on
               Ethereum.
             </Text>
@@ -242,13 +242,13 @@ export const simulatorData: SimulatorData = {
         description: (
           <>
             <Text>
-              Now you have some ETH for network fees, allowing you to submit
-              transactions yourself.
+              Now you have some ETH to cover network fees, allowing you to
+              submit transactions yourself.
             </Text>
             <Text>
               Note that you didn't need to provide any personal information, or
-              have any funds to begin with you start receiving assets to your
-              address—receiving is free. <Emoji text="😉" />
+              have any funds to begin with to start receiving assets to your
+              address—receiving is free. <Emoji text="😁" />
             </Text>
             <Text>
               Let's try sending some funds to a friend by clicking the "Send"
@@ -266,8 +266,8 @@ export const simulatorData: SimulatorData = {
               or third parties intervening and stopping your transactions.
             </Text>
             <Text>
-              Ethereum never stops, allowing you full control over your funds
-              24/7.
+              Ethereum doesn't discriminate, and never stops, allowing you full
+              control over your funds—24/7.
             </Text>
             <Text>Select an amount to send then click "Next".</Text>
           </>
@@ -308,14 +308,10 @@ export const simulatorData: SimulatorData = {
         header: "Thats it! You know the basics of transferring tokens 🎉",
         description: (
           <>
-            <Text>
-              Receive tokens just by sharing your address. Send tokens with just
-              a recipient address.
-            </Text>
-            <Text>Peer-to-peer. Global. 24/7. Powerful stuff, right?</Text>
+            <Text>Peer-to-peer. Global. Always available.</Text>
             <Text>
               Start the next lesson to learn how to use your wallet to log into
-              web3 applications.
+              Web3 applications.
             </Text>
           </>
         ),
@@ -334,27 +330,7 @@ export const simulatorData: SimulatorData = {
     Screen: ConnectWeb3,
     explanations: [
       {
-        header: "Explore web3: from NFTs to decentralized finance and identity",
-        description: (
-          <>
-            <Text>
-              Your wallet can be used to connect to and interact with Ethereum
-              applications such as gaming, lending platforms, or NFT
-              marketplaces.
-            </Text>
-            <Text>
-              It uses your own Ethereum account as a login, removing the need
-              for any new usernames or passwords.
-            </Text>
-            <Text>
-              A friend mentioned they just send you an NFT! Let's check it out
-              on a new NFT marketplace. Connect your wallet to get started.
-            </Text>
-          </>
-        ),
-      },
-      {
-        header: "You can have a single login for most Ethereum based projects",
+        header: "Explore Web3: from NFTs to decentralized finance and identity",
         description: (
           <>
             <Text>
@@ -399,7 +375,27 @@ export const simulatorData: SimulatorData = {
       },
       {
         header: "Start your journey now",
-        description: null,
+        description: (
+          <>
+            <Text>
+              Great job! You're ready to start using apps on Ethereum.
+            </Text>
+            <Text fontWeight="bold" mb={2}>
+              What to do next:
+            </Text>
+            <OrderedList>
+              <Link href="/security/">
+                <ListItem>Learn about staying safe in Web3</ListItem>
+              </Link>
+              <Link href="/what-is-ethereum/">
+                <ListItem>Learn more about Ethereum</ListItem>
+              </Link>
+              <Link href="/dapps/">
+                <ListItem>Check out some beginner friendly apps</ListItem>
+              </Link>
+            </OrderedList>
+          </>
+        ),
       },
     ],
     ctaLabels: ["Connect wallet", "Connect to app", "Done", "Finished"],
