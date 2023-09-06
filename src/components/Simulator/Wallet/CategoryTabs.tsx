@@ -12,7 +12,10 @@ export const CategoryTabs: React.FC<IProps> = ({
 }) => (
   <Flex gap={6} {...flexProps}>
     {categories.map((category, index) => (
-      <Text fontWeight={activeIndex === index ? "bold" : "normal"}>
+      <Text
+        key={category}
+        fontWeight={activeIndex === index ? "bold" : "normal"}
+      >
         {category}
       </Text>
     ))}

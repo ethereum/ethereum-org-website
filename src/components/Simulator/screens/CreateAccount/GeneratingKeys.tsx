@@ -4,6 +4,12 @@ import { PiCheckThin } from "react-icons/pi"
 import { PhoneScreenProps } from "../../interfaces"
 import { motion } from "framer-motion"
 import { ProgressCta } from "../.."
+import {
+  SPINNER_SIZE,
+  WORD_GENERATION_SPINNER_DURATION,
+  BUTTON_DELAY_DURATION,
+  BUTTON_FADE_DURATION,
+} from "./constants"
 
 interface IProps extends PhoneScreenProps {
   generateNewWords: () => void
@@ -20,28 +26,24 @@ export const GeneratingKeys: React.FC<IProps> = ({
   useEffect(generateNewWords, [])
 
   // Show spinner for defined number of milliseconds, switching "loading" state to false when complete
-  const SPINNER_DURATION = 2100 as const
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false)
-    }, SPINNER_DURATION)
+    }, WORD_GENERATION_SPINNER_DURATION)
     return () => {
       clearTimeout(timeout)
     }
   }, [])
 
   // After loading is complete, delay before calling progressStepper
-  const DELAY_DURATION = 1350 as const
-  const BUTTON_FADE_DURATION = 250 as const
   useEffect(() => {
     if (loading) return
-    const timeout = setTimeout(() => setComplete(true), DELAY_DURATION)
+    const timeout = setTimeout(() => setComplete(true), BUTTON_DELAY_DURATION)
     return () => {
       clearTimeout(timeout)
     }
   }, [loading])
 
-  const ICON_SIZE = "4.5rem" as const
   return (
     <Grid placeItems="center" h="full" bg="background.highlight">
       <Flex direction="column" alignItems="center" pt={8} gap={4}>
@@ -52,7 +54,7 @@ export const GeneratingKeys: React.FC<IProps> = ({
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Spinner w={ICON_SIZE} h={ICON_SIZE} />
+            <Spinner w={SPINNER_SIZE} h={SPINNER_SIZE} />
           </motion.div>
         ) : (
           <motion.div
@@ -63,8 +65,8 @@ export const GeneratingKeys: React.FC<IProps> = ({
           >
             <Icon
               as={PiCheckThin}
-              w={ICON_SIZE}
-              h={ICON_SIZE}
+              w={SPINNER_SIZE}
+              h={SPINNER_SIZE}
               transform="rotate(-10deg)"
             />
           </motion.div>

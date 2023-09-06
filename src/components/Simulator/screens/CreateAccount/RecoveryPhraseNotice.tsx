@@ -3,6 +3,7 @@ import React from "react"
 import { motion } from "framer-motion"
 
 const MotionBox = motion(Box)
+
 export const RecoveryPhraseNotice: React.FC = () => (
   <MotionBox
     initial={{ opacity: 0 }}
