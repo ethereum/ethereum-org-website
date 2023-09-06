@@ -10496,6 +10496,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "kritik-sah",
+      "name": "kritik sah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57076429?v=4",
+      "profile": "https://linktr.ee/kritik",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
