@@ -985,7 +985,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 ### eth_call {#eth_call}
 
-Executes a new message call immediately without creating a transaction on the block chain. Often used for executing read-only smart contract functions, ofr example the `balanceOf` for an ERC-20 contract.
+Executes a new message call immediately without creating a transaction on the block chain. Often used for executing read-only smart contract functions, for example the `balanceOf` for an ERC-20 contract.
 
 **Parameters**
 
