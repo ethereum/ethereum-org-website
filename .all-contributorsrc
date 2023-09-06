@@ -10442,6 +10442,15 @@
         "bug",
         "doc"
       ]
+    },
+    {
+      "login": "avalidurl",
+      "name": "gokhan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11991363?v=4",
+      "profile": "https://github.com/avalidurl",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
