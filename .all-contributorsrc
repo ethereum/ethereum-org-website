@@ -10451,6 +10451,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "0xadri",
+      "name": "Adri",
+      "avatar_url": "https://avatars.githubusercontent.com/u/738533?v=4",
+      "profile": "https://github.com/0xadri",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
