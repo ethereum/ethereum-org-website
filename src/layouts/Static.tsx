@@ -9,6 +9,7 @@ import {
   chakra,
 } from "@chakra-ui/react"
 
+import Breadcrumbs from "../components/Breadcrumbs"
 import ButtonLink from "@/components/ButtonLink"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
@@ -164,7 +165,7 @@ export const staticComponents = {
   YouTube,
 }
 
-export const StaticLayout = ({ children }) => {
+export const StaticLayout = ({ children, breadcrumbs }) => {
   return (
     <Box w="full" ml={2}>
       <Flex
@@ -195,6 +196,7 @@ export const StaticLayout = ({ children }) => {
             },
           }}
         >
+          <Breadcrumbs slug={breadcrumbs} />
           <Text
             color="text200"
             // dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
