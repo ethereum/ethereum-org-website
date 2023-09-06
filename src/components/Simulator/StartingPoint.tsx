@@ -8,15 +8,10 @@ import type {
 } from "./interfaces"
 import type { PathId } from "./types"
 import { simulatorData } from "./data"
-import { PATH_IDS, PATH_ID_QUERY_PARAM } from "./constants"
+import { PATH_ID_QUERY_PARAM } from "./constants"
 import { trackCustomEvent } from "../../utils/matomo"
 import { navigate } from "gatsby"
-import { clearUrlParams } from "./utils"
-
-const getValidPathId = (pathIdString: PathId | null): PathId | null => {
-  if (!pathIdString || !PATH_IDS.includes(pathIdString)) return null
-  return pathIdString as PathId
-}
+import { clearUrlParams, getValidPathId } from "./utils"
 
 interface IProps {
   location: Location

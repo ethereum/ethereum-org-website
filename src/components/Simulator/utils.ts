@@ -1,4 +1,6 @@
 import { navigate } from "gatsby"
+import { PATH_IDS } from "./constants"
+import type { PathId } from "./types"
 
 export const shareOnTwitter = (): void => {
   const url = "https://ethereum.org/simulator" // TODO: Update with production link
@@ -14,4 +16,9 @@ export const shareOnTwitter = (): void => {
 
 export const clearUrlParams = (location: Location): void => {
   navigate(location.pathname, { replace: true })
+}
+
+export const getValidPathId = (pathIdString: PathId | null): PathId | null => {
+  if (!pathIdString || !PATH_IDS.includes(pathIdString)) return null
+  return pathIdString as PathId
 }
