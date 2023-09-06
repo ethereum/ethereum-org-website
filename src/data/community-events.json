@@ -1,4 +1,13 @@
 [
+   {
+    "title": "Road to Devcon（Shenzhen）",
+    "to": "https://ethsz.openbuild.xyz/",
+    "sponsor": null,
+    "location": "Shenzhen, China",
+    "description": "Preheating activities for DEVCON 7 in the China region.Developers and communities, let us gather at Devcon！",
+    "startDate": "2023-10-21",
+    "endDate": "2023-10-21"
+  },
   {
     "title": "Ethereum Rio",
     "to": "https://www.ethereumbrasil.com/",
