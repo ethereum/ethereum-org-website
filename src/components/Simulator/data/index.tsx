@@ -83,8 +83,8 @@ export const simulatorData: SimulatorData = {
           <>
             <Text>
               Sometimes called a "seed phrase", this unique sequence of 12-24
-              words is used to generate new accounts. This phrase can also
-              recover your account to a new wallet or device.
+              words is used to generate new accounts and recover your existing
+              accounts.
             </Text>
             <Text>
               Read notice and click "I understand" to see and backup your
@@ -213,7 +213,7 @@ export const simulatorData: SimulatorData = {
               New accounts are of course empty, so let's first look at how to
               receive some ETH to a new address.
             </Text>
-            <Text>Click the "Receive" button to get your address.</Text>
+            <Text>Click the button to get your address.</Text>
           </>
         ),
       },
@@ -294,8 +294,8 @@ export const simulatorData: SimulatorData = {
         description: (
           <>
             <Text>
-              Ensure that your account has sufficient ETH to cover the
-              transaction fee, which varies depending on network conditions.
+              Make sure your account has enough ETH to cover network fees. Fees
+              change based on how many people are using Ethereum.
             </Text>
             <Text>
               Most wallets will automatically add the suggested fee to the

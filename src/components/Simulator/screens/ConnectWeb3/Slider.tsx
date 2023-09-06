@@ -62,7 +62,7 @@ export const Slider: React.FC<IProps> = ({ isConnected }) => {
                 transition={{ delay: 0.15 }}
               >
                 <Text textAlign="center" px={{ base: 4, md: 8 }}>
-                  You are connected!
+                  You're logged in!
                 </Text>
               </motion.div>
             </Flex>
