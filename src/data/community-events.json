@@ -1,9 +1,9 @@
 [
   {
-    "title": "Etherum Rio",
+    "title": "Ethereum Rio",
     "to": "https://www.ethereumbrasil.com/",
     "sponsor": null,
-    "location": "Rio de Janeiro, Brasil",
+    "location": "Rio de Janeiro, Brazil",
     "description": "3rd Edition of LATAM's most loved ETH event. Bootcamp, Buildathon & Conference",
     "startDate": "2024-04-09",
     "endDate": "2024-04-14"
@@ -210,7 +210,7 @@
     "title": "ETHGlobal Istanbul",
     "to": "https://ethglobal.com/events/istanbul",
     "sponsor": null,
-    "location": "Istanbul, Türkiye",
+    "location": "Istanbul, Turkey",
     "description": "ETHGlobal Istanbul is going to be an event full of hacking, networking, side events and fun activites.",
     "startDate": "2023-11-17",
     "endDate": "2023-11-19"
