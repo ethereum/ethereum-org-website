@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, type BoxProps, Flex, Text, Grid } from "@chakra-ui/react"
+import { Box, type BoxProps, Flex, Text, Grid, Divider } from "@chakra-ui/react"
 import { MdArrowBack } from "react-icons/md"
 import Button from "../Button"
 import type {
@@ -20,7 +20,6 @@ interface ExplanationProps extends SimulatorStateProps {
   nextPathSummary: SimulatorPathSummary | null
   nextPathId: PathId | null
   finalCtaLink: LabelHref
-  onClose?: () => void
   openPath?: (pathId: PathId) => void
   logFinalCta?: () => void
 }
@@ -30,7 +29,6 @@ export const Explanation: React.FC<ExplanationProps> = ({
   nextPathSummary,
   nextPathId,
   finalCtaLink,
-  onClose,
   openPath,
   logFinalCta,
 }) => {
@@ -119,15 +117,20 @@ export const Explanation: React.FC<ExplanationProps> = ({
               handleClick={() => openPath(nextPathId)}
             />
           )}
-          {finalCtaLink && (
-            <ButtonLink
-              variant={finalCtaLink.isPrimary ? "solid" : "outline"}
-              href={finalCtaLink.href}
-              onClick={logFinalCta}
-            >
-              {finalCtaLink.label}
-            </ButtonLink>
-          )}
+          <ButtonLink
+            variant={finalCtaLink.isPrimary ? "solid" : "outline"}
+            href={finalCtaLink.href}
+            onClick={logFinalCta}
+          >
+            {finalCtaLink.label}
+          </ButtonLink>
+          <Flex alignItems="center" gap={6}>
+            <Divider borderColor="body.medium" />
+            <Text textTransform="uppercase" m={0} color="body.medium">
+              or
+            </Text>
+            <Divider borderColor="body.medium" />
+          </Flex>
           <Button
             variant="outline-color"
             leftIcon={<FaTwitter />}
@@ -135,13 +138,8 @@ export const Explanation: React.FC<ExplanationProps> = ({
             w={{ base: "full", lg: "auto" }}
             mt={{ base: 2, lg: 0 }}
           >
-            Share experience
+            Share on Twitter
           </Button>
-          {!nextPathId && (
-            <Button onClick={onClose} variant="outline">
-              Go back
-            </Button>
-          )}
         </Flex>
       )}
     </Flex>

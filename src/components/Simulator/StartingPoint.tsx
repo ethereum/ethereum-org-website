@@ -26,6 +26,9 @@ export const StartingPoint: React.FC<IProps> = ({
   const pathIdString = params.get(PATH_ID_QUERY_PARAM)
   const pathId: PathId | null = getValidPathId(pathIdString as PathId | null)
 
+  // If pathId present, modal is open, else closed
+  const isOpen = !!pathId
+
   // Track step
   const [step, setStep] = useState(0) // 0-indexed to use as array index
   const totalSteps: number = pathId ? data[pathId].explanations.length : 0
@@ -41,18 +44,12 @@ export const StartingPoint: React.FC<IProps> = ({
     clearUrlParams(location)
   }
 
-  // Set URL search params for pathId when it changes
+  // Remove URL search param if invalid pathId
   useEffect(() => {
-    if (!pathId) {
-      clearUrlParams(location)
-      return
-    }
-    const params = new URLSearchParams()
-    params.set(PATH_ID_QUERY_PARAM, pathId)
-    const url = `?${params.toString()}`
-    navigate(url, { replace: true })
+    if (!pathId) clearUrlParams(location)
   }, [pathId])
 
+  // Navigation helpers
   const progressStepper = (): void => {
     trackCustomEvent({
       eventCategory: "simulator",
@@ -85,6 +82,7 @@ export const StartingPoint: React.FC<IProps> = ({
     navigate(url, { replace: true })
   }
 
+  // Navigation object passed to child components
   const state: SimulatorState | null = pathId
     ? {
         step,
@@ -96,7 +94,6 @@ export const StartingPoint: React.FC<IProps> = ({
     : null
 
   const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
-
   const { Screen, explanations, ctaLabels, nextPathId, finalCtaLink } =
     simulator ?? {}
   const explanation = explanations ? explanations[step] : null
@@ -121,9 +118,6 @@ export const StartingPoint: React.FC<IProps> = ({
       eventName: `find-wallet`,
     })
   }
-
-  const isOpen: boolean =
-    !!state && !!pathId && !!simulator && !!explanation && !!finalCtaLink
 
   return (
     <Grid
@@ -186,7 +180,6 @@ export const StartingPoint: React.FC<IProps> = ({
               nextPathSummary={nextPathSummary}
               nextPathId={nextPathId ?? null}
               finalCtaLink={finalCtaLink!}
-              onClose={handleClose}
               openPath={(id: PathId) => {
                 trackCustomEvent({
                   eventCategory: "simulator",

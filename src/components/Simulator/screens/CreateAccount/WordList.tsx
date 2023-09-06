@@ -5,7 +5,7 @@ import {
   OrderedList,
 } from "@chakra-ui/react"
 import React from "react"
-import { WordDisplay, type WordStyleVariant } from "./index"
+import { WordDisplay, type WordStyleVariant } from "./WordDisplay"
 import {
   DELAY_MULTIPLIER_MS,
   EXTRA_DELAY_MS,

@@ -1,13 +1,5 @@
-import React, { useMemo } from "react"
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
-import { PhoneScreenProps } from "../interfaces"
-import { ProgressCta } from "../ProgressCta"
-import { Slider, Web3App } from "./ConnectWeb3/index"
-import { AnimatePresence, motion } from "framer-motion"
-import { WalletHome } from "../WalletHome"
-import { defaultTokenBalances } from "../data"
-import { TokenBalance } from "../Wallet/interfaces"
-import { useEthPrice } from "../hooks"
+import React, { useMemo } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {
@@ -15,6 +7,14 @@ import {
   RiAuctionLine,
   RiFileTransferLine,
 } from "react-icons/ri"
+import { AnimatePresence, motion } from "framer-motion"
+import { Slider } from "./Slider"
+import { Web3App } from "./Web3App"
+import { ProgressCta, WalletHome } from "../.."
+import { defaultTokenBalances } from "../../data"
+import type { PhoneScreenProps } from "../../interfaces"
+import type { TokenBalance } from "../../Wallet/interfaces"
+import { useEthPrice } from "../../hooks"
 
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({
   state,

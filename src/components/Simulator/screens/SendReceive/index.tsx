@@ -1,20 +1,16 @@
 import React, { useEffect, useMemo, useState } from "react"
-import { PhoneScreenProps } from "../interfaces"
-import { ProgressCta, WalletHome } from "../"
-import {
-  ReceiveEther,
-  SendEther,
-  SendFromContacts,
-  SendSummary,
-  Success,
-} from "./SendReceive/index"
-import { defaultTokenBalances } from "../data"
-import { TokenBalance } from "../Wallet/interfaces"
-import { useEthPrice } from "../hooks"
 import { motion } from "framer-motion"
-
-const FALLBACK_ETH_PRICE = 1000 as const
-const USD_RECEIVE_AMOUNT = 50 as const
+import { ReceiveEther } from "./ReceiveEther"
+import { SendEther } from "./SendEther"
+import { SendFromContacts } from "./SendFromContacts"
+import { SendSummary } from "./SendSummary"
+import { Success } from "./Success"
+import { ProgressCta, WalletHome } from "../.."
+import { defaultTokenBalances } from "../../data"
+import { PhoneScreenProps } from "../../interfaces"
+import type { TokenBalance } from "../../Wallet/interfaces"
+import { useEthPrice } from "../../hooks"
+import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "./constants"
 
 export const SendReceive: React.FC<PhoneScreenProps> = ({
   state,
