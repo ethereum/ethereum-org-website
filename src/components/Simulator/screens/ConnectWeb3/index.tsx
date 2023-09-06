@@ -36,8 +36,8 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
         <Web3App>
           <Flex
             px={6}
-            py={16}
-            gap={16}
+            py={{ base: 8, md: 16 }}
+            gap={{ base: 8, md: 16 }}
             bg="background.highlight"
             h="full"
             direction="column"

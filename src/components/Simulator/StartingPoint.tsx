@@ -129,7 +129,8 @@ export const StartingPoint: React.FC<IProps> = ({
       <Flex
         direction={{ base: "column", md: "row" }}
         bg="background.base"
-        p={{ base: 4, md: 16 }}
+        px={{ base: 4, md: 16 }}
+        py={{ base: 8, md: 16 }}
         alignItems="center"
         textAlign={{ base: "center", md: "start" }}
         gap={{ base: 16, md: 8, lg: 16 }}
