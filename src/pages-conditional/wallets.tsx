@@ -9,7 +9,7 @@ import {
   Img,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
 import PageHero from "../components/PageHero"
@@ -27,6 +27,8 @@ import { StyledCard } from "../pages/get-eth"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
+import { StartingPoint } from "../components/Simulator"
+import { simulatorData } from "../components/Simulator/data"
 
 const GrayContainer = (props: BoxProps) => (
   <Box
@@ -174,8 +176,10 @@ const guides = [
 
 const WalletsPage = ({
   data,
+  location,
 }: PageProps<Queries.WalletsPageQuery, Context>) => {
   const { t } = useTranslation()
+  const { language } = useI18next()
 
   const heroContent = {
     title: t("page-wallets-title"),
@@ -302,42 +306,65 @@ const WalletsPage = ({
           </Box>
         </RightColumn>
       </TwoColumnContent>
-      <GrayContainer
-        my={12}
-        bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
+      {language === "en" ? (
+        <Content my={20}>
+          <StartingPoint location={location} data={simulatorData}>
+            <Text
+              fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
+              fontStyle="italic"
+              color="body.medium"
+              mb={2}
+            >
+              Interactive explainer
+            </Text>
+            <Text
+              fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+              lineHeight="115%"
+              fontWeight="bold"
+              m={0}
+            >
+              How to use a wallet
+            </Text>
+          </StartingPoint>
+        </Content>
+      ) : (
+        <GrayContainer
+          my={12}
+          bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
     rgba(134, 168, 231, 0.2) 58.46%,
     rgba(145, 234, 228, 0.2) 97.05%)"
-      >
-        <Content>
-          <Flex flexDirection="column" alignItems="center" mb="8">
-            <H2>
-              <Translation id="page-wallets-features-title" />
-            </H2>
-            <Box
-              fontSize="xl"
-              lineHeight={1.4}
-              color="text"
-              textAlign="center"
-              mb={6}
-            >
-              <Translation id="page-wallets-features-desc" />
-            </Box>
-            <ButtonLink to="/wallets/find-wallet/">
-              <Translation id="page-wallets-find-wallet-btn" />
-            </ButtonLink>
-            <Img
-              as={GatsbyImage}
-              image={getImage(data.findWallet)!}
-              alt=""
-              mt={8}
-              maxW="800px"
-              backgroundSize="cover"
-              backgroundRepeat="no-repeat"
-              w="full"
-            />
-          </Flex>
-        </Content>
-      </GrayContainer>
+        >
+          <Content>
+            <Flex flexDirection="column" alignItems="center" mb="8">
+              <H2>
+                <Translation id="page-wallets-features-title" />
+              </H2>
+              <Box
+                fontSize="xl"
+                lineHeight={1.4}
+                color="text"
+                textAlign="center"
+                mb={6}
+              >
+                <Translation id="page-wallets-features-desc" />
+              </Box>
+              <ButtonLink to="/wallets/find-wallet/">
+                <Translation id="page-wallets-find-wallet-btn" />
+              </ButtonLink>
+              <Img
+                as={GatsbyImage}
+                image={getImage(data.findWallet)!}
+                alt=""
+                mt={8}
+                maxW="800px"
+                backgroundSize="cover"
+                backgroundRepeat="no-repeat"
+                w="full"
+              />
+            </Flex>
+          </Content>
+        </GrayContainer>
+      )}
       <TwoColumnContent>
         <LeftColumn>
           <H2>
