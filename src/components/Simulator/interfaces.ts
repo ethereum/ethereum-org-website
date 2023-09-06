@@ -14,7 +14,6 @@ export interface SimulatorExplanation {
 }
 
 export interface SimulatorState {
-  pathId: PathId
   step: number
   totalSteps: number
   progressStepper: () => void
@@ -28,7 +27,9 @@ export interface LabelHref {
   isPrimary?: boolean
 }
 
-export interface PhoneScreenProps extends SimulatorStateProps {}
+export interface PhoneScreenProps extends SimulatorStateProps {
+  ctaLabel: string
+}
 export interface SimulatorDetails {
   title: string
   Icon: React.FC<IconProps>
