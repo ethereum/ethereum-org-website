@@ -1,3 +1,5 @@
+import { navigate } from "gatsby"
+
 export const shareOnTwitter = (): void => {
   const url = "https://ethereum.org/simulator" // TODO: Update with production link
   const hashtags = ["walletsimulator", "ethereum", "wallet"]
@@ -8,4 +10,8 @@ export const shareOnTwitter = (): void => {
   window.open(
     `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
   )
+}
+
+export const clearUrlParams = (location: Location): void => {
+  navigate(location.pathname, { replace: true })
 }

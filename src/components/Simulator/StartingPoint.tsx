@@ -1,6 +1,6 @@
-import { Flex, Grid, Text, useDisclosure } from "@chakra-ui/react"
+import { Flex, Grid, Text } from "@chakra-ui/react"
 import React, { useEffect, useMemo, useState } from "react"
-import { PathButton, SimulatorModal, Template } from "."
+import { Explanation, PathButton, Phone, SimulatorModal, Template } from "."
 import type {
   SimulatorDetails,
   SimulatorPathSummary,
@@ -11,10 +11,10 @@ import { simulatorData } from "./data"
 import { PATH_IDS, PATH_ID_QUERY_PARAM } from "./constants"
 import { trackCustomEvent } from "../../utils/matomo"
 import { navigate } from "gatsby"
+import { clearUrlParams } from "./utils"
 
 const getValidPathId = (pathIdString: PathId | null): PathId | null => {
-  if (!pathIdString) return null
-  if (!PATH_IDS.includes(pathIdString)) return null
+  if (!pathIdString || !PATH_IDS.includes(pathIdString)) return null
   return pathIdString as PathId
 }
 
@@ -22,42 +22,32 @@ interface IProps {
   location: Location
 }
 export const StartingPoint: React.FC<IProps> = ({ location }) => {
+  // Track pathID
   const params = new URLSearchParams(location.search)
   const pathIdString = params.get(PATH_ID_QUERY_PARAM)
   const pathId: PathId | null = getValidPathId(pathIdString as PathId | null)
-  const [step, setStep] = useState(0) // 0-indexed to use as array index
 
+  // Track step
+  const [step, setStep] = useState(0) // 0-indexed to use as array index
   const totalSteps: number = pathId
     ? simulatorData[pathId].explanations.length
     : 0
 
-  const { onClose, onOpen, isOpen } = useDisclosure({ isOpen: !!pathId })
-
+  // When simulator closed: log event, clear URL params and close modal
   const handleClose = (): void => {
     trackCustomEvent({
       eventCategory: "simulator",
       eventAction: `${pathId}_click`,
       eventName: `close-from-step-${step + 1}`,
     })
-    clearUrlParams()
-    onClose()
-  }
-
-  const clearUrlParams = (): void => {
-    navigate(location.pathname, { replace: true })
-  }
-
-  const setUrlPathId = (pathId: PathId): void => {
-    const params = new URLSearchParams()
-    params.set(PATH_ID_QUERY_PARAM, pathId)
-    const url = `?${params.toString()}`
-    navigate(url, { replace: true })
+    // Clearing URL Params will reset pathId, and close modal
+    clearUrlParams(location)
   }
 
   // Set URL search params for pathId when it changes
   useEffect(() => {
     if (!pathId) {
-      clearUrlParams()
+      clearUrlParams(location)
       return
     }
     const params = new URLSearchParams()
@@ -82,25 +72,24 @@ export const StartingPoint: React.FC<IProps> = ({ location }) => {
       eventName: `back-from-step-${step + 1}`,
     })
     if (step === 0) {
-      onClose()
+      clearUrlParams(location)
       return
     }
     setStep((step) => Math.max(step - 1, 0))
   }
 
-  const resetStepper = (): void => {
-    setStep(0)
-  }
-
   const openPath = (pathId: PathId): void => {
-    resetStepper()
-    setUrlPathId(pathId)
-    onOpen()
+    // Reset step count
+    setStep(0)
+    // Set new pathId in navigation
+    const params = new URLSearchParams()
+    params.set(PATH_ID_QUERY_PARAM, pathId)
+    const url = `?${params.toString()}`
+    navigate(url, { replace: true })
   }
 
   const state: SimulatorState | null = pathId
     ? {
-        pathId,
         step,
         totalSteps,
         progressStepper,
@@ -112,6 +101,11 @@ export const StartingPoint: React.FC<IProps> = ({ location }) => {
   const simulator: SimulatorDetails | null = pathId
     ? simulatorData[pathId]
     : null
+
+  const { Screen, explanations, ctaLabels, nextPathId, finalCtaLink } =
+    simulator ?? {}
+  const explanation = explanations ? explanations[step] : null
+  const ctaLabel = ctaLabels ? ctaLabels[step] : null
 
   const nextPathSummary = useMemo<SimulatorPathSummary | null>(() => {
     if (!simulator) return null
@@ -132,6 +126,10 @@ export const StartingPoint: React.FC<IProps> = ({ location }) => {
       eventName: `find-wallet`,
     })
   }
+
+  const isOpen: boolean =
+    !!state && !!pathId && !!simulator && !!explanation && !!finalCtaLink
+
   return (
     <Grid
       bg="cardGradient"
@@ -200,22 +198,29 @@ export const StartingPoint: React.FC<IProps> = ({ location }) => {
         </Flex>
       </Flex>
       <SimulatorModal isOpen={isOpen} onClose={handleClose}>
-        {state && simulator && (
-          <Template
-            state={state}
-            nextPathSummary={nextPathSummary}
-            simulator={simulator}
-            onClose={handleClose}
-            openPath={(id: PathId) => {
-              trackCustomEvent({
-                eventCategory: "simulator",
-                eventAction: `${pathId}_click`,
-                eventName: `next-lession-${id}`,
-              })
-              openPath(id)
-            }}
-            logFinalCta={logFinalCta}
-          />
+        {isOpen && Screen && (
+          <Template>
+            <Explanation
+              state={state!}
+              explanation={explanation!}
+              nextPathSummary={nextPathSummary}
+              nextPathId={nextPathId ?? null}
+              finalCtaLink={finalCtaLink!}
+              onClose={handleClose}
+              openPath={(id: PathId) => {
+                trackCustomEvent({
+                  eventCategory: "simulator",
+                  eventAction: `${pathId}_click`,
+                  eventName: `next-lession-${id}`,
+                })
+                openPath(id)
+              }}
+              logFinalCta={logFinalCta}
+            />
+            <Phone>
+              <Screen state={state!} ctaLabel={ctaLabel!} />
+            </Phone>
+          </Template>
         )}
       </SimulatorModal>
     </Grid>
