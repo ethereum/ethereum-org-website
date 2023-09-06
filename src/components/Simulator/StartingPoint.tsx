@@ -4,7 +4,7 @@ import { Explanation, PathButton, Phone, SimulatorModal, Template } from "."
 import type {
   SimulatorDetails,
   SimulatorPathSummary,
-  SimulatorState,
+  SimulatorNav,
 } from "./interfaces"
 import type { PathId, SimulatorData } from "./types"
 import { PATH_ID_QUERY_PARAM } from "./constants"
@@ -83,7 +83,7 @@ export const StartingPoint: React.FC<IProps> = ({
   }
 
   // Navigation object passed to child components
-  const state: SimulatorState | null = pathId
+  const nav: SimulatorNav | null = pathId
     ? {
         step,
         totalSteps,
@@ -129,7 +129,8 @@ export const StartingPoint: React.FC<IProps> = ({
       <Flex
         direction={{ base: "column", md: "row" }}
         bg="background.base"
-        p={{ base: 4, md: 16 }}
+        px={{ base: 4, md: 16 }}
+        py={{ base: 8, md: 16 }}
         alignItems="center"
         textAlign={{ base: "center", md: "start" }}
         gap={{ base: 16, md: 8, lg: 16 }}
@@ -175,7 +176,7 @@ export const StartingPoint: React.FC<IProps> = ({
         {isOpen && Screen && (
           <Template>
             <Explanation
-              state={state!}
+              nav={nav!}
               explanation={explanation!}
               nextPathSummary={nextPathSummary}
               nextPathId={nextPathId ?? null}
@@ -191,7 +192,7 @@ export const StartingPoint: React.FC<IProps> = ({
               logFinalCta={logFinalCta}
             />
             <Phone>
-              <Screen state={state!} ctaLabel={ctaLabel!} />
+              <Screen nav={nav!} ctaLabel={ctaLabel!} />
             </Phone>
           </Template>
         )}

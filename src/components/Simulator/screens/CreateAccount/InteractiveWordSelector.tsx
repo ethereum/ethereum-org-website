@@ -12,9 +12,9 @@ interface IProps extends PhoneScreenProps {
 export const InteractiveWordSelector: React.FC<IProps> = ({
   words,
   ctaLabel,
-  state,
+  nav,
 }) => {
-  const { progressStepper } = state
+  const { progressStepper } = nav
   const [wordsSelected, setWordsSelected] = useState<number>(0)
   return (
     <Box mt={8}>

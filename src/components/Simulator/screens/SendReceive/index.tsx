@@ -12,11 +12,8 @@ import type { TokenBalance } from "../../Wallet/interfaces"
 import { useEthPrice } from "../../hooks"
 import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "./constants"
 
-export const SendReceive: React.FC<PhoneScreenProps> = ({
-  state,
-  ctaLabel,
-}) => {
-  const { progressStepper, step } = state
+export const SendReceive: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
+  const { progressStepper, step } = nav
   const fetchedPrice = useEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const ethReceiveAmount = USD_RECEIVE_AMOUNT / ethPrice
@@ -43,9 +40,7 @@ export const SendReceive: React.FC<PhoneScreenProps> = ({
   )
   return (
     <>
-      {[0].includes(step) && (
-        <WalletHome state={state} isEnabled={[false, true]} />
-      )}
+      {[0].includes(step) && <WalletHome nav={nav} isEnabled={[false, true]} />}
       {[1].includes(step) && <ReceiveEther />}
       {[2].includes(step) && (
         <motion.div
@@ -55,7 +50,7 @@ export const SendReceive: React.FC<PhoneScreenProps> = ({
           transition={{ duration: 0.25 }}
         >
           <WalletHome
-            state={state}
+            nav={nav}
             isEnabled={[true, false]}
             tokenBalances={tokensWithEthBalance}
           />
@@ -69,7 +64,7 @@ export const SendReceive: React.FC<PhoneScreenProps> = ({
           setChosenAmount={setChosenAmount}
         />
       )}
-      {[4].includes(step) && <SendFromContacts state={state} />}
+      {[4].includes(step) && <SendFromContacts nav={nav} />}
       {[5].includes(step) && (
         <SendSummary chosenAmount={chosenAmount} ethPrice={ethPrice} />
       )}

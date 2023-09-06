@@ -11,21 +11,21 @@ import { RecoveryPhraseNotice } from "./RecoveryPhraseNotice"
 import { WelcomeScreen } from "./WelcomeScreen"
 
 export const CreateAccount: React.FC<PhoneScreenProps> = ({
-  state,
+  nav,
   ctaLabel,
 }) => {
-  const { progressStepper, step } = state
+  const { progressStepper, step } = nav
   const [words, setWords] = useState<Array<string>>(generateInvalidSafeSeed())
   const generateNewWords = () => {
     setWords(generateInvalidSafeSeed())
   }
   return (
     <>
-      {[0, 1].includes(step) && <HomeScreen state={state} />}
+      {[0, 1].includes(step) && <HomeScreen nav={nav} />}
       {[2].includes(step) && <WelcomeScreen />}
       {[3].includes(step) && (
         <GeneratingKeys
-          state={state}
+          nav={nav}
           generateNewWords={generateNewWords}
           ctaLabel={ctaLabel}
         />
@@ -33,11 +33,7 @@ export const CreateAccount: React.FC<PhoneScreenProps> = ({
       {[4].includes(step) && <RecoveryPhraseNotice />}
       {[5].includes(step) && <InitialWordDisplay words={words} />}
       {[6].includes(step) && (
-        <InteractiveWordSelector
-          state={state}
-          words={words}
-          ctaLabel={ctaLabel}
-        />
+        <InteractiveWordSelector nav={nav} words={words} ctaLabel={ctaLabel} />
       )}
       {[7].includes(step) && <WalletHome />}
       {[0, 1, 2, 4, 5].includes(step) && (

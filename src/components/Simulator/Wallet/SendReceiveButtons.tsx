@@ -2,31 +2,31 @@ import { Flex } from "@chakra-ui/react"
 import React from "react"
 import { PiPaperPlaneRightFill } from "react-icons/pi"
 import { SendReceiveButton } from "./"
-import type { SimulatorState } from "../interfaces"
+import type { SimulatorNav } from "../interfaces"
 import type { SendReceiveEnabled } from "./types"
 import { QrCodeIcon } from "../icons"
 
 interface SendReceiveButtonsProps {
-  state?: SimulatorState
+  nav?: SimulatorNav
   isEnabled?: SendReceiveEnabled
 }
 export const SendReceiveButtons: React.FC<SendReceiveButtonsProps> = ({
-  state,
+  nav,
   isEnabled = [false, false],
 }) => {
   const [isSendEnabled, isReceiveEnabled] = isEnabled
-  if (state && isSendEnabled === isReceiveEnabled)
+  if (nav && isSendEnabled === isReceiveEnabled)
     throw new Error(
-      "Send and receive buttons cannot both be enabled or disabled. To disable both, do not pass state"
+      "Send and receive buttons cannot both be enabled or disabled. To disable both, do not pass nav"
     )
-  const disableSend = !state || !isSendEnabled
-  const disableReceive = !state || !isReceiveEnabled
-  const highlightSend = !state || !disableSend
-  const highlightReceive = !state || !disableReceive
+  const disableSend = !nav || !isSendEnabled
+  const disableReceive = !nav || !isReceiveEnabled
+  const highlightSend = !nav || !disableSend
+  const highlightReceive = !nav || !disableReceive
   return (
     <Flex justify="space-around" w="full" gap={4}>
       <SendReceiveButton
-        onClick={state?.progressStepper}
+        onClick={nav?.progressStepper}
         isDisabled={disableSend}
         isHighlighted={highlightSend}
         icon={PiPaperPlaneRightFill}
@@ -34,7 +34,7 @@ export const SendReceiveButtons: React.FC<SendReceiveButtonsProps> = ({
         Send
       </SendReceiveButton>
       <SendReceiveButton
-        onClick={state?.progressStepper}
+        onClick={nav?.progressStepper}
         isDisabled={disableReceive}
         isHighlighted={highlightReceive}
         icon={QrCodeIcon}

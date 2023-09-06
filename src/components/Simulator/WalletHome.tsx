@@ -8,16 +8,16 @@ import {
 } from "./Wallet"
 import { TokenBalance } from "./Wallet/interfaces"
 import { defaultTokenBalances } from "./data"
-import type { SimulatorState } from "./interfaces"
+import type { SimulatorNav } from "./interfaces"
 import type { SendReceiveEnabled } from "./Wallet/types"
 
 interface IProps {
-  state?: SimulatorState
+  nav?: SimulatorNav
   isEnabled?: SendReceiveEnabled
   tokenBalances?: Array<TokenBalance>
 }
 export const WalletHome: React.FC<IProps> = ({
-  state,
+  nav,
   isEnabled,
   tokenBalances,
 }) => {
@@ -44,7 +44,7 @@ export const WalletHome: React.FC<IProps> = ({
         w="full"
       >
         <WalletBalance usdAmount={totalAmounts} />
-        <SendReceiveButtons state={state} isEnabled={isEnabled} />
+        <SendReceiveButtons nav={nav} isEnabled={isEnabled} />
       </Flex>
       <Flex
         direction="column"

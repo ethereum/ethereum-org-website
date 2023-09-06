@@ -6,7 +6,7 @@ import type {
   LabelHref,
   SimulatorExplanation,
   SimulatorPathSummary,
-  SimulatorStateProps,
+  SimulatorNavProps,
 } from "./interfaces"
 import type { PathId } from "./types"
 import { MoreInfoPopover, PathButton } from "."
@@ -15,7 +15,7 @@ import { motion } from "framer-motion"
 import { shareOnTwitter } from "./utils"
 import { FaTwitter } from "react-icons/fa"
 
-interface ExplanationProps extends SimulatorStateProps {
+interface ExplanationProps extends SimulatorNavProps {
   explanation: SimulatorExplanation
   nextPathSummary: SimulatorPathSummary | null
   nextPathId: PathId | null
@@ -24,7 +24,7 @@ interface ExplanationProps extends SimulatorStateProps {
   logFinalCta?: () => void
 }
 export const Explanation: React.FC<ExplanationProps> = ({
-  state,
+  nav,
   explanation,
   nextPathSummary,
   nextPathId,
@@ -32,13 +32,13 @@ export const Explanation: React.FC<ExplanationProps> = ({
   openPath,
   logFinalCta,
 }) => {
-  const { regressStepper, step, totalSteps } = state
+  const { regressStepper, step, totalSteps } = nav
   const { header, description } = explanation
 
   const Description: React.FC<BoxProps> = (props) => (
     <Box {...props}>{description}</Box>
   )
-  const isLastStep = state.step + 1 === totalSteps
+  const isLastStep = nav.step + 1 === totalSteps
 
   const backButtonVariants = {
     visible: { opacity: 1 },
@@ -92,7 +92,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
           </Text>
           {description && (
             <Box display={{ base: "block", md: "none" }} position="relative">
-              <MoreInfoPopover step={state.step}>
+              <MoreInfoPopover isFirstStep={nav.step === 0}>
                 <Description />
               </MoreInfoPopover>
             </Box>

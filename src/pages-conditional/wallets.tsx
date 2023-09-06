@@ -307,7 +307,7 @@ const WalletsPage = ({
         </RightColumn>
       </TwoColumnContent>
       {language === "en" ? (
-        <Content my={20}>
+        <Content my={20} px={0}>
           <StartingPoint location={location} data={simulatorData}>
             <Text
               fontSize={{ base: "lg", md: "xl", lg: "2xl" }}

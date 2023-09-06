@@ -16,11 +16,8 @@ import type { PhoneScreenProps } from "../../interfaces"
 import type { TokenBalance } from "../../Wallet/interfaces"
 import { useEthPrice } from "../../hooks"
 
-export const ConnectWeb3: React.FC<PhoneScreenProps> = ({
-  state,
-  ctaLabel,
-}) => {
-  const { progressStepper, step } = state
+export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
+  const { progressStepper, step } = nav
   const { nftImage } = useStaticQuery(graphql`
     {
       nftImage: file(relativePath: { eq: "deep-panic.png" }) {
@@ -62,8 +59,8 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({
         <Web3App>
           <Flex
             px={6}
-            py={16}
-            gap={16}
+            py={{ base: 8, md: 16 }}
+            gap={{ base: 8, md: 16 }}
             bg="background.highlight"
             h="full"
             direction="column"
