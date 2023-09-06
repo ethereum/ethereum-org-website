@@ -9,6 +9,7 @@ import {
   chakra,
 } from "@chakra-ui/react"
 
+import Breadcrumbs from "../components/Breadcrumbs"
 import ButtonLink from "@/components/ButtonLink"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
@@ -24,7 +25,11 @@ import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
 import { mdxTableComponents } from "@/components/Table"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import { isLangRightToLeft } from "@/lib/utils/translations"
+import { getLocaleTimestamp } from "@/lib/utils/time"
+import { getLastModifiedDate } from "@/lib/utils/gh"
+
+import type { ChildOnlyProp, Lang } from "@/lib/types"
 
 const Pre = (props: ChildOnlyProp) => (
   <Text
@@ -164,7 +169,16 @@ export const staticComponents = {
   YouTube,
 }
 
-export const StaticLayout = ({ children }) => {
+export const StaticLayout = ({
+  children,
+  frontmatter,
+  slug,
+  lastUpdatedDate,
+}) => {
+  // const { language } = useI18next()
+  const language = "en"
+  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
+
   return (
     <Box w="full" ml={2}>
       <Flex
@@ -174,7 +188,7 @@ export const StaticLayout = ({ children }) => {
         mb={16}
         p={8}
         pt={{ base: 8, lg: 16 }}
-        // dir={isRightToLeft ? "rtl" : "ltr"}
+        dir={isRightToLeft ? "rtl" : "ltr"}
       >
         <Box
           as="article"
@@ -195,15 +209,17 @@ export const StaticLayout = ({ children }) => {
             },
           }}
         >
+          <Breadcrumbs slug={slug} />
           <Text
             color="text200"
-            // dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
+            dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
           >
-            {/* TODO: add Translation and remove hardcoded date  */}
+            {/* TODO: add Translation when i18n is set up  */}
             {/* <Translation id="page-last-updated" />:{" "} */}
-            Page last updated: August 17, 2023
-            {/* {getLocaleTimestamp(language as Lang, lastUpdatedDate)} */}
+            Page last updated:{" "}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
           </Text>
+
           {children}
 
           <FeedbackCard isArticle />

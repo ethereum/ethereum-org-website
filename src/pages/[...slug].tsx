@@ -14,7 +14,8 @@ import { staticComponents as components } from "@/layouts/Static"
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
-import { NextPageWithLayout } from "@/lib/types"
+import { Frontmatter, NextPageWithLayout } from "@/lib/types"
+import { getLastModifiedDate } from "@/lib/utils/gh"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -44,12 +45,17 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
-  const markdown = getContentBySlug(params.slug.join("/"), ["slug", "content"])
+  const markdown = getContentBySlug(params.slug.join("/"), [
+    "slug",
+    "content",
+    "frontmatter",
+  ])
+  const frontmatter = markdown.frontmatter
 
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
 
-  const mdxSource = await serialize(markdown.content, {
+  const mdxSource: any = await serialize(markdown.content as string, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
@@ -57,9 +63,15 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     },
   })
 
+  const originalSlug = `/${params.slug.join("/")}/`
+  const lastUpdatedDate = await getLastModifiedDate(originalSlug)
+
   return {
     props: {
       mdxSource,
+      originalSlug,
+      frontmatter,
+      lastUpdatedDate,
     },
   }
 }
@@ -76,9 +88,16 @@ const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
 
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
+  // `slug`, `frontmatter` and `lastUpdatedDate` values are returned by `getStaticProps` method and passed to the page component
+  const slug: string = page.props.originalSlug
+  const frontmatter: Frontmatter = page.props.frontmatter
+  const lastUpdatedDate = page.props.lastUpdatedDate
+
+  const layoutProps = { slug, frontmatter, lastUpdatedDate }
+
   return (
     <RootLayout>
-      <StaticLayout>{page}</StaticLayout>
+      <StaticLayout {...layoutProps}>{page}</StaticLayout>
     </RootLayout>
   )
 }

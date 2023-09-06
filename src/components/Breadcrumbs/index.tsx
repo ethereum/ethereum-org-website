@@ -1,5 +1,5 @@
 import React from "react"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+// import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -37,10 +37,14 @@ const Breadcrumbs: React.FC<IProps> = ({
   startDepth = 0,
   ...restProps
 }) => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  // TODO: update when i18n is set up
+  // const { t } = useTranslation()
+  // const { language } = useI18next()
+  const language = "en"
 
-  const hasHome = originalSlug.includes(`/${language}/`)
+  // TODO: update when i18n is set up
+  // const hasHome = originalSlug.includes(`/${language}/`)
+  const hasHome = true
   const slug = originalSlug.replace(`/${language}/`, "/")
 
   const slugChunk = slug.split("/")
@@ -52,7 +56,9 @@ const Breadcrumbs: React.FC<IProps> = ({
       ? [
           {
             fullPath: "/",
-            text: t("page-index-meta-title"),
+            // TODO: update when i18n is set up
+            // text: t("page-index-meta-title"),
+            text: "Home",
           },
         ]
       : []),
@@ -60,7 +66,9 @@ const Breadcrumbs: React.FC<IProps> = ({
     ...sliced.map((path, idx) => {
       return {
         fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
-        text: t(path),
+        // TODO: update when i18n is set up
+        // text: t(path),
+        text: path,
       }
     }),
   ]
