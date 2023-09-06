@@ -1635,6 +1635,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/avalidurl"><img src="https://avatars.githubusercontent.com/u/11991363?v=4?s=100" width="100px;" alt="gokhan"/><br /><sub><b>gokhan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aavalidurl" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xadri"><img src="https://avatars.githubusercontent.com/u/738533?v=4?s=100" width="100px;" alt="Adri"/><br /><sub><b>Adri</b></sub></a><br /><a href="#content-0xadri" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/DSherryD"><img src="https://avatars.githubusercontent.com/u/130898085?v=4?s=100" width="100px;" alt="Sherry.Du"/><br /><sub><b>Sherry.Du</b></sub></a><br /><a href="#content-DSherryD" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://francescociulla.com"><img src="https://avatars.githubusercontent.com/u/18360871?v=4?s=100" width="100px;" alt="Francesco Ciulla"/><br /><sub><b>Francesco Ciulla</b></sub></a><br /><a href="#content-FrancescoXX" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
