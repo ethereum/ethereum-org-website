@@ -3,6 +3,8 @@ import { extname } from "path"
 import { join } from "path"
 import matter from "gray-matter"
 
+import { Frontmatter } from "../types"
+
 import { CONTENT_DIR } from "../constants"
 
 const contentDir = join(process.cwd(), CONTENT_DIR)
@@ -70,7 +72,7 @@ export const getContentBySlug = (slug: string, fields: string[] = []) => {
   const { data: frontmatter, content } = matter(fileContents)
 
   type Items = {
-    [key: string]: string
+    [key: string]: string | Frontmatter
   }
 
   const items: Items = {}
@@ -85,12 +87,11 @@ export const getContentBySlug = (slug: string, fields: string[] = []) => {
       items[field] = removeAnchorLinks(content)
     }
 
-    if (typeof frontmatter[field] !== "undefined") {
-      items[field] = frontmatter[field]
+    if (field === "frontmatter") {
+      items[field] = frontmatter
     }
   })
 
-  // return { items, staticPath }
   return items
 }
 
