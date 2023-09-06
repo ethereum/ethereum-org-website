@@ -92,7 +92,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
           </Text>
           {description && (
             <Box display={{ base: "block", md: "none" }} position="relative">
-              <MoreInfoPopover step={nav.step}>
+              <MoreInfoPopover isFirstStep={nav.step === 0}>
                 <Description />
               </MoreInfoPopover>
             </Box>

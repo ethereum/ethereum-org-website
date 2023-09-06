@@ -1,4 +1,5 @@
 import {
+  Box,
   Popover,
   PopoverTrigger,
   Button,
@@ -7,44 +8,52 @@ import {
   PopoverArrow,
   PopoverBody,
   type PopoverBodyProps,
-  Checkbox,
-  PopoverFooter,
   PopoverCloseButton,
   PopoverHeader,
 } from "@chakra-ui/react"
-import React, { ChangeEvent, useEffect, useRef, useState } from "react"
+import { motion } from "framer-motion"
+import React, { useState } from "react"
 import { MdInfoOutline } from "react-icons/md"
 
-interface IProps extends Pick<PopoverBodyProps, "children"> {
-  step: number
-}
-export const MoreInfoPopover: React.FC<IProps> = ({ step, children }) => {
-  const DEFAULT_HIDDEN = true as const
-  const [hidden, setHidden] = useState<boolean>(DEFAULT_HIDDEN)
-  const buttonRef = useRef<HTMLButtonElement>(null)
-  useEffect(() => {
-    if (hidden && step !== 0) return
-    buttonRef.current?.click()
-  }, [step])
+const MotionBox = motion(Box)
+const MotionButton = motion(Button)
 
-  const handleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
-    setHidden(e.target.checked)
-  }
+interface IProps extends Pick<PopoverBodyProps, "children"> {
+  isFirstStep: boolean
+}
+export const MoreInfoPopover: React.FC<IProps> = ({
+  isFirstStep,
+  children,
+}) => {
+  const [clicked, setClicked] = useState(false)
 
   return (
     <Popover>
       <PopoverTrigger>
-        <Button
-          ref={buttonRef}
+        <MotionButton
           rightIcon={<Icon as={MdInfoOutline} size={24} />}
           variant="ghost"
           sx={{ paddingInlineStart: 0 }}
           color="body.medium"
           fontSize="sm"
-          py={0}
+          p={0}
+          onClick={() => setClicked(true)}
+          position="relative"
         >
           More info
-        </Button>
+          {isFirstStep && !clicked && (
+            <MotionBox
+              position="absolute"
+              inset={-1}
+              border="2px"
+              borderColor="primary.base"
+              borderRadius="full"
+              initial={{ scale: 1, opacity: 0.9 }}
+              animate={{ scaleX: 1.2, scaleY: 1.5, opacity: 0 }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }}
+            />
+          )}
+        </MotionButton>
       </PopoverTrigger>
       <PopoverContent
         bg="background.highlight"
@@ -59,16 +68,9 @@ export const MoreInfoPopover: React.FC<IProps> = ({ step, children }) => {
         <PopoverHeader mb={2}>
           <PopoverCloseButton ms="auto" />
         </PopoverHeader>
-        <PopoverBody>{children}</PopoverBody>
-        <PopoverFooter display="flex">
-          <Checkbox
-            defaultChecked={DEFAULT_HIDDEN}
-            ms="auto"
-            onChange={handleCheckbox}
-          >
-            Hide by default
-          </Checkbox>
-        </PopoverFooter>
+        <PopoverBody sx={{ "p:last-of-type": { mb: 2 } }}>
+          {children}
+        </PopoverBody>
       </PopoverContent>
     </Popover>
   )
