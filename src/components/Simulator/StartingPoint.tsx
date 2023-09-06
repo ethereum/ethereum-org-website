@@ -1,4 +1,4 @@
-import { Flex, Grid, Text } from "@chakra-ui/react"
+import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 import React, { useEffect, useMemo, useState } from "react"
 import { Explanation, PathButton, Phone, SimulatorModal, Template } from "."
 import type {
@@ -6,17 +6,21 @@ import type {
   SimulatorPathSummary,
   SimulatorState,
 } from "./interfaces"
-import type { PathId } from "./types"
-import { simulatorData } from "./data"
+import type { PathId, SimulatorData } from "./types"
 import { PATH_ID_QUERY_PARAM } from "./constants"
 import { trackCustomEvent } from "../../utils/matomo"
 import { navigate } from "gatsby"
 import { clearUrlParams, getValidPathId } from "./utils"
 
-interface IProps {
+interface IProps extends Pick<FlexProps, "children"> {
+  data: SimulatorData
   location: Location
 }
-export const StartingPoint: React.FC<IProps> = ({ location }) => {
+export const StartingPoint: React.FC<IProps> = ({
+  children,
+  data,
+  location,
+}) => {
   // Track pathID
   const params = new URLSearchParams(location.search)
   const pathIdString = params.get(PATH_ID_QUERY_PARAM)
@@ -24,9 +28,7 @@ export const StartingPoint: React.FC<IProps> = ({ location }) => {
 
   // Track step
   const [step, setStep] = useState(0) // 0-indexed to use as array index
-  const totalSteps: number = pathId
-    ? simulatorData[pathId].explanations.length
-    : 0
+  const totalSteps: number = pathId ? data[pathId].explanations.length : 0
 
   // When simulator closed: log event, clear URL params and close modal
   const handleClose = (): void => {
@@ -93,9 +95,7 @@ export const StartingPoint: React.FC<IProps> = ({ location }) => {
       }
     : null
 
-  const simulator: SimulatorDetails | null = pathId
-    ? simulatorData[pathId]
-    : null
+  const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
 
   const { Screen, explanations, ctaLabels, nextPathId, finalCtaLink } =
     simulator ?? {}
@@ -106,7 +106,7 @@ export const StartingPoint: React.FC<IProps> = ({ location }) => {
     if (!simulator) return null
     const { nextPathId } = simulator
     if (!nextPathId) return null
-    const { title, Icon } = simulatorData[nextPathId]
+    const { title, Icon } = data[nextPathId]
     return {
       primaryText: "Start next lesson",
       secondaryText: title,
@@ -144,22 +144,7 @@ export const StartingPoint: React.FC<IProps> = ({ location }) => {
       >
         {/* TEXT CONTENT */}
         <Flex direction="column" px={4}>
-          <Text
-            fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
-            fontStyle="italic"
-            color="body.medium"
-            mb={2}
-          >
-            Interactive explainer
-          </Text>
-          <Text
-            fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-            lineHeight="115%"
-            fontWeight="bold"
-            m={0}
-          >
-            How to use a wallet
-          </Text>
+          {children}
         </Flex>
         {/* Button stack for path options */}
         <Flex
@@ -168,8 +153,8 @@ export const StartingPoint: React.FC<IProps> = ({ location }) => {
           w={{ base: "min(100%, 320px)", md: "300px" }}
           minW={{ md: "300px" }}
         >
-          {Object.keys(simulatorData).map((id) => {
-            const sim = simulatorData[id]
+          {Object.keys(data).map((id) => {
+            const sim = data[id]
             const pathSummary = {
               primaryText: sim.title,
               secondaryText: "How to?",
