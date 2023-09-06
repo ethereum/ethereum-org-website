@@ -13,12 +13,16 @@ export interface SimulatorExplanation {
   description: ReactElement | null
 }
 
-export interface SimulatorState {
+export interface SimulatorNav {
   step: number
   totalSteps: number
   progressStepper: () => void
   regressStepper: () => void
   openPath: (pathId: PathId) => void
+}
+
+export interface SimulatorNavProps {
+  nav: SimulatorNav
 }
 
 export interface LabelHref {
@@ -27,7 +31,7 @@ export interface LabelHref {
   isPrimary?: boolean
 }
 
-export interface PhoneScreenProps extends SimulatorStateProps {
+export interface PhoneScreenProps extends SimulatorNavProps {
   ctaLabel: string
 }
 export interface SimulatorDetails {
@@ -38,8 +42,4 @@ export interface SimulatorDetails {
   ctaLabels: Array<string>
   finalCtaLink: LabelHref
   nextPathId?: PathId | null
-}
-
-export interface SimulatorStateProps {
-  state: SimulatorState
 }

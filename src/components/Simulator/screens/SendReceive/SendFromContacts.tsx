@@ -4,9 +4,9 @@ import { PiMagnifyingGlass } from "react-icons/pi"
 import { CategoryTabs } from "../../Wallet"
 import { CONTACTS } from "../../data"
 import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
-import type { SimulatorStateProps } from "../../interfaces"
+import type { SimulatorNavProps } from "../../interfaces"
 
-export const SendFromContacts: React.FC<SimulatorStateProps> = ({ state }) => (
+export const SendFromContacts: React.FC<SimulatorNavProps> = ({ nav }) => (
   <>
     <Box py={8} px={6}>
       <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={8}>
@@ -45,7 +45,7 @@ export const SendFromContacts: React.FC<SimulatorStateProps> = ({ state }) => (
               pointerEvents: "none",
             }}
             data-group
-            onClick={state.progressStepper}
+            onClick={nav.progressStepper}
           >
             <Box as="span" flex={1}>
               <Text

@@ -15,11 +15,11 @@ interface IProps extends PhoneScreenProps {
   generateNewWords: () => void
 }
 export const GeneratingKeys: React.FC<IProps> = ({
-  state,
+  nav,
   ctaLabel,
   generateNewWords,
 }) => {
-  const { progressStepper } = state
+  const { progressStepper } = nav
   const [loading, setLoading] = useState<boolean>(true)
   const [complete, setComplete] = useState<boolean>(false)
 

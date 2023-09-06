@@ -1,13 +1,13 @@
 import React from "react"
 import { Grid, Icon, GridProps, Box } from "@chakra-ui/react"
 import { MdArrowDownward } from "react-icons/md"
-import type { SimulatorStateProps } from "../../interfaces"
+import type { SimulatorNavProps } from "../../interfaces"
 import { EthGlyphIcon } from "../../icons"
 
-interface IProps extends GridProps, SimulatorStateProps {}
-export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
-  const { step } = state
-  const ICON_COUNT = 8 as const
+interface IProps extends GridProps, SimulatorNavProps {}
+export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
+  const { step } = nav
+  const ICON_COUNT = 8
   const sharedIconStyles = {
     w: "full",
     aspectRatio: 1,
@@ -34,7 +34,7 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
       {step === 1 ? (
         <Grid
           {...sharedIconStyles}
-          onClick={state.progressStepper}
+          onClick={nav.progressStepper}
           cursor="pointer"
           as="button"
           transition={`
@@ -63,7 +63,7 @@ export const HomeScreen: React.FC<IProps> = ({ state, ...props }) => {
           bg="background.base"
           borderStyle="dashed"
           borderColor="primary.hover"
-          onClick={state.progressStepper}
+          onClick={nav.progressStepper}
           cursor="pointer"
           _hover={{
             borderColor: "primary.base",

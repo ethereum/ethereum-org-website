@@ -9,11 +9,8 @@ import type { PhoneScreenProps } from "../../interfaces"
 import type { TokenBalance } from "../../Wallet/interfaces"
 import { useEthPrice } from "../../hooks"
 
-export const ConnectWeb3: React.FC<PhoneScreenProps> = ({
-  state,
-  ctaLabel,
-}) => {
-  const { progressStepper, step } = state
+export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
+  const { progressStepper, step } = nav
   const ethPrice = useEthPrice()
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
     () =>
