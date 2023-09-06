@@ -9,9 +9,6 @@ import {
   ButtonProps,
 } from "@chakra-ui/react"
 import { motion } from "framer-motion"
-import type { SimulatorStateProps } from "./interfaces"
-import { simulatorData } from "./data"
-// TODO: Remove simulatorData import; pass data needed as props
 
 const MotionFlex = motion(Flex)
 const MotionBox = motion(Box)
@@ -27,17 +24,17 @@ const DownArrowLong = motion(
   })
 )
 
-interface IProps
-  extends SimulatorStateProps,
-    FlexProps,
-    Pick<ButtonProps, "isDisabled"> {}
+interface IProps extends FlexProps, Pick<ButtonProps, "isDisabled"> {
+  isAnimated?: boolean
+  progressStepper: () => void
+}
 export const ProgressCta: React.FC<IProps> = ({
-  state,
+  isAnimated = false,
+  progressStepper,
   isDisabled,
+  children,
   ...flexProps
 }) => {
-  const { progressStepper, step, pathId } = state
-  const ctaLabel = simulatorData[pathId].ctaLabels[step]
   const transition = {
     duration: 2,
     times: [0, 0.25, 0.5],
@@ -54,7 +51,7 @@ export const ProgressCta: React.FC<IProps> = ({
       initial={{ opacity: 1 }}
       {...flexProps}
     >
-      {/* {step === 0 && (
+      {isAnimated && (
         <MotionFlex
           position="absolute"
           direction="column"
@@ -81,32 +78,34 @@ export const ProgressCta: React.FC<IProps> = ({
             transition={transition}
           />
         </MotionFlex>
-      )} */}
+      )}
       <Button
         w="full"
         onClick={progressStepper}
         isDisabled={isDisabled}
         position="relative"
       >
-        {step === 0 && (
-          <MotionBox
-            as={motion.div}
-            position="absolute"
-            inset={0}
-            borderRadius="base"
-            border="2px"
-            borderColor="primary.base"
-            initial={{ scale: 1, opacity: 1 }}
-            animate={{ scaleX: 1.1, scaleY: 1.7, opacity: 0 }}
-            transition={{
-              duration: 2.5,
-              repeat: Infinity,
-              ease: "easeOut",
-              delay: 1,
-            }}
-          />
-        )}
-        {ctaLabel}
+        <>
+          {isAnimated && (
+            <MotionBox
+              as={motion.div}
+              position="absolute"
+              inset={0}
+              borderRadius="base"
+              border="2px"
+              borderColor="primary.base"
+              initial={{ scale: 1, opacity: 1 }}
+              animate={{ scaleX: 1.1, scaleY: 1.7, opacity: 0 }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeOut",
+                delay: 1,
+              }}
+            />
+          )}
+          {children}
+        </>
       </Button>
     </MotionFlex>
   )

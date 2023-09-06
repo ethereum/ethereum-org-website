@@ -1,6 +1,6 @@
 import React, { useMemo } from "react"
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
-import { SimulatorStateProps } from "../interfaces"
+import { PhoneScreenProps } from "../interfaces"
 import { ProgressCta } from "../ProgressCta"
 import { Slider, Web3App } from "./ConnectWeb3/index"
 import { AnimatePresence, motion } from "framer-motion"
@@ -16,8 +16,11 @@ import {
   RiFileTransferLine,
 } from "react-icons/ri"
 
-export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
-  const { step } = state
+export const ConnectWeb3: React.FC<PhoneScreenProps> = ({
+  state,
+  ctaLabel,
+}) => {
+  const { progressStepper, step } = state
   const { nftImage } = useStaticQuery(graphql`
     {
       nftImage: file(relativePath: { eq: "deep-panic.png" }) {
@@ -33,6 +36,7 @@ export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
       }
     }
   `)
+
   const ethPrice = useEthPrice()
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
     () =>
@@ -144,7 +148,11 @@ export const ConnectWeb3: React.FC<SimulatorStateProps> = ({ state }) => {
           </Web3App>
         </motion.div>
       )}
-      {[0, 1, 2, 3].includes(step) && <ProgressCta state={state} />}
+      {[0, 1, 2, 3].includes(step) && (
+        <ProgressCta isAnimated={step === 0} progressStepper={progressStepper}>
+          {ctaLabel}
+        </ProgressCta>
+      )}
       {[4].includes(step) && (
         <motion.div
           key="final-wallet-display"

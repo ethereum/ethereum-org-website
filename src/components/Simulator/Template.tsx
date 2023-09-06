@@ -1,30 +1,7 @@
 import React from "react"
-import { Flex } from "@chakra-ui/react"
-import { Explanation, Phone } from "./"
-import type {
-  SimulatorDetails,
-  SimulatorPathSummary,
-  SimulatorStateProps,
-} from "./interfaces"
-import type { PathId } from "./types"
+import { Flex, type FlexProps } from "@chakra-ui/react"
 
-interface IProps extends SimulatorStateProps {
-  simulator: SimulatorDetails
-  nextPathSummary: SimulatorPathSummary | null
-  onClose: () => void
-  openPath?: (pathId: PathId) => void
-}
-export const Template: React.FC<IProps> = ({
-  state,
-  simulator,
-  nextPathSummary,
-  onClose,
-  openPath,
-}) => {
-  const { step } = state
-  const { Screen, explanations, nextPathId, finalCtaLink } = simulator
-  const explanation = explanations[step]
-
+export const Template: React.FC<FlexProps> = ({ children, ...flexProps }) => {
   return (
     <Flex
       pt={{ base: 0, md: 8 }}
@@ -33,19 +10,9 @@ export const Template: React.FC<IProps> = ({
       justify="center"
       direction={{ base: "column", md: "row" }}
       gap={8}
+      {...flexProps}
     >
-      <Explanation
-        state={state}
-        explanation={explanation}
-        nextPathSummary={nextPathSummary}
-        nextPathId={nextPathId ?? null}
-        finalCtaLink={finalCtaLink}
-        onClose={onClose}
-        openPath={openPath}
-      />
-      <Phone>
-        <Screen state={state} />
-      </Phone>
+      {children}
     </Flex>
   )
 }

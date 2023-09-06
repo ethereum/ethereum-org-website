@@ -1,86 +1,92 @@
-import { Flex, Grid, Text, useDisclosure } from "@chakra-ui/react"
+import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 import React, { useEffect, useMemo, useState } from "react"
-import { PathButton, SimulatorModal, Template } from "."
+import { Explanation, PathButton, Phone, SimulatorModal, Template } from "."
 import type {
   SimulatorDetails,
   SimulatorPathSummary,
   SimulatorState,
 } from "./interfaces"
-import type { PathId } from "./types"
-import { simulatorData } from "./data"
-import { PATH_IDS, PATH_ID_QUERY_PARAM } from "./constants"
+import type { PathId, SimulatorData } from "./types"
+import { PATH_ID_QUERY_PARAM } from "./constants"
+import { trackCustomEvent } from "../../utils/matomo"
+import { navigate } from "gatsby"
+import { clearUrlParams, getValidPathId } from "./utils"
 
-export const StartingPoint: React.FC = () => {
-  const [step, setStep] = useState<number>(0) // 0-indexed to use as array index
-  const [pathId, setPathId] = useState<PathId | null>(null)
-  const { onClose, onOpen, isOpen } = useDisclosure()
+interface IProps extends Pick<FlexProps, "children"> {
+  data: SimulatorData
+  location: Location
+}
+export const StartingPoint: React.FC<IProps> = ({
+  children,
+  data,
+  location,
+}) => {
+  // Track pathID
+  const params = new URLSearchParams(location.search)
+  const pathIdString = params.get(PATH_ID_QUERY_PARAM)
+  const pathId: PathId | null = getValidPathId(pathIdString as PathId | null)
 
+  // Track step
+  const [step, setStep] = useState(0) // 0-indexed to use as array index
+  const totalSteps: number = pathId ? data[pathId].explanations.length : 0
+
+  // When simulator closed: log event, clear URL params and close modal
   const handleClose = (): void => {
-    clearUrlParams()
-    onClose()
+    trackCustomEvent({
+      eventCategory: "simulator",
+      eventAction: `${pathId}_click`,
+      eventName: `close-from-step-${step + 1}`,
+    })
+    // Clearing URL Params will reset pathId, and close modal
+    clearUrlParams(location)
   }
-
-  const totalSteps: number = pathId
-    ? simulatorData[pathId].explanations.length
-    : 0
-
-  const clearUrlParams = (): void => {
-    if (!window) return
-    window.history.replaceState({}, "", window.location.pathname)
-  }
-
-  // On page load, check if URL search params contain pathId and step
-  // If so, set pathId and step to those values
-  useEffect(() => {
-    if (!window) return
-    const params = new URLSearchParams(window.location.search)
-    const pathId = params.get(PATH_ID_QUERY_PARAM) as PathId | null
-    if (!pathId || !PATH_IDS.includes(pathId)) {
-      clearUrlParams()
-      return
-    }
-    setPathId(pathId)
-    onOpen()
-  }, [])
 
   // Set URL search params for pathId when it changes
   useEffect(() => {
-    if (!window) return
     if (!pathId) {
-      clearUrlParams()
+      clearUrlParams(location)
       return
     }
     const params = new URLSearchParams()
     params.set(PATH_ID_QUERY_PARAM, pathId)
     const url = `?${params.toString()}`
-    window.history.replaceState({}, "", url)
+    navigate(url, { replace: true })
   }, [pathId])
 
   const progressStepper = (): void => {
+    trackCustomEvent({
+      eventCategory: "simulator",
+      eventAction: `${pathId}_click`,
+      eventName: `progress-from-step-${step + 1}`,
+    })
     setStep((step) => Math.min(step + 1, totalSteps - 1))
   }
 
   const regressStepper = (): void => {
+    trackCustomEvent({
+      eventCategory: "simulator",
+      eventAction: `${pathId}_click`,
+      eventName: `back-from-step-${step + 1}`,
+    })
     if (step === 0) {
-      onClose()
+      clearUrlParams(location)
       return
     }
     setStep((step) => Math.max(step - 1, 0))
   }
 
-  const resetStepper = (): void => {
-    setStep(0)
-  }
-
   const openPath = (pathId: PathId): void => {
-    resetStepper()
-    setPathId(pathId)
-    onOpen()
+    // Reset step count
+    setStep(0)
+    // Set new pathId in navigation
+    const params = new URLSearchParams()
+    params.set(PATH_ID_QUERY_PARAM, pathId)
+    const url = `?${params.toString()}`
+    navigate(url, { replace: true })
   }
 
   const state: SimulatorState | null = pathId
     ? {
-        pathId,
         step,
         totalSteps,
         progressStepper,
@@ -89,21 +95,35 @@ export const StartingPoint: React.FC = () => {
       }
     : null
 
-  const simulator: SimulatorDetails | null = pathId
-    ? simulatorData[pathId]
-    : null
+  const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
+
+  const { Screen, explanations, ctaLabels, nextPathId, finalCtaLink } =
+    simulator ?? {}
+  const explanation = explanations ? explanations[step] : null
+  const ctaLabel = ctaLabels ? ctaLabels[step] : null
 
   const nextPathSummary = useMemo<SimulatorPathSummary | null>(() => {
     if (!simulator) return null
     const { nextPathId } = simulator
     if (!nextPathId) return null
-    const { title, Icon } = simulatorData[nextPathId]
+    const { title, Icon } = data[nextPathId]
     return {
       primaryText: "Start next lesson",
       secondaryText: title,
       Icon,
     }
   }, [pathId])
+
+  const logFinalCta = (): void => {
+    trackCustomEvent({
+      eventCategory: "simulator",
+      eventAction: `${pathId}_click`,
+      eventName: `find-wallet`,
+    })
+  }
+
+  const isOpen: boolean =
+    !!state && !!pathId && !!simulator && !!explanation && !!finalCtaLink
 
   return (
     <Grid
@@ -124,22 +144,7 @@ export const StartingPoint: React.FC = () => {
       >
         {/* TEXT CONTENT */}
         <Flex direction="column" px={4}>
-          <Text
-            fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
-            fontStyle="italic"
-            color="body.medium"
-            mb={2}
-          >
-            Interactive explainer
-          </Text>
-          <Text
-            fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-            lineHeight="115%"
-            fontWeight="bold"
-            m={0}
-          >
-            How to use a wallet
-          </Text>
+          {children}
         </Flex>
         {/* Button stack for path options */}
         <Flex
@@ -148,8 +153,8 @@ export const StartingPoint: React.FC = () => {
           w={{ base: "min(100%, 320px)", md: "300px" }}
           minW={{ md: "300px" }}
         >
-          {Object.keys(simulatorData).map((pathId) => {
-            const sim = simulatorData[pathId]
+          {Object.keys(data).map((id) => {
+            const sim = data[id]
             const pathSummary = {
               primaryText: sim.title,
               secondaryText: "How to?",
@@ -157,23 +162,45 @@ export const StartingPoint: React.FC = () => {
             }
             return (
               <PathButton
-                key={pathId}
+                key={id}
                 pathSummary={pathSummary}
-                handleClick={() => openPath(pathId as PathId)}
+                handleClick={() => {
+                  trackCustomEvent({
+                    eventCategory: "simulator",
+                    eventAction: `main-buttons_click`,
+                    eventName: id,
+                  })
+                  openPath(id as PathId)
+                }}
               />
             )
           })}
         </Flex>
       </Flex>
       <SimulatorModal isOpen={isOpen} onClose={handleClose}>
-        {state && simulator && (
-          <Template
-            state={state!}
-            nextPathSummary={nextPathSummary}
-            simulator={simulator}
-            onClose={handleClose}
-            openPath={openPath}
-          />
+        {isOpen && Screen && (
+          <Template>
+            <Explanation
+              state={state!}
+              explanation={explanation!}
+              nextPathSummary={nextPathSummary}
+              nextPathId={nextPathId ?? null}
+              finalCtaLink={finalCtaLink!}
+              onClose={handleClose}
+              openPath={(id: PathId) => {
+                trackCustomEvent({
+                  eventCategory: "simulator",
+                  eventAction: `${pathId}_click`,
+                  eventName: `next-lession-${id}`,
+                })
+                openPath(id)
+              }}
+              logFinalCta={logFinalCta}
+            />
+            <Phone>
+              <Screen state={state!} ctaLabel={ctaLabel!} />
+            </Phone>
+          </Template>
         )}
       </SimulatorModal>
     </Grid>

@@ -1,17 +1,19 @@
 import { Grid, Flex, Spinner, Icon, Text } from "@chakra-ui/react"
 import React, { useEffect, useState } from "react"
 import { PiCheckThin } from "react-icons/pi"
-import { SimulatorStateProps } from "../../interfaces"
+import { PhoneScreenProps } from "../../interfaces"
 import { motion } from "framer-motion"
 import { ProgressCta } from "../.."
 
-interface IProps extends SimulatorStateProps {
+interface IProps extends PhoneScreenProps {
   generateNewWords: () => void
 }
 export const GeneratingKeys: React.FC<IProps> = ({
   state,
+  ctaLabel,
   generateNewWords,
 }) => {
+  const { progressStepper } = state
   const [loading, setLoading] = useState<boolean>(true)
   const [complete, setComplete] = useState<boolean>(false)
 
@@ -78,7 +80,9 @@ export const GeneratingKeys: React.FC<IProps> = ({
             transition={{ duration: BUTTON_FADE_DURATION * 1e-3 }}
             style={{ position: "absolute", bottom: 0, width: "100%" }}
           >
-            <ProgressCta state={state} insetInline={0} />
+            <ProgressCta progressStepper={progressStepper} insetInline={0}>
+              {ctaLabel}
+            </ProgressCta>
           </motion.div>
         )}
       </Flex>

@@ -12,6 +12,8 @@ import type { PathId } from "./types"
 import { MoreInfoPopover, PathButton } from "."
 import ButtonLink from "../ButtonLink"
 import { motion } from "framer-motion"
+import { shareOnTwitter } from "./utils"
+import { FaTwitter } from "react-icons/fa"
 
 interface ExplanationProps extends SimulatorStateProps {
   explanation: SimulatorExplanation
@@ -20,6 +22,7 @@ interface ExplanationProps extends SimulatorStateProps {
   finalCtaLink: LabelHref
   onClose?: () => void
   openPath?: (pathId: PathId) => void
+  logFinalCta?: () => void
 }
 export const Explanation: React.FC<ExplanationProps> = ({
   state,
@@ -29,6 +32,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
   finalCtaLink,
   onClose,
   openPath,
+  logFinalCta,
 }) => {
   const { regressStepper, step, totalSteps } = state
   const { header, description } = explanation
@@ -119,10 +123,20 @@ export const Explanation: React.FC<ExplanationProps> = ({
             <ButtonLink
               variant={finalCtaLink.isPrimary ? "solid" : "outline"}
               href={finalCtaLink.href}
+              onClick={logFinalCta}
             >
               {finalCtaLink.label}
             </ButtonLink>
           )}
+          <Button
+            variant="outline-color"
+            leftIcon={<FaTwitter />}
+            onClick={shareOnTwitter}
+            w={{ base: "full", lg: "auto" }}
+            mt={{ base: 2, lg: 0 }}
+          >
+            Share experience
+          </Button>
           {!nextPathId && (
             <Button onClick={onClose} variant="outline">
               Go back

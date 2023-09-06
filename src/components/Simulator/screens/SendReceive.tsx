@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react"
-import { SimulatorStateProps } from "../interfaces"
+import { PhoneScreenProps } from "../interfaces"
 import { ProgressCta, WalletHome } from "../"
 import {
   ReceiveEther,
@@ -16,8 +16,11 @@ import { motion } from "framer-motion"
 const FALLBACK_ETH_PRICE = 1000 as const
 const USD_RECEIVE_AMOUNT = 50 as const
 
-export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
-  const { step } = state
+export const SendReceive: React.FC<PhoneScreenProps> = ({
+  state,
+  ctaLabel,
+}) => {
+  const { progressStepper, step } = state
   const fetchedPrice = useEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const ethReceiveAmount = USD_RECEIVE_AMOUNT / ethPrice
@@ -76,7 +79,13 @@ export const SendReceive: React.FC<SimulatorStateProps> = ({ state }) => {
       )}
       {[6].includes(step) && <Success />}
       {[1, 3, 5].includes(step) && (
-        <ProgressCta state={state} isDisabled={step === 3 && !chosenAmount} />
+        <ProgressCta
+          isAnimated={step === 0}
+          isDisabled={step === 3 && !chosenAmount}
+          progressStepper={progressStepper}
+        >
+          {ctaLabel}
+        </ProgressCta>
       )}
     </>
   )

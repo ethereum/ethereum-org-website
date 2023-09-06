@@ -1,14 +1,19 @@
 import React, { useState } from "react"
-import { SimulatorStateProps } from "../../interfaces"
+import { PhoneScreenProps } from "../../interfaces"
 import { WordList, WordSelectorButtons } from "./index"
 import { ProgressCta } from "../.."
 import { Box, Text } from "@chakra-ui/react"
 
-interface IProps extends SimulatorStateProps {
+interface IProps extends PhoneScreenProps {
   words: Array<string>
 }
 
-export const InteractiveWordSelector: React.FC<IProps> = ({ state, words }) => {
+export const InteractiveWordSelector: React.FC<IProps> = ({
+  words,
+  ctaLabel,
+  state,
+}) => {
+  const { progressStepper } = state
   const [wordsSelected, setWordsSelected] = useState<number>(0)
   return (
     <Box mt={8}>
@@ -29,7 +34,7 @@ export const InteractiveWordSelector: React.FC<IProps> = ({ state, words }) => {
           setWordsSelected={setWordsSelected}
         />
       ) : (
-        <ProgressCta state={state} />
+        <ProgressCta progressStepper={progressStepper}>{ctaLabel}</ProgressCta>
       )}
     </Box>
   )
