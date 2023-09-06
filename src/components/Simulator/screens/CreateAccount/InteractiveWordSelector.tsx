@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { PhoneScreenProps } from "../../interfaces"
-import { WordList, WordSelectorButtons } from "./index"
+import { WordList } from "./WordList"
+import { WordSelectorButtons } from "./WordSelectorButtons"
 import { ProgressCta } from "../.."
 import { Box, Text } from "@chakra-ui/react"
 

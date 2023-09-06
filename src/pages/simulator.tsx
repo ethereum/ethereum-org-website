@@ -1,7 +1,7 @@
 import { Box, Text } from "@chakra-ui/react"
 import React from "react"
 import { simulatorData } from "../components/Simulator/data"
-import { StartingPoint } from "../components/Simulator/index"
+import { StartingPoint } from "../components/Simulator"
 
 const SimulatorPage = ({ location }) => (
   <Box w="full" py={16}>

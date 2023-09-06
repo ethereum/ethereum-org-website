@@ -1,15 +1,14 @@
 import React, { useState } from "react"
-import type { PhoneScreenProps } from "../interfaces"
-import { generateInvalidSafeSeed } from "../../../utils/generateSeed"
-import { WalletHome, ProgressCta } from ".."
-import {
-  GeneratingKeys,
-  HomeScreen,
-  InitialWordDisplay,
-  InteractiveWordSelector,
-  RecoveryPhraseNotice,
-  WelcomeScreen,
-} from "./CreateAccount/index"
+import type { PhoneScreenProps } from "../../interfaces"
+import { generateInvalidSafeSeed } from "../../../../utils/generateSeed"
+import { WalletHome, ProgressCta } from "../.."
+
+import { GeneratingKeys } from "./GeneratingKeys"
+import { HomeScreen } from "./HomeScreen"
+import { InitialWordDisplay } from "./InitialWordDisplay"
+import { InteractiveWordSelector } from "./InteractiveWordSelector"
+import { RecoveryPhraseNotice } from "./RecoveryPhraseNotice"
+import { WelcomeScreen } from "./WelcomeScreen"
 
 export const CreateAccount: React.FC<PhoneScreenProps> = ({
   state,
