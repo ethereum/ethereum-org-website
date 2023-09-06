@@ -1637,6 +1637,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/DSherryD"><img src="https://avatars.githubusercontent.com/u/130898085?v=4?s=100" width="100px;" alt="Sherry.Du"/><br /><sub><b>Sherry.Du</b></sub></a><br /><a href="#content-DSherryD" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://francescociulla.com"><img src="https://avatars.githubusercontent.com/u/18360871?v=4?s=100" width="100px;" alt="Francesco Ciulla"/><br /><sub><b>Francesco Ciulla</b></sub></a><br /><a href="#content-FrancescoXX" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/blazingrome"><img src="https://avatars.githubusercontent.com/u/136898739?v=4?s=100" width="100px;" alt="blazingrome"/><br /><sub><b>blazingrome</b></sub></a><br /><a href="#content-blazingrome" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
