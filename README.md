@@ -1639,6 +1639,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/blazingrome"><img src="https://avatars.githubusercontent.com/u/136898739?v=4?s=100" width="100px;" alt="blazingrome"/><br /><sub><b>blazingrome</b></sub></a><br /><a href="#content-blazingrome" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/etan-status"><img src="https://avatars.githubusercontent.com/u/89844309?v=4?s=100" width="100px;" alt="Etan Kissling"/><br /><sub><b>Etan Kissling</b></sub></a><br /><a href="#content-etan-status" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
