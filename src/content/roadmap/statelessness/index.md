@@ -66,7 +66,7 @@ Weak statelessness does involve changes to the way Ethereum nodes verify state c
 
 **In weak statelessness proposing blocks requires access to full state data but verifying blocks requires no state data**
 
-For this to happen, [Verkle trees](../verkle-trees) must already have been implemented in Ethereum clients. Verkle trees are a replacement data structure for storing Ethereum state data that allow small, fixed size "witnesses" to the data to be passed between peers and used to verify blocks instead of verifying blocks against local databases. [Proposer-builder separation](/roadmap/pbs/) is also required because this allows block builders to be specialized nodes with more powerful hardware, and those are the ones that require access to the full state data.
+For this to happen, [Verkle trees](/roadmap/verkle-trees/) must already have been implemented in Ethereum clients. Verkle trees are a replacement data structure for storing Ethereum state data that allow small, fixed size "witnesses" to the data to be passed between peers and used to verify blocks instead of verifying blocks against local databases. [Proposer-builder separation](/roadmap/pbs/) is also required because this allows block builders to be specialized nodes with more powerful hardware, and those are the ones that require access to the full state data.
 
 <ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
