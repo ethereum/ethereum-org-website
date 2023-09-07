@@ -15,7 +15,7 @@ export const shareOnTwitter = (): void => {
 }
 
 export const clearUrlParams = (location: Location): void => {
-  navigate(location.pathname, { replace: true })
+  navigate(location.pathname + location.hash, { replace: true })
 }
 
 export const getValidPathId = (pathIdString: PathId | null): PathId | null => {

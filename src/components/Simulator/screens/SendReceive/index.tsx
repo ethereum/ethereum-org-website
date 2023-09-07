@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react"
-import { motion } from "framer-motion"
+import React, { useEffect, useState } from "react"
 import { ReceiveEther } from "./ReceiveEther"
 import { SendEther } from "./SendEther"
 import { SendFromContacts } from "./SendFromContacts"
@@ -8,9 +7,9 @@ import { Success } from "./Success"
 import { ProgressCta, WalletHome } from "../.."
 import { defaultTokenBalances } from "../../data"
 import { PhoneScreenProps } from "../../interfaces"
-import type { TokenBalance } from "../../Wallet/interfaces"
 import { useEthPrice } from "../../hooks"
 import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "./constants"
+import { ReceivedEther } from "./ReceivedEther"
 
 export const SendReceive: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav
@@ -25,36 +24,17 @@ export const SendReceive: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
     setChosenAmount(0)
   }, [step])
 
-  const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
-    () =>
-      defaultTokenBalances.map((token) =>
-        token.ticker === "ETH"
-          ? {
-              ...token,
-              amount: ethReceiveAmount,
-              usdConversion: ethPrice,
-            }
-          : token
-      ),
-    [ethPrice]
-  )
   return (
     <>
       {[0].includes(step) && <WalletHome nav={nav} isEnabled={[false, true]} />}
       {[1].includes(step) && <ReceiveEther />}
       {[2].includes(step) && (
-        <motion.div
-          key="wallet-step-index-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.25 }}
-        >
-          <WalletHome
-            nav={nav}
-            isEnabled={[true, false]}
-            tokenBalances={tokensWithEthBalance}
-          />
-        </motion.div>
+        <ReceivedEther
+          nav={nav}
+          ethPrice={ethPrice}
+          defaultTokenBalances={defaultTokenBalances}
+          ethReceiveAmount={ethReceiveAmount}
+        />
       )}
       {[3].includes(step) && (
         <SendEther
