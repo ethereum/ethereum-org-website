@@ -319,7 +319,7 @@ export const defaultTokenBalances: Array<TokenBalance> = [
     name: "Ether",
     ticker: "ETH",
     amount: 0,
-    usdConversion: 1600, // TODO: Fetch?
+    usdConversion: 1,
     Icon: EthTokenIcon,
   },
   {
@@ -333,7 +333,7 @@ export const defaultTokenBalances: Array<TokenBalance> = [
     name: "Uniswap",
     ticker: "UNI",
     amount: 0,
-    usdConversion: 4.5, // TODO: Fetch?
+    usdConversion: 1,
     Icon: UniTokenIcon,
   },
 ]
