@@ -46,7 +46,7 @@ export const GeneratingKeys: React.FC<IProps> = ({
 
   return (
     <Grid placeItems="center" h="full" bg="background.highlight">
-      <Flex direction="column" alignItems="center" pt={8} gap={4}>
+      <Flex direction="column" alignItems="center" gap={4}>
         {loading ? (
           <motion.div
             key="spinner"
