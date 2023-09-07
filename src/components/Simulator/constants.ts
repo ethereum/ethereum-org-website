@@ -1,3 +1,5 @@
+export const SIMULATOR_ID = "sim"
+
 export const CREATE_ACCOUNT = "create-account"
 export const SEND_RECEIVE = "send-receive"
 export const CONNECT_WEB3 = "connect-web3"

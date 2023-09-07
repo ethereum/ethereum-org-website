@@ -7,7 +7,7 @@ import type {
   SimulatorNav,
 } from "./interfaces"
 import type { PathId, SimulatorData } from "./types"
-import { PATH_ID_QUERY_PARAM } from "./constants"
+import { PATH_ID_QUERY_PARAM, SIMULATOR_ID } from "./constants"
 import { trackCustomEvent } from "../../utils/matomo"
 import { navigate } from "gatsby"
 import { clearUrlParams, getValidPathId } from "./utils"
@@ -34,7 +34,7 @@ export const StartingPoint: React.FC<IProps> = ({
   const totalSteps: number = pathId ? data[pathId].explanations.length : 0
 
   // When simulator closed: log event, clear URL params and close modal
-  const handleClose = (): void => {
+  const onClose = (): void => {
     trackCustomEvent({
       eventCategory: "simulator",
       eventAction: `${pathId}_click`,
@@ -78,7 +78,7 @@ export const StartingPoint: React.FC<IProps> = ({
     // Set new pathId in navigation
     const params = new URLSearchParams()
     params.set(PATH_ID_QUERY_PARAM, pathId)
-    const url = `?${params.toString()}`
+    const url = `?${params.toString()}#${SIMULATOR_ID}`
     navigate(url, { replace: true })
   }
 
@@ -121,10 +121,13 @@ export const StartingPoint: React.FC<IProps> = ({
 
   return (
     <Grid
+      id={SIMULATOR_ID}
       bg="cardGradient"
       placeItems="center"
       p={{ base: 4, md: 16 }}
       w="full"
+      scrollMarginTop={{ base: "5rem" }}
+      scrollBehavior="smooth"
     >
       <Flex
         direction={{ base: "column", md: "row" }}
@@ -172,7 +175,7 @@ export const StartingPoint: React.FC<IProps> = ({
           })}
         </Flex>
       </Flex>
-      <SimulatorModal isOpen={isOpen} onClose={handleClose}>
+      <SimulatorModal isOpen={isOpen} onClose={onClose}>
         {isOpen && Screen && (
           <Template>
             <Explanation
