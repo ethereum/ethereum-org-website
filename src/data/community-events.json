@@ -349,5 +349,14 @@
     "description": "ETH Riyadh unites developers and builders from Saudi Arabia and the other Middle East regions, nurturing their roles and connections in the Ethereum ecosystem.",
     "startDate": "2023-09-20",
     "endDate": "2023-10-15"
+  },
+  {
+    "title": "A General Forum on Ethereum Localism",
+    "to": "https://pdxdao.xyz/localism/",
+    "sponsor": null,
+    "location": "Portland, OR, USA",
+    "description": "Three days and thoughtful side events will create a container where the Ethereum community can elaborate for itself, in a plurality of directions, what an experimentalism of the city can mean and look like for web3.",
+    "startDate": "2023-10-13",
+    "endDate": "2023-10-15"
   }
 ]
