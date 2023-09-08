@@ -6,7 +6,7 @@ import { PiCheckThin } from "react-icons/pi"
 const ICON_SIZE = "4.5rem" as const
 
 export const Success = () => {
-  const [loading, setLoading] = useState<boolean>(true)
+  const [loading, setLoading] = useState(true)
 
   // Show spinner for defined number of milliseconds, switching "loading" state to false when complete
   const SPINNER_DURATION = 1000 as const

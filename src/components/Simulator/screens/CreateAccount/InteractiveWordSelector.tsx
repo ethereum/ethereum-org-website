@@ -15,7 +15,7 @@ export const InteractiveWordSelector: React.FC<IProps> = ({
   nav,
 }) => {
   const { progressStepper } = nav
-  const [wordsSelected, setWordsSelected] = useState<number>(0)
+  const [wordsSelected, setWordsSelected] = useState(0)
   return (
     <Box mt={8}>
       <Text

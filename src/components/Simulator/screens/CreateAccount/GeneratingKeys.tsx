@@ -20,8 +20,8 @@ export const GeneratingKeys: React.FC<IProps> = ({
   generateNewWords,
 }) => {
   const { progressStepper } = nav
-  const [loading, setLoading] = useState<boolean>(true)
-  const [complete, setComplete] = useState<boolean>(false)
+  const [loading, setLoading] = useState(true)
+  const [complete, setComplete] = useState(false)
 
   useEffect(generateNewWords, [])
 
