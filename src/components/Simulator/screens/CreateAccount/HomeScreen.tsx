@@ -29,10 +29,11 @@ export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
       {Array(ICON_COUNT)
         .fill(0)
         .map((_, i) => (
-          <Box key={i} {...sharedIconStyles} bg="body.light" {...props} />
+          <Box key={i} {...sharedIconStyles} bg="body.light" />
         ))}
       {step === 1 ? (
         <Grid
+          key="download"
           {...sharedIconStyles}
           onClick={nav.progressStepper}
           cursor="pointer"
@@ -53,11 +54,12 @@ export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
           <Icon
             as={EthGlyphIcon}
             color="background.base"
-            fontSize={{ base: "xl", sm: "3xl" }}
+            fontSize={{ base: "2xl", sm: "3xl" }}
           />
         </Grid>
       ) : (
         <Grid
+          key="wallet-app"
           {...sharedIconStyles}
           as="button"
           bg="background.base"
@@ -74,6 +76,7 @@ export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
             as={MdArrowDownward}
             color="primary.hover"
             _groupHover={{ color: "primary.base" }}
+            fontSize={{ base: "2xl", sm: "3xl" }}
           />
         </Grid>
       )}
