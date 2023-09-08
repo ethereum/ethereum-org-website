@@ -35,7 +35,7 @@ Open participation is core to the ethereum.org ethos. We are a website and commu
 
 ### Scope {#scope}
 
-This Code of Conduct applies to all ethereum.org spaces (such as GitHub, Discord, Figma Crowdin, Twitter and other online platforms), and it also applies when the community is represented in real-world public spaces such as at meetups, conferences and events.
+This Code of Conduct applies to all ethereum.org spaces (such as GitHub, Discord, Figma, Crowdin, Twitter and other online platforms), and it also applies when the community is represented in real-world public spaces such as at meetups, conferences and events.
 
 ### Our standards {#our-standards}
 
@@ -52,7 +52,7 @@ Examples of unacceptable behavior by participants include:
 
 - Physical violence, threatening physical violence or encouraging of physical violence of any kind
 - Using sexualized language or imagery or imposing unwelcome sexual attention
-- Impersonating another individual or otherwise dishonestly claiming affiliation with some individual or organization.
+- Impersonating another individual or otherwise dishonestly claiming affiliation with some individual or organization
 - Trolling, insulting/derogatory comments, and personal or political attacks
 - Harassing other community members in public or private channels
 - Publishing others’ private information, such as a physical or electronic address, without explicit permission
