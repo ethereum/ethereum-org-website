@@ -15,9 +15,9 @@ export const SendReceiveButtons: React.FC<SendReceiveButtonsProps> = ({
   isEnabled = [false, false],
 }) => {
   const [isSendEnabled, isReceiveEnabled] = isEnabled
-  if (nav && isSendEnabled === isReceiveEnabled)
+  if (nav && isSendEnabled && isReceiveEnabled)
     throw new Error(
-      "Send and receive buttons cannot both be enabled or disabled. To disable both, do not pass nav"
+      "Send and receive buttons cannot both be enabled while nav available."
     )
   const disableSend = !nav || !isSendEnabled
   const disableReceive = !nav || !isReceiveEnabled

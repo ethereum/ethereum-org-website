@@ -69,7 +69,7 @@ export const ReceivedEther: React.FC<IProps> = ({
     >
       <WalletHome
         nav={nav}
-        isEnabled={[true, false]}
+        isEnabled={[received, false]}
         tokenBalances={tokenBalances}
       />
       <AnimatePresence>
