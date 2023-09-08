@@ -1,4 +1,11 @@
-import { CONNECT_WEB3, CREATE_ACCOUNT, SEND_RECEIVE } from "./constants"
+import {
+  CONNECT_WEB3,
+  CREATE_ACCOUNT,
+  SEND_RECEIVE,
+  CIRCLE,
+  FULL_BUTTON,
+  NARROW_BUTTON,
+} from "./constants"
 import { SimulatorDetails } from "./interfaces"
 
 export type PathId =
@@ -7,3 +14,8 @@ export type PathId =
   | typeof CONNECT_WEB3
 
 export type SimulatorData = Record<PathId, SimulatorDetails>
+
+export type PulseOption =
+  | typeof CIRCLE
+  | typeof FULL_BUTTON
+  | typeof NARROW_BUTTON

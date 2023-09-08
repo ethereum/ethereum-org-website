@@ -1,5 +1,4 @@
 import {
-  Box,
   Popover,
   PopoverTrigger,
   Button,
@@ -14,8 +13,8 @@ import {
 import { motion } from "framer-motion"
 import React, { useState } from "react"
 import { MdInfoOutline } from "react-icons/md"
+import { PulseAnimation } from "."
 
-const MotionBox = motion(Box)
 const MotionButton = motion(Button)
 
 interface IProps extends Pick<PopoverBodyProps, "children"> {
@@ -26,7 +25,6 @@ export const MoreInfoPopover: React.FC<IProps> = ({
   children,
 }) => {
   const [clicked, setClicked] = useState(false)
-
   return (
     <Popover>
       <PopoverTrigger>
@@ -41,18 +39,7 @@ export const MoreInfoPopover: React.FC<IProps> = ({
           position="relative"
         >
           More info
-          {isFirstStep && !clicked && (
-            <MotionBox
-              position="absolute"
-              inset={-1}
-              border="2px"
-              borderColor="primary.base"
-              borderRadius="full"
-              initial={{ scale: 1, opacity: 0.9 }}
-              animate={{ scaleX: 1.2, scaleY: 1.5, opacity: 0 }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }}
-            />
-          )}
+          {isFirstStep && !clicked && <PulseAnimation type="narrow-button" />}
         </MotionButton>
       </PopoverTrigger>
       <PopoverContent

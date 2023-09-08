@@ -6,11 +6,9 @@ import {
   type TextProps,
   Box,
 } from "@chakra-ui/react"
-import { motion } from "framer-motion"
 import React from "react"
+import { ClickAnimation, PulseAnimation } from ".."
 import Button from "../../Button"
-
-const MotionBox = motion(Box)
 
 interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
   icon: As
@@ -50,18 +48,7 @@ export const SendReceiveButton: React.FC<SendReceiveButtonProps> = ({
       }}
       position="relative"
     >
-      {!isDisabled && isAnimated && (
-        <MotionBox
-          position="absolute"
-          inset={0}
-          borderRadius="full"
-          border="2px"
-          borderColor="primary.base"
-          initial={{ scale: 1, opacity: 1 }}
-          animate={{ scale: 1.5, opacity: 0 }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }}
-        />
-      )}
+      {!isDisabled && isAnimated && <PulseAnimation type="circle" />}
       <Icon
         as={icon}
         w={{ base: 4, md: 6 }}
@@ -69,17 +56,23 @@ export const SendReceiveButton: React.FC<SendReceiveButtonProps> = ({
         color="background.base"
       />
     </Grid>
-    <Text
-      fontWeight="bold"
-      color="primary.base"
-      textAlign="center"
-      m={0}
-      _groupHover={{ color: "primary.hover" }}
-      _groupDisabled={{
-        color: isHighlighted ? "primary.base" : "body.medium",
-      }}
-    >
-      {children}
-    </Text>
+    <Box position="relative">
+      <Text
+        fontWeight="bold"
+        color="primary.base"
+        textAlign="center"
+        m={0}
+        _groupHover={{ color: "primary.hover" }}
+        _groupDisabled={{
+          color: isHighlighted ? "primary.base" : "body.medium",
+        }}
+        position="relative"
+      >
+        {children}
+      </Text>
+      {!isDisabled && isAnimated && (
+        <ClickAnimation below>click!</ClickAnimation>
+      )}
+    </Box>
   </Button>
 )
