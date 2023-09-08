@@ -64,7 +64,6 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
     [isIconLeft ? "leftIcon" : "rightIcon"]: <Icon />,
     textAlign: isIconLeft ? "start" : "end",
     justifyContent: isIconLeft ? "flex-start" : "flex-end",
-    w: "278px",
   }
 
   const Component = hasHref(props) ? ButtonLink : Button

@@ -20,6 +20,7 @@ export const ButtonTwoLines: Story = {
     icon: BiCircle,
     mainText: "Main Text",
     helperText: "Helper Text",
+    w: "300px",
   },
   render: (args) => (
     <Stack spacing="8">
