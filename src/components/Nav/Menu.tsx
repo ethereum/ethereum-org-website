@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { Flex, HStack, List } from "@chakra-ui/react"
+import { Flex, HStack, List, StackProps } from "@chakra-ui/react"
 
 import { getDirection } from "../../utils/translations"
 
@@ -8,11 +8,11 @@ import { Lang } from "../../utils/languages"
 import { ISections } from "./types"
 import NavDropdown from "./Dropdown"
 
-export interface IProps {
+export interface IProps extends StackProps {
   sections: ISections
 }
 
-const Menu: React.FC<IProps> = ({ sections }) => {
+const Menu: React.FC<IProps> = ({ sections, ...props }) => {
   const { language } = useI18next()
   const direction = getDirection(language as Lang)
 
@@ -25,6 +25,7 @@ const Menu: React.FC<IProps> = ({ sections }) => {
       aria-label="Main Navigation Link Groups"
       m={0}
       spacing="2"
+      {...props}
     >
       <NavDropdown section={useEthereum}>
         {useEthereum.items.map((item, idx) => (
