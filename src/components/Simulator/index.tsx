@@ -24,7 +24,7 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
   // Track pathID
   const params = new URLSearchParams(location.search)
   const pathIdString = params.get(PATH_ID_QUERY_PARAM)
-  const pathId: PathId | null = getValidPathId(pathIdString as PathId | null)
+  const pathId = getValidPathId(pathIdString)
 
   // If pathId present, modal is open, else closed
   const isOpen = !!pathId
