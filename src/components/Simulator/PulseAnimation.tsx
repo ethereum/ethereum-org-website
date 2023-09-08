@@ -14,7 +14,8 @@ export const PulseAnimation: React.FC<IProps> = ({ type = CIRCLE }) => {
   const scaleY = type === FULL_BUTTON ? 1.7 : type === NARROW_BUTTON ? 1.5 : 1.5
   const inset = type === NARROW_BUTTON ? -1 : 0
   const borderRadius = type === FULL_BUTTON ? "base" : "full"
-
+  const BASE_DURATION = 2.5
+  const delay = type === NARROW_BUTTON ? 0 : BASE_DURATION
   return (
     <MotionBox
       position="absolute"
@@ -28,7 +29,7 @@ export const PulseAnimation: React.FC<IProps> = ({ type = CIRCLE }) => {
         duration: 2.5,
         repeat: Infinity,
         ease: "easeOut",
-        delay: 2,
+        delay,
       }}
     />
   )
