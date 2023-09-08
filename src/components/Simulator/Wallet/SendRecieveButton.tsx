@@ -1,6 +1,13 @@
-import { type As, Grid, Icon, Text, type TextProps } from "@chakra-ui/react"
+import {
+  type As,
+  Grid,
+  Icon,
+  Text,
+  type TextProps,
+  Box,
+} from "@chakra-ui/react"
 import React from "react"
-import { PulseAnimation } from ".."
+import { ClickAnimation, PulseAnimation } from ".."
 import Button from "../../Button"
 
 interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
@@ -49,17 +56,23 @@ export const SendReceiveButton: React.FC<SendReceiveButtonProps> = ({
         color="background.base"
       />
     </Grid>
-    <Text
-      fontWeight="bold"
-      color="primary.base"
-      textAlign="center"
-      m={0}
-      _groupHover={{ color: "primary.hover" }}
-      _groupDisabled={{
-        color: isHighlighted ? "primary.base" : "body.medium",
-      }}
-    >
-      {children}
-    </Text>
+    <Box position="relative">
+      <Text
+        fontWeight="bold"
+        color="primary.base"
+        textAlign="center"
+        m={0}
+        _groupHover={{ color: "primary.hover" }}
+        _groupDisabled={{
+          color: isHighlighted ? "primary.base" : "body.medium",
+        }}
+        position="relative"
+      >
+        {children}
+      </Text>
+      {!isDisabled && isAnimated && (
+        <ClickAnimation below>click!</ClickAnimation>
+      )}
+    </Box>
   </Button>
 )

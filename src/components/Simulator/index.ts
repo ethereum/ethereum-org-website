@@ -1,3 +1,4 @@
+export * from "./ClickAnimation"
 export * from "./Explanation"
 export * from "./icons"
 export * from "./MoreInfoPopover"
