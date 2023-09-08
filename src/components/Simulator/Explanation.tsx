@@ -72,9 +72,8 @@ export const Explanation: React.FC<ExplanationProps> = ({
           bg="body.light"
           borderRadius="lg"
           p={2}
-          w="fit-content"
-          h="fit-content"
-          aspectRatio={1}
+          w={9}
+          h={8}
           fontSize="xs"
         >
           <Text as="span" lineHeight={1} fontWeight="bold" m={0}>

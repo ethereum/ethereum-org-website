@@ -188,7 +188,7 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
                 trackCustomEvent({
                   eventCategory: "simulator",
                   eventAction: `${pathId}_click`,
-                  eventName: `next-lession-${id}`,
+                  eventName: `next-lesson-${id}`,
                 })
                 openPath(id)
               }}
