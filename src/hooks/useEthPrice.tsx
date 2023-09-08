@@ -1,26 +1,22 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import { getData } from "../utils/cache"
 
 export const useEthPrice = (): number => {
   const [ethPrice, setEthPrice] = useState<number>(0)
-
   useEffect(() => {
     ;(async () => {
       try {
-        const response = await axios.get(
+        const data: { ethereum: { usd: number } } = await getData(
           "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
         )
-        if (
-          response.status !== 200 ||
-          !response.data ||
-          !response.data.ethereum
-        )
-          throw new Error("Unable to fetch ETH price from CoinGecko")
-        const currentPriceUSD = response.data.ethereum.usd
-        setEthPrice(currentPriceUSD)
+        const {
+          ethereum: { usd },
+        } = data
+        if (!usd) throw new Error("Unable to fetch ETH price from CoinGecko")
+        setEthPrice(usd)
       } catch (error) {
         console.error(error)
-        setEthPrice(0)
       }
     })()
   }, [])
