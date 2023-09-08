@@ -110,14 +110,10 @@ export const SendEther: React.FC<IProps> = ({
             />
           </Flex>
           {/* Balances */}
-          <Text
-            /* color="body.medium" */ fontWeight="bold"
-            m={0}
-            lineHeight={1}
-          >
+          <Text fontWeight="bold" m={0} lineHeight={1}>
             Balance: {usdAmount}
           </Text>
-          <Text /* color="body.medium" */ m={0}>
+          <Text m={0}>
             <>{ethAmount} ETH</>
           </Text>
         </Flex>

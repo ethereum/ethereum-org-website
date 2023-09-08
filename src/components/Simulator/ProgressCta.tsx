@@ -1,13 +1,8 @@
 import React from "react"
-import {
-  Button,
-  createIcon,
-  Flex,
-  type FlexProps,
-  ButtonProps,
-} from "@chakra-ui/react"
-import { motion, type Transition } from "framer-motion"
-import { ClickAnimation, PulseAnimation } from "."
+import { Button, Flex, type FlexProps, ButtonProps } from "@chakra-ui/react"
+import { motion } from "framer-motion"
+import { ClickAnimation } from "./ClickAnimation"
+import { PulseAnimation } from "./PulseAnimation"
 
 const MotionFlex = motion(Flex)
 

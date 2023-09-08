@@ -13,7 +13,7 @@ import {
 import { motion } from "framer-motion"
 import React, { useState } from "react"
 import { MdInfoOutline } from "react-icons/md"
-import { PulseAnimation } from "."
+import { PulseAnimation } from "./PulseAnimation"
 
 const MotionButton = motion(Button)
 

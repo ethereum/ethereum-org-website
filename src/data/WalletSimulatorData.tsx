@@ -1,21 +1,25 @@
 import React from "react"
-import { ListItem, OrderedList, Text, UnorderedList } from "@chakra-ui/react"
-import Emoji from "../../Emoji"
-import type { SimulatorData } from "../types"
-import { ConnectWeb3, CreateAccount, SendReceive } from "../screens"
+import { ListItem, Text, UnorderedList } from "@chakra-ui/react"
+import Emoji from "../components/Emoji"
+import type { SimulatorData } from "../components/Simulator/types"
+import {
+  ConnectWeb3,
+  CreateAccount,
+  SendReceive,
+} from "../components/Simulator/screens"
 import {
   CreateAccountIcon,
   ConnectWeb3Icon,
-  DaiTokenIcon,
-  EthTokenIcon,
   SendReceiveIcon,
-  UniTokenIcon,
-} from "../icons"
-import { CONNECT_WEB3, CREATE_ACCOUNT, SEND_RECEIVE } from "../constants"
-import Link from "../../Link"
-import { Contact, TokenBalance } from "../Wallet/interfaces"
+} from "../components/Simulator/icons"
+import {
+  CONNECT_WEB3,
+  CREATE_ACCOUNT,
+  SEND_RECEIVE,
+} from "../components/Simulator/constants"
+import Link from "../components/Link"
 
-export const simulatorData: SimulatorData = {
+export const walletOnboardingSimData: SimulatorData = {
   [CREATE_ACCOUNT]: {
     title: "Create account",
     Icon: CreateAccountIcon,
@@ -406,42 +410,3 @@ export const simulatorData: SimulatorData = {
     },
   },
 }
-
-export const defaultTokenBalances: Array<TokenBalance> = [
-  {
-    name: "Ether",
-    ticker: "ETH",
-    amount: 0,
-    usdConversion: 1,
-    Icon: EthTokenIcon,
-  },
-  {
-    name: "DAI",
-    ticker: "DAI",
-    amount: 0,
-    usdConversion: 1,
-    Icon: DaiTokenIcon,
-  },
-  {
-    name: "Uniswap",
-    ticker: "UNI",
-    amount: 0,
-    usdConversion: 1,
-    Icon: UniTokenIcon,
-  },
-]
-
-export const CONTACTS: Array<Contact> = [
-  {
-    name: "Jacob",
-    lastAction: "Received 1 hour ago",
-  },
-  {
-    name: "Mom",
-    lastAction: "Sent to 2 weeks ago",
-  },
-  {
-    name: "Uncle",
-    lastAction: "Sent to 1 month ago",
-  },
-]

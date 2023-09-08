@@ -1,15 +1,13 @@
 import { Flex } from "@chakra-ui/react"
 import React from "react"
-import {
-  SendReceiveButtons,
-  TokenBalanceList,
-  CategoryTabs,
-  WalletBalance,
-} from "./Wallet"
-import { TokenBalance } from "./Wallet/interfaces"
-import { defaultTokenBalances } from "./data"
-import type { SimulatorNav } from "./interfaces"
-import type { SendReceiveEnabled } from "./Wallet/types"
+import { SendReceiveButtons } from "./SendReceiveButtons"
+import { TokenBalanceList } from "./TokenBalanceList"
+import { CategoryTabs } from "./CategoryTabs"
+import { WalletBalance } from "./WalletBalance"
+import { TokenBalance } from "./interfaces"
+import { defaultTokenBalances } from "../constants"
+import type { SimulatorNav } from "../interfaces"
+import type { SendReceiveEnabled } from "./types"
 
 interface IProps {
   nav?: SimulatorNav

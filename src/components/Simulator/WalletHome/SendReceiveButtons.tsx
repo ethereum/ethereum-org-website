@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react"
 import React from "react"
 import { PiPaperPlaneRightFill } from "react-icons/pi"
-import { SendReceiveButton } from "./"
+import { SendReceiveButton } from "./SendRecieveButton"
 import type { SimulatorNav } from "../interfaces"
 import type { SendReceiveEnabled } from "./types"
 import { QrCodeIcon } from "../icons"
@@ -15,9 +15,9 @@ export const SendReceiveButtons: React.FC<SendReceiveButtonsProps> = ({
   isEnabled = [false, false],
 }) => {
   const [isSendEnabled, isReceiveEnabled] = isEnabled
-  if (nav && isSendEnabled === isReceiveEnabled)
+  if (nav && isSendEnabled && isReceiveEnabled)
     throw new Error(
-      "Send and receive buttons cannot both be enabled or disabled. To disable both, do not pass nav"
+      "Send and receive buttons cannot both be enabled while nav available."
     )
   const disableSend = !nav || !isSendEnabled
   const disableReceive = !nav || !isReceiveEnabled

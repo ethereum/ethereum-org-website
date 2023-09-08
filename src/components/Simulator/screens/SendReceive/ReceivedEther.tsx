@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import React, { useEffect, useMemo, useState } from "react"
 import { MdInfo } from "react-icons/md"
 import { SimulatorNavProps } from "../../interfaces"
-import type { TokenBalance } from "../../Wallet/interfaces"
+import type { TokenBalance } from "../../WalletHome/interfaces"
 import { WalletHome } from "../../WalletHome"
 
 interface IProps extends SimulatorNavProps {
@@ -69,7 +69,7 @@ export const ReceivedEther: React.FC<IProps> = ({
     >
       <WalletHome
         nav={nav}
-        isEnabled={[true, false]}
+        isEnabled={[received, false]}
         tokenBalances={tokenBalances}
       />
       <AnimatePresence>

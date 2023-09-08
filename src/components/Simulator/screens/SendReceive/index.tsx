@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react"
 import { ReceiveEther } from "./ReceiveEther"
+import { ReceivedEther } from "./ReceivedEther"
 import { SendEther } from "./SendEther"
 import { SendFromContacts } from "./SendFromContacts"
 import { SendSummary } from "./SendSummary"
 import { Success } from "./Success"
-import { ProgressCta, WalletHome } from "../.."
-import { defaultTokenBalances } from "../../data"
+import { ProgressCta } from "../../ProgressCta"
+import { WalletHome } from "../../WalletHome"
 import { PhoneScreenProps } from "../../interfaces"
-import { useEthPrice } from "../../hooks"
 import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "./constants"
-import { ReceivedEther } from "./ReceivedEther"
+import { defaultTokenBalances } from "../../constants"
+import { useEthPrice } from "../../../../hooks/useEthPrice"
 
 export const SendReceive: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav

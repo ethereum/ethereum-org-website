@@ -7,7 +7,8 @@ import {
   Box,
 } from "@chakra-ui/react"
 import React from "react"
-import { ClickAnimation, PulseAnimation } from ".."
+import { ClickAnimation } from "../ClickAnimation"
+import { PulseAnimation } from "../PulseAnimation"
 import Button from "../../Button"
 
 interface SendReceiveButtonProps extends Pick<TextProps, "children"> {

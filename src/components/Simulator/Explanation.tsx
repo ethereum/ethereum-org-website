@@ -9,7 +9,8 @@ import type {
   SimulatorNavProps,
 } from "./interfaces"
 import type { PathId } from "./types"
-import { MoreInfoPopover, PathButton } from "."
+import { MoreInfoPopover } from "./MoreInfoPopover"
+import { PathButton } from "./PathButton"
 import ButtonLink from "../ButtonLink"
 import { motion } from "framer-motion"
 import { shareOnTwitter } from "./utils"
