@@ -17,7 +17,7 @@ export const SendReceive: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const fetchedPrice = useEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const ethReceiveAmount = USD_RECEIVE_AMOUNT / ethPrice
-  const [chosenAmount, setChosenAmount] = useState<number>(0)
+  const [chosenAmount, setChosenAmount] = useState(0)
 
   useEffect(() => {
     if (step !== 2) return

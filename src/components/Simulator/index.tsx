@@ -25,13 +25,14 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
   const params = new URLSearchParams(location.search)
   const pathIdString = params.get(PATH_ID_QUERY_PARAM)
   const pathId = getValidPathId(pathIdString)
+  const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
 
   // If pathId present, modal is open, else closed
   const isOpen = !!pathId
 
   // Track step
   const [step, setStep] = useState(0) // 0-indexed to use as array index
-  const totalSteps: number = pathId ? data[pathId].explanations.length : 0
+  const totalSteps: number = simulator ? simulator.explanations.length : 0
 
   // When simulator closed: log event, clear URL params and close modal
   const onClose = (): void => {
@@ -93,7 +94,6 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
       }
     : null
 
-  const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
   const { Screen, explanations, ctaLabels, nextPathId, finalCtaLink } =
     simulator ?? {}
   const explanation = explanations ? explanations[step] : null
