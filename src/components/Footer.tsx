@@ -124,6 +124,10 @@ const Footer: React.FC<IProps> = () => {
           text: "Ethereum wallets", // t("ethereum-wallets"),
         },
         {
+          to: "/gas/",
+          text: "Gas fees",
+        },
+        {
           to: "/security/",
           text: "Ethereum security and scam prevention", // t("ethereum-security"),
         },
