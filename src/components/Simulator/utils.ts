@@ -18,7 +18,11 @@ export const clearUrlParams = (location: Location): void => {
   navigate(location.pathname + location.hash, { replace: true })
 }
 
-export const getValidPathId = (pathIdString: PathId | null): PathId | null => {
-  if (!pathIdString || !PATH_IDS.includes(pathIdString)) return null
-  return pathIdString as PathId
+export const getValidPathId = (pathIdString: string | null): PathId | null => {
+  if (!isValidPathId(pathIdString)) return null
+  return pathIdString
+}
+
+const isValidPathId = (pathIdString: string | null): pathIdString is PathId => {
+  return PATH_IDS.includes(pathIdString as PathId)
 }
