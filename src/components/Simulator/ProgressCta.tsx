@@ -1,6 +1,5 @@
 import React from "react"
 import {
-  Box,
   Button,
   createIcon,
   Flex,
@@ -8,10 +7,10 @@ import {
   Text,
   ButtonProps,
 } from "@chakra-ui/react"
-import { motion } from "framer-motion"
+import { motion, type Transition } from "framer-motion"
+import { PulseAnimation } from "."
 
 const MotionFlex = motion(Flex)
-const MotionBox = motion(Box)
 
 const DownArrowLong = motion(
   createIcon({
@@ -35,7 +34,7 @@ export const ProgressCta: React.FC<IProps> = ({
   children,
   ...flexProps
 }) => {
-  const transition = {
+  const transition: Transition = {
     duration: 2,
     times: [0, 0.25, 0.5],
     repeat: Infinity,
@@ -86,24 +85,7 @@ export const ProgressCta: React.FC<IProps> = ({
         position="relative"
       >
         <>
-          {isAnimated && (
-            <MotionBox
-              as={motion.div}
-              position="absolute"
-              inset={0}
-              borderRadius="base"
-              border="2px"
-              borderColor="primary.base"
-              initial={{ scale: 1, opacity: 1 }}
-              animate={{ scaleX: 1.1, scaleY: 1.7, opacity: 0 }}
-              transition={{
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "easeOut",
-                delay: 1,
-              }}
-            />
-          )}
+          {isAnimated && <PulseAnimation type="full-button" />}
           {children}
         </>
       </Button>
