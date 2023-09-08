@@ -1,11 +1,11 @@
 import { Box, Text } from "@chakra-ui/react"
 import React from "react"
-import { simulatorData } from "../components/Simulator/data"
-import { StartingPoint } from "../components/Simulator"
+import { walletOnboardingSimData } from "../data/WalletSimulatorData"
+import { Simulator } from "../components/Simulator"
 
 const SimulatorPage = ({ location }) => (
   <Box w="full" py={16}>
-    <StartingPoint location={location} data={simulatorData}>
+    <Simulator location={location} data={walletOnboardingSimData}>
       <Text
         fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
         fontStyle="italic"
@@ -22,7 +22,7 @@ const SimulatorPage = ({ location }) => (
       >
         How to use a wallet
       </Text>
-    </StartingPoint>
+    </Simulator>
   </Box>
 )
 

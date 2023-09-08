@@ -1,6 +1,10 @@
 import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 import React, { useEffect, useMemo, useState } from "react"
-import { Explanation, PathButton, Phone, SimulatorModal, Template } from "."
+import { Explanation } from "./Explanation"
+import { PathButton } from "./PathButton"
+import { Phone } from "./Phone"
+import { SimulatorModal } from "./SimulatorModal"
+import { Template } from "./Template"
 import type {
   SimulatorDetails,
   SimulatorPathSummary,
@@ -16,11 +20,7 @@ interface IProps extends Pick<FlexProps, "children"> {
   data: SimulatorData
   location: Location
 }
-export const StartingPoint: React.FC<IProps> = ({
-  children,
-  data,
-  location,
-}) => {
+export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
   // Track pathID
   const params = new URLSearchParams(location.search)
   const pathIdString = params.get(PATH_ID_QUERY_PARAM)

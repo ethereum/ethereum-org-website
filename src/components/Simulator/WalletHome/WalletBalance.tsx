@@ -1,6 +1,6 @@
 import { Box, type BoxProps, Text, Flex } from "@chakra-ui/react"
 import React from "react"
-import { AddressPill } from "."
+import { AddressPill } from "./AddressPill"
 
 interface IProps extends BoxProps {
   usdAmount?: number

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { PiCheckThin } from "react-icons/pi"
 import { PhoneScreenProps } from "../../interfaces"
 import { motion } from "framer-motion"
-import { ProgressCta } from "../.."
+import { ProgressCta } from "../../ProgressCta"
 import {
   SPINNER_SIZE,
   WORD_GENERATION_SPINNER_DURATION,

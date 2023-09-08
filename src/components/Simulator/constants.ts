@@ -1,3 +1,6 @@
+import { EthTokenIcon, DaiTokenIcon, UniTokenIcon } from "./icons"
+import { TokenBalance } from "./WalletHome/interfaces"
+
 export const SIMULATOR_ID = "sim"
 
 export const CREATE_ACCOUNT = "create-account"
@@ -12,3 +15,27 @@ export const PATH_ID_QUERY_PARAM = "sim"
 export const CIRCLE = "circle"
 export const FULL_BUTTON = "full-button"
 export const NARROW_BUTTON = "narrow-button"
+
+export const defaultTokenBalances: Array<TokenBalance> = [
+  {
+    name: "Ether",
+    ticker: "ETH",
+    amount: 0,
+    usdConversion: 1,
+    Icon: EthTokenIcon,
+  },
+  {
+    name: "DAI",
+    ticker: "DAI",
+    amount: 0,
+    usdConversion: 1,
+    Icon: DaiTokenIcon,
+  },
+  {
+    name: "Uniswap",
+    ticker: "UNI",
+    amount: 0,
+    usdConversion: 1,
+    Icon: UniTokenIcon,
+  },
+]

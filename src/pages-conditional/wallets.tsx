@@ -27,8 +27,8 @@ import { StyledCard } from "../pages/get-eth"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
-import { StartingPoint } from "../components/Simulator"
-import { simulatorData } from "../components/Simulator/data"
+import { Simulator } from "../components/Simulator"
+import { walletOnboardingSimData } from "../data/WalletSimulatorData"
 
 const GrayContainer = (props: BoxProps) => (
   <Box
@@ -308,7 +308,7 @@ const WalletsPage = ({
       </TwoColumnContent>
       {language === "en" ? (
         <Content my={20} px={0}>
-          <StartingPoint location={location} data={simulatorData}>
+          <Simulator location={location} data={walletOnboardingSimData}>
             <Text
               fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
               fontStyle="italic"
@@ -325,7 +325,7 @@ const WalletsPage = ({
             >
               How to use a wallet
             </Text>
-          </StartingPoint>
+          </Simulator>
         </Content>
       ) : (
         <GrayContainer

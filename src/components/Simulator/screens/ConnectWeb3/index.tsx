@@ -3,11 +3,12 @@ import { Box, Flex, Text } from "@chakra-ui/react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Slider } from "./Slider"
 import { Web3App } from "./Web3App"
-import { ProgressCta, WalletHome } from "../.."
-import { defaultTokenBalances } from "../../data"
+import { ProgressCta } from "../../ProgressCta"
+import { WalletHome } from "../../WalletHome"
 import type { PhoneScreenProps } from "../../interfaces"
-import type { TokenBalance } from "../../Wallet/interfaces"
-import { useEthPrice } from "../../hooks"
+import type { TokenBalance } from "../../WalletHome/interfaces"
+import { defaultTokenBalances } from "../../constants"
+import { useEthPrice } from "../../../../hooks/useEthPrice"
 
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav

@@ -1,5 +1,4 @@
 import React from "react"
-
 import {
   Modal as ChakraModal,
   ModalOverlay,
