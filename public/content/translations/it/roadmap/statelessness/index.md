@@ -66,7 +66,7 @@ L'assenza di stato debole richiede modifiche a come i nodi di Ethereum verifican
 
 **Nell'assenza di stato debole, la proposta dei blocchi richiede l'accesso ai dati di stato completi, ma la verifica dei blocchi no**
 
-Perché ciò si verifichi, devono già essere stati implementati gli [alberi di Verkle](../verkle-trees) nei client di Ethereum. Gli alberi di Verkle sono strutture di dati sostitutive per memorizzare i dati di stato di Ethereum, che consentono a "testimoni" di dati di dimensioni ridotte e fisse, di essere passati tra i pari e utilizzati per verificare i blocchi, invece di verificarli rispetto ai database locali. Anche la [separazione tra propositori e costruttori](/roadmap/pbs/) è necessaria poiché consente ai costruttori di blocchi di essere nodi specializzati con hardware più potente, essendo coloro che necessitano di accedere ai dati di stato completi.
+Perché ciò si verifichi, devono già essere stati implementati gli [alberi di Verkle](/roadmap/verkle-trees) nei client di Ethereum. Gli alberi di Verkle sono strutture di dati sostitutive per memorizzare i dati di stato di Ethereum, che consentono a "testimoni" di dati di dimensioni ridotte e fisse, di essere passati tra i pari e utilizzati per verificare i blocchi, invece di verificarli rispetto ai database locali. Anche la [separazione tra propositori e costruttori](/roadmap/pbs/) è necessaria poiché consente ai costruttori di blocchi di essere nodi specializzati con hardware più potente, essendo coloro che necessitano di accedere ai dati di stato completi.
 
 <ExpandableCard title="Perché va bene affidarsi a meno propositori di blocchi?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
