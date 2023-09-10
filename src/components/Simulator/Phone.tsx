@@ -22,6 +22,7 @@ export const Phone: React.FC<IProps> = ({ children }) => (
     {/* Phone drop shadow */}
     <Box
       h={6}
+      mb={-6}
       w="full"
       borderRadius="100%"
       position="relative"
