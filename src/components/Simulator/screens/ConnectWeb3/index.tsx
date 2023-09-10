@@ -109,7 +109,8 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
                 <GatsbyImage image={getImage(nftImage)!} alt="NFT Image" />
                 <Flex
                   direction="column"
-                  fontSize="sm"
+                  fontSize={{ base: "xs", sm: "sm" }}
+                  textAlign="start"
                   alignItems="start"
                   gap={1}
                 >
