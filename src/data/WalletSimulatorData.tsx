@@ -1,5 +1,5 @@
 import React from "react"
-import { ListItem, Text, UnorderedList } from "@chakra-ui/react"
+import { ListItem, OrderedList, Text, UnorderedList } from "@chakra-ui/react"
 import Emoji from "../components/Emoji"
 import type { SimulatorData } from "../components/Simulator/types"
 import {
