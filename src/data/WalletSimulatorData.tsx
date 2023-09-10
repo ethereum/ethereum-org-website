@@ -350,6 +350,22 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
       {
+        header: "You can have a single login for most Ethereum based projects",
+        description: (
+          <>
+            <Text>
+              Assets stored on Ethereum can be accessed from any application,
+              adding portability to your accounts.
+            </Text>
+            <Text>
+              The same account address will also represent your identity on many
+              different Ethereum compatible blockchains such as Arbitrum,
+              Polygon or Optimism.
+            </Text>
+          </>
+        ),
+      },
+      {
         header:
           "No need to share any phone number, e-mail, or other identifying information",
         description: (
