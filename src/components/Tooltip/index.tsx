@@ -29,7 +29,10 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
             cursor="pointer"
             color="body.base"
             _hover={{
-              color: isMobile ? "primary.hover" : "primary.base",
+              color: "primary.base",
+            }}
+            _active={{
+              color: "primary.hover",
             }}
             _focusVisible={{
               outline: "none",
