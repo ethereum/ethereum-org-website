@@ -7,7 +7,7 @@ export const useEthPrice = (): number => {
   useEffect(() => {
     ;(async () => {
       try {
-        const data: { ethereum: { usd: number } } = await getData(
+        const data = await getData<{ ethereum: { usd: number } }>(
           "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
         )
         const {

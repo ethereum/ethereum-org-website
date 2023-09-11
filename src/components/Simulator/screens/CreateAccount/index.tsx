@@ -9,9 +9,6 @@ import { InitialWordDisplay } from "./InitialWordDisplay"
 import { InteractiveWordSelector } from "./InteractiveWordSelector"
 import { RecoveryPhraseNotice } from "./RecoveryPhraseNotice"
 import { WelcomeScreen } from "./WelcomeScreen"
-import { getImage } from "../../../../utils/image"
-import { graphql, useStaticQuery } from "gatsby"
-import { NFT } from "../../WalletHome/interfaces"
 
 export const CreateAccount: React.FC<PhoneScreenProps> = ({
   nav,

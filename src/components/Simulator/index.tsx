@@ -1,5 +1,6 @@
 import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 import React, { useEffect, useMemo, useState } from "react"
+import { navigate } from "gatsby"
 import { Explanation } from "./Explanation"
 import { PathButton } from "./PathButton"
 import { Phone } from "./Phone"
@@ -13,7 +14,6 @@ import type {
 import type { PathId, SimulatorData } from "./types"
 import { PATH_ID_QUERY_PARAM, SIMULATOR_ID } from "./constants"
 import { trackCustomEvent } from "../../utils/matomo"
-import { navigate } from "gatsby"
 import { clearUrlParams, getValidPathId } from "./utils"
 
 interface IProps extends Pick<FlexProps, "children"> {
