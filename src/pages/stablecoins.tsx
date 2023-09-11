@@ -5,8 +5,6 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   Flex,
-  Heading,
-  Text,
   Img,
   Icon,
   Grid,
@@ -33,6 +31,8 @@ import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 import { getData } from "../utils/cache"
 import { getImage } from "../utils/image"
@@ -76,13 +76,17 @@ const Page = (props: FlexProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
-    fontSize={{ base: "xl", m: "2xl" }}
+    fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
     {...props}
   />

@@ -7,13 +7,11 @@ import {
   Box,
   BoxProps,
   Flex,
-  Heading,
   HeadingProps,
   Img,
   ImgProps,
   List,
   ListItem,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react"
 import type { Context } from "../../../types"
@@ -26,6 +24,8 @@ import PageMetadata from "../../../components/PageMetadata"
 import Translation from "../../../components/Translation"
 import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
 import FeedbackCard from "../../../components/FeedbackCard"
+import Text from "../../../components/OldText"
+import OldHeading from "../../../components/OldHeading"
 
 // Utils
 import { getImage } from "../../../utils/image"
@@ -33,7 +33,7 @@ import { getImage } from "../../../utils/image"
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
 const ContentHeading = (props: HeadingProps) => (
-  <Heading lineHeight={1.4} {...props} />
+  <OldHeading lineHeight={1.4} {...props} />
 )
 
 const Image = (props: ImgProps & { image: IGatsbyImageData }) => {

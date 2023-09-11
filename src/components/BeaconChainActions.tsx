@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Flex, Heading } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
@@ -9,11 +9,12 @@ import CardList from "./CardList"
 import Card from "./Card"
 import ButtonLink from "./ButtonLink"
 import Translation from "./Translation"
+import OldHeading from "./OldHeading"
 
 import type { CardListItem } from "./CardList"
 
 const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize="2xl"
     fontWeight="bold"
@@ -21,7 +22,7 @@ const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     sx={{ a: { display: "none" } }}
   >
     {children}
-  </Heading>
+  </OldHeading>
 )
 
 export const DataLogo = graphql`

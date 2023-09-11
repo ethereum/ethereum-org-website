@@ -2,7 +2,6 @@ import React, { ReactNode } from "react"
 import {
   Box,
   Flex,
-  Text,
   Heading,
   BoxProps,
   LinkBox,
@@ -13,6 +12,7 @@ import {
 } from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
+import Text from "./OldText"
 import { BaseLink } from "./Link"
 
 const linkBoxFocusStyles: BoxProps = {

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Box, Center, ListItem, Text, UnorderedList } from "@chakra-ui/react"
+import { Center, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 import Link from "../Link"
 
@@ -46,7 +46,7 @@ export const ExternalLink: Story = {
 
 export const LinkList: Story = {
   render: () => (
-    <Box>
+    <Stack spacing="6">
       <Text>
         Text body normal. Ethereum is open access to digital money and
         data-friendly services for everyone – no matter your background or
@@ -64,6 +64,6 @@ export const LinkList: Story = {
           </ListItem>
         ))}
       </UnorderedList>
-    </Box>
+    </Stack>
   ),
 }
