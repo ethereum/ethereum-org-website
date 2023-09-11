@@ -1,6 +1,6 @@
 import { Box, Flex, Text } from "@chakra-ui/react"
 import React from "react"
-import { ETH_TRANSFER_FEE } from "./constants"
+import { ETH_TRANSFER_FEE } from "../../constants"
 
 interface IProps {
   chosenAmount: number

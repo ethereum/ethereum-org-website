@@ -13,7 +13,7 @@ export const TokenBalanceList: React.FC<IProps> = ({
   return (
     <Flex direction="column" w="full" gap={4} {...flexProps}>
       {tokenBalances.map((item) => (
-        <TokenBalanceItem item={item} />
+        <TokenBalanceItem key={item.name} item={item} />
       ))}
     </Flex>
   )

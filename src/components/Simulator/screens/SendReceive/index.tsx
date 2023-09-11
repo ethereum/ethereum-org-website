@@ -8,12 +8,12 @@ import { Success } from "./Success"
 import { ProgressCta } from "../../ProgressCta"
 import { WalletHome } from "../../WalletHome"
 import { PhoneScreenProps } from "../../interfaces"
+import { CONTACTS } from "./constants"
 import {
-  CONTACTS,
   ETH_TRANSFER_FEE,
   FALLBACK_ETH_PRICE,
   USD_RECEIVE_AMOUNT,
-} from "./constants"
+} from "../../constants"
 import { defaultTokenBalances } from "../../constants"
 import { useEthPrice } from "../../../../hooks/useEthPrice"
 import type { TokenBalance } from "../../WalletHome/interfaces"

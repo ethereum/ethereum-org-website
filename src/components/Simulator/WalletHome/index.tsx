@@ -1,23 +1,31 @@
 import { Flex } from "@chakra-ui/react"
-import React from "react"
+import React, { type Dispatch, type SetStateAction, useState } from "react"
 import { SendReceiveButtons } from "./SendReceiveButtons"
 import { TokenBalanceList } from "./TokenBalanceList"
 import { CategoryTabs } from "./CategoryTabs"
 import { WalletBalance } from "./WalletBalance"
-import { TokenBalance } from "./interfaces"
+import { NFT, TokenBalance } from "./interfaces"
 import { defaultTokenBalances } from "../constants"
 import type { SimulatorNav } from "../interfaces"
 import type { SendReceiveEnabled } from "./types"
+import { NFTList } from "./NFTList"
 
 interface IProps {
   nav?: SimulatorNav
   isEnabled?: SendReceiveEnabled
   tokenBalances?: Array<TokenBalance>
+  activeTabIndex?: number
+  setActiveTabIndex?: (i: number) => void
+  categoryTabState?: [number, Dispatch<SetStateAction<number>>]
+  nfts?: Array<NFT>
 }
 export const WalletHome: React.FC<IProps> = ({
   nav,
   isEnabled,
   tokenBalances,
+  activeTabIndex = 0,
+  setActiveTabIndex,
+  nfts = [],
 }) => {
   const data: Array<TokenBalance> = tokenBalances ?? defaultTokenBalances
   const totalAmounts = data.reduce(
@@ -53,8 +61,16 @@ export const WalletHome: React.FC<IProps> = ({
         w="full"
         bg="background.highlight"
       >
-        <CategoryTabs categories={["Crypto", "NFTs"]} />
-        <TokenBalanceList tokenBalances={data} />
+        <CategoryTabs
+          categories={["Crypto", "NFTs"]}
+          activeIndex={activeTabIndex}
+          setActiveIndex={setActiveTabIndex}
+        />
+        {activeTabIndex === 0 || !setActiveTabIndex ? (
+          <TokenBalanceList tokenBalances={data} />
+        ) : (
+          <NFTList nfts={nfts} />
+        )}
       </Flex>
     </Flex>
   )

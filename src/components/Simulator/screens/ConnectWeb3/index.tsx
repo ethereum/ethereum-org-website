@@ -1,7 +1,6 @@
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
-import React, { useMemo } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React, { useMemo, useState } from "react"
+import { GatsbyImage } from "gatsby-plugin-image"
 import {
   RiPriceTag2Line,
   RiAuctionLine,
@@ -16,40 +15,29 @@ import type { PhoneScreenProps } from "../../interfaces"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 import { defaultTokenBalances } from "../../constants"
 import { useEthPrice } from "../../../../hooks/useEthPrice"
+import { useNFT } from "../../WalletHome/hooks/useNFT"
+import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "../../constants"
 
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav
-  const { nftImage } = useStaticQuery(graphql`
-    {
-      nftImage: file(relativePath: { eq: "deep-panic.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 120
-            height: 120
-            layout: FIXED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-    }
-  `)
-
-  const ethPrice = useEthPrice()
+  const NFTs = useNFT()
+  const fetchedPrice = useEthPrice()
+  const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
     () =>
       defaultTokenBalances.map((token) =>
         token.ticker === "ETH"
           ? {
               ...token,
-              amount: 500 / ethPrice,
+              amount: USD_RECEIVE_AMOUNT / ethPrice,
               usdConversion: ethPrice,
             }
           : token
       ),
     [ethPrice]
   )
-
+  const [activeTabIndex, setActiveTabIndex] = useState(0)
+  const nfts = useNFT()
   const fadeInProps = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -106,7 +94,7 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
                 Your collection
               </Text>
               <Flex gap={2} mb={6}>
-                <GatsbyImage image={getImage(nftImage)!} alt="NFT Image" />
+                <GatsbyImage image={NFTs[0].image} alt="NFT Image" />
                 <Flex
                   direction="column"
                   fontSize={{ base: "xs", sm: "sm" }}
@@ -159,7 +147,12 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
           transition={{ duration: 0.5 }}
           style={{ height: "100%" }}
         >
-          <WalletHome tokenBalances={tokensWithEthBalance} />
+          <WalletHome
+            tokenBalances={tokensWithEthBalance}
+            activeTabIndex={activeTabIndex}
+            setActiveTabIndex={setActiveTabIndex}
+            nfts={nfts}
+          />
         </motion.div>
       )}
     </>

@@ -9,6 +9,9 @@ import { InitialWordDisplay } from "./InitialWordDisplay"
 import { InteractiveWordSelector } from "./InteractiveWordSelector"
 import { RecoveryPhraseNotice } from "./RecoveryPhraseNotice"
 import { WelcomeScreen } from "./WelcomeScreen"
+import { getImage } from "../../../../utils/image"
+import { graphql, useStaticQuery } from "gatsby"
+import { NFT } from "../../WalletHome/interfaces"
 
 export const CreateAccount: React.FC<PhoneScreenProps> = ({
   nav,
@@ -16,9 +19,11 @@ export const CreateAccount: React.FC<PhoneScreenProps> = ({
 }) => {
   const { progressStepper, step } = nav
   const [words, setWords] = useState<Array<string>>(generateInvalidSafeSeed())
+  const [categoryIndex, setCategoryIndex] = useState(0)
   const generateNewWords = () => {
     setWords(generateInvalidSafeSeed())
   }
+
   return (
     <>
       {[0, 1].includes(step) && <HomeScreen nav={nav} />}
@@ -35,7 +40,12 @@ export const CreateAccount: React.FC<PhoneScreenProps> = ({
       {[6].includes(step) && (
         <InteractiveWordSelector nav={nav} words={words} ctaLabel={ctaLabel} />
       )}
-      {[7].includes(step) && <WalletHome />}
+      {[7].includes(step) && (
+        <WalletHome
+          activeTabIndex={categoryIndex}
+          setActiveTabIndex={setCategoryIndex}
+        />
+      )}
       {[0, 1, 2, 4, 5].includes(step) && (
         <ProgressCta
           isAnimated={step === 0}

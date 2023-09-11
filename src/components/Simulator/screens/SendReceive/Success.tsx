@@ -13,6 +13,7 @@ interface IProps {
 export const Success: React.FC<IProps> = ({ tokenBalances }) => {
   const [txPending, setTxPending] = useState(true)
   const [showWallet, setShowWallet] = useState(false)
+  const [categoryIndex, setCategoryIndex] = useState(0)
 
   // Show spinner for defined number of milliseconds, switching "loading" state to false when complete
   const SPINNER_DURATION = 1000
@@ -40,7 +41,11 @@ export const Success: React.FC<IProps> = ({ tokenBalances }) => {
     <AnimatePresence>
       {showWallet ? (
         <motion.div animate={{ opacity: [0, 1] }} key="wallet-home">
-          <WalletHome tokenBalances={tokenBalances} />
+          <WalletHome
+            tokenBalances={tokenBalances}
+            activeTabIndex={categoryIndex}
+            setActiveTabIndex={setCategoryIndex}
+          />
         </motion.div>
       ) : (
         <Grid
