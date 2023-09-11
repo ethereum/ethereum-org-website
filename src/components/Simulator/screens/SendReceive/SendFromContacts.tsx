@@ -5,71 +5,86 @@ import { CategoryTabs } from "../../WalletHome/CategoryTabs"
 import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
 import type { SimulatorNavProps } from "../../interfaces"
 import { CONTACTS } from "./constants"
+import { Contact } from "../../WalletHome/interfaces"
 
-export const SendFromContacts: React.FC<SimulatorNavProps> = ({ nav }) => (
-  <>
-    <Box py={8} px={6}>
-      <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={8}>
-        Choose recipient
-      </Text>
-      <Button
-        variant="outline"
-        isDisabled
-        leftIcon={<Icon as={PiMagnifyingGlass} />}
-        rightIcon={<Icon as={QrCodeIcon} />}
-        _disabled={{ color: "body.medium" }}
-        py={4}
-        pointerEvents="none"
-        fontSize="sm"
-        w="full"
-      >
-        <Text as="span" me="auto">
-          Address or contacts
+interface IProps extends SimulatorNavProps {
+  setRecipient: (name: string) => void
+}
+export const SendFromContacts: React.FC<IProps> = ({ nav, setRecipient }) => {
+  const handleSelection = (name: string) => {
+    setRecipient(name)
+    nav.progressStepper()
+  }
+  return (
+    <>
+      <Box py={8} px={6}>
+        <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={8}>
+          Choose recipient
         </Text>
-      </Button>
-    </Box>
-    <Box py={8} px={6} bg="background.highlight" h="full">
-      <CategoryTabs categories={["My contacts", "Recent"]} />
-      <Flex direction="column" gap={4}>
-        {CONTACTS.map(({ name, lastAction }, i) => (
-          <Button
-            key={name + i}
-            leftIcon={
-              <Icon as={EthTokenIconGrayscale} fill="black" w="30px" h="30px" />
-            }
-            isDisabled={i > 0}
-            gap={2}
-            _disabled={{
-              color: "body.base",
-              bg: "background.base",
-              pointerEvents: "none",
-            }}
-            data-group
-            onClick={nav.progressStepper}
-          >
-            <Box as="span" flex={1}>
-              <Text
-                as="span"
-                display="block"
-                fontWeight="bold"
-                textAlign="start"
-              >
-                {name}
-              </Text>
-              <Text
-                as="span"
-                display="block"
-                color="body.light"
-                textAlign="start"
-                _groupDisabled={{ color: "body.medium" }}
-                fontSize="sm"
-              >
-                {lastAction}
-              </Text>
-            </Box>
-          </Button>
-        ))}
-      </Flex>
-    </Box>
-  </>
-)
+        <Button
+          variant="outline"
+          isDisabled
+          leftIcon={<Icon as={PiMagnifyingGlass} />}
+          rightIcon={<Icon as={QrCodeIcon} />}
+          _disabled={{ color: "body.medium" }}
+          py={4}
+          pointerEvents="none"
+          fontSize="sm"
+          w="full"
+        >
+          <Text as="span" me="auto">
+            Address or contacts
+          </Text>
+        </Button>
+      </Box>
+      <Box py={8} px={6} bg="background.highlight" h="full">
+        <CategoryTabs categories={["My contacts", "Recent"]} activeIndex={1} />
+        <Flex direction="column" gap={4}>
+          {CONTACTS.map(({ name, lastAction }, i) => (
+            <Button
+              key={name + i}
+              leftIcon={
+                <Icon
+                  as={EthTokenIconGrayscale}
+                  fill="black"
+                  w="30px"
+                  h="30px"
+                />
+              }
+              isDisabled={i > 0}
+              gap={2}
+              _disabled={{
+                color: "body.base",
+                bg: "background.base",
+                pointerEvents: "none",
+              }}
+              data-group
+              onClick={() => handleSelection(name)}
+            >
+              <Box as="span" flex={1}>
+                <Text
+                  as="span"
+                  display="block"
+                  fontWeight="bold"
+                  textAlign="start"
+                >
+                  {name}
+                </Text>
+                <Text
+                  as="span"
+                  display="block"
+                  color="body.light"
+                  textAlign="start"
+                  _groupDisabled={{ color: "body.medium" }}
+                  fontSize="sm"
+                >
+                  {lastAction}
+                </Text>
+              </Box>
+            </Button>
+          ))}
+        </Flex>
+      </Box>
+    </>
+  )
+}

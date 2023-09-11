@@ -8,7 +8,7 @@ export const Template: React.FC<FlexProps> = (props) => (
     w="full"
     justify="center"
     direction={{ base: "column", md: "row" }}
-    gap={8}
+    gap={{ base: 6, md: 8 }}
     {...props}
   />
 )

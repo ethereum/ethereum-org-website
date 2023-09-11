@@ -1,6 +1,5 @@
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
-import { MdChevronRight } from "react-icons/md"
 import { EthTokenIcon } from "../../icons"
 
 interface IProps {
@@ -90,8 +89,7 @@ export const SendEther: React.FC<IProps> = ({
         <Flex direction="column" alignItems="end">
           {/* Token selector pill */}
           <Flex
-            ps={2}
-            pe={1}
+            px={2}
             py={1}
             mb={4}
             borderRadius="full"
@@ -102,12 +100,6 @@ export const SendEther: React.FC<IProps> = ({
             <Text fontWeight="bold" m={0} color="body.base">
               ETH
             </Text>
-            <Icon
-              as={MdChevronRight}
-              fontSize="xl"
-              transform="scale(1.125)"
-              ms={0.5}
-            />
           </Flex>
           {/* Balances */}
           <Text fontWeight="bold" m={0} lineHeight={1}>

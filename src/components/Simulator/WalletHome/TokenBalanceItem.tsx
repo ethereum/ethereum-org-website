@@ -7,11 +7,13 @@ interface IProps extends FlexProps {
 }
 export const TokenBalanceItem: React.FC<IProps> = ({ item, ...flexProps }) => {
   const { name, ticker, amount, usdConversion, Icon } = item
+  const usdAmount = amount * usdConversion
   const usdValue = Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
     notation: "compact",
-  }).format(amount * usdConversion)
+    maximumFractionDigits: usdAmount % 1 === 0 ? 0 : 2,
+  }).format(usdAmount)
   const tokenAmount = Intl.NumberFormat("en", {
     maximumFractionDigits: 5,
   }).format(amount)

@@ -23,6 +23,7 @@ export const WalletBalance: React.FC<IProps> = ({
         style: "currency",
         currency: "USD",
         notation: "compact",
+        maximumFractionDigits: usdAmount % 1 === 0 ? 0 : 2,
       }).format(usdAmount)}
     </Text>
     <Flex justify="center" mb={4}>

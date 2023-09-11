@@ -47,8 +47,6 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
 
   // Remove URL search param if invalid pathId
   useEffect(() => {
-    // Reset step counter on pathId change
-    setStep(0)
     if (!pathId) clearUrlParams(location)
   }, [pathId])
 
@@ -81,6 +79,8 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
     params.set(PATH_ID_QUERY_PARAM, pathId)
     const url = `?${params.toString()}#${SIMULATOR_ID}`
     navigate(url, { replace: true })
+    // Reset step counter on pathId change
+    setStep(0)
   }
 
   // Navigation object passed to child components

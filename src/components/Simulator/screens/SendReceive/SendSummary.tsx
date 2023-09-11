@@ -1,11 +1,18 @@
 import { Box, Flex, Text } from "@chakra-ui/react"
 import React from "react"
+import { ETH_TRANSFER_FEE } from "./constants"
 
 interface IProps {
   chosenAmount: number
   ethPrice: number
+  recipient: string
+  ethAvailable: number
 }
-export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
+export const SendSummary: React.FC<IProps> = ({
+  chosenAmount,
+  ethPrice,
+  recipient,
+}) => {
   const formatEth = (amount: number): string =>
     new Intl.NumberFormat("en", { maximumFractionDigits: 5 }).format(amount)
 
@@ -13,10 +20,10 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
     style: "currency",
     currency: "USD",
     notation: "compact",
-    maximumFractionDigits: 0,
+    maximumFractionDigits: chosenAmount % 1 === 0 ? 0 : 2,
   }).format(chosenAmount)
 
-  const USD_FEE = 0.69 as const
+  const usdFee = ETH_TRANSFER_FEE * ethPrice
   return (
     <>
       {/* Top section */}
@@ -61,7 +68,7 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
       >
         <Box>
           <Text>To</Text>
-          <Text fontWeight="bold">Jacob</Text>
+          <Text fontWeight="bold">{recipient}</Text>
         </Box>
         <Box>
           <Text>Arrival time</Text>
@@ -71,11 +78,11 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
           <Text>Nework fees</Text>
           <Text m={0} fontWeight="bold">
             {Intl.NumberFormat("en", {
-              maximumFractionDigits: 2,
+              maximumFractionDigits: usdFee % 1 === 0 ? 0 : 2,
               style: "currency",
               currency: "USD",
               notation: "compact",
-            }).format(USD_FEE)}
+            }).format(usdFee)}
             <Text
               as="span"
               color="body.medium"
@@ -86,7 +93,7 @@ export const SendSummary: React.FC<IProps> = ({ chosenAmount, ethPrice }) => {
               (
               {Intl.NumberFormat("en", {
                 maximumFractionDigits: 6,
-              }).format(USD_FEE / ethPrice)}{" "}
+              }).format(ETH_TRANSFER_FEE)}{" "}
               ETH)
             </Text>
           </Text>

@@ -12,6 +12,7 @@ import type { PathId } from "./types"
 import { MoreInfoPopover } from "./MoreInfoPopover"
 import { PathButton } from "./PathButton"
 import ButtonLink from "../ButtonLink"
+import Link from "../Link"
 import { motion } from "framer-motion"
 import { shareOnTwitter } from "./utils"
 import { FaTwitter } from "react-icons/fa"
@@ -54,7 +55,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
         leftIcon={<MdArrowBack size="18px" />}
         sx={{ paddingInlineStart: 0 }}
         mt={{ base: -6, md: 0 }}
-        mb={{ base: 6, md: 8 }}
+        mb={{ base: 2, md: 8 }}
         onClick={regressStepper}
         pointerEvents={step === 0 ? "none" : "all"}
         variants={backButtonVariants}
@@ -117,13 +118,14 @@ export const Explanation: React.FC<ExplanationProps> = ({
               handleClick={() => openPath(nextPathId)}
             />
           )}
-          <ButtonLink
+          {/* TODO: Decide on button/link approach and remove unused */}
+          {/* <ButtonLink
             variant={finalCtaLink.isPrimary ? "solid" : "outline"}
             href={finalCtaLink.href}
             onClick={logFinalCta}
           >
             {finalCtaLink.label}
-          </ButtonLink>
+          </ButtonLink> */}
           <Flex alignItems="center" gap={6}>
             <Divider borderColor="body.medium" />
             <Text textTransform="uppercase" m={0} color="body.medium">
@@ -131,6 +133,9 @@ export const Explanation: React.FC<ExplanationProps> = ({
             </Text>
             <Divider borderColor="body.medium" />
           </Flex>
+          <Link href={finalCtaLink.href} isExternal onClick={logFinalCta}>
+            {finalCtaLink.label}
+          </Link>
           <Button
             variant="outline-color"
             leftIcon={<FaTwitter />}

@@ -18,6 +18,8 @@ import {
   SEND_RECEIVE,
 } from "../components/Simulator/constants"
 import Link from "../components/Link"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import { CONTACTS } from "../components/Simulator/screens/SendReceive/constants"
 
 export const walletOnboardingSimData: SimulatorData = {
   [CREATE_ACCOUNT]: {
@@ -209,19 +211,20 @@ export const walletOnboardingSimData: SimulatorData = {
     Screen: SendReceive,
     explanations: [
       {
-        header: "Send or receive digital assets from anywhere",
+        header: "Receive and send digital assets from anywhere",
         description: (
           <>
             <Text>
-              Your wallet helps you manage your funds, NFTs, Web3 identity and
-              more. Here we'll go over how to send and receive some tokens on
-              Ethereum.
+              Your wallet helps you manage your funds,{" "}
+              <GlossaryTooltip termKey="nft">NFTs</GlossaryTooltip>,{" "}
+              <GlossaryTooltip termKey="web3">Web3</GlossaryTooltip> identity
+              and more. Here we'll go over how to receive and send some tokens
+              on Ethereum.
             </Text>
             <Text>
-              New accounts are of course empty, so let's first look at how to
-              receive some ETH to a new address.
+              Let's first look at how to receive some ETH to a new address.
             </Text>
-            <Text>Click the button to get your address.</Text>
+            <Text>Click "Receive" to see and share your address.</Text>
           </>
         ),
       },
@@ -246,7 +249,7 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
       {
-        header: "You received funds! Now let's send some",
+        header: "A family member sent you ETH! Let's send some back",
         description: (
           <>
             <Text>
@@ -259,8 +262,7 @@ export const walletOnboardingSimData: SimulatorData = {
               address—receiving is free. <Emoji text="😁" />
             </Text>
             <Text>
-              Let's try sending some funds to a friend by clicking the "Send"
-              button.
+              Let's try sending some funds back by clicking the "Send" button.
             </Text>
           </>
         ),
@@ -292,7 +294,7 @@ export const walletOnboardingSimData: SimulatorData = {
             <Text>You can send tokens anywhere globally at any time.</Text>
             <Text>
               As you use your wallet, you can save users as contacts for
-              repeated use. Let's send some funds to Jacob.
+              repeated use. Let's send some funds back to {CONTACTS[0].name}.
             </Text>
           </>
         ),
@@ -313,19 +315,16 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
       {
-        header: "Thats it! You know the basics of transferring tokens 🎉",
+        header: "Peer-to-peer. Global. Always available. 🎉",
         description: (
-          <>
-            <Text>Peer-to-peer. Global. Always available.</Text>
-            <Text>
-              Start the next lesson to learn how to use your wallet to log into
-              Web3 applications.
-            </Text>
-          </>
+          <Text>
+            Start the next lesson to learn how to use your wallet to log into
+            Web3 applications.
+          </Text>
         ),
       },
     ],
-    ctaLabels: ["", "Share address", "", "Next", "", "Send now"],
+    ctaLabels: ["", "Share address", "", "Select recipient", "", "Send now"],
     finalCtaLink: {
       label: "Download a real wallet",
       href: "/wallets/find-wallet/",

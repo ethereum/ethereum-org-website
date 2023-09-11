@@ -10,12 +10,14 @@ interface IProps extends SimulatorNavProps {
   defaultTokenBalances: Array<TokenBalance>
   ethReceiveAmount: number
   ethPrice: number
+  sender?: string
 }
 export const ReceivedEther: React.FC<IProps> = ({
   nav,
   defaultTokenBalances,
   ethReceiveAmount,
   ethPrice,
+  sender,
 }) => {
   const [received, setReceived] = useState(false)
   const [hideToast, setHideToast] = useState(false)
@@ -95,7 +97,7 @@ export const ReceivedEther: React.FC<IProps> = ({
           >
             <Icon as={MdInfo} fontSize="xl" />
             <Text m={0} fontWeight="bold">
-              You received {displayEth} ETH!
+              You received {displayEth} ETH{sender ? ` from ${sender}` : ""}!
             </Text>
           </Flex>
         )}

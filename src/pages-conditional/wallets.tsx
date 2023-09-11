@@ -513,7 +513,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-wallets", "learn-quizzes", "common"] }
+        ns: { in: ["page-wallets", "learn-quizzes", "common", "glossary"] }
       }
     ) {
       edges {
