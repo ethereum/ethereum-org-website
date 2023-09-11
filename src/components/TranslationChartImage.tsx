@@ -10,14 +10,14 @@ const TranslationChartImage: React.FC<IProps> = () => {
   const data = useStaticQuery(graphql`
     {
       pageviewsLight: file(
-        relativePath: { eq: "translation-program/pageviews-light.png" }
+        relativePath: { eq: "translation-program/pageviews_light.png" }
       ) {
         childImageSharp {
           gatsbyImageData(height: 500, placeholder: BLURRED, quality: 100)
         }
       }
       pageviewsDark: file(
-        relativePath: { eq: "translation-program/pageviews-dark.png" }
+        relativePath: { eq: "translation-program/pageviews_dark.png" }
       ) {
         childImageSharp {
           gatsbyImageData(height: 500, placeholder: BLURRED, quality: 100)
