@@ -19,7 +19,6 @@ import {
   Heading,
   HeadingProps,
   SimpleGrid,
-  Text,
   chakra,
   useToken,
 } from "@chakra-ui/react"
@@ -40,6 +39,8 @@ import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 
 import { getImage, getSrc } from "../utils/image"
@@ -188,7 +189,7 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
 )
 
 const StyledH2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     fontSize="2xl"
     lineHeight="22px"
     letterSpacing={0}
@@ -209,7 +210,7 @@ const H2 = (props: HeadingProps) => (
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     fontWeight="semibold"

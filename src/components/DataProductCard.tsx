@@ -6,11 +6,12 @@ import {
   Flex,
   Heading,
   Image,
-  Text,
   LinkOverlay,
   LinkBox,
   useColorModeValue,
 } from "@chakra-ui/react"
+
+import Text from "./OldText"
 
 export interface DataRow {
   logo: IGatsbyImageData

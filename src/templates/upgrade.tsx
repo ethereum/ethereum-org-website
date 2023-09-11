@@ -13,7 +13,6 @@ import {
   Divider as ChakraDivider,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   List,
   ListItem,
@@ -52,6 +51,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 import {
   MobileButton,
   MobileButtonDropdown,
@@ -150,7 +150,7 @@ const Pre = chakra("pre", {
 })
 
 const H1 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize={{ base: "2.5rem", lg: "5xl" }}
     fontWeight="bold"
@@ -162,7 +162,7 @@ const H1 = (props: ChildOnlyProp) => (
 )
 
 const MDXH1 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontWeight="bold"
     lineHeight={1.4}
@@ -172,7 +172,7 @@ const MDXH1 = (props: HeadingProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     fontSize="2rem"
     fontWeight="bold"
     lineHeight={1.4}
@@ -182,7 +182,7 @@ const H2 = (props: HeadingProps) => (
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontWeight="bold"
     lineHeight={1.4}
@@ -192,7 +192,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize="xl"
     lineHeight={1.4}
@@ -240,7 +240,7 @@ const components = {
 }
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize="2.5rem"
     fontWeight="bold"

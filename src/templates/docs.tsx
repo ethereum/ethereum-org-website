@@ -43,6 +43,7 @@ import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 import RollupProductDevDoc from "../components/RollupProductDevDoc"
 import YouTube from "../components/YouTube"
 import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -85,7 +86,7 @@ const H1 = (props: HeadingProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     {...baseHeadingStyle}
     fontSize="2xl"
     lineHeight={{ base: 1.2, md: 1.4 }}
@@ -103,7 +104,7 @@ const baseSubHeadingStyles: HeadingProps = {
 }
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     {...baseSubHeadingStyles}
     as="h3"
     fontSize={{ md: "2xl" }}
@@ -113,7 +114,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     {...baseSubHeadingStyles}
     as="h4"
     fontSize={{ md: "xl" }}

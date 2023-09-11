@@ -1,11 +1,13 @@
 import React from "react"
-import { Box, Center, chakra, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Center, chakra, Flex } from "@chakra-ui/react"
 
 import CardList from "../CardList"
 import InlineLink from "../Link"
 import Emoji from "../Emoji"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
 
 import { ChildOnlyProp } from "../../types"
 import { useEthExchanges } from "./use-eth-exchanges"
@@ -92,13 +94,13 @@ const EthExchanges = () => {
 
   return (
     <Flex flexDir="column" align="center" w="full">
-      <Heading
+      <OldHeading
         fontSize={{ base: "2xl", md: "2rem" }}
         fontWeight={600}
         lineHeight={1.4}
       >
         <Translation id="page-get-eth-exchanges-header" />
-      </Heading>
+      </OldHeading>
       <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">
         <Translation id="page-get-eth-exchanges-intro" />
       </Text>
@@ -131,14 +133,14 @@ const EthExchanges = () => {
         <>
           <ResultsContainer>
             <ListContainer>
-              <Heading
+              <OldHeading
                 as="h3"
                 fontSize={{ base: "xl", md: "2xl" }}
                 fontWeight={600}
                 lineHeight={1.4}
               >
                 <Translation id="page-get-eth-exchanges-header-exchanges" />
-              </Heading>
+              </OldHeading>
               {hasExchangeResults && (
                 <SuccessContainer>
                   <Text>
@@ -154,14 +156,14 @@ const EthExchanges = () => {
               )}
             </ListContainer>
             <ListContainer>
-              <Heading
+              <OldHeading
                 as="h3"
                 fontSize={{ base: "xl", md: "2xl" }}
                 fontWeight={600}
                 lineHeight={1.4}
               >
                 <Translation id="page-get-eth-exchanges-header-wallets" />
-              </Heading>
+              </OldHeading>
 
               {hasWalletResults && (
                 <SuccessContainer>

@@ -2,12 +2,14 @@ import { Alert } from "./Alert"
 import { Avatar } from "./Avatar"
 import { Badge } from "./Badge"
 import { Button } from "./Button"
+import { Heading } from "./Heading"
 import { Link } from "./Link"
 import { Tag } from "./Tag"
 import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
 import { Progress } from "./Progress"
 import { Tabs } from "./Tabs"
+import { Text } from "./Text"
 import { Table } from "./Table"
 import { Radio } from "./Radio"
 import { Select } from "./Select"
@@ -41,7 +43,7 @@ export default {
   Drawer: drawerDefaultTheme,
   Form: formDefaultTheme,
   FormLabel: formLabelDefaultTheme,
-  Heading: headingDefaultTheme,
+  Heading,
   Input,
   Link,
   Menu: menuDefaultTheme,
@@ -54,4 +56,5 @@ export default {
   Table,
   Tabs,
   Tag,
+  Text,
 }

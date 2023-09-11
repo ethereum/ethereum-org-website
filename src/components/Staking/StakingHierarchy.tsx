@@ -175,7 +175,6 @@ const Header = ({ children }: ChildOnlyType) => (
 
 const HeadingEl = ({ children }: ChildOnlyType) => (
   <Heading
-    m={0}
     color={$colorVar.reference}
     fontSize="2rem"
     fontWeight={600}

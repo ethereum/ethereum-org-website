@@ -14,6 +14,7 @@ const ns = [
   "common",
   "glossary",
   "page-about",
+  "page-index",
   "page-upgrades",
   "page-developers-index",
 ]

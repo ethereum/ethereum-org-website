@@ -1,5 +1,7 @@
 import { defineStyleConfig } from "@chakra-ui/react"
+import components from "."
 import { defineMergeStyles, linkDefaultTheme } from "./components.utils"
+import { Text } from "./Text"
 
 export const Link = defineStyleConfig({
   baseStyle: defineMergeStyles(linkDefaultTheme.baseStyle, {
@@ -22,4 +24,5 @@ export const Link = defineStyleConfig({
       },
     },
   }),
+  sizes: Text.sizes,
 })

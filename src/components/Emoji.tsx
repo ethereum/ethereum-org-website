@@ -18,6 +18,7 @@ const Emoji = (props: IProps) => {
       options={{ protocol: IS_DEV ? "http" : "https" }}
       svg
       display="inline-block"
+      lineHeight="none"
       sx={{
         "& > img": {
           margin: "0 !important",

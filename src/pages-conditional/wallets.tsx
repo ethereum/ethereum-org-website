@@ -1,13 +1,5 @@
 import React from "react"
-import {
-  Center,
-  Heading,
-  Box,
-  Flex,
-  BoxProps,
-  Text,
-  Img,
-} from "@chakra-ui/react"
+import { Center, Box, Flex, BoxProps, Img } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
@@ -23,6 +15,8 @@ import HorizontalCard, {
 import CardList from "../components/CardList"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 import { StyledCard } from "../pages/get-eth"
 
 import { getImage, getSrc } from "../utils/image"
@@ -76,7 +70,11 @@ const ChecklistItem = (props: HorizontalCardProps) => (
 )
 
 const H2 = (props: ChildOnlyProp) => (
-  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const CalloutCardContainer = (props: ChildOnlyProp) => (

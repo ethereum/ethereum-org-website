@@ -7,7 +7,6 @@ import {
   Icon,
   LinkBox,
   LinkOverlay,
-  Text,
 } from "@chakra-ui/react"
 import { MdArrowForward } from "react-icons/md"
 import ButtonLink from "../ButtonLink"
@@ -15,6 +14,8 @@ import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
 import InlineLink, { BaseLink } from "../Link"
 import Translation from "../Translation"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
 import {
   AccordionCustomItem,
   LeftColumnPanel,
@@ -28,7 +29,7 @@ export type ChildOnlyType = {
 }
 
 const SectionTitle = (props: ChildOnlyType) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize="1.25rem"
     fontWeight={700}
@@ -91,7 +92,7 @@ const StepBox = (
 )
 
 const H4 = (props: ChildOnlyType) => (
-  <Heading fontSize="1.25rem" fontWeight={700} mt={0} mb={4} {...props} />
+  <Heading fontSize="1.25rem" fontWeight={700} mb={4} {...props} />
 )
 
 export interface IProps {}

@@ -6,12 +6,12 @@ import {
   LinkBox,
   LinkOverlay,
   Spacer,
-  Text,
 } from "@chakra-ui/react"
 
 import { BaseLink } from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
