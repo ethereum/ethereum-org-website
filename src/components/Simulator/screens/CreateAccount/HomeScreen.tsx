@@ -1,8 +1,9 @@
 import React from "react"
-import { Grid, Icon, GridProps, Box } from "@chakra-ui/react"
+import { Grid, Icon, GridProps, Box, useColorModeValue } from "@chakra-ui/react"
 import { MdArrowDownward } from "react-icons/md"
 import type { SimulatorNavProps } from "../../interfaces"
 import { EthGlyphIcon } from "../../icons"
+import { AnimatePresence, motion } from "framer-motion"
 
 interface IProps extends GridProps, SimulatorNavProps {}
 export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
@@ -31,55 +32,52 @@ export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
         .map((_, i) => (
           <Box key={i} {...sharedIconStyles} bg="body.light" />
         ))}
-      {step === 1 ? (
-        <Grid
-          key="download"
-          {...sharedIconStyles}
-          onClick={nav.progressStepper}
-          cursor="pointer"
-          as="button"
-          transition={`
-            background 0.8s ease-in-out,
-            border-color 0.8s ease-in-out,
-            box-shadow 0.8s ease-in-out
-          `}
-          bg="body.base"
-          borderColor="body.base"
-          boxShadow="0 0 7px 0 #000000C0"
-          _hover={{
-            outline: "2px solid var(--eth-colors-primary-hover)",
-            outlineOffset: "2px",
-          }}
-        >
-          <Icon
-            as={EthGlyphIcon}
-            color="background.base"
-            fontSize={{ base: "2xl", sm: "3xl" }}
-          />
-        </Grid>
-      ) : (
-        <Grid
-          key="wallet-app"
-          {...sharedIconStyles}
-          as="button"
-          bg="background.base"
-          borderStyle="dashed"
-          borderColor="primary.hover"
-          onClick={nav.progressStepper}
-          cursor="pointer"
-          _hover={{
-            borderColor: "primary.base",
-          }}
-          data-group
-        >
-          <Icon
-            as={MdArrowDownward}
-            color="primary.hover"
-            _groupHover={{ color: "primary.base" }}
-            fontSize={{ base: "2xl", sm: "3xl" }}
-          />
-        </Grid>
-      )}
+      <AnimatePresence>
+        {step === 1 ? (
+          <Grid
+            as={motion.button}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            {...sharedIconStyles}
+            onClick={nav.progressStepper}
+            transitionDuration="0.3s"
+            bg="body.base"
+            borderColor="body.base"
+            boxShadow={useColorModeValue(
+              "0 0 7px 0 var(--eth-colors-blackAlpha-800)",
+              "0 0 7px 0 var(--eth-colors-whiteAlpha-800)"
+            )}
+            _hover={{
+              outline: "2px solid var(--eth-colors-primary-hover)",
+              outlineOffset: "2px",
+            }}
+          >
+            <Icon
+              as={EthGlyphIcon}
+              color="background.base"
+              fontSize={{ base: "2xl", sm: "3xl" }}
+            />
+          </Grid>
+        ) : (
+          <Grid
+            as={motion.div}
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transitionDuration="0.2s"
+            {...sharedIconStyles}
+            bg="background.base"
+            borderStyle="dashed"
+            borderColor="disabled"
+          >
+            <Icon
+              as={MdArrowDownward}
+              color="disabled"
+              fontSize={{ base: "2xl", sm: "3xl" }}
+            />
+          </Grid>
+        )}
+      </AnimatePresence>
     </Grid>
   )
 }

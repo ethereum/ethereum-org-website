@@ -29,6 +29,7 @@ import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
 import { Simulator } from "../components/Simulator"
 import { walletOnboardingSimData } from "../data/WalletSimulatorData"
+import { SIMULATOR_ID } from "../components/Simulator/constants"
 
 const GrayContainer = (props: BoxProps) => (
   <Box
@@ -197,6 +198,15 @@ const WalletsPage = ({
           eventName: "find wallet",
         },
       },
+      {
+        to: `#${SIMULATOR_ID}`,
+        content: "Interactive tutorial",
+        matomo: {
+          eventCategory: "wallet hero buttons",
+          eventAction: "click",
+          eventName: "interactive tutorial",
+        },
+      },
     ],
   }
 
@@ -315,7 +325,7 @@ const WalletsPage = ({
               color="body.medium"
               mb={2}
             >
-              Interactive explainer
+              Interactive tutorial
             </Text>
             <Text
               fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}

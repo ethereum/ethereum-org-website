@@ -21,18 +21,18 @@ interface IProps extends Pick<FlexProps, "children"> {
   location: Location
 }
 export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
+  // Track step
+  const [step, setStep] = useState(0) // 0-indexed to use as array index
+
   // Track pathID
   const params = new URLSearchParams(location.search)
   const pathIdString = params.get(PATH_ID_QUERY_PARAM)
   const pathId = getValidPathId(pathIdString)
   const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
+  const totalSteps: number = simulator ? simulator.explanations.length : 0
 
   // If pathId present, modal is open, else closed
   const isOpen = !!pathId
-
-  // Track step
-  const [step, setStep] = useState(0) // 0-indexed to use as array index
-  const totalSteps: number = simulator ? simulator.explanations.length : 0
 
   // When simulator closed: log event, clear URL params and close modal
   const onClose = (): void => {
@@ -47,6 +47,8 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
 
   // Remove URL search param if invalid pathId
   useEffect(() => {
+    // Reset step counter on pathId change
+    setStep(0)
     if (!pathId) clearUrlParams(location)
   }, [pathId])
 
@@ -74,8 +76,6 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
   }
 
   const openPath = (pathId: PathId): void => {
-    // Reset step count
-    setStep(0)
     // Set new pathId in navigation
     const params = new URLSearchParams()
     params.set(PATH_ID_QUERY_PARAM, pathId)

@@ -101,9 +101,8 @@ const PageHero: React.FC<IProps> = ({
               {buttons.map((button, idx) => {
                 if (isButtonLink(button)) {
                   return (
-                    <WrapItem>
+                    <WrapItem key={idx}>
                       <ButtonLink
-                        key={idx}
                         variant={button.variant}
                         to={button.to}
                         onClick={() =>

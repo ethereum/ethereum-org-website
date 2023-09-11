@@ -73,7 +73,9 @@ export const GeneratingKeys: React.FC<IProps> = ({
         )}
 
         <Text textAlign="center" px={{ base: 4, md: 8 }}>
-          {loading ? "Generating your recovery phrase" : "Account created"}
+          {loading
+            ? "Generating example recovery phrase"
+            : "Example account created"}
         </Text>
         {complete && (
           <motion.div

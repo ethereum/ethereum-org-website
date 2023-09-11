@@ -26,7 +26,7 @@ export const walletOnboardingSimData: SimulatorData = {
     Screen: CreateAccount,
     explanations: [
       {
-        header: "Wallets are used to interact with Ethereum",
+        header: "Begin your journey by downloading a wallet",
         description: (
           <>
             <Text>
@@ -53,7 +53,7 @@ export const walletOnboardingSimData: SimulatorData = {
             </Text>
             <Text>
               Wallets provide an easy way to create an Ethereum account, and
-              then interact with Ethereum and its applications.
+              then use Ethereum and its applications.
             </Text>
             <Text>Go ahead and open your new wallet app.</Text>
           </>
@@ -91,7 +91,7 @@ export const walletOnboardingSimData: SimulatorData = {
               accounts.
             </Text>
             <Text>
-              Read notice and click "I understand" to see and backup your
+              Read carefully and click "I understand" to see and backup your
               recovery phrase.
             </Text>
           </>
@@ -106,7 +106,7 @@ export const walletOnboardingSimData: SimulatorData = {
             </Text>
             <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
               <ListItem>
-                <Emoji text="🔐" me={2} /> Consider saving in a password manager
+                <Emoji text="✅" me={2} /> Consider saving in a password manager
               </ListItem>
             </UnorderedList>
             <Text fontWeight="bold" mb={2}>
@@ -114,18 +114,18 @@ export const walletOnboardingSimData: SimulatorData = {
             </Text>
             <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
               <ListItem>
-                <Emoji text="✍️" me={2} /> Write your recovery phrase down
+                <Emoji text="✅" me={2} /> Write your recovery phrase down
               </ListItem>
               <ListItem>
-                <Emoji text="🔒" me={2} /> Store it in a safe place (consider
+                <Emoji text="✅" me={2} /> Store it in a safe place (consider
                 multiple backups)
               </ListItem>
-              <ListItem>
-                <Emoji text="👩‍🏫" me={2} />{" "}
+              {/* <ListItem>
+                <Emoji text="✅" me={2} />{" "}
                 <Link href="#TODO-link-out">
                   Learn more on protecting your recovery phrase
                 </Link>
-              </ListItem>
+              </ListItem> */}
             </UnorderedList>
             <Text fontWeight="bold" mb={2}>
               Unsafe backup methods:
@@ -152,7 +152,7 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
       {
-        header: "You may be asked to repeat it to ensure you've saved it",
+        header: "Repeat phrase to prove you have saved it",
         description: (
           <>
             <Text>
@@ -160,9 +160,13 @@ export const walletOnboardingSimData: SimulatorData = {
               steps to backup and secure it.
             </Text>
             <Text>
+              <strong>Keep this private!</strong> Nobody from customer service
+              should <em>ever</em> ask you for this.
+            </Text>
+            <Text>
               Wallets usually ask you to repeat this on initial setup to ensure
-              you've backed it up, but you do <strong>not</strong> have to enter
-              this every time you use your wallet.
+              you've backed it up, but is <strong>not</strong> needed every
+              time.
             </Text>
             <Text>
               You're almost done! Click the words in the correct order to prove
@@ -194,7 +198,7 @@ export const walletOnboardingSimData: SimulatorData = {
       "Start using wallet",
     ],
     finalCtaLink: {
-      label: "See a list of wallets",
+      label: "Download a real wallet",
       href: "/wallets/find-wallet/",
     },
     nextPathId: SEND_RECEIVE,
@@ -323,7 +327,7 @@ export const walletOnboardingSimData: SimulatorData = {
     ],
     ctaLabels: ["", "Share address", "", "Next", "", "Send now"],
     finalCtaLink: {
-      label: "See a list of wallets",
+      label: "Download a real wallet",
       href: "/wallets/find-wallet/",
     },
     nextPathId: CONNECT_WEB3,
@@ -371,8 +375,8 @@ export const walletOnboardingSimData: SimulatorData = {
         description: (
           <Text>
             Your public Ethereum address serves as a way to identify yourself,
-            and can be authenticated using the keys in your wallet. No need to
-            create a new account—you already own one.
+            and can be authenticated using your wallet. No need to create a new
+            account—you already own one.
           </Text>
         ),
       },
