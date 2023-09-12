@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Flex, Text, Grid, Divider, Heading } from "@chakra-ui/react"
+import { Box, Flex, Text, Grid, Heading } from "@chakra-ui/react"
 import { MdArrowBack } from "react-icons/md"
 import Button from "../Button"
 import type {
@@ -11,11 +11,8 @@ import type {
 import type { PathId } from "./types"
 import { MoreInfoPopover } from "./MoreInfoPopover"
 import { PathButton } from "./PathButton"
-// import ButtonLink from "../ButtonLink"
-import Link from "../Link"
+import ButtonLink from "../ButtonLink"
 import { motion } from "framer-motion"
-import { shareOnTwitter } from "./utils"
-import { FaTwitter } from "react-icons/fa"
 
 interface ExplanationProps extends SimulatorNavProps {
   explanation: SimulatorExplanation
@@ -118,33 +115,13 @@ export const Explanation: React.FC<ExplanationProps> = ({
               handleClick={() => openPath(nextPathId)}
             />
           )}
-          {/* TODO: Decide on button/link approach and remove unused */}
-          {/* <ButtonLink
+          <ButtonLink
             variant={finalCtaLink.isPrimary ? "solid" : "outline"}
             href={finalCtaLink.href}
             onClick={logFinalCta}
           >
             {finalCtaLink.label}
-          </ButtonLink> */}
-          <Flex alignItems="center" gap={6}>
-            <Divider borderColor="body.medium" />
-            <Text textTransform="uppercase" m={0} color="body.medium">
-              or
-            </Text>
-            <Divider borderColor="body.medium" />
-          </Flex>
-          <Link href={finalCtaLink.href} isExternal onClick={logFinalCta}>
-            {finalCtaLink.label}
-          </Link>
-          <Button
-            variant="outline-color"
-            leftIcon={<FaTwitter />}
-            onClick={shareOnTwitter}
-            w={{ base: "full", lg: "auto" }}
-            mt={{ base: 2, lg: 0 }}
-          >
-            Share on Twitter
-          </Button>
+          </ButtonLink>
         </Flex>
       )}
     </Flex>
