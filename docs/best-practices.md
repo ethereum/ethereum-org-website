@@ -229,3 +229,11 @@ export const query = graphql`
 `
 // These query results get passed as an object `props.data` to your component
 ```
+
+### Using custom `GatsbyImage`
+
+[GatsbyImage](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/) is the component of choice to handle responsive images processed through graphql. However, we use a custom version of this component that is properly optimized with Chakra. This way we can use style props from Chakra but still be able to forward common or GatsbyImage-specific props to the Gatsby component for correct usage and rendering.
+
+```tsx
+import GatsbyImage from "./components/GatsbyImage"
+```
