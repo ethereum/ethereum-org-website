@@ -212,6 +212,7 @@ const WalletsPage = ({
           eventAction: "click",
           eventName: "interactive tutorial",
         },
+        variant: "outline",
       },
     ],
   }
