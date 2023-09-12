@@ -57,7 +57,6 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
             <Text
               color={isCompleted ? "body.medium" : "text"}
               fontWeight="bold"
-              mb={0}
               _before={{
                 content: 'counter(list-counter) ". "',
               }}

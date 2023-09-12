@@ -9,20 +9,20 @@ import {
   chakra,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Show,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import ExpandableCard from "../components/ExpandableCard"
 import PageMetadata from "../components/PageMetadata"
 import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 import { ChildOnlyProp, Context } from "../types"
 
@@ -32,19 +32,19 @@ const commonHeadingProps: HeadingProps = {
 }
 
 export const H1 = (props: HeadingProps) => (
-  <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
 export const H2 = (props: HeadingProps) => (
-  <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
+  <OldHeading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
 export const H3 = (props: HeadingProps) => (
-  <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
 export const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     {...commonHeadingProps}
     fontSize="xl"
@@ -135,7 +135,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: InlineLink,
   h1: H1,
   h2: H2,
   h3: H3,

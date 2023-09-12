@@ -26,7 +26,7 @@ In addition to the benefits we outlined in our [intro to staking](/staking/), st
 <CardGrid>
   <Card title="Low barrier to entry" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Stake today" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Staking tokens" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -60,7 +60,7 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 ## Frequently asked questions {#faq}
 
 <ExpandableCard title="How do I earn rewards?">
-Typically ERC-20 staking tokens are issued to stakers that represents the value of their staked ETH plus rewards. Keep in mind that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
+Typically ERC-20 staking tokens are issued to stakers and represent the value of their staked ETH plus rewards. Keep in mind that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw my stake?">

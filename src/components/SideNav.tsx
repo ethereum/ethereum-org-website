@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Link, { IProps as ILinkProps } from "./Link"
+import Link, { BaseLink, IProps as ILinkProps } from "./Link"
 import Translation from "./Translation"
 
 import docLinks from "../data/developer-docs-links.yaml"
@@ -50,16 +50,17 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
 
 const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
   return (
-    <Link
+    <BaseLink
       w="full"
       textDecoration="none"
       color="text"
+      fontWeight="normal"
       _hover={{ textDecoration: "none", color: "primary.base" }}
       _active={{ color: "primary.base" }}
       {...props}
     >
       {children}
-    </Link>
+    </BaseLink>
   )
 }
 

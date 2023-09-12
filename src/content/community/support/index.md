@@ -65,7 +65,7 @@ Here are some popular examples:
 
 If you're running a node or validator, here are some communities that are dedicated to helping you get started.
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 Most of the teams building Ethereum clients also have dedicated, public-facing, spaces where you can get support and ask questions.

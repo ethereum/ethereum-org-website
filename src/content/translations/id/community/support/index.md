@@ -62,7 +62,7 @@ Berikut adalah beberapa contoh populer:
 
 Jika Anda menjalankan node atau validator, berikut adalah beberapa komunitas yang dikhususkan untuk menolong Anda memulai.
 
-- [Discord EthStaker](https://discord.io/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
 - [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
 
 Kebanyakan tim yang membangun klien Ethereum juga telah mendedikasikan lingkungan untuk publik di mana Anda dapat mendapatkan dukungan dan mengajukan pertanyaan.

@@ -2,11 +2,12 @@
 import React, { useState, useEffect, ReactNode } from "react"
 import { MdInfoOutline } from "react-icons/md"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { Code, Flex, Icon, Spinner, Text, VStack } from "@chakra-ui/react"
+import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
 import Tooltip from "../Tooltip"
-import Link from "../Link"
+import InlineLink from "../Link"
+import Text from "../OldText"
 // Import utilities
 import { Lang } from "../../utils/languages"
 import { getData } from "../../utils/cache"
@@ -175,7 +176,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
               <Translation id="page-staking-stats-box-metric-1-tooltip" />
             </Text>
             <Translation id="data-provided-by" />{" "}
-            <Link to="https://beaconcha.in/">Beaconcha.in</Link>
+            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -194,7 +195,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
               <Translation id="page-staking-stats-box-metric-2-tooltip" />
             </Text>
             <Translation id="data-provided-by" />{" "}
-            <Link to="https://beaconcha.in/">Beaconcha.in</Link>
+            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -213,7 +214,9 @@ const StakingStatsBox: React.FC<IProps> = () => {
               <Translation id="page-staking-stats-box-metric-3-tooltip" />
             </Text>
             <Translation id="data-provided-by" />{" "}
-            <Link to="https://beaconcha.in/ethstore">Beaconcha.in</Link>
+            <InlineLink to="https://beaconcha.in/ethstore">
+              Beaconcha.in
+            </InlineLink>
           </BeaconchainTooltip>
         </Label>
       </Cell>
