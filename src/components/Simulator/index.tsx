@@ -47,6 +47,7 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
 
   // Remove URL search param if invalid pathId
   useEffect(() => {
+    setStep(0)
     if (!pathId) clearUrlParams(location)
   }, [pathId])
 
@@ -73,14 +74,12 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
     setStep((step) => Math.max(step - 1, 0))
   }
 
-  const openPath = (pathId: PathId): void => {
+  const openPath = (id: PathId): void => {
     // Set new pathId in navigation
     const params = new URLSearchParams()
-    params.set(PATH_ID_QUERY_PARAM, pathId)
+    params.set(PATH_ID_QUERY_PARAM, id)
     const url = `?${params.toString()}#${SIMULATOR_ID}`
     navigate(url, { replace: true })
-    // Reset step counter on pathId change
-    setStep(0)
   }
 
   // Navigation object passed to child components
@@ -176,11 +175,11 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
         </Flex>
       </Flex>
       <SimulatorModal isOpen={isOpen} onClose={onClose}>
-        {isOpen && Screen && (
-          <Template>
+        <Template>
+          {explanation ? (
             <Explanation
               nav={nav!}
-              explanation={explanation!}
+              explanation={explanation}
               nextPathSummary={nextPathSummary}
               nextPathId={nextPathId ?? null}
               finalCtaLink={finalCtaLink!}
@@ -194,11 +193,15 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
               }}
               logFinalCta={logFinalCta}
             />
+          ) : (
+            <Flex flex={1} minH={32} />
+          )}
+          {Screen && (
             <Phone>
-              <Screen nav={nav!} ctaLabel={ctaLabel!} />
+              <Screen nav={nav!} ctaLabel={ctaLabel ?? ""} />
             </Phone>
-          </Template>
-        )}
+          )}
+        </Template>
       </SimulatorModal>
     </Grid>
   )
