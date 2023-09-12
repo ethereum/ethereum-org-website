@@ -169,7 +169,7 @@ The schema is the GraphQL data definition. It will allow you to define which ent
 - BigInt
 - BigDecimal
 
-You can also use entities as type to define relationships. In our example we define a 1-to-many relationship from player to bets. The ! means the value can't be empty. The full documentation can be seen [here](https://thegraph.com/docs/define-a-subgraph#the-graphql-schema).
+You can also use entities as type to define relationships. In our example we define a 1-to-many relationship from player to bets. The ! means the value can't be empty. The full documentation can be seen [here](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```graphql
 type Bet @entity {
@@ -198,7 +198,7 @@ Then we create a new Bet entity. The id for this will be `event.transaction.hash
 
 Lastly we can update the Player entity with all the data. Arrays cannot be pushed to directly, but need to be updated as shown here. We use the id to reference the bet. And `.save()` is required at the end to store an entity.
 
-The full documentation can be seen here: https://thegraph.com/docs/define-a-subgraph#writing-mappings. You can also add logging output to the mapping file, see [here](https://thegraph.com/docs/assemblyscript-api#api-reference).
+The full documentation can be seen here: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. You can also add logging output to the mapping file, see [here](https://thegraph.com/docs/assemblyscript-api#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
@@ -295,24 +295,21 @@ But we're missing one last piece of the puzzle and that's the server. You can ei
 
 ### Graph Explorer: The hosted service {#graph-explorer-the-hosted-service}
 
-The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/deploy-a-subgraph) to deploy a subgraph. For many projects you can actually find existing subgraphs in the [explorer](https://thegraph.com/explorer/).
+The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) to deploy a subgraph. For many projects you can actually find existing subgraphs in the [explorer](https://thegraph.com/explorer/).
 
 ![The Graph-Explorer](./thegraph-explorer.png)
 
 ### Running your own node {#running-your-own-node}
 
-Alternatively you can run your own node. Docs [here](https://github.com/graphprotocol/graph-node#quick-start). One reason to do this might be using a network that's not supported by the hosted service. Currently supported are Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI and Sokol.
+Alternatively you can run your own node. Docs [here](https://github.com/graphprotocol/graph-node#quick-start). One reason to do this might be using a network that's not supported by the hosted service. The currently supported networks [can be found here](https://thegraph.com/docs/en/developing/supported-networks/).
 
 ## The decentralized future {#the-decentralized-future}
 
-GraphQL supports streams as well for newly incoming events. This is not yet fully supported by The Graph, but it will be released soon.
+GraphQL supports streams as well for newly incoming events. These are supported on the graph through [Substreams](https://thegraph.com/docs/en/substreams/) which are currently in open beta.
 
-One missing aspect though is still decentralization. The Graph has future plans for eventually becoming a fully decentralized protocol. Those are two great articles explaining the plan in more detail:
-
-- https://thegraph.com/blog/the-graph-network-in-depth-part-1
-- https://thegraph.com/blog/the-graph-network-in-depth-part-2
+In [2021](https://thegraph.com/blog/mainnet-migration/) The Graph began its transition to a decentralized indexing network. You can read more about the architecture of this decentralized indexing network [here](https://thegraph.com/docs/en/network/explorer/).
 
 Two key aspects are:
 
-1. Users will be paying the indexers for queries.
-2. Indexers will be staking Graph Tokens (GRT).
+1. Users pay the indexers for queries.
+2. Indexers stake Graph Tokens (GRT).

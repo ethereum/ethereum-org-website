@@ -94,11 +94,12 @@ const TableOfContents: React.FC<IProps> = ({
         <List {...outerListProps}>
           {!hideEditButton && (
             <ListItem mb={2}>
-              <ButtonLink to={editPath} variant="outline" hideArrow mt={0}>
-                <Flex alignItems="center">
-                  <Icon as={FaGithub} color="text" boxSize={6} me={2} />
-                  <Translation id="edit-page" />
-                </Flex>
+              <ButtonLink
+                leftIcon={<Icon as={FaGithub} />}
+                to={editPath}
+                variant="outline"
+              >
+                <Translation id="edit-page" />
               </ButtonLink>
             </ListItem>
           )}

@@ -64,7 +64,7 @@ Hier sind einige beliebte Beispiele:
 
 Wenn Sie einen Knoten oder Validator betreiben, finden Sie hier einige Communitys, die Ihnen den Einstieg erleichtern.
 
-- [EthStaker-Discord](https://discord.io/ethstaker)
+- [EthStaker-Discord](https://discord.gg/ethstaker)
 - [EthStaker-Reddit](https://www.reddit.com/r/ethstaker)
 
 Die meisten Teams, die Ethereum-Clients entwickeln, haben auch eigene, öffentlich zugängliche Bereiche, in denen Sie Unterstützung erhalten und Fragen stellen können.

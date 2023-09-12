@@ -5,7 +5,7 @@ import { useI18next } from "gatsby-plugin-react-i18next"
 
 // Components
 import Emoji from "../Emoji"
-import Link from "../Link"
+import InlineLink from "../Link"
 import Translation from "../Translation"
 
 // Data
@@ -48,9 +48,9 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
         <Emoji fontSize="sm" mr={2} text=":bricks:" />
         <Translation id={translationKey} />
         :&nbsp;
-        <Link to={`${explorerUrl}${number}`}>
+        <InlineLink to={`${explorerUrl}${number}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
-        </Link>
+        </InlineLink>
       </Flex>
     )
   }
@@ -60,9 +60,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       {formattedUTC && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":calendar:" />
-          <Text fontFamily="monospace" m={0}>
-            {formattedUTC}
-          </Text>
+          <Text fontFamily="monospace">{formattedUTC}</Text>
         </Flex>
       )}
       {blockNumber &&
@@ -97,9 +95,9 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       {waybackLink && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
-          <Link to={waybackLink}>
+          <InlineLink to={waybackLink}>
             <Translation id="page-history-ethereum-org-wayback" />
-          </Link>
+          </InlineLink>
         </Flex>
       )}
     </Stack>

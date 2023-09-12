@@ -1,11 +1,13 @@
 // Libraries
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, FlexProps, Heading, Image, Text } from "@chakra-ui/react"
+import { Flex, FlexProps, Image } from "@chakra-ui/react"
 
 // Components
 import Translation from "./Translation"
 import Emoji from "./Emoji"
+import Text from "./OldText"
+import OldHeading from "./OldHeading"
 
 import type { TranslationKey } from "../utils/translations"
 
@@ -60,9 +62,9 @@ const Callout: React.FC<IProps> = ({
     <Flex direction="column" justify="space-between" mt={10} h="full">
       <div>
         {emoji && <Emoji text={emoji} fontSize="5xl" />}
-        <Heading as="h3" fontSize="2xl" lineHeight={1.4}>
+        <OldHeading as="h3" fontSize="2xl" lineHeight={1.4}>
           <Translation id={titleKey} />
-        </Heading>
+        </OldHeading>
         <Text color="text200" fontSize="xl" lineHeight="140%">
           <Translation id={descriptionKey} />
         </Text>

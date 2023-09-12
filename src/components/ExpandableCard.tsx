@@ -1,11 +1,5 @@
 // Libraries
-import React, { ComponentType, ReactNode, SVGProps, useState } from "react"
-
-// Components
-import Translation from "./Translation"
-
-// Utils
-import { trackCustomEvent } from "../utils/matomo"
+import React, { ReactNode, useState } from "react"
 import {
   Accordion,
   AccordionButton,
@@ -14,8 +8,14 @@ import {
   Box,
   Heading,
   Icon,
-  Text,
 } from "@chakra-ui/react"
+
+// Components
+import Translation from "./Translation"
+import Text from "./OldText"
+
+// Utils
+import { trackCustomEvent } from "../utils/matomo"
 
 export interface IProps {
   children?: React.ReactNode
