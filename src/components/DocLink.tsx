@@ -2,7 +2,6 @@ import React from "react"
 import {
   Icon,
   Box,
-  Text,
   Flex,
   LinkBox,
   LinkOverlay,
@@ -10,7 +9,8 @@ import {
 } from "@chakra-ui/react"
 import { AiOutlineArrowRight } from "react-icons/ai"
 import Emoji from "./Emoji"
-import Link from "./Link"
+import { BaseLink } from "./Link"
+import Text from "./OldText"
 
 export interface IProps {
   children?: React.ReactNode
@@ -48,7 +48,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
         <Box flex={1} flexDirection="column">
           <LinkOverlay
             href={to}
-            as={Link}
+            as={BaseLink}
             isExternal={isExternal}
             textDecoration="none"
             _hover={{ textDecoration: "none" }}

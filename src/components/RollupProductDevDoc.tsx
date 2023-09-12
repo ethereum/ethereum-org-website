@@ -1,17 +1,11 @@
 // Libraries
 import React from "react"
-import {
-  Box,
-  Flex,
-  Heading,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react"
+import { Box, Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
 
 // Components
-import Link from "./Link"
+import InlineLink from "./Link"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 // Data
 import _rollups from "../data/layer-2/layer-2.json"
@@ -70,19 +64,19 @@ const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {
                   )}
                   <UnorderedList>
                     <ListItem>
-                      <Link to={website}>
+                      <InlineLink to={website}>
                         <Translation id="rollup-component-website" />
-                      </Link>
+                      </InlineLink>
                     </ListItem>
                     <ListItem>
-                      <Link to={developerDocs}>
+                      <InlineLink to={developerDocs}>
                         <Translation id="rollup-component-developer-docs" />
-                      </Link>
+                      </InlineLink>
                     </ListItem>
                     <ListItem>
-                      <Link to={l2beat}>
+                      <InlineLink to={l2beat}>
                         <Translation id="rollup-component-technology-and-risk-summary" />
-                      </Link>
+                      </InlineLink>
                     </ListItem>
                   </UnorderedList>
                 </Box>

@@ -1,20 +1,20 @@
 ---
 title: Máquina virtual de Ethereum (EVM)
-description: Una introducción sobre la máquina virtual de Ethereum y acerca de su relación con los bienes, las transacciones y los contratos inteligentes.
+description: Una introducción a la máquina virtual de Ethereum y su relación con el estado, las transacciones y los contratos inteligentes.
 lang: es
 ---
 
 La representación física de EVM no se puede describir del mismo modo que una nube o una ola, pero _existe_ como una única entidad sustentada por miles de computadoras conectadas ejecutando un cliente de Ethereum.
 
-El protocolo de Ethereum en sí mismo existe únicamente con el propósito de mantener el funcionamiento continuo, ininterrumpido e inmutable de esta máquina de estado especial; se trata del entorno que alberga todas las cuentas de Ethereum y los contratos inteligentes. En cualquier bloque de la cadena, Ethereum tiene un único estado "canónico" y la EVM es la que define las reglas de cálculo de un nuevo estado válido de bloque a bloque.
+El propio protocolo Ethereum existe únicamente con el propósito de mantener el funcionamiento continuo, ininterrumpido e inmutable de esta máquina de estado especial. Es el entorno en el que cohabitan todas las cuentas de Ethereum y los contratos inteligentes. En cualquier bloque de la cadena, Ethereum tiene un único estado «canónico» y la EVM es la que define las reglas de cálculo de un nuevo estado válido de bloque a bloque.
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender la EVM es necesario estar familiarizado con terminología básica y común de las ciencias informáticas, como [bytes](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) y [pila](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Asimismo, será de ayuda estar familiarizado con conceptos de criptografía/cadena de bloques, como [funciones hash](https://wikipedia.org/wiki/Cryptographic_hash_function), [prueba de trabajo](https://wikipedia.org/wiki/Proof_of_work) y [árboles Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Para comprender la EVM es necesario estar familiarizado con terminología básica y común de las ciencias informáticas, como [bytes](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) y [pila](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). También sería útil sertirse cómodo con los conceptos de criptografía/cadena de bloques[funciones hash](https://wikipedia.org/wiki/Cryptographic_hash_function) y el [árbol Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Del libro de contabilidad a la máquina de estado {#from-ledger-to-state-machine}
 
-La analogía del "libro de contabilidad distribuido" suele utilizarse para describir blockchains como Bitcoin, que permite la existencia de una moneda descentralizada que utiliza herramientas fundamentales de criptografía. Una criptomoneda se comporta como una moneda "normal", debido a las reglas que rigen lo que uno puede o no puede hacer para modificar el libro de contabilidad. Por ejemplo, una dirección de Bitcoin no puede gastar más Bitcoin de los que ha recibido previamente. Estas reglas sustentan todas las transacciones de Bitcoin y muchas otras blockchains.
+La analogía del "libro de contabilidad distribuido" suele utilizarse para describir blockchains como Bitcoin, que permite la existencia de una moneda descentralizada que utiliza herramientas fundamentales de criptografía. El libro mayor mantiene un registro de actividad que debe adherirse a un conjunto de reglas que rigen lo que alguien puede y no puede hacer para modificar el libro. Por ejemplo, una dirección de Bitcoin no puede gastar más Bitcoin de los que ha recibido previamente. Estas reglas sustentan todas las transacciones de Bitcoin y muchas otras blockchains.
 
 Aunque Ethereum tenga su propia criptomoneda nativa (Ether), que sigue casi exactamente las mismas reglas intuitivas, también permite el uso de una función mucho más poderosa: [los contratos inteligentes](/developers/docs/smart-contracts/). Para explicar esta característica más compleja se requiere una analogía más sofisticada. En lugar de un libro mayor distribuido, Ethereum es una [máquina de estado](https://wikipedia.org/wiki/Finite-state_machine) distribuida. El estado de Ethereum es una gran estructura de datos, que no solo sostiene todas las cuentas y saldos, sino que también alberga el _estado de la máquina_. Este puede cambiar de bloque a bloque según un conjunto de reglas predefinidas, así como ejecutar un código de máquina arbitrario. Las reglas específicas de cambiar el estado de bloque a bloque las define la EVM.
 
@@ -32,7 +32,7 @@ Dado un estado válido anterior `(S)` y un nuevo conjunto de transacciones váli
 
 ### Estado {#state}
 
-En el contexto de Ethereum, el estado es una gran estructura de datos llamada [Merkle Patricia Trie modificado](https://eth.wiki/en/fundamentals/patricia-tree), que mantiene todas las [cuentas](/developers/docs/accounts/) enlazadas mediante los hashes y reducibles a un solo hash raíz almacenado en la blockchain.
+En el contexto de Ethereum, el estado es una gran estructura de datos llamada [Merkle Patricia Trie modificado](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), que mantiene todas las [cuentas](/developers/docs/accounts/) enlazadas mediante los hashes y reducibles a un solo hash raíz almacenado en la cadena de bloques.
 
 ### Transacciones {#transactions}
 
@@ -56,9 +56,9 @@ El bytecode compilado del contrato inteligente se ejecuta a través de [códigos
 
 Todas las implementaciones de la EVM deben ser conformes con la especificación descrita en el protocolo de Ethereum.
 
-A lo largo de los 5 años de historia de Ethereum, la EVM ha pasado varias revisiones y existen varias implementaciones de la EVM en distintos lenguajes de programación.
+Durante los nueve años de historia de Ethereum, la EVM ha pasado varias revisiones y existen varias implementaciones de la EVM en distintos lenguajes de programación.
 
-Todos los [clientes de Ethereum](/developers/docs/nodes-and-clients/#execution-clients) incluyen una implementación de la EVM. Asimismo, existen varias implementaciones independientes, entre las que se incluyen las siguientes:
+[Los clientes de ejecución de Ethereum](/developers/docs/nodes-and-clients/#execution-clients) incluyen una implementación de EVM. Además, existen múltiples implementaciones independientes, que incluyen:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_.
 - [evmone](https://github.com/ethereum/evmone) - _C++_.
@@ -71,6 +71,7 @@ Todos los [clientes de Ethereum](/developers/docs/nodes-and-clients/#execution-c
 - [Jellopaper, también conocido como KEVM: semántica de EVM en K](https://jellopaper.org/)
 - [El Beigepaper](https://github.com/chronaeon/beigepaper)
 - [Códigos de operación de la máquina virtual de Ethereum](https://www.ethervm.io/)
+- [Referencia interactiva de códigos de operación de máquina virtual Ethereum](https://www.evm.codes/)
 - [Una breve introducción a la documentación de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
 ## Temas relacionados {#related-topics}

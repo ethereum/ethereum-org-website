@@ -19,14 +19,14 @@ import {
   Table,
   TableProps,
   Td,
-  Text,
   Th,
   Tr,
 } from "@chakra-ui/react"
 
 // Components
-import Link, { IProps as LinkProps } from "../../Link"
+import InlineLink, { IProps as LinkProps } from "../../Link"
 import { WalletMoreInfo } from "./WalletMoreInfo"
+import Text from "../../OldText"
 
 // Icons
 import {
@@ -280,7 +280,7 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
 )
 
 const SocialLink = (props: LinkProps) => (
-  <Link
+  <InlineLink
     display="flex"
     height={8}
     alignItems="center"

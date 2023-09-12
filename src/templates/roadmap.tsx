@@ -10,7 +10,6 @@ import {
   ListItem,
   Show,
   SimpleGrid,
-  Text,
   UnorderedList,
   useToken,
   Wrap,
@@ -26,8 +25,7 @@ import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -44,7 +42,9 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import Text from "../components/OldText"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
 import {
   Page,
   InfoColumn,
@@ -118,13 +118,13 @@ const TitleCard = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   li: ListItem,
   ul: UnorderedList,
   MeetupList,
@@ -146,7 +146,7 @@ const components = {
   YouTube,
   RoadmapActionCard,
   RoadmapImageContent,
-  QuizWidget,
+  GlossaryTooltip,
 }
 
 const RoadmapPage = ({
@@ -311,7 +311,7 @@ export const roadmapPageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["common", "learn-quizzes"] }
+        ns: { in: ["common", "glossary"] }
       }
     ) {
       edges {
