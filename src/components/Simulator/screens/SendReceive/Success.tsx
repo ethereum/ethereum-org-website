@@ -1,4 +1,4 @@
-import { Grid, Flex, Icon, Text, Spinner } from "@chakra-ui/react"
+import { Flex, Icon, Text, Spinner } from "@chakra-ui/react"
 import { AnimatePresence, motion } from "framer-motion"
 import React, { useEffect, useState } from "react"
 import { PiCheckThin } from "react-icons/pi"
@@ -48,14 +48,16 @@ export const Success: React.FC<IProps> = ({ tokenBalances }) => {
           />
         </motion.div>
       ) : (
-        <Grid
+        <Flex
           animate={{ opacity: [0, 1] }}
           exit={{ opacity: 0 }}
           key="success-fade-out"
           as={motion.div}
-          placeItems="center"
+          justify="center"
           h="full"
           bg="background.highlight"
+          pt={{ base: 24, md: 0 }}
+          alignItems={{ base: "start", md: "center" }}
         >
           <Flex direction="column" alignItems="center" pt={8} gap={4}>
             {txPending ? (
@@ -88,7 +90,7 @@ export const Success: React.FC<IProps> = ({ tokenBalances }) => {
                 : "Transaction successfully sent"}
             </Text>
           </Flex>
-        </Grid>
+        </Flex>
       )}
     </AnimatePresence>
   )
