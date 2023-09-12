@@ -16,17 +16,17 @@ This is the project repository for the [ethereum.org](https://ethereum.org) webs
 
 We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/CetY6Y4).
 
-## How to contribute
+## How to contribute to ethereum.org
 
 There are a number of ways for you to contribute to ethereum.org.
 
-1. Content contributions
+1. [Content contributions](docs/content-contributions.md)
 2. [Code contributions](docs/code-contributions.md)
-3. Design contributions
+3. [Design contributions](docs/design-contributions.md)
 4. [Translation program contributions](docs/translation-program.md)
-5. QA testing contributions
+5. [QA testing contributions](docs/testing-contributions.md)
 
-## Looking for the Ethereum blockchain's code?
+## Looking for the Ethereum client code?
 
 If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#execution-clients)
 
