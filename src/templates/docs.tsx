@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef, ReactNode, useContext } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -28,9 +28,9 @@ import Codeblock from "../components/Codeblock"
 import FeedbackCard from "../components/FeedbackCard"
 import CrowdinContributors from "../components/FileContributorsCrowdin"
 import GitHubContributors from "../components/FileContributorsGitHub"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -42,10 +42,9 @@ import DocsNav from "../components/DocsNav"
 import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 import RollupProductDevDoc from "../components/RollupProductDevDoc"
 import YouTube from "../components/YouTube"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
-import PostMergeBanner from "../components/Banners/PostMergeBanner"
-
-import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { ChildOnlyProp, Context } from "../types"
@@ -87,7 +86,7 @@ const H1 = (props: HeadingProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     {...baseHeadingStyle}
     fontSize="2xl"
     lineHeight={{ base: 1.2, md: 1.4 }}
@@ -105,7 +104,7 @@ const baseSubHeadingStyles: HeadingProps = {
 }
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     {...baseSubHeadingStyles}
     as="h3"
     fontSize={{ md: "2xl" }}
@@ -115,7 +114,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     {...baseSubHeadingStyles}
     as="h4"
     fontSize={{ md: "xl" }}
@@ -138,9 +137,9 @@ const ListItem = (props: ListItemProps) => (
   <ChakraListItem color="text300" {...props} />
 )
 
-const ContentContainer = (props: ChildOnlyProp & { isZenMode: boolean }) => (
+const ContentContainer = (props: ChildOnlyProp) => (
   <Flex
-    justify={props.isZenMode ? "center" : "space-between"}
+    justify={"space-between"}
     w="full"
     py={0}
     pl={0}
@@ -195,7 +194,7 @@ const BackToTop = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -205,9 +204,10 @@ const components = {
   ol: OrderedList,
   li: ListItem,
   pre: Codeblock,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   ButtonLink,
   InfoBanner,
+  GlossaryTooltip,
   Card,
   Divider,
   SectionNav,
@@ -224,8 +224,6 @@ const DocsPage = ({
   data: { siteData, pageData: mdx, allCombinedTranslatorsJson },
   pageContext: { relativePath, slug },
 }: PageProps<Queries.DocsPageQuery, Context>) => {
-  const { isZenMode } = useContext(ZenModeContext)
-
   if (!siteData || !mdx?.frontmatter)
     throw new Error("Docs page template query does not return expected values")
   if (!mdx?.frontmatter?.title)
@@ -252,7 +250,7 @@ const DocsPage = ({
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
       )}
-      <ContentContainer isZenMode={isZenMode}>
+      <ContentContainer>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
           {/* flip these positive first */}
@@ -312,7 +310,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-developers-docs", "common"] }
+        ns: { in: ["page-developers-docs", "common", "glossary"] }
       }
     ) {
       edges {

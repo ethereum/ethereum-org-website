@@ -117,7 +117,7 @@
   "rollups-the-ultimate-ethereum-scaling-strategy": "AGRUPACIONES: ¿La estrategia definitiva de escalabilidad de Ethereum? Arbitrum y Optimism explicados",
   "scaling-layer-1-with-shard-chains": "Escalabilidad a capa 1 con cadenas de fragmentos",
   "understanding-rollup-economics-from-first-principals": "Entender la economía de agrupaciones desde los albores",
-  "arbitrum-description": "Arbitrum es una agrupación optimista (Optimistic rollup) que pretende imitar la interacción con Ethereum, pero con transacciones que cuestan una fracción de lo que cuestan en L1.",
+  "arbitrum-description": "Arbitrum One es una agrupación optimista (Optimistic rollup) que pretende imitar la interacción con Ethereum, pero con transacciones que cuestan una fracción de lo que cuestan en L1.",
   "optimism-description": "Optimism es una agrupación optimista segura y rápida, con tecnología equivalente a la EVM. Escala la tecnología de Ethereum y difunde sus principios mediante la financiación retroactiva de bienes públicos.",
   "boba-description": "Boba es una agrupación optimista (Optimistic rollup) originalmente bifurcada desde Optimism, que es una solución de escalabilidad que tiene como objetivo reducir el precio del gas, mejorar el rendimiento de las transacciones, y ampliar las capacidades de los contratos inteligentes.",
   "loopring-description": "La solución de agrupación de conocimiento cero para L2, zkRollup L2, de Loopring tiene como objetivo ofrecer las mismas garantías de seguridad que la red principal Ethereum, con un gran aumento de la escalabilidad: el rendimiento aumentó 1000 veces y el coste se redujo a solo 0,1 % de L1.",

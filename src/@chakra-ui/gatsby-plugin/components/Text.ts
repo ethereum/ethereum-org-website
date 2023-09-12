@@ -1,43 +1,43 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react"
 
 const sizes = {
-  "7xl": defineStyle({
+  "6xl": defineStyle({
     fontSize: "6xl",
     lineHeight: "4xs",
   }),
-  "6xl": defineStyle({
+  "5xl": defineStyle({
     fontSize: "5xl",
     lineHeight: "4xs",
   }),
-  "5xl": defineStyle({
+  "4xl": defineStyle({
     fontSize: "4xl",
     lineHeight: "sm",
   }),
-  "4xl": defineStyle({
+  "3xl": defineStyle({
     fontSize: "3xl",
     lineHeight: "sm",
   }),
-  "3xl": defineStyle({
+  "2xl": defineStyle({
     fontSize: "2xl",
     lineHeight: "sm",
   }),
-  "2xl": defineStyle({
+  xl: defineStyle({
     fontSize: "xl",
     lineHeight: "sm",
   }),
-  xl: defineStyle({
+  lg: defineStyle({
     fontSize: "lg",
     lineHeight: "base",
   }),
-  lg: defineStyle({
+  md: defineStyle({
     fontSize: "md",
     lineHeight: "base",
   }),
-  md: defineStyle({
+  sm: defineStyle({
     fontSize: "sm",
     lineHeight: "base",
   }),
-  sm: defineStyle({
+  xs: defineStyle({
     fontSize: "xs",
     lineHeight: "base",
   }),

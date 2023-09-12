@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
-import { Box, Flex, Heading, HeadingProps, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, HeadingProps } from "@chakra-ui/react"
 // Component imports
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
@@ -12,6 +12,7 @@ import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import FeedbackCard from "../../components/FeedbackCard"
 import LearningToolsCardGrid from "../../components/LearningToolsCardGrid"
+import Text from "../../components/OldText"
 // Util imports
 import { getImage } from "../../utils/image"
 // Type imports
@@ -45,7 +46,6 @@ const Header = (props: ChildOnlyProp) => (
 const H1 = (props: ChildOnlyProp) => (
   <Heading
     as="h1"
-    my={0}
     color="text"
     fontStyle="normal"
     fontFamily="monospace"
@@ -132,19 +132,19 @@ const LearningToolsPage = ({
       },
       {
         name: "ChainIDE",
-        description: "page-learning-tools-chainIDE-description",
+        description: t("page-learning-tools-chainIDE-description"),
         url: "https://chainide.com/",
         image: getImage(data.chainIDE)!,
-        alt: "page-learning-tools-chainIDE-logo-alt",
+        alt: t("page-learning-tools-chainIDE-logo-alt"),
         background: "#2C60A3",
         subjects: ["Solidity", "web3"],
       },
       {
         name: "Tenderly",
-        description: "page-learning-tools-tenderly-description",
+        description: t("page-learning-tools-tenderly-description"),
         url: "https://sandbox.tenderly.co",
         image: getImage(data.tenderly)!,
-        alt: "page-learning-tools-tenderly-logo-alt",
+        alt: t("page-learning-tools-tenderly-logo-alt"),
         background: "#0f1524",
         subjects: ["Solidity", "Vyper", "web3"],
       },
@@ -231,10 +231,10 @@ const LearningToolsPage = ({
     },
     {
       name: "Metaschool",
-      description: "page-learning-tools-metaschool-description",
+      description: t("page-learning-tools-metaschool-description"),
       url: "https://metaschool.so",
       image: getImage(data.metaschool)!,
-      alt: "page-learning-tools-metaschool-logo-alt",
+      alt: t("page-learning-tools-metaschool-logo-alt"),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
@@ -277,10 +277,10 @@ const LearningToolsPage = ({
     },
     {
       name: "Alchemy University",
-      description: "page-learning-tools-alchemy-university-description",
+      description: t("page-learning-tools-alchemy-university-description"),
       url: "https://university.alchemy.com/",
       image: getImage(data.alchemyuniversity)!,
-      alt: "page-learning-tools-alchemy-university-logo-alt",
+      alt: t("page-learning-tools-alchemy-university-logo-alt"),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },

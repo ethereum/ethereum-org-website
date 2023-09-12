@@ -2,7 +2,7 @@ import React from "react"
 import { Box } from "@chakra-ui/react"
 
 import Translation from "./Translation"
-import Link from "../components/Link"
+import { BaseLink } from "../components/Link"
 
 export interface IProps {
   hrefId: string
@@ -11,7 +11,7 @@ export interface IProps {
 export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
   return (
     <Box bg="primary.base">
-      <Link
+      <BaseLink
         href={hrefId}
         lineHeight="taller"
         position="absolute"
@@ -23,7 +23,7 @@ export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
         _focus={{ position: "static" }}
       >
         <Translation id="skip-to-main-content" />
-      </Link>
+      </BaseLink>
     </Box>
   )
 }

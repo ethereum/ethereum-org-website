@@ -70,6 +70,10 @@ export const useNav = ({ path }: { path: string }) => {
           text: t("decentralized-science"),
           to: "/desci/",
         },
+        {
+          text: t("regenerative-finance"),
+          to: "/refi/",
+        },
       ],
     },
     learn: {
@@ -77,7 +81,7 @@ export const useNav = ({ path }: { path: string }) => {
       ariaLabel: t("learn-menu"),
       items: [
         {
-          text: "Start here",
+          text: t("start-here"),
           items: [
             {
               text: t("learn-hub"),
@@ -90,7 +94,7 @@ export const useNav = ({ path }: { path: string }) => {
           ],
         },
         {
-          text: "Ethereum basics",
+          text: t("ethereum-basics"),
           items: [
             {
               text: t("what-is-ethereum"),
@@ -105,6 +109,10 @@ export const useNav = ({ path }: { path: string }) => {
               to: "/wallets/",
             },
             {
+              text: "Gas fees",
+              to: "/gas/",
+            },
+            {
               text: t("ethereum-security"),
               to: "/security/",
             },
@@ -116,6 +124,7 @@ export const useNav = ({ path }: { path: string }) => {
               text: t("smart-contracts"),
               to: "/smart-contracts/",
             },
+
             {
               text: t("quizzes-title"),
               to: "/quizzes/",
@@ -123,7 +132,7 @@ export const useNav = ({ path }: { path: string }) => {
           ],
         },
         {
-          text: "Ethereum protocol",
+          text: t("ethereum-protocol"),
           items: [
             {
               text: t("energy-consumption"),
@@ -274,11 +283,6 @@ export const useNav = ({ path }: { path: string }) => {
     setIsMenuOpen((prev) => !prev)
   }
 
-  const searchRef = useRef<HTMLButtonElement>(null)
-
-  const toggleSearch = (): void => {
-    searchRef.current?.click()
-  }
   const shouldShowSubNav = path.includes("/developers/")
   const splitPath = path.split("/")
   const fromPageParameter =
@@ -300,7 +304,6 @@ export const useNav = ({ path }: { path: string }) => {
     isDarkTheme,
     toggleMenu,
     toggleTheme: changeColorMode,
-    toggleSearch,
     linkSections: mobileLinkSections,
     fromPageParameter,
   }
@@ -312,7 +315,6 @@ export const useNav = ({ path }: { path: string }) => {
     isDarkTheme,
     ednLinks,
     linkSections,
-    searchRef,
     shouldShowSubNav,
     fromPageParameter,
     mobileNavProps,

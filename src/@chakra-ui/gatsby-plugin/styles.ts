@@ -16,12 +16,7 @@ const styles = {
       // native Chakra semantic tokens
       bg: mode("white", "gray.700")(props),
       lineHeight: "base",
-      fontSize: ["sm", null, "lg"],
-    },
-    p: {
-      _last: {
-        mb: 0,
-      },
+      fontSize: ["sm", null, "md"],
     },
     a: {
       color: "primary.base",

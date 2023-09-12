@@ -1,23 +1,23 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { Box, Flex } from "@chakra-ui/react"
+import { Box, Flex, Heading, Text } from "@chakra-ui/react"
 
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import Translation from "../components/Translation"
 
 const NotFoundPage = (props: PageProps) => (
   <Flex flexDir="column" align="center" w="full" mt={16} mb={0} mx="auto">
     <Box py={4} px={8} w="full">
-      <h1>
+      <Heading as="h1" size="2xl" my={8}>
         <Translation id="we-couldnt-find-that-page" />
-      </h1>
-      <p>
+      </Heading>
+      <Text mb={8}>
         <Translation id="try-using-search" />{" "}
-        <Link to="/">
+        <InlineLink to="/">
           <Translation id="return-home" />
-        </Link>
+        </InlineLink>
         .
-      </p>
+      </Text>
     </Box>
   </Flex>
 )

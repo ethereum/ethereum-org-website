@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react"
 import { shuffle } from "lodash"
 
-import { Box, Flex, Image, LinkBox, LinkOverlay, Text } from "@chakra-ui/react"
+import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import data from "../data/contributors.json"
 
-import Link from "./Link"
+import InlineLink from "./Link"
+import Text from "./OldText"
 
 export interface IProps {}
 
@@ -67,7 +68,7 @@ const Contributors: React.FC<IProps> = () => {
             <Box padding="1rem">
               <Text as="h3" fontSize="md" marginTop="2" marginBottom="4">
                 <LinkOverlay
-                  as={Link}
+                  as={InlineLink}
                   href={contributor.profile}
                   hideArrow
                   color="text"

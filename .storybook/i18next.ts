@@ -11,9 +11,10 @@ export const baseLocales = {
 // Only i18n files named in this array are being exposed to Storybook. Add filenames as necessary.
 const ns = [
   "common",
+  "glossary",
   "page-about",
-  "page-learn",
   "page-index",
+  "page-learn",
   "page-upgrades",
   "page-developers-index",
 ]
@@ -25,22 +26,23 @@ const supportedLngs = Object.keys(baseLocales)
  */
 const resources: Resource = ns.reduce((acc, n) => {
   supportedLngs.forEach((lng) => {
-    let langFile: object
-
-    try {
-      langFile = require(`../src/intl/${lng}/${n}.json`)
-    } catch {
-      // If the search file is not found
-      return acc
-    }
-
     if (!acc[lng]) acc[lng] = {}
+    try {
+      acc[lng] = {
+        translation: {
+          ...acc[lng].translation,
 
-    acc[lng] = {
-      translation: {
-        ...acc[lng].translation,
-        ...langFile,
-      },
+          ...require(`../src/intl/${lng}/${n}.json`),
+        },
+      }
+    } catch {
+      acc[lng] = {
+        translation: {
+          ...acc[lng].translation,
+
+          ...require(`../src/intl/en/${n}.json`),
+        },
+      }
     }
   })
   return acc

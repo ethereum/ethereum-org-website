@@ -10,8 +10,7 @@ import {
 import { navigate as gatsbyNavigate } from "gatsby"
 import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 import { NavigateOptions } from "@reach/router"
-
-import { BsQuestionSquareFill } from "react-icons/bs"
+import { RxExternalLink } from "react-icons/rx"
 
 import { Lang } from "../utils/languages"
 import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
@@ -48,7 +47,7 @@ export interface IProps extends IBaseProps, LinkProps {
  * - Intl links
  * e.g. <Link href="/page-2/" language="de">
  */
-const Link: React.FC<IProps> = ({
+export const BaseLink: React.FC<IProps> = ({
   to: toProp,
   href,
   language,
@@ -70,7 +69,6 @@ const Link: React.FC<IProps> = ({
   if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
   const isExternal = url.isExternal(to)
   const isHash = url.isHash(to)
-  const isGlossary = url.isGlossary(to)
   const isStatic = url.isStatic(to)
   const isPdf = url.isPdf(to)
 
@@ -140,9 +138,13 @@ const Link: React.FC<IProps> = ({
           {children}
           <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
           {!hideArrow && (
-            <Box as="span" ml={0.5} mr={1.5} aria-hidden>
-              ↗
-            </Box>
+            <Icon
+              as={RxExternalLink}
+              boxSize="6"
+              p="1"
+              verticalAlign="middle"
+              me="-1"
+            />
           )}
         </>
       </ChakraLink>
@@ -157,24 +159,10 @@ const Link: React.FC<IProps> = ({
       language={language}
       partiallyActive={isPartiallyActive}
       activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
-      whiteSpace={isGlossary ? "nowrap" : "normal"}
+      whiteSpace={"normal"}
       {...commonProps}
     >
-      <>
-        {children}
-        {isGlossary && (
-          <Icon
-            as={BsQuestionSquareFill}
-            aria-label="See definition"
-            fontSize="12px"
-            margin="0 0.25rem 0 0.35rem"
-            _hover={{
-              transition: "transform 0.1s",
-              transform: "scale(1.2)",
-            }}
-          />
-        )}
-      </>
+      {children}
     </ChakraLink>
   )
 }
@@ -192,4 +180,6 @@ export function navigate(
   gatsbyNavigate(link, options)
 }
 
-export default Link
+const InlineLink = (props: IProps) => <BaseLink data-inline-link {...props} />
+
+export default InlineLink
