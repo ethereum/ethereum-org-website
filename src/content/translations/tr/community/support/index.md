@@ -62,7 +62,7 @@ Sorunuz belirli bir araç, proje veya kütüphane ile mi ilgili? Çoğu projede 
 
 Bir düğüm veya doğrulayıcı çalıştırıyorsanız, başlamanıza yardımcı olmaya adanmış bazı toplulukları burada bulabilirsiniz.
 
-- [EthStaker Discord'u](https://discord.io/ethstaker)
+- [EthStaker Discord'u](https://discord.gg/ethstaker)
 - [EthStaker Reddit'i](https://www.reddit.com/r/ethstaker)
 
 Ethereum istemcileri geliştiren ekiplerin çoğu, destek alabileceğiniz ve soru sorabileceğiniz özel, herkese açık alanlara da sahiptir.

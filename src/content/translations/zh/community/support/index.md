@@ -64,7 +64,7 @@ _这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加�
 
 如果您正在运行节点或验证者节点，下面是一些专门帮助您入门的社区。
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 大多数构建以太坊客户端的团队也有专门的、面向公众的平台，您可以在这些平台获取支持和提问。

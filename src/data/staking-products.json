@@ -291,7 +291,7 @@
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["GUI"],
       "socials": {
-        "discord": "https://discord.io/ethstaker",
+        "discord": "https://discord.gg/ethstaker",
         "twitter": "https://twitter.com/wagyutools",
         "github": "https://github.com/stake-house/wagyu-key-gen"
       },
