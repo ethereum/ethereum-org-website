@@ -1,5 +1,6 @@
 import { Box, Flex, type FlexProps, Text } from "@chakra-ui/react"
 import React from "react"
+import { getMaxFractionDigitsUsd } from "../utils"
 import { TokenBalance } from "./interfaces"
 
 interface IProps extends FlexProps {
@@ -12,7 +13,7 @@ export const TokenBalanceItem: React.FC<IProps> = ({ item, ...flexProps }) => {
     style: "currency",
     currency: "USD",
     notation: "compact",
-    maximumFractionDigits: usdAmount % 1 === 0 ? 0 : 2,
+    maximumFractionDigits: getMaxFractionDigitsUsd(usdAmount),
   }).format(usdAmount)
   const tokenAmount = Intl.NumberFormat("en", {
     maximumFractionDigits: 5,

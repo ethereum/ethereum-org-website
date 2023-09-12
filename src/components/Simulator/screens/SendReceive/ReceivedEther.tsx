@@ -1,10 +1,11 @@
 import { Flex, Icon, Text } from "@chakra-ui/react"
 import { AnimatePresence, motion } from "framer-motion"
 import React, { useEffect, useMemo, useState } from "react"
-import { MdInfo } from "react-icons/md"
+import { MdClose, MdInfo } from "react-icons/md"
 import { SimulatorNavProps } from "../../interfaces"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 import { WalletHome } from "../../WalletHome"
+import { getMaxFractionDigitsUsd } from "../../utils"
 
 interface IProps extends SimulatorNavProps {
   defaultTokenBalances: Array<TokenBalance>
@@ -22,7 +23,7 @@ export const ReceivedEther: React.FC<IProps> = ({
   const [received, setReceived] = useState(false)
   const [hideToast, setHideToast] = useState(false)
   const showToast = received && !hideToast
-
+  const [hidden, setHidden] = useState(false)
   useEffect(() => {
     const timeout = setTimeout(() => {
       setReceived(true)
@@ -61,7 +62,13 @@ export const ReceivedEther: React.FC<IProps> = ({
   const displayEth: string = new Intl.NumberFormat("en", {
     maximumFractionDigits: 5,
   }).format(ethReceiveAmount)
-
+  const usdReceiveAmount = ethReceiveAmount * ethPrice
+  const displayUsd: string = new Intl.NumberFormat("en", {
+    style: "currency",
+    currency: "USD",
+    notation: "compact",
+    maximumFractionDigits: getMaxFractionDigitsUsd(usdReceiveAmount),
+  }).format(usdReceiveAmount)
   return (
     <motion.div
       key="wallet-step-index-2"
@@ -75,14 +82,14 @@ export const ReceivedEther: React.FC<IProps> = ({
         tokenBalances={tokenBalances}
       />
       <AnimatePresence>
-        {showToast && (
+        {showToast && !hidden && (
           <Flex
             key="toast"
             position="absolute"
             inset={4}
-            bottom={6}
-            borderRadius="base"
             top="auto"
+            bottom={32}
+            borderRadius="base"
             h="fit-content"
             bg="primary300"
             gap={3}
@@ -96,9 +103,11 @@ export const ReceivedEther: React.FC<IProps> = ({
             exit={{ opacity: 0 }}
           >
             <Icon as={MdInfo} fontSize="xl" />
-            <Text m={0} fontWeight="bold">
-              You received {displayEth} ETH{sender ? ` from ${sender}` : ""}!
+            <Text m={0} fontWeight="bold" fontSize="xs">
+              You received {displayEth} ETH ({displayUsd})
+              {sender ? ` from ${sender}` : ""}!
             </Text>
+            <Icon as={MdClose} fontSize="xl" onClick={() => setHidden(true)} />
           </Flex>
         )}
       </AnimatePresence>

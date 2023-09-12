@@ -2,6 +2,7 @@ import { Flex, Icon, Text, Spinner } from "@chakra-ui/react"
 import { AnimatePresence, motion } from "framer-motion"
 import React, { useEffect, useState } from "react"
 import { PiCheckThin } from "react-icons/pi"
+import { getMaxFractionDigitsUsd } from "../../utils"
 import { WalletHome } from "../../WalletHome"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 
@@ -9,11 +10,32 @@ const ICON_SIZE = "4.5rem" as const
 
 interface IProps {
   tokenBalances: Array<TokenBalance>
+  sentEthAmount: number
+  ethPrice: number
+  recipient: string
 }
-export const Success: React.FC<IProps> = ({ tokenBalances }) => {
+export const Success: React.FC<IProps> = ({
+  tokenBalances,
+  sentEthAmount,
+  ethPrice,
+  recipient,
+}) => {
   const [txPending, setTxPending] = useState(true)
   const [showWallet, setShowWallet] = useState(false)
   const [categoryIndex, setCategoryIndex] = useState(0)
+
+  const usdAmount = sentEthAmount * ethPrice
+
+  const usdValue = new Intl.NumberFormat("en", {
+    style: "currency",
+    currency: "USD",
+    notation: "compact",
+    maximumFractionDigits: getMaxFractionDigitsUsd(usdAmount),
+  }).format(usdAmount)
+
+  const sentEthValue = new Intl.NumberFormat("en", {
+    maximumFractionDigits: 5,
+  }).format(sentEthAmount)
 
   // Show spinner for defined number of milliseconds, switching "loading" state to false when complete
   const SPINNER_DURATION = 1000
@@ -85,9 +107,17 @@ export const Success: React.FC<IProps> = ({ tokenBalances }) => {
               </motion.div>
             )}
             <Text textAlign="center" px={{ base: 4, md: 8 }}>
-              {txPending
-                ? "Sending transaction"
-                : "Transaction successfully sent"}
+              {txPending ? (
+                "Sending transaction"
+              ) : (
+                <Text as="span">
+                  You sent{" "}
+                  <strong>
+                    <>{sentEthValue} ETH</>
+                  </strong>{" "}
+                  ({usdValue}) to <strong>{recipient}</strong>
+                </Text>
+              )}
             </Text>
           </Flex>
         </Flex>

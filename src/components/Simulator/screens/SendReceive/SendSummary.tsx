@@ -1,6 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react"
 import React from "react"
 import { ETH_TRANSFER_FEE } from "../../constants"
+import { getMaxFractionDigitsUsd } from "../../utils"
 
 interface IProps {
   chosenAmount: number
@@ -20,7 +21,7 @@ export const SendSummary: React.FC<IProps> = ({
     style: "currency",
     currency: "USD",
     notation: "compact",
-    maximumFractionDigits: chosenAmount % 1 === 0 ? 0 : 2,
+    maximumFractionDigits: getMaxFractionDigitsUsd(chosenAmount),
   }).format(chosenAmount)
 
   const usdFee = ETH_TRANSFER_FEE * ethPrice
@@ -78,7 +79,7 @@ export const SendSummary: React.FC<IProps> = ({
           <Text>Nework fees</Text>
           <Text m={0} fontWeight="bold">
             {Intl.NumberFormat("en", {
-              maximumFractionDigits: usdFee % 1 === 0 ? 0 : 2,
+              maximumFractionDigits: getMaxFractionDigitsUsd(usdFee),
               style: "currency",
               currency: "USD",
               notation: "compact",

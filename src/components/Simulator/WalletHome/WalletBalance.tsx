@@ -1,5 +1,6 @@
 import { Box, type BoxProps, Text, Flex } from "@chakra-ui/react"
 import React from "react"
+import { getMaxFractionDigitsUsd } from "../utils"
 import { AddressPill } from "./AddressPill"
 
 interface IProps extends BoxProps {
@@ -23,7 +24,7 @@ export const WalletBalance: React.FC<IProps> = ({
         style: "currency",
         currency: "USD",
         notation: "compact",
-        maximumFractionDigits: usdAmount % 1 === 0 ? 0 : 2,
+        maximumFractionDigits: getMaxFractionDigitsUsd(usdAmount),
       }).format(usdAmount)}
     </Text>
     <Flex justify="center" mb={4}>
