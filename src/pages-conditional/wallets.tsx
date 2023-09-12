@@ -1,5 +1,13 @@
 import React from "react"
-import { Center, Box, Flex, BoxProps, Img } from "@chakra-ui/react"
+import {
+  Center,
+  Box,
+  Flex,
+  BoxProps,
+  Img,
+  Text as ChakraText,
+  Heading,
+} from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
@@ -17,11 +25,11 @@ import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import { Simulator } from "../components/Simulator"
 import { StyledCard } from "../pages/get-eth"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
-import { Simulator } from "../components/Simulator"
 import { walletOnboardingSimData } from "../data/WalletSimulatorData"
 import { SIMULATOR_ID } from "../components/Simulator/constants"
 
@@ -317,22 +325,23 @@ const WalletsPage = ({
       {language === "en" ? (
         <Content my={20} px={0}>
           <Simulator location={location} data={walletOnboardingSimData}>
-            <Text
+            <ChakraText
               fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
               fontStyle="italic"
               color="body.medium"
               mb={2}
             >
               Interactive tutorial
-            </Text>
-            <Text
-              fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+            </ChakraText>
+            <Heading
+              as="h2"
+              size={{ base: "xl", lg: "2xl" }}
               lineHeight="115%"
               fontWeight="bold"
               m={0}
             >
               How to use a wallet
-            </Text>
+            </Heading>
           </Simulator>
         </Content>
       ) : (

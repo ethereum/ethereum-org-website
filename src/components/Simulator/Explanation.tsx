@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, type BoxProps, Flex, Text, Grid, Divider } from "@chakra-ui/react"
+import { Box, Flex, Text, Grid, Divider, Heading } from "@chakra-ui/react"
 import { MdArrowBack } from "react-icons/md"
 import Button from "../Button"
 import type {
@@ -11,7 +11,7 @@ import type {
 import type { PathId } from "./types"
 import { MoreInfoPopover } from "./MoreInfoPopover"
 import { PathButton } from "./PathButton"
-import ButtonLink from "../ButtonLink"
+// import ButtonLink from "../ButtonLink"
 import Link from "../Link"
 import { motion } from "framer-motion"
 import { shareOnTwitter } from "./utils"
@@ -37,9 +37,6 @@ export const Explanation: React.FC<ExplanationProps> = ({
   const { regressStepper, step, totalSteps } = nav
   const { header, description } = explanation
 
-  const Description: React.FC<BoxProps> = (props) => (
-    <Box {...props}>{description}</Box>
-  )
   const isLastStep = nav.step + 1 === totalSteps
 
   const backButtonVariants = {
@@ -83,24 +80,27 @@ export const Explanation: React.FC<ExplanationProps> = ({
         </Grid>
         {/* Header and description */}
         <Box>
-          <Text
+          <Heading
+            as="h3"
             fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
             lineHeight={{ base: 8, md: 10 }}
-            fontWeight="bold"
+            mt={0}
             mb={{ base: 4, md: 8 }}
           >
             {header}
-          </Text>
+          </Heading>
           {description && (
             <Box display={{ base: "block", md: "none" }} position="relative">
               <MoreInfoPopover isFirstStep={nav.step === 0}>
-                <Description />
+                <Box>{description}</Box>
               </MoreInfoPopover>
             </Box>
           )}
         </Box>
       </Flex>
-      {description && <Description display={{ base: "none", md: "block" }} />}
+      {description && (
+        <Box display={{ base: "none", md: "block" }}>{description}</Box>
+      )}
       {/* Last step navigation buttons */}
       {isLastStep && (
         <Flex
