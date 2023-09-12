@@ -11,7 +11,7 @@ export type GatsbyImageProps = ChakraComponent<"img", Props>
  */
 const GatsbyImage: GatsbyImageProps = chakra(Image, {
   shouldForwardProp: (prop) => {
-    // Have to add all used GatsbyImage props, else console warnings will throw
+    // Forward props that only GatsbyImage should be applying, else warnings may throw
     return ["image", "loading", "objectFit", "alt", "objectPosition"].includes(
       prop
     )
