@@ -67,7 +67,7 @@ export const WordSelectorButtons: React.FC<IProps> = ({
         templateColumns="repeat(4, 1fr)"
         gap={2}
         whiteSpace="nowrap"
-        h={{ base: 100, md: 152 }}
+        h={{ base: 90, md: 152 }}
         overflow="hidden"
         w="full"
       >
@@ -95,7 +95,7 @@ export const WordSelectorButtons: React.FC<IProps> = ({
                 <Icon
                   as={LiaHandPointerSolid}
                   position="absolute"
-                  top="75%"
+                  top="65%"
                   left="65%"
                   fill="body.base"
                   zIndex="popover"

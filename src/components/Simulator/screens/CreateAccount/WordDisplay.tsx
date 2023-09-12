@@ -42,6 +42,8 @@ const wordStyleVariants = {
     bg: "body.light",
     color: "body.medium",
     px: 2,
+    border: "1px",
+    borderColor: "transparent",
   },
 } as const
 
