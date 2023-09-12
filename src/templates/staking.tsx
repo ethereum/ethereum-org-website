@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import {
   Badge,
@@ -71,6 +70,7 @@ import {
   Page,
   StyledButtonDropdown,
 } from "./use-cases"
+import GatsbyImage from "../components/GatsbyImage"
 
 // Apply styles for classes within markdown here
 const Divider = (props: ChildOnlyProp) => (
@@ -416,8 +416,7 @@ const StakingPage = ({
             isMobile
           />
         </Flex>
-        <Image
-          as={GatsbyImage}
+        <GatsbyImage
           flex="1 1 100%"
           bgRepeat="no-repeat"
           right={0}

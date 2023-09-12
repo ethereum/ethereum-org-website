@@ -2,7 +2,6 @@ import React, { ComponentProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Badge,
   Box,
@@ -59,6 +58,7 @@ import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
 import { ChildOnlyProp, Context } from "../types"
+import GatsbyImage, { GatsbyImageProps } from "../components/GatsbyImage"
 
 const commonHeadingProps: HeadingProps = {
   fontWeight: 700,
@@ -176,24 +176,25 @@ const TitleCard = (props: ChildOnlyProp) => {
 
 export const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
-const HeroImage = chakra(GatsbyImage, {
-  baseStyle: {
-    alignSelf: {
+const HeroImage: GatsbyImageProps = (props) => (
+  <GatsbyImage
+    alignSelf={{
       base: "center",
       lg: "normal",
-    },
-    backgroundSize: "cover",
-    flex: "1 1 100%",
-    right: 0,
-    bottom: 0,
-    width: "full",
-    overflow: "initial",
-    maxH: {
+    }}
+    backgroundSize="cover"
+    flex="1 1 100%"
+    right={0}
+    bottom={0}
+    width="full"
+    overflow="initial"
+    maxH={{
       base: "340px",
       lg: "full",
-    },
-  },
-})
+    }}
+    {...props}
+  />
+)
 
 export const Page = (props: FlexProps) => (
   <Flex

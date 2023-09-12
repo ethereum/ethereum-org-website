@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import {
   BackgroundProps,
   Box,
@@ -17,6 +17,7 @@ import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
 
 import Text from "./OldText"
+import GatsbyImage from "./GatsbyImage"
 
 export interface IProps extends ChakraProps {
   children?: React.ReactNode

@@ -1,7 +1,6 @@
 // Third-party libraries
 import React, { ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
@@ -41,6 +40,7 @@ import Pill from "../components/Pill"
 import Translation from "../components/Translation"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 

@@ -1,12 +1,12 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { Center } from "@chakra-ui/react"
 
 import OrderedList from "../OrderedList"
 import Translation from "../Translation"
+import GatsbyImage from "../GatsbyImage"
 
 import { getImage } from "../../utils/image"
-import { Center, Image } from "@chakra-ui/react"
 
 export interface IProps {}
 
@@ -50,7 +50,7 @@ const StakingHowSoloWorks: React.FC<IProps> = () => {
       justifyContent="space-between"
     >
       <OrderedList listData={items} />
-      <Image as={GatsbyImage} image={getImage(image)!} alt="" />
+      <GatsbyImage image={getImage(image)!} alt="" />
     </Center>
   )
 }

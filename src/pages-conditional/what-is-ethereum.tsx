@@ -1,5 +1,4 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -40,6 +39,7 @@ import StatErrorMessage from "../components/StatErrorMessage"
 import StatLoadingMessage from "../components/StatLoadingMessage"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 import { getLocaleForNumberFormat } from "../utils/translations"
 import { Lang } from "../utils/languages"

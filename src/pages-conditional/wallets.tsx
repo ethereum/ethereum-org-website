@@ -1,6 +1,5 @@
 import React from "react"
 import { Center, Box, Flex, BoxProps, Img } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
@@ -17,6 +16,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 import { StyledCard } from "../pages/get-eth"
 
 import { getImage, getSrc } from "../utils/image"
@@ -323,8 +323,7 @@ const WalletsPage = ({
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               image={getImage(data.findWallet)!}
               alt=""
               mt={8}

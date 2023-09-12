@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useTheme } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { Box, Flex, Icon } from "@chakra-ui/react"
 import axios from "axios"
 
@@ -11,6 +10,7 @@ import InlineLink from "./Link"
 import Tooltip from "./Tooltip"
 import Text from "./OldText"
 import OldHeading from "./OldHeading"
+import GatsbyImage from "./GatsbyImage"
 
 import { getImage } from "../utils/image"
 import { MdInfoOutline } from "react-icons/md"
@@ -175,21 +175,13 @@ const BugBountyPoints: React.FC<IProps> = () => {
             </Text>
           </Flex>
           <Flex align="center" wrap="wrap">
-            <GatsbyImage
-              image={getImage(data.dai)!}
-              style={{ marginRight: "0.5rem" }}
-              alt=""
-            />
+            <GatsbyImage image={getImage(data.dai)!} alt="" me="2" />
             <Text fontSize="xl" m={0} mr={4}>
               {pointsInDAI} DAI
             </Text>
           </Flex>
           <Flex align="center" wrap="wrap">
-            <GatsbyImage
-              image={getImage(ethImage)!}
-              style={{ marginRight: "0.5rem" }}
-              alt=""
-            />
+            <GatsbyImage image={getImage(ethImage)!} alt="" me="2" />
             <Text fontSize="xl" m={0} mr={4}>
               {pointsInETH} ETH
             </Text>

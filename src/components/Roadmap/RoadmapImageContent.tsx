@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { Center, Heading, Flex, Image, Stack } from "@chakra-ui/react"
+import { Center, Heading, Flex, Stack } from "@chakra-ui/react"
+import GatsbyImage from "../GatsbyImage"
 
 import { getImage } from "../../utils/image"
 
@@ -32,8 +32,7 @@ const RoadmapImageContent: React.FC<IProps> = ({ children, title }) => {
       <Flex flexDir={{ base: "column", lg: "row" }}>
         <Stack mb={4}>{children}</Stack>
         <Center>
-          <Image
-            as={GatsbyImage}
+          <GatsbyImage
             image={getImage(data.robot)!}
             alt="Ethereum Wallet"
             w="350px"

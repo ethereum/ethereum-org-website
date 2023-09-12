@@ -1,12 +1,13 @@
 // Libraries
 import React from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, FlexProps, Image } from "@chakra-ui/react"
+import { IGatsbyImageData } from "gatsby-plugin-image"
+import { Flex, FlexProps } from "@chakra-ui/react"
 
 // Components
 import Translation from "./Translation"
 import Emoji from "./Emoji"
 import Text from "./OldText"
+import GatsbyImage from "./GatsbyImage"
 import OldHeading from "./OldHeading"
 
 import type { TranslationKey } from "../utils/translations"
@@ -49,8 +50,7 @@ const Callout: React.FC<IProps> = ({
     {...rest}
   >
     {image && (
-      <Image
-        as={GatsbyImage}
+      <GatsbyImage
         image={image}
         alt={alt || ""}
         mt={-40}
