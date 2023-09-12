@@ -6,17 +6,51 @@ import {
   PopoverArrow,
   PopoverBody,
   useBreakpointValue,
+  Image,
+  useColorModeValue,
 } from "@chakra-ui/react"
-
 import React from "react"
-import { Box, Flex, Icon, Text } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion"
-import { QrCodeEthereumOrg } from "../../icons"
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 
 const MotionBox = motion(Box)
 
 export const ReceiveEther = () => {
+  const images = useStaticQuery(graphql`
+    {
+      qrLight: file(relativePath: { eq: "qr-code-ethereum-org-light.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 128
+            height: 128
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
+        }
+      }
+      qrDark: file(relativePath: { eq: "qr-code-ethereum-org-dark.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 128
+            height: 128
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
+        }
+      }
+    }
+  `)
+
+  const qrImage = useColorModeValue(
+    getImage(images.qrLight),
+    getImage(images.qrDark)
+  )
+
   const SPACING = useBreakpointValue({ base: 3, md: 5 })
   const QR_SIZE = useBreakpointValue({ base: 100, md: 150 })
   return (
@@ -43,13 +77,12 @@ export const ReceiveEther = () => {
       </Text>
       {/* QR Code */}
       <Flex justify="center" mb={SPACING}>
-        <Icon
-          as={QrCodeEthereumOrg}
+        <Image
+          as={GatsbyImage}
+          image={qrImage}
           w={QR_SIZE}
           h={QR_SIZE}
-          color="body.base"
           p={3}
-          bg="background.base"
           borderRadius="base"
         />
       </Flex>
