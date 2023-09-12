@@ -36,7 +36,7 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
       ),
     [ethPrice]
   )
-  const [activeTabIndex, setActiveTabIndex] = useState(0)
+  const [activeTabIndex, setActiveTabIndex] = useState(1)
   const nfts = useNFT()
   const fadeInProps = {
     initial: { opacity: 0 },

@@ -1,5 +1,11 @@
 import React from "react"
-import { ListItem, OrderedList, Text, UnorderedList } from "@chakra-ui/react"
+import {
+  ListItem,
+  OrderedList,
+  Text as ChakraText,
+  TextProps,
+  UnorderedList,
+} from "@chakra-ui/react"
 import Emoji from "../components/Emoji"
 import type { SimulatorData } from "../components/Simulator/types"
 import {
@@ -21,6 +27,8 @@ import Link from "../components/Link"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import { CONTACTS } from "../components/Simulator/screens/SendReceive/constants"
 
+const Text: React.FC<TextProps> = (props) => <ChakraText mb={4} {...props} />
+
 export const walletOnboardingSimData: SimulatorData = {
   [CREATE_ACCOUNT]: {
     title: "Create account",
@@ -31,9 +39,7 @@ export const walletOnboardingSimData: SimulatorData = {
         header: "Begin your journey by downloading a wallet",
         description: (
           <>
-            <Text>
-              To get started, you&apos;ll need to download a wallet app.
-            </Text>
+            <Text>To get started, you'll need to download a wallet app.</Text>
             <Text>
               Most people use mobile apps, but desktop apps and browser
               extensions are also available.

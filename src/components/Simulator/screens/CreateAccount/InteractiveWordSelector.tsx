@@ -24,7 +24,7 @@ export const InteractiveWordSelector: React.FC<IProps> = ({
         lineHeight={8}
         fontWeight="bold"
         px={{ base: 4, md: 8 }}
-        pb={4}
+        mb={4}
       >
         Repeat the words
       </Text>
