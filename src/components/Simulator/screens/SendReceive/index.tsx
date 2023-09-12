@@ -24,6 +24,7 @@ export const SendReceive: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const ethReceiveAmount = USD_RECEIVE_AMOUNT / ethPrice
   const [chosenAmount, setChosenAmount] = useState(0)
+  const ethChosenAmount = chosenAmount / ethPrice
   const [recipient, setRecipient] = useState<string | null>(null)
   const ethAfterTransfer = Math.max(
     ethReceiveAmount - chosenAmount / ethPrice - ETH_TRANSFER_FEE,
@@ -88,7 +89,14 @@ export const SendReceive: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
           ethAvailable={ethReceiveAmount}
         />
       )}
-      {[6].includes(step) && <Success tokenBalances={tokenBalancesAfterSend} />}
+      {[6].includes(step) && (
+        <Success
+          tokenBalances={tokenBalancesAfterSend}
+          ethPrice={ethPrice}
+          sentEthAmount={ethChosenAmount}
+          recipient={recipient!}
+        />
+      )}
       {[1, 3, 5].includes(step) && (
         <ProgressCta
           isAnimated={step === 0}

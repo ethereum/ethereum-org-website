@@ -51,8 +51,8 @@ export const ReceiveEther = () => {
     getImage(images.qrDark)
   )
 
-  const SPACING = useBreakpointValue({ base: 3, md: 5 })
-  const QR_SIZE = useBreakpointValue({ base: 100, md: 150 })
+  const SPACING = { base: 3, md: 5 }
+  const QR_SIZE = { base: "80px", md: "120px" }
   return (
     <MotionBox
       initial={{ opacity: 0 }}
@@ -80,8 +80,8 @@ export const ReceiveEther = () => {
         <Image
           as={GatsbyImage}
           image={qrImage}
-          w={QR_SIZE}
-          h={QR_SIZE}
+          maxW={QR_SIZE}
+          maxH={QR_SIZE}
           p={3}
           borderRadius="base"
         />
