@@ -6,13 +6,13 @@ import {
   CloseButton,
   Flex,
   Heading,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 
 // Component
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 export interface IProps {
   shouldShow: boolean
@@ -79,7 +79,6 @@ const TranslationBannerLegal: React.FC<IProps> = ({
               fontSize={{ base: "1.25rem", md: "1.5rem" }}
               fontWeight="bold"
               lineHeight="100%"
-              my={0}
             >
               <Translation id="translation-banner-no-bugs-title" />
               <Emoji

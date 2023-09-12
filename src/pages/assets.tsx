@@ -17,10 +17,11 @@ import {
 
 // Components
 import AssetDownload from "../components/AssetDownload"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
+import OldHeading from "../components/OldHeading"
 
 // Types
 import type { ChildOnlyProp, Context } from "../types"
@@ -48,7 +49,7 @@ const H2 = (prop: ChildOnlyProp & HeadingProps) => (
 )
 
 const H3 = (prop: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
@@ -80,24 +81,24 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             />
           </Center>
           <Center>
-            <h1>
+            <Heading as="h1" size="2xl" my={8}>
               <Translation id="page-assets-h1" />
-            </h1>
+            </Heading>
           </Center>
           <Center>
-            <Link to="/assets/#illustrations">
+            <InlineLink to="/assets/#illustrations">
               <Translation id="page-assets-illustrations" />
-            </Link>
+            </InlineLink>
           </Center>
           <Center>
-            <Link to="/assets/#historical">
+            <InlineLink to="/assets/#historical">
               <Translation id="page-assets-historical-artwork" />
-            </Link>
+            </InlineLink>
           </Center>
           <Center>
-            <Link to="/assets/#brand">
+            <InlineLink to="/assets/#brand">
               <Translation id="page-assets-ethereum-brand-assets" />
-            </Link>
+            </InlineLink>
           </Center>
         </Flex>
 

@@ -1,14 +1,6 @@
 // Libraries
 import React, { useState, useRef } from "react"
-import {
-  Flex,
-  Box,
-  Image,
-  Icon,
-  Text,
-  Heading,
-  useTheme,
-} from "@chakra-ui/react"
+import { Flex, Box, Image, Icon, useTheme } from "@chakra-ui/react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -22,6 +14,8 @@ import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
 import WalletTable from "../../components/FindWallet/WalletTable"
+import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
 
 // Data
 import walletData from "../../data/wallets/wallet-data"
@@ -144,13 +138,13 @@ const FindWalletPage = ({ data, location }) => {
       >
         <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
           <Breadcrumbs slug={location.pathname} />
-          <Heading
+          <OldHeading
             as="h1"
             fontSize={{ base: "2.5rem", md: "5xl" }}
             lineHeight={1.4}
           >
             <Translation id="page-find-wallet-title" />
-          </Heading>
+          </OldHeading>
           <Subtitle>
             <Translation id="page-find-wallet-description" />
           </Subtitle>
