@@ -22,7 +22,7 @@ There are a number of ways for you to contribute to ethereum.org. Click on the c
 
 1. [Content contributions](docs/content-contributions.md)
 2. [Code contributions](docs/code-contributions.md)
-3. [Design contributions](docs/design-contributions.md)
+3. [Design contributions](https://ethereum.org/en/contributing/design/#design-contributions)
 4. [Translation program contributions](docs/translation-program.md)
 5. [QA testing contributions](docs/testing-contributions.md)
 
