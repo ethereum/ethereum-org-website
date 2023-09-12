@@ -67,7 +67,7 @@ import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp, Context } from "../types"
 import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
-import GatsbyImage, { GatsbyImageProps } from "../components/GatsbyImage"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid
@@ -91,7 +91,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const HeroImage: GatsbyImageProps = (props) => (
+const HeroImage: GatsbyImageType = (props) => (
   <GatsbyImage
     alignSelf={{
       base: "center",

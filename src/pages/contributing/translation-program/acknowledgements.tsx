@@ -24,7 +24,7 @@ import FeedbackCard from "../../../components/FeedbackCard"
 import Text from "../../../components/OldText"
 import OldHeading from "../../../components/OldHeading"
 import GatsbyImage, {
-  type GatsbyImageProps,
+  type GatsbyImageType,
 } from "../../../components/GatsbyImage"
 
 // Utils
@@ -36,7 +36,7 @@ const ContentHeading = (props: HeadingProps) => (
   <OldHeading lineHeight={1.4} {...props} />
 )
 
-const Image: GatsbyImageProps = (props) => {
+const Image: GatsbyImageType = (props) => {
   return (
     <GatsbyImage
       maxH={{ base: "300px", sm: "none" }}

@@ -51,7 +51,7 @@ import QuizWidget from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
-import GatsbyImage, { GatsbyImageProps } from "../components/GatsbyImage"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 import {
   MobileButton,
   MobileButtonDropdown,
@@ -101,7 +101,7 @@ const InfoColumn = (props: ChildOnlyProp) => (
   />
 )
 
-// Apply styles for classes within markdown here
+// Apply styles for classes within markdown here[]
 const ContentContainer = (props: BoxProps) => (
   <Box
     as="article"
@@ -271,7 +271,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const Image: GatsbyImageProps = (props) => (
+const Image: GatsbyImageType = (props) => (
   <GatsbyImage
     flex="1 1 100%"
     maxW="816px"

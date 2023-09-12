@@ -52,13 +52,13 @@ import QuizWidget from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
 import { ChildOnlyProp, Context } from "../types"
-import GatsbyImage, { GatsbyImageProps } from "../components/GatsbyImage"
 
 const commonHeadingProps: HeadingProps = {
   fontWeight: 700,
@@ -176,7 +176,7 @@ const TitleCard = (props: ChildOnlyProp) => {
 
 export const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
-const HeroImage: GatsbyImageProps = (props) => (
+const HeroImage: GatsbyImageType = (props) => (
   <GatsbyImage
     alignSelf={{
       base: "center",

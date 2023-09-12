@@ -23,7 +23,7 @@ import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
-import GatsbyImage, { GatsbyImageProps } from "../components/GatsbyImage"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 import { ChildOnlyProp, Context } from "../types"
 
@@ -148,9 +148,8 @@ const components = {
   InfoBanner,
 }
 
-const HeroImage: GatsbyImageProps = (props) => (
+const HeroImage: GatsbyImageType = (props) => (
   <GatsbyImage
-    alt=""
     alignSelf={{
       base: "center",
       lg: "normal",
@@ -174,7 +173,7 @@ const EventPage = ({
   return (
     <Box position="relative" width="full">
       <HeroContainer>
-        <HeroImage image={getImage(mdx?.frontmatter?.image)!} />
+        <HeroImage alt="" image={getImage(mdx?.frontmatter?.image)!} />
         <Box
           position="absolute"
           left="32px"
