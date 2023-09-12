@@ -271,7 +271,7 @@ export const walletOnboardingSimData: SimulatorData = {
               Ethereum doesn't discriminate, and never stops, allowing you full
               control over your funds—24/7.
             </Text>
-            <Text>Select an amount to send then click "Next".</Text>
+            <Text>Select an amount to send then click "Select recipient."</Text>
           </>
         ),
       },
