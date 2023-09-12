@@ -172,6 +172,18 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </Text>
           <br />
           <Box as={EthPriceCard} mb={8} />
+          <ButtonLink
+            to="#country-picker"
+            onClick={() =>
+              trackCustomEvent({
+                eventCategory: "Search by country button",
+                eventAction: "click",
+                eventName: "search_by_country",
+              })
+            }
+          >
+            <Translation id="page-get-eth-search-by-country" />
+          </ButtonLink>
         </Flex>
       </Flex>
       <Flex flexWrap="wrap" mx={{ base: 4, lg: 8 }} my={{ base: 4, lg: 0 }}>
