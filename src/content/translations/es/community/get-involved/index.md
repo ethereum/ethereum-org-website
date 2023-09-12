@@ -41,7 +41,7 @@ Si no es desarrollador, puede ser difícil saber por dónde empezar en Ethereum.
 ### Escriba contenido sobre Ethereum {#write-content}
 
 - Ethereum necesita buenos escritores que puedan explicar su valor en un lenguaje sencillo.
-- ¿Aún no está listo para publicar sus propios artículos? Contemple la posibilidad de añadir contenidos a los ya existentes sobre recursos de la comunidad o de proponer nuevos contenidos para ethereum.org.
+- ¿Aún no está listo para publicar sus propios artículos? Contemple la posibilidad de añadir contenidos a los ya existentes sobre recursos de la comunidad [EthHub](/contributing/) o de proponer nuevos contenidos para ethereum.org.
 
 ### Ofrézcase a elaborar actas de reuniones comunitarias {#take-notes}
 
