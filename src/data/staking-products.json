@@ -382,7 +382,7 @@
       "feePercentage": 5,
       "tokens": [],
       "isFoss": true,
-      "hasBugBounty": true,
+      "hasBugBounty": false,
       "isTrustless": true,
       "isPermissionless": true,
       "pctMajorityExecutionClient": null,
