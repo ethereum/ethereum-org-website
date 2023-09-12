@@ -1,11 +1,21 @@
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  Flex,
+  Icon,
+  Popover,
+  PopoverBody,
+  PopoverContent,
+  PopoverTrigger,
+  Text,
+} from "@chakra-ui/react"
 import React from "react"
 import { PiMagnifyingGlass } from "react-icons/pi"
 import { CategoryTabs } from "../../WalletHome/CategoryTabs"
 import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
 import type { SimulatorNavProps } from "../../interfaces"
 import { CONTACTS } from "./constants"
-import { Contact } from "../../WalletHome/interfaces"
+import { DemoOnlyPopover } from "../../DemoOnlyPopover"
 
 interface IProps extends SimulatorNavProps {
   setRecipient: (name: string) => void
@@ -21,24 +31,32 @@ export const SendFromContacts: React.FC<IProps> = ({ nav, setRecipient }) => {
         <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={8}>
           Choose recipient
         </Text>
-        <Button
-          variant="outline"
-          isDisabled
-          leftIcon={<Icon as={PiMagnifyingGlass} />}
-          rightIcon={<Icon as={QrCodeIcon} />}
-          _disabled={{ color: "body.medium" }}
-          py={4}
-          pointerEvents="none"
-          fontSize="sm"
-          w="full"
-        >
-          <Text as="span" me="auto">
-            Address or contacts
-          </Text>
-        </Button>
+        <DemoOnlyPopover fontSize="sm">
+          <Button
+            variant="outline"
+            leftIcon={<Icon as={PiMagnifyingGlass} />}
+            rightIcon={<Icon as={QrCodeIcon} />}
+            color="disabled"
+            py={4}
+            w="full"
+            _hover={{
+              color: "disabled",
+              borderColor: "disabled",
+            }}
+            cursor="auto"
+          >
+            <Text as="span" me="auto">
+              Address or contacts
+            </Text>
+          </Button>
+        </DemoOnlyPopover>
       </Box>
       <Box py={8} px={6} bg="background.highlight" h="full">
-        <CategoryTabs categories={["My contacts", "Recent"]} activeIndex={1} />
+        <CategoryTabs
+          categories={["My contacts", "Recent"]}
+          activeIndex={1}
+          mb={4}
+        />
         <Flex direction="column" gap={4}>
           {CONTACTS.map(({ name, lastAction }, i) => (
             <Button

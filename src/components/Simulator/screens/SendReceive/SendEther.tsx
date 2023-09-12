@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
+import { DemoOnlyPopover } from "../../DemoOnlyPopover"
 import { EthTokenIcon } from "../../icons"
 
 interface IProps {
@@ -55,14 +56,11 @@ export const SendEther: React.FC<IProps> = ({
         <Text
           fontSize={{ base: "xl", md: "2xl" }}
           fontWeight="bold"
-          color="body.medium"
           mb={{ base: 4, md: 6 }}
         >
           Send
         </Text>
-        <Text color="body.medium" mb={{ base: 0, md: 6 }}>
-          How much do you want to send?
-        </Text>
+        <Text mb={{ base: 0, md: 6 }}>How much do you want to send?</Text>
       </Box>
       <Flex
         px={6}
@@ -75,32 +73,36 @@ export const SendEther: React.FC<IProps> = ({
         fontSize="xs"
       >
         {/* Left side: Displayed send amount */}
-        <Flex
-          alignItems="top"
-          flex={1}
-          fontWeight="bold"
-          color={chosenAmount > 0 ? "body.base" : "disabled"}
-        >
-          <Text fontSize="6xl" h="full" lineHeight="1em">
-            {formatChosenAmount}
-          </Text>
-        </Flex>
-        {/* Right side */}
-        <Flex direction="column" alignItems="end">
-          {/* Token selector pill */}
+        <DemoOnlyPopover placement="top">
           <Flex
-            px={2}
-            py={1}
-            mb={4}
-            borderRadius="full"
-            bg="body.light"
-            alignItems="center"
+            alignItems="top"
+            flex={1}
+            fontWeight="bold"
+            color={chosenAmount > 0 ? "body.base" : "disabled"}
           >
-            <Icon as={EthTokenIcon} fontSize="xl" me={1.5} />
-            <Text fontWeight="bold" m={0} color="body.base">
-              ETH
+            <Text fontSize="6xl" h="full" lineHeight="1em">
+              {formatChosenAmount}
             </Text>
           </Flex>
+        </DemoOnlyPopover>
+        {/* Right side */}
+        <Flex direction="column" alignItems="end">
+          <DemoOnlyPopover placement="top">
+            {/* Token selector pill */}
+            <Flex
+              px={2}
+              py={1}
+              mb={4}
+              borderRadius="full"
+              bg="body.light"
+              alignItems="center"
+            >
+              <Icon as={EthTokenIcon} fontSize="xl" me={1.5} />
+              <Text fontWeight="bold" m={0} color="body.base">
+                ETH
+              </Text>
+            </Flex>
+          </DemoOnlyPopover>
           {/* Balances */}
           <Text fontWeight="bold" m={0} lineHeight={1}>
             Balance: {usdAmount}
