@@ -50,8 +50,8 @@ export const walletOnboardingSimData: SimulatorData = {
         description: (
           <>
             <Text>
-              Mobile wallet apps can be downloaded and installed using app
-              stores.
+              Mobile wallet apps can be downloaded and installed using any app
+              store.
             </Text>
             <Text>
               Wallets provide an easy way to create an Ethereum account, and
@@ -211,7 +211,7 @@ export const walletOnboardingSimData: SimulatorData = {
     Screen: SendReceive,
     explanations: [
       {
-        header: "Receive and send digital assets from anywhere",
+        header: "Receive digital assets from anywhere",
         description: (
           <>
             <Text>
@@ -222,9 +222,10 @@ export const walletOnboardingSimData: SimulatorData = {
               on Ethereum.
             </Text>
             <Text>
-              Let's first look at how to receive some ETH to a new address.
+              Let's first look at how to receive Ether, Ethereum's native
+              currency.
             </Text>
-            <Text>Click "Receive" to see and share your address.</Text>
+            <Text>Click the "Receive" button to see how to receive funds.</Text>
           </>
         ),
       },

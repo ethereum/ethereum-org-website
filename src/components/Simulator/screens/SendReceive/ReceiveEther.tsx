@@ -39,7 +39,7 @@ export const ReceiveEther = () => {
         Receive assets
       </Text>
       <Text mb={SPACING}>
-        Share this QR code containing your address with others
+        Show this QR code containing your account address to the sender
       </Text>
       {/* QR Code */}
       <Flex justify="center" mb={SPACING}>
