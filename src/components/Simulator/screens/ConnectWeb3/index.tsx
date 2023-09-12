@@ -101,6 +101,7 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
                   textAlign="start"
                   alignItems="start"
                   gap={1}
+                  sx={{ button: { textDecoration: "none" } }}
                 >
                   <Text fontWeight="bold" fontSize="md" mb="auto" ms={2}>
                     Cool art
