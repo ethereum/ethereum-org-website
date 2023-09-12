@@ -18,7 +18,7 @@ We have a space to discuss all things ethereum.org – share your ideas or just 
 
 ## How to contribute to ethereum.org
 
-There are a number of ways for you to contribute to ethereum.org.
+There are a number of ways for you to contribute to ethereum.org. Click on the contribution type you are interested in for more information.
 
 1. [Content contributions](docs/content-contributions.md)
 2. [Code contributions](docs/code-contributions.md)
