@@ -36,20 +36,16 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 
 > The Proof of Attendance Protocol is a dapp that distributes badges in the form of ERC-721 tokens to prove you participated in an event. [More on POAPs](https://www.poap.xyz/).
 
-### ethereum.org 2022 Contributor POAP
+### ethereum.org 2023 Contributor POAP
 
-- If you have committed any changes in 2022 so far that were merged into our repo, you have a POAP waiting!
-- This includes our dedicated translators on Crowdin
+If you have committed any changes in 2023 so far that were merged into our repo, you have a [GitPOAP](https://www.gitpoap.io/) waiting! Check out your pull request for a claim message.
 
-  [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/CetY6Y4)
+If you have contributed translations to the translation program:
 
-- 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the `#🥇 | poaps` [channel](https://discord.com/channels/714888181740339261/804005643211898911)
-
+- Join our Discord server and paste a link to your Crowdin account in the `#🥇 | poaps` [channel](https://discord.com/channels/714888181740339261/804005643211898911). Crowdin contributors will be verified directly through Crowdin by our team.
 - A member of our team will verify the request and DM you with a personalized link to claim your own freshly minted POAP collectible!
 
-- To help with verification we request GitHub contributors connect their GitHub account with their Discord account (Discord > Settings > Connections > GitHub). Crowdin contributors will be verified directly through Crowdin by our team.
-
-- If you haven't contributed yet and would like to earn a POAP to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started!
+If you haven't contributed yet and would like to earn a POAP to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started!
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
