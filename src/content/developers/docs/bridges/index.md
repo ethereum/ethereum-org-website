@@ -91,7 +91,7 @@ For developers, there are many ways to add support for bridges:
    - Assessment and maintenance of bridges are hard and time-consuming.
    - Selecting one bridge creates a single point of failure and dependency.
    - The dapp is limited by the bridge’s capabilities.
-   - Bridges alone might not be enough. dapps might need DEXs to offer more functionality such as cross-chain swaps.
+   - Bridges alone might not be enough. Dapps might need DEXs to offer more functionality such as cross-chain swaps.
 
 4. **Integrating multiple bridges –** This solution solves many problems associated with integrating a single bridge. However, it also has limitations, as integrating multiple bridges is resource-consuming and creates technical and communication overheads for developers—the scarcest resource in crypto.
 

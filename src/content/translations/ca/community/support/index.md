@@ -62,7 +62,7 @@ Aquí teniu alguns exemples populars:
 
 Si esteu executant un node o un validador, aquí teniu algunes comunitats que es dediquen a ajudar-vos a començar.
 
-- [Discord EthStaker](https://discord.io/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
 - [Reddit d'EthStaker](https://www.reddit.com/r/ethstaker)
 
 La majoria dels equips que construeixen clients Ethereum també tenen espais públics i dedicats, on podeu trobar suport i fer preguntes.

@@ -62,7 +62,7 @@ Iată doar câteva exemple populare:
 
 Dacă rulați un nod sau un validator, iată câteva comunități dedicate să vă ofere ajutor să începeți.
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 Cele mai multe dintre echipele care construiesc clienți Ethereum au de asemenea spații dedicate, cu caracter public, unde puteți obține asistență și pune întrebări.

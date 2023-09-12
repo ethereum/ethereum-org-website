@@ -6,7 +6,6 @@ import {
   Button as ChakraButton,
   Flex,
   Img,
-  Text,
   useColorModeValue,
   useRadio,
   useRadioGroup,
@@ -15,6 +14,7 @@ import {
 // Components
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 export interface IProps {
   monthData: any

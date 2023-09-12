@@ -5,8 +5,6 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   Flex,
-  Heading,
-  Text,
   Img,
   Icon,
   Grid,
@@ -24,7 +22,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import GhostCard from "../components/GhostCard"
 import HorizontalCard from "../components/HorizontalCard"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
@@ -33,6 +31,8 @@ import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 import { getData } from "../utils/cache"
 import { getImage } from "../utils/image"
@@ -40,7 +40,7 @@ import { getImage } from "../utils/image"
 const tooltipContent = (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
+    <InlineLink to="https://www.coingecko.com/en/api">coingecko.com</InlineLink>
   </div>
 )
 
@@ -76,13 +76,17 @@ const Page = (props: FlexProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
-    fontSize={{ base: "xl", m: "2xl" }}
+    fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
     {...props}
   />
@@ -390,9 +394,9 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             </H2>
             <Text>
               <Translation id="page-stablecoins-prices-definition" />{" "}
-              <Link to="#how">
+              <InlineLink to="#how">
                 <Translation id="page-stablecoins-prices-definition-how" />
-              </Link>
+              </InlineLink>
             </Text>
           </Box>
         </Flex>
@@ -456,14 +460,14 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             </Text>
             <ul>
               <li>
-                <Link to="#how">
+                <InlineLink to="#how">
                   <Translation id="page-stablecoins-find-stablecoin-types-link" />
-                </Link>
+                </InlineLink>
               </li>
               <li>
-                <Link to="#explore">
+                <InlineLink to="#explore">
                   <Translation id="page-stablecoins-find-stablecoin-how-to-get-them" />
-                </Link>
+                </InlineLink>
               </li>
             </ul>
           </Box>
@@ -674,9 +678,9 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             </Text>
             <Text as="em">
               <Translation id="page-stablecoins-bank-apy-source" />{" "}
-              <Link to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
+              <InlineLink to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
                 <Translation id="page-stablecoins-bank-apy-source-link" />
-              </Link>
+              </InlineLink>
             </Text>
           </Box>
         </Flex>

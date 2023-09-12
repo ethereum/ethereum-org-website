@@ -4,11 +4,9 @@ import {
   Box,
   BoxProps,
   Flex,
-  Heading,
   HeadingProps,
   ListItem,
   SimpleGrid,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -17,16 +15,18 @@ import type { Context } from "../../../types"
 
 // Components
 import Breadcrumbs from "../../../components/Breadcrumbs"
-import Link from "../../../components/Link"
+import InlineLink from "../../../components/Link"
 import Translation from "../../../components/Translation"
 import PageMetadata from "../../../components/PageMetadata"
+import Text from "../../../components/OldText"
+import OldHeading from "../../../components/OldHeading"
 
 // Utils
 import FeedbackCard from "../../../components/FeedbackCard"
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 const ContentHeading = (props: HeadingProps) => (
-  <Heading lineHeight={1.4} {...props} />
+  <OldHeading lineHeight={1.4} {...props} />
 )
 
 const Contributors = ({
@@ -110,9 +110,9 @@ const Contributors = ({
         </Text>
         <Text>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
-          </Link>
+          </InlineLink>
           .
         </Text>
         <ContentHeading
@@ -138,9 +138,9 @@ const Contributors = ({
         </SimpleGrid>
         <Text>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
-          </Link>
+          </InlineLink>
           .
         </Text>
       </Content>
