@@ -1,7 +1,15 @@
 import React from "react"
-import { Center, Box, Flex, BoxProps, Img } from "@chakra-ui/react"
+import {
+  Center,
+  Box,
+  Flex,
+  BoxProps,
+  Img,
+  Text as ChakraText,
+  Heading,
+} from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
 import PageHero from "../components/PageHero"
@@ -17,10 +25,13 @@ import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import { Simulator } from "../components/Simulator"
 import { StyledCard } from "../pages/get-eth"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
+import { walletOnboardingSimData } from "../data/WalletSimulatorData"
+import { SIMULATOR_ID } from "../components/Simulator/constants"
 
 const GrayContainer = (props: BoxProps) => (
   <Box
@@ -172,8 +183,10 @@ const guides = [
 
 const WalletsPage = ({
   data,
+  location,
 }: PageProps<Queries.WalletsPageQuery, Context>) => {
   const { t } = useTranslation()
+  const { language } = useI18next()
 
   const heroContent = {
     title: t("page-wallets-title"),
@@ -190,6 +203,16 @@ const WalletsPage = ({
           eventAction: "click",
           eventName: "find wallet",
         },
+      },
+      {
+        to: `#${SIMULATOR_ID}`,
+        content: "Interactive tutorial",
+        matomo: {
+          eventCategory: "wallet hero buttons",
+          eventAction: "click",
+          eventName: "interactive tutorial",
+        },
+        variant: "outline",
       },
     ],
   }
@@ -300,42 +323,66 @@ const WalletsPage = ({
           </Box>
         </RightColumn>
       </TwoColumnContent>
-      <GrayContainer
-        my={12}
-        bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
+      {language === "en" ? (
+        <Content my={20} px={0}>
+          <Simulator location={location} data={walletOnboardingSimData}>
+            <ChakraText
+              fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
+              fontStyle="italic"
+              color="body.medium"
+              mb={2}
+            >
+              Interactive tutorial
+            </ChakraText>
+            <Heading
+              as="h2"
+              size={{ base: "xl", lg: "2xl" }}
+              lineHeight="115%"
+              fontWeight="bold"
+              m={0}
+            >
+              How to use a wallet
+            </Heading>
+          </Simulator>
+        </Content>
+      ) : (
+        <GrayContainer
+          my={12}
+          bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
     rgba(134, 168, 231, 0.2) 58.46%,
     rgba(145, 234, 228, 0.2) 97.05%)"
-      >
-        <Content>
-          <Flex flexDirection="column" alignItems="center" mb="8">
-            <H2>
-              <Translation id="page-wallets-features-title" />
-            </H2>
-            <Box
-              fontSize="xl"
-              lineHeight={1.4}
-              color="text"
-              textAlign="center"
-              mb={6}
-            >
-              <Translation id="page-wallets-features-desc" />
-            </Box>
-            <ButtonLink to="/wallets/find-wallet/">
-              <Translation id="page-wallets-find-wallet-btn" />
-            </ButtonLink>
-            <Img
-              as={GatsbyImage}
-              image={getImage(data.findWallet)!}
-              alt=""
-              mt={8}
-              maxW="800px"
-              backgroundSize="cover"
-              backgroundRepeat="no-repeat"
-              w="full"
-            />
-          </Flex>
-        </Content>
-      </GrayContainer>
+        >
+          <Content>
+            <Flex flexDirection="column" alignItems="center" mb="8">
+              <H2>
+                <Translation id="page-wallets-features-title" />
+              </H2>
+              <Box
+                fontSize="xl"
+                lineHeight={1.4}
+                color="text"
+                textAlign="center"
+                mb={6}
+              >
+                <Translation id="page-wallets-features-desc" />
+              </Box>
+              <ButtonLink to="/wallets/find-wallet/">
+                <Translation id="page-wallets-find-wallet-btn" />
+              </ButtonLink>
+              <Img
+                as={GatsbyImage}
+                image={getImage(data.findWallet)!}
+                alt=""
+                mt={8}
+                maxW="800px"
+                backgroundSize="cover"
+                backgroundRepeat="no-repeat"
+                w="full"
+              />
+            </Flex>
+          </Content>
+        </GrayContainer>
+      )}
       <TwoColumnContent>
         <LeftColumn>
           <H2>
@@ -474,7 +521,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-wallets", "learn-quizzes", "common"] }
+        ns: { in: ["page-wallets", "learn-quizzes", "common", "glossary"] }
       }
     ) {
       edges {
