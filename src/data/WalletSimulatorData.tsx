@@ -94,9 +94,8 @@ export const walletOnboardingSimData: SimulatorData = {
         description: (
           <>
             <Text>
-              Sometimes called a "seed phrase", this unique sequence of 12-24
-              words is used to generate new accounts and recover your existing
-              accounts.
+              You and only you control this phrase, so it is critical to take
+              steps to backup and secure it.
             </Text>
             <Text>
               Read carefully and click "I understand" to see and backup your
@@ -128,6 +127,7 @@ export const walletOnboardingSimData: SimulatorData = {
                 <Emoji text="✅" me={2} /> Store it in a safe place (consider
                 multiple backups)
               </ListItem>
+              {/* TODO: Add link for seed phrase further reading */}
               {/* <ListItem>
                 <Emoji text="✅" me={2} />{" "}
                 <Link href="#TODO-link-out">
@@ -152,10 +152,6 @@ export const walletOnboardingSimData: SimulatorData = {
                 Saving it in a file on your computer
               </ListItem>
             </UnorderedList>
-            <Text>
-              Feels old-fashioned, but{" "}
-              <em>some things we don't want online!</em>
-            </Text>
           </>
         ),
       },
@@ -164,21 +160,16 @@ export const walletOnboardingSimData: SimulatorData = {
         description: (
           <>
             <Text>
-              Since you and only you control this phrase, it is critical to take
-              steps to backup and secure it.
+              This is done on initial setup only, but is <strong>not</strong>{" "}
+              required every time.
             </Text>
             <Text>
               <strong>Keep this private!</strong> Nobody from customer service
               should <em>ever</em> ask you for this.
             </Text>
             <Text>
-              Wallets usually ask you to repeat this on initial setup to ensure
-              you've backed it up, but is <strong>not</strong> needed every
-              time.
-            </Text>
-            <Text>
-              You're almost done! Click the words in the correct order to prove
-              you've backed up your phrase.
+              Click the words in the correct order to prove you've backed up
+              your phrase.
             </Text>
           </>
         ),
@@ -186,13 +177,10 @@ export const walletOnboardingSimData: SimulatorData = {
       {
         header: "Thats it! Welcome to Ethereum 🎉",
         description: (
-          <>
-            <Text>That's all it takes to create an Ethereum account!</Text>
-            <Text>
-              In the next lesson we'll learn how to use your new account to
-              receive and send some funds.
-            </Text>
-          </>
+          <Text>
+            In the next lesson we'll learn how to use your new account to
+            receive and send some funds.
+          </Text>
         ),
       },
     ],
@@ -207,7 +195,7 @@ export const walletOnboardingSimData: SimulatorData = {
     ],
     finalCtaLink: {
       label: "Download a real wallet",
-      href: "/wallets/find-wallet/",
+      href: "https://ethereum.org/wallets/find-wallet/", // Full path to treat as external
     },
     nextPathId: SEND_RECEIVE,
   },
@@ -240,23 +228,20 @@ export const walletOnboardingSimData: SimulatorData = {
         description: (
           <>
             <Text>
-              Your address is a <em>public</em> identifier for your
+              Your address is a <em>sharable</em> identifier for your
               account—share this with others to receive tokens.
             </Text>
             <Text>
               An Ethereum address is like a transparent public dropbox, with
-              your own unique number on it—anyone can see in, or make a deposit,
-              but only you have the key to unlock and use what's inside.
-            </Text>
-            <Text>
-              Your wallet holds the key to this lockbox, not the contents
-              themselves.
+              your own unique number on it—anyone can see in, or put stuff
+              inside, but only you have the ability to unlock and use its
+              contents.
             </Text>
           </>
         ),
       },
       {
-        header: "A family member sent you ETH! Let's send some back",
+        header: "You received some ether! Now let's send some",
         description: (
           <>
             <Text>
@@ -269,7 +254,7 @@ export const walletOnboardingSimData: SimulatorData = {
               address—receiving is free. <Emoji text="😁" />
             </Text>
             <Text>
-              Let's try sending some funds back by clicking the "Send" button.
+              Let's try sending some funds by clicking the "Send" button.
             </Text>
           </>
         ),
@@ -279,8 +264,8 @@ export const walletOnboardingSimData: SimulatorData = {
         description: (
           <>
             <Text>
-              Unlike with traditional banking, there are no borders, hidden fees
-              or third parties intervening and stopping your transactions.
+              Unlike with traditional banking, there are no borders, or third
+              parties intervening and stopping your transactions.
             </Text>
             <Text>
               Ethereum doesn't discriminate, and never stops, allowing you full
@@ -334,7 +319,7 @@ export const walletOnboardingSimData: SimulatorData = {
     ctaLabels: ["", "Share address", "", "Select recipient", "", "Send now"],
     finalCtaLink: {
       label: "Download a real wallet",
-      href: "/wallets/find-wallet/",
+      href: "https://ethereum.org/wallets/find-wallet/", // Full path to treat as external
     },
     nextPathId: CONNECT_WEB3,
   },
@@ -348,13 +333,11 @@ export const walletOnboardingSimData: SimulatorData = {
         description: (
           <>
             <Text>
-              Assets stored on Ethereum can be accessed from any application,
-              adding portability to your accounts.
+              Your account is universal across all Ethereum and
+              Ethereum-compatible applications.
             </Text>
             <Text>
-              The same account address will also represent your identity on many
-              different Ethereum compatible blockchains such as Arbitrum,
-              Polygon or Optimism.
+              There is no need to create a new account for each service.
             </Text>
           </>
         ),
@@ -364,28 +347,29 @@ export const walletOnboardingSimData: SimulatorData = {
         description: (
           <>
             <Text>
-              Assets stored on Ethereum can be accessed from any application,
-              adding portability to your accounts.
-            </Text>
-            <Text>
-              The same account address will also represent your identity on many
+              The same account address will represent your identity on many
               different Ethereum compatible blockchains such as Arbitrum,
               Polygon or Optimism.
+            </Text>
+            <Text>
+              Assets stored on-chain can be accessed from any application.
             </Text>
           </>
         ),
       },
       {
-        header:
-          "No need to share any phone number, e-mail, or other identifying information",
+        header: "Personal identifying information is not shared",
         description: (
-          <Text>
-            Your public Ethereum address serves as a way to identify yourself,
-            and can be authenticated using your wallet. No need to create a new
-            account—you already own one.
-          </Text>
+          <>
+            <Text>Your private information stays private.</Text>
+            <Text>
+              Your personal information, such as email or phone number, is not
+              needed to use Web3 apps—you only need a wallet.
+            </Text>
+          </>
         ),
       },
+
       {
         header:
           "No geographical or political discrimination against who can use Ethereum services",
@@ -428,10 +412,15 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
     ],
-    ctaLabels: ["Connect wallet", "Connect to app", "Done", "Finished"],
+    ctaLabels: [
+      "Connect wallet",
+      "Connect to app",
+      "Go to account",
+      "Finished",
+    ],
     finalCtaLink: {
       label: "Get a wallet",
-      href: "/wallets/find-wallet/",
+      href: "https://ethereum.org/wallets/find-wallet/", // Full path to treat as external
       isPrimary: true,
     },
   },
