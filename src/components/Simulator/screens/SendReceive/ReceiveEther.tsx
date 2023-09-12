@@ -76,7 +76,7 @@ export const ReceiveEther = () => {
         Show this QR code containing your account address to the sender
       </Text>
       {/* QR Code */}
-      <Flex justify="center" mb={SPACING}>
+      <Box w="fit-content" mx="auto" mb={SPACING} p={3} bg="background.base">
         <Image
           as={GatsbyImage}
           image={qrImage}
@@ -85,7 +85,7 @@ export const ReceiveEther = () => {
           p={3}
           borderRadius="base"
         />
-      </Flex>
+      </Box>
       <Flex
         borderRadius="base"
         border="1px"
