@@ -2,7 +2,7 @@
 title: "Some tricks used by scam tokens and how to detect them"
 description: In this tutorial we dissect a scam token to see some of the tricks that scammers play, how they implement them, and how we can detect them.
 author: Ori Pomerantz
-tags: ["scam", "solidity", "erc-20"]
+tags: ["scam", "solidity", "erc-20", "javascript", "typescript"]
 skill: intermediate
 published: 2023-09-15
 lang: en
@@ -53,7 +53,7 @@ abstract contract Ownable is Context {
 }
 ```
 
-The [`ARB` token contract](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code) does not have a privileged address directly. However, it does not need one. It sits behind a [`Proxy`](https://docs.openzeppelin.com/contracts/4.x/api/proxy) at [address `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code). That contract has an privileged address (see the fourth file, `ERC1967Upgrade.sol`) that be used for upgrades.
+The [`ARB` token contract](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code) does not have a privileged address directly. However, it does not need one. It sits behind a [`proxy`](https://docs.openzeppelin.com/contracts/4.x/api/proxy) at [address `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code). That contract has a privileged address (see the fourth file, `ERC1967Upgrade.sol`) that be used for upgrades.
 
 ```solidity
     /**
@@ -118,7 +118,7 @@ The suspicious part is:
 
 If the contract owner sends tokens, why does the `Transfer` event show they come from `deployer`? 
 
-However, there is a more important issue. Who calls this `_transfer` function? It can't be called from the outside, it is marked `interval`. And the code we habve doesn't include any calls to `_transfer`. Clearly, it is here as a decoy.
+However, there is a more important issue. Who calls this `_transfer` function? It can't be called from the outside, it is marked `internal`. And the code we have doesn't include any calls to `_transfer`. Clearly, it is here as a decoy.
 
 ```solidity
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
@@ -198,7 +198,7 @@ This restriction makes perfect sense, because we wouldn't want random accounts t
 }
 ```
 
-A function to transfer from a pool account to an array of receivers an array of amounts makes perfect sense. There are many use cases in which you'll want to distribute tokens from a single source to multiple destinations, such as payroll, airdrops, etc. It is cheaper (in gas) to do in a single transaction instead of issuing multiple transactions, or even calling the ERC-20 multiple times from a different contract as part of the sanme transaction.
+A function to transfer from a pool account to an array of receivers an array of amounts makes perfect sense. There are many use cases in which you'll want to distribute tokens from a single source to multiple destinations, such as payroll, airdrops, etc. It is cheaper (in gas) to do in a single transaction instead of issuing multiple transactions, or even calling the ERC-20 multiple times from a different contract as part of the same transaction.
 
 However, `dropNewTokens` doesn't do that. It emits [`Transfer` events](https://eips.ethereum.org/EIPS/eip-20#transfer-1), but does not actually transfer any tokens. There is no legitimate reason to confuse offchain applications by telling them of a transfer that did not really happen.
 
@@ -330,7 +330,7 @@ There are some tricks we can use to identify that an ERC-20 token is suspicious 
 
 This means that `Approval` events that approve spending from an [externally owned account](/developers/docs/accounts/#types-of-account) have to come from transactions that originate in that account, and whose destination is the ERC-20 contract. Any other kind of approval from an externally owned account is suspicious.
 
-Here is [a program that identifies this kind of event](https://github.com/qbzzt/20230915-scam-token-detection), using (viem)[https://viem.sh/] and (TypeScript)[https://www.typescriptlang.org/docs/], a JavaScript variant with type safety. To run it:
+Here is [a program that identifies this kind of event](https://github.com/qbzzt/20230915-scam-token-detection), using [viem](https://viem.sh/) and [TypeScript](https://www.typescriptlang.org/docs/), a JavaScript variant with type safety. To run it:
 
 1. Copy `.env.example` to `.env`.
 2. Edit `.env` to provide the URL to an Ethereum mainnet node.
@@ -400,13 +400,13 @@ This function gets the transaction receipt from an event. We need the receipt to
 const suspiciousApprovalEvent = async (ev : Event) : (Event | null) => {
 ```
 
-This is the most important function, the one that actually decides if an event is suspicious or not. The return type, `(Event | null)`, tells TypeScript that this function can return either an `Event` or `null`. We return `null` is the event is not suspicious.
+This is the most important function, the one that actually decides if an event is suspicious or not. The return type, `(Event | null)`, tells TypeScript that this function can return either an `Event` or `null`. We return `null` if the event is not suspicious.
 
 ```typescript
     const owner = ev.args._owner
 ```
 
-Viem has the field names, so it parsed the event for us. `_owner` is the owner of the tokens to be spent,
+Viem has the field names, so it parsed the event for us. `_owner` is the owner of the tokens to be spent.
 
 ```typescript
     // Approvals by contracts are not suspicious
@@ -414,7 +414,7 @@ Viem has the field names, so it parsed the event for us. `_owner` is the owner o
         return null
 ```
 
-If the owner is a contract, assume this approval is not suspicious. To check if a contract's approval is suspicious or not we'll need to trace the full execution of the transaction to see if it ever got to the owner contract, and if that contract called the ERC-20 contract directly. That is a lot more resource expensive than we'd like to do
+If the owner is a contract, assume this approval is not suspicious. To check if a contract's approval is suspicious or not we'll need to trace the full execution of the transaction to see if it ever got to the owner contract, and if that contract called the ERC-20 contract directly. That is a lot more resource expensive than we'd like to do.
 
 ```typescript
     const txn = await getEventTxn(ev)
