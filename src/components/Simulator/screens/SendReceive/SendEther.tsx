@@ -94,7 +94,7 @@ export const SendEther: React.FC<IProps> = ({
           <NotificationPopover
             placement="top"
             title="Example walkthrough"
-            content="ETH will be used here"
+            content="In this walkthrough you can only send ETH, but in real wallet you can send different tokens as well"
           >
             {/* Token selector pill */}
             <Flex

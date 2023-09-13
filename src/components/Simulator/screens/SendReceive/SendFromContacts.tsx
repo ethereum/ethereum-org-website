@@ -32,7 +32,6 @@ export const SendFromContacts: React.FC<IProps> = ({ nav, setRecipient }) => {
           Choose recipient
         </Text>
         <NotificationPopover
-          fontSize="xs"
           title="Example walkthrough"
           content={`Choose ${CONTACTS[0].name} from recent contacts`}
         >

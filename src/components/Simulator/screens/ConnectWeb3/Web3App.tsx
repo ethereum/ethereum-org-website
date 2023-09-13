@@ -9,6 +9,7 @@ import {
 import React from "react"
 import { GrMenu } from "react-icons/gr"
 import { EthGlyphIcon } from "../../icons"
+import { NotificationPopover } from "../../NotificationPopover"
 
 interface IProps extends BoxProps {}
 export const Web3App: React.FC<IProps> = ({ children, ...boxProps }) => {
@@ -21,10 +22,15 @@ export const Web3App: React.FC<IProps> = ({ children, ...boxProps }) => {
           app.example.com
         </Text>
       </Box>
-      <Flex justify="space-between" p={6} fontSize="4xl">
-        <Icon as={EthGlyphIcon} />
-        <Icon as={GrMenu} sx={{ path: { stroke: "body.base" } }} />
-      </Flex>
+      <NotificationPopover
+        title="Example walkthrough"
+        content="Try out a real Ethereum application when finished here"
+      >
+        <Flex p={6} fontSize="4xl" justify="space-between">
+          <Icon as={EthGlyphIcon} />
+          <Icon as={GrMenu} sx={{ path: { stroke: "body.base" } }} />
+        </Flex>
+      </NotificationPopover>
       <>{children}</>
     </Box>
   )

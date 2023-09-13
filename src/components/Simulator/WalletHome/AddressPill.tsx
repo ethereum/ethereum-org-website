@@ -10,8 +10,7 @@ interface IProps extends Omit<FlexProps, "children"> {
 export const AddressPill: React.FC<IProps> = ({ children, ...btnProps }) => (
   <NotificationPopover
     title="Example walkthrough"
-    content="Share your address (public identifier) from your own wallet when finished here."
-    fontSize="xs"
+    content="Share your address (public identifier) from your own wallet when finished here"
   >
     <Flex
       gap={2}
@@ -21,14 +20,14 @@ export const AddressPill: React.FC<IProps> = ({ children, ...btnProps }) => (
       color="disabled"
       border="1px"
       borderColor="border"
-      py={0}
+      py={1}
       px={2}
       alignSelf="center"
       fontSize="xs"
       {...btnProps}
     >
       <Text m={0}>{children ?? FAKE_DEMO_ADDRESS}</Text>
-      <Icon as={MdContentCopy} w={4} />
+      <Icon as={MdContentCopy} w={4} fontSize="lg" />
     </Flex>
   </NotificationPopover>
 )

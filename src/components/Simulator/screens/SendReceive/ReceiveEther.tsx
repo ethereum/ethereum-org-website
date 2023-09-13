@@ -79,8 +79,7 @@ export const ReceiveEther = () => {
       {/* QR Code */}
       <NotificationPopover
         title="Example walkthrough"
-        content="Share QR containing your address (public identifier) from your own wallet when finished here."
-        fontSize="xs"
+        content="Share QR containing your address (public identifier) from your own wallet when finished here"
         placement="top"
       >
         <Box w="fit-content" mx="auto" mb={SPACING} p={3} bg="background.base">
@@ -117,8 +116,7 @@ export const ReceiveEther = () => {
         </Box>
         <NotificationPopover
           title="Example walkthrough"
-          content="Share your address (public identifier) from your own wallet when finished here."
-          fontSize="xs"
+          content="Share your address (public identifier) from your own wallet when finished here"
           placement="top-start"
         >
           <Button
