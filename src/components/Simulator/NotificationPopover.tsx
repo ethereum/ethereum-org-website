@@ -5,6 +5,9 @@ import {
   PopoverBody,
   PopoverContentProps,
   PopoverProps,
+  PopoverHeader,
+  PopoverCloseButton,
+  Flex,
 } from "@chakra-ui/react"
 import React, { type ReactNode } from "react"
 
@@ -13,9 +16,11 @@ interface IProps
     Pick<PopoverProps, "placement"> {
   children: ReactNode
 }
-export const DemoOnlyPopover: React.FC<IProps> = ({
+export const NotificationPopover: React.FC<IProps> = ({
   placement,
   children,
+  content,
+  title,
   ...restProps
 }) => (
   <Popover placement={placement}>
@@ -24,12 +29,20 @@ export const DemoOnlyPopover: React.FC<IProps> = ({
       bg="background.highlight"
       px={4}
       py={2}
-      maxW={{ base: "calc(100vw - 3rem)", sm: "calc(100vw - 5rem)" }}
+      maxW="15rem"
       borderRadius="base"
       boxShadow="tooltip"
+      position="relative"
+      isolation="isolate"
       {...restProps}
     >
-      <PopoverBody>Demo only! Select a preset</PopoverBody>
+      <Flex gap={2} zIndex={100000000}>
+        <PopoverHeader fontWeight="bold" mb={2} flex={1} mt={0.5}>
+          {title || ""}
+        </PopoverHeader>
+        <PopoverCloseButton ms="auto" />
+      </Flex>
+      <PopoverBody>{content}</PopoverBody>
     </PopoverContent>
   </Popover>
 )
