@@ -1,13 +1,17 @@
+import { FC, RefAttributes } from "react"
 import {
   Icon,
-  Link as ChakraLink,
-  LinkProps,
-  useTheme,
   VisuallyHidden,
+  forwardRef,
+  chakra,
+  useStyleConfig,
+  omitThemingProps,
+  HTMLChakraProps,
+  ThemingProps,
 } from "@chakra-ui/react"
 import { RxExternalLink } from "react-icons/rx"
 import { useRouter } from "next/router"
-import NextLink from "next/link"
+import NextLink, { type LinkProps as NextLinkProps } from "next/link"
 
 // import { Lang } from "../utils/languages"
 // import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
@@ -17,7 +21,8 @@ import { getRelativePath } from "@/lib/utils/relativePath"
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 // import { Direction } from "../types"
 
-export interface IBaseProps {
+type BaseProps = {
+  /** @deprecated Use `href` prop instead */
   to?: string
   href?: string
   // language?: Lang
@@ -25,14 +30,44 @@ export interface IBaseProps {
   isPartiallyActive?: boolean
   // customEventOptions?: MatomoEventOptions
   activeStyle?: object
+  // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
 
-export interface IProps extends IBaseProps, LinkProps {
-  // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
+const cx = (...classNames: any[]) => classNames.filter(Boolean).join(" ")
+
+type Pretty<T> = { [K in keyof T]: T[K] } & {}
+type Merge<P, T> = Pretty<Omit<P, keyof T> & T>
+type LegacyProps = "as" | "legacyBehavior" | "passHref"
+
+type LinkComponent = FC<RefAttributes<HTMLAnchorElement> & LinkProps>
+
+export type LinkProps = Merge<
+  HTMLChakraProps<"a"> & ThemingProps<"Link"> & BaseProps,
+  Omit<NextLinkProps, LegacyProps | "href">
+>
+
+const ExternalContent = ({ hideArrow }) => {
+  return (
+    <>
+      <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+      {!hideArrow && (
+        <Icon
+          as={RxExternalLink}
+          boxSize="6"
+          p="1"
+          verticalAlign="middle"
+          me="-1"
+        />
+      )}
+    </>
+  )
 }
 
 /**
  * Link wrapper which handles:
+ *
+ * Implementation taken from the official Chakra/NextJS link integration example:
+ * https://github.com/chakra-ui/chakra-ui/blob/main/packages/integrations/next-js/src/link.tsx
  *
  * - Hashed links
  * e.g. <Link href="/page-2/#specific-section">
@@ -46,76 +81,53 @@ export interface IProps extends IBaseProps, LinkProps {
  * - Intl links
  * e.g. <Link href="/page-2/" language="de">
  */
-export const BaseLink: React.FC<IProps> = ({
-  to: toProp,
-  href,
-  // language,
-  dir = "ltr",
-  children,
-  hideArrow = false,
-  isPartiallyActive = true,
-  // customEventOptions,
-  activeStyle = null,
-  ...restProps
-}) => {
-  const theme = useTheme()
+export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
   const router = useRouter()
+  const styles = useStyleConfig("Link", props)
+  const {
+    className,
+    isExternal: isExternalProp,
+    href: hrefProp,
+    to,
+    children,
+    hideArrow,
+    ...rest
+  } = omitThemingProps(props)
 
-  // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
-  // this is to support the ButtonLink component which uses the `to` prop
-  let to = (toProp ?? href)!
+  let href = (to ?? hrefProp)!
 
-  const isDiscordInvite = url.isDiscordInvite(to)
-  if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
-  const isExternal = url.isExternal(to)
-  const isPdf = url.isPdf(to)
-
-  const commonProps = {
-    dir,
-    ...restProps,
-  }
+  const isDiscordInvite = url.isDiscordInvite(href)
+  const isPdf = url.isPdf(href)
+  const isExternal = url.isExternal(href) || isPdf || isExternalProp
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
   if (isPdf) {
-    to = getRelativePath(router.asPath, to)
+    href = getRelativePath(router.asPath, href)
   }
 
-  if (isPdf || isExternal) {
-    return (
-      <ChakraLink href={to} isExternal {...commonProps}>
-        <>
-          {children}
-          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-          {!hideArrow && (
-            <Icon
-              as={RxExternalLink}
-              boxSize="6"
-              p="1"
-              verticalAlign="middle"
-              me="-1"
-            />
-          )}
-        </>
-      </ChakraLink>
-    )
+  if (isDiscordInvite) {
+    href = new URL(DISCORD_PATH, SITE_URL).href
   }
 
   return (
-    <ChakraLink
+    <chakra.a
+      target={isExternal ? "_blank" : undefined}
+      ref={ref}
+      href={href as any}
+      {...rest}
+      className={cx("chakra-link", className)}
+      __css={styles}
       as={NextLink}
-      href={to}
-      // language={language}
-      partiallyActive={isPartiallyActive}
-      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
-      whiteSpace={"normal"}
-      {...commonProps}
     >
       {children}
-    </ChakraLink>
+      {isExternal && <ExternalContent hideArrow={hideArrow} />}
+    </chakra.a>
   )
-}
+})
 
-const InlineLink = (props: IProps) => <BaseLink data-inline-link {...props} />
+const InlineLink: LinkComponent = forwardRef((props, ref) => (
+  <BaseLink data-inline-link ref={ref} {...props} />
+))
 
 export default InlineLink
