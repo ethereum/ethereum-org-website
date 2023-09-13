@@ -62,7 +62,7 @@ _このリストはすべてを網羅するものではありません。 特定
 
 ノードを実行している場合やバリデータの方は、下記のコミュニティでサポートを受けることができます。
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 イーサリアムクライアントを構築しているチームの大半は、サポートを受けたり質問したりできる専用のパブリックスペースを持っています。

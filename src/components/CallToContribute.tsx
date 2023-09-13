@@ -1,15 +1,11 @@
-import {
-  Flex,
-  FlexProps,
-  Heading,
-  Icon,
-  Text,
-  useToken,
-} from "@chakra-ui/react"
+import { Flex, FlexProps, Icon, useToken } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 import React, { ReactNode } from "react"
+
 import InlineLink from "./Link"
 import ButtonLink from "./ButtonLink"
+import Text from "./OldText"
+import OldHeading from "./OldHeading"
 
 import Translation from "./Translation"
 
@@ -75,7 +71,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
         ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
       </ContentColumn>
       <ContentColumn>
-        <Heading
+        <OldHeading
           as="h2"
           fontFamily="monospace"
           textTransform="uppercase"
@@ -85,7 +81,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
           lineHeight={1.4}
         >
           <Translation id="page-calltocontribute-title" />
-        </Heading>
+        </OldHeading>
         <DescriptionParagraph>
           <Translation id="page-calltocontribute-desc-1" />
         </DescriptionParagraph>

@@ -1,9 +1,10 @@
 import React from "react"
-import { Flex, Text } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 
 import Translation from "../Translation"
 import Emoji from "../Emoji"
 import Link from "../Link"
+import Text from "../OldText"
 
 interface Props {
   artistName: string

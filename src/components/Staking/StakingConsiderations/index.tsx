@@ -1,14 +1,5 @@
 import React from "react"
-import {
-  Box,
-  Flex,
-  Heading,
-  List,
-  ListItem,
-  Text,
-  useToken,
-  VStack,
-} from "@chakra-ui/react"
+import { Box, Flex, List, ListItem, useToken, VStack } from "@chakra-ui/react"
 
 // SVG imports
 import {
@@ -20,6 +11,8 @@ import {
 // Component imports
 import ButtonDropdown from "../../ButtonDropdown"
 import Translation from "../../Translation"
+import Text from "../../OldText"
+import OldHeading from "../../OldHeading"
 import { trackCustomEvent } from "../../../utils/matomo"
 import { useStakingConsiderations } from "./use-staking-considerations"
 
@@ -135,7 +128,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         p={6}
       >
         <StyledSvg />
-        <Heading
+        <OldHeading
           as="h3"
           fontWeight={700}
           fontSize="27px"
@@ -143,7 +136,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
           mt={10}
         >
           {title}
-        </Heading>
+        </OldHeading>
         <Text>{description}</Text>
         <Flex gap={8} justifyContent="center" mt="auto">
           {!!valid && (
