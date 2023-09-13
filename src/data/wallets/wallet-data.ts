@@ -782,7 +782,7 @@ const walletData: WalletData[] = [
     last_updated: "September 13, 2023",
     name: "Linen",
     image_name: "linen",
-    brand_color: "#08CDC7",
+    brand_color: "#000000",
     url: "https://linen.app/",
     wallet_live_date: "November, 2019",
     active_development_team: true,
