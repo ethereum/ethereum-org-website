@@ -77,29 +77,11 @@ export const BaseLink: React.FC<IProps> = ({
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
-  if (isPdf && !isExternal) {
-    const relativePath = getRelativePath(router.asPath, to)
-
-    return (
-      <ChakraLink href={relativePath} isExternal {...commonProps}>
-        <>
-          {children}
-          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-          {!hideArrow && (
-            <Icon
-              as={RxExternalLink}
-              boxSize="6"
-              p="1"
-              verticalAlign="middle"
-              me="-1"
-            />
-          )}
-        </>
-      </ChakraLink>
-    )
+  if (isPdf) {
+    to = getRelativePath(router.asPath, to)
   }
 
-  if (isExternal) {
+  if (isPdf || isExternal) {
     return (
       <ChakraLink href={to} isExternal {...commonProps}>
         <>
