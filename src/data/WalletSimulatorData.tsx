@@ -216,7 +216,7 @@ export const walletOnboardingSimData: SimulatorData = {
               on Ethereum.
             </Text>
             <Text>
-              Let's first look at how to receive Ether, Ethereum's native
+              Let's first look at how to receive ether (ETH), Ethereum's native
               currency.
             </Text>
             <Text>Click the "Receive" button to see how to receive funds.</Text>
@@ -241,7 +241,7 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
       {
-        header: "You received some ether! Now let's send some",
+        header: "You received ether (ETH)! Now let's send some",
         description: (
           <>
             <Text>
@@ -254,7 +254,7 @@ export const walletOnboardingSimData: SimulatorData = {
               address—receiving is free. <Emoji text="😁" />
             </Text>
             <Text>
-              Let's try sending some funds by clicking the "Send" button.
+              Let's try sending some ETH by clicking the "Send" button.
             </Text>
           </>
         ),
