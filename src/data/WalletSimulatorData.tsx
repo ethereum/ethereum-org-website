@@ -195,7 +195,7 @@ export const walletOnboardingSimData: SimulatorData = {
     ],
     finalCtaLink: {
       label: "Download a real wallet",
-      href: "https://ethereum.org/wallets/find-wallet/", // Full path to treat as external
+      href: "/wallets/find-wallet/",
     },
     nextPathId: SEND_RECEIVE,
   },
@@ -319,7 +319,7 @@ export const walletOnboardingSimData: SimulatorData = {
     ctaLabels: ["", "Share address", "", "Select recipient", "", "Send now"],
     finalCtaLink: {
       label: "Download a real wallet",
-      href: "https://ethereum.org/wallets/find-wallet/", // Full path to treat as external
+      href: "/wallets/find-wallet/",
     },
     nextPathId: CONNECT_WEB3,
   },
@@ -420,7 +420,7 @@ export const walletOnboardingSimData: SimulatorData = {
     ],
     finalCtaLink: {
       label: "Get a wallet",
-      href: "https://ethereum.org/wallets/find-wallet/", // Full path to treat as external
+      href: "/wallets/find-wallet/",
       isPrimary: true,
     },
   },
