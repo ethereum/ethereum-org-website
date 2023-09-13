@@ -7,9 +7,7 @@ import {
 } from "@chakra-ui/react"
 import { RxExternalLink } from "react-icons/rx"
 import { useRouter } from "next/router"
-// import { navigate as gatsbyNavigate } from "gatsby"
-// import { Link as IntlLink } from "gatsby-plugin-react-i18next"
-// import { NavigateOptions } from "@reach/router"
+import NextLink from "next/link"
 
 // import { Lang } from "../utils/languages"
 // import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
@@ -70,25 +68,12 @@ export const BaseLink: React.FC<IProps> = ({
   const isDiscordInvite = url.isDiscordInvite(to)
   if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
   const isExternal = url.isExternal(to)
-  const isHash = url.isHash(to)
   const isStatic = url.isStatic(to)
   const isPdf = url.isPdf(to)
 
   const commonProps = {
     dir,
     ...restProps,
-  }
-
-  // Must use Chakra's native <Link> for anchor links
-  // Otherwise the Gatsby <Link> functionality will navigate to homepage
-  // See https://github.com/gatsbyjs/gatsby/issues/21909
-  // TODO: review the comments above for NextJS version
-  if (isHash) {
-    return (
-      <ChakraLink href={to} {...commonProps}>
-        {children}
-      </ChakraLink>
-    )
   }
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
@@ -137,8 +122,8 @@ export const BaseLink: React.FC<IProps> = ({
 
   return (
     <ChakraLink
-      to={to}
-      // as={IntlLink}
+      as={NextLink}
+      href={to}
       // language={language}
       partiallyActive={isPartiallyActive}
       activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
@@ -149,15 +134,6 @@ export const BaseLink: React.FC<IProps> = ({
     </ChakraLink>
   )
 }
-
-// export function navigate(to: string, language: Lang, options?: NavigateOptions<{}>) {
-//   if (typeof window === "undefined") {
-//     return
-//   }
-
-//   const link = `/${language}${to}`
-//   gatsbyNavigate(link, options)
-// }
 
 const InlineLink = (props: IProps) => <BaseLink data-inline-link {...props} />
 
