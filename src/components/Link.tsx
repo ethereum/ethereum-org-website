@@ -68,7 +68,6 @@ export const BaseLink: React.FC<IProps> = ({
   const isDiscordInvite = url.isDiscordInvite(to)
   if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
   const isExternal = url.isExternal(to)
-  const isStatic = url.isStatic(to)
   const isPdf = url.isPdf(to)
 
   const commonProps = {
@@ -78,7 +77,7 @@ export const BaseLink: React.FC<IProps> = ({
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
-  if ((isPdf && !isExternal) || isStatic) {
+  if (isPdf && !isExternal) {
     const relativePath = getRelativePath(router.asPath, to)
 
     return (
