@@ -194,27 +194,27 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           title={t("page-get-eth-cex")}
           description={t("page-get-eth-cex-desc")}
         >
-          <Link to="#country-picker">
+          <InlineLink to="#country-picker">
             <Translation id="page-get-eth-cex-link-desc" />
-          </Link>
+          </InlineLink>
         </StyledCard>
         <StyledCard
           emoji=":building_construction:"
           title={t("page-get-eth-earn")}
           description={t("page-get-eth-earn-desc")}
         >
-          <Link to="/dao/">
+          <InlineLink to="/dao/">
             <Translation id="page-get-eth-daos-link-desc" />
-          </Link>
+          </InlineLink>
         </StyledCard>
         <StyledCard
           emoji=":busts_in_silhouette:"
           title={t("page-get-eth-peers")}
           description={t("page-get-eth-peers-desc")}
         >
-          <Link to="/wallets/">
+          <InlineLink to="/wallets/">
             <Translation id="page-get-eth-wallets-link-desc" />
-          </Link>
+          </InlineLink>
         </StyledCard>
         <StyledCard
           emoji=":robot:"
@@ -239,9 +239,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           title={t("page-get-eth-staking")}
           description={t("page-get-eth-staking-desc")}
         >
-          <Link to="/staking">
+          <InlineLink to="/staking">
             <Translation id="page-get-eth-staking-link-desc" />
-          </Link>
+          </InlineLink>
         </StyledCard>
         <Content>
           <Text>
