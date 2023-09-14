@@ -20,11 +20,11 @@ We have a space to discuss all things ethereum.org – share your ideas or just 
 
 There are a number of ways for you to contribute to ethereum.org. Click on the contribution type you are interested in for more information.
 
-1. [Content contributions](docs/content-contributions.md)
-2. [Code contributions](docs/code-contributions.md)
-3. [Design contributions](https://ethereum.org/en/contributing/design/#design-contributions)
-4. [Translation program contributions](https://ethereum.org/en/contributing/translation-program/#translation-program)
-5. [QA testing contributions](https://ethereum.org/en/contributing/testing)
+- [Code contributions](docs/code-contributions.md)
+- [Content contributions](docs/content-contributions.md)
+- [Design contributions](https://ethereum.org/en/contributing/design/#design-contributions)
+- [Translation program contributions](https://ethereum.org/en/contributing/translation-program/#translation-program)
+- [QA testing contributions](https://ethereum.org/en/contributing/testing)
 
 ## Looking for the Ethereum client code?
 

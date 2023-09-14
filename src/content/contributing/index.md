@@ -6,21 +6,37 @@ lang: en
 
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg}
 
-The ethereum.org website, like Ethereum more broadly, is an open-source project. So if you want to help improve [our portal to Ethereum](/about/), here's how you can help out.
+ethereum.org's purpose is to _“Be the best portal to Ethereum for our growing global community"_ - read more about what this means [here](/about/#our-mission). ethereum.org is being improved and changed over time through the contributions of community members who submit content, code, design, help review give feedback, test, or volunteer their time to manage its evolution.
 
-<InfoBanner shouldCenter emoji=":tada:">
-  Claim your POAP token! If you contributed to ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
-  <a href="#poap">More on POAPs</a>
-</InfoBanner>
+Before contributing, make sure you're familiar with:
+
+- the evolving [vision of ethereum.org](/about/)
+- our [design principles](/contributing/design-principles/)
+- our [style guide](/contributing/style-guide/)
+- our [code of conduct](/community/code-of-conduct)
 
 ## Ways to contribute {#ways-to-contribute}
 
-- [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
-  _– Work we've identified that needs doing_
-- [Join the translation program](/contributing/translation-program/)
-  _– Help us bring ethereum.org to new languages_
-- [Help design the website](/contributing/design/)
-  _– Designers of all levels can contribute to improve the website_
+### Contribution types
+
+There are a number of ways for you to contribute to ethereum.org. Click on the contribution type you are interested in for more information.
+
+- [Content contributions](docs/content-contributions.md)
+- [Code contributions](docs/code-contributions.md)
+- [Design contributions](/contributing/design/#design-contributions) _– Designers of all levels can contribute to improve the website_
+- [Translation program contributions](/contributing/translation-program/#translation-program) _– Help us bring ethereum.org to new languages_
+- [QA testing contributions](/contributing/testing) _- Help us test release candidates for ethereum.org_
+
+### Suggest improvements
+
+- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)
+  _– Let us know about any ideas you have for a new feature or design_
+- [Add a glossary term](/contributing/adding-glossary-terms)
+  _– Help us continue to expand the Ethereum [glossary](/glossary/)_
+- [Quizzes](/contributing/quizzes/) _- Add, update, and delete quiz question banks for a relevant page_
+
+### Add resources or projects
+
 - [Add community resources](/contributing/content-resources/)
   _– Add a helpful article or resource to a relevant page_
 - [Add a product](/contributing/adding-products/)
@@ -29,14 +45,6 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Add a developer tool to a relevant page_
 - [Add an exchange](/contributing/adding-exchanges/)
   _– Add an exchange to our [exchange finder](/get-eth/#country-picker)_
-- [Improve our research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
-  _– Let us know your feedback on our research or contribute your own_
-- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)
-  _– Let us know about any ideas you have for a new feature or design_
-- [Add a glossary term](/contributing/adding-glossary-terms)
-  _– Help us continue to expand the Ethereum [glossary](/glossary/)_
-- [Create/edit content](/contributing/#how-to-update-content)
-  _– Suggest new pages or make tweaks to what's here already_
 - [Add a layer 2](/contributing/adding-layer-2s/)
   _– Add a layer 2 to a relevant page_
 - [Add a staking product or service](/contributing/adding-staking-products/)
@@ -45,28 +53,18 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Add a wallet for the [find wallets page](/wallets/find-wallet/)_
 - [Suggest a project for our DeSci page](/contributing/adding-desci-projects/)
   _- Add a project built on Ethereum that contributes to decentralized science_
-- [Quizzes](/contributing/quizzes/) _- Add, update, and delete quiz question banks for a relevant page_
 - [Suggest a design resource](/contributing/design/adding-design-resources/) _- Add, update, and delete helpful design resources_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 
 ## How to work on ethereum.org {#how-to-update-content}
 
-Whether you're adding to the site, creating content or working on open issues, you'll need a [GitHub](https://github.com) account.
+Whether you're adding to the site, creating content or working on open issues, you'll need a [GitHub](https://github.com) account. If you are working on design related work, you'll need a [Figma](https://figma.com) account.
 
-All updates are made via the GitHub PR process. This means you create a local copy of the website, make your changes and request to merge your changes. If you've never done this before, follow the instructions at the bottom of our [GitHub repository](https://github.com/ethereum/ethereum-org-website).
-
-You don't need permission to work on anything, but it's always best to let us know what you're planning to do. You can do this by:
+You don't need permission to work on anything, but it's always best to let us know what you're planning to do to avoid wasting time. You can do this by:
 
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
 - Messaging on our [Discord server](https://discord.gg/CetY6Y4)
-
-Before contributing, make sure you're familiar with:
-
-- the evolving [vision of ethereum.org](/about/)
-- our [design principles](/contributing/design-principles/)
-- our [style guide](/contributing/style-guide/)
-- our [code of conduct](/community/code-of-conduct)
 
 ## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 
@@ -84,20 +82,16 @@ Only use your original work or content that you have permission to use when cont
 
 We have low barrier to entry issues on our GitHub repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-## Claim your contributor POAP {#poap}
+## ethereum.org 2023 Contributor POAP
 
-If your contribution gets merged into ethereum.org, we'll mint you a unique contributors POAP. A Proof of Attendance Protocol (POAP) token is on-chain proof that you helped make the ecosystem a little more awesome.
+If you have committed any changes in 2023 so far that were merged into our repo, you have a [GitPOAP](https://www.gitpoap.io/) waiting! Check out your pull request for a claim message.
 
-[More on POAPs](https://www.poap.xyz/)
+If you have contributed translations to the translation program:
 
-### How to claim {#how-to-claim}
+- Join our Discord server and paste a link to your Crowdin account in the `#🥇 | poaps` [channel](https://discord.com/channels/714888181740339261/804005643211898911). Crowdin contributors will be verified directly through Crowdin by our team.
+- A member of our team will verify the request and DM you with a personalized link to claim your own freshly minted POAP collectible!
 
-1. Join our [Discord server](https://discord.gg/E8dET2ux8y).
-2. Paste a link to your contribution in the `#🥇 | poaps` [channel](https://discord.com/channels/714888181740339261/804005643211898911).
-3. Wait for a member of our team to send you a link to your POAP.
-4. Claim your POAP!
-
-You should only use self-custody wallets to claim POAPs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your POAPs.
+If you haven't contributed yet and would like to earn a POAP to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started!
 
 ## Contributors {#contributors}
 
