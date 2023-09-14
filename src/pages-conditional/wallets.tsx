@@ -194,27 +194,41 @@ const WalletsPage = ({
     subtitle: t("page-wallets-subtitle"),
     image: getImage(data.hero)!,
     alt: t("page-wallets-alt"),
-    buttons: [
-      {
-        to: "/wallets/find-wallet/",
-        content: t("page-wallets-find-wallet-link"),
-        matomo: {
-          eventCategory: "wallet hero buttons",
-          eventAction: "click",
-          eventName: "find wallet",
-        },
-      },
-      {
-        to: `#${SIMULATOR_ID}`,
-        content: "Interactive tutorial",
-        matomo: {
-          eventCategory: "wallet hero buttons",
-          eventAction: "click",
-          eventName: "interactive tutorial",
-        },
-        variant: "outline",
-      },
-    ],
+    // TODO: remove conditional after soft launch
+    buttons:
+      language === "en"
+        ? [
+            {
+              to: "/wallets/find-wallet/",
+              content: t("page-wallets-find-wallet-link"),
+              matomo: {
+                eventCategory: "wallet hero buttons",
+                eventAction: "click",
+                eventName: "find wallet",
+              },
+            },
+            {
+              to: `#${SIMULATOR_ID}`,
+              content: "Interactive tutorial",
+              matomo: {
+                eventCategory: "wallet hero buttons",
+                eventAction: "click",
+                eventName: "interactive tutorial",
+              },
+              variant: "outline",
+            },
+          ]
+        : [
+            {
+              to: "/wallets/find-wallet/",
+              content: t("page-wallets-find-wallet-link"),
+              matomo: {
+                eventCategory: "wallet hero buttons",
+                eventAction: "click",
+                eventName: "find wallet",
+              },
+            },
+          ],
   }
 
   return (
