@@ -8,6 +8,7 @@ import {
   PopoverHeader,
   PopoverCloseButton,
   Flex,
+  Portal,
 } from "@chakra-ui/react"
 import React, { type ReactNode } from "react"
 
@@ -26,24 +27,26 @@ export const NotificationPopover: React.FC<IProps> = ({
   return (
     <Popover placement={placement}>
       <PopoverTrigger>{children}</PopoverTrigger>
-      <PopoverContent
-        bg="background.highlight"
-        px={4}
-        py={2}
-        maxW="15rem"
-        borderRadius="base"
-        boxShadow="tooltip"
-        fontSize="xs"
-        {...restProps}
-      >
-        <Flex gap={2} zIndex={100000000}>
-          <PopoverHeader fontWeight="bold" mb={2} flex={1} mt={0.5}>
-            {title || ""}
-          </PopoverHeader>
-          <PopoverCloseButton ms="auto" />
-        </Flex>
-        <PopoverBody>{content}</PopoverBody>
-      </PopoverContent>
+      <Portal>
+        <PopoverContent
+          bg="background.highlight"
+          px={4}
+          py={2}
+          maxW="15rem"
+          borderRadius="base"
+          boxShadow="tooltip"
+          fontSize="xs"
+          {...restProps}
+        >
+          <Flex gap={2} zIndex={100000000}>
+            <PopoverHeader fontWeight="bold" mb={2} flex={1} mt={0.5}>
+              {title || ""}
+            </PopoverHeader>
+            <PopoverCloseButton ms="auto" />
+          </Flex>
+          <PopoverBody>{content}</PopoverBody>
+        </PopoverContent>
+      </Portal>
     </Popover>
   )
 }
