@@ -63,7 +63,7 @@ Hier zijn enkele populaire voorbeelden:
 
 Als u een node of validator uitvoert, zijn hier enkele gemeenschappen die u kunnen helpen om aan de slag te gaan.
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 De meeste teams die Ethereum clients bouwen, hebben ook speciale op het publiek gerichte ruimtes waar u ondersteuning kunt krijgen en vragen kunt stellen.

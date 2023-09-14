@@ -10496,6 +10496,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "kritik-sah",
+      "name": "kritik sah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57076429?v=4",
+      "profile": "https://linktr.ee/kritik",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Fuliggine",
+      "name": "Fuliggine",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56844974?v=4",
+      "profile": "https://github.com/Fuliggine",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Omsify",
+      "name": "Omsify",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87442202?v=4",
+      "profile": "https://github.com/Omsify",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

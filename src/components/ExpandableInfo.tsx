@@ -10,12 +10,13 @@ import {
   HStack,
   Icon,
   Stack,
-  Text,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
+
+import Text from "./OldText"
 
 export interface IProps extends ChakraProps {
   children?: React.ReactNode

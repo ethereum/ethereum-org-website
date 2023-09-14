@@ -6,7 +6,7 @@ lang: it
 
 # Come utilizzare un portafoglio
 
-Impara come gestire tutte le funzioni di base di un portafoglio. Se non ne hai ancora uno, consulta il nostro [Come "registrare" un conto di Ethereum](/guides/how-to-register-an-ethereum-account/).
+Impara come gestire tutte le funzioni di base di un portafoglio. Se non ne hai ancora uno, consulta il nostro [Come "registrare" un conto di Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Apri il tuo portafoglio
 

@@ -1,7 +1,8 @@
 import React from "react"
-import { Box, Heading, Text } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 
 import Translation from "../../Translation"
+import OldHeading from "../../OldHeading"
 
 interface IProps {
   term: string
@@ -18,9 +19,9 @@ const GlossaryDefinition: React.FC<IProps> = ({ term, size = "md" }) => {
 
   return (
     <Box>
-      <Heading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
+      <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
         <Translation id={`${term}-term`} />
-      </Heading>
+      </OldHeading>
       <Text {...textStyles}>
         <Translation id={`${term}-definition`} />
       </Text>

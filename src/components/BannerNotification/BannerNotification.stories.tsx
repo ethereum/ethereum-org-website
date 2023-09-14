@@ -21,7 +21,7 @@ export const PostMergeBanner: StoryFn<typeof BannerNotification> = (args) => {
 
   return (
     <BannerNotification {...args}>
-      <Text m={0}>{t("page-upgrades-post-merge-banner-tutorial-ood")}</Text>
+      <Text>{t("page-upgrades-post-merge-banner-tutorial-ood")}</Text>
     </BannerNotification>
   )
 }

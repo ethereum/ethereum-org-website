@@ -10,7 +10,6 @@ import {
   ListItem,
   Show,
   SimpleGrid,
-  Text,
   UnorderedList,
   useToken,
   Wrap,
@@ -43,6 +42,7 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
+import Text from "../components/OldText"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import {

@@ -1,11 +1,13 @@
 import React from "react"
-import { Box, Center, chakra, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Center, chakra, Flex } from "@chakra-ui/react"
 
 import CardList from "../CardList"
 import InlineLink from "../Link"
 import Emoji from "../Emoji"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
 
 import { ChildOnlyProp } from "../../types"
 import { useEthExchanges } from "./use-eth-exchanges"
@@ -84,21 +86,19 @@ const EthExchanges = () => {
     placeholderString,
     t,
     hasExchangeResults,
-    hasWalletResults,
     filteredExchanges,
-    filteredWallets,
     lastUpdated,
   } = useEthExchanges()
 
   return (
     <Flex flexDir="column" align="center" w="full">
-      <Heading
+      <OldHeading
         fontSize={{ base: "2xl", md: "2rem" }}
         fontWeight={600}
         lineHeight={1.4}
       >
         <Translation id="page-get-eth-exchanges-header" />
-      </Heading>
+      </OldHeading>
       <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">
         <Translation id="page-get-eth-exchanges-intro" />
       </Text>
@@ -119,7 +119,7 @@ const EthExchanges = () => {
         </EmptyStateContainer>
       )}
       {/* No results */}
-      {hasSelectedCountry && !hasExchangeResults && !hasWalletResults && (
+      {hasSelectedCountry && !hasExchangeResults && (
         <ResultsContainer>
           <NoResults>
             <Translation id="page-get-eth-exchanges-no-exchanges-or-wallets" />
@@ -127,18 +127,18 @@ const EthExchanges = () => {
         </ResultsContainer>
       )}
       {/* Has results */}
-      {(hasExchangeResults || hasWalletResults) && (
+      {hasExchangeResults && (
         <>
           <ResultsContainer>
             <ListContainer>
-              <Heading
+              <OldHeading
                 as="h3"
                 fontSize={{ base: "xl", md: "2xl" }}
                 fontWeight={600}
                 lineHeight={1.4}
               >
                 <Translation id="page-get-eth-exchanges-header-exchanges" />
-              </Heading>
+              </OldHeading>
               {hasExchangeResults && (
                 <SuccessContainer>
                   <Text>
@@ -150,34 +150,6 @@ const EthExchanges = () => {
               {!hasExchangeResults && (
                 <NoResultsSingle>
                   <Translation id="page-get-eth-exchanges-no-exchanges" />
-                </NoResultsSingle>
-              )}
-            </ListContainer>
-            <ListContainer>
-              <Heading
-                as="h3"
-                fontSize={{ base: "xl", md: "2xl" }}
-                fontWeight={600}
-                lineHeight={1.4}
-              >
-                <Translation id="page-get-eth-exchanges-header-wallets" />
-              </Heading>
-
-              {hasWalletResults && (
-                <SuccessContainer>
-                  <Text>
-                    <Translation id="page-get-eth-exchanges-success-wallet-paragraph" />{" "}
-                    <InlineLink to="/wallets/">
-                      <Translation id="page-get-eth-exchanges-success-wallet-link" />
-                    </InlineLink>
-                    .
-                  </Text>
-                  <CardList content={filteredWallets} />
-                </SuccessContainer>
-              )}
-              {!hasWalletResults && (
-                <NoResultsSingle>
-                  <Translation id="page-get-eth-exchanges-no-wallets" />
                 </NoResultsSingle>
               )}
             </ListContainer>
