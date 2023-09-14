@@ -52,7 +52,7 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
       {
-        header: "They are free apps you can download",
+        header: "Wallets are free apps you can download",
         description: (
           <>
             <Text>
