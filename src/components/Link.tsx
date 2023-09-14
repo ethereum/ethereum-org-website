@@ -27,9 +27,7 @@ type BaseProps = {
   href?: string
   // language?: Lang
   hideArrow?: boolean
-  isPartiallyActive?: boolean
   // customEventOptions?: MatomoEventOptions
-  activeStyle?: object
   // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
 
@@ -46,28 +44,8 @@ export type LinkProps = Merge<
   Omit<NextLinkProps, LegacyProps | "href">
 >
 
-const ExternalContent = ({ hideArrow }) => {
-  return (
-    <>
-      <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-      {!hideArrow && (
-        <Icon
-          as={RxExternalLink}
-          boxSize="6"
-          p="1"
-          verticalAlign="middle"
-          me="-1"
-        />
-      )}
-    </>
-  )
-}
-
 /**
  * Link wrapper which handles:
- *
- * Implementation taken from the official Chakra/NextJS link integration example:
- * https://github.com/chakra-ui/chakra-ui/blob/main/packages/integrations/next-js/src/link.tsx
  *
  * - Hashed links
  * e.g. <Link href="/page-2/#specific-section">
@@ -78,8 +56,8 @@ const ExternalContent = ({ hideArrow }) => {
  * - PDFs & static files (which open in a new tab)
  * e.g. <Link href="/eth-whitepaper.pdf">
  *
- * - Intl links
- * e.g. <Link href="/page-2/" language="de">
+ * Implementation taken from the official Chakra/NextJS link integration example:
+ * https://github.com/chakra-ui/chakra-ui/blob/main/packages/integrations/next-js/src/link.tsx
  */
 export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
   const router = useRouter()
@@ -121,10 +99,31 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
       as={NextLink}
     >
       {children}
-      {isExternal && <ExternalContent hideArrow={hideArrow} />}
+      {isExternal && <ExternalLinkContent hideArrow={hideArrow} />}
     </chakra.a>
   )
 })
+
+const ExternalLinkContent = ({
+  hideArrow,
+}: {
+  hideArrow: BaseProps["hideArrow"]
+}) => {
+  return (
+    <>
+      <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+      {!hideArrow && (
+        <Icon
+          as={RxExternalLink}
+          boxSize="6"
+          p="1"
+          verticalAlign="middle"
+          me="-1"
+        />
+      )}
+    </>
+  )
+}
 
 const InlineLink: LinkComponent = forwardRef((props, ref) => (
   <BaseLink data-inline-link ref={ref} {...props} />
