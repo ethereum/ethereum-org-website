@@ -38,7 +38,7 @@ export const NotificationPopover: React.FC<IProps> = ({
           fontSize="xs"
           {...restProps}
         >
-          <Flex gap={2} zIndex={100000000}>
+          <Flex gap={2}>
             <PopoverHeader fontWeight="bold" mb={2} flex={1} mt={0.5}>
               {title || ""}
             </PopoverHeader>
