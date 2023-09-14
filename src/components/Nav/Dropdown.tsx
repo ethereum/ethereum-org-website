@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
-import { BaseLink, IProps as LinkProps } from "../Link"
+import { BaseLink, type LinkProps } from "../Link"
 // TODO
 // import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 // import { getDirection } from "../../utils/translations"

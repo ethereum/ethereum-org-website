@@ -1,13 +1,13 @@
 import React from "react"
 
 import type { IProps as IButtonProps } from "./Button"
-import { BaseLink, IBaseProps as ILinkProps } from "./Link"
+import { BaseLink, type LinkProps } from "./Link"
 import Button from "./Button"
 
-export interface IProps extends ILinkProps, Omit<IButtonProps, "toId"> {}
+export type Props = LinkProps & Omit<IButtonProps, "toId">
 
-const ButtonLink: React.FC<IProps> = (props) => {
-  return <Button as={BaseLink} activeStyle={{}} {...props} />
+const ButtonLink: React.FC<Props> = (props) => {
+  return <Button as={BaseLink} {...props} />
 }
 
 export default ButtonLink

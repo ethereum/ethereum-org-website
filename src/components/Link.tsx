@@ -26,6 +26,7 @@ type BaseProps = {
   to?: string
   href?: string
   hideArrow?: boolean
+  isPartiallyActive?: boolean
   // customEventOptions?: MatomoEventOptions
   // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
