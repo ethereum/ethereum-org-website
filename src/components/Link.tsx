@@ -25,7 +25,6 @@ type BaseProps = {
   /** @deprecated Use `href` prop instead */
   to?: string
   href?: string
-  // language?: Lang
   hideArrow?: boolean
   // customEventOptions?: MatomoEventOptions
   // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
@@ -64,7 +63,6 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
   const styles = useStyleConfig("Link", props)
   const {
     className,
-    isExternal: isExternalProp,
     href: hrefProp,
     to,
     children,
@@ -76,7 +74,7 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
 
   const isDiscordInvite = url.isDiscordInvite(href)
   const isPdf = url.isPdf(href)
-  const isExternal = url.isExternal(href) || isPdf || isExternalProp
+  const isExternal = url.isExternal(href) || isPdf
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
