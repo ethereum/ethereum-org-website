@@ -52,7 +52,7 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
       {
-        header: "They are free apps you can download",
+        header: "Wallets are free apps you can download",
         description: (
           <>
             <Text>
@@ -195,7 +195,7 @@ export const walletOnboardingSimData: SimulatorData = {
     ],
     finalCtaLink: {
       label: "Download a real wallet",
-      href: "https://ethereum.org/wallets/find-wallet/", // Full path to treat as external
+      href: "/wallets/find-wallet/",
     },
     nextPathId: SEND_RECEIVE,
   },
@@ -216,7 +216,7 @@ export const walletOnboardingSimData: SimulatorData = {
               on Ethereum.
             </Text>
             <Text>
-              Let's first look at how to receive Ether, Ethereum's native
+              Let's first look at how to receive ether (ETH), Ethereum's native
               currency.
             </Text>
             <Text>Click the "Receive" button to see how to receive funds.</Text>
@@ -241,7 +241,7 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
       {
-        header: "You received some ether! Now let's send some",
+        header: "You received ether (ETH)! Now let's send some",
         description: (
           <>
             <Text>
@@ -254,7 +254,7 @@ export const walletOnboardingSimData: SimulatorData = {
               address—receiving is free. <Emoji text="😁" />
             </Text>
             <Text>
-              Let's try sending some funds by clicking the "Send" button.
+              Let's try sending some ETH by clicking the "Send" button.
             </Text>
           </>
         ),
@@ -319,7 +319,7 @@ export const walletOnboardingSimData: SimulatorData = {
     ctaLabels: ["", "Share address", "", "Select recipient", "", "Send now"],
     finalCtaLink: {
       label: "Download a real wallet",
-      href: "https://ethereum.org/wallets/find-wallet/", // Full path to treat as external
+      href: "/wallets/find-wallet/",
     },
     nextPathId: CONNECT_WEB3,
   },
@@ -420,7 +420,7 @@ export const walletOnboardingSimData: SimulatorData = {
     ],
     finalCtaLink: {
       label: "Get a wallet",
-      href: "https://ethereum.org/wallets/find-wallet/", // Full path to treat as external
+      href: "/wallets/find-wallet/",
       isPrimary: true,
     },
   },
