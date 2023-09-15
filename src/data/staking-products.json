@@ -291,7 +291,7 @@
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["GUI"],
       "socials": {
-        "discord": "https://discord.io/ethstaker",
+        "discord": "https://discord.gg/ethstaker",
         "twitter": "https://twitter.com/wagyutools",
         "github": "https://github.com/stake-house/wagyu-key-gen"
       },
@@ -356,6 +356,53 @@
     }
   ],
   "saas": [
+    {
+      "name": "stakefish",
+      "imageName": "Stakefish",
+      "hue": 73,
+      "launchDate": "2020-12-01",
+      "url": "https://stake.fish/ethereum/",
+      "audits": [
+        {
+          "name": "Solidified",
+          "url": "https://github.com/solidified-platform/audits/blob/master/Audit%20Report%20-%20Stakefish%20%5B20.09.2021%5D.pdf"
+        },
+        {
+          "name": "Slither",
+          "url": "https://github.com/crytic/slither"
+        },
+        {
+          "name": "SOC 2 Type II",
+          "url": "https://blog.stake.fish/stakefish-completes-soc-2-type-ii-certification-for-non-custodial-blockchain-staking-services/"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "feePercentage": 5,
+      "tokens": [],
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser", "Wallet", "Linux", "macOS", "Windows"],
+      "ui": ["GUI"],
+      "socials": {
+        "github": "https://github.com/stakefish",
+        "twitter": "https://twitter.com/stakefish",
+        "telegram": "https://t.me/stakefish",
+        "linkedin": "https://www.linkedin.com/company/14396078",
+        "youtube": "https://www.youtube.com/@stakefish"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked stakefish go to link"
+      }
+    },
     {
       "name": "Kiln",
       "imageName": "Kiln",
@@ -769,40 +816,6 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked StakeWise Pool go to link"
-      }
-    },
-    {
-      "name": "stakefish",
-      "imageName": "Stakefish",
-      "hue": 73,
-      "launchDate": "2020-12-01",
-      "url": "https://stake.fish/ethereum-shared/",
-      "audits": [
-        {
-          "name": "Solidified",
-          "url": "https://github.com/solidified-platform/audits/blob/master/Audit%20Report%20-%20Stakefish%20%5B20.09.2021%5D.pdf"
-        }
-      ],
-      "minEth": 0.1,
-      "feePercentage": 10,
-      "tokens": [],
-      "isFoss": false,
-      "hasBugBounty": false,
-      "isTrustless": true,
-      "hasPermissionlessNodes": false,
-      "pctMajorityExecutionClient": null,
-      "pctMajorityConsensusClient": 0.0,
-      "platforms": ["Browser", "Wallet"],
-      "ui": ["GUI"],
-      "twitter": "https://twitter.com/stakefish",
-      "telegram": "https://t.me/stakefish",
-      "socials": {
-        "github": null
-      },
-      "matomo": {
-        "eventCategory": "StakingProductCard",
-        "eventAction": "Clicked",
-        "eventName": "Clicked stakefish go to link"
       }
     },
     {

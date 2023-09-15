@@ -20,7 +20,6 @@ const baseStyle = defineMergeStyles(
   definePartsStyle({
     table: {
       [$bgColor.variable]: "colors.background.highlight",
-      minW: "556px",
     },
     th: {
       borderBottom: "1px",
