@@ -18,7 +18,7 @@ const baseStyle = definePartsStyle({
     cursor: "default",
     textAlign: "center",
     userSelect: "none",
-    zIndex: "docked",
+    zIndex: "popover",
     outline: 0,
     boxShadow: `0px 0px 16px 0px #00000040`,
   },
