@@ -22,6 +22,7 @@ const GatsbyImage: GatsbyImageType = chakra(Image, {
       "imgStyle",
     ].includes(prop)
   },
+  label: "ChakraGatsbyImage",
 })
 
 export default GatsbyImage
