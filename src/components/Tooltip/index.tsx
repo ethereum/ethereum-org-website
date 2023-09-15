@@ -16,7 +16,6 @@ export interface IProps {
 }
 
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
-  const isMobile = utils.isMobile()
 
   return (
     <Box title="More Info!" display="inline-block" ml={2}>
