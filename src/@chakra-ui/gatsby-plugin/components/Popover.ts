@@ -24,7 +24,7 @@ const baseStyle = definePartsStyle({
   },
   arrow: {
     [$arrowBg.variable]: "colors.background.highlight",
-    zIndex: "docked",
+    zIndex: "popover",
   },
 })
 
