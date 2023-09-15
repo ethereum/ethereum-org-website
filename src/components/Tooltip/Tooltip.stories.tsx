@@ -1,8 +1,9 @@
 import * as React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { Icon } from "@chakra-ui/react"
+import { HStack, Text } from "@chakra-ui/react"
 import { RiInformationLine } from "react-icons/ri"
 import TooltipComponent from "."
+import InlineLink from "../Link"
 
 type TooltipType = typeof TooltipComponent
 
@@ -15,9 +16,24 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
+const TooltipContent = () => (
+  <div>
+    <Text m={0}>Lorem, ipsum dolor.</Text>
+    <InlineLink to="/?path=/story/molecules-overlay-content-tooltip--tooltip">
+      link
+    </InlineLink>
+  </div>
+)
+
 export const Tooltip: Story = {
   args: {
     content: "text here",
-    children: <Icon as={RiInformationLine} />,
+    children: <RiInformationLine />,
   },
+  render: (args) => (
+    <HStack>
+      <TooltipComponent {...args} />
+      <TooltipComponent {...args} content={<TooltipContent />} />
+    </HStack>
+  ),
 }

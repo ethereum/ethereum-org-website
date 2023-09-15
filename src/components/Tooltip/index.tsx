@@ -8,7 +8,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@chakra-ui/react"
-import * as utils from "../../utils/isMobile"
 
 export interface IProps {
   content: ReactNode
@@ -16,7 +15,6 @@ export interface IProps {
 }
 
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
-
   return (
     <Box title="More Info!" display="inline-block" ml={2}>
       <Popover placement="top" trigger="hover" strategy="fixed" gutter={6}>
