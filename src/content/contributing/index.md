@@ -21,11 +21,11 @@ Before contributing, make sure you're familiar with:
 
 There are a number of ways for you to contribute to ethereum.org. Click on the contribution type you are interested in for more information.
 
-- [Content contributions](docs/content-contributions.md)
 - [Code contributions](docs/code-contributions.md)
+- [Content contributions](/contributing/content/) _- Help us add/update content on ethereum.org_
 - [Design contributions](/contributing/design/#design-contributions) _– Designers of all levels can contribute to improve the website_
 - [Translation program contributions](/contributing/translation-program/#translation-program) _– Help us bring ethereum.org to new languages_
-- [QA testing contributions](/contributing/testing) _- Help us test release candidates for ethereum.org_
+- [QA testing contributions](/contributing/testing/) _- Help us test release candidates for ethereum.org_
 
 ### Suggest improvements
 
