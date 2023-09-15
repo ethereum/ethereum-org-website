@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
-import { NotificationPopover } from "../../NotificationPopover"
+import { DemoOnlyPopover } from "../../DemoOnlyPopover"
 import { EthTokenIcon } from "../../icons"
 
 interface IProps {
@@ -73,11 +73,7 @@ export const SendEther: React.FC<IProps> = ({
         fontSize="xs"
       >
         {/* Left side: Displayed send amount */}
-        <NotificationPopover
-          title="Example walkthrough"
-          content="Choose a value below"
-          placement="top"
-        >
+        <DemoOnlyPopover placement="top">
           <Flex
             alignItems="top"
             flex={1}
@@ -88,14 +84,10 @@ export const SendEther: React.FC<IProps> = ({
               {formatChosenAmount}
             </Text>
           </Flex>
-        </NotificationPopover>
+        </DemoOnlyPopover>
         {/* Right side */}
         <Flex direction="column" alignItems="end">
-          <NotificationPopover
-            placement="top"
-            title="Example walkthrough"
-            content="In this walkthrough you can only send ETH, but in real wallet you can send different tokens as well"
-          >
+          <DemoOnlyPopover placement="top">
             {/* Token selector pill */}
             <Flex
               px={2}
@@ -110,7 +102,7 @@ export const SendEther: React.FC<IProps> = ({
                 ETH
               </Text>
             </Flex>
-          </NotificationPopover>
+          </DemoOnlyPopover>
           {/* Balances */}
           <Text fontWeight="bold" m={0} lineHeight={1}>
             Balance: {usdAmount}

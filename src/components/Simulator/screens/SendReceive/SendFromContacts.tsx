@@ -15,7 +15,7 @@ import { CategoryTabs } from "../../WalletHome/CategoryTabs"
 import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
 import type { SimulatorNavProps } from "../../interfaces"
 import { CONTACTS } from "./constants"
-import { NotificationPopover } from "../../NotificationPopover"
+import { DemoOnlyPopover } from "../../DemoOnlyPopover"
 
 interface IProps extends SimulatorNavProps {
   setRecipient: (name: string) => void
@@ -31,10 +31,7 @@ export const SendFromContacts: React.FC<IProps> = ({ nav, setRecipient }) => {
         <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={8}>
           Choose recipient
         </Text>
-        <NotificationPopover
-          title="Example walkthrough"
-          content={`Choose ${CONTACTS[0].name} from recent contacts`}
-        >
+        <DemoOnlyPopover fontSize="sm">
           <Button
             variant="outline"
             leftIcon={<Icon as={PiMagnifyingGlass} />}
@@ -52,7 +49,7 @@ export const SendFromContacts: React.FC<IProps> = ({ nav, setRecipient }) => {
               Address or contacts
             </Text>
           </Button>
-        </NotificationPopover>
+        </DemoOnlyPopover>
       </Box>
       <Box py={8} px={6} bg="background.highlight" h="full">
         <CategoryTabs
