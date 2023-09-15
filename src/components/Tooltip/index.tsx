@@ -12,7 +12,7 @@ import * as utils from "../../utils/isMobile"
 
 export interface IProps {
   content: ReactNode
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
