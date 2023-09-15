@@ -29,30 +29,30 @@ const styles = {
     },
     // imported global CSS styles for list items
     li: {
-      "margin-bottom": "calc(1.45rem / 2)",
+      marginBottom: "calc(1.45rem / 2)",
     },
     "ol li": {
-      "padding-left": "0",
+      paddingInlineStart: "0",
     },
     "ul li": {
-      "padding-left": "0",
+      paddingInlineStart: "0",
     },
     "li > ol": {
-      "margin-left": "1.45rem",
-      "margin-bottom": "calc(1.45rem / 2)",
-      "margin-top": "calc(1.45rem / 2)",
+      marginInlineStart: "1.45rem",
+      marginBottom: "calc(1.45rem / 2)",
+      marginTop: "calc(1.45rem / 2)",
     },
     "li > ul": {
-      "margin-left": "1.45rem",
-      "margin-bottom": "calc(1.45rem / 2)",
-      "margin-top": "calc(1.45rem / 2)",
+      marginInlineStart: "1.45rem",
+      marginBottom: "calc(1.45rem / 2)",
+      marginTop: "calc(1.45rem / 2)",
     },
 
     "li *:last-child": {
-      "margin-bottom": "0",
+      marginBottom: "0",
     },
     "li > p": {
-      "margin-bottom": "calc(1.45rem / 2)",
+      marginBottom: "calc(1.45rem / 2)",
     },
     // Anchor tag styles
     // Selected specifically for mdx rendered side icon link
