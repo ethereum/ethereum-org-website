@@ -1,9 +1,15 @@
+---
+title: Code contributions
+description: Code contribution to ethereum.org
+lang: en
+---
+
 ### 1. Submit an issue
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 - Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
 
-More information on the issue creation process, and expectations around creating issues can be [found here](docs/github-issue-triage-process.md).
+More information on the issue creation process, and expectations around creating issues can be [found here](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/github-issue-triage-process.md).
 
 ### 2. Fork the repository (repo)
 
@@ -49,13 +55,21 @@ yarn
 
 ### 4. Make awesome changes!
 
-1. Create new branch for your changes
+1. Create new branch for your changes off of your local `dev` branch
 
 ```sh
 git checkout -b new_branch_name
 ```
 
 2. Start developing!
+
+Install dependencies and clear cache
+
+```sh
+rm -rf node_modules && yarn install && npx gatsby clean
+```
+
+Start the project
 
 ```sh
 yarn start
@@ -118,7 +132,3 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
 - Learn more about how we deploy the site [here](docs/deploy-process.md)
 - You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
-
-<hr style="margin-top: 3em; margin-bottom: 3em;">
-
-![POAP Logo](src/assets/poap-logo.svg)

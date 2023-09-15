@@ -10,8 +10,6 @@ Ethereum.org is an education portal for Ethereum, and that starts with the conte
 
 Before contributing to content, make sure you are familiar with our [style guide](/contributing/style-guide/).
 
-Our codebase has content split up into two main sources. Markdown content is found in the `/src/content` folder. Custom React pages found in the `/src/pages` or `/src/pages-conditional` folders, with a corresponding JSON file containing translated strings in the `/src/intl/<lang code>` folder. Below will go into detail how to work on either form of content.
-
 ## Markdown content in `/src/content` {#markdown-content}
 
 Most of the content on ethereum.org is written in markdown. A cheat sheet on markdown syntax can be found [here](https://www.markdownguide.org/cheat-sheet).
@@ -107,15 +105,3 @@ git push origin <branch name>
 ```
 
 Lastly, make a pull request into the `dev` branch from your fork and we will review it.
-
-## React pages in `/src/pages` or `/src/pages-conditional` {#react-pages}
-
-These pages are created on a case by case basis, and will have a lot of involvement from the core team who can help create a React page with you. For the purposes of this, we will go over how to edit content on this page type.
-
-### How to edit a React page {#how-to-create-a-react-page}
-
-Find the page you are looking to edit in the `/src/pages` or `/src/pages-conditional` folder. The structure of the `pages` or `pages-conditional` folder maps to the url of ethereum.org. For example, lets edit the layer 2 page. More on code contributions and working with the repository can be found on our [code contributions](/contributing/code) page.
-
-#### In GitHub {#how-to-create-a-react-page-in-github}
-
-#### Locally cloned repository {#how-to-create-a-react-page-locally-cloned-repository}
