@@ -56,7 +56,7 @@ Prima di avviare il tuo nodo archivio, scopri le differenze tra i client e, in p
 
 ## Pratiche consigliate
 
-Oltre ai [consigli generali per eseguire un nodo](developers/docs/nodes-and-clients/run-a-node/), un nodo archivio potrebbe avere requisiti maggiori in termini di hardware e manutenzione. Considerando le [funzionalità chiave](https://github.com/ledgerwatch/erigon#key-features) di Erigon, l'approccio più pratico è utilizzare l'implementazione del client di [Erigon](/developers/docs/nodes-and-clients/#erigon).
+Oltre ai [consigli generali per eseguire un nodo](/developers/docs/nodes-and-clients/run-a-node/), un nodo archivio potrebbe avere requisiti maggiori in termini di hardware e manutenzione. Considerando le [funzionalità chiave](https://github.com/ledgerwatch/erigon#key-features) di Erigon, l'approccio più pratico è utilizzare l'implementazione del client di [Erigon](/developers/docs/nodes-and-clients/#erigon).
 
 ### Hardware
 
