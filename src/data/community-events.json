@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHTbilisi",
+    "to": "https://lu.ma/ETHTbilisi",
+    "sponsor": null,
+    "location": "Tbilisi, Georgia",
+    "description": "ETHTbilisi Meetup",
+    "startDate": "2023-09-22",
+    "endDate": "2023-09-22"
+  },
+  {
     "title": "Road to Devcon（Shenzhen）",
     "to": "https://ethsz.openbuild.xyz/",
     "sponsor": null,
