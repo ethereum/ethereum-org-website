@@ -1,14 +1,5 @@
 [
   {
-    "title": "Road to Devcon（Shenzhen）",
-    "to": "https://ethsz.openbuild.xyz/",
-    "sponsor": null,
-    "location": "Shenzhen, China",
-    "description": "Preheating activities for DEVCON 7 in the China region.Developers and communities, let us gather at Devcon！",
-    "startDate": "2023-10-21",
-    "endDate": "2023-10-21"
-  },
-  {
     "title": "Ethereum Rio",
     "to": "https://www.ethereumbrasil.com/",
     "sponsor": null,
@@ -79,15 +70,6 @@
     "description": "Building Blockchains for Africa's Future. We support the Blockchain revolution and we are establishing a movement to promote its use out of love for our African Continent and the nations that make it up.",
     "startDate": "2023-10-27",
     "endDate": "2023-10-28"
-  },
-  {
-    "title": "ETH Montréal",
-    "to": "https://ethmontreal.xyz",
-    "sponsor": null,
-    "location": "Montréal, Canada",
-    "description": "Conference and hackathon with the aim to onboard to Ethereum the students and junior devs from Montréal's world class universities",
-    "startDate": "2023-09-18",
-    "endDate": "2023-09-21"
   },
   {
     "title": "ETHGlobal New York",
