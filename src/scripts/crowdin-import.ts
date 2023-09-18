@@ -15,6 +15,7 @@ const argv = require("minimist")(process.argv.slice(2))
  ******************************/
 
 /**
+ * -b,--buckets    Prints buckets overview and exits
  * -v,--verbose    Prints verbose console logs
  * -f,--full       Prints full name of buckets in summary
  */
@@ -43,12 +44,15 @@ const argv = require("minimist")(process.argv.slice(2))
  *      ie. `es: [1, 10],` would import the "Homepage" and "Learn" buckets for Spanish
  *   2. Save file without committing*
  *
- * Export/import translated content from Crowdin:
+ * Optionally: To view summary of buckets from CSV, run `yarn crowdin-import --buckets` or `yarn crowdin-import -b`
+ *   Any items in USER_OVERRIDE will override the CSV import
+ *
+ * 3. Export translated content from Crowdin and import into ./.crowdin folder:
  *   1. Export latest translated content from Crowdin and unzip
  *   2. Copy languages folder from Crowdin export to ./.crowdin
  *      ie. ./.crowdin/{lang-codes}
  *
- * Execute script:
+ * 4. Execute script:
  *   1. Execute script by running `yarn crowdin-import`
  *   2. If successful, copy `GATSBY_BUILD_LANGS={langs}` output and paste in
  *      your `.env`, then build site to test results.
@@ -58,7 +62,8 @@ const argv = require("minimist")(process.argv.slice(2))
 
 type BucketsList = { [key: string]: Array<number> }
 const USER_OVERRIDE: BucketsList = {
-  // langCode: [bucket_number, bucket_number],
+  // FORMAT: lang_code: [bucket_number, bucket_number, ...],
+  // EXAMPLE: es: [1, 10, 12, 14],
 }
 
 /******************************
@@ -230,6 +235,12 @@ const highestBucketNumber: number = Object.values(bucketsToImport).reduce(
     buckets[buckets.length - 1] > prev ? buckets[buckets.length - 1] : prev,
   0
 )
+
+/**
+ * If BUCKET_GENERATION_ONLY (-b, --buckets) flag is enabled, show overview
+ * of all langs and buckets to be imported. Also print a copy/paste ready
+ * object for USER_OVERRIDE, then exit the script early.
+ */
 if (BUCKET_GENERATION_ONLY) {
   const bucketsOverview = {}
   Object.entries(bucketsToImport).forEach(([langCode, buckets]) => {
@@ -237,11 +248,8 @@ if (BUCKET_GENERATION_ONLY) {
       .fill(0)
       .map((_, i) => (buckets.includes(i + 1) ? i + 1 : ""))
   })
-  // Show buckets overview
   console.table(bucketsOverview)
-  // Show buckets to import, set up for copy/paste to USER_OVERRIDE
   console.log("const USER_OVERRIDE: BucketsList =", bucketsToImport)
-  // EXIT SCRIPT EARLY
   process.exit(0)
 }
 
