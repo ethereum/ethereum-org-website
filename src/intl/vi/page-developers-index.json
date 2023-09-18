@@ -49,10 +49,12 @@
   "page-developers-learn-tutorials-cta": "Xem hướng dẫn",
   "page-developers-learn-tutorials-desc": "Học cách phát triển Ethereum từng bước từ các nhà phát triển đã từng làm điều đó.",
   "page-developers-meta-desc": "Tài liệu tham khảo, hướng dẫn và công cụ để các nhà phát triển xây dựng trên Ethereum.",
-  "page-developers-mev-desc": "Giới thiệu về lợi nhuận có thể trích xuất của thợ đào (MEV)",
+  "page-developers-mev-desc": "An introduction to maximal extractable value (MEV)",
   "page-developers-mev-link": "Nhuận quyền thợ đào (MEV)",
-  "page-developers-mining-desc": "Cách các khối mới được tạo và đạt đến sự đồng thuận",
+  "page-developers-mining-desc": "Cách các khối mới được tạo và đạt được sự đồng thuận bằng cách sử dụng cơ chế bằng chứng công việc",
   "page-developers-mining-link": "Khai thác",
+  "page-developers-mining-algorithms-desc": "Thông tin về các thuật toán khai thác của Ethereum",
+  "page-developers-mining-algorithms-link": "Thuật toán khai thác",
   "page-developers-networks-desc": "Tổng quan về mạng chính và các mạng kiểm thử",
   "page-developers-networks-link": "Mạng",
   "page-developers-node-clients-desc": "Cách các khối và giao dịch được xác minh trong mạng",
@@ -84,5 +86,12 @@
   "page-developers-transactions-link": "Giao dịch",
   "page-developers-web3-desc": "Sự khác biệt của thế giới phát triển web3",
   "page-developers-web3-link": "Web2 và Web3",
-  "alt-eth-blocks": "Hình minh họa các khối được sắp xếp thành một biểu tượng ETH"
+  "page-developers-networking-layer": "Lớp mạng",
+  "page-developers-networking-layer-link": "Lớp mạng",
+  "page-developers-networking-layer-desc": "Giới thiệu về tầng phân lớp mạng Ethereum",
+  "page-developers-data-structures-and-encoding": "Cấu trúc dữ liệu và mã hoá",
+  "page-developers-data-structures-and-encoding-link": "Cấu trúc dữ liệu và mã hoá",
+  "page-developers-data-structures-and-encoding-desc": "Giới thiệu về cấu trúc dữ liệu và lược đồ mã hóa được sử dụng trong các stack Ethereum",
+  "alt-eth-blocks": "Hình minh họa các khối được sắp xếp thành một biểu tượng ETH",
+  "page-assets-doge": "Doge sử dụng ứng dụng phi tập trung"
 }
