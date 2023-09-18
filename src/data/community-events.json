@@ -373,8 +373,17 @@
     "to": "https://ethglobal.com/events/pragma-newyork",
     "sponsor": null,
     "location": "New York, New York",
-    "description": "ETHGlobal Pragma is an in-person summit for builders and leaders in the web3 ecosystem",
+    "description": "Pragma New York is an in-person summit for builders and leaders in the web3 ecosystem",
     "startDate": "2023-09-21",
     "endDate": "2023-09-21"
+  },
+  {
+    "title": "Pragma Istanbul",
+    "to": "https://ethglobal.com/events/pragma-istanbul",
+    "sponsor": null,
+    "location": "Istanbul, Turkey",
+    "description": "Pragma Istanbul is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-11-16",
+    "endDate": "2023-11-16"
   }
 ]
