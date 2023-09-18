@@ -48,8 +48,10 @@
   "page-index-developers-code-example-description-3": "Existující služby si lze představit jako decentralizované otevřené aplikace.",
   "page-index-network-stats-title": "Ethereum dnes",
   "page-index-network-stats-subtitle": "Nejnovější statistiky sítě",
+  "page-index-network-stats-total-eth-staked": "Total ETH staked",
   "page-index-network-stats-eth-price-description": "Cena ETH (USD)",
   "page-index-network-stats-eth-price-explainer": "Nejnovější cena za 1 ether. Můžete si koupit pouze 0,000000000000000001 – nemusíte koupit 1 celý ETH.",
+  "page-index-network-stats-total-eth-staked-explainer": "Celkové množství ETH, které je v současné době stakováno a zabezpečuje tak síť.",
   "page-index-network-stats-tx-day-description": "Dnešní transakce",
   "page-index-network-stats-tx-day-explainer": "Počet transakcí, které byly v síti úspěšně zpracovány za posledních 24 hodin.",
   "page-index-network-stats-value-defi-description": "Hodnota uzamčená v DeFi (USD)",
@@ -73,5 +75,15 @@
   "page-index-nft": "Internet aktiv",
   "page-index-nft-description": "Ethereum není jen pro digitální peníze. Cokoliv, co můžete vlastnit, lze reprezentovat, obchodovat a používat jako nezaměnitelné tokeny (NFT). Můžete tokenizovat své umění a automaticky získávat licenční poplatky pokaždé, když je znovu prodáno. Nebo použijte token pro něco, co vlastníte, jako zástavu za půjčku. Možnosti neustále přibývají.",
   "page-index-nft-button": "Více o NFT",
-  "page-index-nft-alt": "Logo Eth zobrazené prostřednictvím hologramu."
+  "page-index-nft-alt": "Logo Eth zobrazené prostřednictvím hologramu.",
+  "community-events-content-heading": "Přidejte se ke komunitě ethereum.org",
+  "community-events-content-1": "Přidejte se k takřka <strong>40 000 členům</strong> našeho <a href=\"/discord/\">Discord serveru</a>.",
+  "community-events-content-2": "Připojte se k našim měsíčním komunitním callům, kde se dozvíte nejnovější aktualizace o vývoji Ethereum.org a důležité novinky o celém ekosystému. Budete moci klást otázky, sdílet nápady a poskytovat zpětnou vazbu – je to ideální příležitost stát se součástí aktivní ethereovské komunity.",
+  "community-events-next-event": "Další událost",
+  "community-events-no-events-planned": "Žádné naplánované události",
+  "community-events-upcoming-calls": "Budoucí cally",
+  "community-events-no-upcoming-calls": "Žádné budoucí cally",
+  "community-events-previous-calls": "Předchozí cally",
+  "community-events-there-are-no-past-calls": "Žádné proběhlé cally",
+  "community-events-add-to-calendar": "Přidat do kalendáře"
 }
