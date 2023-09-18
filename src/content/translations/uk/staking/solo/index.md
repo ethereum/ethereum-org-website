@@ -53,9 +53,9 @@ summaryPoints:
 </ExpandableCard>
 
 <ExpandableCard title="Безпечне керування ключами" eventCategory="SoloStaking" eventName="clicked secure key management">
-Подібно до того, як приватні ключі захищають вашу адресу Ethereum, вам потрібно буде створити ключі спеціально для вашого валідатора. Ви повинні розуміти, як зберігати будь-які початкові фрази або закриті ключі в безпеці.
+Подібно до того, як приватні ключі захищають вашу адресу Ethereum, вам потрібно буде створити ключі спеціально для вашого валідатора. Ви повинні розуміти, як убезпечити й захистити кодові фрази або приватні ключі.{' '}
 
-<a href="/security/">Безпека Ethereum і запобігання шахрайству</a>
+<a href="/security/">Безпека й запобігання шахрайству в Ethereum</a>
 </ExpandableCard>
 
 <ExpandableCard title="Технічне обслуговування" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -69,7 +69,7 @@ summaryPoints:
 <ExpandableCard title="Ризик скорочення" eventCategory="SoloStaking" eventName="clicked slashing risk">
 На відміну від покарань за бездіяльність у режимі офлайн, <em>скорочення</em> є набагато серйознішим покаранням, призначеним за зловмисні порушення. Якщо ви запустите міноритарний клієнт із завантаженими ключами лише на одній машині одночасно, ваш ризик бути скороченими зводиться до мінімуму. З огляду на це, усі стейкери повинні усвідомлювати ризики скорочення.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Докладніше про скорочення та життєвий цикл валідатора</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Докладніше про покарання та життєвий цикл валідатора</a>
 </ExpandableCard>
 </InfoGrid>
 
