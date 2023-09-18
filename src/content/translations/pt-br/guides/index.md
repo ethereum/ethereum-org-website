@@ -10,7 +10,7 @@ Deseja iniciar a sua jornada no Ethereum? Há toda uma comunidade de nós explor
 
 ## Introdução
 
-1. [Como “registrar” uma conta Ethereum](/guides/how-to-register-an-ethereum-account/) — qualquer pessoa pode criar uma carteira gratuitamente. Este guia mostrará por onde começar.
+1. [Como “registrar” uma conta Ethereum](/guides/how-to-create-an-ethereum-account/) — qualquer pessoa pode criar uma carteira gratuitamente. Este guia mostrará por onde começar.
 
 2. [Como usar uma carteira](/guides/how-to-use-a-wallet/) — Uma introdução aos recursos básicos de qualquer carteira e como usá-los.
 

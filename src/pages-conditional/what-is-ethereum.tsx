@@ -11,7 +11,6 @@ import {
   Heading,
   HeadingProps,
   ListItem,
-  Text,
   UnorderedList,
   Icon,
 } from "@chakra-ui/react"
@@ -39,6 +38,8 @@ import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import StatErrorMessage from "../components/StatErrorMessage"
 import StatLoadingMessage from "../components/StatLoadingMessage"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 import { getLocaleForNumberFormat } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -71,7 +72,6 @@ const Title = (props: ChildOnlyProp) => (
     letterSpacing="wider"
     fontWeight="500"
     mb={4}
-    mt={0}
     textTransform="uppercase"
     color="textTableOfContents"
     {...props}
@@ -124,14 +124,13 @@ const H2 = (prop: ChildOnlyProp & HeadingProps) => (
   <Heading
     fontSize={{ base: "2xl", md: "3xl" }}
     lineHeight={1.4}
-    mt={0}
     mb={6}
     {...prop}
   />
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     mt={0}
     fontSize={{ base: "xl", md: "2xl" }}
@@ -343,7 +342,6 @@ const WhatIsEthereumPage = ({
                   fontSize="1.4rem"
                   lineHeight={1.4}
                   color="text300"
-                  mt={0}
                   mb={6}
                 >
                   <Translation id="page-what-is-ethereum-summary-title" />

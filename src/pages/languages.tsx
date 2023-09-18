@@ -1,13 +1,4 @@
-import {
-  Box,
-  CloseButton,
-  Flex,
-  Heading,
-  IconButton,
-  LinkBox,
-  LinkOverlay,
-  Text,
-} from "@chakra-ui/react"
+import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React, { useState } from "react"
@@ -17,6 +8,8 @@ import InlineLink, { BaseLink } from "../components/Link"
 import Input from "../components/Input"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 import { Language, languageMetadata } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
@@ -60,13 +53,13 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
         description={t("page-languages-meta-desc")}
       />
       <Box py={4} px={8} w="full">
-        <Heading
+        <OldHeading
           as="h1"
           lineHeight={1.4}
           fontSize={{ base: "2.5rem", md: "3rem" }}
         >
           <Translation id="page-languages-h1" />
-        </Heading>
+        </OldHeading>
         <Text>
           <Translation id="page-languages-p1" />
         </Text>
@@ -84,9 +77,9 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
           </InlineLink>
           .
         </Text>
-        <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+        <OldHeading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
           <Translation id="page-languages-translations-available" />:
-        </Heading>
+        </OldHeading>
         <Box
           as="form"
           position="relative"
@@ -142,7 +135,7 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                 >
                   {lang["name"]}
                 </Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
@@ -158,14 +151,14 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                   >
                     {lang.localName}
                   </LinkOverlay>
-                </Heading>
+                </OldHeading>
               </LinkBox>
             )
           })}
         </Flex>
-        <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+        <OldHeading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
           <Translation id="page-languages-want-more-header" />
-        </Heading>
+        </OldHeading>
         <Text>
           <Translation id="page-languages-want-more-paragraph" />{" "}
           <InlineLink to="/contributing/translation-program/">

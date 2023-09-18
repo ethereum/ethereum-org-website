@@ -8,12 +8,12 @@ import {
   Image,
   LinkBox,
   LinkOverlay,
-  Text,
 } from "@chakra-ui/react"
 
 import { getImage } from "../../utils/image"
 
 import ButtonLink from "../ButtonLink"
+import Text from "../OldText"
 
 interface IProps {
   to: string
