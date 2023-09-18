@@ -9,7 +9,7 @@ image: ../../assets/future_transparent.png
 alt: ""
 summaryPoint1: An alternative economic system built on regenerative principles
 summaryPoint2: An attempt to harness Ethereum to solve global-level coordination crises such as climate change
-summaryPoint3: A tool to drastically scale ecological benefit assets like verifed carbon credits
+summaryPoint3: A tool to drastically scale ecological benefit assets like verified carbon credits
 ---
 
 ## What is ReFi? {#what-is-refi}
