@@ -101,7 +101,7 @@ const InfoColumn = (props: ChildOnlyProp) => (
   />
 )
 
-// Apply styles for classes within markdown here[]
+// Apply styles for classes within markdown here
 const ContentContainer = (props: BoxProps) => (
   <Box
     as="article"
