@@ -70,12 +70,7 @@ import type { ChildOnlyProp, Context } from "../types"
 import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <SimpleGrid
-    columns={{ base: 1, md: 2 }}
-    spacing={8}
-    sx={{ h3: { mt: 0 } }}
-    {...props}
-  />
+  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
 )
 
 const HeroContainer = (props: ChildOnlyProp) => (
