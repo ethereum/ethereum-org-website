@@ -58,58 +58,7 @@ const argv = require("minimist")(process.argv.slice(2))
 
 type BucketsList = { [key: string]: Array<number> }
 const USER_OVERRIDE: BucketsList = {
-  ar: [],
-  az: [],
-  bg: [],
-  bn: [],
-  ca: [],
-  cs: [],
-  da: [],
-  de: [],
-  el: [],
-  es: [],
-  fa: [],
-  fi: [],
-  fil: [],
-  fr: [],
-  gl: [],
-  gu: [],
-  hi: [],
-  hr: [],
-  hu: [],
-  id: [],
-  ig: [],
-  it: [],
-  ja: [],
-  ka: [],
-  kk: [],
-  km: [],
-  ko: [],
-  lt: [],
-  ml: [],
-  ms: [],
-  mr: [],
-  nb: [],
-  nl: [],
-  pcm: [],
-  pl: [],
-  pt: [],
-  "pt-br": [],
-  ro: [],
-  ru: [],
-  se: [],
-  sk: [],
-  sl: [],
-  sr: [],
-  sw: [],
-  ta: [],
-  th: [],
-  tr: [],
-  uk: [],
-  uz: [],
-  vi: [],
-  zh: [],
-  "zh-tw": [],
+  // langCode: [bucket_number, bucket_number],
 }
 
 /******************************
@@ -149,6 +98,7 @@ const USER_OVERRIDE: BucketsList = {
 
 // Initialize console arguments
 const VERBOSE = Boolean(argv.v || argv.verbose)
+const BUCKET_GENERATION_ONLY = Boolean(argv.b || argv.buckets)
 const FULL_BUCKET_NAME_SUMMARY = Boolean(argv.f || argv.full)
 
 // Initialize root paths
@@ -274,6 +224,26 @@ const useUserOverRide =
 const bucketsToImport: BucketsList = useUserOverRide
   ? USER_OVERRIDE
   : fetchReviewedCsv()
+
+const highestBucketNumber: number = Object.values(bucketsToImport).reduce(
+  (prev: number, buckets: Array<number>): number =>
+    buckets[buckets.length - 1] > prev ? buckets[buckets.length - 1] : prev,
+  0
+)
+if (BUCKET_GENERATION_ONLY) {
+  const bucketsOverview = {}
+  Object.entries(bucketsToImport).forEach(([langCode, buckets]) => {
+    bucketsOverview[langCode] = Array(highestBucketNumber - 1)
+      .fill(0)
+      .map((_, i) => (buckets.includes(i + 1) ? i + 1 : ""))
+  })
+  // Show buckets overview
+  console.table(bucketsOverview)
+  // Show buckets to import, set up for copy/paste to USER_OVERRIDE
+  console.log("const USER_OVERRIDE: BucketsList =", bucketsToImport)
+  // EXIT SCRIPT EARLY
+  process.exit(0)
+}
 
 /**
  * Reads `ls` file contents of `_path`, moving .md and .json files
