@@ -1643,6 +1643,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://linktr.ee/kritik"><img src="https://avatars.githubusercontent.com/u/57076429?v=4?s=100" width="100px;" alt="kritik sah"/><br /><sub><b>kritik sah</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akritik-sah" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Fuliggine"><img src="https://avatars.githubusercontent.com/u/56844974?v=4?s=100" width="100px;" alt="Fuliggine"/><br /><sub><b>Fuliggine</b></sub></a><br /><a href="#content-Fuliggine" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Omsify"><img src="https://avatars.githubusercontent.com/u/87442202?v=4?s=100" width="100px;" alt="Omsify"/><br /><sub><b>Omsify</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AOmsify" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xMimir"><img src="https://avatars.githubusercontent.com/u/108837858?v=4?s=100" width="100px;" alt="0xMimir"/><br /><sub><b>0xMimir</b></sub></a><br /><a href="#content-0xMimir" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
