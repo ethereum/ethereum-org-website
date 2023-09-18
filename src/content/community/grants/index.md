@@ -38,6 +38,7 @@ These projects have created their own grants for projects aimed at developing an
 - [SKALE Network Grants Program](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/) ecosystem_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
 - [UMA Grants Program](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) developer support_
+- [Uniswap Grants Program](https://www.uniswapfoundation.org/grants) - _[Uniswap](https://uniswap.org/) community_
 - [Web3 Grants](https://web3grants.net) - _An extensive list of web3/crypto related grant programs_
 
 ## Quadratic funding {#quadratic-funding}
