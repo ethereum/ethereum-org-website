@@ -168,7 +168,7 @@ const FindWalletPage = ({ data, location }) => {
         top="76px"
         bg="background.base"
         w="full"
-        zIndex={1}
+        zIndex={11}
         py="5px"
       >
         <Box
