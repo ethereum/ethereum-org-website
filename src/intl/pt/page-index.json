@@ -39,7 +39,7 @@
   "page-index-developers-button": "Portal do programador",
   "page-index-developers-code-examples": "Exemplos de código",
   "page-index-developers-code-example-title-0": "O seu próprio banco",
-  "page-index-developers-code-example-description-0": "Pode criar um banco que funcionará com base na lógica com que o programou.",
+  "page-index-developers-code-example-description-0": "Pode criar um banco desenvolvido pela lógica que programou.",
   "page-index-developers-code-example-title-1": "A sua própria moeda",
   "page-index-developers-code-example-description-1": "Pode criar tokens que pode transferir e utilizar em todas as aplicações.",
   "page-index-developers-code-example-title-2": "Uma carteira Ethereum em JavaScript",
@@ -75,5 +75,15 @@
   "page-index-nft": "A internet dos ativos",
   "page-index-nft-description": "O Ethereum não se destina apenas ao dinheiro digital. Qualquer coisa que possua pode ser representada, negociada e usada como tokens não fungíveis (NFT). Pode tokenizar a sua arte e obter royalties automaticamente sempre que esta é revendida. Ou utilize um token para algo que possui para retirar um empréstimo. As possibilidades estão estão em constante crescimento.",
   "page-index-nft-button": "Mais sobre NFTs",
-  "page-index-nft-alt": "Um logótipo Eth exibido através de um holograma."
+  "page-index-nft-alt": "Um logótipo Eth exibido através de um holograma.",
+  "community-events-content-heading": "Junte-se à comunidade ethereum.org",
+  "community-events-content-1": "Junte-se a quase <strong>40.000 membros</strong> no nosso <a href=\"/discord/\">servidor no Discord</a>.",
+  "community-events-content-2": "Junte-se às nossas chamadas mensais para conhecer as últimas atualizações em Ethereum.org e as notícias mais importantes sobre o ecossistema. Obtenha a oportunidade de colocar questões, partilhar ideias e a sua opinião - é a oportunidade perfeita para fazer parte da vibrante comunidade Ethereum.",
+  "community-events-next-event": "Próximo evento",
+  "community-events-no-events-planned": "Sem eventos agendados",
+  "community-events-upcoming-calls": "Próximas chamadas",
+  "community-events-no-upcoming-calls": "Sem chamadas agendadas",
+  "community-events-previous-calls": "Chamadas prévias",
+  "community-events-there-are-no-past-calls": "No existem chamadas prévias",
+  "community-events-add-to-calendar": "Adicionar ao calendário"
 }

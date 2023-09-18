@@ -39,7 +39,7 @@
   "page-index-developers-button": "개발자 포털",
   "page-index-developers-code-examples": "예제 코드",
   "page-index-developers-code-example-title-0": "나만의 은행",
-  "page-index-developers-code-example-description-0": "사용자는 직접 프로그래밍한 로직으로 뱅크런을 구축할 수 있습니다.",
+  "page-index-developers-code-example-description-0": "사용자는 직접 프로그래밍한 로직에 기반하여 은행을 빌드할 수 있습니다.",
   "page-index-developers-code-example-title-1": "나만의 화폐",
   "page-index-developers-code-example-description-1": "여러 애플리케이션 간에 전송하고 사용할 수 있는 토큰을 생성할 수 있습니다.",
   "page-index-developers-code-example-title-2": "JavaScript 이더리움 지갑",
@@ -51,6 +51,7 @@
   "page-index-network-stats-total-eth-staked": "총  스테이킹된 ETH",
   "page-index-network-stats-eth-price-description": "ETH 가격(미국 달러)",
   "page-index-network-stats-eth-price-explainer": "1이더(ETH)의 최신 가격입니다. 최저 0.000000000000000001을 구입할 수 있으며, 1이더(ETH) 전액을 구입할 필요는 없습니다.",
+  "page-index-network-stats-total-eth-staked-explainer": "현재 스테이킹되어 네트워크 보안에 기여하는 ETH 합계.",
   "page-index-network-stats-tx-day-description": "오늘의 거래",
   "page-index-network-stats-tx-day-explainer": "지난 24시간 동안 네트워크에서 성공적으로 처리된 거래의 수입니다.",
   "page-index-network-stats-value-defi-description": "DeFi 내 고정 값(미국 달러)",
@@ -74,5 +75,15 @@
   "page-index-nft": "자산 인터넷",
   "page-index-nft-description": "이더리움은 디지털 화폐만을 위한 곳이 아닙니다. 여러분이 소유할 수 있는 것은 무엇이든 표현하고 거래할 수 있으며, 대체 불가 토큰(NFT, non-fungible token)으로 사용할 수도 있습니다. 여러분의 기술을 토큰으로 만들고 이를 재판매할 때마다 자동으로 로열티를 받을 수 있습니다. 또는 대출을 받을 수 있도록 여러분이 소유한 자산에 대해 토큰을 사용하십시오. 가능성은 언제나 커지고 있습니다.",
   "page-index-nft-button": "NFT에 대해 자세히 알아보기",
-  "page-index-nft-alt": "홀로그램을 통해 표시되고 있는 ETH 로고."
+  "page-index-nft-alt": "홀로그램을 통해 표시되고 있는 ETH 로고.",
+  "community-events-content-heading": "ethereum.org 커뮤니티에 참여하기",
+  "community-events-content-1": "공식 <a href=\"/discord/\">Discord 서버</a>에서 약 <strong>40,000명의 회원</strong>과 함께하세요.",
+  "community-events-content-2": "커뮤니티 월례 회의에 참여하여 Ethereum.org 개발과 관련한 흥미로운 업데이트와 중요한 생태계 소식을 접하세요. 질문하고 아이디어를 공유하고 피드백을 제공할 수 있는 기회를 놓치지 마세요. 활기찬 Ethereum 커뮤니티의 일원이 될 수 있는 절호의 기회입니다.",
+  "community-events-next-event": "다음 이벤트",
+  "community-events-no-events-planned": "예정된 이벤트가 없습니다",
+  "community-events-upcoming-calls": "예정된 모임",
+  "community-events-no-upcoming-calls": "예정된 모임 없음",
+  "community-events-previous-calls": "지난 모임",
+  "community-events-there-are-no-past-calls": "지난 모임이 없습니다",
+  "community-events-add-to-calendar": "캘린더에 추가"
 }
