@@ -237,14 +237,11 @@ const FindWalletPage = ({ data, location }) => {
       <Flex
         px={{ base: 0, md: 8 }}
         pt={4}
-        pb={0}
+        pb={6}
         w="full"
         gap={6}
-        height="90vh"
-        overflow="hidden"
-        position="sticky"
         top="76px"
-        mb={{ base: "230px", md: "120px", lg: "150px" }}
+        mb={{ base: "30px", md: "20px", lg: "50px" }}
         borderBottom="1px solid"
         borderBottomColor="secondary"
       >
@@ -303,8 +300,8 @@ const FindWalletPage = ({ data, location }) => {
         sx={{
           p: {
             fontSize: "sm",
-            lineHeight: "23px",
-            pt: "0.2rem",
+            lineHeight: "18px",
+            p: "8px",
             m: 0,
           },
         }}
