@@ -9,6 +9,15 @@
     "endDate": "2023-10-21"
   },
   {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org/",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, EVM scaling, layers 2, Account Abstraction and more with a focus on decentralization and community projects. We also organize a Demo Pitch Day with VCs.",
+    "startDate": "2024-04-19",
+    "endDate": "2024-04-21"
+  },
+  {
     "title": "Ethereum Rio",
     "to": "https://www.ethereumbrasil.com/",
     "sponsor": null,
