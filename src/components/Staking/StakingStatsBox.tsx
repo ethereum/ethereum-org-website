@@ -2,11 +2,12 @@
 import React, { useState, useEffect, ReactNode } from "react"
 import { MdInfoOutline } from "react-icons/md"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { Code, Flex, Icon, Spinner, Text, VStack } from "@chakra-ui/react"
+import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
 import Tooltip from "../Tooltip"
 import InlineLink from "../Link"
+import Text from "../OldText"
 // Import utilities
 import { Lang } from "../../utils/languages"
 import { getData } from "../../utils/cache"

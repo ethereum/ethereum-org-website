@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Flex, Text } from "@chakra-ui/react"
 import { FaTools } from "react-icons/fa"
+import { Box, Flex } from "@chakra-ui/react"
 
 import ButtonLink from "../ButtonLink"
 import ReactSelect, { type ReactSelectOnChange } from "../ReactSelect"
 import Translation from "../Translation"
+import Text from "../OldText"
 
 import { trackCustomEvent } from "../../utils/matomo"
 

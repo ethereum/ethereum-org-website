@@ -57,7 +57,7 @@
   "page-upgrades-bug-bounty-specs-docs": "规范文档",
   "page-upgrades-bug-bounty-submit": "提交漏洞",
   "page-upgrades-bug-bounty-submit-desc": "每发现一个有效漏洞，你都会获得奖励。奖励多少将因严重程度而异。严重程度是按照漏洞对以太坊网络的影响及出现的可能性，依据开放式 Web 应用程序安全项目 (OWASP) 风险评级模型计算的。",
-  "page-upgrades-bug-bounty-subtitle": "找出协议、客户端和 Solidity 语言中影响到以太坊网络的漏洞，最高可赢取 $250,000 USD 并登上排行榜。",
+  "page-upgrades-bug-bounty-subtitle": "找出协议、客户端和 Solidity 语言中影响到以太坊网络的漏洞，最高可赢取 250,000 USD 并登上排行榜。",
   "page-upgrades-bug-bounty-title": "已开放供提交",
   "page-upgrades-bug-bounty-title-1": "信标链",
   "page-upgrades-bug-bounty-title-2": "分支选择",

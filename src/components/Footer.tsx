@@ -11,7 +11,7 @@ import {
 import { graphql, useStaticQuery } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React from "react"
-import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 
 import { Lang } from "../utils/languages"
 import { getLocaleTimestamp } from "../utils/time"
@@ -31,12 +31,6 @@ const socialLinks = [
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
     color: "#1DA1F2",
-  },
-  {
-    icon: FaYoutube,
-    to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
-    ariaLabel: "Youtube",
-    color: "#FF0000",
   },
   {
     icon: FaDiscord,
@@ -116,6 +110,10 @@ const Footer: React.FC<IProps> = () => {
         {
           to: `/wallets/`,
           text: t("ethereum-wallets"),
+        },
+        {
+          to: "/gas/",
+          text: "Gas fees",
         },
         {
           to: "/security/",

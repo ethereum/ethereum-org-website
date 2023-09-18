@@ -55,8 +55,6 @@ type ExchangeName =
   | "wazirx"
   | "korbit"
 
-type WalletProviderName = "simplex" | "moonpay" | "wyre"
-
 type ExchangeByCountry = {
   value: string
   label: string
@@ -71,22 +69,6 @@ interface Exchange {
 }
 
 type Exchanges = Record<ExchangeName, Exchange>
-
-interface Wallet {
-  url: string
-  platform: string
-  image: ImageDataLike | null
-  isUsaOnly?: boolean
-}
-
-interface WalletProvider {
-  usaExceptions: Array<string>
-  wallets: {
-    [key: string]: Wallet
-  }
-}
-
-type WalletProviders = Record<WalletProviderName, WalletProvider>
 
 interface FilteredData {
   title: string
@@ -430,66 +412,6 @@ export const useEthExchanges = () => {
     },
   }
 
-  const walletProviders: WalletProviders = {
-    wyre: {
-      usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
-      wallets: {
-        Squarelink: {
-          url: "https://squarelink.com/	",
-          platform: "Web",
-          image: data.squarelink,
-        },
-      },
-    },
-    moonpay: {
-      usaExceptions: [
-        "CT",
-        "HI",
-        "IA",
-        "KS",
-        "KY",
-        "MS",
-        "NE",
-        "NM",
-        "NY",
-        "RI",
-        "WV",
-      ],
-      wallets: {
-        Argent: {
-          url: "https://www.argent.xyz/	",
-          platform: "Mobile",
-          image: data.argent,
-        },
-        imToken: {
-          url: "https://token.im/ ",
-          platform: "Mobile",
-          image: data.imtoken,
-        },
-        Trust: {
-          url: "https://trustwallet.com/	",
-          platform: "Mobile",
-          image: data.trust,
-        },
-        MyCrypto: {
-          url: "https://app.mycrypto.com",
-          platform: "Web",
-          image: data.mycrypto,
-        },
-      },
-    },
-    simplex: {
-      usaExceptions: ["AL", "AK", "NM", "HI", "NV", "WA", "VT", "NY"],
-      wallets: {
-        MyEtherWallet: {
-          url: "https://www.myetherwallet.com/",
-          platform: "Mobile/Web",
-          image: data.myetherwallet,
-        },
-      },
-    },
-  }
-
   const lastUpdated = getLocaleTimestamp(
     language as Lang,
     data.timestamp.parent.fields.gitLogLatestDate
@@ -521,14 +443,9 @@ export const useEthExchanges = () => {
       .sort((a, b) => a.value.localeCompare(b.value))
 
   const exchangesArray = Object.keys(exchanges) as Array<ExchangeName>
-  const walletProvidersArray = Object.keys(
-    walletProviders
-  ) as Array<WalletProviderName>
 
   // Construct arrays for CardList
   let filteredExchanges: Array<FilteredData> = []
-  let filteredWalletProviders: Array<WalletProviderName> = []
-  let filteredWallets: Array<FilteredData> = []
 
   const hasSelectedCountry = !!state?.selectedCountry?.value
   if (hasSelectedCountry) {
@@ -561,60 +478,9 @@ export const useEthExchanges = () => {
           }
         })
     )
-
-    // Filter to wallet providers that serve selected Country
-    filteredWalletProviders = walletProvidersArray.filter(
-      (provider) => state?.selectedCountry?.exchanges[provider] === "TRUE"
-    )
-  }
-  if (filteredWalletProviders.length) {
-    // Construct wallets based on the provider
-    filteredWallets = shuffle(
-      filteredWalletProviders.reduce<Array<FilteredData>>(
-        (res, currentProvider) => {
-          const wallets = Object.keys(walletProviders[currentProvider].wallets)
-
-          const flattenWallets = wallets.reduce<Array<FilteredData>>(
-            (result, currentWallet) => {
-              const walletObject =
-                walletProviders[currentProvider].wallets[currentWallet]
-              // Add state exceptions if Country is USA
-              let description: string | null = null
-              if (
-                state?.selectedCountry?.value ===
-                t("page-get-eth-exchanges-usa")
-              ) {
-                const exceptions =
-                  walletProviders[currentProvider].usaExceptions
-                if (exceptions.length > 0) {
-                  description = `${t(
-                    "page-get-eth-exchanges-except"
-                  )} ${exceptions.join(", ")}`
-                }
-                // Filter out wallets that only service USA
-              } else if (walletObject.isUsaOnly) {
-                return result
-              }
-              return result.concat({
-                title: currentWallet,
-                description,
-                link: walletObject.url,
-                image: getImage(walletObject.image)!,
-                alt: "",
-              })
-            },
-            []
-          )
-          // Flatten data into single array for <CardList/>
-          return res.concat(flattenWallets)
-        },
-        []
-      )
-    )
   }
 
   const hasExchangeResults = filteredExchanges.length > 0
-  const hasWalletResults = filteredWallets.length > 0
 
   return {
     t,
@@ -623,9 +489,7 @@ export const useEthExchanges = () => {
     placeholderString,
     hasSelectedCountry,
     hasExchangeResults,
-    hasWalletResults,
     filteredExchanges,
-    filteredWallets,
     lastUpdated,
   }
 }
