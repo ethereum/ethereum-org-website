@@ -5,5 +5,5 @@ export type CommonHeroProps = {
   heroImgSrc: IGatsbyImageData
   header: string
   description: string
-  buttons?: [CTAParentProps, CTAParentProps]
+  buttons?: [CTAParentProps, CTAParentProps?]
 }

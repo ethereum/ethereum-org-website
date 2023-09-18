@@ -77,9 +77,10 @@ const HubHero = (props: HubHeroProps) => {
         </Stack>
         <HStack justify={{ md: "center", xl: "start" }} spacing="4">
           {buttons
-            ? buttons.map((button, idx) => (
-                <CallToAction key={idx} {...button} index={idx} />
-              ))
+            ? buttons.map((button, idx) => {
+                if (!button) return
+                return <CallToAction key={idx} {...button} index={idx} />
+              })
             : null}
         </HStack>
       </Stack>
