@@ -11,7 +11,6 @@ import {
   chakra,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Icon,
   ListItem as ChakraListItem,
@@ -51,6 +50,9 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -64,19 +66,19 @@ const commonHeadingProps: HeadingProps = {
 }
 
 export const H1 = (props: HeadingProps) => (
-  <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
 export const H2 = (props: HeadingProps) => (
-  <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
+  <OldHeading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
 export const H3 = (props: HeadingProps) => (
-  <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
 export const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     {...commonHeadingProps}
     fontSize="xl"
@@ -108,7 +110,7 @@ export const Paragraph = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: InlineLink,
+  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -133,6 +135,7 @@ const components = {
   ExpandableCard,
   YouTube,
   QuizWidget,
+  GlossaryTooltip,
 }
 
 const HeroContainer = (props: ChildOnlyProp) => (
@@ -490,7 +493,7 @@ export const useCasePageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["template-usecase", "learn-quizzes", "common"] }
+        ns: { in: ["template-usecase", "learn-quizzes", "common", "glossary"] }
       }
     ) {
       edges {

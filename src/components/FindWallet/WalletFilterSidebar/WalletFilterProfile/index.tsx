@@ -119,7 +119,6 @@ const WalletFilterProfile = ({
               <Heading
                 as="h3"
                 ml={2}
-                my={0}
                 fontSize="1.3rem"
                 py={0}
                 pr={1}

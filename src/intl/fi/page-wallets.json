@@ -62,6 +62,6 @@
   "page-wallets-your-ethereum-account-desc": "Lompakkosi on ikkuna Ethereum-tiliisi – saldoon, transaktiohistoriaan ynnä muuhun. Lompakko-palveluntarjoajaa voit vaihtaa milloin vain.",
   "page-wallets-your-login": "Avain Ethereum-sovelluksiin",
   "page-wallets-your-login-desc": "Lompakkosi avulla voit kirjautua mihin tahansa hajautetun verkon sovellukseen, käyttäen Ethereum-tiliäsi. Lompakko on tavallaan sisäänkirjautumisen avain, jota voit käyttää useisiin dAppeihin.",
-  "additional-reading-how-to-register-an-ethereum-account": "Miten Ethereum-tili rekisteröidään",
+  "additional-reading-how-to-create-an-ethereum-account": "Miten Ethereum-tili rekisteröidään",
   "additional-reading-how-to-use-a-wallet": "Miten lompakkoa käytetään"
 }

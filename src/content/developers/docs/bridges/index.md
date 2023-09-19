@@ -30,7 +30,7 @@ For developers, bridges enable the following:
 
 ## How do bridges work? {#how-do-bridges-work}
 
-While there are many [types of bridge designs](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa), three ways to facilitate the cross-chain transfer of assets stand out:
+While there are many [types of bridge designs](https://li.fi/knowledge-hub/blockchain-bridges-and-classification/), three ways to facilitate the cross-chain transfer of assets stand out:
 
 - **Lock and mint –** Lock assets on the source chain and mint assets on the destination chain.
 - **Burn and mint –** Burn assets on the source chain and mint assets on the destination chain.
@@ -91,7 +91,7 @@ For developers, there are many ways to add support for bridges:
    - Assessment and maintenance of bridges are hard and time-consuming.
    - Selecting one bridge creates a single point of failure and dependency.
    - The dapp is limited by the bridge’s capabilities.
-   - Bridges alone might not be enough. dapps might need DEXs to offer more functionality such as cross-chain swaps.
+   - Bridges alone might not be enough. Dapps might need DEXs to offer more functionality such as cross-chain swaps.
 
 4. **Integrating multiple bridges –** This solution solves many problems associated with integrating a single bridge. However, it also has limitations, as integrating multiple bridges is resource-consuming and creates technical and communication overheads for developers—the scarcest resource in crypto.
 

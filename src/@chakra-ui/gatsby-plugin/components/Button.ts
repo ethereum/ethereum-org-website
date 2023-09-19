@@ -10,17 +10,15 @@ import { defineStyle, defineStyleConfig } from "@chakra-ui/react"
  */
 const ICON_SELECTOR = "& svg"
 
-const getBaseColor = (isSecondary: boolean) =>
-  !isSecondary ? "primary.base" : "body.base"
-
-const baseStyle = defineStyle((props) => ({
+const baseStyle = defineStyle({
   borderRadius: "base",
   border: "1px",
-  color: getBaseColor(props.isSecondary),
+  color: "primary.base",
   lineHeight: "1.6",
   transitionProperty: "common",
   transitionDuration: "normal",
   whiteSpace: "normal",
+  p: "unset",
   _focusVisible: {
     outline: "4px solid",
     outlineColor: "primary.hover",
@@ -33,7 +31,16 @@ const baseStyle = defineStyle((props) => ({
   _hover: {
     color: "primary.hover",
   },
-}))
+  "&[data-secondary='true']": {
+    color: "body.base",
+  },
+  "&.chakra-link": {
+    textDecoration: "none",
+    _hover: {
+      textDecoration: "none",
+    },
+  },
+})
 
 const variantSolid = defineStyle({
   color: "background.base",
@@ -68,7 +75,6 @@ const variantGhost = {
 
 const variantLink = defineStyle({
   borderColor: "transparent",
-  color: "primary.base",
   fontWeight: 700,
   textDecor: "underline",
   py: 0,
@@ -78,39 +84,22 @@ const variantLink = defineStyle({
   },
 })
 
-/**
- * @deprecated This is no longer needed. Styling for just the icon is not
- * unique compared to the variants used for text (as of the new DS)
- */
-const variantIcon = defineStyle({
-  appearance: "none",
-  background: "inherit",
-  padding: "initial",
-  border: 0,
-  color: "inherit",
-  boxShadow: "none",
-  _hover: {
-    color: "primary.base",
-    boxShadow: "none",
-  },
-})
-
 const sizes = {
-  md: {
-    py: "2 !important",
-    px: "4 !important",
+  md: defineStyle({
+    py: "2",
+    px: "4",
     [ICON_SELECTOR]: {
       fontSize: "2xl",
     },
-  },
-  sm: {
+  }),
+  sm: defineStyle({
     fontSize: "xs",
-    py: "1.5 !important",
-    px: "2 !important",
+    py: "1.5",
+    px: "2",
     [ICON_SELECTOR]: {
       fontSize: "md",
     },
-  },
+  }),
 }
 
 const variants = {
@@ -118,7 +107,6 @@ const variants = {
   outline: variantOutline,
   ghost: variantGhost,
   link: variantLink,
-  icon: variantIcon,
 }
 
 export const Button = defineStyleConfig({
