@@ -1,11 +1,17 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Box, Center, Flex, LinkBox, LinkOverlay } from "@chakra-ui/react"
+import {
+  Text,
+  Center,
+  Flex,
+  Heading,
+  LinkBox,
+  LinkOverlay,
+} from "@chakra-ui/react"
 
 import { getImage } from "../../utils/image"
 
 import ButtonLink from "../ButtonLink"
-import Text from "../OldText"
 import GatsbyImage from "../GatsbyImage"
 
 interface IProps {
@@ -77,7 +83,6 @@ const RoadmapActionCard: React.FC<IProps> = ({
     <LinkBox
       as={Flex}
       direction="column"
-      justifyContent="space-between"
       border="1px solid"
       borderColor="lightBorder"
     >
@@ -88,13 +93,15 @@ const RoadmapActionCard: React.FC<IProps> = ({
           objectFit="contain"
         />
       </Center>
-      <Box p={6}>
-        <Text as="h3">{title}</Text>
-        <Text>{description}</Text>
+      <Flex p={6} flex="1" flexDir="column" justify="space-between" gap={4}>
+        <Heading as="h3" size="md">
+          {title}
+        </Heading>
+        <Text flex="1">{description}</Text>
         <LinkOverlay as={ButtonLink} href={to}>
           {buttonText}
         </LinkOverlay>
-      </Box>
+      </Flex>
     </LinkBox>
   )
 }

@@ -9,6 +9,15 @@
     "endDate": "2023-10-21"
   },
   {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org/",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, EVM scaling, layers 2, Account Abstraction and more with a focus on decentralization and community projects. We also organize a Demo Pitch Day with VCs.",
+    "startDate": "2024-04-19",
+    "endDate": "2024-04-21"
+  },
+  {
     "title": "Ethereum Rio",
     "to": "https://www.ethereumbrasil.com/",
     "sponsor": null,
@@ -364,8 +373,17 @@
     "to": "https://ethglobal.com/events/pragma-newyork",
     "sponsor": null,
     "location": "New York, New York",
-    "description": "ETHGlobal Pragma is an in-person summit for builders and leaders in the web3 ecosystem",
+    "description": "Pragma New York is an in-person summit for builders and leaders in the web3 ecosystem",
     "startDate": "2023-09-21",
     "endDate": "2023-09-21"
+  },
+  {
+    "title": "Pragma Istanbul",
+    "to": "https://ethglobal.com/events/pragma-istanbul",
+    "sponsor": null,
+    "location": "Istanbul, Turkey",
+    "description": "Pragma Istanbul is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-11-16",
+    "endDate": "2023-11-16"
   }
 ]

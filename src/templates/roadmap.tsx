@@ -70,12 +70,7 @@ import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
 import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <SimpleGrid
-    columns={{ base: 1, md: 2 }}
-    spacing={8}
-    sx={{ h3: { mt: 0 } }}
-    {...props}
-  />
+  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
 )
 
 const HeroContainer = (props: ChildOnlyProp) => (
