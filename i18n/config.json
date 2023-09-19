@@ -8,6 +8,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "am",
+    "crowdinCode": "am",
+    "name": "Amharic",
+    "localName": "አማርኛ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "ar",
     "crowdinCode": "ar",
     "name": "Arabic",
