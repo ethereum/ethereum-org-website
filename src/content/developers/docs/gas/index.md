@@ -83,7 +83,7 @@ It's also important to note it is unlikely we will see extended spikes of full b
 
 ### Priority fee (tips) {#priority-fee}
 
-Before the London Upgrade, validators (known as "miners" under PoW) would receive the total gas fee from any transaction included in a block.
+Before the London Upgrade, validators (previously "miners" under PoW) would receive the total gas fee from any transaction included in a block.
 
 With the new base fee getting burned, the London Upgrade introduced a priority fee (tip) to incentivize validators to include a transaction in the block. Without tips, validators would find it economically viable to mine empty blocks, as they would receive the same block reward. Under normal conditions, a small tip provides validators a minimal incentive to include a transaction. For transactions that need to get preferentially executed ahead of other transactions in the same block, a higher tip will be necessary to attempt to outbid competing transactions.
 
