@@ -10,7 +10,6 @@ import Search from "../Search"
 import IconButton from "../IconButton"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
-import { FaLastfmSquare } from "react-icons/fa"
 
 export interface IProps {
   path: string
