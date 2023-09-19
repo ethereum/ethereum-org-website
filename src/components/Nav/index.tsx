@@ -114,7 +114,6 @@ const Nav: FC<IProps> = ({ path }) => {
                 <ButtonLink
                   onMouseOver={() => setLanguagesHover(true)}
                   onMouseOut={() => setLanguagesHover(false)}
-                  as={Link}
                   to={`/languages/${fromPageParameter}`}
                   variant="ghost"
                   isSecondary
