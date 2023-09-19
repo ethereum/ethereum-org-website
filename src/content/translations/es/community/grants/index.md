@@ -35,10 +35,11 @@ Estos proyectos han creado sus propias subvenciones para proyectos con fines de 
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/): _[ecosistema financiero](https://lido.fi/) Lido_
 - [Programa de MetaMask](https://metamaskgrants.org/): _[MetaMask](https://metamask.io/) subvenciones lideradas por empleados DAO_
 - [Programa de subvenciones mStable](https://docs.mstable.org/advanced/grants-program): _[comunidad](https://mstable.org/) mStable_
+- [Programa de subvenciones para la red SKALE](https://skale.space/developers#grants): _[ecosistema](https://skale.space/) de la red SKALE_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm): _[ecosistema The Graph](https://thegraph.com/)_
 - [Programa de subvenciones UMA](https://grants.umaproject.org/): _[ayuda para el desarrollador](https://umaproject.org/)UMA_
 - [Programa de subvenciones Uniswap](https://www.unigrants.org/): _[comunidad Uniswap](https://uniswap.org/)_
-- [Subvenciones Web3](https://web3grants.net): _una lista extensa de programas de subvención web3/cripto_
+- [Subvenciones Web3](https://web3grants.net): _una lista extensa de programas de subvenciones web3/cripto_
 
 ## Financiamiento cuadrático {#quadratic-funding}
 

@@ -1,5 +1,32 @@
 [
   {
+    "title": "Road to Devcon（Shenzhen）",
+    "to": "https://ethsz.openbuild.xyz/",
+    "sponsor": null,
+    "location": "Shenzhen, China",
+    "description": "Preheating activities for DEVCON 7 in the China region.Developers and communities, let us gather at Devcon！",
+    "startDate": "2023-10-21",
+    "endDate": "2023-10-21"
+  },
+  {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org/",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, EVM scaling, layers 2, Account Abstraction and more with a focus on decentralization and community projects. We also organize a Demo Pitch Day with VCs.",
+    "startDate": "2024-04-19",
+    "endDate": "2024-04-21"
+  },
+  {
+    "title": "Ethereum Rio",
+    "to": "https://www.ethereumbrasil.com/",
+    "sponsor": null,
+    "location": "Rio de Janeiro, Brazil",
+    "description": "3rd Edition of LATAM's most loved ETH event. Bootcamp, Buildathon & Conference",
+    "startDate": "2024-04-09",
+    "endDate": "2024-04-14"
+  },
+  {
     "title": "ETHKL 2023",
     "to": "https://hack.ethkl.org/",
     "sponsor": null,
@@ -162,6 +189,15 @@
     "endDate": "2023-08-16"
   },
   {
+    "title": "Web3FC",
+    "to": "https://web3fc.xyz/",
+    "sponsor": null,
+    "location": "Barcelona, Spain",
+    "description": "Web3FC is a chain-agnostic conference with activities such as Talks, Panels, Workshops & Public Debates.",
+    "startDate": "2023-09-22",
+    "endDate": "2023-09-23"
+  },
+  {
     "title": "ETHAccra",
     "to": "https://www.ethaccra.xyz/",
     "sponsor": null,
@@ -192,7 +228,7 @@
     "title": "ETHGlobal Istanbul",
     "to": "https://ethglobal.com/events/istanbul",
     "sponsor": null,
-    "location": "Istanbul, Türkiye",
+    "location": "Istanbul, Turkey",
     "description": "ETHGlobal Istanbul is going to be an event full of hacking, networking, side events and fun activites.",
     "startDate": "2023-11-17",
     "endDate": "2023-11-19"
@@ -313,5 +349,41 @@
     "description": "Full day of learning about Ethereum, onboarding new users and builders.",
     "startDate": "2023-11-25",
     "endDate": "2023-11-25"
+  },
+  {
+    "title": "ETH Riyadh",
+    "to": "https://ethriyadh.com/",
+    "sponsor": null,
+    "location": "Riyadh, Saudi Arabia",
+    "description": "ETH Riyadh unites developers and builders from Saudi Arabia and the other Middle East regions, nurturing their roles and connections in the Ethereum ecosystem.",
+    "startDate": "2023-09-20",
+    "endDate": "2023-10-15"
+  },
+  {
+    "title": "A General Forum on Ethereum Localism",
+    "to": "https://pdxdao.xyz/localism/",
+    "sponsor": null,
+    "location": "Portland, OR, USA",
+    "description": "Three days and thoughtful side events will create a container where the Ethereum community can elaborate for itself, in a plurality of directions, what an experimentalism of the city can mean and look like for web3.",
+    "startDate": "2023-10-13",
+    "endDate": "2023-10-15"
+  },
+  {
+    "title": "Pragma New York",
+    "to": "https://ethglobal.com/events/pragma-newyork",
+    "sponsor": null,
+    "location": "New York, New York",
+    "description": "Pragma New York is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-09-21",
+    "endDate": "2023-09-21"
+  },
+  {
+    "title": "Pragma Istanbul",
+    "to": "https://ethglobal.com/events/pragma-istanbul",
+    "sponsor": null,
+    "location": "Istanbul, Turkey",
+    "description": "Pragma Istanbul is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-11-16",
+    "endDate": "2023-11-16"
   }
 ]
