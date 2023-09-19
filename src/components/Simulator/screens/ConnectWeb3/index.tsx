@@ -1,6 +1,5 @@
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React, { useMemo, useState } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   RiPriceTag2Line,
   RiAuctionLine,
@@ -16,6 +15,7 @@ import type { TokenBalance } from "../../WalletHome/interfaces"
 import { defaultTokenBalances } from "../../constants"
 import { useEthPrice } from "../../../../hooks/useEthPrice"
 import { useNFT } from "../../WalletHome/hooks/useNFT"
+import GatsbyImage from "../../../GatsbyImage"
 import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "../../constants"
 
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
