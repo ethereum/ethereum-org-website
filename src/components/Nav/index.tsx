@@ -122,7 +122,6 @@ const Nav: FC<IProps> = ({ path }) => {
                         transform: languagesHover
                           ? "rotate(30deg)"
                           : "rotate(0deg)", // Rotate the icon to 30 degrees on hover
-                        color: languagesHover ? "blue" : "inherit", // Change color to blue on hover
                       }}
                     />
                   </Box>
