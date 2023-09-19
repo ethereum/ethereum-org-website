@@ -16,22 +16,23 @@ const variantCode = definePartsStyle((props) => ({
     bg: "rgba(0, 0, 0, 0.7)",
   },
   dialog: {
-    maxW: "100vw",
-    marginTop: "auto",
-    marginBottom: 0,
-    maxHeight: "50%",
-    borderRadius: 0,
+    maxW: "464px",
+    my: "64px",
+    mx: "8px",
+    /* padding: "32px", */
+    maxHeight: "70%",
+    borderRadius: "4px",
   },
   header: {
     bg: props.colorMode === "dark" ? "rgb(25, 25, 25)" : "rgb(247, 247, 247)",
     borderColor:
       props.colorMode == "dark" ? "rgb(242, 242, 242)" : "rgb(51, 51, 51)",
-    borderTop: "1px solid",
-    borderBottom: "1px solid",
+    /* borderTop: "1px solid",
+    borderBottom: "1px solid", */
     textTransform: "uppercase",
-    fontWeight: "normal",
-    fontSize: "md",
-    fontFamily: "monospace",
+    fontWeight: "bold",
+    fontSize: "2xl",
+    fontFamily: "Inter",
   },
   closeButton: {
     padding: 0,
@@ -47,6 +48,9 @@ const variantCode = definePartsStyle((props) => ({
   },
   body: {
     padding: 0,
+    fontWeight: "normal",
+    fontSize: "md",
+    fontFamily: "Inter",
   },
 }))
 

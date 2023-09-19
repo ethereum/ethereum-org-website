@@ -37,6 +37,7 @@ import allQuizzesData, {
   ethereumBasicsQuizzes,
   usingEthereumQuizzes,
 } from "../data/quizzes"
+import Modal from "../components/Modal"
 
 // Contains each quiz id as key and <boolean, number> to indicate if its completed and the highest score in that quiz
 // Initialize all quizzes as not completed
@@ -101,14 +102,14 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
       </Box>
 
       <QuizzesHubContext.Provider value={contextState}>
-        <QuizzesModal isOpen={isOpen} onClose={onClose}>
+        <Modal isOpen={isOpen} setIsOpen={onClose}>
           <QuizWidget
             quizKey={currentQuiz}
             currentHandler={setCurrentQuiz}
             statusHandler={setQuizStatus}
             isStandaloneQuiz={false}
           />
-        </QuizzesModal>
+        </Modal>
 
         <Box px={{ base: 0, lg: 8 }} py={{ base: 0, lg: 4 }} mb={12}>
           <Flex

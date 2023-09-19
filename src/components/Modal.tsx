@@ -5,6 +5,7 @@ import {
   ModalOverlay,
   ModalContent,
   ModalCloseButton,
+  ModalHeader,
 } from "@chakra-ui/react"
 
 export interface IPropsOverlay {
@@ -24,18 +25,13 @@ const Modal: React.FC<IProps> = ({ children, isOpen, setIsOpen, ...props }) => {
       onClose={() => setIsOpen(false)}
       isCentered
       size="xl"
+      variant="code"
       scrollBehavior="inside"
       {...props}
     >
       <ModalOverlay bgColor="blackAlpha.700" />
 
-      <ModalContent
-        p={8}
-        shadow="md"
-        border="1px"
-        borderColor="border"
-        borderRadius="md"
-      >
+      <ModalContent>
         <ModalCloseButton />
         {children}
       </ModalContent>
