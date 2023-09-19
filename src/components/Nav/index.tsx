@@ -10,7 +10,6 @@ import Search from "../Search"
 import IconButton from "../IconButton"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
-import { FaLastfmSquare } from "react-icons/fa"
 
 export interface IProps {
   path: string
@@ -106,7 +105,7 @@ const Nav: FC<IProps> = ({ path }) => {
                   px={1.5}
                   _hover={{
                     transform: "rotate(30deg)", // Rotate the icon to 30 degrees on hover
-                    color: "blue", // Change color to blue on hover
+                    color: "primary.hover", // Change color to blue on hover
                   }}
                   onClick={toggleColorMode}
                 ></IconButton>
@@ -120,25 +119,24 @@ const Nav: FC<IProps> = ({ path }) => {
                   isSecondary
                   px={1.5}
                   _hover={{
-                    color: "blue", // Change color to blue on hover
-                  }}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
+                    color: "primary.hover", // Change color on hover
                   }}
                 >
                   <Box mr={2} mt={2}>
                     {" "}
                     {/* Add spacing between the text and the icon */}
-                    <Icon
-                      as={MdLanguage}
-                      style={{
-                        transition: "transform 0.3s ease-in-out, color 0.2s", // Apply the transition to the icon
-                        transform: languagesHover
-                          ? "rotate(30deg)"
-                          : "rotate(0deg)", // Rotate the icon to 30 degrees on hover
-                        color: languagesHover ? "blue" : "inherit", // Change color to blue on hover
-                      }}
+                    <ButtonLink
+                      data-group
+                      leftIcon={
+                        <Icon
+                          as={MdLanguage}
+                          transition="transform 0.3s ease-in-out, color 0.2s"
+                          // _groupHover renders "[data-group]:hover &"
+                          _groupHover={{
+                            transform: "rotate(30deg)",
+                          }}
+                        />
+                      }
                     />
                   </Box>
                   <span>Languages {i18n.language.toUpperCase()}</span>
