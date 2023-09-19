@@ -8,9 +8,7 @@ import {
   Flex,
   Grid,
   GridItem,
-  Heading,
   Icon,
-  Text,
 } from "@chakra-ui/react"
 import { FaDiscord } from "react-icons/fa"
 import { DateTime, DateTimeFormatOptions } from "luxon"
@@ -19,6 +17,8 @@ import { DateTime, DateTimeFormatOptions } from "luxon"
 import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
 import Translation from "../Translation"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
@@ -100,9 +100,9 @@ const CommunityEvents = () => {
     >
       <Center w={{ base: "100%", lg: "40%" }}>
         <Box pr={8} pl={{ base: 8, lg: 0 }}>
-          <Heading>
+          <OldHeading>
             <Translation id="community-events-content-heading" />
-          </Heading>
+          </OldHeading>
           <Text>
             <Translation id="community-events-content-1" />
           </Text>

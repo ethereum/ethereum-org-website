@@ -2,11 +2,12 @@
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Center, Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Box, Center, Flex, Heading, Image } from "@chakra-ui/react"
 
 // Components
 import { ButtonLink } from "./Buttons"
 import InlineLink from "./Link"
+import Text from "./OldText"
 
 export interface IProps {
   children?: React.ReactNode
@@ -67,7 +68,7 @@ const Layer2ProductCard: React.FC<IProps> = ({
       </Center>
       <Flex p={6} h="100%" direction="column">
         <Box>
-          <Heading as="h3" fontSize={{ base: "xl", m: "2xl" }} mt={0} mb={3}>
+          <Heading as="h3" fontSize={{ base: "xl", md: "2xl" }} mb={3}>
             {name}
           </Heading>
           {children && (

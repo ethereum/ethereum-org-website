@@ -13,7 +13,6 @@ import {
   Divider as ChakraDivider,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   List,
   ListItem,
@@ -31,7 +30,7 @@ import Card from "../components/Card"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import InlineLink, { BaseLink } from "../components/Link"
+import { BaseLink } from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
 import BeaconChainActions from "../components/BeaconChainActions"
 import ShardChainsList from "../components/ShardChainsList"
@@ -51,6 +50,8 @@ import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 import {
   MobileButton,
   MobileButtonDropdown,
@@ -149,7 +150,7 @@ const Pre = chakra("pre", {
 })
 
 const H1 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize={{ base: "2.5rem", lg: "5xl" }}
     fontWeight="bold"
@@ -161,7 +162,7 @@ const H1 = (props: ChildOnlyProp) => (
 )
 
 const MDXH1 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontWeight="bold"
     lineHeight={1.4}
@@ -171,7 +172,7 @@ const MDXH1 = (props: HeadingProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     fontSize="2rem"
     fontWeight="bold"
     lineHeight={1.4}
@@ -181,7 +182,7 @@ const H2 = (props: HeadingProps) => (
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontWeight="bold"
     lineHeight={1.4}
@@ -191,7 +192,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize="xl"
     lineHeight={1.4}
@@ -208,7 +209,7 @@ const P = (props: TextProps) => (
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 
 const components = {
-  a: InlineLink,
+  a: MdLink,
   h1: MDXH1,
   h2: H2,
   h3: H3,
@@ -239,7 +240,7 @@ const components = {
 }
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize="2.5rem"
     fontWeight="bold"

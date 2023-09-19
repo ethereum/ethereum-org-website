@@ -48,7 +48,7 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
               eventName: "clicked discord",
             })
           }}
-          to="https://discord.io/ethstaker"
+          to="https://discord.gg/ethstaker"
           w={{ base: "full", md: "auto" }}
         >
           Discord

@@ -10,10 +10,8 @@ import {
   CenterProps,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Img,
-  Text,
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 import { FaDiscord } from "react-icons/fa"
@@ -41,9 +39,12 @@ import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
 import Emoji from "../components/Emoji"
 import InlineLink from "../components/Link"
-import ButtonLink from "../components/Buttons/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
-import Button from "../components/Buttons/Button"
+import { Button, ButtonLink } from "../components/Buttons"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+
+// Utils
 import { InfoGrid } from "../templates/staking"
 import { Width40, Width60 } from "../pages-conditional/what-is-ethereum"
 
@@ -279,11 +280,15 @@ const StrongParagraph = (props: BoxProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
@@ -292,7 +297,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     lineHeight={1.4}

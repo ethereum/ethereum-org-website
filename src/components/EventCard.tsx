@@ -1,7 +1,8 @@
 import React from "react"
-import Emoji from "./Emoji"
+import { Box, Heading } from "@chakra-ui/react"
 import { ButtonLink } from "./Buttons"
-import { Box, Text, Heading } from "@chakra-ui/react"
+import Emoji from "./Emoji"
+import Text from "./OldText"
 
 const clearStyles = {
   content: '""',

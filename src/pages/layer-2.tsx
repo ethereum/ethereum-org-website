@@ -12,12 +12,10 @@ import {
   DividerProps,
   Flex,
   GridItem,
-  Heading,
   HeadingProps,
   Icon,
   ListItem,
   SimpleGrid,
-  Text,
   UnorderedList,
   useBreakpointValue,
 } from "@chakra-ui/react"
@@ -41,6 +39,8 @@ import ProductList from "../components/ProductList"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 // Utils
 import { getData } from "../utils/cache"
@@ -70,7 +70,7 @@ const SectionHeading = (props: HeadingProps) => {
 
   const mergeProps = merge(headingSpecificProps, props)
 
-  return <Heading {...mergeProps} />
+  return <OldHeading {...mergeProps} />
 }
 
 interface ContentBoxProps extends BoxProps {

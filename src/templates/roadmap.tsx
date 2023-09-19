@@ -10,7 +10,6 @@ import {
   ListItem,
   Show,
   SimpleGrid,
-  Text,
   UnorderedList,
   useToken,
   Wrap,
@@ -26,7 +25,6 @@ import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import InlineLink from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
@@ -44,7 +42,9 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
+import Text from "../components/OldText"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
 import {
   Page,
   InfoColumn,
@@ -70,12 +70,7 @@ import type { ChildOnlyProp, Context } from "../types"
 import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <SimpleGrid
-    columns={{ base: 1, md: 2 }}
-    spacing={8}
-    sx={{ h3: { mt: 0 } }}
-    {...props}
-  />
+  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
 )
 
 const HeroContainer = (props: ChildOnlyProp) => (
@@ -118,7 +113,7 @@ const TitleCard = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: InlineLink,
+  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,

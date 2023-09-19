@@ -8,7 +8,6 @@ import {
   LinkOverlay,
   List,
   ListItem,
-  Text,
   useColorModeValue,
   useToken,
   VisuallyHidden,
@@ -19,6 +18,7 @@ import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
 import InlineLink, { BaseLink } from "./Link"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 // Data
 import meetups from "../data/community-meetups.json"

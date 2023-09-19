@@ -7,7 +7,6 @@ import {
   Heading,
   HeadingProps,
   ListItem,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -28,6 +27,8 @@ import PageMetadata from "../components/PageMetadata"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Card from "../components/Card"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
@@ -95,7 +96,6 @@ const Title = (props: ChildOnlyProp) => (
     letterSpacing="0.04em"
     fontWeight="500"
     mb={4}
-    mt={0}
     textTransform="uppercase"
     color="textTableOfContents"
     {...props}
@@ -172,7 +172,7 @@ const Header = (props: ChildOnlyProp) => (
 )
 
 const H2 = (prop: HeadingProps) => (
-  <Heading
+  <OldHeading
     fontSize={{ base: "2xl", md: "2rem" }}
     lineHeight={1.4}
     mt={0}
@@ -181,16 +181,16 @@ const H2 = (prop: HeadingProps) => (
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
-    fontSize={{ base: "xl", m: "2xl" }}
+    fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
     {...props}
   />
 )
 
 const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     fontWeight={600}

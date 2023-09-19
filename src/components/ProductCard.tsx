@@ -9,12 +9,12 @@ import {
   Heading,
   HStack,
   Img,
-  Text,
   TextProps,
 } from "@chakra-ui/react"
 
 import GitStars from "./GitStars"
 import { ButtonLink } from "./Buttons"
+import Text from "./OldText"
 
 const REPO_DATA = gql`
   query RepoData(

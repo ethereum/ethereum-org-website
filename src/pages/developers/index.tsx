@@ -6,10 +6,8 @@ import {
   Box,
   chakra,
   Flex,
-  Heading,
   Image,
   SimpleGrid,
-  Text,
   TextProps,
   useColorModeValue,
 } from "@chakra-ui/react"
@@ -21,6 +19,8 @@ import Translation from "../../components/Translation"
 import ButtonLink from "../../components/Buttons/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import FeedbackCard from "../../components/FeedbackCard"
+import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
 
 import { getImage } from "../../utils/image"
 
@@ -71,7 +71,7 @@ const HeroCopy = (props: ChildOnlyProp) => (
 )
 
 const H1 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize="2rem"
     fontWeight="medium"
@@ -106,7 +106,7 @@ const Subtitle = (props: TextProps) => (
   <Text fontSize="xl" lineHeight="140%" color="text200" {...props} />
 )
 
-const MonoSubtitle = (props: ChildOnlyProp) => <Box as="h2" mb={0} {...props} />
+const MonoSubtitle = (props: ChildOnlyProp) => <OldHeading mb={0} {...props} />
 
 const Hero = (props: ChildOnlyProp) => (
   <Box
@@ -282,21 +282,21 @@ const DevelopersPage = ({
         </StyledCardContainer>
         <TwoColumnContent>
           <IntroColumn>
-            <h2>
+            <OldHeading>
               <Translation id="page-developers-about" />
-            </h2>
+            </OldHeading>
             <Subtitle mb={6}>
               <Translation id="page-developers-about-desc" />
             </Subtitle>
-            <p>
+            <Text>
               <Translation id="page-developers-about-desc-2" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-developers-feedback" />{" "}
               <InlineLink to="https://discord.gg/CetY6Y4">
                 <Translation id="page-developers-discord" />
               </InlineLink>
-            </p>
+            </Text>
           </IntroColumn>
           <StyledCallout
             image={getImage(data.developers)}
@@ -314,57 +314,57 @@ const DevelopersPage = ({
       </Content>
       <GrayContainer>
         <Content>
-          <h2>
+          <OldHeading>
             <Translation id="page-developers-explore-documentation" />
-          </h2>
+          </OldHeading>
         </Content>
         {/* TODO use the same source as SideNav for these sections */}
         <ThreeColumnContent>
           <Column>
-            <h3>
+            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
               <Translation id="page-developers-docs-introductions" />
-            </h3>
+            </OldHeading>
             <InlineLink to="/developers/docs/intro-to-ethereum/">
               <Translation id="page-developers-intro-eth-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-into-eth-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/intro-to-ether/">
               <Translation id="page-developers-intro-ether-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-intro-ether-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/dapps/">
               <Translation id="page-developers-intro-dapps-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-intro-dapps-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/ethereum-stack/">
               <Translation id="page-developers-intro-stack" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-intro-stack-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/web2-vs-web3/">
               <Translation id="page-developers-web3-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-web3-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/programming-languages/">
               <Translation id="page-developers-languages" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-language-desc" />
-            </p>
+            </Text>
             <Image
               as={GatsbyImage}
               hideBelow="lg"
@@ -375,163 +375,163 @@ const DevelopersPage = ({
             />
           </Column>
           <Column>
-            <h3>
+            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
               <Translation id="page-developers-fundamentals" />
-            </h3>
+            </OldHeading>
             <InlineLink to="/developers/docs/accounts/">
               <Translation id="page-developers-accounts-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-account-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/transactions/">
               <Translation id="page-developers-transactions-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-transactions-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/blocks/">
               <Translation id="page-developers-blocks-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-block-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/evm/">
               <Translation id="page-developers-evm-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-evm-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/gas/">
               <Translation id="page-developers-gas-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-gas-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/nodes-and-clients/">
               <Translation id="page-developers-node-clients-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-node-clients-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/networks/">
               <Translation id="page-developers-networks-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-networks-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/consensus-mechanisms/pow/mining/">
               <Translation id="page-developers-mining-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-mining-desc" />
-            </p>
+            </Text>
 
             <InlineLink to="/developers/docs/consensus-mechanisms/pow/mining-algorithms/">
               <Translation id="page-developers-mining-algorithms-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-mining-algorithms-desc" />
-            </p>
+            </Text>
           </Column>
           <RightColumn>
-            <h3>
+            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
               <Translation id="page-developers-stack" />
-            </h3>
+            </OldHeading>
             <InlineLink to="/developers/docs/smart-contracts/">
               <Translation id="page-developers-smart-contracts-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-smart-contracts-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/frameworks/">
               <Translation id="page-developers-frameworks-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-frameworks-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/apis/javascript/">
               <Translation id="page-developers-js-libraries-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-js-libraries-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/apis/backend/">
               <Translation id="page-developers-api-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-api-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/data-and-analytics/block-explorers/">
               <Translation id="page-developers-block-explorers-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-block-explorers-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/smart-contracts/security/">
               <Translation id="page-developers-smart-contract-security-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-smart-contract-security-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/storage/">
               <Translation id="page-developers-storage-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-storage-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/ides/">
               <Translation id="page-developers-dev-env-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-dev-env-desc" />
-            </p>
-            <h3>
+            </Text>
+            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
               <Translation id="page-developers-advanced" />
-            </h3>
+            </OldHeading>
             <InlineLink to="/developers/docs/standards/tokens/">
               <Translation id="page-developers-token-standards-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-token-standards-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/mev/">
               <Translation id="page-developers-mev-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-mev-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/oracles/">
               <Translation id="page-developers-oracles-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-oracle-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/scaling/">
               <Translation id="page-developers-scaling-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-scaling-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/networking-layer/">
               <Translation id="page-developers-networking-layer-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-networking-layer-desc" />
-            </p>
+            </Text>
             <InlineLink to="/developers/docs/data-structures-and-encoding/">
               <Translation id="page-developers-data-structures-and-encoding-link" />
             </InlineLink>
-            <p>
+            <Text>
               <Translation id="page-developers-data-structures-and-encoding-desc" />
-            </p>
+            </Text>
           </RightColumn>
         </ThreeColumnContent>
       </GrayContainer>
