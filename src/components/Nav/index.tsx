@@ -84,17 +84,8 @@ const Nav: FC<IProps> = ({ path }) => {
               />
               <HStack spacing={2} hideBelow="lg">
                 <IconButton
-                  icon={
-                    isDarkTheme ? (
-                      <MdWbSunny
-                        style={{ transition: "transform 0.5s, color 0.2s" }}
-                      />
-                    ) : (
-                      <MdBrightness2
-                        style={{ transition: "transform 0.5s, color 0.2s" }}
-                      />
-                    )
-                  }
+                  transition="transform 0.5s, color 0.2s"
+                  icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
                   aria-label={
                     isDarkTheme
                       ? "Switch to Light Theme"
