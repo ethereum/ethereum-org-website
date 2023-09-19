@@ -358,5 +358,15 @@
     "description": "Three days and thoughtful side events will create a container where the Ethereum community can elaborate for itself, in a plurality of directions, what an experimentalism of the city can mean and look like for web3.",
     "startDate": "2023-10-13",
     "endDate": "2023-10-15"
+  },
+  {
+    "title": "Consensys Fellowship",
+    "to": "https://consensys.io/fellowship",
+    "sponsor": null,
+    "location": "Global",
+    "description": "Join us on a 12-week program for web3 innovators! We're supporting early stage web3 founders with workshops, mentorship, and networking. Plus access to a $1.5M fund of potential follow-on investment set aside by Consensys Mesh and Tachyon! Don't miss this opportunity! Apply from Sep 20th — Oct 3rd.",
+    "startDate": "2023-09-20",
+    "endDate": "2023-10-03"
   }
+
 ]
