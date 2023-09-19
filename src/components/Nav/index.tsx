@@ -122,10 +122,6 @@ const Nav: FC<IProps> = ({ path }) => {
                   _hover={{
                     color: "blue", // Change color to blue on hover
                   }}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                  }}
                 >
                   <Box mr={2} mt={2}>
                     {" "}
