@@ -1,6 +1,5 @@
 import React from "react"
 import {
-  Box,
   forwardRef,
   Icon,
   Link as ChakraLink,
@@ -89,7 +88,9 @@ export const BaseLink = forwardRef<IProps, "a">(
       eventName: to,
     }
 
-    const commonProps = {
+    const commonProps: LinkProps & { ref: React.ForwardedRef<any> } = {
+      ref,
+      href: to,
       dir,
       ...restProps,
     }
@@ -100,8 +101,6 @@ export const BaseLink = forwardRef<IProps, "a">(
     if (isHash) {
       return (
         <ChakraLink
-          ref={ref}
-          href={to}
           onClick={(e) => {
             // only track events on external links and hash links
             if (!isHash) {
@@ -125,8 +124,6 @@ export const BaseLink = forwardRef<IProps, "a">(
     if (isExternal || isPdf || isStatic) {
       return (
         <ChakraLink
-          ref={ref}
-          href={to}
           isExternal
           onClick={(e) => {
             // only track events on external links and hash links
@@ -161,8 +158,6 @@ export const BaseLink = forwardRef<IProps, "a">(
     // Use `gatsby-theme-i18n` Link (which prepends lang path)
     return (
       <ChakraLink
-        ref={ref}
-        to={to}
         as={IntlLink}
         language={language}
         partiallyActive={isPartiallyActive}
