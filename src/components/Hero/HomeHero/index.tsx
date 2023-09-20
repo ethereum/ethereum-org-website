@@ -4,7 +4,7 @@ import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 import ButtonLink from "../../ButtonLink"
 import Morpher from "../../Morpher"
 import Translation from "../../Translation"
-import { GatsbyImage } from "../GatsbyImage"
+import GatsbyImage from "../../GatsbyImage"
 import { CommonHeroProps } from "../utils"
 
 interface HomeHeroProps extends Pick<CommonHeroProps, "heroImgSrc"> {}
