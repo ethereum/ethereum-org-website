@@ -17,7 +17,7 @@ import {
   Container,
 } from "@chakra-ui/react"
 import { shuffle } from "lodash"
-import { FaTwitter } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Button from "../Button"
@@ -495,7 +495,7 @@ const QuizWidget: React.FC<IProps> = ({
                   >
                     <Button
                       variant="outline-color"
-                      leftIcon={<Icon as={FaTwitter} />}
+                      leftIcon={<Icon as={FaXTwitter} />}
                       onClick={handleShare}
                     >
                       <Translation id="share-results" />

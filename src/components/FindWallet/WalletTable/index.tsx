@@ -3,7 +3,8 @@ import React, { ReactNode } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Select from "react-select"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
-import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaGlobe } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import {
   Box,
   chakra,
@@ -486,8 +487,8 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             }}
                           >
                             <Icon
-                              as={FaTwitter}
-                              color="#1da1f2"
+                              as={FaXTwitter}
+                              color="#000000"
                               fontSize="2xl"
                             />
                           </SocialLink>

@@ -9,7 +9,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react"
-import { FaTwitter } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import { useI18next } from "gatsby-plugin-react-i18next"
 
 import Button from "../Button"
@@ -97,7 +97,7 @@ const QuizzesStats: React.FC = () => {
           >
             <Button
               variant="outline-color"
-              leftIcon={<FaTwitter />}
+              leftIcon={<FaXTwitter />}
               onClick={() =>
                 handleShare({ score: userScore, total: totalQuizzesPoints })
               }

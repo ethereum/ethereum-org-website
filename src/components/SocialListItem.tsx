@@ -2,7 +2,6 @@
 import React from "react"
 import { Flex, Box, Icon } from "@chakra-ui/react"
 import {
-  FaTwitter,
   FaYoutube,
   FaDiscord,
   FaRedditAlien,
@@ -10,9 +9,11 @@ import {
   FaGlobe,
 } from "react-icons/fa"
 
+import { FaXTwitter } from "react-icons/fa6"
+
 const socialColors = {
   reddit: "#ff4301",
-  twitter: "#1da1f2",
+  twitter: "#000000",
   youtube: "#ff0000",
   discord: "#7289da",
   stackExchange: "#48a2da",
@@ -20,7 +21,7 @@ const socialColors = {
 
 const icons = {
   reddit: FaRedditAlien,
-  twitter: FaTwitter,
+  twitter: FaXTwitter,
   youtube: FaYoutube,
   discord: FaDiscord,
   stackExchange: FaStackExchange,
