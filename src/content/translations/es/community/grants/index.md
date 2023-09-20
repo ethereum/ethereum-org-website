@@ -16,7 +16,7 @@ Estos programas apoyan al ecosistema Ethereum ofreciendo subvenciones para una a
 
 - [Programa de apoyo al ecosistema EF](https://esp.ethereum.foundation): _ financia proyectos de código abierto que beneficien a Ethereum, con enfoque particular en herramientas universales, infraestructura, investigación y bienes públicos_
 - [Ethereum RFP](https://github.com/ethereum/requests-for-proposals): _ solicitudes de propuestas («requests for proposals» o RFP en inglés) de Ethereum Foundation para trabajos y proyectos en el ecosistema Ethereum_.
-- [MetaCartel](https://www.metacartel.org/grants/): _desarrollo de Dapp, creación de DAO_
+- [MetaCartel](https://www.metacartel.org/grants/): _desarrollo de DApp, creación de DAO_
 - [Moloch DAO](https://www.molochdao.com/): _privacidad, escalabilidad en capa 2, seguridad del cliente y más_.
 - [Subvenciones abiertas](https://opengrants.com/explore)
 - [Subvenciones DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _hoja de cálculo de Google de organizaciones que ofrecen subvenciones_
