@@ -1,10 +1,11 @@
 import React from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import { Flex, FlexProps, Image } from "@chakra-ui/react"
 
 import Translation from "./Translation"
 import Text from "./OldText"
 import OldHeading from "./OldHeading"
+import GatsbyImage from "./GatsbyImage"
 import { TranslationKey } from "../utils/translations"
 
 export interface IProps extends FlexProps {
@@ -33,8 +34,7 @@ const CalloutBanner: React.FC<IProps> = ({
     borderRadius="base"
     {...restProps}
   >
-    <Image
-      as={GatsbyImage}
+    <GatsbyImage
       image={image}
       alt={alt}
       objectFit="contain"
