@@ -4,64 +4,71 @@ description: Informieren Sie sich über die Beacon Chain – das Upgrade, mit de
 lang: de
 template: upgrade
 image: ../../../../../assets/upgrades/core.png
-summaryPoint1: Die Beacon Chain ändert nichts an Ethereum, das wir heute verwenden.
-summaryPoint2: Sie wird die Koordination im Netzwerk übernehmen und dabei als Konsensuslayer dienen.
-summaryPoint3: Mit der Bacon Chain wurde Proof-of-Stake in das Ethereum Ökosystem eingeführt.
-summaryPoint4: Sie kennen das möglicherweise als „Phase 0“ in technischen Dokumentationen.
+summaryPoint1: Mit der Bacon Chain wurde Proof-of-Stake in das Ethereum Ökosystem eingeführt.
+summaryPoint2: Sie wurde 2022 mit der ursprünglichen Ethereum Proof-of-Work Blockchain vereinigt.
+summaryPoint3: Die Beacon Chain führte die Konsenslogik und das Block-Gossip-Protokoll ein, das nun Ethereum sichert.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    Die Beacon Chain wurde am 1. Dezember 2020 zur Mittagszeit der koordinierten Weltzeit eingeführt. Um mehr zu erfahren, schauen Sie sich die <a href="https://beaconscan.com/">Daten</a> an. Wenn Sie auch beim Validieren von Transaktionen auf der Beacon Chain unterstützen möchten, können Sie <a href="/staking/">Ihre ETH staken</a>.
+  Die Beacon Chain, die am 1. Dezember 2020 an den Start ging, formalisierte Proof-of-Stake als Konsensmechanismus von Ethereum mit dem Merge Upgrade am 15. September 2022.
 </UpgradeStatus>
+
+## Was ist die Beacon Chain? {#what-is-the-beacon-chain}
+
+Die Beacon Chain ist der Name der ursprünglichen Proof-of-Stake (Anteilsnachweis) Blockchain, die im Jahr 2020 eingeführt wurde. Sie wurde geschaffen, um sicherzustellen, dass die Proof-of-Stake Konsenslogik sicher und nachhaltig ist, bevor sie auf dem Ethereum Mainnet eingeführt wurde. Sie wurde daher neben dem ursprünglichen Proof-of-Work Konsens für Ethereum betrieben. Die Beacon Chain bestand aus 'leeren' Blöcken. Die Umstellung von Proof-of-Work (Arbeitsnachweis) auf den Proof-of-Stake (Anteilsnachweis) Mechanismus auf Ethereum erforderte jedoch, dass die Beacon Chain angewiesen wurde, Transaktionsdaten von Ausführungsklienten anzunehmen, sie zu Blockbündeln zusammenzuführen und sie dann mithilfe eines auf dem Proof-of-Stake-Mechanismus basierenden Konsensverfahrens in eine Blockchain zu organisieren. Zur gleichen Zeit haben die ursprünglichen Ethereum Clients ihr Mining, die Blockausbreitung und die Konsenslogik abgeschaltet und alles an die Beacon Chain übergeben. Dieses Ereignis wurde als [die Zusammenführung bekannt](/roadmap/merge/). Nachdem das Merge (Fusion)-Ereignis erfolgreich abgeschlossen war, existierten keine zwei Blockchains mehr. Stattdessen existierte nur noch ein Proof-of-Stake Ethereum, für das nun pro Knoten zwei verschiedene Klienten erforderlich waren. Die Beacon Chain ist nun die Konsensus-Ebene, ein Peer-to-Peer-Netzwerk von Konsens-Clients, das für den Block-Tratsch und die Konsensus-Logik zuständig ist, während die ursprünglichen Clients die Ausführungs-Ebene bilden, die für den Tratsch und die Ausführung von Transaktionen sowie die Verwaltung des Ethereum-Status verantwortlich ist. Die beiden Schichten können über die Engine-API miteinander kommunizieren.
 
 ## Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/roadmap/danksharding/) und [Staker](/staking/). Aber sie ist nicht mit dem [Ethereum-Mainnet](/glossary/#mainnet) von heute vergleichbar, da sie keine Konten oder Smart Contracts verarbeitet.
+Die Beacon Chain ist die Bezeichnung für ein Kontenbuch, das das Netzwerk von Ethereum [Stakern](/staking/) leitete und koordinierte, bevor diese Staker mit der Validierung echter Ethereum-Blöcke begannen. Es werden jedoch keine Transaktionen verarbeitet oder Smart-Contract-Interaktionen abgewickelt, da dies in der Ausführungs-Ebene geschieht. Die Beacon Chain ist verantwortlich für Dinge wie die Handhabung von Blöcken und Bescheinigungen, die Ausführung des Fork-Choice-Algorithmus und die Verwaltung von Belohnungen und Strafen. Lesen Sie mehr auf unserer [Seite über die Architektur der Nodes](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/roadmap/vision/).
-
-## Eigenschaften der Beacon Chain {#beacon-chain-features}
+## Auswirkungen der Beacon Chain {#beacon-chain-features}
 
 ### Einführung ins Staking {#introducing-staking}
 
-Die Beacon Chain wird [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) für Ethereum einführen. Dies eröffnet neue Möglichkeiten für die Beteiligung an der Sicherheit des Ethereum-Netzwerks. Man kann es sich als frei verfügbares Gut vorstellen, das Ethereum vitaler macht und Ihnen dabei im Prozess einige ETH einbringt. In der Praxis bedeutet das, ETH einzusetzen, um die Validierungssoftware zu aktivieren. Als Validator verarbeiten Sie Transaktionen auf der Blockchain und beteiligen sich an der Erstellung neuer Blöcke.
+Die Beacon Chain brachte [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) zu Ethereum. Dieser Mechanismus sichert Ethereum und sorgt dafür, dass die Validatoren dabei ETH verdienen. In der Praxis bedeutet dies ETH einzusetzen, um die Validierungssoftware zu aktivieren. Als Staker führen Sie die Software aus die in der Chain neue Blöcke erstellt und validiert.
 
-Das Staking als Validator ist einfacher, als das [Mining](/developers/docs/mining/) (wie das Netzwerk momentan gesichert wird). Langfristig besteht die Hoffnung darin, Ethereum durch Staking noch sicherer zu machen. Je mehr Leute sich aktiv am Netzwerk beteiligen, desto dezentraler und damit robuster und sicherer ist Ethereum gegen potenzielle Angriffe.
+Staking erfüllt denselben Zweck wie einst [Mining](/developers/docs/mining/), aber unterscheidet sich davon in vielerlei Hinsicht. Mining erforderte hohe Voraufwendungen in Form von mächtiger Hardware und hohem Energieverbrauch. Dies führte zu Skaleneffekten und förderte Zentralisierung. Mining sah auch keine Verpflichtung vor Vermögenswerte, als Sicherheiten zu sperren. Das Protokoll hatte dadurch weniger Möglichkeiten feindselige Akteure nach einer Attacke zu bestrafen.
+
+Der Wechsel zu Proof-of-Stake machte Ethereum wesentlich sicherer und dezentralisierte im Vergleich zu Proof-of-Work. Je mehr Menschen sich am Netzwerk beteiligen, desto dezentralisierter und sicherer wird es vor Angriffen.
+
+Und die Verwendung von Proof-of-Stake als Konsensmechanismus ist eine grundlegende Komponente für [das sichere, umweltfreundliche und skalierbare Ethereum, das wir jetzt haben](/roadmap/vision/).
 
 <InfoBanner emoji=":money_bag:">
-Wenn Sie Interesse haben, die Beacon Chain als Validator sicherer zu machen, <a href="/staking/">können Sie hier mehr über das Staking</a> lernen.
+  Wenn Sie Interesse daran haben ein Validator zu werden und bei der Sicherung von Ethereum mitwirken wollen können Sie hier mehr über das <a href="/staking/">Staking</a> erfahren.
 </InfoBanner>
 
-Das ist auch eine wichtige Änderung für ein anderes Upgrade: [Shard Chains](/roadmap/danksharding/).
+### Vorbereitung für Sharding {#setting-up-for-sharding}
 
-### Vorbereitung für Shard Chains {#setting-up-for-shard-chains}
+Seit die Beacon Chain mit dem ursprünglichen Ethereum Mainnet zusammengeführt wurde, hat die Ethereum Community damit begonnen das Netzwerk zu skalieren.
 
-Nachdem das Mainnet mit der Beacon Chain verschmolzen ist, wird das nächste Upgrade die Shard Chains in das Proof-of-Stake-Netzwerk einbringen. Diese "Shards" werden die Kapazität des Netzwerks erhöhen und die Transaktionsgeschwindigkeit verbessern, indem das Netzwerk auf 64 Blockchains erweitert wird. Die Beacon Chain ist ein erster wichtiger Schritt für die Einführung von Shard Chains, da diese Staking zum sicheren Gebrauch benötigen.
+Proof-of-Stake bietet den Vorteil, dass es zu jeder Zeit eine Registry aller zugelassener Blockproduzenten, die ETH eingesetzt haben, besitzt. Diese Registry bereitet den Weg teilen und herrschen anzuwenden, aber verlässlich spezifische Verantwortungen im Netzwerk zu teilen.
 
-Letztlich wird die Beacon Chain durch ein Zufallsprinzip auch dafür sorgen, dass Staker zum Validieren der einzelnen Shard Chains zugewiesen werden. Dies ist der Schlüssel, um die unerlaubte Zusammenarbeit von Stakern zur Übernahme eines Shards zu erschweren. Um genau zu sein reduziert es die Wahrscheinlichkeit [auf 1 zu eine Billion](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Diese Verantwortung steht im Gegensatz zu Proof-of-Work, wo Miner keine Verantwortung gegenüber dem Netzwerk haben und jederzeit, ohne Auswirkungen, ihr Mining beenden und ihre Node-Software permanent abschalten konnten. Es gibt auch keine Registry bekannter Blockvorschläger und keinen verlässlichen Weg Verantwortung sicher im Netzwerk zu teilen.
+
+[Mehr zu Sharding](/roadmap/danksharding/)
 
 ## Beziehung zwischen den Upgrades {#relationship-between-upgrades}
 
-Die Ethereum-Upgrades sind alle auf eine Weise miteinander verbunden. Zusammenfassend wirkt sich die Beacon Chain auf weitere Upgrades wie folgt aus:
+Die Ethereum-Upgrades sind alle in gewisser Weise miteinander verbunden. Zusammenfassend wirkt sich die Beacon Chain auf weitere Upgrades wie folgt aus:
 
-### Mainnet und die Beacon Chain {#mainnet-and-beacon-chain}
+### Beacon Chain und die Zusammenführung {#merge-and-beacon-chain}
 
-Die Beacon Chain wird zunächst getrennt vom Ethereum-Mainnet existieren, welches wir derzeit nutzen. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet mit dem Proof-of-Stake-System zu "verschmelzen", das von der Beacon Chain kontrolliert und koordiniert wird.
+Zunächst existierte die Beacon Chain getrennt vom Ethereum Mainnet. Sie wurden im Jahre 2022 zusammengeführt.
 
 <ButtonLink to="/roadmap/merge/">
-    Die Zusammenführung
+  Die Zusammenführung
 </ButtonLink>
 
 ### Shards und die Beacon Chain {#shards-and-beacon-chain}
 
-Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, wenn ein funktionierender Proof-of-Stake-Konsensmechanismus bereits etabliert ist. Mit der Beacon Chain wird Staking eingeführt, wodurch der Weg für das Shard Chains-Upgrade geebnet wird.
+Sharding kann nur sicher in das Ethereum Ökosystem eingeführt werden, wenn ein Proof-of-Stake Konsensmechanismus aktiv ist. Die Beacon Chain, welche mit Mainnet zusammengeführt wurde, führte das Staking ein. Dieses ebnet den Weg für Sharding, was wiederum bei einer besseren Skalierung von Ethereum hilft.
 
 <ButtonLink to="/roadmap/danksharding/">
-    Shard Chains
+  Shard Chains
 </ButtonLink>
 
-<Divider />
+## Weiterführende Informationen
 
-## Interaktion mit der Beacon Chain {#interact-with-beacon-chain}
-
-<BeaconChainActions />
+- [Mehr über zukünftige Ethereum Upgrades](/roadmap/vision)
+- [Mehr über die Knotenarchitektur](/developers/docs/nodes-and-clients/node-architecture)
+- [Mehr über Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)

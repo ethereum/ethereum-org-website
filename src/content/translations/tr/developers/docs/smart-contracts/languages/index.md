@@ -88,12 +88,13 @@ Bu örnek size Solidity sözleşme söz dizimi hakkında bir fikir verecektir. F
 - Python'a benzer programlama dili
 - Güçlü tipleme
 - Küçük ve anlaşılabilir derleyici kodu
-- Sözleşmeleri daha güvenli ve denetlenmesi daha kolay hâle getirmek amacıyla kasti olarak Solidity'den daha az özelliğe sahiptir. Vyper şunları desteklemez:
+- Etkili bit kodu oluşturma
+- Sözleşmeleri daha güvenli ve denetlenmesi daha kolay hâle getirmek amacıyla bilinçli olarak Solidity'den daha az özelliğe sahiptir. Vyper şunları desteklemez:
   - Niteleyiciler
   - Kalıtım
   - Satır içi derleme
-  - Fonksiyon aşırı yükleme
-  - Operatör aşırı yükleme
+  - Fonksiyon aşırı yüklemesi
+  - Operatör aşırı yüklemesi
   - Özyinelemeli çağrı
   - Sonsuz uzunlukta döngüler
   - İkili sabit noktalar
@@ -104,10 +105,16 @@ Daha fazla bilgi için [Vyper mantığını okuyun](https://vyper.readthedocs.io
 
 - [Belgeler](https://vyper.readthedocs.io)
 - [Örnekle Vyper](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Örneklerle Daha Fazla Vyper](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Vyper Gitter Chatroom](https://gitter.im/vyperlang/community)
+- [Vyper topluluğu Discord sohbeti](https://discord.gg/SdvKC79cJk)
 - [Kopya Kağıdı](https://reference.auditless.com/cheatsheet)
-- [8 Ocak 2020 Güncellemesi](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
+- [Vyper için akıllı sözleşme geliştirme çerçeveleri ve araçları](/developers/docs/programming-languages/python/)
+- [VyperPunk - Vyper akıllı sözleşmelerini güvenli kılmayı ve hacklemeyi öğrenin](https://github.com/SupremacyTeam/VyperPunk)
+- [VyperExamples - Vyper güvenlik açığı örnekleri](https://www.vyperexamples.com/reentrancy)
+- [Geliştirme için Vyper Hub](https://github.com/zcor/vyper-dev)
+- [Vyper en başarılı akıllı sözleşme örnekleri](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Harika Vyper düzenlenmiş kaynakları](https://github.com/spadebuilders/awesome-vyper)
 
 ### Örnek {#example}
 

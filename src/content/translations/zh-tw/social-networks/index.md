@@ -91,7 +91,7 @@ Reddit 擁有[回饋式社群積分](https://cointelegraph.com/news/reddit-to-re
 
 ## 使用去中心化社交網路 {#use-decentralized-social-networks}
 
-- **[Status.im](https://status.im/)** - _ Status 是安全的訊息傳遞應用程式，使用開放程式碼、點對點協議和端到端加密來保護你的訊息免受第三方的侵害。_
+- **[Status.im](https://status.im/)** - _Status 是安全的訊息傳遞應用程式，使用開放程式碼、點對點協議和端到端加密來保護你的訊息免受第三方的侵害。_
 - **[Mirror.xyz](https://mirror.xyz/)** - _Ｍ irror 是一個基於以太坊構建的使用者擁有的去中心化發布平台，供使用者眾籌創意、將內容貨幣化並建立高價值社群。_
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol 是一個可組合和去中心化的社交圖譜，可幫助創作者在去中心化網際網路的數位花園中的任何地方擁有自己的內容。_
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster 是一個充分去中心化的社交網路。 它是個支持多種用戶端的開放式協議，如電子郵件。_
