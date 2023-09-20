@@ -64,7 +64,7 @@ Atau pertimbangkan tiket untuk sebuah acara olahraga. Sama seperti penyelenggara
 
 Di ethereum.org, NFT digunakan untuk menunjukkan bahwa orang-orang telah berkontribusi pada repositori Github kami atau menghadiri panggilan, dan kami bahkan memiliki nama domain NFT kami sendiri. Jika Anda berkontribusi pada ethereum.org, Anda dapat memperoleh NFT POAP. Beberapa pertemuan kripto telah menggunakan POAP sebagai tiket. [Selengkapnya tentang berkontribusi](/contributing/#poap).
 
-![ethereum.org POAP](./poap.png)
+![POAP ethereum.org](./poap.png)
 
 Situs web ini juga memiliki nama domain alternatif yang didukung oleh NFT, **ethereum.eth**. Alamat `.org` kami dikelola secara terpusat oleh sebuah penyedia sistem nama domain (DNS), sedangkan ethereum`.eth` terdaftar di Ethereum melalui Layanan Nama Ethereum (ENS). Dan ini dimiliki dan dikelola oleh kami. [Lihat catatan ENS kami](https://app.ens.domains/name/ethereum.eth)
 
