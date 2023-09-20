@@ -6,18 +6,25 @@ import {
   PopoverArrow,
   PopoverBody,
   PopoverContent,
+  PopoverProps,
   PopoverTrigger,
 } from "@chakra-ui/react"
 
-export interface IProps {
+export interface IProps extends PopoverProps {
   content: ReactNode
   children?: ReactNode
 }
 
-const Tooltip: React.FC<IProps> = ({ content, children }) => {
+const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
   return (
     <Box title="More Info!" display="inline-block" ml={2}>
-      <Popover placement="top" trigger="hover" strategy="fixed" gutter={6}>
+      <Popover
+        placement="top"
+        trigger="hover"
+        strategy="fixed"
+        gutter={6}
+        {...rest}
+      >
         <PopoverTrigger>
           <Center
             as="span"

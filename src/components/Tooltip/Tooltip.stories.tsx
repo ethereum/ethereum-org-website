@@ -1,39 +1,46 @@
 import * as React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { HStack, Text } from "@chakra-ui/react"
+import { HStack } from "@chakra-ui/react"
 import { RiInformationLine } from "react-icons/ri"
-import TooltipComponent from "."
+
+// TODO: remove `index` when we delete the old tooltip
+import TooltipComponent from "./index"
 import InlineLink from "../Link"
+import Translation from "../Translation"
 
 type TooltipType = typeof TooltipComponent
+
+const TooltipContent = () => (
+  <div>
+    <Translation id="data-provided-by" />{" "}
+    <InlineLink to="https://defillama.com/">defillama</InlineLink>
+  </div>
+)
 
 const meta = {
   title: "Molecules / Overlay Content / Tooltip",
   component: TooltipComponent,
+  args: {
+    content: <TooltipContent />,
+    children: <RiInformationLine />,
+  },
 } satisfies Meta<TooltipType>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-const TooltipContent = () => (
-  <div>
-    <Text m={0}>Lorem, ipsum dolor.</Text>
-    <InlineLink to="/?path=/story/molecules-overlay-content-tooltip--tooltip">
-      link
-    </InlineLink>
-  </div>
-)
-
 export const Tooltip: Story = {
-  args: {
-    content: "text here",
-    children: <RiInformationLine />,
-  },
   render: (args) => (
     <HStack>
       <TooltipComponent {...args} />
-      <TooltipComponent {...args} content={<TooltipContent />} />
     </HStack>
   ),
+}
+
+// for chromatic visual testing
+export const AlwaysOpen: Story = {
+  args: {
+    isOpen: true,
+  },
 }
