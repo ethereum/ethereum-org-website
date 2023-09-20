@@ -8,6 +8,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "am",
+    "crowdinCode": "am",
+    "name": "Amharic",
+    "localName": "አማርኛ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "ar",
     "crowdinCode": "ar",
     "name": "Arabic",
@@ -24,6 +32,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "be",
+    "crowdinCode": "be",
+    "name": "Belarusian",
+    "localName": "беларускі",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "bg",
     "crowdinCode": "bg",
     "name": "Bulgarian",
@@ -36,6 +52,14 @@
     "crowdinCode": "bn",
     "name": "Bengali",
     "localName": "বাংলা",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "bs",
+    "crowdinCode": "bs",
+    "name": "Bosnian",
+    "localName": "босански",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
@@ -156,6 +180,14 @@
     "crowdinCode": "hu",
     "name": "Hungarian",
     "localName": "Magyar",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "hy-am",
+    "crowdinCode": "hy-AM",
+    "name": "Armenian",
+    "localName": "հայերեն",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },

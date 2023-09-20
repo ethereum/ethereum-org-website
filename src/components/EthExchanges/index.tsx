@@ -86,9 +86,7 @@ const EthExchanges = () => {
     placeholderString,
     t,
     hasExchangeResults,
-    hasWalletResults,
     filteredExchanges,
-    filteredWallets,
     lastUpdated,
   } = useEthExchanges()
 
@@ -121,7 +119,7 @@ const EthExchanges = () => {
         </EmptyStateContainer>
       )}
       {/* No results */}
-      {hasSelectedCountry && !hasExchangeResults && !hasWalletResults && (
+      {hasSelectedCountry && !hasExchangeResults && (
         <ResultsContainer>
           <NoResults>
             <Translation id="page-get-eth-exchanges-no-exchanges-or-wallets" />
@@ -129,7 +127,7 @@ const EthExchanges = () => {
         </ResultsContainer>
       )}
       {/* Has results */}
-      {(hasExchangeResults || hasWalletResults) && (
+      {hasExchangeResults && (
         <>
           <ResultsContainer>
             <ListContainer>
@@ -152,34 +150,6 @@ const EthExchanges = () => {
               {!hasExchangeResults && (
                 <NoResultsSingle>
                   <Translation id="page-get-eth-exchanges-no-exchanges" />
-                </NoResultsSingle>
-              )}
-            </ListContainer>
-            <ListContainer>
-              <OldHeading
-                as="h3"
-                fontSize={{ base: "xl", md: "2xl" }}
-                fontWeight={600}
-                lineHeight={1.4}
-              >
-                <Translation id="page-get-eth-exchanges-header-wallets" />
-              </OldHeading>
-
-              {hasWalletResults && (
-                <SuccessContainer>
-                  <Text>
-                    <Translation id="page-get-eth-exchanges-success-wallet-paragraph" />{" "}
-                    <InlineLink to="/wallets/">
-                      <Translation id="page-get-eth-exchanges-success-wallet-link" />
-                    </InlineLink>
-                    .
-                  </Text>
-                  <CardList content={filteredWallets} />
-                </SuccessContainer>
-              )}
-              {!hasWalletResults && (
-                <NoResultsSingle>
-                  <Translation id="page-get-eth-exchanges-no-wallets" />
                 </NoResultsSingle>
               )}
             </ListContainer>

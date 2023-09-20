@@ -32,9 +32,12 @@ const argv = require("minimist")(process.argv.slice(2))
 
 type UserSelectionObject = { [key: string]: Array<number> }
 const USER_SELECTION: UserSelectionObject = {
+  am: [],
   ar: [],
   az: [],
+  be: [],
   bg: [],
+  bs: [],
   bn: [],
   ca: [],
   cs: [],
@@ -43,7 +46,7 @@ const USER_SELECTION: UserSelectionObject = {
   el: [],
   es: [],
   fa: [],
-  fi: [2, 3, 4],
+  fi: [],
   fil: [],
   fr: [],
   gl: [],
@@ -51,6 +54,7 @@ const USER_SELECTION: UserSelectionObject = {
   hi: [],
   hr: [],
   hu: [],
+  hy: [],
   id: [],
   ig: [],
   it: [],

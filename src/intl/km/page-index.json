@@ -48,8 +48,10 @@
   "page-index-developers-code-example-description-3": "អ្នកអាចស្រមៃមើលសេវាកម្មដែលមានស្រាប់ឡើងវិញជាវិមជ្ឈការ និងបើកកម្មវិធី។",
   "page-index-network-stats-title": "Ethereum ថ្ងៃនេះ",
   "page-index-network-stats-subtitle": "ស្ថិតិបណ្តាញចុងក្រោយបំផុត",
+  "page-index-network-stats-total-eth-staked": "Total ETH staked",
   "page-index-network-stats-eth-price-description": "តម្លៃ ETH (USD)",
   "page-index-network-stats-eth-price-explainer": "តម្លៃចុងក្រោយបំផុតសម្រាប់ 1 ether ។ អ្នកអាចទិញតិចតួចបំផុតត្រឹម 0.000000000000000001 – អ្នកមិនចាំបាច់ទិញ 1 ETH ទាំងមូលទេ។",
+  "page-index-network-stats-total-eth-staked-explainer": "ចំនួន ETH សរុបដែលបច្ចុប្បន្នកំពុងតម្តល់ និង ធានាសុវត្ថិភាពបណ្តាញ។",
   "page-index-network-stats-tx-day-description": "ប្រតិបត្តិការថ្ងៃនេះ",
   "page-index-network-stats-tx-day-explainer": "ចំនួនប្រតិបត្តិការបានដំណើរការដោយជោគជ័យនៅលើបណ្តាញក្នុងរយៈពេល 24 ម៉ោងចុងក្រោយ។",
   "page-index-network-stats-value-defi-description": "តម្លៃត្រូវបានចាក់សោនៅក្នុង DeFi (USD)",
@@ -73,5 +75,15 @@
   "page-index-nft": "អ៊ីនធឺណិតនៃទ្រព្យសកម្ម",
   "page-index-nft-description": "Ethereum មិនមែនសម្រាប់តែលុយឌីជីថលប៉ុណ្ណោះទេ។ អ្វីក៏ដោយដែលអ្នកអាចធ្វើជាម្ចាស់អាចត្រូវបានតំណាង ជួញដូរ និងដាក់ឱ្យប្រើជាថូខឹនមិនអាចផ្លាស់ប្តូរបាន ( Non-Fungible Tokens, NFTs)។ អ្នកអាចដាក់ស្នាដៃសិល្បៈរបស់អ្នកជាថូខឹន និងទទួលបានកម្រៃសួយសារដោយស្វ័យប្រវត្តិរាល់ពេលដែលវាត្រូវបានលក់ឡើងវិញ។ ឬប្រើថូខឹនសម្រាប់អ្វីដែលអ្នកមានដើម្បីយកប្រាក់កម្ចី។ លទ្ធភាពកំពុងកើនឡើងគ្រប់ពេលវេលា។",
   "page-index-nft-button": "មើល​បន្ថែមទៀត​អំពី NFTs",
-  "page-index-nft-alt": "និមិត្តសញ្ញា Eth ត្រូវបានបង្ហាញតាមរយៈហូឡូក្រាម។"
+  "page-index-nft-alt": "និមិត្តសញ្ញា Eth ត្រូវបានបង្ហាញតាមរយៈហូឡូក្រាម។",
+  "community-events-content-heading": "ចូលរួមជាមួយសហគមន៍ ethereum.org",
+  "community-events-content-1": "ចូលរួមជាមួយ<strong>សមាជិកជិត 40 000 នាក់</strong> នៅលើ <a href=\"/discord/\">ម៉ាស៊ីនមេ Discord</a> របស់យើង។",
+  "community-events-content-2": "ចូលរួមពិភាក្សាជាមួយសហគមន៍របស់យើងរៀងរាល់ខែ សម្រាប់ការធ្វើបច្ចុប្បន្នភាពលើការអភិវឌ្ឍ Ethereum.org និងព័ត៌មានអំពីប្រព័ន្ធអេកូឡូស៊ីសំខាន់ៗ។ ទទួលបានឱកាសក្នុងការសួរសំណួរ ចែករំលែកគំនិត និងផ្តល់មតិយោបល់ - វាជាឱកាសដ៏ល្អដើម្បីក្លាយជាផ្នែកមួយនៃសហគមន៍ Ethereum ដែលកំពុងតែរីកចម្រើន។",
+  "community-events-next-event": "ព្រឹត្តិការណ៍បន្ទាប់",
+  "community-events-no-events-planned": "គ្មានព្រឹត្តិការណ៍ដែលបានគ្រោងទុក",
+  "community-events-upcoming-calls": "ការជួប​ជុំ​នាពេលខាងមុខ",
+  "community-events-no-upcoming-calls": "គ្មានការជួប​ជុំ​នាពេលខាងមុខទេ",
+  "community-events-previous-calls": "ការជួប​ជុំ​ពីមុន",
+  "community-events-there-are-no-past-calls": "មិនមានការជួប​ជុំ​កន្លងមកទេ",
+  "community-events-add-to-calendar": "បន្ថែមទៅប្រតិទិន"
 }
