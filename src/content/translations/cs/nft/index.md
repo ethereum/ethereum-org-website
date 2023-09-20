@@ -64,7 +64,7 @@ Nebo si představte vstupenku na sportovní událost. Stejně jako organizátor 
 
 Na ethereum.org se NFT používají k ukázce toho, že lidé přispěli do našeho repozitáře na Githubu nebo se zúčastnili callů, a dokonce máme vlastní NFT s názvem domény. Pokud přispějete na ethereum.org, můžete získat POAP NFT. Některé krypto meetupy používají POAPy jako vstupenky. [Více o přispívání](/contributing/#poap).
 
-![ethereum.org POAP](../../../../assets/use-cases/poap.png)
+![ethereum.org POAP](./poap.png)
 
 Tato webová stránka má také alternativní název domény využívající NFT, **ethereum.eth**. Naše adresa `.org` je centrálně spravována poskytovatelem doménových jmen (DNS), zatímco ethereum`.eth` je registrována na síti Ethereum prostřednictvím Ethereum Name Service (ENS). A je vlastněná a ovládaná námi. [Podívejte se na náš ENS záznam.](https://app.ens.domains/name/ethereum.eth)
 

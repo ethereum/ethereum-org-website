@@ -64,7 +64,7 @@ Par exemple, pensez à un billet pour un événement sportif. Tout comme l'organ
 
 Sur ethereum.org, les NFT sont utilisés pour montrer que des personnes ont contribué à notre dépôt Github ou assisté à des appels, et nous avons même notre propre nom de domaine NFT. Si vous contribuez à ethereum.org, vous pouvez demander un POAP NFT. Certains rassemblements crypto ont utilisé des POAP comme billets. [Plus d'infos sur la contribution](/contributing/#poap).
 
-![POAP ethereum.org](../../../../assets/use-cases/poap.png)
+![POAP ethereum.org](./poap.png)
 
 Ce site web dispose également d'un nom de domaine alternatif NFT, **ethereum.eth**. Notre adresse `.org` est gérée de façon centralisée par un fournisseur de noms de domaine (DNS) alors que ethereum`.eth` est enregistré sur Ethereum par le service Ethereum Name Service (ENS). Nous en sommes les propriétaires et les gestionnaires. [Consulter notre dossier ENS](https://app.ens.domains/name/ethereum.eth)
 

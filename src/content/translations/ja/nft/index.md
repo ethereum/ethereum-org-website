@@ -64,7 +64,7 @@ NFT は以下のような多数の用途に使用されます。
 
 ethereum.org では、Github リポジトリへの貢献や電話会議への出席を示すために NFT が使用されており、独自の NFT ドメイン名も取得しています。 ethereum.org に貢献することで、POAP NFT(出席証明 NFT)を獲得できます。 一部のクリプトミートアップでは、チケットとして POAP が使用されています。 [貢献の詳細](/contributing/#poap)
 
-![ethereum.orgの出席証明プロトコル(POAP)](../../../../assets/use-cases/poap.png)
+![ethereum.orgの出席証明プロトコル(POAP)](./poap.png)
 
 このウェブサイトには、NFT による代替ドメイン名**ethereum.eth**があります。 `.org`アドレスは、ドメインネームシステム(DNS)プロバイダーによって集中管理されていますが、ethereum`.eth`は、イーサリアム・ネーム・サービス(ENS)を介してイーサリアム上に登録されています。 つまり、私たち自身が所有、管理しているということです。 [ENS レコードの確認](https://app.ens.domains/name/ethereum.eth)
 
