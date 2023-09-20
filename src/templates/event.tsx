@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import {
@@ -9,10 +9,8 @@ import {
   chakra,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Show,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 
@@ -23,6 +21,9 @@ import ExpandableCard from "../components/ExpandableCard"
 import PageMetadata from "../components/PageMetadata"
 import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 import { ChildOnlyProp, Context } from "../types"
 
@@ -32,19 +33,19 @@ const commonHeadingProps: HeadingProps = {
 }
 
 export const H1 = (props: HeadingProps) => (
-  <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
 export const H2 = (props: HeadingProps) => (
-  <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
+  <OldHeading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
 export const H3 = (props: HeadingProps) => (
-  <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
 export const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     {...commonHeadingProps}
     fontSize="xl"
@@ -147,20 +148,21 @@ const components = {
   InfoBanner,
 }
 
-const HeroImage = chakra(GatsbyImage, {
-  baseStyle: {
-    alignSelf: {
+const HeroImage: GatsbyImageType = (props) => (
+  <GatsbyImage
+    alignSelf={{
       base: "center",
       lg: "normal",
-    },
-    backgroundSize: "contain",
-    flex: "1 1 100%",
-    right: 0,
-    bottom: 0,
-    width: "full",
-    overflow: "initial",
-  },
-})
+    }}
+    backgroundSize="contain"
+    flex="1 1 100%"
+    right={0}
+    bottom={0}
+    width="full"
+    overflow="initial"
+    {...props}
+  />
+)
 
 const EventPage = ({
   data: { pageData: mdx },
@@ -171,7 +173,7 @@ const EventPage = ({
   return (
     <Box position="relative" width="full">
       <HeroContainer>
-        <HeroImage as={GatsbyImage} image={getImage(mdx.frontmatter.image)!} />
+        <HeroImage alt="" image={getImage(mdx?.frontmatter?.image)!} />
         <Box
           position="absolute"
           left="32px"

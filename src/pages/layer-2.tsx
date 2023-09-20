@@ -1,7 +1,6 @@
 // Libraries
 import React, { HTMLAttributes, ReactNode, useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Badge,
@@ -12,12 +11,10 @@ import {
   DividerProps,
   Flex,
   GridItem,
-  Heading,
   HeadingProps,
   Icon,
   ListItem,
   SimpleGrid,
-  Text,
   UnorderedList,
   useBreakpointValue,
 } from "@chakra-ui/react"
@@ -41,6 +38,9 @@ import ProductList from "../components/ProductList"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 // Utils
 import { getData } from "../utils/cache"
@@ -70,7 +70,7 @@ const SectionHeading = (props: HeadingProps) => {
 
   const mergeProps = merge(headingSpecificProps, props)
 
-  return <Heading {...mergeProps} />
+  return <OldHeading {...mergeProps} />
 }
 
 interface ContentBoxProps extends BoxProps {
@@ -483,7 +483,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <GatsbyImage
               image={getImage(data.whatIsEthereum)!}
               alt=""
-              style={{ maxHeight: "400px" }}
+              maxH="400px"
               objectFit="contain"
             />
           </Box>
@@ -539,7 +539,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <GatsbyImage
               image={getImage(data.dao)!}
               alt=""
-              style={{ width: "100%" }}
+              w="full"
               objectFit="contain"
             />
           </Center>
@@ -622,7 +622,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <GatsbyImage
               image={getImage(data.rollup)!}
               alt=""
-              style={{ width: "100%" }}
+              w="full"
               objectFit="contain"
             />
           </Center>

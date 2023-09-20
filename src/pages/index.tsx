@@ -1,7 +1,6 @@
 import React, { ReactNode, useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
   chakra,
@@ -14,7 +13,6 @@ import {
   Img,
   SimpleGridProps,
   Stack,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
@@ -32,6 +30,8 @@ import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import Translation from "../components/Translation"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
+import Text from "../components/OldText"
+import GatsbyImage from "../components/GatsbyImage"
 import { isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 
@@ -46,7 +46,6 @@ const SectionHeading = (props: HeadingProps) => (
     fontFamily="sans-serif"
     fontSize={{ base: "2xl", sm: "2rem" }}
     fontWeight={600}
-    mt={0}
     mb={2}
     {...props}
   />
@@ -162,7 +161,7 @@ const PageHeader = () => (
     mb={8}
     px={8}
   >
-    <Heading as="h1" fontSize={{ base: "2rem", sm: "2.5rem" }} m={0}>
+    <Heading as="h1" fontSize={{ base: "2rem", sm: "2.5rem" }}>
       <Translation id="page-index-title" />
     </Heading>
     <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>
@@ -285,8 +284,7 @@ const HomePage = ({
         title={t("page-index-meta-title")}
         description={t("page-index-meta-description")}
       />
-      <Img
-        as={GatsbyImage}
+      <GatsbyImage
         image={getImage(data.hero)!}
         alt={t("page-index-hero-image-alt")}
         loading="eager"
@@ -322,8 +320,7 @@ const HomePage = ({
               </SectionDecription>
             </Box>
             <ImageContainer>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 image={getImage(data.hackathon)!}
                 alt={t("page-index-get-started-image-alt")}
                 width="full"
@@ -368,8 +365,7 @@ const HomePage = ({
             </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer pl={{ lg: 8 }}>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               width="full"
               image={getImage(data.ethereum)!}
               alt={t("page-index-what-is-ethereum-image-alt")}
@@ -394,8 +390,7 @@ const HomePage = ({
             </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               width="full"
               image={getImage(data.impact)!}
               alt={t("page-index-defi-image-alt")}
@@ -420,8 +415,7 @@ const HomePage = ({
             </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               width="full"
               image={getImage(data.infrastructure)!}
               alt={t("page-index-nft-alt")}
@@ -450,8 +444,7 @@ const HomePage = ({
               </ButtonLinkRow>
             </FeatureContent>
             <ImageContainer>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 width="full"
                 image={getImage(data.future)!}
                 alt={t("page-index-internet-image-alt")}

@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import {
   Box,
@@ -10,7 +9,6 @@ import {
   ListItem,
   Show,
   SimpleGrid,
-  Text,
   UnorderedList,
   useToken,
   Wrap,
@@ -43,6 +41,7 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
+import Text from "../components/OldText"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import {
@@ -68,14 +67,10 @@ import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp, Context } from "../types"
 import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <SimpleGrid
-    columns={{ base: 1, md: 2 }}
-    spacing={8}
-    sx={{ h3: { mt: 0 } }}
-    {...props}
-  />
+  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
 )
 
 const HeroContainer = (props: ChildOnlyProp) => (
@@ -91,25 +86,26 @@ const HeroContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const HeroImage = chakra(GatsbyImage, {
-  baseStyle: {
-    alignSelf: {
+const HeroImage: GatsbyImageType = (props) => (
+  <GatsbyImage
+    alignSelf={{
       base: "center",
       lg: "normal",
-    },
-    bgRepeat: "no-repeat",
-    flex: "1 1 100%",
-    right: 0,
-    bottom: 0,
-    width: "full",
-    height: "full",
-    overflow: "initial",
-    maxW: {
+    }}
+    bgRepeat="no-repeat"
+    flex="1 1 100%"
+    right={0}
+    bottom={0}
+    width="full"
+    height="full"
+    overflow="initial"
+    maxW={{
       base: "538px",
       lg: "full",
-    },
-  },
-})
+    }}
+    {...props}
+  />
+)
 
 const TitleCard = (props: ChildOnlyProp) => (
   <Flex w="full" p={8} direction="column" justify="flex-start" {...props} />

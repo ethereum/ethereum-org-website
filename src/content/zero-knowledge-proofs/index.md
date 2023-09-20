@@ -176,7 +176,7 @@ Using MACI _does_ require trusting the coordinator not to collude with bribers o
 
 But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of on-chain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
 
-[Learn more about MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[Learn more about MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Drawbacks of using zero-knowledge proofs {#drawbacks-of-using-zero-knowledge-proofs}
 

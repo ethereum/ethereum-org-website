@@ -1,19 +1,18 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
-  Box,
+  Text,
   Center,
   Flex,
-  Image,
+  Heading,
   LinkBox,
   LinkOverlay,
-  Text,
 } from "@chakra-ui/react"
 
 import { getImage } from "../../utils/image"
 
 import ButtonLink from "../ButtonLink"
+import GatsbyImage from "../GatsbyImage"
 
 interface IProps {
   to: string
@@ -84,25 +83,25 @@ const RoadmapActionCard: React.FC<IProps> = ({
     <LinkBox
       as={Flex}
       direction="column"
-      justifyContent="space-between"
       border="1px solid"
       borderColor="lightBorder"
     >
       <Center background="cardGradient" h="260px">
-        <Image
-          as={GatsbyImage}
+        <GatsbyImage
           image={getImage(data[image])!}
           alt={alt}
-          fit="contain"
+          objectFit="contain"
         />
       </Center>
-      <Box p={6}>
-        <Text as="h3">{title}</Text>
-        <Text>{description}</Text>
+      <Flex p={6} flex="1" flexDir="column" justify="space-between" gap={4}>
+        <Heading as="h3" size="md">
+          {title}
+        </Heading>
+        <Text flex="1">{description}</Text>
         <LinkOverlay as={ButtonLink} href={to}>
           {buttonText}
         </LinkOverlay>
-      </Box>
+      </Flex>
     </LinkBox>
   )
 }

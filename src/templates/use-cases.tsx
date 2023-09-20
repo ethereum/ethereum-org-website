@@ -2,7 +2,6 @@ import React, { ComponentProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Badge,
   Box,
@@ -11,7 +10,6 @@ import {
   chakra,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Icon,
   ListItem as ChakraListItem,
@@ -53,6 +51,8 @@ import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -66,19 +66,19 @@ const commonHeadingProps: HeadingProps = {
 }
 
 export const H1 = (props: HeadingProps) => (
-  <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
 export const H2 = (props: HeadingProps) => (
-  <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
+  <OldHeading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
 export const H3 = (props: HeadingProps) => (
-  <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
 export const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     {...commonHeadingProps}
     fontSize="xl"
@@ -176,24 +176,25 @@ const TitleCard = (props: ChildOnlyProp) => {
 
 export const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
-const HeroImage = chakra(GatsbyImage, {
-  baseStyle: {
-    alignSelf: {
+const HeroImage: GatsbyImageType = (props) => (
+  <GatsbyImage
+    alignSelf={{
       base: "center",
       lg: "normal",
-    },
-    backgroundSize: "cover",
-    flex: "1 1 100%",
-    right: 0,
-    bottom: 0,
-    width: "full",
-    overflow: "initial",
-    maxH: {
+    }}
+    backgroundSize="cover"
+    flex="1 1 100%"
+    right={0}
+    bottom={0}
+    width="full"
+    overflow="initial"
+    maxH={{
       base: "340px",
       lg: "full",
-    },
-  },
-})
+    }}
+    {...props}
+  />
+)
 
 export const Page = (props: FlexProps) => (
   <Flex

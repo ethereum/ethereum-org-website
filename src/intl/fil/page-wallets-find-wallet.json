@@ -89,5 +89,6 @@
   "page-find-wallet-browser": "Browser",
   "page-find-wallet-browser-desc": "Mga wallet na may mga browser extension",
   "page-find-wallet-device": "Device",
-  "page-find-choose-to-compare": "Pumili para ihambing"
+  "page-find-choose-to-compare": "Pumili para ihambing",
+  "page-find-wallet-choose-features": "Pumili ng mga feature"
 }

@@ -1,9 +1,7 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
   Flex,
-  Heading,
   Image,
   List,
   ListItem,
@@ -13,6 +11,8 @@ import {
 
 import ButtonLink from "./ButtonLink"
 import Translation from "./Translation"
+import OldHeading from "./OldHeading"
+import GatsbyImage from "./GatsbyImage"
 
 export interface Content {
   title: string
@@ -35,7 +35,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
 
   return (
     <Box boxSize="full">
-      <Heading
+      <OldHeading
         as="h3"
         id={CATEGORY_NAME}
         fontSize="2xl"
@@ -45,7 +45,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
         marginBottom={0}
       >
         {category}
-      </Heading>
+      </OldHeading>
       <Flex
         as={List}
         aria-labelledby={CATEGORY_NAME}
@@ -64,8 +64,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
           >
             <Box width="5rem">
               {image && (
-                <Image
-                  as={GatsbyImage}
+                <GatsbyImage
                   image={image}
                   alt={alt}
                   boxShadow={shadow}
