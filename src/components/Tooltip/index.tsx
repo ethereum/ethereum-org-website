@@ -17,7 +17,7 @@ export interface IProps extends PopoverProps {
 
 const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
   return (
-    <Box title="More Info!" display="inline-block" ml={2}>
+    <Box display="inline-block" ml={2}>
       <Popover
         placement="top"
         trigger="hover"
