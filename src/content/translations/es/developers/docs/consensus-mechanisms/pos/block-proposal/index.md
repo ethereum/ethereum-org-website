@@ -8,7 +8,7 @@ Los bloques son las unidades fundamentales de la cadena de bloques. Los bloques 
 
 ## Requisitos previos {#prerequisites}
 
-La propuesta de bloque es parte del protocolo de prueba de participación. Para ayudar a entender esta página, le recomendamos que lea sobre la [prueba de participación](src/content/developers/docs/consensus-mechanisms/pos/) y la [arquitectura de bloques](src/content/developers/docs/blocks/).
+La propuesta de bloque es parte del protocolo de prueba de participación. Para ayudar a entender esta página, le recomendamos que lea sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) y la [arquitectura de bloques](/developers/docs/blocks/).
 
 ## ¿Quién produce los bloques? {#who-produces-blocks}
 
