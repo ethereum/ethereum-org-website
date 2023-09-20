@@ -82,6 +82,7 @@ const USER_SELECTION: UserSelectionObject = {
   sw: [],
   ta: [],
   th: [],
+  tk: [],
   tr: [],
   uk: [],
   uz: [],
