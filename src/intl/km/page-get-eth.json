@@ -2,6 +2,9 @@
   "page-get-eth-article-keeping-crypto-safe": "គន្លឹះក្នុងការរក្សាគ្រីបតូរបស់អ្នកឱ្យមានសុវត្ថិភាព",
   "page-get-eth-article-protecting-yourself": "ការការពារខ្លួនអ្នក និងមូលនិធិរបស់អ្នក។",
   "page-get-eth-article-store-digital-assets": "របៀបរក្សាទុកទ្រព្យសម្បត្តិឌីជីថលនៅលើ Ethereum",
+  "page-get-eth-article-protecting-yourself-desc": "MyCrypto",
+  "page-get-eth-article-keeping-crypto-safe-desc": "Coinbase",
+  "page-get-eth-article-store-digital-assets-desc": "ConsenSys",
   "page-get-eth-cex": "អាជីវកម្មប្តូររូបិយប័ណ្ណគ្រីបតូវិមជ្ឈការ",
   "page-get-eth-cex-desc": "អាជីវកម្មប្តូររូបិយប័ណ្ណគ្រីបតូគឺជាអាជីវកម្មដែលអនុញ្ញាតឱ្យអ្នកទិញគ្រីបតូដោយប្រើរូបិយប័ណ្ណប្រពៃណី។ ពួកគេមានសិទ្ធិគ្រប់គ្រងលើ ETH ណាមួយដែលអ្នកទិញរហូតដល់អ្នកផ្ញើវាទៅកាបូបដែលអ្នកគ្រប់គ្រង។",
   "page-get-eth-checkout-dapps-btn": "ពិនិត្យមើល dapps",
@@ -62,5 +65,5 @@
   "page-get-eth-your-address-desc-3": "គិត​ថា​វា​ដូច​ជា​អាសយដ្ឋាន​អ៊ីមែល​របស់​អ្នក​ដែរ ប៉ុន្តែ​ជំនួស​ឱ្យ​អ៊ីមែល​វា​អាច​ទទួល ETH ។ ប្រសិនបើអ្នកចង់ផ្ទេរ ETH ពីអាជីវកម្មប្តូររូបិយប័ណ្ណគ្រីបតូទៅកាបូបរបស់អ្នក សូមប្រើអាសយដ្ឋានរបស់អ្នកជាគោលដៅ។ ត្រូវប្រាកដថាពិនិត្យមើលទ្វេដងមុនពេលអ្នកផ្ញើ!",
   "page-get-eth-your-address-wallet-link": "ពិនិត្យមើលកាបូប",
   "listing-policy-raise-issue-link": "លើកបញ្ហា",
-  "page-find-wallet-last-updated": "Last updated"
+  "page-find-wallet-last-updated": "ធ្វើ​បច្ចុ​ប្បន្នភាព​ចុង​ក្រោយ​បង្អស់​នៅ"
 }
