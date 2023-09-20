@@ -4,7 +4,6 @@ import React, {
   useEffect,
   ComponentPropsWithRef,
 } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -19,7 +18,6 @@ import {
   Heading,
   HeadingProps,
   SimpleGrid,
-  chakra,
   useToken,
 } from "@chakra-ui/react"
 
@@ -42,6 +40,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import GatsbyImage from "../components/GatsbyImage"
 
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
@@ -130,18 +129,18 @@ const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
   <Button variant="outline" py={2} px={3} borderRadius="0.25em" {...props} />
 )
 
-const MagiciansImage = chakra(GatsbyImage, {
-  baseStyle: {
-    bgSize: "cover",
-    bgRepeat: "no-repeat",
-    alignSelf: "center",
-    w: "full",
-    minW: "240px",
-    maxW: "300px",
-    my: 8,
-    mx: { base: 0, sm: 8, md: 24 },
-  },
-})
+const MagiciansImage = () => (
+  <GatsbyImage
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    alignSelf="center"
+    w="full"
+    minW="240px"
+    maxW="300px"
+    my="8"
+    mx={{ base: 0, sm: "8", md: "24" }}
+  />
+)
 
 const ImageContainer = (props: Pick<FlexProps, "children" | "id">) => (
   <Flex justify="center" {...props} />

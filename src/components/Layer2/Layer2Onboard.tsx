@@ -1,6 +1,6 @@
 // Libraries
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import React, { useState } from "react"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
@@ -20,6 +20,7 @@ import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 import Text from "../OldText"
 import OldHeading from "../OldHeading"
+import GatsbyImage from "../GatsbyImage"
 
 // Data
 import {
@@ -372,8 +373,7 @@ const Layer2Onboard: React.FC<IProps> = ({
         )}
         {/* EthLogo */}
         <Box {...gridContentPlacementStyles.logo}>
-          <Img
-            as={GatsbyImage}
+          <GatsbyImage
             image={ethIcon}
             objectFit="contain"
             alt={ethIconAlt}
