@@ -7,7 +7,7 @@ import Translation from "../../Translation"
 import GatsbyImage from "../../GatsbyImage"
 import { CommonHeroProps } from "../utils"
 
-interface HomeHeroProps extends Pick<CommonHeroProps, "heroImgSrc"> {}
+export interface HomeHeroProps extends Pick<CommonHeroProps, "heroImgSrc"> {}
 
 const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
   const { t } = useTranslation()

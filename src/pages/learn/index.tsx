@@ -22,7 +22,7 @@ import InlineLink from "../../components/Link"
 import OriginalCard, {
   IProps as IOriginalCardProps,
 } from "../../components/Card"
-import HubHero, { type HubHeroProps } from "../../components/Hero/HubHero"
+import { HubHero, type HubHeroProps } from "../../components/Hero"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"

@@ -2,7 +2,7 @@ import { Heading, Stack } from "@chakra-ui/react"
 import * as React from "react"
 import Breadcrumbs, { IProps as BreadcrumbsProps } from "../../Breadcrumbs"
 
-interface MdxHeroProps {
+export interface MdxHeroProps {
   breadcrumbs: BreadcrumbsProps
   headingTitle: string
 }
