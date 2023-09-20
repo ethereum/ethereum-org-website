@@ -54,7 +54,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Ethereum protokolünün resmi Go uygulaması_
 - [Go Ethereum Kodu Analizi](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go Ethereum kaynak kodunun incelenmesi ve analizi_
-- </em>Arşiv düğümlerine odaklanan Go Ethereum'un [Erigon](https://github.com/ledgerwatch/erigon) - \_Faster türevi</li>
+- Arşiv düğümlerine odaklanan Go Ethereum'un [Erigon](https://github.com/ledgerwatch/erigon) - \_Faster türevi
 - [Golem](https://github.com/golemfactory/golem) - _Golem, bilgi işlem gücü için küresel bir pazar oluşturuyor_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _İzin verilen veri gizliliğini destekleyen Ethereum uygulaması_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Ethereum "Serenity" 2.0 Go Uygulaması_
