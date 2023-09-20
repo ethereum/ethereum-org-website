@@ -64,7 +64,7 @@ summaryPoint3: 由以太坊区块链上的智能合约提供支持
 
 在 ethereum.org 上，非同质化代币被用来证明人们对我们的 Github 库做出了贡献或者参加了电话会议，我们甚至拥有自己的非同质化代币域名。 如果你对 ethereum.org 做了贡献，即可认领出勤证明协议非同质化代币。 一些数字货币相关活动使用 POAP 作为门票。 [关于贡献的更多信息](/contributing/#poap)。
 
-![ethereum.org 出勤证明协议](../../../../assets/use-cases/poap.png)
+![ethereum.org 出勤证明协议](./poap.png)
 
 本网站也有一个由非同质化代币支持的备用域名：**ethereum.eth**。 我们的 `.org` 地址由域名系统 (DNS) 提供商集中管理，而 ethereum`.eth` 则通过以太坊域名服务 (ENS) 在以太坊上注册。 此域名由我们所有和管理。 [查看我们的 ENS 记录](https://app.ens.domains/name/ethereum.eth)
 
