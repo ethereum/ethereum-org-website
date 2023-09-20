@@ -79,7 +79,7 @@ Reddit, kullanıcıların kaliteli içerik yayınlayarak ve çevrimiçi topluluk
 
 Program zaten yayında ve r/Kripto para subreddit ["Moons" adlı Topluluk Puanları sürümünü çalıştırıyor](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Resmi açıklamaya göre, Moons "alt diziye katkılarından dolayı posterleri, yorumcuları ve moderatörleri ödüllendiriyor." Bu token'lar blok zincirde olduğundan (kullanıcılar bunları cüzdanlarda alır), Reddit'ten bağımsızdırlar ve alınamazlar.
 
-Rinkeby test ağında bir beta aşamasını tamamladıktan sonra, Reddit Topluluk Puanları artık bir [validium](/developers/docs/scaling/validium/) ve bir [iyimser toplama](/developers/docs/scaling/optimistic-rollups/) özelliklerini birleştiren bir blok zincir olan [Arbitrum Nova'da](https://nova.arbitrum.io/). Kullanıcılar, özel özelliklerin kilidini açmak için Topluluk Puanlarını kullanmanın yanı sıra, bunları borsalarda fiat karşılığında takas edebilirler. Ayrıca, bir kullanıcının sahip olduğu Topluluk Puanlarının miktarı, topluluk içindeki karar verme süreci üzerindeki etkisini belirler.
+Rinkeby test ağında bir beta aşamasını tamamladıktan sonra, Reddit Topluluk Puanları artık bir [yan ağ](/developers/docs/scaling/sidechains/) ve bir [iyimser toplama](/developers/docs/scaling/optimistic-rollups/) özelliklerini birleştiren bir blok zincir olan [Arbitrum Nova'da](https://nova.arbitrum.io/). Kullanıcılar, özel özelliklerin kilidini açmak için Topluluk Puanlarını kullanmanın yanı sıra, bunları borsalarda fiat karşılığında takas edebilirler. Ayrıca, bir kullanıcının sahip olduğu Topluluk Puanlarının miktarı, topluluk içindeki karar verme süreci üzerindeki etkisini belirler.
 
 ### Twitter {#twitter}
 
@@ -94,16 +94,19 @@ Mayıs 2022'de [Instagram, Ethereum ve Polygon'da NFT'ler için destek verdiğin
 - **[Status.im](https://status.im/)** - _Status, mesajlarınızı üçüncü taraflardan korumak için açık kaynaklı, eşler arası bir protokol ve uçtan uca şifreleme kullanan güvenli bir mesajlaşma uygulamasıdır._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror, kullanıcıların fikirlerini kitle fonlaması, içerikten para kazanması ve yüksek değerli topluluklar oluşturması için Ethereum üzerine inşa edilmiş, merkeziyetsiz, kullanıcıya ait bir yayın platformudur._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol, içerik yaratıcıların merkeziyetsiz internetin dijital bahçesinde nereye giderlerse gitsinler içeriklerinin mülkiyetini almalarına yardımcı olan birleştirilebilir ve merkeziyetsiz bir sosyal grafiktir._
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster yeterince merkeziyetsiz bir sosyal ağdır. Birçok istemciyi destekleyen açık bir protokoldür, tıpkı e-posta gibi._
 
 ## Daha fazla okuma {#further-reading}
 
 ### Makaleler {#articles}
 
+- [Sosyal medyayı merkeziyetsizleştirmek: web3 sosyal yığınına bir rehber](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [How Blockchain Can Solve Social Media Privacy](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Sosyal Ağlar İçin Yeterli Merkeziyetsizlik](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) - _Varun Srinivasan_
 
 ### Videolar {#videos}
 
