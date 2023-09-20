@@ -19,7 +19,6 @@ import {
   Table,
   TableProps,
   Td,
-  Text,
   Th,
   Tr,
 } from "@chakra-ui/react"
@@ -27,6 +26,7 @@ import {
 // Components
 import InlineLink, { IProps as LinkProps } from "../../Link"
 import { WalletMoreInfo } from "./WalletMoreInfo"
+import Text from "../../OldText"
 
 // Icons
 import {

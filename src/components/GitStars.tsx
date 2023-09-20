@@ -1,8 +1,10 @@
 import React from "react"
-import { Icon, Text, Center, Flex } from "@chakra-ui/react"
+import { Icon, Center, Flex } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
+
 import Emoji from "./Emoji"
 import { BaseLink } from "./Link"
+import Text from "./OldText"
 
 export interface GitHubRepo {
   stargazerCount: number

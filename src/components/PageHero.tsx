@@ -1,10 +1,11 @@
 import React, { ReactNode } from "react"
-import { Box, Flex, Heading, Text, Wrap, WrapItem } from "@chakra-ui/react"
+import { Box, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
 
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
 import Button, { IProps as IButtonProps } from "./Button"
+import Text from "./OldText"
 
 import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
 
@@ -101,9 +102,8 @@ const PageHero: React.FC<IProps> = ({
               {buttons.map((button, idx) => {
                 if (isButtonLink(button)) {
                   return (
-                    <WrapItem>
+                    <WrapItem key={idx}>
                       <ButtonLink
-                        key={idx}
                         variant={button.variant}
                         to={button.to}
                         onClick={() =>
@@ -122,9 +122,8 @@ const PageHero: React.FC<IProps> = ({
 
                 if (button.toId) {
                   return (
-                    <WrapItem>
+                    <WrapItem key={idx}>
                       <Button
-                        key={idx}
                         variant={button.variant}
                         toId={button.toId}
                         onClick={() =>

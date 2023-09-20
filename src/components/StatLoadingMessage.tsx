@@ -1,7 +1,8 @@
 import React from "react"
-import { Text, TextProps } from "@chakra-ui/react"
+import { TextProps } from "@chakra-ui/react"
 
 import Translation from "./Translation"
+import Text from "./OldText"
 
 export interface IProps extends TextProps {}
 
