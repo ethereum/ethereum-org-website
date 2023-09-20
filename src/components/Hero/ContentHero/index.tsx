@@ -41,9 +41,11 @@ const ContentHero = (props: ContentHeroProps) => {
             <Text fontSize="lg">{description}</Text>
             <HStack spacing="4">
               {buttons
-                ? buttons.map((button, idx) => (
-                    <CallToAction key={idx} index={idx} {...button} />
-                  ))
+                ? buttons.map((button, idx) => {
+                    if (!button) return
+
+                    return <CallToAction key={idx} index={idx} {...button} />
+                  })
                 : null}
             </HStack>
           </Stack>
