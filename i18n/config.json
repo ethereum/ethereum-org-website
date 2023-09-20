@@ -416,6 +416,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "tk",
+    "crowdinCode": "tk",
+    "name": "Turkmen",
+    "localName": "türkmen",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "th",
     "crowdinCode": "th",
     "name": "Thai",
