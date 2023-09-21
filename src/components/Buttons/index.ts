@@ -1,13 +1,7 @@
-import Button, { IProps as IButtonProps } from "./Button"
-import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
-import IconButton from "./IconButton"
-import ButtonTwoLines from "./ButtonTwoLines"
-
+export { default as Button, type IProps as IButtonProps } from "./Button"
 export {
-  Button,
-  ButtonLink,
-  IconButton,
-  IButtonProps,
-  IButtonLinkProps,
-  ButtonTwoLines,
-}
+  default as ButtonLink,
+  type IProps as IButtonLinkProps,
+} from "./ButtonLink"
+export { default as IconButton } from "./IconButton"
+export { default as ButtonTwoLines } from "./ButtonTwoLines"
