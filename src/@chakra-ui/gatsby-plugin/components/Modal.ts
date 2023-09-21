@@ -19,12 +19,12 @@ const variantCode = definePartsStyle((props) => ({
     maxW: "464px",
     my: "64px",
     mx: "8px",
-    /* padding: "32px", */
+    padding: "32px",
     maxHeight: "70%",
     borderRadius: "4px",
   },
   header: {
-    bg: props.colorMode === "dark" ? "rgb(25, 25, 25)" : "rgb(247, 247, 247)",
+    /* bg: props.colorMode === "dark" ? "rgb(25, 25, 25)" : "rgb(247, 247, 247)", */
     borderColor:
       props.colorMode == "dark" ? "rgb(242, 242, 242)" : "rgb(51, 51, 51)",
     /* borderTop: "1px solid",

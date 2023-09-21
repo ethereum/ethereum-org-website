@@ -39,6 +39,7 @@ import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
+import Modal from "../components/Modal"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -92,7 +93,7 @@ const StyledActionCard = chakra(ActionCard, {
   },
 })
 
-const StyledCodeModal = chakra(CodeModal)
+const StyledCodeModal = chakra(Modal)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
