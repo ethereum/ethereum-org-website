@@ -821,7 +821,8 @@ const walletData: WalletData[] = [
     multisig: true,
     social_recovery: false,
     onboard_documentation: "https://support.linen.app/",
-    documentation: "https://linen.app/articles/crypto-assets-self-custody-linen-wallet-primer/",
+    documentation:
+      "https://linen.app/articles/crypto-assets-self-custody-linen-wallet-primer/",
   },
   {
     last_updated: "June 24, 2022",

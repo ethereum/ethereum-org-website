@@ -11,6 +11,8 @@
   "page-upgrades-upgrades-docking": "合并",
   "page-upgrades-shard-title": "分片",
   "page-upgrades-upgrades-beacon-chain": "信标链",
+  "consensus-beaconscan-title": "beaconscan",
+  "consensus-beaconscan-in-title": "beaconcha.in",
   "consensus-beaconcha-in-desc": "开源信标链浏览器",
   "consensus-beaconscan-desc": "共识层信标链浏览器 - Etherscan",
   "consensus-become-staker": "成为质押人",

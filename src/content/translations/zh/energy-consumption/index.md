@@ -55,7 +55,7 @@ CCRI 估计，以太坊的年化耗电量会因合并减少 **99.988% ** 以上�
 
 ## 绿色应用程序层 {#green-applications}
 
-以太坊的能源消耗非常低，与此同时，以太坊上也出现了大量、不断增长且高度活跃的**再生金融 (ReFi)** 社区。 再生金融应用程序使用去中心化金融组件来构建具有积极外部影响，从而使环境受益的金融应用程序。 再生金融是更广泛的[“太阳朋克”](https://en.wikipedia.org/wiki/Solarpunk)运动的一部分，这项运动与以太坊高度契合，旨在将技术进步和环境管理结合起来。 以太坊具有去中心化、无需许可和可组合的特性，这使其成为再生金融和太阳朋克社区的理想基础层。
+尽管以太坊的能源消耗非常低，但以太坊上也出现了大量不断增长且高度活跃的[**再生金融 (ReFi)**](/refi/) 社区。 再生金融应用程序使用去中心化金融组件来构建具有积极外部影响，从而使环境受益的金融应用程序。 再生金融是更广泛的[“太阳朋克”](https://en.wikipedia.org/wiki/Solarpunk)运动的一部分，这项运动与以太坊高度契合，旨在将技术进步和环境管理结合起来。 以太坊具有去中心化、无需许可和可组合的特性，这使其成为再生金融和太阳朋克社区的理想基础层。
 
 Web3 原生公共物品融资平台，如 [Gitcoin](https://gitcoin.co) 举行气候进程，推动在以太坊应用程序层上形成环境意识。 通过制定这些计划（以及其他，例如[去中心化科研](/desci/)），以太坊正在成为一项对环境和社会有益的技术。
 
@@ -67,10 +67,10 @@ Web3 原生公共物品融资平台，如 [Gitcoin](https://gitcoin.co) 举行�
 
 - [剑桥区块链网络可持续性指数](https://ccaf.io/cbnsi/ethereum)
 - [白宫关于工作量证明区块链的报告](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
-- [以太坊的排放：自下而上的估算](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
-- [以太坊能源消耗指标](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
+- [以太坊排放量：一种自下而上的估算方法](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
+- [以太坊能源消耗指数](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
-- [合并 - 对以太坊网络电力消耗和碳足迹的影响](https://carbon-ratings.com/eth-report-2022) - _CCRI_
+- [合并 - 对以太坊网络电力消耗和碳足迹的影响](https://carbon-ratings.com/eth-report-2022) - _CCRI_。
 - [以太坊的能源消耗](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
 ## 相关主题 {#related-topics}

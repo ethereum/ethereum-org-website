@@ -9,7 +9,6 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
@@ -32,6 +31,7 @@ import OldHeading from "../components/OldHeading"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
+import GatsbyImage from "../components/GatsbyImage"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex

@@ -1,6 +1,6 @@
 ---
 title: Introducción a Ethereum
-description: Una introducción a los conceptos principales de Ethereum para los desarrolladores de dapps.
+description: Una introducción a los conceptos principales de Ethereum para los desarrolladores de DApps.
 lang: es
 ---
 
@@ -48,7 +48,7 @@ En la práctica, los participantes no escriben un código nuevo cada vez que des
 
 A un nivel muy básico, puede entender a los contratos inteligentes como una especie de máquina expendedora: un script que, cuando se opera con ciertos parámetros, realiza una acción o cálculo si se cumplen ciertas condiciones. Por ejemplo, un contrato inteligente de un proveedor simple puede crear y asignar la propiedad de un activo digital si la persona que lo solicita envía ETH a un destinatario específico.
 
-Cualquier desarrollador puede crear un contrato inteligente y hacerlo público en la red, mediante el uso de la cadena de bloques como su capa de datos, a cambio del pago de una comisión a la red. A continuación, cualquier usuario puede solicitar el uso del contrato inteligente para ejecutar su código, de nuevo, a cambio del pago de una comisión a la red.
+Cualquier desarrollador puede crear un contrato inteligente y hacerlo público en la red, mediante el uso de la cadena de bloques como su capa de datos, a cambio del pago de una tarifa a la red. A continuación, cualquier usuario puede solicitar el uso del contrato inteligente para ejecutar su código, de nuevo, a cambio del pago de una tarifa a la red.
 
 Así pues, gracias a los contratos inteligentes, los desarrolladores pueden desarrollar y publicar arbitrariamente complejas aplicaciones y servicios orientados al usuario, como mercados, instrumentos financieros, videojuegos, etc.
 
@@ -100,7 +100,7 @@ El volumen de las transacciones es muy alto, por lo que las transacciones se «c
 
 ### Contratos inteligentes {#smart-contracts}
 
-Un fragmento de código reutilizable (un programa) que publica un desarrollador en el entorno EVM. Cualquier persona puede solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Como los desarrolladores pueden escribir arbitrariamente aplicaciones ejecutables en la EVM (juegos, mercados, instrumentos financieros, etc.) mediante la publicación de contratos inteligentes, estos suelen denominarse [dapps o aplicaciones descentralizadas](/developers/docs/dapps/).
+Un fragmento de código reutilizable (un programa) que publica un desarrollador en el entorno EVM. Cualquier persona puede solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Como los desarrolladores pueden escribir arbitrariamente aplicaciones ejecutables en la EVM (juegos, mercados, instrumentos financieros, etc.) mediante la publicación de contratos inteligentes, estos suelen denominarse [DApps o Aplicaciones Descentralizadas](/developers/docs/dapps/).
 
 [Más información sobre contratos inteligentes](/developers/docs/smart-contracts/)
 
