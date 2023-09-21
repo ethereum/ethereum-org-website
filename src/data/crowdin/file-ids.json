@@ -256,6 +256,10 @@
     "path": "/developers/docs/data-availability/index.md"
   },
   {
+    "id": 8015,
+    "path": "/developers/docs/design-and-ux/index.md"
+  },
+  {
     "id": 2672,
     "path": "/history/index.md"
   },
@@ -318,6 +322,14 @@
   {
     "id": 6193,
     "path": "/community/page-community.json"
+  },
+  {
+    "id": 8019,
+    "path": "/community/code-of-conduct/index.md"
+  },
+  {
+    "id": 8023,
+    "path": "/community/research/index.md"
   },
   {
     "id": 2620,
@@ -440,6 +452,10 @@
     "path": "/developers/tutorials/reverse-engineering-a-contract/index.md"
   },
   {
+    "id": 8003,
+    "path": "/developers/tutorials/yellow-paper-evm/index.md"
+  },
+  {
     "id": 2980,
     "path": "/developers/tutorials/logging-events-smart-contracts/index.md"
   },
@@ -490,6 +506,14 @@
   {
     "id": 7631,
     "path": "/developers/tutorials/all-you-can-cache/index.md"
+  },
+  {
+    "id": 7995,
+    "path": "/developers/tutorials/eip-1271-smart-contract-signatures/index.md"
+  },
+  {
+    "id": 7999,
+    "path": "/developers/tutorials/hello-world-smart-contract-fullstack/index.md"
   },
   {
     "id": 5553,
@@ -576,6 +600,10 @@
     "path": "/contributing/design/adding-design-resources/index.md"
   },
   {
+    "id": 8007,
+    "path": "/contributing/quizzes/index.md"
+  },
+  {
     "id": 6568,
     "path": "/developers/docs/networking-layer/index.md"
   },
@@ -606,6 +634,10 @@
   {
     "id": 7797,
     "path": "/developers/docs/networking-layer/cons_client_net_layer.svg"
+  },
+  {
+    "id": 8011,
+    "path": "/developers/docs/networking-layer/portal-network/index.md"
   },
   {
     "id": 2636,
@@ -716,6 +748,10 @@
     "path": "/desci/index.md"
   },
   {
+    "id": 8035,
+    "path": "/refi/index.md"
+  },
+  {
     "id": 7471,
     "path": "/page-learn.json"
   },
@@ -746,6 +782,10 @@
   {
     "id": 7543,
     "path": "/learn-quizzes.json"
+  },
+  {
+    "id": 8027,
+    "path": "/guides/how-to-id-scam-tokens/index.md"
   },
   {
     "id": 2776,
@@ -980,6 +1020,14 @@
     "path": "/about/index.md"
   },
   {
+    "id": 8031,
+    "path": "/deprecated-software/index.md"
+  },
+  {
+    "id": 8037,
+    "path": "/page-bug-bounty.json"
+  },
+  {
     "id": 2986,
     "path": "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md"
   },
@@ -1054,5 +1102,9 @@
   {
     "id": 7304,
     "path": "/developers/tutorials/short-abi/index.md"
+  },
+  {
+    "id": 8039,
+    "path": "/index.md"
   }
 ]
