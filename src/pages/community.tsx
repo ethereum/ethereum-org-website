@@ -16,7 +16,7 @@ import Callout from "../components/Callout"
 import Card from "../components/Card"
 import ButtonLink, {
   IProps as IButtonLinkProps,
-} from "../components/ButtonLink"
+} from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"

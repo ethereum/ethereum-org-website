@@ -9,7 +9,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 import WithdrawalCredentials from "./WithdrawalCredentials"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import Translation from "../Translation"
 import Text from "../OldText"
 import OldHeading from "../OldHeading"

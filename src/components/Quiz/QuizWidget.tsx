@@ -20,7 +20,7 @@ import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Button from "../Button"
+import Button from "../Buttons/Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"

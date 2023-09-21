@@ -9,7 +9,7 @@ import {
 import React from "react"
 import { ClickAnimation } from "../ClickAnimation"
 import { PulseAnimation } from "../PulseAnimation"
-import Button from "../../Button"
+import { Button } from "../../Buttons"
 
 interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
   icon: As
