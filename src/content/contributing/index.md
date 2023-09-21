@@ -83,19 +83,6 @@ We have low barrier to entry issues on our GitHub repository specifically design
 
 ## Claim your contributor POAP {#poap}
 
-{For GitPOAP} (one time contribution)
-
-GitPOAP will automatically recognizes your merged contribution and lets you mint a unique contributors POAP on their platform itself!
-
-### How to claim {#how-to-claim}
-
-1. Visit [GitPOAP](https://www.gitpoap.io). 
-2. Connect with your wallet or even with your email id through sign in option.
-3. Search for your GitHub username, ETH address, ENS names or any GitPOAP to check if you're eligibile.
-4. If your github account is eligible, then you would be able to mint a GitPOAP!
- 
-{For tiered POAPs} (based on number of contributions)
-
 If your contribution gets merged into ethereum.org, we'll mint you a unique contributors POAP. A Proof of Attendance Protocol (POAP) token is on-chain proof that you helped make the ecosystem a little more awesome.
 
 [More on POAPs](https://www.poap.xyz/)
@@ -108,6 +95,17 @@ If your contribution gets merged into ethereum.org, we'll mint you a unique cont
 4. Claim your POAP!
 
 You should only use self-custody wallets to claim POAPs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your POAPs.
+
+## Claim your GitPOAP {#claim-gitpoap}
+
+GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
+
+### How to claim {#how-to-claim}
+
+1. Visit [GitPOAP](https://www.gitpoap.io).
+2. Connect with your wallet or even with your email through sign in option.
+3. Search for your GitHub username, ETH address, ENS names or any GitPOAP to check if you're eligible.
+4. If your GitHub account is eligible, then you would be able to mint a GitPOAP!
 
 ## Contributors {#contributors}
 
