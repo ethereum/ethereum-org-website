@@ -90,7 +90,6 @@ export const BaseLink = forwardRef<IProps, "a">(
 
     const commonProps: LinkProps & { ref: React.ForwardedRef<any> } = {
       ref,
-      href: to,
       dir,
       ...restProps,
     }
@@ -101,6 +100,7 @@ export const BaseLink = forwardRef<IProps, "a">(
     if (isHash) {
       return (
         <ChakraLink
+          href={to}
           onClick={(e) => {
             // only track events on external links and hash links
             if (!isHash) {
@@ -124,6 +124,7 @@ export const BaseLink = forwardRef<IProps, "a">(
     if (isExternal || isPdf || isStatic) {
       return (
         <ChakraLink
+          href={to}
           isExternal
           onClick={(e) => {
             // only track events on external links and hash links
@@ -159,6 +160,7 @@ export const BaseLink = forwardRef<IProps, "a">(
     return (
       <ChakraLink
         as={IntlLink}
+        to={to}
         language={language}
         partiallyActive={isPartiallyActive}
         activeStyle={
