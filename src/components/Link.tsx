@@ -40,9 +40,6 @@ type LinkComponent = FC<RefAttributes<HTMLAnchorElement> & LinkProps>
  *
  * - PDFs & static files (which open in a new tab)
  * e.g. <Link href="/eth-whitepaper.pdf">
- *
- * Implementation taken from the official Chakra/NextJS link integration example:
- * https://github.com/chakra-ui/chakra-ui/blob/main/packages/integrations/next-js/src/link.tsx
  */
 export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
   const router = useRouter()
