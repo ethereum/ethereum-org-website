@@ -25,7 +25,7 @@ type BaseProps = {
   // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
 
-export type LinkProps = BaseProps & NextLinkProps
+export type LinkProps = BaseProps & Omit<NextLinkProps, "href">
 
 type LinkComponent = FC<RefAttributes<HTMLAnchorElement> & LinkProps>
 
