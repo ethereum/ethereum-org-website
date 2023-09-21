@@ -115,18 +115,13 @@ const Nav: FC<IProps> = ({ path }) => {
                   <Box mr={2} mt={2}>
                     {" "}
                     {/* Add spacing between the text and the icon */}
-                    <ButtonLink
-                      data-group
-                      leftIcon={
-                        <Icon
-                          as={MdLanguage}
-                          transition="transform 0.3s ease-in-out, color 0.2s"
-                          // _groupHover renders "[data-group]:hover &"
-                          _groupHover={{
-                            transform: "rotate(30deg)",
-                          }}
-                        />
-                      }
+                    <Icon
+                      as={MdLanguage}
+                      transition="transform 0.3s ease-in-out, color 0.2s"
+                      // _groupHover renders "[data-group]:hover &"
+                      _groupHover={{
+                        transform: "rotate(30deg)",
+                      }}
                     />
                   </Box>
                   <span>Languages {i18n.language.toUpperCase()}</span>
