@@ -6,6 +6,7 @@ template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
 image: ../../../../assets/future_transparent.png
+alt: ""
 summaryPoint1: Globalna, otwarta alternatywa dla obecnego systemu naukowego.
 summaryPoint2: Technologia, która umożliwia naukowcom pozyskiwanie funduszy, prowadzenie eksperymentów, udostępnianie danych, rozpowszechnianie wniosków i wiele innych.
 summaryPoint3: Opiera się na otwartych inicjatywach naukowych.
@@ -19,9 +20,9 @@ DeSci ma na celu stworzenie ekosystemu, w którym naukowcy są zachęcani do otw
 
 Zdecentralizowana nauka umożliwia bardziej zróżnicowane źródła finansowania (od [DAO](/dao/), [kwadratowych darowizn](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) do finansowania społecznościowego i innych form), łatwiejszy dostęp do danych i metod, a także poprzez zapewnienie zachęt do odtwarzalności.
 
-### Juan Benet - DeSci, Niezależne laboratoria i nauka o danych na wielką skalę
+### Juan Benet — ruch DeSci
 
-<YouTube id="zkXM9H90g_E" />
+<YouTube id="5ORvbCIW39o" />
 
 ## Jak DeSci poprawia jakość nauki {#desci-improves-science}
 
@@ -107,7 +108,6 @@ Przeglądaj projekty i dołącz do społeczności DeSci.
 - [VitaDAO: uzyskuj środki finansowe w ramach sponsorowanych umów badawczych na długotrwałe badania](https://www.vitadao.com/)
 - [Protokół Fleminga: gospodarka danymi typu open-source, która wspiera wspólne odkrycia biomedyczne](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Laboratorium aktywnego wnioskowania](https://www.activeinference.org/)
-- [Cherubs DAO: fundusz wpływu finansowany przez NFT i zarządzany przez DAO dla zdrowia psychicznego i dobrej kondycji mózgu](https://cherubsdao.com/)
 - [CureDAO: wspólnotowa platforma ds. zdrowia precyzyjnego](https://docs.curedao.org/)
 - [IdeaMarkets: umożliwia zapewnienie zdecentralizowanej wiarygodności naukowej](https://ideamarket.io/)
 

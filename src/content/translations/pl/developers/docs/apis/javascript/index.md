@@ -208,14 +208,14 @@ eterach. tils.formatEther(balance)
 // '2,337132817842795605'
 ```
 
-- [Funkcje użytkowe Web3js](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Funkcje użytkowe Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funkcje użytkowe Ethers](https://docs.ethers.io/v5/api/utils/)
 
 ## Dostępne biblioteki {#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
-- [Dokumentacja](https://web3js.readthedocs.io/en/1.0/)
+- [Dokumentacja](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js —** **_Pełna implementacja portfela Ethereum i narzędzia w JavaScript i TypeScript._**

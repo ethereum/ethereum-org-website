@@ -157,6 +157,7 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _Un système de nommage décentralisé pour les identifiants sur la chaîne, lisibles par machine, tels que les adresses de portefeuilles Ethereum, les hachages de contenu et les métadonnées._
 - **[SprunceID](https://www.spruceid.com/)** - _Un projet d'identité décentralisé qui permet aux utilisateurs de contrôler leur identité numérique avec des comptes Ethereum et des profils ENS au lieu de s'appuyer sur des services tiers._
+- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Un registre/protocole décentralisé pour faire des attestations en chaîne ou hors chaîne sur quoi que ce soit._
 - **[Preuve d'humanité](https://www.proofofhumanity.id)** - _Preuve d'humanité (ou PoH) est un système de vérification d'identité sociale construit sur Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Un réseau d'identité sociale décentralisé et open-source qui cherche à réformer la vérification d'identité par la création et l'analyse d'un graphe social._
 - **[Passeport de preuve d'identité ](https://proofofpersonhood.com/)** - _Un agrégateur d'identité numérique décentralisé._

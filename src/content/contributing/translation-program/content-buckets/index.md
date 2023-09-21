@@ -76,7 +76,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
 - [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/)
 - [How to swap tokens](/guides/how-to-swap-tokens/)
-- Learning quizzes
+- [Learning quizzes](/quizzes/)
 
 ## 9) Upgrades {#upgrades}
 
@@ -217,7 +217,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/)
 - [Maximal extractable value (MEV)](/developers/docs/mev/)
-- [Orcles](/developers/docs/oracles/)
+- [Oracles](/developers/docs/oracles/)
 - [Bridges](/developers/docs/bridges/)
 - [Data availability](/developers/docs/data-availability/)
 
@@ -237,7 +237,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Patricia Merkle Trees](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 - [Data structures and encoding](/developers/docs/data-structures-and-encoding/)
 - [Recursive-length prefix (RLP) serialization](/developers/docs/data-structures-and-encoding/rlp/)
-- [Network adresses](/developers/docs/networking-layer/network-addresses/)
+- [Network addresses](/developers/docs/networking-layer/network-addresses/)
 - [Simple serialize](/developers/docs/data-structures-and-encoding/ssz/)
 - [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
 - [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)
@@ -282,7 +282,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [How to write & deploy an NFT (Part 1/3 of NFT tutorial series)](/developers/tutorials/how-to-write-and-deploy-an-nft/)
 - [How to mint an NFT (Part 2/3 of NFT tutorial series)](/developers/tutorials/how-to-mint-an-nft/)
 - [How to view your NFT in your wallet (Part 3/3 of NFT tutorial series)](/developers/tutorials/how-to-view-nft-in-metamask/)
-  transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
+- [Transfers and approval of ERC-20 tokens from a solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
 - [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/)
 - [Uniswap-v2 contract walkthrough](/developers/tutorials/uniswap-v2-annotated-code/)
 - Submit a tutorial

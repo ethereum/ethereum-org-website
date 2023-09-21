@@ -10,7 +10,7 @@ Un'interfaccia standard per i contratti che gestiscono più tipi di token. Un si
 
 **Cosa si intende per Standard Multi-Token?**
 
-L'idea è semplice e cerca di creare un'interfaccia per i contratti intelligenti, che possa rappresentare e controllare qualsiasi numero di tipi di token fungibili e non fungibili. In questo modo, il token ERC-1155 può svolgere le stesse funzioni di un token [ERC-20](/developers/docs/standards/tokens/erc-20/) e [ERC-721](/developers/docs/standards/tokens/erc-721/), e anche entrambi contemporaneamente. E soprattutto, migliorare la funzionalità di entrambi gli standard, rendendola più efficiente, e correggendo evidenti errori di implementazione sugli standard ERC-20 e ERC-721.
+L'idea è semplice e cerca di creare un'interfaccia per i contratti intelligenti, che possa rappresentare e controllare qualsiasi numero di tipi di token fungibili e non fungibili. In questo modo, il token ERC-1155 può svolgere le stesse funzioni di un token [ERC-20](/developers/docs/standards/tokens/erc-20/) e [ERC-721](/developers/docs/standards/tokens/erc-721/), e anche entrambi contemporaneamente. Migliora la funzionalità degli standard ERC-20 ed ERC-721, rendendola più efficiente e correggendo ovvi errori d'implementazione.
 
 Il token ERC-1155 è descritto nella sua interezza in [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
@@ -29,7 +29,7 @@ Per comprendere meglio questa pagina, consigliamo innanzi tutto di leggere [toke
 
 ### Trasferimenti in batch {#batch-transfers}
 
-Il trasferimento in batch funziona in modo molto simile ai normali trasferimenti ERC-20. Diamo un'occhiata alla normale funzione transferFrom di ERC-20:
+Il trasferimento in batch funziona in modo molto simile ai normali trasferimenti ERC-20. Diamo un'occhiata alla normale funzione `transferFrom` dell'ERC-20:
 
 ```solidity
 // ERC-20
@@ -45,7 +45,7 @@ function safeBatchTransferFrom(
 ) external;
 ```
 
-L'unica differenza in ERC-1155 è che passiamo i valori come un array e passiamo anche un array di id. Per esempio, dati `ids=[3, 6, 13]` e `values=[100, 200, 5]`, i trasferimenti risultanti saranno
+La sola differenza in ERC-1155 è che passiamo i valori come un array e inoltre passiamo un array di ID. Per esempio, dati `ids=[3, 6, 13]` e `values=[100, 200, 5]`, i trasferimenti risultanti saranno
 
 1. Trasferisci 100 token con id 3 da `_from` a `_to`.
 2. Trasferisci 200 token con id 6 da `_from` a `_to`.
@@ -97,7 +97,7 @@ function isApprovedForAll(
 
 Le approvazioni sono leggermente diverse da quelle dell'ERC-20. Invece di approvare quantità specifiche, si imposta un operatore come approvato o non approvato tramite `setApprovalForAll`.
 
-È possibile leggere lo stato corrente tramite `isApprovedForAll`. Come potete vedere, è vale il principio del "tutto o niente”. Non è possibile definire quanti token o quale classe di token approvare.
+È possibile leggere lo stato corrente tramite `isApprovedForAll`. Come puoi vedere, si tratta di un'operazione "o tutto o niente". Non è possibile definire quanti token o quale classe di token approvare.
 
 Questo è intenzionalmente progettato pensando alla semplicità. È possibile solo approvare tutto per un indirizzo.
 

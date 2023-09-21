@@ -6,7 +6,6 @@ import {
   FlexProps,
   Heading,
   HeadingProps,
-  Text,
   TextProps,
   Divider,
   Box,
@@ -15,7 +14,8 @@ import {
 } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
+import Text from "./OldText"
 
 import Translation from "./Translation"
 
@@ -39,7 +39,7 @@ const Card = ({ children, ...props }: FlexProps) => {
       flexDir="column"
       flex={{ base: "1 1 412px", xl: "1 1 260px" }}
       justifyContent="space-between"
-      bg="background"
+      bg="background.base"
       borderRadius="2px"
       boxShadow={tableBoxShadow}
       border="1px solid"

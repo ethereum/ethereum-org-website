@@ -4,7 +4,7 @@ description: An overview of Ethereum's networks and where to get testnet ether (
 lang: en
 ---
 
-Networks are different Ethereum environments you can access for development, testing, or production use cases. Since Ethereum is a protocol, there can be multiple independent "networks" that conform to the protocol without interacting with each other.
+Ethereum networks are groups of connected computers that communicate using the Ethereum protocol. There is only one Ethereum Mainnet, but independent networks conforming to the same protocol rules can be created for testing and development purposes. There are many independent "networks" that conform to the protocol without interacting with each other. You can even start one locally on your own computer for testing your smart contracts and web3 apps.
 
 Your Ethereum account will work across the different networks, but your account balance and transaction history won't carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH to play around with. In general, for security considerations, it's not recommended to reuse mainnet accounts on testnets or vice versa.
 
@@ -30,7 +30,7 @@ You should test any contract code you write on a testnet before deploying to Mai
 
 Most testnets started by using a permissioned proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. Alternatively, some testnets feature an open proof-of-stake consensus mechanism where everyone can test running a validator, just like Ethereum Mainnet.
 
-ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
+ETH on testnets is supposed to have no real value; however, there have been markets created for certain types of testnet ETH that have become scarce or hard to obtain. Since you need ETH to actually interact with Ethereum (even on testnets), most people get testnet ETH for free from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
 #### Which Testnet should I use?
 
@@ -57,17 +57,18 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
+- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Testnet Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(long-term support)_ {#goerli}
 
 _Note: [the Goerli testnet is deprecated](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) and will be replaced by [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Please consider migrating your applications to Sepolia._
 
-Goerli is testnet for testing of validating and staking. The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
+Goerli is a testnet for testing validating and staking. The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
 
 - Open validator set, stakers can test network upgrades
 - Large state, useful for testing complex smart contract interactions
@@ -84,26 +85,13 @@ Goerli is testnet for testing of validating and staking. The Goerli network is o
 - [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://goerli-faucet.pk910.de/)
-- [Goerli faucet](https://faucet.goerli.mudit.blog/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
+- [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
 
 To launch a Validator on Goerli testnet, use ethstaker's ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/).
-
-#### Rinkeby _(deprecated)_ {#rinkeby}
-
-_Note: [the Rinkeby testnet is deprecated](https://blog.ethereum.org/2022/11/30/ropsten-shutdown-announcement) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia._
-
-A proof-of-authority testnet for those running old versions of the Geth client.
-
-##### Faucets
-
-- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Rinkeby faucet](https://faucet.rinkeby.io/)
 
 ### Layer 2 testnets {#layer-2-testnets}
 

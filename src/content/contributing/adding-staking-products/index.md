@@ -20,7 +20,7 @@ Proof-of-stake on the Beacon Chain has been live since December 1, 2020. While s
 
 ## The decision framework {#the-decision-framework}
 
-The decision to list a product on ethereum.org is not dependent on any one factor. Multiple criteria are considered together when deciding to list a product or service. The more or these criteria are met, the more likely it is to be listed.
+The decision to list a product on ethereum.org is not dependent on any one factor. Multiple criteria are considered together when deciding to list a product or service. The more of these criteria are met, the more likely it is to be listed.
 
 **First, which category of product or service is it?**
 
@@ -29,7 +29,7 @@ The decision to list a product on ethereum.org is not dependent on any one facto
 - Staking as a service (SaaS)
 - Staking pool
 
-Currently we are only listing products or services in these categories.
+Currently, we are only listing products or services in these categories.
 
 ### Criteria for inclusion {#criteria-for-inclusion}
 
@@ -49,6 +49,11 @@ Staking products or services submissions will be assessed by the following crite
 
 - What steps in the users journey require trusting humans to either hold the keys to their funds, or to properly distribute rewards?
 - This is used to determine the product or services "trustless" score.
+
+**Does the project provide accurate and reliable information?**
+
+- It is crucial that the product's website features up-to-date, accurate, and non-misleading information, particularly if it pertains to the Ethereum protocol or other related technologies.
+- Submissions containing misinformation, outdated details, or potentially misleading statements about Ethereum or other relevant subjects will not be listed or will be removed if already listed.
 
 **What platforms are supported?**
 
@@ -82,14 +87,14 @@ For any custom software or smart contracts involved:
 
 For software products related to node or client setup, management or migration:
 
-**Which consensus layer clients (ie. Lighthouse, Teku, Nimbus, Prysm) are supported?**
+**Which consensus layer clients (i.e. Lighthouse, Teku, Nimbus, Prysm) are supported?**
 
 - Which clients are supported? Can the user choose?
 - This is used to determine the products "multi-client" score.
 
 #### Staking as a service {#staking-as-a-service}
 
-For [staking-as-a-service listings](/staking/saas/) (ie. delegated node operation):
+For [staking-as-a-service listings](/staking/saas/) (i.e. delegated node operation):
 
 **What are the fees associated with using the service?**
 
@@ -108,7 +113,7 @@ For [staking-as-a-service listings](/staking/saas/) (ie. delegated node operatio
 
 **What is the client diversity of the nodes being operated?**
 
-- What percent of validator keys are being run a majority consensus layer (CL) client?
+- What percent of validator keys are being run by a majority consensus layer (CL) client?
 - As of last edit, Prysm is the consensus layer client being run by a majority of node operators, which is dangerous for the network. If any CL client is currently being used by over 33% of the network, we request data related to its usage.
 - This is used to determine the products "diverse clients" score.
 

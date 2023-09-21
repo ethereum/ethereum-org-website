@@ -1,263 +1,225 @@
-import React, { MutableRefObject } from "react"
-import { BsToggleOff, BsToggleOn } from "react-icons/bs"
+// Libraries
+import React, { forwardRef } from "react"
 import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-  GridItem,
-  Heading,
-  HStack,
   Icon,
-  List,
-  SimpleGrid,
-  Text,
-  useColorModeValue,
-  VStack,
+  Center,
+  useTheme,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
 } from "@chakra-ui/react"
-import { uniqueId } from "lodash"
-import Checkbox from "../../Checkbox"
-import { useWalletFilterSidebar } from "./useWalletFilterSidebar"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+import { BsArrowCounterclockwise } from "react-icons/bs"
+
+// Components
+import Translation from "../../Translation"
+import WalletFilterProfile from "./WalletFilterFeature"
+import WalletFilterPersonas from "./WalletFilterProfile"
+
+// Utils
 import { trackCustomEvent } from "../../../utils/matomo"
 
-const FilterToggle = ({
-  ariaLabel,
-  conditionItem,
+import { FiltersType } from "../../../pages/wallets/find-wallet"
+
+const FilterTab = ({
+  eventName,
+  ...rest
 }: {
-  ariaLabel: string
-  conditionItem: boolean
+  children: React.ReactNode
+  eventName: string
 }) => (
-  <Box
-    as="span"
-    aria-label={ariaLabel}
-    role="checkbox"
-    aria-checked={conditionItem ? "true" : "false"}
-  >
-    <Icon
-      as={conditionItem ? BsToggleOn : BsToggleOff}
-      color="primary"
-      boxSize="1.875rem"
-    />
-  </Box>
+  <Tab
+    onClick={() => {
+      trackCustomEvent({
+        eventCategory: "WalletFilterSidebar",
+        eventAction: `WalletFilterSidebar tab clicked`,
+        eventName,
+      })
+    }}
+    _hover={{
+      bg: "selectHover",
+    }}
+    sx={{
+      "&[aria-selected=true]": {
+        _hover: {
+          bg: "primary.base",
+        },
+      },
+    }}
+    {...rest}
+  />
 )
 
-export interface WalletFilterSidebarProps {
-  resetWalletFilter: MutableRefObject<() => void>
-  filters: Record<string, boolean>
+interface WalletFilterSidebarProps {
+  showMobileSidebar: boolean
+  filters: FiltersType
+  resetWalletFilter: React.MutableRefObject<() => void>
+  resetFilters: () => void
+  setFilters: React.Dispatch<React.SetStateAction<FiltersType>>
+  selectedPersona: number
+  setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
   updateFilterOption: (key: any) => void
-  updateFilterOptions: (key: any, value: any) => void
+  updateFilterOptions: (keys: any, value: any) => void
 }
 
-const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
-  updateFilterOption,
-  ...restProps
-}) => {
-  const { filterOptions, setShowOptions } = useWalletFilterSidebar(restProps)
+const WalletFilterSidebar = forwardRef<
+  HTMLDivElement,
+  WalletFilterSidebarProps
+>(
+  /**
+   * Note: forwardRef here comes from React and not Chakra
+   * Chakra's version throws error of `children` prop missing
+   */
+  (props, ref) => {
+    const {
+      showMobileSidebar,
+      filters,
+      resetWalletFilter,
+      resetFilters,
+      setFilters,
+      selectedPersona,
+      setSelectedPersona,
+      updateFilterOption,
+      updateFilterOptions,
+    } = props
 
-  const filterPanelBg = useColorModeValue("primary100", "black400")
-  return (
-    <Accordion
-      as={VStack}
-      allowMultiple
-      reduceMotion
-      spacing={4}
-      alignItems="normal"
-      p={{ base: 4, sm: 0 }}
-      // Workaround to not having a dedicated prop to all items open by default
-      defaultIndex={Object.keys(filterOptions).map((key) => +key)}
-    >
-      {filterOptions.map((filterOption, idx) => {
-        return (
-          <AccordionItem
-            key={uniqueId("walletFilterSidebarItem")}
-            background={filterPanelBg}
-            borderRadius="base"
-            // Remove border color from global style
-            borderColor="transparent"
-            p={6}
-          >
-            {({ isExpanded }) => (
-              <>
-                <Heading
-                  as="h3"
-                  color="primary"
-                  borderBottom={isExpanded ? "1px" : "none"}
-                  borderColor="currentColor"
-                  fontSize="2xl"
-                  fontWeight={600}
-                  lineHeight={1.4}
-                  m={0}
-                  pb={isExpanded ? 3 : 0}
-                  px={4}
-                >
-                  <AccordionButton
-                    color="inherit"
-                    fontWeight="inherit"
-                    fontSize="inherit"
-                    p={0}
-                    textAlign="initial"
-                  >
-                    <Box as="span" flex={1}>
-                      {filterOption.title}
-                    </Box>
-                    <AccordionIcon color="primary" boxSize={9} />
-                  </AccordionButton>
-                </Heading>
-                <AccordionPanel as={List} p={0} m={0}>
-                  {filterOption.items.map((item, itemIdx) => {
-                    const LabelIcon = item.icon
-                    return (
-                      <Box
-                        borderBottom="1px"
-                        borderColor="lightBorder"
-                        pt="1.16rem"
-                        px={3}
-                        pb={3}
-                        _last={{ border: "none" }}
-                      >
-                        <SimpleGrid
-                          key={uniqueId("walletFilterSidebarItemPanel")}
-                          templateColumns="28px auto 34px"
-                          alignItems="center"
-                          columnGap={2.5}
-                          cursor="pointer"
-                          onClick={
-                            item.filterKey
-                              ? () => {
-                                  trackCustomEvent({
-                                    eventCategory: "WalletFilterSidebar",
-                                    eventAction: `${filterOption.title}`,
-                                    eventName: `${item.filterKey} ${!restProps
-                                      .filters[item.filterKey!]}`,
-                                  })
-                                  updateFilterOption(item.filterKey)
-                                }
-                              : () => {
-                                  setShowOptions(
-                                    idx,
-                                    itemIdx,
-                                    !item.showOptions
-                                  )
-                                  trackCustomEvent({
-                                    eventCategory: "WalletFilterSidebar",
-                                    eventAction: `${filterOption.title}`,
-                                    eventName: `Toggle ${
-                                      item.title
-                                    } ${!item.showOptions}`,
-                                  })
-                                }
-                          }
-                        >
-                          <GridItem>
-                            <LabelIcon
-                              boxSize={7}
-                              mt={0.5}
-                              color="text"
-                              aria-hidden
-                            />
-                          </GridItem>
-                          <GridItem as="span" lineHeight="1.1rem">
-                            {item.title}
-                          </GridItem>
-                          <GridItem>
-                            {item.filterKey && (
-                              <FilterToggle
-                                ariaLabel={item.title}
-                                conditionItem={
-                                  restProps.filters[item.filterKey]
-                                }
-                              />
-                            )}
-                            {item.showOptions !== undefined && (
-                              <FilterToggle
-                                ariaLabel={item.title}
-                                conditionItem={item.showOptions}
-                              />
-                            )}
-                          </GridItem>
-                          <GridItem
-                            as="span"
-                            color="text200"
-                            fontSize="0.9rem"
-                            lineHeight="1.1rem"
-                            colStart={2}
-                          >
-                            {item.description}
-                          </GridItem>
-                        </SimpleGrid>
-                        {item.options.length > 0 && item.showOptions && (
-                          <HStack mt={3.5} spacing={2}>
-                            {item.options.map((option) => {
-                              const handleClick = () => {
-                                let closeShowOptions = true
+    const theme = useTheme()
+    const { t } = useTranslation()
+    return (
+      <Tabs
+        ref={ref}
+        maxW="330px"
+        overflowY="scroll"
+        bg="background.base"
+        transition="0.5s all"
+        zIndex={20}
+        borderTopRightRadius="lg"
+        pointerEvents="auto"
+        sx={{
+          scrollbarWidth: "thin",
+          scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
 
-                                for (let filterOption of item.options) {
-                                  if (filterOption.name === option.name) {
-                                    if (
-                                      !restProps.filters[
-                                        filterOption.filterKey!
-                                      ]
-                                    ) {
-                                      closeShowOptions = false
-                                      break
-                                    }
-                                  } else {
-                                    if (
-                                      restProps.filters[filterOption.filterKey!]
-                                    ) {
-                                      closeShowOptions = false
-                                      break
-                                    }
-                                  }
-                                }
+          "::-webkit-scrollbar": {
+            width: 2,
+          },
+          "::-webkit-scrollbar-track": {
+            bg: "background.base",
+          },
+          "::-webkit-scrollbar-thumb": {
+            bgColor: "lightBorder",
+            borderRadius: "base",
+            border: "2px solid",
+            borderColor: "background.base",
+          },
+        }}
+        width={{ base: "90%", sm: "350px", lg: "full" }}
+        height={{ base: "full", lg: "auto" }}
+        hideBelow={!showMobileSidebar ? "lg" : undefined}
+        position={{
+          base: showMobileSidebar ? "absolute" : "relative",
+          lg: "static",
+        }}
+        boxShadow={{
+          base: showMobileSidebar ? "0 800px 0 800px rgb(0 0 0 / 65%)" : "none",
+          lg: "none",
+        }}
+        left={showMobileSidebar ? 0 : "-400px"}
+      >
+        <TabList
+          borderBottom="1px solid"
+          borderBottomColor="primary.base"
+          position="sticky"
+          top={0}
+          bg="background.base"
+          sx={{
+            ".chakra-tabs__tab": {
+              flex: 1,
+              fontSize: "0.9rem",
+              letterSpacing: "0.02rem",
+              py: "0.9rem",
+              _first: {
+                borderTopLeftRadius: "lg",
+              },
+              _last: {
+                borderTopRightRadius: "lg",
+              },
+            },
+          }}
+        >
+          <FilterTab eventName="show user personas">
+            <Translation id="page-find-wallet-profile-filters" />
+          </FilterTab>
+          <FilterTab eventName="show feature filters">
+            {t("page-find-wallet-feature-filters")} (
+            {Object.values(filters).reduce((acc, filter) => {
+              if (filter) {
+                acc += 1
+              }
+              return acc
+            }, 0)}
+            )
+          </FilterTab>
+        </TabList>
+        <Center
+          as="button"
+          borderRadius="base"
+          color="primary.base"
+          fontSize="xs"
+          gap={1}
+          mx="auto"
+          my="0.55rem"
+          py={0.5}
+          px={1}
+          _hover={{
+            color: "selectHover",
+          }}
+          onClick={() => {
+            resetFilters()
+            resetWalletFilter.current()
+            trackCustomEvent({
+              eventCategory: "WalletFilterReset",
+              eventAction: `WalletFilterReset clicked`,
+              eventName: `reset filters`,
+            })
+          }}
+        >
+          <Icon as={BsArrowCounterclockwise} aria-hidden="true" fontSize="sm" />
+          {"Reset filters".toUpperCase()}
+        </Center>
+        <TabPanels
+          m={0}
+          sx={{
+            ".chakra-tabs__tab-panel": {
+              bg: "transparent",
+              border: "none",
+              p: 0,
+            },
+          }}
+        >
+          <TabPanel>
+            <WalletFilterPersonas
+              resetFilters={resetFilters}
+              setFilters={setFilters}
+              selectedPersona={selectedPersona}
+              setSelectedPersona={setSelectedPersona}
+            />
+          </TabPanel>
+          <TabPanel>
+            <WalletFilterProfile
+              resetWalletFilter={resetWalletFilter}
+              filters={filters}
+              updateFilterOption={updateFilterOption}
+              updateFilterOptions={updateFilterOptions}
+            />
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+    )
+  }
+)
 
-                                if (closeShowOptions) {
-                                  setShowOptions(
-                                    idx,
-                                    itemIdx,
-                                    !item.showOptions
-                                  )
-                                }
-
-                                trackCustomEvent({
-                                  eventCategory: "WalletFilterSidebar",
-                                  eventAction: `${filterOption.title}`,
-                                  eventName: `${option.filterKey} ${!restProps
-                                    .filters[option.filterKey!]}`,
-                                })
-                                updateFilterOption(option.filterKey)
-                              }
-                              return (
-                                <Checkbox
-                                  aria-label={option.name}
-                                  isChecked={
-                                    restProps.filters[option.filterKey!]
-                                  }
-                                  size="md"
-                                  width="full"
-                                  onChange={handleClick}
-                                >
-                                  <Text as="p" aria-hidden="true" m={0}>
-                                    {option.name}
-                                  </Text>
-                                </Checkbox>
-                              )
-                            })}
-                          </HStack>
-                        )}
-                      </Box>
-                    )
-                  })}
-                </AccordionPanel>
-              </>
-            )}
-          </AccordionItem>
-        )
-      })}
-    </Accordion>
-  )
-}
+WalletFilterSidebar.displayName = "WalletFilterSidebar"
 
 export default WalletFilterSidebar

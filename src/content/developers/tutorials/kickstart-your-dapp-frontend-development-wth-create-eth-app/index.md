@@ -11,7 +11,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Last time we looked at [the big picture of Solidity](https://soliditydeveloper.com/solidity-overview-2020) and already mentioned the [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Now you will find out how to use it, what features are integrated and additional ideas on how to expand on it. Started by Paul Razvan Berg, the founder of [Sablier](http://sablier.finance/), this app will kickstart your frontend development and comes with several optional integrations to choose from.
+Last time we looked at [the big picture of Solidity](https://soliditydeveloper.com/solidity-overview-2020) and already mentioned the [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Now you will find out how to use it, what features are integrated and additional ideas on how to expand on it. Started by Paul Razvan Berg, the founder of [Sablier](http://sablier.com/), this app will kickstart your frontend development and comes with several optional integrations to choose from.
 
 ## Installation {#installation}
 
@@ -46,7 +46,7 @@ The _create-eth-app_ in particular is making use of the new [hooks effects](http
 
 ### ethers.js {#ethersjs}
 
-While [Web3](https://web3js.readthedocs.io/en/v1.2.7/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs-beta.ethers.io/) which is almost out of beta.
+While [Web3](https://docs.web3js.org/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs-beta.ethers.io/) which is almost out of beta.
 
 ### The Graph {#the-graph}
 
@@ -98,7 +98,7 @@ Unfortunately, at the time of this writing the integration is only for Uniswap v
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.finance/) allows users streaming money payments. Instead of a single payday, you actually get your money constantly without further administration after the initial setup. The integration includes its [own subgraph](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
+[Sablier](https://sablier.com/) allows users streaming money payments. Instead of a single payday, you actually get your money constantly without further administration after the initial setup. The integration includes its [own subgraph](https://thegraph.com/explorer/subgraph/sablierhq/sablier).
 
 ## What's next? {#whats-next}
 

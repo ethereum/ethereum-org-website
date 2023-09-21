@@ -15,7 +15,7 @@ Birçok Web3 geliştiricisi, Ethereum'un yerleşik merkeziyetsizliği nedeniyle 
 - Ağda bulunan herkesin hizmeti kullanma izni vardır, başka bir deyişle izin gerekmez.
 - Hiç kimse sizi engelleyemez veya hizmete erişiminizi durduramaz.
 - Ödemeler, yerel token olan ether (ETH) aracılığıyla yapılır.
-- Ethereum turing-tamdır, yani neredeyse her şeyi programlayabilirsiniz.
+- Ethereum turing testini geçer yani Ethereum'la istediğiniz neredeyse her şeyi programlayabilirsiniz.
 
 ## Pratik karşılaştırmalar {#practical-comparisons}
 
@@ -31,7 +31,7 @@ Bu, tüm hizmetlerin bir dapp'ee dönüştürülmesi gerektiği anlamına gelmez
 
 Web3'ün şu anda bazı sınırlamaları var:
 
-- Ölçeklenebilirlik – merkeziyetsiz oldukları için işlemler web3'te daha yavaştır. Bir ödeme gibi durum değişikliklerinin bir madenci tarafından işlenmesi ve ağ boyunca yayılması gerekir.
+- Ölçeklenebilirlik – merkeziyetsiz oldukları için işlemler web3'te daha yavaştır. Ödeme gibi durum değişikliklerinin bir düğüm tarafından işlenmesi ve tüm ağ boyunca yayılması gerekir.
 - Kullanıcı Deneyimi – web3 uygulamalarıyla etkileşim; ekstra adımlar, yazılım ve eğitim gerektirebilir. Bu, benimsenmesi için bir engel olabilir.
 - Erişilebilirlik - modern web tarayıcılarındaki entegrasyon eksikliği, web3'ü birçok kullanıcı için daha az erişilebilir kılar.
 - Maliyet – çoğu başarılı dapp, pahalı olduğu için kodlarının çok küçük kısımlarını blok zincirine koyar.
@@ -59,3 +59,4 @@ Bunların, her ağda geçerli olmayabilecek genel kalıplar olduğunu unutmayın
 - [Merkeziyetsizliğin Anlamı](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _ 6 Şubat 2017 - Vitalik Buterin_
 - [Merkeziyetsizlik Neden Önemlidir](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 Şubat 2018 - Chris Dixon_
 - [Web 3.0 Nedir ve Neden Önemlidir](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _31 Aralık 2019 - Max Mersch ve Richard Muirhead_
+- [Neden Web 3.0'a İhtiyacımız Var?](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab)_12 Eylül 2018 - Gavin Wood_

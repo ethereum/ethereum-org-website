@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Translation from "./Translation"
 import Emoji from "./Emoji"
 
@@ -118,7 +118,7 @@ const TranslationBanner: React.FC<IProps> = ({
           margin={2}
           color="secondary"
           _hover={{
-            color: "primary",
+            color: "primary.base",
           }}
           onClick={() => setIsOpen(false)}
         />

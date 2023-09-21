@@ -1,25 +1,26 @@
 // Libraries
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import React, { useState } from "react"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   chakra,
   Flex,
-  Heading,
   Img,
   ListItem,
   SimpleGrid,
   Stack,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 
 // Components
-import ButtonLink from "../ButtonLink"
-import Link from "../Link"
+import { ButtonLink } from "../Buttons"
+import InlineLink from "../Link"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
+import GatsbyImage from "../GatsbyImage"
 
 // Data
 import {
@@ -65,7 +66,7 @@ const SelectedContainer = (props: ChildOnlyProp) => (
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     mt={0}
     fontSize={{ base: "xl", md: "2xl" }}
@@ -76,7 +77,7 @@ const H3 = (props: ChildOnlyProp) => (
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     fontWeight={500}
@@ -226,14 +227,14 @@ const Layer2Onboard: React.FC<IProps> = ({
   return (
     <Box bg="layer2Gradient" borderRadius="sm" p={10}>
       <Box textAlign="center" maxW="75ch" m="auto">
-        <Heading
+        <OldHeading
           fontSize={{ base: "2xl", md: "2rem" }}
           mt="12"
           fontWeight={600}
           lineHeight={1.4}
         >
           <Translation id="layer-2-onboard-title" />
-        </Heading>
+        </OldHeading>
         <Text>
           <Translation id="layer-2-onboard-1" />
         </Text>
@@ -249,9 +250,9 @@ const Layer2Onboard: React.FC<IProps> = ({
               <Translation id="layer-2-onboard-wallet-1" />
             </Text>
             <Text>
-              <Link to="/bridges/">
+              <InlineLink to="/bridges/">
                 <Translation id="layer-2-more-on-bridges" />
-              </Link>
+              </InlineLink>
             </Text>
           </Box>
           {/* LeftSelected */}
@@ -282,9 +283,9 @@ const Layer2Onboard: React.FC<IProps> = ({
             </Text>
             <Text>
               <Translation id="layer-2-onboard-exchange-2" />{" "}
-              <Link to="/wallets/find-wallet/">
+              <InlineLink to="/wallets/find-wallet/">
                 <Translation id="layer-2-onboard-find-a-wallet" />
-              </Link>
+              </InlineLink>
             </Text>
           </Box>
           {/* RightSelect */}
@@ -372,8 +373,7 @@ const Layer2Onboard: React.FC<IProps> = ({
         )}
         {/* EthLogo */}
         <Box {...gridContentPlacementStyles.logo}>
-          <Img
-            as={GatsbyImage}
+          <GatsbyImage
             image={ethIcon}
             objectFit="contain"
             alt={ethIconAlt}

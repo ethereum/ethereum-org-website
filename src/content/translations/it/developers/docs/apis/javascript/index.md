@@ -10,7 +10,7 @@ Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/de
 
 Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, puoi usare Javascript vanilla, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
 
-Sei pregato di notare che, a partire dalla [Fusione](/roadmap/merge/), per operare un nodo occorrono due elementi di software di Ethereum connessi (un client di esecuzione e un client di consenso). Assicurati che il tuo nodo includa sia un client di esecuzione che un client di consenso. Se il tuo nodo non si trova sulla tua macchina locale (ad es. se è in esecuzione su un'istanza AWS), occorrerà aggiornare di conseguenza gli indirizzi IP nel tutorial. Per ulteriori informazioni, consulta la nostra pagina sull'[esecuzione di un nodo](/developers/docs/nodes-and-clients/run-a-node/).
+Si noti che, a partire da [La Fusione](/roadmap/merge/), per eseguire un nodo occorrono due elementi di software di Ethereum connessi (un client di esecuzione e un client di consenso). Assicurati che il tuo nodo includa sia un client di esecuzione che un client di consenso. Se il tuo nodo non si trova sulla tua macchina locale (ad es. se è in esecuzione su un'istanza AWS), occorrerà aggiornare di conseguenza gli indirizzi IP nel tutorial. Per ulteriori informazioni, consulta la nostra pagina sull'[esecuzione di un nodo](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Prerequisiti {#prerequisites}
 
@@ -47,7 +47,7 @@ var web3 = new Web3("http://localhost:8545")
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
 // cambiamento di provider
-web3.etProvider("ws://localhost:8546")
+web3.setProvider("ws://localhost:8546")
 // o
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
@@ -233,14 +233,14 @@ ethers.utils.formatEther(balance)
 // '2.337132817842795605'
 ```
 
-- [Funzioni di utilità Web3js](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
+- [Funzioni di utilità Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funzioni utilità ethers](https://docs.ethers.io/v5/api/utils/)
 
 ## Librerie disponibili {#available-libraries}
 
 **Web3.js -** **_API JavaScript Ethereum_**
 
-- [Documentazione](https://web3js.readthedocs.io/en/1.0/)
+- [Documentazione](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_Implementazione completa del portafoglio Ethereum e delle utility in JavaScript e TypeScript_**
@@ -275,17 +275,22 @@ ethers.utils.formatEther(balance)
 - [Documentazione](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**viem -** **_Interfaccia TypeScript per Ethereum._**
+
+- [Documentazione](https://viem.sh)
+- [Github](https://github.com/wagmi-dev/viem)
+
 ## Letture consigliate {#further-reading}
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Nodi e client](/developers/docs/nodes-and-clients/)
-- [Framework di sviluppo](/developers/docs/frameworks/)
+- [ Nodi e client](/developers/docs/nodes-and-clients/)
+- [Quadri di sviluppo](/developers/docs/frameworks/)
 
 ## Tutorial correlati {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
-- [Chiamare un contratto intelligente da JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _- Usando il token DAI, impara come chiamare la funzione dei contratti usando JavaScript._
+- [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token DAI, impara come funzionano i contratti di chiamata con JavaScript_
 - [Sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Istruzioni passo passo per l'invio di transazioni dal backend._

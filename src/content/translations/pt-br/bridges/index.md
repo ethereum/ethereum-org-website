@@ -18,7 +18,7 @@ Vejamos um exemplo:
 
 Você é dos EUA e está planejando uma viagem à Europa. Você tem Dólar, mas precisa de Euro para gastar. Para trocar seus Dólares por Euros, você pode usar uma corretora de câmbio por uma pequena taxa.
 
-Mas, o que você faz se quiser fazer uma troca parecida para usar um blockchain diferente? Digamos que você queira trocar ETH na rede principal Ethereum por ETH no [Arbitrum](https://arbitrum.io/). Como o câmbio de moedas que fizemos por Euro, precisamos de um mecanismo para mover nosso ETH do Ethereum para o Arbitrum. As pontes tornam essa transação possível. Neste caso,a [Arbitrum tem uma ponte nativa](https://bridge.arbitrum.io/) que pode transferir o ETH da rede principal para o Arbitrum.
+Mas, o que você faz se quiser fazer uma troca parecida para usar um blockchain diferente? Digamos que você queira trocar ETH na rede principal Ethereum por ETH no [Arbitrum](https://arbitrum.io/). Como o câmbio de moedas que fizemos por Euro, precisamos de um mecanismo para mover nosso ETH do Ethereum para o Arbitrum. As pontes tornam essa transação possível. Neste caso, a [Arbitrum tem uma ponte nativa](https://bridge.arbitrum.io/) que pode transferir o ETH da rede principal para o Arbitrum.
 
 ## Por que precisamos de pontes? {#why-do-we-need-bridges}
 

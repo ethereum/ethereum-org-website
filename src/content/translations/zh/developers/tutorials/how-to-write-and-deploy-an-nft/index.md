@@ -16,7 +16,7 @@ published: 2021-04-22
 
 Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括 Makersplace（最近在克利斯蒂拍卖行创造了 6900 万美元的数字艺术品销售记录）、Dapper Labs（NBA Top Shot & Crypto Kitties 的创作者）、OpenSea（世界上最大的非同质化代币市场）、Zora、Super Rare、NFTfi、Foundation、Enjin、Origin Protocol、Immutable 等。
 
-在本教程中，我们将使用 [MetaMask](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[安全帽](https://hardhat.org/)、[Pinata](https://pinata.cloud/) 及 [Alchemy](https://alchemy.com/signup/eth) 演示如何在 Goerli 测试网上创建和部署 ERC-721 智能合约（如果你对这些方式有不明白之处，不要着急，我们将加以解释！）。
+在本教程中，我们将使用 [MetaMask](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/)、[Pinata](https://pinata.cloud/) 和 [Alchemy](https://alchemy.com/signup/eth) 演示如何在 Sepolia 测试网络上创建和部署 ERC-721 智能合约（如果还不明白其中的含义，请不要着急，我们会为你解释！)。
 
 在本教程的第二部分，我们将了解如何使用我们的智能合约来铸造非同质化代币；在第三部分，我们将说明如何在 MetaMask 上查看您的非同质化代币。
 
@@ -30,15 +30,15 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 ## 步骤 2：创建应用程序（和应用程序接口密钥） {#make-api-key}
 
-创建了 Alchemy 帐户后，您可以通过创建应用程序来生成应用程序接口密钥。 这样，我们就可以向 Goerli 测试网发出请求。 如果您想了解更多关于测试网络的信息，请查看[本指南](https://docs.alchemyapi.io/guides/choosing-a-network)。
+创建了 Alchemy 帐户后，您可以通过创建应用程序来生成应用程序接口密钥。 这将使我们能够向 Sepolia 测试网络发出请求。 如果您想了解更多关于测试网络的信息，请查看[本指南](https://docs.alchemyapi.io/guides/choosing-a-network)。
 
 1. 在您的 Alchemy 仪表板中的“创建应用程序”页面上，将鼠标悬停在导航栏中的“应用程序”上 ，然后点击“创建应用程序”
 
 ![创建您的应用程序](./create-your-app.png)
 
-2. 给你的应用程序命名（我们选择使用“My First NFT!”），提供简短描述，选择“Ethereum”作为区块链和“Goerli”作为你的网络。 合并后，其他测试网已被弃用。
+2. 命名你的应用程序（我们选择使用“My First NFT!”），提供简短描述，选择“Ethereum”作为区块链，并选择“Sepolia”作为你的网络。 合并后，其他测试网已被弃用。
 
-![配置并发布您的应用程序](./configure-and-publish-your-app.png)
+![配置并发布您的应用程序](./alchemy-explorer-sepolia.png)
 
 3. 点击"创建应用程序"，完成！ 您的应用程序应该会出现在下面的表格中。
 
@@ -46,13 +46,13 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 我们需要一个以太坊帐户来发送和接收交易。 在本教程中，我们将使用 MetaMask——浏览器中的虚拟钱包，用来管理您的以太坊帐户地址。 如果您想了解更多关于以太坊交易的运作方式，请查看以太坊基金会的[这个页面](/developers/docs/transactions/)。
 
-您可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 帐户。 在你创建帐户时，或者如果你已经有帐户，请确保切换到右上角的“Goerli Test Network”（这样我们就不会使用实际货币进行交易）。
+您可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 帐户。 在你创建帐户时，或者如果你已有一个帐户，请确保切换到右上角的“Sepolia Test Network”（这样我们就不会使用实际货币进行交易）。
 
-![将 Goerli 设置为你的网络](./metamask-goerli.png)
+![将 Sepolia 设置为你的网络](./metamask-goerli.png)
 
 ## 步骤 4：从水龙头添加以太币 {#step-4-add-ether-from-a-faucet}
 
-为了将我们的智能合约部署到测试网络，我们需要一些虚拟以太币。 要想获得以太币，可以访问 Alchemy 托管的 [Goerli 水龙头](https://goerlifaucet.com/)，登录并输入你的帐户地址，点击“Send Me ETH”。 您应该会很快在您的 MetaMask 帐户中看到以太币！
+为了将我们的智能合约部署到测试网络，我们需要一些虚拟以太币。 想要获取以太币，可以访问由 Alchemy 托管的 [Sepolia Faucet](https://sepoliafaucet.com/)，登录并输入你的帐户地址，点击“Send Me ETH”。 您应该会很快在您的 MetaMask 帐户中看到以太币！
 
 ## 步骤 5：查看帐户余额 {#check-balance}
 
@@ -234,14 +234,12 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 你的 `.env` 现在应该如下所示：
 
-    API_URL="https://eth-goerli.g.alchemy.com/v2/your-api-key"
+    API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
 
 为了将它们实际连接到我们的代码，我们将在步骤 13 中在 hardhat.config.js 文件中引用这些变量。
 
-<InfoBanner isWarning>
-不要提交 <code>.env</code>！ 请确保永远不要与任何人共享或公开您的 <code>.env</code> 文件，因为这样做会泄露您的秘密。 如果您使用版本控制，请将您的 <code>.env</code> 添加到 <a href="https://git-scm.com/docs/gitignore">gitignore</a> 文件中。
-</InfoBanner>
+<EnvWarningBanner />
 
 ## 步骤 12：安装 Ethers.js {#install-ethers}
 
@@ -257,9 +255,9 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
 
 ## 步骤 13：更新 hardhat.config.js {#update-hardhat-config}
 
-到目前为止，我们已经添加了几个依赖项和插件，现在我们需要更新 hardhat.config.js，以便项目使用所有这些新的组件。
+到目前为止，我们已经添加了几个依赖库和插件，现在我们需要更新 hardhat.config.js，以使项目了解所有这些新的组件。
 
-按如下所示更新您的 hardhat.config.js：
+按如下所示更新你的 hardhat.config.js 代码：
 
     /**
     * @type import('hardhat/config').HardhatUserConfig
@@ -269,10 +267,10 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
     const { API_URL, PRIVATE_KEY } = process.env;
     module.exports = {
        solidity: "0.8.1",
-       defaultNetwork: "goerli",
+       defaultNetwork: "sepolia",
        networks: {
           hardhat: {},
-          goerli: {
+          sepolia: {
              url: API_URL,
              accounts: [`0x${PRIVATE_KEY}`]
           }
@@ -281,19 +279,19 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
 
 ## 步骤 14：编写合约 {#compile-contract}
 
-为了确保一切正常，我们来编译一下合约。 编译任务是安全帽的内部任务之一。
+为了确保一切正常，我们来编译一下合约。 编译任务是 hardhat 的内部任务之一。
 
 在命令行中运行：
 
     npx hardhat compile
 
-你可能会看到关于“源文件中未提供 SPDX 许可证标识符”的警告，但不用担心，希望其它部分看起来都正常！ 如果遇到问题，您可以随时在 [Alchemy cord](https://discord.gg/u72VCg3) 社区中发消息询问。
+你可能会看到关于源文件中未提供 SPDX 许可证识别码的警告，但无需担心，但愿其它的一切正常！ 如果遇到问题，您可以随时在 [Alchemy cord](https://discord.gg/u72VCg3) 社区中发消息询问。
 
 ## 步骤 15：编写部署脚本 {#write-deploy}
 
 合约已经写完，配置文件也准备妥当，现在是写合约部署脚本的时候了。
 
-转到 `scripts/` 文件夹，创建一个新的文件名为 `deploy.js`，在其中添加以下内容：
+转到 `scripts/` 文件夹，创建一个名为 `deploy.js` 的新文件，在其中添加以下内容：
 
 ```js
 async function main() {
@@ -321,32 +319,32 @@ ethers.js 中的 ContractFactory 是用于部署新智能合约的抽象对象�
 
     const myNFT = await MyNFT.deploy();
 
-调用 ContractFactory 代码中的 deploy() 函数会启动合约部署，并返回解析为合约的 Promise。 这个对象包括我们智能合约中每个函数的对应调用方法。
+调用 ContractFactory 代码中的 deploy() 函数会启动合约部署，然后返回解析为合约的 Promise。 这个对象包括我们智能合约中每个函数的对应调用方法。
 
 ## 步骤 16：部署合约 {#deploy-contract}
 
 我们终于准备好部署我们的智能合约啦！ 返回项目目录的根目录，在命令行中运行：
 
-    npx hardhat --network goerli run scripts/deploy.js
+    npx hardhat --network sepolia run scripts/deploy.js
 
 您会看到类似以下所示的信息：
 
     在地址 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650 部署的合约
 
-如果我们进入 [Goerli etherscan](https://goerli.etherscan.io/) 并搜索我们的合约地址，我们应该能够看到它已成功部署。 如果没有立刻看到它，请稍等片刻，因为部署可能需要一些时间。 交易将类似以下：
+如果我们访问 [Sepolia etherscan](https://sepolia.etherscan.io/) 并搜索我们的合约地址，应该能够看到它已成功部署。 如果未能立即看到它，请稍等片刻，因为部署可能需要一些时间。 交易将类似以下：
 
-![在 Etherscan 上查看你的交易地址](./etherscan-goerli-contract-creation.png)
+![在 Etherscan 上查看你的交易地址](./etherscan-sepoila-contract-creation.png)
 
-“From”地址应匹配你的 MetaMask 帐户地址，“To”地址将显示“Contract Creation”。 如果我们点击进入交易，我们将在“To”字段中看到我们的合约地址：
+发送地址应匹配你的 MetaMask 帐户地址，收件地址将显示“合约创建”。 如果我们点击进入交易，将会在“To”字段中看到我们的合约地址：
 
-![在 Etherscan 上查看您的合约地址](./etherscan-goerli-tx-details.png)
+![在 Etherscan 上查看您的合约地址](./etherscan-sepolia-tx-details.png)
 
 太棒了！ 你刚刚在以太坊（测试网）区块链上部署了你的非同质化代币智能合约！
 
-要了解后台运行情况，我们导航到 [Alchemy 仪表板](https://dashboard.alchemyapi.io/explorer)中的 Explorer 选项卡。 如果你有多个 Alchemy 应用程序，请确保按应用程序筛选，然后选择“MyNFT”。
+为了更深入了解到底发生了什么，我们转到 [Alchemy 仪表板](https://dashboard.alchemyapi.io/explorer)中的 Explorer 选项卡。 如果你有多个 Alchemy 应用程序，请确保按应用程序筛选，然后选择“MyNFT”。
 
 ![使用 Alchemy 的浏览器仪表板查看“后端”调用](./alchemy-explorer-goerli.png)
 
-在这里你会看到一系列 JSON-RPC 调用，都是在我们调用 .deploy() 函数时，Hardhat/Ethers 替我们在后端完成的。 这里有两项重要调用，一个是 [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)，这是实际将我们的智能合约写入 Ropsten 链的请求，另一个是 [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash)，这是在提供哈希值时读取有关我们交易信息的请求（即发送交易时的典型模式）。 如需了解更多关于发送交易的信息，请查看关于[使用 Web3 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的教程。
+在这里，你会看到一系列 JSON-RPC 调用，都是在我们调用 .deploy() 函数时 Hardhat/Ethers 替我们在后端完成的。 这里有两项重要调用，一个是 [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)，这是实际将我们的智能合约写入 Sepolia 链的请求，另一个是 [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash)，这是在提供哈希值时读取有关我们交易信息的请求（发送交易时的典型模式）。 如需了解更多关于发送交易的信息，请查看关于[使用 Web3 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的本教程。
 
-以上即为本教程第 1 部分的全部内容。 在[第 2 部分，我们将通过铸造非同质化代币与我们的智能合约进行实际交互](/developers/tutorials/how-to-mint-an-nft/)，在[第 3 部分，我们将向你演示如何查看你的以太坊钱包中的非同质化代币](/developers/tutorials/how-to-view-nft-in-metamask/)！
+以上即为本教程第 1 部分的全部内容。 在[第 2 部分，我们将通过铸造非同质化代币与我们的智能合约进行交互](/developers/tutorials/how-to-mint-an-nft/)，在[第 3 部分，我们将向你演示如何在以太坊钱包中查看你的非同质化代币](/developers/tutorials/how-to-view-nft-in-metamask/)！

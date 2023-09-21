@@ -1,11 +1,12 @@
 import React, { useState } from "react"
-import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import Link, { navigate } from "./Link"
+import InlineLink, { navigate } from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { isMobile } from "../utils/isMobile"
 import { Lang } from "../utils/languages"
+import OldHeading from "./OldHeading"
 
 // Represent string as 32-bit integer
 const hashCode = (string: string): number => {
@@ -50,33 +51,33 @@ interface IPropsGridItem {
 
 const OpenTitle: React.FC<{ title: string }> = ({ title }) => {
   return (
-    <Heading
+    <OldHeading
       as="h3"
       fontSize={{ base: "2rem", sm: "2.5rem" }}
       fontWeight={700}
       marginTop={0}
     >
       {title}
-    </Heading>
+    </OldHeading>
   )
 }
 
 const Title: React.FC<{ title: string }> = ({ title }) => {
   return (
-    <Heading
+    <OldHeading
       as="h3"
       fontSize={{ base: "2rem", sm: "2.5rem" }}
       fontWeight={400}
       marginTop={0}
     >
       {title}
-    </Heading>
+    </OldHeading>
   )
 }
 
 const Subtitle: React.FC<{ children: any }> = ({ children }) => {
   return (
-    <Heading
+    <OldHeading
       as="h4"
       fontSize={{ base: "2xl", sm: "2rem" }}
       fontWeight={600}
@@ -87,7 +88,7 @@ const Subtitle: React.FC<{ children: any }> = ({ children }) => {
       borderColor="black300"
     >
       {children}
-    </Heading>
+    </OldHeading>
   )
 }
 
@@ -159,7 +160,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
       gridColumnStart={isOpen ? columnNumber : `auto`}
       color={isOpen ? "black300" : "text"}
       cursor={isOpen ? `auto` : `pointer`}
-      background={isOpen ? color : "background"}
+      background={isOpen ? color : "background.base"}
       direction={{
         base: "column",
         sm: `${isOpen ? "column" : "row"}`,
@@ -232,7 +233,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
                 <ul>
                   {links.map((link, idx) => (
                     <li key={idx}>
-                      <Link
+                      <InlineLink
                         key={idx}
                         to={link.url}
                         color="black300"
@@ -241,7 +242,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
                         }}
                       >
                         {link.text}
-                      </Link>
+                      </InlineLink>
                     </li>
                   ))}
                 </ul>

@@ -52,7 +52,7 @@ Ora, diciamo che nella nostra dapp, vogliamo mostrare le scommesse totali, le pa
 2. Recuperare `totalGamesPlayerLost`.
 3. Iscriversi agli eventi `BetPlaced`.
 
-Possiamo attendere l'[evento in Web3](https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#contract-events) come mostrato sulla destra, ma richiederebbe la gestione di alcuni casi.
+Possiamo attendere l'[evento in Web3](https://docs.web3js.org/api/web3/class/Contract#events) come mostrato sulla destra, ma richiederebbe la gestione di alcuni casi.
 
 ```solidity
 GameContract.events.BetPlaced({

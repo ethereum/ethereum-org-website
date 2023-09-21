@@ -30,9 +30,6 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 ## Artigos para intermediários {#intermediate-articles}
 
-- [Documentação Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Exemplos de trabalho Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## Padrões de utilização avançada {#advanced-use-patterns}
 
 - [pwasm_ethereum: biblioteca externa para interagir com uma rede análoga a Ethereum](https://github.com/openethereum/pwasm-ethereum)
@@ -40,21 +37,20 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Construa um aplicativo descentralizado de tarefas utilizando Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 
 - [Uma Introdução a Contratos Secretos](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Construa uma blockchain em Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
+- [Construir uma blockchain no Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Projetos e ferramentas em Rust {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Coleção de externos para interagir com uma rede análoga à Ethereum._
-- [Lighthouse](https://github.com/sigp/lighthouse) - _Cliente da camada de consenso de Ethereum rápida_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Reconcepção proposta da camada de execução de contrato inteligente Ethereum usando um subconjunto determinístico de WebAssembly_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) — _Coleção de externos para interagir com uma rede análoga ao Ethereum._
+- [Lighthouse](https://github.com/sigp/lighthouse) — _Cliente rápido da camada de consenso do Ethereum_
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) — _Proposta de reformulação da camada de execução de contrato inteligente do Ethereum usando um subconjunto determinístico do WebAssembly_
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _referência da API OASIS_
-- [Solaris](https://github.com/paritytech/sol-rs) - _Teste unitário de contratos inteligentes em Solidity que aproveita a Parity Client EVM nativo._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementação de Máquina Virtual de Ethereum em Rust_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _implementação em Rust da biblioteca Web3.js_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contrato inteligente Wavelet em Rust_
-- [Foundry](https://github.com/gakonst/foundry)- _Conjunto de ferramentas para o desenvolvimento do aplicativo Ethereum_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Implementação da biblioteca e carteira Ethereum_
-- [SewUp](https://github.com/second-state/SewUp) - _Uma biblioteca para ajudá-lo a construir seu contrato Ethereum webassembly com Rust e, assim, desenvolver em um backend comum_
+- [Solaris](https://github.com/paritytech/sol-rs) — _Agente de teste unitário dos contratos inteligentes no Solidity usando o EVM nativo do cliente Parity._
+- [SputnikVM](https://github.com/rust-blockchain/evm) — _Implementação da Máquina Virtual do Ethereum no Rust_
+- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _smart contract Wavelet em Rust_
+- [Foundry](https://github.com/gakonst/foundry) — _Conjunto de ferramentas para o desenvolvimento de aplicativos Ethereum_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) — _Implementação da biblioteca e da carteira Ethereum_
+- [SewUp](https://github.com/second-state/SewUp) — _Uma biblioteca para ajudar você a construir seu contrato Webassembly do Ethereum com o Rust e desenvolvê-lo em um back-end comum_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (abreviação de Rust Ethereum, pronúncia) é uma nova implementação de nó completo do Ethereum
 
 Procurando por mais recursos? Leia [ethereum.org/developers.](/developers/)

@@ -1,0 +1,1058 @@
+[
+  {
+    "id": 2558,
+    "path": "/page-index.json"
+  },
+  {
+    "id": 2660,
+    "path": "/common.json"
+  },
+  {
+    "id": 2560,
+    "path": "/page-developers-index.json"
+  },
+  {
+    "id": 2630,
+    "path": "/page-languages.json"
+  },
+  {
+    "id": 2648,
+    "path": "/page-developers-local-environment.json"
+  },
+  {
+    "id": 2650,
+    "path": "/page-developers-learning-tools.json"
+  },
+  {
+    "id": 5559,
+    "path": "/dao/index.md"
+  },
+  {
+    "id": 6374,
+    "path": "/page-run-a-node.json"
+  },
+  {
+    "id": 6512,
+    "path": "/page-layer-2.json"
+  },
+  {
+    "id": 2628,
+    "path": "/page-stablecoins.json"
+  },
+  {
+    "id": 2654,
+    "path": "/page-dapps.json"
+  },
+  {
+    "id": 5565,
+    "path": "/nft/index.md"
+  },
+  {
+    "id": 5567,
+    "path": "/template-usecase.json"
+  },
+  {
+    "id": 2652,
+    "path": "/page-developers-docs.json"
+  },
+  {
+    "id": 2716,
+    "path": "/developers/docs/dapps/index.md"
+  },
+  {
+    "id": 2762,
+    "path": "/developers/docs/web2-vs-web3/index.md"
+  },
+  {
+    "id": 2766,
+    "path": "/developers/docs/accounts/index.md"
+  },
+  {
+    "id": 2786,
+    "path": "/developers/docs/index.md"
+  },
+  {
+    "id": 2792,
+    "path": "/developers/docs/transactions/index.md"
+  },
+  {
+    "id": 2860,
+    "path": "/developers/docs/gas/index.md"
+  },
+  {
+    "id": 2894,
+    "path": "/developers/docs/blocks/index.md"
+  },
+  {
+    "id": 2898,
+    "path": "/developers/docs/networks/index.md"
+  },
+  {
+    "id": 2908,
+    "path": "/developers/docs/evm/index.md"
+  },
+  {
+    "id": 2914,
+    "path": "/developers/docs/intro-to-ethereum/index.md"
+  },
+  {
+    "id": 5533,
+    "path": "/developers/docs/intro-to-ether/index.md"
+  },
+  {
+    "id": 7597,
+    "path": "/developers/docs/evm/opcodes/index.md"
+  },
+  {
+    "id": 7767,
+    "path": "/developers/docs/accounts/accounts.svg"
+  },
+  {
+    "id": 7769,
+    "path": "/developers/docs/transactions/gas-tx.svg"
+  },
+  {
+    "id": 7771,
+    "path": "/developers/docs/transactions/tx.svg"
+  },
+  {
+    "id": 7773,
+    "path": "/developers/docs/blocks/tx-block.svg"
+  },
+  {
+    "id": 7775,
+    "path": "/developers/docs/evm/evm.svg"
+  },
+  {
+    "id": 7777,
+    "path": "/developers/docs/evm/gas.svg"
+  },
+  {
+    "id": 2722,
+    "path": "/developers/docs/programming-languages/java/index.md"
+  },
+  {
+    "id": 2726,
+    "path": "/developers/docs/programming-languages/rust/index.md"
+  },
+  {
+    "id": 2730,
+    "path": "/developers/docs/programming-languages/python/index.md"
+  },
+  {
+    "id": 2732,
+    "path": "/developers/docs/programming-languages/index.md"
+  },
+  {
+    "id": 2736,
+    "path": "/developers/docs/programming-languages/delphi/index.md"
+  },
+  {
+    "id": 2740,
+    "path": "/developers/docs/programming-languages/dot-net/index.md"
+  },
+  {
+    "id": 2744,
+    "path": "/developers/docs/programming-languages/javascript/index.md"
+  },
+  {
+    "id": 2748,
+    "path": "/developers/docs/programming-languages/golang/index.md"
+  },
+  {
+    "id": 2752,
+    "path": "/developers/docs/ides/index.md"
+  },
+  {
+    "id": 2798,
+    "path": "/developers/docs/storage/index.md"
+  },
+  {
+    "id": 2852,
+    "path": "/developers/docs/ethereum-stack/index.md"
+  },
+  {
+    "id": 2856,
+    "path": "/developers/docs/frameworks/index.md"
+  },
+  {
+    "id": 2868,
+    "path": "/developers/docs/apis/backend/index.md"
+  },
+  {
+    "id": 2872,
+    "path": "/developers/docs/apis/javascript/index.md"
+  },
+  {
+    "id": 2880,
+    "path": "/developers/docs/data-and-analytics/index.md"
+  },
+  {
+    "id": 2884,
+    "path": "/developers/docs/data-and-analytics/block-explorers/index.md"
+  },
+  {
+    "id": 2888,
+    "path": "/developers/docs/development-networks/index.md"
+  },
+  {
+    "id": 5529,
+    "path": "/developers/docs/apis/json-rpc/index.md"
+  },
+  {
+    "id": 6169,
+    "path": "/developers/docs/programming-languages/dart/index.md"
+  },
+  {
+    "id": 6424,
+    "path": "/developers/docs/programming-languages/ruby/index.md"
+  },
+  {
+    "id": 2958,
+    "path": "/whitepaper/index.md"
+  },
+  {
+    "id": 2840,
+    "path": "/developers/docs/standards/tokens/erc-20/index.md"
+  },
+  {
+    "id": 2842,
+    "path": "/developers/docs/standards/tokens/index.md"
+  },
+  {
+    "id": 2846,
+    "path": "/developers/docs/standards/tokens/erc-721/index.md"
+  },
+  {
+    "id": 2848,
+    "path": "/developers/docs/standards/index.md"
+  },
+  {
+    "id": 2876,
+    "path": "/developers/docs/oracles/index.md"
+  },
+  {
+    "id": 5521,
+    "path": "/developers/docs/standards/tokens/erc-777/index.md"
+  },
+  {
+    "id": 5525,
+    "path": "/developers/docs/mev/index.md"
+  },
+  {
+    "id": 6171,
+    "path": "/developers/docs/standards/tokens/erc-1155/index.md"
+  },
+  {
+    "id": 6532,
+    "path": "/developers/docs/standards/tokens/erc-4626/index.md"
+  },
+  {
+    "id": 7453,
+    "path": "/developers/docs/bridges/index.md"
+  },
+  {
+    "id": 7479,
+    "path": "/developers/docs/data-availability/index.md"
+  },
+  {
+    "id": 2672,
+    "path": "/history/index.md"
+  },
+  {
+    "id": 2954,
+    "path": "/glossary/index.md"
+  },
+  {
+    "id": 2646,
+    "path": "/page-developers-tutorials.json"
+  },
+  {
+    "id": 3002,
+    "path": "/developers/tutorials/calling-a-smart-contract-from-javascript/index.md"
+  },
+  {
+    "id": 3006,
+    "path": "/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md"
+  },
+  {
+    "id": 6221,
+    "path": "/developers/tutorials/how-to-write-and-deploy-an-nft/index.md"
+  },
+  {
+    "id": 6223,
+    "path": "/developers/tutorials/how-to-mint-an-nft/index.md"
+  },
+  {
+    "id": 6225,
+    "path": "/developers/tutorials/how-to-view-nft-in-metamask/index.md"
+  },
+  {
+    "id": 6239,
+    "path": "/developers/tutorials/uniswap-v2-annotated-code/index.md"
+  },
+  {
+    "id": 5557,
+    "path": "/community/grants/index.md"
+  },
+  {
+    "id": 6161,
+    "path": "/community/events/index.md"
+  },
+  {
+    "id": 6163,
+    "path": "/community/get-involved/index.md"
+  },
+  {
+    "id": 6165,
+    "path": "/community/online/index.md"
+  },
+  {
+    "id": 6167,
+    "path": "/community/support/index.md"
+  },
+  {
+    "id": 6185,
+    "path": "/community/language-resources/index.md"
+  },
+  {
+    "id": 6193,
+    "path": "/community/page-community.json"
+  },
+  {
+    "id": 2620,
+    "path": "/page-upgrades-index.json"
+  },
+  {
+    "id": 2634,
+    "path": "/page-roadmap-vision.json"
+  },
+  {
+    "id": 2640,
+    "path": "/page-upgrades-get-involved.json"
+  },
+  {
+    "id": 2926,
+    "path": "/roadmap/merge/index.md"
+  },
+  {
+    "id": 2946,
+    "path": "/roadmap/beacon-chain/index.md"
+  },
+  {
+    "id": 2950,
+    "path": "/eips/index.md"
+  },
+  {
+    "id": 6127,
+    "path": "/page-upgrades.json"
+  },
+  {
+    "id": 7515,
+    "path": "/roadmap/merge/issuance/index.md"
+  },
+  {
+    "id": 7713,
+    "path": "/roadmap/account-abstraction/index.md"
+  },
+  {
+    "id": 7717,
+    "path": "/roadmap/danksharding/index.md"
+  },
+  {
+    "id": 7721,
+    "path": "/roadmap/future-proofing/index.md"
+  },
+  {
+    "id": 7725,
+    "path": "/roadmap/pbs/index.md"
+  },
+  {
+    "id": 7729,
+    "path": "/roadmap/scaling/index.md"
+  },
+  {
+    "id": 7733,
+    "path": "/roadmap/secret-leader-election/index.md"
+  },
+  {
+    "id": 7737,
+    "path": "/roadmap/security/index.md"
+  },
+  {
+    "id": 7741,
+    "path": "/roadmap/single-slot-finality/index.md"
+  },
+  {
+    "id": 7745,
+    "path": "/roadmap/statelessness/index.md"
+  },
+  {
+    "id": 7749,
+    "path": "/roadmap/user-experience/index.md"
+  },
+  {
+    "id": 7753,
+    "path": "/roadmap/verkle-trees/index.md"
+  },
+  {
+    "id": 7803,
+    "path": "/roadmap/index.md"
+  },
+  {
+    "id": 3018,
+    "path": "/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md"
+  },
+  {
+    "id": 3036,
+    "path": "/developers/tutorials/the-graph-fixing-web3-data-querying/index.md"
+  },
+  {
+    "id": 3082,
+    "path": "/developers/tutorials/run-node-raspberry-pi/index.md"
+  },
+  {
+    "id": 3088,
+    "path": "/developers/tutorials/interact-with-other-contracts-from-solidity/index.md"
+  },
+  {
+    "id": 3124,
+    "path": "/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md"
+  },
+  {
+    "id": 3128,
+    "path": "/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md"
+  },
+  {
+    "id": 6227,
+    "path": "/developers/tutorials/hello-world-smart-contract/index.md"
+  },
+  {
+    "id": 6247,
+    "path": "/developers/tutorials/send-token-etherjs/index.md"
+  },
+  {
+    "id": 6432,
+    "path": "/developers/tutorials/nft-minter/index.md"
+  },
+  {
+    "id": 7308,
+    "path": "/developers/tutorials/reverse-engineering-a-contract/index.md"
+  },
+  {
+    "id": 2980,
+    "path": "/developers/tutorials/logging-events-smart-contracts/index.md"
+  },
+  {
+    "id": 3100,
+    "path": "/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md"
+  },
+  {
+    "id": 3110,
+    "path": "/developers/tutorials/waffle-test-simple-smart-contract/index.md"
+  },
+  {
+    "id": 3116,
+    "path": "/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/index.md"
+  },
+  {
+    "id": 3120,
+    "path": "/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md"
+  },
+  {
+    "id": 3138,
+    "path": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md"
+  },
+  {
+    "id": 3144,
+    "path": "/developers/tutorials/secure-development-workflow/index.md"
+  },
+  {
+    "id": 3160,
+    "path": "/developers/tutorials/guide-to-smart-contract-security-tools/index.md"
+  },
+  {
+    "id": 6243,
+    "path": "/developers/tutorials/erc20-annotated-code/index.md"
+  },
+  {
+    "id": 6245,
+    "path": "/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md"
+  },
+  {
+    "id": 6267,
+    "path": "/developers/tutorials/erc-721-vyper-annotated-code/index.md"
+  },
+  {
+    "id": 7627,
+    "path": "/developers/tutorials/erc20-with-safety-rails/index.md"
+  },
+  {
+    "id": 7631,
+    "path": "/developers/tutorials/all-you-can-cache/index.md"
+  },
+  {
+    "id": 5553,
+    "path": "/contributing/translation-program/faq/index.md"
+  },
+  {
+    "id": 5555,
+    "path": "/contributing/translation-program/index.md"
+  },
+  {
+    "id": 6177,
+    "path": "/contributing/page-contributing-translation-program-acknowledgements.json"
+  },
+  {
+    "id": 6181,
+    "path": "/contributing/page-contributing-translation-program-contributors.json"
+  },
+  {
+    "id": 6388,
+    "path": "/contributing/index.md"
+  },
+  {
+    "id": 6392,
+    "path": "/contributing/design-principles/index.md"
+  },
+  {
+    "id": 6398,
+    "path": "/contributing/adding-developer-tools/index.md"
+  },
+  {
+    "id": 6400,
+    "path": "/contributing/adding-exchanges/index.md"
+  },
+  {
+    "id": 6404,
+    "path": "/contributing/adding-glossary-terms/index.md"
+  },
+  {
+    "id": 6408,
+    "path": "/contributing/adding-products/index.md"
+  },
+  {
+    "id": 6412,
+    "path": "/contributing/translation-program/translators-guide/index.md"
+  },
+  {
+    "id": 6416,
+    "path": "/contributing/content-resources/index.md"
+  },
+  {
+    "id": 6446,
+    "path": "/contributing/adding-layer-2s/index.md"
+  },
+  {
+    "id": 6448,
+    "path": "/contributing/adding-staking-products/index.md"
+  },
+  {
+    "id": 7565,
+    "path": "/contributing/adding-wallets/index.md"
+  },
+  {
+    "id": 7569,
+    "path": "/contributing/adding-desci-projects/index.md"
+  },
+  {
+    "id": 7581,
+    "path": "/contributing/translation-program/mission-and-vision/index.md"
+  },
+  {
+    "id": 7585,
+    "path": "/contributing/translation-program/how-to-translate/index.md"
+  },
+  {
+    "id": 7589,
+    "path": "/contributing/translation-program/resources/index.md"
+  },
+  {
+    "id": 7935,
+    "path": "/contributing/design/index.md"
+  },
+  {
+    "id": 7939,
+    "path": "/contributing/design/adding-design-resources/index.md"
+  },
+  {
+    "id": 6568,
+    "path": "/developers/docs/networking-layer/index.md"
+  },
+  {
+    "id": 6572,
+    "path": "/developers/docs/networking-layer/network-addresses/index.md"
+  },
+  {
+    "id": 7328,
+    "path": "/developers/docs/data-structures-and-encoding/index.md"
+  },
+  {
+    "id": 7334,
+    "path": "/developers/docs/data-structures-and-encoding/rlp/index.md"
+  },
+  {
+    "id": 7336,
+    "path": "/developers/docs/data-structures-and-encoding/ssz/index.md"
+  },
+  {
+    "id": 7340,
+    "path": "/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md"
+  },
+  {
+    "id": 7483,
+    "path": "/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md"
+  },
+  {
+    "id": 7797,
+    "path": "/developers/docs/networking-layer/cons_client_net_layer.svg"
+  },
+  {
+    "id": 2636,
+    "path": "/page-staking.json"
+  },
+  {
+    "id": 2642,
+    "path": "/page-staking-deposit-contract.json"
+  },
+  {
+    "id": 6518,
+    "path": "/staking/pools/index.md"
+  },
+  {
+    "id": 6524,
+    "path": "/staking/saas/index.md"
+  },
+  {
+    "id": 6526,
+    "path": "/staking/solo/index.md"
+  },
+  {
+    "id": 7591,
+    "path": "/staking/withdrawals/index.md"
+  },
+  {
+    "id": 7919,
+    "path": "/staking/dvt/index.md"
+  },
+  {
+    "id": 2622,
+    "path": "/page-what-is-ethereum.json"
+  },
+  {
+    "id": 2624,
+    "path": "/page-wallets.json"
+  },
+  {
+    "id": 2626,
+    "path": "/page-wallets-find-wallet.json"
+  },
+  {
+    "id": 2632,
+    "path": "/page-get-eth.json"
+  },
+  {
+    "id": 2644,
+    "path": "/page-eth.json"
+  },
+  {
+    "id": 5563,
+    "path": "/governance/index.md"
+  },
+  {
+    "id": 6183,
+    "path": "/energy-consumption/index.md"
+  },
+  {
+    "id": 6187,
+    "path": "/security/index.md"
+  },
+  {
+    "id": 6428,
+    "path": "/web3/index.md"
+  },
+  {
+    "id": 7320,
+    "path": "/bridges/index.md"
+  },
+  {
+    "id": 7465,
+    "path": "/zero-knowledge-proofs/index.md"
+  },
+  {
+    "id": 7759,
+    "path": "/web3/web1.svg"
+  },
+  {
+    "id": 7761,
+    "path": "/web3/web2.svg"
+  },
+  {
+    "id": 7763,
+    "path": "/web3/web3.svg"
+  },
+  {
+    "id": 7765,
+    "path": "/energy-consumption/energy_consumption_pre_post_merge.svg"
+  },
+  {
+    "id": 5561,
+    "path": "/defi/index.md"
+  },
+  {
+    "id": 6440,
+    "path": "/smart-contracts/index.md"
+  },
+  {
+    "id": 7314,
+    "path": "/social-networks/index.md"
+  },
+  {
+    "id": 7316,
+    "path": "/decentralized-identity/index.md"
+  },
+  {
+    "id": 7461,
+    "path": "/desci/index.md"
+  },
+  {
+    "id": 7471,
+    "path": "/page-learn.json"
+  },
+  {
+    "id": 7521,
+    "path": "/guides/index.md"
+  },
+  {
+    "id": 7525,
+    "path": "/guides/how-to-create-an-ethereum-account/index.md"
+  },
+  {
+    "id": 7529,
+    "path": "/guides/how-to-revoke-token-access/index.md"
+  },
+  {
+    "id": 7533,
+    "path": "/guides/how-to-swap-tokens/index.md"
+  },
+  {
+    "id": 7537,
+    "path": "/guides/how-to-use-a-bridge/index.md"
+  },
+  {
+    "id": 7541,
+    "path": "/guides/how-to-use-a-wallet/index.md"
+  },
+  {
+    "id": 7543,
+    "path": "/learn-quizzes.json"
+  },
+  {
+    "id": 2776,
+    "path": "/developers/docs/nodes-and-clients/nodes-as-a-service/index.md"
+  },
+  {
+    "id": 2778,
+    "path": "/developers/docs/nodes-and-clients/index.md"
+  },
+  {
+    "id": 6173,
+    "path": "/developers/docs/nodes-and-clients/run-a-node/index.md"
+  },
+  {
+    "id": 7324,
+    "path": "/developers/docs/nodes-and-clients/client-diversity/index.md"
+  },
+  {
+    "id": 7609,
+    "path": "/developers/docs/nodes-and-clients/archive-nodes/index.md"
+  },
+  {
+    "id": 7617,
+    "path": "/developers/docs/nodes-and-clients/bootnodes/index.md"
+  },
+  {
+    "id": 7619,
+    "path": "/developers/docs/nodes-and-clients/light-clients/index.md"
+  },
+  {
+    "id": 7621,
+    "path": "/developers/docs/nodes-and-clients/node-architecture/index.md"
+  },
+  {
+    "id": 7779,
+    "path": "/developers/docs/nodes-and-clients/eth1eth2client.svg"
+  },
+  {
+    "id": 7781,
+    "path": "/developers/docs/nodes-and-clients/nodes.svg"
+  },
+  {
+    "id": 7783,
+    "path": "/developers/docs/nodes-and-clients/run-a-node/diagram.svg"
+  },
+  {
+    "id": 7785,
+    "path": "/developers/docs/nodes-and-clients/node-architecture/node-architecture-text-background.svg"
+  },
+  {
+    "id": 2702,
+    "path": "/developers/docs/consensus-mechanisms/pos/index.md"
+  },
+  {
+    "id": 2704,
+    "path": "/developers/docs/consensus-mechanisms/index.md"
+  },
+  {
+    "id": 6562,
+    "path": "/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md"
+  },
+  {
+    "id": 6564,
+    "path": "/developers/docs/consensus-mechanisms/pos/gasper/index.md"
+  },
+  {
+    "id": 7495,
+    "path": "/developers/docs/consensus-mechanisms/pos/attestations/index.md"
+  },
+  {
+    "id": 7499,
+    "path": "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md"
+  },
+  {
+    "id": 7503,
+    "path": "/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md"
+  },
+  {
+    "id": 7507,
+    "path": "/developers/docs/consensus-mechanisms/pos/keys/index.md"
+  },
+  {
+    "id": 7601,
+    "path": "/developers/docs/consensus-mechanisms/pos/faqs/index.md"
+  },
+  {
+    "id": 7605,
+    "path": "/developers/docs/consensus-mechanisms/pos/block-proposal/index.md"
+  },
+  {
+    "id": 7787,
+    "path": "/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.svg"
+  },
+  {
+    "id": 7789,
+    "path": "/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.svg"
+  },
+  {
+    "id": 7791,
+    "path": "/developers/docs/consensus-mechanisms/pos/keys/multiple-keys.svg"
+  },
+  {
+    "id": 7793,
+    "path": "/developers/docs/consensus-mechanisms/pos/keys/validator-key-schematic.svg"
+  },
+  {
+    "id": 7927,
+    "path": "/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md"
+  },
+  {
+    "id": 2710,
+    "path": "/developers/docs/consensus-mechanisms/pow/mining/index.md"
+  },
+  {
+    "id": 2712,
+    "path": "/developers/docs/consensus-mechanisms/pow/index.md"
+  },
+  {
+    "id": 6540,
+    "path": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md"
+  },
+  {
+    "id": 6546,
+    "path": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md"
+  },
+  {
+    "id": 6550,
+    "path": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md"
+  },
+  {
+    "id": 2808,
+    "path": "/developers/docs/smart-contracts/languages/index.md"
+  },
+  {
+    "id": 2810,
+    "path": "/developers/docs/smart-contracts/index.md"
+  },
+  {
+    "id": 2818,
+    "path": "/developers/docs/smart-contracts/compiling/index.md"
+  },
+  {
+    "id": 2822,
+    "path": "/developers/docs/smart-contracts/deploying/index.md"
+  },
+  {
+    "id": 2826,
+    "path": "/developers/docs/smart-contracts/libraries/index.md"
+  },
+  {
+    "id": 2830,
+    "path": "/developers/docs/smart-contracts/anatomy/index.md"
+  },
+  {
+    "id": 2902,
+    "path": "/developers/docs/smart-contracts/security/index.md"
+  },
+  {
+    "id": 2804,
+    "path": "/developers/docs/smart-contracts/testing/index.md"
+  },
+  {
+    "id": 2814,
+    "path": "/developers/docs/smart-contracts/composability/index.md"
+  },
+  {
+    "id": 7473,
+    "path": "/developers/docs/smart-contracts/formal-verification/index.md"
+  },
+  {
+    "id": 7757,
+    "path": "/developers/docs/smart-contracts/upgrading/index.md"
+  },
+  {
+    "id": 7795,
+    "path": "/developers/docs/smart-contracts/verifying/source-code-verification.svg"
+  },
+  {
+    "id": 7801,
+    "path": "/developers/docs/smart-contracts/verifying/index.md"
+  },
+  {
+    "id": 2756,
+    "path": "/developers/docs/scaling/index.md"
+  },
+  {
+    "id": 5483,
+    "path": "/developers/docs/scaling/validium/index.md"
+  },
+  {
+    "id": 5485,
+    "path": "/developers/docs/scaling/state-channels/index.md"
+  },
+  {
+    "id": 5487,
+    "path": "/developers/docs/scaling/sidechains/index.md"
+  },
+  {
+    "id": 5489,
+    "path": "/developers/docs/scaling/plasma/index.md"
+  },
+  {
+    "id": 6382,
+    "path": "/developers/docs/scaling/zk-rollups/index.md"
+  },
+  {
+    "id": 6384,
+    "path": "/developers/docs/scaling/optimistic-rollups/index.md"
+  },
+  {
+    "id": 2656,
+    "path": "/page-assets.json"
+  },
+  {
+    "id": 2658,
+    "path": "/page-about.json"
+  },
+  {
+    "id": 2680,
+    "path": "/enterprise/index.md"
+  },
+  {
+    "id": 2684,
+    "path": "/enterprise/private-ethereum/index.md"
+  },
+  {
+    "id": 2962,
+    "path": "/foundation/index.md"
+  },
+  {
+    "id": 2966,
+    "path": "/about/index.md"
+  },
+  {
+    "id": 2986,
+    "path": "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md"
+  },
+  {
+    "id": 2994,
+    "path": "/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md"
+  },
+  {
+    "id": 2998,
+    "path": "/developers/tutorials/smart-contract-security-guidelines/index.md"
+  },
+  {
+    "id": 3010,
+    "path": "/developers/tutorials/token-integration-checklist/index.md"
+  },
+  {
+    "id": 3024,
+    "path": "/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md"
+  },
+  {
+    "id": 3056,
+    "path": "/developers/tutorials/deploying-your-first-smart-contract/index.md"
+  },
+  {
+    "id": 3070,
+    "path": "/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md"
+  },
+  {
+    "id": 3074,
+    "path": "/developers/tutorials/how-to-implement-an-erc721-market/index.md"
+  },
+  {
+    "id": 3092,
+    "path": "/developers/tutorials/using-websockets/index.md"
+  },
+  {
+    "id": 3148,
+    "path": "/developers/tutorials/solidity-and-truffle-continuous-integration-setup/index.md"
+  },
+  {
+    "id": 3156,
+    "path": "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md"
+  },
+  {
+    "id": 3164,
+    "path": "/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md"
+  },
+  {
+    "id": 6241,
+    "path": "/developers/tutorials/create-and-deploy-a-defi-app/index.md"
+  },
+  {
+    "id": 6259,
+    "path": "/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md"
+  },
+  {
+    "id": 6261,
+    "path": "/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md"
+  },
+  {
+    "id": 6263,
+    "path": "/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md"
+  },
+  {
+    "id": 6265,
+    "path": "/developers/tutorials/testing-erc-20-tokens-with-waffle/index.md"
+  },
+  {
+    "id": 6436,
+    "path": "/developers/tutorials/optimism-std-bridge-annotated-code/index.md"
+  },
+  {
+    "id": 7304,
+    "path": "/developers/tutorials/short-abi/index.md"
+  }
+]

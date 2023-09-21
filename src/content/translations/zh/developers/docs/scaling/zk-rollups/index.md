@@ -232,13 +232,15 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 
 零知识以太坊虚拟机上运行的项目包括：
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 是由 Matter Labs 构建的与以太坊虚拟机兼容的零知识卷叠，由其自己的零知识以太坊虚拟机提供支持。_
-
 - **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP 是由以太坊基金会资助的项目，旨在开发与以太坊虚拟机兼容的零知识卷叠以及为以太坊区块生成有效性证明的机制。_
+
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _是以太坊主网上的去中心化零知识卷叠，它在零知识以太坊虚拟机 (zkEVM) 上运行，以透明的方式执行以太坊交易，包括智能合约与零知识证明验证。_
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll 是 一家致力于为以太坊构建原生零知识以太坊虚拟机二层解决方案的技术驱动型公司。_
 
-- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _是以太坊主网上的去中心化零知识卷叠，它在零知识以太坊虚拟机 (zkEVM) 上运行，以透明的方式执行以太坊交易，包括智能合约与零知识证明验证。_
+- **[Taiko](https://taiko.xyz)** - _Taiko 是去中心化的、等同于以太坊的零知识卷叠（[1 类零知识以太坊虚拟机](https://vitalik.ca/general/2022/08/04/zkevm.html)）。_
+
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 是与以太坊虚拟机兼容的零知识卷叠，由 Matter Labs 构建并由它自己的零知识以太坊虚拟机提供支持。_
 
 ## 进一步阅读零知识卷叠的相关内容 {#further-reading-on-zk-rollups}
 

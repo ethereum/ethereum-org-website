@@ -47,6 +47,8 @@ Le piattaforme con persistenza basata su contratto sono:
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
 - [Rete Crust](https://crust.network)
+- [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### Considerazioni aggiuntive {#additional-consideration}
 
@@ -57,14 +59,18 @@ IPFS è un sistema distribuito per memorizzare e accedere a file, siti web, appl
 - [Pinata](https://www.pinata.cloud/) _(servizio di pinning IPFS)_
 - [Pinata](https://www.pinata.cloud/) _(servizio di pinning IPFS)_
 - [IPFS Scan](https://ipfs-scan.io) _(esploratore di pinning di IPFS)_
+- [4EVERLAND](https://www.4everland.org/)_（Servizio di pinning IPFS）_
+- [Filebase](https://filebase.com) _(Servizio di pinning IPFS)_
+
+SWARM è una tecnologia decentralizzata di archiviazione e distribuzione di dati con un sistema di incentivazione di archiviazione e un oracolo del prezzo di affitto della memoria.
 
 ## Ritenzione dei dati {#data-retention}
 
-Per ritenere i dati, i sistemi devono avere qualche tipo di meccanismo per assicurarsi che i dati vengano conservati.
+Per conservare i dati, i sistemi devono avere qualche tipo di meccanismo per assicurarsi che i dati vengano conservati.
 
 ### Meccanismo di messa alla prova {#challenge-mechanism}
 
-Per verificare l'effettiva conservazione dei dati, uno dei metodi più diffusi consiste nell'utilizzare un meccanismo di messa alla prova crittografica emessa ai nodi per accertare che contengano ancora i dati. Un esempio semplice è quello del Proof of Access di Arweave. I nodi vengono messi alla prova per vedere se contengono i dati sia sul blocco più recente sia su un blocco passato a caso. Se il nodo non trova la risposta, viene penalizzato.
+Uno dei metodi più diffusi per verificare l'effettiva conservazione dei dati consiste nell'utilizzare qualche tipo di meccanismo di messa alla prova crittografica applicato ai nodi per accertare che contengano ancora i dati. Un esempio semplice è quello di verificare il proof-of-access di Arweave. I nodi vengono messi alla prova per vedere se contengono i dati sia sul blocco più recente sia su un blocco casuale in passato. Se il nodo non trova la risposta, viene penalizzato.
 
 Tipi di dStorage con meccanismo di messa alla prova:
 
@@ -73,10 +79,11 @@ Tipi di dStorage con meccanismo di messa alla prova:
 - Arweave
 - Filecoin
 - Rete Crust
+- 4EVERLAND
 
 ### Decentralità {#decentrality}
 
-Non esistono strumenti impeccabili per misurare il livello di decentralizzazione delle piattaforme ma, in generale, si tende a ricorrere a strumenti che non utilizzano un tipo di KYC per dimostrare di non essere centralizzati.
+Non esistono strumenti impeccabili per misurare il livello di decentralizzazione delle piattaforme ma, in generale, si tende a ricorrere a strumenti che non utilizzano qualche tipo di KYC per dimostrare di non essere centralizzati.
 
 Strumenti decentralizzati senza KYC:
 
@@ -87,10 +94,11 @@ Strumenti decentralizzati senza KYC:
 - IPFS
 - Ethereum
 - Rete Crust
+- 4EVERLAND
 
 ### Consenso {#consensus}
 
-Gran parte di questi strumenti ha la propria versione di un [meccanismo di consenso](/developers/docs/consensus-mechanisms/) ma, generalmente, si basano su [**Proof of Work (PoW)**](/developers/docs/consensus-mechanisms/pow/) o [**Proof of Stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
+Gran parte di questi strumenti ha la propria versione di un [meccanismo di consenso](/developers/docs/consensus-mechanisms/), ma generalmente si basano su [**proof-of-work (PoW)**](/developers/docs/consensus-mechanisms/pow/) o [**proof-of-stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
 Basata sul proof-of-work:
 
@@ -106,7 +114,7 @@ Basata sul proof-of-stake:
 
 ## Strumenti correlati {#related-tools}
 
-**IPFS - _InterPlanetary File System è un sistema di archiviazione decentralizzata e referenziazione dei file per Ethereum._**
+**IPFS - _InterPlanetary File System è un sistema decentralizzato di archiviazione e referenziazione dei file per Ethereum._**
 
 - [Ipfs.io](https://ipfs.io/)
 - [Documentazione](https://docs.ipfs.io/)
@@ -116,6 +124,7 @@ Basata sul proof-of-stake:
 
 - [Storj.io](https://storj.io/)
 - [Documentazione](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
 **Skynet - _Skynet è una catena di PoW decentralizzata dedicata a un web decentralizzato._**
 
@@ -135,7 +144,7 @@ Basata sul proof-of-stake:
 - [Documentazione](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain è una piattaforma di dStorage in Proof of Stake con sharding e blobber._**
+**0chain - _0Chain è una piattaforma di dStorage in proof-of-stake con sharding e blobber._**
 
 - [0Chain.net](https://0chain.net/)
 - [Documentazione](https://docs.0chain.net/0chain/)
@@ -159,7 +168,7 @@ Basata sul proof-of-stake:
 - [Documentazione](https://github.com/orbitdb/field-manual/)
 - [GitHub](https://github.com/orbitdb/orbit-db/)
 
-**Aleph.im - _Progetto su cloud decentralizzato (database, archiviazione di file, calcolo e DID). Una combinazione unica di tecnologia peer-to-peer on-chain e off-chain. Compatibilità multi-catena e IPFS._**
+**Aleph.im - _Progetto decentralizzato su cloud (database, archiviazione di file, calcolo e DID). Una combinazione unica di tecnologia peer-to-peer on-chain e off-chain. Compatibilità multi-catena e IPFS._**
 
 - [Aleph.im](https://aleph.im/)
 - [Documentazione](https://aleph.im/#/developers/)
@@ -171,19 +180,31 @@ Basata sul proof-of-stake:
 - [Documentazione](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _La prima piattaforma di archiviazione di oggetti compatibile con S3 che consente di archiviare i dati su più reti d'archiviazione decentralizzata, tra cui IPFS, Sia, Skynet e Storj._**
+**Filebase - _archiviazione decentralizzata compatibile con S3 e servizio di pinning IPFS geo-ridondante. Tutti i file caricati in IPFS tramite Filebase sono fissati automaticamente all'infrastruttura di Filebase con replicazione 3x in tutto il globo._**
 
 - [Filebase.com](https://filebase.com/)
 - [Documentazione](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
+
+**4EVERLAND: _Una piattaforma di cloud computing in Web 3.0 che integra archiviazione, calcolo e capacità essenziali di rete, è compatibile con S3 e fornisce l'archiviazione sincrona dei dati su reti di archiviazione decentralizzate quali IPFS e Arweave._**
+
+- [4everland.org](https://www.4everland.org/)
+- [Documentazione](https://docs.4everland.org/)
+- [GitHub](https://github.com/4everland)
+
+**Kaleido - _Una piattaforma di blockchain-as-a-service con Nodi IPFS alla pressione di un pulsante_**
+
+- [Kaleido](https://kaleido.io/)
+- [Documentazione](https://docs.kaleido.io/kaleido-services/ipfs/)
+- [GitHub](https://github.com/kaleido-io)
 
 ## Letture consigliate {#further-reading}
 
 - [Cos'è l'archiviazione decentralizzata?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [Sfatiamo cinque falsi miti sull'archiviazione decentralizzata](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Framework di sviluppo](/developers/docs/frameworks/)
+- [Quadri di sviluppo](/developers/docs/frameworks/)

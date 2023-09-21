@@ -7,7 +7,6 @@ import {
   chakra,
   Divider,
   Flex,
-  Heading,
   HeadingProps,
   Text,
   TextProps,
@@ -16,15 +15,13 @@ import {
   Box,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
 import TutorialMetadata from "../components/TutorialMetadata"
-import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import EnvWarningBanner from "../components/EnvWarningBanner"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -35,22 +32,27 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
+import CrowdinContributors from "../components/FileContributorsCrowdin"
+import GitHubContributors from "../components/FileContributorsGitHub"
 
 // Apply styles for classes within markdown here
 const ContentContainer = (props) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
-  const borderColor = useToken("colors", "primary")
+  const borderColor = useToken("colors", "primary.base")
 
   return (
     <Box
       as="article"
       maxW="1000px"
       minW={0}
-      background="background"
+      background="background.base"
       boxShadow={{ base: "none", lg: boxShadow }}
       m={{ base: "2.5rem 0rem", lg: "2rem 2rem 6rem" }}
       p={{ base: "3rem 2rem", lg: 16 }}
@@ -73,7 +75,7 @@ const ContentContainer = (props) => {
 const H1 = (props: HeadingProps) => {
   const monospaceFont = useToken("fonts", "monospace")
   return (
-    <Heading
+    <OldHeading
       as="h1"
       fontWeight="bold"
       fontFamily={monospaceFont}
@@ -99,7 +101,7 @@ const H2 = (props: HeadingProps) => {
   const monospaceFont = useToken("fonts", "monospace")
 
   return (
-    <Heading
+    <OldHeading
       as="h2"
       fontFamily={monospaceFont}
       textTransform="uppercase"
@@ -121,7 +123,7 @@ const H2 = (props: HeadingProps) => {
 
 const H3 = (props: HeadingProps) => {
   return (
-    <Heading
+    <OldHeading
       as="h3"
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.5rem" }}
@@ -141,7 +143,7 @@ const H3 = (props: HeadingProps) => {
 
 const H4 = (props: HeadingProps) => {
   return (
-    <Heading
+    <OldHeading
       as="h4"
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.25rem" }}
@@ -179,7 +181,7 @@ const ListItem = (props) => {
 }
 
 const KBD = (props) => {
-  const borderColor = useToken("colors", "primary")
+  const borderColor = useToken("colors", "primary.base")
 
   return (
     <Kbd
@@ -195,7 +197,7 @@ const KBD = (props) => {
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -204,7 +206,7 @@ const components = {
   kbd: KBD,
   li: ListItem,
   pre: Codeblock,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   ButtonLink,
   InfoBanner,
   EnvWarningBanner,
@@ -215,10 +217,11 @@ const components = {
   CallToContribute,
   Emoji,
   YouTube,
+  GlossaryTooltip,
 }
 
 const TutorialPage = ({
-  data: { siteData, pageData: mdx },
+  data: { siteData, pageData: mdx, allCombinedTranslatorsJson },
   pageContext: { relativePath },
 }: PageProps<Queries.TutorialPageQuery, Context>) => {
   if (!siteData || !mdx?.frontmatter)
@@ -255,7 +258,7 @@ const TutorialPage = ({
         dir={isRightToLeft ? "rtl" : "ltr"}
         m={{ base: "2rem 0rem", lg: "0 auto" }}
         p={{ base: "0", lg: "0 2rem 0 0" }}
-        background={{ base: "background", lg: "ednBackground" }}
+        background={{ base: "background.base", lg: "ednBackground" }}
       >
         <PageMetadata
           title={mdx.frontmatter.title}
@@ -275,15 +278,19 @@ const TutorialPage = ({
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-          <FileContributors
-            relativePath={relativePath}
-            editPath={absoluteEditPath}
-            mt={12}
-            p={2}
-            borderRadius="4px"
-            border={`1px solid ${borderColor}`}
-            background="ednBackground"
-          />
+          {mdx.frontmatter.lang !== "en" ? (
+            <CrowdinContributors
+              relativePath={relativePath}
+              editPath={absoluteEditPath}
+              //@ts-ignore
+              langContributors={allCombinedTranslatorsJson.nodes}
+            />
+          ) : (
+            <GitHubContributors
+              relativePath={relativePath}
+              editPath={absoluteEditPath}
+            />
+          )}
           <FeedbackCard />
         </ContentContainer>
         {tocItems && (
@@ -303,11 +310,15 @@ const TutorialPage = ({
 export default TutorialPage
 
 export const query = graphql`
-  query TutorialPage($languagesToFetch: [String!]!, $relativePath: String) {
+  query TutorialPage(
+    $language: String!
+    $languagesToFetch: [String!]!
+    $relativePath: String
+  ) {
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-developers-tutorials", "common"] }
+        ns: { in: ["page-developers-tutorials", "common", "glossary"] }
       }
     ) {
       edges {
@@ -348,6 +359,20 @@ export const query = graphql`
       }
       body
       tableOfContents
+    }
+    allCombinedTranslatorsJson(filter: { lang: { eq: $language } }) {
+      nodes {
+        lang
+        data {
+          fileId
+          contributors {
+            id
+            username
+            avatarUrl
+            totalCosts
+          }
+        }
+      }
     }
   }
 `

@@ -31,7 +31,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 - Financial services can block you from getting paid.
 - A hidden charge of financial services is your personal data.
 - Governments and centralized institutions can close down markets at will.
-- Trading hours often limited to business hours of specific time zone.
+- Trading hours are often limited to business hours of specific time zone.
 - Money transfers can take days due to internal human processes.
 - There's a premium to financial services because intermediary institutions need their cut.
 
@@ -40,7 +40,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 | DeFi                                                                                               | Traditional finance                                                                                                            |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | You hold your money.                                                                               | Your money is held by companies.                                                                                               |
-| You control where your money goes and how it's spent.                                              | You have to trust companies not to mismanage your money, like lend to risky borrowers.                                         |
+| You control where your money goes and how it's spent.                                              | You have to trust companies not to mismanage your money, like lending to risky borrowers.                                      |
 | Transfers of funds happen in minutes.                                                              | Payments can take days due to manual processes.                                                                                |
 | Transaction activity is pseudonymous.                                                              | Financial activity is tightly coupled with your identity.                                                                      |
 | DeFi is open to anyone.                                                                            | You must apply to use financial services.                                                                                      |
@@ -53,7 +53,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 
 ## It started with Bitcoin... {#bitcoin}
 
-Bitcoin in many ways was the first DeFi application. Bitcoin lets you really own and control value and send it anywhere around the world. It does this by providing a way for a large number of people, who don't trust each other, to agree on a ledger of accounts without the need for a trusted intermediary. Bitcoin is open to anyone and no one has the authority to change its rules. Bitcoin's rules, like its scarcity and its openness, are written into the technology. It's not like traditional finance where governments can print money which devalues your savings and companies can shut down markets.
+Bitcoin in many ways was the first DeFi application. Bitcoin lets you really own and control value and send it anywhere around the world. It does this by providing a way for a large number of people, who don't trust each other, to agree on a ledger of accounts without the need for a trusted intermediary. Bitcoin is open to anyone and no one has the authority to change its rules. Bitcoin's rules, like its scarcity and its openness, are written into the technology. It's not like traditional finance where governments can print money that devalues your savings and companies can shut down markets.
 
 Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable, using [smart contracts](/glossary#smart-contract), so you can go beyond storing and sending value.
 
@@ -133,7 +133,7 @@ There are many advantages to using a decentralized lender...
 
 Today, lending and borrowing money all revolves around the individuals involved. Banks need to know whether you're likely to repay a loan before lending.
 
-Decentralized lending works without either party having to identify themselves. Instead the borrower must put up collateral that the lender will automatically receive if their loan is not repaid. Some lenders even accept NFTs as collateral. NFTs are a deed to a unique asset, like a painting. [More on NFTs](/nft/)
+Decentralized lending works without either party having to identify themselves. Instead, the borrower must put up collateral that the lender will automatically receive if their loan is not repaid. Some lenders even accept NFTs as collateral. NFTs are a deed to a unique asset, like a painting. [More on NFTs](/nft/)
 
 This allows you to borrow money without credit checks or handing over private information.
 
@@ -143,7 +143,7 @@ When you use a decentralized lender you have access to funds deposited from all 
 
 #### Tax-efficiencies {#tax-efficiencies}
 
-Borrowing can give you access to the funds you need without needing to sell your ETH (a taxable event). Instead you can use ETH as collateral for a stablecoin loan. This gives you the cash-flow you need and lets you keep your ETH. Stablecoins are tokens that are much better for when you need cash as they don't fluctuate in value like ETH. [More on stablecoins](#stablecoins)
+Borrowing can give you access to the funds you need without needing to sell your ETH (a taxable event). Instead, you can use ETH as collateral for a stablecoin loan. This gives you the cash-flow you need and lets you keep your ETH. Stablecoins are tokens that are much better for when you need cash as they don't fluctuate in value like ETH. [More on stablecoins](#stablecoins)
 
 #### Flash loans {#flash-loans}
 
@@ -157,7 +157,7 @@ The funds that are often used are held in liquidity pools (big pools of funds us
 
 This means a lot of logic must be included in a very bespoke transaction. A simple example might be someone using a flash loan to borrow as much of an asset at one price so they can sell it on a different exchange where the price is higher.
 
-So in a single transaction the following happens:
+So in a single transaction, the following happens:
 
 - You borrow X amount of $asset at $1.00 from exchange A
 - You sell X $asset on exchange B for $1.10
@@ -233,7 +233,7 @@ When you use a centralized exchange you have to deposit your assets before the t
 
 There are fund management products on Ethereum that will try to grow your portfolio based on a strategy of your choice. This is automatic, open to everyone, and doesn't need a human manager taking a cut of your profits.
 
-A good example is the [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). This is a fund that rebalances automatically to ensure your portfolio always includes [the top DeFi tokens by market capitalisation](https://www.coingecko.com/en/defi). You never have to manage any of the details and you can withdraw from the fund whenever you like.
+A good example is the [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). This is a fund that rebalances automatically to ensure your portfolio always includes [the top DeFi tokens by market capitalization](https://www.coingecko.com/en/defi). You never have to manage any of the details and you can withdraw from the fund whenever you like.
 
 <ButtonLink to="/dapps/?category=finance">
   See investment dapps
@@ -274,7 +274,7 @@ This means Project A with its 100 donations of 1 dollar could end up with more f
 
 Decentralized insurance aims to make insurance cheaper, faster to pay out, and more transparent. With more automation, coverage is more affordable and pay-outs are a lot quicker. The data used to decide on your claim is completely transparent.
 
-Ethereum products, like any software, can suffer from bugs and exploits. So right now a lot of insurance products in the space focus on protecting their users against loss of funds. However there are projects starting to build out coverage for everything life can throw at us. A good example of this is Etherisc's Crop cover which aims to [protect smallholder farmers in Kenya against droughts and flooding](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralized insurance can provide cheaper cover for farmers who are often priced out of traditional insurance.
+Ethereum products, like any software, can suffer from bugs and exploits. So right now a lot of insurance products in the space focus on protecting their users against loss of funds. However, there are projects starting to build out coverage for everything life can throw at us. A good example of this is Etherisc's Crop cover which aims to [protect smallholder farmers in Kenya against droughts and flooding](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralized insurance can provide cheaper cover for farmers who are often priced out of traditional insurance.
 
 <ButtonLink to="/dapps/?category=finance">
   See insurance dapps
@@ -317,7 +317,7 @@ You can think of DeFi in layers:
 
 1. The blockchain – Ethereum contains the transaction history and state of accounts.
 2. The assets – [ETH](/eth/) and the other tokens (currencies).
-3. The protocols – [smart contracts](/glossary/#smart-contract) that provide the functionality, for example a service that allows for decentralized lending of assets.
+3. The protocols – [smart contracts](/glossary/#smart-contract) that provide the functionality, for example, a service that allows for decentralized lending of assets.
 4. [The applications](/dapps/) – the products we use to manage and access the protocols.
 
 ## Build DeFi {#build-defi}
@@ -338,7 +338,7 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
 
 ### DeFi articles {#defi-articles}
 
-- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6 2020_
+- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6, 2020_
 
 ### Videos {#videos}
 

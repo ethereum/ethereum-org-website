@@ -10,11 +10,11 @@ Sono comunque disponibili tecnologie base di Ethereum che aiutano a fornire un m
 
 ## Livello 1: macchina virtuale Ethereum {#ethereum-virtual-machine}
 
-La [Macchina Virtuale di Ethereum (EVM)](/developers/docs/evm/) è l'ambiente d'esecuzione per i contratti intelligenti su Ethereum. Tutti i contratti intelligenti e i cambiamenti di stato sulle blockchain di Ethereum sono eseguiti dalle [transazioni](/developers/docs/transactions/). La EVM gestisce l'elaborazione di tutte le transazioni sulla rete Ethereum.
+La [Macchina Virtuale di Ethereum (EVM)](/developers/docs/evm/) è l'ambiente di esecuzione per i contratti intelligenti su Ethereum. Tutti i contratti intelligenti e i cambiamenti di stato sulle blockchain di Ethereum sono eseguiti dalle [transazioni](/developers/docs/transactions/). La EVM gestisce l'elaborazione di tutte le transazioni sulla rete Ethereum.
 
 Come avviene con ogni macchina virtuale, la EVM crea un livello di astrazione fra il codice in esecuzione e la macchina che esegue tale codice (il nodo Ethereum). Al momento la EVM è in esecuzione su migliaia di nodi distribuiti in tutto il mondo.
 
-La EVM utilizza un insieme di istruzioni opcode per eseguire attività specifiche. Questi 140 opcode univoci permettono alla EVM di essere Turing completa, cioè di essere in grado di elaborare praticamente tutto, se sono presenti risorse sufficienti.
+La EVM utilizza un insieme di istruzioni opcode per eseguire attività specifiche. Questi (140) opcode (univoci) consentono all'EVM di essere [Turing-completa](https://en.wikipedia.org/wiki/Turing_completeness), cioè in grado di calcolare praticamente tutto, se sono presenti risorse sufficienti.
 
 A uno sviluppatore di dapp non serve conoscere a fondo la EVM, gli basta sapere che esiste e fa funzionare in modo affidabile tutte le applicazioni su Ethereum senza interruzioni.
 

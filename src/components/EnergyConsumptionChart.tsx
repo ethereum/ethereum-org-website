@@ -5,7 +5,6 @@ import {
   Bar,
   Cell,
   XAxis,
-  Text,
   LabelList,
   ResponsiveContainer,
   Legend,
@@ -13,6 +12,7 @@ import {
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Translation from "./Translation"
+import Text from "./OldText"
 
 interface ITickProps {
   x: number
@@ -149,7 +149,7 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#C1B6F5",
       },
       {
-        name: "AirBnB",
+        name: t("energy-consumption-chart-airbnb-label"),
         amount: 0.02,
         color: "#E50914",
       },

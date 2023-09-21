@@ -10,21 +10,22 @@ import {
   Box,
   Flex,
   Heading,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 
 // Components
 import Translation from "../../components/Translation"
-import ButtonLink from "../../components/ButtonLink"
-import Link from "../../components/Link"
+import ButtonLink from "../../components/Buttons/ButtonLink"
+import InlineLink, { BaseLink } from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
 import FeedbackCard from "../../components/FeedbackCard"
 import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
+import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
 
 // Data
 import externalTutorials from "../../data/externalTutorials.json"
@@ -60,7 +61,7 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
         p={2}
         textTransform="uppercase"
         _hover={{
-          color: "primary",
+          color: "primary.base",
           borderColor: "text200",
           opacity: "1",
         }}
@@ -214,14 +215,14 @@ const TutorialsPage = ({
       </Text>
 
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <Heading fontSize="2rem" lineHeight="1.4" mt={0} mb={4}>
+        <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
           <Translation id="page-tutorial-submit-btn" />
         </Heading>
         <Text>
           <Translation id="page-tutorial-listing-policy-intro" />{" "}
-          <Link to="/contributing/content-resources/">
+          <InlineLink to="/contributing/content-resources/">
             <Translation id="page-tutorial-listing-policy" />
-          </Link>
+          </InlineLink>
         </Text>
         <Text>
           <Translation id="page-tutorial-submit-tutorial" />
@@ -299,8 +300,8 @@ const TutorialsPage = ({
         color="text"
         borderColor="text"
         _hover={{
-          color: "primary",
-          borderColor: "primary",
+          color: "primary.base",
+          borderColor: "primary.base",
           boxShadow: cardBoxShadow,
         }}
         _active={{
@@ -356,7 +357,7 @@ const TutorialsPage = ({
             })}
             {selectedTags.length > 0 && (
               <Button
-                color="primary"
+                color="primary.base"
                 textDecoration="underline"
                 bg="none"
                 border="none"
@@ -382,21 +383,22 @@ const TutorialsPage = ({
         {filteredTutorials.length === 0 && (
           <Box mt={0} textAlign="center" padding={12}>
             <Emoji text=":crying_face:" fontSize="5xl" mb={8} mt={8} />
-            <h2>
+            <OldHeading>
               <Translation id="page-tutorial-tags-error" />
-            </h2>
-            <p>
+            </OldHeading>
+            <Text>
               <Translation id="page-find-wallet-try-removing" />
-            </p>
+            </Text>
           </Box>
         )}
         {filteredTutorials.map((tutorial) => {
           return (
             <Flex
-              as={Link}
+              as={BaseLink}
               textDecoration="none"
               flexDirection="column"
               justifyContent="space-between"
+              fontWeight="normal"
               color="text"
               boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
               mb="px"
@@ -405,7 +407,7 @@ const TutorialsPage = ({
               _hover={{
                 textDecoration: "none",
                 borderRadius: "base",
-                boxShadow: "0 0 1px var(--eth-colors-primary)",
+                boxShadow: "0 0 1px var(--eth-colors-primary-base)",
                 bg: "tableBackgroundHover",
               }}
               key={tutorial.to}
@@ -458,7 +460,7 @@ const TutorialsPage = ({
                   <>
                     {" "}
                     •<Emoji text=":link:" fontSize="sm" ml={2} mr={2} />
-                    <Box as="span" color="primary" cursor="pointer">
+                    <Box as="span" color="primary.base" cursor="pointer">
                       <Translation id="page-tutorial-external-link" />
                     </Box>
                   </>

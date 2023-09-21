@@ -46,7 +46,7 @@ Os optimistic rollups dependem da rede principal do Ethereum para o seguinte:
 
 Como mencionado, os optimistic rollups publicam dados de transações no Ethereum como `calldata`. Como a execução na cadeia do rollup é baseada em transações enviadas, qualquer pessoa pode usar essa informação – ancorada na camada base do Ethereum – para executar o estado do rollup e verificar a exatidão das transições de estado.
 
-A [disponibilidade de dados](https://ethereum.org/en/developers/docs/data-availability/) é fundamental porque, sem acesso a dados do estado, os desafiantes não podem criar provas de fraude para disputar operações de rollup inválidas. Com o Ethereum fornecendo disponibilidade de dados, o risco de os operadores de um rollup escaparem impunes de atos maliciosos (por exemplo, enviar blocos inválidos) é reduzido.
+A [disponibilidade de dados](/developers/docs/data-availability/) é fundamental porque, sem acesso a dados do estado, os desafiantes não podem criar provas de fraude para disputar operações de rollup inválidas. Com o Ethereum fornecendo disponibilidade de dados, o risco de os operadores de um rollup escaparem impunes de atos maliciosos (por exemplo, enviar blocos inválidos) é reduzido.
 
 ### Resistência à censura {#censorship-resistance}
 

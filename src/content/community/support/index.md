@@ -43,6 +43,7 @@ Building can be hard. Here are some development focused spaces with experienced 
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 You can also find documentation and development guides in our [Ethereum developer resources](/developers/) section.
 
@@ -64,7 +65,7 @@ Here are some popular examples:
 
 If you're running a node or validator, here are some communities that are dedicated to helping you get started.
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 Most of the teams building Ethereum clients also have dedicated, public-facing, spaces where you can get support and ask questions.

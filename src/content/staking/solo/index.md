@@ -53,7 +53,7 @@ It also requires very basic hardware setup, and some understanding of minimum re
 </ExpandableCard>
 
 <ExpandableCard title="Secure key management" eventCategory="SoloStaking" eventName="clicked secure key management">
-Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.
+Just like how private keys secure your Ethereum address, you will need to generate keys specifically for your validator. You must understand how to keep any seed phrases or private keys safe and secure.{' '}
 
 <a href="/security/">Ethereum security and scam prevention</a>
 </ExpandableCard>
@@ -69,7 +69,7 @@ Your rewards are proportional to the time your validator is online and properly 
 <ExpandableCard title="Slashing risk" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Different from inactivity penalties for being offline, <em>slashing</em> is a much more serious penalty reserved for malicious offenses. By running a minority client with your keys loaded on only one machine at time, your risk of being slashed is minimized. That being said, all stakers must be aware of the risks of slashing.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">More on slashing and validator lifecycle</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> More on slashing and validator lifecycle</a>
 </ExpandableCard>
 </InfoGrid>
 
@@ -103,13 +103,13 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
-<InfoBanner emoji="⚠️" isWarning>
-Please note the importance of choosing a <a href="/developers/docs/nodes-and-clients/client-diversity/">minority client</a> as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style="text-transform: uppercase;">"multi-client."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### Node tools
 
 <StakingProductsCardGrid category="nodeTools" />
+
+Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style="text-transform: uppercase;">"multi-client."</em>
 
 #### Key Generators
 

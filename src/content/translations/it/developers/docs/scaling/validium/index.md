@@ -67,7 +67,7 @@ Come meccanismo anti-censura, il protocollo validium consente agli utenti di pre
 
 ### Invio del batch {#batch-submission}
 
-Dopo aver eseguito un batch di transazioni, l'operatore invia la prova di validità associata al contratto di verifica e propone una nuova radice di stato al contratto principale. Se la prova è valida, il contratto principale aggiorna lo stato del validium e finalizza i risultati delle transazioni nel batch.
+Dopo aver eseguito un lotto di transazioni, l'operatore invia la prova di validità associata al contratto verificatore e propone una nuova radice di stato al contratto principale. Se la prova è valida, il contratto principale aggiorna lo stato del validium e finalizza i risultati delle transazioni nel batch.
 
 A differenza di un rollup ZK, i produttori di blocchi su un validium non devono pubblicare i dati della transazione per i batch di transazioni (solo le intestazioni dei blocchi). Questo rende validium un protocollo di ridimensionamento puramente off-chain, a differenza dei protocolli di ridimensionamento "ibridi" (cioè, il [livello 2](/layer-2/)) che pubblicano i dati di stato sulla catena principale di Ethereum come `calldata`.
 
@@ -113,7 +113,7 @@ Come i rollup ZK, i validium sono per lo più adatti ad applicazioni semplici, c
 
 Alcuni progetti di validium provano ad aggirare questo problema compilando linguaggi compatibili all'EVM (es., Solidity, Vyper) per creare bytecode personalizzato e ottimizzato per una prova efficiente. Un inconveniente di questo approccio è che le nuove VM proof-friendly a conoscenza zero potrebbero non supportare importanti opcode dell'EVM, e gli sviluppatori devono scrivere direttamente nel linguaggio di alto livello per un'esperienza ottimale. Questo crea persino più problemi: obbliga gli sviluppatori a creare dapp con uno stack di sviluppo del tutto nuovo e spezza la compatibilità con l'infrastruttura corrente di Ethereum.
 
-Alcuni team, tuttavia, stanno tentando di ottimizzare gli opcode dell'EVM esistenti per i circuiti di prova a conoscenza zero. Questo risulterà nello sviluppo di una Macchina virtuale di Ethereum a conoscenza zero (zkEVM), una VM compatibile all'EVM che produce prove per verificare la correttezza dell'esecuzione del programma. Con una zkEVM, le catene di Validium possono eseguire i contratti intelligenti all'esterno della catena e inviare le prove di validità per verificare un calcolo esterno alla catena (senza doverlo eseguire nuovamente) su Ethereum.
+Alcuni team, tuttavia, stanno cercando di ottimizzare gli opcode EVM esistenti per i circuiti di prova ZK. Questo risulterà nello sviluppo di una Macchina virtuale di Ethereum a conoscenza zero (zkEVM), una VM compatibile all'EVM che produce prove per verificare la correttezza dell'esecuzione del programma. Con una zkEVM, le catene di Validium possono eseguire i contratti intelligenti all'esterno della catena e inviare le prove di validità per verificare un calcolo esterno alla catena (senza doverlo eseguire nuovamente) su Ethereum.
 
 [Maggiori informazioni sulle zkEVM](https://www.alchemy.com/overviews/zkevm).
 

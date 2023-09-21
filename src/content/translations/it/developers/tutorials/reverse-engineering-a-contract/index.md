@@ -77,14 +77,14 @@ Questo codice fa due cose:
 
 Questo frammento inizia con un `JUMPDEST`. I programmi dell'EVM (macchina virtuale di Ethereum) lanciano un'eccezione se salti a un opcode che non è `JUMPDEST`. Poi guarda la CALLDATASIZE e se è "true" (ovvero, non è zero) salta a 0x7C. Lo vedremo di seguito.
 
-| Offset | Opcode     | Stack (dopo l'opcode)                                                                                 |
-| -----: | ---------- | ----------------------------------------------------------------------------------------------------- |
-|     64 | CALLVALUE  | [Wei](https://ethereum.org/en/glossary/#wei) fornito dalla chiamata. Chiamato `msg.value` in Solidity |
-|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                                           |
-|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                                         |
-|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                                               |
-|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                                             |
-|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                                                    |
+| Offset | Opcode     | Stack (dopo l'opcode)                                                          |
+| -----: | ---------- | ------------------------------------------------------------------------------ |
+|     64 | CALLVALUE  | [Wei](/glossary/#wei) fornito dalla chiamata. Chiamato `msg.value` in Solidity |
+|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                    |
+|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                  |
+|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                        |
+|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                      |
+|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                             |
 
 Quindi quando non ci sono dati della chiamata leggiamo il valore di Storage[6]. Non sappiamo ancora cosa sia questo valore, ma possiamo cercare delle transazioni ricevute dal contratto prive di dati della chiamata. Le transazioni che trasferiscono semplicemente ETH senza alcun dato della chiamata (e dunque senza metodo) contengono in Etherscan il metodo `Transfer`. Difatti, [la prima vera transazione ricevuta dal contratto](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) è un trasferimento.
 

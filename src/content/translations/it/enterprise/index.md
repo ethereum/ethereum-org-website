@@ -62,6 +62,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 - [Tenderly](https://tenderly.co) _una piattaforma di sviluppo Web3 che fornisce elementi di debug, osservabilità e infrastruttura per lo sviluppo, il test, il monitoraggio e il funzionamento dei contratti intelligenti._
 - [Unibright](https://unibright.io/) _team di specialisti della blockchain, architetti, sviluppatori e consulenti con più di 20 anni di esperienza in processi di business e integrazione_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _provider di servizi gestiti si diffonde in co-sedi in Europa e Asia. Fa funzionare e monitora i tuoi nodi in modo sicuro e affidabile_
+- [Zeeve](https://www.zeeve.io/) _fornisce una gamma di prodotti e strumenti per creare su Ethereum, nonché infrastruttura e API per le applicazioni Enterprise Web3._
 
 ### Strumenti e librerie {#tooling-and-libraries}
 

@@ -6,7 +6,6 @@ import {
   Button as ChakraButton,
   Flex,
   Img,
-  Text,
   useColorModeValue,
   useRadio,
   useRadioGroup,
@@ -15,6 +14,7 @@ import {
 // Components
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 export interface IProps {
   monthData: any
@@ -43,8 +43,8 @@ const Button = (props) => {
       ml={{ base: "0", lg: "2" }}
       mr={{ base: "0", lg: "2" }}
       _hover={{
-        color: "primary",
-        borderColor: "primary",
+        color: "primary.base",
+        borderColor: "primary.base",
       }}
       _focus={{}}
       _active={{}}
@@ -65,8 +65,8 @@ const RadioCard = (props) => {
       as="label"
       {...checkbox}
       _checked={{
-        borderColor: "primary",
-        color: "primary",
+        borderColor: "primary.base",
+        color: "primary.base",
         boxShadow: shadow,
       }}
     >
@@ -146,7 +146,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
         </RadioCard>
       </Flex>
-      <Box bg="background" boxShadow={tableBoxShadow} w="full" mb={8}>
+      <Box bg="background.base" boxShadow={tableBoxShadow} w="full" mb={8}>
         <Flex
           bg="grayBackground"
           textDecoration="none"

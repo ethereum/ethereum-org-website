@@ -6,7 +6,6 @@ tags:
   - "contrats intelligents"
   - "jetons"
   - "solidity"
-  - "premiers pas"
   - "erc-20"
 skill: intermediate
 lang: fr
@@ -18,7 +17,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Dans le tutoriel précédent, nous avons étudié [l'anatomie d'un jeton ERC-20 dans Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) sur la blockchain Ethereum. Dans cet article, nous allons voir comment nous pouvons utiliser un contrat intelligent pour interagir avec un jeton en utilisant le langage Solidity.
 
-Pour ce contrat intelligent, nous allons créer un échange décentralisé vraiment factice où un utilisateur peut échanger Ethereum avec notre jeton [ERC-20 récemment déployé](/developers/docs/standards/tokens/erc-20/).
+Pour ce contrat intelligent, nous allons créer un échange décentralisé vraiment factice où un utilisateur peut échanger de l'Ethereum contre notre jeton [ERC-20](/developers/docs/standards/tokens/erc-20/) nouvellement déployé.
 
 Pour ce tutoriel, nous utiliserons le code que nous avons écrit dans le tutoriel précédent comme base. Notre DEX instanciera une instance du contrat dans son constructeur et effectuera les opérations de :
 
@@ -95,7 +94,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
@@ -277,7 +276,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;

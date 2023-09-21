@@ -1,10 +1,19 @@
 // Libraries
-import React, { ReactNode } from "react"
+import React, { ComponentProps, ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import styled from "@emotion/styled"
-import { type Icon as ChakraIcon } from "@chakra-ui/react"
+import {
+  Box,
+  BoxProps,
+  Center,
+  CenterProps,
+  Flex,
+  FlexProps,
+  HeadingProps,
+  Img,
+  type Icon as ChakraIcon,
+} from "@chakra-ui/react"
+import { FaDiscord } from "react-icons/fa"
 
 // Assets
 import Dappnode from "../assets/run-a-node/dappnode.svg"
@@ -25,369 +34,277 @@ import {
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import {
-  Content,
-  Divider,
-  Page,
-  InfoGrid,
-  Width60,
-  Width40,
-} from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
-import Emoji from "../components/OldEmoji"
-import Link from "../components/Link"
-import ButtonLink from "../components/ButtonLink"
+import Emoji from "../components/Emoji"
+import InlineLink from "../components/Link"
 import FeedbackCard from "../components/FeedbackCard"
-import Icon from "../components/Icon"
+import { Button, ButtonLink } from "../components/Buttons"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 // Utils
-import { TranslationKey } from "../utils/translations"
-import { scrollIntoView } from "../utils/scrollIntoView"
+import { InfoGrid } from "../templates/staking"
+import { Width40, Width60 } from "../pages-conditional/what-is-ethereum"
+
+// Utils
 import { getImage } from "../utils/image"
 
-// Styles
-const GappedPage = styled(Page)`
-  gap: 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    gap: 3rem;
-  }
-  * {
-    scroll-margin-top: 5.5rem;
-  }
-`
+import type { ChildOnlyProp } from "../types"
+import GatsbyImage from "../components/GatsbyImage"
 
-const GappedContent = styled(Content)`
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 1rem 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    gap: 2rem;
-    padding: 1rem 2rem;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 1rem 0;
-  }
-`
+const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
 
-const HeroContainer = styled.div`
-  background: ${({ theme }) => theme.colors.runNodeGradient};
-  width: 100%;
-`
+const GappedPage = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    align="center"
+    w="full"
+    my={0}
+    mx="auto"
+    gap={{ base: 12, lg: 16 }}
+    sx={{
+      "*": {
+        scrollMarginTop: "5.5rem",
+      },
+    }}
+    {...props}
+  />
+)
 
-const Hero = styled(PageHero)`
-  padding-bottom: 2rem;
-`
+const GappedContent = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    w="full"
+    gap={{ base: 8, lg: 12 }}
+    px={{ base: 0, md: 8, lg: 16 }}
+    py={4}
+    {...props}
+  />
+)
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  gap: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Box w="full" bg="runNodeGradient" {...props} />
+)
 
-const SplitContent = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+const Content = (props: BoxProps) => <Box w="full" py={4} px={8} {...props} />
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-    flex-direction: column-reverse;
-  }
-`
+const TwoColumnContent = (props: ChildOnlyProp) => (
+  <Flex
+    direction={{ base: "column", lg: "row" }}
+    justify="space-between"
+    align={{ base: "flex-start", lg: "center" }}
+    gap={8}
+    mb={8}
+    {...props}
+  />
+)
 
-const Column = styled.div`
-  flex: 1;
-`
+const SplitContent = (props: FlexProps) => (
+  <Flex
+    direction={{ base: "column", md: "row" }}
+    align="center"
+    w="full"
+    gap={8}
+    {...props}
+  />
+)
 
-const ResponsiveButtonLink = styled(ButtonLink)`
-  gap: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+const Column = (props: ChildOnlyProp) => <Box flex="1" {...props} />
 
-  &:hover {
-    svg {
-      fill: ${({ theme }) => theme.colors.buttonColor};
-      transform: scale(1.15);
-      transition: 0.1s;
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: 100%;
-    justify-content: center;
-  }
-`
+const SoftwareHighlight = (props: CenterProps) => (
+  <Center
+    w="100%"
+    gap={8}
+    py={8}
+    px={{ base: 8, md: 24 }}
+    border="1px"
+    borderColor="#dadada"
+    borderRadius="base"
+    color="text"
+    flexDirection={{ base: "column", md: "row" }}
+    position="relative"
+    isolation="isolate"
+    sx={{
+      "&::after": {
+        content: '""',
+        position: "absolute",
+        inset: 0,
+        zIndex: -1,
+        bg: "inherit",
+        filter: "blur(1rem)",
+      },
+    }}
+    {...props}
+  />
+)
 
-const Highlight = styled(Content)<{ backgroundColor: string }>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${({ theme, backgroundColor }) => theme.colors[backgroundColor]};
-  border: 1px solid #dadada;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 2rem 6rem;
-  color: ${({ theme }) => theme.colors.text};
-  position: relative;
-  isolation: isolate;
-  svg {
-    margin: 0 0 0 2rem;
-  }
-  &:nth-of-type(even) {
-    flex-direction: row-reverse;
-    svg {
-      margin: 0 2rem 0 0;
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 2rem;
-    flex-direction: column-reverse;
-    &:nth-of-type(even) {
-      flex-direction: column-reverse;
-      svg {
-        margin: 0 0 2rem;
-      }
-    }
-    svg {
-      margin: 0 0 2rem;
-    }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: inherit;
-    filter: blur(1rem);
-  }
-`
+const ColumnFill = (props: ChildOnlyProp) => (
+  <Box flex="1" lineHeight={2} sx={{ ul: { listStyle: "none" } }} {...props} />
+)
 
-const SoftwareHighlight = styled(Highlight)``
+const ColumnNarrow = (props: ChildOnlyProp) => (
+  <Flex
+    boxSizing="border-box"
+    inset="auto"
+    justify="center"
+    align="center"
+    {...props}
+  />
+)
 
-const ColumnFill = styled.div`
-  line-height: 2;
-  box-sizing: border-box;
-  flex: 1;
-  ul {
-    list-style: none;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
+const FlexContent = (props: ChildOnlyProp) => (
+  <Flex direction="column" py={4} px={8} w="full" {...props} />
+)
 
-const ColumnNarrow = styled.div`
-  box-sizing: border-box;
-  display: flex;
-  inset: auto;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
+const FlexContainer = (props: FlexProps) => (
+  <Flex direction={{ base: "column", lg: "row" }} gap={8} {...props} />
+)
 
-const FlexContent = styled(Content)`
-  display: flex;
-  flex-direction: column;
-`
+const MarginFlex = (props: ChildOnlyProp) => (
+  <FlexContainer my={12} {...props} />
+)
 
-const Flex = styled.div`
-  display: flex;
-  gap: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const Container = (props: FlexProps) => (
+  <Flex
+    bg="grayBackground"
+    border="1px solid"
+    borderColor="#d1d1d1"
+    borderRadius="5px"
+    color="text"
+    py={0}
+    px={8}
+    {...props}
+  />
+)
 
-const MarginFlex = styled(Flex)`
-  margin: 3rem 0;
-`
+const BuildBox = (props: ComponentProps<typeof Container>) => (
+  <Container
+    direction="column"
+    bg="preBackground"
+    flex="1"
+    p={8}
+    sx={{
+      "& > p:last-of-type": {
+        mb: 8,
+      },
+      "li:last-child": {
+        mb: 0,
+      },
+    }}
+    {...props}
+  />
+)
 
-const Container = styled.div`
-  background: ${({ theme }) => theme.colors.grayBackground};
-  border: 1px solid #d1d1d1;
-  box-sizing: border-box;
-  border-radius: 5px;
-  color: ${({ theme }) => theme.colors.text};
-  padding: 0 2rem;
-`
+const BuildBoxSpace = (props: ChildOnlyProp) => (
+  <BuildBox
+    direction="column"
+    justify="space-between"
+    _hover={{
+      transform: "scale(1.02)",
+      transition: "transform 0.1s",
+    }}
+    {...props}
+  />
+)
 
-const BuildBox = styled(Container)`
-  background: ${({ theme }) => theme.colors.preBackground};
-  flex: 1;
-  padding: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
+const FullyLoaded = (props: ChildOnlyProp) => (
+  <Container
+    direction="column"
+    justify="space-between"
+    lineHeight="200%"
+    flex="1"
+    px={8}
+    py={8}
+    _hover={{
+      transform: "scale(1.02)",
+      transition: "transform 0.1s",
+    }}
+    sx={{
+      p: {
+        fontSize: "110%",
+      },
+      code: {
+        fontWeight: 600,
+        lineHeight: "125%",
+      },
+      "li:last-child": {
+        mb: 0,
+      },
+    }}
+    {...props}
+  />
+)
 
-  & > p:last-of-type {
-    margin-bottom: 2rem;
-  }
-`
+const SvgTitle = (props: ChildOnlyProp) => (
+  <Flex gap={4} align="center" {...props} />
+)
 
-const BuildBoxSpace = styled(BuildBox)`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  &:hover {
-    transform: scale(1.02);
-    transition: transform 0.1s;
-  }
-`
+const ButtonContainer = (props: ChildOnlyProp) => (
+  <Flex
+    gap={4}
+    mt="auto"
+    direction={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const FullyLoaded = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  line-height: 200%;
-  padding: 2rem;
-  flex: 1;
-  p {
-    font-size: 110%;
-  }
-  code {
-    font-weight: 600;
-    line-height: 125%;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    button {
-      width: fit-content;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    button {
-      width: 100%;
-    }
-  }
-  &:hover {
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
+const BuildContainer = (props: ChildOnlyProp) => (
+  <Container
+    direction="column"
+    py={8}
+    px={{ base: 0, md: 8 }}
+    borderRadius={0}
+    border={0}
+    bg="none"
+    {...props}
+  />
+)
 
-const SvgTitle = styled.div`
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-`
+const StakingCalloutContainer = (props: ChildOnlyProp) => (
+  <SplitContent
+    w="full"
+    p={8}
+    bg="linear-gradient(
+      262.78deg,
+      rgba(152, 186, 249, 0.25) 0%,
+      rgba(207, 177, 251, 0.25) 53.12%,
+      rgba(151, 252, 246, 0.25) 100%
+    )"
+    {...props}
+  />
+)
 
-const ButtonContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-  margin-top: auto;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const StrongParagraph = (props: BoxProps) => (
+  <Text fontSize="150%" fontWeight={600} {...props} />
+)
 
-const DappNodeButtonLink = styled(ResponsiveButtonLink)`
-  background-color: #007dfc;
-  span {
-    color: ${({ theme }) => theme.colors.white};
-  }
-  &:hover {
-    background-color: #0077be;
-    box-shadow: 4px 4px 0 0 rgba(#007dfc, 0.47);
-  }
-`
+const H2 = (props: HeadingProps) => (
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const AvadoButtonLink = styled(ResponsiveButtonLink)`
-  background-color: #37822e;
-  span {
-    color: ${({ theme }) => theme.colors.white};
-  }
-  &:hover {
-    background-color: #2e6d2e;
-    box-shadow: 4px 4px 0 0 rgba(#37822e, 0.47);
-  }
-`
+const H3 = (props: HeadingProps) => (
+  <OldHeading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const StyledEmoji = styled(Emoji)`
-  margin-right: 1rem;
-`
-
-const BuildContainer = styled(Container)`
-  flex: 1;
-  padding: 2rem;
-  border-radius: none;
-  border: none;
-  background: none;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 2rem 0;
-  }
-`
-
-const ScrollButtonSecondary = styled.button`
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5rem 2rem;
-  margin-top: 1rem;
-  font-size: 1rem;
-  border-radius: 0.25em;
-  text-align: center;
-  cursor: pointer;
-
-  color: ${({ theme }) => theme.colors.text};
-  border: 1px solid ${({ theme }) => theme.colors.text};
-  background-color: transparent;
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary};
-    border: 1px solid ${({ theme }) => theme.colors.primary};
-    box-shadow: ${({ theme }) => theme.colors.cardBoxShadow};
-  }
-  &:active {
-    background-color: ${({ theme }) =>
-      theme.colors.secondaryButtonBackgroundActive};
-  }
-  &:hover {
-    transition: transform 0.1s;
-    transform: scale(1.05);
-  }
-`
-
-const DiscordIcon = styled(Icon)`
-  fill: ${({ theme }) => theme.colors.buttonColor};
-`
-
-const StakingCalloutContainer = styled(SplitContent)`
-  background: linear-gradient(
-    262.78deg,
-    rgba(152, 186, 249, 0.25) 0%,
-    rgba(207, 177, 251, 0.25) 53.12%,
-    rgba(151, 252, 246, 0.25) 100%
-  );
-  width: 100%;
-  padding: 2rem;
-  gap: 5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-    gap: 3rem;
-  }
-`
-
-const Leslie = styled(GatsbyImage)`
-  transform: scaleX(-1) scale(1.15) translateX(2rem);
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    transform: scaleX(-1) translateY(-3rem);
-  }
-`
-
-const StrongParagraph = styled.p`
-  font-size: 150%;
-  font-weight: 600;
-`
+const H4 = (props: ChildOnlyProp) => (
+  <OldHeading
+    as="h4"
+    fontSize={{ base: "md", md: "xl" }}
+    lineHeight={1.4}
+    fontWeight="medium"
+    {...props}
+  />
+)
 
 interface RunANodeCard {
   image: typeof ChakraIcon
@@ -499,33 +416,35 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
         description={t("page-run-a-node-meta-description")}
       />
       <HeroContainer>
-        <Hero content={heroContent} isReverse />
+        <Box pb={8}>
+          <PageHero content={heroContent} isReverse />
+        </Box>
       </HeroContainer>
 
       <Content id="what-is-a-node">
         <TwoColumnContent>
           <Width60>
-            <h2>
+            <H2>
               <Translation id="page-run-a-node-what-title" />
-            </h2>
-            <h3>
+            </H2>
+            <H3>
               <Translation id="page-run-a-node-what-1-subtitle" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-run-a-node-what-1-text" />
-            </p>
-            <h3>
+            </Text>
+            <H3>
               <Translation id="page-run-a-node-what-2-subtitle" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-run-a-node-what-2-text" />
-            </p>
-            <h3>
+            </Text>
+            <H3>
               <Translation id="page-run-a-node-what-3-subtitle" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-run-a-node-what-3-text" />
-            </p>
+            </Text>
           </Width60>
           <Width40>
             <GatsbyImage image={getImage(data.hackathon)!} alt="" />
@@ -544,15 +463,15 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
           background="runNodeGradient2"
           forceOpen
         >
-          <p>
+          <Text>
             <Translation id="page-run-a-node-who-copy-1" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-run-a-node-who-copy-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-run-a-node-who-copy-3" />
-          </p>
+          </Text>
           <StrongParagraph>
             <Translation id="page-run-a-node-who-copy-bold" />
           </StrongParagraph>
@@ -560,9 +479,9 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       </FlexContent>
 
       <Content>
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-why-title" />
-        </h2>
+        </H2>
         <InfoGrid>
           {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => {
             return (
@@ -587,24 +506,27 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       <Divider />
 
       <Content id="getting-started">
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-getting-started-title" />
-        </h2>
+        </H2>
         <GappedContent>
-          <SoftwareHighlight backgroundColor="homeBoxTurquoise">
+          <SoftwareHighlight
+            bg="homeBoxTurquoise"
+            flexDirection={{ base: "column-reverse", md: "row" }}
+          >
             <ColumnFill>
-              <p>
+              <Text>
                 <Translation id="page-run-a-node-getting-started-software-section-1" />
-              </p>
-              <p>
-                <code>
-                  <StyledEmoji text=":warning:" size={1} />
+              </Text>
+              <Text>
+                <Text as="code">
+                  <Emoji text=":warning:" fontSize="md" mr={4} />
                   <Translation id="page-run-a-node-getting-started-software-section-1-alert" />
-                </code>
-              </p>
-              <Link to="/developers/docs/nodes-and-clients/run-a-node/">
+                </Text>
+              </Text>
+              <InlineLink to="/developers/docs/nodes-and-clients/run-a-node/">
                 <Translation id="page-run-a-node-getting-started-software-section-1-link" />
-              </Link>
+              </InlineLink>
             </ColumnFill>
             <ColumnNarrow>
               <Terminal
@@ -615,12 +537,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             </ColumnNarrow>
           </SoftwareHighlight>
 
-          <SoftwareHighlight backgroundColor="homeBoxOrange">
-            <ColumnFill>
-              <p>
-                <Translation id="page-run-a-node-getting-started-software-section-2" />
-              </p>
-            </ColumnFill>
+          <SoftwareHighlight bg="homeBoxOrange">
             <ColumnNarrow>
               <Dappnode
                 // TODO: make a11y svgs (using <title>)
@@ -628,16 +545,24 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                 alt={t("page-run-a-node-glyph-alt-dappnode")}
               />
             </ColumnNarrow>
+            <ColumnFill>
+              <Text>
+                <Translation id="page-run-a-node-getting-started-software-section-2" />
+              </Text>
+            </ColumnFill>
           </SoftwareHighlight>
 
-          <SoftwareHighlight backgroundColor="homeBoxPurple">
+          <SoftwareHighlight
+            bg="homeBoxPurple"
+            flexDirection={{ base: "column-reverse", md: "row" }}
+          >
             <ColumnFill>
-              <p>
+              <Text>
                 <Translation id="page-run-a-node-getting-started-software-section-3a" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-run-a-node-getting-started-software-section-3b" />
-              </p>
+              </Text>
             </ColumnFill>
             <ColumnNarrow>
               <Dapptap
@@ -651,25 +576,25 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       </Content>
 
       <Content>
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-choose-your-adventure-title" />
-        </h2>
-        <p>
+        </H2>
+        <Text>
           <Translation id="page-run-a-node-choose-your-adventure-1" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-run-a-node-choose-your-adventure-2" />
-        </p>
+        </Text>
         <MarginFlex>
           <FullyLoaded>
-            <div>
-              <h3>
-                <StyledEmoji text=":shopping_cart:" size={2} />
+            <Box>
+              <H3>
+                <Emoji text=":shopping_cart:" fontSize="2em" mr={4} />
                 <Translation id="page-run-a-node-buy-fully-loaded-title" />
-              </h3>
-              <p>
+              </H3>
+              <Text>
                 <Translation id="page-run-a-node-buy-fully-loaded-description" />
-              </p>
+              </Text>
               <ul>
                 <li>
                   <Translation id="page-run-a-node-buy-fully-loaded-note-1" />
@@ -678,31 +603,31 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                   <Translation id="page-run-a-node-buy-fully-loaded-note-2" />
                 </li>
                 <li>
-                  <code>
+                  <Text as="code">
                     <Translation id="page-run-a-node-buy-fully-loaded-note-3" />
-                  </code>
+                  </Text>
                 </li>
               </ul>
-            </div>
+            </Box>
             <ButtonContainer>
-              <DappNodeButtonLink to="https://shop.dappnode.io/">
+              <ButtonLink to="https://shop.dappnode.io/">
                 <Translation id="page-run-a-node-shop-dappnode" />
-              </DappNodeButtonLink>
-              <AvadoButtonLink to="https://ava.do/">
+              </ButtonLink>
+              <ButtonLink to="https://ava.do/">
                 <Translation id="page-run-a-node-shop-avado" />
-              </AvadoButtonLink>
+              </ButtonLink>
             </ButtonContainer>
           </FullyLoaded>
 
           <FullyLoaded>
-            <div>
-              <h3>
-                <StyledEmoji text=":building_construction:" size={2} />
+            <Box>
+              <H3>
+                <Emoji text=":building_construction:" fontSize="2em" mr={4} />
                 <Translation id="page-run-a-node-build-your-own-title" />
-              </h3>
-              <p>
+              </H3>
+              <Text>
                 <Translation id="page-run-a-node-choose-your-adventure-build-1" />
-              </p>
+              </Text>
               <ul>
                 <li>
                   <Translation id="page-run-a-node-choose-your-adventure-build-bullet-1" />
@@ -714,20 +639,18 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                   <Translation id="page-run-a-node-choose-your-adventure-build-bullet-3" />
                 </li>
               </ul>
-            </div>
-            <ScrollButtonSecondary
-              onClick={() => scrollIntoView("build-your-own")}
-            >
+            </Box>
+            <Button variant="outline" toId="build-your-own">
               <Translation id="page-run-a-node-choose-your-adventure-build-start" />
-            </ScrollButtonSecondary>
+            </Button>
           </FullyLoaded>
         </MarginFlex>
       </Content>
 
       <Content id="build-your-own">
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-build-your-own-title" />
-        </h2>
+        </H2>
 
         <BuildContainer>
           <SvgTitle>
@@ -736,79 +659,79 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               // @ts-ignore
               alt={t("page-run-a-node-glyph-alt-hardware")}
             />
-            <h3>
+            <H3>
               <Translation id="page-run-a-node-build-your-own-hardware-title" />
-            </h3>
+            </H3>
           </SvgTitle>
 
-          <Flex>
+          <FlexContainer>
             <BuildBox>
-              <h4>
+              <H4>
                 <Translation id="page-run-a-node-build-your-own-minimum-specs" />
-              </h4>
+              </H4>
               <ul>
                 <li>
-                  <p>
+                  <Text>
                     <Translation id="page-run-a-node-build-your-own-min-ram" />
-                  </p>
-                  <p>
-                    <Link href="#plan-on-staking">
+                  </Text>
+                  <Text>
+                    <InlineLink href="#plan-on-staking">
                       <Translation id="page-run-a-node-build-your-own-ram-note-1" />
-                    </Link>
-                  </p>
-                  <p>
-                    <Link href="#rasp-pi">
+                    </InlineLink>
+                  </Text>
+                  <Text>
+                    <InlineLink href="#rasp-pi">
                       <Translation id="page-run-a-node-build-your-own-ram-note-2" />
-                    </Link>
-                  </p>
+                    </InlineLink>
+                  </Text>
                 </li>
                 <li>
-                  <p>
+                  <Text>
                     <Translation id="page-run-a-node-build-your-own-min-ssd" />
-                  </p>
-                  <p>
-                    <small>
-                      <em>
+                  </Text>
+                  <Text>
+                    <Text as="small">
+                      <Text as="em">
                         <Translation id="page-run-a-node-build-your-own-ssd-note" />
-                      </em>
-                    </small>
-                  </p>
+                      </Text>
+                    </Text>
+                  </Text>
                 </li>
               </ul>
             </BuildBox>
 
             <BuildBox>
-              <h4>
+              <H4>
                 <Translation id="page-run-a-node-build-your-own-recommended" />
-              </h4>
+              </H4>
               <ul>
                 <li>
                   <Translation id="page-run-a-node-build-your-own-nuc" />
-                  <p>
-                    <small>
+                  <Text>
+                    <Text as="small">
                       <Translation id="page-run-a-node-build-your-own-nuc-small" />
-                    </small>
-                  </p>
+                    </Text>
+                  </Text>
                 </li>
                 <li>
                   <Translation id="page-run-a-node-build-your-own-connection" />
-                  <p>
-                    <small>
+                  <Text>
+                    <Text as="small">
                       <Translation id="page-run-a-node-build-your-own-connection-small" />
-                    </small>
-                  </p>
+                    </Text>
+                  </Text>
                 </li>
                 <li>
                   <Translation id="page-run-a-node-build-your-own-peripherals" />
-                  <p>
-                    <small>
+                  <Text>
+                    <Text as="small">
                       <Translation id="page-run-a-node-build-your-own-peripherals-small" />
-                    </small>
-                  </p>
+                    </Text>
+                  </Text>
                 </li>
               </ul>
             </BuildBox>
-          </Flex>
+          </FlexContainer>
         </BuildContainer>
 
         <BuildContainer>
@@ -818,75 +741,77 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               // @ts-ignore
               alt={t("page-run-a-node-glyph-alt-software")}
             />
-            <h3>
+            <H3>
               <Translation id="page-run-a-node-build-your-own-software" />
-            </h3>
+            </H3>
           </SvgTitle>
 
-          <Flex>
+          <FlexContainer>
             <BuildBoxSpace>
-              <div>
-                <h4>
+              <Box>
+                <H4>
                   <Translation id="page-run-a-node-build-your-own-software-option-1-title" />
-                </h4>
-                <p>
+                </H4>
+                <Text>
                   <Translation id="page-run-a-node-build-your-own-software-option-1-description" />
-                </p>
-              </div>
+                </Text>
+              </Box>
               <ButtonContainer>
-                <DappNodeButtonLink to="https://docs.dappnode.io">
+                <ButtonLink to="https://docs.dappnode.io">
                   <Translation id="page-run-a-node-build-your-own-software-option-1-button" />
-                </DappNodeButtonLink>
+                </ButtonLink>
               </ButtonContainer>
             </BuildBoxSpace>
 
             <BuildBoxSpace>
-              <div>
-                <h4>
+              <Box>
+                <H4>
                   <Translation id="page-run-a-node-build-your-own-software-option-2-title" />
-                </h4>
-                <p>
+                </H4>
+                <Text>
                   <Translation id="page-run-a-node-build-your-own-software-option-2-description-1" />
-                </p>
-                <p>
+                </Text>
+                <Text>
                   <Translation id="page-run-a-node-build-your-own-software-option-2-description-2" />
-                </p>
-              </div>
+                </Text>
+              </Box>
               <ButtonContainer>
-                <ResponsiveButtonLink
+                <ButtonLink
                   to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
                   variant="outline"
                 >
-                  <code>
+                  <Text as="code">
                     <Translation id="page-run-a-node-build-your-own-software-option-2-button" />
-                  </code>
-                </ResponsiveButtonLink>
+                  </Text>
+                </ButtonLink>
               </ButtonContainer>
             </BuildBoxSpace>
-          </Flex>
+          </FlexContainer>
         </BuildContainer>
       </Content>
 
       <Content>
-        <SplitContent>
+        <SplitContent direction={{ base: "column-reverse", md: "row" }}>
           <Column>
-            <h2>
+            <H2>
               <Translation id="page-run-a-node-community-title" />
-            </h2>
-            <p>
+            </H2>
+            <Text>
               <Translation id="page-run-a-node-community-description-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-run-a-node-community-description-2" />
-            </p>
+            </Text>
             <ButtonContainer>
-              <ResponsiveButtonLink to="https://discord.gg/c28an8dA5k">
-                <DiscordIcon name="discord" />
+              <ButtonLink
+                leftIcon={<FaDiscord />}
+                to="https://discord.gg/c28an8dA5k"
+              >
                 <Translation id="page-run-a-node-community-link-1" />
-              </ResponsiveButtonLink>
-              <ResponsiveButtonLink to="/community/online/" variant="outline">
+              </ButtonLink>
+              <ButtonLink to="/community/online/" variant="outline">
                 <Translation id="page-run-a-node-community-link-2" />
-              </ResponsiveButtonLink>
+              </ButtonLink>
             </ButtonContainer>
           </Column>
           <Column>
@@ -896,32 +821,32 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       </Content>
 
       <Content>
-        <h2>
+        <H2>
           <Translation id="page-run-a-node-further-reading-title" />
-        </h2>
+        </H2>
         <ul>
           <li>
-            <Link to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
+            <InlineLink to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
               <Translation id="page-run-a-node-further-reading-1-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-further-reading-1-author" />
-            </i>
+            </Text>
           </li>
           <li>
-            <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
+            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
               <Translation id="page-run-a-node-further-reading-2-link" />
-            </Link>
+            </InlineLink>
           </li>
           <li>
-            <Link to="https://vitalik.ca/general/2021/05/23/scaling.html">
+            <InlineLink to="https://vitalik.ca/general/2021/05/23/scaling.html">
               <Translation id="page-run-a-node-further-reading-3-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-further-reading-3-author" />
-            </i>
+            </Text>
           </li>
         </ul>
       </Content>
@@ -930,71 +855,78 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
       <StakingCalloutContainer>
         <Column>
-          <Leslie image={getImage(data.leslie)!} alt="" />
+          <GatsbyImage
+            image={getImage(data.leslie)!}
+            alt=""
+            transform={{
+              base: "scaleX(-1) translateY(-3rem)",
+              lg: "scaleX(-1) scale(1.15) translateX(2rem)",
+            }}
+          />
         </Column>
         <Column>
-          <h2>
+          <H2>
             <Translation id="page-run-a-node-staking-title" />
-          </h2>
-          <p>
+          </H2>
+          <Text>
             <Translation id="page-run-a-node-staking-description" />
-          </p>
+          </Text>
           <ButtonContainer>
-            <ResponsiveButtonLink to="/staking/">
+            <ButtonLink to="/staking/">
               <Translation id="page-run-a-node-staking-link" />
-            </ResponsiveButtonLink>
+            </ButtonLink>
           </ButtonContainer>
         </Column>
       </StakingCalloutContainer>
       <Content>
-        <h3 id="plan-on-staking">
-          <StyledEmoji text=":cut_of_meat:" size={2} />
+        <H3 id="plan-on-staking">
+          <Emoji text=":cut_of_meat:" fontSize="2em" mr={4} />
           <Translation id="page-run-a-node-staking-plans-title" />
-        </h3>
-        <p>
+        </H3>
+        <Text>
           <Translation id="page-run-a-node-staking-plans-description" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-run-a-node-staking-plans-ethstaker-link-description" />{" "}
           -{" "}
-          <Link to="https://youtu.be/C2wwu1IlhDc">
+          <InlineLink to="https://youtu.be/C2wwu1IlhDc">
             <Translation id="page-run-a-node-staking-plans-ethstaker-link-label" />
-          </Link>
-        </p>
-        <h3 id="rasp-pi">
-          <StyledEmoji text=":pie:" size={2} />
+          </InlineLink>
+        </Text>
+        <H3 id="rasp-pi">
+          <Emoji text=":pie:" fontSize="2em" mr={4} />
           <Translation id="page-run-a-node-rasp-pi-title" />
-        </h3>
-        <p>
+        </H3>
+        <Text>
           <Translation id="page-run-a-node-rasp-pi-description" />
-        </p>
+        </Text>
         <ul>
           <li>
-            <Link to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
+            <InlineLink to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
               <Translation id="page-run-a-node-rasp-pi-note-1-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-rasp-pi-note-1-description" />
-            </i>
+            </Text>
           </li>
           <li>
-            <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
+            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
               <Translation id="page-run-a-node-rasp-pi-note-2-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-rasp-pi-note-2-description" />
-            </i>
+            </Text>
           </li>
           <li>
-            <Link to="/developers/tutorials/run-node-raspberry-pi">
+            <InlineLink to="/developers/tutorials/run-node-raspberry-pi">
               <Translation id="page-run-a-node-rasp-pi-note-3-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
-            <i>
+            <Text as="i">
               <Translation id="page-run-a-node-rasp-pi-note-3-description" />
-            </i>
+            </Text>
           </li>
         </ul>
       </Content>

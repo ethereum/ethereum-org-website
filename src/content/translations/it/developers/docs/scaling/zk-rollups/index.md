@@ -102,7 +102,7 @@ Gli ZK-STARK sono "trasparenti", potendo lavorare senza la configurazione attend
 
 Gli ZK-STARK forniscono inoltre una maggiore scalabilità perché il tempo necessario per provare e verificare le prove di validità aumenta _quasi linearmente_ rispetto alla complessità del calcolo sottostante. Con gli ZK-SNARK, la prova e la verifica dei tempi scalano _linearmente_ in rapporto alle dimensioni del calcolo sottostante. Questo significa che gli ZK-STARK richiedono meno tempo degli ZK-SNARK per provare e verificare quando sono coinvolti grandi serie di dati, rendendoli utili per le applicazioni a volume elevato.
 
-Gli ZK-STARK proteggono inoltre dai computer quantistici, mentre è opinione diffusa che la Crittografia a curva ellittica (ECC) usata negli ZK-SNARK sia suscettibile agli attacchi di calcolo quantistico. Lo svantaggio degli ZK-STARK è che producono prove di dimensioni maggiori, che sono più costose da verificare su Ethereum. Inoltre, non supportano la ricorsività, che è la chiave per scalare i calcoli off-chain con le prove a conoscenza zero.
+Gli ZK-STARK proteggono inoltre dai computer quantistici, mentre è opinione diffusa che la Crittografia a curva ellittica (ECC) usata negli ZK-SNARK sia suscettibile agli attacchi di calcolo quantistico. Lo svantaggio degli ZK-STARK è che producono prove di dimensioni maggiori, che sono più costose da verificare su Ethereum.
 
 #### Come funzionano le prove di validità nei rollup ZK? {#validity-proofs-in-zk-rollups}
 
@@ -115,7 +115,7 @@ Prima di accettare le transazioni, l'operatore eseguirà i soliti controlli. Que
 - La transazione sia corretta e corrisponda alla chiave pubblica del mittente sul rollup.
 - Il nonce del mittente sia corretto, ecc.
 
-Una volta che il nodo del rollup ZK ha abbastanza transazioni, le aggrega in un batch e compila gli input per il circuito di prova da compilare in una prova ZK succinta. Questo include:
+Una volta che il nodo del rollup ZK ha abbastanza transazioni, le aggrega in un batch e compila gli input per il circuito di prova da compilare in una prova "piccola" ZK. Questo include:
 
 - Un albero di Merkle che comprenda tutte le transazioni nel batch.
 - Le prove di Merkle per le transazioni per provare l'inclusione nel batch.
@@ -130,7 +130,7 @@ Il circuito di prova esegue lo stesso processo sul conto del destinatario. Verif
 
 Il processo si ripete per ogni transazione; ogni "ciclo" crea una nuova radice di stato dall'aggiornamento del conto del mittente e una successiva nuova radice dall'aggiornamento del conto del destinatario. Come spiegato, ogni aggiornamento alla radice di stato rappresenta il cambiamento di una parte dell'albero di stato del rollup.
 
-Il circuito di prova ZK itera a ciclo di intero batch di transazioni, verificando la sequenza di aggiornamenti risultante in una radice di stato finale dopo l'esecuzione dell'ultima transazione. L'ultima radice di Merkle calcolata diventa la più recente radice di stato canonica del rollup ZK.
+Il circuito di prova ZK itera l'intero batch di transazioni, verificando la sequenza di aggiornamenti risultante in una radice di stato finale dopo l'esecuzione dell'ultima transazione. L'ultima radice di Merkle calcolata diventa la più recente radice di stato canonica del rollup ZK.
 
 ##### Verifica della prova
 
@@ -172,7 +172,7 @@ Tuttavia, i [progressi nella tecnologia a conoscenza zero](https://hackmd.io/@ye
 
 Come l'EVM, una zkEVM transita tra gli stati dopo che il calcolo è eseguito su alcuni input. La differenza è che la zkEVM crea anche prove a conoscenza zero per verificare la correttezza di ogni passaggio nell'esecuzione del programma. Le prove di validità potrebbero verificare la correttezza delle operazioni che toccano lo stato della VM (memoria, stack, archiviazione) e il calcolo stesso (cioè, l'operazione ha chiamato gli opcode esatti e li ha eseguiti correttamente?).
 
-L'introduzione dei rollup ZK compatibili con l'EVM è prevista per aiutare gli sviluppatori a sfruttare le garanzie di scalabilità e sicurezza delle prove a conoscenza zero. Ancora più importante, la compatibilità con l'infrastruttura nativa di Ethereum fa sì che gli sviluppatori possano creare dapp con funzionalità ZK usando strumenti e linguaggi familiari (e collaudati).
+L'introduzione dei rollup ZK compatibili con l'EVM è prevista per aiutare gli sviluppatori a sfruttare le garanzie di scalabilità e sicurezza delle prove a conoscenza zero. Ancora più importante, la compatibilità con l'infrastruttura nativa di Ethereum fa sì che gli sviluppatori possano creare dApp con funzionalità ZK usando strumenti e linguaggi familiari (e collaudati).
 
 ## Come funzionano le commissioni del rollup ZK? {#how-do-zk-rollup-fees-work}
 
@@ -232,13 +232,15 @@ Esistono molteplici implementazioni dei rollup ZK che puoi integrare nelle tue d
 
 I progetti che stanno lavorando alle zkEVM includono:
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 è un rollup ZK compatibile con l'EVM creato da Matter Labs, basato sulla propria zkEVM._
-
 - **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP è un progetto finanziato dalla Ethereum Foundation per sviluppare un rollup ZK compatibile con l'EVM e un meccanismo per generare prove di validità per i blocchi di Ethereum._
+
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _ è un Rollup ZK decentralizzato sulla rete principale di Ethereum che opera su una Macchina Virtuale di Ethereum a conoscenza zero (zkEVM) che esegue le transazioni di Ethereum in modo trasparente, includendo contratti intelligenti con validazioni di prova a conoscenza zero._
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll è un'azienda orientata alla tecnologia che sta lavorando alla creazione di una Soluzione di Livello 2 dello zkEVM nativa per Ethereum._
 
-- **[Polygon Hermez](https://docs.hermez.io/zkEVM/architecture/introduction/)** - _Hermez 2.0 è un Rollup ZK decentralizzato sulla rete principale di Ethereum che opera su una Macchina Virtuale di Ethereum a conoscenza zero (zkEVM) ed eseguite le transazioni di Ethereum in modo trasparente, includendo i contratti intelligenti con validazioni di prova a conoscenza zero._
+- **[Taiko](https://taiko.xyz)** - _Taiko è un rollup ZK decentralizzato ed equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.ca/general/2022/08/04/zkevm.html))._
+
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 è un rollup ZK compatibile con l'EVM creato da Matter Labs, basato sulla propria zkEVM._
 
 ## Ulteriori letture sui rollup ZK {#further-reading-on-zk-rollups}
 

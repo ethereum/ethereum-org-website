@@ -35,6 +35,8 @@ I ponti consentono:
 - agli utenti di accedere a nuove piattaforme e sfruttare i benefici di catene differenti.
 - agli sviluppatori da ecosistemi della blockchain differenti, di collaborare e creare nuove piattaforme per gli utenti.
 
+[Come collegare i token al livello 2](/guides/how-to-use-a-bridge/)
+
 <Divider />
 
 ## Casi d'uso dei ponti {#bridge-use-cases}

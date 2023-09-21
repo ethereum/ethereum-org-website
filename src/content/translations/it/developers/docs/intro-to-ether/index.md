@@ -18,7 +18,7 @@ La prima criptovaluta è stata Bitcoin, creata da Satoshi Nakamoto. Dal rilascio
 
 ## Cos'è un ether? {#what-is-ether}
 
-**Ether (ETH)** è la criptovaluta impiegata per molti scopi sulla rete Ethereum. Fondamentalmente è l'unica forma di pagamento accettabile per le commissioni sulle transazioni, e dopo [la fusione](/roadmap/merge) servianno degli ether per convalidare e proporre blocchi sulla rete principale. L'ether è anche usato come una forma principale di garanzia nei mercati di prestito della [DeFi](/defi), come un'unità di conto nei mercati di NFT, come pagamento guadagnato per l'esecuzione di servizi o della vendita di beni del mondo reale e molto altro.
+**Ether (ETH)** è la criptovaluta impiegata per molti scopi sulla rete Ethereum. Fondamentalmente è l'unica forma di pagamento accettabile per le commissioni sulle transazioni, e dopo [La Fusione](/roadmap/merge) serviranno ether per convalidare e proporre blocchi sulla Rete Principale. L'ether è anche usato come una forma principale di garanzia nei mercati di prestito della [DeFi](/defi), come un'unità di conto nei mercati di NFT, come pagamento guadagnato per l'esecuzione di servizi o della vendita di beni del mondo reale e molto altro.
 
 Ethereum consente agli sviluppatori di creare [**applicazioni decentralizzate (dapp)**](/developers/docs/dapps), che condividono tutte un pool di potenza di elaborazione. Questo pool condiviso è limitato, quindi Ethereum necessita di un meccanismo per determinare chi lo usa. In caso contrario, una dApp potrebbe consumare accidentalmente o malevolmente tutte le risorse della rete, impedendo ad altri di accedervi.
 
@@ -36,15 +36,15 @@ L'ether è coniato come una ricompensa per ogni blocco proposto e al punto di co
 
 ## Bruciare ether {#burning-ether}
 
-Oltre a essere creato tramite le ricompense per il blocco, l'ether può essere anche distrutto o "bruciato", come si dice in gergo. L'ether bruciato viene rimosso dalla circolazione in via permanente.
+Oltre a creare ether tramite le ricompense del blocco, l'ether può essere distrutto tramite un processo detto 'bruciatura'. L'ether bruciato viene rimosso dalla circolazione in via permanente.
 
 La bruciatura di ether ha luogo in ogni transazione su Ethereum. Quando gli utenti pagano per le proprie transazioni, una commissione di base sul gas, impostata dalla rete secondo la domanda di transazioni, viene distrutta. Questo, insieme a dimensioni variabili dei blocchi e una commissione sul gas massima, semplifica la stima della commissione della transazione su Ethereum. Quando la domanda della rete è elevata, i [blocchi](https://etherscan.io/block/12965263) possono bruciare più ether di quanto ne sia coniato, compensando efficacemente l'emissione di ether.
 
-Bruciare la commissione di base impedisce vari metodi in cui i produttori del blocco potrebbero altrimenti manipolarla. Ad esempio, se i produttori del blocco hanno ricevuto la commissione di base, potrebbero includere le proprie transazioni gratuitamente e aumentare la commissione di base per tutti gli altri. In caso contrario, potrebbero rimborsare la commissione di base ad alcuni utenti al di fuori della catena, creando così un mercato delle commissioni sulle transazioni più opaco e complesso.
+Bruciare la commissione di base ostacola la capacità dei produttori di blocchi di manipolare le transazioni. Ad esempio, se i produttori del blocco hanno ricevuto la commissione di base, potrebbero includere le proprie transazioni gratuitamente e aumentare la commissione di base per tutti gli altri. In caso contrario, potrebbero rimborsare la commissione di base ad alcuni utenti al di fuori della catena, creando così un mercato delle commissioni sulle transazioni più opaco e complesso.
 
 ## Denominazioni dell'ether {#denominations}
 
-Poiché molte transazioni su Ethereum sono di dimensioni ridotte, l'ether ha diverse denominazioni che possono essere utilizzate per importi di piccola entità. Tra queste denominazioni, Wei e gwei sono particolarmente importanti.
+Poiché il valore di molte transazioni su Ethereum è ridotto, l'ether ha svariate denominazioni che possono essere utilizzate per fare riferimento a unità di conto inferiori. Tra queste denominazioni, Wei e gwei sono particolarmente importanti.
 
 Wei è la quantità più piccola possibile di ether. Di conseguenza, molte implementazioni tecniche, come l'[Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), effettuano tutti i loro calcoli in Wei.
 

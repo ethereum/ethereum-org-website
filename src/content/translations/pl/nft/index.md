@@ -304,7 +304,7 @@ Ethereum umożliwia działanie NFT z kilku powodów:
 
 ## Wpływ NFT na środowisko {#environmental-impact-nfts}
 
-Tworzenie i przesyłanie NFT to wyłącznie transakcje Ethereum — wybijanie, kupowanie, wymiana lub interakcja z NFT nie powoduje bezpośredniego zużycia energii. Od czasu [Połączenia](/roadmap/merge) Ethereum jest łańcuchem bloków o niskim zużyciu energii, co oznacza, że ​​wpływ używania NFT na środowisko jest niewielki.
+Tworzenie i przesyłanie NFT to wyłącznie transakcje Ethereum — wybijanie, kupowanie, wymiana lub interakcja z NFT nie powoduje bezpośredniego zużycia energii. Od czasu [Połączenia](/roadmap/merge) Ethereum jest blockchainem o niskim zużyciu energii, co oznacza, że ​​wpływ używania NFT na środowisko jest znikomy.
 
 [Więcej o zużyciu energii przez Ethereum](/energy-consumption/).
 
@@ -341,7 +341,7 @@ Kwestie bezpieczeństwa związane z NFT są najczęściej związane z oszustwami
 
 ## Twórz z NFT {#build-with-nfts}
 
-Większość NFT jest zbudowana przy użyciu spójnego standardu znanego jako [ERC-721](/developers/docs/standards/tokens/erc-721/). Istnieją jednak inne standardy, którym warto się przyjrzeć. Standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) pozwala na półzamienne tokeny, co jest szczególnie przydatne w świecie gier. A ostatnio zaproponowano [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309), aby bicie NFT było o wiele bardziej wydajne. Ten standard pozwala wybić dowolną ilość w jednej transakcji!
+Większość NFT jest zbudowana przy użyciu spójnego standardu znanego jako [ERC-721](/developers/docs/standards/tokens/erc-721/). Istnieją jednak inne standardy, którym warto się przyjrzeć. Standard [ERC-1155](/developers/docs/standards/tokens/erc-1155/) pozwala na półzamienne tokeny, co jest szczególnie przydatne w świecie gier. A ostatnio zaproponowano [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309), aby bicie NFT było o wiele bardziej wydajne. Ten standard pozwala wybić dowolną ilość w jednej transakcji!
 
 ## Dalsza lektura {#further-reading}
 
@@ -351,5 +351,6 @@ Większość NFT jest zbudowana przy użyciu spójnego standardu znanego jako [E
 - [Wszystko, co musisz wiedzieć o metawersum](https://foundation.app/blog/enter-the-metaverse) – _Zespół fundacji, foundation.app_
 - [Nie, kryptoartyści nie szkodzą planecie](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Zużycie energii przez Ethereum](/energy-consumption/)
+- [Interfejsy API Ethereum NFT](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
 <QuizWidget quizKey="nfts" />

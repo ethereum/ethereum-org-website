@@ -35,10 +35,11 @@ lang: zh
 - [Lido 生态系统资助组织 (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) 金融生态系统_
 - [MetaMask 方案](https://metamaskgrants.org/) - _-[MetaMask](https://metamask.io/) 员工主导的资助去中心化自助组织_
 - [mStable 资助方案](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) 社区_
+- [SKALE 网络资助方案](https://skale.space/developers#grants) - _[SKALE 网络](https://skale.space/)生态系统_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生态系统_
 - [UMA 资助方案](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) 开发者支持_
 - [Uniswap 资助方案](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) 社区_
-- [Web3 资助](https://web3grants.net) - _Web3/加密货币相关资助计划详尽列表_
+- [Web3 资助](https://web3grants.net) - _Web3/加密货币相关资助方案详尽列表_
 
 ## 二次方融资 {#quadratic-funding}
 

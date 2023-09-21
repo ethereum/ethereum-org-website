@@ -1,24 +1,24 @@
 ---
 title: Organizzazioni autonome decentralizzate (DAO)
-description: Una panoramica dei DAO su Ethereum
+description: Una panoramica delle DAO su Ethereum
 lang: it
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 3
 image: ../../../../assets/use-cases/dao-2.png
 alt: Rappresentazione di una votazione DAO su una proposta.
-summaryPoint1: Comunità di proprietà dei membri senza leadership centralizzata.
+summaryPoint1: Community posseduta dai membri, prive di leadership centralizzata.
 summaryPoint2: Un modo sicuro per collaborare con sconosciuti su Internet.
 summaryPoint3: Un luogo sicuro per impegnare fondi in una causa specifica.
 ---
 
 ## Cosa sono le DAO? {#what-are-daos}
 
-Con il termine DAO si intende una organizzazione di proprietà collettiva governata da blockchain che lavora per realizzare una missione condivisa.
+Una DAO è un'organizzazione posseduta collettivamente e governata dalla blockchain, che opera per realizzare una missione condivisa.
 
-Le DAO permettono di lavorare con persone con la stessa mentalità provenienti da tutto il mondo doversi fidare di un leader benevolo per gestire i fondi o le operazioni. Non esiste alcun CEO che possa spendere i fondi secondo i propri capricci o un CFO che possa manipolare i libri contabili. Invece, le regole basate sulla blockchain integrate nel codice definiscono il funzionamento dell'organizzazione e come vengono spesi i fondi.
+Le DAO ci consentono di lavorare con persone con la stessa mentalità provenienti da tutto il mondo, senza doversi fidare di un capo benevolo, per la gestione di fondi od operazioni. Non esiste alcun CEO che possa spendere i fondi secondo i propri capricci, o CFO che possa manipolare i libri contabili. Invece, le regole basate sulla blockchain, integrate nel codice, definiscono il funzionamento dell'organizzazione e come vengono spesi i fondi.
 
-Contengono al loro interno un patrimonio a cui nessuno ha l'autorità di accedere senza l'approvazione del gruppo. Le decisioni sono governate da proposte e votazioni per garantire che tutti nell'organizzazione abbiano voce in capitolo, e tutto si verifica in modo trasparente sulla catena.
+Contengono delle tesoriere integrate, a cui nessuno ha l'autorità di accedere senza l'approvazione del gruppo. Le decisioni sono governate da proposte e votazioni, per assicurarsi che tutti nell'organizzazione abbiano voce in capitolo, e che tutto si verifichi in modo trasparente sulla catena.
 
 ## Perché abbiamo bisogno delle DAO? {#why-dao}
 

@@ -42,7 +42,7 @@ Entrambi i tipi di conto hanno l'abilità di:
 
 I conti di Ethereum hanno quattro campi:
 
-- `nonce`: Un contatore che indica il numero di transazioni inviate dal conto. Questo assicura che le transazioni siano elaborate una volta. Nel conto di un contratto, questo numero rappresenta il numero di contratti creati dal conto.
+- `nonce` – Si tratta di un codice che indica il numero di transazioni inviate da un conto posseduto esternamente oppure il numero di contratti creati da un conto. Per ogni conto può essere eseguita una sola transazione con un determinato nonce, il che protegge da attacchi replay in cui le transazioni firmate vengono trasmesse e ri-eseguite ripetutamente.
 - `balance`: il numero di wei posseduti da questo indirizzo. Wei è una denominazione di ETH e ci sono 1e+18 wei per ETH.
 - `codeHash`: Questo hash si riferisce al _codice_ di un conto sulla Macchina Virtuale di Ethereum (EVM). I conti del contratto contengono frammenti di codice programmati per poter eseguire diverse operazioni. Questo codice dell'EVM viene eseguito se il conto riceve una chiamata di messaggio. Non è modificabile, a differenza degli altri campi del conto. Tutti i frammenti di codice sono conservati nel database di stato sotto gli hash corrispondenti, per riferimento futuro. Questo valore dell'hash è noto come un codeHash. Per i conti esterni, il campo codeHash è l'hash di una stringa vuota.
 - `storageRoot`: detto anche hash di archiviazione. Un hash da 256 bit del nodo radice di un albero di Patricia Merkle che codifica i contenuti dell'archiviazione del conto (una mappatura tra i valori interi da 256 bit), codificato nell'albero come una mappatura dall'hash da 256 bit di Keccak delle chiavi intere da 256 bit ai valori interi codificati in RLP da 256 bit. Questo albero codifica l'hash dei contenuti dell'archiviazione di questo conto ed è vuoto di default.
@@ -69,19 +69,22 @@ Esempio:
 
 La chiave pubblica è generata dalla chiave privata usando [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Puoi ottenere un indirizzo pubblico per il tuo conto prendendo gli ultimi 20 byte dell'hash Keccak-256 della chiave pubblica e aggiungendo `0x` all'inizio.
 
-Ecco un esempio di creazione di un conto nella console usando il `personal_newAccount` di GETH
+Il seguente esempio mostra come usare uno strumento di firma chiamato [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) per generare un nuovo account. Clef è uno strumento di gestione degli account e di firma che è stato messo in bundle con il client Ethereum, [Geth](https://geth.ethereum.org). Il comando `chiave del nuovo account` crea una nuova coppia di chiavi, e le salva in uno store crittografato.
 
-```go
-> personal.newAccount()
-Passphrase:
-Repeat passphrase:
-"0x5e97870f263700f46aa00d967821199b9bc5a120"
+```
+> clef newaccount --keystore <path>
 
-> personal.newAccount("h4ck3r")
-"0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
+Please enter a password for the new account to be created:
+> <password>
+
+------------
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Account generato 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
-[Documentazione di GETH](https://geth.ethereum.org/docs)
+[Documentazione di Geth](https://geth.ethereum.org/docs)
 
 È possibile derivare nuove chiavi pubbliche dalla tua chiave privata ma non puoi derivare una chiave privata dalle chiavi pubbliche. Questo significa che è vitale mantenere al sicuro una chiave privata, come suggerito dal nome, **PRIVATA**.
 

@@ -38,6 +38,7 @@ Vous êtes à la recherche d'un portefeuille Ethereum ? [Explorez notre liste co
 
 Le développement d'une application décentralisée peut être difficile. Voici quelques espaces axés sur leur création, avec des développeurs Ethereum chevronnés qui seront heureux de vous faire part de leur expérience.
 
+- [Alchemy University](https://university.alchemy.com/#starter_code)
 - [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
@@ -63,7 +64,7 @@ Voici quelques exemples connus :
 
 Si vous exécutez un nœud ou un validateur, voici quelques communautés qui sont consacrées à aider ceux qui débutent.
 
-- [Discord EthStaker](https://discord.io/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
 - [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
 
 La plupart des équipes qui créent des clients Ethereum disposent aussi d'espaces dédiés, ouverts au public, dans lesquels vous pouvez obtenir une aide et poser des questions.

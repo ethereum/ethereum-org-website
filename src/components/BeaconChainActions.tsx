@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Flex, Heading } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
@@ -7,13 +7,14 @@ import { getImage, ImageDataLike } from "../utils/image"
 
 import CardList from "./CardList"
 import Card from "./Card"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Translation from "./Translation"
+import OldHeading from "./OldHeading"
 
 import type { CardListItem } from "./CardList"
 
 const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize="2xl"
     fontWeight="bold"
@@ -21,7 +22,7 @@ const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     sx={{ a: { display: "none" } }}
   >
     {children}
-  </Heading>
+  </OldHeading>
 )
 
 export const DataLogo = graphql`
@@ -59,14 +60,14 @@ const BeaconChainActions: React.FC = () => {
 
   const datapoints: Array<CardListItem> = [
     {
-      title: "beaconscan",
+      title: t("consensus-beaconscan-title"),
       image: getImage(data.beaconscan)!,
       alt: "",
       link: "https://beaconscan.com",
       description: t("consensus-beaconscan-desc"),
     },
     {
-      title: "beaconcha.in",
+      title: t("consensus-beaconscan-in-title"),
       image: getImage(data.beaconchain)!,
       alt: "",
       link: "https://beaconcha.in",
@@ -78,12 +79,12 @@ const BeaconChainActions: React.FC = () => {
   const reads: Array<CardListItem> = [
     {
       title: t("page-upgrade-article-title-two-point-oh"),
-      description: "Status",
+      description: t("page-upgrade-article-author-status"),
       link: "https://our.status.im/two-point-oh-the-beacon-chain/",
     },
     {
       title: t("page-upgrade-article-title-beacon-chain-explainer"),
-      description: "Ethos.dev",
+      description: t("page-upgrade-article-author-ethos-dev"),
       link: "https://ethos.dev/beacon-chain/",
     },
     {

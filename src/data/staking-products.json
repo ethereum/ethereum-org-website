@@ -157,7 +157,12 @@
       "hue": 221,
       "launchDate": "2021-06-05",
       "url": "https://eth-docker.net",
-      "audits": [],
+      "audits": [
+        {
+          "name": "Sigma Prime",
+          "url": "https://eth-docker.net/About/SecurityAudit"
+        }
+      ],
       "minEth": 32,
       "isFoss": true,
       "hasBugBounty": false,
@@ -244,11 +249,11 @@
       "url": "https://launchnodes.com/",
       "audits": [],
       "minEth": 32,
-      "isFoss": false,
+      "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
       "isPermissionless": false,
-      "multiClient": false,
+      "multiClient": true,
       "easyClientSwitching": false,
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["CLI", "AWS", "Azure"],
@@ -286,7 +291,7 @@
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["GUI"],
       "socials": {
-        "discord": "https://discord.io/ethstaker",
+        "discord": "https://discord.gg/ethstaker",
         "twitter": "https://twitter.com/wagyutools",
         "github": "https://github.com/stake-house/wagyu-key-gen"
       },
@@ -351,6 +356,53 @@
     }
   ],
   "saas": [
+    {
+      "name": "stakefish",
+      "imageName": "Stakefish",
+      "hue": 73,
+      "launchDate": "2020-12-01",
+      "url": "https://stake.fish/ethereum/",
+      "audits": [
+        {
+          "name": "Solidified",
+          "url": "https://github.com/solidified-platform/audits/blob/master/Audit%20Report%20-%20Stakefish%20%5B20.09.2021%5D.pdf"
+        },
+        {
+          "name": "Slither",
+          "url": "https://github.com/crytic/slither"
+        },
+        {
+          "name": "SOC 2 Type II",
+          "url": "https://blog.stake.fish/stakefish-completes-soc-2-type-ii-certification-for-non-custodial-blockchain-staking-services/"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "feePercentage": 5,
+      "tokens": [],
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": null,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser", "Wallet", "Linux", "macOS", "Windows"],
+      "ui": ["GUI"],
+      "socials": {
+        "github": "https://github.com/stakefish",
+        "twitter": "https://twitter.com/stakefish",
+        "telegram": "https://t.me/stakefish",
+        "linkedin": "https://www.linkedin.com/company/14396078",
+        "youtube": "https://www.youtube.com/@stakefish"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked stakefish go to link"
+      }
+    },
     {
       "name": "Kiln",
       "imageName": "Kiln",
@@ -466,14 +518,14 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityExecutionClient": null,
+      "pctMajorityExecutionClient": 0,
       "pctMajorityConsensusClient": 0,
       "isSelfCustody": true,
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
-        "discord": "https://discord.io/ethermine",
-        "twitter": "https://twitter.com/ethermine_org"
+        "discord": "https://discord.io/ethpool",
+        "twitter": "https://twitter.com/ethpool_staking"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
@@ -767,40 +819,6 @@
       }
     },
     {
-      "name": "stakefish",
-      "imageName": "Stakefish",
-      "hue": 73,
-      "launchDate": "2020-12-01",
-      "url": "https://stake.fish/ethereum-shared/",
-      "audits": [
-        {
-          "name": "Solidified",
-          "url": "https://github.com/solidified-platform/audits/blob/master/Audit%20Report%20-%20Stakefish%20%5B20.09.2021%5D.pdf"
-        }
-      ],
-      "minEth": 0.1,
-      "feePercentage": 10,
-      "tokens": [],
-      "isFoss": false,
-      "hasBugBounty": false,
-      "isTrustless": true,
-      "hasPermissionlessNodes": false,
-      "pctMajorityExecutionClient": null,
-      "pctMajorityConsensusClient": 0.0,
-      "platforms": ["Browser", "Wallet"],
-      "ui": ["GUI"],
-      "twitter": "https://twitter.com/stakefish",
-      "telegram": "https://t.me/stakefish",
-      "socials": {
-        "github": null
-      },
-      "matomo": {
-        "eventCategory": "StakingProductCard",
-        "eventAction": "Clicked",
-        "eventName": "Clicked stakefish go to link"
-      }
-    },
-    {
       "name": "Ankr Staking",
       "imageName": "Ankr",
       "hue": 221,
@@ -892,7 +910,7 @@
     },
     {
       "name": "Bedrock",
-      "imageName": "RockX",
+      "imageName": "Bedrock",
       "hue": 224,
       "launchDate": "2022-09-29",
       "url": "https://bedrock.rockx.com/",
@@ -930,53 +948,6 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked Bedrock go to link"
-      }
-    },
-    {
-      "name": "Origin Ether",
-      "imageName": "OriginEther",
-      "hue": 211,
-      "launchDate": "2023-05-16",
-      "url": "https://oeth.com/",
-      "audits": [
-        {
-          "name": "OpenZeppelin Security",
-          "url": "https://github.com/OriginProtocol/security/blob/master/audits/OpenZeppelin%20-%20Origin%20Dollar%20OETH%20Integration%20-%20May%202023.pdf"
-        },
-        {
-          "name": "Narya.ai",
-          "url": "https://github.com/OriginProtocol/security/blob/master/audits/Narya%20-%20Origin%20OETH%20Report%20-%20May%202023%20-%20Initial%20Report.pdf"
-        }
-      ],
-      "minEth": 0,
-      "feePercentage": 20,
-      "tokens": [
-        {
-          "name": "Origin Ether",
-          "symbol": "OETH",
-          "address": "0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3"
-        }
-      ],
-      "isFoss": true,
-      "hasBugBounty": true,
-      "isTrustless": true,
-      "hasPermissionlessNodes": true,
-      "pctMajorityClient": null,
-      "platforms": ["Browser"],
-      "ui": ["GUI"],
-      "socials": {
-        "discord": "https://discord.com/invite/ogn",
-        "twitter": "https://twitter.com/OriginProtocol",
-        "github": "https://github.com/originprotocol",
-        "linkedin": "https://www.linkedin.com/company/originprotocol/",
-        "youtube": "https://www.youtube.com/c/originprotocol",
-        "medium": "https://blog.originprotocol.com/",
-        "telegram": "https://t.me/originprotocol"
-      },
-      "matomo": {
-        "eventCategory": "StakingProductCard",
-        "eventAction": "Clicked",
-        "eventName": "Clicked Origin Ether go to link"
       }
     }
   ]

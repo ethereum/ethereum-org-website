@@ -1,8 +1,5 @@
 import React from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import Link from "./Link"
-import Translation from "./Translation"
-import { TranslationKey } from "../utils/translations"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import {
   Flex,
   Box,
@@ -12,8 +9,11 @@ import {
   LinkOverlay,
   useColorModeValue,
 } from "@chakra-ui/react"
-
 import { IoCodeOutline } from "react-icons/io5"
+import { BaseLink } from "./Link"
+import Translation from "./Translation"
+import GatsbyImage from "./GatsbyImage"
+import { TranslationKey } from "../utils/translations"
 
 export interface ITitleCardItem {
   title: string
@@ -47,7 +47,7 @@ const TitleCardList: React.FC<IProps> = ({
   )
   return (
     <Box
-      bg="background"
+      bg="background.base"
       boxShadow="tableBox"
       width="100%"
       border-radius="sm"
@@ -106,11 +106,8 @@ const TitleCardList: React.FC<IProps> = ({
         return isLink ? (
           <LinkBox
             key={id || idx}
-            as={Link}
-            href={link}
             display="flex"
             textDecoration="none"
-            hideArrow
             justifyContent="space-between"
             color="text"
             marginBottom="1px"
@@ -119,14 +116,13 @@ const TitleCardList: React.FC<IProps> = ({
             boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
             _hover={{
               textDecoration: "none",
-              boxShadow: "0 0 1px var(--eth-colors-primary)",
+              boxShadow: "0 0 1px var(--eth-colors-primary-base)",
               bg: "primary100",
               color: "black",
             }}
           >
             {image && (
-              <Box
-                as={GatsbyImage}
+              <GatsbyImage
                 marginTop={1}
                 marginRight={4}
                 minWidth={5}
@@ -136,7 +132,7 @@ const TitleCardList: React.FC<IProps> = ({
             )}
             <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
               <LinkOverlay
-                as={Link}
+                as={BaseLink}
                 href={link}
                 hideArrow
                 color="inherit"
@@ -186,14 +182,13 @@ const TitleCardList: React.FC<IProps> = ({
             cursor="pointer"
             boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
             _hover={{
-              boxShadow: "0 0 1px var(--eth-colors-primary)",
+              boxShadow: "0 0 1px var(--eth-colors-primary-base)",
               bg: "primary100",
               color: "black",
             }}
           >
             {image && (
-              <Box
-                as={GatsbyImage}
+              <GatsbyImage
                 marginTop={1}
                 marginRight={4}
                 minWidth={5}

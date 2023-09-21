@@ -69,7 +69,7 @@ Usamos NFTs para retribuir nossos colaboradores e ainda temos o nosso próprio n
 
 Se você contribuir para ethereum.org, poderá reivindicar uma NFT POAP. Estes são colecionáveis que provam que você participou de um evento. Alguns encontros cripto utilizaram POAP como uma forma de ticket para seus eventos. [Mais sobre contribuição](/contributing/#poap).
 
-![blog ethereum.org](../../assets/use-cases/poap.png)
+![ethereum.org POAP](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
@@ -348,8 +348,9 @@ A maioria dos NFTs é criada usando um padrão consistente conhecido como [ERC-7
 - [Dados de arte cripto](https://cryptoart.io/data) – Richard Chen, atualizados automaticamente
 - [OpenSea: A Bíblia sobre NFT](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, 10 de janeiro de 2020_
 - [Um guia para iniciantes em NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, janeiro de 2020_
-- [Tudo o que você precisa saber sobre o metaverso](https://foundation.app/blog/enter-the-metaverse) – _ (em inglês) equipe da Fundação, foundation.app_
+- [Tudo o que você precisa saber sobre o metaverso](https://foundation.app/blog/enter-the-metaverse) – _(em inglês) equipe da Fundação, foundation.app_
 - [Não, criptoartistas não abraçam o planeta](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Consumo de energia do Ethereum](/energy-consumption/)
+- [APIs Ethereum NFT](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
 <QuizWidget quizKey="nfts" />

@@ -9,14 +9,14 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import React from "react"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 
 import { Lang } from "../utils/languages"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
-import Link from "./Link"
+import { BaseLink } from "./Link"
 import Translation from "./Translation"
 
 const socialLinks = [
@@ -24,24 +24,21 @@ const socialLinks = [
     icon: FaGithub,
     to: "https://github.com/ethereum/ethereum-org-website",
     ariaLabel: "GitHub",
+    color: "#333",
   },
   {
     icon: FaTwitter,
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
-  },
-  {
-    icon: FaYoutube,
-    to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
-    ariaLabel: "Youtube",
+    color: "#1DA1F2",
   },
   {
     icon: FaDiscord,
     to: "https://discord.gg/CetY6Y4",
     ariaLabel: "Discord",
+    color: "#7289da",
   },
 ]
-
 export interface LinkSection {
   title: TranslationKey
   links: Array<{
@@ -66,8 +63,8 @@ const Footer: React.FC<IProps> = () => {
       title: t("use-ethereum"),
       links: [
         {
-          text: t("find-wallet"),
           to: "/wallets/find-wallet/",
+          text: t("find-wallet"),
         },
         {
           to: `/get-eth/`,
@@ -115,24 +112,28 @@ const Footer: React.FC<IProps> = () => {
           text: t("ethereum-wallets"),
         },
         {
-          text: t("ethereum-security"),
+          to: "/gas/",
+          text: "Gas fees",
+        },
+        {
           to: "/security/",
+          text: t("ethereum-security"),
         },
         {
-          text: t("web3"),
           to: "/web3/",
+          text: t("web3"),
         },
         {
-          text: t("smart-contracts"),
           to: "/smart-contracts/",
+          text: t("smart-contracts"),
         },
         {
-          text: t("energy-consumption"),
           to: "/energy-consumption/",
+          text: t("energy-consumption"),
         },
         {
-          text: t("ethereum-roadmap"),
           to: "/roadmap/",
+          text: t("ethereum-roadmap"),
         },
         {
           to: "/eips/",
@@ -151,20 +152,20 @@ const Footer: React.FC<IProps> = () => {
           text: t("ethereum-glossary"),
         },
         {
-          text: t("ethereum-governance"),
           to: "/governance/",
+          text: t("ethereum-governance"),
         },
         {
-          text: t("bridges"),
           to: "/bridges/",
+          text: t("bridges"),
         },
         {
-          text: t("zero-knowledge-proofs"),
           to: "/zero-knowledge-proofs/",
+          text: t("zero-knowledge-proofs"),
         },
         {
-          text: t("quizzes-title"),
           to: "/quizzes/",
+          text: t("quizzes-title"),
         },
       ],
     },
@@ -317,15 +318,24 @@ const Footer: React.FC<IProps> = () => {
         <Box my={4}>
           {socialLinks.map((link, idk) => {
             return (
-              <Link
+              <BaseLink
                 key={idk}
                 to={link.to}
                 hideArrow
                 color="secondary"
                 aria-label={link.ariaLabel}
               >
-                <Icon as={link.icon} fontSize="4xl" ml={4} />
-              </Link>
+                <Icon
+                  as={link.icon}
+                  _hover={{
+                    color: link.color,
+                    transition:
+                      "color 0.2s ease-in-out, transform 0.2s ease-in-out",
+                  }}
+                  fontSize="4xl"
+                  ml={4}
+                />
+              </BaseLink>
             )
           })}
         </Box>
@@ -354,20 +364,21 @@ const Footer: React.FC<IProps> = () => {
             <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} mb={4}>
-                  <Link
+                  <BaseLink
                     to={link.to}
                     isPartiallyActive={false}
                     dir={isPageRightToLeft ? "auto" : "ltr"}
                     textDecor="none"
                     color="text200"
+                    fontWeight="normal"
                     _hover={{
                       textDecor: "none",
-                      color: "primary",
+                      color: "primary.base",
                       _after: {
-                        color: "primary",
+                        color: "primary.base",
                       },
                       "& svg": {
-                        fill: "primary",
+                        fill: "primary.base",
                       },
                     }}
                     sx={{
@@ -377,7 +388,7 @@ const Footer: React.FC<IProps> = () => {
                     }}
                   >
                     {link.text}
-                  </Link>
+                  </BaseLink>
                 </ListItem>
               ))}
             </List>

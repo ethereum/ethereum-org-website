@@ -1,3 +1,4 @@
+const fs = require("fs")
 const path = require("path")
 const visitWithParents = require("unist-util-visit-parents")
 const isRelativeUrl = require("is-relative-url")
@@ -39,7 +40,10 @@ module.exports = ({ markdownNode, markdownAST }) => {
         return
       }
 
-      node.url = path.join(relativePath, node.url)
+      // only modify the paths for those files doesn't exist in the current folder
+      if (!fs.existsSync(path.join(fileAbsoluteDir, node.url))) {
+        node.url = path.join(relativePath, node.url)
+      }
     }
   })
 

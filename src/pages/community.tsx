@@ -2,14 +2,12 @@ import React from "react"
 import {
   Box,
   Flex,
-  Heading,
   HeadingProps,
   Image,
   SimpleGrid,
   Text,
   useTheme,
 } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
@@ -18,11 +16,13 @@ import Callout from "../components/Callout"
 import Card from "../components/Card"
 import ButtonLink, {
   IProps as IButtonLinkProps,
-} from "../components/ButtonLink"
+} from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+import GatsbyImage from "../components/GatsbyImage"
+import OldHeading from "../components/OldHeading"
 
 import { getImage } from "../utils/image"
 
@@ -120,9 +120,9 @@ const FeatureContent = ({ children }: ChildOnlyProp) => {
 
 const H2 = ({ children, ...props }: HeadingProps) => {
   return (
-    <Heading fontSize={{ base: "2xl", md: "2rem" }} mt={0} {...props}>
+    <OldHeading fontSize={{ base: "2xl", md: "2rem" }} mt={0} {...props}>
       {children}
-    </Heading>
+    </OldHeading>
   )
 }
 
@@ -268,8 +268,7 @@ const CommunityPage = ({
               </Subtitle>
             </Box>
             <ImageContainer>
-              <Image
-                as={GatsbyImage}
+              <GatsbyImage
                 w="full"
                 bgSize="cover"
                 bg="no-repeat 50px"
@@ -287,7 +286,7 @@ const CommunityPage = ({
                 borderRadius="sm"
                 border="1px solid"
                 borderColor="text"
-                bg="background"
+                bg="background.base"
                 boxShadow={theme.colors.cardBoxShadow}
                 key={idx}
                 title={card.title}
@@ -331,8 +330,7 @@ const CommunityPage = ({
             </ButtonRow>
           </FeatureContent>
           <ImageContainer>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               w="full"
               image={getImage(data.ethereum)!}
               alt={t("page-community-open-source-image-alt")}
@@ -379,8 +377,7 @@ const CommunityPage = ({
             </Flex>
           </FeatureContent>
           <ImageContainer>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               w="full"
               image={getImage(data.finance)!}
               alt={t("page-index-internet-image-alt")}
@@ -414,8 +411,7 @@ const CommunityPage = ({
             </Box>
           </FeatureContent>
           <ImageContainer>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               w="full"
               image={getImage(data.hackathon)!}
               alt={t("page-community-support-alt")}
@@ -432,9 +428,9 @@ const CommunityPage = ({
         px={8}
       >
         <Box flex="0 0 50%" maxW={{ base: "full", md: "75%" }} mb={6}>
-          <Heading fontSize={{ base: "2xl", md: "2rem" }}>
+          <OldHeading fontSize={{ base: "2xl", md: "2rem" }}>
             <Translation id="page-community-try-ethereum" />
-          </Heading>
+          </OldHeading>
         </Box>
       </Flex>
       <Content>
@@ -497,7 +493,7 @@ export const query = graphql`
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 800
+          width: 624
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -517,7 +513,7 @@ export const query = graphql`
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 1440
+          width: 740
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -527,7 +523,7 @@ export const query = graphql`
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 800
+          width: 600
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
@@ -537,7 +533,7 @@ export const query = graphql`
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 1440
+          width: 700
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

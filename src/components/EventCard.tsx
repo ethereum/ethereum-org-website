@@ -1,7 +1,8 @@
 import React from "react"
+import { Box, Heading } from "@chakra-ui/react"
+import { ButtonLink } from "./Buttons"
 import Emoji from "./Emoji"
-import ButtonLink from "./ButtonLink"
-import { Box, Text, Heading } from "@chakra-ui/react"
+import Text from "./OldText"
 
 const clearStyles = {
   content: '""',
@@ -44,7 +45,7 @@ const EventCard: React.FC<IProps> = ({
       left="50%"
       overflow="hidden"
       marginLeft="-12px"
-      backgroundColor="primary"
+      backgroundColor="primary.base"
       display={{ base: "none", md: "block" }}
     />
     <Box
@@ -75,10 +76,10 @@ const EventCard: React.FC<IProps> = ({
               borderLeft: "25px solid",
               borderRight: 0,
             }),
-        borderColor: "primary",
+        borderColor: "primary.base",
       }}
     >
-      <Text color="primary" marginBottom={0} textAlign="right">
+      <Text color="primary.base" marginBottom={0} textAlign="right">
         {date}
         <Emoji text=":spiral_calendar:" fontSize="md" marginLeft={2} />
       </Text>

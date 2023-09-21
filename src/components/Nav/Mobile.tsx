@@ -1,7 +1,6 @@
 import React, { Fragment, ReactNode, RefObject } from "react"
 import {
   Box,
-  IconButton,
   Icon,
   Drawer,
   DrawerOverlay,
@@ -12,17 +11,18 @@ import {
   forwardRef,
   DrawerFooter,
   Flex,
+  ButtonProps,
 } from "@chakra-ui/react"
 import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 
-import Link from "../Link"
+import { BaseLink } from "../Link"
+import { Button } from "../Buttons"
 import Translation from "../Translation"
 
 import { ISections } from "./types"
 import { ChildOnlyProp } from "../../types"
-import { SearchIconButton } from "../Search"
 
 const NavListItem = forwardRef<{ "aria-label"?: string }, typeof List>(
   (props, ref) => <ListItem ref={ref} mb={12} {...props} />
@@ -37,11 +37,11 @@ const StyledNavLink = (props: {
   isPartiallyActive: boolean
   children: ReactNode
 }) => (
-  <Link
+  <BaseLink
     color="currentColor"
     textDecor="none"
     _hover={{
-      color: "primary",
+      color: "primary.base",
     }}
     {...props}
   />
@@ -56,7 +56,7 @@ const FooterItem = forwardRef<ChildOnlyProp, "div">((props, ref) => (
     cursor="pointer"
     flexDir="column"
     _hover={{
-      color: "primary",
+      color: "primary.base",
       "& svg": {
         fill: "currentColor",
       },
@@ -104,7 +104,7 @@ const glyphPathVariants = {
   },
 }
 
-export interface IProps {
+export interface IProps extends ButtonProps {
   isMenuOpen: boolean
   isDarkTheme: boolean
   toggleMenu: () => void
@@ -124,6 +124,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   linkSections,
   fromPageParameter,
   drawerContainerRef,
+  ...props
 }) => {
   const { t } = useTranslation()
 
@@ -132,54 +133,45 @@ const MobileNavMenu: React.FC<IProps> = ({
   }
 
   return (
-    <Box
-      display={{ base: "flex", lg: "none" }}
-      gap={2}
-      sx={{ svg: { fill: "body" } }}
-    >
-      <SearchIconButton
-        onClick={toggleSearch}
-        aria-label={t("aria-toggle-search-button")}
-        size="sm"
-      />
-      <IconButton
-        icon={
-          <Icon
-            viewBox="0 0 24 40"
-            pointerEvents={isMenuOpen ? "none" : "auto"}
-            mx={0.5}
-            width={6}
-            height={10}
-            position="relative"
-            strokeWidth="2px"
-            zIndex={100}
-            _hover={{
-              color: "primary",
-              "& > path": {
-                stroke: "primary",
-              },
-            }}
-            sx={{
-              "& > path": {
-                stroke: "text",
-                fill: "none",
-              },
-            }}
-          >
-            <motion.path
-              variants={glyphPathVariants}
-              initial={false}
-              animate={isMenuOpen ? "open" : "closed"}
-            />
-          </Icon>
-        }
+    <>
+      <Button
         onClick={toggleMenu}
         aria-label={t("aria-toggle-search-button")}
-        variant="icon"
-        size="sm"
+        variant="ghost"
+        isSecondary
+        px={0}
         zIndex={2000}
-        _hover={{ svg: { fill: "primary" } }}
-      />
+        {...props}
+      >
+        <Icon
+          viewBox="0 0 24 40"
+          pointerEvents={isMenuOpen ? "none" : "auto"}
+          mx={0.5}
+          width={6}
+          height={10}
+          position="relative"
+          strokeWidth="2px"
+          zIndex={100}
+          _hover={{
+            color: "primary.base",
+            "& > path": {
+              stroke: "primary.base",
+            },
+          }}
+          sx={{
+            "& > path": {
+              stroke: "text",
+              fill: "none",
+            },
+          }}
+        >
+          <motion.path
+            variants={glyphPathVariants}
+            initial={false}
+            animate={isMenuOpen ? "open" : "closed"}
+          />
+        </Icon>
+      </Button>
       <Drawer
         portalProps={{ containerRef: drawerContainerRef }}
         isOpen={isMenuOpen}
@@ -188,7 +180,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         size="sm"
       >
         <DrawerOverlay bg="modalBackground" />
-        <DrawerContent bg="background">
+        <DrawerContent bg="background.base">
           <DrawerBody pt={12} pb={24} px={4}>
             <List m={0}>
               {Object.keys(linkSections).map((sectionKey, idx) => {
@@ -250,7 +242,7 @@ const MobileNavMenu: React.FC<IProps> = ({
             </List>
           </DrawerBody>
           <DrawerFooter
-            bg="background"
+            bg="background.base"
             borderTop="1px"
             borderColor="lightBorder"
             justifyContent="space-between"
@@ -279,14 +271,14 @@ const MobileNavMenu: React.FC<IProps> = ({
             </FooterItem>
             <FooterItem onClick={handleClick}>
               <Flex
-                as={Link}
+                as={BaseLink}
                 to={`/languages/${fromPageParameter}`}
                 alignItems="center"
                 color="text"
                 flexDir="column"
                 textDecor="none"
                 _hover={{
-                  color: "primary",
+                  color: "primary.base",
                   textDecor: "none",
                 }}
               >
@@ -299,7 +291,7 @@ const MobileNavMenu: React.FC<IProps> = ({
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-    </Box>
+    </>
   )
 }
 

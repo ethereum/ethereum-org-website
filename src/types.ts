@@ -5,7 +5,7 @@ import type { Messages } from "./interfaces"
 import type { Lang } from "./utils/languages"
 import { TranslationKey } from "./utils/translations"
 
-export type ChildOnlyProp = { children: ReactNode }
+export type ChildOnlyProp = { children?: ReactNode }
 
 export type Intl = {
   language: Lang
@@ -123,7 +123,7 @@ export interface RawQuizzes {
   [key: string]: RawQuiz
 }
 
-type QuizLevel = "beginner" | "intermediate"
+type QuizLevel = "beginner" | "intermediate" | "advanced"
 
 export type QuizzesSection = {
   id: string

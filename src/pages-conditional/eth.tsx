@@ -1,168 +1,257 @@
-import React from "react"
-import { Center } from "@chakra-ui/react"
-import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import React, { ComponentProps } from "react"
+import {
+  Box,
+  Center,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  ListItem,
+  UnorderedList,
+} from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import CardList from "../components/CardList"
 import EthPriceCard from "../components/EthPriceCard"
 import EthVideo from "../components/EthVideo"
 import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
-import {
-  CardContainer,
-  Content,
-  Divider,
-  GrayContainer,
-  Intro,
-  LeftColumn,
-  RightColumn,
-  TwoColumnContent,
-  Page,
-  StyledCard,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import Card from "../components/Card"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 import { getImage, getSrc } from "../utils/image"
-import { Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
+import GatsbyImage from "../components/GatsbyImage"
 
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 2rem;
-  line-height: 140%;
-`
+const Page = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    align="center"
+    w="full"
+    my={0}
+    mx="auto"
+    {...props}
+  />
+)
 
-const Title = styled.h1`
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-`
+const Content = (props: ChildOnlyProp) => (
+  <Box w="full" px={8} py={4} {...props} />
+)
 
-const StyledTwoColumnContent = styled(TwoColumnContent)`
-  align-items: flex-start;
-`
+const Divider = () => (
+  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider" />
+)
 
-const Subtitle = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-`
-const SubtitleTwo = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  margin-bottom: 2rem;
-  color: ${(props) => props.theme.colors.text300};
-`
+const GrayContainer = (props: ChildOnlyProp) => (
+  <Box
+    width="full"
+    py={16}
+    mt={8}
+    background="grayBackground"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+    {...props}
+  />
+)
 
-const StyledEthPriceCard = styled(EthPriceCard)`
-  margin-bottom: 2rem;
-`
+const Intro = (props: ChildOnlyProp) => (
+  <Box maxW="608px" mb={{ base: 12, sm: 16 }} {...props} />
+)
 
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-`
+const StyledCard = (props: ComponentProps<typeof Card>) => (
+  <Card
+    m={4}
+    p={6}
+    flex="1 0 30%"
+    minW="280px"
+    maxW={{ base: "full", md: "46%", lg: "31%" }}
+    {...props}
+  />
+)
 
-const Hero = styled(GatsbyImage)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  align-self: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-left: 0;
-    width: 100%;
-  }
-`
+const Slogan = (props: ChildOnlyProp) => (
+  <Text
+    textStyle="normal"
+    fontWeight="normal"
+    fontSize="2rem"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const Header = styled.header`
-  flex: 1 1 50%;
-  min-width: 300px;
-  margin-top: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 1.5rem;
-  }
-`
+const Title = (props: ChildOnlyProp) => (
+  <Heading
+    as="h1"
+    fontSize="sm"
+    lineHeight={1.4}
+    letterSpacing="0.04em"
+    fontWeight="500"
+    mb={4}
+    textTransform="uppercase"
+    color="textTableOfContents"
+    {...props}
+  />
+)
 
-const H2 = styled.h2`
-  margin-top: 0;
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Text fontSize="xl" lineHeight={1.4} color="text200" {...props} />
+)
 
-const H4 = styled.h4`
-  font-weight: 600;
-`
+export const TwoColumnContent = (props: FlexProps) => (
+  <Flex
+    w="full"
+    direction={{ base: "column", lg: "row" }}
+    justify="space-between"
+    p={8}
+    mb={12}
+    {...props}
+  />
+)
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-bottom: 2rem;
-`
+export const LeftColumn = (props: ChildOnlyProp) => (
+  <Box
+    flex="0 0 50%"
+    maxW={{ base: "full", lg: "75%" }}
+    me={{ lg: 16 }}
+    {...props}
+  />
+)
 
-const TokenCard = styled(HorizontalCard)`
-  min-width: 100%;
-  margin: 0.5rem 0rem;
-  border-radius: 0px;
-`
+export const RightColumn = (props: ChildOnlyProp) => (
+  <Flex
+    flex="0 1 50%"
+    direction="column"
+    justify="center"
+    maxW={{ base: "full", lg: "75%" }}
+    mt={{ base: 12, lg: 0 }}
+    {...props}
+  />
+)
 
-const TextDivider = styled.div`
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  width: 10%;
-  height: 1px;
-  background-color: ${(props) => props.theme.colors.searchResultBackground};
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    align-self: flex-start;
-  }
-`
+const SubtitleTwo = (props: ChildOnlyProp) => (
+  <Text fontSize="xl" lineHeight={1.4} color="text300" mb={8} {...props} />
+)
 
-const CentralColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 960px;
-  margin: 4rem auto;
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Flex
+    align="center"
+    justify="space-between"
+    direction={{ base: "column-reverse", md: "row" }}
+    {...props}
+  />
+)
 
-const CentralActionCard = styled(ActionCard)`
-  flex: none;
-  margin: 2rem 0;
-  .action-card-image-wrapper {
-    padding: 1rem;
-  }
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    display: flex;
+const Hero = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 100%"
+    maxW="800px"
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    ms={{ base: 0, md: 8 }}
+    {...props}
+  />
+)
 
-    .action-card-image-wrapper {
-      min-width: 260px;
-    }
-    .action-card-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-left: 1rem;
+const Header = (props: ChildOnlyProp) => (
+  <Box
+    as="header"
+    flex="1 1 50%"
+    minW="300px"
+    mt={{ base: 6, md: 32 }}
+    {...props}
+  />
+)
 
-      p {
-        margin-bottom: 0;
-      }
-    }
-  }
-`
+const H2 = (prop: HeadingProps) => (
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    mt={0}
+    {...prop}
+  />
+)
+
+const H3 = (props: HeadingProps) => (
+  <OldHeading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    lineHeight={1.4}
+    {...props}
+  />
+)
+
+const H4 = (props: HeadingProps) => (
+  <OldHeading
+    as="h4"
+    fontSize={{ base: "md", md: "xl" }}
+    fontWeight={600}
+    lineHeight={1.4}
+    {...props}
+  />
+)
+
+const CardContainer = (props: FlexProps) => (
+  <Flex wrap="wrap" mx={-4} {...props} />
+)
+
+const TokenCard = (props: ComponentProps<typeof HorizontalCard>) => (
+  <HorizontalCard minW="full" my={2} mx={0} borderRadius={0} {...props} />
+)
+
+const TextDivider = () => (
+  <Box
+    w="10%"
+    h="1px"
+    bg="searchResultBackground"
+    my={8}
+    alignSelf={{ lg: "flex-start" }}
+  />
+)
+
+const CentralColumn = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    align="center"
+    maxW="960px"
+    my={16}
+    mx="auto"
+    {...props}
+  />
+)
+
+const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
+  <ActionCard
+    display={{ base: "block", sm: "flex" }}
+    flex="none"
+    my={8}
+    mx={0}
+    sx={{
+      ".action-card-image-wrapper": {
+        p: 4,
+        minW: { sm: "260px" },
+      },
+      ".action-card-content": {
+        display: { sm: "flex" },
+        justifyContent: { sm: "center" },
+        flexDirection: { sm: "column" },
+        ml: { sm: 4 },
+      },
+      p: {
+        mb: { sm: 0 },
+      },
+    }}
+    {...props}
+  />
+)
 
 const tokens = [
   {
@@ -287,26 +376,28 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             <SubtitleTwo>
               <Translation id="page-eth-currency-for-apps" />
             </SubtitleTwo>
-            <StyledEthPriceCard isLeftAlign={false} />
+            <EthPriceCard isLeftAlign={false} mb={8} />
             <ButtonLink to="/get-eth/">
               <Translation id="page-eth-button-buy-eth" />
             </ButtonLink>
           </Header>
-          <Hero
-            image={getImage(data.eth)!}
-            alt={t("page-eth-whats-eth-hero-alt")}
-            loading="eager"
-          />
+          <Hero>
+            <GatsbyImage
+              image={getImage(data.eth)!}
+              alt={t("page-eth-whats-eth-hero-alt")}
+              loading="eager"
+            />
+          </Hero>
         </HeroContainer>
       </Content>
       <GrayContainer>
         <Content>
           <Intro>
-            <p>
+            <Text>
               <Translation id="page-eth-description" />{" "}
-            </p>
+            </Text>
           </Intro>
-          <StyledCardContainer>
+          <CardContainer mb={8}>
             {benefits.map((benefits, idx) => (
               <StyledCard
                 key={idx}
@@ -315,15 +406,15 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
                 description={benefits.description}
               />
             ))}
-          </StyledCardContainer>
+          </CardContainer>
           <InfoBanner emoji=":wave:" shouldCenter>
-            <b>
+            <Text as="b">
               <Translation id="page-eth-buy-some" />
-            </b>{" "}
+            </Text>{" "}
             <Translation id="page-eth-buy-some-desc" />{" "}
-            <Link to="/what-is-ethereum/">
+            <InlineLink to="/what-is-ethereum/">
               <Translation id="page-eth-more-on-ethereum-link" />
-            </Link>
+            </InlineLink>
             <Translation id="page-eth-period" />
           </InfoBanner>
         </Content>
@@ -333,34 +424,34 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <H2>
             <Translation id="page-eth-whats-unique" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-eth-whats-unique-desc" />
-          </p>
+          </Text>
           <EthVideo />
-          <div>
+          <Box>
             <H4>
               <Translation id="page-eth-fuels" />
             </H4>
-            <p>
+            <Text>
               <Translation id="page-eth-fuels-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-fuels-desc-2" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-fuels-desc-3" />{" "}
-              <strong>
+              <Text as="strong">
                 <Translation id="page-eth-powers-ethereum" />
-              </strong>
+              </Text>
               <Translation id="page-eth-period" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-fuels-staking" />{" "}
-              <Link to="/staking/">
+              <InlineLink to="/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
-              </Link>
-            </p>
-          </div>
+              </InlineLink>
+            </Text>
+          </Box>
           <CentralActionCard
             to="/what-is-ethereum/"
             title={t("page-eth-whats-ethereum")}
@@ -368,61 +459,61 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             image={getImage(data.ethereum)!}
           />
           <TextDivider />
-          <div>
+          <Box>
             <H4>
               <Translation id="page-eth-underpins" />
             </H4>
-            <p>
+            <Text>
               <Translation id="page-eth-underpins-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-underpins-desc-2" />
-            </p>
+            </Text>
             <CentralActionCard
               to="/defi/"
               title={t("page-eth-whats-defi")}
               description={t("page-eth-whats-defi-description")}
               image={getImage(data.defi)!}
             />
-          </div>
+          </Box>
           <TextDivider />
-          <div>
+          <Box>
             <H4>
               <Translation id="page-eth-uses" />
             </H4>
-            <p>
+            <Text>
               <Translation id="page-eth-uses-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-eth-uses-desc-2" />{" "}
-            </p>
-            <ul>
-              <li>
-                <Link to="https://sablier.finance">
+            </Text>
+            <UnorderedList>
+              <ListItem>
+                <InlineLink to="https://sablier.com">
                   <Translation id="page-eth-stream-link" />
-                </Link>{" "}
+                </InlineLink>{" "}
                 – <Translation id="page-eth-uses-desc-3" />
-              </li>
-              <li>
-                <Link to="/get-eth/#dex">
+              </ListItem>
+              <ListItem>
+                <InlineLink to="/get-eth/#dex">
                   <Translation id="page-eth-trade-link-2" />
-                </Link>{" "}
+                </InlineLink>{" "}
                 – <Translation id="page-eth-uses-desc-4" />
-              </li>
-              <li>
-                <Link to="https://app.compound.finance/">
+              </ListItem>
+              <ListItem>
+                <InlineLink to="https://app.compound.finance/">
                   <Translation id="page-eth-earn-interest-link" />
-                </Link>{" "}
+                </InlineLink>{" "}
                 – <Translation id="page-eth-uses-desc-5" />
-              </li>
-              <li>
-                <Link to="/stablecoins/">
+              </ListItem>
+              <ListItem>
+                <InlineLink to="/stablecoins/">
                   <Translation id="page-eth-stablecoins-link" />
-                </Link>{" "}
+                </InlineLink>{" "}
                 – <Translation id="page-eth-uses-desc-6" />
-              </li>
-            </ul>
-          </div>
+              </ListItem>
+            </UnorderedList>
+          </Box>
           <Divider />
         </CentralColumn>
         <CalloutBanner
@@ -434,59 +525,59 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           alt={t("page-eth-cat-img-alt")}
           maxImageWidth={300}
         >
-          <div>
+          <Box>
             <ButtonLink to="/get-eth/">
               <Translation id="page-eth-get-eth-btn" />
             </ButtonLink>
-          </div>
+          </Box>
         </CalloutBanner>
       </Content>
 
       <TwoColumnContent>
         <LeftColumn>
-          <h3>
+          <H3>
             <Translation id="page-eth-has-value" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-eth-has-value-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-has-value-desc-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-has-value-desc-3" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-has-value-desc-4" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-has-value-desc-5" />
-          </p>
+          </Text>
         </LeftColumn>
         <RightColumn>
           <CardList content={cardListContent} />
         </RightColumn>
       </TwoColumnContent>
-      <StyledTwoColumnContent id="tokens">
+      <TwoColumnContent id="tokens" align="flex-start">
         <LeftColumn>
-          <h3>
+          <H3>
             <Translation id="page-eth-not-only-crypto" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-eth-not-only-crypto-desc" />{" "}
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-eth-not-only-crypto-desc-2" />
-          </p>
-          <h4>
+          </Text>
+          <H4 fontWeight="normal">
             <Translation id="page-eth-more-on-tokens" />
-          </h4>
+          </H4>
           <CardList content={tokenLinks} />
         </LeftColumn>
         <RightColumn>
-          <h3>
+          <H3>
             <Translation id="page-eth-popular-tokens" />
-          </h3>
+          </H3>
           {tokens.map((token, idx) => (
             <TokenCard
               key={idx}
@@ -497,7 +588,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             />
           ))}
         </RightColumn>
-      </StyledTwoColumnContent>
+      </TwoColumnContent>
       <Content>
         <Center w="100%">
           <QuizWidget quizKey="what-is-ether" />

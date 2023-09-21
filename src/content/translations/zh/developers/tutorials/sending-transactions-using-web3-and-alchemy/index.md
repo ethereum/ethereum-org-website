@@ -44,10 +44,10 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 
 `eth_sendTransaction` 和 `eth_sendRawTransaction` 都是 Ethereum API 函数，用于将交易广播到 Ethereum 网络，以便将其添加到未来的区块中。 它们在处理交易签名的方式上有所不同。
 
-- [`eth_sendTransaction`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#eth-sendtransaction) 用于发送*未签名的*交易，这意味着您发送到的节点必须管理您的私钥，以便它能够在将交易广播到链中之前对交易进行签名。 由于 Alchemy 没有用户私钥，因此他们不支持这种方法。
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) 用于广播已经签名的交易。 这意味着您首先必须使用 [`signTransaction(tx, private_key)`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#signtransaction)，然后将结果发送到 `eth_sendRawTransaction`。
+- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) 用于发送*未签名的*交易，这意味着您发送到的节点必须管理您的私钥，以便它能够在将交易广播到链中之前对交易进行签名。 由于 Alchemy 没有用户私钥，因此他们不支持这种方法。
+- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) 用于广播已经签名的交易。 这意味着您首先必须使用 [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction)，然后将结果发送到 `eth_sendRawTransaction`。
 
-当使用 web3 时，通过调用函数 [web3.eth.sendSignedTransaction](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#sendsignedtransaction) 来访问`eth_sendRawTransaction`。
+当使用 web3 时，通过调用函数 [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction) 来访问`eth_sendRawTransaction`。
 
 这就是我们将在本教程中使用的函数。
 

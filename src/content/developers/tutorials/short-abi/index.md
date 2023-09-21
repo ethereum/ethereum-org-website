@@ -36,7 +36,7 @@ The cost of L2 transactions is composed of two components:
 1. L2 processing, which is usually extremely cheap
 2. L1 storage, which is tied to Mainnet gas costs
 
-As I'm writing this, on Optimism the cost of L2 gas is 0.001 [Gwei](https://ethereum.org/en/developers/docs/gas/#pre-london).
+As I'm writing this, on Optimism the cost of L2 gas is 0.001 [Gwei](/developers/docs/gas/#pre-london).
 The cost of L1 gas, on the other hand, is approximately 40 gwei.
 [You can see the current prices here](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 

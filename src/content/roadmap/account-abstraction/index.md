@@ -23,7 +23,7 @@ Smart contract wallets unlock many benefits for the user, including:
 - batch transactions together (e.g. approve and execute a swap in one go)
 - more opportunities for dapps and wallet developers to innovate on user experiences
 
-These benefits are not natively supported today because only externally-owned accounts ([EOAs](https://ethereum.org/en/glossary/#eoa)) can start transactions. EOAs are simply public-private key pairs. They work like this:
+These benefits are not natively supported today because only externally-owned accounts ([EOAs](/glossary/#eoa)) can start transactions. EOAs are simply public-private key pairs. They work like this:
 
 - if you have the private key you can do _anything_ within the rules of the Ethereum Virtual Machine (EVM)
 - if you do not have the private key you can do _nothing_.
@@ -47,8 +47,8 @@ For example, backup keys can be added to a wallet so that if you lose or acciden
 - **Multisig authorization**: You can share authorization credentials across multiple trusted people or devices. Then the contract can be configured so that transactions of more than some preset value require authorization from a certain proportion (e.g. 3/5) of the trusted parties. For example, high value transactions might require approval from both a mobile device and a hardware wallet, or signatures from accounts distributed to trusted family members.
 - **Account freezing**: If a device is lost or compromised the account can be locked from another authorized device, protecting the user's assets.
 - **Account recovery**: Lost a device or forgotten a password? In the current paradigm this means your assets could be frozen forever. With a smart contract wallet, you can set some pre-approved accounts that can authorize new devices and reset access.
-- **Set transaction limits**: specify daily thresholds for how much value can be transferred from the account in a day/week/month. This means if an attacker does gain access to your account they can't drain everything at once and you have opportunities to freeze and reset access.
-- **Create whitelists**: only allow transactions to certain addresses that you know to be safe. This means that _even if_ your private key was stolen, the attacker could not send funds to non-whitelisted destination accounts. These whitelists would require multiple signatures to change them so that an attacker couldn't add their own address to the list unless they had access to several of your backup keys.
+- **Set transaction limits**: Specify daily thresholds for how much value can be transferred from the account in a day/week/month. This means if an attacker does gain access to your account they can't drain everything at once and you have opportunities to freeze and reset access.
+- **Create whitelists**: Only allow transactions to certain addresses that you know to be safe. This means that _even if_ your private key was stolen, the attacker could not send funds to non-whitelisted destination accounts. These whitelists would require multiple signatures to change them so that an attacker couldn't add their own address to the list unless they had access to several of your backup keys.
 
 ## Better user experience {#better-user-experience}
 

@@ -1,10 +1,10 @@
 ---
 title: Stockage décentralisé
-description: Présentation du stockage décentralisé et des outils disponibles à intégrer dans une DApp
+description: Présentation du stockage décentralisé et des outils disponibles à intégrer dans une dApp.
 lang: fr
 ---
 
-Contrairement à un serveur centralisé exploité par une unique organisation ou une entreprise, les systèmes de stockage décentralisé se composent d'un réseau de pair à pair d'opérateurs-utilisateurs qui détiennent une partie de l'ensemble des données, créant ainsi un système de partage de fichiers résiliant. Cela peut être via une application basée sur la blockchain ou bien sur n'importe quel réseau basé sur le principe du pair à pair.
+Contrairement à un serveur centralisé exploité par une entreprise ou organisation unique, les systèmes de stockage décentralisé se composent d'un réseau de pair à pair d'opérateurs-utilisateurs qui détiennent une partie de l'ensemble des données, créant ainsi un système de partage de fichiers résiliant. Cela peut être via une application basée sur la blockchain ou bien sur n'importe quel réseau basé sur le principe du pair à pair.
 
 Ethereum lui-même peut être utilisé comme un système de stockage décentralisé, c'est d'ailleurs déjà le cas concernant le stockage de code compris dans tous les contrats intelligent. Cependant, lorsqu'il s'agit de grandes quantités de données, Ethereum n'a été conçu pour cela. La chaîne ne cesse de croître, mais au moment d'écrire ces lignes, la chaîne Ethereum est d'environ 500 Go à 1 To ([selon le client](https://etherscan.io/chartsync/chaindefault)), et chaque nœud du réseau doit être en mesure de stocker toutes les données. Si la chaîne devait s'étendre à de grandes quantités de données (disons 5 To par exemple), il serait impossible pour tous les nœuds de continuer à fonctionner. En outre, le coût du déploiement d'une telle quantité de données sur le réseau principal serait prohibitif en raison des frais de [gaz](/developers/docs/gas).
 
@@ -17,7 +17,7 @@ En se penchant sur la question des options de stockage décentralisé (dStorage)
 - Décentralisé
 - Consensus
 
-## Mécanisme de persistance / structure d'incitation {#persistence-mechanism}
+## Mécanisme de persistance / structure incitative {#persistence-mechanism}
 
 ### Orientation blockchain {#blockchain-based}
 
@@ -27,7 +27,7 @@ Ce processus est connu sous le nom de : persistance **basée sur la blockchain**
 
 Le problème avec la persistance basée sur la blockchain est que la chaîne pourrait devenir beaucoup trop grande pour entretenir et stocker toutes les données (ex. [de nombreuses sources](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) estiment que l'Internet nécessite plus de 40 Zetabytes de capacité de stockage).
 
-La blockchain doit également avoir une certaine structure incitative. Pour la persistance basée sur la blockchain, il y a un paiement effectué au mineur. Lorsque les données sont ajoutées à la chaîne, les nœuds sont payés pour y ajouter les données.
+La blockchain doit également avoir une certaine structure incitative. Pour la persistance basée sur la blockchain, il y a un paiement effectué au validateur. Les validateurs sont payés pour ajouter les données lorsqu'elles sont ajoutées à la chaine.
 
 Plateformes avec persistance basée sur la blockchain :
 
@@ -46,6 +46,9 @@ Les plateformes avec persistance basée sur contrat :
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
+- [Réseau Crust](https://crust.network)
+- [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### Autres considérations {#additional-consideration}
 
@@ -55,6 +58,11 @@ IPFS est un système distribué pour stocker et accéder aux fichiers, sites Web
 - [Pinata](https://www.pinata.cloud/) _(service d'épinglage IPFS)_
 - [web3.storage](https://web3.storage/) _(service d'épinglage IPFS/Filecoin)_
 - [Infura](https://infura.io/product/ipfs) _(service d'épinglage IPFS)_
+- [IPFS Scan](https://ipfs-scan.io) _(explorateur IPFS pinning)_
+- [4EVERLAND](https://www.4everland.org/)_ (service d'épinglage IPFS) _
+- [Filebase](https://filebase.com) _(Service d'épinglage IPFS)_
+
+SWARM est une technologie décentralisée de stockage et de distribution de données avec un système incitatif de stockage et un prix de location de stockage oracle.
 
 ## Conservation des données {#data-retention}
 
@@ -70,6 +78,8 @@ Types de dStorage avec mécanisme de challenge :
 - Skynet
 - Arweave
 - Filecoin
+- Réseau Crust
+- 4EVERLAND
 
 ### Décentralisation {#decentrality}
 
@@ -83,22 +93,24 @@ Outils décentralisés sans KYC :
 - Filecoin
 - IPFS
 - Ethereum
+- Réseau Crust
+- 4EVERLAND
 
 ### Consensus {#consensus}
 
-La plupart de ces outils ont leur propre version de [mécanisme de consensus](/developers/docs/consensus-mechanisms/) mais généralement ils sont basés soit sur une [**Preuve de travail (PoW)**](/developers/docs/consensus-mechanisms/pow/) ou une [**Preuve d'enjeu (PoS)**](/developers/docs/consensus-mechanisms/pos/).
+La plupart de ces outils ont leur propre version de [mécanisme de consensus](/developers/docs/consensus-mechanisms/) mais généralement ils sont basés soit sur une [**Preuve de travail (PoW)**](/developers/docs/consensus-mechanisms/pow/) soit sur une [**Preuve d'enjeu (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-Basé PoW :
+Preuve de travail (PoW) :
 
 - Skynet
 - Arweave
+
+Preuve d'enjeu (PoS) :
+
 - Ethereum
-
-Basé PoS :
-
-- [La chaîne phare](/roadmap/beacon-chain/)
 - Filecoin
 - 0Chain
+- Réseau Crust
 
 ## Outils connexes {#related-tools}
 
@@ -112,6 +124,7 @@ Basé PoS :
 
 - [Storj.io](https://storj.io/)
 - [Documentation](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
 **Skynet - _Skynet est une chaîne PoW décentralisée dédiée à un Web décentralisé._**
 
@@ -131,11 +144,17 @@ Basé PoS :
 - [Documentation](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain est une plateforme dStorage basée Preuve d'enjeu avec des fragments et des blobbers._**
+**0chain - _0Chain est une plateforme dStorage basée sur la Preuve d'enjeu avec des fragments et des blobbers._**
 
 - [0Chain.net](https://0chain.net/)
 - [Documentation](https://docs.0chain.net/0chain/)
 - [GitHub](https://github.com/0chain/)
+
+**Réseau Crust - _Crust est une plateforme dStorage basée sur IPFS_**
+
+- [Crust.network](https://crust.network)
+- [Documentation](https://wiki.crust.network)
+- [Github](https://github.com/crustio)
 
 **Swarm - _Plateforme de stockage distribuée et service de distribution de contenu pour la pile web3 Ethereum_**
 
@@ -161,11 +180,23 @@ Basé PoS :
 - [Documentation](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _La première plate-forme de stockage d'objet compatible S3 qui vous permet de stocker des données sur plusieurs réseaux de stockage décentralisés, y compris IPFS, Sia, Skynet et Storj._**
+**File base - _Stockage décentralisé compatible S3 et service d'épinglage IPFS géo-redondant. Tous les fichiers téléchargés sur IPFS via Filebase sont automatiquement épinglés à l'infrastructure Filebase avec une réplication 3x à travers le monde._**
 
 - [Filebase.com](https://filebase.com/)
 - [Documentation](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
+
+**4EVERLAND - _Une plateforme de calcul cloud Web 3 qui intègre les capacités de stockage, de calcul et de réseautage de base, est compatible S3 et fournit un stockage de données synchronisé sur les réseaux de stockage décentralisés tels que IPFS et Arweave._**
+
+- [4everland.org](https://www.4everland.org/)
+- [Documentation](https://docs.4everland.org/)
+- [GitHub](https://github.com/4everland)
+
+**Kaleido - _Une plateforme blockchain-as-a-service avec un bouton clic IPFS Nodes_**
+
+- [Kaleido](https://kaleido.io/)
+- [Documentation](https://docs.kaleido.io/kaleido-services/ipfs/)
+- [GitHub](https://github.com/kaleido-io)
 
 ## Complément d'information {#further-reading}
 

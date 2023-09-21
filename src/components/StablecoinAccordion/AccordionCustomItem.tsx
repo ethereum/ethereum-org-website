@@ -25,7 +25,7 @@ export const RightColumnPanel = (props: ChildOnlyType) => (
 
 const MoreOrLessLink = ({ isOpen }: { isOpen: boolean }) => {
   return (
-    <Box mr={6} color="primary">
+    <Box mr={6} color="primary.base">
       {isOpen ? (
         <Translation id="page-stablecoins-accordion-less" />
       ) : (
@@ -77,7 +77,6 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
                     as="h3"
                     fontSize={{ base: "1.25rem", md: "1.5rem" }}
                     lineHeight={1.4}
-                    my={0}
                   >
                     <Translation id={contentObj.title} />
                   </Heading>
@@ -87,7 +86,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
                     </Pill>
                   )}
                 </Flex>
-                <Text color="text200" mb={0} textAlign="start">
+                <Text color="text200" textAlign="start">
                   <Translation id={contentObj.textPreview} />
                 </Text>
               </Box>

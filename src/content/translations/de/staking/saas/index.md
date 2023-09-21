@@ -58,7 +58,7 @@ Sie haben einen Vorschlag zu einem SaaS-Anbieter, den wir noch nicht haben? Prü
 ## Häufig gestellte Fragen {#faq}
 
 <ExpandableCard title="Wer hält meine Schlüssel?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-  Die Vereinbarungen unterscheiden sich von Anbieter zu Anbieter. In der Regel werden Sie durch die Einrichtung aller benötigten Signaturschlüssel (einer pro 32 ETH) und das Hochladen dieser Schlüssel zu Ihrem Anbieter geleitet, damit dieser in Ihrem Namen validieren kann. Die Signaturschlüssel allein bieten nicht die Möglichkeit, Ihr Geld abzuheben, zu überweisen oder auszugeben. Sie bieten jedoch die Möglichkeit, Stimmen für einen Konsens abzugeben, was, wenn es nicht richtig gemacht wird, zu Offline-Strafen oder Slashing führen kann.
+Die Vereinbarungen unterscheiden sich von Anbieter zu Anbieter. In der Regel werden Sie durch die Einrichtung aller benötigten Signaturschlüssel (einer pro 32 ETH) und das Hochladen dieser Schlüssel zu Ihrem Anbieter geleitet, damit dieser in Ihrem Namen validieren kann. Die Signaturschlüssel allein bieten nicht die Möglichkeit, Ihr Geld abzuheben, zu überweisen oder auszugeben. Sie bieten jedoch die Möglichkeit, Stimmen für einen Konsens abzugeben, was, wenn es nicht richtig gemacht wird, zu Offline-Strafen oder Slashing führen kann.
 </ExpandableCard>
 
 <ExpandableCard title="Also gibt es zwei Gruppen von Schlüsseln?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
@@ -66,23 +66,25 @@ Ja. Jedes Konto besteht aus BLS-<em>Signaturschlüsseln</em> und BLS-<em>Abhebun
 
 Die BLS-Abhebungsschlüssel werden verwendet, um eine einmalige Nachricht zu signieren, die angibt, an welches Execution-Layer-Konto Staking-Belohnungen und ausgetretene Mittel gehen sollen. Sobald diese Nachricht gesendet wurde, werden die <em>BLS-Abhebungsschlüssel</em> nicht mehr benötigt. Stattdessen wird die Kontrolle über abgehobene Mittel dauerhaft an die von Ihnen angegebene Adresse delegiert. Auf diese Weise können Sie eine Abhebungsadresse festlegen, die durch Ihre eigene Cold Storage gesichert ist, um das Risiko für Ihre Validator-Fonds zu minimieren, selbst wenn jemand anderes die Signaturschlüssel Ihres Validators kontrolliert.
 
-Das Aktualisieren der Abhebungsberechtigungen ist ein erforderlicher Schritt, um Abhebungen mit dem Shanghai-Upgrade zu ermöglichen. Dieser Prozess beinhaltet das Generieren der Abhebungsschlüssel mit Hilfe Ihrer Mnemonic Seed Phrase. Staker, die bei der ersten Einzahlung eine Abhebungsadresse angegeben haben, müssen das nicht festlegen. <em>Stellen Sie jedoch sicher, dass Sie diese Mnemonic Seed Phrase sicher speichern, da Sie andernfalls Ihre Abhebungsschlüssel nicht generieren können, wenn es soweit ist.</em> Bitte wenden Sie sich an Ihren SaaS-Anbieter, um Unterstützung bei der Vorbereitung Ihres Validators zu erhalten.
+Das Aktualisieren der Auszahlungsberechtigungen ist ein erforderlicher Schritt, um Auszahlungen zu ermöglichen\*. Dieser Prozess beinhaltet das Generieren der Abhebungsschlüssel mit Hilfe Ihrer Mnemonic Seed Phrase.
+
+<strong>Stellen Sie unbedingt sicher, dass Sie diesen Seed-Satz sicher aufbewahren, sonst können Sie Ihre Auszahlungsschlüssel nicht erstellen, wenn es soweit ist.</strong>
+
+\*Staker, die eine Auszahlungsadresse bei der ersten Einzahlung angegeben haben, müssen dies nicht einstellen. Bitte wenden Sie sich an Ihren SaaS-Anbieter, um Unterstützung bei der Vorbereitung Ihres Validators zu erhalten.
 </ExpandableCard>
 
 <ExpandableCard title="Wann kann ich ETH abheben?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Wenn Sie 32 ETH bei einem SaaS-Anbieter staken, werden diese ETH immer nach Maßgabe des offiziellen Staking-Einlagenvertrags hinterlegt. Die SaaS-Staker sind daher durch die gleichen Widerrufsbeschränkungen wie die Solo-Staker begrenzt, und Auszahlungen werden erst nach dem Upgrade in Shanghai ermöglicht.
+Staking Auszahlungen wurden mit der Shanghai/Capella Aktualisierung im April 2023 eingeführt. Staker müssen (sofern nicht bereits bei der Ersteinzahlung geschehen) eine Auszahlungsadresse bereitstellen. Belohnungen werden daraufhin automatisch alle paar Tage in regelmäßigen Abständen ausgezahlt.
 
-Staking-Auszahlungen werden mit dem bevorstehenden Shanghai-Upgrade implementiert, das im ersten oder zweiten Quartal 2023 erwartet wird. Danach müssen Staker eine Auszahlungsadresse angeben (sofern bei der anfänglichen Einzahlung nicht angegeben). Die Belohnungszahlungen werden automatisch in regelmäßigen Abständen alle paar Tage verteilt.
-
-Dadurch wird auch die Entsperrung von zurückgezogenen Mitteln ermöglicht. Validatoren können sich als Validator vollständig zurückziehen. Ihr gesamtes Guthaben wird an die angegebene Auszahlungsadresse zurückerstattet.
+Validatoren haben auch die Möglichkeit, ihre Tätigkeit als Validator zu beenden. Das ermöglicht die Auszahlung ihres restlichen ETH-Guthabens. Konten, die eine Auszahlungsadresse angegeben und den Austrittsprozess abgeschlossen haben, erhalten ihr gesamtes Guthaben bei der nächsten Validatorendurchsicht auf die angegebene Auszahlungsadresse.
 
 <ButtonLink to="/staking/withdrawals/">Mehr zu Staking-Abhebungen</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Was passiert, wenn ich geslashed werde?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
-Durch die Nutzung eines SaaS-Anbieters vertrauen Sie den Betrieb Ihrer Nodes jemand anderem an. Dies birgt das Risiko einer schlechten Node-Leistung, auf die Sie keinen Einfluss haben. Falls Ihr Validator geslashed wird, wird Ihr Validator-Guthaben bestraft und zwangsweise aus dem Validator-Pool entfernt. Diese Gelder werden gesperrt, bis Auszahlungen auf Protokollebene aktiviert werden.
+Durch die Nutzung eines SaaS-Anbieters vertrauen Sie den Betrieb Ihrer Nodes jemand anderem an. Dies birgt das Risiko einer schlechten Node-Leistung, auf die Sie keinen Einfluss haben. Falls Ihr Validator geslashed wird, wird Ihr Validator-Guthaben bestraft und zwangsweise aus dem Validator-Pool entfernt.
 
-Das bevorstehende Shanghai-Upgrade bringt die Funktion der Abhebung, die aktiviert wird, wenn eine Abhebungsadresse angegeben wird. Diese Adresse kann bei der anfänglichen Einzahlung angegeben worden sein. Falls nicht, müssen die Validator-Signierschlüssel verwendet werden, um eine Nachricht zu signieren, in der eine Abhebungsadresse angegeben wird, sobald das Upgrade aktiv ist.
+Nach Abschluss des Slashing-/Austrittsprozesses werden diese Mittel an die dem Validator zugewiesene Auszahlungsadresse übertragen. Dies erfordert die Angabe einer Auszahlungsadresse zur Aktivierung. Diese Adresse kann bei der anfänglichen Einzahlung angegeben worden sein. Falls nicht, müssen die Auszahlungsschlüssel des Validators verwendet werden, um eine Nachricht zu unterschreiben, die eine Auszahlungsadresse angibt. Wenn keine Auszahlungsadresse angegeben wurde, bleibt das Guthaben bis zur Angabe gesperrt.
 
 Für weitere Informationen zu Garantien oder Versicherungsoptionen sowie zur Anleitung zur Bereitstellung einer Abhebungsadresse wenden Sie sich bitte an Ihren individuellen SaaS-Anbieter. Wenn Sie es vorziehen, die volle Kontrolle über Ihre Validator-Konfiguration zu haben, <a href="/staking/solo/">erfahren Sie mehr darüber, wie Sie Ihre ETH alleine einsetzen können</a>.
 </ExpandableCard>

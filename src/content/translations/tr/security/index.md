@@ -55,8 +55,8 @@ Sahip olduğunuz her hesap için güçlü, benzersiz şifreleri ezberlemeye çal
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
-- [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
+- Yahut diğer [önerilen şifre yöneticilerine](https://www.privacytools.io/secure-password-manager) göz atın
 
 ### İki Faktörlü Kimlik Doğrulamayı Kullanın {#two-factor-authentication}
 
@@ -137,7 +137,7 @@ Güvenlik kelimelerinizin veya özel anahtarlarınızın ekran görüntüsünü 
 
 ### Donanım cüzdanı kullanın {#use-hardware-wallet}
 
-Bir donanım cüzdanı, özel anahtarlar için çevrimdışı depolama sağlar. Özel anahtarlarınızı saklamak için en güvenli cüzdan seçeneği olarak bilinirler.
+Bir donanım cüzdanı, özel anahtarlar için çevrimdışı depolama sağlar. Gizli anahtarlarınızı saklamak için en güvenli cüzdan seçeneği olarak görülürler: gizli anahtarınız asla internete dokunmaz ve tamamen yerel olarak cihazınızda kalır.
 
 Özel anahtarlarınızı çevrimdışı yapmak, hacker bilgisayarınızın kontrolünü ele geçirse bile saldıraya uğrama riskinizi büyük ölçüde azaltır.
 
@@ -157,6 +157,8 @@ Bir işlem göndermeden önce, gönderdiğiniz adresin istediğiniz alıcının 
 Akıllı sözleşmelerle etkileşim kurarken sınırsız harcama limitlerine izin vermeyin. Sınırsız bir harcama, akıllı sözleşmenin cüzdanınızı boşaltmasını sağlayabilir. Bunun yerine, harcama limitlerini yalnızca işlem için gerekli olan miktara ayarlayın.
 
 Birçok Ethereum cüzdanı, boşaltılan hesaplara karşı koruma sağlamak için limit koruması sunar.
+
+[Kripto fonlarınızın akıllı sözleşme erişimini nasıl iptal edebilirsiniz?](/guides/how-to-revoke-token-access/)
 
 <Divider />
 
@@ -178,25 +180,25 @@ Bu dolandırıcılıklar genellikle yanlış kararlar vermeye yönlendirmek ve s
 
 Bunun üst düzey bir versiyonu Temmuz 2020'de önde gelen ünlülerin ve organizasyonların Twitter hesapları çalındığında gerçekleşti. Hacker eş zamanlı olarak çalınan hesaplarda bir Bitcoin çekilişi paylaştı. Aldatıcı tweetler hızlıca fark edilmiş ve silinmiş olsa da saldırganlar 11 Bitcoin koparmayı başardı (Eylül 2021 itibarıyla 500.000 ABD Doları).
 
-![Twitter'da bir dolandırıcılık](./appleTwitterScam.png)
+![Twitter'daki dolandırıcılık](./appleTwitterScam.png)
 
 #### Ünlü çekilişleri {#celebrity-giveaway}
 
 Ünlü çekilişi, çekiliş dolandırıcılığı teşebbüslerinin yaygın başka bir türüdür. Dolandırıcılar bir ünlü tarafından verilen kaydedilmiş bir röportaj veya konferans videosunu alırlar ve YouTube'da canlı yayın olarak yayınlarlar: Bir kripto para çekilişini destekleyen canlı bir video röportajı veriyormuş gibi gösterirler.
 
-Bu dolandırıcılıkta en sık Vitalik Buterin kullanılsa da kriptoyla ilgili diğer birçok önde gelen kişi de kullanılır (örneğin Elon Musk veya Charles Hoskinson). Tanınmış birini dahil etmek dolandırıcıların canlı yayınlarına bir meşruiyet hissi verir ("Bu biraz garip görünüyor ama Vitalik olduğuna göre güvenilirdir herhâlde!").
+Bu dolandırıcılıkta en sık Vitalik Buterin kullanılsa da kriptoyla ilgili diğer birçok önde gelen kişi de kullanılır (ör. Elon Musk veya Charles Hoskinson). Tanınmış birini dahil etmek dolandırıcıların canlı yayınlarına bir meşruiyet hissi verir ("Bu biraz garip görünüyor ama Vitalik olduğuna göre güvenilirdir herhalde!").
 
-**Çekilişler her zaman dolandırıcılıktır. Paranızı bu hesaplara gönderirseniz, onları sonsuza kadar kaybedersiniz.**
+**Çekilişler her zaman dolandırıcılıktır. Paranızı bu hesaplara gönderirseniz, paranızı sonsuza kadar kaybedersiniz.**
 
-![YouTube'da bir dolandırıcılık](./youtubeScam.png)
+![YouTube'daki dolandırıcılık](./youtubeScam.png)
 
 ### Destek dolandırıcılıkları {#support-scams}
 
-Kripto paralar nispeten yeni ve yanlış anlaşılan bir teknolojidir. Bundan yararlanan yaygın bir dolandırıcılık ise dolandırıcıların popüler cüzdanların, borsaların veya blok zincirlerinin destek personellerini taklit ettikleri destek dolandırıcılığıdır.
+Kripto paralar nispeten yeni ve yanlış anlaşılan bir teknolojidir. Bundan yararlanan yaygın bir dolandırıcılık ise dolandırıcıların popüler cüzdanların, borsaların veya blok zincirlerin destek personellerini taklit ettikleri destek dolandırıcılığıdır.
 
 Ethereum hakkındaki tartışmaların çoğu Discord'da gerçekleşir. Destek dolandırıcıları, genellikle herkese açık anlaşmazlık kanallarında destek soruları arayarak ve ardından talepte bulunan kişiye destek sunan özel bir mesaj göndererek hedeflerini bulurlar. Destek dolandırıcıları, güven oluşturarak özel anahtarlarınızı ifşa etmeniz veya paranızı cüzdanlarına göndermeniz için sizi kandırmaya çalışır.
 
-![Discord'da bir destek dolandırıcılığı](./discordScam.png)
+![Discord'daki destek dolandırıcılığı](./discordScam.png)
 
 Genel bir kural olarak, ekip sizinle asla özel ve resmi olmayan kanallar aracılığıyla iletişim kurmaz. Destekle muhatap olurken akılda tutulması gereken bazı basit şeyler:
 
@@ -210,11 +212,19 @@ Genel bir kural olarak, ekip sizinle asla özel ve resmi olmayan kanallar aracı
   </div>
 </InfoBanner>
 
-### Oltalama (Phishing) dolandırıcılıkları {#phishing-scams}
+### "Eth2" token dolandırıcılığı {#eth2-token-scam}
 
-Oltalama dolandırıcılıkları dolandırıcıların cüzdanınızdaki fonları çalmaya çalışmak için kullandığı gittikçe yaygınlaşan başka bir yoldur.
+[Birleştirme](/roadmap/merge/) öncesinde dolandırıcılar, kullanıcıların ETH'lerini bir "ETH2" token'ı için kullanmalarını sağlamak için "Eth2" terimi etrafındaki karışıklıktan yararlandı. "ETH2" yoktu ve Birleşme ile ilgili başka hiçbir meşru token sunulmadı. Birleşmeden önce sahip olduğunuz ETH, şimdi aynı ETH'dir. **İş kanıtından hisse kanıtına geçişi hesaba katmak için ETH'nizle ilgili herhangi bir işlem yapmanıza gerek yoktur**.
 
-Bazı oltalama e-postaları kullanıcıların onları sahte web sayfalarına yönlendirecek linklere tıklamalarını, güvenlik kelimesini girmelerini, şifrelerini sıfırlamalarını veya ETH göndermelerini isterler. Başkaları sizden bilgisayarınıza virüs bulaştırmanız ve dolandırıcılara bilgisiyarınızdaki dosyaların erişimi vermeniz için farkında olmadan kötü amaçlı yazılımlar kurmanızı isteyebilir.
+Dolandırıcılar "destek" olarak görünebilir ve size ETH'nizi yatırırsanız "ETH2"yi geri alacağınızı söylerler. [Ne resmi bir Ethereum destek ekibi](/community/support/) ne de yeni bir token yoktur. Cüzdan güvenlik kelimelerini asla kimseyle paylaşmayın.
+
+_Not: Hisselenmiş ETH'yi temsil edebilecek türev token'lar/kayıtlar vardır (ör. Rocket Pool'dan rETH, Lido'dan stETH, Coinbase'den ETH2), ancak bunlar kriptonuzu "taşımanız" gereken şeyler değildir_
+
+### Kimlik avı dolandırıcılıkları {#phishing-scams}
+
+Kimlik avı dolandırıcılıkları, dolandırıcıların cüzdanınızdaki fonları çalmaya çalışmak için kullandığı gittikçe yaygınlaşan başka bir yoldur.
+
+Bazı kimlik avı e-postaları kullanıcıların onları sahte web sayfalarına yönlendirecek bağlantılara tıklamalarını, güvenlik kelimesini girmelerini, şifrelerini sıfırlamalarını veya ETH göndermelerini isterler. Başkaları sizden bilgisayarınıza virüs bulaştırmanız ve dolandırıcılara bilgisiyarınızdaki dosyaların erişimi vermeniz için farkında olmadan kötü amaçlı yazılımlar kurmanızı isteyebilir.
 
 Eğer bilinmeyen bir göndericiden bir e-posta alırsanız, hatırlayın:
 
@@ -222,11 +232,11 @@ Eğer bilinmeyen bir göndericiden bir e-posta alırsanız, hatırlayın:
 - Asla kimseye özel bilgilerinizi veya şifrelerinizi söylemeyin
 - Bilinmeyen göndericilerden gelen e-postaları silin
 
-[Oltalama dolandırıcılıklarından kaçınmak üzerine dahası](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
+[Kimlik avı dolandırıcılıklarından kaçınmak üzerine dahası](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
 
 ### Kripto ticaret simsarı dolandırıcılıkları {#broker-scams}
 
-Dolandırıcı kripto ticaret simsarları sizin paranızı almayı ve sizin adınıza yatırım yapmayı teklif ederler ve uzman kripto para simsarı olduklarını iddia ederler. Genellikle bu teklife gerçeklikten uzak kazanç vaatleri eşlik eder. Dolandırıcı paranızı aldıktan sonra, daha fazla yatırım kazancını kaybetmemek için daha çok para göndermenizi isteyerek sizi kandırmaya devam edebilir, veya tamamen ortadan kaybolabilir.
+Dolandırıcı kripto ticaret simsarları sizin paranızı almayı ve sizin adınıza yatırım yapmayı teklif ederler ve uzman kripto para simsarı olduklarını iddia ederler. Genellikle bu teklife gerçeklikten uzak kazanç vaatleri eşlik eder. Dolandırıcı paranızı aldıktan sonra, daha fazla yatırım kazancını kaybetmemek için daha çok para göndermenizi isteyerek sizi kandırmaya devam edebilir veya tamamen ortadan kaybolabilir.
 
 Bu sahtekâr simsarlar, simsar hakkında görünüşte doğal sohbetler başlatmak için YouTube'da sahte hesaplar kullanarak hedeflerini bulurlar. Bu sohbetler genelde gerçekliğini arttırmak için yüksek miktarda oy alır, ancak oyların hepsi bot hesaplardandır.
 
@@ -236,7 +246,7 @@ Bu sahtekâr simsarlar, simsar hakkında görünüşte doğal sohbetler başlatm
 
 ### Kripto madencilik havuzu dolandırıcılıkları {#mining-pool-scams}
 
-Madencilik havuzu dolandırıcılıkları size istenmeyen şekilde ulaşan ve bir Ethereum madencilik havuzuna katılarak büyük kazançlar elde edebileceğinizi iddia eden insanları içerir. Dolandırıcılar vaadlerte bulunurlar ve sizinle olabildiği kadar iletişimde kalırlar. Temel olarak, dolandırıcı sizi bir Ethereum madencilik havuzuna katıldığınızda kripto paranızın ETH yaratmak için kullanılacağına ve ETH şeklinde kâr payı ödemesi alacağınıza ikna etmeye çalışır. Aslında gerçekleşecek olan, kripto paranızın küçük kazançlar yarattığını fark etmenizdir. Bu sadece sizi daha çok yatırmanız için aldatmayı amaçlar. Sonuç olarak, tüm fonlarınız bilinmeyen bir adrese gönderilecek ve dolandırıcı ya kaybolacak ya da bazı durumlarda yakın zamandaki bir vakadaki gibi iletişimde kalmaya devam edecektir.
+Eylül 2022'den itibaren Ethereum'da madencilik yapmak artık mümkün değil. Ancak, madencilik havuzu dolandırıcılığı hâlâ var. Madencilik havuzu dolandırıcılığı, istenmeyen kişilerin sizinle iletişim kurmasını ve bir Ethereum madencilik havuzuna katılarak büyük getiriler elde edebileceğinizi iddia etmesini içerir. Dolandırıcılar vaatlerde bulunurlar ve sizinle olabildiği kadar iletişimde kalırlar. Temel olarak, dolandırıcı sizi bir Ethereum madencilik havuzuna katıldığınızda kripto paranızın ETH yaratmak için kullanılacağına ve ETH şeklinde kâr payı ödemesi alacağınıza ikna etmeye çalışır. Aslında gerçekleşecek olan, kripto paranızın küçük kazançlar yarattığını fark etmenizdir. Bu sadece sizi daha çok yatırmanız için aldatmayı amaçlar. Sonunda, tüm paranız bilinmeyen bir adrese gönderilecek ve dolandırıcı ya ortadan kaybolacak ya da bazı durumlarda yakın zamanda olduğu gibi iletişim halinde kalmaya devam edecek.
 
 Sonuç olarak, bir madencilik havuzunun parçası olmanızı isteyen sosyal medyada sizinle iletişime geçen kişilere karşı dikkatli olun. Kriptonuzu bir kez kaybettiğinizde, geri dönüşü yoktur.
 
@@ -247,14 +257,6 @@ Hatırlanacak birkaç şey:
 - Bu tür projeler nadiren gerçektir. Eğer gerçek olsalardı, muhtemelen çok ünlü olurlardı ve onları duymuş olurdunuz.
 
 [Bir kullanıcı madencilik havuzu dolandırıcılığında 200.000 ABD doları kaybetti](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
-
-### "Eth2" token dolandırıcılığı {#eth2-token-scam}
-
-2022'de gelen [Birleştirme](/roadmap/merge/) ile dolandırıcılar, kullanıcıların ETH'lerini bir "ETH2" token'ı için kullanmalarını sağlamak için "Eth2" terimi hakkındaki karışıklıktan faydalandı. Birleştirme ile kullanıma giren hiçbir "ETH2" veya başka bir yeni token yok. Bugün sahip olduğunuz ETH, Birleştirme sonrasında da aynı ETH olmaya devam edecek ve Birleştirme için ETH'nizde herhangi bir takas yapmanıza gerek yok.
-
-Dolandırıcılar, "destek ekibindenmiş" gibi görünebilir ve size ETH'nizi yatırırsanız karşılığında "ETH2" alacağınızı söylerler. [Ne resmi bir Ethereum destek ekibi](/community/support/) ne de yeni bir token yok. Cüzdan güvenlik kelimelerini asla kimseyle paylaşmayın.
-
-_Not: Stake edilmiş ETH'yi temsil edebilecek türev tokenler/kayıtlar vardır (örneğin Rocket Pool'dan rETH, Lido'dan stETH, Coinbase'den ETH2) ancak bunlar kriptonuzu "taşımanız" gereken şeyler değildir_
 
 ### Airdrop dolandırıcılığı {#airdrop-scams}
 
@@ -282,5 +284,9 @@ Airdrop dolandırıcılığı, bir varlığı (NFT, token) cüzdanınıza Airdro
 
 ### Dolandırıcılık farkındalığı {#reading-scam-education}
 
+- [Rehber: Dolandırıcılık token'ları nasıl tespit edilir](/guides/how-to-id-scam-tokens/)
 - [Güvende Kalmak: Yaygın Dolandırıcılıklar](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [Dolandırıcılıklardan Kaçınmak](https://bitcoin.org/en/scams) _Bitcoin.org_
+- [Dolandırıcılıklardan Kaçınmak](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [Yaygın kripto kimlik avı e-postaları ve mesajları hakkında Twitter ileti dizisi](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+
+<QuizWidget quizKey="security" />

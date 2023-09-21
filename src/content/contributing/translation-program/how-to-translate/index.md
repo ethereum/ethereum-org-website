@@ -39,7 +39,7 @@ Don't see your language listed? [Open an issue](https://github.com/ethereum/ethe
 
 ![Translated and untranslated files in Crowdin](./crowdin-files.png)
 
-A note on content buckets: we use 'content buckets' within Crowdin to get the highest priority content released first. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for content bucket ("1. Homepage", "2. Use Ethereum Pages", etc.).
+A note on content buckets: we use 'content buckets' within Crowdin to get the highest priority content released first. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for content bucket ("1. Homepage", "2. Essentials", "3. Exploring", etc.).
 
 We encourage you to translate in this numerical order (1 → 2 → 3 → ⋯) to ensure the highest impact pages are translated first.
 

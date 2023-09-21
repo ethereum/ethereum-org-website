@@ -22,14 +22,15 @@ lang: zh
 
 所提交的交易包括下列信息：
 
-- `recipient` – 接收地址（如果为一个外部持有的帐户，交易将传输值。 如果为合约帐户，交易将执行合约代码）
-- `signature` – 发送者的标识符。 当通过发送者的私钥签名交易来确保发送者已授权此交易时，生成此签名。
-- `随机数` - 一个连续的递增计数器，表示帐户中的交易编号。
-- `value` – 发送人向接收人转移的以太币金额（以以太币的一种面值 WEI 为单位）
+- `from` - 发送者的地址，该地址将签署交易。 这将是一个外部帐户，因为合约帐户不能发送交易。
+- `recipient` – 接收地址（如果是外部帐户，交易将传输值。 如果是合约帐户，交易将执行合约代码）
+- `signature` – 发送者的标识符。 当发送者的私钥签署交易并确保发送者已授权此交易时，生成此签名。
+- `nonce` - 一个有序递增的计数器，表示来自帐户的交易数量
+- `value` – 发送者向接收者转移的以太币数量（面值为 WEI，1 个以太币 = 1e+18wei）
 - `data` – 可包括任意数据的可选字段
-- `gasLimit` – 交易可以消耗的最大数量的燃料单位。 燃料单位代表计算步骤
-- `maxPriorityFeePerGas` - 作为验证者小费包含的最大燃料数量
-- `maxFeePerGas` - 愿意为交易支付的最大燃料数量（包括 `baseFeePerGas` 和 `maxPriorityFeePerGas`）
+- `gasLimit` – 交易可以消耗的最大数量的燃料单位。 [以太坊虚拟机](https://ethereum.org/en/developers/docs/evm/opcodes)指定每个可计算步骤所需的燃料单位
+- `maxPriorityFeePerGas` - 作为小费提供给验证者的已消耗燃料的最高价格
+- `maxFeePerGas` - 愿意为交易支付的每单位燃料的最高费用（包括 `baseFeePerGas` 和 `maxPriorityFeePerGas`）
 
 燃料是指验证者处理交易所需的计算。 用户必须为此计算支付费用。 `gasLimit` 和 `maxPriorityFeePerGas` 决定支付给验证者的最高交易费。 [关于燃料的更多信息](/developers/docs/gas/)。
 
@@ -51,7 +52,7 @@ lang: zh
 
 Geth 这样的以太坊客户端将处理此签名过程。
 
-示例 [JSON-RPC](https://eth.wiki/json-rpc/API) 调用：
+示例 [JSON-RPC](/developers/docs/apis/json-rpc) 调用：
 
 ```json
 {
@@ -98,7 +99,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 }
 ```
 
-- `raw` 是已签名交易的 RLP（Recursive Length Prefix）编码形式。
+- `raw` 是采用[递归长度前缀 (RLP) ](/developers/docs/data-structures-and-encoding/rlp)编码形式的签名交易
 - `tx` 是已签名交易的 JSON 形式。
 
 如有签名哈希，可通过加密技术证明交易来自发送者并提交网络。
@@ -162,10 +163,10 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 交易提交后，就会发生以下情况：
 
-1. 一旦您发送交易，加密法生成交易哈希： `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
-2. 然后将该交易转播到网络，并且与大量其他交易一起包含在一个集合中。
+1. 以加密方式生成的交易哈希： `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
+2. 然后，该交易被广播到网络，并添加到由所有其他待处理的网络交易组成的交易池中。
 3. 验证者必须选择你的交易并将它包含在一个区块中，以便验证交易并认为它“成功”。
-4. 随着时间的流逝，包含你的交易的区块将升级成“合理”状态，然后变成“最后确定”状态。 通过这些升级，可以进一步确定 你的交易已经成功并将无法更改。 区块一旦“最终确定”，只能通过耗费数十亿美元 的攻击来更改。
+4. 随着时间的流逝，包含你的交易的区块将升级成“合理”状态，然后变成“最后确定”状态。 通过这些升级，可以进一步确定 你的交易已经成功并将无法更改。 区块一旦“最终确定”，只能通过耗费数十亿美元 的网络级攻击来更改。
 
 ## 视频演示 {#a-visual-demo}
 
@@ -175,15 +176,13 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 ## Typed Transaction Envelope 交易 {#typed-transaction-envelope}
 
-以太坊最初有一种交易形式。 每笔交易都包含 Nonce、燃料价格、燃料限制、目的地地址、价值、数据、v、r 和 s。 这些字段采用 RLP 编码，如下所示：
+以太坊最初有一种交易形式。 每笔交易都包含 Nonce、燃料价格、燃料限制、目的地地址、价值、数据、v、r 和 s。 这些字段为 [RLP 编码](/developers/docs/data-structures-and-encoding/rlp/)，看起来像这样：
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
 以太坊经过演变，已经支持多种类型的交易，从而能够在不影响传统交易形式的情况下实现访问列表和 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 等新功能。
 
-[EIP-2718：类型化交易封套](https://eips.ethereum.org/EIPS/eip-2718)定义了交易类型，是未来交易类型的“封套”。
-
-EIP-2718 是用于类型化交易的新通用封套。 在新标准中，交易被解释为：
+[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718)是允许这种行为的。 交易解释如下：
 
 `TransactionType || TransactionPayload`
 
@@ -196,7 +195,7 @@ EIP-2718 是用于类型化交易的新通用封套。 在新标准中，交易�
 
 - [EIP-2718：Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
-_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
+_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
 
 ## 相关主题 {#related-topics}
 

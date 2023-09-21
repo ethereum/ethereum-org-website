@@ -39,7 +39,7 @@
   "page-index-developers-button": "开发者门户",
   "page-index-developers-code-examples": "代码示例",
   "page-index-developers-code-example-title-0": "您自己的银行",
-  "page-index-developers-code-example-description-0": "您可以通过自己编写的逻辑来建立银行。",
+  "page-index-developers-code-example-description-0": "你可以用自己编写的逻辑来建立银行。",
   "page-index-developers-code-example-title-1": "自己的货币",
   "page-index-developers-code-example-description-1": "您可以创建代币，并在应用程序之间转账和使用。",
   "page-index-developers-code-example-title-2": "JavaScript 以太坊钱包",
@@ -51,6 +51,7 @@
   "page-index-network-stats-total-eth-staked": "以太币质押总数",
   "page-index-network-stats-eth-price-description": "ETH 价格（美元）",
   "page-index-network-stats-eth-price-explainer": "最新以太币价格。最低购买 0.000000000000000001 即可，无需购买 1 个完整的以太币。",
+  "page-index-network-stats-total-eth-staked-explainer": "当前质押的用来保护网络安全的以太币总量。",
   "page-index-network-stats-tx-day-description": "今日交易",
   "page-index-network-stats-tx-day-explainer": "过去 24 小时内，网络成功处理的交易笔数。",
   "page-index-network-stats-value-defi-description": "DeFi 中锁定的价值（美元）",
@@ -74,5 +75,15 @@
   "page-index-nft": "资产互联网",
   "page-index-nft-description": "以太坊并非仅限数字货币。您拥有的任何东西都可以采用非同质化代币 (NFT) 来表现、交易和使用。您可以将艺术品代币化，并在每次重新出售时自动获得使用费。或者，您也可以用所有物的代币来贷款。不断开辟新的可能。",
   "page-index-nft-button": "关于非同质化代币的更多信息",
-  "page-index-nft-alt": "通过全息图显示的 ETH 徽标。"
+  "page-index-nft-alt": "通过全息图显示的 ETH 徽标。",
+  "community-events-content-heading": "加入 ethereum.org 社区",
+  "community-events-content-1": "加入我们的 <a href=\"/discord/\">Discord 服务器</a>，与近 <strong>4 万名成员</strong>一起交流。",
+  "community-events-content-2": "参加我们每月举行的社区电话会议，获取有关 Ethereum.org 发展的令人兴奋的最新消息和重要生态系统新闻。你将有机会提出问题、分享想法和提供反馈——这是你成为蓬勃发展的以太坊社区一员的绝佳机会。",
+  "community-events-next-event": "下个活动",
+  "community-events-no-events-planned": "没有计划开展的活动",
+  "community-events-upcoming-calls": "即将召开的电话会议",
+  "community-events-no-upcoming-calls": "没有即将召开的电话会议",
+  "community-events-previous-calls": "之前的电话会议",
+  "community-events-there-are-no-past-calls": "没有之前的电话会议",
+  "community-events-add-to-calendar": "添加到日历"
 }

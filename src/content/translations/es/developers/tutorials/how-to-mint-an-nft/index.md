@@ -118,7 +118,7 @@ Seguidamente, para interactuar con nuestro contrato, necesitamos crear una insta
 
 En el ejemplo anterior, la dirección de nuestro contrato es 0x81c587EB0fE773404c42c1d2666b5f557C470eED.
 
-A continuación, utilizaremos el [método de contrato Web3](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) para crear nuestro contrato usando ABI y la dirección. En su archivo `mint-nft.js`, añada lo siguiente:
+A continuación, utilizaremos el [método de contrato Web3](https://docs.web3js.org/api/web3-eth-contract/class/Contract) para crear nuestro contrato usando ABI y la dirección. En su archivo `mint-nft.js`, añada lo siguiente:
 
 ```js
 const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"

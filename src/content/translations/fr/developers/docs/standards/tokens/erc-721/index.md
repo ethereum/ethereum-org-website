@@ -14,13 +14,13 @@ Un NFT est utilisé pour identifier quelque chose ou quelqu'un d'une façon uniq
 
 L'ERC-721 introduit une norme pour les NFT. En d'autres termes, ce type de jeton est unique et peut avoir une valeur différente de celle d'un autre jeton du même contrat intelligent, peut-être en raison de son âge, de sa rareté ou du visuel qui lui est associé. Visuel ? Vous avez dit visuel ?
 
-Oui ! Tous les NFT ont une variable `uint256` appelée `tokenId` ainsi, pour tout contrat ERC-721, la paire `contract address, uint256 tokenId` doit être globalement unique. Ceci étant dit, une dApp peut intégrer un « convertisseur » qui utilise le `tokenId` comme entrée et affiche une image de quelque chose de cool, comme des zombies, des armes, des compétences ou d'incroyables chatons !
+Oui ! Tous les NFT ont une variable `uint256` appelée `tokenId` ainsi, pour tout contrat ERC-721, la paire `contract address, uint256 tokenId` doit être globalement unique. Cela dit, une dApp peut avoir un « convertisseur » qui utilisent le `tokenld` comme entrée et affiche une image de quelque chose de cool, comme des zombies, des armes, des compétences ou des incroyables chatons !
 
-## Pré-requis {#prerequisites}
+## Prérequis {#prerequisites}
 
 - [Comptes](/developers/docs/accounts/)
-- [Les contrats intelligents ou «&nbsp;_smart contracts_&nbsp;»](/developers/docs/smart-contracts/)
-- [Normes des jetons](/developers/docs/standards/tokens/)
+- [Contrats intelligents](/developers/docs/smart-contracts/)
+- [Normes de jetons](/developers/docs/standards/tokens/)
 
 ## Présentation {#body}
 
@@ -46,7 +46,7 @@ De [EIP-721](https://eips.ethereum.org/EIPS/eip-721) :
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Évènements {#events}
+#### Événements {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -231,6 +231,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [CryptoKitties](https://www.cryptokitties.co/) est un jeu axé sur des créatures de collection adorables dont on peut faire l'élevage et que nous appelons CryptoKitties.
 - [Sorare](https://sorare.com/) est un jeu de football mondial où vous pouvez collectionner des objets en édition limitée, gérer vos équipes et concourir pour gagner des prix.
 - [Ethereum Name Service (ENS)](https://ens.domains/) offre un moyen sécurisé et décentralisé d'adresser des ressources à la fois sur et hors de la blockchain en utilisant des noms simples et lisibles.
+- [POAP](https://poap.xyz) fournit des NFT gratuits aux personnes qui assistent à des événements ou accomplissent des actions spécifiques. Les POAP sont libres de création et de distribution.
 - [Unstoppable Domains](https://unstoppabledomains.com/) est une société basée à San Francisco, qui construit des domaines sur des blockchains. Les domaines de blockchains remplacent les adresses des cryptomonnaies par des noms lisibles et peuvent être utilisés pour activer des sites Web résistants à la censure.
 - [Gods Unchained Cards](https://godsunchained.com/) est un jeu de cartes à collectionner (JCC) de la blockchain Ethereum, qui utilise des NFT pour apporter une vraie propriété aux actifs en jeu.
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com) est une collection de 10 000 NFT uniques qui, en plus d'être une œuvre d'art remarquablement rare, agit en tant que jeton d’adhésion au club en fournissant aux membres des atouts et des avantages qui augmentent au fil du temps grâce aux efforts de la communauté.

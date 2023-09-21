@@ -19,7 +19,7 @@ Você pode usar essas bibliotecas para interagir com contratos inteligentes na E
 **Confira**
 
 - [Web3.js](https://web3js.readthedocs.io/)
-- [Ethers.js - \_\_Implementação completa de uma carteira Ethereum e utilidades em JavaScript e TypeScript.](https://docs.ethers.io/)
+- [Ethers.js - Implementação completa de uma carteira Ethereum e utilidades em JavaScript e TypeScript.](https://docs.ethers.io/)
 
 ### Smart Contracts {#smart-contracts}
 

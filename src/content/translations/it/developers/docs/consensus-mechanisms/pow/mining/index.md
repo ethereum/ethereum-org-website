@@ -41,6 +41,8 @@ Per approfondire ulteriormente la redditività del mining, usa un apposito calco
 
 ## Come avveniva il mining delle transazioni Ethereum {#how-ethereum-transactions-were-mined}
 
+Quanto segue fornisce una panoramica di come erano minate le transazioni, nel proof-of-work di Ethereum. Una descrizione analoga di questo processo per il proof-of-stake di Ethereum, si può trovare [qui](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
+
 1. Un utente scrive e firma una richiesta di [transazione](/developers/docs/transactions/) con la chiave privata di un [conto](/developers/docs/accounts/).
 2. L'utente trasmette la richiesta di transazione all'intera rete Ethereum attraverso un [nodo](/developers/docs/nodes-and-clients/).
 3. Dopo aver recepito la richiesta della nuova transazione, ogni nodo nella rete Ethereum aggiunge la richiesta alla propria mempool locale, un elenco di tutte le richieste di transazioni delle quali è venuto a conoscenza e che non sono ancora state inviate alla blockchain in un blocco.
@@ -54,7 +56,13 @@ Per approfondire ulteriormente la redditività del mining, usa un apposito calco
 
 Il mining di ogni transazione (cioè l'inclusione in un nuovo blocco e la prima propagazione) avviene una volta sola, ma la transazione viene eseguita e verificata da ogni partecipante nel processo di avanzamento dello stato canonico dell'EVM. Questa è una delle regole fondamentali della blockchain: **non ti fidare, verifica**.
 
-## Dimostrazione visiva {#a-visual-demo}
+## Blocchi ommer (zio) {#ommer-blocks}
+
+L'estrazione di blocchi basata sul proof-of-work era solo probabilistica, il che significa che a volte due blocchi validi venivano pubblicati simultaneamente a causa della latenza della rete. In questo caso, il protocollo doveva determinare la catena più lunga (e quindi più "valida") garantendo al tempo stesso un trattamento equo dei miner, ricompensando parzialmente il blocco valido proposto non incluso. Ciò incoraggiava l'ulteriore decentralizzazione della rete in quanto i piccoli miner, che potevano trovarsi ad affrontare una latenza più elevata, potevano comunque generare rendimenti tramite ricompense per blocchi [ommer](/glossary/#ommer).
+
+"Ommer" è il termine preferito, neutro dal punto di vista del genere, per lo stesso livello di un blocco padre, ma a volte viene anche indicato come "zio". **Da quando Ethereum è passato alla proof-of-stake, i blocchi ommer non vengono più estratti** poiché in ogni slot viene eletto solo un proponente. Questo cambiamento può essere osservato nel [grafico storico](https://ycharts.com/indicators/ethereum_uncle_rate) dei blocchi ommer estratti.
+
+## Demo visiva {#a-visual-demo}
 
 Austin ti guiderà attraverso il mining e la blockchain basata sul proof-of-work.
 
@@ -65,14 +73,6 @@ Austin ti guiderà attraverso il mining e la blockchain basata sul proof-of-work
 La Rete principale di Ethereum ha sempre e solo usato un algoritmo di mining: ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash fu il successore di un algoritmo R&D originale, noto come ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 [Maggiori informazioni sugli algoritmi di mining](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
-
-## Letture consigliate {#further-reading}
-
-## Strumenti correlati {#related-tools}
-
-- [I top miner di Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
-- [Calcolatore di mining Etherscan](https://etherscan.io/ether-mining-calculator)
-- [Calcolatore di mining Minerstat](https://minerstat.com/coin/ETH)
 
 ## Argomenti correlati {#related-topics}
 

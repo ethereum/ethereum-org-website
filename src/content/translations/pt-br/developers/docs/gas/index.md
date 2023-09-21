@@ -63,7 +63,7 @@ A taxa base é calculada por uma fórmula que compara o tamanho do bloco anterio
 | 7               |          30M |           12,5% |      180,2 gwei |
 | 8               |          30M |           12,5% |      202,7 gwei |
 
-Em relação ao mercado de leilão de gás antes da atualização London, essa mudança no mecanismo de taxa de transação faz com que a previsão de taxa seja mais confiável. Conforme a tabela acima, para criar uma transação no bloco número 9, uma carteira informará o usuário que a **taxa base máxima** a ser adicionada ao próximo bloco é `taxa base atual * 12,5%` ou `202,7 gwei * 12,5% = 228,1 gwei`.
+Em relação ao mercado de leilão de gás antes da atualização London, essa mudança no mecanismo de taxa de transação faz com que a previsão de taxa seja mais confiável. Conforme a tabela acima, para criar uma transação no bloco número 9, uma carteira informará o usuário que a **taxa base máxima** a ser adicionada ao próximo bloco é a `taxa base atual * 112,5%` ou `202,7 gwei * 112,5% = 228,1 gwei`.
 
 Também é importante notar que é improvável que vejamos picos prolongados de blocos cheios devido à velocidade com que a taxa base aumenta após um bloco cheio.
 
@@ -148,6 +148,7 @@ Se você deseja monitorar os preços do gás, para poder enviar seu ETH por meno
 - [Explicação sobre o gás de Ethereum](https://defiprime.com/gas)
 - [Reduzindo o consumo de gás de seus Contratos Inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Prova de participação em comparação à Prova de trabalho](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
+- [Estratégias de otimização de gás para desenvolvedores](https://www.alchemy.com/overviews/solidity-gas-optimization)
 
 ## Tópicos relacionados {#related-topics}
 

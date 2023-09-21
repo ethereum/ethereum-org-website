@@ -906,7 +906,7 @@ If you don't have it already, first install [Alchemy Web3](https://github.com/al
 npm install @alch/alchemy-web3
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) is a wrapper around [Web3.js](https://web3js.readthedocs.io/en/v1.2.9/), providing enhanced API methods and other crucial benefits to make your life as a web3 developer easier. It is designed to require minimal configuration so you can start using it in your app right away!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) is a wrapper around [Web3.js](https://docs.web3js.org/), providing enhanced API methods and other crucial benefits to make your life as a web3 developer easier. It is designed to require minimal configuration so you can start using it in your app right away!
 
 Then, install the [dotenv](https://www.npmjs.com/package/dotenv) package in your project directory, so we have a secure place to store our API key after we fetch it.
 
@@ -951,7 +951,7 @@ A contract ABI is necessary for specifying which function a contract will invoke
 
 Your contract-abi.json should be stored in your src folder.
 
-Armed with our contract address, ABI, and Alchemy Web3 endpoint, we can use the [contract method](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) to load an instance of our smart contract. Import your contract ABI into the `interact.js` file and add your contract address.
+Armed with our contract address, ABI, and Alchemy Web3 endpoint, we can use the [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) to load an instance of our smart contract. Import your contract ABI into the `interact.js` file and add your contract address.
 
 ```javascript
 // interact.js
