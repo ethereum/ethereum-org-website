@@ -21,7 +21,7 @@ Muchas redes sociales descentralizadas existen como alternativa a los servicios 
 
 ### ¿Cómo funcionan las redes sociales descentralizadas? {#decentralized-social-networks-overview}
 
-Las redes sociales descentralizadas son una clase [aplicaciones descentralizadas (dapps)](/dapps/) - aplicaiones impulsadas por [contratos inteligentes](/developers/docs/smart-contracts/) desplegados en la cadena de bloques. El código de contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
+Las redes sociales descentralizadas son una clase [aplicaciones descentralizadas (DApps)](/dapps/) - aplicaiones impulsadas por [contratos inteligentes](/developers/docs/smart-contracts/) desplegados en la cadena de bloques. El código de contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
 
 Las plataformas tradicionales de redes sociales se basan en bases de datos para almacenar información del usuario, el código del programa y otras formas de datos. Aunque esto crea puntos únicos de fallo y supone un riesgo significativo. Por ejemplo, los servidores de Facebook, de forma notoria, [se desconectaron durante horas](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) el año pasado, dejando a los usuarios fuera de la plataforma.
 
@@ -39,7 +39,7 @@ Muchas plataformas de redes sociales basadas en la cadena de bloques tienen tók
 
 3. Las redes sociales descentralizadas eliminan al intermediario. Los creadores son propietarios exclusivos de sus contenidos, y se comprometen directamente con sus seguidores, aficionados, compradores y otras partes, con la única mediación de un contrato inteligente entre ellos.
 
-4. Al tratarse de dapps que corren en la red Ethereum, que es una red global de nodos entre pares, las redes sociales descentralizadas son menos propensas a sufrir tiempos de inactividad por fallos o interrupciones de funcionamiento o cortes en servidores.
+4. Al tratarse de DApps que corren en la red Ethereum, que es una red global de nodos entre pares, las redes sociales descentralizadas son menos propensas a sufrir tiempos de inactividad por fallos o interrupciones de funcionamiento o cortes en servidores.
 
 5. Las plataformas sociales descentralizadas ofrecen un marco de monetización mejorado para los creadores de contenido a través de tókenes no fungibles (NFT), pagos con criptomonedas en la propia aplicación, entre otras ventajas.
 

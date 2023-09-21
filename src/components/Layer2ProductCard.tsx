@@ -1,6 +1,6 @@
 // Libraries
 import React from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { Box, Center, Flex, Heading, Image } from "@chakra-ui/react"
 
@@ -8,6 +8,7 @@ import { Box, Center, Flex, Heading, Image } from "@chakra-ui/react"
 import ButtonLink from "./ButtonLink"
 import InlineLink from "./Link"
 import Text from "./OldText"
+import GatsbyImage from "./GatsbyImage"
 
 export interface IProps {
   children?: React.ReactNode
@@ -56,8 +57,7 @@ const Layer2ProductCard: React.FC<IProps> = ({
         boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
         minH="200px"
       >
-        <Image
-          as={GatsbyImage}
+        <GatsbyImage
           image={image}
           alt={alt}
           objectFit="contain"

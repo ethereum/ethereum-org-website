@@ -1,7 +1,7 @@
 import React from "react"
-import { Image, useColorModeValue } from "@chakra-ui/react"
+import { useColorModeValue } from "@chakra-ui/react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import GatsbyImage from "./GatsbyImage"
 import { getImage } from "../utils/image"
 
 export interface IProps {}
@@ -29,11 +29,10 @@ const TranslationChartImage: React.FC<IProps> = () => {
   const ethImage = useColorModeValue(data.pageviewsLight, data.pageviewsDark)
 
   return (
-    <Image
-      as={GatsbyImage}
+    <GatsbyImage
       image={getImage(ethImage)!}
       alt=""
-      fit="contain"
+      objectFit="contain"
       minW="263px"
     />
   )
