@@ -15,7 +15,7 @@ import {
   Box,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
 import TutorialMetadata from "../components/TutorialMetadata"

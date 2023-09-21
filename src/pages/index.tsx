@@ -20,7 +20,7 @@ import { FaGithub } from "react-icons/fa"
 import type { ChildOnlyProp, Context } from "../types"
 
 import ActionCard from "../components/ActionCard"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import CodeModal from "../components/CodeModal"
 import Codeblock from "../components/Codeblock"

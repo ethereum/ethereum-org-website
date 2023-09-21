@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa"
 import React, { ReactNode } from "react"
 
 import InlineLink from "./Link"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Text from "./OldText"
 import OldHeading from "./OldHeading"
 

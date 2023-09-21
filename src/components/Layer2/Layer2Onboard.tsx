@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react"
 
 // Components
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"

@@ -21,7 +21,7 @@ import {
 import { MdExpandMore } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import ButtonDropdown, {
   IProps as ButtonDropdownProps,
   List as ButtonDropdownList,

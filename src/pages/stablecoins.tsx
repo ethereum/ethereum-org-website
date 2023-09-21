@@ -13,7 +13,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import DataProductCard from "../components/DataProductCard"
 import Emoji from "../components/Emoji"

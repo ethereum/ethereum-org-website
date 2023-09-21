@@ -15,7 +15,7 @@ import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import DocLink from "../../components/DocLink"
 import FeedbackCard from "../../components/FeedbackCard"
 import InlineLink from "../../components/Link"

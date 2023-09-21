@@ -17,7 +17,7 @@ import {
 // Data imports
 import stakingProducts from "../../data/staking-products.json"
 // Component imports
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import Translation from "../Translation"
 import OldHeading from "../OldHeading"
 // SVG imports

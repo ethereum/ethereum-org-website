@@ -14,7 +14,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import InfoBanner from "../components/InfoBanner"
 import InlineLink from "../components/Link"
 import ExpandableCard from "../components/ExpandableCard"
