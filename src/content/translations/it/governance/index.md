@@ -57,7 +57,7 @@ _Nota: chiunque può far parte di più gruppi (ad esempio uno sviluppatore di pr
 
 ## Cos'è una EIP? {#what-is-an-eip}
 
-Un processo importante usato nella governance di Ethereum è la proposta di miglioramento di Ethereum **(Ethereum Improvement Proposal, EIP)**. Le EIP costituiscono lo standard per potenziali nuove funzioni o processi di Ethereum. Chiunque nella community Ethereum può creare un'EIP. Ad esempio, nessuno degli autori della EIP-721, l'EIP che ha standardizzato gli NFT, ha lavorato direttamente allo sviluppo del protocollo Ethereum.
+Un processo importante usato nella governance di Ethereum è la proposta di miglioramento di Ethereum **(Ethereum Improvement Proposal, EIP)**. Le EIP costituiscono lo standard per potenziali nuove funzioni o processi di Ethereum. Chiunque nella community Ethereum può creare un'EIP. Se sei interessata/o a scrivere un’EIP o a partecipare alla revisione tra colleghi e/o alla governance, vedi:
 
 <ButtonLink to="/eips/">
   Maggiori informazioni sulle EIP
@@ -153,7 +153,7 @@ Il processo di governance di Ethereum spesso rinuncia a velocità ed efficienza 
 
 Lo sviluppo di specifiche e implementazioni è sempre stato totalmente open source, non sono stati invece utilizzati i processi formali descritti sopra per proporre gli aggiornamenti. Questo ha consentito a ricercatori e implementatori di specificare e concordare le modifiche più rapidamente.
 
-Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 september 2022 La Fusione è stata completata, come parte dell'[aggiornamento di rete di Parigi](/history/#paris). La proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) è stata modificata da 'Ultimo Appello' a 'Definitiva', completando la transizione al proof-of-stake.
+Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 settembre 2022, la Fusione si è completata come parte dell'[aggiornamento di rete di Parigi](/history/#paris). La proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) è stata modificata da 'Ultimo Appello' a 'Definitiva', completando la transizione al proof-of-stake.
 
 <ButtonLink to="/roadmap/merge/">
   Maggiori informazioni sulla fusione
