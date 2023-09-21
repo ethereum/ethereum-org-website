@@ -1,17 +1,11 @@
 import { FC, RefAttributes } from "react"
-import {
-  Icon,
-  VisuallyHidden,
-  forwardRef,
-  chakra,
-  useStyleConfig,
-  omitThemingProps,
-  HTMLChakraProps,
-  ThemingProps,
-} from "@chakra-ui/react"
+import { Icon, VisuallyHidden, forwardRef } from "@chakra-ui/react"
 import { RxExternalLink } from "react-icons/rx"
 import { useRouter } from "next/router"
-import NextLink, { type LinkProps as NextLinkProps } from "next/link"
+import {
+  Link as NextLink,
+  type LinkProps as NextLinkProps,
+} from "@chakra-ui/next-js"
 
 // import { Lang } from "../utils/languages"
 // import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
@@ -31,18 +25,9 @@ type BaseProps = {
   // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
 
-const cx = (...classNames: any[]) => classNames.filter(Boolean).join(" ")
-
-type Pretty<T> = { [K in keyof T]: T[K] } & {}
-type Merge<P, T> = Pretty<Omit<P, keyof T> & T>
-type LegacyProps = "as" | "legacyBehavior" | "passHref"
+export type LinkProps = BaseProps & NextLinkProps
 
 type LinkComponent = FC<RefAttributes<HTMLAnchorElement> & LinkProps>
-
-export type LinkProps = Merge<
-  HTMLChakraProps<"a"> & ThemingProps<"Link"> & BaseProps,
-  Omit<NextLinkProps, LegacyProps | "href">
->
 
 /**
  * Link wrapper which handles:
@@ -61,15 +46,14 @@ export type LinkProps = Merge<
  */
 export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
   const router = useRouter()
-  const styles = useStyleConfig("Link", props)
   const {
-    className,
     href: hrefProp,
     to,
     children,
     hideArrow,
+    isPartiallyActive,
     ...rest
-  } = omitThemingProps(props)
+  } = props
 
   let href = (to ?? hrefProp)!
 
@@ -88,18 +72,11 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
   }
 
   return (
-    <chakra.a
-      target={isExternal ? "_blank" : undefined}
-      ref={ref}
-      href={href as any}
-      {...rest}
-      className={cx("chakra-link", className)}
-      __css={styles}
-      as={NextLink}
-    >
+    // @ts-ignore: `isExternal` is missing from the NextLink types
+    <NextLink ref={ref} href={href} isExternal={isExternal} {...rest}>
       {children}
       {isExternal && <ExternalLinkContent hideArrow={hideArrow} />}
-    </chakra.a>
+    </NextLink>
   )
 })
 
@@ -124,7 +101,7 @@ const ExternalLinkContent = ({
   )
 }
 
-const InlineLink: LinkComponent = forwardRef((props, ref) => (
+const InlineLink: FC<LinkProps> = forwardRef((props, ref) => (
   <BaseLink data-inline-link ref={ref} {...props} />
 ))
 
