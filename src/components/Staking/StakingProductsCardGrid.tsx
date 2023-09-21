@@ -20,7 +20,6 @@ import stakingProducts from "../../data/staking-products.json"
 // Component imports
 import ButtonLink from "../ButtonLink"
 import Translation from "../Translation"
-import OldHeading from "../OldHeading"
 // SVG imports
 import {
   CautionProductGlyphIcon,
