@@ -32,7 +32,7 @@ To achieve deterministic execution, blockchains limit nodes to reaching consensu
 - “Does this account have enough funds to cover the transaction?”
 - “Is this transaction valid in the context of this smart contract?”, etc.
 
-If blockchains received information from external sources (i.e. from the real world), determinism would be impossible to achieve, preventing nodes from agreeing on the validity of changes to the blockchain’s state. Take for example a smart contract that executes a transaction based on the current ETH-USD exchange rate obtained from a traditional price API. This figure is likely change frequently (not to mention that the API could get deprecated or hacked), meaning nodes executing the same contract code would arrive at different results.
+If blockchains received information from external sources (i.e. from the real world), determinism would be impossible to achieve, preventing nodes from agreeing on the validity of changes to the blockchain’s state. Take for example a smart contract that executes a transaction based on the current ETH-USD exchange rate obtained from a traditional price API. This figure is likely to change frequently (not to mention that the API could get deprecated or hacked), meaning nodes executing the same contract code would arrive at different results.
 
 For a public blockchain like Ethereum, with thousands of nodes around the world processing transactions, determinism is critical. With no central authority serving as a source of truth, nodes need mechanisms for arriving at the same state after applying the same transactions. A case whereby node A executes a smart contract’s code and gets "3" as a result, while node B gets "7" after running the same transaction would cause consensus to break down and eliminate Ethereum’s value as a decentralized computing platform.
 
@@ -206,7 +206,7 @@ Computational oracles also rely on off-chain nodes to perform computational task
 
 ## Oracle design patterns {#oracle-design-patterns}
 
-Oracles come in different types, including _immediate-read_, _publish-subscribe_, and _request-response_, with the latter two being the most popular among Ethereum smart contracts. Here we briefly describe the publish_subscribe and request_response models.
+Oracles come in different types, including _immediate-read_, _publish-subscribe_, and _request-response_, with the latter two being the most popular among Ethereum smart contracts. Here we briefly describe the publish-subscribe and request-response models.
 
 ### Publish-subscribe oracles {#publish-subscribe-oracles}
 
