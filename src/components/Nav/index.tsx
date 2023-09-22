@@ -95,7 +95,7 @@ const Nav: FC<IProps> = ({ path }) => {
                   isSecondary
                   px={1.5}
                   _hover={{
-                    transform: "rotate(30deg)", // Rotate the icon to 30 degrees on hover
+                    transform: "rotate(10deg)",
                     color: "primary.hover", // Change color to blue on hover
                   }}
                   onClick={toggleColorMode}
