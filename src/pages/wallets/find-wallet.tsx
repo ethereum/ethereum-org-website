@@ -242,8 +242,6 @@ const FindWalletPage = ({ data, location }) => {
         gap={6}
         top="76px"
         mb={{ base: "30px", md: "20px", lg: "50px" }}
-        borderBottom="1px solid"
-        borderBottomColor="secondary"
       >
         <WalletFilterSidebar
           ref={wrapperRef}
