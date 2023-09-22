@@ -1,15 +1,15 @@
 import fs from "fs"
-import { extname } from "path"
-import { join } from "path"
+import { join, extname } from "path"
 import matter from "gray-matter"
 
 import { Frontmatter } from "../types"
 
 import { CONTENT_DIR } from "../constants"
 
-const contentDir = join(process.cwd(), CONTENT_DIR)
+const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
 const getPostSlugs = (dir: string, files: string[] = []) => {
+  const contentDir = join(CURRENT_CONTENT_DIR, dir)
   // Temporal list of content pages allowed to be compiled
   // When a content page is migrated (and he components being used), should be added to this list
   const temporalAllowedPages = [
@@ -29,19 +29,22 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
 
   // Skip /translations dir for now until we set up i18n
   // Skip /developers dir for now until we set up required layout
-  if (dir.includes("/translations") || dir.includes("/developers")) return []
+  if (dir.includes("/translations")) return []
 
-  // Get an array of all files and directories in the passed directory using fs.readdirSync
-  const fileList = fs.readdirSync(dir)
+  // Get an array of all files and directories in the passed directory using
+  // fs.readdirSync
+  const fileList = fs.readdirSync(contentDir)
 
   // Create the full path of the file/directory by concatenating the passed directory and file/directory name
   for (const file of fileList) {
-    const name = `${dir}/${file}`
+    const name = join(contentDir, file)
 
     // Check if the current file/directory is a directory using fs.statSync
     if (fs.statSync(name).isDirectory()) {
-      // If it is a directory, recursively call the getFiles function with the directory path and the files array
-      getPostSlugs(name, files)
+      // If it is a directory, recursively call the getFiles function with the
+      // directory path and the files array
+      const nestedDir = join(dir, file)
+      getPostSlugs(nestedDir, files)
     } else {
       const fileExtension = extname(name)
 
@@ -50,7 +53,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
         for (const page of temporalAllowedPages) {
           if (name.includes(page)) {
             files.push(
-              name.replace("public/content", "").replace("/index.md", "")
+              name.replace(CURRENT_CONTENT_DIR, "").replace("/index.md", "")
             )
           }
         }
@@ -67,7 +70,7 @@ const removeAnchorLinks = (mdContent: string) =>
 
 export const getContentBySlug = (slug: string, fields: string[] = []) => {
   const realSlug = `${slug}/index.md`
-  const fullPath = join(contentDir, realSlug)
+  const fullPath = join(CURRENT_CONTENT_DIR, realSlug)
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data: frontmatter, content } = matter(fileContents)
 
@@ -95,9 +98,9 @@ export const getContentBySlug = (slug: string, fields: string[] = []) => {
   return items
 }
 
-export const getContent = (fields: string[] = []) => {
-  const slugs = getPostSlugs(CONTENT_DIR)
-  const content = slugs.map((slug) => getContentBySlug(slug as string, fields))
+export const getContent = (dir: string, fields: string[] = []) => {
+  const slugs = getPostSlugs(dir)
+  const content = slugs.map((slug) => getContentBySlug(slug, fields))
 
   return content
 }

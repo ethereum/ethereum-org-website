@@ -9,7 +9,7 @@ import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
 
 // Layouts
-import { RootLayout, StaticLayout } from "@/layouts"
+import { RootLayout, DocsLayout } from "@/layouts"
 import { staticComponents as components } from "@/layouts/Static"
 
 // Types
@@ -26,14 +26,18 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const contentFiles = getContent("/", ["slug"])
+  const dir = path.join("/", "developers", "docs")
+  const contentFiles = getContent(dir, ["slug"])
 
   return {
     paths: contentFiles.map((file) => {
+      // Remove dir from slug since the base segment is handled by Next with the
+      // nested folder structure
+      const slug = file.slug.replace(dir, "")
       return {
         params: {
           // Splitting nested paths to generate proper slug
-          slug: file.slug.split("/").slice(1),
+          slug: slug.split("/").slice(1),
         },
       }
     }),
@@ -97,7 +101,7 @@ ContentPage.getLayout = (page: ReactElement) => {
 
   return (
     <RootLayout>
-      <StaticLayout {...layoutProps}>{page}</StaticLayout>
+      <DocsLayout {...layoutProps}>{page}</DocsLayout>
     </RootLayout>
   )
 }

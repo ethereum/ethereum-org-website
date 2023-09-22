@@ -1,1 +1,1 @@
-const DocsLayout = () => null
+export const DocsLayout = ({ children }) => <div>{children}</div>
