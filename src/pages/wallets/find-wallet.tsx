@@ -234,15 +234,7 @@ const FindWalletPage = ({ data, location }) => {
           )}
         </Box>
       </Box>
-      <Flex
-        px={{ base: 0, md: 8 }}
-        pt={4}
-        pb={6}
-        w="full"
-        gap={6}
-        top="76px"
-        mb={16}
-      >
+      <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} w="full" gap={6} top="76px">
         <WalletFilterSidebar
           ref={wrapperRef}
           {...{
@@ -294,12 +286,13 @@ const FindWalletPage = ({ data, location }) => {
       </Flex>
       <Box
         textAlign="center"
-        p={5}
+        p={4}
+        m={4}
         sx={{
           p: {
             fontSize: "sm",
             lineHeight: "18px",
-            p: "2",
+            p: "1",
             m: 0,
           },
         }}
