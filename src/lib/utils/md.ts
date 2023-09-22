@@ -25,6 +25,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/history/",
     "/smart-contracts",
     "/whitepaper",
+    "/developers/docs/bridges",
   ]
 
   // Skip /translations dir for now until we set up i18n
@@ -51,7 +52,8 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
       if (fileExtension === ".md") {
         // If it is a .md file (allowed content page), push the path to the files array
         for (const page of temporalAllowedPages) {
-          if (name.includes(page)) {
+          const fullPagePath = join(CURRENT_CONTENT_DIR, page)
+          if (name.includes(fullPagePath)) {
             files.push(
               name.replace(CURRENT_CONTENT_DIR, "").replace("/index.md", "")
             )

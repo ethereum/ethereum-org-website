@@ -26,7 +26,11 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const contentFiles = getContent("/", ["slug"])
+  const contentFiles = getContent("/", ["slug"]).filter(
+    // Filter `/developers` slugs since they are processed by
+    // `/developers/docs/[...slug].tsx`
+    (file) => !file.slug.includes("/developers")
+  )
 
   return {
     paths: contentFiles.map((file) => {
