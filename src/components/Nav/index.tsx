@@ -113,14 +113,7 @@ const Nav: FC<IProps> = ({ path }) => {
                   }}
                 >
                   <Box mr={2} mt={2}>
-                    <Icon
-                      as={MdLanguage}
-                      transition="transform 0.3s ease-in-out, color 0.2s"
-                      // _groupHover renders "[data-group]:hover &"
-                      _groupHover={{
-                        transform: "rotate(10deg)",
-                      }}
-                    />
+                    <Icon as={MdLanguage} />
                   </Box>
                   <span>Languages {i18n.language.toUpperCase()}</span>
                 </ButtonLink>
