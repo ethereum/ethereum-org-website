@@ -14,7 +14,7 @@ import { graphql, PageProps } from "gatsby"
 
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import CardList from "../components/CardList"
 import EthPriceCard from "../components/EthPriceCard"

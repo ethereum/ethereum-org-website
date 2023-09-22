@@ -7,7 +7,7 @@ import { getImage, ImageDataLike } from "../utils/image"
 
 import CardList from "./CardList"
 import Card from "./Card"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Translation from "./Translation"
 import OldHeading from "./OldHeading"
 

@@ -12,7 +12,7 @@ import { useI18next } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Callout from "../components/Callout"

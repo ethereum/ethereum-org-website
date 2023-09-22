@@ -23,7 +23,7 @@ import {
 import layer2Data from "../data/layer-2/layer-2.json"
 
 // Components
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"

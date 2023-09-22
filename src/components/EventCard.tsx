@@ -1,7 +1,6 @@
 import React from "react"
 import { Box, Heading } from "@chakra-ui/react"
-
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Emoji from "./Emoji"
 import Text from "./OldText"
 
