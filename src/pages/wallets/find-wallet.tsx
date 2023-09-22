@@ -299,7 +299,7 @@ const FindWalletPage = ({ data, location }) => {
           p: {
             fontSize: "sm",
             lineHeight: "18px",
-            p: "8px",
+            p: "2",
             m: 0,
           },
         }}
