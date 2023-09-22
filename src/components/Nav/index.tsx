@@ -109,7 +109,7 @@ const Nav: FC<IProps> = ({ path }) => {
                   isSecondary
                   px={1.5}
                   _hover={{
-                    color: "primary.hover", // Change color on hover
+                    color: "primary.hover",
                   }}
                 >
                   <Box mr={2} mt={2}>
