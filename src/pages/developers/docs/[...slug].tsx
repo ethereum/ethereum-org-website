@@ -25,8 +25,8 @@ interface Props {
   mdxSource: MDXRemoteSerializeResult
 }
 
+const dir = path.join("/", "developers", "docs")
 export const getStaticPaths: GetStaticPaths = () => {
-  const dir = path.join("/", "developers", "docs")
   const contentFiles = getContent(dir, ["slug"])
 
   return {
@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
-  const markdown = getContentBySlug(params.slug.join("/"), [
+  const markdown = getContentBySlug(path.join(dir, params.slug.join("/")), [
     "slug",
     "content",
     "frontmatter",
