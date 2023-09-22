@@ -95,8 +95,8 @@ const Nav: FC<IProps> = ({ path }) => {
                   isSecondary
                   px={1.5}
                   _hover={{
-                    transform: "rotate(30deg)", // Rotate the icon to 30 degrees on hover
-                    color: "primary.hover", // Change color to blue on hover
+                    transform: "rotate(10deg)", // Rotate the icon to 30 degrees on hover
+                    color: "primary.hover",
                   }}
                   onClick={toggleColorMode}
                 ></IconButton>
@@ -113,14 +113,12 @@ const Nav: FC<IProps> = ({ path }) => {
                   }}
                 >
                   <Box mr={2} mt={2}>
-                    {" "}
-                    {/* Add spacing between the text and the icon */}
                     <Icon
                       as={MdLanguage}
                       transition="transform 0.3s ease-in-out, color 0.2s"
                       // _groupHover renders "[data-group]:hover &"
                       _groupHover={{
-                        transform: "rotate(30deg)",
+                        transform: "rotate(10deg)",
                       }}
                     />
                   </Box>
