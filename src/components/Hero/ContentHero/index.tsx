@@ -6,11 +6,11 @@ import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
 
 export interface ContentHeroProps extends CommonHeroProps {
-  breadcrumbSlug: BreadcrumbsProps["slug"]
+  breadcrumbs: BreadcrumbsProps
 }
 
 const ContentHero = (props: ContentHeroProps) => {
-  const { breadcrumbSlug, heroImgSrc, buttons, header, description } = props
+  const { breadcrumbs, heroImgSrc, buttons, header, description } = props
   return (
     <Box bgImg="bgMainGradient">
       <SimpleGrid columns={{ base: 1, lg: 2 }} maxW="1536px" mx="auto" gap="4">
@@ -35,7 +35,7 @@ const ContentHero = (props: ContentHeroProps) => {
            * This change would be done when the component is applied
            * to prod.
            */}
-          <Breadcrumbs slug={breadcrumbSlug} mb="0" />
+          <Breadcrumbs {...breadcrumbs} mb="0" />
           <Stack spacing="6">
             <Heading size="2xl">{header}</Heading>
             <Text fontSize="lg">{description}</Text>

@@ -68,7 +68,7 @@ export const ContentHero: StoryObj = {
     ]
     return (
       <ContentHeroComponent
-        breadcrumbSlug="/en/run-a-node/"
+        breadcrumbs={{ slug: "/en/run-a-node/" }}
         heroImgSrc={mockGatsbyImgData}
         header={t("hero-header")}
         description={t("hero-subtitle")}
