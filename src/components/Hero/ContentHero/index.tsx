@@ -37,7 +37,9 @@ const ContentHero = (props: ContentHeroProps) => {
            */}
           <Breadcrumbs {...breadcrumbs} mb="0" />
           <Stack spacing="6">
-            <Heading size="2xl">{header}</Heading>
+            <Heading as="h1" size="2xl">
+              {header}
+            </Heading>
             <Text fontSize="lg">{description}</Text>
             <HStack spacing="4">
               {buttons
