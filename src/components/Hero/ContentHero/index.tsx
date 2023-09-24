@@ -5,12 +5,12 @@ import GatsbyImage from "../../GatsbyImage"
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
 
-export interface ContentHeroProps extends CommonHeroProps {
+export interface ContentHeroProps extends Omit<CommonHeroProps, "header"> {
   breadcrumbs: BreadcrumbsProps
 }
 
 const ContentHero = (props: ContentHeroProps) => {
-  const { breadcrumbs, heroImgSrc, buttons, header, description } = props
+  const { breadcrumbs, heroImgSrc, buttons, title, description } = props
   return (
     <Box bgImg="bgMainGradient">
       <SimpleGrid columns={{ base: 1, lg: 2 }} maxW="1536px" mx="auto" gap="4">
@@ -38,7 +38,7 @@ const ContentHero = (props: ContentHeroProps) => {
           <Breadcrumbs {...breadcrumbs} mb="0" />
           <Stack spacing="6">
             <Heading as="h1" size="2xl">
-              {header}
+              {title}
             </Heading>
             <Text fontSize="lg">{description}</Text>
             <HStack spacing="4">

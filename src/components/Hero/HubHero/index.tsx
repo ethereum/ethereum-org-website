@@ -11,9 +11,7 @@ import GatsbyImage from "../../GatsbyImage"
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
 
-export interface HubHeroProps extends CommonHeroProps {
-  title: string
-}
+export interface HubHeroProps extends CommonHeroProps {}
 
 const HubHero = (props: HubHeroProps) => {
   const { heroImgSrc, title, header, description, buttons } = props

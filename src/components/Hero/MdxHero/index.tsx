@@ -1,10 +1,10 @@
 import { Heading, Stack } from "@chakra-ui/react"
 import * as React from "react"
 import Breadcrumbs, { IProps as BreadcrumbsProps } from "../../Breadcrumbs"
+import { CommonHeroProps } from "../utils"
 
-export interface MdxHeroProps {
+export interface MdxHeroProps extends Pick<CommonHeroProps, "title"> {
   breadcrumbs: BreadcrumbsProps
-  title: string
 }
 
 const MdxHero = (props: MdxHeroProps) => {
