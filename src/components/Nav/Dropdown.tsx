@@ -102,8 +102,8 @@ const Item = (props: Pick<LinkProps, "to" | "children">) => (
     display="block"
     p="2"
     _hover={{
-      bg: "primary.hover",
-      color: "background.base",
+      bg: "primary.lowContrast",
+      color: "primary.base",
       textDecor: "none",
     }}
     _active={{

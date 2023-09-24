@@ -39,14 +39,16 @@ const Menu: React.FC<IProps> = ({ sections, ...props }) => {
 
       <NavDropdown section={learn}>
         <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"} gap="2">
-          <Flex flexDir="column" gap="16" maxW="2xs">
+          <Flex flexDir="column" gap="8" maxW="2xs">
             {[start, basics].map((section, idx) => (
               <Box py="2">
                 <NavDropdown.ItemGroup key={idx} item={section} />
               </Box>
             ))}
           </Flex>
-          <NavDropdown.ItemGroup item={protocol} />
+          <Box py="2" maxW="2xs">
+            <NavDropdown.ItemGroup item={protocol} />
+          </Box>
         </Flex>
       </NavDropdown>
 
