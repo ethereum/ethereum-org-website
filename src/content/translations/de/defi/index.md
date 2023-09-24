@@ -53,7 +53,7 @@ Um das wahre Potenzial von DeFi erkennen zu können, ist es wichtig, die aktuell
 
 ## Alles begann mit Bitcoin... {#bitcoin}
 
-Bitcoin war in vielerlei Hinsicht die erste DeFi-Anwendung. Mit Bitcoin können Sie den Wert selbst besitzen, kontrollieren und überall auf der Welt hinsenden. Bitcoin bietet vielen Menschen, die sich gegenseitig nicht vertrauen, die Möglichkeit, eine Einigung über einen aktuellen Transaktionsstatus und Stand aller Konten zu erzielen, ohne dass dafür ein vertrauenswürdiger Vermittler vonnöten ist. Bitcoin ist offen für jeden und niemand ist befugt, Regeln zu ändern. Die Regeln von Bitcoin, wie die Knappheit und Offenheit, sind in der Technologie niedergeschrieben. Bitcoin verhält sich nicht wie das traditionelle Finanzwesen, in dem Regierungen Geld drucken können (und damit Ihre Ersparnisse abwerten) und Firmen willkürlich bestimmen, wann und für wen Finanzmärkte geöffnet sind.
+Bitcoin war in vielerlei Hinsicht die erste DeFi-Anwendung. Mit Bitcoin können Sie den Wert selbst besitzen, kontrollieren und überall auf der Welt hinsenden. Bitcoin bietet vielen Menschen, die sich gegenseitig nicht vertrauen, die Möglichkeit, eine Einigung über einen aktuellen Transaktionsstatus und Stand aller Konten zu erzielen, ohne dass dafür ein vertrauenswürdiger Vermittler vonnöten ist. Bitcoin ist offen für jeden und niemand ist befugt, Regeln zu ändern. Die Regeln von Bitcoin, wie die Knappheit und Offenheit, sind in der Technologie niedergeschrieben. Es ist nicht wie im traditionellen Finanzwesen, wo Regierungen Geld drucken können, das Ihre Ersparnisse entwertet, und Unternehmen die Märkte schließen können.
 
 Darauf baut Ethereum auf. Wie bei Bitcoin, können die Regeln sich nicht ändern und jeder hat Zugang dazu. Doch zusätzlich macht Ethereum dieses digitale Geld programmierbar, und zwar mit[Smart Contracts](/glossary#smart-contract). Das bietet über das Speichern und Senden von Werten hinaus noch viele weitere Möglichkeiten.
 
@@ -133,7 +133,7 @@ Auf dezentrale Kreditanbieter zurückzugreifen, bietet viele Vorteile...
 
 Bei der Vergabe und Inanspruchnahme von Krediten dreht sich heutzutage alles um die beteiligten Einzelpersonen. Banken müssen vor einer Kreditvergabe wissen, ob man wahrscheinlich in der Lage ist, den Kredit zurückzuzahlen.
 
-Eine dezentrale Kreditvergabe funktioniert vollständig ohne Identifikation der involvierten Parteien. Stattdessen muss der Kreditnehmer eine Sicherheit bereitstellen, die der Kreditgeber im Falle einer Zahlungsunfähigkeit des Kreditnehmers automatisch erhält. Manche Plattformen akzeptieren sogar NFTs, also Non-Fungible Token, als Sicherheit. NFTs kann man sich wie eine Besitzurkunde für einen bestimmten Vermögenswert vorstellen. [Mehr zu NFTs](/nft/)
+Eine dezentrale Kreditvergabe funktioniert vollständig ohne Identifikation der involvierten Parteien. Stattdessen muss der Kreditnehmer eine Sicherheit stellen, die der Kreditgeber automatisch erhält, wenn der Kredit nicht zurückgezahlt wird. Manche Plattformen akzeptieren sogar NFTs, also Non-Fungible Token, als Sicherheit. NFTs kann man sich wie eine Besitzurkunde für einen bestimmten Vermögenswert vorstellen. [Mehr zu NFTs](/nft/)
 
 Das ermöglicht es, ohne Kreditchecks und Preisgabe von privaten Informationen Geld zu borgen.
 
@@ -143,7 +143,7 @@ Wenn Sie auf einen dezentralen Kreditgeber setzen, erhalten Sie Zugang zu allen 
 
 #### Steuervorteile {#tax-efficiencies}
 
-Wenn Sie Geld leihen, erhalten Sie Zugang zu Assets und müssen nicht Ihr ETH verkaufen (ein steuerpflichtiger Vorgang). Stattdessen können Sie ETH als Sicherheit für einen Stablecoin-Kredit hinterlegen. Damit erhalten Sie den benötigten Cashflow, ohne Ihre ETH verkaufen zu müssen. Stablecoins sind Token, die als Zahlungsmittel wesentlich besser geeignet sind, da sie anders als ETH keinen Wertschwankungen unterliegen. [Mehr zu Stablecoins](#stablecoins)
+Wenn Sie Geld leihen, erhalten Sie Zugang zu Assets und müssen nicht Ihr ETH verkaufen (ein steuerpflichtiger Vorgang). Stattdessen können Sie ETH als Sicherheit für einen Stablecoin-Kredit verwenden. Damit erhalten Sie den benötigten Cashflow, ohne Ihre ETH verkaufen zu müssen. Stablecoins sind Token, die als Zahlungsmittel wesentlich besser geeignet sind, da sie anders als ETH keinen Wertschwankungen unterliegen. [Mehr zu Stablecoins](#stablecoins)
 
 #### Flash Loans {#flash-loans}
 
@@ -233,7 +233,7 @@ Wenn Sie sich für einen zentralen Handelsplatz entscheiden, müssen Sie Ihre As
 
 Auf Ethereum gibt es auch Produkte für das Portfoliomanagement, deren Ziel es ist, Ihr Portfolio mit einer Strategie Ihrer Wahl zu vergrößern. Das erfolgt automatisch, ist offen für jeden und Sie benötigen keinen realen Manager, der einen Anteil an Ihren Gewinnen beansprucht.
 
-Ein gutes Beispiel ist der [DeFi Pulse Index Fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). Es handelt sich dabei um einen Fonds, der sich automatisch ausgleicht, um sicherzustellen, dass Ihr Portfolio immer die [wichtigsten Defi-Token nach Marktkapitalisierung](https://www.coingecko.com/en/defi) enthält. Sie werden niemals irgendwelche Details verwalten müssen und können jederzeit Abhebungen aus dem Fonds tätigen.
+Ein gutes Beispiel ist der [DeFi Pulse Index Fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). Es handelt sich um einen Fonds, der automatisch ein Rebalancing durchführt, um sicherzustellen, dass Ihr Portfolio immer [die besten DeFi-Token nach Marktkapitalisierung](https://www.coingecko.com/en/defi) enthält. Sie werden niemals irgendwelche Details verwalten müssen und können jederzeit Abhebungen aus dem Fonds tätigen.
 
 <ButtonLink to="/dapps/?category=finance">
   Zu Investment-dApps
@@ -274,7 +274,7 @@ Projekt A mit 100 Spenden zu je 1 Euro könnte also mehr Mittel erhalten als Pro
 
 Eine dezentralisierte Versicherung zielt darauf ab, Versicherungen billiger und transparenter zu machen sowie Versicherungsfälle schneller auszuzahlen. Mit einem höherem Grad an Automatisierung wird der Versicherungsschutz erschwinglicher und die Auszahlungen erfolgen wesentlich schneller. Die Daten, die zur Entscheidung über Ihren Versicherungsfall genutzt werden, sind vollkommen transparent.
 
-Bei Ethereum-Produkten gibt es wie auch bei jeder anderen Software Fehler und Exploits. Derzeit liegt beispielsweise bei vielen Versicherungsprodukten in diesem Bereich der Schwerpunkt auf dem Schutz der Benutzer vor finanziellen Verlusten. Bei manchen Projekten wird jedoch damit begonnen, eine Absicherung für alles aufzubauen, was im Leben so passieren kann. Ein gutes Beispiel ist die Ernteversicherung von Etherisc. Es wird versucht, [Kleinbauern in Kenia gegen Dürren und Überschwemmungen abzusichern](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Dezentrale Versicherungen können Landwirten, denen herkömmliche Versicherungen oft zu teuer sind, einen erschwinglichen Versicherungsschutz bieten.
+Bei Ethereum-Produkten gibt es wie auch bei jeder anderen Software Fehler und Exploits. Derzeit liegt beispielsweise bei vielen Versicherungsprodukten in diesem Bereich der Schwerpunkt auf dem Schutz der Benutzer vor finanziellen Verlusten. Es gibt jedoch Projekte, die damit beginnen, einen Versicherungsschutz für alles Unwägbarkeiten aufzubauen, die das Leben uns bescheren kann. Ein gutes Beispiel ist die Ernteversicherung von Etherisc. Es wird versucht, [Kleinbauern in Kenia gegen Dürren und Überschwemmungen abzusichern](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Dezentrale Versicherungen können Landwirten, denen herkömmliche Versicherungen oft zu teuer sind, einen erschwinglichen Versicherungsschutz bieten.
 
 <ButtonLink to="/dapps/?category=finance">
   Zu Versicherungs-dApps
@@ -317,7 +317,7 @@ DeFi ist praktisch ein Ebenenmodell:
 
 1. Die Blockchain: Ethereum enthält den Transaktionsverlauf und den Status der Konten.
 2. Die Assets: [ETH](/eth/) und die anderen Token (Währungen).
-3. Die Protokolle: [Smart Contracts](/glossary/#smart-contract), die eine Funktion bieten, zum Beispiel einen Service, der dezentrales Verleihen von Vermögenswerten erlaubt.
+3. Die Protokolle – [Smart Contracts](/glossary/#smart-contract), die die Funktionalität bereitstellen, z.B. einen Dienst, der die dezentrale Ausleihe von Vermögenswerten ermöglicht.
 4. [Die Anwendungen](/dapps/): Produkte die wir benutzen, um Protokolle zu verwalten und auf diese zuzugreifen.
 
 ## DeFi aufbauen {#build-defi}
@@ -338,7 +338,7 @@ DeFi ist eine Open-Source-Bewegung. DeFi-Protokolle und -Anwendungen sind für j
 
 ### DeFi-Artikel {#defi-articles}
 
-- [DeFi-Leitfaden für Einsteiger](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6. Januar 2020_
+- [Ein Leitfaden für Einsteiger in DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6. Januar 2020_
 
 ### Videos {#videos}
 

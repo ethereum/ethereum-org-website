@@ -4,10 +4,9 @@ import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink, IconButton } from "../Buttons"
 import Link, { BaseLink } from "../Link"
 import Search from "../Search"
-import IconButton from "../IconButton"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
 

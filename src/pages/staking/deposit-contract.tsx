@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import CardList from "../../components/CardList"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Emoji from "../../components/Emoji"
@@ -25,6 +25,7 @@ import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import Tooltip from "../../components/Tooltip"
 import FeedbackCard from "../../components/FeedbackCard"
+import OldHeading from "../../components/OldHeading"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
 import { TranslationKey } from "../../utils/translations"
@@ -57,7 +58,7 @@ const RightColumn = (props: ChildOnlyProp) => (
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontWeight="700"
     fontSize="2rem"
@@ -156,7 +157,6 @@ const Row = (props: ChildOnlyProp) => (
 const CardTitle = (props: ChildOnlyProp) => (
   <Heading
     as="h2"
-    mt={0}
     mb={4}
     fontWeight="600"
     fontSize="2rem"
@@ -323,25 +323,25 @@ const DepositContractPage = ({
           <Subtitle>
             <Translation id="page-staking-deposit-contract-subtitle" />
           </Subtitle>
-          <h2>
+          <OldHeading>
             <Translation id="page-staking-deposit-contract-h2" />
-          </h2>
-          <p>
+          </OldHeading>
+          <Text>
             <Translation id="page-staking-deposit-contract-staking" />{" "}
             <InlineLink to="/staking/">
               <Translation id="page-staking-deposit-contract-staking-more-link" />
             </InlineLink>
-          </p>
+          </Text>
           <StyledButton
             to="https://launchpad.ethereum.org"
             id="page-staking-deposit-contract-launchpad"
           />
-          <h2>
+          <OldHeading>
             <Translation id="page-staking-deposit-contract-staking-check" />
-          </h2>
-          <p>
+          </OldHeading>
+          <Text>
             <Translation id="page-staking-deposit-contract-staking-check-desc" />
-          </p>
+          </Text>
           <CardList content={addressSources} />
         </LeftColumn>
         <RightColumn>

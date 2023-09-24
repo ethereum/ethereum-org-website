@@ -10523,6 +10523,51 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "0xMimir",
+      "name": "0xMimir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108837858?v=4",
+      "profile": "https://github.com/0xMimir",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "bilaljawed",
+      "name": "Bilal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17548944?v=4",
+      "profile": "https://github.com/bilaljawed",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ilanolkies",
+      "name": "Ilan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36084092?v=4",
+      "profile": "https://ilanolkies.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "umededoteth",
+      "name": "umede",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122288558?v=4",
+      "profile": "https://mirror.xyz/umede.eth",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "taminobaumann",
+      "name": "Tamino",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48290617?v=4",
+      "profile": "http://taminobaumann.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

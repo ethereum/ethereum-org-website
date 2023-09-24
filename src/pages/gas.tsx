@@ -1,21 +1,18 @@
 // Third-party libraries
 import React, { ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   BoxProps,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Link,
   ListItem,
   Table,
   TableCaption,
   Tbody,
-  Text,
   Th,
   Thead,
   Td,
@@ -27,7 +24,7 @@ import {
 import { getImage } from "../utils/image"
 
 // Components
-import ButtonLink from "../components/ButtonLink"
+import { ButtonLink } from "../components/Buttons"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import Emoji from "../components/Emoji"
@@ -41,6 +38,9 @@ import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
@@ -70,13 +70,17 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
-    fontSize={{ base: "xl", m: "2xl" }}
+    fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
     {...props}
   />

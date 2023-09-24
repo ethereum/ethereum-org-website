@@ -175,7 +175,12 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 - To help with verification we request GitHub contributors connect their GitHub account with their Discord account (Discord > Settings > Connections > GitHub). Crowdin contributors will be verified directly through Crowdin by our team.
 
-- If you haven't contributed yet and would like to earn a POAP to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started!
+### GitPOAP
+
+- If you've made at least one contribution and that gets merged into ethereum.org, GitPOAP will also auto recognize it and let you mint a unique contributor POAP.
+  [More on GitPOAP](https://www.gitpoap.io).
+
+If you haven't contributed yet and would like to earn a POAP to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started!
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
@@ -1643,6 +1648,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://linktr.ee/kritik"><img src="https://avatars.githubusercontent.com/u/57076429?v=4?s=100" width="100px;" alt="kritik sah"/><br /><sub><b>kritik sah</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akritik-sah" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Fuliggine"><img src="https://avatars.githubusercontent.com/u/56844974?v=4?s=100" width="100px;" alt="Fuliggine"/><br /><sub><b>Fuliggine</b></sub></a><br /><a href="#content-Fuliggine" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Omsify"><img src="https://avatars.githubusercontent.com/u/87442202?v=4?s=100" width="100px;" alt="Omsify"/><br /><sub><b>Omsify</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AOmsify" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xMimir"><img src="https://avatars.githubusercontent.com/u/108837858?v=4?s=100" width="100px;" alt="0xMimir"/><br /><sub><b>0xMimir</b></sub></a><br /><a href="#content-0xMimir" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/bilaljawed"><img src="https://avatars.githubusercontent.com/u/17548944?v=4?s=100" width="100px;" alt="Bilal"/><br /><sub><b>Bilal</b></sub></a><br /><a href="#content-bilaljawed" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://ilanolkies.com"><img src="https://avatars.githubusercontent.com/u/36084092?v=4?s=100" width="100px;" alt="Ilan"/><br /><sub><b>Ilan</b></sub></a><br /><a href="#content-ilanolkies" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://mirror.xyz/umede.eth"><img src="https://avatars.githubusercontent.com/u/122288558?v=4?s=100" width="100px;" alt="umede"/><br /><sub><b>umede</b></sub></a><br /><a href="#content-umededoteth" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://taminobaumann.com"><img src="https://avatars.githubusercontent.com/u/48290617?v=4?s=100" width="100px;" alt="Tamino"/><br /><sub><b>Tamino</b></sub></a><br /><a href="#content-taminobaumann" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
