@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { Flex, HStack, List, StackProps } from "@chakra-ui/react"
+import { Box, Flex, HStack, List, StackProps } from "@chakra-ui/react"
 
 import { getDirection } from "../../utils/translations"
 
@@ -28,18 +28,22 @@ const Menu: React.FC<IProps> = ({ sections, ...props }) => {
       {...props}
     >
       <NavDropdown section={useEthereum}>
-        {useEthereum.items.map((item, idx) => (
-          <NavDropdown.Item key={idx} to={item.to}>
-            {item.text}
-          </NavDropdown.Item>
-        ))}
+        <Box maxW="2xs" py="2">
+          {useEthereum.items.map((item, idx) => (
+            <NavDropdown.Item key={idx} to={item.to}>
+              {item.text}
+            </NavDropdown.Item>
+          ))}
+        </Box>
       </NavDropdown>
 
       <NavDropdown section={learn}>
-        <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"} gap="8">
-          <Flex flexDir="column" gap="16">
+        <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"} gap="2">
+          <Flex flexDir="column" gap="16" maxW="2xs">
             {[start, basics].map((section, idx) => (
-              <NavDropdown.ItemGroup key={idx} item={section} />
+              <Box py="2">
+                <NavDropdown.ItemGroup key={idx} item={section} />
+              </Box>
             ))}
           </Flex>
           <NavDropdown.ItemGroup item={protocol} />

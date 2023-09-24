@@ -1,6 +1,7 @@
 import React from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import {
+  Box,
   Icon,
   ListItem,
   Menu as ChakraMenu,
@@ -33,7 +34,7 @@ const NavDropdown: React.FC<IProps> & {
 
   return (
     <ListItem m={0}>
-      <ChakraMenu isLazy placement="bottom-end">
+      <ChakraMenu isLazy placement="bottom">
         {({ isOpen }) => (
           <>
             <MenuButton
@@ -74,12 +75,13 @@ const NavDropdown: React.FC<IProps> & {
               border="1px"
               borderColor="dropdownBorder"
               borderRadius="none"
-              py="2"
+              p={0}
               sx={{ "--menu-bg": "colors.dropdownBackground" }}
               // Override the dark styles from the default theme
               _dark={{}}
               rootProps={{
                 top: "4 !important",
+                mt: "-1px !important",
               }}
             >
               {children}
@@ -131,8 +133,8 @@ const ItemGroup = ({ item }: { item: Pick<IItem, "text" | "items"> }) => {
       lineHeight="1.5"
       mt={0}
       mx={0}
-      mb={2}
-      px={2}
+      mb="2"
+      px="2"
     >
       {(items || []).map((item, idx) => (
         <NavDropdown.Item key={idx} to={item.to}>
