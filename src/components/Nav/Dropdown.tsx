@@ -93,12 +93,16 @@ const NavDropdown: React.FC<IProps> & {
 
 const Item = (props: Pick<LinkProps, "to" | "children">) => (
   <MenuItem
+    as={BaseLink}
+    isPartiallyActive={false}
+    textDecor="none"
     color="text200"
     display="block"
     p="2"
     _hover={{
       bg: "primary.hover",
       color: "background.base",
+      textDecor: "none",
     }}
     _active={{
       bg: "primary.lowContrast",
@@ -111,15 +115,8 @@ const Item = (props: Pick<LinkProps, "to" | "children">) => (
       color: "primary.base",
       bg: "none",
     }}
-  >
-    <BaseLink
-      isPartiallyActive={false}
-      color="inherit"
-      textDecor="none"
-      _hover={{ textDecor: "none" }}
-      {...props}
-    />
-  </MenuItem>
+    {...props}
+  />
 )
 
 const ItemGroup = ({ item }: { item: Pick<IItem, "text" | "items"> }) => {
