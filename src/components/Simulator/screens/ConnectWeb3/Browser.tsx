@@ -43,12 +43,18 @@ export const Browser: React.FC<IProps> = ({ progressStepper, ...props }) => {
             h={16}
             _groupHover={{ bg: "primary.hover" }}
           >
-            <Icon as={NFTSupportIcon} color="white" w={10} h={10} />
+            <Icon
+              as={NFTSupportIcon}
+              color="body.base"
+              w={10}
+              h={10}
+              _groupHover={{ color: "background.base" }}
+            />
           </Grid>
           <Box position="relative">
             <Text
               fontWeight="bold"
-              color="primary.base"
+              color="body.base"
               textAlign="center"
               m={0}
               _groupHover={{ color: "primary.hover" }}
