@@ -2,13 +2,12 @@ import * as React from "react"
 import Button, { IProps as ButtonProps } from "../Button"
 import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
 
-type CallToActionProps = Omit<ButtonProps, "children" | "content"> & {
+export type CallToActionProps = Omit<ButtonProps, "children" | "content"> & {
   content: React.ReactNode
   matomo: MatomoEventOptions
-  index: React.Key
 }
 
-export function CallToAction(props: CallToActionProps) {
+export function CallToAction(props: CallToActionProps & { index: React.Key }) {
   const { content, matomo, index, ...rest } = props
 
   const handleClick = () => trackCustomEvent(matomo)
@@ -25,8 +24,3 @@ export function CallToAction(props: CallToActionProps) {
     </Button>
   )
 }
-
-/**
- * Props to be passed to through the hero component. `index` prop not used here.
- */
-export type CTAParentProps = Omit<CallToActionProps, "index">
