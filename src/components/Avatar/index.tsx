@@ -6,13 +6,13 @@ import {
   CenterProps,
   FlexProps,
   forwardRef,
-  Link,
   LinkBox,
   LinkOverlay,
   LinkProps,
   ThemingProps,
 } from "@chakra-ui/react"
 import { RxExternalLink } from "react-icons/rx"
+import { BaseLink } from "../Link"
 
 type AssignAvatarProps = Required<Pick<AvatarProps, "name" | "src">> &
   AvatarProps
@@ -44,7 +44,7 @@ const Avatar = forwardRef<AvatarLinkProps, "div" | "a">((props, ref) => {
     return (
       <LinkBox as={Center} ref={ref} flexDirection={_direction} columnGap="1">
         <LinkOverlay
-          as={Link}
+          as={BaseLink}
           data-peer
           display="inline-flex"
           textDecoration="none"
@@ -65,7 +65,7 @@ const Avatar = forwardRef<AvatarLinkProps, "div" | "a">((props, ref) => {
 
   return (
     <ChakraAvatar
-      as={Link}
+      as={BaseLink}
       ref={ref}
       showBorder
       {...avatarProps}

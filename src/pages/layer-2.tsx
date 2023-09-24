@@ -1,7 +1,6 @@
 // Libraries
 import React, { HTMLAttributes, ReactNode, useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Badge,
@@ -12,12 +11,10 @@ import {
   DividerProps,
   Flex,
   GridItem,
-  Heading,
   HeadingProps,
   Icon,
   ListItem,
   SimpleGrid,
-  Text,
   UnorderedList,
   useBreakpointValue,
 } from "@chakra-ui/react"
@@ -26,14 +23,14 @@ import {
 import layer2Data from "../data/layer-2/layer-2.json"
 
 // Components
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
 import Layer2ProductCard from "../components/Layer2ProductCard"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import OrderedList from "../components/OrderedList"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
@@ -41,6 +38,9 @@ import ProductList from "../components/ProductList"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 // Utils
 import { getData } from "../utils/cache"
@@ -70,7 +70,7 @@ const SectionHeading = (props: HeadingProps) => {
 
   const mergeProps = merge(headingSpecificProps, props)
 
-  return <Heading {...mergeProps} />
+  return <OldHeading {...mergeProps} />
 }
 
 interface ContentBoxProps extends BoxProps {
@@ -391,7 +391,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
   const tooltipContent = (metric: ToolTipContentMetric): JSX.Element => (
     <div>
       <Translation id="data-provided-by" />{" "}
-      <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
+      <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
     </div>
   )
 
@@ -483,7 +483,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <GatsbyImage
               image={getImage(data.whatIsEthereum)!}
               alt=""
-              style={{ maxHeight: "400px" }}
+              maxH="400px"
               objectFit="contain"
             />
           </Box>
@@ -525,9 +525,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             />
             <Text>
               <Translation id="layer-2-what-is-layer-1-list-link-1" />{" "}
-              <Link to="/what-is-ethereum/">
+              <InlineLink to="/what-is-ethereum/">
                 <Translation id="layer-2-what-is-layer-1-list-link-2" />
-              </Link>
+              </InlineLink>
             </Text>
           </Box>
         </TwoColumnContent>
@@ -539,7 +539,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <GatsbyImage
               image={getImage(data.dao)!}
               alt=""
-              style={{ width: "100%" }}
+              w="full"
               objectFit="contain"
             />
           </Center>
@@ -563,9 +563,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Text>
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-2" />
             </Text>
-            <Link to="/roadmap/vision/">
+            <InlineLink to="/roadmap/vision/">
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-3" />
-            </Link>
+            </InlineLink>
           </Box>
         </TwoColumnContent>
         <SectionHeading as="h3">
@@ -622,7 +622,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <GatsbyImage
               image={getImage(data.rollup)!}
               alt=""
-              style={{ width: "100%" }}
+              w="full"
               objectFit="contain"
             />
           </Center>
@@ -650,7 +650,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <SectionHeading as="h3">{title}</SectionHeading>
                 <Text>{description}</Text>
                 <Text>
-                  <Link to={childLink}>{childSentence}</Link>
+                  <InlineLink to={childLink}>{childSentence}</InlineLink>
                 </Text>
               </Flex>
             )
@@ -770,23 +770,20 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             </Text>
             <UnorderedList>
               <ListItem>
-                <Link to="/developers/docs/scaling/sidechains/">
+                <InlineLink to="/developers/docs/scaling/sidechains/">
                   <Translation id="layer-2-more-on-sidechains" />
-                </Link>
+                </InlineLink>
               </ListItem>
               <ListItem>
-                <Link to="/developers/docs/scaling/validium/">
+                <InlineLink to="/developers/docs/scaling/validium/">
                   <Translation id="layer-2-more-on-validiums" />
-                </Link>
+                </InlineLink>
               </ListItem>
             </UnorderedList>
           </Box>
           <Box flex="50%">
             <Text>
               <Translation id="layer-2-sidechains-4" />
-            </Text>
-            <Text>
-              <Translation id="layer-2-sidechains-5" />
             </Text>
           </Box>
         </TwoColumnContent>
@@ -840,14 +837,14 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Translation id="layer-2-faq-question-2-description-3" />
           </Text>
           <Text>
-            <Link to="/developers/docs/scaling/optimistic-rollups/">
+            <InlineLink to="/developers/docs/scaling/optimistic-rollups/">
               <Translation id="layer-2-more-info-on-optimistic-rollups" />
-            </Link>
+            </InlineLink>
           </Text>
           <Text>
-            <Link to="/developers/docs/scaling/zk-rollups/">
+            <InlineLink to="/developers/docs/scaling/zk-rollups/">
               <Translation id="layer-2-more-info-on-zk-rollups" />
-            </Link>
+            </InlineLink>
           </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-4-title")}`}>
@@ -861,17 +858,17 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Translation id="layer-2-faq-question-4-description-3" />
           </Text>
           <Text>
-            <Link to="/bridges/">
+            <InlineLink to="/bridges/">
               <Translation id="layer-2-more-on-bridges" />
-            </Link>
+            </InlineLink>
           </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-5-title")}`}>
           <Text>
             <Translation id="layer-2-faq-question-5-description-1" />{" "}
-            <Link to="/contributing/adding-layer-2s/">
+            <InlineLink to="/contributing/adding-layer-2s/">
               <Translation id="layer-2-faq-question-5-view-listing-policy" />
-            </Link>
+            </InlineLink>
           </Text>
           <Text>
             <Translation id="layer-2-faq-question-5-description-2" />
@@ -885,33 +882,33 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         </SectionHeading>
         <UnorderedList ms="1.45rem" mb="1.45rem">
           <ListItem>
-            <Link to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
+            <InlineLink to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
               <Translation id="a-rollup-centric-ethereum-roadmap" />
-            </Link>{" "}
+            </InlineLink>{" "}
             <i>- Vitalik Buterin </i>
           </ListItem>
           <ListItem>
-            <Link to="https://vitalik.ca/general/2021/01/05/rollup.html">
+            <InlineLink to="https://vitalik.ca/general/2021/01/05/rollup.html">
               <Translation id="an-incomplete-guide-to-rollups" />
-            </Link>{" "}
+            </InlineLink>{" "}
             <i>- Vitalik Buterin</i>
           </ListItem>
           <ListItem>
-            <Link to="https://www.youtube.com/watch?v=DyNbmgkyxJI">
+            <InlineLink to="https://www.youtube.com/watch?v=DyNbmgkyxJI">
               <Translation id="polygon-sidechain-vs-ethereum-rollups" />
-            </Link>{" "}
+            </InlineLink>{" "}
             <i>- Lex Clips</i>
           </ListItem>
           <ListItem>
-            <Link to="https://www.youtube.com/watch?v=7pWxCklcNsU">
+            <InlineLink to="https://www.youtube.com/watch?v=7pWxCklcNsU">
               <Translation id="rollups-the-ultimate-ethereum-scaling-strategy" />
-            </Link>{" "}
+            </InlineLink>{" "}
             <i>- Finematics</i>
           </ListItem>
           <ListItem>
-            <Link to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
+            <InlineLink to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
               <Translation id="understanding-rollup-economics-from-first-principals" />
-            </Link>{" "}
+            </InlineLink>{" "}
             <i>- Barnabé Monnot</i>
           </ListItem>
         </UnorderedList>

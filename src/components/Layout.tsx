@@ -74,6 +74,8 @@ const Layout: React.FC<IProps> = ({
       (isPageContentEnglish && !isPageLanguageEnglish)) &&
     !isTranslationBannerIgnored
 
+  const strippedPathname = path.replace(/^\/[a-z]{2,3}(-[a-z]{2})?\//, "/")
+
   return (
     <ApolloProvider client={client}>
       <SkipLink hrefId="#main-content" />

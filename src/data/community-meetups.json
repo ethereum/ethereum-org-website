@@ -1,10 +1,17 @@
 [
   {
+    "title": "ETHTbilisi",
+    "emoji": ":ge:",
+    "location": "Georgia",
+    "link": "https://lu.ma/ETHTbilisi"
+  },
+  {
     "title": "ETH Nanjing",
     "emoji": ":cn:",
     "location": "Nanjing",
     "link": "https://lu.ma/ETHNanJing"
-  },{
+  },
+  {
     "title": "852dev.xyz",
     "emoji": ":hong_kong:",
     "location": "Hong Kong",

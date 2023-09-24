@@ -1,19 +1,14 @@
 // Libraries
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   BoxProps,
   Flex,
-  Heading,
   HeadingProps,
-  Img,
-  ImgProps,
   List,
   ListItem,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react"
 import type { Context } from "../../../types"
@@ -21,11 +16,16 @@ import type { Context } from "../../../types"
 // Components
 import ActionCard from "../../../components/ActionCard"
 import Breadcrumbs from "../../../components/Breadcrumbs"
-import Link from "../../../components/Link"
+import InlineLink from "../../../components/Link"
 import PageMetadata from "../../../components/PageMetadata"
 import Translation from "../../../components/Translation"
 import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
 import FeedbackCard from "../../../components/FeedbackCard"
+import Text from "../../../components/OldText"
+import OldHeading from "../../../components/OldHeading"
+import GatsbyImage, {
+  type GatsbyImageType,
+} from "../../../components/GatsbyImage"
 
 // Utils
 import { getImage } from "../../../utils/image"
@@ -33,17 +33,16 @@ import { getImage } from "../../../utils/image"
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
 const ContentHeading = (props: HeadingProps) => (
-  <Heading lineHeight={1.4} {...props} />
+  <OldHeading lineHeight={1.4} {...props} />
 )
 
-const Image = (props: ImgProps & { image: IGatsbyImageData }) => {
+const Image: GatsbyImageType = (props) => {
   return (
-    <Img
-      as={GatsbyImage}
+    <GatsbyImage
       maxH={{ base: "300px", sm: "none" }}
       maxW={{ base: "300px", sm: "none" }}
       backgroundSize="contain"
-      imgStyle={{ objectFit: "contain" }}
+      objectFit="contain"
       {...props}
     />
   )
@@ -98,9 +97,9 @@ const TranslatorAcknowledgements = ({
             </Text>
             <Text>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-3" />{" "}
-              <Link to="/contributing/translation-program/contributors/">
+              <InlineLink to="/contributing/translation-program/contributors/">
                 <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-link" />
-              </Link>
+              </InlineLink>
               .
             </Text>
             <Text>
@@ -241,9 +240,9 @@ const TranslatorAcknowledgements = ({
         <List as="ol" styleType="decimal">
           <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1" />{" "}
-            <Link to="https://discord.gg/CetY6Y4">
+            <InlineLink to="https://discord.gg/CetY6Y4">
               <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1-discord" />
-            </Link>
+            </InlineLink>
           </ListItem>
           <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-2" />

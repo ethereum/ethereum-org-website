@@ -1,6 +1,5 @@
 // Libraries
 import React, { ReactNode } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Select from "react-select"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
@@ -19,14 +18,15 @@ import {
   Table,
   TableProps,
   Td,
-  Text,
   Th,
   Tr,
 } from "@chakra-ui/react"
 
 // Components
-import Link, { IProps as LinkProps } from "../../Link"
+import InlineLink, { IProps as LinkProps } from "../../Link"
 import { WalletMoreInfo } from "./WalletMoreInfo"
+import GatsbyImage from "../../GatsbyImage"
+import Text from "../../OldText"
 
 // Icons
 import {
@@ -280,7 +280,7 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
 )
 
 const SocialLink = (props: LinkProps) => (
-  <Link
+  <InlineLink
     display="flex"
     height={8}
     alignItems="center"
@@ -432,8 +432,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
               <Td lineHeight="revert">
                 <FlexInfo>
                   <Box>
-                    <Img
-                      as={GatsbyImage}
+                    <GatsbyImage
                       image={getImage(data[wallet.image_name])!}
                       alt=""
                       objectFit="contain"

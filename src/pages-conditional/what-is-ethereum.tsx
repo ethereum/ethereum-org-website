@@ -1,5 +1,4 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -11,7 +10,6 @@ import {
   Heading,
   HeadingProps,
   ListItem,
-  Text,
   UnorderedList,
   Icon,
 } from "@chakra-ui/react"
@@ -19,12 +17,12 @@ import {
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
-import ButtonLink from "../components/ButtonLink"
-import Button from "../components/Button"
+import ButtonLink from "../components/Buttons/ButtonLink"
+import Button from "../components/Buttons/Button"
 import PageMetadata from "../components/PageMetadata"
 import Tooltip from "../components/Tooltip"
 import Tabs from "../components/Tabs"
-import Link from "../components/Link"
+import InlineLink from "../components/Link"
 import {
   Banner,
   BannerBody,
@@ -39,6 +37,9 @@ import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import StatErrorMessage from "../components/StatErrorMessage"
 import StatLoadingMessage from "../components/StatLoadingMessage"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 import { getLocaleForNumberFormat } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -71,7 +72,6 @@ const Title = (props: ChildOnlyProp) => (
     letterSpacing="wider"
     fontWeight="500"
     mb={4}
-    mt={0}
     textTransform="uppercase"
     color="textTableOfContents"
     {...props}
@@ -124,14 +124,13 @@ const H2 = (prop: ChildOnlyProp & HeadingProps) => (
   <Heading
     fontSize={{ base: "2xl", md: "3xl" }}
     lineHeight={1.4}
-    mt={0}
     mb={6}
     {...prop}
   />
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     mt={0}
     fontSize={{ base: "xl", md: "2xl" }}
@@ -283,9 +282,9 @@ const WhatIsEthereumPage = ({
   const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
     <div>
       <Translation id="data-provided-by" />{" "}
-      <Link to={apiUrl} aria-label={ariaLabel}>
+      <InlineLink to={apiUrl} aria-label={ariaLabel}>
         {apiProvider}
-      </Link>
+      </InlineLink>
     </div>
   )
 
@@ -343,7 +342,6 @@ const WhatIsEthereumPage = ({
                   fontSize="1.4rem"
                   lineHeight={1.4}
                   color="text300"
-                  mt={0}
                   mb={6}
                 >
                   <Translation id="page-what-is-ethereum-summary-title" />
@@ -737,16 +735,16 @@ const WhatIsEthereumPage = ({
               </Text>
               <UnorderedList>
                 <ListItem>
-                  <Link to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
+                  <InlineLink to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
                     Europol Spotlight - Cryptocurrencies - Tracing the evolution
                     of criminal finances.pdf
-                  </Link>{" "}
+                  </InlineLink>{" "}
                   EN (1.4 MB)
                 </ListItem>
                 <ListItem>
-                  <Link to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
+                  <InlineLink to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
                     Chainalysis (2021), The 2021 Crypto Crime report
-                  </Link>{" "}
+                  </InlineLink>{" "}
                   EN
                 </ListItem>
               </UnorderedList>
@@ -785,22 +783,22 @@ const WhatIsEthereumPage = ({
           <Translation id="page-what-is-ethereum-additional-reading" />
         </H2>
         <Text>
-          <Link to="https://weekinethereumnews.com/">
+          <InlineLink to="https://weekinethereumnews.com/">
             <Translation id="page-what-is-ethereum-week-in-ethereum" />
-          </Link>{" "}
+          </InlineLink>{" "}
           <Translation id="page-what-is-ethereum-week-in-ethereum-desc" />
         </Text>
         <Text>
-          <Link to="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
+          <InlineLink to="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
             <Translation id="page-what-is-ethereum-atoms-institutions-blockchains" />
-          </Link>{" "}
+          </InlineLink>{" "}
           <Translation id="page-what-is-ethereum-atoms-institutions-blockchains-desc" />
         </Text>
 
         <Text>
-          <Link to="https://www.kernel.community/en/learn/module-1/dreamers">
+          <InlineLink to="https://www.kernel.community/en/learn/module-1/dreamers">
             <Translation id="page-what-is-ethereum-kernel-dreamers" />
-          </Link>{" "}
+          </InlineLink>{" "}
           <Translation id="page-what-is-ethereum-kernel-dreamers-desc" />
         </Text>
       </Content>

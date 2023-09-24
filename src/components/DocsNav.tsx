@@ -6,12 +6,12 @@ import {
   LinkBox,
   LinkOverlay,
   Spacer,
-  Text,
 } from "@chakra-ui/react"
 
-import Link from "./Link"
+import { BaseLink } from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
@@ -73,7 +73,7 @@ const CardLink = (props: {
           <Translation id={isPrev ? "previous" : "next"} />
         </Text>
         <LinkOverlay
-          as={Link}
+          as={BaseLink}
           href={docData.to}
           textAlign={isPrev ? "start" : "end"}
           rel={isPrev ? "prev" : "next"}

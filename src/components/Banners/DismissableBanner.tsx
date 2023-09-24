@@ -4,7 +4,6 @@ import { Center, CloseButton } from "@chakra-ui/react"
 
 // Components
 import BannerNotification from "../BannerNotification"
-import Emoji from "../Emoji"
 
 // Interface
 export interface IProps {
@@ -27,10 +26,7 @@ const DismissableBanner: React.FC<IProps> = ({ children, storageKey }) => {
 
   return (
     <BannerNotification shouldShow={show}>
-      <Center paddingEnd={8}>
-        <Emoji marginEnd={4} flexShrink={0} text=":tada:" />
-        {children}
-      </Center>
+      <Center paddingEnd={8}>{children}</Center>
       <CloseButton onClick={onClose} aria-label="Close Banner" />
     </BannerNotification>
   )

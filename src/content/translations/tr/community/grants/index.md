@@ -20,6 +20,8 @@ Bu programlar geniş bir proje yelpazesine hibeler sağlayarak geniş Ethereum e
 - [Moloch DAO](https://www.molochdao.com/) - _Gizlilik, katman 2 ölçeklendirme, istemci güvenliği ve dahası_
 - [Açık Hibeler](https://opengrants.com/explore)
 - [DAO Hibeleri](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Hibe sunan organizasyonların Google tablosu_
+- [Web3 Hibeleri için Crunchbase](https://www.cryptoneur.xyz/web3-grants) - _Hibeleri kategori, kullanım alanı, miktar ve dahasına göre filtreleyin ve arayın. Diğerlerinin doğru hibeyi bulabilmesine yardımcı olmak için katkı sağlayın._
+- [Akademik Hibeler](https://esp.ethereum.foundation/academic-grants) - _Ethereum ile ilgili akademik çalışmaları desteklemek için hibeler_
 
 ## Projeye özel {#project-specific}
 
@@ -29,12 +31,15 @@ Bu projeler kendi teknolojilerini geliştirmeye ve deneyimlemeye yönelik olarak
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) ekosistem fonu_
 - [Chainlink Hibe Programı](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) toplum hi̇beleri̇_
 - [Compound Hibe Programı](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finans ekosistemi_
-- [Consensys Hibe Programı](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blok zincir fonlama & Ethereum hibeleri_
-- [dYdX Hibe Programı](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) merkezi olmayan borsa_
+- [Decentraland Hibe Programı](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
 - [Lido Ekosistem Hibeleri Organizasyonu (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finans ekosistemi_
+- [MetaMask Programı](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) çalışanlar öncülüğünde yönetilen hibe DAO'su_
 - [mStable Hibe Programı](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) topluluğu_
+- [SKALE Ağı Hibe Ekosistemi](https://skale.space/developers#grants) - _[SKALE Ağı](https://skale.space/) ekosistemi_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ekosistemi_
+- [UMA Hibe Programı](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) geliştirici desteği_
 - [Uniswap Hibe Programı](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) topluluğu_
+- [Web3 Hibeleri](https://web3grants.net) - _Web3/kripto ile ilgili hibe programlarının geniş bir listesi_
 
 ## İkinci dereceden finansman {#quadratic-funding}
 

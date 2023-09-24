@@ -18,7 +18,7 @@ import {
 // Data imports
 import stakingProducts from "../../data/staking-products.json"
 // Component imports
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import Translation from "../Translation"
 // SVG imports
 import {
@@ -213,7 +213,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
         maxH={24}
       >
         {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
-        <Heading fontSize="2xl" color="white">
+        <Heading as="h4" fontSize="2xl" color="white">
           {name}
         </Heading>
       </HStack>

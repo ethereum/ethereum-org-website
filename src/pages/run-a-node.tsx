@@ -1,7 +1,6 @@
 // Libraries
 import React, { ComponentProps, ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
@@ -10,10 +9,8 @@ import {
   CenterProps,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Img,
-  Text,
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 import { FaDiscord } from "react-icons/fa"
@@ -40,10 +37,13 @@ import Translation from "../components/Translation"
 import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
 import Emoji from "../components/Emoji"
-import Link from "../components/Link"
-import ButtonLink from "../components/ButtonLink"
+import InlineLink from "../components/Link"
 import FeedbackCard from "../components/FeedbackCard"
-import Button from "../components/Button"
+import { Button, ButtonLink } from "../components/Buttons"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+
+// Utils
 import { InfoGrid } from "../templates/staking"
 import { Width40, Width60 } from "../pages-conditional/what-is-ethereum"
 
@@ -51,6 +51,7 @@ import { Width40, Width60 } from "../pages-conditional/what-is-ethereum"
 import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp } from "../types"
+import GatsbyImage from "../components/GatsbyImage"
 
 const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
 
@@ -279,11 +280,15 @@ const StrongParagraph = (props: BoxProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
@@ -292,7 +297,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     lineHeight={1.4}
@@ -519,9 +524,9 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                   <Translation id="page-run-a-node-getting-started-software-section-1-alert" />
                 </Text>
               </Text>
-              <Link to="/developers/docs/nodes-and-clients/run-a-node/">
+              <InlineLink to="/developers/docs/nodes-and-clients/run-a-node/">
                 <Translation id="page-run-a-node-getting-started-software-section-1-link" />
-              </Link>
+              </InlineLink>
             </ColumnFill>
             <ColumnNarrow>
               <Terminal
@@ -670,14 +675,14 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                     <Translation id="page-run-a-node-build-your-own-min-ram" />
                   </Text>
                   <Text>
-                    <Link href="#plan-on-staking">
+                    <InlineLink href="#plan-on-staking">
                       <Translation id="page-run-a-node-build-your-own-ram-note-1" />
-                    </Link>
+                    </InlineLink>
                   </Text>
                   <Text>
-                    <Link href="#rasp-pi">
+                    <InlineLink href="#rasp-pi">
                       <Translation id="page-run-a-node-build-your-own-ram-note-2" />
-                    </Link>
+                    </InlineLink>
                   </Text>
                 </li>
                 <li>
@@ -821,23 +826,23 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
         </H2>
         <ul>
           <li>
-            <Link to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
+            <InlineLink to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
               <Translation id="page-run-a-node-further-reading-1-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
             <Text as="i">
               <Translation id="page-run-a-node-further-reading-1-author" />
             </Text>
           </li>
           <li>
-            <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
+            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
               <Translation id="page-run-a-node-further-reading-2-link" />
-            </Link>
+            </InlineLink>
           </li>
           <li>
-            <Link to="https://vitalik.ca/general/2021/05/23/scaling.html">
+            <InlineLink to="https://vitalik.ca/general/2021/05/23/scaling.html">
               <Translation id="page-run-a-node-further-reading-3-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
             <Text as="i">
               <Translation id="page-run-a-node-further-reading-3-author" />
@@ -850,8 +855,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
       <StakingCalloutContainer>
         <Column>
-          <Img
-            as={GatsbyImage}
+          <GatsbyImage
             image={getImage(data.leslie)!}
             alt=""
             transform={{
@@ -885,9 +889,9 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
         <Text>
           <Translation id="page-run-a-node-staking-plans-ethstaker-link-description" />{" "}
           -{" "}
-          <Link to="https://youtu.be/C2wwu1IlhDc">
+          <InlineLink to="https://youtu.be/C2wwu1IlhDc">
             <Translation id="page-run-a-node-staking-plans-ethstaker-link-label" />
-          </Link>
+          </InlineLink>
         </Text>
         <H3 id="rasp-pi">
           <Emoji text=":pie:" fontSize="2em" mr={4} />
@@ -898,27 +902,27 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
         </Text>
         <ul>
           <li>
-            <Link to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
+            <InlineLink to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
               <Translation id="page-run-a-node-rasp-pi-note-1-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
             <Text as="i">
               <Translation id="page-run-a-node-rasp-pi-note-1-description" />
             </Text>
           </li>
           <li>
-            <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
+            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
               <Translation id="page-run-a-node-rasp-pi-note-2-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
             <Text as="i">
               <Translation id="page-run-a-node-rasp-pi-note-2-description" />
             </Text>
           </li>
           <li>
-            <Link to="/developers/tutorials/run-node-raspberry-pi">
+            <InlineLink to="/developers/tutorials/run-node-raspberry-pi">
               <Translation id="page-run-a-node-rasp-pi-note-3-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
             -{" "}
             <Text as="i">
               <Translation id="page-run-a-node-rasp-pi-note-3-description" />

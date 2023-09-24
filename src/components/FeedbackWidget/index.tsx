@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Button,
   Flex,
@@ -6,12 +7,11 @@ import {
   ModalCloseButton,
   ModalContent,
   ModalOverlay,
-  Text,
 } from "@chakra-ui/react"
+import Text from "../OldText"
 import Translation from "../Translation"
 import FixedDot from "./FixedDot"
 import { useFeedbackWidget } from "./useFeedbackWidget"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
 interface FeedbackWidgetProps {
   location: string

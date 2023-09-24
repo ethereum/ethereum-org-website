@@ -38,7 +38,7 @@ The main benefit of state archive is a quick access to queries about historical 
 - _What was ETH balance of account 0x1337... at block 15537393?_
 - _What is the balance of token 0x in contract 0x at block 1920000?_
 
-As explained above, a full node would need to generate this data by EVM execution which uses the CPU and takes time. Archive nodes access them on the disk and serves responses immediately. This is useful feature for certain parts of infrastracture, for example:
+As explained above, a full node would need to generate this data by EVM execution which uses the CPU and takes time. Archive nodes access them on the disk and serve responses immediately. This is a useful feature for certain parts of infrastructure, for example:
 
 - Service providers like block explorers
 - Researchers
@@ -52,7 +52,7 @@ There are various free [services](/developers/docs/nodes-and-clients/nodes-as-a-
 
 Archive node in this context means data served by user facing execution layer clients as they handle the state database and provide JSON-RPC endpoints. Configuration options, sync time and database size may vary by client. For details, please refer to the documentation provided by your client.
 
-Before starting your own archive node, learn about the differences between the clients and especially the various [hardware requirements](/developers/docs/nodes-and-clients/run-a-node/#requirements). Most clients are not optimized for this feature and their archives requires more than 12TB of space. In contrast, implementations like Erigon can store the same data in under 3TB which makes them the most effective way of running an archive node.
+Before starting your own archive node, learn about the differences between the clients and especially the various [hardware requirements](/developers/docs/nodes-and-clients/run-a-node/#requirements). Most clients are not optimized for this feature and their archives require more than 12TB of space. In contrast, implementations like Erigon can store the same data in under 3TB which makes them the most effective way of running an archive node.
 
 ## Recommended practices
 
@@ -63,7 +63,7 @@ Apart from general [recommendations for running a node](developers/docs/nodes-an
 Always make sure to verify hardware requirements for a given mode in a client's documentation.
 The biggest requirement for archive nodes is the disk space. Depending on client, it varies from 3TB to 12TB. Even if HDD might be considered a better solution for large amounts of data, syncing it and constantly updating the head of the chain will require SSD drives. [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) drives are good enough but it should be a reliable quality, at least [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Disks can be fitted into a desktop computer or a server with enough slots. Such dedicated devices are ideal for running high uptime node. It's totally possible to run it on a laptop but the portability will come at an additional cost.
 
-All of the data needs to be fit in one volume, therefore disks have to be joined, e.g. with [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) or [LVM](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html). It might be also worth considering using [ZFS](https://en.wikipedia.org/wiki/ZFS) as it supports "Copy-on-write" which ensures data is correctly written to the disk without any low level errors.
+All of the data needs to fit in one volume, therefore disks have to be joined, e.g. with [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) or [LVM](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html). It might be also worth considering using [ZFS](https://en.wikipedia.org/wiki/ZFS) as it supports "Copy-on-write" which ensures data is correctly written to the disk without any low level errors.
 
 For more stability and security in preventing accidental database corruption, especially in a professional setup, consider using [ECC memory](https://en.wikipedia.org/wiki/ECC_memory) if your system supports it. The size of RAM is generally advised to be the same as for a full node but more RAM can help speed up the synchronization.
 
