@@ -73,15 +73,15 @@ const NavDropdown: React.FC<IProps> & {
             </MenuButton>
             <MenuList
               border="1px"
-              borderColor="dropdownBorder"
+              borderTop="none"
+              borderColor="body.light"
               borderRadius="none"
               p={0}
-              sx={{ "--menu-bg": "colors.dropdownBackground" }}
+              sx={{ "--menu-bg": "colors.background.highlight" }}
               // Override the dark styles from the default theme
               _dark={{}}
               rootProps={{
                 top: "4 !important",
-                mt: "-1px !important",
               }}
             >
               {children}
@@ -107,7 +107,7 @@ const Item = (props: Pick<LinkProps, "to" | "children">) => (
       textDecor: "none",
     }}
     _active={{
-      bg: "primary.lowContrast",
+      bg: "body.light",
       color: "primary.highContrast",
     }}
     _focusVisible={{
