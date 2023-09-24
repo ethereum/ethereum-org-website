@@ -2,7 +2,7 @@ import * as React from "react"
 import Button, { IProps as ButtonProps } from "../Button"
 import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
 
-type CallToActionProps = Omit<ButtonProps, "children"> & {
+type CallToActionProps = Omit<ButtonProps, "children" | "content"> & {
   content: React.ReactNode
   matomo: MatomoEventOptions
   index: React.Key
