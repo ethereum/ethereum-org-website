@@ -33,7 +33,7 @@ const NavDropdown: React.FC<IProps> & {
 
   return (
     <ListItem m={0}>
-      <ChakraMenu isLazy placement="bottom">
+      <ChakraMenu isLazy placement="bottom-end">
         {({ isOpen }) => (
           <>
             <MenuButton
@@ -74,7 +74,7 @@ const NavDropdown: React.FC<IProps> & {
               border="1px"
               borderColor="dropdownBorder"
               borderRadius="none"
-              p={4}
+              py="2"
               sx={{ "--menu-bg": "colors.dropdownBackground" }}
               // Override the dark styles from the default theme
               _dark={{}}
