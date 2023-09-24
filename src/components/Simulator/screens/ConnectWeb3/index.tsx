@@ -17,6 +17,8 @@ import { useEthPrice } from "../../../../hooks/useEthPrice"
 import { useNFT } from "../../WalletHome/hooks/useNFT"
 import GatsbyImage from "../../../GatsbyImage"
 import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "../../constants"
+import { EXAMPLE_APP_URL } from "./constants"
+import { Browser } from "./Browser"
 
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav
@@ -44,8 +46,9 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   }
   return (
     <>
-      {[0, 1, 2].includes(step) && (
-        <Web3App>
+      {[0].includes(step) && <Browser />}
+      {[1, 2, 3].includes(step) && (
+        <Web3App displayUrl={EXAMPLE_APP_URL}>
           <Flex
             px={6}
             py={{ base: 8, md: 16 }}
@@ -80,18 +83,28 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
         </Web3App>
       )}
       <AnimatePresence>
-        {[1, 2].includes(step) && <Slider isConnected={step === 2} />}
+        {[2, 3].includes(step) && (
+          <Slider isConnected={step === 3} displayUrl={EXAMPLE_APP_URL}>
+            Connecting to the website will not share any personal or secure
+            information with the site owners.
+          </Slider>
+        )}
       </AnimatePresence>
-      {[3].includes(step) && (
+      {[4].includes(step) && (
         <motion.div
           {...fadeInProps}
           exit={{ opacity: 0 }}
           style={{ height: "100%" }}
         >
-          <Web3App bg="background.base">
-            <Box px={6} py={{ base: 2, md: 6 }} fontSize="lg">
+          <Web3App bg="background.base" connected displayUrl="app.example.com">
+            <Box
+              px={6}
+              py={{ base: 2, md: 6 }}
+              fontSize="lg"
+              sx={{ button: { textDecoration: "none" } }}
+            >
               <Text fontWeight="bold" mb={4}>
-                Your collection
+                Your collection (1)
               </Text>
               <Flex gap={2} mb={6}>
                 <GatsbyImage image={NFTs[0].image} alt="NFT Image" />
@@ -101,7 +114,6 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
                   textAlign="start"
                   alignItems="start"
                   gap={1}
-                  sx={{ button: { textDecoration: "none" } }}
                 >
                   <Text fontWeight="bold" fontSize="md" mb="auto" ms={2}>
                     Cool art
@@ -129,19 +141,26 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
                   </Button>
                 </Flex>
               </Flex>
-              <Button variant="outline" w="full" isDisabled>
-                Browser other artwork
+              <Button variant="link" isDisabled>
+                Browse other artwork
+              </Button>
+              <Button variant="link" isDisabled>
+                Mint new NFT
               </Button>
             </Box>
           </Web3App>
         </motion.div>
       )}
-      {[0, 1, 2, 3].includes(step) && (
-        <ProgressCta isAnimated={step === 0} progressStepper={progressStepper}>
+      {[0, 1, 2, 3, 4].includes(step) && (
+        <ProgressCta
+          isAnimated={step === 0}
+          progressStepper={progressStepper}
+          mb={step === 0 ? 16 : 0}
+        >
           {ctaLabel}
         </ProgressCta>
       )}
-      {[4].includes(step) && (
+      {[5].includes(step) && (
         <motion.div
           key="final-wallet-display"
           {...fadeInProps}

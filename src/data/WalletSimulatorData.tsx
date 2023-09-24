@@ -333,11 +333,26 @@ export const walletOnboardingSimData: SimulatorData = {
         description: (
           <>
             <Text>
+              Your wallet can be used to connect to all sorts of applications,
+              allowing you to interact with your on-chain assets.
+            </Text>
+            <Text>
+              Your friend just sent an NFT art piece to your address! Let's
+              login to a new NFT marketplace to view it.
+            </Text>
+          </>
+        ),
+      },
+      {
+        header: "No need to create a new account for each service",
+        description: (
+          <>
+            <Text>
               Your account is universal across all Ethereum and
               Ethereum-compatible applications.
             </Text>
             <Text>
-              There is no need to create a new account for each service.
+              Assets stored on-chain can be accessed from any application.
             </Text>
           </>
         ),
@@ -352,7 +367,8 @@ export const walletOnboardingSimData: SimulatorData = {
               Polygon or Optimism.
             </Text>
             <Text>
-              Assets stored on-chain can be accessed from any application.
+              Logins are handled by your wallet—no more creating insecure
+              passwords.
             </Text>
           </>
         ),
@@ -366,16 +382,19 @@ export const walletOnboardingSimData: SimulatorData = {
               Your personal information, such as email or phone number, is not
               needed to use Web3 apps—you only need a wallet.
             </Text>
+            <Text>
+              Also note there are no associated transaction fees here—signing in
+              using Ethereum is free, fast and easy!
+            </Text>
           </>
         ),
       },
-
       {
         header:
           "No geographical or political discrimination against who can use Ethereum services",
         description: (
           <>
-            <Text>You can use the same address on multiple devices.</Text>
+            <Text>There's the NFT you received!</Text>
             <Text>
               Wallets are technically only an interface to show you your balance
               and to make transactions—
@@ -413,6 +432,7 @@ export const walletOnboardingSimData: SimulatorData = {
       },
     ],
     ctaLabels: [
+      "Go to website",
       "Connect wallet",
       "Connect to app",
       "Go to account",

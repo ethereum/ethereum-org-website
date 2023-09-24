@@ -1,13 +1,18 @@
-import { Box, Flex, Grid, Icon, Text } from "@chakra-ui/react"
+import { Box, Flex, Grid, Icon, Text, TextProps } from "@chakra-ui/react"
 import React from "react"
 import { motion } from "framer-motion"
 import { EthGlyphIcon } from "../../icons"
 import { PiCheckThin } from "react-icons/pi"
 
-interface IProps {
+interface IProps extends Pick<TextProps, "children"> {
   isConnected: boolean
+  displayUrl: string
 }
-export const Slider: React.FC<IProps> = ({ isConnected }) => {
+export const Slider: React.FC<IProps> = ({
+  isConnected,
+  displayUrl,
+  children,
+}) => {
   const ICON_SIZE = "4.5rem" as const
   return (
     <>
@@ -96,14 +101,11 @@ export const Slider: React.FC<IProps> = ({ isConnected }) => {
                   />
                 </Grid>
                 <Text mb={0} me={0.5}>
-                  app.example.com
+                  {displayUrl}
                 </Text>
               </Flex>
               {/* Information */}
-              <Text>
-                Connecting to the website will not share any personal
-                information with the site owners.
-              </Text>
+              <Text>{children}</Text>
             </>
           )}
         </Flex>
