@@ -1,11 +1,22 @@
 import React from "react"
-import { Box, type FlexProps, Text, Icon, Flex, Grid } from "@chakra-ui/react"
+import {
+  Box,
+  type FlexProps,
+  Text,
+  Icon,
+  Flex,
+  Grid,
+  Button,
+} from "@chakra-ui/react"
 import { BsTriangle } from "react-icons/bs"
 import { PiMagnifyingGlass } from "react-icons/pi"
 import { IoEllipsisHorizontalSharp } from "react-icons/io5"
 import { NFTSupportIcon } from "../../../icons/wallets/NFTSupportIcon"
 
-export const Browser: React.FC<FlexProps> = (props) => {
+interface IProps extends FlexProps {
+  progressStepper: () => void
+}
+export const Browser: React.FC<IProps> = ({ progressStepper, ...props }) => {
   return (
     <Flex direction="column" h="full" bg="body.light" {...props}>
       <Box bg="background.highlight" w="full" px={3} pt={9} pb={3}>
@@ -14,18 +25,38 @@ export const Browser: React.FC<FlexProps> = (props) => {
         </Box>
       </Box>
       <Box p={8} flex={1}>
-        <Flex direction="column" alignItems="center" gap={2} w="fit-content">
+        <Button
+          variant="ghost"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          data-group
+          onClick={progressStepper}
+          gap={4}
+          p={0}
+        >
           <Grid
+            bg="background.highlight"
+            borderRadius="lg"
             placeItems="center"
             w={16}
             h={16}
-            bg="background.highlight"
-            borderRadius="lg"
+            _groupHover={{ bg: "primary.hover" }}
           >
-            <Icon as={NFTSupportIcon} fontSize="4xl" />
+            <Icon as={NFTSupportIcon} color="white" w={10} h={10} />
           </Grid>
-          <Text>NFT Market</Text>
-        </Flex>
+          <Box position="relative">
+            <Text
+              fontWeight="bold"
+              color="primary.base"
+              textAlign="center"
+              m={0}
+              _groupHover={{ color: "primary.hover" }}
+            >
+              NFT Market
+            </Text>
+          </Box>
+        </Button>
       </Box>
       <Flex
         bg="background.highlight"

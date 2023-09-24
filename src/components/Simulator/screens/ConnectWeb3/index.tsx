@@ -46,7 +46,7 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   }
   return (
     <>
-      {[0].includes(step) && <Browser />}
+      {[0].includes(step) && <Browser progressStepper={progressStepper} />}
       {[1, 2, 3].includes(step) && (
         <Web3App displayUrl={EXAMPLE_APP_URL}>
           <Flex
