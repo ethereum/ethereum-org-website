@@ -1,17 +1,11 @@
 // Libraries
 import React from "react"
-import {
-  Box,
-  Flex,
-  Heading,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react"
+import { Box, Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
 
 // Components
 import InlineLink from "./Link"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 // Data
 import _rollups from "../data/layer-2/layer-2.json"

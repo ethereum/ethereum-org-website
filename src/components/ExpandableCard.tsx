@@ -1,13 +1,5 @@
 // Libraries
-import { ComponentType, ReactNode, SVGProps, useState } from "react"
-
-// Components
-// TODO: add Translation when i18n is set up
-// import Translation from "./Translation"
-
-// Utils
-// TODO: add trackCustomEvent when util is migrated
-// import { trackCustomEvent } from "../utils/matomo"
+import { ReactNode, useState } from "react"
 import {
   Accordion,
   AccordionButton,
@@ -16,8 +8,16 @@ import {
   Box,
   Heading,
   Icon,
-  Text,
 } from "@chakra-ui/react"
+
+// Components
+// TODO: add Translation when i18n is set up
+// import Translation from "./Translation"
+import Text from "./OldText"
+
+// Utils
+// TODO: add trackCustomEvent when util is migrated
+// import { trackCustomEvent } from "../utils/matomo"
 
 export interface IProps {
   children?: React.ReactNode

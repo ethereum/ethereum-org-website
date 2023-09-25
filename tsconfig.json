@@ -43,8 +43,10 @@
     "./src/components/Banners/PostMergeBanner.tsx",
     "./src/components/Banners/TranslatathonBanner.tsx",
     "./src/components/BaseStories/Checkbox.stories.tsx",
+    "./src/components/BaseStories/Heading.stories.tsx",
     "./src/components/BaseStories/Radio.stories.tsx",
     "./src/components/BaseStories/Switch.stories.tsx",
+    "./src/components/BaseStories/Text.stories.tsx",
     "./src/components/BeaconChainActions.tsx",
     "./src/components/BoxGrid.tsx",
     "./src/components/Breadcrumbs/index.tsx",
@@ -95,6 +97,7 @@
     "./src/components/Glossary/GlossaryDefinition/GlossaryDefinition.stories.tsx",
     "./src/components/Glossary/GlossaryTooltip/index.tsx",
     "./src/components/Glossary/GlossaryTooltip/GlossaryTooltip.stories.tsx",
+    // "./src/components/Heading",
     "./src/components/HorizontalCard.tsx",
     "./src/components/ImageCard.tsx",
     "./src/components/Input/Input.stories.tsx",
@@ -144,6 +147,7 @@
     "./src/components/SideNav.tsx",
     "./src/components/SideNavMobile.tsx",
     "./src/components/SimpleTable.tsx",
+    "./src/components/Simulator",
     "./src/components/SkipLink.tsx",
     "./src/components/Slider/Slider.stories.tsx",
     "./src/components/Slider/index.tsx",
@@ -284,6 +288,7 @@
     "./src/components/icons/wallets/SwapIcon.tsx",
     "./src/components/icons/wallets/WalletConnectIcon.tsx",
     "./src/components/icons/wallets/WithdrawCryptoIcon.tsx",
-    "./src/components/icons/wallets/index.ts"
+    "./src/components/icons/wallets/index.ts",
+    "./src/hooks/useEthPrice.tsx"
   ]
 }
