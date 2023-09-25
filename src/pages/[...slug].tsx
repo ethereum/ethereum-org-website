@@ -17,7 +17,6 @@ import { staticComponents as components } from "@/layouts/Static"
 // import { UpgradeLayout } from "@/layouts/Upgrade"
 // import { EventLayout } from "@/layouts/Event"
 // import { DocsLayout } from "@/layouts/Docs"
-// import { TutorialLayout } from "@/layouts/Tutorial"
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
@@ -32,7 +31,6 @@ const componentMapping = {
   // upgrade: UpgradeLayout,
   // event: EventLayout,
   // docs: DocsLayout,
-  // tutorial: TutorialLayout,
 } as const
 
 interface Params extends ParsedUrlQuery {
@@ -87,8 +85,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const layout =
     frontmatter.template ?? params.slug.includes("developers/docs")
       ? "docs"
-      : params.slug.includes("developers/tutorials")
-      ? "tutorial"
       : "static"
   return {
     props: {
