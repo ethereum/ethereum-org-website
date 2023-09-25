@@ -46,6 +46,7 @@ Platforms with contract-based persistence:
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
+- [Spheron Network](https://spheron.network/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -55,6 +56,7 @@ Platforms with contract-based persistence:
 IPFS is a distributed system for storing and accessing files, websites, applications, and data. It doesn't have a built-in incentive scheme, but can instead be used with any of the contract-based incentive solutions above for longer-term persistence. Another way to persist data on IPFS is to work with a pinning service, which will "pin" your data for you. You can even run your own IPFS node and contribute to the network to persist your and/or other's data for free!
 
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
+- [Spheron Network](https://spheron.network/) _(IPFS/Filecoin pinning service)_
 - [Pinata](https://www.pinata.cloud/) _(IPFS pinning service)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
@@ -75,6 +77,7 @@ One of the most popular ways to make sure data is retained, is to use some type 
 Types of dStorage with a challenge mechanism:
 
 - 0Chain
+- Spheron Network
 - Skynet
 - Arweave
 - Filecoin
@@ -93,6 +96,7 @@ Decentralized tools without KYC:
 - Filecoin
 - IPFS
 - Ethereum
+- Spheron Network
 - Crust Network
 - 4EVERLAND
 
@@ -143,6 +147,13 @@ Proof-of-stake based:
 - [Arweave.org](https://www.arweave.org/)
 - [Documentation](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
+
+**Spheron Network - _Deploy, manage & scale your applications utlising Web3 Infrastructure._**
+
+- [Spheron Network](https://spheron.network/) 
+- [Documentation](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
+
 
 **0chain - _0Chain is a proof-of-stake dStorage platform with sharding and blobbers._**
 
