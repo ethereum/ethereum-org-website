@@ -28,15 +28,15 @@ This is a curated list of user research done in web3 that may help with design a
 | <Badge colorScheme="green">Crypto onboarding</Badge>  | [CRADL: Onboarding to Cryptocurrency](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing) |
 | <Badge colorScheme="green">Crypto onboarding</Badge>             | [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                         |
 | <Badge colorScheme="green">Crypto onboarding</Badge>             | [ConSensys: The State of Web3 perception around the world 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                            |
-| <Badge colorScheme="green">Staking</Badge>             | [Staking: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)                        |
-| <Badge colorScheme="green">Staking</Badge>            | [Multi App Staking](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)                          |
-| <Badge colorScheme="green">DAO</Badge>            | [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)                          |
-| <Badge colorScheme="green">DeFi</Badge>            | [The state of Defi 2023](https://stateofdefi.org/)                         |
-| <Badge colorScheme="green">DeFi</Badge>            | [Coverage pools](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                         |
-| <Badge colorScheme="green">DeFi</Badge>            | [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                          |
-| <Badge colorScheme="green">Metaverse</Badge>             | [Metaverse: User Research Report](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                         |
-| <Badge colorScheme="green">Metaverse</Badge>           | [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)                          |
-| <Badge colorScheme="green">Ethereum.org UX stats</Badge>            | [Usability and user satisfaction survey dashboard - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                          |
+| <Badge colorScheme="purple">Staking</Badge>             | [Staking: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)                        |
+| <Badge colorScheme="purple">Staking</Badge>            | [Multi App Staking](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)                          |
+| <Badge colorScheme="red">DAO</Badge>            | [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)                          |
+| <Badge colorScheme="pink">DeFi</Badge>            | [The state of Defi 2023](https://stateofdefi.org/)                         |
+| <Badge colorScheme="pink">DeFi</Badge>            | [Coverage pools](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                         |
+| <Badge colorScheme="pink">DeFi</Badge>            | [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                          |
+| <Badge colorScheme="gray">Metaverse</Badge>             | [Metaverse: User Research Report](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                         |
+| <Badge colorScheme="gray">Metaverse</Badge>           | [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)                          |
+| <Badge colorScheme="blue">Ethereum.org UX stats</Badge>            | [Usability and user satisfaction survey dashboard - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                          |
 
 ## Design for web3 {#Design-for-web3}
 
