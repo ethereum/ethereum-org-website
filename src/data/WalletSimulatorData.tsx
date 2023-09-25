@@ -337,8 +337,8 @@ export const walletOnboardingSimData: SimulatorData = {
               allowing you to interact with your on-chain assets.
             </Text>
             <Text>
-              Your friend just sent an NFT art piece to your address! Let's
-              login to a new NFT marketplace to view it.
+              Your friend just sent an NFT art piece to your address! Let's go
+              to a new NFT marketplace website to view it.
             </Text>
           </>
         ),
@@ -432,7 +432,7 @@ export const walletOnboardingSimData: SimulatorData = {
       },
     ],
     ctaLabels: [
-      "Go to website",
+      "Go to web app",
       "Connect wallet",
       "Connect to app",
       "Go to account",
