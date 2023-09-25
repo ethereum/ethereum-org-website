@@ -373,7 +373,6 @@
       "isTrustless": true,
       "isPermissionless": false,
       "pctMajorityExecutionClient": 100,
-      "pctMajorityConsensusClient": 100,
       "pctMajorityConsensusClient": 0,
       "isSelfCustody": true,
       "platforms": ["Browser"],
