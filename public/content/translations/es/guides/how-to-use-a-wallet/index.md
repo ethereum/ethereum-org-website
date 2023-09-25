@@ -6,7 +6,7 @@ lang: es
 
 # Cómo utilizar una cartera
 
-Domine el funcionamiento de todas las funciones básicas de su cartera. Si aún no tiene una, consulte nuesta guía [ Cómo «registrar» una cuenta de Ethereum](/guides/how-to-register-an-ethereum-account/).
+Domine el funcionamiento de todas las funciones básicas de su cartera. Si aún no tiene una, eche un vistazo a nuestra guía [Cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Abra su cartera
 
@@ -18,13 +18,13 @@ Debería aparecer un panel que probablemente muestre el saldo y dos botones para
 
 Cada cuenta de Ethereum tiene su propia dirección que es una secuencia única de numeros y letras. La dirección funciona como el número de una cuenta de banco. Las direcciones de Ethereum siempre empiezan por «0x». Puede compartir esta dirección con cualquiera: es seguro hacerlo.
 
-Su dirección (que algunas veces se le llama «llave pública») es como la dirección de su casa: necesita decirle a la gente cuál es para que le puedan encontrar. Es seguro hacerlo, porque puede seguir bloqueando la puerta principal con otra llave que sólo usted controla, así nadie puede entrar, ni siquiera sabiendo donde vive.
+Su dirección es como la de su casa: tiene que decirle a la gente cuál es para que puedan encontrarle. Es seguro hacerlo, porque puede seguir bloqueando la puerta principal con otra llave que sólo usted controla, así nadie puede entrar, ni siquiera sabiendo donde vive.
 
 Tiene que facilitar su dirección pública a cualquier persona que quiera enviarle dinero. Muchas aplicaciones de cartera le permiten copiar su dirección o mostrar un código QR para escanear para un uso más sencillo. Evita escribir cualquier dirección Ethereum manualmente. Esto puede conllevar a errores y pérdida de fondos.
 
 Diferentes aplicaciones pueden variar o usar diferentes idiomas, pero todas deben llevarle por un proceso similar si intenta transferir fondos.
 
-1. Abre la aplicación de su cartera.
+1. Abra la aplicación de su cartera.
 2. Haga clic en «Recibir» (o en una opción con una palabra similar).
 3. Copie su dirección Ethereum al portapapeles.
 4. Proporcione al emisor su dirección de Ethereum.
@@ -33,7 +33,7 @@ Diferentes aplicaciones pueden variar o usar diferentes idiomas, pero todas debe
 
 ¿Le gustaría enviar ETH a otra cartera?
 
-1. Abre la aplicación de su cartera.
+1. Abra la aplicación de su cartera.
 2. Consiga la dirección de Ethereum y asegúrese de que está conectada a la misma red que el destinatario.
 3. Introduzca la dirección o escanee el código QR con su cámara y así no tiene que escribir la dirección manualmente.
 4. Haga clic en el botón «Enviar» en su cartera (u otra palabra similar).
@@ -60,7 +60,7 @@ Su dirección será la misma en todos los proyectos de Ethereum. No tiene que re
 ![Seleccione de una lista de carteras entre las que conectarse](./connect2.png)
 
 5. Confirme la solicitud en su cartera para establecer la conexión. ** Aceptar este mensaje no requiere gastar ETH **.
-6. ¡Y ya está! Puede empezar a utilizar la aplicación. Puede encontrar algunos proyectos interesantes en nuestra [ página dApps](/dapps/#explore). <br />
+6. ¡Y ya está! Puede empezar a utilizar la aplicación. Puede encontrar algunos proyectos interesantes en nuestra [ página DApps](/dapps/#explore). <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
@@ -77,7 +77,7 @@ Puede utilizar la misma dirección en todas las cadenas de bloques compatibles c
 
 ### ¿Puedo usar la misma dirección en múltiples dispositivos?
 
-Sí, puede usar la misma dirección en múltiples dispositivos. Las carteras sólo son técnicamente una interfaz que muestra su saldo y que sirven para realizar transacciones, su cuenta no se guarda dentro de la cartera, sino en la cadena de bloques.
+Sí, puedes usar la misma dirección en varios dispositivos. Las carteras sólo son técnicamente una interfaz que muestra su saldo y que sirven para realizar transacciones, su cuenta no se guarda dentro de la cartera, sino en la cadena de bloques.
 
 ### No he recibido mi criptomoneda, ¿dónde puedo verificar el estado de la transacción?
 

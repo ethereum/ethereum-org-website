@@ -1,12 +1,12 @@
 ---
 title: Akıllı sözleşmelerin anatomisi
-description: Akıllı bir sözleşmenin anatomisine derinlemesine bir bakış – fonksiyonlar, veriler ve değişkenler.
+description: Akıllı bir sözleşmenin anatomisine derinlemesine bir bakış - fonksiyonlar, veriler ve değişkenler.
 lang: tr
 ---
 
 Bir akıllı sözleşme Ethereum üzerindeki bir adreste çalışan bir programdır. Bir işlem alındığında yürütülebilen fonksiyonlar ve verilerden oluşurlar. Burada bir akıllı sözleşmenin nelerden oluştuğu hakkında genel bir bakış bulunmaktadır.
 
-### Ön koşullar {#prerequisites}
+### Ön Koşullar {#prerequisites}
 
 İlk olarak [akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında okuduğunuzdan emin olun. Bu belge, hâlihazırda JavaScript veya Python gibi programlama dillerine aşina olduğunuzu varsayar.
 
@@ -69,7 +69,7 @@ Sözleşmenizde tanımladığınız değişkenlere ek olarak, bazı özel global
 | `block.timestamp` | uint256             | Mevcut blok dönemi zaman damgası   |
 | `msg.sender`      | adres               | Mesajın göndericisi (mevcut çağrı) |
 
-## İşlevler {#functions}
+## Fonksiyonlar {#functions}
 
 En basit şekilde, fonksiyonlar gelen işlemlere yanıt olarak bilgi alabilir veya düzenleyebilir.
 

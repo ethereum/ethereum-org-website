@@ -4,64 +4,71 @@ description: Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinci
 lang: tr
 template: upgrade
 image: ../../../../../assets/upgrades/core.png
-summaryPoint1: İşaret Zinciri kullanmakta olduğumuz Ethereum ile ilgili hiçbir şeyi değiştirmez.
-summaryPoint2: Mutabakat katmanı görevi görerek ağı koordine eder.
-summaryPoint3: Hisse ispatı modelini Ethereum ekosisteminde uygulamaya koydu.
-summaryPoint4: Bunu teknik yol haritalarından "Aşama 0" olarak biliyor olabilirsiniz.
+summaryPoint1: İşaret Zincirinin Ethereum ekosistemine hisse ispatı olarak eklenmesi.
+summaryPoint2: Original Ethereum Hisse İspatı zinciri ile eylül 2022de birleştirilmiştir.
+summaryPoint3: İşaret Zinciri ve mutabakat mantığını ve şimdilerde Ethereumu güvende tutan blok dedikodusu protokolünü tanıttı.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    İşaret (Beacon) Zinciri 1 Aralık saat 12:00'de (UTC) başlatılmıştır. Daha fazla bilgi için, bk. <a href="https://beaconscan.com/">verileri keşfet</a>. Zincirin doğrulanmasına yardımcı olmak isterseniz, <a href="/staking/">ETH'nizi stake edebilirsiniz</a>.
+  İşaret Zinciri 1 Aralık 2020'de geldi ve hisse ispatını Ethereumun mutabakat mekanizması olarak 15 Eylül 2022'de Birleşim yükseltmesiyle resmileştirdi.
 </UpgradeStatus>
 
-## İşaret (Beacon) Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}
+## İşaret Zinciri Nedir? {#what-is-the-beacon-chain}
 
-İşaret Zinciri, [parçalardan](/roadmap/danksharding/) ve [stake edenlerden](/staking/) oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
+İşaret Zinciri 2020'de hayata geçirilmiş olan hisse ispatı blok zincirinin orijinal adıdır. Ethereum Markette ulaşılabilir hale gelmeden önce Hisse ispatı mutabakatı mantığının sağlam ve sürdürülebilir olduğundan emin olmak için oluşturuldu. Bu yüzden, Ethereum'un iş ispatı ile birlikte çalıştırıldı. İşaret zinciri boş bloklardan oluşan bir zincirdi, ancak Ethereumda İş ispatından ve hisse ispatına geçiş İşaret Zincirinin tanıtılmasına ve Yürütüm İstemcilerinden gelen işlem verilerinin kabul edilmesine, blokların paket haline getirilmesine ve bir blok zincirin içine hisse ispatı ve mutabakat mantığıyla organize edilmesine yol açtı. Aynı zamanda, orijinal Ethereum Müşterileri madenciliklerini, blok yayılmalarını ve Mutabakat mantıklarını kapattılar ve bunları tamamen İşaret Zincirine bıraktılar. Bu olay [Birleşim](/roadmap/merge/) olarak bilinir. Birleşim olduğunda, artık ikili blok zincirler yoktu. Onun yerine, sadece bir hisse ispatı Ethereumu vardı ve bu artık düğüm başına iki farklı istemci gerektiriyor. İşaret Zinciri artık fikir birliği katmanı, fikir birliği istemcileri için eşler arası bir ağ ve blok dedikodusu ve mutabakat mantığını hallediyor. Dedikodu ve işlemlerin uygulanmasından, Ethereum'un duruşunu yönetmekten sorumlu. Bu iki katman birbirleriyle Motor API'sını kullanarak iletişim kurabilirler.
 
-İşaret Zincirinin rolü zamanla değişecek ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklenebilir Ethereum](/roadmap/vision/) için temel bir bileşendir.
+## İşaret Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}
 
-## İşaret (Beacon) Zinciri özellikleri {#beacon-chain-features}
+İşaret Zinciri Ethereum [paydaşlar](/staking/) ağını oluşturan ve koordine eden hesap defterlerine verilen addır, bunlardan önce ise hissedarlar gerçek Ethereum bloklarını doğrulamaya başlamışlardı. Ama, İşaret Zinciri işlemleri ilerletmez ya da akıllı sözleşme etkileşimlerini halletmez çünkü bu işlemler Yürütüm Katmanında yapılmaktadır. İşaret Zinciri, blok ve tasdik işlemleri, çatallanma seçim algoritmasını çalıştırma ve ödül ve cezaları yönetme gibi şeylerden sorumludur. [Düğüm mimarisi sayfamızda](/developers/docs/nodes-and-clients/node-architecture/#node-comparison) daha fazlasını okuyun.
+
+## İşaret Zinciri etkisi {#beacon-chain-features}
 
 ### Staking ile Tanışın {#introducing-staking}
 
-İşaret (Beacon) Zinciri Ethereum'a [pay ispatını](/developers/docs/consensus-mechanisms/pos/) getirir. Bu Ethereum'u güvenli kılmaya yardımcı olmak üzere size sunulan yeni bir imkândır. Ethereum'u daha sağlıklı kılacak ve bu süreç içinde size daha fazla ETH kazandıracak bir kamu emtiası olarak görün. Uygulamada, doğrulayıcı yazılımı etkinleştirmek için ETH stake etmenizi sağlar. Doğrulayıcı olarak işlemleri gerçekleştirir ve zincirde yeni bloklar oluşturursunuz.
+İşaret Zinciri, Ethereum'a [Hisse İspatını](/developers/docs/consensus-mechanisms/pos/) tanıttı. Bu, Ethereum'u güvende tutar ve süreç doğrulayıcılarına daha fazla ETH kazandırır. Pratikte hisseleme, doğrulayıcı yazılımını aktive etmek için ETH'nin hisselenmesini içerir. Bir paydaş olarak, zincirde yeni bloklar oluşturan ve doğrulayan yazılımı çalıştırırsınız.
 
-Paydaşlık ve doğrulayıcı oluşturmak [madencilik](/developers/docs/mining/) faaliyetinden daha kolaydır (şu anda ağ bu şekilde korunmaktadır). Ethereum'u uzun vadede daha güvenli kılmanıza yardımcı olması umulmaktadır. Ağa ne kadar kişi katılırsa o kadar merkeziyetsiz ve saldırıya karşı güvenli hale gelir.
+Hisseleme [ madenciliğin](/developers/docs/mining/) eskiden yaptığına benzer bir amaca hizmet eder, ancak birçok yönden farklıdır. Madencilik güçlü donanım, enerji harcaması gibi büyük ön harcamalar gerektiriyordu ve ölçeklendirilmiş ekonomilere sebep oluyor ve merkeziyetçiliği teşvik ediyordu. Madencilik ayrıca varlıkları teminat olarak kitlemeye gerek duymuyordu ve protokolün uğranan saldırıdan sonra gerekli kişilere gerekli ceza vermesini de sınırlandırıyordu.
+
+Hisse ispatına geçiş Ethereum'u, iş ispatına kıyasla, çok daha güvenli ve merkeziyetsiz hale getirdi. Ağa katılan insan sayısı arttıkça, mevcut ağ bir o kadar merkeziyetsiz ve saldırılara karşı daha da güvende olur.
+
+Ve hisse ispatını mutabakat mekanizması olarak kullanmak, [ şuan sahip olduğumuz güvenli, çevre dostu ve ölçeklenebillir Ethereum](/roadmap/vision/) için temel bir bileşendir.
 
 <InfoBanner emoji=":money_bag:">
-Bir doğrulayıcı olarak İşaret Zincirinin güvenliğine yardımcı olmak istiyorsanız <a href="/staking/">stake etme konusunda daha fazla bilgi alın</a>.
+  Eğer doğrulayıcı olmakla ve Ethereum'un güvenliğini sağlamaya yardımcı olmakla ilgileniyorsanız, <a href="/staking/">hisseleme ile ilgili daha fazla şey öğrenin</a>.
 </InfoBanner>
 
-Bu ayrıca başka bir yükseltme için de önemli bir değişikliktir: [parça zincirleri](/roadmap/danksharding/).
+### Parçalama için ayarlamalar {#setting-up-for-sharding}
 
-### Shard zincirleri kurulumu {#setting-up-for-shard-chains}
+İşaret Zinciri, Ethereum Ana Ağı ile birleştiğinden beri, Ethereum topluluğu ağı ölçeklendirmeye başladı.
 
-Mainnet, İşaret Zinciri ile birleştikten sonra bir sonraki yükseltme ile iş ispatı ağına parça zincirleri giriş yapacak. Bu "parçalar", ağın kapasitesini ve ağı 64 blokzincir olarak genişleterek işlem hızını artıracaktır. İşaret (Beacon) Zinciri shard zincirlerinin sunulmasındaki önemli ilk adımdır, zira güvenli çalışmaları için paydaşlık gerektirir.
+Hisse İspatı, herhangi bir zamanda, her biri ETH'nin söz konusu olduğu tüm onaylanmış blok üreticilerinin kaydına sahip olma avantajına sahiptir. Bu kayıt defteri, bölme ve fethetme yeteneği için zemin hazırlar, ancak belirli ağ sorumluluklarını güvenilir bir şekilde böler.
 
-Sonuç olarak İşaret (Beacon) Zinciri shard zincirlerini doğrulamak üzere rasgele staker'lar atanmasından da sorumlu olacaktır. Staker'lar için işbirliği yapmayı ve shard'ı devralmayı zorlaştırmanın anahtarı da budur. Başka deyişle bu [trilyon şansta 1'den az](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20) anlamına gelir.
+Bu sorumluluk, madencilerin ağa karşı hiçbir yükümlülüğünün olmadığı ve madenciliği durdurup düğüm yazılımlarını anında kalıcı olarak kapatabilecekleri iş ispatının karşıtıdır. Ayrıca bilinen blok teklifçilerinin kaydı ile ağ sorumluluklarını güvenli bir şekilde bölmenin güvenilir bir yolu yoktur.
+
+[Parçalama hakkında daha fazlası](/roadmap/danksharding/)
 
 ## Yükseltmeler arasındaki ilişki {#relationship-between-upgrades}
 
-Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret (Beacon) Zincirinin diğer yükseltmeleri nasıl etkilediğini özetleyelim.
+Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret Zincirinin diğer yükseltmeleri nasıl etkilediğini özetleyelim.
 
-### Mainnet ve İşaret Zinciri {#mainnet-and-beacon-chain}
+### İşaret Zinciri ve Birleşim {#merge-and-beacon-chain}
 
-İlk başta İşaret Zinciri, bugün kullandığımız Ethereum Mainnet'ten ayrı olarak kullanılacaktır. Ancak sonuç olarak bağlanacaklardır. Plan, İşaret Zinciri tarafından kontrol ve koordine edilen hisse ispatı sistemini ana ağ ile "birleştirmektir".
+İlk başta İşaret Zinciri, Ethereum Ana Ağı'ndan ayrıydı, ancak 2022'de birleştirildi.
 
 <ButtonLink to="/roadmap/merge/">
-    Birleştirme
+  Birleştirme
 </ButtonLink>
 
 ### Parçalar ve İşaret Zinciri {#shards-and-beacon-chain}
 
-Parça zincirleri, Ethereum ekosistemine yalnızca hisse ispatı mutabakat mekanizması ile güvenli bir şekilde girebilir. İşaret Zinciri, staking sistemini başlatarak gelecekte parça zinciri yükseltmesine olanak verir.
+Parçalama, Ethereum ekosistemine yalnızca bir Hisse İspatı mutabakat mekanizması ile güvenli bir şekilde girebilir. İşare Zinciri Ana Ağ ile "bireleşerek" Ethereum'un daha da ölçeklenmesine yardımcı olmak için parçalamanın önünü açan hisselemeyi tanıttı.
 
 <ButtonLink to="/roadmap/danksharding/">
-    Parça zincirleri
+  Parça zincirleri
 </ButtonLink>
 
-<Divider />
+## Daha Fazla Okuma
 
-## İşaret (Beacon) Zinciriyle Etkileşim Kurun {#interact-with-beacon-chain}
-
-<BeaconChainActions />
+- [Ethereum'un gelecekteki yükseltmeleri hakkında daha fazla bilgi](/roadmap/vision)
+- [Düğüm mimarisi hakkında daha fazlası](/developers/docs/nodes-and-clients/node-architecture)
+- [Hisse ispatına dair daha fazlası](/developers/docs/consensus-mechanisms/pos)
