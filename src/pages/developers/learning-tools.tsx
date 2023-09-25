@@ -3,15 +3,16 @@ import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
-import { Box, Flex, Heading, HeadingProps, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, HeadingProps } from "@chakra-ui/react"
 // Component imports
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import FeedbackCard from "../../components/FeedbackCard"
 import LearningToolsCardGrid from "../../components/LearningToolsCardGrid"
+import Text from "../../components/OldText"
 // Util imports
 import { getImage } from "../../utils/image"
 // Type imports
@@ -45,7 +46,6 @@ const Header = (props: ChildOnlyProp) => (
 const H1 = (props: ChildOnlyProp) => (
   <Heading
     as="h1"
-    my={0}
     color="text"
     fontStyle="normal"
     fontFamily="monospace"

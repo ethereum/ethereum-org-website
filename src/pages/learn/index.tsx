@@ -5,20 +5,17 @@ import {
   Center,
   Flex,
   Grid,
-  Heading,
   HeadingProps,
   ListItem,
   Show,
-  Text,
   UnorderedList,
   useToken,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import DocLink from "../../components/DocLink"
 import FeedbackCard from "../../components/FeedbackCard"
 import InlineLink from "../../components/Link"
@@ -29,6 +26,9 @@ import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
+import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
+import GatsbyImage from "../../components/GatsbyImage"
 import {
   ContentContainer,
   InfoColumn,
@@ -77,9 +77,15 @@ const DocsContainer = ({ children }: ChildOnlyProp) => {
 
 const AdditionalReadingHeader = ({ children }: ChildOnlyProp) => {
   return (
-    <Heading as="h3" mt={16} fontSize="xl" fontWeight="bold" textAlign="center">
+    <OldHeading
+      as="h3"
+      mt={16}
+      fontSize="xl"
+      fontWeight="bold"
+      textAlign="center"
+    >
       {children}
-    </Heading>
+    </OldHeading>
   )
 }
 
@@ -105,17 +111,21 @@ const CardGrid = ({ children }: ChildOnlyProp) => {
 
 const H2 = ({ children, ...props }: HeadingProps) => {
   return (
-    <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props}>
+    <OldHeading
+      fontSize={{ base: "2xl", md: "2rem" }}
+      lineHeight={1.4}
+      {...props}
+    >
       {children}
-    </Heading>
+    </OldHeading>
   )
 }
 
 const H3 = ({ children, ...props }: HeadingProps) => {
   return (
-    <Heading as="h3" fontSize={{ base: "xl", md: "2xl" }} {...props}>
+    <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }} {...props}>
       {children}
-    </Heading>
+    </OldHeading>
   )
 }
 

@@ -4,90 +4,77 @@ description: Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan tem
 lang: tr
 ---
 
-# Ethereum enerji tüketimi {#introduction}
+# Ethereum'un enerji tüketimi {#proof-of-stake-energy}
 
-Ethereum'un [iş ispatı](/developers/docs/consensus-mechanisms/#proof-of-work) ile mevcut enerji harcaması çok yüksek ve sürdürülemez. Enerji harcaması sorunlarını güvenlik ve merkeziyetsizleşmeden ödün vermeden çözmek kayda değer bir teknik zorluktur ve bu zorluk, yıllardır araştırma ve geliştirmenin odağı olmuştur. Ethereum'un oluşumunun neden yüksek bir çevresel etkiye yol açtığını ve yaklaşan [hisse ispatı](/developers/docs/consensus-mechanisms/pos) ağ yükseltmesinin bunu önemli ölçüde nasıl değiştirebileceğini keşfedelim.
+Ethereum çevre dostu bir blok zincirdir. Ethereum'un [hisse ispatı mekanizması](/developers/docs/consensus-mechanisms/pos), [ağın güvenliğini sağlamak için](/developers/docs/consensus-mechanisms/pow) enerji yerine ETH kullanır. Tüm Ethereum ağının, yılda tükettiği enerji yaklaşık olarak [~0.0026 TWh](https://carbon-ratings.com/eth-report-2022)'dir.
 
-## Enerji, ağı korur {#energy-secures-the-network}
+Ethereum için enerji tüketim tahmini [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) çalışmasından geliyor. Ethereum Ağı'nın karbon ayak izi ve elektrik harcamaları hakkında aşağı yukarı tahminlerde bulundular. ([rapora bakabilirsiniz](https://carbon-ratings.com/eth-report-2022)). Farklı düğümlerin elektrik harcamalarını çeşitli biligisayar donanım ve yazılım yapılandırmalarıyla test ettiler. Ağın yıllık tahmin edilen elektrik tüketimi olan **2.601 MWh** (0.0026 TWh) bölgeye özel karbon yoğunluğu faktörleri uygulandığında yıllık **870 tonluk CO2e** karbon emisyonuna denk gelmektedir. Bu değer düğümler ağa girdikçe ve çıktıkça değişir - bunun takibini [Cambridge Blok Zincir Ağ Sürdürülebilirlik Endeksinden](https://ccaf.io/cbnsi/ethereum) yuvarlanan 7 günlük ortalama tahmini kullanarak yapabilirsiniz (tahminleri için biraz farklı bir metot kullandıklarını aklınızda tutun - detaylar sitede mevcuttur).
 
-Ethereum blok zincirindeki işlemler [madenciler](/developers/docs/consensus-mechanisms/pow/mining) tarafından doğrulanır. Madenciler, işlemleri sıralı bloklar hâlinde bir araya toplar ve bunları Ethereum blok zincirine ekler. Yeni bloklar, işlemleri bağımsız olarak yürüten ve geçerli olduklarını doğrulayan diğer tüm düğüm operatörlerine yayınlanır. Herhangi bir sahtekârlık, farklı düğümler arasında bir tutarsızlık olarak ortaya çıkar. Dürüst bloklar blok zincirine eklenir ve tarihinin değişmez bir parçası hâline gelir.
+Ethereum'un enerji tüketimini bağlama oturtmak için, diğer bazı endüstriler için yıllık tahminleri karşılaştırabiliriz. Bu, bize Ethereum için tahminin düşük ya da yüksek olduğunu daha iyi anlamamıza yardım ediyor.
 
-Herhangi bir madencinin yeni blok ekleme kabiliyeti, yalnızca madencilikle ilgili bir maliyet varsa ve hangi düğümün bir sonraki bloğu gönderdiğine ilişkin öngörülemezlik varsa işe yarar. Bu koşullar, iş ispatı (PoW) uygulanarak karşılanır. Bir işlem bloğu göndermeye uygun olmak için bir madenci, saymaca bir hesaplama bulmacasını başka bir madenciden daha hızlı bir şekilde çözmelidir. Bu bulmacayı çözmek, enerji harcaması şeklinde madenciler ve maliyetler arasında rekabet yaratır. Blok zincirini başarılı bir şekilde dolandırmak için, dürüst olmayan bir madenci, pek olası olmayan ve aşırı derecede pahalı olan iş ispatı yarışını sürekli olarak kazanmak zorundadır.
+<EnergyConsumptionChart />
 
-Ethereum başlangıçtan itibaren iş ispatını kullandı. İş ispatından hisse ispatına geçmek, her zaman Ethereum'un esas bir amacı olmuştur. Ancak, Ethereum'un temel prensipleri olan güvenlik ve merkeziyetsizliğe uyan bir hisse ispatı sistemi geliştirmek kolay değildir. Geçişin mümkün olduğu noktaya ulaşmak; kriptografide, kriptoekonomide ve mekanizma dizaynında birçok araştırma ve ilerleme gerektirdi.
+Yukarıdaki tablo, diğer bazı endüstrilere kıyasla Ethereum için tahmini yıllık enerji tüketimini TWh/yıl cinsinden göstermektedir. Sunulan tahminler Mayıs 2023'te herkese açık bilgilerden alınmıştır, kaynak bağlantıları aşağıdaki tabloda mevcuttur:
 
-## İş ispatı enerji harcaması {#proof-of-work}
+|                           | Yıllık enerji tüketimi (TWh) | PoS Ethereum ile karşılaştırma | Kaynak                                                                                                                                                                            |
+| :------------------------ | :--------------------------: | :----------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Küresel veri merkezleri   |             200              |            77.000x             | [kaynak](https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches)                                                                       |
+| Altın madenciliği         |             131              |            50.000x             | [kaynak](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                                                                                 |
+| Bitcoin                   |             131              |            50.000x             | [kaynak](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                                                                                 |
+| PoW Ethereum              |              78              |            30.000x             | [kaynak](https://digiconomist.net/ethereum-energy-consumption)                                                                                                                    |
+| Youtube (sadece doğrudan) |              12              |             4600x              | [kaynak](https://www.gstatic.com/gumdrop/sustainability/google-2020-environmental-report.pdf)                                                                                     |
+| ABD'de oyun               |              34              |            13.000x             | [kaynak](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                                 |
+| Netflix                   |            0,451             |              173x              | [kaynak](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
+| PayPal                    |             0,26             |              100x              | [kaynak](https://app.impaakt.com/analyses/paypal-consumed-264100-mwh-of-energy-in-2020-24-from-non-renewable-sources-27261)                                                       |
+| AirBnB                    |             0,02             |               8x               | [kaynak](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                                                           |
+| PoS Ethereum              |            0,0026            |               1x               | [kaynak](https://carbon-ratings.com/eth-report-2022)                                                                                                                              |
 
-İş ispatı, ağı güvenli kılmak ve blok zincirine güvenilir değişiklikler uygulamak için sağlam bir yoldur ancak birkaç sebepten dolayı sıkıntılıdır. Bir bloğu çıkartma hakkı rastlantısal bir hesaplama yapbozu çözmeyi gerektirdiği için madenciler başarı ihtimallerini daha güçlü donanımlara yatırım yaparak artırabilirler. Bu durum, madencilerin daha da enerjiye aç madencilik ekipmanları alarak bir silahlanma yarışına girmesine neden olur. Şu anda Ethereum'un iş ispatı protokolünün toplam yıllık güç tüketimi ortalama olarak Finlandiya'nınkine eşittir <sup>[^1]</sup> ve karbon ayak izi İsviçre'ninkine benzer seviyededir <sup>[^1]</sup>.
+Enerji tüketimine dair isabetli tahminler yapmak karmaşıktır, özellikle söz konusu kalemin tedarik zinciri veya dağıtım detayları, kalemin verimliliğini etkileyecek kadar karmaşıksa. Örneğin Netflix veya YouTube'u düşünün. Onların enerji kullanımıyla ilgili tahminler sadece sistemlerini yönetecek ve kullanıcılara içerik iletecek enerjiyi mi (_doğrudan maliyet_) yoksa içerik üretimi, şirket ofislerinin yönetimi, reklam ve benzeri için gereken maliyeti (_dolaylı maliyet_) ekleyip eklememelerine göre değişir. Dolaylı kullanıma ayrıca TV'ler, bilgisayarlar ve mobiller gibi son kullanıcı cihazlarında hangi cihazların kullanıldığına bağlı olarak içerik tüketimi için gereken enerji de dahil olabilir.
 
-## Hisse ispatı {#proof-of-stake}
+Bu sorun hakkında bir tartışma [Carbon Brief'de](https://www.carbonbrief.org/factcheck-what-is-the-carbon-footprint-of-streaming-video-on-netflix) bulunmaktadır. Yukarıdaki tabloda, Netflix için bildirilmiş değer kendi bildirdikleri _doğrudan_ ve _dolaylı_ kullanımı içermektedir. Youtube sadece kendi _direkt_ enerji tüketiminin tahminini sağlamaktadır, bu da [12 TWh/yıl](https://www.gstatic.com/gumdrop/sustainability/google-2020-environmental-report.pdf) civarındadır.
 
-Ethereum için daha yeşil bir gelecek, şu anda zaten bir [**hisse ispatı (PoS)** zinciri](/roadmap/beacon-chain/) şeklinde inşa ediliyor. [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/) altında, saymaca yapbozlar çözmek gereksizdir. Yapboz çözümünün kaldırılması ağı korumak için gereken enerji miktarını büyük miktarda azaltmaktadır. Madencilerin yerini, aynı fonksiyonu gerçekleştiren ama varlıklarını hesaplama işi aracılığıyla tüketmek yerine sahtekâr davranışlara karşı teminat olarak ETH stake eden doğrulayıcılar alır. Eğer doğrulayıcı tembelse (doğrulayıcı görevini yerine getirmesi gerekirken çevrimdışıysa) stake ettikleri ETH yavaşça tükenebilir, bu sırada kanıtlanabilir biçimde sahtekâr davranışlar, stake edilmiş varlıkların "kesilmesi" ile sonuçlanır. Bu, ağı korumak için aktif ve dürüst katılımı fazlasıyla teşvik eder.
+Yukarıdaki tablo ve grafik ayrıca Bitcoin ve iş kanıtlı Ethereum ile ilgili karşılaştırmalar içermektedir. Şu akılda tutulmalıdır ki iş ispatı ağlarının enerji tüketimi sabit değildir - günden güne değişir. İş ispatlı Ethereum için kullanılan değer hisse ispatına [Birleşim'den](/roadmap/merge/) öncedir, tıpkı [Digiconomist](https://digiconomist.net/ethereum-energy-consumption) tarafından tahmin edildiği gibi. [Cambridge Blok Zincir Ağ Sürdürülebilirlik Endeksi](https://ccaf.io/cbnsi/ethereum/1) gibi diğer kaynaklar ise enerji tüketimini daha düşük (20 TWh/yıl civarı) tahmin etmektedir. Bitcoin'in enerji tüketimi ile ilgili tahminler kaynaklar arası geniş farklılıklar gösterir ve sadece tüketilen enerji değil, ayrıca o enerji ve onunla ilgili ahlaki değerler ile alakalı incelikli [tartışmaları](https://www.coindesk.com/business/2020/05/19/the-last-word-on-bitcoins-energy-consumption/) cezbeden bir konudur. Enerji tüketimi muhakkak çevresel ayak iziyle eşleşmez çünkü farklı projeler farklı enerji kaynakları kullanabilir, örnek olarak daha az ya da fazla oranda yenilenebilir enerji gibi. Örneğin, [Cambridge Bitcoin Elektrik Tüketim Endeksi](https://ccaf.io/cbnsi/cbeci/comparisons) teorik olarak Bitcoin ağ talebinin gaz yakımı veya başka durumda aktarım ve dağıtımda kaybedilecek elektrik ile güçlendirebileceğini belirtir. Ethereum'un sürdürülebiliğe yolu ağın enerjiye aç kısmını yeşil bir alternatifle değiştirmekti.
 
-İş ispatına benzer bir şekilde, kötü niyetli bir oluşum [%51 saldırısı](/glossary/#51-attack) gerçekleştirebilmek için ağda stake edilmiş ETH'nin en az %51'ine ihtiyaç duyar. Ancak, başarısız bir saldırıdaki potansiyel kaybın sadece madencilik yapmak için gereken hash gücünü yaratma maliyeti olduğu iş ispatının aksine hisse ispatında, bir saldırıda olabilecek muhtemel kayıp, teminat olarak kullanılan tüm ETH miktarıdır. Bu caydırıcı yapı, hisse ispatı ile ağ güvenliğine olanak sağlar ve saymaca hesaplamalarla tüketilen enerjiye duyulan ihtiyacı yok eder. Hisse ispatı altında ağ güvenliği hakkında detaylı açıklamalara [buradan](/developers/docs/consensus-mechanisms/pos/) ve [buradan](https://vitalik.ca/general/2017/12/31/pos_faq.html) erişebilirsiniz.
+Birçok endüstri için enerji tüketimi ve karbon emisyonu tahminlerine [Cambridge Blok Zincir Ağ Sürdürülebilirlik Endeksi sitesinden](https://ccaf.io/cbnsi/ethereum) göz atabilirsiniz.
 
-## Birleştirme {#the-merge}
+## İşlem başına tahminler {#per-transaction-estimates}
 
-Hisse ispatı protokolünün uygulanabilirliğini gösteren [İşaret Zinciri](/roadmap/beacon-chain/) isimli fonksiyonel hisse ispatı zinciri, Aralık 2020'den beri çalışmaktadır. Birleştirme, Ethereum'un iş ispatını geride bıraktığı ve hisse ispatını tamamen benimsediği zamandır. Birleşmenin 2022'nin üçüncü veya dördüncü çeyreğinde gerçekleşmesi bekleniyor. [Birleştirme hakkında daha fazla bilgi](/roadmap/merge/).
+Birçok makale, blok zincirler için "işlem başına" enerji harcamasını öngörüyor. Ancak bu yanıltabilir çünkü bir bloku öne sürmek ve doğrulamak için gereken enerji blokun içindeki işlemlerin sayısından bağımsızdır. İşlem başına enerji harcaması birimi, daha az işlemin daha küçük enerji harcamasına yol açacağı anlamına gelir ve bunun tersi de geçerlidir. Ayrıca, işlem başına tahminler bir blok zincirin işlem girdisinin nasıl tanımlandığına karşı çok hassasstır ve bu tanımlamanın değişimi ile oynanarak değer olduğundan daha büyük veya küçük gösterilebilir.
 
-## Hisse ispatı enerji harcaması {#proof-of-stake-energy}
+Örneğin, Ethereum'da işlem verimi yalnızca temel katmanınki değildir - aynı zamanda tüm "[katman 2](/layer-2/)" toplamaların işlem veriminin toplamıdır. Katman 2'ler genelde hesaplamalara katılmazlar, ancak sıralayıcılar tarafından harcanan ek enerji (az) ve onların tamamladığı işlem sayısının (çok) göz önüne alınması işlem başına tahminleri büyük oranda düşürürdü. Bu platformlar arasında işlem başına enerji tüketimi karşılaştırmalarının yanıltıcı olmasının sebeplerinden biridir.
 
-İşaret Zinciri, hisse ispatı mekanizmasına güven inşa etmesinin yanında, Ethereum'un birleştirme sonrası enerji kullanımı için tahminlere da olanak verir. [Yakın zamandaki bir tahminde](https://blog.ethereum.org/2021/05/18/country-power-no-more/), hisse ispatının iş ispatından enerji bakımından 2000 kat daha tasarruflu olduğu için, hisse ispatı ile yapılacak bir birleştirmenin toplam enerji kullanımında %99,95'lik bir düşüş sağlayabileceğini öne sürdü. Ethereum'un enerji harcaması, yaklaşık olarak ağdaki her bir düğüm için bir ev bilgisayarı çalıştırmanın maliyetine eşit olacak.
+## Ethereum'un karbon borcu {#carbon-debt}
 
-![resim](energy_use_per_transaction.png)
+Ethereum'un enerji tüketimi gayet düşüktür, ancak bu durum hep böyle olmamıştır. Ethereum aslen mevcut hisse ispatı mekanizmasından çok daha büyük bir çevresel maliyeti olan iş ispatını kullanıyordu.
 
-<p style="text-align: center;"><small><i>Figürde kullanılan işlem başına iş ispatı enerji tüketimi için <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">Mayıs 2021 verileri</a> temel alınmıştır; aynı kaynak, yazım sırasında bu değerin <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 Kwh</a> olduğunu öne sürmektedir</i></small></p>
+En başından beri, Ethereum hisse ispatı temelli bir fikir birliği mekanizması uygulamayı planlamıştı, ancak bunun güvenlik ve merkeziyetsizlikten taviz verilmeden yapılması yıllarca odaklı biçimde araştırma ve geliştirme gerektirdi. Sonuç olarak, ağı başlatmak için bir iş ispatı mekanizması kullanıldı. İş ispatı madencilerin donanımlarını süreç esnasında enerji tüketerek değer hesaplamak için kullanmasını gerektirir.
 
-Bu sayıları Visa gibi bir hizmetle karşılaştıralım. 100.000 Visa işlemi, 149 kWh enerji kullanır<sup>[^2]</sup>. Parçalamanın yürürlüğe konulduğunu varsayarsak, Ethereum'un mevcut işlem oranı (saniyede 15 işlem) toplamalardan gelen ek optimizasyonlar hariç en az 64 kat artacak (parça sayısı). Birleştirme sonrası için gerçekçi bir tahmin olarak, toplamalarla birlikte parçalanmış Ethereum ile saniyede [25.000 ila 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) işlem olacağı söylenebilir. Bu bilgiyi 100.000 işlem başına maksimum ve minimum enerji harcamasını tahmin etmek için kullanabiliriz.
+![Soldaki Eyfel Kulesi'ni (330 metre uzunluğunda) Birleşim öncesi yüksek enerji tüketimini sembolize etmek için, 4 cm uzunluğunda bir Lego figürünü ise Birleşim sonrası enerji tüketiminden dramatik düşüşü temsil etmek için kullanarak Ethereum'un Birleşim öncesi ve sonrası enerji tüketiminin karşılaştırılması](energy_consumption_pre_post_merge.png)
 
-- Saniyede 25.000 işlem.
-- 100.000 işlemi işlemek, `100,000 / 25,000 = 4` saniye alır.
+CCRI Birleşim'in Ethereum'un yıllık enerji tüketimini **%99.988** veya daha fazla düşündüğünü tahmin ediyor. Aynı şekilde, Ethereum'un karbon ayak izi de yaklaşık **%99.992** (11.016.000 ila 870 ton arası CO2e) düştü. Bunu daha iyi anlatabilmek için, yukarıdaki figürde gösterildiği gibi, emisyonlardaki düşüş tıpkı Eyfel Kulesi'nin yüksekliğinden bir küçük plastik oyuncak figürün boyuna inmek gibiydi. Sonuç olarak, ağın korunmasının çevresel maliyeti büyük oranda düştü. Aynı zamanda, ağın güvenliğinin geliştiği düşünülüyor.
 
-Ağın teminatı olarak 10.000 aktif doğrulayıcı olduğunu düşünüp makul bir tahmin yaparak da Ethereum'un saniye başına enerji harcamasını tahmin edebiliriz. (Şu anda [İşaret Zincirinde 250.000 doğrulayıcı](https://beaconscan.com/) bulunmaktadır ancak doğrulayıcıların çoğu tek bir düğüm üzerinde çalışabilir. Şu anda 3.000 ila 4.000 arası bireysel düğüm olduğu tahmin edildiği için 10.000, birleştirme sonrası için makul bir tahmindir):
+## Çevre dostu uygulama katmanı {#green-applications}
 
-Günlük `1.44kWh daily usage * 10,000 network nodes = 14,400kWh`. Bir günde 86.400 saniye bulunmaktadır, yani saniye başına `14,400 / 86,400 = 0.1667 kWh` eder.
+Ethereum'un enerji tüketiminin aşırı düşük olduğu esnada, aynı zamanda önemli, büyüyen ve yüksek oranda aktif bir [**rejeneratif finans (ReFi)**](/refi/) topluluğu Ethereum üzerinde inşa etmekte. ReFi uygulamaları, çevreye fayda sağlayan pozitif dışsallıklara sahip finansal uygulamalar oluşturmak için DeFi bileşenlerini kullanır. ReFi daha geniş bir ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) hareketinin Ethereum ile yakın çalışan bir parçasıdır ve teknolojik gelişme ile çevresel koruyuculuğu eşleştirmeyi hedefler. Ethereum'un merkezi olmayan, izinsiz ve şekillendirilebilir doğası, onu ReFi ve solarpunk toplulukları için ideal temel katman yapar.
 
-Eğer bunu 100.000 işlemi gerçekleştirmenin aldığı süreyle çarparsak: `0.1667 * 4 = 0.667 kWh`.
-
-Bu, Visa tarafından aynı sayıda işlem için kullanılan enerjinin yaklaşık %0,4'ü, veya Ethereum'un mevcut iş ispatı ağıyla karşılaştırıldığında yaklaşık 225 kat değerinde bir enerji harcaması düşüşüdür.
-
-Hesabı saniye başına maksimum işlemle tekrar etmek, saniyede 0,1667 kWh sonucunu ortaya çıkartır, bu da Visa'nın harcadığı enerjinin %0,1'i veya 894 kat aşağısıdır.
-
-_Not: Ethereum'un enerji kullanımı zaman tabanlı olduğu için işlem sayılarına göre karşılaştırma yapmak tamamen isabetli bir sonuç vermez. Ethereum'un 1 dakikada kullandığı enerji miktarı, 1 işlem de yapsa 1.000 işlem de yapsa aynıdır._
-
-_Ayrıca Ethereum'un basit mali işlemlerle sınırlı olmadığını ve akıllı sözleşmeler ile merkeziyetsiz uygulamalar için inşa edilmiş tam bir platform olduğunu da hesaba katmalıyız._
-
-## Daha yeşil bir Ethereum {#green-ethereum}
-
-Ethereum'un enerji tüketimi tarihsel olarak önemli olsa da, enerjiye aç bir blok doğrulamadan enerji açısından verimli bir blok doğrulamaya geçiş için büyük miktarda geliştirici zamanı ve zekası da harcandı. [Bankless](http://podcast.banklesshq.com/)'a göre, iş ispatı tarafından tüketilen enerjiyi azaltmanın en iyi yolu, en basit hâliyle iş ispatını "kapatmaktır", Ethereum da bu yaklaşımı benimsemiştir.
+[Gitcoin](https://gitcoin.co) gibi Web3'ye ait kamu malı fonlama platformları Ethereum'un uygulama katmanı üzerinde çevresel olarak bilinçli inşayı teşvik etmek için iklim rauntları oluştururlar. Bu inisiyatiflerin gelişimi aracılığıyla (ve [DeSci](/desci/) gibi diğerleri) Ethereum, çevresel ve sosyal bir net pozitif teknoloji haline geliyor.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Eğer bu istatistiklerin yanlış olduğunu veya daha isabetli olabileceğini düşünüyorsanız, lütfen bir PR veya konu açın. Bunlar, ethereum.org ekibi tarafından herkese açık bilgiler ve mevcut Ethereum yol haritası kullanılarak yapılan tahminlerdir. Bu ifadeler, Ethereum Vakfı'nın resmi bir vaadini temsil etmiyor. 
+  Eğer bu sayfanın daha isabetli olabileceğini düşünüyorsanız, lütfen bir konu veya PR açın. Bu sayfadaki istatistikler herkese açık veriye dayalı tahminlerdir - ethereum.org takımından veya Ethereum Foundation'dan resmi bir açıklama veya sözü temsil etmezler.
 </InfoBanner>
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-- [Artık bir ülkeyle eş güç harcanmıyor](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 Mayıs 2021_
+- [Cambridge Blok Zincir Ağ Sürdürülebilirlik Endeksi](https://ccaf.io/cbnsi/ethereum)
+- [İş ispatı blok zincirleri hakkında Beyaz Saray raporu](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Ethereum Emisyonları: Baştan Sona Bir Tahmin](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
+- [Ethereum Enerji Tüketim Endeksi](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [Birleşim - Ethereum Ağının Elektrik Tüketimi ve Karbon Ayak İzi Üzerindeki Sonuçları](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Ethereum'un enerji tüketimi](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
-- [Ethereum Emisyonları: Toplu bir Tahmin](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
-- [Ethereum Enerji Tüketimi Endeksi](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://twitter.com/InsideTheSim)*
 
 ## İlgili konular {#related-topics}
 
 - [Ethereum'un vizyonu](/roadmap/vision/)
 - [İşaret Zinciri](/roadmap/beacon-chain)
 - [Birleştirme](/roadmap/merge/)
-- [Parçalama](/roadmap/beacon-chain/)
-
-### Dipnotlar ve kaynaklar {#footnotes-and-sources}
-
-#### 1. Ethereum iş ispatı enerji tüketimi {#fn-1}
-
-[Ethereum Dahil Ülke Başına Enerji Tüketimi (Yıllık hesaplanmış TWh)](https://digiconomist.net/ethereum-energy-consumption)
-
-#### 2. Visa enerji tüketimi {#fn-2}
-
-[2020 itibarı ile Bitcoin ağının işlem başına ortalama enerji tüketiminin VISA ağı ile karşılaştırılması, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
-
-[Visa finans raporu 4. Çeyrek 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)

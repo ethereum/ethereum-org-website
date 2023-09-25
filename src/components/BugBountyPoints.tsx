@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react"
 import { useTheme } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { Box, Flex, Icon } from "@chakra-ui/react"
 import axios from "axios"
 
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import InlineLink from "./Link"
 import Tooltip from "./Tooltip"
+import Text from "./OldText"
+import OldHeading from "./OldHeading"
+import GatsbyImage from "./GatsbyImage"
 
 import { getImage } from "../utils/image"
-import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 
 export const TokenLogo = graphql`
@@ -125,7 +127,7 @@ const BugBountyPoints: React.FC<IProps> = () => {
           <Icon as={MdInfoOutline} fill="text200" boxSize="4" />
         </Tooltip>
       </Box>
-      <Heading
+      <OldHeading
         as="h2"
         mt={0}
         fontFamily="monospace"
@@ -133,7 +135,7 @@ const BugBountyPoints: React.FC<IProps> = () => {
         fontWeight="bold"
       >
         <Translation id="page-upgrades-bug-bounty-points-point" />
-      </Heading>
+      </OldHeading>
       {state.hasError && (
         <Flex
           align={{ base: "start", sm: "center" }}
@@ -173,21 +175,13 @@ const BugBountyPoints: React.FC<IProps> = () => {
             </Text>
           </Flex>
           <Flex align="center" wrap="wrap">
-            <GatsbyImage
-              image={getImage(data.dai)!}
-              style={{ marginRight: "0.5rem" }}
-              alt=""
-            />
+            <GatsbyImage image={getImage(data.dai)!} alt="" me="2" />
             <Text fontSize="xl" m={0} mr={4}>
               {pointsInDAI} DAI
             </Text>
           </Flex>
           <Flex align="center" wrap="wrap">
-            <GatsbyImage
-              image={getImage(ethImage)!}
-              style={{ marginRight: "0.5rem" }}
-              alt=""
-            />
+            <GatsbyImage image={getImage(ethImage)!} alt="" me="2" />
             <Text fontSize="xl" m={0} mr={4}>
               {pointsInETH} ETH
             </Text>

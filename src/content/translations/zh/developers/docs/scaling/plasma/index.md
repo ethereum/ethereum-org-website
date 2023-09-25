@@ -175,4 +175,4 @@ Plasma 不同于此，因为主网只接收最少量的子链状态信息。 这
 - [了解 Plasma（第一部分）：基础知识](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Plasma 的一生](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

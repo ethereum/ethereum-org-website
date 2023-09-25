@@ -1,7 +1,6 @@
 // Libraries
 import React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import {
   Box,
@@ -9,7 +8,6 @@ import {
   Flex,
   Heading,
   HeadingProps,
-  Img,
   SimpleGrid,
   SimpleGridProps,
   useTheme,
@@ -21,6 +19,8 @@ import InlineLink from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 // Types
 import type { ChildOnlyProp, Context } from "../types"
@@ -48,7 +48,7 @@ const H2 = (prop: ChildOnlyProp & HeadingProps) => (
 )
 
 const H3 = (prop: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
@@ -73,16 +73,15 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
       <Box py={4} px={8}>
         <Flex direction="column" px={8} py={4}>
           <Center>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               image={getImage(assetPageHeroImage)!}
               alt={t("page-assets-eth-diamond-gray")}
             />
           </Center>
           <Center>
-            <h1>
+            <Heading as="h1" size="2xl" my={8}>
               <Translation id="page-assets-h1" />
-            </h1>
+            </Heading>
           </Center>
           <Center>
             <InlineLink to="/assets/#illustrations">

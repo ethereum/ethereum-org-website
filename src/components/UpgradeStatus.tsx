@@ -1,7 +1,10 @@
 import React from "react"
-import { TranslationKey } from "../utils/translations"
+import { Heading, useColorModeValue, VStack } from "@chakra-ui/react"
+
 import Translation from "./Translation"
-import { Heading, Text, useColorModeValue, VStack } from "@chakra-ui/react"
+import Text from "./OldText"
+
+import { TranslationKey } from "../utils/translations"
 
 export interface IStyledContainer {
   isShipped: boolean
@@ -41,12 +44,7 @@ const UpgradeStatus: React.FC<IProps> = ({
       spacing={6}
       width="100%"
     >
-      <Heading
-        fontSize="sm"
-        fontWeight="normal"
-        my={0}
-        textTransform="uppercase"
-      >
+      <Heading fontSize="sm" fontWeight="normal" textTransform="uppercase">
         <Translation id="consensus-when-shipping" />
       </Heading>
       <Text fontSize="2.5rem" fontWeight="bold" lineHeight="100%">

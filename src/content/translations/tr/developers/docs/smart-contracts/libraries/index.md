@@ -91,7 +91,7 @@ Son olarak, bir kütüphaneyi dahil edip etmeyeceğinize karar verirken, onun ge
 
 - [Belgeler](https://docs.openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
-- [Topluluk Forumları](https://forum.openzeppelin.com/c/general/16)
+- [Topluluk Forumu](https://forum.openzeppelin.com/c/general/16)
 
 **DappSys -** **_Akıllı sözleşmeler için güvenli, basit ve esnek yapılı yapı taşlarıdır._**
 
@@ -102,11 +102,16 @@ Son olarak, bir kütüphaneyi dahil edip etmeyeceğinize karar verirken, onun ge
 
 - [GitHub](https://github.com/HQ20/contracts)
 
-## İlgili öğreticiler {#related-tutorials}
+**thirdweb Solidity SDK -** **_Özel akıllı sözleşmeleri verimli bir şekilde oluşturmak için gereken araçları sağlar_**
 
-- [Ethereum geliştiricileri için güvenlik değerlendirmeleri](/developers/docs/smart-contracts/security/) _– Akıllı sözleşme yapımı esnasında kütüphane kullanımı dahil güvenlik değerlendirmelerine giriş._
-- [ERC-20 token akıllı sözleşmesini anlamak](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Birden fazla kütüphane tarafından sağlanan, ERC20 standartına bir giriş._
+- [Dokümanlar](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
 
-## Daha fazla okuma {#further-reading}
+## İlgili eğitimler {#related-tutorials}
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+- [Ethereum geliştiricilerinin güvenlik konusunda dikkat etmesi gereken hususlar](/developers/docs/smart-contracts/security/) _– Akıllı sözleşme oluşturma sırasında, kütüphane kullanımı da dahil olmak üzere güvenlik konusunda dikkat edilmesi gereken hususlar hakkında bir öğretici._
+- [ERC-20 jeton akıllı sözleşmesini anlamak](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Birden fazla kütüphane tarafından sağlanan, ERC20 standardı hakkında bir öğretici._
+
+## Daha fazla bilgi {#further-reading}
+
+_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_

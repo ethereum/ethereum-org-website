@@ -62,6 +62,6 @@
   "page-wallets-your-ethereum-account-desc": "Вашият портфейл е вашият прозорец към акаунта ви в Ethereum – баланс, история на трансакциите и други. Вие обаче може да смените доставчиците на портфейли по всяко време.",
   "page-wallets-your-login": "Вашата регистрация за приложенията в Ethereum",
   "page-wallets-your-login-desc": "Вашият портфейл ви позволява да се свържете с което и да е децентрализирано приложение, като ползвате акаунта си в Ethereum. Това е като регистрация, която може да ползвате в много dapps.",
-  "additional-reading-how-to-register-an-ethereum-account": "Как да „регистрирате“ акаунт в Етереум",
+  "additional-reading-how-to-create-an-ethereum-account": "Как да „регистрирате“ акаунт в Етереум",
   "additional-reading-how-to-use-a-wallet": "Как се използва портфейл"
 }

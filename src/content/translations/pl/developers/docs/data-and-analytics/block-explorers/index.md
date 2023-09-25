@@ -260,7 +260,6 @@ Dane najwyższego poziomu Eth2 obejmują:
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
-- [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
 
 ## Dalsza lektura {#further-reading}
 
