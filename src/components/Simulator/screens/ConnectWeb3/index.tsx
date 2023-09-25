@@ -97,7 +97,11 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
           exit={{ opacity: 0 }}
           style={{ height: "100%" }}
         >
-          <Web3App bg="background.base" connected displayUrl="app.example.com">
+          <Web3App
+            bg="background.base"
+            appName="NFT Marketplace"
+            displayUrl="app.example.com"
+          >
             <Box
               px={6}
               py={{ base: 2, md: 6 }}

@@ -14,11 +14,11 @@ import { NotificationPopover } from "../../NotificationPopover"
 
 interface IProps extends BoxProps {
   displayUrl: string
-  connected?: boolean
+  appName?: string
 }
 export const Web3App: React.FC<IProps> = ({
   displayUrl,
-  connected,
+  appName,
   children,
   ...boxProps
 }) => {
@@ -35,9 +35,18 @@ export const Web3App: React.FC<IProps> = ({
         title="Example walkthrough"
         content="Try out a real Ethereum application when finished here"
       >
-        <Flex p={6} fontSize="4xl" justify="space-between" alignItems="center">
+        <Flex p={6} fontSize="4xl" gap={3} alignItems="center">
           <Icon as={EthGlyphIcon} />
-          {connected && <Text fontSize="sm">{FAKE_DEMO_ADDRESS}</Text>}
+          <Box flex={1} cursor="default">
+            {appName && (
+              <>
+                <Text fontSize="md" fontWeight="bold">
+                  {appName}
+                </Text>
+                <Text fontSize="sm">{FAKE_DEMO_ADDRESS}</Text>
+              </>
+            )}
+          </Box>
           <Icon as={GrMenu} sx={{ path: { stroke: "body.base" } }} />
         </Flex>
       </NotificationPopover>
