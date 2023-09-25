@@ -73,7 +73,7 @@ export const Slider: React.FC<IProps> = ({
             </Flex>
           ) : (
             <>
-              <Text textAlign="center" fontWeight="bold" fontSize="lg">
+              <Text textAlign="center" fontWeight="bold" fontSize="lg" mb={4}>
                 Connect account?
               </Text>
               {/* URL Pill */}

@@ -12,6 +12,7 @@ import { BsTriangle } from "react-icons/bs"
 import { PiMagnifyingGlass } from "react-icons/pi"
 import { IoEllipsisHorizontalSharp } from "react-icons/io5"
 import { NFTSupportIcon } from "../../../icons/wallets/NFTSupportIcon"
+import { NotificationPopover } from "../../NotificationPopover"
 
 interface IProps extends FlexProps {
   progressStepper: () => void
@@ -20,9 +21,16 @@ export const Browser: React.FC<IProps> = ({ progressStepper, ...props }) => {
   return (
     <Flex direction="column" h="full" bg="body.light" {...props}>
       <Box bg="background.highlight" w="full" px={3} pt={9} pb={3}>
-        <Box bg="background.base" w="full" borderRadius="base" px={3} py={2}>
-          <Text color="disabled">Search or enter address</Text>
-        </Box>
+        <NotificationPopover
+          title="Example walkthrough"
+          content="Try logging into a real app with your wallet when finished here"
+        >
+          <Box bg="background.base" w="full" borderRadius="base" px={3} py={2}>
+            <Text color="disabled" cursor="default">
+              Search or enter address
+            </Text>
+          </Box>
+        </NotificationPopover>
       </Box>
       <Box p={8} flex={1}>
         <Button

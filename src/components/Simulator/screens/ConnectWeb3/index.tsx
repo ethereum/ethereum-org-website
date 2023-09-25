@@ -19,6 +19,7 @@ import GatsbyImage from "../../../GatsbyImage"
 import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "../../constants"
 import { EXAMPLE_APP_URL } from "./constants"
 import { Browser } from "./Browser"
+import { NotificationPopover } from "../../NotificationPopover"
 
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav
@@ -108,45 +109,59 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
               </Text>
               <Flex gap={2} mb={6}>
                 <GatsbyImage image={NFTs[0].image} alt="NFT Image" />
-                <Flex
-                  direction="column"
-                  fontSize={{ base: "xs", sm: "sm" }}
-                  textAlign="start"
-                  alignItems="start"
-                  gap={1}
+                <NotificationPopover
+                  title="Example walkthrough"
+                  content="These are some things you could do as the owner of your NFTs"
+                  placement="top"
                 >
-                  <Text fontWeight="bold" fontSize="md" mb="auto" ms={2}>
-                    Cool art
-                  </Text>
-                  <Button
-                    variant="link"
-                    isDisabled
-                    leftIcon={<Icon as={RiAuctionLine} fontSize="xs" />}
+                  <Flex
+                    direction="column"
+                    fontSize={{ base: "xs", sm: "sm" }}
+                    textAlign="start"
+                    alignItems="start"
+                    gap={1}
                   >
-                    Set a price
-                  </Button>
-                  <Button
-                    variant="link"
-                    isDisabled
-                    leftIcon={<Icon as={RiPriceTag2Line} fontSize="xs" />}
-                  >
-                    Auction item
-                  </Button>
-                  <Button
-                    variant="link"
-                    isDisabled
-                    leftIcon={<Icon as={RiFileTransferLine} fontSize="xs" />}
-                  >
-                    Transfer item
-                  </Button>
-                </Flex>
+                    <Text fontWeight="bold" fontSize="md" mb="auto" ms={2}>
+                      Cool art
+                    </Text>
+                    <Button
+                      variant="link"
+                      isDisabled
+                      leftIcon={<Icon as={RiAuctionLine} fontSize="xs" />}
+                    >
+                      Set a price
+                    </Button>
+                    <Button
+                      variant="link"
+                      isDisabled
+                      leftIcon={<Icon as={RiPriceTag2Line} fontSize="xs" />}
+                    >
+                      Auction item
+                    </Button>
+                    <Button
+                      variant="link"
+                      isDisabled
+                      leftIcon={<Icon as={RiFileTransferLine} fontSize="xs" />}
+                    >
+                      Transfer item
+                    </Button>
+                  </Flex>
+                </NotificationPopover>
               </Flex>
-              <Button variant="link" isDisabled>
-                Browse other artwork
-              </Button>
-              <Button variant="link" isDisabled>
-                Mint new NFT
-              </Button>
+              <NotificationPopover
+                title="Example walkthrough"
+                content="Try out a real Ethereum application when finished here"
+                placement="top"
+              >
+                <Box fontSize={{ base: "sm", md: "md" }}>
+                  <Button variant="link" isDisabled display="block">
+                    Browse other artwork
+                  </Button>
+                  <Button variant="link" isDisabled>
+                    Mint new NFT
+                  </Button>
+                </Box>
+              </NotificationPopover>
             </Box>
           </Web3App>
         </motion.div>
