@@ -121,14 +121,6 @@ Réseau de test pour [Optimism](https://www.optimism.io/).
 - [FaucETH](https://fauceth.komputing.org) (Robinet multichaînes fonctionnant sans avoir besoin d'un compte sur réseau social)
 - [Robinet Paradigm](https://faucet.paradigm.xyz/)
 
-#### Starknet Goerli {#starknet-goerli}
-
-Un réseau de test pour [Starknet](https://www.starknet.io).
-
-##### Robinets
-
-- [Robinet Starknet](https://faucet.goerli.starknet.io)
-
 ## Réseaux privés {#private-networks}
 
 Un réseau Ethereum est un privé si ses nœuds ne sont pas connectés à un réseau public ( réseau principal ou réseau de test par exemple). Dans ce contexte, « privé » signifie « réservé » ou « isolé », plutôt que « protégé » ou « sécurisé ».

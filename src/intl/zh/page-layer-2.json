@@ -124,7 +124,6 @@
   "zksync-description": "zkSync 是由 Matter Labs 推出的以用户为中心的零知识卷叠平台。它是以太坊的扩容解决方案，已经在以太坊主链上线，支持付款、代币交换和 NFT 挖矿。",
   "zkspace-description": "ZKSpace 平台由三个主要部分组成：利用零知识卷叠技术建立的二层自动化做市商，被称为 ZKSwap；还有被称为 ZKSquare 的支付服务，以及被称为 ZKSea 的非同质化代币市场。",
   "aztec-description": "Aztec Network 是以太坊上的第一个私有零知识卷叠，使去中心化应用程序能够访问隐私并扩展。",
-  "starknet-description": "Starknet 是 Validity Rollup Layer 2。它提供高吞吐量、低 Gas 成本，并保留以太坊 Layer 1 的安全级别",
   "layer-2-note": "备注:",
   "layer-2-ecosystem-portal": "生态系统相关门户网站",
   "layer-2-token-lists": "代币列表",

@@ -125,14 +125,6 @@ Una rete di prova per [Optimism](https://www.optimism.io/).
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Faucet Coinbase Wallet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
-#### Starknet Goerli {#starknet-goerli}
-
-Una rete di prova per [Starknet](https://www.starknet.io).
-
-##### Faucet
-
-- [Faucet Starknet](https://faucet.goerli.starknet.io)
-
 ## Reti private {#private-networks}
 
 Una rete Ethereum è una rete privata se i relativi nodi non sono connessi a una rete pubblica (ossia Rete principale o una rete di prova). In questo contesto, privato significa solo riservato o isolato, e non protetto o sicuro.

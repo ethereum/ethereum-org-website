@@ -81,14 +81,6 @@ Ein Testnetz für [Optimismus](https://www.optimism.io/).
 - [FaucETH](https://fauceth.computing.org) (Multi-Chain-Faucet ohne die Notwendigkeit eines Social-Kontos)
 - [Paradigmatischer Faucet](https://faucet.paradigm.xyz/)
 
-#### Starknet Goerli {#starknet-goerli}
-
-Ein Testnetz für [Starknet](https://www.starknet.io).
-
-##### Faucets
-
-- [Faucet Starknet](https://faucet.goerli.starknet.io)
-
 #### Rinkeby {#rinkeby}
 
 Ein Proof-of-Authority-Testnetz für diejenigen, die den Geth-Client verwenden.

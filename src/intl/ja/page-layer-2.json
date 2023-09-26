@@ -124,7 +124,6 @@
   "zksync-description": "zkSyncは、Matter Labsが提供するユーザー中心のゼロ知識ロールアップ・プラットフォームです。イーサリアムのスケーリング・ソリューションであり、イーサリアムメインネットですでに稼働しています。支払い、トークンのスワップ、NFTのミンティングをサポートしています。",
   "zkspace-description": "ZKSpaceプラットフォームは、ゼロ知識ロールアップ(ZK-Rollup)の技術を活用したレイヤー2 AMM 分散型取引所(DEX)「ZKSwap」、決済サービス「ZKSquare」、NFTマーケットプレイス「ZKSea」の3本柱で構成されています。",
   "aztec-description": "Aztecネットワークは、イーサリム初のプライベート・ゼロ知識ロールアップで、分散型アプリケーションのプライバシーとスケールリングへのアクセスを可能にします。",
-  "starknet-description": "Starknet は Validity Rollup Layer 2 です。これは、高スループット、低ガスコストを提供し、Ethereum Layer 1 レベルのセキュリティを保持します。",
   "layer-2-note": "注意:",
   "layer-2-ecosystem-portal": "エコシステムポータル",
   "layer-2-token-lists": "トークンリスト",

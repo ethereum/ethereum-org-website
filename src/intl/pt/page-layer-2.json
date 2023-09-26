@@ -124,7 +124,6 @@
   "zksync-description": "zkSync é uma plataforma da Matter Labs de rollup zk centrada no utilizador. É uma solução de redimensionamento para Ethereum, já disponível na rede Ethereum Mainnet. Suporta pagamentos, trocas de tokens e cunhagem de NFT.",
   "zkspace-description": "A plataforma ZKSpace consiste em três elementos principais: um AMM DEX de layer 2 que utiliza a tecnologia ZK-Rollups, denominado ZKSwap, um serviço de pagamento denominado ZKSquare e um mercado de NFT denominado ZKSea.",
   "aztec-description": "A Aztec Network é o primeiro zk-rollup privado na Ethereum, permitindo que aplicações descentralizadas tenham privacidade e escalabilidade.",
-  "starknet-description": "Starknet é um Rollup Layer 2 de Validity. Ele fornece alto rendimento, baixo custo de gás e mantém os níveis de segurança Ethereum Layer 1.",
   "layer-2-note": "Nota:",
   "layer-2-ecosystem-portal": "Portal do Ecossistema",
   "layer-2-token-lists": "Lista de tokens",

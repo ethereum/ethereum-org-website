@@ -125,14 +125,6 @@ _注意：[Rinkeby 测试网已弃用](https://blog.ethereum.org/2022/11/30/rops
 - [Paradigm 水龙头](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
-#### Starknet Goerli {#starknet-goerli}
-
-[Starknet](https://www.starknet.io) 测试网。
-
-##### 水龙头
-
-- [Starknet 水龙头](https://faucet.goerli.starknet.io)
-
 ## 私有网络 {#private-networks}
 
 如果以太坊网络的节点未连接到公共网络（即， 主网或测试网），则以太坊网络就是私有网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。

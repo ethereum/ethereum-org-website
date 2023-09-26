@@ -124,7 +124,6 @@
   "zksync-description": "zkSync 是由 Matter Labs 推出的以使用者為中心的零知識證明卷軸平台。它是一種以太坊擴容解決方案，已在以太坊主網上線。它支援付款、交換代幣和鑄造非同質化代幣。",
   "zkspace-description": "ZKSpace 平台由三個主要部分組成：使用零知識證明卷軸技術建立的二層網路自動化做市商去中心化交易所，稱為 ZKSwap；稱為 ZKSquare 的支付服務；稱為 ZKSea 的非同質化代幣交易市場。",
   "aztec-description": "Aztec 網路是第一個在以太坊上的私有零知識證明卷軸，使去中心化應用程式能存取隱私和擴張。",
-  "starknet-description": "Starknet 是 Validity Rollup Layer 2。它提供高吞吐量、低 Gas 成本，並保留以太坊 Layer 1 的安全級別。",
   "layer-2-note": "備註：",
   "layer-2-ecosystem-portal": "生態系統相關入口網站",
   "layer-2-token-lists": "代幣清單",

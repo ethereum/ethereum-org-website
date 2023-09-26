@@ -81,14 +81,6 @@ Una red de pruebas para [Optimism](https://www.optimism.io/).
 - [FaucETH](https://fauceth.komputing.org)(Faucet multicadena sin la necesidad de una cuenta social)
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 
-#### Starknet Goerli {#starknet-goerli}
-
-Una red de pruebas para [Starknet](https://www.starknet.io).
-
-##### Faucets
-
-- [Faucet Starknet](https://faucet.goerli.starknet.io)
-
 #### Rinkeby {#rinkeby}
 
 Una red de prueba con prueba de autoridad para los que ejecutan clientes de Geth.
