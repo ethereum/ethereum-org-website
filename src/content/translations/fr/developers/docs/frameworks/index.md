@@ -46,7 +46,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 - [Page d'accueil](https://www.web3labs.com/web3j-sdk)
 - [Documentation](https://docs.web3j.io)
-- [Github](https://github.com/web3j/web3j)
+- [GitHub](https://github.com/web3j/web3j)
 
 **OpenZeppelin SDK - \*\***_The Ultimate Smart Contract Toolkit : la suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._\*\*
 
