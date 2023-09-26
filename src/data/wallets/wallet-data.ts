@@ -2675,7 +2675,7 @@ const walletData: WalletData[] = [
     chromium: true,
     hardware: false,
     open_source: false,
-    repo_url: "",
+    repo_url: "https://github.com/XDeFi-tech",
     non_custodial: true,
     security_audit: [
       "https://www.xdefi.io/wp-content/uploads/2021/07/XDEFI_Audit_Report_Kudelski.pdf",
