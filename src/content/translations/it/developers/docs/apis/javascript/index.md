@@ -286,7 +286,7 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 
 ## Argomenti correlati {#related-topics}
 
-- [ Nodi e client](/developers/docs/nodes-and-clients/)
+- [Nodi e client](/developers/docs/nodes-and-clients/)
 - [Quadri di sviluppo](/developers/docs/frameworks/)
 
 ## Tutorial correlati {#related-tutorials}
