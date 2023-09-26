@@ -52,7 +52,7 @@ const USER_SELECTION: UserSelectionObject = {
   gl: [],
   gu: [],
   hi: [],
-  hr: [],
+  hr: [1, 2],
   hu: [],
   hy: [],
   id: [],
