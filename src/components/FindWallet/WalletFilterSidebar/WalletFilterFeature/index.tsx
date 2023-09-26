@@ -88,7 +88,6 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                   fontSize="2xl"
                   fontWeight={600}
                   lineHeight={1.4}
-                  m={0}
                   pb={isExpanded ? 3 : 0}
                   px={4}
                 >
@@ -238,7 +237,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                                   width="full"
                                   onChange={handleClick}
                                 >
-                                  <Text as="p" aria-hidden="true" m={0}>
+                                  <Text as="p" aria-hidden="true">
                                     {option.name}
                                   </Text>
                                 </Checkbox>

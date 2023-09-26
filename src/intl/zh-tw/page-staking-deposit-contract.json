@@ -2,7 +2,7 @@
   "page-staking-deposit-contract-address": "質押存款合約地址",
   "page-staking-deposit-contract-address-caption": "我們添加一些空格使得這個地址更容易閱讀",
   "page-staking-deposit-contract-address-check-btn": "查看存款合約地址",
-  "page-staking-deposit-contract-checkbox1": "我已使用啟動面板來設定我的以太坊驗證程式。",
+  "page-staking-deposit-contract-checkbox1": "我已使用啟動面板來設定我的以太坊驗證者。",
   "page-staking-deposit-contract-checkbox2": "我明白，我需要使用啟動面板來進行質押。簡單地向這個地址轉賬無法奏效。",
   "page-staking-deposit-contract-checkbox3": "我將向其他來源核對存款合約地址。",
   "page-staking-deposit-contract-confirm-address": "確認展示地址",
@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "停止閲讀",
   "page-staking-deposit-contract-subtitle": "這是以太坊質押合約的地址。質押時，使用此頁面確認你正向正確的地址發送資金。",
   "page-staking-deposit-contract-warning": "仔細檢查每個字元。",
-  "page-staking-deposit-contract-warning-2": "向此地址發送資金將不會起作用，不會使你成為一個質押者。你必須遵循啟動面板的指示。"
+  "page-staking-deposit-contract-warning-2": "向此地址發送資金將不會起作用，不會使你成為一個質押者。你必須遵循啟動面板的指示。",
+  "page-staking-deposit-contract-title": "查看存款合約地址"
 }

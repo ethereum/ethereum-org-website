@@ -28,6 +28,7 @@ const Pill: React.FC<IProps> = ({
       px={2}
       borderRadius="base"
       fontSize="xs"
+      lineHeight="1.6rem"
       className={className}
       {...rest}
     >
@@ -45,6 +46,7 @@ const Pill: React.FC<IProps> = ({
       mr={2}
       fontSize="xs"
       borderRadius="base"
+      lineHeight="1.6rem"
       className={className}
       {...rest}
     >

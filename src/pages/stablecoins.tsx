@@ -1,12 +1,9 @@
 import React, { useEffect, useState, useMemo } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   Flex,
-  Heading,
-  Text,
   Img,
   Icon,
   Grid,
@@ -16,7 +13,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import DataProductCard from "../components/DataProductCard"
 import Emoji from "../components/Emoji"
@@ -33,6 +30,9 @@ import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 import { getData } from "../utils/cache"
 import { getImage } from "../utils/image"
@@ -76,13 +76,17 @@ const Page = (props: FlexProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+  <OldHeading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
-    fontSize={{ base: "xl", m: "2xl" }}
+    fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
     {...props}
   />
@@ -508,8 +512,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                   </Flex>
                 </Box>
               </Box>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 image={getImage(data.dailarge)!}
                 alt={t("page-stablecoins-dai-logo")}
                 backgroundSize="cover"
@@ -559,8 +562,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                   </Box>
                 </Flex>
               </Box>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 image={getImage(data.usdclarge)!}
                 alt={t("page-stablecoins-usdc-logo")}
                 backgroundSize="cover"

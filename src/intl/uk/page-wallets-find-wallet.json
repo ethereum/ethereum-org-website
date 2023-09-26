@@ -11,7 +11,7 @@
   "page-stake-eth": "Частка ETH",
   "page-find-wallet-open-source": "Відкрите джерело коду",
   "page-find-wallet-open-source-desc": "Програмне забезпечення з відкритим кодом дає змогу будь-кому перевіряти цілісність та безпеку програми.",
-  "page-find-wallet-self-custody": "Self custody",
+  "page-find-wallet-self-custody": "Самозахист",
   "page-find-wallet-non-custodial": "Без зберігання",
   "page-find-wallet-non-custodial-desc": "Гаманці, які не контролюють ваші приватні ключі",
   "page-find-wallet-hardware-wallet-support": "Підтримка апаратних гаманців",
@@ -89,5 +89,6 @@
   "page-find-wallet-browser": "Браузер",
   "page-find-wallet-browser-desc": "Гаманці з розширенням для браузера",
   "page-find-wallet-device": "Пристрій",
-  "page-find-choose-to-compare": "Виберіть для порівняння"
+  "page-find-choose-to-compare": "Виберіть для порівняння",
+  "page-find-wallet-choose-features": "Виберіть функції"
 }

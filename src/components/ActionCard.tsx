@@ -2,7 +2,6 @@ import React, { ReactNode } from "react"
 import {
   Box,
   Flex,
-  Text,
   Heading,
   BoxProps,
   LinkBox,
@@ -11,9 +10,11 @@ import {
   useColorModeValue,
   LinkBoxProps,
 } from "@chakra-ui/react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 
+import Text from "./OldText"
 import { BaseLink } from "./Link"
+import GatsbyImage from "./GatsbyImage"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",
@@ -77,9 +78,8 @@ const ActionCard: React.FC<IProps> = ({
         boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
       >
         {!isImageURL && (
-          <Image
+          <GatsbyImage
             alt={alt || ""}
-            as={GatsbyImage}
             maxH="257px"
             maxW={{ base: "311px", sm: "372px" }}
             minW="100px"

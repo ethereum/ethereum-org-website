@@ -14,7 +14,6 @@ import {
   ModalHeader,
   Skeleton as ChakraSkeleton,
   SkeletonCircle as ChakraSkeletonCircle,
-  Text,
   UnorderedList,
   VStack,
 } from "@chakra-ui/react"
@@ -24,11 +23,11 @@ import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
 import { Lang } from "../utils/languages"
 
-import ButtonLink from "./ButtonLink"
+import { Button, ButtonLink } from "./Buttons"
 import InlineLink from "./Link"
 import Modal from "./Modal"
 import Translation from "./Translation"
-import Button from "./Button"
+import Text from "./OldText"
 
 export interface Author {
   name: string
