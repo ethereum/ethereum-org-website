@@ -27,9 +27,9 @@ interface Props {
 
 export const getStaticPaths: GetStaticPaths = () => {
   const contentFiles = getContent("/", ["slug"]).filter(
-    // Filter `/developers/docs` slugs since they are processed by
-    // `/developers/docs/[...slug].tsx`
-    (file) => !file.slug.includes("/developers/docs")
+    // Filter `/developers/tutorials` slugs since they are processed by
+    // `/developers/tutorials/[...tutorial].tsx`
+    (file) => !file.slug!.includes("/developers/tutorials")
   )
 
   return {
@@ -37,7 +37,7 @@ export const getStaticPaths: GetStaticPaths = () => {
       return {
         params: {
           // Splitting nested paths to generate proper slug
-          slug: file.slug.split("/").slice(1),
+          slug: file.slug!.split("/").slice(1),
         },
       }
     }),

@@ -25,7 +25,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/history/",
     "/smart-contracts",
     "/whitepaper",
-    "/developers/docs/bridges",
+    "/developers/tutorials/all-you-can-cache",
   ]
 
   // Skip /translations dir for now until we set up i18n
@@ -77,7 +77,9 @@ export const getContentBySlug = (slug: string, fields: string[] = []) => {
   const { data: frontmatter, content } = matter(fileContents)
 
   type Items = {
-    [key: string]: string | Frontmatter
+    slug?: string
+    content?: string
+    frontmatter?: Frontmatter
   }
 
   const items: Items = {}
