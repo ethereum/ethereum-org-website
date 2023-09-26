@@ -88,7 +88,7 @@ const USER_SELECTION: UserSelectionObject = {
   uk: [],
   uz: [],
   vi: [],
-  zh: [],
+  zh: [11, 12],
   "zh-tw": [],
 }
 
