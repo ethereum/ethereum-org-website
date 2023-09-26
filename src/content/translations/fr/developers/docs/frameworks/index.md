@@ -56,7 +56,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 **Create Eth App -** **_Création d'applications alimentées par Ethereum en une seule commande. Fournit un panel d'infrastructures d'interface utilisateur et des modèles DeFi parmi lesquels faire votre choix._**
 
-- [Github](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modèles (Templates)](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
 **Scaffold-eth -** **_Les composants Ethers.js + Hardhat + React et les boucles pour web3 : tout ce dont vous avez besoin pour commencer à bâtir des applications décentralisées alimentées par des contrats intelligents._**
