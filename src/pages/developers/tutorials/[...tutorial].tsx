@@ -5,7 +5,7 @@ import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 import path from "path"
 
-import { getContent, getContentBySlug } from "@/lib/utils/md"
+import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 
@@ -14,7 +14,7 @@ import { RootLayout, TutorialLayout } from "@/layouts"
 import { staticComponents as components } from "@/layouts/Static"
 
 // Types
-import type { GetStaticPaths, GetStaticProps } from "next/types"
+import type { GetServerSideProps } from "next/types"
 import type { NextPageWithLayout } from "@/lib/types"
 
 interface Params extends ParsedUrlQuery {
@@ -25,31 +25,15 @@ interface Props {
   mdxSource: MDXRemoteSerializeResult
 }
 
-const dir = path.join("/", "developers", "tutorials")
-export const getStaticPaths: GetStaticPaths = () => {
-  const contentFiles = getContent(dir, ["slug"])
+const tutorialsPath = path.join("/", "developers", "tutorials")
 
-  return {
-    paths: contentFiles.map((file) => {
-      // Remove dir from slug since the base segment is handled by Next with the
-      // nested folder structure
-      const slug = file.slug!.replace(dir, "")
-      return {
-        params: {
-          // Splitting nested paths to generate proper slug
-          tutorial: slug.split("/").slice(1),
-        },
-      }
-    }),
-    fallback: false,
-  }
-}
-
-export const getStaticProps: GetStaticProps<Props, Params> = async (
+export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
-  const markdown = getContentBySlug(path.join(dir, params.tutorial.join("/")), [
+
+  const tutorialPath = path.join(tutorialsPath, params.tutorial.join("/"))
+  const markdown = getContentBySlug(tutorialPath, [
     "slug",
     "content",
     "frontmatter",
