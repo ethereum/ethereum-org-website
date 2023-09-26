@@ -692,6 +692,20 @@ const DappsPage = ({
       image: getImage(data.balancer),
       alt: t("page-dapps-balancer-logo-alt"),
     },
+    {
+      title: "Curve",
+      description: t("page-dapps-dapp-description-curve"),
+      link: "https://curve.fi/",
+      image: getImage(data.curve),
+      alt: t("page-dapps-curve-logo-alt"),
+    },
+    {
+      title: "DODO",
+      description: t("page-dapps-dapp-description-dodo"),
+      link: "https://dodo.io/",
+      image: getImage(data.dodo),
+      alt: t("page-dapps-dodo-logo-alt"),
+    },
   ]
 
   const trading = [
@@ -2180,6 +2194,12 @@ export const query = graphql`
       ...dappImage
     }
     synthetix: file(relativePath: { eq: "dapps/synthetix.png" }) {
+      ...dappImage
+    }
+    curve: file(relativePath: { eq: "dapps/curve.png" }) {
+      ...dappImage
+    }
+    dodo: file(relativePath: { eq: "dapps/dodo.png" }) {
       ...dappImage
     }
   }

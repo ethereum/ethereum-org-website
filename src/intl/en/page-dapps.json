@@ -284,5 +284,9 @@
   "page-dapps-convex-image-alt": "Convex logo",
   "foundation": "Foundation",
   "transaction-fees": "What are transaction fees?",
-  "page-wallets-get-some": "Get some ETH"
+  "page-wallets-get-some": "Get some ETH",
+  "page-dapps-dapp-description-curve": "Curve is a dex focused on stablecoins",
+  "page-dapps-curve-image-alt": "Curve logo",
+  "page-dapps-dapp-description-dodo": "DODO is a on-chain liquidity provider, which leverages the Proactive Market Maker algorithm (PMM)",
+  "page-dapps-dodo-image-alt": "DODO logo"
 }
