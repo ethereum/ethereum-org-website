@@ -76,7 +76,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 **Alchemy -** **_Piattaforma di sviluppo Ethereum_**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [Github](https://github.com/alchemyplatform)
+- [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
 **Foundry -** **_Un toolkit velocissimo, portatile e modulare per lo sviluppo di applicazioni di Ethereum scritte in Rust._**
