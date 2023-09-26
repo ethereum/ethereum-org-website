@@ -13,7 +13,7 @@ import { graphql, PageProps } from "gatsby"
 import PageHero from "../components/PageHero"
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import HorizontalCard, {
   IProps as HorizontalCardProps,

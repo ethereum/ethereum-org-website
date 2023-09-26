@@ -10559,6 +10559,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "taminobaumann",
+      "name": "Tamino",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48290617?v=4",
+      "profile": "http://taminobaumann.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "keccers",
+      "name": "Katherine Champagne",
+      "avatar_url": "https://avatars.githubusercontent.com/u/770277?v=4",
+      "profile": "https://github.com/keccers",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

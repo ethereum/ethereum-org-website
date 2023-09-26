@@ -64,7 +64,7 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 
 在 ethereum.org 上，非同質化代幣用於證明人們對我們的 Github 儲存庫有所貢獻，或者參加了會議，我們甚至有自己的非同質化代幣網域名稱。 如果你對 ethereum.org 有所貢獻，就可以領取出席證明協議的非同質化代幣。 某些加密貨幣聚會使用出席證明協議作為入場門票。 [深入了解如何貢獻](/contributing/#poap)。
 
-![ethereum.org 出席證明協議](../../assets/use-cases/poap.png)
+![ethereum.org 出席證明協議](./poap.png)
 
 此網站也有一個由非同質化代幣提供支援的替代網域名稱：**ethereum.eth**。 我們的 `.org` 位址是由網域名稱系統 (DNS) 供應商集中管理，而 ethereum`.eth` 則是透過以太坊名稱服務 (ENS) 於以太坊註冊， 為我們所有，且由我們管理。 [查看我們的以太坊名稱服務 (ENS) 記錄](https://app.ens.domains/name/ethereum.eth)
 

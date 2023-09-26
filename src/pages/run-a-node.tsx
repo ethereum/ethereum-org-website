@@ -38,13 +38,12 @@ import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
 import Emoji from "../components/Emoji"
 import InlineLink from "../components/Link"
-import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
+import { Button, ButtonLink } from "../components/Buttons"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 
 // Utils
-import Button from "../components/Button"
 import { InfoGrid } from "../templates/staking"
 import { Width40, Width60 } from "../pages-conditional/what-is-ethereum"
 
