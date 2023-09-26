@@ -33,7 +33,7 @@ const argv = require("minimist")(process.argv.slice(2))
 type UserSelectionObject = { [key: string]: Array<number> }
 const USER_SELECTION: UserSelectionObject = {
   am: [],
-  ar: [4, 5, 6],
+  ar: [],
   az: [],
   be: [],
   bg: [],
