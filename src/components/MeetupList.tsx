@@ -8,7 +8,6 @@ import {
   LinkOverlay,
   List,
   ListItem,
-  Text,
   useColorModeValue,
   useToken,
   VisuallyHidden,
@@ -20,6 +19,7 @@ import InfoBanner from "./InfoBanner"
 import InlineLink, { BaseLink } from "./Link"
 // TODO: add Translation when i18n is set up
 // import Translation from "./Translation"
+import Text from "./OldText"
 
 // Data
 import meetups from "../data/community-meetups.json"

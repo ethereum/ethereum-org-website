@@ -64,7 +64,7 @@ Voici quelques exemples connus :
 
 Si vous exécutez un nœud ou un validateur, voici quelques communautés qui sont consacrées à aider ceux qui débutent.
 
-- [Discord EthStaker](https://discord.io/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
 - [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
 
 La plupart des équipes qui créent des clients Ethereum disposent aussi d'espaces dédiés, ouverts au public, dans lesquels vous pouvez obtenir une aide et poser des questions.

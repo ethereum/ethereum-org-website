@@ -6,7 +6,7 @@ lang: pt-br
 
 # Como usar uma carteira
 
-Aprenda como operar todas as funções básicas de uma carteira. Se você ainda não tem uma conta, registre-se em [Como “registrar” uma conta Ethereum](/guides/how-to-register-an-ethereum-account/).
+Aprenda como operar todas as funções básicas de uma carteira. Se você ainda não tem uma conta, registre-se em [Como “registrar” uma conta Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Abra sua conta
 
