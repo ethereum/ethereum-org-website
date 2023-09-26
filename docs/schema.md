@@ -1,6 +1,6 @@
 # Schema
 
-Our schema, used in the Gatsby GraphQL layer, is defined under the `src/schema` folder. These files are then grabbed by the `createSchemaCustomization`Gatsby hook in`gatsby-node.ts`.
+Our schema, used in the Gatsby GraphQL layer, is defined under the `src/schema` folder. These files are then grabbed by the `createSchemaCustomization` Gatsby hook in`gatsby-node.ts`.
 There are two ways to define a schema in Gatsby:
 
 - GraphQL SDL, the traditional way using [template literals](https://graphql.org/learn/schema/)
