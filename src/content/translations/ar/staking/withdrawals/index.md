@@ -5,7 +5,7 @@ lang: ar
 template: staking
 image: ../../../../../assets/staking/leslie-withdrawal.png
 alt: ليزلي فرس النهر مع مكافأتها من المراهنة
-sidebarDepth: ٢
+sidebarDepth: 2
 summaryPoints:
   - ساعد تحديث Shanghai/Capella على تمكين سحب المراهنة على إيثريوم
   - يجب أن يقدم مشغلو برنامج المدقق عنوان السحب لتمكين هذه الخاصية
