@@ -76,7 +76,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 **Alchemy -** **_Plateforme de développement Ethereum._**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [Github](https://github.com/alchemyplatform)
+- [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
 **Foundry -** **_Une boîte à outils rapide, portable et modulaire pour le développement d'applications Ethereum écrites en Rust._**
