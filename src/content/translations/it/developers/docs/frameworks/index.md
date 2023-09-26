@@ -46,7 +46,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 
 - [Home page](https://www.web3labs.com/web3j-sdk)
 - [Documentazione](https://docs.web3j.io)
-- [Github](https://github.com/web3j/web3j)
+- [GitHub](https://github.com/web3j/web3j)
 
 **OpenZeppelin SDK:** **_Il kit di strumenti definitivo per i contratti intelligenti: una suite di strumenti per aiutarti a sviluppare, compilare, aggiornare, distribuire e interagire con i contratti intelligenti_**
 
