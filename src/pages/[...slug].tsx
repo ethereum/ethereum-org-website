@@ -11,11 +11,27 @@ import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
 // Layouts
 import { RootLayout, StaticLayout } from "@/layouts"
 import { staticComponents as components } from "@/layouts/Static"
+// import { UseCasesLayout } from "@/layouts/UseCases"
+// import { StakingLayout } from "@/layouts/Staking"
+// import { RoadmapLayout } from "@/layouts/Roadmap"
+// import { UpgradeLayout } from "@/layouts/Upgrade"
+// import { EventLayout } from "@/layouts/Event"
+// import { DocsLayout } from "@/layouts/Docs"
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import { Frontmatter, NextPageWithLayout } from "@/lib/types"
 import { getLastModifiedDate } from "@/lib/utils/gh"
+
+const componentMapping = {
+  static: StaticLayout,
+  // "use-cases": UseCasesLayout,
+  // staking: StakingLayout,
+  // roadmap: RoadmapLayout,
+  // upgrade: UpgradeLayout,
+  // event: EventLayout,
+  // docs: DocsLayout,
+} as const
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -54,7 +70,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     "content",
     "frontmatter",
   ])
-  const frontmatter = markdown.frontmatter
+  const frontmatter = markdown.frontmatter as Frontmatter
 
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
@@ -70,12 +86,17 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = await getLastModifiedDate(originalSlug)
 
+  const layout =
+    frontmatter.template ?? params.slug.includes("developers/docs")
+      ? "docs"
+      : "static"
   return {
     props: {
       mdxSource,
       originalSlug,
       frontmatter,
       lastUpdatedDate,
+      layout,
     },
   }
 }
@@ -93,15 +114,17 @@ const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
   // `slug`, `frontmatter` and `lastUpdatedDate` values are returned by `getStaticProps` method and passed to the page component
-  const slug: string = page.props.originalSlug
-  const frontmatter: Frontmatter = page.props.frontmatter
-  const lastUpdatedDate = page.props.lastUpdatedDate
-
+  const {
+    originalSlug: slug,
+    frontmatter,
+    lastUpdatedDate,
+    layout,
+  } = page.props
   const layoutProps = { slug, frontmatter, lastUpdatedDate }
-
+  const Layout = componentMapping[layout]
   return (
     <RootLayout>
-      <StaticLayout {...layoutProps}>{page}</StaticLayout>
+      <Layout {...layoutProps}>{page}</Layout>
     </RootLayout>
   )
 }
