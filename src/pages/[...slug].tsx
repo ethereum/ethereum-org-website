@@ -121,7 +121,9 @@ ContentPage.getLayout = (page: ReactElement) => {
     layout,
   } = page.props
   const layoutProps = { slug, frontmatter, lastUpdatedDate }
+
   const Layout = componentMapping[layout]
+
   return (
     <RootLayout>
       <Layout {...layoutProps}>{page}</Layout>

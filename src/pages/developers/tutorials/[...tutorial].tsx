@@ -96,10 +96,7 @@ const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
   // `slug`, `frontmatter` and `lastUpdatedDate` values are returned by `getStaticProps` method and passed to the page component
-  const slug: string = page.props.originalSlug
-  const frontmatter = page.props.frontmatter
-  const lastUpdatedDate = page.props.lastUpdatedDate
-
+  const { originalSlug: slug, frontmatter, lastUpdatedDate } = page.props
   const layoutProps = { slug, frontmatter, lastUpdatedDate }
 
   return (
