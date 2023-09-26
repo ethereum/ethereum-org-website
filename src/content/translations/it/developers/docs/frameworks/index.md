@@ -56,7 +56,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 
 **Create Eth App -** **_Crea app per Ethereum con un comando. Offre una vasta scelta di framework per l'interfaccia utente e modelli DeFI tra cui scegliere._**
 
-- [Github](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modelli](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
 **Scaffold-Eth -** **_I componenti Ethers.js + Hardhat + React e gli hook per web3: tutto ciò che ti serve per iniziare a creare applicazioni decentralizzate alimentate da contratti intelligenti._**
