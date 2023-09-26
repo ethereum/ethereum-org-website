@@ -51,7 +51,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 **OpenZeppelin SDK - \*\***_The Ultimate Smart Contract Toolkit : la suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._\*\*
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum communautaire](https://forum.openzeppelin.com/c/support/17)
 
 **Create Eth App -** **_Création d'applications alimentées par Ethereum en une seule commande. Fournit un panel d'infrastructures d'interface utilisateur et des modèles DeFi parmi lesquels faire votre choix._**
