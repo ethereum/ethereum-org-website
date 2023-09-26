@@ -180,7 +180,7 @@ La coverage de Solidity démarre sa propre ganache-cli, pour que nous n'ayons pa
 ### Étape 4 : Ajouter un dépôt à Coveralls {#step-4-add-repository-to-coveralls}
 
 - Créez un compte [Coveralls](https://coveralls.io/).
-- Ajoutez-y le dépôt Github.
+- Ajoutez-y le dépôt GitHub.
 - Maintenant, allez de l'avant et créez une pull request.
 
 ![Exemple Coverall](./coverall.png)
