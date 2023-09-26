@@ -525,5 +525,8 @@ export const query = graphql`
     phantom: file(relativePath: { eq: "wallets/phantom.png" }) {
       ...walletImage
     }
+    XDEFI: file(relativePath: { eq: "wallets/XDEFI.png" }) {
+      ...walletImage
+    }
   }
 `
