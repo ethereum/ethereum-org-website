@@ -1,5 +1,5 @@
 ---
-title: Smart-Contract-Bibliotheken
+title: Smart Contract-Bibliotheken
 description:
 lang: de
 ---
@@ -56,7 +56,7 @@ Ein weiteres gängiges Beispiel ist [SafeMath](https://docs.openzeppelin.com/con
 
 Um die [Komponierbarkeit und Interoperabilität](/developers/docs/smart-contracts/composability/) zu erleichtern, hat die Ethereum-Community mehrere Standards in Form von **ERCs** definiert. Weitere Informationen hierzu finden Sie im Abschnitt [Standards](/developers/docs/standards/).
 
-Wenn Sie einen ERC in Ihre Verträge aufnehmen, sollten Sie nach Standardimplementierungen suchen, anstatt Ihre eigenen einzuführen. Viele Smart-Contract-Bibliotheken enthalten Implementierungen für die gängigsten ERCs. Den allgegenwärtigen [ERC20-Standard für fungible Token](/developers/tutorials/understand-the-erc-20-token-smart-contract/) finden Sie in [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) und [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Darüber hinaus bieten einige ERCs auch kanonische Implementierungen als Teil des ERC selbst.
+Wenn Sie einen ERC in Ihre Verträge aufnehmen, sollten Sie nach Standardimplementierungen suchen, anstatt Ihre eigenen einzuführen. Viele Smart-Contract-Bibliotheken enthalten Implementierungen für die gängigsten ERCs. Den allgegenwärtigen [ERC20-Standard für fungible Token](/developers/tutorials/understand-the-erc-20-token-smart-contract/) finden Sie in <a hrbeibeispielsweise ef="https: //github.com/HQ20/contracts/blob/master/contracts/token/README.md">HQ20</a>, [DappSys](https://github.com/dapphub/ds-token/) und [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Darüber hinaus bieten einige ERCs auch kanonische Implementierungen als Teil des ERC selbst.
 
 Es ist erwähnenswert, dass einige ERCs nicht eigenständig sind, sondern Ergänzungen zu anderen ERCs sind. Zum Beispiel fügt [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) eine Erweiterung zu ERC20 hinzu, um die Benutzerfreundlichkeit zu verbessern.
 
@@ -102,6 +102,11 @@ Schließlich sollten Sie bei der Entscheidung, ob Sie eine Bibliothek integriere
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**thirdweb Solidity SDK -** **_Bietet die Tools, die zum effizienten Erstellen von benutzerdefinierten Smart Contracts erforderlich sind_**
+
+- [Dokumentation](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## Ähnliche Tutorials {#related-tutorials}
 
 - [Sicherheitsüberlegungen für Ethereum-Entwickler](/developers/docs/smart-contracts/security/) _– Ein Tutorial zu Sicherheitsüberlegungen beim Erstellen von Smart Contracts, einschließlich der Bibliotheksnutzung_
@@ -109,4 +114,4 @@ Schließlich sollten Sie bei der Entscheidung, ob Sie eine Bibliothek integriere
 
 ## Weiterführende Informationen {#further-reading}
 
-_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
+_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
