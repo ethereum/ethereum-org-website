@@ -46,7 +46,7 @@ Los editores de EIP retirados son:
 
 Si deseas convertirte en un editor de EIP, por favor revisa [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-Los editores EIP deciden cuándo una propuesta está ya madura para convertirse en una EIP, y ayudan a los autores de EIP a sacar adelante sus propuestas. [Los Ethereum Cat Herders](https://ethereumcatherders.com/) ayudan a organizar reuniones entre los editores de EIP y la comunidad (ver [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
+Los editores EIP deciden cuándo una propuesta está ya madura para convertirse en una EIP, y ayudan a los autores de EIP a sacar adelante sus propuestas. [Los Ethereum Cat Herders](https://www.ethereumcatherders.com/) ayudan a organizar reuniones entre los editores de EIP y la comunidad (ver [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
 
 El proceso de normalización completo junto con el gráfico correspondiente se describe en [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
