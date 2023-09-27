@@ -13,8 +13,8 @@ import {
   RootLayout,
   staticComponents,
   StaticLayout,
-  // useCasesComponents,
-  // UseCasesLayout,
+  useCasesComponents,
+  UseCasesLayout,
   // stakingComponents,
   // StakingLayout,
   // roadmapComponents,
@@ -34,7 +34,7 @@ import { getLastModifiedDate } from "@/lib/utils/gh"
 
 const layoutMapping = {
   static: StaticLayout,
-  // "use-cases": UseCasesLayout,
+  "use-cases": UseCasesLayout,
   // staking: StakingLayout,
   // roadmap: RoadmapLayout,
   // upgrade: UpgradeLayout,
@@ -44,7 +44,7 @@ const layoutMapping = {
 
 const componentsMapping = {
   static: staticComponents,
-  // "use-cases": useCasesComponents,
+  "use-cases": useCasesComponents,
   // staking: stakingComponents,
   // roadmap: roadmapComponents,
   // upgrade: upgradeComponents,
@@ -58,7 +58,6 @@ interface Params extends ParsedUrlQuery {
 
 interface Props {
   mdxSource: MDXRemoteSerializeResult
-  layout: keyof typeof layoutMapping
 }
 
 export const getStaticPaths: GetStaticPaths = () => {

@@ -14,15 +14,16 @@ import {
   UnorderedList,
   useToken,
   type BoxProps,
+  Hide,
 } from "@chakra-ui/react"
-import { type ComponentProps } from "react"
+// import { type ComponentProps } from "react"
 import { MdExpandMore } from "react-icons/md"
 
 import BannerNotification from "@/components/BannerNotification"
-import /* ButtonDropdown, */ {
-  type IProps as ButtonDropdownProps,
-  List as ButtonDropdownList,
-} from "@/components/ButtonDropdown"
+// import ButtonDropdown, {
+//   type IProps as ButtonDropdownProps,
+//   List as ButtonDropdownList,
+// } from "@/components/ButtonDropdown"
 import ButtonLink from "@/components/ButtonLink"
 import Card from "@/components/Card"
 // import Contributors from "@/components/Contributors"
@@ -55,19 +56,19 @@ const commonHeadingProps: HeadingProps = {
   lineHeight: 1.4,
 }
 
-export const Heading1 = (props: HeadingProps) => (
+const Heading1 = (props: HeadingProps) => (
   <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
-export const Heading2 = (props: HeadingProps) => (
+const Heading2 = (props: HeadingProps) => (
   <Heading as="h2" {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
-export const Heading3 = (props: HeadingProps) => (
+const Heading3 = (props: HeadingProps) => (
   <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
-export const Heading4 = (props: HeadingProps) => (
+const Heading4 = (props: HeadingProps) => (
   <Heading
     as="h4"
     {...commonHeadingProps}
@@ -77,11 +78,11 @@ export const Heading4 = (props: HeadingProps) => (
   />
 )
 
-export const Divider = () => (
+const Divider = () => (
   <Box my={16} w="10%" h={1} bgColor="primary.hover" />
 )
 
-export const Pre = (props: ChildOnlyProp) => (
+const Pre = (props: ChildOnlyProp) => (
   <chakra.pre
     bg="preBackground"
     border="1px"
@@ -95,7 +96,7 @@ export const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-export const Paragraph = (props: ChildOnlyProp) => (
+const Paragraph = (props: ChildOnlyProp) => (
   <Text color="text300" mt={8} mb={4} {...props} />
 )
 
@@ -167,29 +168,29 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-export const Title = (props: ChildOnlyProp) => <Heading1 mt={4} {...props} />
+const Title = (props: ChildOnlyProp) => <Heading1 mt={4} {...props} />
 
-const HeroImage = (props) => (
-  <Image
-    alignSelf={{
-      base: "center",
-      lg: "normal",
-    }}
-    backgroundSize="cover"
-    flex="1 1 100%"
-    right={0}
-    bottom={0}
-    width="full"
-    overflow="initial"
-    maxH={{
-      base: "340px",
-      lg: "full",
-    }}
-    {...props}
-  />
-)
+// const HeroImage = (props) => (
+//   <Image
+//     alignSelf={{
+//       base: "center",
+//       lg: "normal",
+//     }}
+//     backgroundSize="cover"
+//     flex="1 1 100%"
+//     right={0}
+//     bottom={0}
+//     width="full"
+//     overflow="initial"
+//     maxH={{
+//       base: "340px",
+//       lg: "full",
+//     }}
+//     {...props}
+//   />
+// )
 
-export const Page = (props: FlexProps) => (
+const Page = (props: FlexProps) => (
   <Flex
     flexDirection={{ base: "column", lg: "row" }}
     justifyContent="space-between"
@@ -202,7 +203,7 @@ export const Page = (props: FlexProps) => (
   />
 )
 
-export const InfoColumn = (props: ChildOnlyProp) => (
+const InfoColumn = (props: ChildOnlyProp) => (
   <Flex
     as="aside"
     flexDirection="column"
@@ -216,7 +217,7 @@ export const InfoColumn = (props: ChildOnlyProp) => (
   />
 )
 
-export const InfoTitle = (props: ChildOnlyProp) => (
+const InfoTitle = (props: ChildOnlyProp) => (
   <Heading2
     fontSize={{ base: "2.5rem", lg: "5xl" }}
     textAlign={{ base: "left", lg: "right" }}
@@ -225,7 +226,7 @@ export const InfoTitle = (props: ChildOnlyProp) => (
   />
 )
 
-// export const StyledButtonDropdown = ({
+// const StyledButtonDropdown = ({
 //   list,
 //   ...rest
 // }: FlexProps & Pick<ButtonDropdownProps, "list">) => (
@@ -234,11 +235,11 @@ export const InfoTitle = (props: ChildOnlyProp) => (
 //   </Flex>
 // )
 
-// export const MobileButtonDropdown = (
+// const MobileButtonDropdown = (
 //   props: ComponentProps<typeof StyledButtonDropdown>
 // ) => <StyledButtonDropdown mb={0} {...props} />
 
-export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const lgBp = useToken("breakpoints", "lg")
 
   return (
@@ -264,7 +265,7 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-export const MobileButton = (props: ChildOnlyProp) => {
+const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
     <Box
@@ -281,9 +282,6 @@ export const MobileButton = (props: ChildOnlyProp) => {
 }
 
 export const UseCasesLayout = ({ children, frontmatter, slug }) => {
-  // TODO: Replace with direct token implementation after UI migration is completed
-  const lgBp = useToken("breakpoints", "lg")
-
   if (/* !siteData ||  */ !frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"
@@ -380,7 +378,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
 
   return (
     <Box position="relative" width="full">
-      <Show above={lgBp}>
+      <Show above="lg">
         <BannerNotification shouldShow>
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <aside>
@@ -424,7 +422,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
           }}
         /> */}
       </HeroContainer>
-      <Show above={lgBp}>
+      <Show above="lg">
         <Flex
           as={BaseLink}
           to="#content"
@@ -444,7 +442,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
           title={frontmatter.title}
           description={frontmatter.description}
         /> */}
-        <Show above={lgBp}>
+        <Show above="lg">
           <InfoColumn>
             {/* <StyledButtonDropdown list={dropdownLinks} /> */}
             <InfoTitle>{frontmatter.title}</InfoTitle>
@@ -458,17 +456,14 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
           </InfoColumn>
         </Show>
         <ContentContainer id="content">
-          {/* <MDXProvider components={components}>
-            <MDXRenderer>{children}</MDXRenderer>
-          </MDXProvider> */}
           {children}
           <FeedbackCard />
         </ContentContainer>
-        <Show below={lgBp}>
+        <Hide above="lg">
           <MobileButton>
             {/* <MobileButtonDropdown list={dropdownLinks} /> */}
           </MobileButton>
-        </Show>
+        </Hide>
       </Page>
     </Box>
   )

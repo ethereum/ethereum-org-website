@@ -25,6 +25,13 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/history/",
     "/smart-contracts",
     "/whitepaper",
+    "/defi",
+    "/nft",
+    "/dao",
+    "/desci",
+    // "/refi",
+    "/social-networks",
+    "/decentralized-identity",
   ]
 
   // Skip /translations dir for now until we set up i18n
