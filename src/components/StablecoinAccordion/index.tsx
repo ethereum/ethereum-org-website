@@ -7,14 +7,15 @@ import {
   Icon,
   LinkBox,
   LinkOverlay,
-  Text,
 } from "@chakra-ui/react"
 import { MdArrowForward } from "react-icons/md"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
-import Link from "../Link"
+import InlineLink, { BaseLink } from "../Link"
 import Translation from "../Translation"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
 import {
   AccordionCustomItem,
   LeftColumnPanel,
@@ -28,7 +29,7 @@ export type ChildOnlyType = {
 }
 
 const SectionTitle = (props: ChildOnlyType) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize="1.25rem"
     fontWeight={700}
@@ -69,7 +70,7 @@ const StepBox = (
     <Flex justifyContent="space-between" alignItems="center" width="100%">
       <Box>
         <LinkOverlay
-          as={Link}
+          as={BaseLink}
           color="inherit"
           textDecoration="inherit"
           to={props.to}
@@ -91,7 +92,7 @@ const StepBox = (
 )
 
 const H4 = (props: ChildOnlyType) => (
-  <Heading fontSize="1.25rem" fontWeight={700} mt={0} mb={4} {...props} />
+  <Heading fontSize="1.25rem" fontWeight={700} mb={4} {...props} />
 )
 
 export interface IProps {}
@@ -136,9 +137,9 @@ const StablecoinAccordion: React.FC<IProps> = () => {
           </SectionTitle>
           <p>
             <Translation id="page-stablecoins-accordion-swap-dapp-intro" />{" "}
-            <Link to="/get-eth/#dex">
+            <InlineLink to="/get-eth/#dex">
               <Translation id="page-stablecoins-accordion-swap-dapp-link" />
-            </Link>
+            </InlineLink>
           </p>
           <CardList content={cardListGroups.dapps} />
         </RightColumnPanel>
@@ -220,9 +221,9 @@ const StablecoinAccordion: React.FC<IProps> = () => {
           </SectionTitle>
           <p>
             <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-copy" />{" "}
-            <Link to="#how">
+            <InlineLink to="#how">
               <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-link" />
-            </Link>
+            </InlineLink>
           </p>
           <p>
             <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-copy-p2" />
@@ -243,9 +244,9 @@ const StablecoinAccordion: React.FC<IProps> = () => {
           </SectionTitle>
           <p>
             <Translation id="page-stablecoins-accordion-borrow-risks-copy" />{" "}
-            <Link to="/eth/">
+            <InlineLink to="/eth/">
               <Translation id="page-stablecoins-accordion-borrow-risks-link" />
-            </Link>
+            </InlineLink>
           </p>
         </RightColumnPanel>
       </AccordionCustomItem>

@@ -7,7 +7,6 @@ import {
   chakra,
   Divider,
   Flex,
-  Heading,
   HeadingProps,
   Text,
   TextProps,
@@ -16,15 +15,13 @@ import {
   Box,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
 import TutorialMetadata from "../components/TutorialMetadata"
-import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import EnvWarningBanner from "../components/EnvWarningBanner"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -35,6 +32,9 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -75,7 +75,7 @@ const ContentContainer = (props) => {
 const H1 = (props: HeadingProps) => {
   const monospaceFont = useToken("fonts", "monospace")
   return (
-    <Heading
+    <OldHeading
       as="h1"
       fontWeight="bold"
       fontFamily={monospaceFont}
@@ -101,7 +101,7 @@ const H2 = (props: HeadingProps) => {
   const monospaceFont = useToken("fonts", "monospace")
 
   return (
-    <Heading
+    <OldHeading
       as="h2"
       fontFamily={monospaceFont}
       textTransform="uppercase"
@@ -123,7 +123,7 @@ const H2 = (props: HeadingProps) => {
 
 const H3 = (props: HeadingProps) => {
   return (
-    <Heading
+    <OldHeading
       as="h3"
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.5rem" }}
@@ -143,7 +143,7 @@ const H3 = (props: HeadingProps) => {
 
 const H4 = (props: HeadingProps) => {
   return (
-    <Heading
+    <OldHeading
       as="h4"
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.25rem" }}
@@ -197,7 +197,7 @@ const KBD = (props) => {
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -206,7 +206,7 @@ const components = {
   kbd: KBD,
   li: ListItem,
   pre: Codeblock,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   ButtonLink,
   InfoBanner,
   EnvWarningBanner,
@@ -217,6 +217,7 @@ const components = {
   CallToContribute,
   Emoji,
   YouTube,
+  GlossaryTooltip,
 }
 
 const TutorialPage = ({
@@ -317,7 +318,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-developers-tutorials", "common"] }
+        ns: { in: ["page-developers-tutorials", "common", "glossary"] }
       }
     ) {
       edges {

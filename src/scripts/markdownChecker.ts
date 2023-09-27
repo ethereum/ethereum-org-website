@@ -9,10 +9,16 @@ const LANG_ARG: string | null = argv.lang || null
 const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
 const PATH_TO_ALL_CONTENT = "./src/content/"
 const TUTORIAL_DATE_REGEX = new RegExp("\\d{4}-\\d{2}-\\d{2}")
+// Original
 const WHITE_SPACE_IN_LINK_TEXT = new RegExp(
   "\\[\\s.+\\]\\( | \\[.+\\s\\]\\(",
   "g"
 )
+// Modified
+// const WHITE_SPACE_IN_LINK_TEXT = new RegExp(
+//   "\\[\\s.+?\\]\\(|\\[.+?\\s\\]\\(",
+//   "g"
+// )
 const BROKEN_LINK_REGEX = new RegExp(
   "\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)",
   "g"

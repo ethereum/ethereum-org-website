@@ -1,7 +1,7 @@
 import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 import { SystemStyleObject, cssVar } from "@chakra-ui/react"
-import CustomLink from "../Link"
+import CustomLink, { BaseLink } from "../Link"
 import { getCustomId, Item, trimmedTitle } from "./utils"
 
 export interface IPropsTableOfContentsLink {
@@ -47,7 +47,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
   }
 
   return (
-    <CustomLink
+    <BaseLink
       as={GatsbyLink}
       to={url}
       className={classes}
@@ -55,6 +55,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
       display="inline-block"
       position="relative"
       color="textTableOfContents"
+      fontWeight="normal"
       mb="0.5rem !important"
       width={{ base: "100%", lg: "auto" }}
       _hover={{
@@ -84,7 +85,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
       }}
     >
       {trimmedTitle(item.title)}
-    </CustomLink>
+    </BaseLink>
   )
 }
 

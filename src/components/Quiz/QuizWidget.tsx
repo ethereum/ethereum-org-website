@@ -12,7 +12,6 @@ import {
   Flex,
   Heading,
   Icon,
-  Text,
   Spinner,
   Stack,
   Container,
@@ -21,10 +20,11 @@ import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Button from "../Button"
+import Button from "../Buttons/Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
+import Text from "../OldText"
 
 import {
   CorrectIcon,
@@ -60,8 +60,8 @@ import questionBank from "../../data/quizzes/questionBank"
 
 interface IProps {
   quizKey?: string
-  currentHandler?: (next?: string) => void
-  statusHandler?: (status: QuizStatus) => void
+  currentHandler: (next?: string) => void
+  statusHandler: (status: QuizStatus) => void
   maxQuestions?: number
   isStandaloneQuiz?: boolean
 }
@@ -315,7 +315,6 @@ const QuizWidget: React.FC<IProps> = ({
         <Heading
           as="h2"
           mb={12}
-          mt={0}
           textAlign="center"
           scrollBehavior="smooth"
           scrollMarginTop={24}

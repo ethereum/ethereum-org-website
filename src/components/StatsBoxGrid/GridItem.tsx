@@ -5,16 +5,17 @@ import { kebabCase } from "lodash"
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis } from "recharts"
 import Tooltip from "../Tooltip"
 import Translation from "../Translation"
-import Link from "../Link"
+import InlineLink from "../Link"
 import StatErrorMessage from "../StatErrorMessage"
 import StatLoadingMessage from "../StatLoadingMessage"
 import { Metric, ranges } from "./useStatsBoxGrid"
 import { Direction } from "../../types"
+import OldText from "../OldText"
 
 const tooltipContent = (metric: Metric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
+    <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
   </div>
 )
 
@@ -131,7 +132,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
       }}
       padding={{ base: "2rem 1rem 1rem", lg: "1.5rem" }}
     >
-      <div>
+      <Box>
         <Text
           fontSize="xl"
           mb={2}
@@ -141,8 +142,8 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         >
           {title}
         </Text>
-        <p>{description}</p>
-      </div>
+        <OldText>{description}</OldText>
+      </Box>
       {!state.hasError && !isLoading && (
         <>
           <Box
@@ -185,6 +186,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         color="text"
         flexWrap="wrap"
         textOverflow="ellipsis"
+        lineHeight="1.6rem"
       >
         {value}
       </Box>

@@ -110,6 +110,7 @@ Web3 обладает потенциалом, который позволит р
 - [Active Inference Lab: лаборатория активного обобщения](https://www.activeinference.org/)
 - [CureDAO: платформа точного здоровья, принадлежащая сообществу](https://docs.curedao.org/)
 - [IdeaMarkets: обеспечение децентрализованного научного доверия](https://ideamarket.io/)
+- [DeSci Labs](https://www.desci.com/)
 
 Мы рады предложениям, позволяющим пополнить наш список новыми проектами. Для начала ознакомьтесь с нашей [политикой размещения в списках](/contributing/adding-desci-projects/)!
 
