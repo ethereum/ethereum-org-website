@@ -1,1 +1,3 @@
-const EventLayout = () => null
+// export const eventComponents = {}
+
+export const EventLayout = () => null

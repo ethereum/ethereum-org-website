@@ -1,1 +1,3 @@
-const DocsLayout = () => null
+// export const docsComponents = {}
+
+export const DocsLayout = () => null
