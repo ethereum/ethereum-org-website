@@ -4,7 +4,7 @@ description: نظرة عامة على التمويل المتجدد (ري فاي
 lang: ar
 template: use-cases
 emoji: ":recycle:"
-sidebarDepth: ٢
+sidebarDepth: 2
 image: ../../../../assets/future_transparent.png
 alt: ""
 summaryPoint1: اقتصاد بديل قائم على أُسُس متجددة
