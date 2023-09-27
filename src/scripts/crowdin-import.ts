@@ -43,7 +43,7 @@ const USER_SELECTION: UserSelectionObject = {
   cs: [],
   da: [],
   de: [],
-  el: [],
+  el: [5],
   es: [],
   fa: [],
   fi: [],
