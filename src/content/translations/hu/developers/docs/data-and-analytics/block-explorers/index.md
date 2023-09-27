@@ -260,7 +260,6 @@ Az Eth2 felső szintű adat a következőket tartalmazza:
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
-- [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
 
 ## További olvasnivaló {#further-reading}
 

@@ -522,5 +522,11 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
+    phantom: file(relativePath: { eq: "wallets/phantom.png" }) {
+      ...walletImage
+    }
+    XDEFI: file(relativePath: { eq: "wallets/XDEFI.png" }) {
+      ...walletImage
+    }
   }
 `

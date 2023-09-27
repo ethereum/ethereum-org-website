@@ -24,7 +24,7 @@ import {
 import { getImage } from "../utils/image"
 
 // Components
-import ButtonLink from "../components/ButtonLink"
+import { ButtonLink } from "../components/Buttons"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import Emoji from "../components/Emoji"

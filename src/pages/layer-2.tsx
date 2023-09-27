@@ -23,7 +23,7 @@ import {
 import layer2Data from "../data/layer-2/layer-2.json"
 
 // Components
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
@@ -1059,6 +1059,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 200
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    starknet: file(relativePath: { eq: "layer-2/starknet.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

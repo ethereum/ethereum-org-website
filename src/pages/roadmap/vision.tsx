@@ -21,7 +21,7 @@ import PageHero, {
   IContent as IPageHeroContent,
 } from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import InfoBanner from "../../components/InfoBanner"
 import FeedbackCard from "../../components/FeedbackCard"

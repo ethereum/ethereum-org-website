@@ -15,8 +15,8 @@ import {
   WrapItem,
 } from "@chakra-ui/react"
 
-import Button from "../components/Button"
-import ButtonLink from "../components/ButtonLink"
+import Button from "../components/Buttons/Button"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Card from "../components/Card"
 import ImageCard from "../components/ImageCard"
 import ExpandableCard from "../components/ExpandableCard"
