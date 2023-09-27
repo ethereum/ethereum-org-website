@@ -88,15 +88,16 @@ Contoh ini seharusnya memberi Anda pemahaman seperti apa sintaksis kontrak Solid
 - Bahasa pemrograman Python
 - Strong typing
 - Kode pengompilasi berukuran kecil yang dapat dimengerti
-- Secara sengaja memiliki fitur lebih sedikit dari Solidity dengan tujuan membuat kontrak lebih aman dan lebih mudah diaudit. Vyper tidak mendukung:
+- Pembuatan kode bita yang efisien
+- Disengaja dengan fitur lebih sedikit daripada Solidity yang bertujuan agar kontrak menjadi lebih aman dan lebih mudah untuk diaudit. Vyper tidak mendukung:
   - Pengubah
   - Warisan
-  - Perakitan sebaris
-  - Fungsi kelebihan beban
-  - Operator kelebihan beban
+  - Kode assembly dalam baris
+  - Beban berlebih pada fungsi
+  - Beban berlebih pada operator
   - Pemanggilan berulang
   - Perulangan dengan panjang tak terbatas
-  - Poin tetap biner
+  - Titik tetap biner
 
 Untuk informasi selengkapnya, [baca prinsip Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
@@ -104,10 +105,16 @@ Untuk informasi selengkapnya, [baca prinsip Vyper](https://vyper.readthedocs.io/
 
 - [Dokumentasi](https://vyper.readthedocs.io)
 - [Contoh Vyper](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Vyper Selengkapnya dengan Contoh](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Ruang Obrolan Gitter Vyper](https://gitter.im/vyperlang/community)
+- [Obrolan Discord komunitas Vyper](https://discord.gg/SdvKC79cJk)
 - [Lembar Kecurangan](https://reference.auditless.com/cheatsheet)
-- [Pembaruan 8 Januari 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
+- [Kerangka kerja dan alat pengembangan kontrak pintar untuk Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk - belajar mengamankan dan meretas kontrak pintar Vyper](https://github.com/SupremacyTeam/VyperPunk)
+- [VyperExamples - Contoh kerentanan Vyper](https://www.vyperexamples.com/reentrancy)
+- [Vyper Hub untuk pengembangan](https://github.com/zcor/vyper-dev)
+- [Contoh kontrak pintar terbaik Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Sumber daya pilihan Awesome Vyper](https://github.com/spadebuilders/awesome-vyper)
 
 ### Contoh {#example}
 
@@ -211,7 +218,7 @@ Jika Anda baru mengenal Ethereum dan belum pernah melakukan pengodean apa pun de
 **Yul+**
 
 - Ekstensi level rendah yang sangat efisien untuk Yul.
-- Didesain pada awalnya untuk kontrak [rollup optimistic](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups).
+- Awalnya dirancang untuk kontrak [optimistic rollup (penggabungan yang optimis)](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ bisa dianggap sebagai proposal peningkatan eksperimental untuk Yul, yang menambahkan fitur baru ke dalamnya.
 
 ### Tautan penting {#important-links-2}
