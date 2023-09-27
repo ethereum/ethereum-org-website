@@ -58,6 +58,7 @@ const Container = (props: TableProps) => (
 
 const WalletContainer = (props: ChildOnlyProp) => (
   <Container
+    as="div"
     borderBottom="1px"
     borderColor="lightBorder"
     _hover={{ bg: "boxShadow", transition: "0.5s all" }}
