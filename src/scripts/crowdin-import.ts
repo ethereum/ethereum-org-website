@@ -69,6 +69,7 @@ const USER_SELECTION: UserSelectionObject = {
   ms: [],
   mr: [],
   nb: [],
+  "ne-np": [],
   nl: [],
   pcm: [],
   pl: [],
