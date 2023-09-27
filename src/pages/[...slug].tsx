@@ -9,23 +9,32 @@ import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
 
 // Layouts
-import { RootLayout, StaticLayout } from "@/layouts"
-import { staticComponents as components } from "@/layouts/Static"
-// import { UseCasesLayout } from "@/layouts/UseCases"
-// import { StakingLayout } from "@/layouts/Staking"
-// import { RoadmapLayout } from "@/layouts/Roadmap"
-// import { UpgradeLayout } from "@/layouts/Upgrade"
-// import { EventLayout } from "@/layouts/Event"
-// import { DocsLayout } from "@/layouts/Docs"
+import {
+  RootLayout,
+  StaticLayout,
+  UseCasesLayout,
+  // StakingLayout,
+  // RoadmapLayout,
+  // UpgradeLayout,
+  // EventLayout,
+  // DocsLayout,
+} from "@/layouts"
+import { staticComponents } from "@/layouts/Static"
+import { useCasesComponents } from "@/layouts/UseCases"
+// import { stakingComponents } from "@/layouts/Staking"
+// import { roadmapComponents } from "@/layouts/Roadmap"
+// import { upgradeComponents } from "@/layouts/Upgrade"
+// import { eventComponents } from "@/layouts/Event"
+// import { docsComponents } from "@/layouts/Docs"
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import { Frontmatter, NextPageWithLayout } from "@/lib/types"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 
-const componentMapping = {
+const layoutMapping = {
   static: StaticLayout,
-  // "use-cases": UseCasesLayout,
+  "use-cases": UseCasesLayout,
   // staking: StakingLayout,
   // roadmap: RoadmapLayout,
   // upgrade: UpgradeLayout,
@@ -33,12 +42,23 @@ const componentMapping = {
   // docs: DocsLayout,
 } as const
 
+const componentsMapping = {
+  static: staticComponents,
+  "use-cases": useCasesComponents,
+  // staking: stakingComponents,
+  // roadmap: roadmapComponents,
+  // upgrade: upgradeComponents,
+  // event: eventComponents,
+  // docs: docsComponents,
+}
+
 interface Params extends ParsedUrlQuery {
   slug: string[]
 }
 
 interface Props {
   mdxSource: MDXRemoteSerializeResult
+  layout: keyof typeof layoutMapping
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -97,7 +117,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   }
 }
 
-const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
+const ContentPage: NextPageWithLayout<Props> = ({ mdxSource, layout }) => {
+  const components = componentsMapping[layout]
   return (
     <>
       {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
@@ -117,7 +138,7 @@ ContentPage.getLayout = (page: ReactElement) => {
     layout,
   } = page.props
   const layoutProps = { slug, frontmatter, lastUpdatedDate }
-  const Layout = componentMapping[layout]
+  const Layout = layoutMapping[layout]
   return (
     <RootLayout>
       <Layout {...layoutProps}>{page}</Layout>
