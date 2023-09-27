@@ -6,12 +6,10 @@ import {
   Box,
   chakra,
   Flex,
-  Heading,
   Img,
   ListItem,
   SimpleGrid,
   Stack,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 
@@ -20,6 +18,8 @@ import ButtonLink from "../ButtonLink"
 import InlineLink from "../Link"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
 
 // Data
 import {
@@ -65,7 +65,7 @@ const SelectedContainer = (props: ChildOnlyProp) => (
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     mt={0}
     fontSize={{ base: "xl", md: "2xl" }}
@@ -76,7 +76,7 @@ const H3 = (props: ChildOnlyProp) => (
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     fontWeight={500}
@@ -226,14 +226,14 @@ const Layer2Onboard: React.FC<IProps> = ({
   return (
     <Box bg="layer2Gradient" borderRadius="sm" p={10}>
       <Box textAlign="center" maxW="75ch" m="auto">
-        <Heading
+        <OldHeading
           fontSize={{ base: "2xl", md: "2rem" }}
           mt="12"
           fontWeight={600}
           lineHeight={1.4}
         >
           <Translation id="layer-2-onboard-title" />
-        </Heading>
+        </OldHeading>
         <Text>
           <Translation id="layer-2-onboard-1" />
         </Text>

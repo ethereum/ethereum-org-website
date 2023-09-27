@@ -1,11 +1,9 @@
-import Image from "next/image"
 import { Flex } from "@chakra-ui/react"
 
+import { Image, type ImageProps } from "./Image"
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 
-interface MarkdownImageProps {
-  src: string
-  alt: string
+interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
   width: string
   height: string
   aspectRatio: string

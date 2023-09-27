@@ -11,7 +11,7 @@ import {
 // TODO
 // import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React from "react"
-import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 
 // TODO
 // import { Lang } from "../utils/languages"
@@ -35,12 +35,6 @@ const socialLinks = [
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
     color: "#1DA1F2",
-  },
-  {
-    icon: FaYoutube,
-    to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
-    ariaLabel: "Youtube",
-    color: "#FF0000",
   },
   {
     icon: FaDiscord,

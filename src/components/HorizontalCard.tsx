@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react"
+import { Box, Flex, FlexProps } from "@chakra-ui/react"
+
 import Emoji from "./Emoji"
-import { Text, Box, Flex, FlexProps } from "@chakra-ui/react"
+import Text from "./OldText"
 
 export interface IProps extends Omit<FlexProps, "title"> {
   emoji: string

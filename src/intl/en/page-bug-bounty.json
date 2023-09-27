@@ -57,7 +57,7 @@
   "page-upgrades-bug-bounty-specs-docs": "Specification documents",
   "page-upgrades-bug-bounty-submit": "Submit a bug",
   "page-upgrades-bug-bounty-submit-desc": "For each valid bug you find you’ll earn rewards. The quantity of rewards awarded will vary depending on Severity. The severity is calculated according to the OWASP risk rating model based on Impact on the Ethereum Network and Likelihood.",
-  "page-upgrades-bug-bounty-subtitle": "Earn up to $250,000 USD and a place on the leaderboard by finding protocol, client and Solidity bugs affecting the Ethereum network.",
+  "page-upgrades-bug-bounty-subtitle": "Earn up to 250,000 USD and a place on the leaderboard by finding protocol, client and Solidity bugs affecting the Ethereum network.",
   "page-upgrades-bug-bounty-title": "Open for submissions",
   "page-upgrades-bug-bounty-title-1": "Beacon Chain",
   "page-upgrades-bug-bounty-title-2": "Fork choice",
