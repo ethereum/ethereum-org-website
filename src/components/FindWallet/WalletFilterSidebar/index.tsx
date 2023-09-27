@@ -9,7 +9,6 @@ import {
   Tab,
   TabPanels,
   TabPanel,
-  type TabsProps,
 } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
@@ -53,7 +52,7 @@ const FilterTab = ({
   />
 )
 
-interface WalletFilterSidebarProps extends Omit<TabsProps, "children"> {
+interface WalletFilterSidebarProps {
   filters: FiltersType
   resetWalletFilter: React.MutableRefObject<() => void>
   resetFilters: () => void
@@ -73,7 +72,6 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
   setSelectedPersona,
   updateFilterOption,
   updateFilterOptions,
-  ...tabsProps
 }) => {
   const theme = useTheme()
   const { t } = useTranslation()
@@ -103,7 +101,6 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
           borderColor: "background.base",
         },
       }}
-      {...tabsProps}
     >
       <TabList
         borderBottom="1px solid"

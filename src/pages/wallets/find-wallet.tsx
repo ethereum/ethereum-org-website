@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import {
   Flex,
   Box,
@@ -14,6 +14,7 @@ import {
   DrawerBody,
   Hide,
   DrawerHeader,
+  Show,
 } from "@chakra-ui/react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -40,7 +41,6 @@ import { FilterBurgerIcon } from "../../components/icons/wallets"
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
-import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 import type { ChildOnlyProp } from "../../types"
 
@@ -96,7 +96,7 @@ const FindWalletPage = ({ data, location }) => {
   const theme = useTheme()
   const { t } = useTranslation()
   const resetWalletFilter = React.useRef(() => {})
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
 
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
@@ -192,14 +192,14 @@ const FindWalletPage = ({ data, location }) => {
           ml={0}
           zIndex={1}
           w="full"
-          maxW={isOpen ? "330px" : "150px"}
+          maxW={showMobileSidebar ? "330px" : "150px"}
           bg="background.base"
           onClick={() => {
-            isOpen ? onClose() : onOpen()
+            showMobileSidebar ? onClose() : onOpen()
             trackCustomEvent({
               eventCategory: "MobileFilterToggle",
               eventAction: `Tap MobileFilterToggle`,
-              eventName: `show mobile filters ${!isOpen}`,
+              eventName: `show mobile filters ${!showMobileSidebar}`,
             })
           }}
           sx={{
@@ -231,7 +231,7 @@ const FindWalletPage = ({ data, location }) => {
               {t("page-find-wallet-active")}
             </Text>
           </Box>
-          {isOpen ? (
+          {showMobileSidebar ? (
             <Icon as={MdOutlineCancel} fill="primary.base" />
           ) : (
             <FilterBurgerIcon />
@@ -239,7 +239,12 @@ const FindWalletPage = ({ data, location }) => {
         </Box>
       </Box>
       <Hide above="lg">
-        <Drawer isOpen={isOpen} placement="start" onClose={onClose} size="sm">
+        <Drawer
+          isOpen={showMobileSidebar}
+          placement="start"
+          onClose={onClose}
+          size="sm"
+        >
           <DrawerOverlay />
           <DrawerContent>
             <DrawerHeader mb={4}>
@@ -247,7 +252,6 @@ const FindWalletPage = ({ data, location }) => {
             </DrawerHeader>
             <DrawerBody position="relative">
               <WalletFilterSidebar
-                display={{ base: isOpen ? "block" : "none", lg: "none" }}
                 {...{
                   filters,
                   resetWalletFilter,
@@ -264,19 +268,20 @@ const FindWalletPage = ({ data, location }) => {
         </Drawer>
       </Hide>
       <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} w="full" gap={6} top="76px">
-        <WalletFilterSidebar
-          display={{ base: "none", lg: "block" }}
-          {...{
-            filters,
-            resetWalletFilter,
-            updateFilterOption,
-            updateFilterOptions,
-            resetFilters,
-            selectedPersona,
-            setFilters,
-            setSelectedPersona,
-          }}
-        />
+        <Show above="lg">
+          <WalletFilterSidebar
+            {...{
+              filters,
+              resetWalletFilter,
+              updateFilterOption,
+              updateFilterOptions,
+              resetFilters,
+              selectedPersona,
+              setFilters,
+              setSelectedPersona,
+            }}
+          />
+        </Show>
         <Box
           w="full"
           overflowY="scroll"
