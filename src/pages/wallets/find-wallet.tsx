@@ -1,6 +1,20 @@
 // Libraries
 import React, { useState, useRef } from "react"
-import { Flex, Box, Image, Icon, useTheme } from "@chakra-ui/react"
+import {
+  Flex,
+  Box,
+  Image,
+  Icon,
+  useTheme,
+  useDisclosure,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerBody,
+  Hide,
+  DrawerHeader,
+} from "@chakra-ui/react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -82,9 +96,8 @@ const FindWalletPage = ({ data, location }) => {
   const theme = useTheme()
   const { t } = useTranslation()
   const resetWalletFilter = React.useRef(() => {})
-  const wrapperRef = useRef<HTMLDivElement>(null)
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const [showMobileSidebar, setShowMobileSidebar] = useState(false)
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
@@ -109,16 +122,8 @@ const FindWalletPage = ({ data, location }) => {
     setFilters(filterDefault)
   }
 
-  useOnClickOutside(wrapperRef, () => setShowMobileSidebar(false), ["mouseup"])
-
   return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      w="full"
-      mx="auto"
-      pointerEvents={showMobileSidebar ? "none" : "auto"}
-    >
+    <Flex direction="column" alignItems="center" w="full" mx="auto">
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
@@ -168,7 +173,7 @@ const FindWalletPage = ({ data, location }) => {
         top="76px"
         bg="background.base"
         w="full"
-        zIndex="sticky"
+        zIndex="dropdown"
         py="5px"
       >
         <Box
@@ -187,14 +192,14 @@ const FindWalletPage = ({ data, location }) => {
           ml={0}
           zIndex={1}
           w="full"
-          maxW={showMobileSidebar ? "330px" : "150px"}
+          maxW={isOpen ? "330px" : "150px"}
           bg="background.base"
           onClick={() => {
-            setShowMobileSidebar(!showMobileSidebar)
+            isOpen ? onClose() : onOpen()
             trackCustomEvent({
               eventCategory: "MobileFilterToggle",
               eventAction: `Tap MobileFilterToggle`,
-              eventName: `show mobile filters ${!showMobileSidebar}`,
+              eventName: `show mobile filters ${!isOpen}`,
             })
           }}
           sx={{
@@ -202,7 +207,6 @@ const FindWalletPage = ({ data, location }) => {
               m: 0,
             },
             svg: {
-              pointerEvents: "none",
               boxSize: 8,
               line: {
                 stroke: "primary.base",
@@ -227,16 +231,41 @@ const FindWalletPage = ({ data, location }) => {
               {t("page-find-wallet-active")}
             </Text>
           </Box>
-          {showMobileSidebar ? (
+          {isOpen ? (
             <Icon as={MdOutlineCancel} fill="primary.base" />
           ) : (
             <FilterBurgerIcon />
           )}
         </Box>
       </Box>
+      <Hide above="lg">
+        <Drawer isOpen={isOpen} placement="start" onClose={onClose} size="sm">
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader mb={4}>
+              <DrawerCloseButton my={2} />
+            </DrawerHeader>
+            <DrawerBody position="relative">
+              <WalletFilterSidebar
+                display={{ base: isOpen ? "block" : "none", lg: "none" }}
+                {...{
+                  filters,
+                  resetWalletFilter,
+                  updateFilterOption,
+                  updateFilterOptions,
+                  resetFilters,
+                  selectedPersona,
+                  setFilters,
+                  setSelectedPersona,
+                }}
+              />
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Hide>
       <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} w="full" gap={6} top="76px">
         <WalletFilterSidebar
-          ref={wrapperRef}
+          display={{ base: "none", lg: "block" }}
           {...{
             filters,
             resetWalletFilter,
@@ -246,7 +275,6 @@ const FindWalletPage = ({ data, location }) => {
             selectedPersona,
             setFilters,
             setSelectedPersona,
-            showMobileSidebar,
           }}
         />
         <Box
@@ -271,10 +299,6 @@ const FindWalletPage = ({ data, location }) => {
             table: {
               m: 0,
             },
-          }}
-          display={{
-            base: showMobileSidebar ? "none" : "block",
-            sm: "block",
           }}
         >
           <WalletTable
