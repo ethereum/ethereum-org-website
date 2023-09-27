@@ -32,7 +32,7 @@ Die Ethereum-Community hat das Ziel, global und inklusiv zu sein. Doch ein Groß
 
 Das Übersetzungsprogramm von ethereum.org zielt darauf ab, Ethereum jedermann zugänglich zu machen, indem ethereum.org und andere Ethereum-Inhalte in so viele Sprachen wie möglich übersetzt werden.
 
-Lesen Sie mehr über a href="/contributing/translation-program/mission-and-vision">Mission und Vision</a> des Übersetzungsprogramms auf ethereum.org.
+Lesen Sie mehr über <a href="/contributing/translation-program/mission-and-vision">Mission und Vision</a> des Übersetzungsprogramms auf ethereum.org.
 
 ### Unsere bisherigen Fortschritte {#our-progress}
 
