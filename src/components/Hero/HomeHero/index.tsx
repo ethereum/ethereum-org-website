@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useTranslation } from "react-i18next"
 import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
-import ButtonLink from "../../ButtonLink"
+import { ButtonLink } from "../../Buttons"
 import Morpher from "../../Morpher"
 import Translation from "../../Translation"
 import GatsbyImage from "../../GatsbyImage"
