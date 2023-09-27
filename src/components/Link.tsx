@@ -1,5 +1,10 @@
 import { FC, RefAttributes } from "react"
-import { Icon, VisuallyHidden, forwardRef } from "@chakra-ui/react"
+import {
+  Icon,
+  VisuallyHidden,
+  forwardRef,
+  Link as ChakraLink,
+} from "@chakra-ui/react"
 import { RxExternalLink } from "react-icons/rx"
 import { useRouter } from "next/router"
 import {
@@ -68,35 +73,30 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
     href = new URL(DISCORD_PATH, SITE_URL).href
   }
 
+  if (isExternal) {
+    return (
+      <ChakraLink ref={ref} href={href} isExternal {...rest}>
+        {children}
+        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+        {!hideArrow && (
+          <Icon
+            as={RxExternalLink}
+            boxSize="6"
+            p="1"
+            verticalAlign="middle"
+            me="-1"
+          />
+        )}
+      </ChakraLink>
+    )
+  }
+
   return (
-    // @ts-ignore: `isExternal` is missing from the NextLink types
-    <NextLink ref={ref} href={href} isExternal={isExternal} {...rest}>
+    <NextLink ref={ref} href={href} {...rest}>
       {children}
-      {isExternal && <ExternalLinkContent hideArrow={hideArrow} />}
     </NextLink>
   )
 })
-
-const ExternalLinkContent = ({
-  hideArrow,
-}: {
-  hideArrow: BaseProps["hideArrow"]
-}) => {
-  return (
-    <>
-      <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-      {!hideArrow && (
-        <Icon
-          as={RxExternalLink}
-          boxSize="6"
-          p="1"
-          verticalAlign="middle"
-          me="-1"
-        />
-      )}
-    </>
-  )
-}
 
 const InlineLink: FC<LinkProps> = forwardRef((props, ref) => (
   <BaseLink data-inline-link ref={ref} {...props} />
