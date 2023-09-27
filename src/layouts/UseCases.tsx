@@ -78,9 +78,7 @@ const Heading4 = (props: HeadingProps) => (
   />
 )
 
-const Divider = () => (
-  <Box my={16} w="10%" h={1} bgColor="primary.hover" />
-)
+const Divider = () => <Box my={16} w="10%" h={1} bgColor="primary.hover" />
 
 const Pre = (props: ChildOnlyProp) => (
   <chakra.pre
@@ -141,6 +139,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
     minHeight="608px"
     maxHeight={{ base: "full", lg: "608px" }}
     width="full"
+    position="relative"
     {...props}
   />
 )
@@ -153,42 +152,23 @@ const TitleCard = (props: ChildOnlyProp) => {
       bg={{ base: "ednBackground", lg: "background.base" }}
       border="1px"
       borderColor="border"
-      borderRadius="base"
+      borderRadius={{ base: "none", lg: "base" }}
       boxShadow={{ lg: boxShadow }}
       flexDirection="column"
       maxWidth={{ base: "full", lg: "container.sm" }}
-      mt={{ base: 0, lg: 12 }}
       zIndex="docked"
       p={8}
-      position={{ base: "relative", lg: "absolute" }}
-      top={{ lg: 24 }}
-      left={{ lg: 24 }}
+      position="absolute"
+      top={{ base: "unset", lg: 24 }}
+      left={{ base: 0, lg: 24 }}
+      bottom={{ base: 0, lg: "unset" }}
+      right={{ base: 0, lg: "unset" }}
       {...props}
     />
   )
 }
 
 const Title = (props: ChildOnlyProp) => <Heading1 mt={4} {...props} />
-
-// const HeroImage = (props) => (
-//   <Image
-//     alignSelf={{
-//       base: "center",
-//       lg: "normal",
-//     }}
-//     backgroundSize="cover"
-//     flex="1 1 100%"
-//     right={0}
-//     bottom={0}
-//     width="full"
-//     overflow="initial"
-//     maxH={{
-//       base: "340px",
-//       lg: "full",
-//     }}
-//     {...props}
-//   />
-// )
 
 const Page = (props: FlexProps) => (
   <Flex
@@ -379,16 +359,16 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
   return (
     <Box position="relative" width="full">
       <Show above="lg">
-        <BannerNotification shouldShow>
+        <BannerNotification shouldShow zIndex="sticky">
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
-          <aside>
+          <Text m={0}>
             Uses of Ethereum are always developing and evolving. Add any info
             you think will make things clearer or more up to date.
             {/* <Translation id="template-usecase-banner" />{" "} */}
             {/* <InlineLink to={absoluteEditPath}>
               <Translation id="template-usecase-edit-link" />
             </InlineLink> */}
-          </aside>
+          </Text>
         </BannerNotification>
       </Show>
       <HeroContainer>
@@ -410,8 +390,17 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
             /> */}
           </Box>
         </TitleCard>
-        {/* <HeroImage
-          image={getImage(frontmatter.image)!}
+        <Image
+          alignSelf={{ base: "center", lg: "normal" }}
+          position="absolute"
+          top={0}
+          right={0}
+          bottom={0}
+          objectFit="cover"
+          width={1000}
+          height={610}
+          maxH={{ base: "340px", lg: "full" }}
+          src={frontmatter.image}
           alt={frontmatter.alt || ""}
           maxW={{
             base: useCase === "defi" ? "full" : "min(405px, 98%)",
@@ -420,7 +409,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
               (useCase === "defi" && "80%") ||
               "640px",
           }}
-        /> */}
+        />
       </HeroContainer>
       <Show above="lg">
         <Flex
