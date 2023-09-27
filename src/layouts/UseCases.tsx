@@ -16,14 +16,14 @@ import {
   type BoxProps,
   Hide,
 } from "@chakra-ui/react"
-// import { type ComponentProps } from "react"
+import { type ComponentProps } from "react"
 import { MdExpandMore } from "react-icons/md"
 
 import BannerNotification from "@/components/BannerNotification"
-// import ButtonDropdown, {
-//   type IProps as ButtonDropdownProps,
-//   List as ButtonDropdownList,
-// } from "@/components/ButtonDropdown"
+import ButtonDropdown, {
+  type IProps as ButtonDropdownProps,
+  List as ButtonDropdownList,
+} from "@/components/ButtonDropdown"
 import ButtonLink from "@/components/ButtonLink"
 import Card from "@/components/Card"
 // import Contributors from "@/components/Contributors"
@@ -206,18 +206,18 @@ const InfoTitle = (props: ChildOnlyProp) => (
   />
 )
 
-// const StyledButtonDropdown = ({
-//   list,
-//   ...rest
-// }: FlexProps & Pick<ButtonDropdownProps, "list">) => (
-//   <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
-//     <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
-//   </Flex>
-// )
+const StyledButtonDropdown = ({
+  list,
+  ...rest
+}: FlexProps & Pick<ButtonDropdownProps, "list">) => (
+  <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
+    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
+  </Flex>
+)
 
-// const MobileButtonDropdown = (
-//   props: ComponentProps<typeof StyledButtonDropdown>
-// ) => <StyledButtonDropdown mb={0} {...props} />
+const MobileButtonDropdown = (
+  props: ComponentProps<typeof StyledButtonDropdown>
+) => <StyledButtonDropdown mb={0} {...props} />
 
 const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const lgBp = useToken("breakpoints", "lg")
@@ -286,75 +286,75 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
     useCase = "nft"
   }
 
-  // const dropdownLinks: ButtonDropdownList = {
-  //   text: "Ethereum use cases", // t("template-usecase-dropdown"),
-  //   ariaLabel: "Use case dropdown menu", // t("template-usecase-dropdown-aria"),
-  //   items: [
-  //     {
-  //       text: "Decentralized finance (DeFi)", // t("template-usecase-dropdown-defi"),
-  //       to: "/defi/",
-  //       matomo: {
-  //         eventCategory: "use cases menu",
-  //         eventAction: "click",
-  //         eventName: "defi",
-  //       },
-  //     },
-  //     {
-  //       text: "Non-fungible tokens (NFTs)", // t("template-usecase-dropdown-nft"),
-  //       to: "/nft/",
-  //       matomo: {
-  //         eventCategory: "use cases menu",
-  //         eventAction: "click",
-  //         eventName: "nft",
-  //       },
-  //     },
-  //     {
-  //       text: "Decentralized autonomous organisations (DAOs)", // t("template-usecase-dropdown-dao"),
-  //       to: "/dao/",
-  //       matomo: {
-  //         eventCategory: "use cases menu",
-  //         eventAction: "click",
-  //         eventName: "dao",
-  //       },
-  //     },
-  //     {
-  //       text: "Decentralized social networks", // t("template-usecase-dropdown-social-networks"),
-  //       to: "/social-networks/",
-  //       matomo: {
-  //         eventCategory: "use cases menu",
-  //         eventAction: "click",
-  //         eventName: "social-networks",
-  //       },
-  //     },
-  //     {
-  //       text: "Decentralized identity", // t("template-usecase-dropdown-identity"),
-  //       to: "/decentralized-identity/",
-  //       matomo: {
-  //         eventCategory: "use cases menu",
-  //         eventAction: "click",
-  //         eventName: "decentralized-identity",
-  //       },
-  //     },
-  //     {
-  //       text: "Decentralized science (DeSci)", // t("template-usecase-dropdown-desci"),
-  //       to: "/desci/",
-  //       matomo: {
-  //         eventCategory: "use cases menu",
-  //         eventAction: "click",
-  //         eventName: "desci",
-  //       },
-  //     },
-  //     {
-  //       text: "Regenerative finance (ReFi)", // t("template-usecase-dropdown-refi"),
-  //       to: "/refi/",
-  //       matomo: {
-  //         eventCategory: "use cases menu",
-  //         eventAction: "click",
-  //         eventName: "refi",
-  //       },
-  //     },
-  //   ],
-  // }
+  const dropdownLinks: ButtonDropdownList = {
+    text: "Ethereum use cases", // t("template-usecase-dropdown"),
+    ariaLabel: "Use case dropdown menu", // t("template-usecase-dropdown-aria"),
+    items: [
+      {
+        text: "Decentralized finance (DeFi)", // t("template-usecase-dropdown-defi"),
+        to: "/defi/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "defi",
+        },
+      },
+      {
+        text: "Non-fungible tokens (NFTs)", // t("template-usecase-dropdown-nft"),
+        to: "/nft/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "nft",
+        },
+      },
+      {
+        text: "Decentralized autonomous organisations (DAOs)", // t("template-usecase-dropdown-dao"),
+        to: "/dao/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "dao",
+        },
+      },
+      {
+        text: "Decentralized social networks", // t("template-usecase-dropdown-social-networks"),
+        to: "/social-networks/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "social-networks",
+        },
+      },
+      {
+        text: "Decentralized identity", // t("template-usecase-dropdown-identity"),
+        to: "/decentralized-identity/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "decentralized-identity",
+        },
+      },
+      {
+        text: "Decentralized science (DeSci)", // t("template-usecase-dropdown-desci"),
+        to: "/desci/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "desci",
+        },
+      },
+      {
+        text: "Regenerative finance (ReFi)", // t("template-usecase-dropdown-refi"),
+        to: "/refi/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "refi",
+        },
+      },
+    ],
+  }
 
   return (
     <Box position="relative" width="full">
@@ -365,9 +365,10 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
             Uses of Ethereum are always developing and evolving. Add any info
             you think will make things clearer or more up to date.
             {/* <Translation id="template-usecase-banner" />{" "} */}
-            {/* <InlineLink to={absoluteEditPath}>
-              <Translation id="template-usecase-edit-link" />
-            </InlineLink> */}
+            {/* <InlineLink to={absoluteEditPath}> */}
+            {/* <Translation id="template-usecase-edit-link" /> */}
+            Edit page
+            {/* </InlineLink> */}
           </Text>
         </BannerNotification>
       </Show>
@@ -433,7 +434,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
         /> */}
         <Show above="lg">
           <InfoColumn>
-            {/* <StyledButtonDropdown list={dropdownLinks} /> */}
+            <StyledButtonDropdown list={dropdownLinks} />
             <InfoTitle>{frontmatter.title}</InfoTitle>
 
             {/* {tocItems && (
@@ -450,7 +451,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
         </ContentContainer>
         <Hide above="lg">
           <MobileButton>
-            {/* <MobileButtonDropdown list={dropdownLinks} /> */}
+            <MobileButtonDropdown list={dropdownLinks} />
           </MobileButton>
         </Hide>
       </Page>
