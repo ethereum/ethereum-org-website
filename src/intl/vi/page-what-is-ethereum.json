@@ -1,7 +1,7 @@
 {
   "page-what-is-ethereum-alt-img-bazaar": "Ảnh minh họa một người đang nhìn vào thị trường đại diện cho Ethereum",
   "page-what-is-ethereum-alt-img-comm": "Ảnh minh hoạ các thành viên trong cộng đồng Ethereum đang làm việc cùng nhau",
-  "page-what-is-ethereum-alt-img-lego": "Ảnh minh hoạ bàn tay tạo ra biểu trưng ETH làm bằng các viên gạch lego",
+  "page-what-is-ethereum-alt-img-lego": "Ảnh minh hoạ bàn tay tạo ra logo của ETH làm bằng các viên gạch lego",
   "page-what-is-ethereum-banking-card": "Ngân hàng dành cho tất cả mọi người",
   "page-what-is-ethereum-banking-card-desc": "Không phải ai cũng được tiếp cận các dịch vụ tài chính. Nhưng tất cả những gì bạn cần là kết nối Ethereum và các sản phẩm cho vay, mượn và tiết kiệm với một kết nối mạng được xây dựng trên đó.",
   "page-what-is-ethereum-build": "Bắt tay cùng Ethereum",
@@ -89,6 +89,7 @@
   "energy-consumption-chart-netflix-label": "Netflix",
   "energy-consumption-chart-eth-pow-label": "ETH PoW",
   "energy-consumption-chart-gaming-us-label": "Chơi game ở Mỹ",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
   "energy-consumption-chart-paypal-label": "PayPal",
   "energy-consumption-chart-eth-pos-label": "ETH PoS",
   "page-what-is-ethereum-the-merge-update": "Cập nhật của The Merge",

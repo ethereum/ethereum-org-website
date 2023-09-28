@@ -31,21 +31,21 @@ DeFi'nin potansiyelini görmenin en iyi yollarından biri, bugün var olan sorun
 - Finansal hizmetler ödeme almanızı engelleyebilir.
 - Finansal hizmetlerin gizli bir ücreti, kişisel verilerinizdir.
 - Hükümetler ve merkezi kurumlar piyasaları istedikleri zaman kapatabilirler.
-- İşlem saatleri genellikle belirli bir saat diliminin çalışma saatleriyle sınırlıdır.
+- İşlem saatleri genelde belirli bir saat diliminin iş saatleriyle sınırlıdır.
 - Para transferleri içsel insan süreçleri nedeniyle günler alabilir.
 - Aracı kurumların pay almaya ihtiyacı olduğu için finansal hizmetler için bir ücret bulunur.
 
 ### Bir karşılaştırma {#defi-comparison}
 
-| DeFi                                                                                                               | Geleneksel finans                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| Paranızı siz saklarsınız.                                                                                          | Paranız şirketler tarafından saklanır.                                                                                  |
-| Paranızın nereye gittiğini ve nasıl harcandığını siz kontrol edersiniz.                                            | Riskli kişilere borç vermek gibi yollarla paranızı kötü yönetmemeleri için şirketlere güvenmeniz gerekir.               |
-| Para transferleri dakikalar içinde gerçekleşir.                                                                    | Manuel işlemler nedeniyle ödemeler günler sürebilmektedir.                                                              |
-| İşlem etkinliği takma addır.                                                                                       | Finansal etkinlik, kimliğinizle sıkı sıkıya bağlıdır.                                                                   |
-| DeFi herkese açıktır.                                                                                              | Finansal hizmetlerden yararlanmak için başvurmanız gerekir.                                                             |
-| Piyasalar her zaman açıktır.                                                                                       | Çalışanların molaya ihtiyacı olduğu için piyasalar kapanır.                                                             |
-| Şeffaflık üzerine kurulmuştur: Herkes bir ürünün verilerine bakabilir ve sistemin nasıl çalıştığını inceleyebilir. | Finansal kurumlar kapalı kutulardır: Kredi geçmişlerini, yönetilen varlıklarının kaydını vb. görmeyi talep edemezsiniz. |
+| DeFi                                                                                                               | Geleneksel finans                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| Paranızı siz saklarsınız.                                                                                          | Paranız şirketler tarafından saklanır.                                                                                   |
+| Paranızın nereye gittiğini ve nasıl harcandığını siz kontrol edersiniz.                                            | Borç vermesi riskli olan kişilere borç vermek gibi paranızı yanlış şekilde yönetmemeleri için şirketlere güvenmelisiniz. |
+| Para transferleri dakikalar içinde gerçekleşir.                                                                    | Manuel işlemler nedeniyle ödemeler günler sürebilmektedir.                                                               |
+| İşlem etkinliği takma addır.                                                                                       | Finansal etkinlik, kimliğinizle sıkı sıkıya bağlıdır.                                                                    |
+| DeFi herkese açıktır.                                                                                              | Finansal hizmetlerden yararlanmak için başvurmanız gerekir.                                                              |
+| Piyasalar her zaman açıktır.                                                                                       | Çalışanların molaya ihtiyacı olduğu için piyasalar kapanır.                                                              |
+| Şeffaflık üzerine kurulmuştur: Herkes bir ürünün verilerine bakabilir ve sistemin nasıl çalıştığını inceleyebilir. | Finansal kurumlar kapalı kutulardır: Kredi geçmişlerini, yönetilen varlıklarının kaydını vb. görmeyi talep edemezsiniz.  |
 
 <ButtonLink to="/dapps/?category=finance">
   DeFi uygulamalarını keşfedin
@@ -53,7 +53,7 @@ DeFi'nin potansiyelini görmenin en iyi yollarından biri, bugün var olan sorun
 
 ## Bitcoin ile başladı... {#bitcoin}
 
-Bitcoin, birçok yönden ilk DeFi uygulamasıydı. Bitcoin, değere gerçekten sahip olmanızı, onu kontrol etmenizi ve dünyanın her yerine göndermenizi sağlar. Bunu, birbirine güvenmeyen çok sayıda insanın, güvenilir bir aracıya ihtiyaç duymadan bir hesap defteri üzerinde anlaşmaya varması için bir yol sağlayarak yapar. Bitcoin herkese açıktır ve hiç kimsenin kurallarını değiştirme yetkisi yoktur. Bitcoin'in kıtlığı ve açıklığı gibi kuralları teknolojinin içine yazılmıştır. Hükümetlerin tasarruflarınızı değersizleştiren para basabileceği ve şirketlerin piyasaları kapatabileceği geleneksel finans gibi değil.
+Bitcoin, birçok yönden ilk DeFi uygulamasıydı. Bitcoin, değere gerçekten sahip olmanızı, onu kontrol etmenizi ve dünyanın her yerine göndermenizi sağlar. Bunu, birbirine güvenmeyen çok sayıda insanın, güvenilir bir aracıya ihtiyaç duymadan bir hesap defteri üzerinde anlaşmaya varması için bir yol sağlayarak yapar. Bitcoin herkese açıktır ve hiç kimsenin kurallarını değiştirme yetkisi yoktur. Bitcoin'in kıtlığı ve açıklığı gibi kuralları teknolojinin içine yazılmıştır. Geleneksel finans sisteminde hükümetler, paranızın değerini düşürecek paralar basabilir ve şirketler pazarları kapatabilir.
 
 Ethereum bunun üzerine kurulu. Bitcoin gibi, kurallar sizin aleyhinize değişemez ve herkesin erişimi vardır. Ama aynı zamanda [akıllı sözleşmeler](/glossary#smart-contract) kullanarak bu dijital parayı programlanabilir hâle getirir, böylece değer depolamanın ve göndermenin ötesine geçebilirsiniz.
 
@@ -133,7 +133,7 @@ Merkezi olmayan bir borç veren kullanmanın birçok avantajı vardır...
 
 Bugün, borç vermek ve borç almak, ilgili kişilerin etrafında dönmektedir. Bankaların, borç vermeden önce bir krediyi geri ödeme olasılığınız olup olmadığını bilmesi gerekir.
 
-Merkezi olmayan borç verme, tarafların kendilerini tanımlamasına gerek kalmadan çalışır. Bunun yerine borç alan kişi, kredisi geri ödenmezse borç verenin otomatik olarak alacağı bir teminat koymalıdır. Bazı borç verenler, NFT'leri bile teminat olarak kabul ederler. NFT'ler, bir tablo gibi benzersiz bir varlığın tapusudur. [NFT'ler hakkında daha fazla bilgi](/nft/)
+Merkezi olmayan borç verme, tarafların kendilerini tanımlamasına gerek kalmadan çalışır. Böylece, borç alan kişi kredisini geri ödemezse kredi verenin otomatik olarak alacağı bir teminat sunulmuş olur. Bazı borç verenler, NFT'leri bile teminat olarak kabul ederler. NFT'ler, bir tablo gibi benzersiz bir varlığın tapusudur. [NFT'ler hakkında daha fazla bilgi](/nft/)
 
 Bu, kredi kontrolü olmadan veya özel bilgileri teslim etmeden borç para almanızı sağlar.
 
@@ -143,7 +143,7 @@ Merkezi olmayan bir borç veren kullandığınızda, yalnızca seçtiğiniz bank
 
 #### Vergi açısından verimlilik {#tax-efficiencies}
 
-Borçlanma, ETH'nizi satmanıza (vergiye tabi bir eylem) gerek kalmadan ihtiyacınız olan fonlara erişmenizi sağlayabilir. Bunun yerine, bir sabit para (stablecoin) kredisi için teminat olarak ETH'yi kullanabilirsiniz. Bu, size ihtiyacınız olan nakit akışını sağlar ve ETH'nizi korumanıza izin verir. Sabit paralar, ETH gibi değerlerinde dalgalanma olmadığı için nakit ihtiyacınız olduğunda çok daha iyi olan token'lardır. [Sabit paralar hakkında daha fazla bilgi](#stablecoins)
+Borçlanma, ETH'nizi satmanıza (vergiye tabi bir eylem) gerek kalmadan ihtiyacınız olan fonlara erişmenizi sağlayabilir. Bunun yerine, bir sabit para kredisi için teminat olarak ETH'yi kullanabilirsiniz. Bu, size ihtiyacınız olan nakit akışını sağlar ve ETH'nizi korumanıza izin verir. Sabit paralar, ETH gibi değerlerinde dalgalanma olmadığı için nakit ihtiyacınız olduğunda çok daha iyi olan token'lardır. [Sabit paralar hakkında daha fazla bilgi](#stablecoins)
 
 #### Hızlı krediler (flash loan) {#flash-loans}
 
@@ -233,7 +233,7 @@ Merkezi bir borsa kullandığınızda, varlıklarınızı ticaretten önce yatı
 
 Ethereum'da, seçtiğiniz bir stratejiye dayalı olarak portföyünüzü büyütmeye çalışacak fon yönetimi ürünleri bulunmaktadır. Bu otomatiktir, herkese açıktır ve kârınızdan pay alan bir insan yöneticiye ihtiyaç duymaz.
 
-İyi bir örnek: [DeFi Pulse Index fonu (DPI)](https://defipulse.com/blog/defi-pulse-index/). Bu, portföyünüzün her zaman [piyasa değerine göre en iyi DeFi token'larını](https://www.coingecko.com/en/defi) içermesini sağlamak için otomatik olarak yeniden dengelenen bir fondur. Hiçbir zaman herhangi bir ayrıntıyı yönetmek zorunda kalmazsınız ve istediğiniz zaman fondan çıkabilirsiniz.
+İyi bir örnek: [DeFi Pulse Index fonu (DPI)](https://defipulse.com/blog/defi-pulse-index/). Bu, sizin portföyünüzün her zaman [piyasa değerine göre en iyi DeFi token'larını](https://www.coingecko.com/en/defi) içermesini sağlamak için otomatik olarak yeniden dengelenen bir fondur. Hiçbir zaman herhangi bir ayrıntıyı yönetmek zorunda kalmazsınız ve istediğiniz zaman fondan çıkabilirsiniz.
 
 <ButtonLink to="/dapps/?category=finance">
   Yatırım dapp'lerini gör
@@ -274,7 +274,7 @@ Bu, 1 dolarlık 100 bağışa sahip olan A Projesi'nin, tek bir 10.000 dolarlık
 
 Merkezi olmayan sigorta; sigortayı daha ucuz, ödemesi daha hızlı ve daha şeffaf hâle getirmeyi amaçlar. Daha fazla otomasyonla, kapsama alanı daha ekonomiktir ve ödemeler çok daha hızlıdır. Tazminatınıza karar vermek için kullanılan veriler tamamen şeffaftır.
 
-Ethereum ürünleri, herhangi bir yazılım gibi, hatalardan ve açıklardan zarar görebilir. Dolayısıyla şu anda bu alandaki birçok sigorta ürünü, kullanıcılarını fon kaybına karşı korumaya odaklanıyor. Ancak hayatın karşımıza çıkarabileceği her şeyi kapsamaya başlayan projeler var. Güzel bir örnek: [Kenya'daki küçük çiftçileri kuraklık ve sele karşı korumayı](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc) amaçlayan Etherisc'in Hasat teminatı. Merkezi olmayan sigorta, genellikle geleneksel sigortadan fiyatlandırılan çiftçiler için daha ucuz teminat sağlayabilir.
+Ethereum ürünleri, herhangi bir yazılım gibi, hatalardan ve açıklardan zarar görebilir. Dolayısıyla şu anda bu alandaki birçok sigorta ürünü, kullanıcılarını fon kaybına karşı korumaya odaklanıyor. Ancak hayatın karşımıza çıkarabileceği her şeyi kapsamaya başlayan projeler mevcuttur. Güzel bir örnek: [Kenya'daki küçük çiftçileri kuraklık ve sele karşı korumayı](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc) amaçlayan Etherisc'in Hasat teminatı. Merkezi olmayan sigorta, genellikle geleneksel sigortadan fiyatlandırılan çiftçiler için daha ucuz teminat sağlayabilir.
 
 <ButtonLink to="/dapps/?category=finance">
   Sigorta dapp'lerini gör
@@ -317,7 +317,7 @@ DeFi'yi katmanlar halinde düşünebilirsiniz:
 
 1. Blok zinciri: Ethereum, işlem geçmişini ve hesapların durumunu içerir.
 2. Varlıklar: [ETH](/eth/) ve diğer token'lar (para birimleri).
-3. Protokoller: Varlıkların merkezi olmayan şekilde borç verilmesin sağlayan bir hizmet gibi işlevsellik sağlayan [akıllı sözleşmeler](/glossary/#smart-contract).
+3. Protokol – [akıllı sözleşmeler](/glossary/#smart-contract) işlevsellik sağlar; örneğin, bu varlıklara merkeziyetsiz borçlanmaya izin veren bir servis sağlar.
 4. [Uygulamalar](/dapps/): Protokolleri yönetmek ve bunlara erişmek için kullandığımız ürünler.
 
 ## DeFi oluşturun {#build-defi}
@@ -338,7 +338,7 @@ DeFi, açık kaynaklı bir akımdır. DeFi protokolleri ve uygulamaları; incele
 
 ### DeFi makaleleri {#defi-articles}
 
-- [DeFi'ye yeni başlayanlar için rehber](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 Ocak 2020_
+- [DeFi Başlangıç Rehberi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 Ocak 2020_
 
 ### Videolar {#videos}
 

@@ -157,6 +157,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _Un sistema de nomenclatura descentralizado en la cadena, identificadores legibles por máquinas, como direcciones del cartera Ethereum, hashes de contenido y metadatos._
 - **[SpruceID](https://www.spruceid.com/)** - _Un proyecto de identidad descentralizado que permite a los usuarios controlar la identidad digital con cuentas de Ethereum y perfiles ENS en lugar de depender de servicios de terceros._
+- **[Servicio de Atestación de Ethereum (EAS)](https://attest.sh/)**: _Un registro/protocolo descentralizado para hacer atestaciones dentro o fuera de la cadena sobre cualquier cosa._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (o PoH) es un sistema de verificación de identidad social construido en Ethereum._
 - **[Brillo](https://www.brightid.org/)** - _Una red de identidad social descentralizada y de código abierto que busca reformar la verificación de identidad a través de la creación y el análisis de un gráfico social._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _Un agregador de identidad digital descentralizado._
@@ -175,7 +176,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - [Identidad descentralizada (bonificación de sesión Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un vídeo muy aclarador de la identidad descentralizada explicado por Andreas_
 - [Iniciar sesión con Ethereum e Identity descentralizada con Ceramic, IDX, React, y 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutorial de YouTube sobre la construcción de un sistema de gestión de identidad para crear, leer, y actualizar el perfil de un usuario usando su cartera Ethereum por Nader Dabit_
 - [BrightID - Identidad descentralizada en Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _episodio de pódcast Bankless abordando BrightID, una solución de identidad descentralizada para Ethereum_
-- [Internet fuera de la cadena: Credenciales descentralizadas y verificables](https://www.youtube.com/watch?v=Ez_Bb6j87mg) — EthDenver 2022 presentación de Evin McMullen
+- [Internet fuera de la cadena: Credenciales descentralizadas y verificables](https://www.youtube.com/watch?v=Ez_Bb6j87mg) — _EthDenver 2022 presentación de Evin McMullen_
 
 ### Comunidades {#communities}
 
