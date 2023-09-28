@@ -1,25 +1,29 @@
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
-import React, { useMemo, useState } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import {
   RiPriceTag2Line,
   RiAuctionLine,
   RiFileTransferLine,
 } from "react-icons/ri"
 import { AnimatePresence, motion } from "framer-motion"
-import { Slider } from "./Slider"
-import { Web3App } from "./Web3App"
+import GatsbyImage from "../../../GatsbyImage"
+import { NotificationPopover } from "../../NotificationPopover"
 import { ProgressCta } from "../../ProgressCta"
 import { WalletHome } from "../../WalletHome"
-import type { PhoneScreenProps } from "../../interfaces"
 import type { TokenBalance } from "../../WalletHome/interfaces"
-import { defaultTokenBalances } from "../../constants"
-import { useEthPrice } from "../../../../hooks/useEthPrice"
 import { useNFT } from "../../WalletHome/hooks/useNFT"
-import GatsbyImage from "../../../GatsbyImage"
-import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "../../constants"
-import { EXAMPLE_APP_URL } from "./constants"
 import { Browser } from "./Browser"
-import { NotificationPopover } from "../../NotificationPopover"
+import { Slider } from "./Slider"
+import { Web3App } from "./Web3App"
+import {
+  defaultTokenBalances,
+  FALLBACK_ETH_PRICE,
+  USD_RECEIVE_AMOUNT,
+  BASE_ANIMATION_DELAY_SEC,
+} from "../../constants"
+import { EXAMPLE_APP_URL } from "./constants"
+import type { PhoneScreenProps } from "../../interfaces"
+import { useEthPrice } from "../../../../hooks/useEthPrice"
 
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav
@@ -45,6 +49,17 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
   }
+
+  // Enable ProgressCta button after short delay for first step
+  const [ctaDisabled, setCtaDisabled] = useState(step === 0)
+  useEffect(() => {
+    if (step !== 0) return
+    const timeout = setTimeout(() => {
+      setCtaDisabled(false)
+    }, BASE_ANIMATION_DELAY_SEC * 1000)
+    return () => clearTimeout(timeout)
+  }, [])
+
   return (
     <>
       {[0].includes(step) && <Browser progressStepper={progressStepper} />}
@@ -173,6 +188,7 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
       {[0, 1, 2, 3, 4].includes(step) && (
         <ProgressCta
           isAnimated={step === 0}
+          isDisabled={ctaDisabled}
           progressStepper={progressStepper}
           mb={step === 0 ? 16 : 0}
         >

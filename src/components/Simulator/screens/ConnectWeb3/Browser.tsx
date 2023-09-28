@@ -7,6 +7,7 @@ import { IoEllipsisHorizontalSharp } from "react-icons/io5"
 import { motion } from "framer-motion"
 import { NotificationPopover } from "../../NotificationPopover"
 import { EXAMPLE_APP_URL } from "./constants"
+import { BASE_ANIMATION_DELAY_SEC } from "../../constants"
 
 interface IProps extends FlexProps {
   progressStepper: () => void
@@ -16,7 +17,7 @@ export const Browser: React.FC<IProps> = ({ progressStepper, ...props }) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setTyping(true)
-    }, 3000)
+    }, BASE_ANIMATION_DELAY_SEC * 1000)
     return () => clearTimeout(timeout)
   }, [])
 
