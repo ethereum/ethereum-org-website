@@ -88,8 +88,10 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                   fontSize="lg"
                   fontWeight={600}
                   lineHeight={1.4}
-                  pb={isExpanded ? 3 : 0}
+                  py={1}
                   px={4}
+                  borderRadius={1}
+                  _hover={{ color: "primary.hover" }}
                 >
                   <AccordionButton
                     color="inherit"
@@ -97,11 +99,16 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                     fontSize="inherit"
                     p={0}
                     textAlign="initial"
+                    _hover={{ background: "transparent" }}
                   >
                     <Box as="span" flex={1}>
                       {filterOption.title}
                     </Box>
-                    <AccordionIcon color="primary.base" boxSize={9} />
+                    <AccordionIcon
+                      color="primary.base"
+                      boxSize={9}
+                      _hover={{ color: "primary.hover" }}
+                    />
                   </AccordionButton>
                 </Heading>
                 <AccordionPanel as={List} p={0} m={0}>
