@@ -1,5 +1,5 @@
 import React from "react"
-import { Link as GatsbyLink } from "gatsby"
+// import { Link as GatsbyLink } from "gatsby"
 import { SystemStyleObject, cssVar } from "@chakra-ui/react"
 import CustomLink, { BaseLink } from "../Link"
 import { getCustomId, Item, trimmedTitle } from "./utils"
@@ -48,8 +48,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
 
   return (
     <BaseLink
-      as={GatsbyLink}
-      to={url}
+      href={url}
       className={classes}
       textDecoration="none"
       display="inline-block"

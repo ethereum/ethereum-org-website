@@ -31,6 +31,7 @@ import {
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import { Frontmatter, NextPageWithLayout } from "@/lib/types"
 import { getLastModifiedDate } from "@/lib/utils/gh"
+import { generateTableOfContents, slugify } from "@/components/TableOfContents/utils"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -86,6 +87,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     "frontmatter",
   ])
   const frontmatter = markdown.frontmatter as Frontmatter
+  const tocItems = generateTableOfContents(markdown.content as string)
 
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
@@ -111,6 +113,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       frontmatter,
       lastUpdatedDate,
       layout,
+      tocItems,
     },
   }
 }
@@ -136,8 +139,9 @@ ContentPage.getLayout = (page: ReactElement) => {
     frontmatter,
     lastUpdatedDate,
     layout,
+    tocItems,
   } = page.props
-  const layoutProps = { slug, frontmatter, lastUpdatedDate }
+  const layoutProps = { slug, frontmatter, lastUpdatedDate, tocItems }
   const Layout = layoutMapping[layout]
   return (
     <RootLayout>

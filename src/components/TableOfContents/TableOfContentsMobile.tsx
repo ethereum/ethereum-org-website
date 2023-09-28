@@ -7,11 +7,10 @@ import {
   Icon,
   List,
   Show,
-  useToken,
 } from "@chakra-ui/react"
 import React from "react"
 import { MdExpandMore } from "react-icons/md"
-import Translation from "../Translation"
+// import Translation from "../Translation"
 import ItemsList from "./ItemsList"
 import { Item, outerListProps } from "./utils"
 
@@ -21,9 +20,6 @@ export interface IPropsTableOfContentsMobile {
 }
 
 const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
-  // TODO: Replace with direct token implementation after UI migration is completed
-  const lgBp = useToken("breakpoints", "lg")
-
   const { getButtonProps, getDisclosureProps, isOpen } = useDisclosure({
     defaultIsOpen: false,
   })
@@ -32,8 +28,7 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
   }
 
   return (
-    <Show below={lgBp}>
-      {/* TODO: switch `l` to `lg` after UI migration and use `hideBelow` prop */}
+    <Show below="lg">
       <Box
         as="aside"
         background="background.base"
@@ -51,7 +46,8 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
           {...getButtonProps()}
         >
           <chakra.span flex={1} fontWeight={500}>
-            <Translation id="on-this-page" />
+            {/* <Translation id="on-this-page" /> */}
+            On this page
           </chakra.span>
           <Icon
             as={MdExpandMore}

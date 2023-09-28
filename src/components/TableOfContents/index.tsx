@@ -1,25 +1,20 @@
-import React from "react"
-
 import {
   Box,
   BoxProps,
   calc,
-  Flex,
   Icon,
   List,
   ListItem,
   Show,
-  useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
-import { useActiveHash } from "../../hooks/useActiveHash"
+import { useActiveHash } from "@/hooks/useActiveHash"
 import ButtonLink from "../ButtonLink"
-import Translation from "../Translation"
+// import Translation from "../Translation"
 
 import Mobile from "./TableOfContentsMobile"
 import ItemsList from "./ItemsList"
 import { getCustomId, type Item, outerListProps } from "./utils"
-import { trackCustomEvent } from "../../utils/matomo"
 
 export { Item }
 
@@ -41,9 +36,6 @@ const TableOfContents: React.FC<IProps> = ({
   isMobile = false,
   ...rest
 }) => {
-  // TODO: Replace with direct token implementation after UI migration is completed
-  const lgBp = useToken("breakpoints", "lg")
-
   const titleIds: Array<string> = []
 
   if (!isMobile) {
@@ -77,8 +69,7 @@ const TableOfContents: React.FC<IProps> = ({
   }
 
   return (
-    // TODO: Switch to `above="lg"` after completion of Chakra Migration
-    <Show above={lgBp}>
+    <Show above="lg">
       <Box
         as="aside"
         position="sticky"
@@ -99,13 +90,15 @@ const TableOfContents: React.FC<IProps> = ({
                 to={editPath}
                 variant="outline"
               >
-                <Translation id="edit-page" />
+                {/* <Translation id="edit-page" /> */}
+                Edit page
               </ButtonLink>
             </ListItem>
           )}
           <ListItem>
             <Box mb={2} textTransform="uppercase">
-              <Translation id="on-this-page" />
+              {/* <Translation id="on-this-page" /> */}
+              On this page
             </Box>
             <List m={0}>
               <ItemsList

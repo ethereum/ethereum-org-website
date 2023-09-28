@@ -44,6 +44,8 @@ import MeetupList from "@/components/MeetupList"
 import RandomAppList from "@/components/RandomAppList"
 import SectionNav from "@/components/SectionNav"
 import { mdxTableComponents } from "@/components/Table"
+import TableOfContents from "@/components/TableOfContents"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import YouTube from "@/components/YouTube"
 
@@ -261,16 +263,13 @@ const MobileButton = (props: ChildOnlyProp) => {
   )
 }
 
-export const UseCasesLayout = ({ children, frontmatter, slug }) => {
-  if (/* !siteData ||  */ !frontmatter)
-    throw new Error(
-      "UseCases page template query does not return expected values"
-    )
+export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
+  if (!frontmatter)
+    throw new Error("UseCasesLayout missing expected `frontmatter` prop")
   if (!frontmatter?.title)
-    throw new Error("Required `title` property missing for use-cases template")
+    throw new Error("Required `title` property missing for UseCasesLayout")
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
-  // const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
   const summaryPoints = getSummaryPoints(frontmatter)
 
   // const { editContentUrl } = siteData.siteMetadata || {}
@@ -384,11 +383,11 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
                 </ListItem>
               ))}
             </UnorderedList>
-            {/* <TableOfContents
+            <TableOfContents
               items={tocItems}
-              maxDepth={frontmatter.sidebarDepth!}
+              maxDepth={2}
               isMobile
-            /> */}
+            />
           </Box>
         </TitleCard>
         <Image
@@ -437,12 +436,12 @@ export const UseCasesLayout = ({ children, frontmatter, slug }) => {
             <StyledButtonDropdown list={dropdownLinks} />
             <InfoTitle>{frontmatter.title}</InfoTitle>
 
-            {/* {tocItems && (
+            {tocItems && (
               <UpgradeTableOfContents
                 items={tocItems}
-                maxDepth={frontmatter.sidebarDepth!}
+                maxDepth={2}
               />
-            )} */}
+            )}
           </InfoColumn>
         </Show>
         <ContentContainer id="content">
