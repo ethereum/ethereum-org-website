@@ -432,7 +432,7 @@ export const walletOnboardingSimData: SimulatorData = {
       },
     ],
     ctaLabels: [
-      "Go to web app",
+      "Visit NFT market",
       "Connect wallet",
       "Connect to app",
       "Go to account",

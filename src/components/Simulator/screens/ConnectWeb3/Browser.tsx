@@ -1,23 +1,37 @@
-import React from "react"
-import {
-  Box,
-  type FlexProps,
-  Text,
-  Icon,
-  Flex,
-  Grid,
-  Button,
-} from "@chakra-ui/react"
+import React, { useEffect, useState } from "react"
+import { Box, type FlexProps, Text, Icon, Flex } from "@chakra-ui/react"
 import { BsTriangle } from "react-icons/bs"
 import { PiMagnifyingGlass } from "react-icons/pi"
+import { TbWorldWww } from "react-icons/tb"
 import { IoEllipsisHorizontalSharp } from "react-icons/io5"
-import { NFTSupportIcon } from "../../../icons/wallets/NFTSupportIcon"
+import { motion } from "framer-motion"
 import { NotificationPopover } from "../../NotificationPopover"
+import { EXAMPLE_APP_URL } from "./constants"
 
 interface IProps extends FlexProps {
   progressStepper: () => void
 }
 export const Browser: React.FC<IProps> = ({ progressStepper, ...props }) => {
+  const [typing, setTyping] = useState(false)
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setTyping(true)
+    }, 3000)
+    return () => clearTimeout(timeout)
+  }, [])
+
+  const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.12 },
+    },
+  }
+  const letter = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0 } },
+  }
+
   return (
     <Flex direction="column" h="full" bg="body.light" {...props}>
       <Box bg="background.highlight" w="full" px={3} pt={9} pb={3}>
@@ -25,53 +39,47 @@ export const Browser: React.FC<IProps> = ({ progressStepper, ...props }) => {
           title="Example walkthrough"
           content="Try logging into a real app with your wallet when finished here"
         >
-          <Box bg="background.base" w="full" borderRadius="base" px={3} py={2}>
-            <Text color="disabled" cursor="default">
-              Search or enter address
-            </Text>
-          </Box>
+          <Flex
+            bg="background.base"
+            borderRadius="base"
+            px={3}
+            py={2}
+            align="center"
+            color="disabled"
+            cursor="default"
+          >
+            <Box
+              borderInlineEnd="1px"
+              borderColor="background.highlight"
+              flex={1}
+            >
+              {typing ? (
+                <Text
+                  as={motion.p}
+                  variants={sentence}
+                  initial="hidden"
+                  animate="visible"
+                  color="body.medium"
+                >
+                  {EXAMPLE_APP_URL.split("").map((char, index) => (
+                    <motion.span key={char + "-" + index} variants={letter}>
+                      {char}
+                    </motion.span>
+                  ))}
+                </Text>
+              ) : (
+                <Text>Search or enter website</Text>
+              )}
+            </Box>
+            <Icon as={TbWorldWww} ms={3} />
+          </Flex>
         </NotificationPopover>
       </Box>
-      <Box p={8} flex={1}>
-        <Button
-          variant="ghost"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          data-group
-          onClick={progressStepper}
-          gap={4}
-          p={0}
-        >
-          <Grid
-            bg="background.highlight"
-            borderRadius="lg"
-            placeItems="center"
-            w={16}
-            h={16}
-            _groupHover={{ bg: "primary.hover" }}
-          >
-            <Icon
-              as={NFTSupportIcon}
-              color="body.base"
-              w={10}
-              h={10}
-              _groupHover={{ color: "background.base" }}
-            />
-          </Grid>
-          <Box position="relative">
-            <Text
-              fontWeight="bold"
-              color="body.base"
-              textAlign="center"
-              m={0}
-              _groupHover={{ color: "primary.hover" }}
-            >
-              NFT Market
-            </Text>
-          </Box>
-        </Button>
-      </Box>
+
+      <Flex flex={1} justify="center" pt={{ base: 20, md: 24 }}>
+        <Icon as={TbWorldWww} fontSize="8xl" strokeWidth="1" color="disabled" />
+      </Flex>
+
       <Flex
         bg="background.highlight"
         w="full"
