@@ -68,7 +68,7 @@ Kurtosis is a build system for multi-container test environments which enables d
 
 The Ethereum Kurtosis package locally instantiates a containerized and parameterizable Ethereum testnet, with support for multiple different Execution Layer (EL) and Consensus Layer (CL) clients and an n-number of nodes. Kurtosis gracefully handles all local port mappings and service connections for easy dApp and smart contract prototyping and testing.
 
-- [Ethereum network package](https://github.com/kurtosis-tech/eth-network-package)
+- [Ethereum network package](https://github.com/kurtosis-tech/ethereum-package)
 - [Website](https://www.kurtosis.com/)
 - [Github](https://github.com/kurtosis-tech/kurtosis)
 - [Documentation](https://docs.kurtosis.com/)

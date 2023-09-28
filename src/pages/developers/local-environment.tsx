@@ -78,7 +78,7 @@ const ChooseStackPage = ({
     {
       id: "kurtosis",
       url: "https://www.kurtosis.com/",
-      githubUrl: "https://github.com/kurtosis-tech/kurtosis",
+      githubUrl: "https://github.com/kurtosis-tech/ethereum-package",
       background: "#000000",
       name: "Kurtosis",
       description: t("page-local-environment-kurtosis-desc"),
