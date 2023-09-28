@@ -30,12 +30,12 @@ const WalletFilterProfile = ({
 
   const getContainerBg = (idx: number) =>
     useColorModeValue(
-      selectedPersona === idx ? "primary200" : "primary100",
+      selectedPersona === idx ? "primary100" : "chakra-subtle-bg",
       selectedPersona === idx ? "primary900" : "black400"
     )
   const getContainerHoverBg = (idx: number) =>
     useColorModeValue(
-      "primary200",
+      "primary100",
       selectedPersona === idx ? "primary900" : "black500"
     )
 
@@ -110,7 +110,7 @@ const WalletFilterProfile = ({
                   }
                   outline="1.5px solid"
                   outlineColor={
-                    selectedPersona === idx ? "primary.base" : "text"
+                    selectedPersona === idx ? "primary.base" : "primary.base"
                   }
                   outlineOffset="3px"
                   fontSize={8}
@@ -124,7 +124,7 @@ const WalletFilterProfile = ({
                 pr={1}
                 pl={0}
                 lineHeight="1.7rem"
-                color="text"
+                color="primary.base"
               >
                 {persona.title}
               </Heading>
@@ -139,7 +139,7 @@ const WalletFilterProfile = ({
               transition="0.5s all"
               lineHeight={1.3}
               borderTop="1px solid"
-              borderTopColor="lightBorder"
+              borderTopColor="primary.base"
             >
               {persona.description}
             </Box>

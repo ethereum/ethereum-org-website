@@ -56,7 +56,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
 }) => {
   const { filterOptions, setShowOptions } = useWalletFilterFeature(restProps)
 
-  const filterPanelBg = useColorModeValue("primary100", "black400")
+  const filterPanelBg = useColorModeValue("chakra-subtle-bg", "black400")
   return (
     <Accordion
       as={VStack}
