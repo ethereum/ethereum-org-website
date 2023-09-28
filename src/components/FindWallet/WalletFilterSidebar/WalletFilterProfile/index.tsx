@@ -160,6 +160,7 @@ const WalletFilterProfile = ({
                   lineHeight="0.95rem"
                   margin="0.1rem"
                   alignItems="center"
+                  wordBreak={"break-word"}
                   sx={{
                     p: {
                       mb: 0,
