@@ -1,7 +1,6 @@
 import React, { ReactNode, useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
   chakra,
@@ -21,7 +20,7 @@ import { FaGithub } from "react-icons/fa"
 import type { ChildOnlyProp, Context } from "../types"
 
 import ActionCard from "../components/ActionCard"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import CodeModal from "../components/CodeModal"
 import Codeblock from "../components/Codeblock"
@@ -32,6 +31,7 @@ import StatsBoxGrid from "../components/StatsBoxGrid"
 import Translation from "../components/Translation"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
 import Text from "../components/OldText"
+import GatsbyImage from "../components/GatsbyImage"
 import { isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 
@@ -284,8 +284,7 @@ const HomePage = ({
         title={t("page-index-meta-title")}
         description={t("page-index-meta-description")}
       />
-      <Img
-        as={GatsbyImage}
+      <GatsbyImage
         image={getImage(data.hero)!}
         alt={t("page-index-hero-image-alt")}
         loading="eager"
@@ -321,8 +320,7 @@ const HomePage = ({
               </SectionDecription>
             </Box>
             <ImageContainer>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 image={getImage(data.hackathon)!}
                 alt={t("page-index-get-started-image-alt")}
                 width="full"
@@ -367,8 +365,7 @@ const HomePage = ({
             </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer pl={{ lg: 8 }}>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               width="full"
               image={getImage(data.ethereum)!}
               alt={t("page-index-what-is-ethereum-image-alt")}
@@ -393,8 +390,7 @@ const HomePage = ({
             </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               width="full"
               image={getImage(data.impact)!}
               alt={t("page-index-defi-image-alt")}
@@ -419,8 +415,7 @@ const HomePage = ({
             </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               width="full"
               image={getImage(data.infrastructure)!}
               alt={t("page-index-nft-alt")}
@@ -449,8 +444,7 @@ const HomePage = ({
               </ButtonLinkRow>
             </FeatureContent>
             <ImageContainer>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 width="full"
                 image={getImage(data.future)!}
                 alt={t("page-index-internet-image-alt")}

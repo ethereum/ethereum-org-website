@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import {
   Box,
   BoxProps,
@@ -11,8 +11,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import * as url from "../utils/url"
 import { BaseLink } from "./Link"
+import GatsbyImage from "./GatsbyImage"
+import * as url from "../utils/url"
 
 export type CardListItem = {
   title?: ReactNode
@@ -57,9 +58,7 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
 
   return (
     <CardContainer {...rest}>
-      {image && (
-        <Box as={GatsbyImage} image={image} alt={alt || ""} minW="20px" />
-      )}
+      {image && <GatsbyImage image={image} alt={alt || ""} minW="20px" />}
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
           <LinkOverlay

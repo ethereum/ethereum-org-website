@@ -12,11 +12,10 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import DocLink from "../../components/DocLink"
 import FeedbackCard from "../../components/FeedbackCard"
 import InlineLink from "../../components/Link"
@@ -29,6 +28,7 @@ import Translation from "../../components/Translation"
 import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
 import Text from "../../components/OldText"
 import OldHeading from "../../components/OldHeading"
+import GatsbyImage from "../../components/GatsbyImage"
 import {
   ContentContainer,
   InfoColumn,

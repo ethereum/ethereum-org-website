@@ -9,7 +9,7 @@ import {
   LinkOverlay,
 } from "@chakra-ui/react"
 import { MdArrowForward } from "react-icons/md"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
 import InlineLink, { BaseLink } from "../Link"

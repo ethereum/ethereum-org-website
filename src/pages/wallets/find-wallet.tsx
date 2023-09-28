@@ -1,5 +1,4 @@
 // Libraries
-import React, { useState } from "react"
 import {
   Flex,
   Box,
@@ -16,8 +15,8 @@ import {
   DrawerHeader,
   Show,
 } from "@chakra-ui/react"
+import React, { useState, useRef } from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
 import { MdOutlineCancel } from "react-icons/md"
@@ -31,6 +30,7 @@ import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar
 import WalletTable from "../../components/FindWallet/WalletTable"
 import Text from "../../components/OldText"
 import OldHeading from "../../components/OldHeading"
+import GatsbyImage from "../../components/GatsbyImage"
 
 // Data
 import walletData from "../../data/wallets/wallet-data"
@@ -157,15 +157,12 @@ const FindWalletPage = ({ data, location }) => {
             <Translation id="page-find-wallet-desc-2" />
           </Subtitle>
         </Box>
-        <Image
-          as={GatsbyImage}
+        <GatsbyImage
           w={{ base: "full", sm: "50%" }}
           image={getImage(data.hero)!}
           alt=""
           loading="eager"
-          imgStyle={{
-            objectFit: "contain",
-          }}
+          objectFit="contain"
         />
       </Flex>
       <Box
@@ -541,6 +538,12 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
+    }
+    phantom: file(relativePath: { eq: "wallets/phantom.png" }) {
+      ...walletImage
+    }
+    XDEFI: file(relativePath: { eq: "wallets/XDEFI.png" }) {
+      ...walletImage
     }
   }
 `

@@ -7,7 +7,7 @@ import { Box, Flex, Heading, HeadingProps } from "@chakra-ui/react"
 // Component imports
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import FeedbackCard from "../../components/FeedbackCard"

@@ -284,6 +284,7 @@ Beim Airdrop-Betrug sendet ein Betrugsprojekt ein Asset (z. B. ein NFT/Token) pe
 
 ### Aufklärung über Betrug {#reading-scam-education}
 
+- [Leitfaden: Wie man betrügerische Token erkennt](/guides/how-to-id-scam-tokens/)
 - [Bleiben Sie sicher: gängige Betrugsmaschen](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Betrug vermeiden](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Twitter-Thread über häufige Phishing-E-Mails und Nachrichten](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_

@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useMemo } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -14,7 +13,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import DataProductCard from "../components/DataProductCard"
 import Emoji from "../components/Emoji"
@@ -33,6 +32,7 @@ import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 import { getData } from "../utils/cache"
 import { getImage } from "../utils/image"
@@ -512,8 +512,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                   </Flex>
                 </Box>
               </Box>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 image={getImage(data.dailarge)!}
                 alt={t("page-stablecoins-dai-logo")}
                 backgroundSize="cover"
@@ -563,8 +562,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                   </Box>
                 </Flex>
               </Box>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 image={getImage(data.usdclarge)!}
                 alt={t("page-stablecoins-usdc-logo")}
                 backgroundSize="cover"

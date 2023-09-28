@@ -4,7 +4,7 @@ description: Una descripción general de las redes de Ethereum, así como de dó
 lang: es
 ---
 
-Las redes son diferentes entornos de Ethereum a los que se puede acceder para desarrollarlos, probarlos o producir casos de uso. Como Ethereum es un protocolo, puede haber múltiples «redes» que se atengan a este protocolo pero no interactúen entre sí.
+Las redes de Ethereum son grupos de ordenadores conectados que se comunican utilizando el protocolo Ethereum. Solo existe una red principal de Ethereum, pero se pueden crear redes independientes que cumplan con las mismas reglas de protocolo con fines de pruebas y desarrollo. Existen múltiples «redes» independientes que siguen el protocolo pero que no interactúan entre ellas. Incluso puede comenzar una en su ordenador para probar sus contratos inteligentes y aplicaciones en Web3.
 
 Su cuenta de Ethereum funcionará a través de las diferentes redes, pero el saldo de su cuenta y el historial de transacciones no se mantendrán desde la red principal de Ethereum. Con fines de realizar pruebas, es útil saber qué redes están disponibles y cómo hacer que la red de prueba ETH la experimente. En general, por razones de seguridad, no se recomienda reutilizar cuentas de la red principal en redes de pruebas o viceversa.
 
@@ -26,11 +26,11 @@ Cuando las personas y los entes de intercambio discuten los precios de los ETH, 
 
 Además de la red principal, existen las redes de prueba públicas. Estas redes las utilizan los desarrolladores de protocolos o los desarrolladores de contratos inteligentes para probar las actualizaciones de los protocolos y los posibles contratos inteligentes en un entorno similar a los entornos de producción antes de implementarlos en la red principal. Como ejemplo, podíamos pensar en los servidores de producción frente a los de almacenamiento.
 
-En la mayoría de los casos es importante comprobar cualquier código de contrato que escriba en una red de pruebas antes de implementarlo en la red principal. Entre dapps que se integran con contratos inteligentes existentes, la mayoría de los proyectos tienen copias desplegadas en redes de pruebas.
+En la mayoría de los casos es importante comprobar cualquier código de contrato que escriba en una red de pruebas antes de implementarlo en la red principal. Entre DApps que se integran con contratos inteligentes existentes, la mayoría de los proyectos tienen copias desplegadas en redes de pruebas.
 
 La mayoría de las redes de prueba empezaron utilizando un mecanismo de consenso de prueba de autoridad permitido. Es decir, se escoge un pequeño número de nodos para validar las transacciones y crear nuevos bloques apostando sus identidades en el proceso. Alternativamente, algunas redes de pruebas cuentan con un mecanismo de consenso de prueba de participación abierto donde todos pueden hacer una prueba de ejecución de validador, al igual que en la red principal de Ethereum.
 
-Los ETH en redes de pruebas no tienen un valor real; por lo tanto, no existe ningún mercado para los ETH de redes de prueba. Dado que necesita ETH para interactuar con Ethereum, la mayor parte de las personas adquieren ETH de redes de prueba en webs de tipo faucet. La mayoría de las faucets son aplicaciones web en las que puede introducir una dirección a la que pide que le envíen ETH.
+El ETH en las redes de prueba se supone que no tiene un valor real; sin embargo, se han creado mercados para ciertos tipos de ETH de red de prueba que se han vuelto escasos o difíciles de obtener. Dado que necesita ETH para interactuar con Ethereum (incluso en redes de prueba), la mayoría de las personas obtienen ETH de red de prueba de forma gratuita a través de «faucets» (o grifos). La mayoría de las faucets son aplicaciones web en las que puede introducir una dirección a la que pide que le envíen ETH.
 
 #### ¿Qué red de prueba debo usar?
 
@@ -61,12 +61,13 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
+- [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
 
 #### Goerli _(soporte a largo plazo)_ {#goerli}
 
 _Nota: [la red de pruebas Goerli está obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) y se reemplazará por [Holesovice](https://github.com/eth-clients/holesovice) en 2023. Por favor, considere la migración de sus aplicaciones a Sepolia._
 
-Goerli es una red de prueba para probar la validación y apuestas. La red Goerli está abierta a usuarios que quieren ejecutar un validador de red de pruebas. Los participantes que quieran probar las actualizaciones del protocolo antes de que se implementen en la red principal deben usar Goerli.
+Goerli es una red de prueba para probar la validación y la participación. La red Goerli está abierta a usuarios que quieren ejecutar un validador de red de pruebas. Los participantes que quieran probar las actualizaciones del protocolo antes de que se implementen en la red principal deben usar Goerli.
 
 - Conjunto de validador abierto, los participantes pueden probar las actualizaciones de la red.
 - Estado grande, útil para probar interacciones complejas de contratos inteligentes.
@@ -83,26 +84,13 @@ Goerli es una red de prueba para probar la validación y apuestas. La red Goerli
 - [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://goerli-faucet.pk910.de/)
-- [Faucet Goerli](https://faucet.goerli.mudit.blog/)
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Faucet Alchemy Goerly](https://goerlifaucet.com/)
 - [Faucet All That Node Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
+- [Faucet Chainstack Goerli](https://faucet.chainstack.com/goerli-faucet)
 
 Para iniciar un validador en la red de prueba de Goerli, utilice la plataforma de lanzamiento de [«cheap goerli validator»](https://goerli.launchpad.ethstaker.cc/en/) de ethstaker.
-
-#### Rinkeby _(obsoleto)_ {#rinkeby}
-
-_Nota: [la red de pruebas Rinkeby está obsoleta](https://blog.ethereum.org/2022/11/30/ropsten-shutdown-announcement) y ya no recibirá actualizaciones de protocolo. Por favor, considere la migración de sus aplicaciones a Sepolia._
-
-Una red de prueba con prueba de autoridad para aquellos que emplean versiones antiguas del cliente Geth.
-
-##### Faucets
-
-- [FaucETH](https://fauceth.komputing.org)(Faucet multicadena sin necesidad de cuenta de red social)
-- [Faucet Chainlink](https://faucets.chain.link/)
-- [Faucet Paradigm](https://faucet.paradigm.xyz/)
-- [Faucet Rinkeby](https://faucet.rinkeby.io/)
 
 ### Redes de pruebas de Capa 2 {#layer-2-testnets}
 
@@ -123,15 +111,15 @@ Una red de pruebas para [Optimism](https://www.optimism.io/).
 ##### Faucets
 
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Faucet Coinbase Wallet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
 ## Redes privadas {#private-networks}
 
-Una red de Ethereum es una red privada si sus nodos no están conectados a una red pública (es decir, una red principal o una red de pruebas). En este contexto, el término privado solo significa reservado o aislado, en lugar de protegido o seguro.
+Una red de Ethereum es una red privada si sus nodos no están conectados a una red pública (es decir, a una red principal o una red de pruebas). En este contexto, el término privado solo significa reservado o aislado, en lugar de protegido o seguro.
 
 ### Redes de desarrollo {#development-networks}
 
-Para desarrollar una aplicación Ethereum, se recomienda ejecutarla en una red privada para ver cómo funciona antes de implementarla. De igual modo que crea un servidor local en su ordenador para el desarrollo web, puede crear una instancia en una cadena de bloques local para probar su dapp descentralizada. Esto permite realizar una iteración mucho más rápida que en una red de prueba pública.
+Para desarrollar una aplicación Ethereum, se recomienda ejecutarla en una red privada para ver cómo funciona antes de implementarla. De igual modo que crea un servidor local en su ordenador para el desarrollo web, puede crear una instancia de cadena de bloques local para probar su DApp. Esto permite realizar una iteración mucho más rápida que en una red de prueba pública.
 
 Existen proyectos y herramientas exclusivos para ayudarle con esto. Más información sobre [redes de desarrollo](/developers/docs/development-networks/).
 
