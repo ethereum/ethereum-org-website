@@ -1,5 +1,5 @@
 ---
-title: JavaScript Geliştiricileri için Ethereum
+title: Javascript geliştiricileri için Ethereum
 description: JavaScript tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin.
 lang: tr
 ---
@@ -10,7 +10,7 @@ Yığının her seviyesinde JavaScript (veya benzer bir şey) yazma [fırsatlar�
 
 ## Ethereum ile etkileşime gir {#interact-with-ethereum}
 
-### JavaScript API kütüphaneleri {#javascript-api-libraries}
+### Javascript API kütüphaneleri {#javascript-api-libraries}
 
 Eğer blok zincirini sorgulamak için JavaScript yazmak isterseniz, işlemleri göndermenin ve daha fazlasını yapmanın en uygun yolu bir [JavaScript API kütüphanesi kullanmaktır](/developers/docs/apis/javascript/). Bu API'ler, geliştiricilerin [ Ethereum ağındaki düğümlerle](/developers/docs/nodes-and-clients/) kolayca etkileşim kurmasına olanak tanır.
 
@@ -20,10 +20,11 @@ Bu kütüphaneleri Ethereum'daki akıllı sözleşmelerle etkileşim kurmak içi
 
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Ethers.js](https://docs.ethers.io/) _– JavaScript ve TypeScript'te Ethereum cüzdan uygulamasına yardımcı araçları içerir._
+- [viem](https://viem.sh) – Ethereum ile etkileşime geçmek için düşük seviye durumsuz temeller sağlayan Ethereum için bir TypeScript arayüzü.
 
 ### Akıllı sözleşmeler {#smart-contracts}
 
-Kendi akıllı sözleşmenizi yazmak isteyen bir JavaScript geliştiricisiyseniz, [Solidity'ye](https://solidity.readthedocs.io) aşina olmak isteyebilirsiniz. Bu en popüler akıllı sözleşme dilidir ve sözdizimsel olarak JavaScript'e benzer, bu da öğrenmeyi kolaylaştırabilir.
+Eğer bir JavaScript geliştiricisiyseniz ve kendi akıllı sözleşmenizi yazmak istiyorsanız, [Solidity](https://solidity.readthedocs.io) ile bilgi sahibi olmak isteyebilirsiniz. Bu en popüler akıllı sözleşme dilidir ve sözdizimsel olarak JavaScript'e benzer, bu da öğrenmeyi kolaylaştırabilir.
 
 [Akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında daha fazla bilgi.
 
@@ -50,10 +51,12 @@ Kodu okumayı tercih ediyorsanız, JavaScript belgelerimizi okumak sizin için h
 
 ### Düğümler ve istemciler {#nodes-and-clients}
 
-Geliştirme aşamasında bir Ethereumjs istemcisi bulunuyor. Bu, anladığınız bir dilde Ethereum istemcilerinin nasıl çalıştığını incelemenizi sağlayacaktır.
+Ethereum istemcilerinin nasıl çalıştığını anladığınız bir dilde inceleyebileceğiniz bir Ethereumjs istemcisi geliştirilmektedir; JavaScript!
+
+Daha önce bağımsız bir [`kılavuzda`](https://github.com/ethereumjs/ethereumjs-client) barındırılıyordu, ancak daha sonra bir paket olarak EthereumVM monorepo ile birleştirildi.
 
 **Şu istemciye göz atın:**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-client)
+[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## Diğer projeler {#other-projects}
 
@@ -67,4 +70,4 @@ Ethereum JavaScript alanında aşağıdakiler de dahil olmak üzere pek çok ba�
 
 ## Daha fazla bilgi {#further-reading}
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_

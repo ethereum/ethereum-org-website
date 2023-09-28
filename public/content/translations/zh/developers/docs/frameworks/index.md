@@ -46,17 +46,17 @@ lang: zh
 
 - [主页](https://www.web3labs.com/web3j-sdk)
 - [相关文档](https://docs.web3j.io)
-- [Github](https://github.com/web3j/web3j)
+- [GitHub](https://github.com/web3j/web3j)
 
 **OpenZeppelin SDK -** **_终极智能合约工具包：一套帮助您开发、编译、升级、部署智能合约并与之交互的工具。_**
 
 - [OpenZepelin SDK](https://openzeppelin.com/sdk/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [社区论坛](https://forum.openzeppelin.com/c/support/17)
 
 **创建以太坊应用程序 -** **_使用一个命令创建以太坊驱动的应用程序。 提供众多 UI 框架和去中心化金融模板供选择。_**
 
-- [Github](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://github.com/paulrberg/create-eth-app)
 - [模板](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
 **Scaffold-Eth -** **_Ethers.js + 安全帽 + React 组件和 web3 钩子函数：这是您开始构建由智能合约驱动的去中心化应用程序所需要的一切。_**
@@ -76,7 +76,7 @@ lang: zh
 **Alchemy -** **_以太坊开发平台_**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [Github](https://github.com/alchemyplatform)
+- [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
 **Foundry -** **_ 一种快速便携的模块化工具包，适用于使用 Rust 语言进行以太坊应用程序开发。_**
@@ -91,9 +91,20 @@ lang: zh
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
+**thirdweb SDK -** **_使用我们强大的 SDK 和 CLI 构建能够与你的智能合约交互的 web3 应用程序。_**
+
+- [相关文档](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
+**Chainstack -** **_Web3（以太坊和其他区块链）开发平台。_**
+
+- [chainstack.com](https://www.chainstack.com/)
+- [GitHub](https://github.com/chainstack)
+- [Discord](https://discord.gg/BSb5zfp9AT)
+
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 
