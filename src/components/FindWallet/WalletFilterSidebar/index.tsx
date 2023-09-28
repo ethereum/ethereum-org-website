@@ -83,7 +83,6 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
       overflow="auto"
       bg="background.base"
       transition="0.5s all"
-      borderTopRightRadius="lg"
       sx={{
         scrollbarWidth: "thin",
         scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,

@@ -58,7 +58,6 @@ const Container = (props: TableProps) => (
 
 const WalletContainer = (props: ChildOnlyProp) => (
   <Container
-    as="div"
     borderBottom="1px"
     borderColor="lightBorder"
     _hover={{ bg: "chakra-subtle-bg", transition: "0.5s all" }}
@@ -91,8 +90,8 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
     rowGap={{ base: 4, sm: 0 }}
     p={2}
     position="sticky"
-    top={0}
-    zIndex="docked"
+    top={{ base: "8.75rem", lg: 20 }}
+    zIndex={1}
     sx={{
       th: {
         p: 0,

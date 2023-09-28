@@ -2,8 +2,6 @@
 import {
   Flex,
   Box,
-  Image,
-  Icon,
   useTheme,
   useDisclosure,
   Drawer,
@@ -15,11 +13,10 @@ import {
   DrawerHeader,
   Show,
 } from "@chakra-ui/react"
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
-import { MdOutlineCancel } from "react-icons/md"
 
 // Components
 import BannerNotification from "../../components/BannerNotification"
@@ -170,7 +167,7 @@ const FindWalletPage = ({ data, location }) => {
         top="76px"
         bg="background.base"
         w="full"
-        zIndex="dropdown"
+        zIndex="docked"
         py="5px"
       >
         <Box
@@ -187,7 +184,6 @@ const FindWalletPage = ({ data, location }) => {
           pb={2.5}
           m="auto"
           ml={0}
-          zIndex={1}
           w="full"
           maxW={showMobileSidebar ? "330px" : "150px"}
           bg="background.base"
@@ -228,11 +224,7 @@ const FindWalletPage = ({ data, location }) => {
               {t("page-find-wallet-active")}
             </Text>
           </Box>
-          {showMobileSidebar ? (
-            <Icon as={MdOutlineCancel} fill="primary.base" />
-          ) : (
-            <FilterBurgerIcon />
-          )}
+          <FilterBurgerIcon />
         </Box>
       </Box>
       <Hide above="lg">
@@ -264,7 +256,7 @@ const FindWalletPage = ({ data, location }) => {
           </DrawerContent>
         </Drawer>
       </Hide>
-      <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} w="full" gap={6} top="76px">
+      <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} w="full" gap={6}>
         <Show above="lg">
           <WalletFilterSidebar
             {...{
@@ -281,7 +273,6 @@ const FindWalletPage = ({ data, location }) => {
         </Show>
         <Box
           w="full"
-          overflowY="scroll"
           sx={{
             scrollbarWidth: "thin",
             scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
