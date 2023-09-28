@@ -29,7 +29,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/nft",
     "/dao",
     "/desci",
-    // "/refi",
+    "/refi",
     "/social-networks",
     "/decentralized-identity",
   ]

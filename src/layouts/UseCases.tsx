@@ -26,7 +26,6 @@ import ButtonDropdown, {
 } from "@/components/ButtonDropdown"
 import ButtonLink from "@/components/ButtonLink"
 import Card from "@/components/Card"
-// import Contributors from "@/components/Contributors"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
@@ -34,10 +33,8 @@ import FeedbackCard from "@/components/FeedbackCard"
 // import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
-import { /* InlineLink, */ BaseLink } from "@/components/Link"
-import Link from "@/components/Link"
-// import Logo from "@/components/Logo"
-// import MdLink from "@/components/MdLink"
+import Link, { BaseLink } from "@/components/Link"
+import MarkdownImage from "@/components/MarkdownImage"
 import MeetupList from "@/components/MeetupList"
 // import PageMetadata from "@/components/PageMetadata"
 // import QuizWidget from "@/components/Quiz/QuizWidget"
@@ -103,21 +100,19 @@ const Paragraph = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 export const useCasesComponents = {
-  // a: MdLink,
   a: Link,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
+  img: MarkdownImage,
   p: Paragraph,
   li: chakra.li,
   pre: Pre,
   ...mdxTableComponents,
   MeetupList,
   RandomAppList,
-  // Logo,
   ButtonLink,
-  // Contributors,
   InfoBanner,
   Card,
   Divider,
