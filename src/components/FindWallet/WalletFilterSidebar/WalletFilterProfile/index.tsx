@@ -146,10 +146,9 @@ const WalletFilterProfile = ({
             <UnorderedList
               m={0}
               display="grid"
-              gridTemplateColumns="50% 50%"
               width="full"
               columnGap="0.2rem"
-              rowGap={2}
+              rowGap="0.4rem"
               aria-label={`${persona.title} filters`}
             >
               {persona.featureHighlight.map((feature) => (
