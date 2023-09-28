@@ -86,7 +86,7 @@ const WalletFilterProfile = ({
               }
             }}
           >
-            <Flex alignItems="center" gap={2} mb="0.6rem" pt={2} pb={0} px={2}>
+            <Flex alignItems="center" gap={2} mb="0.2rem" pt={0} pb={0} px={2}>
               <Box
                 boxSize="1.3rem"
                 role="checkbox"
@@ -95,7 +95,7 @@ const WalletFilterProfile = ({
                 <Icon
                   as={MdCircle}
                   borderRadius="full"
-                  boxSize={4}
+                  boxSize={3}
                   my={0}
                   mx={1}
                   fill={
@@ -118,8 +118,8 @@ const WalletFilterProfile = ({
               </Box>
               <Heading
                 as="h3"
-                ml={2}
-                fontSize="1.3rem"
+                ml={0}
+                fontSize="1.2rem"
                 py={0}
                 pr={1}
                 pl={0}
