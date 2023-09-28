@@ -18,7 +18,7 @@ Una transacción de Ethereum hace referencia a una acción iniciada por una cuen
 
 Las transacciones, que modifican el estado de la EVM, se deben transmitir a toda la red. Cualquier nodo puede transmitir una solicitud para que se ejecute una transacción en la EVM; después de que esto suceda, un validador ejecutará la transacción y propagará el cambio de estado resultante al resto de la red.
 
-Las transacciones requieren una comisión y deben incluirse en un bloque validado. Para simplificar este resumen, abarcaremos las comisiones de gas y el minado por separado.
+Las transacciones requieren una tarifa y deben incluirse en un bloque validado. Para simplificar este resumen, abarcaremos las comisiones de gas y el minado por separado.
 
 Una transacción enviada incluye la siguiente información:
 
@@ -27,12 +27,12 @@ Una transacción enviada incluye la siguiente información:
 - `Firma`: identificador del remitente. Se genera cuando la clave privada del remitente firma la transacción y confirma que el remitente ha autorizado esta transacción.
 - `Nonce`: un contador que se incrementa secuencialmente y que indica el número de transacción de la cuenta.
 - `Valor`: cantidad de ETH a transferir del remitente al destinatario (denominada en WEI, donde 1ETH equivale a 1e+18wei).
-- `Datos`: campo opcional en el que se incluyen datos arbitrarios.
+- `datos de entrada`: campo opcional para incluir datos arbitrarios
 - `gasLimit`: cantidad máxima de unidades de gas que puede consumir la transacción. La[EVM](/developers/docs/evm/opcodes)especifica las unidades de gas necesarias para cada paso de cálculo.
 - `maxPriorityFeePerGas`: cantidad máxima de gas consumido que se incluirá como propina al validador.
 - `maxFeePerGas`: máxima comision por unidad de gas destinada al pago por la transacción (exclusiva de `baseFeePerGas` y `maxPriorityFeePerGas`)
 
-El gas es una referencia al cálculo necesario para que el validador procese la transacción. Los usuarios tienen que pagar una comisión por ese cálculo. Los valores `gasLimit` y `maxPriorityFeePerGas` determinan la comisión por transacción máxima que se le paga al validador. [Mas información sobre el gas](/developers/docs/gas/).
+El gas es una referencia al cálculo necesario para que el validador procese la transacción. Los usuarios tienen que pagar una tarifa por ese cálculo. Los valores `gasLimit` y `maxPriorityFeePerGas` determinan la tarifa por transacción máxima que se le paga al validador. [Mas información sobre el gas](/developers/docs/gas/).
 
 El objeto de la transacción se verá de la siguiente forma:
 
@@ -137,7 +137,7 @@ En Ethereum hay algunos tipos diferentes de transacciones:
 
 Tal y como se ha mencionado, las transacciones necesitan [gas](/developers/docs/gas/) para ejecutarse. Las transacciones de transferencia simple requieren 21.000 unidades de gas.
 
-De modo que, para que Bob pueda enviar a Alice 1 ETH con un coste de `baseFeePerGas` de 190 gwei y de `maxPriorityFeePerGas` de 10 gwei, Bob tendrá que pagar la siguiente comisión:
+De modo que, para que Bob pueda enviar a Alice 1 ETH con un coste de `baseFeePerGas` de 190 gwei y de `maxPriorityFeePerGas` de 10 gwei, Bob tendrá que pagar la siguiente tarifa:
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -149,7 +149,7 @@ En la cuenta de Bobs se cargará**-1,0042 ETH** (1 ETH por Alice + 0,0042 ETH en
 
 A la cuenta de Alice se añadirán **+1,0 ETH**
 
-La comisión base que se quemará será de **0,00399 ETH**
+La tarifa base que se consumirá será de **0,00399 ETH**
 
 El validador se queda con una propina de **+0,000210 ETH**
 
