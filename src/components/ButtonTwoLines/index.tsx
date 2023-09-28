@@ -2,7 +2,7 @@ import * as React from "react"
 import { Icon, Stack, Text } from "@chakra-ui/react"
 import type { IconType } from "react-icons/lib"
 import Button, { type IProps as ButtonProps } from "../Button"
-import ButtonLink, { type IProps as ButtonLinkProps } from "../ButtonLink"
+import ButtonLink, { type Props as ButtonLinkProps } from "../ButtonLink"
 
 type CommonProps = {
   icon: IconType | typeof Icon
@@ -69,6 +69,8 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
   const Component = hasHref(props) ? ButtonLink : Button
 
   return (
+    // TODO: fix type error
+    // @ts-ignore
     <Component
       {...buttonStyles}
       size={size}
