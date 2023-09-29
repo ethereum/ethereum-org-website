@@ -104,7 +104,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   if (!frontmatter.template) {
     layout = params.slug.includes("developers/docs") ? "docs" : "static"
   }
- 
+
   return {
     props: {
       mdxSource,
@@ -120,19 +120,23 @@ interface ContentPageProps extends Props {
   layout: keyof typeof layoutMapping
 }
 
-const ContentPage: NextPageWithLayout<ContentPageProps> = ({ mdxSource, layout }) => {
+const ContentPage: NextPageWithLayout<ContentPageProps> = ({
+  mdxSource,
+  layout,
+}) => {
+  const components = componentsMapping[layout]
   return (
     <>
       {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
       {/* @ts-ignore */}
-      <MDXRemote {...mdxSource} components={componentsMapping[layout]} />
+      <MDXRemote {...mdxSource} components={components} />
     </>
   )
 }
 
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
-  // `slug`, `frontmatter` and `lastUpdatedDate` values are returned by `getStaticProps` method and passed to the page component
+  // `slug`, `frontmatter`, `lastUpdatedDate` and `layout` values are returned by `getStaticProps` method and passed to the page component
   const {
     originalSlug: slug,
     frontmatter,
