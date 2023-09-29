@@ -1,1 +1,3 @@
-const StakingLayout = () => null
+// export const stakingComponents = {}
+
+export const StakingLayout = () => null

@@ -8,22 +8,31 @@ import path from "path"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
 
-// Layouts
-import { RootLayout, StaticLayout } from "@/layouts"
-import { staticComponents as components } from "@/layouts/Static"
-// import { UseCasesLayout } from "@/layouts/UseCases"
-// import { StakingLayout } from "@/layouts/Staking"
-// import { RoadmapLayout } from "@/layouts/Roadmap"
-// import { UpgradeLayout } from "@/layouts/Upgrade"
-// import { EventLayout } from "@/layouts/Event"
-// import { DocsLayout } from "@/layouts/Docs"
+// Layouts and components
+import {
+  RootLayout,
+  staticComponents,
+  StaticLayout,
+  // useCasesComponents,
+  // UseCasesLayout,
+  // stakingComponents,
+  // StakingLayout,
+  // roadmapComponents,
+  // RoadmapLayout,
+  // upgradeComponents,
+  // UpgradeLayout,
+  // eventComponents,
+  // EventLayout,
+  // docsComponents,
+  // DocsLayout,
+} from "@/layouts"
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import { Frontmatter, NextPageWithLayout } from "@/lib/types"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 
-const componentMapping = {
+const layoutMapping = {
   static: StaticLayout,
   // "use-cases": UseCasesLayout,
   // staking: StakingLayout,
@@ -31,6 +40,16 @@ const componentMapping = {
   // upgrade: UpgradeLayout,
   // event: EventLayout,
   // docs: DocsLayout,
+} as const
+
+const componentsMapping = {
+  static: staticComponents,
+  // "use-cases": useCasesComponents,
+  // staking: stakingComponents,
+  // roadmap: roadmapComponents,
+  // upgrade: upgradeComponents,
+  // event: eventComponents,
+  // docs: docsComponents,
 } as const
 
 interface Params extends ParsedUrlQuery {
@@ -81,11 +100,11 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = await getLastModifiedDate(originalSlug)
+  let layout = frontmatter.template
+  if (!frontmatter.template) {
+    layout = params.slug.includes("developers/docs") ? "docs" : "static"
+  }
 
-  const layout =
-    frontmatter.template ?? params.slug.includes("developers/docs")
-      ? "docs"
-      : "static"
   return {
     props: {
       mdxSource,
@@ -97,7 +116,15 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   }
 }
 
-const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
+interface ContentPageProps extends Props {
+  layout: keyof typeof layoutMapping
+}
+
+const ContentPage: NextPageWithLayout<ContentPageProps> = ({
+  mdxSource,
+  layout,
+}) => {
+  const components = componentsMapping[layout]
   return (
     <>
       {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
@@ -109,7 +136,7 @@ const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
 
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
-  // `slug`, `frontmatter` and `lastUpdatedDate` values are returned by `getStaticProps` method and passed to the page component
+  // `slug`, `frontmatter`, `lastUpdatedDate` and `layout` values are returned by `getStaticProps` method and passed to the page component
   const {
     originalSlug: slug,
     frontmatter,
@@ -117,7 +144,7 @@ ContentPage.getLayout = (page: ReactElement) => {
     layout,
   } = page.props
   const layoutProps = { slug, frontmatter, lastUpdatedDate }
-  const Layout = componentMapping[layout]
+  const Layout = layoutMapping[layout]
   return (
     <RootLayout>
       <Layout {...layoutProps}>{page}</Layout>
