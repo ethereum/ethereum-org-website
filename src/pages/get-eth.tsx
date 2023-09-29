@@ -1,6 +1,5 @@
 import React, { ComponentPropsWithRef } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { Box, BoxProps, Flex, Img } from "@chakra-ui/react"
 
@@ -10,7 +9,7 @@ import EthExchanges from "../components/EthExchanges"
 import EthPriceCard from "../components/EthPriceCard"
 import InfoBanner from "../components/InfoBanner"
 import InlineLink from "../components/Link"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import FeedbackCard from "../components/FeedbackCard"
@@ -18,6 +17,7 @@ import { CardListItem } from "../components/CardList"
 import Card from "../components/Card"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 import {
   LeftColumn,
@@ -132,8 +132,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         mb={{ base: 0, sm: 8 }}
         justifyContent="center"
       >
-        <Img
-          as={GatsbyImage}
+        <GatsbyImage
           sx={{
             position: "absolute !important",
           }}
@@ -335,8 +334,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       </Content>
       <TwoColumnContent>
         <Flex as={LeftColumn} flexDir="column">
-          <Img
-            as={GatsbyImage}
+          <GatsbyImage
             alignSelf="center"
             w={{ base: "full", sm: "60%", md: "50%" }}
             maxW="600px"

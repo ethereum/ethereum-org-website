@@ -36,6 +36,7 @@ export async function fetchTranslationCostsReport(
     dateTo,
     // @ts-ignore
     languageId: crowdinLangCode,
+    // @ts-ignore
     fileIds: [fileId],
   }
 

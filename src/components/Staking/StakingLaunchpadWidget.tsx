@@ -3,7 +3,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import { Box, chakra, Flex } from "@chakra-ui/react"
 
 import { StyledSelect as Select } from "../SharedStyledComponents"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import Translation from "../Translation"
 import Text from "../OldText"
 

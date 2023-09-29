@@ -9,13 +9,12 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import CardList from "../components/CardList"
 import EthPriceCard from "../components/EthPriceCard"
@@ -32,6 +31,7 @@ import OldHeading from "../components/OldHeading"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
+import GatsbyImage from "../components/GatsbyImage"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex

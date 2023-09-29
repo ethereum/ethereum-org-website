@@ -249,11 +249,11 @@
       "url": "https://launchnodes.com/",
       "audits": [],
       "minEth": 32,
-      "isFoss": false,
+      "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
       "isPermissionless": false,
-      "multiClient": false,
+      "multiClient": true,
       "easyClientSwitching": false,
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["CLI", "AWS", "Azure"],
@@ -635,6 +635,42 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked Sensei Node go to link"
+      }
+    },
+    {
+      "name": "RockX Staking",
+      "imageName": "RockX",
+      "hue": 224,
+      "launchDate": "2023-05-23",
+      "url": "https://www.rockx.com/staking/ethereum",
+      "audits": [
+        {
+          "name": "PeckShield",
+          "url": "https://github.com/RockX-SG/direct_staking_contracts/blob/main/PeckShield-Audit-Report-RockX-DirectStaking-v1.0.pdf"
+        }
+      ],
+      "minEth": 32,
+      "monthlyFee": "20",
+      "monthlyFeeUnit": "% execution rewards",
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityExecutionClient": 100,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": false,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.gg/YJzs4UwsTp",
+        "twitter": "https://twitter.com/rockx_official",
+        "linkedin": "https://www.linkedin.com/company/rockx-official",
+        "youtube": "https://www.youtube.com/channel/UCur9s16EemOPuY_YAXhtG9A"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked RockX go to link"
       }
     }
   ],

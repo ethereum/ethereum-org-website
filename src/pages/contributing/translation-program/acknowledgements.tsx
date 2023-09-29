@@ -1,15 +1,12 @@
 // Libraries
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   BoxProps,
   Flex,
   HeadingProps,
-  Img,
-  ImgProps,
   List,
   ListItem,
   useColorModeValue,
@@ -26,6 +23,9 @@ import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
 import FeedbackCard from "../../../components/FeedbackCard"
 import Text from "../../../components/OldText"
 import OldHeading from "../../../components/OldHeading"
+import GatsbyImage, {
+  type GatsbyImageType,
+} from "../../../components/GatsbyImage"
 
 // Utils
 import { getImage } from "../../../utils/image"
@@ -36,14 +36,13 @@ const ContentHeading = (props: HeadingProps) => (
   <OldHeading lineHeight={1.4} {...props} />
 )
 
-const Image = (props: ImgProps & { image: IGatsbyImageData }) => {
+const Image: GatsbyImageType = (props) => {
   return (
-    <Img
-      as={GatsbyImage}
+    <GatsbyImage
       maxH={{ base: "300px", sm: "none" }}
       maxW={{ base: "300px", sm: "none" }}
       backgroundSize="contain"
-      imgStyle={{ objectFit: "contain" }}
+      objectFit="contain"
       {...props}
     />
   )

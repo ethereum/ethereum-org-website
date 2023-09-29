@@ -1,7 +1,6 @@
 // Libraries
 import React, { ComponentProps, ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
@@ -39,13 +38,12 @@ import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
 import Emoji from "../components/Emoji"
 import InlineLink from "../components/Link"
-import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
+import { Button, ButtonLink } from "../components/Buttons"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 
 // Utils
-import Button from "../components/Button"
 import { InfoGrid } from "../templates/staking"
 import { Width40, Width60 } from "../pages-conditional/what-is-ethereum"
 
@@ -53,6 +51,7 @@ import { Width40, Width60 } from "../pages-conditional/what-is-ethereum"
 import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp } from "../types"
+import GatsbyImage from "../components/GatsbyImage"
 
 const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
 
@@ -856,8 +855,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
       <StakingCalloutContainer>
         <Column>
-          <Img
-            as={GatsbyImage}
+          <GatsbyImage
             image={getImage(data.leslie)!}
             alt=""
             transform={{
