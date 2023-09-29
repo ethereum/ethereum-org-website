@@ -87,19 +87,11 @@ const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
   )
 }
 
-function UpgradeTableOfContents(props: {
-  items: Array<{ id: string; title: string }>
-}): JSX.Element
-function UpgradeTableOfContents(props: {
-  maxDepth: number
+interface IPropsToC {
   items: Array<TableOfContentsItem>
-}): JSX.Element
-function UpgradeTableOfContents(props: {
   maxDepth?: number
-  items: Array<Item>
-}) {
-  const { items, maxDepth = 1 } = props
-
+}
+const UpgradeTableOfContents: React.FC<IPropsToC> = ({ items, maxDepth = 1}) => {
   return (
     <Box
       as="nav"
