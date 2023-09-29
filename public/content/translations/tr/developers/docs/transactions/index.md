@@ -4,7 +4,7 @@ description: Ethereum işlemlerine genel bir bakış - nasıl çalışırlar, ve
 lang: tr
 ---
 
-İşlemler, hesaplardan gelen kriptografik olarak imzalanmış talimatlardır. Bir hesap, Ethereum ağının durumunu güncellemek için bir işlem başlatacaktır. En basit işlem ETH'yi bir hesaptan diğerine aktarmaktır.
+İşlemler, hesaplardan kriptografik olarak imzalanmış talimatlardır. Bir hesap, Ethereum ağının durumunu güncellemek için bir işlem başlatacaktır. En basit işlem ETH'yi bir hesaptan diğerine aktarmaktır.
 
 ## Ön koşullar {#prerequisites}
 
@@ -16,21 +16,23 @@ Bir Ethereum işlemi, harici olarak sahiplenilmiş bir hesap tarafından başlat
 
 ![Bir işlemin durum değişikliği yaptığını gösteren diyagram](./tx.png) _Diyagram [Ethereum EVM resmediciden](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) uyarlanmıştır_
 
-EVM'nin durumunu değiştiren işlemlerin tüm ağa yayınlanması gerekir. Herhangi bir düğüm, EVM'de yürütülecek bir işlem için bir talep yayınlayabilir; bu gerçekleştikten sonra, bir madenci işlemi yürütecek ve ortaya çıkan durum değişikliğini ağın geri kalanına yayacaktır.
+EVM'nin durumunu değiştiren işlemlerin tüm ağa yayınlanması gerekir. Herhangi bir düğüm, Ethereum Sanal Makinesinde ugulanacak işlemleri yayınlamak için talepte bulunabilir, bu olduktan sonra da, doğrulayıcı işlemi uygulayacak ve ortaya çıkan durum değişikliğini ağın geri kalanına yayacaktır.
 
-İşlemler bir ücret gerektirir ve geçerli olabilmesi için madencilik sürecinden geçmelidir. Bu genel bakışı daha basit hâle getirmek için gaz ücretlerini ve madenciliği başka bir konuda ele alacağız.
+İşlemler için ücretler gereklidir ve doğrulanan bir blokta bulunmak zorundadırlar. Bu taslağı daha basit hale getirebilmek için gaz ücretlerini ve doğrulamayı başka bir yerde inceleyeceğiz.
 
 Gönderilen bir işlem aşağıdaki bilgileri içerir:
 
-- `recipient` – alıcı adres (eğer harici olarak sahiplenilmiş bir hesapsa, işlem değeri aktaracaktır. Eğer bir sözleşme hesabıysa, işlem sözleşme kodunu yürütecektir)
-- `signature` – gönderenin tanımlayıcısı. Bu, gönderenin özel anahtarı işlemi imzaladığında ve gönderenin bu işleme yetki verdiğini doğruladığında oluşturulur
-- `value` – göndericiden alıcıya aktarılacak ETH miktarı (bir ETH birimi olan WEI cinsinden)
-- `data` – isteğe bağlı verileri dahil etmek için opsiyonel alan
-- `gasLimit` – işlem tarafından tüketilebilecek maksimum gaz birimi miktarı. Gaz birimleri bilgi işlem adımlarını temsil eder
-- `maxPriorityFeePerGas` - madenciye bahşiş olarak dahil edilecek maksimum gaz miktarı
-- `maxFeePerGas` - işlem için ödenmek istenen maksimum gaz miktarı (`baseFeePerGas` ve `maxPriorityFeePerGas` dahil)
+- `from` - işlemi imzalayacak olan göndericinin adresi. Bu sözleşme hesapları işlem gönderemeyeceği için harici olarak sahiplenilmiş bir hesap olacaktır.
+- `recipient` - alıcı adres (eğer harici olarak sahiplenilmiş bir hesapsa, işlem değeri aktaracaktır. Eğer bir sözleşme hesabıysa, işlem sözleşme kodunu yürütecektir)
+- `signature` - gönderenin tanımlayıcısı. Bu, gönderenin özel anahtarı işlemi imzaladığında ve gönderenin bu işleme yetki verdiğini doğruladığında oluşturulur
+- `nonce` - hesabın işlem sayısını belirten ve ardışık olarak artan bir sayaç
+- `value` - göndericiden alıcıya aktarılacak ETH miktarı (WEI şeklinde birimlendirilmiştir, 1ETH 1e+18wei'ye eşittir)
+- `giriş verileri` - keyfi verileri dahil etmek için opsiyonel alan
+- `gasLimit` - işlem tarafından tüketilebilecek maksimum gaz birimi miktarı. [EVM](/developers/docs/evm/opcodes) her bir hesaplık adım için gereken gaz birimini belirtir
+- `maxPriorityFeePerGas` - doğrulayıcıya bir bahşiş olarak eklenmesi için harcanan gazın maksimum fiyatı
+- `maxFeePerGas` - işlem için ödenebilecek gaz birimi başına maksimum ücret (`baseFeePerGas` ve `maxPriorityFeePerGas`'ı kapsayıcıdır)
 
-Gaz, işlemin bir madenci tarafından işlenmesi için gereken hesaplamaya bir referanstır. Kullanıcılar bu hesaplama için bir ücret ödemek zorundadır. `gasLimit` ve `maxPriorityFeePerGas` madenciye ödenen maksimum işlem ücretini belirler. [Gaz hakkında daha fazla bilgi](/developers/docs/gas/).
+Gaz, işlemin bir doğrulayıcı tarafından işlenmesi için gereken hesaplamaya bir referanstır. Kullanıcılar bu hesaplama için bir ücret ödemek zorundadır. `gasLimit` ve `maxPriorityFeePerGas` doğrulayıcıya ödenen maksimum işlem ücretini belirler. [Gaz hakkında daha fazla bilgi](/developers/docs/gas/).
 
 İşlem nesnesi biraz şuna benzer:
 
@@ -50,7 +52,7 @@ Ancak, gönderenin özel anahtarı kullanılarak bir işlem nesnesinin imzalanma
 
 Geth gibi bir Ethereum istemcisi bu imzalama sürecini yerine getirir.
 
-[JSON-RPC](https://eth.wiki/json-rpc/API) çağrısı örneği:
+[JSON-RPC](/developers/docs/apis/json-rpc) çağrısı örneği:
 
 ```json
 {
@@ -97,14 +99,14 @@ Yanıt örneği:
 }
 ```
 
-- `raw`, imzalanmış işlemin Tekrarlamalı Uzunluk Öneki (RLP) kodlu biçimidir
+- `raw` [Özyinelemeli Uzunluk Ön Eki (RLP)](/developers/docs/data-structures-and-encoding/rlp) şeklinde şifrelenmiş imzalı işlemdir
 - `tx`, imzalanmış işlemin JSON biçimidir
 
 İmza hash değeri ile işlemin göndericiden geldiği ve ağa gönderildiği kriptografik olarak kanıtlanabilir.
 
 ### Veri alanı {#the-data-field}
 
-İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](/glossary/#abi/) ile uyumlu olacak şekilde yorumlar.
+İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](/glossary/#abi) ile uyumlu olacak şekilde yorumlar.
 
 İlk dört bayt, fonksiyonun isminin ve argümanlarının hash değerini kullanarak hangi fonksiyonun çağrılacağını belirler. Bazen seçiciden [bu veri tabanını](https://www.4byte.directory/signatures/) kullanarak fonksiyonu tespit edebilirsiniz.
 
@@ -127,7 +129,7 @@ ABI koşullarına göre, tamsayı değerleri (20 bayt tamsayılar olan adresler 
 
 Ethereum'da birkaç farklı işlem türü vardır:
 
-- Düzenli işlemler: Bir cüzdandan diğerine yapılan işlem.
+- Düzenli işlemler: bir hesaptan diğerine yapılan işlem.
 - Sözleşme dağıtım işlemleri: Veri alanının sözleşme kodu için kullanıldığı, "to"' (gönderilen adres) adresi olmayan bir işlem.
 - Bir sözleşmenin yürütümü: dağıtılmış akıllı sözleşme ile etkileşime geçen bir işlem. Bu durumda, "to" adresi akıllı sözleşme adresidir.
 
@@ -143,13 +145,13 @@ Dolayısıyla Bob'un 1 ETH'yi Alice'e 190 gwei `baseFeePerGas` ve 10 gwei `maxPr
 0,0042 ETH
 ```
 
-Bob'un hesabı **-1,0042 ETH** borçlandırılır
+Bob'un hesabı **-1,0042 ETH** borçlandırılacaktır (Alice için 1 ETH + gaz ücretleri için 0,0042 ETH)
 
 Alice'in hesabı **+1,0 ETH** alacaklandırılır
 
 Taban ücret yakılacaktır **-0,00399 ETH**
 
-Madenci **+0,000210 ETH** bahşişi kendine alır
+Doğrulayıcı **+0,000210 ETH** bahşişi tutar
 
 Gaz, herhangi bir akıllı sözleşme etkileşimi için de gereklidir.
 
@@ -161,13 +163,10 @@ Gaz, herhangi bir akıllı sözleşme etkileşimi için de gereklidir.
 
 İşlem gönderildikten sonra aşağıdakiler gerçekleşir:
 
-1. Bir işlem gönderdiğinizde, kriptografi bir işlem hash'i oluşturur: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
-2. İşlem daha sonra ağa yayınlanır ve birçok başka işlemi içeren bir havuza dahil edilir.
-3. Bir madenci, işlemi doğrulamak ve "başarılı" olarak değerlendirmek için işleminizi seçmeli ve bir bloğa eklemelidir.
-   - Ağ meşgulse ve madenciler buna ayak uyduramıyorsa, bu aşamada beklemeniz gerekebilir.
-4. İşleminiz "onaylar" alacaktır. Onay sayısı, işleminizi içeren bloktan bu yana oluşturulan blokların sayısıdır. Sayı ne kadar yüksek olursa, ağın işlemi işlemesi ve işlemi tanıması o kadar kesin olur.
-   - Son bloklar yeniden düzenlenebilir ve bu da işlemin başarısız olduğu izlenimini verebilir; ancak işlem yine de geçerli olabilir ancak farklı bir bloğa dahil edilebilir.
-   - Sonraki her blok madenciliği ile yeniden düzenleme olasılığı azalır, yani onay sayısı ne kadar fazlaysa, işlem o kadar değişmez olur.
+1. Bir işlem şifresi kriptografik olarak oluşturulur: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
+2. İşlem sonrasında ağa yayınlanır ve diğer bekleyen ağ işlemlerinden oluşan işlem havuzuna eklenir.
+3. Bir doğrulayıcı, işlemi doğrulamak ve "başarılı" olarak değerlendirmek için işleminizi seçmeli ve bir bloka eklemelidir.
+4. Zaman geçtikçe işleminizi taşıyan blok önce "kanıtlanmış" sonrasında "sonlandırılmış" şeklinde güncellenecektir. Bu yükseltmeler işleminizin başarılı olduğunu ve asla değiştirilemeyeceğini daha netleştirir. Bir blok "sonlandırıldıktan" sonra sadece milyarlarca dolar maliyetinde ağ seviyesinde bir saldırı ile değiştirilebilir.
 
 ## Görsel bir demo {#a-visual-demo}
 
@@ -177,15 +176,13 @@ Austin'in işlemlerde, gazda ve madencilikte size yol göstermesini izleyin.
 
 ## Yazılan İşlem Zarfı {#typed-transaction-envelope}
 
-Ethereum'un başlangıçta işlemler için tek bir formatı vardı. Her işlem, adres, değer, veri, v, r ve s için nonce, gaz fiyatı, gaz limiti içeriyordu. Bu alanlar, şöyle görünecek şekilde RLP kodludur:
+Ethereum'un başlangıçta işlemler için tek bir formatı vardı. Her işlem, adres, değer, veri, v, r ve s için nonce, gaz fiyatı, gaz limiti içeriyordu. Bu alanlar [RLP ile şifrelenmiştir](/developers/docs/data-structures-and-encoding/rlp/), şuna benzer bir şekilde görünür:
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
 Ethereum, erişim listelerini ve [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)'un eski işlem formatlarını etkilemeden uygulanmasını mümkün kılmak için birçok işlem türünü destekleyecek şekilde evrildi.
 
-[EIP-2718: Yazılan İşlem Zarfı](https://eips.ethereum.org/EIPS/eip-2718), gelecekteki işlem türleri için bir zarf olan bir işlem türünü tanımlar.
-
-EIP-2718, yazılan işlemler için yeni bir genelleştirilmiş zarftır. Yeni standartta işlemler şu şekilde yorumlanıyor:
+[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) bu davranışa izin verendir. İşlemler şu şekilde yorumlanır:
 
 `TransactionType || TransactionPayload`
 
@@ -194,15 +191,14 @@ Burada alanlar şu şekilde tanımlanır:
 - `TransactionType` - toplam 128 olası işlem türü için 0 ile 0x7f arasında bir sayı.
 - `TransactionPayload` - işlem türü tarafından tanımlanan rastgele bir bayt dizisi.
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [EIP-2718: Yazılan İşlem Zarfı](https://eips.ethereum.org/EIPS/eip-2718)
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
 ## İlgili konular {#related-topics}
 
 - [Hesaplar](/developers/docs/accounts/)
 - [Ethereum sanal makinesi (EVM)](/developers/docs/evm/)
 - [Gaz](/developers/docs/gas/)
-- [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/)

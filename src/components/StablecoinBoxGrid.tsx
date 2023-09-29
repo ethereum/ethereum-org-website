@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
-import { useI18next } from "gatsby-plugin-react-i18next"
-import InlineLink, { navigate } from "./Link"
+import { useRouter } from "next/router"
+import InlineLink from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { isMobile } from "../utils/isMobile"
-import { Lang } from "../utils/languages"
 import OldHeading from "./OldHeading"
 
 // Represent string as 32-bit integer
@@ -269,14 +268,14 @@ export interface IProps {
 }
 
 const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
-  const { language } = useI18next()
   const [indexOpen, setOpenIndex] = useState<number>(0)
+  const router = useRouter()
 
   // TODO generalize
   const handleSelect = (idx: number): void => {
     setOpenIndex(idx)
     if (isMobile()) {
-      navigate(`/stablecoins/#type-${idx}`, language as Lang)
+      router.push(`/stablecoins/#type-${idx}`)
     }
   }
 

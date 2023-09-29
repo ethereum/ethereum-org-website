@@ -20,9 +20,9 @@ DeSci pretende crear un ecosistema en el que se incentive a los científicos a c
 
 La ciencia descentralizada permite fuentes de financiación más diversas (de [DAO](/dao/), [donaciones cuadráticas](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) a la recaudación colaborativa de fondos, entre otros métodos), datos y métodos de acceso más accesibles, y al proporcionar incentivos para la reproducibilidad.
 
-### Juan Benet, DeSci, Laboratorios Independientes, & Ciencias de datos de gran escala
+### Juan Benet, el movimiento de DeSci
 
-<YouTube id="zkXM9H90g_E" />
+<YouTube id="5ORvbCIW39o" />
 
 ## Cómo DeSci mejora la ciencia {#desci-improves-science}
 
@@ -108,9 +108,9 @@ Explore proyectos y únase a la comunidad DeSci.
 - [VitaDAO: recibe financiación a través de acuerdos de investigación patrocinados para la investigación de la longevidad](https://www.vitadao.com/)
 - [Protocolo Fleming: economía de datos de código abierto que fomenta el descubrimiento biomédico colaborativo](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Laboratorio de inferencia activa](https://www.activeinference.org/)
-- [Cherubs DAO: fondo fundado con NFT y gobernado por DAO para la salud mental & y el bienestar cerebral](https://cherubsdao.com/)
 - [CureDAO: Plataforma de salud de precisión propiedad de la comunidad](https://docs.curedao.org/)
 - [IdeaMarkets: permite la credibilidad científica descentralizada](https://ideamarket.io/)
+- [DeSci Labs](https://www.desci.com/)
 
 Estamos abiertos a recibir sugerencias sobre nuevos proyectos por incluir, por favor, ¡consulte nuestra [política de inclusión](/contributing/adding-desci-projects/) para empezar!
 
@@ -135,5 +135,5 @@ Estamos abiertos a recibir sugerencias sobre nuevos proyectos por incluir, por f
 - [¿Qué es la ciencia descentralizada?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversación entre Vitalik Buterin y el científico Aubrey de Grey sobre la intersección de la investigación de la longevidad y las criptomonedas](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [La publicación científica está interrumpida. ¿Puede Web3 darle continuidad?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
-- [Juan Benet - DeSci, Laboratorios Independientes, & Ciencias de datos de gran escala](https://www.youtube.com/watch?v=zkXM9H90g_E)
+- [Juan Benet, DeSci, Laboratorios Independientes, & Ciencias de datos de gran escala](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Brunemeier: Cómo la ciencia descentralizada puede transformar la investigación biomédica y el capital de riesgo](https://www.youtube.com/watch?v=qB4Tc3FcVbM)

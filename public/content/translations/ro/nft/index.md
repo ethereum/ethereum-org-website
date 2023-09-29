@@ -63,7 +63,7 @@ Folosim NFT-uri pentru a ne răsplăti colaboratorii și avem chiar propriul nos
 
 În cazul în care contribuiți la ethereum.org, puteți revendica un POAP NFT. Acestea sunt obiecte de colecție care dovedesc că ați participat la un eveniment. Unele reuniuni crypto au folosit POAP-urile ca un fel de bilet de intrare la evenimentele lor. [Mai multe despre modurile de a contribui](/contributing/#poap).
 
-![ethereum.org POAP](../../assets/use-cases/poap.png)
+![ethereum.org POAP](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
