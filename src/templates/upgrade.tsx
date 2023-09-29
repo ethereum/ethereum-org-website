@@ -23,7 +23,7 @@ import {
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"

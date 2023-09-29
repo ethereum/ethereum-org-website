@@ -2,7 +2,7 @@ import * as React from "react"
 import { Box, SimpleGrid, VStack, Text } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import ButtonLink from "../../ButtonLink"
+import { ButtonLink } from "../../Buttons"
 import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
 import { DropdownOption } from "./useWalletTable"
 
