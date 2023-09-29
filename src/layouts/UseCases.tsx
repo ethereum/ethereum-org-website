@@ -4,47 +4,48 @@ import {
   calc,
   chakra,
   Flex,
-  type FlexProps,
   Heading,
-  type HeadingProps,
+  Hide,
   Icon,
   ListItem,
   Show,
   Text,
+  type BoxProps,
+  type FlexProps,
+  type HeadingProps,
   UnorderedList,
   useToken,
-  type BoxProps,
-  Hide,
 } from "@chakra-ui/react"
 import { type ComponentProps } from "react"
 import { MdExpandMore } from "react-icons/md"
 
 import BannerNotification from "@/components/BannerNotification"
 import ButtonDropdown, {
-  type IProps as ButtonDropdownProps,
   List as ButtonDropdownList,
+  type IProps as ButtonDropdownProps,
 } from "@/components/ButtonDropdown"
+import { Image } from "@/components/Image"
+import { mdxTableComponents } from "@/components/Table"
 import ButtonLink from "@/components/ButtonLink"
 import Card from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
-// import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import { Image } from "@/components/Image"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import Link, { BaseLink } from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import MeetupList from "@/components/MeetupList"
-// import PageMetadata from "@/components/PageMetadata"
-// import QuizWidget from "@/components/Quiz/QuizWidget"
 import RandomAppList from "@/components/RandomAppList"
 import SectionNav from "@/components/SectionNav"
-import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 import YouTube from "@/components/YouTube"
+// TODO: Import once intl implemented
+// import PageMetadata from "@/components/PageMetadata"
+// import QuizWidget from "@/components/Quiz/QuizWidget"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -106,25 +107,25 @@ export const useCasesComponents = {
   h3: Heading3,
   h4: Heading4,
   img: MarkdownImage,
-  p: Paragraph,
   li: chakra.li,
+  p: Paragraph,
   pre: Pre,
-  ...mdxTableComponents,
-  MeetupList,
-  RandomAppList,
+  Badge,
   ButtonLink,
-  InfoBanner,
   Card,
   Divider,
-  SectionNav,
-  Badge,
-  Emoji,
-  UpgradeStatus,
   DocLink,
+  Emoji,
   ExpandableCard,
+  GlossaryTooltip,
+  InfoBanner,
+  MeetupList,
+  RandomAppList,
+  SectionNav,
+  UpgradeStatus,
   YouTube,
+  ...mdxTableComponents,
   // QuizWidget,
-  // GlossaryTooltip,
 }
 
 const HeroContainer = (props: ChildOnlyProp) => (
