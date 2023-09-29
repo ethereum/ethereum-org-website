@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react"
 import { Box, useColorModeValue, useToken } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
-import * as utils from "../utils/isMobile"
+import { isMobile as isMobileCheck } from "../lib/utils/isMobile"
 
 export interface IProps {
   content: ReactNode
@@ -11,7 +11,7 @@ export interface IProps {
 // TODO add `position` prop
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
-  const isMobile = utils.isMobile()
+  const isMobile = isMobileCheck()
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const borderColor = useToken("colors", "primary.lowContrast")
 

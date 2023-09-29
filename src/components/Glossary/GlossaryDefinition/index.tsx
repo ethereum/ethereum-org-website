@@ -1,8 +1,8 @@
 import React from "react"
-import { Box, Text } from "@chakra-ui/react"
+import { Box, Heading, Text } from "@chakra-ui/react"
 
-import Translation from "../../Translation"
-import OldHeading from "../../OldHeading"
+// TODO: Re-enable with translations once intl implemented
+// import Translation from "../../Translation"
 
 interface IProps {
   term: string
@@ -17,13 +17,16 @@ const GlossaryDefinition: React.FC<IProps> = ({ term, size = "md" }) => {
 
   const textStyles = size === "sm" ? { mb: 0 } : {}
 
+  // TODO: Re-enable with translations once intl implemented
   return (
     <Box>
-      <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
-        <Translation id={`${term}-term`} />
-      </OldHeading>
+      <Heading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
+        {/* <Translation id={`${term}-term`} /> */}
+        {term}-term
+      </Heading>
       <Text {...textStyles}>
-        <Translation id={`${term}-definition`} />
+        {/* <Translation id={`${term}-definition`} /> */}
+        {term}-definition
       </Text>
     </Box>
   )
