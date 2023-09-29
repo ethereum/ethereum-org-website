@@ -185,7 +185,7 @@ const FindWalletPage = ({ data, location }) => {
           m="auto"
           ml={0}
           w="full"
-          maxW={showMobileSidebar ? "330px" : "150px"}
+          maxW={showMobileSidebar ? "200px" : "200px"}
           bg="background.base"
           onClick={() => {
             showMobileSidebar ? onClose() : onOpen()
