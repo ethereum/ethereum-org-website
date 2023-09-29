@@ -40,6 +40,7 @@ import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 
 import type { ChildOnlyProp } from "../../types"
+import { NAV_BAR_PX_HEIGHT } from "../../constants"
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
@@ -120,7 +121,7 @@ const FindWalletPage = ({ data, location }) => {
   }
 
   return (
-    <Flex direction="column" alignItems="center" w="full" mx="auto">
+    <Flex direction="column" position="relative">
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
@@ -162,72 +163,72 @@ const FindWalletPage = ({ data, location }) => {
           objectFit="contain"
         />
       </Flex>
-      <Box
-        position="sticky"
-        top="76px"
-        bg="background.base"
-        w="full"
-        zIndex="docked"
-        py="5px"
-      >
-        <Box
-          display={{ base: "flex", lg: "none" }}
-          gap={4}
-          justifyContent="space-between"
-          alignItems="center"
-          border="1px solid"
-          borderColor="primary.base"
-          borderLeft="none"
-          borderRightRadius="base"
-          pt={1.5}
-          px={5}
-          pb={2.5}
-          m="auto"
-          ml={0}
-          w="full"
-          maxW={showMobileSidebar ? "200px" : "200px"}
-          bg="background.base"
-          onClick={() => {
-            showMobileSidebar ? onClose() : onOpen()
-            trackCustomEvent({
-              eventCategory: "MobileFilterToggle",
-              eventAction: `Tap MobileFilterToggle`,
-              eventName: `show mobile filters ${!showMobileSidebar}`,
-            })
-          }}
-          sx={{
-            p: {
-              m: 0,
-            },
-            svg: {
-              boxSize: 8,
-              line: {
-                stroke: "primary.base",
-              },
-              circle: {
-                stroke: "primary.base",
-              },
-            },
-          }}
-        >
-          <Box>
-            <Text>
-              <Translation id="page-find-wallet-filters" />
-            </Text>
-            <Text fontSize="sm" lineHeight="14px" color="text200">
-              {Object.values(filters).reduce((acc, filter) => {
-                if (filter) {
-                  acc += 1
-                }
-                return acc
-              }, 0)}{" "}
-              {t("page-find-wallet-active")}
-            </Text>
-          </Box>
-          <FilterBurgerIcon />
-        </Box>
-      </Box>
+
       <Hide above="lg">
+        <Box
+          position="sticky"
+          top={NAV_BAR_PX_HEIGHT}
+          bg="background.base"
+          w="full"
+          zIndex="docked"
+          py="5px"
+        >
+          <Flex
+            gap={4}
+            justifyContent="space-between"
+            alignItems="center"
+            border="1px solid"
+            borderColor="primary.base"
+            borderLeft="none"
+            borderRightRadius="base"
+            pt={1.5}
+            px={5}
+            pb={2.5}
+            m="auto"
+            ml={0}
+            w="full"
+            maxW={showMobileSidebar ? "200px" : "200px"}
+            bg="background.base"
+            onClick={() => {
+              showMobileSidebar ? onClose() : onOpen()
+              trackCustomEvent({
+                eventCategory: "MobileFilterToggle",
+                eventAction: `Tap MobileFilterToggle`,
+                eventName: `show mobile filters ${!showMobileSidebar}`,
+              })
+            }}
+            sx={{
+              p: {
+                m: 0,
+              },
+              svg: {
+                boxSize: 8,
+                line: {
+                  stroke: "primary.base",
+                },
+                circle: {
+                  stroke: "primary.base",
+                },
+              },
+            }}
+          >
+            <Box>
+              <Text>
+                <Translation id="page-find-wallet-filters" />
+              </Text>
+              <Text fontSize="sm" lineHeight="14px" color="text200">
+                {Object.values(filters).reduce((acc, filter) => {
+                  if (filter) {
+                    acc += 1
+                  }
+                  return acc
+                }, 0)}{" "}
+                {t("page-find-wallet-active")}
+              </Text>
+            </Box>
+            <FilterBurgerIcon />
+          </Flex>
+        </Box>
         <Drawer
           isOpen={showMobileSidebar}
           placement="start"
@@ -237,10 +238,13 @@ const FindWalletPage = ({ data, location }) => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerHeader mb={4}>
-              <DrawerCloseButton my={2} />
+              <DrawerCloseButton />
             </DrawerHeader>
             <DrawerBody position="relative">
               <WalletFilterSidebar
+                position="absolute"
+                inset={2}
+                overflow="auto"
                 {...{
                   filters,
                   resetWalletFilter,
@@ -256,9 +260,11 @@ const FindWalletPage = ({ data, location }) => {
           </DrawerContent>
         </Drawer>
       </Hide>
-      <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} w="full" gap={6}>
+      <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} gap={6}>
         <Show above="lg">
           <WalletFilterSidebar
+            maxW="330px"
+            top={NAV_BAR_PX_HEIGHT}
             {...{
               filters,
               resetWalletFilter,

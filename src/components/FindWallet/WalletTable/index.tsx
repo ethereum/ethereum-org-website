@@ -6,6 +6,7 @@ import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import {
   Box,
+  calc,
   chakra,
   Flex,
   FlexProps,
@@ -40,6 +41,7 @@ import { trackCustomEvent } from "../../../utils/matomo"
 import { getImage } from "../../../utils/image"
 import { WalletData } from "../../../data/wallets/wallet-data"
 import { ChildOnlyProp } from "../../../types"
+import { NAV_BAR_PX_HEIGHT } from "../../../constants"
 
 const Container = (props: TableProps) => (
   <Table
@@ -90,7 +92,10 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
     rowGap={{ base: 4, sm: 0 }}
     p={2}
     position="sticky"
-    top={{ base: "8.75rem", lg: 20 }}
+    top={{
+      base: calc(NAV_BAR_PX_HEIGHT).add("4rem").toString(),
+      lg: NAV_BAR_PX_HEIGHT,
+    }}
     zIndex={1}
     sx={{
       th: {

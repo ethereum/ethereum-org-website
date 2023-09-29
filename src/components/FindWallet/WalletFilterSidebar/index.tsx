@@ -1,5 +1,5 @@
 // Libraries
-import React, { forwardRef } from "react"
+import React from "react"
 import {
   Icon,
   Center,
@@ -9,6 +9,8 @@ import {
   Tab,
   TabPanels,
   TabPanel,
+  Box,
+  type TabsProps,
 } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
@@ -52,7 +54,7 @@ const FilterTab = ({
   />
 )
 
-interface WalletFilterSidebarProps {
+interface WalletFilterSidebarProps extends Omit<TabsProps, "children"> {
   filters: FiltersType
   resetWalletFilter: React.MutableRefObject<() => void>
   resetFilters: () => void
@@ -72,15 +74,13 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
   setSelectedPersona,
   updateFilterOption,
   updateFilterOptions,
+  top,
+  ...tabsProps
 }) => {
   const theme = useTheme()
   const { t } = useTranslation()
   return (
     <Tabs
-      position={{ base: "absolute", lg: "static" }}
-      inset={2}
-      maxW={{ base: "auto", lg: "330px" }}
-      overflow="auto"
       bg="background.base"
       transition="0.5s all"
       sx={{
@@ -100,42 +100,43 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
           borderColor: "background.base",
         },
       }}
+      {...tabsProps}
     >
-      <TabList
-        borderBottom="1px solid"
-        borderBottomColor="primary.base"
-        position="sticky"
-        top={0}
-        bg="background.base"
-        sx={{
-          ".chakra-tabs__tab": {
-            flex: 1,
-            fontSize: "0.9rem",
-            letterSpacing: "0.02rem",
-            py: "0.9rem",
-            _first: {
-              borderTopLeftRadius: "lg",
+      <Box position="sticky" top={top ?? 0}>
+        <TabList
+          borderBottom="1px solid"
+          borderBottomColor="primary.base"
+          bg="background.base"
+          sx={{
+            ".chakra-tabs__tab": {
+              flex: 1,
+              fontSize: "0.9rem",
+              letterSpacing: "0.02rem",
+              py: "0.9rem",
+              _first: {
+                borderTopLeftRadius: "lg",
+              },
+              _last: {
+                borderTopRightRadius: "lg",
+              },
             },
-            _last: {
-              borderTopRightRadius: "lg",
-            },
-          },
-        }}
-      >
-        <FilterTab eventName="show user personas">
-          <Translation id="page-find-wallet-profile-filters" />
-        </FilterTab>
-        <FilterTab eventName="show feature filters">
-          {t("page-find-wallet-feature-filters")} (
-          {Object.values(filters).reduce((acc, filter) => {
-            if (filter) {
-              acc += 1
-            }
-            return acc
-          }, 0)}
-          )
-        </FilterTab>
-      </TabList>
+          }}
+        >
+          <FilterTab eventName="show user personas">
+            <Translation id="page-find-wallet-profile-filters" />
+          </FilterTab>
+          <FilterTab eventName="show feature filters">
+            {t("page-find-wallet-feature-filters")} (
+            {Object.values(filters).reduce((acc, filter) => {
+              if (filter) {
+                acc += 1
+              }
+              return acc
+            }, 0)}
+            )
+          </FilterTab>
+        </TabList>
+      </Box>
       <Center
         as="button"
         borderRadius="base"

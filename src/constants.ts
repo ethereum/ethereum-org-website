@@ -27,3 +27,5 @@ export const REGULAR_RATES: ReportsModel.RegularRate[] = [
     value: 1.01,
   },
 ]
+
+export const NAV_BAR_PX_HEIGHT = "75px"
