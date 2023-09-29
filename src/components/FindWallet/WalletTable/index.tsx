@@ -237,7 +237,7 @@ const FlexInfo = (props: FlexProps) => (
         "& + p": {
           mt: "0.1rem",
           fontSize: "0.9rem",
-          lineHeight: 4,
+          lineHeight: 5,
           fontWeight: "normal",
         },
       },
