@@ -131,8 +131,8 @@ const WalletFilterProfile = ({
             </Flex>
             <Box
               as="span"
-              m="0.5rem 0 0.8rem 0"
-              p="0.7rem 0.6rem 0"
+              m="0.8rem 0 0.8rem 0"
+              p="0.8rem 0.6rem 0"
               color={selectedPersona === idx ? "text" : "text200"}
               fontSize="0.9rem"
               fontWeight="normal"
