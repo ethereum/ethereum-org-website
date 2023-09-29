@@ -97,11 +97,12 @@ El `execution_payload_header` contiene los siguientes campos:
 | `gas_used`          | la cantidad real de gas utilizada en este bloque                          |
 | `marca de tiempo`   | el tiempo del bloque                                                      |
 | `extra_data`        | datos adicionales arbitrarios como bytes sin procesar                     |
-| `base_fee_per_gas`  | el valor de la comisión base                                              |
+| `base_fee_per_gas`  | el valor de la tarifa de base                                             |
 | `block_hash`        | hash del bloque de ejecución                                              |
 | `transactions_root` | hash raíz de las transacciones en la carga útil                           |
+| `withdrawal_root`   | hash raíz de las retiradas en la carga útil                               |
 
-El propio `execution_payload` contiene lo siguiente (tenga en cuenta que esto es idéntico al encabezamiento, con la salvedad de que en lugar del hash raíz de las transacciones incluye la lista real de transacciones):
+El propio `execution_payload` contiene lo siguiente (observe que esto es idéntico al encabezamiento, excepto que en lugar del hash raíz de las transacciones incluye la lista real de transacciones e información de retiradas):
 
 | Campo              | Descripción                                                               |
 | :----------------- | :------------------------------------------------------------------------ |
@@ -119,16 +120,26 @@ El propio `execution_payload` contiene lo siguiente (tenga en cuenta que esto es
 | `base_fee_per_gas` | el valor de la tarifa base                                                |
 | `block_hash`       | Hash del bloque de ejecución                                              |
 | `transacciones`    | lista de transacciones por ejecutar                                       |
+| `retiradas`        | lista de objetos de retiradas                                             |
+
+La lista de `retiradas` contiene objetos de `retirada` estructurados de la siguiente manera:
+
+| Campo            | Descripción                                          |
+| :--------------- | :--------------------------------------------------- |
+| `dirección`      | dirección de la cuenta que ha realizado una retirada |
+| `amount`         | cantidad de la retirada                              |
+| `índice`         | valor del índice de la retirada                      |
+| `validatorIndex` | valor del índice del validador                       |
 
 ## Tiempo del bloque {#block-time}
 
 El tiempo del bloque se refiere al espacio de tiempo que separa los bloques entre sí. En Ethereum, el tiempo se divide en unidades de doce segundos llamadas «ranuras». En cada ranura se selecciona a un validador único para que proponga un bloque. Asumiendo que todos los validadores están en línea y operativos, habría un bloque en cada ranura, lo que significaría que el tiempo de un bloque es de 12 segundos. A pesar de ello, en algunas ocasiones, los validadores podrían encontrarse desconectados en el momento de solicitarles la propuesta de un nuevo bloque, lo que sugiere que algunas ranuras podrían estar vacías.
 
-Esta implementación difiere de los sistemas basados en pruebas de trabajo cuyos tiempos de bloqueo son probabilísticos y ajustados por la dificultad de minería del protocolo. El [tiempo promedio de bloque](https://etherscan.io/chart/blocktime) de Ethereum es un claro ejemplo de esto, donde la transición de la prueba de trabajo a la prueba de participación puede deducirse claramente según la consistencia del nuevo bloque de 12 horas.
+Esta implementación difiere de los sistemas basados en pruebas de trabajo cuyos tiempos de bloqueo son probabilísticos y ajustados por la dificultad de minería del protocolo. El [tiempo medio de bloque](https://etherscan.io/chart/blocktime) de Ethereum es un claro ejemplo de esto, donde la transición de la prueba de trabajo a la prueba de participación puede deducirse claramente según la consistencia del nuevo bloque de 12 horas.
 
 ## Tamaño del bloque {#block-size}
 
-Una importante nota final es que los bloques tienen limitaciones de tamaño. Cada bloque tiene un tamaño objetivo de 15 millones de gas, pero el tamaño de los bloques incrementará o disminuirá según las exigencias de la red, hasta el límite de 30 millones de gas por bloque (el doble del tamaño objetivo). La cantidad total de gas utilizada por todas las transacciones del bloque debe ser inferior al límite de gas del bloque. Esto es importante, porque garantiza que los bloques no pueden tener un tamaño arbitrario. Si los bloques pudieran ser del tamaño que quisiéramos, los nodos completos de menor rendimiento dejarían de adaptarse gradualmente a la red, debido a los requisitos de espacio y velocidad. Cuanto más grande sea el bloque, mayores serán los requerimientos de potencia informática para procesarlos a tiempo para la siguiente ranura. Esto constituye una tensión centralizadora que es impedida al limitar el tamaño de los bloques.
+Un importante apunte final es que los bloques tienen limitaciones de tamaño. Cada bloque tiene un tamaño objetivo de 15 millones de gas, pero el tamaño de los bloques incrementará o disminuirá según las exigencias de la red, hasta el límite de 30 millones de gas por bloque (el doble del tamaño objetivo). La cantidad total de gas utilizada por todas las transacciones del bloque debe ser inferior al límite de gas del bloque. Esto es importante, porque garantiza que los bloques no pueden tener un tamaño arbitrario. Si los bloques pudieran ser del tamaño que quisiéramos, los nodos completos de menor rendimiento dejarían de adaptarse gradualmente a la red, debido a los requisitos de espacio y velocidad. Cuanto más grande sea el bloque, mayores serán los requerimientos de potencia informática para procesarlos a tiempo para la siguiente ranura. Esto constituye una fuerza centralizadora, limitada por el tamaño de los bloques.
 
 ## Más información {#further-reading}
 

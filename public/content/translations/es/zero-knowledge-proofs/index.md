@@ -146,7 +146,7 @@ Los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups) y los [v
 
 Los esquemas de votación de la cadena de bloques tienen muchas características favorables: son totalmente auditables, son seguros contra los ataques, son resistentes a la censura y están libres de restricciones geográficas. Pero, aun así, no son inmunes al problema del **complot**.
 
-El complot, colusión o conspiración, que se define como la "coordinación para limitar la competencia abierta engañando, defraudando y estafando a los demás", puede adoptar la forma de un actor malicioso que influye en el voto ofreciendo sobornos. Por ejemplo, Alice podría recibir un soborno de Bob para elegir la `opción B` en una votación, incluso si prefiere la `opción A`.
+El complot, colusión o conspiración, que se define como la "coordinación para limitar la competencia abierta engañando, defraudando y estafando a los demás", puede adoptar la forma de un actor malicioso que influye en el voto ofreciendo sobornos. Por ejemplo, Alice podría recibir un soborno de Bob para elegir la `option B` en una votación, incluso si prefiere la `option A`.
 
 El soborno y el complot limitan la efectividad de cualquier proceso que utilice el voto como mecanismo de señalización (especialmente donde los usuarios pueden demostrar cómo votaron). Esto puede tener consecuencias importantes, especialmente cuando las votaciones están destinadas a asignar recursos escasos.
 
@@ -165,12 +165,12 @@ En la MACI, las pruebas de conocimiento cero se utilizan para garantizar que el 
 Por lo tanto, incluso sin compartir un desglose de los votos por usuario (como suele suceder), la MACI garantiza la integridad de los resultados calculados durante el proceso de recuento. Esta característica es útil para reducir la efectividad de los esquemas de colusión básicos. Podemos explorar esta posibilidad utilizando el ejemplo anterior de Bob sobornando a Alice para que vote a favor de una opción:
 
 - Alice se registra para votar enviando su clave pública a un contrato inteligente.
-- Alice acuerda votar a favor de la `opción B` a cambio de un soborno de Bob.
-- Alice vota la `opción B`.
+- Alice acuerda votar a favor de la `option B` a cambio de un soborno de Bob.
+- Alice vota la `option B`.
 - Alice envía secretamente una transacción cifrada para cambiar la clave pública asociada a su identidad.
-- Alice envía otro mensaje (cifrado) al contrato inteligente para votar la `opción A` usando la nueva clave pública.
+- Alice envía otro mensaje (cifrado) al contrato inteligente para votar la `option A` usando la nueva clave pública.
 - Alice muestra a Bob una transacción que da cuenta de que votó por la `opción B` (que no es válida, ya que la clave pública ya no está asociada con la identidad de Alice en el sistema).
-- Al procesar mensajes, el coordinador omite el voto de Alice por la `opción B` y solo cuenta el voto de la `opción A`. Por lo tanto, el intento de Bob de colusión con Alice y de manipular el voto en cadena fracasa.
+- Al procesar mensajes, el coordinador omite el voto de Alice por la `option B` y solo cuenta el voto de la `option A`. Por lo tanto, el intento de Bob de colusión con Alice y de manipular el voto en cadena fracasa.
 
 Usar la MACI _requiere_ confiar en que el coordinador no complote con los sobornadores o intente sobornar a los votantes. El coordinador puede descifrar los mensajes de usuario (necesarios para crear la prueba) y así verificar con precisión cómo votó cada persona.
 

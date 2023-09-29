@@ -91,15 +91,18 @@ title="去中心化应用程序和智能合约开发者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-合并带来了对共识的改变，其中还包括与以下内容相关的更改：
+合并导致共识层发生变化，其中还包括以下方面的变化：<
 
-- 区块结构
-- 时隙/区块时间
-- 操作码的变化
-- 链上随机性的来源
-- _安全头_ 和 _最终区块_ 的概念
+<ul>
+  <li>区块结构</li>
+  <li>时隙/区块时间</li>
+  <li>操作码变化</li>
+  <li>链上随机性的来源</li>
+  <li><em>安全头部区块</em> 和<em>最终确定区块</em>的概念</li>
+</ul>
 
-更多信息，请查看 Tim Beiko 的这篇博客：【合并如何影响以太坊的应用层】(https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/)。
+有关详细信息，请查看 Tim Beiko 的博客文章<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">“合并对以太坊的应用程序层有何影响”</a>。
+
 </ExpandableCard>
 
 ## 合并和能源消耗 {#merge-and-energy}
@@ -115,26 +118,29 @@ id="developers">
 <ExpandableCard
 title="误区：&quot;运行一个节点需要质押 32 个以太币。&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+
 以太坊节点有两种类型：可以提议区块的节点和不能提议区块的节点。
 
 可以提议区块的节点只占以太坊节点总数的一小部分。 这类节点包括工作量证明 (PoW) 下的挖矿节点和权益证明 (PoS) 下的验证者节点。 该类别需要投入经济资源（例如工作量证明中的 GPU 哈希算力或权益证明中的质押以太币），以换取有时提出下一个区块并获得协议奖励的能力。
 
 网络上的其他节点（例如大部分节点）不需要投入任何经济资源，只需一台有着 1 到 2 TB 的可用存储空间并且可以连接互联网的消费级计算机即可。 这些节点不提出区块，但它们仍然在网络安全中扮演着关键的角色，通过监听新的区块，在区块到达时根据网络共识机制验证它们的有效性，并对所有的区块产出负责任。 如果区块是有效的，节点将继续通过网络传播它。 如果区块出于任何原因无效，节点软件将会忽略它将他视为无效区块并停止传播。
 
-任何人都可以在任一种共识机制下（工作量证明或权益证明）运行非区块产生节点；我们强烈鼓励所有有办法的用户这样做。 运行一个节点对以太坊非常有价值，并为任何运行节点的个人提供额外的好处，如改进的安全性、隐私性和抗审查性。
+在任一共识机制（工作量证明或权益证明）下，任何人都可以运行非区块生产节点；我们<em>强烈建议</em>所有有能力的用户都这样做。 运行一个节点对以太坊非常有价值，并为任何运行节点的个人提供额外的好处，如改进的安全性、隐私性和抗审查性。
 
-拥有运行自己独立节点的能力对于维持以太坊网络的去中心化极其重要。
+让任何人都拥有运行自己的节点的能力对于维持以太坊网络的去中心化<em>极其重要</em>。
 
-[有关运行自己节点的更多信息]（/运行节点/）
+<a href="/run-a-node/">更多关于运行你自己的节点的信息</a>
 
 </ExpandableCard>
 
 <ExpandableCard
 title="误解：&quot;合并未能降低燃料费用。&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+
 燃料费用是网络需求受限于网络容量的产物。 合并弃用了工作量证明，过渡到权益证明共识机制，但这并不会明显改变直接影响网络容量和吞吐量的任何参数。
 
-通过 [以卷叠为中心的路线图] (https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)，工作重点是扩展用户在 [二层网络] (/layer-2/) 的活动，同时使一层网络主网成为安全的去中心化结算层，为卷叠数据存储进行优化，有助于使卷叠交易成本成倍降低。 转变成权益证明机制是实现这一点的关键先导步骤。 [有关燃料和费用的更多信息。](/developers/docs/gas/)
+根据<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">以卷叠为中心的路线图</a>，工作重点是扩展用户在<a href="/layer-2/">二层网络</a>的活动，同时使一层主网成为安全的去中心化结算层，针对卷叠数据存储进行优化，帮助迅速降低卷叠交易费用。 转变成权益证明机制是实现这一点的关键先导步骤。 <a href="/developers/docs/gas/">更多关于燃料和费用的信息。</a>
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -150,28 +156,26 @@ contentPreview="False. Though some slight changes exist, transaction speed is mo
 
 <ExpandableCard
 title="误解：&quot;合并启用了质押提款。&quot;"
-contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
-在主网没有支持取款功能时，质押的以太币和质押奖励一直被锁定。 提款功能计划在即将进行的上海升级中推出。
+contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+
+在刚刚合并后，质押者只能获得因提议区块而赚取的小费和最大可提取价值。 这些奖励会被记入由验证者（称为<em>费用接收者</em>）控制的非质押帐户，并可以立即获得。 这些奖励与因履行验证者职责而获得的协议奖励区分开。
+
+在上海/卡佩拉网络升级后，质押者现在可以指定一个<em>提款地址</em>，开始接收自动支付的任何超额质押余额（协议奖励中超过 32 以太币的部分）。 这次升级还使验证者可以在退出网络时解锁并收回全部余额。
+
+<a href="/staking/withdrawals/">更多关于质押提款的信息</a>
+
 </ExpandableCard>
 
 <ExpandableCard
-title="误解：&quot;上海升级即提款功能启用前，验证者无法获得任何流动性以太币奖励。&quot;"
-contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
-这似乎与上面提到的在上海升级之前不启用提款功能的做法冲突，但验证者将立即在区块提出过程中获得费用奖励/矿工可提取价值。
-
-协议发行以太币是对为达成共识做出贡献的验证者的奖励。 共识层代表了新发行的以太币，而且每个验证者都有一个唯一的地址来保存其质押的以太币和协议奖励。 这部分以太币在“上海升级”前一直锁定。
-
-执行层上的以太币与共识层分开计算。 当用户在以太坊主网上执行交易时，必须用以及币支付燃料费，包括给验证者的小费。 这个以太币已经在执行层并且不是由协议新发行的，因此可以立即提供给验证者（前提是正确的“费用接收”地址已提供给客户端软件）。
-</ExpandableCard>
-
-<ExpandableCard
-title="误解：&quot;启用提款功能后，质押人将立即退出。&quot;"
+title="误解：&quot;因为合并已经完成，提款功能也已启用，所以质押人可以全部一次性退出。&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-上海升级启用提款功能后，会激励所有验证者将其质押余额提取到超过 32 个以太币即可，因为这些资金不会增加收益并且不提取还会被锁定。 取决于年化利率（由质押的以太币总量决定），激励可能会导致验证者退出，以收回他们的全部余额，或者验证者也可能会把他们的奖励进行再质押，以赚取更多收益。
+上海/卡佩拉升级启用提款功能后，我们鼓励所有验证者将超过 32 以太币的质押余额提取出来，因为这些资金不会增加收益并且不提取还会被锁定。 根据年化利率（由质押的以太币总量决定），验证者可能会退出以提取他们的全部余额，或者使用他们的奖励增加质押，以赚取更多收益。
 
-这里有一个重要说明 — 验证者完全退出的速率会受到协议限制，因此每个时段只能退出 6 个验证者（即每 6.4 分钟，因此每天可有 1350 个验证者可退出，或者说超过 1000 万个质押的以太币中，每天只有约 43200 个以太币可退出）。 速率限制会根据质押的以太币总量进行调整，以防止大量资金外流。 另外，它可以防止潜在的攻击者使用他们的质押进行可罚没的行为，并在协议能够执行罚没的同一时段提取他们的全部质押余额。
+这里有一项重要限制，协议对验证者的退出速度设置了限制，每个时段只允许退出一定数量的验证者（每 6.4 分钟退出 1 个）。 这一限制会根据活跃验证者的数量浮动，但每天可以退出网络的验证者数量为质押以太币总数的大约 0.33%。
 
-以太坊故意将年化利率设置为动态调整，这就允许市场上的质押人来权衡他们愿意为保护网络付出多少资金。 启用提款功能后，如果速率过低，验证者将以协议限制的速率退出。 逐渐地，这就会为所有留下来的验证者提高年化利率，因而吸引新的质押人或者让退出的质押人回归。
+这样可以防止质押资金大规模流出。 另外，还可以防止掌握一大部分质押以太币总量的潜在攻击者进行可遭致罚没的行为，然后在同一时段、协议能够执行罚没之前退出/提取违规所得的所有验证者余额。
+
+以太坊故意将年化利率设置为动态，以便市场上的质押人权衡他们愿意为保护网络付出多少资金。 如果利率过低，验证者将按照协议限制的速度退出。 这样会逐渐提高所有留下来的验证者的年化利率，从而吸引新的质押人加入或者退出的质押人回归。
 </ExpandableCard>
 
 ## “以太坊 2”发生了什么？ {#eth2}
@@ -203,9 +207,9 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 ### 合并与上海升级 {#merge-and-shanghai}
 
-为了简化并顺利过渡到权益证明，合并升级将不包括某些预期的功能，如提取质押以太币的功能。 上海升级计划在合并之后进行，以确保质押人能够提款。
+为了简化并确保顺利过渡到权益证明，合并升级没有包括某些预期的功能，如提取质押以太币的功能。 该功能是通过上海/卡佩拉升级单独启用的。
 
-请随时关注 [GitHub 上的上海升级计划问题](https://github.com/ethereum/pm/issues/450)或 [以太坊基金会研发博客](https://blog.ethereum.org/category/research-and-development/)。 如果感兴趣，请详细了解 Vitalik 在 2021 年 4 月的 ETHGlobal 活动中发表的演讲：[合并后会发生什么](https://youtu.be/7ggwLccuN5s?t=101)。
+如果感兴趣，请参阅 Vitalik 在 2021 年 4 月的 ETHGlobal 活动中发表的演讲“[合并后会发生什么](https://youtu.be/7ggwLccuN5s?t=101)”，了解更多信息。
 
 ### 合并与分片 {#merge-and-data-sharding}
 

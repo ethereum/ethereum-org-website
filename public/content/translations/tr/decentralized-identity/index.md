@@ -17,7 +17,7 @@ Bununla birlikte, geleneksel kimlik yönetim sistemleri uzun süredir kimlik tan
 
 Bu sorunları çözmek için Ethereum gibi halka açık blok zincirler üzerine inşa edilmiş merkeziyetsiz kimlik sistemlerimiz var. Merkeziyetsiz kimlik, bireylerin kimlikle ilgili bilgilerini yönetmelerine olanak tanır. Merkeziyetsiz kimlik çözümleriyle, hizmet sağlayıcılar veya hükûmetler gibi merkezi yetkililere güvenmeden tanımlayıcılar oluşturabilir ve tasdiklerinizi _talep edebilir_ ve _tutabilirsiniz._
 
-## Kimlik nedir {#what-is-identity}
+## Kimlik nedir? {#what-is-identity}
 
 Kimlik, bir bireyin benzersiz özelliklerle tanımlanan benlik duygusu anlamına gelir. Kimlik, bir _birey_, yani ayrı bir insan varlığı anlamına gelir. Kimlik ayrıca bir kuruluş veya otorite gibi diğer insan dışı varlıklara da atıfta bulunabilir.
 
@@ -157,6 +157,7 @@ Merkeziyetsiz kimlik çözümlerinin temeli olarak Ethereum'u kullanan çok say�
 
 - **[Ethereum İsim Servisi (ENS)](https://ens.domains/)** - _Ethereum cüzdan adresleri, içerik karmaları ve metaveriler için zincir üstünde, makine tarafından okunabilen, merkeziyetsiz isimlendirme sistemi._
 - **[SpruceID](https://www.spruceid.com/)** - _Kullanıcıların üçüncü taraf hizmetlerine güvenmek yerine Ethereum hesapları ve ENS profilleri ile dijital kimliği kontrol etmelerini sağlayan merkeziyetsiz bir kimlik projesi._
+- **[Ethereum Tasdik Hizmeti (EAS)](https://attest.sh/)** - _Her şey hakkında zincir üstünde veya dışında tasdik etmek için merkeziyetsiz bir ledger'dır/protokoldür._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (veya PoH) Ethereum üzerine inşa edilmiş bir sosyal kimlik doğrulama sistemidir._
 - **[BrightID](https://www.brightid.org/)** - _Bir sosyal grafiğin oluşturulması ve analizi yoluyla kimlik doğrulamasını yeniden düzenlemeyi amaçlayan merkeziyetsiz, açık kaynaklı bir sosyal kimlik ağı._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _Merkezi olmayan bir dijital kimlik toplayıcısı._
@@ -175,7 +176,7 @@ Merkeziyetsiz kimlik çözümlerinin temeli olarak Ethereum'u kullanan çok say�
 - [Decentralized Identity (Bonus Livestream Session)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Andreas Antonopoulos'tan merkezi olmayan kimlik üzerine harika bir açıklayıcı video_
 - [Sign In with Ethereum and Decentralized Identity with Ceramic, IDX, React, and 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _Nader Dabit tarafından Ethereum cüzdanı kullanarak bir profili oluşturmak, okumak ve güncellemek için bir kimlik yönetim sistemi oluşturmaya yönelik YouTube eğitimi_
 - [BrightID - Decentralized Identity on Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Ethereum için merkeziyetsiz bir kimlik çözümü olan BrightID'yi tartışan Bankless podcast bölümü_
-- [The Off Chain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _Evin McMullen tarafından yapılan EthDenver 2022 sunumu_
+- [The Off Chain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Evin McMullen tarafından yapılan EthDenver 2022 sunumu
 
 ### Topluluklar {#communities}
 

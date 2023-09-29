@@ -25,7 +25,7 @@ Muchos desarrolladores de Web3 han elegido construir dapps debido a la descentra
 | Los servicios de pago pueden decidir no permitir pagos por ciertos tipos de trabajo        | Las aplicaciones de pago web3 no requieren datos personales y no pueden evitar pagos                                   |
 | Los servidores de gig-economy apps podrían caerse, y afectar a los ingresos del trabajador | Los servidores web3 no se pueden caer, utilizan Ethereum, una red descentralizada de miles de ordenadores como backend |
 
-Esto no significa que todos los servicios deban convertirse en una dapp. Estos ejemplos son ilustrativos de las principales diferencias entre los servicios Web 2 y Web3.
+Esto no significa que todos los servicios deban convertirse en una DApp. Estos ejemplos son ilustrativos de las principales diferencias entre los servicios Web 2 y Web3.
 
 ## Limitaciones de web3 {#web3-limitations}
 
@@ -34,7 +34,7 @@ Web3 tiene algunas limitaciones ahora mismo:
 - Escalabilidad: Las transacciones son más lentas en web3 porque son descentralizadas. Los cambios de estado, como por ejemplo los pagos, deberán ser procesados por un nodo y diseminados en la red.
 - UX: Interactuar con aplicaciones web3 puede requerir pasos adicionales, software y formación. Esto puede ser un obstáculo para su implantación.
 - Accesibilidad: la falta de integración en los navegadores web modernos hace que web3 sea menos accesible para la mayoría de los usuarios.
-- Coste: las dapps más exitosas introducen partes muy pequeñas de su código en la cadena de bloques, ya que resulta costoso.
+- Coste: Las DApps más exitosas introducen partes muy pequeñas de su código en la cadena de bloques, ya que resulta costoso.
 
 ## Centralización vs descentralización {#centralization-vs-decentralization}
 
@@ -59,4 +59,4 @@ Tenga en cuenta que estos son patrones generales y puede que no se mantengan aut
 - [El significado de la descentralización](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _6 de Febrero de 2017, Vitalik Buterin_
 - [Por qué la descentralización importa](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 de Febrero de 2018, Chris Dixon_
 - [¿Qué es la Web 3.0 y por qué importa?](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _31 de diciembre de 2019, Max Mersch y Richard Muirhead_
-- [¿Por qué necesitamos la Web 3.0](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab) _Sep 12 de 2018, Gavin Wwood_
+- [¿Por qué necesitamos la Web 3.0](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab) _Sep 12 de 2018, Gavin Wood_
