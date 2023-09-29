@@ -1,6 +1,6 @@
 import { createContext } from "react"
 
-import { QuizStatus, UserStats } from "../../types"
+import { QuizStatus, UserStats } from "@/lib/types"
 
 interface ContextState {
   status: QuizStatus

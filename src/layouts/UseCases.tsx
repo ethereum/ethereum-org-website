@@ -37,15 +37,15 @@ import InfoBanner from "@/components/InfoBanner"
 import Link, { BaseLink } from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import MeetupList from "@/components/MeetupList"
+import QuizWidget from "@/components/Quiz/QuizWidget"
 import RandomAppList from "@/components/RandomAppList"
 import SectionNav from "@/components/SectionNav"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 import YouTube from "@/components/YouTube"
-// TODO: Import once intl implemented
+// TODO: Import once intl implemented?
 // import PageMetadata from "@/components/PageMetadata"
-// import QuizWidget from "@/components/Quiz/QuizWidget"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -120,12 +120,12 @@ export const useCasesComponents = {
   GlossaryTooltip,
   InfoBanner,
   MeetupList,
+  QuizWidget,
   RandomAppList,
   SectionNav,
   UpgradeStatus,
   YouTube,
   ...mdxTableComponents,
-  // QuizWidget,
 }
 
 const HeroContainer = (props: ChildOnlyProp) => (
