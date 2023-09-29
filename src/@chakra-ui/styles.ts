@@ -57,7 +57,7 @@ const styles = {
       marginBottom: "0",
     },
     "p *:last-child": {
-      "margin-bottom": "0",
+      marginBottom: "0",
     },
     "li > p": {
       marginBottom: "calc(1.45rem / 2)",
