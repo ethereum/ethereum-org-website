@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Flex, Text, Grid, Heading } from "@chakra-ui/react"
 import { MdArrowBack } from "react-icons/md"
-import Button from "../Button"
+import { Button, ButtonLink } from "../Buttons"
 import type {
   LabelHref,
   SimulatorExplanation,
@@ -11,7 +11,6 @@ import type {
 import type { PathId } from "./types"
 import { MoreInfoPopover } from "./MoreInfoPopover"
 import { PathButton } from "./PathButton"
-import ButtonLink from "../ButtonLink"
 import { motion } from "framer-motion"
 
 interface ExplanationProps extends SimulatorNavProps {

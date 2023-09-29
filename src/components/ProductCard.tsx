@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react"
 
 import GitStars from "./GitStars"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Text from "./OldText"
 import GatsbyImage from "./GatsbyImage"
 

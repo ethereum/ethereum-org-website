@@ -18,9 +18,9 @@ Follow the new component directory structure:
 src/
 └── components/
     └── ComponentA/
-        ├── index.tsx
-        ├── ComponentA.stories.tsx
-        └── // Any other files as applicable (utils, child components, useHook, etc.)
+          ├── index.tsx
+          ├── ComponentA.stories.tsx
+          └── // Any other files as applicable (utils, child components, useHook, etc.)
 ```
 
 ## Components creation/modification from the DS
