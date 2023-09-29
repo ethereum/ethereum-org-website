@@ -2,7 +2,7 @@
 import React, { ReactNode, useState } from "react"
 import { Flex, FlexProps, Heading } from "@chakra-ui/react"
 // Component imports
-import Button from "./Button"
+import { Button } from "./Buttons"
 // TODO: add Translation when i18n is set up
 // import Translation from "./Translation"
 // SVG imports

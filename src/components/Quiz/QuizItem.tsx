@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Button from "../Button"
+import { Button } from "../Buttons"
 import Translation from "../Translation"
 import Tag from "../Tag"
 import { GreenTickIcon } from "../icons/quiz"

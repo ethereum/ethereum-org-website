@@ -19,7 +19,7 @@ import { motion } from "framer-motion"
 
 import { BaseLink } from "../Link"
 // import Translation from "../Translation"
-import Button from "../Button"
+import { Button } from "../Buttons"
 
 import { ISections } from "./types"
 import type { ChildOnlyProp } from "../../lib/types"

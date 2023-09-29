@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react"
 
 import Breadcrumbs from "../components/Breadcrumbs"
-import ButtonLink from "@/components/ButtonLink"
+import { ButtonLink } from "@/components/Buttons"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"

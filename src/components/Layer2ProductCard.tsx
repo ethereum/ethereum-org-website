@@ -5,7 +5,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import { Box, Center, Flex, Heading, Image } from "@chakra-ui/react"
 
 // Components
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import InlineLink from "./Link"
 import Text from "./OldText"
 import GatsbyImage from "./GatsbyImage"

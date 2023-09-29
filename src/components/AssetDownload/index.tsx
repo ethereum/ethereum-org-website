@@ -4,7 +4,7 @@ import { Box, Flex, FlexProps } from "@chakra-ui/react"
 
 // Components
 import Translation from "../Translation"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import AssetDownloadImage from "./AssetDownloadImage"
 import AssetDownloadArtist from "./AssetDownloadArtist"
 import OldHeading from "../OldHeading"
