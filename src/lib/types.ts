@@ -70,3 +70,5 @@ export type Lang =
   | "vi"
   | "zh"
   | "zh-tw"
+
+export type TranslationKey = string
