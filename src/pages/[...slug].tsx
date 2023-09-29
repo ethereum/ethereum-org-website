@@ -104,6 +104,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   if (!frontmatter.template) {
     layout = params.slug.includes("developers/docs") ? "docs" : "static"
   }
+ 
   return {
     props: {
       mdxSource,
@@ -118,6 +119,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 interface ContentPageProps extends Props {
   layout: keyof typeof layoutMapping
 }
+
 const ContentPage: NextPageWithLayout<ContentPageProps> = ({ mdxSource, layout }) => {
   return (
     <>
