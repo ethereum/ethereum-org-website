@@ -47,6 +47,7 @@ import QuizWidget from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
 import GlossaryDefinition from "../components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -252,6 +253,8 @@ const StaticPage = ({
           translationString={postMergeBannerTranslationString!}
         />
       )}
+
+      <WritersCohortBanner pathname={location.pathname} />
       <Flex
         justifyContent="space-between"
         w="full"
