@@ -21,7 +21,7 @@ import {
 } from "@chakra-ui/react"
 
 import BannerNotification from "../components/BannerNotification"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CallToContribute from "../components/CallToContribute"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
@@ -30,7 +30,6 @@ import CrowdinContributors from "../components/FileContributorsCrowdin"
 import GitHubContributors from "../components/FileContributorsGitHub"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import InfoBanner from "../components/InfoBanner"
-import InlineLink from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
 import PageMetadata from "../components/PageMetadata"
 import TableOfContents, {
@@ -43,6 +42,8 @@ import DocsNav from "../components/DocsNav"
 import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 import RollupProductDevDoc from "../components/RollupProductDevDoc"
 import YouTube from "../components/YouTube"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -85,7 +86,7 @@ const H1 = (props: HeadingProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     {...baseHeadingStyle}
     fontSize="2xl"
     lineHeight={{ base: 1.2, md: 1.4 }}
@@ -103,7 +104,7 @@ const baseSubHeadingStyles: HeadingProps = {
 }
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     {...baseSubHeadingStyles}
     as="h3"
     fontSize={{ md: "2xl" }}
@@ -113,7 +114,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     {...baseSubHeadingStyles}
     as="h4"
     fontSize={{ md: "xl" }}
@@ -193,7 +194,7 @@ const BackToTop = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: InlineLink,
+  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,

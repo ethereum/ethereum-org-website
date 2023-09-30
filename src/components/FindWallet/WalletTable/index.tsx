@@ -1,6 +1,5 @@
 // Libraries
 import React, { ReactNode } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Select from "react-select"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
@@ -19,7 +18,6 @@ import {
   Table,
   TableProps,
   Td,
-  Text,
   Th,
   Tr,
 } from "@chakra-ui/react"
@@ -27,6 +25,8 @@ import {
 // Components
 import InlineLink, { IProps as LinkProps } from "../../Link"
 import { WalletMoreInfo } from "./WalletMoreInfo"
+import GatsbyImage from "../../GatsbyImage"
+import Text from "../../OldText"
 
 // Icons
 import {
@@ -432,8 +432,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
               <Td lineHeight="revert">
                 <FlexInfo>
                   <Box>
-                    <Img
-                      as={GatsbyImage}
+                    <GatsbyImage
                       image={getImage(data[wallet.image_name])!}
                       alt=""
                       objectFit="contain"

@@ -6,7 +6,6 @@ import {
   ButtonProps,
   Flex,
   Icon,
-  Text,
   ScaleFade,
 } from "@chakra-ui/react"
 import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
@@ -14,6 +13,7 @@ import { MdClose } from "react-icons/md"
 import FocusTrap from "focus-trap-react"
 // Component imports
 import Translation from "./Translation"
+import Text from "./OldText"
 // SVG imports
 import { FeedbackGlyphIcon } from "./icons"
 // Utility imports

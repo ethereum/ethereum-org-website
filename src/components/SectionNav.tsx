@@ -1,7 +1,8 @@
 import React from "react"
-import { Flex, Heading } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import OldHeading from "./OldHeading"
 
 export interface IProps {
   children?: React.ReactNode
@@ -22,7 +23,7 @@ const SectionNav: React.FC<IProps> = ({ children }) => (
   >
     <Flex align="flex-start">
       <Emoji text=":point_right:" mb={4} />
-      <Heading
+      <OldHeading
         as="h2"
         fontSize="md"
         lineHeight={7 / 5}
@@ -31,7 +32,7 @@ const SectionNav: React.FC<IProps> = ({ children }) => (
         textTransform="uppercase"
       >
         <Translation id="in-this-section" />
-      </Heading>
+      </OldHeading>
     </Flex>
     {children}
   </Flex>

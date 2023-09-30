@@ -60,7 +60,7 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 ## Frequently asked questions {#faq}
 
 <ExpandableCard title="How do I earn rewards?">
-Typically ERC-20 staking tokens are issued to stakers that represents the value of their staked ETH plus rewards. Keep in mind that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
+Typically ERC-20 staking tokens are issued to stakers and represent the value of their staked ETH plus rewards. Keep in mind that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw my stake?">
@@ -81,5 +81,6 @@ Some pooling options are more decentralized than others when it comes to the nod
 
 ## Further reading {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Staking with Rocket Pool - Staking Overview](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool docs_
 - [Staking Ethereum With Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido help docs_
