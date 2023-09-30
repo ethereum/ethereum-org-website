@@ -4,7 +4,6 @@ import React, {
   useEffect,
   ComponentPropsWithRef,
 } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -19,8 +18,6 @@ import {
   Heading,
   HeadingProps,
   SimpleGrid,
-  Text,
-  chakra,
   useToken,
 } from "@chakra-ui/react"
 
@@ -35,11 +32,15 @@ import InlineLink, { BaseLink } from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import GatsbyImage from "../components/GatsbyImage"
 
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
@@ -128,18 +129,18 @@ const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
   <Button variant="outline" py={2} px={3} borderRadius="0.25em" {...props} />
 )
 
-const MagiciansImage = chakra(GatsbyImage, {
-  baseStyle: {
-    bgSize: "cover",
-    bgRepeat: "no-repeat",
-    alignSelf: "center",
-    w: "full",
-    minW: "240px",
-    maxW: "300px",
-    my: 8,
-    mx: { base: 0, sm: 8, md: 24 },
-  },
-})
+const MagiciansImage = () => (
+  <GatsbyImage
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    alignSelf="center"
+    w="full"
+    minW="240px"
+    maxW="300px"
+    my="8"
+    mx={{ base: 0, sm: "8", md: "24" }}
+  />
+)
 
 const ImageContainer = (props: Pick<FlexProps, "children" | "id">) => (
   <Flex justify="center" {...props} />
@@ -187,7 +188,7 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
 )
 
 const StyledH2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     fontSize="2xl"
     lineHeight="22px"
     letterSpacing={0}
@@ -208,7 +209,7 @@ const H2 = (props: HeadingProps) => (
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     fontWeight="semibold"
@@ -1263,9 +1264,9 @@ const DappsPage = ({
         </StyledH2>
         <Text>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
-          <InlineLink to="/glossary/#transaction-fee">
+          <GlossaryTooltip termKey="transaction-fee">
             <Translation id="transaction-fees" />
-          </InlineLink>
+          </GlossaryTooltip>
         </Text>
         <Row>
           <StepBoxContainer>

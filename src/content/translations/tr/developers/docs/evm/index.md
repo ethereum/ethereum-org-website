@@ -1,20 +1,20 @@
 ---
-title: Ethereum Sanal Makinası (EVM)
+title: Ethereum Sanal Makinesi (EVM)
 description: Ethereum Sanal Makinesine (EVM) ve EVM'nin durum, işlem ve akıllı sözleşmelerle olan ilgisine dair bir giriş.
 lang: tr
 ---
 
 EVM'nin fiziksel varlığı, bir buluta veya bir okyanus dalgasına benzetilerek açıklanamaz ama EVM, bir Ethereum istemcisi çalıştıran binlerce bağlı bilgisayar tarafından sürdürülen tek bir varlık olarak _var olmaktadır_.
 
-Ethereum protokolü sadece bu özel durum makinesinin devamlı, kesintisiz ve değiştirilemez işleyişini sürdürmek için vardır: EVM, tüm Ethereum hesaplarının ve akıllı sözleşmelerin yaşadığı ortamdır. Ethereum, zincirdeki tüm bloklarda sadece tek bir "kurallı" duruma sahiptir ve EVM, bloktan bloğa yeni geçerli bir durum hesaplama kurallarını belirler.
+Ethereum protokolünün kendisi, yalnızca bu özel durum makinesinin sürekli devam eden, kesintisiz ve değiştirilemez işlemlerini sürdürmek amacıyla vardır. Ethereum protokolü tüm Ethereum hesaplarının ve akıllı sözleşmelerinin bulunması için olan ortamdır. Ethereum, zincirdeki tüm bloklarda sadece tek bir "kurallı" duruma sahiptir ve EVM, bloktan bloka yeni geçerli durum hesaplama kurallarını belirler.
 
 ## Ön koşullar {#prerequisites}
 
-[Bayt](https://wikipedia.org/wiki/Byte), [bellek](https://wikipedia.org/wiki/Computer_memory) ve [yığın](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) gibi bilgisayar bilimlerindeki yaygın terminolojiyi temel seviyede kavramak, EVM'yi anlamak için zorunludur. [Hash fonksiyonları](https://wikipedia.org/wiki/Cryptographic_hash_function), [iş ispatı](https://wikipedia.org/wiki/Proof_of_work) ve [Merkle ağacı](https://wikipedia.org/wiki/Merkle_tree) gibi kriptografi/blok zinciri konseptlerine aşina olmak da yardımcı olacaktır.
+[Bayt](https://wikipedia.org/wiki/Byte), [bellek](https://wikipedia.org/wiki/Computer_memory) ve [yığın](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) gibi bilgisayar bilimlerindeki yaygın terminolojiyi temel seviyede kavramak, EVM'yi anlamak için zorunludur. Ayrıca [karmafonksiyonları](https://wikipedia.org/wiki/Cryptographic_hash_function) ve [Merkleağaçları](https://wikipedia.org/wiki/Merkle_tree) gibi kriptografi/blok zincir konseptlerini bilmek faydalı olur.
 
 ## Defterden durum makinesine {#from-ledger-to-state-machine}
 
-“Dağıtılmış defter” analojisi, genellikle temel kriptografi araçlarını kullanarak merkeziyetsiz bir para birimini mümkün kılan Bitcoin gibi blok zincirlerini tanımlamak için kullanılır. Bir kripto para, defteri değiştirmek için ne yapıp ne yapamayacağını yöneten kurallar nedeniyle "normal" bir para birimi gibi davranır. Örneğin, bir Bitcoin adresi daha önce aldığından daha fazla Bitcoin harcayamaz. Bu kurallar, Bitcoin ve diğer birçok blok zincirindeki tüm işlemlerin temelini oluşturur.
+“Dağıtılmış defter” analojisi, genellikle temel kriptografi araçlarını kullanarak merkeziyetsiz bir para birimini mümkün kılan Bitcoin gibi blok zincirlerini tanımlamak için kullanılır. Defter, bir kişinin defteri değiştirmek için neler yapıp yapamayacağını düzenleyen kurallara uyması gereken bir faaliyet kaydı tutar. Örneğin, bir Bitcoin adresi daha önce aldığından daha fazla Bitcoin harcayamaz. Bu kurallar, Bitcoin ve diğer birçok blok zincirindeki tüm işlemlerin temelini oluşturur.
 
 Ethereum'un neredeyse tamamen aynı sezgisel kuralları takip eden kendi yerel kripto parası (Ether) olsa da, Ethereum çok daha güçlü bir fonksiyonu da mümkün kılar: [akıllı sözleşmeler](/developers/docs/smart-contracts/). Bu daha karmaşık olan özellik için daha karmaşık bir analoji gerekir. Ethereum, dağıtılmış bir defter değil de dağıtılmış bir [durum makinesidir](https://wikipedia.org/wiki/Finite-state_machine). Ethereum'un durumu, yalnızca tüm hesapları ve bakiyeleri değil, aynı zamanda önceden tanımlanmış bir dizi kurala göre bloktan bloğa değişebilen ve isteğe bağlı makine kodunu çalıştırabilen _makine durumunu_ tutan büyük bir veri yapısıdır. Durumu bloktan bloğa değiştirmenin özel kuralları EVM tarafından tanımlanır.
 
@@ -32,7 +32,7 @@ Eski `(S)` geçerli durum ve yeni `(T)` geçerli işlem grubu ele alındığınd
 
 ### Durum {#state}
 
-Ethereum bağlamında durum, tüm [hesapları](/developers/docs/accounts/) hash değerleri ile bağlı tutabilen ve blok zincirinde saklanan tek bir kök hash değerine indirgenebilir hâle getirebilen [değiştirilmiş Merkle Patricia Ağacı](https://eth.wiki/en/fundamentals/patricia-tree) adlı devasa bir veri yapısıdır.
+Ethereum bağlamında durum, tüm [hesapları](/developers/docs/accounts/) hash değerleri ile bağlı tutabilen ve blok zincirinde saklanan tek bir kök hash değerine indirgenebilir hâle getirebilen [değiştirilmiş Merkle Patricia Ağacı](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) adlı devasa bir veri yapısıdır.
 
 ### İşlemler {#transactions}
 
@@ -56,9 +56,9 @@ Derlenmiş akıllı sözleşme bayt kodu, `XOR`, `AND`, `ADD`, `SUB` vb. gibi st
 
 EVM'nin tüm uygulamaları, Ethereum Sarı Kağıdında açıklanan şartnameye uymalıdır.
 
-Ethereum'un 5 yıllık geçmişinde, EVM birkaç revizyondan geçmiştir ve çeşitli programlama dillerinde birkaç uygulaması mevcuttur.
+Ethereum'un dokuz yıllık geçmişinde, EVM birkaç revizyondan geçmiştir ve çeşitli programlama dillerinde birkaç uygulaması mevcuttur.
 
-Tüm [Ethereum istemcileri](/developers/docs/nodes-and-clients/#execution-clients) bir EVM uygulaması içerir. Ek olarak şunlar da dahil olmak üzere birden fazla bağımsız uygulaması bulunmaktadır:
+Tüm [Ethereum yürütme istemcileri](/developers/docs/nodes-and-clients/#execution-clients) bir EVM uygulaması içerir. Ek olarak, çok sayıda bütünsel uygulama da vardır:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
@@ -71,8 +71,9 @@ Tüm [Ethereum istemcileri](/developers/docs/nodes-and-clients/#execution-client
 - [Jellopaper ya da diğer adıyla KEVM: K'de EVM Semantiği](https://jellopaper.org/)
 - [Bej Kağıt](https://github.com/chronaeon/beigepaper)
 - [Ethereum Sanal Makinesi İşlem Kodları](https://www.ethervm.io/)
+- [Ethereum Sanal Makinesi İşlem Kodları İnteraktif Referansı](https://www.evm.codes/)
 - [Solidity'nin belgelerine kısa bir giriş](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
-## İlgili Konular {#related-topics}
+## İlgili konular {#related-topics}
 
 - [Gaz](/developers/docs/gas/)

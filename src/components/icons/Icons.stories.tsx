@@ -1,4 +1,11 @@
-import { Box, Center, StackDivider, VStack } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  Flex,
+  SimpleGrid,
+  StackDivider,
+  VStack,
+} from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 import * as React from "react"
 import { EthHomeIcon } from "./EthHomeIcon"
@@ -46,6 +53,7 @@ import {
   OpenSourceStakingIcon,
   PermissionlessIcon,
   RocketPoolGlyphIcon,
+  RockXGlyphIcon,
   SelfCustodyIcon,
   StafiGlyphIcon,
   StakefishGlyphIcon,
@@ -90,8 +98,9 @@ import {
 } from "./wallets"
 
 export default {
+  title: "Atoms / Media & Icons / Icons",
   component: VStack,
-} as Meta<typeof VStack>
+} satisfies Meta<typeof VStack>
 
 const iconsDefinitions = [
   CorrectIcon,
@@ -130,6 +139,7 @@ const iconsDefinitions = [
   OpenSourceStakingIcon,
   PermissionlessIcon,
   RocketPoolGlyphIcon,
+  RockXGlyphIcon,
   SelfCustodyIcon,
   StafiGlyphIcon,
   StakefishGlyphIcon,
@@ -179,30 +189,24 @@ iconsDefinitions.sort((a, b) =>
   (a?.displayName || "") > (b?.displayName || "") ? 1 : -1
 )
 const items = iconsDefinitions.map((IconDef) => (
-  <Box
+  <Flex
     key={IconDef.displayName}
+    direction="column"
+    gap={4}
+    p={4}
     border="1px"
     borderStyle="solid"
-    borderColor="border"
-    p={1}
+    borderColor="background.highlight"
   >
     <Center>
-      <IconDef />
+      <IconDef w="50px" h="50px" />
     </Center>
     <Center>{IconDef.displayName}</Center>
-  </Box>
+  </Flex>
 ))
 
-export const IconsList: StoryObj<typeof VStack> = {
+export const Icons: StoryObj<typeof VStack> = {
   render: () => {
-    return (
-      <VStack
-        divider={<StackDivider borderColor="gray.200" />}
-        spacing={4}
-        align="stretch"
-      >
-        {items}
-      </VStack>
-    )
+    return <SimpleGrid columns={[2, 2, 3, 5]}>{items}</SimpleGrid>
   },
 }

@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Box, Container, Divider, Heading, useToken } from "@chakra-ui/react"
+import { Box, Container, Divider, useToken } from "@chakra-ui/react"
 
 import InlineLink from "../components/Link"
 import Emoji from "../components/Emoji"
-import ButtonLink from "../components/ButtonLink"
+import { ButtonLink } from "../components/Buttons"
+import OldHeading from "../components/OldHeading"
 
 const StudioRedirectPage = () => {
   const largeBp = useToken("breakpoints", "lg")
@@ -22,7 +23,7 @@ const StudioRedirectPage = () => {
     >
       <Box px={8} py={4} w="full">
         <Emoji fontSize="8xl" mb={10} text=":sunset_over_buildings:" />
-        <Heading
+        <OldHeading
           fontSize={{ base: "5xl", lg: "6xl" }}
           fontStyle="normal"
           fontWeight="bold"
@@ -31,7 +32,7 @@ const StudioRedirectPage = () => {
           textAlign="left"
         >
           We've sunset Studio
-        </Heading>
+        </OldHeading>
         <p>
           Ethereum Studio is no longer actively maintained. We'd like to thank
           the <InlineLink to="https://superblocks.com/">Superblocks</InlineLink>
@@ -60,7 +61,7 @@ const StudioRedirectPage = () => {
           opacity="1"
           backgroundColor="homeDivider"
         />
-        <Heading
+        <OldHeading
           fontSize="3xl"
           fontStyle="normal"
           fontWeight="bold"
@@ -69,7 +70,7 @@ const StudioRedirectPage = () => {
           as="h2"
         >
           What to use instead
-        </Heading>
+        </OldHeading>
         <p>
           We recommend using Remix as an alternative web IDE for your Solidity
           development. Additionally, we encourage you to consider{" "}

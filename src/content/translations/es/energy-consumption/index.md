@@ -55,7 +55,7 @@ El CCRI estima que La Fusión redujo el consumo eléctrico anual de Ethereum en 
 
 ## Una capa de aplicación ecológica {#green-applications}
 
-Mientras que el consumo de energía de Ethereum es muy bajo, también hay una comunidad de desarrollo sustancial, creciente y altamente activa en torno a las **finanzas regenerativas (ReFi)** en Ethereum. Las aplicaciones ReFi usan componentes DeFi para crear aplicaciones financieras que tienen externalidades positivas que benefician al entorno. ReFi es parte de un movimiento ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) más amplio que está estrechamente alineado con Ethereum y tiene como objetivo combinar el progreso tecnológico y la gestión medioambiental. La naturaleza descentralizada, sin permisos y componible de Ethereum lo convierten en la capa base ideal para las comunidades de ReFi y solarpunk.
+Mientras que el consumo de energía de Ethereum es muy bajo, también se está desarrollando en Ethereum una comunidad considerable, creciente y muy activa de [**finanzas regenerativas (ReFi)**](/refi/). Las aplicaciones ReFi usan componentes DeFi para crear aplicaciones financieras que tienen externalidades positivas que benefician al entorno. ReFi es parte de un movimiento ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) más amplio que está estrechamente alineado con Ethereum y tiene como objetivo combinar el progreso tecnológico y la gestión medioambiental. La naturaleza descentralizada, sin permisos y componible de Ethereum lo convierten en la capa base ideal para las comunidades de ReFi y solarpunk.
 
 Las plataformas nativas de financiación de bienes públicos de la Web3, como [Gitcoin](https://gitcoin.co), realizan rondas climáticas para estimular el desarrollo respetuoso con el medio ambiente en la capa de aplicación de Ethereum. A través del desarrollo de estas iniciativas (y otras, por ejemplo, [DeSci](/desci/)), Ethereum se está convirtiendo en una tecnología medioambiental y socialmente positiva.
 
@@ -63,13 +63,13 @@ Las plataformas nativas de financiación de bienes públicos de la Web3, como [G
   Si cree que esta página puede ser más precisa, plantee un problema o solicitud pull (PR). Las estadísticas de esta página son estimaciones basadas en datos disponibles públicamente; no representan una declaración oficial ni una promesa del equipo de ethereum.org ni de la Ethereum Foundation.
 </InfoBanner>
 
-## Leer más {#further-reading}
+## Más información {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
 - [Informe de la Casa Blanca sobre las cadenas de bloques de prueba de trabajo](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
-- [Emisiones de Ethereum: estimación ascendente](https://kylemcdonald.github.io/ethereum-emissions/) Kyle McDonald
-- [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [Emisiones Ethereum: un cálculo estimado ascendente](https://kylemcdonald.github.io/ethereum-emissions/), _Kyle McDonald_
+- [Índice de consumo energético de Ethereum](https://digiconomist.net/ethereum-energy-consumption/), _Digiconomista_
+- [ETHMerge.com](https://ethmerge.com/), _[@InsideTheSim](https://twitter.com/InsideTheSim)_
 - [La Fusión: Implicaciones en el consumo eléctrico y la huella de carbono de la red de Ethereum](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Consumo energético de Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

@@ -1,7 +1,7 @@
 import React, { ReactNode, useCallback, useEffect, useState } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 
-import { Box, Center, Flex, IconButton } from "@chakra-ui/react"
+import { Box, Center, Flex, IconButton, Stack } from "@chakra-ui/react"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 
 export interface IProps {
@@ -137,7 +137,7 @@ export const EmblaSlide: React.FC<{ children: ReactNode }> = ({ children }) => {
         },
       }}
     >
-      {children}
+      <Stack spacing="8">{children}</Stack>
     </Box>
   )
 }

@@ -1,16 +1,18 @@
 import React from "react"
 
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import {
   Box,
   Flex,
   Heading,
   Image,
-  Text,
   LinkOverlay,
   LinkBox,
   useColorModeValue,
 } from "@chakra-ui/react"
+
+import Text from "./OldText"
+import GatsbyImage from "./GatsbyImage"
 
 export interface DataRow {
   logo: IGatsbyImageData
@@ -64,8 +66,7 @@ const DataProductCard: React.FC<IProps> = ({
         minH="200px"
         bg={background}
       >
-        <Image
-          as={GatsbyImage}
+        <GatsbyImage
           image={image}
           objectFit="cover"
           alt={alt ? alt : `${name} logo`}
@@ -122,8 +123,7 @@ const DataProductCard: React.FC<IProps> = ({
               >
                 <Flex alignItems="center">
                   {logo && (
-                    <Image
-                      as={GatsbyImage}
+                    <GatsbyImage
                       image={logo}
                       objectFit="cover"
                       alt=""
