@@ -59,6 +59,16 @@ export const outerListProps: ListProps = {
 }
 
 /**
+ * Removes content between HTML comment tags
+ * @param content Full content as a string
+ * @returns Full content as a string with comments removed
+ */
+export const removeMarkdownComments = (content: string): string => {
+  const multilineHtmlCommentsRe = /<!--[^]*-->/gm
+  return content.replaceAll(multilineHtmlCommentsRe, "")
+}
+
+/**
  * Get title and URL from a Markdown heading string. If the heading contains a custom ID,
  * it will be used as the URL, otherwise the title will be slugified
  * @param heading Markdown text string starting with #s, optionally ending with {#id}
@@ -66,13 +76,12 @@ export const outerListProps: ListProps = {
  * @returns Object of type `Item` containing `title` and `url` properties parsed from heading
  */
 const parseHeadingToItem = (heading: string): Item => {
-  const re = /^(#+\s+)(.+?)(\s+\{(#.*?)\})?$/
+  const re = /^(#+\s+)(.+?)(\s+\{(#[A-Za-z0-9\-_]+?)\})?$/
   const match = heading.match(re)
   if (!match) throw new Error(`Invalid heading: ${heading}`)
-  const [title, id] = [match[2], match[4]]
-  const url = id ? id : `#${slugify(title)}`
-  const item: Item = { title: title.trim(), url }
-  return item
+  const title = trimmedTitle(match[2])
+  const url = `#${getCustomId(heading)}`
+  return { title, url }
 }
 
 /**
@@ -108,7 +117,8 @@ const addHeadingAsItem = (headings: Array<string>, h = 2): Array<Item> => {
  * @returns List of `Item` objects parsed from the content, nested according to heading depth
  */
 export const generateTableOfContents = (content: string): Array<Item> => {
-  const lines = content.split("\n")
+  const contentWithoutComments = removeMarkdownComments(content)
+  const lines = contentWithoutComments.split("\n")
   const headings = lines.filter((line) => line.startsWith("#"))
   return addHeadingAsItem(headings)
 }

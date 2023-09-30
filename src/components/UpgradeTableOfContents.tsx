@@ -26,19 +26,7 @@ export interface Item extends TableOfContentsItem {
   id?: string
 }
 
-const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
-  const { item } = props
-
-  const idString = useRef("")
-
-  if (!!item.id) {
-    idString.current = item.id
-  } else {
-    idString.current = item.title
-  }
-
-  const url = `#${getCustomId(idString.current)}`
-
+const TableOfContentsLink: React.FC<{ item: TableOfContentsItem }> = ({ item: { title, url } }) => {
   let isActive = false
   if (typeof window !== `undefined`) {
     isActive = window.location.hash === url
@@ -51,7 +39,7 @@ const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
 
   return (
     <BaseLink
-      to={url}
+      href={url}
       className={classes}
       position="relative"
       display="inline-block"
@@ -61,21 +49,19 @@ const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
       fontWeight="normal"
       _visited={{}}
     >
-      {trimmedTitle(item.title)}
+      {trimmedTitle(title)}
     </BaseLink>
   )
 }
 
 interface IPropsItemsList {
-  items: Array<Item>
+  items: Array<TableOfContentsItem>
   depth: number
   maxDepth: number
 }
 
 const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
-  if (depth > maxDepth || !items) {
-    return null
-  }
+  if (depth > maxDepth || !items) return null
   return (
     <>
       {items.map((item, index) => (
@@ -92,6 +78,7 @@ interface IPropsToC {
   maxDepth?: number
 }
 const UpgradeTableOfContents: React.FC<IPropsToC> = ({ items, maxDepth = 1}) => {
+  console.log({yeah: items})
   return (
     <Box
       as="nav"

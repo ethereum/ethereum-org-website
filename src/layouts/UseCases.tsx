@@ -34,8 +34,9 @@ import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
-import Link, { BaseLink } from "@/components/Link"
+import { BaseLink } from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
+import MdLink from "@/components/MdLink"
 import MeetupList from "@/components/MeetupList"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import RandomAppList from "@/components/RandomAppList"
@@ -101,7 +102,7 @@ const Paragraph = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 export const useCasesComponents = {
-  a: Link,
+  a: MdLink,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
@@ -379,11 +380,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
                 </ListItem>
               ))}
             </UnorderedList>
-            <TableOfContents
-              items={tocItems}
-              maxDepth={2}
-              isMobile
-            />
+            <TableOfContents items={tocItems} maxDepth={2} isMobile />
           </Box>
         </TitleCard>
         <Image
@@ -433,10 +430,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
             <InfoTitle>{frontmatter.title}</InfoTitle>
 
             {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={2}
-              />
+              <UpgradeTableOfContents items={tocItems} maxDepth={2} />
             )}
           </InfoColumn>
         </Show>

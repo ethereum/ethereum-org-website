@@ -5,7 +5,11 @@ import matter from "gray-matter"
 
 import { Frontmatter } from "../types"
 
-import { CONTENT_DIR } from "../constants"
+import { CONTENT_DIR } from "@/lib/constants"
+import {
+  generateTableOfContents,
+  type Item as ToCItem,
+} from "@/components/TableOfContents/utils"
 
 const contentDir = join(process.cwd(), CONTENT_DIR)
 
@@ -79,7 +83,7 @@ export const getContentBySlug = (slug: string, fields: string[] = []) => {
   const { data: frontmatter, content } = matter(fileContents)
 
   type Items = {
-    [key: string]: string | Frontmatter
+    [key: string]: string | Frontmatter | Array<ToCItem>
   }
 
   const items: Items = {}
@@ -92,6 +96,10 @@ export const getContentBySlug = (slug: string, fields: string[] = []) => {
 
     if (field === "content") {
       items[field] = removeAnchorLinks(content)
+    }
+
+    if (field === "tocItems") {
+      items[field] = generateTableOfContents(content)
     }
 
     if (field === "frontmatter") {

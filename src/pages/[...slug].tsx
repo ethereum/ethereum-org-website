@@ -31,7 +31,7 @@ import {
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import { Frontmatter, NextPageWithLayout } from "@/lib/types"
 import { getLastModifiedDate } from "@/lib/utils/gh"
-import { generateTableOfContents, slugify } from "@/components/TableOfContents/utils"
+import { type Item as ToCItem } from "@/components/TableOfContents/utils"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -85,9 +85,10 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     "slug",
     "content",
     "frontmatter",
+    "tocItems"
   ])
   const frontmatter = markdown.frontmatter as Frontmatter
-  const tocItems = generateTableOfContents(markdown.content as string)
+  const tocItems = markdown.tocItems as Array<ToCItem>
 
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
