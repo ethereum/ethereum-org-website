@@ -9,9 +9,7 @@ import IconButton from "./IconButton"
 import Translation from "../Translation"
 import Button from "./Button"
 
-type ButtonType = typeof Button
-
-const meta: Meta<ButtonType> = {
+const meta = {
   title: "Atoms / Form / Buttons",
   component: Button,
   args: {
@@ -25,11 +23,11 @@ const meta: Meta<ButtonType> = {
       if: { arg: "variant", neq: "solid" },
     },
   },
-}
+} satisfies Meta<typeof Button>
 
 export default meta
 
-type Story = StoryObj<ButtonType>
+type Story = StoryObj<typeof meta>
 
 const variants: ThemingProps<"Button">["variant"][] = [
   "solid",

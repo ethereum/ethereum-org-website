@@ -10,8 +10,6 @@ import {
 import { Meta, StoryObj } from "@storybook/react"
 import Translation from "../Translation"
 
-type HeadingType = typeof HeadingComponent
-
 const meta = {
   title: "Atoms / Typography / Heading",
   component: HeadingComponent,
@@ -25,7 +23,7 @@ const meta = {
       </Flex>
     ),
   ],
-} satisfies Meta<HeadingType>
+} satisfies Meta<typeof HeadingComponent>
 
 export default meta
 

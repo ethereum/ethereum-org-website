@@ -9,16 +9,14 @@ const selectData = [
   { label: "Dogecoin", value: "doge" },
 ]
 
-type SelectType = typeof SelectComponent
-
-const meta: Meta<SelectType> = {
+const meta = {
   title: "Atoms / Form / Select",
   component: SelectComponent,
-}
+} satisfies Meta<typeof SelectComponent>
 
 export default meta
 
-type Story = StoryObj<SelectType>
+type Story = StoryObj<typeof meta>
 
 export const Select: Story = {
   args: {

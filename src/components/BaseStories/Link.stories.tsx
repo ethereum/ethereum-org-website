@@ -3,8 +3,6 @@ import { Center, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 import Link from "../Link"
 
-type LinkType = typeof Link
-
 const meta = {
   title: "Molecules / Navigation / Links",
   component: Link,
@@ -15,7 +13,7 @@ const meta = {
       </Center>
     ),
   ],
-} satisfies Meta<LinkType>
+} satisfies Meta<typeof Link>
 
 export default meta
 
@@ -44,7 +42,7 @@ export const ExternalLink: Story = {
   render: (args) => <MockParagraph {...args} />,
 }
 
-export const LinkList: Story = {
+export const LinkList = {
   render: () => (
     <Stack spacing="6">
       <Text>

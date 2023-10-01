@@ -1,21 +1,17 @@
 import * as React from "react"
 import { VStack } from "@chakra-ui/react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta } from "@storybook/react"
 import Input from "."
 import { BsSlashSquare } from "react-icons/bs"
 
-type InputType = typeof Input
-
-const meta: Meta<InputType> = {
+const meta = {
   title: "Atoms / Form / Input",
   component: Input,
-}
+} satisfies Meta<typeof Input>
 
 export default meta
 
-type Story = StoryObj<InputType>
-
-export const Sizes: Story = {
+export const Sizes = {
   render: () => (
     <VStack width="154px">
       <Input rightIcon={<BsSlashSquare />} placeholder="Search" />
@@ -24,7 +20,7 @@ export const Sizes: Story = {
   ),
 }
 
-export const ElementVariations: Story = {
+export const ElementVariations = {
   render: () => (
     <VStack width="258px" spacing={4}>
       <Input placeholder="input text" />

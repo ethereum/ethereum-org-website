@@ -3,16 +3,14 @@ import { Meta, StoryObj } from "@storybook/react"
 import { VStack, AvatarGroup, HStack } from "@chakra-ui/react"
 import Avatar from "."
 
-type AvatarType = typeof Avatar
-
-const meta: Meta<AvatarType> = {
+const meta = {
   title: "Atoms / Media & Icons / Avatars",
   component: Avatar,
-}
+} satisfies Meta<typeof Avatar>
 
 export default meta
 
-type Story = StoryObj<AvatarType>
+type Story = StoryObj<typeof meta>
 
 export const Single: Story = {
   args: {

@@ -1,10 +1,8 @@
 import * as React from "react"
 import { SimpleGrid, Switch as SwitchComponent } from "@chakra-ui/react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta } from "@storybook/react"
 
-type SwitchType = typeof SwitchComponent
-
-const meta: Meta<SwitchType> = {
+const meta = {
   title: "Atoms / Form / Switch",
   component: SwitchComponent,
   parameters: {
@@ -13,13 +11,11 @@ const meta: Meta<SwitchType> = {
       expanded: false,
     },
   },
-}
+} satisfies Meta<typeof SwitchComponent>
 
 export default meta
 
-type Story = StoryObj<SwitchType>
-
-export const Switch: Story = {
+export const Switch = {
   render: () => (
     <SimpleGrid columns={{ base: 2, lg: 4 }} columnGap={1} alignItems="center">
       <span>isChecked:</span>

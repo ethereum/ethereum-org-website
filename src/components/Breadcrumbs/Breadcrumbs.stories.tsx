@@ -1,19 +1,15 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta } from "@storybook/react"
 import BreadcrumbsComponent from "."
 
-type BreadcumbsType = typeof BreadcrumbsComponent
-
-const meta: Meta<BreadcumbsType> = {
+const meta = {
   title: "Molecules / Navigation / Breadcrumbs",
   component: BreadcrumbsComponent,
-}
+} satisfies Meta<typeof BreadcrumbsComponent>
 
 export default meta
 
-type Story = StoryObj<typeof meta>
-
-export const Breadcrumbs: Story = {
+export const Breadcrumbs = {
   render: () => (
     <>
       <BreadcrumbsComponent slug="/en/staking/" />

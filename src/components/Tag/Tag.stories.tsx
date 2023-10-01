@@ -5,16 +5,14 @@ import { TbSquareRoundedNumber8Filled } from "react-icons/tb"
 import Tag, { EthTagProps } from "."
 import { MdInfoOutline, MdLanguage } from "react-icons/md"
 
-type TagType = typeof Tag
-
-const meta: Meta<TagType> = {
+const meta = {
   title: "Molecules / Display Content / Tags",
   component: Tag,
-}
+} satisfies Meta<typeof Tag>
 
 export default meta
 
-type Story = StoryObj<TagType>
+type Story = StoryObj<typeof meta>
 
 // "normal" is default status
 const statusArray = ["normal", "tag", "success", "error", "warning"] as const
@@ -40,7 +38,7 @@ const StyleVariantList = (args: EthTagProps) => (
   </HStack>
 )
 
-export const StyleVariantsBasic: Story = {
+export const StyleVariantsBasic = {
   render: () => (
     <VStack spacing={8}>
       <Box textAlign="center">
@@ -52,7 +50,7 @@ export const StyleVariantsBasic: Story = {
   ),
 }
 
-export const StyleVariantsAsLinks: Story = {
+export const StyleVariantsAsLinks = {
   render: () => (
     <VStack spacing={8}>
       <Box textAlign="center">
@@ -65,6 +63,7 @@ export const StyleVariantsAsLinks: Story = {
 
 export const ElementVariants: Story = {
   args: {
+    label: "",
     status: "tag",
   },
   render: (args) => (
