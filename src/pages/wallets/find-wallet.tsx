@@ -12,6 +12,7 @@ import {
   Hide,
   DrawerHeader,
   Show,
+  Text,
 } from "@chakra-ui/react"
 import React, { useState } from "react"
 import { graphql } from "gatsby"
@@ -25,7 +26,6 @@ import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
 import WalletTable from "../../components/FindWallet/WalletTable"
-import Text from "../../components/OldText"
 import OldHeading from "../../components/OldHeading"
 import GatsbyImage from "../../components/GatsbyImage"
 
@@ -41,21 +41,19 @@ import { getImage } from "../../utils/image"
 
 import type { ChildOnlyProp } from "../../types"
 import { NAV_BAR_PX_HEIGHT } from "../../constants"
+import { Button } from "../../components/Buttons"
 
-const Subtitle = ({ children }: ChildOnlyProp) => {
-  return (
-    <Text
-      fontSize="xl"
-      lineHeight={1.4}
-      color="text200"
-      _last={{
-        mb: 8,
-      }}
-    >
-      {children}
-    </Text>
-  )
-}
+const Subtitle = ({ children }: ChildOnlyProp) => (
+  <Text
+    fontSize="xl"
+    lineHeight={1.4}
+    color="body.medium"
+    mb={6}
+    _last={{ mb: 8 }}
+  >
+    {children}
+  </Text>
+)
 
 const filterDefault = {
   android: false,
@@ -174,22 +172,19 @@ const FindWalletPage = ({ data, location }) => {
           zIndex="docked"
           py="5px"
         >
-          <Flex
+          <Button
+            rightIcon={<FilterBurgerIcon />}
+            variant="outline"
+            borderInlineStart="none"
+            borderInlineStartRadius="none"
             gap={4}
-            justifyContent="space-between"
-            alignItems="center"
-            border="1px solid"
-            borderColor="primary.base"
-            borderLeft="none"
-            borderRightRadius="base"
-            pt={1.5}
-            px={5}
-            pb={2.5}
-            m="auto"
-            ml={0}
-            w="full"
-            maxW={showMobileSidebar ? "200px" : "200px"}
-            bg="background.base"
+            sx={{
+              svg: {
+                boxSize: 8,
+                line: { stroke: "primary.base" },
+                circle: { stroke: "primary.base" },
+              },
+            }}
             onClick={() => {
               showMobileSidebar ? onClose() : onOpen()
               trackCustomEvent({
@@ -198,37 +193,20 @@ const FindWalletPage = ({ data, location }) => {
                 eventName: `show mobile filters ${!showMobileSidebar}`,
               })
             }}
-            sx={{
-              p: {
-                m: 0,
-              },
-              svg: {
-                boxSize: 8,
-                line: {
-                  stroke: "primary.base",
-                },
-                circle: {
-                  stroke: "primary.base",
-                },
-              },
-            }}
           >
             <Box>
               <Text>
                 <Translation id="page-find-wallet-filters" />
               </Text>
-              <Text fontSize="sm" lineHeight="14px" color="text200">
-                {Object.values(filters).reduce((acc, filter) => {
-                  if (filter) {
-                    acc += 1
-                  }
-                  return acc
-                }, 0)}{" "}
+              <Text fontSize="sm" lineHeight="14px" color="body.medium">
+                {Object.values(filters).reduce(
+                  (acc, filter) => (filter ? acc + 1 : acc),
+                  0
+                )}{" "}
                 {t("page-find-wallet-active")}
               </Text>
             </Box>
-            <FilterBurgerIcon />
-          </Flex>
+          </Button>
         </Box>
         <Drawer
           isOpen={showMobileSidebar}
@@ -321,20 +299,14 @@ const FindWalletPage = ({ data, location }) => {
           },
         }}
       >
-        <Text>
-          <Text as="i">
-            <Translation id="page-find-wallet-footnote-1" />
-          </Text>
+        <Text fontStyle="italic">
+          <Translation id="page-find-wallet-footnote-1" />
         </Text>
-        <Text>
-          <Text as="i">
-            <Translation id="page-find-wallet-footnote-2" />
-          </Text>
+        <Text fontStyle="italic">
+          <Translation id="page-find-wallet-footnote-2" />
         </Text>
-        <Text>
-          <Text as="i">
-            <Translation id="page-find-wallet-footnote-3" />
-          </Text>
+        <Text fontStyle="italic">
+          <Translation id="page-find-wallet-footnote-3" />
         </Text>
       </Box>
     </Flex>
