@@ -166,6 +166,7 @@ const FindWalletPage = ({ data, location }) => {
 
       <Hide above="lg">
         <Box
+          display={{ base: "block", lg: "none" }}
           position="sticky"
           top={NAV_BAR_PX_HEIGHT}
           bg="background.base"
