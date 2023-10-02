@@ -1,5 +1,5 @@
 ---
-title: বিকেন্দ্রীভূত বিজ্ঞান
+title: বিকেন্দ্রীভূত বিজ্ঞান (DeSci)
 description: ইথেরিয়ামে বিকেন্দ্রীভূত বিজ্ঞানের একটি ওভারভিউ
 lang: bn
 template: use-cases
