@@ -17,10 +17,10 @@ Follow the new component directory structure:
 ```markdown
 src/
 └── components/
-    └── ComponentA/
-          ├── index.tsx
-          ├── ComponentA.stories.tsx
-          └── // Any other files as applicable (utils, child components, useHook, etc.)
+└── ComponentA/
+├── index.tsx
+├── ComponentA.stories.tsx
+└── // Any other files as applicable (utils, child components, useHook, etc.)
 ```
 
 ## Components creation/modification from the DS
