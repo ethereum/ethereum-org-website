@@ -39,7 +39,6 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
   type Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -53,6 +52,7 @@ import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
 import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
+import LeftNavBar from "../components/LeftNavBar"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -237,7 +237,7 @@ export const StyledButtonDropdown = ({
   ...rest
 }: FlexProps & Pick<ButtonDropdownProps, "list">) => (
   <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
-    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
+    <ButtonDropdown list={list} w="full" minW="240px" />
   </Flex>
 )
 
@@ -461,17 +461,12 @@ const UseCasePage = ({
           description={mdx.frontmatter.description}
         />
         <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={mdx.frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
+          <LeftNavBar
+            dropdownLinks={dropdownLinks}
+            title={mdx.frontmatter.title}
+            tocItems={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+          />
         </Show>
         <ContentContainer id="content">
           <MDXProvider components={components}>

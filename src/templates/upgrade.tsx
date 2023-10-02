@@ -38,7 +38,6 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
@@ -52,11 +51,8 @@ import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
 import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
-import {
-  MobileButton,
-  MobileButtonDropdown,
-  StyledButtonDropdown,
-} from "./use-cases"
+import LeftNavBar from "../components/LeftNavBar"
+import { MobileButton, MobileButtonDropdown } from "./use-cases"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -85,19 +81,6 @@ const Divider = () => (
     w="10%"
     borderBottomWidth="0.25rem"
     borderColor="homeDivider"
-  />
-)
-
-const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    direction="column"
-    flex="0 1 400px"
-    ml={8}
-    mr={16}
-    position="sticky"
-    top="6.25rem"
-    h={calc("100vh").subtract("80px").toString()}
-    {...props}
   />
 )
 
@@ -148,18 +131,6 @@ const Pre = chakra("pre", {
     whiteSpace: "pre-wrap",
   },
 })
-
-const H1 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h1"
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    fontWeight="bold"
-    lineHeight={1.4}
-    textAlign={{ base: "left", lg: "right" }}
-    mt={0}
-    {...props}
-  />
-)
 
 const MDXH1 = (props: HeadingProps) => (
   <OldHeading
@@ -409,19 +380,12 @@ const UpgradePage = ({
           description={mdx.frontmatter.description}
         />
         <Show above={lgBreakpoint}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <Show above={lgBreakpoint}>
-              <H1>{mdx.frontmatter.title}</H1>
-            </Show>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={mdx.frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
+          <LeftNavBar
+            dropdownLinks={dropdownLinks}
+            title={mdx.frontmatter.title}
+            tocItems={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+          />
         </Show>
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
