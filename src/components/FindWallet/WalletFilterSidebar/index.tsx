@@ -1,5 +1,5 @@
 // Libraries
-import React, { forwardRef } from "react"
+import React from "react"
 import {
   Icon,
   Center,
@@ -9,6 +9,8 @@ import {
   Tab,
   TabPanels,
   TabPanel,
+  Box,
+  type TabsProps,
 } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
@@ -52,8 +54,7 @@ const FilterTab = ({
   />
 )
 
-interface WalletFilterSidebarProps {
-  showMobileSidebar: boolean
+interface WalletFilterSidebarProps extends Omit<TabsProps, "children"> {
   filters: FiltersType
   resetWalletFilter: React.MutableRefObject<() => void>
   resetFilters: () => void
@@ -64,74 +65,47 @@ interface WalletFilterSidebarProps {
   updateFilterOptions: (keys: any, value: any) => void
 }
 
-const WalletFilterSidebar = forwardRef<
-  HTMLDivElement,
-  WalletFilterSidebarProps
->(
-  /**
-   * Note: forwardRef here comes from React and not Chakra
-   * Chakra's version throws error of `children` prop missing
-   */
-  (props, ref) => {
-    const {
-      showMobileSidebar,
-      filters,
-      resetWalletFilter,
-      resetFilters,
-      setFilters,
-      selectedPersona,
-      setSelectedPersona,
-      updateFilterOption,
-      updateFilterOptions,
-    } = props
+const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
+  filters,
+  resetWalletFilter,
+  resetFilters,
+  setFilters,
+  selectedPersona,
+  setSelectedPersona,
+  updateFilterOption,
+  updateFilterOptions,
+  top,
+  ...tabsProps
+}) => {
+  const theme = useTheme()
+  const { t } = useTranslation()
+  return (
+    <Tabs
+      bg="background.base"
+      transition="0.5s all"
+      sx={{
+        scrollbarWidth: "thin",
+        scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
 
-    const theme = useTheme()
-    const { t } = useTranslation()
-    return (
-      <Tabs
-        ref={ref}
-        maxW="330px"
-        overflowY="scroll"
-        bg="background.base"
-        transition="0.5s all"
-        zIndex={20}
-        borderTopRightRadius="lg"
-        pointerEvents="auto"
-        sx={{
-          scrollbarWidth: "thin",
-          scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
-
-          "::-webkit-scrollbar": {
-            width: 2,
-          },
-          "::-webkit-scrollbar-track": {
-            bg: "background.base",
-          },
-          "::-webkit-scrollbar-thumb": {
-            bgColor: "lightBorder",
-            borderRadius: "base",
-            border: "2px solid",
-            borderColor: "background.base",
-          },
-        }}
-        width={{ base: "90%", sm: "350px", lg: "full" }}
-        height={{ base: "full", lg: "auto" }}
-        hideBelow={!showMobileSidebar ? "lg" : undefined}
-        position={{
-          base: showMobileSidebar ? "absolute" : "relative",
-          lg: "static",
-        }}
-        boxShadow={{
-          base: showMobileSidebar ? "0 800px 0 800px rgb(0 0 0 / 65%)" : "none",
-          lg: "none",
-        }}
-        left={showMobileSidebar ? 0 : "-400px"}
-      >
+        "::-webkit-scrollbar": {
+          width: 2,
+        },
+        "::-webkit-scrollbar-track": {
+          bg: "background.base",
+        },
+        "::-webkit-scrollbar-thumb": {
+          bgColor: "lightBorder",
+          borderRadius: "base",
+          border: "2px solid",
+          borderColor: "background.base",
+        },
+      }}
+      {...tabsProps}
+    >
+      <Box position="sticky" top={top ?? 0}>
         <TabList
           borderBottom="1px solid"
           borderBottomColor="primary.base"
-          position="sticky"
-          top={0}
           bg="background.base"
           sx={{
             ".chakra-tabs__tab": {
@@ -162,63 +136,63 @@ const WalletFilterSidebar = forwardRef<
             )
           </FilterTab>
         </TabList>
-        <Center
-          as="button"
-          borderRadius="base"
-          color="primary.base"
-          fontSize="xs"
-          gap={1}
-          mx="auto"
-          my="0.55rem"
-          py={0.5}
-          px={1}
-          _hover={{
-            color: "selectHover",
-          }}
-          onClick={() => {
-            resetFilters()
-            resetWalletFilter.current()
-            trackCustomEvent({
-              eventCategory: "WalletFilterReset",
-              eventAction: `WalletFilterReset clicked`,
-              eventName: `reset filters`,
-            })
-          }}
-        >
-          <Icon as={BsArrowCounterclockwise} aria-hidden="true" fontSize="sm" />
-          {"Reset filters".toUpperCase()}
-        </Center>
-        <TabPanels
-          m={0}
-          sx={{
-            ".chakra-tabs__tab-panel": {
-              bg: "transparent",
-              border: "none",
-              p: 0,
-            },
-          }}
-        >
-          <TabPanel>
-            <WalletFilterPersonas
-              resetFilters={resetFilters}
-              setFilters={setFilters}
-              selectedPersona={selectedPersona}
-              setSelectedPersona={setSelectedPersona}
-            />
-          </TabPanel>
-          <TabPanel>
-            <WalletFilterProfile
-              resetWalletFilter={resetWalletFilter}
-              filters={filters}
-              updateFilterOption={updateFilterOption}
-              updateFilterOptions={updateFilterOptions}
-            />
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-    )
-  }
-)
+      </Box>
+      <Center
+        as="button"
+        borderRadius="base"
+        color="primary.base"
+        fontSize="xs"
+        gap={1}
+        mx="auto"
+        mt="0.55rem"
+        py={0.5}
+        px={1}
+        _hover={{
+          color: "selectHover",
+        }}
+        onClick={() => {
+          resetFilters()
+          resetWalletFilter.current()
+          trackCustomEvent({
+            eventCategory: "WalletFilterReset",
+            eventAction: `WalletFilterReset clicked`,
+            eventName: `reset filters`,
+          })
+        }}
+      >
+        <Icon as={BsArrowCounterclockwise} aria-hidden="true" fontSize="sm" />
+        {"Reset filters".toUpperCase()}
+      </Center>
+      <TabPanels
+        m={0}
+        sx={{
+          ".chakra-tabs__tab-panel": {
+            bg: "transparent",
+            border: "none",
+            p: 0,
+          },
+        }}
+      >
+        <TabPanel>
+          <WalletFilterPersonas
+            resetFilters={resetFilters}
+            setFilters={setFilters}
+            selectedPersona={selectedPersona}
+            setSelectedPersona={setSelectedPersona}
+          />
+        </TabPanel>
+        <TabPanel>
+          <WalletFilterProfile
+            resetWalletFilter={resetWalletFilter}
+            filters={filters}
+            updateFilterOption={updateFilterOption}
+            updateFilterOptions={updateFilterOptions}
+          />
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
+  )
+}
 
 WalletFilterSidebar.displayName = "WalletFilterSidebar"
 
