@@ -209,29 +209,6 @@ export const Page = (props: FlexProps) => (
   />
 )
 
-export const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    as="aside"
-    flexDirection="column"
-    flex="0 1 400px"
-    ml={8}
-    mr={16}
-    position="sticky"
-    top="6.25rem"
-    height={calc("100vh").subtract("80px").toString()}
-    {...props}
-  />
-)
-
-export const InfoTitle = (props: ChildOnlyProp) => (
-  <H2
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "left", lg: "right" }}
-    mt={0}
-    {...props}
-  />
-)
-
 export const StyledButtonDropdown = ({
   list,
   ...rest

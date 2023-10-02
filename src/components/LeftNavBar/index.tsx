@@ -30,7 +30,7 @@ export const StyledButtonDropdown = ({
 )
 
 interface IProps {
-  dropdownLinks: ButtonDropdownList
+  dropdownLinks?: ButtonDropdownList
   maxDepth?: number
   tocItems: any[]
 }
@@ -51,7 +51,7 @@ const LeftNavBar: React.FC<IProps> = ({
       top="6.25rem"
       height={calc("100vh").subtract("80px").toString()}
     >
-      <StyledButtonDropdown list={dropdownLinks} />
+      {dropdownLinks && <StyledButtonDropdown list={dropdownLinks} />}
       <H2>
         <Translation id="on-this-page" />
       </H2>
