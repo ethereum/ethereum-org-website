@@ -10577,6 +10577,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Coderoostr",
+      "name": "Marcos González",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103231131?v=4",
+      "profile": "https://coderoostr.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
