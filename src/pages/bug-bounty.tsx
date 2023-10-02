@@ -460,7 +460,7 @@ const BugBountiesPage = ({
               <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 <Translation id="page-upgrades-bug-bounty-submit" />
               </StyledButton>
-              <StyledButton variant="outline" to="#rules">
+              <StyledButton variant="outline" to="#rules" isSecondary>
                 <Translation id="page-upgrades-bug-bounty-rules" />
               </StyledButton>
             </ButtonRow>

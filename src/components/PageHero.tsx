@@ -100,6 +100,7 @@ const PageHero: React.FC<IProps> = ({
             // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
             <Wrap spacing={2} overflow="visible" sx={{ ul: { m: 0 } }}>
               {buttons.map((button, idx) => {
+                const isSecondary = idx !== 0
                 if (isButtonLink(button)) {
                   return (
                     <WrapItem key={idx}>
@@ -113,6 +114,7 @@ const PageHero: React.FC<IProps> = ({
                             eventName: button.matomo.eventName,
                           })
                         }
+                        isSecondary={isSecondary}
                       >
                         {button.content}
                       </ButtonLink>
@@ -133,6 +135,7 @@ const PageHero: React.FC<IProps> = ({
                             eventName: button.matomo.eventName,
                           })
                         }
+                        isSecondary={isSecondary}
                       >
                         {button.content}
                       </Button>

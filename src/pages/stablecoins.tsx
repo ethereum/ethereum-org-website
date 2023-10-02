@@ -505,6 +505,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                       <ButtonLink
                         variant="outline"
                         to="https://kb.oasis.app/help/what-is-dai"
+                        isSecondary
                       >
                         <Translation id="page-stablecoins-dai-banner-learn-button" />
                       </ButtonLink>
@@ -556,6 +557,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                     <ButtonLink
                       variant="outline"
                       to="https://www.coinbase.com/usdc"
+                      isSecondary
                     >
                       <Translation id="page-stablecoins-usdc-banner-learn-button" />
                     </ButtonLink>
@@ -627,7 +629,12 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             <ButtonLink to="/dapps/">
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
-            <ButtonLink variant="outline" to="/defi/" whiteSpace="normal">
+            <ButtonLink
+              variant="outline"
+              to="/defi/"
+              whiteSpace="normal"
+              isSecondary
+            >
               <Translation id="page-stablecoins-more-defi-button" />
             </ButtonLink>
           </Flex>
