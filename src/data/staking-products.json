@@ -408,7 +408,7 @@
       "imageName": "P2P",
       "hue": 227,
       "launchDate": "2023-01-10",
-      "url": "https://eth.p2p.org/",
+      "url": "https://p2p.org/networks/ethereum/",
       "audits": [
         {
           "name": "Mixbytes (v1)",
