@@ -1,5 +1,5 @@
 ---
-title: "hello\nthis is afnan"
+title: বিকেন্দ্রীভূত বিজ্ঞান
 description: ইথেরিয়ামে বিকেন্দ্রীভূত বিজ্ঞানের একটি ওভারভিউ
 lang: bn
 template: use-cases
