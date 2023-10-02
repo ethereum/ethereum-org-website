@@ -121,7 +121,7 @@ const FindWalletPage = ({ data, location }) => {
   }
 
   return (
-    <Flex direction="column" position="relative">
+    <Flex direction="column" position="relative" w="full">
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
