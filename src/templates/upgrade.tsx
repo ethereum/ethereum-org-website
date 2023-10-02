@@ -382,7 +382,6 @@ const UpgradePage = ({
         <Show above={lgBreakpoint}>
           <LeftNavBar
             dropdownLinks={dropdownLinks}
-            title={mdx.frontmatter.title}
             tocItems={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
           />

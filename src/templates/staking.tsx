@@ -437,7 +437,6 @@ const StakingPage = ({
         <Show above={lgBp}>
           <LeftNavBar
             dropdownLinks={dropdownLinks}
-            title={mdx.frontmatter.title}
             tocItems={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
           />

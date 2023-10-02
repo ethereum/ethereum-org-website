@@ -274,7 +274,6 @@ const RoadmapPage = ({
           <LeftNavBar
             dropdownLinks={dropdownLinks}
             maxDepth={mdx.frontmatter.sidebarDepth!}
-            title={mdx.frontmatter.title}
             tocItems={tocItems}
           />
         </Show>

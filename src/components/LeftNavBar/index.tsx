@@ -6,6 +6,7 @@ import ButtonDropdown, {
   List as ButtonDropdownList,
 } from "../ButtonDropdown"
 import OldHeading from "../OldHeading"
+import Translation from "../Translation"
 import UpgradeTableOfContents from "../UpgradeTableOfContents"
 
 export const H2 = (props: HeadingProps) => (
@@ -31,14 +32,12 @@ export const StyledButtonDropdown = ({
 interface IProps {
   dropdownLinks: ButtonDropdownList
   maxDepth?: number
-  title: string
   tocItems: any[]
 }
 
 const LeftNavBar: React.FC<IProps> = ({
   dropdownLinks,
   maxDepth = 1,
-  title,
   tocItems,
 }) => {
   return (
@@ -53,7 +52,9 @@ const LeftNavBar: React.FC<IProps> = ({
       height={calc("100vh").subtract("80px").toString()}
     >
       <StyledButtonDropdown list={dropdownLinks} />
-      <H2>{title}</H2>
+      <H2>
+        <Translation id="on-this-page" />
+      </H2>
       {tocItems && (
         <UpgradeTableOfContents items={tocItems} maxDepth={maxDepth} />
       )}
