@@ -23,7 +23,7 @@ Smart contract wallets unlock many benefits for the user, including:
 - batch transactions together (e.g. approve and execute a swap in one go)
 - more opportunities for dapps and wallet developers to innovate on user experiences
 
-These benefits are not natively supported today because only externally owned accounts ([EOAs](/glossary/#eoa)) can start transactions. EOAs are simply public-private key pairs. They work like this:
+These benefits are not natively supported today because only externally-owned accounts ([EOAs](/glossary/#eoa)) can start transactions. EOAs are simply public-private key pairs. They work like this:
 
 - if you have the private key you can do _anything_ within the rules of the Ethereum Virtual Machine (EVM)
 - if you do not have the private key you can do _nothing_.
