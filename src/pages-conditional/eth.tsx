@@ -555,7 +555,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           </Text>
         </LeftColumn>
         <RightColumn>
-          <CardList content={cardListContent} />
+          <CardList items={cardListContent} />
         </RightColumn>
       </TwoColumnContent>
       <TwoColumnContent id="tokens" align="flex-start">
@@ -572,7 +572,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <H4 fontWeight="normal">
             <Translation id="page-eth-more-on-tokens" />
           </H4>
-          <CardList content={tokenLinks} />
+          <CardList items={tokenLinks} />
         </LeftColumn>
         <RightColumn>
           <H3>

@@ -40,7 +40,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
-import GatsbyImage from "../components/GatsbyImage"
+import GatsbyImage, { GatsbyImageType } from "../components/GatsbyImage"
 
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
@@ -129,7 +129,7 @@ const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
   <Button variant="outline" py={2} px={3} borderRadius="0.25em" {...props} />
 )
 
-const MagiciansImage = () => (
+const MagiciansImage: GatsbyImageType = (props) => (
   <GatsbyImage
     bgSize="cover"
     bgRepeat="no-repeat"
@@ -139,6 +139,7 @@ const MagiciansImage = () => (
     maxW="300px"
     my="8"
     mx={{ base: 0, sm: "8", md: "24" }}
+    {...props}
   />
 )
 
@@ -1400,11 +1401,7 @@ const DappsPage = ({
               <Column>
                 <StyledH2>
                   <Translation id="page-dapps-finance-title" />{" "}
-                  <Emoji
-                    fontSize="5xl"
-                    ml={"0.5rem"}
-                    text=":money_with_wings:"
-                  />
+                  <Emoji fontSize="5xl" ml="2" text=":money_with_wings:" />
                 </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-finance-description" />
@@ -1525,7 +1522,7 @@ const DappsPage = ({
               <Column>
                 <StyledH2>
                   <Translation id="page-dapps-gaming-title" />{" "}
-                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":video_game:" />
+                  <Emoji fontSize="5xl" ml="2" text=":video_game:" />
                 </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-gaming-description" />
@@ -1555,7 +1552,7 @@ const DappsPage = ({
               <Column>
                 <StyledH2>
                   <Translation id="page-dapps-technology-title" />{" "}
-                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":keyboard:" />
+                  <Emoji fontSize="5xl" ml="2" text=":keyboard:" />
                 </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-technology-description" />
@@ -1661,7 +1658,11 @@ const DappsPage = ({
               <Column>
                 <H2>
                   <Translation id="page-dapps-metaverse-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":globe_with_meridians:" />
+                  <Emoji
+                    fontSize="5xl"
+                    ml={"0.5rem"}
+                    text=":globe_with_meridians:"
+                  />
                 </H2>
                 <Subtitle>
                   <Translation id="page-dapps-metaverse-description" />
@@ -1696,7 +1697,7 @@ const DappsPage = ({
               <Column>
                 <H2>
                   <Translation id="page-dapps-social-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":incoming_envelope:" />
+                  <Emoji fontSize="5xl" ml="2" text=":incoming_envelope:" />
                 </H2>
                 <Subtitle>
                   <Translation id="page-dapps-social-description" />
