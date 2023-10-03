@@ -8,8 +8,12 @@ interface IProps {
   pathname: string
 }
 
-const WritersCohortBanner = ({ pathname }) => {
-  if (pathname.includes("contributing") || pathname.includes("community")) {
+const WritersCohortBanner: React.FC<IProps> = ({ pathname }) => {
+  if (
+    pathname.includes("contributing") ||
+    pathname.includes("community") ||
+    pathname === "/"
+  ) {
     return (
       <DismissableBanner storageKey="writersCohort">
         <Text m={0}>
