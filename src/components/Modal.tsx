@@ -32,7 +32,6 @@ const Modal: React.FC<IProps> = ({
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
       size="xl"
-      variant="code"
       scrollBehavior="inside"
       {...props}
     >
