@@ -27,15 +27,7 @@ const ContentHero = (props: ContentHeroProps) => {
           />
         </Box>
         <Stack p={{ base: "8", lg: "16" }} spacing="9" justify="center">
-          {/* TODO:
-           * Recommend the Breadcrumbs component
-           * not have a spacing style (`mb`) and
-           * let the parent handle the spacing.
-           *
-           * This change would be done when the component is applied
-           * to prod.
-           */}
-          <Breadcrumbs {...breadcrumbs} mb="0" />
+          <Breadcrumbs {...breadcrumbs} />
           <Stack spacing="6">
             <Heading as="h1" size="2xl">
               {title}

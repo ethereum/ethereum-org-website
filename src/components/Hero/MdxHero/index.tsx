@@ -11,15 +11,7 @@ const MdxHero = (props: MdxHeroProps) => {
   const { breadcrumbs, title } = props
   return (
     <Stack py="8" px="6" spacing="6" w="full">
-      {/* TODO:
-       * Recommend the Breadcrumbs component
-       * not have a spacing style (`mb`) and
-       * let the parent handle the spacing.
-       *
-       * This change would be done when the component is applied
-       * to prod.
-       */}
-      <Breadcrumbs {...breadcrumbs} mb={0} />
+      <Breadcrumbs {...breadcrumbs} />
       <Heading as="h1" size="2xl">
         {title}
       </Heading>
