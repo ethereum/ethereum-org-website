@@ -442,7 +442,7 @@ const BugBountiesPage = ({
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Breadcrumbs slug={location.pathname} />
+            <Breadcrumbs slug={location.pathname} mb="8" />
             <Row>
               <On />
               <Title>

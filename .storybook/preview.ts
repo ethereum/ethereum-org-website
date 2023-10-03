@@ -3,6 +3,7 @@ import { action } from "@storybook/addon-actions"
 
 import i18n, { baseLocales } from "./i18next"
 import theme from "../src/@chakra-ui/gatsby-plugin/theme"
+import "../static/fonts/inter-font-face.css"
 
 const chakraBreakpointArray = Object.entries(theme.breakpoints)
 

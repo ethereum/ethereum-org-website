@@ -382,7 +382,7 @@ const UpgradePage = ({
     <Container>
       <HeroContainer>
         <TitleCard>
-          <Breadcrumbs slug={slug} startDepth={1} mt={2} />
+          <Breadcrumbs slug={slug} startDepth={1} mt={2} mb="8" />
           <Title>{mdx.frontmatter.title}</Title>
           <Box>
             <List listStyleType="disc">

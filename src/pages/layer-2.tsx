@@ -1065,6 +1065,16 @@ export const query = graphql`
         )
       }
     }
+    starknet: file(relativePath: { eq: "layer-2/starknet.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 100
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
     boba: file(relativePath: { eq: "layer-2/boba.png" }) {
       childImageSharp {
         gatsbyImageData(
