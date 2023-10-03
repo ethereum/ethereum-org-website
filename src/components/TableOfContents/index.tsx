@@ -1,3 +1,4 @@
+import React from "react"
 import {
   Box,
   BoxProps,
@@ -8,8 +9,8 @@ import {
   Show,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
-import { useActiveHash } from "@/hooks/useActiveHash"
-import ButtonLink from "../ButtonLink"
+import { useActiveHash } from "../../hooks/useActiveHash"
+import ButtonLink from "../Buttons/ButtonLink"
 // import Translation from "../Translation"
 
 import Mobile from "./TableOfContentsMobile"

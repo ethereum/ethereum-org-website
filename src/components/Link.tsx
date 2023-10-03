@@ -3,6 +3,7 @@ import {
   Icon,
   VisuallyHidden,
   forwardRef,
+  StyleProps,
   Link as ChakraLink,
 } from "@chakra-ui/react"
 import { RxExternalLink } from "react-icons/rx"
@@ -26,6 +27,7 @@ type BaseProps = {
   href?: string
   hideArrow?: boolean
   isPartiallyActive?: boolean
+  activeStyle?: StyleProps
   // customEventOptions?: MatomoEventOptions
   // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
@@ -47,17 +49,20 @@ type LinkComponent = FC<RefAttributes<HTMLAnchorElement> & LinkProps>
  * e.g. <Link href="/eth-whitepaper.pdf">
  */
 export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
-  const router = useRouter()
   const {
     href: hrefProp,
     to,
     children,
     hideArrow,
-    isPartiallyActive,
+    isPartiallyActive = true,
+    activeStyle = { color: "primary.base" },
     ...rest
   } = props
 
   let href = (to ?? hrefProp)!
+
+  const { asPath } = useRouter()
+  const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
 
   const isDiscordInvite = url.isDiscordInvite(href)
   const isPdf = url.isPdf(href)
@@ -66,16 +71,23 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
   if (isPdf) {
-    href = getRelativePath(router.asPath, href)
+    href = getRelativePath(asPath, href)
   }
 
   if (isDiscordInvite) {
     href = new URL(DISCORD_PATH, SITE_URL).href
   }
 
+  const commonProps = {
+    ref,
+    href,
+    ...rest,
+    ...(isActive && activeStyle),
+  }
+
   if (isExternal) {
     return (
-      <ChakraLink ref={ref} href={href} isExternal {...rest}>
+      <ChakraLink {...commonProps} isExternal>
         {children}
         <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
         {!hideArrow && (
@@ -91,11 +103,7 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
     )
   }
 
-  return (
-    <NextLink ref={ref} href={href} {...rest}>
-      {children}
-    </NextLink>
-  )
+  return <NextLink {...commonProps}>{children}</NextLink>
 })
 
 const InlineLink: FC<LinkProps> = forwardRef((props, ref) => (
