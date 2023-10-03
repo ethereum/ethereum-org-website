@@ -10577,6 +10577,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Coderoostr",
+      "name": "Marcos González",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103231131?v=4",
+      "profile": "https://coderoostr.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "natpicone",
+      "name": "Natalino Picone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4753402?v=4",
+      "profile": "http://nozominetworks.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

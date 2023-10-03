@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from "react"
+import React, { FC, useRef } from "react"
 import { Icon, Flex, Box, HStack, useDisclosure } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 
@@ -30,7 +30,6 @@ const Nav: FC<IProps> = ({ path }) => {
   const searchModalDisclosure = useDisclosure()
 
   const navWrapperRef = useRef(null)
-  const [languagesHover, setLanguagesHover] = useState(false)
 
   return (
     <Box position="sticky" top={0} zIndex={100} width="full">
@@ -94,27 +93,27 @@ const Nav: FC<IProps> = ({ path }) => {
                   isSecondary
                   px={1.5}
                   _hover={{
-                    transform: "rotate(10deg)", // Rotate the icon to 30 degrees on hover
+                    transform: "rotate(10deg)",
                     color: "primary.hover",
                   }}
                   onClick={toggleColorMode}
                 ></IconButton>
-
                 <ButtonLink
-                  onMouseOver={() => setLanguagesHover(true)}
-                  onMouseOut={() => setLanguagesHover(false)}
                   to={`/languages/${fromPageParameter}`}
+                  transition="color 0.2s"
+                  leftIcon={<Icon as={MdLanguage} />}
                   variant="ghost"
                   isSecondary
                   px={1.5}
                   _hover={{
                     color: "primary.hover",
+                    "& svg": {
+                      transform: "rotate(10deg)",
+                      transition: "transform 0.5s",
+                    },
                   }}
                 >
-                  <Box mr={2} mt={2}>
-                    <Icon as={MdLanguage} />
-                  </Box>
-                  <span>Languages {i18n.language.toUpperCase()}</span>
+                  {t("languages")} {i18n.language.toUpperCase()}
                 </ButtonLink>
               </HStack>
             </Flex>
