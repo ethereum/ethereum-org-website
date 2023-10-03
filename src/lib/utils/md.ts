@@ -36,6 +36,11 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/refi",
     "/social-networks",
     "/decentralized-identity",
+    "/roadmap",
+    "/roadmap/future-proofing",
+    "/roadmap/scaling",
+    "/roadmap/security",
+    "/roadmap/user-experience",
   ]
 
   // Skip /translations dir for now until we set up i18n

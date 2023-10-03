@@ -57,19 +57,19 @@ const commonHeadingProps: HeadingProps = {
   lineHeight: 1.4,
 }
 
-const Heading1 = (props: HeadingProps) => (
+export const Heading1 = (props: HeadingProps) => (
   <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
-const Heading2 = (props: HeadingProps) => (
+export const Heading2 = (props: HeadingProps) => (
   <Heading as="h2" {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
-const Heading3 = (props: HeadingProps) => (
+export const Heading3 = (props: HeadingProps) => (
   <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
-const Heading4 = (props: HeadingProps) => (
+export const Heading4 = (props: HeadingProps) => (
   <Heading
     as="h4"
     {...commonHeadingProps}
@@ -79,9 +79,9 @@ const Heading4 = (props: HeadingProps) => (
   />
 )
 
-const Divider = () => <Box my={16} w="10%" h={1} bgColor="primary.hover" />
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="primary.hover" />
 
-const Pre = (props: ChildOnlyProp) => (
+export const Pre = (props: ChildOnlyProp) => (
   <chakra.pre
     bg="preBackground"
     border="1px"
@@ -95,7 +95,7 @@ const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-const Paragraph = (props: ChildOnlyProp) => (
+export const Paragraph = (props: ChildOnlyProp) => (
   <Text color="text300" mt={8} mb={4} {...props} />
 )
 
@@ -167,9 +167,9 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-const Title = (props: ChildOnlyProp) => <Heading1 mt={4} {...props} />
+export const Title = (props: ChildOnlyProp) => <Heading1 mt={4} {...props} />
 
-const Page = (props: FlexProps) => (
+export const Page = (props: FlexProps) => (
   <Flex
     flexDirection={{ base: "column", lg: "row" }}
     justifyContent="space-between"
@@ -182,7 +182,7 @@ const Page = (props: FlexProps) => (
   />
 )
 
-const InfoColumn = (props: ChildOnlyProp) => (
+export const InfoColumn = (props: ChildOnlyProp) => (
   <Flex
     as="aside"
     flexDirection="column"
@@ -196,7 +196,7 @@ const InfoColumn = (props: ChildOnlyProp) => (
   />
 )
 
-const InfoTitle = (props: ChildOnlyProp) => (
+export const InfoTitle = (props: ChildOnlyProp) => (
   <Heading2
     fontSize={{ base: "2.5rem", lg: "5xl" }}
     textAlign={{ base: "left", lg: "right" }}
@@ -205,7 +205,7 @@ const InfoTitle = (props: ChildOnlyProp) => (
   />
 )
 
-const StyledButtonDropdown = ({
+export const StyledButtonDropdown = ({
   list,
   ...rest
 }: FlexProps & Pick<ButtonDropdownProps, "list">) => (
@@ -214,11 +214,11 @@ const StyledButtonDropdown = ({
   </Flex>
 )
 
-const MobileButtonDropdown = (
+export const MobileButtonDropdown = (
   props: ComponentProps<typeof StyledButtonDropdown>
 ) => <StyledButtonDropdown mb={0} {...props} />
 
-const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const lgBp = useToken("breakpoints", "lg")
 
   return (
@@ -244,7 +244,7 @@ const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-const MobileButton = (props: ChildOnlyProp) => {
+export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
     <Box
