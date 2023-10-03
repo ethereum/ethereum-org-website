@@ -17,8 +17,5 @@ export const getLastModifiedDate = async (filePath: string) => {
   return fetch(url, { headers })
     .then((res) => res.json())
     .then((commits) => commits[0].commit.committer.date)
-    .catch((err) => {
-      console.error(err)
-      return ""
-    })
+    .catch(console.error)
 }
