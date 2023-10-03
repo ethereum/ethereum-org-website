@@ -86,7 +86,7 @@ L'autre avantage de minimiser la confiance en un seul opérateur, c'est que les 
 
 - **Composant additionnel** - L' introduction d'un nœud DVT ajoute une partie supplémentaire potentiellement défectueuse ou vulnérable. Une manière d'atténuer cette situation est de forcer plusieurs mises en œuvre d'un nœud DVT, c'est-à-dire plusieurs clients DVT (tout comme il existe plusieurs clients pour le consensus en lui-même et les couches d'exécution).
 - **Coûts opérationnels** - comme la technologie DVT distribue la validation de façon multipartite, davantage de nœuds sont requis pour le fonctionnement au lieu d'un nœud seul, ce qui génère des coûts liés à ce processus bien plus élevés.
-- \*\*Possibilité d'une latence accrue - étant donné que la technologie DVT utilise un protocole de consensus pour finaliser ledit consensus via les nœuds multiples exploitant un validateur ; ce qui peut entraîner une latence accrue possible.
+- **Possibilité d'une latence accrue** - étant donné que la technologie DVT utilise un protocole de consensus pour finaliser ledit consensus via les nœuds multiples exploitant un validateur ; ce qui peut entraîner une latence accrue possible.
 
 ## Complément d'information {#further-reading}
 
