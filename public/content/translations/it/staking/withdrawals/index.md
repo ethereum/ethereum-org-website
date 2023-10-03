@@ -44,7 +44,7 @@ Prima dell'aggiornamento di Shanghai/Capella, non era possibile utilizzare i pro
 Fornire un indirizzo di prelievo è un passaggio necessario per qualsiasi conto del validatore affinché sia idoneo per il prelievo di ETH dal suo saldo.
 
 <InfoBanner emoji="⚠️" isWarning>
-  <strong>A ogni conto del validatore è assegnabile solo un unico indirizzo di prelievo, una volta.</strong> Una volta che un indirizzo è scelto e inviato alla Beacon Chain, questo non può essere cancellato o modificato. Ricontrolla la proprietà e l'accuratezza dell'indirizzo fornito prima di inviarlo.
+  <strong>Ogni account validatore è assegnabile esclusivamente a un singolo indirizzo di prelievo, una sola volta.</strong> Una volta che un indirizzo è scelto e inviato al livello del consenso, ciò non è annullabile o nuovamente modificabile. Ricontrolla la proprietà e l'accuratezza dell'indirizzo fornito prima di inviarlo.
 </InfoBanner>
 
 <strong>Nel mentre, non esiste alcuna minaccia ai tuoi fondi</strong> per non averlo fornito, supponendo che la tua frase mnemonica/di seed sia rimasta al sicuro offline e non sia stata compromessa in alcun modo. La mancata aggiunta delle credenziali di prelievo lascerà semplicemente gli ETH bloccati nel conto del validatore finché non sarà fornito un indirizzo di prelievo.
@@ -53,7 +53,7 @@ Fornire un indirizzo di prelievo è un passaggio necessario per qualsiasi conto 
 
 Fornire un indirizzo di prelievo è necessario prima che _qualsiasi_ fondo possa esser trasferito all'esterno del saldo di un conto del validatore.
 
-Gli utenti che desiderano uscire interamente dallo staking, prelevando il proprio intero saldo, devono inoltre firmare e trasmettere un messaggio di "uscita volontaria" con le chiavi del validatore, avviando così il procedimento di uscita dallo staking. Ciò avviene con il tuo client validatore e inviandolo al tuo nodo beacon, e non richiede carburante.
+Gli utenti che desiderano uscire interamente dallo staking, prelevando il proprio intero saldo, devono inoltre firmare e trasmettere un messaggio di "uscita volontaria" con le chiavi del validatore, avviando così il procedimento di uscita dallo staking. Ciò avviene con il tuo client validatore inviato al tuo nodo del consenso e non richiede gas.
 
 Il processo di uscita di un validatore dallo staking richiede periodi di tempo variabili, a seconda di quanti altri stanno uscendo contemporaneamente. Una volta completato, questo conto non sarà più responsabile dell'esecuzione dei doveri della rete dei validatori e non sarà più idoneo per ricevere ricompense, né avrà i propri ETH "in staking". A questo punto, il conto sarà contrassegnato come interamente "prelevabile".
 
@@ -83,9 +83,9 @@ Dai un'occhiata a questa spiegazione dei prelievi di staking di Ethereum, di Fin
 Quando è pianificato che un validatore proponga il prossimo blocco, è necessario costruire una coda di prelievo, composta da un massimo di 16 prelievi idonei. Ciò avviene iniziando originariamente dall'indice 0 del validatore, determinando se esista un prelievo idoneo per questo conto secondo le regole del protocollo e, in tal caso, aggiungendolo alla coda. Il validatore impostato per proporre il blocco successivo riprenderà da dove si è fermato il precedente, procedendo indefinitamente in ordine.
 
 <InfoBanner emoji="🕛">
-Pensa a un orologio analogico. La lancetta dell'orologio indica l'ora, progredisce in una direzione, non salta nessuna ora e, infine, torna nuovamente all'inizio dopo aver raggiunto l'ultimo numero.<br/><br/>
-Ora invece che da 1 a 12, immagina che l'orologio vada da 0 a N<em>(il numero totale di conti del validatore mai registrati sulla Beacon Chain, oltre 500.000 a gennaio 2023).</em><br/><br/>
-La lancetta dell'orologio punta al validatore successivo che deve essere controllato in cerca di prelievi idonei. Inizia a 0 e procede controllando tutti i conti, senza saltarne nessuno. Quando viene raggiunto l'ultimo validatore, il ciclo continua ricominciando dall'inizio.
+Pensa a un orologio analogico. La lancetta dell'orologio indica l'ora, si muove in una direzione, non salta alcuna ora e, infine, torna nuovamente all'inizio, dopo aver raggiunto l'ultimo numero.<br/><br/>
+Ora, invece che da 1 a 12, immagina che l'orologio vada da 0 a N <em>(il numero totale di account validatore registrati sul livello del consenso, oltre 500.000 a gennaio 2023).</em><br/><br/>
+La lancetta dell'orologio punta al validatore successivo, che dev'essere controllato per verificare la presenza di prelievi idonei. Inizia a 0 e procede controllando tutti i conti, senza saltarne nessuno. Quando viene raggiunto l'ultimo validatore, il ciclo continua ricominciando dall'inizio.
 </InfoBanner>
 
 #### Verificare un conto per i prelievi {#checking-an-account-for-withdrawals}
@@ -148,12 +148,12 @@ Come alternativa alla modifica dell'indirizzo di prelievo per un dato validatore
 </ExpandableCard>
 
 <ExpandableCard
-title="Cosa succede se partecipo con derivati di staking liquidi o staking in pool?"
+title="Cosa succede se partecipo token di staking o a staking in pool"
 eventCategory="FAQ"
-eventAction="What if I participate in liquid staking derivatives or pooled staking"
+eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Se fai parte di un <a href="/staking/pools/">pool di staking</a> o detieni derivati di staking liquidi, dovresti consultare il tuo fornitore per ottenere ulteriori dettagli sulla gestione dei prelievi di staking, poiché ogni servizio opera in modo diverso.
+Se fai parte di un <a href="/staking/pools/">pool di staking</a> o detieni token di staking, dovresti chiedere al tuo fornitore ulteriori dettagli su come vengono gestiti i prelievi dallo staking, poiché ogni servizio opera in modo diverso.
 
 In generale, gli utenti dovrebbero essere liberi di rivendicare i propri ETH in staking sottostanti, o di modificare il fornitore di staking che utilizzano. Se un pool in particolare sta diventando troppo grande, è possibile uscire, riscattare i fondi e rimetterli in staking con un <a href="https://rated.network/">fornitore di dimensioni minori</a>. O, se hai accumulato abbastanza ETH, potresti <a href="/staking/solo/">fare staking da casa</a>.
 

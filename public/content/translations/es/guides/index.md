@@ -6,7 +6,7 @@ lang: es
 
 # Guías de Ethereum
 
-¿Quiere iniciar su viaje a Ethereum? Ethereum no es una corporación con un helpdesk (servicio de asistencia), pero estas guías prácticas le ayudarán a aprender a empezar.
+¿Quiere iniciar su viaje por Ethereum? Nuestras guías prácticas le guían paso a paso en sus comienzos y le facilitan la navegación en esta nueva tecnología.
 
 ## Introducción
 
@@ -25,7 +25,3 @@ lang: es
 1. [Cómo puentear los tókenes para capa 2](/guides/how-to-use-a-bridge/): ¿las transacciones de Ethereum son demasiado costosas? Considere el pasar a soluciones de escalado de Ethereum llamadas capa 2.
 
 2. [Cómo intercambiar tókenes](/guides/how-to-swap-tokens/): ¿quiere cambiar sus tókenes por otro diferente? Esta sencilla guía le mostrará cómo hacerlo.
-
-## Habilidades del planteamiento descentralizado
-
-Una vez que tiene una cartera y ha utilizado algunas de sus características, puede entender mejor Ethereum preguntándose: «_¿por qué_ importa esto?». ¿Qué hace que el dinero sea valioso si nadie lo controla? ¿Qué es la confianza? ¿Contribuye esto a la libertad? ¿Qué tipo de nuevas estructuras de gobernanza y organización permite Ethereum? Estas preguntas, entre otras, se exploran libremente en comunidades como [Kernel](https://www.kernel.community/).

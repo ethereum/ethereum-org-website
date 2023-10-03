@@ -1,5 +1,4 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
   Flex,
@@ -10,9 +9,10 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Translation from "./Translation"
 import OldHeading from "./OldHeading"
+import GatsbyImage from "./GatsbyImage"
 
 export interface Content {
   title: string
@@ -64,8 +64,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
           >
             <Box width="5rem">
               {image && (
-                <Image
-                  as={GatsbyImage}
+                <GatsbyImage
                   image={image}
                   alt={alt}
                   boxShadow={shadow}

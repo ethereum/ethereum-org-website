@@ -86,9 +86,9 @@ contract VendingMachine {
 
 ## 局限性 {#limitations}
 
-智能合约本身无法获取关于“真实世界”事件的信息，因为它们无法发送 HTTP 请求。 这是设计使然。 因为依赖外部信息可能会影响共识，而共识对安全性和去中心化而言十分重要。
+智能合约本身无法获取有关“现实世界”事件的信息，因为它们无法从链下来源检索数据。 这意味着它们无法对现实世界中的事件作出响应。 这是设计使然。 因为依赖外部信息可能会影响共识，而共识对安全性和去中心化而言十分重要。
 
-这可以通过[预言机](/developers/docs/oracles/)来规避。
+然而，对于区块链应用来说，能够使用链下数据非常重要。 解决方案是[预言机](/developers/docs/oracles/)，它们是将链下数据引入并使其可供智能合约使用的工具。
 
 智能合约的另一个限制是最大合约大小。 智能合约最大可达 24 KB，否则会消耗完燃料。 可以使用[钻石模式](https://eips.ethereum.org/EIPS/eip-2535)来规避它。
 
@@ -104,13 +104,8 @@ contract VendingMachine {
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社区论坛](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys - \*\***_安全、简单、灵活的智能合约构造块。_\*\*
-
-- [DappSys](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
-
 ## 延伸阅读 {#further-reading}
 
-- [智能合约：将取代 Lawyer 的区块链技术](https://blockgeeks.com/guides/smart-contracts/) _- Blockgeek_
-- [智能合约开发的最佳做法](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– 2019 年 11 月 10 日 - Yos Riady_
-- [清洁合约 - 智能合约模式与实践指南](https://www.wslyvh.com/clean-contracts/) _– wslyvh，2020 年 7 月 30 日_
+- [Coinbase：什么是智能合约？](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [Chainlink：什么是智能合约？](https://chain.link/education/smart-contracts)
+- [视频：智能合约的简介](https://youtu.be/ZE2HxTmxfrI)

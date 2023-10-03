@@ -51,6 +51,7 @@
   "page-index-network-stats-total-eth-staked": "ETHステーキング合計",
   "page-index-network-stats-eth-price-description": "ETH価格(米ドル)",
   "page-index-network-stats-eth-price-explainer": "1 ETHの最新価格です。0.0000000000000001から購入できます。1 ETH全てを購入する必要はありません。",
+  "page-index-network-stats-total-eth-staked-explainer": "現在ステークされ、ネットワークを保護しているETH総額",
   "page-index-network-stats-tx-day-description": "現在のトランザクション",
   "page-index-network-stats-tx-day-explainer": "過去24時間にネットワーク上で正常に処理されたトランザクション数",
   "page-index-network-stats-value-defi-description": "分散型金融(DeFi)に預けられた金額(米ドル)",
@@ -74,5 +75,15 @@
   "page-index-nft": "資産のインターネット",
   "page-index-nft-description": "イーサリアムはデジタルマネーだけではありません。所有できるものはすべて、非代替性トークン(NFT)として表現し、取引し、利用することができます。自分の芸術作品をトークン化して、再販されるたびに自動的に印税を受け取ることができます。あるいは、所有物をトークンにしてローンを組むこともできます。可能性はどんどん広がっています。",
   "page-index-nft-button": "非代替性トークン(NFT)の詳細",
-  "page-index-nft-alt": "ホログラムを介して表示されているETHロゴ"
+  "page-index-nft-alt": "ホログラムを介して表示されているETHロゴ",
+  "community-events-content-heading": "Ethereum.orgコミュニティへの参加",
+  "community-events-content-1": "<strong>約40,000人のメンバー</strong>が私たちの<a href=\"/discord/\">Discordサーバー</a>に参加しています。",
+  "community-events-content-2": "毎月のコミュニティコールに参加して、Ethereum.org開発に関するエキサイティングな最新情報やエコシステムに関する 重要なニュースを得ましょう。質問やアイデアの共有、フィードバックを提供することもできます。拡大するイーサリアムコミュニティに参加する絶好の機会です。",
+  "community-events-next-event": "次回イベント",
+  "community-events-no-events-planned": "イベント予定なし",
+  "community-events-upcoming-calls": "今後のコミュニティコール",
+  "community-events-no-upcoming-calls": "コミュニティコールの予定なし",
+  "community-events-previous-calls": "過去のコミュニティコール",
+  "community-events-there-are-no-past-calls": "過去のコミュニティコールなし",
+  "community-events-add-to-calendar": "カレンダーに追加"
 }

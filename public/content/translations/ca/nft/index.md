@@ -63,7 +63,7 @@ Utilitzem els NFT per a retornar els nostres contribuïdors i tenim, fins i tot,
 
 Si contribuïu a ethereum.org, podeu reclamar un NFT POAP. Són col·leccionables que demostren que heu participat en un esdeveniment. Algunes trobades sobre criptomonedes han utilitzat els POAP com a tiquet pels seus esdeveniments. [Més informació sobre les contribucions](/contributing/#poap).
 
-![POAP d'ethereum.org](../../assets/use-cases/poap.png)
+![POAP d'ethereum.org](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 

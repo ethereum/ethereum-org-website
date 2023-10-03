@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useQuery, gql } from "@apollo/client"
 import {
   Badge,
@@ -13,8 +13,9 @@ import {
 } from "@chakra-ui/react"
 
 import GitStars from "./GitStars"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Text from "./OldText"
+import GatsbyImage from "./GatsbyImage"
 
 const REPO_DATA = gql`
   query RepoData(
@@ -150,10 +151,9 @@ const ProductCard: React.FC<IProps> = ({
         minH="200px"
       >
         {isImgSrc ? (
-          <img src={image} alt={alt} />
+          <Img src={image} alt={alt} />
         ) : (
-          <Img
-            as={GatsbyImage}
+          <GatsbyImage
             image={image}
             alt={alt}
             objectFit="contain"

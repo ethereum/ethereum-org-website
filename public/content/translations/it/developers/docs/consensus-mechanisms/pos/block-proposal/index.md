@@ -8,7 +8,7 @@ I blocchi costituiscono le unità fondamentali della blockchain. I blocchi sono 
 
 ## Prerequisiti {#prerequisites}
 
-L'azione di proporre un blocco fa parte del protocollo di proof-of-stake. Per aiutarti a capire questa pagina, ti consigliamo di informarti sul [proof-of-stake](public/content/developers/docs/consensus-mechanisms/pos/) e sull'[architettura del blocco](public/content/developers/docs/blocks/).
+L'azione di proporre un blocco fa parte del protocollo di proof-of-stake. Per aiutarti a capire questa pagina, ti consigliamo di informarti sul [proof-of-stake](src/content/developers/docs/consensus-mechanisms/pos/) e sull'[architettura del blocco](src/content/developers/docs/blocks/).
 
 ## Chi produce i blocchi? {#who-produces-blocks}
 

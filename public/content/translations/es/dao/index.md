@@ -123,7 +123,7 @@ _Normalmente se utiliza para organizaciones más estrechas, centradas en el ser 
 
 La reputación representa una prueba de participación y otorga poder de voto en la DAO. A diferencia de la adhesión de miembros basada en tókenes o en la participación, las DAO basadas en la reputación no transfieren la propiedad a colaboradores. La reputación no puede comprarse, transferirse ni delegarse; los miembros de la DAO deben ganarse la reputación mediante la participación. La votación en cadena se realiza sin permisos y los potenciales miembros pueden presentar propuestas libremente para unirse a la DAO y solicitar reputación y tókenes como recompensa a cambio de su contribución.
 
-_Suele usarse para el desarrollo descentralizado y la gobernanza de protocolos y Dapps, pero resulta igualmente adecuado para un conjunto diverso de organizaciones, como las benéficas, los colectivos de trabajadores, o los grupos de inversión, entre otros._
+_Suele usarse para el desarrollo descentralizado y la gobernanza de protocolos y DApps, pero resulta igualmente adecuado para un conjunto diverso de organizaciones, como las benéficas, los colectivos de trabajadores, o los grupos de inversión, entre otros._
 
 #### Un conocido ejemplo {#reputation-example}
 

@@ -8,7 +8,7 @@ Una cuenta Ethereum con un saldo en ether (ETH), que permite realizar transaccio
 
 ## Requisitos previos {#prerequisites}
 
-Las cuentas son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarle a comprender mejor esta página, le recomendamos visitar nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Para ayudarle a entender mejor esta página, recomendamos que lea nuestra [Introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Tipos de cuenta {#types-of-account}
 
@@ -119,6 +119,8 @@ En el siguiente vídeo Austin le guiará por las funciones hash y los pares de c
 <YouTube id="9LtBDy67Tho" />
 
 ## Para seguir leyendo {#further-reading}
+
+- [Claves para entender las cuentas de Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/)-etherscan
 
 _¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
 

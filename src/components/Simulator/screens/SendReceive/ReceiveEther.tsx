@@ -13,9 +13,10 @@ import React from "react"
 import { Box, Flex, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 import { NotificationPopover } from "../../NotificationPopover"
+import GatsbyImage from "../../../GatsbyImage"
 
 const MotionBox = motion(Box)
 
