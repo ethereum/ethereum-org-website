@@ -171,7 +171,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - [What is Ethereum ERC725? Self-Sovereign Identity Management on the Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [How Blockchain Could Solve the Problem of Digital Identity](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [What Is Decentralized Identity And Why Should You Care?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
-- [Introduction to Decentralized Identity](https://walt.id/white-paper/digital-identity)  — _Dominik Beron_
+- [Introduction to Decentralized Identity](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### Videos {#videos}
 
