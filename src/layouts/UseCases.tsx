@@ -133,9 +133,9 @@ const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
     bg="cardGradient"
     boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
-    flexDirection={{ base: "column-reverse", lg: "row" }}
-    justifyContent="flex-end"
-    minHeight="608px"
+    direction={{ base: "column-reverse", lg: "row" }}
+    justify="end"
+    minHeight={{ base: "800px", lg: "608px" }}
     maxHeight={{ base: "full", lg: "608px" }}
     width="full"
     position="relative"
@@ -269,11 +269,12 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const summaryPoints = getSummaryPoints(frontmatter)
 
+  // TODO: Re-implement GitHub edit path
   // const { editContentUrl } = siteData.siteMetadata || {}
   // const { relativePath } = pageContext
   // const absoluteEditPath = `${editContentUrl}${relativePath}`
 
-  /* Assign hero styling, default to "defi" */
+  // Assign hero styling, default to "defi"
   let useCase = "defi"
   if (slug.includes("dao") || slug.includes("identity")) {
     useCase = "dao"
@@ -359,12 +360,12 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <Text m={0}>
             Uses of Ethereum are always developing and evolving. Add any info
-            you think will make things clearer or more up to date.
-            {/* <Translation id="template-usecase-banner" />{" "} */}
-            {/* <InlineLink to={absoluteEditPath}> */}
-            {/* <Translation id="template-usecase-edit-link" /> */}
-            Edit page
-            {/* </InlineLink> */}
+            you think will make things clearer or more up to date. Edit page
+            {/* TODO: Re-enable after intl implemented */}
+            {/* <Translation id="template-usecase-banner" />{" "}
+            <InlineLink to={absoluteEditPath}>
+              <Translation id="template-usecase-edit-link" />
+            </InlineLink> */}
           </Text>
         </BannerNotification>
       </Show>
@@ -384,15 +385,13 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
           </Box>
         </TitleCard>
         <Image
-          alignSelf={{ base: "center", lg: "normal" }}
           position="absolute"
+          alignSelf={{ base: "center", lg: "normal" }}
           top={0}
-          right={0}
           bottom={0}
           objectFit="cover"
           width={1000}
           height={610}
-          maxH={{ base: "340px", lg: "full" }}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
           maxW={{
