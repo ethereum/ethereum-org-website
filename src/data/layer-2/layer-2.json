@@ -132,6 +132,30 @@
       "descriptionKey": "aztec-description",
       "imageKey": "aztec",
       "background": "white"
+    },
+    {
+      "name": "Starknet",
+      "website": "https://www.starknet.io",
+      "developerDocs": "https://docs.starknet.io",
+      "l2beat": "https://l2beat.com/scaling/projects/starknet",
+      "bridge": "https://starkgate.starknet.io",
+      "bridgeWallets": [
+        "MetaMask",
+        "Coinbase Wallet",
+        "WalletConnect",
+        "Trust Wallet",
+        "Rainbow",
+        "Argent X",
+        "Braavos"
+      ],
+      "blockExplorer": "https://starkscan.co",
+      "ecosystemPortal": "https://www.starknet-ecosystem.com",
+      "tokenLists": "https://github.com/starknet-io/starknet-addresses/blob/master/bridged_tokens/mainnet.json",
+      "noteKey": "",
+      "purpose": ["universal"],
+      "descriptionKey": "starknet-description",
+      "imageKey": "starknet",
+      "background": "white"
     }
   ]
 }

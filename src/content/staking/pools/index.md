@@ -81,5 +81,6 @@ Some pooling options are more decentralized than others when it comes to the nod
 
 ## Further reading {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Staking with Rocket Pool - Staking Overview](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool docs_
 - [Staking Ethereum With Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido help docs_

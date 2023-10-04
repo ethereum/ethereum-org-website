@@ -1,5 +1,23 @@
 [
   {
+    "title": "Road to Devcon（Shenzhen）",
+    "to": "https://ethsz.openbuild.xyz/",
+    "sponsor": null,
+    "location": "Shenzhen, China",
+    "description": "Preheating activities for DEVCON 7 in the China region.Developers and communities, let us gather at Devcon！",
+    "startDate": "2023-10-21",
+    "endDate": "2023-10-21"
+  },
+  {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org/",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, EVM scaling, layers 2, Account Abstraction and more with a focus on decentralization and community projects. We also organize a Demo Pitch Day with VCs.",
+    "startDate": "2024-04-19",
+    "endDate": "2024-04-21"
+  },
+  {
     "title": "Ethereum Rio",
     "to": "https://www.ethereumbrasil.com/",
     "sponsor": null,
@@ -320,8 +338,8 @@
     "sponsor": null,
     "location": "Costa Rica",
     "description": "Full day of learning about Ethereum, onboarding new users and builders.",
-    "startDate": "2023-11-25",
-    "endDate": "2023-11-25"
+    "startDate": "2023-11-18",
+    "endDate": "2023-11-18"
   },
   {
     "title": "ETH Riyadh",
@@ -342,12 +360,39 @@
     "endDate": "2023-10-15"
   },
   {
+    "title": "Consensys Fellowship",
+    "to": "https://consensys.io/fellowship",
+    "sponsor": null,
+    "location": "Global",
+    "description": "Join us on a 12-week program for web3 innovators! We're supporting early stage web3 founders with workshops, mentorship, and networking. Plus access to a $1.5M fund of potential follow-on investment set aside by Consensys Mesh and Tachyon! Don't miss this opportunity! Apply from Sep 20th — Oct 3rd.",
+    "startDate": "2023-09-20",
+    "endDate": "2023-10-03"
+  },
+  {
     "title": "Pragma New York",
     "to": "https://ethglobal.com/events/pragma-newyork",
     "sponsor": null,
     "location": "New York, New York",
-    "description": "ETHGlobal Pragma is an in-person summit for builders and leaders in the web3 ecosystem",
+    "description": "Pragma New York is an in-person summit for builders and leaders in the web3 ecosystem",
     "startDate": "2023-09-21",
     "endDate": "2023-09-21"
+  },
+  {
+    "title": "Pragma Istanbul",
+    "to": "https://ethglobal.com/events/pragma-istanbul",
+    "sponsor": null,
+    "location": "Istanbul, Turkey",
+    "description": "Pragma Istanbul is an in-person summit for builders and leaders in the web3 ecosystem",
+    "startDate": "2023-11-16",
+    "endDate": "2023-11-16"
+  },
+  {
+    "title": "ETHIndia 2023",
+    "to": "https://ethindia.co/",
+    "sponsor": null,
+    "location": "Bengaluru, India",
+    "description": "ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum.",
+    "startDate": "2023-12-8",
+    "endDate": "2023-12-10"
   }
 ]

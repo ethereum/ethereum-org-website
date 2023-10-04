@@ -4,7 +4,7 @@ import { Box, Container, Divider, useToken } from "@chakra-ui/react"
 
 import InlineLink from "../components/Link"
 import Emoji from "../components/Emoji"
-import ButtonLink from "../components/ButtonLink"
+import { ButtonLink } from "../components/Buttons"
 import OldHeading from "../components/OldHeading"
 
 const StudioRedirectPage = () => {

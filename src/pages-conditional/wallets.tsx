@@ -4,18 +4,16 @@ import {
   Box,
   Flex,
   BoxProps,
-  Img,
   Text as ChakraText,
   Heading,
 } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
 import PageHero from "../components/PageHero"
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import HorizontalCard, {
   IProps as HorizontalCardProps,
@@ -27,6 +25,7 @@ import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 import { Simulator } from "../components/Simulator"
 import { StyledCard } from "../pages/get-eth"
+import GatsbyImage from "../components/GatsbyImage"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
@@ -383,8 +382,7 @@ const WalletsPage = ({
               <ButtonLink to="/wallets/find-wallet/">
                 <Translation id="page-wallets-find-wallet-btn" />
               </ButtonLink>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 image={getImage(data.findWallet)!}
                 alt=""
                 mt={8}

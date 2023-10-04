@@ -96,6 +96,10 @@ Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dil
 - [Microsoft Learn (Akıllı sözleşmeler)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidity ile Ethereum akıllı sözleşmeleri yazmayı öğrenin
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - merkeziyetsiz uygulamalar ile bir kullanıcı arayüzü oluşturun
 
+### Rusça {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) - web3 yaratıcıları için eğitim alanı
+
 ### İspanyolca {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - blok zincir, DeFi ve yönetişim kursları, etkinlikleri ve blogu
@@ -113,9 +117,9 @@ Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dil
 
 ### Vietnamca {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - Ethereum, dapps, cüzdanlar ve SSS'lere genel bakış
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - Ethereum, merkeziyetsiz uygulamalar, cüzdanlar ve SSS'lere genel bakış
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - Ethereum haberleri ve eğitimi için alt sayfalar içeren bir web platformu
-- [Coin68](https://coin68.com/ethereum-tieu-diem/) - Ethereum haberleri ve eğitimsel içerik içeren bir kripto para portalı
+- [Coin68](https://coin68.com/ethereum-tieu-diem/) - Ethereum haberleri ve eğitim ile ilgili bilgiler içeren bir kripto para portalı
 
 ### Japonca {#ja}
 

@@ -56,7 +56,7 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Full node {#full-node}
 
-Full nodes do a block-by-block validation of the blockchain, including downloading and verifying the block body and state data for each block. There are different classes of full node - some start from the genesis block and verify every single block in the entie history of the blockchain. Others start their verification at a more recent block that they trust to be valid (e.g. Geth's 'snap sync'). Regardless of where the verification starts, full nodes only keep a local copy of relatively recent data (typically the most recent 128 blocks), allowing older data to be deleted to save disk space. Older data can be regenerated when it is needed.
+Full nodes do a block-by-block validation of the blockchain, including downloading and verifying the block body and state data for each block. There are different classes of full node - some start from the genesis block and verify every single block in the entire history of the blockchain. Others start their verification at a more recent block that they trust to be valid (e.g. Geth's 'snap sync'). Regardless of where the verification starts, full nodes only keep a local copy of relatively recent data (typically the most recent 128 blocks), allowing older data to be deleted to save disk space. Older data can be regenerated when it is needed.
 
 - Stores full blockchain data (although this is periodically pruned so a full node does not store all state data back to genesis)
 - Participates in block validation, verifies all blocks and states.
@@ -139,6 +139,7 @@ This table summarizes the different clients. All of them pass [client tests](htt
 | [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap (without serving), Fast, Full | Archive, Pruned |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap, Fast, Full                   | Archive, Pruned |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Full                               | Archive, Pruned |
+| [Reth](https://github.com/paradigmxyz/reth)     | Rust     | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Full                   | Archive, Pruned |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
