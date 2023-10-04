@@ -99,7 +99,7 @@ export const getContentBySlug = (
     }
 
     if (field === "content") {
-      items[field] = removeAnchorLinks(content)
+      items[field] = content
     }
 
     if (field === "tocItems") {
