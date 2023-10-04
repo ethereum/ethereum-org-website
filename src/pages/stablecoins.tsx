@@ -504,7 +504,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                     <Box>
                       <ButtonLink
                         variant="outline"
-                        to="https://kb.oasis.app/help/what-is-dai"
+                        to="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
                       >
                         <Translation id="page-stablecoins-dai-banner-learn-button" />
                       </ButtonLink>
