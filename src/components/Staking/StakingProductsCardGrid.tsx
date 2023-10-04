@@ -6,6 +6,7 @@ import {
   BoxProps,
   Center,
   Flex,
+  Heading,
   HStack,
   Icon,
   List,
@@ -17,9 +18,8 @@ import {
 // Data imports
 import stakingProducts from "../../data/staking-products.json"
 // Component imports
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import Translation from "../Translation"
-import OldHeading from "../OldHeading"
 // SVG imports
 import {
   CautionProductGlyphIcon,
@@ -213,9 +213,9 @@ const StakingProductCard: React.FC<ICardProps> = ({
         maxH={24}
       >
         {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
-        <OldHeading fontSize="2xl" color="white">
+        <Heading as="h4" fontSize="2xl" color="white">
           {name}
-        </OldHeading>
+        </Heading>
       </HStack>
       {typeof minEth !== "undefined" && (
         <Center

@@ -4,7 +4,6 @@ import {
   calc,
   chakra,
   Flex,
-  Heading,
   Hide,
   Icon,
   ListItem,
@@ -26,7 +25,7 @@ import ButtonDropdown, {
 } from "@/components/ButtonDropdown"
 import { Image } from "@/components/Image"
 import { mdxTableComponents } from "@/components/Table"
-import ButtonLink from "@/components/ButtonLink"
+import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
@@ -38,6 +37,7 @@ import { BaseLink } from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import MdLink from "@/components/MdLink"
 import MeetupList from "@/components/MeetupList"
+import OldHeading from "@/components/OldHeading"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import RandomAppList from "@/components/RandomAppList"
 import SectionNav from "@/components/SectionNav"
@@ -51,26 +51,33 @@ import YouTube from "@/components/YouTube"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang } from "@/lib/types"
+import { PageContent } from "@/lib/interfaces"
 
 const commonHeadingProps: HeadingProps = {
   fontWeight: 700,
   lineHeight: 1.4,
 }
 
-export const Heading1 = (props: HeadingProps) => (
-  <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+const Heading1 = (props: HeadingProps) => (
+  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
-export const Heading2 = (props: HeadingProps) => (
-  <Heading as="h2" {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
+const Heading2 = (props: HeadingProps) => (
+  <OldHeading
+    as="h2"
+    {...commonHeadingProps}
+    fontSize="2rem"
+    mt={16}
+    {...props}
+  />
 )
 
-export const Heading3 = (props: HeadingProps) => (
-  <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+const Heading3 = (props: HeadingProps) => (
+  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
-export const Heading4 = (props: HeadingProps) => (
-  <Heading
+const Heading4 = (props: HeadingProps) => (
+  <OldHeading
     as="h4"
     {...commonHeadingProps}
     fontSize="xl"
@@ -133,9 +140,9 @@ const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
     bg="cardGradient"
     boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
-    flexDirection={{ base: "column-reverse", lg: "row" }}
-    justifyContent="flex-end"
-    minHeight="608px"
+    direction={{ base: "column-reverse", lg: "row" }}
+    justify="end"
+    minHeight={{ base: "800px", lg: "608px" }}
     maxHeight={{ base: "full", lg: "608px" }}
     width="full"
     position="relative"
@@ -260,20 +267,26 @@ export const MobileButton = (props: ChildOnlyProp) => {
   )
 }
 
-export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
-  if (!frontmatter)
-    throw new Error("UseCasesLayout missing expected `frontmatter` prop")
-  if (!frontmatter?.title)
-    throw new Error("Required `title` property missing for UseCasesLayout")
+interface IProps extends PageContent, ChildOnlyProp {}
+export const UseCasesLayout: React.FC<IProps> = ({
+  children,
+  frontmatter,
+  slug,
+  tocItems,
+}) => {
+  // TODO: Re-enable after i18n implemented
+  // const { t } = useTranslation()
+  const lgBp = useToken("breakpoints", "lg")
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const summaryPoints = getSummaryPoints(frontmatter)
 
+  // TODO: Re-implement GitHub edit path
   // const { editContentUrl } = siteData.siteMetadata || {}
   // const { relativePath } = pageContext
   // const absoluteEditPath = `${editContentUrl}${relativePath}`
 
-  /* Assign hero styling, default to "defi" */
+  // Assign hero styling, default to "defi"
   let useCase = "defi"
   if (slug.includes("dao") || slug.includes("identity")) {
     useCase = "dao"
@@ -354,17 +367,17 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
 
   return (
     <Box position="relative" width="full">
-      <Show above="lg">
+      <Show above={lgBp}>
         <BannerNotification shouldShow zIndex="sticky">
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <Text m={0}>
             Uses of Ethereum are always developing and evolving. Add any info
-            you think will make things clearer or more up to date.
-            {/* <Translation id="template-usecase-banner" />{" "} */}
-            {/* <InlineLink to={absoluteEditPath}> */}
-            {/* <Translation id="template-usecase-edit-link" /> */}
-            Edit page
-            {/* </InlineLink> */}
+            you think will make things clearer or more up to date. Edit page
+            {/* TODO: Re-enable after intl implemented */}
+            {/* <Translation id="template-usecase-banner" />{" "}
+            <InlineLink to={absoluteEditPath}>
+              <Translation id="template-usecase-edit-link" />
+            </InlineLink> */}
           </Text>
         </BannerNotification>
       </Show>
@@ -384,15 +397,13 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
           </Box>
         </TitleCard>
         <Image
-          alignSelf={{ base: "center", lg: "normal" }}
           position="absolute"
+          alignSelf={{ base: "center", lg: "normal" }}
           top={0}
-          right={0}
           bottom={0}
           objectFit="cover"
           width={1000}
           height={610}
-          maxH={{ base: "340px", lg: "full" }}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
           maxW={{
@@ -404,7 +415,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
           }}
         />
       </HeroContainer>
-      <Show above="lg">
+      <Show above={lgBp}>
         <Flex
           as={BaseLink}
           to="#content"
@@ -424,7 +435,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
           title={frontmatter.title}
           description={frontmatter.description}
         /> */}
-        <Show above="lg">
+        <Show above={lgBp}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />
             <InfoTitle>{frontmatter.title}</InfoTitle>
@@ -438,7 +449,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
           {children}
           <FeedbackCard />
         </ContentContainer>
-        <Hide above="lg">
+        <Hide above={lgBp}>
           <MobileButton>
             <MobileButtonDropdown list={dropdownLinks} />
           </MobileButton>

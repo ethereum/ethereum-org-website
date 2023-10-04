@@ -1,3 +1,4 @@
+import React from "react"
 import {
   Box,
   BoxProps,
@@ -6,20 +7,22 @@ import {
   List,
   ListItem,
   Show,
+  useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
-import { useActiveHash } from "@/hooks/useActiveHash"
-import ButtonLink from "../ButtonLink"
+import { useActiveHash } from "../../hooks/useActiveHash"
+import ButtonLink from "../Buttons/ButtonLink"
 // import Translation from "../Translation"
 
 import Mobile from "./TableOfContentsMobile"
 import ItemsList from "./ItemsList"
-import { getCustomId, type Item, outerListProps } from "./utils"
+import { getCustomId, outerListProps } from "@/lib/utils/toc"
+import type { ToCItem } from "@/lib/interfaces"
 
-export { Item }
+export { ToCItem }
 
 export interface IProps extends BoxProps {
-  items: Array<Item>
+  items: Array<ToCItem>
   maxDepth?: number
   slug?: string
   editPath?: string
@@ -36,10 +39,13 @@ const TableOfContents: React.FC<IProps> = ({
   isMobile = false,
   ...rest
 }) => {
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
+
   const titleIds: Array<string> = []
 
   if (!isMobile) {
-    const getTitleIds = (items: Array<Item>, depth: number): void => {
+    const getTitleIds = (items: Array<ToCItem>, depth: number): void => {
       if (depth > (maxDepth ? maxDepth : 1)) return
 
       items?.forEach((item) => {
@@ -69,7 +75,7 @@ const TableOfContents: React.FC<IProps> = ({
   }
 
   return (
-    <Show above="lg">
+    <Show above={lgBp}>
       <Box
         as="aside"
         position="sticky"

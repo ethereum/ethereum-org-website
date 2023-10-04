@@ -10,12 +10,13 @@ import {
 } from "@chakra-ui/react"
 
 import Breadcrumbs from "../components/Breadcrumbs"
-import ButtonLink from "@/components/ButtonLink"
+import { ButtonLink } from "@/components/Buttons"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
@@ -160,6 +161,7 @@ export const staticComponents = {
   Emoji,
   EnergyConsumptionChart,
   ExpandableCard,
+  GlossaryDefinition,
   Icon,
   InfoBanner,
   Link,

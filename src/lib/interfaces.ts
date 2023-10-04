@@ -1,4 +1,4 @@
-import { TranslationKey } from "./types"
+import { Frontmatter, TranslationKey } from "./types"
 
 /**
  * Quiz data interfaces
@@ -42,4 +42,23 @@ export interface Quiz {
 
 export interface RawQuizzes {
   [key: string]: RawQuiz
+}
+
+/**
+ * Table of Contents
+ */
+export interface ToCItem {
+  title: string
+  url: string
+  items?: Array<ToCItem>
+}
+
+/**
+ * Layout interface
+ */
+export interface PageContent {
+  slug: string
+  content: string
+  frontmatter: Frontmatter
+  tocItems: Array<ToCItem>
 }

@@ -7,19 +7,24 @@ import {
   Icon,
   List,
   Show,
+  useToken,
 } from "@chakra-ui/react"
 import React from "react"
 import { MdExpandMore } from "react-icons/md"
 // import Translation from "../Translation"
 import ItemsList from "./ItemsList"
-import { Item, outerListProps } from "./utils"
+import { outerListProps } from "@/lib/utils/toc"
+import type { ToCItem } from "@/lib/interfaces"
 
 export interface IPropsTableOfContentsMobile {
-  items?: Array<Item>
+  items?: Array<ToCItem>
   maxDepth?: number
 }
 
 const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
+
   const { getButtonProps, getDisclosureProps, isOpen } = useDisclosure({
     defaultIsOpen: false,
   })
@@ -28,7 +33,8 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
   }
 
   return (
-    <Show below="lg">
+    <Show below={lgBp}>
+      {/* TODO: switch `l` to `lg` after UI migration and use `hideBelow` prop */}
       <Box
         as="aside"
         background="background.base"

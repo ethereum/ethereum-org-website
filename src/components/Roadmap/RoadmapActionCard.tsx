@@ -7,9 +7,8 @@ import {
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/react"
-import ButtonLink from "@/components/ButtonLink"
+import { ButtonLink } from "../Buttons"
 import { Image } from "@/components/Image"
-
 
 interface IProps {
   to: string

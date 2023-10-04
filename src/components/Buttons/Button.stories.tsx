@@ -3,11 +3,11 @@ import { HStack, ThemingProps, Text, VStack } from "@chakra-ui/react"
 import { getThemingArgTypes } from "@chakra-ui/storybook-addon"
 import { Meta, StoryObj } from "@storybook/react"
 import { MdExpandMore, MdChevronRight, MdNightlight } from "react-icons/md"
-import theme from "../../@chakra-ui/gatsby-plugin/theme"
-import ButtonLink from "../ButtonLink"
-import IconButton from "../IconButton"
+import theme from "../../@chakra-ui/theme"
+import ButtonLink from "./ButtonLink"
+import IconButton from "./IconButton"
 import Translation from "../Translation"
-import Button from "."
+import Button from "./Button"
 
 type ButtonType = typeof Button
 

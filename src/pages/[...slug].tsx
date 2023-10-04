@@ -7,6 +7,7 @@ import path from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
+import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 
 // Layouts and components
 import {
@@ -31,7 +32,7 @@ import {
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import { Frontmatter, NextPageWithLayout } from "@/lib/types"
 import { getLastModifiedDate } from "@/lib/utils/gh"
-import { type Item as ToCItem } from "@/components/TableOfContents/utils"
+import type { ToCItem } from "@/lib/interfaces"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -62,7 +63,11 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const contentFiles = getContent(["slug", "content"])
+  const contentFiles = getContent("/").filter(
+    // Filter `/developers/tutorials` slugs since they are processed by
+    // `/developers/tutorials/[...tutorial].tsx`
+    (file) => !file.slug.includes("/developers/tutorials")
+  )
 
   return {
     paths: contentFiles.map((file) => {
@@ -81,23 +86,18 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
-  const markdown = getContentBySlug(params.slug.join("/"), [
-    "slug",
-    "content",
-    "frontmatter",
-    "tocItems",
-  ])
+  const markdown = getContentBySlug(params.slug.join("/"))
   const frontmatter = markdown.frontmatter as Frontmatter
   const tocItems = markdown.tocItems as Array<ToCItem>
 
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
 
-  const mdxSource: any = await serialize(markdown.content as string, {
+  const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }]],
+      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }], [rehypeHeadingIds]],
     },
   })
 

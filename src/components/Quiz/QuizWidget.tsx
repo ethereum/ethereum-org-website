@@ -19,7 +19,7 @@ import {
 import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
 
-import Button from "../Button"
+import Button from "../Buttons/Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Text from "../OldText"

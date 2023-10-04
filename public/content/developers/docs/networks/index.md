@@ -114,6 +114,14 @@ A testnet for [Optimism](https://www.optimism.io/).
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
+#### Starknet Goerli {#starknet-goerli}
+
+A testnet for [Starknet](https://www.starknet.io).
+
+##### Faucets
+
+- [Starknet faucet](https://faucet.goerli.starknet.io)
+
 ## Private networks {#private-networks}
 
 An Ethereum network is a private network if its nodes are not connected to a public network (i.e. Mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
