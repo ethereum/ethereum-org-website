@@ -7,7 +7,7 @@ import path from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
-import rehypeHeaderIds from "@/lib/rehype/rehypeHeaderIds"
+import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 
 // Layouts and components
 import {
@@ -98,7 +98,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }], [rehypeHeaderIds]],
+      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }], [rehypeHeadingIds]],
     },
   })
 

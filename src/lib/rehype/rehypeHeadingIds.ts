@@ -3,9 +3,14 @@ import type { Plugin } from "unified"
 import type { ElementContent, Root } from "hast"
 import { getCustomId, trimmedTitle } from "@/lib/utils/toc"
 
-interface Options {}
-
-const setMarkdownHeaderIds: Plugin<[Options], Root> = () => (tree, _file) => {
+/**
+ * Parses DOM elements to find all headings, setting an `id` attribute on each one.
+ * The `getCustomId` Table of Contents utility functions is used to generate the `id`
+ * for each, allowing ToC links to match.
+ * The `trimmedTitle` function is used to remove any trailing `{#id}` from the heading
+ * @returns Plugin<[{}], Root>, a rehype plugin tht can be used in [...dynamic-md-pages].tsx
+ */
+const setMarkdownHeadingIds: Plugin<[{}], Root> = () => (tree, _file) => {
   visit(tree, "element", (node) => {
     // Ignore non-heading elements
     const headingElements = ["h1", "h2", "h3", "h4", "h5", "h6"]
@@ -29,4 +34,4 @@ const setMarkdownHeaderIds: Plugin<[Options], Root> = () => (tree, _file) => {
   })
 }
 
-export default setMarkdownHeaderIds
+export default setMarkdownHeadingIds
