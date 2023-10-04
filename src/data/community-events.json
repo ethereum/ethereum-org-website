@@ -90,15 +90,6 @@
     "endDate": "2023-10-28"
   },
   {
-    "title": "ETH Montréal",
-    "to": "https://ethmontreal.xyz",
-    "sponsor": null,
-    "location": "Montréal, Canada",
-    "description": "Conference and hackathon with the aim to onboard to Ethereum the students and junior devs from Montréal's world class universities",
-    "startDate": "2023-09-18",
-    "endDate": "2023-09-21"
-  },
-  {
     "title": "ETHGlobal New York",
     "to": "https://ethglobal.com/events/newyork2023",
     "sponsor": null,
