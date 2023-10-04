@@ -1,32 +1,13 @@
 import React, { useRef } from "react"
 import { Box, List, ListItem } from "@chakra-ui/react"
 import { BaseLink } from "./Link"
-import { Item as TableOfContentsItem } from "./TableOfContents"
+import type { ToCItem } from "@/lib/interfaces"
+import { trimmedTitle } from "@/lib/utils/toc"
 
-const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
-
-const slugify = (s: string): string =>
-  encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
-
-const getCustomId = (title: string): string => {
-  const match = customIdRegEx.exec(title)
-  if (match) {
-    return match[2].toLowerCase()
-  }
-  console.warn("Missing custom ID on header: ", title)
-  return slugify(title)
+export interface IPropsTableOfContentsLink {
+  item: ToCItem
 }
-
-const trimmedTitle = (title: string): string => {
-  const match = customIdRegEx.exec(title)
-  return match ? title.replace(match[1], "").trim() : title
-}
-
-export interface Item extends TableOfContentsItem {
-  id?: string
-}
-
-const TableOfContentsLink: React.FC<{ item: TableOfContentsItem }> = ({ item: { title, url } }) => {
+const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({ item: { title, url } }) => {
   let isActive = false
   if (typeof window !== `undefined`) {
     isActive = window.location.hash === url
@@ -55,7 +36,7 @@ const TableOfContentsLink: React.FC<{ item: TableOfContentsItem }> = ({ item: { 
 }
 
 interface IPropsItemsList {
-  items: Array<TableOfContentsItem>
+  items: Array<ToCItem>
   depth: number
   maxDepth: number
 }
@@ -74,33 +55,30 @@ const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
 }
 
 interface IPropsToC {
-  items: Array<TableOfContentsItem>
+  items: Array<ToCItem>
   maxDepth?: number
 }
-const UpgradeTableOfContents: React.FC<IPropsToC> = ({ items, maxDepth = 1}) => {
-  console.log({yeah: items})
-  return (
-    <Box
-      as="nav"
-      p={0}
-      mb={8}
-      textAlign="end"
-      overflowY="auto"
-      display={{ base: "none", l: "block" }}
+const UpgradeTableOfContents: React.FC<IPropsToC> = ({ items, maxDepth = 1}) => (
+  <Box
+    as="nav"
+    p={0}
+    mb={8}
+    textAlign="end"
+    overflowY="auto"
+    display={{ base: "none", l: "block" }}
+  >
+    <List
+      m={0}
+      py={0}
+      ps={4}
+      pe={1}
+      fontSize="xl"
+      lineHeight="1.6"
+      styleType="none"
     >
-      <List
-        m={0}
-        py={0}
-        ps={4}
-        pe={1}
-        fontSize="xl"
-        lineHeight="1.6"
-        styleType="none"
-      >
-        <ItemsList items={items} depth={0} maxDepth={maxDepth} />
-      </List>
-    </Box>
-  )
-}
+      <ItemsList items={items} depth={0} maxDepth={maxDepth} />
+    </List>
+  </Box>
+)
 
 export default UpgradeTableOfContents

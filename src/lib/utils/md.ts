@@ -6,10 +6,8 @@ import matter from "gray-matter"
 import { Frontmatter } from "../types"
 
 import { CONTENT_DIR } from "@/lib/constants"
-import {
-  generateTableOfContents,
-  type Item as ToCItem,
-} from "@/components/TableOfContents/utils"
+import { generateTableOfContents } from "@/lib/utils/toc"
+import type { ToCItem } from "@/lib/interfaces"
 
 const contentDir = join(process.cwd(), CONTENT_DIR)
 

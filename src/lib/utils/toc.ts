@@ -1,4 +1,5 @@
 import { ListProps } from "@chakra-ui/react"
+import type { ToCItem } from "@/lib/interfaces"
 
 export const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 export const emojiRegEx = /<Emoji [^/]+\/>/g
@@ -8,11 +9,8 @@ export const slugify = (s: string): string =>
 
 export const getCustomId = (title: string): string => {
   const match = customIdRegEx.exec(title)
-  if (match) {
-    return match[2].toLowerCase()
-  }
-  console.warn("Missing custom ID on header: ", title)
-  return slugify(title)
+  if (!match) return slugify(title)
+  return match[2].toLowerCase()
 }
 
 export const trimmedTitle = (title: string): string => {
@@ -22,12 +20,6 @@ export const trimmedTitle = (title: string): string => {
   // Removes Twemoji components from title
   const emojiMatch = emojiRegEx.exec(trimmedTitle)
   return emojiMatch ? trimmedTitle.replaceAll(emojiRegEx, "") : trimmedTitle
-}
-
-export interface Item {
-  title: string
-  url: string
-  items?: Array<Item>
 }
 
 /**
@@ -75,7 +67,7 @@ export const removeMarkdownComments = (content: string): string => {
  * Example: "### Hello world {#hello-world}" or "## Hello world"
  * @returns Object of type `Item` containing `title` and `url` properties parsed from heading
  */
-const parseHeadingToItem = (heading: string): Item => {
+const parseHeadingToItem = (heading: string): ToCItem => {
   const re = /^(#+\s+)(.+?)(\s+\{(#[A-Za-z0-9\-_]+?)\})?$/
   const match = heading.match(re)
   if (!match) throw new Error(`Invalid heading: ${heading}`)
@@ -90,14 +82,14 @@ const parseHeadingToItem = (heading: string): Item => {
  * @param h Heading level being parsed (2 for h2, 3 for h3, etc.), starting with 2
  * @returns Array of `Item` objects parsed from the headings
  */
-const addHeadingAsItem = (headings: Array<string>, h = 2): Array<Item> => {
-  const items: Array<Item> = []
+const addHeadingAsItem = (headings: Array<string>, h = 2): Array<ToCItem> => {
+  const items: Array<ToCItem> = []
   const depths: number[] = headings.map(
     (heading) => heading.match(/^#+/)?.[0].length ?? 0
   )
   depths.forEach((depth, i): void => {
     if (depth > h) return
-    const headingItem: Item = parseHeadingToItem(headings[i])
+    const headingItem: ToCItem = parseHeadingToItem(headings[i])
     if (depths[i + 1] > h) {
       const start = i + 1
       const rest = depths.slice(start)
@@ -116,7 +108,7 @@ const addHeadingAsItem = (headings: Array<string>, h = 2): Array<Item> => {
  * @param content Markdown content as a string (all lines)
  * @returns List of `Item` objects parsed from the content, nested according to heading depth
  */
-export const generateTableOfContents = (content: string): Array<Item> => {
+export const generateTableOfContents = (content: string): Array<ToCItem> => {
   const contentWithoutComments = removeMarkdownComments(content)
   const lines = contentWithoutComments.split("\n")
   const headings = lines.filter((line) => line.startsWith("#"))

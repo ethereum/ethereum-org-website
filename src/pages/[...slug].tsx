@@ -31,7 +31,7 @@ import {
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import { Frontmatter, NextPageWithLayout } from "@/lib/types"
 import { getLastModifiedDate } from "@/lib/utils/gh"
-import { type Item as ToCItem } from "@/components/TableOfContents/utils"
+import type { ToCItem } from "@/lib/interfaces"
 
 const layoutMapping = {
   static: StaticLayout,

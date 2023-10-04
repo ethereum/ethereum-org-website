@@ -43,3 +43,12 @@ export interface Quiz {
 export interface RawQuizzes {
   [key: string]: RawQuiz
 }
+
+/**
+ * Table of Contents
+ */
+export interface ToCItem {
+  title: string
+  url: string
+  items?: Array<ToCItem>
+}
