@@ -1660,7 +1660,7 @@ const DappsPage = ({
                   <Translation id="page-dapps-metaverse-title" />{" "}
                   <Emoji
                     fontSize="5xl"
-                    ml={"0.5rem"}
+                    ml="2"
                     text=":globe_with_meridians:"
                   />
                 </H2>
