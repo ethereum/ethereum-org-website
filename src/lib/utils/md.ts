@@ -2,11 +2,9 @@ import fs from "fs"
 import { join, extname } from "path"
 import matter from "gray-matter"
 
-import { Frontmatter } from "../types"
-
 import { CONTENT_DIR } from "@/lib/constants"
 import { generateTableOfContents } from "@/lib/utils/toc"
-import type { ToCItem } from "@/lib/interfaces"
+import type { PageContent } from "@/lib/interfaces"
 
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
@@ -81,14 +79,7 @@ export const getContentBySlug = (slug: string) => {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data: frontmatter, content } = matter(fileContents)
 
-  type Items = {
-    slug: string
-    content: string
-    frontmatter: Frontmatter
-    tocItems: Array<ToCItem>
-  }
-
-  const items: Items = {
+  const items: PageContent = {
     slug,
     content,
     frontmatter,

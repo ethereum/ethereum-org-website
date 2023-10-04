@@ -12,10 +12,9 @@ import allQuizzesData, {
   ethereumBasicsQuizzes,
   usingEthereumQuizzes,
 } from "@/data/quizzes"
-import type { RawQuizzes } from "@/lib/interfaces"
 
 export const getTotalQuizzesPoints = () =>
-  Object.values(allQuizzesData as RawQuizzes)
+  Object.values(allQuizzesData)
     .map((quiz) => quiz.questions.length)
     .reduce((accumulator, currentValue) => {
       return accumulator + currentValue

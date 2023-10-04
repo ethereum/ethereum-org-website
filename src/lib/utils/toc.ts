@@ -23,6 +23,15 @@ export const trimmedTitle = (title: string): string => {
 }
 
 /**
+ * Removes {#...} from .md file so content can be parsed properly
+ * @deprecated Use `trimmedTitle` instead for each heading instead
+ * @param mdContent
+ * @returns string with {#id} removed
+ */
+export const removeAnchorLinks = (mdContent: string) =>
+  mdContent.replace(/{#.*?}/g, "").trim()
+
+/**
  * Common props used used for the outermost list element in the mobile and desktop renders
  */
 export const outerListProps: ListProps = {

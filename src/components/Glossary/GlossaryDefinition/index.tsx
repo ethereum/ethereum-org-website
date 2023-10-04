@@ -1,5 +1,6 @@
 import React from "react"
 import { Box, Heading, Text } from "@chakra-ui/react"
+import OldHeading from "@/components/OldHeading"
 
 // TODO: Re-enable with translations once intl implemented
 // import Translation from "../../Translation"
@@ -20,10 +21,10 @@ const GlossaryDefinition: React.FC<IProps> = ({ term, size = "md" }) => {
   // TODO: Re-enable with translations once intl implemented
   return (
     <Box>
-      <Heading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
+      <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
         {/* <Translation id={`${term}-term`} /> */}
         {term}-term
-      </Heading>
+      </OldHeading>
       <Text {...textStyles}>
         {/* <Translation id={`${term}-definition`} /> */}
         {term}-definition

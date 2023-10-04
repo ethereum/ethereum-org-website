@@ -1,7 +1,6 @@
 import React from "react"
-// import { Link as GatsbyLink } from "gatsby"
 import { SystemStyleObject, cssVar } from "@chakra-ui/react"
-import CustomLink, { BaseLink } from "../Link"
+import { BaseLink } from "../Link"
 import { getCustomId, trimmedTitle } from "@/lib/utils/toc"
 import type { ToCItem } from "@/lib/interfaces"
 

@@ -4,7 +4,6 @@ import {
   calc,
   chakra,
   Flex,
-  Heading,
   Hide,
   Icon,
   ListItem,
@@ -38,6 +37,7 @@ import { BaseLink } from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import MdLink from "@/components/MdLink"
 import MeetupList from "@/components/MeetupList"
+import OldHeading from "@/components/OldHeading"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import RandomAppList from "@/components/RandomAppList"
 import SectionNav from "@/components/SectionNav"
@@ -51,6 +51,7 @@ import YouTube from "@/components/YouTube"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang } from "@/lib/types"
+import { PageContent } from "@/lib/interfaces"
 
 const commonHeadingProps: HeadingProps = {
   fontWeight: 700,
@@ -58,19 +59,25 @@ const commonHeadingProps: HeadingProps = {
 }
 
 const Heading1 = (props: HeadingProps) => (
-  <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
 const Heading2 = (props: HeadingProps) => (
-  <Heading as="h2" {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
+  <OldHeading
+    as="h2"
+    {...commonHeadingProps}
+    fontSize="2rem"
+    mt={16}
+    {...props}
+  />
 )
 
 const Heading3 = (props: HeadingProps) => (
-  <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
 const Heading4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     {...commonHeadingProps}
     fontSize="xl"
@@ -260,11 +267,16 @@ const MobileButton = (props: ChildOnlyProp) => {
   )
 }
 
-export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
-  if (!frontmatter)
-    throw new Error("UseCasesLayout missing expected `frontmatter` prop")
-  if (!frontmatter?.title)
-    throw new Error("Required `title` property missing for UseCasesLayout")
+interface IProps extends PageContent, ChildOnlyProp {}
+export const UseCasesLayout: React.FC<IProps> = ({
+  children,
+  frontmatter,
+  slug,
+  tocItems,
+}) => {
+  // TODO: Re-enable after i18n implemented
+  // const { t } = useTranslation()
+  const lgBp = useToken("breakpoints", "lg")
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const summaryPoints = getSummaryPoints(frontmatter)
@@ -355,7 +367,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
 
   return (
     <Box position="relative" width="full">
-      <Show above="lg">
+      <Show above={lgBp}>
         <BannerNotification shouldShow zIndex="sticky">
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <Text m={0}>
@@ -403,7 +415,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
           }}
         />
       </HeroContainer>
-      <Show above="lg">
+      <Show above={lgBp}>
         <Flex
           as={BaseLink}
           to="#content"
@@ -423,7 +435,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
           title={frontmatter.title}
           description={frontmatter.description}
         /> */}
-        <Show above="lg">
+        <Show above={lgBp}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />
             <InfoTitle>{frontmatter.title}</InfoTitle>
@@ -437,7 +449,7 @@ export const UseCasesLayout = ({ children, frontmatter, slug, tocItems }) => {
           {children}
           <FeedbackCard />
         </ContentContainer>
-        <Hide above="lg">
+        <Hide above={lgBp}>
           <MobileButton>
             <MobileButtonDropdown list={dropdownLinks} />
           </MobileButton>

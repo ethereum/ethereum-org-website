@@ -7,6 +7,7 @@ import {
   List,
   ListItem,
   Show,
+  useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 import { useActiveHash } from "../../hooks/useActiveHash"
@@ -38,6 +39,9 @@ const TableOfContents: React.FC<IProps> = ({
   isMobile = false,
   ...rest
 }) => {
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
+
   const titleIds: Array<string> = []
 
   if (!isMobile) {
@@ -71,7 +75,7 @@ const TableOfContents: React.FC<IProps> = ({
   }
 
   return (
-    <Show above="lg">
+    <Show above={lgBp}>
       <Box
         as="aside"
         position="sticky"
