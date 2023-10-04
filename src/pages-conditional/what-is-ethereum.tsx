@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -162,6 +162,17 @@ const ButtonRow = (props: ChildOnlyProp) => (
   <Flex align="center" mt={4} mb={6} wrap="wrap" gap={4} {...props} />
 )
 
+export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
+  <Card
+    flex="1 1 30%"
+    minW="240px"
+    maxW={{ base: "full", md: "46%", lg: "31%" }}
+    m={4}
+    p={6}
+    {...props}
+  />
+)
+
 const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
   const isLoading = !stat.value
 
@@ -322,6 +333,7 @@ const WhatIsEthereumPage = ({
               image={getImage(data.hero)!}
               alt={t("page-what-is-ethereum-alt-img-bazaar")}
               loading="eager"
+              mb={8}
             />
           </Hero>
         </Flex>
@@ -363,21 +375,17 @@ const WhatIsEthereumPage = ({
           <br />
           <br />
 
-          <Section>
+          <Section px={0}>
             <H2>
               <Translation id="page-what-is-ethereum-what-can-eth-do-title" />
             </H2>
             <CardContainer>
               {cards.map((card, idx) => (
-                <Card
+                <StyledCard
                   key={idx}
                   emoji={card.emoji}
                   title={card.title}
                   description={card.description}
-                  flex="1 1 30%"
-                  minW="240px"
-                  m={4}
-                  p={6}
                 />
               ))}
             </CardContainer>
