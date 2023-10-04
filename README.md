@@ -1660,6 +1660,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://nozominetworks.com"><img src="https://avatars.githubusercontent.com/u/4753402?v=4?s=100" width="100px;" alt="Natalino Picone"/><br /><sub><b>Natalino Picone</b></sub></a><br /><a href="#content-natpicone" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hammadsaedi"><img src="https://avatars.githubusercontent.com/u/71373419?v=4?s=100" width="100px;" alt="Hammad Saaedi"/><br /><sub><b>Hammad Saaedi</b></sub></a><br /><a href="#content-hammadsaedi" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/srn08"><img src="https://avatars.githubusercontent.com/u/105499798?v=4?s=100" width="100px;" alt="Shaunak Nagrecha"/><br /><sub><b>Shaunak Nagrecha</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asrn08" title="Bug reports">🐛</a></td>
+    </tr>
   </tbody>
 </table>
 
