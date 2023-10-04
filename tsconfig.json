@@ -53,7 +53,7 @@
     "./src/components/Breadcrumbs/Breadcrumbs.stories.tsx",
     "./src/components/BugBountyCards.tsx",
     "./src/components/BugBountyPoints.tsx",
-    "./src/components/Button/Button.stories.tsx",
+    "./src/components/Buttons/Button.stories.tsx",
     "./src/components/CallToContribute.tsx",
     "./src/components/Callout.tsx",
     "./src/components/CalloutBanner.tsx",
