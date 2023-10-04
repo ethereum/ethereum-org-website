@@ -8,11 +8,11 @@ import {
   LabelList,
   ResponsiveContainer,
   Legend,
+  Text,
 } from "recharts"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Translation from "./Translation"
-import Text from "./OldText"
 
 interface ITickProps {
   x: number
