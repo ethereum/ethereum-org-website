@@ -33,12 +33,8 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   const params = context.params!
 
   const tutorialPath = path.join(tutorialsPath, params.tutorial.join("/"))
-  const markdown = getContentBySlug(tutorialPath, [
-    "slug",
-    "content",
-    "frontmatter",
-  ])
-  const frontmatter = markdown.frontmatter!
+  const markdown = getContentBySlug(tutorialPath)
+  const frontmatter = markdown.frontmatter
   // TODO: see how we can handle the published date on the tutorial's layout
   // since we can't send the Date object anymore
   frontmatter.published = frontmatter.published.toString()
@@ -46,7 +42,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   const mdPath = path.join("/content", ...params.tutorial)
   const mdDir = path.join("public", mdPath)
 
-  const mdxSource: any = await serialize(markdown.content as string, {
+  const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],

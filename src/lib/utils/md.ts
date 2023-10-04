@@ -70,41 +70,30 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
 const removeAnchorLinks = (mdContent: string) =>
   mdContent.replace(/{#.*?}/g, "").trim()
 
-export const getContentBySlug = (slug: string, fields: string[] = []) => {
+export const getContentBySlug = (slug: string) => {
   const realSlug = `${slug}/index.md`
   const fullPath = join(CURRENT_CONTENT_DIR, realSlug)
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data: frontmatter, content } = matter(fileContents)
 
   type Items = {
-    slug?: string
-    content?: string
-    frontmatter?: Frontmatter
+    slug: string
+    content: string
+    frontmatter: Frontmatter
   }
 
-  const items: Items = {}
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === "slug") {
-      items[field] = slug
-    }
-
-    if (field === "content") {
-      items[field] = removeAnchorLinks(content)
-    }
-
-    if (field === "frontmatter") {
-      items[field] = frontmatter
-    }
-  })
+  const items: Items = {
+    slug,
+    content: removeAnchorLinks(content),
+    frontmatter,
+  }
 
   return items
 }
 
-export const getContent = (dir: string, fields: string[] = []) => {
+export const getContent = (dir: string) => {
   const slugs = getPostSlugs(dir)
-  const content = slugs.map((slug) => getContentBySlug(slug, fields))
+  const content = slugs.map(getContentBySlug)
 
   return content
 }

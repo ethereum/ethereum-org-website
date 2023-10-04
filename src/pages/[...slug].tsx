@@ -61,10 +61,10 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const contentFiles = getContent("/", ["slug"]).filter(
+  const contentFiles = getContent("/").filter(
     // Filter `/developers/tutorials` slugs since they are processed by
     // `/developers/tutorials/[...tutorial].tsx`
-    (file) => !file.slug!.includes("/developers/tutorials")
+    (file) => !file.slug.includes("/developers/tutorials")
   )
 
   return {
@@ -72,7 +72,7 @@ export const getStaticPaths: GetStaticPaths = () => {
       return {
         params: {
           // Splitting nested paths to generate proper slug
-          slug: file.slug!.split("/").slice(1),
+          slug: file.slug.split("/").slice(1),
         },
       }
     }),
@@ -84,17 +84,13 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
-  const markdown = getContentBySlug(params.slug.join("/"), [
-    "slug",
-    "content",
-    "frontmatter",
-  ])
+  const markdown = getContentBySlug(params.slug.join("/"))
   const frontmatter = markdown.frontmatter as Frontmatter
 
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
 
-  const mdxSource: any = await serialize(markdown.content as string, {
+  const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
