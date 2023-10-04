@@ -53,16 +53,18 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import { PageContent } from "@/lib/interfaces"
 
+// TODO: Move reused markdown components to separate components file, and remove exports from here
+
 const commonHeadingProps: HeadingProps = {
   fontWeight: 700,
   lineHeight: 1.4,
 }
 
-const Heading1 = (props: HeadingProps) => (
+export const Heading1 = (props: HeadingProps) => (
   <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
-const Heading2 = (props: HeadingProps) => (
+export const Heading2 = (props: HeadingProps) => (
   <OldHeading
     as="h2"
     {...commonHeadingProps}
@@ -72,7 +74,7 @@ const Heading2 = (props: HeadingProps) => (
   />
 )
 
-const Heading3 = (props: HeadingProps) => (
+export const Heading3 = (props: HeadingProps) => (
   <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 

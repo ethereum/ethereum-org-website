@@ -1,14 +1,6 @@
-import ButtonDropdown, {
-  List as ButtonDropdownList,
-  type IProps as ButtonDropdownProps,
-} from "@/components/ButtonDropdown"
-
-import { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 import {
   Box,
   Flex,
-  ImageProps,
   ListItem,
   Show,
   SimpleGrid,
@@ -18,6 +10,25 @@ import {
   WrapItem,
 } from "@chakra-ui/react"
 
+import { Button, ButtonLink } from "@/components/Buttons"
+import { Image } from "@/components/Image"
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import { mdxTableComponents } from "@/components/Table"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import Card from "@/components/Card"
+import Emoji from "@/components/Emoji"
+import ExpandableCard from "@/components/ExpandableCard"
+import FeedbackCard from "@/components/FeedbackCard"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
+import InfoBanner from "@/components/InfoBanner"
+import MdLink from "@/components/MdLink"
+import Pill from "@/components/Pill"
+import RandomAppList from "@/components/RandomAppList"
+import SectionNav from "@/components/SectionNav"
+import TableOfContents from "@/components/TableOfContents"
+import UpgradeStatus from "@/components/UpgradeStatus"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import YouTube from "@/components/YouTube"
 import {
   Page,
   InfoColumn,
@@ -33,26 +44,11 @@ import {
   Title,
   Divider,
   Paragraph,
-} from "./UseCases"
-import MdLink from "@/components/MdLink"
-import { mdxTableComponents } from "@/components/Table"
-import RandomAppList from "@/components/RandomAppList"
-import ButtonLink from "@/components/ButtonLink"
-import YouTube from "@/components/YouTube"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import ExpandableCard from "@/components/ExpandableCard"
-import UpgradeStatus from "@/components/UpgradeStatus"
-import Emoji from "@/components/Emoji"
-import Pill from "@/components/Pill"
-import SectionNav from "@/components/SectionNav"
-import Card from "@/components/Card"
-import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
-import Breadcrumbs from "@/components/Breadcrumbs"
-import Button from "@/components/Button"
-import TableOfContents from "@/components/TableOfContents"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
-import FeedbackCard from "@/components/FeedbackCard"
+} from "@/layouts/UseCases"
+
+import { isLangRightToLeft } from "@/lib/utils/translations"
+import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { PageContent } from "@/lib/interfaces"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
@@ -105,6 +101,7 @@ export const roadmapComponents = {
   // RoadmapImageContent,
 }
 
+interface IProps extends PageContent, ChildOnlyProp {}
 export const RoadmapLayout = ({ children, frontmatter, slug, tocItems }) => {
   if (!frontmatter)
     throw new Error(
