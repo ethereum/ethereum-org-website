@@ -25,7 +25,7 @@ export type CardListItem = {
   alt?: string
 }
 
-export interface IProps extends BoxProps {
+export interface IProps extends Omit<BoxProps, "content"> {
   content: Array<CardListItem>
   clickHandler?: (idx: string | number) => void
 }
