@@ -26,7 +26,7 @@ import ButtonDropdown, {
 } from "@/components/ButtonDropdown"
 import { Image } from "@/components/Image"
 import { mdxTableComponents } from "@/components/Table"
-import ButtonLink from "@/components/ButtonLink"
+import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
