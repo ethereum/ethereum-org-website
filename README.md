@@ -1662,6 +1662,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/srn08"><img src="https://avatars.githubusercontent.com/u/105499798?v=4?s=100" width="100px;" alt="Shaunak Nagrecha"/><br /><sub><b>Shaunak Nagrecha</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asrn08" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/schwindtkevin"><img src="https://avatars.githubusercontent.com/u/1700789?v=4?s=100" width="100px;" alt="Kevin Schwindt"/><br /><sub><b>Kevin Schwindt</b></sub></a><br /><a href="#content-schwindtkevin" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
