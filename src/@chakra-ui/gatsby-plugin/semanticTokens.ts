@@ -41,7 +41,7 @@ const semanticTokens = {
       highContrast: { _light: "blue.800", _dark: "orange.100" },
       lowContrast: { _light: "blue.100", _dark: "orange.900" },
       hover: { _light: "blue.400", _dark: "orange.400" },
-      visited: { _light: "blue.700", _dark: "orange.700" },
+      visited: { _light: "blue.700", _dark: "orange.400" },
       // ! Deprecating primary.light
       light: { _light: "blue.100", _dark: "orange.100" },
       // ! Deprecating primary.dark
