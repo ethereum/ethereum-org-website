@@ -14,8 +14,11 @@ export const getLastModifiedDate = async (filePath: string) => {
   url.searchParams.set("page", "1")
   url.searchParams.set("per_page", "1")
 
-  return fetch(url, { headers })
-    .then((res) => res.json())
-    .then((commits) => commits[0].commit.committer.date)
-    .catch(console.error)
+  try {
+    const response = await fetch(url, { headers })
+    const commits = await response.json()
+    return commits[0].commit.committer.date
+  } catch (err) {
+    console.error(filePath, err)
+  }
 }

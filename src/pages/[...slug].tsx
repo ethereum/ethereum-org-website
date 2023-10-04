@@ -61,7 +61,11 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const contentFiles = getContent(["slug", "content"])
+  const contentFiles = getContent("/").filter(
+    // Filter `/developers/tutorials` slugs since they are processed by
+    // `/developers/tutorials/[...tutorial].tsx`
+    (file) => !file.slug.includes("/developers/tutorials")
+  )
 
   return {
     paths: contentFiles.map((file) => {
@@ -80,17 +84,13 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
-  const markdown = getContentBySlug(params.slug.join("/"), [
-    "slug",
-    "content",
-    "frontmatter",
-  ])
+  const markdown = getContentBySlug(params.slug.join("/"))
   const frontmatter = markdown.frontmatter as Frontmatter
 
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
 
-  const mdxSource: any = await serialize(markdown.content as string, {
+  const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
