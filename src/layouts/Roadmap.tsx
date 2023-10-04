@@ -102,16 +102,8 @@ export const roadmapComponents = {
 }
 
 interface IProps extends PageContent, ChildOnlyProp {}
-export const RoadmapLayout = ({ children, frontmatter, slug, tocItems }) => {
-  if (!frontmatter)
-    throw new Error(
-      "Staking page template query does not return expected values"
-    )
-  if (!frontmatter?.title)
-    throw new Error("Required `title` property missing for staking layout")
-
+export const RoadmapLayout: React.FC<IProps> = ({ children, frontmatter, slug, tocItems }) => {
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
-  // const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const dropdownLinks: ButtonDropdownList = {
     text: "Roadmap Options" as TranslationKey,
@@ -170,8 +162,8 @@ export const RoadmapLayout = ({ children, frontmatter, slug, tocItems }) => {
       <HeroContainer>
         <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
           <TitleCard>
-            <Breadcrumbs slug={slug} />{" "}
             {/* TODO: Double check this slug works */}
+            <Breadcrumbs slug={slug} />{" "}
             <Title>{frontmatter.title}</Title>
             <Text>{frontmatter.description}</Text>
             {frontmatter?.buttons && (

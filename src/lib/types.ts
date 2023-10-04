@@ -12,6 +12,7 @@ export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
+// TODO: Build out Frontmatter schemas
 export type Frontmatter = { [key: string]: any }
 
 export type Lang =

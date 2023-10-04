@@ -1,14 +1,9 @@
-import React from "react"
 import { Box, Flex } from "@chakra-ui/react"
-import { useStaticQuery, graphql } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-
-import { getImage, ImageDataLike } from "../utils/image"
 
 import CardList from "./CardList"
 import Card from "./Card"
 import { ButtonLink } from "./Buttons"
-import Translation from "./Translation"
+// import Translation from "./Translation"
 import OldHeading from "./OldHeading"
 
 import type { CardListItem } from "./CardList"
@@ -55,7 +50,8 @@ type BeaconQueryTypes = {
 }
 
 const BeaconChainActions: React.FC = () => {
-  const { t } = useTranslation()
+  // TODO: Re-enable after i18n implemented
+  // const { t } = useTranslation()
   const data = useStaticQuery<BeaconQueryTypes>(BeaconStaticQuery)
 
   const datapoints: Array<CardListItem> = [

@@ -37,6 +37,8 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/roadmap/scaling",
     "/roadmap/security",
     "/roadmap/user-experience",
+    "/roadmap/merge",
+    "/roadmap/beacon-chain",
     "/developers/tutorials/all-you-can-cache",
   ]
 

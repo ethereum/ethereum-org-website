@@ -20,8 +20,8 @@ import {
   // StakingLayout,
   roadmapComponents,
   RoadmapLayout,
-  // upgradeComponents,
-  // UpgradeLayout,
+  upgradeComponents,
+  UpgradeLayout,
   // eventComponents,
   // EventLayout,
   // docsComponents,
@@ -39,7 +39,7 @@ const layoutMapping = {
   "use-cases": UseCasesLayout,
   // staking: StakingLayout,
   roadmap: RoadmapLayout,
-  // upgrade: UpgradeLayout,
+  upgrade: UpgradeLayout,
   // event: EventLayout,
   // docs: DocsLayout,
 } as const
@@ -49,7 +49,7 @@ const componentsMapping = {
   "use-cases": useCasesComponents,
   // staking: stakingComponents,
   roadmap: roadmapComponents,
-  // upgrade: upgradeComponents,
+  upgrade: upgradeComponents,
   // event: eventComponents,
   // docs: docsComponents,
 } as const
