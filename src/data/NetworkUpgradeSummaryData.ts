@@ -1,7 +1,7 @@
 interface NetworkUpgradeProps {
-  dateTimeAsString?: string
-  ethPriceInUSD?: number
-  waybackLink?: string
+  dateTimeAsString: string
+  ethPriceInUSD: number
+  waybackLink: string
   blockNumber?: number
   epochNumber?: number
   slotNumber?: number
