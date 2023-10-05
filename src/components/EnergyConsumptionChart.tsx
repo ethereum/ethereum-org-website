@@ -1,9 +1,16 @@
 import React from "react"
-import { Box, Center, useBreakpointValue, useToken } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  chakra,
+  useBreakpointValue,
+  useToken,
+} from "@chakra-ui/react"
 import {
   BarChart,
   Bar,
   Cell,
+  Text,
   XAxis,
   LabelList,
   ResponsiveContainer,
@@ -12,7 +19,6 @@ import {
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Translation from "./Translation"
-import Text from "./OldText"
 
 interface ITickProps {
   x: number
@@ -26,23 +32,43 @@ type Data = Array<{
   color: string
 }>
 
-const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
-  const textColor = useToken("colors", "text")
+const RechartText = chakra(Text, {
+  shouldForwardProp: (prop) => {
+    const isValidRechartProp = [
+      "width",
+      "children",
+      "x",
+      "y",
+      "dy",
+      "angle",
+      "scaleToFit",
+      "textAnchor",
+      "verticalAnchor",
+      "breakAll",
+      "maxLines",
+    ].includes(prop)
 
+    if (isValidRechartProp) return true
+
+    return false
+  },
+})
+
+const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
   return (
     <g transform={`translate(${x},${y})`}>
-      <Text
+      <RechartText
         x={0}
         y={0}
         dy={15}
+        fill="text"
         width={50}
-        fill={textColor}
         textAnchor="middle"
         verticalAnchor="middle"
-        fontSize="10px"
+        fontSize="2xs"
       >
         {payload.value}
-      </Text>
+      </RechartText>
     </g>
   )
 }
@@ -175,8 +201,7 @@ const EnergyConsumptionChart: React.FC = () => {
               dataKey="name"
               tickLine={false}
               axisLine={false}
-              // @ts-ignore
-              tick={<CustomTick />}
+              tick={(props) => <CustomTick {...props} />}
               interval={0}
             />
             <Legend
