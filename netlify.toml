@@ -13,3 +13,13 @@
   for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "https://esp.ethereum.foundation"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  included_files = [
+    "!./src/data/**/*",
+    "!./public/**/*",
+    "!node_modules/next-mdx-remote/**/*"
+  ]
