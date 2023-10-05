@@ -43,7 +43,7 @@ import {
   PASSING_QUIZ_SCORE,
   PROGRESS_BAR_GAP,
   USER_STATS_KEY,
-} from "./constants"
+} from "@/lib/constants"
 
 import { getNextQuiz } from "./utils"
 

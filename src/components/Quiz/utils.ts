@@ -6,7 +6,7 @@ import {
   TOTAL_QUIZ_QUESTIONS_ANSWERED,
   TOTAL_QUIZ_RETRY_RATE,
   USER_STATS_KEY,
-} from "./constants"
+} from "@/lib/constants"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,
