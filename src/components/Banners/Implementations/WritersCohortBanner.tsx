@@ -2,7 +2,7 @@ import React from "react"
 import { Text } from "@chakra-ui/react"
 
 import DismissableBanner from "../DismissableBanner"
-import Link from "../../Link"
+import { BaseLink } from "../../Link"
 
 import { supportedLanguages } from "../../../utils/languages"
 
@@ -24,9 +24,9 @@ const WritersCohortBanner: React.FC<IProps> = ({ pathname }) => {
         <Text m={0}>
           🎉 Join the 2nd edition of ethereum.org's Writers Cohort, starting
           October 20th.{" "}
-          <Link to="https://ethereumwriterscohort.carrd.co/">
+          <BaseLink to="https://ethereumwriterscohort.carrd.co/" _visited={{}}>
             Sign up here!
-          </Link>
+          </BaseLink>
         </Text>
       </DismissableBanner>
     )
