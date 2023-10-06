@@ -331,6 +331,7 @@ const WalletsPage = ({
                 emoji={type.emoji}
                 description={type.description}
                 emojiSize={2.5}
+                alignItems="center"
               />
             ))}
           </Box>
