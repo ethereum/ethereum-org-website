@@ -1,13 +1,14 @@
 import React, { useEffect } from "react"
 import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
-import { useI18next } from "gatsby-plugin-react-i18next"
 
-import Translation from "../Translation"
 import Text from "../OldText"
-
-import { numberToPercent } from "../../utils/numberToPercent"
+import { numberToPercent } from "@/lib/utils/numberToPercent"
 import { updateUserStats } from "./utils"
-import { UserStats } from "../../types"
+import { UserStats } from "@/lib/types"
+
+// TODO: Re-enable when i18n is implemented and remove placeholders throughout
+// import { useI18next } from "gatsby-plugin-react-i18next"
+// import Translation from "../Translation"
 
 interface IProps {
   quizKey: string
@@ -28,7 +29,9 @@ const QuizSummary: React.FC<IProps> = ({
   quizScore,
   setUserStats,
 }) => {
-  const { language } = useI18next()
+  // TODO: Re-enable when i18n is implemented; remove placeholder
+  // const { language } = useI18next()
+  const language = "en"
   const [largerThanMobile] = useMediaQuery("(min-width: 30em)")
 
   const valueStyles = { fontWeight: "700", mb: 2 }
@@ -52,11 +55,12 @@ const QuizSummary: React.FC<IProps> = ({
         color={isPassingScore ? "success.base" : "body.base"}
         fontSize="3xl"
       >
-        {isPassingScore ? (
+        {/* {isPassingScore ? (
           <Translation id="passed" />
         ) : (
           <Translation id="your-results" />
-        )}
+        )} */}
+        {isPassingScore ? "Passed" : "Your results"}
       </Text>
 
       <Flex
@@ -84,14 +88,16 @@ const QuizSummary: React.FC<IProps> = ({
             {numberToPercent(ratioCorrect, language)}
           </Text>
           <Text {...labelStyles}>
-            <Translation id="score" />
+            {/* <Translation id="score" /> */}
+            Score
           </Text>
         </Flex>
 
         <Flex>
           <Text {...valueStyles}>+{numberOfCorrectAnswers}</Text>
           <Text {...labelStyles}>
-            <Translation id="correct" />
+            {/* <Translation id="correct" /> */}
+            Correct
           </Text>
         </Flex>
 
@@ -99,7 +105,8 @@ const QuizSummary: React.FC<IProps> = ({
           <Flex>
             <Text {...valueStyles}>{questionCount}</Text>
             <Text {...labelStyles}>
-              <Translation id="questions" />
+              {/* <Translation id="questions" /> */}
+              Questions
             </Text>
           </Flex>
         )}

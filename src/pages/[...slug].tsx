@@ -7,14 +7,15 @@ import path from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
+import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 
 // Layouts and components
 import {
   RootLayout,
   staticComponents,
   StaticLayout,
-  // useCasesComponents,
-  // UseCasesLayout,
+  useCasesComponents,
+  UseCasesLayout,
   // stakingComponents,
   // StakingLayout,
   // roadmapComponents,
@@ -31,10 +32,11 @@ import {
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import { Frontmatter, NextPageWithLayout } from "@/lib/types"
 import { getLastModifiedDate } from "@/lib/utils/gh"
+import type { ToCItem } from "@/lib/interfaces"
 
 const layoutMapping = {
   static: StaticLayout,
-  // "use-cases": UseCasesLayout,
+  "use-cases": UseCasesLayout,
   // staking: StakingLayout,
   // roadmap: RoadmapLayout,
   // upgrade: UpgradeLayout,
@@ -44,7 +46,7 @@ const layoutMapping = {
 
 const componentsMapping = {
   static: staticComponents,
-  // "use-cases": useCasesComponents,
+  "use-cases": useCasesComponents,
   // staking: stakingComponents,
   // roadmap: roadmapComponents,
   // upgrade: upgradeComponents,
@@ -85,7 +87,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 ) => {
   const params = context.params!
   const markdown = getContentBySlug(params.slug.join("/"))
-  const frontmatter = markdown.frontmatter as Frontmatter
+  const frontmatter = markdown.frontmatter
+  const tocItems = markdown.tocItems
 
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
@@ -94,7 +97,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }]],
+      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }], [rehypeHeadingIds]],
     },
   })
 
@@ -112,6 +115,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       frontmatter,
       lastUpdatedDate,
       layout,
+      tocItems,
     },
   }
 }
@@ -142,8 +146,9 @@ ContentPage.getLayout = (page: ReactElement) => {
     frontmatter,
     lastUpdatedDate,
     layout,
+    tocItems,
   } = page.props
-  const layoutProps = { slug, frontmatter, lastUpdatedDate }
+  const layoutProps = { slug, frontmatter, lastUpdatedDate, tocItems }
   const Layout = layoutMapping[layout]
   return (
     <RootLayout>

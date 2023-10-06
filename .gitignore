@@ -39,3 +39,6 @@ feed.xml
 
 # Sitemaps
 sitemap*.xml
+
+# Local Netlify folder
+.netlify

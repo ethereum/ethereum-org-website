@@ -1,12 +1,12 @@
 import React from "react"
-import { Link as GatsbyLink } from "gatsby"
 import { SystemStyleObject, cssVar } from "@chakra-ui/react"
-import CustomLink, { BaseLink } from "../Link"
-import { getCustomId, Item, trimmedTitle } from "./utils"
+import { BaseLink } from "../Link"
+import { getCustomId, parseToCTitle } from "@/lib/utils/toc"
+import type { ToCItem } from "@/lib/interfaces"
 
 export interface IPropsTableOfContentsLink {
   depth: number
-  item: Item
+  item: ToCItem
   activeHash?: string
 }
 
@@ -48,8 +48,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
 
   return (
     <BaseLink
-      as={GatsbyLink}
-      to={url}
+      href={url}
       className={classes}
       textDecoration="none"
       display="inline-block"
@@ -84,7 +83,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
         },
       }}
     >
-      {trimmedTitle(item.title)}
+      {parseToCTitle(item.title)}
     </BaseLink>
   )
 }

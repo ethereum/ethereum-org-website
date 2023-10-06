@@ -1,5 +1,6 @@
 // Import data types
-import { QuizzesSection, RawQuizzes } from "../../types"
+import type { QuizzesSection } from "@/lib/types"
+import type { RawQuizzes } from "@/lib/interfaces"
 
 // Declare hash-map of quizzes based on slug key
 const quizzes: RawQuizzes = {
