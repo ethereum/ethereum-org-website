@@ -1,20 +1,18 @@
-import React from "react"
 import { Box, Flex, List, ListItem, useToken, VStack } from "@chakra-ui/react"
 
-// SVG imports
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
-} from "../../icons/staking"
+} from "@/components/icons/staking"
+import ButtonDropdown from "@/components/ButtonDropdown"
+import Translation from "@/components/Translation"
+import Text from "@/components/OldText"
+import OldHeading from "@/components/OldHeading"
 
-// Component imports
-import ButtonDropdown from "../../ButtonDropdown"
-import Translation from "../../Translation"
-import Text from "../../OldText"
-import OldHeading from "../../OldHeading"
-import { trackCustomEvent } from "../../../utils/matomo"
-import { useStakingConsiderations } from "./use-staking-considerations"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
+import type { StakingPage } from "@/lib/types"
 
 const IndicatorGroup = ({
   label,
@@ -55,7 +53,7 @@ const IndicatorGroup = ({
 }
 
 export interface IProps {
-  page: "solo" | "saas" | "pools"
+  page: StakingPage
 }
 
 const StakingConsiderations: React.FC<IProps> = ({ page }) => {

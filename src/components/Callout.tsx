@@ -1,20 +1,17 @@
-// Libraries
-import React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
 import { Flex, FlexProps } from "@chakra-ui/react"
 
-// Components
-import Translation from "./Translation"
-import Emoji from "./Emoji"
-import Text from "./OldText"
-import GatsbyImage from "./GatsbyImage"
-import OldHeading from "./OldHeading"
+// TODO: Re-enable once i18n is implemented
+// import Translation from "./Translation"
+import Emoji from "@/components/Emoji"
+import Text from "@/components/OldText"
+import OldHeading from "@/components/OldHeading"
+import { Image } from "@/components/Image"
 
-import type { TranslationKey } from "../utils/translations"
+import type { TranslationKey } from "@/lib/types"
 
 export interface IProps extends FlexProps {
   children?: React.ReactNode
-  image?: IGatsbyImageData
+  image?: string
   emoji?: string
   alt?: string
   titleKey: TranslationKey
@@ -50,11 +47,13 @@ const Callout: React.FC<IProps> = ({
     {...rest}
   >
     {image && (
-      <GatsbyImage
-        image={image}
+      <Image
+        src={image}
         alt={alt || ""}
         mt={-40}
         alignSelf="center"
+        w={263}
+        h={200}
         maxW="263px"
         minH="200px"
       />
@@ -63,10 +62,13 @@ const Callout: React.FC<IProps> = ({
       <div>
         {emoji && <Emoji text={emoji} fontSize="5xl" />}
         <OldHeading as="h3" fontSize="2xl" lineHeight={1.4}>
-          <Translation id={titleKey} />
+          {/* TODO: Re-enable after i18n implemented and remove placeholders */}
+          {/* <Translation id={titleKey} /> */}
+          {titleKey}
         </OldHeading>
         <Text color="text200" fontSize="xl" lineHeight="140%">
-          <Translation id={descriptionKey} />
+          {/* <Translation id={descriptionKey} /> */}
+          {descriptionKey}
         </Text>
       </div>
       {children}

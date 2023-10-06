@@ -1,34 +1,28 @@
-// Libraries
-import React from "react"
-
-// Components
-import CardList from "../CardList"
 import { Stack } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import CardList from "@/components/CardList"
 
-export interface IProps {}
-
-const StakingGuides: React.FC<IProps> = () => {
-  const { t } = useTranslation()
+const StakingGuides: React.FC = () => {
+  // TODO: Re-enable after i18n is implemented
+  // const { t } = useTranslation()
   const guides = [
     {
-      title: t("page-staking-guide-title-coincashew-ethereum"),
+      title: "page-staking-guide-title-coincashew-ethereum", // t("page-staking-guide-title-coincashew-ethereum"),
       link: "https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet",
-      description: t("page-staking-guide-description-linux"),
+      description: "page-staking-guide-description-linux", // t("page-staking-guide-description-linux"),
     },
     {
-      title: t("page-staking-guide-title-somer-esat"),
+      title: "page-staking-guide-title-somer-esat", // t("page-staking-guide-title-somer-esat"),
       link: "https://github.com/SomerEsat/ethereum-staking-guide",
-      description: t("page-staking-guide-description-linux"),
+      description: "page-staking-guide-description-linux", // t("page-staking-guide-description-linux"),
     },
     {
-      title: t("page-staking-guide-title-rocket-pool"),
+      title: "page-staking-guide-title-rocket-pool", // t("page-staking-guide-title-rocket-pool"),
       link: "https://rocketpool.net/node-operators",
-      description: t("page-staking-guide-description-mac-linux"),
+      description: "page-staking-guide-description-mac-linux", // t("page-staking-guide-description-mac-linux"),
     },
   ]
-
-  return <Stack as={CardList} direction="column" gap={4} content={guides} />
+  // TODO: Revert to <Stack as={CardList}> once merged with Gatsby repo (content => items)
+  return <CardList as={Stack} flexDirection="column" gap={4} content={guides} />
 }
 
 export default StakingGuides

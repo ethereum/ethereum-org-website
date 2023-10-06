@@ -1,14 +1,11 @@
-// Import libraries
-import React, { FC, useState, useMemo, ChangeEvent } from "react"
+import { FC, useState, useMemo, ChangeEvent } from "react"
 import { Button, Flex, Text } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-// Components
-import CopyToClipboard from "../CopyToClipboard"
-import Emoji from "../Emoji"
-import Translation from "../Translation"
-import Input from "../Input"
-// Utilites
-import { trackCustomEvent } from "../../utils/matomo"
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+// TODO: Re-enable after i18n implemented
+// import Translation from "@/components/Translation"
+import Input from "@/components/Input"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 interface Validator {
   validatorIndex: number
@@ -17,9 +14,9 @@ interface Validator {
   isTestnet?: boolean
 }
 
-interface IProps {}
-const WithdrawalCredentials: FC<IProps> = () => {
-  const { t } = useTranslation()
+const WithdrawalCredentials: FC = () => {
+  // TODO: Re-enable after i18n implemented
+  // const { t } = useTranslation()
   const [isLoading, setIsLoading] = useState<{
     mainnet: boolean
     testnet: boolean
@@ -82,7 +79,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
       return (
         <Flex bg="error.neutral" p={4}>
           <Text m={0} color="error.base">
-            <Translation id="comp-withdrawal-credentials-error" />
+            {/* <Translation id="comp-withdrawal-credentials-error" /> */}
+            comp-withdrawal-credentials-error
           </Text>
         </Flex>
       )
@@ -92,12 +90,14 @@ const WithdrawalCredentials: FC<IProps> = () => {
         <Flex bg="success.neutral" p={4}>
           <Text m={0} color="success.base">
             <Text as="span" fontWeight="bold">
-              <Translation
+              {/* <Translation
                 id="comp-withdrawal-credentials-upgraded-1"
                 options={{ validatorIndex: validator.validatorIndex }}
-              />{" "}
+              />{" "} */}
+              comp-withdrawal-credentials-upgraded-1{" "}
             </Text>
-            <Translation id="comp-withdrawal-credentials-upgraded-2" />{" "}
+            {/* <Translation id="comp-withdrawal-credentials-upgraded-2" />{" "} */}
+            comp-withdrawal-credentials-upgraded-2{" "}
             <CopyToClipboard text={longAddress} inline>
               {(isCopied) => (
                 <>
@@ -108,7 +108,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
                     <>
                       <Emoji text="✅" fontSize="lg" mr={2} ml={2} />
                       <Text as="span" title={longAddress}>
-                        <Translation id="copied" />
+                        {/* <Translation id="copied" /> */}
+                        Copied
                       </Text>
                     </>
                   ) : (
@@ -124,13 +125,17 @@ const WithdrawalCredentials: FC<IProps> = () => {
       <Flex bg="error.neutral" p={4}>
         <Text m={0} color="error.base">
           <Text as="span" fontWeight="bold">
-            {validator.isTestnet ? (
+            {/* {validator.isTestnet ? (
               <Translation id="comp-withdrawal-credentials-not-upgraded-1-testnet" />
             ) : (
               <Translation id="comp-withdrawal-credentials-not-upgraded-1" />
-            )}
+            )} */}
+            {validator.isTestnet
+              ? "comp-withdrawal-credentials-not-upgraded-1-testnet"
+              : "comp-withdrawal-credentials-not-upgraded-1"}
           </Text>{" "}
-          <Translation id="comp-withdrawal-credentials-not-upgraded-2" />
+          {/* <Translation id="comp-withdrawal-credentials-not-upgraded-2" /> */}
+          comp-withdrawal-credentials-not-upgraded-2
         </Text>
       </Flex>
     )
@@ -144,7 +149,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
           value={inputValue}
           onChange={handleChange}
           w={{ base: "full", sm: "18ch" }}
-          placeholder={t("comp-withdrawal-credentials-placeholder")}
+          placeholder="comp-withdrawal-credentials-placeholder" // {t("comp-withdrawal-credentials-placeholder")}
         />
         <Flex
           w={{ base: "full", sm: "fit-content" }}
@@ -156,7 +161,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
             isDisabled={!inputValue.length}
             isLoading={isLoading.mainnet}
           >
-            <Translation id="comp-withdrawal-credentials-verify-mainnet" />
+            {/* <Translation id="comp-withdrawal-credentials-verify-mainnet" /> */}
+            comp-withdrawal-credentials-verify-mainnet
           </Button>
           <Button
             onClick={() => checkWithdrawalCredentials(true)}
@@ -164,7 +170,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
             variant="outline"
             isLoading={isLoading.testnet}
           >
-            <Translation id="comp-withdrawal-credentials-verify-goerli" />
+            {/* <Translation id="comp-withdrawal-credentials-verify-goerli" /> */}
+            comp-withdrawal-credentials-verify-goerli
           </Button>
         </Flex>
       </Flex>

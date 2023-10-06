@@ -41,6 +41,10 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/roadmap/merge",
     "/roadmap/beacon-chain",
     "/developers/tutorials/all-you-can-cache",
+    "/staking/solo",
+    "/staking/saas",
+    "/staking/pools",
+    "/staking/withdrawals",
   ]
 
   // Skip /translations dir for now until we set up i18n

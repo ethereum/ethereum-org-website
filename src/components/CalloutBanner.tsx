@@ -1,16 +1,16 @@
-import React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, FlexProps, Image } from "@chakra-ui/react"
+import { Flex, FlexProps } from "@chakra-ui/react"
+import type { ImageProps } from "next/image"
+import { Image } from "@/components/Image"
+import Text from "@/components/OldText"
+import OldHeading from "@/components/OldHeading"
+// TODO: Re-enable after i18n implemented
+// import Translation from "./Translation"
 
-import Translation from "./Translation"
-import Text from "./OldText"
-import OldHeading from "./OldHeading"
-import GatsbyImage from "./GatsbyImage"
-import { TranslationKey } from "../utils/translations"
+import type { TranslationKey } from "@/lib/types"
 
-export interface IProps extends FlexProps {
+export interface IProps extends Omit<FlexProps, "width" | "height">, Pick<ImageProps, "width" | "height"> {
   children?: React.ReactNode
-  image: IGatsbyImageData
+  image: string
   maxImageWidth?: number
   titleKey: TranslationKey
   descriptionKey: TranslationKey
@@ -24,6 +24,8 @@ const CalloutBanner: React.FC<IProps> = ({
   descriptionKey,
   alt,
   children,
+  width,
+  height,
   ...restProps
 }) => (
   <Flex
@@ -34,12 +36,13 @@ const CalloutBanner: React.FC<IProps> = ({
     borderRadius="base"
     {...restProps}
   >
-    <GatsbyImage
-      image={image}
+    <Image
+      src={image}
       alt={alt}
       objectFit="contain"
       alignSelf="center"
-      w="full"
+      height={height}
+      width={width}
       maxW={`${maxImageWidth}px`}
       mt={-24}
       mb={{ base: 0, lg: -24 }}
@@ -59,10 +62,12 @@ const CalloutBanner: React.FC<IProps> = ({
         fontSize={{ base: "2xl", sm: "2rem" }}
         lineHeight="1.4"
       >
-        <Translation id={titleKey} />
+        {/* <Translation id={titleKey} /> */}
+        {titleKey}
       </OldHeading>
       <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
-        <Translation id={descriptionKey} />
+        {/* <Translation id={descriptionKey} /> */}
+        {descriptionKey}
       </Text>
       {children}
     </Flex>

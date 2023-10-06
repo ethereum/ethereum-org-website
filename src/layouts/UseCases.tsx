@@ -51,7 +51,7 @@ import YouTube from "@/components/YouTube"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang } from "@/lib/types"
-import { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
+import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 // TODO: Move reused markdown components to separate components file, and remove exports from here
 
