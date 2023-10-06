@@ -1,6 +1,15 @@
 import { ReactElement, ReactNode } from "react"
 import { NextPage } from "next"
 import { AppProps } from "next/app"
+import type {
+  DocsFrontmatter,
+  RoadmapFrontmatter,
+  StakingFrontmatter,
+  StaticFrontmatter,
+  TutorialFrontmatter,
+  UpgradeFrontmatter,
+  UseCasesFrontmatter,
+} from "@/lib/interfaces"
 
 export type ChildOnlyProp = { children?: ReactNode }
 
@@ -12,8 +21,14 @@ export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-// TODO: Build out Frontmatter schemas
-export type Frontmatter = { [key: string]: any }
+export type Frontmatter =
+  | RoadmapFrontmatter
+  | UpgradeFrontmatter
+  | StaticFrontmatter
+  | UseCasesFrontmatter
+  | StakingFrontmatter
+  | DocsFrontmatter
+  | TutorialFrontmatter
 
 export type Lang =
   | "en"

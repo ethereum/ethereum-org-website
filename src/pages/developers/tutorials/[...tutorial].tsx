@@ -16,6 +16,7 @@ import { staticComponents as components } from "@/layouts/Static"
 // Types
 import type { GetServerSideProps } from "next/types"
 import type { NextPageWithLayout } from "@/lib/types"
+import type { TutorialFrontmatter } from "@/lib/interfaces"
 
 interface Params extends ParsedUrlQuery {
   tutorial: string[]
@@ -34,7 +35,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
 
   const tutorialPath = path.join(tutorialsPath, params.tutorial.join("/"))
   const markdown = getContentBySlug(tutorialPath)
-  const frontmatter = markdown.frontmatter
+  const frontmatter = markdown.frontmatter as TutorialFrontmatter
   // TODO: see how we can handle the published date on the tutorial's layout
   // since we can't send the Date object anymore
   frontmatter.published = frontmatter.published.toString()

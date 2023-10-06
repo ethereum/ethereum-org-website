@@ -31,6 +31,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { PageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 const Pre = (props: ChildOnlyProp) => (
   <Text
@@ -171,6 +172,9 @@ export const staticComponents = {
   YouTube,
 }
 
+interface IProps extends ChildOnlyProp, PageContent {
+  frontmatter: StaticFrontmatter
+}
 export const StaticLayout = ({
   children,
   frontmatter,

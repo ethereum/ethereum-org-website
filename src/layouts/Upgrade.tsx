@@ -297,7 +297,7 @@ export const upgradeComponents = {
   // MeetupList,
 }
 
-interface IProps extends ChildOnlyProp, Omit<PageContent, "frontmatter"> {
+interface IProps extends ChildOnlyProp, PageContent {
   frontmatter: UpgradeFrontmatter
 }
 export const UpgradeLayout: React.FC<IProps> = ({
@@ -404,7 +404,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
             {tocItems && (
               <UpgradeTableOfContents
                 items={tocItems}
-                maxDepth={frontmatter.sidebarDepth!}
+                maxDepth={frontmatter.sidebarDepth || 2}
               />
             )}
           </InfoColumn>
