@@ -1,7 +1,7 @@
 import React from "react"
 import { SystemStyleObject, cssVar } from "@chakra-ui/react"
 import { BaseLink } from "../Link"
-import { getCustomId, trimmedTitle } from "@/lib/utils/toc"
+import { getCustomId, parseToCTitle } from "@/lib/utils/toc"
 import type { ToCItem } from "@/lib/interfaces"
 
 export interface IPropsTableOfContentsLink {
@@ -83,7 +83,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
         },
       }}
     >
-      {trimmedTitle(item.title)}
+      {parseToCTitle(item.title)}
     </BaseLink>
   )
 }

@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import { Box, List, ListItem } from "@chakra-ui/react"
 import { BaseLink } from "./Link"
 import type { ToCItem } from "@/lib/interfaces"
-import { trimmedTitle } from "@/lib/utils/toc"
+import { parseToCTitle } from "@/lib/utils/toc"
 
 export interface IPropsTableOfContentsLink {
   item: ToCItem
@@ -30,7 +30,7 @@ const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({ item: { titl
       fontWeight="normal"
       _visited={{}}
     >
-      {trimmedTitle(title)}
+      {parseToCTitle(title)}
     </BaseLink>
   )
 }

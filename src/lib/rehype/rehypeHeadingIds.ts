@@ -1,7 +1,7 @@
 import { visit } from "unist-util-visit"
 import type { Plugin } from "unified"
 import type { ElementContent, Root } from "hast"
-import { getCustomId, trimmedTitle } from "@/lib/utils/toc"
+import { getCustomId, parseToCTitle } from "@/lib/utils/toc"
 
 /**
  * Parses DOM elements to find all headings, setting an `id` attribute on each one.
@@ -27,7 +27,7 @@ const setMarkdownHeadingIds: Plugin<[{}], Root> = () => (tree, _file) => {
       const lastChildValue: string = lastChild.value as string
       node.children[lastIndex] = {
         type: "text",
-        value: trimmedTitle(lastChildValue),
+        value: parseToCTitle(lastChildValue),
       }
     }
     // TODO: Add pseudo-element to heading to allow for anchor links

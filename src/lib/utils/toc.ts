@@ -13,7 +13,13 @@ export const getCustomId = (title: string): string => {
   return match[2].toLowerCase()
 }
 
-export const trimmedTitle = (title: string): string => {
+/**
+ * Parse out the title to be displayed in the Table of Contents by
+ * removing any custom ID and Twemoji components
+ * @param title Heading string without leading #s that may contain Emoji's or a {#custom-id}
+ * @returns Title string with custom ID and Emoji's removed
+ */
+export const parseToCTitle = (title: string): string => {
   const match = customIdRegEx.exec(title)
   const trimmedTitle = match ? title.replace(match[1], "").trim() : title
 
@@ -21,15 +27,6 @@ export const trimmedTitle = (title: string): string => {
   const emojiMatch = emojiRegEx.exec(trimmedTitle)
   return emojiMatch ? trimmedTitle.replaceAll(emojiRegEx, "") : trimmedTitle
 }
-
-/**
- * Removes {#...} from .md file so content can be parsed properly
- * @deprecated Use `trimmedTitle` instead for each heading instead
- * @param mdContent
- * @returns string with {#id} removed
- */
-export const removeAnchorLinks = (mdContent: string) =>
-  mdContent.replace(/{#.*?}/g, "").trim()
 
 /**
  * Common props used used for the outermost list element in the mobile and desktop renders
@@ -80,7 +77,7 @@ const parseHeadingToItem = (heading: string): ToCItem => {
   const re = /^(#+\s+)(.+?)(\s+\{(#[A-Za-z0-9\-_]+?)\})?$/
   const match = heading.match(re)
   if (!match) throw new Error(`Invalid heading: ${heading}`)
-  const title = trimmedTitle(match[2])
+  const title = parseToCTitle(match[2])
   const url = `#${getCustomId(heading)}`
   return { title, url }
 }
