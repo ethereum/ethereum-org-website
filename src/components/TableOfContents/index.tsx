@@ -19,8 +19,6 @@ import ItemsList from "./ItemsList"
 import { getCustomId, outerListProps } from "@/lib/utils/toc"
 import type { ToCItem } from "@/lib/interfaces"
 
-export { ToCItem }
-
 export interface IProps extends BoxProps {
   items: Array<ToCItem>
   maxDepth?: number
