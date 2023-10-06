@@ -118,11 +118,11 @@ const BeaconChainActions: React.FC = () => {
         <Translation id="consensus-explore" />
       </H3>
 
-      <CardList content={datapoints} />
+      <CardList items={datapoints} />
       <H3>
         <Translation id="read-more" />
       </H3>
-      <CardList content={reads} />
+      <CardList items={reads} />
     </Box>
   )
 }
