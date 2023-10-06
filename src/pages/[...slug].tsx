@@ -74,7 +74,7 @@ export const getStaticPaths: GetStaticPaths = () => {
       return {
         params: {
           // Splitting nested paths to generate proper slug
-          slug: file.slug!.split("/").slice(1),
+          slug: file.slug.split("/").slice(1),
         },
       }
     }),
@@ -87,8 +87,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 ) => {
   const params = context.params!
   const markdown = getContentBySlug(params.slug.join("/"))
-  const frontmatter = markdown.frontmatter as Frontmatter
-  const tocItems = markdown.tocItems as Array<ToCItem>
+  const frontmatter = markdown.frontmatter
+  const tocItems = markdown.tocItems
 
   const mdPath = path.join("/content", ...params.slug)
   const mdDir = path.join("public", mdPath)
