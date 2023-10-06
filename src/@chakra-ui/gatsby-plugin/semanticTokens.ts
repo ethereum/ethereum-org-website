@@ -41,7 +41,7 @@ const semanticTokens = {
       highContrast: { _light: "blue.800", _dark: "orange.100" },
       lowContrast: { _light: "blue.100", _dark: "orange.900" },
       hover: { _light: "blue.400", _dark: "orange.400" },
-      visited: { _light: "blue.700", _dark: "orange.400" },
+      visited: { _light: "blue.700", _dark: "orange.550" },
       // ! Deprecating primary.light
       light: { _light: "blue.100", _dark: "orange.100" },
       // ! Deprecating primary.dark
@@ -50,14 +50,14 @@ const semanticTokens = {
       pressed: { _light: "blue.400", _dark: "orange.800" },
     },
     body: {
-      base: { _light: "gray.700", _dark: "gray.100" },
+      base: { _light: "gray.800", _dark: "gray.100" },
       medium: { _light: "gray.500", _dark: "gray.300" },
       light: { _light: "gray.200", _dark: "gray.600" },
       // ! Deprecating body.inverted
-      inverted: { _light: "gray.100", _dark: "gray.700" },
+      inverted: { _light: "gray.100", _dark: "gray.800" },
     },
     background: {
-      base: { _light: "white", _dark: "gray.700" },
+      base: { _light: "white", _dark: "gray.800" },
       highlight: { _light: "gray.100", _dark: "gray.900" },
     },
     disabled: { _light: "gray.400", _dark: "gray.500" },
