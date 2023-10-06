@@ -4,7 +4,7 @@ import matter from "gray-matter"
 
 import { CONTENT_DIR } from "@/lib/constants"
 import { generateTableOfContents } from "@/lib/utils/toc"
-import type { PageContent } from "@/lib/interfaces"
+import type { MdPageContent } from "@/lib/interfaces"
 import type { Frontmatter } from "@/lib/types"
 
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
@@ -87,7 +87,7 @@ export const getContentBySlug = (slug: string) => {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
   const frontmatter = data as Frontmatter
-  const items: PageContent = {
+  const items: MdPageContent = {
     slug,
     content,
     frontmatter,

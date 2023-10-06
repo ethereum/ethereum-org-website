@@ -136,7 +136,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   hideEditButton?: boolean
 }
 
-export interface PageContent {
+export interface MdPageContent {
   slug: string
   content: string
   frontmatter: Frontmatter

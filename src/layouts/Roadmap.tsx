@@ -48,7 +48,7 @@ import {
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
-import type { PageContent, RoadmapFrontmatter } from "@/lib/interfaces"
+import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
@@ -101,7 +101,7 @@ export const roadmapComponents = {
   // RoadmapImageContent,
 }
 
-interface IProps extends PageContent, ChildOnlyProp {
+interface IProps extends MdPageContent, ChildOnlyProp {
   frontmatter: RoadmapFrontmatter
 }
 export const RoadmapLayout: React.FC<IProps> = ({ children, frontmatter, slug, tocItems }) => {
