@@ -4,7 +4,7 @@ description: Ein Überblick darüber, wie Sie mit dem Solo-Staking Ihres ETH beg
 lang: de
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Leslie das Nashorn auf ihrem eigenen Computerchip.
 sidebarDepth: 2
 summaryPoints:
@@ -104,7 +104,7 @@ Attributindikatoren werden unten verwendet, um auf nennenswerte Stärken oder Sc
 Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Verwenden Sie die obigen Indikatoren, um Sie durch die folgenden Tools zu führen.
 
 <InfoBanner emoji="⚠️" isWarning>
-Bitte beachten Sie, wie wichtig es ist, einen <a href="/developers/docs/nodes-and-clients/client-diversity/">Minderheits-Client</a> zu wählen, da er die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Tools, mit denen Sie einen Minderheit-Client einrichten können, werden als <em style="text-transform: uppercase;">„Multi-Client."</em> bezeichnet
+Bitte beachten Sie, wie wichtig es ist, einen <a href="/developers/docs/nodes-and-clients/client-diversity/">Minderheits-Client</a> zu wählen, da er die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Tools, mit denen Sie einen Minderheit-Client einrichten können, werden als <em style={{ textTransform: "uppercase" }}>„Multi-Client."</em> bezeichnet
 </InfoBanner>
 
 #### Node-Tools

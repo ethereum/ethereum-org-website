@@ -4,7 +4,7 @@ description: 풀 ETH 스테이킹을 시작하는 방법에 대한 개요
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: 수영장에서 수영하는 코뿔소 레슬리.
 summaryPoints:
   - 다른 사용자와 함께 ETH의 양과 관계없이 스테이킹하고 보상을 받으세요.
@@ -51,7 +51,7 @@ summaryPoints:
 설정에 도움이 되는 다양한 옵션이 있습니다. 위의 지표를 사용하여 아래 도구에 대한 안내를 받으세요.
 
 <InfoBanner emoji="⚠️" isWarning>
-참고로, <a href="/developers/docs/nodes-and-clients/client-diversity/">클라이언트 다양성</a>을 고려한 서비스의 선택은 네트워크의 보안을 강화하고 위험성을 최소화할 수 있으므로 매우 중요합니다. 대부분 클라이언트의 사용을 제한하는 것으로 밝혀진 서비스는 <em style="text-transform: uppercase;">"다양한 클라이언트"</em>로 표시됩니다.
+참고로, <a href="/developers/docs/nodes-and-clients/client-diversity/">클라이언트 다양성</a>을 고려한 서비스의 선택은 네트워크의 보안을 강화하고 위험성을 최소화할 수 있으므로 매우 중요합니다. 대부분 클라이언트의 사용을 제한하는 것으로 밝혀진 서비스는 <em style={{ textTransform: "uppercase" }}>"다양한 클라이언트"</em>로 표시됩니다.
 </InfoBanner>
 
 <StakingProductsCardGrid category="pools" />

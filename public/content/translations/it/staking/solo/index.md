@@ -4,7 +4,7 @@ description: Una panoramica di come iniziare a mettere in staking in solo i tuoi
 lang: it
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Leslie il rinoceronte sul suo chip informatico.
 sidebarDepth: 2
 summaryPoints:
@@ -109,7 +109,7 @@ Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazi
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono denotati come <em style="text-transform: uppercase;">"multi-client".</em>
+Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono denotati come <em style={{ textTransform: "uppercase" }}>"multi-client".</em>
 
 #### Generatori di chiavi
 

@@ -4,7 +4,7 @@ description: 關於如何開始聯合以太幣質押的概覽
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: 萊斯利犀牛在池中游泳
 sidebarDepth: 2
 summaryPoints:
@@ -53,7 +53,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="pools" />
 
-請注意，仔細選擇具有[用戶端多樣性](/developers/docs/nodes-and-clients/client-diversity/)的服務相當重要，因為它可以提高網路的安全性並降低你的風險。 如果某服務可以證明它會限制主流用戶端的使用，則稱它具有<em style="text-transform: uppercase;">「執行層用戶端多樣性」</em>和<em style="text-transform: uppercase;">「共識層用戶端多樣性」</em>。
+請注意，仔細選擇具有[用戶端多樣性](/developers/docs/nodes-and-clients/client-diversity/)的服務相當重要，因為它可以提高網路的安全性並降低你的風險。 如果某服務可以證明它會限制主流用戶端的使用，則稱它具有<em style={{ textTransform: "uppercase" }}>「執行層用戶端多樣性」</em>和<em style={{ textTransform: "uppercase" }}>「共識層用戶端多樣性」</em>。
 
 關於我們遺漏的質押工具，你有什麼推薦嗎？ 請參閱我們的[產品刊登政策](/contributing/adding-staking-products/)，如果合適，請提交以供審核。
 

@@ -4,7 +4,7 @@ description: Een overzicht van hoe u aan de slag kunt met gepoolde ETH-staking
 lang: nl
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Leslie de neushoorn zweeft in de wolken.
 sidebarDepth: 2
 summaryPoints:
@@ -49,7 +49,7 @@ Attribuutindicatoren worden hieronder gebruikt om opmerkelijke of zwakke punten 
 Hieronder staat een aantal beschikbare SaaS-providers. Gebruik bovenstaande indicatoren om u te helpen door de onderstaande services te gaan
 
 <InfoBanner emoji="⚠️" isWarning>
-Houd rekening met het belang van het ondersteunen van <a href="/developers/docs/nodes-and-clients/client-diversity/">diversiteit van clients</a>, omdat dit de veiligheid van het netwerk verbetert en uw risico's beperkt. Services die bewijs hebben van het beperken van het gebruik van meerderheid-clients zijn gemarkeerd als <em style="text-transform: uppercase;">"diverse clients."</em>
+Houd rekening met het belang van het ondersteunen van <a href="/developers/docs/nodes-and-clients/client-diversity/">diversiteit van clients</a>, omdat dit de veiligheid van het netwerk verbetert en uw risico's beperkt. Services die bewijs hebben van het beperken van het gebruik van meerderheid-clients zijn gemarkeerd als <em style={{ textTransform: "uppercase" }}>"diverse clients."</em>
 </InfoBanner>
 
 #### SaaS-providers

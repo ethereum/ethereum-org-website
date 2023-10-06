@@ -4,7 +4,7 @@ description: An overview of how to get started with pooled ETH staking
 lang: en
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: Leslie the rhino swimming in the pool.
 sidebarDepth: 2
 summaryPoints:
@@ -53,7 +53,7 @@ There are a variety of options available to help you with your setup. Use the ab
 
 <StakingProductsCardGrid category="pools" />
 
-Please note the importance of choosing a service that takes [client diversity](/developers/docs/nodes-and-clients/client-diversity/) seriously, as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style="text-transform: uppercase;">"execution client diversity"</em> and <em style="text-transform: uppercase;">"consensus client diversity."</em>
+Please note the importance of choosing a service that takes [client diversity](/developers/docs/nodes-and-clients/client-diversity/) seriously, as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> and <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 

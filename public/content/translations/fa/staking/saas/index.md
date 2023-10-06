@@ -4,7 +4,7 @@ description: مروری بر نحوه شروع سهام‌گذاری مشترک 
 lang: fa
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: لسلی اسب آبی شناور در میان ابرها.
 sidebarDepth: 2
 summaryPoints:
@@ -49,7 +49,7 @@ summaryPoints:
 در زیر برخی از ارائه‌دهندگان SaaS قید شده‌اند. از شاخص‌های بالا برای راهنمایی درباره این خدمات استفاده کنید
 
 <InfoBanner emoji="⚠️" isWarning>
-لطفاً از اهمیت انتخاب سرویسی که <a href="/developers/docs/nodes-and-clients/client-diversity/">تنوع کلاینت</a> را جدی بگیرد غافل نشوید، زیرا امنیت شبکه را بهبود می‌بخشد و ریسک شما را محدود می‌کند. سرویس‌هایی که شواهدی مبنی بر محدود کردن استفاده اکثر کلاینت‌ها دارند، با عنوان <em style="text-transform: uppercase;">«کلاینت‌های متنوع»</em> علامت‌گذاری می‌شوند.
+لطفاً از اهمیت انتخاب سرویسی که <a href="/developers/docs/nodes-and-clients/client-diversity/">تنوع کلاینت</a> را جدی بگیرد غافل نشوید، زیرا امنیت شبکه را بهبود می‌بخشد و ریسک شما را محدود می‌کند. سرویس‌هایی که شواهدی مبنی بر محدود کردن استفاده اکثر کلاینت‌ها دارند، با عنوان <em style={{ textTransform: "uppercase" }}>«کلاینت‌های متنوع»</em> علامت‌گذاری می‌شوند.
 
 </InfoBanner>
 

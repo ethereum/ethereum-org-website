@@ -4,7 +4,7 @@ description: Een overzicht van hoe u moet beginnen met solo staking van uw ETH
 lang: nl
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Leslie de neushoorn op haar eigen computerchip.
 sidebarDepth: 2
 summaryPoints:
@@ -101,7 +101,7 @@ Attribuutindicatoren worden hieronder gebruikt om opmerkelijke sterke of zwakke 
 Er zijn verschillende opties beschikbaar om u te helpen met uw installatie. Gebruik bovenstaande indicatoren om u door de onderstaande tools heen te leiden.
 
 <InfoBanner emoji="⚠️" isWarning>
-Houd rekening met het belang van het kiezen van een <a href="/developers/docs/nodes-and-clients/client-diversity/">minoriteit-client</a>, aangezien dit de veiligheid van het netwerk verbetert en uw risico beperkt. Tools die u in staat stellen om een minoriteit-client in te stellen worden aangeduid als <em style="text-transform: uppercase;">"multi-client."</em>
+Houd rekening met het belang van het kiezen van een <a href="/developers/docs/nodes-and-clients/client-diversity/">minoriteit-client</a>, aangezien dit de veiligheid van het netwerk verbetert en uw risico beperkt. Tools die u in staat stellen om een minoriteit-client in te stellen worden aangeduid als <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 </InfoBanner>
 
 #### Node tools

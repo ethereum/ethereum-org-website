@@ -4,7 +4,7 @@ description: Uma visão geral de como começar a fazer staking individual com se
 lang: pt-br
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Leslie, o rinoceronte, em seu próprio chip de computador
 sidebarDepth: 2
 summaryPoints:
@@ -104,7 +104,7 @@ Os indicadores de atributo são usados abaixo para sinalizar pontos fortes ou fr
 Há uma variedade de opções disponíveis para ajudá-lo na sua configuração. Use os indicadores acima para guiá-lo pelas ferramentas abaixo.
 
 <InfoBanner emoji="⚠️" isWarning>
-Observe a importância de escolher um <a href="/developers/docs/nodes-and-clients/client-diversity/">cliente minoritário</a>, pois melhora a segurança da rede e limita seu risco. As ferramentas que permitem configurar o cliente minoritário são indicadas como <em style="text-transform: uppercase;">"multicliente."</em>
+Observe a importância de escolher um <a href="/developers/docs/nodes-and-clients/client-diversity/">cliente minoritário</a>, pois melhora a segurança da rede e limita seu risco. As ferramentas que permitem configurar o cliente minoritário são indicadas como <em style={{ textTransform: "uppercase" }}>"multicliente."</em>
 </InfoBanner>
 
 #### Ferramentas do nó

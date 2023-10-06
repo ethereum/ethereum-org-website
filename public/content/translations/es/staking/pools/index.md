@@ -4,7 +4,7 @@ description: Una visión general de cómo empezar con la participación agrupada
 lang: es
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: Leslie, el rinoceronte, nadando en la piscina.
 sidebarDepth: 2
 summaryPoints:
@@ -53,7 +53,7 @@ Existe una gran variedad de opciones disponibles para ayudarle con su configurac
 
 <StakingProductsCardGrid category="pools" />
 
-Es importante elegir un servicio que se tome en serio la [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/), ya que mejora la seguridad de la red y limita el riesgo. Los servicios que tienen constatación de limitar el uso de cliente mayoritario están señalados con <em style="text-transform: uppercase;">"diversidad de cliente de ejecución"</em> y <em style="text-transform: uppercase;">"diversidad de cliente de consenso".</em>
+Es importante elegir un servicio que se tome en serio la [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/), ya que mejora la seguridad de la red y limita el riesgo. Los servicios que tienen constatación de limitar el uso de cliente mayoritario están señalados con <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de ejecución"</em> y <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de consenso".</em>
 
 ¿Tiene alguna sugerencia para una herramienta de participación no cubierta? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
 

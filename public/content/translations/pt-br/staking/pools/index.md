@@ -4,7 +4,7 @@ description: Uma visão geral de como começar com pools de staking de ETH
 lang: pt-br
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: Leslie, o rinoceronte, nadando na piscina
 sidebarDepth: 2
 summaryPoints:
@@ -50,7 +50,7 @@ Os indicadores de atributo são usados abaixo para sinalizar notáveis pontos fo
 Há uma variedade de opções disponíveis para ajudá-lo na sua configuração. Use os indicadores acima para guiá-lo pelas ferramentas abaixo.
 
 <InfoBanner emoji="⚠️" isWarning>
-Observe a importância de escolher um serviço que leve a <a href="/developers/docs/nodes-and-clients/client-diversity/">diversidade de cliente</a> a sério, à medida que melhora a segurança da rede e limita o seu risco. Serviços que possuem evidências de limitar a maioria do uso do cliente são marcados como <em style="text-transform: uppercase;">"clientes diversos".</em>
+Observe a importância de escolher um serviço que leve a <a href="/developers/docs/nodes-and-clients/client-diversity/">diversidade de cliente</a> a sério, à medida que melhora a segurança da rede e limita o seu risco. Serviços que possuem evidências de limitar a maioria do uso do cliente são marcados como <em style={{ textTransform: "uppercase" }}>"clientes diversos".</em>
 </InfoBanner>
 
 <StakingProductsCardGrid category="pools" />

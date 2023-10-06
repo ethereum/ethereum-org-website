@@ -3,7 +3,7 @@ title: Retiradas de participaciones
 description: La página resume lo que son los «empujones de retirada», cómo funcionan y lo que los participantes deben hacer para obtener sus recompensas
 lang: es
 template: staking
-image: ../../../../../assets/staking/leslie-withdrawal.png
+image: /staking/leslie-withdrawal.png
 alt: Leslie el rinoceronte con sus recompensas de participaciones
 sidebarDepth: 2
 summaryPoints:

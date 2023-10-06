@@ -4,7 +4,7 @@ description: Havuzlanmış ETH faiz getirisi elde etmeye nasıl başlanacağına
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Gergedan Leslie bulutlarda dalgalanıyor.
 sidebarDepth: 2
 summaryPoints:
@@ -47,7 +47,7 @@ Aşağıda bazı mevcut SaaS sağlayıcıları bulunmaktadır. Bu hizmetlerde si
 
 <StakingProductsCardGrid category="saas" />
 
-Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) desteklemenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımı sınırladığına dair kanıtları olan hizmetler;<em style="text-transform: uppercase;">"yürütme istemcisi çeşitliliği"</em> ve <em style="text-transform: uppercase;">"fikir birliği istemcisi çeşitliliği" ile belirtilir.</em>
+Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) desteklemenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımı sınırladığına dair kanıtları olan hizmetler;<em style={{ textTransform: "uppercase" }}>"yürütme istemcisi çeşitliliği"</em> ve <em style={{ textTransform: "uppercase" }}>"fikir birliği istemcisi çeşitliliği" ile belirtilir.</em>
 
 #### Anahtar Üreticileri
 

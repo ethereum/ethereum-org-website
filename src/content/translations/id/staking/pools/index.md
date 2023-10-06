@@ -4,7 +4,7 @@ description: Gambaran umum mengenai bagaimana cara memulai penaruhan untuk ETH d
 lang: id
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: Leslie si Badak sedang berenang di kolam.
 sidebarDepth: 2
 summaryPoints:
@@ -53,7 +53,7 @@ Terdapat berbagai pilihan yang tersedia untuk membantu Anda dengan pengaturan An
 
 <StakingProductsCardGrid category="pools" />
 
-Harap perhatikan pentingnya memilih layanan yang serius mengenai [diversitas klien](/developers/docs/nodes-and-clients/client-diversity/), karena ini meningkatkan keamanan jaringan dan membatasi risiko Anda. Layanan-layanan yang memiliki bukti pembatasan penggunaan mayoritas klien ditandai dengan <em style="text-transform: uppercase;">"diversitas klien eksekusi"</em> dan <em style="text-transform: uppercase;">"diversitas klien konsensus."</em>
+Harap perhatikan pentingnya memilih layanan yang serius mengenai [diversitas klien](/developers/docs/nodes-and-clients/client-diversity/), karena ini meningkatkan keamanan jaringan dan membatasi risiko Anda. Layanan-layanan yang memiliki bukti pembatasan penggunaan mayoritas klien ditandai dengan <em style={{ textTransform: "uppercase" }}>"diversitas klien eksekusi"</em> dan <em style={{ textTransform: "uppercase" }}>"diversitas klien konsensus."</em>
 
 Punya saran untuk alat penaruhan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.
 

@@ -4,7 +4,7 @@ description: 如何開始單獨質押你的以太幣概覽
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: 萊斯利犀牛在她自己的電腦晶片上。
 sidebarDepth: 2
 summaryPoints:
@@ -109,7 +109,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="nodeTools" />
 
-切記，選擇[非主流用戶端](/developers/docs/nodes-and-clients/client-diversity/)極為重要，因為這可以提高網路的安全性，降低你的風險。 可讓你設定非主流用戶端的工具稱為<em style="text-transform: uppercase;">「多重用戶端」</em>。
+切記，選擇[非主流用戶端](/developers/docs/nodes-and-clients/client-diversity/)極為重要，因為這可以提高網路的安全性，降低你的風險。 可讓你設定非主流用戶端的工具稱為<em style={{ textTransform: "uppercase" }}>「多重用戶端」</em>。
 
 #### 金鑰產生器
 

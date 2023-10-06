@@ -4,7 +4,7 @@ description: مروری بر نحوه آغاز به کار سهام‌گذاری
 lang: fa
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: لسلی اسب آبی در حال شنا در استخر.
 sidebarDepth: 2
 summaryPoints:
@@ -52,7 +52,7 @@ summaryPoints:
 گزینه‌های مختلفی برای کمک به شما در راه‌اندازی وجود دارد. از شاخص‌های بالا برای راهنمایی به خود در مورد ابزارهای زیر استفاده کنید.
 
 <InfoBanner emoji="⚠️" isWarning>
-لطفاً از اهمیت انتخاب سرویسی که <a href="/developers/docs/nodes-and-clients/client-diversity/">تنوع کلاینت</a> را جدی بگیرد غافل نشوید، زیرا امنیت شبکه را بهبود می‌بخشد و ریسک شما را محدود می‌کند. سرویس‌هایی که شواهدی مبنی بر محدود کردن استفاده اکثر کلاینت‌ها دارند، با عنوان <em style="text-transform: uppercase;">«کلاینت‌های متنوع»</em> علامت‌گذاری می‌شوند.
+لطفاً از اهمیت انتخاب سرویسی که <a href="/developers/docs/nodes-and-clients/client-diversity/">تنوع کلاینت</a> را جدی بگیرد غافل نشوید، زیرا امنیت شبکه را بهبود می‌بخشد و ریسک شما را محدود می‌کند. سرویس‌هایی که شواهدی مبنی بر محدود کردن استفاده اکثر کلاینت‌ها دارند، با عنوان <em style={{ textTransform: "uppercase" }}>«کلاینت‌های متنوع»</em> علامت‌گذاری می‌شوند.
 </InfoBanner>
 
 <StakingProductsCardGrid category="pools" />

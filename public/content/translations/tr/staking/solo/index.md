@@ -4,7 +4,7 @@ description: ETH'nizi solo stake etmeye nasıl başlayacağınıza dair genel bi
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Gergedan Leslie bilgisayar çipinin üstünde.
 sidebarDepth: 2
 summaryPoints:
@@ -107,7 +107,7 @@ Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıda
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için bir [azınlık istemcisi](/developers/docs/nodes-and-clients/client-diversity/) seçmenin önemini lütfen unutmayın. Azınlık istemcisini kurmanıza izin veren araçlar, <em style="text-transform: uppercase;">"çoklu istemci"</em> olarak anılır.
+Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için bir [azınlık istemcisi](/developers/docs/nodes-and-clients/client-diversity/) seçmenin önemini lütfen unutmayın. Azınlık istemcisini kurmanıza izin veren araçlar, <em style={{ textTransform: "uppercase" }}>"çoklu istemci"</em> olarak anılır.
 
 #### Anahtar Üreticileri
 

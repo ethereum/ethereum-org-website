@@ -4,7 +4,7 @@ description: ETHステーキングプールの始め方の概要
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: プールで泳ぐサイのレスリー
 sidebarDepth: 2
 summaryPoints:
@@ -52,7 +52,7 @@ summaryPoints:
 セットアップにはさまざまなオプションが用意されています。 上記の指標を参考に、下記のツールをご利用ください。
 
 <InfoBanner emoji="⚠️" isWarning>
-<a href="/developers/docs/nodes-and-clients/client-diversity/">クライアントの多様性</a>に真剣に取り組むサービスを選ぶことが、ネットワークのセキュリティを向上させ、ご自身のリスクを制限する上で、重要であることにご留意ください。 マジョリティを占めるクライアントを制限している証拠があるサービスは、<em style="text-transform: uppercase;">「クライアントの多様性」</em>として表示されます。
+<a href="/developers/docs/nodes-and-clients/client-diversity/">クライアントの多様性</a>に真剣に取り組むサービスを選ぶことが、ネットワークのセキュリティを向上させ、ご自身のリスクを制限する上で、重要であることにご留意ください。 マジョリティを占めるクライアントを制限している証拠があるサービスは、<em style={{ textTransform: "uppercase" }}>「クライアントの多様性」</em>として表示されます。
 </InfoBanner>
 
 <StakingProductsCardGrid category="pools" />

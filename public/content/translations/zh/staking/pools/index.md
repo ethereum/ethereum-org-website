@@ -4,7 +4,7 @@ description: 简要介绍如何开始以太币联合质押
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: 莱斯利犀牛在泳池中游泳。
 sidebarDepth: 2
 summaryPoints:
@@ -53,7 +53,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="pools" />
 
-请注意，选择重视[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)的服务很重要，因为这样可以提高网络安全性，还可以限制你的风险。 <em style="text-transform: uppercase;">“执行客户端多样性”</em>和<em style="text-transform: uppercase;">“共识客户端多样性”</em>能够表明服务可证明其在限制使用主流客户端。
+请注意，选择重视[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)的服务很重要，因为这样可以提高网络安全性，还可以限制你的风险。 <em style={{ textTransform: "uppercase" }}>“执行客户端多样性”</em>和<em style={{ textTransform: "uppercase" }}>“共识客户端多样性”</em>能够表明服务可证明其在限制使用主流客户端。
 
 想要推荐其他未提到的质押工具吗？ 可以查看我们的[产品上线政策](/contributing/adding-staking-products/)，确定你推荐的质押工具是否合适，合适的话，请提交以供审核。
 

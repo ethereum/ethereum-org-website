@@ -4,7 +4,7 @@ description: ETHステーキングプールの始め方の概要
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: 雲に浮かぶサイのレスリー
 sidebarDepth: 2
 summaryPoints:
@@ -49,7 +49,7 @@ ETH のステーキングを支援するステーキング・アズ・ア・サ�
 下記は、利用可能なステーキング・アズ・ア・サービス(SaaS)プロバイダーです。 上記の指標を参考に、これらのサービスをご利用ください。
 
 <InfoBanner emoji="⚠️" isWarning>
-<a href="/developers/docs/nodes-and-clients/client-diversity/">クライアントの多様性</a>をサポートすることが、ネットワークのセキュリティを向上させ、ご自身のリスクを制限する上で、重要であることにご留意ください。 マジョリティを占めるクライアントを制限している証拠があるサービスは、<em style="text-transform: uppercase;">「クライアントの多様性」</em>として表示されます。
+<a href="/developers/docs/nodes-and-clients/client-diversity/">クライアントの多様性</a>をサポートすることが、ネットワークのセキュリティを向上させ、ご自身のリスクを制限する上で、重要であることにご留意ください。 マジョリティを占めるクライアントを制限している証拠があるサービスは、<em style={{ textTransform: "uppercase" }}>「クライアントの多様性」</em>として表示されます。
 </InfoBanner>
 
 #### ステーキングサービスプロバイダー
