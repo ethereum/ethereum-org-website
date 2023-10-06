@@ -98,7 +98,7 @@ const addHeadingAsItem = (headings: Array<string>, h = 2): Array<ToCItem> => {
   )
   depths.forEach((depth, i): void => {
     if (depth > h) return
-    const headingItem: ToCItem = parseHeadingToItem(headings[i])
+    const headingItem = parseHeadingToItem(headings[i])
     if (depths[i + 1] > h) {
       const start = i + 1
       const rest = depths.slice(start)
