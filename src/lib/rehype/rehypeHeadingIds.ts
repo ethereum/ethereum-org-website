@@ -8,7 +8,7 @@ import { getCustomId, trimmedTitle } from "@/lib/utils/toc"
  * The `getCustomId` Table of Contents utility functions is used to generate the `id`
  * for each, allowing ToC links to match.
  * The `trimmedTitle` function is used to remove any trailing `{#id}` from the heading
- * @returns Plugin<[{}], Root>, a rehype plugin tht can be used in [...dynamic-md-pages].tsx
+ * @returns Plugin<[{}], Root>, a rehype plugin that can be used in [...dynamic-md-pages].tsx
  */
 const setMarkdownHeadingIds: Plugin<[{}], Root> = () => (tree, _file) => {
   visit(tree, "element", (node) => {
