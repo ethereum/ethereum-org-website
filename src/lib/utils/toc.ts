@@ -1,31 +1,45 @@
 import { ListProps } from "@chakra-ui/react"
 import type { ToCItem } from "@/lib/interfaces"
 
-export const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
+// RegEx patterns
+export const mdHeadingRegEx = /^(#+\s+)(.+)$/
+export const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
 export const emojiRegEx = /<Emoji [^/]+\/>/g
+export const escapeSlashRegEx = /\\(?=[+*?^$\\.[\]{}()|/#])/g
+export const multilineHtmlCommentsRegEx = /<!--[^]*-->/gm
 
+/**
+ * Creates a slug from a string (Hello world => hello-world)
+ * @param s Any string
+ * @returns Lowercased string with spaces replaced with hyphens (kebab-casing)
+ */
 export const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
-export const getCustomId = (title: string): string => {
-  const match = customIdRegEx.exec(title)
-  if (!match) return slugify(title)
-  return match[2].toLowerCase()
+/**
+ * Parse a heading ID from a Markdown heading string. If the heading contains a custom ID,
+ * it will be used as the ID, otherwise the heading will be slugified
+ * @param heading Heading string without leading #s that may contain a {#custom-id}
+ * @returns Heading ID string
+ */
+export const parseHeadingId = (heading: string): string => {
+  const match = customIdRegEx.exec(heading)
+  return match ? match[2].toLowerCase() : slugify(heading)
 }
 
 /**
- * Parse out the title to be displayed in the Table of Contents by
- * removing any custom ID and Twemoji components
+ * Parse out the title to be displayed in the Table of Contents by removing any custom
+ * ID and Twemoji components, as well as any backslashes used to escape Markdown characters
  * @param title Heading string without leading #s that may contain Emoji's or a {#custom-id}
  * @returns Title string with custom ID and Emoji's removed
  */
 export const parseToCTitle = (title: string): string => {
   const match = customIdRegEx.exec(title)
   const trimmedTitle = match ? title.replace(match[1], "").trim() : title
-
-  // Removes Twemoji components from title
-  const emojiMatch = emojiRegEx.exec(trimmedTitle)
-  return emojiMatch ? trimmedTitle.replaceAll(emojiRegEx, "") : trimmedTitle
+  const sanitizedTitle = trimmedTitle
+    .replaceAll(emojiRegEx, "")
+    .replaceAll(escapeSlashRegEx, "")
+  return sanitizedTitle
 }
 
 /**
@@ -61,10 +75,8 @@ export const outerListProps: ListProps = {
  * @param content Full content as a string
  * @returns Full content as a string with comments removed
  */
-export const removeMarkdownComments = (content: string): string => {
-  const multilineHtmlCommentsRe = /<!--[^]*-->/gm
-  return content.replaceAll(multilineHtmlCommentsRe, "")
-}
+export const removeMarkdownComments = (content: string): string =>
+  content.replaceAll(multilineHtmlCommentsRegEx, "")
 
 /**
  * Get title and URL from a Markdown heading string. If the heading contains a custom ID,
@@ -74,11 +86,10 @@ export const removeMarkdownComments = (content: string): string => {
  * @returns Object of type `Item` containing `title` and `url` properties parsed from heading
  */
 const parseHeadingToItem = (heading: string): ToCItem => {
-  const re = /^(#+\s+)(.+?)(\s+\{(#[A-Za-z0-9\-_]+?)\})?$/
-  const match = heading.match(re)
+  const match = heading.match(mdHeadingRegEx)
   if (!match) throw new Error(`Invalid heading: ${heading}`)
   const title = parseToCTitle(match[2])
-  const url = `#${getCustomId(heading)}`
+  const url = `#${parseHeadingId(heading)}`
   return { title, url }
 }
 
@@ -88,20 +99,20 @@ const parseHeadingToItem = (heading: string): ToCItem => {
  * @param h Heading level being parsed (2 for h2, 3 for h3, etc.), starting with 2
  * @returns Array of `Item` objects parsed from the headings
  */
-const addHeadingAsItem = (headings: Array<string>, h = 2): Array<ToCItem> => {
+const addHeadingsAsItems = (headings: Array<string>, h = 2): Array<ToCItem> => {
   const items: Array<ToCItem> = []
   const depths: number[] = headings.map(
     (heading) => heading.match(/^#+/)?.[0].length ?? 0
   )
   depths.forEach((depth, i): void => {
-    if (depth > h) return
+    if (depth !== h) return
     const headingItem = parseHeadingToItem(headings[i])
     if (depths[i + 1] > h) {
       const start = i + 1
       const rest = depths.slice(start)
       const end = start + rest.indexOf(h)
       const subHeadings = headings.slice(start, end)
-      headingItem.items = addHeadingAsItem(subHeadings, h + 1)
+      headingItem.items = addHeadingsAsItems(subHeadings, h + 1)
     }
     items.push(headingItem)
   })
@@ -118,5 +129,5 @@ export const generateTableOfContents = (content: string): Array<ToCItem> => {
   const contentWithoutComments = removeMarkdownComments(content)
   const lines = contentWithoutComments.split("\n")
   const headings = lines.filter((line) => line.startsWith("#"))
-  return addHeadingAsItem(headings)
+  return addHeadingsAsItems(headings)
 }
