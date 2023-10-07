@@ -73,8 +73,13 @@ const ChecklistItem = (props: HorizontalCardProps) => (
   <HorizontalCard
     border={0}
     display="flex"
-    alignItems="flex-start"
     mb={4}
+    sx={{
+      "& > span": {
+        marginTop: "4.4px !important",
+        display: "initial",
+      },
+    }}
     {...props}
   />
 )
