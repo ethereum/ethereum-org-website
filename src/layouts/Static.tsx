@@ -22,6 +22,7 @@ import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import TableOfContents from "@/components/TableOfContents"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
 import { mdxTableComponents } from "@/components/Table"
@@ -31,6 +32,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { PageContent } from "@/lib/interfaces"
 
 const Pre = (props: ChildOnlyProp) => (
   <Text
@@ -171,10 +173,14 @@ export const staticComponents = {
   YouTube,
 }
 
-export const StaticLayout = ({
+interface IProps extends PageContent, ChildOnlyProp {
+  lastUpdatedDate: string
+}
+export const StaticLayout: React.FC<IProps> = ({
   children,
   frontmatter,
   slug,
+  tocItems,
   lastUpdatedDate,
 }) => {
   // const { language } = useI18next()
@@ -221,11 +227,25 @@ export const StaticLayout = ({
             Page last updated:{" "}
             {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
           </Text>
-
+          <TableOfContents
+            position="relative"
+            zIndex={2}
+            // editPath={absoluteEditPath}
+            items={tocItems}
+            isMobile
+            maxDepth={frontmatter.sidebarDepth || 2}
+            hideEditButton={!!frontmatter.hideEditButton}
+          />
           {children}
 
           <FeedbackCard isArticle />
         </Box>
+        <TableOfContents
+          // editPath={absoluteEditPath}
+          items={tocItems}
+          maxDepth={frontmatter.sidebarDepth || 2}
+          hideEditButton={!!frontmatter.hideEditButton}
+        />
       </Flex>
     </Box>
   )
