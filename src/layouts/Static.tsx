@@ -1,30 +1,12 @@
-import {
-  Badge,
-  Box,
-  Divider as ChakraDivider,
-  Flex,
-  Heading,
-  Icon,
-  Text,
-  chakra,
-} from "@chakra-ui/react"
+import { Box, Flex, Heading, Icon, Text, chakra } from "@chakra-ui/react"
 
 import Breadcrumbs from "../components/Breadcrumbs"
-import { ButtonLink } from "@/components/Buttons"
-import DocLink from "@/components/DocLink"
-import Emoji from "@/components/Emoji"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
-import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
-import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
-import MarkdownImage from "@/components/MarkdownImage"
-import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
-import YouTube from "@/components/YouTube"
-import { mdxTableComponents } from "@/components/Table"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -32,33 +14,6 @@ import { getLastModifiedDate } from "@/lib/utils/gh"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
-
-const Pre = (props: ChildOnlyProp) => (
-  <Text
-    as="pre"
-    maxW="full"
-    overflowX="scroll"
-    bgColor="preBackground"
-    borderRadius="base"
-    p={4}
-    border="1px solid"
-    borderColor="preBorder"
-    whiteSpace="pre-wrap"
-    {...props}
-  />
-)
-
-const HR = () => (
-  <ChakraDivider
-    mt={8}
-    mb={4}
-    display="inline-block"
-    position="inherit"
-    bg="border"
-  />
-)
-
-const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
 const Header1 = (props: ChildOnlyProp) => (
   <Heading
@@ -134,10 +89,6 @@ const Header4 = (props: ChildOnlyProp) => (
   />
 )
 
-const Paragraph = (props: ChildOnlyProp) => (
-  <Text fontSize="md" mt={8} mb={4} color="text300" {...props} />
-)
-
 const ListItem = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
 )
@@ -149,27 +100,13 @@ export const staticComponents = {
   h2: Header2,
   h3: Header3,
   h4: Header4,
-  hr: HR,
-  img: MarkdownImage,
   li: ListItem,
-  p: Paragraph,
-  pre: Pre,
-  ...mdxTableComponents,
-  ButtonLink,
-  Badge,
-  Divider,
-  DocLink,
-  Emoji,
   EnergyConsumptionChart,
-  ExpandableCard,
   GlossaryDefinition,
   Icon,
-  InfoBanner,
   Link,
-  MeetupList,
   NetworkUpgradeSummary,
   UpcomingEventsList,
-  YouTube,
 }
 
 interface IProps extends ChildOnlyProp, MdPageContent {

@@ -9,6 +9,7 @@ import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
+import mdComponents from "@/components/MdComponents"
 
 // Layouts and components
 import {
@@ -32,7 +33,6 @@ import {
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import type { NextPageWithLayout } from "@/lib/types"
-import type { ToCItem } from "@/lib/interfaces"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -97,7 +97,10 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }], [rehypeHeadingIds]],
+      rehypePlugins: [
+        [rehypeImgSize, { dir: mdDir, srcPath: mdPath }],
+        [rehypeHeadingIds],
+      ],
     },
   })
 
@@ -128,7 +131,7 @@ const ContentPage: NextPageWithLayout<ContentPageProps> = ({
   mdxSource,
   layout,
 }) => {
-  const components = componentsMapping[layout]
+  const components = { ...mdComponents, ...componentsMapping[layout] }
   return (
     <>
       {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}

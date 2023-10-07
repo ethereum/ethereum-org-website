@@ -1,50 +1,34 @@
 import {
-  Badge,
   Box,
-  calc,
-  chakra,
   Flex,
   Hide,
   Icon,
   ListItem,
   Show,
   Text,
-  type BoxProps,
-  type FlexProps,
-  type HeadingProps,
   UnorderedList,
   useToken,
 } from "@chakra-ui/react"
-import { type ComponentProps } from "react"
 import { MdExpandMore } from "react-icons/md"
 
 import BannerNotification from "@/components/BannerNotification"
-import ButtonDropdown, {
-  List as ButtonDropdownList,
-  type IProps as ButtonDropdownProps,
-} from "@/components/ButtonDropdown"
-import { Image } from "@/components/Image"
-import { mdxTableComponents } from "@/components/Table"
-import { ButtonLink } from "@/components/Buttons"
-import Card from "@/components/Card"
-import DocLink from "@/components/DocLink"
-import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { BaseLink } from "@/components/Link"
-import MarkdownImage from "@/components/MarkdownImage"
-import MdLink from "@/components/MdLink"
-import MeetupList from "@/components/MeetupList"
-import OldHeading from "@/components/OldHeading"
-import QuizWidget from "@/components/Quiz/QuizWidget"
-import RandomAppList from "@/components/RandomAppList"
-import SectionNav from "@/components/SectionNav"
+import { Image } from "@/components/Image"
+import Emoji from "@/components/Emoji"
+import FeedbackCard from "@/components/FeedbackCard"
 import TableOfContents from "@/components/TableOfContents"
-import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
-import YouTube from "@/components/YouTube"
+import {
+  ContentContainer,
+  InfoColumn,
+  InfoTitle,
+  MobileButton,
+  MobileButtonDropdown,
+  Page,
+  StyledButtonDropdown,
+  Title,
+} from "@/components/MdComponents"
 // TODO: Import once intl implemented?
 // import PageMetadata from "@/components/PageMetadata"
 
@@ -52,91 +36,6 @@ import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
-
-// TODO: Move reused markdown components to separate components file, and remove exports from here
-
-const commonHeadingProps: HeadingProps = {
-  fontWeight: 700,
-  lineHeight: 1.4,
-}
-
-export const Heading1 = (props: HeadingProps) => (
-  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
-)
-
-export const Heading2 = (props: HeadingProps) => (
-  <OldHeading
-    as="h2"
-    {...commonHeadingProps}
-    fontSize="2rem"
-    mt={16}
-    {...props}
-  />
-)
-
-export const Heading3 = (props: HeadingProps) => (
-  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
-)
-
-const Heading4 = (props: HeadingProps) => (
-  <OldHeading
-    as="h4"
-    {...commonHeadingProps}
-    fontSize="xl"
-    fontWeight={600}
-    {...props}
-  />
-)
-
-export const Divider = () => <Box my={16} w="10%" h={1} bgColor="primary.hover" />
-
-export const Pre = (props: ChildOnlyProp) => (
-  <chakra.pre
-    bg="preBackground"
-    border="1px"
-    borderColor="preBorder"
-    borderRadius="base"
-    maxW="full"
-    overflowX="scroll"
-    p={4}
-    whiteSpace="pre-wrap"
-    {...props}
-  />
-)
-
-export const Paragraph = (props: ChildOnlyProp) => (
-  <Text color="text300" mt={8} mb={4} {...props} />
-)
-
-// Note: you must pass components to MDXProvider in order to render them in markdown files
-// https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
-export const useCasesComponents = {
-  a: MdLink,
-  h1: Heading1,
-  h2: Heading2,
-  h3: Heading3,
-  h4: Heading4,
-  img: MarkdownImage,
-  li: chakra.li,
-  p: Paragraph,
-  pre: Pre,
-  Badge,
-  ButtonLink,
-  Card,
-  Divider,
-  DocLink,
-  Emoji,
-  ExpandableCard,
-  GlossaryTooltip,
-  InfoBanner,
-  MeetupList,
-  QuizWidget,
-  RandomAppList,
-  SectionNav,
-  UpgradeStatus,
-  YouTube,
-  ...mdxTableComponents,
-}
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
@@ -176,97 +75,9 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-export const Title = (props: ChildOnlyProp) => <Heading1 mt={4} {...props} />
-
-export const Page = (props: FlexProps) => (
-  <Flex
-    flexDirection={{ base: "column", lg: "row" }}
-    justifyContent="space-between"
-    mx="auto"
-    mb={16}
-    pt={{ lg: 16 }}
-    width="full"
-    sx={{ "h2:first-of-type": { mt: { lg: 0 } } }}
-    {...props}
-  />
-)
-
-export const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    as="aside"
-    flexDirection="column"
-    flex="0 1 400px"
-    ml={8}
-    mr={16}
-    position="sticky"
-    top="6.25rem"
-    height={calc("100vh").subtract("80px").toString()}
-    {...props}
-  />
-)
-
-export const InfoTitle = (props: ChildOnlyProp) => (
-  <Heading2
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "left", lg: "right" }}
-    mt={0}
-    {...props}
-  />
-)
-
-export const StyledButtonDropdown = ({
-  list,
-  ...rest
-}: FlexProps & Pick<ButtonDropdownProps, "list">) => (
-  <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
-    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
-  </Flex>
-)
-
-export const MobileButtonDropdown = (
-  props: ComponentProps<typeof StyledButtonDropdown>
-) => <StyledButtonDropdown mb={0} {...props} />
-
-export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
-  const lgBp = useToken("breakpoints", "lg")
-
-  return (
-    <Box
-      as="article"
-      flex={`1 1 ${lgBp}`}
-      position="relative"
-      px={8}
-      pb={8}
-      {...props}
-      sx={{
-        ".featured": {
-          pl: 4,
-          ml: -4,
-          borderLeft: "1px dotted",
-          borderColor: "primary.base",
-        },
-        ".citation p": {
-          color: "text200",
-        },
-      }}
-    />
-  )
-}
-
-export const MobileButton = (props: ChildOnlyProp) => {
-  const borderColor = useToken("colors", "border")
-  return (
-    <Box
-      bg="background.base"
-      boxShadow={`0 -1px 0 ${borderColor}`}
-      position="sticky"
-      bottom={0}
-      zIndex={99}
-      p={8}
-      width="full"
-      {...props}
-    />
-  )
+// UseCases layout components
+export const useCasesComponents = {
+  // Export empty object if none needed
 }
 
 interface IProps extends ChildOnlyProp, MdPageContent {
@@ -397,7 +208,11 @@ export const UseCasesLayout: React.FC<IProps> = ({
                 </ListItem>
               ))}
             </UnorderedList>
-            <TableOfContents items={tocItems} maxDepth={frontmatter.sidebarDepth || 2} isMobile />
+            <TableOfContents
+              items={tocItems}
+              maxDepth={frontmatter.sidebarDepth || 2}
+              isMobile
+            />
           </Box>
         </TitleCard>
         <Image
