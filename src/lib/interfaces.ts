@@ -61,6 +61,7 @@ export interface PageContent {
   content: string
   frontmatter: Frontmatter
   tocItems: Array<ToCItem>
+  lastUpdatedDate?: string
 }
 
 export interface RequiredFrontmatter {

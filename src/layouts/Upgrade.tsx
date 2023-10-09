@@ -118,17 +118,17 @@ const ContentContainer = (props: BoxProps) => (
   />
 )
 
-// const LastUpdated = (props: ChildOnlyProp) => (
-//   <Text
-//     color="text200"
-//     fontStyle="italic"
-//     pt={4}
-//     mb={0}
-//     borderTop="1px"
-//     borderColor="border"
-//     {...props}
-//   />
-// )
+const LastUpdated = (props: ChildOnlyProp) => (
+  <Text
+    color="text200"
+    fontStyle="italic"
+    pt={4}
+    mb={0}
+    borderTop="1px"
+    borderColor="border"
+    {...props}
+  />
+)
 
 const Pre = chakra("pre", {
   baseStyle: {
@@ -297,7 +297,7 @@ export const upgradeComponents = {
   // MeetupList,
 }
 
-interface IProps extends ChildOnlyProp, Omit<PageContent, "frontmatter"> {
+interface IProps extends ChildOnlyProp, PageContent {
   frontmatter: UpgradeFrontmatter
 }
 export const UpgradeLayout: React.FC<IProps> = ({
@@ -305,20 +305,14 @@ export const UpgradeLayout: React.FC<IProps> = ({
   frontmatter,
   slug,
   tocItems,
+  lastUpdatedDate
 }) => {
   // TODO: Re-enabled after i18n is implemented
   // const { t } = useTranslation()
   // const { language } = useI18next()
+  const language = "en"
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
-
-  // TODO: Implement GitHub API fetching for last updated date
-  // FIXME: remove this any, currently not sure how to fix the ts error
-  // const parent: any = mdx.parent
-  // TODO some `gitLogLatestDate` are `null` - why?
-  // const lastUpdatedDate = parent.fields
-  //   ? parent.fields.gitLogLatestDate
-  //   : parent.mtime
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
@@ -362,11 +356,12 @@ export const UpgradeLayout: React.FC<IProps> = ({
               ))}
             </List>
           </Box>
-          {/* TODO: Re-enable after GitHub API implemented */}
-          {/* <LastUpdated>
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
-          </LastUpdated> */}
+          <LastUpdated>
+            {/* TODO: Re-enable after i18n implemented */}
+            {/* <Translation id="page-last-updated" />:{" "} */}
+            Page last updated:{" "}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
+          </LastUpdated>
         </TitleCard>
         {frontmatter.image && (
           <Image
@@ -422,12 +417,3 @@ export const UpgradeLayout: React.FC<IProps> = ({
     </Container>
   )
 }
-
-// parent {
-//   ... on File {
-//     mtime
-//     fields {
-//       gitLogLatestDate
-//     }
-//   }
-// }
