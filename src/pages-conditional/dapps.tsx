@@ -1177,6 +1177,13 @@ const DappsPage = ({
       image: getImage(data.rarible),
       alt: t("page-dapps-rarible-logo-alt"),
     },
+    {
+      title: "Art Blocks",
+      description: t("page-dapps-dapp-description-artblocks"),
+      link: "https://artblocks.io/",
+      image: getImage(data.artblocks),
+      alt: t("page-dapps-artblocks-logo-alt"),
+    },
   ]
 
   const editorChoices = [
@@ -2181,6 +2188,9 @@ export const query = graphql`
       ...dappImage
     }
     synthetix: file(relativePath: { eq: "dapps/synthetix.png" }) {
+      ...dappImage
+    }
+    artblocks: file(relativePath: { eq: "dapps/artblocks.png" }) {
       ...dappImage
     }
   }
