@@ -702,7 +702,7 @@ const DappsPage = ({
     {
       title: "DODO",
       description: t("page-dapps-dapp-description-dodo"),
-      link: "https://dodo.io/",
+      link: "https://dodoex.io/",
       image: getImage(data.dodo),
       alt: t("page-dapps-dodo-logo-alt"),
     },
