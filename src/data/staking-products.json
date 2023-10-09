@@ -651,7 +651,7 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityExecutionClient": 85,
+      "pctMajorityExecutionClient": 50,
       "pctMajorityConsensusClient": 0,
       "isSelfCustody": false,
       "platforms": ["Browser"],
