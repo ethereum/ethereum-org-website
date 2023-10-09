@@ -10,9 +10,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { BaseLink } from "./Link"
+import { BaseLink } from "@/components/Link"
 import { Image } from "@/components/Image"
 import * as url from "@/lib/utils/url"
+import type { StaticImageData } from "next/image"
 
 export type CardListItem = {
   title?: ReactNode
@@ -20,7 +21,7 @@ export type CardListItem = {
   caption?: ReactNode
   link?: string
   id?: string
-  image?: string
+  image?: string | StaticImageData
   alt?: string
 }
 
