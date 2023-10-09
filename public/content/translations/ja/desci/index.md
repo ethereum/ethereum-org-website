@@ -5,7 +5,7 @@ lang: ja
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: 現在の科学に代わる、グローバルで開かれたシステム。
 summaryPoint2: 科学者が資金を調達し、実験を行い、データーを共有し、得られた見識を広めることなどを可能にする技術。

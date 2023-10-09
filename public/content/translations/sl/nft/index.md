@@ -5,7 +5,7 @@ lang: sl
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Logotip Eth prikazan prek holograma.
 summaryPoint1: Način, za predstavitev česarkoli edinstvenega kot sredstva na podlagi Ethereuma.
 summaryPoint2: NFT-ji ustvarjalcem vsebin dajejo več moči kot kadarkoli prej.
@@ -423,5 +423,5 @@ Drugače povedano, če bi Visa obdelala 140.839.000.000 transakcij po 149 kWh na
 Eth2 bo v enem samem letu predvidoma porabil 5.256.000 kWh. S potencialom za 788.940.000.000 - 3.153.600.000.000 transakcij obdelanih v tem času.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Če mislite, da so te statistike nepravilne, oziroma bi lahko bile bolj natančne, prosimo izpostavite težavo ali PR. To se ocene ekipe ethereum.org, izdelane z uporabo javno dostopnih informacij in trenutne zasnove Eth2. To ne predstavlja uradne obljube s strani Ethereum Fundacije. 
+  Če mislite, da so te statistike nepravilne, oziroma bi lahko bile bolj natančne, prosimo izpostavite težavo ali PR. To se ocene ekipe ethereum.org, izdelane z uporabo javno dostopnih informacij in trenutne zasnove Eth2. To ne predstavlja uradne obljube s strani Ethereum Fundacije.
 </InfoBanner>
