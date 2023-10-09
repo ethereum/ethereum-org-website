@@ -705,6 +705,43 @@
         "eventAction": "Clicked",
         "eventName": "Clicked RockX go to link"
       }
+    },
+     {
+      "name": "ConsensysStaking",
+      "imageName": "ConsensysStaking",
+      "hue": 341,
+      "launchDate": "2020-12-01",
+      "url": "https://consensys.io/staking",
+      "audits": [
+        {
+          "name": "SOC2 and Penttests",
+          "url": "https://app.drata.com/trust/9cbca327-0c38-11ee-865f-029d78a187d9"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": null,
+      "monthlyFeeUnit": null,
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityExecutionClient": 95,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["macOS", "Windows"],
+      "ui": ["GUI", "API", "GraphiQL"],
+      "socials": {
+        "discord": "https://discord.gg/AbYHBfjkDY",
+        "twitter": "https://twitter.com/ssv_network",
+        "github": "https://github.com/bloxapp/blox-live"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked ConsensysStaking go to link"
+      }
     }
   ],
   "pools": [
