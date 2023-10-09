@@ -1,10 +1,8 @@
 import React from "react"
-
 import {
   Box,
   BoxProps,
   calc,
-  Flex,
   Icon,
   List,
   ListItem,
@@ -13,18 +11,16 @@ import {
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 import { useActiveHash } from "../../hooks/useActiveHash"
-import { ButtonLink } from "../Buttons"
-import Translation from "../Translation"
+import ButtonLink from "../Buttons/ButtonLink"
+// import Translation from "../Translation"
 
 import Mobile from "./TableOfContentsMobile"
 import ItemsList from "./ItemsList"
-import { getCustomId, type Item, outerListProps } from "./utils"
-import { trackCustomEvent } from "../../utils/matomo"
-
-export { Item }
+import { getCustomId, outerListProps } from "@/lib/utils/toc"
+import type { ToCItem } from "@/lib/interfaces"
 
 export interface IProps extends BoxProps {
-  items: Array<Item>
+  items: Array<ToCItem>
   maxDepth?: number
   slug?: string
   editPath?: string
@@ -47,7 +43,7 @@ const TableOfContents: React.FC<IProps> = ({
   const titleIds: Array<string> = []
 
   if (!isMobile) {
-    const getTitleIds = (items: Array<Item>, depth: number): void => {
+    const getTitleIds = (items: Array<ToCItem>, depth: number): void => {
       if (depth > (maxDepth ? maxDepth : 1)) return
 
       items?.forEach((item) => {
@@ -77,7 +73,6 @@ const TableOfContents: React.FC<IProps> = ({
   }
 
   return (
-    // TODO: Switch to `above="lg"` after completion of Chakra Migration
     <Show above={lgBp}>
       <Box
         as="aside"
@@ -99,13 +94,15 @@ const TableOfContents: React.FC<IProps> = ({
                 to={editPath}
                 variant="outline"
               >
-                <Translation id="edit-page" />
+                {/* <Translation id="edit-page" /> */}
+                Edit page
               </ButtonLink>
             </ListItem>
           )}
           <ListItem>
             <Box mb={2} textTransform="uppercase">
-              <Translation id="on-this-page" />
+              {/* <Translation id="on-this-page" /> */}
+              On this page
             </Box>
             <List m={0}>
               <ItemsList

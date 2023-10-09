@@ -11,12 +11,13 @@ import {
 } from "@chakra-ui/react"
 import React from "react"
 import { MdExpandMore } from "react-icons/md"
-import Translation from "../Translation"
+// import Translation from "../Translation"
 import ItemsList from "./ItemsList"
-import { Item, outerListProps } from "./utils"
+import { outerListProps } from "@/lib/utils/toc"
+import type { ToCItem } from "@/lib/interfaces"
 
 export interface IPropsTableOfContentsMobile {
-  items?: Array<Item>
+  items?: Array<ToCItem>
   maxDepth?: number
 }
 
@@ -51,7 +52,8 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
           {...getButtonProps()}
         >
           <chakra.span flex={1} fontWeight={500}>
-            <Translation id="on-this-page" />
+            {/* <Translation id="on-this-page" /> */}
+            On this page
           </chakra.span>
           <Icon
             as={MdExpandMore}

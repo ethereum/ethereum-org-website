@@ -4,7 +4,7 @@ import { Heading, useColorModeValue, VStack } from "@chakra-ui/react"
 import Translation from "./Translation"
 import Text from "./OldText"
 
-import { TranslationKey } from "../utils/translations"
+import type { TranslationKey } from "@/lib/types"
 
 export interface IStyledContainer {
   isShipped: boolean

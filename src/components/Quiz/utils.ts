@@ -1,19 +1,17 @@
-import { getLocaleForNumberFormat } from "../../utils/translations"
-import { Lang } from "../../utils/languages"
-
-import { CompletedQuizzes, QuizShareStats } from "../../types"
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+import { CompletedQuizzes, type Lang, QuizShareStats } from "@/lib/types"
 
 import {
   TOTAL_QUIZ_AVERAGE_SCORE,
   TOTAL_QUIZ_QUESTIONS_ANSWERED,
   TOTAL_QUIZ_RETRY_RATE,
   USER_STATS_KEY,
-} from "../../constants"
+} from "@/lib/constants"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,
   usingEthereumQuizzes,
-} from "../../data/quizzes"
+} from "@/data/quizzes"
 
 export const getTotalQuizzesPoints = () =>
   Object.values(allQuizzesData)

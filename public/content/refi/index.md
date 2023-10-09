@@ -5,7 +5,7 @@ lang: en
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: An alternative economic system built on regenerative principles
 summaryPoint2: An attempt to harness Ethereum to solve global-level coordination crises such as climate change
@@ -20,7 +20,7 @@ Instead, ReFi aims to solve environmental, communal, or social problems by creat
 
 One of the foundations of ReFi is the concept of regenerative economics pioneered by John Fullerton of the [Capital Institute](https://capitalinstitute.org). He proposed eight interconnected principles that underlie systemic health:
 
-![Eight interconnected principles](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Eight interconnected principles](refi-regenerative-economy-diagram.png)
 
 ReFi projects realize these principles using [smart contracts](/developers/docs/smart-contracts/) and [decentralized finance (DeFi)](/defi/) applications to incentivize regenerative behaviors, e.g. restoring degraded ecosystems, and facilitate large-scale collaboration on global issues such as climate change and biodiversity loss.
 

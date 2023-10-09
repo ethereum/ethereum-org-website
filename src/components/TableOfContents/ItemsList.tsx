@@ -1,10 +1,11 @@
 import React from "react"
 import { ChakraProps, List, ListItem } from "@chakra-ui/react"
-import { Item } from "./utils"
+import type { ToCItem } from "@/lib/interfaces"
+
 import Link from "./TableOfContentsLink"
 
 export interface IPropsItemsList extends ChakraProps {
-  items?: Array<Item>
+  items?: Array<ToCItem>
   depth: number
   maxDepth: number
   activeHash?: string

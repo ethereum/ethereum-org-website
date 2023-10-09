@@ -16,9 +16,9 @@ import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 // TODO
 // import { Lang } from "../utils/languages"
 // import { getLocaleTimestamp } from "../utils/time"
-// import { isLangRightToLeft, TranslationKey } from "../utils/translations"
-// TODO: remove TranslationKey type below
-export type TranslationKey = string
+// import { isLangRightToLeft } from "../utils/translations"
+
+import { TranslationKey } from "@/lib/types"
 import { BaseLink } from "./Link"
 // TODO
 // import Translation from "./Translation"

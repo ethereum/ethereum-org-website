@@ -2,9 +2,9 @@ import fs from "fs"
 import { join, extname } from "path"
 import matter from "gray-matter"
 
-import { Frontmatter } from "../types"
-
-import { CONTENT_DIR } from "../constants"
+import { CONTENT_DIR } from "@/lib/constants"
+import { generateTableOfContents } from "@/lib/utils/toc"
+import type { PageContent } from "@/lib/interfaces"
 
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
@@ -25,6 +25,13 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/history/",
     "/smart-contracts",
     "/whitepaper",
+    "/defi",
+    "/nft",
+    "/dao",
+    "/desci",
+    "/refi",
+    "/social-networks",
+    "/decentralized-identity",
     "/developers/tutorials/all-you-can-cache",
   ]
 
@@ -66,26 +73,17 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
   return files
 }
 
-// Removes {#...} from .md file so content can be parsed properly
-const removeAnchorLinks = (mdContent: string) =>
-  mdContent.replace(/{#.*?}/g, "").trim()
-
 export const getContentBySlug = (slug: string) => {
   const realSlug = `${slug}/index.md`
   const fullPath = join(CURRENT_CONTENT_DIR, realSlug)
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data: frontmatter, content } = matter(fileContents)
 
-  type Items = {
-    slug: string
-    content: string
-    frontmatter: Frontmatter
-  }
-
-  const items: Items = {
+  const items: PageContent = {
     slug,
-    content: removeAnchorLinks(content),
+    content,
     frontmatter,
+    tocItems: generateTableOfContents(content),
   }
 
   return items

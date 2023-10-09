@@ -1,44 +1,13 @@
 import React, { useRef } from "react"
 import { Box, List, ListItem } from "@chakra-ui/react"
 import { BaseLink } from "./Link"
-import { Item as TableOfContentsItem } from "./TableOfContents"
+import type { ToCItem } from "@/lib/interfaces"
+import { parseToCTitle } from "@/lib/utils/toc"
 
-const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
-
-const slugify = (s: string): string =>
-  encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
-
-const getCustomId = (title: string): string => {
-  const match = customIdRegEx.exec(title)
-  if (match) {
-    return match[2].toLowerCase()
-  }
-  console.warn("Missing custom ID on header: ", title)
-  return slugify(title)
+export interface IPropsTableOfContentsLink {
+  item: ToCItem
 }
-
-const trimmedTitle = (title: string): string => {
-  const match = customIdRegEx.exec(title)
-  return match ? title.replace(match[1], "").trim() : title
-}
-
-export interface Item extends TableOfContentsItem {
-  id?: string
-}
-
-const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
-  const { item } = props
-
-  const idString = useRef("")
-
-  if (!!item.id) {
-    idString.current = item.id
-  } else {
-    idString.current = item.title
-  }
-
-  const url = `#${getCustomId(idString.current)}`
-
+const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({ item: { title, url } }) => {
   let isActive = false
   if (typeof window !== `undefined`) {
     isActive = window.location.hash === url
@@ -51,7 +20,7 @@ const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
 
   return (
     <BaseLink
-      to={url}
+      href={url}
       className={classes}
       position="relative"
       display="inline-block"
@@ -61,21 +30,19 @@ const TableOfContentsLink: React.FC<{ item: Item }> = (props) => {
       fontWeight="normal"
       _visited={{}}
     >
-      {trimmedTitle(item.title)}
+      {parseToCTitle(title)}
     </BaseLink>
   )
 }
 
 interface IPropsItemsList {
-  items: Array<Item>
+  items: Array<ToCItem>
   depth: number
   maxDepth: number
 }
 
 const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
-  if (depth > maxDepth || !items) {
-    return null
-  }
+  if (depth > maxDepth || !items) return null
   return (
     <>
       {items.map((item, index) => (
@@ -87,41 +54,31 @@ const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
   )
 }
 
-function UpgradeTableOfContents(props: {
-  items: Array<{ id: string; title: string }>
-}): JSX.Element
-function UpgradeTableOfContents(props: {
-  maxDepth: number
-  items: Array<TableOfContentsItem>
-}): JSX.Element
-function UpgradeTableOfContents(props: {
+interface IPropsToC {
+  items: Array<ToCItem>
   maxDepth?: number
-  items: Array<Item>
-}) {
-  const { items, maxDepth = 1 } = props
-
-  return (
-    <Box
-      as="nav"
-      p={0}
-      mb={8}
-      textAlign="end"
-      overflowY="auto"
-      display={{ base: "none", l: "block" }}
-    >
-      <List
-        m={0}
-        py={0}
-        ps={4}
-        pe={1}
-        fontSize="xl"
-        lineHeight="1.6"
-        styleType="none"
-      >
-        <ItemsList items={items} depth={0} maxDepth={maxDepth} />
-      </List>
-    </Box>
-  )
 }
+const UpgradeTableOfContents: React.FC<IPropsToC> = ({ items, maxDepth = 1}) => (
+  <Box
+    as="nav"
+    p={0}
+    mb={8}
+    textAlign="end"
+    overflowY="auto"
+    display={{ base: "none", l: "block" }}
+  >
+    <List
+      m={0}
+      py={0}
+      ps={4}
+      pe={1}
+      fontSize="xl"
+      lineHeight="1.6"
+      styleType="none"
+    >
+      <ItemsList items={items} depth={0} maxDepth={maxDepth} />
+    </List>
+  </Box>
+)
 
 export default UpgradeTableOfContents
