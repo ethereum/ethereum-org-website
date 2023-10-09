@@ -9,6 +9,11 @@ import {
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 
+import futureProofing from "@/../public/roadmap/roadmap-future.png"
+import scaling from "@/../public/roadmap/roadmap-transactions.png"
+import security from "@/../public/roadmap/roadmap-security.png"
+import userExperience from "@/../public/roadmap/roadmap-ux.png"
+
 interface IProps {
   to: string
   alt: string
@@ -26,13 +31,13 @@ const RoadmapActionCard: React.FC<IProps> = ({
   description,
   buttonText,
 }) => {
-  const data = {
-    futureProofing: { src: "/roadmap/roadmap-future.png", width: 400, height: 260 },
-    scaling: { src: "/roadmap/roadmap-transactions.png", width: 380, height: 260 },
-    security: { src: "/roadmap/roadmap-security.png", width: 380, height: 260 },
-    userExperience: { src: "/roadmap/roadmap-ux.png", width: 380, height: 260 },
+  const images = {
+    futureProofing,
+    scaling,
+    security,
+    userExperience,
   }
-  const imgProps = data[image] ?? data.futureProofing
+  const imgSrc = images[image] ?? images.futureProofing
 
   return (
     <LinkBox
@@ -43,7 +48,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
     >
       <Center background="cardGradient" h="260px">
         <Image
-          {...imgProps}
+          src={imgSrc}
           alt={alt}
           objectFit="contain"
         />

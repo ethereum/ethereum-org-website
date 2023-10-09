@@ -1,5 +1,6 @@
 import { Center, Heading, Flex, Stack } from "@chakra-ui/react"
 import { Image } from "@/components/Image"
+import wallet from "@/../public/wallet.png"
 
 export interface IProps {
   children: React.ReactNode
@@ -13,10 +14,9 @@ const RoadmapImageContent: React.FC<IProps> = ({ children, title }) => (
       <Stack mb={4}>{children}</Stack>
       <Center minW="fit-content">
         <Image
-          src="/wallet.png"
+          src={wallet}
           alt="Ethereum Wallet"
           width={350}
-          height={435}
           objectFit="contain"
         />
       </Center>
