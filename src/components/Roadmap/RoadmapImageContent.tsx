@@ -11,11 +11,14 @@ const RoadmapImageContent: React.FC<IProps> = ({ children, title }) => (
     <Heading as="h3">{title}</Heading>
     <Flex flexDir={{ base: "column", lg: "row" }}>
       <Stack mb={4}>{children}</Stack>
-      <Center>
+      <Center minW="fit-content">
         <Image
-          src="wallet.png"
+          src="/wallet.png"
           alt="Ethereum Wallet"
-          w="350px" />
+          width={350}
+          height={435}
+          objectFit="contain"
+        />
       </Center>
     </Flex>
   </Stack>

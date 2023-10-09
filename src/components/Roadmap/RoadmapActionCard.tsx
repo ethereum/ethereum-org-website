@@ -1,4 +1,3 @@
-import React from "react"
 import {
   Text,
   Center,
@@ -7,7 +6,7 @@ import {
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/react"
-import { ButtonLink } from "../Buttons"
+import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 
 interface IProps {
@@ -28,12 +27,12 @@ const RoadmapActionCard: React.FC<IProps> = ({
   buttonText,
 }) => {
   const data = {
-    futureProofing: "/roadmap/roadmap-future.png",
-    scaling: "/roadmap/roadmap-transactions.png",
-    security: "/roadmap/roadmap-security.png",
-    userExperience: "/roadmap/roadmap-ux.png",
+    futureProofing: { src: "/roadmap/roadmap-future.png", width: 400, height: 260 },
+    scaling: { src: "/roadmap/roadmap-transactions.png", width: 380, height: 260 },
+    security: { src: "/roadmap/roadmap-security.png", width: 380, height: 260 },
+    userExperience: { src: "/roadmap/roadmap-ux.png", width: 380, height: 260 },
   }
-  const imgSrc = data[image] ?? data.futureProofing
+  const imgProps = data[image] ?? data.futureProofing
 
   return (
     <LinkBox
@@ -44,7 +43,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
     >
       <Center background="cardGradient" h="260px">
         <Image
-          src={imgSrc}
+          {...imgProps}
           alt={alt}
           objectFit="contain"
         />
