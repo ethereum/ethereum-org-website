@@ -1665,6 +1665,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/schwindtkevin"><img src="https://avatars.githubusercontent.com/u/1700789?v=4?s=100" width="100px;" alt="Kevin Schwindt"/><br /><sub><b>Kevin Schwindt</b></sub></a><br /><a href="#content-schwindtkevin" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/robertkodra"><img src="https://avatars.githubusercontent.com/u/36516516?v=4?s=100" width="100px;" alt="Robert"/><br /><sub><b>Robert</b></sub></a><br /><a href="#content-robertkodra" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xObsidian"><img src="https://avatars.githubusercontent.com/u/131651958?v=4?s=100" width="100px;" alt="obsidian"/><br /><sub><b>obsidian</b></sub></a><br /><a href="#content-0xObsidian" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.scienft.com"><img src="https://avatars.githubusercontent.com/u/36033065?v=4?s=100" width="100px;" alt="Fekry Aiad"/><br /><sub><b>Fekry Aiad</b></sub></a><br /><a href="#ideas-MohamedFekryyy" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
