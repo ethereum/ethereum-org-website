@@ -41,7 +41,7 @@ const INITIAL_COMPLETED_QUIZZES: CompletedQuizzes = Object.keys(
 export const INITIAL_USER_STATS: UserStats = {
   score: 0,
   average: [],
-  completed: JSON.stringify(INITIAL_COMPLETED_QUIZZES),
+  completed: INITIAL_COMPLETED_QUIZZES,
 }
 
 const handleGHAdd = () =>
@@ -81,7 +81,7 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
       average: userStats.average,
       completed: userStats.completed,
     },
-    setUserStats: setUserStats,
+    setUserStats,
   }
 
   return (

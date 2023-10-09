@@ -85,15 +85,15 @@ const QuizWidget: React.FC<IProps> = ({
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  const { setUserStats } = useContext(QuizzesHubContext)
+  const { setUserStats, userStats } = useContext(QuizzesHubContext)
 
   useEffect(() => {
     // If quiz is standalone (out of Quiz Hub page),
     // stats required to be initialized on localStorage first
-    const item = window.localStorage.getItem(USER_STATS_KEY)
+    const item = userStats
 
     if (item === null) {
-      localStorage.setItem(USER_STATS_KEY, JSON.stringify(INITIAL_USER_STATS))
+      setUserStats(INITIAL_USER_STATS)
     }
 
     setNextQuiz(getNextQuiz(quizKey))
