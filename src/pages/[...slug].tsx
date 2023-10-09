@@ -3,7 +3,7 @@ import { ParsedUrlQuery } from "querystring"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
-import path from "path"
+import { join } from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
@@ -30,9 +30,8 @@ import {
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
-import { Frontmatter, NextPageWithLayout } from "@/lib/types"
+import { NextPageWithLayout, StaticPaths } from "@/lib/types"
 import { getLastModifiedDate } from "@/lib/utils/gh"
-import type { ToCItem } from "@/lib/interfaces"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -62,22 +61,30 @@ interface Props {
   mdxSource: MDXRemoteSerializeResult
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = ({ locales }) => {
   const contentFiles = getContent("/").filter(
     // Filter `/developers/tutorials` slugs since they are processed by
     // `/developers/tutorials/[...tutorial].tsx`
     (file) => !file.slug.includes("/developers/tutorials")
   )
 
-  return {
-    paths: contentFiles.map((file) => {
-      return {
+  let paths: StaticPaths = []
+
+  // Generate page paths for each supported locale
+  for (const locale of locales!) {
+    contentFiles.map((file) => {
+      paths.push({
         params: {
           // Splitting nested paths to generate proper slug
           slug: file.slug.split("/").slice(1),
         },
-      }
-    }),
+        locale,
+      })
+    })
+  }
+
+  return {
+    paths,
     fallback: false,
   }
 }
@@ -86,24 +93,32 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
-  const markdown = getContentBySlug(params.slug.join("/"))
+  const { locale } = context
+
+  const markdown = getContentBySlug(`${locale}/${params.slug.join("/")}`)
   const frontmatter = markdown.frontmatter
   const tocItems = markdown.tocItems
 
-  const mdPath = path.join("/content", ...params.slug)
-  const mdDir = path.join("public", mdPath)
+  const mdPath = join("/content", ...params.slug)
+  const mdDir = join("public", mdPath)
 
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }], [rehypeHeadingIds]],
+      rehypePlugins: [
+        [rehypeImgSize, { dir: mdDir, srcPath: mdPath }],
+        [rehypeHeadingIds],
+      ],
     },
   })
 
   const originalSlug = `/${params.slug.join("/")}/`
-  const lastUpdatedDate = await getLastModifiedDate(originalSlug)
+  // const lastUpdatedDate = await getLastModifiedDate(originalSlug)
+  const lastUpdatedDate = ""
+  // Get corresponding layout
   let layout = frontmatter.template
+
   if (!frontmatter.template) {
     layout = params.slug.includes("developers/docs") ? "docs" : "static"
   }
