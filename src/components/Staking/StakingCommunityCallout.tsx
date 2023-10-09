@@ -6,6 +6,7 @@ import CalloutBanner from "@/components/CalloutBanner"
 // import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import image from "@/../public/enterprise-eth.png"
 
 export interface IProps extends FlexProps {
   id?: string
@@ -18,13 +19,12 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
   return (
     <CalloutBanner
       {...props}
-      image="/enterprise-eth.png"
-      width={500}
-      height={500}
+      image={image}
       // alt={t("page-staking-image-alt")}
       alt="page-staking-image-alt"
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}
+      maxImageWidth={350}
     >
       <Flex gap={4} direction={{ base: "column", md: "row" }}>
         <ButtonLink
@@ -64,8 +64,9 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
           to="https://ethstaker.cc"
           w={{ base: "full", md: "auto" }}
         >
+          {/* TODO */}
           {/* <Translation id="rollup-component-website" /> */}
-          rollup-component-website
+          Website
         </ButtonLink>
       </Flex>
     </CalloutBanner>
