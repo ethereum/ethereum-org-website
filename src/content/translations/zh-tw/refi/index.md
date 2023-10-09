@@ -5,7 +5,7 @@ lang: zh-tw
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: 建立在可再生原則上的替代性金融系統。
 summaryPoint2: 使用以太坊嘗試解決全球協調危機，如氣候變遷。
