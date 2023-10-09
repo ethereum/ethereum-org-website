@@ -1,5 +1,7 @@
 export const CONTENT_DIR = "public/content"
 export const OLD_CONTENT_DIR = "src/content"
+export const TRANSLATIONS_DIR = "public/content/translations"
+export const OLD_TRANSLATIONS_DIR = "src/content/translations"
 
 // Site urls
 export const SITE_URL = "https://ethereum.org" as const
