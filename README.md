@@ -56,7 +56,7 @@ If this is your first time forking our repo, this is all you need to do for this
 git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd ethereum-org-website
 ```
 
-If you've already forked the repo, you'll want to ensure your fork is configured and that it's up to date. This will save you the headache of potential merge conflicts.
+If you've already forked the repo, you'll want to ensure your fork is configured and that it's up to date. This will save you from the headache of potential merge conflicts.
 
 To [configure your fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork):
 
@@ -1675,7 +1675,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are always welcome!
 
 ### Join our Discord server
 
