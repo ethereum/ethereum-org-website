@@ -24,6 +24,8 @@ import InfoBanner from "@/components/InfoBanner"
 import MdLink from "@/components/MdLink"
 import Pill from "@/components/Pill"
 import RandomAppList from "@/components/RandomAppList"
+import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
+import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import SectionNav from "@/components/SectionNav"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
@@ -90,6 +92,8 @@ export const roadmapComponents = {
   InfoBanner,
   Pill,
   RandomAppList,
+  RoadmapActionCard,
+  RoadmapImageContent,
   SectionNav,
   UpgradeStatus,
   YouTube,
@@ -97,8 +101,6 @@ export const roadmapComponents = {
   // Contributors,
   // Logo,
   // MeetupList,
-  // RoadmapActionCard,
-  // RoadmapImageContent,
 }
 
 interface IProps extends MdPageContent, ChildOnlyProp {
