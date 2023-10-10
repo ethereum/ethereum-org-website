@@ -496,11 +496,19 @@ export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = async ({
   reporter.info(`Contributors copied`)
 }
 
+function Wait() {
+  return new Promise((resolve) => {
+    setTimeout(resolve, 10000, 100)
+  })
+}
+
 // Build lambda functions when the build is complete and the `/public` folder exists
 export const onPostBuild: GatsbyNode["onPostBuild"] = async (
   gatsbyNodeHelpers
 ) => {
   const { reporter } = gatsbyNodeHelpers
+
+  await Wait()
 
   const reportOut = (report: { stderr: string; stdout: string }) => {
     const { stderr, stdout } = report
@@ -509,4 +517,6 @@ export const onPostBuild: GatsbyNode["onPostBuild"] = async (
   }
 
   reportOut(await exec("npm run build:lambda && cp netlify.toml public"))
+
+  await Wait()
 }
