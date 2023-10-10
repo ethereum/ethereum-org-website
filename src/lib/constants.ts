@@ -6,6 +6,7 @@ export const TRANSLATIONS_DIR = "public/content/translations"
 export const OLD_TRANSLATIONS_DIR = "src/content/translations"
 
 // i18n
+export const DEFAULT_LOCALE = "en"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
 export const LOCALES_CODES = i18nConfig.map((lang) => lang.code).sort()
 

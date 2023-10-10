@@ -5,6 +5,8 @@ import { ButtonLink } from "./Buttons"
 import Translation from "./Translation"
 import Emoji from "./Emoji"
 
+import { DEFAULT_LOCALE } from "../lib/constants"
+
 export interface IProps {
   shouldShow: boolean
   isPageRightToLeft: boolean
@@ -103,7 +105,7 @@ const TranslationBanner: React.FC<IProps> = ({
                   mt={{ base: 2, sm: 0 }}
                   borderColor="#333333"
                   color="#333333"
-                  language="en"
+                  language={DEFAULT_LOCALE}
                 >
                   <Translation id="translation-banner-button-see-english" />
                 </ButtonLink>

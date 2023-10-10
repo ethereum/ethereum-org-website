@@ -2,6 +2,7 @@ import fs from "fs"
 import { join } from "path"
 
 import {
+  DEFAULT_LOCALE,
   LAST_COMMIT_BASE_URL,
   OLD_CONTENT_DIR,
   OLD_TRANSLATIONS_DIR,
@@ -27,7 +28,7 @@ export const getLastModifiedDate = async (filePath: string, locale: string) => {
   )
 
   // If content is not translated, use english content date
-  if (locale === "en" || !fs.existsSync(translatedContentPath)) {
+  if (locale === DEFAULT_LOCALE || !fs.existsSync(translatedContentPath)) {
     url.searchParams.set("path", join(OLD_CONTENT_DIR, filePath, "index.md"))
   } else {
     url.searchParams.set(

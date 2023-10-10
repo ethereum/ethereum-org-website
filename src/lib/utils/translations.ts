@@ -1,6 +1,7 @@
 import i18nConfigs from "../../../i18n.config.json"
 
 import { Lang } from "../types"
+import { DEFAULT_LOCALE } from "../constants"
 
 export const isLangRightToLeft = (lang: Lang): boolean => {
   const langConfig = i18nConfigs.filter((language) => language.code === lang)
@@ -14,4 +15,4 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 // Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
 // Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
-  locale === "fa" ? "en" : locale
+  locale === "fa" ? DEFAULT_LOCALE : locale

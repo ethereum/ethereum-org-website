@@ -7,7 +7,7 @@ import { getFallbackEnglishPath, removeEnglishPrefix } from "@/lib/utils/i18n"
 
 import type { PageContent } from "@/lib/interfaces"
 
-import { CONTENT_DIR, LOCALES_CODES } from "@/lib/constants"
+import { CONTENT_DIR, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
@@ -81,7 +81,7 @@ export const getContentBySlug = (slug: string) => {
 
   for (const code of LOCALES_CODES) {
     // Adds `translations/` prefix for translated content so file path can be read correctly
-    if (code !== "en" && slug.split("/").includes(code)) {
+    if (code !== DEFAULT_LOCALE && slug.split("/").includes(code)) {
       realSlug = join("translations", slug, "index.md")
     }
   }
