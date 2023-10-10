@@ -20,7 +20,7 @@ Bunun yerine, ReFi rejeneratif döngüler oluşturarak çevresel, toplumsal veya
 
 ReFi'nin temellerinden birisi [Capital Institute](https://capitalinstitute.org)'tan John Fullerton tarafından öncülük edilen rejeneratif ekonomi konseptidir. O sistemik sağlığın temelinde yatan sekiz birbirine bağlı prensip önerdi:
 
-![Birbirine bağlanmış sekiz prensip](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Birbirine bağlanmış sekiz prensip](./refi-regenerative-economy-diagram.png)
 
 ReFi projeleri bu prensiplerin kullanıldığı [akıllı sözleşmelerde](/developers/docs/smart-contracts/) ve [merkeziyetsiz finans (DeFi)](/defi/) uygulamalarının canlandırıcı davranışlara teşvik ettiğini fark etti, örneğin bozulmuş ekosistemleri kurtarmak ve evrensel sorunlarda iklim değişikliği ve biyolojik çeşitlilik kaybı gibi büyük ölçekli iş birliklerini kolaylaştırdığını anladı.
 

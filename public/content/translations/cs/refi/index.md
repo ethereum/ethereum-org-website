@@ -20,7 +20,7 @@ Namísto toho se ReFi snaží řešit environmentální, komunitní nebo sociál
 
 Jedním ze základů ReFi je koncept regenerativní ekonomiky, který vytvořil John Fullerton z [Capital Institute](https://capitalinstitute.org). Navrhl osm propojených principů, které jsou základem zdravého systému:
 
-![Osm vzájemně propojených principů](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Osm vzájemně propojených principů](./refi-regenerative-economy-diagram.png)
 
 ReFi projekty realizují tyto principy pomocí [smart kontraktů](/developers/docs/smart-contracts/) a aplikací [decentralizovaných financí (DeFi)](/defi/), které motivují regenerativní chování, například obnovu degradovaných ekosystémů, a usnadňují širokou spolupráci v globálních otázkách, jako je změna klimatu a ztráta biodiverzity.
 

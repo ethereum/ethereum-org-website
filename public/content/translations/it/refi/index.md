@@ -20,7 +20,7 @@ La ReFi, invece, mira a risolvere i problemi ambientali, comunitari o sociali cr
 
 Uno dei fondamenti della ReFi è il concetto di economia rigenerativa di cui è stato pioniere John Fullerton del [Capital Institute](https://capitalinstitute.org). Egli ha proposto otto principi interconnessi che sono alla base della salute sistemica:
 
-![Otto principi interconnessi](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Otto principi interconnessi](./refi-regenerative-economy-diagram.png)
 
 I progetti di ReFi realizzano questi principi usando i [contratti intelligenti](/developers/docs/smart-contracts/) e le applicazioni di [finanza decentralizzata (DeFi)](/defi/) per incentivare comportamenti rigenerativi, per esempio il ripristino di ecosistemi degradati e facilitare la collaborazione su larga scala su questioni globali come il cambiamento climatico e la perdita di biodiversità.
 

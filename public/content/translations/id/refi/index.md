@@ -20,7 +20,7 @@ Sebaliknya, ReFi bertujuan untuk memecahkan masalah lingkungan, komunal, atau so
 
 Salah satu dasar dari ReFi adalah konsep ekonomi regeneratif yang dipelopori oleh John Fullerton dari [Capital Institute](https://capitalinstitute.org). Dia mengusulkan delapan prinsip yang saling berhubungan yang mendasari kesehatan sistemik:
 
-![Delapan prinsip yang saling terhubung](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Delapan prinsip yang saling terhubung](./refi-regenerative-economy-diagram.png)
 
 Proyek ReFi merealisasikan prinsip-prinsip ini dengan menggunakan [kontrak pintar](/developers/docs/smart-contracts/) dan aplikasi [keuangan terdesentralisasi (DeFi)](/defi/) untuk mendorong perilaku regeneratif, misalnya memulihkan ekosistem yang rusak, dan memfasilitasi kolaborasi berskala besar pada isu-isu global seperti perubahan iklim dan hilangnya keanekaragaman hayati.
 
