@@ -165,7 +165,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Documentation](https://services.tokeniew/docs?type=api)
-- [Github](https://github.com/Tokenview)
+- [GitHub](https://github.com/Tokenview)
 
 ## Further reading {#further-reading}
 

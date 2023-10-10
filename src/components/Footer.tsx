@@ -339,17 +339,11 @@ const Footer: React.FC<IProps> = () => {
       <SimpleGrid
         gap={4}
         justifyContent="space-between"
-        gridTemplateColumns="repeat(6, auto)"
-        sx={{
-          "@media (max-width: 1300px)": {
-            gridTemplateColumns: "repeat(3, auto)",
-          },
-          [`@media (max-width: ${medBp})`]: {
-            gridTemplateColumns: "repeat(2, auto)",
-          },
-          "@media (max-width: 500px)": {
-            gridTemplateColumns: "auto",
-          },
+        templateColumns={{
+          base: "auto",
+          sm: "repeat(2, auto)",
+          md: "repeat(3, auto)",
+          xl: "repeat(6, auto)",
         }}
       >
         {linkSections.map((section: LinkSection, idx) => (
