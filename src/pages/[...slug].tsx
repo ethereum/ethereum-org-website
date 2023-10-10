@@ -114,8 +114,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   })
 
   const originalSlug = `/${params.slug.join("/")}/`
-  // const lastUpdatedDate = await getLastModifiedDate(originalSlug)
-  const lastUpdatedDate = ""
+  const lastUpdatedDate = await getLastModifiedDate(originalSlug, locale!)
+
   // Get corresponding layout
   let layout = frontmatter.template
 

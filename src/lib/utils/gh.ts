@@ -1,9 +1,11 @@
+import fs from "fs"
 import { join } from "path"
 
 import {
   LAST_COMMIT_BASE_URL,
   OLD_CONTENT_DIR,
   OLD_TRANSLATIONS_DIR,
+  TRANSLATIONS_DIR,
 } from "../constants"
 
 export const getLastModifiedDate = async (filePath: string, locale: string) => {
@@ -17,8 +19,15 @@ export const getLastModifiedDate = async (filePath: string, locale: string) => {
 
   // TODO: swap `OLD_TRANSLATIONS_DIR` for new `TRANSLATIONS_DIR` constant value before deploying site to prod
   // as we're currently fetching last commit date from canonical repo
+  const translatedContentPath = join(
+    TRANSLATIONS_DIR,
+    locale,
+    filePath,
+    "index.md"
+  )
 
-  if (locale === "en") {
+  // If content is not translated, use english content date
+  if (locale === "en" || !fs.existsSync(translatedContentPath)) {
     url.searchParams.set("path", join(OLD_CONTENT_DIR, filePath, "index.md"))
   } else {
     url.searchParams.set(
