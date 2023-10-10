@@ -28,7 +28,9 @@ export const getLastModifiedDate = async (filePath: string, locale: string) => {
   )
 
   // If content is not translated, use english content date
-  if (locale === DEFAULT_LOCALE || !fs.existsSync(translatedContentPath)) {
+  const contentIsNotTranslated = !fs.existsSync(translatedContentPath)
+
+  if (locale === DEFAULT_LOCALE || contentIsNotTranslated) {
     url.searchParams.set("path", join(OLD_CONTENT_DIR, filePath, "index.md"))
   } else {
     url.searchParams.set(

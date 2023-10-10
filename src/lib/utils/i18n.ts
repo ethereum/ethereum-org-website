@@ -11,7 +11,9 @@ export const getFallbackEnglishPath = (path: string) => {
 
 // If content is in english, remove en/ prefix so filepath can be read correctly
 export const removeEnglishPrefix = (slug: string) => {
-  return slug.split("/").includes(DEFAULT_LOCALE)
+  const contentIsInEnglish = slug.split("/").includes(DEFAULT_LOCALE)
+
+  return contentIsInEnglish
     ? join(slug.split("en/")[1], "index.md")
     : join(slug, "index.md")
 }
