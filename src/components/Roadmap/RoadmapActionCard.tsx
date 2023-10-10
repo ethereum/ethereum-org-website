@@ -9,10 +9,10 @@ import {
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 
-import futureProofing from "@/../public/roadmap/roadmap-future.png"
-import scaling from "@/../public/roadmap/roadmap-transactions.png"
-import security from "@/../public/roadmap/roadmap-security.png"
-import userExperience from "@/../public/roadmap/roadmap-ux.png"
+import futureProofing from "@/public/roadmap/roadmap-future.png"
+import scaling from "@/public/roadmap/roadmap-transactions.png"
+import security from "@/public/roadmap/roadmap-security.png"
+import userExperience from "@/public/roadmap/roadmap-ux.png"
 
 interface IProps {
   to: string

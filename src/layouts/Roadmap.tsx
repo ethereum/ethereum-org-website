@@ -26,7 +26,6 @@ import Pill from "@/components/Pill"
 import RandomAppList from "@/components/RandomAppList"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
-import SectionNav from "@/components/SectionNav"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
@@ -94,7 +93,6 @@ export const roadmapComponents = {
   RandomAppList,
   RoadmapActionCard,
   RoadmapImageContent,
-  SectionNav,
   UpgradeStatus,
   YouTube,
   ...mdxTableComponents,
