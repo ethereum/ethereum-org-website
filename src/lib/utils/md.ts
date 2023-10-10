@@ -3,15 +3,11 @@ import { join, extname } from "path"
 import matter from "gray-matter"
 
 import { generateTableOfContents } from "@/lib/utils/toc"
-import {
-  getFallbackEnglishPath,
-  getLocalesCodes,
-  removeEnglishPrefix,
-} from "@/lib/utils/i18n"
+import { getFallbackEnglishPath, removeEnglishPrefix } from "@/lib/utils/i18n"
 
 import type { PageContent } from "@/lib/interfaces"
 
-import { CONTENT_DIR } from "@/lib/constants"
+import { CONTENT_DIR, LOCALES_CODES } from "@/lib/constants"
 
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
@@ -80,12 +76,10 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
 }
 
 export const getContentBySlug = (slug: string) => {
-  const langCodes = getLocalesCodes()
-
   // If content is in english, remove en/ prefix so filepath can be read correctly
   let realSlug = removeEnglishPrefix(slug)
 
-  for (const code of langCodes) {
+  for (const code of LOCALES_CODES) {
     // Adds `translations/` prefix for translated content so file path can be read correctly
     if (code !== "en" && slug.split("/").includes(code)) {
       realSlug = join("translations", slug, "index.md")

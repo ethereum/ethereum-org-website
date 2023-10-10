@@ -1,7 +1,13 @@
+import i18nConfig from "../../i18n.config.json"
+
 export const CONTENT_DIR = "public/content"
 export const OLD_CONTENT_DIR = "src/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
 export const OLD_TRANSLATIONS_DIR = "src/content/translations"
+
+// i18n
+// Sorted list of supported locales codes, defined in `i18n.config.json`
+export const LOCALES_CODES = i18nConfig.map((lang) => lang.code).sort()
 
 // Site urls
 export const SITE_URL = "https://ethereum.org" as const
