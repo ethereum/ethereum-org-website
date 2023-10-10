@@ -31,6 +31,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
+  const { locale } = context
 
   const tutorialPath = path.join(tutorialsPath, params.tutorial.join("/"))
   const markdown = getContentBySlug(tutorialPath)
@@ -50,7 +51,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     },
   })
 
-  const lastUpdatedDate = await getLastModifiedDate(tutorialPath)
+  const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
 
   return {
     props: {
