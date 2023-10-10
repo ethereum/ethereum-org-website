@@ -1,4 +1,11 @@
-import { Box, Flex, Heading, Icon, Text, chakra } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  type HeadingProps,
+  Icon,
+  Text,
+  chakra,
+} from "@chakra-ui/react"
 
 import Breadcrumbs from "../components/Breadcrumbs"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
@@ -14,79 +21,24 @@ import { getLastModifiedDate } from "@/lib/utils/gh"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
+import {
+  Heading1 as MdHeading1,
+  Heading2 as MdHeading2,
+  Heading3 as MdHeading3,
+  Heading4 as MdHeading4,
+} from "@/components/MdComponents"
 
-const Header1 = (props: ChildOnlyProp) => (
-  <Heading
-    as="h1"
-    fontSize={{ base: "2.5rem", md: "5xl" }}
-    lineHeight={1.4}
-    fontWeight="bold"
-    _before={{
-      content: `""`,
-      display: "block",
-      h: "140px",
-      mt: "-140px",
-      visibility: "hidden",
-    }}
-    sx={{
-      a: {
-        display: "none",
-      },
-    }}
-    {...props}
-  />
+const Heading1 = (props: HeadingProps) => (
+  <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
 )
-
-const Header2 = (props: ChildOnlyProp) => (
-  <Heading
-    fontSize={{ base: "2xl", md: "2rem" }}
-    lineHeight={1.4}
-    fontWeight="bold"
-    sx={{ position: "inherit !important" }}
-    _before={{
-      content: `""`,
-      display: "block",
-      h: "120px",
-      mt: "-120px",
-      visibility: "hidden",
-    }}
-    {...props}
-  />
+const Heading2 = (props: HeadingProps) => (
+  <MdHeading2 fontSize={{ base: "2xl", md: "2rem" }} {...props} />
 )
-
-const Header3 = (props: ChildOnlyProp) => (
-  <Heading
-    as="h3"
-    fontSize={{ base: "xl", md: "2xl" }}
-    lineHeight={1.4}
-    sx={{ position: "inherit !important" }}
-    _before={{
-      content: `""`,
-      display: "block",
-      h: "120px",
-      mt: "-120px",
-      visibility: "hidden",
-    }}
-    {...props}
-  />
+const Heading3 = (props: HeadingProps) => (
+  <MdHeading3 fontSize={{ base: "xl", md: "2xl" }} {...props} />
 )
-
-const Header4 = (props: ChildOnlyProp) => (
-  <Heading
-    as="h4"
-    fontSize={{ base: "md", md: "xl" }}
-    lineHeight={1.4}
-    fontWeight="semibold"
-    sx={{ position: "unset !important" }}
-    _before={{
-      content: `""`,
-      display: "block",
-      h: "120px",
-      mt: "-120px",
-      visibility: "hidden",
-    }}
-    {...props}
-  />
+const Heading4 = (props: HeadingProps) => (
+  <MdHeading4 fontSize={{ base: "md", md: "xl" }} {...props} />
 )
 
 const ListItem = (props: ChildOnlyProp) => (
@@ -96,10 +48,10 @@ const ListItem = (props: ChildOnlyProp) => (
 // Static layout components
 export const staticComponents = {
   a: Link,
-  h1: Header1,
-  h2: Header2,
-  h3: Header3,
-  h4: Header4,
+  h1: Heading1,
+  h2: Heading2,
+  h3: Heading3,
+  h4: Heading4,
   li: ListItem,
   EnergyConsumptionChart,
   GlossaryDefinition,

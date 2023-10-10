@@ -9,6 +9,7 @@ import {
   useToken,
   Grid,
   SimpleGrid,
+  type HeadingProps,
 } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
@@ -33,6 +34,8 @@ import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
 import {
   ContentContainer,
+  Heading1 as MdHeading1,
+  Heading4 as MdHeading4,
   InfoColumn,
   InfoTitle,
   MobileButton,
@@ -47,106 +50,14 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
-const Heading1 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h1"
-    fontSize={{ base: "2.5rem", md: "5xl" }}
-    lineHeight={1.4}
-    fontWeight="bold"
-    _before={{
-      content: `""`,
-      display: "block",
-      h: "140px",
-      mt: "-140px",
-      visibility: "hidden",
-    }}
-    sx={{
-      a: {
-        display: "none",
-      },
-    }}
-    {...props}
-  />
+const Heading1 = (props: HeadingProps) => (
+  <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
 )
 
-const Heading2 = (props: ChildOnlyProp) => (
-  <OldHeading
-    fontSize="2rem"
-    lineHeight={1.4}
-    fontWeight="bold"
-    mt={16}
-    sx={{
-      a: {
-        position: "relative",
-        display: "initial",
-        opacity: 0,
-        ml: "-1.5em",
-        pr: 2,
-        fontSize: "md",
-        verticalAlign: "middle",
-
-        "&:hover": {
-          fill: "primary.base",
-          opacity: 1,
-        },
-      },
-    }}
-    _hover={{
-      a: {
-        fill: "primary.base",
-        opacity: 1,
-      },
-    }}
-    {...props}
-  />
-)
-
-const Heading3 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h3"
-    fontSize="2xl"
-    lineHeight={1.4}
-    fontWeight="bold"
-    sx={{
-      a: {
-        position: "relative",
-        display: "initial",
-        opacity: 0,
-        ml: "-1.5em",
-        pr: 2,
-        fontSize: "md",
-        verticalAlign: "middle",
-
-        "&:hover": {
-          fill: "primary.base",
-          opacity: 1,
-        },
-      },
-    }}
-    _hover={{
-      a: {
-        fill: "primary.base",
-        opacity: 1,
-      },
-    }}
-    {...props}
-  />
-)
-
-const Heading4 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h4"
+const Heading4 = (props: HeadingProps) => (
+  <MdHeading4
     fontSize={{ base: "md", md: "xl" }}
-    lineHeight={1.4}
     fontWeight="semibold"
-    sx={{ position: "unset !important" }}
-    _before={{
-      content: `""`,
-      display: "block",
-      h: "120px",
-      mt: "-120px",
-      visibility: "hidden",
-    }}
     {...props}
   />
 )
@@ -257,8 +168,6 @@ const TableContainer = (props: BoxProps) => (
 // Staking layout components
 export const stakingComponents = {
   h1: Heading1,
-  h2: Heading2,
-  h3: Heading3,
   h4: Heading4,
   p: Paragraph,
   pre: Pre,
