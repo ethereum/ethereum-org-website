@@ -28,7 +28,6 @@ import { mdxTableComponents } from "@/components/Table"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getLastModifiedDate } from "@/lib/utils/gh"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 
