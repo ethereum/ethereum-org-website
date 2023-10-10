@@ -1,4 +1,3 @@
-import React from "react"
 import {
   Text,
   Center,
@@ -7,8 +6,13 @@ import {
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/react"
-import { ButtonLink } from "../Buttons"
+import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
+
+import futureProofing from "@/public/roadmap/roadmap-future.png"
+import scaling from "@/public/roadmap/roadmap-transactions.png"
+import security from "@/public/roadmap/roadmap-security.png"
+import userExperience from "@/public/roadmap/roadmap-ux.png"
 
 interface IProps {
   to: string
@@ -27,13 +31,13 @@ const RoadmapActionCard: React.FC<IProps> = ({
   description,
   buttonText,
 }) => {
-  const data = {
-    futureProofing: "/roadmap/roadmap-future.png",
-    scaling: "/roadmap/roadmap-transactions.png",
-    security: "/roadmap/roadmap-security.png",
-    userExperience: "/roadmap/roadmap-ux.png",
+  const images = {
+    futureProofing,
+    scaling,
+    security,
+    userExperience,
   }
-  const imgSrc = data[image] ?? data.futureProofing
+  const imgSrc = images[image] ?? images.futureProofing
 
   return (
     <LinkBox

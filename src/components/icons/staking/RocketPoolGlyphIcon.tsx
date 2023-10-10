@@ -1,6 +1,5 @@
-import React from "react"
 import { createIcon } from "@chakra-ui/react"
-import { commonIconDefaultProps } from "../utils"
+import { commonIconDefaultProps } from "@/components/icons/utils"
 
 export const RocketPoolGlyphIcon = createIcon({
   displayName: "RocketPoolGlyphIcon",

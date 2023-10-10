@@ -14,6 +14,8 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
 import Pill from "@/components/Pill"
+import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
+import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 import {
@@ -56,8 +58,8 @@ const TitleCard = (props: ChildOnlyProp) => (
 export const roadmapComponents = {
   CardGrid,
   Pill,
-  // RoadmapActionCard,
-  // RoadmapImageContent,
+  RoadmapActionCard,
+  RoadmapImageContent,
 }
 
 interface IProps extends MdPageContent, ChildOnlyProp {

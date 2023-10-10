@@ -1,4 +1,3 @@
-import * as React from "react"
 import { createIcon } from "@chakra-ui/react"
 
 export const WarningProductGlyphIcon = createIcon({

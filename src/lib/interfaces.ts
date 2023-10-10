@@ -141,4 +141,5 @@ export interface MdPageContent {
   content: string
   frontmatter: Frontmatter
   tocItems: Array<ToCItem>
+  lastUpdatedDate?: string
 }

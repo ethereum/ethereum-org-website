@@ -5,6 +5,7 @@ import {
   List,
   ListItem,
   Show,
+  Text,
   type FlexProps,
   type HeadingProps,
   useToken,
@@ -12,8 +13,7 @@ import {
 import { MdExpandMore } from "react-icons/md"
 
 import { BaseLink } from "@/components/Link"
-// TODO: Fix BeaconChainActions
-// import BeaconChainActions from "@/components/BeaconChainActions"
+import BeaconChainActions from "@/components/BeaconChainActions"
 import { Image } from "@/components/Image"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -40,6 +40,7 @@ import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 
@@ -120,17 +121,17 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-// const LastUpdated = (props: ChildOnlyProp) => (
-//   <Text
-//     color="text200"
-//     fontStyle="italic"
-//     pt={4}
-//     mb={0}
-//     borderTop="1px"
-//     borderColor="border"
-//     {...props}
-//   />
-// )
+const LastUpdated = (props: ChildOnlyProp) => (
+  <Text
+    color="text200"
+    fontStyle="italic"
+    pt={4}
+    mb={0}
+    borderTop="1px"
+    borderColor="border"
+    {...props}
+  />
+)
 
 // Upgrade layout components
 export const upgradeComponents = {
@@ -138,7 +139,7 @@ export const upgradeComponents = {
   MergeInfographic,
   ShardChainsList,
   UpgradeStatus,
-  // BeaconChainActions,
+  BeaconChainActions,
 }
 
 interface IProps extends ChildOnlyProp, MdPageContent {
@@ -149,20 +150,14 @@ export const UpgradeLayout: React.FC<IProps> = ({
   frontmatter,
   slug,
   tocItems,
+  lastUpdatedDate
 }) => {
   // TODO: Re-enabled after i18n is implemented
   // const { t } = useTranslation()
   // const { language } = useI18next()
+  const language = "en"
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
-
-  // TODO: Implement GitHub API fetching for last updated date
-  // FIXME: remove this any, currently not sure how to fix the ts error
-  // const parent: any = mdx.parent
-  // TODO some `gitLogLatestDate` are `null` - why?
-  // const lastUpdatedDate = parent.fields
-  //   ? parent.fields.gitLogLatestDate
-  //   : parent.mtime
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
@@ -206,11 +201,12 @@ export const UpgradeLayout: React.FC<IProps> = ({
               ))}
             </List>
           </Box>
-          {/* TODO: Re-enable after GitHub API implemented */}
-          {/* <LastUpdated>
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
-          </LastUpdated> */}
+          <LastUpdated>
+            {/* TODO: Re-enable after i18n implemented */}
+            {/* <Translation id="page-last-updated" />:{" "} */}
+            Page last updated:{" "}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
+          </LastUpdated>
         </TitleCard>
         {frontmatter.image && (
           <Image
@@ -266,12 +262,3 @@ export const UpgradeLayout: React.FC<IProps> = ({
     </Container>
   )
 }
-
-// parent {
-//   ... on File {
-//     mtime
-//     fields {
-//       gitLogLatestDate
-//     }
-//   }
-// }
