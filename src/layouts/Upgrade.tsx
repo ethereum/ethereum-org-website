@@ -37,7 +37,6 @@ import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import RandomAppList from "@/components/RandomAppList"
-import SectionNav from "@/components/SectionNav"
 import ShardChainsList from "@/components/ShardChainsList"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
@@ -287,7 +286,6 @@ export const upgradeComponents = {
   MergeInfographic,
   QuizWidget,
   RandomAppList,
-  SectionNav,
   ShardChainsList,
   UpgradeStatus,
   YouTube,
