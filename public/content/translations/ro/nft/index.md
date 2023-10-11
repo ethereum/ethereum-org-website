@@ -5,7 +5,7 @@ lang: ro
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Sigla Eth-ului afișată printr-o hologramă.
 summaryPoint1: O manieră de reprezenta ceva unic ca un activ bazat pe Ethereum.
 summaryPoint2: NTF-urile oferă putere mai multă creatorilor de conținut decât oricând.
@@ -429,5 +429,5 @@ Cu alte cuvinte, dacă Visa procesează 140.839.000.000 de tranzacții ce costă
 Într-un singur an, Ethereum va consuma 5.256.000 kWh. Cu un potențial de 788.940.000.000.000 - 3.153.600.000.000.000 de tranzacții procesate în această perioadă.
 
 <InfoBanner emoji=":evergreen_tree:">
-  În cazul în care considerați că aceste statistici sunt incorecte sau se poate crește precizia lor, vă rugăm să semnalați o problemă sau să creați un PR. Acestea sunt estimări făcute de echipa ethereum.org utilizând informații accesibile publicului și ce este în faza de proiect pentru Ethereum. Aceasta nu reprezintă o promisiune oficială din partea Fundației Ethereum. 
+  În cazul în care considerați că aceste statistici sunt incorecte sau se poate crește precizia lor, vă rugăm să semnalați o problemă sau să creați un PR. Acestea sunt estimări făcute de echipa ethereum.org utilizând informații accesibile publicului și ce este în faza de proiect pentru Ethereum. Aceasta nu reprezintă o promisiune oficială din partea Fundației Ethereum.
 </InfoBanner>

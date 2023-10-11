@@ -5,7 +5,7 @@ lang: pl
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: ../../../../assets/eth-gif-cat.png
+image: /eth-gif-cat.png
 summaryPoint1: W tradycyjnych systemach tożsamościwydawanie, utrzymywanie i kontrola identyfikatorów są scentralizowane.
 summaryPoint2: Tożsamość zdecentralizowana usuwa zależność od scentralizowanych podmiotów trzecich.
 summaryPoint3: Dzięki crypto użytkownicy, po raz kolejny, mają teraz narzędzia do wydawania i kontrolowania własnych identyfikatorów i zaświadczeń.

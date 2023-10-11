@@ -5,7 +5,7 @@ lang: pl
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: ../../../../assets/use-cases/dao-2.png
+image: /use-cases/dao-2.png
 alt: Reprezentacja DAO głosującego nad wnioskiem.
 summaryPoint1: Społeczności należące do członków bez scentralizowanego przywództwa.
 summaryPoint2: Bezpieczny sposób współpracy z nieznajomymi w internecie.
