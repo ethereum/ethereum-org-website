@@ -22,8 +22,7 @@ import { BaseLink } from "@/components/Link"
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 import { mdxTableComponents } from "@/components/Table"
-// TODO: Fix BeaconChainActions
-// import BeaconChainActions from "@/components/BeaconChainActions"
+import BeaconChainActions from "@/components/BeaconChainActions"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
@@ -274,7 +273,7 @@ export const upgradeComponents = {
   p: Paragraph,
   pre: Pre,
   Badge,
-  // BeaconChainActions,
+  BeaconChainActions,
   ButtonLink,
   Card,
   Divider,
