@@ -50,7 +50,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
         <Image
           src={imgSrc}
           alt={alt}
-          objectFit="contain"
+          style={{ objectFit: "contain" }}
         />
       </Center>
       <Flex p={6} flex="1" flexDir="column" justify="space-between" gap={4}>

@@ -208,7 +208,7 @@ export const RoadmapLayout: React.FC<IProps> = ({ children, frontmatter, slug, t
           <Image
             src={frontmatter.image}
             alt={frontmatter.alt || ""}
-            objectFit="contain"
+            style={{ objectFit: "contain" }}
             alignSelf={{
               base: "center",
               lg: "normal",
