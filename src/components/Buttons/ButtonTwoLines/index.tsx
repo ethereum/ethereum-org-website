@@ -89,13 +89,20 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
       >
         <Text
           as="span"
-          fontSize="md"
+          size="md"
           fontWeight={size === "md" ? "bold" : "normal"}
         >
           {mainText}
         </Text>
-        {/* TODO: use `size='xs'` instead when the Text theme is added  */}
-        <Text as="span" fontSize="xs">
+        <Text
+          as="span"
+          size="xs"
+          color={
+            rest.variant === "outline" || rest.isSecondary
+              ? "body.medium"
+              : undefined
+          }
+        >
           {helperText}
         </Text>
       </Stack>

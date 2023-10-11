@@ -1,9 +1,7 @@
 import i18nConfig from "../../i18n.config.json"
 
 export const CONTENT_DIR = "public/content"
-export const OLD_CONTENT_DIR = "src/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
-export const OLD_TRANSLATIONS_DIR = "src/content/translations"
 
 // i18n
 export const DEFAULT_LOCALE = "en"

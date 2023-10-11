@@ -284,8 +284,9 @@ As fraudes com airdrop envolvem um projeto fradulento que lança um ativo (NFT, 
 
 ### Informações sobre golpes {#reading-scam-education}
 
+- [Guia: Como identificar tokens fraudulentos](/guides/how-to-id-scam-tokens/)
 - [Como se proteger: golpes comuns](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [Evitando golpes](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Tópico no Twitter sobre e-mails e mensagens comuns de phishing de criptografia](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Como evitar golpes](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [Discussão no Twitter sobre e-mails e mensagens comuns de phishing de criptografia](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

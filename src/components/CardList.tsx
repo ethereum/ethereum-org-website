@@ -83,18 +83,18 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
   )
 }
 
-export interface IProps extends Omit<BoxProps, "content"> {
-  content: Array<CardListItem>
+export interface IProps extends BoxProps {
+  items: Array<CardListItem>
   clickHandler?: (idx: string | number) => void
 }
 
 const CardList: React.FC<IProps> = ({
-  content,
+  items,
   clickHandler = () => null,
   ...rest
 }) => (
   <Box bg="background.base" w="full" {...rest}>
-    {content.map((listItem, idx) => {
+    {items.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link
 

@@ -3,7 +3,7 @@ title: A Fusão
 description: Aprenda sobre A Fusão — quando a Rede principal do Ethereum adotou a prova de participação.
 lang: pt-br
 template: upgrade
-image: .../../../assets/upgrades/merge.png
+image: /upgrades/merge.png
 summaryPoint1: A Rede principal do Ethereum usa prova de participação, mas nem sempre foi esse o caso.
 summaryPoint2: A melhoria do mecanismo original de prova de trabalho para prova de participação foi chamada de The Merge, ou seja, A Fusão.
 summaryPoint3: A Fusão se refere à fusão original da Rede Principal do Ethereum, com uma cadeia de blocos de prova de participação separada chamada Beacon Chain, agora existente como uma cadeia.

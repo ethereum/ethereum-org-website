@@ -90,12 +90,12 @@ const BeaconChainActions: React.FC = () => {
         Explore the data
       </H3>
 
-      <CardList content={datapoints} />
+      <CardList items={datapoints} />
       <H3>
         {/* <Translation id="read-more" /> */}
         Read more
       </H3>
-      <CardList content={reads} />
+      <CardList items={reads} />
     </Box>
   )
 }

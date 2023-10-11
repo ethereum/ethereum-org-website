@@ -6,6 +6,7 @@ import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import {
   Box,
+  calc,
   chakra,
   Flex,
   FlexProps,
@@ -40,6 +41,7 @@ import { trackCustomEvent } from "../../../utils/matomo"
 import { getImage } from "../../../utils/image"
 import { WalletData } from "../../../data/wallets/wallet-data"
 import { ChildOnlyProp } from "../../../types"
+import { NAV_BAR_PX_HEIGHT } from "../../../constants"
 
 const Container = (props: TableProps) => (
   <Table
@@ -60,7 +62,7 @@ const WalletContainer = (props: ChildOnlyProp) => (
   <Container
     borderBottom="1px"
     borderColor="lightBorder"
-    _hover={{ bg: "boxShadow", transition: "0.5s all" }}
+    _hover={{ bg: "chakra-subtle-bg", transition: "0.5s all" }}
     {...props}
   />
 )
@@ -90,8 +92,11 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
     rowGap={{ base: 4, sm: 0 }}
     p={2}
     position="sticky"
-    top={0}
-    zIndex="docked"
+    top={{
+      base: calc(NAV_BAR_PX_HEIGHT).add("4rem").toString(),
+      lg: NAV_BAR_PX_HEIGHT,
+    }}
+    zIndex={1}
     sx={{
       th: {
         p: 0,
@@ -237,7 +242,7 @@ const FlexInfo = (props: FlexProps) => (
         "& + p": {
           mt: "0.1rem",
           fontSize: "0.9rem",
-          lineHeight: 4,
+          lineHeight: 5,
           fontWeight: "normal",
         },
       },

@@ -62,7 +62,7 @@ Forse sei un artista che vuole condividere il proprio lavoro utilizzando gli NFT
 
 Oppure, prendiamo ad esempio un biglietto per un evento sportivo. Proprio come l'organizzatore di un evento può scegliere quanti biglietti vendere, il creatore di un NFT può decidere quante repliche esistono. A volte queste sono repliche esatte, come 5000 biglietti di ingresso generici. A volte ne vengono coniati diversi molto simili, ma ognuno leggermente diverso, come nel caso dei biglietti con i posti assegnati. Questi possono essere acquistati e venduti peer-to-peer senza pagare i gestori dei biglietti e l'acquirente ha sempre la certezza dell'autenticità del biglietto controllando l'indirizzo del contratto.
 
-Su ethereum.org, gli NFT vengono utilizzati per dimostrare che le persone hanno contribuito al nostro archivio Github o hanno partecipato alle riunioni online, e abbiamo persino il nostro nome di dominio NFT. Se contribuisci a ethereum.org, puoi rivendicare un NFT POAP. Alcuni incontri nel mondo delle criptovalute hanno usato i POAP come biglietti. [Di più su come contribuire](/contributing/#poap).
+Su ethereum.org, gli NFT vengono utilizzati per dimostrare che le persone hanno contribuito al nostro archivio GitHub o hanno partecipato alle riunioni online, e abbiamo persino il nostro nome di dominio NFT. Se contribuisci a ethereum.org, puoi rivendicare un NFT POAP. Alcuni incontri nel mondo delle criptovalute hanno usato i POAP come biglietti. [Di più su come contribuire](/contributing/#poap).
 
 ![POAP di ethereum.org](./poap.png)
 

@@ -62,7 +62,7 @@ Vielleicht sind Sie ein Künstler, der seine Werke mit Hilfe von NFTs verbreiten
 
 Oder denken Sie ein Ticket für ein Sportevent. So wie ein Veranstalter für seine Veranstaltung entscheiden kann, wie viele Tickets verkauft werden, kann der Ersteller eines NFT entscheiden, wie viele Repliken existieren. Manchmal handelt es sich dabei um genaue Repliken, wie etwa 5.000 Eintrittskarten. Manchmal werden auch mehrere Stücke geprägt, die zwar sehr ähnlich sind, aber doch leichte Unterschiede aufweisen, wie z. B. ein Ticket mit einem zugewiesenem Sitzplatz. Diese können in Peer-to-Peer-Umgebungen gekauft und verkauft werden, ohne dass Zwischenhändler dafür bezahlt werden müssen. Dabei kann sich der Käufer durch Überprüfung der Adresse des Contracts stets von der Echtheit des Tickets überzeugen.
 
-Auf ethereum.org werden NFTs verwendet, um zu zeigen, dass Leute zu unserer Github-Ablage beigetragen oder an Calls teilgenommen haben, und wir haben sogar unseren eigenen NFT-Domainnamen. Wenn Sie einen Beitrag für ethereum.org leisten, können Sie ein POAP-NFT beanspruchen. Einige Krypto-Treffen nutzen POAPs als Zutrittskarte. [Mehr zum Beitragen](/contributing/#poap).
+Auf ethereum.org werden NFTs verwendet, um zu zeigen, dass Leute zu unserer GitHub-Ablage beigetragen oder an Calls teilgenommen haben, und wir haben sogar unseren eigenen NFT-Domainnamen. Wenn Sie einen Beitrag für ethereum.org leisten, können Sie ein POAP-NFT beanspruchen. Einige Krypto-Treffen nutzen POAPs als Zutrittskarte. [Mehr zum Beitragen](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 

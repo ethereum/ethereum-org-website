@@ -76,45 +76,15 @@ const Breadcrumbs: React.FC<IProps> = ({
     .slice(startDepth)
 
   return (
-    <Breadcrumb
-      dir="auto"
-      position="relative"
-      zIndex="1"
-      mb={8}
-      spacing="2.5"
-      listProps={{
-        m: 0,
-        lineHeight: 1.6,
-        flexWrap: "wrap",
-      }}
-      {...restProps}
-    >
+    <Breadcrumb dir="auto" {...restProps}>
       {crumbs.map((crumb, idx) => {
         const isCurrentPage = slug === crumb.fullPath
         return (
-          <BreadcrumbItem
-            key={idx}
-            isCurrentPage={isCurrentPage}
-            color="body.medium"
-            letterSpacing="wider"
-            m={0}
-          >
+          <BreadcrumbItem key={idx} isCurrentPage={isCurrentPage}>
             <BreadcrumbLink
               as={BaseLink}
               to={crumb.fullPath}
               isPartiallyActive={isCurrentPage}
-              fontWeight="normal"
-              _hover={{ color: "primary.base", textDecor: "none" }}
-              _active={{ color: "primary.base" }}
-              sx={{
-                /*
-                 * Redundancy to ensure styling on the active
-                 * link is applied.
-                 */
-                '&[aria-current="page"]': {
-                  color: "primary.base",
-                },
-              }}
             >
               {crumb.text.toUpperCase()}
             </BreadcrumbLink>
