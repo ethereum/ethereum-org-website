@@ -5,7 +5,7 @@ lang: id
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Logo Eth yang ditampilkan melalui hologram.
 summaryPoint1: Cara untuk mewakili apa pun yang unik sebagai aset berbasis Ethereum.
 summaryPoint2: NFT memberi lebih banyak pemberdayaan terhadap para pembuat konten daripada sebelumnya.

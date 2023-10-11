@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Ein als Hologramm abgebildetes ETH-Logo.
 summaryPoint1: Ein Weg, alles Einzigartige als eine Ethereum-basierte Anlage darzustellen.
 summaryPoint2: NFTs geben Inhaltserstellern mehr Einfluss denn je.
