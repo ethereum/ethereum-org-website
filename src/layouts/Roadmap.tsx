@@ -4,7 +4,6 @@ import {
   ListItem,
   Show,
   SimpleGrid,
-  Text,
   UnorderedList,
   Wrap,
   WrapItem,
@@ -22,6 +21,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import MdLink from "@/components/MdLink"
+import OldText from "@/components/OldText"
 import Pill from "@/components/Pill"
 import RandomAppList from "@/components/RandomAppList"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
@@ -165,7 +165,7 @@ export const RoadmapLayout: React.FC<IProps> = ({ children, frontmatter, slug, t
             {/* TODO: Double check this slug works */}
             <Breadcrumbs slug={slug} />{" "}
             <Title>{frontmatter.title}</Title>
-            <Text>{frontmatter.description}</Text>
+            <OldText>{frontmatter.description}</OldText>
             {frontmatter?.buttons && (
               // FIXME: remove the `ul` override once removed the corresponding
               // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`

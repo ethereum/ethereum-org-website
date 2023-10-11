@@ -70,7 +70,7 @@ export interface RequiredFrontmatter {
 }
 
 export interface UpgradeFrontmatter extends RequiredFrontmatter {
-  description?: string
+  description: string
   sidebarDepth?: number
   summaryPoint1?: string
   summaryPoint2?: string
