@@ -62,7 +62,7 @@ Talvez seja um artista que queira partilhar o seu trabalho usando NFTs, sem perd
 
 Ou considere um bilhete para um evento desportivo. Tal como o organizador do evento escolhe quantos bilhetes existem para venda, o criador de um NFT pode decidir quantas réplicas existem. Por vezes, tratam-se de réplicas exatas, tal como 5000 bilhetes de acesso geral ao evento. Outras vezes, vários bilhetes cunhados são muito semelhantes, mas com ligeiras diferenças, tal como um bilhete com lugar marcado. Estes bilhetes podem ser comprados e vendidos entre pares sem pagar a quem os distribui e o comprador tem sempre a garantia da autenticidade do bilhete, verificando o endereço do contrato.
 
-Em ethereum.org, os NFTs são usados para demonstrar que as pessoas contribuíram para o nosso repositório Github ou participaram em reuniões, e até temos o nosso próprio nome de domínio em NFT. Se é um colaborador de ethereum.org, pode pedir um NFT POAP. Alguns encontros relacionados com as criptomoedas utilizaram POAPs como bilhetes. [Saiba mais sobre como contribuir](/contributing/#poap).
+Em ethereum.org, os NFTs são usados para demonstrar que as pessoas contribuíram para o nosso repositório GitHub ou participaram em reuniões, e até temos o nosso próprio nome de domínio em NFT. Se é um colaborador de ethereum.org, pode pedir um NFT POAP. Alguns encontros relacionados com as criptomoedas utilizaram POAPs como bilhetes. [Saiba mais sobre como contribuir](/contributing/#poap).
 
 ![POAP ethereum.org](./poap.png)
 

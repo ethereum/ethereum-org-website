@@ -5,7 +5,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 // Component imports
 import Translation from "./Translation"
 // SVG imports
-import InfographicBg from "../assets/upgrades/merge-infographic-bg.svg"
+import InfographicBg from "../../public/upgrades/merge-infographic-bg.svg"
 
 const Background = chakra(InfographicBg)
 const Text = chakra("text", {

@@ -3,7 +3,7 @@ title: Beacon Chain
 description: Узнайте о Beacon Chain — обновлении, которое представило Ethereum с доказательством владения (Proof-of-Stake).
 lang: ru
 template: upgrade
-image: ../../../../../assets/upgrades/core.png
+image: /upgrades/core.png
 summaryPoint1: Сеть Beacon Chain ничего не меняет в том Ethereum, который мы используем сегодня.
 summaryPoint2: Она будет координировать работу сети, выступая в качестве уровня консенсуса.
 summaryPoint3: Она ввела в экосистему Ethereum доказательство владения.
