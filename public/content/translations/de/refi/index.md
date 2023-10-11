@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: Ein alternatives, auf regenerativen Prinzipien beruhendes Wirtschaftssystem
 summaryPoint2: Ein Versuch, Ethereum für die Lösung globaler Koordinationskrisen wie dem Klimawandel nutzbar zu machen
@@ -20,7 +20,7 @@ Stattdessen zielt ReFi darauf ab, ökologische, kommunale oder soziale Probleme 
 
 Eine der Grundlagen von ReFi ist das Konzept der regenerativen Wirtschaft, das von John Fullerton vom [Capital Institute](https://capitalinstitute.org) erdacht wurde. Er schlug acht miteinander verknüpfte Grundsätze vor, die der systemischen Gesundheit zugrunde liegen:
 
-![Acht miteinander verknüpfte Grundsätze](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Acht miteinander verknüpfte Grundsätze](./refi-regenerative-economy-diagram.png)
 
 ReFi-Projekte verwirklichen diese Prinzipien mithilfe von [Smart Contracts](/developers/docs/smart-contracts/) und [dezentralen Finanzen (DeFi)](/defi/), um Anreize für regenerative Verhaltensweisen zu schaffen, z. B. für die Wiederherstellung geschädigter Ökosysteme, und die Zusammenarbeit in großem Maßstab bei globalen Problemen wie Klimawandel und Verlust der Artenvielfalt zu erleichtern.
 

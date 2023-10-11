@@ -5,7 +5,7 @@ lang: hy-am
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Eth-ի պատկերանշանը ցուցադրվաում է հոլոգրամի միջոցով։
 summaryPoint1: "Ցանկացած յուրօրինակ օբյեկտ որպես Էթերիումում գործող ակտիվ ներկայացնելու ձև:"
 summaryPoint2: "NFT-ները ստեղծագործողներին նոր հնարավորություններ են ընձեռում:"

@@ -23,6 +23,8 @@ import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useKeyPress } from "../hooks/useKeyPress"
 import { useSurvey } from "../hooks/useSurvey"
 
+import { DEFAULT_LOCALE } from "../lib/constants"
+
 interface FixedDotProps extends ButtonProps {
   bottomOffset: number
   isExpanded: boolean
@@ -141,7 +143,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
 
   useKeyPress(`Escape`, handleClose)
 
-  if (language !== "en") return null
+  if (language !== DEFAULT_LOCALE) return null
   const closeButtonSize = "24px"
   return (
     <>

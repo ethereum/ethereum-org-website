@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Logo ng Eth naka display via hologram.
 summaryPoint1: Isang paraan para katawanin ang kahit anong natatangi bilang Ethereum-based asset.
 summaryPoint2: Mas binibigyang-kakayahan ngayon ng mga NFT ang mga content creator.

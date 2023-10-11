@@ -71,6 +71,8 @@ export type Lang =
   | "zh"
   | "zh-tw"
 
+export type StaticPaths = { params: { slug: string[] }; locale: string }[]
+
 export type TranslationKey = string
 
 /**
