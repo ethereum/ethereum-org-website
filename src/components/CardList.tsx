@@ -11,9 +11,8 @@ import {
 } from "@chakra-ui/react"
 
 import { BaseLink } from "@/components/Link"
-import { Image } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 import * as url from "@/lib/utils/url"
-import type { StaticImageData } from "next/image"
 
 export type CardListItem = {
   title?: ReactNode
@@ -21,7 +20,7 @@ export type CardListItem = {
   caption?: ReactNode
   link?: string
   id?: string
-  image?: string | StaticImageData
+  image?: ImageProps["src"]
   alt?: string
 }
 
@@ -37,7 +36,8 @@ const CardContainer = (props: StackProps) => (
       boxShadow: "0 0 1px var(--eth-colors-primary)",
       background: "tableBackgroundHover",
     }}
-    {...props} />
+    {...props}
+  />
 )
 
 const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
