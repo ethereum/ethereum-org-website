@@ -5,7 +5,7 @@ lang: zh-tw
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: 建立在可再生原則上的替代性金融系統。
 summaryPoint2: 使用以太坊嘗試解決全球協調危機，如氣候變遷。
@@ -20,7 +20,7 @@ summaryPoint3: 大幅擴展生態效益資產（如已驗證碳權）的工具
 
 再生經濟的概念由[資本研究機構](https://capitalinstitute.org) (Capital Institute) 的 John Fullerton 率先提出，此概念為再生金融的基礎之一。 他提出了組成底層系統健康的八個關聯原則：
 
-![八個關聯原則](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![八個關聯原則](./refi-regenerative-economy-diagram.png)
 
 再生金融項目透過[智慧型合約](/developers/docs/smart-contracts/)及[去中心化金融 (DeFi)](/defi/) 應用程式來實現這些原則，從而獎勵可再生行為，例如復原衰退的生態系統及促進氣候變遷及生物多樣性減損等國際性議題的大規模合作。
 

@@ -5,7 +5,7 @@ lang: fa
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: یک جایگزین جهانی و باز برای سیستم علمی فعلی.
 summaryPoint2: فناوری که دانشمندان را قادر می‌سازد بودجه جمع‌آوری کنند، آزمایش‌ها را انجام دهند، داده‌ها را به اشتراک بگذارند، بینش‌ها را توزیع کنند و موارد دیگر.
