@@ -1,5 +1,5 @@
 ---
-title: Ethereum Yığınına Giriş
+title: Ethereum yığınına giriş
 description: Ethereum yazılım yığınının farklı katmanlarına ve nasıl uyuştuklarına dair bir inceleme.
 lang: tr
 ---
@@ -10,11 +10,11 @@ Ancak, yazılım uygulamalarının Ethereum blok zinciri ile nasıl etkileşime 
 
 ## Seviye 1: Ethereum Sanal Makinesi {#ethereum-virtual-machine}
 
-[Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) Ethereum'daki akıllı sözleşmeler için olan program ortamıdır. Ethereum blok zincirindeki tüm akıllı sözleşmeler ve durum değişiklikleri [işlemler](/developers/docs/transactions/) tarafından yürütülür. EVM, Ethereum ağında yapılan tüm işlemleri idare eder.
+[Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) Ethereum üzerindeki akıllı sözleşmeler için olan program ortamıdır. Ethereum blok zincirindeki tüm akıllı sözleşmeler ve durum değişiklikleri [işlemler](/developers/docs/transactions/) tarafından yürütülür. EVM, Ethereum ağında yapılan tüm işlemleri idare eder.
 
 Herhangi bir sanal makinede olduğu gibi, EVM çalıştırılan kod ve çalıştırılan makine (bir Ethereum düğümü) arasında bir soyutlama seviyesi oluşturur. EVM, şu anda dünyadaki farklı noktalarda bulunan binlerce düğümde çalışıyor.
 
-EVM arka planda belirli görevleri yürütmek için bir dizi işlem kodu talimatı kullanmaktadır. Bu (140 benzersiz) işlem kodu, EVM'nin Turing-tam olmasını sağlıyor ve EVM böylece yeterli kaynak sağlandığı sürece hemen hemen her şeyi hesaplayabiliyor.
+EVM arka planda belirli görevleri yürütmek için bir dizi işlem kodu talimatı kullanmaktadır. Bu (140 eşsiz) işlem kodu EVM'nin [Turing bütünlüğüne](https://en.wikipedia.org/wiki/Turing_completeness) sahip olmasını sağlar, yani yeterli kaynaklar verildiğinde EVM'nin herhangi bir şeyi hesaplayabileceği anlamına gelir.
 
 Bir DAPP geliştiricisi olarak EVM hakkında çok bilgili olmanıza gerek yok, tek bilmeniz gereken şey; EVM'nin Ethereum'daki bütün uygulamaların temeli olduğudur.
 
@@ -54,7 +54,7 @@ Bu kullanıcı arayüzlerini geliştirme yollarınız özünde değişmez. Kulla
 
 Ethereum uygulamanız için [yerel bir geliştirme ortamı kurulumu](/developers/local-environment/) rehberimizi inceleyin.
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Bir Web 3.0 uygulamasının mimarisi](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 

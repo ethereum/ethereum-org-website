@@ -2,12 +2,13 @@
 title: Prueba de trabajo (PoW, por sus siglas en inglés)
 description: Una explicación del protocolo de consenso de la prueba de trabajo y su función en Ethereum.
 lang: es
-incomplete: true
 ---
 
-Actualmente, Ethereum, al igual que Bitcoin, emplea un protocolo de consenso llamado **[Prueba de trabajo (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la blockchain de Ethereum y prevenir ciertos tipos de ataques económicos.
+La red Ethereum comenzó utilizando un mecanismo de consenso que implica una**[prueba de trabajo (o PoW, por sus siglas en inglés)](/developers/docs/consensus-mechanisms/pow)**. Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la cadena de bloques de Ethereum y prevenir ciertos tipos de ataques económicos. Sin embargo, Ethereum se desconectó de la prueba de trabajo en 2022 y empezó a usar la [prueba de participación](/developers/docs/consensus-mechanisms/pos) en su lugar.
 
-Durante el próximo año, la prueba de trabajo se reemplazará progresivamente por la **[prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos)**. La transición a la prueba de participación también eliminará gradualmente el minado de Ethereum. [Más información sobre la fusión.](/roadmap/merge/)
+<InfoBanner emoji=":wave:">
+    La prueba de trabajo ha quedado obsoleta. Ethereum ya no utiliza la prueba de trabajo como parte de su mecanismo de consenso. En su lugar, utiliza la prueba de participación. Descubra más cosas sobre la <a href="/developers/docs/consensus-mechanisms/pos/">prueba de participación</a> y la <a href="/staking/">participación</a>.
+</InfoBanner>
 
 ## Requisitos previos {#prerequisites}
 
@@ -15,63 +16,59 @@ Para comprender mejor esta página, le recomendamos que en primer lugar se infor
 
 ## ¿Qué es la prueba de trabajo (PoW)? {#what-is-pow}
 
-La prueba de trabajo es el mecanismo que permite que la red descentralizada de Ethereum llegue a alcanzar un consenso o un acuerdo en relación con aspectos como los saldos de las cuentas y el orden de las transacciones. De esta manera, se evita que los usuarios realicen un «doble gasto» de sus monedas y se garantiza que resulte muy difícil atacar o manipular la cadena Ethereum.
+El consenso Nakamoto, que utiliza la prueba de trabajo, es el mecanismo que una vez permitió que la red descentralizada Ethereum llegara a un consenso (es decir, que todos los nodos estuvieran de acuerdo) en asuntos como los saldos de cuentas y el orden de las transacciones. De esta manera, se evita que los usuarios realicen un «doble gasto» de sus monedas y se garantiza que resulte muy difícil atacar o manipular la cadena Ethereum. Estas propiedades de seguridad ahora provienen de la prueba de particpación en su lugar utilizando el mecanismo de consenso conocido como [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## La Prueba de trabajo y la minería {#pow-and-mining}
 
-La prueba de trabajo es el algoritmo subyacente que establece la dificultad y las reglas para el trabajo que realizan los mineros. Entendemos como minado el «trabajo» en sí mismo. Es el acto de añadir bloques válidos a la cadena. Esto es importante porque la longitud de la cadena ayuda a que la red siga la cadena correcta de Ethereum y comprenda el estado actual. Cuanto más «trabajo» se realice, más larga sea la cadena y mayor sea la cantidad de bloques, con mayor seguridad la red podrá adaptarse a la situación actual.
+La prueba de trabajo es el algoritmo subyacente que establece la dificultad y las reglas para el trabajo que realizan los mineros. Entendemos como minería el "trabajo" en sí mismo. Es el acto de añadir bloques válidos a la cadena. Esto es importante, porque la longitud de la cadena ayuda a la red a seguir la bifurcación correcta de la cadena de bloques. Cuanto más «trabajo» se haga; cuanto más larga será la cadena; y cuanto mayor sea la cantidad de bloques, mayor será la seguridad con que la red podrá adaptarse al estado actual de las cosas.
 
-[Más información sobre el minado](/developers/docs/consensus-mechanisms/pow/mining/)
+[Más información sobre la minería](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## ¿Cómo funciona la Prueba de trabajo de Ethereum? {#how-it-works}
+## ¿Cómo funciona la prueba de trabajo de Ethereum? {#how-it-works}
 
-Las transacciones de Ethereum se procesan en bloques. Cada bloque tiene:
+Las transacciones de Ethereum se procesan en bloques. En la prueba de trabajo de Ethereum que en la actualidad se considera obsoleta, cada bloque contenía:
 
 - Dificultad del bloque: p. ej., 3,324,092,183,262,715
 - mixHash: p. ej.: `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`
 - nonce: p. ej., `0xd3ee432b4fb3d26b`
 
-Los datos de este bloque están directamente relacionados con la prueba de trabajo.
+Los datos de este bloque estaban directamente relacionados con la prueba de trabajo.
 
 ### El trabajo durante la Prueba de trabajo {#the-work}
 
-El protocolo de prueba de trabajo, conocido como Ethash, requiere que los mineros atraviesen una intensa carrera de prueba y error para encontrar la nonce de un bloque. Únicamente los bloques con nonce válido podrán añadirse a la cadena.
+El protocolo de prueba de trabajo, conocido como Ethash, requería que los mineros atraviesen una intensa carrera de prueba y error para encontrar el nonce para un bloque. Únicamente los bloques con nonce válido podrán añadirse a la cadena.
 
 Cuando se compite para crear un bloque, un minero presentará repetidamente un conjunto de datos que solo se puede obtener de la descarga y la ejecución de la cadena completa (como lo hace un minero) a través de una función matemática. El conjunto de datos se utiliza para generar un mixHash que esté por debajo de un objetivo nonce, según lo indicado por la dificultad del bloque. La mejor manera de hacerlo es a través del sistema de prueba y error.
 
-La dificultad determina el objetivo del hash. Cuanto menor sea el objetivo, menor será el conjunto de hashes válidos. Una vez generado, esto es increíblemente fácil de verificar para otros mineros y clientes. Incluso si una transacción se modificara, el hash sería completamente diferente e indicaría el fraude.
+La dificultad determina el objetivo del hash. Cuanto menor sea el objetivo, menor será el conjunto de hashes válidos. Una vez generado, otros mineros y clientes podrán verificarlo con mucha facilidad. Aunque una transacción se modificarae, el hash sería completamente diferente e indicaría el fraude.
 
-El hashing hace que el fraude sea fácil de detectar. Sin embargo, la prueba de trabajo como proceso también dificulta en gran medida el ataque de la cadena.
+La funcionalidad «hashing» hace que el fraude sea fácil de detectar. Sin embargo, la prueba de trabajo como proceso también dificulta en gran medida el ataque a la cadena.
 
 ### La Prueba de trabajo y la seguridad {#security}
 
-A los mineros se les incentiva para realizar este trabajo en la cadena principal de Ethereum. Existen pocos incentivos para que un subconjunto de mineros comience su propia cadena: debilita el sistema. Las blockchains dependen de tener un solo estado como fuente de verdad. Y los usuarios siempre elegirán la cadena más larga o "más pesada".
+A los mineros se les incentiva para realizar este trabajo en la cadena principal de Ethereum. Existen pocos incentivos para que un subconjunto de mineros comience su propia cadena, ya que debilita el sistema. Las cadenas de bloques dependen de tener un solo estado como fuente de verdad.
 
-El objetivo de la prueba de trabajo es ampliar la cadena. La cadena más larga es más creíble como la válida, ya que en ella se ha realizado el mayor trabajo informático. Dentro del sistema de la PoW de Ethereum es casi imposible crear nuevos bloques que borren las transacciones, creen transacciones falsas o mantengan una segunda cadena. Esto se debe a que un minero malicioso tendría que resolver el bloque nonce más rápido que el resto.
+El objetivo de la prueba de trabajo es ampliar la cadena. La cadena más larga era más creíble como la válida, porque tenía el trabajo más computacional hecho para generarla. Dentro del sistema de la PoW de Ethereum es casi imposible crear nuevos bloques que borren las transacciones, creen transacciones falsas o mantengan una segunda cadena. Esto se debe a que un minero malicioso tendría que resolver el bloque nonce más rápido que el resto.
 
-Para crear sistemáticamente bloques maliciosos pero válidos, se necesitaría más del 51 % de la potencia de minado de la red para vencer a todos los demás. Necesitarías mucha potencia computacional para ser capaz de hacer esta cantidad de "trabajo", El gasto energético podría incluso superar las ganancias que conseguiría en un ataque.
+Para crear sistemáticamente bloques maliciosos pero que sean válidos, un minero malicioso habría necesitado más del 51 % del poder de la minería de la red para tener más control que todos los demás. Esa cantidad de «trabajo» requiere una gran cantidad de energía de computación costosa y la energía gastada podría incluso haber superado los beneficios obtenidos en un ataque.
 
 ### La economía de la Prueba de trabajo {#economics}
 
-La prueba de trabajo también es responsable de generar nuevas monedas en el sistema e incentivar a que los mineros lleven a cabo el trabajo.
+La prueba de trabajo también es responsable de la generación de nuevas monedas en el sistema e incentivar a que los mineros lleven a cabo el trabajo.
 
-Miners who successfully create a block get rewarded with two freshly minted ETH but no longer receive all the transaction fees, as the base fee gets burned, while the tip and block reward goes to the miner. Un minero también puede obtener 1,75 ETH por un bloque de tipo «uncle». Los bloques de tipo «uncle» son bloques válidos que crea un minero prácticamente al mismo tiempo que otro minero minó un bloque satisfactoriamente. Los bloques «uncle» de una cadena suelen surgir debido a la latencia de la red.
+Desde la actualización del [Constantinople](/history/#constantinople), los mineros que crearon con éxito un bloque fueron recompensados con dos ETH y parte de las comisiones de transacción. Los bloques de Ommer también compensaron 1,75 ETH. Los bloques de Ommer eran bloques válidos creados por un minero prácticamente al mismo tiempo que otro minero creó el bloque exacto, que fue determinado en última instancia por la cadena que se construyó sobre la parte superior de la primera. Los bloques Ommer suelen producirse debido a la latencia de la red.
 
 ## Finalidad {#finality}
 
 Una transacción tiene «finalidad» en Ethereum cuando forma parte de un bloque que no puede cambiar.
 
-Debido a que los mineros trabajan de forma descentralizada, es posible minar dos bloques válidos al mismo tiempo. Esto crea una bifurcación temporal. Finalmente, una de esas cadenas será la aceptada una vez que el bloque posterior se haya minado y añadido, con lo que se hará más larga.
+Debido a que los mineros trabajan de forma descentralizada, es posible minar dos bloques válidos al mismo tiempo. Esto crea una bifurcación temporal. Con el tiempo, una de esas cadenas será aceptada una vez que el bloque subsecuente haya sido minado y añadido, haciéndola más grande.
 
-Pero, para complicar las cosas un poco más, las transacciones rechazadas durante la bifurcación temporal podrían haberse incluido en la cadena aceptada. Esto significa que esa transacción se podría revertir. Con lo cual, la finalidad se refiere al tiempo que deberías esperar antes de considerar una transacción irreversible. Para Ethereum, el tiempo recomendado es de seis bloques o de poco más de 1 minuto. Después de seis bloques, puede decir con relativa confianza que la transacción ha resultado satisfactoria. Puede esperar más tiempo para obtener mayores garantías.
-
-La finalidad es un aspecto que se debe tener en cuenta a la hora de diseñar dapps. Sería una mala experiencia de usuario tergiversar la información de transacción para sus usuarios, especialmente si la transacción tiene un alto valor.
-
-Recuerda, este tiempo no incluye los tiempos de espera para que un minero recoja una transacción.
+Pero, para enreversarlo todo un poco más, las transacciones rechazadas durante la bifurcación temporal podrían haberse incluido en la cadena aceptada. Esto significa que esa transacción se podría revertir. Con lo cual, la finalidad se refiere al tiempo que se debería esperar antes de considerar una transacción irreversible. Bajo la prueba de trabajo anterior de Ethereum, cuantos más bloques se minaron sobre un bloque específico `N`, mayor confianza existió de que las transacciones en `N` serían exitosas y no se revertirían. Ahora, con la prueba de participación, la finalización es una propiedad explícita ―más que probabilística― de un bloque.
 
 ## Consumo energético de la prueba de trabajo {#energy}
 
-Una de las críticas principales de la prueba de trabajo es la cantidad de energía que se necesita para mantener la seguridad de la red. Para mantener la seguridad y la descentralización, Ethereum en la prueba de trabajo consume 73,2 TWh al año, el equivalente energético de un país mediano como Austria.
+Una de las críticas principales de la prueba de trabajo es la cantidad de energía que se necesita para mantener la seguridad de la red. Para mantener la seguridad y la descentralización, Ethereum en la prueba de trabajo consumía grandes cantidades de energía. Poco antes de pasar a la prueba de participación, los mineros de Ethereum, consumían colectivamente unos 70 TWh/año (aproximadamente lo mismo que la República Checa, según [digiconomista](https://digiconomist.net) el 18 de julio de 2022).
 
 ## Ventajas y desventajas {#pros-and-cons}
 
@@ -83,7 +80,7 @@ Una de las críticas principales de la prueba de trabajo es la cantidad de energ
 
 ## Comparación con la prueba de participación (PoS, por sus siglas en inglés) {#compared-to-pos}
 
-En un nivel alto, la prueba de participación tiene el mismo objetivo final que la prueba de trabajo: ayudar a la red descentralizada a alcanzar un consenso de forma segura. Pero tiene algunas diferencias en el proceso y el personal:
+A un alto nivel, la prueba de participación tiene el mismo objetivo final que la prueba de trabajo: ayudar a la red descentralizada a alcanzar un consenso de forma segura. Pero tiene algunas diferencias en el proceso y el personal:
 
 - La prueba de participación cambia la importancia de la potencia computacional para los ETH apostados.
 - La prueba de participación reemplaza a los mineros por los validadores. Los validadores apuestan su ETH para activar la capacidad de crear nuevos bloques.

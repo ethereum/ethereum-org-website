@@ -284,5 +284,7 @@
   "page-dapps-convex-image-alt": "Convex logo",
   "foundation": "Foundation",
   "transaction-fees": "What are transaction fees?",
-  "page-wallets-get-some": "Get some ETH"
+  "page-wallets-get-some": "Get some ETH",
+  "page-dapps-dapp-description-artblocks": "Art Blocks is dedicated to bringing compelling works of contemporary generative art to life",
+  "page-dapps-artblocks-image-alt": "Art Blocks logo"
 }

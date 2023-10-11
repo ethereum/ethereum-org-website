@@ -37,7 +37,7 @@ As is the fluid nature of Ethereum, teams and products come and go and innovatio
 - ensure that all projects listed still fulfil our criteria
 - verify there aren't products that have been suggested that meet more of our criteria than the ones currently listed
 
-Ethereum.org is maintained by the open source community & we rely on the community to help keep this up to date. If you notice any information about listed projects that needs to be updated, please open an issue or a pull request on our Github repository.
+Ethereum.org is maintained by the open source community & we rely on the community to help keep this up to date. If you notice any information about listed projects that needs to be updated, please open an issue or a pull request on our GitHub repository.
 
 ## Terms of use {#terms-of-use}
 

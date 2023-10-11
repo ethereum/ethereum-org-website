@@ -1,13 +1,13 @@
 ---
 title: .NET Geliştiricileri için Ethereum
-description: Ethereum için .NET Temelli projeler ve araçlarla nasıl geliştireceğinizi öğrenin
+description: .NET tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin
 lang: tr
 incomplete: true
 ---
 
 <div class="featured">.NET tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin</div>
 
-Kripto Para ve Blok Zincirinin avantajlarını kullanarak Merkezsiz uygulamalar (veya "dApps") oluşturmak için Ethereum'u kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkezsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
+Ethereum'u, kripto para birimi ve blok zinciri teknolojisinin avantajlarından faydalanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 
 Ethereum'un üzerinde merkeziyetsiz uygulamalar oluşturun ve Microsoft teknoloji yığınından araçları ve dilleri kullanarak akıllı sözleşmelerle etkileşim kurun: VSCode ve Visual Studio gibi araçlarda .NET Framework/.NET Core/.NET Standard üzerinde C#, # Visual Basic .NET ve F# desteklenir. Microsoft Azure'ı kullanarak Azure üzerinde bir Ethereum Blok zincirini dakikalar içinde yayınlayın. .NET aşkını Ethereum'a taşıyın!
 
@@ -17,7 +17,7 @@ Ethereum'un üzerinde merkeziyetsiz uygulamalar oluşturun ve Microsoft teknoloj
 
 Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/learn/) veya [ethereum.org/developers](/developers/) adreslerine göz atın.
 
-- [Blockchain Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [Blok Zinciri Açıklaması](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Akıllı Sözleşmeleri Anlamak](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity'i Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
@@ -43,7 +43,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
   - Bir hesaba ether transfer aktarma [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Ve daha fazlası!
 
-## Orta seviye makaleler {#intermediate-articles}
+## Orta Seviye Makaleler {#intermediate-articles}
 
 - [Nethereum Çalışma Kitabı/Örnek Listesi](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Kendi Geliştirici Test Zincirlerinizi Yayınlayın](https://github.com/Nethereum/Testchains)
@@ -56,7 +56,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Kaleido ve Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum ve Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## İleri düzey kullanım Şşkilleri {#advanced-use-patterns}
+## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}
 
 - [Azure Anahtar Kasası ve Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
@@ -68,7 +68,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor'da kullanıcı arayüzü ile Nethereum codegen_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _.NET Wasm SPA hafif blok zinciri arayıcısı ve basit cüzdan_
 - [Wonka İş Kuralları Motoru](https://docs.nethereum.com/en/latest/wonka/) - _Kendiliğinden meta veri odaklı bir iş kuralları motoru (hem .NET platformu hem de Ethereum platformu için)_
-- [Nethermind](https://github.com/NethermindEth/nethermind) - _Linux, Windows, MacOs için .NET Core Ethereum istemci_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _Linux, Windows, MacOs için bir .NET Core Ethereum istemcisi_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Ethereum ile ilgili kod tabanlarıyla çalışmak için yardımcı fonksiyonlar_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Hızlı yanıt için önceden yapılandırılmış .NET aygıtları (PoA)_
 
@@ -78,9 +78,9 @@ Daha fazla kaynak mı arıyorsunuz? Göz atın: [ethereum.org/developers](/devel
 
 Nethereum'da çoğu zaman [Gitter](https://gitter.im/Nethereum/Nethereum)'da zaman geçiriyoruz. Burası herkesin kabul edildiği, soru ve cevaplar yazabildiği, yardım alabildiği veya sadece kafa dağıttığı bir yerdir. [Nethereum GitHub deposunda](https://github.com/Nethereum) bir PR veya bir konu açmaktan veya sadece sahip olduğumuz birçok yan/örnek projeye göz atmaktan çekinmeyin. Ayrıca bizi [Discord](https://discord.gg/jQPrR58FxX) üzerinde de bulabilirsiniz!
 
-Nethermind'da [Gitter](https://gitter.im/nethermindeth/nethermind) aracılığıyla iletişime geçelim. PR' veya konular için şuraya bakın: [Nethermind GitHub deposu](https://github.com/NethermindEth/nethermind).
+Eğer Nethermind'da yeniyseniz ve başlamak için yardıma ihtiyaç duyuyorsanız, [Discord](http://discord.gg/PaCMRFdvWT) sunucumuza katılın. Geliştiricilerimiz sorularınızı cevaplamaya hazırdır. [Nethermind GitHub deposunda](https://github.com/NethermindEth/nethermind) bir PR açmaktan veya konu başlatmaktan çekinmeyin.
 
-## Diğer toplu listeler {#other-aggregated-lists}
+## Diğer Toplu Listeler {#other-aggregated-lists}
 
 [Resmi Nethereum Sitesi](https://nethereum.com/)  
 [Resmi Nethermind Sitesi](https://nethermind.io/)

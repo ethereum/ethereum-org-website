@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react"
 import { shuffle } from "lodash"
 
-import { Box, Flex, Image, LinkBox, LinkOverlay, Text } from "@chakra-ui/react"
+import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import data from "../data/contributors.json"
 
 import InlineLink from "./Link"
+import Text from "./OldText"
 
 export interface IProps {}
 

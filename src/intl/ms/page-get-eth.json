@@ -2,6 +2,9 @@
   "page-get-eth-article-keeping-crypto-safe": "Kunci untuk menjaga kripto anda agar selamat",
   "page-get-eth-article-protecting-yourself": "Melindungi diri dan dana anda",
   "page-get-eth-article-store-digital-assets": "Bagaimana untuk menyimpan aset digital dalam Ethereum",
+  "page-get-eth-article-protecting-yourself-desc": "MyCrypto",
+  "page-get-eth-article-keeping-crypto-safe-desc": "Coinbase",
+  "page-get-eth-article-store-digital-assets-desc": "ConsenSys",
   "page-get-eth-cex": "Bursa tukaran berpusat",
   "page-get-eth-cex-desc": "Bursa adalah perniagaan yang membolehkan anda membeli kripto menggunakan mata wang tradisional. Mereka adalah penjaga amanah jumlah ETH yang anda beli sehinggalah anda menghantarnya dalam dompet kawalan anda sendiri.",
   "page-get-eth-checkout-dapps-btn": "Layari pelbagai dapp",
@@ -61,6 +64,6 @@
   "page-get-eth-your-address-desc": "Apabila anda memuat turun dompet, ia akan mencipta alamat ETH awam untuk anda. Ia akan kelihatan seperti ini:",
   "page-get-eth-your-address-desc-3": "Anggap ia seperti e-mel anda, tetapi sebaliknya dengan menghantar mel, ia boleh menerima ETH. Jika anda ingin memindahkan ETH daripada pertukaran kepada dompet anda, gunakan alamat anda sebagai destinasi. Pastikan anda semak sekali lagi sebelum menghantar!",
   "page-get-eth-your-address-wallet-link": "Lihat dompet",
-  "listing-policy-raise-issue-link": "Sampaikan maklum balas",
-  "page-find-wallet-last-updated": "Dikemaskini pada"
+  "listing-policy-raise-issue-link": "Isukan maklumbalas",
+  "page-find-wallet-last-updated": "Dikemas kini pada"
 }

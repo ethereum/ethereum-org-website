@@ -4,7 +4,6 @@ import React, {
   useEffect,
   ComponentPropsWithRef,
 } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -19,8 +18,6 @@ import {
   Heading,
   HeadingProps,
   SimpleGrid,
-  Text,
-  chakra,
   useToken,
 } from "@chakra-ui/react"
 
@@ -35,12 +32,15 @@ import InlineLink, { BaseLink } from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import GatsbyImage, { GatsbyImageType } from "../components/GatsbyImage"
 
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
@@ -129,18 +129,19 @@ const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
   <Button variant="outline" py={2} px={3} borderRadius="0.25em" {...props} />
 )
 
-const MagiciansImage = chakra(GatsbyImage, {
-  baseStyle: {
-    bgSize: "cover",
-    bgRepeat: "no-repeat",
-    alignSelf: "center",
-    w: "full",
-    minW: "240px",
-    maxW: "300px",
-    my: 8,
-    mx: { base: 0, sm: 8, md: 24 },
-  },
-})
+const MagiciansImage: GatsbyImageType = (props) => (
+  <GatsbyImage
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    alignSelf="center"
+    w="full"
+    minW="240px"
+    maxW="300px"
+    my="8"
+    mx={{ base: 0, sm: "8", md: "24" }}
+    {...props}
+  />
+)
 
 const ImageContainer = (props: Pick<FlexProps, "children" | "id">) => (
   <Flex justify="center" {...props} />
@@ -188,7 +189,7 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
 )
 
 const StyledH2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     fontSize="2xl"
     lineHeight="22px"
     letterSpacing={0}
@@ -209,7 +210,7 @@ const H2 = (props: HeadingProps) => (
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     fontWeight="semibold"
@@ -1176,6 +1177,13 @@ const DappsPage = ({
       image: getImage(data.rarible),
       alt: t("page-dapps-rarible-logo-alt"),
     },
+    {
+      title: "Art Blocks",
+      description: t("page-dapps-dapp-description-artblocks"),
+      link: "https://artblocks.io/",
+      image: getImage(data.artblocks),
+      alt: t("page-dapps-artblocks-logo-alt"),
+    },
   ]
 
   const editorChoices = [
@@ -1400,11 +1408,7 @@ const DappsPage = ({
               <Column>
                 <StyledH2>
                   <Translation id="page-dapps-finance-title" />{" "}
-                  <Emoji
-                    fontSize="5xl"
-                    ml={"0.5rem"}
-                    text=":money_with_wings:"
-                  />
+                  <Emoji fontSize="5xl" ml="2" text=":money_with_wings:" />
                 </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-finance-description" />
@@ -1525,7 +1529,7 @@ const DappsPage = ({
               <Column>
                 <StyledH2>
                   <Translation id="page-dapps-gaming-title" />{" "}
-                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":video_game:" />
+                  <Emoji fontSize="5xl" ml="2" text=":video_game:" />
                 </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-gaming-description" />
@@ -1555,7 +1559,7 @@ const DappsPage = ({
               <Column>
                 <StyledH2>
                   <Translation id="page-dapps-technology-title" />{" "}
-                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":keyboard:" />
+                  <Emoji fontSize="5xl" ml="2" text=":keyboard:" />
                 </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-technology-description" />
@@ -1661,7 +1665,11 @@ const DappsPage = ({
               <Column>
                 <H2>
                   <Translation id="page-dapps-metaverse-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":globe_with_meridians:" />
+                  <Emoji
+                    fontSize="5xl"
+                    ml="2"
+                    text=":globe_with_meridians:"
+                  />
                 </H2>
                 <Subtitle>
                   <Translation id="page-dapps-metaverse-description" />
@@ -1696,7 +1704,7 @@ const DappsPage = ({
               <Column>
                 <H2>
                   <Translation id="page-dapps-social-title" />{" "}
-                  <Emoji size={2} ml={"0.5rem"} text=":incoming_envelope:" />
+                  <Emoji fontSize="5xl" ml="2" text=":incoming_envelope:" />
                 </H2>
                 <Subtitle>
                   <Translation id="page-dapps-social-description" />
@@ -2180,6 +2188,9 @@ export const query = graphql`
       ...dappImage
     }
     synthetix: file(relativePath: { eq: "dapps/synthetix.png" }) {
+      ...dappImage
+    }
+    artblocks: file(relativePath: { eq: "dapps/artblocks.png" }) {
       ...dappImage
     }
   }

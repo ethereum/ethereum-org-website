@@ -1,8 +1,11 @@
 import React from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, FlexProps, Heading, Image, Text } from "@chakra-ui/react"
+import { IGatsbyImageData } from "gatsby-plugin-image"
+import { Flex, FlexProps, Image } from "@chakra-ui/react"
 
 import Translation from "./Translation"
+import Text from "./OldText"
+import OldHeading from "./OldHeading"
+import GatsbyImage from "./GatsbyImage"
 import { TranslationKey } from "../utils/translations"
 
 export interface IProps extends FlexProps {
@@ -31,8 +34,7 @@ const CalloutBanner: React.FC<IProps> = ({
     borderRadius="base"
     {...restProps}
   >
-    <Image
-      as={GatsbyImage}
+    <GatsbyImage
       image={image}
       alt={alt}
       objectFit="contain"
@@ -51,14 +53,14 @@ const CalloutBanner: React.FC<IProps> = ({
       pl={{ base: 0, sm: 4, lg: 8 }}
       w={{ base: "full", lg: "inherit" }}
     >
-      <Heading
+      <OldHeading
         as="h2"
         mt={0}
         fontSize={{ base: "2xl", sm: "2rem" }}
         lineHeight="1.4"
       >
         <Translation id={titleKey} />
-      </Heading>
+      </OldHeading>
       <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
         <Translation id={descriptionKey} />
       </Text>

@@ -1,8 +1,9 @@
 import React, { useEffect } from "react"
-import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react"
+import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
 import { useI18next } from "gatsby-plugin-react-i18next"
 
 import Translation from "../Translation"
+import Text from "../OldText"
 
 import { numberToPercent } from "../../utils/numberToPercent"
 import { updateUserStats } from "./utils"
