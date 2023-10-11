@@ -5,7 +5,7 @@ lang: pt
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: Um sistema económico alternativo baseado em princípios regenerativos
 summaryPoint2: Uma tentativa de aproveitar o Ethereum para resolver crises de coordenação a nível mundial, como as alterações climáticas
