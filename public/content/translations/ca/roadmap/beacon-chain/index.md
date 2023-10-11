@@ -3,7 +3,7 @@ title: La cadena de balisa
 description: Aprèn més coses sobre la Cadena de Balisa - la millora que va introduir la prova de participació d'Ethereum.
 lang: ca
 template: upgrade
-image: ../../../../../assets/upgrades/core.png
+image: /upgrades/core.png
 summaryPoint1: La Cadena de Balisa no canvia en res l'Ethereum que utilitzem avui en dia.
 summaryPoint2: Coordinarà la xarxa, fent servei com a capa de consens.
 summaryPoint3: Va introduir la prova de participació a l'ecosistema Ethereum.

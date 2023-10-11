@@ -5,7 +5,7 @@ lang: hi
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: वर्तमान वैज्ञानिक प्रणाली के लिए एक वैश्विक, खुला विकल्प।
 summaryPoint2: एक तकनीक जो वैज्ञानिकों को धन जुटाने, प्रयोग चलाने, डेटा साझा करने, अंतर्दृष्टि वितरित करने और बहुत कुछ करने में सक्षम बनाती है।

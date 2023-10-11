@@ -3,7 +3,7 @@ title: Вывод средств, использованных в стейкин
 description: Страница с общим описаанием того, что такое вывод средств из стейкинга, как он работает и что нужно сделать дольщику, чтобы получить свои вознаграждения.
 lang: ru
 template: staking
-image: ../../../../../assets/staking/leslie-withdrawal.png
+image: /staking/leslie-withdrawal.png
 alt: Носорог Лесли со своими вознаграждениями за стейкинг
 sidebarDepth: 2
 summaryPoints:

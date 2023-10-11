@@ -3,7 +3,7 @@ title: Ethereum-Roadmap
 description: Der Weg zu mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit für Ethereum.
 lang: de
 template: roadmap
-image: ../../../../assets/roadmap/roadmap-main.png
+image: /roadmap/roadmap-main.png
 alt: "Ethereum-Roadmap"
 summaryPoints:
 buttons:

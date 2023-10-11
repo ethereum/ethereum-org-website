@@ -4,7 +4,7 @@ description: Обзор того, как разместить ETH в пуле
 lang: ru
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Носорог Лесли плавает в облаках.
 sidebarDepth: 2
 summaryPoints:
@@ -22,7 +22,7 @@ summaryPoints:
 Протокол Ethereum нативно не поддерживает делегирование ставок, поэтому эти услуги предлагаются для удовлетворения существующего спроса. Если у вас есть 32 ETH для стейкинга, но вы не чувствуете себя комфортно при работе с оборудованием, службы SaaS позволяют делегировать сложную часть, пока вы зарабатываете собственные вознаграждения за блоки.
 
 <CardGrid>
-  <Card title="Ваш собственный валидатор" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Ваш собственный валидатор" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Просто начать" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Ограничьте свои риски" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>

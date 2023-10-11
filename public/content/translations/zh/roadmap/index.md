@@ -3,7 +3,7 @@ title: 以太坊路线图
 description: 提高以太坊可扩展性、安全性和可持续性的路径。
 lang: zh
 template: roadmap
-image: ../../../../assets/roadmap/roadmap-main.png
+image: /roadmap/roadmap-main.png
 alt: "以太坊路线图"
 summaryPoints:
 buttons:

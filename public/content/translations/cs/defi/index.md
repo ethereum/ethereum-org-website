@@ -4,7 +4,7 @@ description: Přehled DeFi na platformě Ethereum
 lang: cs
 template: use-cases
 emoji: ":money_with_wings:"
-image: ../../../../assets/use-cases/defi.png
+image: /use-cases/defi.png
 alt: Logo Eth vyrobené z cihel lega.
 sidebarDepth: 2
 summaryPoint1: Globální, otevřená alternativa ke stávající finanční soustavě.

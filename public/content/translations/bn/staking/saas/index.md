@@ -4,7 +4,7 @@ description: পুল করা দিয়ে কীভাবে ETH স্�
 lang: bn
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Leslie the rhino মেঘের মধ্যে ভাসছে।
 sidebarDepth: 2
 summaryPoints:
@@ -22,7 +22,7 @@ summaryPoints:
 ইথেরিয়াম প্রোটোকল স্থানীয়ভাবে অংশীদারিত্বের প্রতিনিধিকে সমর্থন করে না, তাই এই চাহিদা পূরণের জন্য এই পরিষেবাগুলি তৈরি করা হয়েছে। যদি আপনার কাছে 32 ETH থাকে, কিন্তু আপনি হার্ডওয়্যার নিয়ে কাজ করতে স্বাচ্ছন্দ্য বোধ করেন না, তবে SaaS পরিষেবাগুলি আপনাকে হার্ড অংশ অর্পণ করার অনুমতি দেয় যখন আপনি স্থানীয় ব্লক পুরস্কার অর্জন করেন।
 
 <CardGrid>
-  <Card title="আপনার নিজস্ব যাচাইকারী" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="আপনার নিজস্ব যাচাইকারী" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="শুরু করা সহজ" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="আপনার ঝুঁকি সীমিত করুন" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>

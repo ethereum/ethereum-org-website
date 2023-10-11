@@ -20,7 +20,7 @@ Em vez de isso, ReFi visa resolver problemas ambientais, comunitários ou sociai
 
 Um dos princípios de ReFi é o conceito de economia regenerativa criada por John Fullerton do [Capital Institute](https://capitalinstitute.org). Ele propôs oito princípios ligados entre si que criam a base para saúde sistemática:
 
-![Oito princípios interligados](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Oito princípios interligados](./refi-regenerative-economy-diagram.png)
 
 ReFi espera aplicar estes princípios usando [contratos inteligentes](/developers/docs/smart-contracts/) e aplicações baseadas em [finanças descentralizadas (DeFi)](/defi/) para incentivar comportamentos regenerativos, e.g. restaurar ecossistemas degradados e facilitar colaboração a larga escala em problemas globais como alterações climáticas ou perda de biodiversidade.
 
