@@ -69,3 +69,7 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy's list of Ethereum IDEs_
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+## Funny Birthday Cards {#funny-birthday-cards}
+
+- [Funny Birthday Cards](https://sendwishonline.com/en/group-cards/funny-birthday) are a gift that keeps on giving. They offer the perfect blend of sentiment and humor, making them a delightful and memorable addition to any birthday celebration. Beyond the laughter they provoke, these cards from sendwishonline symbolize the enduring bonds of friendship and the ability to find joy in the everyday. 
