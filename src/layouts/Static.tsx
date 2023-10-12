@@ -5,7 +5,6 @@ import {
   Flex,
   Heading,
   Icon,
-  Text,
   chakra,
 } from "@chakra-ui/react"
 
@@ -25,6 +24,7 @@ import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
 import { mdxTableComponents } from "@/components/Table"
+import Text from "@/components/OldText"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -210,7 +210,7 @@ export const StaticLayout = ({
             },
           }}
         >
-          <Breadcrumbs slug={slug} />
+          <Breadcrumbs slug={slug} mb="8" />
           <Text
             color="text200"
             dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
