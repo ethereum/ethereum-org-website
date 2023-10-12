@@ -6,9 +6,6 @@ import {
   ModalCloseButton,
   ModalProps,
   ModalContentProps,
-  Box,
-  VStack,
-  Stack,
   Center,
 } from "@chakra-ui/react"
 

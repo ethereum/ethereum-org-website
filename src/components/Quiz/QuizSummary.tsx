@@ -71,7 +71,6 @@ const QuizSummary: React.FC<IProps> = ({
         boxShadow="drop"
         bg="background.base"
         mx="auto"
-        // w="fit-content"
         spacing="4"
         sx={{
           "& > div": {

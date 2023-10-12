@@ -1,12 +1,5 @@
 import * as React from "react"
-import {
-  Box,
-  Center,
-  Spinner,
-  Stack,
-  StackProps,
-  VStack,
-} from "@chakra-ui/react"
+import { Center, Spinner, Stack, StackProps, VStack } from "@chakra-ui/react"
 
 import { StandaloneQuizHeading } from "./StandaloneQuizHeading"
 import { AnswerIcon } from "./AnswerIcon"

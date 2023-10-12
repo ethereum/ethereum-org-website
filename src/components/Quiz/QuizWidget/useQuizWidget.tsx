@@ -1,10 +1,4 @@
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react"
+import { useCallback, useContext, useEffect, useMemo, useState } from "react"
 import { shuffle } from "lodash"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
