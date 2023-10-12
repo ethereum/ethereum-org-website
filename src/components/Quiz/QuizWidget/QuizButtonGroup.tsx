@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Center, Icon } from "@chakra-ui/react"
+import { FaTwitter } from "react-icons/fa"
 import { Button } from "../../Buttons"
 import Translation from "../../Translation"
-import { FaTwitter } from "react-icons/fa"
 import { AnswerChoice, Question } from "../../../types"
 
 export type QuizButtonGroupProps = {
