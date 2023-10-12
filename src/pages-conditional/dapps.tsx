@@ -316,29 +316,6 @@ const RightColumn = (props: ChildOnlyProp) => (
   <Box w="full" m={{ base: "auto 0", lg: 0 }} ml={{ lg: 8 }} {...props} />
 )
 
-const AddDapp = (props: ChildOnlyProp) => (
-  <Flex
-    direction={{ base: "column", sm: "row" }}
-    justify="space-between"
-    align={{ base: "flex-start", sm: "center" }}
-    borderRadius="base"
-    border="1px solid"
-    borderColor="border"
-    p={6}
-    mt={6}
-    {...props}
-  />
-)
-
-const AddDappButton = (props: ComponentPropsWithRef<typeof ButtonLink>) => (
-  <ButtonLink
-    variant="outline"
-    mt={{ base: 8, sm: 0 }}
-    ml={{ base: 0, md: 8 }}
-    {...props}
-  />
-)
-
 const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
   <Callout flex="1 1 416px" minH="full" mt={{ base: 48, lg: 32 }} {...props} />
 )
@@ -1198,33 +1175,33 @@ const DappsPage = ({
       pillColor: "tagMint",
     },
     {
-      name: "Dark Forest",
-      description: t("page-dapps-editors-choice-dark-forest"),
-      url: "https://zkga.me",
-      image: getImage(data.darkforestec),
-      alt: t("page-dapps-dark-forest-logo-alt"),
-      background: "#080808",
-      type: CategoryType.GAMING,
-      pillColor: "tagOrange",
-    },
-    {
-      name: "Foundation",
-      description: t("page-dapps-editors-choice-foundation"),
-      url: "https://foundation.app",
-      image: getImage(data.foundationec),
-      alt: t("page-dapps-foundation-logo-alt"),
-      background: "#ffffff",
+      name: "OpenSea",
+      description: t("page-dapps-dapp-description-opensea"),
+      url: "https://opensea.io/",
+      image: getImage(data.opensea),
+      alt: t("page-dapps-opensea-logo-alt"),
+      background: "#181b21",
       type: CategoryType.COLLECTIBLES,
       pillColor: "tagBlue",
     },
     {
-      name: "PoolTogether",
-      description: t("page-dapps-editors-choice-pooltogether"),
-      url: "https://pooltogether.com",
-      image: getImage(data.pooltogetherec),
-      alt: t("page-dapps-pooltogether-logo-alt"),
-      background: "#7e4cf2",
-      type: CategoryType.FINANCE,
+      name: "Gods Unchained",
+      description: t("page-dapps-dapp-description-gods-unchained"),
+      url: "https://godsunchained.com/",
+      image: getImage(data.gods),
+      alt: t("page-dapps-gods-unchained-logo-alt"),
+      background: "#111c25",
+      type: CategoryType.GAMING,
+      pillColor: "tagOrange",
+    },
+    {
+      name: "Ethereum Name Service",
+      description: t("page-dapps-dapp-description-ens"),
+      url: "https://ens.domains/",
+      image: getImage(data.ens),
+      alt: t("page-dapps-ens-logo-alt"),
+      background: "#fff",
+      type: CategoryType.SOCIAL,
       pillColor: "tagMint",
     },
   ]
@@ -1238,7 +1215,7 @@ const DappsPage = ({
     buttons: [
       {
         content: t("page-dapps-explore-dapps-title"),
-        to: "#explore",
+        to: "#beginner",
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1343,12 +1320,12 @@ const DappsPage = ({
             </StepBox>
           </StepBoxContainer>
         </Row>
-        <H3>
-          <Translation id="page-dapps-editors-choice-header" />{" "}
+        <H3 id="beginner">
+          <Translation id="page-dapps-beginner-friendly-header" />{" "}
           <Emoji text=":+1:" />
         </H3>
         <Text>
-          <Translation id="page-dapps-editors-choice-description" />
+          <Translation id="page-dapps-beginner-friendly-description" />
         </Text>
         <StyledCardGrid>
           {editorChoices.map((choice, idx) => (
@@ -1749,19 +1726,6 @@ const DappsPage = ({
         )}
         {/* General content for all categories */}
         <Content>
-          <AddDapp>
-            <Box>
-              <StyledH2>
-                <Translation id="page-dapps-add-title" />
-              </StyledH2>
-              <Text mb={0} mr={4}>
-                <Translation id="listing-policy-disclaimer" />{" "}
-              </Text>
-            </Box>
-            <AddDappButton to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.yaml&title=">
-              <Translation id="page-dapps-add-button" />
-            </AddDappButton>
-          </AddDapp>
           <CenterDivider />
           {categories[selectedCategory].benefits && (
             <Box mt={12}>
