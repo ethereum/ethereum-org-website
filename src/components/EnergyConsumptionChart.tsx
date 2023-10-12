@@ -1,11 +1,10 @@
 import React from "react"
-import { Box, Center, useToken } from "@chakra-ui/react"
+import { Box, Center, useBreakpointValue, useToken } from "@chakra-ui/react"
 import {
   BarChart,
   Bar,
   Cell,
   XAxis,
-  YAxis,
   Text,
   LabelList,
   ResponsiveContainer,
@@ -20,6 +19,12 @@ interface ITickProps {
   y: number
   payload: { value: number | string }
 }
+
+type Data = Array<{
+  name: string
+  amount: number
+  color: string
+}>
 
 const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
   const textColor = useToken("colors", "text")
@@ -47,77 +52,137 @@ const EnergyConsumptionChart: React.FC = () => {
 
   const textColor = useToken("colors", "text")
 
-  const data = [
-    {
-      name: "Global data centers",
-      amount: 190,
-      color: "#C1B6F5",
-    },
-    {
-      name: "Bitcoin",
-      amount: 149,
-      color: "#C1B6F5",
-    },
-    {
-      name: "Gold mining",
-      amount: 131,
-      color: "#C1B6F5",
-    },
-    {
-      name: "Gaming in USA",
-      amount: 34,
-      color: "#C1B6F5",
-    },
-    {
-      name: "PoW Ethereum",
-      amount: 21,
-      color: "#C1B6F5",
-    },
-    {
-      name: "Google",
-      amount: 19,
-      color: "#C1B6F5",
-    },
-    {
-      name: "Netflix",
-      amount: 0.457,
-      color: "#C1B6F5",
-    },
-    {
-      name: "PayPal",
-      amount: 0.26,
-      color: "#C1B6F5",
-    },
-    {
-      name: "Airbnb",
-      amount: 0.02,
-      color: "#C1B6F5",
-    },
-    {
-      name: "PoS Ethereum",
-      amount: 0.0026,
-      color: "#C1B6F5",
-    },
-  ]
+  const data = useBreakpointValue<Data>({
+    base: [
+      {
+        name: t("energy-consumption-chart-global-data-centers-label"),
+        amount: 190,
+        color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#F2A900",
+      },
+      {
+        name: t("energy-consumption-chart-gaming-us-label"),
+        amount: 34,
+        color: "#71BB8A",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pos-label"),
+        amount: 0.0026,
+        color: "#C1B6F5",
+      },
+    ],
+    sm: [
+      {
+        name: t("energy-consumption-chart-global-data-centers-label"),
+        amount: 190,
+        color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
+      },
+      {
+        name: t("energy-consumption-gold-mining-cbeci-label"),
+        amount: 131,
+        color: "#F2A900",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
+      },
+      {
+        name: t("energy-consumption-chart-netflix-label"),
+        amount: 0.457,
+        color: "#E50914",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pos-label"),
+        amount: 0.0026,
+        color: "#C1B6F5",
+      },
+    ],
+    md: [
+      {
+        name: t("energy-consumption-chart-global-data-centers-label"),
+        amount: 190,
+        color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
+      },
+      {
+        name: t("energy-consumption-gold-mining-cbeci-label"),
+        amount: 131,
+        color: "#D7B14A",
+      },
+      {
+        name: t("energy-consumption-chart-gaming-us-label"),
+        amount: 34,
+        color: "#71BB8A",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
+      },
+      {
+        name: "Google",
+        amount: 19,
+        color: "#E50914",
+      },
+      {
+        name: t("energy-consumption-chart-netflix-label"),
+        amount: 0.457,
+        color: "#E50914",
+      },
+      {
+        name: t("energy-consumption-chart-paypal-label"),
+        amount: 0.26,
+        color: "#C1B6F5",
+      },
+      {
+        name: "AirBnB",
+        amount: 0.02,
+        color: "#E50914",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pos-label"),
+        amount: 0.0026,
+        color: "#C1B6F5",
+      },
+    ],
+  })
 
   return (
     <Center w="full">
       <Box maxW="500px" w="full">
-        <ResponsiveContainer height={550}>
+        <ResponsiveContainer height={500}>
           <BarChart
-            margin={{ top: 30, right: 40, bottom: 30, left: 20 }}
+            margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
+            barGap={15}
+            barSize={38}
             data={data}
-            barGap={20}
-            barSize={30}
-            layout={"vertical"}
           >
-            <XAxis type={"number"} orientation={"bottom"} />
-            <YAxis
-              type={"category"}
-              orientation={"left"}
-              dataKey={"name"}
-              tick={{ fontSize: 14 }}
-              width={120}
+            <XAxis
+              dataKey="name"
+              tickLine={false}
+              axisLine={false}
+              // @ts-ignore
+              tick={<CustomTick />}
+              interval={0}
             />
             <Legend
               content={
@@ -133,7 +198,7 @@ const EnergyConsumptionChart: React.FC = () => {
               isAnimationActive={false}
             >
               <LabelList
-                position="right"
+                position="top"
                 fill={textColor}
                 fontSize={14}
                 offset={10}
