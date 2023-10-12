@@ -6,7 +6,7 @@ import {
   LinkBox,
   LinkOverlay,
 BoxProps,
-  type StackProps,
+StackProps,
   useColorModeValue,
 } from "@chakra-ui/react"
 
