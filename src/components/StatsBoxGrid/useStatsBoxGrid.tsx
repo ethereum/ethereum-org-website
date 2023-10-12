@@ -16,7 +16,7 @@ export const ranges = ["30d", "90d"] as const
 
 export interface State {
   value: string
-  data: Array<{ timestamp: number }>
+  data: Array<{ timestamp: number; value: number }>
   hasError: boolean
 }
 
@@ -30,8 +30,11 @@ export interface Metric {
   apiProvider: string
 }
 
-interface IFetchPriceResponse {
-  prices: Array<[number, number]>
+interface IFetchEthstoreResponse {
+  data: {
+    day: number
+    effective_balances_sum_wei: number
+  }
 }
 
 interface IFetchNodeResponse {
@@ -52,7 +55,7 @@ export const useStatsBoxGrid = () => {
   const { t } = useTranslation()
   const { language } = useI18next()
 
-  const [ethPrices, setEthPrices] = useState<State>({
+  const [totalEthStaked, setTotalEthStaked] = useState<State>({
     data: [],
     value: "0",
     hasError: false,
@@ -72,9 +75,8 @@ export const useStatsBoxGrid = () => {
     value: "0",
     hasError: false,
   })
-  const [selectedRangePrice, setSelectedRangePrice] = useState<string>(
-    ranges[0]
-  )
+  const [selectedRangeTotalStaked, setSelectedRangeTotalStaked] =
+    useState<string>(ranges[0])
   const [selectedRangeTvl, setSelectedRangeTvl] = useState<string>(ranges[0])
   const [selectedRangeNodes, setSelectedRangeNodes] = useState<string>(
     ranges[0]
@@ -84,13 +86,12 @@ export const useStatsBoxGrid = () => {
   useEffect(() => {
     const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
 
-    const formatPrice = (price: number): string => {
+    const formatTotalStaked = (amount: number): string => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
-        style: "currency",
-        currency: "USD",
+        notation: "compact",
         minimumSignificantDigits: 3,
         maximumSignificantDigits: 4,
-      }).format(price)
+      }).format(amount)
     }
 
     const formatTVL = (tvl: number): string => {
@@ -118,33 +119,56 @@ export const useStatsBoxGrid = () => {
       }).format(nodes)
     }
 
-    const fetchPrices = async (): Promise<void> => {
+    const weiToRoundedEther = (wei: number): number => Math.floor(wei * 1e-18)
+
+    const fetchTotalStaked = async (): Promise<void> => {
+      const { href: ethstoreLatest } = new URL(
+        "api/v1/ethstore/latest",
+        "https://beaconcha.in"
+      )
       try {
-        const {
-          data: { prices },
-        } = await axios.get<IFetchPriceResponse>(
-          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=90&interval=daily`
+        // 1- Use initial call to `latest` to fetch current Beacon Chain "day" (for use in secondary fetches)
+        const ethStoreResponse = await getData<IFetchEthstoreResponse>(
+          ethstoreLatest
         )
-        const data = prices
-          .map(([timestamp, value]) => ({
-            timestamp,
-            value,
-          }))
-          .sort((a, b) => a.timestamp - b.timestamp)
-        const value = formatPrice(data[data.length - 1].value)
-        setEthPrices({
-          data, // historical data: {timestamp: unix-milliseconds, value }
-          value, // current value
+        const {
+          data: { day, effective_balances_sum_wei },
+        } = ethStoreResponse
+        const valueTotalEth = weiToRoundedEther(effective_balances_sum_wei)
+        const currentValueTotalEth = formatTotalStaked(valueTotalEth)
+        const MS_PER_DAY = 1000 * 60 * 60 * 24
+        const [DAYS_TO_FETCH, DAY_DELTA] = [90, 5]
+        const data = [
+          {
+            timestamp: new Date().getTime(),
+            value: valueTotalEth,
+          },
+        ]
+        // 2- Perform multiple API calls to fetch data for the last 90 days, `getData` for caching
+        for (let i = DAY_DELTA; i <= DAYS_TO_FETCH; i += DAY_DELTA) {
+          const lookupDay = day - i
+          const timestamp = new Date().getTime() - i * MS_PER_DAY
+          const { href: ethstoreDay } = new URL(
+            `api/v1/ethstore/${lookupDay}`,
+            "https://beaconcha.in"
+          )
+          const {
+            data: { effective_balances_sum_wei: sumWei },
+          } = await getData<IFetchEthstoreResponse>(ethstoreDay)
+          const value = weiToRoundedEther(sumWei)
+          data.push({ timestamp, value })
+        }
+        data.sort((a, b) => a.timestamp - b.timestamp)
+        setTotalEthStaked({
+          data, // historical data: { timestamp: unix-milliseconds, value }
+          value: currentValueTotalEth, // current value
           hasError: false,
         })
       } catch (error) {
-        setEthPrices((ethPrices) => ({
-          ...ethPrices,
-          hasError: true,
-        }))
+        setTotalEthStaked((prev) => ({ ...prev, hasError: true }))
       }
     }
-    fetchPrices()
+    fetchTotalStaked()
 
     const fetchNodes = async (): Promise<void> => {
       try {
@@ -159,7 +183,7 @@ export const useStatsBoxGrid = () => {
           .sort((a, b) => a.timestamp - b.timestamp)
         const value = formatNodes(data[data.length - 1].value)
         setNodes({
-          data, // historical data: {timestamp: unix-milliseconds, value }
+          data, // historical data: { timestamp: unix-milliseconds, value }
           value, // current value
           hasError: false,
         })
@@ -186,7 +210,7 @@ export const useStatsBoxGrid = () => {
           .sort((a, b) => a.timestamp - b.timestamp)
         const value = formatTVL(data[data.length - 1].value)
         setValueLocked({
-          data, // historical data: {timestamp: unix-milliseconds, value }
+          data, // historical data: { timestamp: unix-milliseconds, value }
           value, // current value
           hasError: false,
         })
@@ -230,23 +254,23 @@ export const useStatsBoxGrid = () => {
 
   const metrics: Array<Metric> = [
     {
-      apiProvider: "CoinGecko",
-      apiUrl: "https://www.coingecko.com/en/coins/ethereum",
-      title: t("page-index-network-stats-eth-price-description"),
-      description: t("page-index-network-stats-eth-price-explainer"),
+      apiProvider: "Beaconcha.in",
+      apiUrl: "https://beaconcha.in/",
+      title: t("page-index-network-stats-total-eth-staked"),
+      description: t("page-index-network-stats-total-eth-staked-explainer"),
       buttonContainer: (
         <RangeSelector
-          state={selectedRangePrice}
-          setState={setSelectedRangePrice}
+          state={selectedRangeTotalStaked}
+          setState={setSelectedRangeTotalStaked}
           matomo={{
             eventCategory: "Stats",
             eventAction: "click",
-            eventName: "eth price",
+            eventName: "total eth staked",
           }}
         />
       ),
-      state: ethPrices,
-      range: selectedRangePrice,
+      state: totalEthStaked,
+      range: selectedRangeTotalStaked,
     },
     {
       apiProvider: "Etherscan",

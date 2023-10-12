@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Geçen sefer [Solidity'nin büyük resmine baktık ve](https://soliditydeveloper.com/solidity-overview-2020) hâlihazırda [create-eth-app](https://github.com/PaulRBerg/create-eth-app)'den bahsettik. Şimdi onu nasıl kullanacağınızı, hangi özelliklerin entegre olduğunu ve nasıl genişleteceğinize dair ek fikirleri öğreneceksiniz. [Sablier](http://sablier.finance/)'in kurucusu Paul Razvan Berg tarafından başlatılan bu uygulama, ön uç geliştirmenizi başlatacak ve beraberinde aralarından seçim yapabileceğiniz çeşitli isteğe bağlı entegrasyonlar getiriyor.
+Geçen sefer [Solidity'nin büyük resmine baktık ve](https://soliditydeveloper.com/solidity-overview-2020) hâlihazırda [create-eth-app](https://github.com/PaulRBerg/create-eth-app)'den bahsettik. Şimdi onu nasıl kullanacağınızı, hangi özelliklerin entegre olduğunu ve nasıl genişleteceğinize dair ek fikirleri öğreneceksiniz. [Sablier](http://sablier.com/)'in kurucusu Paul Razvan Berg tarafından başlatılan bu uygulama, ön uç geliştirmenizi başlatacak ve beraberinde aralarından seçim yapabileceğiniz çeşitli isteğe bağlı entegrasyonlar getiriyor.
 
 ## Kurulum {#installation}
 
@@ -51,7 +51,7 @@ Perde arkasında [create-react-app](https://github.com/facebook/create-react-app
 
 ### ethers.js {#ethersjs}
 
-[Web3](https://web3js.readthedocs.io/en/v1.2.7/) hâlâ çoğunlukla kullanılıyor olsa da, [ethers.js](https://docs.ethers.io/) son yıl içinde bir alternatif olarak büyük bir ivme kazanmıştır ve _create-eth-app_ içine entegre edilmiştir. Bununla çalışabilir, onu Web3 olarak değiştirebilir veya neredeyse beta sürümünden çıkmış olan [ethers.js v5](https://docs-beta.ethers.io/)'e yükseltmeyi düşünebilirsiniz.
+[Web3](https://docs.web3js.org/) hâlâ çoğunlukla kullanılıyor olsa da, [ethers.js](https://docs.ethers.io/) son yıl içinde bir alternatif olarak büyük bir ivme kazanmıştır ve _create-eth-app_ içine entegre edilmiştir. Bununla çalışabilir, onu Web3 olarak değiştirebilir veya neredeyse beta sürümünden çıkmış olan [ethers.js v5](https://docs-beta.ethers.io/)'e yükseltmeyi düşünebilirsiniz.
 
 ### The Graph {#the-graph}
 
@@ -103,7 +103,7 @@ Ne yazık ki, bu yazının yazıldığı sırada entegrasyon yalnızca Uniswap v
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.finance/), kullanıcıların para ödemeleri akışına izin verir. Tek bir ödeme günü yerine, ilk kurulumdan sonra başka bir yönetim olmaksızın paranızı sürekli olarak alırsınız. Bu entegrasyon [kendi alt grafiğini](https://thegraph.com/explorer/subgraph/sablierhq/sablier) içerir.
+[Sablier](https://sablier.com/), kullanıcıların para ödemeleri akışına izin verir. Tek bir ödeme günü yerine, ilk kurulumdan sonra başka bir yönetim olmaksızın paranızı sürekli olarak alırsınız. Bu entegrasyon [kendi alt grafiğini](https://thegraph.com/explorer/subgraph/sablierhq/sablier) içerir.
 
 ## Sırada ne var? {#whats-next}
 

@@ -40,9 +40,13 @@ Informazioni più dettagliate su questi diversi tipi e categorie sono disponibil
 ### Standard per i token {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Un'interfaccia standard per token fungibili (intercambiabili), come i token di voto, i token di staking o le valute virtuali.
+  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363): Definisce l'intefaccia di un token per i token ERC-20, che supporta l'esecuzione del codice del destinatario dopo trasferimenti o transferFrom, o il codice di chi spende dopo l'approvazione.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Un'interfaccia standard per token non fungibili, come un atto relativo a opere d'arte o canzoni.
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - Uno standard per i token migliore rispetto a ERC-20.
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Uno standard per i token che può contenere risorse sia fungibili che non fungibili.
+  - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309): Un evento standardizzato emesso alla creazione/trasferimento di uno o più token non fungibili, utilizzando gli identificativi consecutivi del token.
+  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400): Estensione dell'interfaccia per il ruolo del consumatore dell'EIP-721.
+  - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907): Aggiunge un ruolo limitato nel tempo con autorizzazioni limitate ai token ERC-721.
+- [ERC-777](/developers/docs/standards/tokens/erc-777/): **(SCONSIGLIATO)** Uno standard token che migliora ERC-20.
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/): Uno standard per token contenente sia risorse fungibili che non fungibili.
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - Uno standard di cassaforte tokenizzata progettato per ottimizzare e unificare i parametri tecnici delle cassaforti di resa.
 
 Maggiori informazioni sugli [standard peri token](/developers/docs/standards/tokens/).

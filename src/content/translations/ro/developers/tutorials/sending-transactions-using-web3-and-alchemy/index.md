@@ -44,10 +44,10 @@ Ca majoritatea dezvoltatorilor de blockchain la început de drum, poate aţi fă
 
 `eth_sendTransaction` și `eth_sendRawTransaction` sunt amândouă funcții API Ethereum care transmit o tranzacție către rețeaua Ethereum, pentru ca aceasta să fie adăugată la un bloc viitor. Acestea diferă prin modul de gestionare a semnării tranzacțiilor.
 
-- [`eth_sendTransaction`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#eth-sendtransaction) este utilizată pentru trimiterea unei tranzacții _nesemnate_, adică nodul către care trimiteți tranzacția trebuie să vă gestioneze cheia privată pentru a putea semna tranzacția înainte de a o transmite în lanț. Since Alchemy doesn't hold user's private keys, they do not support this method.
-- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) este utilizată la transmiterea tranzacțiilor deja semnate. Aceasta înseamnă că trebuie să utilizați mai întâi [`signTransaction(tx, private_key)`](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#signtransaction), apoi să treceți rezultatul în `eth_sendRawTransaction`.
+- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) este utilizată pentru trimiterea unei tranzacții _nesemnate_, adică nodul către care trimiteți tranzacția trebuie să vă gestioneze cheia privată pentru a putea semna tranzacția înainte de a o transmite în lanț. Since Alchemy doesn't hold user's private keys, they do not support this method.
+- [`eth_sendRawTransaction`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) este utilizată la transmiterea tranzacțiilor deja semnate. Aceasta înseamnă că trebuie să utilizați mai întâi [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction), apoi să treceți rezultatul în `eth_sendRawTransaction`.
 
-Atunci când utilizați web3, este accesat `eth_sendRawTransaction` prin apelarea funcției [„web3.eth.sendSignedTransaction”](https://web3js.readthedocs.io/en/v1.2.0/web3-eth.html#sendsignedtransaction).
+Atunci când utilizați web3, este accesat `eth_sendRawTransaction` prin apelarea funcției [„web3.eth.sendSignedTransaction”](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction).
 
 This is what we will be using in this tutorial.
 

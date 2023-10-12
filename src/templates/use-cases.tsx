@@ -1,8 +1,7 @@
-import React from "react"
+import React, { ComponentProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Badge,
   Box,
@@ -11,7 +10,6 @@ import {
   chakra,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   Icon,
   ListItem as ChakraListItem,
@@ -23,8 +21,9 @@ import {
 import { MdExpandMore } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import ButtonDropdown, {
+  IProps as ButtonDropdownProps,
   List as ButtonDropdownList,
 } from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
@@ -34,8 +33,8 @@ import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import InlineLink, { BaseLink } from "../components/Link"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -50,6 +49,10 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -62,20 +65,20 @@ const commonHeadingProps: HeadingProps = {
   lineHeight: 1.4,
 }
 
-const H1 = (props: HeadingProps) => (
-  <Heading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+export const H1 = (props: HeadingProps) => (
+  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
-const H2 = (props: HeadingProps) => (
-  <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
+export const H2 = (props: HeadingProps) => (
+  <OldHeading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
-const H3 = (props: HeadingProps) => (
-  <Heading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+export const H3 = (props: HeadingProps) => (
+  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
-const H4 = (props: HeadingProps) => (
-  <Heading
+export const H4 = (props: HeadingProps) => (
+  <OldHeading
     as="h4"
     {...commonHeadingProps}
     fontSize="xl"
@@ -84,9 +87,9 @@ const H4 = (props: HeadingProps) => (
   />
 )
 
-const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
-const Pre = (props: ChildOnlyProp) => (
+export const Pre = (props: ChildOnlyProp) => (
   <chakra.pre
     bg="preBackground"
     border="1px"
@@ -100,14 +103,14 @@ const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-const Paragraph = (props: ChildOnlyProp) => (
+export const Paragraph = (props: ChildOnlyProp) => (
   <Text color="text300" mt={8} mb={4} {...props} />
 )
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -115,7 +118,7 @@ const components = {
   p: Paragraph,
   li: chakra.li,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   MeetupList,
   RandomAppList,
   Logo,
@@ -132,6 +135,7 @@ const components = {
   ExpandableCard,
   YouTube,
   QuizWidget,
+  GlossaryTooltip,
 }
 
 const HeroContainer = (props: ChildOnlyProp) => (
@@ -152,7 +156,7 @@ const TitleCard = (props: ChildOnlyProp) => {
 
   return (
     <Flex
-      bg={{ base: "ednBackground", lg: "background" }}
+      bg={{ base: "ednBackground", lg: "background.base" }}
       border="1px"
       borderColor="border"
       borderRadius="base"
@@ -170,26 +174,27 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
+export const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
-const HeroImage = chakra(GatsbyImage, {
-  baseStyle: {
-    alignSelf: {
+const HeroImage: GatsbyImageType = (props) => (
+  <GatsbyImage
+    alignSelf={{
       base: "center",
       lg: "normal",
-    },
-    backgroundSize: "cover",
-    flex: "1 1 100%",
-    right: 0,
-    bottom: 0,
-    width: "full",
-    overflow: "initial",
-    maxH: {
+    }}
+    backgroundSize="cover"
+    flex="1 1 100%"
+    right={0}
+    bottom={0}
+    width="full"
+    overflow="initial"
+    maxH={{
       base: "340px",
       lg: "full",
-    },
-  },
-})
+    }}
+    {...props}
+  />
+)
 
 export const Page = (props: FlexProps) => (
   <Flex
@@ -206,6 +211,7 @@ export const Page = (props: FlexProps) => (
 
 export const InfoColumn = (props: ChildOnlyProp) => (
   <Flex
+    as="aside"
     flexDirection="column"
     flex="0 1 400px"
     ml={8}
@@ -226,24 +232,18 @@ export const InfoTitle = (props: ChildOnlyProp) => (
   />
 )
 
-type ButtonDropdownProps = Parameters<typeof ButtonDropdown>[0]
-
-export const StyledButtonDropdown = (
-  props: FlexProps & ButtonDropdownProps
-) => (
-  <Flex
-    as={ButtonDropdown}
-    alignSelf={{ sm: "flex-end" }}
-    justifyContent="flex-end"
-    mb={8}
-    textAlign="center"
-    {...props}
-  />
+export const StyledButtonDropdown = ({
+  list,
+  ...rest
+}: FlexProps & Pick<ButtonDropdownProps, "list">) => (
+  <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
+    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
+  </Flex>
 )
 
-export const MobileButtonDropdown = (props: ButtonDropdownProps) => (
-  <StyledButtonDropdown mb={0} {...props} />
-)
+export const MobileButtonDropdown = (
+  props: ComponentProps<typeof StyledButtonDropdown>
+) => <StyledButtonDropdown mb={0} {...props} />
 
 export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const lgBp = useToken("breakpoints", "lg")
@@ -261,7 +261,7 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
           pl: 4,
           ml: -4,
           borderLeft: "1px dotted",
-          borderColor: "primary",
+          borderColor: "primary.base",
         },
         ".citation p": {
           color: "text200",
@@ -275,7 +275,7 @@ export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
     <Box
-      bg="background"
+      bg="background.base"
       boxShadow={`0 -1px 0 ${borderColor}`}
       position="sticky"
       bottom={0}
@@ -343,7 +343,7 @@ const UseCasePage = ({
         text: t("template-usecase-dropdown-nft"),
         to: "/nft/",
         matomo: {
-          eventCategory: "use cases menuy",
+          eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "nft",
         },
@@ -352,7 +352,7 @@ const UseCasePage = ({
         text: t("template-usecase-dropdown-dao"),
         to: "/dao/",
         matomo: {
-          eventCategory: "use cases menuy",
+          eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "dao",
         },
@@ -361,7 +361,7 @@ const UseCasePage = ({
         text: t("template-usecase-dropdown-social-networks"),
         to: "/social-networks/",
         matomo: {
-          eventCategory: "use cases menuy",
+          eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "social-networks",
         },
@@ -370,9 +370,27 @@ const UseCasePage = ({
         text: t("template-usecase-dropdown-identity"),
         to: "/decentralized-identity/",
         matomo: {
-          eventCategory: "use cases menuy",
+          eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "decentralized-identity",
+        },
+      },
+      {
+        text: t("decentralized-science"),
+        to: "/desci/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "desci",
+        },
+      },
+      {
+        text: "template-usecase-dropdown-refi",
+        to: "/refi/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "refi",
         },
       },
     ],
@@ -385,9 +403,9 @@ const UseCasePage = ({
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <div>
             <Translation id="template-usecase-banner" />{" "}
-            <Link to={absoluteEditPath}>
+            <InlineLink to={absoluteEditPath}>
               <Translation id="template-usecase-edit-link" />
-            </Link>
+            </InlineLink>
           </div>
         </BannerNotification>
       </Show>
@@ -424,14 +442,14 @@ const UseCasePage = ({
       </HeroContainer>
       <Show above={lgBp}>
         <Flex
-          as={Link}
+          as={BaseLink}
           to="#content"
           bg="ednBackground"
           justifyContent="center"
           p={4}
           width="full"
           _hover={{
-            bg: "background",
+            bg: "background.base",
           }}
         >
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
@@ -476,7 +494,7 @@ export const useCasePageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["template-usecase", "learn-quizzes", "common"] }
+        ns: { in: ["template-usecase", "learn-quizzes", "common", "glossary"] }
       }
     ) {
       edges {

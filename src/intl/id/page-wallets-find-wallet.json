@@ -88,5 +88,7 @@
   "page-find-wallet-desktop-desc": "Dompet dengan aplikasi desktop",
   "page-find-wallet-browser": "Browser",
   "page-find-wallet-browser-desc": "Dompet dengan ekstensi browser",
-  "page-find-wallet-device": "Perangkat"
+  "page-find-wallet-device": "Perangkat",
+  "page-find-choose-to-compare": "Pilih untuk membandingkan",
+  "page-find-wallet-choose-features": "Pilih fitur"
 }

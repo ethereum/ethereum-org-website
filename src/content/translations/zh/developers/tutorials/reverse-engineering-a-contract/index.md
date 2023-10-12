@@ -77,14 +77,14 @@ _区块链上没有秘密_，发生的一切都是持续的、可验证的、公
 
 此代码片段以 `JUMPDEST` 开头。 如果跳转到的操作码不是 `JUMPDEST`，以太坊虚拟机程序会抛出异常。 然后它查看 CALLDATASIZE，如果为“true”（即非零），则跳转到 0x7C。 我们将在下面讨论。
 
-| 偏移量 | 操作码     | 堆栈（在操作码之后）                                                                     |
-| -----: | ---------- | ---------------------------------------------------------------------------------------- |
-|     64 | CALLVALUE  | 调用提供的 [Wei](https://ethereum.org/en/glossary/#wei)。 在 Solidity 中称为 `msg.value` |
-|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                              |
-|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                            |
-|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                                  |
-|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                                |
-|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                                       |
+| 偏移量 | 操作码     | 堆栈（在操作码之后）                                              |
+| -----: | ---------- | ----------------------------------------------------------------- |
+|     64 | CALLVALUE  | 调用提供的 [Wei](/glossary/#wei)。 在 Solidity 中称为 `msg.value` |
+|     65 | PUSH1 0x06 | 6 CALLVALUE                                                       |
+|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                     |
+|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                           |
+|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                         |
+|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                |
 
 因此，当没有调用数据时，我们读取 Storage [6] 中的值。 我们还不知道这个值是什么，但我们可以查找合约收到的没有调用数据的交易。 仅转账以太币而没有任何调用数据（因此没有方法）的交易在 Etherscan 中具有方法 `Transfer`。 事实上，[合约收到的第一笔交易](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7)就是转账。
 

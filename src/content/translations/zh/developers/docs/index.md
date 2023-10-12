@@ -10,13 +10,13 @@ lang: zh
 
 ## 开发单元 {#development-modules}
 
-如果这是你首次尝试以太坊开发，我们建议从头开始，全始全终，有头有尾。
+如果这是你首次尝试以太坊开发，我们建议从头开始，有始有终，从头到尾。
 
 ### 基础主题 {#foundational-topics}
 
 <DeveloperDocsLinks headerId="foundational-topics" />
 
-### 以太坊技术栈 {#ethereum-stack}
+### 以太坊堆栈 {#ethereum-stack}
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 

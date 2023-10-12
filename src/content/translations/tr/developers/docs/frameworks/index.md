@@ -10,7 +10,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 Çerçeveler, aşağıdakiler gibi birçok ezber bozan işlevsellikle gelirler:
 
-- Yerel bir blok-zincir örneğini döndürmek için özellikler.
+- Yerel bir blok zinciri örneği başlatmak için özellikler.
 - Akıllı sözleşmelerinizi derlemek ve test etmek için yardımcı programlar.
 - Kullanıcı odaklı uygulamanızı aynı projede/depoda oluşturmak için istemci geliştirme eklentileri.
 - Ethereum ağlarına bağlanmak ve yerel olarak çalışan bir örneğe veya Ethereum'un genel ağlarından birine sözleşmeleri dağıtmak için yapılandırma.
@@ -42,28 +42,33 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [Belgeler](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Web3j -** **_JVM üzerinde blok zinciri uygulamaları geliştirmek için bir platform._**
+**Web3j -** **_JVM üzerinde blok zincir uygulamaları geliştirmek için bir platform._**
 
 - [Ana Sayfa](https://www.web3labs.com/web3j-sdk)
-- [Belgeler](https://docs.web3j.io)
+- [Dokümanlar](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**OpenZeppelin SDK -** **_Akıllı Sözleşmeler için Temel Araç Kiti: Akıllı sözleşmeler geliştirmenize, derlemenize, yükseltmenize, dağıtmanıza ve bunlarla etkileşime girmenize yardımcı olacak bir dizi araç._**
+**OpenZeppelin SDK -** **_Akıllı Sözleşmeler İçin Temel Araç Kiti: Akıllı sözleşmeler geliştirmenize, derlemenize, yükseltmenize, dağıtmanıza ve bunlarla etkileşime geçmenize yardımcı olacak bir dizi araç._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Topluluk Forumları](https://forum.openzeppelin.com/c/support/17)
+- [Topluluk Forumu](https://forum.openzeppelin.com/c/support/17)
 
-**Create Eth App -** **_Tek bir komutla Ethereum destekli uygulamalar oluşturun. Seçebileceğiniz geniş bir kullanıcı arayüzü çerçevesi ve DeFi şablonu yelpazesi bulunur._**
+**Create Eth App -** **_Tek bir komutla Ethereum destekli uygulamalar oluşturun. Seçebileceğiniz geniş bir kullanıcı arayüzü çerçevesi ve DeFi şablonu yelpazesiyle gelir._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Şablonlar](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Web3 için Ethers.js + Hardhat + React bileşenleri ve kancaları: akıllı sözleşmeler tarafından desteklenen merkeziyetsiz uygulamalar inşa etmeye başlamanız için ihtiyaç duyduğunuz her şey._**
+**Scaffold-Eth -** **_Web3 için Ethers.js + Hardhat + React bileşenleri ve kancaları: akıllı sözleşmeler tarafından güçlendirilen merkeziyetsiz uygulamalar inşa etmeye başlamanız için ihtiyaç duyduğunuz her şey._**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**The Graph -** **_Blok zinciri verisini verimli şekilde sorgulamak için The Graph_**
+**Tenderly -** **_Blok zincir geliştiricilerinin akıllı sözleşmeler oluşturmasını, test etmesini, hata ayıklamasını, izlemesini ve çalıştırmasını ve dapp UX'i geliştirmesini sağlayan Web3 geliştirme platformu._**
+
+- [Web sitesi](https://tenderly.co/)
+- [Dokümanlar](https://docs.tenderly.co/ethereum-development-practices)
+
+**The Graph -** **_Blok zincir verisini verimli şekilde sorgulamak için The Graph_**
 
 - [Web sitesi](https://thegraph.com/)
 - [Öğretici](/developers/tutorials/the-graph-fixing-web3-data-querying/)
@@ -76,13 +81,30 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 **Foundry -** **_Rust ile yazılmış Ethereum uygulama geliştirme için son derece hızlı, taşınabilir ve modüler bir araç takımı._**
 
-- [Belgeler](https://book.getfoundry.sh/)
+- [Dokümanlar](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Foundry için araçlar](https://github.com/crisgarner/awesome-foundry)
 
-## Daha fazla bilgi {#further-reading}
+**NodeReal -** **_Ethereum Geliştirme Platformu._**
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+- [Nodereal.io](https://nodereal.io/)
+- [GitHub](https://github.com/node-real)
+- [Discord](https://discord.gg/V5k5gsuE)
+
+**thirdweb SDK -** **_Güçlü SDK'larımız ve CLI kullanarak akıllı sözleşmelerinizle etkileşimde bulunabilecek web3 uygulamaları oluşturun._**
+
+- [Dokümanlar](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
+**Chainstack -** **_Web3 (Ethereum ve diğer) Geliştirme Platformu._**
+
+- [chainstack.com](https://www.chainstack.com/)
+- [GitHub](https://github.com/chainstack)
+- [Discord](https://discord.gg/BSb5zfp9AT)
+
+## daha fazla okuma {#further-reading}
+
+_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
 ## İlgili konular {#related-topics}
 

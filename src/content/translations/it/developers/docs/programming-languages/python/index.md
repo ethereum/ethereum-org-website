@@ -23,11 +23,12 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 ## Articoli per chi inizia ora {#beginner-articles}
 
 - [Guida di uno sviluppatore (Python) a Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
-- [Un'Introduzione ai Contratti Intelligenti con Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
+- [Report 2023 sullo stato di Python in blockchain](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
+- [Introduzione agli Smart Contract con Vyper (in inglese)](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Distribuisci il tuo Token ERC20 con Python e Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
-- [Come sviluppare un contratto Ethereum utilizzando Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
-- [Introduziona Web3.py · Ethereum per sviluppatori Python](https://www.dappuniversity.com/articles/web3-py-intro)
-- [Come chiamare la funzione di un Contratto Intelligente usando Python e web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
+- [Come sviluppare un contratto Ethereum usando Python Flask (in inglese)](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
+- [Introduzione a Web3.py · Ethereum per sviluppatori Python (in inglese)](https://www.dappuniversity.com/articles/web3-py-intro)
+- [Come chiamare la funzione di uno Smart Contract usando Python e web3.py (in inglese)](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
 ## Articoli di livello intermedio {#intermediate-articles}
 
@@ -64,7 +65,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 ### Archiviato / Non più mantenuto: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Il client Python di Ethereum_
-- [Mamba](https://mamba.black) - _Framework per scrivere, compilare e distribuire contratti intelligenti scritti nel linguaggio Vyper_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _Framework per scrivere, compilare e distribuire contratti intelligenti scritti nel linguaggio Vyper_
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/).
 

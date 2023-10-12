@@ -9,7 +9,7 @@ Um nó de arquivo é uma instância de um cliente Ethereum configurado para cons
 
 ## Pré-requisitos {#prerequisites}
 
-Você deve entender o conceito de um [nó Ethereum](/developers/docs/nodes-and-clients/), [sua arquitetura](/developers/docs/nodes-and-clients/node-architecture/), [estratégias de sincronização](/developers/docs/nodes-and-clients/#sync-modes), práticas de [execução](/developers/docs/nodes-and-clients/run-a-node/) e [uso deles](/developers/docs/apis/json-rpc/).
+Você deve entender o conceito de um [nó Ethereum](/developers/docs/nodes-and-clients/), [a arquitetura deles, assim como suas](/developers/docs/nodes-and-clients/node-architecture/) [estratégias de sincronização](/developers/docs/nodes-and-clients/#sync-modes), práticas de [execução](/developers/docs/nodes-and-clients/run-a-node/), e como [usá-los](/developers/docs/apis/json-rpc/).
 
 ## O que é um nó de arquivo
 

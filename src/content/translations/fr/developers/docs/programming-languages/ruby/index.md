@@ -7,20 +7,20 @@ incomplete: false
 
 <div class="featured">Apprendre à développer sur Ethereum en utilisant des projets et des outils basés sur Ruby.</div>
 
-Utilisez Ethereum pour créer des applications décentralisées (ou «&nbsp;dapps&nbsp;») qui bénéficient des avantages des crypto-monnaies et de la technologie blockchain. Ces dApps sont dignes de confiance, c'est-à-dire qu'une fois déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune entité ou personne ne les contrôle et qu'il est pratiquement impossible de les censurer.
+Utilisez Ethereum pour créer des applications décentralisées (ou « dApps ») qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces dApps sont dignes de confiance, c'est-à-dire qu'une fois déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
 
-## Premiers pas avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Débuter avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Commencer à intégrer Ruby avec Ethereum**
 
 Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
 - [Explication de la blockchain](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Comprendre les contrats autonomes](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [Comprendre les contrats intelligents](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [Écrire votre premier contrat intelligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Apprendre à compiler et à déployer avec Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Apprendre à compiler et à déployer Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Articles pour les débutants {#beginner-articles}
+## Articles pour débutants {#beginner-articles}
 
 - [Bien comprendre les comptes Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Authentifier les utilisateurs Rails avec MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)

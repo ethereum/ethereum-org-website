@@ -1,15 +1,23 @@
+import { Alert } from "./Alert"
+import { Avatar } from "./Avatar"
 import { Badge } from "./Badge"
 import { Button } from "./Button"
+import { Breadcrumb } from "./Breadcrumb"
+import { Heading } from "./Heading"
 import { Link } from "./Link"
 import { Tag } from "./Tag"
 import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
 import { Progress } from "./Progress"
 import { Tabs } from "./Tabs"
+import { Text } from "./Text"
+import { Table } from "./Table"
+import { Radio } from "./Radio"
+import { Select } from "./Select"
+import { Switch } from "./Switch"
+import { Input } from "./Input"
 import {
   accordionDefaultTheme,
-  avatarDefaultTheme,
-  breadcrumbDefaultTheme,
   closeButtonDefaultTheme,
   codeDefaultTheme,
   dividerDefaultTheme,
@@ -18,17 +26,15 @@ import {
   formLabelDefaultTheme,
   headingDefaultTheme,
   menuDefaultTheme,
-  selectDefaultTheme,
   spinnerDefaultTheme,
-  switchDefaultTheme,
-  tableDefaultTheme,
 } from "./components.utils"
 
 export default {
   Accordion: accordionDefaultTheme,
-  Avatar: avatarDefaultTheme,
+  Alert,
+  Avatar,
   Badge,
-  Breadcrumb: breadcrumbDefaultTheme,
+  Breadcrumb,
   Button,
   Checkbox,
   CloseButton: closeButtonDefaultTheme,
@@ -37,15 +43,18 @@ export default {
   Drawer: drawerDefaultTheme,
   Form: formDefaultTheme,
   FormLabel: formLabelDefaultTheme,
-  Heading: headingDefaultTheme,
+  Heading,
+  Input,
   Link,
   Menu: menuDefaultTheme,
   Modal,
   Progress,
-  Select: selectDefaultTheme,
+  Radio,
+  Select,
   Spinner: spinnerDefaultTheme,
-  Switch: switchDefaultTheme,
-  Table: tableDefaultTheme,
+  Switch,
+  Table,
   Tabs,
   Tag,
+  Text,
 }

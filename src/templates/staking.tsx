@@ -1,14 +1,12 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import {
   Badge,
   Box,
   BoxProps,
   Flex,
-  Heading,
   SimpleGrid,
   Text,
   chakra,
@@ -19,7 +17,7 @@ import {
   Show,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import { List as ButtonDropdownList } from "../components/ButtonDropdown"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
@@ -27,11 +25,11 @@ import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { mdxTableComponents } from "../components/Table"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
+import ProductDisclaimer from "../components/ProductDisclaimer"
 import RandomAppList from "../components/RandomAppList"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
@@ -52,6 +50,9 @@ import StakingGuides from "../components/Staking/StakingGuides"
 import WithdrawalCredentials from "../components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "../components/Staking/WithdrawalsTabComparison"
 import Callout from "../components/Callout"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -69,6 +70,7 @@ import {
   Page,
   StyledButtonDropdown,
 } from "./use-cases"
+import GatsbyImage from "../components/GatsbyImage"
 
 // Apply styles for classes within markdown here
 const Divider = (props: ChildOnlyProp) => (
@@ -80,7 +82,7 @@ const Paragraph = (props: ChildOnlyProp) => (
 )
 
 const Header1 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize={{ base: "2.5rem", md: "5xl" }}
     lineHeight={1.4}
@@ -102,7 +104,7 @@ const Header1 = (props: ChildOnlyProp) => (
 )
 
 const Header4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     lineHeight={1.4}
@@ -119,7 +121,7 @@ const Header4 = (props: ChildOnlyProp) => (
   />
 )
 
-const InfoGrid = (props: ChildOnlyProp) => (
+export const InfoGrid = (props: ChildOnlyProp) => (
   <Grid
     templateColumns="repeat(auto-fill, minmax(min(100%, 340px), 1fr))"
     gap={8}
@@ -157,7 +159,7 @@ const Pre = (props: ChildOnlyProp) => (
 )
 
 const H2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     fontSize="2rem"
     lineHeight={1.4}
     fontWeight="bold"
@@ -173,14 +175,14 @@ const H2 = (props: ChildOnlyProp) => (
         verticalAlign: "middle",
 
         "&:hover": {
-          fill: "primary",
+          fill: "primary.base",
           opacity: 1,
         },
       },
     }}
     _hover={{
       a: {
-        fill: "primary",
+        fill: "primary.base",
         opacity: 1,
       },
     }}
@@ -189,7 +191,7 @@ const H2 = (props: ChildOnlyProp) => (
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize="2xl"
     lineHeight={1.4}
@@ -205,14 +207,14 @@ const H3 = (props: ChildOnlyProp) => (
         verticalAlign: "middle",
 
         "&:hover": {
-          fill: "primary",
+          fill: "primary.base",
           opacity: 1,
         },
       },
     }}
     _hover={{
       a: {
-        fill: "primary",
+        fill: "primary.base",
         opacity: 1,
       },
     }}
@@ -235,7 +237,7 @@ const CardGrid = (props: ChildOnlyProp) => (
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize="2.5rem"
     lineHeight={1.4}
@@ -285,14 +287,14 @@ const TableContainer = (props: BoxProps) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  a: MdLink,
   h1: Header1,
   h2: H2,
   h3: H3,
   h4: Header4,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   div: Box,
   Badge,
   ButtonLink,
@@ -304,10 +306,12 @@ const components = {
   DocLink,
   Emoji,
   ExpandableCard,
+  GlossaryTooltip,
   InfoBanner,
   InfoGrid,
   Logo,
   MeetupList,
+  ProductDisclaimer,
   RandomAppList,
   SectionNav,
   StakingComparison,
@@ -397,7 +401,7 @@ const StakingPage = ({
     <Box position="relative" width="full">
       <HeroContainer>
         <Flex direction="column" justify="flex-start" w="full" p={8}>
-          <Breadcrumbs slug={location.pathname} />
+          <Breadcrumbs slug={location.pathname} mb="8" />
           <Title>{mdx.frontmatter.title}</Title>
           <UnorderedList>
             {(summaryPoints || []).map((point, idx) => (
@@ -412,8 +416,7 @@ const StakingPage = ({
             isMobile
           />
         </Flex>
-        <Image
-          as={GatsbyImage}
+        <GatsbyImage
           flex="1 1 100%"
           bgRepeat="no-repeat"
           right={0}
@@ -470,7 +473,7 @@ export const stakingPageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-staking", "common"] }
+        ns: { in: ["page-staking", "common", "glossary"] }
       }
     ) {
       edges {

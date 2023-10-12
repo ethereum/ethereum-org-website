@@ -115,7 +115,7 @@ Now, to interact with our contract, we need to create an instance of it in our c
 
 In the above example, our contract address is 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
-Next we will use the Web3 [contract method](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) to create our contract using the ABI and address. In your `mint-nft.js` file, add the following:
+Next we will use the Web3 [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) to create our contract using the ABI and address. In your `mint-nft.js` file, add the following:
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"

@@ -25,7 +25,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [The Rust Ethereum Client](https://openethereum.github.io/) \* **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 - [Sending Transaction to Ethereum Using Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
-- [An Introduction to Smart Contracts with Parity Ethereum Client](https://wiki.parity.io/Smart-Contracts)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Intermediate articles {#intermediate-articles}
@@ -51,6 +50,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Foundry](https://github.com/gakonst/foundry)- _Toolkit for Ethereum application development_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum library and wallet implementation_
 - [SewUp](https://github.com/second-state/SewUp) - _A library to help you build your Ethereum webassembly contract with Rust and just like develop in a common backend_
+- [Substreams](https://github.com/streamingfast/substreams) - _Parallelized blockchain data indexing technology_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (short for Rust Ethereum, pronunciation) is a new Ethereum full-node implementation
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)

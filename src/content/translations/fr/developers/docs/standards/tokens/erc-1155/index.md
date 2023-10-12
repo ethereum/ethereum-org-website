@@ -10,11 +10,11 @@ Une interface standard pour les contrats qui gèrent plusieurs types de jetons. 
 
 **Qu’entend-on par norme multijeton ?**
 
-L'idée est simple et cherche à créer une interface de contrat intelligent qui peut représenter et contrôler n'importe quel nombre de types de jetons fongibles et non fongibles. De cette façon, le jeton ERC-1155 peut exécuter les mêmes fonctions qu'un jeton [ERC-20](/developers/docs/standards/tokens/erc-20/) et [ERC-721](/developers/docs/standards/tokens/erc-721/) et même les deux en même temps. Mieux encore, améliorer la fonctionnalité des deux normes, la rendre plus efficace et corriger les erreurs évidentes de mise en œuvre des normes ERC-20 et ERC-721.
+L'idée est simple et cherche à créer une interface de contrat intelligent qui peut représenter et contrôler n'importe quel nombre de types de jetons fongibles et non fongibles. De cette façon, le jeton ERC-1155 peut exécuter les mêmes fonctions qu'un jeton [ERC-20](/developers/docs/standards/tokens/erc-20/) et [ERC-721](/developers/docs/standards/tokens/erc-721/) et même les deux en même temps. Cela améliore la fonctionnalité des normes ERC-20 et ERC-721, ce qui la rend plus efficace et corrige les erreurs évidentes de mise en œuvre.
 
 Le jeton ERC-1155 est décrit dans les détails dans [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
-## Pré-requis {#prerequisites}
+## Prérequis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles concernant [les normes de jeton](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/), et [ERC-721](/developers/docs/standards/tokens/erc-721/).
 
@@ -29,7 +29,7 @@ Pour mieux comprendre cette page, nous vous recommandons de commencer par lire c
 
 ### Transferts par lot {#batch-transfers}
 
-Les transferts par lot fonctionnent de la même façon que les transferts réguliers ERC-20. Examinons la fonction régulière de transfert ERC-20 :
+Les transferts par lot fonctionnent de la même façon que les transferts réguliers ERC-20. Examinons la fonction régulière `transferFrom` ERC-20 :
 
 ```solidity
 // ERC-20
@@ -97,7 +97,7 @@ function isApprovedForAll(
 
 Les approbations sont légèrement différentes de l'ERC-20. Au lieu d'approuver des montants spécifiques, vous définissez un opérateur qui approuvera ou non via `setApprovalForAll`.
 
-La lecture du statut actuel peut être exécutée via `isApprovedForAll`. Comme vous pouvez le voir, c'est un tout ou rien. Vous ne pouvez pas définir le nombre de jetons ou même la classe de jeton à approuver.
+La lecture du statut actuel peut être exécutée via `isApprovedForAll`. Comme vous pouvez le voir, c'est une opération tout ou rien. Vous ne pouvez pas définir le nombre de jetons ou même la classe de jeton à approuver.
 
 Cela a été conçu intentionnellement en gardant à l'esprit le principe de simplicité. Vous ne pouvez tout approuver que pour une seule adresse.
 

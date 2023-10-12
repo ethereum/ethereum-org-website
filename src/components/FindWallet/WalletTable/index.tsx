@@ -1,12 +1,12 @@
 // Libraries
 import React, { ReactNode } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Select from "react-select"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import {
   Box,
+  calc,
   chakra,
   Flex,
   FlexProps,
@@ -19,14 +19,15 @@ import {
   Table,
   TableProps,
   Td,
-  Text,
   Th,
   Tr,
 } from "@chakra-ui/react"
 
 // Components
-import Link, { IProps as LinkProps } from "../../Link"
+import InlineLink, { IProps as LinkProps } from "../../Link"
 import { WalletMoreInfo } from "./WalletMoreInfo"
+import GatsbyImage from "../../GatsbyImage"
+import Text from "../../OldText"
 
 // Icons
 import {
@@ -40,6 +41,7 @@ import { trackCustomEvent } from "../../../utils/matomo"
 import { getImage } from "../../../utils/image"
 import { WalletData } from "../../../data/wallets/wallet-data"
 import { ChildOnlyProp } from "../../../types"
+import { NAV_BAR_PX_HEIGHT } from "../../../constants"
 
 const Container = (props: TableProps) => (
   <Table
@@ -60,7 +62,7 @@ const WalletContainer = (props: ChildOnlyProp) => (
   <Container
     borderBottom="1px"
     borderColor="lightBorder"
-    _hover={{ bg: "boxShadow", transition: "0.5s all" }}
+    _hover={{ bg: "chakra-subtle-bg", transition: "0.5s all" }}
     {...props}
   />
 )
@@ -79,9 +81,9 @@ const Grid = forwardRef<SimpleGridProps, "tr">((props, ref) => (
 
 const WalletContentHeader = (props: ChildOnlyProp) => (
   <Grid
-    bg="background"
+    bg="background.base"
     borderBottom="1px"
-    borderColor="primary"
+    borderColor="primary.base"
     templateColumns={{
       base: "auto",
       sm: "60% auto 0% 0% 5%",
@@ -90,8 +92,11 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
     rowGap={{ base: 4, sm: 0 }}
     p={2}
     position="sticky"
-    top={0}
-    zIndex="docked"
+    top={{
+      base: calc(NAV_BAR_PX_HEIGHT).add("4rem").toString(),
+      lg: NAV_BAR_PX_HEIGHT,
+    }}
+    zIndex={1}
     sx={{
       th: {
         p: 0,
@@ -172,18 +177,18 @@ const StyledSelect = (props) => (
           },
 
           "&:hover, &--is-focused": {
-            bg: "primary",
-            borderColor: "primary",
+            bg: "primary.base",
+            borderColor: "primary.base",
 
             ".react-select__value-container": {
               ".react-select__single-value": {
-                color: "background",
+                color: "background.base",
               },
             },
 
             ".react-select__indicators": {
               ".react-select__indicator": {
-                color: "background",
+                color: "background.base",
               },
             },
           },
@@ -211,10 +216,10 @@ const StyledSelect = (props) => (
           },
 
           "&--is-selected": {
-            bg: "primary",
+            bg: "primary.base",
             color: "buttonColor",
             _hover: {
-              bg: "primary",
+              bg: "primary.base",
             },
           },
         },
@@ -237,7 +242,7 @@ const FlexInfo = (props: FlexProps) => (
         "& + p": {
           mt: "0.1rem",
           fontSize: "0.9rem",
-          lineHeight: 4,
+          lineHeight: 5,
           fontWeight: "normal",
         },
       },
@@ -280,7 +285,7 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
 )
 
 const SocialLink = (props: LinkProps) => (
-  <Link
+  <InlineLink
     display="flex"
     height={8}
     alignItems="center"
@@ -432,8 +437,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
               <Td lineHeight="revert">
                 <FlexInfo>
                   <Box>
-                    <Img
-                      as={GatsbyImage}
+                    <GatsbyImage
                       image={getImage(data[wallet.image_name])!}
                       alt=""
                       objectFit="contain"
@@ -548,7 +552,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                   <Box>
                     <Icon
                       as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
-                      color="primary"
+                      color="primary.base"
                       fontSize="2xl"
                     />
                   </Box>

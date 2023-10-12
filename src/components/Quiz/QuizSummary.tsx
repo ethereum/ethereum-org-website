@@ -1,8 +1,9 @@
 import React, { useEffect } from "react"
-import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react"
+import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
 import { useI18next } from "gatsby-plugin-react-i18next"
 
 import Translation from "../Translation"
+import Text from "../OldText"
 
 import { numberToPercent } from "../../utils/numberToPercent"
 import { updateUserStats } from "./utils"
@@ -48,7 +49,7 @@ const QuizSummary: React.FC<IProps> = ({
       <Text
         fontWeight="700"
         textAlign="center"
-        color={isPassingScore ? "success" : "body"}
+        color={isPassingScore ? "success.base" : "body.base"}
         fontSize="3xl"
       >
         {isPassingScore ? (
@@ -62,7 +63,7 @@ const QuizSummary: React.FC<IProps> = ({
         p={4}
         justify="center"
         boxShadow="drop"
-        bg="background"
+        bg="background.base"
         mx="auto"
         w="fit-content"
         sx={{

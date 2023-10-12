@@ -2,19 +2,20 @@ import React from "react"
 import { VStack, Icon, Box, Flex, Text } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 import { kebabCase } from "lodash"
-import { ResponsiveContainer, AreaChart, Area, XAxis } from "recharts"
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis } from "recharts"
 import Tooltip from "../Tooltip"
 import Translation from "../Translation"
-import Link from "../Link"
+import InlineLink from "../Link"
 import StatErrorMessage from "../StatErrorMessage"
 import StatLoadingMessage from "../StatLoadingMessage"
 import { Metric, ranges } from "./useStatsBoxGrid"
 import { Direction } from "../../types"
+import OldText from "../OldText"
 
 const tooltipContent = (metric: Metric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
+    <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
   </div>
 )
 
@@ -40,9 +41,9 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
             boxSize={6}
             fill="text"
             mr={2}
-            _hover={{ fill: "primary" }}
-            _active={{ fill: "primary" }}
-            _focus={{ fill: "primary" }}
+            _hover={{ fill: "primary.base" }}
+            _active={{ fill: "primary.base" }}
+            _focus={{ fill: "primary.base" }}
           ></Icon>
         </Tooltip>
       </Box>
@@ -59,6 +60,16 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
       return timestamp >= now - millisecondRange
     })
   }
+
+  const minValue = state.data.reduce(
+    (prev, { value }) => (prev < value ? prev : value),
+    1e42
+  )
+
+  const maxValue = state.data.reduce(
+    (prev, { value }) => (prev > value ? prev : value),
+    0
+  )
 
   const chart: React.ReactNode = (
     <ResponsiveContainer width="100%" height="100%">
@@ -96,6 +107,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
           fill={`url(#colorUv-${kebabCase(title)})`}
           connectNulls
         />
+        <YAxis type="number" domain={[minValue, maxValue]} width={0} />
         <XAxis dataKey="timestamp" axisLine={false} tick={false} />
       </AreaChart>
     </ResponsiveContainer>
@@ -120,7 +132,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
       }}
       padding={{ base: "2rem 1rem 1rem", lg: "1.5rem" }}
     >
-      <div>
+      <Box>
         <Text
           fontSize="xl"
           mb={2}
@@ -130,8 +142,8 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         >
           {title}
         </Text>
-        <p>{description}</p>
-      </div>
+        <OldText>{description}</OldText>
+      </Box>
       {!state.hasError && !isLoading && (
         <>
           <Box
@@ -174,6 +186,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         color="text"
         flexWrap="wrap"
         textOverflow="ellipsis"
+        lineHeight="1.6rem"
       >
         {value}
       </Box>

@@ -14,7 +14,7 @@ Per capire meglio questa pagina, consigliamo innanzi tutto di leggere gli argome
 
 Gas fa riferimento all'unità che misura la quantità di sforzo di calcolo necessario per eseguire operazioni specifiche sulla rete di Ethereum.
 
-Dato che ogni transazione Ethereum necessita di risorse di calcolo per essere eseguita, richiede una commissione. Gas si riferisce alla commissione necessaria per effettuare con successo una transazione su Ethereum.
+Dato che ogni transazione Ethereum necessita di risorse di calcolo per essere eseguita, richiede una commissione. Il carburante si riferisce alla commissione necessaria per eseguire una transazione su Ethereum, indipendentemente dal suo successo o fallimento.
 
 ![Un diagramma che mostra dov'è necessario il gas nelle operazioni dell'EVM](./gas.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -42,7 +42,7 @@ Inoltre, Jordan può anche impostare una commissione massima (`maxFeePerGas`) pe
 
 ### Dimensione del blocco {#block-size}
 
-Prima dell'Aggiornamento di Londra, Ethereum aveva blocchi di dimensioni fisse. Nei momenti di elevata domanda di rete, questi blocchi operavano a piena capacità. Quindi, spesso gli utenti dovevano attendere che la domanda elevata calasse per poter essere inclusi in un blocco, il che si traduceva in un'esperienza non soddisfacente per l'utente.
+Prima dell'Aggiornamento di Londra, Ethereum aveva blocchi di dimensioni fisse. Nei momenti di elevata domanda di rete, questi blocchi operavano a piena capacità. Quindi, spesso gli utenti dovevano attendere che la domanda calasse per poter essere inclusi in un blocco, il che si traduceva in un'esperienza non soddisfacente per l'utente.
 
 L'Aggiornamento di Londra ha introdotto in Ethereum blocchi di dimensioni variabili. Ogni blocco ha una dimensione prevista di 15 milioni di gas, ma la dimensione dei blocchi aumenta o diminuisce in base alla domanda della rete, fino al limite massimo di 30 milioni di gas per blocco (2 volte la dimensione prevista del blocco). Il protocollo raggiunge una dimensione del blocco equilibrata di 15 milioni in media tramite il processo di _tâtonnement_. Significa che se la dimensione del blocco supera quella prevista, il protocollo aumenta la commissione di base per il blocco successivo. Analogamente, il protocollo riduce la commissione di base se la dimensione del blocco è inferiore a quella prevista. L'importo della commissione di base si adatta proporzionalmente alla distanza della dimensione del blocco corrente rispetto a quella prevista. [Maggiori informazioni sui blocchi](/developers/docs/blocks/).
 
@@ -63,7 +63,7 @@ La commissione di base è calcolata con una formula che confronta le dimensioni 
 | 7                 |         30M |                     12,5% |            180,2 gwei |
 | 8                 |         30M |                     12,5% |            202,7 gwei |
 
-Rispetto al mercato del gas basato su aste prima dell'Aggiornamento di Londra, questa modifica del meccanismo delle commissioni sulle transazioni ha reso più affidabile la previsione delle commissioni. Secondo la tabella che precede, per creare una transazione sul blocco numero 9, un portafoglio indica all'utente con certezza che la **commissione di base massima** da aggiungere al blocco successivo è `commissione di base corrente * 112,5%` o `202,8 gwei * 112,5% = 228,1 gwei`.
+Rispetto al mercato del gas basato su aste prima dell'Aggiornamento di Londra, questa modifica del meccanismo delle commissioni sulle transazioni ha reso più affidabile la previsione delle commissioni. Secondo la tabella che precede, per creare una transazione sul blocco numero 9, un portafoglio indica all'utente con certezza che la **commissione di base massima** da aggiungere al blocco successivo è `commissione di base corrente * 12,5%` o `202,7 gwei * 12,5% = 228,1 gwei`.
 
 Inoltre, è importante notare che, vista la velocità con cui la commissione di base aumenta mentre si avanza verso un blocco completo, è improbabile assistere a picchi prolungati di blocchi completi.
 
@@ -97,7 +97,7 @@ Questo video spiega l'EIP-1559 e i vantaggi che comporta:
 
 <YouTube id="MGemhK9t44Q" />
 
-Se sei interessato, puoi leggere le [specifiche dell'EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) esatte.
+Se sei interessato, puoi leggere [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 
 Approfondisci con queste [Risorse dell'EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
 
@@ -117,7 +117,7 @@ Ad esempio, se imposti un limite di gas di 50.000 per un semplice trasferimento 
 
 ## Perché le commissioni del gas possono esser così elevate? {#why-can-gas-fees-get-so-high}
 
-Le commissioni del gas elevate sono dovute alla popolarità di Ethereum. Eseguire qualsiasi operazione su Ethereum richiede il consumo di gas, ma lo spazio del gas per blocco è limitato. Le commissioni includono l'esecuzione di calcoli, l'archiviazione o la manipolazione di dati, o ancora il trasferimento di token, tutte operazioni che consumano diverse quantità di unità di "gas". All'aumentare della complessità delle funzionalità delle dApp, cresce anche il numero di operazioni eseguite da un contratto intelligente, il che significa che ogni transazione occupa più spazio in un blocco di dimensioni limitate. Se c'è troppa domanda, gli utenti devono offrire una mancia di importo maggiore per provare a superare le transazioni degli altri utenti. Una mancia più cospicua può rendere più probabile che la tua transazione troverà posto nel blocco successivo.
+Le commissioni del gas elevate sono dovute alla popolarità di Ethereum. Eseguire qualsiasi operazione su Ethereum richiede il consumo di gas, ma lo spazio del gas per blocco è limitato. Le commissioni sono utilizzate per pagare i calcoli, l'archiviazione o la manipolazione di dati, o ancora il trasferimento di token, tutte operazioni che consumano diverse quantità di unità di "carburante". All'aumentare della complessità delle funzionalità delle dApp, cresce anche il numero di operazioni eseguite da un contratto intelligente, il che significa che ogni transazione occupa più spazio in un blocco di dimensioni limitate. Se c'è troppa domanda, gli utenti devono offrire una mancia di importo maggiore per provare a superare le transazioni degli altri utenti. Una mancia più cospicua può rendere più probabile che la tua transazione troverà posto nel blocco successivo.
 
 Il prezzo del gas da solo in realtà non determina quanto dobbiamo pagare per una specifica transazione. Per calcolare la commissione sulla transazione dobbiamo moltiplicare il gas usato per la commissione base, misurata in gwei.
 
@@ -129,7 +129,7 @@ Il ridimensionamento del Livello 2 è un'iniziativa fondamentale per migliorare 
 
 ## Strategie utili per ridurre i costi del gas {#strategies-for-you-to-reduce-gas-costs}
 
-Se stai cercando di ridurre i costi del gas per i tuoi ETH, puoi impostare una mancia per indicare il livello di priorità della tua transazione. I miner anteporranno ed eseguiranno le transazioni che offrono una mancia maggiore per il gas, poiché terranno le mance pagate dall'utente e saranno meno inclini a eseguire transazioni che prevedono mance inferiori.
+Se stai cercando di ridurre i costi del carburante per le tue transazioni, puoi impostare una mancia per indicare il livello di priorità della tua transazione. I miner anteporranno ed eseguiranno le transazioni che offrono una mancia maggiore per il gas, poiché terranno le mance pagate dall'utente e saranno meno inclini a eseguire transazioni che prevedono mance inferiori.
 
 Se desideri monitorare i prezzi del gas, così da poter inviare i tuoi ETH a un costo inferiore, puoi usare molti strumenti differenti, come:
 
@@ -148,6 +148,7 @@ Se desideri monitorare i prezzi del gas, così da poter inviare i tuoi ETH a un 
 - [Spiegazione del Gas di Ethereum](https://defiprime.com/gas)
 - [Ridurre il consumo di gas dei tuoi Contratti Intelligenti](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof of Stake contro Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
+- [Strategie di ottimizzazione del carburante per sviluppatori](https://www.alchemy.com/overviews/solidity-gas-optimization)
 
 ## Argomenti correlati {#related-topics}
 

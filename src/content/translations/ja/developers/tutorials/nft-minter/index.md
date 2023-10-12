@@ -629,7 +629,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)は、[Web3.js](https://web3js.readthedocs.io/en/v1.2.9/)のラッパーであり、強化された API メソッドや重要なメリットを提供し、Web3 デベロッパーの負担を軽減します。 最小限の設定で使えるように設計されているので、アプリですぐに使用可能です。
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)は、[Web3.js](https://docs.web3js.org/)のラッパーであり、強化された API メソッドや重要なメリットを提供し、Web3 デベロッパーの負担を軽減します。 最小限の設定で使えるように設計されているので、アプリですぐに使用可能です。
 
 次に、コントラクトアプリケーションバイナリインターフェース(ABI)とコントラクトアドレスをファイルに追加しましょう。
 

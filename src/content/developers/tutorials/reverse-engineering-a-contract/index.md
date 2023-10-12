@@ -73,14 +73,14 @@ This code does two things:
 
 This snippet starts with a `JUMPDEST`. EVM (Ethereum virtual machine) programs throw an exception if you jump to an opcode that isn't `JUMPDEST`. Then it looks at the CALLDATASIZE, and if it is "true" (that is, not zero) jumps to 0x7C. We'll get to that below.
 
-| Offset | Opcode     | Stack (after opcode)                                                                              |
-| -----: | ---------- | ------------------------------------------------------------------------------------------------- |
-|     64 | CALLVALUE  | [Wei](https://ethereum.org/en/glossary/#wei) provided by the call. Called `msg.value` in Solidity |
-|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                                       |
-|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                                                     |
-|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                                           |
-|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                                         |
-|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                                                |
+| Offset | Opcode     | Stack (after opcode)                                                       |
+| -----: | ---------- | -------------------------------------------------------------------------- |
+|     64 | CALLVALUE  | [Wei](/glossary/#wei) provided by the call. Called `msg.value` in Solidity |
+|     65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
+|     67 | PUSH1 0x00 | 0 6 CALLVALUE                                                              |
+|     69 | DUP3       | CALLVALUE 0 6 CALLVALUE                                                    |
+|     6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE                                                  |
+|     6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE                                         |
 
 So when there is no call data we read the value of Storage[6]. We don't know what this value is yet, but we can look for transactions that the contract received with no call data. Transactions which just transfer ETH without any call data (and therefore no method) have in Etherscan the method `Transfer`. In fact, [the very first transaction the contract received](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) is a transfer.
 

@@ -8,6 +8,8 @@ lang: tr
 
 Ethereum topluluğu, birçok farklı geçmişe ve beceriye sahip insanları içerir. İster geliştirici, ister sanatçı veya muhasebeci olun, dahil olmanın çeşitli yolları vardır. İşte başlamanıza yardımcı olabilecek önerilerin bir listesi.
 
+[İş ahlakı kuralları](/community/code-of-conduct)mızdan, Ethereum.org misyonu ve değerleri hakkında okumaya başlayın.
+
 ## Geliştiriciler <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) adresinden Ethereum hakkında bilgi edinin ve Ethereum'u deneyin
@@ -17,13 +19,25 @@ Ethereum topluluğu, birçok farklı geçmişe ve beceriye sahip insanları içe
 - [Core Dev çağrılarını](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) izleyin veya bunlara katılın
 - [Ekosistem Destek Programının istek listesi](https://esp.ethereum.foundation/wishlist/) - Ethereum Ekosistem Destek Programının aktif olarak hibe başvuruları aradığı araçlar, belgeler ve altyapı alanları
 - [Web3Bridge](https://www.web3bridge.com/) - Afrika genelinde yüzlerce geliştiriciyi ve topluluk üyesini belirleme, eğitme ve destekleme girişimlerinde hevesli web3 topluluğuna katılın
+- [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) grubuna katılın
 
 ## Araştırmacılar ve Akademisyenler <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
-Matematik, kriptografi ya da ekonomi alanlarında bir geçmişiniz var mı? Ethereum ekosisteminde yapılan en son işlerin bazıları ilginizi çekebilir
+Matematik, kriptografi ya da ekonomi alanlarında bir geçmişiniz var mı? Ethereum ekosisteminde yapılan en son işlerin bazıları ilginizi çekebilir:
 
-- [Challenges.ethereum.org](https://challenges.ethereum.org/) - >100,000 ABD Doları kazanabileceğiniz, birtakım yüksek değerli araştırma ödülleri
+- Bir Ethereum Geliştirme Önerisini yazın veya revize edin
+  - Bir EIP yazın
+    1. Fikrinizi [Ethereum Magicians](https://ethereum-magicians.org)'a gönderin
+    2. [EIP-1](https://eip.ethereum.org/EIPS/eip-1)'i okuyun -**Evet, bu dökümanın _tamamı._**
+    3. EIP-1'in yönergelerini takip edin. Taslağınızı hazırlarken, EIP-1 den referans alın.
+  - Nasıl bir [EIP Editörü](https://eips.ethereum.org/EIPS/eip-5069) olacağınızı öğrenin
+    - Siz de şu anda EIP'leri gözden geçirebilirsiniz! [Açılan PR taleplerini `e-inceleme`etikeyiyle görebilirsiniz](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Teknik geri bildirimlerinizi `tartışmalar` bağlantısına bırakın.
+  - [EIP yönetişimine](https://github.com/ethereum-cat-herders/EIPIP) katılın
+    - [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) grubuna katılın
+  - [EIP'ler hakkında daha fazla bilgi](/eips/)
+- [Challenges.ethereum.org](https://challenges.ethereum.org/) - >100.000 ABD Doları kazanabileceğiniz, bir dizi yüksek değerli araştırma ödülü
 - [Ethresear.ch](https://ethresear.ch) - Ethereum'un birincil araştırma forumu ve kriptoekonomi alanında dünyanın en etkili forumu
+- [Ethereum Vakfı Araştırma Soru-Cevap Paneli (AMA)](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - Araştırmacılara istenilen soruların sorulduğu ve cevaplandırıldığı bir etkinlik. Etkinliğin her adımı açıldığında, herkes sorularını sorabilecektir.
 - [Ekosistem Destek Programının istek listesi](https://esp.ethereum.foundation/wishlist/) - Ethereum Ekosistem Destek Programının aktif olarak hibe başvuruları aradığı araştırma alanları
 
 [Daha fazla aktif araştırma alanı keşfedin](/community/research/).
@@ -39,7 +53,7 @@ Bir geliştirici değilseniz Ethereum'da nereden başlayacağınızı bilmek zor
 ### Ethereum hakkında içerik yazın {#write-content}
 
 - Ethereum'un değerini sade bir dille açıklayabilecek iyi yazarlara ihtiyacı var
-- Kendi makalelerinizi yayınlamaya hazır değil misiniz? gibi topluluk kaynaklarındaki mevcut içeriklere katkı sağlamayı veya ethereum.org için yeni içerikler önermeyi göz önünde bulundurun!
+- Kendi makalelerinizi yayınlamaya hazır değil misiniz? Halihazırda, topluluk kaynaklarında bulunan içeriklere katkı sağlayabilir veya [ethereum.org için yeni içerik önerebilirsiniz](/contributing/)!
 
 ### Topluluk çağrıları için not alma teklifi {#take-notes}
 
@@ -71,7 +85,7 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 
 ## Finans uzmanları ve Muhasebeciler <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum, alternatif bir finansal sistem sunan bir protokoller ve uygulamalar ağı olan “Merkeziyetsiz Finans” ekosistemine ev sahipliği yapmaktadır. Finans uzmanıysanız bazı DeFi uygulamalarına [DeFi Llama](https://defillama.com/) veya [DeFiPrime](https://defiprime.com) üzerinden bakabilirsiniz
+- Ethereum, alternatif bir finansal sistem sunan bir protokoller ve uygulamalar ağı olan “Merkeziyetsiz Finans” ekosistemine ev sahipliği yapmaktadır. Eğer finans alanında bir profesyonelseniz, [DeFi Llama](https://defillama.com/) veya [DeFiPrime](https://defiprime.com)'daki merkeziyetsiz uygulamalara göz atın
 - Muhasebeci misiniz? Ethereum üzerindeki ETH, token'lar, DeFi vb. varlıklar, birçok yeni muhasebecilik sorununu beraberinde getirir. [Rotki](https://rotki.com/) gibi, kullanıcıların saymanlık ve muhasebecilik sorunlarını çözmeye yardımcı olmayı hedefleyen bazı projeleri inceleyerek başlayabilirsiniz
 
 ## Ürün Yöneticileri <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
@@ -98,10 +112,12 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 - [Web3 İşleri](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley İşleri](https://cryptovalley.jobs/)
+- [Ethereum İşleri](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Bir DAO'ya katılın {#decentralized-autonomous-organizations-daos}
 
-"DAO'lar", merkeziyetsiz otonom organizasyonlardır. Bu gruplar, organizasyonu ve iş birliğini kolaylaştırmak için Ethereum teknolojisinden yararlanır. Örneğin; üyeliği kontrol etmek, teklifleri oylamak veya havuza alınan varlıkları yönetmek için. DAO'lar hâlâ deneysel olsalar da aynı fikirde olduğunuz gruplar ile iş ortakları bulmanız ve Ethereum topluluğu üzerindeki etkinizi artırmanız için fırsatlar sunar. [DAO'lar hakkında daha fazla bilgi](/dao/)
+"DAO'lar", merkeziyetsiz otonom organizasyonlardır. Bu gruplar, organizasyonu ve iş birliğini kolaylaştırmak için Ethereum teknolojisinden yararlanır. Örneğin; üyeliği kontrol etmek, teklifleri oylamak veya havuza alınan varlıkları yönetmek için. DAO'lar hâlâ deneysel olsalar da aynı fikirde olduğunuz gruplar ile iş ortakları bulmanız ve Ethereum topluluğu üzerindeki etkinizi artırmanız için fırsatlar sunar. [DAO'lar hakkında daha fazlası](/dao/)
 
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _DAO konseptinin teknoloji harici alanlarda tanıtılması ve insanların DAO aracılığıyla değer yaratmalarına yardım edilmesi_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _İnternetin ortaklaşa sahipliğine inanan yapımcıların topluluğu_
@@ -118,3 +134,5 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Kadınlar tarafından yürütülen projeler_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Ethereum geliştirmelerini desteklemeye odaklı bir topluluk_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 yapımcılar kolektifi_
+
+Ne zaman ve nerede ethereum.org'a katkı verirseniz verin, lütfen ethereum.org'un [misyon ve değerlerine](/community/code-of-conduct) uymayı unutmayın!

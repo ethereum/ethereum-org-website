@@ -1,6 +1,6 @@
 import React from "react"
 import {
-  Box,
+  forwardRef,
   Icon,
   Link as ChakraLink,
   LinkProps,
@@ -10,8 +10,7 @@ import {
 import { navigate as gatsbyNavigate } from "gatsby"
 import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 import { NavigateOptions } from "@reach/router"
-
-import { BsQuestionSquareFill } from "react-icons/bs"
+import { RxExternalLink } from "react-icons/rx"
 
 import { Lang } from "../utils/languages"
 import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
@@ -48,136 +47,133 @@ export interface IProps extends IBaseProps, LinkProps {
  * - Intl links
  * e.g. <Link href="/page-2/" language="de">
  */
-const Link: React.FC<IProps> = ({
-  to: toProp,
-  href,
-  language,
-  dir = "ltr",
-  children,
-  hideArrow = false,
-  isPartiallyActive = true,
-  customEventOptions,
-  activeStyle = null,
-  ...restProps
-}) => {
-  const theme = useTheme()
+export const BaseLink = forwardRef<IProps, "a">(
+  (
+    {
+      to: toProp,
+      href,
+      language,
+      dir = "ltr",
+      children,
+      hideArrow = false,
+      isPartiallyActive = true,
+      customEventOptions,
+      activeStyle = null,
+      ...restProps
+    },
+    ref
+  ) => {
+    const theme = useTheme()
 
-  // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
-  // this is to support the ButtonLink component which uses the `to` prop
-  let to = (toProp ?? href)!
+    // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
+    // this is to support the ButtonLink component which uses the `to` prop
+    let to = (toProp ?? href)!
 
-  const isDiscordInvite = url.isDiscordInvite(to)
-  if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
-  const isExternal = url.isExternal(to)
-  const isHash = url.isHash(to)
-  const isGlossary = url.isGlossary(to)
-  const isStatic = url.isStatic(to)
-  const isPdf = url.isPdf(to)
+    const isDiscordInvite = url.isDiscordInvite(to)
+    if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
+    const isExternal = url.isExternal(to)
+    const isHash = url.isHash(to)
+    const isStatic = url.isStatic(to)
+    const isPdf = url.isPdf(to)
 
-  const externalLinkEvent: MatomoEventOptions = {
-    eventCategory: `External link`,
-    eventAction: `Clicked`,
-    eventName: to,
-  }
+    const externalLinkEvent: MatomoEventOptions = {
+      eventCategory: `External link`,
+      eventAction: `Clicked`,
+      eventName: to,
+    }
 
-  const hashLinkEvent: MatomoEventOptions = {
-    eventCategory: `Hash link`,
-    eventAction: `Clicked`,
-    eventName: to,
-  }
+    const hashLinkEvent: MatomoEventOptions = {
+      eventCategory: `Hash link`,
+      eventAction: `Clicked`,
+      eventName: to,
+    }
 
-  const commonProps = {
-    dir,
-    ...restProps,
-  }
+    const commonProps: LinkProps & { ref: React.ForwardedRef<any> } = {
+      ref,
+      dir,
+      ...restProps,
+    }
 
-  // Must use Chakra's native <Link> for anchor links
-  // Otherwise the Gatsby <Link> functionality will navigate to homepage
-  // See https://github.com/gatsbyjs/gatsby/issues/21909
-  if (isHash) {
-    return (
-      <ChakraLink
-        href={to}
-        onClick={(e) => {
-          // only track events on external links and hash links
-          if (!isHash) {
-            return
-          }
+    // Must use Chakra's native <Link> for anchor links
+    // Otherwise the Gatsby <Link> functionality will navigate to homepage
+    // See https://github.com/gatsbyjs/gatsby/issues/21909
+    if (isHash) {
+      return (
+        <ChakraLink
+          href={to}
+          onClick={(e) => {
+            // only track events on external links and hash links
+            if (!isHash) {
+              return
+            }
 
-          e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ? customEventOptions : hashLinkEvent
-          )
-        }}
-        {...commonProps}
-      >
-        {children}
-      </ChakraLink>
-    )
-  }
-
-  // Download link for internally hosted PDF's & static files (ex: whitepaper)
-  // Opens in separate window.
-  if (isExternal || isPdf || isStatic) {
-    return (
-      <ChakraLink
-        href={to}
-        isExternal
-        onClick={(e) => {
-          // only track events on external links and hash links
-          if (!isExternal) {
-            return
-          }
-
-          e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ? customEventOptions : externalLinkEvent
-          )
-        }}
-        {...commonProps}
-      >
-        <>
+            e.stopPropagation()
+            trackCustomEvent(
+              customEventOptions ? customEventOptions : hashLinkEvent
+            )
+          }}
+          {...commonProps}
+        >
           {children}
-          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-          {!hideArrow && (
-            <Box as="span" ml={0.5} mr={1.5} aria-hidden>
-              ↗
-            </Box>
-          )}
-        </>
+        </ChakraLink>
+      )
+    }
+
+    // Download link for internally hosted PDF's & static files (ex: whitepaper)
+    // Opens in separate window.
+    if (isExternal || isPdf || isStatic) {
+      return (
+        <ChakraLink
+          href={to}
+          isExternal
+          onClick={(e) => {
+            // only track events on external links and hash links
+            if (!isExternal) {
+              return
+            }
+
+            e.stopPropagation()
+            trackCustomEvent(
+              customEventOptions ? customEventOptions : externalLinkEvent
+            )
+          }}
+          {...commonProps}
+        >
+          <>
+            {children}
+            <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+            {!hideArrow && (
+              <Icon
+                as={RxExternalLink}
+                boxSize="6"
+                p="1"
+                verticalAlign="middle"
+                me="-1"
+              />
+            )}
+          </>
+        </ChakraLink>
+      )
+    }
+
+    // Use `gatsby-theme-i18n` Link (which prepends lang path)
+    return (
+      <ChakraLink
+        as={IntlLink}
+        to={to}
+        language={language}
+        partiallyActive={isPartiallyActive}
+        activeStyle={
+          activeStyle ? activeStyle : { color: theme.colors.primary }
+        }
+        whiteSpace={"normal"}
+        {...commonProps}
+      >
+        {children}
       </ChakraLink>
     )
   }
-
-  // Use `gatsby-theme-i18n` Link (which prepends lang path)
-  return (
-    <ChakraLink
-      to={to}
-      as={IntlLink}
-      language={language}
-      partiallyActive={isPartiallyActive}
-      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
-      whiteSpace={isGlossary ? "nowrap" : "normal"}
-      {...commonProps}
-    >
-      <>
-        {children}
-        {isGlossary && (
-          <Icon
-            as={BsQuestionSquareFill}
-            aria-label="See definition"
-            fontSize="12px"
-            margin="0 0.25rem 0 0.35rem"
-            _hover={{
-              transition: "transform 0.1s",
-              transform: "scale(1.2)",
-            }}
-          />
-        )}
-      </>
-    </ChakraLink>
-  )
-}
+)
 
 export function navigate(
   to: string,
@@ -192,4 +188,6 @@ export function navigate(
   gatsbyNavigate(link, options)
 }
 
-export default Link
+const InlineLink = (props: IProps) => <BaseLink data-inline-link {...props} />
+
+export default InlineLink

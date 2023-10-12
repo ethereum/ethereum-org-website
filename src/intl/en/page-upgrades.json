@@ -11,6 +11,8 @@
   "page-upgrades-upgrades-docking": "The Merge",
   "page-upgrades-shard-title": "Sharding",
   "page-upgrades-upgrades-beacon-chain": "The Beacon Chain",
+  "consensus-beaconscan-title": "beaconscan",
+  "consensus-beaconscan-in-title": "beaconcha.in",
   "consensus-beaconcha-in-desc": "Open source Beacon Chain explorer",
   "consensus-beaconscan-desc": "Beacon Chain explorer - Etherscan for the consensus layer",
   "consensus-become-staker": "Become a staker",

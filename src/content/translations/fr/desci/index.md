@@ -3,7 +3,7 @@ title: La science décentralisée (DeSci)
 description: Présentation de la science décentralisée sur Ethereum
 lang: fr
 template: use-cases
-emoji: ":microscope :"
+emoji: ":microscope:"
 sidebarDepth: 2
 image: ../../../../assets/future_transparent.png
 alt: ""

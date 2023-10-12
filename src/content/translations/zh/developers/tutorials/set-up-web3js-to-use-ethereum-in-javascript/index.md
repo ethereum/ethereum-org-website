@@ -68,7 +68,7 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-您可以在[官方 web3.js 文档](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#)中查看该 Web3 实例上可用的所有函数。
+您可以在[官方 web3.js 文档](https://docs.web3js.org/)中查看该 Web3 实例上可用的所有函数。
 
 大多数 Web3 库都是异步的，因为在后台，该库对返回结果的节点进行 JSON RPC 调用。
 

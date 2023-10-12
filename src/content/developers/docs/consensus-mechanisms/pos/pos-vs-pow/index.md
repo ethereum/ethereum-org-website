@@ -4,7 +4,7 @@ description: A comparison between Ethereum's proof-of-stake and proof-of-work ba
 lang: en
 ---
 
-When Ethereum launched, proof-of-stake still needed a lot of research and development before it could be trusted to secure Ethereum. Proof-of-work was a simpler mechanism that had already been proven by Bitcoin, meaning core developers could implement it right away to Ethereum launched. It took a further eight years to develop proof-of-stake to the point where it could be implemented.
+When Ethereum launched, proof-of-stake still needed a lot of research and development before it could be trusted to secure Ethereum. Proof-of-work was a simpler mechanism that had already been proven by Bitcoin, meaning core developers could implement it right away to get Ethereum launched. It took a further eight years to develop proof-of-stake to the point where it could be implemented.
 
 This page explains the rationale behind Ethereum's switch to proof-of-stake from proof-of-work and the trade-offs involved.
 

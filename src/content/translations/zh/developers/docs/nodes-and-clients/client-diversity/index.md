@@ -1,11 +1,11 @@
 ---
 title: 客户端多样性
-description: 对以太坊客户端多样性的重要性进行概括解释。
+description: 概括解释以太坊客户端多样性的重要性。
 lang: zh
 sidebarDepth: 2
 ---
 
-以太坊节点的行为是由其运行的客户端软件控制的。 有一些生产级的以太坊客户端，每个都是由不同的团队用不同的语言开发和维护。 这些客户端都是按照共同规范建立的，确保客户端相互之间无缝通信，具有相同的功能并提供一致的用户体验。 然而目前，各节点的客户端分布并不均匀，不足以发挥这种网络防御措施的全部潜力。 理想情况下，用户在各个客户端之间大致平均分布，以便在网络上最大程度地实现客户端多样性。
+以太坊节点的行为是由其运行的客户端软件控制的。 有一些生产级的以太坊客户端，每个都是由不同的团队用不同的语言开发和维护。 这些客户端都是按照共同规范建立的，确保客户端相互之间无缝通信，具有相同的功能并提供一致的用户体验。 然而，目前各节点的客户端分布并不均匀，不足以发挥这种网络防御措施的全部潜力。 理想情况下，用户在各个客户端之间大致平均分布，以便在网络上最大程度地实现客户端多样性。
 
 ## 前提条件 {#prerequisites}
 
@@ -13,7 +13,7 @@ sidebarDepth: 2
 
 ## 为什么会有多种客户端？ {#why-multiple-clients}
 
-存在多种独立开发和维护的客户端，是因为客户端多样性使网络对攻击和漏洞更具恢复能力。 多种客户端是以太坊独有的优势，而其他区块链依赖于单一客户端的无误性。 然而，仅仅拥有多种可用的客户端是不够的，这些客户端必须被社区采用，并且全部活跃节点必须相对均匀地分布在它们之间。
+存在多种独立开发和维护的客户端，是因为客户端多样性使网络在面对攻击和漏洞时恢复能力更强。 多种客户端是以太坊独有的优势，而其他区块链依赖于单一客户端的无误性。 然而，仅仅拥有多种可用的客户端是不够的，这些客户端必须被社区采用，并且全部活跃节点必须相对均匀地分布在它们之间。
 
 ## 为什么客户端多样性很重要？ {#client-diversity-importance}
 
@@ -29,15 +29,15 @@ sidebarDepth: 2
 
 ### 权益证明的最终确定性 {#finality}
 
-占据超过 33% 的以太坊节点的共识客户端中有一个漏洞，它可能会阻止信标链最终确定，这意味着用户可能无法相信交易在某些时候不会被回滚或更改。 对于许多建立在以太坊之上的应用程序，尤其是去中心化金融，这将是一个很大的问题。
+超过 33% 的以太坊节点的共识客户端中有一个漏洞，它可能会阻止共识层的最终确定，这意味着用户无法相信交易不会在某些时候被回滚或更改。 对于许多建立在以太坊之上的应用程序，尤其是去中心化金融，这将是一个很大的问题。
 
-<Emoji text="🚨" mr="1rem" /> 更糟糕的是，当拥有三分之二多数节点的客户端出现严重漏洞，可能会导致链<a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">错误地分叉并最终确定</a>，让大量验证者困陷在无效链上。 如果这些验证者想重新加入正确的链，他们将面临罚没或缓慢而昂贵的自愿退出和重新激活过程。 罚没的轻重随过错节点数量而异，三分之二多数将受到最严重的惩罚（32 个以太币）。
+<Emoji text="🚨" mr="1rem" /> 更糟糕的是，当拥有三分之二多数节点的客户端出现严重漏洞，可能会导致链<a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">错误地分叉并最终确定</a>，让大量验证者困陷在无效链上。 如果这些验证者想重新加入正确的链，他们将面临罚没或缓慢而昂贵的自愿退出和重新激活过程。 罚没的轻重随过错节点数量而异，三分之二的大多数将受到最严重的惩罚（32 个以太币）。
 
 尽管这些情况不太可能发生，但为了降低这类风险，以太坊生态系统可以使客户端均衡分布在活跃节点上。 理想情况下，任何共识客户端任何时候都不会达到总节点数的 33%。
 
 ### 共担责任 {#responsibility}
 
-采用主流客户端也需要人力成本。 这给小型开发团队带来了过多的压力和责任。 客户端多样性程度越低，维护主流客户端的开发者的责任负担就越大。 将这一责任分摊到多个团队，不但有利于以太坊节点网络的健康，也对相关人员的健康有益。
+采用主流客户端也需要人力成本。 这给小型开发团队带来了过多的压力和责任。 客户端多样性程度越低，维护主流客户端的开发者的责任负担就越大。 将这一责任分摊到多个团队，既有利于以太坊节点网络的健康，也有益于相关人员的健康。
 
 ## 客户端多样性现状 {#current-client-diversity}
 
@@ -45,13 +45,13 @@ sidebarDepth: 2
 
 上面的两个饼图显示了执行层和共识层客户端多样性现状的快照（在 2022 年 1 月撰写本文时）。 在执行层，[Geth](https://geth.ethereum.org/) 占据绝对主导地位，[Open Ethereum ](https://openethereum.github.io/) 以极大的差距位居第二，[Erigon](https://github.com/ledgerwatch/erigon) 和 [Nethermind](https://nethermind.io/) 分别占据第三和第四，其他客户端加起来占网络的比例不到 1%。 共识层最常用的客户端 [Prysm](https://prysmaticlabs.com/#projects) 不像 Geth 那样占据绝对主导地位，但仍占有网络的 60% 以上。 [Lighthouse](https://lighthouse.sigmaprime.io/) 和 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) 分别占据约 20% 和约 14%，其他客户端很少使用。
 
-执行层数据于 2022 年 1 月 23 日从 [Ethernodes](https://ethernodes.org) 获得。 共识客户端的数据来自 [Michael Sproul](https://github.com/sigp/blockprint)。 共识客户端数据更难获取，因为信标链客户端并不总是具有明确痕迹来加以识别。 这些数据是使用分类算法生成的，该算法有时会混淆一些非主流客户端（点击[此处](https://twitter.com/sproulM_/status/1440512518242197516)了解更多详细信息）。 在上图中，这些含糊的分类使用了“/”符号进行处理（例如 Nimbus/Teku）。 尽管如此，很明显大部分网络都在运行 Prysm。 这些数据是一组固定区块的快照（在本例中为时隙 2048001 与 2164916 之间的信标区块），Prysm 的主导地位曾经一度更高，超过 68%。 尽管只是快照，但上图中的数值让您对客户端多样性现状有了一个清晰的全局认识。
+2022 年 1 月 23 日，从 [Ethernodes](https://ethernodes.org) 获得执行层数据。 共识客户端的数据来自 [Michael Sproul](https://github.com/sigp/blockprint)。 共识客户端数据更难获取，因为共识层客户端并不总是具有可以用来识别它们的明确痕迹。 这些数据是使用分类算法生成的，该算法有时会混淆一些非主流客户端（点击[此处](https://twitter.com/sproulM_/status/1440512518242197516)了解更多详细信息）。 在上图中，这些含糊的分类使用了“/”符号进行处理（例如 Nimbus/Teku）。 尽管如此，很明显大部分网络都在运行 Prysm。 这些数据是一组固定区块的快照（在本例中为时隙 2048001 与 2164916 之间的信标区块），Prysm 的主导地位曾经一度更高，超过 68%。 尽管只是快照，但上图中的数值可以让你清晰地了解客户端多样性现状的全局。
 
 现在，可以在 [clientdiversity.org](https://clientdiversity.org/) 查阅最新的共识层客户端多样性数据。
 
 ## 执行层 {#execution-layer}
 
-迄今为止，围绕客户端多样性进行的对话主要集中在共识层。 然而，执行客户端 [Geth](https://geth.ethereum.org) 目前约占所有节点的 85%。 这一百分比是有问题的，原因与共识客户端一样。 例如，Geth 中影响交易处理或造成执行负载的漏洞，可能导致共识客户端最终确定有问题或有漏洞的交易。 因此，如果执行客户端分布更均匀，以太坊会更健康。理想情况是没有客户端占据超过 33% 的网络。
+迄今为止，围绕客户端多样性进行的对话主要集中在共识层。 然而，执行客户端 [Geth](https://geth.ethereum.org) 目前约占所有节点的 85%。 这一百分比是有问题的，原因与共识客户端一样。 例如，Geth 中影响交易处理或造成执行负载的漏洞，可能导致共识客户端最终确定有问题或有漏洞的交易。 因此，如果执行客户端分布更均匀，以太坊会更健康。理想情况是所有客户端占据的网络都不超过 33%。
 
 ## 使用非主流客户端 {#use-minority-client}
 
@@ -75,7 +75,9 @@ sidebarDepth: 2
 
 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
 
-[Lodestar](https://github.com/ChainSafe/lodestar) - _正在审核和审计_
+[Lodestar](https://github.com/ChainSafe/lodestar)
+
+[Prysm](https://docs.prylabs.network/docs/getting-started)
 
 技术用户可以为非主流客户端编写更多教程和相关文档，并鼓励他们运营节点的对等体从主流客户端迁离，帮助加快这一进程。 [clientdiversity.org](https://clientdiversity.org/) 提供了改用非主流共识客户端的指南。
 
@@ -86,9 +88,7 @@ sidebarDepth: 2
 **共识层：**
 
 - [Rated.network](https://www.rated.network/)
-- [clientdiversity.org](https://clientdiversity.org/)
-
-**执行层：**
+- [clientdiversity.org](https://clientdiversity.org/) **执行层：**
 
 - [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
@@ -100,7 +100,7 @@ sidebarDepth: 2
 - [客户端多样性的重要性](https://our.status.im/the-importance-of-client-diversity/)
 - [以太坊节点服务列表](https://ethereumnodes.com/)
 - [客户端多样性问题的“五个原因”](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
-- [以太坊多样性及其解决方法 (Youtube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
+- [以太坊多样性及其解决方法 (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
 ## 相关主题 {#related-topics}

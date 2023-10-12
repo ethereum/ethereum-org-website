@@ -10,28 +10,31 @@ Lorsqu'il s'agit de configurer un [environnement de développement intégré (ID
 
 Si vous cherchez à manipuler du code avant de [configurer un environnement de développement local](/developers/local-environment/), ces applications Web sont conçues sur mesure pour le développement de contrats intelligents Ethereum.
 
-**Remix -** **_IDE basé sur le Web avec analyse statique intégrée et une machine virtuelle de test de blockchain._**
+**[Remix](https://remix.ethereum.org/)** - **_IDE basé sur le Web avec une analyse statique, et une machine virtuelle de test de la blockchain_**
 
-- [remix.ethereum.org](https://remix.ethereum.org/)
+- [Documentation](https://remix-ide.readthedocs.io/en/latest/#)
+- [Gitter](https://gitter.im/ethereum/remix)
 
-**EthFiddle -** **_IDE Web permettant de rédiger, de compiler et de déboguer vos contrats intelligents._**
+**[ChainIDE](https://chainide.com/)** - **_Un IDE multichaîne basée sur le cloud_**
 
-- [ethfiddle.com](https://ethfiddle.com/)
+- [Documentation](https://chainide.gitbook.io/chainide-english-1/)
+- [Forum d'aide](https://forum.chainide.com/)
+
+**[Replit (Starter Solidity - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_Un environnement de développement personnalisable pour Ethereum avec rechargement, vérification d'erreur et support natif des réseaux de test._**
+
+- [Documentation](https://docs.replit.com/)
+
+**[Bac à sable Tenderly](https://sandbox.tenderly.co/)** - **_Un environnement de prototypage rapide où vous pouvez écrire, exécuter, et déboguer les contrats intelligents dans le navigateur en utilisant Solidity et JavaScript_**
+
+**[EthFiddle](https://ethfiddle.com/)** - **_IDE basé sur le Web qui vous permet d'écrire, de compiler et de déboguer votre contrat intelligent._**
+
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
-
-**ChainIDE -** **_IDE multi chaîne orienté Cloud_**
-
-- [chainide.com](https://chainide.com/)
-
-**Replit : ** **_Un environnement de développement personnalisable pour Ethereum avec rechargement, vérification d'erreur et une assistance de première classe au réseau de tests._**
-
-- [Démarreur Solidity](https://replit.com/@replit/Solidity-starter-beta)
 
 ## IDE de bureau {#desktop-ides}
 
-La plupart des IDE ont construit des plugins pour améliorer l'expérience de développement Ethereum. Au minimum, ils fournissent un éclairage syntaxique sur les [langages des contrats intelligents](/developers/docs/smart-contracts/languages/).
+La plupart des IDE ont permis de construire des plugins pour améliorer l'expérience de développement Ethereum. Au minimum, ils fournissent un éclairage syntaxique sur les [langages des contrats intelligents](/developers/docs/smart-contracts/languages/).
 
-**Visual Studio Code -** **_IDE professionnel multiplateforme avec support officiel Ethereum._**
+**Visual Studio Code -** **_IDE professionnel multiplateforme avec le support officiel d'Ethereum._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Plan de travail blockchain Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
@@ -58,6 +61,7 @@ La plupart des IDE ont construit des plugins pour améliorer l'expérience de d�
 ## Plugins et extensions {#plugins-extensions}
 
 - [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
+- [Solidity + Hardhat pour VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Prise en charge de Solidity et Hardhat par l'équipe Hardhat
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Formateur de code utilisant prettier
 
 ## Complément d'information {#further-reading}

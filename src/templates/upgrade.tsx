@@ -1,9 +1,8 @@
-import React, { ComponentPropsWithRef } from "react"
+import React, { ComponentProps, ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Badge,
   Box,
@@ -13,7 +12,6 @@ import {
   Divider as ChakraDivider,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   List,
   ListItem,
@@ -25,17 +23,14 @@ import {
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
-import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown, {
-  List as ButtonDropdownList,
-} from "../components/ButtonDropdown"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
+import { BaseLink } from "../components/Link"
+import { mdxTableComponents } from "../components/Table"
 import BeaconChainActions from "../components/BeaconChainActions"
 import ShardChainsList from "../components/ShardChainsList"
 import MergeArticleList from "../components/MergeArticleList"
@@ -53,12 +48,23 @@ import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
+import {
+  MobileButton,
+  MobileButtonDropdown,
+  StyledButtonDropdown,
+} from "./use-cases"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
+
+import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
 import type { ChildOnlyProp, Context } from "../types"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
@@ -95,23 +101,6 @@ const InfoColumn = (props: ChildOnlyProp) => (
   />
 )
 
-const MobileButton = (props: ChildOnlyProp) => {
-  const borderColor = useToken("colors", "border")
-
-  return (
-    <Box
-      bg="background"
-      boxShadow={`0 -1px 0 ${borderColor}`}
-      position="sticky"
-      bottom={0}
-      zIndex={99}
-      p={8}
-      w="full"
-      {...props}
-    />
-  )
-}
-
 // Apply styles for classes within markdown here
 const ContentContainer = (props: BoxProps) => (
   <Box
@@ -126,7 +115,7 @@ const ContentContainer = (props: BoxProps) => (
         pl: 4,
         ml: -4,
         borderLeft: "1px dotted",
-        borderColor: "primary",
+        borderColor: "primary.base",
       },
       ".citation p": {
         color: "text200",
@@ -161,7 +150,7 @@ const Pre = chakra("pre", {
 })
 
 const H1 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize={{ base: "2.5rem", lg: "5xl" }}
     fontWeight="bold"
@@ -173,7 +162,7 @@ const H1 = (props: ChildOnlyProp) => (
 )
 
 const MDXH1 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontWeight="bold"
     lineHeight={1.4}
@@ -183,7 +172,7 @@ const MDXH1 = (props: HeadingProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     fontSize="2rem"
     fontWeight="bold"
     lineHeight={1.4}
@@ -193,7 +182,7 @@ const H2 = (props: HeadingProps) => (
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontWeight="bold"
     lineHeight={1.4}
@@ -203,7 +192,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize="xl"
     lineHeight={1.4}
@@ -220,14 +209,14 @@ const P = (props: TextProps) => (
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 
 const components = {
-  a: Link,
+  a: MdLink,
   h1: MDXH1,
   h2: H2,
   h3: H3,
   h4: H4,
   p: P,
   pre: Pre,
-  table: MarkdownTable,
+  ...mdxTableComponents,
   MeetupList,
   RandomAppList,
   Logo,
@@ -247,10 +236,11 @@ const components = {
   ExpandableCard,
   MergeInfographic,
   QuizWidget,
+  GlossaryTooltip,
 }
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize="2.5rem"
     fontWeight="bold"
@@ -262,26 +252,6 @@ const Title = (props: ChildOnlyProp) => (
 
 const SummaryPoint = (props: ChildOnlyProp) => (
   <ListItem color="text300" mb={0} {...props} />
-)
-
-type ButtonDropdownProps = Pick<
-  ComponentPropsWithRef<typeof ButtonDropdown>,
-  "list"
->
-
-const StyledButtonDropdown = (props: FlexProps & ButtonDropdownProps) => (
-  <Flex
-    as={ButtonDropdown}
-    justify="flex-end"
-    align={{ sm: "flex-end" }}
-    textAlign="center"
-    mb={8}
-    {...props}
-  />
-)
-
-const MobileButtonDropdown = (props: ButtonDropdownProps) => (
-  <StyledButtonDropdown mb={0} {...props} />
 )
 
 const Container = (props: ChildOnlyProp) => (
@@ -301,31 +271,32 @@ const HeroContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const Image = chakra(GatsbyImage, {
-  baseStyle: {
-    flex: "1 1 100%",
-    maxW: "816px",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    alignSelf: "flex-end",
-    ml: 8,
-    right: 0,
-    bottom: 0,
-    w: "full",
-    h: "full",
-    overflow: "initial",
-  },
-})
+const Image: GatsbyImageType = (props) => (
+  <GatsbyImage
+    flex="1 1 100%"
+    maxW="816px"
+    backgroundSize="cover"
+    backgroundRepeat="no-repeat"
+    alignSelf="flex-end"
+    ml="8"
+    right={0}
+    bottom={0}
+    w="full"
+    h="full"
+    overflow="initial"
+    {...props}
+  />
+)
 
 const MoreContent = (props: ChildOnlyProp & { to: string }) => (
   <Flex
-    as={Link}
+    as={BaseLink}
     bg="ednBackground"
     justify="center"
     p={4}
     w="full"
     _hover={{
-      bg: "background",
+      bg: "background.base",
     }}
     {...props}
   />
@@ -339,7 +310,7 @@ const TitleCard = (props: ChildOnlyProp) => {
       direction="column"
       justify="flex-start"
       position={{ base: "relative", lg: "absolute" }}
-      bg={{ base: "ednBackground", lg: "background" }}
+      bg={{ base: "ednBackground", lg: "background.base" }}
       border="1px"
       borderColor="border"
       borderRadius="sm"
@@ -411,7 +382,7 @@ const UpgradePage = ({
     <Container>
       <HeroContainer>
         <TitleCard>
-          <Breadcrumbs slug={slug} startDepth={1} mt={2} />
+          <Breadcrumbs slug={slug} startDepth={1} mt={2} mb="8" />
           <Title>{mdx.frontmatter.title}</Title>
           <Box>
             <List listStyleType="disc">
@@ -480,6 +451,7 @@ export const upgradePageQuery = graphql`
             "page-upgrades-index"
             "learn-quizzes"
             "common"
+            "glossary"
           ]
         }
       }

@@ -12,7 +12,6 @@ import {
   Flex,
   Heading,
   Icon,
-  Text,
   Spinner,
   Stack,
   Container,
@@ -21,10 +20,11 @@ import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Button from "../Button"
+import Button from "../Buttons/Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
+import Text from "../OldText"
 
 import {
   CorrectIcon,
@@ -60,8 +60,8 @@ import questionBank from "../../data/quizzes/questionBank"
 
 interface IProps {
   quizKey?: string
-  currentHandler: (next?: string) => void
-  statusHandler: (status: QuizStatus) => void
+  currentHandler?: (next?: string) => void
+  statusHandler?: (status: QuizStatus) => void
   maxQuestions?: number
   isStandaloneQuiz?: boolean
 }
@@ -112,7 +112,7 @@ const QuizWidget: React.FC<IProps> = ({
     setSelectedAnswer(null)
 
     if (!isStandaloneQuiz) {
-      statusHandler("neutral")
+      statusHandler?.("neutral")
     }
 
     const currentQuizKey =
@@ -155,7 +155,7 @@ const QuizWidget: React.FC<IProps> = ({
           currentQuestionAnswerChoice?.isCorrect) ||
         userQuizProgress[index]?.isCorrect
       ) {
-        return "success"
+        return "success.base"
       }
 
       if (
@@ -164,7 +164,7 @@ const QuizWidget: React.FC<IProps> = ({
           !currentQuestionAnswerChoice?.isCorrect) ||
         (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
       ) {
-        return "error"
+        return "error.base"
       }
 
       if (index === currentQuestionIndex) {
@@ -220,11 +220,11 @@ const QuizWidget: React.FC<IProps> = ({
 
     if (!isStandaloneQuiz) {
       if (currentQuestionAnswerChoice?.isCorrect) {
-        statusHandler("success")
+        statusHandler?.("success")
       }
 
       if (!currentQuestionAnswerChoice?.isCorrect) {
-        statusHandler("error")
+        statusHandler?.("error")
       }
     }
   }
@@ -241,7 +241,7 @@ const QuizWidget: React.FC<IProps> = ({
     setShowAnswer(false)
 
     if (!isStandaloneQuiz) {
-      statusHandler("neutral")
+      statusHandler?.("neutral")
     }
   }
 
@@ -274,7 +274,7 @@ const QuizWidget: React.FC<IProps> = ({
 
     // Reset quiz status (modifies bg color for mobile)
     if (!isStandaloneQuiz) {
-      statusHandler("neutral")
+      statusHandler?.("neutral")
     }
 
     if (finishedQuiz) {
@@ -288,7 +288,7 @@ const QuizWidget: React.FC<IProps> = ({
   }
 
   const handleNextQuiz = () => {
-    currentHandler(nextQuiz)
+    currentHandler?.(nextQuiz)
   }
 
   const AnswerIcon = () => {
@@ -309,7 +309,7 @@ const QuizWidget: React.FC<IProps> = ({
 
   // Render QuizWidget component
   return (
-    <Flex width="full" direction="column" alignItems="center">
+    <Flex width="full" direction="column" alignItems="center" my={16}>
       {/* Hide heading if quiz is not in Learning Quizzes Hub page */}
       {isStandaloneQuiz && (
         <Heading
@@ -337,8 +337,8 @@ const QuizWidget: React.FC<IProps> = ({
           !showAnswer
             ? "neutral"
             : currentQuestionAnswerChoice?.isCorrect
-            ? "successNeutral"
-            : "errorNeutral"
+            ? "success.neutral"
+            : "error.neutral"
         }
         borderRadius="base"
         boxShadow={isStandaloneQuiz ? "drop" : "none"}
@@ -372,10 +372,10 @@ const QuizWidget: React.FC<IProps> = ({
             size="50px"
             bg={
               !showAnswer
-                ? "primary"
+                ? "primary.base"
                 : currentQuestionAnswerChoice?.isCorrect
-                ? "success"
-                : "error"
+                ? "success.base"
+                : "error.base"
             }
             position={{ base: "relative", md: "absolute" }}
             top={{ base: 2, md: 0 }}
@@ -394,10 +394,10 @@ const QuizWidget: React.FC<IProps> = ({
                   fontWeight="700"
                   color={
                     showAnswer && currentQuestionAnswerChoice?.isCorrect
-                      ? "success"
+                      ? "success.base"
                       : showAnswer && !currentQuestionAnswerChoice?.isCorrect
-                      ? "fail"
-                      : "primaryHover"
+                      ? "fail.base"
+                      : "primary.hover"
                   }
                 >
                   {showAnswer && currentQuestionAnswerChoice?.isCorrect
@@ -513,7 +513,7 @@ const QuizWidget: React.FC<IProps> = ({
                     <Button
                       onClick={initialize}
                       variant="unstyled"
-                      color="primary"
+                      color="primary.base"
                       _hover={{ boxShadow: "none" }}
                     >
                       <Text textDecoration="underline" fontWeight="bold" m={0}>

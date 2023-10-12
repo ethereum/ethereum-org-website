@@ -68,7 +68,7 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-Puoi vedere tutte le funzioni disponibili sull'istanza di web3 nella [documentazione ufficiale di web3.js](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
+Puoi vedere tutte le funzioni disponibili sull'istanza di web3 nella [documentazione ufficiale di web3.js](https://docs.web3js.org/).
 
 Gran parte delle librerie di Web3 sono asincrone perché, in background, la libreria effettua chiamate RPC di JSON al nodo, il quale restituisce il risultato.
 

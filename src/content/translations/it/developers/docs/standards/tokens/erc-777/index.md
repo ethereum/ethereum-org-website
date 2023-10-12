@@ -4,13 +4,17 @@ description:
 lang: it
 ---
 
+## Attenzione {#warning}
+
+**ERC-777 è difficile da implementare correttamente a causa della sua [suscettibilità a diverse forme di attacchi](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). Si consiglia invece di utilizzare [ERC-20](/developers/docs/standards/tokens/erc-20/).** Questa pagina rimane come archivio storico.
+
 ## Introduzione? {#introduction}
 
 ERC-777 è un token fungibile standard che migliora lo standard [ERC-20](/developers/docs/standards/tokens/erc-20/) esistente.
 
 ## Prerequisiti {#prerequisites}
 
-Per meglio comprendere questa pagina, consigliamo prima di leggere dell'[ERC-20](/developers/docs/standards/tokens/erc-20/).
+Per meglio comprendere questa pagina, consigliamo prima di documentarsi su [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
 ## Quali miglioramenti propone l'ERC-777 rispetto all'ERC-20? {#-erc-777-vs-erc-20}
 
@@ -36,6 +40,6 @@ Lo standard risolve anche la confusione intorno ai `decimals` causata in ERC-20.
 
 Si interagisce con i contratti ERC-777 come se fossero contratti ERC-20.
 
-## Letture consigliate {#further-reading}
+## Ulteriori Letture {#further-reading}
 
 [EIP-777: Standard token](https://eips.ethereum.org/EIPS/eip-777)

@@ -64,11 +64,7 @@ Typischerweise werden ERC-20-Liquiditäts-Token an Staker ausgegeben, die den We
 </ExpandableCard>
 
 <ExpandableCard title="Wann kann ich meinen Einsatz zurückziehen?">
-Derzeit ist es nicht möglich, Gelder von einem Ethereum-Validator abzuziehen. Das schränkt die Möglichkeit ein, dass Sie Ihre Liquiditätstoken für die in der Konsensschicht gesperrten ETH-Belohnungen tatsächlich <i>einlösen</i> können.
-
-Mit m Shanghai-Netzwerkupgrade wird die Funktion zum Abheben eingeführt, geplant ist der Vorgang für das erste oder zweite Quartal 2023. Bis dahin bleiben alle gestakten ETH gesperrt.
-
-Nach diesem Upgrade ist es für Validator-Konten, die Staking-Pools unterstützen, möglich, auszusteigen und ETH an ihre festgelegte Abhebeadresse zu übertragen. So wird es möglich, dass Sie Ihren Anteil an der Beteiligung gegen die zugrunde liegenden ETH einlösen. Bitte wenden Sie sich an Ihren Anbieter, um zu erfahren, wie er diese Funktionalität unterstützt.
+Sofort! Die Aktualisierung des Netzwerks auf Shanghai/Capella erfolgte im April 2023 und führte das Auszahlen von Staking-Mitteln ein. Validatoren haben nun die Möglichkeit, Staking-Pools, die sie unterstützen, zu verlassen und eine Auszahlung von ETH an ihre angegebene Adresse anzuweisen. Dies macht es möglich, Ihren Anteil am Stake gegen das zugrundeliegende ETH einzulösen. Bitte wenden Sie sich an Ihren Anbieter, um zu erfahren, wie er diese Funktionalität unterstützt.
 
 Alternativ erlauben manche Pools, die ERC-20-Liquiditäts-Token benutzen, dass ihre Nutzer diese Token auf dem freien Markt handeln können. So können Sie Ihre Staking-Position verkaufen und praktisch die Gelder „abheben", ohne tatsächlich ETH vom Staking-Vertrag zu entfernen.
 

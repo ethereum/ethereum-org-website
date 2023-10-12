@@ -10,28 +10,28 @@ import {
   HeadingProps,
   List,
   ListItem,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 
 import Translation from "../../components/Translation"
 import Card from "../../components/Card"
-import ActionCard from "../../components/ActionCard"
-import Link from "../../components/Link"
-import Emoji from "../../components/OldEmoji"
+import InlineLink from "../../components/Link"
 import Trilemma from "../../components/Trilemma"
 import PageHero, {
   IContent as IPageHeroContent,
 } from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import InfoBanner from "../../components/InfoBanner"
 import FeedbackCard from "../../components/FeedbackCard"
+import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
 
 import { getImage } from "../../utils/image"
 
 import type { ChildOnlyProp } from "../../types"
+import Emoji from "../../components/Emoji"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex direction="column" align="center" w="full" {...props} />
@@ -47,13 +47,12 @@ const PageDivider = () => (
 )
 
 const PageContent = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+  <Flex flexDirection="column" gap="8" py={4} px={8} w="full" {...props} />
 )
 
 const H2 = (props: HeadingProps) => (
   <Heading
     as="h2"
-    mt={0}
     mb={8}
     fontSize={{ base: "2xl", md: "2rem" }}
     fontWeight="semibold"
@@ -65,7 +64,7 @@ const H2 = (props: HeadingProps) => (
 const CenterH2 = (props: HeadingProps) => <H2 textAlign="center" {...props} />
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     fontWeight="semibold"
@@ -75,7 +74,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H6 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h6"
     fontSize="0.9rem"
     fontWeight="normal"
@@ -169,29 +168,29 @@ const VisionPage = ({
           </Text>
           <List listStyleType="disc">
             <ListItem>
-              <Link to="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">
+              <InlineLink to="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">
                 <Translation id="page-roadmap-vision-2022" />
-              </Link>
+              </InlineLink>
             </ListItem>
             <ListItem>
-              <Link to="https://trent.mirror.xyz/82eyq_NXZzzqFmCNXiKJgSdayf6omCW7BgDQIneyPoA">
+              <InlineLink to="https://trent.mirror.xyz/82eyq_NXZzzqFmCNXiKJgSdayf6omCW7BgDQIneyPoA">
                 <Translation id="page-roadmap-vision-2021-updates" />
-              </Link>
+              </InlineLink>
             </ListItem>
             <ListItem>
-              <Link to="https://tim.mirror.xyz/CHQtTJb1NDxCK41JpULL-zAJe7YOtw-m4UDw6KDju6c">
+              <InlineLink to="https://tim.mirror.xyz/CHQtTJb1NDxCK41JpULL-zAJe7YOtw-m4UDw6KDju6c">
                 <Translation id="page-roadmap-vision-2021" />
-              </Link>
+              </InlineLink>
             </ListItem>
             <ListItem>
-              <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
+              <InlineLink to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
                 <Translation id="page-roadmap-vision-upgrade-needs-serenity" />
-              </Link>
+              </InlineLink>
             </ListItem>
             <ListItem>
-              <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
+              <InlineLink to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
                 <Translation id="page-roadmap-vision-2014" />
-              </Link>
+              </InlineLink>
             </ListItem>
           </List>
           <Text>
@@ -239,9 +238,9 @@ const VisionPage = ({
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-scalability-desc-4" />{" "}
-            <Link to="/roadmap/danksharding/">
+            <InlineLink to="/roadmap/danksharding/">
               <Translation id="page-roadmap-vision-danksharding" />
-            </Link>{" "}
+            </InlineLink>{" "}
           </Text>
           <H3>
             <Translation id="page-roadmap-vision-security" />{" "}
@@ -252,24 +251,24 @@ const VisionPage = ({
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-security-desc-3" />{" "}
-            <Link to="/developers/docs/consensus-mechanisms/pos/">
+            <InlineLink to="/developers/docs/consensus-mechanisms/pos/">
               <Translation id="page-upgrades-proof-stake-link" />
-            </Link>{" "}
+            </InlineLink>{" "}
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-security-desc-5" />{" "}
-            <Link to="/developers/docs/consensus-mechanisms/pow/">
+            <InlineLink to="/developers/docs/consensus-mechanisms/pow/">
               <Translation id="page-roadmap-vision-security-desc-5-link" />
-            </Link>
+            </InlineLink>
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-security-desc-10" />
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-security-validator" />{" "}
-            <Link to="/run-a-node/">
+            <InlineLink to="/run-a-node/">
               <Translation id="page-roadmap-vision-ethereum-node" />
-            </Link>
+            </InlineLink>
           </Text>
           <ButtonLink to="/staking/">
             <Translation id="page-roadmap-vision-security-staking" />
@@ -283,15 +282,15 @@ const VisionPage = ({
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-sustainability-desc-1" />{" "}
-            <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
+            <InlineLink to="/developers/docs/consensus-mechanisms/pow/mining/">
               <Translation id="page-roadmap-vision-mining" />
-            </Link>
+            </InlineLink>
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-sustainability-desc-2" />{" "}
-            <Link to="/staking/">
+            <InlineLink to="/staking/">
               <Translation id="page-roadmap-vision-staking-lower" />
-            </Link>
+            </InlineLink>
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-sustainability-desc-3" />

@@ -4,7 +4,6 @@ import React, {
   useEffect,
   ComponentPropsWithRef,
 } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -19,8 +18,6 @@ import {
   Heading,
   HeadingProps,
   SimpleGrid,
-  Text,
-  chakra,
   useToken,
 } from "@chakra-ui/react"
 
@@ -31,15 +28,19 @@ import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
 import ProductCard from "../components/ProductCard"
 import GhostCard from "../components/GhostCard"
-import Link from "../components/Link"
+import InlineLink, { BaseLink } from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import GatsbyImage, { GatsbyImageType } from "../components/GatsbyImage"
 
 import { getImage, getSrc } from "../utils/image"
 import { trackCustomEvent } from "../utils/matomo"
@@ -89,8 +90,8 @@ const Option = (
       alignItems="center"
       justifyContent={{ base: "center", lg: "flex-start" }}
       boxShadow={props.isActive ? tableBoxShadow : `none`}
-      color={props.isActive ? "primary" : "text"}
-      borderColor={props.isActive ? "primary" : "text"}
+      color={props.isActive ? "primary.base" : "text"}
+      borderColor={props.isActive ? "primary.base" : "text"}
       borderRadius="2rem"
       height="auto"
       w={{ base: "full", lg: "auto" }}
@@ -100,8 +101,8 @@ const Option = (
       px={6}
       transition="none"
       _hover={{
-        color: "primary",
-        borderColor: "primary",
+        color: "primary.base",
+        borderColor: "primary.base",
       }}
       _active={{ bg: "transparent" }}
       {...props}
@@ -128,18 +129,19 @@ const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
   <Button variant="outline" py={2} px={3} borderRadius="0.25em" {...props} />
 )
 
-const MagiciansImage = chakra(GatsbyImage, {
-  baseStyle: {
-    bgSize: "cover",
-    bgRepeat: "no-repeat",
-    alignSelf: "center",
-    w: "full",
-    minW: "240px",
-    maxW: "300px",
-    my: 8,
-    mx: { base: 0, sm: 8, md: 24 },
-  },
-})
+const MagiciansImage: GatsbyImageType = (props) => (
+  <GatsbyImage
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    alignSelf="center"
+    w="full"
+    minW="240px"
+    maxW="300px"
+    my="8"
+    mx={{ base: 0, sm: "8", md: "24" }}
+    {...props}
+  />
+)
 
 const ImageContainer = (props: Pick<FlexProps, "children" | "id">) => (
   <Flex justify="center" {...props} />
@@ -169,7 +171,7 @@ const IntroRow = (props: ChildOnlyProp) => (
     w="full"
     direction={{ base: "column", lg: "row" }}
     align="flex-start"
-    bg="background"
+    bg="background.base"
     p={8}
     borderRadius="32px"
     {...props}
@@ -187,7 +189,7 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
 )
 
 const StyledH2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     fontSize="2xl"
     lineHeight="22px"
     letterSpacing={0}
@@ -208,7 +210,7 @@ const H2 = (props: HeadingProps) => (
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     fontWeight="semibold"
@@ -272,8 +274,8 @@ const StepBoxContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const StepBox = (props: ComponentPropsWithRef<typeof Link>) => (
-  <Link
+const StepBox = (props: ComponentPropsWithRef<typeof BaseLink>) => (
+  <BaseLink
     border="1px solid"
     borderColor="border"
     pt={0}
@@ -314,29 +316,6 @@ const RightColumn = (props: ChildOnlyProp) => (
   <Box w="full" m={{ base: "auto 0", lg: 0 }} ml={{ lg: 8 }} {...props} />
 )
 
-const AddDapp = (props: ChildOnlyProp) => (
-  <Flex
-    direction={{ base: "column", sm: "row" }}
-    justify="space-between"
-    align={{ base: "flex-start", sm: "center" }}
-    borderRadius="base"
-    border="1px solid"
-    borderColor="border"
-    p={6}
-    mt={6}
-    {...props}
-  />
-)
-
-const AddDappButton = (props: ComponentPropsWithRef<typeof ButtonLink>) => (
-  <ButtonLink
-    variant="outline"
-    mt={{ base: 8, sm: 0 }}
-    ml={{ base: 0, md: 8 }}
-    {...props}
-  />
-)
-
 const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
   <Callout flex="1 1 416px" minH="full" mt={{ base: 48, lg: 32 }} {...props} />
 )
@@ -354,6 +333,8 @@ enum CategoryType {
   TECHNOLOGY = "technology",
   COLLECTIBLES = "collectibles",
   GAMING = "gaming",
+  METAVERSE = "metaverse",
+  SOCIAL = "social",
 }
 
 interface Category {
@@ -397,6 +378,8 @@ const DappsPage = ({
         CategoryType.TECHNOLOGY,
         CategoryType.COLLECTIBLES,
         CategoryType.GAMING,
+        CategoryType.METAVERSE,
+        CategoryType.SOCIAL,
       ].includes(selectedCategory)
         ? selectedCategory
         : CategoryType.FINANCE
@@ -590,6 +573,28 @@ const DappsPage = ({
         },
       ],
     },
+    [CategoryType.METAVERSE]: {
+      title: t("page-dapps-metaverse-button"),
+      emoji: ":globe_with_meridians:",
+      benefitsTitle: t("page-dapps-metaverse-benefits-title"),
+      benefitsDescription: t("page-dapps-metaverse-benefits-description"),
+      benefits: [
+        {
+          emoji: ":tophat:",
+          title: t("page-dapps-metaverse-benefits-1-title"),
+          description: t("page-dapps-metaverse-benefits-1-description"),
+        },
+        {
+          emoji: ":person:",
+          title: t("page-dapps-metaverse-benefits-2-title"),
+          description: t("page-dapps-metaverse-benefits-2-description"),
+        },
+      ],
+    },
+    [CategoryType.SOCIAL]: {
+      title: t("page-dapps-social-button"),
+      emoji: ":incoming_envelope:",
+    },
     [CategoryType.TECHNOLOGY]: {
       title: t("page-dapps-technology-button"),
       emoji: ":keyboard:",
@@ -627,6 +632,20 @@ const DappsPage = ({
       image: getImage(data.pwn),
       alt: t("page-dapps-pwn-image-alt"),
     },
+    {
+      title: "Yearn",
+      description: t("page-dapps-dapp-description-yearn"),
+      link: "https://yearn.finance/",
+      image: getImage(data.yearn),
+      alt: t("page-dapps-yearn-image-alt"),
+    },
+    {
+      title: "Convex",
+      description: t("page-dapps-dapp-description-convex"),
+      link: "https://www.convexfinance.com/",
+      image: getImage(data.convex),
+      alt: t("page-dapps-convex-image-alt"),
+    },
   ]
 
   const dex = [
@@ -638,25 +657,18 @@ const DappsPage = ({
       alt: t("page-dapps-uniswap-logo-alt"),
     },
     {
-      title: "Matcha",
-      description: t("page-dapps-dapp-description-matcha"),
-      link: "https://matcha.xyz",
-      image: getImage(data.matcha),
-      alt: t("page-dapps-matcha-logo-alt"),
+      title: "Loopring",
+      description: t("page-dapps-dapp-description-loopring"),
+      link: "https://loopring.org/#/",
+      image: getImage(data.loopring),
+      alt: t("page-dapps-loopring-logo-alt"),
     },
     {
-      title: "1inch",
-      description: t("page-dapps-dapp-description-1inch"),
-      link: "https://1inch.exchange/",
-      image: getImage(data.oneinch),
-      alt: t("page-dapps-1inch-logo-alt"),
-    },
-    {
-      title: "DexGuru",
-      description: t("page-dapps-dapp-description-dexguru"),
-      link: "https://dex.guru",
-      image: getImage(data.dexguru),
-      alt: t("page-dapps-dexguru-logo-alt"),
+      title: "Balancer",
+      description: t("page-dapps-dapp-description-balancer"),
+      link: "https://balancer.fi/",
+      image: getImage(data.balancer),
+      alt: t("page-dapps-balancer-logo-alt"),
     },
   ]
 
@@ -676,11 +688,11 @@ const DappsPage = ({
       alt: t("page-dapps-augur-logo-alt"),
     },
     {
-      title: "Loopring",
-      description: t("page-dapps-dapp-description-loopring"),
-      link: "https://loopring.org/#/",
-      image: getImage(data.loopring),
-      alt: t("page-dapps-loopring-logo-alt"),
+      title: "Synthetix",
+      description: t("page-dapps-dapp-description-synthetix"),
+      link: "https://synthetix.io/",
+      image: getImage(data.synthetix),
+      alt: t("page-dapps-sythetix-logo-alt"),
     },
   ]
 
@@ -696,16 +708,9 @@ const DappsPage = ({
 
   const payments = [
     {
-      title: "Tornado cash",
-      description: t("page-dapps-dapp-description-tornado-cash"),
-      link: "https://ipfs.io/ipns/tornadocash.eth/",
-      image: getImage(data.tornado),
-      alt: t("page-dapps-tornado-cash-logo-alt"),
-    },
-    {
       title: "Sablier",
       description: t("page-dapps-dapp-description-sablier"),
-      link: "https://pay.sablier.finance/",
+      link: "https://app.sablier.com",
       image: getImage(data.sablier),
       alt: t("page-dapps-sablier-logo-alt"),
     },
@@ -734,11 +739,18 @@ const DappsPage = ({
       alt: t("page-dapps-index-coop-logo-alt"),
     },
     {
-      title: "Balancer",
-      description: t("page-dapps-dapp-description-balancer"),
-      link: "https://balancer.fi/",
-      image: getImage(data.balancer),
-      alt: t("page-dapps-balancer-logo-alt"),
+      title: "Yearn",
+      description: t("page-dapps-dapp-description-yearn"),
+      link: "https://yearn.finance/",
+      image: getImage(data.yearn),
+      alt: t("page-dapps-yearn-logo-alt"),
+    },
+    {
+      title: "Convex",
+      description: t("page-dapps-dapp-description-convex"),
+      link: "https://www.convexfinance.com/",
+      image: getImage(data.convex),
+      alt: t("page-dapps-convex-logo-alt"),
     },
   ]
 
@@ -792,22 +804,22 @@ const DappsPage = ({
 
   const computing = [
     {
-      title: "Golem",
-      description: t("page-dapps-dapp-description-golem"),
-      link: "https://golem.network/",
-      image: getImage(data.golem),
-      alt: t("page-dapps-golem-logo-alt"),
-    },
-    {
       title: "radicle.xyz",
       description: t("page-dapps-dapp-description-radicle"),
       link: "https://radicle.xyz/",
       image: getImage(data.radicle),
       alt: t("page-dapps-radicle-logo-alt"),
     },
+    {
+      title: "API3",
+      description: t("page-dapps-dapp-description-api3"),
+      link: "https://api3.org/",
+      image: getImage(data.api3),
+      alt: t("page-dapps-api3-logo-alt"),
+    },
   ]
 
-  const marketplaces = [
+  const codeMarketplaces = [
     {
       title: "Gitcoin",
       description: t("page-dapps-dapp-description-gitcoin"),
@@ -819,11 +831,32 @@ const DappsPage = ({
 
   const utilities = [
     {
-      title: "Ethereum Name Service (ENS)",
-      description: t("page-dapps-dapp-description-ens"),
-      link: "http://ens.domains/",
-      image: getImage(data.ens),
-      alt: t("page-dapps-ens-logo-alt"),
+      title: "IPFS",
+      description: t("page-dapps-dapp-description-ipfs"),
+      link: "https://ipfs.tech/",
+      image: getImage(data.ipfs),
+      alt: t("page-dapps-ipfs-logo-alt"),
+    },
+    {
+      title: "Golem",
+      description: t("page-dapps-dapp-description-golem"),
+      link: "https://golem.network/",
+      image: getImage(data.golem),
+      alt: t("page-dapps-golem-logo-alt"),
+    },
+    {
+      title: "Graph",
+      description: t("page-dapps-dapp-description-graph"),
+      link: "https://thegraph.com/en/",
+      image: getImage(data.graph),
+      alt: t("page-dapps-graph-logo-alt"),
+    },
+    {
+      title: "Arweave",
+      description: t("page-dapps-dapp-description-arweave"),
+      link: "https://www.arweave.org/",
+      image: getImage(data.arweave),
+      alt: t("page-dapps-arweave-logo-alt"),
     },
   ]
 
@@ -887,13 +920,6 @@ const DappsPage = ({
 
   const collectibles = [
     {
-      title: "OpenSea",
-      description: t("page-dapps-dapp-description-opensea"),
-      link: "https://opensea.io/",
-      image: getImage(data.opensea),
-      alt: t("page-dapps-opensea-logo-alt"),
-    },
-    {
       title: "marble.cards",
       description: t("page-dapps-dapp-description-marble-cards"),
       link: "https://marble.cards/",
@@ -901,25 +927,11 @@ const DappsPage = ({
       alt: t("page-dapps-marble-cards-logo-alt"),
     },
     {
-      title: "Rarible",
-      description: t("page-dapps-dapp-description-rarible"),
-      link: "https://rarible.com/",
-      image: getImage(data.rarible),
-      alt: t("page-dapps-rarible-logo-alt"),
-    },
-    {
       title: "CryptoPunks",
       description: t("page-dapps-dapp-description-cryptopunks"),
       link: "https://cryptopunks.app/",
       image: getImage(data.cryptopunks),
       alt: t("page-dapps-cryptopunks-logo-alt"),
-    },
-    {
-      title: "POAP - Proof of Attendance Protocol",
-      description: t("page-dapps-dapp-description-poap"),
-      link: "https://poap.xyz",
-      image: getImage(data.poap),
-      alt: t("page-dapps-poap-logo-alt"),
     },
   ]
 
@@ -937,6 +949,23 @@ const DappsPage = ({
       link: "https://decentraland.org/",
       image: getImage(data.decentraland),
       alt: t("page-dapps-decentraland-logo-alt"),
+    },
+  ]
+
+  const avatar = [
+    {
+      title: "OSUVOX",
+      description: t("page-dapps-dapp-description-osuvox"),
+      link: "https://osuvox.io/",
+      image: getImage(data.osuvox),
+      alt: t("page-dapps-osuvox-logo-alt"),
+    },
+    {
+      title: "Spatial",
+      description: t("page-dapps-dapp-description-spatial"),
+      link: "https://www.spatial.io/",
+      image: getImage(data.spatial),
+      alt: t("page-dapps-spatial-logo-alt"),
     },
   ]
 
@@ -964,6 +993,176 @@ const DappsPage = ({
     },
   ]
 
+  const social = [
+    {
+      title: "GM",
+      description: t("page-dapps-dapp-description-gm"),
+      link: "https://gm.xyz/",
+      image: getImage(data.gm),
+      alt: t("page-dapps-gm-logo-alt"),
+    },
+    {
+      title: "CyberConnect",
+      description: t("page-dapps-dapp-description-cyberconnect"),
+      link: "https://link3.to/cyberconnect",
+      image: getImage(data.cyberconnect),
+      alt: t("page-dapps-cyberconnect-logo-alt"),
+    },
+  ]
+
+  const content = [
+    {
+      title: "Mirror",
+      description: t("page-dapps-dapp-description-mirror"),
+      link: "https://mirror.xyz/",
+      image: getImage(data.mirror),
+      alt: t("page-dapps-mirror-logo-alt"),
+    },
+  ]
+
+  const messaging = [
+    {
+      title: "Status",
+      description: t("page-dapps-dapp-description-status"),
+      link: "https://status.im/",
+      image: getImage(data.status),
+      alt: t("page-dapps-status-logo-alt"),
+    },
+    {
+      title: "XMTP",
+      description: t("page-dapps-dapp-description-xmtp"),
+      link: "https://xmtp.org/",
+      image: getImage(data.xmtp),
+      alt: t("page-dapps-xmtp-logo-alt"),
+    },
+    {
+      title: "Skiff",
+      description: t("page-dapps-dapp-description-skiff"),
+      link: "https://skiff.com/",
+      image: getImage(data.skiff),
+      alt: t("page-dapps-skiff-logo-alt"),
+    },
+  ]
+
+  const identity = [
+    {
+      title: "Ethereum Name Service",
+      description: t("page-dapps-dapp-description-ens"),
+      link: "https://ens.domains/",
+      image: getImage(data.ens),
+      alt: t("page-dapps-ens-logo-alt"),
+    },
+    {
+      title: "Spruce",
+      description: t("page-dapps-dapp-description-spruce"),
+      link: "https://www.spruceid.com/",
+      image: getImage(data.spruce),
+      alt: t("page-dapps-spruce-logo-alt"),
+    },
+  ]
+
+  const demandAggregator = [
+    {
+      title: "KyberSwap",
+      description: t("page-dapps-dapp-description-kyberswap"),
+      link: "https://kyberswap.com/",
+      image: getImage(data.kyberswap),
+      alt: t("page-dapps-kyberswap-logo-alt"),
+    },
+    {
+      title: "Matcha",
+      description: t("page-dapps-dapp-description-matcha"),
+      link: "https://matcha.xyz",
+      image: getImage(data.matcha),
+      alt: t("page-dapps-matcha-logo-alt"),
+    },
+    {
+      title: "1inch",
+      description: t("page-dapps-dapp-description-1inch"),
+      link: "https://1inch.exchange/",
+      image: getImage(data.oneinch),
+      alt: t("page-dapps-1inch-logo-alt"),
+    },
+  ]
+
+  const derivatives = [
+    {
+      title: "Synthetix",
+      description: t("page-dapps-dapp-description-synthetix"),
+      link: "https://synthetix.io/",
+      image: getImage(data.synthetix),
+      alt: t("page-dapps-synthetix-logo-alt"),
+    },
+  ]
+
+  const liquidStaking = [
+    {
+      title: "Lido",
+      description: t("page-dapps-dapp-description-lido"),
+      link: "https://lido.is/",
+      image: getImage(data.lido),
+      alt: t("page-dapps-lido-logo-alt"),
+    },
+    {
+      title: "Ankr",
+      description: t("page-dapps-dapp-description-ankr"),
+      link: "https://www.ankr.com/",
+      image: getImage(data.ankr),
+      alt: t("page-dapps-ankr-logo-alt"),
+    },
+  ]
+
+  const bridges = [
+    {
+      title: "Multichain",
+      description: t("page-dapps-dapp-description-multichain"),
+      link: "https://multichain.xyz/",
+      image: getImage(data.multichain),
+      alt: t("page-dapps-multichain-logo-alt"),
+    },
+    {
+      title: "Rubic",
+      description: t("page-dapps-dapp-description-rubic"),
+      link: "https://rubic.exchange/",
+      image: getImage(data.rubic),
+      alt: t("page-dapps-rubic-logo-alt"),
+    },
+  ]
+
+  const experiences = [
+    {
+      title: "POAP - Proof of Attendance Protocol",
+      description: t("page-dapps-dapp-description-poap"),
+      link: "https://poap.xyz",
+      image: getImage(data.poap),
+      alt: t("page-dapps-poap-logo-alt"),
+    },
+  ]
+
+  const marketplaces = [
+    {
+      title: "OpenSea",
+      description: t("page-dapps-dapp-description-opensea"),
+      link: "https://opensea.io/",
+      image: getImage(data.opensea),
+      alt: t("page-dapps-opensea-logo-alt"),
+    },
+    {
+      title: "Rarible",
+      description: t("page-dapps-dapp-description-rarible"),
+      link: "https://rarible.com/",
+      image: getImage(data.rarible),
+      alt: t("page-dapps-rarible-logo-alt"),
+    },
+    {
+      title: "Art Blocks",
+      description: t("page-dapps-dapp-description-artblocks"),
+      link: "https://artblocks.io/",
+      image: getImage(data.artblocks),
+      alt: t("page-dapps-artblocks-logo-alt"),
+    },
+  ]
+
   const editorChoices = [
     {
       name: "Uniswap",
@@ -976,33 +1175,33 @@ const DappsPage = ({
       pillColor: "tagMint",
     },
     {
-      name: "Dark Forest",
-      description: t("page-dapps-editors-choice-dark-forest"),
-      url: "https://zkga.me",
-      image: getImage(data.darkforestec),
-      alt: t("page-dapps-dark-forest-logo-alt"),
-      background: "#080808",
-      type: CategoryType.GAMING,
-      pillColor: "tagOrange",
-    },
-    {
-      name: "Foundation",
-      description: t("page-dapps-editors-choice-foundation"),
-      url: "https://foundation.app",
-      image: getImage(data.foundationec),
-      alt: t("page-dapps-foundation-logo-alt"),
-      background: "#ffffff",
+      name: "OpenSea",
+      description: t("page-dapps-dapp-description-opensea"),
+      url: "https://opensea.io/",
+      image: getImage(data.opensea),
+      alt: t("page-dapps-opensea-logo-alt"),
+      background: "#181b21",
       type: CategoryType.COLLECTIBLES,
       pillColor: "tagBlue",
     },
     {
-      name: "PoolTogether",
-      description: t("page-dapps-editors-choice-pooltogether"),
-      url: "https://pooltogether.com",
-      image: getImage(data.pooltogetherec),
-      alt: t("page-dapps-pooltogether-logo-alt"),
-      background: "#7e4cf2",
-      type: CategoryType.FINANCE,
+      name: "Gods Unchained",
+      description: t("page-dapps-dapp-description-gods-unchained"),
+      url: "https://godsunchained.com/",
+      image: getImage(data.gods),
+      alt: t("page-dapps-gods-unchained-logo-alt"),
+      background: "#111c25",
+      type: CategoryType.GAMING,
+      pillColor: "tagOrange",
+    },
+    {
+      name: "Ethereum Name Service",
+      description: t("page-dapps-dapp-description-ens"),
+      url: "https://ens.domains/",
+      image: getImage(data.ens),
+      alt: t("page-dapps-ens-logo-alt"),
+      background: "#fff",
+      type: CategoryType.SOCIAL,
       pillColor: "tagMint",
     },
   ]
@@ -1016,7 +1215,7 @@ const DappsPage = ({
     buttons: [
       {
         content: t("page-dapps-explore-dapps-title"),
-        to: "#explore",
+        to: "#beginner",
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1050,9 +1249,9 @@ const DappsPage = ({
         </StyledH2>
         <Text>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
-          <Link to="/glossary/#transaction-fee">
+          <GlossaryTooltip termKey="transaction-fee">
             <Translation id="transaction-fees" />
-          </Link>
+          </GlossaryTooltip>
         </Text>
         <Row>
           <StepBoxContainer>
@@ -1121,12 +1320,12 @@ const DappsPage = ({
             </StepBox>
           </StepBoxContainer>
         </Row>
-        <H3>
-          <Translation id="page-dapps-editors-choice-header" />{" "}
+        <H3 id="beginner">
+          <Translation id="page-dapps-beginner-friendly-header" />{" "}
           <Emoji text=":+1:" />
         </H3>
         <Text>
-          <Translation id="page-dapps-editors-choice-description" />
+          <Translation id="page-dapps-beginner-friendly-description" />
         </Text>
         <StyledCardGrid>
           {editorChoices.map((choice, idx) => (
@@ -1186,11 +1385,7 @@ const DappsPage = ({
               <Column>
                 <StyledH2>
                   <Translation id="page-dapps-finance-title" />{" "}
-                  <Emoji
-                    fontSize="5xl"
-                    ml={"0.5rem"}
-                    text=":money_with_wings:"
-                  />
+                  <Emoji fontSize="5xl" ml="2" text=":money_with_wings:" />
                 </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-finance-description" />
@@ -1220,28 +1415,28 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-trading")}
-                  content={trading}
+                  category={t("page-dapps-category-demand-aggregator")}
+                  content={demandAggregator}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-investments")}
-                  content={investments}
+                  category={t("page-dapps-category-bridges")}
+                  content={bridges}
                 />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-payments")}
-                  content={payments}
+                  category={t("page-dapps-category-investments")}
+                  content={investments}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-lottery")}
-                  content={lottery}
+                  category={t("page-dapps-category-portfolios")}
+                  content={portfolios}
                 />
               </RightColumn>
             </TwoColumnContent>
@@ -1254,8 +1449,36 @@ const DappsPage = ({
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-portfolios")}
-                  content={portfolios}
+                  category={t("page-dapps-category-payments")}
+                  content={payments}
+                />
+              </RightColumn>
+            </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-lottery")}
+                  content={lottery}
+                />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList
+                  category={t("page-dapps-category-derivatives")}
+                  content={derivatives}
+                />
+              </RightColumn>
+            </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-liquid-staking")}
+                  content={liquidStaking}
+                />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList
+                  category={t("page-dapps-category-trading")}
+                  content={trading}
                 />
               </RightColumn>
             </TwoColumnContent>
@@ -1283,7 +1506,7 @@ const DappsPage = ({
               <Column>
                 <StyledH2>
                   <Translation id="page-dapps-gaming-title" />{" "}
-                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":video_game:" />
+                  <Emoji fontSize="5xl" ml="2" text=":video_game:" />
                 </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-gaming-description" />
@@ -1299,16 +1522,11 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-worlds")}
-                  content={worlds}
-                />
-              </LeftColumn>
-              <RightColumn>
-                <ProductList
                   category={t("page-dapps-category-competitive")}
                   content={competitive}
                 />
-              </RightColumn>
+              </LeftColumn>
+              <RightColumn></RightColumn>
             </TwoColumnContent>
           </Content>
         )}
@@ -1318,7 +1536,7 @@ const DappsPage = ({
               <Column>
                 <StyledH2>
                   <Translation id="page-dapps-technology-title" />{" "}
-                  <Emoji fontSize="5xl" ml={"0.5rem"} text=":keyboard:" />
+                  <Emoji fontSize="5xl" ml="2" text=":keyboard:" />
                 </StyledH2>
                 <Subtitle>
                   <Translation id="page-dapps-technology-description" />
@@ -1340,8 +1558,8 @@ const DappsPage = ({
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-marketplaces")}
-                  content={marketplaces}
+                  category={t("page-dapps-category-code-marketplaces")}
+                  content={codeMarketplaces}
                 />
               </RightColumn>
             </TwoColumnContent>
@@ -1387,13 +1605,8 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-arts")}
-                  content={arts}
-                />
-
-                <ProductList
-                  category={t("page-dapps-category-music")}
-                  content={music}
+                  category={t("page-dapps-category-marketplaces")}
+                  content={marketplaces}
                 />
               </LeftColumn>
               <RightColumn>
@@ -1403,23 +1616,116 @@ const DappsPage = ({
                 />
               </RightColumn>
             </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-arts")}
+                  content={arts}
+                />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList
+                  category={t("page-dapps-category-experiences")}
+                  content={experiences}
+                />
+                <ProductList
+                  category={t("page-dapps-category-music")}
+                  content={music}
+                />
+              </RightColumn>
+            </TwoColumnContent>
+          </Content>
+        )}
+        {selectedCategory === CategoryType.METAVERSE && (
+          <Content>
+            <IntroRow>
+              <Column>
+                <H2>
+                  <Translation id="page-dapps-metaverse-title" />{" "}
+                  <Emoji
+                    fontSize="5xl"
+                    ml="2"
+                    text=":globe_with_meridians:"
+                  />
+                </H2>
+                <Subtitle>
+                  <Translation id="page-dapps-metaverse-description" />
+                </Subtitle>
+              </Column>
+              <StyledInfoBanner isWarning>
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
+              </StyledInfoBanner>
+            </IntroRow>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-worlds")}
+                  content={worlds}
+                />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList
+                  category={t("page-dapps-category-avatar")}
+                  content={avatar}
+                />
+              </RightColumn>
+            </TwoColumnContent>
+          </Content>
+        )}
+        {selectedCategory === CategoryType.SOCIAL && (
+          <Content>
+            <IntroRow>
+              <Column>
+                <H2>
+                  <Translation id="page-dapps-social-title" />{" "}
+                  <Emoji fontSize="5xl" ml="2" text=":incoming_envelope:" />
+                </H2>
+                <Subtitle>
+                  <Translation id="page-dapps-social-description" />
+                </Subtitle>
+              </Column>
+              <StyledInfoBanner isWarning>
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
+              </StyledInfoBanner>
+            </IntroRow>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-social")}
+                  content={social}
+                />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList
+                  category={t("page-dapps-category-content")}
+                  content={content}
+                />
+              </RightColumn>
+            </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-messaging")}
+                  content={messaging}
+                />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList
+                  category={t("page-dapps-category-identity")}
+                  content={identity}
+                />
+              </RightColumn>
+            </TwoColumnContent>
           </Content>
         )}
         {/* General content for all categories */}
         <Content>
-          <AddDapp>
-            <Box>
-              <StyledH2>
-                <Translation id="page-dapps-add-title" />
-              </StyledH2>
-              <Text mb={0} mr={4}>
-                <Translation id="listing-policy-disclaimer" />{" "}
-              </Text>
-            </Box>
-            <AddDappButton to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.yaml&title=">
-              <Translation id="page-dapps-add-button" />
-            </AddDappButton>
-          </AddDapp>
           <CenterDivider />
           {categories[selectedCategory].benefits && (
             <Box mt={12}>
@@ -1496,9 +1802,9 @@ const DappsPage = ({
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             <Translation id="page-dapps-magic-behind-dapps-description" />
           </Text>
-          <Link to="/what-is-ethereum/">
+          <InlineLink to="/what-is-ethereum/">
             <Translation id="page-dapps-magic-behind-dapps-link" />
-          </Link>
+          </InlineLink>
         </Flex>
         <BoxGrid items={features} />
         <Row>
@@ -1552,7 +1858,7 @@ export const dappImage = graphql`
     childImageSharp {
       gatsbyImageData(
         width: 80
-        layout: CONSTRAINED
+        layout: FIXED
         placeholder: BLURRED
         quality: 100
       )
@@ -1577,7 +1883,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-dapps", "common"] }
+        ns: { in: ["page-dapps", "common", "glossary"] }
       }
     ) {
       edges {
@@ -1656,6 +1962,9 @@ export const query = graphql`
     compound: file(relativePath: { eq: "dapps/compound.png" }) {
       ...dappImage
     }
+    convex: file(relativePath: { eq: "dapps/convex.png" }) {
+      ...dappImage
+    }
     pooltogether: file(relativePath: { eq: "dapps/pooltogether.png" }) {
       ...dappImage
     }
@@ -1666,9 +1975,6 @@ export const query = graphql`
       ...dappImage
     }
     set: file(relativePath: { eq: "dapps/set.png" }) {
-      ...dappImage
-    }
-    tornado: file(relativePath: { eq: "dapps/tornado.png" }) {
       ...dappImage
     }
     loopring: file(relativePath: { eq: "dapps/loopring.png" }) {
@@ -1776,10 +2082,79 @@ export const query = graphql`
     pwn: file(relativePath: { eq: "dapps/pwn.png" }) {
       ...dappImage
     }
+    yearn: file(relativePath: { eq: "dapps/yearn.png" }) {
+      ...dappImage
+    }
     balancer: file(relativePath: { eq: "dapps/balancer.png" }) {
       ...dappImage
     }
-    dexguru: file(relativePath: { eq: "dapps/dexguru.png" }) {
+    yearn: file(relativePath: { eq: "dapps/yearn.png" }) {
+      ...dappImage
+    }
+    convex: file(relativePath: { eq: "dapps/convex.png" }) {
+      ...dappImage
+    }
+    api3: file(relativePath: { eq: "dapps/api3.png" }) {
+      ...dappImage
+    }
+    ipfs: file(relativePath: { eq: "dapps/ipfs.png" }) {
+      ...dappImage
+    }
+    graph: file(relativePath: { eq: "dapps/graph.png" }) {
+      ...dappImage
+    }
+    arweave: file(relativePath: { eq: "dapps/arweave.png" }) {
+      ...dappImage
+    }
+    osuvox: file(relativePath: { eq: "dapps/osuvox.png" }) {
+      ...dappImage
+    }
+    spatial: file(relativePath: { eq: "dapps/spatial.png" }) {
+      ...dappImage
+    }
+    gm: file(relativePath: { eq: "dapps/gm.png" }) {
+      ...dappImage
+    }
+    cyberconnect: file(relativePath: { eq: "dapps/cyberconnect.png" }) {
+      ...dappImage
+    }
+    mirror: file(relativePath: { eq: "dapps/mirror.png" }) {
+      ...dappImage
+    }
+    status: file(relativePath: { eq: "dapps/status.png" }) {
+      ...dappImage
+    }
+    xmtp: file(relativePath: { eq: "dapps/xmtp.png" }) {
+      ...dappImage
+    }
+    skiff: file(relativePath: { eq: "dapps/skiff.png" }) {
+      ...dappImage
+    }
+    spruce: file(relativePath: { eq: "dapps/spruce.png" }) {
+      ...dappImage
+    }
+    kyberswap: file(relativePath: { eq: "dapps/kyberswap.png" }) {
+      ...dappImage
+    }
+    synthetix: file(relativePath: { eq: "dapps/synthetix.png" }) {
+      ...dappImage
+    }
+    lido: file(relativePath: { eq: "dapps/lido.png" }) {
+      ...dappImage
+    }
+    ankr: file(relativePath: { eq: "dapps/ankr.png" }) {
+      ...dappImage
+    }
+    multichain: file(relativePath: { eq: "dapps/multichain.png" }) {
+      ...dappImage
+    }
+    rubic: file(relativePath: { eq: "dapps/rubic.png" }) {
+      ...dappImage
+    }
+    synthetix: file(relativePath: { eq: "dapps/synthetix.png" }) {
+      ...dappImage
+    }
+    artblocks: file(relativePath: { eq: "dapps/artblocks.png" }) {
       ...dappImage
     }
   }

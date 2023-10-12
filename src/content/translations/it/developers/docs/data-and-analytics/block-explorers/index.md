@@ -14,12 +14,15 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per visua
 ## Servizi {#services}
 
 - [Etherscan](https://etherscan.io/): _disponibile anche in cinese, coreano, russo e giapponese_
-- [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/): _disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita_
+- [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum): _disponibile anche in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi_
 - [Blockscout](https://blockscout.com/)
+- [Etherchain](https://www.etherchain.org/)
+- [Ethplorer](https://ethplorer.io/): _disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita_
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
+- [Sirato](https://www.web3labs.com/sirato)
+- [EthVM](https://www.ethvm.com/)
 
 ## Dati {#data}
 
@@ -226,10 +229,11 @@ I dati di livello superiore del livello di consenso includono quanto segue:
 
 ## Block explorer {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare i dati per la Rete Principale di Ethereum e le Reti di Prova di Ropsten, Kovan, Rinkeby e Goerli
-- [Etherchain](https://www.etherchain.org/) - un esploratore di blocchi per la Rete Principale di Ethereum
-- [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Kovan
+- [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare i dati per la Rete Principale di Ethereum e le reti di prova di Ropsten, Kovan, Rinkeby e Goerli
+- [Beaconcha.in](https://beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di prova di Goerli
 - [Blockchair](https://blockchair.com/ethereum): l'esploratore di Ethereum più privato. Anche per ordinare e filtrare i dati (mempool)
+- [Etherchain](https://www.etherchain.org/) - un esploratore di blocchi per la rete principale di Ethereum
+- [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Kovan
 
 ## Approfondimenti {#further-reading}
 

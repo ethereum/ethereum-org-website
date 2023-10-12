@@ -22,7 +22,7 @@ When you start up a node it should log your [enode](/developers/docs/networking-
 
 The enode is usually regenerated on every restart, so make sure to look at your client's documentation on how to generate a persistent enode for your bootnode.
 
-In order to be a good bootnode it's a good idea to increase the maximum number of peers that can connect to it. Running a bootnode with many peers will increase the bandwith requirement significantly.
+In order to be a good bootnode it's a good idea to increase the maximum number of peers that can connect to it. Running a bootnode with many peers will increase the bandwidth requirement significantly.
 
 ## Available bootnodes {#available-bootnodes}
 

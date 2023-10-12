@@ -57,7 +57,7 @@ _Nota: qualquer indivíduo pode fazer parte de vários desses grupos (por exempl
 
 ## O que é um EIP? {#what-is-an-eip}
 
-Um processo importante usado na governança Ethereum é a sugestão de **Propostas de melhoria Ethereum (EIPs)**. EIPs são padrões que especificam novos recursos ou processos potenciais para a Ethereum. Qualquer um dentro da comunidade Ethereum pode criar um EIP. Por exemplo, nenhum dos autores da EIP-721, o EIP que padronizou NFTs, trabalhou diretamente no desenvolvimento do protocolo Ethereum.
+Um processo importante usado na governança Ethereum é a sugestão de **Propostas de melhoria Ethereum (EIPs)**. EIPs são padrões que especificam novos recursos ou processos potenciais para a Ethereum. Qualquer um dentro da comunidade Ethereum pode criar um EIP. Caso tenha interesse em escrever uma EIP, participar em revisão por pares e/ou governança, consulte:
 
 <ButtonLink to="/eips/">
   Mais sobre EIPs
@@ -153,7 +153,7 @@ O processo de governança Ethereum muitas vezes troca velocidade e eficiência p
 
 Embora as implementações de especificação e desenvolvimento sempre tenham sido totalmente de código aberto, os processos formais usados para propor as atualizações descritas acima não foram usados. Isso permitiu que as alterações fossem especificadas e acordadas mais rapidamente por pesquisadores e implementadores.
 
-Quando a Beacon Chain se uniu com a camada de execução do Ethereum no dia 15 de setembro de 2022, A Fusão foi concluída como parte da [atualização de rede Paris](https://ethereum.org/en/history/#paris). A proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) foi alterada de "Última Chamada" para "Final", completando a transição para o prova de participação.
+Quando ocorreu a fusão da Beacon Chain com a camada de execução do Ethereum em 15 de setembro de 2022, a transação foi concluída como parte da [atualização de rede Paris](/history/#paris). A proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) foi alterada de "Última Chamada" para "Final", completando a transição para o prova de participação.
 
 <ButtonLink to="/roadmap/merge/">
   Mais sobre a integração

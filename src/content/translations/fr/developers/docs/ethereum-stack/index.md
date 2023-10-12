@@ -10,11 +10,11 @@ Il existe cependant des technologies Ethereum de base qui contribuent à fournir
 
 ## Niveau 1: Machine virtuelle Ethereum {#ethereum-virtual-machine}
 
-La [machine virtuelle Ethereum (EVM)](/developers/docs/evm/) est l'environnement d'exécution des contrats intelligents Ethereum. Tout contrat intelligent et changement d'état sur la blockchain Ethereum sont exécutés par des [transactions](/developers/docs/transactions/). L'EVM gère l'ensemble du traitement des transactions sur le réseau Ethereum.
+La [machine virtuelle Ethereum (EVM)](/developers/docs/evm/) est l'environnement d'exécution des contrats intelligents sur Ethereum. Tout contrat intelligent et changement d'état sur la blockchain Ethereum sont exécutés par des [transactions](/developers/docs/transactions/). L'EVM gère l'ensemble du traitement des transactions sur le réseau Ethereum.
 
 Comme toute machine virtuelle, l'EVM crée un niveau d'abstraction entre l'exécution du code et la machine qui l'exécute (un nœud Ethereum). Actuellement, l'EVM s'exécute sur des milliers de nœuds répartis à travers le monde.
 
-De façon non visible, l'EVM utilise un ensemble d'instructions de codes d'opérations (opcodes) pour exécuter des tâches spécifiques. Ces 140 opcodes uniques permettent à l'EVM d'être Turing-complet, ce qui signifie qu'elle est capable de calculer à peu près tout, à partir du moment où elle dispose des ressources suffisantes.
+De façon non visible, l'EVM utilise un ensemble d'instructions de codes d'opérations (opcodes) pour exécuter des tâches spécifiques. Ces 140 op codes (uniques) permettent à l'EVM d'être [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness), ce qui signifie que l'EVM est capable de calculer à peu près n'importe quoi, compte tenu de ressources suffisantes.
 
 En tant que développeur de DApp, vous n'avez pas besoin d'en savoir beaucoup plus sur l'EVM, à part qu'elle existe et qu'elle assure de façon fiable le bon fonctionnement des applications sur Ethereum sans temps d'arrêt.
 
@@ -24,7 +24,7 @@ En tant que développeur de DApp, vous n'avez pas besoin d'en savoir beaucoup pl
 
 Les contrats intelligents sont rédigés avec des [langages de programmation](/developers/docs/smart-contracts/languages/) spécifiques qui se compilent en bytecode EVM (instructions machine de bas niveau appelées codes d'opérations).
 
-Non seulement les contrats intelligents servent de bibliothèques open source, mais ce sont aussi essentiellement des services API ouverts fonctionnant / qui ne peuvent être arrêtés. Les contrats intelligents fournissent des fonctions publiques avec lesquelles les utilisateurs et les applications ([dApps](/developers/docs/dapps/)) peuvent interagir sans nécessiter d'autorisation. Toute application peut s'intégrer à des contrats intelligents déployés pour composer des fonctionnalités, telles que l'ajout de [flux de données](/developers/docs/oracles/) ou la prise en charge des échanges de jetons. N'importe qui peut déployer de nouveaux contrats intelligents sur Ethereum pour ajouter des fonctionnalités personnalisées et répondre aux besoins de son application.
+Non seulement les contrats intelligents servent de bibliothèques open source, mais ce sont aussi essentiellement des services API ouverts fonctionnant 24/7 qui ne peuvent être arrêtés. Les contrats intelligents fournissent des fonctions publiques avec lesquelles les utilisateurs et les applications ([dApps](/developers/docs/dapps/)) peuvent interagir sans nécessiter d'autorisation. Toute application peut s'intégrer à des contrats intelligents déployés pour composer des fonctionnalités, telles que l'ajout de [flux de données](/developers/docs/oracles/) ou la prise en charge des échanges de jetons. N'importe qui peut déployer de nouveaux contrats intelligents sur Ethereum pour ajouter des fonctionnalités personnalisées et répondre aux besoins de son application.
 
 En tant que développeur de dApp, vous n'aurez besoin de rédiger des contrats intelligents que si vous voulez ajouter des fonctionnalités personnalisées sur la blockchain Ethereum. Vous constaterez que vous pouvez réaliser la plupart ou la totalité de vos projets seulement en intégrant des contrats intelligents existants, par exemple si vous voulez encourager les paiements en stablecoins ou faciliter l'échange décentralisé de jetons.
 
@@ -42,7 +42,7 @@ De nombreuses bibliothèques pratiques (construites et maintenues par la communa
 
 Si votre application orientée utilisateur est une application Web, vous pouvez choisir de `npm install` une [API JavaScript](/developers/docs/apis/javascript/) directement sur votre frontend, ou préférerez peut-être implémenter cette fonctionnalité côté serveur, avec une API [Python](/developers/docs/programming-languages/python/) ou [Java](/developers/docs/programming-languages/java/).
 
-Alors que ces API ne sont pas des éléments indispensables de la pile, elles éliminent une grande partie de la complexité d'intéragir directement avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par ex. convertir des ETH en gwei) afin que vous puissiez, en tant que développeur, passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous consacrer aux fonctionnalités uniques de votre application.
+Alors que ces API ne sont pas des éléments indispensables de la pile, elles éliminent une grande partie de la complexité d'intéragir directement avec un nœud Ethereum. Elles fournissent également des fonctions utilitaires (par ex., convertir des ETH en gwei) afin que vous puissiez, en tant que développeur, passer moins de temps à gérer les subtilités des clients Ethereum et plus de temps à vous consacrer aux fonctionnalités uniques de votre application.
 
 ## Niveau 5 : Applications utilisateur {#end-user-applications}
 

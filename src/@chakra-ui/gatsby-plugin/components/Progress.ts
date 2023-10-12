@@ -6,12 +6,12 @@ const { definePartsStyle } = createMultiStyleConfigHelpers(parts.keys)
 
 const baseStyle = definePartsStyle(() => ({
   track: {
-    bg: "primaryLight",
+    bg: "primary.light",
     // `borderRadius` applies to both track and `filledTrack` (https://github.com/chakra-ui/chakra-ui/pull/2946)
     borderRadius: "full",
   },
   filledTrack: {
-    bgColor: "primary",
+    bgColor: "primary.base",
   },
 }))
 

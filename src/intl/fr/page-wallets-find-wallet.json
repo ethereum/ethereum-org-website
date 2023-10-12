@@ -89,5 +89,6 @@
   "page-find-wallet-browser": "Navigateur",
   "page-find-wallet-browser-desc": "Portefeuilles avec extensions pour navigateur",
   "page-find-wallet-device": "Appareil",
-  "page-find-choose-to-compare": "Choisir pour comparer"
+  "page-find-choose-to-compare": "Choisir pour comparer",
+  "page-find-wallet-choose-features": "Choisir des fonctionnalités"
 }

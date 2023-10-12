@@ -12,7 +12,7 @@ Per distribuire un contratto intelligente, invii una transazione di Ethereum con
 
 Dovresti comprendere le [reti di Ethereum](/developers/docs/networks/), le [transazioni](/developers/docs/transactions/) e l'[anatomia dei contratti intelligenti](/developers/docs/smart-contracts/anatomy/), prima di distribuire i contratti intelligenti.
 
-Distribuire un contratto, inoltre, costa ether (ETH), quindi dovresti esser familiare con [gas e commissioni](/developers/docs/gas/) su Ethereum.
+Distribuire un contratto, inoltre, costa ether (ETH), poiché questi sono memorizzati sulla blockchain, quindi dovresti avere familiarità con [carburante e commissioni](/developers/docs/gas/) su Ethereum.
 
 Infine, dovrai compilare il tuo contratto prima di distribuirlo, quindi, assicurati di aver letto a riguardo della [compilazione dei contratti intelligenti](/developers/docs/smart-contracts/compiling/).
 
@@ -23,7 +23,7 @@ Infine, dovrai compilare il tuo contratto prima di distribuirlo, quindi, assicur
 - il bytecode del tuo contratto: è generato tramite la [compilazione](/developers/docs/smart-contracts/compiling/)
 - ETH per gas: imposterai il limite di gas come per altre transazioni, quindi, sappi che la distribuzione del contratto necessita di molto più gasi di un semplice trasferimento di ETH
 - uno script o un plugin di distribuzione.
-- Accedi a un [nodo di Ethereum](/developers/docs/nodes-and-clients/), eseguendone tuo autonomamente, connettendoti a un nodo pubblico oppure tramite una chiave API usando un [nodo di servizio](/developers/docs/nodes-and-clients/nodes-as-a-service/) come Infura o Alchemy.
+- accesso a un [nodo Ethereum](/developers/docs/nodes-and-clients/) tramite esecuzione di un nodo personalizzato, connessione a un nodo pubblico o utilizzando una chiave API con un [servizio di nodi](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
 ### Passaggi per distribuire un contratto intelligente {#steps-to-deploy}
 
@@ -37,7 +37,7 @@ Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly - _Simula, esegui il debug e monitora qualunque cosa su catene compatibili con l’EVM, con dati in tempo reale_**
+**Tenderly: _Piattaforma di sviluppo in Web3 che fornisce debug, osservabilità e blocchi di costruzione dell'infrastruttura per sviluppare, testare, monitorare e gestire i contratti intelligenti_**
 
 - [tenderly.co](https://tenderly.co/)
 - [Documenti](https://docs.tenderly.co/)
@@ -60,7 +60,8 @@ Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [
 ## Tutorial correlati {#related-tutorials}
 
 - [Distribuire il tuo primo contratto intelligente](/developers/tutorials/deploying-your-first-smart-contract/): _Un'introduzione alla distribuzione del tuo primo contratto su una rete di prova di Ethereum._
-- [Interagire con altri contratti da Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/): _Come distribuire un contratto intelligente da un contratto esistente e interagirvi._
+- [Hello World | tutorial di un contratto intelligente](/developers/tutorials/hello-world-smart-contract/): _Un tutorial facile da seguire per creare e distribuire un contratto intelligente di base su Ethereum._
+- [Interagire con gli altri contratti da Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/): _Come distribuire un contratto intelligente da un contratto esistente e interagirvi._
 - [Come ridimensionare il tuo contratto](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/): _Come ridurre le dimensioni del tuo contratto per mantenerlo sotto il limite e risparmiare sul gas_
 
 ## Letture consigliate {#further-reading}
@@ -74,3 +75,4 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 - [Framework di sviluppo](/developers/docs/frameworks/)
 - [Eseguire un nodo di Ethereum](/developers/docs/nodes-and-clients/run-a-node/)
+- [Nodes-as-a-service](/developers/docs/nodes-and-clients/nodes-as-a-service)

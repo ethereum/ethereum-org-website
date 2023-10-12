@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { shuffle } from "lodash"
 
-import Link from "./Link"
+import InlineLink from "./Link"
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 
@@ -63,7 +63,7 @@ const RandomAppList: React.FC<IProps> = () => {
     <ul>
       {randomAppList.map((item, idx) => (
         <li key={idx}>
-          <Link to={item.url}>{item.name}</Link>
+          <InlineLink to={item.url}>{item.name}</InlineLink>
           , <Translation id={item.description} />
         </li>
       ))}

@@ -12,87 +12,87 @@ export const $tagBoxshadowColor = cssVar("tag-boxshadow-color")
 export const STATUS_COLORS = {
   normal: {
     subtle: {
-      [$badgeBg.variable]: "colors.backgroundHighlight",
-      [$badgeColor.variable]: "colors.bodyMedium",
+      [$badgeBg.variable]: "colors.background.highlight",
+      [$badgeColor.variable]: "colors.body.medium",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.background",
-          [$tagBoxshadowColor.variable]: "colors.backgroundHighlight",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.background.base",
+          [$tagBoxshadowColor.variable]: "colors.background.highlight",
           boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.primaryLight",
-          [$badgeColor.variable]: "colors.bodyMedium",
-          outlineColor: "primaryHover",
+          [$badgeBg.variable]: "colors.primary.light",
+          [$badgeColor.variable]: "colors.body.medium",
+          outlineColor: "primary.hover",
         },
         _active: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.primaryLight",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.primary.light",
         },
       },
     },
     solid: {
-      [$badgeBg.variable]: "colors.bodyMedium",
-      [$badgeColor.variable]: "colors.backgroundHighlight",
+      [$badgeBg.variable]: "colors.body.medium",
+      [$badgeColor.variable]: "colors.background.highlight",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.background",
-          [$tagBoxshadowColor.variable]: "colors.backgroundHighlight",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.background.base",
+          [$tagBoxshadowColor.variable]: "colors.background.highlight",
           boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.primaryLight",
-          [$badgeColor.variable]: "colors.bodyMedium",
-          outlineColor: "primaryHover",
+          [$badgeBg.variable]: "colors.primary.light",
+          [$badgeColor.variable]: "colors.body.medium",
+          outlineColor: "primary.hover",
         },
         _active: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.primaryLight",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.primary.light",
         },
       },
     },
     outline: {
-      [$badgeColor.variable]: "colors.bodyMedium",
+      [$badgeColor.variable]: "colors.body.medium",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.background",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.background.base",
           bg: $badgeBg.reference,
-          [$tagBoxshadowColor.variable]: "colors.backgroundHighlight",
+          [$tagBoxshadowColor.variable]: "colors.background.highlight",
           boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
           borderColor: "transparent",
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.primaryLight",
-          [$badgeColor.variable]: "colors.bodyMedium",
+          [$badgeBg.variable]: "colors.primary.light",
+          [$badgeColor.variable]: "colors.body.medium",
           bg: $badgeBg.reference,
-          outlineColor: "primaryHover",
+          outlineColor: "primary.hover",
           borderColor: "transparent",
         },
         _active: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.primaryLight",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.primary.light",
         },
       },
     },
   },
   tag: {
     subtle: {
-      [$badgeBg.variable]: "colors.primaryLight",
-      [$badgeColor.variable]: "colors.primaryDark",
+      [$badgeBg.variable]: "colors.primary.light",
+      [$badgeColor.variable]: "colors.primary.dark",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.background",
-          [$tagBoxshadowColor.variable]: "colors.primaryLight",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.background.base",
+          [$tagBoxshadowColor.variable]: "colors.primary.light",
           boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.background",
-          outlineColor: "primary",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.background.base",
+          outlineColor: "primary.base",
         },
         _active: {
           boxShadow: "none",
@@ -100,19 +100,19 @@ export const STATUS_COLORS = {
       },
     },
     solid: {
-      [$badgeBg.variable]: "colors.primaryDark",
-      [$badgeColor.variable]: "colors.primaryLight",
+      [$badgeBg.variable]: "colors.primary.dark",
+      [$badgeColor.variable]: "colors.primary.light",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.background",
-          [$tagBoxshadowColor.variable]: "colors.primaryLight",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.background.base",
+          [$tagBoxshadowColor.variable]: "colors.primary.light",
           boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.primaryHover",
-          [$badgeColor.variable]: "colors.background",
-          outlineColor: "primary",
+          [$badgeBg.variable]: "colors.primary.hover",
+          [$badgeColor.variable]: "colors.background.base",
+          outlineColor: "primary.base",
         },
         _active: {
           boxShadow: "none",
@@ -120,18 +120,18 @@ export const STATUS_COLORS = {
       },
     },
     outline: {
-      [$badgeColor.variable]: "colors.tagOutline",
+      [$badgeColor.variable]: "colors.primary.highContrast",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.primaryLight",
-          [$badgeColor.variable]: "colors.primaryDark",
+          [$badgeBg.variable]: "colors.primary.light",
+          [$badgeColor.variable]: "colors.primary.dark",
           bg: $badgeBg.reference,
-          [$tagBoxshadowColor.variable]: "colors.primaryLight",
+          [$tagBoxshadowColor.variable]: "colors.primary.light",
           boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.primaryLight",
-          [$badgeColor.variable]: "colors.primaryDark",
+          [$badgeBg.variable]: "colors.primary.light",
+          [$badgeColor.variable]: "colors.primary.dark",
           bg: $badgeBg.reference,
           outlineColor: $badgeColor.reference,
         },
@@ -143,8 +143,8 @@ export const STATUS_COLORS = {
   },
   success: {
     subtle: {
-      [$badgeBg.variable]: "colors.successLight",
-      [$badgeColor.variable]: "colors.success",
+      [$badgeBg.variable]: "colors.success.light",
+      [$badgeColor.variable]: "colors.success.base",
       "&:any-link": {
         _hover: {
           boxShadow: `2px 2px 0 ${$badgeColor.reference}`,
@@ -158,44 +158,44 @@ export const STATUS_COLORS = {
       },
     },
     solid: {
-      [$badgeBg.variable]: "colors.success",
-      [$badgeColor.variable]: "colors.successLight",
+      [$badgeBg.variable]: "colors.success.base",
+      [$badgeColor.variable]: "colors.success.light",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.successLight",
-          [$badgeColor.variable]: "colors.success",
+          [$badgeBg.variable]: "colors.success.light",
+          [$badgeColor.variable]: "colors.success.base",
           boxShadow: `2px 2px 0 ${$badgeColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.successLight",
-          [$badgeColor.variable]: "colors.success",
+          [$badgeBg.variable]: "colors.success.light",
+          [$badgeColor.variable]: "colors.success.base",
           outlineColor: $badgeColor.reference,
         },
         _active: {
-          [$badgeBg.variable]: "colors.successLight",
-          [$badgeColor.variable]: "colors.success",
+          [$badgeBg.variable]: "colors.success.light",
+          [$badgeColor.variable]: "colors.success.base",
           boxShadow: "none",
         },
       },
     },
     outline: {
-      [$badgeColor.variable]: "colors.successOutline",
+      [$badgeColor.variable]: "colors.success.outline",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.successLight",
-          [$badgeColor.variable]: "colors.success",
+          [$badgeBg.variable]: "colors.success.light",
+          [$badgeColor.variable]: "colors.success.base",
           boxShadow: `2px 2px 0 ${$badgeColor.reference}`,
           bg: $badgeBg.reference,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.successLight",
-          [$badgeColor.variable]: "colors.success",
+          [$badgeBg.variable]: "colors.success.light",
+          [$badgeColor.variable]: "colors.success.base",
           bg: $badgeBg.reference,
           outlineColor: $badgeColor.reference,
         },
         _active: {
-          [$badgeBg.variable]: "colors.successLight",
-          [$badgeColor.variable]: "colors.success",
+          [$badgeBg.variable]: "colors.success.light",
+          [$badgeColor.variable]: "colors.success.base",
           bg: $badgeBg.reference,
           boxShadow: "none",
         },
@@ -204,8 +204,8 @@ export const STATUS_COLORS = {
   },
   error: {
     subtle: {
-      [$badgeBg.variable]: "colors.errorLight",
-      [$badgeColor.variable]: "colors.error",
+      [$badgeBg.variable]: "colors.error.light",
+      [$badgeColor.variable]: "colors.error.base",
       "&:any-link": {
         _hover: {
           boxShadow: `2px 2px 0 ${$badgeColor.reference}`,
@@ -219,17 +219,17 @@ export const STATUS_COLORS = {
       },
     },
     solid: {
-      [$badgeBg.variable]: "colors.error",
-      [$badgeColor.variable]: "colors.errorLight",
+      [$badgeBg.variable]: "colors.error.base",
+      [$badgeColor.variable]: "colors.error.light",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.errorLight",
-          [$badgeColor.variable]: "colors.error",
+          [$badgeBg.variable]: "colors.error.light",
+          [$badgeColor.variable]: "colors.error.base",
           boxShadow: `2px 2px 0 ${$badgeColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.errorLight",
-          [$badgeColor.variable]: "colors.error",
+          [$badgeBg.variable]: "colors.error.light",
+          [$badgeColor.variable]: "colors.error.base",
           outlineColor: $badgeColor.reference,
         },
         _active: {
@@ -238,17 +238,17 @@ export const STATUS_COLORS = {
       },
     },
     outline: {
-      [$badgeColor.variable]: "colors.errorOutline",
+      [$badgeColor.variable]: "colors.error.outline",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.errorLight",
-          [$badgeColor.variable]: "colors.error",
+          [$badgeBg.variable]: "colors.error.light",
+          [$badgeColor.variable]: "colors.error.base",
           bg: $badgeBg.reference,
           boxShadow: `2px 2px 0 ${$badgeColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.errorLight",
-          [$badgeColor.variable]: "colors.error",
+          [$badgeBg.variable]: "colors.error.light",
+          [$badgeColor.variable]: "colors.error.base",
           bg: $badgeBg.reference,
           outlineColor: $badgeColor.reference,
         },
@@ -260,11 +260,11 @@ export const STATUS_COLORS = {
   },
   warning: {
     subtle: {
-      [$badgeBg.variable]: "colors.attentionLight",
-      [$badgeColor.variable]: "colors.attention",
+      [$badgeBg.variable]: "colors.attention.light",
+      [$badgeColor.variable]: "colors.attention.base",
       "&:any-link": {
         _hover: {
-          [$tagBoxshadowColor.variable]: "colors.attention",
+          [$tagBoxshadowColor.variable]: "colors.attention.base",
           boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
         },
         _focusWithin: {
@@ -276,18 +276,18 @@ export const STATUS_COLORS = {
       },
     },
     solid: {
-      [$badgeBg.variable]: "colors.attention",
+      [$badgeBg.variable]: "colors.attention.base",
       [$badgeColor.variable]: "white",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.attentionLight",
-          [$badgeColor.variable]: "colors.attention",
-          [$tagBoxshadowColor.variable]: "colors.attention",
+          [$badgeBg.variable]: "colors.attention.light",
+          [$badgeColor.variable]: "colors.attention.base",
+          [$tagBoxshadowColor.variable]: "colors.attention.base",
           boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.attentionLight",
-          [$badgeColor.variable]: "colors.attention",
+          [$badgeBg.variable]: "colors.attention.light",
+          [$badgeColor.variable]: "colors.attention.base",
           outlineColor: $badgeColor.reference,
         },
         _active: {
@@ -296,18 +296,18 @@ export const STATUS_COLORS = {
       },
     },
     outline: {
-      [$badgeColor.variable]: "colors.attentionOutline",
+      [$badgeColor.variable]: "colors.attention.outline",
       "&:any-link": {
         _hover: {
-          [$badgeBg.variable]: "colors.attentionLight",
-          [$badgeColor.variable]: "colors.attention",
-          [$tagBoxshadowColor.variable]: "colors.attention",
+          [$badgeBg.variable]: "colors.attention.light",
+          [$badgeColor.variable]: "colors.attention.base",
+          [$tagBoxshadowColor.variable]: "colors.attention.base",
           bg: $badgeBg.reference,
           boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
         },
         _focusWithin: {
-          [$badgeBg.variable]: "colors.attentionLight",
-          [$badgeColor.variable]: "colors.attention",
+          [$badgeBg.variable]: "colors.attention.light",
+          [$badgeColor.variable]: "colors.attention.base",
           bg: $badgeBg.reference,
           outlineColor: $badgeColor.reference,
         },

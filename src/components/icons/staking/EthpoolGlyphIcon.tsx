@@ -1,3 +1,4 @@
+import React from "react"
 import { createIcon } from "@chakra-ui/react"
 
 export const EthpoolGlyphIcon = createIcon({

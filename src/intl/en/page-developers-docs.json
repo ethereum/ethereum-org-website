@@ -117,6 +117,7 @@
   "docs-nav-networking-layer": "Networking layer",
   "docs-nav-networking-layer-description": "Explanation of Ethereum's networking layer",
   "docs-nav-networking-layer-network-addresses": "Network addresses",
+  "docs-nav-networking-layer-portal-network": "Portal Network",
   "docs-nav-data-structures-and-encoding": "Data structures and encoding",
   "docs-nav-data-structures-and-encoding-description": "Explanation of the data structures and encoding schema used across the Ethereum stack",
   "docs-nav-data-structures-and-encoding-rlp": "Recursive-length prefix (RLP)",

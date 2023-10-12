@@ -27,7 +27,7 @@ Bu, **blok zinciri tabanlı** kalıcılık olarak bilinir.
 
 Blok zinciri tabanlı kalıcılık ile ilgili sıkıntı, zincirin muhafaza edilemeyecek ve tüm verinin makul bir şekilde depolanamayacak kadar büyüyebilecek olmasıdır (örneğin [birçok kaynak](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/), internetin 40 Zetabayttan fazla depolama kapasitesine gerek duyacağını tahmin ediyor).
 
-Blok zinciri ayrıca bir tür teşvik yapısına sahip olmalıdır. Blok zinciri tabanlı kalıcılık için madenciye yapılan bir ödeme bulunur. Veriler zincire eklendiğinde, düğümlere veri eklemeleri için ödeme yapılır.
+Blok zinciri ayrıca bir tür teşvik yapısına sahip olmalıdır. Block zincir tabanlı süreklilik için, doğrulayıcıya ödeme yapılır. Veri zincire eklendiğinde, doğrulayıcılar zincire eklenmesi için ödeme yapar.
 
 Blok zinciri tabanlı kalıcılığa sahip platformlar:
 
@@ -46,6 +46,9 @@ Sözleşme tabanlı kalıcılığa sahip platformlar:
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
+- [Crust Network](https://crust.network)
+- [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### Göz önüne almanız gereken ek kavramlar {#additional-consideration}
 
@@ -55,6 +58,11 @@ IPFS; dosyaları, web sitelerini, uygulamaları ve verileri depolamaya ve bunlar
 - [Pinata](https://www.pinata.cloud/) _(IPFS iliştirme hizmeti)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin iliştirme hizmeti)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS iliştirme hizmeti)_
+- [IPFS Tarama](https://ipfs-scan.io) _(IPFS iliştime arayıcı)_
+- [4EVERLAND](https://www.4everland.org/) _ (IPFS iliştirme hizmeti）_
+- [Filebase](https://filebase.com) _(IPFS İliştirme Hizmeti)_
+
+SWARM, bir depolama teşvik sistemi ve bir depolama fiyatı kahinine sahip merkeziyetsiz bir veri depolama dağıtım teknolojisidir.
 
 ## Veri tutma {#data-retention}
 
@@ -70,6 +78,8 @@ Bir meydan okuma mekanizmasına sahip dStorage türleri:
 - Skynet
 - Arweave
 - Filecoin
+- Crust Network
+- 4EVERLAND
 
 ### Merkeziyetsizlik {#decentrality}
 
@@ -83,22 +93,24 @@ KYC'siz merkeziyetsiz araçlar:
 - Filecoin
 - IPFS
 - Ethereum
+- Crust Network
+- 4EVERLAND
 
 ### Mutabakat {#consensus}
 
 Bu araçların çoğu kendi [mutabakat mekanizması](/developers/docs/consensus-mechanisms/) versiyonuna sahiptir ancak genellikle ya [**iş ispatı (PoW)**](/developers/docs/consensus-mechanisms/pow/) ya da [**hisse ispatı (PoS)**](/developers/docs/consensus-mechanisms/pos/) üzerine kuruludur.
 
-İş İspatı tabanlı:
+İş ispatı tabanlı:
 
 - Skynet
 - Arweave
+
+Hisse ispatı tabanlı:
+
 - Ethereum
-
-Hisse İspatı tabanlı:
-
-- [İşaret Zinciri](/roadmap/beacon-chain/)
 - Filecoin
 - 0Chain
+- Crust Network
 
 ## İlgili araçlar {#related-tools}
 
@@ -112,6 +124,7 @@ Hisse İspatı tabanlı:
 
 - [Storj.io](https://storj.io/)
 - [Belgeler](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
 **Skynet - _Skynet, merkeziyetsiz bir ağa özel, merkeziyetsiz bir iş ispatı zinciridir._**
 
@@ -137,6 +150,12 @@ Hisse İspatı tabanlı:
 - [Belgeler](https://docs.0chain.net/0chain/)
 - [GitHub](https://github.com/0chain/)
 
+**Crust Network - _Crust IPFS üzerine kurulmuş bir merkeziyetsiz depolama platformudur_**
+
+- [Crust ağı](https://crust.network)
+- [Belgeler](https://wiki.crust.network)
+- [GitHub](https://github.com/crustio)
+
 **Swarm - _Ethereum web3 yığını için dağıtılmış bir depolama platformu ve içerik dağıtım hizmeti._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
@@ -161,18 +180,30 @@ Hisse İspatı tabanlı:
 - [Belgeler](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _IPFS, Sia, Skynet ve Storj dahil olmak üzere birden fazla merkezi olmayan depolama ağında veri depolamanıza izin veren ilk S3 uyumlu nesne depolama platformu._**
+**Filebase - _ S3 uyumlu merkeziyetsiz depolama ve coğrafi olarak yedekli IPFS iliştirme hizmetidir. Filebase aracılığıyla IPFS'e yüklenen tüm dosyalar, dünya çapında 3x kopyalanarak otomatik olarak Filebase altyapısına eklenir._**
 
 - [Filebase.com](https://filebase.com/)
-- [Belgeler](https://docs.filebase.com/)
+- [Dökümanlar](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
+
+**4EVERLAND - _Depolama, hesaplama ve ağ çekirdek kabiliyetlerini entegre eden, S3 uyumlu ve IPFS ve Arweave gibi merkeziyetsiz depolama ağlarında senkronize veri depolaması sağlayan bir Web 3.0 bulut bilişimi platformu._**
+
+- [4everland.org](https://www.4everland.org/)
+- [Dokümanlar](https://docs.4everland.org/)
+- [GitHub](https://github.com/4everland)
+
+**Kaleido - _Tek tıkla IPFS düğümleri olan bir servis olarak blok zincir platformu_**
+
+- [Kaleido](https://kaleido.io/)
+- [Dokümanlar](https://docs.kaleido.io/kaleido-services/ipfs/)
+- [GitHub](https://github.com/kaleido-io)
 
 ## Daha fazla bilgi {#further-reading}
 
 - [Merkeziyetsiz Depolama Nedir?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
-- [Merkeziyetsiz Depolamayla İlgili Beş Yaygın Efsanenin Çürütülmesi](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
+- [Merkeziyetsiz Depolamayla İlgili Beş Yaygın Mitin Çürütülmesi](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
 ## İlgili konular {#related-topics}
 

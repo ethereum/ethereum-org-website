@@ -1,5 +1,5 @@
 ---
-title: Compiler des contrats intelligents
+title: Compiler des contrat intelligents
 description: Explication de la raison d'une compilation et pourquoi elle est nécessaire pour les contrats intelligents
 lang: fr
 incomplete: true
@@ -275,4 +275,4 @@ Vous trouverez ci-dessous l’ABI pour le contrat de jetons ERC-20. Un jeton ERC
 ## Sujets connexes {#related-topics}
 
 - [Bibliothèques clientes JavaScript](/developers/docs/apis/javascript/)
-- [Machine virtuelle Ethereum (EVM)](/developers/docs/ethereum-virtual-machine/)
+- [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/)

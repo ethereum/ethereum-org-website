@@ -12,9 +12,17 @@ Se desideri provare a scrivere del codice prima di [configurare un ambiente di s
 
 **[Remix](https://remix.ethereum.org/)**: **_IDE basato sul web che integra analisi statica e una macchina virtuale per una blockchain di prova_**
 
+- [Documentazione](https://remix-ide.readthedocs.io/en/latest/#)
+- [Gitter](https://gitter.im/ethereum/remix)
+
 **[ChainIDE](https://chainide.com/)**: **_un IDE multi-catena basato su cloud_**
 
-**[Replit (Solidity Starter)](https://replit.com/@replit/Solidity-starter-beta)**: **_un ambiente di sviluppo personalizzabile per Ethereum con reloading immediato, controllo degli errori e supporto della rete di prova di prim'ordine_**
+- [Documentazione](https://chainide.gitbook.io/chainide-english-1/)
+- [Forum di supporto](https://forum.chainide.com/)
+
+**[Replit (Solidity Starter - Beta) ](https://replit.com/@replit/Solidity-starter-beta)** - **_Un ambiente di sviluppo personalizzabile per Ethereum con ricarica rapida, controllo degli errori e supporto della rete di prova di prima classe_**
+
+- [Docs](https://docs.replit.com/)
 
 **[Tenderly Sandbox](https://sandbox.tenderly.co/)**: **_un ambiente di prototipazione veloce è possibile scrivere, eseguire ed effettuare il debug dei contratti intelligenti nel browser usando Solidity e JavaScript_**
 
@@ -37,7 +45,7 @@ Gli IDE più diffusi hanno plugin integrati che migliorano l'esperienza di svilu
 
 - [Atom](https://atom.io/)
 - [GitHub](https://github.com/atom)
-- [Pacchetti Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
+- [Ethereum packages](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
 **JetBrains IDEs (IntelliJ IDEA, ecc.) -** **_Strumenti essenziali per sviluppatori di software e team_**
 
@@ -52,7 +60,8 @@ Gli IDE più diffusi hanno plugin integrati che migliorano l'esperienza di svilu
 
 ## Plugin ed estensioni {#plugins-extensions}
 
-- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Linguaggio Solidity di Ethereum per Visual Studio Code
+- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language per Visual Studio Code
+- [Solidity + Hardhat per VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Supporto Solidity e Hardhat fornito da Hardhat team
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Formattatore di codice basato su Prettier
 
 ## Letture consigliate {#further-reading}

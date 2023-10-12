@@ -6,9 +6,10 @@ const typography = {
   },
 
   lineHeights: {
-    "5xs": 1.1,
-    "4xs": 1.15,
-    "3xs": 1.2,
+    "6xs": 1.1,
+    "5xs": 1.15,
+    "4xs": 1.2,
+    "3xs": 1.25,
     "2xs": 1.35,
     xs: 1.4,
     sm: 1.5,

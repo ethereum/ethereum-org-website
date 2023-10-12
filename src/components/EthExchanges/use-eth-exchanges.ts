@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { shuffle } from "lodash"
 import { useStaticQuery, graphql } from "gatsby"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
@@ -51,8 +52,7 @@ type ExchangeName =
   | "rain"
   | "shakepay"
   | "wazirx"
-
-type WalletProviderName = "simplex" | "moonpay" | "wyre"
+  | "korbit"
 
 type ExchangeByCountry = {
   value: string
@@ -68,22 +68,6 @@ interface Exchange {
 }
 
 type Exchanges = Record<ExchangeName, Exchange>
-
-interface Wallet {
-  url: string
-  platform: string
-  image: ImageDataLike | null
-  isUsaOnly?: boolean
-}
-
-interface WalletProvider {
-  usaExceptions: Array<string>
-  wallets: {
-    [key: string]: Wallet
-  }
-}
-
-type WalletProviders = Record<WalletProviderName, WalletProvider>
 
 interface FilteredData {
   title: string
@@ -137,6 +121,7 @@ export const useEthExchanges = () => {
           simplex
           wazirx
           wyre
+          korbit
         }
       }
       timestamp: exchangesByCountryCsv {
@@ -247,6 +232,9 @@ export const useEthExchanges = () => {
         ...cardListImage
       }
       wazirx: file(relativePath: { eq: "exchanges/wazirx.png" }) {
+        ...cardListImage
+      }
+      korbit: file(relativePath: { eq: "exchanges/korbit.png" }) {
         ...cardListImage
       }
     }
@@ -415,65 +403,11 @@ export const useEthExchanges = () => {
       image: data.wazirx,
       usaExceptions: [],
     },
-  }
-
-  const walletProviders: WalletProviders = {
-    wyre: {
-      usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
-      wallets: {
-        Squarelink: {
-          url: "https://squarelink.com/	",
-          platform: "Web",
-          image: data.squarelink,
-        },
-      },
-    },
-    moonpay: {
-      usaExceptions: [
-        "CT",
-        "HI",
-        "IA",
-        "KS",
-        "KY",
-        "MS",
-        "NE",
-        "NM",
-        "NY",
-        "RI",
-        "WV",
-      ],
-      wallets: {
-        Argent: {
-          url: "https://www.argent.xyz/	",
-          platform: "Mobile",
-          image: data.argent,
-        },
-        imToken: {
-          url: "https://token.im/ ",
-          platform: "Mobile",
-          image: data.imtoken,
-        },
-        Trust: {
-          url: "https://trustwallet.com/	",
-          platform: "Mobile",
-          image: data.trust,
-        },
-        MyCrypto: {
-          url: "https://app.mycrypto.com",
-          platform: "Web",
-          image: data.mycrypto,
-        },
-      },
-    },
-    simplex: {
-      usaExceptions: ["AL", "AK", "NM", "HI", "NV", "WA", "VT", "NY"],
-      wallets: {
-        MyEtherWallet: {
-          url: "https://www.myetherwallet.com/",
-          platform: "Mobile/Web",
-          image: data.myetherwallet,
-        },
-      },
+    korbit: {
+      name: "Korbit",
+      url: "https://korbit.co.kr",
+      image: data.korbit,
+      usaExceptions: [],
     },
   }
 
@@ -504,92 +438,44 @@ export const useEthExchanges = () => {
       .sort((a, b) => a.value.localeCompare(b.value))
 
   const exchangesArray = Object.keys(exchanges) as Array<ExchangeName>
-  const walletProvidersArray = Object.keys(
-    walletProviders
-  ) as Array<WalletProviderName>
 
   // Construct arrays for CardList
   let filteredExchanges: Array<FilteredData> = []
-  let filteredWalletProviders: Array<WalletProviderName> = []
-  let filteredWallets: Array<FilteredData> = []
 
   const hasSelectedCountry = !!state?.selectedCountry?.value
   if (hasSelectedCountry) {
     // Filter to exchanges that serve selected Country
-    filteredExchanges = exchangesArray
-      .filter(
-        (exchange) => state?.selectedCountry?.exchanges[exchange] === "TRUE"
-      )
-      // Format array for <CardList/>
-      .map((exchange) => {
-        // Add state exceptions if Country is USA
-        let description: string | null = null
-        if (state?.selectedCountry?.value === t("page-get-eth-exchanges-usa")) {
-          const exceptions = exchanges[exchange].usaExceptions
-          if (exceptions.length > 0) {
-            description = `${t(
-              "page-get-eth-exchanges-except"
-            )} ${exceptions.join(", ")}`
-          }
-        }
-        return {
-          title: exchanges[exchange].name,
-          description,
-          link: exchanges[exchange].url,
-          image: getImage(exchanges[exchange].image)!,
-          alt: "",
-        }
-      })
-      .sort((a, b) => a.title.localeCompare(b.title))
-
-    // Filter to wallet providers that serve selected Country
-    filteredWalletProviders = walletProvidersArray.filter(
-      (provider) => state?.selectedCountry?.exchanges[provider] === "TRUE"
-    )
-  }
-  if (filteredWalletProviders.length) {
-    // Construct wallets based on the provider
-    filteredWallets = filteredWalletProviders
-      .reduce<Array<FilteredData>>((res, currentProvider) => {
-        const wallets = Object.keys(walletProviders[currentProvider].wallets)
-
-        const flattenWallets = wallets.reduce<Array<FilteredData>>(
-          (result, currentWallet) => {
-            const walletObject =
-              walletProviders[currentProvider].wallets[currentWallet]
-            // Add state exceptions if Country is USA
-            let description: string | null = null
-            if (
-              state?.selectedCountry?.value === t("page-get-eth-exchanges-usa")
-            ) {
-              const exceptions = walletProviders[currentProvider].usaExceptions
-              if (exceptions.length > 0) {
-                description = `${t(
-                  "page-get-eth-exchanges-except"
-                )} ${exceptions.join(", ")}`
-              }
-              // Filter out wallets that only service USA
-            } else if (walletObject.isUsaOnly) {
-              return result
-            }
-            return result.concat({
-              title: currentWallet,
-              description,
-              link: walletObject.url,
-              image: getImage(walletObject.image)!,
-              alt: "",
-            })
-          },
-          []
+    filteredExchanges = shuffle(
+      exchangesArray
+        .filter(
+          (exchange) => state?.selectedCountry?.exchanges[exchange] === "TRUE"
         )
-        // Flatten data into single array for <CardList/>
-        return res.concat(flattenWallets)
-      }, [])
-      .sort((a, b) => a.title.localeCompare(b.title))
+        // Format array for <CardList/>
+        .map((exchange) => {
+          // Add state exceptions if Country is USA
+          let description: string | null = null
+          if (
+            state?.selectedCountry?.value === t("page-get-eth-exchanges-usa")
+          ) {
+            const exceptions = exchanges[exchange].usaExceptions
+            if (exceptions.length > 0) {
+              description = `${t(
+                "page-get-eth-exchanges-except"
+              )} ${exceptions.join(", ")}`
+            }
+          }
+          return {
+            title: exchanges[exchange].name,
+            description,
+            link: exchanges[exchange].url,
+            image: getImage(exchanges[exchange].image)!,
+            alt: "",
+          }
+        })
+    )
   }
 
   const hasExchangeResults = filteredExchanges.length > 0
-  const hasWalletResults = filteredWallets.length > 0
 
   return {
     t,
@@ -598,9 +484,7 @@ export const useEthExchanges = () => {
     placeholderString,
     hasSelectedCountry,
     hasExchangeResults,
-    hasWalletResults,
     filteredExchanges,
-    filteredWallets,
     lastUpdated,
   }
 }

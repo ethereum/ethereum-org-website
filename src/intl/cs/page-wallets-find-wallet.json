@@ -88,5 +88,7 @@
   "page-find-wallet-desktop-desc": "Peněženky s desktopovými aplikacemi",
   "page-find-wallet-browser": "Prohlížeč",
   "page-find-wallet-browser-desc": "Peněženky s rozšířeními prohlížeče",
-  "page-find-wallet-device": "Zařízení"
+  "page-find-wallet-device": "Zařízení",
+  "page-find-choose-to-compare": "Zvolte pro porovnání",
+  "page-find-wallet-choose-features": "Vyberte funkce"
 }

@@ -1,8 +1,4 @@
-import {
-  extendBaseTheme,
-  type ThemeConfig,
-  type ThemeOverride,
-} from "@chakra-ui/react"
+import { extendBaseTheme, type ThemeConfig } from "@chakra-ui/react"
 
 // Global style overrides
 import styles from "./styles"
@@ -27,7 +23,7 @@ const config: ThemeConfig = {
  * The complete list of default Chakra styles can be found here:
  * https://github.com/chakra-ui/chakra-ui/tree/main/packages/theme/src
  */
-const theme: ThemeOverride = {
+const theme = {
   config,
   styles,
   ...foundations,

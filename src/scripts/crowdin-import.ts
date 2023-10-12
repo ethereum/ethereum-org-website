@@ -32,9 +32,12 @@ const argv = require("minimist")(process.argv.slice(2))
 
 type UserSelectionObject = { [key: string]: Array<number> }
 const USER_SELECTION: UserSelectionObject = {
+  am: [],
   ar: [],
   az: [],
+  be: [],
   bg: [],
+  bs: [],
   bn: [],
   ca: [],
   cs: [],
@@ -44,12 +47,14 @@ const USER_SELECTION: UserSelectionObject = {
   es: [],
   fa: [],
   fi: [],
+  fil: [],
   fr: [],
   gl: [],
   gu: [],
   hi: [],
   hr: [],
   hu: [],
+  hy: [],
   id: [],
   ig: [],
   it: [],
@@ -57,6 +62,7 @@ const USER_SELECTION: UserSelectionObject = {
   ka: [],
   kk: [],
   km: [],
+  kn: [],
   ko: [],
   lt: [],
   ml: [],
@@ -65,7 +71,6 @@ const USER_SELECTION: UserSelectionObject = {
   nb: [],
   nl: [],
   pcm: [],
-  ph: [],
   pl: [],
   pt: [],
   "pt-br": [],
@@ -78,6 +83,7 @@ const USER_SELECTION: UserSelectionObject = {
   sw: [],
   ta: [],
   th: [],
+  tk: [],
   tr: [],
   uk: [],
   uz: [],
@@ -219,7 +225,7 @@ const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (item.endsWith(".md")) {
+    } else if (item.endsWith(".md") || item.endsWith(".svg")) {
       const mdDestDirPath: string = join(
         repoRoot,
         "src",

@@ -32,6 +32,12 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentazione](https://www.blockcypher.com/dev/ethereum/)
 
+**Blast by Bware Labs -** **_API decentralizzate per la rete principale e le reti di prova di Ethereum._**
+
+- [blastapi.io](https://blastapi.io/)
+- [Documentazione](https://docs.blastapi.io)
+- [Discord](https://discord.com/invite/VPkWESgtvV)
+
 **Infura -** **_L'API Ethereum come servizio_**
 
 - [infura.io](https://infura.io)
@@ -42,21 +48,33 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**DataHub di Figment -** **_Servizi API Web3 con Rete principale e rete di prova di Ethereum._**
+**Nodo cloud di Coinbase-** **_API per l'infrastruttura della Blockchain._**
+
+- [Nodo in cloud di Coinbase](https://www.coinbase.com/cloud/products/node)
+- [Documentazione](https://docs.cloud.coinbase.com/node/reference/welcome-to-node)
+
+**DataHub di Figment -** **_Servizi API Web3 con la Rete principale e le reti di prova di Ethereum._**
 
 - [DataHub](https://www.figment.io/datahub)
 - [Documentazione](https://docs.figment.io/introduction/what-is-datahub)
 
-**Nodesmith -** **_Accesso dell’API JSON-RPC alla Rete principale e rete di prova Ethereum._**
+**NFTPort -** **_Dati di Ethereum e API di Mint._**
+
+- [nftport.xyz](https://www.nftport.xyz/)
+- [Documentazione](https://docs.nftport.xyz/)
+- [GitHub](https://github.com/nftport/)
+- [Discord](https://discord.com/invite/K8nNrEgqhE)
+
+**Nodesmith -** **_Accesso dell’API JSON-RPC alla Rete Principale e alle reti di prova di Ethereum._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentazione](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-**Ethercluster -** **_Esegui un servizio API Ethereum personalizzato che supporta sia ETH che ETC_**
+**Ethercluster -** **_Esegui il tuo servizio API di Ethereum che supporta sia ETH che ETC_**
 
 - [ethercluster.com](https://www.ethercluster.com/)
 
-**Catainstack -** **_Nodi Ethereum elastici e dedicati come servizio_**
+**Catainstack -** **_Nodi di Ethereum elastici e dedicati come servizio_**
 
 - [chainstack.com](https://chainstack.com)
 - [Documentazione](https://docs.chainstack.com)
@@ -74,13 +92,13 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
-**web3j -** **_Libreria di integrazione Java/Android/Kotlin/Scala per Ethereum_**
+**web3j -** **_Libreria di integrazione di Java/Android/Kotlin/Scala per Ethereum_**
 
 - [GitHub](https://github.com/web3j/web3j)
-- [Documentazione](https://docs.web3j.io/)
+- [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-**Rivet -** **_API Ethereum ed Ethereum Classic come servizio, supportate da software open source_**
+**Rivet -** **_API di Ethereum ed Ethereum Classic come servizio, supportate da software open source._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Documentazione](https://rivet.cloud/docs/)
@@ -112,16 +130,34 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [Documentazione](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
+**NOWNodes - _Nodi completi ed esploratori di blocchi._**
+
+- [NOWNodes.io](https://nownodes.io/)
+- [Documentazione](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+
+**Moralis**: **_Fornitore di API EVM di livello enterprise._**
+
+- [moralis.io](http://moralis.io)
+- [Documentazione](https://docs.moralis.io/)
+- [GitHub](https://github.com/MoralisWeb3)
+- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [Forum](https://forum.moralis.io/)
+
+\*_GetBlock- Blockchain-as-a-service per lo sviluppo in Web3_
+
+- [GetBlock.io](https://getblock.io/)
+- [Documentazione](https://getblock.io/docs/)
+
 ## Letture consigliate {#further-reading}
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Nodi e client](/developers/docs/nodes-and-clients/)
-- [Framework di sviluppo](/developers/docs/frameworks/)
+- [ Nodi e client](/developers/docs/nodes-and-clients/)
+- [Quadri di sviluppo](/developers/docs/frameworks/)
 
 ## Tutorial correlati {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
-- [Chiamare un contratto intelligente da JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _- Usando il token Dai, impara come chiamare le funzioni dei contratti usando JavaScript_
+- [Chiamare un contratto intelligente da JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/): _Usando il token DAI, impara come chiamare la funzione dei contratti usando JavaScript._

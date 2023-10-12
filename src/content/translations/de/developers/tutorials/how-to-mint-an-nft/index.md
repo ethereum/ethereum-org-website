@@ -118,7 +118,7 @@ Um nun mit unserem Vertrag zu interagieren, müssen wir eine Instanz davon in un
 
 Im obigen Beispiel lautet unsere Vertragsadresse 0x81c587EB0fE773404c42c1d2666b5f557C470eED.
 
-Als Nächstes werden wir die Web3-[Vertragsmethode](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) verwenden, um unseren Vertrag unter Verwendung der ABI und der Adresse zu erstellen. Fügen Sie in der Datei `mint-nft.js` Folgendes hinzu:
+Als Nächstes werden wir die Web3-[Vertragsmethode](https://docs.web3js.org/api/web3-eth-contract/class/Contract) verwenden, um unseren Vertrag unter Verwendung der ABI und der Adresse zu erstellen. Fügen Sie in der Datei `mint-nft.js` Folgendes hinzu:
 
 ```js
 const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"

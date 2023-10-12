@@ -126,18 +126,18 @@ Test vector using AES-128-CTR and Scrypt:
   "crypto": {
     "cipher": "aes-128-ctr",
     "cipherparams": {
-      "iv": "83dbcc02d8ccb40e466191a123791e0e"
+      "iv": "740770fce12ce862af21264dab25f1da"
     },
-    "ciphertext": "d172bf743a674da9cdad04534d56926ef8358534d458fffccd4e6ad2fbde479c",
+    "ciphertext": "dd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2",
     "kdf": "scrypt",
     "kdfparams": {
       "dklen": 32,
       "n": 262144,
-      "p": 8,
-      "r": 1,
-      "salt": "ab0c7876052600dd703518d6fc3fe8984592145b591fc8fb5c6d43190334ba19"
+      "p": 1,
+      "r": 8,
+      "salt": "25710c2ccd7c610b24d068af83b959b7a0e5f40641f0c82daeb1345766191034"
     },
-    "mac": "2103ac29920d71da29f15d75b4a16dbe95cfd7ff8faea1056c33131d846e3097"
+    "mac": "337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c"
   },
   "id": "3198bc9c-6672-5ab3-d995-4942343ae5b6",
   "version": 3
@@ -146,10 +146,10 @@ Test vector using AES-128-CTR and Scrypt:
 
 **Intermediates**:
 
-`Derived key`: `fac192ceb5fd772906bea3e118a69e8bbb5cc24229e20d8766fd298291bba6bd`
-`MAC Body`: `bb5cc24229e20d8766fd298291bba6bdd172bf743a674da9cdad04534d56926ef8358534d458fffccd4e6ad2fbde479c`
-`MAC`: `2103ac29920d71da29f15d75b4a16dbe95cfd7ff8faea1056c33131d846e3097`
-`Cipher key`: `fac192ceb5fd772906bea3e118a69e8b`
+`Derived key`: `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d`
+`MAC Body`: `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2`
+`MAC`: `337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c`
+`Cipher key`: `7446f59ecc301d2d79bc3302650d8a5c`
 
 ## Alterations from Version 1 {#alterations-from-v2}
 

@@ -51,7 +51,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _Calling RPC methods of Ethereum node with Ruby_
 - [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _Ruby library to generate ETH addresses from a Hierarchical Deterministic wallet according to the BIP32 standard_
 - [etherlite](https://github.com/budacom/etherlite) - _Ethereum integration for Ruby on Rails_
-- [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _Ruby Ethereum client using the JSON-RPC interface for sending transactions, creating and interacting with contracts as well as usefull toolkit to work with Ethereum node_
+- [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _Ruby Ethereum client using the JSON-RPC interface for sending transactions, creating and interacting with contracts as well as useful toolkit to work with Ethereum node_
 - [omniauth-ethereum.rb](https://github.com/q9f/omniauth-ethereum.rb) - _Implements the Ethereum provider strategy for OmniAuth_
 
 Căutaţi şi alte resurse? Check out [our Developer's home](/developers/).

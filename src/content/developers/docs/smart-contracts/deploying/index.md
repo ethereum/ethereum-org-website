@@ -57,6 +57,10 @@ Once deployed, your contract will have an Ethereum address like other [accounts]
 - [Docs on networks and app deployment](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
+**thirdweb - _Easily deploy any contract to any EVM compatible chain, using a single command_**
+
+- [Documentation](https://portal.thirdweb.com/deploy/)
+
 ## Related tutorials {#related-tutorials}
 
 - [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/) _– An introduction to deploying your first smart contract on an Ethereum test network._

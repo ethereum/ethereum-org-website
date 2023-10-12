@@ -22,7 +22,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 ## Trabalhando com clientes Ethereum {#working-with-ethereum-clients}
 
-Aprenda como usar [Web3J](https://github.com/web3j/web3j) e Besu Hiperregistro, dois principais clientes Java Ethereum
+Aprenda como usar [Web3J](https://github.com/web3j/web3j)e Besu Hiperregistro, dois principais clientes Java Ethereum
 
 - [Conectando a um cliente Ethereum com Java, Eclipse e Web3J](https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j)
 - [Gerenciando uma conta Ethereum com Java e Web3j](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)

@@ -163,10 +163,7 @@ Plasma is different because Mainnet only receives minimal information about the 
 
 Multiple projects provide implementations of Plasma that you can integrate into your dapps:
 
-- [OMG Network](https://omg.network/)
 - [Polygon](https://polygon.technology/) (previously Matic Network)
-- [Gluon](https://gluon.network/)
-- [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Further reading {#further-reading}
 

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import {
   BackgroundProps,
   Box,
@@ -10,12 +10,14 @@ import {
   HStack,
   Icon,
   Stack,
-  Text,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
+
+import Text from "./OldText"
+import GatsbyImage from "./GatsbyImage"
 
 export interface IProps extends ChakraProps {
   children?: React.ReactNode
@@ -66,7 +68,7 @@ const ExpandableInfo: React.FC<IProps> = ({
       p={6}
       mb={4}
       spacing="0"
-      background={background ?? "background"}
+      background={background ?? "background.base"}
       position="relative"
       _hover={{
         "& img": {

@@ -46,6 +46,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 - [Suggest a project for our DeSci page](/contributing/adding-desci-projects/)
   _- Add a project built on Ethereum that contributes to decentralized science_
 - [Quizzes](/contributing/quizzes/) _- Add, update, and delete quiz question banks for a relevant page_
+- [Suggest a design resource](/contributing/design/adding-design-resources/) _- Add, update, and delete helpful design resources_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 
@@ -65,6 +66,7 @@ Before contributing, make sure you're familiar with:
 - the evolving [vision of ethereum.org](/about/)
 - our [design principles](/contributing/design-principles/)
 - our [style guide](/contributing/style-guide/)
+- our [code of conduct](/community/code-of-conduct)
 
 ## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 
@@ -96,6 +98,17 @@ If your contribution gets merged into ethereum.org, we'll mint you a unique cont
 4. Claim your POAP!
 
 You should only use self-custody wallets to claim POAPs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your POAPs.
+
+## Claim your GitPOAP {#claim-gitpoap}
+
+GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
+
+### How to claim {#how-to-claim}
+
+1. Visit [GitPOAP](https://www.gitpoap.io).
+2. Connect with your wallet or even with your email through sign in option.
+3. Search for your GitHub username, ETH address, ENS names or any GitPOAP to check if you're eligible.
+4. If your GitHub account is eligible, then you would be able to mint a GitPOAP!
 
 ## Contributors {#contributors}
 

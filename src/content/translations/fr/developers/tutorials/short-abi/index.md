@@ -32,7 +32,7 @@ Le coût des transactions L2 est composé de deux éléments :
 1. Le traitement L2, qui est généralement extrêmement bon marché
 2. Le stockage L1, lié aux coûts de gaz du réseau principal
 
-Au moment d'écrire cet article, le coût de gaz L2 sur Optimism est de 0,001 [Gwei](https://ethereum.org/en/developers/docs/gas/#pre-london) Le coût de gaz L1, en revanche, est d'environ 40 gwei. [Vous pouvez voir les prix actuels ici](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Au moment d'écrire cet article, le coût de gaz L2 sur Optimism est de 0,001 [Gwei](/developers/docs/gas/#pre-london) Le coût de gaz L1, en revanche, est d'environ 40 gwei. [Vous pouvez voir les prix actuels ici](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
 Un octet de données d'appel coûte soit 4 gaz (s'il est nul) soit 16 gaz (s'il s'agit d'une autre valeur). L'une des opérations les plus coûteuses de l'EVM est d'écrire sur le stockage. Le coût maximum d'écriture d'un mot de 32 octets pour un stockage sur L2 est de 22 100 gaz. Soit actuellement 22,1 gwei. Si nous parvenons à sauvegarder un seul octet zéro de données d'appel, nous pourrons écrire environ 200 octets de stockage et sortir gagnants de l'opération.
 

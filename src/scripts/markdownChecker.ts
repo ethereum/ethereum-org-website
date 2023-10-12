@@ -9,12 +9,35 @@ const LANG_ARG: string | null = argv.lang || null
 const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
 const PATH_TO_ALL_CONTENT = "./src/content/"
 const TUTORIAL_DATE_REGEX = new RegExp("\\d{4}-\\d{2}-\\d{2}")
+// Original
 const WHITE_SPACE_IN_LINK_TEXT = new RegExp(
   "\\[\\s.+\\]\\( | \\[.+\\s\\]\\(",
   "g"
 )
+// Modified
+// const WHITE_SPACE_IN_LINK_TEXT = new RegExp(
+//   "\\[\\s.+?\\]\\(|\\[.+?\\s\\]\\(",
+//   "g"
+// )
 const BROKEN_LINK_REGEX = new RegExp(
   "\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)",
+  "g"
+)
+// This RegEx checks for invalid links in markdown content.
+// The criteria for invalid links are:
+// 1. Exclude images: The link shouldn't be preceded by an exclamation mark
+// 2. Exclude internal links: The URL part of the link shouldn't start with a forward slash
+// 3. Exclude fragment identifiers: The URL part of the link shouldn't start with a hash
+// 4. Exclude typical external links: The URL part of the link shouldn't start with http or https
+// 5. Exclude email links: The URL part of the link shouldn't start with mailto:
+// 6. Exclude PDF links: The URL part of the link shouldn't end with .pdf
+// 7. Exclude links wrapped in angled brackets: The URL part of the link shouldn't start with a <
+const INVALID_LINK_REGEX = new RegExp(
+  "(?<!\\!)\\[[^\\]]+\\]\\((?!<|/|#|http|mailto:)[^\\)]*(?<!\\.pdf)\\)",
+  "g"
+)
+const INCORRECT_PATH_IN_TRANSLATED_MARKDOWN = new RegExp(
+  "image: ../../(assets/|../assets/)",
   "g"
 )
 
@@ -74,7 +97,10 @@ function getAllMarkdownPaths(
   return arrayOfMarkdownPaths
 }
 
-function sortMarkdownPathsIntoLanguages(paths: Array<string>): Languages {
+function sortMarkdownPathsIntoLanguages(
+  paths: Array<string>,
+  excludeDefaultLang: boolean = false
+): Languages {
   const languages: Languages = langsArray.reduce((accumulator, value) => {
     return { ...accumulator, [value]: [] }
   }, {})
@@ -90,14 +116,26 @@ function sortMarkdownPathsIntoLanguages(paths: Array<string>): Languages {
     const lang = isTranslation && match && match.length > 1 ? match[1] : "en"
 
     if (LANG_ARG) {
-      if (LANG_ARG === lang) {
+      if (LANG_ARG === lang && (lang !== "en" || !excludeDefaultLang)) {
         languages[lang].push(path)
       }
     } else {
-      languages[lang].push(path)
+      if (lang !== "en" || !excludeDefaultLang) {
+        languages[lang].push(path)
+      }
     }
   }
 
+  return languages
+}
+
+export async function getTranslatedMarkdownPaths() {
+  const markdownPaths: Array<string> = getAllMarkdownPaths(PATH_TO_ALL_CONTENT)
+  const excludeDefaultLang = true
+  const languages = sortMarkdownPathsIntoLanguages(
+    markdownPaths,
+    excludeDefaultLang
+  )
   return languages
 }
 
@@ -108,6 +146,7 @@ interface MatterData {
   published: Date
   sidebar: string
   skill: string
+  emoji: string
 }
 
 function processFrontmatter(path: string, lang: string): void {
@@ -127,6 +166,12 @@ function processFrontmatter(path: string, lang: string): void {
     console.error(
       `Invalid 'lang' frontmatter at ${path}: Expected: ${lang}'. Received: ${frontmatter.lang}.`
     )
+  }
+
+  if (frontmatter.emoji) {
+    if (!/^:\S+:$/.test(frontmatter.emoji)) {
+      console.error(`Frontmatter for 'emoji' is invalid at ${path}`)
+    }
   }
 
   if (frontmatter.sidebar) {
@@ -170,6 +215,30 @@ function processMarkdown(path: string) {
     console.warn(`Broken link found: ${path}:${lineNumber}`)
 
     // if (!BROKEN_LINK_REGEX.global) break
+  }
+
+  let invalidLinkMatch: RegExpExecArray | null
+
+  // Check for invalid links
+  while ((invalidLinkMatch = INVALID_LINK_REGEX.exec(markdownFile))) {
+    const lineNumber = getLineNumber(markdownFile, invalidLinkMatch.index)
+    console.warn(`Invalid link found: ${path}:${lineNumber}`)
+  }
+
+  let incorrectImagePathMatch: RegExpExecArray | null
+
+  // Todo: refactor to simply check if the image exists relative to the path
+  if (path.includes("/translations/")) {
+    while (
+      (incorrectImagePathMatch =
+        INCORRECT_PATH_IN_TRANSLATED_MARKDOWN.exec(markdownFile))
+    ) {
+      const lineNumber = getLineNumber(
+        markdownFile,
+        incorrectImagePathMatch.index
+      )
+      console.warn(`Incorrect image path: ${path}:${lineNumber}`)
+    }
   }
 
   // TODO: refactor history pages to use a component for network upgrade summaries

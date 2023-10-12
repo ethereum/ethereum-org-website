@@ -13,7 +13,7 @@ lang: fr
 
 [Optimism](https://www.optimism.io/) est un [rollup optimiste](/developers/docs/scaling/optimistic-rollups/). Les rollups Optimistics peuvent traiter les transactions à un prix beaucoup plus bas que le réseau principal Ethereum (également connu sous le nom de couche 1 ou L1), car les transactions sont traitées uniquement par quelques nœuds en lieu et place de tous les nœuds du réseau. En même temps, les données sont toutes écrites sur L1 afin que tout puisse être prouvé et reconstruit avec toutes les garanties d'intégrité et de disponibilité du réseau principal.
 
-Pour utiliser les actifs L1 sur Optimism (ou n'importe quel autre L2), les actifs doivent être [connectés](/bridges/#prerequisites). Une façon d'y arriver est pour les utilisateurs de verrouiller les actifs (ETH et les [jetons ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) sont les plus communs) sur L1 et de recevoir des actifs équivalents à utiliser sur L2. Finalement, celui qui se retrouve avec souhaitera peut-être les ramener en L1. En faisant cela, les actifs sont brûlés sur L2 puis redistribués à l'utilisateur sur L1.
+Pour utiliser les actifs L1 sur Optimism (ou n'importe quel autre L2), les actifs doivent être [connectés](/bridges/#prerequisites). Une façon d'y arriver est pour les utilisateurs de verrouiller les actifs (ETH et les [jetons ERC-20](/developers/docs/standards/tokens/erc-20/) sont les plus communs) sur L1 et de recevoir des actifs équivalents à utiliser sur L2. Finalement, celui qui se retrouve avec souhaitera peut-être les ramener en L1. En faisant cela, les actifs sont brûlés sur L2 puis redistribués à l'utilisateur sur L1.
 
 C'est ainsi que fonctionne la [passerelle standard Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). Dans cet article, nous passerons en revue le code source de cette passerelle pour comprendre comment elle fonctionne et l'étudier comme un exemple de code Solidity parfaitement écrit.
 
@@ -1013,7 +1013,7 @@ La passerelle de connexion L2 utilise ERC-165 comme vérification garantissant q
 
 Seul la passerelle L2 est autorisée à frapper et à brûler des actifs.
 
-`_mint` et `_burn` sont définis dans le contrat [OpenZeppelin ERC-20](https://ethereum.org/en/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn). Ce contrat ne les expose pas en externe, parce que les conditions de frappe et de brûlage des jetons sont aussi variées que le nombre de façons d'utiliser ERC-20.
+`_mint` et `_burn` sont définis dans le contrat [OpenZeppelin ERC-20](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn). Ce contrat ne les expose pas en externe, parce que les conditions de frappe et de brûlage des jetons sont aussi variées que le nombre de façons d'utiliser ERC-20.
 
 ## Code de passerelle L2 {#l2-bridge-code}
 

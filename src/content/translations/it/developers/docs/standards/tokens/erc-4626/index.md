@@ -185,7 +185,7 @@ event Deposit(
 
 Dove `sender` è l'utente che ha scambiato `assets` per `shares` e ha trasferito tali `shares` all'`owner`.
 
-#### Evento di Prelievo
+#### Evento di Prelievo (Withdraw)
 
 **DEVE** essere emesso quando le quote sono prelevate dalla cassaforte da un depositante con i metodi [`redeem`](#redeem) o [`withdraw`](#withdraw).
 

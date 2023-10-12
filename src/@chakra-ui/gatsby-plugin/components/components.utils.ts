@@ -1,12 +1,12 @@
-import { SystemStyleObject, theme } from "@chakra-ui/react"
+import { cssVar, SystemStyleObject, theme } from "@chakra-ui/react"
 import { merge } from "lodash"
 
 const {
   Accordion: accordionDefaultTheme,
+  Alert: alertDefaultTheme,
   Avatar: avatarDefaultTheme,
   Badge: badgeDefaultTheme,
   Breadcrumb: breadcrumbDefaultTheme,
-  Button: buttonDefaultTheme,
   Checkbox: checkboxDefaultTheme,
   CloseButton: closeButtonDefaultTheme,
   Code: codeDefaultTheme,
@@ -20,6 +20,7 @@ const {
   List: listDefaultTheme,
   Menu: menuDefaultTheme,
   Modal: modalDefaultTheme,
+  Radio: radioDefaultTheme,
   Select: selectDefaultTheme,
   Spinner: spinnerDefaultTheme,
   Switch: switchDefaultTheme,
@@ -30,10 +31,10 @@ const {
 
 export {
   accordionDefaultTheme,
+  alertDefaultTheme,
   avatarDefaultTheme,
   badgeDefaultTheme,
   breadcrumbDefaultTheme,
-  buttonDefaultTheme,
   checkboxDefaultTheme,
   closeButtonDefaultTheme,
   codeDefaultTheme,
@@ -47,6 +48,7 @@ export {
   listDefaultTheme,
   menuDefaultTheme,
   modalDefaultTheme,
+  radioDefaultTheme,
   selectDefaultTheme,
   spinnerDefaultTheme,
   switchDefaultTheme,
@@ -69,4 +71,67 @@ export function defineMergeStyles(
   ...styleObjs: SystemStyleObject[] | unknown[]
 ): Record<string, SystemStyleObject> {
   return merge(defaultTheming, ...styleObjs)
+}
+
+export const _notDisabledReadOnly =
+  "&:not([data-disabled], [disabled], [data-readonly])"
+
+const $inputTriggerDisableColor = cssVar("input-trigger-disable-color")
+
+export const commonInputTriggerStyles = {
+  commonControlProps: {
+    border: "1px",
+    borderColor: "body.medium",
+    outline: "3px solid",
+    outlineColor: "transparent",
+    _checked: {
+      color: "background.base",
+      bg: "primary.base",
+      borderColor: "primary.base",
+    },
+    _focusVisible: {
+      borderColor: "primary.highContrast",
+      outlineColor: "primary.hover",
+      outlineOffset: "2px",
+      boxShadow: "none",
+    },
+    _disabled: {
+      bg: $inputTriggerDisableColor.reference,
+      borderColor: $inputTriggerDisableColor.reference,
+      opacity: 1,
+      _checked: {
+        bg: $inputTriggerDisableColor.reference,
+        borderColor: $inputTriggerDisableColor.reference,
+      },
+    },
+    [_notDisabledReadOnly]: {
+      // Hovering over the label triggers the style for the control
+      "*[data-checked]:hover > &": {
+        bg: "primary.hover",
+        borderColor: "primary.highContrast",
+      },
+      "*:not([data-checked]):hover > &": {
+        bg: "body.light",
+        borderColor: "primary.highContrast",
+      },
+    },
+    _invalid: {
+      // TODO: Investigate inconsistency in prop rendering order (possible Chakra bug)
+      // border: "2px",
+      borderColor: "error.base",
+      bg: "error.light",
+    },
+  },
+  commonContainerProps: {
+    [$inputTriggerDisableColor.variable]: "colors.disabled",
+    ["[data-disabled], [disabled], [data-readonly]"]: {
+      cursor: "not-allowed",
+    },
+  },
+  commonLabelProps: {
+    _disabled: {
+      color: $inputTriggerDisableColor.reference,
+      opacity: 1,
+    },
+  },
 }
