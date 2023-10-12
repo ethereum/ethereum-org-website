@@ -36,7 +36,7 @@ Selain membangun kepercayaan diri dalam mekanisme bukti taruhan, Rantai Suar jug
 
 ![gambar](energy_use_per_transaction.png)
 
-<p style={{ textTransform: "uppercase" }}><small><i>Perkiraan konsumsi energi PoW per tx yang digunakan dalam gambar berdasarkan <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">data Mei 2021</a>, pada waktu penulisan sumber yang sama menunjukkan hingga <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 Kwh</a></i></small></p>
+<p style={{ textAlign: "center" }}><small><i>Perkiraan konsumsi energi PoW per tx yang digunakan dalam gambar berdasarkan <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">data Mei 2021</a>, pada waktu penulisan sumber yang sama menunjukkan hingga <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 Kwh</a></i></small></p>
 
 Mari kita bandingkan angka-angka ini dengan layanan seperti Visa. 100.000 transaksi Visa menggunakan 149kWh energi<sup>[^2]</sup>. Dengan mengasumsikan sharding telah diimplementasikan, kecepatan transaksi Ethereum saat ini (15 transaksi per detik) akan bertambah paling tidak 64x (jumlah shard), tidak termasuk optimisasi tambahan dari rollup. Perkiraan realistis untuk Ethereum bershard setelah penggabungan dengan rollup adalah [25.000 - 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) transaksi per detik. Kita dapat menggunakan informasi ini untuk memperkirakan pemakaian energi maksimum dan minimum per 100.000 transaksi.
 
@@ -62,7 +62,7 @@ _Kita juga harus mempertimbangkan bahwa Ethereum tidaklah terbatas pada transaks
 Sekalipun pemakaian energi Ethereum secara historis telah menjadi penting, telah ada investasi waktu dan kepintaran yang besar dari pengembang untuk perpindahan dari validasi blok yang boros energi ke yang efisien secara energi. Mengambil kutipan [Bankless](http://podcast.banklesshq.com/), cara terbaik untuk mengurangi energi yang dipakai oleh bukti kerja adalah cukup dengan "mematikannya", yang merupakan pendekatan yang telah diambil Ethereum dengan komitmen.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Jika Anda menganggap status ini tidak benar atau dapat dibuat lebih akurat lagi, silhkan mengajukan masalah atau PR. Ini merupakan perkiraan oleh tim ethereum.org yang dibuat dengan menggunakan informasi yang dapat diakses secara publik dan roadmap Ethereum saat ini. Pernyataan ini tidak mewakili suatu janji resmi dari Yayasan Ethereum. 
+  Jika Anda menganggap status ini tidak benar atau dapat dibuat lebih akurat lagi, silhkan mengajukan masalah atau PR. Ini merupakan perkiraan oleh tim ethereum.org yang dibuat dengan menggunakan informasi yang dapat diakses secara publik dan roadmap Ethereum saat ini. Pernyataan ini tidak mewakili suatu janji resmi dari Yayasan Ethereum.
 </InfoBanner>
 
 ## Bacaan lebih lanjut {#further-reading}
