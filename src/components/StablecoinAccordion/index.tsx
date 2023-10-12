@@ -141,7 +141,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
               <Translation id="page-stablecoins-accordion-swap-dapp-link" />
             </InlineLink>
           </p>
-          <CardList content={cardListGroups.dapps} />
+          <CardList items={cardListGroups.dapps} />
         </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="buy">
@@ -167,7 +167,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
           <SectionTitle>
             <Translation id="page-stablecoins-accordion-buy-exchanges-title" />
           </SectionTitle>
-          <CardList content={cardListGroups.exchanges} />
+          <CardList items={cardListGroups.exchanges} />
         </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="earn">
@@ -193,7 +193,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
           <p>
             <Translation id="page-stablecoins-accordion-earn-projects-copy" />
           </p>
-          <CardList content={cardListGroups.earn} />
+          <CardList items={cardListGroups.earn} />
         </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="generate">
@@ -237,7 +237,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
             <Translation id="page-stablecoins-accordion-borrow-places-intro" />
           </p>
           <Box mb={8}>
-            <CardList content={cardListGroups.borrow} />
+            <CardList items={cardListGroups.borrow} />
           </Box>
           <SectionTitle>
             <Translation id="page-stablecoins-accordion-borrow-risks-title" />

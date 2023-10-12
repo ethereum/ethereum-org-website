@@ -51,7 +51,7 @@ summaryPoints:
 설정에 도움이 되는 다양한 옵션이 있습니다. 위의 지표를 사용하여 아래 도구에 대한 안내를 받으세요.
 
 <InfoBanner emoji="⚠️" isWarning>
-참고로, <a href="/developers/docs/nodes-and-clients/client-diversity/">클라이언트 다양성</a>을 고려한 서비스의 선택은 네트워크의 보안을 강화하고 위험성을 최소화할 수 있으므로 매우 중요합니다. 대부분 클라이언트의 사용을 제한하는 것으로 밝혀진 서비스는 <em style="text-transform: uppercase;">"다양한 클라이언트"</em>로 표시됩니다.
+참고로, <a href="/developers/docs/nodes-and-clients/client-diversity/">클라이언트 다양성</a>을 고려한 서비스의 선택은 네트워크의 보안을 강화하고 위험성을 최소화할 수 있으므로 매우 중요합니다. 대부분 클라이언트의 사용을 제한하는 것으로 밝혀진 서비스는 <em style={{ textTransform: "uppercase" }}>"다양한 클라이언트"</em>로 표시됩니다.
 </InfoBanner>
 
 <StakingProductsCardGrid category="pools" />

@@ -42,7 +42,7 @@ Les indicateurs sont listés ci-dessous pour signaler les forces ou faiblesses n
 Vous trouverez ci-dessous quelques fournisseurs SaaS disponibles. Utilisez les indicateurs ci-dessus pour vous guider à travers les outils ci-dessous
 
 <InfoBanner emoji="⚠️" isWarning>
-Veuillez noter l'importance de choisir un service qui prend au sérieux <a href="/developers/docs/nodes-and-clients/client-diversity/">la diversité des clients</a> , car elle améliore la sécurité du réseau et limite vos risques. Les services dont il est prouvé qu'ils limitent l'utilisation des clients majoritaires sont indiqués comme <em style="text-transform: uppercase;">"clients diversifiés".</em>
+Veuillez noter l'importance de choisir un service qui prend au sérieux <a href="/developers/docs/nodes-and-clients/client-diversity/">la diversité des clients</a> , car elle améliore la sécurité du réseau et limite vos risques. Les services dont il est prouvé qu'ils limitent l'utilisation des clients majoritaires sont indiqués comme <em style={{ textTransform: "uppercase" }}>"clients diversifiés".</em>
 </InfoBanner>
 
 #### Fournisseurs SaaS

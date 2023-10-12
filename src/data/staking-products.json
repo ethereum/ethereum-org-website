@@ -357,6 +357,39 @@
   ],
   "saas": [
     {
+      "name": "ChainLabo",
+      "imageName": "ChainLabo",
+      "hue": 248,
+      "launchDate": "2023-04-01",
+      "url": "https://www.chainlabo.com/",
+      "audits": [],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 200,
+      "monthlyFeeUnit": "CHF",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": false,
+      "pctMajorityExecutionClient": 100,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.gg/3xmHwXxk",
+        "twitter": "https://twitter.com/ChainLabo",
+        "github": "https://github.com/ChainLabo",
+        "telegram": "https://web.telegram.org/a/#-1919442359"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked ChainLabo go to link"
+      }
+    },
+    {
       "name": "stakefish",
       "imageName": "Stakefish",
       "hue": 73,
