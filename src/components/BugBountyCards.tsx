@@ -6,7 +6,6 @@ import {
   FlexProps,
   Heading,
   HeadingProps,
-  Text,
   TextProps,
   Divider,
   Box,
@@ -15,7 +14,8 @@ import {
 } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
+import Text from "./OldText"
 
 import Translation from "./Translation"
 
