@@ -66,7 +66,7 @@ buttons:
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">ETH2 是什麼？</h4>
+  <h4 style={{ marginTop: 0 }}>ETH2 是什麼？</h4>
 
   <p>在轉向權益證明之前，「Eth2」一詞通常用於描述以太坊的未來，但現在<strong>已被逐步淘汰，取而代之的是更精確的術語</strong>。它最初用來區分轉換到權益證明之前和之後的以太坊網路，有時指不同的以太坊用戶端（執行用戶端有時稱為 ETH1 用戶端，共識用戶端有時稱為 ETH2 用戶端）。</p>
 
