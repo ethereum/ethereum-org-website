@@ -36,7 +36,7 @@ Pe lângă consolidarea încrederii în mecanismul dovezii-mizei, Lanțul Beacon
 
 ![imagine](energy_use_per_transaction.png)
 
-<p style="text-align: center;"><small><i>O estimare a consumului de energie per tranzacție (tx) al dovezii-muncii (PoW) pe baza <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">datelor din mai 2021</a>, la momentul redactării acestui articol, a sugerat o valoare de până la <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 kWh</a></i></small></p>
+<p style={{textAlign: "center"}}><small><i>O estimare a consumului de energie per tranzacție (tx) al dovezii-muncii (PoW) pe baza <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">datelor din mai 2021</a>, la momentul redactării acestui articol, a sugerat o valoare de până la <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 kWh</a></i></small></p>
 
 Să facem o comparație între aceste cifre și un serviciu precum Visa. 100.000 de tranzacții Visa consumă 149 kWh de energie<sup>[^2]</sup>. Să presupunem că fragmentarea a fost implementată, iar rata actuală de tranzacții pe Ethereum (15 tranzacții pe secundă) va crește de cel puțin 64x (numărul de fragmente), fără a lua în considerare optimizarea suplimentară datorată rollup-urilor. O estimare realistă pentru un Ethereum post-fuziune, fragmentat și cu rollup-uri, este de [25.000 - 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) de tranzacții pe secundă. Putem folosi aceste informații pentru a estima cheltuielile maxime și minime de energie pentru 100.000 de tranzacții.
 
@@ -62,7 +62,7 @@ _Totodată, trebuie să luăm în considerare că Ethereum nu se limitează la s
 În timp ce consumul de energie al lui Ethereum a fost întotdeauna considerabil, dezvoltatorii au investit mult timp și inteligență în procesul de tranziție de la un proces de validare a blocurilor cu un consum mare de energie la unul eficient energetic. Pentru a cita [Bankless](http://podcast.banklesshq.com/), modalitatea cea mai eficientă de a reduce energia consumată de dovada-muncii este pur și simplu de a o „dezactiva”, abordare pe care Ethereum s-a angajat să o urmeze.
 
 <InfoBanner emoji=":evergreen_tree:">
-  În cazul în care considerați că aceste statistici sunt incorecte sau precizia lor poate fi ameliorată, vă rugăm să ne semnalați o problemă sau creați un PR. Acestea sunt estimări făcute de echipa ethereum.org, folosind informații accesibile publicului precum și foaia de parcurs actuală a lui Ethereum. Aceste declarații nu reprezintă o promisiune oficială din partea Fundației Ethereum. 
+  În cazul în care considerați că aceste statistici sunt incorecte sau precizia lor poate fi ameliorată, vă rugăm să ne semnalați o problemă sau creați un PR. Acestea sunt estimări făcute de echipa ethereum.org, folosind informații accesibile publicului precum și foaia de parcurs actuală a lui Ethereum. Aceste declarații nu reprezintă o promisiune oficială din partea Fundației Ethereum.
 </InfoBanner>
 
 ## Referințe suplimentare {#further-reading}

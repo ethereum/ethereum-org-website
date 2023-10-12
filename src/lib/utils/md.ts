@@ -26,7 +26,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/defi",
     "/desci",
     "/developers/tutorials/all-you-can-cache",
-    // "/energy-consumption",
+    "/energy-consumption",
     "/glossary",
     "/governance",
     "/guides/how-to-swap-tokens",
