@@ -175,7 +175,7 @@ export const staticComponents = {
 interface IProps extends ChildOnlyProp, MdPageContent {
   frontmatter: StaticFrontmatter
 }
-export const StaticLayout = ({
+export const StaticLayout: React.FC<IProps> = ({
   children,
   frontmatter,
   slug,
