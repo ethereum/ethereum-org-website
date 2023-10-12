@@ -36,7 +36,7 @@ lang: fa
 
 ![تصویر](energy_use_per_transaction.png)
 
-<p style="text-align: center;"><small><i>تخمین مصرف انرژی اثبات کار برای هر تراکنش در زمان نوشتن این متن بر مبنای <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">داده‌های مه 2021</a> برابر با <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175.54 کیلووات در ساعت</a> است</i></small></p>
+<p style={{ textTransform: "uppercase" }}><small><i>تخمین مصرف انرژی اثبات کار برای هر تراکنش در زمان نوشتن این متن بر مبنای <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">داده‌های مه 2021</a> برابر با <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175.54 کیلووات در ساعت</a> است</i></small></p>
 
 اجازه بدهید این اعداد را با سرویسی مثل Visa مقایسه کنیم. 100,000 تراکنش Visa معادل 149 کیلووات ساعت انرژی مصرف می‌کند<sup>[^2]</sup>. با فرض اینکه زنجیره‌ای‌سازی اتفاق افتاده باشد، نرخ تراکنش فعلی اتریوم (15 تراکنش بر ثانیه) بیش از 64 برابر (تعداد زنجیره‌ها) خواهد شد؛ بدون در نظر گرفتن بهینه‌سازی‌های دیگر توسط rollupها. یک تخمین واقع‌گرایانه برای اتریوم زنجیره‌ای‌ساخته پس از ادغام با rollupها [25,000 تا 100,000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) تراکنش در ثانیه است. ما می‌توانیم از این عدد برای تخمین بیشینه و کمینه‌ی میزان مصرف انرژی برای هر 100,000 تراکنش استفاده کنیم.
 

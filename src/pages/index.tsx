@@ -32,6 +32,8 @@ import Translation from "../components/Translation"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
 import Text from "../components/OldText"
 import GatsbyImage from "../components/GatsbyImage"
+import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
+
 import { isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 
@@ -179,6 +181,7 @@ const PageHeader = () => (
 const HomePage = ({
   data,
   pageContext: { language = "en" },
+  location,
 }: PageProps<Queries.IndexPageQuery, Context>) => {
   const { t } = useTranslation()
   const [isModalOpen, setModalOpen] = useState(false)
@@ -281,6 +284,7 @@ const HomePage = ({
 
   return (
     <Flex flexDirection="column" alignItems="center" dir={dir} width="full">
+      <WritersCohortBanner pathname={location.pathname} />
       <PageMetadata
         title={t("page-index-meta-title")}
         description={t("page-index-meta-description")}

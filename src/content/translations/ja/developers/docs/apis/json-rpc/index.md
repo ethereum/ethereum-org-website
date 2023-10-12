@@ -22,7 +22,7 @@ JSON-RPC API を介してイーサリアムクライアントと直接やり取�
 
 このページでは、主にイーサリアムの実行クライアントで使用される JSON-RPC API について説明します。 しかし、コンセンサスクライアントには、ユーザーがノードについての情報のクエリを行える RPC API が用意されており、ビーコンブロック、ビーコンの状態、その他のコンセンサス関連の情報を直接ノードにリクエストできます。 この API については 、[ビーコン API のウェブページ](https://ethereum.github.io/beacon-APIs/#/)に記載されています。
 
-内部 API は、ノード内のクライアント間通信にも使用されます。 つまり、コンセンサスクライアントと実行クライアントとの間のデータ交換を可能にします。 これは「Engine API」と呼ばれており、仕様は[Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)で参照できます。
+内部 API は、ノード内のクライアント間通信にも使用されます。 つまり、コンセンサスクライアントと実行クライアントとの間のデータ交換を可能にします。 これは「Engine API」と呼ばれており、仕様は[GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)で参照できます。
 
 ## 実行クライアントの仕様 {#spec}
 
