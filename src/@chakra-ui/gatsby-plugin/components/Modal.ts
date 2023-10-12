@@ -33,11 +33,13 @@ export const Modal = defineMultiStyleConfig({
         borderRadius: "4px",
       },
       header: {
-        /* bg: props.colorMode === "dark" ? "rgb(25, 25, 25)" : "rgb(247, 247, 247)", */
+        /* bg:
+          props.colorMode === "dark" ? "rgb(25, 25, 25)" : "rgb(247, 247, 247)", */
         borderColor:
           props.colorMode == "dark" ? "rgb(242, 242, 242)" : "rgb(51, 51, 51)",
         /* borderTop: "1px solid",
         borderBottom: "1px solid", */
+        padding: 0,
         textTransform: "uppercase",
         fontWeight: "bold",
         fontSize: "2xl",
@@ -50,7 +52,8 @@ export const Modal = defineMultiStyleConfig({
         borderRadius: 0,
         color: "rgb(178, 178, 178)",
         fontSize: "sm",
-        margin: 0,
+        marginTop: 5,
+
         top: 4,
         right: 4,
         bottom: 4,
@@ -60,6 +63,9 @@ export const Modal = defineMultiStyleConfig({
         fontWeight: "normal",
         fontSize: "md",
         fontFamily: "Inter",
+      },
+      footer: {
+        gap: "8px",
       },
     })
   ),

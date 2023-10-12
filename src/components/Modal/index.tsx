@@ -7,7 +7,9 @@ import {
   ModalCloseButton,
   ModalHeader,
   ModalBody,
+  ModalFooter,
 } from "@chakra-ui/react"
+import Button from "../Buttons/Button"
 
 export interface IPropsOverlay {
   isActive: boolean
@@ -15,14 +17,18 @@ export interface IPropsOverlay {
 
 export interface IProps {
   title?: string
-  children?: React.ReactNode
+  description?: string
+  ButtonLabel?: string
+  actionButtonLabel?: string
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
 }
 
 const Modal: React.FC<IProps> = ({
   title,
-  children,
+  description,
+  actionButtonLabel,
+  ButtonLabel,
   isOpen,
   setIsOpen,
   ...props
@@ -31,7 +37,6 @@ const Modal: React.FC<IProps> = ({
     <ChakraModal
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
-      size="xl"
       scrollBehavior="inside"
       {...props}
     >
@@ -40,7 +45,11 @@ const Modal: React.FC<IProps> = ({
       <ModalContent>
         <ModalHeader>{title}</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>{children}</ModalBody>
+        <ModalBody>{description}</ModalBody>
+        <ModalFooter>
+          <Button variant="primary" children={ButtonLabel} />
+          <Button children={actionButtonLabel} />
+        </ModalFooter>
       </ModalContent>
     </ChakraModal>
   )
