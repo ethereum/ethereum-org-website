@@ -26,7 +26,7 @@ Both account types have the ability to:
 
 **Externally-owned**
 
-- Creating an account costs nothing
+- Creating an account has no costs
 - Can initiate transactions
 - Transactions between externally-owned accounts can only be ETH/token transfers
 - Made up of a cryptographic pair of keys: public and private keys that control account activities
