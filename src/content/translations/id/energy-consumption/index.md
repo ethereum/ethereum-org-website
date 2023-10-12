@@ -36,7 +36,7 @@ Selain membangun kepercayaan diri dalam mekanisme bukti taruhan, Rantai Suar jug
 
 ![gambar](energy_use_per_transaction.png)
 
-<p style="text-align: center;"><small><i>Perkiraan konsumsi energi PoW per tx yang digunakan dalam gambar berdasarkan <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">data Mei 2021</a>, pada waktu penulisan sumber yang sama menunjukkan hingga <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 Kwh</a></i></small></p>
+<p style={{ textTransform: "uppercase" }}><small><i>Perkiraan konsumsi energi PoW per tx yang digunakan dalam gambar berdasarkan <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">data Mei 2021</a>, pada waktu penulisan sumber yang sama menunjukkan hingga <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 Kwh</a></i></small></p>
 
 Mari kita bandingkan angka-angka ini dengan layanan seperti Visa. 100.000 transaksi Visa menggunakan 149kWh energi<sup>[^2]</sup>. Dengan mengasumsikan sharding telah diimplementasikan, kecepatan transaksi Ethereum saat ini (15 transaksi per detik) akan bertambah paling tidak 64x (jumlah shard), tidak termasuk optimisasi tambahan dari rollup. Perkiraan realistis untuk Ethereum bershard setelah penggabungan dengan rollup adalah [25.000 - 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) transaksi per detik. Kita dapat menggunakan informasi ini untuk memperkirakan pemakaian energi maksimum dan minimum per 100.000 transaksi.
 
