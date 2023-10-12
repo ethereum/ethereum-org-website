@@ -12,7 +12,7 @@ summaryPoint2: NFT-ji dajejo ustvarjalcem vsebin več moči, kot so jo imeli kad
 summaryPoint3: Podprto s pametnimi pogodbami na Ethereumovi verigi blokov.
 ---
 
-## What are NFTs? {#what-are-nfts}
+## Kaj je NFT? {#what-are-nfts}
 
 NFT-ji so žetoni, ki so individualno unikatni. Vsak NFT ima drugačne lastnosti (nezamenljive) in je dokazljivo redek. To je drugače od žetonov, kot so ERC-20, kjer je vsak žeton v setu identičen in ima enake lastnosti (je zamenljiv). Vseeno vam je, kateri specifični bankovec imate v denarnici, zato ker so vsi identični in imajo enako vrednost. Vendar, vam _je_ pomembno, kateri specifični NFT imate, saj imajo vsi svoje individualne lastnosti, s katerimi jih lahko ločite od drugih (so nezamenljivi).
 
