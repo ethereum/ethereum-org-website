@@ -1,7 +1,8 @@
 import React from "react"
 import { Heading, useColorModeValue, VStack } from "@chakra-ui/react"
 
-import Translation from "./Translation"
+// TODO: Re-enable after i18n implemented
+// import Translation from "./Translation"
 import Text from "./OldText"
 
 import type { TranslationKey } from "@/lib/types"
@@ -45,10 +46,14 @@ const UpgradeStatus: React.FC<IProps> = ({
       width="100%"
     >
       <Heading fontSize="sm" fontWeight="normal" textTransform="uppercase">
-        <Translation id="consensus-when-shipping" />
+        {/* TODO: Re-enable after i18n implemented */}
+        {/* <Translation id="consensus-when-shipping" /> */}
+        When's it shipping?
       </Heading>
       <Text fontSize="2.5rem" fontWeight="bold" lineHeight="100%">
-        <Translation id={dateKey} />
+        {/* TODO: Re-enable after i18n implemented */}
+        {/* <Translation id={dateKey} /> */}
+        {dateKey}
       </Text>
       <Text fontSize="xl">{children}</Text>
     </VStack>

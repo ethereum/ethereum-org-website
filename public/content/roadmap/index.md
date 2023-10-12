@@ -66,7 +66,7 @@ The roadmap is mostly the result of years of work by researchers and developers 
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">What was ETH2?</h4>
+  <h4 style={{ marginTop: 0 }}>What was ETH2?</h4>
 
   <p>The term 'Eth2' was commonly used to describe the future of Ethereum before the switch to proof-of-stake but it was <strong>phased out in favor of more precise terminology.</strong> It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).</p>
 

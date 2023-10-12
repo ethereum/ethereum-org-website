@@ -1,13 +1,8 @@
-// Library imports
-import React from "react"
 import { AspectRatio, Box, chakra, Icon } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-// Component imports
-import Translation from "./Translation"
-// SVG imports
-import InfographicBg from "../../public/upgrades/merge-infographic-bg.svg"
+// TODO: Re-enable after i18n implemented
+// import Translation from "./Translation"
+import { Background } from "./Background" 
 
-const Background = chakra(InfographicBg)
 const Text = chakra("text", {
   baseStyle: {
     textAnchor: "start",
@@ -18,7 +13,8 @@ const Text = chakra("text", {
 export interface SvgProps {}
 
 const SvgText: React.FC<SvgProps> = () => {
-  const { t } = useTranslation()
+// TODO: Re-enable after i18n implemented
+// const { t } = useTranslation()
   const [sm, lg] = ["7px", "8px"]
 
   return (
@@ -34,19 +30,19 @@ const SvgText: React.FC<SvgProps> = () => {
       aria-hidden="true"
     >
       <Text x="2%" y="35%" fontSize={lg}>
-        ⛏ {t("docs-nav-proof-of-work")}
+        ⛏ Proof-of-work{/* t("docs-nav-proof-of-work") */}
       </Text>
       <Text x="47%" y="35%" fontSize={lg}>
-        🌱 {t("docs-nav-proof-of-stake")}
+        🌱 Proof-of-stake{/* t("docs-nav-proof-of-stake") */}
       </Text>
       <Text x="11%" y="70%" fontSize={sm}>
-        🚀 {t("beacon-chain")}
+        🚀 Beacon chain{/* t("beacon-chain") */}
       </Text>
       <Text x="43%" y="12.5%" fontSize={sm}>
-        🐼 {t("page-upgrades-get-involved-ethresearch-2")}
+        🐼 The Merge{/* t("page-upgrades-get-involved-ethresearch-2") */}
       </Text>
       <Text x="63%" y="95%" fontSize={sm}>
-        🌳 {t("page-upgrades-get-involved-ethresearch-1")}
+        🌳 Sharding{/* t("page-upgrades-get-involved-ethresearch-1") */}
       </Text>
     </Icon>
   )
@@ -57,13 +53,16 @@ export interface IProps {
 }
 
 const MergeInfographic: React.FC<IProps> = ({ className }) => {
-  const { t } = useTranslation()
+  // TODO: Re-enable after i18n implemented
+  // const { t } = useTranslation()
 
   return (
     <AspectRatio
       className={className}
       role="img"
-      aria-label={t("page-upgrades-merge-infographic-alt-text")}
+      // TODO: Re-enable after i18n implemented
+      // aria-label={t("page-upgrades-merge-infographic-alt-text")}
+      aria-label="Infographic illustrating how the Beacon Chain merges into Ethereum's execution layer during the transition from proof-of-work to proof-of-stake."
       position="relative"
       width="100%"
       ratio={25 / 11}
@@ -96,7 +95,9 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
           }}
           aria-hidden="true"
         >
-          <Translation id="page-upgrades-merge-infographic-el" />
+          {/* TODO: Re-enable after i18n implemented */}
+          {/* <Translation id="page-upgrades-merge-infographic-el" /> */}
+          Ethereum State: transactions, apps, contracts, balances
         </Box>
         <SvgText />
         <Background

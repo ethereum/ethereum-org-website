@@ -1,17 +1,14 @@
-import React from "react"
 import { Box, Flex } from "@chakra-ui/react"
-import { useStaticQuery, graphql } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import { getImage, ImageDataLike } from "../utils/image"
+import CardList, { type CardListItem } from "@/components/CardList"
+import Card from "@/components/Card"
+import { ButtonLink } from "@/components/Buttons"
+// TODO: Re-enable after i18n implemented
+// import Translation from "@/components/Translation"
+import OldHeading from "@/components/OldHeading"
 
-import CardList from "./CardList"
-import Card from "./Card"
-import { ButtonLink } from "./Buttons"
-import Translation from "./Translation"
-import OldHeading from "./OldHeading"
-
-import type { CardListItem } from "./CardList"
+import beaconscan from "@/public/upgrades/etherscan.png"
+import beaconchain from "@/public/upgrades/beaconchainemoji.png"
 
 const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <OldHeading
@@ -25,71 +22,42 @@ const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   </OldHeading>
 )
 
-export const DataLogo = graphql`
-  fragment DataLogo on File {
-    childImageSharp {
-      gatsbyImageData(
-        width: 24
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
-    }
-  }
-`
-
-const BeaconStaticQuery = graphql`
-  query {
-    beaconscan: file(relativePath: { eq: "upgrades/etherscan.png" }) {
-      ...DataLogo
-    }
-    beaconchain: file(relativePath: { eq: "upgrades/beaconchainemoji.png" }) {
-      ...DataLogo
-    }
-  }
-`
-
-type BeaconQueryTypes = {
-  beaconscan: ImageDataLike | null
-  beaconchain: ImageDataLike | null
-}
-
 const BeaconChainActions: React.FC = () => {
-  const { t } = useTranslation()
-  const data = useStaticQuery<BeaconQueryTypes>(BeaconStaticQuery)
+  // TODO: Re-enable after i18n implemented
+  // const { t } = useTranslation()
 
   const datapoints: Array<CardListItem> = [
     {
-      title: t("consensus-beaconscan-title"),
-      image: getImage(data.beaconscan)!,
+      title: "consensus-beaconscan-title", // t("consensus-beaconscan-title"),
+      image: beaconscan,
       alt: "",
       link: "https://beaconscan.com",
-      description: t("consensus-beaconscan-desc"),
+      description: "consensus-beaconscan-desc", // t("consensus-beaconscan-desc"),
     },
     {
-      title: t("consensus-beaconscan-in-title"),
-      image: getImage(data.beaconchain)!,
+      title: "consensus-beaconscan-in-title", // t("consensus-beaconscan-in-title"),
+      image: beaconchain,
       alt: "",
       link: "https://beaconcha.in",
-      description: t("consensus-beaconcha-in-desc"),
+      description: "consensus-beaconcha-in-desc", // t("consensus-beaconcha-in-desc"),
     },
   ]
 
   //TODO: we should refactor the naming here instead of using authors into the description field
   const reads: Array<CardListItem> = [
     {
-      title: t("page-upgrade-article-title-two-point-oh"),
-      description: t("page-upgrade-article-author-status"),
+      title: "page-upgrade-article-title-two-point-oh", // t("page-upgrade-article-title-two-point-oh"),
+      description: "page-upgrade-article-author-status", // t("page-upgrade-article-author-status"),
       link: "https://our.status.im/two-point-oh-the-beacon-chain/",
     },
     {
-      title: t("page-upgrade-article-title-beacon-chain-explainer"),
-      description: t("page-upgrade-article-author-ethos-dev"),
+      title: "page-upgrade-article-title-beacon-chain-explainer", // t("page-upgrade-article-title-beacon-chain-explainer"),
+      description: "page-upgrade-article-author-ethos-dev", // t("page-upgrade-article-author-ethos-dev"),
       link: "https://ethos.dev/beacon-chain/",
     },
     {
-      title: t("page-upgrade-article-title-sharding-consensus"),
-      description: t("page-upgrade-article-author-ethereum-foundation"),
+      title: "page-upgrade-article-title-sharding-consensus", // t("page-upgrade-article-title-sharding-consensus"),
+      description: "page-upgrade-article-author-ethereum-foundation", // t("page-upgrade-article-author-ethereum-foundation"),
       link: "https://blog.ethereum.org/2020/03/27/sharding-consensus/",
     },
   ]
@@ -103,24 +71,29 @@ const BeaconChainActions: React.FC = () => {
           mr={{ base: 0, md: 4 }}
           mb={{ base: 8, md: 0 }}
           emoji=":money_with_wings:"
-          title={t("consensus-become-staker")}
-          description={t("consensus-become-staker-desc")}
+          title="consensus-become-staker"// {t("consensus-become-staker")}
+          description="consensus-become-staker-desc"// {t("consensus-become-staker-desc")}
         >
           <ButtonLink mb={3} to="https://launchpad.ethereum.org">
-            <Translation id="get-started" />
+            {/* TODO */}
+            {/* <Translation id="get-started" /> */}
+            Get started
           </ButtonLink>
           <ButtonLink variant="outline" to="/staking/">
-            <Translation id="page-upgrades-index-staking-learn" />
+            {/* <Translation id="page-upgrades-index-staking-learn" /> */}
+            Learn about staking
           </ButtonLink>
         </Card>
       </Flex>
       <H3>
-        <Translation id="consensus-explore" />
+        {/* <Translation id="consensus-explore" /> */}
+        Explore the data
       </H3>
 
       <CardList items={datapoints} />
       <H3>
-        <Translation id="read-more" />
+        {/* <Translation id="read-more" /> */}
+        Read more
       </H3>
       <CardList items={reads} />
     </Box>
