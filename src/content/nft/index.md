@@ -56,7 +56,7 @@ Maybe you are an artist that wants to share their work using NFTs, without losin
 
 Or consider a ticket to a sporting event. Just as an organizer of an event can choose how many tickets to sell, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. These can be bought and sold peer-to-peer without paying ticket handlers and the buyer always with assurance of the ticket authenticity by checking the contract address.
 
-On ethereum.org, NFTs are used to demonstrate that people have meaningfully contributed to our Github repository (programmed the website, written or modified an article...) or attended our community calls, and we've even got our own NFT domain name. If you contribute to ethereum.org, you can claim a POAP NFT. Some crypto meetups have used POAPs as tickets. [More on contributing](/contributing/#poap).
+On ethereum.org, NFTs are used to demonstrate that people have meaningfully contributed to our Github repository (programmed the website, written or modified an article...), translated our content, or attended our community calls, and we've even got our own NFT domain name. If you contribute to ethereum.org, you can claim a POAP NFT. Some crypto meetups have used POAPs as tickets. [More on contributing](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 
