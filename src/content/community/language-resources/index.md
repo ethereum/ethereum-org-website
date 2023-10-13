@@ -72,7 +72,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Gwei.cz](https://gwei.cz) - local community around Web3, creates educational content, organises online and in-person events
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - Ethereum guide for beginners
 - [DAO Příručka](https://dao.gwei.cz/) - beginner's guide to the DAOs
-- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Mastering Ethereum in Czech
+
 
 ### French {#fr}
 
