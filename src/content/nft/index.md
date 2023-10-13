@@ -14,7 +14,7 @@ summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
 
 ## What are NFTs? {#what-are-nfts}
 
-NFTs are tokens that are individually unique. Each NFT has different properties (non-fungible) and is provably scarce. This is different from tokens such as ETH, BTC or other Ethereum based tokens like USDC where every token is identical and has the same properties ('fungible'). You don't care which specific dollar bill (or ETH) you have in your wallet, because they are all identical and worth the same. However, you _do_ care which specific NFT you own, because they all have individual properties that distinguish them from others ('non-fungible').
+NFTs are tokens that are individually unique. Each NFT has different properties (non-fungible) and is provably scarce. This is different from tokens such as ETH or other Ethereum based tokens like USDC where every token is identical and has the same properties ('fungible'). You don't care which specific dollar bill (or ETH) you have in your wallet, because they are all identical and worth the same. However, you _do_ care which specific NFT you own, because they all have individual properties that distinguish them from others ('non-fungible').
 
 The uniqueness of each NFT enables tokenization of things like art, collectibles, or even real estate, where one specific unique NFT represents some specific unique real world or digital item. Ownership of an asset is publicly verifiable on Ethereum blockchain.
 
