@@ -169,5 +169,14 @@
     "description": "ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum.",
     "startDate": "2023-12-8",
     "endDate": "2023-12-10"
+  },
+  {
+    "title": "EVM Summit",
+    "to": "https://evmsummit.org/",
+    "sponsor": null,
+    "location": "Istanbul, Turkey",
+    "description": "EVM Summit is an independent one-day event that focuses on the execution environment and engine of Ethereum",
+    "startDate": "2023-11-14",
+    "endDate": "2023-11-14"
   }
 ]
