@@ -80,11 +80,11 @@ const USER_OVERRIDE: BucketsList = {
  * from Crowdin to automate the process of importing the needed buckets. See
  * "Instructions for use" above.
  *
- * You can alternative use the USER_OVERRIDE object above to manually select buckets.
+ * You can alternatively use the USER_OVERRIDE object above to manually select buckets.
  *
  * The script iterates through each language chosen, using the dictionary object
- * below to convert the repo lang code to the code used by Crowdin (only if needed,
- * defaults to same). `fs` is used to find matching language folder.
+ * below to convert the repo lang code to the code used by Crowdin (only if
+ * needed, defaults to same). `fs` is used to find matching language folder.
  *
  * The "buckets" chosen (type number[]) are then iterated over, opening the
  * corresponding folder that begins with the same number string (formatted 00).
@@ -289,7 +289,11 @@ const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (item.endsWith(".md") || item.endsWith(".svg")) {
+    } else if (
+      item.endsWith(".md") ||
+      item.endsWith(".svg") ||
+      item.endsWith(".xlsx")
+    ) {
       const mdDestDirPath: string = join(
         repoRoot,
         "src",
