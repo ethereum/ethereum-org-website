@@ -1,21 +1,15 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  IconButton,
-  LinkBox,
-  LinkOverlay,
-  Text,
-} from "@chakra-ui/react"
+import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React, { useState } from "react"
 import { MdClose } from "react-icons/md"
 
-import Link from "../components/Link"
+import InlineLink, { BaseLink } from "../components/Link"
 import Input from "../components/Input"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
 
 import { Language, languageMetadata } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
@@ -59,33 +53,33 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
         description={t("page-languages-meta-desc")}
       />
       <Box py={4} px={8} w="full">
-        <Heading
+        <OldHeading
           as="h1"
           lineHeight={1.4}
           fontSize={{ base: "2.5rem", md: "3rem" }}
         >
           <Translation id="page-languages-h1" />
-        </Heading>
+        </OldHeading>
         <Text>
           <Translation id="page-languages-p1" />
         </Text>
         <Text>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
-          </Link>
+          </InlineLink>
           .
         </Text>
         <Text>
           <Translation id="page-languages-resources-paragraph" />{" "}
-          <Link to="/community/language-resources">
+          <InlineLink to="/community/language-resources">
             <Translation id="page-languages-resources-link" />
-          </Link>
+          </InlineLink>
           .
         </Text>
-        <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+        <OldHeading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
           <Translation id="page-languages-translations-available" />:
-        </Heading>
+        </OldHeading>
         <Box
           as="form"
           position="relative"
@@ -97,18 +91,15 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
             value={keyword}
             placeholder={searchString}
             onChange={(e) => setKeyword(e.target.value)}
-            rightElement={
-              keyword !== "" && (
-                <IconButton
-                  icon={<MdClose />}
-                  onClick={resetKeyword}
-                  position="absolute"
-                  insetInlineEnd={1}
-                  aria-label={t("clear")}
-                  variant="icon"
-                  _hover={{ svg: { fill: "primary" } }}
-                />
-              )
+            rightIcon={
+              <IconButton
+                icon={<MdClose />}
+                onClick={resetKeyword}
+                display={keyword === "" ? "none" : undefined}
+                aria-label={t("clear")}
+                variant="ghost"
+                _hover={{ svg: { fill: "primary" } }}
+              />
             }
           />
         </Box>
@@ -144,13 +135,13 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                 >
                   {lang["name"]}
                 </Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <LinkOverlay
-                    as={Link}
+                    as={BaseLink}
                     to={redirectTo}
                     language={lang.code}
                     textDecoration="none"
@@ -160,19 +151,19 @@ const LanguagesPage = ({ location }: PageProps<Queries.LanguagesPageQuery>) => {
                   >
                     {lang.localName}
                   </LinkOverlay>
-                </Heading>
+                </OldHeading>
               </LinkBox>
             )
           })}
         </Flex>
-        <Heading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+        <OldHeading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
           <Translation id="page-languages-want-more-header" />
-        </Heading>
+        </OldHeading>
         <Text>
           <Translation id="page-languages-want-more-paragraph" />{" "}
-          <Link to="/contributing/translation-program/">
+          <InlineLink to="/contributing/translation-program/">
             <Translation id="page-languages-want-more-link" />
-          </Link>
+          </InlineLink>
           .
         </Text>
       </Box>

@@ -44,7 +44,7 @@ Antes de la actualización Shanghai/Capella, no se podía usar o acceder a sus E
 Proporcionar una dirección de retirada es un paso obligatorio para cualquier cuenta de validdor antes de que sea elegible para que se retiren ETH de su saldo.
 
 <InfoBanner emoji="⚠️" isWarning>
-  <strong>A cada cuenta de validación solo se le puede asignar una única dirección de retirada una vez.</strong> Y cuando se elige una dirección y se envía a la cadena de baliza, no se puede deshacer ni cambiar nuevamente. Vuelva a verificar la propiedad y la precisión de la dirección proporcionada antes de enviarla.
+  <strong>A cada cuenta de validador sólo se le puede asignar una dirección de retirada, una vez.</strong> Cuando se elige una dirección y se envía a la capa de consenso, no puede deshacerse ni cambiarse nuevamente. Vuelva a verificar la propiedad y la precisión de la dirección proporcionada antes de enviarla.
 </InfoBanner>
 
 Mientras tanto <strong>no hay ninguna amenaza para sus fondos</strong> por no proporcionar esto, asumiendo que su frase mnemónica/de recuperación esté segura fuera de línea, y no se vea afectada de ninguna manera. Si no agrega las credenciales de retirada, simplemente dejará los ETH bloqueados en la cuenta del validador como ha estado hasta que se proporcione una dirección de retirada.
@@ -53,7 +53,7 @@ Mientras tanto <strong>no hay ninguna amenaza para sus fondos</strong> por no pr
 
 Antes de que _los_ fondos puedan transferirse fuera del saldo de una cuenta de validación, es necesario proporcionar una dirección de retirada.
 
-Para abandonar la apuesta y recuperar todo su saldo, los usuarios deben enviar un mensaje de «salida voluntaria» firmado con sus claves de validación que iniciará el proceso de desvinculación de la apuesta. Esto se hace con su cliente de validación y se envía a su nodo de baliza, y no requiere gas.
+Para abandonar la apuesta y recuperar todo su saldo, los usuarios deben enviar un mensaje de «salida voluntaria» firmado con sus claves de validación que iniciará el proceso de desvinculación de la apuesta. Esto se hace con su cliente validador y se envía a su nodo consenso, y no requiere gas.
 
 El proceso de un validador que sale de la apuesta lleva un tiempo variable, en función de la cantidad de peticiones de salida que se registren al mismo tiempo. Una vez completado, esta cuenta ya no tendrá la responsabilidad de realizar las tareas de la red de validación, no será elegible para recibir recompensas ni tendrá sus ETH «apostados». En ese momento, la cuenta se marcará como totalmente «retirable».
 
@@ -83,9 +83,9 @@ Lea la explicación sobre retirads de apuestas en Ethereum hecha por Finematics:
 Cuando un validador está programado para proponer el siguiente bloque, se requiere construir una cola de retirada, de hasta 16 retiradas elegibles. Para ello se empieza originariamente con el índice del validador 0, que determina si hay una retirada elegible para esta cuenta según las reglas del protocolo y se añade a la cola, si existe. El validador establecido para proponer el siguiente bloque lo tomará ahí donde el último lo haya dejado y irá procesando las órdenes de manera indefinida.
 
 <InfoBanner emoji="🕛">
-Piense en un reloj analógico. La manecilla del reloj señala la hora, avanza en una dirección, no se salta ninguna hora y acaba la vuelta hasta llegar al principio cuando alcanza el último número.<br/><br/>
-Ahora en lugar del 1 al 12, imagine que el reloj tiene de 0 a N <em>(el número total de cuentas de validadores que se han registrado en la cadena de baliza supera las 500.000 desde enero de 2023).</em><br/><br/>
-La manecilla del reloj señala el siguiente validador que debe validarse para la retirada elegible. Empieza a partir de 0, y avanza todo el camino alrededor sin saltarse ninguna cuenta. Cuando se alcance el último validador, el ciclo continúa volviendo al principio.
+Piense en un reloj analógico. La manecilla en el reloj marca la hora, avanza en un sentido, no se salta ninguna hora y, al alcanzar el último número, vuelve nuevamente al punto de inicio.<br/><br/>
+Ahora en lugar del 1 al 12, imagine que el reloj tiene de 0 hasta N <em>(el número total de cuentas validadoras que alguna vez se registraron en la capa de consenso, más de 500.000 en enero de 2023).</em><br/><br/>
+La manecilla en el reloj apunta hacia el siguiente validador que necesita ser verificado antes de permitirle retiradas. Empieza a partir de 0, y avanza todo el camino alrededor sin saltarse ninguna cuenta. Cuando se alcance el último validador, el ciclo continúa volviendo al principio.
 </InfoBanner>
 
 #### Cómo comprobar si una cuenta es elegible para retirada {#checking-an-account-for-withdrawals}
@@ -148,13 +148,15 @@ Como alternativa al cambio de la dirección de retirada para un validador en par
 </ExpandableCard>
 
 <ExpandableCard
-title="¿Qué pasa si participo en derivados de apuestas líquidas o en reservas de participaciones?"
+title="Qué pasa si participo en tókenes de participación o en participaciones agrupadas."
 eventCategory="FAQ"
-eventAction="What if I participate in liquid staking derivatives or pooled staking"
+eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
-Si forma parte de una <a href="/staking/pools/">reserva de participaciones</a> o tiene derivados de apuesta líquida, debería consultar con su proveedor para obtener más detalles sobre cómo se manejan las retiradas de apuestas, ya que cada servicio funciona y opera de forma diferente.
 
-En general, los usuarios deberían tener la libertad de reclamar sus ETH apostados subyacentes, o cambiar de proveedor de apuestas. Si una reserva en particular se está volviendo demasiado grande, los fondos se pueden retirar, canjear y volver a apostar con un [proveedor más pequeño](https://rated.network/). O, si ha acumulado suficientes ETH podría [apostar desde casa](/staking/solo/).
+Si forma parte de alguna <a href="/staking/pools/">reserva de participación</a> o tiene tókenes de participación, debería consultarle a su proveedor los detalles de retiradas de participación, pues cada servicio opera de forma distinta.
+
+En general, los usuarios deberían tener la libertad de reclamar sus ETH apostados subyacentes, o cambiar de proveedor de apuestas. Si un grupo en particular se está volviendo demasiado grande, los fondos se pueden cerrar y canjear, y volver a apostarlos con un <a href="https://rated.network/">proveedor más pequeño</a>. O, si ha acumulado suficientes ETH podría <a href="/staking/solo/">apostar desde casa</a>.
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -170,9 +172,11 @@ title="¿Las retiradas completas ocurren automáticamente?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
+
 No, si su validador todavía está activo en la red, una retirada completa no se producirá automáticamente. Esto requiere iniciar manualmente una salida voluntaria.
 
-Una vez que un validador ha completado el proceso de salida, y asumiendo que la cuenta tiene credenciales de retirada, el saldo restante entonces se retirará durante el siguiente [barrido del validador](#barrido-validador).
+Una vez que un validador ha completado el proceso de salida ―asumiendo que la cuenta tenga credenciales de retirada― el saldo restante se retirará <em>entonces</em> durante el siguiente <a href="#validator-sweeping">barrido del validador</a>.
+
 </ExpandableCard>
 
 <ExpandableCard title="¿Puedo retirar una cantidad personalizada?"
@@ -189,9 +193,11 @@ title="Opero un validador. ¿Dónde puedo encontrar más información sobre cóm
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
+
 Se recomienda a los operadores de validadores visitar la página <a href="https://launchpad.ethereum.org/withdrawals/">Retiradas en la plataforma de lanzamiento de participaciones</a> donde encontrarás más detalles sobre cómo preparar tu validador para retiradas. Preparado, el momento de los eventos y más detalles sobre cómo funcionan las retiradas.
 
-Para probar primero su configuración en una red de pruebas, visite la [plataforma de lanzamiento de participaciones de la red de prueba Goerli](https://goerli.launchpad.ethereum.org) para tener algunas nociones preliminares.
+Para probar primero su configuración en una red de pruebas, visite el <a href="https://goerli.launchpad.ethereum.org">Lanzador de apuestas de red de prueba Goerli</a> para empezar.
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -202,7 +208,7 @@ eventName="read more">
 No. Una vez que un validador ha salido y su saldo total se ha retirado, cualquier fondo adicional depositado a ese validador se transferirá automáticamente a la dirección de retirada durante el próximo barrido del validador. Para volver a apostar ETH, se debe activar un validador nuevo.
 </ExpandableCard>
 
-## Leer más {#further-reading}
+## Más información {#further-reading}
 
 - [Retiradas en la plataforma de lanzamiento de participaciones](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: La cadena de baliza impulsa las retiradas como operaciones](https://eips.ethereum.org/EIPS/eip-4895)

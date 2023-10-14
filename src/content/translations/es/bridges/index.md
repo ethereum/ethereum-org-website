@@ -31,7 +31,7 @@ Los puentes existen para conectar cadenas de bloques, permitiendo la transferenc
 Los puentes permiten:
 
 - la transferencia de activos e información entre cadenas
-- acceso de las dapps a las fortalezas de varias cadenas de bloques, lo que mejora sus capacidades (ya que los protocolos ahora tienen más espacio para la innovación)
+- acceso de las DApps a las fortalezas de varias cadenas de bloques, lo que mejora sus capacidades (ya que los protocolos ahora tienen más espacio para la innovación)
 - el acceso a nuevas plataformas y el aprovechamiento de los beneficios de las diferentes cadenas
 - que los desarrolladores de diferentes ecosistemas de cadenas de bloques colaboren y creen nuevas plataformas para los usuarios
 
@@ -45,15 +45,15 @@ Los siguientes son algunos escenarios donde puede usar un puente:
 
 ### Menores comisiones por transacción {#transaction-fees}
 
-Digamos que tiene ETH en la Red principal de Ethereum y quiere comisiones de transacción más bajas para explorar diferentes dapps. Utilizando un puente para llevar su ETH de la Red principal de Ethereum a un roll-up L2 de Ethereum, podrá disfrutar de comisiones de transacción más bajas.
+Digamos que tiene ETH en la Red principal de Ethereum y quiere comisiones de transacción más bajas para explorar diferentes DApps. Utilizando un puente para llevar su ETH de la Red principal de Ethereum a un roll-up L2 de Ethereum, podrá disfrutar de comisiones de transacción más bajas.
 
-### Dapps en otras cadenas de bloques {#dapps-other-chains}
+### DApps en otras cadenas de bloques {#dapps-other-chains}
 
 Si ha estado usando Aave en la Red principal de Ethereum para prestar USDT, pero la tasa de interés para prestarlos usando Aave en Polygon es más alta.
 
 ### Explorar ecosistemas de cadenas de bloques {#explore-ecosystems}
 
-Si tiene ETH en la Red principal de Ethereum y quiere explorar una alternativa L1 para probar sus dapps nativas, puede utilizar un puente para transferir su ETH de la Red principal de Ethereum a la L1 alternativa.
+Si tiene ETH en la Red principal de Ethereum y quiere explorar una alternativa L1 para probar sus DApps nativas, puede utilizar un puente para transferir su ETH de la Red principal de Ethereum a la L1 alternativa.
 
 ### Tener activos crypto nativos {#own-native}
 

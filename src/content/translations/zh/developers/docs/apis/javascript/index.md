@@ -276,11 +276,11 @@ ethers.utils.formatEther(balance)
 **viem -** **_以太坊的 TypeScript 接口。_**
 
 - [相关文档](https://viem.sh)
-- [Github](https://github.com/wagmi-dev/viem)
+- [GitHub](https://github.com/wagmi-dev/viem)
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 

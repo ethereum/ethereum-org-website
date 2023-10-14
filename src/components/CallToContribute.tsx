@@ -1,15 +1,11 @@
-import {
-  Flex,
-  FlexProps,
-  Heading,
-  Icon,
-  Text,
-  useToken,
-} from "@chakra-ui/react"
+import { Flex, FlexProps, Icon, useToken } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 import React, { ReactNode } from "react"
-import Link from "./Link"
-import ButtonLink from "./ButtonLink"
+
+import InlineLink from "./Link"
+import { ButtonLink } from "./Buttons"
+import Text from "./OldText"
+import OldHeading from "./OldHeading"
 
 import Translation from "./Translation"
 
@@ -75,7 +71,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
         ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
       </ContentColumn>
       <ContentColumn>
-        <Heading
+        <OldHeading
           as="h2"
           fontFamily="monospace"
           textTransform="uppercase"
@@ -85,7 +81,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
           lineHeight={1.4}
         >
           <Translation id="page-calltocontribute-title" />
-        </Heading>
+        </OldHeading>
         <DescriptionParagraph>
           <Translation id="page-calltocontribute-desc-1" />
         </DescriptionParagraph>
@@ -94,15 +90,15 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
         </DescriptionParagraph>
         <DescriptionParagraph>
           <Translation id="page-calltocontribute-desc-3" />{" "}
-          <Link to="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
+          <InlineLink to="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
             <Translation id="page-calltocontribute-link" />
-          </Link>
+          </InlineLink>
         </DescriptionParagraph>
         <DescriptionParagraph>
           <Translation id="page-calltocontribute-desc-4" />{" "}
-          <Link to="https://discord.gg/CetY6Y4">
+          <InlineLink to="https://discord.gg/CetY6Y4">
             <Translation id="page-calltocontribute-link-2" />
-          </Link>{" "}
+          </InlineLink>{" "}
         </DescriptionParagraph>
         <ButtonLink
           to={editPath}

@@ -25,7 +25,7 @@
   "page-find-wallet-connect-to-dapps": "Подключиться к децентрализованным приложениям",
   "page-find-wallet-connect-to-dapps-desc": "Кошельки, которые подключаются к приложениям, построенным на сети Ethereum",
   "page-find-wallet-staking": "Стейкинг",
-  "page-find-wallet-staking-desc": "Обменивайте ETH непосредственно с кошелька",
+  "page-find-wallet-staking-desc": "Выполняйте стейкинг ETH непосредственно из кошелька",
   "page-find-wallet-swaps": "Обмены",
   "page-find-wallet-swaps-desc": "Обменивайте токены ERC-20 непосредственно в кошельке",
   "page-find-wallet-layer-2": "Уровень 2",
@@ -89,5 +89,6 @@
   "page-find-wallet-browser": "Браузер",
   "page-find-wallet-browser-desc": "Кошельки с расширениями для браузеров",
   "page-find-wallet-device": "Устройство",
-  "page-find-choose-to-compare": "Выбрать для сравнения"
+  "page-find-choose-to-compare": "Выбрать для сравнения",
+  "page-find-wallet-choose-features": "Выберите функции"
 }

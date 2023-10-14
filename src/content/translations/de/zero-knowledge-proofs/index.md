@@ -172,7 +172,7 @@ Somit garantiert MACI auch ohne eine Aufschlüsselung der Stimmen pro Benutzer (
 - Alice zeigt Bob eine Transaktion, aus der hervorgeht, dass sie für `Option B` gestimmt hat (was ungültig ist, da der öffentliche Schlüssel nicht mehr mit Alices Identität im System verknüpft ist)
 - Während der Verarbeitung von Nachrichten überspringt der Koordinator Alices Stimme für `Option B` und zählt nur die Stimme für `Option A`. Daher schlägt Bobs Versuch fehl, mit Alice zusammenzuarbeiten und die Abstimmung in der Kette zu manipulieren.
 
-Die Verwendung von MACI _setzt_ voraus, dass Sie darauf vertrauen können, dass der Koordinator nicht mit Bestechern konspiriert oder versucht, Wähler selbst zu bestechen. Der Koordinator kann Benutzernachrichten entschlüsseln (notwendig für die Erstellung des Beweises), damit er genau überprüfen kann, wie jede Person abgestimmt hat.
+Die Verwendung von MACI _erfordert_ das Vertrauen in den Koordinator, dass er sich nicht mit Bestechern zusammentut oder selbst versucht, Wähler zu bestechen. Der Koordinator kann Benutzernachrichten entschlüsseln (notwendig für die Erstellung des Beweises), damit er genau überprüfen kann, wie jede Person abgestimmt hat.
 
 Aber in Fällen, in denen der Koordinator ehrlich bleibt, stellt MACI ein mächtiges Werkzeug dar, um die Unversehrtheit der Abstimmung in der Kette zu gewährleisten. Dies erklärt seine Beliebtheit bei quadratischen Finanzierungsanträgen (z. B. [clr.fund](https://clr.fund/#/about/maci)), die sich stark auf die Integrität der Abstimmungsentscheidungen jedes Einzelnen verlassen.
 

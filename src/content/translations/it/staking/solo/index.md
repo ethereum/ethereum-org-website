@@ -53,7 +53,7 @@ Richiede anche una configurazione hardware molto basilare e una minima comprensi
 </ExpandableCard>
 
 <ExpandableCard title="Gestione sicura delle chiavi" eventCategory="SoloStaking" eventName="clicked secure key management">
-Proprio come le chiavi private proteggono il tuo indirizzo di Ethereum, dovrai generare delle chiavi specificamente per il tuo validatore. Devi comprendere come mantenere al sicuro qualsiasi frase di seed o chiave privata.
+Proprio come le chiavi private proteggono il tuo indirizzo di Ethereum, dovrai generare delle chiavi specificamente per il tuo validatore. Devi comprendere come mantenere al sicuro qualsiasi frase di seed o chiave privata.{' '}
 
 <a href="/security/">Sicurezza di Ethereum e prevenzione delle truffe</a>
 </ExpandableCard>
@@ -69,7 +69,7 @@ Le tue ricompense sono proporzionali al tempo in cui il tuo validatore è online
 <ExpandableCard title="Rischio di taglio" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Differente dalle sanzioni di inattività per esser offline, il <em>taglio</em> è una sanzione molto più seria, riservata alle infrazioni malevole. Operando un client di minoranza con le tue chiavi caricate su una sola macchina per volta, il tuo rischio di esser tagliato è minimizzato. Detto ciò, tutti gli staker devono esser consapevoli dei rischi di taglio.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Maggiori informazioni su tagli e il ciclo di vita del validatore</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Ulteriori informazioni sullo slashing e sul ciclo di vita dei validatori</a>
 </ExpandableCard>
 </InfoGrid>
 
@@ -103,21 +103,21 @@ Gli indicatori di attributo sono usati di seguito per segnalare punti di forza e
 
 Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazione. Gli indicatori di cui sopra ti guideranno per gli strumenti seguenti.
 
-<InfoBanner emoji="⚠️" isWarning>
-Ricorda l'importanza di scegliere un <a href="/developers/docs/nodes-and-clients/client-diversity/">client di minoranza</a>, poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono denotati come <em style="text-transform: uppercase;">"multi-client."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### Strumenti del nodo
 
 <StakingProductsCardGrid category="nodeTools" />
 
+Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono denotati come <em style={{ textTransform: "uppercase" }}>"multi-client".</em>
+
 #### Generatori di chiavi
 
-Questi strumenti sono utilizzabili come un'alternativa alla [CLI di Deposito di Staking](https://github.com/ethereum/staking-deposit-cli/) per contribuire alla generazione delle chiavi.
+Questi strumenti sono utilizzabili come un'alternativa alla [CLI di deposito di staking](https://github.com/ethereum/staking-deposit-cli/) per contribuire alla generazione di chiavi.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un'occhiata alla nostra [politica di elenco dei prodotti](/contributing/adding-staking-products/) per vedere se sarebbe adatto e sottoporcelo.
+Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un'occhiata alla nostra [politica di elenco dei prodotti](/contributing/adding-staking-products/) per verificare l'idoneità e sottoporcelo.
 
 ## Esplora le guide di staking in solo {#staking-guides}
 
@@ -181,6 +181,7 @@ Le sanzioni offline sono proporzionali a quanti altri sono offline contemporanea
 </ExpandableCard>
 
 <ExpandableCard title="Come sblocco le mie ricompense o riprendo i miei ETH?">
+
 I prelievi di ogni tipo dalla beacon chain richiedono l'impostazione delle credenziali di prelievo.
 
 I nuovi staker le hanno impostate al momento della generazione della chiave e del deposito. Gli staker esistenti che non lo hanno già impostato, possono aggiornare le proprie chiavi per supportare questa funzionalità.

@@ -66,7 +66,7 @@ The roadmap is mostly the result of years of work by researchers and developers 
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">What was ETH2?</h4>
+  <h4 style={{ marginTop: 0 }}>What was ETH2?</h4>
 
   <p>The term 'Eth2' was commonly used to describe the future of Ethereum before the switch to proof-of-stake but it was <strong>phased out in favor of more precise terminology.</strong> It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).</p>
 
@@ -114,4 +114,4 @@ Sharding is splitting up the Ethereum blockchain so that subsets of validators a
 - [Secret leader election](/roadmap/secret-leader-election) - Clever cryptography can be used to ensure that the identity of the current block proposer is not made public, protecting them from certain types of attack.
 - [Account abstraction](/roadmap/account-abstraction) - Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.
 - [Verkle trees](/roadmap/verkle-trees) - Verkle trees are a data structure that can be used to enable stateless clients on Ethereum. These “stateless” clients will require a tiny amount of storage space but will still be able to verify new blocks.
-- [Statelessness](/roadmap/statelessness) - stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today’s costs.
+- [Statelessness](/roadmap/statelessness) - Stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today’s costs.

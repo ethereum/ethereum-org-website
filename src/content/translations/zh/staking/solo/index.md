@@ -53,9 +53,9 @@ summaryPoints:
 </ExpandableCard>
 
 <ExpandableCard title="安全的密钥管理" eventCategory="SoloStaking" eventName="clicked secure key management">
-就像私钥保护以太坊地址的方式一样，你也需要为验证者单独生成密钥。 你必须了解如何确保助记词或私钥安全无虞。
+就像私钥保护以太坊地址的方式一样，你也需要为验证者单独生成密钥。 你必须了解如何保护好助记词或私钥的安全。{' '}
 
-<a href="/security/">以太坊安全和预防诈骗</a>
+<a href="/security/">以太坊的安全性和防范欺诈</a>
 </ExpandableCard>
 
 <ExpandableCard title="维护" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -69,7 +69,7 @@ summaryPoints:
 <ExpandableCard title="罚没风险" eventCategory="SoloStaking" eventName="clicked slashing risk">
 与离线导致的怠工处罚不同，<em>罚没</em>是一种更严重的处罚，专门针对恶意违规。 同一时间只在一台机器上运行加载你密钥的客户端，你被罚没的风险可以降到最低。 总得来说，所有质押人都必须意识到被罚没的风险。
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多关于罚没和验证者生命周期的信息</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多关于惩罚和验证者生命周期的信息</a>
 </ExpandableCard>
 </InfoGrid>
 
@@ -103,21 +103,21 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 有多种方案可帮助你进行设置。 上述指标可引导你了解如何使用下方的工具。
 
-<InfoBanner emoji="⚠️" isWarning>
-请注意选择<a href="/developers/docs/nodes-and-clients/client-diversity/">非主流客户端</a>的重要性，因为可以提高网络安全性，并限制你的风险。 可让你设置非主流客户端的工具称为<em style="text-transform: uppercase;">“多客户端”。</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### 节点工具
 
 <StakingProductsCardGrid category="nodeTools" />
 
+请注意选择[非主流客户端](/developers/docs/nodes-and-clients/client-diversity/)的重要性，因为可以提高网络安全性，并限制你的风险。 可让你设置非主流客户端的工具称为<em style={{ textTransform: "uppercase" }}>“多客户端”。</em>
+
 #### 密钥生成器
 
-这些工具可用于替代[质押存款命令行接口](https://github.com/ethereum/staking-deposit-cli/)，帮助生成密钥。
+这些工具可用来替代[质押存款命令行接口](https://github.com/ethereum/staking-deposit-cli/)，帮助生成密钥。
 
 <StakingProductsCardGrid category="keyGen" />
 
-想要推荐其他未提到的质押工具吗？ 可以查看我们的[产品清单政策](/contributing/adding-staking-products/)，思考你想要推荐的内容是否合适，合适的话，请提交以供审核。
+想要推荐其他未提到的质押工具吗？ 可以查看我们的[产品上线政策](/contributing/adding-staking-products/)，确定你推荐的质押工具是否合适，合适的话，请提交以供审核。
 
 ## 探索单独质押指南 {#staking-guides}
 
@@ -125,7 +125,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 ## 常见问题 {#faq}
 
-以下关于质押的问题是值得了解的几个最常见问题。
+下面是一些关于质押的最常见问题，值得了解一下。
 
 <ExpandableCard title="什么是验证者？">
 
@@ -181,6 +181,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 </ExpandableCard>
 
 <ExpandableCard title="我如何解锁我的奖励或收回我的以太币？">
+
 从信标链上进行任何类型的提款都需要设置提款凭据。
 
 新质押人在生成密钥和存款时设置提款凭据。 尚未设置提款凭证的现有质押人可以升级他们的密钥，以支持提款功能。

@@ -57,12 +57,12 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Testnet Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(long-term support)_ {#goerli}
 
@@ -113,6 +113,14 @@ A testnet for [Optimism](https://www.optimism.io/).
 
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+
+#### Starknet Goerli {#starknet-goerli}
+
+A testnet for [Starknet](https://www.starknet.io).
+
+##### Faucets
+
+- [Starknet faucet](https://faucet.goerli.starknet.io)
 
 ## Private networks {#private-networks}
 

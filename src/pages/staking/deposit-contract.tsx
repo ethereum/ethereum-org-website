@@ -15,16 +15,17 @@ import {
 } from "@chakra-ui/react"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import CardList from "../../components/CardList"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Emoji from "../../components/Emoji"
 import InfoBanner from "../../components/InfoBanner"
-import Link from "../../components/Link"
+import InlineLink from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import Tooltip from "../../components/Tooltip"
 import FeedbackCard from "../../components/FeedbackCard"
+import OldHeading from "../../components/OldHeading"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
 import { TranslationKey } from "../../utils/translations"
@@ -57,7 +58,7 @@ const RightColumn = (props: ChildOnlyProp) => (
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontWeight="700"
     fontSize="2rem"
@@ -156,7 +157,6 @@ const Row = (props: ChildOnlyProp) => (
 const CardTitle = (props: ChildOnlyProp) => (
   <Heading
     as="h2"
-    mt={0}
     mb={4}
     fontWeight="600"
     fontSize="2rem"
@@ -323,26 +323,26 @@ const DepositContractPage = ({
           <Subtitle>
             <Translation id="page-staking-deposit-contract-subtitle" />
           </Subtitle>
-          <h2>
+          <OldHeading>
             <Translation id="page-staking-deposit-contract-h2" />
-          </h2>
-          <p>
+          </OldHeading>
+          <Text>
             <Translation id="page-staking-deposit-contract-staking" />{" "}
-            <Link to="/staking/">
+            <InlineLink to="/staking/">
               <Translation id="page-staking-deposit-contract-staking-more-link" />
-            </Link>
-          </p>
+            </InlineLink>
+          </Text>
           <StyledButton
             to="https://launchpad.ethereum.org"
             id="page-staking-deposit-contract-launchpad"
           />
-          <h2>
+          <OldHeading>
             <Translation id="page-staking-deposit-contract-staking-check" />
-          </h2>
-          <p>
+          </OldHeading>
+          <Text>
             <Translation id="page-staking-deposit-contract-staking-check-desc" />
-          </p>
-          <CardList content={addressSources} />
+          </Text>
+          <CardList items={addressSources} />
         </LeftColumn>
         <RightColumn>
           <AddressCard>
@@ -449,20 +449,20 @@ const DepositContractPage = ({
                         </CopyButton>
                       )}
                     </CopyToClipboard>
-                    <Link
+                    <InlineLink
                       to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                     >
                       <Translation id="page-staking-deposit-contract-etherscan" />
-                    </Link>
+                    </InlineLink>
                   </ButtonRow>
                 </>
               )}
               <InfoBanner isWarning emoji=":warning:">
                 <div>
                   <Translation id="page-staking-deposit-contract-warning-2" />{" "}
-                  <Link to="https://launchpad.ethereum.org">
+                  <InlineLink to="https://launchpad.ethereum.org">
                     <Translation id="page-staking-deposit-contract-launchpad-2" />
-                  </Link>
+                  </InlineLink>
                 </div>
               </InfoBanner>
             </Box>

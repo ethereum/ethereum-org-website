@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import {
   Box,
   BoxProps,
@@ -11,8 +11,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
+import { BaseLink } from "./Link"
+import GatsbyImage from "./GatsbyImage"
 import * as url from "../utils/url"
-import Link from "./Link"
 
 export type CardListItem = {
   title?: ReactNode
@@ -25,7 +26,7 @@ export type CardListItem = {
 }
 
 export interface IProps extends BoxProps {
-  content: Array<CardListItem>
+  items: Array<CardListItem>
   clickHandler?: (idx: string | number) => void
 }
 
@@ -57,13 +58,11 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
 
   return (
     <CardContainer {...rest}>
-      {image && (
-        <Box as={GatsbyImage} image={image} alt={alt || ""} minW="20px" />
-      )}
+      {image && <GatsbyImage image={image} alt={alt || ""} minW="20px" />}
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
           <LinkOverlay
-            as={Link}
+            as={BaseLink}
             href={link}
             hideArrow
             color="text"
@@ -93,12 +92,12 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
 }
 
 const CardList: React.FC<IProps> = ({
-  content,
+  items,
   clickHandler = () => null,
   ...rest
 }) => (
   <Box bg="background.base" w="full" {...rest}>
-    {content.map((listItem, idx) => {
+    {items.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link
 

@@ -358,7 +358,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-## eth_chainId {#eth_chainId}
+### eth_chainId {#eth_chainId}
 
 返回链 ID，用于签署受重放攻击保护的交易。
 
@@ -1239,7 +1239,10 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 - `contractAddress`: `DATA`，20 字节 - 如果交易是创建合约的，则为创建的合约地址，否则为 `null`。
 - `logs`: `Array` - 此交易生成的日志对象数组。
 - `logsBloom`: `DATA`，256 字节 - 轻客户端用于快速检索相关日志的布隆过滤器。
-- `type`: `QUANTITY` - 表示交易类型的整数，`0x0` 表示以前的交易，`0x1` 表示访问列表类型，`0x2` 表示动态费用。 它还返回*以下两者之一*：
+- `type`: `QUANTITY` - 表示交易类型的整数，`0x0` 表示传统交易，`0x1` 表示访问列表类型，`0x2` 表示动态费用。
+
+它还返回*以下两者之一*：
+
 - `root` : `DATA`，32 字节的交易后状态根（拜占庭升级之前）
 - `status`: `QUANTITY`，`1`（成功）或 `0`（失败）
 
@@ -1484,10 +1487,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSerpent","params":["/
 
 1. `Object` - 过滤器选项：
 
-- `fromBlock`: `QUANTITY|TAG` - （可选，默认值：`"latest"`）整数区块编号，或者如果是最后一个开采的区块，则为 `"latest"`，如果是尚未开采的交易，则为 `"pending"`, `"earliest"`。
-- `toBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块编号，或者如果是最后一个开采的区块，则为 `"latest"`，如果是尚未开采的交易，则为 `"pending"`, `"earliest"`。
-- `address`: `DATA|Array`，20 字节 -（可选）生成日志的合约地址或地址列表。
-- `topics`: `Array of DATA`, -（可选）32 字节 `DATA` 主题的数组。 主题是顺序相关的。 每个主题也可以是带有“or”选项的 DATA 数组。
+- `fromBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块号，`"latest"`（对于最后开采的区块），或`"pending"`、`"earliest"`（对于尚未开采的交易）。
+- `toBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块号，`"latest"`（对于最后开采的区块），或`"pending"`、`"earliest"`（对于尚未开采的交易）。
+- `address`: `DATA|Array`，20 字节 -（可选）日志起源的合约地址或地址列表。
+- `topics`: `Array of DATA` -（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“或”选项的 DATA 数组。
 
 ```js
 params: [
@@ -1566,7 +1569,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 
 ### eth_uninstallFilter {#eth_uninstallfilter}
 
-卸载具有给定 ID 的过滤器。 当不再需要监控时应始终调用该方法。 此外，在一段时间内未使用 [eth_getFilterChanges](#eth_getfilterchanges) 请求过滤器时，过滤器便会超时。
+卸载具有给定 id 的过滤器。 当不再需要监控时应始终调用该方法。 此外，在一段时间内未使用 [eth_getFilterChanges](#eth_getfilterchanges) 请求过滤器时，过滤器便会超时。
 
 **参数**
 
@@ -1620,7 +1623,7 @@ params: [
   - `blockNumber`: `QUANTITY` - 此日志所在区块的区块编号。 如果是待处理区块，则为 `null`。 如果是待处理日志，则为 `null`。
   - `address`: `DATA`，20 字节 - 此日志的来源地址。
   - `data`: `DATA` - 包含日志的一个或多个 32 字节非索引参数。
-  - `topics`: `Array of DATA` - 0 到 4 个 32 字节 `DATA` 类型的索引日志参数的数组。 （在 _Solidity_ 中：第一个主题是事件签名的*哈希*（例如 `Deposit (address,bytes32,uint256)`），除非你使用 `anonymous` 说明符声明了该事件）。
+  - `topics`: `Array of DATA` - 0 到 4 个 32 字节 `DATA` 类型的索引日志参数的数组。 （在 _Solidity_ 中：第一个主题是事件签名的*哈希*（例如 `Deposit(address,bytes32,uint256)`），除非你使用 `anonymous` 说明符声明了该事件。）
 - **示例**
 
 ```js
@@ -1678,11 +1681,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 
 1. `Object` - 过滤器选项：
 
-- `fromBlock`: `QUANTITY|TAG` - （可选，默认值：`"latest"`）整数区块编号，或者如果是最后一个开采的区块，则为 `"latest"`，如果是尚未开采的交易，则为 `"pending"`, `"earliest"`。
-- `toBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块编号，或者如果是最后一个开采的区块，则为 `"latest"`，如果是尚未开采的交易，则为 `"pending"`, `"earliest"`。
-- `address`: `DATA|Array`，20 字节 -（可选）生成日志的合约地址或地址列表。
-- `topics`: `Array of DATA`, -（可选）32 字节 `DATA` 主题的数组。 主题是顺序相关的。 每个主题也可以是带有“or”选项的 DATA 数组。
-- `blockhash`: `DATA`，32 字节 -（可选，**future**），添加 EIP-234 后，`blockHash` 将是一个新的过滤器选项，它会将返回的日志限制为具有 32 字节哈希 `blockHash` 的单一区块。 使用 `blockHash` 相当于 `fromBlock` = `toBlock` = 具有哈希`blockHash` 的区块编号。 如果 `blockHash` 出现在筛选条件中，则 `fromBlock` 和 `toBlock` 都不允许。
+- `fromBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块号，`"latest"`（对于最后开采的区块），或`"pending"`、`"earliest"`（对于尚未开采的交易）。
+- `toBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块号，`"latest"`（对于最后开采的区块），或`"pending"`、`"earliest"`（对于尚未开采的交易）。
+- `address`: `DATA|Array`，20 字节 -（可选）日志起源的合约地址或地址列表。
+- `topics`: `Array of DATA` -（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“或”选项的 DATA 数组。
+- `blockhash`: `DATA`，32 字节 -（可选，**future**），添加 EIP-234 后，`blockHash` 将是一个新的过滤器选项，它会将返回的日志限制为具有 32 字节哈希 `blockHash` 的单一区块。 使用 `blockHash` 相当于 `fromBlock` = `toBlock` = 具有哈希 `blockHash` 的区块编号。 如果 `blockHash` 出现在筛选条件中，则 `fromBlock` 和 `toBlock` 都不允许。
 
 ```js
 params: [
@@ -1736,7 +1739,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getWork","params":[],"id":73
 
 ### eth_submitWork {#eth_submitwork}
 
-用于提交工作证明解决方案。
+用于提交工作量证明解。
 
 **参数**
 
@@ -1752,7 +1755,7 @@ params: [
 ]
 ```
 
-**返回值** `Boolean` - 如果提供的解决方案有效，则返回 `true`，否则返回 `false`。
+**返回值** `Boolean` - 如果提供的解有效，则返回 `true`，否则返回 `false`。
 
 **示例**
 
@@ -1798,11 +1801,11 @@ curl -X POST --data '{"jsonrpc":"2.0", "method":"eth_submitHashrate", "params":[
 }
 ```
 
-### db_putString (deprecated) {#db_putstring}
+### db_putString（已弃用） {#db_putstring}
 
 在本地数据库中存储一个字符串。
 
-**注意**：此方法已弃用。
+**注意**：此函数已弃用。
 
 **参数**
 
@@ -1829,9 +1832,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_putString","params":["testDB"
 }
 ```
 
-### db_getString (deprecated) {#db_getstring}
+### db_getString（已弃用） {#db_getstring}
 
-从本地数据库返回字符串。 **注意**：此方法已弃用。
+从本地数据库返回字符串。 **注意**：此函数已弃用。
 
 **参数**
 
@@ -1857,9 +1860,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_getString","params":["testDB"
 }
 ```
 
-### db_putHex (deprecated) {#db_puthex}
+### db_putHex（已弃用） {#db_puthex}
 
-在本地数据库中存储二进制数据。 **注意**：此方法已弃用。
+在本地数据库中存储二进制数据。 **注意**：此函数已弃用。
 
 **参数**
 
@@ -1886,9 +1889,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_putHex","params":["testDB","m
 }
 ```
 
-### db_getHex (deprecated) {#db_gethex}
+### db_getHex（已弃用） {#db_gethex}
 
-从本地数据库返回二进制数据。 **注意**：此方法已弃用。
+从本地数据库返回二进制数据。 **注意**：此函数已弃用。
 
 **参数**
 
@@ -1914,11 +1917,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_getHex","params":["testDB","m
 }
 ```
 
-### shh_version (deprecated) {#shh_post}
+### shh_version（已弃用） {#shh_post}
 
 返回当前的 Whisper 协议版本。
 
-**注意**：此方法已弃用。
+**注意**：此函数已弃用。
 
 **参数** 无
 
@@ -1937,11 +1940,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_version","params":[],"id":67
 }
 ```
 
-### shh_post (deprecated) {#shh_version}
+### shh_post（已弃用） {#shh_version}
 
 发送 Whisper 消息。
 
-**注意**：此方法已弃用。
+**注意**：此函数已弃用。
 
 **参数**
 
@@ -1985,11 +1988,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_post","params":[{"from":"0xc
 }
 ```
 
-### shh_newIdentity (deprecated){#shh_newidentity}
+### shh_newIdentity（已弃用）{#shh_newidentity}
 
 在客户端中创建新的 Whisper 身份。
 
-**注意**：此方法已弃用。
+**注意**：此函数已弃用。
 
 **参数** 无
 
@@ -2008,11 +2011,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newIdentity","params":[],"id
 }
 ```
 
-### shh_hasIdentity (deprecated){#shh_hasidentity}
+### shh_hasIdentity（已弃用）{#shh_hasidentity}
 
 检查客户端是否持有给定身份的私钥。
 
-**注意**：此方法已弃用。
+**注意**：此函数已弃用。
 
 **参数**
 
@@ -2039,9 +2042,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_hasIdentity","params":["0x04
 }
 ```
 
-### shh_newGroup (deprecated){#shh_newgroup}
+### shh_newGroup（已弃用）{#shh_newgroup}
 
-**注意**：此方法已弃用。
+**注意**：此函数已弃用。
 
 **参数** 无
 
@@ -2060,9 +2063,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newGroup","params":[],"id":7
 }
 ```
 
-### shh_addToGroup (deprecated){#shh_addtogroup}
+### shh_addToGroup（已弃用）{#shh_addtogroup}
 
-**注意**：此方法已弃用。
+**注意**：此函数已弃用。
 
 **参数**
 
@@ -2089,9 +2092,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_addToGroup","params":["0x04f
 }
 ```
 
-### shh_newFilter (deprecated){#shh_newfilter}
+### shh_newFilter（已弃用）{#shh_newfilter}
 
-创建过滤器以通知客户端何时收到与过滤器选项匹配的 Whisper 消息。 **注意**：此方法已弃用。
+创建过滤器以通知客户端何时收到与过滤器选项匹配的 Whisper 消息。 **注意**：此函数已弃用。
 
 **参数**
 
@@ -2128,9 +2131,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newFilter","params":[{"topic
 }
 ```
 
-### shh_uninstallFilter (deprecated){#shh_uninstallfilter}
+### shh_uninstallFilter（已弃用）{#shh_uninstallfilter}
 
-卸载具有给定 ID 的过滤器。 当不再需要监控时应始终调用该方法。 此外，在一段时间内未使用 [shh_getFilterChanges](#shh_getfilterchanges) 请求过滤器时，过滤器便会超时。 **注意**：此方法已弃用。
+卸载具有给定 id 的过滤器。 当不再需要监控时应始终调用该方法。 此外，在一段时间内未使用 [shh_getFilterChanges](#shh_getfilterchanges) 请求过滤器时，过滤器便会超时。 **注意**：此函数已弃用。
 
 **参数**
 
@@ -2157,9 +2160,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_uninstallFilter","params":["
 }
 ```
 
-### shh_getFilterChanges (deprecated){#shh_getfilterchanges}
+### shh_getFilterChanges（已弃用）{#shh_getfilterchanges}
 
-Whisper 过滤器的轮询方法。 返回自上次调用此方法以来的新消息。 **注意**：调用 [shh_getMessages](#shh_getmessages) 方法将重置此方法的缓冲区，这样你就不会收到重复的消息。 **注意**：此方法已弃用。
+Whisper 过滤器的轮询方法。 返回自上次调用此方法以来的新消息。 **注意**：调用 [shh_getMessages](#shh_getmessages) 方法将重置此方法的缓冲区，这样你就不会收到重复的消息。 **注意**：此函数已弃用。
 
 **参数**
 
@@ -2206,11 +2209,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_getFilterChanges","params":[
 }
 ```
 
-### shh_getMessages (deprecated) {#shh_getmessages}
+### shh_getMessages（已弃用） {#shh_getmessages}
 
 获取与过滤器匹配的所有消息。 与 `shh_getFilterChanges` 不同，它返回所有消息。
 
-**注意**：此方法已弃用。
+**注意**：此函数已弃用。
 
 **参数**
 
@@ -2238,7 +2241,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_getMessages","params":["0x7"
 
 ### 使用 JSON_RPC 部署合约 {#deploying-contract}
 
-本节演示如何仅使用远程过程调用接口部署合约。 其他部署合约的途径可以消除这种复杂性 — 例如，使用在远程过程调用接口之上构建的库，如 [web3.js](https://web3js.readthedocs.io/) 和 [web3.py](https://github.com/ethereum/web3.py)。 这些抽象通常更容易理解且不易出错，但了解幕后发生的操作仍然很有帮助。
+本节演示如何仅使用远程过程调用接口部署合约。 部署合约的替代途径可以消除这种复杂性 — 例如，使用在远程过程调用接口之上构建的库，如 [web3.js](https://web3js.readthedocs.io/) 和 [web3.py](https://github.com/ethereum/web3.py)。 这些抽象通常更容易理解且不易出错，但了解幕后发生的操作仍然很有帮助。
 
 以下是一个名为 `Multiply7` 的简单智能合约，将使用 JSON-RPC 接口将其部署到以太坊节点。 本教程假设读者已经在运行 Geth 节点。 [此处](/developers/docs/nodes-and-clients/run-a-node)提供了更多关于节点和客户端的信息。 请参阅单独的[客户端](/developers/docs/nodes-and-clients/)文档，了解如何为非 Geth 客户端启动超文本传输协议 JSON-RPC。 大多数客户端默认在 `localhost:8545` 上提供服务。
 
@@ -2378,5 +2381,5 @@ web3.sha3("Print(uint256)")
 - [JSON-RPC 规范](http://www.jsonrpc.org/specification)
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 - [JavaScript API](/developers/docs/apis/javascript/)
-- [后端 API](/developers/docs/apis/backend/)
+- [后端应用程序接口](/developers/docs/apis/backend/)
 - [执行客户端](/developers/docs/nodes-and-clients/#execution-clients)

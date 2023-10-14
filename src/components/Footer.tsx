@@ -11,12 +11,12 @@ import {
 import { graphql, useStaticQuery } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React from "react"
-import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 
 import { Lang } from "../utils/languages"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
-import Link from "./Link"
+import { BaseLink } from "./Link"
 import Translation from "./Translation"
 
 const socialLinks = [
@@ -31,12 +31,6 @@ const socialLinks = [
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
     color: "#1DA1F2",
-  },
-  {
-    icon: FaYoutube,
-    to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
-    ariaLabel: "Youtube",
-    color: "#FF0000",
   },
   {
     icon: FaDiscord,
@@ -116,6 +110,10 @@ const Footer: React.FC<IProps> = () => {
         {
           to: `/wallets/`,
           text: t("ethereum-wallets"),
+        },
+        {
+          to: "/gas/",
+          text: "Gas fees",
         },
         {
           to: "/security/",
@@ -320,7 +318,7 @@ const Footer: React.FC<IProps> = () => {
         <Box my={4}>
           {socialLinks.map((link, idk) => {
             return (
-              <Link
+              <BaseLink
                 key={idk}
                 to={link.to}
                 hideArrow
@@ -337,7 +335,7 @@ const Footer: React.FC<IProps> = () => {
                   fontSize="4xl"
                   ml={4}
                 />
-              </Link>
+              </BaseLink>
             )
           })}
         </Box>
@@ -345,17 +343,11 @@ const Footer: React.FC<IProps> = () => {
       <SimpleGrid
         gap={4}
         justifyContent="space-between"
-        gridTemplateColumns="repeat(6, auto)"
-        sx={{
-          "@media (max-width: 1300px)": {
-            gridTemplateColumns: "repeat(3, auto)",
-          },
-          [`@media (max-width: ${medBp})`]: {
-            gridTemplateColumns: "repeat(2, auto)",
-          },
-          "@media (max-width: 500px)": {
-            gridTemplateColumns: "auto",
-          },
+        templateColumns={{
+          base: "auto",
+          sm: "repeat(2, auto)",
+          md: "repeat(3, auto)",
+          xl: "repeat(6, auto)",
         }}
       >
         {linkSections.map((section: LinkSection, idx) => (
@@ -366,12 +358,13 @@ const Footer: React.FC<IProps> = () => {
             <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} mb={4}>
-                  <Link
+                  <BaseLink
                     to={link.to}
                     isPartiallyActive={false}
                     dir={isPageRightToLeft ? "auto" : "ltr"}
                     textDecor="none"
                     color="text200"
+                    fontWeight="normal"
                     _hover={{
                       textDecor: "none",
                       color: "primary.base",
@@ -389,7 +382,7 @@ const Footer: React.FC<IProps> = () => {
                     }}
                   >
                     {link.text}
-                  </Link>
+                  </BaseLink>
                 </ListItem>
               ))}
             </List>

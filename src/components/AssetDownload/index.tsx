@@ -1,12 +1,13 @@
 // Libraries
 import React from "react"
-import { Box, Flex, Heading, FlexProps } from "@chakra-ui/react"
+import { Box, Flex, FlexProps } from "@chakra-ui/react"
 
 // Components
 import Translation from "../Translation"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import AssetDownloadImage from "./AssetDownloadImage"
 import AssetDownloadArtist from "./AssetDownloadArtist"
+import OldHeading from "../OldHeading"
 
 // Utils
 import { getSrc, ImageDataLike } from "../../utils/image"
@@ -44,9 +45,9 @@ const AssetDownload: React.FC<IProps> = ({
       p={0}
       {...rest}
     >
-      <Heading as="h4" fontSize={{ base: "md", md: "xl" }} fontWeight="500">
+      <OldHeading as="h4" fontSize={{ base: "md", md: "xl" }} fontWeight="500">
         {title}
-      </Heading>
+      </OldHeading>
       <Box>
         <AssetDownloadImage image={image} alt={alt} />
         {artistName && (

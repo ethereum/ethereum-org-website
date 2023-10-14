@@ -27,7 +27,7 @@ Dapp'leri kullanıma sokmak için, en iyi şekilde bir dapp'in arka ucu olarak t
 
 Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programlandığı gibi çalışan bir koddur. Akıllı sözleşmeler ağa dağıtıldıktan sonra bunları değiştiremezsiniz. Dapp'ler, bir kişi veya şirket tarafından değil, sözleşmeye yazılan mantık tarafından kontrol edildikleri için merkeziyetsiz hâle getirilebilir. Bu aynı zamanda, sözleşmelerinizi çok dikkatli bir şekilde tasarlamanız ve iyice test etmeniz gerektiği anlamına gelir.
 
-## Dapp geliştirmenin faydaları {#benefits-of-dapp-development}
+## Dapp deliştirmenin faydaları {#benefits-of-dapp-development}
 
 - **Sıfır kesinti** – Akıllı sözleşme dağıtıldıktan ve blok zincirine ulaştıktan sonra ağ bir bütün olarak sözleşme ile etkileşmek isteyen istemcilere her zaman hizmet edebilecektir. Bu nedenle kötü niyetli aktörler, bireysel dapp'lere yönelik hizmet reddi saldırıları başlatamaz.
 - **Gizlilik** – Bir dapp dağıtmak veya onunla etkileşime girmek için gerçek hayattaki kimliğinizi sağlamanız gerekmez.
@@ -38,7 +38,7 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 ## Dapp geliştirmenin zorlukları {#drawbacks-of-dapp-development}
 
 - **Bakım** – Blok zincirinde yayınlanan kod ve verilerin değiştirilmesi daha zor olduğu için dapp'lerin bakımı daha zor olabilir. Geliştiricilerin, eski bir sürümde hatalar veya güvenlik riskleri tanımlansa bile dağıtıldıktan sonra dapp'lerinde (veya bir dapp tarafından depolanan temel verilerde) güncellemeler yapmaları zordur.
-- **Performans ek yükü** – Büyük bir performans ek yükü mevcuttur ve ölçeklendirme aşırı zordur. Ethereum'un arzu ettiği güvenlik, bütünlük, şeffaflık ve güvenilirlik seviyesini elde etmek için her düğüm, her işlemi çalıştırır ve depolar. Bunun da ötesinde, iş ispatı da zaman alır. Kabaca hesaplanacak olursa, ek yük şu anda standart hesaplamanın 1.000.000 katı civarındadır.
+- **Performans ek yükü** – Büyük bir performans ek yükü mevcuttur ve ölçeklendirme aşırı zordur. Ethereum'un arzu ettiği güvenlik, bütünlük, şeffaflık ve güvenilirlik seviyesini elde etmek için her düğüm, her işlemi çalıştırır ve depolar. Buna ek olarak, hisse ispatı mutabakatı da zaman alır.
 - **Ağ tıkanıklığı** – Bir dapp çok fazla bilgisayar kaynağı kullanıyorsa, tüm ağ tıkanır. Şu anda ağ, saniyede yalnızca yaklaşık 10-15 işlem gerçekleştirebilir; işlemler bundan daha hızlı gönderiliyorsa onaylanmamış işlemler havuzu hızla şişebilir.
 - **Kullanıcı deneyimi** – Ortalama bir kullanıcı blok zinciriyle gerçekten güvenli bir etkileşime girmek için gerekli bir araç kümesini kurmayı aşırı zor bulabileceği için kullanıcı dostu deneyimler geliştirmek çok daha zor olabilir.
 - **Merkezileşme** – Ethereum'un temel katmanı üzerinde inşa edilmiş kullanıcı dostu ve geliştirici dostu çözümler merkezileşmiş servislere benzeyecek şekilde sonuçlanabilir. Örnek olarak, bu tip servisler anahtarlar veya diğer hassas bilgileri sunucu tarafında depolayabilir, merkezi bir sunucu kullanarak bir ön uç sunabilir veya önemli bir iş mantığını blok zincirine yazmadan önce merkezi bir sunucuda çalıştırabilir. Merkezileşme, blok zincirinin geleneksel modele göre avantajlarının çoğunu (tamamını da olabilir) ortadan kaldırır.
@@ -68,15 +68,23 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-## Daha fazla okuma {#further-reading}
+**thirdweb _- Web3 geliştirme için her dilde SDK'lar, akıllı sözleşmeler, araçlar ve altyapı._**
 
+- [Ana Sayfa](https://thirdweb.com/)
+- [Dokümanlar](https://portal.thirdweb.com/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
+## Daha fazla bilgi {#further-reading}
+
+- [Dapps'i keşfedin](/dapps)
 - [Bir Web 3.0 uygulamasının mimarisi](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
-- [Merkeziyetsiz uygulamalar hakkında bir 2021 rehberi](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
+- [Merkeziyetsiz uygulamalar hakkında 2021 rehberi](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [Merkeziyetsiz Uygulamalar Nedir?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
+- [Popüler merkeziyetsiz uygulamalar](https://www.alchemy.com/dapps) - _Alchemy_
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili Konular {#related-topics}
+## İlgili konular {#related-topics}
 
 - [Ethereum yığınına giriş](/developers/docs/ethereum-stack/)
-- [Geliştirme çerçeveleri](/developers/docs/frameworks/)
+- [Geliştirici çerçeveleri](/developers/docs/frameworks/)

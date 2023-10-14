@@ -1,11 +1,13 @@
 import React from "react"
-import { Box, Center, chakra, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Center, chakra, Flex } from "@chakra-ui/react"
 
 import CardList from "../CardList"
-import Link from "../Link"
+import InlineLink from "../Link"
 import Emoji from "../Emoji"
 import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
 
 import { ChildOnlyProp } from "../../types"
 import { useEthExchanges } from "./use-eth-exchanges"
@@ -54,7 +56,10 @@ const NoResults = ({ children }) => (
     <Emoji text=":crying_face:" fontSize="80px" />
     <EmptyStateText>
       {children}{" "}
-      <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
+      <InlineLink to="mailto:website@ethereum.org">
+        website@ethereum.org
+      </InlineLink>
+      .
     </EmptyStateText>
   </EmptyStateContainer>
 )
@@ -63,7 +68,10 @@ const NoResultsSingle = ({ children }) => (
   <Center flexDir="column" mt={6}>
     <Text maxW="450px" mb={16}>
       {children}{" "}
-      <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
+      <InlineLink to="mailto:website@ethereum.org">
+        website@ethereum.org
+      </InlineLink>
+      .
     </Text>
     <Emoji text=":crying_face:" fontSize="80px" />
   </Center>
@@ -78,21 +86,19 @@ const EthExchanges = () => {
     placeholderString,
     t,
     hasExchangeResults,
-    hasWalletResults,
     filteredExchanges,
-    filteredWallets,
     lastUpdated,
   } = useEthExchanges()
 
   return (
     <Flex flexDir="column" align="center" w="full">
-      <Heading
+      <OldHeading
         fontSize={{ base: "2xl", md: "2rem" }}
         fontWeight={600}
         lineHeight={1.4}
       >
         <Translation id="page-get-eth-exchanges-header" />
-      </Heading>
+      </OldHeading>
       <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">
         <Translation id="page-get-eth-exchanges-intro" />
       </Text>
@@ -113,7 +119,7 @@ const EthExchanges = () => {
         </EmptyStateContainer>
       )}
       {/* No results */}
-      {hasSelectedCountry && !hasExchangeResults && !hasWalletResults && (
+      {hasSelectedCountry && !hasExchangeResults && (
         <ResultsContainer>
           <NoResults>
             <Translation id="page-get-eth-exchanges-no-exchanges-or-wallets" />
@@ -121,24 +127,24 @@ const EthExchanges = () => {
         </ResultsContainer>
       )}
       {/* Has results */}
-      {(hasExchangeResults || hasWalletResults) && (
+      {hasExchangeResults && (
         <>
           <ResultsContainer>
             <ListContainer>
-              <Heading
+              <OldHeading
                 as="h3"
                 fontSize={{ base: "xl", md: "2xl" }}
                 fontWeight={600}
                 lineHeight={1.4}
               >
                 <Translation id="page-get-eth-exchanges-header-exchanges" />
-              </Heading>
+              </OldHeading>
               {hasExchangeResults && (
                 <SuccessContainer>
                   <Text>
                     <Translation id="page-get-eth-exchanges-success-exchange" />
                   </Text>
-                  <CardList content={filteredExchanges} />
+                  <CardList items={filteredExchanges} />
                 </SuccessContainer>
               )}
               {!hasExchangeResults && (
@@ -147,39 +153,13 @@ const EthExchanges = () => {
                 </NoResultsSingle>
               )}
             </ListContainer>
-            <ListContainer>
-              <Heading
-                as="h3"
-                fontSize={{ base: "xl", md: "2xl" }}
-                fontWeight={600}
-                lineHeight={1.4}
-              >
-                <Translation id="page-get-eth-exchanges-header-wallets" />
-              </Heading>
-
-              {hasWalletResults && (
-                <SuccessContainer>
-                  <Text>
-                    <Translation id="page-get-eth-exchanges-success-wallet-paragraph" />{" "}
-                    <Link to="/wallets/">
-                      <Translation id="page-get-eth-exchanges-success-wallet-link" />
-                    </Link>
-                    .
-                  </Text>
-                  <CardList content={filteredWallets} />
-                </SuccessContainer>
-              )}
-              {!hasWalletResults && (
-                <NoResultsSingle>
-                  <Translation id="page-get-eth-exchanges-no-wallets" />
-                </NoResultsSingle>
-              )}
-            </ListContainer>
           </ResultsContainer>
           <Text w="full" maxW="876px" mt={16} mb={0}>
             <Translation id="page-get-eth-exchanges-disclaimer" />{" "}
-            <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.{" "}
-            <Translation id="page-find-wallet-last-updated" />{" "}
+            <InlineLink to="mailto:website@ethereum.org">
+              website@ethereum.org
+            </InlineLink>
+            . <Translation id="page-find-wallet-last-updated" />{" "}
             <strong>{lastUpdated}</strong>
           </Text>
         </>

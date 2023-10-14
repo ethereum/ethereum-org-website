@@ -336,7 +336,15 @@
     "toPath": "/en/staking/withdrawals/"
   },
   {
+    "fromPath": "/*/writing-cohort",
+    "toPath": "https://ethereumwriterscohort.carrd.co/"
+  },
+  {
     "fromPath": "/*/staking/withdraws",
     "toPath": "/:splat/staking/withdrawals/"
+  },
+  {
+    "fromPath": "/*/guides/how-to-register-an-ethereum-account",
+    "toPath": "/:splat/guides/how-to-create-an-ethereum-account/"
   }
 ]
