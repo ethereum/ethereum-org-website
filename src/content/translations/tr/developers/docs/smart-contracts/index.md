@@ -8,7 +8,7 @@ lang: tr
 
 Bir "akıllı sözleşme" basitçe Ethereum blok zincirinde çalışan bir programdır. Ethereum blok zincirindeki özel bir adreste bulunan bir kod (sözleşmenin fonksiyonları) ve veri (sözleşmenin durumu) koleksiyonudur.
 
-Akıllı sözleşmeler bir tür [Ethereum hesabıdır](/developers/docs/accounts/). Bu, bir bakiyeye sahip oldukları ve ağ üzerinde işlemler gönderebildikleri anlamına gelir. Ancak bir kullanıcı tarafından kontrol edilmezler, bunun yerine ağa dağıtılırlar ve programlandıkları gibi çalışırlar. Sonrasında kullanıcı hesapları akıllı sözleşmede tanımlanmış bir fonksiyonu yürüten işlemler göndererek akıllı sözleşme ile etkileşime geçebilirler. Akıllı sözleşmeler, normal bir sözleşmeye benzer şekilde kurallar belirleyebilir ve bu kuralları kod aracılığıyla zorunlu kılabilirler. Akıllı sözleşmeler varsayılan olarak silinemezler ve onlarla yapılan etkileşimler geri alınamaz.
+Akıllı sözleşmeler bir tür [Ethereum hesabıdır](/developers/docs/accounts/). Bu, onların bir dengeye sahip olduğu ve işlemlerinin hedefi olabilecekleri anlamına gelir. Ancak bir kullanıcı tarafından kontrol edilmezler, bunun yerine ağa dağıtılırlar ve programlandıkları gibi çalışırlar. Sonrasında kullanıcı hesapları akıllı sözleşmede tanımlanmış bir fonksiyonu yürüten işlemler göndererek akıllı sözleşme ile etkileşime geçebilirler. Akıllı sözleşmeler, normal bir sözleşmeye benzer şekilde kurallar belirleyebilir ve bu kuralları kod aracılığıyla zorunlu kılabilirler. Akıllı sözleşmeler varsayılan olarak silinemezler ve onlarla yapılan etkileşimler geri alınamaz.
 
 ## Ön Koşullar {#prerequisites}
 
@@ -28,7 +28,7 @@ money + snack selection = snack dispensed
 
 Bu mantık otomatın içine programlanmıştır.
 
-Bir akıllı sözleşme, tıpkı bir otomat gibi içine programlanmış bir mantığa sahiptir. Burada bu otomat bir akıllı sözleşme olsaydı nasıl gözükebileceğinin basit bir örneği bulunuyor:
+Bir akıllı sözleşme, tıpkı bir otomat gibi içine programlanmış bir mantığa sahiptir. Solidity'de yazılmış bir akıllı sözleşme olsaydı otomatın nasıl görüneceğini aşağıdaki basit örnekte görebilirsiniz:
 
 ```solidity
 pragma solidity 0.8.7;
@@ -67,7 +67,7 @@ Bir otomatın bir kasiyere olan ihtiyacı yok etmesi gibi, akıllı sözleşmele
 
 ## İzne dayalı olmama {#permissionless}
 
-Herkes bir akıllı sözleşme yazabilir ve onu ağa dağıtabilir. Sadece bir [akıllı sözleşme dilinde](/developers/docs/smart-contracts/languages/) kod yazmayı öğrenmeniz ve sözleşmenizi dağıtmaya yetecek kadar ETH sahibi olmanız gerekir. Bir akıllı sözleşme dağıtmak teknik olarak bir işlem olduğu için basit bir ETH aktarımında gaz ödeyeceğiniz gibi bunda da [Gaz](/developers/docs/gas/) ödemeniz gerekir. Ancak sözleşme dağıtımları için gaz ücretleri çok daha yüksektir.
+Herkes bir akıllı sözleşme yazabilir ve onu ağa dağıtabilir. Sadece bir [akıllı sözleşme dilinde](/developers/docs/smart-contracts/languages/) kod yazmayı öğrenmeniz ve sözleşmenizi dağıtmaya yetecek kadar ETH sahibi olmanız gerekir. Bir akıllı sözleşmenin dağıtılması, teknik olarak bir işlem olduğundan basit bir ETH transferi için gaz ödediğiniz gibi bunun için de [gaz](/developers/docs/gas/) ödemeniz gerekir. Ancak akıllı sözleşme dağıtımının gaz masrafı çok daha fazladır.
 
 Ethereum, akıllı sözleşme yazmak için geliştirici dostu dillere sahiptir:
 
@@ -80,33 +80,32 @@ Ancak, Ethereum sanal makinesinin sözleşmeyi yorumlayabilmesi ve depolayabilme
 
 ## Birleştirilebilirlik {#composability}
 
-Akıllı sözleşmeler Ethereum üzerinde herkese açıktır ve açık API'ler olarak düşünülebilirler. Bu, olanakları büyük ölçüde genişletmek için kendi akıllı sözleşmenizde başka akıllı sözleşmeleri çağırabileceğiniz anlamına gelir. Sözleşmeler, başka sözleşmeleri bile dağıtabilir.
+Akıllı sözleşmeler Ethereum üzerinde herkese açıktır ve açık API'ler olarak düşünülebilirler. Bu, kendi akıllı sözleşmenizde başka akıllı sözleşmeleri çağırarak olanakları büyük ölçüde genişletebileceğiniz anlamına gelir. Sözleşmeler, başka sözleşmeleri bile dağıtabilir.
 
 [Akıllı sözleşme birleştirilebilirliği](/developers/docs/smart-contracts/composability/) hakkında fazlasını öğrenin.
 
 ## Kısıtlamalar {#limitations}
 
-Akıllı sözleşmeler "gerçek hayat" olayları hakkında tek başlarına bilgi edinemezler çünkü HTTP istekleri gönderemezler. Bu şekilde tasarlanmıştır. Dış bilgiye bağlı kalmak, güvenlik ve merkeziyetsizlik için önemli olan mutabakatı riske atabilir.
+Akıllı sözleşmeler, zincir dışındaki kaynaklardan veri çekemedikleri için kendi başlarına ''gerçek dünya'' olayları hakkında bilgi toplayamaz. Dolayısıyla gerçek dünyada gerçekleşen olaylara yanıt veremezler. Bu, tasarımlarının bir gereğidir. Dış bilgiye bağımlı olmak, güvenlik ve merkeziyetsizlik için önemli olan mutabakatı riske atabilir.
 
-Bu, [kâhinler](/developers/docs/oracles/) ile çözülebilir.
+Ancak blokzincir uygulamaları için zincir dışından edinilen verileri kullanabilmek önemlidir. Çözüm ise zincir dışından edinilen verileri sentezleyip akıllı sözleşmeler için kullanılabilir hale getiren araçlar olan [kâhinlerdir](/developers/docs/oracles/).
 
 Akıllı sözleşmelerin diğer bir kısıtlaması ise maksimum sözleşme boyutudur. Bir akıllı sözleşme maksimum 24 KB olabilir: Aksi takdirde sahip olduğu gaz tükenir. Bu, [Elmas Deseni](https://eips.ethereum.org/EIPS/eip-2535) kullanılarak aşılabilir.
 
+## Çoklu imza sözleşmeleri {#multisig}
+
+Çoklu imza sözleşmeleri, bir işlemi gerçekleştirmek için birden fazla geçerli imza gerektiren akıllı sözleşme hesaplarıdır. Bu, önemli miktarda ether veya diğer tokenleri tutan sözleşmeler için tek başarısızlık noktalarından kaçınmak için çok kullanışlıdır. Çoklu imzalar, ayrıca sözleşme yürütme ve anahtar yönetimi sorumluluğunu birden fazla taraf arasında bölüştürür ve tek bir özel anahtarın geri dönüşü olmayan fon kaybına yol açmasını önler. Bu nedenlerle, basit DAO yönetişimi için çoklu imza sözleşmeleri kullanılabilir. Çoklu imzalar, yürütmek için M olası kabul edilebilir imzadan (burada N ≤ M ve M > 1 olduğunda) N imza gerektirir. `N = 3, M = 5` ve `N = 4, M = 7` yaygın olarak kullanılır. 4/7 çoklu imza, olası yedi geçerli imzadan dördünü gerektirir. Bu, üç imza kaybolsa bile fonların geri alınabileceği anlamına gelir. Bu durumda, sözleşmenin uygulanabilmesi için anahtar sahiplerinin çoğunluğunun kabul etmesi ve imzalaması gerektiği anlamına da gelir.
+
 ## Akıllı sözleşme kaynakları {#smart-contract-resources}
 
-**OpenZeppelin Contracts -** **_Güvenli akıllı sözleşme geliştirme kütüphanesidir._**
+**OpenZeppelin Kontratları -** **_Güvenli akıllı sözleşme geliştirme kütüphanesidir._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Topluluk Forumu](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_Akıllı sözleşmeler için güvenli, basit ve esnek yapılı yapı taşlarıdır._**
+## Daha fazla okuma {#further-reading}
 
-- [Dappsys](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
-
-## Daha fazla bilgi {#further-reading}
-
-- [Akıllı Sözleşmeler: Avukatların Yerini Alacak Blok Zinciri Teknolojisi](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
-- [Akıllı Sözleşme Geliştirme için En İyi Yöntemler](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– 10 Kasım 2019 - Yos Riady_
-- [Temiz sözleşmeler: akıllı sözleşme desenleri ve yöntemleri hakkında kılavuz](https://www.wslyvh.com/clean-contracts/) _– 30 Nisan 2020 - wslyvh_
+- [Coinbase: Akıllı sözleşme nedir?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [Chainlink: Akıllı sözleşme nedir?](https://chain.link/education/smart-contracts)
+- [Video: Basit Anlatım - Akıllı Sözleşmeler](https://youtu.be/ZE2HxTmxfrI)

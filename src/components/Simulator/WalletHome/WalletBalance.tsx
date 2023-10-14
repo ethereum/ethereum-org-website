@@ -11,7 +11,7 @@ export const WalletBalance: React.FC<IProps> = ({
   usdAmount = 0,
   ...boxProps
 }) => (
-  <Box {...boxProps}>
+  <Box zIndex={1} {...boxProps}>
     <Text textAlign="center" color="body.medium" mb={{ base: 2, md: 4 }}>
       Your total
     </Text>

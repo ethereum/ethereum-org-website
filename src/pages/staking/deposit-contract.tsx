@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import CardList from "../../components/CardList"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Emoji from "../../components/Emoji"
@@ -342,7 +342,7 @@ const DepositContractPage = ({
           <Text>
             <Translation id="page-staking-deposit-contract-staking-check-desc" />
           </Text>
-          <CardList content={addressSources} />
+          <CardList items={addressSources} />
         </LeftColumn>
         <RightColumn>
           <AddressCard>

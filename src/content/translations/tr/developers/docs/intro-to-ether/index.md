@@ -4,7 +4,7 @@ description: Ether kripto parasına yönelik bir geliştirici tanıtımı.
 lang: tr
 ---
 
-## Ön koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamanıza yardımcı olmak için önce [ Ethereum'a Giriş](/developers/docs/intro-to-ethereum/)'i okumanızı öneririz.
 
@@ -18,7 +18,7 @@ Bir takas aracı, mallar ve hizmetler için ödeme olarak yaygın olarak kabul e
 
 ## Ether nedir? {#what-is-ether}
 
-**Ether (ETH)** Ethereum ağındaki birçok şey için kullanılan bir kripto paradır. Temelde, işlem ücretleri için kabul edilebilir tek ödeme şeklidir ve [Birleştirmeden](/roadmap/merge) sonra ether, Mainnet'te blokları doğrulamak ve tavsiye etmek için de gerekecektir. Ether ayrıca, [DeFi](/defi) kredi piyasalarında birincil teminat biçimi olarak, NFT piyasalarında bir hesap birimi olarak, hizmetlerin gerçekleştirilmesi veya gerçek dünya mallarının satılması için kazanılan ödeme ve daha fazlası olarak kullanılır.
+**Ether (ETH)** Ethereum ağındaki birçok şey için kullanılan bir kripto paradır. Esasen, işlem ücretleri için kabul edilen tek ödeme yoludur ve [Birleşim](/roadmap/merge) sonrasında ether Ana Ağ'da blok doğrulamak ve önermek için gereklidir. Ether ayrıca, [DeFi](/defi) kredi piyasalarında birincil teminat biçimi olarak, NFT piyasalarında bir hesap birimi olarak, hizmetlerin gerçekleştirilmesi veya gerçek dünya mallarının satılması için kazanılan ödeme ve daha fazlası olarak kullanılır.
 
 Ethereum, geliştiricilerin tümü bir bilgi işlem gücü havuzunu paylaşan [**merkeziyetsiz uygulamalar (dapp'ler)**](/developers/docs/dapps) oluşturmasına olanak tanır. Bu paylaşılan havuz sınırlı olduğu için Ethereum'un onu kimin kullanacağını belirlemek için bir mekanizmaya ihtiyacı vardır. Aksi takdirde, bir dapp yanlışlıkla veya kötü niyetli olarak tüm ağ kaynaklarını tüketebilir ve bu da başkalarının ona erişmesini engelleyebilir.
 
@@ -32,19 +32,19 @@ Ethereum ve ether'dan [yaygın](https://www.reuters.com/article/us-crypto-curren
 
 Basmak, Ethereum defterinde yeni ether'ın oluşturulduğu süreçtir. Temeldeki Ethereum protokolü yeni ether'ı oluşturur ve bir kullanıcının ether oluşturması mümkün değildir.
 
-Bir madenci Ethereum blok zincirinde bir blok oluşturduğunda Ether basılır. Madenciler için bir teşvik olarak, protokol her blokta bir ödül vererek bloğun madencisi tarafından belirlenen bir adresin bakiyesini arttırır. Blok ödülü zamanla değişti ve bugün blok başına 2 ETH oldu.
+Ether önerilen her bir blok için ve mutabakata ulaşmaya bağlı diğer doğrulayıcı aktivileri için her dönem kontrol noktasında ödül olarak basılır. Basılan toplam miktar doğrulayıcı sayısına ve ne kadar ether kilitlediklerine bağlıdır. Toplam basım tüm doğrulayıcıların dürüst ve çevrimiçi olduğu ideal duruma göre doğrulayıcılar arasında eşit biçimde pay edilir, ancak gerçekte, doğrulayıcı performansına göre değişiklik gösterir. Toplam basımın 1/8'i blok önericisine gider; kalanı diğer doğrulayıcılar arasında dağıtılır. Blok önericileri aynı zamanda işlem ücretlerinden bahşişler ve MEV bağlantılı gelir elde ederler, ancak bunlar yeni basımdan değil, geri dönüştürülmüş etherden gelir.
 
 ## Ether yakma {#burning-ether}
 
-Blok ödülleri yoluyla yaratılmasının yanı sıra ether, "yakma" adı verilen bir işlemle yok edilebilir. Ether, yakıldığında dolaşımdan kalıcı olarak çıkarılır.
+Blok ödülleri yoluyla yaratılmasının yanı sıra ether, "yakma" adı verilen bir süreçle yok edilebilir. Ether, yakıldığında dolaşımdan kalıcı olarak çıkarılır.
 
 Ethereum üzerindeki her işlemde ether yakılır. Kullanıcılar işlemler için ödeme yaptığında, ağ tarafından işlem talebine göre belirlenen bir temel gaz ücreti yok edilir. Bu, değişken blok büyüklüğü ve maksimum gaz ücreti ile birleştirildiğinde, Ethereum'da işlem ücreti tahminini basitleştirir. [Bloklar](https://etherscan.io/block/12965263), ağ talebi yüksek olduğunda bastıklarından daha fazla ether yakarak ether ihtiyacını etkili bir şekilde dengeler.
 
-Temel ücreti yakmak, madencilerin manipülasyon yapabileceği diğer yolları engeller. Örneğin, madenciler taban ücreti aldıysa, kendi işlemlerini ücretsiz olarak dahil edebilir ve diğer herkes için taban ücreti yükseltebilirler. Alternatif olarak, bazı kullanıcılara zincir dışı temel ücreti iade edebilirler ve bu da daha opak ve karmaşık bir işlem ücreti piyasasına yol açar.
+Ana ücreti yakmak blok üreticilerinin işlemleri manipüle etme kabiliyetine engel olur. Örneğin, blok üreticileri ana ücreti alırlarsa, kendi işlemlerini ücretsiz olarak dahil edebilir ve diğer herkes için ana ücreti yükseltebilirler. Alternatif olarak, bazı kullanıcılara zincir dışı temel ücreti iade edebilirler ve bu da daha opak ve karmaşık bir işlem ücreti piyasasına yol açar.
 
 ## Ether'ın birimleri {#denominations}
 
-Ethereum'daki birçok işlem küçük olduğundan, ether'ın daha küçük miktarlar için referans alınabilecek birkaç birimi vardır. Bu birimlerden olan Wei ve gwei, özellikle önemlidir.
+Ethereum'daki birçok işlemin değeri küçük olduğundan, ether'in daha küçük hesap birimleri için referans alınabilecek birkaç birimi vardır. Bu birimlerden olan Wei ve gwei, özellikle önemlidir.
 
 Wei, mümkün olan en küçük ether miktarıdır ve sonuç olarak, [Ethereum Sarı Kağıdı (Ethereum Yellowpaper)](https://ethereum.github.io/yellowpaper/paper.pdf) gibi birçok teknik uygulama, tüm hesaplamalarında Wei'yi temel alır.
 
@@ -67,11 +67,12 @@ Alıcı adresi bir [akıllı sözleşme](/developers/docs/smart-contracts/) oldu
 
 Kullanıcılar, herhangi bir [hesabın](/developers/docs/accounts/) ether bakiyesini, hesabın wei cinsinden ether varlıklarını gösteren `balance` alanını inceleyerek sorgulayabilir.
 
-[Etherscan](https://etherscan.io), web tabanlı bir uygulama aracılığıyla adres bakiyelerini denetlemek için popüler bir araçtır. Örneğin, [bu Etherscan sayfası](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae), Ethereum Vakfı'nın bakiyesini gösterir.
+[Etherscan](https://etherscan.io), web tabanlı bir uygulama aracılığıyla adres bakiyelerini denetlemek için popüler bir araçtır. Örneğin, [bu Etherscan sayfası](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae), Ethereum Vakfı'nın bakiyesini gösterir. Hesap bakiyeleri cüzdanlar kullanılarak veya doğrudan düğümlere istekte bulunarak da sorgulanabilir.
 
 ## Daha fazla bilgi {#further-reading}
 
 - [Ether'in ve Ethereum'un Tanımı](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) - _CME Grubu_
 - [Ethereum Teknik Raporu](/whitepaper/): Ethereum'a dair ilk teklif. Bu belge, ether'ın tanımını ve yaratılmasının amaçlarını içerir.
+- [Gwei Hesaplayıcı](https://www.alchemy.com/gwei-calculator): Wei, gwei ve eter kolayca dönüştürmek için bu gwei hesap makinesini kullanın. İstediğiniz miktarda wei, gwei veya ETH girmeniz yeterlidir ve dönüşüm otomatik olarak hesaplanır.
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_

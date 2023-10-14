@@ -13,8 +13,10 @@ import React from "react"
 import { Box, Flex, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { FAKE_DEMO_ADDRESS } from "../../constants"
+import { NotificationPopover } from "../../NotificationPopover"
+import GatsbyImage from "../../../GatsbyImage"
 
 const MotionBox = motion(Box)
 
@@ -76,16 +78,22 @@ export const ReceiveEther = () => {
         Show this QR code containing your account address to the sender
       </Text>
       {/* QR Code */}
-      <Box w="fit-content" mx="auto" mb={SPACING} p={3} bg="background.base">
-        <Image
-          as={GatsbyImage}
-          image={qrImage}
-          maxW={QR_SIZE}
-          maxH={QR_SIZE}
-          p={3}
-          borderRadius="base"
-        />
-      </Box>
+      <NotificationPopover
+        title="Example walkthrough"
+        content="Share QR containing your address (public identifier) from your own wallet when finished here"
+        placement="top"
+      >
+        <Box w="fit-content" mx="auto" mb={SPACING} p={3} bg="background.base">
+          <Image
+            as={GatsbyImage}
+            image={qrImage}
+            maxW={QR_SIZE}
+            maxH={QR_SIZE}
+            p={3}
+            borderRadius="base"
+          />
+        </Box>
+      </NotificationPopover>
       <Flex
         borderRadius="base"
         border="1px"
@@ -107,37 +115,24 @@ export const ReceiveEther = () => {
             {FAKE_DEMO_ADDRESS}
           </Text>
         </Box>
-        <Popover placement="top-start">
-          <PopoverTrigger>
-            <Button
-              fontSize="xs"
-              fontWeight="bold"
-              color="body.base"
-              bg="body.light"
-              borderRadius="10px"
-              h="fit-content"
-              py={1.5}
-              px={2}
-            >
-              Copy
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent
-            bg="background.highlight"
-            p={4}
-            w="20ch"
-            borderRadius="base"
-            boxShadow="tooltip"
+        <NotificationPopover
+          title="Example walkthrough"
+          content="Share your address (public identifier) from your own wallet when finished here"
+          placement="top-start"
+        >
+          <Button
+            fontSize="xs"
+            fontWeight="bold"
+            color="body.base"
+            bg="body.light"
+            borderRadius="10px"
+            h="fit-content"
+            py={1.5}
+            px={2}
           >
-            <PopoverArrow bg="background.highlight" />
-            <PopoverBody>
-              <Text m={0}>
-                This is just a demo account! Try this with your own wallet when
-                your finished here.
-              </Text>
-            </PopoverBody>
-          </PopoverContent>
-        </Popover>
+            Copy
+          </Button>
+        </NotificationPopover>
       </Flex>
       <Text m={0} fontSize="xs" lineHeight={1.7}>
         Use this address for receiving tokens and NFTs on the Ethereum network.

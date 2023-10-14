@@ -8,7 +8,7 @@ lang: ja
 
 ## 前提知識 {#prerequisites}
 
-ブロックの提案は、プルーフ・オブ・ステークのプロトコルの一部です。 このページの内容を理解するためには、[プルーフ・オブ・ステーク](src/content/developers/docs/consensus-mechanisms/pos/)および[ブロックのアーキテクチャ](src/content/developers/docs/blocks/)を読んでおくとよいでしょう。
+ブロックの提案は、プルーフ・オブ・ステークのプロトコルの一部です。 このページの内容を理解するためには、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)および[ブロックのアーキテクチャ](/developers/docs/blocks/)を読んでおくとよいでしょう。
 
 ## 誰がブロックを生成するのか？ {#who-produces-blocks}
 
@@ -64,6 +64,6 @@ class BeaconBlockBody(Container):
 
 - [ブロック入門](/developers/docs/blocks/)
 - [プルーフ・オブ・ステーク入門](/developers/docs/consensus-mechanisms/pos/)
-- [イーサリアムにおけるコンセンサスの仕様](www.github.com/ethereum/consensus-specs)
+- [イーサリアムにおけるコンセンサスの仕様](https://github.com/ethereum/consensus-specs)
 - [ガスパー入門](/developers/docs/consensus-mechanisms/pos/)
 - [イーサリアムのアップグレード](https://eth2book.info/)

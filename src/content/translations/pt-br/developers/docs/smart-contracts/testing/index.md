@@ -174,7 +174,7 @@ A verificação formal é considerada importante para contratos inteligentes, po
 **Estrutura de testes e desenvolvimento Woke** — _Scripts de teste e implantação com dicas, fuzzer, suporte para depuração, cobertura de código e teste cross-chain em Python._
 
 - [Documentação](https://ackeeblockchain.com/woke/docs/latest/testing-framework/overview/)
-- [Github](https://github.com/Ackee-Blockchain/woke)
+- [GitHub](https://github.com/Ackee-Blockchain/woke)
 
 ### Ferramentas de análise estática {#static-analysis-tools}
 
@@ -195,7 +195,7 @@ A verificação formal é considerada importante para contratos inteligentes, po
 
 **Echidna** — _Difusor de contrato rápido para detectar vulnerabilidades em contratos inteligentes por meio de testes baseados em propriedades._
 
-- [Github](https://github.com/crytic/echidna/)
+- [GitHub](https://github.com/crytic/echidna/)
 
 **Harvey** — _Ferramenta automatizada de difusão útil para detectar violações de propriedades em código de contrato inteligente._
 
@@ -203,7 +203,7 @@ A verificação formal é considerada importante para contratos inteligentes, po
 
 **Mantícora** — _Estrutura de execução simbólica dinâmica para analisar o bytecode de EVM._
 
-- [Github](https://github.com/trailofbits/manticore)
+- [GitHub](https://github.com/trailofbits/manticore)
 - [Documentação](https://github.com/trailofbits/manticore/wiki)
 
 ### Serviços de auditoria de contrato inteligente {#smart-contract-auditing-services}

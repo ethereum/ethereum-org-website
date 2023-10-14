@@ -260,7 +260,6 @@ Los datos de Eth2 de nivel superior incluyen los siguientes:
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
-- [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
 
 ## Más información {#further-reading}
 

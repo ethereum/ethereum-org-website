@@ -1,21 +1,11 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Icon,
-  Popover,
-  PopoverBody,
-  PopoverContent,
-  PopoverTrigger,
-  Text,
-} from "@chakra-ui/react"
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
 import { PiMagnifyingGlass } from "react-icons/pi"
 import { CategoryTabs } from "../../WalletHome/CategoryTabs"
 import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
 import type { SimulatorNavProps } from "../../interfaces"
 import { CONTACTS } from "./constants"
-import { DemoOnlyPopover } from "../../DemoOnlyPopover"
+import { NotificationPopover } from "../../NotificationPopover"
 
 interface IProps extends SimulatorNavProps {
   setRecipient: (name: string) => void
@@ -31,7 +21,10 @@ export const SendFromContacts: React.FC<IProps> = ({ nav, setRecipient }) => {
         <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={8}>
           Choose recipient
         </Text>
-        <DemoOnlyPopover fontSize="sm">
+        <NotificationPopover
+          title="Example walkthrough"
+          content={`Choose ${CONTACTS[0].name} from recent contacts`}
+        >
           <Button
             variant="outline"
             leftIcon={<Icon as={PiMagnifyingGlass} />}
@@ -49,7 +42,7 @@ export const SendFromContacts: React.FC<IProps> = ({ nav, setRecipient }) => {
               Address or contacts
             </Text>
           </Button>
-        </DemoOnlyPopover>
+        </NotificationPopover>
       </Box>
       <Box py={8} px={6} bg="background.highlight" h="full">
         <CategoryTabs

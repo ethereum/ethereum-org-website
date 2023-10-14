@@ -21,7 +21,7 @@ import PageHero, {
   IContent as IPageHeroContent,
 } from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import InfoBanner from "../../components/InfoBanner"
 import FeedbackCard from "../../components/FeedbackCard"
@@ -47,7 +47,7 @@ const PageDivider = () => (
 )
 
 const PageContent = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+  <Flex flexDirection="column" gap="8" py={4} px={8} w="full" {...props} />
 )
 
 const H2 = (props: HeadingProps) => (

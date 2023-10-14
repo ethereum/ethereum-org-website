@@ -4,7 +4,7 @@ import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { FaGithub } from "react-icons/fa"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"

@@ -504,6 +504,8 @@ contract Attack {
 
 - **[HashEx](https://hashex.org/)** - _HashEx 专注于区块链和智能合约审计，确保加密货币安全，提供智能合约开发、渗透测试、区块链咨询等服务。_
 
+- **[Code4rena](https://code4rena.com/)** - _竞争性审计平台，激励智能合约安全专家查找漏洞，帮助提高 web3 的安全性。_
+
 ### 漏洞奖励平台 {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _智能合约和去中心化金融项目的漏洞奖励平台，安全研究人员在该平台上审查代码、披露漏洞、获得报酬并使加密应用更加安全。_

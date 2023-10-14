@@ -8,7 +8,6 @@ import {
   Text,
   useTheme,
 } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
@@ -17,11 +16,14 @@ import Callout from "../components/Callout"
 import Card from "../components/Card"
 import ButtonLink, {
   IProps as IButtonLinkProps,
-} from "../components/ButtonLink"
+} from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+
+import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
+import GatsbyImage from "../components/GatsbyImage"
 import OldHeading from "../components/OldHeading"
 
 import { getImage } from "../utils/image"
@@ -209,6 +211,7 @@ const CommunityPage = ({
         title={t("page-community-meta-title")}
         description={t("page-community-meta-description")}
       />
+      <WritersCohortBanner pathname={location.pathname} />
       <PageHero isReverse content={heroContent} />
       <Divider />
       <Flex
@@ -268,8 +271,7 @@ const CommunityPage = ({
               </Subtitle>
             </Box>
             <ImageContainer>
-              <Image
-                as={GatsbyImage}
+              <GatsbyImage
                 w="full"
                 bgSize="cover"
                 bg="no-repeat 50px"
@@ -331,8 +333,7 @@ const CommunityPage = ({
             </ButtonRow>
           </FeatureContent>
           <ImageContainer>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               w="full"
               image={getImage(data.ethereum)!}
               alt={t("page-community-open-source-image-alt")}
@@ -379,8 +380,7 @@ const CommunityPage = ({
             </Flex>
           </FeatureContent>
           <ImageContainer>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               w="full"
               image={getImage(data.finance)!}
               alt={t("page-index-internet-image-alt")}
@@ -414,8 +414,7 @@ const CommunityPage = ({
             </Box>
           </FeatureContent>
           <ImageContainer>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               w="full"
               image={getImage(data.hackathon)!}
               alt={t("page-community-support-alt")}

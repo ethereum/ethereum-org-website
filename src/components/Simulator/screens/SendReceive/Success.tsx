@@ -48,7 +48,7 @@ export const Success: React.FC<IProps> = ({
     }
   }, [])
 
-  const WALLET_FADE_IN_DELAY = 2000
+  const WALLET_FADE_IN_DELAY = 3000
   useEffect(() => {
     if (txPending) return
     const timeout = setTimeout(() => {
