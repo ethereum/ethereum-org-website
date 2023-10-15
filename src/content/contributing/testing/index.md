@@ -10,11 +10,11 @@ The QA testing contributions is an initiative to test release candidates for eth
 
 If you'd like to get involved come say hi in our `👾 ｜ website-code`. We meet bi-weekly in the `🎓 | office-hours-voice` channel in our [Discord](https://discord.gg/ethereum-org). Notes on our process:
 
-- On Tuesdays we create a release candidate that goes into the `staging` branch
-- Information about the release candidate will be posted in the `👾 ｜ website-code` channel in our [Discord](https://discord.gg/ethereum-org)
-- You can also find the release notes for the release candidate on the [releases page](https://github.com/ethereum/ethereum-org-website/releases) in the GitHub repository
-  - The release candidate will be tagged as a `pre-release` until it has been merged into master
-- After QA testing, we deploy the release candidate into production if there are no release blocking bugs found before Thursday
+- **Every Tuesday** we create a release candidate that goes into the `staging` branch
+- Infor about the release candidate is posted in the `👾 ｜ website-code` channel in our [Discord](https://discord.gg/ethereum-org)
+- Find the release notes for the release candidate on the [GitHub repositories releases page](https://github.com/ethereum/ethereum-org-website/releases)
+  - The release candidate will be tagged as a `pre-release`
+- **On Thursday** the release candidate is published on production
 - More info on the deploy process for ethereum.org can be found [here](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/deploy-process.md)
 
 ## How to get involved
