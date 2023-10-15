@@ -10,6 +10,8 @@ Ethereum.org is an education portal for Ethereum, and that starts with the conte
 
 Before contributing to content, make sure you are familiar with our [style guide](/contributing/style-guide/).
 
+You're first content contribution of the year earns you a POAP. [More information on our POAP](https://ethereum.org/en/contributing/#claim-gitpoap).
+
 ## Markdown content in `/src/content` {#markdown-content}
 
 Most of the content on ethereum.org is written in markdown. A cheat sheet on markdown syntax can be found [here](https://www.markdownguide.org/cheat-sheet).

@@ -124,6 +124,7 @@ In case you want to test them as if you were in a Netlify env, you can install t
 - The website team reviews every PR
 - See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made)
 - Acceptable PRs will be approved & merged into the `dev` branch
+- Your first accepted PR for the year gets you a POAP. [More information on our POAP](https://ethereum.org/en/contributing/#claim-gitpoap).
 
 Learn more about how we review pull requests [here](docs/review-process.md).
 
