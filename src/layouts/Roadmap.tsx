@@ -102,7 +102,12 @@ export const roadmapComponents = {
 }
 
 interface IProps extends PageContent, ChildOnlyProp {}
-export const RoadmapLayout: React.FC<IProps> = ({ children, frontmatter, slug, tocItems }) => {
+export const RoadmapLayout: React.FC<IProps> = ({
+  children,
+  frontmatter,
+  slug,
+  tocItems,
+}) => {
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const dropdownLinks: ButtonDropdownList = {
@@ -163,8 +168,7 @@ export const RoadmapLayout: React.FC<IProps> = ({ children, frontmatter, slug, t
         <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
           <TitleCard>
             {/* TODO: Double check this slug works */}
-            <Breadcrumbs slug={slug} />{" "}
-            <Title>{frontmatter.title}</Title>
+            <Breadcrumbs slug={slug} /> <Title>{frontmatter.title}</Title>
             <OldText>{frontmatter.description}</OldText>
             {frontmatter?.buttons && (
               // FIXME: remove the `ul` override once removed the corresponding
@@ -173,24 +177,16 @@ export const RoadmapLayout: React.FC<IProps> = ({ children, frontmatter, slug, t
                 {frontmatter.buttons.map((button, idx) => {
                   if (button?.to) {
                     return (
-                      <WrapItem>
-                        <ButtonLink
-                          key={idx}
-                          variant={button?.variant}
-                          to={button?.to}
-                        >
+                      <WrapItem key={idx}>
+                        <ButtonLink variant={button?.variant} to={button?.to}>
                           {button.label}
                         </ButtonLink>
                       </WrapItem>
                     )
                   }
                   return (
-                    <WrapItem>
-                      <Button
-                        key={idx}
-                        variant={button?.variant}
-                        toId={button?.toId}
-                      >
+                    <WrapItem key={idx}>
+                      <Button variant={button?.variant} toId={button?.toId}>
                         {button?.label}
                       </Button>
                     </WrapItem>
