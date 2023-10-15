@@ -7,14 +7,15 @@ import {
   Icon,
   LinkBox,
   LinkOverlay,
-  Text,
 } from "@chakra-ui/react"
 import { MdArrowForward } from "react-icons/md"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
 import InlineLink, { BaseLink } from "../Link"
 import Translation from "../Translation"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
 import {
   AccordionCustomItem,
   LeftColumnPanel,
@@ -28,7 +29,7 @@ export type ChildOnlyType = {
 }
 
 const SectionTitle = (props: ChildOnlyType) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize="1.25rem"
     fontWeight={700}
@@ -91,7 +92,7 @@ const StepBox = (
 )
 
 const H4 = (props: ChildOnlyType) => (
-  <Heading fontSize="1.25rem" fontWeight={700} mt={0} mb={4} {...props} />
+  <Heading fontSize="1.25rem" fontWeight={700} mb={4} {...props} />
 )
 
 export interface IProps {}
@@ -140,7 +141,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
               <Translation id="page-stablecoins-accordion-swap-dapp-link" />
             </InlineLink>
           </p>
-          <CardList content={cardListGroups.dapps} />
+          <CardList items={cardListGroups.dapps} />
         </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="buy">
@@ -166,7 +167,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
           <SectionTitle>
             <Translation id="page-stablecoins-accordion-buy-exchanges-title" />
           </SectionTitle>
-          <CardList content={cardListGroups.exchanges} />
+          <CardList items={cardListGroups.exchanges} />
         </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="earn">
@@ -192,7 +193,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
           <p>
             <Translation id="page-stablecoins-accordion-earn-projects-copy" />
           </p>
-          <CardList content={cardListGroups.earn} />
+          <CardList items={cardListGroups.earn} />
         </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="generate">
@@ -236,7 +237,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
             <Translation id="page-stablecoins-accordion-borrow-places-intro" />
           </p>
           <Box mb={8}>
-            <CardList content={cardListGroups.borrow} />
+            <CardList items={cardListGroups.borrow} />
           </Box>
           <SectionTitle>
             <Translation id="page-stablecoins-accordion-borrow-risks-title" />

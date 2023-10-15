@@ -8,6 +8,8 @@ lang: es
 
 La comunidad Ethereum incluye a personas de diferentes orígenes y habilidades. Desarrolladores, artistas, contables... hay muchas formas de involucrarse. He aquí una lista de sugerencias para ayudarle a empezar.
 
+Le sugerimos que comience enterándose de la misión y los valores de ethereum.org en nuestro [código de conducta](/community/code-of-conduct).
+
 ## Desarrolladores <Emoji text=":computer:" size={1} /> {#developers}
 
 - Aprenda y pruebe Ethereum en [ethereum.org/developers/](/developers/)
@@ -21,11 +23,21 @@ La comunidad Ethereum incluye a personas de diferentes orígenes y habilidades. 
 
 ## Investigadores y académicos <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
-¿Domina las matemáticas, la criptografía o la economía? Podría interesarle alguno de los trabajos pioneros que se están haciendo dentro del ecosistema Ethereum.
+¿Domina las matemáticas, la criptografía o la economía? Puede interesarle alguno de los trabajos pioneros que se están haciendo dentro del ecosistema Ethereum:
 
+- Escriba o revise una propuesta de mejora de Ethereum
+  - Escriba una propuesta de mejora de Ethereum (EIP)
+    1. Envíe su idea a [Ethereum Magicians](https://ethereum-magicians.org)
+    2. Lea [EIP-1](https://eip.ethereum.org/EIPS/eip-1) - **Sí, ese es _todo el documento_. **
+    3. Siga las indicaciones en EIP-1. Haga referencia a él mientras escribe su borrador.
+  - Aprenda a convertirse en un [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069)
+    - ¡Puede revisar las EIP por pares desde ya mismo! Vea [abrir relaciones públicas con la etiqueta `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Proporcione comentarios técnicos con el enlace `discussion-to`.
+  - Participe en [Gobernanza del EIP](https://github.com/ethereum-cat-herders/EIPIP)
+    - Únase a [Ethereum Cat Herders en Discord](https://discord.io/EthCatHerders)
+  - [Más información sobre las EIP](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/): una serie de recompensas de investigación de alto valor, donde puede ganar >100.000 USD.
-- [Ethresear.ch](https://ethresear.ch): el principal foro de Ethereum sobre la investigación, y el foro más influyente del mundo en criptoeconomía.
-- [AMA investigación sobre EF](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022): una sesión continua de preguntas y respuestas con investigadores. A medida que cada parte siguiente se vaya conociendo, cualquiera puede publicar preguntas.
+- [Ethresear.ch](https://ethresear.ch): el principal foro de Ethereum sobre la investigación y el foro más influyente del mundo en criptoeconomía.
+- [AMA investigación sobre Ethereum Foundation](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022): una sesión continua de preguntas y respuestas con investigadores. A medida que cada parte siguiente se vaya conociendo, cualquiera puede publicar preguntas.
 - [Lista de deseos del Programa de apoyo al ecosistema](https://esp.ethereum.foundation/wishlist/): áreas de investigación en las que el Programa de apoyo al ecosistema de Ethereum está buscando activamente solicitudes de becas.
 
 [Explore más áreas de investigación activas](/community/research/).
@@ -41,7 +53,7 @@ Si no es desarrollador, puede ser difícil saber por dónde empezar en Ethereum.
 ### Escriba contenido sobre Ethereum {#write-content}
 
 - Ethereum necesita buenos escritores que puedan explicar su valor en un lenguaje sencillo.
-- ¿Aún no está listo para publicar sus propios artículos? Contemple la posibilidad de añadir contenidos a los ya existentes sobre recursos de la comunidad o de proponer nuevos contenidos para ethereum.org.
+- ¿Aún no está listo para publicar sus propios artículos? Contemple la posibilidad de añadir contenidos a los ya existentes sobre recursos de la comunidad [EthHub](/contributing/) o de proponer nuevos contenidos para ethereum.org.
 
 ### Ofrézcase a elaborar actas de reuniones comunitarias {#take-notes}
 
@@ -60,7 +72,7 @@ Si no es desarrollador, puede ser difícil saber por dónde empezar en Ethereum.
 
 ### Apueste su ETH {#staking}
 
-Al apostar su ETH, puede ganar recompensas mientras ayuda a asegurar la red Ethereum.
+Al apostar sus ETH, puede ganar recompensas mientras ayuda a proteger la red Ethereum.
 
 - [Más acerca de las apuestas (staking).](/staking/)
 
@@ -110,7 +122,7 @@ Las «DAO» son organizaciones autónomas descentralizadas. Estos grupos aprovec
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Fomente el concepto DAO en un terreno que no sea técnico y ayude a que la gente cree valor a través de las DAO_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao): _Comunidad de desarrolladores que creen en la propiedad colectiva de Internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech): _Colectivo independiente de desarrollo de Web3 que funciona como una DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_): _Desarrollo descentralizado y gobernanza en dapps y protocolos._
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_): _Desarrollo descentralizado y gobernanza en DApps y protocolos._
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit): _Comunidad de gobernanza de DAOhaus_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao): _Franquicia de imágenes superhero de propiedad comunitaria_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO): _Ingeniería jurídica_
@@ -122,3 +134,5 @@ Las «DAO» son organizaciones autónomas descentralizadas. Estos grupos aprovec
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta): _Proyectos dirigidos por mujeres_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO): _Comunidad centrada en la financiación del desarrollo de Ethereum_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild): _Colectivo de desarrolladores de Web3_
+
+¡Por favor, recuerde respetar el [código de conducta de ethereum.org](/community/code-of-conduct) siempre y al margen de la forma en la que contribuya con ethereum.org!

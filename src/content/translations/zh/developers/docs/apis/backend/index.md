@@ -143,10 +143,29 @@ lang: zh
 - [Discord](https://discord.com/invite/KYswaxwEtg)
 - [论坛](https://forum.moralis.io/)
 
-\*_GetBlock - 用于 Web3 开发的区块链即服务_
+**公链 -** **_以太坊的一体化 web3 数据基础设施。_**
+
+- [chainbase.com](https://chainbase.com/)
+- [相关文档](https://docs.chainbase.com/)
+- [Discord](https://discord.gg/Wx6qpqz4AF)
+
+**GetBlock -** **_用于 Web3 开发的区块链服务_**
 
 - [GetBlock.io](https://getblock.io/)
 - [相关文档](https://getblock.io/docs/)
+
+**BlockPi -** **_提供更高效、更快速的 RPC 服务_**
+
+- [blockpi.io](https://blockpi.io/)
+- [相关文档](https://docs.blockpi.io/)
+- [GitHub](https://github.com/BlockPILabs)
+- [Discord](https://discord.com/invite/xTvGVrGVZv)
+
+**Tokenview -** **_通用多加密区块链应用程序接口平台。_**
+
+- [services.tokenview.io](https://services.tokenview.io/)
+- [相关文档](https://services.tokeniew/docs?type=api)
+- [GitHub](https://github.com/Tokenview)
 
 ## 延伸阅读 {#further-reading}
 
@@ -160,4 +179,4 @@ _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 ## 相关教程 {#related-tutorials}
 
 - [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
-- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用稳定币 DAI 代币，了解如何使用 JavaScript 调用合约函数。_
+- [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI 代币，从而借助 JavaScript 调用合约函数。_

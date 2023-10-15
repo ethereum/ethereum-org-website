@@ -22,23 +22,16 @@ Hizmet olarak staking ("SaaS"), bir doğrulayıcı için kendi 32 ETH'nizi yat�
 Ethereum protokolü doğal olarak pay devrini desteklemez, bu nedenle bu hizmetler bu talebi karşılamak için oluşturulmuştur. Stake edilecek 32 ETH'niz varsa, ancak donanımla uğraşmaktan rahatsızlık duyuyorsanız, SaaS hizmetleri, yerel blok ödülleri kazanırken zor kısmı devretmenize izin verir.
 
 <CardGrid>
-  <Card title="Sizin kendi doğrulayıcılarınız" emoji=":desktop_computer:">
-    Ethereum konsensusuna katılacak kendi imzalama anahtarı setinizi etkinleştirmek için kendi 32 ETH'nizi yatırın. Bu ETH ödüllerinin birikmesini izlemek için ilerlemenizi kontrol panelleriyle izleyin.
-  </Card>
-  <Card title="Başlaması kolay" emoji="🏁">
-    Donanım özelliklerini, kurulumu, düğüm bakımını ve yükseltmeleri unutun.
-    SaaS sağlayıcıları, kendi imzalama kimlik bilgilerinizi yükleyerek, küçük bir maliyetle sizin adınıza bir doğrulayıcı çalıştırmalarına olanak tanıyarak işin zor kısmını dışarıdan temin etmenize olanak tanırlar.
-  </Card>
-  <Card title="Riskinizi sınırlayın" emoji=":shield:">
-    Çoğu durumda, kullanıcıların stake edilen fonları çekmeyi veya aktarmayı sağlayan anahtarlara erişimden vazgeçmesi gerekmez. Bunlar, imzalama anahtarlarından farklıdır ve bir staker olarak riskinizi sınırlamak (ancak ortadan kaldırmak değil) için ayrı olarak saklanabilir.
-  </Card>
+  <Card title="Sizin kendi doğrulayıcılarınız" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Başlaması kolay" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
+  <Card title="Riskinizi sınırlayın" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
 
 ## Ne dikkate alınmalı {#what-to-consider}
 
-ETH'nizi stake etmenize yardımcı olacak hizmet olarak staking sağlayıcılarının sayısı giderek artıyor, ancak her biri farklı riskler ve faydalar getiriyor.
+ETH'nizi kilitlemenize yardımcı olacak SaaS sağlayıcılarının sayısı artmaktadır, anca her birinin kendine ait fayda ve riskleri bulunur. Tüm SaaS seçenekleri evde hisseleme ile karşılaştırıldığında ek güven varsayımları gerektirir. Saas seçenekleri açık veya denetlenebilir olmayan Ethereum istemcilerini saran ek kodlara sahip olabilir. SaaS ayrıca ağ merkeziyetsizliği üzerinde zararlı bir etkiye de sahiptir. Kuruluma göre, doğrulayıcınızı kontrol edemeyebilirsiniz - operatör sizin ETH'nizi kullanarak aldatıcı biçimde davranabilir.
 
 Nitelik göstergeleri, listelenen bir SaaS sağlayıcısının sahip olabileceği dikkate değer güçlü veya zayıf yönleri belirtmek için aşağıda kullanılmaktadır. Bu bölümü, stake etme yolculuğunuza yardımcı olacak bir hizmet seçerken bu nitelikleri nasıl tanımladığımıza dair bir referans olarak kullanın.
 
@@ -48,40 +41,52 @@ Nitelik göstergeleri, listelenen bir SaaS sağlayıcısının sahip olabileceğ
 
 Aşağıda bazı mevcut SaaS sağlayıcıları bulunmaktadır. Bu hizmetlerde size rehberlik etmesi için yukarıdaki göstergeleri kullanın
 
-<InfoBanner emoji="⚠️" isWarning>
-Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için <a href="/developers/docs/nodes-and-clients/client-diversity/">istemci çeşitliliğini</a> desteklemenin önemini lütfen unutmayın. Çoğunluk istemci kullanımını sınırladığına dair kanıta sahip hizmetler, <em style="text-transform: büyük harf;">"çeşitli istemciler"</em> olarak işaretlenir
-</InfoBanner>
+<ProductDisclaimer />
 
 #### SaaS sağlayıcıları
 
 <StakingProductsCardGrid category="saas" />
 
+Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) desteklemenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımı sınırladığına dair kanıtları olan hizmetler;<em style={{ textTransform: "uppercase" }}>"yürütme istemcisi çeşitliliği"</em> ve <em style={{ textTransform: "uppercase" }}>"fikir birliği istemcisi çeşitliliği" ile belirtilir.</em>
+
 #### Anahtar Üreticileri
 
 <StakingProductsCardGrid category="keyGen" />
 
-Kaçırdığımız bir hizmet sağlayıcı olarak staking için bir öneriniz mi var? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.
+Kaçırdığımız bir hizmet sağlayıcı olarak hisseleme için bir öneriniz mi var? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.
 
-## SSS {#faq}
+## Sıkça sorulan sorular {#faq}
 
 <ExpandableCard title="Anahtarlarımı kim tutuyor?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-  Düzenlemeler sağlayıcıdan sağlayıcıya farklılık gösterecektir, ancak genellikle ihtiyacınız olan tüm imzalama anahtarlarını (32 ETH başına bir tane olmak üzere) ayarlamanız ve bunları sizin adınıza doğrulamalarına izin vermek için sağlayıcınıza yüklemeniz konusunda size rehberlik edilecektir. İmza anahtarları tek başına paranızı çekme, transfer etme veya harcama imkanı vermez. Ancak, uygun şekilde yapılmadığı takdirde çevrimdışı cezalara veya kesintilere neden olabilecek konsensusa doğru oy kullanma yeteneği sağlarlar.
+Düzenlemeler sağlayıcıdan sağlayıcıya farklılık gösterecektir, ancak genellikle ihtiyacınız olan tüm imzalama anahtarlarını (32 ETH başına bir tane olmak üzere) ayarlamanız ve bunları sizin adınıza doğrulamalarına izin vermek için sağlayıcınıza yüklemeniz konusunda size rehberlik edilecektir. İmza anahtarları tek başına paranızı çekme, transfer etme veya harcama imkanı vermez. Ancak, uygun şekilde yapılmadığı takdirde çevrimdışı cezalara veya kesintilere neden olabilecek konsensusa doğru oy kullanma yeteneği sağlarlar.
 </ExpandableCard>
 
 <ExpandableCard title="Yani iki anahtar seti mi var?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Evet. Her hesap hem <em>imzalama</em> anahtarlarından hem de <em>para çekme</em> anahtarlarından oluşur. Doğrulayıcının zincirin durumunu tasdik etmesi, eşitleme kurullarına katılması ve bloklar önermesi için imzalama anahtarlarına, bir doğrulayıcı müşterisi tarafından kolayca erişilebilir olmalıdır. Bunların bir şekilde internete bağlı olması gerekir ve bu nedenle doğal olarak "kısayol" tuşları olarak kabul edilirler. Bu, doğrulayıcınızın onaylayabilmesi için bir gerekliliktir ve bu nedenle, para transfer etmek veya çekmek için kullanılan anahtarlar güvenlik nedeniyle ayrılmıştır.
+Evet. Tüm hesaplar BLS <em> imzalama </em> ve BLS <em> para çekme </em> anahtarlarından oluşur. Doğrulayıcının zincirin durumunu tasdik etmesi, eşitleme kurullarına katılması ve bloklar önermesi için imzalama anahtarlarına, bir doğrulayıcı müşterisi tarafından kolayca erişilebilir olmalıdır. Bunların bir şekilde internete bağlı olması gerekir ve bu nedenle doğal olarak "kısayol" tuşları olarak kabul edilirler. Bu, doğrulayıcınızın onaylayabilmesi için bir gerekliliktir ve bu nedenle, para transfer etmek veya çekmek için kullanılan anahtarlar güvenlik nedeniyle ayrılmıştır.
 
-Bu anahtarların tümü, 24 kelimelik mnemonik güvenlik kelimelerinizi kullanılarak her zaman tekrarlanabilir bir şekilde yeniden oluşturulabilir. <em>Bu tohum ifadesini güvenli bir şekilde yedeklediğinizden emin olun, aksi takdirde zamanı geldiğinde para çekme anahtarlarınızı oluşturamazsınız</em>.
+BLS para çekme anahtarları, hangi yürütme katmanı hesabının hisseleme ödüllerinin ve çıkış yapılan fonların gitmesi gerektiğini gösteren tek seferlik bir mesajı imzalamak için kullanılır. Bu mesaj bir kere yayınlandıktan sonra <em>BLS para çekme</em> anahtarlarına ihtiyaç duyulmaz. Bunun yerine, çekilen fonların kontrolü kalıcı bir şekilde verdiğiniz adrese devredilir. Bu kendi soğuk depolamanız tarafından güvenli kılınan bir çekim adresi ayarlayarak, başkası sizin doğrulayıcı imzalama anahtarlarınızı kontrol etse bile doğrulayıcı fonlarınızın riskini minimize eder.
+
+Çekim bilgilerini güncellemek çekimi aktif hale getirmek için gerekli bir adımdır\*. Bu süreç sizin anımsatıcı güvenlik kelimenizi kullanarak çekim anahtarlarını oluşturmayı kapsar.
+
+<strong>Bu güvenlik kelimesini güvenli biçimde yedeklediğinizden emin olun, yoksa zamanı geldiğinde çekim anahtarlarınızı oluşturamazsınız.</strong>
+
+\*İlk yatırımında çekim adresi vermiş olan kilitleyicilerin bunu ayarlamasına gerek yoktur. Doğrulayıcınızı nasıl hazırlayacağınızla ilgili destek almak için SaaS sağlayıcınıza danışın.
 </ExpandableCard>
 
 <ExpandableCard title="Ne zaman geri çekebilirim?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  Bir SaaS sağlayıcısıyla 32 ETH stake ettiğinizde, bu ETH hala resmi stake depozito sözleşmesine yatırılır. Bu nedenle, SaaS stakerları şu anda solo stakerlarla aynı para çekme kısıtlamalarıyla sınırlıdır. Bu, ETH'nizi stake etmenin şu anda tek yönlü bir depozito olduğu anlamına gelir. Durum, Şanghay yükseltmesine kadar böyle olacak.
+Kilitleme çekimleri Nisan 2023'teki Shanghai/Capella yükseltmesinde uygulanmıştır. Paydaşların (eğer ilk yatırımda verilmediyse) bir çekim adresi vermesi gerekir ve ödül ödemeleri periyodik olarak birkaç günde bir otomatik olarak dağıtılmaya başlayacaktır.
+
+Doğrulayıcılar ayrıca bir doğrulayıcı olarak tamamen çıkabilir, bu da kalan ETH bakiyelerinin çekim için kilidini kaldıracaktır. Bir yürütme çekim adresi sağlamış ve çıkış sürecini tamamlamış adresler sıradaki doğrulayıcı süpürmesinde çekim adresine tüm bakiyelerini alacaklardır.
+
+<ButtonLink to="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Kesik yersem ne olur?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
-Bir SaaS sağlayıcısı kullanarak, düğümünüzün çalışmasını başka birine emanet ediyorsunuz. Bu, sizin kontrolünüzde olmayan düşük düğüm performansı riskiyle birlikte gelir. Doğrulayıcınızın kesintiye uğraması durumunda, doğrulayıcı bakiyeniz cezalandırılacak ve doğrulayıcı havuzundan zorla kaldırılacaktır. Bu fonlar, protokol düzeyinde para çekme işlemleri etkinleştirilene kadar kilitlenecektir.
+Bir SaaS sağlayıcısı kullanarak, düğümünüzün çalışmasını başka birine emanet ediyorsunuz. Bu, sizin kontrolünüzde olmayan düşük düğüm performansı riskiyle birlikte gelir. Doğrulayıcınızın kesintiye uğraması durumunda, doğrulayıcı bakiyeniz cezalandırılacak ve doğrulayıcı havuzundan zorla kaldırılacaktır.
 
-Herhangi bir garanti veya sigorta seçeneği hakkında daha fazla ayrıntı için bireysel SaaS sağlayıcısı ile iletişime geçin. Doğrulayıcı kurulumunuzun tam kontrolünün sizde olmasını tercih ediyorsanız, <a href="/staking/solo/">ETH'nizi tek başına nasıl stake edeceğiniz hakkında daha fazla bilgi edinin</a>.
+Kesinti/çıkış sürecinin tamamlanmasından sonra, bu fonlar doğrulayıcıya atanmış olan çekim adresine transfer edilecektir. Bu, aktif hale getirilmek için bir çekim adresinin sağlanmasını gerektirir. Bu ilk yatırımda sağlanabilir. Eğer sağlanmadıysa, doğrulayıcı çekim anahtarları çekim adresini belirten bir mesajı imzalamak için kullanılmalıdır. Eğer herhangi bir çekim adresi sağlanmadıysa, sağlanana kadar fonlar kilitli kalacaktır.
+
+Herhangi bir garanti veya sigorta seçeneği hakkında daha fazla detay için ya da nasıl çekim adresi sağlanacağıyla ilgili yönergeler için bireysel SaaS sağlayıcınızla iletişime geçin. Doğrulayıcı kurulumunuzun tam kontrolünün sizde olmasını tercih ediyorsanız, <a href="/staking/solo/">ETH'nizi tek başına nasıl stake edeceğiniz hakkında daha fazla bilgi edinin</a>.
 </ExpandableCard>
 
 ## Daha fazla bilgi {#further-reading}

@@ -7,7 +7,6 @@ import {
   chakra,
   Divider,
   Flex,
-  Heading,
   HeadingProps,
   Text,
   TextProps,
@@ -16,7 +15,7 @@ import {
   Box,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
 import TutorialMetadata from "../components/TutorialMetadata"
@@ -35,6 +34,7 @@ import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -75,7 +75,7 @@ const ContentContainer = (props) => {
 const H1 = (props: HeadingProps) => {
   const monospaceFont = useToken("fonts", "monospace")
   return (
-    <Heading
+    <OldHeading
       as="h1"
       fontWeight="bold"
       fontFamily={monospaceFont}
@@ -101,7 +101,7 @@ const H2 = (props: HeadingProps) => {
   const monospaceFont = useToken("fonts", "monospace")
 
   return (
-    <Heading
+    <OldHeading
       as="h2"
       fontFamily={monospaceFont}
       textTransform="uppercase"
@@ -123,7 +123,7 @@ const H2 = (props: HeadingProps) => {
 
 const H3 = (props: HeadingProps) => {
   return (
-    <Heading
+    <OldHeading
       as="h3"
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.5rem" }}
@@ -143,7 +143,7 @@ const H3 = (props: HeadingProps) => {
 
 const H4 = (props: HeadingProps) => {
   return (
-    <Heading
+    <OldHeading
       as="h4"
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.25rem" }}

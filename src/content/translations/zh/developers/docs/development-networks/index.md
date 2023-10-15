@@ -14,7 +14,7 @@ lang: zh
 
 ## 什么是开发网络？ {#what-is-a-development-network}
 
-实质上开发网络是指那些对本地开发特殊设计的以太坊客户端（会对以太坊进行部署应用）。
+实质上开发网络是指哪些对本地开发特殊设计的以太坊客户端（会对以太坊进行部署应用）。
 
 **为什么不在本地运行一个标准的以太坊节点？**
 
@@ -38,11 +38,11 @@ Ganache 提供了一个桌面应用程序 (Ganache UI) 以及一个命令行工�
 - [GitHub](https://github.com/trufflesuite/ganache)
 - [相关文档](https://www.trufflesuite.com/docs/ganache/overview)
 
-### Hardhat 网络 {#hardhat-network}
+### 安全帽网络 {#hardhat-network}
 
 一个专门用于开发的本地以太坊网络。 该网络允许您部署合约，运行测试并调试代码。
 
-Hardhat 网络内置了安全帽，安全帽是专业人员的以太坊开发环境。
+安全帽网络内置了安全帽，安全帽是专业人员的以太坊开发环境。
 
 - [网站](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
@@ -62,9 +62,20 @@ Hardhat 网络内置了安全帽，安全帽是专业人员的以太坊开发环
 - [Goerli 质押启动板](https://goerli.launchpad.ethereum.org/)
 - [Ropsten、Rinkeby 和 Kiln 弃用公告](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
+### Kurtosis 以太坊包 {#kurtosis}
+
+Kurtosis 是一个用于多容器测试环境的构建系统，它让开发人员能够在本地构建区块链网络的可复制实例。
+
+以太坊 Kurtosis 包本地实例化了一个容器化和可参数化的以太坊测试网，支持多个不同的执行层 (EL) 和共识层 (CL)客户端以及 n 个节点。 Kurtosis 优雅地处理所有本地端口映射和服务连接，以方便 dApp 和智能合约原型设计和测试。
+
+- [以太坊网络包](https://github.com/kurtosis-tech/eth-network-package)
+- [网站](https://www.kurtosis.com/)
+- [GitHub](https://github.com/kurtosis-tech/kurtosis)
+- [相关文档](https://docs.kurtosis.com/)
+
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对你有所帮助？ 编辑本页面以添加！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 

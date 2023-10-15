@@ -109,7 +109,7 @@ There are a variety of options available to help you with your setup. Use the ab
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style="text-transform: uppercase;">"multi-client."</em>
+Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
 #### Key Generators
 
@@ -195,6 +195,7 @@ To unlock and receive your entire balance back you must also complete the proces
 
 ## Further reading {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_

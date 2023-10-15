@@ -62,7 +62,7 @@ Hii ni baadhi ya mifano maalum:
 
 Kama unaendesha nodi am mthibitishaji, hizi ni baadhi ya jamii zinazotoa msaada ili upate kuanza katika Ethereum.
 
-- [Discord ya EthStaker](https://discord.io/ethstaker)
+- [Discord ya EthStaker](https://discord.gg/ethstaker)
 - [Reddit ya EthStaker](https://www.reddit.com/r/ethstaker)
 
 Timu zilizo nyingi za usanidi programu za Ethereum zinajitolea kusaidia mikutano ya hadhara amabayo unaweza kupata waunga mkono na kuuliza maswaloi muhimu.

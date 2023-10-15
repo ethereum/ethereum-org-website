@@ -38,10 +38,12 @@ Ethereum cüzdanı mı arıyorsunuz? [Ethereum cüzdanlarının tam listesini ke
 
 Geliştirme zor olabilir. İşte size yardımcı olmaktan mutluluk duyan deneyimli Ethereum geliştiricileri bulunan geliştirme odaklı bazı alanlar.
 
+- [Alchemy University](https://university.alchemy.com/#starter_code)
 - [CryptoDevs Discord'u](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 [Ethereum geliştirici kaynakları](/developers/) bölümümüzde de belgelere ve geliştirme kılavuzlarına ulaşabilirsiniz.
 
@@ -57,6 +59,7 @@ Sorunuz belirli bir araç, proje veya kütüphane ile mi ilgili? Çoğu projede 
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## Bir düğüm çalıştırma {#node-support}
 
@@ -106,4 +109,8 @@ Ağ talebi nedeniyle gerekenden daha düşük bir işlem ücreti gönderdiyseniz
 
 #### Ethereum madenciliği nasıl yapılır? {#mining-ethereum}
 
-Halihazırda Ethereum madenciliği yapmıyorsanız madencilik ekipmanı satın almanızı önermiyoruz. 2022'nin 3./4. Çeyreğinde [Birleştirme](/roadmap/merge/) gerçekleşerek Ethereum'u iş ispatından hisse ispatına çevirecek. Bu değişiklik, Ethereum madenciliğinin artık mümkün olmayacağı anlamına geliyor.
+Ethereum madenciliği artık mümkün değildir. Ethereum iş isoatından hisse ispatına geçtiğinde madencilik kapatılmıştı. Artık madenciler yerine Ethereum'un doğrulayıcıları var. Doğrulayıcılar, ağın güvenliğini sağlamak için ETH'yi hisseler ve hisseleme ödülleri alır.
+
+#### Nasıl bir paydaş/doğrulayıcı olabilirim? {#become-validator}
+
+Doğrulayıcı olmak için Ethereum para yatırma sözleşmesine 32 ETH yatırmanız ve bir doğrulayıcı düğümü kurmanız gerekir. [Hisseleme sayfalarımızda](/staking) ve [hisseleme başlama noktasında](https://launchpad.ethereum.org/) daha fazla bilgi mevcuttur.

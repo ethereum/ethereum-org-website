@@ -93,6 +93,17 @@ If you have contributed translations to the translation program:
 
 If you haven't contributed yet and would like to earn a POAP to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started!
 
+## Claim your GitPOAP {#claim-gitpoap}
+
+GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
+
+### How to claim {#how-to-claim}
+
+1. Visit [GitPOAP](https://www.gitpoap.io).
+2. Connect with your wallet or even with your email through sign in option.
+3. Search for your GitHub username, ETH address, ENS names or any GitPOAP to check if you're eligible.
+4. If your GitHub account is eligible, then you would be able to mint a GitPOAP!
+
 ## Contributors {#contributors}
 
 <Contributors />

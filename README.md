@@ -53,8 +53,6 @@ If you haven't contributed yet and would like to earn a POAP to show your loyalt
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -1510,16 +1508,3 @@ This project follows the [all-contributors](https://github.com/all-contributors/
       <td align="center" valign="top" width="14.28%"><a href="http://francescociulla.com"><img src="https://avatars.githubusercontent.com/u/18360871?v=4?s=100" width="100px;" alt="Francesco Ciulla"/><br /><sub><b>Francesco Ciulla</b></sub></a><br /><a href="#content-FrancescoXX" title="Content">🖋</a></td>
     </tr>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/blazingrome"><img src="https://avatars.githubusercontent.com/u/136898739?v=4?s=100" width="100px;" alt="blazingrome"/><br /><sub><b>blazingrome</b></sub></a><br /><a href="#content-blazingrome" title="Content">🖋</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/etan-status"><img src="https://avatars.githubusercontent.com/u/89844309?v=4?s=100" width="100px;" alt="Etan Kissling"/><br /><sub><b>Etan Kissling</b></sub></a><br /><a href="#content-etan-status" title="Content">🖋</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://linktr.ee/kritik"><img src="https://avatars.githubusercontent.com/u/57076429?v=4?s=100" width="100px;" alt="kritik sah"/><br /><sub><b>kritik sah</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akritik-sah" title="Bug reports">🐛</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Fuliggine"><img src="https://avatars.githubusercontent.com/u/56844974?v=4?s=100" width="100px;" alt="Fuliggine"/><br /><sub><b>Fuliggine</b></sub></a><br /><a href="#content-Fuliggine" title="Content">🖋</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Omsify"><img src="https://avatars.githubusercontent.com/u/87442202?v=4?s=100" width="100px;" alt="Omsify"/><br /><sub><b>Omsify</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AOmsify" title="Bug reports">🐛</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->

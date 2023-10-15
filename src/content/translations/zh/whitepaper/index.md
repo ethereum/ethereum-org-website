@@ -510,7 +510,7 @@ _尽管采用了线性发行方式，然而和比特币一样，以太币的长�
 15. [帕特里夏树](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST 协议](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ 和自治代理，Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
-18. [Mike Hearn 在图灵节上谈论智能资产](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
+18. [Mike Hearn 在图灵节上谈论智能资产](https://www.youtube.com/watch?v=MVyv4t0OKe4)
 19. [以太坊递归长度前缀编码 (RLP)](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
 20. [以太坊默克尔帕特里夏树](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd 论默克尔求和树](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
