@@ -50,6 +50,12 @@ const UpcomingEventsList: React.FC<IProps> = () => {
     )
   }
 
+  const formatDate = (date: Date): string => {
+    return (
+      date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
+    )
+  }
+
   useEffect(() => {
     const eventsList: Array<ICommunityEventData> = [...events]
     const yesterday = new Date()
@@ -70,10 +76,10 @@ const UpcomingEventsList: React.FC<IProps> = () => {
     const formattedEvents = orderedEvents.map((event) => {
       const dateRange =
         event.startDate === event.endDate
-          ? dateParse(event.startDate).toLocaleDateString()
-          : `${dateParse(event.startDate).toLocaleDateString()} - ${dateParse(
-              event.endDate
-            ).toLocaleDateString()}`
+          ? formatDate(dateParse(event.startDate))
+          : `${formatDate(dateParse(event.startDate))} - ${formatDate(
+              dateParse(event.endDate)
+            )}`
 
       const details = `${event.sponsor ? "(" + event.sponsor + ")" : ""} ${
         event.description
