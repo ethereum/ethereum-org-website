@@ -14,7 +14,7 @@ Before contributing to content, make sure you are familiar with our [style guide
 
 Most of the content on ethereum.org is written in markdown. A cheat sheet on markdown syntax can be found [here](https://www.markdownguide.org/cheat-sheet).
 
-These markdown files are found in `/src/content` of the project repository. Each folder has an `index.md` for the content and corresponds to a page on ethereum.org. For example, this page `https://ethereum.org/en/contributing/content` can be found in the `/src/content/contributing/content/index.md` file.
+These markdown files are found in [`/src/content` of the project repository](https://github.com/ethereum/ethereum-org-website/tree/dev/src/content). Each folder has an `index.md` for the content and corresponds to a page on ethereum.org. For example, this page [https://ethereum.org/contributing/content](/contributing/content) can be found in the [`/src/content/contributing/content/index.md`](https://github.com/ethereum/ethereum-org-website/tree/dev/src/content/contributing/content/index.md) file.
 
 #### A note on the developer docs {#a-note-on-the-developer-docs}
 
@@ -24,9 +24,9 @@ Many pages on ethereum.org are in the developer docs section of the website. Lik
 
 #### In GitHub {#how-to-edit-a-markdown-page-in-github}
 
-Find the page you are looking to edit in `/src/content/` folder. The structure of the content folder maps to the url of ethereum.org. For this example, lets edit the about page.
+Find the page you are looking to edit in [`/src/content/`](https://github.com/ethereum/ethereum-org-website/tree/dev/src/content) folder. The structure of the content folder maps to the url of ethereum.org. For this example, lets edit the about page.
 
-We can find the about page at [https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/about/index.md](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/about/index.md) which will change the `/about` page (https://ethereum.org/en/about). As you can see the mapping of where the content is corresponds to the URL of the website.
+We can find the about page at [https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/about/index.md](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/about/index.md) which will change the `/about` page ([https://ethereum.org/about](/about)). As you can see the mapping of where the content is corresponds to the URL of the website.
 
 ![](./first_image_edit_markdown.png)
 
@@ -42,13 +42,13 @@ Once you have done this, make a pull request into the `dev` branch from your new
 
 #### Locally cloned repository {#how-to-edit-a-markdown-page-locally-cloned-repository}
 
-Find the page you are looking to edit in `/src/content/` folder. The structure of the content folder maps to the url of ethereum.org. For this example, lets edit the about page. More on code contributions and working with the repository can be found on our [code contributions](/contributing/code) page.
+Find the page you are looking to edit in [`/src/content/`](https://github.com/ethereum/ethereum-org-website/tree/dev/src/content) folder. The structure of the content folder maps to the url of ethereum.org. For this example, lets edit the about page. More on code contributions and working with the repository can be found on our [code contributions](/contributing/code) page.
 
 Make a branch off of your forks `dev` branch. Make sure you have a descriptive branch name.
 
-We can find the about page in the `/src/content/about/index.md` file, which will change the `/about` page (https://ethereum.org/en/about). As you can see, the mapping of where the content is corresponds to the URL of the website.
+We can find the about page in the [`/src/content/about/index.md`](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/about/index.md) file, which will change the `/about` page ([https://ethereum.org/about](/about)). As you can see, the mapping of where the content is corresponds to the URL of the website.
 
-Make changes to the `/src/content/about/index.md` file, and save. Then commit and push your changes up to your branch. Example terminal command:
+Make changes to the [`/src/content/about/index.md`](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/about/index.md) file, and save. Then commit and push your changes up to your branch. Example terminal command:
 
 ```
 git add <path>
@@ -62,7 +62,7 @@ Lastly, make a pull request into the `dev` branch from your forks branch and we 
 
 #### In GitHub {#how-to-create-a-markdown-page-in-github}
 
-In the `/src/content/` folder, create a folder with the structure of the url. For example, `/src/content/about/index.md` maps to the `/about` (https://ethereum.org/en/about) page on the website.
+In the [`/src/content/`](https://github.com/ethereum/ethereum-org-website/tree/dev/src/content) folder, create a folder with the structure of the url. For example, [`/src/content/about/index.md`](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/about/index.md) maps to the `/about` ([https://ethereum.org/about](/about)) page on the website.
 
 Click on the `Add file` button in the top right, and select `Create new file`
 
@@ -80,7 +80,7 @@ Once you have done this, make a pull request into the `dev` branch from your new
 
 #### Locally cloned repository {#how-to-create-a-markdown-page-locally-cloned-repository}
 
-In the `/src/content/` folder, create a folder with the structure of the url. For example, `/src/content/about/index.md` maps to the `/about` (https://ethereum.org/en/about) page on the website.
+In the [`/src/content/`](https://github.com/ethereum/ethereum-org-website/tree/dev/src/content) folder, create a folder with the structure of the url. For example, [`/src/content/about/index.md`(https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/about/index.md) maps to the `/about` ([https://ethereum.org/about](/about)) page on the website.
 
 For the purpose of this example, create a folder for the `/test` page with an `index.md` file. This should create the structure `/src/content/test/index.md` Remember, the path in this structure maps to the URL. After doing that, write your content in markdown. At the start of the page, make sure to include the necessary frontmatter text, description, and lang.
 
