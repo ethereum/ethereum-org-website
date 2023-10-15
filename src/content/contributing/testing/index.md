@@ -8,7 +8,14 @@ lang: en
 
 The QA testing contributions is an initiative to test release candidates for ethereum.org before they are deployed into production. Testing is a vital part in a products release cycle to catch bugs and regressions that may have been introduced before a release.
 
-On Tuesdays we create a release candidate that goes into the staging branch. Information about the release candidate will be posted in the `👾 ｜ website-code` channel in our [Discord](https://discord.gg/ethereum-org). You can also find the release notes for the release candidate on the [releases page](https://github.com/ethereum/ethereum-org-website/releases) in the GitHub repository. The release candidate will be tagged as a `pre-release` until it has been merged into master. After QA testing, we deploy the release candidate into production if there are no release blocking bugs found on Thursday. More info on the deploy process for ethereum.org can be found [here](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/deploy-process.md).
+If you'd like to get involved come say hi in our `👾 ｜ website-code`. We meet bi-weekly in the `🎓 | office-hours-voice` channel in our [Discord](https://discord.gg/ethereum-org). Notes on our process:
+
+- On Tuesdays we create a release candidate that goes into the `staging` branch
+- Information about the release candidate will be posted in the `👾 ｜ website-code` channel in our [Discord](https://discord.gg/ethereum-org)
+- You can also find the release notes for the release candidate on the [releases page](https://github.com/ethereum/ethereum-org-website/releases) in the GitHub repository
+  - The release candidate will be tagged as a `pre-release` until it has been merged into master
+- After QA testing, we deploy the release candidate into production if there are no release blocking bugs found before Thursday
+- More info on the deploy process for ethereum.org can be found [here](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/deploy-process.md)
 
 ## How to get involved
 
@@ -25,7 +32,3 @@ In some releases there will be changes to styles for components and pages on eth
 ### User experience
 
 One of our goals is to add more interactive elements to ethereum.org to supplement and improve content and learning for our users. With added interactivity comes a more complex codebase and increased chances for regressions in our user experience. One way to get involved for test release candidates is to test out these new pieces of functionality being added and provide any feedback on them and any issues or regressions found while testing them out.
-
----
-
-If you would like to get involved in testing release candidates, please say hi in the `👾 ｜ website-code` channel of the Discord. We also host bi-weekly community testing events held in Discord and [gather.town](https://www.gather.town/) where we all hop on together to test the release candidate. Come join and say hi!
