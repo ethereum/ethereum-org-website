@@ -8,7 +8,7 @@ image: ../../assets/use-cases/defi.png
 alt: City scape with defi product signs
 summaryPoint1: DeFi operates without centralized intermediaries
 summaryPoint2: Includes products that let you borrow, save, invest, trade, and more
-summaryPoint3: Based on open-source technology that anyone can program with.
+summaryPoint3: Based on open-source technology that anyone can program with
 ---
 
 ## What is decentralized finance (DeFi)? {#what-is-defi}
