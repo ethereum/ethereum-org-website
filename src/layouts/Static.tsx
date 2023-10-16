@@ -5,8 +5,8 @@ import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import Link from "@/components/Link"
+import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
-import QuizWidget from "@/components/Quiz/QuizWidget"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -105,6 +105,7 @@ export const staticComponents = {
   GlossaryDefinition,
   Icon,
   Link,
+  MeetupList,
   NetworkUpgradeSummary,
   UpcomingEventsList,
 }
