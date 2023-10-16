@@ -12,14 +12,16 @@ import {
 // import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { useRouter } from "next/router"
+
+import { BaseLink } from "./Link"
 
 // TODO
-// import { Lang } from "../utils/languages"
 // import { getLocaleTimestamp } from "../utils/time"
-// import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import { TranslationKey } from "@/lib/types"
-import { BaseLink } from "./Link"
+import { Lang, TranslationKey } from "@/lib/types"
+
 // TODO
 // import Translation from "./Translation"
 
@@ -55,15 +57,13 @@ export interface LinkSection {
 export interface IProps {}
 
 const Footer: React.FC<IProps> = () => {
-  // const { language } = useI18next()
+  const { locale } = useRouter()
+  // TODO: enable after setting i18n UI strings
   // const { t } = useTranslation()
 
-  // TODO
-  // const isPageRightToLeft = isLangRightToLeft(language as Lang)
-  const isPageRightToLeft = false
-
+  const isPageRightToLeft = isLangRightToLeft(locale as Lang)
+  // TODO: check if `medBp` is being used or remove it
   const [medBp] = useToken("breakpoints", ["md"])
-
   const linkSections: Array<LinkSection> = [
     {
       title: "Use Ethereum", // t("use-ethereum"),
