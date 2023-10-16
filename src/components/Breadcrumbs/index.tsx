@@ -42,9 +42,8 @@ const Breadcrumbs: React.FC<IProps> = ({
   // const { t } = useTranslation()
   const { locale } = useRouter()
 
-  const hasHome = true
+  const hasHome = originalSlug.includes(`/${locale}/`)
   const slug = originalSlug.replace(`/${locale}/`, "/")
-
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
 
