@@ -19,13 +19,14 @@ import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
+import { mdxTableComponents } from "@/components/Table"
 import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import QuizWidget from "@/components/Quiz/QuizWidget"
+import TableOfContents from "@/components/TableOfContents"
+import Text from "@/components/OldText"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
-import { mdxTableComponents } from "@/components/Table"
-import Text from "@/components/OldText"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -180,6 +181,7 @@ export const StaticLayout: React.FC<IProps> = ({
   children,
   frontmatter,
   slug,
+  tocItems,
   lastUpdatedDate,
 }) => {
   // const { language } = useI18next()
@@ -226,11 +228,25 @@ export const StaticLayout: React.FC<IProps> = ({
             Page last updated:{" "}
             {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
           </Text>
-
+          <TableOfContents
+            position="relative"
+            zIndex={2}
+            // editPath={absoluteEditPath}
+            items={tocItems}
+            isMobile
+            maxDepth={frontmatter.sidebarDepth || 2}
+            hideEditButton={!!frontmatter.hideEditButton}
+          />
           {children}
 
           <FeedbackCard isArticle />
         </Box>
+        <TableOfContents
+          // editPath={absoluteEditPath}
+          items={tocItems}
+          maxDepth={frontmatter.sidebarDepth || 2}
+          hideEditButton={!!frontmatter.hideEditButton}
+        />
       </Flex>
     </Box>
   )
