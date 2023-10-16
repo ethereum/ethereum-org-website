@@ -101,10 +101,12 @@ export const getContentBySlug = (slug: string) => {
   }
 
   let fullPath = join(CURRENT_CONTENT_DIR, realSlug)
+  let contentNotTranslated = false
 
   // If content is not translated, use english content fallback
   if (!fs.existsSync(fullPath)) {
     fullPath = getFallbackEnglishPath(fullPath)
+    contentNotTranslated = true
   }
 
   const fileContents = fs.readFileSync(fullPath, "utf8")
@@ -115,6 +117,7 @@ export const getContentBySlug = (slug: string) => {
     content,
     frontmatter,
     tocItems: generateTableOfContents(content),
+    contentNotTranslated,
   }
 
   return items

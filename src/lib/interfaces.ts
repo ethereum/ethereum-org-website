@@ -56,12 +56,20 @@ export interface ToCItem {
 /**
  * Layout interface
  */
+
+export interface Root {
+  children: JSX.Element
+  contentIsOutdated: boolean
+  contentNotTranslated: boolean
+}
+
 export interface PageContent {
   slug: string
   content: string
   frontmatter: Frontmatter
   tocItems: Array<ToCItem>
   lastUpdatedDate?: string
+  contentNotTranslated: boolean
 }
 
 export interface RequiredFrontmatter {

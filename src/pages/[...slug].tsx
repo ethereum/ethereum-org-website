@@ -98,6 +98,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const markdown = getContentBySlug(`${locale}/${params.slug.join("/")}`)
   const frontmatter = markdown.frontmatter
   const tocItems = markdown.tocItems
+  const contentNotTranslated = markdown.contentNotTranslated
 
   const mdPath = join("/content", ...params.slug)
   const mdDir = join("public", mdPath)
@@ -129,6 +130,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       originalSlug,
       frontmatter,
       lastUpdatedDate,
+      contentNotTranslated,
       layout,
       tocItems,
     },
@@ -155,18 +157,23 @@ const ContentPage: NextPageWithLayout<ContentPageProps> = ({
 
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
-  // `slug`, `frontmatter`, `lastUpdatedDate` and `layout` values are returned by `getStaticProps` method and passed to the page component
+  // values returned by `getStaticProps` method and passed to the page component
   const {
     originalSlug: slug,
     frontmatter,
     lastUpdatedDate,
+    contentNotTranslated,
     layout,
     tocItems,
   } = page.props
   const layoutProps = { slug, frontmatter, lastUpdatedDate, tocItems }
   const Layout = layoutMapping[layout]
+
   return (
-    <RootLayout>
+    <RootLayout
+      contentIsOutdated={frontmatter.isOutdated}
+      contentNotTranslated={contentNotTranslated}
+    >
       <Layout {...layoutProps}>{page}</Layout>
     </RootLayout>
   )
