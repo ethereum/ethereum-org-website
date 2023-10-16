@@ -4,7 +4,7 @@ description: Ethereum'da DeFi'ye genel bakış
 lang: tr
 template: use-cases
 emoji: ":money_with_wings:"
-image: ../../../../assets/use-cases/defi.png
+image: /use-cases/defi.png
 alt: Lego parçalarından yapılmış bir Eth logosu.
 sidebarDepth: 2
 summaryPoint1: Mevcut finansal sisteme küresel ve açık bir alternatif.

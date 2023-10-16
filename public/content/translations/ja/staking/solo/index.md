@@ -46,7 +46,7 @@ summaryPoints:
 <InfoGrid>
   <ExpandableCard title="必読項目" eventCategory="SoloStaking" eventName="clicked required reading">
     ノードを運用する際、選択したソフトウェアの使い方を把握するのに時間をかける必要があります。 そのためには、関連するドキュメントを読み、開発チームのコミュニケーションチャネルにも注意を向ける必要があります。
-    実行するソフトウェアやプルーフ・オブ・ステークがどのように機能するかを理解すればするほど、ステイカーのリスクは減り、ノードオペレータとして稼働する上で発生した問題を修正するのも容易になります。 
+    実行するソフトウェアやプルーフ・オブ・ステークがどのように機能するかを理解すればするほど、ステイカーのリスクは減り、ノードオペレータとして稼働する上で発生した問題を修正するのも容易になります。
   </ExpandableCard>
   <ExpandableCard title="コンピュータの習熟度" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
     新しいツールの登場により、徐々に容易にはなってきていますが、ノードのセットアップには、コンピュータの操作にある程度慣れている必要があります。 コマンドラインインターフェイスを理解していると便利ですが、厳密にはもう必要ありません。
@@ -67,7 +67,7 @@ summaryPoints:
   </ExpandableCard>
   <ExpandableCard title="スラッシングのリスク" eventCategory="SoloStaking" eventName="clicked slashing risk">
     オフラインであることによる非稼働のペナルティとは異なり、<em>スラッシング</em>は悪質な不正にのみ適用される、より深刻なペナルティです。 鍵が読み込まれたマイノリティのクライアントを1台のマシンだけで運用する場合、スラッシングのリスクを最小限に抑えることができます。 とはいえ、すべてのステイカーはスラッシングのリスクを認識しておいてください。
-    
+
     <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">スラッシングとバリデータのライフサイクルの詳細</a></p>
   </ExpandableCard>
 </InfoGrid>

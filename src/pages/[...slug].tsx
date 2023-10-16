@@ -3,11 +3,11 @@ import { ParsedUrlQuery } from "querystring"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
-import path from "path"
+import { join } from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { getLastModifiedDate } from "@/lib/utils/gh"
-import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
+import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import mdComponents from "@/components/MdComponents"
 
@@ -32,7 +32,7 @@ import {
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
-import type { NextPageWithLayout } from "@/lib/types"
+import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -62,22 +62,30 @@ interface Props {
   mdxSource: MDXRemoteSerializeResult
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = ({ locales }) => {
   const contentFiles = getContent("/").filter(
     // Filter `/developers/tutorials` slugs since they are processed by
     // `/developers/tutorials/[...tutorial].tsx`
     (file) => !file.slug.includes("/developers/tutorials")
   )
 
-  return {
-    paths: contentFiles.map((file) => {
-      return {
+  let paths: StaticPaths = []
+
+  // Generate page paths for each supported locale
+  for (const locale of locales!) {
+    contentFiles.map((file) => {
+      paths.push({
         params: {
           // Splitting nested paths to generate proper slug
           slug: file.slug.split("/").slice(1),
         },
-      }
-    }),
+        locale,
+      })
+    })
+  }
+
+  return {
+    paths,
     fallback: false,
   }
 }
@@ -86,27 +94,33 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
-  const markdown = getContentBySlug(params.slug.join("/"))
+  const { locale } = context
+
+  const markdown = getContentBySlug(`${locale}/${params.slug.join("/")}`)
   const frontmatter = markdown.frontmatter
   const tocItems = markdown.tocItems
+  const contentNotTranslated = markdown.contentNotTranslated
 
-  const mdPath = path.join("/content", ...params.slug)
-  const mdDir = path.join("public", mdPath)
+  const mdPath = join("/content", ...params.slug)
+  const mdDir = join("public", mdPath)
 
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
       rehypePlugins: [
-        [rehypeImgSize, { dir: mdDir, srcPath: mdPath }],
+        [rehypeImg, { dir: mdDir, srcPath: mdPath, locale }],
         [rehypeHeadingIds],
       ],
     },
   })
 
   const originalSlug = `/${params.slug.join("/")}/`
-  const lastUpdatedDate = await getLastModifiedDate(originalSlug)
+  const lastUpdatedDate = await getLastModifiedDate(originalSlug, locale!)
+
+  // Get corresponding layout
   let layout = frontmatter.template
+
   if (!frontmatter.template) {
     layout = params.slug.includes("developers/docs") ? "docs" : "static"
   }
@@ -117,6 +131,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       originalSlug,
       frontmatter,
       lastUpdatedDate,
+      contentNotTranslated,
       layout,
       tocItems,
     },
@@ -143,18 +158,23 @@ const ContentPage: NextPageWithLayout<ContentPageProps> = ({
 
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
-  // `slug`, `frontmatter`, `lastUpdatedDate` and `layout` values are returned by `getStaticProps` method and passed to the page component
+  // values returned by `getStaticProps` method and passed to the page component
   const {
     originalSlug: slug,
     frontmatter,
     lastUpdatedDate,
+    contentNotTranslated,
     layout,
     tocItems,
   } = page.props
   const layoutProps = { slug, frontmatter, lastUpdatedDate, tocItems }
   const Layout = layoutMapping[layout]
+
   return (
-    <RootLayout>
+    <RootLayout
+      contentIsOutdated={frontmatter.isOutdated}
+      contentNotTranslated={contentNotTranslated}
+    >
       <Layout {...layoutProps}>{page}</Layout>
     </RootLayout>
   )

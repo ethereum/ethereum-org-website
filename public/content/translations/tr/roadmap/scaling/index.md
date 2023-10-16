@@ -10,11 +10,11 @@ template: roadmap
 Ethereum, birlikte toplu işlemler yapan ve çıktıyı Ethereum'a gönderen [katman 2'ler](/layer-2/#rollups) (toplamalar olarak da bilinir) kullanılarak ölçeklendirilir. Toplamalar Ethereum Ana Ağı'ndan 8 kat daha ucuz olsa da, onları son kullanıcıların masraflarını azaltmak için optimize etmek mümkün. Toplamalar aynı zamanda, geliştiricilerin toplamalar olgunlaştıkça kaldırabilecekleri bazı merkezi bileşenlere dayanır.
 
 <InfoBanner mb={8} title="İşlem maliyetleri">
-  <ul style="margin-bottom: 0">
+  <ul style={{ marginBottom: 0 }}>
     <li>Günümüzün toplamaları Ethereum katman 1'den <strong>~3-8x</strong> daha ucuz</li>
     <li>ZK toplamaları yakında ücretleri <strong>~40-100x</strong> düşürecek</li>
     <li>Ethereum'da yapılacak değişiklikler <strong>~100-1000x</strong> daha fazla ölçeklendirme sağlayacak</li>
-    <li style="margin-bottom: 0">Kullanıcılar <strong> 0,001 dolardan daha az maliyetli</strong> işlemlerden yararlanmalıdır</li>
+    <li style={{ marginBottom: 0 }}>Kullanıcılar <strong> 0,001 dolardan daha az maliyetli</strong> işlemlerden yararlanmalıdır</li>
   </ul>
 </InfoBanner>
 

@@ -2,10 +2,8 @@ import {
   Box,
   Flex,
   Show,
-  SimpleGrid,
-  Text,
-  Wrap,
-  WrapItem,
+  SimpleGrid, Wrap,
+  WrapItem
 } from "@chakra-ui/react"
 
 import { Button, ButtonLink } from "@/components/Buttons"
@@ -13,6 +11,7 @@ import { Image } from "@/components/Image"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
+import OldText from "@/components/OldText"
 import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
@@ -132,7 +131,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
           <TitleCard>
             {/* TODO: Double check this slug works */}
             <Breadcrumbs slug={slug} /> <Title>{frontmatter.title}</Title>
-            <Text>{frontmatter.description}</Text>
+            <OldText>{frontmatter.description}</OldText>
             {frontmatter?.buttons && (
               // FIXME: remove the `ul` override once removed the corresponding
               // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
@@ -140,24 +139,16 @@ export const RoadmapLayout: React.FC<IProps> = ({
                 {frontmatter.buttons.map((button, idx) => {
                   if (button?.to) {
                     return (
-                      <WrapItem>
-                        <ButtonLink
-                          key={idx}
-                          variant={button?.variant}
-                          to={button?.to}
-                        >
+                      <WrapItem key={idx}>
+                        <ButtonLink variant={button?.variant} to={button?.to}>
                           {button.label}
                         </ButtonLink>
                       </WrapItem>
                     )
                   }
                   return (
-                    <WrapItem>
-                      <Button
-                        key={idx}
-                        variant={button?.variant}
-                        toId={button?.toId}
-                      >
+                    <WrapItem key={idx}>
+                      <Button variant={button?.variant} toId={button?.toId}>
                         {button?.label}
                       </Button>
                     </WrapItem>
@@ -174,8 +165,8 @@ export const RoadmapLayout: React.FC<IProps> = ({
           </TitleCard>
           <Image
             src={frontmatter.image}
-            alt={frontmatter.alt || ""}
-            objectFit="contain"
+            alt={frontmatter.alt ?? ""}
+            style={{ objectFit: "contain" }}
             alignSelf={{
               base: "center",
               lg: "normal",

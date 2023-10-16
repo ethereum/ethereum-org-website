@@ -5,7 +5,7 @@ lang: ja
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: ホログラムを介して表示されているETHロゴ
 summaryPoint1: イーサリアムベースのアセットとして、唯一無二なものをトークンとして表現する方法。
 summaryPoint2: NFTは、これまで以上に多くのコンテンツ・クリエイターを後押ししています。
@@ -62,7 +62,7 @@ NFT は以下のような多数の用途に使用されます。
 
 あるいは、スポーツイベントのチケットを例に考えてみましょう。 イベントの主催者がチケットの販売枚数を決めるように、NFT の作成者はレプリカの数を決めることができます。 時には、5,000 枚の一般入場券のようなまったく同じレプリカも存在します。 例えば、座席指定のチケットのように、よく似ていてもそれぞれに微妙な違いがあるものが複数枚ミントされることもあります。 チケットの売買はピアツーピアで行われ、購入者はコントラクトアドレスを確認することで、常にチケットの正当性を確認することができます。
 
-ethereum.org では、Github リポジトリへの貢献や電話会議への出席を示すために NFT が使用されており、独自の NFT ドメイン名も取得しています。 ethereum.org に貢献することで、POAP NFT(出席証明 NFT)を獲得できます。 一部のクリプトミートアップでは、チケットとして POAP が使用されています。 [貢献の詳細](/contributing/#poap)
+ethereum.org では、GitHub リポジトリへの貢献や電話会議への出席を示すために NFT が使用されており、独自の NFT ドメイン名も取得しています。 ethereum.org に貢献することで、POAP NFT(出席証明 NFT)を獲得できます。 一部のクリプトミートアップでは、チケットとして POAP が使用されています。 [貢献の詳細](/contributing/#poap)
 
 ![ethereum.orgの出席証明プロトコル(POAP)](./poap.png)
 
