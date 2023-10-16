@@ -1,7 +1,5 @@
-import React from "react"
 import { SystemStyleObject, cssVar } from "@chakra-ui/react"
-import { BaseLink } from "../Link"
-import { getCustomId, parseToCTitle } from "@/lib/utils/toc"
+import { BaseLink } from "@/components/Link"
 import type { ToCItem } from "@/lib/interfaces"
 
 export interface IPropsTableOfContentsLink {
@@ -12,21 +10,16 @@ export interface IPropsTableOfContentsLink {
 
 const Link: React.FC<IPropsTableOfContentsLink> = ({
   depth,
-  item,
+  item: { title, url },
   activeHash,
 }) => {
-  const url = `#${getCustomId(item.title)}`
-
   const isActive = activeHash === url
   const isNested = depth === 2
 
-  let classes = ""
-  if (isActive) {
-    classes += " active"
-  }
-  if (isNested) {
-    classes += " nested"
-  }
+  const classList: Array<string> = []
+  isActive && classList.push("active")
+  isNested && classList.push("nested")
+  const classes = classList.join(" ")
 
   const $dotBg = cssVar("dot-bg")
 
@@ -83,7 +76,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
         },
       }}
     >
-      {parseToCTitle(item.title)}
+      {title}
     </BaseLink>
   )
 }
