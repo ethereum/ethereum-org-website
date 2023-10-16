@@ -10,6 +10,7 @@ import TranslationBannerLegal from "@/components/TranslationBannerLegal"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { Lang } from "@/lib/types"
+import { Root } from "@/lib/interfaces"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -19,7 +20,7 @@ export const RootLayout = ({
   children,
   contentIsOutdated,
   contentNotTranslated,
-}) => {
+}: Root) => {
   const { locale, asPath } = useRouter()
 
   const isLegal =
@@ -30,11 +31,10 @@ export const RootLayout = ({
     asPath.includes(`/style-guide/`)
 
   const isPageTranslationOutdated = contentIsOutdated ?? false
-  const isPageContentEnglish = contentNotTranslated
   const isPageLanguageEnglish = locale === DEFAULT_LOCALE
   const shouldShowTranslationBanner =
     (isPageTranslationOutdated ||
-      (isPageContentEnglish && !isPageLanguageEnglish)) &&
+      (contentNotTranslated && !isPageLanguageEnglish)) &&
     !isLegal
   const isPageRightToLeft = isLangRightToLeft(locale as Lang)
   const originalPagePath = join(DEFAULT_LOCALE, asPath)
@@ -46,7 +46,7 @@ export const RootLayout = ({
 
       <TranslationBanner
         shouldShow={shouldShowTranslationBanner}
-        isPageContentEnglish={isPageContentEnglish}
+        isPageContentEnglish={contentNotTranslated}
         isPageRightToLeft={isPageRightToLeft}
         originalPagePath={originalPagePath}
       />
