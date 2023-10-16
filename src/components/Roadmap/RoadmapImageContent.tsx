@@ -17,7 +17,7 @@ const RoadmapImageContent: React.FC<IProps> = ({ children, title }) => (
           src={wallet}
           alt="Ethereum Wallet"
           width={350}
-          objectFit="contain"
+          style={{ objectFit: "contain" }}
         />
       </Center>
     </Flex>

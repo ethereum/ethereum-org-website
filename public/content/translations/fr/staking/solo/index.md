@@ -42,7 +42,7 @@ Bien que nous souhaitions que la mise en jeu individuelle soit accessible et san
 <InfoGrid>
   <ExpandableCard title="Lecture nécessaire" eventCategory="SoloStaking" eventName="clicked required reading">
     Lorsque vous opérerez votre propre nœud, vous devrez passer du temps à apprendre à utiliser le logiciel que vous avez choisi. Cela implique de lire la documentation adéquate et d'être connecté aux canaux de communication de ses équipes de développeurs.
-    Mieux vous comprendrez le logiciel que vous exécutez et comment la preuve d'enjeu fonctionne, moins ce sera risqué pour vous, et plus il vous sera facile de résoudre toute sorte de problèmes qui peuvent survenir en tant qu'opérateur de nœud. 
+    Mieux vous comprendrez le logiciel que vous exécutez et comment la preuve d'enjeu fonctionne, moins ce sera risqué pour vous, et plus il vous sera facile de résoudre toute sorte de problèmes qui peuvent survenir en tant qu'opérateur de nœud.
   </ExpandableCard>
   <ExpandableCard title="Aisance en informatique" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
     La configuration des nœuds nécessite un niveau d'aisance raisonnable dans le travail avec des ordinateurs, bien que de nouveaux outils apparaissent au fil du temps pour rendre cela plus facile. Comprendre l'interface de ligne commande est utile, mais n'est plus strictement nécessaire.
@@ -63,7 +63,7 @@ Bien que nous souhaitions que la mise en jeu individuelle soit accessible et san
   </ExpandableCard>
   <ExpandableCard title="Risque de sanctions (délestage)" eventCategory="SoloStaking" eventName="clicked slashing risk">
     Les <em>sanctions de délestage (slashing)</em> diffèrent des pénalités d'inactivité (applicables si un validateur est hors ligne). Ce sont des pénalités bien plus graves, réservées aux délits ayant un caractère malveillant. Exécuter un client minoritaire en ayant vos clés chargées sur un seul appareil à la fois permet de minimiser le risque de délestage. Cela étant dit, toute personne plaçant des ETH doit être consciente du risque de délestage.
-    
+
     <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">En savoir plus sur le délestage et le cycle de vie du validateur</a></p>
   </ExpandableCard>
 </InfoGrid>

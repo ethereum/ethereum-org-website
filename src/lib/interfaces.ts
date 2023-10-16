@@ -136,10 +136,17 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   hideEditButton?: boolean
 }
 
+export interface Root {
+  children: JSX.Element
+  contentIsOutdated: boolean
+  contentNotTranslated: boolean
+}
+
 export interface MdPageContent {
   slug: string
   content: string
   frontmatter: Frontmatter
   tocItems: Array<ToCItem>
   lastUpdatedDate?: string
+  contentNotTranslated: boolean
 }

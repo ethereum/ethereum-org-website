@@ -31,7 +31,6 @@ import MdLink from "@/components/MdLink"
 import OldHeading from "@/components/OldHeading"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import RandomAppList from "@/components/RandomAppList"
-import SectionNav from "@/components/SectionNav"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
@@ -303,7 +302,6 @@ export const stakingComponents = {
   ProductDisclaimer,
   QuizWidget,
   RandomAppList,
-  SectionNav,
   StakingComparison,
   StakingConsiderations,
   StakingGuides,

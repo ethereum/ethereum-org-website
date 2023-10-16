@@ -46,7 +46,7 @@ We zouden heel graag willen dat solo staking toegankelijk en risicovrij zou zijn
 <InfoGrid>
   <ExpandableCard title="Verplicht lezen" eventCategory="SoloStaking" eventName="clicked required reading">
     Bij het beheren van uw eigen node moet u wat tijd besteden om te leren hoe u de software gebruikt die u heeft gekozen. Dit heeft betrekking op het lezen van relevante documentatie en letten op communicatiekanalen van die dev-teams.
-    Hoe meer u begrijpt van de software die u gebruikt en hoe proof-of-stake werkt, hoe minder risico's er zullen zijn als staker, en hoe makkelijker het zal zijn om problemen op te lossen die zich kunnen voordoen. 
+    Hoe meer u begrijpt van de software die u gebruikt en hoe proof-of-stake werkt, hoe minder risico's er zullen zijn als staker, en hoe makkelijker het zal zijn om problemen op te lossen die zich kunnen voordoen.
   </ExpandableCard>
   <ExpandableCard title="Comfortabel met computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
     Node setup vereist een redelijk comfortniveau bij het werken met computers, hoewel nieuwe tools dit makkelijker maken na verloop van tijd. Het begrijpen van de opdrachtregelinterface is nuttig, maar niet langer strikt nodig.
@@ -67,7 +67,7 @@ We zouden heel graag willen dat solo staking toegankelijk en risicovrij zou zijn
   </ExpandableCard>
   <ExpandableCard title="Slashing-risico" eventCategory="SoloStaking" eventName="clicked slashing risk">
     Anders dan inactiviteitsboetes voor offline zijn, is er ook <em>slashing</em>. Dit is een veel serieuzere boete gereserveerd voor kwaadwillige misdrijven. Door een minderheid-client met sleutels enkel op één machine tegelijk te gebruiken, wordt het risico op slashing geminimaliseerd. Toch moeten alle stakers zich bewust zijn van de risico's van slashing.
-    
+
     <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Meer over slashing en validatorlevenscyclus</a></p>
   </ExpandableCard>
 </InfoGrid>

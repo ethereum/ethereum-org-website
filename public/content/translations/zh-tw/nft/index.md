@@ -5,7 +5,7 @@ lang: zh-tw
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: 全息投影顯示的以太幣標誌。
 summaryPoint1: 一種用以太坊資產來呈現任何獨特事物的方式。
 summaryPoint2: 非同質化代幣賦予了內容創作者前所未有的強大力量。
@@ -62,7 +62,7 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 
 又或者以體育賽事的門票為例， 如同賽事主辦者可以決定要販售幾張門票，非同質化代幣的創作者也可以決定要發行幾份複製品。 有時可能是完全相同的複製品，例如 5000 張普通門票； 有時可能會製作好幾種極為類似，但各不相同的複製品，例如指定席的票券。 此類票券可以在不需要給票務員付款的情況下進行點對點買賣，買家可以隨時檢查合約地址，以確保票券的真實性。
 
-在 ethereum.org 上，非同質化代幣用於證明人們對我們的 Github 儲存庫有所貢獻，或者參加了會議，我們甚至有自己的非同質化代幣網域名稱。 如果你對 ethereum.org 有所貢獻，就可以領取出席證明協議的非同質化代幣。 某些加密貨幣聚會使用出席證明協議作為入場門票。 [深入了解如何貢獻](/contributing/#poap)。
+在 ethereum.org 上，非同質化代幣用於證明人們對我們的 GitHub 儲存庫有所貢獻，或者參加了會議，我們甚至有自己的非同質化代幣網域名稱。 如果你對 ethereum.org 有所貢獻，就可以領取出席證明協議的非同質化代幣。 某些加密貨幣聚會使用出席證明協議作為入場門票。 [深入了解如何貢獻](/contributing/#poap)。
 
 ![ethereum.org 出席證明協議](./poap.png)
 

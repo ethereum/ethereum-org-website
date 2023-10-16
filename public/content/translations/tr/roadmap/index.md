@@ -66,7 +66,7 @@ Yol haritası çoğunlukla, araştırmacı ve geliştirmecilerin yıllar süren 
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">ETH2 neydi?</h4>
+  <h4 style={{ marginTop: 0 }}>ETH2 neydi?</h4>
 
   <p>"Eth2" terimi hisse ispatına geçişten önce sıklıkla Ethereum'un geleceği olarak tanımlandı ancak bu, <strong>daha kesin bir terminoloji için aşamalı olarak kaldırıldı.</strong> Aslen, hisse ispatına geçişten önceki Ethereum ağını geçişten sonraki ağdan ayırmak ya da kimi zaman farklı Ethereum müşterilerine atfedilmek (yürütüm istemcisi bazen ETH1 olarak atfedildi ve fikir birliği istemcileri bazen ETH2 istemcisi olarak atfedildi) için kullanıldı.</p>
 

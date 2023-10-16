@@ -22,8 +22,7 @@ import { BaseLink } from "@/components/Link"
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 import { mdxTableComponents } from "@/components/Table"
-// TODO: Fix BeaconChainActions
-// import BeaconChainActions from "@/components/BeaconChainActions"
+import BeaconChainActions from "@/components/BeaconChainActions"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
@@ -274,7 +273,7 @@ export const upgradeComponents = {
   p: Paragraph,
   pre: Pre,
   Badge,
-  // BeaconChainActions,
+  BeaconChainActions,
   ButtonLink,
   Card,
   Divider,
@@ -365,7 +364,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
           <Image
             flex="1 1 100%"
             maxW="min(100%, 816px)"
-            sx={{ objectFit: "cover" }}
+            style={{ objectFit: "cover" }}
             alignSelf="center"
             right={0}
             bottom={0}

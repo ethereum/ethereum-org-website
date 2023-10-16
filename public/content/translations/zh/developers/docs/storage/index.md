@@ -154,7 +154,7 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 
 - [Crust.network](https://crust.network)
 - [相关文档](https://wiki.crust.network)
-- [Github](https://github.com/crustio)
+- [GitHub](https://github.com/crustio)
 
 **Swarm - _以太坊 Web3 堆栈的分布式存储平台和内容分发服务。_**
 

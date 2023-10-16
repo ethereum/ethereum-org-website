@@ -5,7 +5,7 @@ lang: vi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Biểu trưng của Eth được hiển thị qua ảnh ba chiều.
 summaryPoint1: Một cách để đại diện cho bất kỳ thứ gì độc nhất dưới dạng tài sản dựa trên Ethereum.
 summaryPoint2: NFT đang mang lại nhiều quyền lực hơn cho người tạo nội dung hơn bao giờ hết.
@@ -62,7 +62,7 @@ Có thể bạn là một nghệ sĩ muốn chia sẻ tác phẩm của mình b�
 
 Hoặc xem nó như một vé tham gia một sự kiện thể thao. Giống như một nhà tổ chức sự kiện có thể lựa chọn số lượng vé sẽ bán, tác giả của một NFT có thể quyết định số lượng phiên bản NFT tồn tại. Đôi khi chúng là những phiên bản y hệt nhau, ví dụ như 5000 vé tham dự một sự kiện. Đôi khi một số khác thì được phát hành rất tương đồng nhưng mỗi phiên bản sẽ hơi khác nhau, ví dụ như mỗi tấm vé với một số ghế riêng. Những thứ này có thể được bán và mua giữa người dùng mà không phải trả tiền cho các nhà quản lí vé, và người mua luôn đảm bảo được tính xác thực của vé đó bằng cách kiểm tra địa chỉ của hợp đồng đó.
 
-Trên ethereum.org, NFT được dùng để xác thực rằng người dùng đã đóng góp vào kho chứa Github của chúng tôi hoặc đã tham gia các cuộc trò chuyện, và chúng tôi thậm chí có luôn các tên miền NFT của chính mình. Nếu đóng góp cho ethereum.org, bạn có thể yêu cầu một NFT POAP. Một vài sự kiện gặp gỡ trong crypto đã dùng POAP như vé tham gia. [Đọc thêm về việc đóng góp](/contributing/#poap).
+Trên ethereum.org, NFT được dùng để xác thực rằng người dùng đã đóng góp vào kho chứa GitHub của chúng tôi hoặc đã tham gia các cuộc trò chuyện, và chúng tôi thậm chí có luôn các tên miền NFT của chính mình. Nếu đóng góp cho ethereum.org, bạn có thể yêu cầu một NFT POAP. Một vài sự kiện gặp gỡ trong crypto đã dùng POAP như vé tham gia. [Đọc thêm về việc đóng góp](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 

@@ -1,9 +1,11 @@
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 import type { Lang } from "@/lib/types"
 
+import { DEFAULT_LOCALE } from "../constants"
+
 export const numberToPercent = (
   num: number,
-  locale: string | Lang = "en"
+  locale: string | Lang = DEFAULT_LOCALE
 ): string =>
   new Intl.NumberFormat(getLocaleForNumberFormat(locale as Lang), {
     style: "percent",
