@@ -680,7 +680,7 @@ The collective [hashrate](#hashrate) produced by an entire mining network. Minin
 
 ### non-fungible token (NFT) {#nft}
 
-An instance of one of several contract standards, commonly [ERC-721](developers/docs/standards/tokens/erc-721) or [ERC-1155](developers/docs/standards/tokens/erc-1155). Each token is unique and distinct; they are not interchangeable like ETH and [ERC-20 tokens](#token-standard). NFTs can represent ownership of digital or physical assets.
+An instance of one of several contract standards, commonly [ERC-721](/developers/docs/standards/tokens/erc-721/) or [ERC-1155](/developers/docs/standards/tokens/erc-1155/). Each token is unique and distinct; they are not interchangeable like ETH and [ERC-20 tokens](#token-standard). NFTs can represent ownership of digital or physical assets.
 
 <DocLink to="/nft/">
   Non-Fungible Tokens (NFTs)
