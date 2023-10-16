@@ -128,7 +128,7 @@ The time interval between blocks being added to the blockchain.
 
 ### block validation {#block-validation}
 
-The process of checking that a new block contains valid transactions and signatures, builds on the heaviest historical chain (meaning the oen that has accumulated the most attestations in its history), and follows all other consensus rules. Valid blocks are added to the head of the chain and propagated to others on the network. Invalid blocks are disregarded.
+The process of checking that a new block contains valid transactions and signatures, builds on the heaviest historical chain (meaning the one that has accumulated the most attestations in its history), and follows all other consensus rules. Valid blocks are added to the head of the chain and propagated to others on the network. Invalid blocks are disregarded.
 
 ### blockchain {#blockchain}
 
