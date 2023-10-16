@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm"
 import path from "path"
 
 import { getContentBySlug } from "@/lib/utils/md"
-import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
+import rehypeImg from "@/lib/rehype/rehypeImg"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 
 // Layouts
@@ -47,7 +47,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath, locale }]],
+      rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
     },
   })
 
