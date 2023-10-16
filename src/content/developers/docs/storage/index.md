@@ -154,7 +154,7 @@ Proof-of-stake based:
 
 - [Crust.network](https://crust.network)
 - [Documentation](https://wiki.crust.network)
-- [Github](https://github.com/crustio)
+- [GitHub](https://github.com/crustio)
 
 **Swarm - _A distributed storage platform and content distribution service for the Ethereum web3 stack._**
 

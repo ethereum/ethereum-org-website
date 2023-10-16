@@ -60,8 +60,8 @@ import questionBank from "../../data/quizzes/questionBank"
 
 interface IProps {
   quizKey?: string
-  currentHandler: (next?: string) => void
-  statusHandler: (status: QuizStatus) => void
+  currentHandler?: (next?: string) => void
+  statusHandler?: (status: QuizStatus) => void
   maxQuestions?: number
   isStandaloneQuiz?: boolean
 }
@@ -112,7 +112,7 @@ const QuizWidget: React.FC<IProps> = ({
     setSelectedAnswer(null)
 
     if (!isStandaloneQuiz) {
-      statusHandler("neutral")
+      statusHandler?.("neutral")
     }
 
     const currentQuizKey =
@@ -220,11 +220,11 @@ const QuizWidget: React.FC<IProps> = ({
 
     if (!isStandaloneQuiz) {
       if (currentQuestionAnswerChoice?.isCorrect) {
-        statusHandler("success")
+        statusHandler?.("success")
       }
 
       if (!currentQuestionAnswerChoice?.isCorrect) {
-        statusHandler("error")
+        statusHandler?.("error")
       }
     }
   }
@@ -241,7 +241,7 @@ const QuizWidget: React.FC<IProps> = ({
     setShowAnswer(false)
 
     if (!isStandaloneQuiz) {
-      statusHandler("neutral")
+      statusHandler?.("neutral")
     }
   }
 
@@ -274,7 +274,7 @@ const QuizWidget: React.FC<IProps> = ({
 
     // Reset quiz status (modifies bg color for mobile)
     if (!isStandaloneQuiz) {
-      statusHandler("neutral")
+      statusHandler?.("neutral")
     }
 
     if (finishedQuiz) {
@@ -288,7 +288,7 @@ const QuizWidget: React.FC<IProps> = ({
   }
 
   const handleNextQuiz = () => {
-    currentHandler(nextQuiz)
+    currentHandler?.(nextQuiz)
   }
 
   const AnswerIcon = () => {

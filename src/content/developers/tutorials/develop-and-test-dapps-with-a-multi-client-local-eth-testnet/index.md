@@ -362,7 +362,7 @@ And that's it! To recap this short guide, you:
 - Deployed a dApp and ran a simple test against it on the local Ethereum network
 - Configured the underlying Ethereum network to have 3 nodes
 
-We’d love to hear from you on what went well for you, what could be improved, or to answer any of your questions. Don’t hesitate to reach out via [Github](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) or [email us](mailto:feedback@kurtosistech.com)!
+We’d love to hear from you on what went well for you, what could be improved, or to answer any of your questions. Don’t hesitate to reach out via [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) or [email us](mailto:feedback@kurtosistech.com)!
 
 ### Other examples and guides {#other-examples-guides}
 
