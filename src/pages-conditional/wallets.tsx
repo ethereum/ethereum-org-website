@@ -259,7 +259,7 @@ const WalletsPage = ({
             <Text>
               <Translation id="page-wallets-desc-2" />{" "}
             </Text>
-            <CardList content={guides} mb={{ base: 6, lg: 0 }} />
+            <CardList items={guides} mb={{ base: 6, lg: 0 }} />
           </Box>
           <RightColumn>
             <Text>
@@ -400,7 +400,7 @@ const WalletsPage = ({
           <H2>
             <Translation id="page-wallets-stay-safe" />
           </H2>
-          <Box fontSize="xl" lineHeight={1.4} mb={6} color="text300">
+          <Box lineHeight={1.4} mb={6} color="text300">
             <Translation id="page-wallets-stay-safe-desc" />
           </Box>
           <Box>
@@ -446,10 +446,10 @@ const WalletsPage = ({
           <H2>
             <Translation id="page-wallets-tips" />
           </H2>
-          <Box fontSize="xl" lineHeight={1.4} color="text300" mb={6}>
+          <Box lineHeight={1.4} color="text300" mb={6}>
             <Translation id="page-wallets-tips-community" />
           </Box>
-          <CardList content={articles} />
+          <CardList items={articles} />
         </RightColumn>
       </TwoColumnContent>
       <Content>

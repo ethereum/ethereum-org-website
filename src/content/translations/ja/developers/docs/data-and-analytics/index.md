@@ -30,7 +30,7 @@ lang: ja
 
 ## クライアントの多様性
 
-[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は、バグや脆弱性に対する回復力を提供します。そのため、イーサリアムネットワーク全体の健全性にとって重要です。 現在、[clientdiversity.org](https://clientdiversity.org/)、[rated.network](rated.network)、[pool.invis.cloud](pool.invis.cloud)、[slashed.info](slahed.info)、[Ethernodes](https://ethernodes.org/)など、いくつかのクライアント多様性ダッシュボードがあります。
+[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は、バグや脆弱性に対する回復力を提供します。そのため、イーサリアムネットワーク全体の健全性にとって重要です。 現在、[clientdiversity.org](https://clientdiversity.org/)、[rated.network](https://rated.network/)、[slashed.info](https://www.slashed.info/)、[Ethernodes](https://ethernodes.org/)など、いくつかのクライアント多様性ダッシュボードがあります。
 
 ## Dune Analytics {#dune-analytics}
 
