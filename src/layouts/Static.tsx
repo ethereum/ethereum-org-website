@@ -21,6 +21,7 @@ import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import QuizWidget from "@/components/Quiz/QuizWidget"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
 import { mdxTableComponents } from "@/components/Table"
@@ -167,6 +168,7 @@ export const staticComponents = {
   MeetupList,
   NetworkUpgradeSummary,
   UpcomingEventsList,
+  QuizWidget,
   YouTube,
 }
 
