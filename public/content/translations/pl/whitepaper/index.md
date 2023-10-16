@@ -27,7 +27,7 @@ Oto wpis na blogu od Vitalika Buterina, założyciela Ethereum, na temat [prehis
 
 ### Bitcoin jako system przejścia między stanami {#bitcoin-as-a-state-transition-system}
 
-![Zmiana stanu Ethereum](../../../whitepaper/ethereum-state-transition.png)
+![Zmiana stanu Ethereum](./ethereum-state-transition.png)
 
 Z technicznego punktu widzenia księga kryptowalut takich jak Bitcoin może być uważana za system transformacji stanu, gdzie jest "stan" składający się ze statusu własności wszystkich istniejących bitcoinów i "funkcja transformacji stanu", która przyjmuje stan i transakcję oraz wygeneruje nowy stan, który jest rezultatem. Przykładowo w standardowym systemie bankowym stan jest bilansem, transakcja jest prośbą o przeniesienie $X z A do B, a funkcja przejścia stanu zmniejsza wartość na koncie A o $X i zwiększa wartość na koncie B o $X. Jeśli konto A ma w pierwszej kolejności mniej niż X Usd, to stan funkcja przejścia zwraca błąd. Można zatem formalnie zdefiniować:
 
@@ -57,7 +57,7 @@ Pierwsza połowa pierwszego kroku uniemożliwia nadawcom transakcji wydawanie mo
 
 ### Wydobycie {#mining}
 
-![Bloki Ethereum](../../../whitepaper/ethereum-blocks.png)
+![Bloki Ethereum](./ethereum-blocks.png)
 
 Gdybyśmy mieli dostęp do godnej zaufania usługi scentralizowanej, ten system byłby błahy do wdrożenia; można je po prostu zakodować dokładnie tak, jak to opisano, za pomocą scentralizowanego dysku twardy serwera, aby śledzić stan serwera. Jednak za pomocą Bitcoina próbujemy zbudować zdecentralizowaną walutę systemu, więc będziemy musieli połączyć system przejścia stanów z system konsensusu w celu zapewnienia, że ​​wszyscy zgadzają się na kolejność transakcji. Zdecentralizowany proces konsensusu Bitcoina wymaga węzłów w sieci, aby nieustannie próbować tworzyć pakiety transakcji zwanych "blokami". Sieć ma produkować z grubsza jeden blok co dziesięć minut, z każdym blokiem zawierającym znacznik czasu, a nonce, odwołanie do (tj. hash of) poprzedniego bloku i lista wszystkich transakcji, które miały miejsce od poprzedniego bloku. Z czasem tworzy to trwały, ciągle rozwijający się "blockchain", który stale aktualizuje, aby reprezentować najnowszy stan księgi Bitcoin.
 
@@ -87,7 +87,7 @@ Po wykonaniu kroku (1) po kilku minutach jakiś górnik uwzględni transakcję w
 
 ### Drzewa Merkle {#merkle-trees}
 
-![SPV w Bitcoinie](../../../whitepaper/spv-bitcoin.png)
+![SPV w Bitcoinie](./spv-bitcoin.png)
 
 _Po lewej: wystarczy przedstawić tylko niewielką liczbę węzłów w drzewie Merkle, aby przedstawić dowód ważności gałęzi._
 
@@ -180,7 +180,7 @@ Zauważ, że przydział gazu przydzielony przez transakcję lub umowę ma zastos
 
 ### Funkcja Przejścia Stanów Ethereum {#ethereum-state-transition-function}
 
-![Zmiana stanu etheru](../../../whitepaper/ether-state-transition.png)
+![Zmiana stanu etheru](./ether-state-transition.png)
 
 Funkcja zmiany stanu Ethereum, `ZASTOSUJ-(S,TX) -> S'` może być zdefiniowane w następujący sposób:
 
@@ -223,7 +223,7 @@ Formalny model realizacji kodu EVM jest zaskakująco prosty. Podczas gdy maszyna
 
 ### Łańcuch bloków i górnictwo {#blockchain-and-mining}
 
-![Schemat blokowy zastosowania Ethereum](../../../whitepaper/ethereum-apply-block-diagram.png)
+![Schemat blokowy zastosowania Ethereum](./ethereum-apply-block-diagram.png)
 
 Blockchain Ethereum jest pod wieloma względami podobny do łańcucha bloków Bitcoin, choć ma pewne różnice. Główna różnica między Ethereum i Bitcoinem w odniesieniu do architektury blockchain polega na tym, że w odróżnieniu od Bitcoin(który zawiera tylko kopię listy transakcji), Bloki Ethereum zawierają kopię zarówno listy transakcji, jak i najnowszego stanu. Oprócz tego, dwie inne wartości, liczba bloku i trudności, są również przechowywane w bloku. Podstawowy blok algorytm walidacji w Ethereum jest następujący:
 
@@ -427,7 +427,7 @@ Model emisji będzie następujący:
 
 **Długoterminowy wzrost podaży (w procentach)**
 
-![Inflacja w Ethereum](../../../whitepaper/ethereum-inflation.png)
+![Inflacja w Ethereum](./ethereum-inflation.png)
 
 _Pomimo liniowej emisji waluty, podobnie jak w przypadku Bitcoina z czasem stopa wzrostu podaży dąży jednak do zera_
 

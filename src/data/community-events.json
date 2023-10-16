@@ -90,15 +90,6 @@
     "endDate": "2023-10-28"
   },
   {
-    "title": "ETH Montréal",
-    "to": "https://ethmontreal.xyz",
-    "sponsor": null,
-    "location": "Montréal, Canada",
-    "description": "Conference and hackathon with the aim to onboard to Ethereum the students and junior devs from Montréal's world class universities",
-    "startDate": "2023-09-18",
-    "endDate": "2023-09-21"
-  },
-  {
     "title": "ETHGlobal New York",
     "to": "https://ethglobal.com/events/newyork2023",
     "sponsor": null,
@@ -347,8 +338,8 @@
     "sponsor": null,
     "location": "Costa Rica",
     "description": "Full day of learning about Ethereum, onboarding new users and builders.",
-    "startDate": "2023-11-25",
-    "endDate": "2023-11-25"
+    "startDate": "2023-11-18",
+    "endDate": "2023-11-18"
   },
   {
     "title": "ETH Riyadh",
@@ -394,5 +385,14 @@
     "description": "Pragma Istanbul is an in-person summit for builders and leaders in the web3 ecosystem",
     "startDate": "2023-11-16",
     "endDate": "2023-11-16"
+  },
+  {
+    "title": "ETHIndia 2023",
+    "to": "https://ethindia.co/",
+    "sponsor": null,
+    "location": "Bengaluru, India",
+    "description": "ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum.",
+    "startDate": "2023-12-8",
+    "endDate": "2023-12-10"
   }
 ]

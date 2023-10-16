@@ -5,7 +5,6 @@ import {
   Flex,
   Heading,
   Icon,
-  Text,
   chakra,
 } from "@chakra-ui/react"
 
@@ -22,13 +21,14 @@ import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import QuizWidget from "@/components/Quiz/QuizWidget"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
 import { mdxTableComponents } from "@/components/Table"
+import Text from "@/components/OldText"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getLastModifiedDate } from "@/lib/utils/gh"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -169,6 +169,7 @@ export const staticComponents = {
   MeetupList,
   NetworkUpgradeSummary,
   UpcomingEventsList,
+  QuizWidget,
   YouTube,
 }
 
@@ -215,7 +216,7 @@ export const StaticLayout: React.FC<IProps> = ({
             },
           }}
         >
-          <Breadcrumbs slug={slug} />
+          <Breadcrumbs slug={slug} mb="8" />
           <Text
             color="text200"
             dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
@@ -223,7 +224,7 @@ export const StaticLayout: React.FC<IProps> = ({
             {/* TODO: add Translation when i18n is set up  */}
             {/* <Translation id="page-last-updated" />:{" "} */}
             Page last updated:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
           </Text>
 
           {children}

@@ -51,7 +51,7 @@ const ShardChainsList: React.FC<IProps> = () => {
 
   return (
     <Box mb="4rem">
-      <CardList content={reads} />
+      <CardList items={reads} />
     </Box>
   )
 }

@@ -27,7 +27,7 @@ Itt egy blog bejegyzés Vitalik Buterintől, az Ethereum alapítójától az [Et
 
 ### Bitcoin, mint egy állapot átmeneti rendszer {#bitcoin-as-a-state-transition-system}
 
-![Ethereum állapot átmenet](../../../whitepaper/ethereum-state-transition.png)
+![Ethereum állapot átmenet](./ethereum-state-transition.png)
 
 Technikai szempontból egy kriptovaluta, például a Bitcoin főkönyve egy állapot átmeneti rendszernek tekinthető, ahol van egy "állapot", amely számon tartja az összes létező bitcoin tulajdonosi státuszát, és egy "állapot átmeneti függvény", ami az állapothoz egy tranzakció hozzáadásával egy új állapotot eredményez. Például egy szabályos banki rendszerben az állapot a vagyonmérlegnek felel meg, a tranzakció egy kérvény $X összeg átmozgatására A-ból B-be, az állapot átmeneti függvény pedig csökkenti A számlájának értékét $X összeggel, valamint növeli B számlájának értékét $X összeggel. Ha az A számla kevesebb összeggel rendelkezik mint $X, akkor az állapot átmeneti függvény egy hiba jelzést ad vissza. Tehát így definiálható formálisan:
 
@@ -57,7 +57,7 @@ Az első lépés első fele megakadályozza, hogy a tranzakciók feladói nem l�
 
 ### Bányászat {#mining}
 
-![Ethereum blokkok](../../../whitepaper/ethereum-blocks.png)
+![Ethereum blokkok](./ethereum-blocks.png)
 
 Ha hozzáférnénk egy megbízható, központosított szolgáltatáshoz, ezt a rendszert jelentéktelen lenne megvalósítani; mivel ugyanezt pontosan a leírtak szerint lehetne kódolni, egy központosított, azaz centralizált szerver merevlemezén tárolva az állapotot. Azonban a Bitcoinnal egy decentralizált pénz rendszert próbálunk építeni, így az állapot átmeneti rendszert egy konszenzus rendszerrel kell kombinálnunk, hogy biztosítsuk, hogy mindenki egyetért a tranzakciók sorrendje felett. A Bitcoin decentralizált konszenzus folyamata elvárja a hálózat résztvevőitől, hogy folyamatosan tranzakciókból álló csomagokat próbáljanak készíteni, melyeket '"blokkoknak" hívunk. A hálózat nagyjából egy blokkot szándékozik gyártani minden tizedik percben, ahol minden egyes blokk tartalmaz egy időbélyeget, egy nonce-t, egy hivatkozást az előző blokkra (vagyis hash-t), és az összes olyan tranzakciót tartalmazó listát, melyek az előző blokk után következtek. Idővel egy tartós, folyamatosan növekvő "blokklánc" jön létre, mely folyamatosan frissül, hogy a Bitcoin főkönyv legutóbbi állapotát reprezentálja.
 
@@ -87,7 +87,7 @@ Amint az (1) lépés befejeződött, pár perc múlva valamelyik bányász betes
 
 ### Merkle fák {#merkle-trees}
 
-![SPV Bitcoin-ban](../../../whitepaper/spv-bitcoin.png)
+![SPV Bitcoin-ban](./spv-bitcoin.png)
 
 _Bal: elegendő a csomópontok egy kis számát prezentálni a Merkle fában, hogy bizonyítsuk egy ág érvényességét._
 
@@ -180,7 +180,7 @@ Megjegyzendő, hogy a tranzakciók vagy szerződések által kiszabott gas díj 
 
 ### Ethereum állapotátmenet függvény {#ethereum-state-transition-function}
 
-![Ether állapot átmenet](../../../whitepaper/ether-state-transition.png)
+![Ether állapot átmenet](./ether-state-transition.png)
 
 Az Ethereum állapotátmenet függvény, `APPLY(S,TX) -> S'` a következőképpen írható le:
 
@@ -223,7 +223,7 @@ Az EVM kód formális végrehajtási modellje meglepően egyszerű. Amíg az Eth
 
 ### Blokklánc és bányászat {#blockchain-and-mining}
 
-![Ethereum alkalmazás blokkdiagram](../../../whitepaper/ethereum-apply-block-diagram.png)
+![Ethereum alkalmazás blokkdiagram](./ethereum-apply-block-diagram.png)
 
 Az Ethereum blokklánc sok szempontból hasonló a Bitcoin blokklánchoz, bár vannak közöttük különbségek. A fő különbség az Ethereum és a Bitcoin között a blokklánc felépítésének tekintetében az, hogy a Bitcointól eltérően (amely csak a tranzakciós lista másolatát tartalmazza) az Ethereum blokkok tartalmazzák a tranzakciós lista és a legutóbbi állapot másolatát is. Emellett két másik érték, a blokk száma és a nehézsége is tárolva van a blokkban. Az Ethereum blokk érvényesítési algoritmusa a következő:
 
@@ -427,7 +427,7 @@ A kiadási modell a következő:
 
 **Hosszú távú kínálati növekedési ütem (százalék)**
 
-![Ethereum infláció](../../../whitepaper/ethereum-inflation.png)
+![Ethereum infláció](./ethereum-inflation.png)
 
 _A lineáris valuta kibocsátások ellenére, hasonlóan a Bitcoin-hoz időről időre a kínálati növekedési ütem nulla felé tart_
 
