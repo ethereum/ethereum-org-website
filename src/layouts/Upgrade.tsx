@@ -56,7 +56,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
-import type { PageContent, UpgradeFrontmatter } from "@/lib/interfaces"
+import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
@@ -294,7 +294,7 @@ export const upgradeComponents = {
   // MeetupList,
 }
 
-interface IProps extends ChildOnlyProp, PageContent {
+interface IProps extends ChildOnlyProp, MdPageContent {
   frontmatter: UpgradeFrontmatter
 }
 export const UpgradeLayout: React.FC<IProps> = ({
@@ -396,7 +396,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
             {tocItems && (
               <UpgradeTableOfContents
                 items={tocItems}
-                maxDepth={frontmatter.sidebarDepth!}
+                maxDepth={frontmatter.sidebarDepth || 2}
               />
             )}
           </InfoColumn>

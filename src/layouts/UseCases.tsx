@@ -50,7 +50,7 @@ import YouTube from "@/components/YouTube"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang } from "@/lib/types"
-import { PageContent } from "@/lib/interfaces"
+import { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 // TODO: Move reused markdown components to separate components file, and remove exports from here
 
@@ -267,7 +267,9 @@ export const MobileButton = (props: ChildOnlyProp) => {
   )
 }
 
-interface IProps extends PageContent, ChildOnlyProp {}
+interface IProps extends ChildOnlyProp, MdPageContent {
+  frontmatter: UseCasesFrontmatter
+}
 export const UseCasesLayout: React.FC<IProps> = ({
   children,
   frontmatter,
@@ -393,7 +395,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
                 </ListItem>
               ))}
             </UnorderedList>
-            <TableOfContents items={tocItems} maxDepth={2} isMobile />
+            <TableOfContents items={tocItems} maxDepth={frontmatter.sidebarDepth || 2} isMobile />
           </Box>
         </TitleCard>
         <Image

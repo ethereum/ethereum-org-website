@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm"
 import { join } from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
+import { getLastModifiedDate } from "@/lib/utils/gh"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 
@@ -30,8 +31,8 @@ import {
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
-import { NextPageWithLayout, StaticPaths } from "@/lib/types"
-import { getLastModifiedDate } from "@/lib/utils/gh"
+import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
+import type { ToCItem } from "@/lib/interfaces"
 
 const layoutMapping = {
   static: StaticLayout,

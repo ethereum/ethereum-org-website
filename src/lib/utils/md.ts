@@ -3,9 +3,9 @@ import { join, extname } from "path"
 import matter from "gray-matter"
 
 import { generateTableOfContents } from "@/lib/utils/toc"
+import type { MdPageContent } from "@/lib/interfaces"
+import type { Frontmatter } from "@/lib/types"
 import { getFallbackEnglishPath, removeEnglishPrefix } from "@/lib/utils/i18n"
-
-import type { PageContent } from "@/lib/interfaces"
 
 import { CONTENT_DIR, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
@@ -111,9 +111,9 @@ export const getContentBySlug = (slug: string) => {
   }
 
   const fileContents = fs.readFileSync(fullPath, "utf8")
-  const { data: frontmatter, content } = matter(fileContents)
-
-  const items: PageContent = {
+  const { data, content } = matter(fileContents)
+  const frontmatter = data as Frontmatter
+  const items: MdPageContent = {
     slug,
     content,
     frontmatter,

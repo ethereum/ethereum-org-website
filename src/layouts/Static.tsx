@@ -32,7 +32,7 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
-import type { PageContent } from "@/lib/interfaces"
+import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 const Pre = (props: ChildOnlyProp) => (
   <Text
@@ -174,8 +174,8 @@ export const staticComponents = {
   YouTube,
 }
 
-interface IProps extends PageContent, ChildOnlyProp {
-  lastUpdatedDate: string
+interface IProps extends ChildOnlyProp, MdPageContent {
+  frontmatter: StaticFrontmatter
 }
 export const StaticLayout: React.FC<IProps> = ({
   children,
@@ -226,7 +226,7 @@ export const StaticLayout: React.FC<IProps> = ({
             {/* TODO: add Translation when i18n is set up  */}
             {/* <Translation id="page-last-updated" />:{" "} */}
             Page last updated:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
           </Text>
           <TableOfContents
             position="relative"
