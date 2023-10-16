@@ -49,7 +49,7 @@ import {
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
-import type { PageContent } from "@/lib/interfaces"
+import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
@@ -101,13 +101,10 @@ export const roadmapComponents = {
   // MeetupList,
 }
 
-interface IProps extends PageContent, ChildOnlyProp {}
-export const RoadmapLayout: React.FC<IProps> = ({
-  children,
-  frontmatter,
-  slug,
-  tocItems,
-}) => {
+interface IProps extends MdPageContent, ChildOnlyProp {
+  frontmatter: RoadmapFrontmatter
+}
+export const RoadmapLayout: React.FC<IProps> = ({ children, frontmatter, slug, tocItems }) => {
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const dropdownLinks: ButtonDropdownList = {

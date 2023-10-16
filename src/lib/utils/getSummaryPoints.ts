@@ -1,12 +1,7 @@
-import { Frontmatter } from "../types"
+import { SummaryPointsNumbered } from "@/lib/interfaces"
 
 export const getSummaryPoints = (
-  frontmatter: Partial<
-    Pick<
-      Frontmatter,
-      "summaryPoint1" | "summaryPoint2" | "summaryPoint3" | "summaryPoint4"
-    >
-  >,
+  frontmatter: SummaryPointsNumbered,
   count = 4
 ): Array<string> => {
   // Place summary points into an array, guarding for `undefined` values
