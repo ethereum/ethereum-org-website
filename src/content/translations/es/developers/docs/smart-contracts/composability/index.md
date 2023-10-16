@@ -57,7 +57,7 @@ Si crea un dapp que requiere que las transacciones se paguen en ETH, puede permi
 
 ### Gobernanza {#governance}
 
-Crear sistemas de gobernanza a medida para una [DAO](/dao/) puede ser costoso y consumir mucho tiempo. En su lugar, se podría utilizar un kit de herramientas de gobernanza de código abierto, como <0">Aragon Client</a>, para arrancar la DAO y poder crear rápidamente un marco de gobernanza.
+Crear sistemas de gobernanza a medida para una [DAO](/dao/) puede ser costoso y consumir mucho tiempo. En su lugar, se podría utilizar un kit de herramientas de gobernanza de código abierto, como [Aragon Client](https://client.aragon.org/), para arrancar la DAO y poder crear rápidamente un marco de gobernanza.
 
 ### Gestión de identidades {#identity-management}
 
