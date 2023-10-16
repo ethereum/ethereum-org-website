@@ -27,7 +27,7 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 ### address {#address}
 
-A string of 64 characters representing an [EOA](#eoa) or [contract](#contract-account) account in Ethereum's state tree. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
+A string of 40 characters representing an [EOA](#eoa) or [contract](#contract-account) account in Ethereum's state tree. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
 ### application binary interface (ABI) {#abi}
 
