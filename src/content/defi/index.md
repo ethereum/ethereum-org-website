@@ -21,8 +21,8 @@ Defi stands out from traditional financial services in several significant ways:
 
 - **Self custody** - Users maintain custody of their assets, guaranteeing access and keeping control for themselves
 - **Open access** - Decentralized finance operates across border, providing open access to financial services without geographical restrictions
-- **Transparent** - The code underlying decentralized finance is open sourced, allowing anyone to inspect how these financial systems operate
-- **Composable** - Financial primatives, such as lending, can be created and built on to create new applications
+- **Transparent** - The code underlying decentralized finance is open sourced, allowing anyone to inspect how these financial systems operate and where funds are moving
+- **Composable** - Financial primatives, such as lending, can iterated on to create new applications
 - **Censorship resistant** - Decentralized finance is built on decentralized blockchains, making it extremely difficult to censor transactions
 
 | DeFi                                                                                                           | Traditional finance                                                                          |
@@ -43,16 +43,16 @@ In contrast, Ethereum operates on a decentralized and open blockchain. Instead o
 
 You can think of DeFi in layers:
 
-1. The blockchain - Ethereum contains the transaction history and state of accounts
-2. The assets - ETH and other tokens stored on Ethereum
-3. The protocols - smart contracts thats provide the functionality, for example, decentralized lending of assets
-4. The applications - user interfaces thats are used to interact with the protocols
+1. Protocol and network - Ethereum rules of operation, and distributed network of nodes
+2. The blockchain - the data containing transaction history and state of accounts
+3. Primitives - composable smart contracts such as token contracts (assets) and other finance tools
+4. The applications - user interfaces that are used to interact with the protocols
 
 ## What can you do with DeFi? {#what-can-you-do-with-defi}
 
 ### Payments {#payments}
 
-Ethereum is designed for sending transactions around the world. You are able to send a payment by entering the recipients account address, and send funds directly in a matter of seconds to minutes. To send of receive payments, you will need a wallet.
+One of the most basic forms of decentralized finance is digital peer-to-peer value transfers. Ethereum is designed for sending transactions around the world. You are able to send a payment by entering the recipients account address, and send funds directly in a matter of seconds to minutes. To send of receive payments, you will need a wallet.
 
 <ButtonLink to="/wallets/">More on wallets</ButtonLink>
 
@@ -68,7 +68,7 @@ You can lend your assets to lending pools for others to take loans out against. 
 
 ### Decentralized exchanges {#dex}
 
-A decentralized exchange (DEX) is a digital marketplace for cryptocurrency trading that operates without a central authority or intermediary. It enables peer-to-peer trading of cryptocurrencies directly between users through smart contracts, where users create pools of liquidity to be used for exchange for a fee, eliminating the need for a traditional intermediary like a bank or exchange.
+A decentralized exchange (DEX) is a digital marketplace for cryptocurrency trading that operates without a central authority or intermediary, and allows users to maintain full control of their assets throughout the entire exchange. It enables peer-to-peer trading of cryptocurrencies directly between users through smart contracts, where users create pools of liquidity to be used for exchange for a fee, eliminating the need for a traditional intermediary like a bank or exchange.
 
 ### Quadratic funding {#quadratic-funding}
 
