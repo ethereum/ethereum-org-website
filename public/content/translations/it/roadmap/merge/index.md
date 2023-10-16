@@ -3,7 +3,7 @@ title: La Fusione
 description: "Scopri La Fusione: quando la Rete principale di Ethereum ha adottato il Poof of stake."
 lang: it
 template: upgrade
-image: ../../../../../assets/upgrades/merge.png
+image: /upgrades/merge.png
 summaryPoint1: La Rete Principale di Ethereum usa il proof-of-stake, ma non è sempre stato così.
 summaryPoint2: L'aggiornamento dal meccanismo originale di proof-of-work al proof-of-stake è stato chiamato La Fusione.
 summaryPoint3: La Fusione si riferisce alla fusione della Rete Principale originale di Ethereum con una blockchain di proof-of-stake separata, detta Beacon Chain, ora esistenti come un'unica catena.

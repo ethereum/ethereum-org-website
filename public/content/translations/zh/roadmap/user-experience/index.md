@@ -2,7 +2,7 @@
 title: 改善用户体验
 description: 对于大多数人来说，使用以太坊仍然过于复杂。 为了促进以太坊的大规模普及，必须大幅降低其进入门槛 - 必须让用户在访问以太坊时，享受去中心化、无需许可和抗审查的好处，同时像使用传统的 Web2 应用一样丝滑顺畅。
 lang: zh
-image: ../../../../../assets/roadmap/roadmap-ux.png
+image: /roadmap/roadmap-ux.png
 alt: "以太坊路线图"
 template: roadmap
 ---

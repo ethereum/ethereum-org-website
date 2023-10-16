@@ -61,7 +61,7 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
 
   let href = (to ?? hrefProp)!
 
-  const { asPath } = useRouter()
+  const { asPath, locale } = useRouter()
   const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
 
   const isDiscordInvite = url.isDiscordInvite(href)
@@ -103,11 +103,17 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
     )
   }
 
-  return <NextLink {...commonProps}>{children}</NextLink>
+  return (
+    <NextLink locale={locale} {...commonProps}>
+      {children}
+    </NextLink>
+  )
 })
 
-const InlineLink: FC<LinkProps> = forwardRef((props, ref) => (
-  <BaseLink data-inline-link ref={ref} {...props} />
-))
+const InlineLink: FC<LinkProps> = forwardRef((props, ref) => {
+  const { locale } = useRouter()
+
+  return <BaseLink data-inline-link ref={ref} locale={locale} {...props} />
+})
 
 export default InlineLink

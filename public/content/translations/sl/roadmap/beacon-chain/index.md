@@ -3,7 +3,7 @@ title: Oddajniška veriga
 description: Več informacij o oddajniški verigi – nadgradnji, s katero je bil uveden Ethereum z dokazom o deležu.
 lang: sl
 template: upgrade
-image: ../../../../../assets/upgrades/core.png
+image: /upgrades/core.png
 summaryPoint1: Oddajniška veriga je v Ethereumovo okolje vpeljala dokaz o deležu.
 summaryPoint2: Z izvirno Ethereumovo verigo, ki je uporabljala dokaz o delu, je bila spojena septembra 2022.
 summaryPoint3: Oddajniška veriga je vpeljala protokol z logiko za doseganje soglasja in blokiranja lažnih govoric, ki zdaj ščiti Ethereum.

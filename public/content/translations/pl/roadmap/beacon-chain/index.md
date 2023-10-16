@@ -3,7 +3,7 @@ title: Łańcuch śledzący
 description: Dowiedz się więcej o łańcuchu śledzącym — uaktualnieniu, które wprowadziło mechanizm proof-of-stake w sieci Ethereum.
 lang: pl
 template: upgrade
-image: ../../../../../assets/upgrades/core.png
+image: /upgrades/core.png
 summaryPoint1: Łańcuch śledzący wprowadził mechanizm proof-of-stake do ekosystemu Ethereum.
 summaryPoint2: Został on połączony z pierwotnym łańcuchem proof-of-work Ethereum we wrześniu 2022 roku.
 summaryPoint3: Łańcuch śledzący wprowadził logikę konsensusu i protokół uzgadniania bloków, które obecnie zabezpieczają Ethereum.

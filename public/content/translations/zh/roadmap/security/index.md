@@ -2,7 +2,7 @@
 title: 更安全的以太坊
 description: 以太坊是现有的最安全和去中心化的智能合约平台。 然而，我们仍可以进行一些改进，以确保以太坊能够抵御未来任何程度的攻击。
 lang: zh
-image: ../../../../../assets/roadmap/roadmap-security.png
+image: /roadmap/roadmap-security.png
 alt: "以太坊路线图"
 template: roadmap
 ---

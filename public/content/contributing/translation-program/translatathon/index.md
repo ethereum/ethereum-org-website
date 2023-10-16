@@ -4,7 +4,7 @@ description: Join the first ethereum.org Translatathon to contribute to ethereum
 lang: en
 template: event
 sidebarDepth: 2
-image: ../../../../assets/assets/translatathon-hero.png
+image: /assets/translatathon-hero.png
 buttons:
   - label: Apply to participate
     to: https://translatathon.paperform.co/

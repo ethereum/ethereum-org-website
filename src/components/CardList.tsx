@@ -1,19 +1,18 @@
-import React, { ReactNode } from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
+import { ReactNode } from "react"
 import {
   Box,
-  BoxProps,
   Flex,
   HStack,
   LinkBox,
   LinkOverlay,
-  StackProps,
+BoxProps,
+StackProps,
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { BaseLink } from "./Link"
-import GatsbyImage from "./GatsbyImage"
-import * as url from "../utils/url"
+import { BaseLink } from "@/components/Link"
+import { Image, type ImageProps } from "@/components/Image"
+import * as url from "@/lib/utils/url"
 
 export type CardListItem = {
   title?: ReactNode
@@ -21,32 +20,25 @@ export type CardListItem = {
   caption?: ReactNode
   link?: string
   id?: string
-  image?: IGatsbyImageData
+  image?: ImageProps["src"]
   alt?: string
 }
 
-export interface IProps extends BoxProps {
-  content: Array<CardListItem>
-  clickHandler?: (idx: string | number) => void
-}
-
-const CardContainer = (props: StackProps) => {
-  return (
-    <HStack
-      spacing={4}
-      p={4}
-      color="text"
-      border="1px solid"
-      borderColor="border"
-      _hover={{
-        borderRadius: "base",
-        boxShadow: "0 0 1px var(--eth-colors-primary)",
-        background: "tableBackgroundHover",
-      }}
-      {...props}
-    />
-  )
-}
+const CardContainer = (props: StackProps) => (
+  <HStack
+    spacing={4}
+    p={4}
+    color="text"
+    border="1px solid"
+    borderColor="border"
+    _hover={{
+      borderRadius: "base",
+      boxShadow: "0 0 1px var(--eth-colors-primary)",
+      background: "tableBackgroundHover",
+    }}
+    {...props}
+  />
+)
 
 const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
   const { title, description, caption, link, image, alt, ...rest } = props
@@ -58,7 +50,7 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
 
   return (
     <CardContainer {...rest}>
-      {image && <GatsbyImage image={image} alt={alt || ""} minW="20px" />}
+      {image && <Image src={image} alt={alt ?? ""} minW="20px" />}
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
           <LinkOverlay
@@ -91,13 +83,18 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
   )
 }
 
+export interface IProps extends BoxProps {
+  items: Array<CardListItem>
+  clickHandler?: (idx: string | number) => void
+}
+
 const CardList: React.FC<IProps> = ({
-  content,
+  items,
   clickHandler = () => null,
   ...rest
 }) => (
   <Box bg="background.base" w="full" {...rest}>
-    {content.map((listItem, idx) => {
+    {items.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link
 

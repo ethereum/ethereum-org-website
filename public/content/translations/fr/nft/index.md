@@ -5,7 +5,7 @@ lang: fr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Un logo Eth affiché par hologramme.
 summaryPoint1: Un moyen de représenter toute chose unique en tant qu'actif Ethereum.
 summaryPoint2: Les NFT offrent plus de possibilités que jamais aux créateurs de contenus.
@@ -62,7 +62,7 @@ Vous êtes peut-être un artiste qui souhaite partager ses œuvres à l'aide de 
 
 Par exemple, pensez à un billet pour un événement sportif. Tout comme l'organisateur d'un événement peut décider du nombre de billets à vendre, le créateur d'un NFT peut décider du nombre de répliques existantes. Il s'agit parfois de répliques exactes telles que 5 000 billets d'admission générale. Parfois, plusieurs très similaires sont créés, chacun légèrement différent, comme un billet avec un siège assigné. Ils peuvent être achetés et vendus de pair à pair sans avoir à payer de frais de billetterie et l'acheteur peut toujours s'assurer de l'authenticité du billet en vérifiant l'adresse du contrat.
 
-Sur ethereum.org, les NFT sont utilisés pour montrer que des personnes ont contribué à notre dépôt Github ou assisté à des appels, et nous avons même notre propre nom de domaine NFT. Si vous contribuez à ethereum.org, vous pouvez demander un POAP NFT. Certains rassemblements crypto ont utilisé des POAP comme billets. [Plus d'infos sur la contribution](/contributing/#poap).
+Sur ethereum.org, les NFT sont utilisés pour montrer que des personnes ont contribué à notre dépôt GitHub ou assisté à des appels, et nous avons même notre propre nom de domaine NFT. Si vous contribuez à ethereum.org, vous pouvez demander un POAP NFT. Certains rassemblements crypto ont utilisé des POAP comme billets. [Plus d'infos sur la contribution](/contributing/#poap).
 
 ![POAP ethereum.org](./poap.png)
 

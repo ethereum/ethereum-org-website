@@ -5,7 +5,7 @@ lang: es
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Un logotipo Eth mostrado a través de un holograma.
 summaryPoint1: Una forma de representar cualquier cosa exclusiva como un activo de Ethereum.
 summaryPoint2: Los NFT están otorgando más poder a los creadores de contenido que nunca.
@@ -62,7 +62,7 @@ Tal vez usted es un artista que quiere compartir su arte a través de los NFT, s
 
 O pongamos, por ejemplo, una entrada a un evento deportivo. Al igual que el organizador de un evento puede escoger el número de entradas que va a vender, el creador de un NFT también puede decidir cuántas copias existirán. En algunos casos las copias son idénticas, como 5.000 entradas de admisión general. Algunas veces muchas copias acuñadas son muy similares, pero cada una difiere ligeramente, como una entrada con un asiento asignado. Estas se pueden comprar y vender entre pares directamente, sin tener que pasar por promotores o intermediarios de venta, porque pueden asegurarse de la autenticidad de la entrada revisando la dirección del contrato donde se crearon.
 
-Aquí en ethereum.org, utilizamos NFT para reconocer a las personas que han contribuido a nuestro repositorio de Github, su asistencia a las reuniones, e incluso tenemos nuestro NFT del nombre de nuestro dominio. Si contribuye a ethereum.org, puede reclamar un NFT POAP. Algunos eventos y encuentros de criptomonedas utilizan POAP (protocolos de prueba de asistencia) para sus entradas. [Más información sobre cómo contribuir](/contributing/#poap).
+Aquí en ethereum.org, utilizamos NFT para reconocer a las personas que han contribuido a nuestro repositorio de GitHub, su asistencia a las reuniones, e incluso tenemos nuestro NFT del nombre de nuestro dominio. Si contribuye a ethereum.org, puede reclamar un NFT POAP. Algunos eventos y encuentros de criptomonedas utilizan POAP (protocolos de prueba de asistencia) para sus entradas. [Más información sobre cómo contribuir](/contributing/#poap).
 
 ![POAP de ethereum.org](./poap.png)
 

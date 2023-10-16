@@ -1,4 +1,4 @@
-import { Frontmatter, TranslationKey } from "./types"
+import { Frontmatter, Lang, TranslationKey } from "./types"
 
 /**
  * Quiz data interfaces
@@ -56,9 +56,34 @@ export interface ToCItem {
 /**
  * Layout interface
  */
+
+export interface Root {
+  children: JSX.Element
+  contentIsOutdated: boolean
+  contentNotTranslated: boolean
+}
+
 export interface PageContent {
   slug: string
   content: string
   frontmatter: Frontmatter
   tocItems: Array<ToCItem>
+  lastUpdatedDate?: string
+  contentNotTranslated: boolean
+}
+
+export interface RequiredFrontmatter {
+  title: string
+  lang: Lang
+}
+
+export interface UpgradeFrontmatter extends RequiredFrontmatter {
+  description: string
+  sidebarDepth?: number
+  summaryPoint1?: string
+  summaryPoint2?: string
+  summaryPoint3?: string
+  summaryPoint4?: string
+  image?: string
+  isOutdated?: boolean
 }

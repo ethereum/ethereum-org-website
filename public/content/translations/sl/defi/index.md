@@ -4,7 +4,7 @@ description: Pregled DeFi na Ethereumu
 lang: sl
 template: use-cases
 emoji: ":money_with_wings:"
-image: ../../../../assets/use-cases/defi.png
+image: /use-cases/defi.png
 alt: Logotip Ethereum narejen iz lego kock.
 sidebarDepth: 2
 summaryPoint1: Globalna, odprta alternativa trenutnemu finančnemu sistemu.

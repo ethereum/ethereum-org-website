@@ -4,7 +4,7 @@ description: Havuzlanmış ETH faiz getirisi elde etmeye nasıl başlanacağına
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Gergedan Leslie bulutlarda dalgalanıyor.
 sidebarDepth: 2
 summaryPoints:
@@ -22,7 +22,7 @@ Hizmet olarak staking ("SaaS"), bir doğrulayıcı için kendi 32 ETH'nizi yat�
 Ethereum protokolü doğal olarak pay devrini desteklemez, bu nedenle bu hizmetler bu talebi karşılamak için oluşturulmuştur. Stake edilecek 32 ETH'niz varsa, ancak donanımla uğraşmaktan rahatsızlık duyuyorsanız, SaaS hizmetleri, yerel blok ödülleri kazanırken zor kısmı devretmenize izin verir.
 
 <CardGrid>
-  <Card title="Sizin kendi doğrulayıcılarınız" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Sizin kendi doğrulayıcılarınız" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Başlaması kolay" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Riskinizi sınırlayın" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>

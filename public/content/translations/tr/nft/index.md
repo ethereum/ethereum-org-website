@@ -5,7 +5,7 @@ lang: tr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Hologram ile gösterilen bir Eth logosu.
 summaryPoint1: Benzersiz bir şeyi Ethereum tabanlı bir varlık olarak göstermenin yolu.
 summaryPoint2: NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor.
@@ -62,7 +62,7 @@ Belki de eserlerinizi NFT'leri kullanarak paylaşmak isteyen, eserlerinizin kont
 
 Yahut bir spor etkinliğine ait bileti düşünün. Bir etkinlik organizatörü kaç bilet satılacağına karar verdiği gibi, bir NFT'nin oluşturucusu da kaç kopya olacağına karar verebilir. Bazen bunlar, 5000 Genel Giriş bileti gibi birebir kopyalardır. Bazen birbirine çok benzer ama her biri biraz farklı olan kopyalar basılır, örneğin sıralı ve sınırlı atanmış koltuk numarası olan bir bilet gibi. Bu biletler, bilet işletmecilerine ödeme yapmadan eşten eşe alınıp satılabilir ve alıcı, sözleşme adresini kontrol ederek biletin özgünlüğünden her zaman emin olabilir.
 
-Ethereum.org'da NFT'ler, Github deposuna katkıda bulunan kişileri veya çağrılara katılanları göstermek için kullanılır ve hatta kendi NFT etki alanı adımıza da sahip oluruz. Ethereum.org'a katkıda bulunursanız, bir POAP NFT'si talep edebilirsiniz. Bazı kripto buluşmaları için POAP'lar bilet olarak kullanıldı. [Katkıda bulunma hakkında daha fazla bilgi](/contributing/#poap).
+Ethereum.org'da NFT'ler, GitHub deposuna katkıda bulunan kişileri veya çağrılara katılanları göstermek için kullanılır ve hatta kendi NFT etki alanı adımıza da sahip oluruz. Ethereum.org'a katkıda bulunursanız, bir POAP NFT'si talep edebilirsiniz. Bazı kripto buluşmaları için POAP'lar bilet olarak kullanıldı. [Katkıda bulunma hakkında daha fazla bilgi](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 

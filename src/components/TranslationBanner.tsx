@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react"
 
 import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
 import { ButtonLink } from "./Buttons"
-import Translation from "./Translation"
+// import Translation from "./Translation"
 import Emoji from "./Emoji"
+
+import { DEFAULT_LOCALE } from "../lib/constants"
 
 export interface IProps {
   shouldShow: boolean
@@ -73,7 +75,9 @@ const TranslationBanner: React.FC<IProps> = ({
               lineHeight="100%"
               my="0"
             >
-              <Translation id={headerTextId} />
+              {/* TODO: enable after setting i18n UI strings */}
+              {/* <Translation id={headerTextId} /> */}
+              {headerTextId}
             </Heading>
             <Emoji
               text=":globe_showing_asia_australia:"
@@ -83,7 +87,9 @@ const TranslationBanner: React.FC<IProps> = ({
             />
           </Flex>
           <p>
-            <Translation id={bodyTextId} />
+            {/* TODO: enable after setting i18n UI strings */}
+            {/* <Translation id={bodyTextId} /> */}
+            {bodyTextId}
           </p>
           <Flex
             align={{ base: "flex-start", sm: "center" }}
@@ -91,7 +97,9 @@ const TranslationBanner: React.FC<IProps> = ({
           >
             <Box>
               <ButtonLink to="/contributing/translation-program/">
-                <Translation id="translation-banner-button-translate-page" />
+                {/* TODO: enable after setting i18n UI strings */}
+                {/* <Translation id="translation-banner-button-translate-page" /> */}
+                translation-banner-button-translate-page
               </ButtonLink>
             </Box>
             {!isPageContentEnglish && (
@@ -103,9 +111,11 @@ const TranslationBanner: React.FC<IProps> = ({
                   mt={{ base: 2, sm: 0 }}
                   borderColor="#333333"
                   color="#333333"
-                  language="en"
+                  lang={DEFAULT_LOCALE}
                 >
-                  <Translation id="translation-banner-button-see-english" />
+                  {/* TODO: enable after setting i18n UI strings */}
+                  {/* <Translation id="translation-banner-button-see-english" /> */}
+                  translation-banner-button-see-english
                 </ButtonLink>
               </Box>
             )}

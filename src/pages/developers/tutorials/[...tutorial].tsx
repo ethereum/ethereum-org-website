@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm"
 import path from "path"
 
 import { getContentBySlug } from "@/lib/utils/md"
-import rehypeImgSize from "@/lib/rehype/rehypeImgSize"
+import rehypeImg from "@/lib/rehype/rehypeImg"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 
 // Layouts
@@ -31,10 +31,12 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   context
 ) => {
   const params = context.params!
+  const { locale } = context
 
   const tutorialPath = path.join(tutorialsPath, params.tutorial.join("/"))
   const markdown = getContentBySlug(tutorialPath)
   const frontmatter = markdown.frontmatter
+  const contentNotTranslated = markdown.contentNotTranslated
   // TODO: see how we can handle the published date on the tutorial's layout
   // since we can't send the Date object anymore
   frontmatter.published = frontmatter.published.toString()
@@ -46,11 +48,11 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }]],
+      rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
     },
   })
 
-  const lastUpdatedDate = await getLastModifiedDate(tutorialPath)
+  const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
 
   return {
     props: {
@@ -58,6 +60,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
       slug: tutorialPath,
       frontmatter,
       lastUpdatedDate,
+      contentNotTranslated,
     },
   }
 }
@@ -74,12 +77,16 @@ const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
 
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
-  // `slug`, `frontmatter` and `lastUpdatedDate` values are returned by `getStaticProps` method and passed to the page component
-  const { slug, frontmatter, lastUpdatedDate } = page.props
+  // values returned by `getStaticProps` method and passed to the page component
+  const { slug, frontmatter, lastUpdatedDate, contentNotTranslated } =
+    page.props
   const layoutProps = { slug, frontmatter, lastUpdatedDate }
 
   return (
-    <RootLayout>
+    <RootLayout
+      contentIsOutdated={frontmatter.isOutdated}
+      contentNotTranslated={contentNotTranslated}
+    >
       <TutorialLayout {...layoutProps}>{page}</TutorialLayout>
     </RootLayout>
   )

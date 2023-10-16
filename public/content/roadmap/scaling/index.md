@@ -2,7 +2,7 @@
 title: Scaling Ethereum
 description: Rollups batch transactions together off-chain, reducing costs for the user. However, the way rollups currently use data is currently too expensive, limiting how cheap transactions can be. Proto-Danksharding fixes this.
 lang: en
-image: ../../../assets/roadmap/roadmap-transactions.png
+image: /roadmap/roadmap-transactions.png
 alt: "Ethereum roadmap"
 template: roadmap
 ---
@@ -10,11 +10,11 @@ template: roadmap
 Ethereum is scaled using [layer 2s](/layer-2/#rollups) (also known as rollups), which batch transactions together and send the output to Ethereum. Even though rollups are up to eight times less expensive than Ethereum Mainnet, it's possible to optimize rollups further to reduce costs for end users. Rollups also rely on some centralized components that developers can remove as the rollups mature.
 
 <InfoBanner mb={8} title="Transaction costs">
-  <ul style="margin-bottom: 0">
+  <ul style={{ marginBottom: 0 }}>
     <li>Today’s rollups are <strong>~3-8x</strong> cheaper than Ethereum layer 1</li>
     <li>ZK-rollups will soon lower fees by <strong>~40-100x</strong></li>
     <li>Upcoming changes to Ethereum will provide another <strong>~100-1000x</strong> of scaling</li>
-    <li style="margin-bottom: 0">Users should benefit from transactions <strong>costing less than $0.001</strong></li>
+    <li style={{ marginBottom: 0 }}>Users should benefit from transactions <strong>costing less than $0.001</strong></li>
   </ul>
 </InfoBanner>
 

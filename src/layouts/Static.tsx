@@ -5,7 +5,6 @@ import {
   Flex,
   Heading,
   Icon,
-  Text,
   chakra,
 } from "@chakra-ui/react"
 
@@ -20,16 +19,17 @@ import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
+import { mdxTableComponents } from "@/components/Table"
 import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import QuizWidget from "@/components/Quiz/QuizWidget"
 import TableOfContents from "@/components/TableOfContents"
+import Text from "@/components/OldText"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
-import { mdxTableComponents } from "@/components/Table"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getLastModifiedDate } from "@/lib/utils/gh"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { PageContent } from "@/lib/interfaces"
@@ -170,6 +170,7 @@ export const staticComponents = {
   MeetupList,
   NetworkUpgradeSummary,
   UpcomingEventsList,
+  QuizWidget,
   YouTube,
 }
 
@@ -217,7 +218,7 @@ export const StaticLayout: React.FC<IProps> = ({
             },
           }}
         >
-          <Breadcrumbs slug={slug} />
+          <Breadcrumbs slug={slug} mb="8" />
           <Text
             color="text200"
             dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}

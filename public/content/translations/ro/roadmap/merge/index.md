@@ -3,7 +3,7 @@ title: Fuziunea
 description: Aflați mai multe despre Fuziune, când Rețeaua principală Ethereum a adoptat dovada mizei.
 lang: ro
 template: upgrade
-image: ../../../../../assets/upgrades/merge.png
+image: /upgrades/merge.png
 summaryPoint1: Rețeaua principală Ethereum folosește dovada mizei, dar nu a fost întotdeauna așa.
 summaryPoint2: Modernizarea de la mecanismul original al dovezii muncii la dovada mizei a purtat numele de Fuziune.
 summaryPoint3: Fuziunea se referă la fuziunea dintre Rețeaua principală Ethernet și un blockchain dovada mizei separat, numit Lanțul Beacon, ceea ce acum funcționează ca un singur lanț.

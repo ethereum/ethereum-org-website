@@ -2,9 +2,12 @@ import fs from "fs"
 import { join, extname } from "path"
 import matter from "gray-matter"
 
-import { CONTENT_DIR } from "@/lib/constants"
 import { generateTableOfContents } from "@/lib/utils/toc"
+import { getFallbackEnglishPath, removeEnglishPrefix } from "@/lib/utils/i18n"
+
 import type { PageContent } from "@/lib/interfaces"
+
+import { CONTENT_DIR, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
@@ -18,29 +21,39 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/community/code-of-conduct",
     "/community/events",
     "/community/support",
+    "/dao",
+    "/decentralized-identity",
+    "/defi",
+    "/desci",
+    "/developers/tutorials/all-you-can-cache",
     "/energy-consumption",
     "/glossary",
     "/governance",
     "/guides/how-to-swap-tokens",
     "/history/",
-    "/smart-contracts",
-    "/whitepaper",
-    "/defi",
     "/nft",
-    "/dao",
-    "/desci",
     "/refi",
+    "/roadmap",
+    "/roadmap/account-abstraction",
+    "/roadmap/beacon-chain",
+    "/roadmap/danksharding",
+    "/roadmap/future-proofing",
+    "/roadmap/merge",
+    "/roadmap/pbs",
+    "/roadmap/scaling",
+    "/roadmap/secret-leader-election",
+    "/roadmap/security",
+    "/roadmap/single-slot-finality",
+    "/roadmap/statelessness",
+    "/roadmap/user-experience",
+    "/roadmap/verkle-trees",
+    "/smart-contracts",
     "/social-networks",
-    "/decentralized-identity",
-    "/developers/tutorials/all-you-can-cache",
+    "/web3",
+    "/whitepaper",
   ]
 
-  // Skip /translations dir for now until we set up i18n
-  // Skip /developers dir for now until we set up required layout
-  if (dir.includes("/translations")) return []
-
-  // Get an array of all files and directories in the passed directory using
-  // fs.readdirSync
+  // Get an array of all files and directories in the passed directory using `fs.readdirSync`
   const fileList = fs.readdirSync(contentDir)
 
   // Create the full path of the file/directory by concatenating the passed directory and file/directory name
@@ -49,9 +62,10 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
 
     // Check if the current file/directory is a directory using fs.statSync
     if (fs.statSync(name).isDirectory()) {
-      // If it is a directory, recursively call the getFiles function with the
+      // If it is a directory, recursively call the `getPostSlugs` function with the
       // directory path and the files array
       const nestedDir = join(dir, file)
+
       getPostSlugs(nestedDir, files)
     } else {
       const fileExtension = extname(name)
@@ -60,9 +74,12 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
         // If it is a .md file (allowed content page), push the path to the files array
         for (const page of temporalAllowedPages) {
           const fullPagePath = join(CURRENT_CONTENT_DIR, page)
+
           if (name.includes(fullPagePath)) {
             files.push(
-              name.replace(CURRENT_CONTENT_DIR, "").replace("/index.md", "")
+              fullPagePath
+                .replace(CURRENT_CONTENT_DIR, "")
+                .replace("/index.md", "")
             )
           }
         }
@@ -74,8 +91,25 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
 }
 
 export const getContentBySlug = (slug: string) => {
-  const realSlug = `${slug}/index.md`
-  const fullPath = join(CURRENT_CONTENT_DIR, realSlug)
+  // If content is in english, remove en/ prefix so filepath can be read correctly
+  let realSlug = removeEnglishPrefix(slug)
+
+  for (const code of LOCALES_CODES) {
+    // Adds `translations/` prefix for translated content so file path can be read correctly
+    if (code !== DEFAULT_LOCALE && slug.split("/").includes(code)) {
+      realSlug = join("translations", slug, "index.md")
+    }
+  }
+
+  let fullPath = join(CURRENT_CONTENT_DIR, realSlug)
+  let contentNotTranslated = false
+
+  // If content is not translated, use english content fallback
+  if (!fs.existsSync(fullPath)) {
+    fullPath = getFallbackEnglishPath(fullPath)
+    contentNotTranslated = true
+  }
+
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data: frontmatter, content } = matter(fileContents)
 
@@ -84,6 +118,7 @@ export const getContentBySlug = (slug: string) => {
     content,
     frontmatter,
     tocItems: generateTableOfContents(content),
+    contentNotTranslated,
   }
 
   return items

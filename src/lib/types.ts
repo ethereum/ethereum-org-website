@@ -12,6 +12,7 @@ export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
+// TODO: Build out Frontmatter schemas
 export type Frontmatter = { [key: string]: any }
 
 export type Lang =
@@ -70,6 +71,8 @@ export type Lang =
   | "vi"
   | "zh"
   | "zh-tw"
+
+export type StaticPaths = { params: { slug: string[] }; locale: string }[]
 
 export type TranslationKey = string
 
