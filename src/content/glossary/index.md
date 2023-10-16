@@ -795,7 +795,7 @@ An amount of ether [awarded to validators](developers/docs/consensus-mechanisms/
 
 ### Recursive Length Prefix (RLP) {#rlp}
 
-An [encoding standard](developers/docs/data-structures-and-encoding) designed by the Ethereum developers to encode and serialize objects (data structures) of arbitrary complexity and length.
+An [encoding standard](/developers/docs/data-structures-and-encoding/) designed by the Ethereum developers to encode and serialize objects (data structures) of arbitrary complexity and length.
 
 ### rollups {#rollups}
 
