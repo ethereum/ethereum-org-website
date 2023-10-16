@@ -7,7 +7,7 @@ emoji: ":money_with_wings:"
 image: ../../assets/use-cases/defi.png
 alt: City scape with defi product signs
 summaryPoint1: DeFi operates without centralized intermediaries
-summaryPoint2: Products that let you borrow, save, invest, trade, and more.
+summaryPoint2: Includes products that let you borrow, save, invest, trade, and more
 summaryPoint3: Based on open-source technology that anyone can program with.
 ---
 
