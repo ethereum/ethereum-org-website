@@ -19,7 +19,7 @@ Decentralized finance, also known as DeFi, is a peer-to-peer financial ecosystem
 
 Defi stands out from traditional financial services in several significant ways:
 
-- **Non-custodial** - Users maintain custody of their keys ensuring access their assets returning more control to the user
+- **Self custody** - Users maintain custody of their assets, guaranteeing access and keeping control for themselves
 - **Open access** - Decentralized finance operates across border, providing open access to financial services without geographical restrictions
 - **Transparent** - The code underlying decentralized finance is open sourced, allowing anyone to inspect how these financial systems operate
 - **Composable** - Financial primatives, such as lending, can be created and built on to create new applications
