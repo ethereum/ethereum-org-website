@@ -5,7 +5,7 @@ lang: id
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: ../../../../assets/use-cases/dao-2.png
+image: /use-cases/dao-2.png
 alt: Sebuah representasi DAO yang mengambil suara untuk sebuah usulan.
 summaryPoint1: Komunitas yang dimiliki anggota tanpa kepemimpinan terpusat.
 summaryPoint2: Cara yang aman untuk berkolaborasi dengan orang asing di internet.

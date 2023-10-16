@@ -154,7 +154,7 @@ Hisse ispatı tabanlı:
 
 - [Crust ağı](https://crust.network)
 - [Belgeler](https://wiki.crust.network)
-- [Github](https://github.com/crustio)
+- [GitHub](https://github.com/crustio)
 
 **Swarm - _Ethereum web3 yığını için dağıtılmış bir depolama platformu ve içerik dağıtım hizmeti._**
 

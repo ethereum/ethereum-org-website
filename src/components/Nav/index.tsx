@@ -86,6 +86,7 @@ const Nav: FC<IProps> = ({ path }) => {
               />
               <HStack spacing={2} hideBelow="lg">
                 <IconButton
+                  transition="transform 0.5s, color 0.2s"
                   icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
                   aria-label={
                     isDarkTheme
@@ -95,14 +96,26 @@ const Nav: FC<IProps> = ({ path }) => {
                   variant="ghost"
                   isSecondary
                   px={1.5}
+                  _hover={{
+                    transform: "rotate(10deg)",
+                    color: "primary.hover",
+                  }}
                   onClick={toggleColorMode}
                 ></IconButton>
                 <ButtonLink
                   to={`/languages/${fromPageParameter}`}
+                  transition="color 0.2s"
                   leftIcon={<Icon as={MdLanguage} />}
                   variant="ghost"
                   isSecondary
                   px={1.5}
+                  _hover={{
+                    color: "primary.hover",
+                    "& svg": {
+                      transform: "rotate(10deg)",
+                      transition: "transform 0.5s",
+                    },
+                  }}
                 >
                   {/* TODO */}
                   {/* {t("languages")} {i18n.language.toUpperCase()} */}

@@ -212,7 +212,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
           <Image
             flex="1 1 100%"
             maxW="min(100%, 816px)"
-            sx={{ objectFit: "cover" }}
+            style={{ objectFit: "cover" }}
             alignSelf="center"
             right={0}
             bottom={0}

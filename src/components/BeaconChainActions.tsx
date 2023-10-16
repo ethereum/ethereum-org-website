@@ -22,25 +22,6 @@ const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   </OldHeading>
 )
 
-// export const DataLogo = graphql`
-//   fragment DataLogo on File {
-//     childImageSharp {
-//       gatsbyImageData(
-//         width: 24
-//         layout: FIXED
-//         placeholder: BLURRED
-//         quality: 100
-//       )
-//     }
-//   }
-// `
-
-
-// type BeaconQueryTypes = {
-//   beaconscan: ImageDataLike | null
-//   beaconchain: ImageDataLike | null
-// }
-
 const BeaconChainActions: React.FC = () => {
   // TODO: Re-enable after i18n implemented
   // const { t } = useTranslation()
@@ -109,12 +90,12 @@ const BeaconChainActions: React.FC = () => {
         Explore the data
       </H3>
 
-      <CardList content={datapoints} />
+      <CardList items={datapoints} />
       <H3>
         {/* <Translation id="read-more" /> */}
         Read more
       </H3>
-      <CardList content={reads} />
+      <CardList items={reads} />
     </Box>
   )
 }

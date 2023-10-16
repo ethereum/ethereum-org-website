@@ -45,7 +45,7 @@ summaryPoints:
 <InfoGrid>
   <ExpandableCard title="중요한 읽을거리" eventCategory="SoloStaking" eventName="clicked required reading">
     자신의 노드를 직접 운영할 때 선택한 소프트웨어를 사용하는 방법에 대해 알아봐야 합니다. 여기에는 관련 문서를 읽거나 해당하는 개발 팀의 통신 채널에 주목하는 것도 포함됩니다.
-    실행하는 소프트웨어와 지분 증명 작동의 원리를 잘 이해할수록 스테이커로서의 위험 부담이 낮아지며 노드 운영자로서 도중에 발생할 수 있는 문제를 더 쉽게 해결할 수 있습니다. 
+    실행하는 소프트웨어와 지분 증명 작동의 원리를 잘 이해할수록 스테이커로서의 위험 부담이 낮아지며 노드 운영자로서 도중에 발생할 수 있는 문제를 더 쉽게 해결할 수 있습니다.
   </ExpandableCard>
   <ExpandableCard title="컴퓨터와 익숙하게" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
     새로운 도구를 통해 작업이 더 쉬워지더라도 노드를 설치하려면 컴퓨터를 사용하는 작업에 어느 정도 친숙해야 합니다. 명령줄 인터페이스를 이해하는 것이 도움은 되지만 더 이상 반드시 필요한 것은 아닙니다.
@@ -66,7 +66,7 @@ summaryPoints:
   </ExpandableCard>
   <ExpandableCard title="슬래싱 리스크" eventCategory="SoloStaking" eventName="clicked slashing risk">
     오프라인 상태가 되어 받는 비활동 상태에 대한 불이익과는 달리, <em>슬래싱</em>은 악의적 행동에 대한 훨씬 심각한 불이익입니다. 한 번에 하나의 시스템에만 로드된 키를 사용하여 소수의 클라이언트를 실행하면 슬래시 처리될 위험성이 최소화됩니다. 이를 통해 알 수 있듯이 모든 스테이커는 슬래싱의 위험성을 주의해야 합니다.
-    
+
     <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">슬래싱 및 검증자의 주기 자세히 알아보기</a></p>
   </ExpandableCard>
 </InfoGrid>
