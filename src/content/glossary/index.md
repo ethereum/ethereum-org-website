@@ -791,7 +791,7 @@ An attack that consists of an attacker contract calling a victim contract functi
 
 ### reward {#reward}
 
-An amount of ether [awarded to validators](developers/docs/consensus-mechanisms/pos/rewards-and-penalties) that perform certain functions, including proposing a block or participating in a sync-committee, in each slot.
+An amount of ether [awarded to validators](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/) that perform certain functions, including proposing a block or participating in a sync-committee, in each slot.
 
 ### Recursive Length Prefix (RLP) {#rlp}
 
