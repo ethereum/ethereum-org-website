@@ -33,6 +33,7 @@ const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({ item: { titl
 }
 
 const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
+  // Return early if maxDepth hit, or if no items
   if (depth > maxDepth || !items) return null
   return (
     <>

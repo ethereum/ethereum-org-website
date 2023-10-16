@@ -44,8 +44,8 @@ const TableOfContents: React.FC<IProps> = ({
 
   if (!isMobile) {
     const getTitleIds = (items: Array<ToCItem>, depth: number): void => {
-      if (depth > (maxDepth ?? 1)) return
-
+      // Return early if maxDepth hit
+      if (depth > maxDepth) return
       items?.forEach(({ url, items }) => {
         titleIds.push(url)
         items && getTitleIds(items, depth + 1)
