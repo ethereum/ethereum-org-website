@@ -58,7 +58,7 @@ Ethereum is designed for sending transactions around the world. You are able to 
 
 ### Stablecoins {#stablecoins}
 
-Stablecoins are cryptocurrencies whose price is pegged toe the value of another asset, typically a fiat currency. Stablecoins introduced the option for users to hold cryptocurrency with a stable price not subject to high volatility. While the name implies stablecoins are stable, they are not without risk, and are more centralized than other forms of cryptocurrency due to them often being backed by reserves in a centralized institution.
+Stablecoins are cryptocurrencies whose price is pegged to the value of another asset, typically a fiat currency. Stablecoins introduced the option for users to hold cryptocurrency with a stable price not subject to high volatility. While the name implies stablecoins are stable, they are not without risk, and are often more centralized than other forms of cryptocurrency due to them commonly being backed by reserves in a centralized institution.
 
 <ButtonLink to="/stablecoins/">More on stablecoins</ButtonLink>
 
