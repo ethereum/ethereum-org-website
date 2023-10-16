@@ -4,9 +4,17 @@ import sizeOf from "image-size"
 import type { Plugin } from "unified"
 import type { Root } from "hast"
 
+import {
+  checkIfImageIsTranslated,
+  getTranslatedImgPath,
+} from "@/lib/utils/i18n"
+
+import { DEFAULT_LOCALE } from "../constants"
+
 interface Options {
   dir: string
   srcPath: string
+  locale: string
 }
 
 /**
@@ -45,6 +53,7 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
   const opts = options || {}
   const dir = opts.dir
   const srcPath = opts.srcPath
+  const locale = opts.locale
 
   return (tree, _file) => {
     visit(tree, "element", (node) => {
@@ -56,7 +65,15 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
           return
         }
 
-        node.properties.src = path.join(srcPath, src)
+        const originalPath = path.join(srcPath, src)
+        const translatedImgPath = getTranslatedImgPath(originalPath, locale)
+        const imageIsTranslated = checkIfImageIsTranslated(translatedImgPath)
+
+        // If translated image exists and current locale is not 'en', use it instead of original
+        node.properties.src =
+          imageIsTranslated && locale !== DEFAULT_LOCALE
+            ? translatedImgPath
+            : originalPath
         node.properties.width = dimensions.width
         node.properties.height = dimensions.height
         node.properties.aspectRatio =
