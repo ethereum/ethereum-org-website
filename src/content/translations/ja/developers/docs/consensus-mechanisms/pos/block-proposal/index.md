@@ -64,6 +64,6 @@ class BeaconBlockBody(Container):
 
 - [ブロック入門](/developers/docs/blocks/)
 - [プルーフ・オブ・ステーク入門](/developers/docs/consensus-mechanisms/pos/)
-- [イーサリアムにおけるコンセンサスの仕様](www.github.com/ethereum/consensus-specs)
+- [イーサリアムにおけるコンセンサスの仕様](https://github.com/ethereum/consensus-specs)
 - [ガスパー入門](/developers/docs/consensus-mechanisms/pos/)
 - [イーサリアムのアップグレード](https://eth2book.info/)

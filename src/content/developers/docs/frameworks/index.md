@@ -30,10 +30,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 ## Available frameworks {#available-frameworks}
 
-**Truffle -** **_A development environment, testing framework, build pipeline, and other tools._**
+**Foundry** - **_Foundry is a blazing fast, portable and modular toolkit for Ethereum application development_**
 
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
+- [Install Foundry](https://book.getfoundry.sh/)
+- [Foundry book](https://book.getfoundry.sh/)
+- [Foundry community chat on Telegram](https://t.me/foundry_support)
+- [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
 **Hardhat -** **_Ethereum development environment for professionals._**
 
@@ -45,22 +47,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Brownie -** **_Python-based development environment and testing framework._**
-
-- [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/eth-brownie/brownie)
-
 **Web3j -** **_A platform for developing blockchain applications on the JVM._**
 
 - [Homepage](https://www.web3labs.com/web3j-sdk)
 - [Documentation](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
-
-**OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
-
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Community Forum](https://forum.openzeppelin.com/c/support/17)
 
 **Create Eth App -** **_Create Ethereum-powered apps with one command. Comes with a wide offering of UI frameworks and DeFi templates to choose from._**
 
@@ -87,12 +78,6 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**Foundry -** **_A blazing fast, portable and modular toolkit for Ethereum application development written in Rust._**
-
-- [Documentation](https://book.getfoundry.sh/)
-- [GitHub](https://github.com/gakonst/foundry/)
-- [Tools for Foundry](https://github.com/crisgarner/awesome-foundry)
-
 **NodeReal -** **_Ethereum Development Platform._**
 
 - [Nodereal.io](https://nodereal.io/)
@@ -109,6 +94,25 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
+
+**Brownie -** **_Python-based development environment and testing framework._**
+
+- [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
+- [GitHub](https://github.com/eth-brownie/brownie)
+- **Brownie is currently unmaintained**
+
+**Truffle -** **_A development environment, testing framework, build pipeline, and other tools._**
+
+- [trufflesuite.com](https://www.trufflesuite.com/)
+- [GitHub](https://github.com/trufflesuite/truffle)
+- **Truffle development has ended** - [read more](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
+
+**OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
+
+- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [Community Forum](https://forum.openzeppelin.com/c/support/17)
+- **OpenZeppelin SDK development has ended**
 
 ## Further reading {#further-reading}
 

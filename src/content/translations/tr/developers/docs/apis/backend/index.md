@@ -165,7 +165,7 @@ Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın ka
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Dokümanlar](https://services.tokeniew/docs?type=api)
-- [Github](https://github.com/Tokenview)
+- [GitHub](https://github.com/Tokenview)
 
 ## Daha fazla bilgi {#further-reading}
 
@@ -173,7 +173,7 @@ _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzen
 
 ## İlgili konular {#related-topics}
 
-- [ Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
+- [Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
 - [Geliştirici çerçeveleri](/developers/docs/frameworks/)
 
 ## İlgili öğreticiler {#related-tutorials}
