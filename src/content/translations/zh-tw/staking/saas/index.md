@@ -48,7 +48,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="saas" />
 
-切記，支援[用戶端多元化](/developers/docs/nodes-and-clients/client-diversity/)極為重要，因為這可以提高網路的安全性，降低你的風險。 如果某服務可以證明它會限制主流用戶端的使用，則稱它具有<em style="text-transform: uppercase;">「執行層用戶端多樣性」</em>和<em style="text-transform: uppercase;">「共識層用戶端多樣性」</em>。
+切記，支援[用戶端多元化](/developers/docs/nodes-and-clients/client-diversity/)極為重要，因為這可以提高網路的安全性，降低你的風險。 如果某服務可以證明它會限制主流用戶端的使用，則稱它具有<em style={{ textTransform: "uppercase" }}>「執行層用戶端多樣性」</em>和<em style={{ textTransform: "uppercase" }}>「共識層用戶端多樣性」</em>。
 
 #### 金鑰產生器
 

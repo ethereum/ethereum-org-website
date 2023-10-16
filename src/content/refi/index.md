@@ -18,7 +18,7 @@ summaryPoint3: A tool to drastically scale ecological benefit assets like verifi
 
 Instead, ReFi aims to solve environmental, communal, or social problems by creating regenerative cycles. These systems create value for participants while simultaneously benefiting ecosystems and communities.
 
-One of the foundations of ReFi is the concept of regenerative economics pioneered by John Fullerton of the [Capital Institute](https://capitalinstitute.org). He proposed eight interconnected principles that underlie systemic health:
+One of the foundations of ReFi is the concept of regenerative economics pioneered by John Fullerton of the Capital Institute. He proposed [eight interconnected principles](https://capitalinstitute.org/8-principles-regenerative-economy/) that underlie systemic health:
 
 ![Eight interconnected principles](../../assets/use-cases/refi-regenerative-economy-diagram.png)
 

@@ -70,7 +70,7 @@ Kurtosis 是一个用于多容器测试环境的构建系统，它让开发人�
 
 - [以太坊网络包](https://github.com/kurtosis-tech/eth-network-package)
 - [网站](https://www.kurtosis.com/)
-- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [相关文档](https://docs.kurtosis.com/)
 
 ## 延伸阅读 {#further-reading}

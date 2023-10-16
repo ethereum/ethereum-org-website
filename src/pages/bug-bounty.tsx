@@ -442,7 +442,7 @@ const BugBountiesPage = ({
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Breadcrumbs slug={location.pathname} />
+            <Breadcrumbs slug={location.pathname} mb="8" />
             <Row>
               <On />
               <Title>
@@ -581,7 +581,7 @@ const BugBountiesPage = ({
                 >
                   <Translation id="page-upgrades-bug-bounty-specs-docs" />
                 </OldHeading>
-                <CardList content={specs} />
+                <CardList items={specs} />
               </Box>
             </StyledCard>
             <StyledCard
@@ -623,7 +623,7 @@ const BugBountiesPage = ({
                 >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
                 </OldHeading>
-                <CardList content={clients} />
+                <CardList items={clients} />
               </Box>
             </StyledCard>
             <StyledCard
