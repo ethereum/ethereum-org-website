@@ -632,7 +632,7 @@ Memory hard functions are processes that experience a drastic decrease in speed 
 
 ### Merkle Patricia trie {#merkle-patricia-tree}
 
-A [data structure](developers/docs/data-structures-and-encoding) used in Ethereum to efficiently store key-value pairs.
+A [data structure](/developers/docs/data-structures-and-encoding/) used in Ethereum to efficiently store key-value pairs.
 
 ### message {#message}
 
