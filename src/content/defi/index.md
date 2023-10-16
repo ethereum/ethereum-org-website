@@ -64,7 +64,7 @@ Stablecoins are cryptocurrencies whose price is pegged toe the value of another 
 
 ### Lending and borrowing {#lending-and-borrowing}
 
-You can lend your assets to lending pools for others to take loans out against. When you lend assets to a pool, you can earn interest based on the demand for borrowing of that asset. Most loans in DeFi are over-collateralized and use cryptocurrencies like ETH as collateral, meaning you deposit more crypto than you borrow. Smart contracts handle the rules, like how much collateral you need and the interest rate you borrow at. If your account balance drops below a certain level, it's automatically sold to cover the loan.
+You can lend your assets to lending pools for others to take loans out against. When you lend assets to a pool, you can earn interest based on the demand for borrowing of that asset. Most loans in DeFi are over-collateralized and use cryptocurrencies like ETH as collateral, meaning you deposit more crypto than you borrow. Smart contracts handle the rules, like how much collateral you need and the interest rate you borrow at. If your collateral value drops below a certain level, it's automatically sold to cover the loan.
 
 ### Decentralized exchanges {#dex}
 
