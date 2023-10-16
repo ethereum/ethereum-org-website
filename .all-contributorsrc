@@ -10577,6 +10577,78 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Coderoostr",
+      "name": "Marcos González",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103231131?v=4",
+      "profile": "https://coderoostr.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "natpicone",
+      "name": "Natalino Picone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4753402?v=4",
+      "profile": "https://chainlabo.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "hammadsaedi",
+      "name": "Hammad Saaedi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71373419?v=4",
+      "profile": "https://github.com/hammadsaedi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "srn08",
+      "name": "Shaunak Nagrecha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105499798?v=4",
+      "profile": "https://github.com/srn08",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "schwindtkevin",
+      "name": "Kevin Schwindt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1700789?v=4",
+      "profile": "https://github.com/schwindtkevin",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "robertkodra",
+      "name": "Robert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36516516?v=4",
+      "profile": "https://github.com/robertkodra",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "0xObsidian",
+      "name": "obsidian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/131651958?v=4",
+      "profile": "https://github.com/0xObsidian",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "MohamedFekryyy",
+      "name": "Fekry Aiad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36033065?v=4",
+      "profile": "http://www.scienft.com",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

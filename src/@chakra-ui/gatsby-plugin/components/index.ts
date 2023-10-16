@@ -2,6 +2,7 @@ import { Alert } from "./Alert"
 import { Avatar } from "./Avatar"
 import { Badge } from "./Badge"
 import { Button } from "./Button"
+import { Breadcrumb } from "./Breadcrumb"
 import { Heading } from "./Heading"
 import { Link } from "./Link"
 import { Tag } from "./Tag"
@@ -17,7 +18,6 @@ import { Switch } from "./Switch"
 import { Input } from "./Input"
 import {
   accordionDefaultTheme,
-  breadcrumbDefaultTheme,
   closeButtonDefaultTheme,
   codeDefaultTheme,
   dividerDefaultTheme,
@@ -34,7 +34,7 @@ export default {
   Alert,
   Avatar,
   Badge,
-  Breadcrumb: breadcrumbDefaultTheme,
+  Breadcrumb,
   Button,
   Checkbox,
   CloseButton: closeButtonDefaultTheme,

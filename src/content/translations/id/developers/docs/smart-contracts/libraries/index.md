@@ -20,7 +20,7 @@ Ketika menulis kontrak pintar, ada kemungkinan Anda akan menemukan bahwa Anda me
 
 Pustaka kontrak pintar biasanya menyediakan implementasi yang dapat digunakan kembali dari perilaku ini sebagai [pustaka](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) atau lewat [warisan](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) dalam Solidity.
 
-Sebagai contoh, berikut ini adalah versi sederhana dari kontrak [`Yang dapat Dimiliki`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) dari [pustaka Kontrak OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), yang mendesain alamat sebagai pemilik kontrak, dan menyediakan pengubah untuk membatasi akses pada metode yang hanya terkait dengan pemilik tersebut.
+Sebagai contoh, berikut ini adalah versi sederhana dari kontrak [`Ownable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) dari [pustaka Kontrak OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), yang mendesain alamat sebagai pemilik kontrak, dan menyediakan pengubah untuk membatasi akses pada metode yang hanya terkait dengan pemilik tersebut. ownableownable.
 
 ```solidity
 contract Ownable {
@@ -37,7 +37,7 @@ contract Ownable {
 }
 ```
 
-Untuk menggunakan blok pembangun seperti ini dalam kontrak, Anda perlu mengimpornya terlebih dahulu, dan kemudian memperpanjangnya dari kontrak milik Anda. Ini akan memungkinkan Anda menggunakan pengubah yang disediakan oleh basis kontrak `Yang dapat dimiliki` untuk mengamankan fungsi Anda.
+Untuk menggunakan blok pembangun seperti ini dalam kontrak, Anda perlu mengimpornya terlebih dahulu, dan kemudian memperpanjangnya dari kontrak milik Anda. Ini akan memungkinkan Anda menggunakan pengubah yang disediakan oleh basis kontrak `Ownable` untuk mengamankan fungsi Anda.
 
 ```solidity
 import ".../Ownable.sol"; // Jalan ke pustaka yang diimpor
@@ -102,11 +102,16 @@ Terakhir, saat memutuskan apakah akan memasukkan suatu pustaka, pertimbangkan pe
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**SDK Solidity thirdweb -** **_Menyediakan alat yang dibutuhkan untuk membuat kontrak pintar khusus dengan efisien_**
+
+- [Dokumentasi](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## Tutorial terkait {#related-tutorials}
 
-- [Pertimbangan keamanan untuk pengembang Ethereum](/developers/docs/smart-contracts/security/) _– Sebuah tutorial tentang pertimbangan keamanan ketika menyusun kontrak pintar, termasuk pemakaian pustaka._
+- [Pertimbangan keamanan untuk pengembang Ethereum](/developers/docs/smart-contracts/security/) _– Tutorial tentang pertimbangan keamanan pada saat membuat kontrak pintar, termasuk pemakaian pustaka._
 - [Pahami kontrak pintar token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- Tutorial tentang standar ERC20, yang disediakan oleh berbagai pustaka._
 
 ## Bacaan lebih lanjut {#further-reading}
 
-_Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
+_Tahu tentang referensi komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

@@ -47,7 +47,7 @@ const PageDivider = () => (
 )
 
 const PageContent = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+  <Flex flexDirection="column" gap="8" py={4} px={8} w="full" {...props} />
 )
 
 const H2 = (props: HeadingProps) => (

@@ -62,7 +62,7 @@ Bəlkə siz NFT-lərdən istifadə edərək, nəzarəti itirmədən və qazancı
 
 Və ya bir idman tədbirinə bileti düşünün. Bir tədbirin təşkilatçısı neçə bilet satacağını seçə bildiyi kimi, NFT-nin yaradıcısı da neçə replikanın mövcudluğuna qərar verə bilər. Bəzən bunlar 5000 Ümumi Qəbul biletləri kimi dəqiq replikalardır. Bəzən çox oxşar, lakin hər biri bir qədər fərqli olan bir neçəsi zərb edilir, məsələn, təyin edilmiş oturacaqlı bilet. Bunları, bilet idarəçilərinə pul ödəmədən və alıcı həmişə müqavilə ünvanını yoxlayaraq biletin həqiqiliyinə əmin olaraq, almaq və satmaq olar.
 
-Ethereum.org saytında NFT-lər insanların Github repozitoriyamıza töhfə verdiyini və ya zənglərə cavab verdiyini nümayiş etdirmək üçün istifadə olunur və bizim hətta öz NFT domen adımız var. Ethereum.org-a töhfə versəniz, POAP NFT-ni tələb edə bilərsiniz. Bəzi kriptovalyuta görüşləri bilet kimi POAP-lardan istifadə etmişdir. [Töhfə haqqında daha çox məlumat](/contributing/#poap).
+Ethereum.org saytında NFT-lər insanların GitHub repozitoriyamıza töhfə verdiyini və ya zənglərə cavab verdiyini nümayiş etdirmək üçün istifadə olunur və bizim hətta öz NFT domen adımız var. Ethereum.org-a töhfə versəniz, POAP NFT-ni tələb edə bilərsiniz. Bəzi kriptovalyuta görüşləri bilet kimi POAP-lardan istifadə etmişdir. [Töhfə haqqında daha çox məlumat](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 
