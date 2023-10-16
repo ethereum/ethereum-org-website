@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react"
-import { useRouter } from "next/router"
 
 import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
 import { ButtonLink } from "./Buttons"
 // import Translation from "./Translation"
 import Emoji from "./Emoji"
+
+import { DEFAULT_LOCALE } from "../lib/constants"
 
 export interface IProps {
   shouldShow: boolean
@@ -21,7 +22,6 @@ const TranslationBanner: React.FC<IProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(shouldShow)
   const [textColor] = useToken("colors", ["text"])
-  const { locale } = useRouter()
 
   useEffect(() => {
     setIsOpen(shouldShow)
@@ -111,7 +111,7 @@ const TranslationBanner: React.FC<IProps> = ({
                   mt={{ base: 2, sm: 0 }}
                   borderColor="#333333"
                   color="#333333"
-                  lang={locale}
+                  lang={DEFAULT_LOCALE}
                 >
                   {/* TODO: enable after setting i18n UI strings */}
                   {/* <Translation id="translation-banner-button-see-english" /> */}
