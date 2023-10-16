@@ -23,7 +23,7 @@ Defi stands out from traditional financial services in several significant ways:
 - **Open access** - Decentralized finance operates across border, providing open access to financial services without geographical restrictions
 - **Transparent** - The code underlying decentralized finance is open sourced, allowing anyone to inspect how these financial systems operate
 - **Composable** - Financial primatives, such as lending, can be created and built on to create new applications
-- **Decentralized** - Decentralized finance is build on censorship resistant blockchains, making it extremely difficult to censor transactions
+- **Censorship resistant** - Decentralized finance is built on decentralized blockchains, making it extremely difficult to censor transactions
 
 | DeFi                                                                                                           | Traditional finance                                                                          |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
