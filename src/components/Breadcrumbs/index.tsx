@@ -6,6 +6,7 @@ import {
   BreadcrumbLink,
   BreadcrumbProps,
 } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 
 import { BaseLink } from "../Link"
 
@@ -39,14 +40,10 @@ const Breadcrumbs: React.FC<IProps> = ({
 }) => {
   // TODO: update when i18n is set up
   // const { t } = useTranslation()
-  // const { language } = useI18next()
-  const language = "en"
+  const { locale } = useRouter()
 
-  // TODO: update when i18n is set up
-  // const hasHome = originalSlug.includes(`/${language}/`)
-  const hasHome = true
-  const slug = originalSlug.replace(`/${language}/`, "/")
-
+  const hasHome = originalSlug.includes(`/${locale}/`)
+  const slug = originalSlug.replace(`/${locale}/`, "/")
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
 
