@@ -14,7 +14,7 @@ const baseStyle = defineMergeStyles(defaultBaseStyle, {
 })
 
 const variantSecondary = defineStyle({
-  borderColor: "primary100",
+  borderColor: "orange.100",
   color: "text",
 })
 
@@ -23,11 +23,42 @@ const variantSolid = defineStyle({
   background: "primary100",
 })
 
+const variantGreen = defineStyle({
+  color: "white",
+  background: "green.500",
+})
+
+const variantBlue = defineStyle({
+  color: "black",
+  background: "blue.300",
+})
+
+const variantRed = defineStyle({
+  color: "white",
+  background: "red.500",
+})
+
+const variantPink = defineStyle({
+  color: "black",
+  background: "red.100",
+})
+
+const variantGray = defineStyle({
+  color: "black",
+  background: "gray.300",
+})
+
 export const Badge = defineStyleConfig({
   baseStyle,
   variants: {
     solid: variantSolid,
     secondary: variantSecondary,
+    green: variantGreen,
+    purple: variantSolid,
+    red: variantRed,
+    pink: variantPink,
+    gray: variantGray,
+    blue: variantBlue,
   },
   sizes: {
     sm: {
