@@ -107,7 +107,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
       rehypePlugins: [
-        [rehypeImgSize, { dir: mdDir, srcPath: mdPath }],
+        [rehypeImgSize, { dir: mdDir, srcPath: mdPath, locale }],
         [rehypeHeadingIds],
       ],
     },

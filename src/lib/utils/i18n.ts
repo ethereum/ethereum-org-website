@@ -1,6 +1,7 @@
+import { existsSync } from "fs"
 import { join } from "path"
 
-import { DEFAULT_LOCALE } from "../constants"
+import { DEFAULT_LOCALE, TRANSLATED_IMAGES_DIR } from "../constants"
 
 // If content is not translated, read it from english path as fallback
 export const getFallbackEnglishPath = (path: string) => {
@@ -17,3 +18,12 @@ export const removeEnglishPrefix = (slug: string) => {
     ? join(slug.split("en/")[1], "index.md")
     : join(slug, "index.md")
 }
+
+export const getTranslatedImgPath = (originalPath: string, locale: string) =>
+  join(
+    `${TRANSLATED_IMAGES_DIR}/${locale}`,
+    originalPath.split("/content/").slice(1).join("/")
+  )
+
+export const checkIfImageIsTranslated = (translatedImgPath: string) =>
+  existsSync(join("public", translatedImgPath))

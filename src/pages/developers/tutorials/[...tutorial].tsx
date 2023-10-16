@@ -47,7 +47,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath }]],
+      rehypePlugins: [[rehypeImgSize, { dir: mdDir, srcPath: mdPath, locale }]],
     },
   })
 
