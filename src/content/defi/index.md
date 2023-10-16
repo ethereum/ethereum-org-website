@@ -13,7 +13,7 @@ summaryPoint3: Based on open-source technology that anyone can program with
 
 ## What is decentralized finance (DeFi)? {#what-is-defi}
 
-Decentralized finance, also known as DeFi, is a peer-to-peer financial ecosystem built on Ethereum. It creates financial services like payments, lending, borrowing, and trading using Ethereum and <a href="/glossary/#smart-contract">smart contracts</a>.
+Decentralized finance, also known as DeFi, is a peer-to-peer financial ecosystem built on Ethereum. It enables financial services like payments, lending, borrowing, and trading using Ethereum and <a href="/glossary/#smart-contract">smart contracts</a>, which do not require any trusted central authority or bank to settle.
 
 ### DeFi compared to traditional financial services {#defi-compared}
 
