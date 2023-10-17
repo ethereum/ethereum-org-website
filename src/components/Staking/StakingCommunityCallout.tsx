@@ -6,7 +6,7 @@ import CalloutBanner from "@/components/CalloutBanner"
 // import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import image from "@/../public/enterprise-eth.png"
+import image from "@/public/enterprise-eth.png"
 
 export interface IProps extends FlexProps {
   id?: string
@@ -19,7 +19,8 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
   return (
     <CalloutBanner
       {...props}
-      image={image}
+      image={image.src}
+      imageWidth={image.width}
       // alt={t("page-staking-image-alt")}
       alt="page-staking-image-alt"
       titleKey={"page-staking-join-community"}

@@ -5,6 +5,8 @@ import OrderedList from "@/components/OrderedList"
 // Re-enable after i18n implemented
 // import Translation from "@/components/Translation"
 
+import image from "@/public/hackathon_transparent.png"
+
 export interface IProps {}
 
 const StakingHowSoloWorks: React.FC<IProps> = () => {
@@ -43,7 +45,7 @@ const StakingHowSoloWorks: React.FC<IProps> = () => {
       justifyContent="space-between"
     >
       <OrderedList listData={items} />
-      <Image src="/hackathon_transparent.png" alt="" width={400} height={400 / 1.5}/>
+      <Image src={image} alt="" width={400} />
     </Center>
   )
 }

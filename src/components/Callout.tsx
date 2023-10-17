@@ -1,4 +1,4 @@
-import { Flex, FlexProps } from "@chakra-ui/react"
+import { Flex, type FlexProps, type ImageProps } from "@chakra-ui/react"
 
 // TODO: Re-enable once i18n is implemented
 // import Translation from "./Translation"
@@ -11,7 +11,7 @@ import type { TranslationKey } from "@/lib/types"
 
 export interface IProps extends FlexProps {
   children?: React.ReactNode
-  image?: string
+  image?: ImageProps["src"]
   emoji?: string
   alt?: string
   titleKey: TranslationKey
