@@ -5,8 +5,7 @@ import {
   forwardRef,
 } from "@chakra-ui/react"
 
-// TODO: migrate scrollIntoView util
-// import { scrollIntoView } from "../../utils/scrollIntoView"
+import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 export const checkIsSecondary = (props: {
   variant?: string
@@ -41,7 +40,7 @@ const Button = forwardRef<IProps, "button">((props, ref) => {
 
   const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (toId) {
-      // scrollIntoView(toId)
+      scrollIntoView(toId)
     }
 
     onClick?.(e)
