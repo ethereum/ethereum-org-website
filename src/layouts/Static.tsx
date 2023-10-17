@@ -1,11 +1,4 @@
-import {
-  Box,
-  Flex,
-  type HeadingProps,
-  Icon,
-  Text,
-  chakra,
-} from "@chakra-ui/react"
+import { Box, Flex, type HeadingProps, Icon, chakra } from "@chakra-ui/react"
 
 import Breadcrumbs from "../components/Breadcrumbs"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
@@ -13,7 +6,8 @@ import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import Link from "@/components/Link"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
-import QuizWidget from "@/components/Quiz/QuizWidget"
+import TableOfContents from "@/components/TableOfContents"
+import Text from "@/components/OldText"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -68,6 +62,7 @@ export const StaticLayout: React.FC<IProps> = ({
   children,
   frontmatter,
   slug,
+  tocItems,
   lastUpdatedDate,
 }) => {
   // const { language } = useI18next()
@@ -114,11 +109,25 @@ export const StaticLayout: React.FC<IProps> = ({
             Page last updated:{" "}
             {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
           </Text>
-
+          <TableOfContents
+            position="relative"
+            zIndex={2}
+            // editPath={absoluteEditPath}
+            items={tocItems}
+            isMobile
+            maxDepth={frontmatter.sidebarDepth || 2}
+            hideEditButton={!!frontmatter.hideEditButton}
+          />
           {children}
 
           <FeedbackCard isArticle />
         </Box>
+        <TableOfContents
+          // editPath={absoluteEditPath}
+          items={tocItems}
+          maxDepth={frontmatter.sidebarDepth || 2}
+          hideEditButton={!!frontmatter.hideEditButton}
+        />
       </Flex>
     </Box>
   )

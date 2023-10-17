@@ -40,9 +40,9 @@ const Breadcrumbs: React.FC<IProps> = ({
 }) => {
   // TODO: update when i18n is set up
   // const { t } = useTranslation()
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
 
-  const hasHome = originalSlug.includes(`/${locale}/`)
+  const hasHome = asPath !== "/"
   const slug = originalSlug.replace(`/${locale}/`, "/")
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
