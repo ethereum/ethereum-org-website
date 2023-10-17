@@ -1,4 +1,3 @@
-import React from "react"
 import {
   Box,
   BoxProps,
@@ -10,13 +9,14 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
-import { useActiveHash } from "../../hooks/useActiveHash"
-import ButtonLink from "../Buttons/ButtonLink"
-// import Translation from "../Translation"
+import { ButtonLink } from "@/components/Buttons"
+import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
+import ItemsList from "@/components/TableOfContents/ItemsList"
+// TODO: Re-enable after i18n implemented
+// import Translation from "@/components/Translation"
 
-import Mobile from "./TableOfContentsMobile"
-import ItemsList from "./ItemsList"
-import { getCustomId, outerListProps } from "@/lib/utils/toc"
+import { useActiveHash } from "@/hooks/useActiveHash"
+import { outerListProps } from "@/lib/utils/toc"
 import type { ToCItem } from "@/lib/interfaces"
 
 export interface IProps extends BoxProps {
@@ -44,15 +44,11 @@ const TableOfContents: React.FC<IProps> = ({
 
   if (!isMobile) {
     const getTitleIds = (items: Array<ToCItem>, depth: number): void => {
-      if (depth > (maxDepth ? maxDepth : 1)) return
-
-      items?.forEach((item) => {
-        if (item.items && Array.isArray(item.items)) {
-          if (item.title) titleIds.push(getCustomId(item.title))
-          getTitleIds(item.items, depth + 1)
-        } else {
-          titleIds.push(getCustomId(item.title))
-        }
+      // Return early if maxDepth hit
+      if (depth > maxDepth) return
+      items?.forEach(({ url, items }) => {
+        titleIds.push(url)
+        items && getTitleIds(items, depth + 1)
       })
     }
 
@@ -87,11 +83,11 @@ const TableOfContents: React.FC<IProps> = ({
         {...rest}
       >
         <List {...outerListProps}>
-          {!hideEditButton && (
+          {!hideEditButton && editPath && (
             <ListItem mb={2}>
               <ButtonLink
                 leftIcon={<Icon as={FaGithub} />}
-                to={editPath}
+                href={editPath}
                 variant="outline"
               >
                 {/* <Translation id="edit-page" /> */}
