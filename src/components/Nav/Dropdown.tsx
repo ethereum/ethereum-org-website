@@ -19,15 +19,12 @@ import { Lang } from "../../utils/languages"
 
 import { IItem, ISection } from "./types"
 
-export interface IProps {
-  children?: React.ReactNode
+export interface NavDropdownProps {
+  children: React.ReactNode
   section: ISection
 }
 
-const NavDropdown: React.FC<IProps> & {
-  Item: typeof Item
-  ItemGroup: typeof ItemGroup
-} = ({ children, section }) => {
+const _NavDropdown = ({ children, section }: NavDropdownProps) => {
   const { language } = useI18next()
 
   const direction = getDirection(language as Lang)
@@ -145,6 +142,5 @@ const ItemGroup = ({ item }: { item: Pick<IItem, "text" | "items"> }) => {
   )
 }
 
-NavDropdown.Item = Item
-NavDropdown.ItemGroup = ItemGroup
+const NavDropdown = Object.assign(_NavDropdown, { Item, ItemGroup })
 export default NavDropdown
