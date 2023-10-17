@@ -1,4 +1,4 @@
-import { Flex, ImageProps, type FlexProps } from "@chakra-ui/react"
+import { Flex, type FlexProps } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import CalloutBanner from "@/components/CalloutBanner"

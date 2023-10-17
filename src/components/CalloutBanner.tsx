@@ -1,5 +1,4 @@
 import { Flex, type FlexProps, type ImageProps } from "@chakra-ui/react"
-import type { StaticImageData } from "next/image"
 import { Image } from "@/components/Image"
 import Text from "@/components/OldText"
 import OldHeading from "@/components/OldHeading"
