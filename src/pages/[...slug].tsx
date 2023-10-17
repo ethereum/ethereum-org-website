@@ -32,7 +32,6 @@ import {
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
-import type { ToCItem } from "@/lib/interfaces"
 
 const layoutMapping = {
   static: StaticLayout,
