@@ -10,7 +10,7 @@ import type { TranslationKey } from "@/lib/types"
 
 export interface IProps extends FlexProps {
   children?: React.ReactNode
-  image: string | StaticImageData
+  image: ImageProps["src"]
   maxImageWidth?: number
   titleKey: TranslationKey
   descriptionKey: TranslationKey
@@ -37,7 +37,9 @@ const CalloutBanner: React.FC<IProps> = ({
     <Image
       src={image}
       alt={alt}
-      objectFit="contain"
+      style={{
+        objectFit: "contain"
+      }}
       alignSelf="center"
       maxW={`${maxImageWidth}px`}
       mt={-24}

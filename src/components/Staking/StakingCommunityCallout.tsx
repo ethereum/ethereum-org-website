@@ -6,7 +6,7 @@ import CalloutBanner from "@/components/CalloutBanner"
 // import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import image from "@/../public/enterprise-eth.png"
+import image from "@/public/enterprise-eth.png"
 
 export interface IProps extends FlexProps {
   id?: string
