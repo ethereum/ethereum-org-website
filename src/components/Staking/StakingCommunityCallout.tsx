@@ -1,4 +1,4 @@
-import { Flex, type FlexProps } from "@chakra-ui/react"
+import { Flex, ImageProps, type FlexProps } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -19,7 +19,8 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
   return (
     <CalloutBanner
       {...props}
-      image={image}
+      image={image.src}
+      imageWidth={image.width}
       // alt={t("page-staking-image-alt")}
       alt="page-staking-image-alt"
       titleKey={"page-staking-join-community"}

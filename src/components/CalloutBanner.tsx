@@ -1,4 +1,4 @@
-import { Flex, FlexProps } from "@chakra-ui/react"
+import { Flex, type FlexProps, type ImageProps } from "@chakra-ui/react"
 import type { StaticImageData } from "next/image"
 import { Image } from "@/components/Image"
 import Text from "@/components/OldText"
@@ -11,6 +11,7 @@ import type { TranslationKey } from "@/lib/types"
 export interface IProps extends FlexProps {
   children?: React.ReactNode
   image: ImageProps["src"]
+  imageWidth: ImageProps["width"]
   maxImageWidth?: number
   titleKey: TranslationKey
   descriptionKey: TranslationKey
@@ -19,6 +20,7 @@ export interface IProps extends FlexProps {
 
 const CalloutBanner: React.FC<IProps> = ({
   image,
+  imageWidth,
   maxImageWidth,
   titleKey,
   descriptionKey,
@@ -34,17 +36,20 @@ const CalloutBanner: React.FC<IProps> = ({
     borderRadius="base"
     {...restProps}
   >
-    <Image
-      src={image}
-      alt={alt}
-      style={{
-        objectFit: "contain"
-      }}
-      alignSelf="center"
-      maxW={`${maxImageWidth}px`}
-      mt={-24}
-      mb={{ base: 0, lg: -24 }}
-    />
+    {image && (
+      <Image
+        src={image}
+        alt={alt}
+        w={imageWidth}
+        maxW={`${maxImageWidth}px`}
+        style={{
+          objectFit: "contain",
+        }}
+        alignSelf="center"
+        mt={-24}
+        mb={{ base: 0, lg: -24 }}
+      />
+    )}
     <Flex
       flexGrow={1}
       flexShrink={0}
