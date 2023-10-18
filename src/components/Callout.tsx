@@ -1,11 +1,11 @@
-import { Flex, type FlexProps, type ImageProps } from "@chakra-ui/react"
+import { Flex, type FlexProps } from "@chakra-ui/react"
 
 // TODO: Re-enable once i18n is implemented
 // import Translation from "./Translation"
 import Emoji from "@/components/Emoji"
 import Text from "@/components/OldText"
 import OldHeading from "@/components/OldHeading"
-import { Image } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 
 import type { TranslationKey } from "@/lib/types"
 

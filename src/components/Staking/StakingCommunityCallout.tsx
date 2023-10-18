@@ -19,8 +19,7 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
   return (
     <CalloutBanner
       {...props}
-      image={image.src}
-      imageWidth={image.width}
+      image={image}
       // alt={t("page-staking-image-alt")}
       alt="page-staking-image-alt"
       titleKey={"page-staking-join-community"}
