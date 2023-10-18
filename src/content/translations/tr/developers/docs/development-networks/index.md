@@ -70,7 +70,7 @@ Ethereum Kurtosis paketi, birden fazla farklı Yürütüm Katmanı (EL) ve Fikir
 
 - [Ethereum ağ paketi](https://github.com/kurtosis-tech/eth-network-package)
 - [Web sitesi](https://www.kurtosis.com/)
-- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Dokümanlar](https://docs.kurtosis.com/)
 
 ## daha fazla okuma {#further-reading}

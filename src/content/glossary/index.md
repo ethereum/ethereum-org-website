@@ -6,11 +6,11 @@ lang: en
 
 # Glossary {#ethereum-glossary}
 
-<Divider />
-
 ## \# {#section-numbers}
 
 <GlossaryDefinition term="51%-attack" />
+
+<Divider />
 
 ## A {#section-a}
 

@@ -104,7 +104,7 @@ ethereum.org コアチームは、私たちの取り組みへのアクセスを�
 
 私たちは、機能のリリースを迅速化するために[デザインシステム](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)を構築し、コミュニティメンバーが ethereum.org のオープンデザインに参加できるようにしました。
 
-参加を希望されますか?希望される方は、[Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)と[Github](https://github.com/ethereum/ethereum-org-website/issues/6284)のイシューをフォローし、[#design Discord チャネル](https://discord.gg/bKycYhVUwV)の会話に参加してください。
+参加を希望されますか?希望される方は、[Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)と[GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284)のイシューをフォローし、[#design Discord チャネル](https://discord.gg/bKycYhVUwV)の会話に参加してください。
 
 ## スタイルガイド {#style-guide}
 

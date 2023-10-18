@@ -23,6 +23,19 @@ const BROKEN_LINK_REGEX = new RegExp(
   "\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)",
   "g"
 )
+// This RegEx checks for invalid links in markdown content.
+// The criteria for invalid links are:
+// 1. Exclude images: The link shouldn't be preceded by an exclamation mark
+// 2. Exclude internal links: The URL part of the link shouldn't start with a forward slash
+// 3. Exclude fragment identifiers: The URL part of the link shouldn't start with a hash
+// 4. Exclude typical external links: The URL part of the link shouldn't start with http or https
+// 5. Exclude email links: The URL part of the link shouldn't start with mailto:
+// 6. Exclude PDF links: The URL part of the link shouldn't end with .pdf
+// 7. Exclude links wrapped in angled brackets: The URL part of the link shouldn't start with a <
+const INVALID_LINK_REGEX = new RegExp(
+  "(?<!\\!)\\[[^\\]]+\\]\\((?!<|/|#|http|mailto:)[^\\)]*(?<!\\.pdf)\\)",
+  "g"
+)
 const INCORRECT_PATH_IN_TRANSLATED_MARKDOWN = new RegExp(
   "image: ../../(assets/|../assets/)",
   "g"
@@ -202,6 +215,14 @@ function processMarkdown(path: string) {
     console.warn(`Broken link found: ${path}:${lineNumber}`)
 
     // if (!BROKEN_LINK_REGEX.global) break
+  }
+
+  let invalidLinkMatch: RegExpExecArray | null
+
+  // Check for invalid links
+  while ((invalidLinkMatch = INVALID_LINK_REGEX.exec(markdownFile))) {
+    const lineNumber = getLineNumber(markdownFile, invalidLinkMatch.index)
+    console.warn(`Invalid link found: ${path}:${lineNumber}`)
   }
 
   let incorrectImagePathMatch: RegExpExecArray | null

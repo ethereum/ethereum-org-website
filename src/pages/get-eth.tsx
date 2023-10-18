@@ -320,7 +320,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           <Text>
             <Translation id="page-get-eth-swapping" />
           </Text>
-          <CardList content={tokenSwaps} />
+          <CardList items={tokenSwaps} />
           <InfoBanner isWarning>
             <Translation id="page-get-eth-warning" />
           </InfoBanner>
@@ -349,7 +349,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           >
             <Translation id="page-get-eth-community-safety" />
           </OldHeading>
-          <CardList content={safetyArticles} />
+          <CardList items={safetyArticles} />
         </Flex>
         <RightColumn>
           <Text>
