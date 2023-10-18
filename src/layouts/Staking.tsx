@@ -288,7 +288,9 @@ export const StakingLayout: React.FC<IProps> = ({
           alignSelf={{ base: "center", lg: "auto" }}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
-          objectFit="contain"
+          style={{
+            objectFit: "contain",
+          }}
         />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
