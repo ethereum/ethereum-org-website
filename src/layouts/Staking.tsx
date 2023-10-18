@@ -12,10 +12,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react"
 
-
-import {
-  List as ButtonDropdownList
-} from "@/components/ButtonDropdown"
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { Image } from "@/components/Image"
 import { mdxTableComponents } from "@/components/Table"
 import { ButtonLink } from "@/components/Buttons"
@@ -62,8 +59,6 @@ import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGri
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
 import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
-
-
 
 const Header1 = (props: ChildOnlyProp) => (
   <OldHeading
@@ -419,7 +414,9 @@ export const StakingLayout: React.FC<IProps> = ({
           alignSelf={{ base: "center", lg: "auto" }}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
-          objectFit="contain"
+          style={{
+            objectFit: "contain",
+          }}
         />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
