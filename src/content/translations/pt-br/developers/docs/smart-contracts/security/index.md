@@ -500,6 +500,8 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 - **[Hacken](https://hacken.io)** - _Auditor de cibersegurança da Web3 que traz a abordagem de 360 graus à segurança da blockchain._
 
+- **[Smartzation](https://www.smartzation.com)** - _Empresa brasileira de segurança de contrato inteligente que fornece auditorias de segurança para sistemas EVM._ 
+
 - **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Serviços de auditoria Solidity e Cairo que garantem a integridade dos contratos inteligentes e a segurança dos usuários em toda a Ethereum e Starknet._
 
 - **[HashEx](https://hashex.org/)** – _O HashEx se dedica a blockchain e auditoria de contrato inteligente para garantir a segurança de criptomoedas, fornecendo serviços como desenvolvimento de contrato inteligente, teste de penetração e consultoria em blockchain._
