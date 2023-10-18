@@ -4,7 +4,7 @@ description: ETH'nizi solo stake etmeye nasıl başlayacağınıza dair genel bi
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Gergedan Leslie bilgisayar çipinin üstünde.
 sidebarDepth: 2
 summaryPoints:

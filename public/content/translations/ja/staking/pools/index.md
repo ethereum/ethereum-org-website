@@ -4,7 +4,7 @@ description: ETHステーキングプールの始め方の概要
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: プールで泳ぐサイのレスリー
 sidebarDepth: 2
 summaryPoints:

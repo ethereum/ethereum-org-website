@@ -5,7 +5,6 @@ import {
   Flex,
   Heading,
   Icon,
-  Text,
   chakra,
 } from "@chakra-ui/react"
 
@@ -20,17 +19,20 @@ import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
+import { mdxTableComponents } from "@/components/Table"
 import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import QuizWidget from "@/components/Quiz/QuizWidget"
+import TableOfContents from "@/components/TableOfContents"
+import Text from "@/components/OldText"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 import YouTube from "@/components/YouTube"
-import { mdxTableComponents } from "@/components/Table"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getLastModifiedDate } from "@/lib/utils/gh"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 const Pre = (props: ChildOnlyProp) => (
   <Text
@@ -168,13 +170,18 @@ export const staticComponents = {
   MeetupList,
   NetworkUpgradeSummary,
   UpcomingEventsList,
+  QuizWidget,
   YouTube,
 }
 
-export const StaticLayout = ({
+interface IProps extends ChildOnlyProp, MdPageContent {
+  frontmatter: StaticFrontmatter
+}
+export const StaticLayout: React.FC<IProps> = ({
   children,
   frontmatter,
   slug,
+  tocItems,
   lastUpdatedDate,
 }) => {
   // const { language } = useI18next()
@@ -211,7 +218,7 @@ export const StaticLayout = ({
             },
           }}
         >
-          <Breadcrumbs slug={slug} />
+          <Breadcrumbs slug={slug} mb="8" />
           <Text
             color="text200"
             dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
@@ -219,13 +226,27 @@ export const StaticLayout = ({
             {/* TODO: add Translation when i18n is set up  */}
             {/* <Translation id="page-last-updated" />:{" "} */}
             Page last updated:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
           </Text>
-
+          <TableOfContents
+            position="relative"
+            zIndex={2}
+            // editPath={absoluteEditPath}
+            items={tocItems}
+            isMobile
+            maxDepth={frontmatter.sidebarDepth || 2}
+            hideEditButton={!!frontmatter.hideEditButton}
+          />
           {children}
 
           <FeedbackCard isArticle />
         </Box>
+        <TableOfContents
+          // editPath={absoluteEditPath}
+          items={tocItems}
+          maxDepth={frontmatter.sidebarDepth || 2}
+          hideEditButton={!!frontmatter.hideEditButton}
+        />
       </Flex>
     </Box>
   )

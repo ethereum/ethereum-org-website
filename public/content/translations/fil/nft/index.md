@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Logo ng Eth naka display via hologram.
 summaryPoint1: Isang paraan para katawanin ang kahit anong natatangi bilang Ethereum-based asset.
 summaryPoint2: Mas binibigyang-kakayahan ngayon ng mga NFT ang mga content creator.
@@ -62,7 +62,7 @@ Maaaring artist ka na gustong ibahagi ang gawa mo gamit ang mga NFT nang hindi n
 
 O parang ticket lang sa isang sporting event. Kung paanong mapipili ng organizer ng event kung gaano karaming ticket ang ibebenta, makakapagpasya ang creator ng NFT kung ilang replica ang mayroon. Kung minsan, mga exact replica ang mga ito, tulad ng 5000 General Admission ticket. Kung minsan, may ilang mini-mint na halos magkakatulad, pero may kaunting pagkakaiba, tulad ng ticket na may nakatalagang upuan. Maaaring bilhin at ibenta nang peer-to-peer ang mga ito nang hindi kinakailangang magbayad sa mga ticket handler at palaging sigurado ang buyer sa authenticity ng ticket sa pamamagitan ng pagtingin sa address ng kontrata.
 
-Sa ethereum.org, ginagamit ang mga NFT para ipakita na nag-contribute ang mga tao sa aming Github repository o sumali sa mga tawag, at mayroon din kaming sariling domain name para sa NFT. Kung magko-contribute ka sa ethereum.org, maaari kang mag-claim ng POAP NFT. May ilang crypto meetup na gumamit ng mga POAP bilang ticket. [Iba pang detalye tungkol sa pag contribute](/contributing/#poap).
+Sa ethereum.org, ginagamit ang mga NFT para ipakita na nag-contribute ang mga tao sa aming GitHub repository o sumali sa mga tawag, at mayroon din kaming sariling domain name para sa NFT. Kung magko-contribute ka sa ethereum.org, maaari kang mag-claim ng POAP NFT. May ilang crypto meetup na gumamit ng mga POAP bilang ticket. [Iba pang detalye tungkol sa pag contribute](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 

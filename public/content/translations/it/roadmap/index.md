@@ -3,7 +3,7 @@ title: Roadmap di Ethereum
 description: Il percorso verso una maggiore scalabilità, sicurezza e sostenibilità per Ethereum.
 lang: it
 template: roadmap
-image: ../../../../assets/roadmap/roadmap-main.png
+image: /roadmap/roadmap-main.png
 alt: "Roadmap di Ethereum"
 summaryPoints:
 buttons:
@@ -66,7 +66,7 @@ La tabella di marcia è principalmente il risultato di anni di lavoro da parte d
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">Cos'è stato l'ETH?</h4>
+  <h4 style={{ marginTop: 0 }}>Cos'è stato l'ETH?</h4>
 
   <p>Il termine 'Eth2' è stato comunemente usato per descrivere il futuro di Ethereum prima del passaggio alla proof-of-stake ma è stato <strong>gradualmente eliminato a favore di una terminologia più precisa.</strong> Originariamente è stato utilizzato per differenziare la rete Ethereum prima del passaggio alla proof-of-stake e la rete successiva, o a volte per fare riferimento ai diversi clienti di Ethereum (i clienti di esecuzione sono stati talvolta denominati clienti ETH1 e i clienti di consenso sono stati talvolta denominati clienti ETH2).</p>
 

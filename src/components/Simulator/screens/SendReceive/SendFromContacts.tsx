@@ -1,14 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Icon,
-  Popover,
-  PopoverBody,
-  PopoverContent,
-  PopoverTrigger,
-  Text,
-} from "@chakra-ui/react"
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
 import { PiMagnifyingGlass } from "react-icons/pi"
 import { CategoryTabs } from "../../WalletHome/CategoryTabs"

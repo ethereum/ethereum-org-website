@@ -3,7 +3,7 @@ title: Birleştirme
 description: "Birleşim: Ana Ağ Ethereum'un hisse ispatını kullanmaya başlama zamanı hakkında bilgi edinin."
 lang: tr
 template: upgrade
-image: ../../../../../assets/upgrades/merge.png
+image: /upgrades/merge.png
 summaryPoint1: Ethereum Ana Ağı hisse ispatı kullanır, ancak bu her zaman geçerli olan durum değildi.
 summaryPoint2: Özgün iş ispatı mekanizmasının hisse ispatına yükseltilmesi Birleşim olarak adlandırılır.
 summaryPoint3: Birleşim, esas Ethereum Ana Ağı'nın İşaret Zinciri olarak adlandırılan ayrı bir iş ispatı blok zinciri ile birleşmesi ile artık tek bir zincir olarak varlığını sürdürmesini ifade eder.

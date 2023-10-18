@@ -4,7 +4,7 @@ description: نگاهی کلی بر امور مالی غیرمتمرکز بر پ
 lang: fa
 template: use-cases
 emoji: ":money_with_wings:"
-image: ../../../../assets/use-cases/defi.png
+image: /use-cases/defi.png
 alt: لوگوی اتر ساخته‌شده از آجرهای لگو.
 sidebarDepth: 2
 summaryPoint1: یک جایگزین جهانی و آِزاد برای سیستم مالی فعلی.

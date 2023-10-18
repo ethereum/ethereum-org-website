@@ -5,7 +5,7 @@ lang: sw
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Nembo ya Eth ikionyeshwa kwa kupitia hologramu.
 summaryPoint1: Njia ya kuwakilisha kitu chochote cha pekee kama mali zilizojengwa na Ethereum.
 summaryPoint2: NFT zinawapatia waundaji wa maudhui nguvu zaidi kuliko zamani.
@@ -62,7 +62,7 @@ Labda wewe ni msanii amabaye angependa kushiriki kazi yake kupitia tokeni zisizo
 
 Ama zingatia tiketi ya mechi ijayo. Kama mratibu wa matukio anavyoweza kuamua idadi ya tiketi za kuchapisha, muundaji wa NFT anaweza kuamua idadi ya kuwepo kwa nakala za kazi yake. Wakati mwingine huwa na nakala za ziada, kama vile Tiketi 5000 za Kiingilio cha Jumla. Wakati mwingine nyingine zinachapishwa zinazofanana, ila kila moja ina tofauti ndogo na yenzake, kama vile tiketi yeneye nambari ya kiti. Hizi zinaweza kununuliwa na kuuzwa kutoka kwa mshirika mmoja mpaka kwa mwingine kusipokuwepo na ulipaji wa washikaji tiketi na wanunuzi watakuwa na uhakika wa tiketi halisi kwa kuangalia anwani ya mkataba huo.
 
-Kwenye ethereum.org, tokeni zisizoigwa zinatumika kuonyesha kwamba watu wamechangia kwenye hazina ya Github ama kushiriki kwa wito uliotolewa, vile vile tuna jina la kikoa cheti cha tokeni isiyoigwa. Ukichangia kwenye ethereum.org, unaweza kudai NFT ya POAP. Mikutano mingine ya sarafu za kidijitali imetumia POAPs kama tiketi. [Zaidi juu ya uchangiaji](/contributing/#poap).
+Kwenye ethereum.org, tokeni zisizoigwa zinatumika kuonyesha kwamba watu wamechangia kwenye hazina ya GitHub ama kushiriki kwa wito uliotolewa, vile vile tuna jina la kikoa cheti cha tokeni isiyoigwa. Ukichangia kwenye ethereum.org, unaweza kudai NFT ya POAP. Mikutano mingine ya sarafu za kidijitali imetumia POAPs kama tiketi. [Zaidi juu ya uchangiaji](/contributing/#poap).
 
 ![POAP za ethereum.org](./poap.png)
 

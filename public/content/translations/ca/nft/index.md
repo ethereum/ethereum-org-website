@@ -5,7 +5,7 @@ lang: ca
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Un logotip d'Eth mostrat mitjançant un holograma.
 summaryPoint1: Una forma de representar quelcom únic com ara un actiu basat en Ethereum.
 summaryPoint2: Els NFT estan donant més poder als creadors de contingut que mai.
@@ -429,5 +429,5 @@ Per dir-ho d'una altra manera, si Visa gestionés 140.839.000.000 transaccions a
 Ethereum en un sol any consumeix 5.256.000 kWh. Amb un potencial de 788.940.000.000 - 3.153.600.000.000 transaccions processades en aquest espai de temps.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Si creieu que aquestes afirmacions són incorrectes o poden ser més exactes, plantegeu un problema o una PR. Són estimacions fetes per l'equip d'ethereum.org utilitzant informació accessible públicament i el disseny d'Ethereum planejat. No representa una promesa oficial de la Fundació Ethereum. 
+  Si creieu que aquestes afirmacions són incorrectes o poden ser més exactes, plantegeu un problema o una PR. Són estimacions fetes per l'equip d'ethereum.org utilitzant informació accessible públicament i el disseny d'Ethereum planejat. No representa una promesa oficial de la Fundació Ethereum.
 </InfoBanner>

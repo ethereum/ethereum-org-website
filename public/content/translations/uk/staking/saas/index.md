@@ -4,7 +4,7 @@ description: Огляд того, як почати роботу з об’єд�
 lang: uk
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Носоріг Леслі плаває в хмарах.
 sidebarDepth: 2
 summaryPoints:
@@ -22,7 +22,7 @@ summaryPoints:
 Сам протокол Ethereum не підтримує делегування частки, тому ці служби створено для задоволення цього попиту. Якщо у вас є 32 ETH для ставки, але вам незручно мати справу з апаратним забезпеченням, послуги SaaS дадуть вам змогу делегувати складну частину, поки ви отримуєте власну винагороду за блок.
 
 <CardGrid>
-  <Card title="Ваш власний валідатор" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Ваш власний валідатор" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Легкий старт" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Обмежте свій ризик" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>

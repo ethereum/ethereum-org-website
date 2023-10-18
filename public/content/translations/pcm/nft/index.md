@@ -5,7 +5,7 @@ lang: pcm
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: ../../../../assets/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Eth logo wey wi dey yus hologram show.
 summaryPoint1: Na one way wey yu fit reprisent anytin wey dey unik as Ethereum-based asset.
 summaryPoint2: NFTs dey give more pawa to kontent kreators pass any taim bifor.
@@ -62,7 +62,7 @@ E fit bi say yu bi artist wey wont shia yor work yusing NFTs, witout luzin kontr
 
 Abi tink about one ticket for sporting event. Just like hau di organizer of one event fit shuse hau many tickets dem wan sell, di kreator of one NFT fit deside hau many replicas wont dey exist. Somtaims dem fit be exact replicas, like 5000 General Admishon ticket. Somtaims e dey mint several wey dey similar wella, but ish one difren smoll, like one ticket wit one assigned seat. Pipol fit buy and sell dem peer-to-peer witout paying ticket handlas and di pesin wey buy go always get asurans for di ticket audinticity as dem shek di contract address.
 
-For ethereum.org, dem dey yus NFTs to show say pipol don kontribute to awa Github repository abi attend kolls, and dem even get awa own NFT domain name. If yu kontribute to ethereum.org, yu fit klaim one POAP NFT. Some crypto meetups don yus POAPs as tickets. [More to dey kontribute](/contributing/#poap).
+For ethereum.org, dem dey yus NFTs to show say pipol don kontribute to awa GitHub repository abi attend kolls, and dem even get awa own NFT domain name. If yu kontribute to ethereum.org, yu fit klaim one POAP NFT. Some crypto meetups don yus POAPs as tickets. [More to dey kontribute](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 

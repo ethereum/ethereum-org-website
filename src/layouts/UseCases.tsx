@@ -40,7 +40,6 @@ import MeetupList from "@/components/MeetupList"
 import OldHeading from "@/components/OldHeading"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import RandomAppList from "@/components/RandomAppList"
-import SectionNav from "@/components/SectionNav"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
@@ -51,18 +50,20 @@ import YouTube from "@/components/YouTube"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang } from "@/lib/types"
-import { PageContent } from "@/lib/interfaces"
+import { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
+
+// TODO: Move reused markdown components to separate components file, and remove exports from here
 
 const commonHeadingProps: HeadingProps = {
   fontWeight: 700,
   lineHeight: 1.4,
 }
 
-const Heading1 = (props: HeadingProps) => (
+export const Heading1 = (props: HeadingProps) => (
   <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
 )
 
-const Heading2 = (props: HeadingProps) => (
+export const Heading2 = (props: HeadingProps) => (
   <OldHeading
     as="h2"
     {...commonHeadingProps}
@@ -72,7 +73,7 @@ const Heading2 = (props: HeadingProps) => (
   />
 )
 
-const Heading3 = (props: HeadingProps) => (
+export const Heading3 = (props: HeadingProps) => (
   <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
 )
 
@@ -86,9 +87,9 @@ const Heading4 = (props: HeadingProps) => (
   />
 )
 
-const Divider = () => <Box my={16} w="10%" h={1} bgColor="primary.hover" />
+export const Divider = () => <Box my={16} w="10%" h={1} bgColor="primary.hover" />
 
-const Pre = (props: ChildOnlyProp) => (
+export const Pre = (props: ChildOnlyProp) => (
   <chakra.pre
     bg="preBackground"
     border="1px"
@@ -102,7 +103,7 @@ const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-const Paragraph = (props: ChildOnlyProp) => (
+export const Paragraph = (props: ChildOnlyProp) => (
   <Text color="text300" mt={8} mb={4} {...props} />
 )
 
@@ -130,7 +131,6 @@ export const useCasesComponents = {
   MeetupList,
   QuizWidget,
   RandomAppList,
-  SectionNav,
   UpgradeStatus,
   YouTube,
   ...mdxTableComponents,
@@ -174,9 +174,9 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-const Title = (props: ChildOnlyProp) => <Heading1 mt={4} {...props} />
+export const Title = (props: ChildOnlyProp) => <Heading1 mt={4} {...props} />
 
-const Page = (props: FlexProps) => (
+export const Page = (props: FlexProps) => (
   <Flex
     flexDirection={{ base: "column", lg: "row" }}
     justifyContent="space-between"
@@ -189,7 +189,7 @@ const Page = (props: FlexProps) => (
   />
 )
 
-const InfoColumn = (props: ChildOnlyProp) => (
+export const InfoColumn = (props: ChildOnlyProp) => (
   <Flex
     as="aside"
     flexDirection="column"
@@ -203,7 +203,7 @@ const InfoColumn = (props: ChildOnlyProp) => (
   />
 )
 
-const InfoTitle = (props: ChildOnlyProp) => (
+export const InfoTitle = (props: ChildOnlyProp) => (
   <Heading2
     fontSize={{ base: "2.5rem", lg: "5xl" }}
     textAlign={{ base: "left", lg: "right" }}
@@ -212,7 +212,7 @@ const InfoTitle = (props: ChildOnlyProp) => (
   />
 )
 
-const StyledButtonDropdown = ({
+export const StyledButtonDropdown = ({
   list,
   ...rest
 }: FlexProps & Pick<ButtonDropdownProps, "list">) => (
@@ -221,11 +221,11 @@ const StyledButtonDropdown = ({
   </Flex>
 )
 
-const MobileButtonDropdown = (
+export const MobileButtonDropdown = (
   props: ComponentProps<typeof StyledButtonDropdown>
 ) => <StyledButtonDropdown mb={0} {...props} />
 
-const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const lgBp = useToken("breakpoints", "lg")
 
   return (
@@ -251,7 +251,7 @@ const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-const MobileButton = (props: ChildOnlyProp) => {
+export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
     <Box
@@ -267,7 +267,9 @@ const MobileButton = (props: ChildOnlyProp) => {
   )
 }
 
-interface IProps extends PageContent, ChildOnlyProp {}
+interface IProps extends ChildOnlyProp, MdPageContent {
+  frontmatter: UseCasesFrontmatter
+}
 export const UseCasesLayout: React.FC<IProps> = ({
   children,
   frontmatter,
@@ -393,7 +395,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
                 </ListItem>
               ))}
             </UnorderedList>
-            <TableOfContents items={tocItems} maxDepth={2} isMobile />
+            <TableOfContents items={tocItems} maxDepth={frontmatter.sidebarDepth || 2} isMobile />
           </Box>
         </TitleCard>
         <Image
@@ -401,7 +403,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
           alignSelf={{ base: "center", lg: "normal" }}
           top={0}
           bottom={0}
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
           width={1000}
           height={610}
           src={frontmatter.image}

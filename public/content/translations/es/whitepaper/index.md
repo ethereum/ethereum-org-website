@@ -27,7 +27,7 @@ Aquí puedes consultar una entrada del blog de Vitalik Buterin, el fundador de E
 
 ### Bitcoin como un sistema de transición de estados {#bitcoin-as-a-state-transition-system}
 
-![Transición de estado de Ethereum](../../../whitepaper/ethereum-state-transition.png)
+![Transición de estado de Ethereum](./ethereum-state-transition.png)
 
 Desde un punto de vista técnico, el libro de contabilidad de una criptomoneda como Bitcoin se puede considerar un sistema de transición de estados, donde hay un "estado" que consiste en el estado de propiedad de todos los bitcoins existentes, y una "función de transición de estados" que toma un estado y una transacción y produce un nuevo estado como resultado. En un sistema bancario estándar, por ejemplo, el estado es una hoja de balance, una transacción es una petición para mover $X de A a B, y la función de transición de estado reduce el valor en la cuenta A en $X y aumenta el valor en la cuenta B en $X. Si la cuenta A tiene menos de $X en primer lugar, la función de transición de estado devuelve un error. Por lo tanto, se puede definir formalmente:
 
@@ -57,7 +57,7 @@ La primera mitad del primer paso impide a los emisores de transacciones que gast
 
 ### Minería {#mining}
 
-![Bloques de Ethereum](../../../whitepaper/ethereum-blocks.png)
+![Bloques de Ethereum](./ethereum-blocks.png)
 
 Si tuviéramos acceso a un servicio centralizado de confianza, este sistema sería trivial de implementar; se podría exactamente como se ha descrito, usando el disco duro de un servidor centralizado para mantener el registro del estado. Sin embargo, con Bitcoin estamos tratando de construir un sistema monetario descentralizado, así que necesitaremos combinar el sistema de transición de estados con un sistema de consenso para asegurarse de que todo el mundo esté de acuerdo en el orden de las transacciones. El proceso de consenso descentralizado de Bitcoin requiere que los nodos que integran la red intenten producir continuamente paquetes de transacciones llamados "bloques". La red está pensada para producir aproximadamente un bloque cada diez minutos, donde cada bloque contiene una marca temporal, un nonce, una referencia (es decir, un hash de) al bloque anterior y una lista de todas las transacciones que han tenido lugar desde el bloque anterior. Con el tiempo, esto crea una "blockchain" persistente, cada vez mayor, que se actualiza constantemente para representar el último estado del libro de contabilidad de Bitcoin.
 
@@ -87,7 +87,7 @@ Una vez que el paso (1) ha tenido lugar, tras unos minutos algún minero incluir
 
 ### Árboles de Merkle {#merkle-trees}
 
-![SPV en Bitcoin](../../../whitepaper/spv-bitcoin.png)
+![SPV en Bitcoin](./spv-bitcoin.png)
 
 _Izquierda: Basta con presentar solo un pequeño número de nodos en un árbol de Merkle para demostrar la validez de una bifurcación._
 
@@ -180,7 +180,7 @@ Nótese que la cantidad de gas asignada por una transacción o contrato se aplic
 
 ### Función de transición de estado de Ethereum {#ethereum-state-transition-function}
 
-![Transición de estado de Ether](../../../whitepaper/ether-state-transition.png)
+![Transición de estado de Ether](./ether-state-transition.png)
 
 La función de transición de estado `APPLY(S,TX) -> S'` puede definirse como sigue:
 
@@ -223,7 +223,7 @@ El modelo de ejecución formal de código de la EVM es sorprendentemente simple.
 
 ### Blockchain y minería {#blockchain-and-mining}
 
-![Ethereum aplica diagrama de bloque](../../../whitepaper/ethereum-apply-block-diagram.png)
+![Ethereum aplica diagrama de bloque](./ethereum-apply-block-diagram.png)
 
 La blockchain de Ethereum es en muchas maneras similar a la blockchain de Bitcoin, aunque tiene algunas diferencias. La diferencia principal entre Ethereum y Bitcoin en relación a la arquitectura blockchain es que, a diferencia de Bitcoin (que solo contiene una copia de la lista de la transacciones), los bloques de Ethereum contienen una copia tanto de la lista de transacciones como del estado más reciente. Aparte, hay dos valores, el número de bloque y la dificultad, que también se almacenan en el bloque. El algoritmo básico de validación de bloque en Ethereum es el siguiente:
 
@@ -427,7 +427,7 @@ El modelo de emisión será el siguiente:
 
 **Tasa de crecimiento a largo plazo de la oferta (porcentaje)**
 
-![Inflación Ethereum](../../../whitepaper/ethereum-inflation.png)
+![Inflación Ethereum](./ethereum-inflation.png)
 
 _A pesar de la emisión lineal de moneda, al igual que con Bitcoin a lo largo del tiempo la tasa de crecimiento de la oferta tiende sin embargo a cero_
 

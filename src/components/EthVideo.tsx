@@ -1,8 +1,8 @@
 import React from "react"
 import { Box, useColorModeValue } from "@chakra-ui/react"
 
-import darkVideo from "../assets/ethereum-hero-dark.mp4"
-import lightVideo from "../assets/ethereum-hero-light.mp4"
+import darkVideo from "../../public/ethereum-hero-dark.mp4"
+import lightVideo from "../../public/ethereum-hero-light.mp4"
 
 export interface IProps {
   className?: string
