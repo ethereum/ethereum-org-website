@@ -806,7 +806,7 @@ export const query = graphql`
         }
       }
     }
-    heroImage: file(relativePath: { eq: "ethereum-eth2.png" }) {
+    heroImage: file(relativePath: { eq: "heroes/learn-hub-hero.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 1504

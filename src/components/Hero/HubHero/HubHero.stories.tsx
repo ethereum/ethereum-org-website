@@ -28,12 +28,12 @@ const mockGatsbyImgData: IGatsbyImageData = {
   layout: "fullWidth",
   images: {
     fallback: {
-      src: "/ethereum-eth2.png",
+      src: "/heroes/learn-hub-hero.png",
       sizes: "100vw",
     },
     sources: [
       {
-        srcSet: "/ethereum-eth2.png",
+        srcSet: "/heroes/learn-hub-hero.png",
         type: "image/webp",
         sizes: "100vw",
       },
