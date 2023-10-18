@@ -6,9 +6,10 @@ import {
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
 import ButtonDropdown from "@/components/ButtonDropdown"
-import Translation from "@/components/Translation"
 import Text from "@/components/OldText"
 import OldHeading from "@/components/OldHeading"
+// TODO: Re-enable after i18n implemented
+// import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
@@ -46,7 +47,9 @@ const IndicatorGroup = ({
         textAlign="center"
         width={{ base: "fit-content", sm: "max-content" }}
       >
-        <Translation id={label} />
+        {/* TODO: Re-enable after i18n implemented */}
+        {/* <Translation id={label} /> */}
+        {label}
       </Text>
     </VStack>
   )

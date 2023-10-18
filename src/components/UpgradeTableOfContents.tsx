@@ -1,8 +1,8 @@
-import React, { useRef } from "react"
 import { Box, List, ListItem } from "@chakra-ui/react"
-import { BaseLink } from "./Link"
-import type { ToCItem } from "@/lib/interfaces"
+import { BaseLink } from "@/components/Link"
+import { IPropsItemsList } from "@/components/TableOfContents/ItemsList"
 import { parseToCTitle } from "@/lib/utils/toc"
+import type { ToCItem } from "@/lib/interfaces"
 
 export interface IPropsTableOfContentsLink {
   item: ToCItem
@@ -13,10 +13,7 @@ const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({ item: { titl
     isActive = window.location.hash === url
   }
 
-  let classes = ""
-  if (isActive) {
-    classes += " active"
-  }
+  const classes = isActive ? "active" : ""
 
   return (
     <BaseLink
@@ -35,13 +32,8 @@ const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({ item: { titl
   )
 }
 
-interface IPropsItemsList {
-  items: Array<ToCItem>
-  depth: number
-  maxDepth: number
-}
-
 const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
+  // Return early if maxDepth hit, or if no items
   if (depth > maxDepth || !items) return null
   return (
     <>
