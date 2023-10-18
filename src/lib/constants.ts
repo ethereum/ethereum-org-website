@@ -4,6 +4,7 @@ export const OLD_CONTENT_DIR = "src/content"
 // Site urls
 export const SITE_URL = "https://ethereum.org" as const
 export const DISCORD_PATH = "/discord/" as const
+export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/` as const
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800
