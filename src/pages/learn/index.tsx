@@ -196,7 +196,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
         w="full"
         mb={16}
         mx="auto"
-        pt={{ lg: 16 }}
+        pt={{ base: "10", lg: "16" }}
         dir={isRightToLeft ? "rtl" : "ltr"}
       >
         <Show above={lgBp}>
