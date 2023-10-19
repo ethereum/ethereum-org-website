@@ -27,7 +27,7 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 ### address {#address}
 
-A string of 40 characters representing an [EOA](#eoa) or [contract](#contract-account) account in Ethereum's state tree. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
+A unique identifier that represents your account. All accounts on Ethereum have a public address that starts with `0x`. This address is sharable and used to receive assets to your account. 
 
 ### application binary interface (ABI) {#abi}
 
