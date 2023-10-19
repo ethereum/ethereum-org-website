@@ -588,7 +588,7 @@ Cryptographic [hash](#hash) function used in Ethereum. Keccak-256 was standardiz
 
 ### layer 2 {#layer-2}
 
-An area of development focused on moving transactions off of Ethereum layer-1 to enable Ethereum to scale. These improvements reduce transaction fees for users.
+An area of development focused on moving transactions off of Ethereum Mainnet to enable Ethereum to scale. These improvements reduce transaction fees for users.
 
 <DocLink to="/layer-2/">
   Layer 2
