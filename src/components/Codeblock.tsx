@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 import Highlight, {
   defaultProps,
   Language,
   PrismTheme,
 } from "prism-react-renderer"
+import Prism from "prism-react-renderer/prism"
 
 import Translation from "./Translation"
 import CopyToClipboard from "./CopyToClipboard"
@@ -213,6 +214,15 @@ const Codeblock: React.FC<IProps> = ({
   codeLanguage,
   fromHomepage = false,
 }) => {
+  useEffect(() => {
+    
+    ;(typeof global !== "undefined" ? global : window).Prism = Prism
+
+    // Default languages included:
+    // https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js
+    require("prismjs/components/prism-solidity")
+  })
+
   const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
 
   const codeText = React.Children.toArray(children)
@@ -330,12 +340,16 @@ const Codeblock: React.FC<IProps> = ({
                           {!isCopied ? (
                             <>
                               <Emoji text=":clipboard:" fontSize="md" />{" "}
-                              <Translation id="copy" />
+                              {/* TODO: Implement after intl */}
+                              {/* <Translation id="copy" /> */}
+                              Copy
                             </>
                           ) : (
                             <>
                               <Emoji text=":white_check_mark:" fontSize="md" />{" "}
-                              <Translation id="copied" />
+                              {/* TODO: Implement after intl */}
+                              {/* <Translation id="copied" /> */}
+                              Copied
                             </>
                           )}
                         </TopBarItem>

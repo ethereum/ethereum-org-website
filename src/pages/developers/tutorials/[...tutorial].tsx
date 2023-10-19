@@ -11,7 +11,7 @@ import { getLastModifiedDate } from "@/lib/utils/gh"
 
 // Layouts
 import { RootLayout, TutorialLayout } from "@/layouts"
-import { staticComponents as components } from "@/layouts/Static"
+import { tutorialsComponents } from "@/layouts"
 
 // Types
 import type { GetServerSideProps } from "next/types"
@@ -37,6 +37,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   const tutorialPath = path.join(tutorialsPath, params.tutorial.join("/"))
   const markdown = getContentBySlug(tutorialPath)
   const frontmatter = markdown.frontmatter as TutorialFrontmatter
+  const tocItems = markdown.tocItems
   const contentNotTranslated = markdown.contentNotTranslated
   // TODO: see how we can handle the published date on the tutorial's layout
   // since we can't send the Date object anymore
@@ -53,15 +54,12 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     },
   })
 
-  const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
-
   return {
     props: {
       mdxSource,
-      slug: tutorialPath,
       frontmatter,
-      lastUpdatedDate,
       contentNotTranslated,
+      tocItems,
     },
   }
 }
@@ -71,7 +69,7 @@ const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
     <>
       {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
       {/* @ts-ignore */}
-      <MDXRemote {...mdxSource} components={components} />
+      <MDXRemote {...mdxSource} components={tutorialsComponents} />
     </>
   )
 }
@@ -79,9 +77,9 @@ const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
   // values returned by `getStaticProps` method and passed to the page component
-  const { slug, frontmatter, lastUpdatedDate, contentNotTranslated } =
+  const { frontmatter, tocItems, contentNotTranslated } =
     page.props
-  const layoutProps = { slug, frontmatter, lastUpdatedDate }
+  const layoutProps = { frontmatter, tocItems }
 
   return (
     <RootLayout

@@ -12,6 +12,9 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import dynamic from 'next/dynamic'
+ 
+
 
 // Components
 import { ButtonLink } from "@/components/Buttons"
@@ -22,7 +25,7 @@ import Codeblock from "@/components/Codeblock"
 // import CrowdinConbtirbutors from "@/components/FileContributorsCrowdin"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
-import FeedbackCard from "@/components/FeedbackCard"
+const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), { ssr: false })
 import GitHubContributors from "@/components/FileContributorsGitHub"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
@@ -31,7 +34,6 @@ import OldHeading from "@/components/OldHeading"
 // TODO: Import once intl implements?
 // import PageMetadata from "@/components/PageMetadata"
 import PostMergeBanner from "@/components/Banners/PostMergeBanner"
-import SectionNav from "@/components/SectionNav"
 import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import { mdxTableComponents } from "@/components/Table"
@@ -41,7 +43,7 @@ import YouTube from "@/components/YouTube"
 import { EDIT_CONTENT_URL } from "@/lib/constants"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
 
 const ContentContainer = (props) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
@@ -194,7 +196,7 @@ const KBD = (props) => {
   )
 }
 
-const tutorialsComponents = {
+export const tutorialsComponents = {
   a: MdLink,
   h1: H1,
   h2: H2,
@@ -213,7 +215,6 @@ const tutorialsComponents = {
   EnvWarningBanner,
   GlossaryTooltip,
   InfoBanner,
-  SectionNav,
   StyledDivider,
   YouTube,
 }
@@ -221,43 +222,76 @@ const tutorialsComponents = {
 export const TutorialLayout = ({
   children,
   frontmatter,
-  slug,
-  lastUpdatedDate,
+  tocItems
 }) => {
   const { asPath: relativePath} = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
   const borderColor = useToken("colors", "border")
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
-  console.log(lastUpdatedDate)
+  const postMergeBannerTranslationString = frontmatter
+    .postMergeBannerTranslation as TranslationKey | null
+
   return (
-    <Flex
-      w="100%"
-      borderBottom={`1px solid ${borderColor}`}
-      dir={isRightToLeft ? "rtl" : "ltr"}
-      m={{ base: "2rem 0rem", lg: "0 auto" }}
-      p={{ base: "0", lg: "0 2rem 0 0" }}
-      background={{ base: "background.base", lg: "ednBackground" }}
-    >
-      <ContentContainer>
-        {children}
-        {frontmatter.lang !== "en" ? (
-          <Text>Crowdin contributor</Text>
-            // TODO: Implement CrowdinContributors after intl is implemented
-            // <CrowdinContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            //   //@ts-ignore
-            //   langContributors={allCombinedTranslatorsJson.nodes}
-            // />
-          ) : (
-            <Text>Github contributor</Text>
-            // <GitHubContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            // />
+    <>
+      {!!frontmatter.showPostMergeBanner && (
+        <PostMergeBanner
+          translationString={postMergeBannerTranslationString!}
+        />
+      )}
+      <Flex
+        w="100%"
+        borderBottom={`1px solid ${borderColor}`}
+        dir={isRightToLeft ? "rtl" : "ltr"}
+        m={{ base: "2rem 0rem", lg: "0 auto" }}
+        p={{ base: "0", lg: "0 2rem 0 0" }}
+        background={{ base: "background.base", lg: "ednBackground" }}
+      >
+        {/* TODO: Implement PageMetaData after intl */}
+        {/* <PageMetadata
+          title={frontmatter.title}
+          description={frontmatter.description}
+          canonicalUrl={frontmatter.sourceUrl}
+        /> */}
+        <ContentContainer>
+          <H1>{frontmatter.title}</H1>
+          <TutorialMetadata frontmatter={frontmatter} />
+          <TableOfContents
+            items={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+            editPath={absoluteEditPath}
+            isMobile
+            pt={8}
+          />
+          {children}
+          {frontmatter.lang !== "en" ? (
+            <Text>Crowdin contributor</Text>
+              // TODO: Implement CrowdinContributors after intl is implemented
+              // <CrowdinContributors
+              //   relativePath={relativePath}
+              //   editPath={absoluteEditPath}
+              //   //@ts-ignore
+              //   langContributors={allCombinedTranslatorsJson.nodes}
+              // />
+            ) : (
+              <Text>Github contributor</Text>
+              // TODO: Implement GitHubContributors 
+              // <GitHubContributors
+              //   relativePath={relativePath}
+              //   editPath={absoluteEditPath}
+              // />
+            )}
+          <FeedbackCard />
+        </ContentContainer>
+        {tocItems && (
+            <TableOfContents
+              items={tocItems}
+              maxDepth={frontmatter.sidebarDepth!}
+              editPath={absoluteEditPath}
+              hideEditButton={!!frontmatter.hideEditButton}
+              pt={16}
+            />
           )}
-        <FeedbackCard />
-      </ContentContainer>
-    </Flex>
+      </Flex>
+    </>
   )
 }
