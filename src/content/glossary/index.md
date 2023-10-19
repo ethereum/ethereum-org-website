@@ -180,7 +180,7 @@ A process is computationally infeasible if it would take an impracticably long t
 
 ### consensus {#consensus}
 
-When a supermajority of nodes on the network all have the same blocks in their local copy of the blockchain. Not to be confused with [consensus rules](#consensus-rules).
+When a supermajority (more than 66%) of nodes on the network verify and agree on all of the same blocks in their local copy of the blockchain. Not to be confused with [consensus rules](#consensus-rules).
 
 ### consensus client {#consensus-client}
 
