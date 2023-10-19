@@ -26,7 +26,8 @@ import Codeblock from "@/components/Codeblock"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), { ssr: false })
-import GitHubContributors from "@/components/FileContributorsGitHub"
+// TODO: Implement FileContribtorsGitHub
+// import GitHubContributors from "@/components/FileContributorsGitHub"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import MdLink from "@/components/MdLink"
