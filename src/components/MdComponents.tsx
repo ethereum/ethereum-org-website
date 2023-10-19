@@ -46,10 +46,10 @@ import { motion } from "framer-motion"
 const headingPropsForAnchor = (id?: string): HeadingProps =>
   id
     ? ({
-        scrollMarginTop: "7.5rem",
+        scrollMarginTop: 28,
         id,
         "data-group": true,
-        ms: -8,
+        position: "relative",
       } as HeadingProps)
     : {}
 
@@ -61,22 +61,23 @@ export const commonHeadingProps = (id?: string): HeadingProps => ({
 
 const IdAnchor: React.FC<{ id?: string }> = ({ id }) =>
   id ? (
-    <Link href={`#${id}`}>
+    <Link href={`#${id}`}
+      position="absolute"
+      insetInlineEnd="100%"
+    >
       <Icon
         as={CiLink}
         opacity={0}
         _groupHover={{ opacity: 1 }}
         transition="opacity 0.1s ease-in-out"
         fontSize="xl"
-        w={6}
-        me={2}
+        me={1}
       />
     </Link>
   ) : null
 
-export const Heading1 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading as="h1" {...commonHeadingProps(id)} fontSize="2.5rem" {...rest}>
-    <IdAnchor id={id} />
+export const Heading1 = ({ children, ...rest }: HeadingProps) => (
+  <OldHeading as="h1" {...commonHeadingProps()} fontSize="2.5rem" {...rest}>
     {children}
   </OldHeading>
 )
