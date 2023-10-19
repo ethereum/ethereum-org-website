@@ -7,7 +7,7 @@ import path from "path"
 
 import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImg from "@/lib/rehype/rehypeImg"
-import { getLastModifiedDate } from "@/lib/utils/gh"
+import { getLastDeployDate, getLastModifiedDate } from "@/lib/utils/gh"
 
 // Layouts
 import { RootLayout, TutorialLayout } from "@/layouts"
@@ -54,6 +54,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   })
 
   const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
+  const lastDeployDate = await getLastDeployDate()
 
   return {
     props: {
@@ -61,6 +62,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
       slug: tutorialPath,
       frontmatter,
       lastUpdatedDate,
+      lastDeployDate,
       contentNotTranslated,
     },
   }
@@ -79,15 +81,23 @@ const ContentPage: NextPageWithLayout<Props> = ({ mdxSource }) => {
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page: ReactElement) => {
   // values returned by `getStaticProps` method and passed to the page component
-  const { slug, frontmatter, lastUpdatedDate, contentNotTranslated } =
-    page.props
+  const {
+    slug,
+    frontmatter,
+    lastUpdatedDate,
+    lastDeployDate,
+    contentNotTranslated,
+  } = page.props
+
+  const rootLayoutProps = {
+    contentIsOutdated: frontmatter.isOutdated,
+    contentNotTranslated,
+    lastDeployDate,
+  }
   const layoutProps = { slug, frontmatter, lastUpdatedDate }
 
   return (
-    <RootLayout
-      contentIsOutdated={frontmatter.isOutdated}
-      contentNotTranslated={contentNotTranslated}
-    >
+    <RootLayout {...rootLayoutProps}>
       <TutorialLayout {...layoutProps}>{page}</TutorialLayout>
     </RootLayout>
   )

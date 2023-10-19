@@ -20,6 +20,7 @@ export const RootLayout = ({
   children,
   contentIsOutdated,
   contentNotTranslated,
+  lastDeployDate,
 }: Root) => {
   const { locale, asPath } = useRouter()
 
@@ -59,7 +60,7 @@ export const RootLayout = ({
 
       {children}
 
-      <Footer />
+      <Footer lastDeployDate={lastDeployDate} />
     </Container>
   )
 }

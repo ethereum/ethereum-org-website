@@ -140,6 +140,7 @@ export interface Root {
   children: JSX.Element
   contentIsOutdated: boolean
   contentNotTranslated: boolean
+  lastDeployDate: string
 }
 
 export interface MdPageContent {

@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm"
 import { join } from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getLastModifiedDate } from "@/lib/utils/gh"
+import { getLastModifiedDate, getLastDeployDate } from "@/lib/utils/gh"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 
@@ -116,6 +116,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = await getLastModifiedDate(originalSlug, locale!)
+  const lastDeployDate = await getLastDeployDate()
 
   // Get corresponding layout
   let layout = frontmatter.template
@@ -130,6 +131,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       originalSlug,
       frontmatter,
       lastUpdatedDate,
+      lastDeployDate,
       contentNotTranslated,
       layout,
       tocItems,
@@ -162,18 +164,22 @@ ContentPage.getLayout = (page: ReactElement) => {
     originalSlug: slug,
     frontmatter,
     lastUpdatedDate,
+    lastDeployDate,
     contentNotTranslated,
     layout,
     tocItems,
   } = page.props
+
+  const rootLayoutProps = {
+    contentIsOutdated: frontmatter.isOutdated,
+    contentNotTranslated,
+    lastDeployDate,
+  }
   const layoutProps = { slug, frontmatter, lastUpdatedDate, tocItems }
   const Layout = layoutMapping[layout]
 
   return (
-    <RootLayout
-      contentIsOutdated={frontmatter.isOutdated}
-      contentNotTranslated={contentNotTranslated}
-    >
+    <RootLayout {...rootLayoutProps}>
       <Layout {...layoutProps}>{page}</Layout>
     </RootLayout>
   )
