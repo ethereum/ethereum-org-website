@@ -7,7 +7,7 @@ import path from "path"
 
 import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImg from "@/lib/rehype/rehypeImg"
-import { getLastModifiedDate } from "@/lib/utils/gh"
+import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import { readingTime } from "@/lib/utils/timeToRead"
 
 // Layouts
@@ -52,7 +52,10 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     mdxOptions: {
       // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
+      rehypePlugins: [
+        [rehypeImg, { dir: mdDir, srcPath: mdPath, locale }],
+        [rehypeHeadingIds],
+      ],
     },
   })
 

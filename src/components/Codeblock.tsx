@@ -327,9 +327,13 @@ const Codeblock: React.FC<IProps> = ({
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
                       <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
                         {isCollapsed ? (
-                          <Translation id="show-all" />
+                          // TODO: Implement after intl
+                          // <Translation id="show-all" />
+                          <>Show all</>
                         ) : (
-                          <Translation id="show-less" />
+                          // TODO: Implement after intl
+                          // <Translation id="show-less" />
+                          <>Show less</>
                         )}
                       </TopBarItem>
                     )}
