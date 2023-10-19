@@ -1,5 +1,14 @@
 [
   {
+    "title": "Ethereum HK Day: Road to Devcon",
+    "to": "https://ethhongkong.dev/",
+    "sponsor": "Road to Devcon Grants",
+    "location": "Hong Kong",
+    "description": "AA, wallet, ZK, intents, L2, Verkle tree, stateless, and more.",
+    "startDate": "2023-11-06",
+    "endDate": "2023-11-07"
+  },
+  {
     "title": "Road to Devcon（Shenzhen）",
     "to": "https://ethsz.openbuild.xyz/",
     "sponsor": null,
