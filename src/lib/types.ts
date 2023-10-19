@@ -118,3 +118,8 @@ export type UserStats = {
 }
 
 export type QuizShareStats = { score: number; total: number }
+
+/**
+ * Staking
+ */
+export type StakingPage = "solo" | "saas" | "pools"

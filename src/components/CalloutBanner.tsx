@@ -1,16 +1,16 @@
-import React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, FlexProps, Image } from "@chakra-ui/react"
+import { Flex, type FlexProps } from "@chakra-ui/react"
+import { Image, type ImageProps } from "@/components/Image"
+import Text from "@/components/OldText"
+import OldHeading from "@/components/OldHeading"
+// TODO: Re-enable after i18n implemented
+// import Translation from "./Translation"
 
-import Translation from "./Translation"
-import Text from "./OldText"
-import OldHeading from "./OldHeading"
-import GatsbyImage from "./GatsbyImage"
-import { TranslationKey } from "../utils/translations"
+import type { TranslationKey } from "@/lib/types"
 
 export interface IProps extends FlexProps {
   children?: React.ReactNode
-  image: IGatsbyImageData
+  image: ImageProps["src"]
+  imageWidth?: ImageProps["width"]
   maxImageWidth?: number
   titleKey: TranslationKey
   descriptionKey: TranslationKey
@@ -19,6 +19,7 @@ export interface IProps extends FlexProps {
 
 const CalloutBanner: React.FC<IProps> = ({
   image,
+  imageWidth,
   maxImageWidth,
   titleKey,
   descriptionKey,
@@ -34,16 +35,20 @@ const CalloutBanner: React.FC<IProps> = ({
     borderRadius="base"
     {...restProps}
   >
-    <GatsbyImage
-      image={image}
-      alt={alt}
-      objectFit="contain"
-      alignSelf="center"
-      w="full"
-      maxW={`${maxImageWidth}px`}
-      mt={-24}
-      mb={{ base: 0, lg: -24 }}
-    />
+    {image && (
+      <Image
+        src={image}
+        alt={alt}
+        w={imageWidth}
+        maxW={`${maxImageWidth}px`}
+        style={{
+          objectFit: "contain",
+        }}
+        alignSelf="center"
+        mt={-24}
+        mb={{ base: 0, lg: -24 }}
+      />
+    )}
     <Flex
       flexGrow={1}
       flexShrink={0}
@@ -59,10 +64,12 @@ const CalloutBanner: React.FC<IProps> = ({
         fontSize={{ base: "2xl", sm: "2rem" }}
         lineHeight="1.4"
       >
-        <Translation id={titleKey} />
+        {/* <Translation id={titleKey} /> */}
+        {titleKey}
       </OldHeading>
       <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
-        <Translation id={descriptionKey} />
+        {/* <Translation id={descriptionKey} /> */}
+        {descriptionKey}
       </Text>
       {children}
     </Flex>

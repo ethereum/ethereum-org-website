@@ -1,7 +1,7 @@
-import { Flex, FlexProps, LightMode } from "@chakra-ui/react"
+import { Flex, type FlexProps, LightMode } from "@chakra-ui/react"
 
-import Emoji from "./Emoji"
-import Text from "./OldText"
+import Emoji from "@/components/Emoji"
+import Text from "@/components/OldText"
 
 export interface IProps extends FlexProps {
   children?: React.ReactNode

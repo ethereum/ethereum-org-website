@@ -53,7 +53,7 @@ Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazi
 
 <StakingProductsCardGrid category="pools" />
 
-Sei pregato di notare l'importanza di scegliere un servizio che prenda sul serio la [diversità del client](/developers/docs/nodes-and-clients/client-diversity/), poiché essa migliora la sicurezza della rete e limita i tuoi rischi. I servizi aventi prova della limitazione dell'utilizzo dei client di maggioranza sono indicati con <em style="text-transform: uppercase;">"diversità del client d'esecuzione"</em> e <em style="text-transform: uppercase;">"diversità del client del consenso."</em>
+Sei pregato di notare l'importanza di scegliere un servizio che prenda sul serio la [diversità del client](/developers/docs/nodes-and-clients/client-diversity/), poiché essa migliora la sicurezza della rete e limita i tuoi rischi. I servizi aventi prova della limitazione dell'utilizzo dei client di maggioranza sono indicati con <em style={{ textTransform: "uppercase" }}>"diversità del client d'esecuzione"</em> e <em style={{ textTransform: "uppercase" }}>"diversità del client del consenso."</em>
 
 Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un'occhiata alla nostra [politica di elenco dei prodotti](/contributing/adding-staking-products/) per verificare l'idoneità e sottoporcelo.
 

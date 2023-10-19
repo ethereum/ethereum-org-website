@@ -17,8 +17,8 @@ import {
   StaticLayout,
   useCasesComponents,
   UseCasesLayout,
-  // stakingComponents,
-  // StakingLayout,
+  stakingComponents,
+  StakingLayout,
   roadmapComponents,
   RoadmapLayout,
   upgradeComponents,
@@ -36,7 +36,7 @@ import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
 const layoutMapping = {
   static: StaticLayout,
   "use-cases": UseCasesLayout,
-  // staking: StakingLayout,
+  staking: StakingLayout,
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
   // event: EventLayout,
@@ -46,7 +46,7 @@ const layoutMapping = {
 const componentsMapping = {
   static: staticComponents,
   "use-cases": useCasesComponents,
-  // staking: stakingComponents,
+  staking: stakingComponents,
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
   // event: eventComponents,

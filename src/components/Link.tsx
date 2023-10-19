@@ -13,8 +13,8 @@ import {
   type LinkProps as NextLinkProps,
 } from "@chakra-ui/next-js"
 
-// import { Lang } from "../utils/languages"
-// import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
+// import type { Lang } from "@/lib/types"
+// import { trackCustomEvent, MatomoEventOptions } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
 import { getRelativePath } from "@/lib/utils/relativePath"
 

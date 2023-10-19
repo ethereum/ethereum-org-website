@@ -101,7 +101,7 @@ Les indicateurs d'attributs sont utilisés ci-dessous pour signaler des forces o
 Il existe une variété d'options disponibles pour vous aider dans votre configuration. Utilisez les indicateurs ci-dessus pour vous guider à travers les outils ci-dessous.
 
 <InfoBanner emoji="⚠️" isWarning>
-Veuillez noter l'importance de choisir un <a href="/developers/docs/nodes-and-clients/client-diversity/">client minoritaire</a> , car cela améliore la sécurité du réseau et limite vos risques. Les outils qui permettent de configurer un client minoritaire sont désignés comme <em style="text-transform: uppercase;">"multi-client."</em>
+Veuillez noter l'importance de choisir un <a href="/developers/docs/nodes-and-clients/client-diversity/">client minoritaire</a> , car cela améliore la sécurité du réseau et limite vos risques. Les outils qui permettent de configurer un client minoritaire sont désignés comme <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 </InfoBanner>
 
 #### Outils de nœud

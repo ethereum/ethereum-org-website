@@ -49,6 +49,10 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/roadmap/verkle-trees",
     "/smart-contracts",
     "/social-networks",
+    "/staking/pools",
+    "/staking/saas",
+    "/staking/solo",
+    "/staking/withdrawals",
     "/web3",
     "/whitepaper",
   ]
