@@ -242,6 +242,8 @@ Projects working on zkEVMs include:
 
 - **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 is an EVM-compatible ZK Rollup being built by Matter Labs, powered by its own zkEVM._
 
+- **[Morphism](https://www.morphism.xyz)** - _Morphism is a hybrid rollup scaling solution that utilizes zk-proof to address the Layer 2 state challenge issue._
+
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
 - [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
