@@ -2,18 +2,18 @@ import React from "react"
 import { Badge, Box, Flex, HStack } from "@chakra-ui/react"
 
 import Emoji from "./Emoji"
-import CopyToClipboard from "./CopyToClipboard"
 import InlineLink from "./Link"
 import TutorialTags from "./TutorialTags"
-// import Translation from "./Translation"
-import Text from "./OldText"
 
-import { Lang } from "../utils/languages"
-import { getLocaleTimestamp } from "../utils/time"
-import { TranslationKey } from "../utils/translations"
+// TODO: Implement after intl
+// import Translation from "./Translation"
+// import { Lang } from "../utils/languages"
+// import { getLocaleTimestamp } from "../utils/time"
+import type { TranslationKey } from "@/lib/types"
 
 export interface IProps {
   frontmatter: any
+  timeToRead: number
 }
 
 export enum Skill {
@@ -26,9 +26,8 @@ export const getSkillTranslationId = (skill: Skill): TranslationKey =>
   `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 
-// TODO: Implement intl
-const TutorialMetadata: React.FC<IProps> = ({ frontmatter }) => {
-  // TODO: Implement intl
+const TutorialMetadata: React.FC<IProps> = ({ frontmatter, timeToRead }) => {
+  // TODO: Implement after intl
   // const { language } = useI18next()
 
   const hasSource = frontmatter.source && frontmatter.sourceUrl
@@ -53,7 +52,7 @@ const TutorialMetadata: React.FC<IProps> = ({ frontmatter }) => {
           mb={2}
           whiteSpace="nowrap"
         >
-          {/* TODO: Implement intl */}
+          {/* TODO: Implement after intl */}
           {/* <Translation id={getSkillTranslationId(frontmatter.skill)} /> */}
           {frontmatter.skill}
         </Flex>
@@ -85,15 +84,17 @@ const TutorialMetadata: React.FC<IProps> = ({ frontmatter }) => {
         {published && (
           <Box>
             <Emoji fontSize="sm" mr={2} text=":calendar:" />
-            {/* TODO: Implement language from intl */}
+            {/* TODO: Implement after intl */}
             {/* {getLocaleTimestamp(language as Lang, published)} */}
           </Box>
         )}
-        {/* <Box>
+        <Box>
           <Emoji fontSize="sm" mr={2} text=":stopwatch:" />
-          {Math.round(tutorial.fields.readingTime.minutes)}{" "}
-          <Translation id="comp-tutorial-metadata-minute-read" />
-        </Box> */}
+          {timeToRead}{" "}
+          {/* TODO: Implement after intl */}
+          {/* <Translation id="comp-tutorial-metadata-minute-read" /> */}
+          minute read
+        </Box>
       </HStack>
     </Flex>
   )

@@ -222,7 +222,8 @@ export const tutorialsComponents = {
 export const TutorialLayout = ({
   children,
   frontmatter,
-  tocItems
+  tocItems,
+  timeToRead,
 }) => {
   const { asPath: relativePath} = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
@@ -254,7 +255,7 @@ export const TutorialLayout = ({
         /> */}
         <ContentContainer>
           <H1>{frontmatter.title}</H1>
-          <TutorialMetadata frontmatter={frontmatter} />
+          <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
           <TableOfContents
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
