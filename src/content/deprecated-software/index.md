@@ -189,7 +189,7 @@ Minimal was a modular implementation of the Ethereum blockchain written in Go.
 
 **History**
 
-Minimal was replaced by [polgon-sdk](https://github.com/0xPolygon/polygon-edge)
+Minimal was replaced by [polygon-sdk](https://github.com/0xPolygon/polygon-edge)
 
 ### Hyperledger Burrow {#hyperledger-burrow}
 
