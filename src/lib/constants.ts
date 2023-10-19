@@ -17,6 +17,8 @@ export const DISCORD_PATH = "/discord/" as const
 export const CONTENT_IMAGES_MAX_WIDTH = 800
 export const LAST_COMMIT_BASE_URL =
   "https://api.github.com/repos/ethereum/ethereum-org-website/commits"
+export const LAST_DEPLOY_BASE_URL =
+  "https://api.github.com/repos/ethereum/ethereum-org-website/pulls?base=master&state=closed"
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"
