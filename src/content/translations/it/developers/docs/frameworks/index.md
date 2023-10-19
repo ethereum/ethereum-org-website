@@ -46,17 +46,17 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 
 - [Home page](https://www.web3labs.com/web3j-sdk)
 - [Documentazione](https://docs.web3j.io)
-- [Github](https://github.com/web3j/web3j)
+- [GitHub](https://github.com/web3j/web3j)
 
 **OpenZeppelin SDK:** **_Il kit di strumenti definitivo per i contratti intelligenti: una suite di strumenti per aiutarti a sviluppare, compilare, aggiornare, distribuire e interagire con i contratti intelligenti_**
 
 - [SDK OpenZeppelin](https://openzeppelin.com/sdk/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum della community](https://forum.openzeppelin.com/c/support/17)
 
 **Create Eth App -** **_Crea app per Ethereum con un comando. Offre una vasta scelta di framework per l'interfaccia utente e modelli DeFI tra cui scegliere._**
 
-- [Github](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modelli](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
 **Scaffold-Eth -** **_I componenti Ethers.js + Hardhat + React e gli hook per web3: tutto ciò che ti serve per iniziare a creare applicazioni decentralizzate alimentate da contratti intelligenti._**
@@ -76,7 +76,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 **Alchemy -** **_Piattaforma di sviluppo Ethereum_**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [Github](https://github.com/alchemyplatform)
+- [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
 **Foundry -** **_Un toolkit velocissimo, portatile e modulare per lo sviluppo di applicazioni di Ethereum scritte in Rust._**

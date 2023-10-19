@@ -8,11 +8,11 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-为了帮助您更好地理解这个页面，我们建议您先阅读[账户](/developers/docs/accounts/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
+为了帮助你更好地理解这个页面，我们建议先阅读[账户](/developers/docs/accounts/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
 ## 什么是交易？ {#whats-a-transaction}
 
-以太坊交易是指由外部持有账户发起的行动，换句话说，是指由人管理而不是智能合约管理的账户。 例如，如果 Bob 向 Alice 发送 1 ETH，则 Bob 的帐户必须减少 1 ETH，而 Alice 的账户必须增加 1 ETH。 交易会造成状态的改变。
+以太坊交易是指由外部持有账户发起的行动，换句话说，是指由人管理而不是智能合约管理的账户。 例如，如果 Bob 发送 Alice 1 ETH，则 Bob 的帐户必须减少 1 ETH，而 Alice 的帐户必须增加 1 ETH。 交易会造成状态的改变。
 
 ![显示交易导致状态更改的图表](./tx.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -27,8 +27,8 @@ lang: zh
 - `signature` – 发送者的标识符。 当发送者的私钥签署交易并确保发送者已授权此交易时，生成此签名。
 - `nonce` - 一个有序递增的计数器，表示来自帐户的交易数量
 - `value` – 发送者向接收者转移的以太币数量（面值为 WEI，1 个以太币 = 1e+18wei）
-- `data` – 可包括任意数据的可选字段
-- `gasLimit` – 交易可以消耗的最大数量的燃料单位。 [以太坊虚拟机](https://ethereum.org/en/developers/docs/evm/opcodes)指定每个可计算步骤所需的燃料单位
+- `input data` – 可包括任意数据的可选字段
+- `gasLimit` – 交易可以消耗的最大数量的燃料单位。 [以太坊虚拟机](/developers/docs/evm/opcodes)指定每个计算步骤所需的燃料单位
 - `maxPriorityFeePerGas` - 作为小费提供给验证者的已消耗燃料的最高价格
 - `maxFeePerGas` - 愿意为交易支付的每单位燃料的最高费用（包括 `baseFeePerGas` 和 `maxPriorityFeePerGas`）
 

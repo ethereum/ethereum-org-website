@@ -46,6 +46,7 @@ import { Item as ItemTableOfContents } from "../components/TableOfContents/utils
 import Text from "../components/OldText"
 import GlossaryDefinition from "../components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
 
@@ -253,6 +254,8 @@ const StaticPage = ({
           translationString={postMergeBannerTranslationString!}
         />
       )}
+
+      <WritersCohortBanner pathname={location.pathname} />
       <Flex
         justifyContent="space-between"
         w="full"
@@ -285,7 +288,7 @@ const StaticPage = ({
             },
           }}
         >
-          <Breadcrumbs slug={slug} />
+          <Breadcrumbs slug={slug} mb="8" />
           <Text
             color="text200"
             dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}

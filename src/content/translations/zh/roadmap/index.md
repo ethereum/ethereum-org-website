@@ -66,7 +66,7 @@ buttons:
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">ETH2 是什么？</h4>
+  <h4 style={{ marginTop: 0 }}>ETH2 是什么？</h4>
 
   <p>在以太坊转用权益证明之前，“Eth2” 一词通常用于描述以太坊的未来，但它<strong>已被淘汰，被更加准确的术语取代。</strong>它最初被用来区分转用权益证明之前和之后的以太坊网络，有时被用来指不同的以太坊客户端（执行客户端有时被称为 ETH1 客户端，共识客户端有时被称为 ETH2 客户端）。</p>
 
