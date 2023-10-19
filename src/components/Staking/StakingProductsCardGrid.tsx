@@ -1,4 +1,4 @@
-import React, { ComponentType, SVGProps, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { shuffle } from "lodash"
 import {
   Badge,
@@ -8,7 +8,7 @@ import {
   Flex,
   Heading,
   HStack,
-  Icon,
+  Icon as ChakraIcon,
   List,
   ListIcon,
   ListItem,
@@ -44,28 +44,29 @@ enum FlagType {
   UNKNOWN = "unknown",
 }
 
-const getIconFromName = (
-  imageName: string
-): ComponentType<SVGProps<SVGElement>> => {
+const getIconFromName = (imageName: string): typeof ChakraIcon | undefined => {
   const { [imageName + "GlyphIcon"]: Icon } = require("../icons/staking")
   return Icon
 }
 
-const Status: React.FC<{ status: FlagType }> = ({ status }) => {
+const Status = ({ status }: { status: FlagType }) => {
   if (!status) return null
 
-  const styles = { fontSize: "2xl", m: 0 }
-  switch (status) {
-    case "green-check":
-      return <ListIcon as={GreenCheckProductGlyphIcon} {...styles} />
-    case "caution":
-      return <ListIcon as={CautionProductGlyphIcon} {...styles} />
-    case "warning":
-    case "false":
-      return <ListIcon as={WarningProductGlyphIcon} {...styles} />
-    default:
-      return <ListIcon as={UnknownProductGlyphIcon} {...styles} />
+  const getStatusIcon = () => {
+    switch (status) {
+      case "green-check":
+        return GreenCheckProductGlyphIcon
+      case "caution":
+        return CautionProductGlyphIcon
+      case "warning":
+      case "false":
+        return WarningProductGlyphIcon
+      default:
+        return UnknownProductGlyphIcon
+    }
   }
+
+  return <ListIcon as={getStatusIcon()} fontSize="2xl" m={0} />
 }
 
 const StakingBadge: React.FC<{
@@ -93,20 +94,20 @@ type Product = {
   url: string
   platforms: Array<string>
   ui: Array<string>
-  minEth: number
+  minEth?: number
   openSource: FlagType
   audited: FlagType
   bugBounty: FlagType
   battleTested: FlagType
-  trustless: FlagType
-  selfCustody: FlagType
-  liquidityToken: FlagType
-  permissionless: FlagType
-  permissionlessNodes: FlagType
-  multiClient: FlagType
-  consensusDiversity: FlagType
-  executionDiversity: FlagType
-  economical: FlagType
+  trustless?: FlagType
+  selfCustody?: FlagType
+  liquidityToken?: FlagType
+  permissionless?: FlagType
+  permissionlessNodes?: FlagType
+  multiClient?: FlagType
+  consensusDiversity?: FlagType
+  executionDiversity?: FlagType
+  economical?: FlagType
   matomo: MatomoEventOptions
 }
 interface ICardProps {
@@ -139,7 +140,8 @@ const StakingProductCard: React.FC<ICardProps> = ({
   },
 }) => {
   const Svg = getIconFromName(imageName)
-  const data = [
+  type DataType = { label: JSX.Element; status?: FlagType }
+  const data: DataType[] = [
     {
       label: <Translation id="page-staking-considerations-solo-1-title" />,
       status: openSource,
@@ -192,7 +194,11 @@ const StakingProductCard: React.FC<ICardProps> = ({
       label: <Translation id="page-staking-considerations-solo-9-title" />,
       status: economical,
     },
-  ].filter(({ status }) => !!status)
+  ]
+
+  const filteredData = data.filter(
+    (item): item is Required<DataType> => !!item.status
+  )
 
   return (
     <Flex
@@ -212,7 +218,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
         borderRadius="base"
         maxH={24}
       >
-        {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
+        {!!Svg && <Svg fontSize="2rem" color="white" />}
         <Heading as="h4" fontSize="2xl" color="white">
           {name}
         </Heading>
@@ -250,8 +256,8 @@ const StakingProductCard: React.FC<ICardProps> = ({
       </Flex>
       <Box {...PADDED_DIV_STYLE} py={0}>
         <List m={0} gap={3}>
-          {data &&
-            data.map(({ label, status }, idx) => (
+          {filteredData &&
+            filteredData.map(({ label, status }, idx) => (
               <ListItem
                 as={Flex}
                 key={idx}
@@ -280,8 +286,20 @@ const StakingProductCard: React.FC<ICardProps> = ({
   )
 }
 
+type StakingProductsType = typeof stakingProducts
+
+type NodeToolsType = StakingProductsType["nodeTools"]
+type KeyGenType = StakingProductsType["keyGen"]
+type PoolsType = StakingProductsType["pools"]
+type SaasType = StakingProductsType["saas"]
+
+type StakingProductsCategoryKeys = keyof StakingProductsType
+
+type StakingCategoryType =
+  StakingProductsType[StakingProductsCategoryKeys][number]
+
 export interface IProps {
-  category: string
+  category: StakingProductsCategoryKeys
 }
 
 const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
@@ -324,8 +342,12 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     return product.multiClient === FlagType.VALID ? 1 : 0
   }
 
-  const scoreClientDiversity = (flag: FlagType): 2 | 1 | 0 => {
-    return flag === FlagType.VALID ? 2 : flag === FlagType.WARNING ? 1 : 0
+  const scoreClientDiversity = (flag: FlagType | undefined): 2 | 1 | 0 => {
+    if (flag === FlagType.VALID) return 2
+
+    if (flag === FlagType.WARNING) return 1
+
+    return 0
   }
 
   const scoreEconomical = (product: Product): 1 | 0 => {
@@ -348,75 +370,83 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     return score
   }
 
-  const getBattleTestedFlag = (_launchDate: string): FlagType => {
-    let battleTested = FlagType.WARNING
+  const getBattleTestedFlag = (
+    _launchDate: string
+  ): FlagType.CAUTION | FlagType.WARNING | FlagType.VALID => {
     const launchDate = new Date(_launchDate)
     const now = new Date()
     const halfYearAgo = new Date()
     const oneYearAgo = new Date()
     halfYearAgo.setDate(now.getDate() - 183)
     oneYearAgo.setDate(now.getDate() - 365)
+
     if (halfYearAgo > launchDate) {
-      battleTested = FlagType.CAUTION
+      return FlagType.CAUTION
     }
+
     if (oneYearAgo > launchDate) {
-      battleTested = FlagType.VALID
+      return FlagType.VALID
     }
-    return battleTested
+
+    return FlagType.WARNING
   }
 
   const getDiversityOfClients = (
     _pctMajorityClient: number | null
-  ): FlagType => {
+  ): FlagType.VALID | FlagType.UNKNOWN | FlagType.WARNING => {
     if (_pctMajorityClient === null) return FlagType.UNKNOWN
     if (_pctMajorityClient > 50) return FlagType.WARNING
     return FlagType.VALID
   }
 
-  const getFlagFromBoolean = (bool: boolean): FlagType =>
-    !!bool ? FlagType.VALID : FlagType.FALSE
+  const getFlagFromBoolean = (bool: boolean) =>
+    bool ? FlagType.VALID : FlagType.FALSE
 
   const getBrandProperties = ({
-    name,
-    imageName,
     hue,
-    url,
-    socials,
-    matomo,
-  }) => ({
-    name,
-    imageName,
+    ...rest
+  }: Pick<
+    StakingCategoryType,
+    "name" | "imageName" | "hue" | "url" | "matomo"
+  >): Pick<Product, "name" | "imageName" | "color" | "url" | "matomo"> => ({
     color: `hsla(${hue}, ${SAT}, ${LUM}, 1)`,
-    url,
-    socials,
-    matomo,
+    ...rest,
   })
 
-  const getTagProperties = ({ platforms, ui }) => ({
-    platforms,
-    ui,
-  })
+  const getTagProperties = (
+    props: Pick<StakingCategoryType, "platforms" | "ui">
+  ): Pick<Product, "platforms" | "ui"> => props
 
-  const getSharedSecurityProperties = ({
-    isFoss,
-    audits,
-    hasBugBounty,
-    launchDate,
-  }) => ({
-    openSource: getFlagFromBoolean(isFoss),
-    audited: getFlagFromBoolean(audits?.length),
-    bugBounty: getFlagFromBoolean(hasBugBounty),
-    battleTested: getBattleTestedFlag(launchDate),
+  const getSharedSecurityProperties = (
+    props: Pick<
+      StakingCategoryType,
+      "isFoss" | "audits" | "hasBugBounty" | "launchDate"
+    >
+  ): Pick<
+    Product,
+    "openSource" | "audited" | "bugBounty" | "battleTested"
+  > => ({
+    openSource: getFlagFromBoolean(props.isFoss),
+    audited: getFlagFromBoolean(!!props.audits?.length),
+    bugBounty: getFlagFromBoolean(props.hasBugBounty),
+    battleTested: getBattleTestedFlag(props.launchDate),
   })
 
   useEffect(() => {
     const categoryProducts = stakingProducts[category]
     const products: Array<Product> = []
 
+    function mapCatProducts<T extends unknown>(
+      products: T[],
+      cb: (listing: T) => Product
+    ) {
+      return products.map((item) => cb(item))
+    }
+
     // Pooled staking services
     if (category === "pools") {
       products.push(
-        ...categoryProducts.map((listing) => ({
+        ...mapCatProducts(categoryProducts as PoolsType, (listing) => ({
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
@@ -430,7 +460,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
           consensusDiversity: getDiversityOfClients(
             listing.pctMajorityConsensusClient
           ),
-          liquidityToken: getFlagFromBoolean(listing.tokens?.length),
+          liquidityToken: getFlagFromBoolean(!!listing.tokens?.length),
           minEth: listing.minEth,
         }))
       )
@@ -439,7 +469,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     // Solo staking products
     if (category === "nodeTools") {
       products.push(
-        ...categoryProducts.map((listing) => ({
+        ...mapCatProducts(categoryProducts as NodeToolsType, (listing) => ({
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
@@ -455,7 +485,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     // Staking as a service
     if (category === "saas") {
       products.push(
-        ...categoryProducts.map((listing) => ({
+        ...mapCatProducts(categoryProducts as SaasType, (listing) => ({
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
@@ -474,7 +504,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     // Key generators
     if (category === "keyGen") {
       products.push(
-        ...categoryProducts.map((listing) => ({
+        ...mapCatProducts(categoryProducts as KeyGenType, (listing) => ({
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
@@ -494,7 +524,6 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
           .sort((a, b) => b.rankingScore - a.rankingScore)
       )
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!rankedProducts) return null
