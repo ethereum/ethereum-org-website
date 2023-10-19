@@ -16,9 +16,8 @@ import { useRouter } from "next/router"
 
 import { BaseLink } from "./Link"
 
-// TODO
-// import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { Lang, TranslationKey } from "@/lib/types"
 
@@ -54,9 +53,11 @@ export interface LinkSection {
   }>
 }
 
-export interface IProps {}
+export interface IProps {
+  lastDeployDate: string
+}
 
-const Footer: React.FC<IProps> = () => {
+const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
   const { locale } = useRouter()
   // TODO: enable after setting i18n UI strings
   // const { t } = useTranslation()
@@ -305,11 +306,8 @@ const Footer: React.FC<IProps> = () => {
         <Box color="text200">
           {/* TODO */}
           {/* <Translation id="website-last-updated" />:{" "} */}
-          Website last updated: August 17, 2023
-          {/* {getLocaleTimestamp(
-            language as Lang,
-            data.allSiteBuildMetadata.edges[0].node.buildTime
-          )} */}
+          Website last updated:{" "}
+          {getLocaleTimestamp(locale as Lang, lastDeployDate!)}
         </Box>
         <Box my={4}>
           {socialLinks.map((link, idk) => {
