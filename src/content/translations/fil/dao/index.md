@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: ../../assets/use-cases/dao-2.png
+image: ../../../../assets/use-cases/dao-2.png
 alt: Representasyon ng botohan ng DAO sa isang panukala.
 summaryPoint1: Mga komunidad ng mga miyembro na walang sentralisadong pamumuno.
 summaryPoint2: Isang ligtas na paraan para makipag-collaborate sa mga hindi kakilala sa internet.

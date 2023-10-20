@@ -64,6 +64,6 @@ class BeaconBlockBody(Container):
 
 - [区块简介](/developers/docs/blocks/)
 - [权益证明简介](/developers/docs/consensus-mechanisms/pos/)
-- [以太坊共识规范](www.github.com/ethereum/consensus-specs)
+- [以太坊共识规范](https://github.com/ethereum/consensus-specs)
 - [Gasper 简介](/developers/docs/consensus-mechanisms/pos/)
 - [升级以太坊](https://eth2book.info/)
