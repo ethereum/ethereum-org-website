@@ -30,7 +30,7 @@ const MarkdownImage = ({
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
     <Flex as="span" justify="center">
-      <Link href={rest.src.toString()} hideArrow forceExternal>
+      <Link href={rest.src.toString()} target="_blank">
         <Image
           width={imageWidth}
           height={imageHeight}

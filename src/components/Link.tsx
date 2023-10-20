@@ -28,7 +28,6 @@ type BaseProps = {
   hideArrow?: boolean
   isPartiallyActive?: boolean
   activeStyle?: StyleProps
-  forceExternal?: boolean
   // customEventOptions?: MatomoEventOptions
   // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
@@ -57,7 +56,6 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
     hideArrow,
     isPartiallyActive = true,
     activeStyle = { color: "primary.base" },
-    forceExternal,
     ...rest
   } = props
 
@@ -68,7 +66,7 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
 
   const isDiscordInvite = url.isDiscordInvite(href)
   const isPdf = url.isPdf(href)
-  const isExternal = forceExternal || url.isExternal(href) || isPdf
+  const isExternal = url.isExternal(href) || isPdf
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
