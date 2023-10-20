@@ -1,88 +1,35 @@
-import React from "react"
-
-import { useQuery, gql } from "@apollo/client"
-import FileContributors, { Author, Commit } from "./FileContributors"
-
-import { FlexProps } from "@chakra-ui/react"
-
-const COMMIT_HISTORY = gql`
-  query CommitHistory($relativePath: String) {
-    repository(name: "ethereum-org-website", owner: "ethereum") {
-      ref(qualifiedName: "master") {
-        target {
-          ... on Commit {
-            id
-            history(path: $relativePath) {
-              edges {
-                node {
-                  author {
-                    name
-                    email
-                    avatarUrl(size: 100)
-                    user {
-                      login
-                      url
-                    }
-                  }
-                  committedDate
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+import { useEffect, useState } from "react"
+import type { FlexProps } from "@chakra-ui/react"
+import FileContributors from "@/components/FileContributors"
+import { /* CONTENT_DIR,  */GITHUB_AUTH_HEADERS, GITHUB_COMMITS_URL } from "@/lib/constants"
+import { fetchGitHubAuthors } from "@/lib/utils/fetchGitHubContributors"
+import { FileContributorsState } from "@/lib/types"
 
 export interface IProps extends FlexProps {
   relativePath: string
   editPath?: string
+  lastUpdatedDate: string
 }
 
 const GitHubContributors: React.FC<IProps> = ({
   relativePath,
+  lastUpdatedDate,
   editPath,
-  ...props
 }) => {
-  const { loading, error, data } = useQuery(COMMIT_HISTORY, {
-    variables: { relativePath },
-  })
-
-  const commits: Array<Commit> =
-    data?.repository?.ref?.target?.history?.edges?.map((commit) => commit.node)
-
-  const lastCommit = commits?.[0] || {}
-  const lastContributor = lastCommit?.author || {}
-  const uniqueContributors =
-    commits?.reduce(
-      (res: Array<Author>, cur: Commit) => {
-        if (cur.author.user === null) {
-          return res
-        }
-        for (const contributor of res) {
-          const hasAuthorInfo = !!contributor.user && !!cur.author.user
-          if (
-            hasAuthorInfo &&
-            contributor.user.login === cur.author.user.login
-          ) {
-            return res
-          }
-        }
-        res.push(cur.author)
-        return res
-      },
-      [lastContributor]
-    ) || []
+  const [{ loading, authors, error }, setState] = useState<FileContributorsState>({ loading: true })
+  useEffect(() => {
+    ;(async () => {
+      setState(await fetchGitHubAuthors(relativePath))
+    })()
+  }, [])
 
   return (
     <FileContributors
-      error={error}
+      error={!!error}
       loading={loading}
-      relativePath={relativePath}
-      contributors={uniqueContributors}
-      lastContributor={lastContributor}
-      lastEdit={lastCommit.committedDate}
+      contributors={authors || []}
+      lastEdit={lastUpdatedDate}
+      editPath={editPath}
     />
   )
 }

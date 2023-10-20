@@ -1,7 +1,4 @@
-import React, { useState } from "react"
-
-import { useI18next } from "gatsby-plugin-react-i18next"
-import { gql } from "@apollo/client"
+import { useState } from "react"
 
 import {
   Avatar,
@@ -19,60 +16,21 @@ import {
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 
-import { getLocaleTimestamp } from "../utils/time"
-import { trackCustomEvent } from "../utils/matomo"
-import { Lang } from "../utils/languages"
+import { Button, ButtonLink } from "@/components/Buttons"
+import InlineLink from "@/components/Link"
+import Modal from "@/components/Modal"
+import Translation from "@/components/Translation"
+import Text from "@/components/OldText"
 
-import { Button, ButtonLink } from "./Buttons"
-import InlineLink from "./Link"
-import Modal from "./Modal"
-import Translation from "./Translation"
-import Text from "./OldText"
+import { getLocaleTimestamp } from "@/lib/utils/time"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import type { Lang } from "@/lib/types"
+import type { Author } from "@/lib/interfaces"
 
-export interface Author {
-  name: string
-  email: string
-  avatarUrl: string
-  user: {
-    login: string
-    url: string
-  }
-}
-
-export interface Commit {
-  author: Author
-  committedDate: string
-}
-
-const COMMIT_HISTORY = gql`
-  query CommitHistory($relativePath: String) {
-    repository(name: "ethereum-org-website", owner: "ethereum") {
-      ref(qualifiedName: "master") {
-        target {
-          ... on Commit {
-            id
-            history(path: $relativePath) {
-              edges {
-                node {
-                  author {
-                    name
-                    email
-                    avatarUrl(size: 100)
-                    user {
-                      login
-                      url
-                    }
-                  }
-                  committedDate
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export interface Commit {
+//   author: Author
+//   committedDate: string
+// }
 
 // TODO: skeletons are not part of the DS, so these should be replaced once we
 // implement the new designs. Thats the reason we haven't define these styles in
@@ -119,29 +77,36 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
 }
 
 export interface IProps extends FlexProps {
-  relativePath: string
   editPath?: string
   contributors: Array<Author>
-  lastContributor: any
   loading: Boolean
-  error: any
+  error?: boolean
   lastEdit: string
 }
 
 const FileContributors: React.FC<IProps> = ({
-  relativePath,
   editPath,
   contributors,
-  lastContributor,
   loading,
   error,
   lastEdit,
   ...props
 }) => {
   const [isModalOpen, setModalOpen] = useState(false)
-  const { language } = useI18next()
+  // TODO: Revert
+  // const { language } = useI18next()
+  const language = "en"
 
   if (error) return null
+  const lastContributor: Author = contributors.length ? contributors[0] : {
+    name: "",
+    email: "",
+    avatarUrl: "",
+    user: {
+      login: "",
+      url: "",
+    },
+  }
 
   return (
     <>
@@ -188,7 +153,9 @@ const FileContributors: React.FC<IProps> = ({
 
           <Skeleton isLoaded={!loading}>
             <Text m={0} color="text200">
-              <Translation id="last-edit" />:{" "}
+              {/* TODO: Revert with intl */}
+              {/* <Translation id="last-edit" />:{" "} */}
+              Last edit:{" "}
               {lastContributor.user && (
                 <InlineLink to={lastContributor.user.url}>
                   @{lastContributor.user.login}
@@ -216,7 +183,8 @@ const FileContributors: React.FC<IProps> = ({
               }}
               w={{ base: "full", md: "inherit" }}
             >
-              <Translation id="see-contributors" />
+              {/* <Translation id="see-contributors" /> */}
+              See contributors
             </Button>
           </Skeleton>
           {editPath && (
