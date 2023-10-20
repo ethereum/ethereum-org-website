@@ -53,8 +53,8 @@ export const getLastDeployDate = async () => {
       title.toLowerCase().includes("deploy")
     )
 
-    const lastDeployDate: string =
-      deploys.length > 0 ? deploys[0].merged_at : new Date().toISOString()
+    if (deploys.length <= 0) throw new Error("No deploy PRs found")
+    const lastDeployDate: string = deploys[0].merged_at
 
     return lastDeployDate
   } catch (err) {
