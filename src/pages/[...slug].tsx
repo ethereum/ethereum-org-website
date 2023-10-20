@@ -6,9 +6,10 @@ import remarkGfm from "remark-gfm"
 import { join } from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getLastModifiedDate } from "@/lib/utils/gh"
+import { getLastModifiedDate, getLastDeployDate } from "@/lib/utils/gh"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
+import mdComponents from "@/components/MdComponents"
 
 // Layouts and components
 import {
@@ -17,8 +18,8 @@ import {
   StaticLayout,
   useCasesComponents,
   UseCasesLayout,
-  // stakingComponents,
-  // StakingLayout,
+  stakingComponents,
+  StakingLayout,
   roadmapComponents,
   RoadmapLayout,
   upgradeComponents,
@@ -36,7 +37,7 @@ import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
 const layoutMapping = {
   static: StaticLayout,
   "use-cases": UseCasesLayout,
-  // staking: StakingLayout,
+  staking: StakingLayout,
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
   // event: EventLayout,
@@ -46,7 +47,7 @@ const layoutMapping = {
 const componentsMapping = {
   static: staticComponents,
   "use-cases": useCasesComponents,
-  // staking: stakingComponents,
+  staking: stakingComponents,
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
   // event: eventComponents,
@@ -116,6 +117,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = await getLastModifiedDate(originalSlug, locale!)
+  const lastDeployDate = await getLastDeployDate()
 
   // Get corresponding layout
   let layout = frontmatter.template
@@ -130,6 +132,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       originalSlug,
       frontmatter,
       lastUpdatedDate,
+      lastDeployDate,
       contentNotTranslated,
       layout,
       tocItems,
@@ -145,7 +148,7 @@ const ContentPage: NextPageWithLayout<ContentPageProps> = ({
   mdxSource,
   layout,
 }) => {
-  const components = componentsMapping[layout]
+  const components = { ...mdComponents, ...componentsMapping[layout] }
   return (
     <>
       {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
@@ -162,18 +165,22 @@ ContentPage.getLayout = (page: ReactElement) => {
     originalSlug: slug,
     frontmatter,
     lastUpdatedDate,
+    lastDeployDate,
     contentNotTranslated,
     layout,
     tocItems,
   } = page.props
+
+  const rootLayoutProps = {
+    contentIsOutdated: frontmatter.isOutdated,
+    contentNotTranslated,
+    lastDeployDate,
+  }
   const layoutProps = { slug, frontmatter, lastUpdatedDate, tocItems }
   const Layout = layoutMapping[layout]
 
   return (
-    <RootLayout
-      contentIsOutdated={frontmatter.isOutdated}
-      contentNotTranslated={contentNotTranslated}
-    >
+    <RootLayout {...rootLayoutProps}>
       <Layout {...layoutProps}>{page}</Layout>
     </RootLayout>
   )

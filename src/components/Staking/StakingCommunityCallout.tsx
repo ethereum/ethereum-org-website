@@ -1,43 +1,30 @@
-import React from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { graphql, useStaticQuery } from "gatsby"
-import { Flex, FlexProps } from "@chakra-ui/react"
+import { Flex, type FlexProps } from "@chakra-ui/react"
 
-import { ButtonLink } from "../Buttons"
-import CalloutBanner from "../CalloutBanner"
-import Translation from "../Translation"
+import { ButtonLink } from "@/components/Buttons"
+import CalloutBanner from "@/components/CalloutBanner"
+// TODO: Re-enable after i18n implemented
+// import Translation from "@/components/Translation"
 
-import { trackCustomEvent } from "../../utils/matomo"
-import { getImage } from "../../utils/image"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import image from "@/public/enterprise-eth.png"
 
 export interface IProps extends FlexProps {
   id?: string
 }
 
 const StakingCommunityCallout: React.FC<IProps> = (props) => {
-  const { t } = useTranslation()
-  const { image } = useStaticQuery(graphql`
-    {
-      image: file(relativePath: { eq: "enterprise-eth.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 500
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-    }
-  `)
+  // TODO: Re-enable after i18n implemented
+  // const { t } = useTranslation()
 
   return (
     <CalloutBanner
       {...props}
-      image={getImage(image)!}
-      alt={t("page-staking-image-alt")}
+      image={image}
+      // alt={t("page-staking-image-alt")}
+      alt="page-staking-image-alt"
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}
+      maxImageWidth={350}
     >
       <Flex gap={4} direction={{ base: "column", md: "row" }}>
         <ButtonLink
@@ -77,7 +64,9 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
           to="https://ethstaker.cc"
           w={{ base: "full", md: "auto" }}
         >
-          <Translation id="rollup-component-website" />
+          {/* TODO */}
+          {/* <Translation id="rollup-component-website" /> */}
+          Website
         </ButtonLink>
       </Flex>
     </CalloutBanner>

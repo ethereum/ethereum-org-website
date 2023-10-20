@@ -1,25 +1,28 @@
-import React, { useState } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useState } from "react"
 import { Box, chakra, Flex } from "@chakra-ui/react"
-
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import { ButtonLink } from "../Buttons"
-import Translation from "../Translation"
-import Text from "../OldText"
-
-import { trackCustomEvent } from "../../utils/matomo"
 import { FaTools } from "react-icons/fa"
 
-const StyledSelect = chakra(Select, {
-  baseStyle: {
-    maxW: { base: "full", md: "50%" },
-  },
-})
+// TODO: Figure out "react-select" usage
+// import { StyledSelect as Select } from "@/components/SharedStyledComponents"
+
+import { ButtonLink } from "@/components/Buttons"
+import Text from "@/components/OldText"
+// TODO: Re-enable after i18n implemented
+// import Translation from "@/components/Translation"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+// const StyledSelect = chakra(Select, {
+//   baseStyle: {
+//     maxW: { base: "full", md: "50%" },
+//   },
+// })
 
 export interface IProps {}
 
 const StakingLaunchpadWidget: React.FC<IProps> = () => {
-  const { t } = useTranslation()
+  // TODO: Re-enable after i18n implemented
+  // const { t } = useTranslation()
   const [selection, setSelection] = useState("testnet")
 
   const handleChange = (e) => {
@@ -48,6 +51,7 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
     value: key,
   }))
 
+  // TODO: Re-enable translations after i18n implemented, and remove English placeholders
   return (
     <Flex
       bg="layer2Gradient"
@@ -56,35 +60,52 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
       p={{ base: 6, md: 8 }}
     >
       <Text as="span" color="text200">
-        <Translation id="page-staking-launchpad-widget-span" />
+        {/* <Translation id="page-staking-launchpad-widget-span" /> */}
+        Choose network
       </Text>
       <Box my={4}>
-        <StyledSelect
+        {/* TODO: Figured out "react-select" usage */}
+        {/* <StyledSelect
           className="react-select-container"
           classNamePrefix="react-select"
           options={selectOptions}
           onChange={handleChange}
           defaultValue={selectOptions[0]}
-        />
+        /> */}
       </Box>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p1" />
+        {/* <Translation id="page-staking-launchpad-widget-p1" /> */}
+        Solo validators are expected to <strong>test their setup</strong> and
+        operational skills on the Goerli testnet before risking funds. Remember
+        it is important to choose a{" "}
+        <a href="/developers/docs/nodes-and-clients/client-diversity/">
+          minority client
+        </a>{" "}
+        as it improves the security of the network and limits your risk.
       </Text>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p2" />
+        {/* <Translation id="page-staking-launchpad-widget-p2" /> */}
+        If you're comfortable with it, you can set up everything needed from the
+        command line using the Staking Launchpad alone.
       </Text>
       <Box mb={4}>
         <ButtonLink
           to={data[selection].url}
           width={{ base: "full", md: "auto" }}
         >
-          {selection === "mainnet"
+          {/* {selection === "mainnet"
             ? t("page-staking-launchpad-widget-mainnet-start")
-            : t("page-staking-launchpad-widget-testnet-start")}
+            : t("page-staking-launchpad-widget-testnet-start")} */}
+          {selection === "mainnet"
+            ? "Start staking on Mainnet"
+            : "Start staking on Goerli"}
         </ButtonLink>
       </Box>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p3" />
+        {/* <Translation id="page-staking-launchpad-widget-p3" /> */}
+        To make things easier, check out some of the tools and guides below that
+        can help you alongside the Staking Launchpad to get your clients set up
+        with ease.
       </Text>
       <Box>
         <ButtonLink
@@ -93,7 +114,8 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           width={{ base: "full", md: "auto" }}
           leftIcon={<FaTools />}
         >
-          <Translation id="page-staking-launchpad-widget-link" />
+          {/* <Translation id="page-staking-launchpad-widget-link" /> */}
+          Software tools and guide
         </ButtonLink>
       </Box>
     </Flex>

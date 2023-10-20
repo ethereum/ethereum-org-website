@@ -101,7 +101,7 @@ ETH のソロステーキングを支援するツールやサービスは増え�
 セットアップに役立つ様々なオプションが用意されています。 上記の指標を参考に、ツールを選択してください。
 
 <InfoBanner emoji="⚠️" isWarning>
-<a href="/developers/docs/nodes-and-clients/client-diversity/">マイノリティのクライアント</a>を選択することが、ネットワークのセキュリティを向上させ、ご自身のリスクを制限する上で、重要であることにご留意ください。 少数派のクライアントを設定できるツールは、<em style="text-transform: uppercase;">「マルチクライアント」</em> と表記されています。
+<a href="/developers/docs/nodes-and-clients/client-diversity/">マイノリティのクライアント</a>を選択することが、ネットワークのセキュリティを向上させ、ご自身のリスクを制限する上で、重要であることにご留意ください。 少数派のクライアントを設定できるツールは、<em style={{ textTransform: "uppercase" }}>「マルチクライアント」</em> と表記されています。
 </InfoBanner>
 
 #### ノードツール

@@ -110,7 +110,7 @@ Terdapat berbagai pilihan yang tersedia untuk membantu Anda dengan pengaturan An
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Harap perhatikan pentingnya memilih [klien minoritas](/developers/docs/nodes-and-clients/client-diversity/) karena ini meningkatkan keamanan jaringan dan membatasi risiko Anda. Perangkat yang memungkinkan Anda mengatur klien minoritas ditandai sebagai <em style="text-transform: uppercase;">"multi-klien."</em>
+Harap perhatikan pentingnya memilih [klien minoritas](/developers/docs/nodes-and-clients/client-diversity/) karena ini meningkatkan keamanan jaringan dan membatasi risiko Anda. Perangkat yang memungkinkan Anda mengatur klien minoritas ditandai sebagai <em style={{ textTransform: "uppercase" }}>"multi-klien."</em>
 
 #### Pembangkit Kunci
 

@@ -1,189 +1,48 @@
 import {
-  Badge,
   Box,
-  calc,
-  chakra,
-  Divider as ChakraDivider,
   Flex,
   Icon,
   List,
   ListItem,
   Show,
   Text,
-  type BoxProps,
   type FlexProps,
   type HeadingProps,
-  type TextProps,
   useToken,
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
 import { BaseLink } from "@/components/Link"
-import { ButtonLink } from "@/components/Buttons"
-import { Image } from "@/components/Image"
-import { mdxTableComponents } from "@/components/Table"
 import BeaconChainActions from "@/components/BeaconChainActions"
+import { Image } from "@/components/Image"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import Card from "@/components/Card"
-import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
-import MdLink from "@/components/MdLink"
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
-import QuizWidget from "@/components/Quiz/QuizWidget"
-import RandomAppList from "@/components/RandomAppList"
 import ShardChainsList from "@/components/ShardChainsList"
+import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
-import YouTube from "@/components/YouTube"
-// import Contributors from "@/components/Contributors"
-// import Logo from "@/components/Logo"
-// import MeetupList from "@/components/MeetupList"
-// import Translation from "@/components/Translation"
-// TODO: Re-enable PageMetadata after i18n is implemented:
-// import PageMetadata from "@/components/PageMetadata"
 import {
   MobileButton,
   MobileButtonDropdown,
+  Page as MdPage,
   StyledButtonDropdown,
-} from "@/layouts/UseCases"
+  InfoColumn,
+  ContentContainer,
+} from "@/components/MdComponents"
+// import Translation from "@/components/Translation"
+// TODO: Re-enable PageMetadata after i18n is implemented:
+// import PageMetadata from "@/components/PageMetadata"
 
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
-import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
-const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
-  <Flex
-    direction={{ base: "column", lg: "row" }}
-    justify="space-between"
-    mx="auto"
-    mb={16}
-    pt={{ lg: 16 }}
-    w="full"
-    {...props}
-  />
-)
-
-const Divider = () => (
-  <ChakraDivider
-    my={16}
-    w="10%"
-    borderBottomWidth="0.25rem"
-    borderColor="homeDivider"
-  />
-)
-
-const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    direction="column"
-    flex="0 1 400px"
-    ml={8}
-    mr={16}
-    position="sticky"
-    top="6.25rem"
-    h={calc("100vh").subtract("80px").toString()}
-    {...props}
-  />
-)
-
-// Apply styles for classes within markdown here
-const ContentContainer = (props: BoxProps) => (
-  <Box
-    as="article"
-    flex="1 1 1024px"
-    position="relative"
-    p={8}
-    pt={0}
-    {...props}
-    sx={{
-      ".featured": {
-        pl: 4,
-        ml: -4,
-        borderLeft: "1px dotted",
-        borderColor: "primary.base",
-      },
-      ".citation p": {
-        color: "text200",
-      },
-    }}
-  />
-)
-
-const LastUpdated = (props: ChildOnlyProp) => (
-  <Text
-    color="text200"
-    fontStyle="italic"
-    pt={4}
-    mb={0}
-    borderTop="1px"
-    borderColor="border"
-    {...props}
-  />
-)
-
-const Pre = chakra("pre", {
-  baseStyle: {
-    maxW: "full",
-    overflowX: "scroll",
-    backgroundColor: "preBackground",
-    borderRadius: 1,
-    p: 4,
-    border: "1px",
-    borderColor: "preBorder",
-    whiteSpace: "pre-wrap",
-  },
-})
-
-const Heading1 = (props: HeadingProps) => (
-  <OldHeading
-    as="h1"
-    fontWeight="bold"
-    lineHeight={1.4}
-    fontSize="2.5rem"
-    {...props}
-  />
-)
-
-const Heading2 = (props: HeadingProps) => (
-  <OldHeading
-    fontSize="2rem"
-    fontWeight="bold"
-    lineHeight={1.4}
-    mt={16}
-    {...props}
-  />
-)
-
-const Heading3 = (props: HeadingProps) => (
-  <OldHeading
-    as="h3"
-    fontWeight="bold"
-    lineHeight={1.4}
-    fontSize="2xl"
-    {...props}
-  />
-)
-
-const Heading4 = (props: HeadingProps) => (
-  <OldHeading
-    as="h4"
-    fontSize="xl"
-    lineHeight={1.4}
-    fontWeight="semibold"
-    {...props}
-  />
-)
-
-const Paragraph = (props: TextProps) => (
-  <Text mt={8} mb={4} color="text300" {...props} />
-)
+const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 
 const Title = (props: ChildOnlyProp) => (
   <OldHeading
@@ -262,36 +121,25 @@ const TitleCard = (props: ChildOnlyProp) => {
   )
 }
 
-// Note: you must pass components to MDXProvider in order to render them in markdown files
-// https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
+const LastUpdated = (props: ChildOnlyProp) => (
+  <Text
+    color="text200"
+    fontStyle="italic"
+    pt={4}
+    mb={0}
+    borderTop="1px"
+    borderColor="border"
+    {...props}
+  />
+)
+
+// Upgrade layout components
 export const upgradeComponents = {
-  a: MdLink,
-  h1: Heading1,
-  h2: Heading2,
-  h3: Heading3,
-  h4: Heading4,
-  p: Paragraph,
-  pre: Pre,
-  Badge,
-  BeaconChainActions,
-  ButtonLink,
-  Card,
-  Divider,
-  Emoji,
-  ExpandableCard,
-  GlossaryTooltip,
-  InfoBanner,
   MergeArticleList,
   MergeInfographic,
-  QuizWidget,
-  RandomAppList,
   ShardChainsList,
   UpgradeStatus,
-  YouTube,
-  ...mdxTableComponents,
-  // Contributors,
-  // Logo,
-  // MeetupList,
+  BeaconChainActions,
 }
 
 interface IProps extends ChildOnlyProp, MdPageContent {

@@ -1,47 +1,42 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import { Center } from "@chakra-ui/react"
 
-import OrderedList from "../OrderedList"
-import Translation from "../Translation"
-import GatsbyImage from "../GatsbyImage"
+import { Image } from "@/components/Image"
+import OrderedList from "@/components/OrderedList"
+// Re-enable after i18n implemented
+// import Translation from "@/components/Translation"
 
-import { getImage } from "../../utils/image"
+import image from "@/public/hackathon_transparent.png"
 
 export interface IProps {}
 
 const StakingHowSoloWorks: React.FC<IProps> = () => {
-  const { image } = useStaticQuery(graphql`
-    {
-      image: file(relativePath: { eq: "hackathon_transparent.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 400
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-    }
-  `)
-
+  // TODO: Re-enable after i18n implemented
+  // const items = [
+  //   <p>
+  //     <Translation id="page-staking-how-solo-works-item-1" />
+  //   </p>,
+  //   <p>
+  //     <Translation id="page-staking-how-solo-works-item-2" />
+  //   </p>,
+  //   <p>
+  //     <Translation id="page-staking-how-solo-works-item-3" />
+  //   </p>,
+  //   <p>
+  //     <Translation id="page-staking-how-solo-works-item-4" />
+  //   </p>,
+  //   <p>
+  //     <Translation id="page-staking-how-solo-works-item-5" />
+  //   </p>,
+  // ]
   const items = [
     <p>
-      <Translation id="page-staking-how-solo-works-item-1" />
+      Get some hardware: You need to <a href="/run-a-node/">run a node</a> to
+      stake
     </p>,
-    <p>
-      <Translation id="page-staking-how-solo-works-item-2" />
-    </p>,
-    <p>
-      <Translation id="page-staking-how-solo-works-item-3" />
-    </p>,
-    <p>
-      <Translation id="page-staking-how-solo-works-item-4" />
-    </p>,
-    <p>
-      <Translation id="page-staking-how-solo-works-item-5" />
-    </p>,
+    <p>Sync an execution layer client</p>,
+    <p>Sync a consensus layer client</p>,
+    <p>Generate your keys and load them into your validator client</p>,
+    <p>Monitor and maintain your node</p>,
   ]
 
   return (
@@ -50,7 +45,7 @@ const StakingHowSoloWorks: React.FC<IProps> = () => {
       justifyContent="space-between"
     >
       <OrderedList listData={items} />
-      <GatsbyImage image={getImage(image)!} alt="" />
+      <Image src={image} alt="" width={400} />
     </Center>
   )
 }

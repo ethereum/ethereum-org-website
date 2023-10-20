@@ -1,18 +1,18 @@
-import React from "react"
 import { Box, Flex, Heading, useTheme } from "@chakra-ui/react"
 
-import InlineLink from "../Link"
-import Translation from "../Translation"
-import Text from "../OldText"
-import OldHeading from "../OldHeading"
+import InlineLink from "@/components/Link"
+// TODO: Re-enable when translations are ready
+// import Translation from "@/components/Translation"
+import Text from "@/components/OldText"
+import OldHeading from "@/components/OldHeading"
 
-import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
-import { TranslationKey } from "../../utils/translations"
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import type { StakingPage, TranslationKey } from "@/lib/types"
 import {
   StakingGlyphCloudIcon,
   StakingGlyphCPUIcon,
   StakingGlyphTokenWalletIcon,
-} from "../icons/staking"
+} from "@/components/icons/staking"
 
 interface DataType {
   title: TranslationKey
@@ -23,10 +23,8 @@ interface DataType {
   glyph: JSX.Element
 }
 
-type StakingTypePage = "solo" | "saas" | "pools"
-
 export interface IProps {
-  page: StakingTypePage
+  page: StakingPage
   className?: string
 }
 
@@ -73,7 +71,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
     ),
   }
   const data: {
-    [key in StakingTypePage]: (DataType & {
+    [key in StakingPage]: (DataType & {
       content: TranslationKey
     })[]
   } = {
@@ -143,10 +141,13 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
             )}
             <Box>
               <Heading as="h3" fontSize="2xl" color={color} mb={2}>
-                <Translation id={title} />
+                {/* TODO: Re-enable after i18n implemented */}
+                {/* <Translation id={title} /> */}
+                {title}
               </Heading>
               <Text>
-                <Translation id={content} />
+                {/* <Translation id={content} /> */}
+                {content}
               </Text>
               <InlineLink
                 onClick={() => {
@@ -154,7 +155,8 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
                 }}
                 to={to}
               >
-                <Translation id={linkText} />
+                {/* <Translation id={linkText} /> */}
+                {linkText}
               </InlineLink>
             </Box>
           </Flex>

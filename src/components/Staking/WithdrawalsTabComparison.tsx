@@ -1,4 +1,3 @@
-import React from "react"
 import {
   ListItem,
   Tab,
@@ -8,12 +7,13 @@ import {
   Tabs,
   UnorderedList,
 } from "@chakra-ui/react"
-import WithdrawalCredentials from "./WithdrawalCredentials"
-import { ButtonLink } from "../Buttons"
-import Translation from "../Translation"
-import Text from "../OldText"
-import OldHeading from "../OldHeading"
-import { trackCustomEvent } from "../../utils/matomo"
+import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
+import { ButtonLink } from "@/components/Buttons"
+// TODO: Re-enable after i18n implemented
+// import Translation from "@/components/Translation"
+import Text from "@/components/OldText"
+import OldHeading from "@/components/OldHeading"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 interface IProps {}
 const WithdrawalsTabComparison: React.FC<IProps> = () => {
@@ -24,32 +24,39 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => {
       eventName: `click`,
     })
   }
+  // TODO: Re-enable <Translation> components after i18n implemented, removed placeholders
   return (
     <Tabs>
       <TabList>
         <Tab onClick={() => handleMatomoEvent("Current stakers")}>
-          <Translation id="comp-withdrawal-comparison-current-title" />
+          {/* <Translation id="comp-withdrawal-comparison-current-title" /> */}
+          comp-withdrawal-comparison-current-title
         </Tab>
         <Tab onClick={() => handleMatomoEvent("New stakers")}>
-          <Translation id="comp-withdrawal-comparison-new-title" />
+          {/* <Translation id="comp-withdrawal-comparison-new-title" /> */}
+          comp-withdrawal-comparison-new-title
         </Tab>
       </TabList>
 
       <TabPanels>
         <TabPanel>
           <OldHeading as="h3">
-            <Translation id="comp-withdrawal-comparison-current-title" />
+            {/* <Translation id="comp-withdrawal-comparison-current-title" /> */}
+            comp-withdrawal-comparison-current-title
           </OldHeading>
           <UnorderedList>
             <ListItem>
-              <Translation id="comp-withdrawal-comparison-current-li-1" />
+              {/* <Translation id="comp-withdrawal-comparison-current-li-1" /> */}
+              comp-withdrawal-comparison-current-li-1
             </ListItem>
             <ListItem>
-              <Translation id="comp-withdrawal-comparison-current-li-2" />
+              {/* <Translation id="comp-withdrawal-comparison-current-li-2" /> */}
+              comp-withdrawal-comparison-current-li-2
             </ListItem>
           </UnorderedList>
           <Text fontWeight="bold">
-            <Translation id="comp-withdrawal-comparison-current-p" />
+            {/* <Translation id="comp-withdrawal-comparison-current-p" /> */}
+            comp-withdrawal-comparison-current-p
           </Text>
 
           <WithdrawalCredentials />
@@ -57,21 +64,26 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => {
 
         <TabPanel>
           <OldHeading as="h3">
-            <Translation id="comp-withdrawal-comparison-new-title" />
+            {/* <Translation id="comp-withdrawal-comparison-new-title" /> */}
+            comp-withdrawal-comparison-new-title
           </OldHeading>
           <UnorderedList>
             <ListItem>
-              <Translation id="comp-withdrawal-comparison-new-li-1" />
+              {/* <Translation id="comp-withdrawal-comparison-new-li-1" /> */}
+              comp-withdrawal-comparison-new-li-1
             </ListItem>
             <ListItem>
-              <Translation id="comp-withdrawal-comparison-new-li-2" />
+              {/* <Translation id="comp-withdrawal-comparison-new-li-2" /> */}
+              comp-withdrawal-comparison-new-li-2
             </ListItem>
           </UnorderedList>
           <Text fontWeight="bold">
-            <Translation id="comp-withdrawal-comparison-new-p" />
+            {/* <Translation id="comp-withdrawal-comparison-new-p" /> */}
+            comp-withdrawal-comparison-new-p
           </Text>
           <ButtonLink to="https://launchpad.ethereum.org/" hideArrow>
-            <Translation id="comp-withdrawal-comparison-new-link" />
+            {/* <Translation id="comp-withdrawal-comparison-new-link" /> */}
+            comp-withdrawal-comparison-new-link
           </ButtonLink>
         </TabPanel>
       </TabPanels>
