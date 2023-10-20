@@ -1,51 +1,32 @@
 import {
   Box,
   Flex,
-  ListItem,
   Show,
-  SimpleGrid,
-  UnorderedList,
-  Wrap,
-  WrapItem,
+  SimpleGrid, Wrap,
+  WrapItem
 } from "@chakra-ui/react"
 
 import { Button, ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import { mdxTableComponents } from "@/components/Table"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import Card from "@/components/Card"
-import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
-import MdLink from "@/components/MdLink"
 import OldText from "@/components/OldText"
 import Pill from "@/components/Pill"
-import RandomAppList from "@/components/RandomAppList"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
-import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
-import YouTube from "@/components/YouTube"
 import {
-  Page,
-  InfoColumn,
   ContentContainer,
+  InfoColumn,
   InfoTitle,
   MobileButton,
-  Heading1,
-  Heading2,
-  Heading3,
-  Pre,
-  StyledButtonDropdown,
   MobileButtonDropdown,
+  Page,
+  StyledButtonDropdown,
   Title,
-  Divider,
-  Paragraph,
-} from "@/layouts/UseCases"
+} from "@/components/MdComponents"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
@@ -72,39 +53,23 @@ const TitleCard = (props: ChildOnlyProp) => (
   <Flex w="full" p={8} direction="column" justify="flex-start" {...props} />
 )
 
+// Roadmap layout components
 export const roadmapComponents = {
-  a: MdLink,
-  h1: Heading1,
-  h2: Heading2,
-  h3: Heading3,
-  li: ListItem,
-  p: Paragraph,
-  pre: Pre,
-  ul: UnorderedList,
-  ButtonLink,
-  Card,
   CardGrid,
-  Divider,
-  Emoji,
-  ExpandableCard,
-  GlossaryTooltip,
-  InfoBanner,
   Pill,
-  RandomAppList,
   RoadmapActionCard,
   RoadmapImageContent,
-  UpgradeStatus,
-  YouTube,
-  ...mdxTableComponents,
-  // Contributors,
-  // Logo,
-  // MeetupList,
 }
 
 interface IProps extends MdPageContent, ChildOnlyProp {
   frontmatter: RoadmapFrontmatter
 }
-export const RoadmapLayout: React.FC<IProps> = ({ children, frontmatter, slug, tocItems }) => {
+export const RoadmapLayout: React.FC<IProps> = ({
+  children,
+  frontmatter,
+  slug,
+  tocItems,
+}) => {
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const dropdownLinks: ButtonDropdownList = {
