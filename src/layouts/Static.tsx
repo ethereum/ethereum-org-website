@@ -1,5 +1,4 @@
-import { Box, Flex, Heading, Icon, chakra } from "@chakra-ui/react"
-
+import { Box, Flex, Icon, chakra } from "@chakra-ui/react"
 import Breadcrumbs from "../components/Breadcrumbs"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -7,6 +6,7 @@ import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import Link from "@/components/Link"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import TableOfContents from "@/components/TableOfContents"
+import Heading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
