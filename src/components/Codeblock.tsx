@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 import Highlight, {
   defaultProps,
