@@ -49,9 +49,12 @@ export const getLastDeployDate = async () => {
     const pullRequests = await response.json()
 
     // Get the `merged_at` date (deployment date) from last deploy PR made to the master branch
-    const lastDeployDate: string = pullRequests.filter((pr) =>
-      pr.title.toLowerCase().includes("deploy")
-    )[0].merged_at
+    const deploys = pullRequests.filter(({ title }: { title: string }) =>
+      title.toLowerCase().includes("deploy")
+    )
+
+    const lastDeployDate: string =
+      deploys.length > 0 ? deploys[0].merged_at : new Date().toISOString()
 
     return lastDeployDate
   } catch (err) {
