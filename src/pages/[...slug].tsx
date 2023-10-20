@@ -9,6 +9,7 @@ import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { getLastModifiedDate, getLastDeployDate } from "@/lib/utils/gh"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
+import mdComponents from "@/components/MdComponents"
 
 // Layouts and components
 import {
@@ -147,7 +148,7 @@ const ContentPage: NextPageWithLayout<ContentPageProps> = ({
   mdxSource,
   layout,
 }) => {
-  const components = componentsMapping[layout]
+  const components = { ...mdComponents, ...componentsMapping[layout] }
   return (
     <>
       {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}

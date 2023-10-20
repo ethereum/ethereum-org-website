@@ -1,5 +1,4 @@
 import {
-  Badge,
   Box,
   chakra,
   Flex,
@@ -12,55 +11,43 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react"
 
-import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { Image } from "@/components/Image"
-import { mdxTableComponents } from "@/components/Table"
-import { ButtonLink } from "@/components/Buttons"
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import Card from "@/components/Card"
-import DocLink from "@/components/DocLink"
-import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
-import MdLink from "@/components/MdLink"
-import OldHeading from "@/components/OldHeading"
-import QuizWidget from "@/components/Quiz/QuizWidget"
-import RandomAppList from "@/components/RandomAppList"
-import TableOfContents from "@/components/TableOfContents"
-import UpgradeStatus from "@/components/UpgradeStatus"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
-import YouTube from "@/components/YouTube"
-// TODO: Import once intl implemented
-// import PageMetadata from "@/components/PageMetadata"
-
-import {
-  Page,
-  InfoColumn,
-  ContentContainer,
-  InfoTitle,
-  MobileButton,
-  StyledButtonDropdown,
-  MobileButtonDropdown,
-} from "@/layouts/UseCases"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
-import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 import Callout from "@/components/Callout"
+import DocLink from "@/components/DocLink"
+import FeedbackCard from "@/components/FeedbackCard"
+import OldHeading from "@/components/OldHeading"
 import ProductDisclaimer from "@/components/ProductDisclaimer"
+import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
 import StakingComparison from "@/components/Staking/StakingComparison"
 import StakingConsiderations from "@/components/Staking/StakingConsiderations"
 import StakingGuides from "@/components/Staking/StakingGuides"
 import StakingHowSoloWorks from "@/components/Staking/StakingHowSoloWorks"
 import StakingLaunchpadWidget from "@/components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGrid"
+import TableOfContents from "@/components/TableOfContents"
+import UpgradeStatus from "@/components/UpgradeStatus"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
-import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
+import {
+  ContentContainer,
+  InfoColumn,
+  InfoTitle,
+  MobileButton,
+  MobileButtonDropdown,
+  Page,
+  StyledButtonDropdown,
+} from "@/components/MdComponents"
+// TODO: Import once intl implemented
+// import PageMetadata from "@/components/PageMetadata"
 
-const Header1 = (props: ChildOnlyProp) => (
+import { isLangRightToLeft } from "@/lib/utils/translations"
+import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
+
+const Heading1 = (props: ChildOnlyProp) => (
   <OldHeading
     as="h1"
     fontSize={{ base: "2.5rem", md: "5xl" }}
@@ -146,7 +133,7 @@ const Heading3 = (props: ChildOnlyProp) => (
   />
 )
 
-const Header4 = (props: ChildOnlyProp) => (
+const Heading4 = (props: ChildOnlyProp) => (
   <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
@@ -183,11 +170,7 @@ const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-const Divider = (props: ChildOnlyProp) => (
-  <Box my={16} w="10%" h={1} bgColor="homeDivider" {...props} />
-)
-
-export const InfoGrid = (props: ChildOnlyProp) => (
+const InfoGrid = (props: ChildOnlyProp) => (
   <Grid
     templateColumns="repeat(auto-fill, minmax(min(100%, 340px), 1fr))"
     gap={8}
@@ -271,32 +254,19 @@ const TableContainer = (props: BoxProps) => (
   />
 )
 
-// Note: you must pass components to MDXProvider in order to render them in markdown files
-// https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
+// Staking layout components
 export const stakingComponents = {
-  a: MdLink,
-  div: Box,
-  h1: Header1,
+  h1: Heading1,
   h2: Heading2,
   h3: Heading3,
-  h4: Header4,
+  h4: Heading4,
   p: Paragraph,
   pre: Pre,
-  Badge,
-  ButtonLink,
   Callout,
-  Card,
   CardGrid,
-  Divider,
   DocLink,
-  Emoji,
-  ExpandableCard,
-  GlossaryTooltip,
-  InfoBanner,
   InfoGrid,
   ProductDisclaimer,
-  QuizWidget,
-  RandomAppList,
   StakingComparison,
   StakingConsiderations,
   StakingGuides,
@@ -307,11 +277,6 @@ export const stakingComponents = {
   UpgradeStatus,
   WithdrawalCredentials,
   WithdrawalsTabComparison,
-  YouTube,
-  ...mdxTableComponents,
-  // Contributors,
-  // Logo,
-  // MeetupList,
 }
 
 interface IProps extends MdPageContent, ChildOnlyProp {
