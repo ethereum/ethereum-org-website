@@ -1,6 +1,6 @@
 import { Box, Flex, type HeadingProps, Icon, chakra } from "@chakra-ui/react"
 
-import Breadcrumbs from "../components/Breadcrumbs"
+import Breadcrumbs from "@/components/Breadcrumbs"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
