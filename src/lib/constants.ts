@@ -15,10 +15,17 @@ export const DISCORD_PATH = "/discord/" as const
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800
-export const LAST_COMMIT_BASE_URL =
-  "https://api.github.com/repos/ethereum/ethereum-org-website/commits"
-export const LAST_DEPLOY_BASE_URL =
-  "https://api.github.com/repos/ethereum/ethereum-org-website/pulls?base=master&state=closed"
+export const GITHUB_BASE_API =
+  "https://api.github.com/repos/ethereum/ethereum-org-website"
+export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
+export const GITHUB_LAST_DEPLOY_URL =
+  GITHUB_BASE_API + "/pulls?base=master&state=closed"
+export const GITHUB_AUTH_HEADERS = {
+  headers: new Headers({
+    // About personal access tokens https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#about-personal-access-tokens
+    Authorization: "Token " + process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY,
+  }),
+}
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"

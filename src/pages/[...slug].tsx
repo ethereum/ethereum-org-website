@@ -115,7 +115,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   })
 
   const originalSlug = `/${params.slug.join("/")}/`
-  const lastUpdatedDate = await getLastModifiedDate(originalSlug, locale!)
+  const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
   const lastDeployDate = await getLastDeployDate()
 
   // Get corresponding layout
