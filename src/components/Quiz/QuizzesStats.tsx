@@ -181,7 +181,7 @@ const QuizzesStats: React.FC = () => {
                 },
               ] satisfies Array<{ labelId: string; value: string }>
             ).map(({ labelId, value }) => (
-              <Stack key="labelId">
+              <Stack key={labelId}>
                 <Text mb="-2" color="body.medium">
                   <Translation id={labelId} />
                 </Text>
