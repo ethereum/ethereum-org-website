@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import type { FlexProps } from "@chakra-ui/react"
 import FileContributors from "@/components/FileContributors"
-import { /* CONTENT_DIR,  */GITHUB_AUTH_HEADERS, GITHUB_COMMITS_URL } from "@/lib/constants"
 import { fetchGitHubAuthors } from "@/lib/utils/fetchGitHubContributors"
 import { FileContributorsState } from "@/lib/types"
 
