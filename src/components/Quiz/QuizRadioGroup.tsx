@@ -75,7 +75,7 @@ const CustomRadio: React.FC<CustomRadioProps> = ({
 
   // Render CustomRadio component
   return (
-    <chakra.label {...htmlProps} cursor="pointer" data-group w="100%">
+    <chakra.label {...htmlProps} cursor="pointer" w="100%">
       <input {...getInputProps()} />
       <Flex
         {...getRadioProps()}
