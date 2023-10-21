@@ -9,6 +9,7 @@ import TableOfContents from "@/components/TableOfContents"
 import Heading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
+import GitHubContributors from "@/components/FileContributorsGitHub"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -164,6 +165,7 @@ export const StaticLayout: React.FC<IProps> = ({
             Page last updated:{" "}
             {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
           </Text>
+          <GitHubContributors relativePath={slug} lastUpdatedDate={lastUpdatedDate!} />
           <TableOfContents
             position="relative"
             zIndex={2}
