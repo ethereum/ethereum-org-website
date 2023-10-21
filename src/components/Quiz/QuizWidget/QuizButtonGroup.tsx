@@ -9,7 +9,7 @@ export type QuizButtonGroupProps = {
   showAnswer: boolean
   showResults: boolean
   quizScore: number
-  initialize: () => void
+  handleReset: () => void
   currentQuestionIndex: number
   currentQuestionAnswerChoice: AnswerChoice | null
   questions: Question[]
@@ -28,7 +28,7 @@ export const QuizButtonGroup = (props: QuizButtonGroupProps) => {
     showResults,
     quizScore,
     questions,
-    initialize,
+    handleReset,
     currentQuestionIndex,
     currentQuestionAnswerChoice,
     finishedQuiz,
@@ -72,7 +72,7 @@ export const QuizButtonGroup = (props: QuizButtonGroupProps) => {
 
           {hasNotPerfectQuizScore ? (
             <Button
-              onClick={initialize}
+              onClick={handleReset}
               variant="ghost"
               fontWeight="bold"
               textDecoration="underline"

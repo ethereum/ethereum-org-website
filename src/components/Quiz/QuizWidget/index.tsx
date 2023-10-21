@@ -128,7 +128,7 @@ const QuizWidget: React.FC<IProps> = (props) => {
                 handleSubmitAnswer={handleSubmitAnswer}
                 handleShare={handleShare}
                 hasNextQuiz={hasNextQuiz}
-                initialize={initialize}
+                handleReset={initialize}
                 currentQuestionIndex={currentQuestionIndex}
                 questions={quizData.questions}
                 quizScore={quizScore}
