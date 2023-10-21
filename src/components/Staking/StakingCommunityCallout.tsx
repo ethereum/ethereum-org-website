@@ -3,7 +3,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, useStaticQuery } from "gatsby"
 import { Flex, FlexProps } from "@chakra-ui/react"
 
-import ButtonLink from "../ButtonLink"
+import { ButtonLink } from "../Buttons"
 import CalloutBanner from "../CalloutBanner"
 import Translation from "../Translation"
 
@@ -48,7 +48,7 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
               eventName: "clicked discord",
             })
           }}
-          to="https://discord.io/ethstaker"
+          to="https://discord.gg/ethstaker"
           w={{ base: "full", md: "auto" }}
         >
           Discord

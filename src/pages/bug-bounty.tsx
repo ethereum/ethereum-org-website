@@ -1,16 +1,8 @@
 import React, { ReactNode } from "react"
 import { useTheme } from "@emotion/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import {
-  Box,
-  Center,
-  Heading,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react"
+import { Box, Center, ListItem, UnorderedList } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import Card from "../components/Card"
@@ -20,12 +12,15 @@ import InlineLink from "../components/Link"
 import Emoji from "../components/Emoji"
 import CardList from "../components/CardList"
 import Breadcrumbs from "../components/Breadcrumbs"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
-import { getImage } from "../utils/image"
+import Text from "../components/OldText"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
+import { getImage } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
 
 const Page = (props: ChildOnlyProp) => (
@@ -56,7 +51,7 @@ const Title = (props: ChildOnlyProp) => (
 )
 
 const H2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h2"
     fontSize="1.5rem"
     fontStyle="normal"
@@ -447,7 +442,7 @@ const BugBountiesPage = ({
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Breadcrumbs slug={location.pathname} />
+            <Breadcrumbs slug={location.pathname} mb="8" />
             <Row>
               <On />
               <Title>
@@ -483,33 +478,33 @@ const BugBountiesPage = ({
       </ClientIntro>
       <ClientRow>
         <Client>
-          <GatsbyImage image={getImage(data.besu)!} alt=""></GatsbyImage>
+          <GatsbyImage image={getImage(data.besu)!} alt="" />
         </Client>
         <Client>
-          <GatsbyImage image={getImage(data.erigon)!} alt=""></GatsbyImage>
+          <GatsbyImage image={getImage(data.erigon)!} alt="" />
         </Client>
         <Client>
-          <GatsbyImage image={getImage(data.geth)!} alt=""></GatsbyImage>
+          <GatsbyImage image={getImage(data.geth)!} alt="" />
         </Client>
         <Client>
-          <GatsbyImage image={getImage(data.nethermind)!} alt=""></GatsbyImage>
+          <GatsbyImage image={getImage(data.nethermind)!} alt="" />
         </Client>
       </ClientRow>
       <ClientRow>
         <Client>
-          <GatsbyImage image={lighthouseImage!} alt=""></GatsbyImage>
+          <GatsbyImage image={lighthouseImage!} alt="" />
         </Client>
         <Client>
-          <GatsbyImage image={getImage(data.lodestar)!} alt=""></GatsbyImage>
+          <GatsbyImage image={getImage(data.lodestar)!} alt="" />
         </Client>
         <Client>
-          <GatsbyImage image={getImage(data.nimbus)!} alt=""></GatsbyImage>
+          <GatsbyImage image={getImage(data.nimbus)!} alt="" />
         </Client>
         <Client>
-          <GatsbyImage image={getImage(data.prysm)!} alt=""></GatsbyImage>
+          <GatsbyImage image={getImage(data.prysm)!} alt="" />
         </Client>
         <Client>
-          <GatsbyImage image={tekuImage!} alt=""></GatsbyImage>
+          <GatsbyImage image={tekuImage!} alt="" />
         </Client>
       </ClientRow>
       <StyledGrayContainer id="rules">
@@ -554,14 +549,14 @@ const BugBountiesPage = ({
                 </UnorderedList>
               </Box>
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </Heading>
+                </OldHeading>
                 <UnorderedList>
                   <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-1" />
@@ -578,15 +573,15 @@ const BugBountiesPage = ({
                 </UnorderedList>
               </Box>
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-specs-docs" />
-                </Heading>
-                <CardList content={specs} />
+                </OldHeading>
+                <CardList items={specs} />
               </Box>
             </StyledCard>
             <StyledCard
@@ -598,14 +593,14 @@ const BugBountiesPage = ({
                 <Text>
                   <Translation id="page-upgrades-bug-bounty-client-bugs-desc-2" />
                 </Text>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </Heading>
+                </OldHeading>
                 <UnorderedList>
                   <ListItem>
                     <Translation id="page-upgrades-bug-bounty-clients-type-1" />
@@ -620,15 +615,15 @@ const BugBountiesPage = ({
                 </UnorderedList>
               </Box>
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </Heading>
-                <CardList content={clients} />
+                </OldHeading>
+                <CardList items={clients} />
               </Box>
             </StyledCard>
             <StyledCard
@@ -642,14 +637,14 @@ const BugBountiesPage = ({
                 </Text>
               </Box>
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </Heading>
+                </OldHeading>
                 <InlineLink to="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
                   SECURITY.md
                 </InlineLink>
@@ -661,14 +656,14 @@ const BugBountiesPage = ({
               description={t("page-upgrades-bug-bounty-deposit-bugs-desc")}
             >
               <Box>
-                <Heading
+                <OldHeading
                   as="h4"
                   fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </Heading>
+                </OldHeading>
                 <InlineLink to="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
                   Deposit Contract Specifications
                 </InlineLink>

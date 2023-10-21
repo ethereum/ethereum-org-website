@@ -1,5 +1,5 @@
 ---
-title: Akıllı kontratlar dağıtmak
+title: Akıllı kontratları dağıtmak
 description:
 lang: tr
 ---
@@ -12,7 +12,7 @@ Bir akıllı sözleşmeyi dağıtmak için, bir alıcı belirtmeden akıllı sö
 
 Akıllı sözleşme dağıtmadan önce [Ethereum ağlarını](/developers/docs/networks/), [işlemlerini](/developers/docs/transactions/) ve [akıllı sözleşmelerin anatomisini](/developers/docs/smart-contracts/anatomy/) anlamalısınız.
 
-Bir sözleşmeyi dağıtmanın da ether (ETH) maliyeti vardır, bundan dolayı Ethereum'daki [gaz ve ücretlere](/developers/docs/gas/) de aşina olmalısınız.
+Blokzincirde depolanmasından dolayı bir sözleşmeyi dağıtmanın da ether (ETH) maliyeti olmasından dolayı Ethereum'daki [gaz ve ücretlere](/developers/docs/gas/) de aşina olmalısınız.
 
 Son olarak, sözleşmenizi dağıtmadan önce onu derlemeniz gerekir, bu yüzden [akıllı sözleşmeleri derleme](/developers/docs/smart-contracts/compiling/) hakkında bilgi edinmeyi de unutmayın.
 
@@ -23,7 +23,7 @@ Son olarak, sözleşmenizi dağıtmadan önce onu derlemeniz gerekir, bu yüzden
 - sözleşmenizin bytecode'u - bu, [derleme](/developers/docs/smart-contracts/compiling/) aracılığıyla oluşturulur
 - Gaz için ETH - gaz limitinizi diğer işlemler gibi ayarlayacağınız için sözleşme dağıtımının basit bir ETH aktarımından çok daha fazla gaz gerektirdiğini unutmayın
 - bir dağıtım komut dosyası veya eklentisi
-- kendiniz çalıştırarak, herkese açık bir düğüme bağlanarak veya bir API anahtarı aracılığıyla Infura ya da Alchemy gibi bir [düğüm hizmeti](/developers/docs/nodes-and-clients/nodes-as-a-service/) kullanarak bir [Ethereum düğümüne](/developers/docs/nodes-and-clients/) erişim
+- kendinizinkini çalıştırarak, herkese açık bir düğüme bağlanarak veya [düğüm hizmeti](/developers/docs/nodes-and-clients/nodes-as-a-service/) kullanan API anahtarı aracılığıyla bir [Ethereum düğümüne](/developers/docs/nodes-and-clients/) erişim
 
 ### Bir akıllı sözleşme dağıtmanın aşamaları {#steps-to-deploy}
 
@@ -37,7 +37,7 @@ Dağıtıldığında, sözleşmeniz diğer [hesaplar](/developers/docs/accounts/
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly - _Gerçek zamanlı verilerle EVM uyumlu zincirlerdeki her şeyi simüle edin, hatalarını ayıklayın ve izleyin_**
+**Tenderly - _Akıllı sözleşmeleri geliştirmek, test etmek, izlemek ve yönetmek için hata ayıklama, gözlemlenebilirlik ve altyapı temel taşları sağlayan bir Web3 geliştirme platformu_**
 
 - [tenderly.co](https://tenderly.co/)
 - [Belgeler](https://docs.tenderly.co/)
@@ -57,20 +57,26 @@ Dağıtıldığında, sözleşmeniz diğer [hesaplar](/developers/docs/accounts/
 - [Ağlar ve uygulama geliştirme üzerine belgeler](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
+**thirdweb - _Tek bir komut kullanarak herhangi bir sözleşmeyi Ethereum Sanal Makinesi uyumlu herhangi bir zincire kolayca dağıtın_**
+
+- [Dokümanlar](https://portal.thirdweb.com/deploy/)
+
 ## İlgili öğreticiler {#related-tutorials}
 
-- [İlk akıllı sözleşmenizi dağıtma](/developers/tutorials/deploying-your-first-smart-contract/) _– Bir Ethereum test ağı üzerinde ilk akıllı sözleşmenizi dağıtmaya giriş._
-- [Solidity ile başka sözleşmelerle etkileşime geçmek](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Mevcut bir sözleşmeden bir akıllı sözleşme dağıtma ve onunla etkileşime geçme._
-- [Sözleşme boyutunu azaltma](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Gaz tasarrufu yapmak ve boyutu limitin altında tutmak için sözleşmenizin boyutunu azaltma_
+- [İlk akıllı sözleşmenizi dağıtma](/developers/tutorials/deploying-your-first-smart-contract/) _– Bir Ethereum test ağı üzerinde ilk akıllı sözleşmenizi dağıtmaya ilişkin tanıtım._
+- [Merhaba Dünya | akıllı sözleşme öğreticisi](/developers/tutorials/hello-world-smart-contract/) _– Ethereum üzerinde basit bir akıllı sözleşme oluşturmak & dağıtmak için takibi kolay bir öğretici._
+- [Solidity ile başka sözleşmelerle etkileşime geçmek](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Mevcut bir sözleşmeden nasıl bir akıllı sözleşme dağıtılır ve etkileşime geçilir._
+- [Sözleşme boyutunuzu azaltma](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Sözleşmenizin boyutunu azaltarak limitin altında tutma ve gaz tasarrufu yapma_
 
 ## Daha fazla bilgi {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
-- [Hardhat ile sözleşmelerinizi dağıtma](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
+- [Hardhat ile yaptığınız sözleşmeleri dağıtma](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
 ## İlgili konular {#related-topics}
 
-- [Geliştirme çerçeveleri](/developers/docs/frameworks/)
+- [Geliştirici çerçeveleri](/developers/docs/frameworks/)
 - [Bir Ethereum düğümü çalıştırın](/developers/docs/nodes-and-clients/run-a-node/)
+- [Hizmet olarak düğümler](/developers/docs/nodes-and-clients/nodes-as-a-service)

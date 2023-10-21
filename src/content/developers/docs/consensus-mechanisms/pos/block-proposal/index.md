@@ -8,7 +8,7 @@ Blocks are the fundamental units of the blockchain. Blocks are discrete units of
 
 ## Prerequisites {#prerequisites}
 
-Block proposal is part of the proof-of-stake protocol. To help understand this page, we recommend you read about [proof-of-stake](src/content/developers/docs/consensus-mechanisms/pos/) and [block architecture](src/content/developers/docs/blocks/).
+Block proposal is part of the proof-of-stake protocol. To help understand this page, we recommend you read about [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [block architecture](/developers/docs/blocks/).
 
 ## Who produces blocks? {#who-produces-blocks}
 
@@ -64,6 +64,6 @@ The block proposer receives payment for their work. There is a `base_reward` cal
 
 - [Introduction to blocks](/developers/docs/blocks/)
 - [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-- [Ethereum consensus specs](www.github.com/ethereum/consensus-specs)
+- [Ethereum consensus specs](https://github.com/ethereum/consensus-specs)
 - [Introduction to Gasper](/developers/docs/consensus-mechanisms/pos/)
 - [Upgrading Ethereum](https://eth2book.info/)

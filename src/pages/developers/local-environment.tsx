@@ -6,11 +6,10 @@ import {
   Img,
   ListItem,
   SimpleGrid,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
@@ -19,10 +18,12 @@ import Translation from "../../components/Translation"
 import PageMetadata from "../../components/PageMetadata"
 import ProductCard from "../../components/ProductCard"
 import FeedbackCard from "../../components/FeedbackCard"
+import Text from "../../components/OldText"
 
 import { getImage } from "../../utils/image"
 
 import { ChildOnlyProp, Context } from "../../types"
+import GatsbyImage from "../../components/GatsbyImage"
 
 const Content = ({ children }: ChildOnlyProp) => {
   return (
@@ -249,8 +250,7 @@ const ChooseStackPage = ({
             </UnorderedList>
           </Column>
           <Column>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               flex="1 1 100%"
               maxW="50rem"
               backgroundSize="cover"

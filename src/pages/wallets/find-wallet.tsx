@@ -1,19 +1,23 @@
 // Libraries
-import React, { useState, useRef } from "react"
 import {
   Flex,
   Box,
-  Image,
-  Icon,
-  Text,
-  Heading,
   useTheme,
+  useDisclosure,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerBody,
+  Hide,
+  DrawerHeader,
+  Show,
+  Text,
 } from "@chakra-ui/react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
-import { MdOutlineCancel } from "react-icons/md"
 
 // Components
 import BannerNotification from "../../components/BannerNotification"
@@ -22,6 +26,8 @@ import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
 import WalletTable from "../../components/FindWallet/WalletTable"
+import OldHeading from "../../components/OldHeading"
+import GatsbyImage from "../../components/GatsbyImage"
 
 // Data
 import walletData from "../../data/wallets/wallet-data"
@@ -32,24 +38,22 @@ import { FilterBurgerIcon } from "../../components/icons/wallets"
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
-import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 import type { ChildOnlyProp } from "../../types"
+import { NAV_BAR_PX_HEIGHT } from "../../constants"
+import { Button } from "../../components/Buttons"
 
-const Subtitle = ({ children }: ChildOnlyProp) => {
-  return (
-    <Text
-      fontSize="xl"
-      lineHeight={1.4}
-      color="text200"
-      _last={{
-        mb: 8,
-      }}
-    >
-      {children}
-    </Text>
-  )
-}
+const Subtitle = ({ children }: ChildOnlyProp) => (
+  <Text
+    fontSize="xl"
+    lineHeight={1.4}
+    color="body.medium"
+    mb={6}
+    _last={{ mb: 8 }}
+  >
+    {children}
+  </Text>
+)
 
 const filterDefault = {
   android: false,
@@ -88,9 +92,8 @@ const FindWalletPage = ({ data, location }) => {
   const theme = useTheme()
   const { t } = useTranslation()
   const resetWalletFilter = React.useRef(() => {})
-  const wrapperRef = useRef<HTMLDivElement>(null)
+  const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
 
-  const [showMobileSidebar, setShowMobileSidebar] = useState(false)
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
@@ -115,16 +118,8 @@ const FindWalletPage = ({ data, location }) => {
     setFilters(filterDefault)
   }
 
-  useOnClickOutside(wrapperRef, () => setShowMobileSidebar(false), ["mouseup"])
-
   return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      w="full"
-      mx="auto"
-      pointerEvents={showMobileSidebar ? "none" : "auto"}
-    >
+    <Flex direction="column" position="relative" w="full">
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
@@ -144,13 +139,13 @@ const FindWalletPage = ({ data, location }) => {
       >
         <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
           <Breadcrumbs slug={location.pathname} />
-          <Heading
+          <OldHeading
             as="h1"
             fontSize={{ base: "2.5rem", md: "5xl" }}
             lineHeight={1.4}
           >
             <Translation id="page-find-wallet-title" />
-          </Heading>
+          </OldHeading>
           <Subtitle>
             <Translation id="page-find-wallet-description" />
           </Subtitle>
@@ -158,119 +153,111 @@ const FindWalletPage = ({ data, location }) => {
             <Translation id="page-find-wallet-desc-2" />
           </Subtitle>
         </Box>
-        <Image
-          as={GatsbyImage}
+        <GatsbyImage
           w={{ base: "full", sm: "50%" }}
           image={getImage(data.hero)!}
           alt=""
           loading="eager"
-          imgStyle={{
-            objectFit: "contain",
-          }}
+          objectFit="contain"
         />
       </Flex>
-      <Box
-        position="sticky"
-        top="76px"
-        bg="background.base"
-        w="full"
-        zIndex={1}
-        py="5px"
-      >
+
+      <Hide above="lg">
         <Box
-          display={{ base: "flex", lg: "none" }}
-          gap={4}
-          justifyContent="space-between"
-          alignItems="center"
-          border="1px solid"
-          borderColor="primary.base"
-          borderLeft="none"
-          borderRightRadius="base"
-          pt={1.5}
-          px={5}
-          pb={2.5}
-          m="auto"
-          ml={0}
-          zIndex={1}
-          w="full"
-          maxW={showMobileSidebar ? "330px" : "150px"}
+          display={{ base: "block", lg: "none" }}
+          position="sticky"
+          top={NAV_BAR_PX_HEIGHT}
           bg="background.base"
-          onClick={() => {
-            setShowMobileSidebar(!showMobileSidebar)
-            trackCustomEvent({
-              eventCategory: "MobileFilterToggle",
-              eventAction: `Tap MobileFilterToggle`,
-              eventName: `show mobile filters ${!showMobileSidebar}`,
-            })
-          }}
-          sx={{
-            p: {
-              m: 0,
-            },
-            svg: {
-              pointerEvents: "none",
-              boxSize: 8,
-              line: {
-                stroke: "primary.base",
-              },
-              circle: {
-                stroke: "primary.base",
-              },
-            },
-          }}
+          w="full"
+          zIndex="docked"
+          py="5px"
         >
-          <Box>
-            <Text>
-              <Translation id="page-find-wallet-filters" />
-            </Text>
-            <Text fontSize="sm" lineHeight="14px" color="text200">
-              {Object.values(filters).reduce((acc, filter) => {
-                if (filter) {
-                  acc += 1
-                }
-                return acc
-              }, 0)}{" "}
-              {t("page-find-wallet-active")}
-            </Text>
-          </Box>
-          {showMobileSidebar ? (
-            <Icon as={MdOutlineCancel} fill="primary.base" />
-          ) : (
-            <FilterBurgerIcon />
-          )}
+          <Button
+            rightIcon={<FilterBurgerIcon />}
+            variant="outline"
+            borderInlineStart="none"
+            borderInlineStartRadius="none"
+            gap={4}
+            sx={{
+              svg: {
+                boxSize: 8,
+                line: { stroke: "primary.base" },
+                circle: { stroke: "primary.base" },
+              },
+            }}
+            onClick={() => {
+              showMobileSidebar ? onClose() : onOpen()
+              trackCustomEvent({
+                eventCategory: "MobileFilterToggle",
+                eventAction: `Tap MobileFilterToggle`,
+                eventName: `show mobile filters ${!showMobileSidebar}`,
+              })
+            }}
+          >
+            <Box>
+              <Text>
+                <Translation id="page-find-wallet-filters" />
+              </Text>
+              <Text fontSize="sm" lineHeight="14px" color="body.medium">
+                {Object.values(filters).reduce(
+                  (acc, filter) => (filter ? acc + 1 : acc),
+                  0
+                )}{" "}
+                {t("page-find-wallet-active")}
+              </Text>
+            </Box>
+          </Button>
         </Box>
-      </Box>
-      <Flex
-        px={{ base: 0, md: 8 }}
-        pt={4}
-        pb={0}
-        w="full"
-        gap={6}
-        height="90vh"
-        overflow="hidden"
-        position="sticky"
-        top="76px"
-        mb={{ base: "230px", md: "120px", lg: "150px" }}
-        borderBottom="1px solid"
-        borderBottomColor="secondary"
-      >
-        <WalletFilterSidebar
-          ref={wrapperRef}
-          {...{
-            filters,
-            resetWalletFilter,
-            updateFilterOption,
-            updateFilterOptions,
-            resetFilters,
-            selectedPersona,
-            setFilters,
-            setSelectedPersona,
-            showMobileSidebar,
-          }}
-        />
+        <Drawer
+          isOpen={showMobileSidebar}
+          placement="start"
+          onClose={onClose}
+          size="sm"
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader mb={4}>
+              <DrawerCloseButton />
+            </DrawerHeader>
+            <DrawerBody position="relative">
+              <WalletFilterSidebar
+                position="absolute"
+                inset={2}
+                overflow="auto"
+                {...{
+                  filters,
+                  resetWalletFilter,
+                  updateFilterOption,
+                  updateFilterOptions,
+                  resetFilters,
+                  selectedPersona,
+                  setFilters,
+                  setSelectedPersona,
+                }}
+              />
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Hide>
+      <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} gap={6}>
+        <Show above="lg">
+          <WalletFilterSidebar
+            maxW="330px"
+            top={NAV_BAR_PX_HEIGHT}
+            {...{
+              filters,
+              resetWalletFilter,
+              updateFilterOption,
+              updateFilterOptions,
+              resetFilters,
+              selectedPersona,
+              setFilters,
+              setSelectedPersona,
+            }}
+          />
+        </Show>
         <Box
           w="full"
-          overflowY="scroll"
           sx={{
             scrollbarWidth: "thin",
             scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
@@ -291,10 +278,6 @@ const FindWalletPage = ({ data, location }) => {
               m: 0,
             },
           }}
-          display={{
-            base: showMobileSidebar ? "none" : "block",
-            sm: "block",
-          }}
         >
           <WalletTable
             data={data}
@@ -305,30 +288,25 @@ const FindWalletPage = ({ data, location }) => {
       </Flex>
       <Box
         textAlign="center"
-        p={5}
+        p={4}
+        m={4}
         sx={{
           p: {
             fontSize: "sm",
-            lineHeight: "23px",
-            pt: "0.2rem",
+            lineHeight: "18px",
+            p: "1",
             m: 0,
           },
         }}
       >
-        <Text>
-          <Text as="i">
-            <Translation id="page-find-wallet-footnote-1" />
-          </Text>
+        <Text fontStyle="italic">
+          <Translation id="page-find-wallet-footnote-1" />
         </Text>
-        <Text>
-          <Text as="i">
-            <Translation id="page-find-wallet-footnote-2" />
-          </Text>
+        <Text fontStyle="italic">
+          <Translation id="page-find-wallet-footnote-2" />
         </Text>
-        <Text>
-          <Text as="i">
-            <Translation id="page-find-wallet-footnote-3" />
-          </Text>
+        <Text fontStyle="italic">
+          <Translation id="page-find-wallet-footnote-3" />
         </Text>
       </Box>
     </Flex>
@@ -530,6 +508,12 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
+    }
+    phantom: file(relativePath: { eq: "wallets/phantom.png" }) {
+      ...walletImage
+    }
+    XDEFI: file(relativePath: { eq: "wallets/XDEFI.png" }) {
+      ...walletImage
     }
   }
 `

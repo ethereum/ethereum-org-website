@@ -154,7 +154,7 @@ Preuve d'enjeu (PoS) :
 
 - [Crust.network](https://crust.network)
 - [Documentation](https://wiki.crust.network)
-- [Github](https://github.com/crustio)
+- [GitHub](https://github.com/crustio)
 
 **Swarm - _Plateforme de stockage distribuée et service de distribution de contenu pour la pile web3 Ethereum_**
 

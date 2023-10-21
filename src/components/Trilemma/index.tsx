@@ -6,14 +6,14 @@ import {
   DrawerContent,
   DrawerOverlay,
   Flex,
-  Heading,
   Hide,
   Stack,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 import Card from "../Card"
 import Translation from "../Translation"
+import Text from "../OldText"
+import OldHeading from "../OldHeading"
 import { TriangleSVG, IProps as TriangleSVGProps } from "./Triangle"
 import { useTrilemma } from "./useTrilemma"
 
@@ -54,9 +54,9 @@ const Trilemma: React.FC<IProps> = () => {
         }}
       >
         <Box>
-          <Heading fontSize="2rem" mt={0}>
+          <OldHeading fontSize="2rem" mt={0}>
             <Translation id="page-roadmap-vision-trilemma-h2" />
-          </Heading>
+          </OldHeading>
           <Text>
             <Translation id="page-roadmap-vision-trilemma-p" />
           </Text>
