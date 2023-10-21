@@ -21,6 +21,8 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+
+import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 import GatsbyImage from "../components/GatsbyImage"
 import OldHeading from "../components/OldHeading"
 
@@ -209,6 +211,7 @@ const CommunityPage = ({
         title={t("page-community-meta-title")}
         description={t("page-community-meta-description")}
       />
+      <WritersCohortBanner pathname={location.pathname} />
       <PageHero isReverse content={heroContent} />
       <Divider />
       <Flex

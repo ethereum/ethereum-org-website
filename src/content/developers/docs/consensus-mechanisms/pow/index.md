@@ -68,7 +68,7 @@ To complicate things further, transactions rejected on the temporary fork may no
 
 ## Proof-of-work energy-usage {#energy}
 
-A major criticism of proof-of-work is the amount of energy output required to keep the network safe. To maintain security and decentralization, Ethereum on proof-of-work consumed large amounts of energy. Shortly before switching to proof-of-stake, Ethereum miners were collectively consuming about 70 TWh/yr (about the same as the Czech Republic - according to [digiconomist](digiconomist.net) on 18-July-2022).
+A major criticism of proof-of-work is the amount of energy output required to keep the network safe. To maintain security and decentralization, Ethereum on proof-of-work consumed large amounts of energy. Shortly before switching to proof-of-stake, Ethereum miners were collectively consuming about 70 TWh/yr (about the same as the Czech Republic - according to [digiconomist](https://digiconomist.net/) on 18-July-2022).
 
 ## Pros and cons {#pros-and-cons}
 

@@ -109,7 +109,7 @@ There are a variety of options available to help you with your setup. Use the ab
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style="text-transform: uppercase;">"multi-client."</em>
+Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
 #### Key Generators
 

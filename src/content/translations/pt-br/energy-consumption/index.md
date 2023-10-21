@@ -55,7 +55,7 @@ CCRI estima que o The Merge reduziu o consumo anual de eletricidade do Ethereum 
 
 ## Uma camada de aplicação ecológica {#green-applications}
 
-Embora o consumo de energia do Ethereum seja muito baixo, há também uma comunidade sobre **finanças regenerativas (ReFi)** substancial, crescente e altamente ativa construída no Ethereum. Os aplicativos ReFi usam componentes DeFi para construir aplicativos financeiros com externalidades positivas benéficas para o ambiente. O ReFi faz parte de um movimento [“solarpunk”](https://en.wikipedia.org/wiki/Solarpunk) mais amplo, que está intimamente alinhado com o Ethereum e visa unir o avanço tecnológico e a gestão ambiental. A natureza descentralizada, sem permissão e combinável do Ethereum faz dele a camada base ideal para as comunidades ReFi e solarpunk.
+Embora o consumo de energia do Ethereum seja muito baixo, também há uma comunidade de [**finanças regenerativas (ReFi)**](/refi/) considerável, crescente e altamente ativa sendo desenvolvida no Ethereum. Os aplicativos ReFi usam componentes DeFi para construir aplicativos financeiros com externalidades positivas benéficas para o ambiente. O ReFi faz parte de um movimento [“solarpunk”](https://en.wikipedia.org/wiki/Solarpunk) mais amplo, que está intimamente alinhado com o Ethereum e visa unir o avanço tecnológico e a gestão ambiental. A natureza descentralizada, sem permissão e combinável do Ethereum faz dele a camada base ideal para as comunidades ReFi e solarpunk.
 
 As plataformas nativas de financiamento de bens públicos da Web3, como [Gitcoin](https://gitcoin.co), executam rodadas climáticas para estimular uma construção com consciência ambiental na camada de aplicações do Ethereum. Por meio do desenvolvimento dessas iniciativas (e outras, por exemplo, [DeSci](/desci/)), o Ethereum está se tornando uma tecnologia social e ambientalmente positiva.
 
@@ -67,9 +67,9 @@ As plataformas nativas de financiamento de bens públicos da Web3, como [Gitcoin
 
 - [Índice de Sustentabilidade da rede Cambridge Blockchain](https://ccaf.io/cbnsi/ethereum)
 - [Relatório da Casa Branca sobre blockchains de prova de trabalho](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
-- [Emissões do Ethereum: uma estimativa minuciosa](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
+- [Emissões do Ethereum: uma estimativa ascendente](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Índice de consumo de energia do Ethereum](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
 - [A Fusão — As Implicações no Consumo de Eletricidade e Emissão de Carbono da Rede Ethereum](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Consumo de energia do Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

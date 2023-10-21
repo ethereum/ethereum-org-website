@@ -51,17 +51,17 @@ lang: zh-tw
 
 **Scaffold-ETH _- 透過可適應你的智慧型合約的前端，快速體驗 Solidity。_**
 
-- [Github](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/austintgriffith/scaffold-eth)
 - [範例去中心化應用程式](https://punkwallet.io/)
 
 **Create Eth App _- 通過一條指令建立以太坊支援的應用程式。_**
 
-- [Github](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://github.com/paulrberg/create-eth-app)
 
 **One Click Dapp _ - FOSS 工具，用來透過[應用程式介面](/glossary/#abi)生成去中心化應用程式前端。_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [Github](https://github.com/oneclickdapp/oneclickdapp-v1)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow* -- FOSS 工具，以太坊開發者可用其測試節點，在瀏覽器中撰寫並偵錯遠端程序呼叫。***
 
@@ -72,7 +72,7 @@ lang: zh-tw
 
 - [首頁](https://thirdweb.com/)
 - [文件](https://portal.thirdweb.com/)
-- [Github](https://github.com/thirdweb-dev/)
+- [GitHub](https://github.com/thirdweb-dev/)
 
 ## 衍生閱讀 {#further-reading}
 
