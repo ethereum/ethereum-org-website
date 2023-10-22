@@ -138,7 +138,6 @@ The quality of the tools used in running unit tests for your smart contracts is 
 
 Unit testing frameworks for Solidity smart contracts come in different languages (mostly JavaScript, Python, and Rust). See some of the guides below for information on how to start running unit tests with different testing frameworks:
 
-- **[Running unit tests with Truffle](https://trufflesuite.com/docs/truffle/testing/testing-your-contracts/)**
 - **[Running unit tests with Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)**
 - **[Running unit tests with Foundry](https://book.getfoundry.sh/forge/writing-tests)**
 - **[Running unit tests with Waffle](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)**
@@ -150,7 +149,7 @@ Unit testing frameworks for Solidity smart contracts come in different languages
 
 While unit testing debugs contract functions in isolation, integration tests evaluate the components of a smart contract as a whole. Integration testing can detect issues arising from cross-contract calls or interactions between different functions in the same smart contract. For example, integration tests can help check if things like [inheritance](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) and dependency injection work properly.
 
-Integration testing is useful if your contract adopts a modular architecture or interfaces with other on-chain contracts during execution. One way of running integration tests is to [fork the blockchain](/glossary/#fork) at a specific height (using a tool like [Ganache](https://trufflesuite.com/docs/ganache/) or [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)) and simulate interactions between your contract and deployed contracts.
+Integration testing is useful if your contract adopts a modular architecture or interfaces with other on-chain contracts during execution. One way of running integration tests is to [fork the blockchain](/glossary/#fork) at a specific height (using a tool like [Forge](https://book.getfoundry.sh/forge/fork-testing) or [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) and simulate interactions between your contract and deployed contracts.
 
 The forked blockchain will behave similarly to Mainnet and have accounts with associated states and balances. But it only acts as a sandboxed local development environment, meaning you won't need real ETH for transactions, for example, nor will your changes affect the real Ethereum protocol.
 
@@ -255,8 +254,6 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[OpenZeppelin Test Helpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** - _Assertion library for Ethereum smart contract testing. Make sure your contracts behave as expected!_
 
-- **[Truffle Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts#testing-contracts)** - _Automated testing framework to make testing your contracts a breeze._
-
 - **[Brownie unit testing framework](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie utilizes Pytest, a feature-rich test framework that lets you write small tests with minimal code, scales well for large projects, and is highly extendable._
 
 - **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry offers Forge, a fast and flexible Ethereum testing framework capable of executing simple unit tests, gas optimization checks, and contract fuzzing._
@@ -286,15 +283,13 @@ The major difference is that bug bounty programs are open to the wider developer
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble is a specification language and runtime verification tool that allows you to annotate smart contracts with properties that allow you to automatically test the contracts with tools such as Diligence Fuzzing or MythX._
 
 ## Related tutorials {#related-tutorials}
-
-- [How to setup Travis or Circle Continuous Integration (CI) for Truffle testing](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)
 - [An overview and comparison of different testing products](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [How to use Echidna to test smart contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [How to mock Solidity contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [How to migrate from Truffle Tests to OpenZeppelin Test Environment](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
-- [How to test contracts after they have been deployed on a network](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
+- [How to run unit tests in Solidity using Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Further reading {#further-reading}
 
