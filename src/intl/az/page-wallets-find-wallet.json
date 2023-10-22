@@ -88,5 +88,7 @@
   "page-find-wallet-desktop-desc": "Masaüstü tətbiqləri olan pulqabılar",
   "page-find-wallet-browser": "Brauzer",
   "page-find-wallet-browser-desc": "Brauzer uzantıları olan pulqabılar",
-  "page-find-wallet-device": "Cihazlar"
+  "page-find-wallet-device": "Cihazlar",
+  "page-find-choose-to-compare": "Müqayisə etmək üçün seçin",
+  "page-find-wallet-choose-features": "Xüsusiyyətləri seçin"
 }

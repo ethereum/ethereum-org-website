@@ -66,4 +66,6 @@ lang: zh
 
 ## 延伸阅读 {#further-reading}
 
+- [以太坊集成开发环境 (IDE)](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy 提供的以太坊 IDE 列表_
+
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

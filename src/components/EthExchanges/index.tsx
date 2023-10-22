@@ -140,7 +140,7 @@ const EthExchanges = () => {
                   <Text>
                     <Translation id="page-get-eth-exchanges-success-exchange" />
                   </Text>
-                  <CardList content={filteredExchanges} />
+                  <CardList items={filteredExchanges} />
                 </SuccessContainer>
               )}
               {!hasExchangeResults && (

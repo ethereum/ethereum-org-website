@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -16,7 +15,7 @@ import Card, { IProps as ICardProps } from "../../components/Card"
 import Callout from "../../components/Callout"
 import InlineLink from "../../components/Link"
 import Translation from "../../components/Translation"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import FeedbackCard from "../../components/FeedbackCard"
 import Text from "../../components/OldText"
@@ -25,6 +24,7 @@ import OldHeading from "../../components/OldHeading"
 import { getImage } from "../../utils/image"
 
 import type { ChildOnlyProp, Context } from "../../types"
+import GatsbyImage from "../../components/GatsbyImage"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -365,8 +365,7 @@ const DevelopersPage = ({
             <Text>
               <Translation id="page-developers-language-desc" />
             </Text>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               hideBelow="lg"
               image={getImage(data.doge)!}
               alt={t("page-assets-doge")}

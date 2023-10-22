@@ -7,7 +7,7 @@ import { getImage, ImageDataLike } from "../utils/image"
 
 import CardList from "./CardList"
 import Card from "./Card"
-import ButtonLink from "./ButtonLink"
+import { ButtonLink } from "./Buttons"
 import Translation from "./Translation"
 import OldHeading from "./OldHeading"
 
@@ -118,11 +118,11 @@ const BeaconChainActions: React.FC = () => {
         <Translation id="consensus-explore" />
       </H3>
 
-      <CardList content={datapoints} />
+      <CardList items={datapoints} />
       <H3>
         <Translation id="read-more" />
       </H3>
-      <CardList content={reads} />
+      <CardList items={reads} />
     </Box>
   )
 }

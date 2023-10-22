@@ -204,7 +204,7 @@ export interface IProps {
   allowCollapse?: boolean
   codeLanguage: string
   fromHomepage?: boolean
-  children: React.ReactChild
+  children: React.ReactNode
 }
 
 const Codeblock: React.FC<IProps> = ({
@@ -215,13 +215,16 @@ const Codeblock: React.FC<IProps> = ({
 }) => {
   const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
 
-  const codeText = React.Children.map(children, (child) => {
-    return getValidChildrenForCodeblock(child)
-  }).join("")
+  const codeText = React.Children.toArray(children)
+    .map((child) => {
+      if (!child) return
+      return getValidChildrenForCodeblock(child)
+    })
+    .join("")
 
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
 
-  let className
+  let className: string
   if (React.isValidElement(children)) {
     className = children?.props?.className
   } else {

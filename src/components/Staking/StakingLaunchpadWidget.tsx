@@ -3,8 +3,8 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import { FaTools } from "react-icons/fa"
 import { Box, Flex } from "@chakra-ui/react"
 
-import ButtonLink from "../ButtonLink"
 import ReactSelect, { type ReactSelectOnChange } from "../ReactSelect"
+import { ButtonLink } from "../Buttons"
 import Translation from "../Translation"
 import Text from "../OldText"
 

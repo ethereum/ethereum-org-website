@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import {
   Badge,
@@ -18,7 +17,7 @@ import {
   Show,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import { List as ButtonDropdownList } from "../components/ButtonDropdown"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
@@ -71,6 +70,7 @@ import {
   Page,
   StyledButtonDropdown,
 } from "./use-cases"
+import GatsbyImage from "../components/GatsbyImage"
 
 // Apply styles for classes within markdown here
 const Divider = (props: ChildOnlyProp) => (
@@ -401,7 +401,7 @@ const StakingPage = ({
     <Box position="relative" width="full">
       <HeroContainer>
         <Flex direction="column" justify="flex-start" w="full" p={8}>
-          <Breadcrumbs slug={location.pathname} />
+          <Breadcrumbs slug={location.pathname} mb="8" />
           <Title>{mdx.frontmatter.title}</Title>
           <UnorderedList>
             {(summaryPoints || []).map((point, idx) => (
@@ -416,8 +416,7 @@ const StakingPage = ({
             isMobile
           />
         </Flex>
-        <Image
-          as={GatsbyImage}
+        <GatsbyImage
           flex="1 1 100%"
           bgRepeat="no-repeat"
           right={0}
