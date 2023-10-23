@@ -126,7 +126,7 @@ export const StaticLayout: React.FC<IProps> = ({
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const repo =
-    process.env.NEXT_PUBLIC_CANONICAL_GITHUB_REPO ||
+    process.env.NEXT_PUBLIC_GITHUB_REPO ||
     "ethereum/ethereum-org-website"
   const baseEditPath = `https://github.com/${repo}/tree/dev/${CONTENT_DIR}/`
   const absoluteEditPath = baseEditPath + slug + "index.md"
