@@ -26,7 +26,6 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
-- [Swarm Foundation Grants Program](https://my.ethswarm.org/grants) - [Swarm Foundation](https://www.ethswarm.org/) _Grants Program_
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
 - [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/) ecosystem fund_
 - [Chainlink Grants Program](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) community grants_
@@ -34,6 +33,7 @@ These projects have created their own grants for projects aimed at developing an
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) finance ecosystem_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [SKALE Network Grants Program](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/) ecosystem_
+- [Swarm Foundation Grants Program](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/) ecosystem_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Uniswap](https://uniswap.org/) community_
 - [Web3 Grants](https://web3grants.net) - _An extensive list of web3/crypto related grant programs_
