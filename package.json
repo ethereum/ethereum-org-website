@@ -6,11 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
+    "crowdin-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin-import.ts",
+    "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
+    "generate-heading-ids": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/generateHeadingIds.ts",
+    "unused-translations": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/unusedTranslations.ts",
+    "reorg-intl": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/reorgIntlFiles.ts",
+    "optimize-images": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/optimizeImages.ts",
+    "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.0",
+    "@crowdin/crowdin-api-client": "^1.25.0",
     "@docsearch/react": "^3.5.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -39,7 +48,9 @@
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.5.6",
     "image-size": "^1.0.2",
+    "minimist": "^1.2.8",
     "polished": "^4.2.2",
+    "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
     "unified": "^10.0.0",
     "unist-util-visit": "^5.0.0"
