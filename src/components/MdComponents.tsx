@@ -63,6 +63,7 @@ const IdAnchor: React.FC<{ id?: string }> = ({ id }) =>
     <Link href={`#${id}`}
       position="absolute"
       insetInlineEnd="100%"
+      aria-label={id.replaceAll("-", " ") + " permalink"}
     >
       <Icon
         as={CiLink}
