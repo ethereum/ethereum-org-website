@@ -84,7 +84,7 @@ const TableOfContents: React.FC<IProps> = ({
       >
         <List {...outerListProps}>
           {!hideEditButton && editPath && (
-            <ListItem mb={2}>
+            <ListItem mb={4}>
               <ButtonLink
                 leftIcon={<Icon as={FaGithub} />}
                 href={editPath}
