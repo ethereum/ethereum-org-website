@@ -21,5 +21,4 @@
   included_files = [
     "!./src/data/**/*",
     "!./public/**/*",
-    "!node_modules/next-mdx-remote/**/*"
   ]
