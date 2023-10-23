@@ -35,7 +35,6 @@ import Card from "./Card"
 import QuizWidget from "./Quiz/QuizWidget"
 import DocLink from "./DocLink"
 import Link from "@/components/Link"
-import { motion } from "framer-motion"
 // import Contributors from "@/components/Contributors"
 // import Logo from "@/components/Logo"
 // import MeetupList from "@/components/MeetupList"
@@ -97,7 +96,7 @@ export const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
 )
 
 export const Heading4 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading as="h4" {...commonHeadingProps} fontSize="xl" fontWeight={600} {...rest}>
+  <OldHeading as="h4" {...commonHeadingProps(id)} fontSize="xl" fontWeight={600} {...rest}>
     <IdAnchor id={id} />
     {children}
   </OldHeading>
