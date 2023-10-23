@@ -1667,6 +1667,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xObsidian"><img src="https://avatars.githubusercontent.com/u/131651958?v=4?s=100" width="100px;" alt="obsidian"/><br /><sub><b>obsidian</b></sub></a><br /><a href="#content-0xObsidian" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.scienft.com"><img src="https://avatars.githubusercontent.com/u/36033065?v=4?s=100" width="100px;" alt="Fekry Aiad"/><br /><sub><b>Fekry Aiad</b></sub></a><br /><a href="#ideas-MohamedFekryyy" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/wilson-wu-2021/"><img src="https://avatars.githubusercontent.com/u/41039035?v=4?s=100" width="100px;" alt="Wilson Wu"/><br /><sub><b>Wilson Wu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Wilson-Wu1" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fvaysh"><img src="https://avatars.githubusercontent.com/u/126754021?v=4?s=100" width="100px;" alt="VAS"/><br /><sub><b>VAS</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=fvaysh" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
