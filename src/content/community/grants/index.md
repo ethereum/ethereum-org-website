@@ -26,7 +26,7 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
-- [Swarm Foundation Grants Program]([url](https://my.ethswarm.org/grants)) - [Swarm Foundation]([url](https://www.ethswarm.org/)) _Grants Program_
+- [Swarm Foundation Grants Program](https://my.ethswarm.org/grants) - [Swarm Foundation](https://www.ethswarm.org/) _Grants Program_
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
 - [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/) ecosystem fund_
 - [Chainlink Grants Program](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) community grants_
