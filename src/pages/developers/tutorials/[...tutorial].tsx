@@ -17,6 +17,7 @@ import { staticComponents as components } from "@/layouts/Static"
 import type { GetServerSideProps } from "next/types"
 import type { NextPageWithLayout } from "@/lib/types"
 import type { TutorialFrontmatter } from "@/lib/interfaces"
+import PageMetadata from "@/components/PageMetadata"
 
 interface Params extends ParsedUrlQuery {
   tutorial: string[]
@@ -98,7 +99,14 @@ ContentPage.getLayout = (page: ReactElement) => {
 
   return (
     <RootLayout {...rootLayoutProps}>
-      <TutorialLayout {...layoutProps}>{page}</TutorialLayout>
+      <TutorialLayout {...layoutProps}>
+        <PageMetadata
+          title={frontmatter.title}
+          description={frontmatter.description}
+          author={frontmatter.author}
+        />
+        {page}
+      </TutorialLayout>
     </RootLayout>
   )
 }

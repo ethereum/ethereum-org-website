@@ -33,8 +33,6 @@ import {
   ContentContainer,
 } from "@/components/MdComponents"
 // import Translation from "@/components/Translation"
-// TODO: Re-enable PageMetadata after i18n is implemented:
-// import PageMetadata from "@/components/PageMetadata"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -150,7 +148,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
   frontmatter,
   slug,
   tocItems,
-  lastUpdatedDate
+  lastUpdatedDate,
 }) => {
   // TODO: Re-enabled after i18n is implemented
   // const { t } = useTranslation()
@@ -230,10 +228,6 @@ export const UpgradeLayout: React.FC<IProps> = ({
         </MoreContent>
       </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-        /> */}
         <Show above={lgBreakpoint}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />
