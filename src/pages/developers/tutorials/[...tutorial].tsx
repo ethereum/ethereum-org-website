@@ -4,6 +4,7 @@ import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 import path from "path"
+import { Text } from "@chakra-ui/react"
 
 import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImg from "@/lib/rehype/rehypeImg"
@@ -114,7 +115,8 @@ ContentPage.getLayout = (page: ReactElement) => {
 
   return (
     <RootLayout {...rootLayoutProps}>
-      <TutorialLayout {...layoutProps}>{page}</TutorialLayout>
+      <Text>Hello world</Text>
+      {/* <TutorialLayout {...layoutProps}>{page}</TutorialLayout> */}
     </RootLayout>
   )
 }

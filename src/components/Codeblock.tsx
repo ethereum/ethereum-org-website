@@ -5,7 +5,7 @@ import Highlight, {
   Language,
   PrismTheme,
 } from "prism-react-renderer"
-// import Prism from "prism-react-renderer/prism"
+import Prism from "prism-react-renderer/prism"
 
 import Translation from "./Translation"
 import CopyToClipboard from "./CopyToClipboard"
@@ -214,14 +214,14 @@ const Codeblock: React.FC<IProps> = ({
   codeLanguage,
   fromHomepage = false,
 }) => {
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   ;(typeof global !== "undefined" ? global : window).Prism = Prism
+    ;(typeof global !== "undefined" ? global : window).Prism = Prism
 
-  //   // Default languages included:
-  //   // https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js
-  //   require("prismjs/components/prism-solidity")
-  // })
+    // Default languages included:
+    // https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js
+    require("prismjs/components/prism-solidity")
+  })
 
   const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
 
