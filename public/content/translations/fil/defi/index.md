@@ -4,7 +4,7 @@ description: Pangkalahatang-ideya ng DeFi sa Ethereum
 lang: fil
 template: use-cases
 emoji: ":money_with_wings:"
-image: ../../../../assets/use-cases/defi.png
+image: /use-cases/defi.png
 alt: Logo ng Eth na gawa sa mga lego brick.
 sidebarDepth: 2
 summaryPoint1: Isang pandaigdigan at bukas na alternatibo sa kasalukuyang sistemang pinansyal.

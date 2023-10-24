@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: Isang alternatibong sistema ng ekonomiya na ibinatay sa mga prinsipyong regenerative
 summaryPoint2: Isang pagsubok na gamitin ang Ethereum upang malutas ang mga pandaigdigang problema sa koordinasyon tulad ng pagbabago ng klima
@@ -20,7 +20,7 @@ Sa halip, layunin ng ReFi na lutasin ang mga problemang pangkalikasan, pangkomun
 
 Ang isa sa mga pundasyon ng ReFi ay ang konsepto ng regenerative economics na unang ginamit ni John Fullerton ng [Capital Institute](https://capitalinstitute.org). Nagpanukala siya ng walong magkakaugnay na prinsipyo na sumusuporta sa systemic health:
 
-![Walong magkakaugnay na prinsipyo](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Walong magkakaugnay na prinsipyo](./refi-regenerative-economy-diagram.png)
 
 Isinasakatuparan ng mga proyekto sa ReFi ang mga prinsipyong ito gamit ang [mga smart contract](/developers/docs/smart-contracts/) at mga [decentralized finance (DeFi)](/defi/) application para hikayatin ang mga regenerative na kagaiwan, hal., pagpapanumbalik ng sigla ng mga napinsalang ecosystem, at pangasiwaan ang large-scale collaboration sa mga pandaigdigang isyu tulad ng pagbabago ng klima at pagkaubos ng biodiversity.
 

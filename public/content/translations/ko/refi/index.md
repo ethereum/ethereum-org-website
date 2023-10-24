@@ -5,7 +5,7 @@ lang: ko
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: 재생 원칙 위에 기반한 대안 경제 시스템
 summaryPoint2: 이더리움을 활용하여 기후 변화와 같은 범세계적인 공동 위기를 해결하기 위한 시도
@@ -20,7 +20,7 @@ summaryPoint3: 검증된 탄소 배출권과 같은 생태계 효익 자산을 �
 
 리파이의 기초 중 하나는 [Capital Institute](https://capitalinstitute.org)의 존 플러튼이 개척한 재생경제학의 개념입니다. 플러튼은 시스템 건전성의 기초이자 상호연결된 8가지 원칙을 제시했습니다.
 
-![여덟 가지 상호연결 원칙](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![여덟 가지 상호연결 원칙](./refi-regenerative-economy-diagram.png)
 
 리파이는 [스마트 계약](/developers/docs/smart-contracts/)과 [탈중앙 금융(디파이, DeFi)](/defi/) 애플리케이션으로 이러한 원칙을 실현하여 저하된 생태계의 복원과 같은 재생 행동에 인센티브를 지급하고 기후 변화 및 생물다양성 유실과 같은 글로벌 문제에 대해 대규모 협업을 촉진합니다.
 

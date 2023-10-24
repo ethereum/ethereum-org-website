@@ -3,7 +3,7 @@ title: برداشت‌ها از سهام‌گذاری
 description: این صفحه به طور خلاصه بیان می‌کند که برداشت‌های سهامگذاری خودکار چه هستند، چطور کار می‌کنند، و سهامگذاران برای دریافت پاداش‌هایشان به چه کار باید انجام بدهند
 lang: fa
 template: staking
-image: ../../../../../assets/staking/leslie-withdrawal.png
+image: /staking/leslie-withdrawal.png
 alt: لزلی (Leslie) کرگدن، با پاداش سهام گذاری‌اش
 sidebarDepth: 2
 summaryPoints:
