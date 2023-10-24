@@ -53,7 +53,7 @@ May iba't ibang opsyon na available upang tulungan ka sa iyong setup. Gamitin an
 
 <StakingProductsCardGrid category="pools" />
 
-Tandaan ang kahalagahan ng pagpili ng serbisyo na seryoso sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/), dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng client sa pamamagitan ng <em style="text-transform: uppercase;">"execution client diversity"</em> at <em style="text-transform: uppercase;">"consensus client diversity."</em>
+Tandaan ang kahalagahan ng pagpili ng serbisyo na seryoso sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/), dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng client sa pamamagitan ng <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> at <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
 May mungkahi para sa staking tool na hindi namin nabanggit? Tingnan ang aming [patakaran sa product listing](/contributing/adding-staking-products/) para malaman kung ito ay angkop, at isumite ito para masuri.
 
