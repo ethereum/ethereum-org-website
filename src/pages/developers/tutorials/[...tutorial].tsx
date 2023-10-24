@@ -45,7 +45,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   // since we can't send the Date object anymore
   frontmatter.published = frontmatter.published.toString()
 
-  const mdPath = path.join("/content", ...params.tutorial)
+  const mdPath = path.join("/content/developers/tutorials", ...params.tutorial)
   const mdDir = path.join("public", mdPath)
   const timeToRead = readingTime(markdown.content)
   const mdxSource = await serialize(markdown.content, {

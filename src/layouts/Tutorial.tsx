@@ -49,7 +49,7 @@ import YouTube from "@/components/YouTube"
 import { EDIT_CONTENT_URL } from "@/lib/constants"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { Lang, TranslationKey } from "@/lib/types"
 
 const ContentContainer = (props) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
