@@ -30,8 +30,13 @@ const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), { ssr: f
 // import GitHubContributors from "@/components/FileContributorsGitHub"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
+import {
+  Heading1 as MdHeading1,
+  Heading2 as MdHeading2,
+  Heading3 as MdHeading3,
+  Heading4 as MdHeading4,
+} from "@/components/MdComponents"
 import MdLink from "@/components/MdLink"
-import OldHeading from "@/components/OldHeading"
 // TODO: Import once intl implements?
 // import PageMetadata from "@/components/PageMetadata"
 import PostMergeBanner from "@/components/Banners/PostMergeBanner"
@@ -78,23 +83,10 @@ const ContentContainer = (props) => {
 const H1 = (props: HeadingProps) => {
   const monospaceFont = useToken("fonts", "monospace")
   return (
-    <OldHeading
-      as="h1"
-      fontWeight="bold"
+    <MdHeading1
+      fontSize={{ base: "1.75rem", lg: "2.5rem" }}
       fontFamily={monospaceFont}
       textTransform="uppercase"
-      fontSize={{ base: "1.75rem", lg: "2.5rem" }}
-      lineHeight="1.4"
-      _before={{
-        content: '""',
-        display: "block",
-        h: "140px",
-        mt: "-140px",
-        visibility: "hidden",
-      }}
-      sx={{
-        a: { display: "none" },
-      }}
       {...props}
     />
   )
@@ -104,14 +96,11 @@ const H2 = (props: HeadingProps) => {
   const monospaceFont = useToken("fonts", "monospace")
 
   return (
-    <OldHeading
-      as="h2"
+    <MdHeading2
       fontFamily={monospaceFont}
       textTransform="uppercase"
       fontWeight="bold"
-      fontSize={{ base: "2xl", md: "2rem" }}
       sx={{ position: "inherit !important" }}
-      lineHeight="1.4"
       _before={{
         content: '""',
         display: "block",
@@ -126,11 +115,9 @@ const H2 = (props: HeadingProps) => {
 
 const H3 = (props: HeadingProps) => {
   return (
-    <OldHeading
-      as="h3"
+    <MdHeading3
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.5rem" }}
-      lineHeight="1.4"
       sx={{ position: "inherit !important" }}
       _before={{
         content: '""',
@@ -146,11 +133,9 @@ const H3 = (props: HeadingProps) => {
 
 const H4 = (props: HeadingProps) => {
   return (
-    <OldHeading
-      as="h4"
+    <MdHeading4
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.25rem" }}
-      lineHeight="1.4"
       sx={{ position: "unset !important" }}
       _before={{
         content: '""',
