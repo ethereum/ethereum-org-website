@@ -30,7 +30,6 @@ const setMarkdownHeadingIds: Plugin<[{}], Root> = () => (tree, _file) => {
         value: parseToCTitle(lastChildValue),
       }
     }
-    // TODO: Add pseudo-element to heading to allow for anchor links
   })
 }
 

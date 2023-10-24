@@ -4,6 +4,7 @@ description: Pelajari tentang Penggabungan - ketika Jaringan Utama Ethereum berk
 lang: id
 template: upgrade
 image: /upgrades/merge.png
+alt: 
 summaryPoint1: Pada akhirnya, Jaringan Utama Ethereum saat ini akan "bergabung" dengan sistem bukti taruhan rantai suar.
 summaryPoint2: Ini akan menandai akhir bukti kerja untuk Ethereum, dan transisi penuh ke bukti taruhan.
 summaryPoint3: Ini direncanakan mendahului peluncuran rantai shard.

@@ -4,6 +4,7 @@ description: പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് Ethereu
 lang: ml
 template: upgrade
 image: /upgrades/core.png
+alt: 
 summaryPoint1: ബീക്കൺ ചെയിൻ, Ethereum ഇക്കോസിസ്റ്റത്തിലേക്ക് പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് അവതരിപ്പിച്ചു.
 summaryPoint2: ഇത് ഒറിജിനൽ Ethereum പ്രൂഫ് ഓഫ് വർക്ക് ശൃംഖലയുമായി 2022 സെപ്റ്റംബറിൽ ലയിപ്പിച്ചു.
 summaryPoint3: ബീക്കൺ ചെയിൻ പൊതു യുക്തിയും Ethereum-ത്തെ ഇപ്പോൾ സുരക്ഷിതമാക്കുന്ന ബ്ലോക്ക് ഗോസിപ്പ് പ്രോട്ടോക്കോളും അവതരിപ്പിച്ചു.

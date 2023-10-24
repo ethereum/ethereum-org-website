@@ -4,6 +4,7 @@ description: Belajar tentang Rantai Suar - peningkatan yang memperkenalkan bukti
 lang: id
 template: upgrade
 image: /upgrades/core.png
+alt: 
 summaryPoint1: Rantai Suar tidak mengubah apa pun terkait Ethereum yang kita gunakan saat ini.
 summaryPoint2: Rantai Suar akan mengoordinasikan jaringan, yang berfungsi sebagai lapisan konsensus.
 summaryPoint3: Rantai Suar memperkenalkan bukti taruhan ke ekosistem Ethereum.

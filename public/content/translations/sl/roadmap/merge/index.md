@@ -4,6 +4,7 @@ description: Več informacij o spojitvi – trenutku, ko je Ethereumovo glavno o
 lang: sl
 template: upgrade
 image: /upgrades/merge.png
+alt: 
 summaryPoint1: Ethereumovo glavno omrežje uporablja dokaz o deležu, vendar ni bilo vedno tako.
 summaryPoint2: Nadgradnja z izvirnega mehanizma dokaza o delu na dokaz o deležu se je imenovala spojitev.
 summaryPoint3: Spojitev je ime dogodka, ko se je Ethereumovo glavno omrežje spojilo z oddajniško verigo – ločeno verigo blokov, ki je uporabljalo dokaz o deležu. Obe omrežji zdaj obstajata kot ena veriga.
