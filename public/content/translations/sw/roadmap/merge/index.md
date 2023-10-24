@@ -4,6 +4,7 @@ description: Jifunze kuhusu muunganiko - ambapo mtandao mkuu wa Etheream utakapo
 lang: sw
 template: upgrade
 image: /upgrades/merge.png
+alt: 
 summaryPoint1: Hatimaye Ethereum ya sasa itafanya "muungano" na mfumo wa uthibitisho-wa-hisa wa mnyororo kioleza.
 summaryPoint2: Hii itaweka alama ya kuhitumu kwa Ethereum ya uthibitisho-wa-kazi, na mpito mzima kwenda kwenye uthibitisho-wa-hisa.
 summaryPoint3: Hii imepangwa kutangulia utolewaji wa minyororo ya vigae.

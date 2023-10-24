@@ -14,7 +14,9 @@ import {
   ListItem,
   UnorderedList,
   OrderedList,
+  Icon,
 } from "@chakra-ui/react"
+import { CiLink } from "react-icons/ci"
 import ButtonDropdown, {
   type IProps as ButtonDropdownProps,
 } from "@/components/ButtonDropdown"
@@ -32,6 +34,7 @@ import InfoBanner from "./InfoBanner"
 import Card from "./Card"
 import QuizWidget from "./Quiz/QuizWidget"
 import DocLink from "./DocLink"
+import Link from "@/components/Link"
 // import Contributors from "@/components/Contributors"
 // import Logo from "@/components/Logo"
 // import MeetupList from "@/components/MeetupList"
@@ -39,37 +42,65 @@ import DocLink from "./DocLink"
 /**
  * Base HTML elements
  */
-export const commonHeadingProps: HeadingProps = {
+const headingPropsForAnchor = (id?: string): HeadingProps =>
+  id
+    ? ({
+        scrollMarginTop: 28,
+        id,
+        "data-group": true,
+        position: "relative",
+      } as HeadingProps)
+    : {}
+
+export const commonHeadingProps = (id?: string): HeadingProps => ({
   fontWeight: 700,
   lineHeight: 1.4,
-}
+  ...headingPropsForAnchor(id),
+})
 
-export const Heading1 = (props: HeadingProps) => (
-  <OldHeading as="h1" {...commonHeadingProps} fontSize="2.5rem" {...props} />
+const IdAnchor: React.FC<{ id?: string }> = ({ id }) =>
+  id ? (
+    <Link href={`#${id}`}
+      position="absolute"
+      insetInlineEnd="100%"
+      aria-label={id.replaceAll("-", " ") + " permalink"}
+    >
+      <Icon
+        as={CiLink}
+        opacity={0}
+        _groupHover={{ opacity: 1 }}
+        transition="opacity 0.1s ease-in-out"
+        fontSize="xl"
+        me={1}
+      />
+    </Link>
+  ) : null
+
+export const Heading1 = ({ children, ...rest }: HeadingProps) => (
+  <OldHeading as="h1" {...commonHeadingProps()} fontSize="2.5rem" {...rest}>
+    {children}
+  </OldHeading>
 )
 
-export const Heading2 = (props: HeadingProps) => (
-  <OldHeading
-    as="h2"
-    {...commonHeadingProps}
-    fontSize="2rem"
-    mt={16}
-    {...props}
-  />
+export const Heading2 = ({ id, children, ...rest }: HeadingProps) => (
+  <OldHeading as="h2" {...commonHeadingProps(id)} fontSize="2rem" mt={16} {...rest}>
+    <IdAnchor id={id} />
+    {children}
+  </OldHeading>
 )
 
-export const Heading3 = (props: HeadingProps) => (
-  <OldHeading as="h3" {...commonHeadingProps} fontSize="2xl" {...props} />
+export const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
+  <OldHeading as="h3" {...commonHeadingProps(id)} fontSize="2xl" {...rest}>
+    <IdAnchor id={id} />
+    {children}
+  </OldHeading>
 )
 
-export const Heading4 = (props: HeadingProps) => (
-  <OldHeading
-    as="h4"
-    {...commonHeadingProps}
-    fontSize="xl"
-    fontWeight={600}
-    {...props}
-  />
+export const Heading4 = ({ id, children, ...rest }: HeadingProps) => (
+  <OldHeading as="h4" {...commonHeadingProps(id)} fontSize="xl" fontWeight={600} {...rest}>
+    <IdAnchor id={id} />
+    {children}
+  </OldHeading>
 )
 
 export const Pre = (props: ChildOnlyProp) => (
