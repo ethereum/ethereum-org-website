@@ -705,7 +705,7 @@ En cryptographie, valeur qui ne peut être utilisée qu'une seule fois. Le nonce
 
 ### bloc ommer (oncle) {#ommer}
 
-Quand un [mineur](#miner) de preuve de travail trouve un [bloc](#block) valide, un autre mineur peut avoir publié un bloc concurrent, qui est ajouté en premier au sommet de la blockchain. Ce bloc valide, mais obsolète, peut être inclus par des blocs plus récents en tant que _bloc oncle_ et faire l'objet d'une récompense partielle. On utilise de préférence le terme « ommer », plus neutre, pour désigner le frère ou la sœur d'un bloc parent, mais on parle aussi parfois d'« oncle ». Ceci était pertinent pour Ethereum lorsqu'il était un réseau à [preuve de travail](pow), mais les blocs oncle ne sont pas une fonctionnalité de la [preuve d'enjeu](#pos) sur Ethereum, car un seul proposant de bloc est sélectionné à chaque créneau.
+Quand un [mineur](#miner) de preuve de travail trouve un [bloc](#block) valide, un autre mineur peut avoir publié un bloc concurrent, qui est ajouté en premier au sommet de la blockchain. Ce bloc valide, mais obsolète, peut être inclus par des blocs plus récents en tant que _bloc oncle_ et faire l'objet d'une récompense partielle. On utilise de préférence le terme « ommer », plus neutre, pour désigner le frère ou la sœur d'un bloc parent, mais on parle aussi parfois d'« oncle ». Ceci était pertinent pour Ethereum lorsqu'il était un réseau à [preuve de travail](#pow), mais les blocs oncle ne sont pas une fonctionnalité de la [preuve d'enjeu](#pos) sur Ethereum, car un seul proposant de bloc est sélectionné à chaque créneau.
 
 ### Rollup optimiste {#optimistic-rollup}
 
