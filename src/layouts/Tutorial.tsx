@@ -12,9 +12,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { useRouter } from "next/router"
-import dynamic from 'next/dynamic'
- 
-
+// import dynamic from 'next/dynamic'
 
 // Components
 import { ButtonLink } from "@/components/Buttons"
@@ -25,7 +23,7 @@ import Codeblock from "@/components/Codeblock"
 // import CrowdinConbtirbutors from "@/components/FileContributorsCrowdin"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
-const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), { ssr: false })
+// const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), { ssr: false })
 // TODO: Implement FileContribtorsGitHub
 // import GitHubContributors from "@/components/FileContributorsGitHub"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
@@ -267,7 +265,7 @@ export const TutorialLayout = ({
               //   editPath={absoluteEditPath}
               // />
             )}
-          <FeedbackCard />
+          {/* <FeedbackCard /> */}
         </ContentContainer>
         {tocItems && (
             <TableOfContents
