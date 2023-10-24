@@ -26,8 +26,8 @@ import {
   UpgradeLayout,
   // eventComponents,
   // EventLayout,
-  // docsComponents,
-  // DocsLayout,
+  docsComponents,
+  DocsLayout,
 } from "@/layouts"
 
 // Types
@@ -41,7 +41,7 @@ const layoutMapping = {
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
   // event: EventLayout,
-  // docs: DocsLayout,
+  docs: DocsLayout,
 } as const
 
 const componentsMapping = {
@@ -51,7 +51,7 @@ const componentsMapping = {
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
   // event: eventComponents,
-  // docs: docsComponents,
+  docs: docsComponents,
 } as const
 
 interface Params extends ParsedUrlQuery {
@@ -123,7 +123,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   let layout = frontmatter.template
 
   if (!frontmatter.template) {
-    layout = params.slug.includes("developers/docs") ? "docs" : "static"
+    layout = params.slug.join('/').includes("developers/docs") ? "docs" : "static"
   }
 
   return {

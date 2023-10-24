@@ -1,3 +1,9 @@
-// export const docsComponents = {}
+export const docsComponents = {
+  
+}
 
-export const DocsLayout = ({ children }) => <div>{children}</div>
+export const DocsLayout = ({ children }) => {
+  return (
+    <div>Hello world</div>
+  )
+}

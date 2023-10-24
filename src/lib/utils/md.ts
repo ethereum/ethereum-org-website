@@ -25,6 +25,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/decentralized-identity",
     "/defi",
     "/desci",
+    "/developers/docs/",
     "/developers/tutorials/all-you-can-cache",
     "/energy-consumption",
     "/glossary",
