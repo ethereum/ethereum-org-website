@@ -220,7 +220,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
             height={600}
             overflow="initial"
             src={frontmatter.image}
-            alt=""
+            alt={frontmatter.alt}
           />
         )}
       </HeroContainer>

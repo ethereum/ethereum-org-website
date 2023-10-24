@@ -4,6 +4,7 @@ description: Saznajte vieše o nadogradnji Beacon Chain kojom je implementiran d
 lang: hr
 template: upgrade
 image: /upgrades/core.png
+alt: 
 summaryPoint1: Nadogradnja Beacon Chain implementirala je dokaz uloga u ekosustav Ethereuma.
 summaryPoint2: Nadogradnja je objedinjena s izvornim lancem dokaza rada Ethereuma u rujnu 2022.
 summaryPoint3: Nadogradnja Beacon Chain uvela je logiku koncenzusa i protokol blokiranja nagađanja koji sada pruža Ethereum.
