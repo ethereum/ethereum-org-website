@@ -23,7 +23,7 @@ import Codeblock from "@/components/Codeblock"
 // import CrowdinConbtirbutors from "@/components/FileContributorsCrowdin"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
-// const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), { ssr: false })
+import FeedbackCard from "@/components/FeedbackCard"
 // TODO: Implement FileContribtorsGitHub
 // import GitHubContributors from "@/components/FileContributorsGitHub"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
@@ -265,7 +265,7 @@ export const TutorialLayout = ({
               //   editPath={absoluteEditPath}
               // />
             )}
-          {/* <FeedbackCard /> */}
+          <FeedbackCard />
         </ContentContainer>
         {tocItems && (
             <TableOfContents

@@ -4,7 +4,6 @@ import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 import path from "path"
-import { Text } from "@chakra-ui/react"
 
 import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImg from "@/lib/rehype/rehypeImg"
@@ -60,15 +59,15 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     },
   })
 
-  // const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
-  // const lastDeployDate = await getLastDeployDate()
+  const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
+  const lastDeployDate = await getLastDeployDate()
 
   return {
     props: {
       mdxSource,
       frontmatter,
-      // lastUpdatedDate,
-      // lastDeployDate,
+      lastUpdatedDate,
+      lastDeployDate,
       contentNotTranslated,
       timeToRead,
       tocItems,
@@ -94,15 +93,15 @@ ContentPage.getLayout = (page: ReactElement) => {
     frontmatter,
     tocItems,
     timeToRead,
-    // lastUpdatedDate,
+    lastUpdatedDate,
     contentNotTranslated,
-    // lastDeployDate,
+    lastDeployDate,
   } = page.props
 
   const rootLayoutProps = {
     contentIsOutdated: frontmatter.isOutdated,
     contentNotTranslated,
-    lastDeployDate: new Date().toISOString(),
+    lastDeployDate,
   }
 
   const layoutProps = {
@@ -110,13 +109,12 @@ ContentPage.getLayout = (page: ReactElement) => {
     frontmatter,
     tocItems,
     timeToRead,
-    // lastUpdatedDate,
+    lastUpdatedDate,
   }
 
   return (
     <RootLayout {...rootLayoutProps}>
-      <Text>Hello world</Text>
-      {/* <TutorialLayout {...layoutProps}>{page}</TutorialLayout> */}
+      <TutorialLayout {...layoutProps}>{page}</TutorialLayout>
     </RootLayout>
   )
 }
