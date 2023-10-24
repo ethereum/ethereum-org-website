@@ -5,6 +5,7 @@ import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import Link from "@/components/Link"
+import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import TableOfContents from "@/components/TableOfContents"
 import Text from "@/components/OldText"
@@ -51,6 +52,7 @@ export const staticComponents = {
   GlossaryDefinition,
   Icon,
   Link,
+  MeetupList,
   NetworkUpgradeSummary,
   UpcomingEventsList,
 }
