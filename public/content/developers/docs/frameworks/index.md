@@ -114,7 +114,6 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Community Forum](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK development has ended**
 
-
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
