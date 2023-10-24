@@ -60,15 +60,15 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     },
   })
 
-  const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
-  const lastDeployDate = await getLastDeployDate()
+  // const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
+  // const lastDeployDate = await getLastDeployDate()
 
   return {
     props: {
       mdxSource,
       frontmatter,
-      lastUpdatedDate,
-      lastDeployDate,
+      // lastUpdatedDate,
+      // lastDeployDate,
       contentNotTranslated,
       timeToRead,
       tocItems,
@@ -94,15 +94,15 @@ ContentPage.getLayout = (page: ReactElement) => {
     frontmatter,
     tocItems,
     timeToRead,
-    lastUpdatedDate,
+    // lastUpdatedDate,
     contentNotTranslated,
-    lastDeployDate,
+    // lastDeployDate,
   } = page.props
 
   const rootLayoutProps = {
     contentIsOutdated: frontmatter.isOutdated,
     contentNotTranslated,
-    lastDeployDate,
+    lastDeployDate: new Date().toISOString(),
   }
 
   const layoutProps = {
@@ -110,7 +110,7 @@ ContentPage.getLayout = (page: ReactElement) => {
     frontmatter,
     tocItems,
     timeToRead,
-    lastUpdatedDate,
+    // lastUpdatedDate,
   }
 
   return (
