@@ -53,7 +53,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="pools" />
 
-لطفاً از اهمیت انتخاب سرویسی که [تنوع کاربر](/developers/docs/nodes-and-clients/client-diversity/) را جدی بگیرد غافل نشوید، زیرا امنیت شبکه را بهبود می‌بخشد و ریسک شما را محدود می‌کند. سرویس‌هایی که مدارکی از محدود کردن استفاده اکثریت کاربران را دارند با عنوان <em style="text-transform: uppercase;">"تنوع کاربر اجرایی"</em> و <em style="text-transform: uppercase;">"تنوع کاربر اجماعی"</em> نشان داده می‌شوند.
+لطفاً از اهمیت انتخاب سرویسی که [تنوع کاربر](/developers/docs/nodes-and-clients/client-diversity/) را جدی بگیرد غافل نشوید، زیرا امنیت شبکه را بهبود می‌بخشد و ریسک شما را محدود می‌کند. سرویس‌هایی که مدارکی از محدود کردن استفاده اکثریت کاربران را دارند با عنوان <em style={{ textTransform: "uppercase" }}>"تنوع کاربر اجرایی"</em> و <em style={{ textTransform: "uppercase" }}>"تنوع کاربر اجماعی"</em> نشان داده می‌شوند.
 
 ابزار سهامگذاری‌‌ می‌شناسید که نگنجانده‌ایم؟ [سیاست فهرست‌بندی محصول](/contributing/adding-staking-products/) ما را برای اطمینان از مناسب بودن آن و ثبت آن جهت بررسی مشاهده کنید.
 

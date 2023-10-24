@@ -82,12 +82,12 @@ const EnergyConsumptionChart: React.FC = () => {
   const data = useBreakpointValue<Data>({
     base: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
+        name: "Global data centers", // t("energy-consumption-chart-global-data-centers-label")
         amount: 190,
         color: "#FF0000",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
+        name: "BTC PoW", // t("energy-consumption-chart-btc-pow-label")
         amount: 149,
         color: "#F2A900",
       },
@@ -97,12 +97,7 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#71BB8A",
       },
       {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 21,
-        color: "#C1B6F5",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
+        name: "ETH PoW", //t("energy-consumption-chart-eth-pow-label"),
         amount: 21,
         color: "#C1B6F5",
       },
@@ -114,17 +109,12 @@ const EnergyConsumptionChart: React.FC = () => {
     ],
     sm: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
+        name: "Global data centers", // t("energy-consumption-chart-global-data-centers-label")
         amount: 190,
         color: "#FF0000",
       },
       {
-        name: "Gold mining", // t("energy-consumption-gold-mining-cbeci-label")
-        amount: 149,
-        color: "#D7B14A",
-      },
-      {
-        name: "Gold mining", // t("energy-consumption-gold-mining-cbeci-label")
+        name: "BTC PoW", // t("energy-consumption-chart-btc-pow-label")
         amount: 149,
         color: "#D7B14A",
       },
@@ -134,34 +124,29 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#F2A900",
       },
       {
-        name: t("energy-consumption-chart-eth-pow-label"),
+        name: "ETH PoW", //t("energy-consumption-chart-eth-pow-label"),
         amount: 21,
         color: "#C1B6F5",
       },
       {
-        name: t("energy-consumption-chart-netflix-label"),
+        name: "Netflix", // t("energy-consumption-chart-netflix-label")
         amount: 0.457,
         color: "#E50914",
       },
       {
-        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label")
+        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label"),
         amount: 0.0026,
         color: "#C1B6F5",
       },
     ],
     md: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
+        name: "Global data centers", // t("energy-consumption-chart-global-data-centers-label")
         amount: 190,
         color: "#FF0000",
       },
       {
-        name: "Gold mining", // t("energy-consumption-gold-mining-cbeci-label")
-        amount: 149,
-        color: "#D7B14A",
-      },
-      {
-        name: "Gold mining", // t("energy-consumption-gold-mining-cbeci-label")
+        name: "BTC PoW", // t("energy-consumption-chart-btc-pow-label")
         amount: 149,
         color: "#D7B14A",
       },
@@ -171,12 +156,12 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-chart-gaming-us-label"),
+        name: "Gaming in the US", // t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
       },
       {
-        name: t("energy-consumption-chart-eth-pow-label"),
+        name: "ETH PoW", //t("energy-consumption-chart-eth-pow-label"),
         amount: 21,
         color: "#C1B6F5",
       },
@@ -186,7 +171,7 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#E50914",
       },
       {
-        name: t("energy-consumption-chart-netflix-label"),
+        name: "Netflix", // t("energy-consumption-chart-netflix-label")
         amount: 0.457,
         color: "#E50914",
       },
@@ -201,7 +186,7 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#E50914",
       },
       {
-        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label")
+        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label"),
         amount: 0.0026,
         color: "#C1B6F5",
       },

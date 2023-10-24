@@ -3,7 +3,7 @@ title: Peta Perjalanan Ethereum
 description: Jalan menuju peningkatan skalabilitas, keamanan, dan keberlanjutan Ethereum.
 lang: id
 template: roadmap
-image: ../../../../assets/roadmap/roadmap-main.png
+image: /roadmap/roadmap-main.png
 alt: "Peta Perjalanan Ethereum"
 summaryPoints:
 buttons:
@@ -66,7 +66,7 @@ Peta jalan ini sebagian besar adalah hasil kerja bertahun-tahun dari para peneli
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">Apa itu ETH2?</h4>
+  <h4 style={{ marginTop: 0 }}>Apa itu ETH2?</h4>
 
   <p>Istilah 'Eth2' sebelumnya digunakan untuk menggambarkan masa depan Ethereum sebelum beralih ke konsep bukti kepemilikan, tetapi istilah ini <strong>kemudian perlahan ditinggalkan karena ada terminologi lain yang lebih tepat.</strong> Istilah ini pada awalnya digunakan untuk membedakan jaringan Ethereum sebelum beralih ke konsep bukti kepemilikan dan jaringan setelahnya, atau terkadang digunakan untuk menyebut klien Ethereum yang lain (klien eksekusi terkadang disebut sebagai klien ETH1 dan klien konsensus terkadang disebut sebagai klien ETH2).</p>
 
