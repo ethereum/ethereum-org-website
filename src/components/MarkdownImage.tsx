@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/react"
 
-import { Image, type ImageProps } from "./Image"
+import Link from "@/components/Link"
+import { Image, type ImageProps } from "@/components/Image"
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
@@ -29,7 +30,14 @@ const MarkdownImage = ({
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
     <Flex as="span" justify="center">
-      <Image width={imageWidth} height={imageHeight} loading="lazy" {...rest} />
+      <Link href={rest.src.toString()} target="_blank" rel="noopener">
+        <Image
+          width={imageWidth}
+          height={imageHeight}
+          loading="lazy"
+          {...rest}
+        />
+      </Link>
     </Flex>
   )
 }
