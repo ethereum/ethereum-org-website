@@ -12,7 +12,7 @@ summaryPoint2: Des produits qui vous permettent d'emprunter, d'épargner, d'inve
 summaryPoint3: Basé sur une technologie open-source avec laquelle n'importe qui peut programmer.
 ---
 
-DeFi est un système financier ouvert et mondial conçu pour l'ère de l'internet - une alternative à un système opaque, contrôlé rigoureusement et maintenu ensemble par des infrastructures et des processus vieux de plusieurs décennies. Il vous donne le contrôle et la visibilité de votre argent. Il vous offre une exposition aux marchés mondiaux et des alternatives à vos options bancaires ou monétaires locales. Les produits DeFi ouvrent des services financiers à toute personne disposant d'une connexion Internet et ils sont en grande partie la propriété de leurs utilisateurs. Jusqu'à présent, des dizaines de milliards de dollars de cryptomonnaies ont coulé à travers des applications DeFi et ils se développent chaque jour.
+La DeFi est un système financier ouvert et mondial conçu pour l'ère de l'internet - une alternative à un système opaque, contrôlé rigoureusement et maintenu par des infrastructures et des processus vieux de plusieurs décennies. Il vous donne le contrôle et la visibilité de votre argent. Il vous offre une exposition aux marchés mondiaux et des alternatives à vos options bancaires ou monétaires locales. Les produits DeFi ouvrent des services financiers à toute personne disposant d'une connexion Internet et ils sont en grande partie la propriété de leurs utilisateurs. Jusqu'à présent, des dizaines de milliards de dollars de cryptomonnaies ont coulé à travers des applications DeFi et ils se développent chaque jour.
 
 ## Qu'est-ce que la DeFi ? {#what-is-defi}
 
@@ -31,7 +31,7 @@ L'une des meilleures façons de voir le potentiel de la DeFi est de comprendre l
 - Les services financiers peuvent vous empêcher d'être payé.
 - Des frais cachés de services financiers sont vos données personnelles.
 - Les gouvernements et les institutions centralisées peuvent fermer les marchés à volonté.
-- Les heures de trading sont souvent limitées aux heures d'ouverture d'un fuseau horaire spécifique.
+- Les heures de trading sont souvent limitées aux heures de bureau sur un fuseau horaire spécifique.
 - Les transferts d'argent peuvent prendre des jours en raison de processus humains internes.
 - Il y a une prime pour les services financiers parce que les institutions intermédiaires ont besoin de leur part.
 
@@ -233,7 +233,7 @@ Avec le trading centralisé, vous devez déposer vos actifs avant les échanges 
 
 Il existe des outils de gestion de fonds sur Ethereum qui vous permettront de développer votre portefeuille en vous appuyant sur la stratégie de votre choix. C'est automatique, ouvert à tous, et personne ne pourra vous demander de commission.
 
-Voilà un bon exemple [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). C'est un fond qui se rééquilibre automatiquement pour garantir qu'il inclue toujours [les meilleurs DeFi tokens par capitalisation boursière](https://www.coingecko.com/en/defi). Pas besoin de gérer les détails et vous pouvez retirer les fonds quand bon vous semble.
+Voilà un bon exemple [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). C'est un fond qui se rééquilibre automatiquement pour garantir qu'il inclue toujours [les jetons DeFi ayant la meilleure capitalisation boursière](https://www.coingecko.com/en/defi). Pas besoin de gérer les détails et vous pouvez retirer les fonds quand bon vous semble.
 
 <ButtonLink to="/dapps/?category=finance">
   Voir les applications d'investissement dapps
@@ -274,7 +274,7 @@ Cela veut dire qu'un projet A avec ses 100 donneurs de 1 dollar pourrait finir a
 
 L'assurance décentralisée vise à rendre l'assurance moins chère, plus rapide à rembourser et plus transparente. Avec davantage d'automatisation, la protection est plus abordable et les paiements sont beaucoup plus rapides. Les données utilisées pour décider de votre réclamation sont complètement transparentes.
 
-Les produits Ethereum, comme n'importe quel logiciel, peuvent souffrir de bugs et d'exploits. Actuellement, de nombreux produits d'assurance dans l'espace sont axés sur la protection de leurs utilisateurs contre la perte de fonds. Cependant, il y a des projets qui commencent à construire une couverture pour tout ce que la vie peut nous donner. Un bon exemple de ceci est la couverture Etherisc's Crop qui vise à [protéger les petits agriculteurs kényans contre les sécheresses et les inondations](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Les assurances décentralisées peuvent offrir une couverture moins chère aux agriculteurs qui n'ont souvent pas les moyens d'accéder aux assurances traditionnelles.
+Les produits Ethereum, comme n'importe quel logiciel, peuvent souffrir de bugs et d'exploits. Actuellement, de nombreux produits d'assurance dans l'espace sont axés sur la protection de leurs utilisateurs contre la perte de fonds. Cependant, il y a des projets qui commencent à construire une couverture pour tous les événements de la vie. Un bon exemple de ceci est la couverture Etherisc's Crop qui vise à [protéger les petits agriculteurs kényans contre les sécheresses et les inondations](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Les assurances décentralisées peuvent offrir une couverture moins chère aux agriculteurs qui n'ont souvent pas les moyens d'accéder aux assurances traditionnelles.
 
 <ButtonLink to="/dapps/?category=finance">
   Voir les assurances Dapps
@@ -338,7 +338,7 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
 
 ### Articles DeFi {#defi-articles}
 
-- [Guide de la DeFi pour débutants](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) - _Sid Coelho-Prabhu, 6 janvier 2020_
+- [Un guide de la DeFi pour débutants](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) - _Sid Coelho-Prabhu, 6 janvier 2020_
 
 ### Vidéos {#videos}
 

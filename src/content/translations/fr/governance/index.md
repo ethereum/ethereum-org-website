@@ -57,7 +57,7 @@ _Note : Toute personne peut faire partie de plusieurs de ces groupes (par exempl
 
 ## Qu'est-ce qu'une EIP ? {#what-is-an-eip}
 
-Un processus important utilisé dans la gouvernance Ethereum est la proposition de **Propositions d'amélioration Ethereum (EIP)**. Les EIP sont des normes qui spécifient de nouvelles fonctionnalités ou processus potentiels pour Ethereum. N'importe qui au sein de la communauté Ethereum peut créer une EIP. Par exemple, aucun des auteurs de l'EIP-721, l'EIP qui a standardisé les NFT, n'a travaillé directement sur le développement de protocoles Ethereum.
+Un processus important utilisé dans la gouvernance Ethereum est la proposition de **Propositions d'amélioration Ethereum (EIP)**. Les EIP sont des normes qui spécifient de nouvelles fonctionnalités ou processus potentiels pour Ethereum. N'importe qui au sein de la communauté Ethereum peut créer une EIP. Si vous souhaitez écrire une EIP ou participer à une revue par les pairs, et/ou la gouvernance, voir :
 
 <ButtonLink to="/eips/">
   Plus d'infos les EIP

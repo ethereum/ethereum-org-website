@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "ವೈಶಿಷ್ಟ್ಯ ಫಿಲ್ಟರ್‌ಗಳು",
   "page-find-wallet-footnote-1": "ಈ ಪುಟದಲ್ಲಿ ಪಟ್ಟಿಯಾದ ವಾಲೆಟ್‌ಗಳು ಅಧಿಕೃತ ಅಭಿಪ್ರಾಯಗಳಲ್ಲ ಮತ್ತು ಮಾಹಿತಿಯ ಉದ್ದೇಶಕ್ಕೆ ಮಾತ್ರ ಒದಗಿಸಲಾಗಿದೆ.",
   "page-find-wallet-footnote-2": "ಅವರ ವಿವರಣೆಗಳು ವಾಲೆಟ್ ಯೋಜನೆಗಳೇ ಒದಗಿಸಿದವುಗಳಾಗಿವೆ.",
-  "page-find-wallet-footnote-3": "ನಾವು ಈ ಪುಟಕ್ಕೆ ಉತ್ತಮಗಳನ್ನು ನಮ್ಮ <a href=\"/contributing/adding-products/\">ಪಟ್ಟಿ ನೀತಿಯಲ್ಲಿನ ಮಾನದಂಡಗಳ</a> ಆಧಾರದ ಮೇಲೆ ಸೇರಿಸುತ್ತೇವೆ. ನೀವು ನಮಗೆ ಒಂದು ವಾಲೆಟ್ ಸೇರಿಸಬೇಕೆಂದಿದ್ದರೆ, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">ಗಿಟ್‌ಹಬ್‌ನಲ್ಲಿ ಸಮಸ್ಯೆಯನ್ನು ಉತ್ತೇರಿಸಿ</a>.",
+  "page-find-wallet-footnote-3": "ನಾವು ಈ ಪುಟಕ್ಕೆ ಉತ್ತಮಗಳನ್ನು ನಮ್ಮ <a href=\"/contributing/adding-wallets/\">ಪಟ್ಟಿ ನೀತಿಯಲ್ಲಿನ ಮಾನದಂಡಗಳ</a> ಆಧಾರದ ಮೇಲೆ ಸೇರಿಸುತ್ತೇವೆ. ನೀವು ನಮಗೆ ಒಂದು ವಾಲೆಟ್ ಸೇರಿಸಬೇಕೆಂದಿದ್ದರೆ, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">ಗಿಟ್‌ಹಬ್‌ನಲ್ಲಿ ಸಮಸ್ಯೆಯನ್ನು ಉತ್ತೇರಿಸಿ</a>.",
   "page-find-wallet-mobile": "ಮೊಬೈಲ್",
   "page-find-wallet-mobile-desc": "ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳೊಂದಿಗೆ ವಾಲೆಟ್‌ಗಳು",
   "page-find-wallet-desktop": "ಡೆಸ್ಕ್‌ಟಾಪ್",
