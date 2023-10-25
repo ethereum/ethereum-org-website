@@ -10,7 +10,6 @@ import {
   Heading,
   HeadingProps,
   Icon,
-  Img,
   SimpleGridProps,
   Stack,
   useToken,
@@ -25,14 +24,13 @@ import CalloutBanner from "../components/CalloutBanner"
 import CodeModal from "../components/CodeModal"
 import Codeblock from "../components/Codeblock"
 import CommunityEvents from "../components/CommunityEvents"
-import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import Translation from "../components/Translation"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
-import Text from "../components/OldText"
 import GatsbyImage from "../components/GatsbyImage"
 import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
+import { HomeHero } from "../components/Hero"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
@@ -153,30 +151,6 @@ const ButtonLinkRow = (props: ChildOnlyProp) => (
   />
 )
 
-const PageHeader = () => (
-  <Flex
-    as="header"
-    flexDirection="column"
-    alignItems="center"
-    textAlign="center"
-    mt={4}
-    mb={8}
-    px={8}
-  >
-    <Heading as="h1" fontSize={{ base: "2rem", sm: "2.5rem" }}>
-      <Translation id="page-index-title" />
-    </Heading>
-    <Text color="text200" maxW="55ch" fontSize="xl" mt={4}>
-      <Translation id="page-index-description" />
-    </Text>
-    <ButtonLinkRow>
-      <ButtonLink to="/learn/">
-        <Translation id="page-index-title-button" />
-      </ButtonLink>
-    </ButtonLinkRow>
-  </Flex>
-)
-
 const HomePage = ({
   data,
   pageContext: { language = "en" },
@@ -288,19 +262,9 @@ const HomePage = ({
         title={t("page-index-meta-title")}
         description={t("page-index-meta-description")}
       />
-      <GatsbyImage
-        image={getImage(data.hero)!}
-        alt={t("page-index-hero-image-alt")}
-        loading="eager"
-        width="full"
-        minH="380px"
-        maxH="440px"
-        backgroundSize="cover"
-        background="no-repeat 50px"
-        mb={8}
-      />
-      <Morpher />
-      <PageHeader />
+      <Box w="full">
+        <HomeHero heroImgSrc={getImage(data.hero)!} />
+      </Box>
       {/* Getting Started Section */}
       <GrayContainer>
         <ContentBox>
