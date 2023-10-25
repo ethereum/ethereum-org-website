@@ -11,7 +11,7 @@ import {
   RawQuiz,
 } from "../../../types"
 import questionBank from "../../../data/quizzes/questionBank"
-import { PASSING_QUIZ_SCORE } from "../../../constants"
+import { PASSING_QUIZ_SCORE, USER_STATS_KEY } from "../../../constants"
 import { trackCustomEvent } from "../../../utils/matomo"
 import { INITIAL_USER_STATS } from "../../../pages/quizzes"
 
@@ -38,15 +38,15 @@ export const useQuizWidget = ({
     useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  const { setUserStats, userStats } = useContext(QuizzesHubContext)
+  const { setUserStats } = useContext(QuizzesHubContext)
 
   useEffect(() => {
     // If quiz is standalone (out of Quiz Hub page),
     // stats required to be initialized on localStorage first
-    const item = userStats
+    const item = window.localStorage.getItem(USER_STATS_KEY)
 
     if (item === null) {
-      setUserStats(INITIAL_USER_STATS)
+      localStorage.setItem(USER_STATS_KEY, JSON.stringify(INITIAL_USER_STATS))
     }
 
     setNextQuiz(getNextQuiz(quizKey))
