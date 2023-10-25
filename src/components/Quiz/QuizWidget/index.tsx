@@ -61,8 +61,6 @@ const QuizWidget: React.FC<IProps> = (props) => {
   // Render QuizWidget component
   return (
     <VStack spacing="12" width="full" maxW="600px">
-      {/* Hide heading if quiz is not in Learning Quizzes Hub page */}
-      {isStandaloneQuiz && <StandaloneQuizHeading />}
       {/* Inner Container */}
       <Stack
         w="full"
@@ -151,7 +149,8 @@ export default QuizWidget
  * For use of the widget on single pages (not the quizzes page)
  */
 export const StandaloneQuizWidget = (props: IProps) => (
-  <Center my="16">
-    <QuizWidget {...props} isStandaloneQuiz />
-  </Center>
+  <VStack spacing="12" my="16">
+    <StandaloneQuizHeading />
+    <QuizWidget {...props} />
+  </VStack>
 )
