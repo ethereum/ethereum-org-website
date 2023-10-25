@@ -1,4 +1,5 @@
 import { Box, Flex, type HeadingProps, Icon, chakra } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
@@ -67,8 +68,7 @@ export const StaticLayout: React.FC<IProps> = ({
   tocItems,
   lastUpdatedDate,
 }) => {
-  // const { language } = useI18next()
-  const language = "en"
+  const { locale } = useRouter()
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   return (
@@ -104,12 +104,12 @@ export const StaticLayout: React.FC<IProps> = ({
           <Breadcrumbs slug={slug} mb="8" />
           <Text
             color="text200"
-            dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
+            dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
           >
             {/* TODO: add Translation when i18n is set up  */}
             {/* <Translation id="page-last-updated" />:{" "} */}
             Page last updated:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
+            {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </Text>
           <TableOfContents
             position="relative"
