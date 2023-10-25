@@ -431,7 +431,7 @@
       "pctMajorityExecutionClient": 50,
       "pctMajorityConsensusClient": 30,
       "isSelfCustody": true,
-      "platforms": ["Browser", "Linux", "macOS", "Windows", "iOS", "Android"],
+      "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
         "linkedin": "https://www.linkedin.com/company/p2p-org/",
