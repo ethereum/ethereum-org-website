@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm"
 import { join } from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getLastModifiedDate, getLastDeployDate } from "@/lib/utils/gh"
+import { getLastModifiedDate, getLastTagDate } from "@/lib/utils/gh"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import mdComponents from "@/components/MdComponents"
@@ -117,7 +117,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = await getLastModifiedDate(originalSlug, locale!)
-  const lastDeployDate = await getLastDeployDate()
+  const lastDeployDate = getLastTagDate()
 
   // Get corresponding layout
   let layout = frontmatter.template
