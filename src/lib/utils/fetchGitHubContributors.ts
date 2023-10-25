@@ -20,6 +20,7 @@ export const fetchGitHubContributors = async (
 
   try {
     const response = await fetch(url, gitHubAuthHeaders)
+    if (!response.ok) throw new Error(response.statusText)
     const commits = await response.json()
     const authorSet = new Set<string>()
     commits
