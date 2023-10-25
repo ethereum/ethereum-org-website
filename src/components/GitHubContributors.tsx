@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import type { FlexProps } from "@chakra-ui/react"
 import FileContributors from "@/components/FileContributors"
-import { fetchGitHubAuthors } from "@/lib/utils/fetchGitHubContributors"
+import { fetchGitHubContributors } from "@/lib/utils/fetchGitHubContributors"
 import { FileContributorsState } from "@/lib/types"
 
 export interface IProps extends FlexProps {
@@ -18,7 +18,7 @@ const GitHubContributors: React.FC<IProps> = ({
   const [{ loading, authors, error }, setState] = useState<FileContributorsState>({ loading: true })
   useEffect(() => {
     ;(async () => {
-      setState(await fetchGitHubAuthors(relativePath))
+      setState(await fetchGitHubContributors(relativePath))
     })()
   }, [])
 

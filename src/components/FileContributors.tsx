@@ -26,6 +26,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import type { Lang } from "@/lib/types"
 import type { Author } from "@/lib/interfaces"
+import { useRouter } from "next/router"
 
 // TODO: skeletons are not part of the DS, so these should be replaced once we
 // implement the new designs. Thats the reason we haven't define these styles in
@@ -88,9 +89,7 @@ const FileContributors: React.FC<IProps> = ({
   ...props
 }) => {
   const [isModalOpen, setModalOpen] = useState(false)
-  // TODO: Revert
-  // const { language } = useI18next()
-  const language = "en"
+  const { locale } = useRouter()
 
   if (error) return null
   const lastContributor: Author = contributors.length ? contributors[0] : {
@@ -157,7 +156,7 @@ const FileContributors: React.FC<IProps> = ({
                 </InlineLink>
               )}
               {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-              {getLocaleTimestamp(language as Lang, lastEdit)}
+              {getLocaleTimestamp(locale as Lang, lastEdit)}
             </Text>
           </Skeleton>
         </Flex>

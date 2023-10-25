@@ -1,19 +1,25 @@
 import { join } from "path"
-import { GITHUB_AUTH_HEADERS, GITHUB_COMMITS_URL } from "@/lib/constants"
+import { GITHUB_COMMITS_URL, OLD_CONTENT_DIR } from "@/lib/constants"
 import type { Author } from "@/lib/interfaces"
 import type { FileContributorsState } from "@/lib/types"
 
-export const fetchGitHubAuthors = async (
+export const gitHubAuthHeaders = {
+  headers: new Headers({
+    // About personal access tokens https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#about-personal-access-tokens
+    Authorization: "Token " + process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY,
+  }),
+}
+
+export const fetchGitHubContributors = async (
   relativePath: string
 ): Promise<FileContributorsState> => {
   const url = new URL(GITHUB_COMMITS_URL)
-  const CONTENT_DIR = "/src/content/" // TODO: Overriding with Gatsby repo—Remove and import from constants.ts for production
-  const filePath = join(CONTENT_DIR, relativePath, "index.md")
+  // TODO: OLD_CONTENT_DIR -> CONTENT_DIR for production
+  const filePath = join(OLD_CONTENT_DIR, relativePath, "index.md")
   url.searchParams.set("path", filePath)
 
   try {
-    const uniqueAuthors: Array<Author> = []
-    const response = await fetch(url, GITHUB_AUTH_HEADERS)
+    const response = await fetch(url, gitHubAuthHeaders)
     const commits = await response.json()
     const authorSet = new Set<string>()
     commits
@@ -31,10 +37,10 @@ export const fetchGitHubAuthors = async (
         // Unique authors only
         authorSet.add(JSON.stringify(entry))
       })
-    Array.from(authorSet).forEach((entry) =>
-      uniqueAuthors.push(JSON.parse(entry))
+    const authors = Array.from(authorSet).map(
+      JSON.parse as (entry: string) => Author
     )
-    return { loading: false, authors: uniqueAuthors }
+    return { loading: false, authors }
   } catch (error) {
     console.error(filePath, error)
     return { loading: false, error }

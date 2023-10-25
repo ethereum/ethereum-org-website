@@ -1,5 +1,6 @@
 import i18nConfig from "../../i18n.config.json"
 
+export const OLD_CONTENT_DIR = "src/content"
 export const CONTENT_DIR = "public/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
@@ -10,8 +11,8 @@ export const DEFAULT_LOCALE = "en"
 export const LOCALES_CODES = i18nConfig.map((lang) => lang.code).sort()
 
 // Site urls
-export const SITE_URL = "https://ethereum.org" as const
-export const DISCORD_PATH = "/discord/" as const
+export const SITE_URL = "https://ethereum.org"
+export const DISCORD_PATH = "/discord/"
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800
@@ -20,12 +21,6 @@ export const GITHUB_BASE_API =
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_LAST_DEPLOY_URL =
   GITHUB_BASE_API + "/pulls?base=master&state=closed"
-export const GITHUB_AUTH_HEADERS = {
-  headers: new Headers({
-    // About personal access tokens https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#about-personal-access-tokens
-    Authorization: "Token " + process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY,
-  }),
-}
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"

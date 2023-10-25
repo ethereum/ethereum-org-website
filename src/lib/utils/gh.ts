@@ -5,10 +5,10 @@ import { execSync } from "child_process"
 import {
   CONTENT_DIR,
   DEFAULT_LOCALE,
-  GITHUB_AUTH_HEADERS,
   GITHUB_LAST_DEPLOY_URL,
   TRANSLATIONS_DIR,
 } from "@/lib/constants"
+import { gitHubAuthHeaders } from "@/lib/utils/fetchGitHubContributors"
 
 // This util filters the git log to get the file last commit info, and then the commit date (last update)
 export const getLastModifiedDate = (slug: string, locale: string) => {
@@ -41,7 +41,7 @@ export const getLastModifiedDate = (slug: string, locale: string) => {
 export const getLastDeployDate = async () => {
   try {
     // Fetch data from closed PRs made to the master branch
-    const response = await fetch(GITHUB_LAST_DEPLOY_URL, GITHUB_AUTH_HEADERS)
+    const response = await fetch(GITHUB_LAST_DEPLOY_URL, gitHubAuthHeaders)
     const pullRequests = await response.json()
 
     // Get the `merged_at` date (deployment date) from last deploy PR made to the master branch
