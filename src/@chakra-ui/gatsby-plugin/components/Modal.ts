@@ -28,6 +28,7 @@ export const Modal = defineMultiStyleConfig({
         /* maxW: "464px", */
         my: "64px",
         mx: "8px",
+        gap: 4,
         padding: "32px",
         maxHeight: "70%",
         borderRadius: "4px",
@@ -40,7 +41,6 @@ export const Modal = defineMultiStyleConfig({
         /* borderTop: "1px solid",
         borderBottom: "1px solid", */
         padding: 0,
-        textTransform: "uppercase",
         fontWeight: "bold",
         fontSize: "2xl",
         fontFamily: "Inter",
@@ -53,10 +53,6 @@ export const Modal = defineMultiStyleConfig({
         color: "rgb(178, 178, 178)",
         fontSize: "sm",
         marginTop: 5,
-
-        top: 4,
-        right: 4,
-        bottom: 4,
       },
       body: {
         padding: 0,
@@ -66,6 +62,9 @@ export const Modal = defineMultiStyleConfig({
       },
       footer: {
         gap: "8px",
+        px: 0,
+        pt: 8,
+        pb: 0,
       },
     })
   ),

@@ -9,13 +9,13 @@ import {
   ModalBody,
   ModalFooter,
 } from "@chakra-ui/react"
-import Button from "../Buttons/Button"
 
 export interface IPropsOverlay {
   isActive: boolean
 }
 
 export interface IProps {
+  children?: React.ReactNode
   title?: string
   description?: string
   ButtonLabel?: string
@@ -25,6 +25,7 @@ export interface IProps {
 }
 
 const Modal: React.FC<IProps> = ({
+  children,
   title,
   description,
   actionButtonLabel,
@@ -45,11 +46,7 @@ const Modal: React.FC<IProps> = ({
       <ModalContent>
         <ModalHeader>{title}</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>{description}</ModalBody>
-        <ModalFooter>
-          <Button variant="primary" children={ButtonLabel} />
-          <Button children={actionButtonLabel} />
-        </ModalFooter>
+        <ModalBody>{children}</ModalBody>
       </ModalContent>
     </ChakraModal>
   )
