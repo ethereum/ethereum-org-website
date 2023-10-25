@@ -74,6 +74,16 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 - [Documentation](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
+
+**Web3 Sveltekit Bundle -** **_Full 3-stack -Frontend, traditional web server backend using a database, and blockchain backend- using some of the most exciting developer tools_**
+- pnpm mono repo for managing sub projects
+- foundry for blockchain development
+- Sveltekit for universal/isomorphic web development
+- Easy installation and integration using one project
+- Develop locally using Solidity, TypeScript and Svelte
+- Test locally using foundry/anvil and vite
+- [Web3 Sveltekit Bundle](https://github.com/bumi001/web3-sveltekit-bundle)
+
 ## Further reading {#further-reading}
 
 - [Explore dapps](/dapps)
