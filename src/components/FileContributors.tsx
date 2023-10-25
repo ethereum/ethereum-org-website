@@ -27,11 +27,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import type { Lang } from "@/lib/types"
 import type { Author } from "@/lib/interfaces"
 
-// export interface Commit {
-//   author: Author
-//   committedDate: string
-// }
-
 // TODO: skeletons are not part of the DS, so these should be replaced once we
 // implement the new designs. Thats the reason we haven't define these styles in
 // the theme config file
