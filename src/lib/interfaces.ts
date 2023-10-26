@@ -53,6 +53,14 @@ export interface ToCItem {
   items?: Array<ToCItem>
 }
 
+export interface DeveloperDocsLink {
+  id: TranslationKey
+  to: string
+  path: string
+  description: TranslationKey
+  items: Array<DeveloperDocsLink>
+}
+
 /**
  * Layout interface
  */

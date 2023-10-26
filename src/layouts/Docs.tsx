@@ -1,18 +1,49 @@
 import { ChildOnlyProp, Lang } from "@/lib/types"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-import { Box, Flex, FlexProps, HeadingProps, Text, useToken } from "@chakra-ui/react"
+import {
+  Box,
+  Divider as ChakraDivider,
+  Flex,
+  FlexProps,
+  HeadingProps,
+  ListItem as ChakraListItem,
+  ListItemProps,
+  ListProps,
+  OrderedList as ChakraOrderedList,
+  Text, UnorderedList as ChakraUnorderedList, useToken, Badge } from "@chakra-ui/react"
 
 import BannerNotification from "@/components/BannerNotification"
+import ButtonLink from "@/components/Buttons/ButtonLink"
+import CallToContribute from "@/components/CallToContribute"
+import Card from "@/components/Card"
+import Codeblock from "@/components/Codeblock"
 // TODO: Implement file contributors
 // import CrowdinContributors from "@/components/FileContributorsCrowdin"
+import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
+import DocsNav from "@/components/DocsNav"
+import Emoji from "@/components/Emoji"
+import FeedbackCard from "@/components/FeedbackCard"
+// TODO: Implement file contributors
 // import GitHubContributors from "@/components/FileContributorsGitHub"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
+import InfoBanner from "@/components/InfoBanner"
+import Link from "@/components/Link"
+import MdLink from "@/components/MdLink"
 // TODO: IMPLEMENT PAGEMETADATA
 // import PageMetadata from "@/components/PageMetadata"
+import { mdxTableComponents } from "@/components/Table"
+import RollupProductDevDoc from "@/components/RollupProductDevDoc"
+import SectionNav from "@/components/SectionNav"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import YouTube from "@/components/YouTube"
 
 import {
   Heading1 as MdHeading1,
+  Heading2 as MdHeading2,
+  Heading3 as MdHeading3,
+  Heading4 as MdHeading4,
+  Paragraph,
 } from "@/components/MdComponents"
 import { useRouter } from "next/router"
 
@@ -41,15 +72,71 @@ const ContentContainer = (props: ChildOnlyProp) => (
   />
 )
 
+const baseHeadingStyle: HeadingProps = {
+  fontFamily: "mono",
+  textTransform: "uppercase",
+  fontWeight: "bold",
+}
+
 const H1 = (props: HeadingProps) => (
   <MdHeading1
-    fontFamily="mono"
-    textTransform="uppercase"
-    fontWeight="bold"
+    {...baseHeadingStyle}
     fontSize={{ base: "2rem", md: "2.5rem" }}
     mt={{ base: 0, md: 8 }}
     mb={{ base: 4, md: 8 }}
     {...props}
+  />
+)
+
+const H2 = (props: HeadingProps) => (
+  <MdHeading2
+    {...baseHeadingStyle}
+    fontSize="2xl"
+    lineHeight={{ base: 1.2, md: 1.4 }}
+    pb={2}
+    borderBottom="1px"
+    borderColor="border"
+    {...props}
+  />
+)
+
+const baseSubHeadingStyles: HeadingProps = {
+  lineHeight: 1.4,
+  fontWeight: "semibold",
+}
+
+const H3 = (props: HeadingProps) => (
+  <MdHeading3
+    {...baseSubHeadingStyles}
+    mt={12}
+    {...props}
+  />
+)
+
+const H4 = (props: HeadingProps) => (
+  <MdHeading4
+    {...baseSubHeadingStyles}
+    {...props}
+  />
+)
+
+const UnorderedList = (props: ListProps) => (
+  <ChakraUnorderedList ms="1.45rem" {...props} />
+)
+const OrderedList = (props: ListProps) => (
+  <ChakraOrderedList ms="1.45rem" {...props} />
+)
+
+const ListItem = (props: ListItemProps) => (
+  <ChakraListItem color="text300" {...props} />
+)
+
+const Divider = () => (
+  <ChakraDivider
+    my={16}
+    w="10%"
+    borderBottomWidth={1}
+    borderColor="homeDivider"
   />
 )
 
@@ -84,8 +171,45 @@ const Content = (props: ChildOnlyProp) => {
   )
 }
 
-export const docsComponents = {
+const BackToTop = (props: ChildOnlyProp) => (
+  <Flex
+    display={{ lg: "none" }}
+    mt={12}
+    pt={8}
+    borderTop="1px"
+    borderColor="border"
+    {...props}
+  >
+    <Link to="#top">
+      <Translation id="back-to-top" /> ↑
+    </Link>
+  </Flex>
+)
 
+export const docsComponents = {
+  a: MdLink,
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  p: Paragraph,
+  ul: UnorderedList,
+  ol: OrderedList,
+  li: ListItem,
+  pre: Codeblock,
+  ...mdxTableComponents,
+  Badge,
+  ButtonLink,
+  CallToContribute,
+  Card,
+  DeveloperDocsLinks,
+  Divider,
+  Emoji,
+  GlossaryTooltip,
+  InfoBanner,
+  RollupProductDevDoc,
+  SectionNav,
+  YouTube,
 }
 
 export const DocsLayout = ({ children, frontmatter, slug, tocItems }) => {
@@ -134,6 +258,10 @@ export const DocsLayout = ({ children, frontmatter, slug, tocItems }) => {
             hideEditButton={!!frontmatter.hideEditButton}
           />
           {children}
+          {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
+          <BackToTop />
+          <FeedbackCard isArticle />
+          <DocsNav relativePath={relativePath} />
         </Content>
         {tocItems && (
           <TableOfContents

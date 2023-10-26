@@ -8,15 +8,17 @@ import {
   Spacer,
 } from "@chakra-ui/react"
 
-import { BaseLink } from "./Link"
-import Emoji from "./Emoji"
-import Translation from "./Translation"
-import Text from "./OldText"
+import { BaseLink } from "@/components/Link"
+import Emoji from "@/components/Emoji"
+import Translation from "@/components/Translation"
+import Text from "@/components/OldText"
 
-import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
-import { TranslationKey } from "../utils/translations"
-import { trackCustomEvent } from "../utils/matomo"
+import docLinks from "@/data/developer-docs-links.yaml"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import type { DeveloperDocsLink } from "@/lib/interfaces"
+import { TranslationKey } from "@/lib/types"
+
 
 const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
   <Flex
@@ -24,7 +26,7 @@ const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
     justify="space-between"
     maxW="166px"
     h="100%"
-    wordWrap="break-word"
+    wordwrap="break-word"
     p={4}
     lineHeight={4}
     {...props}
