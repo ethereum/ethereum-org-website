@@ -430,7 +430,7 @@
       "isPermissionless": true,
       "pctMajorityExecutionClient": 50,
       "pctMajorityConsensusClient": 30,
-      "isSelfCustody": true,
+      "isSelfCustody": false,
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
