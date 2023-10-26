@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "តម្រង​លក្ខ​ណៈពិសេស",
   "page-find-wallet-footnote-1": "កាបូប​ដែលបានរាយក្នុង​ទំព័រនេះមិន​មែន​ជាការ​​យល់​​ព្រម​ជា​ផ្លូវ​ការ​ទេ ហើយ​គ្រាន់តែ​ផ្ត​ល់ជូន​ជាព័ត៌​មាន​តែប៉ុណ្ណោះ។",
   "page-find-wallet-footnote-2": "ការ​ពិ​ព​ណ៌​នា​ទាំងនេះត្រូវ​បាន​ផ្ត​ល់​​ជូន​ដោយ​គម្រោង​កាបូប​ខ្លួន​ឯង។",
-  "page-find-wallet-footnote-3": "យើងបន្ថែមផលិតផលទៅទំព័រនេះដោយផ្អែកលើលក្ខណៈវិនិច្ឆ័យនៅក្នុង <a href=\"/contributing/adding-products/\">គោលការណ៍ចុះបញ្ជីរបស់យើង</a>។ ប្រសិនបើអ្នកចង់ឱ្យយើងបន្ថែមកាបូបមួយ <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">សូមលើកបញ្ហាមួយនៅក្នុង GitHub</a>.",
+  "page-find-wallet-footnote-3": "យើងបន្ថែមផលិតផលទៅទំព័រនេះដោយផ្អែកលើលក្ខណៈវិនិច្ឆ័យនៅក្នុង <a href=\"/contributing/adding-wallets/\">គោលការណ៍ចុះបញ្ជីរបស់យើង</a>។ ប្រសិនបើអ្នកចង់ឱ្យយើងបន្ថែមកាបូបមួយ <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">សូមលើកបញ្ហាមួយនៅក្នុង GitHub</a>.",
   "page-find-wallet-mobile": "ទូរស័ព្ទដៃ",
   "page-find-wallet-mobile-desc": "កាបូប​ជាមួយ​កម្ម​វិធីទូរសព្ទ",
   "page-find-wallet-desktop": "កំ​ព្យូ​ទ័​រ",

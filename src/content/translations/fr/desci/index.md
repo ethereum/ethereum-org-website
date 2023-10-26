@@ -110,6 +110,7 @@ Explorer les projets et rejoindre la communauté DeSci.
 - [Active Inference Lab](https://www.activeinference.org/)
 - [CureDAO : plateforme de santé de précision détenue par une communauté](https://docs.curedao.org/)
 - [IdeaMarkets : pour une crédibilité scientifique décentralisée renforcée](https://ideamarket.io/)
+- [DeSci Labs](https://www.desci.com/)
 
 Nous accueillons volontiers les suggestions de nouveaux projets à répertorier - veuillez consulter notre [politique d'inscription](/contributing/adding-desci-projects/) pour commencer !
 
