@@ -2,6 +2,7 @@ import { Box, Flex, type HeadingProps, Icon, chakra } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
+import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -54,6 +55,7 @@ export const staticComponents = {
   h3: Heading3,
   h4: Heading4,
   li: ListItem,
+  Callout,
   Contributors,
   EnergyConsumptionChart,
   GlossaryDefinition,
