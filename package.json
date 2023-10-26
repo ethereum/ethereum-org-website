@@ -7,13 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
-    "crowdin-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin-import.ts",
-    "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
-    "generate-heading-ids": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/generateHeadingIds.ts",
-    "unused-translations": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/unusedTranslations.ts",
-    "reorg-intl": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/reorgIntlFiles.ts",
-    "optimize-images": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/optimizeImages.ts",
     "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts"
   },
   "dependencies": {
