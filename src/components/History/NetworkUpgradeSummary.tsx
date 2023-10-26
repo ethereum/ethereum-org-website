@@ -12,6 +12,9 @@ import InlineLink from "../Link"
 // Data
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 
+// Constants
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 // Utils
 // TODO
 // import { Lang } from "../../utils/languages"
@@ -24,11 +27,8 @@ interface IProps {
 
 const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   const [formattedUTC, setFormattedUTC] = useState("")
-
   const { locale } = useRouter()
-
-  // const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
-  const localeForStatsBoxNumbers = "en"
+  const localeForStatsBoxNumbers = DEFAULT_LOCALE
 
   const {
     dateTimeAsString,
