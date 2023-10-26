@@ -89,7 +89,7 @@ export type Lang =
 
 export type Direction = "rtl" | "ltr" | "auto"
 
-export type Language = {
+export type I18nLocale = {
   code: Lang
   crowdinCode: string
   name: string
