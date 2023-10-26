@@ -4,7 +4,7 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/dist/shared/lib/constants")
 const i18nConfig = require("./i18n.config.json")
 
 const BUILD_LANGS = (process.env.BUILD_LANGS || "").replaceAll(/\s/g, "").split(",").filter(item => item.length > 1)
-
+const LIMIT_CPU = (process.env.LIMIT_CPU || "").toLowerCase() === "true"
 module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
@@ -19,7 +19,7 @@ module.exports = (phase, { defaultConfig }) => {
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
     nextConfig = {
       ...nextConfig,
-      experimental: {
+      experimental: LIMIT_CPU ? {
         // This option could be enabled in the future when flagged as stable, to speed up builds
         // (see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#using-the-rust-based-mdx-compiler-experimental)
         //   mdxRs: true,
@@ -28,7 +28,7 @@ module.exports = (phase, { defaultConfig }) => {
         // to consume less memory
         workerThreads: false,
         cpus: 2,
-      },
+      } : {},
     }
   }
 
