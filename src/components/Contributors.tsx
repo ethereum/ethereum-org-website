@@ -35,9 +35,9 @@ const Contributors = () => {
       </p>
 
       <Flex flexWrap="wrap">
-        {contributorsList.map((contributor, idx) => (
+        {contributorsList.map((contributor) => (
           <LinkBox
-            key={contributor.name + idx}
+            key={contributor.login}
             as="div"
             maxWidth="132px"
             margin="2"
