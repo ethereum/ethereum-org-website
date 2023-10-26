@@ -7,7 +7,7 @@ import path from "path"
 
 import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImg from "@/lib/rehype/rehypeImg"
-import { getLastTagDate, getLastModifiedDate } from "@/lib/utils/gh"
+import { getLastDeployDate, getLastModifiedDate } from "@/lib/utils/gh"
 
 // Layouts
 import { RootLayout, TutorialLayout } from "@/layouts"
@@ -54,7 +54,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   })
 
   const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
-  const lastDeployDate = getLastTagDate()
+  const lastDeployDate = await getLastDeployDate()
 
   return {
     props: {
