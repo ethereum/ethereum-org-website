@@ -68,9 +68,9 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/contributing/quizzes",
     "/contributing/style-guide",
     "/contributing/style-guide/content-standardization",
-    // "/contributing/translation-program", // TODO: Fix image reference bug
+    "/contributing/translation-program",
     "/contributing/translation-program/content-buckets",
-    // "/contributing/translation-program/faq", // TODO: Fix image reference bug
+    "/contributing/translation-program/faq",
     "/contributing/translation-program/how-to-translate",
     "/contributing/translation-program/mission-and-vision",
     "/contributing/translation-program/playbook",
