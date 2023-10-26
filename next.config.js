@@ -3,6 +3,8 @@
 const { PHASE_DEVELOPMENT_SERVER } = require("next/dist/shared/lib/constants")
 const i18nConfig = require("./i18n.config.json")
 
+const BUILD_LANGS = (process.env.BUILD_LANGS || "").replaceAll(/\s/g, "").split(",").filter(item => item.length > 1)
+
 module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
@@ -10,7 +12,7 @@ module.exports = (phase, { defaultConfig }) => {
     i18n: {
       defaultLocale: "en",
       // supported locales defined in `i18n.config.json`
-      locales: i18nConfig.map((lang) => lang.code).sort(),
+      locales: BUILD_LANGS.length > 0 ? BUILD_LANGS.sort() : i18nConfig.map((lang) => lang.code).sort(),
     },
   }
 

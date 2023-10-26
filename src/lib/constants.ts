@@ -7,7 +7,13 @@ export const TRANSLATED_IMAGES_DIR = "/content/translations"
 // i18n
 export const DEFAULT_LOCALE = "en"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
-export const LOCALES_CODES = i18nConfig.map((lang) => lang.code).sort()
+const BUILD_LANGS = (process.env.BUILD_LANGS || "")
+  .split(",")
+  .filter((item) => item.length > 1)
+export const LOCALES_CODES =
+  BUILD_LANGS.length > 0
+    ? BUILD_LANGS.sort()
+    : i18nConfig.map((lang) => lang.code).sort()
 
 // Site urls
 export const SITE_URL = "https://ethereum.org" as const
