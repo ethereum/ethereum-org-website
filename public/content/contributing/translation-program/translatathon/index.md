@@ -2,7 +2,7 @@
 title: Ethereum.org Translatathon
 description: Join the first ethereum.org Translatathon to contribute to ethereum.org, learn about Ethereum, and compete for prizes.
 lang: en
-template: event
+# template: event
 sidebarDepth: 2
 image: /assets/translatathon-hero.png
 buttons:
