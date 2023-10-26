@@ -99,7 +99,7 @@ const parseHeadingToItem = (heading: string): ToCItem => {
  * @param h Heading level being parsed (2 for h2, 3 for h3, etc.), starting with 2
  * @returns Array of `Item` objects parsed from the headings
  */
-const addHeadingsAsItems = (headings: Array<string>, h = 2): Array<ToCItem> => {
+const addHeadingsAsItems = (headings: Array<string>, h = 3): Array<ToCItem> => {
   const items: Array<ToCItem> = []
   const depths: number[] = headings.map(
     (heading) => heading.match(/^#+/)?.[0].length ?? 0
