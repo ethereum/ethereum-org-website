@@ -8,25 +8,27 @@ lang: id
 
 "Kontrak pintar" secara sederhana adalah sebuah program yang beroperasi pada blockchain Ethereum. Ini adalah koleksi kode (fungsinya) dan data (statenya) yang berada pada alamat tertentu dalam blockchain Ethereum.
 
-Kontrak pintar adalah suatu jenis [akun Ethereum](/developers/docs/accounts/). Ini berarti kontrak pintar memiliki saldo dan bisa mengirim transaksi melalui jaringan. Namun kontrak pintar tidak dapat dikendalikan oleh pengguna, tetapi diterapkan ke jaringan dan berjalan seperti yang telah diprogramkan. Akun pengguna bisa berinteraksi dengan sebuah kontrak pintar dengan mengirimkan transaksi yang menjalankan fungsi yang telah ditentukan dalam kontrak pintar. Kontrak pintar bisa menetapkan aturan, seperti kontrak umumnya, dan secara otomatis melaksanakannya lewat kode. Kontrak pintar tidak dapat dihapus secara default, dan interaksi dengannya tidak dapat diubah.
+Kontrak pintar adalah suatu jenis [akun Ethereum](/developers/docs/accounts/). Artinya, kontrak ini ada saldo dan dapat menjadi target transaksi. Namun kontrak pintar tidak dapat dikendalikan oleh pengguna, tetapi diterapkan ke jaringan dan berjalan seperti yang telah diprogramkan. Akun pengguna bisa berinteraksi dengan sebuah kontrak pintar dengan mengirimkan transaksi yang menjalankan fungsi yang telah ditentukan dalam kontrak pintar. Kontrak pintar bisa menetapkan aturan, seperti kontrak umumnya, dan secara otomatis melaksanakannya lewat kode. Kontrak pintar tidak dapat dihapus secara default, dan interaksi dengannya tidak dapat diubah.
 
 ## Prasyarat {#prerequisites}
+
+Jika Anda baru saja memulai atau mencari informasi pendahuluan yang tidak terlalu teknis, kami menganjurkan untuk membaca [pendahuluan kontrak pintar](/smart-contracts/) dari kami.
 
 Pastikan Anda telah membaca tentang [akun](/developers/docs/accounts/), [transaksi](/developers/docs/transactions/), dan [mesin virtual Ethereum](/developers/docs/evm/) sebelum terjun ke dunia kontrak pintar.
 
 ## Mesin penjual otomatis digital {#a-digital-vending-machine}
 
-Mungkin perumpamaan terbaik untuk kontrak pintar adalah sebuah mesin penjual otomatis, seperti yang dideskripsikan oleh [Nick Szabo](https://unenumerated.blogspot.com/). Dengan input yang benar, maka hasil keluarannya terjamin.
+Perumpamaan terbaik untuk menggambarkan kontrak pintar mungkin dengan mesin penjual otomatis, sebagaimana diuraikan oleh [Nick Szabo](https://unenumerated.blogspot.com/). Input yang tepat akan menjamin output yang pasti.
 
-Untuk mendapatkan sebuah kudapan ringan dari mesin penjual otomatis:
+Untuk mendapatkan kudapan dari mesin penjual otomatis:
 
 ```
 money + snack selection = snack dispensed
 ```
 
-Logika ini diprogramkan ke dalam mesin penjual otomatis.
+Logika ini diprogram ke dalam mesin penjual otomatis.
 
-Kontrak pintar, seperti mesin penjual otomatis, mempunyai logika yang diprogram ke dalamnya. Berikut adalah contoh sederhana bagaimana mesin penjual otomatis ini mungkin terlihat seperti kontrak pintar:
+Kontrak pintar, seperti mesin penjual otomatis, mempunyai logika yang terprogram ke dalamnya. Berikut contoh sederhana tentang seperti apa tampilan mesin penjual otomatis jika diumpamakan sebagai kontrak pintar yang ditulis dalam Solidity:
 
 ```solidity
 pragma solidity 0.8.7;
@@ -61,34 +63,38 @@ contract VendingMachine {
 }
 ```
 
-Seperti sebuah mesin penjual otomatis yang menghapus kebutuhan akan karyawan vendor, kontrak pintar juga bisa menggantikan perantara dalam banyak industri.
+Seperti cara mesin penjual otomatis menghilangkan kebutuhan akan karyawan penjual, kontrak pintar juga dapat menggantikan para perantara di banyak industri.
 
 ## Tanpa izin {#permissionless}
 
-Siapa pun dapat menulis kontrak pintar dan menyebarkannya ke jaringan. Anda hanya perlu belajar cara mengodekan dalam [bahasa kontrak pintar](/developers/docs/smart-contracts/languages/) dan memiliki cukup ETH untuk menyebarkan kontrak Anda. Menggunakan kontrak pintar secara teknis sama dengan melakukan transaksi, sehingga Anda perlu membayar [Gas](/developers/docs/gas/) sama seperti Anda perlu membayar gas untuk transfer ETH sederhana. Namun, biaya gas untuk penggunaan kontrak jauh lebih tinggi.
+Siapa pun dapat menulis kontrak pintar dan menyebarkannya ke jaringan. Anda hanya perlu belajar cara menulis kode dalam [bahasa kontrak pintar](/developers/docs/smart-contracts/languages/) dan memiliki cukup ETH untuk menyebarkan kontrak Anda. Menyebarkan kontrak pintar secara teknis adalah transaksi, sehingga Anda harus membayar [gas](/developers/docs/gas/) dengan cara yang sama seperti membayar gas untuk transfer ETH biasa. Namun, biaya gas untuk penyebaran kontrak jauh lebih tinggi.
 
-Ethereum memiliki bahasa ramah pengembang untuk menulis kontrak pintar:
+Ethereum memiliki bahasa pemrograman yang mudah digunakan oleh pengembang untuk menulis kontrak pintar:
 
 - Solidity
 - Vyper
 
-[Selengkapnya tentang bahasa](/developers/docs/smart-contracts/languages/)
+[Selengkapnya tentang bahasa pemrograman](/developers/docs/smart-contracts/languages/)
 
-Namun, kontrak harus dikompilasikan sebelum bisa digunakan agar mesin virtual Ethereum bisa mengartikan dan menyimpan kontrak tersebut. [Selengkapnya tentang pengompilasian](/developers/docs/smart-contracts/compiling/)
+Namun, kontrak harus dikompilasi sebelum dapat disebarkan agar mesin virtual Ethereum dapat menafsirkan dan menyimpan kontrak tersebut. [Selengkapnya tentang kompilasi](/developers/docs/smart-contracts/compiling/)
 
 ## Komposabilitas {#composability}
 
-Kontrak pintar bersifat publik di Ethereum dan bisa dianggap sebagai API terbuka. Ini berarti Anda bisa memanggil kontrak pintar orang lain di dalam kontrak pintar Anda untuk lebih memperluas apa yang mungkin diperluas. Kontrak bahkan bisa menyebarkan kontrak lainnya.
+Kontrak pintar bersifat publik di Ethereum dan bisa dianggap sebagai API terbuka. Hal ini berarti bahwa Anda dapat memanggil kontrak pintar lain di dalam kontrak pintar Anda sendiri sehingga dapat mengembangkan banyak kemungkinan. Kontrak bahkan dapat menyebarkan kontrak lainnya.
 
 Pelajari selengkapnya tentang [komposabilitas kontrak pintar](/developers/docs/smart-contracts/composability/).
 
 ## Batasan {#limitations}
 
-Kontrak pintar sendiri tidak bisa mendapatkan informasi tentang aksi "dunia nyata" karena tidak bisa mengirim permintaan HTTP. Ini sengaja dirancang demikian. Mengandalkan informasi eksternal bisa membahayakan konsensus, yang penting untuk keamanan dan desentralisasi.
+Kontrak pintar sendiri tidak bisa mendapatkan informasi tentang aksi "dunia nyata" karena kontrak tidak dapat mengambil data dari sumber di luar rantai. Artinya, kontrak tidak dapat merespons aksi di dunia nyata. Hal ini sesuai dengan rancangan. Mengandalkan informasi eksternal bisa membahayakan konsensus, yang penting untuk keamanan dan desentralisasi.
 
-Ada cara untuk mengatasi ini, menggunakan [oracle](/developers/docs/oracles/).
+Akan tetapi, penting bagi aplikasi rantai blok untuk dapat menggunakan data di luar rantai. Solusinya adalah [oracle](/developers/docs/oracles/), yaitu alat yang mengumpulkan data di luar rantai dan menyediakannya untuk kontrak pintar.
 
-Keterbatasan lain dari kontrak pintar adalah ukuran kontrak maksimumnya. Ukuran kontrak pintar maksimum bisa 24KB atau kontrak akan kehabisan gas. Ini dapat dihindari dengan menggunakan [Pola Permata](https://eips.ethereum.org/EIPS/eip-2535).
+Keterbatasan kontrak pintar lainnya adalah ukuran maksimum kontrak. Kontrak pintar dapat berukuran maksimum sebesar 24KB atau akan kehabisan gas jika lebih. Hal ini dapat dihindari dengan menggunakan [Pola Permata](https://eips.ethereum.org/EIPS/eip-2535).
+
+## Kontrak multisig {#multisig}
+
+Kontrak multisig (beberapa tanda tangan) adalah akun kontrak pintar yang membutuhkan beberapa tanda tangan yang valid untuk menjalankan transaksi. Cara ini sangat berguna untuk menghindari titik kegagalan tunggal bagi kontrak yang menyimpan Ether atau token lainnya dalam jumlah besar. Multisig juga membagi tanggung jawab menjalankan kontrak dan manajemen kunci di antara beberapa pihak sehingga mencegah hilangnya kunci pribadi yang dapat mengakibatkan hilangnya dana secara permanen. Karena alasan ini, kontrak multisig dapat digunakan untuk tata kelola DAO yang sederhana. Multisig membutuhkan N tanda tangan dari M kemungkinan tanda tangan yang dapat diterima (di mana N ≤ M, dan M > 1) agar dapat dijalankan. `N = 3, M = 5` dan `N = 4, M = 7` adalah nilai-nilai yang umum digunakan. Multisig 4/7 membutuhkan empat dari tujuh kemungkinan tanda tangan yang valid. Hal ini berarti dana masih dapat diambil kembali meskipun ada tiga tanda tangan yang hilang. Dalam kasus ini, hal ini juga berarti bahwa mayoritas pemegang kunci harus setuju dan menandatangani agar kontrak dapat dijalankan.
 
 ## Sumber daya kontrak pintar {#smart-contract-resources}
 
@@ -98,13 +104,8 @@ Keterbatasan lain dari kontrak pintar adalah ukuran kontrak maksimumnya. Ukuran 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Forum Komunitas](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_Blok pembangun yang aman, sederhana, dan fleksibel untuk kontrak pintar._**
-
-- [Dappsys](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
-
 ## Bacaan lebih lanjut {#further-reading}
 
-- [Kontrak Pintar: Teknologi Blockchain yang Akan Menggantikan Pengacara](https://blockgeeks.com/guides/smart-contracts/)_– Blockgeeks_
-- [Cara Terbaik untuk Pengembangan Kontrak Pintar](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _–10 November 2019 - Yos Riady_
-- [Kontrak bersih - panduan tentang pola dan praktik kontrak pintar](https://www.wslyvh.com/clean-contracts/) _– 30 Juli 2020 - wslyvh_
+- [Coinbase: Apa yang dimaksud dengan kontrak pintar?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [Chainlink: Apa yang dimaksud dengan kontrak pintar?](https://chain.link/education/smart-contracts)
+- [Video: Penjelasan Sederhana - Kontrak Pintar](https://youtu.be/ZE2HxTmxfrI)

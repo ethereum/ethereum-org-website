@@ -13,7 +13,7 @@ const config: StorybookConfig = {
     "@chakra-ui/storybook-addon",
     "storybook-react-i18next",
   ],
-  staticDirs: ["../static"],
+  staticDirs: ["../static", "../src/assets"],
   babel: async () => ({
     ...babelConfig,
   }),

@@ -14,7 +14,7 @@ const styles = {
     body: {
       // TODO: when we have Chakra v2, this should be done by overriding the
       // native Chakra semantic tokens
-      bg: mode("white", "gray.700")(props),
+      bg: mode("white", "gray.800")(props),
       lineHeight: "base",
       fontSize: "md",
     },
@@ -79,9 +79,9 @@ const styles = {
       visibility: "visible",
     },
     "pre, code, kbd, samp": {
-      fontSize: "0.8em",
-      lineHeight: "1.1rem",
-      fontFamily: "SFMono-Regular,Menlo,Monaco,Consolas,monospace",
+      fontSize: "md",
+      lineHeight: "base",
+      fontFamily: "monospace",
     },
   }),
 }

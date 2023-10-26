@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Feature filtas",
   "page-find-wallet-footnote-1": "Wallets wey dem list for dis page nor get official endorsements, and dem dey provided only for informashional purposes.",
   "page-find-wallet-footnote-2": "Di wallet projects don already provide dia diskripshon demsefs.",
-  "page-find-wallet-footnote-3": "Wi add prodcuts to dis page based on di kriteria wey dey awa<a href=\"/contributing/adding-products/\"> listin policy</a>. If yu go like add new wallet,<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\"> you fit raise issue for di GitHub</a>.",
+  "page-find-wallet-footnote-3": "Wi add prodcuts to dis page based on di kriteria wey dey awa<a href=\"/contributing/adding-wallets/\"> listin policy</a>. If yu go like add new wallet,<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\"> you fit raise issue for di GitHub</a>.",
   "page-find-wallet-mobile": "Mobile",
   "page-find-wallet-mobile-desc": "Wallet wey get mobile apps",
   "page-find-wallet-desktop": "Desktop",

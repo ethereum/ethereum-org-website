@@ -82,23 +82,23 @@ const EnergyConsumptionChart: React.FC = () => {
     base: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 200,
+        amount: 190,
         color: "#FF0000",
       },
       {
         name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 131,
+        amount: 149,
         color: "#F2A900",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
-        color: "#C1B6F5",
       },
       {
         name: t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
       },
       {
         name: t("energy-consumption-chart-eth-pos-label"),
@@ -109,8 +109,13 @@ const EnergyConsumptionChart: React.FC = () => {
     sm: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 200,
+        amount: 190,
         color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
       },
       {
         name: t("energy-consumption-gold-mining-cbeci-label"),
@@ -118,18 +123,13 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#F2A900",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 131,
-        color: "#D7B14A",
-      },
-      {
         name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
+        amount: 21,
         color: "#C1B6F5",
       },
       {
         name: t("energy-consumption-chart-netflix-label"),
-        amount: 0.451,
+        amount: 0.457,
         color: "#E50914",
       },
       {
@@ -141,8 +141,13 @@ const EnergyConsumptionChart: React.FC = () => {
     md: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 200,
+        amount: 190,
         color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
       },
       {
         name: t("energy-consumption-gold-mining-cbeci-label"),
@@ -150,23 +155,23 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 131,
-        color: "#D7B14A",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
-        color: "#C1B6F5",
-      },
-      {
         name: t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
       },
       {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
+      },
+      {
+        name: "Google",
+        amount: 19,
+        color: "#E50914",
+      },
+      {
         name: t("energy-consumption-chart-netflix-label"),
-        amount: 0.451,
+        amount: 0.457,
         color: "#E50914",
       },
       {

@@ -10591,7 +10591,7 @@
       "login": "natpicone",
       "name": "Natalino Picone",
       "avatar_url": "https://avatars.githubusercontent.com/u/4753402?v=4",
-      "profile": "http://nozominetworks.com",
+      "profile": "https://chainlabo.com",
       "contributions": [
         "content"
       ]
@@ -10639,6 +10639,42 @@
       "profile": "https://github.com/0xObsidian",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "MohamedFekryyy",
+      "name": "Fekry Aiad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36033065?v=4",
+      "profile": "http://www.scienft.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Wilson-Wu1",
+      "name": "Wilson Wu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41039035?v=4",
+      "profile": "https://www.linkedin.com/in/wilson-wu-2021/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "fvaysh",
+      "name": "VAS",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126754021?v=4",
+      "profile": "https://github.com/fvaysh",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "costgallo",
+      "name": "Costanza",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49433698?v=4",
+      "profile": "https://github.com/costgallo",
+      "contributions": [
+        "doc"
       ]
     }
   ],
