@@ -25,7 +25,7 @@ const icons = {
   webpage: FaGlobe,
 }
 
-export type SocialListItemProps = {
+type SocialListItemProps = {
   children?: React.ReactNode
   socialIcon: keyof typeof icons
 }
