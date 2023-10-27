@@ -131,8 +131,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     frontmatter.published = frontmatter.published.toString()
   }
 
-  console.log(layout)
-
   return {
     props: {
       mdxSource,
