@@ -9,17 +9,14 @@ import InlineLink from "../Link"
 // TODO add Translation
 // import Translation from "../Translation"
 
+// Utils
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
+// Types
+import { Lang } from "@/lib/types"
+
 // Data
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
-
-// Constants
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
-// Utils
-// TODO
-// import { Lang } from "../../utils/languages"
-// TODO
-// import { getLocaleForNumberFormat } from "../../utils/translations"
 
 interface IProps {
   name: string
@@ -28,7 +25,7 @@ interface IProps {
 const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   const [formattedUTC, setFormattedUTC] = useState("")
   const { locale } = useRouter()
-  const localeForStatsBoxNumbers = DEFAULT_LOCALE
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
 
   const {
     dateTimeAsString,
