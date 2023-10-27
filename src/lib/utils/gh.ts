@@ -31,8 +31,3 @@ export const getLastModifiedDate = async (slug: string, locale: string) => {
 
   return new Date(lastCommitDate).toISOString()
 }
-
-export const getLastTagDate = () => {
-  const cmd = "git log -1 --format=%ai $(git describe --tags --abbrev=0)"
-  return new Date(execSync(cmd).toString()).toISOString()
-}

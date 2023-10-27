@@ -6,10 +6,10 @@ import remarkGfm from "remark-gfm"
 import { join } from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getLastModifiedDate, getLastTagDate } from "@/lib/utils/gh"
+import { getLastModifiedDate } from "@/lib/utils/gh"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
-import mdComponents from "@/components/MdComponents"
+import published from "@/data/published.json"
 
 // Layouts and components
 import {
@@ -29,6 +29,7 @@ import {
   // docsComponents,
   // DocsLayout,
 } from "@/layouts"
+import mdComponents from "@/components/MdComponents"
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
@@ -117,7 +118,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = await getLastModifiedDate(originalSlug, locale!)
-  const lastDeployDate = getLastTagDate()
+  const lastDeployDate = new Date(published.date).toISOString()
 
   // Get corresponding layout
   let layout = frontmatter.template
