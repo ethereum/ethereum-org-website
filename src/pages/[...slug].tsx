@@ -28,6 +28,8 @@ import {
   // EventLayout,
   // docsComponents,
   // DocsLayout,
+  tutorialsComponents,
+  TutorialLayout
 } from "@/layouts"
 
 // Types
@@ -40,6 +42,7 @@ const layoutMapping = {
   staking: StakingLayout,
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
+  tutorial: TutorialLayout,
   // event: EventLayout,
   // docs: DocsLayout,
 } as const
@@ -52,6 +55,7 @@ const componentsMapping = {
   upgrade: upgradeComponents,
   // event: eventComponents,
   // docs: docsComponents,
+  tutorial: tutorialsComponents,
 } as const
 
 interface Params extends ParsedUrlQuery {
@@ -63,11 +67,7 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths = ({ locales }) => {
-  const contentFiles = getContent("/").filter(
-    // Filter `/developers/tutorials` slugs since they are processed by
-    // `/developers/tutorials/[...tutorial].tsx`
-    (file) => !file.slug.includes("/developers/tutorials")
-  )
+  const contentFiles = getContent("/")
 
   let paths: StaticPaths = []
 
@@ -123,8 +123,15 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   let layout = frontmatter.template
 
   if (!frontmatter.template) {
-    layout = params.slug.includes("developers/docs") ? "docs" : "static"
+    layout = params.slug.join('.').includes("developers/docs") ? "docs" : "static"
   }
+
+  if (params.slug.join('/').includes("developers/tutorials")) {
+    layout = 'tutorial'
+    frontmatter.published = frontmatter.published.toString()
+  }
+
+  console.log(layout)
 
   return {
     props: {

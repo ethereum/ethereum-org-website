@@ -46,8 +46,9 @@ import YouTube from "@/components/YouTube"
 // Utils
 import { EDIT_CONTENT_URL } from "@/lib/constants"
 import { isLangRightToLeft } from "@/lib/utils/translations"
+import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-import type { Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
 
 const ContentContainer = (props) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
@@ -202,13 +203,17 @@ export const tutorialsComponents = {
   StyledDivider,
   YouTube,
 }
+interface IProps extends MdPageContent, ChildOnlyProp {
+  frontmatter: TutorialFrontmatter
+  timeToRead: number
+}
 
 export const TutorialLayout = ({
   children,
   frontmatter,
   tocItems,
   timeToRead,
-}) => {
+}: IProps) => {
   const { asPath: relativePath} = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
   const borderColor = useToken("colors", "border")
