@@ -36,7 +36,7 @@ Ethereum використовує доказ роботи з моменту св
 
 ![зображення](energy_use_per_transaction.png)
 
-<p style={{textAlign: "center"}}><small><i>Оцінка споживання енергії за моделі PoW на транзакцію, використана на малюнку, базується на <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">даних за травень 2021 року</a>; на момент написання це джерело припускало рівень споживання до <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 кВт⋅год</a></i></small></p>
+<p style={{ textAlign: "center" }}><small><i>Оцінка споживання енергії за моделі PoW на транзакцію, використана на малюнку, базується на <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">даних за травень 2021 року</a>; на момент написання це джерело припускало рівень споживання до <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 кВт⋅год</a></i></small></p>
 
 Порівняймо ці дані з таким сервісом, як Visa. 100 000 операцій із Visa використовують 149 кВт⋅год енергії<sup>[^2]</sup>. Якщо припустити, що сегментування впроваджено, поточна швидкість транзакцій Ethereum (15 транзакцій за секунду) буде збільшена щонайменше у 64 рази (кількість сегментів), не враховуючи додаткову оптимізацію шляхом зведення. Реалістична оцінка для Ethereum із накопичувальними пакетами після шардингу й об’єднання становить [25 000–100 000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) транзакцій на секунду. Ми можемо використати цю інформацію, щоб оцінити максимальні та мінімальні енергозатрати на 100 000 транзакцій.
 
