@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preversion": "echo \"{\\\"date\\\":\\\"$(date +%Y-%m-%d)\\\"}\" > src/data/published.json && git add src/data/published.json"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
