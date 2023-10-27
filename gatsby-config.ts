@@ -118,6 +118,7 @@ const config: GatsbyConfig = {
             options: {
               backgroundColor: `transparent`,
               maxWidth: 1200,
+              quiality: 100,
             },
           },
         ],
@@ -142,6 +143,7 @@ const config: GatsbyConfig = {
             options: {
               backgroundColor: `transparent`,
               maxWidth: 1200,
+              quiality: 100,
             },
           },
           {
