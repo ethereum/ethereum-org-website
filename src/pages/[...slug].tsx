@@ -128,7 +128,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   if (params.slug.join('/').includes("developers/tutorials")) {
     layout = 'tutorial'
-    frontmatter.published = frontmatter.published.toString()
   }
 
   return {
