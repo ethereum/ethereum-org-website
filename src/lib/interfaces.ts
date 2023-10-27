@@ -134,6 +134,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   address?: string
   postMergeBannerTranslation?: string
   hideEditButton?: boolean
+  showPostMergeBanner?: boolean
 }
 
 export interface Root {
