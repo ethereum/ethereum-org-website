@@ -56,8 +56,6 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 - [Faucet do QuickNode Sepolia](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Faucet de PoW](https://sepolia-faucet.pk910.de/)
-- [Faucet Sepolia](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
 - [Faucet da Carteira da Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Faucet do Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet do Infura Sepolia](https://www.infura.io/faucet)
