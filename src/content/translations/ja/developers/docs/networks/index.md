@@ -57,7 +57,11 @@ Sepolia (セポリア)は、プルーフ・オブ・ステークのテストネ�
 
 ##### Sepolia フォーセット
 
-
+- [QuickNode Sepolia フォーセット](https://faucet.quicknode.com/drip)
+- [Grabteeth](https://grabteeth.xyz/)
+- [PoW フォーセット](https://sepolia-faucet.pk910.de/)
+- [Coinbase Wallet フォーセット | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia フォーセット](https://sepoliafaucet.com/)
 
 #### Ropsten (ロプステン) _(非推奨)_ {#ropsten}
 
