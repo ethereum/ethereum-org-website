@@ -57,8 +57,7 @@ Sepolia (セポリア)は、プルーフ・オブ・ステークのテストネ�
 
 ##### Sepolia フォーセット
 
-- [Sepolia faucet](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
+
 
 #### Ropsten (ロプステン) _(非推奨)_ {#ropsten}
 
