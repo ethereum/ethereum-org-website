@@ -38,6 +38,7 @@ const commonRedirectProps = {
  * @returns boolean for if file is outdated or not
  */
 const checkIsMdxOutdated = (filePath: string): boolean => {
+  // .replace(/\\./g, "/") to replace \ in windows paths ex: C:\\folder\\myfile.txt becomes C:/folder/myfile.txt
   const dirname = path.resolve("./").replace(/\\./g, "/")
   const splitPath = filePath.split(dirname)
   const tempSplitPath = splitPath[1]
