@@ -38,7 +38,7 @@ const commonRedirectProps = {
  * @returns boolean for if file is outdated or not
  */
 const checkIsMdxOutdated = (filePath: string): boolean => {
-  const dirname = path.resolve("./")
+  const dirname = path.resolve("./").replace(/\\./g, "/")
   const splitPath = filePath.split(dirname)
   const tempSplitPath = splitPath[1]
   const tempSplit = tempSplitPath.split("/")
