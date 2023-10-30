@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Filtri po značajkama",
   "page-find-wallet-footnote-1": "Prikaz novčanika na ovoj stranici ne predstavlja službeno odobrenje i služi samo za informaciju.",
   "page-find-wallet-footnote-2": "Njihovi opisi primljeni su izravno od projekata novčanika.",
-  "page-find-wallet-footnote-3": "Na ovu stranicu dodajemo proizvode temeljem kriterija iz naše <a href=\"/contributing/adding-products/\">politike uvrštenja</a>. Ako želite da dodamo novčanik, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">podignite problem na GitHub-u</a>.",
+  "page-find-wallet-footnote-3": "Na ovu stranicu dodajemo proizvode temeljem kriterija iz naše <a href=\"/contributing/adding-wallets/\">politike uvrštenja</a>. Ako želite da dodamo novčanik, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">podignite problem na GitHub-u</a>.",
   "page-find-wallet-mobile": "Mobitel",
   "page-find-wallet-mobile-desc": "Novčanici s mobilnim aplikacijama",
   "page-find-wallet-desktop": "Desktop",

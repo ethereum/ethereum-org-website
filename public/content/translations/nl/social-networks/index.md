@@ -79,7 +79,7 @@ Reddit heeft [Community Points](https://cointelegraph.com/news/reddit-to-reporte
 
 Het programma is al live, met de r/CryptoCurrency subreddit [die zijn versie van gemeenschapspunten genaamd "Moons" draait](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Volgens de officiële beschrijving beloont Moons "posters, commentators en moderators voor hun bijdragen aan de subreddit." Omdat deze tokens op de blockchain staan (gebruikers ontvangen ze in hun portemonnee), zijn ze onafhankelijk van Reddit en kunnen ze niet worden weggenomen.
 
-Na het afsluiten van een beta-fase op het Rinkeby-testnet staan de Reddit-gemeenschapspunten nu op [Arbitrum Nova](https://nova.arbitrum.io/), een blockchain die de eigenschappen van een [validium](/developers/docs/scaling/validium/) en een [optimistic rollup](/developers/docs/scaling/optimistic-rollups/) combineert. Naast het gebruik van gemeenschapspunten om speciale functies te ontgrendelen, kunnen gebruikers ze ook verhandelen op exchanges in ruil voor fiat. Ook bepaalt de hoeveelheid gemeenschapspunten die een gebruiker bezit diens invloed op het besluitvormingsproces binnen de gemeenschap.
+Na het afsluiten van een bètafase op het Rinkeby-testnet, staan Reddit Community Points nu op [Arbitrum Nova](https://nova.arbitrum.io/), een blockchain die eigenschappen combineert van een [sidechain](/developers/docs/scaling/sidechains/) en een [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Naast het gebruik van gemeenschapspunten om speciale functies te ontgrendelen, kunnen gebruikers ze ook verhandelen op exchanges in ruil voor fiat. Ook bepaalt de hoeveelheid gemeenschapspunten die een gebruiker bezit diens invloed op het besluitvormingsproces binnen de gemeenschap.
 
 ### Twitter {#twitter}
 
@@ -94,16 +94,19 @@ In mei 2022 [kondigde Instagram ondersteuning aan voor NFT's](https://about.inst
 - **[Status.im](https://status.im/)** - _Status is een beveiligde communicatie-app die gebruik maakt van een open-source, peer-to-peer protocol en end-to-end versleuteling om uw berichten te beschermen tegen derden._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is een gedecentraliseerd publicatieplatform in handen van gebruikers dat gebouwd is op Ethereum. Het is bedoeld voor gebruikers om ideeën te crowdfunden, content te verkopen en hoogwaardige gemeenschappen op te bouwen._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is een samen te stellen gedecentraliseerde sociale grafiek die creators helpt met hun eigendomsrecht op hun content, waar ze ook maar heen gaan in het digitale landschap van het gedecentraliseerde internet._
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster is een gedecentraliseerd sociaal netwerk. Het is een open protocol dat veel clients kan ondersteunen, net als e-mail._
 
 ## Lees verder {#further-reading}
 
 ### Artikelen {#articles}
 
+- [Decentralizing social media: a guide to the web3 social stack](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [How Blockchain Can Solve Social Media Privacy](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Sufficient Decentralization for Social Networks](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Video's {#videos}
 

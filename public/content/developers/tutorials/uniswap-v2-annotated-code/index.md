@@ -366,7 +366,7 @@ If the time elapsed is not zero, it means we are the first exchange transaction 
         }
 ```
 
-Each cost accumulator is updated with the latest cost (reserve of the other token/reserve of this token) times the elapsed time in seconds. To get an average price you read the cumulative price is two points in time, and divide by the time difference between them. For example, assume this sequence of events:
+Each cost accumulator is updated with the latest cost (reserve of the other token/reserve of this token) times the elapsed time in seconds. To get an average price, you read the cumulative price in two points in time and divide by the time difference between them. For example, assume this sequence of events:
 
 | Event                                                    |  reserve0 |  reserve1 | timestamp | Marginal exchange rate (reserve1 / reserve0) |       price0CumulativeLast |
 | -------------------------------------------------------- | --------: | --------: | --------- | -------------------------------------------: | -------------------------: |
