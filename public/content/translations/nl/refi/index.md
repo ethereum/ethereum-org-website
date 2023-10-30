@@ -5,7 +5,7 @@ lang: nl
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: Een alternatief economisch systeem gebouwd op regeneratieve principes
 summaryPoint2: Een poging om Ethereum te benutten voor het oplossen van wereldwijde coördinatiecrisissen zoals de klimaatverandering
@@ -20,7 +20,7 @@ In plaats daarvan tracht ReFi milieu-, samenlevings- en sociale problemen op te 
 
 Een van de grondbeginselen van ReFi is het concept van de regeneratieve economie gepionierd door John Fullerton van het [Capital Institute](https://capitalinstitute.org). Hij stelde acht onderling verbonden principes voor die aan de basis liggen van systemische gezondheid:
 
-![Acht onderling verbonden principes](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Acht onderling verbonden principes](refi-regenerative-economy-diagram.png)
 
 ReFi-projecten realiseren deze principes door gebruik te maken van [slimme contracten](/developers/docs/smart-contracts/) en [gedecentraliseerde financiën (DeFi)](/defi/)-applicaties om regeneratieve gedragingen te stimuleren, bijv. herstellen van gedegradeerde ecosystemen, en om grootschalige samenwerking te faciliteren voor wereldwijde problemen zoals klimaatverandering en biodiversiteitsverlies.
 
