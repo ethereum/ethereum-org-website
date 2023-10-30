@@ -515,5 +515,8 @@ export const query = graphql`
     XDEFI: file(relativePath: { eq: "wallets/XDEFI.png" }) {
       ...walletImage
     }
+    aurox: file(relativePath: { eq: "wallets/aurox.png" }) {
+      ...walletImage
+    }
   }
 `
