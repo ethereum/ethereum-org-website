@@ -17,7 +17,7 @@
           // Also, put `react-icons` in sorting order not with `react`
           ["^react(?!-.)$", "^\\w", "^@\\w"],
           // The Chakra theme directory if imported to story file or other places
-          ["^(\\.\\./)+@chakra-ui/gatsby-plugin/theme"],
+          ["^(\\.\\./)+@chakra-ui"],
           // From the `types` directory.
           ["^(\\.\\./)+types"],
           // From the `components` directory.
