@@ -13,8 +13,8 @@ import React from "react"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import { useRouter } from "next/router"
 
-import { BaseLink } from "./Link"
-import Translation from "./Translation"
+import { BaseLink } from "@/components/Link"
+import Translation from "@/components/Translation"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -56,7 +56,7 @@ export interface IProps {
 
 const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
   const { locale } = useRouter()
-  const { t } = useTranslation()
+  const { t } = useTranslation("common")
 
   const isPageRightToLeft = isLangRightToLeft(locale as Lang)
   // TODO: check if `medBp` is being used or remove it
