@@ -186,6 +186,7 @@ ContentPage.getLayout = (page: ReactElement) => {
         <PageMetadata
           title={frontmatter.title}
           description={frontmatter.description}
+          image={frontmatter.image}
         />
         {page}
       </Layout>

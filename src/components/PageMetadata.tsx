@@ -1,12 +1,12 @@
+import { join } from "path"
 import Head from "next/head"
 import { useRouter } from "next/router"
-import { join } from "path"
 
 import ogImageDefault from "@/public/home/hero.png"
 import ogImageDevelopers from "@/public/enterprise-eth.png"
 import ogImageDapps from "@/public/doge-computer.png"
 import ogImageUpgrades from "@/public/upgrades/upgrade_doge.png"
-import { SITE_URL } from "@/lib/constants"
+import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
 
 type NameMeta = {
   name: string
@@ -22,7 +22,7 @@ export type Meta = NameMeta | PropMeta
 
 export interface IProps {
   title: string
-  description?: string
+  description: string
   image?: string
   canonicalUrl?: string
   author?: string
@@ -35,8 +35,6 @@ const PageMetadata: React.FC<IProps> = ({
   canonicalUrl,
   author,
 }) => {
-  if (!description) console.warn(`Missing PageMetadata description: ${title}`)
-
   const { locale, asPath } = useRouter()
 
   // TODO: Re-implement intl
@@ -53,7 +51,7 @@ const PageMetadata: React.FC<IProps> = ({
 
   /* Set canonical URL w/ language path to avoid duplicate content */
   /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
-  const canonical = canonicalUrl || join(SITE_URL, "en", asPath)
+  const canonical = canonicalUrl || join(SITE_URL, DEFAULT_LOCALE, asPath)
   const url = locale ? join(SITE_URL, locale, asPath) : canonical
 
   /* Set fallback ogImage based on path */

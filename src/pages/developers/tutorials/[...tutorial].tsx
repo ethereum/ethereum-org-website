@@ -12,12 +12,12 @@ import { getLastDeployDate, getLastModifiedDate } from "@/lib/utils/gh"
 // Layouts
 import { RootLayout, TutorialLayout } from "@/layouts"
 import { staticComponents as components } from "@/layouts/Static"
+import PageMetadata from "@/components/PageMetadata"
 
 // Types
 import type { GetServerSideProps } from "next/types"
 import type { NextPageWithLayout } from "@/lib/types"
 import type { TutorialFrontmatter } from "@/lib/interfaces"
-import PageMetadata from "@/components/PageMetadata"
 
 interface Params extends ParsedUrlQuery {
   tutorial: string[]
@@ -104,6 +104,7 @@ ContentPage.getLayout = (page: ReactElement) => {
           title={frontmatter.title}
           description={frontmatter.description}
           author={frontmatter.author}
+          canonicalUrl={frontmatter.sourceUrl}
         />
         {page}
       </TutorialLayout>
