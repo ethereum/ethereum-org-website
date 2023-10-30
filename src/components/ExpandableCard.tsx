@@ -11,8 +11,7 @@ import {
 } from "@chakra-ui/react"
 
 // Components
-// TODO: add Translation when i18n is set up
-// import Translation from "./Translation"
+import Translation from "@/components/Translation"
 import Text from "./OldText"
 
 // Utils
@@ -124,9 +123,7 @@ const ExpandableCard: React.FC<IProps> = ({
                 mt="auto"
                 mb="auto"
               >
-                {/* TODO: add Translation component when i18n is set up */}
-                {/* <Translation id={isVisible ? "less" : "more"} /> */}
-                More
+                <Translation id={isVisible ? "less" : "more"} />
               </Text>
             </Box>
           </AccordionButton>
