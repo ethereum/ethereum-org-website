@@ -4,6 +4,7 @@ description: Lees meer over de merge - wanneer het hoofdnet van Ethereum wordt g
 lang: nl
 template: upgrade
 image: /upgrades/merge.png
+alt: 
 summaryPoint1: Uiteindelijk zal het huidige Ethereum-hoofdnet "fuseren" met het Beacon Chain proof-of-stake systeem.
 summaryPoint2: Dit markeert het einde van proof-of-work voor Ethereum, en de volledige overgang naar proof-of-stake.
 summaryPoint3: Het is de bedoeling dat dit voorafgaat aan de uitrol van shardketens.

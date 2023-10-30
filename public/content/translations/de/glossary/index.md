@@ -705,7 +705,7 @@ Ein Wert in der Kryptographie, der nur einmal verwendet werden kann. Eine Konto-
 
 ### Ommer- (Onkel-)Block {#ommer}
 
-Wenn ein [Miner](#miner) einen gültigen [Block](#block) findet, könnte ein anderer Miner einen Konkurrenzblock veröffentlicht haben, der zuerst der Spitze der Blockchain hinzugefügt wird. Dieser gültige, aber veraltete Block kann von neueren Blöcken als _Ommers_ aufgenommen werden und erhält eine Teilblockbelohnung. Der Begriff „Ommer" ist der bevorzugte geschlechtsneutrale Begriff für das Geschwisterteil eines Elternblocks, aber es wird auch manchmal „Onkel" verwendet. Dies war für Ethereum relevant, als es sich um ein [Proof-of-Work](pow) Netzwerk handelte, aber die Ommers sind keine Eigenschaft von [Proof-of-Stake](#pos) Ethereum, weil genau ein Block-Antragsteller in jedem Slot ausgewählt wird.
+Wenn ein [Miner](#miner) einen gültigen [Block](#block) findet, könnte ein anderer Miner einen Konkurrenzblock veröffentlicht haben, der zuerst der Spitze der Blockchain hinzugefügt wird. Dieser gültige, aber veraltete Block kann von neueren Blöcken als _Ommers_ aufgenommen werden und erhält eine Teilblockbelohnung. Der Begriff „Ommer" ist der bevorzugte geschlechtsneutrale Begriff für das Geschwisterteil eines Elternblocks, aber es wird auch manchmal „Onkel" verwendet. Dies war für Ethereum relevant, als es sich um ein [Proof-of-Work](#pow) Netzwerk handelte, aber die Ommers sind keine Eigenschaft von [Proof-of-Stake](#pos) Ethereum, weil genau ein Block-Antragsteller in jedem Slot ausgewählt wird.
 
 ### Optimistische Rollups (Optimistic Rollups) {#optimistic-rollup}
 

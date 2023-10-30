@@ -705,7 +705,7 @@ En criptografía, un valor que solo puede utilizarse una vez. Una cuenta nonce e
 
 ### bloque ommer (tío) {#ommer}
 
-Cuando un [minero de prueba de trabajo](#miner) encuentra un [bloque](#block) válido, otro minero puede haber publicado un bloque competidor que se agrega primero a la punta de la cadena de bloques. Esto es válido, pero el bloque obsoleto se puede incluir mediante bloques nuevos a modo de _ommers_ y recibir una recompensa parcial de bloque. El término «ommer» es el término de género neutral preferido para el hermano de un bloque padre, aunque algunas veces, se le denomina «tío». Esto era relevante para Ethereum cuando era una red [prueba de trabajo](pow), pero los ommers no son una característica de [prueba de participación](#pos) Ethereum porque se selecciona precisamente un proponente de bloque en cada ranura.
+Cuando un [minero de prueba de trabajo](#miner) encuentra un [bloque](#block) válido, otro minero puede haber publicado un bloque competidor que se agrega primero a la punta de la cadena de bloques. Esto es válido, pero el bloque obsoleto se puede incluir mediante bloques nuevos a modo de _ommers_ y recibir una recompensa parcial de bloque. El término «ommer» es el término de género neutral preferido para el hermano de un bloque padre, aunque algunas veces, se le denomina «tío». Esto era relevante para Ethereum cuando era una red [prueba de trabajo](#pow), pero los ommers no son una característica de [prueba de participación](#pos) Ethereum porque se selecciona precisamente un proponente de bloque en cada ranura.
 
 ### acumulaciones optimistas (Optimistic rollups) {#optimistic-rollup}
 
