@@ -19,15 +19,15 @@
           // The Chakra theme directory if imported to story file or other places
           ["^(\\.\\./)+@chakra-ui"],
           // From the `types` directory.
-          ["^(\\.\\./)+types"],
+          ["^@/lib/types", "^@/lib/interfaces"],
           // From the `components` directory.
-          ["^(\\.\\./)+components"],
+          ["^@/components"],
           // From the `utils` directory.
-          ["^(\\.\\./)+utils"],
+          ["^@/lib/utils"],
           // From the `data` directory.
-          ["^(\\.\\./)+data"],
+          ["^@/data"],
           // From the `constants` directory.
-          ["^(\\.\\./)+constants"],
+          ["^@/lib/constants"],
           // Parent imports. Put `..` last.
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
           // Other relative imports. Put same-folder imports and `.` last.
