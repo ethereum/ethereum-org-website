@@ -109,7 +109,7 @@ Il existe une variété d'options disponibles pour vous aider dans votre configu
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Veuillez noter l'importance de choisir un [client minoritaire](/developers/docs/nodes-and-clients/client-diversity/) , car cela améliore la sécurité du réseau et limite vos risques. Les outils qui permettent de configurer un client minoritaire sont désignés comme <em style="text-transform: uppercase;">"multi-client."</em>
+Veuillez noter l'importance de choisir un [client minoritaire](/developers/docs/nodes-and-clients/client-diversity/) , car cela améliore la sécurité du réseau et limite vos risques. Les outils qui permettent de configurer un client minoritaire sont désignés comme <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
 #### Générateurs de clés
 

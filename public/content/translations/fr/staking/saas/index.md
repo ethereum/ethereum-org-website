@@ -47,7 +47,7 @@ Vous trouverez ci-dessous quelques fournisseurs SaaS disponibles. Utilisez les i
 
 <StakingProductsCardGrid category="saas" />
 
-Veuillez noter l'importance de choisir un service qui prend au sérieux [la diversité des clients](/developers/docs/nodes-and-clients/client-diversity/) , car elle améliore la sécurité du réseau et limite vos risques. Les services limitent l'émergence d'un client majoritaire sont indiqués avec <em style="text-transform: uppercase;">"diversité des clients d'exécution"</em> et <em style="text-transform: uppercase;">"diversité des clients de consensus"</em>.
+Veuillez noter l'importance de choisir un service qui prend au sérieux [la diversité des clients](/developers/docs/nodes-and-clients/client-diversity/) , car elle améliore la sécurité du réseau et limite vos risques. Les services limitent l'émergence d'un client majoritaire sont indiqués avec <em style={{ textTransform: "uppercase" }}>"diversité des clients d'exécution"</em> et <em style={{ textTransform: "uppercase" }}>"diversité des clients de consensus"</em>.
 
 #### Générateurs de clés
 
