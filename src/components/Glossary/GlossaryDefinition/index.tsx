@@ -1,8 +1,7 @@
-import React from "react"
 import { Box, Text } from "@chakra-ui/react"
-import OldHeading from "@/components/OldHeading"
-
 import { useTranslation } from "next-i18next"
+
+import OldHeading from "@/components/OldHeading"
 
 interface IProps {
   term: string
