@@ -1,8 +1,5 @@
 {
   "extends": ["next/core-web-vitals", "prettier"],
-  "parserOptions": {
-    "sourceType": "module"
-  },
   "env": { "es6": true },
   "plugins": ["simple-import-sort"],
   "rules": {
