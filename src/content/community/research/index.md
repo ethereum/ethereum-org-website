@@ -156,7 +156,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Recent research {#recent-research-5}
 
-- [ecdsa on FGPAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ecdsa on FPGAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Security {#security}
 
