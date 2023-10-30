@@ -1,7 +1,8 @@
-import { join } from "path"
+import { join, relative } from "path"
 import { GITHUB_COMMITS_URL, OLD_CONTENT_DIR } from "@/lib/constants"
 import type { Author } from "@/lib/interfaces"
 import type { FileContributorsState } from "@/lib/types"
+import { useEffect, useState } from "react"
 
 export const gitHubAuthHeaders = {
   headers: new Headers({
@@ -10,9 +11,7 @@ export const gitHubAuthHeaders = {
   }),
 }
 
-export const fetchGitHubContributors = async (
-  relativePath: string
-): Promise<FileContributorsState> => {
+const fetchGitHubContributors = async (relativePath: string) => {
   const url = new URL(GITHUB_COMMITS_URL)
   // TODO: OLD_CONTENT_DIR -> CONTENT_DIR for production
   const filePath = join(OLD_CONTENT_DIR, relativePath, "index.md")
@@ -42,8 +41,27 @@ export const fetchGitHubContributors = async (
       JSON.parse as (entry: string) => Author
     )
     return { loading: false, authors }
-  } catch (error) {
-    console.error(filePath, error)
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error(filePath, error.message)
+    }
     return { loading: false, error }
   }
+}
+/**
+ * Client-side hook to fetch GitHub contributors for a given file
+ * @param relativePath Relative path of the file being queried
+ * @returns `state` comprise of { loading, authors, error } where
+ * authors is an array of Author objects if successful
+ */
+export const useClientSideGitHubContributors = (
+  relativePath: string
+): FileContributorsState => {
+  const [state, setState] = useState<FileContributorsState>({ loading: true })
+  useEffect(() => {
+    ;(async () => {
+      setState(await fetchGitHubContributors(relativePath))
+    })()
+  }, [relativePath])
+  return state
 }

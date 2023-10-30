@@ -8,7 +8,7 @@ import {
   GITHUB_LAST_DEPLOY_URL,
   TRANSLATIONS_DIR,
 } from "@/lib/constants"
-import { gitHubAuthHeaders } from "@/lib/utils/fetchGitHubContributors"
+import { gitHubAuthHeaders } from "@/hooks/useClientSideGitHubContributors"
 
 // This util filters the git log to get the file last commit info, and then the commit date (last update)
 export const getLastModifiedDate = (slug: string, locale: string) => {
