@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "preversion": "./src/scripts/updatePublishDate.sh"
+    "preversion": "bash ./src/scripts/updatePublishDate.sh"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
