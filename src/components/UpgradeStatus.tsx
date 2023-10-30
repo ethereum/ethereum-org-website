@@ -1,9 +1,8 @@
 import React from "react"
 import { Heading, useColorModeValue, VStack } from "@chakra-ui/react"
 
-// TODO: Re-enable after i18n implemented
-// import Translation from "./Translation"
 import Text from "./OldText"
+import Translation from "@/components/Translation"
 
 import type { TranslationKey } from "@/lib/types"
 
@@ -24,7 +23,6 @@ const UpgradeStatus: React.FC<IProps> = ({
 }) => {
   const border = useColorModeValue("none", "2px solid")
   const darkBorderColor = isShipped ? "#3fb181" : "#a4a4ff"
-
   const borderColor = useColorModeValue(undefined, darkBorderColor)
 
   return (
@@ -46,14 +44,10 @@ const UpgradeStatus: React.FC<IProps> = ({
       width="100%"
     >
       <Heading fontSize="sm" fontWeight="normal" textTransform="uppercase">
-        {/* TODO: Re-enable after i18n implemented */}
-        {/* <Translation id="consensus-when-shipping" /> */}
-        When's it shipping?
+        <Translation id="consensus-when-shipping" />
       </Heading>
       <Text fontSize="2.5rem" fontWeight="bold" lineHeight="100%">
-        {/* TODO: Re-enable after i18n implemented */}
-        {/* <Translation id={dateKey} /> */}
-        {dateKey}
+        <Translation id={dateKey} />
       </Text>
       <Text fontSize="xl">{children}</Text>
     </VStack>

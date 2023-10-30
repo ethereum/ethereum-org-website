@@ -10,7 +10,7 @@ import { IItem, ISections } from "./types"
 export const useNav = ({ path }: { path: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { colorMode, toggleColorMode } = useColorMode()
-  const { t } = useTranslation()
+  const { t } = useTranslation("common")
 
   const isDarkTheme = colorMode === "dark"
 
