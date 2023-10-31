@@ -1,10 +1,9 @@
-import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { useLocation } from "@reach/router"
 import { getSrc } from "gatsby-plugin-image"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 
 import { isLang } from "../utils/languages"
 
@@ -98,12 +97,10 @@ const PageMetadata: React.FC<IProps> = ({
   )
 
   const location = useLocation()
-
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const { t } = useTranslation("common")
+  const { locale } = useRouter()
 
   const desc = description || t("site-description")
-
   const siteTitle = t("site-title")
 
   /* Set canonical URL w/ language path to avoid duplicate content */
@@ -111,6 +108,7 @@ const PageMetadata: React.FC<IProps> = ({
   const { pathname } = location
   let canonicalPath = pathname
   const firstDirectory = canonicalPath.split("/")[1]
+
   if (!isLang(firstDirectory)) {
     canonicalPath = `/en${pathname}`
   }
