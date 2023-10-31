@@ -1,7 +1,6 @@
-import * as React from "react"
 import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 import { MdInfoOutline } from "react-icons/md"
+import { useTranslation } from "next-i18next"
 
 import Text from "../../OldText"
 import Tooltip from "../../Tooltip"
@@ -22,7 +21,7 @@ export const WalletMoreInfoCategory = ({
   headingLabel,
   sectionName,
 }: WalletMoreInfoCategoryProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
     <Box width="full" mt={12} _first={{ mt: 2 }}>
