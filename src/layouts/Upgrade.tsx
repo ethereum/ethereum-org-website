@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 
 import { BaseLink } from "@/components/Link"
 import BeaconChainActions from "@/components/BeaconChainActions"
@@ -32,8 +33,7 @@ import {
   InfoColumn,
   ContentContainer,
 } from "@/components/MdComponents"
-// import Translation from "@/components/Translation"
-// TODO: Re-enable PageMetadata after i18n is implemented:
+import Translation from "@/components/Translation"
 // import PageMetadata from "@/components/PageMetadata"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
@@ -151,20 +151,18 @@ export const UpgradeLayout: React.FC<IProps> = ({
   tocItems,
   lastUpdatedDate,
 }) => {
-  // TODO: Re-enabled after i18n is implemented
-  // const { t } = useTranslation()
+  const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
-
   const summaryPoints = getSummaryPoints(frontmatter)
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Guide to Ethereum upgrades", // t("page-upgrades-upgrades-guide"),
-    ariaLabel: "Ethereum upgrades menu", // t("page-upgrades-upgrades-aria-label"),
+    text: t("page-upgrades-upgrades-guide"),
+    ariaLabel: t("page-upgrades-upgrades-aria-label"),
     items: [
       {
-        text: "The Beacon Chain", // t("page-upgrades-upgrades-beacon-chain"),
+        text: t("page-upgrades-upgrades-beacon-chain"),
         to: "/roadmap/beacon-chain/",
         matomo: {
           eventCategory: "upgrade menu",
@@ -173,7 +171,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "The Merge", // t("page-upgrades-upgrades-docking"),
+        text: t("page-upgrades-upgrades-docking"),
         to: "/roadmap/merge/",
         matomo: {
           eventCategory: "upgrade menu",
@@ -200,9 +198,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
             </List>
           </Box>
           <LastUpdated>
-            {/* TODO: Re-enable after i18n implemented */}
-            {/* <Translation id="page-last-updated" />:{" "} */}
-            Page last updated:{" "}
+            <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </LastUpdated>
         </TitleCard>

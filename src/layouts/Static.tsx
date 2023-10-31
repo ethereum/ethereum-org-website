@@ -11,6 +11,7 @@ import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import TableOfContents from "@/components/TableOfContents"
 import Text from "@/components/OldText"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
+import Translation from "@/components/Translation"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -106,9 +107,7 @@ export const StaticLayout: React.FC<IProps> = ({
             color="text200"
             dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
           >
-            {/* TODO: add Translation when i18n is set up  */}
-            {/* <Translation id="page-last-updated" />:{" "} */}
-            Page last updated:{" "}
+            <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </Text>
           <TableOfContents
