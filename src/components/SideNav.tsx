@@ -3,13 +3,12 @@ import { Box, HStack, Icon } from "@chakra-ui/react"
 
 import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Link, { BaseLink, IProps as ILinkProps } from "./Link"
+import { BaseLink } from "./Link"
 import Translation from "./Translation"
 
 import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
+import { DeveloperDocsLink } from "@/lib/interfaces"
 
 export const dropdownIconContainerVariant = {
   open: {
@@ -48,7 +47,7 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
+const SideNavLink = ({ children, ...props }) => {
   return (
     <BaseLink
       w="full"
@@ -135,7 +134,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
   )
 }
 
-export interface IProps {
+export interface SideNavProps {
   path: string
 }
 
@@ -143,8 +142,9 @@ export interface IProps {
 // of the given parent. Currently all `path` items default to open
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
-const SideNav: React.FC<IProps> = ({ path }) => {
-  const { t } = useTranslation()
+const SideNav: React.FC<SideNavProps> = ({ path }) => {
+  // TODO: Implement intl
+  // const { t } = useTranslation()
 
   return (
     <Box
@@ -163,7 +163,8 @@ const SideNav: React.FC<IProps> = ({ path }) => {
       borderRight="1px solid"
       borderRightColor="border"
       display={{ base: "none", lg: "block" }}
-      aria-label={t("nav-developers-docs")}
+      // TODO: Implement intl
+      // aria-label={t("nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} />

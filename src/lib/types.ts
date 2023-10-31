@@ -21,6 +21,8 @@ export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
+export type Direction = "rtl" | "ltr" | "auto"
+
 export type Frontmatter =
   | RoadmapFrontmatter
   | UpgradeFrontmatter

@@ -34,6 +34,8 @@ import MdLink from "@/components/MdLink"
 import { mdxTableComponents } from "@/components/Table"
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
 import SectionNav from "@/components/SectionNav"
+import SideNav from "@/components/SideNav"
+import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
@@ -225,12 +227,14 @@ export const DocsLayout = ({ children, frontmatter, slug, tocItems }) => {
         title={frontmatter.title}
         description={frontmatter.description}
       /> */}
+      <SideNavMobile path={relativePath} />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
       )}
       <ContentContainer>
+        <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
           {frontmatter.lang !== "en" ? (
