@@ -140,11 +140,11 @@ export const htmlElements = {
   h4: Heading4,
   hr: HR,
   img: MarkdownImage,
-  ol: OrderedList,
-  ul: UnorderedList,
   li: ListItem,
+  ol: OrderedList,
   p: Paragraph,
   pre: Pre,
+  ul: UnorderedList,
   ...mdxTableComponents,
 }
 
@@ -252,6 +252,7 @@ export const reactComponents = {
   ButtonLink,
   Card,
   ContentContainer,
+  Contributors,
   Divider,
   DocLink,
   Emoji,
@@ -267,7 +268,6 @@ export const reactComponents = {
   StyledButtonDropdown,
   Title,
   YouTube,
-  Contributors,
 }
 
 /**
