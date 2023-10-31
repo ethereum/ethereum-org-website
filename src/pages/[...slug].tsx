@@ -34,6 +34,7 @@ import {
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
 import { dateToString } from "@/lib/utils/date"
+import { readingTime } from "@/lib/utils/timeToRead"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -113,6 +114,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     },
   })
 
+  const timeToRead = readingTime(markdown.content)
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
   const lastDeployDate = await getLastDeployDate()
@@ -144,6 +146,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       lastDeployDate,
       contentNotTranslated,
       layout,
+      timeToRead,
       tocItems,
     },
   }
@@ -177,6 +180,7 @@ ContentPage.getLayout = (page: ReactElement) => {
     lastDeployDate,
     contentNotTranslated,
     layout,
+    timeToRead,
     tocItems,
   } = page.props
 
@@ -185,7 +189,7 @@ ContentPage.getLayout = (page: ReactElement) => {
     contentNotTranslated,
     lastDeployDate,
   }
-  const layoutProps = { slug, frontmatter, lastUpdatedDate, tocItems }
+  const layoutProps = { slug, frontmatter, lastUpdatedDate, timeToRead, tocItems }
   const Layout = layoutMapping[layout]
 
   return (
