@@ -222,7 +222,7 @@ Podzielmy ten test na części:
 
 Jesteśmy gotowi wystrzelić z grubej rury:
 
-![Jeden test zaliczony](././test-one.png)
+![Jeden test zaliczony](./test-one.png)
 
 Tak więc test działa, ale... wciąż jest trochę miejsca na ulepszenia. Funkcja `balanceOf()` zawsze zwróci 99999. Możemy ją ulepszyć poprzez określenie portfela, dla którego funkcja powinna zwracać coś — tak jak prawdziwy kontrakt:
 
