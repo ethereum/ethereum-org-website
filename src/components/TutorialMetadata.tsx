@@ -1,12 +1,12 @@
-import React from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
 import { Badge, Box, Flex, HStack } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 
 import Emoji from "./Emoji"
 import CopyToClipboard from "./CopyToClipboard"
 import InlineLink from "./Link"
 import TutorialTags from "./TutorialTags"
-import Translation from "./Translation"
+// import Translation from "./Translation"
 import Text from "./OldText"
 
 import { Lang } from "../utils/languages"
@@ -27,7 +27,8 @@ export const getSkillTranslationId = (skill: Skill): TranslationKey =>
   `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
-  const { language } = useI18next()
+  const { locale } = useRouter()
+  const { t } = useTranslation("page-developers-tutorials")
 
   const frontmatter = tutorial.frontmatter
   const hasSource = frontmatter.source && frontmatter.sourceUrl
@@ -53,7 +54,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           mb={2}
           whiteSpace="nowrap"
         >
-          <Translation id={getSkillTranslationId(frontmatter.skill)} />
+          {t(getSkillTranslationId(frontmatter.skill))}
         </Flex>
       </Flex>
       <HStack
@@ -83,13 +84,13 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         {published && (
           <Box>
             <Emoji fontSize="sm" mr={2} text=":calendar:" />
-            {getLocaleTimestamp(language as Lang, published)}
+            {getLocaleTimestamp(locale! as Lang, published)}
           </Box>
         )}
         <Box>
           <Emoji fontSize="sm" mr={2} text=":stopwatch:" />
           {Math.round(tutorial.fields.readingTime.minutes)}{" "}
-          <Translation id="comp-tutorial-metadata-minute-read" />
+          {t("comp-tutorial-metadata-minute-read")}
         </Box>
       </HStack>
       <HStack
@@ -141,7 +142,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
                         textTransform="uppercase"
                         id="comp-tutorial-metadata-tip-author"
                       />{" "}
-                      {frontmatter.address} <Translation id="copied" />
+                      {frontmatter.address} {t("common:copied")}
                       <Emoji
                         fontSize="sm"
                         ml={2}
