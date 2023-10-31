@@ -4,6 +4,7 @@ description: Узнайте о Beacon Chain — обновлении, котор
 lang: ru
 template: upgrade
 image: /upgrades/core.png
+alt: 
 summaryPoint1: Сеть Beacon Chain ничего не меняет в том Ethereum, который мы используем сегодня.
 summaryPoint2: Она будет координировать работу сети, выступая в качестве уровня консенсуса.
 summaryPoint3: Она ввела в экосистему Ethereum доказательство владения.

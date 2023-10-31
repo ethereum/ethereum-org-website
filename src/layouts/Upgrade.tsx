@@ -11,6 +11,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
+import { useRouter } from "next/router"
 
 import { BaseLink } from "@/components/Link"
 import BeaconChainActions from "@/components/BeaconChainActions"
@@ -152,8 +153,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
 }) => {
   // TODO: Re-enabled after i18n is implemented
   // const { t } = useTranslation()
-  // const { language } = useI18next()
-  const language = "en"
+  const { locale } = useRouter()
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
@@ -203,7 +203,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
             {/* TODO: Re-enable after i18n implemented */}
             {/* <Translation id="page-last-updated" />:{" "} */}
             Page last updated:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
+            {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </LastUpdated>
         </TitleCard>
         {frontmatter.image && (
@@ -218,7 +218,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
             height={600}
             overflow="initial"
             src={frontmatter.image}
-            alt=""
+            alt={frontmatter.alt}
           />
         )}
       </HeroContainer>

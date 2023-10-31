@@ -4,6 +4,7 @@ description: Informati rigurado alla Beacon Chain - l'aggiornamento che ha intro
 lang: it
 template: upgrade
 image: /upgrades/core.png
+alt: 
 summaryPoint1: La Beacon Chain ha introdotto il proof-of-stake nell'ecosistema Ethereum.
 summaryPoint2: È stata fusa con la catena di proof-of-work originale di Ethereum nel settembre 2022.
 summaryPoint3: La Beacon Chain ha introdotto la logica del consenso e il protocollo di gossip del blocco, che ora protegge Ethereum.

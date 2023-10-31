@@ -1,8 +1,7 @@
 // Libraries
 import { useEffect, useState } from "react"
 import { Flex, Stack, Text } from "@chakra-ui/react"
-// TODO: look for replacement lib when i18n is set up
-// import { useI18next } from "gatsby-plugin-react-i18next"
+import { useRouter } from "next/router"
 
 // Components
 import Emoji from "../Emoji"
@@ -10,14 +9,14 @@ import InlineLink from "../Link"
 // TODO add Translation
 // import Translation from "../Translation"
 
+// Utils
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
+// Types
+import { Lang } from "@/lib/types"
+
 // Data
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
-
-// Utils
-// TODO
-// import { Lang } from "../../utils/languages"
-// TODO
-// import { getLocaleForNumberFormat } from "../../utils/translations"
 
 interface IProps {
   name: string
@@ -25,12 +24,8 @@ interface IProps {
 
 const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   const [formattedUTC, setFormattedUTC] = useState("")
-
-  // TODO: remove hardcoded locale "en" values when i18n is set up
-  // const { language } = useI18next()
-  const language = "en"
-  // const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
-  const localeForStatsBoxNumbers = "en"
+  const { locale } = useRouter()
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
 
   const {
     dateTimeAsString,
@@ -45,7 +40,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   // calculate date format only on the client side to avoid hydration issues
   useEffect(() => {
     const date = new Date(dateTimeAsString as any)
-    const formattedDate = date.toLocaleString(language, {
+    const formattedDate = date.toLocaleString(locale, {
       timeZone: "UTC",
       month: "short",
       day: "numeric",
