@@ -91,6 +91,17 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
+**thirdweb SDK -** **_Créez des applications web3 capables d'interagir avec vos smart contracts à l'aide de nos puissants SDK et CLI._**
+
+- [Documentation](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
+**Chainstack -** **_Plateforme de développement Web3 (Ethereum et autres)._**
+
+- [chainstack.com](https://www.chainstack.com/)
+- [GitHub](https://github.com/chainstack)
+- [Discord](https://discord.gg/BSb5zfp9AT)
+
 ## Complément d'information {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
