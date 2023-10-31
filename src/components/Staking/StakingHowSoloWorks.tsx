@@ -2,41 +2,27 @@ import { Center } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 import OrderedList from "@/components/OrderedList"
-// Re-enable after i18n implemented
-// import Translation from "@/components/Translation"
+import Translation from "@/components/Translation"
 
 import image from "@/public/hackathon_transparent.png"
 
-export interface IProps {}
-
-const StakingHowSoloWorks: React.FC<IProps> = () => {
-  // TODO: Re-enable after i18n implemented
-  // const items = [
-  //   <p>
-  //     <Translation id="page-staking-how-solo-works-item-1" />
-  //   </p>,
-  //   <p>
-  //     <Translation id="page-staking-how-solo-works-item-2" />
-  //   </p>,
-  //   <p>
-  //     <Translation id="page-staking-how-solo-works-item-3" />
-  //   </p>,
-  //   <p>
-  //     <Translation id="page-staking-how-solo-works-item-4" />
-  //   </p>,
-  //   <p>
-  //     <Translation id="page-staking-how-solo-works-item-5" />
-  //   </p>,
-  // ]
+const StakingHowSoloWorks: React.FC = () => {
   const items = [
     <p>
-      Get some hardware: You need to <a href="/run-a-node/">run a node</a> to
-      stake
+      <Translation id="page-staking-how-solo-works-item-1" />
     </p>,
-    <p>Sync an execution layer client</p>,
-    <p>Sync a consensus layer client</p>,
-    <p>Generate your keys and load them into your validator client</p>,
-    <p>Monitor and maintain your node</p>,
+    <p>
+      <Translation id="page-staking-how-solo-works-item-2" />
+    </p>,
+    <p>
+      <Translation id="page-staking-how-solo-works-item-3" />
+    </p>,
+    <p>
+      <Translation id="page-staking-how-solo-works-item-4" />
+    </p>,
+    <p>
+      <Translation id="page-staking-how-solo-works-item-5" />
+    </p>,
   ]
 
   return (

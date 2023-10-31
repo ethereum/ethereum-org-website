@@ -15,11 +15,12 @@ import {
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+
 // Data imports
 import stakingProducts from "@/data/staking-products.json"
 // Component imports
 import { ButtonLink } from "@/components/Buttons"
-import Translation from "@/components/Translation"
 // SVG imports
 import {
   CautionProductGlyphIcon,
@@ -48,7 +49,9 @@ enum FlagType {
 const getIconFromName = (
   imageName: string
 ): ComponentType<SVGProps<SVGElement>> => {
-  const { [imageName + "GlyphIcon"]: Icon } = require("@/components/icons/staking")
+  const {
+    [imageName + "GlyphIcon"]: Icon,
+  } = require("@/components/icons/staking")
   return Icon
 }
 
@@ -139,71 +142,59 @@ const StakingProductCard: React.FC<ICardProps> = ({
     matomo,
   },
 }) => {
+  const { t } = useTranslation("page-staking")
   const Svg = getIconFromName(imageName)
   const data = [
     {
-      // label: <Translation id="page-staking-considerations-solo-1-title" />,
-      label: "page-staking-considerations-solo-1-title",
+      label: t("page-staking-considerations-solo-1-title"),
       status: openSource,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-2-title" />,
-      label: "page-staking-considerations-solo-2-title",
+      label: t("page-staking-considerations-solo-2-title"),
       status: audited,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-3-title" />,
-      label: "page-staking-considerations-solo-3-title",
+      label: t("page-staking-considerations-solo-3-title"),
       status: bugBounty,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-4-title" />,
-      label: "page-staking-considerations-solo-4-title",
+      label: t("page-staking-considerations-solo-4-title"),
       status: battleTested,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-5-title" />,
-      label: "page-staking-considerations-solo-5-title",
+      label: t("page-staking-considerations-solo-5-title"),
       status: trustless,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-6-title" />,
-      label: "page-staking-considerations-solo-6-title",
+      label: t("page-staking-considerations-solo-6-title"),
       status: permissionless,
     },
     {
-      // label: <Translation id="page-staking-considerations-pools-6-title" />,
-      label: "page-staking-considerations-pools-6-title",
+      label: t("page-staking-considerations-pools-6-title"),
       status: permissionlessNodes,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-7-title" />,
-      label: "page-staking-considerations-solo-7-title",
+      label: t("page-staking-considerations-solo-7-title"),
       status: multiClient,
     },
     {
-      // label: <Translation id="page-staking-considerations-saas-7-title" />,
-      label: "page-staking-considerations-saas-7-title",
+      label: t("page-staking-considerations-saas-7-title"),
       status: executionDiversity,
     },
     {
-      // label: <Translation id="page-staking-considerations-saas-8-title" />,
-      label: "page-staking-considerations-saas-8-title",
+      label: t("page-staking-considerations-saas-8-title"),
       status: consensusDiversity,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-8-title" />,
-      label: "page-staking-considerations-solo-8-title",
+      label: t("page-staking-considerations-solo-8-title"),
       status: selfCustody,
     },
     {
-      // label: <Translation id="page-staking-considerations-pools-8-title" />,
-      label: "page-staking-considerations-pools-8-title",
+      label: t("page-staking-considerations-pools-8-title"),
       status: liquidityToken,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-9-title" />,
-      label: "page-staking-considerations-solo-9-title",
+      label: t("page-staking-considerations-solo-9-title"),
       status: economical,
     },
   ].filter(({ status }) => !!status)
@@ -288,7 +279,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
       <Box {...PADDED_DIV_STYLE}>
         {/* TODO: Matomo - re-enable */}
         <ButtonLink to={url} /* customEventOptions={matomo} */ width="100%">
-          <Translation id="page-staking-products-get-started" />
+          {t("page-staking-products-get-started")}
         </ButtonLink>
       </Box>
     </Flex>

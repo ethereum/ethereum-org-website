@@ -8,8 +8,7 @@ import {
 import ButtonDropdown from "@/components/ButtonDropdown"
 import Text from "@/components/OldText"
 import OldHeading from "@/components/OldHeading"
-// TODO: Re-enable after i18n implemented
-// import Translation from "@/components/Translation"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
@@ -47,9 +46,7 @@ const IndicatorGroup = ({
         textAlign="center"
         width={{ base: "fit-content", sm: "max-content" }}
       >
-        {/* TODO: Re-enable after i18n implemented */}
-        {/* <Translation id={label} /> */}
-        {label}
+        <Translation id={label} />
       </Text>
     </VStack>
   )
