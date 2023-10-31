@@ -8,7 +8,7 @@ Un compte Ethereum est une entité avec un solde en ether (ETH) qui peut réalis
 
 ## Prérequis {#prerequisites}
 
-Les comptes sont un sujet très accessible pour les débutants, Pour vous aider à mieux comprendre cette page, nous vous recommandons de commencer par lire notre [introduction à Ethereum](/developers/docs/intro-to-ethereum/).
+Pour vous aider à mieux comprendre cette page, nous vous recommandons de commencer par lire notre [introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Types de comptes {#types-of-account}
 
@@ -42,7 +42,7 @@ Les deux types de comptes peuvent :
 
 Les comptes Ethereum comportent quatre champs :
 
-- `nonce` – Compteur qui indique le nombre de transactions envoyées depuis le compte. Cela garantit que les transactions ne sont traitées qu'une seule fois. Dans un compte de contrat, ce nombre représente le nombre de contrats créés par ce compte
+- `nonce` - Il s'agit soit d'un code indiquant le nombre de transactions envoyées à partir d'une adresse émettrice, soit du nombre de contrats créés auxquels vous pouvez avoir accès par le biais de la page dédiée aux contrats et aux adresses Ethereum (Account). Chaque adresse Ethereum (Account) peut être utilisée uniquement à chaque transaction en choisissant un nonce associé au bloc. Le rôle de ce dernier est de rendre impossible les attaques par rejeu, durant lesquelles des transactions signées sur une chaîne, sont réalisées et retransmises de manière continue sur l'autre chaîne.
 - `balance` – le nombre de wei possédés par cette adresse. Le wei est une unité divisionnaire de l'ETH. Il y a 1e+18 wei pour 1 ETH.
 - `codeHash` – ce hash est une référence au _code_ d'un compte dans la machine virtuelle Ethereum (EVM). Les comptes de contrat possèdent des fragments de code qui peuvent réaliser différentes opérations. Ce code EVM est exécuté si le compte reçoit un message. Contrairement aux autres champs, il ne peut pas être modifié. Tous ces fragments de code sont stockés dans une base de données à états, sous leur hachage correspondant, pour une récupération future. Cette valeur de hachage est connue en tant que codeHash. Pour les comptes externes, le champ du codeHash contient le hachage d'une chaîne vide.
 - `storageRoot` – Parfois connu sous le nom de hachage de stockage. Un hash 256 bits du nœud racine d'un arbre de Merkle qui encode le contenu de stockage du compte (une correspondance entre 256 bits entiers), encodé dans un arbre préfixé comme correspondance d'un hach Keccak 256 bits des clés d'entier en 256 bits en des valeurs entières encodées en RLP. Cet arbre encode le hash des contenus stockés de ce compte, et est vide pas défaut.
@@ -119,6 +119,8 @@ Regardez Austin vous guider à travers les fonctions de hachage et les paires de
 <YouTube id="9LtBDy67Tho" />
 
 ## Complément d'information {#further-reading}
+
+- [Comprendre les Comptes Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 

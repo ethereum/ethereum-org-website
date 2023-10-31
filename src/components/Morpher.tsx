@@ -143,7 +143,7 @@ const Morpher = () => {
     <BaseLink
       textDecor="none"
       fontSize="md"
-      color="text"
+      color="body.medium"
       _hover={{ color: "primary.base" }}
       to="/languages/"
     >

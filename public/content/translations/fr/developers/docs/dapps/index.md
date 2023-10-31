@@ -68,15 +68,23 @@ Un contrat intelligent est un code présent sur la blockchain Ethereum qui fonct
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
+**thirdweb _- SDKs dans tous les langages, smart contrats, outils et infrastructure pour le développement web3._**
+
+- [Page d'accueil](https://thirdweb.com/)
+- [Documentation](https://portal.thirdweb.com/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
 ## Complément d'information {#further-reading}
 
+- [Explorez des applications décentralisées](/dapps)
 - [L'Architecture d'une application Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [Le guide 2021 pour les applications décentralisées](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [Qu'est-ce que les applications décentralisées ?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
+- [Dapps populaires](https://www.alchemy.com/dapps) - _Alchemy_
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
 - [Introduction à la pile Ethereum](/developers/docs/ethereum-stack/)
-- [Infrastructures de développement](/developers/docs/frameworks/)
+- [Frameworks de développement](/developers/docs/frameworks/)

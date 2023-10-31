@@ -2,6 +2,7 @@ import { ReactElement, ReactNode } from "react"
 import { NextPage } from "next"
 import { AppProps } from "next/app"
 import type {
+  Author,
   DocsFrontmatter,
   RoadmapFrontmatter,
   StakingFrontmatter,
@@ -134,3 +135,12 @@ export type QuizShareStats = { score: number; total: number }
  * Staking
  */
 export type StakingPage = "solo" | "saas" | "pools"
+
+/**
+ * File contributors
+ */
+export type FileContributorsState = {
+  loading: boolean
+  authors?: Array<Author>
+  error?: unknown
+}
