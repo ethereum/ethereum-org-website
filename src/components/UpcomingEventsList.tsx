@@ -1,13 +1,13 @@
 // Libraries
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { Box } from "@chakra-ui/react"
 
 // Components
 import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
 import InlineLink from "./Link"
-import Translation from "./Translation"
 import { Button } from "./Buttons"
+import Translation from "@/components/Translation"
 
 // Data
 import events from "../data/community-events.json"
@@ -31,9 +31,7 @@ interface IOrderedUpcomingEventType extends ICommunityEventData {
   formattedDetails: string
 }
 
-export interface IProps {}
-
-const UpcomingEventsList: React.FC<IProps> = () => {
+const UpcomingEventsList: React.FC = () => {
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
     Array<IOrderedUpcomingEventType>
