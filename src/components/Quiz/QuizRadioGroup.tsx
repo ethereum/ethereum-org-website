@@ -10,10 +10,7 @@ import {
   useRadioGroup,
   useToken,
 } from "@chakra-ui/react"
-// TODO: Re-enable after intl implemented
-// import { useTranslation } from "gatsby-plugin-react-i18next"
-
-// import Translation from "../Translation"
+import { useTranslation } from "next-i18next"
 
 import type { TranslationKey } from "../../lib/types"
 import type { Question } from "../../lib/interfaces"
@@ -36,7 +33,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
   handleSelection,
   selectedAnswer,
 }) => {
-  // const { t } = useTranslation()
+  const { t } = useTranslation("learn-quizzes")
   const { getRadioProps, getRootProps } = useRadioGroup({
     onChange: handleSelection,
   })
@@ -133,9 +130,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
         fontSize="2xl"
         mb={6}
       >
-        {/* TODO: Re-enable once intl implemented; remove placeholder */}
-        {/* {t(prompt)} */}
-        prompt
+        {t(prompt)}
       </Text>
 
       <Flex direction="column" gap={4}>
@@ -147,9 +142,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
               key={id}
               display={display}
               index={index}
-              // TODO: Re-enable once intl implemented; remove placeholder
-              // label={t(label)}
-              label={label}
+              label={t(label)}
               {...getRadioProps({ value: id })}
             />
           )
@@ -159,13 +152,10 @@ const QuizRadioGroup: React.FC<IProps> = ({
       {showAnswer && (
         <Box mt={5}>
           <Text fontWeight="bold" mt={0} mb={2}>
-            {/* TODO: Re-enable once intl implemented; remove placeholder */}
-            {/* <Translation id="explanation" /> */}
-            Explanation
+            {t("explanation")}
           </Text>
-          {/* TODO: Re-enable once intl implemented; remove placeholder */}
-          {/* <Text m={0}>{t(explanation)}</Text> */}
-          <Text m={0}>{explanation}</Text>
+
+          <Text m={0}>{t(explanation)}</Text>
         </Box>
       )}
     </Flex>

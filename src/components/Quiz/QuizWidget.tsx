@@ -71,7 +71,7 @@ const QuizWidget: React.FC<IProps> = ({
   maxQuestions,
   isStandaloneQuiz = true,
 }) => {
-  const { t } = useTranslation("learn-quizzes")
+  const { t } = useTranslation(["common", "learn-quizzes"])
 
   const [quizData, setQuizData] = useState<Quiz | null>(null)
   const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
