@@ -33,14 +33,17 @@ type ComponentProps = {
   // Prop types
 }
 
-const Component = (props: ComponentProps) => {
+// Destructure props at the declaration and use the name `props` when using the spread operator for the remaining props not specifically needed
+const Component = ({ title, label, ...props }: ComponentProps) => {
   // Component code
 }
 
 // Components using `forwardRef` from the Chakra UI package
-const Component = forwardRef<ComponentProps, "div">((props, ref) => {
-  // Component code
-})
+const Component = forwardRef<ComponentProps, "div">(
+  ({ title, label, ...props }, ref) => {
+    // Component code
+  }
+)
 ```
 
 #### Prop Type Naming Convention
