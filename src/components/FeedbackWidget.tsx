@@ -1,5 +1,5 @@
 // Library imports
-import React, { useState, useEffect, useRef, useMemo } from "react"
+import { useState, useEffect, useRef, useMemo } from "react"
 import {
   Box,
   Button,
@@ -8,9 +8,10 @@ import {
   Icon,
   ScaleFade,
 } from "@chakra-ui/react"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import { MdClose } from "react-icons/md"
 import FocusTrap from "focus-trap-react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 // Component imports
 import Translation from "./Translation"
 import Text from "./OldText"
@@ -71,8 +72,8 @@ interface FeedbackWidgetProps {
   location: string
 }
 const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const { t } = useTranslation("common")
+  const { locale } = useRouter()
 
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
