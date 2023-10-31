@@ -1,7 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { useColorMode } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 
 import { getImage } from "../utils/image"
 import GatsbyImage from "./GatsbyImage"
@@ -9,7 +7,7 @@ import GatsbyImage from "./GatsbyImage"
 export interface IProps {}
 
 const Logo: React.FC<IProps> = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("common")
   const { colorMode } = useColorMode()
   const isDarkTheme = colorMode === "dark"
   const data = useStaticQuery(graphql`
