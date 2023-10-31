@@ -1,5 +1,6 @@
+import { useTranslation } from "next-i18next"
+
 // Libraries
-import React from "react"
 import {
   Icon,
   Center,
@@ -12,11 +13,9 @@ import {
   Box,
   type TabsProps,
 } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 
 // Components
-import Translation from "../../Translation"
 import WalletFilterProfile from "./WalletFilterFeature"
 import WalletFilterPersonas from "./WalletFilterProfile"
 
@@ -78,7 +77,8 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
   ...tabsProps
 }) => {
   const theme = useTheme()
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
+
   return (
     <Tabs
       bg="background.base"
@@ -123,7 +123,7 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
           }}
         >
           <FilterTab eventName="show user personas">
-            <Translation id="page-find-wallet-profile-filters" />
+            {t("page-find-wallet-profile-filters")}
           </FilterTab>
           <FilterTab eventName="show feature filters">
             {t("page-find-wallet-feature-filters")} (
