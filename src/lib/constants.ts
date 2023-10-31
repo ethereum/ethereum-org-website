@@ -7,12 +7,12 @@ export const TRANSLATED_IMAGES_DIR = "/content/translations"
 // i18n
 export const DEFAULT_LOCALE = "en"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
-const BUILD_LANGS = (process.env.BUILD_LANGS || "")
+const BUILD_LOCALES = (process.env.BUILD_LOCALES || "")
   .split(",")
   .filter((item) => item.length > 1)
 export const LOCALES_CODES =
-  BUILD_LANGS.length > 0
-    ? BUILD_LANGS.sort()
+  BUILD_LOCALES.length > 0
+    ? BUILD_LOCALES.sort()
     : i18nConfig.map((lang) => lang.code).sort()
 
 // Site urls
