@@ -50,7 +50,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       second: "numeric",
     })
     setFormattedUTC(`${formattedDate} +UTC`)
-  })
+  }, [dateTimeAsString, locale])
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     // TODO: remove temporalGetValue after i18n is set up

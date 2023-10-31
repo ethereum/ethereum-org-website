@@ -43,7 +43,7 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
           hasError: true,
         })
       })
-  }, [])
+  }, [state])
 
   const isLoading = !state.currentPriceUSD
 

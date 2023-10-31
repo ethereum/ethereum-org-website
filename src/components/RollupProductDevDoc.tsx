@@ -43,9 +43,9 @@ const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {
   return (
     <Box>
       {rollups[rollupType].map(
-        ({ name, noteKey, website, developerDocs, l2beat }) => {
+        ({ name, noteKey, website, developerDocs, l2beat }, idx) => {
           return (
-            <Flex my={4} background="rollupDevDocList">
+            <Flex key={idx} my={4} background="rollupDevDocList">
               <Box p={4} pb={0}>
                 <Box>
                   <Heading

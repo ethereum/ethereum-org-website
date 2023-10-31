@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Box, chakra, Flex } from "@chakra-ui/react"
+import { Link } from "@chakra-ui/next-js"
 import { FaTools } from "react-icons/fa"
 
 // TODO: Figure out "react-select" usage
@@ -78,15 +79,15 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
         Solo validators are expected to <strong>test their setup</strong> and
         operational skills on the Goerli testnet before risking funds. Remember
         it is important to choose a{" "}
-        <a href="/developers/docs/nodes-and-clients/client-diversity/">
+        <Link href="/developers/docs/nodes-and-clients/client-diversity/">
           minority client
-        </a>{" "}
+        </Link>{" "}
         as it improves the security of the network and limits your risk.
       </Text>
       <Text>
         {/* <Translation id="page-staking-launchpad-widget-p2" /> */}
-        If you're comfortable with it, you can set up everything needed from the
-        command line using the Staking Launchpad alone.
+        If you&apos;re comfortable with it, you can set up everything needed
+        from the command line using the Staking Launchpad alone.
       </Text>
       <Box mb={4}>
         <ButtonLink

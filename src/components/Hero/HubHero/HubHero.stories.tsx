@@ -51,6 +51,7 @@ export const HubHero: StoryObj<typeof meta> = {
     heroImgSrc: mockGatsbyImgData,
   },
   render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { t } = useTranslation()
     const { title, header, description, ...rest } = args
 

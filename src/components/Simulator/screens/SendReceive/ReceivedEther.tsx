@@ -54,7 +54,7 @@ export const ReceivedEther: React.FC<IProps> = ({
             }
           : token
       ),
-    [ethPrice]
+    [defaultTokenBalances, ethPrice, ethReceiveAmount]
   )
 
   const tokenBalances = received ? tokensWithEthBalance : defaultTokenBalances

@@ -14,6 +14,7 @@ const MarkdownImage = ({
   width,
   height,
   aspectRatio,
+  alt,
   ...rest
 }: MarkdownImageProps) => {
   const imageAspectRatio = parseFloat(aspectRatio)
@@ -32,6 +33,7 @@ const MarkdownImage = ({
     <Flex as="span" justify="center">
       <Link href={rest.src.toString()} target="_blank" rel="noopener">
         <Image
+          alt={alt}
           width={imageWidth}
           height={imageHeight}
           loading="lazy"

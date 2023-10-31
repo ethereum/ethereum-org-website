@@ -86,6 +86,7 @@ export const ReceiveEther = () => {
         <Box w="fit-content" mx="auto" mb={SPACING} p={3} bg="background.base">
           <Image
             as={GatsbyImage}
+            alt=""
             image={qrImage}
             maxW={QR_SIZE}
             maxH={QR_SIZE}

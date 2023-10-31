@@ -49,7 +49,7 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
   useEffect(() => {
     setStep(0)
     if (!pathId) clearUrlParams(location)
-  }, [pathId])
+  }, [location, pathId])
 
   // Navigation helpers
   const progressStepper = (): void => {
@@ -108,7 +108,7 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
       secondaryText: title,
       Icon,
     }
-  }, [pathId])
+  }, [data, simulator])
 
   const logFinalCta = (): void => {
     trackCustomEvent({

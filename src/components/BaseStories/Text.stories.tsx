@@ -43,8 +43,8 @@ export const Normal: Story = {
     return (
       <VStack w="full">
         <Box>
-          Adjust the viewport to below "md" to see the font size and line height
-          change
+          Adjust the viewport to below &quot;md&quot; to see the font size and
+          line height change
         </Box>
         <Stack>
           {Object.keys(textSizes || {}).map((key, idx) => (
@@ -70,8 +70,8 @@ export const Bold: Story = {
     return (
       <VStack w="full">
         <Box>
-          Adjust the viewport to below "md" to see the font size and line height
-          change
+          Adjust the viewport to below &quot;md&quot; to see the font size and
+          line height change
         </Box>
         <Stack>
           {Object.keys(textSizes || {}).map((key, idx) => (
@@ -96,8 +96,8 @@ export const Italic: Story = {
     return (
       <VStack w="full">
         <Box>
-          Adjust the viewport to below "md" to see the font size and line height
-          change
+          Adjust the viewport to below &quot;md&quot; to see the font size and
+          line height change
         </Box>
         <Stack>
           {Object.keys(textSizes || {}).map((key, idx) => (
@@ -122,8 +122,8 @@ export const Link: StoryObj<typeof ChakraLink> = {
     return (
       <VStack w="full">
         <Box>
-          Adjust the viewport to below "md" to see the font size and line height
-          change
+          Adjust the viewport to below &quot;md&quot; to see the font size and
+          line height change
         </Box>
         <Stack>
           {Object.keys(textSizes || {}).map((key, idx) => (
@@ -146,8 +146,9 @@ export const BodyCopy: Story = {
       <Text>
         Text body normal. Ethereum is open access to digital money and
         data-friendly services for everyone - no matter your background or
-        location. It's a community-built technology behind the cryptocurrency
-        ether (ETH) and thousands of applications you can use today!
+        location. It&apos;s a community-built technology behind the
+        cryptocurrency ether (ETH) and thousands of applications you can use
+        today!
       </Text>
     </Box>
   ),

@@ -81,7 +81,7 @@ export const useCommunityEvents = () => {
       })
     }
     fetchCalendarData()
-  }, [])
+  }, [state])
 
   return state
 }

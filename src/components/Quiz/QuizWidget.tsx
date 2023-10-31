@@ -148,7 +148,12 @@ const QuizWidget: React.FC<IProps> = ({
     setQuizData(quiz)
   }
 
-  useEffect(initialize, [quizKey])
+  useEffect(initialize, [
+    isStandaloneQuiz,
+    maxQuestions,
+    quizKey,
+    statusHandler,
+  ])
 
   const currentQuestionIndex = userQuizProgress.length
   const showResults = currentQuestionIndex === quizData?.questions.length

@@ -58,7 +58,7 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
       setCtaDisabled(false)
     }, BASE_ANIMATION_DELAY_SEC * 1000)
     return () => clearTimeout(timeout)
-  }, [])
+  }, [step])
 
   return (
     <>

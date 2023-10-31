@@ -45,6 +45,7 @@ const mockGatsbyImgData: IGatsbyImageData = {
 
 export const ContentHero: StoryObj = {
   render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { t } = useTranslation()
 
     const buttons: ContentHeroProps["buttons"] = [

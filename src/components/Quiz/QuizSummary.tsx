@@ -45,7 +45,7 @@ const QuizSummary: React.FC<IProps> = ({
       numberOfCorrectAnswers,
       setUserStats,
     })
-  }, [])
+  }, [numberOfCorrectAnswers, quizKey, quizScore, setUserStats])
 
   return (
     <Box w="full" fontSize={["xl", "2xl"]}>
@@ -84,9 +84,7 @@ const QuizSummary: React.FC<IProps> = ({
         overflowX="hidden"
       >
         <Flex>
-          <Text {...valueStyles}>
-            {numberToPercent(ratioCorrect, locale)}
-          </Text>
+          <Text {...valueStyles}>{numberToPercent(ratioCorrect, locale)}</Text>
           <Text {...labelStyles}>
             {/* <Translation id="score" /> */}
             Score

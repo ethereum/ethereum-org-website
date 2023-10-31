@@ -48,7 +48,7 @@ const UpgradeStatus: React.FC<IProps> = ({
       <Heading fontSize="sm" fontWeight="normal" textTransform="uppercase">
         {/* TODO: Re-enable after i18n implemented */}
         {/* <Translation id="consensus-when-shipping" /> */}
-        When's it shipping?
+        When&apos;s it shipping?
       </Heading>
       <Text fontSize="2.5rem" fontWeight="bold" lineHeight="100%">
         {/* TODO: Re-enable after i18n implemented */}

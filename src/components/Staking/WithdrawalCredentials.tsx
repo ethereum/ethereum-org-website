@@ -139,7 +139,7 @@ const WithdrawalCredentials: FC = () => {
         </Text>
       </Flex>
     )
-  }, [isLoading, hasError, validator, longAddress, shortAddress])
+  }, [hasError, validator, longAddress, shortAddress])
 
   return (
     <Flex direction="column" gap={4}>

@@ -60,7 +60,8 @@ export const commonHeadingProps = (id?: string): HeadingProps => ({
 
 const IdAnchor: React.FC<{ id?: string }> = ({ id }) =>
   id ? (
-    <Link href={`#${id}`}
+    <Link
+      href={`#${id}`}
       position="absolute"
       insetInlineEnd="100%"
       aria-label={id.replaceAll("-", " ") + " permalink"}
@@ -83,7 +84,13 @@ export const Heading1 = ({ children, ...rest }: HeadingProps) => (
 )
 
 export const Heading2 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading as="h2" {...commonHeadingProps(id)} fontSize="2rem" mt={16} {...rest}>
+  <OldHeading
+    as="h2"
+    {...commonHeadingProps(id)}
+    fontSize="2rem"
+    mt={16}
+    {...rest}
+  >
     <IdAnchor id={id} />
     {children}
   </OldHeading>
@@ -97,7 +104,13 @@ export const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
 )
 
 export const Heading4 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading as="h4" {...commonHeadingProps(id)} fontSize="xl" fontWeight={600} {...rest}>
+  <OldHeading
+    as="h4"
+    {...commonHeadingProps(id)}
+    fontSize="xl"
+    fontWeight={600}
+    {...rest}
+  >
     <IdAnchor id={id} />
     {children}
   </OldHeading>
@@ -276,7 +289,9 @@ export const reactComponents = {
 /**
  * All base markdown components as default export
  */
-export default {
+const MdComponents = {
   ...htmlElements,
   ...reactComponents,
 }
+
+export default MdComponents

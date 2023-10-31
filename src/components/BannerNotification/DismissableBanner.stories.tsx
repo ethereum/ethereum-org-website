@@ -19,10 +19,9 @@ export const DismissableBannerStory: StoryObj<typeof DismissableBanner> = {
   render: () => {
     const children = <div>{bannerText}</div>
     return (
-      <DismissableBanner
-        children={children}
-        storageKey={dismissableBannerStoryPageKey}
-      />
+      <DismissableBanner storageKey={dismissableBannerStoryPageKey}>
+        {children}
+      </DismissableBanner>
     )
   },
 }

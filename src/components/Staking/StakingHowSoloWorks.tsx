@@ -1,4 +1,6 @@
+/* eslint-disable react/jsx-key */
 import { Center } from "@chakra-ui/react"
+import { Link } from "@chakra-ui/next-js"
 
 import { Image } from "@/components/Image"
 import OrderedList from "@/components/OrderedList"
@@ -30,8 +32,8 @@ const StakingHowSoloWorks: React.FC<IProps> = () => {
   // ]
   const items = [
     <p>
-      Get some hardware: You need to <a href="/run-a-node/">run a node</a> to
-      stake
+      Get some hardware: You need to <Link href="/run-a-node/">run a node</Link>{" "}
+      to stake
     </p>,
     <p>Sync an execution layer client</p>,
     <p>Sync a consensus layer client</p>,

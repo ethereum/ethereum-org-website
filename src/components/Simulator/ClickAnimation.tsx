@@ -28,7 +28,7 @@ export const ClickAnimation: React.FC<IProps> = ({
   useEffect(() => {
     const timeout = setTimeout(() => setVisible(true), delay)
     return () => clearTimeout(timeout)
-  }, [])
+  }, [delay])
   const transition: Transition = {
     duration: 2.5,
     times: [0, 0.25, 0.5],

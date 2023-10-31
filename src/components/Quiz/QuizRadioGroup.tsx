@@ -46,10 +46,10 @@ const QuizRadioGroup: React.FC<IProps> = ({
   const explanation = useMemo<TranslationKey>(() => {
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
-  }, [selectedAnswer])
+  }, [answers, selectedAnswer])
   const isSelectedCorrect = useMemo<boolean>(
     () => correctAnswerId === selectedAnswer,
-    [selectedAnswer]
+    [correctAnswerId, selectedAnswer]
   )
 
   // Custom radio button component
@@ -67,7 +67,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
       if (!showAnswer) return "primary.base"
       if (!isSelectedCorrect) return "error.base"
       return "success.base"
-    }, [state.isChecked, showAnswer, isSelectedCorrect])
+    }, [state.isChecked])
 
     const primaryBaseColor = useToken("colors", "primary.base")
 

@@ -81,7 +81,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
             "fifth",
           ] as const
           return (
-            <ListItem mb={0}>
+            <ListItem key={item.username} mb={0}>
               <LinkBox
                 key={idx}
                 display="flex"

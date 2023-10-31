@@ -116,6 +116,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                     const LabelIcon = item.icon
                     return (
                       <Box
+                        key={itemIdx}
                         borderBottom="1px"
                         borderColor="lightBorder"
                         pt="1.16rem"
@@ -195,7 +196,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                         </SimpleGrid>
                         {item.options.length > 0 && item.showOptions && (
                           <HStack mt={3.5} spacing={2}>
-                            {item.options.map((option) => {
+                            {item.options.map((option, optionIdx) => {
                               const handleClick = () => {
                                 let closeShowOptions = true
 
@@ -237,6 +238,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                               }
                               return (
                                 <Checkbox
+                                  key={optionIdx}
                                   aria-label={option.name}
                                   isChecked={
                                     restProps.filters[option.filterKey!]

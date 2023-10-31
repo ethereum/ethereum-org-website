@@ -146,7 +146,7 @@ const MeetupList: React.FC<IProps> = () => {
           <InfoBanner emoji=":information_source:">
             {/* TODO: add Translation when i18n is set up */}
             {/* <Translation id="page-community-meetuplist-no-meetups" />{" "} */}
-            We don't have any meetups matching this search. Know of one?
+            We don&apos;t have any meetups matching this search. Know of one?
             <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
               {/* TODO: add Translation when i18n is set up */}
               {/* <Translation id="page-community-please-add-to-page" /> */}

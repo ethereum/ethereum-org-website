@@ -75,7 +75,7 @@ const BugBountyPoints: React.FC<IProps> = () => {
           hasError: true,
         })
       })
-  }, [])
+  }, [state])
 
   const isLoading = !state.currentETHPriceUSD
 

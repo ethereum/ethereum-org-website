@@ -7,6 +7,11 @@ import { AnimatePresence, motion } from "framer-motion"
 
 interface IProps extends GridProps, SimulatorNavProps {}
 export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
+  const gridShadow = useColorModeValue(
+    "0 0 7px 0 var(--eth-colors-blackAlpha-800)",
+    "0 0 7px 0 var(--eth-colors-whiteAlpha-800)"
+  )
+
   const { step } = nav
   const ICON_COUNT = 8
   const sharedIconStyles = {
@@ -44,10 +49,7 @@ export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
             transitionDuration="0.3s"
             bg="body.base"
             borderColor="body.base"
-            boxShadow={useColorModeValue(
-              "0 0 7px 0 var(--eth-colors-blackAlpha-800)",
-              "0 0 7px 0 var(--eth-colors-whiteAlpha-800)"
-            )}
+            boxShadow={gridShadow}
             _hover={{
               outline: "2px solid var(--eth-colors-primary-hover)",
               outlineOffset: "2px",
