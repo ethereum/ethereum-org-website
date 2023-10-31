@@ -9,10 +9,10 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
 
 // Components
-import Link, { BaseLink } from "./Link"
-// import Translation from "./Translation"
+import { BaseLink } from "./Link"
 
 // Utils
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -39,6 +39,7 @@ export interface IProps extends ButtonProps {
 }
 
 const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
+  const { t } = useTranslation("common")
   const handleClick = (
     e: MouseEvent<HTMLElement>,
     item: ListItem,
@@ -55,6 +56,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
       callback(idx)
     }
   }
+
   return (
     <Menu matchWidth>
       <MenuButton
@@ -64,8 +66,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
         _active={{ bg: "transparent" }}
         {...rest}
       >
-        {/* <Translation id={list.text} /> */}
-        {list.text}
+        {t(list.text)}
       </MenuButton>
       <MenuList
         py={2}
@@ -105,14 +106,12 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
                   bg: "dropdownBackgroundHover",
                 }}
               >
-                {/* <Translation id={text} /> */}
-                {text}
+                {t(text)}
               </MenuItem>
             </BaseLink>
           ) : (
             <MenuItem key={idx} onClick={(e) => handleClick(e, item, idx)}>
-              {/* <Translation id={text} /> */}
-              {text}
+              {t(text)}
             </MenuItem>
           )
         })}
