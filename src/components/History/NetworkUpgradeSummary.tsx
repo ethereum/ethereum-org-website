@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react"
 import { Flex, Stack, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 
 // Components
 import Emoji from "../Emoji"
 import InlineLink from "../Link"
-import Translation from "@/components/Translation"
 
 // Utils
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
@@ -25,6 +25,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   const [formattedUTC, setFormattedUTC] = useState("")
   const { locale } = useRouter()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
+  const { t } = useTranslation("page-history")
 
   const {
     dateTimeAsString,
@@ -55,7 +56,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
     return (
       <Flex>
         <Emoji fontSize="sm" mr={2} text=":bricks:" />
-        <Translation id={translationKey} />:{" "}
+        {t(translationKey)}:{" "}
         <InlineLink to={`${explorerUrl}${number}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </InlineLink>
@@ -92,7 +93,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       {ethPriceInUSD && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":money_bag:" />
-          <Translation id="page-history-eth-price" />:{" "}
+          {t("page-history-eth-price")}:{" "}
           {new Intl.NumberFormat(localeForStatsBoxNumbers, {
             style: "currency",
             currency: "USD",
@@ -103,7 +104,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
           <InlineLink to={waybackLink}>
-            <Translation id="page-history-ethereum-org-wayback" />
+            {t("page-history-ethereum-org-wayback")}
           </InlineLink>
         </Flex>
       )}
