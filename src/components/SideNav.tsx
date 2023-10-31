@@ -1,12 +1,11 @@
-import React, { useState, useEffect, ReactNode } from "react"
+import { useState, useEffect, ReactNode } from "react"
 import { Box, HStack, Icon } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
 
 import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Link, { BaseLink, IProps as ILinkProps } from "./Link"
-import Translation from "./Translation"
+import { BaseLink, IProps as ILinkProps } from "./Link"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
@@ -88,12 +87,12 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
         <LinkContainer>
           {item.to && (
             <SideNavLink to={item.to} isPartiallyActive={false}>
-              <Translation id={item.id} />
+              {t(item.id)}
             </SideNavLink>
           )}
           {!item.to && (
             <Box w="full" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
-              <Translation id={item.id} />
+              {t(item.id)}
             </Box>
           )}
           <Box
@@ -128,7 +127,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
     <Box>
       <LinkContainer>
         <SideNavLink to={item.to} isPartiallyActive={false}>
-          <Translation id={item.id} />
+          {t(item.id)}
         </SideNavLink>
       </LinkContainer>
     </Box>
@@ -144,7 +143,7 @@ export interface IProps {
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
 const SideNav: React.FC<IProps> = ({ path }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-developers-docs")
 
   return (
     <Box
@@ -163,7 +162,7 @@ const SideNav: React.FC<IProps> = ({ path }) => {
       borderRight="1px solid"
       borderRightColor="border"
       display={{ base: "none", lg: "block" }}
-      aria-label={t("nav-developers-docs")}
+      aria-label={t("common:nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} />
