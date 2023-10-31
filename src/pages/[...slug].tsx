@@ -1,6 +1,7 @@
 import { ReactElement } from "react"
 import { ParsedUrlQuery } from "querystring"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 import { join } from "path"
@@ -124,6 +125,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   return {
     props: {
+      ...(await serverSideTranslations(locale!, "common")), // load i18n required namespaces
       mdxSource,
       originalSlug,
       frontmatter,
