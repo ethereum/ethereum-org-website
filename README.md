@@ -1673,6 +1673,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/costgallo"><img src="https://avatars.githubusercontent.com/u/49433698?v=4?s=100" width="100px;" alt="Costanza"/><br /><sub><b>Costanza</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=costgallo" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/joaolago1113"><img src="https://avatars.githubusercontent.com/u/22820692?v=4?s=100" width="100px;" alt="joao"/><br /><sub><b>joao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=joaolago1113" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://p2p.org"><img src="https://avatars.githubusercontent.com/u/3310192?v=4?s=100" width="100px;" alt="Eugene"/><br /><sub><b>Eugene</b></sub></a><br /><a href="#content-rgb2hsl" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.danielgorbe.com"><img src="https://avatars.githubusercontent.com/u/36860942?v=4?s=100" width="100px;" alt="Dániel Görbe"/><br /><sub><b>Dániel Görbe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=g0rbe" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
