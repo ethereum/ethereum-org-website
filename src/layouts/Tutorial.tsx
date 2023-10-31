@@ -2,6 +2,7 @@
 import {
   Badge,
   Box,
+  type BoxProps,
   chakra,
   Divider,
   Flex,
@@ -50,7 +51,7 @@ import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
 
-const ContentContainer = (props) => {
+const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
   const borderColor = useToken("colors", "primary.base")
 
@@ -203,7 +204,7 @@ export const tutorialsComponents = {
   StyledDivider,
   YouTube,
 }
-interface IProps extends MdPageContent, ChildOnlyProp {
+interface TutorialLayoutProps extends MdPageContent, ChildOnlyProp {
   frontmatter: TutorialFrontmatter
   timeToRead: number
 }
@@ -213,7 +214,7 @@ export const TutorialLayout = ({
   frontmatter,
   tocItems,
   timeToRead,
-}: IProps) => {
+}: TutorialLayoutProps) => {
   const { asPath: relativePath} = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
   const borderColor = useToken("colors", "border")

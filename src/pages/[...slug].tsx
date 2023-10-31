@@ -33,6 +33,7 @@ import {
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
+import { dateToString } from "@/lib/utils/date"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -120,14 +121,17 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   let layout = frontmatter.template
 
   if (!frontmatter.template) {
-    layout = params.slug.join('/').includes("developers/docs") ? "docs" : "static"
-  }
+    layout = 'static'
 
-  if (params.slug.join('/').includes("developers/tutorials")) {
-    layout = 'tutorial'
-    // Add published property to Frontmatter type
-    if ('published' in frontmatter) {
-      (frontmatter as { published?: string }).published = new Date(frontmatter.published).toISOString().split('T')[0]
+    if (params.slug.includes('docs')) {
+      layout = 'docs'
+    }
+
+    if (params.slug.includes('tutorials')) {
+      layout = 'tutorial'
+      if ('published' in frontmatter) {
+        frontmatter.published = dateToString(frontmatter.published)
+      }
     }
   }
 
