@@ -27,10 +27,9 @@ const FeedbackCard: React.FC<IProps> = ({
 }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   // const surveyUrl = useSurvey(feedbackSubmitted)
-  const router = useRouter()
-  const { slug } = router.query
+  const { asPath } = useRouter()
 
-  const isTutorial = slug?.includes("tutorials")
+  const isTutorial = asPath?.includes("tutorials")
 
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {

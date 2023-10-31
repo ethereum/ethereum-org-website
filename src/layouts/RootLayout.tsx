@@ -42,7 +42,6 @@ export const RootLayout = ({
 
   return (
     <Container mx="auto" maxW={oldTheme.variables.maxPageWidth}>
-      {/* TODO: get proper path value after setting i18n */}
       <Nav path={asPath} />
 
       <TranslationBanner

@@ -1,16 +1,17 @@
 import { useState, useEffect, useRef } from "react"
 import ClipboardJS from "clipboard"
-import { Box } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
+
+import Emoji from "@/components/Emoji"
+import Translation from "@/components/Translation"
 
 export interface IProps {
-  text: string
+  address: string
   inline?: boolean
-  children: (isCopied: boolean) => React.ReactNode
 }
 
 const CopyToClipboard: React.FC<IProps> = ({
-  children,
-  text,
+  address,
   inline = false,
 }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false)
@@ -25,7 +26,7 @@ const CopyToClipboard: React.FC<IProps> = ({
     }
 
     const clipboard = new ClipboardJS(targetEl.current!, {
-      text: () => text,
+      text: () => address,
     })
 
     clipboard.on("success", (e) => {
@@ -40,11 +41,36 @@ const CopyToClipboard: React.FC<IProps> = ({
       clipboard.destroy()
       clearTimeout(timer.current)
     }
-  }, [text])
+  }, [address])
 
   return (
     <Box ref={targetEl} display={inline ? "inline" : "block"} cursor="pointer">
-      {children(isCopied)}
+        <Box
+          color="primary.base"
+          cursor="pointer"
+          overflow="hidden"
+          textOverflow="ellipsis"
+          fontFamily="monospace"
+          bg="ednBackground"
+          px={1}
+          fontSize="sm"
+          _hover={{
+            bg: "primary100",
+          }}
+        >
+          <Text
+            as={Translation}
+            textTransform="uppercase"
+            id="comp-tutorial-metadata-tip-author"
+          />{" "}
+          {address} {isCopied && <Translation id="copied" />}
+          {isCopied && <Emoji
+              fontSize="sm"
+              ml={2}
+              mr={2}
+              text=":white_check_mark:"
+            />}
+        </Box>
     </Box>
   )
 }

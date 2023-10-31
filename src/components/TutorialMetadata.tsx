@@ -1,18 +1,18 @@
 import React from "react"
 import { Badge, Box, Flex, HStack } from "@chakra-ui/react"
 
-import Emoji from "./Emoji"
-import InlineLink from "./Link"
-import TutorialTags from "./TutorialTags"
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+import InlineLink from "@/components/Link"
+import TutorialTags from "@/components/TutorialTags"
 
-// TODO: Implement after intl
-// import Translation from "./Translation"
 // import { Lang } from "../utils/languages"
 // import { getLocaleTimestamp } from "../utils/time"
 import type { TranslationKey } from "@/lib/types"
+import { TutorialFrontmatter } from "@/lib/interfaces"
 
-export interface IProps {
-  frontmatter: any
+export type TutorialMetadataProps = {
+  frontmatter: TutorialFrontmatter
   timeToRead: number
 }
 
@@ -26,13 +26,14 @@ export const getSkillTranslationId = (skill: Skill): TranslationKey =>
   `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 
-const TutorialMetadata: React.FC<IProps> = ({ frontmatter, timeToRead }) => {
+const TutorialMetadata = ({ frontmatter, timeToRead }: TutorialMetadataProps) => {
   // TODO: Implement after intl
   // const { language } = useI18next()
 
   const hasSource = frontmatter.source && frontmatter.sourceUrl
   const published = frontmatter.published
   const author = frontmatter.author
+  const address = frontmatter.address
 
   return (
     <Flex
@@ -95,6 +96,20 @@ const TutorialMetadata: React.FC<IProps> = ({ frontmatter, timeToRead }) => {
           {/* <Translation id="comp-tutorial-metadata-minute-read" /> */}
           minute read
         </Box>
+      </HStack>
+      <HStack
+        mb={6}
+        flexWrap="wrap"
+        mt={-4}
+        fontSize="sm"
+        color="text300"
+        justifyContent="flex-start"
+      >
+        {address && (
+          <Flex flexWrap="wrap" w="full" mr={4}>
+            <CopyToClipboard address={frontmatter.address!} />
+          </Flex>
+        )}
       </HStack>
     </Flex>
   )

@@ -27,7 +27,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/desci",
     "/developers/tutorials/a-developers-guide-to-ethereum-part-one",
     "/developers/tutorials/all-you-can-cache",
-    "/developrs/tutorials/calling-a-smart-contract-from-javascript",
+    "/developers/tutorials/calling-a-smart-contract-from-javascript",
     "/developers/tutorials/create-and-deploy-a-defi-app",
     "/developers/tutorials/deploying-your-first-smart-contract",
     "/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet",
