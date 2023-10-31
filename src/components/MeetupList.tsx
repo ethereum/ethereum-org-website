@@ -17,8 +17,7 @@ import InfoBanner from "@/components/InfoBanner"
 import InlineLink, { BaseLink } from "@/components/Link"
 import Input from "@/components/Input"
 import Text from "@/components/OldText"
-// TODO: add Translation when i18n is set up
-// import Translation from "./Translation"
+import Translation from "@/components/Translation"
 
 import meetups from "@/data/community-meetups.json"
 
@@ -144,13 +143,9 @@ const MeetupList: React.FC<IProps> = () => {
       <Box aria-live="assertive" aria-atomic>
         {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
-            {/* TODO: add Translation when i18n is set up */}
-            {/* <Translation id="page-community-meetuplist-no-meetups" />{" "} */}
-            We don't have any meetups matching this search. Know of one?
+            <Translation id="page-community-meetuplist-no-meetups" />{" "}
             <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
-              {/* TODO: add Translation when i18n is set up */}
-              {/* <Translation id="page-community-please-add-to-page" /> */}
-              Please add it to this page!
+              <Translation id="page-community-please-add-to-page" />
             </InlineLink>
           </InfoBanner>
         )}
