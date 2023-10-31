@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Filter med funktioner",
   "page-find-wallet-footnote-1": "Plånböckerna på den här sidan är inte officiella rekommendationer utan tillhandahålls endast i informationssyfte.",
   "page-find-wallet-footnote-2": "Beskrivningarna har tillhandahållits av plånboksprojekten själva.",
-  "page-find-wallet-footnote-3": "Vi lägger till produkter på denna sida baserat på kriterier i vår <a href=\"/contributing/adding-products/\">listningspolicy</a>. Om du vill att vi ska lägga till en plånbok kan du <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">skapa ett problem i GitHub</a>.",
+  "page-find-wallet-footnote-3": "Vi lägger till produkter på denna sida baserat på kriterier i vår <a href=\"/contributing/adding-wallets/\">listningspolicy</a>. Om du vill att vi ska lägga till en plånbok kan du <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">skapa ett problem i GitHub</a>.",
   "page-find-wallet-mobile": "Mobil",
   "page-find-wallet-mobile-desc": "Plånböcker med mobilappar",
   "page-find-wallet-desktop": "Skrivbord",
