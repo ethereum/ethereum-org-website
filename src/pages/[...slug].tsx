@@ -125,6 +125,10 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   if (params.slug.join('/').includes("developers/tutorials")) {
     layout = 'tutorial'
+    // Add published property to Frontmatter type
+    if ('published' in frontmatter) {
+      (frontmatter as { published?: string }).published = new Date(frontmatter.published).toISOString().split('T')[0]
+    }
   }
 
   return {
