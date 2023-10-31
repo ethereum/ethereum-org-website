@@ -1,7 +1,7 @@
 // Libraries
 import { useEffect, useState } from "react"
 import { Icon } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 
 // Data
 import walletFilterData from "../../../../data/wallets/wallet-filters"
@@ -56,7 +56,7 @@ export const useWalletFilterFeature = ({
   filters,
   updateFilterOptions,
 }: Omit<WalletFilterFeatureProps, "updateFilterOption">) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
   const [filterOptions, setFilterOptions] = useState<FilterOptionType[]>([
     {
       title: t("page-find-wallet-device"),
