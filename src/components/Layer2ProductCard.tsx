@@ -1,8 +1,6 @@
 // Libraries
-import React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Center, Flex, Heading, Image } from "@chakra-ui/react"
+import { Box, Center, Flex, Heading } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
 
 // Components
 import { ButtonLink } from "./Buttons"
@@ -37,7 +35,7 @@ const Layer2ProductCard: React.FC<IProps> = ({
   tokenLists,
   ecosystemPortal,
 }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-layer-2")
 
   return (
     <Flex
