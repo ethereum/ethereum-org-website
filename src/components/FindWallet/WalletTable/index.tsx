@@ -1,6 +1,5 @@
 // Libraries
-import React, { ReactNode } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { ReactNode } from "react"
 import Select from "react-select"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
@@ -22,6 +21,7 @@ import {
   Th,
   Tr,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
 
 // Components
 import InlineLink, { IProps as LinkProps } from "../../Link"
@@ -320,7 +320,7 @@ export interface WalletTableProps {
 }
 
 const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
   const {
     featureDropdownItems,
     filteredFeatureDropdownItems,
