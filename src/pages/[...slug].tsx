@@ -24,8 +24,6 @@ import {
   RoadmapLayout,
   upgradeComponents,
   UpgradeLayout,
-  // eventComponents,
-  // EventLayout,
   docsComponents,
   DocsLayout,
 } from "@/layouts"
@@ -40,7 +38,6 @@ const layoutMapping = {
   staking: StakingLayout,
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
-  // event: EventLayout,
   docs: DocsLayout,
 } as const
 
@@ -50,7 +47,6 @@ const componentsMapping = {
   staking: stakingComponents,
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
-  // event: eventComponents,
   docs: docsComponents,
 } as const
 

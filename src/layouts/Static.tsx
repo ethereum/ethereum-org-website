@@ -1,4 +1,5 @@
 import { Box, Flex, type HeadingProps, Icon, chakra } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
@@ -13,6 +14,7 @@ import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { CONTENT_DIR } from "@/lib/constants"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -67,9 +69,14 @@ export const StaticLayout: React.FC<IProps> = ({
   tocItems,
   lastUpdatedDate,
 }) => {
-  // const { language } = useI18next()
-  const language = "en"
+  const { locale } = useRouter()
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
+
+  const repo =
+    process.env.NEXT_PUBLIC_GITHUB_REPO ||
+    "ethereum/ethereum-org-website"
+  const baseEditPath = `https://github.com/${repo}/tree/dev/${CONTENT_DIR}/`
+  const absoluteEditPath = baseEditPath + slug + "index.md"
 
   return (
     <Box w="full" ml={2}>
@@ -104,17 +111,16 @@ export const StaticLayout: React.FC<IProps> = ({
           <Breadcrumbs slug={slug} mb="8" />
           <Text
             color="text200"
-            dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
+            dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
           >
             {/* TODO: add Translation when i18n is set up  */}
             {/* <Translation id="page-last-updated" />:{" "} */}
             Page last updated:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate!)}
+            {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </Text>
           <TableOfContents
             position="relative"
             zIndex={2}
-            // editPath={absoluteEditPath}
             items={tocItems}
             isMobile
             maxDepth={frontmatter.sidebarDepth || 2}
@@ -125,7 +131,7 @@ export const StaticLayout: React.FC<IProps> = ({
           <FeedbackCard isArticle />
         </Box>
         <TableOfContents
-          // editPath={absoluteEditPath}
+          editPath={absoluteEditPath}
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth || 2}
           hideEditButton={!!frontmatter.hideEditButton}
