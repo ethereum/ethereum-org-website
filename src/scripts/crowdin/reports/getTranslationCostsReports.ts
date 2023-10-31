@@ -1,6 +1,6 @@
 import { findFileIdsByPaths } from "../utils"
 import { fetchTranslationCostsReport } from "./reportsHelpers"
-import getCrowdinCode from "../../../lib/utils/getCrowdinCode"
+import { getCrowdinCode } from "../utils"
 
 async function getTranslationCostsReports(translatedMarkdownPaths) {
   for (let lang in translatedMarkdownPaths) {
@@ -13,11 +13,11 @@ async function getTranslationCostsReports(translatedMarkdownPaths) {
     const crowdinLangCode = await getCrowdinCode(lang)
 
     for (const fileId of fileIds) {
-      if (fileId !== null) {
-        await fetchTranslationCostsReport(fileId, crowdinLangCode)
-      } else {
+      if (!fileId) {
         console.log("Error: No file ID found for one of the paths")
+        continue
       }
+      await fetchTranslationCostsReport(fileId, crowdinLangCode)
     }
   }
 }
