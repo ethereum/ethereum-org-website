@@ -223,7 +223,7 @@ Décomposons ce test en parties :
 
 Nous sommes prêts à allumer la bête :
 
-![Un test réussi](test-one.png)
+![Un test réussi](./test-one.png)
 
 Alors le test fonctionne, mais... il y a encore des choses à améliorer. La fonction `balanceOf()` retournera toujours 99999. Nous pouvons l'améliorer en spécifiant un portefeuille pour lequel la fonction devrait retourner quelque chose - tout comme un contrat réel :
 

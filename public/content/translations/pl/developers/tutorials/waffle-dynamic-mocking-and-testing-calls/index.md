@@ -222,7 +222,7 @@ Podzielmy ten test na części:
 
 Jesteśmy gotowi wystrzelić z grubej rury:
 
-![Jeden test zaliczony](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-one.png)
+![Jeden test zaliczony](././test-one.png)
 
 Tak więc test działa, ale... wciąż jest trochę miejsca na ulepszenia. Funkcja `balanceOf()` zawsze zwróci 99999. Możemy ją ulepszyć poprzez określenie portfela, dla którego funkcja powinna zwracać coś — tak jak prawdziwy kontrakt:
 
@@ -248,7 +248,7 @@ it("returns true if the wallet has at least 1000001 tokens", async () => {
 
 Uruchomiłeś testy...
 
-![Zaliczenie dwóch testów](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-two.png)
+![Zaliczenie dwóch testów](./test-two.png)
 
 ...i tu jesteś! Nasza umowa wydaje się działać zgodnie z zamierzeniem :)
 
@@ -278,7 +278,7 @@ it("checks if contract called balanceOf with certain wallet on the ERC20 token",
 
 Sprawdźmy, czy testy są poprawne:
 
-![Zaliczenie trzech testów](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-three.png)
+![Zaliczenie trzech testów](./test-three.png)
 
 Świetnie, wszystkie testy są zielone.
 
