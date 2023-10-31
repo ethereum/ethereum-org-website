@@ -22,12 +22,13 @@ Les transactions requièrent des frais et doivent être incluses dans un bloc va
 
 Une transaction soumise comprend les informations suivantes :
 
+- `depuis` - l'adresse de l'expéditeur qui signera la transaction. On aura donc une adresse émettrice, car les contrats et les adresses (Accounts) ne vous permettront pas d'envoyer des transactions.
 - `recipient` : adresse de réception (S'il s'agit d'un compte externe, la transaction va transférer la valeur. S'il s'agit d'un compte de contrat, la transaction exécutera le code du contrat.)
 - `signature` : identifiant de l'expéditeur. Cette signature est générée lorsque la clé privée de l'expéditeur signe la transaction, et confirme que l'expéditeur a autorisé cette transaction.
-- `nonce` - un compteur d'incrémentation séquentielle qui indique le numéro de transaction du compte
-- `value` : quantité d'ETH à transférer de l'expéditeur au destinataire (en WEI, une dénomination de l'ETH).
-- `data` : champ facultatif destiné à inclure des données arbitraires.
-- `gasLimit` : Quantité maximum d’unités de gaz pouvant être consommée par la transaction. Les unités de gaz représentent les étapes de calcul.
+- `nonce` -, il s'agit d'une machine à travers laquelle un nombre maximum d'essais consécutifs est réalisé, il qualifie aussi le numéro de transactions dans la liste des transactions sortantes depuis votre adresse
+- `valeur` - montants de l'Ether (ETH) à transférer de l'expéditeur au destinataire (libellé en WEI parallèlement à la valeur de l'Ether, qui atteint les 1e+18wei)
+- `input data` – champ facultatif permettant d'inclure des données arbitraires
+- `gasLimit` : Quantité maximum d’unités de gaz pouvant être consommée par la transaction. La [machine virtuelle d'Ethereum (EVM)](/developers/docs/evm/opcodes) donne une estimation de la quantité de gaz (unité virtuelle) nécessaire à une opération, ce qui permet de représenter les coûts informatiques d'une opération sur le réseau
 - `maxPriorityFeePerGas` : la quantité maximale de gaz à inclure comme pourboire pour le validateur
 - `maxFeePerGas` : montant maximum de gaz prêt à être payé pour la transaction (y compris `baseFeePerGas` et `maxPriorityFeePerGas`)
 
@@ -98,7 +99,7 @@ Exemple de réponse :
 }
 ```
 
-- `raw` est la transaction signée sous forme de préfixe de longueur récursive (RLP)
+- dans la Structure de Données Récursives (SDR), la transaction signée prend essentiellement la forme d'une séquence d'instructions codées`` [](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` est la transaction signée sous la forme JSON
 
 Grâce au hachage de la signature, il est possible de prouver de façon cryptographique que la transaction provient de l'expéditeur et qu'elle a été soumise au réseau.
@@ -162,10 +163,10 @@ Tout gaz non utilisé dans une transaction est remboursé sur le compte de l'uti
 
 Voici ce qui se passe une fois qu'une transaction a été soumise :
 
-1. Quand vous envoyez une transaction, la cryptographie génère un hachage de transaction : `0x97d99bc77292111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
-2. La transaction est ensuite diffusée sur le réseau et incluse dans un groupe comportant de nombreuses autres transactions.
+1. Le hash de la transaction vient d'être généré grâce aux fonctions de hachage (suite d'opérations mathématiques et cryptographiques) : `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
+2. La transaction est ensuite diffusée sur le réseau et ajoutée à un pool de transactions composé de toutes les autres transactions réseau en attente.
 3. Un validateur doit sélectionner votre transaction et l'inclure dans un bloc pour la vérifier et la considérer comme « réussie ».
-4. Au fur et à mesure que le temps passe, le bloc contenant votre transaction sera mis à niveau vers « justifié » puis « finalisé ». Grâce à ces mises à niveau, vous êtes davantage assuré que votre transaction a été réussie et qu'elle ne sera jamais altérée. Une fois un bloc « finalisé », il ne pourrait être changé que par une attaque qui coûterait plusieurs milliards de dollars.
+4. Au fur et à mesure que le temps passe, le bloc contenant votre transaction sera mis à niveau vers « justifié » puis « finalisé ». Grâce à ces mises à niveau, vous êtes davantage assuré que votre transaction a été réussie et qu'elle ne sera jamais altérée. Une fois qu'un bloc est "finalisé", il ne peut plus être modifié par une attaque au niveau du réseau qui coûterait plusieurs milliards de dollars.
 
 ## Démonstration visuelle {#a-visual-demo}
 
@@ -175,7 +176,7 @@ Regardez Austin vous guider à travers les transactions, le gaz et le minage.
 
 ## Enveloppe de transaction saisie {#typed-transaction-envelope}
 
-Ethereum avait à l'origine un unique format pour les transactions. Chaque transaction contenait une nonce, le prix du gaz, la limite de gaz, l'adresse de destination, la valeur, les données, v, r et s. Ces champs sont encodés en RLP, pour ressembler à ceci :
+Ethereum avait à l'origine un unique format pour les transactions. Chaque transaction contenait une nonce, le prix du gaz, la limite de gaz, l'adresse de destination, la valeur, les données, v, r et s. Il s'agit de champs d'application [d'un RLP](/developers/docs/data-structures-and-encoding/rlp/), qui pourraient ressembler à ceci :
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 

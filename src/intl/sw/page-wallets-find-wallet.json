@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Chujio za huduma",
   "page-find-wallet-footnote-1": "Pochi zilizoorodheshwa hapa sio ridhaa rasmi, bali kwa kutoa taarifa peke yake.",
   "page-find-wallet-footnote-2": "Maelezo yametolewa na kazi za pochi zenyewe.",
-  "page-find-wallet-footnote-3": "Tunaongeza bidhaa kwenye ukurasa huu kwa kutazama msingi wa <a href=\"/contributing/adding-products/\">sera za orodha</a>. Kama ungependa tuongeze pochi, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">andika pendekezo kwenye GitHub</a>.",
+  "page-find-wallet-footnote-3": "Tunaongeza bidhaa kwenye ukurasa huu kwa kutazama msingi wa <a href=\"/contributing/adding-wallets/\">sera za orodha</a>. Kama ungependa tuongeze pochi, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">andika pendekezo kwenye GitHub</a>.",
   "page-find-wallet-mobile": "Rununu",
   "page-find-wallet-mobile-desc": "Pochi zenye programu za simu",
   "page-find-wallet-desktop": "Tarakilishi",
