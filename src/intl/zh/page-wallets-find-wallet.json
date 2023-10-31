@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "功能筛选",
   "page-find-wallet-footnote-1": "本页所列钱包并非官方认可，仅供参考。",
   "page-find-wallet-footnote-2": "钱包描述由钱包项目自行提供。",
-  "page-find-wallet-footnote-3": "我们根据我们<a href=\"/contributing/adding-products/\">上架政策</a>中的标准将产品添加到本页面。如果你想要添加钱包，<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">请在 GitHub 中提出问题</a>。",
+  "page-find-wallet-footnote-3": "我们根据我们<a href=\"/contributing/adding-wallets/\">上架政策</a>中的标准将产品添加到本页面。如果你想要添加钱包，<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">请在 GitHub 中提出问题</a>。",
   "page-find-wallet-mobile": "移动版",
   "page-find-wallet-mobile-desc": "带有移动应用程序的钱包",
   "page-find-wallet-desktop": "桌面",

@@ -53,7 +53,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     },
   })
 
-  const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
+  const lastUpdatedDate = getLastModifiedDate(tutorialPath, locale!)
   const lastDeployDate = await getLastDeployDate()
 
   return {

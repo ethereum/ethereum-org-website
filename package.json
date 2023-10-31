@@ -6,11 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.0",
+    "@crowdin/crowdin-api-client": "^1.25.0",
     "@docsearch/react": "^3.5.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -39,7 +41,9 @@
     "eslint": "^8.45.0",
     "eslint-config-next": "^14.0.0",
     "image-size": "^1.0.2",
+    "minimist": "^1.2.8",
     "polished": "^4.2.2",
+    "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
     "unified": "^10.0.0",
     "unist-util-visit": "^5.0.0"

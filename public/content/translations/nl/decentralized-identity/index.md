@@ -17,7 +17,7 @@ Traditionele identiteitsbeheersystemen hebben echter lang vertrouwd op gecentral
 
 Om deze problemen op te lossen, hebben we gedecentraliseerde identiteitssystemen gebouwd op openbare blockchains zoals Ethereum. Gedecentraliseerde identiteit stelt individuen in staat hun identiteitsgerelateerde informatie te beheren. Met gedecentraliseerde identiteitsoplossingen kunt _u_ zelf uw identificatiekenmerken creëren en houdt u zelf uw certificaten bij, zonder te vertrouwen op centrale autoriteiten, zoals dienstverleners of overheden.
 
-## Wat is identiteit {#what-is-identity}
+## Wat is identiteit? {#what-is-identity}
 
 Identiteit betekent iemands gevoel voor zichzelf, gedefinieerd door zijn unieke kenmerken. Identiteit verwijst naar het zijn van een _individu_, d.w.z. een afzonderlijke menselijke entiteit. Identiteit zou ook kunnen verwijzen naar andere niet-menselijke entiteiten, zoals een organisatie of autoriteit.
 
@@ -157,6 +157,7 @@ Er zijn veel ambitieuze projecten die Ethereum als basis voor gedecentraliseerde
 
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _Een gedecentraliseerd benamingssysteem voor on-chain, machine-leesbare identificatiekenmerken, zoals Ethereum-portemonnee-adressen, content hashes en metadata._
 - **[SpruceID](https://www.spruceid.com/)** - _Een gedecentraliseerd identiteitsproject dat gebruikers in staat stelt om hun digitale identiteit te beheren met Ethereum-accounts en ENS-profielen, in plaats van te vertrouwen op diensten van derden._
+- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Een gedecentraliseerd grootboek/protocol voor het maken van on-chain of off-chain attestaties over wat dan ook._
 - **[Bewijs van Menselijkheid (PoH)](https://www.proofofhumanity.id)** - _Bewijs van Menselijkheid (of Proof of Humanity, PoH) is een sociaal identiteitsverificatiesysteem gebouwd op Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Een gedecentraliseerd, open-source sociaal identiteitsnetwerk dat probeert de identiteitsverificatie te hervormen door het creëren en analyseren van een sociale grafiek._
 - **[Proof-of-personhood-paspoort](https://proofofpersonhood.com/)** - _Een gedecentraliseerde digitale identiteitsaggregator._

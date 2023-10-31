@@ -175,7 +175,7 @@ export const walletOnboardingSimData: SimulatorData = {
         ),
       },
       {
-        header: "Thats it! Welcome to Ethereum 🎉",
+        header: "That's it! Welcome to Ethereum 🎉",
         description: (
           <Text>
             In the next lesson we'll learn how to use your new account to
