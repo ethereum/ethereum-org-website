@@ -9,9 +9,9 @@ import {
   Heading,
   Icon,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
 
 // Components
-import Translation from "@/components/Translation"
 import Text from "./OldText"
 
 // Utils
@@ -38,6 +38,7 @@ const ExpandableCard: React.FC<IProps> = ({
   eventName = "",
 }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const { t } = useTranslation("common")
   const matomo = {
     eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
@@ -123,7 +124,7 @@ const ExpandableCard: React.FC<IProps> = ({
                 mt="auto"
                 mb="auto"
               >
-                <Translation id={isVisible ? "less" : "more"} />
+                {t(isVisible ? "less" : "more")}
               </Text>
             </Box>
           </AccordionButton>
