@@ -67,7 +67,7 @@ Tout comme un distributeur automatique peut remplacer un employé dans une bouti
 
 ## Sans autorisation {#permissionless}
 
-N'importe qui peut rédiger un contrat intelligent et le déployer sur le réseau. Il vous suffit d'apprendre à coder dans un [langage de contrat intelligent](/developers/docs/smart-contracts/languages/) et de disposer de suffisamment d'ETH pour déployer votre contrat. Techniquement, le fait de déployer un contrat intelligent est une transaction. L'auteur doit donc payer des frais de [Gaz](/developers/docs/gas/) de la même façon qu'il s'acquitterait de ces frais pour un simple transfert d'ETH. Toutefois, les frais de gaz pour le déploiement d'un contrat sont beaucoup plus élevés.
+N'importe qui peut rédiger un contrat intelligent et le déployer sur le réseau. Il vous suffit d'apprendre à coder dans un [langage de contrat intelligent](/developers/docs/smart-contracts/languages/) et de disposer de suffisamment d'ETH pour déployer votre contrat. Techniquement, le fait de déployer un contrat intelligent est une transaction. L'auteur doit donc payer des frais de [gaz](/developers/docs/gas/) de la même façon qu'il s'acquitterait de ces frais pour un simple transfert d'ETH. Toutefois, les frais de gaz pour le déploiement d'un contrat sont beaucoup plus élevés.
 
 Pour la rédaction des contrats intelligents, Ethereum propose aux développeurs des langages conviviaux :
 
@@ -86,9 +86,9 @@ En savoir plus sur la [composabilité des contrats intelligents](/developers/doc
 
 ## Limitations {#limitations}
 
-Les contrats intelligents seuls ne peuvent pas obtenir d'informations sur les événements du "monde réel", dans la mesure où ils ne peuvent pas envoyer de requêtes HTTP. C'est un choix délibéré. Le fait de s'appuyer sur des informations externes pourrait compromettre le consensus, qui est essentiel en matière de sécurité et de décentralisation.
+Les contrats intelligents seuls ne peuvent pas obtenir d'informations sur les événements du "monde réel", dans la mesure où ils ne peuvent pas récupérer de données depuis des sources hors chaîne. Cela signifie qu'ils ne peuvent pas réagir aux événements du monde réel. C'est un choix délibéré. Le fait de s'appuyer sur des informations externes pourrait compromettre le consensus, qui est essentiel en matière de sécurité et de décentralisation.
 
-Il existe des moyens de contourner le problème en utilisant [oracles](/developers/docs/oracles/).
+Il est toutefois important que les applications de la blockchain puissent utiliser des données hors chaîne. Pour ce faire, il est possible d'utiliser [oracles](/developers/docs/oracles/), des outils capables d'ingérer des données hors chaîne et de mettre à la disposition des contrats intelligents.
 
 Une autre limitation des contrats intelligents est la taille maximale des contrats. Un contrat intelligent ne peut pas dépasser 24 Ko, sans quoi il sera à court de gaz. Ceci peut être contourné en utilisant [Le modèle du diamant](https://eips.ethereum.org/EIPS/eip-2535).
 
@@ -104,13 +104,8 @@ Les contrats multisig (signature multiple) sont des comptes de contrats intellig
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Forum communautaire](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_Blocs de construction sûrs, simples et flexibles pour les contrats intelligents_**
-
-- [Dappsys](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
-
 ## Complément d'information {#further-reading}
 
-- [Les Contrats intelligents : La technologie Blockchain qui va remplacer les juristes](https://blockgeeks.com/guides/smart-contracts/) _- Blockgeeks_
-- [Meilleures pratiques pour le développement de contrats intelligents](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _- Yos Riady, 10 novembre 2019_
-- [Contrats propres - un guide sur les modèles et bonnes pratiques pour les contrats intelligents](https://www.wslyvh.com/clean-contracts/) _– 30 juillet 2020 - wslyvh_
+- [Coinbase : Qu'est-ce qu'un contrat intelligent ?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [Chainlink : Qu'est-ce qu'un contrat intelligent ?](https://chain.link/education/smart-contracts)
+- [Vidéo : Expliqués Simplement - Les Contrats Intelligents](https://youtu.be/ZE2HxTmxfrI)

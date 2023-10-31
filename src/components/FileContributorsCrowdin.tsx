@@ -3,8 +3,13 @@ import React, { useEffect, useState } from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import { useStaticQuery, graphql } from "gatsby"
 import { FlexProps } from "@chakra-ui/react"
-import FileContributors, { Author, Commit } from "./FileContributors"
+import FileContributors, { Author } from "./FileContributors"
 import { useQuery, gql } from "@apollo/client"
+
+interface Commit {
+  author: Author
+  committedDate: string
+}
 
 interface Contributor {
   id: string

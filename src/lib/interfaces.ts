@@ -152,3 +152,14 @@ export interface MdPageContent {
   lastUpdatedDate?: string
   contentNotTranslated: boolean
 }
+
+// GitHub contributors
+export interface Author {
+  name: string
+  email: string
+  avatarUrl: string
+  user: {
+    login: string
+    url: string
+  }
+}
