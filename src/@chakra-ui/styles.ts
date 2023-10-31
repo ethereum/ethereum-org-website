@@ -14,7 +14,7 @@ const styles = {
     body: {
       // TODO: when we have Chakra v2, this should be done by overriding the
       // native Chakra semantic tokens
-      bg: mode("white", "gray.700")(props),
+      bg: mode("white", "gray.800")(props),
       lineHeight: "base",
       fontSize: "md",
     },

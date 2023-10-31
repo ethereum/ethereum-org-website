@@ -56,7 +56,7 @@ Before starting your own archive node, learn about the differences between the c
 
 ## Recommended practices
 
-Apart from general [recommendations for running a node](developers/docs/nodes-and-clients/run-a-node/), an archive node may be more demanding on hardware and maintenance. Considering Erigons [key features](https://github.com/ledgerwatch/erigon#key-features), the most practical approach is using the [Erigon](/developers/docs/nodes-and-clients/#erigon) client implementation.
+Apart from general [recommendations for running a node](/developers/docs/nodes-and-clients/run-a-node/), an archive node may be more demanding on hardware and maintenance. Considering Erigons [key features](https://github.com/ledgerwatch/erigon#key-features), the most practical approach is using the [Erigon](/developers/docs/nodes-and-clients/#erigon) client implementation.
 
 ### Hardware
 

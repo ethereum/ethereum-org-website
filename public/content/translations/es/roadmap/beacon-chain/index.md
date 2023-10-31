@@ -4,6 +4,7 @@ description: "Descubra todo lo relacionado con la cadena de baliza: la actualiza
 lang: es
 template: upgrade
 image: /upgrades/core.png
+alt: 
 summaryPoint1: La cadena de baliza ha introducido la prueba de participación en el ecosistema de Ethereum.
 summaryPoint2: Se fusionó con la cadena de prueba de trabajo original de Ethereum en septiembre de 2022.
 summaryPoint3: La cadena de baliza introdujo la lógica de consenso y bloqueó el protocolo de cotilleo que ahora asegura Ethereum.

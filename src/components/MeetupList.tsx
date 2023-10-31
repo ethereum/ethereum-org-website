@@ -1,5 +1,4 @@
-// Libraries
-import React, { useState } from "react"
+import { useState } from "react"
 import { sortBy } from "lodash"
 import {
   Box,
@@ -13,21 +12,17 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-// Components
-import Emoji from "./Emoji"
-import InfoBanner from "./InfoBanner"
-import InlineLink, { BaseLink } from "./Link"
+import Emoji from "@/components/Emoji"
+import InfoBanner from "@/components/InfoBanner"
+import InlineLink, { BaseLink } from "@/components/Link"
+import Input from "@/components/Input"
+import Text from "@/components/OldText"
 // TODO: add Translation when i18n is set up
 // import Translation from "./Translation"
-import Text from "./OldText"
 
-// Data
-import meetups from "../data/community-meetups.json"
-import Input from "./Input"
+import meetups from "@/data/community-meetups.json"
 
-// Utils
-// TODO: add trackCustomEvent when util is migrated
-// import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 export interface Meetup {
   title: string
@@ -67,12 +62,11 @@ const MeetupList: React.FC<IProps> = () => {
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchField(event.target.value)
-    // TODO: add trackCustomEvent when util is migrated
-    // trackCustomEvent({
-    //   eventCategory: "events search",
-    //   eventAction: "click",
-    //   eventName: event.target.value,
-    // })
+    trackCustomEvent({
+      eventCategory: "events search",
+      eventAction: "click",
+      eventName: event.target.value,
+    })
   }
 
   const primaryBaseColor = useToken("colors", "primary.base")
