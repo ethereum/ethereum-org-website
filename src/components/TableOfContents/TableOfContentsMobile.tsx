@@ -11,7 +11,8 @@ import {
 } from "@chakra-ui/react"
 import React from "react"
 import { MdExpandMore } from "react-icons/md"
-// import Translation from "../Translation"
+import { useTranslation } from "next-i18next"
+
 import ItemsList from "./ItemsList"
 import { outerListProps } from "@/lib/utils/toc"
 import type { ToCItem } from "@/lib/interfaces"
@@ -22,6 +23,7 @@ export interface IPropsTableOfContentsMobile {
 }
 
 const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
+  const { t } = useTranslation("common")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
@@ -52,8 +54,7 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
           {...getButtonProps()}
         >
           <chakra.span flex={1} fontWeight={500}>
-            {/* <Translation id="on-this-page" /> */}
-            On this page
+            {t("on-this-page")}
           </chakra.span>
           <Icon
             as={MdExpandMore}

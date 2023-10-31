@@ -9,14 +9,16 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
+import { useTranslation } from "next-i18next"
+
 import { ButtonLink } from "@/components/Buttons"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 import ItemsList from "@/components/TableOfContents/ItemsList"
-// TODO: Re-enable after i18n implemented
-// import Translation from "@/components/Translation"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
+
 import { outerListProps } from "@/lib/utils/toc"
+
 import type { ToCItem } from "@/lib/interfaces"
 
 export interface IProps extends BoxProps {
@@ -37,6 +39,7 @@ const TableOfContents: React.FC<IProps> = ({
   isMobile = false,
   ...rest
 }) => {
+  const { t } = useTranslation("common")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
@@ -61,9 +64,11 @@ const TableOfContents: React.FC<IProps> = ({
   if (items?.length === 1) {
     items = items[0].items!
   }
+
   if (!items) {
     return null
   }
+
   if (isMobile) {
     return <Mobile items={items} maxDepth={maxDepth} />
   }
@@ -90,15 +95,13 @@ const TableOfContents: React.FC<IProps> = ({
                 href={editPath}
                 variant="outline"
               >
-                {/* <Translation id="edit-page" /> */}
-                Edit page
+                {t("edit-page")}
               </ButtonLink>
             </ListItem>
           )}
           <ListItem>
             <Box mb={2} textTransform="uppercase">
-              {/* <Translation id="on-this-page" /> */}
-              On this page
+              {t("on-this-page")}
             </Box>
             <List m={0}>
               <ItemsList
