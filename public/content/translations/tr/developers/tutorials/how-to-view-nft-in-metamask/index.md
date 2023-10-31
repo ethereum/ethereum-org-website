@@ -23,7 +23,7 @@ Bir ön koşul olarak, MetaMask'in mobil cihazınızda zaten kurulu olması ve N
 
 Uygulamanın üst kısmındaki "Wallet" (Cüzdan) düğmesine basın, ardından bir ağ seçmeniz istenecektir. NFT'miz Ropsten ağında basıldığından, ağ olarak Ropsten'i seçmelisiniz.
 
-![MetaMask Mobile üzerinde ağınız nasıl Ropsten olarak ayarlanır](./ropstenMetamask.gif)
+![MetaMask Mobile üzerinde ağınız nasıl Ropsten olarak ayarlanır](./goerliMetamask.gif)
 
 ## Adım 2: Koleksiyon öğenizi MetaMask'e ekleyin {#add-nft-to-metamask}
 
