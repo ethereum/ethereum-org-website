@@ -20,6 +20,7 @@ import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { CONTENT_DIR } from "@/lib/constants"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -83,6 +84,12 @@ export const StaticLayout: React.FC<IProps> = ({
   const { locale } = useRouter()
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
+  const repo =
+    process.env.NEXT_PUBLIC_GITHUB_REPO ||
+    "ethereum/ethereum-org-website"
+  const baseEditPath = `https://github.com/${repo}/tree/dev/${CONTENT_DIR}/`
+  const absoluteEditPath = baseEditPath + slug + "index.md"
+
   return (
     <Box w="full" ml={2}>
       <Flex
@@ -126,7 +133,6 @@ export const StaticLayout: React.FC<IProps> = ({
           <TableOfContents
             position="relative"
             zIndex={2}
-            // editPath={absoluteEditPath}
             items={tocItems}
             isMobile
             maxDepth={frontmatter.sidebarDepth || 2}
@@ -137,7 +143,7 @@ export const StaticLayout: React.FC<IProps> = ({
           <FeedbackCard isArticle />
         </Box>
         <TableOfContents
-          // editPath={absoluteEditPath}
+          editPath={absoluteEditPath}
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth || 2}
           hideEditButton={!!frontmatter.hideEditButton}
