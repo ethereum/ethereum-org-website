@@ -3,8 +3,6 @@
   "env": { "es6": true },
   "plugins": ["simple-import-sort"],
   "rules": {
-    // Else Eslint will throw an error for `!!raw-loader!` imports
-    "import/no-webpack-loader-syntax": [0],
     "simple-import-sort/imports": [
       "error",
       {
