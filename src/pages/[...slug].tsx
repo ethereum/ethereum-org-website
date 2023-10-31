@@ -120,7 +120,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   let layout = frontmatter.template
 
   if (!frontmatter.template) {
-    layout = params.slug.join('.').includes("developers/docs") ? "docs" : "static"
+    layout = params.slug.join('/').includes("developers/docs") ? "docs" : "static"
   }
 
   if (params.slug.join('/').includes("developers/tutorials")) {

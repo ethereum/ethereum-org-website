@@ -1,23 +1,21 @@
 import { useState, useEffect, useRef } from "react"
 import ClipboardJS from "clipboard"
-import { Box, Text } from "@chakra-ui/react"
-
-import Emoji from "@/components/Emoji"
-import Translation from "@/components/Translation"
+import { Box } from "@chakra-ui/react"
 
 export interface IProps {
-  address: string
+  text: string
   inline?: boolean
+  children: (isCopied: boolean) => React.ReactNode
 }
 
 const CopyToClipboard: React.FC<IProps> = ({
-  address,
+  children,
+  text,
   inline = false,
 }) => {
   const [isCopied, setIsCopied] = useState<boolean>(false)
   const targetEl = useRef<HTMLDivElement>(null)
   const timer = useRef(0)
-
   useEffect(() => {
     const afterCopy = () => {
       setIsCopied(true)
@@ -26,51 +24,24 @@ const CopyToClipboard: React.FC<IProps> = ({
     }
 
     const clipboard = new ClipboardJS(targetEl.current!, {
-      text: () => address,
+      text: () => text,
     })
 
     clipboard.on("success", (e) => {
       afterCopy()
     })
-
     clipboard.on("error", (e) => {
       console.log("error: failed to copy text")
     })
-
     return () => {
       clipboard.destroy()
       clearTimeout(timer.current)
     }
-  }, [address])
+  }, [text])
 
   return (
     <Box ref={targetEl} display={inline ? "inline" : "block"} cursor="pointer">
-        <Box
-          color="primary.base"
-          cursor="pointer"
-          overflow="hidden"
-          textOverflow="ellipsis"
-          fontFamily="monospace"
-          bg="ednBackground"
-          px={1}
-          fontSize="sm"
-          _hover={{
-            bg: "primary100",
-          }}
-        >
-          <Text
-            as={Translation}
-            textTransform="uppercase"
-            id="comp-tutorial-metadata-tip-author"
-          />{" "}
-          {address} {isCopied && <Translation id="copied" />}
-          {isCopied && <Emoji
-              fontSize="sm"
-              ml={2}
-              mr={2}
-              text=":white_check_mark:"
-            />}
-        </Box>
+      {children(isCopied)}
     </Box>
   )
 }

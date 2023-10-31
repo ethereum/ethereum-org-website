@@ -1,9 +1,10 @@
 import React from "react"
-import { Badge, Box, Flex, HStack } from "@chakra-ui/react"
+import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import InlineLink from "@/components/Link"
+import Translation from "@/components/Translation"
 import TutorialTags from "@/components/TutorialTags"
 
 // import { Lang } from "../utils/languages"
@@ -107,7 +108,36 @@ const TutorialMetadata = ({ frontmatter, timeToRead }: TutorialMetadataProps) =>
       >
         {address && (
           <Flex flexWrap="wrap" w="full" mr={4}>
-            <CopyToClipboard address={frontmatter.address!} />
+            <CopyToClipboard text={address}>
+              {(isCopied) => (
+                <Box
+                  color="primary.base"
+                  cursor="pointer"
+                  overflow="hidden"
+                  textOverflow="ellipsis"
+                  fontFamily="monospace"
+                  bg="ednBackground"
+                  px={1}
+                  fontSize="sm"
+                  _hover={{
+                    bg: "primary100",
+                  }}
+                >
+                  <Text
+                    as={Translation}
+                    textTransform="uppercase"
+                    id="comp-tutorial-metadata-tip-author"
+                  />{" "}
+                  {address} {isCopied && <Translation id="copied" />}
+                  {isCopied && <Emoji
+                      fontSize="sm"
+                      ml={2}
+                      mr={2}
+                      text=":white_check_mark:"
+                    />}
+                </Box>
+              )}
+            </CopyToClipboard>
           </Flex>
         )}
       </HStack>
