@@ -1,4 +1,3 @@
-import React from "react"
 import {
   Box,
   Avatar,
@@ -10,11 +9,10 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 
 import Emoji from "./Emoji"
 import { BaseLink } from "./Link"
-import Translation from "./Translation"
 
 const githubUrl = `https://github.com/`
 
@@ -43,7 +41,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
     }
   )
 
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-bug-bounty")
 
   return (
     <List
@@ -127,8 +125,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                   </LinkOverlay>
 
                   <Box fontSize="sm" color={colorModeStyles.scoreColor}>
-                    {score}{" "}
-                    <Translation id="page-upgrades-bug-bounty-leaderboard-points" />
+                    {score} {t("page-upgrades-bug-bounty-leaderboard-points")}
                   </Box>
                 </Flex>
                 {emoji && <Emoji mr={8} fontSize="2xl" text={emoji} />}
