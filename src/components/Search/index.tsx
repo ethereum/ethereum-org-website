@@ -1,7 +1,5 @@
 // Import libraries
 import React from "react"
-// TODO
-// import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import { MdSearch } from "react-icons/md"
 import {
   forwardRef,
@@ -11,6 +9,8 @@ import {
   useMediaQuery,
   useMergeRefs,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+
 // TODO
 // import { useDocSearchKeyboardEvents } from "@docsearch/react"
 // import { DocSearchHit } from "@docsearch/react/dist/esm/types"
@@ -44,8 +44,8 @@ interface IProps {
 const Search = forwardRef<IProps, "button">(
   ({ isOpen, onOpen, onClose }, ref) => {
     const searchButtonRef = React.useRef<HTMLButtonElement>(null)
-
     const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
+    const { t } = useTranslation("common")
 
     // TODO
     // useDocSearchKeyboardEvents({
@@ -54,10 +54,7 @@ const Search = forwardRef<IProps, "button">(
     //   onClose,
     //   searchButtonRef,
     // })
-    // TODO
-    // const { t } = useTranslation()
-    // TODO
-    // const { language } = useI18next()
+
     const appId = process.env.GATSBY_ALGOLIA_APP_ID || ""
     const apiKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY || ""
     const indexName =
@@ -81,11 +78,10 @@ const Search = forwardRef<IProps, "button">(
               //   eventName: "search open",
               // })
             }}
-            // TODO
-            // translations={{
-            //   buttonText: t("search"),
-            //   buttonAriaLabel: t("search"),
-            // }}
+            translations={{
+              buttonText: t("search"),
+              buttonAriaLabel: t("search"),
+            }}
           />
         ) : (
           <SearchIconButton
@@ -99,9 +95,7 @@ const Search = forwardRef<IProps, "button">(
               // })
             }}
             ref={mergedButtonRefs}
-            // TODO
-            // aria-label={t("aria-toggle-search-button")}
-            aria-label=""
+            aria-label={t("aria-toggle-search-button")}
           />
         )}
         <Portal>
@@ -125,56 +119,53 @@ const Search = forwardRef<IProps, "button">(
               //     return newItem
               //   })
               // }
-              // TODO
-              // placeholder={t("search-ethereum-org")}
-              placeholder="Search ethereum.org"
-              // TODO
-              // translations={{
-              //   searchBox: {
-              //     resetButtonTitle: t("clear"),
-              //     resetButtonAriaLabel: t("clear"),
-              //     cancelButtonText: t("close"),
-              //     cancelButtonAriaLabel: t("close"),
-              //   },
-              //   footer: {
-              //     selectText: t("docsearch-to-select"),
-              //     selectKeyAriaLabel: t("docsearch-to-select"),
-              //     navigateText: t("docsearch-to-navigate"),
-              //     navigateUpKeyAriaLabel: t("up"),
-              //     navigateDownKeyAriaLabel: t("down"),
-              //     closeText: t("docsearch-to-close"),
-              //     closeKeyAriaLabel: t("docsearch-to-close"),
-              //     searchByText: t("docsearch-search-by"),
-              //   },
-              //   errorScreen: {
-              //     titleText: t("docsearch-error-title"),
-              //     helpText: t("docsearch-error-help"),
-              //   },
-              //   startScreen: {
-              //     recentSearchesTitle: t(
-              //   "docsearch-start-recent-searches-title"
-              // ),
-              //     noRecentSearchesText: t("docsearch-start-no-recent-searches"),
-              //     saveRecentSearchButtonTitle: t(
-              //       "docsearch-start-save-recent-search"
-              //     ),
-              //     removeRecentSearchButtonTitle: t(
-              //       "docsearch-start-remove-recent-search"
-              //     ),
-              //     favoriteSearchesTitle: t("docsearch-start-favorite-searches"),
-              //     removeFavoriteSearchButtonTitle: t(
-              //       "docsearch-start-remove-favorite-search"
-              //     ),
-              //   },
-              //   noResultsScreen: {
-              //     noResultsText: t("docsearch-no-results-text"),
-              //     suggestedQueryText: t("docsearch-no-results-suggested-query"),
-              //     reportMissingResultsText: t("docsearch-no-results-missing"),
-              //     reportMissingResultsLinkText: t(
-              //       "docsearch-no-results-missing-link"
-              //     ),
-              //   },
-              // }}
+              placeholder={t("search-ethereum-org")}
+              translations={{
+                searchBox: {
+                  resetButtonTitle: t("clear"),
+                  resetButtonAriaLabel: t("clear"),
+                  cancelButtonText: t("close"),
+                  cancelButtonAriaLabel: t("close"),
+                },
+                footer: {
+                  selectText: t("docsearch-to-select"),
+                  selectKeyAriaLabel: t("docsearch-to-select"),
+                  navigateText: t("docsearch-to-navigate"),
+                  navigateUpKeyAriaLabel: t("up"),
+                  navigateDownKeyAriaLabel: t("down"),
+                  closeText: t("docsearch-to-close"),
+                  closeKeyAriaLabel: t("docsearch-to-close"),
+                  searchByText: t("docsearch-search-by"),
+                },
+                errorScreen: {
+                  titleText: t("docsearch-error-title"),
+                  helpText: t("docsearch-error-help"),
+                },
+                startScreen: {
+                  recentSearchesTitle: t(
+                    "docsearch-start-recent-searches-title"
+                  ),
+                  noRecentSearchesText: t("docsearch-start-no-recent-searches"),
+                  saveRecentSearchButtonTitle: t(
+                    "docsearch-start-save-recent-search"
+                  ),
+                  removeRecentSearchButtonTitle: t(
+                    "docsearch-start-remove-recent-search"
+                  ),
+                  favoriteSearchesTitle: t("docsearch-start-favorite-searches"),
+                  removeFavoriteSearchButtonTitle: t(
+                    "docsearch-start-remove-favorite-search"
+                  ),
+                },
+                noResultsScreen: {
+                  noResultsText: t("docsearch-no-results-text"),
+                  suggestedQueryText: t("docsearch-no-results-suggested-query"),
+                  reportMissingResultsText: t("docsearch-no-results-missing"),
+                  reportMissingResultsLinkText: t(
+                    "docsearch-no-results-missing-link"
+                  ),
+                },
+              }}
             />
           )}
         </Portal>
