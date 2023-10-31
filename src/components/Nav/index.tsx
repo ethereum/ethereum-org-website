@@ -1,11 +1,13 @@
 import React, { FC, useRef } from "react"
 import { Icon, Flex, Box, HStack, useDisclosure } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import { ButtonLink, IconButton } from "../Buttons"
-import Link, { BaseLink } from "../Link"
+import { BaseLink } from "../Link"
 import Search from "../Search"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
@@ -19,18 +21,15 @@ const Nav: FC<IProps> = ({ path }) => {
   const {
     ednLinks,
     fromPageParameter,
-    // TODO
-    // i18n,
     isDarkTheme,
     shouldShowSubNav,
-    // TODO
-    // t,
     toggleColorMode,
     linkSections,
     mobileNavProps,
   } = useNav({ path })
+  const { locale } = useRouter()
+  const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
-
   const navWrapperRef = useRef(null)
 
   return (
@@ -117,9 +116,7 @@ const Nav: FC<IProps> = ({ path }) => {
                     },
                   }}
                 >
-                  {/* TODO */}
-                  {/* {t("languages")} {i18n.language.toUpperCase()} */}
-                  Languages EN
+                  {t("languages")} {locale!.toUpperCase()}
                 </ButtonLink>
               </HStack>
             </Flex>
