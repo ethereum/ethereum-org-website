@@ -127,7 +127,7 @@ _Dem dey use am for decentralized development and governance of protocols and da
 
 #### Popula eksampol {#reputation-example}
 
-[DXdao](https://DXdao.eth.link) - DXdao na global sovereign collective building and governing decentralized protocols and application since 2019. Dem dey leverage reputation based governance and holographic consensus to cordinate and manage funds, e mean say person no fit buy their way into influencing its future.
+[DXdao](https://DXdao.eth.link) - DXdao na global sovereign collective building and governing decentralized protocols and application since 2019. Dem dey leverage reputation based governance and holographic consensus to coordinate and manage funds, e mean say person no fit buy their way into influencing its future.
 
 ## Join abi start DAO {#join-start-a-dao}
 

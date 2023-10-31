@@ -94,7 +94,7 @@ interface ImageInfo {
 export interface UpgradeFrontmatter
   extends SharedFrontmatter,
     SummaryPointsNumbered,
-    Omit<ImageInfo, "alt"> {}
+    ImageInfo {}
 
 export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
   buttons: Array<{

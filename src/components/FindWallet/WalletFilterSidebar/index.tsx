@@ -161,7 +161,7 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
         }}
       >
         <Icon as={BsArrowCounterclockwise} aria-hidden="true" fontSize="sm" />
-        {"Reset filters".toUpperCase()}
+        {t("page-find-wallet-reset-filters").toUpperCase()}
       </Center>
       <TabPanels
         m={0}

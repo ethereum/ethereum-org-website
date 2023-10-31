@@ -4,6 +4,7 @@ description: Aprèn més coses sobre la Cadena de Balisa - la millora que va int
 lang: ca
 template: upgrade
 image: /upgrades/core.png
+alt: 
 summaryPoint1: La Cadena de Balisa no canvia en res l'Ethereum que utilitzem avui en dia.
 summaryPoint2: Coordinarà la xarxa, fent servei com a capa de consens.
 summaryPoint3: Va introduir la prova de participació a l'ecosistema Ethereum.

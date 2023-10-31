@@ -119,7 +119,7 @@ sudo journalctl -u lighthouse-beacon
 
 Note that the consensus client will sync in a few minutes because it uses checkpoint sync. The execution client will take longer - potentially several hours, and it will not start until the consensus client is already finished syncing (this is because the execution client needs a target to sync to, which the synced consensus client provides).
 
-With the Geth and Lighthouse services running and synced, your Raspberry Pi is now an Ethereum node! It is most common to interact with the Ethereum network using Geth's Javascript console, which can be attached to the Geth client on port 8545. It is also possible to submit commands formatted as JSON objects using a request tool such as Curl. See more in the [Geth documentation](geth.ethereum.org).
+With the Geth and Lighthouse services running and synced, your Raspberry Pi is now an Ethereum node! It is most common to interact with the Ethereum network using Geth's Javascript console, which can be attached to the Geth client on port 8545. It is also possible to submit commands formatted as JSON objects using a request tool such as Curl. See more in the [Geth documentation](https://geth.ethereum.org/).
 
 Geth is preconfigured to report metrics to a Grafana dashboard which can be viewed in the browser. More advanced users might wish to use this feature to monitor the health of their node by navigating to `ipaddress:3000`, passing `user: admin` and `passwd: ethereum`.
 

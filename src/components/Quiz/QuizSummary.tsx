@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 
 import Text from "../OldText"
 import { numberToPercent } from "@/lib/utils/numberToPercent"
@@ -29,9 +30,8 @@ const QuizSummary: React.FC<IProps> = ({
   quizScore,
   setUserStats,
 }) => {
-  // TODO: Re-enable when i18n is implemented; remove placeholder
-  // const { language } = useI18next()
-  const language = "en"
+  const { locale } = useRouter()
+
   const [largerThanMobile] = useMediaQuery("(min-width: 30em)")
 
   const valueStyles = { fontWeight: "700", mb: 2 }
@@ -85,7 +85,7 @@ const QuizSummary: React.FC<IProps> = ({
       >
         <Flex>
           <Text {...valueStyles}>
-            {numberToPercent(ratioCorrect, language)}
+            {numberToPercent(ratioCorrect, locale)}
           </Text>
           <Text {...labelStyles}>
             {/* <Translation id="score" /> */}

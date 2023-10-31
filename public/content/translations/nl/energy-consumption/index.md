@@ -36,7 +36,7 @@ De Beacon Chain vergroot niet alleen het vertrouwen in het proof-of-stake-mechan
 
 ![afbeelding](energy_use_per_transaction.png)
 
-<p style={{textAlign: "center"}}><small><i>Volgens dezelfde bron wordt de schatting van het in de cijfers gebruikte PoW-energieverbruik per tx op basis van <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">gegevens in mei 2021</a>, op het moment van dit schrijven, gesteld op <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 Kwh</a></i></small></p>
+<p style={{ textAlign: "center" }}><small><i>Volgens dezelfde bron wordt de schatting van het in de cijfers gebruikte PoW-energieverbruik per tx op basis van <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">gegevens in mei 2021</a>, op het moment van dit schrijven, gesteld op <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 Kwh</a></i></small></p>
 
 Laten we deze cijfers vergelijken met een dienst zoals Visa. 100.000 Visa-transacties gebruiken 149 kWh energie<sup>[^2]</sup>. Ervan uitgaande dat sharding is geïmplementeerd, zal de huidige transactiesnelheid van Ethereum (15 transacties per seconde) met ten minste 64x (het aantal shards) toenemen, waarbij geen rekening is gehouden met extra optimalisering via rollups. Een realistische schatting voor gesharde Ethereum na de merge met rollups is [25.000 - 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) transacties per seconde. We kunnen deze gegevens gebruiken om de maximale en minimale energiekosten per transactie te schatten.
 

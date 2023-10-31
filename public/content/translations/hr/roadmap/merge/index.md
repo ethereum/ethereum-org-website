@@ -4,6 +4,7 @@ description: Saznajte više o spajanju – kada je glavna mreža Ethereuma usvoj
 lang: hr
 template: upgrade
 image: /upgrades/merge.png
+alt: 
 summaryPoint1: Glavna mreža Ethereuma upotrebljava dokaz uloga, međutim, to nije uvijek bilo tako.
 summaryPoint2: Nadogradnja izvornog mehanizma dokaza rada na dokaz uloga nazvana je The Merge (Spajanje).
 summaryPoint3: Spajanjem je spojena izvorna glavna mreža Ethereumu sa zasebnim lancem blokova dokaza uloga (poznat pod nazivom Beacon Chain) u jedan lanac.

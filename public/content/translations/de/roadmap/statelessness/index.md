@@ -66,7 +66,7 @@ Schwache Zustandslosigkeit beinhaltet Änderungen dazu, wie Ethereum Nodes Zusta
 
 **Bei der schwachen Zustandslosigkeit brauchen Blöcke Zugriff auf die vollen Zustandsdaten, jedoch benötigt das Verifizieren von Blöcken keine Zustandsdaten**
 
-Damit dies passieren kann, müssten [Verkle Bäume](../verkle-trees) bereits in Ethereum Clients implementiert sein. Verkle-Bäume sind eine Datenersetzungsstruktur um Ethereums Zustandsdaten zu speichern. Sie erlauben kleine "Zeugen" fester Größe, die dazu da sind Daten zwischen Peers zu vermitteln und Blöcke direkt, anstatt gegen lokale Datenbanken zu verifizieren. [Proposer-Builder Separation](/roadmap/pbs/) wird zudem benötigt, da es Blockerzeugern erlaubt spezialisierte Nodes mit leistungsfähigerer Hardware zu sein und da sie es sind, die Zugriff auf die vollen Zustandsdaten brauchen.
+Damit dies passieren kann, müssten [Verkle Bäume](/roadmap/verkle-trees/) bereits in Ethereum Clients implementiert sein. Verkle-Bäume sind eine Datenersetzungsstruktur um Ethereums Zustandsdaten zu speichern. Sie erlauben kleine "Zeugen" fester Größe, die dazu da sind Daten zwischen Peers zu vermitteln und Blöcke direkt, anstatt gegen lokale Datenbanken zu verifizieren. [Proposer-Builder Separation](/roadmap/pbs/) wird zudem benötigt, da es Blockerzeugern erlaubt spezialisierte Nodes mit leistungsfähigerer Hardware zu sein und da sie es sind, die Zugriff auf die vollen Zustandsdaten brauchen.
 
 <ExpandableCard title="Warum ist es OK ist sich auf weniger Block Proposer zu stützen?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
