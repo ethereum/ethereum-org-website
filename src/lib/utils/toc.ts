@@ -110,7 +110,8 @@ const addHeadingsAsItems = (headings: Array<string>, h = 2): Array<ToCItem> => {
     if (depths[i + 1] > h) {
       const start = i + 1
       const rest = depths.slice(start)
-      const end = start + rest.indexOf(h)
+      const stepOutIndex = rest.indexOf(h)
+      const end = stepOutIndex < 0 ? headings.length : start + stepOutIndex
       const subHeadings = headings.slice(start, end)
       headingItem.items = addHeadingsAsItems(subHeadings, h + 1)
     }
@@ -120,7 +121,8 @@ const addHeadingsAsItems = (headings: Array<string>, h = 2): Array<ToCItem> => {
 }
 
 /**
- * Splits the content by lines and filters out lines that don't start with #s
+ * Splits the content by lines and filters out lines that don't start with at least two #'s (h2 or deeper)
+ * Note: each file should only have one h1, and it is not included in the ToC
  * Calls `addHeadingAsItem` with array of Markdown headers to generate list of `Item` objects
  * @param content Markdown content as a string (all lines)
  * @returns List of `Item` objects parsed from the content, nested according to heading depth
@@ -128,6 +130,6 @@ const addHeadingsAsItems = (headings: Array<string>, h = 2): Array<ToCItem> => {
 export const generateTableOfContents = (content: string): Array<ToCItem> => {
   const contentWithoutComments = removeMarkdownComments(content)
   const lines = contentWithoutComments.split("\n")
-  const headings = lines.filter((line) => line.startsWith("#"))
+  const headings = lines.filter((line) => line.startsWith("##"))
   return addHeadingsAsItems(headings)
 }

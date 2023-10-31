@@ -24,8 +24,6 @@ import {
   RoadmapLayout,
   upgradeComponents,
   UpgradeLayout,
-  // eventComponents,
-  // EventLayout,
   // docsComponents,
   // DocsLayout,
   tutorialsComponents,
@@ -53,7 +51,6 @@ const componentsMapping = {
   staking: stakingComponents,
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
-  // event: eventComponents,
   // docs: docsComponents,
   tutorial: tutorialsComponents,
 } as const
