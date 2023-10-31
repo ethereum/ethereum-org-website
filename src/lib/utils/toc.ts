@@ -121,7 +121,8 @@ const addHeadingsAsItems = (headings: Array<string>, h = 2): Array<ToCItem> => {
 }
 
 /**
- * Splits the content by lines and filters out lines that don't start with #s
+ * Splits the content by lines and filters out lines that don't start with at least two #'s (h2 or deeper)
+ * Note: each file should only have one h1, and it is not included in the ToC
  * Calls `addHeadingAsItem` with array of Markdown headers to generate list of `Item` objects
  * @param content Markdown content as a string (all lines)
  * @returns List of `Item` objects parsed from the content, nested according to heading depth
