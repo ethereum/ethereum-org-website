@@ -16,6 +16,7 @@ const CopyToClipboard: React.FC<IProps> = ({
   const [isCopied, setIsCopied] = useState<boolean>(false)
   const targetEl = useRef<HTMLDivElement>(null)
   const timer = useRef(0)
+
   useEffect(() => {
     const afterCopy = () => {
       setIsCopied(true)
@@ -30,9 +31,11 @@ const CopyToClipboard: React.FC<IProps> = ({
     clipboard.on("success", (e) => {
       afterCopy()
     })
+
     clipboard.on("error", (e) => {
       console.log("error: failed to copy text")
     })
+
     return () => {
       clipboard.destroy()
       clearTimeout(timer.current)
