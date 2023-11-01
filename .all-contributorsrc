@@ -10704,6 +10704,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "s-crypt",
+      "name": "s-crypt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41712656?v=4",
+      "profile": "https://blog.insubli.me",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
