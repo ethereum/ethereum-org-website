@@ -41,7 +41,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     // Developer docs (0/95)
     // Developer tutorials (1/53)
     "/developers/tutorials/all-you-can-cache",
-    // Static (66/68)
+    // Static (68/68)
     "/about",
     "/bridges",
     "/community/code-of-conduct",
