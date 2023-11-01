@@ -84,6 +84,8 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
               fullPagePath
                 .replace(CURRENT_CONTENT_DIR, "")
                 .replace("/index.md", "")
+                // For replacing forward slashes generated in windows file paths
+                .replace(/\\/g, "/")
             )
           }
         }
