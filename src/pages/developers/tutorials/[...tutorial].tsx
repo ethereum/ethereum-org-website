@@ -7,8 +7,7 @@ import path from "path"
 
 import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImg from "@/lib/rehype/rehypeImg"
-import { getLastModifiedDate } from "@/lib/utils/gh"
-import published from "@/data/published.json"
+import { getLastDeployDate, getLastModifiedDate } from "@/lib/utils/gh"
 
 // Components
 import PageMetadata from "@/components/PageMetadata"
@@ -58,7 +57,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   })
 
   const lastUpdatedDate = getLastModifiedDate(tutorialPath, locale!)
-  const lastDeployDate = new Date(published.date).toISOString()
+  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
