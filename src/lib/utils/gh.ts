@@ -2,8 +2,6 @@ import fs from "fs"
 import { join } from "path"
 import { execSync } from "child_process"
 
-import published from "@/data/published.json"
-
 import { CONTENT_DIR, DEFAULT_LOCALE, TRANSLATIONS_DIR } from "@/lib/constants"
 
 // This util filters the git log to get the file last commit info, and then the commit date (last update)
@@ -33,5 +31,3 @@ export const getLastModifiedDate = (slug: string, locale: string) => {
 
   return new Date(lastCommitDate).toISOString()
 }
-
-export const getLastDeployDate = () => new Date(published.date).toISOString()
