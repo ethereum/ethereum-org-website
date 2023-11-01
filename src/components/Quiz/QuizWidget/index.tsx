@@ -148,9 +148,11 @@ export default QuizWidget
 /**
  * For use of the widget on single pages (not the quizzes page)
  */
-export const StandaloneQuizWidget = (props: IProps) => (
+export const StandaloneQuizWidget = (
+  props: Omit<IProps, "isStandaloneQuiz">
+) => (
   <VStack spacing="12" my="16">
     <StandaloneQuizHeading />
-    <QuizWidget {...props} />
+    <QuizWidget {...props} isStandaloneQuiz />
   </VStack>
 )
