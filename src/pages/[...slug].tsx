@@ -4,6 +4,7 @@ import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 import { join } from "path"
+import readingTime from "reading-time"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { getLastModifiedDate, getLastDeployDate } from "@/lib/utils/gh"
@@ -34,7 +35,6 @@ import {
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
 import { dateToString } from "@/lib/utils/date"
-import { readingTime } from "@/lib/utils/timeToRead"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -146,7 +146,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       lastDeployDate,
       contentNotTranslated,
       layout,
-      timeToRead,
+      timeToRead: Math.round(timeToRead.minutes),
       tocItems,
     },
   }
