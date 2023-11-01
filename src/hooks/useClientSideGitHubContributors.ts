@@ -4,7 +4,7 @@ import type { Author } from "@/lib/interfaces"
 import type { FileContributorsState } from "@/lib/types"
 import { useEffect, useState } from "react"
 
-export const gitHubAuthHeaders = {
+const gitHubAuthHeaders = {
   headers: new Headers({
     // About personal access tokens https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#about-personal-access-tokens
     Authorization: "Token " + process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY,

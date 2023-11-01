@@ -9,10 +9,12 @@ import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import { getLastDeployDate, getLastModifiedDate } from "@/lib/utils/gh"
 
+// Components
+import PageMetadata from "@/components/PageMetadata"
+
 // Layouts
 import { RootLayout, TutorialLayout } from "@/layouts"
 import { staticComponents as components } from "@/layouts/Static"
-import PageMetadata from "@/components/PageMetadata"
 
 // Types
 import type { GetServerSideProps } from "next/types"
@@ -55,7 +57,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   })
 
   const lastUpdatedDate = getLastModifiedDate(tutorialPath, locale!)
-  const lastDeployDate = await getLastDeployDate()
+  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
