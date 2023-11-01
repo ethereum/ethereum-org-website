@@ -14,7 +14,7 @@ import { MdExpandMore } from "react-icons/md"
 // import Translation from "../Translation"
 import ItemsList from "./ItemsList"
 import { outerListProps } from "@/lib/utils/toc"
-import type { ToCItem } from "@/lib/interfaces"
+import type { ToCItem } from "@/lib/types"
 
 export interface IPropsTableOfContentsMobile {
   items?: Array<ToCItem>
