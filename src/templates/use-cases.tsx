@@ -48,7 +48,7 @@ import SectionNav from "../components/SectionNav"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
@@ -134,7 +134,7 @@ const components = {
   DocLink,
   ExpandableCard,
   YouTube,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   GlossaryTooltip,
 }
 
