@@ -23,19 +23,17 @@ export type QuizContentProps = {
   >
 }
 
-export const QuizContent = (props: QuizContentProps) => {
-  const {
-    showAnswer,
-    isCurrentQuestionCorrect,
-    questions,
-    title,
-    progressBarBackground,
-    showResults,
-    quizSummaryProps,
-    currentQuestionIndex,
-    quizRadioGroupProps,
-  } = props
-
+export const QuizContent = ({
+  showAnswer,
+  isCurrentQuestionCorrect,
+  questions,
+  title,
+  progressBarBackground,
+  showResults,
+  quizSummaryProps,
+  currentQuestionIndex,
+  quizRadioGroupProps,
+}: QuizContentProps) => {
   const getTitleTextColor = (): TextProps["color"] => {
     if (showAnswer) {
       return isCurrentQuestionCorrect ? "success.base" : "fail.base"

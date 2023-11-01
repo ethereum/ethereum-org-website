@@ -22,24 +22,22 @@ export type QuizButtonGroupProps = {
   handleSubmitAnswer: (questionId: string, answerChoice: AnswerChoice) => void
 }
 
-export const QuizButtonGroup = (props: QuizButtonGroupProps) => {
-  const {
-    showAnswer,
-    showResults,
-    quizScore,
-    questions,
-    handleReset,
-    currentQuestionIndex,
-    currentQuestionAnswerChoice,
-    finishedQuiz,
-    handleRetryQuestion,
-    handleShare,
-    handleNextQuiz,
-    hasNextQuiz,
-    handleContinue,
-    handleSubmitAnswer,
-  } = props
-
+export const QuizButtonGroup = ({
+  showAnswer,
+  showResults,
+  quizScore,
+  questions,
+  handleReset,
+  currentQuestionIndex,
+  currentQuestionAnswerChoice,
+  finishedQuiz,
+  handleRetryQuestion,
+  handleShare,
+  handleNextQuiz,
+  hasNextQuiz,
+  handleContinue,
+  handleSubmitAnswer,
+}: QuizButtonGroupProps) => {
   const hasFailedAnswer =
     currentQuestionAnswerChoice && !currentQuestionAnswerChoice.isCorrect
 
