@@ -102,6 +102,11 @@ Enfin, au moment où vous décidez s'inclure une bibliothèque, considérez son 
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**SDK Solidity thirdweb -** **_Fournit les outils nécessaires pour construire efficacement des contrats intelligents personnalisés_**
+
+- [Documentation](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## Tutoriels connexes {#related-tutorials}
 
 - [Considérations de sécurité pour les développeurs Ethereum](/developers/docs/smart-contracts/security/) _- Tutoriel sur les considérations de sécurité lors de la construction de contrats intelligents, y compris l'utilisation de la bibliothèque_
