@@ -81,11 +81,10 @@ const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
 }
 
 const H1 = (props: HeadingProps) => {
-  const monospaceFont = useToken("fonts", "monospace")
   return (
     <MdHeading1
       fontSize={{ base: "1.75rem", lg: "2.5rem" }}
-      fontFamily={monospaceFont}
+      fontFamily="monospace"
       textTransform="uppercase"
       {...props}
     />
@@ -93,21 +92,14 @@ const H1 = (props: HeadingProps) => {
 }
 
 const H2 = (props: HeadingProps) => {
-  const monospaceFont = useToken("fonts", "monospace")
-
   return (
     <MdHeading2
-      fontFamily={monospaceFont}
+      fontSize={{ base: "2xl", md: "2rem" }}
+      fontFamily="monospace"
       textTransform="uppercase"
       fontWeight="bold"
-      sx={{ position: "inherit !important" }}
-      _before={{
-        content: '""',
-        display: "block",
-        h: "120px",
-        mt: "-120px",
-        visibility: "hidden",
-      }}
+      scrollMarginTop={40}
+      mt={12}
       {...props}
     />
   )
@@ -118,14 +110,7 @@ const H3 = (props: HeadingProps) => {
     <MdHeading3
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.5rem" }}
-      sx={{ position: "inherit !important" }}
-      _before={{
-        content: '""',
-        display: "block",
-        h: "120px",
-        mt: "-120px",
-        visibility: "hidden",
-      }}
+      scrollMarginTop={40}
       {...props}
     />
   )
@@ -136,14 +121,7 @@ const H4 = (props: HeadingProps) => {
     <MdHeading4
       fontWeight={{ base: "semibold" }}
       fontSize={{ base: "1rem", md: "1.25rem" }}
-      sx={{ position: "unset !important" }}
-      _before={{
-        content: '""',
-        display: "block",
-        h: "120px",
-        mt: "-120px",
-        visibility: "hidden",
-      }}
+      scrollMarginTop={40}
       {...props}
     />
   )
@@ -215,12 +193,12 @@ export const TutorialLayout = ({
   tocItems,
   timeToRead,
 }: TutorialLayoutProps) => {
-  const { asPath: relativePath} = useRouter()
+  const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
   const borderColor = useToken("colors", "border")
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
-  const postMergeBannerTranslationString = frontmatter
-    .postMergeBannerTranslation as TranslationKey | null
+  const postMergeBannerTranslationString =
+    frontmatter.postMergeBannerTranslation as TranslationKey | null
 
   return (
     <>
@@ -256,32 +234,32 @@ export const TutorialLayout = ({
           {children}
           {frontmatter.lang !== "en" ? (
             <Text>Crowdin contributor</Text>
-              // TODO: Implement CrowdinContributors after intl is implemented
-              // <CrowdinContributors
-              //   relativePath={relativePath}
-              //   editPath={absoluteEditPath}
-              //   //@ts-ignore
-              //   langContributors={allCombinedTranslatorsJson.nodes}
-              // />
-            ) : (
-              <Text>Github contributor</Text>
-              // TODO: Implement GitHubContributors 
-              // <GitHubContributors
-              //   relativePath={relativePath}
-              //   editPath={absoluteEditPath}
-              // />
-            )}
+          ) : (
+            // TODO: Implement CrowdinContributors after intl is implemented
+            // <CrowdinContributors
+            //   relativePath={relativePath}
+            //   editPath={absoluteEditPath}
+            //   //@ts-ignore
+            //   langContributors={allCombinedTranslatorsJson.nodes}
+            // />
+            <Text>Github contributor</Text>
+            // TODO: Implement GitHubContributors
+            // <GitHubContributors
+            //   relativePath={relativePath}
+            //   editPath={absoluteEditPath}
+            // />
+          )}
           <FeedbackCard />
         </ContentContainer>
         {tocItems && (
-            <TableOfContents
-              items={tocItems}
-              maxDepth={frontmatter.sidebarDepth!}
-              editPath={absoluteEditPath}
-              hideEditButton={!!frontmatter.hideEditButton}
-              pt={16}
-            />
-          )}
+          <TableOfContents
+            items={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+            editPath={absoluteEditPath}
+            hideEditButton={!!frontmatter.hideEditButton}
+            pt={16}
+          />
+        )}
       </Flex>
     </>
   )
