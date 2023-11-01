@@ -1113,7 +1113,7 @@ const DappsPage = ({
     {
       title: "Lido",
       description: t("page-dapps-dapp-description-lido"),
-      link: "https://lido.is/",
+      link: "https://lido.fi/",
       image: getImage(data.lido),
       alt: t("page-dapps-lido-logo-alt"),
     },

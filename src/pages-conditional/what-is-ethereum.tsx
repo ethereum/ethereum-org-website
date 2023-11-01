@@ -34,7 +34,7 @@ import AdoptionChart from "../components/AdoptionChart"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import Slider, { EmblaSlide } from "../components/Slider"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import StatErrorMessage from "../components/StatErrorMessage"
 import StatLoadingMessage from "../components/StatLoadingMessage"
 import Text from "../components/OldText"
@@ -842,9 +842,7 @@ const WhatIsEthereumPage = ({
       </Content>
 
       <Content>
-        <Center w="100%">
-          <QuizWidget quizKey="what-is-ethereum" />
-        </Center>
+        <StandaloneQuizWidget quizKey="what-is-ethereum" />
       </Content>
 
       <Content>
