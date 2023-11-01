@@ -10,6 +10,9 @@ import rehypeImg from "@/lib/rehype/rehypeImg"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import published from "@/data/published.json"
 
+// Components
+import PageMetadata from "@/components/PageMetadata"
+
 // Layouts
 import { RootLayout, TutorialLayout } from "@/layouts"
 import { staticComponents as components } from "@/layouts/Static"
@@ -54,7 +57,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
     },
   })
 
-  const lastUpdatedDate = await getLastModifiedDate(tutorialPath, locale!)
+  const lastUpdatedDate = getLastModifiedDate(tutorialPath, locale!)
   const lastDeployDate = new Date(published.date).toISOString()
 
   return {
@@ -99,7 +102,15 @@ ContentPage.getLayout = (page: ReactElement) => {
 
   return (
     <RootLayout {...rootLayoutProps}>
-      <TutorialLayout {...layoutProps}>{page}</TutorialLayout>
+      <TutorialLayout {...layoutProps}>
+        <PageMetadata
+          title={frontmatter.title}
+          description={frontmatter.description}
+          author={frontmatter.author}
+          canonicalUrl={frontmatter.sourceUrl}
+        />
+        {page}
+      </TutorialLayout>
     </RootLayout>
   )
 }

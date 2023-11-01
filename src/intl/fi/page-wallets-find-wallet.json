@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Ominaisuuden suodattimet",
   "page-find-wallet-footnote-1": "Tällä sivulla listatut lompakot eivät ole virallisia suosituksia vaan niistä jaetaan tietoa.",
   "page-find-wallet-footnote-2": " Lompakko-projektien oma hallinto on tuottanut kuvaukset itsenäisesti.",
-  "page-find-wallet-footnote-3": "Lisäämme tuotteita tälle sivulle oman <a href=\"/contributing/adding-products/\">listaus politiikkamme perusteella</a>. Jos haluat meidän lisäävän lompakon, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">kirjaa pyyntö GitHubiin</a>.",
+  "page-find-wallet-footnote-3": "Lisäämme tuotteita tälle sivulle oman <a href=\"/contributing/adding-wallets/\">listaus politiikkamme perusteella</a>. Jos haluat meidän lisäävän lompakon, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">kirjaa pyyntö GitHubiin</a>.",
   "page-find-wallet-mobile": "Mobiili",
   "page-find-wallet-mobile-desc": "Lompakot, joilla myös mobiilisovellus",
   "page-find-wallet-desktop": "Työpöytäkone",

@@ -2,10 +2,16 @@ import fs from "fs"
 import { join } from "path"
 import { execSync } from "child_process"
 
-import { CONTENT_DIR, DEFAULT_LOCALE, TRANSLATIONS_DIR } from "../constants"
+import {
+  CONTENT_DIR,
+  DEFAULT_LOCALE,
+  TRANSLATIONS_DIR,
+} from "@/lib/constants"
+
+import { gitHubAuthHeaders } from "@/hooks/useClientSideGitHubContributors"
 
 // This util filters the git log to get the file last commit info, and then the commit date (last update)
-export const getLastModifiedDate = async (slug: string, locale: string) => {
+export const getLastModifiedDate = (slug: string, locale: string) => {
   const translatedContentPath = join(TRANSLATIONS_DIR, locale, slug, "index.md")
   const contentIsNotTranslated = !fs.existsSync(translatedContentPath)
   let filePath = ""

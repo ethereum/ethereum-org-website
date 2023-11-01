@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Funkciószűrő",
   "page-find-wallet-footnote-1": "Az oldalon szereplő tárcák nem minősülnek az Ethereum által minősített termékeknek, az itt megjelenő adataik tájékoztatási célt szolgálnak.",
   "page-find-wallet-footnote-2": "A leírásokat a tárcákat biztosító projekt adta.",
-  "page-find-wallet-footnote-3": "Erre az oldalra a <a href=\"/contributing/adding-products/\">listázási szabályzatban</a> meghatározott kritériumok alapján veszünk fel új termékeket. Ha új termék megjelenítését szeretné, akkor <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">kérje a GitHubon</a>.",
+  "page-find-wallet-footnote-3": "Erre az oldalra a <a href=\"/contributing/adding-wallets/\">listázási szabályzatban</a> meghatározott kritériumok alapján veszünk fel új termékeket. Ha új termék megjelenítését szeretné, akkor <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">kérje a GitHubon</a>.",
   "page-find-wallet-mobile": "Mobil",
   "page-find-wallet-mobile-desc": "Tárcák mobilalkalmazásokkal",
   "page-find-wallet-desktop": "Asztali számítógép",
