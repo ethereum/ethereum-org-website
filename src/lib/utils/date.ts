@@ -1,1 +1,2 @@
-export const dateToString = (published) => new Date(published).toISOString().split('T')[0]
+export const dateToString = (published: Date | string) =>
+  new Date(published).toISOString().split("T")[0]
