@@ -12,6 +12,7 @@ import { getLastDeployDate, getLastModifiedDate } from "@/lib/utils/gh"
 // Layouts
 import { RootLayout, TutorialLayout } from "@/layouts"
 import { staticComponents as components } from "@/layouts/Static"
+import PageMetadata from "@/components/PageMetadata"
 
 // Types
 import type { GetServerSideProps } from "next/types"
@@ -98,7 +99,15 @@ ContentPage.getLayout = (page: ReactElement) => {
 
   return (
     <RootLayout {...rootLayoutProps}>
-      <TutorialLayout {...layoutProps}>{page}</TutorialLayout>
+      <TutorialLayout {...layoutProps}>
+        <PageMetadata
+          title={frontmatter.title}
+          description={frontmatter.description}
+          author={frontmatter.author}
+          canonicalUrl={frontmatter.sourceUrl}
+        />
+        {page}
+      </TutorialLayout>
     </RootLayout>
   )
 }

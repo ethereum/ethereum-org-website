@@ -27,6 +27,7 @@ import {
   // docsComponents,
   // DocsLayout,
 } from "@/layouts"
+import PageMetadata from "@/components/PageMetadata"
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
@@ -177,7 +178,14 @@ ContentPage.getLayout = (page: ReactElement) => {
 
   return (
     <RootLayout {...rootLayoutProps}>
-      <Layout {...layoutProps}>{page}</Layout>
+      <Layout {...layoutProps}>
+        <PageMetadata
+          title={frontmatter.title}
+          description={frontmatter.description}
+          image={frontmatter.image}
+        />
+        {page}
+      </Layout>
     </RootLayout>
   )
 }
