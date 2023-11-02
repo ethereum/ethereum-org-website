@@ -12,7 +12,7 @@ Los contratos inteligentes son públicos en Ethereum y se pueden considerar API 
 ## Tutoriales relacionados {#related-tutorials}
 
 - [Composición del contrato: Los bloques de construcción para el desarrollo de contratos inteligentes de Ethereum](https://blog.decentlabs.io/contract-composability-the-building-blocks-of-ethereum-smart-contract-development/)
-- [Comienza el desarrollo de tu interfaz Dapp con create-eth-app,](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/)_ un resumen sobre cómo usar create-eth-app para crear apps con contratos inteligentes previamente formulados. _
+- [Comienza el desarrollo de tu interfaz Dapp con create-eth-app,](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/)_ un resumen sobre cómo usar create-eth-app para crear apps con contratos inteligentes previamente formulados. _
 
 ## Más lectura {#further-reading}
 

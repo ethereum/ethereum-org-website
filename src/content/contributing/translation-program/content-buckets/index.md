@@ -308,7 +308,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [ERC-20 with safety rails](/developers/tutorials/erc20-with-safety-rails/)
 - [Getting Started with Ethereum Development](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [How to mock Solidity smart contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/)
+- [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/)
 - [Logging data from smart contracts with events](/developers/tutorials/logging-events-smart-contracts/)
 - [Merkle proofs for offline data integrity](/developers/tutorials/merkle-proofs-for-offline-data-integrity/)
 - [Sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
