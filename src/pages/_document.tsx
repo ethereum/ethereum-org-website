@@ -1,8 +1,15 @@
+import { GetStaticProps } from "next"
 import { Html, Head, Main, NextScript } from "next/document"
+import { useRouter } from "next/router"
 
-export default function Document() {
+export const getStaticProps: GetStaticProps = async () => {
+  const { locale } = useRouter()
+  return { props: { locale } }
+}
+
+export default function Document({ locale }) {
   return (
-    <Html lang="en">
+    <Html lang={locale}>
       <Head />
       <body>
         <Main />

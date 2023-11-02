@@ -7,7 +7,11 @@ import path from "path"
 
 import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImg from "@/lib/rehype/rehypeImg"
-import { getLastDeployDate, getLastModifiedDate } from "@/lib/utils/gh"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLastModifiedDate } from "@/lib/utils/gh"
+
+// Components
+import PageMetadata from "@/components/PageMetadata"
 
 // Layouts
 import { RootLayout, TutorialLayout } from "@/layouts"
@@ -54,7 +58,7 @@ export const getServerSideProps: GetServerSideProps<Props, Params> = async (
   })
 
   const lastUpdatedDate = getLastModifiedDate(tutorialPath, locale!)
-  const lastDeployDate = await getLastDeployDate()
+  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
@@ -98,7 +102,15 @@ ContentPage.getLayout = (page: ReactElement) => {
 
   return (
     <RootLayout {...rootLayoutProps}>
-      <TutorialLayout {...layoutProps}>{page}</TutorialLayout>
+      <TutorialLayout {...layoutProps}>
+        <PageMetadata
+          title={frontmatter.title}
+          description={frontmatter.description}
+          author={frontmatter.author}
+          canonicalUrl={frontmatter.sourceUrl}
+        />
+        {page}
+      </TutorialLayout>
     </RootLayout>
   )
 }
