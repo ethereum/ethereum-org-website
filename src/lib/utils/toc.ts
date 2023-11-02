@@ -1,20 +1,21 @@
 import { ListProps } from "@chakra-ui/react"
 
-import type { ToCItem } from "@/lib/interfaces"
+import type { SourceHeadingItem, ToCItem } from "@/lib/types"
 
 // RegEx patterns
-export const mdHeadingRegEx = /^(#+\s+)(.+)$/
-export const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
-export const emojiRegEx = /<Emoji [^/]+\/>/g
-export const escapeSlashRegEx = /\\(?=[+*?^$\\.[\]{}()|/#])/g
-export const multilineHtmlCommentsRegEx = /<!--[^]*-->/gm
+const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
+const emojiRegEx = /<Emoji [^/]+\/>/g
+const emojiUnicodeRegEx = /\\u{[0-9A-F]+?}/gi
+const escapeSlashRegEx = /\\(?=[+*?^$\\.[\]{}()|/#])/g
+const compiledSourceHeadingRegEx =
+  /(?<=mdx\()"h([2-4])",e\(.+?id:"([^"]+)".+?"([^"]+)"/g
 
 /**
  * Creates a slug from a string (Hello world => hello-world)
  * @param s Any string
  * @returns Lowercased string with spaces replaced with hyphens (kebab-casing)
  */
-export const slugify = (s: string): string =>
+const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
 /**
@@ -39,6 +40,7 @@ export const parseToCTitle = (title: string): string => {
   const trimmedTitle = match ? title.replace(match[1], "").trim() : title
   const sanitizedTitle = trimmedTitle
     .replaceAll(emojiRegEx, "")
+    .replaceAll(emojiUnicodeRegEx, "")
     .replaceAll(escapeSlashRegEx, "")
   return sanitizedTitle
 }
@@ -72,42 +74,31 @@ export const outerListProps: ListProps = {
 }
 
 /**
- * Removes content between HTML comment tags
- * @param content Full content as a string
- * @returns Full content as a string with comments removed
- */
-export const removeMarkdownComments = (content: string): string =>
-  content.replaceAll(multilineHtmlCommentsRegEx, "")
-
-/**
- * Get title and URL from a Markdown heading string. If the heading contains a custom ID,
- * it will be used as the URL, otherwise the title will be slugified
- * @param heading Markdown text string starting with #s, optionally ending with {#id}
- * Example: "### Hello world {#hello-world}" or "## Hello world"
+ * Refactor title and URL from `SourceHeadingItem` object. The contained `id`'s are obtained
+ * from the compiled DOM source and do not need further alteration.
+ * @param heading SourceHeadingItem object with label and id strings
  * @returns Object of type `Item` containing `title` and `url` properties parsed from heading
  */
-const parseHeadingToItem = (heading: string): ToCItem => {
-  const match = heading.match(mdHeadingRegEx)
-  if (!match) throw new Error(`Invalid heading: ${heading}`)
-  const title = parseToCTitle(match[2])
-  const url = `#${parseHeadingId(heading)}`
-  return { title, url }
-}
+const parseSourceToToCItem = ({ label, id }: SourceHeadingItem): ToCItem => ({
+  title: parseToCTitle(label),
+  url: "#" + id,
+})
 
 /**
  * Recursive function used to generate nested array of `Items`, nesting according to heading depth
- * @param headings Array of Markdown headings (strings starting with #s)
- * @param h Heading level being parsed (2 for h2, 3 for h3, etc.), starting with 2
+ * @param headings Array of `SourceHeadingItem` objects: { depth: number, id: string, label: string }
+ * @param h Heading level being parsed (2 for h2, 3 for h3, 4 for h4), starting with 2
  * @returns Array of `Item` objects parsed from the headings
  */
-const addHeadingsAsItems = (headings: Array<string>, h = 2): Array<ToCItem> => {
+const addHeadingsAsItems = (
+  headings: Array<SourceHeadingItem>,
+  h = 2
+): Array<ToCItem> => {
   const items: Array<ToCItem> = []
-  const depths: number[] = headings.map(
-    (heading) => heading.match(/^#+/)?.[0].length ?? 0
-  )
+  const depths: number[] = headings.map(({ depth }) => depth)
   depths.forEach((depth, i): void => {
     if (depth !== h) return
-    const headingItem = parseHeadingToItem(headings[i])
+    const headingItem = parseSourceToToCItem(headings[i])
     if (depths[i + 1] > h) {
       const start = i + 1
       const rest = depths.slice(start)
@@ -122,15 +113,25 @@ const addHeadingsAsItems = (headings: Array<string>, h = 2): Array<ToCItem> => {
 }
 
 /**
- * Splits the content by lines and filters out lines that don't start with at least two #'s (h2 or deeper)
+ * Generates a Table of Contents from a compiled page source string, after markdown has been parsed into DOM elements
+ * Parses all h2/3/4 elements into an array of `SourceHeadingItem` objects using regex matching
  * Note: each file should only have one h1, and it is not included in the ToC
- * Calls `addHeadingAsItem` with array of Markdown headers to generate list of `Item` objects
- * @param content Markdown content as a string (all lines)
- * @returns List of `Item` objects parsed from the content, nested according to heading depth
+ * Calls `addHeadingAsItem` with array of `SourceHeadingItem` objects to generate list of `Item` objects
+ * @param content Compiled page source from mdx compiler (string)
+ * @returns List of `Item` objects parsed from the compiled source, nested according to heading depth
  */
-export const generateTableOfContents = (content: string): Array<ToCItem> => {
-  const contentWithoutComments = removeMarkdownComments(content)
-  const lines = contentWithoutComments.split("\n")
-  const headings = lines.filter((line) => line.startsWith("##"))
+
+export const generateTableOfContents = (
+  compiledSource: string
+): Array<ToCItem> => {
+  const matchAll = compiledSource.matchAll(compiledSourceHeadingRegEx)
+  const matches = Array.from(matchAll)
+  const headings: Array<SourceHeadingItem> = matches.map(
+    ([_, depth, id, label]) => ({
+      depth: +depth,
+      id,
+      label,
+    })
+  )
   return addHeadingsAsItems(headings)
 }

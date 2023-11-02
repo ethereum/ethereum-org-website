@@ -5,7 +5,6 @@ import { getThemingArgTypes } from "@chakra-ui/storybook-addon"
 import { Meta, StoryObj } from "@storybook/react"
 
 import theme from "../../@chakra-ui/theme"
-
 import Translation from "../Translation"
 
 import Button from "./Button"

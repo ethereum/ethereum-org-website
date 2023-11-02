@@ -1,6 +1,6 @@
 import { cssVar,SystemStyleObject } from "@chakra-ui/react"
 
-import type { ToCItem } from "@/lib/interfaces"
+import type { ToCItem } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 

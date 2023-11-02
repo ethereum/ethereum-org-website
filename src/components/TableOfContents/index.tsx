@@ -10,7 +10,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ToCItem } from "@/lib/interfaces"
+import type { ToCItem } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import ItemsList from "@/components/TableOfContents/ItemsList"

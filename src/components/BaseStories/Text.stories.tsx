@@ -11,7 +11,6 @@ import {
 import { Meta, StoryObj } from "@storybook/react"
 
 import components from "../../@chakra-ui/gatsby-plugin/components"
-
 import Translation from "../Translation"
 
 type TextType = typeof Text

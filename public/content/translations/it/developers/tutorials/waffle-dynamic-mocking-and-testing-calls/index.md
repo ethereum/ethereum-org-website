@@ -223,7 +223,7 @@ Dividiamo il test in due parti:
 
 Siamo pronti a scatenare la bestia:
 
-![Un test superato](test-one.png)
+![Un test superato](./test-one.png)
 
 Quindi il test funziona, ma... si può ancora migliorare. La funzione `balanceOf()` restituirà sempre 99999. Possiamo migliorarla specificando un portafoglio per cui la funzione deve restituire qualcosa, proprio come un vero contratto:
 

@@ -1,7 +1,8 @@
 import React from "react"
 import { Text } from "@chakra-ui/react"
 
-import { TranslationKey } from "../../utils/translations"
+import type { TranslationKey } from "@/lib/types"
+
 import BannerNotification from "../BannerNotification"
 import Translation from "../Translation"
 

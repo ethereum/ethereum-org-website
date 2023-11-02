@@ -145,3 +145,13 @@ export type FileContributorsState = {
   authors?: Array<Author>
   error?: unknown
 }
+
+/**
+ * Table of contents
+ */
+export type SourceHeadingItem = { depth: number; id: string; label: string }
+export type ToCItem = {
+  title: string
+  url: string
+  items?: Array<ToCItem>
+}

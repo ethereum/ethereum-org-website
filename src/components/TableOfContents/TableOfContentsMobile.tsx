@@ -12,7 +12,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ToCItem } from "@/lib/interfaces"
+import type { ToCItem } from "@/lib/types"
 
 import { outerListProps } from "@/lib/utils/toc"
 
