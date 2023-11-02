@@ -13,7 +13,7 @@ import semanticTokens from "./semanticTokens"
 
 const config: ThemeConfig = {
   cssVarPrefix: "eth",
-  initialColorMode: "light",
+  initialColorMode: "system",
   useSystemColorMode: true,
 }
 
