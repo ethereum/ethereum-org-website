@@ -30,8 +30,7 @@ export const parseHeadingId = (heading: string): string => {
 }
 
 /**
- * Parse out the title to be displayed in the Table of Contents by removing any custom
- * ID and Twemoji components, as well as any backslashes used to escape Markdown characters
+ * Parse out the title to be displayed in the Table of Contents
  * @param title Heading string without leading #s that may contain Emoji's or a {#custom-id}
  * @returns Title string with custom ID and Emoji's removed
  */
