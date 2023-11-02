@@ -1,16 +1,16 @@
+import React, { type ReactNode } from "react"
 import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverBody,
-  PopoverContentProps,
-  PopoverProps,
-  PopoverHeader,
-  PopoverCloseButton,
   Flex,
+  Popover,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverContentProps,
+  PopoverHeader,
+  PopoverProps,
+  PopoverTrigger,
   Portal,
 } from "@chakra-ui/react"
-import React, { type ReactNode } from "react"
 
 interface IProps
   extends Omit<PopoverContentProps, "children">,

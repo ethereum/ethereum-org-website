@@ -2,12 +2,12 @@ import * as React from "react"
 import {
   Table as ChakraTable,
   TableContainer,
+  Tbody,
   Td,
   Th,
-  Tr,
-  ThemingProps,
-  Tbody,
   Thead,
+  ThemingProps,
+  Tr,
 } from "@chakra-ui/react"
 
 /*

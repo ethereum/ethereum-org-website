@@ -1,6 +1,7 @@
 import * as React from "react"
-import { Icon, Stack, Text } from "@chakra-ui/react"
 import type { IconType } from "react-icons/lib"
+import { Icon, Stack, Text } from "@chakra-ui/react"
+
 import Button, { type IProps as ButtonProps } from "../Button"
 import ButtonLink, { type ButtonLinkProps } from "../ButtonLink"
 

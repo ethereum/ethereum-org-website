@@ -1,24 +1,21 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect,useState } from "react"
 import { ApolloProvider } from "@apollo/client"
 import { Flex } from "@chakra-ui/react"
 
+import client from "../apollo"
+import { lightTheme as oldTheme } from "../theme"
+import type { Context } from "../types"
+import { scrollIntoView } from "../utils/scrollIntoView"
+import { isLangRightToLeft } from "../utils/translations"
+
+import FeedbackWidget from "./FeedbackWidget"
 import Footer from "./Footer"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
+import { SkipLink } from "./SkipLink"
 import TranslationBanner from "./TranslationBanner"
 import TranslationBannerLegal from "./TranslationBannerLegal"
-import FeedbackWidget from "./FeedbackWidget"
-import { SkipLink } from "./SkipLink"
-
-import { lightTheme as oldTheme } from "../theme"
-
-import { isLangRightToLeft } from "../utils/translations"
-import { scrollIntoView } from "../utils/scrollIntoView"
-
-import type { Context } from "../types"
-
-import client from "../apollo"
 
 import "../../static/fonts/inter-font-face.css"
 import "../../static/fonts/ibm-plex-font-face.css"

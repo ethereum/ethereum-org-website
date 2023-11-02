@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import { shuffle } from "lodash"
-
 import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import data from "../data/contributors.json"

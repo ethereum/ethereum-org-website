@@ -1,17 +1,14 @@
-// Libraries
 import React from "react"
 import { Box, Flex, FlexProps } from "@chakra-ui/react"
 
-// Components
-import Translation from "../Translation"
-import { ButtonLink } from "../Buttons"
-import AssetDownloadImage from "./AssetDownloadImage"
-import AssetDownloadArtist from "./AssetDownloadArtist"
-import OldHeading from "../OldHeading"
-
-// Utils
 import { getSrc, ImageDataLike } from "../../utils/image"
 import { trackCustomEvent } from "../../utils/matomo"
+import { ButtonLink } from "../Buttons"
+import OldHeading from "../OldHeading"
+import Translation from "../Translation"
+
+import AssetDownloadArtist from "./AssetDownloadArtist"
+import AssetDownloadImage from "./AssetDownloadImage"
 
 export interface IProps extends FlexProps {
   alt: string

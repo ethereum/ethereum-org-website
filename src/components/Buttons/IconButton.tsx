@@ -3,6 +3,7 @@ import {
   IconButton as ChakraIconButton,
   IconButtonProps as ChakraIconButtonProps,
 } from "@chakra-ui/react"
+
 import { checkIsSecondary, IProps as IButtonProps } from "./Button"
 
 interface IconButtonProps

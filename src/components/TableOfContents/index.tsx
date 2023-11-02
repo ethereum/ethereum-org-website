@@ -1,3 +1,4 @@
+import { FaGithub } from "react-icons/fa"
 import {
   Box,
   BoxProps,
@@ -8,16 +9,18 @@ import {
   Show,
   useToken,
 } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
+
+import type { ToCItem } from "@/lib/interfaces"
+
 import { ButtonLink } from "@/components/Buttons"
-import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 import ItemsList from "@/components/TableOfContents/ItemsList"
+import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
+
+import { outerListProps } from "@/lib/utils/toc"
+
 // TODO: Re-enable after i18n implemented
 // import Translation from "@/components/Translation"
-
 import { useActiveHash } from "@/hooks/useActiveHash"
-import { outerListProps } from "@/lib/utils/toc"
-import type { ToCItem } from "@/lib/interfaces"
 
 export interface IProps extends BoxProps {
   items: Array<ToCItem>

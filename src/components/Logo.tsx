@@ -1,9 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { useColorMode } from "@chakra-ui/react"
+import { graphql,useStaticQuery } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useColorMode } from "@chakra-ui/react"
 
 import { getImage } from "../utils/image"
+
 import GatsbyImage from "./GatsbyImage"
 
 export interface IProps {}

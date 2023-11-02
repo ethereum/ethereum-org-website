@@ -1,6 +1,8 @@
-import { SystemStyleObject, cssVar } from "@chakra-ui/react"
-import { BaseLink } from "@/components/Link"
+import { cssVar,SystemStyleObject } from "@chakra-ui/react"
+
 import type { ToCItem } from "@/lib/interfaces"
+
+import { BaseLink } from "@/components/Link"
 
 export interface IPropsTableOfContentsLink {
   depth: number

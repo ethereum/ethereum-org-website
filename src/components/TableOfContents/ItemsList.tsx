@@ -1,6 +1,8 @@
 import { ChakraProps, List, ListItem } from "@chakra-ui/react"
-import ToCLink from "@/components/TableOfContents/TableOfContentsLink"
+
 import type { ToCItem } from "@/lib/interfaces"
+
+import ToCLink from "@/components/TableOfContents/TableOfContentsLink"
 
 export interface IPropsItemsList extends ChakraProps {
   items: Array<ToCItem>

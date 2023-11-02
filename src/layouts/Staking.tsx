@@ -1,37 +1,26 @@
 import {
   Box,
+  type BoxProps,
   chakra,
   Flex,
+  Grid,
+  type HeadingProps,
   Show,
+  SimpleGrid,
   Text,
-  type BoxProps,
   UnorderedList,
   useToken,
-  Grid,
-  SimpleGrid,
-  type HeadingProps,
 } from "@chakra-ui/react"
 
-import { Image } from "@/components/Image"
-import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
+
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Callout from "@/components/Callout"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
-import OldHeading from "@/components/OldHeading"
-import ProductDisclaimer from "@/components/ProductDisclaimer"
-import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
-import StakingComparison from "@/components/Staking/StakingComparison"
-import StakingConsiderations from "@/components/Staking/StakingConsiderations"
-import StakingGuides from "@/components/Staking/StakingGuides"
-import StakingHowSoloWorks from "@/components/Staking/StakingHowSoloWorks"
-import StakingLaunchpadWidget from "@/components/Staking/StakingLaunchpadWidget"
-import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGrid"
-import TableOfContents from "@/components/TableOfContents"
-import UpgradeStatus from "@/components/UpgradeStatus"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
-import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
-import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
+import { Image } from "@/components/Image"
 import {
   ContentContainer,
   Heading1 as MdHeading1,
@@ -43,10 +32,22 @@ import {
   Page,
   StyledButtonDropdown,
 } from "@/components/MdComponents"
+import OldHeading from "@/components/OldHeading"
+import ProductDisclaimer from "@/components/ProductDisclaimer"
+import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
+import StakingComparison from "@/components/Staking/StakingComparison"
+import StakingConsiderations from "@/components/Staking/StakingConsiderations"
+import StakingGuides from "@/components/Staking/StakingGuides"
+import StakingHowSoloWorks from "@/components/Staking/StakingHowSoloWorks"
+import StakingLaunchpadWidget from "@/components/Staking/StakingLaunchpadWidget"
+import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGrid"
+import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
+import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
+import TableOfContents from "@/components/TableOfContents"
+import UpgradeStatus from "@/components/UpgradeStatus"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
-import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />

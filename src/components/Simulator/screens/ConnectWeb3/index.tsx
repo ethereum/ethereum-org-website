@@ -1,29 +1,31 @@
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React, { useEffect, useMemo, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import {
-  RiPriceTag2Line,
   RiAuctionLine,
   RiFileTransferLine,
+  RiPriceTag2Line,
 } from "react-icons/ri"
-import { AnimatePresence, motion } from "framer-motion"
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
+
+import { useEthPrice } from "../../../../hooks/useEthPrice"
 import GatsbyImage from "../../../GatsbyImage"
-import { NotificationPopover } from "../../NotificationPopover"
-import { ProgressCta } from "../../ProgressCta"
-import { WalletHome } from "../../WalletHome"
-import type { TokenBalance } from "../../WalletHome/interfaces"
-import { useNFT } from "../../WalletHome/hooks/useNFT"
-import { Browser } from "./Browser"
-import { Slider } from "./Slider"
-import { Web3App } from "./Web3App"
 import {
+  BASE_ANIMATION_DELAY_SEC,
   defaultTokenBalances,
   FALLBACK_ETH_PRICE,
   USD_RECEIVE_AMOUNT,
-  BASE_ANIMATION_DELAY_SEC,
 } from "../../constants"
-import { EXAMPLE_APP_URL } from "./constants"
 import type { PhoneScreenProps } from "../../interfaces"
-import { useEthPrice } from "../../../../hooks/useEthPrice"
+import { NotificationPopover } from "../../NotificationPopover"
+import { ProgressCta } from "../../ProgressCta"
+import { WalletHome } from "../../WalletHome"
+import { useNFT } from "../../WalletHome/hooks/useNFT"
+import type { TokenBalance } from "../../WalletHome/interfaces"
+
+import { Browser } from "./Browser"
+import { EXAMPLE_APP_URL } from "./constants"
+import { Slider } from "./Slider"
+import { Web3App } from "./Web3App"
 
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav

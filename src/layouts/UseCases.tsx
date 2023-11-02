@@ -1,3 +1,4 @@
+import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   Flex,
@@ -9,16 +10,16 @@ import {
   UnorderedList,
   useToken,
 } from "@chakra-ui/react"
-import { MdExpandMore } from "react-icons/md"
+
+import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import { BaseLink } from "@/components/Link"
-import { Image } from "@/components/Image"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import TableOfContents from "@/components/TableOfContents"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import { Image } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
   InfoColumn,
@@ -29,11 +30,11 @@ import {
   StyledButtonDropdown,
   Title,
 } from "@/components/MdComponents"
+import TableOfContents from "@/components/TableOfContents"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang } from "@/lib/types"
-import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex

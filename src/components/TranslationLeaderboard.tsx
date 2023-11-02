@@ -1,4 +1,3 @@
-// Libraries
 import React, { useState } from "react"
 import { reverse, sortBy } from "lodash"
 import {
@@ -11,10 +10,9 @@ import {
   useRadioGroup,
 } from "@chakra-ui/react"
 
-// Components
 import Emoji from "./Emoji"
-import Translation from "./Translation"
 import Text from "./OldText"
+import Translation from "./Translation"
 
 export interface IProps {
   monthData: any

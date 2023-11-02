@@ -1,4 +1,5 @@
 import { ListProps } from "@chakra-ui/react"
+
 import type { ToCItem } from "@/lib/interfaces"
 
 // RegEx patterns

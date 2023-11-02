@@ -1,4 +1,3 @@
-// Libraries
 import React, { MouseEvent } from "react"
 import { MdMenu } from "react-icons/md"
 import {
@@ -10,12 +9,10 @@ import {
   MenuList,
 } from "@chakra-ui/react"
 
-// Components
-import Link, { BaseLink } from "./Link"
-// import Translation from "./Translation"
-
-// Utils
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+// import Translation from "./Translation"
+import { BaseLink } from "./Link"
 
 export interface ListItem {
   text: string

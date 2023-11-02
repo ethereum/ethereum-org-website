@@ -1,14 +1,13 @@
-// Libraries
 import React from "react"
-import { Flex, Box, Icon } from "@chakra-ui/react"
 import {
-  FaTwitter,
-  FaYoutube,
   FaDiscord,
+  FaGlobe,
   FaRedditAlien,
   FaStackExchange,
-  FaGlobe,
+  FaTwitter,
+  FaYoutube,
 } from "react-icons/fa"
+import { Box, Flex, Icon } from "@chakra-ui/react"
 
 const socialColors = {
   reddit: "#ff4301",

@@ -1,18 +1,16 @@
 import React from "react"
-
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import {
   Box,
   Flex,
   Heading,
-  Image,
-  LinkOverlay,
   LinkBox,
+  LinkOverlay,
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import Text from "./OldText"
 import GatsbyImage from "./GatsbyImage"
+import Text from "./OldText"
 
 export interface DataRow {
   logo: IGatsbyImageData

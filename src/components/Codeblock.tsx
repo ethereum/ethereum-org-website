@@ -1,14 +1,14 @@
 import React, { useState } from "react"
-import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 import Highlight, {
   defaultProps,
   Language,
   PrismTheme,
 } from "prism-react-renderer"
+import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
-import Translation from "./Translation"
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
+import Translation from "./Translation"
 
 const LINES_BEFORE_COLLAPSABLE = 8
 

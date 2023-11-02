@@ -1,7 +1,8 @@
-import { Flex, Icon, Text, Spinner } from "@chakra-ui/react"
-import { AnimatePresence, motion } from "framer-motion"
 import React, { useEffect, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import { PiCheckThin } from "react-icons/pi"
+import { Flex, Icon, Spinner,Text } from "@chakra-ui/react"
+
 import { getMaxFractionDigitsUsd } from "../../utils"
 import { WalletHome } from "../../WalletHome"
 import type { TokenBalance } from "../../WalletHome/interfaces"

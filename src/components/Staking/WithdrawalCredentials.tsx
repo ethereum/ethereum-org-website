@@ -1,10 +1,12 @@
-import { FC, useState, useMemo, ChangeEvent } from "react"
+import { ChangeEvent,FC, useMemo, useState } from "react"
 import { Button, Flex, Text } from "@chakra-ui/react"
+
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 // TODO: Re-enable after i18n implemented
 // import Translation from "@/components/Translation"
 import Input from "@/components/Input"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 interface Validator {

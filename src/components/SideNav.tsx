@@ -1,15 +1,14 @@
-import React, { useState, useEffect, ReactNode } from "react"
-import { Box, HStack, Icon } from "@chakra-ui/react"
-
+import React, { ReactNode, useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { MdExpandMore } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-
-import Link, { BaseLink, IProps as ILinkProps } from "./Link"
-import Translation from "./Translation"
+import { MdExpandMore } from "react-icons/md"
+import { Box, HStack, Icon } from "@chakra-ui/react"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
+
+import { BaseLink, IProps as ILinkProps } from "./Link"
+import Translation from "./Translation"
 
 export const dropdownIconContainerVariant = {
   open: {

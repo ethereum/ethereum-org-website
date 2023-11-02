@@ -1,13 +1,11 @@
-// Library imports
 import React from "react"
 import { Grid } from "@chakra-ui/react"
-// Component imports
-import ProductCard from "./ProductCard"
-import Translation from "./Translation"
-// Type imports
+
 import { LearningToolsCardGridProps } from "../types"
 
-// Component
+import ProductCard from "./ProductCard"
+import Translation from "./Translation"
+
 const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
   category,
 }) => {

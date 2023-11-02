@@ -1,15 +1,14 @@
 import { useState } from "react"
-import { Box, chakra, Flex } from "@chakra-ui/react"
 import { FaTools } from "react-icons/fa"
+import { Box, Flex } from "@chakra-ui/react"
 
 // TODO: Figure out "react-select" usage
 // import { StyledSelect as Select } from "@/components/SharedStyledComponents"
-
 import { ButtonLink } from "@/components/Buttons"
 import Text from "@/components/OldText"
+
 // TODO: Re-enable after i18n implemented
 // import Translation from "@/components/Translation"
-
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 // const StyledSelect = chakra(Select, {

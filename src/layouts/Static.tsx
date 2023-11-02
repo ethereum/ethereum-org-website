@@ -1,30 +1,31 @@
-import { Box, Flex, type HeadingProps, Icon, chakra } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import { Box, chakra,Flex, type HeadingProps, Icon } from "@chakra-ui/react"
+
+import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
-import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
-import Link from "@/components/Link"
-import MeetupList from "@/components/MeetupList"
-import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
-import TableOfContents from "@/components/TableOfContents"
-import Text from "@/components/OldText"
-import UpcomingEventsList from "@/components/UpcomingEventsList"
 import GitHubContributors from "@/components/GitHubContributors"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { CONTENT_DIR } from "@/lib/constants"
-
-import type { ChildOnlyProp, Lang } from "@/lib/types"
-import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
+import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import Link from "@/components/Link"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
+import MeetupList from "@/components/MeetupList"
+import Text from "@/components/OldText"
+import TableOfContents from "@/components/TableOfContents"
+import UpcomingEventsList from "@/components/UpcomingEventsList"
+
+import { getLocaleTimestamp } from "@/lib/utils/time"
+import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { CONTENT_DIR } from "@/lib/constants"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />

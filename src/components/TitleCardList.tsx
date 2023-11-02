@@ -1,19 +1,21 @@
 import React from "react"
 import { IGatsbyImageData } from "gatsby-plugin-image"
+import { IoCodeOutline } from "react-icons/io5"
 import {
-  Flex,
   Box,
+  Flex,
   Hide,
   Icon,
   LinkBox,
   LinkOverlay,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { IoCodeOutline } from "react-icons/io5"
+
+import { TranslationKey } from "../utils/translations"
+
+import GatsbyImage from "./GatsbyImage"
 import { BaseLink } from "./Link"
 import Translation from "./Translation"
-import GatsbyImage from "./GatsbyImage"
-import { TranslationKey } from "../utils/translations"
 
 export interface ITitleCardItem {
   title: string

@@ -1,26 +1,24 @@
-import { ReactElement } from "react"
+import path from "path"
 import { ParsedUrlQuery } from "querystring"
+
+import { ReactElement } from "react"
+import type { GetServerSideProps } from "next/types"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
-import path from "path"
 
-import { getContentBySlug } from "@/lib/utils/md"
-import rehypeImg from "@/lib/rehype/rehypeImg"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLastModifiedDate } from "@/lib/utils/gh"
-
-// Components
-import PageMetadata from "@/components/PageMetadata"
-
-// Layouts
-import { RootLayout, TutorialLayout } from "@/layouts"
-import { staticComponents as components } from "@/layouts/Static"
-
-// Types
-import type { GetServerSideProps } from "next/types"
 import type { NextPageWithLayout } from "@/lib/types"
 import type { TutorialFrontmatter } from "@/lib/interfaces"
+
+import PageMetadata from "@/components/PageMetadata"
+
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLastModifiedDate } from "@/lib/utils/gh"
+import { getContentBySlug } from "@/lib/utils/md"
+
+import { RootLayout, TutorialLayout } from "@/layouts"
+import { staticComponents as components } from "@/layouts/Static"
+import rehypeImg from "@/lib/rehype/rehypeImg"
 
 interface Params extends ParsedUrlQuery {
   tutorial: string[]

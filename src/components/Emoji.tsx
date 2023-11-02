@@ -1,5 +1,5 @@
+import { BaseProps,Twemoji } from "react-emoji-render"
 import { Box, BoxProps } from "@chakra-ui/react"
-import { Twemoji, BaseProps } from "react-emoji-render"
 
 import { IS_DEV } from "@/lib/utils/env"
 

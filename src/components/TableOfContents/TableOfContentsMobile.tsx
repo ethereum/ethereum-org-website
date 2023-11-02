@@ -1,20 +1,23 @@
+import React from "react"
+import { MdExpandMore } from "react-icons/md"
 import {
-  useDisclosure,
-  chakra,
   Box,
+  chakra,
   Fade,
   Flex,
   Icon,
   List,
   Show,
+  useDisclosure,
   useToken,
 } from "@chakra-ui/react"
-import React from "react"
-import { MdExpandMore } from "react-icons/md"
+
+import type { ToCItem } from "@/lib/interfaces"
+
+import { outerListProps } from "@/lib/utils/toc"
+
 // import Translation from "../Translation"
 import ItemsList from "./ItemsList"
-import { outerListProps } from "@/lib/utils/toc"
-import type { ToCItem } from "@/lib/interfaces"
 
 export interface IPropsTableOfContentsMobile {
   items?: Array<ToCItem>

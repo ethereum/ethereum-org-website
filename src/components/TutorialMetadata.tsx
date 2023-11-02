@@ -2,16 +2,16 @@ import React from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
 import { Badge, Box, Flex, HStack } from "@chakra-ui/react"
 
-import Emoji from "./Emoji"
-import CopyToClipboard from "./CopyToClipboard"
-import InlineLink from "./Link"
-import TutorialTags from "./TutorialTags"
-import Translation from "./Translation"
-import Text from "./OldText"
-
 import { Lang } from "../utils/languages"
 import { getLocaleTimestamp } from "../utils/time"
 import { TranslationKey } from "../utils/translations"
+
+import CopyToClipboard from "./CopyToClipboard"
+import Emoji from "./Emoji"
+import InlineLink from "./Link"
+import Text from "./OldText"
+import Translation from "./Translation"
+import TutorialTags from "./TutorialTags"
 
 export interface IProps {
   tutorial: any

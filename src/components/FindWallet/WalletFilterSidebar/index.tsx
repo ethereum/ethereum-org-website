@@ -1,29 +1,25 @@
-// Libraries
 import React from "react"
-import {
-  Icon,
-  Center,
-  useTheme,
-  Tabs,
-  TabList,
-  Tab,
-  TabPanels,
-  TabPanel,
-  Box,
-  type TabsProps,
-} from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
-
-// Components
-import Translation from "../../Translation"
-import WalletFilterProfile from "./WalletFilterFeature"
-import WalletFilterPersonas from "./WalletFilterProfile"
-
-// Utils
-import { trackCustomEvent } from "../../../utils/matomo"
+import {
+  Box,
+  Center,
+  Icon,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  type TabsProps,
+  useTheme,
+} from "@chakra-ui/react"
 
 import { FiltersType } from "../../../pages/wallets/find-wallet"
+import { trackCustomEvent } from "../../../utils/matomo"
+import Translation from "../../Translation"
+
+import WalletFilterProfile from "./WalletFilterFeature"
+import WalletFilterPersonas from "./WalletFilterProfile"
 
 const FilterTab = ({
   eventName,

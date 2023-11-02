@@ -1,4 +1,5 @@
 import React from "react"
+import { useRouter } from "next/router"
 // import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import {
   Breadcrumb,
@@ -6,7 +7,6 @@ import {
   BreadcrumbLink,
   BreadcrumbProps,
 } from "@chakra-ui/react"
-import { useRouter } from "next/router"
 
 import { BaseLink } from "../Link"
 
