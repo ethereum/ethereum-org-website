@@ -34,6 +34,7 @@ import PageMetadata from "@/components/PageMetadata"
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
+import { generateTableOfContents } from "@/lib/utils/toc"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -97,7 +98,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   const markdown = getContentBySlug(`${locale}/${params.slug.join("/")}`)
   const frontmatter = markdown.frontmatter
-  const tocItems = markdown.tocItems
   const contentNotTranslated = markdown.contentNotTranslated
 
   const mdPath = join("/content", ...params.slug)
@@ -114,6 +114,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     },
   })
 
+  const tocItems = generateTableOfContents(mdxSource.compiledSource)
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
   const lastDeployDate = getLastDeployDate()

@@ -2,7 +2,7 @@ import { Box, List, ListItem } from "@chakra-ui/react"
 import { BaseLink } from "@/components/Link"
 import { IPropsItemsList } from "@/components/TableOfContents/ItemsList"
 import { parseToCTitle } from "@/lib/utils/toc"
-import type { ToCItem } from "@/lib/interfaces"
+import type { ToCItem } from "@/lib/types"
 
 export interface IPropsTableOfContentsLink {
   item: ToCItem
