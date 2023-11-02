@@ -24,7 +24,7 @@ Nie martw się, ponieważ jest to nasz pierwszy inteligentny kontrakt, wdrożymy
 
 Pierwszym krokiem jest [odwiedzenie Remix](https://remix.ethereum.org/) i utworzenie nowego pliku. W lewej górnej części interfejsu Remix dodaj nowy plik i wprowadź żądaną nazwę pliku.
 
-![Dodawanie nowego pliku do interfejsu Remix](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix.png)
+![Dodawanie nowego pliku do interfejsu Remix](./remix.png)
 
 W nowym pliku wkleimy następujący kod.
 
@@ -66,34 +66,34 @@ Ponieważ napisaliśmy pierwszy inteligentny kontrakt, teraz wdrożymy go w bloc
 
 Najpierw [skompilujemy kontrakt](/developers/docs/smart-contracts/compiling/), klikając ikonę kompilacji po lewej stronie:
 
-![Ikona kompilacji na pasku narzędzi Remix](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-compile-button.png)
+![Ikona kompilacji na pasku narzędzi Remix](./remix-compile-button.png)
 
 Następnie kliknij przycisk kompilacji:
 
-![Przycisk kompilacji w Remix Solidity](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-compile.png)
+![Przycisk kompilacji w Remix Solidity](./remix-compile.png)
 
 Możesz wybrać opcję „Automatyczna kompilacja”, aby umowa była zawsze kompilowana po zapisaniu zawartości w edytorze tekstowym.
 
 Następnie przejdź do ekranu wdrażania i uruchamiania transakcji:
 
-![Ikona wdrażania na pasku narzędzi Remix](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy.png)
+![Ikona wdrażania na pasku narzędzi Remix](./remix-deploy.png)
 
 Po przejściu do ekranu „wdróż i uruchom” transakcje sprawdź dokładnie, czy pojawia się nazwa Twojego kontraktu i kliknij Wdróż. Jak widać na górze strony, obecne środowisko to „Maszyna wirtualna JavaScript”, co oznacza, że ​​wdrożymy inteligentny kontrakt i będziemy nad nim pracować w lokalnym testowym blockchainie, aby móc testować szybciej i bez żadnych opłat.
 
-![Przycisk wdrażania w kompilatorze Remix Solidity](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy.png)
+![Przycisk wdrażania w kompilatorze Remix Solidity](./remix-deploy.png)
 
 Po kliknięciu przycisku „Wdróż” na dole pojawi się Twój kontrakt. Kliknij strzałkę po lewej stronie, aby ją rozwinąć i wyświetlić zawartość kontraktu. To jest utworzona zmienna `counter`, funkcja `increment()` i getter `getCounter()`.
 
 Jeśli klikniesz przycisk `count` lub `getCount`, zostanie pobrana i wyświetlona zmienna `count`. Ponieważ funkcja `increment` nie została jeszcze wywołana, wyświetli 0.
 
-![Przycisk funkcji w kompilatorze Remix Solidity](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-function-button.png)
+![Przycisk funkcji w kompilatorze Remix Solidity](./remix-function-button.png)
 
 Wywołajmy funkcję `increment`, klikając przycisk. Zobaczysz dzienniki transakcji, wyświetlone na dole okna. Zobaczysz, że dzienniki są inne, gdy naciśniesz przycisk pobierania danych zamiast przycisku `increment`. To dlatego, że odczyt danych w blockchainie nie wymaga żadnych transakcji (pisanie) ani opłat. Ponieważ tylko modyfikacja stanu łańcucha bloków wymaga dokonania transakcji:
 
-![Dziennik transakcji](../../../../../developers/tutorials/deploying-your-first-smart-contract/transaction-log.png)
+![Dziennik transakcji](./transaction-log.png)
 
 Po naciśnięciu przycisku inkrement, który wygeneruje transakcję, aby wywołać naszą funkcję `increment()`, jeśli ponownie klikniemy przycisk count lub getCount, odczytamy nowo zaktualizowany stan naszego inteligentnego kontraktu ze zmienną count większą niż 0.
 
-![Nowo zaktualizowany stan inteligentnego kontraktu](../../../../../developers/tutorials/deploying-your-first-smart-contract/updated-state.png)
+![Nowo zaktualizowany stan inteligentnego kontraktu](./updated-state.png)
 
 W następnym samouczku omówimy [jak dodawać zdarzenia do inteligentnych kontraktów](/developers/tutorials/logging-events-smart-contracts/). Rejestrowanie zdarzeń jest wygodnym sposobem debugowania inteligentnego kontraktu i zrozumienia, co się dzieje podczas wywoływania funkcji.

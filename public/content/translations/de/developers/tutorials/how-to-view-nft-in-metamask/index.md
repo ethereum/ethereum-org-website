@@ -23,7 +23,7 @@ Als Voraussetzung sollten Sie MetaMask bereits auf ihrem Handy oder in Ihrem Bro
 
 Drücken Sie oben in der App auf die Schaltfläche "Wallet". Daraufhin werden Sie aufgefordert, ein Netzwerk auszuwählen. Da unser NFT im Ropsten-Netzwerk geprägt wurde, sollten Sie als Netzwerk Ropsten auswählen.
 
-![So legen Sie Ropsten als Netzwerk auf MetaMask fest](./ropstenMetamask.gif)
+![So legen Sie Ropsten als Netzwerk auf MetaMask fest](./goerliMetamask.gif)
 
 ## Schritt 2: Kollektion zu MetaMask hinzufügen {#add-nft-to-metamask}
 

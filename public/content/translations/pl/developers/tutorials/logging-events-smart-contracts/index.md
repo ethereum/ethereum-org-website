@@ -43,6 +43,6 @@ Zauważ, że:
 
 Jeżeli teraz wdrożymy umowę i wywołamy funkcję inkrementacji, zobaczymy, że Remix automatycznie ją wyświetli, jeśli zostanie kliknięta nowa transakcja w tablicy nazwanych rejestrów.
 
-![Zrzut ekranu Remix](../../../../../developers/tutorials/logging-events-smart-contracts/remix-screenshot.png)
+![Zrzut ekranu Remix](./remix-screenshot.png)
 
 Dzienniki są naprawdę przydatne do debugowania inteligentnych kontraktów, ale są również ważne, jeśli tworzysz aplikacje używane przez różne osoby i ułatwiają analizę w celu śledzenia i zrozumienia, w jaki sposób jest używany inteligentny kontrakt. Logi generowane przez transakcje są wyświetlane w popularnych eksploratorach bloków i można je również wykorzystać np. do tworzenia skryptów off-chain do nasłuchiwania określonych zdarzeń i podejmowania działań w momencie ich wystąpienia.

@@ -2,7 +2,6 @@ import fs from "fs"
 import { join, extname } from "path"
 import matter from "gray-matter"
 
-import { generateTableOfContents } from "@/lib/utils/toc"
 import type { MdPageContent } from "@/lib/interfaces"
 import type { Frontmatter } from "@/lib/types"
 import { getFallbackEnglishPath, removeEnglishPrefix } from "@/lib/utils/i18n"
@@ -25,7 +24,59 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/decentralized-identity",
     "/defi",
     "/desci",
+    "/developers/tutorials/a-developers-guide-to-ethereum-part-one",
     "/developers/tutorials/all-you-can-cache",
+    "/developers/tutorials/calling-a-smart-contract-from-javascript",
+    "/developers/tutorials/create-and-deploy-a-defi-app",
+    "/developers/tutorials/deploying-your-first-smart-contract",
+    "/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet",
+    "/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit",
+    "/developers/tutorials/eip-1271-smart-contract-signatures",
+    "/developers/tutorials/erc-721-vyper-annotated-code",
+    "/developers/tutorials/erc20-annotated-code",
+    "/developers/tutorials/erc20-with-safety-rails",
+    "/developers/tutorials/getting-started-with-ethereum-development-using-alchemy",
+    "/developers/tutorials/guide-to-smart-contract-security-tools",
+    "/developers/tutorials/hello-world-smart-contract",
+    "/developers/tutorials/hello-world-smart-contract-fullstack",
+    "/developers/tutorials/how-to-implement-an-erc721-market",
+    "/developers/tutorials/how-to-mint-an-nft",
+    "/developers/tutorials/how-to-mock-solidity-contracts-for-testing",
+    "/developers/tutorials/how-to-use-echidna-to-test-smart-contracts",
+    "/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs",
+    "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs",
+    "/developers/tutorials/how-to-use-tellor-as-your-oracle",
+    "/developers/tutorials/how-to-view-nft-in-metamask",
+    "/developers/tutorials/how-to-write-and-deploy-an-nft",
+    "/developers/tutorials/interact-with-other-contracts-from-solidity",
+    "/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app",
+    "/developers/tutorials/learn-foundational-ethereum-topics-with-sql",
+    "/developers/tutorials/logging-events-smart-contracts",
+    "/developers/tutorials/merkle-proofs-for-offline-data-integrity",
+    "/developers/tutorials/monitoring-geth-with-influxdb-and-grafana",
+    "/developers/tutorials/nft-minter",
+    "/developers/tutorials/optimism-std-bridge-annotated-code",
+    "/developers/tutorials/reverse-engineering-a-contract",
+    "/developers/tutorials/run-node-raspberry-pi",
+    "/developers/tutorials/scam-token-tricks",
+    "/developers/tutorials/secure-development-workflow",
+    "/developers/tutorials/send-token-ethersjs",
+    "/developers/tutorials/sending-transactions-using-web3-and-alchemy",
+    "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript",
+    "/developers/tutorials/short-abi",
+    "/developers/tutorials/smart-contract-security-guidelines",
+    "/developers/tutorials/solidity-and-truffle-continuous-integration-setup",
+    "/developers/tutorials/testing-erc-20-tokens-with-waffle",
+    "/developers/tutorials/the-graph-fixing-web3-data-querying",
+    "/developers/tutorials/token-integration-checklist",
+    "/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract",
+    "/developers/tutorials/understand-the-erc-20-token-smart-contract",
+    "/developers/tutorials/uniswap-v2-annotated-code",
+    "/developers/tutorials/using-websockets",
+    "/developers/tutorials/waffle-dynamic-mocking-and-testing-calls",
+    "/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers",
+    "/developers/tutorials/waffle-test-simple-smart-contract",
+    "/developers/tutorials/yellow-paper-evm",
     "/energy-consumption",
     "/glossary",
     "/governance",
@@ -119,11 +170,10 @@ export const getContentBySlug = (slug: string) => {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
   const frontmatter = data as Frontmatter
-  const items: MdPageContent = {
+  const items: Omit<MdPageContent, "tocItems"> = {
     slug,
     content,
     frontmatter,
-    tocItems: generateTableOfContents(content),
     contentNotTranslated,
   }
 
