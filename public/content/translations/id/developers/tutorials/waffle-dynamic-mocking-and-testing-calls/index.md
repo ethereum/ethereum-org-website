@@ -223,7 +223,7 @@ Mari kita pecahkan tes ini ke dalam bagian-bagian:
 
 Kita siap untuk menyalakannya:
 
-![Satu ujian lulus](test-one.png)
+![Satu ujian lulus](./test-one.png)
 
 Jadi testnya bekerja, namun... masih ada sedikit ruang untuk peningkatan. Fungsi `balanceOf()` akan selalu mengembalikan 99999. Kita bisa meningkatkannya dengan menentukan dompet yang ke mana fungsinya harus mengembalikan sesuatu - sama seperti kontrak sungguhan:
 

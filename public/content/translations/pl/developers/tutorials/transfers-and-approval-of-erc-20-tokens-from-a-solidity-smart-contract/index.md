@@ -172,7 +172,7 @@ function buy() payable public {
 
 Jeśli zakup zakończył się sukcesem, powinniśmy zobaczyć dwa zdarzenia w transakcji: Token `Transfer` i `Bought` wydarzenie.
 
-![Dwa zdarzenia w transakcji: Transfer i Bought](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png)
+![Dwa zdarzenia w transakcji: Transfer i Bought](./transfer-and-bought-events.png)
 
 ## Funkcja kupna {#the-sell-function}
 
@@ -191,7 +191,7 @@ function sell(uint256 amount) public {
 
 Jeśli wszystko działa, powinieneś zobaczyć 2 zdarzenia w transakcji (a `Transfer` i `Sold`) i Twoje saldo tokenu i saldo Ethereum zaktualizowane.
 
-![Dwa zdarzenia w transakcji: Transfer i Sold](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png)
+![Dwa zdarzenia w transakcji: Transfer i Sold](./transfer-and-bought-events.png)
 
 <Divider />
 

@@ -14,6 +14,7 @@ export const LOCALES_CODES = i18nConfig.map((lang) => lang.code).sort()
 // Site urls
 export const SITE_URL = "https://ethereum.org"
 export const DISCORD_PATH = "/discord/"
+export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800
