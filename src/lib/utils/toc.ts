@@ -14,7 +14,7 @@ const compiledSourceHeadingRegEx =
  * @param s Any string
  * @returns Lowercased string with spaces replaced with hyphens (kebab-casing)
  */
-export const slugify = (s: string): string =>
+const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
 /**
