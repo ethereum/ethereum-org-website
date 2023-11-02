@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "ফিচার ফিল্টার",
   "page-find-wallet-footnote-1": "এই পৃষ্ঠায় তালিকাভুক্ত ওয়ালেটগুলো অফিসিয়াল অনুমোদিত নয় এবং শুধুমাত্র তথ্যের উদ্দেশ্যে প্রদান হয়েছে।",
   "page-find-wallet-footnote-2": "তাদের বর্ণনা ওয়ালেট প্রকল্পগুলোর নিজেদের দ্বারা প্রদান করা হয়েছে।",
-  "page-find-wallet-footnote-3": "আমরা আমাদের <a href=\"/contributing/adding-products/\">তালিকা নীতি</a> এর মানদন্ডের উপর ভিত্তি করে এই পৃষ্ঠায় পণ্য যোগ করি। আপনি যদি আমাদেরকে একটি ওয়ালেট যোগ করতে অনুরোধ করতে চান, তাহলে <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub এ একটি ইস্যু উত্থাপন করুন</a>।",
+  "page-find-wallet-footnote-3": "আমরা আমাদের <a href=\"/contributing/adding-wallets/\">তালিকা নীতি</a> এর মানদন্ডের উপর ভিত্তি করে এই পৃষ্ঠায় পণ্য যোগ করি। আপনি যদি আমাদেরকে একটি ওয়ালেট যোগ করতে অনুরোধ করতে চান, তাহলে <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub এ একটি ইস্যু উত্থাপন করুন</a>।",
   "page-find-wallet-mobile": "মোবাইল",
   "page-find-wallet-mobile-desc": "মোবাইল অ্যাপস সহ ওয়ালেট",
   "page-find-wallet-desktop": "ডেস্কটপ",

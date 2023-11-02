@@ -218,7 +218,7 @@ Let's brake down this test into parts:
 
 We're ready to fire up the beast:
 
-![One test passing](test-one.png)
+![One test passing](./test-one.png)
 
 So the test works, but... there's still some room for improvement. The `balanceOf()` function will always return 99999. We can improve it by specifying a wallet for which the function should return something - just like a real contract:
 

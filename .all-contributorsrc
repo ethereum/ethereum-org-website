@@ -10649,6 +10649,33 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "Wilson-Wu1",
+      "name": "Wilson Wu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41039035?v=4",
+      "profile": "https://www.linkedin.com/in/wilson-wu-2021/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "fvaysh",
+      "name": "VAS",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126754021?v=4",
+      "profile": "https://github.com/fvaysh",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "costgallo",
+      "name": "Costanza",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49433698?v=4",
+      "profile": "https://github.com/costgallo",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -49,7 +49,7 @@ Avem nevoie de un cont Ethereum pentru a trimite și primi tranzacții. În aces
 
 Puteți descărca și crea un cont MetaMask pe gratis [aici](https://metamask.io/download.html). Atunci când vă creați un cont sau dacă aveți deja unul, aveţi grijă să comutaţi pe „Ropsten Test Network” („Rețeaua de testare Ropsten”) în dreapta sus (pentru a nu avea de-a face cu bani reali).
 
-![Setați Ropsten ca rețeaua dvs.](./metamask-ropsten.png)
+![Setați Ropsten ca rețeaua dvs.](./metamask-goerli.png)
 
 ## Etapa 4: Adăugarea de ether de la un faucet {#step-4-add-ether-from-a-faucet}
 
@@ -332,17 +332,17 @@ Ar trebui să vedeți ceva de genul:
 
 Dacă mergem pe [„Ropsten etherscan”](https://ropsten.etherscan.io/) și căutăm adresa contractului nostru, ar trebui să vedem că acesta a fost implementat cu succes. Tranzacția va arăta cam așa:
 
-![Vizualizați adresa tranzacției dvs. pe Etherscan](./etherscan-transaction.png)
+![Vizualizați adresa tranzacției dvs. pe Etherscan](./etherscan-sepolia-tx-details.png)
 
 Adresa „From” (De la) ar trebui să corespundă cu adresa contului MetaMask, iar adresa „To” (Către) va preciza „Contract Creation” (Crearea contractului). Dacă facem clic pe tranzacție, vom vedea adresa contractului nostru în câmpul „To”:
 
-![Vizualizați adresa contractului dvs. pe Etherscan](./etherscan-contract.png)
+![Vizualizați adresa contractului dvs. pe Etherscan](./etherscan-sepoila-contract-creation.png)
 
 Yasssss! Tocmai v-ați implementat contractul inteligent NFT în lanțul Ethereum!
 
 Pentru a înțelege ce se întâmplă în culise, să navigăm la fila Explorer din [tabloul de bord Alchemy](https://dashboard.alchemyapi.io/explorer). Dacă aveți mai multe aplicații Alchimy, asigurați-vă că filtrați după aplicație și selectați „MyNFT”.
 
-![Vizualizați apelurile efectuate „în culise” cu Tabloul de bord al exploratorului Alchemy](./alchemy-explorer.png)
+![Vizualizați apelurile efectuate „în culise” cu Tabloul de bord al exploratorului Alchemy](./alchemy-explorer-goerli.png)
 
 Aici veți vedea o serie de apeluri JSON-RPC pe care Hardhat/Ethers le-a făcut în culise pentru noi atunci când am apelat funcția .deploy(). Este important de menţionat două dintre acestea aici: [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), care este solicitarea de a scrie efectiv contractul nostru în lanțul Ropsten, și [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash), care este o solicitare de a citi informații despre tranzacția noastră având în vedere hash-ul (un model tipic în cazul tranzacțiilor). Dacă doriți să aflați mai multe despre trimiterea de tranzacții, consultați acest tutorial despre [trimiterea de tranzacții utilizând Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 

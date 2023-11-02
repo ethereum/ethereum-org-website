@@ -23,7 +23,7 @@ Ca şi condiţie prealabilă, ar trebui să aveți deja instalat MetaMask pe mob
 
 În partea superioară a aplicației, apăsați butonul „Wallet” („Portofel”), după care vi se va cere să selectați o rețea. Deoarece NFT-ul nostru a fost emis în rețeaua Ropsten, va trebui să selectați Ropsten ca rețea.
 
-![Cum să setați Ropsten ca rețeaua dvs. pe MetaMask Mobile](./ropstenMetamask.gif)
+![Cum să setați Ropsten ca rețeaua dvs. pe MetaMask Mobile](./goerliMetamask.gif)
 
 ## Etapa 2: Adăugarea obiectului de colecție la MetaMask {#add-nft-to-metamask}
 

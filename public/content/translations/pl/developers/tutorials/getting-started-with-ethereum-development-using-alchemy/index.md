@@ -16,7 +16,7 @@ source: Średni
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
-![Logo Ethereum i Alchemy](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/ethereum-alchemy.png)
+![Logo Ethereum i Alchemy](./ethereum-alchemy.png)
 
 To jest przewodnik dla początkujących po rozpoczęciu programowania w Ethereum przy użyciu [Alchemy](https://alchemyapi.io/), wiodącej platformy dla twórców blockchainów wykorzystywanej przez miliony użytkowników z 70% najlepszych aplikacji blockchain, w tym Maker, 0x, MyEtherWallet, Dharma i Kyber.
 
@@ -34,15 +34,15 @@ Możesz [tworzyć klucze API z panelu](http://dashboard.alchemyapi.io/). Aby utw
 
 Specjalne podziękowania dla [_ShapeShift_](https://shapeshift.com/) _za umożliwienie nam pokazania ich panelu!_
 
-![Pulpit Alchemy](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/alchemy-dashboard.png)
+![Pulpit Alchemy](./alchemy-dashboard.png)
 
 Wypełnij szczegóły w sekcji „Utwórz aplikację”, aby uzyskać swój nowy klucz. Możesz również zobaczyć aplikacje, które wcześniej stworzyłeś i aplikacje wykonane przez swój zespół tutaj. Pociągnij istniejące klucze, klikając „Wyświetl klucz” dla dowolnej aplikacji.
 
-![Utwórz aplikację za pomocą zrzutu ekranu Alchemy](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/create-app.png)
+![Utwórz aplikację za pomocą zrzutu ekranu Alchemy](./create-app.png)
 
 Możesz również ściągnąć istniejące klucze API, umieszczając kursor myszy nad „Aplikacje” i wybierając jeden. Możesz tutaj „Wyświetlić klucz”, a także „Edytować aplikację”, aby dodać określone domeny do białej listy, zobaczyć kilka narzędzi dla programistów i wyświetlić dane analityczne.
 
-![Gif pokazuje użytkownikowi jak ściągnąć klucze API](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/pull-api-keys.gif)
+![Gif pokazuje użytkownikowi jak ściągnąć klucze API](./pull-api-keys.gif)
 
 ## 3\. Zgłoś żądanie z wiersza poleceń {#make-a-request-from-the-command-line}
 

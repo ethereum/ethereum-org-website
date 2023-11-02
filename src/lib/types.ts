@@ -2,6 +2,7 @@ import { ReactElement, ReactNode } from "react"
 import { NextPage } from "next"
 import { AppProps } from "next/app"
 import type {
+  Author,
   DocsFrontmatter,
   RoadmapFrontmatter,
   StakingFrontmatter,
@@ -87,6 +88,17 @@ export type Lang =
   | "zh"
   | "zh-tw"
 
+export type Direction = "rtl" | "ltr" | "auto"
+
+export type I18nLocale = {
+  code: Lang
+  crowdinCode: string
+  name: string
+  localName: string
+  langDir: Direction
+  dateFormat: string
+}
+
 export type StaticPaths = { params: { slug: string[] }; locale: string }[]
 
 export type TranslationKey = string
@@ -123,3 +135,22 @@ export type QuizShareStats = { score: number; total: number }
  * Staking
  */
 export type StakingPage = "solo" | "saas" | "pools"
+
+/**
+ * File contributors
+ */
+export type FileContributorsState = {
+  loading: boolean
+  authors?: Array<Author>
+  error?: unknown
+}
+
+/**
+ * Table of contents
+ */
+export type SourceHeadingItem = { depth: number; id: string; label: string }
+export type ToCItem = {
+  title: string
+  url: string
+  items?: Array<ToCItem>
+}

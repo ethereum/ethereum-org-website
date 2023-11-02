@@ -49,7 +49,7 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anah
 
 [Buradan](https://metamask.io/download.html) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluşturuyorsanız veya zaten bir hesabınız varsa, sağ üstteki "Ropsten Test Ağı"na geçtiğinizden emin olun (böylece gerçek parayla uğraşmayız).
 
-![Ropsten'i ağınız olarak ayarlayın](./metamask-ropsten.png)
+![Ropsten'i ağınız olarak ayarlayın](./metamask-goerli.png)
 
 ## Adım 4: Bir Musluktan ether ekleyin {#step-4-add-ether-from-a-faucet}
 
@@ -337,17 +337,17 @@ Daha sonra şöyle bir şey görmelisiniz:
 
 [Ropsten etherscan](https://ropsten.etherscan.io/)'e gidersek ve sözleşme adresimizi ararsak, bunun başarıyla dağıtıldığını görebiliriz. Bu işlem biraz zaman alabileceğinden dolayı hemen göremezseniz lütfen biraz bekleyin. İşlem şunun gibi gözükecektir:
 
-![İşlem adresinizi Etherscan'de görüntüleyin](./etherscan-transaction.png)
+![İşlem adresinizi Etherscan'de görüntüleyin](./etherscan-sepolia-tx-details.png)
 
 From (gönderen) adresi, MetaMask hesap adresinizle eşleşmelidir ve To (alıcı) adresinde "Contract Creation" (Sözleşme Oluşturma) yazacaktır. İşleme tıklarsak, To alanında sözleşme adresimizi görürüz:
 
-![Etherscan'da sözleşme adresinizi görüntüleyin](./etherscan-contract.png)
+![Etherscan'da sözleşme adresinizi görüntüleyin](./etherscan-sepoila-contract-creation.png)
 
 Eveeet! NFT akıllı sözleşmenizi Ethereum zincirine dağıttınız!
 
 Perde arkasında neler olduğunu anlamak için [Alchemy gösterge panelimizde](https://dashboard.alchemyapi.io/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtreleme yaptığınızdan ve "MyNFT"yi seçtiğinizden emin olun.
 
-![Alchemy'nin Gezgin Gösterge Panosu ile "perde arkasında" yapılan aramaları görüntüleyin](./alchemy-explorer.png)
+![Alchemy'nin Gezgin Gösterge Panosu ile "perde arkasında" yapılan aramaları görüntüleyin](./alchemy-explorer-goerli.png)
 
 Burada, .deploy() fonksiyonunu çağırdığımızda Hardhat/Ethers'ın bizim için arka planda yaptığı bir avuç JSON-RPC çağrısı göreceksiniz. Burada belirtilmesi gereken iki önemli şey, akıllı sözleşmemizi Ropsten zincirine yazma isteği olan [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction) ve hash değerine göre işlemimiz hakkındaki bilgileri okuma isteği olan (işlem gönderirken sık kullanılan bir şablon) [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) öğeleridir. İşlem gönderme hakkında daha fazla bilgi edinmek için web3 kullanarak işlem göndermeyle ilgili [bu öğreticiye](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
 
