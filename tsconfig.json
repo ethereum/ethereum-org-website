@@ -115,7 +115,6 @@
     "./src/components/Search/utils.ts",
     "./src/components/Select/Select.stories.tsx",
     "./src/components/Select/index.tsx",
-    "./src/components/SharedStyledComponents.tsx",
     "./src/components/SideNav.tsx",
     "./src/components/SideNavMobile.tsx",
     "./src/components/SimpleTable.tsx",
