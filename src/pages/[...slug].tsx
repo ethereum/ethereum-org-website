@@ -6,7 +6,8 @@ import remarkGfm from "remark-gfm"
 import { join } from "path"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getLastDeployDate, getLastModifiedDate } from "@/lib/utils/gh"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLastModifiedDate } from "@/lib/utils/gh"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 
