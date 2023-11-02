@@ -296,7 +296,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Interact with other contracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/)
 - [NFT Minter tutorial](/developers/tutorials/nft-minter/)
 - [Reverse engineering a contract](/developers/tutorials/reverse-engineering-a-contract/)
-- [Sending tokens using ethers.js](/developers/tutorials/send-token-etherjs/)
+- [Sending tokens using ethers.js](/developers/tutorials/send-token-ethersjs/)
 - [The Graph: Fixing Web3 data querying](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 - [Transfers and approval of ERC-20 tokens from a Solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
 
