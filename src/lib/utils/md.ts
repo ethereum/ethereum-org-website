@@ -41,7 +41,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/hello-world-smart-contract",
     "/developers/tutorials/hello-world-smart-contract-fullstack",
     "/developers/tutorials/how-to-implement-an-erc721-market",
-    "/developers/tutorials/how-to-mind-an-nft",
+    "/developers/tutorials/how-to-mint-an-nft",
     "/developers/tutorials/how-to-mock-solidity-contracts-for-testing",
     "/developers/tutorials/how-to-use-echidna-to-test-smart-contracts",
     "/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs",
