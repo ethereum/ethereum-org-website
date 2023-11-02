@@ -13,7 +13,6 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { useRouter } from "next/router"
-// import dynamic from 'next/dynamic'
 
 // Components
 import { ButtonLink } from "@/components/Buttons"
@@ -80,52 +79,43 @@ const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-const H1 = (props: HeadingProps) => {
-  return (
-    <MdHeading1
-      fontSize={{ base: "1.75rem", lg: "2.5rem" }}
-      fontFamily="monospace"
-      textTransform="uppercase"
-      {...props}
-    />
-  )
-}
+const Heading1 = (props: HeadingProps) => (
+  <MdHeading1
+    fontSize={{ base: "1.75rem", lg: "2.5rem" }}
+    fontFamily="monospace"
+    textTransform="uppercase"
+    {...props}
+  />
+)
 
-const H2 = (props: HeadingProps) => {
-  return (
-    <MdHeading2
-      fontSize={{ base: "2xl", md: "2rem" }}
-      fontFamily="monospace"
-      textTransform="uppercase"
-      fontWeight="bold"
-      scrollMarginTop={40}
-      mt={12}
-      {...props}
-    />
-  )
-}
+const Heading2 = (props: HeadingProps) => (
+  <MdHeading2
+    fontSize={{ base: "2xl", md: "2rem" }}
+    fontFamily="monospace"
+    textTransform="uppercase"
+    scrollMarginTop={40}
+    mt={12}
+    {...props}
+  />
+)
 
-const H3 = (props: HeadingProps) => {
-  return (
-    <MdHeading3
-      fontWeight={{ base: "semibold" }}
-      fontSize={{ base: "1rem", md: "1.5rem" }}
-      scrollMarginTop={40}
-      {...props}
-    />
-  )
-}
+const Heading3 = (props: HeadingProps) => (
+  <MdHeading3
+    fontWeight={{ base: "semibold" }}
+    fontSize={{ base: "1rem", md: "1.5rem" }}
+    scrollMarginTop={40}
+    {...props}
+  />
+)
 
-const H4 = (props: HeadingProps) => {
-  return (
-    <MdHeading4
-      fontWeight={{ base: "semibold" }}
-      fontSize={{ base: "1rem", md: "1.25rem" }}
-      scrollMarginTop={40}
-      {...props}
-    />
-  )
-}
+const Heading4 = (props: HeadingProps) => (
+  <MdHeading4
+    fontWeight={{ base: "semibold" }}
+    fontSize={{ base: "1rem", md: "1.25rem" }}
+    scrollMarginTop={40}
+    {...props}
+  />
+)
 
 const StyledDivider = (props) => (
   <Divider
@@ -162,10 +152,10 @@ const KBD = (props) => {
 
 export const tutorialsComponents = {
   a: MdLink,
-  h1: H1,
-  h2: H2,
-  h3: H3,
-  h4: H4,
+  h1: Heading1,
+  h2: Heading2,
+  h3: Heading3,
+  h4: Heading4,
   p: Paragraph,
   kbd: KBD,
   li: ListItem,
@@ -222,7 +212,7 @@ export const TutorialLayout = ({
           canonicalUrl={frontmatter.sourceUrl}
         /> */}
         <ContentContainer>
-          <H1>{frontmatter.title}</H1>
+          <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
           <TableOfContents
             items={tocItems}
