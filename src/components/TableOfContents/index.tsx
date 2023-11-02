@@ -17,7 +17,7 @@ import ItemsList from "@/components/TableOfContents/ItemsList"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { outerListProps } from "@/lib/utils/toc"
-import type { ToCItem } from "@/lib/interfaces"
+import type { ToCItem } from "@/lib/types"
 
 export interface IProps extends BoxProps {
   items: Array<ToCItem>
