@@ -7,7 +7,8 @@ import path from "path"
 
 import { getContentBySlug } from "@/lib/utils/md"
 import rehypeImg from "@/lib/rehype/rehypeImg"
-import { getLastDeployDate, getLastModifiedDate } from "@/lib/utils/gh"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLastModifiedDate } from "@/lib/utils/gh"
 
 // Components
 import PageMetadata from "@/components/PageMetadata"
