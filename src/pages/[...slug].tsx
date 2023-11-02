@@ -7,10 +7,10 @@ import { join } from "path"
 import readingTime from "reading-time"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getLastModifiedDate, getLastDeployDate } from "@/lib/utils/gh"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLastModifiedDate } from "@/lib/utils/gh"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
-import mdComponents from "@/components/MdComponents"
 
 // Layouts and components
 import {
@@ -28,8 +28,11 @@ import {
   // docsComponents,
   // DocsLayout,
   tutorialsComponents,
-  TutorialLayout
+  TutorialLayout,
 } from "@/layouts"
+
+import mdComponents from "@/components/MdComponents"
+import PageMetadata from "@/components/PageMetadata"
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
@@ -117,21 +120,21 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const timeToRead = readingTime(markdown.content)
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
-  const lastDeployDate = await getLastDeployDate()
+  const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
   let layout = frontmatter.template
 
   if (!frontmatter.template) {
-    layout = 'static'
+    layout = "static"
 
-    if (params.slug.includes('docs')) {
-      layout = 'docs'
+    if (params.slug.includes("docs")) {
+      layout = "docs"
     }
 
-    if (params.slug.includes('tutorials')) {
-      layout = 'tutorial'
-      if ('published' in frontmatter) {
+    if (params.slug.includes("tutorials")) {
+      layout = "tutorial"
+      if ("published" in frontmatter) {
         frontmatter.published = dateToString(frontmatter.published)
       }
     }
@@ -189,12 +192,27 @@ ContentPage.getLayout = (page: ReactElement) => {
     contentNotTranslated,
     lastDeployDate,
   }
-  const layoutProps = { slug, frontmatter, lastUpdatedDate, timeToRead, tocItems }
+  const layoutProps = {
+    slug,
+    frontmatter,
+    lastUpdatedDate,
+    timeToRead,
+    tocItems,
+  }
   const Layout = layoutMapping[layout]
 
   return (
     <RootLayout {...rootLayoutProps}>
-      <Layout {...layoutProps}>{page}</Layout>
+      <Layout {...layoutProps}>
+        <PageMetadata
+          title={frontmatter.title}
+          description={frontmatter.description}
+          image={frontmatter.image}
+          author={frontmatter.author}
+          canonicalUrl={frontmatter.sourceUrl}
+        />
+        {page}
+      </Layout>
     </RootLayout>
   )
 }
