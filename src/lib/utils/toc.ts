@@ -3,11 +3,12 @@ import type { SourceHeadingItem, ToCItem } from "@/lib/types"
 
 // RegEx patterns
 const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
-const emojiRegEx = /<Emoji [^/]+\/>/g
-const emojiUnicodeRegEx = /\\u{[0-9A-F]+?}/gi
-const escapeSlashRegEx = /\\(?=[+*?^$\\.[\]{}()|/#])/g
+const unicodeEmojiRegEx = /\\u{[0-9A-F]+}/gi
+const unicodeIntlRegEx = /\\u[0-9A-F]+/gi
 const compiledSourceHeadingRegEx =
-  /(?<=mdx\()"h([2-4])",e\(.+?id:"([^"]+)".+?"([^"]+)"/g
+  /mdx\("h([2-4])",e\(.+?id:"([^"]+)"}\)((,("([^"]+)"|mdx\([^\)]+\)))+)\)/g
+const mdxFncRegEx = /mdx\(.+?\)/g
+const stringRegEx = /"([^"]+)"/g
 
 /**
  * Creates a slug from a string (Hello world => hello-world)
@@ -38,9 +39,12 @@ export const parseToCTitle = (title: string): string => {
   const match = customIdRegEx.exec(title)
   const trimmedTitle = match ? title.replace(match[1], "").trim() : title
   const sanitizedTitle = trimmedTitle
-    .replaceAll(emojiRegEx, "")
-    .replaceAll(emojiUnicodeRegEx, "")
-    .replaceAll(escapeSlashRegEx, "")
+    .replaceAll(unicodeEmojiRegEx, (match) =>
+      String.fromCodePoint(parseInt(match.slice(3, -1), 16))
+    )
+    .replaceAll(unicodeIntlRegEx, (match) =>
+      String.fromCharCode(parseInt(match.slice(2), 16))
+    )
   return sanitizedTitle
 }
 
@@ -115,6 +119,7 @@ const addHeadingsAsItems = (
  * Generates a Table of Contents from a compiled page source string, after markdown has been parsed into DOM elements
  * Parses all h2/3/4 elements into an array of `SourceHeadingItem` objects using regex matching
  * Note: each file should only have one h1, and it is not included in the ToC
+ * Removes component functions such as Emoji components) and joins rest to form heading label
  * Calls `addHeadingAsItem` with array of `SourceHeadingItem` objects to generate list of `Item` objects
  * @param content Compiled page source from mdx compiler (string)
  * @returns List of `Item` objects parsed from the compiled source, nested according to heading depth
@@ -124,13 +129,15 @@ export const generateTableOfContents = (
   compiledSource: string
 ): Array<ToCItem> => {
   const matchAll = compiledSource.matchAll(compiledSourceHeadingRegEx)
-  const matches = Array.from(matchAll)
-  const headings: Array<SourceHeadingItem> = matches.map(
-    ([_, depth, id, label]) => ({
-      depth: +depth,
-      id,
-      label,
-    })
-  )
+  const matches = Array.from(matchAll).slice(0)
+  const headings: Array<SourceHeadingItem> = matches.map((headingMatch) => {
+    const [_, depth, id, fullLabel] = headingMatch
+    const fullLabelNoFunctions = fullLabel.replaceAll(mdxFncRegEx, "")
+    const matchAllStrings = fullLabelNoFunctions.matchAll(stringRegEx)
+    const label = Array.from(matchAllStrings)
+      .map(([_, frag]) => frag)
+      .join("")
+    return { depth: +depth, id, label }
+  })
   return addHeadingsAsItems(headings)
 }
