@@ -49,7 +49,7 @@ Kita memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Untuk tutor
 
 Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download.html). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Jaringan Pengujian Ropsten" di kanan atas (sehingga kita tidak berurusan dengan uang asli).
 
-![Tetapkan Ropsten sebagi jaringan Anda](./metamask-ropsten.png)
+![Tetapkan Ropsten sebagi jaringan Anda](./metamask-goerli.png)
 
 ## Langkah 4: Tambahkan ether dari Keran {#step-4-add-ether-from-a-faucet}
 
@@ -336,17 +336,17 @@ Lalu, Anda seharusnya melihat sesuatu seperti ini:
 
 If we go to the [Ropsten etherscan](https://ropsten.etherscan.io/) and search for our contract address we should be able to see that it has been deployed successfully. If you can't see it immediately, please wait a while as it can take some time. Transaksi akan terlihat seperti ini:
 
-![Lihat alamat transaksi Anda di Etherscan](./etherscan-transaction.png)
+![Lihat alamat transaksi Anda di Etherscan](./etherscan-sepolia-tx-details.png)
 
 Alamat From seharusnya sesuai dengan alamat akun MetaMask Anda dan alamat To akan berkata "Pembuatan Kontrak." Jika kita mengklik transaksi, kita akan melihat akun kontrak kita dalam field To:
 
-![Lihat akun kontrak Anda di Etherscan](./etherscan-contract.png)
+![Lihat akun kontrak Anda di Etherscan](./etherscan-sepoila-contract-creation.png)
 
 Yesssss! Anda baru saja menyebarkan kontrak pintar NFT Anda ke rantai Ethereum!
 
 Untuk memahami apa yang terjadi di bawah hood, mari navigasikan ke tab Penjelajah dalam [dasbor Alchemy](https://dashboard.alchemyapi.io/explorer) kita. Jika Anda memiliki beberapa aplikasi Alchemy, pastikan memilah berdasarkan aplikasi dan pilih "MyNFT".
 
-![Lihat pemanggilan yang dibuat "dibawah hood" dengan Dasbor Penjelajah Alchemy](./alchemy-explorer.png)
+![Lihat pemanggilan yang dibuat "dibawah hood" dengan Dasbor Penjelajah Alchemy](./alchemy-explorer-goerli.png)
 
 Di sini Anda akan melihat beberapa panggilan JSON-RPC yang dibuat Hardhat/Ethers untuk kita saat kita memanggil fungsi .deploy(). Dua fungsi penting untuk dipanggil keluar di sini adalah [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), yang merupakan permintaan untuk benar-benar menulis kontrak pintar kita pada rantai Ropsten, dan [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) yang merupakan permintaan untuk membaca informasi tentang transaksi kita berdasarkan hash (pola umum ketika mengirim transaksi). Untuk mempelajari lebih lanjut tentang mengirim transaksi, lihat tutorial ini [tentang mengirim transaksi dengan menggunakan Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 

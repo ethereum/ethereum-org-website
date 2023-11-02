@@ -71,7 +71,7 @@ GameContract.events.BetPlaced({
 
 W naszym prostym przykładzie jest to nadal poniekąd w porządku. Ale powiedzmy, że chcemy teraz wyświetlać kwoty przegranych/wygranych zakładów tylko dla aktualnego gracza. Cóż, nie mamy szczęścia, lepiej wdrożyć nowy kontrakt, który przechowuje te wartości i je pobiera. A teraz wyobraź sobie znacznie bardziej skomplikowany inteligentny kontrakt i dapp, rzeczy mogą szybko się popsuć.
 
-![Nie wystarczy po prostu zapytać](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/one-does-not-simply-query.jpg)
+![Nie wystarczy po prostu zapytać](./one-does-not-simply-query.jpg)
 
 Możesz zobaczyć, że to nieoptymalne:
 
@@ -79,7 +79,7 @@ Możesz zobaczyć, że to nieoptymalne:
 - Dodatkowe koszty gazu za przechowywanie tych wartości.
 - Wymaga kolejnego wywołania w celu pobrania danych dla węzła Ethereum.
 
-![To nie jest wystarczająco dobre](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/not-good-enough.jpg)
+![To nie jest wystarczająco dobre](./not-good-enough.jpg)
 
 Spójrzmy teraz na lepsze rozwiązanie.
 
@@ -87,7 +87,7 @@ Spójrzmy teraz na lepsze rozwiązanie.
 
 Najpierw porozmawiajmy o GraphQL, pierwotnie zaprojektowanym i zaimplementowanym przez Facebooka. Być może znasz tradycyjny model Rest API. Teraz wyobraź sobie, że zamiast tego możesz napisać zapytanie dla dokładnie tych danych, które chciałeś:
 
-![GraphQL API vs. REST API](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/graphql.jpg)
+![GraphQL API vs. REST API](./graphql.jpg)
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
@@ -99,7 +99,7 @@ Teraz, mając tę ​​wiedzę, w końcu wskoczmy w przestrzeń blockchain i Th
 
 Blockchain to zdecentralizowana baza danych, ale w przeciwieństwie do tego, co zwykle ma miejsce, nie mamy języka zapytań dla tej bazy danych. Rozwiązania do odzyskiwania danych są bolesne lub całkowicie niemożliwe. The Graph to zdecentralizowany protokół do indeksowania i odpytywania danych blockchain. I mogłeś się domyślić, że używa GraphQL jako języka zapytań.
 
-![The Graph](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/thegraph.png)
+![The Graph](./thegraph.png)
 
 Przykłady są zawsze najlepsze, aby coś zrozumieć, więc użyjmy The Graph dla naszego przykładu GameContract.
 
@@ -285,7 +285,7 @@ React.useEffect(() => {
 }, [loading, error, data])
 ```
 
-![Magic](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/magic.jpg)
+![Magic](./magic.jpg)
 
 Ale brakuje nam ostatniego elementu układanki, a jest nim serwer. Możesz uruchomić go samodzielnie lub skorzystać z usługi hostowanej.
 
@@ -295,7 +295,7 @@ Ale brakuje nam ostatniego elementu układanki, a jest nim serwer. Możesz uruch
 
 Najprostszym sposobem jest skorzystanie z usługi hostowanej. Postępuj zgodnie z instrukcjami [tutaj](https://thegraph.com/docs/deploy-a-subgraph), aby wdrożyć subgraf. W przypadku wielu projektów można znaleźć istniejące podgrafy w eksploratorze pod adresem https://thegraph.com/explorer/.
 
-![The Graph-Explorer](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/thegraph-explorer.png)
+![The Graph-Explorer](./thegraph-explorer.png)
 
 ### Uruchamianie własnego węzła {#running-your-own-node}
 
